@@ -1,7 +1,9 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { useAuth } from './AuthProvider';
 
 export default function FlashcardsTab({ cards, sectionId }) {
+  const { user } = useAuth();
   const storageKey = `flashcards-${sectionId}`;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
@@ -12,19 +14,63 @@ export default function FlashcardsTab({ cards, sectionId }) {
       return saved ? JSON.parse(saved) : {};
     } catch { return {}; }
   });
+  const syncTimer = useRef(null);
 
+  // Load statuses on section change
   useEffect(() => {
     setCurrentIndex(0);
     setFlipped(false);
+
+    // Load from localStorage first (instant)
+    let localStatuses = {};
     try {
       const saved = localStorage.getItem(storageKey);
-      setStatuses(saved ? JSON.parse(saved) : {});
-    } catch { setStatuses({}); }
-  }, [sectionId]);
+      localStatuses = saved ? JSON.parse(saved) : {};
+    } catch { /* ignore */ }
+    setStatuses(localStatuses);
 
+    // If logged in, fetch from database
+    if (user) {
+      fetch(`/api/progress/flashcards?sectionId=${sectionId}`)
+        .then(res => res.ok ? res.json() : null)
+        .then(data => {
+          if (!data) return;
+          const dbStatuses = data.statuses || {};
+
+          if (Object.keys(dbStatuses).length > 0) {
+            // Database has data — use it as source of truth
+            setStatuses(dbStatuses);
+            localStorage.setItem(storageKey, JSON.stringify(dbStatuses));
+          } else if (Object.keys(localStatuses).length > 0) {
+            // First-login migration: push localStorage to database
+            fetch('/api/progress/flashcards', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ sectionId, statuses: localStatuses }),
+            }).catch(() => {});
+          }
+        })
+        .catch(() => {});
+    }
+  }, [sectionId, user]);
+
+  // Save to localStorage on every change
   useEffect(() => {
     localStorage.setItem(storageKey, JSON.stringify(statuses));
   }, [statuses, storageKey]);
+
+  // Debounced sync to database when logged in
+  function syncToDatabase(newStatuses) {
+    if (!user) return;
+    if (syncTimer.current) clearTimeout(syncTimer.current);
+    syncTimer.current = setTimeout(() => {
+      fetch('/api/progress/flashcards', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sectionId, statuses: newStatuses }),
+      }).catch(() => {});
+    }, 1000);
+  }
 
   if (!cards || !cards.length) {
     return <div style={{ color: '#6b7a99', textAlign: 'center', padding: 40 }}>No flashcards available.</div>;
@@ -35,7 +81,9 @@ export default function FlashcardsTab({ cards, sectionId }) {
   const card = cards[currentIndex];
 
   function markCard(status) {
-    setStatuses(prev => ({ ...prev, [currentIndex]: status }));
+    const newStatuses = { ...statuses, [currentIndex]: status };
+    setStatuses(newStatuses);
+    syncToDatabase(newStatuses);
     if (currentIndex < cards.length - 1) {
       setCurrentIndex(currentIndex + 1);
       setFlipped(false);

@@ -7,6 +7,7 @@ import DiagramsTab from './DiagramsTab';
 import FlashcardsTab from './FlashcardsTab';
 import QuizTab from './QuizTab';
 import TutorTab from './TutorTab';
+import AuthButton from './AuthButton';
 
 const tabs = [
   { id: 'content', label: 'Content', icon: '\uD83D\uDCD6' },
@@ -121,6 +122,7 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
               )}
               <span className="content-header-section-num">Section {currentSection?.number}</span>
               <span className="content-header-unit-badge">Unit {currentUnit?.number}: {currentUnit?.title}</span>
+              <AuthButton />
             </div>
             <h1 className="content-header-title">{currentSection?.title}</h1>
             <div className="tab-bar">

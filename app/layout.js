@@ -1,11 +1,16 @@
 import "./globals.css";
+import { createClient } from '@/lib/supabase/server';
+import { AuthProvider } from '@/components/AuthProvider';
 
 export const metadata = {
   title: "Economics IAS — Edexcel Revision",
   description: "Comprehensive revision app for Edexcel International AS Level Economics covering Units 1 & 2",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+
   return (
     <html lang="en">
       <head>
@@ -14,7 +19,11 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <AuthProvider initialUser={user}>
+          {children}
+        </AuthProvider>
+      </body>
     </html>
   );
 }

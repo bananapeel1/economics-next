@@ -1,14 +1,31 @@
 "use client";
 import { useState, useEffect } from 'react';
+import { useAuth } from './AuthProvider';
 
 export default function QuizTab({ questions, sectionId }) {
+  const { user } = useAuth();
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const [bestScore, setBestScore] = useState(null);
+  const [saving, setSaving] = useState(false);
 
+  // Reset state and load best score on section change
   useEffect(() => {
     setAnswers({});
     setSubmitted(false);
-  }, [sectionId]);
+    setBestScore(null);
+
+    if (user && sectionId) {
+      fetch(`/api/progress/quiz?sectionId=${sectionId}`)
+        .then(res => res.ok ? res.json() : null)
+        .then(data => {
+          if (!data || !data.attempts || data.attempts.length === 0) return;
+          const best = Math.max(...data.attempts.map(a => a.score));
+          setBestScore({ score: best, total: data.attempts[0].total });
+        })
+        .catch(() => {});
+    }
+  }, [sectionId, user]);
 
   if (!questions || !questions.length) {
     return <div style={{ color: '#6b7a99', textAlign: 'center', padding: 40 }}>No quiz available.</div>;
@@ -21,6 +38,31 @@ export default function QuizTab({ questions, sectionId }) {
 
   function handleSubmit() {
     setSubmitted(true);
+
+    const finalScore = questions.reduce((acc, q, i) => acc + (answers[i] === q.correctIndex ? 1 : 0), 0);
+
+    // Save to database if logged in
+    if (user) {
+      setSaving(true);
+      fetch('/api/progress/quiz', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          sectionId,
+          score: finalScore,
+          total: questions.length,
+          answers,
+        }),
+      })
+        .then(() => {
+          // Update best score if this attempt is better
+          if (!bestScore || finalScore > bestScore.score) {
+            setBestScore({ score: finalScore, total: questions.length });
+          }
+        })
+        .catch(() => {})
+        .finally(() => setSaving(false));
+    }
   }
 
   function handleReset() {
@@ -41,6 +83,12 @@ export default function QuizTab({ questions, sectionId }) {
 
   return (
     <div>
+      {bestScore && !submitted && (
+        <div className="quiz-best-score">
+          Your best: {bestScore.score}/{bestScore.total}
+        </div>
+      )}
+
       {submitted && (
         <div className="quiz-score">
           <div className="quiz-score-number" style={{ color: scoreColor }}>
@@ -52,6 +100,7 @@ export default function QuizTab({ questions, sectionId }) {
              score >= questions.length * 0.5 ? 'Good effort — review the explanations below.' :
              'Keep studying — review the explanations below.'}
           </div>
+          {saving && <div style={{ fontSize: 12, color: '#6b7a99', marginTop: 4 }}>Saving...</div>}
           <button className="quiz-reset-btn" onClick={handleReset}>Try Again</button>
         </div>
       )}

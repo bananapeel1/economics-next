@@ -1,10 +1,23 @@
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
+import { createClient } from '@/lib/supabase/server';
 
 export const metadata = {
   title: 'Admin — Economics IAS',
 };
 
-export default function AdminLayout({ children }) {
+export default async function AdminLayout({ children }) {
+  // Server-side auth check (defense in depth — middleware handles this too)
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+
+  if (!user) {
+    redirect('/login?redirect=/admin');
+  }
+  if (user.app_metadata?.role !== 'admin') {
+    redirect('/');
+  }
+
   return (
     <div style={{ display: 'flex', height: '100vh', overflow: 'hidden' }}>
       <nav style={{

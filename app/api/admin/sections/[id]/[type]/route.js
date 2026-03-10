@@ -1,4 +1,5 @@
 import { createServerClient } from '@/lib/supabase-server';
+import { createClient } from '@/lib/supabase/server';
 import { NextResponse } from 'next/server';
 
 const TABLE_MAP = {
@@ -10,6 +11,12 @@ const TABLE_MAP = {
 };
 
 export async function PUT(request, { params }) {
+  // Auth check — require admin role
+  const supabaseAuth = await createClient();
+  const { data: { user } } = await supabaseAuth.auth.getUser();
+  if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  if (user.app_metadata?.role !== 'admin') return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+
   const { id, type } = await params;
   const tableName = TABLE_MAP[type];
 
