@@ -21,11 +21,26 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
   const [activeSection, setActiveSection] = useState(initialSectionId || sections[0]?.id);
   const [activeTab, setActiveTab] = useState('content');
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [sectionData, setSectionData] = useState(initialSectionData);
   const [isInitial, setIsInitial] = useState(true);
 
   const currentSection = sections.find(s => s.id === activeSection);
   const currentUnit = units.find(u => u.id === currentSection?.unit_id);
+
+  // Hydrate sidebar collapsed state from localStorage
+  useEffect(() => {
+    const saved = localStorage.getItem('sidebar-collapsed');
+    if (saved === 'true') setSidebarCollapsed(true);
+  }, []);
+
+  function toggleSidebarCollapsed() {
+    setSidebarCollapsed(prev => {
+      const next = !prev;
+      localStorage.setItem('sidebar-collapsed', String(next));
+      return next;
+    });
+  }
 
   useEffect(() => {
     // Skip fetch for initial section (data comes from server)
@@ -92,11 +107,18 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
           activeSection={activeSection}
           onSectionChange={handleSectionChange}
           isOpen={sidebarOpen}
+          isCollapsed={sidebarCollapsed}
+          onToggleCollapse={toggleSidebarCollapsed}
         />
 
         <div className="main-content">
           <div className="content-header">
             <div className="content-header-top">
+              {sidebarCollapsed && (
+                <button className="sidebar-expand-btn" onClick={toggleSidebarCollapsed} title="Expand sidebar">
+                  &#9776;
+                </button>
+              )}
               <span className="content-header-section-num">Section {currentSection?.number}</span>
               <span className="content-header-unit-badge">Unit {currentUnit?.number}: {currentUnit?.title}</span>
             </div>

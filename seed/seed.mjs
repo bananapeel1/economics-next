@@ -13,9 +13,13 @@ envContent.split('\n').forEach(line => {
 
 const supabase = createClient(env.NEXT_PUBLIC_SUPABASE_URL, env.SUPABASE_SERVICE_ROLE_KEY);
 
+const subjects = [
+  { slug: 'economics', name: 'Economics', code: 'ECON', description: 'Edexcel International A-Level Economics', sort_order: 1 },
+];
+
 const units = [
-  { number: 1, title: 'Markets in Action', code: 'WEC11' },
-  { number: 2, title: 'Macroeconomic Performance & Policy', code: 'WEC12' },
+  { number: 1, title: 'Markets in Action', code: 'WEC11', subject: 'economics' },
+  { number: 2, title: 'Macroeconomic Performance & Policy', code: 'WEC12', subject: 'economics' },
 ];
 
 const sections = [
@@ -36,11 +40,24 @@ const sections = [
 async function seed() {
   console.log('🌱 Starting seed...\n');
 
-  // 1. Insert units
+  // 1. Insert subjects
+  console.log('📦 Inserting subjects...');
+  const { data: insertedSubjects, error: subjectsErr } = await supabase
+    .from('subjects')
+    .upsert(subjects, { onConflict: 'slug' })
+    .select();
+  if (subjectsErr) { console.error('Subjects error:', subjectsErr); return; }
+  console.log(`   ✅ ${insertedSubjects.length} subjects inserted`);
+
+  // Map subject slug to ID
+  const subjectIdMap = {};
+  insertedSubjects.forEach(s => { subjectIdMap[s.slug] = s.id; });
+
+  // 2. Insert units
   console.log('📦 Inserting units...');
   const { data: insertedUnits, error: unitsErr } = await supabase
     .from('units')
-    .upsert(units.map(u => ({ number: u.number, title: u.title, code: u.code })), { onConflict: 'number' })
+    .upsert(units.map(u => ({ number: u.number, title: u.title, code: u.code, subject_id: subjectIdMap[u.subject] })), { onConflict: 'number' })
     .select();
   if (unitsErr) { console.error('Units error:', unitsErr); return; }
   console.log(`   ✅ ${insertedUnits.length} units inserted`);

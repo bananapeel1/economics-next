@@ -1,7 +1,7 @@
 "use client";
 import { useState } from 'react';
 
-export default function Sidebar({ sections, units, activeSection, onSectionChange, isOpen }) {
+export default function Sidebar({ sections, units, activeSection, onSectionChange, isOpen, isCollapsed, onToggleCollapse }) {
   const [expandedUnits, setExpandedUnits] = useState({ 1: true, 2: true });
 
   function toggleUnit(unitNum) {
@@ -9,13 +9,18 @@ export default function Sidebar({ sections, units, activeSection, onSectionChang
   }
 
   return (
-    <nav className={`sidebar ${isOpen ? 'open' : ''}`}>
+    <nav className={`sidebar ${isOpen ? 'open' : ''} ${isCollapsed ? 'collapsed' : ''}`}>
       <div className="sidebar-header">
         <div className="sidebar-logo">
           <div className="sidebar-logo-icon">E</div>
           <span className="sidebar-logo-text">Economics IAS</span>
         </div>
         <div className="sidebar-subtitle">Edexcel International A-Level</div>
+        {onToggleCollapse && (
+          <button className="sidebar-collapse-btn" onClick={onToggleCollapse} title="Collapse sidebar">
+            &#x2190;
+          </button>
+        )}
       </div>
 
       {units.map(unit => {

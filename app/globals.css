@@ -28,9 +28,10 @@ body {
 .sidebar {
   width: 280px; min-width: 280px; background: #0f1117;
   border-right: 1px solid #2a3045; display: flex; flex-direction: column;
-  overflow-y: auto; transition: transform 0.3s ease;
+  overflow-y: auto; transition: width 0.3s ease, min-width 0.3s ease, transform 0.3s ease;
 }
-.sidebar-header { padding: 20px 20px 16px; border-bottom: 1px solid #2a3045; }
+.sidebar.collapsed { width: 0; min-width: 0; overflow: hidden; border-right: none; }
+.sidebar-header { padding: 20px 20px 16px; border-bottom: 1px solid #2a3045; position: relative; }
 .sidebar-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
 .sidebar-logo-icon {
   width: 32px; height: 32px; background: linear-gradient(135deg, #059669, #10b981);
@@ -68,6 +69,24 @@ body {
   font-family: 'DM Mono', monospace; font-size: 11px; color: #4a5568; min-width: 32px;
 }
 .sidebar-section-item.active .sidebar-section-number { color: #059669; }
+
+/* Sidebar collapse/expand buttons */
+.sidebar-collapse-btn {
+  position: absolute; top: 20px; right: 12px;
+  background: none; border: 1px solid #2a3045; color: #6b7a99;
+  width: 28px; height: 28px; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-size: 14px; transition: all 0.15s;
+}
+.sidebar-collapse-btn:hover { background: rgba(5,150,105,0.1); border-color: #059669; color: #059669; }
+.sidebar-expand-btn {
+  background: none; border: 1px solid #2a3045; color: #6b7a99;
+  width: 32px; height: 32px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-size: 18px; transition: all 0.15s;
+  margin-right: 12px; flex-shrink: 0;
+}
+.sidebar-expand-btn:hover { background: rgba(5,150,105,0.1); border-color: #059669; color: #059669; }
 
 /* Mobile */
 .mobile-header {
@@ -272,4 +291,6 @@ body {
   .content-header-title { font-size: 20px; }
   .flashcard, .flashcard-progress { max-width: 100%; }
   .tutor-container { height: calc(100vh - 240px); }
+  .sidebar-collapse-btn, .sidebar-expand-btn { display: none; }
+  .sidebar.collapsed { width: 280px; min-width: 280px; overflow-y: auto; }
 }
