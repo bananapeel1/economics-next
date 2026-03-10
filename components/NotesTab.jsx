@@ -1,7 +1,13 @@
 "use client";
-export default function NotesTab({ data }) {
+import { highlightGlossaryTerms } from '@/lib/glossary-highlight';
+
+export default function NotesTab({ data, glossaryTerms }) {
   if (!data || !data.length) {
     return <div style={{ color: '#6b7a99', textAlign: 'center', padding: 40 }}>No notes available.</div>;
+  }
+
+  function g(html) {
+    return highlightGlossaryTerms(html, glossaryTerms);
   }
 
   return (
@@ -11,7 +17,7 @@ export default function NotesTab({ data }) {
           <h3 className="notes-section-title">{section.title}</h3>
           <ul className="notes-list">
             {section.points.map((point, j) => (
-              <li key={j} dangerouslySetInnerHTML={{ __html: point }} />
+              <li key={j} dangerouslySetInnerHTML={{ __html: g(point) }} />
             ))}
           </ul>
         </div>

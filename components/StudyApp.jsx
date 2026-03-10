@@ -36,6 +36,7 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [sectionData, setSectionData] = useState(initialSectionData);
   const [isInitial, setIsInitial] = useState(true);
+  const [glossaryTerms, setGlossaryTerms] = useState([]);
 
   const currentSection = sections.find(s => s.id === activeSection);
   const currentUnit = units.find(u => u.id === currentSection?.unit_id);
@@ -44,6 +45,14 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
   useEffect(() => {
     const saved = localStorage.getItem('sidebar-collapsed');
     if (saved === 'true') setSidebarCollapsed(true);
+  }, []);
+
+  // Fetch glossary terms once for inline highlighting
+  useEffect(() => {
+    fetch('/api/glossary')
+      .then(res => res.ok ? res.json() : [])
+      .then(setGlossaryTerms)
+      .catch(() => {});
   }, []);
 
   function toggleSidebarCollapsed() {
@@ -93,8 +102,8 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
     }
 
     switch (activeTab) {
-      case 'content': return <ContentTab data={sectionData.content} />;
-      case 'notes': return <NotesTab data={sectionData.notes} />;
+      case 'content': return <ContentTab data={sectionData.content} glossaryTerms={glossaryTerms} />;
+      case 'notes': return <NotesTab data={sectionData.notes} glossaryTerms={glossaryTerms} />;
       case 'diagrams': return <DiagramsTab data={sectionData.diagrams} />;
       case 'flashcards': return <FlashcardsTab cards={sectionData.flashcards} sectionId={activeSection} />;
       case 'quiz': return <QuizTab questions={sectionData.quiz} sectionId={activeSection} />;

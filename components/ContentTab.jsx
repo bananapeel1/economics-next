@@ -1,7 +1,13 @@
 "use client";
-export default function ContentTab({ data }) {
+import { highlightGlossaryTerms } from '@/lib/glossary-highlight';
+
+export default function ContentTab({ data, glossaryTerms }) {
   if (!data || !data.length) {
     return <div style={{ color: '#6b7a99', textAlign: 'center', padding: 40 }}>No content available.</div>;
+  }
+
+  function g(html) {
+    return highlightGlossaryTerms(html, glossaryTerms);
   }
 
   return (
@@ -21,11 +27,11 @@ export default function ContentTab({ data }) {
                 {concept.points && (
                   <ul>
                     {concept.points.map((point, k) => (
-                      <li key={k} dangerouslySetInnerHTML={{ __html: point }} />
+                      <li key={k} dangerouslySetInnerHTML={{ __html: g(point) }} />
                     ))}
                   </ul>
                 )}
-                {concept.text && <p dangerouslySetInnerHTML={{ __html: concept.text }} />}
+                {concept.text && <p dangerouslySetInnerHTML={{ __html: g(concept.text) }} />}
                 {concept.formula && <div className="formula-box">{concept.formula}</div>}
                 {concept.formulas && concept.formulas.map((f, k) => (
                   <div className="formula-box" key={k}>{f}</div>
