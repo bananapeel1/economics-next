@@ -1,8 +1,11 @@
 "use client";
 import { useState } from 'react';
+import Link from 'next/link';
+import { useAuth } from './AuthProvider';
 
 export default function Sidebar({ sections, units, activeSection, onSectionChange, isOpen, isCollapsed, onToggleCollapse }) {
   const [expandedUnits, setExpandedUnits] = useState({ 1: true, 2: true });
+  const { user } = useAuth();
 
   function toggleUnit(unitNum) {
     setExpandedUnits(prev => ({ ...prev, [unitNum]: !prev[unitNum] }));
@@ -50,6 +53,25 @@ export default function Sidebar({ sections, units, activeSection, onSectionChang
           </div>
         );
       })}
+
+      {/* Resources section */}
+      <div className="sidebar-resources">
+        <div className="sidebar-resources-title">Resources</div>
+        <Link href="/command-words" className="sidebar-resource-link">
+          <span className="sidebar-resource-icon">📋</span>
+          Command Words
+        </Link>
+        <Link href="/glossary" className="sidebar-resource-link">
+          <span className="sidebar-resource-icon">📖</span>
+          Glossary
+        </Link>
+        {user && (
+          <Link href="/bookmarks" className="sidebar-resource-link">
+            <span className="sidebar-resource-icon">🔖</span>
+            Bookmarks
+          </Link>
+        )}
+      </div>
     </nav>
   );
 }

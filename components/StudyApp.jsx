@@ -7,6 +7,8 @@ import DiagramsTab from './DiagramsTab';
 import FlashcardsTab from './FlashcardsTab';
 import QuizTab from './QuizTab';
 import TutorTab from './TutorTab';
+import MistakesTab from './MistakesTab';
+import BookmarkButton from './BookmarkButton';
 import AuthButton from './AuthButton';
 
 const tabs = [
@@ -15,11 +17,20 @@ const tabs = [
   { id: 'diagrams', label: 'Diagrams', icon: '\uD83D\uDCCA' },
   { id: 'flashcards', label: 'Flashcards', icon: '\uD83C\uDCCF' },
   { id: 'quiz', label: 'Quiz', icon: '\u270F\uFE0F' },
+  { id: 'mistakes', label: 'Mistakes', icon: '\u26A0\uFE0F' },
   { id: 'tutor', label: 'Tutor', icon: '\uD83E\uDD16' },
 ];
 
 export default function StudyApp({ sections, units, initialSectionData, initialSectionId }) {
-  const [activeSection, setActiveSection] = useState(initialSectionId || sections[0]?.id);
+  // Support ?section=xxx URL param (from bookmarks page)
+  const urlSection = typeof window !== 'undefined'
+    ? new URLSearchParams(window.location.search).get('section')
+    : null;
+  const startSection = (urlSection && sections.some(s => s.id === urlSection))
+    ? urlSection
+    : (initialSectionId || sections[0]?.id);
+
+  const [activeSection, setActiveSection] = useState(startSection);
   const [activeTab, setActiveTab] = useState('content');
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
@@ -87,6 +98,7 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
       case 'diagrams': return <DiagramsTab data={sectionData.diagrams} />;
       case 'flashcards': return <FlashcardsTab cards={sectionData.flashcards} sectionId={activeSection} />;
       case 'quiz': return <QuizTab questions={sectionData.quiz} sectionId={activeSection} />;
+      case 'mistakes': return <MistakesTab data={sectionData.mistakes} />;
       case 'tutor': return <TutorTab section={currentSection} unit={currentUnit} />;
       default: return null;
     }
@@ -122,6 +134,7 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
               )}
               <span className="content-header-section-num">Section {currentSection?.number}</span>
               <span className="content-header-unit-badge">Unit {currentUnit?.number}: {currentUnit?.title}</span>
+              <BookmarkButton sectionId={activeSection} />
               <AuthButton />
             </div>
             <h1 className="content-header-title">{currentSection?.title}</h1>

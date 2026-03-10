@@ -7,6 +7,7 @@ const editorTabs = [
   { id: 'diagrams', label: 'Diagrams' },
   { id: 'flashcards', label: 'Flashcards' },
   { id: 'quiz', label: 'Quiz' },
+  { id: 'mistakes', label: 'Mistakes' },
 ];
 
 export default function SectionEditor({ sectionId, initialData }) {
@@ -69,6 +70,9 @@ export default function SectionEditor({ sectionId, initialData }) {
         )}
         {activeTab === 'quiz' && (
           <QuizEditor data={data.quiz} onChange={updateData} />
+        )}
+        {activeTab === 'mistakes' && (
+          <MistakesEditor data={data.mistakes || []} onChange={updateData} />
         )}
         {activeTab === 'notes' && (
           <NotesEditor data={data.notes} onChange={updateData} />
@@ -357,6 +361,103 @@ function NotesEditor({ data, onChange }) {
         cursor: 'pointer', fontFamily: 'inherit'
       }}>
         + Add Section
+      </button>
+    </div>
+  );
+}
+
+// Mistakes editor
+function MistakesEditor({ data, onChange }) {
+  function updateItem(index, field, value) {
+    const newData = [...data];
+    newData[index] = { ...newData[index], [field]: value };
+    onChange(newData);
+  }
+
+  function addItem() {
+    onChange([...data, { title: '', mistake: '', correction: '', examTip: '' }]);
+  }
+
+  function removeItem(index) {
+    onChange(data.filter((_, i) => i !== index));
+  }
+
+  return (
+    <div>
+      <div style={{ fontSize: 13, color: '#6b7a99', marginBottom: 12 }}>{data.length} common mistakes</div>
+      {data.map((item, i) => (
+        <div key={i} style={{
+          background: '#1e2335', border: '1px solid #2a3045', borderRadius: 10,
+          padding: 16, marginBottom: 12
+        }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
+            <span style={{ fontSize: 11, fontWeight: 700, color: '#f59e0b', textTransform: 'uppercase' }}>Mistake {i + 1}</span>
+            <button onClick={() => removeItem(i)} style={{
+              background: 'none', border: 'none', color: '#ef4444', fontSize: 12, cursor: 'pointer'
+            }}>Remove</button>
+          </div>
+          <div style={{ marginBottom: 8 }}>
+            <label style={{ fontSize: 11, color: '#6b7a99', display: 'block', marginBottom: 4 }}>Title</label>
+            <input
+              value={item.title}
+              onChange={e => updateItem(i, 'title', e.target.value)}
+              placeholder="e.g. Confusing movement along vs shift of demand curve"
+              style={{
+                width: '100%', padding: '8px 12px', borderRadius: 6, border: '1px solid #2a3045',
+                background: '#151825', color: '#e8ecf5', fontSize: 13, fontFamily: 'inherit', outline: 'none'
+              }}
+            />
+          </div>
+          <div style={{ marginBottom: 8 }}>
+            <label style={{ fontSize: 11, color: '#ef4444', display: 'block', marginBottom: 4 }}>Common Mistake</label>
+            <textarea
+              value={item.mistake}
+              onChange={e => updateItem(i, 'mistake', e.target.value)}
+              rows={3}
+              placeholder="What students get wrong..."
+              style={{
+                width: '100%', padding: '8px 12px', borderRadius: 6, border: '1px solid #2a3045',
+                background: '#151825', color: '#e8ecf5', fontSize: 13, fontFamily: 'inherit',
+                resize: 'vertical', outline: 'none'
+              }}
+            />
+          </div>
+          <div style={{ marginBottom: 8 }}>
+            <label style={{ fontSize: 11, color: '#10b981', display: 'block', marginBottom: 4 }}>Correct Approach</label>
+            <textarea
+              value={item.correction}
+              onChange={e => updateItem(i, 'correction', e.target.value)}
+              rows={3}
+              placeholder="The right way to answer..."
+              style={{
+                width: '100%', padding: '8px 12px', borderRadius: 6, border: '1px solid #2a3045',
+                background: '#151825', color: '#e8ecf5', fontSize: 13, fontFamily: 'inherit',
+                resize: 'vertical', outline: 'none'
+              }}
+            />
+          </div>
+          <div>
+            <label style={{ fontSize: 11, color: '#f59e0b', display: 'block', marginBottom: 4 }}>Exam Tip (optional)</label>
+            <textarea
+              value={item.examTip || ''}
+              onChange={e => updateItem(i, 'examTip', e.target.value)}
+              rows={2}
+              placeholder="Extra tip for the exam..."
+              style={{
+                width: '100%', padding: '8px 12px', borderRadius: 6, border: '1px solid #2a3045',
+                background: '#151825', color: '#e8ecf5', fontSize: 13, fontFamily: 'inherit',
+                resize: 'vertical', outline: 'none'
+              }}
+            />
+          </div>
+        </div>
+      ))}
+      <button onClick={addItem} style={{
+        padding: '8px 20px', background: 'rgba(5,150,105,0.15)', color: '#059669',
+        border: '1px solid #059669', borderRadius: 8, fontSize: 13, fontWeight: 600,
+        cursor: 'pointer', fontFamily: 'inherit'
+      }}>
+        + Add Mistake
       </button>
     </div>
   );

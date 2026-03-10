@@ -16,12 +16,13 @@ export default async function EditSection({ params }) {
     return <div style={{ color: '#ef4444', padding: 40 }}>Section not found.</div>;
   }
 
-  const [content, notes, diagrams, flashcards, quiz] = await Promise.all([
+  const [content, notes, diagrams, flashcards, quiz, mistakes] = await Promise.all([
     supabase.from('section_content').select('data').eq('section_id', id).single(),
     supabase.from('section_notes').select('data').eq('section_id', id).single(),
     supabase.from('section_diagrams').select('data').eq('section_id', id).single(),
     supabase.from('section_flashcards').select('data').eq('section_id', id).single(),
     supabase.from('section_quiz').select('data').eq('section_id', id).single(),
+    supabase.from('section_common_mistakes').select('data').eq('section_id', id).single(),
   ]);
 
   const sectionData = {
@@ -30,6 +31,7 @@ export default async function EditSection({ params }) {
     diagrams: diagrams.data?.data || [],
     flashcards: flashcards.data?.data || [],
     quiz: quiz.data?.data || [],
+    mistakes: mistakes.data?.data || [],
   };
 
   return (
