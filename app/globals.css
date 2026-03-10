@@ -631,7 +631,71 @@ body {
 .collapsed .sidebar-resources { display: none; }
 
 /* ─── Glossary Tooltips (inline) ─── */
-.glossary-highlight { text-decoration: underline dotted rgba(5,150,105,0.5); text-underline-offset: 3px; cursor: help; position: relative; }
+.glossary-highlight { text-decoration: underline dotted rgba(5,150,105,0.5); text-underline-offset: 3px; cursor: help; }
 .glossary-highlight:hover { text-decoration-color: #059669; color: #059669; }
-.glossary-highlight:hover::after { content: attr(data-definition); position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%); background: #151825; border: 1px solid #059669; color: #e8ecf5; padding: 10px 14px; border-radius: 8px; font-size: 12px; line-height: 1.5; max-width: 300px; min-width: 180px; white-space: normal; z-index: 100; pointer-events: none; box-shadow: 0 4px 20px rgba(0,0,0,0.4); font-weight: 400; }
-.glossary-highlight:hover::before { content: ''; position: absolute; bottom: calc(100% + 2px); left: 50%; transform: translateX(-50%); border: 5px solid transparent; border-top-color: #059669; z-index: 101; pointer-events: none; }
+
+/* Single JS-managed tooltip — fixes overlap issue */
+.glossary-tooltip-popup {
+  background: #151825; border: 1px solid #059669; color: #e8ecf5;
+  padding: 10px 14px; border-radius: 8px; font-size: 12px; line-height: 1.5;
+  white-space: normal; z-index: 9999; pointer-events: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4); font-weight: 400;
+  animation: glossaryFadeIn 0.15s ease;
+}
+.glossary-tooltip-arrow {
+  position: absolute; bottom: -6px; transform: translateX(-50%);
+  width: 0; height: 0; border: 5px solid transparent; border-top-color: #059669;
+}
+@keyframes glossaryFadeIn { from { opacity: 0; transform: translateY(calc(-100% + 4px)); } to { opacity: 1; transform: translateY(-100%); } }
+
+/* ─── Past Papers ─── */
+.past-papers-filters {
+  display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+}
+.past-papers-select {
+  padding: 10px 14px; background: #151825; border: 1px solid #2a3045;
+  border-radius: 8px; color: #e8ecf5; font-size: 14px; outline: none;
+  min-width: 120px; cursor: pointer;
+}
+.past-papers-select:focus { border-color: #059669; }
+.past-papers-year-group { margin-bottom: 32px; }
+.past-papers-year-title {
+  font-size: 20px; font-weight: 700; color: #059669; margin-bottom: 16px;
+  padding-bottom: 8px; border-bottom: 1px solid #2a3045;
+}
+.past-papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;
+}
+.past-paper-card {
+  background: #151825; border: 1px solid #2a3045; border-radius: 12px;
+  padding: 20px; transition: border-color 0.2s;
+}
+.past-paper-card:hover { border-color: #3a4565; }
+.past-paper-card-header {
+  display: flex; align-items: center; gap: 8px; margin-bottom: 10px;
+}
+.past-paper-badge {
+  background: rgba(5,150,105,0.15); color: #10b981; font-size: 11px;
+  font-weight: 600; padding: 2px 8px; border-radius: 4px; text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.past-paper-session {
+  font-size: 12px; color: #6b7a99; font-weight: 500;
+}
+.past-paper-title {
+  font-size: 15px; font-weight: 600; color: #e8ecf5; margin-bottom: 16px;
+}
+.past-paper-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.past-paper-btn {
+  display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px;
+  border-radius: 6px; font-size: 12px; font-weight: 600; text-decoration: none;
+  transition: all 0.15s; cursor: pointer; border: none;
+}
+.past-paper-btn-primary {
+  background: rgba(5,150,105,0.15); color: #10b981;
+}
+.past-paper-btn-primary:hover { background: rgba(5,150,105,0.25); }
+.past-paper-btn-secondary {
+  background: rgba(99,102,241,0.15); color: #818cf8;
+}
+.past-paper-btn-secondary:hover { background: rgba(99,102,241,0.25); }

@@ -4,7 +4,7 @@ import BookmarksPage from '@/components/BookmarksPage';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Bookmarks — Economics IAS',
+  title: 'Bookmarks — Rivvy Learn',
 };
 
 export default async function BookmarksRoute() {

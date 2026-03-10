@@ -50,8 +50,8 @@ export default function LoginPage() {
     <div className="auth-page">
       <div className="auth-card">
         <div className="auth-logo">
-          <div className="auth-logo-icon">E</div>
-          <span className="auth-logo-text">Economics IAS</span>
+          <div className="auth-logo-icon">R</div>
+          <span className="auth-logo-text">Rivvy Learn</span>
         </div>
         <h1 className="auth-title">Sign In</h1>
 

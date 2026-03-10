@@ -3,7 +3,7 @@ import { createClient } from '@/lib/supabase/server';
 import { AuthProvider } from '@/components/AuthProvider';
 
 export const metadata = {
-  title: "Economics IAS — Edexcel Revision",
+  title: "Rivvy Learn — Edexcel Economics Revision",
   description: "Comprehensive revision app for Edexcel International AS Level Economics covering Units 1 & 2",
 };
 

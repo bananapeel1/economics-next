@@ -15,8 +15,8 @@ export default function Sidebar({ sections, units, activeSection, onSectionChang
     <nav className={`sidebar ${isOpen ? 'open' : ''} ${isCollapsed ? 'collapsed' : ''}`}>
       <div className="sidebar-header">
         <div className="sidebar-logo">
-          <div className="sidebar-logo-icon">E</div>
-          <span className="sidebar-logo-text">Economics IAS</span>
+          <div className="sidebar-logo-icon">R</div>
+          <span className="sidebar-logo-text">Rivvy Learn</span>
         </div>
         <div className="sidebar-subtitle">Edexcel International A-Level</div>
         {onToggleCollapse && (
@@ -64,6 +64,10 @@ export default function Sidebar({ sections, units, activeSection, onSectionChang
         <Link href="/glossary" className="sidebar-resource-link">
           <span className="sidebar-resource-icon">📖</span>
           Glossary
+        </Link>
+        <Link href="/past-papers" className="sidebar-resource-link">
+          <span className="sidebar-resource-icon">📄</span>
+          Past Papers
         </Link>
         {user && (
           <Link href="/bookmarks" className="sidebar-resource-link">

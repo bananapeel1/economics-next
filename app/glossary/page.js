@@ -3,7 +3,7 @@ import GlossaryPage from '@/components/GlossaryPage';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Glossary — Economics IAS',
+  title: 'Glossary — Rivvy Learn',
   description: 'Comprehensive glossary of Edexcel Economics key terms and definitions.',
 };
 

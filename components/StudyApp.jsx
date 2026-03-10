@@ -10,6 +10,7 @@ import TutorTab from './TutorTab';
 import MistakesTab from './MistakesTab';
 import BookmarkButton from './BookmarkButton';
 import AuthButton from './AuthButton';
+import GlossaryTooltip from './GlossaryTooltip';
 
 const tabs = [
   { id: 'content', label: 'Content', icon: '\uD83D\uDCD6' },
@@ -164,6 +165,7 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
           <div className="tab-content">
             {renderTab()}
           </div>
+          <GlossaryTooltip />
         </div>
       </div>
     </>
