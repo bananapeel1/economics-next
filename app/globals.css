@@ -761,7 +761,6 @@ body {
   font-size: 17px; font-weight: 700; color: #e8ecf5; margin: 0;
   transition: color 0.2s;
 }
-.stepper-step.locked .stepper-step-title { color: #4a5270; }
 .stepper-step.completed .stepper-step-header { cursor: pointer; }
 .stepper-step.completed .stepper-step-title { color: #8892a8; }
 .stepper-step.completed:hover .stepper-step-title { color: #c0c8dc; }
@@ -771,9 +770,6 @@ body {
   opacity: 0; transition: opacity 0.2s;
 }
 .stepper-step.completed:hover .stepper-expand-hint { opacity: 1; }
-.stepper-locked-hint {
-  font-size: 11px; color: #3a4565; font-style: italic;
-}
 
 .stepper-step-body {
   padding: 16px 0 24px;

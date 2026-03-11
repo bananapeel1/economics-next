@@ -2,19 +2,28 @@
 import { useState, useRef, useEffect } from 'react';
 import { highlightGlossaryTerms } from '@/lib/glossary-highlight';
 
-export default function ContentTab({ data, glossaryTerms, onStepChange }) {
-  const [activeStep, setActiveStep] = useState(0);
-  const [furthestStep, setFurthestStep] = useState(0);
+export default function ContentTab({ data, glossaryTerms, onStepChange, initialPosition, sectionId }) {
+  const [activeStep, setActiveStep] = useState(initialPosition?.activeStep || 0);
+  const [furthestStep, setFurthestStep] = useState(initialPosition?.furthestStep || 0);
   const stepRefs = useRef([]);
   const containerRef = useRef(null);
+  const prevSectionId = useRef(sectionId);
 
-  // Reset when data changes (section switch)
+  // When switching sections, restore saved position or reset
   useEffect(() => {
-    setActiveStep(0);
-    setFurthestStep(0);
-  }, [data]);
+    if (sectionId !== prevSectionId.current) {
+      prevSectionId.current = sectionId;
+      if (initialPosition) {
+        setActiveStep(initialPosition.activeStep);
+        setFurthestStep(initialPosition.furthestStep);
+      } else {
+        setActiveStep(0);
+        setFurthestStep(0);
+      }
+    }
+  }, [sectionId, initialPosition]);
 
-  // Report step changes to parent (for sidebar dots)
+  // Report step changes to parent (for sidebar dots + position memory)
   useEffect(() => {
     if (onStepChange && data?.length) {
       onStepChange({ activeStep, furthestStep, totalSteps: data.length });
@@ -30,15 +39,19 @@ export default function ContentTab({ data, glossaryTerms, onStepChange }) {
   }
 
   function goToStep(index) {
-    if (index > furthestStep) return;
+    // All steps are always accessible
     setActiveStep(index);
+    // Expand furthest if jumping ahead
+    if (index > furthestStep) {
+      setFurthestStep(index);
+    }
     setTimeout(() => {
       stepRefs.current[index]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 50);
   }
 
   function handleContinue(e) {
-    e.stopPropagation(); // Prevent parent step onClick from firing
+    e.stopPropagation();
     const next = activeStep + 1;
     if (next < data.length) {
       const newFurthest = Math.max(furthestStep, next);
@@ -62,22 +75,22 @@ export default function ContentTab({ data, glossaryTerms, onStepChange }) {
     <div className="stepper-container" ref={containerRef}>
       {data.map((block, i) => {
         const isActive = i === activeStep;
-        const isUnlocked = i <= furthestStep;
+        const isVisited = i <= furthestStep;
 
         return (
           <div
             key={i}
             ref={el => (stepRefs.current[i] = el)}
-            className={`stepper-step ${isActive ? 'active' : ''} ${isUnlocked && !isActive ? 'completed' : ''} ${!isUnlocked ? 'locked' : ''}`}
+            className={`stepper-step ${isActive ? 'active' : ''} ${isVisited && !isActive ? 'completed' : ''}`}
           >
             {/* Step indicator line on left */}
             <div className="stepper-rail">
               <div
-                className={`stepper-node ${isActive ? 'active' : ''} ${isUnlocked ? 'unlocked' : ''}`}
-                onClick={() => isUnlocked ? goToStep(i) : null}
-                style={{ cursor: isUnlocked ? 'pointer' : 'default' }}
+                className={`stepper-node ${isActive ? 'active' : ''} unlocked`}
+                onClick={() => goToStep(i)}
+                style={{ cursor: 'pointer' }}
               >
-                {isUnlocked && !isActive ? (
+                {isVisited && !isActive ? (
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
@@ -94,15 +107,12 @@ export default function ContentTab({ data, glossaryTerms, onStepChange }) {
             <div className="stepper-content">
               <div
                 className="stepper-step-header"
-                onClick={() => isUnlocked ? goToStep(i) : null}
-                style={{ cursor: isUnlocked ? 'pointer' : 'default' }}
+                onClick={() => goToStep(i)}
+                style={{ cursor: 'pointer' }}
               >
                 <h2 className="stepper-step-title">{block.title || `Topic ${i + 1}`}</h2>
-                {isUnlocked && !isActive && (
+                {isVisited && !isActive && (
                   <span className="stepper-expand-hint">Click to review</span>
-                )}
-                {!isUnlocked && (
-                  <span className="stepper-locked-hint">Complete previous topic first</span>
                 )}
               </div>
 

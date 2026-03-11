@@ -42,6 +42,9 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
   const [glossaryTerms, setGlossaryTerms] = useState([]);
   const [contentStepInfo, setContentStepInfo] = useState(null);
 
+  // Remember stepper position per section: { sectionId: { activeStep, furthestStep } }
+  const stepperPositions = useRef({});
+
   // Saved progress: { sectionId: { furthest_step, total_steps, completed } }
   const [savedProgress, setSavedProgress] = useState({});
 
@@ -138,15 +141,22 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
     if (!el) return;
 
     const scrollTop = el.scrollTop;
-    const scrollHeight = el.scrollHeight - el.clientHeight;
+    const maxScroll = el.scrollHeight - el.clientHeight;
 
-    const progress = scrollHeight > 0 ? Math.min(scrollTop / scrollHeight, 1) : 0;
+    const progress = maxScroll > 0 ? Math.min(scrollTop / maxScroll, 1) : 0;
     setReadProgress(progress);
 
+    // Near bottom of page — always show header to avoid bounce-glitch
+    if (maxScroll - scrollTop < 30) {
+      setHeaderHidden(false);
+      lastScrollTop.current = scrollTop;
+      return;
+    }
+
     const delta = scrollTop - lastScrollTop.current;
-    if (delta > 8 && scrollTop > scrollThreshold) {
+    if (delta > 10 && scrollTop > scrollThreshold) {
       setHeaderHidden(true);
-    } else if (delta < -8) {
+    } else if (delta < -10) {
       setHeaderHidden(false);
     }
 
@@ -179,7 +189,13 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
   const handleStepChange = useCallback((info) => {
     setContentStepInfo(info);
 
-    // Save when section is fully completed
+    // Remember position for this section
+    stepperPositions.current[activeSection] = {
+      activeStep: info.activeStep,
+      furthestStep: info.furthestStep,
+    };
+
+    // Save to DB when section is fully completed
     if (user && info.furthestStep >= info.totalSteps - 1) {
       saveProgress(activeSection, info.furthestStep, info.totalSteps);
     }
@@ -204,7 +220,7 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
     }
 
     switch (activeTab) {
-      case 'content': return <ContentTab data={sectionData.content} glossaryTerms={glossaryTerms} onStepChange={handleStepChange} />;
+      case 'content': return <ContentTab data={sectionData.content} glossaryTerms={glossaryTerms} onStepChange={handleStepChange} initialPosition={stepperPositions.current[activeSection] || null} sectionId={activeSection} />;
       case 'notes': return <NotesTab data={sectionData.notes} glossaryTerms={glossaryTerms} />;
       case 'diagrams': return <DiagramsTab data={sectionData.diagrams} />;
       case 'flashcards': return <FlashcardsTab cards={sectionData.flashcards} sectionId={activeSection} />;
