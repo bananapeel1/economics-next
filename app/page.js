@@ -4,10 +4,15 @@ import StudyApp from '@/components/StudyApp';
 export default async function HomePage() {
   const supabase = createServerClient();
 
-  // Fetch units and sections for sidebar
+  // Fetch subjects, units and sections
+  const { data: subjects } = await supabase
+    .from('subjects')
+    .select('*')
+    .order('sort_order');
+
   const { data: units } = await supabase
     .from('units')
-    .select('*')
+    .select('*, subjects(slug)')
     .order('number');
 
   const { data: sections } = await supabase
@@ -15,8 +20,17 @@ export default async function HomePage() {
     .select('*')
     .order('sort_order');
 
-  // Fetch initial section data (first section)
-  const firstSectionId = sections?.[0]?.id;
+  // Default to first subject
+  const defaultSubject = subjects?.[0] || null;
+  const defaultUnits = defaultSubject
+    ? (units || []).filter(u => u.subject_id === defaultSubject.id)
+    : [];
+  const defaultSectionIds = new Set(
+    (sections || []).filter(s => defaultUnits.some(u => u.id === s.unit_id)).map(s => s.id)
+  );
+  const firstSectionId = (sections || []).find(s => defaultSectionIds.has(s.id))?.id || null;
+
+  // Fetch initial section data
   let initialData = null;
   if (firstSectionId) {
     const [content, notes, diagrams, flashcards, quiz, mistakes] = await Promise.all([
@@ -39,6 +53,7 @@ export default async function HomePage() {
 
   return (
     <StudyApp
+      subjects={subjects || []}
       sections={sections || []}
       units={units || []}
       initialSectionData={initialData}

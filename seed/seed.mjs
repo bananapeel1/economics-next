@@ -57,7 +57,7 @@ async function seed() {
   console.log('📦 Inserting units...');
   const { data: insertedUnits, error: unitsErr } = await supabase
     .from('units')
-    .upsert(units.map(u => ({ number: u.number, title: u.title, code: u.code, subject_id: subjectIdMap[u.subject] })), { onConflict: 'number' })
+    .upsert(units.map(u => ({ number: u.number, title: u.title, code: u.code, subject_id: subjectIdMap[u.subject] })), { onConflict: 'number,subject_id' })
     .select();
   if (unitsErr) { console.error('Units error:', unitsErr); return; }
   console.log(`   ✅ ${insertedUnits.length} units inserted`);

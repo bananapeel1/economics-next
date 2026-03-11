@@ -23,15 +23,24 @@ const tabs = [
   { id: 'tutor', label: 'Tutor', icon: '\uD83E\uDD16' },
 ];
 
-export default function StudyApp({ sections, units, initialSectionData, initialSectionId }) {
+export default function StudyApp({ subjects, sections, units, initialSectionData, initialSectionId }) {
   const { user } = useAuth();
+
+  // Subject state
+  const [activeSubjectId, setActiveSubjectId] = useState(subjects[0]?.id || null);
+  const activeSubject = subjects.find(s => s.id === activeSubjectId) || subjects[0];
+
+  // Filter units and sections by active subject
+  const subjectUnits = units.filter(u => u.subject_id === activeSubjectId);
+  const subjectSectionIds = new Set(sections.filter(s => subjectUnits.some(u => u.id === s.unit_id)).map(s => s.id));
+  const subjectSections = sections.filter(s => subjectSectionIds.has(s.id));
 
   const urlSection = typeof window !== 'undefined'
     ? new URLSearchParams(window.location.search).get('section')
     : null;
-  const startSection = (urlSection && sections.some(s => s.id === urlSection))
+  const startSection = (urlSection && subjectSections.some(s => s.id === urlSection))
     ? urlSection
-    : (initialSectionId || sections[0]?.id);
+    : (initialSectionId || subjectSections[0]?.id);
 
   const [activeSection, setActiveSection] = useState(startSection);
   const [activeTab, setActiveTab] = useState('content');
@@ -55,7 +64,7 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
   const lastScrollTop = useRef(0);
   const scrollThreshold = 60;
 
-  const currentSection = sections.find(s => s.id === activeSection);
+  const currentSection = subjectSections.find(s => s.id === activeSection) || subjectSections[0];
   const currentUnit = units.find(u => u.id === currentSection?.unit_id);
 
   // Hydrate sidebar collapsed state
@@ -201,6 +210,25 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
     }
   }, [user, activeSection, saveProgress]);
 
+  function handleSubjectChange(subjectId) {
+    setActiveSubjectId(subjectId);
+    // Find first section of new subject
+    const newUnits = units.filter(u => u.subject_id === subjectId);
+    const newSections = sections.filter(s => newUnits.some(u => u.id === s.unit_id));
+    const firstId = newSections[0]?.id;
+    if (firstId) {
+      setActiveSection(firstId);
+      setIsInitial(false);
+      setSectionData(null);
+      setActiveTab('content');
+      setContentStepInfo(null);
+      fetch(`/api/sections/${firstId}`)
+        .then(res => res.ok ? res.json() : null)
+        .then(data => { if (data) setSectionData(data); })
+        .catch(() => {});
+    }
+  }
+
   function handleSectionChange(sectionId) {
     setActiveSection(sectionId);
     setActiveTab('content');
@@ -242,8 +270,11 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
 
       <div className="app-layout">
         <Sidebar
-          sections={sections}
-          units={units}
+          subjects={subjects}
+          activeSubjectId={activeSubjectId}
+          onSubjectChange={handleSubjectChange}
+          sections={subjectSections}
+          units={subjectUnits}
           activeSection={activeSection}
           onSectionChange={handleSectionChange}
           isOpen={sidebarOpen}

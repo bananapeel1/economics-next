@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useAuth } from './AuthProvider';
 import { useTheme } from './ThemeProvider';
 
-export default function Sidebar({ sections, units, activeSection, onSectionChange, isOpen, isCollapsed, onToggleCollapse, contentStepInfo, savedProgress }) {
+export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, sections, units, activeSection, onSectionChange, isOpen, isCollapsed, onToggleCollapse, contentStepInfo, savedProgress }) {
   const [expandedUnits, setExpandedUnits] = useState({ 1: true, 2: true });
   const { user } = useAuth();
   const { theme, toggleTheme } = useTheme();
@@ -52,6 +52,20 @@ export default function Sidebar({ sections, units, activeSection, onSectionChang
           </button>
         )}
       </div>
+
+      {subjects && subjects.length > 1 && (
+        <div className="sidebar-subject-selector">
+          {subjects.map(subject => (
+            <button
+              key={subject.id}
+              className={`sidebar-subject-btn ${activeSubjectId === subject.id ? 'active' : ''}`}
+              onClick={() => onSubjectChange(subject.id)}
+            >
+              {subject.name}
+            </button>
+          ))}
+        </div>
+      )}
 
       {units.map(unit => {
         const unitSections = sections.filter(s => s.unit_id === unit.id);
