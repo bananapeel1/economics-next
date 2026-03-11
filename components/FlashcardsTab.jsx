@@ -73,7 +73,7 @@ export default function FlashcardsTab({ cards, sectionId }) {
   }
 
   if (!cards || !cards.length) {
-    return <div style={{ color: '#6b7a99', textAlign: 'center', padding: 40 }}>No flashcards available.</div>;
+    return <div style={{ color: 'var(--text-muted)', textAlign: 'center', padding: 40 }}>No flashcards available.</div>;
   }
 
   const gotItCount = Object.values(statuses).filter(s => s === 'got-it').length;
@@ -111,7 +111,7 @@ export default function FlashcardsTab({ cards, sectionId }) {
           <div className="flashcard-front">
             <div className="flashcard-label">Question {currentIndex + 1} of {cards.length}</div>
             <div className="flashcard-question">{card.front}</div>
-            <div style={{ fontSize: 12, color: '#4a5568', marginTop: 16 }}>Click to reveal answer</div>
+            <div style={{ fontSize: 12, color: 'var(--text-dim)', marginTop: 16 }}>Click to reveal answer</div>
           </div>
           <div className="flashcard-back">
             <div className="flashcard-label">Answer</div>

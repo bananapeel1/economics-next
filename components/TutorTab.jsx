@@ -165,15 +165,15 @@ export default function TutorTab({ section, unit }) {
 
       <div className="tutor-messages">
         {messages.length === 0 && (
-          <div style={{ textAlign: 'center', padding: '40px 20px', color: '#6b7a99' }}>
+          <div style={{ textAlign: 'center', padding: '40px 20px', color: 'var(--text-muted)' }}>
             <div style={{ fontSize: 32, marginBottom: 12 }}>&#129302;</div>
-            <div style={{ fontSize: 15, fontWeight: 600, color: '#e8ecf5', marginBottom: 6 }}>AI Economics Tutor</div>
+            <div style={{ fontSize: 15, fontWeight: 600, color: 'var(--text-primary)', marginBottom: 6 }}>AI Economics Tutor</div>
             <div style={{ fontSize: 13, marginBottom: 20 }}>
               Ask me anything about {section?.title}. I&apos;m focused on Edexcel IAS exam technique.
             </div>
             {!apiKey && (
               <button
-                style={{ padding: '8px 20px', borderRadius: 8, background: '#059669', color: 'white', border: 'none', fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}
+                style={{ padding: '8px 20px', borderRadius: 8, background: 'var(--accent-green)', color: 'white', border: 'none', fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}
                 onClick={() => setShowModal(true)}
               >
                 Enter API Key to Start

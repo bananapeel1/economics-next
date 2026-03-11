@@ -211,9 +211,9 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
   function renderTab() {
     if (!sectionData) {
       return (
-        <div style={{ textAlign: 'center', padding: '60px 20px', color: '#6b7a99' }}>
+        <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--text-muted)' }}>
           <div style={{ fontSize: 48, marginBottom: 16 }}>&#128218;</div>
-          <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 8, color: '#e8ecf5' }}>Loading content...</div>
+          <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 8, color: 'var(--text-primary)' }}>Loading content...</div>
           <div style={{ fontSize: 14 }}>Content for this section is being prepared.</div>
         </div>
       );

@@ -24,7 +24,7 @@ export default function BookmarksPage() {
     return (
       <div className="resource-empty">
         <div style={{ fontSize: 36, marginBottom: 12 }}>🔖</div>
-        <div style={{ fontWeight: 600, color: '#e8ecf5', marginBottom: 6 }}>No bookmarks yet</div>
+        <div style={{ fontWeight: 600, color: 'var(--text-primary)', marginBottom: 6 }}>No bookmarks yet</div>
         <div>Click the bookmark icon on any section to save it here for quick access.</div>
       </div>
     );
@@ -49,7 +49,7 @@ export default function BookmarksPage() {
                 <div className="bookmark-item-unit">Unit {unit.number}: {unit.title}</div>
               )}
             </div>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: '#6b7a99', flexShrink: 0 }}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: 'var(--text-muted)', flexShrink: 0 }}>
               <path d="M9 18l6-6-6-6" />
             </svg>
           </Link>

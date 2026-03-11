@@ -17,7 +17,7 @@ export default function ContentTab({ data, glossaryTerms, onStepChange, initialP
   }, [activeStep, furthestStep, data?.length, onStepChange]);
 
   if (!data || !data.length) {
-    return <div style={{ color: '#6b7a99', textAlign: 'center', padding: 40 }}>No content available.</div>;
+    return <div style={{ color: 'var(--text-muted)', textAlign: 'center', padding: 40 }}>No content available.</div>;
   }
 
   function g(html) {
@@ -155,7 +155,7 @@ export default function ContentTab({ data, glossaryTerms, onStepChange, initialP
                       </button>
                     ) : (
                       <div className="stepper-complete-message">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                           <circle cx="12" cy="12" r="10" />
                           <polyline points="16 8 10 16 7 13" />
                         </svg>

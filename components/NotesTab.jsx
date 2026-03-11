@@ -3,7 +3,7 @@ import { highlightGlossaryTerms } from '@/lib/glossary-highlight';
 
 export default function NotesTab({ data, glossaryTerms }) {
   if (!data || !data.length) {
-    return <div style={{ color: '#6b7a99', textAlign: 'center', padding: 40 }}>No notes available.</div>;
+    return <div style={{ color: 'var(--text-muted)', textAlign: 'center', padding: 40 }}>No notes available.</div>;
   }
 
   function g(html) {

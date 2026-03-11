@@ -28,7 +28,7 @@ export default function QuizTab({ questions, sectionId }) {
   }, [sectionId, user]);
 
   if (!questions || !questions.length) {
-    return <div style={{ color: '#6b7a99', textAlign: 'center', padding: 40 }}>No quiz available.</div>;
+    return <div style={{ color: 'var(--text-muted)', textAlign: 'center', padding: 40 }}>No quiz available.</div>;
   }
 
   function selectAnswer(qIndex, optIndex) {
@@ -76,10 +76,10 @@ export default function QuizTab({ questions, sectionId }) {
 
   const allAnswered = Object.keys(answers).length === questions.length;
   const scoreColor = submitted
-    ? score >= questions.length * 0.8 ? '#10b981'
-    : score >= questions.length * 0.5 ? '#f59e0b'
-    : '#ef4444'
-    : '#059669';
+    ? score >= questions.length * 0.8 ? 'var(--accent-green-light)'
+    : score >= questions.length * 0.5 ? 'var(--accent-amber)'
+    : 'var(--accent-red)'
+    : 'var(--accent-green)';
 
   return (
     <div>
@@ -100,7 +100,7 @@ export default function QuizTab({ questions, sectionId }) {
              score >= questions.length * 0.5 ? 'Good effort — review the explanations below.' :
              'Keep studying — review the explanations below.'}
           </div>
-          {saving && <div style={{ fontSize: 12, color: '#6b7a99', marginTop: 4 }}>Saving...</div>}
+          {saving && <div style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 4 }}>Saving...</div>}
           <button className="quiz-reset-btn" onClick={handleReset}>Try Again</button>
         </div>
       )}

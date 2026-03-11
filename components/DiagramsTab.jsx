@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 export default function DiagramsTab({ data }) {
   if (!data || !data.length) {
-    return <div style={{ color: '#6b7a99', textAlign: 'center', padding: 40 }}>No diagrams available.</div>;
+    return <div style={{ color: 'var(--text-muted)', textAlign: 'center', padding: 40 }}>No diagrams available.</div>;
   }
 
   return (

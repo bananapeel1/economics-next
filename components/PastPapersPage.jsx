@@ -37,9 +37,9 @@ export default function PastPapersPage({ papers }) {
 
   if (!papers.length) {
     return (
-      <div style={{ textAlign: 'center', padding: '60px 20px', color: '#6b7a99' }}>
+      <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--text-muted)' }}>
         <div style={{ fontSize: 48, marginBottom: 16 }}>📄</div>
-        <div style={{ fontSize: 16, fontWeight: 600, color: '#e8ecf5', marginBottom: 8 }}>No past papers yet</div>
+        <div style={{ fontSize: 16, fontWeight: 600, color: 'var(--text-primary)', marginBottom: 8 }}>No past papers yet</div>
         <div style={{ fontSize: 14 }}>Past papers will be available here once uploaded.</div>
       </div>
     );
@@ -77,7 +77,7 @@ export default function PastPapersPage({ papers }) {
       </div>
 
       {grouped.length === 0 ? (
-        <div style={{ textAlign: 'center', padding: 40, color: '#6b7a99' }}>
+        <div style={{ textAlign: 'center', padding: 40, color: 'var(--text-muted)' }}>
           No papers match your filters.
         </div>
       ) : (

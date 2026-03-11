@@ -2,10 +2,12 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useAuth } from './AuthProvider';
+import { useTheme } from './ThemeProvider';
 
 export default function Sidebar({ sections, units, activeSection, onSectionChange, isOpen, isCollapsed, onToggleCollapse, contentStepInfo, savedProgress }) {
   const [expandedUnits, setExpandedUnits] = useState({ 1: true, 2: true });
   const { user } = useAuth();
+  const { theme, toggleTheme } = useTheme();
 
   function toggleUnit(unitNum) {
     setExpandedUnits(prev => ({ ...prev, [unitNum]: !prev[unitNum] }));
@@ -37,6 +39,13 @@ export default function Sidebar({ sections, units, activeSection, onSectionChang
           <span className="sidebar-logo-text">Revvy Learn</span>
         </div>
         <div className="sidebar-subtitle">Edexcel International A-Level</div>
+        <button
+          className="theme-toggle-btn"
+          onClick={toggleTheme}
+          title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+        >
+          {theme === 'dark' ? '☀️' : '🌙'}
+        </button>
         {onToggleCollapse && (
           <button className="sidebar-collapse-btn" onClick={onToggleCollapse} title="Collapse sidebar">
             &#x2190;
