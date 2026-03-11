@@ -2,26 +2,12 @@
 import { useState, useRef, useEffect } from 'react';
 import { highlightGlossaryTerms } from '@/lib/glossary-highlight';
 
-export default function ContentTab({ data, glossaryTerms, onStepChange, initialPosition, sectionId }) {
+export default function ContentTab({ data, glossaryTerms, onStepChange, initialPosition }) {
+  // key={sectionId} on parent forces remount, so useState initials work correctly
   const [activeStep, setActiveStep] = useState(initialPosition?.activeStep || 0);
   const [furthestStep, setFurthestStep] = useState(initialPosition?.furthestStep || 0);
   const stepRefs = useRef([]);
   const containerRef = useRef(null);
-  const prevSectionId = useRef(sectionId);
-
-  // When switching sections, restore saved position or reset
-  useEffect(() => {
-    if (sectionId !== prevSectionId.current) {
-      prevSectionId.current = sectionId;
-      if (initialPosition) {
-        setActiveStep(initialPosition.activeStep);
-        setFurthestStep(initialPosition.furthestStep);
-      } else {
-        setActiveStep(0);
-        setFurthestStep(0);
-      }
-    }
-  }, [sectionId, initialPosition]);
 
   // Report step changes to parent (for sidebar dots + position memory)
   useEffect(() => {
