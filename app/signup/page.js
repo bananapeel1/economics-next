@@ -64,8 +64,8 @@ export default function SignupPage() {
       <div className="auth-page">
         <div className="auth-card">
           <div className="auth-logo">
-            <div className="auth-logo-icon">R</div>
-            <span className="auth-logo-text">Rivvy Learn</span>
+            <img src="/logo.png" alt="Revvy Learn" className="auth-logo-icon" />
+            <span className="auth-logo-text">Revvy Learn</span>
           </div>
           <h1 className="auth-title">Check Your Email</h1>
           <p className="auth-message">
@@ -83,8 +83,8 @@ export default function SignupPage() {
     <div className="auth-page">
       <div className="auth-card">
         <div className="auth-logo">
-          <div className="auth-logo-icon">E</div>
-          <span className="auth-logo-text">Economics IAS</span>
+          <img src="/logo.png" alt="Revvy Learn" className="auth-logo-icon" />
+          <span className="auth-logo-text">Revvy Learn</span>
         </div>
         <h1 className="auth-title">Create Account</h1>
 

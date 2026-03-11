@@ -3,7 +3,7 @@ import CommandWordsPage from '@/components/CommandWordsPage';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Command Words — Rivvy Learn',
+  title: 'Command Words — Revvy Learn',
   description: 'Edexcel Economics command words: what they mean and what examiners expect.',
 };
 

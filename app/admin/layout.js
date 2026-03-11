@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation';
 import { createClient } from '@/lib/supabase/server';
 
 export const metadata = {
-  title: 'Admin — Rivvy Learn',
+  title: 'Admin — Revvy Learn',
 };
 
 export default async function AdminLayout({ children }) {
@@ -27,11 +27,7 @@ export default async function AdminLayout({ children }) {
       }}>
         <div style={{ padding: '0 20px 16px', borderBottom: '1px solid #2a3045' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <div style={{
-              width: 32, height: 32, background: 'linear-gradient(135deg, #059669, #10b981)',
-              borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: 14, fontWeight: 700, color: 'white'
-            }}>A</div>
+            <img src="/logo.png" alt="Revvy Learn" style={{ width: 28, height: 28, objectFit: 'contain' }} />
             <span style={{ fontSize: 15, fontWeight: 700, color: '#e8ecf5' }}>Admin Panel</span>
           </div>
         </div>

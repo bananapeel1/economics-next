@@ -33,8 +33,8 @@ export default function Sidebar({ sections, units, activeSection, onSectionChang
     <nav className={`sidebar ${isOpen ? 'open' : ''} ${isCollapsed ? 'collapsed' : ''}`}>
       <div className="sidebar-header">
         <div className="sidebar-logo">
-          <div className="sidebar-logo-icon">R</div>
-          <span className="sidebar-logo-text">Rivvy Learn</span>
+          <img src="/logo.png" alt="Revvy Learn" className="sidebar-logo-icon" />
+          <span className="sidebar-logo-text">Revvy Learn</span>
         </div>
         <div className="sidebar-subtitle">Edexcel International A-Level</div>
         {onToggleCollapse && (

@@ -50,8 +50,8 @@ export default function LoginPage() {
     <div className="auth-page">
       <div className="auth-card">
         <div className="auth-logo">
-          <div className="auth-logo-icon">R</div>
-          <span className="auth-logo-text">Rivvy Learn</span>
+          <img src="/logo.png" alt="Revvy Learn" className="auth-logo-icon" />
+          <span className="auth-logo-text">Revvy Learn</span>
         </div>
         <h1 className="auth-title">Sign In</h1>
 

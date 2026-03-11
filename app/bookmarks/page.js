@@ -4,7 +4,7 @@ import BookmarksPage from '@/components/BookmarksPage';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Bookmarks — Rivvy Learn',
+  title: 'Bookmarks — Revvy Learn',
 };
 
 export default async function BookmarksRoute() {

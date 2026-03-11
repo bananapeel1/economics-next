@@ -3,7 +3,7 @@ import PastPapersPage from '@/components/PastPapersPage';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Past Papers — Rivvy Learn',
+  title: 'Past Papers — Revvy Learn',
   description: 'Download Edexcel Economics past papers and mark schemes for exam practice.',
 };
 
