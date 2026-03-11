@@ -2,6 +2,7 @@ import "./globals.css";
 import { createClient } from '@/lib/supabase/server';
 import { AuthProvider } from '@/components/AuthProvider';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata = {
   title: "Revvy Learn — Edexcel Economics Revision",
@@ -41,6 +42,7 @@ export default async function RootLayout({ children }) {
             {children}
           </AuthProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
