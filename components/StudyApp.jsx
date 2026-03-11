@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import Sidebar from './Sidebar';
 import ContentTab from './ContentTab';
 import NotesTab from './NotesTab';
@@ -38,6 +38,13 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
   const [sectionData, setSectionData] = useState(initialSectionData);
   const [isInitial, setIsInitial] = useState(true);
   const [glossaryTerms, setGlossaryTerms] = useState([]);
+
+  // Scroll-aware header state
+  const [headerHidden, setHeaderHidden] = useState(false);
+  const [readProgress, setReadProgress] = useState(0);
+  const tabContentRef = useRef(null);
+  const lastScrollTop = useRef(0);
+  const scrollThreshold = 60; // px before hiding triggers
 
   const currentSection = sections.find(s => s.id === activeSection);
   const currentUnit = units.find(u => u.id === currentSection?.unit_id);
@@ -84,6 +91,39 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
     }
     loadSection();
   }, [activeSection]);
+
+  // Reset scroll state when section or tab changes
+  useEffect(() => {
+    setHeaderHidden(false);
+    setReadProgress(0);
+    lastScrollTop.current = 0;
+    if (tabContentRef.current) {
+      tabContentRef.current.scrollTop = 0;
+    }
+  }, [activeSection, activeTab]);
+
+  // Scroll handler for auto-hide header + progress bar
+  const handleScroll = useCallback(() => {
+    const el = tabContentRef.current;
+    if (!el) return;
+
+    const scrollTop = el.scrollTop;
+    const scrollHeight = el.scrollHeight - el.clientHeight;
+
+    // Progress bar
+    const progress = scrollHeight > 0 ? Math.min(scrollTop / scrollHeight, 1) : 0;
+    setReadProgress(progress);
+
+    // Auto-hide header: hide on scroll down, show on scroll up
+    const delta = scrollTop - lastScrollTop.current;
+    if (delta > 8 && scrollTop > scrollThreshold) {
+      setHeaderHidden(true);
+    } else if (delta < -8) {
+      setHeaderHidden(false);
+    }
+
+    lastScrollTop.current = scrollTop;
+  }, []);
 
   function handleSectionChange(sectionId) {
     setActiveSection(sectionId);
@@ -135,7 +175,12 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
         />
 
         <div className="main-content">
-          <div className="content-header">
+          {/* Reading progress bar */}
+          <div className="reading-progress-bar">
+            <div className="reading-progress-fill" style={{ width: `${readProgress * 100}%` }} />
+          </div>
+
+          <div className={`content-header ${headerHidden ? 'header-hidden' : ''}`}>
             <div className="content-header-top">
               {sidebarCollapsed && (
                 <button className="sidebar-expand-btn" onClick={toggleSidebarCollapsed} title="Expand sidebar">
@@ -162,7 +207,11 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
             </div>
           </div>
 
-          <div className="tab-content">
+          <div
+            className="tab-content"
+            ref={tabContentRef}
+            onScroll={handleScroll}
+          >
             {renderTab()}
           </div>
           <GlossaryTooltip />
