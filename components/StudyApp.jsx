@@ -38,13 +38,14 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
   const [sectionData, setSectionData] = useState(initialSectionData);
   const [isInitial, setIsInitial] = useState(true);
   const [glossaryTerms, setGlossaryTerms] = useState([]);
+  const [contentStepInfo, setContentStepInfo] = useState(null);
 
   // Scroll-aware header state
   const [headerHidden, setHeaderHidden] = useState(false);
   const [readProgress, setReadProgress] = useState(0);
   const tabContentRef = useRef(null);
   const lastScrollTop = useRef(0);
-  const scrollThreshold = 60; // px before hiding triggers
+  const scrollThreshold = 60;
 
   const currentSection = sections.find(s => s.id === activeSection);
   const currentUnit = units.find(u => u.id === currentSection?.unit_id);
@@ -100,6 +101,10 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
     if (tabContentRef.current) {
       tabContentRef.current.scrollTop = 0;
     }
+    // Clear step info when not on content tab
+    if (activeTab !== 'content') {
+      setContentStepInfo(null);
+    }
   }, [activeSection, activeTab]);
 
   // Scroll handler for auto-hide header + progress bar
@@ -125,10 +130,15 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
     lastScrollTop.current = scrollTop;
   }, []);
 
+  const handleStepChange = useCallback((info) => {
+    setContentStepInfo(info);
+  }, []);
+
   function handleSectionChange(sectionId) {
     setActiveSection(sectionId);
     setActiveTab('content');
     setSidebarOpen(false);
+    setContentStepInfo(null);
   }
 
   function renderTab() {
@@ -143,7 +153,7 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
     }
 
     switch (activeTab) {
-      case 'content': return <ContentTab data={sectionData.content} glossaryTerms={glossaryTerms} />;
+      case 'content': return <ContentTab data={sectionData.content} glossaryTerms={glossaryTerms} onStepChange={handleStepChange} />;
       case 'notes': return <NotesTab data={sectionData.notes} glossaryTerms={glossaryTerms} />;
       case 'diagrams': return <DiagramsTab data={sectionData.diagrams} />;
       case 'flashcards': return <FlashcardsTab cards={sectionData.flashcards} sectionId={activeSection} />;
@@ -172,6 +182,7 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
           isOpen={sidebarOpen}
           isCollapsed={sidebarCollapsed}
           onToggleCollapse={toggleSidebarCollapsed}
+          contentStepInfo={activeTab === 'content' ? contentStepInfo : null}
         />
 
         <div className="main-content">

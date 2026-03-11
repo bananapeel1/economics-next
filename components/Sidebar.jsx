@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useAuth } from './AuthProvider';
 
-export default function Sidebar({ sections, units, activeSection, onSectionChange, isOpen, isCollapsed, onToggleCollapse }) {
+export default function Sidebar({ sections, units, activeSection, onSectionChange, isOpen, isCollapsed, onToggleCollapse, contentStepInfo }) {
   const [expandedUnits, setExpandedUnits] = useState({ 1: true, 2: true });
   const { user } = useAuth();
 
@@ -38,16 +38,36 @@ export default function Sidebar({ sections, units, activeSection, onSectionChang
             </div>
             {isExpanded && (
               <ul className="sidebar-section-list">
-                {unitSections.map(section => (
-                  <li
-                    key={section.id}
-                    className={`sidebar-section-item ${activeSection === section.id ? 'active' : ''}`}
-                    onClick={() => onSectionChange(section.id)}
-                  >
-                    <span className="sidebar-section-number">{section.number}</span>
-                    <span>{section.short_title}</span>
-                  </li>
-                ))}
+                {unitSections.map(section => {
+                  const isActive = activeSection === section.id;
+                  const showDots = isActive && contentStepInfo && contentStepInfo.totalSteps > 0;
+
+                  return (
+                    <li
+                      key={section.id}
+                      className={`sidebar-section-item ${isActive ? 'active' : ''}`}
+                      onClick={() => onSectionChange(section.id)}
+                    >
+                      <div className="sidebar-section-row">
+                        <span className="sidebar-section-number">{section.number}</span>
+                        <span>{section.short_title}</span>
+                      </div>
+                      {showDots && (
+                        <div className="sidebar-step-dots">
+                          {Array.from({ length: contentStepInfo.totalSteps }, (_, i) => (
+                            <div
+                              key={i}
+                              className={`sidebar-step-dot ${
+                                i === contentStepInfo.activeStep ? 'current' :
+                                i <= contentStepInfo.furthestStep ? 'done' : ''
+                              }`}
+                            />
+                          ))}
+                        </div>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             )}
           </div>
