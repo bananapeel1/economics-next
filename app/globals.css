@@ -56,31 +56,27 @@ body {
 .sidebar-unit-chevron.open { transform: rotate(90deg); }
 .sidebar-section-list { list-style: none; padding: 0 0 8px 0; }
 .sidebar-section-item {
-  display: flex; flex-direction: column; gap: 0; padding: 8px 20px 8px 24px;
+  display: flex; align-items: center; gap: 10px; padding: 8px 20px 8px 24px;
   cursor: pointer; transition: all 0.15s; border-left: 3px solid transparent;
   font-size: 13px; color: #8892a8;
 }
-.sidebar-section-row { display: flex; align-items: center; gap: 10px; }
+.sidebar-section-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .sidebar-section-item:hover { background: rgba(5, 150, 105, 0.05); color: #c0c8dc; }
 .sidebar-section-item.active {
   background: rgba(5, 150, 105, 0.1); border-left-color: #059669;
   color: #059669; font-weight: 600;
 }
 .sidebar-section-number {
-  font-family: 'DM Mono', monospace; font-size: 11px; color: #4a5568; min-width: 32px;
+  font-family: 'DM Mono', monospace; font-size: 11px; color: #4a5568; min-width: 32px; flex-shrink: 0;
 }
 .sidebar-section-item.active .sidebar-section-number { color: #059669; }
 
-/* Sidebar step progress dots */
-.sidebar-step-dots {
-  display: flex; gap: 4px; padding: 5px 0 2px 42px;
+/* Sidebar section progress status icons */
+.sidebar-section-status {
+  flex-shrink: 0; display: flex; align-items: center; margin-left: auto;
 }
-.sidebar-step-dot {
-  width: 7px; height: 7px; border-radius: 50%;
-  background: #2a3045; transition: all 0.25s;
-}
-.sidebar-step-dot.done { background: #059669; }
-.sidebar-step-dot.current { background: #10b981; box-shadow: 0 0 6px rgba(16,185,129,0.5); transform: scale(1.2); }
+.sidebar-section-status.complete { color: #10b981; }
+.sidebar-section-status.in-progress { color: #4a5568; }
 
 /* Sidebar collapse/expand buttons */
 .sidebar-collapse-btn {
@@ -821,5 +817,4 @@ body {
   .stepper-node { width: 26px; height: 26px; font-size: 11px; }
   .stepper-step { gap: 10px; }
   .stepper-step-title { font-size: 15px; }
-  .sidebar-step-dots { display: none; }
 }

@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { useAuth } from './AuthProvider';
 import Sidebar from './Sidebar';
 import ContentTab from './ContentTab';
 import NotesTab from './NotesTab';
@@ -23,7 +24,8 @@ const tabs = [
 ];
 
 export default function StudyApp({ sections, units, initialSectionData, initialSectionId }) {
-  // Support ?section=xxx URL param (from bookmarks page)
+  const { user } = useAuth();
+
   const urlSection = typeof window !== 'undefined'
     ? new URLSearchParams(window.location.search).get('section')
     : null;
@@ -40,6 +42,9 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
   const [glossaryTerms, setGlossaryTerms] = useState([]);
   const [contentStepInfo, setContentStepInfo] = useState(null);
 
+  // Saved progress: { sectionId: { furthest_step, total_steps, completed } }
+  const [savedProgress, setSavedProgress] = useState({});
+
   // Scroll-aware header state
   const [headerHidden, setHeaderHidden] = useState(false);
   const [readProgress, setReadProgress] = useState(0);
@@ -50,19 +55,41 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
   const currentSection = sections.find(s => s.id === activeSection);
   const currentUnit = units.find(u => u.id === currentSection?.unit_id);
 
-  // Hydrate sidebar collapsed state from localStorage
+  // Hydrate sidebar collapsed state
   useEffect(() => {
     const saved = localStorage.getItem('sidebar-collapsed');
     if (saved === 'true') setSidebarCollapsed(true);
   }, []);
 
-  // Fetch glossary terms once for inline highlighting
+  // Fetch glossary terms once
   useEffect(() => {
     fetch('/api/glossary')
       .then(res => res.ok ? res.json() : [])
       .then(setGlossaryTerms)
       .catch(() => {});
   }, []);
+
+  // Fetch saved content progress when user is logged in
+  useEffect(() => {
+    if (!user) {
+      setSavedProgress({});
+      return;
+    }
+    fetch('/api/progress/content')
+      .then(res => res.ok ? res.json() : [])
+      .then(rows => {
+        const map = {};
+        rows.forEach(r => {
+          map[r.section_id] = {
+            furthest_step: r.furthest_step,
+            total_steps: r.total_steps,
+            completed: r.furthest_step >= r.total_steps - 1,
+          };
+        });
+        setSavedProgress(map);
+      })
+      .catch(() => {});
+  }, [user]);
 
   function toggleSidebarCollapsed() {
     setSidebarCollapsed(prev => {
@@ -73,7 +100,6 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
   }
 
   useEffect(() => {
-    // Skip fetch for initial section (data comes from server)
     if (isInitial) {
       setIsInitial(false);
       return;
@@ -101,7 +127,6 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
     if (tabContentRef.current) {
       tabContentRef.current.scrollTop = 0;
     }
-    // Clear step info when not on content tab
     if (activeTab !== 'content') {
       setContentStepInfo(null);
     }
@@ -115,11 +140,9 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
     const scrollTop = el.scrollTop;
     const scrollHeight = el.scrollHeight - el.clientHeight;
 
-    // Progress bar
     const progress = scrollHeight > 0 ? Math.min(scrollTop / scrollHeight, 1) : 0;
     setReadProgress(progress);
 
-    // Auto-hide header: hide on scroll down, show on scroll up
     const delta = scrollTop - lastScrollTop.current;
     if (delta > 8 && scrollTop > scrollThreshold) {
       setHeaderHidden(true);
@@ -130,9 +153,37 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
     lastScrollTop.current = scrollTop;
   }, []);
 
+  // Save progress to DB when a section is fully completed
+  const saveProgress = useCallback((sectionId, furthestStep, totalSteps) => {
+    if (!user) return;
+    const completed = furthestStep >= totalSteps - 1;
+
+    // Update local state immediately
+    setSavedProgress(prev => ({
+      ...prev,
+      [sectionId]: { furthest_step: furthestStep, total_steps: totalSteps, completed },
+    }));
+
+    // Persist to DB
+    fetch('/api/progress/content', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        section_id: sectionId,
+        furthest_step: furthestStep,
+        total_steps: totalSteps,
+      }),
+    }).catch(() => {});
+  }, [user]);
+
   const handleStepChange = useCallback((info) => {
     setContentStepInfo(info);
-  }, []);
+
+    // Save when section is fully completed
+    if (user && info.furthestStep >= info.totalSteps - 1) {
+      saveProgress(activeSection, info.furthestStep, info.totalSteps);
+    }
+  }, [user, activeSection, saveProgress]);
 
   function handleSectionChange(sectionId) {
     setActiveSection(sectionId);
@@ -183,10 +234,10 @@ export default function StudyApp({ sections, units, initialSectionData, initialS
           isCollapsed={sidebarCollapsed}
           onToggleCollapse={toggleSidebarCollapsed}
           contentStepInfo={activeTab === 'content' ? contentStepInfo : null}
+          savedProgress={user ? savedProgress : null}
         />
 
         <div className="main-content">
-          {/* Reading progress bar */}
           <div className="reading-progress-bar">
             <div className="reading-progress-fill" style={{ width: `${readProgress * 100}%` }} />
           </div>
