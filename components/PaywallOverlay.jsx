@@ -68,6 +68,10 @@ export default function PaywallOverlay({ feature = 'this feature' }) {
             <span className="paywall-check">✓</span>
             AI Tutor for Exam Prep
           </div>
+          <div className="paywall-feature-item">
+            <span className="paywall-check">✓</span>
+            Chains of Analysis & Evaluation
+          </div>
         </div>
 
         {errorMsg && (

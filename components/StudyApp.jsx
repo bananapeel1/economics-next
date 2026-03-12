@@ -16,8 +16,8 @@ import PracticeQuestionsTab from './PracticeQuestionsTab';
 import ExtrasTab from './ExtrasTab';
 import PaywallOverlay from './PaywallOverlay';
 
-const FREE_TABS = new Set(['content', 'notes', 'diagrams', 'practice', 'extras']);
-const PREMIUM_TABS = new Set(['flashcards', 'quiz', 'mistakes', 'tutor']);
+const FREE_TABS = new Set(['content', 'notes', 'diagrams', 'practice']);
+const PREMIUM_TABS = new Set(['flashcards', 'quiz', 'mistakes', 'tutor', 'extras']);
 
 const allTabs = [
   { id: 'content', label: 'Content', icon: '\uD83D\uDCD6' },
@@ -28,7 +28,7 @@ const allTabs = [
   { id: 'quiz', label: 'Quiz', icon: '\u270F\uFE0F', premium: true },
   { id: 'mistakes', label: 'Mistakes', icon: '\u26A0\uFE0F', premium: true, subjects: ['business'] },
   { id: 'tutor', label: 'Tutor', icon: '\uD83E\uDD16', premium: true },
-  { id: 'extras', label: 'Extras', icon: '\u2B50' },
+  { id: 'extras', label: 'Extras', icon: '\u2B50', premium: true },
 ];
 
 export default function StudyApp({ subjects, sections, units, initialSectionData, initialSectionId }) {
