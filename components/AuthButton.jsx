@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 export default function AuthButton() {
-  const { user, loading, supabase } = useAuth();
+  const { user, loading, supabase, isPremium } = useAuth();
   const { theme, toggleTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
@@ -62,6 +62,11 @@ export default function AuthButton() {
       {menuOpen && (
         <div className="auth-dropdown">
           <div className="auth-dropdown-email">{user.email}</div>
+          <div className="auth-dropdown-plan">
+            <span className={`auth-plan-badge ${isPremium ? 'premium' : 'free'}`}>
+              {isPremium ? '⭐ Pro' : 'Free'}
+            </span>
+          </div>
           <button className="auth-dropdown-item" onClick={() => { toggleTheme(); }}>
             <span style={{ marginRight: 8 }}>{theme === 'dark' ? '☀️' : '🌙'}</span>
             {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}

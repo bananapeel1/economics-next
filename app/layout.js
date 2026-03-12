@@ -4,8 +4,8 @@ import { AuthProvider } from '@/components/AuthProvider';
 import { ThemeProvider } from '@/components/ThemeProvider';
 
 export const metadata = {
-  title: "Revvy Learn — Edexcel Economics Revision",
-  description: "Comprehensive revision app for Edexcel International AS Level Economics covering Units 1 & 2",
+  title: "Revvy Learn — Edexcel A-Level Revision",
+  description: "Comprehensive revision app for Edexcel International A-Level Economics and Business",
 };
 
 export default async function RootLayout({ children }) {

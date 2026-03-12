@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState, useCallback } from 'react';
 import { createClient } from '@/lib/supabase/client';
 
 const AuthContext = createContext({
@@ -8,6 +8,7 @@ const AuthContext = createContext({
   supabase: null,
   subscription: null,
   isPremium: false,
+  refreshSubscription: () => {},
 });
 
 export function AuthProvider({ children, initialUser }) {
@@ -27,13 +28,11 @@ export function AuthProvider({ children, initialUser }) {
     return () => authSub.unsubscribe();
   }, [supabase]);
 
-  // Fetch subscription status when user changes
-  useEffect(() => {
+  const fetchSubscription = useCallback(() => {
     if (!user) {
       setSubscription(null);
       return;
     }
-
     fetch('/api/subscription')
       .then(res => res.ok ? res.json() : null)
       .then(data => {
@@ -42,10 +41,48 @@ export function AuthProvider({ children, initialUser }) {
       .catch(() => setSubscription(null));
   }, [user]);
 
+  // Fetch subscription status when user changes
+  useEffect(() => {
+    fetchSubscription();
+  }, [fetchSubscription]);
+
+  // Re-fetch subscription when returning from Stripe checkout
+  useEffect(() => {
+    if (typeof window === 'undefined' || !user) return;
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('upgraded') === 'true') {
+      // Remove the query param from URL
+      const url = new URL(window.location.href);
+      url.searchParams.delete('upgraded');
+      window.history.replaceState({}, '', url.pathname + url.search);
+
+      // Poll for subscription update (webhook may take a moment)
+      let attempts = 0;
+      const poll = setInterval(() => {
+        attempts++;
+        fetch('/api/subscription')
+          .then(res => res.ok ? res.json() : null)
+          .then(data => {
+            if (data && data.plan === 'premium' && data.status === 'active') {
+              setSubscription(data);
+              clearInterval(poll);
+            } else if (attempts >= 10) {
+              clearInterval(poll);
+            }
+          })
+          .catch(() => {
+            if (attempts >= 10) clearInterval(poll);
+          });
+      }, 2000);
+
+      return () => clearInterval(poll);
+    }
+  }, [user]);
+
   const isPremium = subscription?.plan === 'premium' && subscription?.status === 'active';
 
   return (
-    <AuthContext.Provider value={{ user, loading, supabase, subscription, isPremium }}>
+    <AuthContext.Provider value={{ user, loading, supabase, subscription, isPremium, refreshSubscription: fetchSubscription }}>
       {children}
     </AuthContext.Provider>
   );

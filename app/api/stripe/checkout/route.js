@@ -48,12 +48,13 @@ export async function POST() {
     return NextResponse.json({ error: 'Stripe price not configured' }, { status: 500 });
   }
 
-  const origin = process.env.NEXT_PUBLIC_SITE_URL || 'https://economics-next.vercel.app';
+  const origin = process.env.NEXT_PUBLIC_SITE_URL || 'https://revvylearn.com';
 
   const session = await getStripe().checkout.sessions.create({
     customer: customerId,
     mode: 'subscription',
     line_items: [{ price: priceId, quantity: 1 }],
+    allow_promotion_codes: true,
     success_url: `${origin}/?upgraded=true`,
     cancel_url: `${origin}/?cancelled=true`,
     metadata: { supabase_user_id: user.id },
