@@ -148,9 +148,27 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     setHeaderHidden(false);
     setReadProgress(0);
     lastScrollTop.current = 0;
-    if (tabContentRef.current) {
-      tabContentRef.current.scrollTop = 0;
+
+    // Instantly remove header-hidden class + transition to avoid flash of empty space
+    const headerEl = document.querySelector('.content-header');
+    if (headerEl) {
+      headerEl.style.transition = 'none';
+      headerEl.classList.remove('header-hidden');
     }
+
+    // Defer scroll reset to after the DOM has updated (next frame)
+    requestAnimationFrame(() => {
+      if (tabContentRef.current) {
+        tabContentRef.current.scrollTop = 0;
+      }
+      // Re-enable transition after scroll reset settles
+      requestAnimationFrame(() => {
+        if (headerEl) {
+          headerEl.style.transition = '';
+        }
+      });
+    });
+
     if (activeTab !== 'content') {
       setContentStepInfo(null);
     }

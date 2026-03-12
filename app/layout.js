@@ -8,6 +8,12 @@ export const metadata = {
   description: "Comprehensive revision app for Edexcel International A-Level Economics and Business",
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+};
+
 export default async function RootLayout({ children }) {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
