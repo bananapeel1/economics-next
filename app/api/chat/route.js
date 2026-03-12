@@ -66,7 +66,25 @@ export async function POST(request) {
     );
   }
 
-  const { messages, section, unit } = await request.json();
+  const body = await request.json();
+  const { messages: rawMessages, section, unit } = body;
+
+  // Convert UIMessages (parts-based) to ModelMessages (content-based) for streamText
+  const messages = (rawMessages || []).map(msg => {
+    // If message already has content string, use it directly
+    if (typeof msg.content === 'string') {
+      return { role: msg.role, content: msg.content };
+    }
+    // Convert parts-based UIMessage to content string
+    if (msg.parts) {
+      const text = msg.parts
+        .filter(p => p.type === 'text')
+        .map(p => p.text)
+        .join('');
+      return { role: msg.role, content: text };
+    }
+    return { role: msg.role, content: '' };
+  });
 
   const system = `You are an expert Edexcel International A-Level Economics tutor. You are helping a student revise for their IAS Economics exam.
 
