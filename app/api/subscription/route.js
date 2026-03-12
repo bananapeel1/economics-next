@@ -1,4 +1,4 @@
-import { getStripe } from '@/lib/stripe';
+import { getStripe, getSubscriptionPeriodEnd } from '@/lib/stripe';
 import { createClient } from '@/lib/supabase/server';
 import { createServerClient } from '@/lib/supabase-server';
 import { NextResponse } from 'next/server';
@@ -36,7 +36,7 @@ export async function GET() {
 
         if (subscriptions.data.length > 0) {
           const activeSub = subscriptions.data[0];
-          const periodEnd = new Date(activeSub.current_period_end * 1000).toISOString();
+          const periodEnd = getSubscriptionPeriodEnd(activeSub);
 
           // Sync the DB with Stripe's truth
           await serviceSupabase

@@ -1,4 +1,4 @@
-import { getStripe } from '@/lib/stripe';
+import { getStripe, getSubscriptionPeriodEnd } from '@/lib/stripe';
 import { createServerClient } from '@/lib/supabase-server';
 import { NextResponse } from 'next/server';
 
@@ -26,6 +26,7 @@ export async function POST(request) {
       if (userId && subscriptionId) {
         // Fetch subscription details from Stripe
         const subscription = await getStripe().subscriptions.retrieve(subscriptionId);
+        const periodEnd = getSubscriptionPeriodEnd(subscription);
 
         await supabase
           .from('user_subscriptions')
@@ -35,7 +36,7 @@ export async function POST(request) {
             stripe_subscription_id: subscriptionId,
             plan: 'premium',
             status: 'active',
-            current_period_end: new Date(subscription.current_period_end * 1000).toISOString(),
+            current_period_end: periodEnd,
             updated_at: new Date().toISOString(),
           }, { onConflict: 'user_id' });
       }
@@ -45,6 +46,7 @@ export async function POST(request) {
     case 'customer.subscription.updated': {
       const subscription = event.data.object;
       const customerId = subscription.customer;
+      const periodEnd = getSubscriptionPeriodEnd(subscription);
 
       // Find user by Stripe customer ID
       const { data: sub } = await supabase
@@ -60,7 +62,7 @@ export async function POST(request) {
           .update({
             status: isActive ? 'active' : 'cancelled',
             plan: isActive ? 'premium' : 'free',
-            current_period_end: new Date(subscription.current_period_end * 1000).toISOString(),
+            current_period_end: periodEnd,
             updated_at: new Date().toISOString(),
           })
           .eq('user_id', sub.user_id);
