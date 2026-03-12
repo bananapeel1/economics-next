@@ -3,14 +3,19 @@ import { useState, useRef } from 'react';
 
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
-export default function GlossaryPage({ terms }) {
+export default function GlossaryPage({ terms, subjects = [] }) {
   const [search, setSearch] = useState('');
+  const [activeSubjectId, setActiveSubjectId] = useState('all');
   const groupRefs = useRef({});
 
-  const filtered = terms.filter(t =>
-    t.term.toLowerCase().includes(search.toLowerCase()) ||
-    t.definition.toLowerCase().includes(search.toLowerCase())
-  );
+  const filtered = terms.filter(t => {
+    if (activeSubjectId !== 'all' && t.subject_id !== parseInt(activeSubjectId)) return false;
+    if (search) {
+      const q = search.toLowerCase();
+      return t.term.toLowerCase().includes(q) || t.definition.toLowerCase().includes(q);
+    }
+    return true;
+  });
 
   // Group by first letter
   const groups = {};
@@ -29,6 +34,27 @@ export default function GlossaryPage({ terms }) {
 
   return (
     <div>
+      {/* Subject toggle */}
+      {subjects.length > 1 && (
+        <div className="resource-subject-toggle">
+          <button
+            className={`resource-subject-btn ${activeSubjectId === 'all' ? 'active' : ''}`}
+            onClick={() => setActiveSubjectId('all')}
+          >
+            All Subjects
+          </button>
+          {subjects.map(s => (
+            <button
+              key={s.id}
+              className={`resource-subject-btn ${activeSubjectId === String(s.id) ? 'active' : ''}`}
+              onClick={() => setActiveSubjectId(String(s.id))}
+            >
+              {s.name}
+            </button>
+          ))}
+        </div>
+      )}
+
       <input
         className="resource-search"
         type="text"
@@ -54,7 +80,7 @@ export default function GlossaryPage({ terms }) {
       )}
 
       {filtered.length === 0 ? (
-        <div className="resource-empty">No terms found matching &quot;{search}&quot;</div>
+        <div className="resource-empty">No terms found{search ? ` matching "${search}"` : ' for this subject'}.</div>
       ) : (
         <div className="glossary-list">
           {LETTERS.filter(l => groups[l]).map(letter => (

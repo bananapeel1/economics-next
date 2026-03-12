@@ -733,6 +733,44 @@ body {
 .resource-search::placeholder { color: var(--text-muted); }
 .resource-empty { text-align: center; padding: 40px 20px; color: var(--text-muted); font-size: 14px; max-width: 800px; margin: 0 auto; }
 
+/* Subject toggle on resource pages */
+.resource-subject-toggle {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.resource-subject-btn {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: 1px solid var(--border-primary);
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.resource-subject-btn:hover {
+  border-color: var(--accent-green);
+  color: var(--accent-green);
+}
+.resource-subject-btn.active {
+  background: var(--accent-green);
+  border-color: var(--accent-green);
+  color: white;
+}
+
+/* Auth actions row (theme toggle + sign in for logged out users) */
+.auth-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
 /* ─── Command Words ─── */
 .command-words-list { max-width: 800px; margin: 0 auto; }
 .command-word-card { background: var(--bg-card); border: 1px solid var(--border-primary); border-radius: 12px; padding: 20px; margin-bottom: 12px; }
@@ -927,15 +965,103 @@ body {
   border: 1px solid var(--green-light-20); border-radius: 8px;
 }
 
-/* Theme toggle button */
+/* Theme toggle button (now in header auth area) */
 .theme-toggle-btn {
-  position: absolute; top: 20px; right: 44px;
   background: none; border: 1px solid var(--border-primary); color: var(--text-muted);
   width: 28px; height: 28px; border-radius: 6px;
   display: flex; align-items: center; justify-content: center;
   cursor: pointer; font-size: 14px; transition: all 0.15s;
+  flex-shrink: 0;
 }
 .theme-toggle-btn:hover { background: var(--green-10); border-color: var(--accent-green); color: var(--accent-green); }
+
+/* Tab lock icon for premium tabs */
+.tab-lock-icon {
+  font-size: 10px;
+  margin-left: 2px;
+  opacity: 0.6;
+}
+.tab-item.tab-locked {
+  opacity: 0.7;
+}
+
+/* ─── Paywall Overlay ─── */
+.paywall-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  padding: 40px 20px;
+}
+.paywall-card {
+  text-align: center;
+  max-width: 420px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: 16px;
+  padding: 40px 32px;
+}
+.paywall-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+.paywall-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 12px;
+}
+.paywall-description {
+  font-size: 14px;
+  color: var(--text-muted-alt);
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+.paywall-features {
+  text-align: left;
+  margin-bottom: 28px;
+}
+.paywall-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+.paywall-check {
+  color: var(--accent-green);
+  font-weight: 700;
+  font-size: 16px;
+}
+.paywall-btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background: linear-gradient(135deg, var(--accent-green), var(--accent-green-light));
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.paywall-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.paywall-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+.paywall-note {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 16px 0 0;
+}
 
 /* Light mode card shadows for depth */
 [data-theme="light"] .concept-box,

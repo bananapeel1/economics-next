@@ -38,6 +38,7 @@ export async function POST(request) {
   const session = formData.get('session'); // e.g. "January", "June", "October"
   const paper_number = parseInt(formData.get('paper_number')) || 1;
   const unit = parseInt(formData.get('unit')) || 1;
+  const subject_id = parseInt(formData.get('subject_id')) || null;
   const paperFile = formData.get('paper_file');
   const markSchemeFile = formData.get('mark_scheme_file');
 
@@ -77,7 +78,7 @@ export async function POST(request) {
   // Check if we're updating
   const id = formData.get('id');
   if (id) {
-    const updateData = { title, year, session, paper_number, unit };
+    const updateData = { title, year, session, paper_number, unit, subject_id };
     if (paper_url) updateData.paper_url = paper_url;
     if (mark_scheme_url) updateData.mark_scheme_url = mark_scheme_url;
 
@@ -95,7 +96,7 @@ export async function POST(request) {
   // Create new
   const { data, error } = await supabase
     .from('past_papers')
-    .insert({ title, year, session, paper_number, unit, paper_url, mark_scheme_url })
+    .insert({ title, year, session, paper_number, unit, subject_id, paper_url, mark_scheme_url })
     .select()
     .single();
 

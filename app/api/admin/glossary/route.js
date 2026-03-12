@@ -34,7 +34,7 @@ export async function POST(request) {
   if (body.id) {
     const { data, error } = await supabase
       .from('glossary_terms')
-      .update({ term: body.term, definition: body.definition })
+      .update({ term: body.term, definition: body.definition, subject_id: body.subject_id })
       .eq('id', body.id)
       .select()
       .single();
@@ -44,7 +44,7 @@ export async function POST(request) {
   } else {
     const { data, error } = await supabase
       .from('glossary_terms')
-      .insert({ term: body.term, definition: body.definition })
+      .insert({ term: body.term, definition: body.definition, subject_id: body.subject_id })
       .select()
       .single();
 

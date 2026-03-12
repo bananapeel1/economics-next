@@ -12,19 +12,23 @@ import MistakesTab from './MistakesTab';
 import BookmarkButton from './BookmarkButton';
 import AuthButton from './AuthButton';
 import GlossaryTooltip from './GlossaryTooltip';
+import PaywallOverlay from './PaywallOverlay';
+
+const FREE_TABS = new Set(['content', 'notes', 'diagrams']);
+const PREMIUM_TABS = new Set(['flashcards', 'quiz', 'mistakes', 'tutor']);
 
 const tabs = [
   { id: 'content', label: 'Content', icon: '\uD83D\uDCD6' },
   { id: 'notes', label: 'Notes', icon: '\uD83D\uDCDD' },
   { id: 'diagrams', label: 'Diagrams', icon: '\uD83D\uDCCA' },
-  { id: 'flashcards', label: 'Flashcards', icon: '\uD83C\uDCCF' },
-  { id: 'quiz', label: 'Quiz', icon: '\u270F\uFE0F' },
-  { id: 'mistakes', label: 'Mistakes', icon: '\u26A0\uFE0F' },
-  { id: 'tutor', label: 'Tutor', icon: '\uD83E\uDD16' },
+  { id: 'flashcards', label: 'Flashcards', icon: '\uD83C\uDCCF', premium: true },
+  { id: 'quiz', label: 'Quiz', icon: '\u270F\uFE0F', premium: true },
+  { id: 'mistakes', label: 'Mistakes', icon: '\u26A0\uFE0F', premium: true },
+  { id: 'tutor', label: 'Tutor', icon: '\uD83E\uDD16', premium: true },
 ];
 
 export default function StudyApp({ subjects, sections, units, initialSectionData, initialSectionId }) {
-  const { user } = useAuth();
+  const { user, isPremium } = useAuth();
 
   // Subject state
   const [activeSubjectId, setActiveSubjectId] = useState(subjects[0]?.id || null);
@@ -73,13 +77,16 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     if (saved === 'true') setSidebarCollapsed(true);
   }, []);
 
-  // Fetch glossary terms once
+  // Fetch glossary terms for active subject
   useEffect(() => {
-    fetch('/api/glossary')
+    const url = activeSubjectId
+      ? `/api/glossary?subject_id=${activeSubjectId}`
+      : '/api/glossary';
+    fetch(url)
       .then(res => res.ok ? res.json() : [])
       .then(setGlossaryTerms)
       .catch(() => {});
-  }, []);
+  }, [activeSubjectId]);
 
   // Fetch saved content progress when user is logged in
   useEffect(() => {
@@ -237,6 +244,12 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   }
 
   function renderTab() {
+    // Show paywall for premium tabs if not subscribed
+    if (PREMIUM_TABS.has(activeTab) && !isPremium) {
+      const tabLabel = tabs.find(t => t.id === activeTab)?.label || activeTab;
+      return <PaywallOverlay feature={tabLabel} />;
+    }
+
     if (!sectionData) {
       return (
         <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--text-muted)' }}>
@@ -306,11 +319,12 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
               {tabs.map(tab => (
                 <button
                   key={tab.id}
-                  className={`tab-item ${activeTab === tab.id ? 'active' : ''}`}
+                  className={`tab-item ${activeTab === tab.id ? 'active' : ''} ${tab.premium && !isPremium ? 'tab-locked' : ''}`}
                   onClick={() => setActiveTab(tab.id)}
                 >
                   <span className="tab-icon">{tab.icon}</span>
                   {tab.label}
+                  {tab.premium && !isPremium && <span className="tab-lock-icon">🔒</span>}
                 </button>
               ))}
             </div>

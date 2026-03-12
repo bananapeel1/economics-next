@@ -1,18 +1,38 @@
 "use client";
 import { useState, useMemo } from 'react';
 
-export default function PastPapersPage({ papers }) {
+export default function PastPapersPage({ papers, subjects = [], units = [] }) {
   const [search, setSearch] = useState('');
+  const [activeSubjectId, setActiveSubjectId] = useState('all');
   const [filterUnit, setFilterUnit] = useState('all');
   const [filterYear, setFilterYear] = useState('all');
 
+  // Get papers for the active subject
+  const subjectPapers = useMemo(() => {
+    if (activeSubjectId === 'all') return papers;
+    return papers.filter(p => p.subject_id === parseInt(activeSubjectId));
+  }, [papers, activeSubjectId]);
+
+  // Dynamic unit options based on selected subject
+  const unitOptions = useMemo(() => {
+    if (activeSubjectId === 'all') {
+      const allUnits = new Set(papers.map(p => p.unit));
+      return [...allUnits].sort((a, b) => a - b);
+    }
+    const subjectUnitNums = units
+      .filter(u => u.subject_id === parseInt(activeSubjectId))
+      .map(u => u.number)
+      .sort((a, b) => a - b);
+    return subjectUnitNums;
+  }, [papers, units, activeSubjectId]);
+
   const years = useMemo(() => {
-    const set = new Set(papers.map(p => p.year));
+    const set = new Set(subjectPapers.map(p => p.year));
     return [...set].sort((a, b) => b - a);
-  }, [papers]);
+  }, [subjectPapers]);
 
   const filtered = useMemo(() => {
-    return papers.filter(p => {
+    return subjectPapers.filter(p => {
       if (filterUnit !== 'all' && p.unit !== parseInt(filterUnit)) return false;
       if (filterYear !== 'all' && p.year !== parseInt(filterYear)) return false;
       if (search) {
@@ -23,7 +43,7 @@ export default function PastPapersPage({ papers }) {
       }
       return true;
     });
-  }, [papers, search, filterUnit, filterYear]);
+  }, [subjectPapers, search, filterUnit, filterYear]);
 
   // Group by year
   const grouped = useMemo(() => {
@@ -34,6 +54,13 @@ export default function PastPapersPage({ papers }) {
     });
     return Object.entries(map).sort(([a], [b]) => b - a);
   }, [filtered]);
+
+  // Reset unit and year filters when subject changes
+  function handleSubjectChange(subjectId) {
+    setActiveSubjectId(subjectId);
+    setFilterUnit('all');
+    setFilterYear('all');
+  }
 
   if (!papers.length) {
     return (
@@ -47,6 +74,27 @@ export default function PastPapersPage({ papers }) {
 
   return (
     <div>
+      {/* Subject toggle */}
+      {subjects.length > 1 && (
+        <div className="resource-subject-toggle">
+          <button
+            className={`resource-subject-btn ${activeSubjectId === 'all' ? 'active' : ''}`}
+            onClick={() => handleSubjectChange('all')}
+          >
+            All Subjects
+          </button>
+          {subjects.map(s => (
+            <button
+              key={s.id}
+              className={`resource-subject-btn ${activeSubjectId === String(s.id) ? 'active' : ''}`}
+              onClick={() => handleSubjectChange(String(s.id))}
+            >
+              {s.name}
+            </button>
+          ))}
+        </div>
+      )}
+
       <div className="past-papers-filters">
         <input
           className="resource-search"
@@ -61,8 +109,9 @@ export default function PastPapersPage({ papers }) {
           onChange={e => setFilterUnit(e.target.value)}
         >
           <option value="all">All Units</option>
-          <option value="1">Unit 1</option>
-          <option value="2">Unit 2</option>
+          {unitOptions.map(u => (
+            <option key={u} value={u}>Unit {u}</option>
+          ))}
         </select>
         <select
           className="past-papers-select"
