@@ -1,4 +1,4 @@
-import { streamText, convertToModelMessages } from 'ai';
+import { streamText } from 'ai';
 import { google } from '@ai-sdk/google';
 import { createClient } from '@/lib/supabase/server';
 import { createServerClient } from '@/lib/supabase-server';
@@ -88,7 +88,7 @@ Your role:
   const result = streamText({
     model: google('gemini-2.0-flash'),
     system,
-    messages: convertToModelMessages(messages),
+    messages,
     maxTokens: 1024,
   });
 
