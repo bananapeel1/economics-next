@@ -149,29 +149,34 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     setReadProgress(0);
     lastScrollTop.current = 0;
 
-    // Instantly remove header-hidden class + transition to avoid flash of empty space
+    // Instantly remove header-hidden class + transition to avoid flash
     const headerEl = document.querySelector('.content-header');
     if (headerEl) {
       headerEl.style.transition = 'none';
       headerEl.classList.remove('header-hidden');
     }
 
-    // Defer scroll reset to after the DOM has updated (next frame)
-    requestAnimationFrame(() => {
-      if (tabContentRef.current) {
-        tabContentRef.current.scrollTop = 0;
+    // Scroll to top — multiple attempts for iOS Safari compatibility
+    const el = tabContentRef.current;
+    if (el) {
+      el.scrollTop = 0;
+      try { el.scrollTo({ top: 0, behavior: 'instant' }); } catch (_) {}
+    }
+
+    // Fallback: iOS Safari sometimes needs a delayed scroll reset
+    const t = setTimeout(() => {
+      if (el) {
+        el.scrollTop = 0;
+        try { el.scrollTo({ top: 0, behavior: 'instant' }); } catch (_) {}
       }
-      // Re-enable transition after scroll reset settles
-      requestAnimationFrame(() => {
-        if (headerEl) {
-          headerEl.style.transition = '';
-        }
-      });
-    });
+      if (headerEl) headerEl.style.transition = '';
+    }, 80);
 
     if (activeTab !== 'content') {
       setContentStepInfo(null);
     }
+
+    return () => clearTimeout(t);
   }, [activeSection, activeTab]);
 
   // Scroll handler for auto-hide header + progress bar
@@ -318,6 +323,10 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       <div className="mobile-header">
         <button className="hamburger" onClick={() => setSidebarOpen(true)}>&#9776;</button>
         <span className="mobile-title">{currentSection?.short_title}</span>
+        <div className="mobile-header-actions">
+          <BookmarkButton sectionId={activeSection} />
+          <AuthButton />
+        </div>
       </div>
 
       <div className={`sidebar-overlay ${sidebarOpen ? 'show' : ''}`} onClick={() => setSidebarOpen(false)} />

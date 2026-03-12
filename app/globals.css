@@ -250,13 +250,14 @@ body {
 /* Mobile */
 .mobile-header {
   display: none; position: fixed; top: 0; left: 0; right: 0;
-  height: calc(56px + env(safe-area-inset-top, 0px));
+  height: calc(48px + env(safe-area-inset-top, 0px));
   padding-top: env(safe-area-inset-top, 0px);
   background: var(--bg-primary); border-bottom: 1px solid var(--border-primary); z-index: 100;
-  align-items: center; padding-left: 16px; padding-right: 16px; gap: 12px;
+  align-items: center; padding-left: 12px; padding-right: 12px; gap: 8px;
 }
-.hamburger { background: none; border: none; color: var(--text-primary); font-size: 24px; cursor: pointer; padding: 4px; }
-.mobile-title { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+.hamburger { background: none; border: none; color: var(--text-primary); font-size: 22px; cursor: pointer; padding: 4px; }
+.mobile-title { font-size: 14px; font-weight: 600; color: var(--text-primary); flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mobile-header-actions { display: none; align-items: center; gap: 6px; flex-shrink: 0; }
 .sidebar-overlay { display: none; position: fixed; inset: 0; background: var(--overlay-light); z-index: 199; }
 
 /* Main content */
@@ -474,18 +475,33 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
   .mobile-header { display: flex; }
+  .mobile-header-actions { display: flex; }
   .sidebar { position: fixed; top: 0; left: 0; bottom: 0; z-index: 200; transform: translateX(-100%); }
   .sidebar.open { transform: translateX(0); }
   .sidebar-overlay.show { display: block; }
-  .main-content { padding-top: calc(56px + env(safe-area-inset-top, 0px)); }
-  .content-header { padding: 16px 16px 0; }
-  .content-header-top { flex-wrap: wrap; gap: 6px; }
-  .tab-content-body { padding: 20px 16px calc(60px + env(safe-area-inset-bottom, 0px)); }
-  .content-header-title { font-size: 20px; }
+  .main-content { padding-top: calc(48px + env(safe-area-inset-top, 0px)); }
+  .content-header { padding: 10px 14px 0; }
+  .content-header-top { gap: 6px; }
+  .content-header-section-num { font-size: 11px; }
+  .content-header-unit-badge { font-size: 10px; padding: 2px 8px; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  /* Hide auth/bookmark from content header on mobile — they're in mobile-header */
+  .content-header-top .bookmark-btn { display: none; }
+  .content-header-top .auth-actions-row { display: none; }
+  .content-header-top .auth-user-menu { display: none; }
+  .content-header-title { font-size: 18px; margin-bottom: 8px; }
+  .tab-item { padding: 8px 10px; font-size: 12px; }
+  .tab-icon { font-size: 13px; }
+  .tab-content-body { padding: 20px 14px calc(60px + env(safe-area-inset-bottom, 0px)); }
   .flashcard, .flashcard-progress { max-width: 100%; }
-  .tutor-container { height: calc(100vh - 240px); height: calc(100dvh - 240px); }
+  .tutor-container { height: calc(100vh - 200px); height: calc(100dvh - 200px); }
   .sidebar-collapse-btn, .sidebar-expand-btn { display: none; }
   .sidebar.collapsed { width: 280px; min-width: 280px; overflow-y: auto; }
+  /* Compact auth elements in mobile header */
+  .mobile-header-actions .auth-actions-row { margin-left: 0; }
+  .mobile-header-actions .auth-user-menu { margin-left: 0; }
+  .mobile-header-actions .auth-signin-btn { margin-left: 0; padding: 4px 12px; font-size: 12px; }
+  .mobile-header-actions .auth-avatar-btn { width: 28px; height: 28px; }
+  .mobile-header-actions .theme-toggle-btn { width: 26px; height: 26px; font-size: 13px; }
 }
 
 /* ===== AUTH PAGES ===== */
