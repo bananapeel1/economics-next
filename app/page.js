@@ -33,13 +33,15 @@ export default async function HomePage() {
   // Fetch initial section data
   let initialData = null;
   if (firstSectionId) {
-    const [content, notes, diagrams, flashcards, quiz, mistakes] = await Promise.all([
+    const [content, notes, diagrams, flashcards, quiz, mistakes, practice, extras] = await Promise.all([
       supabase.from('section_content').select('data').eq('section_id', firstSectionId).single(),
       supabase.from('section_notes').select('data').eq('section_id', firstSectionId).single(),
       supabase.from('section_diagrams').select('data').eq('section_id', firstSectionId).single(),
       supabase.from('section_flashcards').select('data').eq('section_id', firstSectionId).single(),
       supabase.from('section_quiz').select('data').eq('section_id', firstSectionId).single(),
       supabase.from('section_common_mistakes').select('data').eq('section_id', firstSectionId).single(),
+      supabase.from('section_practice').select('data').eq('section_id', firstSectionId).single(),
+      supabase.from('section_extras').select('data').eq('section_id', firstSectionId).single(),
     ]);
     initialData = {
       content: content.data?.data || [],
@@ -48,6 +50,8 @@ export default async function HomePage() {
       flashcards: flashcards.data?.data || [],
       quiz: quiz.data?.data || [],
       mistakes: mistakes.data?.data || [],
+      practice: practice.data?.data || [],
+      extras: extras.data?.data || { chains: [], evaluation: [] },
     };
   }
 

@@ -13,9 +13,10 @@ import BookmarkButton from './BookmarkButton';
 import AuthButton from './AuthButton';
 import GlossaryTooltip from './GlossaryTooltip';
 import PracticeQuestionsTab from './PracticeQuestionsTab';
+import ExtrasTab from './ExtrasTab';
 import PaywallOverlay from './PaywallOverlay';
 
-const FREE_TABS = new Set(['content', 'notes', 'diagrams', 'practice']);
+const FREE_TABS = new Set(['content', 'notes', 'diagrams', 'practice', 'extras']);
 const PREMIUM_TABS = new Set(['flashcards', 'quiz', 'mistakes', 'tutor']);
 
 const allTabs = [
@@ -27,6 +28,7 @@ const allTabs = [
   { id: 'quiz', label: 'Quiz', icon: '\u270F\uFE0F', premium: true },
   { id: 'mistakes', label: 'Mistakes', icon: '\u26A0\uFE0F', premium: true, subjects: ['business'] },
   { id: 'tutor', label: 'Tutor', icon: '\uD83E\uDD16', premium: true },
+  { id: 'extras', label: 'Extras', icon: '\u2B50' },
 ];
 
 export default function StudyApp({ subjects, sections, units, initialSectionData, initialSectionId }) {
@@ -314,6 +316,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       case 'quiz': return <QuizTab questions={sectionData.quiz} sectionId={activeSection} />;
       case 'mistakes': return <MistakesTab data={sectionData.mistakes} />;
       case 'tutor': return <TutorTab section={currentSection} unit={currentUnit} />;
+      case 'extras': return <ExtrasTab data={sectionData.extras} />;
       default: return null;
     }
   }

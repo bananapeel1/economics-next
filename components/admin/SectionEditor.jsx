@@ -9,6 +9,7 @@ const editorTabs = [
   { id: 'quiz', label: 'Quiz' },
   { id: 'mistakes', label: 'Mistakes' },
   { id: 'practice', label: 'Practice' },
+  { id: 'extras', label: 'Extras' },
 ];
 
 export default function SectionEditor({ sectionId, initialData }) {
@@ -77,6 +78,9 @@ export default function SectionEditor({ sectionId, initialData }) {
         )}
         {activeTab === 'practice' && (
           <PracticeEditor data={data.practice || []} onChange={updateData} />
+        )}
+        {activeTab === 'extras' && (
+          <ExtrasEditor data={data.extras || { chains: [], evaluation: [] }} onChange={updateData} />
         )}
         {activeTab === 'notes' && (
           <NotesEditor data={data.notes} onChange={updateData} />
@@ -597,6 +601,208 @@ function PracticeEditor({ data, onChange }) {
       }}>
         + Add Question
       </button>
+    </div>
+  );
+}
+
+// Extras editor — chains of analysis + evaluation points
+function ExtrasEditor({ data, onChange }) {
+  const chains = data?.chains || [];
+  const evaluation = data?.evaluation || [];
+
+  function updateChain(index, field, value) {
+    const newChains = [...chains];
+    newChains[index] = { ...newChains[index], [field]: value };
+    onChange({ ...data, chains: newChains });
+  }
+
+  function updateChainStep(chainIndex, stepIndex, value) {
+    const newChains = [...chains];
+    const steps = [...newChains[chainIndex].steps];
+    steps[stepIndex] = value;
+    newChains[chainIndex] = { ...newChains[chainIndex], steps };
+    onChange({ ...data, chains: newChains });
+  }
+
+  function addChainStep(chainIndex) {
+    const newChains = [...chains];
+    newChains[chainIndex] = { ...newChains[chainIndex], steps: [...newChains[chainIndex].steps, ''] };
+    onChange({ ...data, chains: newChains });
+  }
+
+  function removeChainStep(chainIndex, stepIndex) {
+    const newChains = [...chains];
+    newChains[chainIndex] = { ...newChains[chainIndex], steps: newChains[chainIndex].steps.filter((_, i) => i !== stepIndex) };
+    onChange({ ...data, chains: newChains });
+  }
+
+  function addChain() {
+    onChange({ ...data, chains: [...chains, { title: '', steps: ['', '', ''], result: '' }] });
+  }
+
+  function removeChain(index) {
+    onChange({ ...data, chains: chains.filter((_, i) => i !== index) });
+  }
+
+  function updateEval(index, field, value) {
+    const newEval = [...evaluation];
+    newEval[index] = { ...newEval[index], [field]: value };
+    onChange({ ...data, evaluation: newEval });
+  }
+
+  function addEval() {
+    onChange({ ...data, evaluation: [...evaluation, { title: '', content: '' }] });
+  }
+
+  function removeEval(index) {
+    onChange({ ...data, evaluation: evaluation.filter((_, i) => i !== index) });
+  }
+
+  return (
+    <div>
+      {/* Chains of Analysis */}
+      <div style={{ marginBottom: 32 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
+          <span style={{ fontSize: 16 }}>🔗</span>
+          <span style={{ fontSize: 15, fontWeight: 700, color: '#60a5fa' }}>Chains of Analysis</span>
+          <span style={{ fontSize: 12, color: '#6b7a99', marginLeft: 4 }}>({chains.length})</span>
+        </div>
+
+        {chains.map((chain, ci) => (
+          <div key={ci} style={{
+            background: '#1e2335', border: '1px solid #2a3045', borderRadius: 10,
+            padding: 16, marginBottom: 12
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
+              <span style={{ fontSize: 11, fontWeight: 700, color: '#60a5fa', textTransform: 'uppercase' }}>Chain {ci + 1}</span>
+              <button onClick={() => removeChain(ci)} style={{
+                background: 'none', border: 'none', color: '#ef4444', fontSize: 12, cursor: 'pointer'
+              }}>Remove</button>
+            </div>
+
+            <div style={{ marginBottom: 10 }}>
+              <label style={{ fontSize: 11, color: '#6b7a99', display: 'block', marginBottom: 4 }}>Title</label>
+              <input
+                value={chain.title}
+                onChange={e => updateChain(ci, 'title', e.target.value)}
+                placeholder="e.g. Rising Costs → Business Failure"
+                style={{
+                  width: '100%', padding: '8px 12px', borderRadius: 6, border: '1px solid #2a3045',
+                  background: '#151825', color: '#e8ecf5', fontSize: 13, fontFamily: 'inherit', outline: 'none'
+                }}
+              />
+            </div>
+
+            <div style={{ marginBottom: 10 }}>
+              <label style={{ fontSize: 11, color: '#60a5fa', display: 'block', marginBottom: 6 }}>Steps</label>
+              {chain.steps.map((step, si) => (
+                <div key={si} style={{ display: 'flex', gap: 6, alignItems: 'flex-start', marginBottom: 6 }}>
+                  <span style={{ color: '#60a5fa', marginTop: 8, fontSize: 11, fontWeight: 700, width: 20, flexShrink: 0 }}>{si + 1}.</span>
+                  <textarea
+                    value={step}
+                    onChange={e => updateChainStep(ci, si, e.target.value)}
+                    rows={2}
+                    placeholder={`Step ${si + 1}...`}
+                    style={{
+                      flex: 1, padding: '6px 10px', borderRadius: 6, border: '1px solid #2a3045',
+                      background: '#151825', color: '#c0c8dc', fontSize: 13, fontFamily: 'inherit',
+                      resize: 'vertical', outline: 'none'
+                    }}
+                  />
+                  <button onClick={() => removeChainStep(ci, si)} style={{
+                    background: 'none', border: 'none', color: '#ef4444', fontSize: 11, cursor: 'pointer', marginTop: 6
+                  }}>×</button>
+                </div>
+              ))}
+              <button onClick={() => addChainStep(ci)} style={{
+                background: 'none', border: 'none', color: '#6b7a99', fontSize: 12, cursor: 'pointer', marginTop: 2
+              }}>+ Add step</button>
+            </div>
+
+            <div>
+              <label style={{ fontSize: 11, color: '#60a5fa', display: 'block', marginBottom: 4 }}>Result / Conclusion</label>
+              <textarea
+                value={chain.result || ''}
+                onChange={e => updateChain(ci, 'result', e.target.value)}
+                rows={2}
+                placeholder="Final outcome of this chain..."
+                style={{
+                  width: '100%', padding: '8px 12px', borderRadius: 6, border: '1px solid #2a3045',
+                  background: '#151825', color: '#e8ecf5', fontSize: 13, fontFamily: 'inherit',
+                  resize: 'vertical', outline: 'none'
+                }}
+              />
+            </div>
+          </div>
+        ))}
+
+        <button onClick={addChain} style={{
+          padding: '8px 20px', background: 'rgba(96,165,250,0.15)', color: '#60a5fa',
+          border: '1px solid rgba(96,165,250,0.3)', borderRadius: 8, fontSize: 13, fontWeight: 600,
+          cursor: 'pointer', fontFamily: 'inherit'
+        }}>
+          + Add Chain
+        </button>
+      </div>
+
+      {/* Evaluation Points */}
+      <div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
+          <span style={{ fontSize: 16 }}>⚖️</span>
+          <span style={{ fontSize: 15, fontWeight: 700, color: '#10b981' }}>Evaluation Points</span>
+          <span style={{ fontSize: 12, color: '#6b7a99', marginLeft: 4 }}>({evaluation.length})</span>
+        </div>
+
+        {evaluation.map((point, ei) => (
+          <div key={ei} style={{
+            background: '#1e2335', border: '1px solid #2a3045', borderRadius: 10,
+            padding: 16, marginBottom: 12
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
+              <span style={{ fontSize: 11, fontWeight: 700, color: '#10b981', textTransform: 'uppercase' }}>Point {ei + 1}</span>
+              <button onClick={() => removeEval(ei)} style={{
+                background: 'none', border: 'none', color: '#ef4444', fontSize: 12, cursor: 'pointer'
+              }}>Remove</button>
+            </div>
+
+            <div style={{ marginBottom: 8 }}>
+              <label style={{ fontSize: 11, color: '#6b7a99', display: 'block', marginBottom: 4 }}>Title</label>
+              <input
+                value={point.title}
+                onChange={e => updateEval(ei, 'title', e.target.value)}
+                placeholder="e.g. Short Run vs Long Run"
+                style={{
+                  width: '100%', padding: '8px 12px', borderRadius: 6, border: '1px solid #2a3045',
+                  background: '#151825', color: '#e8ecf5', fontSize: 13, fontFamily: 'inherit', outline: 'none'
+                }}
+              />
+            </div>
+
+            <div>
+              <label style={{ fontSize: 11, color: '#10b981', display: 'block', marginBottom: 4 }}>Evaluation Paragraph</label>
+              <textarea
+                value={point.content}
+                onChange={e => updateEval(ei, 'content', e.target.value)}
+                rows={5}
+                placeholder="Write a full analytical evaluation paragraph..."
+                style={{
+                  width: '100%', padding: '8px 12px', borderRadius: 6, border: '1px solid #2a3045',
+                  background: '#151825', color: '#e8ecf5', fontSize: 13, fontFamily: 'inherit',
+                  resize: 'vertical', outline: 'none'
+                }}
+              />
+            </div>
+          </div>
+        ))}
+
+        <button onClick={addEval} style={{
+          padding: '8px 20px', background: 'rgba(5,150,105,0.15)', color: '#059669',
+          border: '1px solid #059669', borderRadius: 8, fontSize: 13, fontWeight: 600,
+          cursor: 'pointer', fontFamily: 'inherit'
+        }}>
+          + Add Evaluation Point
+        </button>
+      </div>
     </div>
   );
 }

@@ -10,6 +10,7 @@ const TABLE_MAP = {
   quiz: 'section_quiz',
   mistakes: 'section_common_mistakes',
   practice: 'section_practice',
+  extras: 'section_extras',
 };
 
 export async function PUT(request, { params }) {
