@@ -1,6 +1,6 @@
 "use client";
-import { useState, useEffect, useRef } from 'react';
-import ApiKeyModal from './ApiKeyModal';
+import { useEffect, useRef } from 'react';
+import { useChat } from '@ai-sdk/react';
 
 const quickPromptsBySection = {
   'introductory-concepts': [
@@ -78,24 +78,28 @@ const quickPromptsBySection = {
 };
 
 export default function TutorTab({ section, unit }) {
-  const [apiKey, setApiKey] = useState('');
-  const [showModal, setShowModal] = useState(false);
-  const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState('');
-  const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef(null);
 
-  // Load API key from localStorage on mount (client-side only)
-  useEffect(() => {
-    const saved = localStorage.getItem('anthropic-api-key') || '';
-    setApiKey(saved);
-  }, []);
+  const {
+    messages,
+    input,
+    handleInputChange,
+    handleSubmit,
+    isLoading,
+    error,
+    setMessages,
+    append,
+  } = useChat({
+    api: '/api/chat',
+    body: { section, unit },
+  });
 
+  // Reset chat when section changes
   useEffect(() => {
     setMessages([]);
-    setInput('');
-  }, [section?.id]);
+  }, [section?.id, setMessages]);
 
+  // Auto-scroll to latest message
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
@@ -107,62 +111,31 @@ export default function TutorTab({ section, unit }) {
     'What are common mistakes students make?',
   ];
 
-  async function sendMessage(text) {
-    if (!text.trim()) return;
-    if (!apiKey) {
-      setShowModal(true);
-      return;
-    }
-
-    const userMsg = { role: 'user', content: text };
-    setMessages(prev => [...prev, userMsg]);
-    setInput('');
-    setLoading(true);
-
-    try {
-      const response = await fetch('/api/tutor', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          apiKey,
-          messages: [...messages, userMsg].map(m => ({ role: m.role, content: m.content })),
-          section: section ? { number: section.number, title: section.title } : null,
-          unit: unit ? { number: unit.number, title: unit.title, code: unit.code } : null,
-        }),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || `API error: ${response.status}`);
-      }
-
-      const assistantMsg = { role: 'assistant', content: data.text };
-      setMessages(prev => [...prev, assistantMsg]);
-    } catch (err) {
-      setMessages(prev => [...prev, { role: 'assistant', content: `Error: ${err.message}. Please check your API key.` }]);
-    } finally {
-      setLoading(false);
-    }
+  function handleQuickPrompt(text) {
+    append({ role: 'user', content: text });
   }
 
   function handleKeyDown(e) {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
-      sendMessage(input);
+      handleSubmit(e);
     }
   }
 
-  function saveKey(key) {
-    setApiKey(key);
-    localStorage.setItem('anthropic-api-key', key);
-    setShowModal(false);
+  // Format assistant messages with bold text support
+  function formatContent(text) {
+    if (!text) return null;
+    const parts = text.split(/(\*\*[^*]+\*\*)/g);
+    return parts.map((part, i) => {
+      if (part.startsWith('**') && part.endsWith('**')) {
+        return <strong key={i}>{part.slice(2, -2)}</strong>;
+      }
+      return part;
+    });
   }
 
   return (
     <div className="tutor-container">
-      {showModal && <ApiKeyModal onSave={saveKey} onClose={() => setShowModal(false)} />}
-
       <div className="tutor-messages">
         {messages.length === 0 && (
           <div style={{ textAlign: 'center', padding: '40px 20px', color: 'var(--text-muted)' }}>
@@ -171,27 +144,21 @@ export default function TutorTab({ section, unit }) {
             <div style={{ fontSize: 13, marginBottom: 20 }}>
               Ask me anything about {section?.title}. I&apos;m focused on Edexcel IAS exam technique.
             </div>
-            {!apiKey && (
-              <button
-                style={{ padding: '8px 20px', borderRadius: 8, background: 'var(--accent-green)', color: 'white', border: 'none', fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}
-                onClick={() => setShowModal(true)}
-              >
-                Enter API Key to Start
-              </button>
-            )}
           </div>
         )}
 
-        {messages.map((msg, i) => (
-          <div key={i} className={`tutor-message ${msg.role === 'user' ? 'user' : 'ai'}`}>
+        {messages.map((msg) => (
+          <div key={msg.id} className={`tutor-message ${msg.role === 'user' ? 'user' : 'ai'}`}>
             <div className={`tutor-avatar ${msg.role === 'user' ? 'user' : 'ai'}`}>
               {msg.role === 'user' ? '\uD83D\uDC64' : '\uD83E\uDD16'}
             </div>
-            <div className="tutor-bubble">{msg.content}</div>
+            <div className="tutor-bubble">
+              {msg.role === 'assistant' ? formatContent(msg.content) : msg.content}
+            </div>
           </div>
         ))}
 
-        {loading && (
+        {isLoading && messages.length > 0 && messages[messages.length - 1].role === 'user' && (
           <div className="tutor-message ai">
             <div className="tutor-avatar ai">&#129302;</div>
             <div className="tutor-bubble">
@@ -199,36 +166,46 @@ export default function TutorTab({ section, unit }) {
             </div>
           </div>
         )}
+
+        {error && (
+          <div className="tutor-message ai">
+            <div className="tutor-avatar ai">&#129302;</div>
+            <div className="tutor-bubble" style={{ color: 'var(--accent-red, #ef4444)' }}>
+              {error.message || 'Something went wrong. Please try again.'}
+            </div>
+          </div>
+        )}
+
         <div ref={messagesEndRef} />
       </div>
 
-      {messages.length === 0 && apiKey && (
+      {messages.length === 0 && (
         <div className="tutor-quick-prompts">
           {quickPrompts.map((prompt, i) => (
-            <button key={i} className="tutor-quick-btn" onClick={() => sendMessage(prompt)}>
+            <button key={i} className="tutor-quick-btn" onClick={() => handleQuickPrompt(prompt)}>
               {prompt}
             </button>
           ))}
         </div>
       )}
 
-      <div className="tutor-input-area">
+      <form className="tutor-input-area" onSubmit={handleSubmit}>
         <textarea
           className="tutor-input"
           rows={1}
           placeholder="Ask a question..."
           value={input}
-          onChange={e => setInput(e.target.value)}
+          onChange={handleInputChange}
           onKeyDown={handleKeyDown}
         />
         <button
+          type="submit"
           className="tutor-send-btn"
-          disabled={!input.trim() || loading}
-          onClick={() => sendMessage(input)}
+          disabled={!input.trim() || isLoading}
         >
           Send
         </button>
-      </div>
+      </form>
     </div>
   );
 }

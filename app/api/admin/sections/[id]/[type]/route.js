@@ -9,6 +9,7 @@ const TABLE_MAP = {
   flashcards: 'section_flashcards',
   quiz: 'section_quiz',
   mistakes: 'section_common_mistakes',
+  practice: 'section_practice',
 };
 
 export async function PUT(request, { params }) {

@@ -8,6 +8,7 @@ const editorTabs = [
   { id: 'flashcards', label: 'Flashcards' },
   { id: 'quiz', label: 'Quiz' },
   { id: 'mistakes', label: 'Mistakes' },
+  { id: 'practice', label: 'Practice' },
 ];
 
 export default function SectionEditor({ sectionId, initialData }) {
@@ -73,6 +74,9 @@ export default function SectionEditor({ sectionId, initialData }) {
         )}
         {activeTab === 'mistakes' && (
           <MistakesEditor data={data.mistakes || []} onChange={updateData} />
+        )}
+        {activeTab === 'practice' && (
+          <PracticeEditor data={data.practice || []} onChange={updateData} />
         )}
         {activeTab === 'notes' && (
           <NotesEditor data={data.notes} onChange={updateData} />
@@ -458,6 +462,140 @@ function MistakesEditor({ data, onChange }) {
         cursor: 'pointer', fontFamily: 'inherit'
       }}>
         + Add Mistake
+      </button>
+    </div>
+  );
+}
+
+// Practice questions editor
+function PracticeEditor({ data, onChange }) {
+  const markColors = {
+    4: '#059669',
+    6: '#3b82f6',
+    10: '#f59e0b',
+    20: '#ef4444',
+  };
+
+  function updateItem(index, field, value) {
+    const newData = [...data];
+    newData[index] = { ...newData[index], [field]: value };
+    onChange(newData);
+  }
+
+  function addItem() {
+    onChange([...data, { marks: 4, command: 'Define', question: '', guidance: '' }]);
+  }
+
+  function removeItem(index) {
+    onChange(data.filter((_, i) => i !== index));
+  }
+
+  return (
+    <div>
+      <div style={{ fontSize: 13, color: '#6b7a99', marginBottom: 12 }}>{data.length} practice questions</div>
+      {data.map((item, i) => {
+        const color = markColors[item.marks] || '#6b7a99';
+        return (
+          <div key={i} style={{
+            background: '#1e2335', border: '1px solid #2a3045', borderRadius: 10,
+            padding: 16, marginBottom: 12
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                <span style={{
+                  fontSize: 11, fontWeight: 700, color: 'white', textTransform: 'uppercase',
+                  background: color, padding: '2px 8px', borderRadius: 4
+                }}>
+                  {item.marks} marks
+                </span>
+                {item.command && (
+                  <span style={{ fontSize: 11, fontWeight: 600, color: '#8892a8', background: '#252d44', padding: '2px 8px', borderRadius: 4 }}>
+                    {item.command}
+                  </span>
+                )}
+              </div>
+              <button onClick={() => removeItem(i)} style={{
+                background: 'none', border: 'none', color: '#ef4444', fontSize: 12, cursor: 'pointer'
+              }}>Remove</button>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '100px 1fr', gap: 8, marginBottom: 8 }}>
+              <div>
+                <label style={{ fontSize: 11, color: '#6b7a99', display: 'block', marginBottom: 4 }}>Marks</label>
+                <select
+                  value={item.marks}
+                  onChange={e => updateItem(i, 'marks', parseInt(e.target.value))}
+                  style={{
+                    width: '100%', padding: '8px 12px', borderRadius: 6, border: '1px solid #2a3045',
+                    background: '#151825', color: '#e8ecf5', fontSize: 13, fontFamily: 'inherit', outline: 'none'
+                  }}
+                >
+                  <option value={4}>4</option>
+                  <option value={6}>6</option>
+                  <option value={10}>10</option>
+                  <option value={20}>20</option>
+                </select>
+              </div>
+              <div>
+                <label style={{ fontSize: 11, color: '#6b7a99', display: 'block', marginBottom: 4 }}>Command Word</label>
+                <select
+                  value={item.command || ''}
+                  onChange={e => updateItem(i, 'command', e.target.value)}
+                  style={{
+                    width: '100%', padding: '8px 12px', borderRadius: 6, border: '1px solid #2a3045',
+                    background: '#151825', color: '#e8ecf5', fontSize: 13, fontFamily: 'inherit', outline: 'none'
+                  }}
+                >
+                  <option value="Define">Define</option>
+                  <option value="Explain">Explain</option>
+                  <option value="Analyse">Analyse</option>
+                  <option value="Assess">Assess</option>
+                  <option value="Evaluate">Evaluate</option>
+                  <option value="Outline">Outline</option>
+                  <option value="Discuss">Discuss</option>
+                  <option value="Compare">Compare</option>
+                </select>
+              </div>
+            </div>
+
+            <div style={{ marginBottom: 8 }}>
+              <label style={{ fontSize: 11, color: '#6b7a99', display: 'block', marginBottom: 4 }}>Question</label>
+              <textarea
+                value={item.question}
+                onChange={e => updateItem(i, 'question', e.target.value)}
+                rows={2}
+                placeholder="e.g. Define the term 'opportunity cost'. (4 marks)"
+                style={{
+                  width: '100%', padding: '8px 12px', borderRadius: 6, border: '1px solid #2a3045',
+                  background: '#151825', color: '#e8ecf5', fontSize: 13, fontFamily: 'inherit',
+                  resize: 'vertical', outline: 'none'
+                }}
+              />
+            </div>
+
+            <div>
+              <label style={{ fontSize: 11, color: '#059669', display: 'block', marginBottom: 4 }}>Model Answer Guidance</label>
+              <textarea
+                value={item.guidance}
+                onChange={e => updateItem(i, 'guidance', e.target.value)}
+                rows={4}
+                placeholder="Mark-by-mark guidance for the model answer..."
+                style={{
+                  width: '100%', padding: '8px 12px', borderRadius: 6, border: '1px solid #2a3045',
+                  background: '#151825', color: '#e8ecf5', fontSize: 13, fontFamily: 'inherit',
+                  resize: 'vertical', outline: 'none'
+                }}
+              />
+            </div>
+          </div>
+        );
+      })}
+      <button onClick={addItem} style={{
+        padding: '8px 20px', background: 'rgba(5,150,105,0.15)', color: '#059669',
+        border: '1px solid #059669', borderRadius: 8, fontSize: 13, fontWeight: 600,
+        cursor: 'pointer', fontFamily: 'inherit'
+      }}>
+        + Add Question
       </button>
     </div>
   );
