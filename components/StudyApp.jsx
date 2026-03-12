@@ -157,31 +157,48 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   }, [activeSection, activeTab]);
 
   // Scroll handler for auto-hide header + progress bar
+  const rafId = useRef(null);
   const handleScroll = useCallback(() => {
-    const el = tabContentRef.current;
-    if (!el) return;
+    if (rafId.current) return; // throttle to one per frame
+    rafId.current = requestAnimationFrame(() => {
+      rafId.current = null;
+      const el = tabContentRef.current;
+      if (!el) return;
 
-    const scrollTop = el.scrollTop;
-    const maxScroll = el.scrollHeight - el.clientHeight;
+      const scrollTop = el.scrollTop;
+      const maxScroll = el.scrollHeight - el.clientHeight;
 
-    const progress = maxScroll > 0 ? Math.min(scrollTop / maxScroll, 1) : 0;
-    setReadProgress(progress);
+      // Ignore rubber-band / overscroll values
+      if (scrollTop < 0 || scrollTop > maxScroll + 50) {
+        return;
+      }
 
-    // Near bottom of page — always show header to avoid bounce-glitch
-    if (maxScroll - scrollTop < 30) {
-      setHeaderHidden(false);
+      const progress = maxScroll > 0 ? Math.min(Math.max(scrollTop / maxScroll, 0), 1) : 0;
+      setReadProgress(progress);
+
+      // Near bottom — always show header
+      if (maxScroll - scrollTop < 60) {
+        setHeaderHidden(false);
+        lastScrollTop.current = scrollTop;
+        return;
+      }
+
+      // Near top — always show header
+      if (scrollTop < scrollThreshold) {
+        setHeaderHidden(false);
+        lastScrollTop.current = scrollTop;
+        return;
+      }
+
+      const delta = scrollTop - lastScrollTop.current;
+      if (delta > 12 && scrollTop > scrollThreshold) {
+        setHeaderHidden(true);
+      } else if (delta < -12) {
+        setHeaderHidden(false);
+      }
+
       lastScrollTop.current = scrollTop;
-      return;
-    }
-
-    const delta = scrollTop - lastScrollTop.current;
-    if (delta > 10 && scrollTop > scrollThreshold) {
-      setHeaderHidden(true);
-    } else if (delta < -10) {
-      setHeaderHidden(false);
-    }
-
-    lastScrollTop.current = scrollTop;
+    });
   }, []);
 
   // Save progress to DB when a section is fully completed
@@ -308,40 +325,42 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
             <div className="reading-progress-fill" style={{ width: `${readProgress * 100}%` }} />
           </div>
 
-          <div className={`content-header ${headerHidden ? 'header-hidden' : ''}`}>
-            <div className="content-header-top">
-              {sidebarCollapsed && (
-                <button className="sidebar-expand-btn" onClick={toggleSidebarCollapsed} title="Expand sidebar">
-                  &#9776;
-                </button>
-              )}
-              <span className="content-header-section-num">Section {currentSection?.number}</span>
-              <span className="content-header-unit-badge">Unit {currentUnit?.number}: {currentUnit?.title}</span>
-              <BookmarkButton sectionId={activeSection} />
-              <AuthButton />
-            </div>
-            <h1 className="content-header-title">{currentSection?.title}</h1>
-            <div className="tab-bar">
-              {tabs.map(tab => (
-                <button
-                  key={tab.id}
-                  className={`tab-item ${activeTab === tab.id ? 'active' : ''} ${tab.premium && !isPremium ? 'tab-locked' : ''}`}
-                  onClick={() => setActiveTab(tab.id)}
-                >
-                  <span className="tab-icon">{tab.icon}</span>
-                  {tab.label}
-                  {tab.premium && !isPremium && <span className="tab-lock-icon">🔒</span>}
-                </button>
-              ))}
-            </div>
-          </div>
-
           <div
             className="tab-content"
             ref={tabContentRef}
             onScroll={handleScroll}
           >
-            {renderTab()}
+            <div className={`content-header ${headerHidden ? 'header-hidden' : ''}`}>
+              <div className="content-header-top">
+                {sidebarCollapsed && (
+                  <button className="sidebar-expand-btn" onClick={toggleSidebarCollapsed} title="Expand sidebar">
+                    &#9776;
+                  </button>
+                )}
+                <span className="content-header-section-num">Section {currentSection?.number}</span>
+                <span className="content-header-unit-badge">Unit {currentUnit?.number}: {currentUnit?.title}</span>
+                <BookmarkButton sectionId={activeSection} />
+                <AuthButton />
+              </div>
+              <h1 className="content-header-title">{currentSection?.title}</h1>
+              <div className="tab-bar">
+                {tabs.map(tab => (
+                  <button
+                    key={tab.id}
+                    className={`tab-item ${activeTab === tab.id ? 'active' : ''} ${tab.premium && !isPremium ? 'tab-locked' : ''}`}
+                    onClick={() => setActiveTab(tab.id)}
+                  >
+                    <span className="tab-icon">{tab.icon}</span>
+                    {tab.label}
+                    {tab.premium && !isPremium && <span className="tab-lock-icon">🔒</span>}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="tab-content-body">
+              {renderTab()}
+            </div>
           </div>
           <GlossaryTooltip />
         </div>

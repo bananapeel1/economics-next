@@ -33,7 +33,7 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
     <nav className={`sidebar ${isOpen ? 'open' : ''} ${isCollapsed ? 'collapsed' : ''}`}>
       <div className="sidebar-header">
         <div className="sidebar-logo">
-          <img src="/logo.png" alt="Revvy Learn" className="sidebar-logo-icon" />
+          <img src="/logo.svg" alt="Revvy Learn" className="sidebar-logo-icon" />
           <span className="sidebar-logo-text">Revvy Learn</span>
         </div>
         <div className="sidebar-subtitle">Edexcel International A-Level</div>

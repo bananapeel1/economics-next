@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { useChat } from '@ai-sdk/react';
 
 const quickPromptsBySection = {
@@ -89,9 +89,56 @@ function getMessageText(msg) {
   return msg.content || '';
 }
 
+// SessionStorage helpers for chat history per section
+const STORAGE_PREFIX = 'tutor-chat-';
+
+function saveChatHistory(sectionId, messages) {
+  if (!sectionId || !messages.length) return;
+  try {
+    // Store a simplified version to avoid hitting storage limits
+    const simplified = messages.map(msg => ({
+      id: msg.id,
+      role: msg.role,
+      content: getMessageText(msg),
+    }));
+    sessionStorage.setItem(STORAGE_PREFIX + sectionId, JSON.stringify(simplified));
+  } catch {
+    // Silently fail if sessionStorage is full
+  }
+}
+
+function loadChatHistory(sectionId) {
+  if (!sectionId) return null;
+  try {
+    const stored = sessionStorage.getItem(STORAGE_PREFIX + sectionId);
+    if (!stored) return null;
+    const parsed = JSON.parse(stored);
+    if (!Array.isArray(parsed) || parsed.length === 0) return null;
+    // Convert back to UIMessage format with parts
+    return parsed.map(msg => ({
+      id: msg.id,
+      role: msg.role,
+      parts: [{ type: 'text', text: msg.content }],
+    }));
+  } catch {
+    return null;
+  }
+}
+
+function clearChatHistory(sectionId) {
+  if (!sectionId) return;
+  try {
+    sessionStorage.removeItem(STORAGE_PREFIX + sectionId);
+  } catch {
+    // ignore
+  }
+}
+
 export default function TutorTab({ section, unit }) {
   const [input, setInput] = useState('');
   const messagesEndRef = useRef(null);
+  const prevSectionId = useRef(section?.id);
+  const hasRestoredRef = useRef(false);
 
   const {
     messages,
@@ -106,11 +153,32 @@ export default function TutorTab({ section, unit }) {
 
   const isLoading = status === 'submitted' || status === 'streaming';
 
-  // Reset chat when section changes
+  // Restore chat history when section changes or on first mount
   useEffect(() => {
-    setMessages([]);
-    setInput('');
+    if (section?.id !== prevSectionId.current) {
+      // Section changed — try to restore saved history for new section
+      prevSectionId.current = section?.id;
+      hasRestoredRef.current = false;
+    }
+
+    if (!hasRestoredRef.current && section?.id) {
+      hasRestoredRef.current = true;
+      const saved = loadChatHistory(section.id);
+      if (saved) {
+        setMessages(saved);
+      } else {
+        setMessages([]);
+      }
+      setInput('');
+    }
   }, [section?.id, setMessages]);
+
+  // Save chat to sessionStorage whenever messages change (only when not streaming)
+  useEffect(() => {
+    if (status === 'ready' && messages.length > 0 && section?.id) {
+      saveChatHistory(section.id, messages);
+    }
+  }, [messages, status, section?.id]);
 
   // Auto-scroll to latest message
   useEffect(() => {
@@ -129,6 +197,12 @@ export default function TutorTab({ section, unit }) {
     if (!trimmed || isLoading) return;
     setInput('');
     sendMessage({ text: trimmed });
+  }
+
+  function handleClearChat() {
+    setMessages([]);
+    clearChatHistory(section?.id);
+    setInput('');
   }
 
   function handleKeyDown(e) {
@@ -209,6 +283,19 @@ export default function TutorTab({ section, unit }) {
       )}
 
       <div className="tutor-input-area">
+        {messages.length > 0 && (
+          <button
+            className="tutor-clear-btn"
+            onClick={handleClearChat}
+            title="Clear chat"
+            disabled={isLoading}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="1 4 1 10 7 10" />
+              <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
+            </svg>
+          </button>
+        )}
         <textarea
           className="tutor-input"
           rows={1}

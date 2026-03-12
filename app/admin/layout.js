@@ -27,7 +27,7 @@ export default async function AdminLayout({ children }) {
       }}>
         <div style={{ padding: '0 20px 16px', borderBottom: '1px solid #2a3045' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <img src="/logo.png" alt="Revvy Learn" style={{ width: 28, height: 28, objectFit: 'contain' }} />
+            <img src="/logo.svg" alt="Revvy Learn" style={{ width: 28, height: 28, objectFit: 'contain' }} />
             <span style={{ fontSize: 15, fontWeight: 700, color: '#e8ecf5' }}>Admin Panel</span>
           </div>
         </div>
