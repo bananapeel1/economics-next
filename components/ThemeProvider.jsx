@@ -8,13 +8,12 @@ export function ThemeProvider({ children }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Read from localStorage, fall back to system preference
+    // Read from localStorage, fall back to dark mode
     const stored = localStorage.getItem('theme');
     if (stored === 'light' || stored === 'dark') {
       setTheme(stored);
     } else {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setTheme(prefersDark ? 'dark' : 'light');
+      setTheme('dark');
     }
     setMounted(true);
   }, []);

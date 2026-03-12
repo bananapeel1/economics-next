@@ -28,8 +28,7 @@ export default async function RootLayout({ children }) {
               if (t === 'light' || t === 'dark') {
                 document.documentElement.setAttribute('data-theme', t);
               } else {
-                var d = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-                document.documentElement.setAttribute('data-theme', d);
+                document.documentElement.setAttribute('data-theme', 'dark');
               }
             } catch(e) {
               document.documentElement.setAttribute('data-theme', 'dark');
