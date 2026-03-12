@@ -104,7 +104,7 @@ Your role:
 - Format responses with clear paragraphs. Use **bold** for key terms.`;
 
   const result = streamText({
-    model: google('gemini-2.0-flash-lite'),
+    model: google('gemini-2.5-flash-lite'),
     system,
     messages,
     maxTokens: 1024,
