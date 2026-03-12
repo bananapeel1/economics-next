@@ -12,15 +12,17 @@ import MistakesTab from './MistakesTab';
 import BookmarkButton from './BookmarkButton';
 import AuthButton from './AuthButton';
 import GlossaryTooltip from './GlossaryTooltip';
+import PracticeQuestionsTab from './PracticeQuestionsTab';
 import PaywallOverlay from './PaywallOverlay';
 
-const FREE_TABS = new Set(['content', 'notes', 'diagrams']);
+const FREE_TABS = new Set(['content', 'notes', 'diagrams', 'practice']);
 const PREMIUM_TABS = new Set(['flashcards', 'quiz', 'mistakes', 'tutor']);
 
-const tabs = [
+const allTabs = [
   { id: 'content', label: 'Content', icon: '\uD83D\uDCD6' },
   { id: 'notes', label: 'Notes', icon: '\uD83D\uDCDD' },
-  { id: 'diagrams', label: 'Diagrams', icon: '\uD83D\uDCCA' },
+  { id: 'diagrams', label: 'Diagrams', icon: '\uD83D\uDCCA', subjects: ['economics'] },
+  { id: 'practice', label: 'Practice', icon: '\uD83D\uDCDD', subjects: ['business'] },
   { id: 'flashcards', label: 'Flashcards', icon: '\uD83C\uDCCF', premium: true },
   { id: 'quiz', label: 'Quiz', icon: '\u270F\uFE0F', premium: true },
   { id: 'mistakes', label: 'Mistakes', icon: '\u26A0\uFE0F', premium: true },
@@ -33,6 +35,9 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   // Subject state
   const [activeSubjectId, setActiveSubjectId] = useState(subjects[0]?.id || null);
   const activeSubject = subjects.find(s => s.id === activeSubjectId) || subjects[0];
+
+  // Filter tabs by active subject slug
+  const tabs = allTabs.filter(tab => !tab.subjects || tab.subjects.includes(activeSubject?.slug));
 
   // Filter units and sections by active subject
   const subjectUnits = units.filter(u => u.subject_id === activeSubjectId);
@@ -264,6 +269,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       case 'content': return <ContentTab key={activeSection} data={sectionData.content} glossaryTerms={glossaryTerms} onStepChange={handleStepChange} initialPosition={stepperPositions.current[activeSection] || null} />;
       case 'notes': return <NotesTab data={sectionData.notes} glossaryTerms={glossaryTerms} />;
       case 'diagrams': return <DiagramsTab data={sectionData.diagrams} />;
+      case 'practice': return <PracticeQuestionsTab questions={sectionData.practice} />;
       case 'flashcards': return <FlashcardsTab cards={sectionData.flashcards} sectionId={activeSection} />;
       case 'quiz': return <QuizTab questions={sectionData.quiz} sectionId={activeSection} />;
       case 'mistakes': return <MistakesTab data={sectionData.mistakes} />;
