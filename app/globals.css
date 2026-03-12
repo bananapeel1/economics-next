@@ -1284,6 +1284,200 @@ body {
   margin-bottom: 0;
 }
 
+/* ─── Auth Dropdown Links ─── */
+a.auth-dropdown-item,
+a.auth-dropdown-item:visited {
+  display: block;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+.auth-dropdown-divider {
+  height: 1px;
+  background: var(--border-primary);
+  margin: 4px 0;
+}
+
+/* ─── Settings Page ─── */
+.settings-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.settings-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+.settings-section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+.settings-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-primary);
+}
+.settings-info-row:last-of-type {
+  border-bottom: none;
+}
+.settings-info-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.settings-info-value {
+  font-size: 13px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+.settings-plan-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 10px;
+  letter-spacing: 0.3px;
+}
+.settings-plan-badge.free {
+  background: var(--bg-section);
+  color: var(--text-muted);
+}
+.settings-plan-badge.premium {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+  color: #fff;
+}
+.settings-upgrade-hint {
+  font-size: 13px;
+  color: var(--text-muted-alt);
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+.settings-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted-alt);
+  margin-bottom: 6px;
+  margin-top: 14px;
+}
+.settings-input {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+.settings-input:focus {
+  border-color: var(--accent-green);
+}
+.settings-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.settings-btn.primary {
+  background: var(--accent-green);
+  color: white;
+}
+.settings-btn.primary:hover {
+  background: var(--accent-green-dark);
+}
+.settings-btn.secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-primary);
+}
+.settings-btn.secondary:hover {
+  border-color: var(--accent-green);
+  color: var(--accent-green);
+}
+.settings-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.settings-error {
+  background: var(--red-6);
+  border: 1px solid var(--red-30);
+  color: var(--accent-red);
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+.settings-success {
+  background: var(--green-light-6);
+  border: 1px solid var(--green-30);
+  color: var(--accent-green-light);
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+/* ─── Contact Page ─── */
+.contact-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: 12px;
+  padding: 28px;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+}
+.contact-item + .contact-item {
+  border-top: 1px solid var(--border-primary);
+}
+.contact-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+.contact-item-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+}
+.contact-item-value {
+  font-size: 15px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+.contact-link {
+  text-decoration: none;
+  color: var(--accent-green);
+  transition: color 0.15s;
+}
+.contact-link:hover {
+  color: var(--accent-green-light);
+}
+
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .stepper-rail { width: 28px; }
@@ -1294,4 +1488,6 @@ body {
   .practice-title { font-size: 18px; }
   .practice-question-card { padding: 16px; }
   .practice-question-text { font-size: 14px; }
+  .settings-content { padding: 0 4px; }
+  .contact-content { padding: 0 4px; }
 }

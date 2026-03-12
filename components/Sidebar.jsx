@@ -126,6 +126,10 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
             Bookmarks
           </Link>
         )}
+        <Link href="/contact" className="sidebar-resource-link">
+          <span className="sidebar-resource-icon">📧</span>
+          Contact
+        </Link>
       </div>
     </nav>
   );

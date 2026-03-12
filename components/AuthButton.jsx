@@ -71,6 +71,26 @@ export default function AuthButton() {
             <span style={{ marginRight: 8 }}>{theme === 'dark' ? '☀️' : '🌙'}</span>
             {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
           </button>
+          <div className="auth-dropdown-divider" />
+          <Link href="/settings" className="auth-dropdown-item" onClick={() => setMenuOpen(false)}>
+            <span style={{ marginRight: 8 }}>⚙️</span>
+            Settings
+          </Link>
+          <Link href="/contact" className="auth-dropdown-item" onClick={() => setMenuOpen(false)}>
+            <span style={{ marginRight: 8 }}>📧</span>
+            Contact
+          </Link>
+          <a
+            href="https://instagram.com/revvylearn"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="auth-dropdown-item"
+            onClick={() => setMenuOpen(false)}
+          >
+            <span style={{ marginRight: 8 }}>📸</span>
+            Instagram
+          </a>
+          <div className="auth-dropdown-divider" />
           <button className="auth-dropdown-item" onClick={handleSignOut}>
             Sign Out
           </button>

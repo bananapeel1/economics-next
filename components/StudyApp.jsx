@@ -22,10 +22,10 @@ const allTabs = [
   { id: 'content', label: 'Content', icon: '\uD83D\uDCD6' },
   { id: 'notes', label: 'Notes', icon: '\uD83D\uDCDD' },
   { id: 'diagrams', label: 'Diagrams', icon: '\uD83D\uDCCA', subjects: ['economics'] },
-  { id: 'practice', label: 'Practice', icon: '\uD83D\uDCDD', subjects: ['business'] },
+  { id: 'practice', label: 'Practice', icon: '\uD83D\uDCDD' },
   { id: 'flashcards', label: 'Flashcards', icon: '\uD83C\uDCCF', premium: true },
   { id: 'quiz', label: 'Quiz', icon: '\u270F\uFE0F', premium: true },
-  { id: 'mistakes', label: 'Mistakes', icon: '\u26A0\uFE0F', premium: true },
+  { id: 'mistakes', label: 'Mistakes', icon: '\u26A0\uFE0F', premium: true, subjects: ['business'] },
   { id: 'tutor', label: 'Tutor', icon: '\uD83E\uDD16', premium: true },
 ];
 
