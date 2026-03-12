@@ -7,19 +7,34 @@ export default function PaywallOverlay({ feature = 'this feature' }) {
   const { user } = useAuth();
   const [loading, setLoading] = useState(false);
 
+  const [errorMsg, setErrorMsg] = useState('');
+
   async function handleUpgrade() {
     setLoading(true);
+    setErrorMsg('');
     try {
       const res = await fetch('/api/stripe/checkout', { method: 'POST' });
-      const { url, error } = await res.json();
+      if (!res.ok) {
+        let msg = 'Something went wrong. Please try again.';
+        try {
+          const body = await res.json();
+          if (body?.error) msg = body.error;
+        } catch (_) {}
+        console.error('Checkout error:', msg);
+        setErrorMsg(msg);
+        setLoading(false);
+        return;
+      }
+      const { url } = await res.json();
       if (url) {
         window.location.href = url;
       } else {
-        console.error('Checkout error:', error);
+        setErrorMsg('Could not create checkout session.');
         setLoading(false);
       }
     } catch (e) {
       console.error('Checkout error:', e);
+      setErrorMsg('Network error. Please try again.');
       setLoading(false);
     }
   }
@@ -54,6 +69,10 @@ export default function PaywallOverlay({ feature = 'this feature' }) {
             AI Tutor for Exam Prep
           </div>
         </div>
+
+        {errorMsg && (
+          <p style={{ color: '#ef4444', fontSize: 13, margin: '0 0 12px' }}>{errorMsg}</p>
+        )}
 
         {user ? (
           <button
