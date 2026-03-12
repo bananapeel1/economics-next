@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useChat } from '@ai-sdk/react';
 
 const quickPromptsBySection = {
@@ -77,26 +77,39 @@ const quickPromptsBySection = {
   ],
 };
 
+// Extract text content from a v6 UIMessage (parts-based)
+function getMessageText(msg) {
+  if (msg.parts) {
+    return msg.parts
+      .filter(p => p.type === 'text')
+      .map(p => p.text)
+      .join('');
+  }
+  // Fallback for any legacy format
+  return msg.content || '';
+}
+
 export default function TutorTab({ section, unit }) {
+  const [input, setInput] = useState('');
   const messagesEndRef = useRef(null);
 
   const {
     messages,
-    input,
-    handleInputChange,
-    handleSubmit,
-    isLoading,
+    sendMessage,
+    status,
     error,
     setMessages,
-    append,
   } = useChat({
     api: '/api/chat',
     body: { section, unit },
   });
 
+  const isLoading = status === 'submitted' || status === 'streaming';
+
   // Reset chat when section changes
   useEffect(() => {
     setMessages([]);
+    setInput('');
   }, [section?.id, setMessages]);
 
   // Auto-scroll to latest message
@@ -111,14 +124,17 @@ export default function TutorTab({ section, unit }) {
     'What are common mistakes students make?',
   ];
 
-  function handleQuickPrompt(text) {
-    append({ role: 'user', content: text });
+  function handleSend(text) {
+    const trimmed = (text || '').trim();
+    if (!trimmed || isLoading) return;
+    setInput('');
+    sendMessage({ text: trimmed });
   }
 
   function handleKeyDown(e) {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
-      handleSubmit(e);
+      handleSend(input);
     }
   }
 
@@ -147,18 +163,21 @@ export default function TutorTab({ section, unit }) {
           </div>
         )}
 
-        {messages.map((msg) => (
-          <div key={msg.id} className={`tutor-message ${msg.role === 'user' ? 'user' : 'ai'}`}>
-            <div className={`tutor-avatar ${msg.role === 'user' ? 'user' : 'ai'}`}>
-              {msg.role === 'user' ? '\uD83D\uDC64' : '\uD83E\uDD16'}
+        {messages.map((msg) => {
+          const text = getMessageText(msg);
+          return (
+            <div key={msg.id} className={`tutor-message ${msg.role === 'user' ? 'user' : 'ai'}`}>
+              <div className={`tutor-avatar ${msg.role === 'user' ? 'user' : 'ai'}`}>
+                {msg.role === 'user' ? '\uD83D\uDC64' : '\uD83E\uDD16'}
+              </div>
+              <div className="tutor-bubble">
+                {msg.role === 'assistant' ? formatContent(text) : text}
+              </div>
             </div>
-            <div className="tutor-bubble">
-              {msg.role === 'assistant' ? formatContent(msg.content) : msg.content}
-            </div>
-          </div>
-        ))}
+          );
+        })}
 
-        {isLoading && messages.length > 0 && messages[messages.length - 1].role === 'user' && (
+        {status === 'submitted' && (
           <div className="tutor-message ai">
             <div className="tutor-avatar ai">&#129302;</div>
             <div className="tutor-bubble">
@@ -182,30 +201,30 @@ export default function TutorTab({ section, unit }) {
       {messages.length === 0 && (
         <div className="tutor-quick-prompts">
           {quickPrompts.map((prompt, i) => (
-            <button key={i} className="tutor-quick-btn" onClick={() => handleQuickPrompt(prompt)}>
+            <button key={i} className="tutor-quick-btn" onClick={() => handleSend(prompt)}>
               {prompt}
             </button>
           ))}
         </div>
       )}
 
-      <form className="tutor-input-area" onSubmit={handleSubmit}>
+      <div className="tutor-input-area">
         <textarea
           className="tutor-input"
           rows={1}
           placeholder="Ask a question..."
           value={input}
-          onChange={handleInputChange}
+          onChange={e => setInput(e.target.value)}
           onKeyDown={handleKeyDown}
         />
         <button
-          type="submit"
           className="tutor-send-btn"
           disabled={!input.trim() || isLoading}
+          onClick={() => handleSend(input)}
         >
           Send
         </button>
-      </form>
+      </div>
     </div>
   );
 }
