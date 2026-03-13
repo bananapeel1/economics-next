@@ -4,7 +4,7 @@ import FunPage from '@/components/fun/FunPage';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Fun Zone — Revvy Learn',
+  title: 'Blackjack — Revvy Learn',
 };
 
 export default async function FunRoute() {
@@ -19,7 +19,7 @@ export default async function FunRoute() {
     <div className="resource-page">
       <div className="resource-page-header">
         <Link href="/" className="resource-back-link">&larr; Back to App</Link>
-        <h1 className="resource-page-title">Fun Zone</h1>
+        <h1 className="resource-page-title">Blackjack</h1>
         <p className="resource-page-subtitle">
           Beat the dealer, answer questions, level up your knowledge.
         </p>

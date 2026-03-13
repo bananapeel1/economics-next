@@ -21,8 +21,8 @@ export default function ContactPage() {
             <span className="contact-icon">📧</span>
             <div>
               <div className="contact-item-label">Email</div>
-              <a href="mailto:hello@revvylearn.com" className="contact-item-value contact-link">
-                hello@revvylearn.com
+              <a href="mailto:arongijsel@gmail.com" className="contact-item-value contact-link">
+                arongijsel@gmail.com
               </a>
             </div>
           </div>

@@ -78,7 +78,7 @@ export default function AuthButton() {
           </Link>
           <Link href="/fun" className="auth-dropdown-item" onClick={() => setMenuOpen(false)}>
             <span style={{ marginRight: 8 }}>🎮</span>
-            Fun Zone
+            Blackjack
           </Link>
           <Link href="/contact" className="auth-dropdown-item" onClick={() => setMenuOpen(false)}>
             <span style={{ marginRight: 8 }}>📧</span>
