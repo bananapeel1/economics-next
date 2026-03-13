@@ -27,6 +27,9 @@ export async function POST(request) {
         // Fetch subscription details from Stripe
         const subscription = await getStripe().subscriptions.retrieve(subscriptionId);
         const periodEnd = getSubscriptionPeriodEnd(subscription);
+        const trialEnd = subscription.trial_end
+          ? new Date(subscription.trial_end * 1000).toISOString()
+          : null;
 
         await supabase
           .from('user_subscriptions')
@@ -37,6 +40,7 @@ export async function POST(request) {
             plan: 'premium',
             status: 'active',
             current_period_end: periodEnd,
+            trial_end: trialEnd,
             updated_at: new Date().toISOString(),
           }, { onConflict: 'user_id' });
       }
@@ -57,12 +61,17 @@ export async function POST(request) {
 
       if (sub) {
         const isActive = ['active', 'trialing'].includes(subscription.status);
+        const trialEnd = subscription.trial_end
+          ? new Date(subscription.trial_end * 1000).toISOString()
+          : null;
+
         await supabase
           .from('user_subscriptions')
           .update({
             status: isActive ? 'active' : 'cancelled',
             plan: isActive ? 'premium' : 'free',
             current_period_end: periodEnd,
+            trial_end: trialEnd,
             updated_at: new Date().toISOString(),
           })
           .eq('user_id', sub.user_id);

@@ -24,6 +24,15 @@ export default function SettingsPage() {
       })
     : '';
 
+  const isOnTrial = isPremium && subscription?.trialEnd
+    && new Date(subscription.trialEnd) > new Date();
+
+  const trialEndDate = subscription?.trialEnd
+    ? new Date(subscription.trialEnd).toLocaleDateString('en-GB', {
+        day: 'numeric', month: 'long', year: 'numeric',
+      })
+    : '';
+
   async function handleChangePassword(e) {
     e.preventDefault();
     setPasswordError('');
@@ -119,14 +128,21 @@ export default function SettingsPage() {
           <>
             <div className="settings-info-row">
               <span className="settings-info-label">Plan</span>
-              <span className="settings-plan-badge premium">Pro</span>
+              <span className="settings-plan-badge premium">
+                {isOnTrial ? 'Pro (Trial)' : 'Pro'}
+              </span>
             </div>
-            {periodEnd && (
+            {isOnTrial && trialEndDate ? (
+              <div className="settings-info-row">
+                <span className="settings-info-label">Trial ends</span>
+                <span className="settings-info-value">{trialEndDate}</span>
+              </div>
+            ) : periodEnd ? (
               <div className="settings-info-row">
                 <span className="settings-info-label">Renews</span>
                 <span className="settings-info-value">{periodEnd}</span>
               </div>
-            )}
+            ) : null}
             <button
               className="settings-btn secondary"
               onClick={handleManageSubscription}
@@ -149,7 +165,7 @@ export default function SettingsPage() {
               onClick={handleUpgrade}
               disabled={upgradeLoading}
             >
-              {upgradeLoading ? 'Loading...' : 'Upgrade to Pro'}
+              {upgradeLoading ? 'Loading...' : 'Start 5-Day Free Trial'}
             </button>
           </>
         )}

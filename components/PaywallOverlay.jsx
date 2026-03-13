@@ -46,8 +46,8 @@ export default function PaywallOverlay({ feature = 'this feature' }) {
         <h2 className="paywall-title">Premium Feature</h2>
         <p className="paywall-description">
           {user
-            ? `Upgrade to Premium to unlock ${feature} and accelerate your revision.`
-            : `Sign in and upgrade to Premium to access ${feature}.`
+            ? `Start your free trial to unlock ${feature} and accelerate your revision.`
+            : `Sign in to start your free trial and access ${feature}.`
           }
         </p>
 
@@ -84,7 +84,7 @@ export default function PaywallOverlay({ feature = 'this feature' }) {
             onClick={handleUpgrade}
             disabled={loading}
           >
-            {loading ? 'Loading...' : 'Upgrade to Premium'}
+            {loading ? 'Loading...' : 'Start 5-Day Free Trial'}
           </button>
         ) : (
           <Link href="/login" className="paywall-btn">
@@ -93,7 +93,7 @@ export default function PaywallOverlay({ feature = 'this feature' }) {
         )}
 
         <p className="paywall-note">
-          Content and Notes are always free. No credit card required to browse.
+          No credit card required. Content and Notes are always free.
         </p>
       </div>
     </div>

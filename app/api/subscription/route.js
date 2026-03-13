@@ -15,7 +15,7 @@ export async function GET() {
     const serviceSupabase = createServerClient();
     const { data: sub } = await serviceSupabase
       .from('user_subscriptions')
-      .select('plan, status, current_period_end, stripe_customer_id')
+      .select('plan, status, current_period_end, stripe_customer_id, trial_end')
       .eq('user_id', user.id)
       .single();
 
@@ -28,15 +28,30 @@ export async function GET() {
     if (sub.plan !== 'premium' && sub.stripe_customer_id) {
       try {
         const stripe = getStripe();
-        const subscriptions = await stripe.subscriptions.list({
+
+        // Check for both active AND trialing subscriptions
+        let activeSub = null;
+        const activeList = await stripe.subscriptions.list({
           customer: sub.stripe_customer_id,
           status: 'active',
           limit: 1,
         });
+        activeSub = activeList.data[0];
 
-        if (subscriptions.data.length > 0) {
-          const activeSub = subscriptions.data[0];
+        if (!activeSub) {
+          const trialingList = await stripe.subscriptions.list({
+            customer: sub.stripe_customer_id,
+            status: 'trialing',
+            limit: 1,
+          });
+          activeSub = trialingList.data[0];
+        }
+
+        if (activeSub) {
           const periodEnd = getSubscriptionPeriodEnd(activeSub);
+          const trialEnd = activeSub.trial_end
+            ? new Date(activeSub.trial_end * 1000).toISOString()
+            : null;
 
           // Sync the DB with Stripe's truth
           await serviceSupabase
@@ -46,6 +61,7 @@ export async function GET() {
               plan: 'premium',
               status: 'active',
               current_period_end: periodEnd,
+              trial_end: trialEnd,
               updated_at: new Date().toISOString(),
             })
             .eq('user_id', user.id);
@@ -54,6 +70,7 @@ export async function GET() {
             plan: 'premium',
             status: 'active',
             currentPeriodEnd: periodEnd,
+            trialEnd,
           });
         }
       } catch (e) {
@@ -74,6 +91,7 @@ export async function GET() {
       plan: sub.plan,
       status: sub.status,
       currentPeriodEnd: sub.current_period_end,
+      trialEnd: sub.trial_end || null,
     });
   } catch (err) {
     console.error('Subscription check error:', err);

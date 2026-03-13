@@ -68,9 +68,18 @@ export async function POST() {
       return NextResponse.json({ error: 'Stripe price not configured' }, { status: 500 });
     }
 
+    // Check if user has had a previous subscription (prevent trial abuse)
+    const { data: existingSub } = await serviceSupabase
+      .from('user_subscriptions')
+      .select('stripe_subscription_id')
+      .eq('user_id', user.id)
+      .single();
+
+    const hadPreviousSubscription = !!existingSub?.stripe_subscription_id;
+
     const origin = process.env.NEXT_PUBLIC_SITE_URL || 'https://revvylearn.com';
 
-    const session = await stripe.checkout.sessions.create({
+    const sessionParams = {
       customer: customerId,
       mode: 'subscription',
       line_items: [{ price: priceId, quantity: 1 }],
@@ -78,7 +87,15 @@ export async function POST() {
       success_url: `${origin}/?upgraded=true`,
       cancel_url: `${origin}/?cancelled=true`,
       metadata: { supabase_user_id: user.id },
-    });
+    };
+
+    // Only offer trial to new users who haven't had a subscription before
+    if (!hadPreviousSubscription) {
+      sessionParams.payment_method_collection = 'if_required';
+      sessionParams.subscription_data = { trial_period_days: 5 };
+    }
+
+    const session = await stripe.checkout.sessions.create(sessionParams);
 
     return NextResponse.json({ url: session.url });
   } catch (err) {
