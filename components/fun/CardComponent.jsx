@@ -7,10 +7,12 @@ const SUIT_SYMBOLS = {
   spades: '\u2660',
 };
 
-export default function CardComponent({ card, hidden, delay = 0 }) {
+export default function CardComponent({ card, hidden, delay = 0, isHit = false }) {
+  const animClass = isHit ? 'fun-card-hit' : 'fun-card-deal';
+
   if (hidden) {
     return (
-      <div className="fun-card fun-card-back fun-card-deal" style={{ animationDelay: `${delay}ms` }}>
+      <div className={`fun-card fun-card-back ${animClass}`} style={{ animationDelay: `${delay}ms` }}>
         <div className="fun-card-back-pattern" />
       </div>
     );
@@ -21,7 +23,7 @@ export default function CardComponent({ card, hidden, delay = 0 }) {
 
   return (
     <div
-      className={`fun-card ${isRed ? 'red' : 'black'} fun-card-deal`}
+      className={`fun-card ${isRed ? 'red' : 'black'} ${animClass}`}
       style={{ animationDelay: `${delay}ms` }}
     >
       <span className="fun-card-corner top">{card.rank}{symbol}</span>

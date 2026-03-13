@@ -440,6 +440,39 @@ body {
 .flashcard-btn.restart { margin-top: 8px; background: var(--bg-card); border: 1px solid var(--border-primary); color: var(--text-primary); }
 .flashcard-btn.restart:hover { background: var(--bg-hover); }
 
+/* Flashcard fullscreen button */
+.flashcard-fullscreen-btn {
+  display: none; /* hidden on mobile */
+  align-items: center; justify-content: center;
+  width: 30px; height: 30px; border-radius: 7px;
+  background: var(--bg-card); border: 1px solid var(--border-primary);
+  color: var(--text-muted); cursor: pointer; transition: all 0.15s;
+  margin-left: 8px; vertical-align: middle; flex-shrink: 0;
+}
+.flashcard-fullscreen-btn:hover { background: var(--bg-card-hover); color: var(--text-primary); border-color: var(--accent-green); }
+@media (min-width: 769px) {
+  .flashcard-fullscreen-btn { display: inline-flex; }
+}
+
+/* Flashcard fullscreen mode */
+.flashcard-fullscreen {
+  background: var(--bg-primary);
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  min-height: 100vh;
+}
+.flashcard-fullscreen .flashcard-progress { max-width: 640px; }
+.flashcard-fullscreen .flashcard { max-width: 640px; min-height: 360px; }
+.flashcard-fullscreen .flashcard-inner { min-height: 360px; }
+.flashcard-fullscreen .flashcard-question { font-size: 22px; }
+.flashcard-fullscreen .flashcard-answer { font-size: 16px; }
+.flashcard-fullscreen .flashcard-actions { gap: 16px; }
+.flashcard-fullscreen .flashcard-btn { padding: 12px 32px; font-size: 16px; }
+
 /* Quiz */
 .quiz-question { background: var(--bg-card); border: 1px solid var(--border-primary); border-radius: 12px; padding: 20px 24px; margin-bottom: 16px; }
 .quiz-question-num { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--accent-green); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }

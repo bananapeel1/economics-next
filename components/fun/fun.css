@@ -188,6 +188,11 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   position: relative;
   flex-shrink: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.fun-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 .fun-card.red { color: #dc2626; }
 .fun-card.black { color: #1f2937; }
@@ -209,11 +214,40 @@
   border-radius: 4px;
 }
 .fun-card-deal {
-  animation: funCardDeal 0.35s ease-out forwards;
+  animation: funCardDeal 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0;
 }
 @keyframes funCardDeal {
-  from { transform: translateY(-40px) scale(0.85); opacity: 0; }
-  to { transform: translateY(0) scale(1); opacity: 1; }
+  0% {
+    transform: translate(120px, -100px) rotate(-15deg) scale(0.5);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  75% {
+    transform: translate(-2px, 3px) rotate(1deg) scale(1.03);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+/* Hit card — quicker, simpler slide in */
+.fun-card-hit {
+  animation: funCardHit 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0;
+}
+@keyframes funCardHit {
+  0% {
+    transform: translateY(-40px) scale(0.8);
+    opacity: 0;
+  }
+  50% { opacity: 1; }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
 }
 
 /* --- Game Actions --- */

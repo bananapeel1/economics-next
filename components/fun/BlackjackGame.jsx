@@ -29,7 +29,8 @@ export default function BlackjackGame({ playerHand, dealerHand, dealerHidden, ph
               key={i}
               card={card}
               hidden={dealerHidden && i === 1}
-              delay={i * 150}
+              delay={i < 2 ? i * 150 : 0}
+              isHit={i >= 2}
             />
           ))}
         </div>
@@ -53,7 +54,7 @@ export default function BlackjackGame({ playerHand, dealerHand, dealerHidden, ph
         <div className="fun-hand-label">You ({playerScore})</div>
         <div className="fun-hand">
           {playerHand.map((card, i) => (
-            <CardComponent key={i} card={card} delay={i * 150 + 300} />
+            <CardComponent key={i} card={card} delay={i < 2 ? i * 150 + 350 : 0} isHit={i >= 2} />
           ))}
         </div>
       </div>

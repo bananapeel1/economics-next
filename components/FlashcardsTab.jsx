@@ -5,6 +5,26 @@ import { useAuth } from './AuthProvider';
 export default function FlashcardsTab({ cards, sectionId }) {
   const { user } = useAuth();
   const storageKey = `flashcards-${sectionId}`;
+  const containerRef = useRef(null);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  // Listen for fullscreen changes (including Esc key exit)
+  useEffect(() => {
+    function onFsChange() {
+      setIsFullscreen(!!document.fullscreenElement);
+    }
+    document.addEventListener('fullscreenchange', onFsChange);
+    return () => document.removeEventListener('fullscreenchange', onFsChange);
+  }, []);
+
+  function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+      containerRef.current?.requestFullscreen?.().catch(() => {});
+    } else {
+      document.exitFullscreen?.().catch(() => {});
+    }
+  }
+
   const [statuses, setStatuses] = useState(() => {
     if (typeof window === 'undefined') return {};
     try {
@@ -102,7 +122,7 @@ export default function FlashcardsTab({ cards, sectionId }) {
     return <div style={{ color: 'var(--text-muted)', textAlign: 'center', padding: 40 }}>No flashcards available.</div>;
   }
 
-  if (!deck.length) {
+  if (!deck.length && !allComplete) {
     return <div style={{ color: 'var(--text-muted)', textAlign: 'center', padding: 40 }}>Loading flashcards...</div>;
   }
 
@@ -228,7 +248,7 @@ export default function FlashcardsTab({ cards, sectionId }) {
   const card = cards[cardIndex];
 
   return (
-    <div className="flashcard-container">
+    <div className={`flashcard-container${isFullscreen ? ' flashcard-fullscreen' : ''}`} ref={containerRef}>
       <div className="flashcard-progress">
         <div className="flashcard-progress-bar-bg">
           <div className="flashcard-progress-bar" style={{ width: `${progress}%` }} />
@@ -236,6 +256,13 @@ export default function FlashcardsTab({ cards, sectionId }) {
         <div className="flashcard-progress-text">
           {gotItCount} of {cards.length} mastered
           {round > 1 && <span className="flashcard-round-badge">Round {round}</span>}
+          <button className="flashcard-fullscreen-btn" onClick={toggleFullscreen} title={isFullscreen ? 'Exit fullscreen' : 'Fullscreen'}>
+            {isFullscreen ? (
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="4 14 4 20 10 20"/><polyline points="20 10 20 4 14 4"/><line x1="14" y1="10" x2="21" y2="3"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+            ) : (
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+            )}
+          </button>
         </div>
       </div>
 

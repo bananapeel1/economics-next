@@ -6,6 +6,10 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 export const metadata = {
   title: "Revvy Learn — Edexcel A-Level Revision",
   description: "Comprehensive revision app for Edexcel International A-Level Economics and Business",
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-icon.png',
+  },
 };
 
 export const viewport = {

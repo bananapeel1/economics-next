@@ -126,6 +126,12 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
             Bookmarks
           </Link>
         )}
+        {user && (
+          <Link href="/fun" className="sidebar-resource-link">
+            <span className="sidebar-resource-icon">🎮</span>
+            Fun Zone
+          </Link>
+        )}
         <Link href="/contact" className="sidebar-resource-link">
           <span className="sidebar-resource-icon">📧</span>
           Contact
