@@ -418,6 +418,28 @@ body {
 .flashcard-dot.got-it { background: var(--accent-green-light); }
 .flashcard-dot.learning { background: var(--accent-amber); }
 
+/* Flashcard round badge */
+.flashcard-round-badge { display: inline-block; margin-left: 8px; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; background: var(--accent-green); color: #fff; letter-spacing: 0.02em; }
+
+/* Flashcard round summary */
+.flashcard-round-summary, .flashcard-complete { display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 40px 24px; text-align: center; max-width: 440px; width: 100%; margin: 0 auto; }
+.flashcard-round-title, .flashcard-complete-title { font-size: 22px; font-weight: 700; color: var(--text-primary); margin: 0; }
+.flashcard-round-stats { display: flex; gap: 24px; margin: 8px 0; }
+.flashcard-round-stat { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 16px 28px; border-radius: 12px; }
+.flashcard-round-stat.correct { background: rgba(16, 185, 129, 0.12); }
+.flashcard-round-stat.incorrect { background: rgba(245, 158, 11, 0.12); }
+.flashcard-round-stat-num { font-size: 32px; font-weight: 700; }
+.flashcard-round-stat.correct .flashcard-round-stat-num { color: var(--accent-green); }
+.flashcard-round-stat.incorrect .flashcard-round-stat-num { color: var(--accent-amber); }
+.flashcard-round-stat-label { font-size: 13px; color: var(--text-muted); font-weight: 500; }
+.flashcard-round-info { font-size: 14px; color: var(--text-muted); margin: 0; }
+
+/* Flashcard completion */
+.flashcard-complete-icon { font-size: 48px; margin-bottom: 4px; }
+.flashcard-complete-text { font-size: 15px; color: var(--text-secondary); line-height: 1.5; margin: 0; }
+.flashcard-btn.restart { margin-top: 8px; background: var(--bg-card); border: 1px solid var(--border-primary); color: var(--text-primary); }
+.flashcard-btn.restart:hover { background: var(--bg-hover); }
+
 /* Quiz */
 .quiz-question { background: var(--bg-card); border: 1px solid var(--border-primary); border-radius: 12px; padding: 20px 24px; margin-bottom: 16px; }
 .quiz-question-num { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--accent-green); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
