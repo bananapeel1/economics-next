@@ -61,6 +61,12 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   const [isInitial, setIsInitial] = useState(true);
   const [glossaryTerms, setGlossaryTerms] = useState([]);
   const [contentStepInfo, setContentStepInfo] = useState(null);
+  const [pendingTutorPrompt, setPendingTutorPrompt] = useState(null);
+
+  function goToTutor(prompt) {
+    setPendingTutorPrompt(prompt);
+    setActiveTab('tutor');
+  }
 
   // Remember stepper position per section: { sectionId: { activeStep, furthestStep } }
   const stepperPositions = useRef({});
@@ -311,11 +317,11 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       case 'content': return <ContentTab key={activeSection} data={sectionData.content} glossaryTerms={glossaryTerms} onStepChange={handleStepChange} initialPosition={stepperPositions.current[activeSection] || null} />;
       case 'notes': return <NotesTab data={sectionData.notes} glossaryTerms={glossaryTerms} />;
       case 'diagrams': return <DiagramsTab data={sectionData.diagrams} />;
-      case 'practice': return <PracticeQuestionsTab questions={sectionData.practice} />;
+      case 'practice': return <PracticeQuestionsTab questions={sectionData.practice} onAskTutor={isPremium ? goToTutor : null} />;
       case 'flashcards': return <FlashcardsTab cards={sectionData.flashcards} sectionId={activeSection} />;
-      case 'quiz': return <QuizTab questions={sectionData.quiz} sectionId={activeSection} />;
+      case 'quiz': return <QuizTab questions={sectionData.quiz} sectionId={activeSection} onAskTutor={isPremium ? goToTutor : null} />;
       case 'mistakes': return <MistakesTab data={sectionData.mistakes} />;
-      case 'tutor': return <TutorTab section={currentSection} unit={currentUnit} />;
+      case 'tutor': return <TutorTab section={currentSection} unit={currentUnit} pendingPrompt={pendingTutorPrompt} onPromptConsumed={() => setPendingTutorPrompt(null)} />;
       case 'extras': return <ExtrasTab data={sectionData.extras} />;
       default: return null;
     }

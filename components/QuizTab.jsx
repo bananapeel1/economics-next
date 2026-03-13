@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from './AuthProvider';
 
-export default function QuizTab({ questions, sectionId }) {
+export default function QuizTab({ questions, sectionId, onAskTutor }) {
   const { user } = useAuth();
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
@@ -133,6 +133,16 @@ export default function QuizTab({ questions, sectionId }) {
           </div>
           {submitted && q.explanation && (
             <div className="quiz-explanation">{q.explanation}</div>
+          )}
+          {submitted && answers[qIndex] !== q.correctIndex && onAskTutor && (
+            <button
+              className="quiz-ask-tutor-btn"
+              onClick={() => onAskTutor(
+                `I got this quiz question wrong and need help understanding it:\n\n**Question:** ${q.question}\n**My answer:** ${q.options[answers[qIndex]]}\n**Correct answer:** ${q.options[q.correctIndex]}\n\nPlease explain why the correct answer is right and why my answer was wrong. Help me understand the underlying concept so I don't make this mistake again.`
+              )}
+            >
+              🤖 Ask Tutor to Explain
+            </button>
           )}
         </div>
       ))}

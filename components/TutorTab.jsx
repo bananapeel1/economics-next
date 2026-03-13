@@ -134,11 +134,12 @@ function clearChatHistory(sectionId) {
   }
 }
 
-export default function TutorTab({ section, unit }) {
+export default function TutorTab({ section, unit, pendingPrompt, onPromptConsumed }) {
   const [input, setInput] = useState('');
   const messagesEndRef = useRef(null);
   const prevSectionId = useRef(section?.id);
   const hasRestoredRef = useRef(false);
+  const pendingSentRef = useRef(false);
 
   const {
     messages,
@@ -179,6 +180,19 @@ export default function TutorTab({ section, unit }) {
       saveChatHistory(section.id, messages);
     }
   }, [messages, status, section?.id]);
+
+  // Auto-send pending prompt from Quiz/Practice tabs
+  useEffect(() => {
+    if (!pendingPrompt) {
+      pendingSentRef.current = false;
+      return;
+    }
+    if (status === 'ready' && !pendingSentRef.current) {
+      pendingSentRef.current = true;
+      sendMessage({ text: pendingPrompt });
+      onPromptConsumed?.();
+    }
+  }, [pendingPrompt, status]);
 
   // Auto-scroll to latest message
   useEffect(() => {

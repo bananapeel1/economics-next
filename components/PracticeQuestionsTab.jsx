@@ -16,7 +16,7 @@ const MARK_FILTERS = [
   { value: 20, label: '20 Marks' },
 ];
 
-export default function PracticeQuestionsTab({ questions = [] }) {
+export default function PracticeQuestionsTab({ questions = [], onAskTutor }) {
   const [activeFilter, setActiveFilter] = useState('all');
   const [expandedIds, setExpandedIds] = useState(new Set());
 
@@ -122,6 +122,16 @@ export default function PracticeQuestionsTab({ questions = [] }) {
                       <p key={li}>{line}</p>
                     ))}
                   </div>
+                  {onAskTutor && (
+                    <button
+                      className="practice-model-answer-btn"
+                      onClick={() => onAskTutor(
+                        `Write a full model answer for this ${q.marks}-mark exam question that would achieve full marks:\n\n**Question (${q.marks} marks):** ${q.question}${q.command ? `\n**Command word:** ${q.command}` : ''}\n\nPlease structure the answer exactly as an examiner would expect, include all key points needed for full marks, and explain how each point earns marks. Use relevant economic/business terminology and, where appropriate, include diagram references.`
+                      )}
+                    >
+                      🤖 Get Full Model Answer from Tutor
+                    </button>
+                  )}
                 </div>
               )}
             </div>
