@@ -10,6 +10,9 @@ export const metadata = {
     icon: '/favicon.ico',
     apple: '/apple-icon.png',
   },
+  verification: {
+    google: 'SUCgmkz_aRMbcTiUDxOGBJfzifJo7yY2a3muEdY9Zbw',
+  },
 };
 
 export const viewport = {
