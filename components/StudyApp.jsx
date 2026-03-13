@@ -9,7 +9,6 @@ import FlashcardsTab from './FlashcardsTab';
 import QuizTab from './QuizTab';
 import TutorTab from './TutorTab';
 import MistakesTab from './MistakesTab';
-import BookmarkButton from './BookmarkButton';
 import AuthButton from './AuthButton';
 import GlossaryTooltip from './GlossaryTooltip';
 import PracticeQuestionsTab from './PracticeQuestionsTab';
@@ -333,7 +332,6 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
         <button className="hamburger" onClick={() => setSidebarOpen(true)}>&#9776;</button>
         <span className="mobile-title">{currentSection?.short_title}</span>
         <div className="mobile-header-actions">
-          <BookmarkButton sectionId={activeSection} />
           <AuthButton />
         </div>
       </div>
@@ -375,7 +373,6 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
                 )}
                 <span className="content-header-section-num">Section {currentSection?.number}</span>
                 <span className="content-header-unit-badge">Unit {currentUnit?.number}: {currentUnit?.title}</span>
-                <BookmarkButton sectionId={activeSection} />
                 <AuthButton />
               </div>
               <h1 className="content-header-title">{currentSection?.title}</h1>

@@ -563,8 +563,7 @@ body {
   .content-header-top { gap: 6px; }
   .content-header-section-num { font-size: 11px; }
   .content-header-unit-badge { font-size: 10px; padding: 2px 8px; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  /* Hide auth/bookmark from content header on mobile — they're in mobile-header */
-  .content-header-top .bookmark-btn { display: none; }
+  /* Hide auth from content header on mobile — it's in mobile-header */
   .content-header-top .auth-actions-row { display: none; }
   .content-header-top .auth-user-menu { display: none; }
   .content-header-title { font-size: 18px; margin-bottom: 8px; }
@@ -947,21 +946,6 @@ body {
 .glossary-term-name { font-size: 15px; font-weight: 700; color: var(--text-primary); }
 .glossary-term-definition { font-size: 13px; color: var(--text-muted-alt); line-height: 1.5; }
 
-/* ─── Bookmark Button ─── */
-.bookmark-btn { background: none; border: none; color: var(--text-muted); cursor: pointer; padding: 4px; border-radius: 4px; display: flex; align-items: center; transition: color 0.15s; margin-left: 8px; }
-.bookmark-btn:hover { color: var(--accent-green); }
-.bookmark-btn.active { color: var(--accent-green); }
-.bookmark-btn:disabled { opacity: 0.5; cursor: default; }
-
-/* ─── Bookmarks Page ─── */
-.bookmarks-list { max-width: 800px; margin: 0 auto; }
-.bookmark-item { display: flex; align-items: center; gap: 14px; padding: 14px 16px; background: var(--bg-card); border: 1px solid var(--border-primary); border-radius: 10px; margin-bottom: 8px; text-decoration: none; transition: border-color 0.15s; }
-.bookmark-item:hover { border-color: var(--accent-green); }
-.bookmark-item-number { font-size: 12px; font-weight: 700; color: var(--accent-green); background: var(--green-10); padding: 4px 10px; border-radius: 6px; white-space: nowrap; font-family: 'DM Mono', monospace; }
-.bookmark-item-info { flex: 1; min-width: 0; }
-.bookmark-item-title { font-size: 14px; font-weight: 600; color: var(--text-primary); }
-.bookmark-item-unit { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
-
 /* ─── Sidebar Resources ─── */
 .sidebar-resources { margin-top: auto; padding: 16px 12px 20px; border-top: 1px solid var(--border-primary); }
 .sidebar-resources-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dim); padding: 0 8px 8px; }
@@ -1224,7 +1208,6 @@ body {
 [data-theme="light"] .flashcard-front,
 [data-theme="light"] .past-paper-card,
 [data-theme="light"] .glossary-term,
-[data-theme="light"] .bookmark-item,
 [data-theme="light"] .command-word-card,
 [data-theme="light"] .auth-card,
 [data-theme="light"] .auth-dropdown,

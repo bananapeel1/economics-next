@@ -6,6 +6,7 @@ export default function QuizChallenge({ questions, onComplete }) {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [submitted, setSubmitted] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
+  const [incorrectQuestions, setIncorrectQuestions] = useState([]);
 
   const q = questions[currentIndex];
   const isCorrect = selectedAnswer === q.correctIndex;
@@ -19,7 +20,11 @@ export default function QuizChallenge({ questions, onComplete }) {
   function handleSubmit() {
     if (selectedAnswer === null) return;
     setSubmitted(true);
-    if (isCorrect) setCorrectCount(c => c + 1);
+    if (isCorrect) {
+      setCorrectCount(c => c + 1);
+    } else {
+      setIncorrectQuestions(prev => [...prev, q]);
+    }
   }
 
   function handleNext() {
@@ -29,7 +34,7 @@ export default function QuizChallenge({ questions, onComplete }) {
   }
 
   function handleFinish() {
-    onComplete({ correct: correctCount, total: questions.length });
+    onComplete({ correct: correctCount, total: questions.length, incorrectQuestions });
   }
 
   return (

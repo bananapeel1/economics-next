@@ -31,30 +31,46 @@ export default function FunPage() {
   const [roundXp, setRoundXp] = useState(0);
   const [roundLevelUp, setRoundLevelUp] = useState(null);
   const [quizResult, setQuizResult] = useState(null);
+  const [retryPool, setRetryPool] = useState([]);
 
   const blackjack = useBlackjack();
   const { progress, loading: progressLoading, processRound, xpForNext, xpIntoLevel, xpProgress } = useFunProgress(subjectId);
 
   const pickQuestions = useCallback((count) => {
-    const available = questionPool
-      .map((q, i) => ({ q, i }))
-      .filter(({ i }) => !usedIndices.has(i));
+    // Draw from retry pool first (questions previously answered wrong)
+    const retryPicks = retryPool.slice(0, count);
+    const remaining = count - retryPicks.length;
 
-    let source = available;
-    if (available.length < count) {
-      setUsedIndices(new Set());
-      source = questionPool.map((q, i) => ({ q, i }));
+    // Remove used retry questions from the pool
+    if (retryPicks.length > 0) {
+      setRetryPool(prev => prev.slice(retryPicks.length));
     }
 
-    const shuffled = [...source].sort(() => Math.random() - 0.5);
-    const picked = shuffled.slice(0, count);
-    setUsedIndices(prev => {
-      const next = new Set(prev);
-      picked.forEach(({ i }) => next.add(i));
-      return next;
-    });
-    return picked.map(({ q }) => q);
-  }, [questionPool, usedIndices]);
+    let freshPicks = [];
+    if (remaining > 0) {
+      const available = questionPool
+        .map((q, i) => ({ q, i }))
+        .filter(({ i }) => !usedIndices.has(i));
+
+      let source = available;
+      if (available.length < remaining) {
+        setUsedIndices(new Set());
+        source = questionPool.map((q, i) => ({ q, i }));
+      }
+
+      const shuffled = [...source].sort(() => Math.random() - 0.5);
+      const picked = shuffled.slice(0, remaining);
+      setUsedIndices(prev => {
+        const next = new Set(prev);
+        picked.forEach(({ i }) => next.add(i));
+        return next;
+      });
+      freshPicks = picked.map(({ q }) => q);
+    }
+
+    // Shuffle retry + fresh together so retries aren't always first
+    return [...retryPicks, ...freshPicks].sort(() => Math.random() - 0.5);
+  }, [questionPool, usedIndices, retryPool]);
 
   async function handleSubjectSelect(subj) {
     setSubject(subj);
@@ -102,8 +118,14 @@ export default function FunPage() {
     setGameState(STATES.QUIZ);
   }
 
-  function handleQuizComplete({ correct, total }) {
+  function handleQuizComplete({ correct, total, incorrectQuestions }) {
     setQuizResult({ correct, total });
+
+    // Add incorrectly answered questions back to retry pool for future rounds
+    if (incorrectQuestions && incorrectQuestions.length > 0) {
+      setRetryPool(prev => [...prev, ...incorrectQuestions]);
+    }
+
     const bjResult = blackjackResult;
     const { leveled, xpEarned, newLevel } = processRound(bjResult, correct, total);
     setRoundXp(xpEarned);
@@ -134,6 +156,7 @@ export default function FunPage() {
     setSubjectId(null);
     setQuestionPool([]);
     setUsedIndices(new Set());
+    setRetryPool([]);
     setGameState(STATES.SUBJECT_SELECT);
   }
 

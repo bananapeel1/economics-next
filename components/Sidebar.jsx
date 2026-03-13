@@ -121,12 +121,6 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
           Past Papers
         </Link>
         {user && (
-          <Link href="/bookmarks" className="sidebar-resource-link">
-            <span className="sidebar-resource-icon">🔖</span>
-            Bookmarks
-          </Link>
-        )}
-        {user && (
           <Link href="/fun" className="sidebar-resource-link">
             <span className="sidebar-resource-icon">🎮</span>
             Fun Zone
