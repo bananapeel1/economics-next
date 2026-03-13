@@ -1,398 +1,314 @@
+// ═══════════════════════════════════════════════════════════════
+// EXTRAS — Edexcel International A-Level Business (IAL)
+// Business Unit 2: Managing Business Activities (WBS12)
+// 5 sections, 4 thematically linked chains + 3 evaluation points each
+// ═══════════════════════════════════════════════════════════════
+
 export default {
+
+  // 1. PLANNING & RAISING FINANCE
+  // Theme: Plan → Source funds → Choose debt vs equity → Manage cash flow
   'planning-raising-finance': {
     chains: [
       {
-        title: "Venture Capital to Rapid Growth",
+        title: "Business plans reduce risk and attract finance",
         steps: [
-          "A start-up with a scalable business model seeks venture capital funding from investors willing to take equity in exchange for significant capital.",
-          "The venture capital firm provides not only funding but also strategic expertise, industry contacts, and management support.",
-          "The business uses the capital to invest heavily in product development, marketing, and talent acquisition to scale rapidly.",
-          "Rapid scaling enables the business to capture market share before competitors can respond, establishing first-mover advantage.",
-          "The business grows to a position of market strength, increasing its valuation and creating potential returns for both founders and investors."
+          "An entrepreneur prepares a business plan detailing the market opportunity, financial forecasts and competitive strategy.",
+          "The plan demonstrates to lenders and investors that risks have been considered and returns are realistic.",
+          "Banks offer loans on more favourable terms, or investors provide equity at a higher valuation, due to perceived lower risk.",
+          "The business secures sufficient start-up or growth capital to begin operations or fund expansion."
         ],
-        result: "Venture capital accelerates growth beyond what organic funding could achieve, but at the cost of diluted ownership and external influence over strategic decisions."
+        result: "A well-researched business plan is essential for accessing external finance — it reduces perceived risk and builds lender or investor confidence."
       },
       {
-        title: "Retained Profit to Sustainable Investment",
+        title: "The choice of finance source depends on business needs",
         steps: [
-          "A profitable business retains a portion of its after-tax profits rather than distributing them as dividends to shareholders.",
-          "Retained profit provides an internal source of finance that does not carry interest charges or require ownership dilution.",
-          "The business reinvests these funds into new equipment, R&D, or market expansion to support organic growth.",
-          "Because there is no external repayment obligation, the business retains full financial flexibility and decision-making autonomy."
+          "Short-term needs (cash flow gaps, seasonal stock) suit overdrafts or trade credit — flexible and quick to arrange.",
+          "Medium-term needs (equipment, vehicles) suit bank loans or hire purchase — matched repayment to asset life.",
+          "Long-term needs (expansion, new premises) suit share capital, venture capital or long-term loans — larger sums over longer periods.",
+          "Matching the finance source to the purpose ensures costs are minimised and repayment is manageable."
         ],
-        result: "Retained profit is the most cost-effective and low-risk source of long-term finance, but it requires the business to already be profitable and may conflict with shareholder expectations for dividends."
+        result: "Choosing the right finance source depends on the purpose, amount needed and the firm's willingness to share ownership or take on debt."
       },
       {
-        title: "Crowdfunding to Market Validation",
+        title: "Debt vs equity involves fundamental trade-offs",
         steps: [
-          "An entrepreneur launches a crowdfunding campaign on a platform such as Kickstarter, presenting their product concept to potential backers.",
-          "The campaign simultaneously raises finance and tests whether genuine consumer demand exists for the product.",
-          "A successful campaign provides both start-up capital and a ready-made customer base of early supporters.",
-          "The public visibility of the campaign also generates free marketing exposure and media attention.",
-          "The entrepreneur can use backer feedback to refine the product before full-scale production."
+          "Debt finance (loans, overdrafts) preserves ownership but creates fixed repayment obligations with interest.",
+          "Equity finance (shares, venture capital) avoids repayment pressure but permanently dilutes the owner's control and profit share.",
+          "In a downturn, debt becomes a burden as repayments continue regardless of revenue — increasing insolvency risk.",
+          "Equity investors share the risk but may demand influence over strategy and expect high returns."
         ],
-        result: "Crowdfunding uniquely combines fundraising, market research, and marketing into a single activity, reducing the risk and cost of launching a new product."
+        result: "The optimal debt-equity balance depends on risk tolerance, cash flow stability and the owner's willingness to share control — there is no universally correct answer."
       },
       {
-        title: "Business Plan to Securing External Finance",
+        title: "Cash flow management determines survival",
         steps: [
-          "An entrepreneur prepares a comprehensive business plan detailing the market opportunity, financial forecasts, competitive strategy, and management team.",
-          "The plan demonstrates to potential lenders or investors that the business has been thoroughly researched and that risks have been considered.",
-          "Banks or investors gain confidence that their funds will generate a return, making them more willing to provide finance.",
-          "The business secures the necessary funding on more favourable terms — lower interest rates or a higher valuation — due to the perceived lower risk."
+          "A business may be profitable on paper but still fail if cash outflows exceed inflows at critical points.",
+          "Cash flow forecasts identify periods of potential shortfall, allowing managers to arrange overdrafts or chase debtors in advance.",
+          "Proactive cash flow management — negotiating supplier credit, reducing debtor days, controlling stock levels — prevents liquidity crises.",
+          "Maintaining positive cash flow ensures the business can pay wages, suppliers and creditors on time, avoiding insolvency."
         ],
-        result: "A well-constructed business plan is essential for accessing external finance, as it reduces perceived risk and increases investor or lender confidence."
-      },
-      {
-        title: "Short-Term Finance to Cash Flow Management",
-        steps: [
-          "A business experiences a temporary cash flow shortfall due to seasonal demand fluctuations or late customer payments.",
-          "It arranges short-term finance such as a bank overdraft or trade credit to cover immediate obligations like wages and supplier invoices.",
-          "The business continues to operate without disruption, maintaining supplier relationships and employee morale.",
-          "When customer payments arrive or seasonal revenues increase, the short-term borrowing is repaid quickly, minimising interest costs."
-        ],
-        result: "Short-term finance provides essential liquidity to bridge temporary cash flow gaps, preventing operational disruption and protecting stakeholder relationships."
+        result: "Cash flow management is the most common determinant of business survival — profitable businesses fail when they run out of cash."
       }
     ],
     evaluation: [
       {
-        title: "Venture Capital Is Not Suitable for All Businesses",
-        content: "Venture capitalists typically seek businesses with high growth potential and a clear exit strategy, meaning lifestyle businesses or those in slow-growth markets are unlikely to attract VC interest. Furthermore, venture capital involves significant loss of control — investors may demand board seats, influence over strategy, and eventual exit through sale or IPO, which may conflict with the founder's vision. The pressure to deliver rapid returns can also push businesses into unsustainable growth strategies."
+        title: "Business plans are based on assumptions",
+        content: "Financial forecasts rely on assumptions about demand, costs and market conditions that may prove inaccurate. Overly optimistic projections mislead investors; overly cautious estimates may fail to attract funding. The value lies in the quality of thinking, not the precision of numbers."
       },
       {
-        title: "Debt vs Equity Involves Fundamental Trade-Offs",
-        content: "Debt finance preserves ownership but creates fixed repayment obligations that can strain cash flow, particularly during economic downturns when revenue may fall. Equity finance avoids repayment pressure but permanently dilutes the founder's ownership and share of future profits. The optimal balance depends on the business's risk profile, cash flow stability, and the owner's willingness to share control — there is no universally correct answer."
+        title: "Venture capital is not suitable for all businesses",
+        content: "VCs seek high-growth businesses with clear exit strategies. Lifestyle businesses or slow-growth firms are unlikely to attract VC interest. Venture capital involves significant loss of control and pressure for rapid returns that may conflict with the founder's vision."
       },
       {
-        title: "Business Plans Are Based on Assumptions",
-        content: "While business plans are essential for securing finance, their financial forecasts are inherently based on assumptions about future demand, costs, and market conditions that may prove inaccurate. Overly optimistic projections can mislead investors and set unrealistic expectations, while overly conservative estimates may fail to attract sufficient funding. The value of a business plan lies not in the precision of its forecasts but in the quality of the thinking and research behind them."
-      },
-      {
-        title: "Crowdfunding Carries Reputational Risk",
-        content: "A failed crowdfunding campaign publicly demonstrates a lack of market demand, which can damage the entrepreneur's credibility and make it harder to raise finance through other channels. Even successful campaigns carry risk — if the business fails to deliver on its promises to backers, the resulting negative publicity can be severe and long-lasting. Entrepreneurs must therefore be confident in their ability to fulfil pledges before launching a crowdfunding campaign."
-      },
-      {
-        title: "Internal Finance Limits Growth Speed",
-        content: "Relying solely on internal sources such as retained profit or asset sales limits the speed at which a business can grow, since investment is constrained to the amount of profit generated. In fast-moving markets, this cautious approach may allow competitors with external funding to scale more quickly and capture market share. Businesses must therefore assess whether the lower risk of internal finance is worth the potentially slower growth trajectory compared to externally funded rivals."
+        title: "Internal finance limits growth speed",
+        content: "Relying solely on retained profit constrains investment to the amount of profit generated. In fast-moving markets, competitors with external funding may scale more quickly and capture market share. Businesses must weigh the lower risk of internal finance against potentially slower growth."
       }
     ]
   },
 
+  // 2. FINANCIAL PLANNING
+  // Theme: Break-even → Budgets → Contribution → Cash flow forecasting
   'financial-planning': {
     chains: [
       {
-        title: "Break-Even Analysis to Pricing Decisions",
+        title: "Break-even analysis reveals the minimum viable output",
         steps: [
-          "A business calculates its break-even point by dividing total fixed costs by the contribution per unit (selling price minus variable cost per unit).",
-          "The analysis reveals the minimum number of units that must be sold to cover all costs and avoid making a loss.",
-          "Managers use this information to assess whether a proposed selling price generates a realistic break-even output given expected demand.",
-          "If the break-even output is too high relative to projected sales, the business may increase its price, reduce costs, or reconsider the project entirely."
+          "A business calculates its break-even point: fixed costs divided by contribution per unit (selling price minus variable cost).",
+          "This reveals the minimum number of units that must be sold to cover all costs and avoid a loss.",
+          "The margin of safety (actual sales minus break-even output) shows how far sales can fall before losses begin.",
+          "Managers use this to evaluate pricing strategies, assess new product viability and set sales targets."
         ],
-        result: "Break-even analysis provides a clear financial threshold for decision-making, helping managers evaluate the viability of pricing strategies and new product proposals."
+        result: "Break-even analysis provides a clear financial threshold for decision-making — it shows the minimum output needed to survive."
       },
       {
-        title: "Cash Flow Forecasting to Insolvency Prevention",
+        title: "Budgets create financial discipline and accountability",
         steps: [
-          "A business prepares a cash flow forecast projecting all expected cash inflows and outflows over the coming months.",
-          "The forecast identifies periods where cash outflows are expected to exceed inflows, creating potential cash shortfalls.",
-          "Managers take pre-emptive action to address shortfalls — arranging overdraft facilities, delaying non-essential expenditure, or chasing outstanding debtor payments.",
-          "By anticipating and addressing cash flow problems before they occur, the business avoids the inability to pay its obligations as they fall due.",
-          "The risk of insolvency — the most common cause of business failure — is significantly reduced."
+          "Departmental budgets allocate a fixed spending limit to each area of the business.",
+          "Budget holders are responsible for managing within their allocation, creating accountability at every level.",
+          "Variance analysis compares actual spending to budgeted figures, highlighting areas of over- or under-spending.",
+          "Managers investigate adverse variances and take corrective action — renegotiating contracts, cutting waste or reallocating resources."
         ],
-        result: "Cash flow forecasting is a critical management tool that enables proactive financial planning, reducing the risk of liquidity crises and business failure."
+        result: "Budgeting creates a framework for cost control and accountability — it enables managers to identify inefficiencies early."
       },
       {
-        title: "Budgeting to Cost Control",
+        title: "Contribution analysis guides product mix decisions",
         steps: [
-          "A business sets departmental budgets that allocate a fixed amount of expenditure for each area of operations.",
-          "Budget holders are responsible for managing spending within their allocation, creating accountability at every level.",
-          "Variance analysis compares actual spending against budgeted figures, highlighting departments that are over- or under-spending.",
-          "Managers investigate adverse variances and implement corrective measures, such as renegotiating supplier contracts or reducing discretionary spending."
+          "Contribution per unit (selling price minus variable cost) shows how much each product contributes to covering fixed costs.",
+          "Products with high contribution make a larger payment toward fixed costs and profit.",
+          "Managers use contribution data to decide which products to promote, which to discontinue and how to allocate resources.",
+          "Shifting resources toward high-contribution products maximises overall profitability."
         ],
-        result: "Budgeting creates a framework for financial discipline and cost control, enabling managers to identify inefficiencies and maintain profitability."
+        result: "Contribution analysis provides a rational basis for product decisions — it focuses resources on the products that generate the greatest surplus."
       },
       {
-        title: "Contribution Analysis to Product Decisions",
+        title: "Cash flow forecasts prevent insolvency",
         steps: [
-          "A business calculates the contribution per unit for each product — the selling price minus the variable cost per unit.",
-          "Products with high contribution per unit make a larger payment toward covering fixed costs and generating profit.",
-          "Managers use contribution data to decide which products to promote, which to discontinue, and how to allocate marketing resources.",
-          "Resources are shifted toward high-contribution products, maximising the overall profitability of the product portfolio."
+          "A cash flow forecast projects all expected inflows and outflows over the coming months.",
+          "It identifies periods where outflows exceed inflows — potential cash shortfalls.",
+          "Managers take pre-emptive action: arranging overdrafts, delaying non-essential spending or chasing late-paying debtors.",
+          "By anticipating problems before they occur, the business avoids the inability to pay obligations — the most common cause of failure."
         ],
-        result: "Contribution analysis provides a rational basis for product mix decisions, enabling businesses to maximise profitability by focusing on products that generate the greatest surplus over variable costs."
-      },
-      {
-        title: "Margin of Safety to Risk Assessment",
-        steps: [
-          "A business calculates its margin of safety — the difference between actual or forecast sales and the break-even output.",
-          "A large margin of safety indicates that sales can fall significantly before the business makes a loss, suggesting low financial risk.",
-          "A small margin of safety means the business is operating close to its break-even point, leaving little room for error.",
-          "Managers with a narrow margin of safety may decide to reduce fixed costs, increase prices, or diversify revenue streams to widen the safety margin."
-        ],
-        result: "The margin of safety provides a straightforward measure of financial vulnerability, helping managers assess risk and take action to improve the business's resilience."
+        result: "Cash flow forecasting is a critical survival tool — it enables proactive management of liquidity and reduces the risk of insolvency."
       }
     ],
     evaluation: [
       {
-        title: "Break-Even Analysis Relies on Simplistic Assumptions",
-        content: "Break-even analysis assumes that all output is sold, that selling price and variable costs remain constant at all output levels, and that costs can be neatly divided into fixed and variable categories. In reality, businesses often offer discounts on bulk orders, experience rising variable costs due to overtime payments, and face semi-variable costs that defy simple classification. These limitations mean that break-even analysis provides an approximation rather than a precise financial prediction."
+        title: "Break-even relies on simplistic assumptions",
+        content: "It assumes all output is sold, that prices and variable costs are constant, and that costs divide neatly into fixed and variable. In reality, firms offer discounts, face stepped costs and experience semi-variable costs. Break-even is an approximation, not a precise prediction."
       },
       {
-        title: "Cash Flow Forecasts Are Only as Good as Their Assumptions",
-        content: "The accuracy of a cash flow forecast depends entirely on the reliability of the assumptions used to project future inflows and outflows. If customer demand is overestimated or supplier costs increase unexpectedly, the forecast will be inaccurate and may provide false reassurance. Businesses should therefore treat cash flow forecasts as living documents that are regularly updated as new information becomes available, rather than as fixed predictions."
+        title: "Budgets can create dysfunctional behaviour",
+        content: "Budget holders may rush to spend their full allocation at year-end to avoid cuts the following year. Tight budgets may discourage innovation and risk-taking. Effective budgeting requires flexibility and a culture that rewards efficiency, not just compliance."
       },
       {
-        title: "Budgets Can Create Dysfunctional Behaviour",
-        content: "While budgets promote cost control, they can also encourage counterproductive behaviour if poorly implemented. Budget holders may rush to spend their entire allocation at year-end to avoid receiving a reduced budget the following year, leading to wasteful expenditure. Alternatively, excessively tight budgets may discourage innovation and risk-taking, as managers focus on staying within their allocation rather than pursuing value-creating opportunities that require additional investment."
-      },
-      {
-        title: "Fixed and Variable Cost Classification Is Often Unclear",
-        content: "Financial planning tools such as break-even analysis and contribution analysis require costs to be clearly categorised as either fixed or variable, but many real-world costs are semi-variable or stepped. For example, labour costs may be fixed up to a certain output level but become variable when overtime is required. This ambiguity can distort financial calculations and lead to inaccurate conclusions if managers fail to recognise the complexity of their cost structure."
-      },
-      {
-        title: "Profitability and Cash Flow Are Distinct Concepts",
-        content: "A business can be profitable on paper but still face severe cash flow difficulties if revenue is tied up in unpaid receivables or if large capital expenditures drain cash reserves. Conversely, a loss-making business may maintain positive cash flow temporarily by delaying payments to suppliers. Financial planning must therefore address both profitability and liquidity separately, as success in one does not guarantee success in the other."
+        title: "Profitability and cash flow are distinct concepts",
+        content: "A business can be profitable but cash-poor if revenue is tied up in receivables or drained by capital expenditure. Conversely, a loss-making firm may have positive cash flow temporarily by delaying payments. Financial planning must address both separately."
       }
     ]
   },
 
+  // 3. MANAGING FINANCE
+  // Theme: Profitability → Liquidity → Balance sheet strength → Stakeholder confidence
   'managing-finance': {
     chains: [
       {
-        title: "Improving Gross Profit Margin to Business Viability",
+        title: "Profitability ratios reveal the quality of earnings",
         steps: [
-          "A business identifies that its gross profit margin is declining, indicating that cost of sales is rising faster than revenue.",
-          "Managers investigate the causes — potentially higher raw material prices, supplier price increases, or production inefficiencies.",
-          "The business negotiates better terms with suppliers, switches to cheaper inputs, or improves production efficiency to reduce cost of sales.",
-          "Gross profit margin stabilises or improves, ensuring the business generates sufficient gross profit to cover its operating expenses.",
-          "With a healthier margin, the business has more funds available for reinvestment, marketing, and innovation."
+          "Gross profit margin shows whether the core trading activity generates sufficient surplus after cost of sales.",
+          "Operating profit margin reveals whether overheads are under control — a declining margin signals rising expenses relative to revenue.",
+          "Net profit margin shows the final return after all costs including interest and tax.",
+          "Tracking these ratios over time reveals trends — a business with growing revenue but falling margins has a cost problem, not a sales problem."
         ],
-        result: "Monitoring and improving gross profit margin is essential for long-term viability, as it ensures the core trading activity generates sufficient surplus to sustain the business."
+        result: "Profitability ratios provide essential insight into the quality of earnings — revenue growth alone means nothing if margins are eroding."
       },
       {
-        title: "Liquidity Management to Business Survival",
+        title: "Liquidity ratios measure short-term survival capacity",
         steps: [
-          "A business monitors its current ratio and acid test ratio to assess whether it holds sufficient liquid assets to meet short-term liabilities.",
-          "The acid test ratio reveals that the business has insufficient liquid assets after excluding stock, indicating a potential liquidity crisis.",
-          "Managers take corrective action — reducing the debtor collection period, negotiating extended credit from suppliers, or arranging short-term borrowing.",
-          "Improved liquidity ensures the business can meet its obligations as they fall due, maintaining supplier confidence and avoiding legal action from creditors."
+          "The current ratio (current assets ÷ current liabilities) indicates whether the business can meet its short-term obligations.",
+          "The acid test ratio excludes stock, providing a stricter test of immediate liquidity.",
+          "A ratio below 1.0 signals potential danger — the business may not be able to pay its bills as they fall due.",
+          "Managers improve liquidity by reducing debtor collection periods, negotiating longer supplier credit or arranging short-term borrowing."
         ],
-        result: "Effective liquidity management prevents the cash flow crises that are the most common cause of business failure, even among otherwise profitable firms."
+        result: "Liquidity management prevents the cash flow crises that destroy even profitable businesses — it is the most immediate measure of financial health."
       },
       {
-        title: "Profitability Ratio Analysis to Strategic Action",
+        title: "Balance sheet strength supports long-term investment",
         steps: [
-          "A business calculates its operating profit margin and net profit margin over several years, identifying a downward trend.",
-          "Analysis reveals that while revenue is growing, operating expenses — particularly wages and rent — are increasing at a faster rate.",
-          "Managers implement cost-reduction strategies such as renegotiating leases, introducing automation, or restructuring the workforce.",
-          "Operating expenses are brought under control, restoring the operating profit margin to a sustainable level.",
-          "The improved profitability strengthens the business's ability to attract investment and fund future growth."
+          "A strong balance sheet shows net assets significantly exceeding liabilities, with low gearing (low proportion of debt to equity).",
+          "Low gearing reduces financial risk — less profit is consumed by interest payments, leaving more for reinvestment.",
+          "Banks and investors view the business as lower risk, offering more favourable lending terms and cheaper capital.",
+          "Access to cheaper finance enables strategic investment that higher-risk competitors cannot afford."
         ],
-        result: "Ratio analysis over time reveals trends that are not visible in absolute profit figures alone, enabling managers to identify and address deteriorating performance before it becomes critical."
+        result: "Balance sheet strength builds stakeholder confidence, reduces the cost of capital and provides the financial foundation for long-term growth."
       },
       {
-        title: "Balance Sheet Strength to Stakeholder Confidence",
+        title: "Financial analysis must be contextual and comparative",
         steps: [
-          "A business maintains a strong balance sheet with substantial net assets — total assets significantly exceed total liabilities.",
-          "A high level of equity relative to debt indicates low gearing, reducing the financial risk perceived by lenders and investors.",
-          "Banks are more willing to offer favourable lending terms, and investors view the business as a lower-risk proposition.",
-          "Access to cheaper finance enables the business to invest in growth opportunities that higher-risk competitors cannot afford."
+          "Individual ratios mean little in isolation — a current ratio of 1.5 may be healthy for a retailer but dangerously low for a manufacturer.",
+          "Ratios must be compared against industry benchmarks, competitor performance and the firm's own historical trends.",
+          "Financial statements are backward-looking — they show what happened, not what will happen.",
+          "Effective analysis combines ratio analysis with qualitative assessment of brand strength, market position and management quality."
         ],
-        result: "A strong balance sheet builds stakeholder confidence, reduces the cost of capital, and provides the financial foundation for strategic investment and long-term growth."
-      },
-      {
-        title: "Income Statement Analysis to Performance Evaluation",
-        steps: [
-          "A business analyses its income statement to compare revenue, cost of sales, and operating expenses across multiple periods.",
-          "The comparison reveals that revenue has increased but net profit has fallen — indicating that costs have risen disproportionately.",
-          "Further analysis identifies which cost categories have increased most, pinpointing areas where efficiency improvements are needed.",
-          "Managers implement targeted interventions such as renegotiating contracts, reducing waste, or reallocating resources to more profitable activities."
-        ],
-        result: "Systematic income statement analysis enables data-driven cost management, ensuring that revenue growth translates into genuine profit improvement."
+        result: "Financial analysis requires context and comparison to be meaningful — numbers alone do not tell the full story of business performance."
       }
     ],
     evaluation: [
       {
-        title: "Ratio Analysis Requires Context and Comparison",
-        content: "Individual financial ratios have limited meaning in isolation — a current ratio of 1.5 may be healthy for a retailer but dangerously low for a manufacturer with long production cycles. Ratios must be compared against industry benchmarks, competitor performance, and the firm's own historical trends to provide meaningful insight. Furthermore, ratios are backward-looking indicators based on historical financial statements, which may not reflect the business's current or future financial position."
+        title: "Profitability and liquidity can conflict",
+        content: "Investing in machinery boosts long-term profitability but drains short-term cash. Holding excessive cash ensures liquidity but earns no productive return. Managers must balance these competing objectives rather than pursuing either in isolation."
       },
       {
-        title: "Profitability and Liquidity Can Conflict",
-        content: "Actions taken to improve profitability may worsen liquidity, and vice versa. For example, investing in new machinery may boost long-term profitability but requires a large cash outflow that weakens short-term liquidity. Conversely, holding excessive cash to ensure liquidity means funds are not being invested productively, reducing profitability. Managers must therefore balance these competing financial objectives rather than pursuing either in isolation."
+        title: "Financial statements can be manipulated",
+        content: "Businesses have discretion over depreciation methods, revenue recognition and asset valuation. Creative accounting — while legal — can inflate apparent profitability or disguise weakness. Stakeholders must look beyond headline figures to underlying policies."
       },
       {
-        title: "Financial Statements Can Be Manipulated",
-        content: "Businesses have some discretion over how they present their financial information through choices about depreciation methods, revenue recognition, and asset valuation. This means that published accounts may not always provide a fully transparent picture of financial performance. Creative accounting practices — while technically legal — can inflate apparent profitability or disguise financial weakness, making it important for stakeholders to look beyond headline figures and examine the underlying accounting policies."
-      },
-      {
-        title: "Non-Financial Factors May Be More Important",
-        content: "While financial ratios and statements provide valuable quantitative data, they cannot capture crucial qualitative factors such as brand strength, employee morale, innovation capability, and customer loyalty. A business with declining ratios may still have strong future prospects due to a revolutionary product in development, while a business with excellent current ratios may be heading for decline due to a loss of key personnel. Effective business analysis must combine financial and non-financial assessment."
-      },
-      {
-        title: "Gearing Levels Depend on Business Circumstances",
-        content: "High gearing is often presented as risky because it increases interest obligations, but in a low-interest-rate environment with stable revenues, debt can be a tax-efficient and cost-effective way to fund growth. Conversely, a business with volatile revenue streams should maintain lower gearing to avoid the risk of defaulting on interest payments during downturns. The appropriate level of gearing therefore depends on interest rate conditions, revenue stability, and the nature of the industry."
+        title: "Non-financial factors may matter more",
+        content: "Ratios cannot capture brand strength, employee morale, innovation capability or customer loyalty. A business with declining ratios may have strong prospects due to a new product; one with excellent ratios may be heading for decline due to losing key staff. Effective analysis combines financial and non-financial assessment."
       }
     ]
   },
 
+  // 4. RESOURCE MANAGEMENT
+  // Theme: Production efficiency → Stock management → Quality → Capacity utilisation
   'resource-management': {
     chains: [
       {
-        title: "Lean Production to Cost Reduction",
+        title: "Lean production eliminates waste and reduces costs",
         steps: [
-          "A business adopts lean production principles, systematically identifying and eliminating all forms of waste — including excess inventory, unnecessary movement, and defective output.",
-          "Streamlined processes reduce material waste, lower storage costs, and minimise the time spent on non-value-adding activities.",
+          "Lean production identifies and eliminates all forms of waste — excess inventory, unnecessary movement, defective output and waiting time.",
+          "Streamlined processes reduce material waste, lower storage costs and minimise non-value-adding activities.",
           "Average production costs fall as resources are used more efficiently, without requiring additional capital investment.",
-          "Lower unit costs enable the business to offer more competitive prices or retain wider profit margins.",
-          "The business strengthens its competitive position against rivals who operate with higher cost bases."
+          "Lower unit costs enable more competitive pricing or wider profit margins, strengthening the firm's market position."
         ],
-        result: "Lean production creates a culture of continuous efficiency improvement that reduces costs and strengthens competitiveness without compromising product quality."
+        result: "Lean production creates a culture of continuous efficiency improvement — it reduces costs and strengthens competitiveness without compromising quality."
       },
       {
-        title: "Just-In-Time to Working Capital Efficiency",
+        title: "Just-in-time stock management frees working capital",
         steps: [
-          "A business implements just-in-time (JIT) stock management, receiving materials from suppliers only when they are needed in the production process.",
-          "Stock holding levels fall dramatically, freeing up warehouse space and reducing storage costs, insurance, and the risk of obsolescence.",
-          "Cash previously tied up in stock is released, improving working capital and providing funds for other productive uses.",
-          "The business becomes more responsive to changes in customer demand, as production is closely aligned with actual orders rather than forecasts."
+          "JIT receives materials only when needed in production, eliminating buffer stock.",
+          "Stock holding levels fall dramatically — freeing warehouse space and reducing storage costs, insurance and obsolescence risk.",
+          "Cash previously tied up in stock is released, improving working capital for other productive uses.",
+          "Production becomes closely aligned with actual orders rather than forecasts, improving responsiveness to demand."
         ],
-        result: "JIT improves working capital efficiency by minimising stock levels, but its success depends critically on reliable supplier relationships and accurate demand forecasting."
+        result: "JIT improves working capital efficiency by minimising stock levels — but success depends critically on reliable suppliers and accurate demand forecasting."
       },
       {
-        title: "Kaizen to Continuous Improvement",
+        title: "Quality management builds reputation and reduces costs",
         steps: [
-          "A business implements Kaizen — a philosophy of continuous, incremental improvement involving all employees from shop floor to senior management.",
-          "Workers are encouraged to identify small inefficiencies in their daily tasks and suggest practical improvements.",
-          "Each individual improvement may be small, but the cumulative effect across the entire organisation over time is substantial.",
-          "Quality improves, waste reduces, and employee engagement increases as workers feel their contributions are valued.",
-          "The business develops a culture where improvement is embedded in everyday operations rather than imposed through periodic restructuring."
+          "Total Quality Management (TQM) makes quality every employee's responsibility — defects are caught and corrected at every stage, not just final inspection.",
+          "Defect rates fall, reducing waste, rework costs and customer returns.",
+          "Customers receive consistently high-quality products, increasing satisfaction, repeat purchases and positive word-of-mouth.",
+          "The business builds a reputation for reliability that supports premium pricing and differentiates it from competitors."
         ],
-        result: "Kaizen delivers sustained performance improvement through the collective engagement of the entire workforce, creating a competitive advantage that is deeply embedded in organisational culture."
+        result: "Quality management transforms quality from a cost of compliance into a source of competitive advantage — it drives customer loyalty and brand value."
       },
       {
-        title: "Capacity Utilisation to Unit Cost Reduction",
+        title: "Capacity utilisation determines unit cost efficiency",
         steps: [
-          "A business operates at low capacity utilisation — for example, 60% — meaning 40% of its productive capacity sits idle.",
-          "Fixed costs are spread across a smaller number of units, resulting in high average costs per unit.",
-          "The business increases capacity utilisation by securing new contracts, extending operating hours, or diversifying its product range.",
-          "As output increases, fixed costs are spread across more units, reducing average cost per unit significantly.",
-          "Lower unit costs improve the business's price competitiveness and profit margins."
+          "A business operating at 60% capacity spreads its fixed costs across fewer units, resulting in high average costs per unit.",
+          "Increasing utilisation through new contracts, extended hours or product diversification spreads fixed costs more widely.",
+          "As output rises, average cost per unit falls significantly — improving price competitiveness and profit margins.",
+          "However, operating consistently above 90% risks machine breakdowns, worker fatigue and inability to meet demand surges."
         ],
-        result: "Increasing capacity utilisation is one of the most direct routes to reducing unit costs and improving competitiveness, provided it does not compromise quality or overwhelm operational capacity."
-      },
-      {
-        title: "Total Quality Management to Customer Satisfaction",
-        steps: [
-          "A business implements Total Quality Management (TQM), making quality the responsibility of every employee rather than just a quality control department.",
-          "Defects are identified and corrected at every stage of production, rather than being caught only at final inspection.",
-          "The rate of defective output falls, reducing waste, rework costs, and customer returns.",
-          "Customers receive consistently high-quality products, increasing satisfaction, repeat purchases, and positive word-of-mouth.",
-          "The business builds a reputation for reliability that differentiates it from competitors and supports premium pricing."
-        ],
-        result: "TQM transforms quality from a cost of compliance into a source of competitive advantage, driving customer satisfaction and brand value through organisation-wide commitment."
+        result: "Capacity utilisation is one of the most direct routes to reducing unit costs — but the optimal level balances cost efficiency with operational flexibility."
       }
     ],
     evaluation: [
       {
-        title: "JIT Is Vulnerable to Supply Chain Disruption",
-        content: "While JIT minimises stock holding costs, it leaves the business with virtually no buffer stock to absorb supply chain disruptions. Events such as natural disasters, transport strikes, or supplier insolvency can halt production entirely within hours, as evidenced by the global supply chain crises of recent years. Businesses operating JIT must therefore invest heavily in supplier relationship management and may need contingency plans that partially offset the cost savings of the system."
+        title: "JIT is vulnerable to supply chain disruption",
+        content: "With no buffer stock, any supplier delay or disruption halts production entirely. Events like transport strikes or natural disasters can be catastrophic for JIT firms. Businesses must invest heavily in supplier relationships and may need contingency plans that offset cost savings."
       },
       {
-        title: "Lean Production Requires Cultural Change",
-        content: "Implementing lean production is not simply a technical process — it requires a fundamental shift in organisational culture toward continuous improvement and waste elimination. Resistance from employees who fear job losses or increased workload can undermine lean initiatives, particularly if management fails to communicate the benefits or involve workers in the transition. Successful lean implementation therefore depends as much on effective change management and leadership as on process redesign."
+        title: "Lean production requires cultural change",
+        content: "Implementing lean is not just a technical process — it requires a fundamental shift in culture toward continuous improvement. Employee resistance (fear of job losses, increased workload) can undermine lean initiatives. Success depends as much on change management as on process redesign."
       },
       {
-        title: "High Capacity Utilisation Has Diminishing Returns",
-        content: "While increasing capacity utilisation reduces unit costs, operating consistently at very high levels (above 90%) creates problems including increased machine breakdowns due to lack of maintenance time, worker fatigue, and inability to respond to unexpected surges in demand. Businesses need to maintain some spare capacity to accommodate demand fluctuations and schedule essential maintenance. The optimal capacity utilisation rate balances cost efficiency with operational flexibility."
-      },
-      {
-        title: "Quality Management Involves Significant Costs",
-        content: "Implementing TQM or other quality systems requires substantial investment in training, monitoring systems, and potentially re-engineering production processes. These costs can be particularly burdensome for small businesses with limited resources. Additionally, the benefits of quality improvement may take considerable time to materialise in terms of increased sales and reputation, meaning the short-term financial impact can be negative even if the long-term return is positive."
-      },
-      {
-        title: "The Choice of Production Method Depends on the Product",
-        content: "Job production, batch production, and flow production each suit different product types and market conditions — there is no universally superior method. Flow production achieves the lowest unit costs but requires standardised products and high, consistent demand; job production is essential for bespoke, high-value items but is expensive per unit. Businesses must match their production method to their product characteristics, market demands, and strategic positioning rather than simply pursuing the lowest-cost option."
+        title: "Quality systems involve significant upfront costs",
+        content: "Implementing TQM requires substantial investment in training, monitoring and process re-engineering. Benefits may take considerable time to materialise in increased sales. For small businesses with limited resources, the short-term financial impact can be negative even if the long-term return is positive."
       }
     ]
   },
 
+  // 5. EXTERNAL INFLUENCES
+  // Theme: Economic environment → Legal framework → Competitive pressure → Strategic response
   'external-influences': {
     chains: [
       {
-        title: "Rising Interest Rates to Reduced Consumer Spending",
+        title: "Economic conditions shape demand and business strategy",
         steps: [
-          "The Bank of England raises the base interest rate to control inflation in the economy.",
-          "The cost of borrowing increases for consumers with variable-rate mortgages and personal loans, reducing their disposable income.",
-          "Consumers cut back on discretionary spending — luxury goods, dining out, and non-essential purchases — as a larger share of income goes toward debt repayment.",
-          "Businesses selling income-elastic products experience falling demand, leading to lower revenue and potential stock build-up.",
-          "Firms may be forced to cut prices, reduce output, or make redundancies to adjust to lower demand levels."
+          "Rising interest rates increase borrowing costs for consumers and businesses, reducing disposable income and investment.",
+          "Consumer spending on income-elastic goods (luxuries, non-essentials) falls as mortgage and loan repayments absorb more income.",
+          "Businesses selling discretionary products experience declining demand, leading to lower revenue and potential stock build-up.",
+          "Firms respond by cutting costs, reducing prices or shifting focus to more income-inelastic product lines."
         ],
-        result: "Interest rate increases create a contractionary effect on consumer-facing businesses, particularly those selling non-essential goods, by reducing household spending power."
+        result: "Economic conditions directly shape demand patterns — businesses must monitor interest rates, inflation and GDP growth to anticipate shifts in consumer spending."
       },
       {
-        title: "Exchange Rate Depreciation to Export Competitiveness",
+        title: "Exchange rate movements create winners and losers",
         steps: [
-          "The value of the pound sterling falls against major currencies such as the dollar and euro.",
-          "UK exports become cheaper in foreign currency terms, making them more price-competitive in international markets.",
-          "Foreign demand for UK goods and services increases, boosting revenue for exporting businesses.",
-          "However, imported raw materials and components become more expensive in sterling terms, increasing production costs for businesses reliant on foreign inputs.",
-          "The net effect on profitability depends on the balance between increased export revenue and higher import costs."
+          "A fall in the pound makes UK exports cheaper in foreign currency terms, boosting price competitiveness abroad.",
+          "Exporters benefit from increased foreign demand and higher revenue when converted back to sterling.",
+          "However, imported raw materials become more expensive, increasing production costs for firms reliant on foreign inputs.",
+          "The net effect on profitability depends on the balance between export gains and import cost increases."
         ],
-        result: "Currency depreciation benefits exporters through improved price competitiveness but creates cost pressures for importers, with the overall impact depending on the firm's trade exposure."
+        result: "Exchange rate changes create both opportunities and threats — the impact depends on the firm's trade exposure and the price elasticity of its products."
       },
       {
-        title: "Employment Legislation to Increased Business Costs",
+        title: "Employment and consumer legislation increase costs but build trust",
         steps: [
-          "The government introduces new employment legislation — such as a higher National Minimum Wage, enhanced parental leave, or stricter dismissal procedures.",
-          "Businesses face increased direct labour costs (higher wages) and indirect compliance costs (legal advice, administrative processes, and record-keeping).",
-          "Higher costs reduce profit margins unless the business can pass them on to customers through higher prices or offset them through productivity improvements.",
-          "Some businesses may respond by reducing headcount, increasing automation, or shifting to more flexible contract arrangements to manage the cost impact."
+          "Employment law (minimum wage, parental leave, dismissal procedures) raises direct labour costs and compliance costs.",
+          "Consumer protection law (product quality, fair contracts, honest marketing) requires investment in quality control and staff training.",
+          "Higher costs reduce short-term margins — but reputable firms benefit from a level playing field that prevents unfair competition.",
+          "Consumers and employees gain greater confidence, which supports demand, loyalty and recruitment."
         ],
-        result: "Employment legislation increases the cost base for businesses while protecting workers' rights, creating tension between social objectives and commercial viability."
+        result: "Legislation increases costs but creates a more trusted marketplace — businesses that exceed minimum standards can turn compliance into competitive advantage."
       },
       {
-        title: "Economic Recession to Strategic Retrenchment",
+        title: "Economic cycles force strategic adaptation",
         steps: [
-          "The economy enters a recession — defined as two consecutive quarters of negative GDP growth — causing widespread falls in consumer and business confidence.",
-          "Demand falls across most sectors, but particularly for luxury goods, capital equipment, and housing-related products.",
-          "Businesses experience declining revenues and may face cash flow difficulties as customers delay payments.",
-          "Firms implement cost-cutting measures — redundancies, reduced marketing spend, delayed investment, and renegotiated supplier contracts.",
-          "Weaker competitors may exit the market, while stronger firms with cash reserves can acquire distressed assets at low prices."
+          "Recession (two consecutive quarters of negative GDP growth) causes widespread falls in consumer and business confidence.",
+          "Demand falls across most sectors — particularly luxury goods, capital equipment and housing.",
+          "Businesses implement cost-cutting: redundancies, reduced marketing, delayed investment and renegotiated contracts.",
+          "Stronger firms with cash reserves survive and can acquire distressed competitors at low prices, emerging in a stronger position."
         ],
-        result: "Recessions force businesses into defensive strategies but also create opportunities for well-capitalised firms to strengthen their competitive position through strategic acquisitions and market consolidation."
-      },
-      {
-        title: "Consumer Protection Law to Business Behaviour",
-        steps: [
-          "Consumer protection legislation — such as the Consumer Rights Act — establishes minimum standards for product quality, fair contract terms, and honest marketing.",
-          "Businesses must ensure their products are fit for purpose, as described, and of satisfactory quality, or face legal claims and potential fines.",
-          "Compliance requires investment in quality control, product testing, accurate labelling, and staff training on consumer rights.",
-          "While these requirements increase costs, they also create a more level playing field by preventing unscrupulous firms from gaining advantage through misleading practices."
-        ],
-        result: "Consumer protection law constrains business behaviour and increases compliance costs, but ultimately builds consumer confidence in the market, benefiting reputable businesses."
+        result: "Recessions force defensive strategies but also create opportunities — well-capitalised firms can consolidate market position while weaker competitors exit."
       }
     ],
     evaluation: [
       {
-        title: "The Impact of Interest Rates Depends on the Business",
-        content: "Interest rate changes do not affect all businesses equally — firms selling necessities such as food and energy experience relatively stable demand regardless of rate movements, while luxury goods retailers and house-builders are far more sensitive. Businesses with high levels of debt are more vulnerable to rate increases due to higher interest payments, while cash-rich firms may actually benefit from higher returns on their savings. The impact therefore depends on the firm's product type, customer base, and financial structure."
+        title: "Interest rate impacts vary by business type",
+        content: "Firms selling necessities experience stable demand regardless of rate changes, while luxury retailers and house-builders are highly sensitive. Cash-rich firms may benefit from higher returns on savings. The impact depends on product type, customer base and financial structure."
       },
       {
-        title: "Exchange Rate Effects Are Complex and Uncertain",
-        content: "While a weaker pound theoretically boosts export competitiveness, the actual impact depends on many factors including the price elasticity of demand for the product, the proportion of costs denominated in foreign currencies, and whether competitors also face currency changes. Many UK businesses both export and import, meaning the net effect of a currency movement is ambiguous. Additionally, exchange rate volatility itself creates uncertainty that can discourage international trade and investment."
+        title: "Legislation can create competitive advantage",
+        content: "Firms that voluntarily exceed minimum standards may attract better employees and more loyal customers. Paying above minimum wage reduces turnover and training costs. The strategic question is whether to treat legislation as a constraint to minimise or an opportunity to differentiate."
       },
       {
-        title: "Legislation Can Create Competitive Advantage",
-        content: "While businesses often view regulation as a burden, firms that exceed minimum legal standards can turn compliance into a competitive advantage. For example, a business that voluntarily pays above the National Minimum Wage may attract more motivated employees, reducing turnover and training costs. Similarly, exceeding environmental regulations can enhance brand reputation among increasingly ethical consumers. The key strategic question is whether the business treats legislation as a constraint to minimise or an opportunity to differentiate."
-      },
-      {
-        title: "PESTLE Analysis Is Broad but Lacks Depth",
-        content: "PESTLE analysis provides a useful framework for scanning the external environment but risks becoming a superficial tick-box exercise if not applied rigorously. Simply listing political, economic, social, technological, legal, and environmental factors does not constitute strategic analysis — the value lies in assessing how each factor specifically affects the individual business and what strategic response is appropriate. Without this level of depth, PESTLE analysis can create the illusion of thorough analysis while failing to deliver actionable insights."
-      },
-      {
-        title: "Economic Cycles Are Difficult to Predict",
-        content: "While understanding the economic cycle is valuable for strategic planning, accurately predicting the timing and severity of recessions and recoveries remains extremely challenging, even for professional economists. Businesses that make major strategic decisions based on economic forecasts — such as delaying investment in anticipation of a recession — risk being wrong and missing growth opportunities. A more resilient approach may be to maintain financial flexibility through moderate gearing and cash reserves, enabling the business to respond to changing conditions rather than attempting to predict them."
+        title: "Economic cycles are difficult to predict",
+        content: "Even professional economists struggle to predict the timing and severity of recessions. Businesses that make major decisions based on forecasts risk being wrong. A more resilient approach is maintaining financial flexibility through moderate gearing and cash reserves, enabling response to changing conditions rather than attempting prediction."
       }
     ]
-  }
+  },
+
 };
