@@ -15,13 +15,15 @@ import PracticeQuestionsTab from './PracticeQuestionsTab';
 import ExtrasTab from './ExtrasTab';
 import PaywallOverlay from './PaywallOverlay';
 import AnimatedTabBar from './AnimatedTabBar';
-import { BookAlt, Notes as NotesIcon, ChartHistogram, DrawerAlt, CardsBlank, Quiz as QuizIcon, Mistakes as MistakesIcon, Tutor as TutorIcon, Star, Padlock } from './Icons';
+import LearnModeTab from './LearnModeTab';
+import { BookAlt, Notes as NotesIcon, ChartHistogram, DrawerAlt, CardsBlank, Quiz as QuizIcon, Mistakes as MistakesIcon, Tutor as TutorIcon, Star, Padlock, LearnMode as LearnModeIcon } from './Icons';
 
-const FREE_TABS = new Set(['content', 'notes', 'diagrams', 'practice']);
+const FREE_TABS = new Set(['learn-mode', 'content', 'notes', 'diagrams', 'practice']);
 const PREVIEW_TABS = new Set(['flashcards', 'quiz', 'extras']); // Show preview then paywall (signed-in only)
 const PREMIUM_TABS = new Set(['mistakes', 'tutor']); // Full paywall block
 
 const allTabs = [
+  { id: 'learn-mode', label: 'Learn', Icon: LearnModeIcon },
   { id: 'content', label: 'Content', Icon: BookAlt },
   { id: 'notes', label: 'Notes', Icon: NotesIcon },
   { id: 'diagrams', label: 'Diagrams', Icon: ChartHistogram, subjects: ['economics'] },
@@ -173,6 +175,10 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     if (!visitedFeatures[`tab-${tabId}`]) {
       markFeatureVisited(`tab-${tabId}`);
     }
+    // Learn Mode: mark as seen on first click
+    if (tabId === 'learn-mode' && typeof window !== 'undefined') {
+      localStorage.setItem('revvy_learnmode_seen', 'true');
+    }
   }
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [sectionData, setSectionData] = useState(initialSectionData);
@@ -180,6 +186,26 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   const [glossaryTerms, setGlossaryTerms] = useState([]);
   const [contentStepInfo, setContentStepInfo] = useState(null);
   const [pendingTutorPrompt, setPendingTutorPrompt] = useState(null);
+
+  // Learn Mode state — current step persisted to localStorage
+  const [learnModeSection, setLearnModeSection] = useState(() => {
+    if (typeof window === 'undefined') return 0;
+    const saved = localStorage.getItem(`revvy_learnmode_${activeSubjectId}_${activeSection}_section`);
+    return saved ? parseInt(saved, 10) : 0;
+  });
+  const [learnModeResuming, setLearnModeResuming] = useState(false);
+
+  // Learn Mode completions — scan localStorage on mount
+  const [learnModeCompletions, setLearnModeCompletions] = useState(() => {
+    if (typeof window === 'undefined') return {};
+    const completions = {};
+    subjectSections.forEach(s => {
+      if (localStorage.getItem(`revvy_complete_${activeSubjectId}_${s.id}`) === 'true') {
+        completions[s.id] = true;
+      }
+    });
+    return completions;
+  });
 
   function goToTutor(prompt) {
     setPendingTutorPrompt(prompt);
@@ -220,6 +246,16 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       localStorage.setItem('last-visited-subject', activeSubjectId);
     }
   }, [activeSubjectId]);
+
+  // Persist Learn Mode section to localStorage
+  useEffect(() => {
+    if (typeof window !== 'undefined' && activeSubjectId && activeSection) {
+      localStorage.setItem(
+        `revvy_learnmode_${activeSubjectId}_${activeSection}_section`,
+        String(learnModeSection)
+      );
+    }
+  }, [learnModeSection, activeSubjectId, activeSection]);
 
   // Fetch glossary terms for active subject
   useEffect(() => {
@@ -425,6 +461,14 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     setActiveTab('content');
     setSidebarOpen(false);
     setContentStepInfo(null);
+
+    // Learn Mode: check for saved progress on new section
+    if (typeof window !== 'undefined') {
+      const savedStep = localStorage.getItem(`revvy_learnmode_${activeSubjectId}_${sectionId}_section`);
+      const step = savedStep ? parseInt(savedStep, 10) : 0;
+      setLearnModeSection(step);
+      setLearnModeResuming(step > 0);
+    }
   }
 
   function renderTab() {
@@ -457,6 +501,28 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
 
     switch (activeTab) {
       case 'overview': return <SectionOverview section={currentSection} unit={currentUnit} sectionData={sectionData} tabs={tabs} onTabSelect={handleTabSelect} isPremium={isPremium} user={user} savedProgress={savedProgress} />;
+      case 'learn-mode': return (
+        <LearnModeTab
+          key={activeSection}
+          contentData={sectionData.content}
+          diagramsData={sectionData.diagrams}
+          practiceData={sectionData.practice}
+          glossaryTerms={glossaryTerms}
+          sectionId={activeSection}
+          subjectId={activeSubjectId}
+          currentSection={currentSection}
+          currentUnit={currentUnit}
+          currentStep={learnModeSection}
+          onStepChange={setLearnModeSection}
+          isResuming={learnModeResuming}
+          onResumeDismiss={() => setLearnModeResuming(false)}
+          onComplete={() => {
+            setLearnModeCompletions(prev => ({ ...prev, [activeSection]: true }));
+          }}
+          onNavigateToQuiz={() => handleTabSelect('quiz')}
+          onNavigateToTab={handleTabSelect}
+        />
+      );
       case 'content': return <ContentTab key={activeSection} data={sectionData.content} glossaryTerms={glossaryTerms} onStepChange={handleStepChange} initialPosition={stepperPositions.current[activeSection] || null} />;
       case 'notes': return <NotesTab data={sectionData.notes} glossaryTerms={glossaryTerms} />;
       case 'diagrams': return <DiagramsTab data={sectionData.diagrams} />;
@@ -498,6 +564,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
           savedProgress={user ? savedProgress : null}
           visitedFeatures={visitedFeatures}
           onResourceVisit={markFeatureVisited}
+          learnModeCompletions={learnModeCompletions}
         />
 
         <div className="main-content">
@@ -528,6 +595,8 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
                 setActiveTab={handleTabSelect}
                 isPremium={isPremium}
                 visitedFeatures={visitedFeatures}
+                learnModeCompletions={learnModeCompletions}
+                activeSection={activeSection}
               />
             </div>
 

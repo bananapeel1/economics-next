@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useAuth } from './AuthProvider';
 import { Clipboard, Glossary, Document, CardClub, PdfFile, NetworkGraph, ModelAnswer } from './Icons';
 
-export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, sections, units, activeSection, onSectionChange, isOpen, isCollapsed, onToggleCollapse, contentStepInfo, savedProgress, visitedFeatures = {}, onResourceVisit }) {
+export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, sections, units, activeSection, onSectionChange, isOpen, isCollapsed, onToggleCollapse, contentStepInfo, savedProgress, visitedFeatures = {}, onResourceVisit, learnModeCompletions = {} }) {
   const { user, isPremium } = useAuth();
   const [moreOpen, setMoreOpen] = useState(false);
 
@@ -113,6 +113,9 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
                     >
                       <span className="sidebar-section-number">{section.number}</span>
                       <span className="sidebar-section-name">{section.short_title}</span>
+                      {learnModeCompletions[section.id] && (
+                        <span className="sidebar-learn-complete-dot" title="Learn Mode complete" />
+                      )}
                       {status && (
                         <span className={`sidebar-section-status ${status}`} title={status === 'complete' ? 'Completed' : 'In progress'}>
                           {status === 'complete' ? (

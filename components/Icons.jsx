@@ -349,6 +349,17 @@ export function ModelAnswer(props) {
   );
 }
 
+// 🧭 Learn Mode — compass / guided path
+export function LearnMode(props) {
+  return wrap(
+    <>
+      <circle cx="12" cy="12" r="10" />
+      <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" fill="currentColor" stroke="currentColor" strokeWidth="1" />
+    </>,
+    props
+  );
+}
+
 const Icons = {
   BookAlt,
   ChartHistogram,
@@ -375,6 +386,7 @@ const Icons = {
   Sun,
   Moon,
   LogOut,
+  LearnMode,
 };
 
 export default Icons;
