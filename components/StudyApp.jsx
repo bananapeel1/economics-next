@@ -159,19 +159,19 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
           <span className="overview-category-line" />
         </div>
         <div className="overview-grid overview-grid-3">
-          <button className="overview-card overview-card-premium" onClick={() => onTabSelect('flashcards')}>
+          <button className={`overview-card ${!isPremium ? 'overview-card-premium' : ''}`} onClick={() => onTabSelect('flashcards')}>
             {!isPremium && <span className="overview-card-lock"><Padlock size={12} /></span>}
             <span className="overview-card-icon"><CardsBlank size={24} /></span>
             <span className="overview-card-label">Flashcards</span>
             <span className="overview-card-count">{flashcardCount} cards</span>
           </button>
-          <button className="overview-card overview-card-premium" onClick={() => onTabSelect('quiz')}>
+          <button className={`overview-card ${!isPremium ? 'overview-card-premium' : ''}`} onClick={() => onTabSelect('quiz')}>
             {!isPremium && <span className="overview-card-lock"><Padlock size={12} /></span>}
             <span className="overview-card-icon"><QuizIcon size={24} /></span>
             <span className="overview-card-label">Quiz</span>
             <span className="overview-card-count">{quizCount} questions</span>
           </button>
-          <button className="overview-card overview-card-premium" onClick={() => onTabSelect('tutor')}>
+          <button className={`overview-card ${!isPremium ? 'overview-card-premium' : ''}`} onClick={() => onTabSelect('tutor')}>
             {!isPremium && <span className="overview-card-lock"><Padlock size={12} /></span>}
             <span className="overview-card-icon"><TutorIcon size={24} /></span>
             <span className="overview-card-label">AI Tutor</span>
