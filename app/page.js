@@ -2,11 +2,11 @@ import { createServerClient } from '@/lib/supabase-server';
 import StudyApp from '@/components/StudyApp';
 
 export const metadata = {
-  title: 'Free IAL Economics & Business Revision | Revvy Learn',
-  description: 'Free notes, flashcards, quizzes and AI tutor for Edexcel IAL Economics and Business. Every spec point covered. Used by IAL students worldwide.',
+  title: 'Free Edexcel IAL Economics & Business Revision Notes | Revvy Learn',
+  description: 'Free revision notes, flashcards, diagrams and past papers for Edexcel International A-Level Economics and Business. Interactive quizzes, AI tutor and model answers for Units 1\u20134.',
   openGraph: {
-    title: 'Free IAL Economics & Business Revision | Revvy Learn',
-    description: 'Free notes, flashcards, quizzes and AI tutor for Edexcel IAL Economics and Business. Every spec point covered.',
+    title: 'Free Edexcel IAL Economics & Business Revision Notes | Revvy Learn',
+    description: 'Free revision notes, flashcards, diagrams and past papers for Edexcel IAL Economics and Business. Every spec point covered with quizzes and AI tutor.',
     url: 'https://revvylearn.com',
     type: 'website',
   },

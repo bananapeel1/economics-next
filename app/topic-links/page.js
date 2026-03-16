@@ -2,11 +2,11 @@ import TopicLinksPage from '@/components/topic-links/TopicLinksPage';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Topic Linkage Map | Revvy Learn — Edexcel A-Level Revision',
-  description: 'Interactive visual map showing how Edexcel IAL Economics topics connect. See relationships between micro and macro concepts for better exam revision.',
+  title: 'Economics Topic Linkage Map — Edexcel IAL | Revvy Learn',
+  description: 'Interactive visual map showing how Edexcel IAL Economics topics connect across micro and macro units. Spot cross-topic evaluation points for higher-mark exam answers.',
   openGraph: {
-    title: 'Topic Linkage Map | Revvy Learn',
-    description: 'Interactive visual map showing how Edexcel IAL Economics topics connect.',
+    title: 'Economics Topic Linkage Map — Edexcel IAL | Revvy Learn',
+    description: 'Interactive visual map showing how Edexcel IAL Economics topics connect across micro and macro units.',
     url: 'https://revvylearn.com/topic-links',
   },
 };

@@ -2,11 +2,11 @@ import { createServerClient } from '@/lib/supabase-server';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'WBS12 Revision — Managing Business Activities | Revvy Learn',
-  description: 'Free Edexcel IAL Business Unit 2 notes (WBS12). Finance, cash flow, operations and external influences — with model answers and quizzes.',
+  title: 'Managing Business Activities — Edexcel IAL Business Unit 2 (WBS12) | Revvy Learn',
+  description: 'Free revision notes for Edexcel IAL Business Unit 2 (WBS12). Covers raising finance, cash flow forecasting, budgets, break-even analysis, quality management, supply chains and external influences (PESTLE) with exam practice.',
   openGraph: {
-    title: 'WBS12 Revision — Managing Business Activities | Revvy Learn',
-    description: 'Free Edexcel IAL Business Unit 2 notes (WBS12). Finance, cash flow, operations and external influences.',
+    title: 'Managing Business Activities — Edexcel IAL Business Unit 2 (WBS12) | Revvy Learn',
+    description: 'Free Edexcel IAL Business Unit 2 revision notes. Finance, cash flow, budgets, operations management and external influences.',
     url: 'https://revvylearn.com/business/unit-2',
     type: 'article',
   },

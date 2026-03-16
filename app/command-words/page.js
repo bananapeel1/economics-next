@@ -3,11 +3,11 @@ import CommandWordsPage from '@/components/CommandWordsPage';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IAL Economics & Business Command Words | Revvy Learn',
-  description: 'Guide to Edexcel IAL command words: Define, Explain, Analyse, Assess and Evaluate. How each is marked, with model opening sentences.',
+  title: 'Edexcel IAL Command Words Guide \u2014 Define, Explain, Evaluate | Revvy Learn',
+  description: 'Complete guide to Edexcel IAL Economics and Business command words. Learn what Define, Explain, Analyse, Assess and Evaluate mean in exams, how each is marked, and model opening sentences that hit top marks.',
   openGraph: {
-    title: 'IAL Economics & Business Command Words | Revvy Learn',
-    description: 'Guide to Edexcel IAL command words: Define, Explain, Analyse, Assess and Evaluate. How each is marked.',
+    title: 'Edexcel IAL Command Words Guide | Revvy Learn',
+    description: 'Guide to Edexcel IAL command words: Define, Explain, Analyse, Assess and Evaluate. How each is marked with model opening sentences.',
     url: 'https://revvylearn.com/command-words',
   },
 };

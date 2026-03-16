@@ -2,11 +2,11 @@ import { createServerClient } from '@/lib/supabase-server';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'WEC11 Revision — Markets in Action | Revvy Learn',
-  description: 'Free Edexcel IAL Economics Unit 1 notes (WEC11). Demand, supply, market failure and government intervention — with diagrams and flashcards.',
+  title: 'Markets in Action — Edexcel IAL Economics Unit 1 (WEC11) | Revvy Learn',
+  description: 'Free revision notes for Edexcel IAL Economics Unit 1 (WEC11). Covers demand & supply, price determination, elasticity (PED, YED, XED), market failure, externalities and government intervention with diagrams, flashcards and practice questions.',
   openGraph: {
-    title: 'WEC11 Revision — Markets in Action | Revvy Learn',
-    description: 'Free Edexcel IAL Economics Unit 1 notes (WEC11). Demand, supply, market failure and government intervention.',
+    title: 'Markets in Action — Edexcel IAL Economics Unit 1 (WEC11) | Revvy Learn',
+    description: 'Free Edexcel IAL Economics Unit 1 revision notes. Demand, supply, elasticity, market failure and government intervention with diagrams and practice questions.',
     url: 'https://revvylearn.com/economics/unit-1',
     type: 'article',
   },

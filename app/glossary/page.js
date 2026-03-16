@@ -3,11 +3,11 @@ import GlossaryPage from '@/components/GlossaryPage';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IAL Economics & Business Glossary | Revvy Learn',
-  description: 'Key terms and definitions for Edexcel IAL Economics and Business, A–Z. Aligned to the Edexcel IAL specification for quick exam reference.',
+  title: 'Edexcel IAL Economics & Business Key Terms Glossary | Revvy Learn',
+  description: 'A\u2013Z glossary of key terms and definitions for Edexcel International A-Level Economics and Business. Every definition aligned to the IAL specification \u2014 perfect for quick revision and exam reference.',
   openGraph: {
-    title: 'IAL Economics & Business Glossary | Revvy Learn',
-    description: 'Key terms and definitions for Edexcel IAL Economics and Business, A–Z. Aligned to the IAL specification.',
+    title: 'Edexcel IAL Economics & Business Key Terms Glossary | Revvy Learn',
+    description: 'A\u2013Z key terms and definitions for Edexcel IAL Economics and Business, aligned to the IAL specification.',
     url: 'https://revvylearn.com/glossary',
   },
 };

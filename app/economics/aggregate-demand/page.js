@@ -3,11 +3,11 @@ import Link from 'next/link';
 import RelatedModelAnswers from '@/components/RelatedModelAnswers';
 
 export const metadata = {
-  title: 'Edexcel IAL Aggregate Demand Revision Notes | Economics | Revvy Learn',
-  description: 'In-depth revision notes for Edexcel IAL Economics aggregate demand (2.3.2). Covers components of AD, the AD curve, shifts, multiplier effect and fiscal policy.',
+  title: 'Aggregate Demand \u2014 Edexcel IAL Economics Unit 2 | Revvy Learn',
+  description: 'Free aggregate demand revision notes for Edexcel IAL Economics (2.3.2). Covers components of AD (C+I+G+X\u2212M), the AD curve, shifts in AD, the multiplier effect and fiscal policy with diagrams and practice questions.',
   openGraph: {
-    title: 'Edexcel IAL Aggregate Demand Revision Notes | Revvy Learn',
-    description: 'Complete aggregate demand revision notes for Edexcel International A-Level Economics.',
+    title: 'Aggregate Demand \u2014 Edexcel IAL Economics Unit 2 | Revvy Learn',
+    description: 'Complete aggregate demand revision notes for Edexcel IAL Economics. AD components, shifts, multiplier and fiscal policy.',
     url: 'https://revvylearn.com/economics/aggregate-demand',
     type: 'article',
   },

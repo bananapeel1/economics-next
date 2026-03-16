@@ -2,11 +2,11 @@ import { createServerClient } from '@/lib/supabase-server';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'WEC12 Revision — Macroeconomic Performance | Revvy Learn',
-  description: 'Free Edexcel IAL Economics Unit 2 notes (WEC12). Aggregate demand, aggregate supply, growth, inflation and macro policies — with model answers.',
+  title: 'Macroeconomic Performance — Edexcel IAL Economics Unit 2 (WEC12) | Revvy Learn',
+  description: 'Free revision notes for Edexcel IAL Economics Unit 2 (WEC12). Covers aggregate demand & supply, GDP, inflation, unemployment, economic growth, fiscal and monetary policy with AD/AS diagrams and exam practice.',
   openGraph: {
-    title: 'WEC12 Revision — Macroeconomic Performance | Revvy Learn',
-    description: 'Free Edexcel IAL Economics Unit 2 notes (WEC12). Aggregate demand, aggregate supply, growth, inflation and macro policies.',
+    title: 'Macroeconomic Performance — Edexcel IAL Economics Unit 2 (WEC12) | Revvy Learn',
+    description: 'Free Edexcel IAL Economics Unit 2 revision notes. AD/AS, GDP, inflation, unemployment, economic growth and macro policy with diagrams.',
     url: 'https://revvylearn.com/economics/unit-2',
     type: 'article',
   },

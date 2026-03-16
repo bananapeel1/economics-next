@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Settings — Revvy Learn',
+  robots: 'noindex, nofollow',
 };
 
 export default async function SettingsRoute() {

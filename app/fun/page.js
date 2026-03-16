@@ -6,6 +6,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Blackjack — Revvy Learn',
+  robots: 'noindex, nofollow',
 };
 
 export default async function FunRoute() {

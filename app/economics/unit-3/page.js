@@ -2,11 +2,11 @@ import { createServerClient } from '@/lib/supabase-server';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'WEC13 Revision — Business Behaviour | Revvy Learn',
-  description: 'Free Edexcel IAL Economics Unit 3 notes (WEC13). Market structures, costs, revenue, labour markets and government intervention with diagrams.',
+  title: 'Business Behaviour — Edexcel IAL Economics Unit 3 (WEC13) | Revvy Learn',
+  description: 'Free revision notes for Edexcel IAL Economics Unit 3 (WEC13). Covers perfect competition, monopoly, oligopoly, contestability, costs & revenue curves, labour markets, wage determination and competition policy with diagrams and exam practice.',
   openGraph: {
-    title: 'WEC13 Revision — Business Behaviour | Revvy Learn',
-    description: 'Free Edexcel IAL Economics Unit 3 notes (WEC13). Market structures, costs, revenue, labour markets and government intervention.',
+    title: 'Business Behaviour — Edexcel IAL Economics Unit 3 (WEC13) | Revvy Learn',
+    description: 'Free Edexcel IAL Economics Unit 3 revision notes. Market structures, costs & revenue, labour markets and competition policy with diagrams.',
     url: 'https://revvylearn.com/economics/unit-3',
     type: 'article',
   },

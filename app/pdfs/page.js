@@ -2,11 +2,11 @@ import { createServerClient } from '@/lib/supabase-server';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Useful PDFs | Revvy Learn — Edexcel A-Level Revision',
-  description: 'Download useful revision PDFs for Edexcel International A-Level Economics and Business. Notes, cheat sheets, revision guides and more.',
+  title: 'Edexcel IAL Revision PDFs — Free Downloads | Revvy Learn',
+  description: 'Download free revision PDFs for Edexcel International A-Level Economics and Business. Includes summary sheets, formula guides, key definitions and exam technique cheat sheets.',
   openGraph: {
-    title: 'Useful PDFs | Revvy Learn',
-    description: 'Download useful revision PDFs for Edexcel IAL Economics and Business.',
+    title: 'Edexcel IAL Revision PDFs — Free Downloads | Revvy Learn',
+    description: 'Download free revision PDFs for Edexcel IAL Economics and Business. Summary sheets, formula guides and cheat sheets.',
     url: 'https://revvylearn.com/pdfs',
   },
 };

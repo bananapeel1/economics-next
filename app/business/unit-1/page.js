@@ -2,11 +2,11 @@ import { createServerClient } from '@/lib/supabase-server';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'WBS11 Revision — Marketing & People | Revvy Learn',
-  description: 'Free Edexcel IAL Business Unit 1 notes (WBS11). Marketing mix, pricing, managing people, HR and entrepreneurs — with flashcards and quizzes.',
+  title: 'Marketing & People — Edexcel IAL Business Unit 1 (WBS11) | Revvy Learn',
+  description: 'Free revision notes for Edexcel IAL Business Unit 1 (WBS11). Covers market research, the marketing mix (4Ps), STP, pricing strategies, managing people, HR, motivation theory and entrepreneurship with flashcards and exam practice.',
   openGraph: {
-    title: 'WBS11 Revision — Marketing & People | Revvy Learn',
-    description: 'Free Edexcel IAL Business Unit 1 notes (WBS11). Marketing mix, pricing, managing people, HR and entrepreneurs.',
+    title: 'Marketing & People — Edexcel IAL Business Unit 1 (WBS11) | Revvy Learn',
+    description: 'Free Edexcel IAL Business Unit 1 revision notes. Marketing mix, pricing strategies, managing people, HR and entrepreneurship.',
     url: 'https://revvylearn.com/business/unit-1',
     type: 'article',
   },

@@ -3,11 +3,11 @@ import PastPapersPage from '@/components/PastPapersPage';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Edexcel IAL Past Papers — Free Download | Revvy Learn',
-  description: 'Free Edexcel IAL Economics and Business past papers. WEC11, WEC12, WEC13, WEC14, WBS11–WBS14 organised by year with mark schemes.',
+  title: 'Edexcel IAL Economics & Business Past Papers — Free Download | Revvy Learn',
+  description: 'Download free Edexcel IAL Economics and Business past papers with mark schemes. All units covered: WEC11, WEC12, WEC13, WEC14, WBS11, WBS12. Organised by year and unit for easy exam practice.',
   openGraph: {
     title: 'Edexcel IAL Past Papers — Free Download | Revvy Learn',
-    description: 'Free Edexcel IAL Economics and Business past papers. WEC11–WEC14, WBS11–WBS14 organised by year with mark schemes.',
+    description: 'Download free Edexcel IAL Economics and Business past papers with mark schemes. All units organised by year.',
     url: 'https://revvylearn.com/past-papers',
   },
 };

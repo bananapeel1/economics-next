@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IAL Business Revision — WBS11 to WBS14 | Revvy Learn',
-  description: 'Free revision notes for all Edexcel IAL Business units: WBS11, WBS12, WBS13, WBS14. Flashcards, 20-mark essay guides and AI tutor included.',
+  title: 'Edexcel IAL Business Revision Notes — Units 1\u20134 | Revvy Learn',
+  description: 'Complete revision notes for Edexcel International A-Level Business. Covers Unit 1 Marketing & People (WBS11), Unit 2 Managing Business Activities (WBS12). Free notes, flashcards, 20-mark essay guides and AI tutor.',
   openGraph: {
-    title: 'IAL Business Revision — WBS11 to WBS14 | Revvy Learn',
-    description: 'Free revision notes for all Edexcel IAL Business units: WBS11, WBS12, WBS13, WBS14.',
+    title: 'Edexcel IAL Business Revision Notes — Units 1\u20134 | Revvy Learn',
+    description: 'Complete free revision notes for all Edexcel IAL Business units: WBS11, WBS12. Flashcards, essay guides and practice questions.',
     url: 'https://revvylearn.com/business',
     type: 'article',
   },

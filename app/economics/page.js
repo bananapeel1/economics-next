@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IAL Economics Revision — WEC11 to WEC14 | Revvy Learn',
-  description: 'Free revision notes for all Edexcel IAL Economics units: WEC11, WEC12, WEC13, WEC14. Notes, flashcards, quizzes and AI tutor per spec point.',
+  title: 'Edexcel IAL Economics Revision Notes — Units 1\u20134 | Revvy Learn',
+  description: 'Complete revision notes for Edexcel International A-Level Economics. Covers Unit 1 Markets in Action (WEC11), Unit 2 Macroeconomic Performance (WEC12), Unit 3 Business Behaviour (WEC13) and Unit 4 Global Economy (WEC14). Free notes, diagrams and practice questions.',
   openGraph: {
-    title: 'IAL Economics Revision — WEC11 to WEC14 | Revvy Learn',
-    description: 'Free revision notes for all Edexcel IAL Economics units: WEC11, WEC12, WEC13, WEC14.',
+    title: 'Edexcel IAL Economics Revision Notes — Units 1\u20134 | Revvy Learn',
+    description: 'Complete free revision notes for all Edexcel IAL Economics units: WEC11, WEC12, WEC13, WEC14. Diagrams, flashcards and practice questions.',
     url: 'https://revvylearn.com/economics',
     type: 'article',
   },

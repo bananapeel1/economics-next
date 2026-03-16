@@ -3,14 +3,14 @@ import { MODEL_ANSWERS, MODEL_ANSWERS_FAQ, MODEL_ANSWERS_SECTIONS } from '@/data
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'IAL Economics & Business Model Answers | Revvy Learn',
-  description: 'Free annotated model answers for Edexcel IAL Economics and Business. 4, 8 and 20-mark questions with mark scheme commentary and examiner tips.',
+  title: 'Edexcel IAL Economics & Business Model Answers | Revvy Learn',
+  description: 'Free annotated model answers for Edexcel IAL Economics and Business exam questions. Full mark 4, 8 and 20-mark responses with mark scheme breakdowns, examiner tips and evaluation frameworks.',
   alternates: {
     canonical: '/model-answers',
   },
   openGraph: {
-    title: 'IAL Economics & Business Model Answers | Revvy Learn',
-    description: 'Free annotated model answers for Edexcel IAL Economics and Business. 4, 8 and 20-mark questions with mark scheme commentary.',
+    title: 'Edexcel IAL Economics & Business Model Answers | Revvy Learn',
+    description: 'Free annotated model answers for Edexcel IAL Economics and Business. 4, 8 and 20-mark exam questions with mark scheme commentary.',
     url: 'https://revvylearn.com/model-answers',
   },
 };

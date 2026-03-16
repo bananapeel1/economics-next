@@ -2,11 +2,11 @@ import { createServerClient } from '@/lib/supabase-server';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'WEC14 Revision — Global Economy | Revvy Learn',
-  description: 'Free Edexcel IAL Economics Unit 4 notes (WEC14). Globalisation, trade, exchange rates, poverty, inequality and economic development.',
+  title: 'Global Economy — Edexcel IAL Economics Unit 4 (WEC14) | Revvy Learn',
+  description: 'Free revision notes for Edexcel IAL Economics Unit 4 (WEC14). Covers globalisation, comparative advantage, trade blocs, exchange rates, balance of payments, poverty, inequality and strategies for economic development with exam practice.',
   openGraph: {
-    title: 'WEC14 Revision — Global Economy | Revvy Learn',
-    description: 'Free Edexcel IAL Economics Unit 4 notes (WEC14). Globalisation, trade, exchange rates, poverty, inequality and economic development.',
+    title: 'Global Economy — Edexcel IAL Economics Unit 4 (WEC14) | Revvy Learn',
+    description: 'Free Edexcel IAL Economics Unit 4 revision notes. Globalisation, trade, exchange rates, poverty, inequality and economic development.',
     url: 'https://revvylearn.com/economics/unit-4',
     type: 'article',
   },
