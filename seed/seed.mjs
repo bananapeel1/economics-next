@@ -20,6 +20,8 @@ const subjects = [
 const units = [
   { number: 1, title: 'Markets in Action', code: 'WEC11', subject: 'economics' },
   { number: 2, title: 'Macroeconomic Performance & Policy', code: 'WEC12', subject: 'economics' },
+  { number: 3, title: 'Business Behaviour', code: 'WEC13', subject: 'economics' },
+  { number: 4, title: 'Developments in the Global Economy', code: 'WEC14', subject: 'economics' },
 ];
 
 const sections = [
@@ -35,6 +37,19 @@ const sections = [
   { id: 'national-income', unit: 2, number: '2.3.4', title: 'National Income', shortTitle: 'National Income', sort_order: 10 },
   { id: 'economic-growth', unit: 2, number: '2.3.5', title: 'Economic Growth', shortTitle: 'Econ. Growth', sort_order: 11 },
   { id: 'macroeconomic-objectives-policies', unit: 2, number: '2.3.6', title: 'Macroeconomic Objectives & Policies', shortTitle: 'Macro Policies', sort_order: 12 },
+  // Unit 3: Business Behaviour
+  { id: 'types-sizes-businesses', unit: 3, number: '3.3.1', title: 'Types and Sizes of Businesses', shortTitle: 'Business Types', sort_order: 13 },
+  { id: 'revenue-costs-profits', unit: 3, number: '3.3.2', title: 'Revenue, Costs and Profits', shortTitle: 'Revenue & Costs', sort_order: 14 },
+  { id: 'market-structures-contestability', unit: 3, number: '3.3.3', title: 'Market Structures and Contestability', shortTitle: 'Market Structures', sort_order: 15 },
+  { id: 'labour-markets', unit: 3, number: '3.3.4', title: 'Labour Markets', shortTitle: 'Labour Markets', sort_order: 16 },
+  { id: 'government-intervention-firms', unit: 3, number: '3.3.5', title: 'Government Intervention', shortTitle: 'Gov. Intervention', sort_order: 17 },
+  // Unit 4: Developments in the Global Economy
+  { id: 'causes-effects-globalisation', unit: 4, number: '4.3.1', title: 'Causes and Effects of Globalisation', shortTitle: 'Globalisation', sort_order: 18 },
+  { id: 'trade-global-economy', unit: 4, number: '4.3.2', title: 'Trade and the Global Economy', shortTitle: 'Trade', sort_order: 19 },
+  { id: 'balance-payments-exchange-rates', unit: 4, number: '4.3.3', title: 'Balance of Payments, Exchange Rates and International Competitiveness', shortTitle: 'BoP & Exchange Rates', sort_order: 20 },
+  { id: 'poverty-inequality', unit: 4, number: '4.3.4', title: 'Poverty and Inequality', shortTitle: 'Poverty & Inequality', sort_order: 21 },
+  { id: 'role-state-macroeconomy', unit: 4, number: '4.3.5', title: 'The Role of the State in the Macroeconomy', shortTitle: 'Role of State', sort_order: 22 },
+  { id: 'growth-development', unit: 4, number: '4.3.6', title: 'Growth and Development', shortTitle: 'Growth & Development', sort_order: 23 },
 ];
 
 async function seed() {

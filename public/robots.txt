@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /admin
 Disallow: /settings
+Disallow: /fun
 Disallow: /api/
 
 Sitemap: https://revvylearn.com/sitemap.xml

@@ -1,12 +1,16 @@
 "use client";
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useAuth } from './AuthProvider';
+import PaywallOverlay from './PaywallOverlay';
+import { CardsBlank } from './Icons';
 
-export default function FlashcardsTab({ cards, sectionId }) {
+export default function FlashcardsTab({ cards, sectionId, previewMode = false }) {
   const { user } = useAuth();
   const storageKey = `flashcards-${sectionId}`;
   const containerRef = useRef(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
+
+  const PREVIEW_LIMIT = 2;
 
   // Listen for fullscreen changes (including Esc key exit)
   useEffect(() => {
@@ -26,7 +30,7 @@ export default function FlashcardsTab({ cards, sectionId }) {
   }
 
   const [statuses, setStatuses] = useState(() => {
-    if (typeof window === 'undefined') return {};
+    if (typeof window === 'undefined' || previewMode) return {};
     try {
       const saved = localStorage.getItem(storageKey);
       return saved ? JSON.parse(saved) : {};
@@ -41,24 +45,28 @@ export default function FlashcardsTab({ cards, sectionId }) {
   const [round, setRound] = useState(1);
   const [roundSummary, setRoundSummary] = useState(null); // { correct, incorrect, total }
   const [allComplete, setAllComplete] = useState(false);
+  const [previewEnded, setPreviewEnded] = useState(false);
 
   // Build initial deck when cards or section changes
   const buildDeck = useCallback((currentStatuses) => {
     if (!cards || !cards.length) return;
-    const allGreen = cards.every((_, i) => currentStatuses[i] === 'got-it');
-    if (allGreen) {
+
+    // In preview mode, only use first PREVIEW_LIMIT cards
+    const availableCards = previewMode ? cards.slice(0, PREVIEW_LIMIT) : cards;
+
+    const allGreen = availableCards.every((_, i) => currentStatuses[i] === 'got-it');
+    if (allGreen && !previewMode) {
       setAllComplete(true);
       setRoundSummary(null);
       return;
     }
     setAllComplete(false);
     setRoundSummary(null);
-    // First round: all cards. Later rounds: only non-mastered
-    const indices = cards.map((_, i) => i).filter(i => currentStatuses[i] !== 'got-it');
-    setDeck(indices.length > 0 ? indices : cards.map((_, i) => i));
+    const indices = availableCards.map((_, i) => i).filter(i => currentStatuses[i] !== 'got-it');
+    setDeck(indices.length > 0 ? indices : availableCards.map((_, i) => i));
     setDeckPos(0);
     setFlipped(false);
-  }, [cards]);
+  }, [cards, previewMode]);
 
   // Load statuses on section change
   useEffect(() => {
@@ -66,6 +74,14 @@ export default function FlashcardsTab({ cards, sectionId }) {
     setRound(1);
     setRoundSummary(null);
     setAllComplete(false);
+    setPreviewEnded(false);
+
+    // In preview mode, don't load saved statuses
+    if (previewMode) {
+      setStatuses({});
+      buildDeck({});
+      return;
+    }
 
     // Load from localStorage first (instant)
     let localStatuses = {};
@@ -98,16 +114,17 @@ export default function FlashcardsTab({ cards, sectionId }) {
         })
         .catch(() => {});
     }
-  }, [sectionId, user, storageKey, buildDeck]);
+  }, [sectionId, user, storageKey, buildDeck, previewMode]);
 
-  // Save to localStorage on every change
+  // Save to localStorage on every change (skip in preview mode)
   useEffect(() => {
+    if (previewMode) return;
     localStorage.setItem(storageKey, JSON.stringify(statuses));
-  }, [statuses, storageKey]);
+  }, [statuses, storageKey, previewMode]);
 
-  // Debounced sync to database when logged in
+  // Debounced sync to database when logged in (skip in preview mode)
   function syncToDatabase(newStatuses) {
-    if (!user) return;
+    if (!user || previewMode) return;
     if (syncTimer.current) clearTimeout(syncTimer.current);
     syncTimer.current = setTimeout(() => {
       fetch('/api/progress/flashcards', {
@@ -122,12 +139,13 @@ export default function FlashcardsTab({ cards, sectionId }) {
     return <div style={{ color: 'var(--text-muted)', textAlign: 'center', padding: 40 }}>No flashcards available.</div>;
   }
 
-  if (!deck.length && !allComplete) {
+  if (!deck.length && !allComplete && !previewEnded) {
     return <div style={{ color: 'var(--text-muted)', textAlign: 'center', padding: 40 }}>Loading flashcards...</div>;
   }
 
+  const totalCards = previewMode ? Math.min(cards.length, PREVIEW_LIMIT) : cards.length;
   const gotItCount = Object.values(statuses).filter(s => s === 'got-it').length;
-  const progress = (gotItCount / cards.length) * 100;
+  const progress = (gotItCount / totalCards) * 100;
 
   function markCard(status) {
     const cardIndex = deck[deckPos];
@@ -137,6 +155,12 @@ export default function FlashcardsTab({ cards, sectionId }) {
 
     // If this was the last card in the deck, end the round
     if (deckPos >= deck.length - 1) {
+      // In preview mode, show paywall after all preview cards
+      if (previewMode) {
+        setPreviewEnded(true);
+        return;
+      }
+
       const correctThisRound = deck.filter(i => newStatuses[i] === 'got-it').length;
       const incorrectThisRound = deck.length - correctThisRound;
 
@@ -173,7 +197,9 @@ export default function FlashcardsTab({ cards, sectionId }) {
     setRound(1);
     setAllComplete(false);
     setRoundSummary(null);
-    setDeck(cards.map((_, i) => i));
+    setPreviewEnded(false);
+    const availableCards = previewMode ? cards.slice(0, PREVIEW_LIMIT) : cards;
+    setDeck(availableCards.map((_, i) => i));
     setDeckPos(0);
     setFlipped(false);
   }
@@ -183,6 +209,21 @@ export default function FlashcardsTab({ cards, sectionId }) {
       setDeckPos(pos);
       setFlipped(false);
     }
+  }
+
+  // Preview ended — show upgrade CTA
+  if (previewEnded) {
+    return (
+      <div className="flashcard-container">
+        <div className="preview-fade-cta">
+          <div className="preview-fade-icon"><CardsBlank size={40} /></div>
+          <p className="preview-fade-count">
+            You've previewed {PREVIEW_LIMIT} of {cards.length} flashcards
+          </p>
+          <PaywallOverlay feature="Flashcards" inline />
+        </div>
+      </div>
+    );
   }
 
   // All complete celebration
@@ -254,15 +295,19 @@ export default function FlashcardsTab({ cards, sectionId }) {
           <div className="flashcard-progress-bar" style={{ width: `${progress}%` }} />
         </div>
         <div className="flashcard-progress-text">
-          {gotItCount} of {cards.length} mastered
-          {round > 1 && <span className="flashcard-round-badge">Round {round}</span>}
-          <button className="flashcard-fullscreen-btn" onClick={toggleFullscreen} title={isFullscreen ? 'Exit fullscreen' : 'Fullscreen'}>
-            {isFullscreen ? (
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="4 14 4 20 10 20"/><polyline points="20 10 20 4 14 4"/><line x1="14" y1="10" x2="21" y2="3"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
-            ) : (
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
-            )}
-          </button>
+          {previewMode
+            ? `Card ${deckPos + 1} of ${totalCards} (preview)`
+            : <>{gotItCount} of {cards.length} mastered{round > 1 && <span className="flashcard-round-badge">Round {round}</span>}</>
+          }
+          {!previewMode && (
+            <button className="flashcard-fullscreen-btn" onClick={toggleFullscreen} title={isFullscreen ? 'Exit fullscreen' : 'Fullscreen'}>
+              {isFullscreen ? (
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="4 14 4 20 10 20"/><polyline points="20 10 20 4 14 4"/><line x1="14" y1="10" x2="21" y2="3"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+              ) : (
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+              )}
+            </button>
+          )}
         </div>
       </div>
 

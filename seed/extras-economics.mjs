@@ -762,4 +762,725 @@ export default {
     ]
   },
 
+  // ───────────────────────────────────────────────────────────────
+  // UNIT 3 — BUSINESS ECONOMICS
+  // ───────────────────────────────────────────────────────────────
+
+  // ───────────────────────────────────────────────────────────────
+  // 13. TYPES & SIZES OF BUSINESSES
+  // Theme: Ownership → Growth → Control problems → Market niches
+  // ───────────────────────────────────────────────────────────────
+  'types-sizes-businesses': {
+    chains: [
+      {
+        title: "Profit motive drives efficiency in private sector",
+        steps: [
+          "Private sector firms are owned by shareholders who seek maximum returns on their investment, creating a strong profit motive.",
+          "The profit motive incentivises firms to minimise costs and innovate, as higher efficiency leads to greater profits and shareholder value.",
+          "Cost minimisation drives productive efficiency — firms produce at the lowest point on their average cost curve to maximise profit margins.",
+          "Competition between profit-seeking firms pushes prices down towards costs, benefiting consumers through lower prices and improved product quality."
+        ],
+        result: "The profit motive in the private sector acts as a powerful incentive for efficiency, innovation and consumer benefit through competitive pressure."
+      },
+      {
+        title: "Mergers can create monopoly power harming consumers",
+        steps: [
+          "Horizontal mergers combine firms at the same stage of production, increasing market concentration and the merged firm's market share.",
+          "Greater market share gives the merged firm increased pricing power, allowing it to raise prices above competitive levels.",
+          "Higher prices transfer surplus from consumers to producers, reducing consumer welfare and creating allocative inefficiency.",
+          "Reduced competitive pressure may also lead to X-inefficiency, as the dominant firm has less incentive to minimise costs or innovate."
+        ],
+        result: "Mergers that significantly increase market concentration can harm consumers through higher prices, reduced choice and lower efficiency."
+      },
+      {
+        title: "Principal-agent problem leads to satisficing",
+        steps: [
+          "In large firms, ownership (shareholders) is separated from control (managers), creating the principal-agent problem.",
+          "Managers (agents) may pursue their own objectives — such as revenue maximisation, empire building or leisure — rather than profit maximisation for shareholders (principals).",
+          "Information asymmetry means shareholders cannot perfectly monitor managers' decisions, giving managers discretion to satisfice rather than maximise profits.",
+          "Satisficing behaviour means managers aim for 'good enough' profits to keep shareholders content while pursuing their own goals, leading to outcomes that deviate from allocative efficiency."
+        ],
+        result: "The divorce of ownership from control in large firms means managers may satisfice rather than profit maximise, reducing shareholder returns and economic efficiency."
+      },
+      {
+        title: "SMEs face constraints but fill market niches",
+        steps: [
+          "Small and medium enterprises face higher average costs than large firms because they cannot exploit internal economies of scale in purchasing, marketing or finance.",
+          "SMEs also face greater difficulty accessing finance — banks view them as higher risk, and they cannot issue shares on stock markets as easily as PLCs.",
+          "Despite these constraints, SMEs survive by serving niche markets with specialised products, offering personalised service and maintaining flexibility to adapt quickly to changing demand.",
+          "SMEs are vital for the economy as they promote entrepreneurship, increase competition, create employment and drive innovation in areas large firms overlook."
+        ],
+        result: "SMEs overcome cost and finance disadvantages by exploiting niche markets and flexibility, playing an essential role in promoting competition and innovation."
+      }
+    ],
+    evaluation: [
+      {
+        title: "Profit motive does not always lead to socially optimal outcomes",
+        content: "While the profit motive drives efficiency, it can also incentivise negative externalities — firms may cut costs by polluting or exploiting workers. Firms may engage in rent-seeking behaviour rather than productive activity. The profit motive only leads to socially optimal outcomes when markets are competitive and externalities are internalised through regulation or taxation."
+      },
+      {
+        title: "Mergers can generate genuine efficiency gains",
+        content: "Not all mergers harm consumers. Horizontal mergers may deliver economies of scale that lower average costs, with savings passed on to consumers. Vertical mergers can reduce transaction costs and improve supply chain coordination. The net effect depends on whether efficiency gains outweigh the market power created — this is the core assessment for competition authorities."
+      },
+      {
+        title: "Corporate governance can mitigate the principal-agent problem",
+        content: "Share option schemes, performance-related pay and non-executive directors can align managers' incentives with shareholders' interests. Hostile takeover threats also discipline management, as poorly performing firms become takeover targets. However, these mechanisms are imperfect — excessive risk-taking to boost short-term share prices can result, as seen in the 2008 financial crisis."
+      },
+      {
+        title: "SME survival depends on the nature of the market",
+        content: "In markets with significant economies of scale (utilities, car manufacturing), SMEs cannot compete and large firms dominate. However, in fragmented markets with diverse consumer tastes (restaurants, consulting), SMEs thrive. The growth of digital platforms has also enabled SMEs to access global markets at low cost, changing the traditional relationship between firm size and competitiveness."
+      }
+    ]
+  },
+
+  // ───────────────────────────────────────────────────────────────
+  // 14. REVENUE, COSTS & PROFITS
+  // Theme: Cost structures → Economies of scale → Profit maximisation → Market entry
+  // ───────────────────────────────────────────────────────────────
+  'revenue-costs-profits': {
+    chains: [
+      {
+        title: "Diminishing returns lead to rising marginal costs",
+        steps: [
+          "In the short run, at least one factor of production is fixed — typically capital. As more variable factors (labour) are added, output initially rises at an increasing rate.",
+          "Beyond a certain point, adding more labour to fixed capital yields diminishing marginal returns — each additional worker adds less to total output than the previous one.",
+          "Diminishing marginal returns cause marginal costs to rise, because each extra unit of output requires proportionally more variable input to produce.",
+          "Rising marginal costs eventually pull up average variable costs and average total costs, giving the short-run cost curves their characteristic U-shape."
+        ],
+        result: "The law of diminishing returns explains why short-run marginal and average costs eventually rise, shaping the firm's supply decision."
+      },
+      {
+        title: "Economies of scale create barriers to entry",
+        steps: [
+          "As firms increase their scale of production in the long run, they can exploit internal economies of scale — technical, managerial, financial, marketing and risk-bearing.",
+          "Economies of scale reduce long-run average costs, allowing large firms to produce at lower unit costs than smaller rivals.",
+          "New entrants cannot immediately match these low costs, as they start at a small scale with higher average costs — this creates a natural barrier to entry.",
+          "Barriers to entry protect incumbent firms' market power and supernormal profits, reducing competitive pressure and potentially harming consumers."
+        ],
+        result: "Economies of scale give large incumbent firms a cost advantage that deters new entrants, sustaining market concentration and potentially reducing competition."
+      },
+      {
+        title: "Profit maximisation occurs at MC=MR",
+        steps: [
+          "A profit-maximising firm produces where marginal cost equals marginal revenue (MC=MR), as this is the output level where the addition to revenue from the last unit exactly equals the addition to cost.",
+          "If MR > MC, the firm can increase profit by producing more, as each extra unit adds more to revenue than to cost.",
+          "If MC > MR, the firm should reduce output, as each unit produced adds more to cost than to revenue, reducing total profit.",
+          "At MC=MR, total profit (TR - TC) is maximised, and this rule applies regardless of market structure — whether perfectly competitive, monopolistic or oligopolistic."
+        ],
+        result: "The MC=MR rule is the universal condition for profit maximisation, providing the foundation for analysing output decisions across all market structures."
+      },
+      {
+        title: "Supernormal profits attract entry in competitive markets",
+        steps: [
+          "When existing firms earn supernormal profits (AR > AC), this signals to potential entrants that above-normal returns are available in the market.",
+          "In markets with low barriers to entry, new firms enter attracted by the prospect of supernormal profits, increasing market supply.",
+          "The increase in supply shifts the market supply curve rightward, putting downward pressure on price and reducing profit margins for all firms.",
+          "Entry continues until supernormal profits are competed away and firms earn only normal profit (AR = AC), which is the long-run equilibrium in competitive markets."
+        ],
+        result: "Supernormal profits are temporary in competitive markets — entry erodes them until only normal profit remains, ensuring resources are efficiently allocated."
+      }
+    ],
+    evaluation: [
+      {
+        title: "Firms may not profit maximise in practice",
+        content: "The MC=MR rule assumes firms have perfect knowledge of their cost and revenue curves, which is unrealistic. In practice, firms often use cost-plus pricing or target a specific profit margin. Additionally, the principal-agent problem means managers may pursue sales revenue maximisation or growth rather than profit maximisation. However, competitive pressure tends to push firms towards profit-maximising behaviour in the long run."
+      },
+      {
+        title: "Diseconomies of scale can offset growth advantages",
+        content: "As firms grow beyond their optimal scale, they may experience diseconomies of scale — communication breakdowns, coordination problems and reduced worker motivation increase long-run average costs. This means continuous growth does not guarantee lower costs. The optimal firm size varies by industry, and some markets are better served by many small firms than a few large ones."
+      },
+      {
+        title: "Barriers to entry are not permanent",
+        content: "Economies of scale create significant barriers, but technological change can disrupt established cost advantages. Digital platforms, for example, have dramatically reduced minimum efficient scale in many industries, enabling start-ups to compete with incumbents. Creative destruction means that barriers which seem insurmountable can be bypassed by innovation rather than overcome by scale."
+      }
+    ]
+  },
+
+  // ───────────────────────────────────────────────────────────────
+  // 15. MARKET STRUCTURES & CONTESTABILITY
+  // Theme: Competition → Efficiency → Interdependence → Contestability
+  // ───────────────────────────────────────────────────────────────
+  'market-structures-contestability': {
+    chains: [
+      {
+        title: "Perfect competition drives allocative efficiency",
+        steps: [
+          "In perfect competition, many firms sell homogeneous products with perfect information and no barriers to entry or exit.",
+          "Individual firms are price takers — they face a perfectly elastic demand curve and cannot influence market price.",
+          "In long-run equilibrium, firms produce where P = MC (allocative efficiency) and at the minimum point of the AC curve (productive efficiency).",
+          "Consumers benefit from the lowest possible prices, and resources are allocated to their most valued uses, maximising total economic welfare."
+        ],
+        result: "Perfect competition achieves both allocative and productive efficiency in long-run equilibrium, maximising consumer welfare and resource allocation."
+      },
+      {
+        title: "Monopoly can enable dynamic efficiency through supernormal profits",
+        steps: [
+          "A monopolist faces the entire market demand curve and can set price above marginal cost, earning persistent supernormal profits due to high barriers to entry.",
+          "Supernormal profits provide the funds and incentive for research and development — Schumpeter argued monopoly is the engine of innovation.",
+          "Innovation leads to dynamic efficiency — new products, processes and technologies that shift cost curves downward and expand consumer choice over time.",
+          "If dynamic efficiency gains are large enough, they can outweigh the static welfare losses (deadweight loss) caused by monopoly pricing, resulting in net social benefit."
+        ],
+        result: "Monopoly creates static inefficiency but may promote dynamic efficiency through innovation funded by supernormal profits — the net effect is an empirical question."
+      },
+      {
+        title: "Game theory explains interdependence in oligopoly",
+        steps: [
+          "Oligopolistic markets are characterised by a few dominant firms with high market concentration, creating strategic interdependence — each firm's decisions affect its rivals.",
+          "Game theory models this interdependence: in a prisoner's dilemma, each firm has an incentive to undercut rivals' prices, but if all do so, profits fall for everyone.",
+          "This creates a tendency towards collusion (tacit or explicit) to maintain high prices and joint profit maximisation, acting as a cartel.",
+          "However, collusion is unstable because each firm has an incentive to cheat on the agreement to gain market share, and competition authorities actively prosecute cartels."
+        ],
+        result: "Oligopolistic behaviour is characterised by strategic interdependence, with tension between the incentive to collude for joint profits and the temptation to cheat for individual gain."
+      },
+      {
+        title: "Contestability disciplines monopoly pricing",
+        steps: [
+          "A contestable market has low barriers to entry and exit — including low sunk costs — so potential entrants can easily enter if incumbent firms earn supernormal profits.",
+          "The threat of hit-and-run entry forces incumbent firms to keep prices close to average cost, even if they hold a dominant market position.",
+          "In a perfectly contestable market, even a monopolist would earn only normal profit, as any supernormal profit would immediately attract entry.",
+          "Contestability theory suggests that market structure alone does not determine outcomes — the degree of potential competition matters as much as actual competition."
+        ],
+        result: "Contestability shows that the threat of entry can discipline incumbent firms, meaning market performance depends on barriers to entry, not just the number of existing firms."
+      }
+    ],
+    evaluation: [
+      {
+        title: "Perfect competition is a theoretical benchmark, not a realistic market",
+        content: "No real-world market perfectly satisfies all conditions of perfect competition — homogeneous products, perfect information and zero barriers to entry are unrealistic. However, the model remains valuable as a benchmark for evaluating the efficiency of real markets. Markets that approximate these conditions, such as agricultural commodity markets, tend to produce outcomes closer to the competitive ideal."
+      },
+      {
+        title: "Monopoly and innovation: the evidence is mixed",
+        content: "Schumpeter's argument that monopoly drives innovation is not universally supported. Many breakthrough innovations come from small, competitive firms and start-ups rather than established monopolists. Monopolists may become complacent and use profits for rent-seeking rather than R&D. The relationship between market structure and innovation is complex and depends on industry characteristics, regulatory environment and competitive dynamics."
+      },
+      {
+        title: "Contestability is limited by sunk costs in practice",
+        content: "In most industries, entry requires significant sunk costs — investment in brand building, specialised equipment or regulatory compliance that cannot be recovered on exit. These sunk costs undermine contestability by making hit-and-run entry unprofitable. However, digital markets and platform economies have reduced sunk costs in some sectors, increasing contestability and challenging traditional monopolies."
+      },
+      {
+        title: "Collusion is difficult to detect and prove",
+        content: "While competition authorities prohibit explicit collusion, tacit collusion through price leadership or parallel pricing is harder to identify and prosecute. Oligopolists may achieve collusive outcomes without direct communication, making enforcement challenging. The effectiveness of competition policy depends on the resources and legal powers of regulatory bodies, which vary significantly across countries."
+      }
+    ]
+  },
+
+  // ───────────────────────────────────────────────────────────────
+  // 16. LABOUR MARKETS
+  // Theme: Derived demand → Wage determination → Monopsony → Immobility
+  // ───────────────────────────────────────────────────────────────
+  'labour-markets': {
+    chains: [
+      {
+        title: "Derived demand links product and labour markets",
+        steps: [
+          "The demand for labour is derived from the demand for the goods and services that labour produces — firms hire workers to meet consumer demand.",
+          "When demand for a product increases, firms need more workers to increase output, shifting the demand curve for labour rightward and putting upward pressure on wages.",
+          "Conversely, a fall in product demand reduces the need for workers, shifting labour demand leftward and leading to lower wages or unemployment.",
+          "This link means that labour market outcomes — wages, employment levels and job creation — are fundamentally determined by conditions in product markets."
+        ],
+        result: "The derived nature of labour demand means that product market conditions directly determine employment and wage outcomes in labour markets."
+      },
+      {
+        title: "MRP theory determines profit-maximising employment",
+        steps: [
+          "A profit-maximising firm hires workers up to the point where the marginal revenue product of labour (MRP) equals the marginal cost of labour (MCL) — i.e., MRPL = MCL.",
+          "The MRP is calculated as marginal physical product (MPP) multiplied by marginal revenue (MR) — it represents the additional revenue generated by hiring one more worker.",
+          "If MRPL > MCL, hiring an extra worker adds more to revenue than to cost, so the firm should expand employment to increase profit.",
+          "The MRP curve is the firm's demand curve for labour — it slopes downward due to diminishing marginal returns, showing that each additional worker adds less to output and revenue."
+        ],
+        result: "MRP theory shows that profit-maximising firms hire where the value of a worker's output equals the cost of employing them, with the MRP curve acting as the labour demand curve."
+      },
+      {
+        title: "Monopsony power leads to exploitation of workers",
+        steps: [
+          "A monopsony is a labour market with a single or dominant employer, giving the firm wage-setting power — it faces the entire upward-sloping labour supply curve.",
+          "The monopsonist must raise wages to attract additional workers, but this higher wage must be paid to all existing workers, making the marginal cost of labour (MCL) exceed the wage rate.",
+          "The monopsonist maximises profit by hiring where MRPL = MCL, but pays a wage read off the supply curve — which is below both the MRP and the MCL at the profit-maximising employment level.",
+          "This results in workers being paid below their marginal revenue product — a form of exploitation — with lower employment and wages compared to a competitive labour market."
+        ],
+        result: "Monopsony power enables employers to pay wages below workers' MRP, resulting in both exploitation and a deadweight welfare loss from under-employment."
+      },
+      {
+        title: "Immobility causes persistent wage differentials",
+        steps: [
+          "Occupational immobility arises when workers lack the skills, qualifications or training needed to move between different jobs or industries.",
+          "Geographical immobility occurs when workers cannot easily relocate due to housing costs, family ties or regional differences in the cost of living.",
+          "These immobilities prevent labour from moving from low-wage to high-wage markets, meaning wage differentials persist rather than being competed away.",
+          "Persistent wage differentials lead to structural unemployment in declining sectors and labour shortages in growing ones, reducing overall economic efficiency."
+        ],
+        result: "Labour immobility prevents the equalisation of wages across markets, creating persistent differentials and structural unemployment that reduce economic welfare."
+      }
+    ],
+    evaluation: [
+      {
+        title: "MRP theory has significant limitations in practice",
+        content: "Measuring an individual worker's marginal revenue product is extremely difficult in complex production processes where output depends on teamwork. In the public sector and non-profit organisations, there is no market revenue to calculate MRP against. In practice, wages are often determined by collective bargaining, custom, minimum wage legislation and internal pay structures rather than individual productivity."
+      },
+      {
+        title: "Monopsony can be addressed by minimum wages",
+        content: "In a monopsony labour market, a minimum wage set between the monopsony wage and the competitive wage can simultaneously increase both wages and employment — a seemingly paradoxical result. This is because the minimum wage eliminates the need to raise all workers' pay when hiring, reducing the gap between MCL and the wage. This provides a strong theoretical justification for minimum wage legislation, though setting the optimal level requires accurate information about market conditions."
+      },
+      {
+        title: "Trade unions can counterbalance monopsony power",
+        content: "Trade unions can act as a monopoly seller of labour, counterbalancing employer monopsony power in a bilateral monopoly. The union can negotiate wages closer to the MRP, reducing exploitation. However, if union power exceeds employer power, wages may be pushed above the competitive equilibrium, causing unemployment. The net effect depends on the relative bargaining strength of each side and the elasticity of labour demand."
+      }
+    ]
+  },
+
+  // ───────────────────────────────────────────────────────────────
+  // 17. GOVERNMENT INTERVENTION & FIRMS
+  // Theme: Competition policy → Wage regulation → Ownership → Regulatory limits
+  // ───────────────────────────────────────────────────────────────
+  'government-intervention-firms': {
+    chains: [
+      {
+        title: "Competition policy prevents monopoly exploitation",
+        steps: [
+          "Competition authorities (such as the CMA in the UK) investigate mergers, abuse of dominant market position and anti-competitive practices like cartels and predatory pricing.",
+          "By blocking mergers that would substantially lessen competition, regulators prevent the creation of dominant firms with excessive market power.",
+          "Fines and remedies for anti-competitive behaviour deter firms from colluding on prices, dividing markets or engaging in exclusionary practices.",
+          "Effective competition policy protects consumer welfare by maintaining competitive markets that deliver lower prices, greater choice and stronger incentives for innovation."
+        ],
+        result: "Competition policy aims to preserve competitive market structures and prevent monopoly exploitation, protecting consumers from higher prices and reduced choice."
+      },
+      {
+        title: "Minimum wage in monopsony can increase employment",
+        steps: [
+          "In a competitive labour market, a minimum wage above the equilibrium creates unemployment by raising the cost of labour above workers' MRP for some firms.",
+          "However, in a monopsony labour market, the employer pays below the competitive wage — a minimum wage set at the competitive level can increase both wages and employment.",
+          "This is because the minimum wage makes the supply of labour perfectly elastic up to the minimum rate, eliminating the monopsonist's incentive to restrict hiring to keep wages low.",
+          "The result is higher wages and higher employment — the minimum wage corrects the market failure caused by monopsony power without creating unemployment."
+        ],
+        result: "The impact of minimum wages depends critically on market structure — harmful in competitive markets but potentially beneficial in monopsony markets."
+      },
+      {
+        title: "Privatisation vs nationalisation involves efficiency trade-offs",
+        steps: [
+          "Privatisation transfers ownership from the public to the private sector, introducing the profit motive and market discipline that incentivise cost reduction and efficiency.",
+          "Private firms face competitive pressure and the threat of takeover, which disciplines management and promotes productive efficiency.",
+          "However, privatised natural monopolies may exploit their market power to raise prices and reduce quality if not effectively regulated.",
+          "Nationalisation ensures public control over strategic industries and can prioritise social objectives (universal service, equity) over profit — but may suffer from X-inefficiency due to the absence of competitive pressure."
+        ],
+        result: "The choice between privatisation and nationalisation involves trading off productive efficiency gains against the risks of private monopoly exploitation and the loss of social objectives."
+      },
+      {
+        title: "Regulatory capture limits effectiveness of intervention",
+        steps: [
+          "Government regulators are established to oversee industries and protect consumer interests, but they rely on information provided by the firms they regulate.",
+          "Over time, regulators may develop close relationships with the industry, leading to regulatory capture — where the regulator acts in the industry's interest rather than the public interest.",
+          "Captured regulators may set lenient price caps, approve anti-competitive mergers or fail to enforce standards, undermining the purpose of regulation.",
+          "This weakens the effectiveness of government intervention and allows firms to maintain supernormal profits and inefficient practices at the expense of consumers."
+        ],
+        result: "Regulatory capture is a significant government failure that can turn regulation from a tool for consumer protection into a mechanism that protects incumbent firms from competition."
+      }
+    ],
+    evaluation: [
+      {
+        title: "Competition policy faces trade-offs with dynamic efficiency",
+        content: "Breaking up monopolies or blocking mergers may improve static efficiency but could reduce dynamic efficiency. Large firms with market power may have greater ability and incentive to invest in R&D, as argued by Schumpeter. Competition authorities must balance short-term consumer welfare against long-term innovation. This is particularly relevant in technology markets where network effects create natural monopolies that deliver significant consumer benefits."
+      },
+      {
+        title: "Minimum wage effects depend on the level set",
+        content: "The theoretical argument for minimum wages in monopsony markets assumes the rate is set at or near the competitive equilibrium. If set too high, even monopsony employers will reduce hiring. Empirical evidence, such as Card and Krueger's study, suggests modest minimum wage increases have little negative employment effect, but very large increases could cause significant job losses, particularly for low-skilled and young workers."
+      },
+      {
+        title: "Privatisation outcomes depend on regulatory framework",
+        content: "The success of privatisation depends heavily on whether effective regulation accompanies the transfer of ownership. The UK's privatisation of water and rail has been criticised for delivering high profits and executive pay while underinvesting in infrastructure. By contrast, telecommunications privatisation with strong regulation delivered significant innovation and price reductions. The key is not ownership per se but the competitive and regulatory environment in which firms operate."
+      },
+      {
+        title: "Government intervention may create unintended consequences",
+        content: "All forms of intervention risk unintended consequences — price controls create shortages, subsidies distort resource allocation, and regulation imposes compliance costs. These government failures must be weighed against the market failures that intervention seeks to correct. The case for intervention is strongest when market failures are severe, the intervention is well-designed and regulatory institutions are independent and well-resourced."
+      }
+    ]
+  },
+
+  // ───────────────────────────────────────────────────────────────
+  // UNIT 4 — THE GLOBAL ECONOMY
+  // ───────────────────────────────────────────────────────────────
+
+  // ───────────────────────────────────────────────────────────────
+  // 18. CAUSES & EFFECTS OF GLOBALISATION
+  // Theme: Trade liberalisation → TNCs → Inequality → Technology
+  // ───────────────────────────────────────────────────────────────
+  'causes-effects-globalisation': {
+    chains: [
+      {
+        title: "Trade liberalisation drives globalisation and growth",
+        steps: [
+          "Reductions in tariffs, quotas and other trade barriers — driven by WTO negotiations and bilateral trade agreements — have lowered the cost of international trade.",
+          "Lower trade costs enable firms to access larger global markets, exploiting economies of scale and specialising according to comparative advantage.",
+          "Increased trade boosts economic growth in participating countries through higher exports, greater foreign direct investment and technology transfer.",
+          "Consumers benefit from lower prices, greater product variety and access to goods that cannot be produced domestically, increasing consumer welfare."
+        ],
+        result: "Trade liberalisation has been the primary driver of globalisation, generating growth and consumer welfare gains through specialisation and market expansion."
+      },
+      {
+        title: "TNCs bring FDI but can exploit developing countries",
+        steps: [
+          "Transnational corporations (TNCs) invest in developing countries through foreign direct investment (FDI), establishing production facilities to exploit lower labour costs and access new markets.",
+          "FDI brings benefits including job creation, technology transfer, management expertise and tax revenue that can fund public services and infrastructure.",
+          "However, TNCs may exploit weak labour and environmental regulations in developing countries, paying low wages, creating poor working conditions and causing environmental degradation.",
+          "Profits are often repatriated to the home country rather than reinvested locally, and transfer pricing strategies can reduce tax payments to host governments."
+        ],
+        result: "TNCs and FDI create a complex mix of benefits and costs for developing countries — the net impact depends on host country governance and bargaining power."
+      },
+      {
+        title: "Globalisation increases inequality within countries",
+        steps: [
+          "Globalisation creates winners and losers — skilled workers and capital owners benefit from access to global markets, while low-skilled workers face competition from cheaper labour abroad.",
+          "Offshoring and automation, both accelerated by globalisation, reduce demand for low-skilled manufacturing jobs in developed countries, depressing wages at the bottom of the distribution.",
+          "At the same time, globalisation increases returns to capital, entrepreneurship and high skills, as these factors can exploit global markets — widening income inequality.",
+          "Rising within-country inequality can erode social cohesion, fuel populist political movements and undermine support for further trade liberalisation."
+        ],
+        result: "Globalisation tends to increase inequality within countries by rewarding mobile factors (capital, skills) while displacing immobile low-skilled workers."
+      },
+      {
+        title: "Technology reduces costs and accelerates integration",
+        steps: [
+          "Advances in information and communication technology (ICT) have dramatically reduced the costs of communication, coordination and information sharing across borders.",
+          "Containerisation and improvements in transport infrastructure have lowered shipping costs, making it economical to fragment production across multiple countries in global supply chains.",
+          "Digital platforms enable even small firms and individuals to participate in global trade, reducing the importance of physical proximity and traditional barriers to entry.",
+          "These technological changes have made globalisation self-reinforcing — lower costs encourage more integration, which drives further innovation in logistics and communication."
+        ],
+        result: "Technological progress in communication and transport has been a fundamental enabler of globalisation, reducing costs and accelerating economic integration."
+      }
+    ],
+    evaluation: [
+      {
+        title: "Globalisation's benefits are unevenly distributed",
+        content: "While globalisation has raised aggregate global welfare and lifted millions out of absolute poverty, its benefits have been concentrated among skilled workers, capital owners and consumers in developed countries. The costs — job displacement, wage stagnation and environmental degradation — fall disproportionately on vulnerable groups. Effective redistribution policies are needed to ensure the gains from globalisation are shared more equitably."
+      },
+      {
+        title: "Dependency on global supply chains creates vulnerability",
+        content: "The COVID-19 pandemic exposed the fragility of globally integrated supply chains. Just-in-time production and geographic concentration of key inputs (semiconductors in East Asia, PPE in China) left countries vulnerable to disruption. This has prompted a reassessment of globalisation, with some governments pursuing reshoring and 'friend-shoring' strategies, accepting higher costs for greater supply chain resilience."
+      },
+      {
+        title: "The race to the bottom may be overstated",
+        content: "Critics argue that globalisation forces countries to compete by lowering labour, environmental and tax standards — a 'race to the bottom'. However, evidence suggests that FDI often flows to countries with stronger institutions and higher standards, as these provide greater certainty and productivity. Countries that attract FDI through deregulation may find it unsustainable as social and environmental costs mount."
+      }
+    ]
+  },
+
+  // ───────────────────────────────────────────────────────────────
+  // 19. TRADE & THE GLOBAL ECONOMY
+  // Theme: Comparative advantage → Protectionism → Trading blocs → Terms of trade
+  // ───────────────────────────────────────────────────────────────
+  'trade-global-economy': {
+    chains: [
+      {
+        title: "Comparative advantage shows gains from trade",
+        steps: [
+          "The theory of comparative advantage states that countries should specialise in producing goods where they have the lowest opportunity cost, even if they lack an absolute advantage.",
+          "By specialising according to comparative advantage and trading, both countries can consume beyond their production possibility frontiers — total world output increases.",
+          "Specialisation leads to higher productivity, economies of scale and more efficient resource allocation, raising real GDP and living standards in trading nations.",
+          "The gains from trade include lower prices for consumers, greater product variety, access to resources unavailable domestically and competitive pressure that drives innovation."
+        ],
+        result: "Comparative advantage demonstrates that free trade is mutually beneficial, enabling countries to consume beyond their domestic production capabilities."
+      },
+      {
+        title: "Tariffs create deadweight loss and reduce welfare",
+        steps: [
+          "A tariff is a tax on imported goods that raises the domestic price above the world price, protecting domestic producers from foreign competition.",
+          "The higher price reduces consumer surplus as consumers pay more and consume less, while domestic producers gain surplus by producing more at the higher price.",
+          "The government gains tariff revenue on remaining imports, but the net welfare effect is negative — two deadweight loss triangles represent the production inefficiency and consumption loss.",
+          "Tariffs also invite retaliation from trading partners, potentially triggering trade wars that reduce global trade volumes and harm all participating economies."
+        ],
+        result: "Tariffs create net welfare losses by raising prices above efficient levels, and risk escalating into destructive trade wars through retaliation."
+      },
+      {
+        title: "Trading blocs create trade creation and diversion",
+        steps: [
+          "Trading blocs such as customs unions and free trade areas eliminate tariffs between member states, while maintaining common or individual external tariffs against non-members.",
+          "Trade creation occurs when bloc membership shifts production from high-cost domestic producers to lower-cost member state producers, improving allocative efficiency.",
+          "Trade diversion occurs when the common external tariff shifts imports from the lowest-cost world producer (outside the bloc) to a higher-cost member state producer.",
+          "The net welfare effect depends on the balance between trade creation and trade diversion — blocs are beneficial if trade creation dominates, harmful if diversion dominates."
+        ],
+        result: "Trading blocs generate both trade creation (efficiency-improving) and trade diversion (efficiency-reducing), with the net effect depending on relative magnitudes."
+      },
+      {
+        title: "Terms of trade affect real living standards",
+        steps: [
+          "The terms of trade measure the ratio of export prices to import prices (index of export prices / index of import prices × 100) — an improvement means export prices rise relative to import prices.",
+          "An improvement in the terms of trade means a country can buy more imports for each unit of exports, increasing the purchasing power of its output and raising real living standards.",
+          "However, a terms of trade improvement caused by rising export prices may reduce export competitiveness, leading to lower export volumes and potential current account deterioration.",
+          "Developing countries dependent on primary commodities face volatile and deteriorating terms of trade as commodity prices fluctuate and manufactured goods prices rise over time (Prebisch-Singer hypothesis)."
+        ],
+        result: "Changes in the terms of trade directly affect real living standards, but improvements must be balanced against potential competitiveness effects and commodity dependency risks."
+      }
+    ],
+    evaluation: [
+      {
+        title: "Comparative advantage has limitations as a guide to policy",
+        content: "The theory assumes constant opportunity costs, perfect factor mobility within countries, zero transport costs and no externalities. In reality, dynamic comparative advantages can be created through industrial policy and investment in human capital. Countries that follow static comparative advantage may be locked into low-value primary production, while those that develop new industries through strategic intervention may achieve higher long-run growth."
+      },
+      {
+        title: "Infant industry protection may be justified in some cases",
+        content: "Developing countries may need temporary protection for nascent industries that cannot yet compete with established foreign rivals. Tariffs give domestic firms time to develop economies of scale, learning-by-doing and technological capabilities. However, infant industry protection is often captured by politically connected firms, and 'temporary' protection frequently becomes permanent, reducing long-run efficiency and consumer welfare."
+      },
+      {
+        title: "Trading blocs may undermine global free trade",
+        content: "While trading blocs promote free trade among members, they maintain barriers against non-members, creating a discriminatory trading system. The proliferation of overlapping bilateral and regional agreements creates a 'spaghetti bowl' of complex rules of origin and regulatory requirements. The WTO's multilateral approach to trade liberalisation may be undermined if countries pursue preferential arrangements rather than global negotiations."
+      }
+    ]
+  },
+
+  // ───────────────────────────────────────────────────────────────
+  // 20. BALANCE OF PAYMENTS & EXCHANGE RATES
+  // Theme: Current account → Depreciation → J-curve → Competitiveness
+  // ───────────────────────────────────────────────────────────────
+  'balance-payments-exchange-rates': {
+    chains: [
+      {
+        title: "Current account deficits reflect structural weaknesses",
+        steps: [
+          "A current account deficit occurs when the value of imports of goods, services, primary income and secondary income exceeds exports — meaning the country spends more abroad than it earns.",
+          "Persistent deficits may reflect structural problems such as low productivity, weak international competitiveness, over-reliance on imported energy or consumer goods, and deindustrialisation.",
+          "A current account deficit must be financed by a surplus on the financial account — through foreign borrowing, inward FDI or the sale of domestic assets to foreign investors.",
+          "Sustained reliance on financial inflows makes the economy vulnerable to sudden capital flight, currency crises and rising external debt, which can trigger severe economic disruption."
+        ],
+        result: "Persistent current account deficits can signal structural economic weaknesses and create vulnerability to financial instability if financed by unsustainable capital inflows."
+      },
+      {
+        title: "Exchange rate depreciation and the J-curve effect",
+        steps: [
+          "A depreciation of the exchange rate makes exports cheaper in foreign currency and imports more expensive in domestic currency, which should improve the trade balance over time.",
+          "In the short run, however, the trade balance initially worsens — import volumes are slow to adjust due to existing contracts, while the higher cost of imports raises the import bill immediately.",
+          "Over time, the volume effects dominate as consumers switch from expensive imports to domestic substitutes, and foreign buyers increase purchases of now-cheaper exports.",
+          "This pattern — initial deterioration followed by improvement — traces out a J-curve, with the trade balance eventually improving if the Marshall-Lerner condition is satisfied."
+        ],
+        result: "Exchange rate depreciation follows a J-curve pattern, with the trade balance worsening before improving as volumes adjust to the new relative prices."
+      },
+      {
+        title: "Marshall-Lerner condition for devaluation to improve BoP",
+        steps: [
+          "The Marshall-Lerner condition states that a depreciation will improve the trade balance only if the sum of the price elasticities of demand for exports and imports exceeds one (PEDx + PEDm > 1).",
+          "If demand for exports and imports is relatively elastic, the volume changes following depreciation will be large enough to outweigh the adverse price effect of more expensive imports.",
+          "If demand is inelastic (PEDx + PEDm < 1), depreciation worsens the trade balance — export revenue rises only slightly while the import bill increases significantly.",
+          "In the long run, demand tends to be more price elastic as consumers and firms have time to find alternatives, making depreciation more effective at improving the trade balance over time."
+        ],
+        result: "Depreciation only improves the trade balance if the Marshall-Lerner condition is met — the effectiveness depends on the price elasticity of demand for imports and exports."
+      },
+      {
+        title: "International competitiveness drives export performance",
+        steps: [
+          "International competitiveness depends on both price factors (unit labour costs, exchange rate, relative inflation) and non-price factors (quality, design, reliability, after-sales service).",
+          "Countries with lower unit labour costs relative to trading partners can offer goods at competitive prices, increasing export market share and improving the current account.",
+          "Non-price competitiveness is increasingly important in global markets — countries like Germany and Japan maintain strong export performance despite relatively high labour costs through quality and innovation.",
+          "Improving competitiveness requires long-term supply-side reforms — investment in education, infrastructure, R&D and institutions that support productivity growth."
+        ],
+        result: "Sustained export performance depends on both price and non-price competitiveness, which requires long-term investment in productivity-enhancing factors."
+      }
+    ],
+    evaluation: [
+      {
+        title: "Current account deficits are not always problematic",
+        content: "A current account deficit financed by productive FDI can reflect economic strength rather than weakness — it shows the country is an attractive destination for investment. Fast-growing developing economies often run deficits as they import capital goods to build productive capacity. The sustainability of a deficit depends on how the foreign borrowing is used — if invested productively, future export earnings can service the debt."
+      },
+      {
+        title: "Exchange rate policy involves significant trade-offs",
+        content: "A depreciation improves export competitiveness but raises import costs, contributing to cost-push inflation. For countries dependent on imported raw materials, energy or food, depreciation can significantly reduce real living standards. Fixed exchange rate regimes provide stability for trade and investment but remove the exchange rate as an adjustment mechanism, requiring alternative methods to correct imbalances."
+      },
+      {
+        title: "Competitiveness is multidimensional and hard to measure",
+        content: "Simple measures like the real effective exchange rate capture price competitiveness but miss non-price factors that often determine trade success. Global value chains complicate the picture further — a country's exports may contain a high proportion of imported components, so depreciation benefits are offset by higher input costs. Improving competitiveness requires a comprehensive strategy addressing productivity, skills, infrastructure and institutions simultaneously."
+      }
+    ]
+  },
+
+  // ───────────────────────────────────────────────────────────────
+  // 21. POVERTY & INEQUALITY
+  // Theme: Growth and poverty → Inequality effects → Measurement → Capitalism
+  // ───────────────────────────────────────────────────────────────
+  'poverty-inequality': {
+    chains: [
+      {
+        title: "Economic growth can reduce absolute poverty",
+        steps: [
+          "Economic growth increases a country's total output and real national income, expanding the resources available to raise living standards.",
+          "Growth creates employment opportunities and raises wages, enabling households to earn income above the poverty line and afford basic necessities.",
+          "Higher government tax revenue from growth can fund public services — healthcare, education and social protection — that directly reduce poverty and improve capabilities.",
+          "However, the extent to which growth reduces poverty depends on its distribution — growth concentrated in capital-intensive sectors or urban areas may bypass the rural poor entirely."
+        ],
+        result: "Economic growth is necessary but not sufficient for poverty reduction — its impact depends critically on whether growth is inclusive and broadly shared."
+      },
+      {
+        title: "Inequality affects incentives and social cohesion",
+        steps: [
+          "Some inequality provides incentives for entrepreneurship, risk-taking and hard work — differential rewards motivate productive effort and innovation.",
+          "However, excessive inequality can reduce social mobility as the wealthy use their resources to secure advantages for their children, while the poor lack access to education and opportunities.",
+          "High inequality undermines social cohesion and trust, leading to higher crime rates, worse health outcomes and lower life expectancy — as documented by Wilkinson and Pickett.",
+          "Extreme inequality can also reduce aggregate demand if the wealthy have a lower marginal propensity to consume, potentially slowing economic growth and increasing macroeconomic instability."
+        ],
+        result: "Moderate inequality may support growth through incentive effects, but excessive inequality undermines social cohesion, mobility and aggregate demand."
+      },
+      {
+        title: "Gini coefficient measures inequality but has limitations",
+        steps: [
+          "The Gini coefficient measures income or wealth inequality on a scale from 0 (perfect equality) to 1 (perfect inequality), derived from the Lorenz curve's deviation from the line of equality.",
+          "It provides a single, comparable statistic that enables cross-country comparisons and tracking changes in inequality over time within a country.",
+          "However, the Gini coefficient can give the same value for very different distributions — a country with a large middle class and small extremes can have the same Gini as one with extremes and no middle.",
+          "The Gini also does not capture the causes of inequality, distinguish between income and wealth inequality, or reflect absolute living standards — a country could become more equal through everyone becoming poorer."
+        ],
+        result: "The Gini coefficient is a useful summary measure of inequality but must be supplemented with other indicators to provide a complete picture of distributional outcomes."
+      },
+      {
+        title: "Free market capitalism generates both growth and inequality",
+        steps: [
+          "Free market capitalism allocates resources through the price mechanism, rewarding productive activity with profits and wages — this drives innovation, efficiency and economic growth.",
+          "However, the rewards of capitalism are distributed according to factor ownership — those with capital, land and high skills earn disproportionately more, generating income and wealth inequality.",
+          "Market outcomes reflect initial endowments rather than need or merit — inherited wealth, access to education and social connections create unequal starting points that compound over time.",
+          "Without government redistribution through progressive taxation and transfer payments, free market outcomes tend towards increasing concentration of wealth and widening inequality."
+        ],
+        result: "Free market capitalism is a powerful engine of growth but inherently generates inequality that requires government intervention to ensure socially acceptable distributional outcomes."
+      }
+    ],
+    evaluation: [
+      {
+        title: "The relationship between growth and poverty is conditional",
+        content: "The 'trickle-down' theory — that growth automatically benefits the poor — has been challenged by evidence showing that growth can coexist with rising poverty if gains are captured by elites. Pro-poor growth strategies that invest in rural development, small-scale agriculture, education and health tend to be more effective at reducing poverty. The quality and inclusiveness of growth matters more than its rate."
+      },
+      {
+        title: "Redistribution involves efficiency-equity trade-offs",
+        content: "Progressive taxation and welfare transfers reduce inequality but may weaken incentive effects — high marginal tax rates can discourage work effort, savings and investment. This trade-off is central to the debate about optimal tax policy. However, well-designed redistribution through investment in education, healthcare and infrastructure can enhance both equity and efficiency by improving human capital and productive potential."
+      },
+      {
+        title: "Poverty measurement itself is contested",
+        content: "Absolute poverty measures ($2.15/day PPP) capture extreme deprivation but miss the multidimensional nature of poverty — including access to education, health, clean water and political freedom. Relative poverty measures (below 60% of median income) better capture social exclusion in developed countries but shift with the income distribution. The Multidimensional Poverty Index (MPI) provides a more comprehensive but complex measure of deprivation."
+      },
+      {
+        title: "Globalisation's impact on poverty and inequality is nuanced",
+        content: "Globalisation has contributed to unprecedented reductions in absolute poverty globally, particularly in China and East Asia. However, it has also widened inequality within many countries. The net effect depends on a country's institutions, labour market flexibility, education system and social safety net. Countries that invest in skills and social protection tend to share the gains from globalisation more equitably."
+      }
+    ]
+  },
+
+  // ───────────────────────────────────────────────────────────────
+  // 22. ROLE OF THE STATE IN THE MACROECONOMY
+  // Theme: Taxation → Fiscal balance → Redistribution → TNC regulation
+  // ───────────────────────────────────────────────────────────────
+  'role-state-macroeconomy': {
+    chains: [
+      {
+        title: "Laffer curve suggests optimal tax rate exists",
+        steps: [
+          "The Laffer curve illustrates the theoretical relationship between tax rates and tax revenue — starting at zero revenue at 0% and 100% tax rates, with a revenue-maximising rate somewhere in between.",
+          "At low tax rates, increasing rates raises revenue because the tax base remains largely unaffected — people continue working and investing with relatively minor behavioural changes.",
+          "Beyond the revenue-maximising rate, further increases reduce revenue as high rates discourage work, encourage tax avoidance and evasion, and drive economic activity underground or abroad.",
+          "The implication is that cutting very high tax rates could simultaneously increase revenue and improve economic efficiency — though the revenue-maximising rate is unknown and context-dependent."
+        ],
+        result: "The Laffer curve demonstrates that there is a theoretically optimal tax rate that maximises revenue, and exceeding it is counterproductive for both growth and government finances."
+      },
+      {
+        title: "Fiscal deficits can crowd out private investment",
+        steps: [
+          "When the government runs a budget deficit (G > T), it must borrow by selling bonds, increasing demand for loanable funds in financial markets.",
+          "Higher demand for loanable funds pushes up interest rates, increasing the cost of borrowing for private firms and households.",
+          "Higher interest rates discourage private investment and consumption, partially or fully offsetting the expansionary effect of the fiscal stimulus.",
+          "This crowding out effect means that fiscal expansion may be less effective than the multiplier analysis suggests, particularly when the economy is near full capacity."
+        ],
+        result: "Crowding out reduces the effectiveness of fiscal expansion by raising interest rates and displacing private sector spending, weakening the multiplier effect."
+      },
+      {
+        title: "Progressive taxation reduces inequality but may reduce incentives",
+        steps: [
+          "Progressive taxation applies higher marginal tax rates to higher income bands, meaning the proportion of income paid in tax rises with income.",
+          "This redistributes income from higher earners to fund public services and transfer payments that benefit lower-income households, directly reducing post-tax income inequality.",
+          "However, high marginal tax rates may reduce the incentive to work additional hours, take risks through entrepreneurship or invest, potentially reducing aggregate supply and long-run growth.",
+          "The net impact depends on the responsiveness of labour supply and investment to tax rates — if behaviour is relatively unresponsive, progressive taxation achieves redistribution with limited efficiency costs."
+        ],
+        result: "Progressive taxation is an effective tool for reducing inequality, but its impact on work incentives and growth depends on the elasticity of response to tax rate changes."
+      },
+      {
+        title: "Controlling TNCs is difficult due to international mobility",
+        steps: [
+          "Transnational corporations can shift profits, production and headquarters across borders to minimise their tax burden, exploiting differences in national tax systems.",
+          "Transfer pricing — setting artificial prices on intra-firm transactions — allows TNCs to shift profits from high-tax to low-tax jurisdictions, reducing their effective tax rate.",
+          "Tax competition between countries creates a 'race to the bottom' as governments lower corporate tax rates to attract TNC investment, eroding the tax base.",
+          "Individual governments have limited power to regulate TNCs operating across multiple jurisdictions, making international coordination through bodies like the OECD essential but difficult to achieve."
+        ],
+        result: "The international mobility of TNCs undermines national governments' ability to tax and regulate them, requiring coordinated international action that is politically challenging."
+      }
+    ],
+    evaluation: [
+      {
+        title: "The Laffer curve is theoretically appealing but practically limited",
+        content: "The revenue-maximising tax rate is unknown and varies by country, tax type and time period. Claims that a country is on the 'wrong side' of the Laffer curve are often politically motivated rather than evidence-based. Most empirical estimates suggest developed countries' income tax rates are below the revenue-maximising point, meaning increases would still raise revenue. The Laffer curve is a useful conceptual tool but should not be used to justify specific tax cuts without strong empirical support."
+      },
+      {
+        title: "Crowding out depends on economic conditions",
+        content: "Crowding out is most significant when the economy is at or near full employment and financial markets are functioning normally. In a recession with spare capacity and low interest rates, fiscal expansion is less likely to crowd out private investment — this is the Keynesian case for counter-cyclical fiscal policy. Quantitative easing by central banks can also mitigate crowding out by keeping interest rates low during periods of fiscal expansion."
+      },
+      {
+        title: "International tax cooperation has made progress but faces limits",
+        content: "The OECD/G20 Base Erosion and Profit Shifting (BEPS) framework and the global minimum corporate tax rate (Pillar Two) represent significant steps towards coordinated action against TNC tax avoidance. However, implementation varies across countries, and tax havens continue to offer preferential regimes. Small countries that rely on low tax rates to attract investment resist harmonisation, and enforcement requires continuous adaptation to new avoidance strategies."
+      }
+    ]
+  },
+
+  // ───────────────────────────────────────────────────────────────
+  // 23. GROWTH & DEVELOPMENT
+  // Theme: Savings-investment → Structural change → Commodity dependency → Aid
+  // ───────────────────────────────────────────────────────────────
+  'growth-development': {
+    chains: [
+      {
+        title: "Harrod-Domar model links savings to growth",
+        steps: [
+          "The Harrod-Domar model states that the rate of economic growth depends on the savings ratio (s) divided by the capital-output ratio (k): g = s/k.",
+          "Higher domestic savings fund greater investment in physical capital — machinery, infrastructure and technology — which increases the productive capacity of the economy.",
+          "If a developing country has a low savings ratio, it faces a 'savings gap' that constrains investment and growth, trapping the economy in a cycle of low income and low savings.",
+          "The model suggests that foreign aid or FDI can fill the savings gap, providing the capital needed to break out of the cycle and achieve sustained economic growth."
+        ],
+        result: "The Harrod-Domar model identifies savings and capital accumulation as the key drivers of growth, implying that developing countries need external capital to overcome domestic savings constraints."
+      },
+      {
+        title: "Lewis model explains structural transformation",
+        steps: [
+          "The Lewis dual-sector model divides the economy into a traditional agricultural sector with surplus labour and a modern industrial sector with higher productivity.",
+          "Wages in the modern sector are set above subsistence, attracting surplus labour from the traditional sector — this transfer is possible without reducing agricultural output due to the labour surplus.",
+          "Industrial sector profits are reinvested, expanding capacity and drawing more labour from agriculture — creating a virtuous cycle of capital accumulation and structural transformation.",
+          "Development occurs as the share of the economy in the modern sector grows, raising average productivity, real wages and national income until surplus labour is fully absorbed."
+        ],
+        result: "The Lewis model explains development as a process of structural transformation driven by the transfer of surplus labour from low-productivity agriculture to high-productivity industry."
+      },
+      {
+        title: "Primary product dependency constrains development",
+        steps: [
+          "Many developing countries rely on exports of primary commodities (agricultural products, minerals, fuels) which face volatile and often declining world prices.",
+          "Price volatility makes export revenue unpredictable, complicating government budgeting, discouraging long-term investment and creating boom-bust economic cycles.",
+          "The Prebisch-Singer hypothesis argues that the terms of trade for primary products decline relative to manufactured goods over time, meaning developing countries must export more to afford the same imports.",
+          "Resource dependency can also cause 'Dutch disease' — commodity export revenues strengthen the exchange rate, making other exports uncompetitive and hindering industrial diversification."
+        ],
+        result: "Primary product dependency traps developing countries in a cycle of volatile revenue, deteriorating terms of trade and failed diversification, constraining sustainable development."
+      },
+      {
+        title: "International institutions can help but with conditions",
+        steps: [
+          "International institutions such as the World Bank, IMF and regional development banks provide loans, grants and technical assistance to developing countries to fund infrastructure, education and institutional reform.",
+          "IMF structural adjustment programmes (SAPs) require recipient countries to implement market-oriented reforms — trade liberalisation, privatisation, fiscal austerity and deregulation — as conditions for financial support.",
+          "These conditions aim to improve economic efficiency and governance, but critics argue they impose a one-size-fits-all approach that ignores local circumstances and can worsen poverty in the short run.",
+          "Aid effectiveness depends on good governance, institutional quality and policy ownership in recipient countries — without these, aid may be misallocated, fuel corruption or create dependency."
+        ],
+        result: "International institutions provide essential financial and technical support, but the conditions attached and the quality of governance in recipient countries determine whether aid translates into sustainable development."
+      }
+    ],
+    evaluation: [
+      {
+        title: "The Harrod-Domar model oversimplifies the growth process",
+        content: "The model assumes a fixed capital-output ratio and that savings automatically translate into productive investment, ignoring the role of institutions, governance, human capital and technology. In practice, many developing countries with high savings rates have not achieved sustained growth due to corruption, poor infrastructure and weak property rights. Modern growth theory emphasises total factor productivity and institutional quality rather than capital accumulation alone."
+      },
+      {
+        title: "Structural transformation does not guarantee development",
+        content: "The Lewis model assumes that the modern sector will absorb surplus labour and that industrial profits will be reinvested productively. In reality, urbanisation without industrialisation has left many developing countries with large informal sectors offering low wages and poor conditions. Premature deindustrialisation — where countries move to services before fully industrialising — further complicates the Lewis model's predictions."
+      },
+      {
+        title: "Aid effectiveness is highly contested",
+        content: "Supporters argue that aid fills financing gaps, builds infrastructure and provides essential services. Critics like Dambisa Moyo argue that aid creates dependency, undermines governance through corruption and reduces incentives for domestic resource mobilisation. The evidence suggests that aid is most effective when targeted at specific sectors (health, education), accompanied by good governance, and delivered through recipient-owned strategies rather than donor-imposed conditions."
+      },
+      {
+        title: "Diversification is essential but difficult to achieve",
+        content: "Escaping primary product dependency requires deliberate industrial policy — investment in education, infrastructure, technology and institutions that support diversification into manufacturing and services. However, this requires resources that commodity-dependent countries often lack, creating a chicken-and-egg problem. Successful diversifiers like South Korea and Botswana combined strong governance, strategic investment and selective openness to trade, but their experiences may not be easily replicable."
+      }
+    ]
+  },
+
 };

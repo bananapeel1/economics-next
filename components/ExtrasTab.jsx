@@ -1,13 +1,17 @@
 "use client";
+import PaywallOverlay from './PaywallOverlay';
+import { Star } from './Icons';
 
-export default function ExtrasTab({ data }) {
+export default function ExtrasTab({ data, previewMode = false }) {
   const chains = data?.chains || [];
   const evaluation = data?.evaluation || [];
+
+  const PREVIEW_LIMIT = 1; // Show 1 chain and 1 evaluation point in preview
 
   if (chains.length === 0 && evaluation.length === 0) {
     return (
       <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--text-muted)' }}>
-        <div style={{ fontSize: 48, marginBottom: 16 }}>⭐</div>
+        <div style={{ fontSize: 48, marginBottom: 16 }}><Star size={48} /></div>
         <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 8, color: 'var(--text-primary)' }}>
           No extras available yet
         </div>
@@ -18,9 +22,18 @@ export default function ExtrasTab({ data }) {
     );
   }
 
+  const displayChains = previewMode ? chains.slice(0, PREVIEW_LIMIT) : chains;
+  const displayEvaluation = previewMode ? evaluation.slice(0, PREVIEW_LIMIT) : evaluation;
+
   return (
     <div className="extras-tab">
-      {chains.length > 0 && (
+      {previewMode && (
+        <div className="flashcard-preview-badge">
+          Preview — {PREVIEW_LIMIT} of {chains.length + evaluation.length} extras
+        </div>
+      )}
+
+      {displayChains.length > 0 && (
         <div className="extras-section">
           <div className="extras-section-header">
             <span className="extras-section-icon chain-icon">🔗</span>
@@ -33,7 +46,7 @@ export default function ExtrasTab({ data }) {
           </div>
 
           <div className="extras-cards">
-            {chains.map((chain, i) => (
+            {displayChains.map((chain, i) => (
               <div key={i} className="extras-card chain-card">
                 <div className="extras-card-header chain-header">
                   <span className="extras-card-number">{i + 1}</span>
@@ -70,7 +83,7 @@ export default function ExtrasTab({ data }) {
         </div>
       )}
 
-      {evaluation.length > 0 && (
+      {displayEvaluation.length > 0 && (
         <div className="extras-section">
           <div className="extras-section-header">
             <span className="extras-section-icon eval-icon">⚖️</span>
@@ -83,7 +96,7 @@ export default function ExtrasTab({ data }) {
           </div>
 
           <div className="extras-cards">
-            {evaluation.map((point, i) => (
+            {displayEvaluation.map((point, i) => (
               <div key={i} className="extras-card eval-card">
                 <div className="extras-card-header eval-header">
                   <span className="extras-card-number">{i + 1}</span>
@@ -95,6 +108,16 @@ export default function ExtrasTab({ data }) {
               </div>
             ))}
           </div>
+        </div>
+      )}
+
+      {previewMode && (
+        <div className="preview-fade-cta">
+          <div className="preview-fade-icon"><Star size={40} /></div>
+          <p className="preview-fade-count">
+            {chains.length + evaluation.length - (displayChains.length + displayEvaluation.length)} more extras available
+          </p>
+          <PaywallOverlay feature="Extras" inline />
         </div>
       )}
     </div>

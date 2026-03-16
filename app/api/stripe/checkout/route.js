@@ -92,7 +92,7 @@ export async function POST() {
     // Only offer trial to new users who haven't had a subscription before
     if (!hadPreviousSubscription) {
       sessionParams.payment_method_collection = 'if_required';
-      sessionParams.subscription_data = { trial_period_days: 5 };
+      sessionParams.subscription_data = { trial_period_days: 3 };
     }
 
     const session = await stripe.checkout.sessions.create(sessionParams);

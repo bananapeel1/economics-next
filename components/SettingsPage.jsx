@@ -165,7 +165,7 @@ export default function SettingsPage() {
               onClick={handleUpgrade}
               disabled={upgradeLoading}
             >
-              {upgradeLoading ? 'Loading...' : 'Start 5-Day Free Trial'}
+              {upgradeLoading ? 'Loading...' : 'Start 3-Day Free Trial — €0.99/mo'}
             </button>
           </>
         )}

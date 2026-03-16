@@ -3,8 +3,13 @@ import PastPapersPage from '@/components/PastPapersPage';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Past Papers — Revvy Learn',
-  description: 'Download Edexcel past papers and mark schemes for exam practice.',
+  title: 'Edexcel IAL Past Papers — Free Download | Revvy Learn',
+  description: 'Free Edexcel IAL Economics and Business past papers. WEC11, WEC12, WEC13, WEC14, WBS11–WBS14 organised by year with mark schemes.',
+  openGraph: {
+    title: 'Edexcel IAL Past Papers — Free Download | Revvy Learn',
+    description: 'Free Edexcel IAL Economics and Business past papers. WEC11–WEC14, WBS11–WBS14 organised by year with mark schemes.',
+    url: 'https://revvylearn.com/past-papers',
+  },
 };
 
 export default async function PastPapersRoute() {
@@ -20,7 +25,7 @@ export default async function PastPapersRoute() {
     <div className="resource-page">
       <div className="resource-page-header">
         <Link href="/" className="resource-back-link">&larr; Back to App</Link>
-        <h1 className="resource-page-title">Past Papers</h1>
+        <h1 className="resource-page-title">Edexcel IAL Past Papers & Mark Schemes</h1>
         <p className="resource-page-subtitle">
           Download previous exam papers and mark schemes for Edexcel International A-Level.
         </p>

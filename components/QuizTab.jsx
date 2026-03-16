@@ -1,13 +1,19 @@
 "use client";
 import { useState, useEffect } from 'react';
 import { useAuth } from './AuthProvider';
+import PaywallOverlay from './PaywallOverlay';
+import { Quiz as QuizIcon, CardClub } from './Icons';
+import Link from 'next/link';
 
-export default function QuizTab({ questions, sectionId, onAskTutor }) {
+export default function QuizTab({ questions, sectionId, onAskTutor, previewMode = false }) {
   const { user } = useAuth();
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [bestScore, setBestScore] = useState(null);
   const [saving, setSaving] = useState(false);
+
+  const PREVIEW_LIMIT = 2;
+  const displayQuestions = previewMode ? (questions || []).slice(0, PREVIEW_LIMIT) : (questions || []);
 
   // Reset state and load best score on section change
   useEffect(() => {
@@ -15,7 +21,7 @@ export default function QuizTab({ questions, sectionId, onAskTutor }) {
     setSubmitted(false);
     setBestScore(null);
 
-    if (user && sectionId) {
+    if (user && sectionId && !previewMode) {
       fetch(`/api/progress/quiz?sectionId=${sectionId}`)
         .then(res => res.ok ? res.json() : null)
         .then(data => {
@@ -25,7 +31,7 @@ export default function QuizTab({ questions, sectionId, onAskTutor }) {
         })
         .catch(() => {});
     }
-  }, [sectionId, user]);
+  }, [sectionId, user, previewMode]);
 
   if (!questions || !questions.length) {
     return <div style={{ color: 'var(--text-muted)', textAlign: 'center', padding: 40 }}>No quiz available.</div>;
@@ -39,10 +45,10 @@ export default function QuizTab({ questions, sectionId, onAskTutor }) {
   function handleSubmit() {
     setSubmitted(true);
 
-    const finalScore = questions.reduce((acc, q, i) => acc + (answers[i] === q.correctIndex ? 1 : 0), 0);
+    const finalScore = displayQuestions.reduce((acc, q, i) => acc + (answers[i] === q.correctIndex ? 1 : 0), 0);
 
-    // Save to database if logged in
-    if (user) {
+    // Save to database if logged in (skip in preview mode)
+    if (user && !previewMode) {
       setSaving(true);
       fetch('/api/progress/quiz', {
         method: 'POST',
@@ -50,14 +56,13 @@ export default function QuizTab({ questions, sectionId, onAskTutor }) {
         body: JSON.stringify({
           sectionId,
           score: finalScore,
-          total: questions.length,
+          total: displayQuestions.length,
           answers,
         }),
       })
         .then(() => {
-          // Update best score if this attempt is better
           if (!bestScore || finalScore > bestScore.score) {
-            setBestScore({ score: finalScore, total: questions.length });
+            setBestScore({ score: finalScore, total: displayQuestions.length });
           }
         })
         .catch(() => {})
@@ -71,19 +76,21 @@ export default function QuizTab({ questions, sectionId, onAskTutor }) {
   }
 
   const score = submitted
-    ? questions.reduce((acc, q, i) => acc + (answers[i] === q.correctIndex ? 1 : 0), 0)
+    ? displayQuestions.reduce((acc, q, i) => acc + (answers[i] === q.correctIndex ? 1 : 0), 0)
     : 0;
 
-  const allAnswered = Object.keys(answers).length === questions.length;
+  const allAnswered = Object.keys(answers).length === displayQuestions.length;
   const scoreColor = submitted
-    ? score >= questions.length * 0.8 ? 'var(--accent-green-light)'
-    : score >= questions.length * 0.5 ? 'var(--accent-amber)'
+    ? score >= displayQuestions.length * 0.8 ? 'var(--accent-green-light)'
+    : score >= displayQuestions.length * 0.5 ? 'var(--accent-amber)'
     : 'var(--accent-red)'
     : 'var(--accent-green)';
 
+  const totalQuizQuestions = questions?.length || 0;
+
   return (
     <div>
-      {bestScore && !submitted && (
+      {bestScore && !submitted && !previewMode && (
         <div className="quiz-best-score">
           Your best: {bestScore.score}/{bestScore.total}
         </div>
@@ -92,20 +99,22 @@ export default function QuizTab({ questions, sectionId, onAskTutor }) {
       {submitted && (
         <div className="quiz-score">
           <div className="quiz-score-number" style={{ color: scoreColor }}>
-            {score}/{questions.length}
+            {score}/{displayQuestions.length}
           </div>
           <div className="quiz-score-label">
-            {score === questions.length ? 'Perfect score!' :
-             score >= questions.length * 0.8 ? 'Great work!' :
-             score >= questions.length * 0.5 ? 'Good effort — review the explanations below.' :
-             'Keep studying — review the explanations below.'}
+            {previewMode
+              ? `You answered ${score} of ${displayQuestions.length} questions correctly.`
+              : score === displayQuestions.length ? 'Perfect score!' :
+                score >= displayQuestions.length * 0.8 ? 'Great work!' :
+                score >= displayQuestions.length * 0.5 ? 'Good effort — review the explanations below.' :
+                'Keep studying — review the explanations below.'}
           </div>
           {saving && <div style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 4 }}>Saving...</div>}
-          <button className="quiz-reset-btn" onClick={handleReset}>Try Again</button>
+          {!previewMode && <button className="quiz-reset-btn" onClick={handleReset}>Try Again</button>}
         </div>
       )}
 
-      {questions.map((q, qIndex) => (
+      {displayQuestions.map((q, qIndex) => (
         <div className="quiz-question" key={qIndex}>
           <div className="quiz-question-num">Question {qIndex + 1}</div>
           <div className="quiz-question-text">{q.question}</div>
@@ -134,7 +143,7 @@ export default function QuizTab({ questions, sectionId, onAskTutor }) {
           {submitted && q.explanation && (
             <div className="quiz-explanation">{q.explanation}</div>
           )}
-          {submitted && answers[qIndex] !== q.correctIndex && onAskTutor && (
+          {submitted && answers[qIndex] !== q.correctIndex && onAskTutor && !previewMode && (
             <button
               className="quiz-ask-tutor-btn"
               onClick={() => onAskTutor(
@@ -155,6 +164,29 @@ export default function QuizTab({ questions, sectionId, onAskTutor }) {
         >
           Submit Answers
         </button>
+      )}
+
+      {/* Upgrade CTA after preview questions */}
+      {previewMode && submitted && (
+        <div className="preview-fade-cta">
+          <div className="preview-fade-icon"><QuizIcon size={40} /></div>
+          <p className="preview-fade-count">
+            You've previewed {PREVIEW_LIMIT} of {totalQuizQuestions} questions
+          </p>
+          <PaywallOverlay feature="Quiz" inline />
+        </div>
+      )}
+
+      {/* Post-quiz break prompt */}
+      {submitted && !previewMode && (
+        <div className="quiz-break-prompt">
+          <div className="quiz-break-emoji">&#127881;</div>
+          <div className="quiz-break-text">Nice work! Want a break?</div>
+          <Link href="/fun" className="quiz-break-cta">
+            <CardClub size={16} />
+            Play Blackjack
+          </Link>
+        </div>
       )}
     </div>
   );

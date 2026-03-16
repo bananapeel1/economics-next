@@ -1,5 +1,8 @@
 "use client";
 import { useState } from 'react';
+import { DrawerAlt } from './Icons';
+import { SECTION_MODEL_ANSWERS_LINKS } from '@/data/modelAnswersData';
+import Link from 'next/link';
 
 const MARK_COLORS = {
   4: { bg: 'var(--practice-4-bg)', border: 'var(--practice-4-border)', badge: 'var(--practice-4-badge)' },
@@ -16,14 +19,14 @@ const MARK_FILTERS = [
   { value: 20, label: '20 Marks' },
 ];
 
-export default function PracticeQuestionsTab({ questions = [], onAskTutor }) {
+export default function PracticeQuestionsTab({ questions = [], onAskTutor, sectionNumber }) {
   const [activeFilter, setActiveFilter] = useState('all');
   const [expandedIds, setExpandedIds] = useState(new Set());
 
   if (!questions.length) {
     return (
       <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--text-muted)' }}>
-        <div style={{ fontSize: 48, marginBottom: 16 }}>📝</div>
+        <div style={{ fontSize: 48, marginBottom: 16 }}><DrawerAlt size={48} /></div>
         <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 8, color: 'var(--text-primary)' }}>No Practice Questions Yet</div>
         <div style={{ fontSize: 14 }}>Practice questions for this section are coming soon.</div>
       </div>
@@ -60,6 +63,23 @@ export default function PracticeQuestionsTab({ questions = [], onAskTutor }) {
           Exam-style questions to test your understanding. Click &quot;Show Guidance&quot; to see model answer structures.
         </p>
       </div>
+
+      {sectionNumber && SECTION_MODEL_ANSWERS_LINKS[sectionNumber] && (
+        <Link href={SECTION_MODEL_ANSWERS_LINKS[sectionNumber]} className="practice-ma-card">
+          <div className="practice-ma-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <path d="M9 15l2 2 4-4" />
+            </svg>
+          </div>
+          <div className="practice-ma-text">
+            <strong>Model Answers</strong>
+            <p>Annotated model answers with mark scheme breakdowns for this section.</p>
+          </div>
+          <span className="practice-ma-arrow">View &rarr;</span>
+        </Link>
+      )}
 
       <div className="practice-filters">
         {MARK_FILTERS.map(f => {

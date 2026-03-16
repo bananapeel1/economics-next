@@ -3,8 +3,13 @@ import CommandWordsPage from '@/components/CommandWordsPage';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Command Words — Revvy Learn',
-  description: 'Edexcel Economics command words: what they mean and what examiners expect.',
+  title: 'IAL Economics & Business Command Words | Revvy Learn',
+  description: 'Guide to Edexcel IAL command words: Define, Explain, Analyse, Assess and Evaluate. How each is marked, with model opening sentences.',
+  openGraph: {
+    title: 'IAL Economics & Business Command Words | Revvy Learn',
+    description: 'Guide to Edexcel IAL command words: Define, Explain, Analyse, Assess and Evaluate. How each is marked.',
+    url: 'https://revvylearn.com/command-words',
+  },
 };
 
 export default async function CommandWordsRoute() {
@@ -19,7 +24,7 @@ export default async function CommandWordsRoute() {
     <div className="resource-page">
       <div className="resource-page-header">
         <Link href="/" className="resource-back-link">← Back to App</Link>
-        <h1 className="resource-page-title">Command Words</h1>
+        <h1 className="resource-page-title">Edexcel IAL Economics Command Words</h1>
         <p className="resource-page-subtitle">
           Understanding command words is essential for exam success. Each word tells you exactly what the examiner expects in your answer.
         </p>

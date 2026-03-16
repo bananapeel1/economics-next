@@ -15,8 +15,10 @@ const supabase = createClient(env.NEXT_PUBLIC_SUPABASE_URL, env.SUPABASE_SERVICE
 
 import { unit1Practice } from './economics-practice-unit1.mjs';
 import { unit2Practice } from './economics-practice-unit2.mjs';
+import { unit3Practice } from './economics-practice-unit3.mjs';
+import { unit4Practice } from './economics-practice-unit4.mjs';
 
-const allPractice = { ...unit1Practice, ...unit2Practice };
+const allPractice = { ...unit1Practice, ...unit2Practice, ...unit3Practice, ...unit4Practice };
 
 async function seedPractice() {
   console.log('🌱 Starting Economics practice questions seed...\n');

@@ -1,6 +1,17 @@
 import { createServerClient } from '@/lib/supabase-server';
 import StudyApp from '@/components/StudyApp';
 
+export const metadata = {
+  title: 'Free IAL Economics & Business Revision | Revvy Learn',
+  description: 'Free notes, flashcards, quizzes and AI tutor for Edexcel IAL Economics and Business. Every spec point covered. Used by IAL students worldwide.',
+  openGraph: {
+    title: 'Free IAL Economics & Business Revision | Revvy Learn',
+    description: 'Free notes, flashcards, quizzes and AI tutor for Edexcel IAL Economics and Business. Every spec point covered.',
+    url: 'https://revvylearn.com',
+    type: 'website',
+  },
+};
+
 export default async function HomePage() {
   const supabase = createServerClient();
 
@@ -56,12 +67,15 @@ export default async function HomePage() {
   }
 
   return (
-    <StudyApp
-      subjects={subjects || []}
-      sections={sections || []}
-      units={units || []}
-      initialSectionData={initialData}
-      initialSectionId={firstSectionId}
-    />
+    <>
+      <h1 className="sr-only">Edexcel IAL Economics &amp; Business Revision — Free Notes, Flashcards &amp; Quizzes</h1>
+      <StudyApp
+        subjects={subjects || []}
+        sections={sections || []}
+        units={units || []}
+        initialSectionData={initialData}
+        initialSectionId={firstSectionId}
+      />
+    </>
   );
 }

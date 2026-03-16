@@ -6,6 +6,7 @@ import BlackjackGame from './BlackjackGame';
 import QuizChallenge from './QuizChallenge';
 import PlayerStats from './PlayerStats';
 import LevelUpCelebration from './LevelUpCelebration';
+import PaywallOverlay from '../PaywallOverlay';
 import useBlackjack from './useBlackjack';
 import useFunProgress from './useFunProgress';
 import './fun.css';
@@ -19,7 +20,7 @@ const STATES = {
   ROUND_RESULT: 'round_result',
 };
 
-export default function FunPage() {
+export default function FunPage({ previewMode = false }) {
   const { user } = useAuth();
   const [gameState, setGameState] = useState(STATES.SUBJECT_SELECT);
   const [subject, setSubject] = useState(null);
@@ -32,6 +33,7 @@ export default function FunPage() {
   const [roundLevelUp, setRoundLevelUp] = useState(null);
   const [quizResult, setQuizResult] = useState(null);
   const [retryPool, setRetryPool] = useState([]);
+  const [roundsPlayed, setRoundsPlayed] = useState(0);
 
   const blackjack = useBlackjack();
   const { progress, loading: progressLoading, processRound, xpForNext, xpIntoLevel, xpProgress } = useFunProgress(subjectId);
@@ -103,6 +105,14 @@ export default function FunPage() {
     setBlackjackResult(result);
 
     if (result === 'push') {
+      if (previewMode) {
+        // In preview, a push counts as a round — show result with paywall
+        setRoundXp(0);
+        setQuizResult(null);
+        setRoundsPlayed(prev => prev + 1);
+        setGameState(STATES.ROUND_RESULT);
+        return;
+      }
       // Push — award small XP, skip quiz, deal again
       const { xpEarned } = processRound('push', 0, 0);
       setRoundXp(xpEarned);
@@ -127,8 +137,18 @@ export default function FunPage() {
     }
 
     const bjResult = blackjackResult;
+
+    // Skip progress saving in preview mode
+    if (previewMode) {
+      setRoundXp(0);
+      setRoundsPlayed(prev => prev + 1);
+      setGameState(STATES.ROUND_RESULT);
+      return;
+    }
+
     const { leveled, xpEarned, newLevel } = processRound(bjResult, correct, total);
     setRoundXp(xpEarned);
+    setRoundsPlayed(prev => prev + 1);
 
     if (leveled) {
       setRoundLevelUp(newLevel);
@@ -175,13 +195,15 @@ export default function FunPage() {
 
   return (
     <div className="fun-container">
-      <PlayerStats
-        progress={progress}
-        subject={subject}
-        xpForNext={xpForNext}
-        xpIntoLevel={xpIntoLevel}
-        xpProgress={xpProgress}
-      />
+      {!previewMode && (
+        <PlayerStats
+          progress={progress}
+          subject={subject}
+          xpForNext={xpForNext}
+          xpIntoLevel={xpIntoLevel}
+          xpProgress={xpProgress}
+        />
+      )}
 
       {gameState === STATES.BLACKJACK && (
         <BlackjackGame
@@ -221,15 +243,20 @@ export default function FunPage() {
                 Quiz: {quizResult.correct}/{quizResult.total} correct
               </div>
             )}
-            <div className="fun-round-xp">+{roundXp} XP</div>
-            <div className="fun-round-actions">
-              <button className="fun-btn fun-btn-hit" onClick={handleNextRound}>
-                Next Round
-              </button>
-              <button className="fun-btn fun-btn-stand" onClick={handleChangeSubject}>
-                Change Subject
-              </button>
-            </div>
+            {!previewMode && <div className="fun-round-xp">+{roundXp} XP</div>}
+
+            {previewMode && roundsPlayed >= 1 ? (
+              <PaywallOverlay feature="Blackjack" inline />
+            ) : (
+              <div className="fun-round-actions">
+                <button className="fun-btn fun-btn-hit" onClick={handleNextRound}>
+                  Next Round
+                </button>
+                <button className="fun-btn fun-btn-stand" onClick={handleChangeSubject}>
+                  Change Subject
+                </button>
+              </div>
+            )}
           </div>
         </div>
       )}

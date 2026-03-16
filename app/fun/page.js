@@ -1,4 +1,5 @@
 import { createClient } from '@/lib/supabase/server';
+import { createServerClient } from '@/lib/supabase-server';
 import { redirect } from 'next/navigation';
 import FunPage from '@/components/fun/FunPage';
 import Link from 'next/link';
@@ -15,6 +16,16 @@ export default async function FunRoute() {
     redirect('/login?redirect=/fun');
   }
 
+  // Check premium status server-side
+  const serviceSupabase = createServerClient();
+  const { data: sub } = await serviceSupabase
+    .from('user_subscriptions')
+    .select('plan, status')
+    .eq('user_id', user.id)
+    .single();
+
+  const isPremium = sub?.plan === 'premium' && sub?.status === 'active';
+
   return (
     <div className="resource-page">
       <div className="resource-page-header">
@@ -24,7 +35,7 @@ export default async function FunRoute() {
           Beat the dealer, answer questions, level up your knowledge.
         </p>
       </div>
-      <FunPage />
+      <FunPage previewMode={!isPremium} />
     </div>
   );
 }
