@@ -220,7 +220,7 @@ export default function FlashcardsTab({ cards, sectionId, previewMode = false })
           <p className="preview-fade-count">
             You've previewed {PREVIEW_LIMIT} of {cards.length} flashcards
           </p>
-          <PaywallOverlay feature="Flashcards" inline />
+          <PaywallOverlay feature="Flashcards" />
         </div>
       </div>
     );

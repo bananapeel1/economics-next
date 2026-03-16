@@ -117,7 +117,7 @@ export default function ExtrasTab({ data, previewMode = false }) {
           <p className="preview-fade-count">
             {chains.length + evaluation.length - (displayChains.length + displayEvaluation.length)} more extras available
           </p>
-          <PaywallOverlay feature="Extras" inline />
+          <PaywallOverlay feature="Extras" />
         </div>
       )}
     </div>

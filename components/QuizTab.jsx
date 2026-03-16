@@ -173,7 +173,7 @@ export default function QuizTab({ questions, sectionId, onAskTutor, previewMode 
           <p className="preview-fade-count">
             You've previewed {PREVIEW_LIMIT} of {totalQuizQuestions} questions
           </p>
-          <PaywallOverlay feature="Quiz" inline />
+          <PaywallOverlay feature="Quiz" />
         </div>
       )}
 
