@@ -112,13 +112,7 @@ export default function ExtrasTab({ data, previewMode = false }) {
       )}
 
       {previewMode && (
-        <div className="preview-fade-cta">
-          <div className="preview-fade-icon"><Star size={40} /></div>
-          <p className="preview-fade-count">
-            {chains.length + evaluation.length - (displayChains.length + displayEvaluation.length)} more extras available
-          </p>
-          <PaywallOverlay feature="Extras" />
-        </div>
+        <PaywallOverlay feature="Extras" previewText={`${chains.length + evaluation.length - (displayChains.length + displayEvaluation.length)} more extras available`} />
       )}
     </div>
   );

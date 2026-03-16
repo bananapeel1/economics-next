@@ -215,13 +215,7 @@ export default function FlashcardsTab({ cards, sectionId, previewMode = false })
   if (previewEnded) {
     return (
       <div className="flashcard-container">
-        <div className="preview-fade-cta">
-          <div className="preview-fade-icon"><CardsBlank size={40} /></div>
-          <p className="preview-fade-count">
-            You've previewed {PREVIEW_LIMIT} of {cards.length} flashcards
-          </p>
-          <PaywallOverlay feature="Flashcards" />
-        </div>
+        <PaywallOverlay feature="Flashcards" previewText={`You've previewed ${PREVIEW_LIMIT} of ${cards.length} flashcards`} />
       </div>
     );
   }

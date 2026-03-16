@@ -17,7 +17,6 @@ import PaywallOverlay from './PaywallOverlay';
 import AnimatedTabBar from './AnimatedTabBar';
 import LearnModeTab from './LearnModeTab';
 import { SpacedReview, MixedReview, countDueReviews, getDueReviews } from './ReviewMode';
-import TrialStrip from './TrialStrip';
 import { BookAlt, Notes as NotesIcon, ChartHistogram, DrawerAlt, CardsBlank, Quiz as QuizIcon, Mistakes as MistakesIcon, Tutor as TutorIcon, Star, Padlock, LearnMode as LearnModeIcon } from './Icons';
 
 const FREE_TABS = new Set(['learn-mode', 'content', 'notes', 'diagrams', 'practice']); // content kept for sidebar access
@@ -511,14 +510,6 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       return <PaywallOverlay feature={tabLabel} />;
     }
 
-    // Preview tabs: only signed-in users get preview, others get full paywall
-    if (PREVIEW_TABS.has(activeTab) && !isPremium) {
-      if (!user) {
-        const tabLabel = tabs.find(t => t.id === activeTab)?.label || activeTab;
-        return <PaywallOverlay feature={tabLabel} />;
-      }
-    }
-
     if (!sectionData) {
       return (
         <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--text-muted)' }}>
@@ -529,8 +520,8 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       );
     }
 
-    // Preview tabs: show component with previewMode when signed in but not premium
-    const isPreview = PREVIEW_TABS.has(activeTab) && !isPremium && !!user;
+    // Preview tabs: everyone gets preview if not premium
+    const isPreview = PREVIEW_TABS.has(activeTab) && !isPremium;
 
     switch (activeTab) {
       case 'overview': return <SectionOverview section={currentSection} unit={currentUnit} sectionData={sectionData} tabs={tabs} onTabSelect={handleTabSelect} isPremium={isPremium} user={user} savedProgress={savedProgress} />;
@@ -586,8 +577,6 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
 
   return (
     <>
-      <TrialStrip />
-
       <div className="mobile-header">
         <button className="hamburger" onClick={() => setSidebarOpen(true)}>&#9776;</button>
         <span className="mobile-title">{currentSection?.short_title}</span>

@@ -20,7 +20,7 @@ function CheckIcon() {
   );
 }
 
-export default function PaywallOverlay({ feature = 'this feature', inline = false }) {
+export default function PaywallOverlay({ feature = 'this feature', inline = false, previewText = '' }) {
   const { user } = useAuth();
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
@@ -98,6 +98,11 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
   return (
     <div className="paywall-overlay">
       <div className="paywall-card">
+
+        {/* Preview count (when coming from preview mode) */}
+        {previewText && (
+          <div className="paywall-preview-text">{previewText}</div>
+        )}
 
         {/* Badge */}
         <div className="paywall-badge-row">

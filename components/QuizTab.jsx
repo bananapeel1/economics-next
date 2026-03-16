@@ -168,13 +168,7 @@ export default function QuizTab({ questions, sectionId, onAskTutor, previewMode 
 
       {/* Upgrade CTA after preview questions */}
       {previewMode && submitted && (
-        <div className="preview-fade-cta">
-          <div className="preview-fade-icon"><QuizIcon size={40} /></div>
-          <p className="preview-fade-count">
-            You've previewed {PREVIEW_LIMIT} of {totalQuizQuestions} questions
-          </p>
-          <PaywallOverlay feature="Quiz" />
-        </div>
+        <PaywallOverlay feature="Quiz" previewText={`You've previewed ${PREVIEW_LIMIT} of ${totalQuizQuestions} questions`} />
       )}
 
       {/* Post-quiz break prompt */}
