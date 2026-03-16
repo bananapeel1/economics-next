@@ -1,11 +1,43 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { useAuth } from './AuthProvider';
+import { Clipboard, Glossary, Document, CardClub, PdfFile, NetworkGraph, ModelAnswer } from './Icons';
 
-export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, sections, units, activeSection, onSectionChange, isOpen, isCollapsed, onToggleCollapse, contentStepInfo, savedProgress }) {
-  const [expandedUnits, setExpandedUnits] = useState({ 1: true, 2: true });
-  const { user } = useAuth();
+export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, sections, units, activeSection, onSectionChange, isOpen, isCollapsed, onToggleCollapse, contentStepInfo, savedProgress, visitedFeatures = {}, onResourceVisit }) {
+  const { user, isPremium } = useAuth();
+  const [moreOpen, setMoreOpen] = useState(false);
+
+  // Determine which unit the active section belongs to
+  const activeUnitNumber = useMemo(() => {
+    const section = sections.find(s => s.id === activeSection);
+    if (!section) return null;
+    const unit = units.find(u => u.id === section.unit_id);
+    return unit?.number || null;
+  }, [activeSection, sections, units]);
+
+  // Smart collapse: only expand the unit that contains the active section
+  // Default: unit 1 if no active section found
+  const [expandedUnits, setExpandedUnits] = useState(() => {
+    const state = {};
+    units.forEach(u => { state[u.number] = false; });
+    // Expand unit containing active section, or unit 1 by default
+    const unitToExpand = activeUnitNumber || 1;
+    state[unitToExpand] = true;
+    return state;
+  });
+
+  // When the active section changes, auto-expand its unit and collapse others
+  useEffect(() => {
+    if (!activeUnitNumber) return;
+    setExpandedUnits(prev => {
+      // Only update if the active unit isn't already expanded
+      if (prev[activeUnitNumber]) return prev;
+      const next = {};
+      units.forEach(u => { next[u.number] = u.number === activeUnitNumber; });
+      return next;
+    });
+  }, [activeUnitNumber, units]);
 
   function toggleUnit(unitNum) {
     setExpandedUnits(prev => ({ ...prev, [unitNum]: !prev[unitNum] }));
@@ -105,30 +137,52 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
         );
       })}
 
-      {/* Resources section */}
+      {/* Resources section — top 3 always visible */}
       <div className="sidebar-resources">
         <div className="sidebar-resources-title">Resources</div>
-        <Link href="/command-words" className="sidebar-resource-link">
-          <span className="sidebar-resource-icon">📋</span>
-          Command Words
+        <Link href="/model-answers" className="sidebar-resource-link">
+          <span className="sidebar-resource-icon"><ModelAnswer size={16} /></span>
+          Model Answers
         </Link>
-        <Link href="/glossary" className="sidebar-resource-link">
-          <span className="sidebar-resource-icon">📖</span>
-          Glossary
+        <Link href="/pdfs" className="sidebar-resource-link" onClick={() => !visitedFeatures['resource-pdfs'] && onResourceVisit?.('resource-pdfs')}>
+          <span className="sidebar-resource-icon"><PdfFile size={16} /></span>
+          PDFs
+          {!visitedFeatures['resource-pdfs'] && <span className="new-badge">New</span>}
         </Link>
-        <Link href="/past-papers" className="sidebar-resource-link">
-          <span className="sidebar-resource-icon">📄</span>
-          Past Papers
+        <Link href="/topic-links" className="sidebar-resource-link" onClick={() => !visitedFeatures['resource-topic-links'] && onResourceVisit?.('resource-topic-links')}>
+          <span className="sidebar-resource-icon"><NetworkGraph size={16} /></span>
+          Topic Links
+          {!visitedFeatures['resource-topic-links'] && <span className="new-badge">New</span>}
         </Link>
-        {user && (
-          <Link href="/fun" className="sidebar-resource-link">
-            <span className="sidebar-resource-icon">🎮</span>
-            Blackjack
-          </Link>
+
+        {/* Collapsible "More" */}
+        <button className="sidebar-resource-more-btn" onClick={() => setMoreOpen(prev => !prev)}>
+          {moreOpen ? '\u25BE' : '\u25B8'} More
+        </button>
+        {moreOpen && (
+          <>
+            <Link href="/past-papers" className="sidebar-resource-link">
+              <span className="sidebar-resource-icon"><Document size={16} /></span>
+              Past Papers
+            </Link>
+            <Link href="/command-words" className="sidebar-resource-link">
+              <span className="sidebar-resource-icon"><Clipboard size={16} /></span>
+              Command Words
+            </Link>
+            <Link href="/glossary" className="sidebar-resource-link">
+              <span className="sidebar-resource-icon"><Glossary size={16} /></span>
+              Glossary
+            </Link>
+          </>
         )}
-        <Link href="/contact" className="sidebar-resource-link">
-          <span className="sidebar-resource-icon">📧</span>
-          Contact
+      </div>
+
+      {/* Break Time section */}
+      <div className="sidebar-break-time">
+        <div className="sidebar-break-title">Break Time</div>
+        <Link href="/fun" className="sidebar-resource-link sidebar-break-link">
+          <span className="sidebar-resource-icon"><CardClub size={16} /></span>
+          Blackjack
         </Link>
       </div>
     </nav>

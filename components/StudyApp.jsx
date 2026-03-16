@@ -14,27 +14,118 @@ import GlossaryTooltip from './GlossaryTooltip';
 import PracticeQuestionsTab from './PracticeQuestionsTab';
 import ExtrasTab from './ExtrasTab';
 import PaywallOverlay from './PaywallOverlay';
+import AnimatedTabBar from './AnimatedTabBar';
+import { BookAlt, Notes as NotesIcon, ChartHistogram, DrawerAlt, CardsBlank, Quiz as QuizIcon, Mistakes as MistakesIcon, Tutor as TutorIcon, Star, Padlock } from './Icons';
 
 const FREE_TABS = new Set(['content', 'notes', 'diagrams', 'practice']);
-const PREMIUM_TABS = new Set(['flashcards', 'quiz', 'mistakes', 'tutor', 'extras']);
+const PREVIEW_TABS = new Set(['flashcards', 'quiz', 'extras']); // Show preview then paywall (signed-in only)
+const PREMIUM_TABS = new Set(['mistakes', 'tutor']); // Full paywall block
 
 const allTabs = [
-  { id: 'content', label: 'Content', icon: '\uD83D\uDCD6' },
-  { id: 'notes', label: 'Notes', icon: '\uD83D\uDCDD' },
-  { id: 'diagrams', label: 'Diagrams', icon: '\uD83D\uDCCA', subjects: ['economics'] },
-  { id: 'practice', label: 'Practice', icon: '\uD83D\uDCDD' },
-  { id: 'flashcards', label: 'Flashcards', icon: '\uD83C\uDCCF', premium: true },
-  { id: 'quiz', label: 'Quiz', icon: '\u270F\uFE0F', premium: true },
-  { id: 'mistakes', label: 'Mistakes', icon: '\u26A0\uFE0F', premium: true, subjects: ['business'] },
-  { id: 'tutor', label: 'Tutor', icon: '\uD83E\uDD16', premium: true },
-  { id: 'extras', label: 'Extras', icon: '\u2B50', premium: true },
+  { id: 'content', label: 'Content', Icon: BookAlt },
+  { id: 'notes', label: 'Notes', Icon: NotesIcon },
+  { id: 'diagrams', label: 'Diagrams', Icon: ChartHistogram, subjects: ['economics'] },
+  { id: 'practice', label: 'Practice', Icon: DrawerAlt },
+  { id: 'flashcards', label: 'Flashcards', Icon: CardsBlank, premium: true },
+  { id: 'quiz', label: 'Quiz', Icon: QuizIcon, premium: true },
+  { id: 'mistakes', label: 'Mistakes', Icon: MistakesIcon, premium: true, subjects: ['business'] },
+  { id: 'tutor', label: 'Tutor', Icon: TutorIcon, premium: true },
+  { id: 'extras', label: 'Extras', Icon: Star, premium: true },
 ];
+
+/* ── Section Overview (Dashboard Launchpad) ── */
+const OVERVIEW_FEATURES = [
+  { id: 'content', label: 'Content', Icon: BookAlt, dataKey: 'content', unit: 'steps' },
+  { id: 'notes', label: 'Notes', Icon: NotesIcon, dataKey: 'notes', unit: 'sections' },
+  { id: 'flashcards', label: 'Flashcards', Icon: CardsBlank, dataKey: 'flashcards', unit: 'cards', premium: true },
+  { id: 'quiz', label: 'Quiz', Icon: QuizIcon, dataKey: 'quiz', unit: 'questions', premium: true },
+  { id: 'practice', label: 'Practice', Icon: DrawerAlt, dataKey: 'practice', unit: 'questions' },
+  { id: 'tutor', label: 'AI Tutor', Icon: TutorIcon, dataKey: null, unit: null, premium: true },
+];
+
+function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPremium, user, savedProgress }) {
+  const availableIds = new Set(tabs.map(t => t.id));
+  const features = OVERVIEW_FEATURES.filter(f => availableIds.has(f.id));
+
+  // "Pick up where you left off" — show for logged-in users with progress on this section
+  const progress = user && savedProgress ? savedProgress[section?.id] : null;
+  const progressPct = progress
+    ? Math.round(((progress.furthest_step + 1) / progress.total_steps) * 100)
+    : 0;
+
+  return (
+    <div className="section-overview">
+      {/* Branded resume card for logged-in users */}
+      {user && progress && (
+        <div className="overview-resume">
+          <div className="overview-resume-brand">
+            <img src="/logo.svg" alt="Revvy Learn" className="overview-resume-logo" />
+            Revvy Learn
+          </div>
+          <div className="overview-resume-title">Pick up where you left off</div>
+          <div className="overview-resume-section">
+            <span className="overview-resume-section-num">Section {section?.number}</span>
+            <span className="overview-resume-section-name">{section?.title}</span>
+          </div>
+          <div className="overview-resume-progress">
+            <div className="overview-resume-progress-bar">
+              <div className="overview-resume-progress-fill" style={{ width: `${progressPct}%` }} />
+            </div>
+            <span className="overview-resume-progress-text">{progressPct}% complete</span>
+          </div>
+          <button className="overview-resume-btn" onClick={() => onTabSelect('content')}>
+            Continue Learning &#8594;
+          </button>
+        </div>
+      )}
+
+      <div className="overview-header">
+        <div className="overview-unit-badge">Unit {unit?.number}: {unit?.title}</div>
+        <h2 className="overview-title">{section?.title}</h2>
+        <p className="overview-subtitle">{user && progress ? 'Or explore other tabs:' : 'Choose where to start:'}</p>
+      </div>
+      <div className="overview-grid">
+        {features.map(f => {
+          const count = f.dataKey ? (sectionData?.[f.dataKey]?.length || 0) : null;
+          const isEmpty = f.dataKey && count === 0;
+          const isLocked = f.premium && !isPremium;
+          return (
+            <button
+              key={f.id}
+              className={`overview-card ${isEmpty ? 'dimmed' : ''}`}
+              onClick={() => onTabSelect(f.id)}
+            >
+              <span className="overview-card-icon"><f.Icon size={24} /></span>
+              <span className="overview-card-label">{f.label}</span>
+              {isLocked && <span className="overview-card-lock"><Padlock size={12} /></span>}
+              <span className="overview-card-count">
+                {isEmpty ? 'Coming soon' : count !== null ? `${count} ${f.unit}` : 'Ask anything'}
+              </span>
+            </button>
+          );
+        })}
+      </div>
+      <div className="overview-study-flow">
+        <span className="overview-flow-label">Suggested flow:</span>
+        {' '}Start with <button className="overview-flow-link" onClick={() => onTabSelect('content')}>Content</button>
+        {' \u2192 '}test with <button className="overview-flow-link" onClick={() => onTabSelect('flashcards')}>Flashcards</button>
+        {' \u2192 '}take the <button className="overview-flow-link" onClick={() => onTabSelect('quiz')}>Quiz</button>
+      </div>
+    </div>
+  );
+}
 
 export default function StudyApp({ subjects, sections, units, initialSectionData, initialSectionId }) {
   const { user, isPremium } = useAuth();
 
-  // Subject state
-  const [activeSubjectId, setActiveSubjectId] = useState(subjects[0]?.id || null);
+  // Subject state — restore last-visited subject if available
+  const savedSubjectId = typeof window !== 'undefined'
+    ? localStorage.getItem('last-visited-subject')
+    : null;
+  const initialSubjectId = (savedSubjectId && subjects.some(s => s.id === savedSubjectId))
+    ? savedSubjectId
+    : (subjects[0]?.id || null);
+  const [activeSubjectId, setActiveSubjectId] = useState(initialSubjectId);
   const activeSubject = subjects.find(s => s.id === activeSubjectId) || subjects[0];
 
   // Filter tabs by active subject slug
@@ -45,16 +136,44 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   const subjectSectionIds = new Set(sections.filter(s => subjectUnits.some(u => u.id === s.unit_id)).map(s => s.id));
   const subjectSections = sections.filter(s => subjectSectionIds.has(s.id));
 
+  // Determine starting section: URL param > localStorage last-visited > initial > first
   const urlSection = typeof window !== 'undefined'
     ? new URLSearchParams(window.location.search).get('section')
     : null;
+  const lastVisited = typeof window !== 'undefined'
+    ? localStorage.getItem('last-visited-section')
+    : null;
   const startSection = (urlSection && subjectSections.some(s => s.id === urlSection))
     ? urlSection
-    : (initialSectionId || subjectSections[0]?.id);
+    : (lastVisited && subjectSections.some(s => s.id === lastVisited))
+      ? lastVisited
+      : (initialSectionId || subjectSections[0]?.id);
 
   const [activeSection, setActiveSection] = useState(startSection);
-  const [activeTab, setActiveTab] = useState('content');
+  const [activeTab, setActiveTab] = useState('overview');
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  // Feature discovery badges — track which features the user has visited
+  const [visitedFeatures, setVisitedFeatures] = useState(() => {
+    if (typeof window === 'undefined') return {};
+    try { return JSON.parse(localStorage.getItem('visited-features') || '{}'); }
+    catch { return {}; }
+  });
+
+  function markFeatureVisited(featureId) {
+    setVisitedFeatures(prev => {
+      const next = { ...prev, [featureId]: true };
+      localStorage.setItem('visited-features', JSON.stringify(next));
+      return next;
+    });
+  }
+
+  function handleTabSelect(tabId) {
+    setActiveTab(tabId);
+    if (!visitedFeatures[`tab-${tabId}`]) {
+      markFeatureVisited(`tab-${tabId}`);
+    }
+  }
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [sectionData, setSectionData] = useState(initialSectionData);
   const [isInitial, setIsInitial] = useState(true);
@@ -88,6 +207,19 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     const saved = localStorage.getItem('sidebar-collapsed');
     if (saved === 'true') setSidebarCollapsed(true);
   }, []);
+
+  // Persist last-visited section and subject to localStorage
+  useEffect(() => {
+    if (activeSection) {
+      localStorage.setItem('last-visited-section', activeSection);
+    }
+  }, [activeSection]);
+
+  useEffect(() => {
+    if (activeSubjectId) {
+      localStorage.setItem('last-visited-subject', activeSubjectId);
+    }
+  }, [activeSubjectId]);
 
   // Fetch glossary terms for active subject
   useEffect(() => {
@@ -296,10 +428,18 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   }
 
   function renderTab() {
-    // Show paywall for premium tabs if not subscribed
+    // Show full paywall for premium-only tabs if not subscribed
     if (PREMIUM_TABS.has(activeTab) && !isPremium) {
       const tabLabel = tabs.find(t => t.id === activeTab)?.label || activeTab;
       return <PaywallOverlay feature={tabLabel} />;
+    }
+
+    // Preview tabs: only signed-in users get preview, others get full paywall
+    if (PREVIEW_TABS.has(activeTab) && !isPremium) {
+      if (!user) {
+        const tabLabel = tabs.find(t => t.id === activeTab)?.label || activeTab;
+        return <PaywallOverlay feature={tabLabel} />;
+      }
     }
 
     if (!sectionData) {
@@ -312,16 +452,20 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       );
     }
 
+    // Preview tabs: show component with previewMode when signed in but not premium
+    const isPreview = PREVIEW_TABS.has(activeTab) && !isPremium && !!user;
+
     switch (activeTab) {
+      case 'overview': return <SectionOverview section={currentSection} unit={currentUnit} sectionData={sectionData} tabs={tabs} onTabSelect={handleTabSelect} isPremium={isPremium} user={user} savedProgress={savedProgress} />;
       case 'content': return <ContentTab key={activeSection} data={sectionData.content} glossaryTerms={glossaryTerms} onStepChange={handleStepChange} initialPosition={stepperPositions.current[activeSection] || null} />;
       case 'notes': return <NotesTab data={sectionData.notes} glossaryTerms={glossaryTerms} />;
       case 'diagrams': return <DiagramsTab data={sectionData.diagrams} />;
-      case 'practice': return <PracticeQuestionsTab questions={sectionData.practice} onAskTutor={isPremium ? goToTutor : null} />;
-      case 'flashcards': return <FlashcardsTab cards={sectionData.flashcards} sectionId={activeSection} />;
-      case 'quiz': return <QuizTab questions={sectionData.quiz} sectionId={activeSection} onAskTutor={isPremium ? goToTutor : null} />;
+      case 'practice': return <PracticeQuestionsTab questions={sectionData.practice} onAskTutor={isPremium ? goToTutor : null} sectionNumber={currentSection?.number} />;
+      case 'flashcards': return <FlashcardsTab cards={sectionData.flashcards} sectionId={activeSection} previewMode={isPreview} />;
+      case 'quiz': return <QuizTab questions={sectionData.quiz} sectionId={activeSection} onAskTutor={isPremium ? goToTutor : null} previewMode={isPreview} />;
       case 'mistakes': return <MistakesTab data={sectionData.mistakes} />;
       case 'tutor': return <TutorTab section={currentSection} unit={currentUnit} pendingPrompt={pendingTutorPrompt} onPromptConsumed={() => setPendingTutorPrompt(null)} />;
-      case 'extras': return <ExtrasTab data={sectionData.extras} />;
+      case 'extras': return <ExtrasTab data={sectionData.extras} previewMode={isPreview} />;
       default: return null;
     }
   }
@@ -352,6 +496,8 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
           onToggleCollapse={toggleSidebarCollapsed}
           contentStepInfo={activeTab === 'content' ? contentStepInfo : null}
           savedProgress={user ? savedProgress : null}
+          visitedFeatures={visitedFeatures}
+          onResourceVisit={markFeatureVisited}
         />
 
         <div className="main-content">
@@ -376,19 +522,13 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
                 <AuthButton />
               </div>
               <h1 className="content-header-title">{currentSection?.title}</h1>
-              <div className="tab-bar">
-                {tabs.map(tab => (
-                  <button
-                    key={tab.id}
-                    className={`tab-item ${activeTab === tab.id ? 'active' : ''} ${tab.premium && !isPremium ? 'tab-locked' : ''}`}
-                    onClick={() => setActiveTab(tab.id)}
-                  >
-                    <span className="tab-icon">{tab.icon}</span>
-                    {tab.label}
-                    {tab.premium && !isPremium && <span className="tab-lock-icon">🔒</span>}
-                  </button>
-                ))}
-              </div>
+              <AnimatedTabBar
+                tabs={tabs}
+                activeTab={activeTab}
+                setActiveTab={handleTabSelect}
+                isPremium={isPremium}
+                visitedFeatures={visitedFeatures}
+              />
             </div>
 
             <div className="tab-content-body">
