@@ -67,6 +67,18 @@ export default function AuthButton() {
               {isPremium ? '⭐ Pro' : 'Free'}
             </span>
           </div>
+          {!isPremium && (
+            <Link href="/upgrade" className="auth-dropdown-item auth-dropdown-upgrade" onClick={() => setMenuOpen(false)}>
+              <span style={{ marginRight: 8 }}>&#11088;</span>
+              Upgrade to Pro
+            </Link>
+          )}
+          {isPremium && (
+            <Link href="/upgrade" className="auth-dropdown-item" onClick={() => setMenuOpen(false)}>
+              <span style={{ marginRight: 8 }}>&#11088;</span>
+              Your Plan
+            </Link>
+          )}
           <button className="auth-dropdown-item" onClick={() => { toggleTheme(); }}>
             <span style={{ marginRight: 8 }}>{theme === 'dark' ? '☀️' : '🌙'}</span>
             {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
