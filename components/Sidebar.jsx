@@ -177,9 +177,9 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
         )}
       </div>
 
-      {/* Break Time section */}
+      {/* Fun section */}
       <div className="sidebar-break-time">
-        <div className="sidebar-break-title">Break Time</div>
+        <div className="sidebar-break-title">Fun</div>
         <Link href="/fun" className="sidebar-resource-link sidebar-break-link">
           <span className="sidebar-resource-icon"><CardClub size={16} /></span>
           Blackjack
