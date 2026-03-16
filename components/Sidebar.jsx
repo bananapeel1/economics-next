@@ -3,6 +3,7 @@ import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { useAuth } from './AuthProvider';
 import { Clipboard, Glossary, Document, CardClub, PdfFile, NetworkGraph, ModelAnswer, BookAlt } from './Icons';
+import StrengthMeter from './StrengthMeter';
 
 export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, sections, units, activeSection, onSectionChange, isOpen, isCollapsed, onToggleCollapse, contentStepInfo, savedProgress, visitedFeatures = {}, onResourceVisit, learnModeCompletions = {}, onTabSelect }) {
   const { user, isPremium } = useAuth();
@@ -114,7 +115,10 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
                       <span className="sidebar-section-number">{section.number}</span>
                       <span className="sidebar-section-name">{section.short_title}</span>
                       {learnModeCompletions[section.id] && (
-                        <span className="sidebar-learn-complete-dot" title="Learn Mode complete" />
+                        <>
+                          <StrengthMeter subjectId={activeSubjectId} sectionId={section.id} size="small" />
+                          <span className="sidebar-learn-complete-dot" title="Learn Mode complete" />
+                        </>
                       )}
                       {status && (
                         <span className={`sidebar-section-status ${status}`} title={status === 'complete' ? 'Completed' : 'In progress'}>

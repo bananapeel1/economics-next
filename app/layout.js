@@ -11,9 +11,13 @@ export const metadata = {
   title: "Revvy Learn — Edexcel A-Level Revision",
   description: "Comprehensive revision app for Edexcel International A-Level Economics and Business",
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.ico', sizes: '48x48' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+    ],
     apple: '/apple-icon.png',
   },
+  manifest: '/manifest.json',
   verification: {
     google: 'SUCgmkz_aRMbcTiUDxOGBJfzifJo7yY2a3muEdY9Zbw',
   },

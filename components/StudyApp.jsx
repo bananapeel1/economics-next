@@ -16,6 +16,7 @@ import ExtrasTab from './ExtrasTab';
 import PaywallOverlay from './PaywallOverlay';
 import AnimatedTabBar from './AnimatedTabBar';
 import LearnModeTab from './LearnModeTab';
+import { SpacedReview, MixedReview, countDueReviews, getDueReviews } from './ReviewMode';
 import { BookAlt, Notes as NotesIcon, ChartHistogram, DrawerAlt, CardsBlank, Quiz as QuizIcon, Mistakes as MistakesIcon, Tutor as TutorIcon, Star, Padlock, LearnMode as LearnModeIcon } from './Icons';
 
 const FREE_TABS = new Set(['learn-mode', 'content', 'notes', 'diagrams', 'practice']); // content kept for sidebar access
@@ -205,6 +206,38 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     });
     return completions;
   });
+
+  // Review mode state
+  const [dueReviewCount, setDueReviewCount] = useState(() => {
+    if (typeof window === 'undefined') return 0;
+    return countDueReviews();
+  });
+  const [activeReview, setActiveReview] = useState(null); // null | { type: 'spaced', entry } | { type: 'mixed' }
+
+  function refreshDueReviews() {
+    setDueReviewCount(countDueReviews());
+  }
+
+  // Check due reviews on mount and when tab changes
+  useEffect(() => {
+    refreshDueReviews();
+  }, [activeTab]);
+
+  function handleStartReview() {
+    const due = getDueReviews();
+    if (due.length > 0) {
+      setActiveReview({ type: 'spaced', entry: due[0] });
+    }
+  }
+
+  function handleStartMixedReview() {
+    setActiveReview({ type: 'mixed' });
+  }
+
+  function handleFinishReview() {
+    setActiveReview(null);
+    refreshDueReviews();
+  }
 
   function goToTutor(prompt) {
     setPendingTutorPrompt(prompt);
@@ -500,30 +533,43 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
 
     switch (activeTab) {
       case 'overview': return <SectionOverview section={currentSection} unit={currentUnit} sectionData={sectionData} tabs={tabs} onTabSelect={handleTabSelect} isPremium={isPremium} user={user} savedProgress={savedProgress} />;
-      case 'learn-mode': return (
-        <LearnModeTab
-          key={activeSection}
-          contentData={sectionData.content}
-          diagramsData={sectionData.diagrams}
-          practiceData={sectionData.practice}
-          quizData={sectionData.quiz}
-          glossaryTerms={glossaryTerms}
-          sectionId={activeSection}
-          subjectId={activeSubjectId}
-          currentSection={currentSection}
-          currentUnit={currentUnit}
-          currentStep={learnModeSection}
-          onStepChange={setLearnModeSection}
-          isResuming={learnModeResuming}
-          onResumeDismiss={() => setLearnModeResuming(false)}
-          onComplete={() => {
-            setLearnModeCompletions(prev => ({ ...prev, [activeSection]: true }));
-          }}
-          onNavigateToQuiz={() => handleTabSelect('quiz')}
-          onNavigateToTab={handleTabSelect}
-          onAskTutor={isPremium ? goToTutor : null}
-        />
-      );
+      case 'learn-mode': {
+        // If a review is active, show the review component instead
+        if (activeReview?.type === 'spaced') {
+          return <SpacedReview reviewEntry={activeReview.entry} onFinish={handleFinishReview} />;
+        }
+        if (activeReview?.type === 'mixed') {
+          return <MixedReview onFinish={handleFinishReview} />;
+        }
+        return (
+          <LearnModeTab
+            key={activeSection}
+            contentData={sectionData.content}
+            diagramsData={sectionData.diagrams}
+            practiceData={sectionData.practice}
+            quizData={sectionData.quiz}
+            glossaryTerms={glossaryTerms}
+            sectionId={activeSection}
+            subjectId={activeSubjectId}
+            currentSection={currentSection}
+            currentUnit={currentUnit}
+            currentStep={learnModeSection}
+            onStepChange={setLearnModeSection}
+            isResuming={learnModeResuming}
+            onResumeDismiss={() => setLearnModeResuming(false)}
+            onComplete={() => {
+              setLearnModeCompletions(prev => ({ ...prev, [activeSection]: true }));
+              refreshDueReviews();
+            }}
+            onNavigateToQuiz={() => handleTabSelect('quiz')}
+            onNavigateToTab={handleTabSelect}
+            onAskTutor={isPremium ? goToTutor : null}
+            dueReviews={dueReviewCount}
+            onStartReview={handleStartReview}
+            onStartMixedReview={handleStartMixedReview}
+          />
+        );
+      }
       case 'content': return <ContentTab key={activeSection} data={sectionData.content} glossaryTerms={glossaryTerms} onStepChange={handleStepChange} initialPosition={stepperPositions.current[activeSection] || null} />;
       case 'notes': return <NotesTab data={sectionData.notes} glossaryTerms={glossaryTerms} />;
       case 'diagrams': return <DiagramsTab data={sectionData.diagrams} />;

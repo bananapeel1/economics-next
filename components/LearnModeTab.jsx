@@ -1,6 +1,8 @@
 "use client";
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { highlightGlossaryTerms } from '@/lib/glossary-highlight';
+import { recordReview, recordPretest } from '@/lib/strength';
+import StrengthMeter from './StrengthMeter';
 
 const MARK_COLORS = {
   4: { bg: 'var(--practice-4-bg)', border: 'var(--practice-4-border)', badge: 'var(--practice-4-badge)' },
@@ -59,10 +61,16 @@ function InlineDiagram({ diagram }) {
   );
 }
 
-/* ── Inline Practice Card (with guidance + AI tutor) ── */
-function InlinePractice({ question, onAskTutor }) {
-  const [revealed, setRevealed] = useState(false);
+/* ── Inline Practice Card (with Worked Example Fading) ── */
+function InlinePractice({ question, onAskTutor, mode = 'independent' }) {
+  // mode: 'worked' | 'guided' | 'independent'
+  const [revealed, setRevealed] = useState(mode === 'worked');
+  const [guidedExpanded, setGuidedExpanded] = useState(false);
   const colors = MARK_COLORS[question.marks] || MARK_COLORS[4];
+
+  const guidanceParagraphs = question.guidance?.split('\n').filter(Boolean) || [];
+  const firstParagraph = guidanceParagraphs[0];
+  const restParagraphs = guidanceParagraphs.slice(1);
 
   function handleAskTutor() {
     if (!onAskTutor) return;
@@ -71,38 +79,94 @@ function InlinePractice({ question, onAskTutor }) {
     );
   }
 
+  const labelText = mode === 'worked' ? '\u{1F4D6} Worked example'
+    : mode === 'guided' ? '\u{1F9ED} Guided practice'
+    : '\u270D\uFE0F Quick check';
+
+  const labelClass = mode === 'worked' ? 'lm-card-label lm-card-label-blue'
+    : mode === 'guided' ? 'lm-card-label lm-card-label-amber'
+    : 'lm-card-label lm-card-label-red';
+
   return (
-    <div className="lm-practice-card">
-      <div className="lm-card-label lm-card-label-red">&#9997;&#65039; Quick check</div>
+    <div className={`lm-practice-card ${mode === 'worked' ? 'lm-worked-example' : ''}`}>
+      <div className={labelClass}>{labelText}</div>
       <div className="lm-practice-inner">
         <p className="lm-practice-question">{question.question}</p>
         <span className="lm-practice-marks" style={{ backgroundColor: colors.bg, color: colors.badge, borderColor: colors.border }}>
           {question.marks} marks
         </span>
-        <button className="lm-practice-reveal-btn" onClick={() => setRevealed(!revealed)}>
-          {revealed ? 'Hide mark scheme \u25B2' : 'Reveal mark scheme \u25BC'}
-        </button>
-        <div className={`lm-practice-answer ${revealed ? 'open' : ''}`}>
-          <div className="lm-practice-answer-inner">
-            {question.guidance?.split('\n').map((line, i) => (
-              <p key={i}>{line}</p>
-            ))}
-            {onAskTutor && (
-              <button className="lm-practice-tutor-btn" onClick={handleAskTutor}>
-                &#129302; Get Full Model Answer from Tutor
-              </button>
-            )}
+
+        {mode === 'worked' && (
+          /* Worked example: guidance shown by default */
+          <div className="lm-practice-answer open">
+            <div className="lm-practice-answer-inner lm-worked-answer">
+              {guidanceParagraphs.map((line, i) => (
+                <p key={i}>{line}</p>
+              ))}
+              {onAskTutor && (
+                <button className="lm-practice-tutor-btn" onClick={handleAskTutor}>
+                  &#129302; Get Full Model Answer from Tutor
+                </button>
+              )}
+            </div>
           </div>
-        </div>
+        )}
+
+        {mode === 'guided' && (
+          /* Guided: first paragraph visible, rest behind toggle */
+          <>
+            <div className="lm-practice-answer open">
+              <div className="lm-practice-answer-inner lm-guided-answer">
+                {firstParagraph && <p>{firstParagraph}</p>}
+                {guidedExpanded && restParagraphs.map((line, i) => (
+                  <p key={i}>{line}</p>
+                ))}
+                {!guidedExpanded && restParagraphs.length > 0 && (
+                  <button className="lm-guided-expand-btn" onClick={() => setGuidedExpanded(true)}>
+                    See full guidance &#x25BC;
+                  </button>
+                )}
+                {onAskTutor && (
+                  <button className="lm-practice-tutor-btn" onClick={handleAskTutor}>
+                    &#129302; Get Full Model Answer from Tutor
+                  </button>
+                )}
+              </div>
+            </div>
+          </>
+        )}
+
+        {mode === 'independent' && (
+          /* Independent: current behavior */
+          <>
+            <button className="lm-practice-reveal-btn" onClick={() => setRevealed(!revealed)}>
+              {revealed ? 'Hide mark scheme \u25B2' : 'Reveal mark scheme \u25BC'}
+            </button>
+            <div className={`lm-practice-answer ${revealed ? 'open' : ''}`}>
+              <div className="lm-practice-answer-inner">
+                {guidanceParagraphs.map((line, i) => (
+                  <p key={i}>{line}</p>
+                ))}
+                {onAskTutor && (
+                  <button className="lm-practice-tutor-btn" onClick={handleAskTutor}>
+                    &#129302; Get Full Model Answer from Tutor
+                  </button>
+                )}
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
 }
 
-/* ── Inline Quiz Card (MCQ) ── */
-function InlineQuiz({ question }) {
+/* ── Inline Quiz Card (MCQ) with Confidence Rating ── */
+function InlineQuiz({ question, subjectId, sectionId, stepIndex }) {
   const [selected, setSelected] = useState(null);
   const [answered, setAnswered] = useState(false);
+  const [confidence, setConfidence] = useState(null); // null | 'guessed' | 'somewhat' | 'certain'
+  const [feedbackMsg, setFeedbackMsg] = useState('');
   const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
 
   function handleSelect(index) {
@@ -113,11 +177,39 @@ function InlineQuiz({ question }) {
 
   const isCorrect = answered && selected === question.correctIndex;
 
+  function handleConfidence(level) {
+    setConfidence(level);
+
+    // Feedback messages
+    const messages = {
+      guessed: 'Noted \u2014 this topic needs more practice.',
+      somewhat: 'Good awareness \u2014 keep reviewing.',
+      certain: isCorrect
+        ? 'Great self-knowledge!'
+        : 'Hmm \u2014 this is a good one to revisit.',
+    };
+    setFeedbackMsg(messages[level]);
+
+    // Save to localStorage
+    if (typeof window !== 'undefined' && subjectId && sectionId) {
+      try {
+        const key = `revvy_confidence_${subjectId}_${sectionId}`;
+        const existing = JSON.parse(localStorage.getItem(key) || '[]');
+        existing.push({
+          questionIndex: stepIndex,
+          correct: isCorrect,
+          confidence: level,
+          timestamp: Date.now(),
+        });
+        localStorage.setItem(key, JSON.stringify(existing));
+      } catch {}
+    }
+  }
+
   function getOptionClass(index) {
     if (!answered) return selected === index ? 'selected' : '';
     if (index === question.correctIndex) return 'correct';
-    if (index === selected) return 'incorrect';
-    if (index === question.correctIndex) return 'correct-reveal';
+    if (index === selected && index !== question.correctIndex) return 'incorrect';
     return '';
   }
 
@@ -144,7 +236,177 @@ function InlineQuiz({ question }) {
             {question.explanation}
           </div>
         )}
+        {/* Confidence rating — shown after answering, before rating */}
+        {answered && !confidence && (
+          <div className="lm-confidence-row">
+            <span className="lm-confidence-prompt">How sure were you?</span>
+            <div className="lm-confidence-buttons">
+              <button className="lm-confidence-btn lm-conf-guessed" onClick={() => handleConfidence('guessed')}>Guessed</button>
+              <button className="lm-confidence-btn lm-conf-somewhat" onClick={() => handleConfidence('somewhat')}>Somewhat sure</button>
+              <button className="lm-confidence-btn lm-conf-certain" onClick={() => handleConfidence('certain')}>Certain</button>
+            </div>
+          </div>
+        )}
+        {confidence && (
+          <div className="lm-confidence-done">{feedbackMsg}</div>
+        )}
       </div>
+    </div>
+  );
+}
+
+/* ── "Explain It Back" Prompt ── */
+function ExplainItBack({ title, onAskTutor }) {
+  const [expanded, setExpanded] = useState(false);
+  const [text, setText] = useState('');
+
+  function handleTutorCheck() {
+    if (!onAskTutor || !text.trim()) return;
+    onAskTutor(
+      `A student tried to explain '${title}' in their own words. Review their explanation for accuracy, highlight any misconceptions, and provide encouraging feedback:\n\n**Student's explanation:**\n${text}`
+    );
+  }
+
+  return (
+    <div className="lm-explain-section">
+      <button className="lm-explain-toggle" onClick={() => setExpanded(!expanded)}>
+        <span className="lm-explain-toggle-icon">{expanded ? '\u25BE' : '\u25B8'}</span>
+        <span className="lm-explain-toggle-text">Explain it back: <strong>{title}</strong></span>
+      </button>
+      {expanded && (
+        <div className="lm-explain-body">
+          <p className="lm-explain-prompt">Try explaining what you just learned in your own words. This is one of the most effective ways to strengthen your memory.</p>
+          <textarea
+            className="lm-explain-textarea"
+            placeholder="In my own words, this topic is about..."
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            rows={4}
+          />
+          {onAskTutor && text.trim().length > 10 && (
+            <button className="lm-explain-tutor-btn" onClick={handleTutorCheck}>
+              &#129302; Check my explanation with AI Tutor
+            </button>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* ── Pre-test Before Learning ── */
+function PreTest({ quizData, subjectId, sectionId, onDone }) {
+  const questions = useMemo(() => {
+    if (!quizData?.length) return [];
+    const shuffled = [...quizData].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, Math.min(3, shuffled.length));
+  }, [quizData]);
+
+  const [answers, setAnswers] = useState({});
+  const [submitted, setSubmitted] = useState(false);
+  const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
+
+  function handleSelect(qIdx, optIdx) {
+    if (submitted) return;
+    setAnswers(prev => ({ ...prev, [qIdx]: optIdx }));
+  }
+
+  function handleSubmit() {
+    if (Object.keys(answers).length < questions.length) return;
+    setSubmitted(true);
+
+    // Calculate score
+    let correct = 0;
+    questions.forEach((q, i) => {
+      if (answers[i] === q.correctIndex) correct++;
+    });
+    const score = questions.length > 0 ? correct / questions.length : 0;
+
+    // Save pre-test result
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(`revvy_pretest_${subjectId}_${sectionId}`, JSON.stringify({
+        completed: true,
+        score: correct,
+        total: questions.length,
+        timestamp: Date.now(),
+      }));
+    }
+
+    // Record to strength meter
+    recordPretest(subjectId, sectionId, score);
+  }
+
+  const correctCount = questions.reduce((c, q, i) => c + (answers[i] === q.correctIndex ? 1 : 0), 0);
+  const allCorrect = correctCount === questions.length;
+  const noneCorrect = correctCount === 0;
+
+  if (!questions.length) {
+    onDone?.();
+    return null;
+  }
+
+  return (
+    <div className="lm-pretest-container">
+      <div className="lm-pretest-header">
+        <div className="lm-pretest-icon">&#129504;</div>
+        <h2 className="lm-pretest-title">Quick pre-test</h2>
+        <p className="lm-pretest-subtitle">Let&apos;s see what you already know. This primes your brain for learning.</p>
+      </div>
+
+      {questions.map((q, qIdx) => (
+        <div className="lm-pretest-question" key={qIdx}>
+          <p className="lm-pretest-q-text">{qIdx + 1}. {q.question}</p>
+          <div className="lm-quiz-options">
+            {q.options?.map((option, i) => {
+              let cls = '';
+              if (submitted) {
+                if (i === q.correctIndex) cls = 'correct';
+                else if (i === answers[qIdx] && i !== q.correctIndex) cls = 'incorrect';
+              } else if (answers[qIdx] === i) {
+                cls = 'selected';
+              }
+              return (
+                <button
+                  key={i}
+                  className={`lm-quiz-option ${cls}`}
+                  onClick={() => handleSelect(qIdx, i)}
+                >
+                  <span className="lm-quiz-option-letter">{letters[i]}</span>
+                  {option}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+
+      {!submitted && (
+        <button
+          className="lm-pretest-submit"
+          onClick={handleSubmit}
+          disabled={Object.keys(answers).length < questions.length}
+        >
+          Check my answers
+        </button>
+      )}
+
+      {submitted && (
+        <div className="lm-pretest-result">
+          <div className="lm-pretest-score">
+            {correctCount} / {questions.length} correct
+          </div>
+          <p className="lm-pretest-encouragement">
+            {allCorrect
+              ? 'Impressive \u2014 you already know some of this!'
+              : noneCorrect
+                ? 'Perfect \u2014 your brain is now primed to learn this.'
+                : 'Good start! Your brain is now primed for learning.'}
+          </p>
+          <button className="lm-pretest-continue" onClick={onDone}>
+            Start learning &#8594;
+          </button>
+        </div>
+      )}
     </div>
   );
 }
@@ -157,11 +419,18 @@ export default function LearnModeTab({
   isResuming, onResumeDismiss,
   onComplete, onNavigateToQuiz, onNavigateToTab,
   onAskTutor,
+  dueReviews, onStartReview, onStartMixedReview,
 }) {
   const [showKeyboardHint, setShowKeyboardHint] = useState(false);
   const [isComplete, setIsComplete] = useState(() => {
     if (typeof window === 'undefined') return false;
     return localStorage.getItem(`revvy_complete_${subjectId}_${sectionId}`) === 'true';
+  });
+  const [showPretest, setShowPretest] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    // Show pre-test only on first visit (not resume), if quiz data exists, and not already done
+    const done = localStorage.getItem(`revvy_pretest_${subjectId}_${sectionId}`);
+    return !done && !isResuming && (quizData?.length > 0);
   });
   const containerRef = useRef(null);
 
@@ -173,6 +442,17 @@ export default function LearnModeTab({
   const practiceMap = distributeItems(sortedPractice, totalSteps);
   const quizMap = distributeItems(quizData, totalSteps);
 
+  // Determine practice mode for each distributed practice question (Worked Example Fading)
+  const practiceStepIndices = useMemo(() => Object.keys(practiceMap).map(Number).sort((a, b) => a - b), [practiceMap]);
+  function getPracticeMode(stepIndex) {
+    const ordinal = practiceStepIndices.indexOf(stepIndex);
+    const total = practiceStepIndices.length;
+    if (total <= 1) return 'independent';
+    if (ordinal === 0) return 'worked';
+    if (ordinal === total - 1) return 'independent';
+    return 'guided';
+  }
+
   // Glossary highlighting
   function g(html) {
     return highlightGlossaryTerms(html, glossaryTerms);
@@ -180,12 +460,10 @@ export default function LearnModeTab({
 
   // Auto-scroll to top when navigating
   const scrollToTop = useCallback(() => {
-    // Try scrolling the .tab-content container (parent scroll area)
     const tabContent = document.querySelector('.tab-content');
     if (tabContent) {
       tabContent.scrollTo({ top: 0, behavior: 'smooth' });
     }
-    // Also scroll window in case it's the page scroll
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
@@ -223,6 +501,32 @@ export default function LearnModeTab({
   function handleComplete() {
     if (typeof window !== 'undefined') {
       localStorage.setItem(`revvy_complete_${subjectId}_${sectionId}`, 'true');
+
+      // Snapshot quiz questions for spaced review schedule
+      if (quizData?.length) {
+        try {
+          const existing = JSON.parse(localStorage.getItem('revvy_review_schedule') || '[]');
+          // Don't duplicate if already scheduled
+          if (!existing.find(r => r.sectionId === sectionId && r.subjectId === subjectId)) {
+            const shuffled = [...quizData].sort(() => Math.random() - 0.5);
+            const snapshotQuestions = shuffled.slice(0, Math.min(5, shuffled.length));
+            existing.push({
+              sectionId,
+              subjectId,
+              title: currentSection?.title || 'Unknown section',
+              questions: snapshotQuestions,
+              intervals: [1, 3, 7, 14],
+              currentInterval: 0,
+              nextDue: Date.now() + 1 * 24 * 60 * 60 * 1000, // 1 day from now
+              lastScore: null,
+            });
+            localStorage.setItem('revvy_review_schedule', JSON.stringify(existing));
+          }
+        } catch {}
+      }
+
+      // Record initial review for strength meter
+      recordReview(subjectId, sectionId, null);
     }
     setIsComplete(true);
     onComplete?.();
@@ -239,8 +543,31 @@ export default function LearnModeTab({
     );
   }
 
+  // Pre-test gate (before learning starts)
+  if (showPretest && currentStep === 0) {
+    return (
+      <div className="lm-container">
+        <PreTest
+          quizData={quizData}
+          subjectId={subjectId}
+          sectionId={sectionId}
+          onDone={() => setShowPretest(false)}
+        />
+      </div>
+    );
+  }
+
   // Completion screen
   if (isComplete) {
+    // Count completed sections for mixed review eligibility
+    let completedCount = 0;
+    if (typeof window !== 'undefined') {
+      try {
+        const schedule = JSON.parse(localStorage.getItem('revvy_review_schedule') || '[]');
+        completedCount = schedule.length;
+      } catch {}
+    }
+
     return (
       <div className="lm-complete-screen">
         <div className="lm-complete-icon">
@@ -251,6 +578,10 @@ export default function LearnModeTab({
         </div>
         <h2 className="lm-complete-title">Topic complete</h2>
         <p className="lm-complete-topic">{currentSection?.title}</p>
+
+        {/* Strength meter */}
+        <StrengthMeter subjectId={subjectId} sectionId={sectionId} size="medium" />
+
         <div className="lm-complete-divider" />
         <div className="lm-complete-summary">
           <h3 className="lm-complete-summary-title">What you covered</h3>
@@ -263,6 +594,11 @@ export default function LearnModeTab({
         <button className="lm-complete-quiz-btn" onClick={onNavigateToQuiz}>
           Try the quiz &rarr;
         </button>
+        {completedCount >= 3 && onStartMixedReview && (
+          <button className="lm-complete-mixed-btn" onClick={onStartMixedReview}>
+            Mixed review ({completedCount} topics) &#8644;
+          </button>
+        )}
         <button className="lm-complete-explore-btn" onClick={() => onNavigateToTab?.('content')}>
           Explore this topic
         </button>
@@ -280,6 +616,20 @@ export default function LearnModeTab({
 
   return (
     <div className="lm-container" ref={containerRef}>
+      {/* Review banner */}
+      {dueReviews > 0 && onStartReview && (
+        <div className="lm-review-banner">
+          <span className="lm-review-banner-icon">&#128337;</span>
+          <span className="lm-review-banner-text">
+            {dueReviews} review{dueReviews !== 1 ? 's' : ''} due
+          </span>
+          <button className="lm-review-banner-btn" onClick={onStartReview}>Review now</button>
+          {onStartMixedReview && (
+            <button className="lm-review-banner-mixed-btn" onClick={onStartMixedReview}>Mixed review</button>
+          )}
+        </div>
+      )}
+
       {/* Resume banner */}
       {isResuming && currentStep > 0 && (
         <div className="lm-resume-banner">
@@ -358,11 +708,35 @@ export default function LearnModeTab({
           {/* Inline diagram (if distributed to this step) */}
           {currentDiagram && <InlineDiagram diagram={currentDiagram} />}
 
-          {/* Inline quiz question (if distributed to this step) — key forces reset on step change */}
-          {currentQuiz && <InlineQuiz key={`quiz-${currentStep}`} question={currentQuiz} />}
+          {/* Inline quiz question — key forces reset on step change */}
+          {currentQuiz && (
+            <InlineQuiz
+              key={`quiz-${currentStep}`}
+              question={currentQuiz}
+              subjectId={subjectId}
+              sectionId={sectionId}
+              stepIndex={currentStep}
+            />
+          )}
 
-          {/* Inline practice question (if distributed to this step) */}
-          {currentPractice && <InlinePractice key={`practice-${currentStep}`} question={currentPractice} onAskTutor={onAskTutor} />}
+          {/* Inline practice question with worked example fading */}
+          {currentPractice && (
+            <InlinePractice
+              key={`practice-${currentStep}`}
+              question={currentPractice}
+              onAskTutor={onAskTutor}
+              mode={getPracticeMode(currentStep)}
+            />
+          )}
+
+          {/* Explain It Back prompt */}
+          {currentBlock.title && (
+            <ExplainItBack
+              key={`explain-${currentStep}`}
+              title={currentBlock.title}
+              onAskTutor={onAskTutor}
+            />
+          )}
 
           {/* Keyboard hint */}
           {showKeyboardHint && (
