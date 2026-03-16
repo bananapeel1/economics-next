@@ -279,7 +279,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     }
   }, [activeSubjectId]);
 
-  // Persist Learn Mode section to localStorage
+  // Persist Learn Mode section to localStorage + debounced DB save
   useEffect(() => {
     if (typeof window !== 'undefined' && activeSubjectId && activeSection) {
       localStorage.setItem(
@@ -287,7 +287,15 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
         String(learnModeSection)
       );
     }
-  }, [learnModeSection, activeSubjectId, activeSection]);
+
+    // Debounced DB save for logged-in users (1s)
+    if (user && activeSection && sectionData?.content?.length) {
+      const timer = setTimeout(() => {
+        saveProgress(activeSection, learnModeSection, sectionData.content.length);
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [learnModeSection, activeSubjectId, activeSection, user, sectionData, saveProgress]);
 
   // Fetch glossary terms for active subject
   useEffect(() => {
@@ -479,7 +487,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       setActiveSection(firstId);
       setIsInitial(false);
       setSectionData(null);
-      setActiveTab('content');
+      setActiveTab('learn-mode');
       setContentStepInfo(null);
       fetch(`/api/sections/${firstId}`)
         .then(res => res.ok ? res.json() : null)
@@ -490,14 +498,16 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
 
   function handleSectionChange(sectionId) {
     setActiveSection(sectionId);
-    setActiveTab('content');
+    setActiveTab('learn-mode');
     setSidebarOpen(false);
     setContentStepInfo(null);
 
-    // Learn Mode: check for saved progress on new section
+    // Learn Mode: check for saved progress — prefer DB for logged-in, fallback to localStorage
     if (typeof window !== 'undefined') {
-      const savedStep = localStorage.getItem(`revvy_learnmode_${activeSubjectId}_${sectionId}_section`);
-      const step = savedStep ? parseInt(savedStep, 10) : 0;
+      const dbProgress = user && savedProgress[sectionId];
+      const dbStep = dbProgress ? dbProgress.furthest_step : null;
+      const localStep = localStorage.getItem(`revvy_learnmode_${activeSubjectId}_${sectionId}_section`);
+      const step = dbStep ?? (localStep ? parseInt(localStep, 10) : 0);
       setLearnModeSection(step);
       setLearnModeResuming(step > 0);
     }
@@ -556,6 +566,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
             onNavigateToQuiz={() => handleTabSelect('quiz')}
             onNavigateToTab={handleTabSelect}
             onAskTutor={isPremium ? goToTutor : null}
+            isPremium={isPremium}
             dueReviews={dueReviewCount}
             onStartReview={handleStartReview}
             onStartMixedReview={handleStartMixedReview}

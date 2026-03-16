@@ -3,6 +3,10 @@ import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { highlightGlossaryTerms } from '@/lib/glossary-highlight';
 import { recordReview, recordPretest } from '@/lib/strength';
 import StrengthMeter from './StrengthMeter';
+import RecallCheckpoint from './learn-mode/RecallCheckpoint';
+import ExplainItBackUpgraded from './learn-mode/ExplainItBackUpgraded';
+import PostTest from './learn-mode/PostTest';
+import QuickFireDrill from './learn-mode/QuickFireDrill';
 
 const MARK_COLORS = {
   4: { bg: 'var(--practice-4-bg)', border: 'var(--practice-4-border)', badge: 'var(--practice-4-badge)' },
@@ -322,13 +326,20 @@ function PreTest({ quizData, subjectId, sectionId, onDone }) {
     });
     const score = questions.length > 0 ? correct / questions.length : 0;
 
-    // Save pre-test result
+    // Save pre-test result + questions for post-test comparison
     if (typeof window !== 'undefined') {
       localStorage.setItem(`revvy_pretest_${subjectId}_${sectionId}`, JSON.stringify({
         completed: true,
         score: correct,
         total: questions.length,
         timestamp: Date.now(),
+        questions: questions.map((q, i) => ({
+          question: q.question,
+          options: q.options,
+          correctIndex: q.correctIndex,
+          explanation: q.explanation,
+          userAnswer: answers[i],
+        })),
       }));
     }
 
@@ -381,13 +392,18 @@ function PreTest({ quizData, subjectId, sectionId, onDone }) {
       ))}
 
       {!submitted && (
-        <button
-          className="lm-pretest-submit"
-          onClick={handleSubmit}
-          disabled={Object.keys(answers).length < questions.length}
-        >
-          Check my answers
-        </button>
+        <div className="lm-pretest-actions">
+          <button
+            className="lm-pretest-submit"
+            onClick={handleSubmit}
+            disabled={Object.keys(answers).length < questions.length}
+          >
+            Check my answers
+          </button>
+          <button className="lm-pretest-skip" onClick={onDone}>
+            Skip pre-test &rarr;
+          </button>
+        </div>
       )}
 
       {submitted && (
@@ -418,7 +434,7 @@ export default function LearnModeTab({
   currentStep, onStepChange,
   isResuming, onResumeDismiss,
   onComplete, onNavigateToQuiz, onNavigateToTab,
-  onAskTutor,
+  onAskTutor, isPremium,
   dueReviews, onStartReview, onStartMixedReview,
 }) {
   const [showKeyboardHint, setShowKeyboardHint] = useState(false);
@@ -432,6 +448,7 @@ export default function LearnModeTab({
     const done = localStorage.getItem(`revvy_pretest_${subjectId}_${sectionId}`);
     return !done && !isResuming && (quizData?.length > 0);
   });
+  const [completeView, setCompleteView] = useState('main'); // 'main' | 'posttest' | 'drill'
   const containerRef = useRef(null);
 
   const totalSteps = contentData?.length || 0;
@@ -568,6 +585,35 @@ export default function LearnModeTab({
       } catch {}
     }
 
+    // Check if pre-test data exists for post-test
+    const hasPretestData = typeof window !== 'undefined' &&
+      (() => { try { const d = JSON.parse(localStorage.getItem(`revvy_pretest_${subjectId}_${sectionId}`) || '{}'); return d.questions?.length > 0; } catch { return false; } })();
+
+    // Post-test sub-view
+    if (completeView === 'posttest') {
+      return (
+        <div className="lm-complete-screen">
+          <PostTest
+            subjectId={subjectId}
+            sectionId={sectionId}
+            onClose={() => setCompleteView('main')}
+          />
+        </div>
+      );
+    }
+
+    // Quick fire drill sub-view
+    if (completeView === 'drill') {
+      return (
+        <div className="lm-complete-screen">
+          <QuickFireDrill
+            quizData={quizData}
+            onClose={() => setCompleteView('main')}
+          />
+        </div>
+      );
+    }
+
     return (
       <div className="lm-complete-screen">
         <div className="lm-complete-icon">
@@ -591,6 +637,21 @@ export default function LearnModeTab({
             ))}
           </ul>
         </div>
+
+        {/* Post-test: re-test pre-test questions */}
+        {hasPretestData && (
+          <button className="lm-complete-posttest-btn" onClick={() => setCompleteView('posttest')}>
+            &#128200; Test your improvement
+          </button>
+        )}
+
+        {/* Quick fire drill */}
+        {quizData?.length > 0 && (
+          <button className="lm-complete-drill-btn" onClick={() => setCompleteView('drill')}>
+            &#9889; Quick fire drill ({quizData.length} questions)
+          </button>
+        )}
+
         <button className="lm-complete-quiz-btn" onClick={onNavigateToQuiz}>
           Try the quiz &rarr;
         </button>
@@ -644,8 +705,11 @@ export default function LearnModeTab({
       )}
 
       {/* Progress bar */}
-      <div className="lm-progress-track">
-        <div className="lm-progress-fill" style={{ width: `${progressPct}%` }} />
+      <div className="lm-progress-container">
+        <div className="lm-progress-track">
+          <div className="lm-progress-fill" style={{ width: `${progressPct}%` }} />
+        </div>
+        <span className="lm-progress-label">{Math.round(progressPct)}%</span>
       </div>
 
       {/* Vertical stepper with rail */}
@@ -665,6 +729,14 @@ export default function LearnModeTab({
 
         {/* Main content on the right */}
         <div className="lm-stepper-content">
+          {/* Recall checkpoint — active recall of previous step */}
+          {currentStep > 0 && (
+            <RecallCheckpoint
+              key={`recall-${currentStep}`}
+              previousBlock={contentData[currentStep - 1]}
+            />
+          )}
+
           <div className="lm-section-counter">Section {currentStep + 1} of {totalSteps}</div>
 
           {/* Section title */}
@@ -729,12 +801,13 @@ export default function LearnModeTab({
             />
           )}
 
-          {/* Explain It Back prompt */}
+          {/* Explain It Back prompt with AI grading */}
           {currentBlock.title && (
-            <ExplainItBack
+            <ExplainItBackUpgraded
               key={`explain-${currentStep}`}
               title={currentBlock.title}
               onAskTutor={onAskTutor}
+              isPremium={isPremium}
             />
           )}
 
