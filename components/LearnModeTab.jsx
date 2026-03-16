@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { highlightGlossaryTerms } from '@/lib/glossary-highlight';
 
 const MARK_COLORS = {
@@ -59,10 +59,17 @@ function InlineDiagram({ diagram }) {
   );
 }
 
-/* ── Inline Practice Card ── */
-function InlinePractice({ question }) {
+/* ── Inline Practice Card (with guidance + AI tutor) ── */
+function InlinePractice({ question, onAskTutor }) {
   const [revealed, setRevealed] = useState(false);
   const colors = MARK_COLORS[question.marks] || MARK_COLORS[4];
+
+  function handleAskTutor() {
+    if (!onAskTutor) return;
+    onAskTutor(
+      `Write a full model answer for this ${question.marks}-mark exam question that would achieve full marks:\n\n**Question (${question.marks} marks):** ${question.question}${question.command ? `\n**Command word:** ${question.command}` : ''}\n\nPlease structure the answer exactly as an examiner would expect, include all key points needed for full marks, and explain how each point earns marks. Use relevant economic/business terminology and, where appropriate, include diagram references.`
+    );
+  }
 
   return (
     <div className="lm-practice-card">
@@ -80,6 +87,11 @@ function InlinePractice({ question }) {
             {question.guidance?.split('\n').map((line, i) => (
               <p key={i}>{line}</p>
             ))}
+            {onAskTutor && (
+              <button className="lm-practice-tutor-btn" onClick={handleAskTutor}>
+                &#129302; Get Full Model Answer from Tutor
+              </button>
+            )}
           </div>
         </div>
       </div>
@@ -87,30 +99,99 @@ function InlinePractice({ question }) {
   );
 }
 
+/* ── Inline Quiz Card (MCQ) ── */
+function InlineQuiz({ question }) {
+  const [selected, setSelected] = useState(null);
+  const [answered, setAnswered] = useState(false);
+  const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
+
+  function handleSelect(index) {
+    if (answered) return;
+    setSelected(index);
+    setAnswered(true);
+  }
+
+  const isCorrect = answered && selected === question.correctIndex;
+
+  function getOptionClass(index) {
+    if (!answered) return selected === index ? 'selected' : '';
+    if (index === question.correctIndex) return 'correct';
+    if (index === selected) return 'incorrect';
+    if (index === question.correctIndex) return 'correct-reveal';
+    return '';
+  }
+
+  return (
+    <div className="lm-quiz-card">
+      <div className="lm-card-label">&#128161; Quick quiz</div>
+      <div className="lm-quiz-inner">
+        <p className="lm-quiz-question">{question.question}</p>
+        <div className="lm-quiz-options">
+          {question.options?.map((option, i) => (
+            <button
+              key={i}
+              className={`lm-quiz-option ${getOptionClass(i)}`}
+              onClick={() => handleSelect(i)}
+            >
+              <span className="lm-quiz-option-letter">{letters[i]}</span>
+              {option}
+            </button>
+          ))}
+        </div>
+        {answered && (
+          <div className="lm-quiz-explanation">
+            <strong>{isCorrect ? 'Correct!' : 'Not quite.'}</strong>{' '}
+            {question.explanation}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 /* ── Main Learn Mode Tab ── */
 export default function LearnModeTab({
-  contentData, diagramsData, practiceData, glossaryTerms,
+  contentData, diagramsData, practiceData, quizData, glossaryTerms,
   sectionId, subjectId, currentSection, currentUnit,
   currentStep, onStepChange,
   isResuming, onResumeDismiss,
   onComplete, onNavigateToQuiz, onNavigateToTab,
+  onAskTutor,
 }) {
   const [showKeyboardHint, setShowKeyboardHint] = useState(false);
   const [isComplete, setIsComplete] = useState(() => {
     if (typeof window === 'undefined') return false;
     return localStorage.getItem(`revvy_complete_${subjectId}_${sectionId}`) === 'true';
   });
+  const containerRef = useRef(null);
 
   const totalSteps = contentData?.length || 0;
 
-  // Distribute diagrams and practice questions evenly across steps
+  // Distribute diagrams, practice questions, and quiz questions evenly across steps
   const sortedPractice = [...(practiceData || [])].sort((a, b) => a.marks - b.marks);
   const diagramMap = distributeItems(diagramsData, totalSteps);
   const practiceMap = distributeItems(sortedPractice, totalSteps);
+  const quizMap = distributeItems(quizData, totalSteps);
 
   // Glossary highlighting
   function g(html) {
     return highlightGlossaryTerms(html, glossaryTerms);
+  }
+
+  // Auto-scroll to top when navigating
+  const scrollToTop = useCallback(() => {
+    // Try scrolling the .tab-content container (parent scroll area)
+    const tabContent = document.querySelector('.tab-content');
+    if (tabContent) {
+      tabContent.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    // Also scroll window in case it's the page scroll
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  function navigateToStep(step) {
+    onStepChange(step);
+    setTimeout(scrollToTop, 50);
   }
 
   // Keyboard navigation (desktop)
@@ -118,14 +199,14 @@ export default function LearnModeTab({
     function handleKeyDown(e) {
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
       if (e.key === 'ArrowRight' && currentStep < totalSteps - 1) {
-        onStepChange(currentStep + 1);
+        navigateToStep(currentStep + 1);
       } else if (e.key === 'ArrowLeft' && currentStep > 0) {
-        onStepChange(currentStep - 1);
+        navigateToStep(currentStep - 1);
       }
     }
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentStep, totalSteps, onStepChange]);
+  }, [currentStep, totalSteps]);
 
   // Keyboard hint — show once
   useEffect(() => {
@@ -193,11 +274,12 @@ export default function LearnModeTab({
   const currentBlock = contentData[currentStep];
   const currentDiagram = diagramMap[currentStep];
   const currentPractice = practiceMap[currentStep];
+  const currentQuiz = quizMap[currentStep];
   const isLastStep = currentStep === totalSteps - 1;
   const progressPct = ((currentStep + 1) / totalSteps) * 100;
 
   return (
-    <div className="lm-container">
+    <div className="lm-container" ref={containerRef}>
       {/* Resume banner */}
       {isResuming && currentStep > 0 && (
         <div className="lm-resume-banner">
@@ -206,7 +288,7 @@ export default function LearnModeTab({
           </span>
           <div className="lm-resume-actions">
             <button className="lm-resume-continue" onClick={onResumeDismiss}>Continue</button>
-            <button className="lm-resume-restart" onClick={() => { onStepChange(0); onResumeDismiss?.(); }}>Start over</button>
+            <button className="lm-resume-restart" onClick={() => { navigateToStep(0); onResumeDismiss?.(); }}>Start over</button>
           </div>
         </div>
       )}
@@ -215,76 +297,99 @@ export default function LearnModeTab({
       <div className="lm-progress-track">
         <div className="lm-progress-fill" style={{ width: `${progressPct}%` }} />
       </div>
-      <div className="lm-section-counter">Section {currentStep + 1} of {totalSteps}</div>
 
-      {/* Section title */}
-      <h2 className="lm-section-title">{currentBlock.title || `Section ${currentStep + 1}`}</h2>
+      {/* Vertical stepper with rail */}
+      <div className="lm-stepper-step">
+        {/* Stepper rail on the left */}
+        <div className="lm-stepper-rail">
+          <div
+            className={`lm-stepper-node active`}
+            onClick={() => {}}
+          >
+            <span>{currentStep + 1}</span>
+          </div>
+          {!isLastStep && (
+            <div className={`lm-stepper-line ${currentStep > 0 ? 'filled' : ''}`} />
+          )}
+        </div>
 
-      {/* Content — reuses exact concept-box markup from ContentTab */}
-      <div className="lm-content">
-        {currentBlock.concepts?.map((concept, j) => (
-          <div className="concept-box" key={j} style={concept.accent ? { borderLeftColor: concept.accent } : {}}>
-            <div className="concept-box-title">{concept.title}</div>
-            <div className="concept-box-content">
-              {concept.points && (
-                <ul>
-                  {concept.points.map((point, k) => (
-                    <li key={k} dangerouslySetInnerHTML={{ __html: g(point) }} />
+        {/* Main content on the right */}
+        <div className="lm-stepper-content">
+          <div className="lm-section-counter">Section {currentStep + 1} of {totalSteps}</div>
+
+          {/* Section title */}
+          <h2 className="lm-section-title">{currentBlock.title || `Section ${currentStep + 1}`}</h2>
+
+          {/* Content — reuses exact concept-box markup from ContentTab */}
+          <div className="lm-content">
+            {currentBlock.concepts?.map((concept, j) => (
+              <div className="concept-box" key={j} style={concept.accent ? { borderLeftColor: concept.accent } : {}}>
+                <div className="concept-box-title">{concept.title}</div>
+                <div className="concept-box-content">
+                  {concept.points && (
+                    <ul>
+                      {concept.points.map((point, k) => (
+                        <li key={k} dangerouslySetInnerHTML={{ __html: g(point) }} />
+                      ))}
+                    </ul>
+                  )}
+                  {concept.text && <p dangerouslySetInnerHTML={{ __html: g(concept.text) }} />}
+                  {concept.formula && <div className="formula-box">{concept.formula}</div>}
+                  {concept.formulas?.map((f, k) => (
+                    <div className="formula-box" key={k}>{f}</div>
                   ))}
-                </ul>
-              )}
-              {concept.text && <p dangerouslySetInnerHTML={{ __html: g(concept.text) }} />}
-              {concept.formula && <div className="formula-box">{concept.formula}</div>}
-              {concept.formulas?.map((f, k) => (
-                <div className="formula-box" key={k}>{f}</div>
-              ))}
-            </div>
-            {concept.examTip && (
+                </div>
+                {concept.examTip && (
+                  <div className="exam-tip">
+                    <div className="exam-tip-label">Exam Tip</div>
+                    {concept.examTip}
+                  </div>
+                )}
+              </div>
+            ))}
+            {currentBlock.examTip && (
               <div className="exam-tip">
                 <div className="exam-tip-label">Exam Tip</div>
-                {concept.examTip}
+                {currentBlock.examTip}
               </div>
             )}
           </div>
-        ))}
-        {currentBlock.examTip && (
-          <div className="exam-tip">
-            <div className="exam-tip-label">Exam Tip</div>
-            {currentBlock.examTip}
+
+          {/* Inline diagram (if distributed to this step) */}
+          {currentDiagram && <InlineDiagram diagram={currentDiagram} />}
+
+          {/* Inline quiz question (if distributed to this step) */}
+          {currentQuiz && <InlineQuiz question={currentQuiz} />}
+
+          {/* Inline practice question (if distributed to this step) */}
+          {currentPractice && <InlinePractice question={currentPractice} onAskTutor={onAskTutor} />}
+
+          {/* Keyboard hint */}
+          {showKeyboardHint && (
+            <div className="lm-keyboard-hint">
+              Use <kbd>&larr;</kbd> <kbd>&rarr;</kbd> arrow keys to navigate
+            </div>
+          )}
+
+          {/* Navigation */}
+          <div className="lm-nav">
+            {currentStep > 0 && (
+              <button className="lm-nav-back" onClick={() => navigateToStep(currentStep - 1)}>
+                &larr; Back
+              </button>
+            )}
+            <div className="lm-nav-spacer" />
+            {!isLastStep ? (
+              <button className="lm-nav-next" onClick={() => navigateToStep(currentStep + 1)}>
+                Next section &rarr;
+              </button>
+            ) : (
+              <button className="lm-nav-complete" onClick={handleComplete}>
+                Complete topic &#10003;
+              </button>
+            )}
           </div>
-        )}
-      </div>
-
-      {/* Inline diagram (if distributed to this step) */}
-      {currentDiagram && <InlineDiagram diagram={currentDiagram} />}
-
-      {/* Inline practice question (if distributed to this step) */}
-      {currentPractice && <InlinePractice question={currentPractice} />}
-
-      {/* Keyboard hint */}
-      {showKeyboardHint && (
-        <div className="lm-keyboard-hint">
-          Use <kbd>&larr;</kbd> <kbd>&rarr;</kbd> arrow keys to navigate
         </div>
-      )}
-
-      {/* Navigation */}
-      <div className="lm-nav">
-        {currentStep > 0 && (
-          <button className="lm-nav-back" onClick={() => onStepChange(currentStep - 1)}>
-            &larr; Back
-          </button>
-        )}
-        <div className="lm-nav-spacer" />
-        {!isLastStep ? (
-          <button className="lm-nav-next" onClick={() => onStepChange(currentStep + 1)}>
-            Next section &rarr;
-          </button>
-        ) : (
-          <button className="lm-nav-complete" onClick={handleComplete}>
-            Complete topic &#10003;
-          </button>
-        )}
       </div>
     </div>
   );

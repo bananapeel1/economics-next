@@ -10,7 +10,7 @@ const GREEN_GLOW = [5, 150, 105]; // --accent-green rgb
 const SPRING_CONFIG = { stiffness: 170, damping: 26, mass: 1 };
 const GLOW_SPRING = { stiffness: 120, damping: 20, mass: 0.8 };
 
-function AnimatedTab({ tab, isActive, isPremium, onClick, isNew, isLearnMode, isTopicComplete }) {
+function AnimatedTab({ tab, isActive, isPremium, onClick, isNew, isTopicComplete }) {
   const [isHovered, setIsHovered] = useState(false);
   const isLocked = tab.premium && !isPremium;
 
@@ -33,8 +33,7 @@ function AnimatedTab({ tab, isActive, isPremium, onClick, isNew, isLearnMode, is
   const tiltX = useSpring(0, SPRING_CONFIG);
   const liftY = useSpring(0, SPRING_CONFIG);
   const itemScale = useSpring(1, SPRING_CONFIG);
-  // Learn Mode tab suppresses green glow — it uses its own purple gradient
-  const glowOpacity = useSpring((isActive && !isLearnMode) ? 0.35 : 0, GLOW_SPRING);
+  const glowOpacity = useSpring(isActive ? 0.35 : 0, GLOW_SPRING);
   const glowScale = useSpring(isActive ? 1.1 : 0.8, GLOW_SPRING);
 
   useEffect(() => {
@@ -43,16 +42,16 @@ function AnimatedTab({ tab, isActive, isPremium, onClick, isNew, isLearnMode, is
       tiltX.set(-8);
       liftY.set(-2);
       itemScale.set(1.05);
-      glowOpacity.set(isLearnMode ? 0 : 0.5);
+      glowOpacity.set(0.5);
       glowScale.set(1.2);
     } else {
       tiltX.set(0);
       liftY.set(0);
       itemScale.set(1);
-      glowOpacity.set((isActive && !isLearnMode) ? 0.35 : 0);
+      glowOpacity.set(isActive ? 0.35 : 0);
       glowScale.set(isActive ? 1.1 : 0.8);
     }
-  }, [isHovered, isActive, isLearnMode, tiltX, liftY, itemScale, glowOpacity, glowScale]);
+  }, [isHovered, isActive, tiltX, liftY, itemScale, glowOpacity, glowScale]);
 
   // Always green glow — no per-tab color change
   const [r, g, b] = GREEN_GLOW;
@@ -62,7 +61,6 @@ function AnimatedTab({ tab, isActive, isPremium, onClick, isNew, isLearnMode, is
     'tab-flip-wrapper',
     isActive ? 'tab-active' : '',
     isLocked ? 'tab-premium' : '',
-    isLearnMode ? 'tab-learn-mode' : '',
   ].filter(Boolean).join(' ');
 
   return (
@@ -74,7 +72,7 @@ function AnimatedTab({ tab, isActive, isPremium, onClick, isNew, isLearnMode, is
       role="tab"
       aria-selected={isActive}
     >
-      {/* Radial gradient glow — always green (suppressed for Learn Mode) */}
+      {/* Radial gradient glow — always green */}
       <motion.div
         className="tab-glow"
         style={{
@@ -101,7 +99,7 @@ function AnimatedTab({ tab, isActive, isPremium, onClick, isNew, isLearnMode, is
         {tab.label}
         {isLocked && <span className="tab-lock-icon"><Padlock size={12} /></span>}
         {isNew && !isLocked && <span className="new-badge">New</span>}
-        {isLearnMode && isTopicComplete && <span className="learn-mode-complete-dot" />}
+        {isTopicComplete && <span className="learn-mode-complete-dot" />}
       </motion.button>
     </div>
   );
@@ -125,7 +123,6 @@ export default function AnimatedTabBar({ tabs, activeTab, setActiveTab, isPremiu
             isPremium={isPremium}
             onClick={() => setActiveTab(tab.id)}
             isNew={isNew}
-            isLearnMode={isLearnMode}
             isTopicComplete={isTopicComplete}
           />
         );

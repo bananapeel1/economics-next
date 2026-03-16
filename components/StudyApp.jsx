@@ -507,6 +507,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
           contentData={sectionData.content}
           diagramsData={sectionData.diagrams}
           practiceData={sectionData.practice}
+          quizData={sectionData.quiz}
           glossaryTerms={glossaryTerms}
           sectionId={activeSection}
           subjectId={activeSubjectId}
@@ -521,6 +522,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
           }}
           onNavigateToQuiz={() => handleTabSelect('quiz')}
           onNavigateToTab={handleTabSelect}
+          onAskTutor={isPremium ? goToTutor : null}
         />
       );
       case 'content': return <ContentTab key={activeSection} data={sectionData.content} glossaryTerms={glossaryTerms} onStepChange={handleStepChange} initialPosition={stepperPositions.current[activeSection] || null} />;
