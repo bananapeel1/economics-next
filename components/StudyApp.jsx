@@ -279,7 +279,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     }
   }, [activeSubjectId]);
 
-  // Persist Learn Mode section to localStorage + debounced DB save
+  // Persist Learn Mode section to localStorage
   useEffect(() => {
     if (typeof window !== 'undefined' && activeSubjectId && activeSection) {
       localStorage.setItem(
@@ -287,15 +287,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
         String(learnModeSection)
       );
     }
-
-    // Debounced DB save for logged-in users (1s)
-    if (user && activeSection && sectionData?.content?.length) {
-      const timer = setTimeout(() => {
-        saveProgress(activeSection, learnModeSection, sectionData.content.length);
-      }, 1000);
-      return () => clearTimeout(timer);
-    }
-  }, [learnModeSection, activeSubjectId, activeSection, user, sectionData, saveProgress]);
+  }, [learnModeSection, activeSubjectId, activeSection]);
 
   // Fetch glossary terms for active subject
   useEffect(() => {
@@ -461,6 +453,16 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       }),
     }).catch(() => {});
   }, [user]);
+
+  // Debounced DB save for learn mode step changes (1s)
+  useEffect(() => {
+    if (user && activeSection && sectionData?.content?.length) {
+      const timer = setTimeout(() => {
+        saveProgress(activeSection, learnModeSection, sectionData.content.length);
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [learnModeSection, activeSection, user, sectionData, saveProgress]);
 
   const handleStepChange = useCallback((info) => {
     setContentStepInfo(info);
