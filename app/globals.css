@@ -492,91 +492,131 @@ body {
 
 /* ─── Section Overview (Launchpad) ─── */
 .section-overview { max-width: 640px; margin: 0 auto; }
-/* Resume card — "Pick up where you left off" */
-.overview-resume {
-  display: flex; flex-direction: column; align-items: center;
-  padding: 24px 28px 20px; margin-bottom: 28px;
-  background: var(--bg-card);
-  border: 1.5px solid var(--accent-green);
-  border-radius: 14px;
-  box-shadow: 0 2px 12px var(--green-10);
-}
-.overview-resume-brand {
-  display: flex; align-items: center; gap: 6px;
-  font-size: 12px; font-weight: 700; color: var(--accent-green);
-  text-transform: uppercase; letter-spacing: 0.06em;
-  margin-bottom: 6px;
-}
-.overview-resume-logo { width: 18px; height: 18px; }
-.overview-resume-title {
-  font-size: 18px; font-weight: 700; color: var(--text-primary);
-  margin-bottom: 12px;
-}
-.overview-resume-section {
-  display: flex; align-items: center; gap: 8px;
-  margin-bottom: 14px;
-}
-.overview-resume-section-num {
-  display: inline-block; font-size: 11px; font-weight: 600;
-  padding: 2px 8px; border-radius: 6px;
-  background: var(--green-15); color: var(--accent-green);
-  font-family: 'DM Mono', monospace;
-}
-.overview-resume-section-name {
-  font-size: 14px; font-weight: 600; color: var(--text-secondary);
-}
-.overview-resume-progress {
-  display: flex; align-items: center; gap: 10px; width: 100%;
-  max-width: 320px; margin-bottom: 16px;
-}
-.overview-resume-progress-bar {
-  flex: 1; height: 6px; border-radius: 3px;
-  background: var(--bg-input);
-  overflow: hidden;
-}
-.overview-resume-progress-fill {
-  height: 100%; border-radius: 3px;
-  background: var(--accent-green);
-  transition: width 0.3s ease;
-}
-.overview-resume-progress-text {
-  font-size: 12px; font-weight: 600; color: var(--text-muted);
-  white-space: nowrap;
-}
-.overview-resume-btn {
-  padding: 10px 28px; border-radius: 10px;
-  background: var(--accent-green); color: #fff;
-  font-size: 14px; font-weight: 600;
-  border: none; cursor: pointer;
-  font-family: inherit;
-  transition: all 0.15s;
-}
-.overview-resume-btn:hover {
-  background: var(--accent-green-dark);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px var(--green-25);
-}
 
-.overview-header { text-align: center; margin-bottom: 28px; }
+/* ── Overview Header ── */
+.overview-header { text-align: center; margin-bottom: 24px; }
 .overview-unit-badge {
   display: inline-block; font-size: 11px; font-weight: 600;
-  padding: 3px 10px; border-radius: 20px;
+  padding: 4px 14px; border-radius: 20px;
+  border: 1px solid var(--accent-green);
+  color: var(--accent-green);
+  font-family: 'DM Mono', monospace; margin-bottom: 10px;
+  letter-spacing: 0.02em;
+}
+.overview-title {
+  font-size: 24px; font-weight: 800; color: var(--text-primary);
+  margin: 0; letter-spacing: -0.01em;
+}
+
+/* ── Learn Mode Hero Card ── */
+.overview-hero {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 24px;
+  background: var(--bg-card);
+  border: 1.5px solid rgba(168, 85, 247, 0.4);
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+  margin-bottom: 32px;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.08), inset 0 1px 0 rgba(255,255,255,0.03);
+  width: 100%; text-align: left;
+  color: inherit;
+}
+.overview-hero:hover {
+  border-color: rgba(168, 85, 247, 0.6);
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.15), inset 0 1px 0 rgba(255,255,255,0.05);
+  transform: translateY(-1px);
+}
+.overview-hero-left {
+  display: flex; align-items: center; gap: 16px;
+}
+.overview-hero-icon {
+  width: 52px; height: 52px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 14px;
+  background: rgba(168, 85, 247, 0.15);
+  color: #a855f7;
+  flex-shrink: 0;
+}
+.overview-hero-info {
+  display: flex; flex-direction: column; gap: 3px;
+}
+.overview-hero-label {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--accent-green);
+}
+.overview-hero-name {
+  font-size: 18px; font-weight: 700; color: var(--text-primary);
+}
+.overview-hero-meta {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 13px; color: var(--text-muted);
+}
+.overview-hero-free {
+  display: inline-flex; align-items: center; gap: 3px;
+  padding: 1px 8px; border-radius: 6px;
   background: var(--green-15); color: var(--accent-green);
-  font-family: 'DM Mono', monospace; margin-bottom: 8px;
+  font-size: 11px; font-weight: 600;
 }
-.overview-title { font-size: 22px; font-weight: 700; color: var(--text-primary); margin: 0 0 6px; }
-.overview-subtitle { font-size: 13px; color: var(--text-muted); margin: 0; }
+.overview-hero-progress {
+  display: flex; align-items: center; gap: 8px; margin-top: 4px;
+}
+.overview-hero-progress-bar {
+  width: 120px; height: 4px; border-radius: 2px;
+  background: var(--bg-input); overflow: hidden;
+}
+.overview-hero-progress-fill {
+  height: 100%; border-radius: 2px;
+  background: #a855f7; transition: width 0.3s ease;
+}
+.overview-hero-progress-text {
+  font-size: 11px; font-weight: 600; color: var(--text-muted);
+}
+.overview-hero-btn {
+  padding: 12px 28px; border-radius: 12px;
+  background: #a855f7; color: #fff;
+  font-size: 15px; font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.15s;
+}
+.overview-hero:hover .overview-hero-btn {
+  background: #9333ea;
+  box-shadow: 0 4px 16px rgba(168, 85, 247, 0.3);
+}
+
+/* ── Category Headers ── */
+.overview-category { margin-bottom: 8px; }
+.overview-category-header {
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 16px;
+}
+.overview-category-line {
+  flex: 1; height: 1px;
+  background: var(--border-primary);
+}
+.overview-category-label {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+/* ── Overview Card Grid ── */
 .overview-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 12px; margin-bottom: 28px;
+  display: grid; gap: 12px; margin-bottom: 24px;
 }
+.overview-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.overview-grid-2 { grid-template-columns: repeat(2, 1fr); }
 .overview-card {
   display: flex; flex-direction: column; align-items: center;
-  gap: 6px; padding: 20px 12px;
+  gap: 6px; padding: 22px 12px;
   background: var(--bg-card); border: 1.5px solid var(--border-primary);
-  border-radius: 12px; cursor: pointer;
+  border-radius: 14px; cursor: pointer;
   transition: all 0.15s; font-family: inherit;
-  position: relative;
+  position: relative; color: inherit;
 }
 .overview-card:hover {
   border-color: var(--accent-green); background: var(--green-5);
@@ -586,24 +626,57 @@ body {
 .overview-card.dimmed { opacity: 0.45; }
 .overview-card.dimmed:hover { transform: none; border-color: var(--border-primary); background: var(--bg-card); box-shadow: none; }
 .overview-card-icon { color: var(--accent-green); }
-.overview-card-label { font-size: 14px; font-weight: 600; color: var(--text-primary); }
-.overview-card-count { font-size: 12px; color: var(--text-muted); }
+.overview-card-label { font-size: 15px; font-weight: 700; color: var(--text-primary); }
+.overview-card-count { font-size: 12px; color: var(--text-muted); text-align: center; }
 .overview-card-lock {
-  position: absolute; top: 8px; right: 8px;
+  position: absolute; top: 10px; right: 10px;
   color: var(--text-dim); opacity: 0.5;
 }
-.overview-study-flow {
-  text-align: center; padding: 16px 20px;
-  background: var(--bg-input); border-radius: 10px;
-  font-size: 13px; color: var(--text-tertiary);
+/* Exam resource cards get a subtle blue tint */
+.overview-card-exam { border-color: rgba(96, 165, 250, 0.2); }
+.overview-card-exam:hover {
+  border-color: rgba(96, 165, 250, 0.5);
+  background: rgba(96, 165, 250, 0.05);
 }
-.overview-flow-label { font-weight: 600; color: var(--text-muted); margin-right: 4px; }
-.overview-flow-link {
-  background: none; border: none; color: var(--accent-green);
-  font-weight: 600; cursor: pointer; text-decoration: underline;
-  font-family: inherit; font-size: 13px;
+.overview-card-exam .overview-card-icon { color: #60a5fa; }
+/* Premium cards get muted styling when locked */
+.overview-card-premium { opacity: 0.65; }
+.overview-card-premium:hover { opacity: 1; }
+
+/* ── Premium CTA Bar ── */
+.overview-cta-bar {
+  display: flex; align-items: center; gap: 12px;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(139, 92, 246, 0.1));
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 14px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.overview-flow-link:hover { color: var(--accent-green-light); }
+.overview-cta-icon { font-size: 18px; flex-shrink: 0; }
+.overview-cta-text {
+  font-size: 13px; color: var(--text-secondary);
+  flex: 1; min-width: 200px;
+}
+.overview-cta-cancel {
+  font-size: 12px; color: var(--text-dim);
+  white-space: nowrap;
+}
+.overview-cta-btn {
+  padding: 8px 20px; border-radius: 10px;
+  background: #a855f7; color: #fff;
+  font-size: 13px; font-weight: 700;
+  border: none; cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.overview-cta-btn:hover {
+  background: #9333ea;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
+}
 
 /* Concept boxes */
 .concept-box {
@@ -880,8 +953,25 @@ body {
   .tab-glow { display: none; }
   .tab-icon svg { width: 14px; height: 14px; }
   .tab-content-body { padding: 20px 14px calc(60px + env(safe-area-inset-bottom, 0px)); }
-  .overview-grid { grid-template-columns: repeat(2, 1fr); }
-  .overview-title { font-size: 18px; }
+  .overview-grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .overview-title { font-size: 20px; }
+  .overview-hero {
+    flex-direction: column; align-items: stretch; gap: 14px;
+    padding: 16px 18px;
+  }
+  .overview-hero-left { gap: 12px; }
+  .overview-hero-icon { width: 44px; height: 44px; border-radius: 12px; }
+  .overview-hero-icon svg { width: 22px; height: 22px; }
+  .overview-hero-name { font-size: 16px; }
+  .overview-hero-btn {
+    text-align: center; padding: 10px 20px;
+    font-size: 14px; border-radius: 10px;
+  }
+  .overview-cta-bar {
+    flex-direction: column; text-align: center; gap: 8px;
+    padding: 14px 16px;
+  }
+  .overview-cta-text { min-width: auto; text-align: center; }
   .flashcard, .flashcard-progress { max-width: 100%; }
   .tutor-container { height: calc(100vh - 200px); height: calc(100dvh - 200px); }
   .sidebar-collapse-btn, .sidebar-expand-btn { display: none; }

@@ -36,83 +36,164 @@ const allTabs = [
 ];
 
 /* ── Section Overview (Dashboard Launchpad) ── */
-const OVERVIEW_FEATURES = [
-  { id: 'learn-mode', label: 'Learn', Icon: LearnModeIcon, dataKey: 'content', unit: 'steps' },
-  { id: 'notes', label: 'Notes', Icon: NotesIcon, dataKey: 'notes', unit: 'sections' },
-  { id: 'flashcards', label: 'Flashcards', Icon: CardsBlank, dataKey: 'flashcards', unit: 'cards', premium: true },
-  { id: 'quiz', label: 'Quiz', Icon: QuizIcon, dataKey: 'quiz', unit: 'questions', premium: true },
-  { id: 'practice', label: 'Practice', Icon: DrawerAlt, dataKey: 'practice', unit: 'questions' },
-  { id: 'tutor', label: 'AI Tutor', Icon: TutorIcon, dataKey: null, unit: null, premium: true },
-];
-
 function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPremium, user, savedProgress }) {
-  const availableIds = new Set(tabs.map(t => t.id));
-  const features = OVERVIEW_FEATURES.filter(f => availableIds.has(f.id));
+  const contentSteps = sectionData?.content?.length || 0;
+  const notesSections = sectionData?.notes?.length || 0;
+  const diagramCount = sectionData?.diagrams?.length || 0;
+  const practiceCount = sectionData?.practice?.length || 0;
+  const flashcardCount = sectionData?.flashcards?.length || 0;
+  const quizCount = sectionData?.quiz?.length || 0;
+  const estMinutes = Math.max(5, Math.round(contentSteps * 1.6));
+  const hasDiagrams = tabs.some(t => t.id === 'diagrams');
 
-  // "Pick up where you left off" — show for logged-in users with progress on this section
   const progress = user && savedProgress ? savedProgress[section?.id] : null;
   const progressPct = progress
     ? Math.round(((progress.furthest_step + 1) / progress.total_steps) * 100)
     : 0;
+  const hasProgress = !!progress;
 
   return (
     <div className="section-overview">
-      {/* Branded resume card for logged-in users */}
-      {user && progress && (
-        <div className="overview-resume">
-          <div className="overview-resume-brand">
-            <img src="/logo.svg" alt="Revvy Learn" className="overview-resume-logo" />
-            Revvy Learn
-          </div>
-          <div className="overview-resume-title">Pick up where you left off</div>
-          <div className="overview-resume-section">
-            <span className="overview-resume-section-num">Section {section?.number}</span>
-            <span className="overview-resume-section-name">{section?.title}</span>
-          </div>
-          <div className="overview-resume-progress">
-            <div className="overview-resume-progress-bar">
-              <div className="overview-resume-progress-fill" style={{ width: `${progressPct}%` }} />
-            </div>
-            <span className="overview-resume-progress-text">{progressPct}% complete</span>
-          </div>
-          <button className="overview-resume-btn" onClick={() => onTabSelect('learn-mode')}>
-            Continue Learning &#8594;
-          </button>
-        </div>
-      )}
-
       <div className="overview-header">
         <div className="overview-unit-badge">Unit {unit?.number}: {unit?.title}</div>
         <h2 className="overview-title">{section?.title}</h2>
-        <p className="overview-subtitle">{user && progress ? 'Or explore other tabs:' : 'Choose where to start:'}</p>
       </div>
-      <div className="overview-grid">
-        {features.map(f => {
-          const count = f.dataKey ? (sectionData?.[f.dataKey]?.length || 0) : null;
-          const isEmpty = f.dataKey && count === 0;
-          const isLocked = f.premium && !isPremium;
-          return (
-            <button
-              key={f.id}
-              className={`overview-card ${isEmpty ? 'dimmed' : ''}`}
-              onClick={() => onTabSelect(f.id)}
-            >
-              <span className="overview-card-icon"><f.Icon size={24} /></span>
-              <span className="overview-card-label">{f.label}</span>
-              {isLocked && <span className="overview-card-lock"><Padlock size={12} /></span>}
-              <span className="overview-card-count">
-                {isEmpty ? 'Coming soon' : count !== null ? `${count} ${f.unit}` : 'Ask anything'}
-              </span>
+
+      {/* ── Learn Mode Hero Card ── */}
+      <button className="overview-hero" onClick={() => onTabSelect('learn-mode')}>
+        <div className="overview-hero-left">
+          <div className="overview-hero-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <div className="overview-hero-info">
+            <div className="overview-hero-label">RECOMMENDED &middot; START HERE</div>
+            <div className="overview-hero-name">Learn Mode</div>
+            <div className="overview-hero-meta">
+              <span className="overview-hero-free">&#10003; Free</span>
+              {contentSteps} steps &middot; ~{estMinutes} mins
+            </div>
+            {hasProgress && (
+              <div className="overview-hero-progress">
+                <div className="overview-hero-progress-bar">
+                  <div className="overview-hero-progress-fill" style={{ width: `${progressPct}%` }} />
+                </div>
+                <span className="overview-hero-progress-text">{progressPct}%</span>
+              </div>
+            )}
+          </div>
+        </div>
+        <span className="overview-hero-btn">
+          {hasProgress ? 'Continue learning \u2192' : 'Start learning \u2192'}
+        </span>
+      </button>
+
+      {/* ── Free Resources ── */}
+      <div className="overview-category">
+        <div className="overview-category-header">
+          <span className="overview-category-line" />
+          <span className="overview-category-label">FREE RESOURCES</span>
+          <span className="overview-category-line" />
+        </div>
+        <div className={`overview-grid ${hasDiagrams ? 'overview-grid-3' : 'overview-grid-2'}`}>
+          <button className="overview-card" onClick={() => onTabSelect('notes')}>
+            <span className="overview-card-icon"><NotesIcon size={24} /></span>
+            <span className="overview-card-label">Content</span>
+            <span className="overview-card-count">{notesSections || contentSteps} sections</span>
+          </button>
+          {hasDiagrams && (
+            <button className={`overview-card ${diagramCount === 0 ? 'dimmed' : ''}`} onClick={() => onTabSelect('diagrams')}>
+              <span className="overview-card-icon"><ChartHistogram size={24} /></span>
+              <span className="overview-card-label">Diagrams</span>
+              <span className="overview-card-count">{diagramCount > 0 ? 'All annotated' : 'Coming soon'}</span>
             </button>
-          );
-        })}
+          )}
+          <button className={`overview-card ${practiceCount === 0 ? 'dimmed' : ''}`} onClick={() => onTabSelect('practice')}>
+            <span className="overview-card-icon"><DrawerAlt size={24} /></span>
+            <span className="overview-card-label">Practice</span>
+            <span className="overview-card-count">{practiceCount} questions</span>
+          </button>
+        </div>
       </div>
-      <div className="overview-study-flow">
-        <span className="overview-flow-label">Suggested flow:</span>
-        {' '}Start with <button className="overview-flow-link" onClick={() => onTabSelect('learn-mode')}>Learn</button>
-        {' \u2192 '}test with <button className="overview-flow-link" onClick={() => onTabSelect('flashcards')}>Flashcards</button>
-        {' \u2192 '}take the <button className="overview-flow-link" onClick={() => onTabSelect('quiz')}>Quiz</button>
+
+      {/* ── Exam Resources ── */}
+      <div className="overview-category">
+        <div className="overview-category-header">
+          <span className="overview-category-line" />
+          <span className="overview-category-label">EXAM RESOURCES</span>
+          <span className="overview-category-line" />
+        </div>
+        <div className="overview-grid overview-grid-2">
+          <button className="overview-card overview-card-exam" onClick={() => { window.location.href = '/model-answers'; }}>
+            <span className="overview-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M9 11l3 3L22 4"/>
+                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+              </svg>
+            </span>
+            <span className="overview-card-label">Model Answers</span>
+            <span className="overview-card-count">Examiner-level worked answers</span>
+          </button>
+          <button className="overview-card overview-card-exam" onClick={() => { window.location.href = '/topic-links'; }}>
+            <span className="overview-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="18" cy="5" r="3"/>
+                <circle cx="6" cy="12" r="3"/>
+                <circle cx="18" cy="19" r="3"/>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+              </svg>
+            </span>
+            <span className="overview-card-label">Topic Links</span>
+            <span className="overview-card-count">How topics connect across units</span>
+          </button>
+        </div>
       </div>
+
+      {/* ── Premium ── */}
+      <div className="overview-category">
+        <div className="overview-category-header">
+          <span className="overview-category-line" />
+          <span className="overview-category-label">{isPremium ? 'PREMIUM' : 'PREMIUM \u2014 3-DAY FREE TRIAL'}</span>
+          <span className="overview-category-line" />
+        </div>
+        <div className="overview-grid overview-grid-3">
+          <button className="overview-card overview-card-premium" onClick={() => onTabSelect('flashcards')}>
+            {!isPremium && <span className="overview-card-lock"><Padlock size={12} /></span>}
+            <span className="overview-card-icon"><CardsBlank size={24} /></span>
+            <span className="overview-card-label">Flashcards</span>
+            <span className="overview-card-count">{flashcardCount} cards</span>
+          </button>
+          <button className="overview-card overview-card-premium" onClick={() => onTabSelect('quiz')}>
+            {!isPremium && <span className="overview-card-lock"><Padlock size={12} /></span>}
+            <span className="overview-card-icon"><QuizIcon size={24} /></span>
+            <span className="overview-card-label">Quiz</span>
+            <span className="overview-card-count">{quizCount} questions</span>
+          </button>
+          <button className="overview-card overview-card-premium" onClick={() => onTabSelect('tutor')}>
+            {!isPremium && <span className="overview-card-lock"><Padlock size={12} /></span>}
+            <span className="overview-card-icon"><TutorIcon size={24} /></span>
+            <span className="overview-card-label">AI Tutor</span>
+            <span className="overview-card-count">Ask anything</span>
+          </button>
+        </div>
+      </div>
+
+      {/* ── Premium CTA Bar ── */}
+      {!isPremium && (
+        <div className="overview-cta-bar">
+          <span className="overview-cta-icon">&#9889;</span>
+          <span className="overview-cta-text">
+            Unlock Flashcards, Quiz &amp; AI Tutor &mdash; <strong>3 days free</strong>, then &euro;0.99/month
+          </span>
+          <span className="overview-cta-cancel">Cancel anytime</span>
+          <button className="overview-cta-btn" onClick={(e) => { e.stopPropagation(); window.location.href = '/upgrade'; }}>
+            Try free &rarr;
+          </button>
+        </div>
+      )}
     </div>
   );
 }
@@ -279,7 +360,13 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     }
   }, [activeSubjectId]);
 
-  // Persist Learn Mode section to localStorage
+  // ⚠️  TDZ GUARD: Effects that reference `saveProgress` (defined below with useCallback)
+  // MUST be placed AFTER the saveProgress definition (~line 435). Placing them here
+  // causes a "Cannot access 'saveProgress' before initialization" ReferenceError
+  // because useCallback variables are in the temporal dead zone before their declaration.
+  // See commit 45d4583 for the fix.
+
+  // Persist Learn Mode section to localStorage (no DB dependency — safe here)
   useEffect(() => {
     if (typeof window !== 'undefined' && activeSubjectId && activeSection) {
       localStorage.setItem(
