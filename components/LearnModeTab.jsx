@@ -358,11 +358,11 @@ export default function LearnModeTab({
           {/* Inline diagram (if distributed to this step) */}
           {currentDiagram && <InlineDiagram diagram={currentDiagram} />}
 
-          {/* Inline quiz question (if distributed to this step) */}
-          {currentQuiz && <InlineQuiz question={currentQuiz} />}
+          {/* Inline quiz question (if distributed to this step) — key forces reset on step change */}
+          {currentQuiz && <InlineQuiz key={`quiz-${currentStep}`} question={currentQuiz} />}
 
           {/* Inline practice question (if distributed to this step) */}
-          {currentPractice && <InlinePractice question={currentPractice} onAskTutor={onAskTutor} />}
+          {currentPractice && <InlinePractice key={`practice-${currentStep}`} question={currentPractice} onAskTutor={onAskTutor} />}
 
           {/* Keyboard hint */}
           {showKeyboardHint && (

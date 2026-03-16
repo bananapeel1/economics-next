@@ -18,13 +18,12 @@ import AnimatedTabBar from './AnimatedTabBar';
 import LearnModeTab from './LearnModeTab';
 import { BookAlt, Notes as NotesIcon, ChartHistogram, DrawerAlt, CardsBlank, Quiz as QuizIcon, Mistakes as MistakesIcon, Tutor as TutorIcon, Star, Padlock, LearnMode as LearnModeIcon } from './Icons';
 
-const FREE_TABS = new Set(['learn-mode', 'content', 'notes', 'diagrams', 'practice']);
+const FREE_TABS = new Set(['learn-mode', 'content', 'notes', 'diagrams', 'practice']); // content kept for sidebar access
 const PREVIEW_TABS = new Set(['flashcards', 'quiz', 'extras']); // Show preview then paywall (signed-in only)
 const PREMIUM_TABS = new Set(['mistakes', 'tutor']); // Full paywall block
 
 const allTabs = [
   { id: 'learn-mode', label: 'Learn', Icon: LearnModeIcon },
-  { id: 'content', label: 'Content', Icon: BookAlt },
   { id: 'notes', label: 'Notes', Icon: NotesIcon },
   { id: 'diagrams', label: 'Diagrams', Icon: ChartHistogram, subjects: ['economics'] },
   { id: 'practice', label: 'Practice', Icon: DrawerAlt },
@@ -37,7 +36,7 @@ const allTabs = [
 
 /* ── Section Overview (Dashboard Launchpad) ── */
 const OVERVIEW_FEATURES = [
-  { id: 'content', label: 'Content', Icon: BookAlt, dataKey: 'content', unit: 'steps' },
+  { id: 'learn-mode', label: 'Learn', Icon: LearnModeIcon, dataKey: 'content', unit: 'steps' },
   { id: 'notes', label: 'Notes', Icon: NotesIcon, dataKey: 'notes', unit: 'sections' },
   { id: 'flashcards', label: 'Flashcards', Icon: CardsBlank, dataKey: 'flashcards', unit: 'cards', premium: true },
   { id: 'quiz', label: 'Quiz', Icon: QuizIcon, dataKey: 'quiz', unit: 'questions', premium: true },
@@ -75,7 +74,7 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
             </div>
             <span className="overview-resume-progress-text">{progressPct}% complete</span>
           </div>
-          <button className="overview-resume-btn" onClick={() => onTabSelect('content')}>
+          <button className="overview-resume-btn" onClick={() => onTabSelect('learn-mode')}>
             Continue Learning &#8594;
           </button>
         </div>
@@ -109,7 +108,7 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
       </div>
       <div className="overview-study-flow">
         <span className="overview-flow-label">Suggested flow:</span>
-        {' '}Start with <button className="overview-flow-link" onClick={() => onTabSelect('content')}>Content</button>
+        {' '}Start with <button className="overview-flow-link" onClick={() => onTabSelect('learn-mode')}>Learn</button>
         {' \u2192 '}test with <button className="overview-flow-link" onClick={() => onTabSelect('flashcards')}>Flashcards</button>
         {' \u2192 '}take the <button className="overview-flow-link" onClick={() => onTabSelect('quiz')}>Quiz</button>
       </div>
@@ -567,6 +566,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
           visitedFeatures={visitedFeatures}
           onResourceVisit={markFeatureVisited}
           learnModeCompletions={learnModeCompletions}
+          onTabSelect={handleTabSelect}
         />
 
         <div className="main-content">

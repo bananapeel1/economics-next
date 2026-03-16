@@ -2,9 +2,9 @@
 import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { useAuth } from './AuthProvider';
-import { Clipboard, Glossary, Document, CardClub, PdfFile, NetworkGraph, ModelAnswer } from './Icons';
+import { Clipboard, Glossary, Document, CardClub, PdfFile, NetworkGraph, ModelAnswer, BookAlt } from './Icons';
 
-export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, sections, units, activeSection, onSectionChange, isOpen, isCollapsed, onToggleCollapse, contentStepInfo, savedProgress, visitedFeatures = {}, onResourceVisit, learnModeCompletions = {} }) {
+export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, sections, units, activeSection, onSectionChange, isOpen, isCollapsed, onToggleCollapse, contentStepInfo, savedProgress, visitedFeatures = {}, onResourceVisit, learnModeCompletions = {}, onTabSelect }) {
   const { user, isPremium } = useAuth();
   const [moreOpen, setMoreOpen] = useState(false);
 
@@ -140,9 +140,15 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
         );
       })}
 
-      {/* Resources section — top 3 always visible */}
+      {/* Resources section — top items always visible */}
       <div className="sidebar-resources">
         <div className="sidebar-resources-title">Resources</div>
+        {onTabSelect && (
+          <button className="sidebar-resource-link sidebar-content-link" onClick={() => onTabSelect('content')}>
+            <span className="sidebar-resource-icon"><BookAlt size={16} /></span>
+            Content Explorer
+          </button>
+        )}
         <Link href="/model-answers" className="sidebar-resource-link">
           <span className="sidebar-resource-icon"><ModelAnswer size={16} /></span>
           Model Answers

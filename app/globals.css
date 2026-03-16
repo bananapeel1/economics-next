@@ -1272,6 +1272,10 @@ body {
 .sidebar-resource-link:hover { color: var(--text-primary); background: var(--green-5); }
 .sidebar-resource-icon { display: inline-flex; align-items: center; vertical-align: middle; color: var(--text-dim); }
 .sidebar-resource-link:hover .sidebar-resource-icon { color: var(--accent-green); }
+button.sidebar-resource-link {
+  width: 100%; background: none; border: none;
+  cursor: pointer; font-family: inherit; text-align: left;
+}
 .collapsed .sidebar-resources { display: none; }
 .collapsed .sidebar-break-time { display: none; }
 
@@ -1448,23 +1452,24 @@ body {
 }
 .lm-practice-answer.open { max-height: 800px; }
 .lm-practice-answer-inner {
-  background: var(--accent-green-dark, #047857); color: #fff;
+  background: var(--green-light-6);
+  border: 1px solid var(--green-light-20);
   border-radius: 12px; padding: 16px 20px;
   font-size: 14px; line-height: 1.7; margin-top: 10px;
+  color: var(--text-secondary);
 }
-[data-theme="dark"] .lm-practice-answer-inner { background: rgba(5, 150, 105, 0.25); }
 .lm-practice-answer-inner p { margin: 0 0 6px; }
 .lm-practice-answer-inner p:last-child { margin: 0; }
 .lm-practice-tutor-btn {
   display: flex; align-items: center; gap: 8px;
   margin-top: 12px; padding: 10px 16px;
-  background: rgba(255,255,255,0.12); color: #fff;
-  border: 1.5px solid rgba(255,255,255,0.2);
+  background: var(--accent-green); color: #fff;
+  border: none;
   border-radius: 12px; font-size: 13px; font-weight: 600;
   cursor: pointer; font-family: inherit; transition: all 0.15s;
   width: 100%;
 }
-.lm-practice-tutor-btn:hover { background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.35); }
+.lm-practice-tutor-btn:hover { background: var(--accent-green-dark); }
 
 /* Quiz card inner */
 .lm-quiz-inner {
