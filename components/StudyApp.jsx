@@ -71,7 +71,7 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
             <div className="overview-hero-label">RECOMMENDED &middot; START HERE</div>
             <div className="overview-hero-name">Learn Mode</div>
             <div className="overview-hero-meta">
-              <span className="overview-hero-free">&#10003; Free</span>
+              {!isPremium && <span className="overview-hero-free">&#10003; Free</span>}
               {contentSteps} steps
             </div>
             {hasProgress && (
