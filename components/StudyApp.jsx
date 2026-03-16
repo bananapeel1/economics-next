@@ -17,6 +17,7 @@ import PaywallOverlay from './PaywallOverlay';
 import AnimatedTabBar from './AnimatedTabBar';
 import LearnModeTab from './LearnModeTab';
 import { SpacedReview, MixedReview, countDueReviews, getDueReviews } from './ReviewMode';
+import TrialStrip from './TrialStrip';
 import { BookAlt, Notes as NotesIcon, ChartHistogram, DrawerAlt, CardsBlank, Quiz as QuizIcon, Mistakes as MistakesIcon, Tutor as TutorIcon, Star, Padlock, LearnMode as LearnModeIcon } from './Icons';
 
 const FREE_TABS = new Set(['learn-mode', 'content', 'notes', 'diagrams', 'practice']); // content kept for sidebar access
@@ -585,6 +586,8 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
 
   return (
     <>
+      <TrialStrip />
+
       <div className="mobile-header">
         <button className="hamburger" onClick={() => setSidebarOpen(true)}>&#9776;</button>
         <span className="mobile-title">{currentSection?.short_title}</span>

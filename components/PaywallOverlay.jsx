@@ -68,7 +68,7 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
     return (
       <div className="preview-paywall-banner">
         <h3 className="preview-paywall-title">Unlock All {feature}</h3>
-        <p className="preview-paywall-desc">Full access to every section &mdash; just &euro;0.99/month.</p>
+        <p className="preview-paywall-desc">Full access to every section &mdash; just <strong>&euro;0.99/month</strong>. Cheaper than a coffee.</p>
 
         <div className="paywall-inline-features">
           {FEATURES.map(f => (
@@ -128,6 +128,7 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
             <span className="paywall-price-period">/ month</span>
           </div>
           <div className="paywall-price-trial">3-day free trial</div>
+          <div className="paywall-price-value">Cheaper than a single coffee &mdash; for unlimited revision tools</div>
         </div>
 
         {/* Feature checklist */}
