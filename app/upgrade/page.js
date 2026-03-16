@@ -106,7 +106,11 @@ export default function UpgradePage() {
               </div>
               <div className="upgrade-exclusive-item">
                 <span className="upgrade-feature-check green">&#10003;</span>
-                <strong>Common mistakes analysis by topic</strong>
+                <strong>Model answers for every topic</strong>
+              </div>
+              <div className="upgrade-exclusive-item">
+                <span className="upgrade-feature-check green">&#10003;</span>
+                <strong>Analysis chains for structured evaluation</strong>
               </div>
             </div>
 
@@ -125,7 +129,7 @@ export default function UpgradePage() {
               <div className="upgrade-feature">
                 <span className="upgrade-feature-check green">&#10003;</span>
                 <div>
-                  <strong>Timed Quizzes + Feedback</strong>
+                  <strong>Quizzes + Feedback</strong>
                   <span className="upgrade-feature-desc">Examiner-style marking</span>
                 </div>
               </div>

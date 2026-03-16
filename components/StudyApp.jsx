@@ -43,7 +43,6 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
   const practiceCount = sectionData?.practice?.length || 0;
   const flashcardCount = sectionData?.flashcards?.length || 0;
   const quizCount = sectionData?.quiz?.length || 0;
-  const estMinutes = Math.max(5, Math.round(contentSteps * 1.6));
   const hasDiagrams = tabs.some(t => t.id === 'diagrams');
 
   const progress = user && savedProgress ? savedProgress[section?.id] : null;
@@ -73,7 +72,7 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
             <div className="overview-hero-name">Learn Mode</div>
             <div className="overview-hero-meta">
               <span className="overview-hero-free">&#10003; Free</span>
-              {contentSteps} steps &middot; ~{estMinutes} mins
+              {contentSteps} steps
             </div>
             {hasProgress && (
               <div className="overview-hero-progress">

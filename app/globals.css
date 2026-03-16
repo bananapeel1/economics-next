@@ -513,19 +513,19 @@ body {
   display: flex; align-items: center; justify-content: space-between;
   padding: 20px 24px;
   background: var(--bg-card);
-  border: 1.5px solid rgba(168, 85, 247, 0.4);
+  border: 1.5px solid var(--green-30);
   border-radius: 16px;
   cursor: pointer;
   transition: all 0.2s;
   font-family: inherit;
   margin-bottom: 32px;
-  box-shadow: 0 0 20px rgba(168, 85, 247, 0.08), inset 0 1px 0 rgba(255,255,255,0.03);
+  box-shadow: 0 0 20px var(--green-10), inset 0 1px 0 rgba(255,255,255,0.03);
   width: 100%; text-align: left;
   color: inherit;
 }
 .overview-hero:hover {
-  border-color: rgba(168, 85, 247, 0.6);
-  box-shadow: 0 0 30px rgba(168, 85, 247, 0.15), inset 0 1px 0 rgba(255,255,255,0.05);
+  border-color: var(--green-50);
+  box-shadow: 0 0 30px var(--green-15), inset 0 1px 0 rgba(255,255,255,0.05);
   transform: translateY(-1px);
 }
 .overview-hero-left {
@@ -535,8 +535,8 @@ body {
   width: 52px; height: 52px;
   display: flex; align-items: center; justify-content: center;
   border-radius: 14px;
-  background: rgba(168, 85, 247, 0.15);
-  color: #a855f7;
+  background: var(--green-15);
+  color: var(--accent-green);
   flex-shrink: 0;
 }
 .overview-hero-info {
@@ -569,22 +569,22 @@ body {
 }
 .overview-hero-progress-fill {
   height: 100%; border-radius: 2px;
-  background: #a855f7; transition: width 0.3s ease;
+  background: var(--accent-green); transition: width 0.3s ease;
 }
 .overview-hero-progress-text {
   font-size: 11px; font-weight: 600; color: var(--text-muted);
 }
 .overview-hero-btn {
   padding: 12px 28px; border-radius: 12px;
-  background: #a855f7; color: #fff;
+  background: var(--accent-green); color: #fff;
   font-size: 15px; font-weight: 600;
   white-space: nowrap;
   flex-shrink: 0;
   transition: all 0.15s;
 }
 .overview-hero:hover .overview-hero-btn {
-  background: #9333ea;
-  box-shadow: 0 4px 16px rgba(168, 85, 247, 0.3);
+  background: var(--accent-green-dark);
+  box-shadow: 0 4px 16px var(--green-25);
 }
 
 /* ── Category Headers ── */
@@ -647,8 +647,8 @@ body {
 .overview-cta-bar {
   display: flex; align-items: center; gap: 12px;
   padding: 16px 24px;
-  background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(139, 92, 246, 0.1));
-  border: 1px solid rgba(168, 85, 247, 0.25);
+  background: linear-gradient(135deg, var(--green-15), var(--green-10));
+  border: 1px solid var(--green-25);
   border-radius: 14px;
   margin-top: 8px;
   flex-wrap: wrap;
@@ -665,7 +665,7 @@ body {
 }
 .overview-cta-btn {
   padding: 8px 20px; border-radius: 10px;
-  background: #a855f7; color: #fff;
+  background: var(--accent-green); color: #fff;
   font-size: 13px; font-weight: 700;
   border: none; cursor: pointer;
   font-family: inherit;
@@ -673,9 +673,9 @@ body {
   white-space: nowrap;
 }
 .overview-cta-btn:hover {
-  background: #9333ea;
+  background: var(--accent-green-dark);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
+  box-shadow: 0 4px 12px var(--green-25);
 }
 
 /* Concept boxes */
