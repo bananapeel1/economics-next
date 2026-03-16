@@ -21,8 +21,8 @@ import TrialStrip from './TrialStrip';
 import { BookAlt, Notes as NotesIcon, ChartHistogram, DrawerAlt, CardsBlank, Quiz as QuizIcon, Mistakes as MistakesIcon, Tutor as TutorIcon, Star, Padlock, LearnMode as LearnModeIcon } from './Icons';
 
 const FREE_TABS = new Set(['learn-mode', 'content', 'notes', 'diagrams', 'practice']); // content kept for sidebar access
-const PREVIEW_TABS = new Set(['flashcards', 'quiz', 'extras']); // Show preview then paywall (signed-in only)
-const PREMIUM_TABS = new Set(['mistakes', 'tutor']); // Full paywall block
+const PREVIEW_TABS = new Set([]); // (reserved for future preview-then-paywall tabs)
+const PREMIUM_TABS = new Set(['flashcards', 'quiz', 'mistakes', 'tutor', 'extras']); // Full paywall block
 
 const allTabs = [
   { id: 'learn-mode', label: 'Learn', Icon: LearnModeIcon },
