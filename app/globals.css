@@ -715,7 +715,12 @@ body {
 .diagram-title { font-size: 16px; font-weight: 700; color: var(--text-primary); margin-bottom: 16px; }
 .diagram-description { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.6; }
 .diagram-svg-wrapper { display: flex; justify-content: center; padding: 16px 0; }
-.diagram-svg-wrapper svg { max-width: 100%; height: auto; }
+.diagram-svg-wrapper svg { max-width: 100%; height: auto; display: block; }
+.diagram-svg-wrapper svg text { font-family: 'DM Sans', system-ui, sans-serif; }
+.diagram-svg-wrapper svg line,
+.diagram-svg-wrapper svg path,
+.diagram-svg-wrapper svg polyline,
+.diagram-svg-wrapper svg circle { shape-rendering: geometricPrecision; }
 .diagram-checklist { background: var(--bg-input); border: 1px solid var(--border-primary); border-radius: 8px; padding: 16px 20px; margin-top: 16px; }
 .diagram-checklist-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-amber); margin-bottom: 8px; }
 .diagram-checklist ul { list-style: none; padding: 0; }
@@ -2613,10 +2618,10 @@ button.sidebar-resource-link {
 /* Interactive diagram */
 .lm-interactive-diagram {
   position: relative;
-  padding: 16px 8px;
+  padding: 20px 12px;
   border-radius: 12px;
   background: var(--bg-input);
-  margin: 12px 0;
+  margin: 16px 0;
 }
 .lm-interactive-svg-wrapper {
   display: flex; justify-content: center; align-items: center;
@@ -2624,6 +2629,20 @@ button.sidebar-resource-link {
 .lm-interactive-svg-wrapper svg {
   width: 100%; height: auto; max-width: 100%;
   display: block;
+}
+/* Ensure all SVG text is crisp and readable */
+.lm-interactive-svg-wrapper svg text {
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+/* Ensure lines render with clean edges */
+.lm-interactive-svg-wrapper svg line,
+.lm-interactive-svg-wrapper svg path,
+.lm-interactive-svg-wrapper svg polyline {
+  shape-rendering: geometricPrecision;
+}
+/* Circles always sharp */
+.lm-interactive-svg-wrapper svg circle {
+  shape-rendering: geometricPrecision;
 }
 .lm-diagram-tooltip {
   position: absolute; transform: translate(-50%, -100%);

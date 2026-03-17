@@ -1,5 +1,6 @@
 "use client";
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import processSvg from './learn-mode/processSvg';
 
 export default function DiagramsTab({ data }) {
   if (!data || !data.length) {
@@ -17,9 +18,18 @@ export default function DiagramsTab({ data }) {
 
 function DiagramCard({ diagram }) {
   const [activeScenario, setActiveScenario] = useState(0);
+  const svgRef = useRef(null);
 
   const scenarios = diagram.scenarios || [{ label: 'Default', svg: diagram.svg }];
   const currentSvg = scenarios[activeScenario]?.svg || diagram.svg;
+
+  // Post-process SVG after render for quality fixes
+  useEffect(() => {
+    if (!svgRef.current || !currentSvg) return;
+    svgRef.current.innerHTML = currentSvg;
+    const svgEl = svgRef.current.querySelector('svg');
+    if (svgEl) processSvg(svgEl);
+  }, [currentSvg]);
 
   return (
     <div className="diagram-container">
@@ -40,7 +50,7 @@ function DiagramCard({ diagram }) {
         </div>
       )}
 
-      <div className="diagram-svg-wrapper" dangerouslySetInnerHTML={{ __html: currentSvg }} />
+      <div className="diagram-svg-wrapper" ref={svgRef} />
 
       {diagram.checklist && (
         <div className="diagram-checklist">
