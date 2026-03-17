@@ -2611,22 +2611,41 @@ button.sidebar-resource-link {
 }
 
 /* Interactive diagram */
-.lm-interactive-diagram { position: relative; }
-.lm-interactive-svg-wrapper svg { width: 100%; height: auto; max-width: 100%; }
+.lm-interactive-diagram {
+  position: relative;
+  padding: 16px 8px;
+  border-radius: 12px;
+  background: var(--bg-input);
+  margin: 12px 0;
+}
+.lm-interactive-svg-wrapper {
+  display: flex; justify-content: center; align-items: center;
+}
+.lm-interactive-svg-wrapper svg {
+  width: 100%; height: auto; max-width: 100%;
+  display: block;
+}
 .lm-diagram-tooltip {
   position: absolute; transform: translate(-50%, -100%);
-  padding: 6px 12px; background: var(--bg-card);
-  border: 1.5px solid; border-left-width: 3px; border-radius: 8px;
+  padding: 8px 14px; background: var(--bg-card);
+  border: 1.5px solid var(--border-primary); border-left: 3px solid;
+  border-radius: 8px;
   font-size: 12px; font-weight: 600;
-  color: var(--text-primary); box-shadow: var(--card-shadow);
+  color: var(--text-primary);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
   pointer-events: none; white-space: nowrap; z-index: 10;
   animation: lmTooltipIn 0.15s ease;
 }
-.lm-diagram-tooltip-label { font-size: 13px; font-weight: 700; color: var(--text-primary); }
-.lm-diagram-tooltip-role { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
-.lm-diagram-interact-hint {
-  text-align: center; font-size: 12px; color: var(--text-muted);
-  margin-top: 8px; font-style: italic; opacity: 0.7;
+.lm-diagram-tooltip-label {
+  font-size: 13px; font-weight: 700; color: var(--text-primary);
+}
+.lm-diagram-tooltip-role {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 11px; color: var(--text-muted); margin-top: 3px;
+}
+.lm-diagram-tooltip-dot {
+  display: inline-block; width: 8px; height: 8px;
+  border-radius: 50%; flex-shrink: 0;
 }
 
 /* Diagram label drill */
