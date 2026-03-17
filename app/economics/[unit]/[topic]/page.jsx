@@ -92,18 +92,31 @@ export default async function EconomicsTopicPage({ params }) {
   const unit = section ? (units || []).find(u => u.id === section.unit_id) : null;
   const contentData = initialData.content;
 
-  // Build FAQs from first 2 concepts of the first content step
+  // Build FAQs from first 2 concepts/sections of the first content step
   const faqs = [];
-  if (contentData.length > 0 && contentData[0].concepts) {
-    contentData[0].concepts.slice(0, 2).forEach(concept => {
-      const answer = concept.points.map(p => stripHtml(p)).join(' ');
-      if (answer) {
-        faqs.push({
-          question: `What is ${concept.title} in ${section?.title || 'Economics'}?`,
-          answer,
-        });
-      }
-    });
+  if (contentData.length > 0) {
+    const firstBlock = contentData[0];
+    if (firstBlock.concepts) {
+      firstBlock.concepts.slice(0, 2).forEach(concept => {
+        const answer = concept.points.map(p => stripHtml(p)).join(' ');
+        if (answer) {
+          faqs.push({
+            question: `What is ${concept.title} in ${section?.title || 'Economics'}?`,
+            answer,
+          });
+        }
+      });
+    } else if (firstBlock.sections) {
+      firstBlock.sections.slice(0, 2).forEach(sec => {
+        const answer = sec.keyIdea || '';
+        if (answer) {
+          faqs.push({
+            question: `What is ${sec.title} in ${section?.title || 'Economics'}?`,
+            answer: answer.replace(/\*\*/g, ''),
+          });
+        }
+      });
+    }
   }
 
   // JSON-LD BreadcrumbList
@@ -164,6 +177,17 @@ export default async function EconomicsTopicPage({ params }) {
                   ))}
                 </ul>
                 {concept.examTip && <p><strong>Exam Tip:</strong> {stripHtml(concept.examTip)}</p>}
+              </div>
+            ))}
+            {step.sections?.map((sec, j) => (
+              <div key={j}>
+                <h3>{sec.title}</h3>
+                <p>{sec.keyIdea?.replace(/\*\*/g, '')}</p>
+                {sec.body?.filter(b => b.type === 'paragraph').map((b, k) => (
+                  <p key={k}>{b.text.replace(/\*\*/g, '').replace(/\*/g, '')}</p>
+                ))}
+                {sec.realExample && <p><strong>Real Example:</strong> {sec.realExample.text.replace(/\*\*/g, '')}</p>}
+                {sec.examMatters && <p><strong>Exam Matters:</strong> {sec.examMatters.replace(/\*\*/g, '')}</p>}
               </div>
             ))}
           </div>

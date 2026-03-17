@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from 'react';
 import { highlightGlossaryTerms } from '@/lib/glossary-highlight';
+import { NoteSection, TakeawayCard } from './notes';
 
 export default function ContentTab({ data, glossaryTerms, onStepChange, initialPosition }) {
   // key={sectionId} on parent forces remount, so useState initials work correctly
@@ -104,37 +105,52 @@ export default function ContentTab({ data, glossaryTerms, onStepChange, initialP
 
               {isActive && (
                 <div className="stepper-step-body">
-                  {block.concepts && block.concepts.map((concept, j) => (
-                    <div className="concept-box" key={j} style={concept.accent ? { borderLeftColor: concept.accent } : {}}>
-                      <div className="concept-box-title">{concept.title}</div>
-                      <div className="concept-box-content">
-                        {concept.points && (
-                          <ul>
-                            {concept.points.map((point, k) => (
-                              <li key={k} dangerouslySetInnerHTML={{ __html: g(point) }} />
+                  {/* ── New format: structured sections ── */}
+                  {Array.isArray(block.sections) ? (
+                    <>
+                      {block.sections.map((section) => (
+                        <NoteSection key={section.id} section={section} glossaryTerms={glossaryTerms} />
+                      ))}
+                      {block.takeaway && (
+                        <TakeawayCard items={block.takeaway} glossaryTerms={glossaryTerms} />
+                      )}
+                    </>
+                  ) : (
+                    <>
+                      {/* ── Old format: HTML-string concepts ── */}
+                      {block.concepts && block.concepts.map((concept, j) => (
+                        <div className="concept-box" key={j} style={concept.accent ? { borderLeftColor: concept.accent } : {}}>
+                          <div className="concept-box-title">{concept.title}</div>
+                          <div className="concept-box-content">
+                            {concept.points && (
+                              <ul>
+                                {concept.points.map((point, k) => (
+                                  <li key={k} dangerouslySetInnerHTML={{ __html: g(point) }} />
+                                ))}
+                              </ul>
+                            )}
+                            {concept.text && <p dangerouslySetInnerHTML={{ __html: g(concept.text) }} />}
+                            {concept.formula && <div className="formula-box">{concept.formula}</div>}
+                            {concept.formulas && concept.formulas.map((f, k) => (
+                              <div className="formula-box" key={k}>{f}</div>
                             ))}
-                          </ul>
-                        )}
-                        {concept.text && <p dangerouslySetInnerHTML={{ __html: g(concept.text) }} />}
-                        {concept.formula && <div className="formula-box">{concept.formula}</div>}
-                        {concept.formulas && concept.formulas.map((f, k) => (
-                          <div className="formula-box" key={k}>{f}</div>
-                        ))}
-                      </div>
-                      {concept.examTip && (
+                          </div>
+                          {concept.examTip && (
+                            <div className="exam-tip">
+                              <div className="exam-tip-label">Exam Tip</div>
+                              {concept.examTip}
+                            </div>
+                          )}
+                        </div>
+                      ))}
+
+                      {block.examTip && (
                         <div className="exam-tip">
                           <div className="exam-tip-label">Exam Tip</div>
-                          {concept.examTip}
+                          {block.examTip}
                         </div>
                       )}
-                    </div>
-                  ))}
-
-                  {block.examTip && (
-                    <div className="exam-tip">
-                      <div className="exam-tip-label">Exam Tip</div>
-                      {block.examTip}
-                    </div>
+                    </>
                   )}
 
                   {/* Continue / Complete button */}

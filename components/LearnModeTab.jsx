@@ -10,6 +10,7 @@ import PreTest from './learn-mode/PreTest';
 import CompletionScreen from './learn-mode/CompletionScreen';
 import RecallCheckpoint from './learn-mode/RecallCheckpoint';
 import ExplainItBackUpgraded from './learn-mode/ExplainItBackUpgraded';
+import { NoteSection, TakeawayCard } from './notes';
 
 /* ── Main Learn Mode Tab ── */
 export default function LearnModeTab({
@@ -161,7 +162,7 @@ export default function LearnModeTab({
           quizData={quizData}
           subjectId={subjectId}
           sectionId={sectionId}
-          onDone={() => setShowPretest(false)}
+          onDone={() => { setShowPretest(false); setTimeout(scrollToTop, 50); }}
         />
       </div>
     );
@@ -257,38 +258,51 @@ export default function LearnModeTab({
           {/* Section title */}
           <h2 className="lm-section-title">{currentBlock.title || `Section ${currentStep + 1}`}</h2>
 
-          {/* Content — reuses exact concept-box markup from ContentTab */}
+          {/* Content — dual-format: structured sections or legacy concept-box HTML */}
           <div className="lm-content">
-            {currentBlock.concepts?.map((concept, j) => (
-              <div className="concept-box" key={j} style={concept.accent ? { borderLeftColor: concept.accent } : {}}>
-                <div className="concept-box-title">{concept.title}</div>
-                <div className="concept-box-content">
-                  {concept.points && (
-                    <ul>
-                      {concept.points.map((point, k) => (
-                        <li key={k} dangerouslySetInnerHTML={{ __html: g(point) }} />
+            {Array.isArray(currentBlock.sections) ? (
+              <>
+                {currentBlock.sections.map((section) => (
+                  <NoteSection key={section.id} section={section} glossaryTerms={glossaryTerms} />
+                ))}
+                {currentBlock.takeaway && (
+                  <TakeawayCard items={currentBlock.takeaway} glossaryTerms={glossaryTerms} />
+                )}
+              </>
+            ) : (
+              <>
+                {currentBlock.concepts?.map((concept, j) => (
+                  <div className="concept-box" key={j} style={concept.accent ? { borderLeftColor: concept.accent } : {}}>
+                    <div className="concept-box-title">{concept.title}</div>
+                    <div className="concept-box-content">
+                      {concept.points && (
+                        <ul>
+                          {concept.points.map((point, k) => (
+                            <li key={k} dangerouslySetInnerHTML={{ __html: g(point) }} />
+                          ))}
+                        </ul>
+                      )}
+                      {concept.text && <p dangerouslySetInnerHTML={{ __html: g(concept.text) }} />}
+                      {concept.formula && <div className="formula-box">{concept.formula}</div>}
+                      {concept.formulas?.map((f, k) => (
+                        <div className="formula-box" key={k}>{f}</div>
                       ))}
-                    </ul>
-                  )}
-                  {concept.text && <p dangerouslySetInnerHTML={{ __html: g(concept.text) }} />}
-                  {concept.formula && <div className="formula-box">{concept.formula}</div>}
-                  {concept.formulas?.map((f, k) => (
-                    <div className="formula-box" key={k}>{f}</div>
-                  ))}
-                </div>
-                {concept.examTip && (
+                    </div>
+                    {concept.examTip && (
+                      <div className="exam-tip">
+                        <div className="exam-tip-label">Exam Tip</div>
+                        {concept.examTip}
+                      </div>
+                    )}
+                  </div>
+                ))}
+                {currentBlock.examTip && (
                   <div className="exam-tip">
                     <div className="exam-tip-label">Exam Tip</div>
-                    {concept.examTip}
+                    {currentBlock.examTip}
                   </div>
                 )}
-              </div>
-            ))}
-            {currentBlock.examTip && (
-              <div className="exam-tip">
-                <div className="exam-tip-label">Exam Tip</div>
-                {currentBlock.examTip}
-              </div>
+              </>
             )}
           </div>
 

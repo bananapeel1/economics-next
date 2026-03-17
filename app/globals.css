@@ -117,6 +117,13 @@
   --ma-peel-ex-text: #166534;
   --ma-peel-l: #fff7ed;
   --ma-peel-l-text: #9a3412;
+
+  /* ── Revision Learn card tokens (light) — aligned with app accent palette ── */
+  --rl-green: #059669; --rl-green-bg: rgba(5,150,105,0.07); --rl-green-bd: rgba(5,150,105,0.2);
+  --rl-amber: #f59e0b; --rl-amber-bg: rgba(245,158,11,0.06); --rl-amber-bd: rgba(245,158,11,0.2);
+  --rl-teal: #10b981; --rl-teal-bg: rgba(16,185,129,0.06); --rl-teal-bd: rgba(16,185,129,0.2);
+  --rl-blue: #3b82f6; --rl-blue-bg: rgba(59,130,246,0.06); --rl-blue-bd: rgba(59,130,246,0.2);
+  --rl-red: #ef4444; --rl-red-bg: rgba(239,68,68,0.06); --rl-red-bd: rgba(239,68,68,0.2);
 }
 
 [data-theme="dark"] {
@@ -224,6 +231,13 @@
   --ma-peel-ex-text: #86efac;
   --ma-peel-l: rgba(234,88,12,0.1);
   --ma-peel-l-text: #fdba74;
+
+  /* ── Revision Learn card tokens (dark) — aligned with app accent palette ── */
+  --rl-green: #10b981; --rl-green-bg: rgba(16,185,129,.09); --rl-green-bd: rgba(16,185,129,.22);
+  --rl-amber: #f59e0b; --rl-amber-bg: rgba(245,158,11,.09); --rl-amber-bd: rgba(245,158,11,.22);
+  --rl-teal: #22c55e; --rl-teal-bg: rgba(22,163,74,.08); --rl-teal-bd: rgba(22,163,74,.22);
+  --rl-blue: #60a5fa; --rl-blue-bg: rgba(96,165,250,.09); --rl-blue-bd: rgba(96,165,250,.22);
+  --rl-red: #ef4444; --rl-red-bg: rgba(239,68,68,.09); --rl-red-bd: rgba(239,68,68,.22);
 }
 
 * {
@@ -780,6 +794,143 @@ body {
   margin: 16px 0; font-size: 13px; color: var(--accent-amber-light); line-height: 1.6;
 }
 .exam-tip-label { font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; color: var(--accent-amber); }
+
+/* ── Revision Learn Note Components ── */
+
+/* Sub-section wrapper */
+.rl-note-section { margin-bottom: 32px; }
+.rl-note-section-title {
+  font-size: 16px; font-weight: 600; color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+/* Key Idea — green card */
+.rl-key-idea {
+  background: var(--rl-green-bg); border: 1px solid var(--rl-green-bd);
+  border-left: 3px solid var(--rl-green); border-radius: 0 8px 8px 0;
+  padding: 12px 16px; margin-bottom: 16px;
+}
+.rl-key-idea-label {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.07em; color: var(--rl-green); margin-bottom: 6px;
+}
+.rl-key-idea p { color: var(--text-primary); font-size: 14px; line-height: 1.65; margin: 0; }
+
+/* Body content */
+.rl-body { margin-bottom: 16px; }
+.rl-body-p {
+  font-size: 14px; color: var(--text-secondary); line-height: 1.7;
+  margin: 0 0 12px;
+}
+.rl-body-p strong { color: var(--text-primary); }
+.rl-body-subhead {
+  font-size: 15px; font-weight: 600; color: var(--text-primary);
+  margin: 20px 0 8px;
+}
+.rl-body-bullets {
+  list-style: none; padding: 0; margin: 8px 0 12px;
+}
+.rl-body-bullets li {
+  position: relative; padding: 4px 0 4px 18px;
+  font-size: 14px; color: var(--text-secondary); line-height: 1.6;
+}
+.rl-body-bullets li::before {
+  content: '\2022'; position: absolute; left: 0;
+  color: var(--rl-green); font-weight: 700;
+}
+.rl-body-bullets li strong { color: var(--text-primary); }
+
+/* Flow Chain — cause→effect pills */
+.rl-flow-chain {
+  display: flex; flex-wrap: wrap; gap: 4px;
+  align-items: center; margin: 16px 0;
+}
+.rl-flow-pill {
+  padding: 6px 11px; border-radius: 6px;
+  font-size: 12px; font-weight: 500; line-height: 1.3;
+  background: var(--bg-input); border: 1px solid var(--border-primary);
+  color: var(--text-primary);
+}
+.rl-flow-arrow { color: var(--rl-green); font-size: 15px; font-weight: 700; }
+.rl-flow-result {
+  padding: 6px 11px; border-radius: 6px;
+  font-size: 12px; font-weight: 600; line-height: 1.3;
+}
+.rl-flow-result--good {
+  background: var(--rl-green-bg); border: 1px solid var(--rl-green-bd);
+  color: var(--rl-green);
+}
+.rl-flow-result--bad {
+  background: var(--rl-red-bg); border: 1px solid var(--rl-red-bd);
+  color: var(--rl-red);
+}
+.rl-flow-result--neutral {
+  background: var(--rl-blue-bg); border: 1px solid var(--rl-blue-bd);
+  color: var(--rl-blue);
+}
+
+/* Real Example — teal card */
+.rl-real-example {
+  background: var(--rl-teal-bg); border: 1px solid var(--rl-teal-bd);
+  border-radius: 8px; padding: 12px 16px; margin-bottom: 12px;
+}
+.rl-real-example-label {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.07em; color: var(--rl-teal); margin-bottom: 6px;
+}
+.rl-real-example p { color: var(--text-secondary); font-size: 13px; line-height: 1.65; margin: 0; }
+.rl-real-example p strong { color: var(--text-primary); }
+
+/* Misconception — amber card */
+.rl-misconception {
+  background: var(--rl-amber-bg); border: 1px solid var(--rl-amber-bd);
+  border-radius: 8px; padding: 12px 16px; margin-bottom: 12px;
+}
+.rl-misconception-label {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.07em; color: var(--rl-amber); margin-bottom: 6px;
+}
+.rl-misconception p { color: var(--text-secondary); font-size: 13px; line-height: 1.65; margin: 0; }
+.rl-misconception p strong { color: var(--text-primary); }
+
+/* Exam Matters — blue card */
+.rl-exam-matters {
+  background: var(--rl-blue-bg); border: 1px solid var(--rl-blue-bd);
+  border-radius: 8px; padding: 12px 16px; margin-bottom: 12px;
+}
+.rl-exam-matters-label {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.07em; color: var(--rl-blue); margin-bottom: 6px;
+}
+.rl-exam-matters p { color: var(--text-secondary); font-size: 13px; line-height: 1.65; margin: 0; }
+.rl-exam-matters p strong { color: var(--text-primary); }
+
+/* Takeaway — step summary */
+.rl-takeaway {
+  background: var(--bg-card); border: 1px solid var(--border-primary);
+  border-radius: 10px; padding: 16px; margin-top: 24px;
+}
+.rl-takeaway-label {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.07em; color: var(--text-muted); margin-bottom: 10px;
+}
+.rl-takeaway-item {
+  display: flex; align-items: flex-start; gap: 8px;
+  font-size: 13.5px; color: var(--text-secondary); line-height: 1.6;
+  margin-bottom: 8px;
+}
+.rl-takeaway-item:last-child { margin-bottom: 0; }
+.rl-takeaway-check { color: var(--rl-green); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+/* Mobile responsive for RL components */
+@media (max-width: 768px) {
+  .rl-key-idea, .rl-real-example, .rl-misconception, .rl-exam-matters { padding: 10px 12px; }
+  .rl-note-section-title { font-size: 15px; }
+  .rl-flow-chain { gap: 3px; }
+  .rl-flow-pill { font-size: 11px; padding: 4px 8px; }
+  .rl-body-p { font-size: 13px; }
+  .rl-takeaway-item { font-size: 13px; }
+}
 
 /* Notes */
 .notes-section { margin-bottom: 24px; }

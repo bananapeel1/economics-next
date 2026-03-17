@@ -15,14 +15,15 @@ export default function RecallCheckpoint({ previousBlock }) {
 
   if (dismissed) return null;
 
-  // Extract prompt and model answer from previous block
+  // Extract prompt and model answer from previous block (supports both formats)
   const concept = previousBlock?.concepts?.[0];
-  if (!concept) return null;
+  const section = previousBlock?.sections?.[0];
+  if (!concept && !section) return null;
 
-  const prompt = concept.title;
-  const modelAnswer = concept.points?.[0] || concept.text || '';
-  // Strip HTML tags for clean display
-  const cleanAnswer = modelAnswer.replace(/<[^>]+>/g, '');
+  const prompt = concept?.title || section?.title;
+  const modelAnswer = concept?.points?.[0] || concept?.text || section?.keyIdea || '';
+  // Strip HTML tags and markdown for clean display
+  const cleanAnswer = modelAnswer.replace(/<[^>]+>/g, '').replace(/\*\*/g, '');
 
   function handleReveal() {
     setPhase('reveal');
