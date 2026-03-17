@@ -28,9 +28,14 @@ export default function InlinePractice({ question, onAskTutor, mode = 'independe
     : mode === 'guided' ? 'lm-card-label lm-card-label-amber'
     : 'lm-card-label lm-card-label-red';
 
+  const labelDesc = mode === 'worked' ? "We'll walk you through this one"
+    : mode === 'guided' ? 'Try with some hints available'
+    : "You're on your own \u2014 test yourself";
+
   return (
     <div className={`lm-practice-card ${mode === 'worked' ? 'lm-worked-example' : ''}`}>
       <div className={labelClass}>{labelText}</div>
+      <div className="lm-card-label-desc">{labelDesc}</div>
       <div className="lm-practice-inner">
         <p className="lm-practice-question">{question.question}</p>
         <span className="lm-practice-marks" style={{ backgroundColor: colors.bg, color: colors.badge, borderColor: colors.border }}>

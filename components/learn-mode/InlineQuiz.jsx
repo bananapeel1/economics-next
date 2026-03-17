@@ -1,18 +1,31 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 /* ── Inline Quiz Card (MCQ) with Confidence Rating ── */
 export default function InlineQuiz({ question, subjectId, sectionId, stepIndex }) {
   const [selected, setSelected] = useState(null);
   const [answered, setAnswered] = useState(false);
+  const [revealPhase, setRevealPhase] = useState(0); // 0=unanswered, 1=user choice shown, 2=full reveal
   const [confidence, setConfidence] = useState(null); // null | 'guessed' | 'somewhat' | 'certain'
+  const [confidenceTimedOut, setConfidenceTimedOut] = useState(false);
   const [feedbackMsg, setFeedbackMsg] = useState('');
   const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
+
+  // Auto-dismiss confidence after 4s if not answered
+  useEffect(() => {
+    if (answered && !confidence && !confidenceTimedOut) {
+      const timer = setTimeout(() => setConfidenceTimedOut(true), 4000);
+      return () => clearTimeout(timer);
+    }
+  }, [answered, confidence, confidenceTimedOut]);
 
   function handleSelect(index) {
     if (answered) return;
     setSelected(index);
     setAnswered(true);
+    setRevealPhase(1);
+    // After 200ms, reveal correct answer + explanation
+    setTimeout(() => setRevealPhase(2), 200);
   }
 
   const isCorrect = answered && selected === question.correctIndex;
@@ -48,6 +61,12 @@ export default function InlineQuiz({ question, subjectId, sectionId, stepIndex }
 
   function getOptionClass(index) {
     if (!answered) return selected === index ? 'selected' : '';
+    if (revealPhase === 1) {
+      // Only show user's selected option feedback
+      if (index === selected) return index === question.correctIndex ? 'correct' : 'incorrect';
+      return '';
+    }
+    // revealPhase >= 2: full reveal
     if (index === question.correctIndex) return 'correct';
     if (index === selected && index !== question.correctIndex) return 'incorrect';
     return '';
@@ -70,25 +89,29 @@ export default function InlineQuiz({ question, subjectId, sectionId, stepIndex }
             </button>
           ))}
         </div>
-        {answered && (
-          <div className="lm-quiz-explanation">
+        {revealPhase >= 2 && (
+          <div className="lm-quiz-explanation lm-animate-slide-in">
             <strong>{isCorrect ? 'Correct!' : 'Not quite.'}</strong>{' '}
             {question.explanation}
           </div>
         )}
-        {/* Confidence rating — shown after answering, before rating */}
-        {answered && !confidence && (
-          <div className="lm-confidence-row">
+        {/* Confidence rating — auto-dismisses after 4s */}
+        {answered && !confidence && !confidenceTimedOut && (
+          <div className="lm-confidence-row lm-animate-fade-in">
             <span className="lm-confidence-prompt">How sure were you?</span>
             <div className="lm-confidence-buttons">
               <button className="lm-confidence-btn lm-conf-guessed" onClick={() => handleConfidence('guessed')}>Guessed</button>
               <button className="lm-confidence-btn lm-conf-somewhat" onClick={() => handleConfidence('somewhat')}>Somewhat sure</button>
               <button className="lm-confidence-btn lm-conf-certain" onClick={() => handleConfidence('certain')}>Certain</button>
+              <button className="lm-confidence-btn lm-conf-skip" onClick={() => setConfidenceTimedOut(true)}>Skip</button>
             </div>
           </div>
         )}
         {confidence && (
           <div className="lm-confidence-done">{feedbackMsg}</div>
+        )}
+        {confidenceTimedOut && !confidence && (
+          <div className="lm-confidence-done" style={{ fontStyle: 'italic' }}>No worries — moving on.</div>
         )}
       </div>
     </div>

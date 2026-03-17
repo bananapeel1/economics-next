@@ -20,6 +20,9 @@ export default function QuickFireDrill({ quizData, onClose }) {
   const [timeLeft, setTimeLeft] = useState(TIMER_SECONDS);
   const [results, setResults] = useState([]); // { correct, timedOut, timeUsed }[]
   const [phase, setPhase] = useState('drill'); // 'drill' | 'done'
+  const [betweenQuestions, setBetweenQuestions] = useState(false);
+  const [streak, setStreak] = useState(0);
+  const [bestStreak, setBestStreak] = useState(0);
   const timerRef = useRef(null);
   const startTimeRef = useRef(Date.now());
 
@@ -48,6 +51,7 @@ export default function QuickFireDrill({ quizData, onClose }) {
 
   function handleTimedOut() {
     setAnswered(true);
+    setStreak(0);
     setResults(prev => [...prev, { correct: false, timedOut: true, timeUsed: TIMER_SECONDS }]);
     // Auto-advance after 2s
     setTimeout(advance, 2000);
@@ -61,6 +65,15 @@ export default function QuickFireDrill({ quizData, onClose }) {
     setSelected(index);
     setAnswered(true);
     setResults(prev => [...prev, { correct: isCorrect, timedOut: false, timeUsed }]);
+    if (isCorrect) {
+      setStreak(prev => {
+        const next = prev + 1;
+        setBestStreak(b => Math.max(b, next));
+        return next;
+      });
+    } else {
+      setStreak(0);
+    }
     // Auto-advance after feedback
     setTimeout(advance, 1500);
   }
@@ -69,9 +82,14 @@ export default function QuickFireDrill({ quizData, onClose }) {
     if (currentIndex + 1 >= questions.length) {
       setPhase('done');
     } else {
-      setCurrentIndex(prev => prev + 1);
-      setSelected(null);
-      setAnswered(false);
+      // 300ms breathing space between questions
+      setBetweenQuestions(true);
+      setTimeout(() => {
+        setCurrentIndex(prev => prev + 1);
+        setSelected(null);
+        setAnswered(false);
+        setBetweenQuestions(false);
+      }, 300);
     }
   }
 
@@ -111,6 +129,12 @@ export default function QuickFireDrill({ quizData, onClose }) {
               <span className="lm-drill-stat-value">{timedOutCount}</span>
               <span className="lm-drill-stat-label">timed out</span>
             </div>
+            {bestStreak >= 2 && (
+              <div className="lm-drill-stat">
+                <span className="lm-drill-stat-value">{'\u{1F525}'} {bestStreak}</span>
+                <span className="lm-drill-stat-label">best streak</span>
+              </div>
+            )}
           </div>
           <button className="lm-drill-close-btn" onClick={onClose}>Done</button>
         </div>
@@ -123,7 +147,7 @@ export default function QuickFireDrill({ quizData, onClose }) {
   const timerUrgent = timeLeft <= 5;
 
   return (
-    <div className="lm-drill-container">
+    <div className={`lm-drill-container ${betweenQuestions ? 'lm-drill-breathing' : ''}`}>
       {/* Timer bar */}
       <div className="lm-drill-timer-track">
         <div
@@ -136,6 +160,11 @@ export default function QuickFireDrill({ quizData, onClose }) {
         <span className="lm-drill-counter">
           {currentIndex + 1} / {questions.length}
         </span>
+        {streak >= 2 && (
+          <span className="lm-drill-streak" key={streak}>
+            {'\u{1F525}'} {streak} streak
+          </span>
+        )}
         <span className={`lm-drill-time ${timerUrgent ? 'urgent' : ''}`}>
           {timeLeft}s
         </span>

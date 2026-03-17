@@ -1440,10 +1440,13 @@ button.sidebar-resource-link {
   background: var(--accent-green); border-color: var(--accent-green); color: #fff;
 }
 .lm-stepper-line {
-  width: 3px; flex: 1; min-height: 20px; background: var(--border-primary);
-  margin: 4px 0; transition: background 0.3s; border-radius: 2px;
+  width: 3px; flex: 1; min-height: 20px;
+  background: linear-gradient(to bottom, var(--accent-green), var(--accent-green)) no-repeat top / 100% 0%,
+              var(--border-primary);
+  margin: 4px 0; border-radius: 2px;
+  transition: background-size 0.6s ease;
 }
-.lm-stepper-line.filled { background: var(--accent-green); }
+.lm-stepper-line.filled { background-size: 100% 100%, 100% 100%; }
 .lm-stepper-content {
   flex: 1; min-width: 0; padding-bottom: 8px;
 }
@@ -1488,6 +1491,7 @@ button.sidebar-resource-link {
   border-radius: 3px;
   transition: width 0.4s ease;
   box-shadow: 0 0 8px var(--green-light-30);
+  animation: lmProgressGlow 2s ease-in-out infinite;
 }
 .lm-progress-label {
   font-family: 'DM Mono', monospace;
@@ -1606,6 +1610,7 @@ button.sidebar-resource-link {
 .lm-quiz-option.correct {
   border-color: #10B981; background: rgba(16,185,129,0.1);
   color: #059669; font-weight: 600;
+  animation: lmCorrectPulse 0.6s ease;
 }
 .lm-quiz-option.incorrect {
   border-color: #EF4444; background: rgba(239,68,68,0.06);
@@ -1695,23 +1700,33 @@ button.sidebar-resource-link {
   background: rgba(16, 185, 129, 0.1);
   display: flex; align-items: center; justify-content: center;
   margin-bottom: 22px;
+  animation: lmCelebrateScaleIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-delay: 0.1s;
 }
 .lm-complete-title {
   font-size: 38px; font-weight: 900;
   color: var(--text-primary); letter-spacing: -2px; margin: 0 0 6px;
+  animation: lmCelebrateFadeUp 0.4s ease both;
+  animation-delay: 0.25s;
 }
 .lm-complete-topic {
   font-size: 17px; color: var(--text-tertiary); margin: 0 0 26px;
+  animation: lmCelebrateFadeUp 0.4s ease both;
+  animation-delay: 0.35s;
 }
 .lm-complete-divider {
   width: 100%; height: 1px;
   background: var(--border-primary); margin-bottom: 26px;
+  animation: lmCelebrateFadeUp 0.3s ease both;
+  animation-delay: 0.5s;
 }
 .lm-complete-summary {
   width: 100%; text-align: left;
   background: var(--green-light-6);
   border-radius: 14px; padding: 18px 22px;
   margin-bottom: 24px;
+  animation: lmCelebrateFadeUp 0.4s ease both;
+  animation-delay: 0.55s;
 }
 .lm-complete-summary-title {
   font-size: 14px; font-weight: 700;
@@ -1733,7 +1748,10 @@ button.sidebar-resource-link {
   padding: 12px; margin-bottom: 10px;
   border-radius: 30px; font-size: 14px; font-weight: 600;
   cursor: pointer; font-family: inherit; transition: all 0.2s;
+  animation: lmCelebrateSlideIn 0.35s ease both;
 }
+.lm-complete-posttest-btn { animation-delay: 0.65s; }
+.lm-complete-drill-btn { animation-delay: 0.72s; }
 .lm-complete-posttest-btn {
   background: none; border: 1.5px solid var(--accent-blue, #3b82f6);
   color: var(--accent-blue, #3b82f6);
@@ -1751,6 +1769,8 @@ button.sidebar-resource-link {
   font-size: 15px; font-weight: 700;
   cursor: pointer; font-family: inherit;
   margin-bottom: 10px; transition: all 0.2s;
+  animation: lmCelebrateSlideIn 0.35s ease both;
+  animation-delay: 0.79s;
 }
 .lm-complete-quiz-btn:hover { background: var(--accent-green-dark); transform: translateY(-1px); }
 .lm-complete-explore-btn {
@@ -1760,11 +1780,15 @@ button.sidebar-resource-link {
   border-radius: 30px;
   font-size: 14px; font-weight: 600;
   cursor: pointer; font-family: inherit; transition: all 0.15s;
+  animation: lmCelebrateSlideIn 0.35s ease both;
+  animation-delay: 0.93s;
 }
 .lm-complete-explore-btn:hover { border-color: var(--accent-green); color: var(--accent-green); }
 .lm-complete-or {
   font-size: 13px; color: var(--text-dim);
   margin: 16px 0 0;
+  animation: lmCelebrateFadeUp 0.3s ease both;
+  animation-delay: 1s;
 }
 
 /* Sidebar Learn Mode completion dot */
@@ -1972,6 +1996,15 @@ button.sidebar-resource-link {
   border: 1.5px solid var(--border-primary);
   border-radius: 14px;
   border-left: 3px solid var(--accent-blue, #3b82f6);
+  transition: opacity 0.35s ease, transform 0.35s ease, max-height 0.35s ease,
+              padding 0.35s ease, margin 0.35s ease;
+  max-height: 500px;
+  overflow: visible;
+}
+.lm-recall-dismissing {
+  opacity: 0; transform: translateY(-12px);
+  max-height: 0 !important; margin-bottom: 0; padding-top: 0; padding-bottom: 0;
+  overflow: hidden;
 }
 .lm-recall-header {
   display: flex; align-items: center; gap: 8px; margin-bottom: 10px;
@@ -2308,6 +2341,8 @@ button.sidebar-resource-link {
   border-radius: 30px;
   font-size: 14px; font-weight: 600;
   cursor: pointer; font-family: inherit; transition: all 0.15s;
+  animation: lmCelebrateSlideIn 0.35s ease both;
+  animation-delay: 0.86s;
 }
 .lm-complete-mixed-btn:hover { background: var(--green-light-6); }
 
@@ -2466,6 +2501,204 @@ button.sidebar-resource-link {
 @keyframes stepperFadeIn {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Learn Mode Animation Keyframes ─── */
+@keyframes lmStepExit {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(-12px); }
+}
+@keyframes lmStepEnter {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes lmCelebrateScaleIn {
+  from { opacity: 0; transform: scale(0.5); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes lmCelebrateFadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes lmCelebrateSlideIn {
+  from { opacity: 0; transform: translateY(10px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes lmSlideIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes lmCorrectPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+  50%  { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+  100% { box-shadow: none; }
+}
+@keyframes lmProgressGlow {
+  0%, 100% { box-shadow: 0 0 8px var(--green-light-30); }
+  50%      { box-shadow: 0 0 14px var(--green-light-30), 0 0 4px var(--accent-green-light); }
+}
+@keyframes lmNodePop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+@keyframes lmTimerPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%      { transform: scale(1.1); opacity: 0.8; }
+}
+@keyframes lmTimerBarPulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.7; }
+}
+@keyframes lmStreakPop {
+  from { transform: scale(0.8); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+@keyframes lmTooltipIn {
+  from { opacity: 0; transform: translate(-50%, -90%); }
+  to   { opacity: 1; transform: translate(-50%, -100%); }
+}
+@keyframes lmShake {
+  0%, 100% { transform: translateX(0); }
+  25%      { transform: translateX(-4px); }
+  75%      { transform: translateX(4px); }
+}
+@keyframes lmFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ─── Learn Mode Utility Classes ─── */
+.lm-animate-slide-in { animation: lmSlideIn 0.3s ease both; }
+.lm-animate-fade-in { animation: lmFadeIn 0.3s ease both; }
+.lm-stepper-content.step-exit { animation: lmStepExit 0.25s ease both; }
+.lm-stepper-content.step-enter { animation: lmStepEnter 0.3s ease both; }
+.lm-stepper-node.node-pop { animation: lmNodePop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
+
+/* Button press micro-interaction */
+.lm-nav-next:active, .lm-nav-back:active, .lm-nav-complete:active,
+.lm-complete-quiz-btn:active, .lm-complete-explore-btn:active,
+.lm-complete-posttest-btn:active, .lm-complete-drill-btn:active,
+.lm-complete-mixed-btn:active,
+.lm-practice-reveal-btn:active, .lm-recall-reveal-btn:active,
+.lm-recall-rate-btn:active, .lm-confidence-btn:active,
+.lm-pretest-submit:active, .lm-drill-close-btn:active {
+  transform: scale(0.96) !important;
+  transition: transform 0.08s ease;
+}
+
+/* Confidence skip button */
+.lm-conf-skip { border-color: var(--border-primary); color: var(--text-muted); }
+.lm-conf-skip:hover { color: var(--text-secondary); }
+
+/* Practice mode description label */
+.lm-card-label-desc {
+  font-size: 12px; font-weight: 500;
+  color: var(--text-tertiary);
+  margin: -6px 0 12px;
+  font-style: italic;
+}
+
+/* Quick fire drill enhancements */
+.lm-drill-time.urgent { animation: lmTimerPulse 0.5s ease-in-out infinite; }
+.lm-drill-timer-fill.urgent { animation: lmTimerBarPulse 0.5s ease-in-out infinite; }
+.lm-drill-question-area { transition: opacity 0.15s ease; }
+.lm-drill-breathing { opacity: 0; }
+.lm-drill-streak {
+  font-size: 14px; font-weight: 700;
+  color: var(--accent-amber, #f59e0b);
+  animation: lmStreakPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Interactive diagram */
+.lm-interactive-diagram { position: relative; }
+.lm-interactive-svg-wrapper svg { width: 100%; height: auto; max-width: 100%; }
+.lm-diagram-tooltip {
+  position: absolute; transform: translate(-50%, -100%);
+  padding: 6px 12px; background: var(--bg-card);
+  border: 1.5px solid; border-left-width: 3px; border-radius: 8px;
+  font-size: 12px; font-weight: 600;
+  color: var(--text-primary); box-shadow: var(--card-shadow);
+  pointer-events: none; white-space: nowrap; z-index: 10;
+  animation: lmTooltipIn 0.15s ease;
+}
+.lm-diagram-tooltip-label { font-size: 13px; font-weight: 700; color: var(--text-primary); }
+.lm-diagram-tooltip-role { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.lm-diagram-interact-hint {
+  text-align: center; font-size: 12px; color: var(--text-muted);
+  margin-top: 8px; font-style: italic; opacity: 0.7;
+}
+
+/* Diagram label drill */
+.lm-label-drill {
+  position: relative; padding: 16px 0;
+}
+.lm-label-drill-header {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 12px;
+}
+.lm-label-drill-title {
+  font-size: 15px; font-weight: 700; color: var(--text-primary);
+}
+.lm-label-drill-progress {
+  font-size: 13px; color: var(--text-muted); margin-left: auto;
+}
+.lm-label-drill-close {
+  background: none; border: none; font-size: 20px; color: var(--text-muted);
+  cursor: pointer; padding: 4px 8px; line-height: 1; font-family: inherit;
+}
+.lm-label-drill-close:hover { color: var(--text-primary); }
+.lm-label-drill-svg {
+  position: relative; margin-bottom: 16px;
+}
+.lm-label-drill-svg svg { width: 100%; height: auto; max-width: 100%; }
+.lm-label-drill-toggle {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-top: 12px; padding: 8px 16px;
+  background: none; border: 1.5px dashed var(--accent-green);
+  border-radius: 20px; color: var(--accent-green);
+  font-size: 13px; font-weight: 600;
+  cursor: pointer; font-family: inherit; transition: all 0.15s;
+}
+.lm-label-drill-toggle:hover { background: var(--green-light-6); border-style: solid; }
+.lm-label-chips {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  padding: 12px; margin-top: 4px;
+  background: var(--bg-input); border-radius: 12px;
+}
+.lm-label-chip {
+  padding: 6px 14px; background: var(--bg-card);
+  border: 1.5px solid var(--border-primary);
+  border-radius: 20px; font-size: 13px; font-weight: 600;
+  color: var(--text-primary); cursor: grab;
+  user-select: none; transition: all 0.15s;
+  touch-action: none;
+}
+.lm-label-chip:active { cursor: grabbing; transform: scale(0.95); }
+.lm-label-shake { animation: lmShake 0.4s ease; }
+.lm-label-ghost {
+  padding: 6px 14px; background: var(--accent-green);
+  color: #fff; border-radius: 20px; font-size: 13px; font-weight: 700;
+  pointer-events: none; z-index: 100;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transform: translate(-50%, -50%);
+}
+.lm-label-placed {
+  position: absolute; font-size: 12px; font-weight: 700;
+  color: var(--accent-green); pointer-events: none;
+  animation: lmFadeIn 0.3s ease;
+  transform: translate(-50%, 0);
+}
+.lm-label-drill-complete {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; margin-top: 12px;
+  background: rgba(16,185,129,0.1); border-radius: 12px;
+  font-size: 14px; font-weight: 600; color: var(--accent-green);
+}
+.lm-label-drill-done-btn {
+  margin-left: auto; padding: 6px 16px;
+  background: var(--accent-green); color: #fff; border: none;
+  border-radius: 20px; font-size: 13px; font-weight: 600;
+  cursor: pointer; font-family: inherit;
 }
 
 .stepper-action {

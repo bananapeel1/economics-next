@@ -11,6 +11,7 @@ export default function RecallCheckpoint({ previousBlock }) {
   const [text, setText] = useState('');
   const [rating, setRating] = useState(null);
   const [dismissed, setDismissed] = useState(false);
+  const [dismissing, setDismissing] = useState(false);
 
   if (dismissed) return null;
 
@@ -30,16 +31,18 @@ export default function RecallCheckpoint({ previousBlock }) {
   function handleRate(level) {
     setRating(level);
     setPhase('rated');
-    // Auto-dismiss after a short delay
-    setTimeout(() => setDismissed(true), 1200);
+    // Show feedback, then animate out, then remove
+    setTimeout(() => setDismissing(true), 1200);
+    setTimeout(() => setDismissed(true), 1200 + 350);
   }
 
   function handleSkip() {
-    setDismissed(true);
+    setDismissing(true);
+    setTimeout(() => setDismissed(true), 350);
   }
 
   return (
-    <div className="lm-recall-checkpoint">
+    <div className={`lm-recall-checkpoint ${dismissing ? 'lm-recall-dismissing' : ''}`}>
       <div className="lm-recall-header">
         <span className="lm-recall-icon">&#129504;</span>
         <span className="lm-recall-title">Quick recall</span>

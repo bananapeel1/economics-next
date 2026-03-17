@@ -22,6 +22,8 @@ export default function LearnModeTab({
   dueReviews, onStartReview, onStartMixedReview,
 }) {
   const [showKeyboardHint, setShowKeyboardHint] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [nodePopped, setNodePopped] = useState(false);
   const [isComplete, setIsComplete] = useState(() => {
     if (typeof window === 'undefined') return false;
     return localStorage.getItem(`revvy_complete_${subjectId}_${sectionId}`) === 'true';
@@ -68,8 +70,16 @@ export default function LearnModeTab({
   }, []);
 
   function navigateToStep(step) {
-    onStepChange(step);
-    setTimeout(scrollToTop, 50);
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setNodePopped(true);
+    // After exit animation, switch content
+    setTimeout(() => {
+      onStepChange(step);
+      setIsTransitioning(false);
+      setNodePopped(false);
+      setTimeout(scrollToTop, 50);
+    }, 250);
   }
 
   // Keyboard navigation (desktop)
@@ -222,7 +232,7 @@ export default function LearnModeTab({
         {/* Stepper rail on the left */}
         <div className="lm-stepper-rail">
           <div
-            className={`lm-stepper-node active`}
+            className={`lm-stepper-node active ${nodePopped ? 'node-pop' : ''}`}
             onClick={() => {}}
           >
             <span>{currentStep + 1}</span>
@@ -233,7 +243,7 @@ export default function LearnModeTab({
         </div>
 
         {/* Main content on the right */}
-        <div className="lm-stepper-content">
+        <div className={`lm-stepper-content ${isTransitioning ? 'step-exit' : 'step-enter'}`}>
           {/* Recall checkpoint — active recall of previous step */}
           {currentStep > 0 && (
             <RecallCheckpoint
@@ -326,17 +336,17 @@ export default function LearnModeTab({
           {/* Navigation */}
           <div className="lm-nav">
             {currentStep > 0 && (
-              <button className="lm-nav-back" onClick={() => navigateToStep(currentStep - 1)}>
+              <button className="lm-nav-back" onClick={() => navigateToStep(currentStep - 1)} disabled={isTransitioning}>
                 &larr; Back
               </button>
             )}
             <div className="lm-nav-spacer" />
             {!isLastStep ? (
-              <button className="lm-nav-next" onClick={() => navigateToStep(currentStep + 1)}>
+              <button className="lm-nav-next" onClick={() => navigateToStep(currentStep + 1)} disabled={isTransitioning}>
                 Next section &rarr;
               </button>
             ) : (
-              <button className="lm-nav-complete" onClick={handleComplete}>
+              <button className="lm-nav-complete" onClick={handleComplete} disabled={isTransitioning}>
                 Complete topic &#10003;
               </button>
             )}

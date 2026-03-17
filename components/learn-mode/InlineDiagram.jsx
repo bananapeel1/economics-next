@@ -1,11 +1,17 @@
 "use client";
 import { useState } from 'react';
+import InteractiveDiagram from './InteractiveDiagram';
+import DiagramLabelDrill from './DiagramLabelDrill';
 
 /* ── Inline Diagram Card ── */
 export default function InlineDiagram({ diagram }) {
   const [activeScenario, setActiveScenario] = useState(0);
+  const [showLabelDrill, setShowLabelDrill] = useState(false);
   const scenarios = diagram.scenarios || [{ label: 'Default', svg: diagram.svg }];
   const currentSvg = scenarios[activeScenario]?.svg || diagram.svg;
+
+  // Check if SVG has text elements (needed for label drill)
+  const hasTextLabels = currentSvg && /<text[\s>]/i.test(currentSvg);
 
   return (
     <div className="lm-diagram-card">
@@ -22,7 +28,27 @@ export default function InlineDiagram({ diagram }) {
             ))}
           </div>
         )}
-        <div className="diagram-svg-wrapper" dangerouslySetInnerHTML={{ __html: currentSvg }} />
+
+        {/* Interactive diagram with hover highlighting */}
+        {showLabelDrill ? (
+          <DiagramLabelDrill
+            svgString={currentSvg}
+            onClose={() => setShowLabelDrill(false)}
+          />
+        ) : (
+          <InteractiveDiagram svgString={currentSvg} />
+        )}
+
+        {/* Label drill toggle button */}
+        {hasTextLabels && !showLabelDrill && (
+          <button
+            className="lm-label-drill-toggle"
+            onClick={() => setShowLabelDrill(true)}
+          >
+            {'\u{1F3AF}'} Label this diagram yourself
+          </button>
+        )}
+
         {diagram.checklist && (
           <div className="diagram-checklist">
             <div className="diagram-checklist-title">What examiners look for</div>

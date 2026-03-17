@@ -12,6 +12,7 @@ export default function PreTest({ quizData, subjectId, sectionId, onDone }) {
 
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const [revealIndex, setRevealIndex] = useState(-1);
   const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
 
   function handleSelect(qIdx, optIdx) {
@@ -22,6 +23,10 @@ export default function PreTest({ quizData, subjectId, sectionId, onDone }) {
   function handleSubmit() {
     if (Object.keys(answers).length < questions.length) return;
     setSubmitted(true);
+    // Stagger reveal each question's answer
+    questions.forEach((_, i) => {
+      setTimeout(() => setRevealIndex(i), (i + 1) * 150);
+    });
 
     // Calculate score
     let correct = 0;
@@ -74,7 +79,7 @@ export default function PreTest({ quizData, subjectId, sectionId, onDone }) {
           <div className="lm-quiz-options">
             {q.options?.map((option, i) => {
               let cls = '';
-              if (submitted) {
+              if (submitted && revealIndex >= qIdx) {
                 if (i === q.correctIndex) cls = 'correct';
                 else if (i === answers[qIdx] && i !== q.correctIndex) cls = 'incorrect';
               } else if (answers[qIdx] === i) {
