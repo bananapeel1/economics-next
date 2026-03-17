@@ -1,23 +1,25 @@
 "use client";
-import { useState, useRef, useEffect, useCallback, useMemo } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
+import processSvg from './processSvg';
 
-const TOLERANCE = 30; // px radius for correct placement
+const TOLERANCE = 35; // px radius for correct drop placement
 
 /**
  * Drag-and-drop label exercise for SVG diagrams.
- * Extracts <text> elements, removes them from the SVG,
- * and lets users drag labels back to their correct positions.
+ * Only extracts <text class="draggable"> elements — keeps axes, values,
+ * and structural text in place. Shows pulsing drop indicators where
+ * labels should be placed.
  */
 export default function DiagramLabelDrill({ svgString, onClose }) {
   const svgContainerRef = useRef(null);
   const drillAreaRef = useRef(null);
-  const [labels, setLabels] = useState([]); // { id, text, correctX, correctY, placed, correct }
+  const [labels, setLabels] = useState([]);
   const [shuffledLabels, setShuffledLabels] = useState([]);
-  const [dragging, setDragging] = useState(null); // { id, offsetX, offsetY, x, y }
+  const [dragging, setDragging] = useState(null);
   const [completed, setCompleted] = useState(false);
   const [strippedSvg, setStrippedSvg] = useState('');
 
-  // Parse SVG and extract text elements
+  // Parse SVG and extract only draggable text elements
   useEffect(() => {
     if (!svgString) return;
 
@@ -26,56 +28,81 @@ export default function DiagramLabelDrill({ svgString, onClose }) {
     const svgEl = doc.querySelector('svg');
     if (!svgEl) return;
 
-    // Get SVG viewBox for coordinate conversion
-    const viewBox = svgEl.getAttribute('viewBox');
-    const vbParts = viewBox ? viewBox.split(/\s+/).map(Number) : null;
+    // Apply quality fixes (min strokes, text on top, etc.)
+    processSvg(svgEl);
 
-    // Extract all text elements
-    const textEls = Array.from(svgEl.querySelectorAll('text'));
+    // Find only text elements with class="draggable"
+    const draggableEls = Array.from(svgEl.querySelectorAll('text.draggable'));
+
+    // If no .draggable class found, fall back to extracting curve/point labels
+    // (for older SVGs without the class)
+    const textEls = draggableEls.length > 0
+      ? draggableEls
+      : Array.from(svgEl.querySelectorAll('text')).filter(t => {
+          const text = t.textContent.trim();
+          // Skip axis labels, values, and very short text
+          if (!text || text.length < 2) return false;
+          // Skip numerical values and axis titles
+          if (/^\d+$/.test(text)) return false;
+          if (/^(Price|Quantity|Cost|Output|Consumer|Capital|Q\)|P\))/i.test(text)) return false;
+          return true;
+        });
+
     const extracted = [];
     let idCounter = 0;
 
     textEls.forEach(textEl => {
       const text = textEl.textContent.trim();
-      if (!text || text.length < 2) return; // Skip single chars like axis labels
+      if (!text) return;
 
-      // Get position from attributes
       const x = parseFloat(textEl.getAttribute('x') || 0);
       const y = parseFloat(textEl.getAttribute('y') || 0);
+      const fill = textEl.getAttribute('fill') || '#e2e8f0';
 
       extracted.push({
         id: idCounter++,
         text,
         correctX: x,
         correctY: y,
-        placed: false,
-        placedX: null,
-        placedY: null,
+        color: fill,
         correct: false,
         shaking: false,
       });
 
-      // Remove text from SVG
-      textEl.remove();
+      // Replace text with a pulsing drop zone indicator
+      const indicator = doc.createElementNS('http://www.w3.org/2000/svg', 'g');
+
+      // Dashed rectangle as drop zone
+      const rect = doc.createElementNS('http://www.w3.org/2000/svg', 'rect');
+      const approxWidth = Math.max(text.length * 8, 40);
+      rect.setAttribute('x', x - 4);
+      rect.setAttribute('y', y - 14);
+      rect.setAttribute('width', approxWidth);
+      rect.setAttribute('height', 20);
+      rect.setAttribute('rx', '4');
+      rect.setAttribute('fill', 'none');
+      rect.setAttribute('stroke', fill);
+      rect.setAttribute('stroke-width', '1.5');
+      rect.setAttribute('stroke-dasharray', '4 3');
+      rect.setAttribute('opacity', '0.4');
+
+      // Question mark placeholder
+      const qmark = doc.createElementNS('http://www.w3.org/2000/svg', 'text');
+      qmark.setAttribute('x', String(x + approxWidth / 2 - 4));
+      qmark.setAttribute('y', String(y));
+      qmark.setAttribute('fill', fill);
+      qmark.setAttribute('font-size', '13');
+      qmark.setAttribute('font-weight', '600');
+      qmark.setAttribute('opacity', '0.35');
+      qmark.textContent = '?';
+
+      indicator.appendChild(rect);
+      indicator.appendChild(qmark);
+
+      // Remove original text, add indicator
+      textEl.parentNode.replaceChild(indicator, textEl);
     });
 
-    // Add drop zone circles at original positions
-    extracted.forEach(label => {
-      const circle = doc.createElementNS('http://www.w3.org/2000/svg', 'circle');
-      circle.setAttribute('cx', label.correctX);
-      circle.setAttribute('cy', label.correctY);
-      circle.setAttribute('r', '8');
-      circle.setAttribute('fill', 'var(--accent-green)');
-      circle.setAttribute('fill-opacity', '0.2');
-      circle.setAttribute('stroke', 'var(--accent-green)');
-      circle.setAttribute('stroke-opacity', '0.4');
-      circle.setAttribute('stroke-width', '1.5');
-      circle.setAttribute('stroke-dasharray', '3 3');
-      circle.setAttribute('data-drop-zone', label.id);
-      svgEl.appendChild(circle);
-    });
-
-    // Serialize cleaned SVG
     const serializer = new XMLSerializer();
     setStrippedSvg(serializer.serializeToString(svgEl));
     setLabels(extracted);
@@ -97,11 +124,9 @@ export default function DiagramLabelDrill({ svgString, onClose }) {
     return { x: svgPt.x, y: svgPt.y };
   }, []);
 
-  // Pointer handlers (works for touch + mouse)
   const handlePointerDown = useCallback((e, label) => {
-    if (label.correct) return; // Already correctly placed
+    if (label.correct) return;
     e.preventDefault();
-
     const rect = e.currentTarget.getBoundingClientRect();
     setDragging({
       id: label.id,
@@ -115,11 +140,7 @@ export default function DiagramLabelDrill({ svgString, onClose }) {
   const handlePointerMove = useCallback((e) => {
     if (!dragging) return;
     e.preventDefault();
-    setDragging(prev => ({
-      ...prev,
-      x: e.clientX,
-      y: e.clientY,
-    }));
+    setDragging(prev => ({ ...prev, x: e.clientX, y: e.clientY }));
   }, [dragging]);
 
   const handlePointerUp = useCallback((e) => {
@@ -136,12 +157,10 @@ export default function DiagramLabelDrill({ svgString, onClose }) {
       const dist = Math.sqrt(dx * dx + dy * dy);
 
       if (dist <= TOLERANCE) {
-        // Correct placement
         setLabels(prev => prev.map(l =>
-          l.id === id ? { ...l, placed: true, correct: true, placedX: label.correctX, placedY: label.correctY } : l
+          l.id === id ? { ...l, correct: true } : l
         ));
       } else {
-        // Wrong — shake animation
         setLabels(prev => prev.map(l =>
           l.id === id ? { ...l, shaking: true } : l
         ));
@@ -163,17 +182,16 @@ export default function DiagramLabelDrill({ svgString, onClose }) {
     }
   }, [labels]);
 
-  // Add global pointer events during drag
+  // Global pointer events during drag
   useEffect(() => {
     if (!dragging) return;
-    const handleMove = (e) => handlePointerMove(e);
-    const handleUp = (e) => handlePointerUp(e);
-
-    window.addEventListener('pointermove', handleMove);
-    window.addEventListener('pointerup', handleUp);
+    const move = (e) => handlePointerMove(e);
+    const up = (e) => handlePointerUp(e);
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', up);
     return () => {
-      window.removeEventListener('pointermove', handleMove);
-      window.removeEventListener('pointerup', handleUp);
+      window.removeEventListener('pointermove', move);
+      window.removeEventListener('pointerup', up);
     };
   }, [dragging, handlePointerMove, handlePointerUp]);
 
@@ -189,27 +207,24 @@ export default function DiagramLabelDrill({ svgString, onClose }) {
           {'\u{1F3AF}'} Label this diagram
         </div>
         <div className="lm-label-drill-progress">
-          {placedCount} / {totalCount} placed
+          {placedCount} / {totalCount}
         </div>
         <button className="lm-label-drill-close" onClick={onClose}>&times;</button>
       </div>
 
-      {/* SVG with drop zones */}
+      {/* SVG with drop zone indicators */}
       <div
         className="lm-label-drill-svg"
         ref={svgContainerRef}
         dangerouslySetInnerHTML={{ __html: strippedSvg }}
       />
 
-      {/* Correctly placed labels (rendered as overlays on SVG) */}
+      {/* Correctly placed labels overlay */}
       {labels.filter(l => l.correct).map(label => {
-        // We need to position these over the SVG
         const svgEl = svgContainerRef.current?.querySelector('svg');
         if (!svgEl) return null;
-
         const ctm = svgEl.getScreenCTM();
         if (!ctm) return null;
-
         const containerRect = drillAreaRef.current?.getBoundingClientRect();
         if (!containerRect) return null;
 
@@ -225,6 +240,7 @@ export default function DiagramLabelDrill({ svgString, onClose }) {
             style={{
               left: screenPt.x - containerRect.left,
               top: screenPt.y - containerRect.top - 10,
+              color: label.color,
             }}
           >
             {label.text}
@@ -242,6 +258,8 @@ export default function DiagramLabelDrill({ svgString, onClose }) {
             style={{
               touchAction: 'none',
               userSelect: 'none',
+              borderColor: label.color,
+              color: label.color,
             }}
           >
             {label.text}
@@ -263,7 +281,7 @@ export default function DiagramLabelDrill({ svgString, onClose }) {
         </div>
       )}
 
-      {/* Completion message */}
+      {/* Completion */}
       {completed && (
         <div className="lm-label-drill-complete">
           <span>{'\u{2705}'} All labels placed correctly!</span>

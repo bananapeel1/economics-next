@@ -10,8 +10,9 @@ export default function InlineDiagram({ diagram }) {
   const scenarios = diagram.scenarios || [{ label: 'Default', svg: diagram.svg }];
   const currentSvg = scenarios[activeScenario]?.svg || diagram.svg;
 
-  // Check if SVG has text elements (needed for label drill)
-  const hasTextLabels = currentSvg && /<text[\s>]/i.test(currentSvg);
+  // Check if SVG has draggable labels (new v2 format) or any text (legacy)
+  const hasDraggableLabels = currentSvg && /class="draggable"/.test(currentSvg);
+  const hasTextLabels = hasDraggableLabels || (currentSvg && /<text[\s>]/i.test(currentSvg));
 
   return (
     <div className="lm-diagram-card">

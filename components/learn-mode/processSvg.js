@@ -37,7 +37,12 @@ export default function processSvg(svgEl) {
   });
 
   // 4. Add text readability halos using paint-order stroke
+  //    Skip text inside colored point circles (white letters inside filled circles)
   textEls.forEach(textEl => {
+    // Skip white text inside point labels (they have a colored circle behind them)
+    const fill = textEl.getAttribute('fill') || '';
+    if (fill === '#fff' || fill === '#ffffff' || fill === 'white') return;
+
     textEl.setAttribute('paint-order', 'stroke');
     const existingStroke = textEl.getAttribute('stroke');
     if (!existingStroke || existingStroke === 'none') {
