@@ -20,23 +20,24 @@ function DiagramCard({ diagram }) {
   const [activeScenario, setActiveScenario] = useState(0);
   const svgRef = useRef(null);
 
+  const hasImage = !!diagram.imageUrl;
   const scenarios = diagram.scenarios || [{ label: 'Default', svg: diagram.svg }];
   const currentSvg = scenarios[activeScenario]?.svg || diagram.svg;
 
   // Post-process SVG after render for quality fixes
   useEffect(() => {
-    if (!svgRef.current || !currentSvg) return;
+    if (!svgRef.current || !currentSvg || hasImage) return;
     svgRef.current.innerHTML = currentSvg;
     const svgEl = svgRef.current.querySelector('svg');
     if (svgEl) processSvg(svgEl);
-  }, [currentSvg]);
+  }, [currentSvg, hasImage]);
 
   return (
     <div className="diagram-container">
       <h3 className="diagram-title">{diagram.title}</h3>
       {diagram.description && <p className="diagram-description">{diagram.description}</p>}
 
-      {scenarios.length > 1 && (
+      {!hasImage && scenarios.length > 1 && (
         <div className="scenario-switcher">
           {scenarios.map((s, i) => (
             <button
@@ -50,7 +51,13 @@ function DiagramCard({ diagram }) {
         </div>
       )}
 
-      <div className="diagram-svg-wrapper" ref={svgRef} />
+      {hasImage ? (
+        <div className="diagram-svg-wrapper">
+          <img src={diagram.imageUrl} alt={diagram.title} />
+        </div>
+      ) : (
+        <div className="diagram-svg-wrapper" ref={svgRef} />
+      )}
 
       {diagram.checklist && (
         <div className="diagram-checklist">

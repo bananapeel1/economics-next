@@ -36,6 +36,8 @@ export default function LearnModeTab({
     return !done && !isResuming && (quizData?.length > 0);
   });
   const containerRef = useRef(null);
+  const [revealedIndex, setRevealedIndex] = useState(0);
+  const lastRevealedRef = useRef(null);
 
   const totalSteps = contentData?.length || 0;
 
@@ -107,6 +109,16 @@ export default function LearnModeTab({
       return () => clearTimeout(timer);
     }
   }, []);
+
+  // Reset progressive reveal when navigating to a new step
+  useEffect(() => { setRevealedIndex(0); }, [currentStep]);
+
+  function handleRevealNext() {
+    setRevealedIndex(i => i + 1);
+    setTimeout(() => {
+      lastRevealedRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 80);
+  }
 
   // Handle completion
   function handleComplete() {
@@ -262,11 +274,28 @@ export default function LearnModeTab({
           <div className="lm-content">
             {Array.isArray(currentBlock.sections) ? (
               <>
-                {currentBlock.sections.map((section) => (
-                  <NoteSection key={section.id} section={section} glossaryTerms={glossaryTerms} />
+                {currentBlock.sections.slice(0, revealedIndex + 1).map((section, idx) => (
+                  <div
+                    key={section.id}
+                    ref={idx === revealedIndex ? lastRevealedRef : undefined}
+                    className={idx === revealedIndex && revealedIndex > 0 ? 'rl-section-enter' : ''}
+                  >
+                    <NoteSection section={section} glossaryTerms={glossaryTerms} />
+                  </div>
                 ))}
-                {currentBlock.takeaway && (
-                  <TakeawayCard items={currentBlock.takeaway} glossaryTerms={glossaryTerms} />
+                {revealedIndex < currentBlock.sections.length - 1 ? (
+                  <button className="lm-reveal-btn" onClick={handleRevealNext}>
+                    Continue &middot; {revealedIndex + 1} of {currentBlock.sections.length} topics
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                ) : (
+                  currentBlock.takeaway && (
+                    <div className={currentBlock.sections.length > 1 ? 'rl-section-enter' : ''}>
+                      <TakeawayCard items={currentBlock.takeaway} glossaryTerms={glossaryTerms} />
+                    </div>
+                  )
                 )}
               </>
             ) : (

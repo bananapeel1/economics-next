@@ -63,6 +63,12 @@ export default async function AdminLayout({ children }) {
           }}>
             Past Papers
           </Link>
+          <Link href="/admin/diagrams" style={{
+            display: 'block', padding: '8px 20px', fontSize: 13, color: '#8892a8',
+            textDecoration: 'none', transition: 'all 0.15s'
+          }}>
+            Diagrams
+          </Link>
           <Link href="/admin/pdfs" style={{
             display: 'block', padding: '8px 20px', fontSize: 13, color: '#8892a8',
             textDecoration: 'none', transition: 'all 0.15s'
