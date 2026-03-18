@@ -2608,24 +2608,25 @@ button.sidebar-resource-link {
   font-size: 12px; font-weight: 600;
 }
 
-/* Swap animation for reorder */
-.lm-recall-item.swap-up {
-  animation: recallSwapUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+/* Swap animation — cards physically move to each other's position */
+.lm-recall-item {
+  transition: transform 0.05s ease, box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+  position: relative; z-index: 1;
 }
-.lm-recall-item.swap-down {
-  animation: recallSwapDown 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+.lm-recall-item.swapping {
+  animation: recallSwap 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+  z-index: 10;
 }
-@keyframes recallSwapUp {
-  0% { transform: translateY(0); opacity: 1; }
-  40% { transform: translateY(-8px) scale(1.02); opacity: 0.7; }
-  100% { transform: translateY(0); opacity: 1; }
+@keyframes recallSwap {
+  0%   { transform: translateY(0) scale(1); box-shadow: none; }
+  20%  { transform: translateY(0) scale(1.03); box-shadow: 0 4px 20px rgba(167,139,250,0.25); }
+  100% { transform: translateY(var(--swap-dy, 0)) scale(1); box-shadow: none; }
 }
-@keyframes recallSwapDown {
-  0% { transform: translateY(0); opacity: 1; }
-  40% { transform: translateY(8px) scale(1.02); opacity: 0.7; }
-  100% { transform: translateY(0); opacity: 1; }
+.lm-recall-item.selected {
+  border-color: #a78bfa; background: rgba(167,139,250,0.1);
+  box-shadow: 0 0 0 2px rgba(167,139,250,0.2);
+  transform: scale(1.02);
 }
-.lm-recall-item.selected { border-color: #a78bfa; background: rgba(167,139,250,0.1); box-shadow: 0 0 0 2px rgba(167,139,250,0.2); }
 .lm-recall-hint-text { font-size: 11px; color: var(--text-dim); margin-bottom: 10px; font-style: italic; }
 
 .lm-explain-section { margin: 24px 0 0; }

@@ -1,7 +1,7 @@
 "use client";
-import { useState } from 'react';
+import { useState, useRef, useCallback } from 'react';
 
-/* ── Reorder Recall: tap to select, tap to swap with animation ── */
+/* ── Reorder Recall: tap to select, tap to swap ── */
 export default function ReorderRecall({ recall, onComplete }) {
   const [items, setItems] = useState(() => recall.shuffled.map(i => recall.correctOrder[i]));
   const [checked, setChecked] = useState(false);
@@ -9,31 +9,54 @@ export default function ReorderRecall({ recall, onComplete }) {
   const [showHint, setShowHint] = useState(false);
   const [dismissed, setDismissed] = useState(false);
   const [selectedIdx, setSelectedIdx] = useState(null);
-  const [swapPair, setSwapPair] = useState(null); // { from, to } during animation
+  const [animating, setAnimating] = useState(false);
+  const itemRefs = useRef([]);
 
   if (dismissed) return null;
 
   function handleTap(idx) {
-    if (checked || swapPair) return;
+    if (checked || animating) return;
     if (selectedIdx === null) {
       setSelectedIdx(idx);
     } else if (selectedIdx === idx) {
       setSelectedIdx(null);
     } else {
-      // Animate swap, then apply
-      setSwapPair({ from: selectedIdx, to: idx });
-      setTimeout(() => {
-        const next = [...items];
-        [next[selectedIdx], next[idx]] = [next[idx], next[selectedIdx]];
-        setItems(next);
-        setSelectedIdx(null);
-        setSwapPair(null);
-      }, 300);
+      // Calculate the distance between the two items for the animation
+      const fromEl = itemRefs.current[selectedIdx];
+      const toEl = itemRefs.current[idx];
+      if (fromEl && toEl) {
+        const fromRect = fromEl.getBoundingClientRect();
+        const toRect = toEl.getBoundingClientRect();
+        const dy = toRect.top - fromRect.top;
+
+        // Apply CSS custom properties for the animation distance
+        fromEl.style.setProperty('--swap-dy', `${dy}px`);
+        toEl.style.setProperty('--swap-dy', `${-dy}px`);
+        fromEl.classList.add('swapping');
+        toEl.classList.add('swapping');
+
+        setAnimating(true);
+
+        setTimeout(() => {
+          // Remove animation classes
+          fromEl.classList.remove('swapping');
+          toEl.classList.remove('swapping');
+          fromEl.style.removeProperty('--swap-dy');
+          toEl.style.removeProperty('--swap-dy');
+
+          // Apply the actual swap
+          const next = [...items];
+          [next[selectedIdx], next[idx]] = [next[idx], next[selectedIdx]];
+          setItems(next);
+          setSelectedIdx(null);
+          setAnimating(false);
+        }, 350);
+      }
     }
   }
 
   function check() {
-    if (swapPair) return; // Don't check during swap animation
+    if (animating) return;
     const correct = items.every((item, i) => item.trim() === recall.correctOrder[i].trim());
     setIsCorrect(correct);
     setChecked(true);
@@ -41,15 +64,6 @@ export default function ReorderRecall({ recall, onComplete }) {
   }
 
   const displayItems = checked && !isCorrect ? recall.correctOrder : items;
-
-  function getItemClass(i) {
-    let cls = 'lm-recall-item';
-    if (checked) cls += ' correct';
-    if (selectedIdx === i && !swapPair) cls += ' selected';
-    if (swapPair?.from === i) cls += ' swap-up';
-    if (swapPair?.to === i) cls += ' swap-down';
-    return cls;
-  }
 
   return (
     <div className="lm-recall-card">
@@ -60,18 +74,23 @@ export default function ReorderRecall({ recall, onComplete }) {
       <p className="lm-recall-prompt">{recall.prompt}</p>
       {!checked && (
         <p className="lm-recall-hint-text">
-          {selectedIdx !== null
-            ? '↑ Now tap another item to swap with the highlighted one'
-            : 'Tap an item to select it, then tap another to swap their positions'}
+          Tap an item to select it, then tap another to swap their positions
         </p>
       )}
 
       <div className="lm-recall-items">
         {displayItems.map((item, i) => (
-          <div key={`${item}-${i}`} className={getItemClass(i)} onClick={() => handleTap(i)}>
+          <div
+            key={`${item}-${i}`}
+            ref={el => itemRefs.current[i] = el}
+            className={`lm-recall-item ${checked ? 'correct' : ''} ${selectedIdx === i && !animating ? 'selected' : ''}`}
+            onClick={() => handleTap(i)}
+          >
             <span className="lm-recall-item-num">{i + 1}</span>
             <span className="lm-recall-item-text">{item}</span>
-            {!checked && selectedIdx === i && !swapPair && <span className="lm-recall-item-icon" style={{ color: '#a78bfa' }}>●</span>}
+            {!checked && selectedIdx === i && !animating && (
+              <span className="lm-recall-item-icon" style={{ color: '#a78bfa' }}>●</span>
+            )}
             {checked && <span className="lm-recall-item-icon" style={{ color: 'var(--rl-green)' }}>✓</span>}
           </div>
         ))}
