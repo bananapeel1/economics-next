@@ -591,6 +591,17 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     setSidebarOpen(false);
     setContentStepInfo(null);
 
+    // Update URL so page refresh loads the correct section
+    if (typeof window !== 'undefined') {
+      const sec = subjectSections.find(s => s.id === sectionId);
+      const unit = subjectUnits.find(u => u.id === sec?.unit_id);
+      const subject = subjects.find(s => s.id === activeSubjectId);
+      if (sec && unit && subject) {
+        const newUrl = `/${subject.slug}/unit-${unit.number}/${sec.id}`;
+        window.history.replaceState(null, '', newUrl);
+      }
+    }
+
     // Learn Mode: check for saved progress — prefer DB for logged-in, fallback to localStorage
     if (typeof window !== 'undefined') {
       const dbProgress = user && savedProgress[sectionId];

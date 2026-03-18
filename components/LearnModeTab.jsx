@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { highlightGlossaryTerms } from '@/lib/glossary-highlight';
 import { recordReview } from '@/lib/strength';
-import { distributeItems } from './learn-mode/utils';
+import { distributeItems, matchDiagramsToBlocks } from './learn-mode/utils';
 import InlineDiagram from './learn-mode/InlineDiagram';
 import InlinePractice from './learn-mode/InlinePractice';
 import InlineQuiz from './learn-mode/InlineQuiz';
@@ -43,7 +43,7 @@ export default function LearnModeTab({
 
   // Distribute diagrams, practice questions, and quiz questions evenly across steps
   const sortedPractice = [...(practiceData || [])].sort((a, b) => a.marks - b.marks);
-  const diagramMap = distributeItems(diagramsData, totalSteps);
+  const diagramMap = matchDiagramsToBlocks(diagramsData, contentData) || distributeItems(diagramsData, totalSteps);
   const practiceMap = distributeItems(sortedPractice, totalSteps);
   const quizMap = distributeItems(quizData, totalSteps);
 

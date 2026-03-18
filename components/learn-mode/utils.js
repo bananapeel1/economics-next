@@ -21,3 +21,40 @@ export function distributeItems(items, totalSteps) {
   }
   return map;
 }
+
+/**
+ * Match diagrams to content blocks by title word-overlap.
+ * Returns { stepIndex: diagram } where each diagram is placed on the
+ * block whose title shares the most words with the diagram title.
+ * Falls back to even distribution if no meaningful matches found.
+ */
+export function matchDiagramsToBlocks(diagrams, blocks) {
+  if (!diagrams?.length || !blocks?.length) return {};
+  const normalize = s => (s || '').toLowerCase().replace(/[^a-z0-9\s]/g, '').split(/\s+/).filter(w => w.length > 2);
+
+  const map = {};
+  const used = new Set();
+
+  for (const diagram of diagrams) {
+    const dWords = new Set(normalize(diagram.title));
+    let bestIdx = -1, bestScore = 0;
+
+    blocks.forEach((block, idx) => {
+      if (used.has(idx)) return;
+      const bWords = normalize(block.title);
+      const score = bWords.filter(w => dWords.has(w)).length;
+      if (score > bestScore) { bestScore = score; bestIdx = idx; }
+    });
+
+    if (bestScore > 0 && bestIdx >= 0) {
+      map[bestIdx] = diagram;
+      used.add(bestIdx);
+    } else {
+      // No match — place on first available step
+      for (let i = 0; i < blocks.length; i++) {
+        if (!used.has(i) && !map[i]) { map[i] = diagram; used.add(i); break; }
+      }
+    }
+  }
+  return map;
+}
