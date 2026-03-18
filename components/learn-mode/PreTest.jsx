@@ -18,6 +18,13 @@ export default function PreTest({ quizData, subjectId, sectionId, onDone }) {
   function handleSelect(qIdx, optIdx) {
     if (submitted) return;
     setAnswers(prev => ({ ...prev, [qIdx]: optIdx }));
+    // Auto-scroll to next question on mobile
+    if (qIdx < questions.length - 1) {
+      setTimeout(() => {
+        const nextQ = document.querySelector(`[data-pretest-q="${qIdx + 1}"]`);
+        nextQ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 200);
+    }
   }
 
   function handleSubmit() {
@@ -74,7 +81,7 @@ export default function PreTest({ quizData, subjectId, sectionId, onDone }) {
       </div>
 
       {questions.map((q, qIdx) => (
-        <div className="lm-pretest-question" key={qIdx}>
+        <div className="lm-pretest-question" key={qIdx} data-pretest-q={qIdx}>
           <p className="lm-pretest-q-text">{qIdx + 1}. {q.question}</p>
           <div className="lm-quiz-options">
             {q.options?.map((option, i) => {

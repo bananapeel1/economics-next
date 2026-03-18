@@ -141,18 +141,35 @@ export default function LearnModeTab({
     window.scrollTo({ top: 0, behavior });
   }, []);
 
+  const [stepComplete, setStepComplete] = useState(false);
+
   function navigateToStep(step) {
     if (isTransitioning) return;
-    setIsTransitioning(true);
-    setNodePopped(true);
-    // Scroll to top immediately (while exit animation plays)
-    scrollToTop(true);
-    // After exit animation (200ms), swap content
-    setTimeout(() => {
-      onStepChange(step);
-      setIsTransitioning(false);
-      setNodePopped(false);
-    }, 200);
+    // Brief checkmark pulse on the node before transitioning
+    if (step > currentStep) {
+      setStepComplete(true);
+      setTimeout(() => {
+        setStepComplete(false);
+        setIsTransitioning(true);
+        setNodePopped(true);
+        scrollToTop(true);
+        setTimeout(() => {
+          onStepChange(step);
+          setIsTransitioning(false);
+          setNodePopped(false);
+        }, 200);
+      }, 400);
+    } else {
+      // Going back — no celebration, just transition
+      setIsTransitioning(true);
+      setNodePopped(true);
+      scrollToTop(true);
+      setTimeout(() => {
+        onStepChange(step);
+        setIsTransitioning(false);
+        setNodePopped(false);
+      }, 200);
+    }
   }
 
   // Keyboard navigation
@@ -287,8 +304,8 @@ export default function LearnModeTab({
       {/* Stepper */}
       <div className="lm-stepper-step">
         <div className="lm-stepper-rail">
-          <div className={`lm-stepper-node active ${nodePopped ? 'node-pop' : ''}`}>
-            <span>{currentStep + 1}</span>
+          <div className={`lm-stepper-node active ${nodePopped ? 'node-pop' : ''} ${stepComplete ? 'step-done' : ''}`}>
+            <span>{stepComplete ? '✓' : currentStep + 1}</span>
           </div>
           {!isLastStep && <div className={`lm-stepper-line ${currentStep > 0 ? 'filled' : ''}`} />}
         </div>
