@@ -76,6 +76,7 @@ export default function FillInRecall({ recall, onComplete }) {
           const word = placed[blankIdx];
           const isCorrect = checked && results[blankIdx];
           const isWrong = checked && !results[blankIdx];
+          const [before, after] = part.split('___');
           return (
             <div
               key={i}
@@ -83,13 +84,14 @@ export default function FillInRecall({ recall, onComplete }) {
               onDragOver={e => e.preventDefault()}
               onDrop={e => handleDropOnBlank(e, blankIdx)}
             >
-              <span>{part.replace('___', '')}</span>
+              {before && <span>{before}</span>}
               <span
                 className={`lm-fillin-blank ${word ? 'filled' : ''} ${isCorrect ? 'correct' : ''} ${isWrong ? 'wrong' : ''}`}
                 onClick={() => handleTapBlank(blankIdx)}
               >
                 {checked && isWrong ? recall.answers[blankIdx] : word || (showHint ? recall.hints?.[blankIdx] : '___')}
               </span>
+              {after && <span>{after}</span>}
             </div>
           );
         })}
@@ -119,11 +121,21 @@ export default function FillInRecall({ recall, onComplete }) {
           <button className="lm-recall-check-btn" onClick={check} disabled={!allFilled}>Check answers</button>
         </div>
       ) : (
-        <div className={`lm-recall-result ${correctCount === recall.answers.length ? 'correct' : 'wrong'}`}>
-          {correctCount === recall.answers.length
-            ? '✓ All correct!'
-            : `${correctCount} of ${recall.answers.length} correct — the right answers are shown above.`}
-        </div>
+        <>
+          <div className={`lm-recall-result ${correctCount === recall.answers.length ? 'correct' : 'wrong'}`}>
+            {correctCount === recall.answers.length
+              ? '✓ All correct!'
+              : `${correctCount} of ${recall.answers.length} correct`}
+          </div>
+          {correctCount < recall.answers.length && (
+            <div className="lm-recall-correct-answers">
+              <span className="lm-recall-correct-label">Correct answers:</span>
+              {recall.answers.map((ans, i) => (
+                <span key={i} className="lm-recall-correct-word">{ans}</span>
+              ))}
+            </div>
+          )}
+        </>
       )}
     </div>
   );
