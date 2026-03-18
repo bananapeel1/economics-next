@@ -110,22 +110,21 @@ export default function LearnModeTab({
     return highlightGlossaryTerms(html, glossaryTerms);
   }
 
-  // Auto-scroll to top when navigating
-  const scrollToTop = useCallback(() => {
+  // Scroll to top — instant for step transitions, smooth for reveals
+  const scrollToTop = useCallback((instant = false) => {
+    const behavior = instant ? 'instant' : 'smooth';
     const tabContent = document.querySelector('.tab-content');
-    if (tabContent) {
-      tabContent.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (tabContent) tabContent.scrollTo({ top: 0, behavior });
+    window.scrollTo({ top: 0, behavior });
   }, []);
 
   function navigateToStep(step) {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setNodePopped(true);
-    // After exit animation (200ms), switch content smoothly
+    // After exit animation (200ms), snap to top then swap content
     setTimeout(() => {
-      scrollToTop();
+      scrollToTop(true);
       onStepChange(step);
       setIsTransitioning(false);
       setNodePopped(false);
