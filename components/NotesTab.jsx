@@ -35,14 +35,6 @@ export default function NotesTab({ data, glossaryTerms }) {
   // Rich format — chapters with blocks, flow chains, formulas, callouts
   return (
     <div className="rn-notes">
-      {/* Color key legend */}
-      <div className="rn-color-key">
-        <span className="rn-color-key-item"><span className="rn-color-dot def" /> Definition</span>
-        <span className="rn-color-key-item"><span className="rn-color-dot mech" /> Mechanism</span>
-        <span className="rn-color-key-item"><span className="rn-color-dot imp" /> Implication</span>
-        <span className="rn-color-key-item"><span className="rn-color-dot link" /> Link</span>
-      </div>
-
       {data.map((chapter, ci) => (
         <div className="rn-chapter" key={ci}>
           {/* Chapter heading */}
@@ -50,6 +42,16 @@ export default function NotesTab({ data, glossaryTerms }) {
             <span>{chapter.title}</span>
             {chapter.meta && <span className="rn-ch-meta">{chapter.meta}</span>}
           </div>
+
+          {/* Color key legend — below heading */}
+          {ci === 0 && (
+            <div className="rn-color-key">
+              <span className="rn-color-key-item"><span className="rn-color-dot def" /> Definition</span>
+              <span className="rn-color-key-item"><span className="rn-color-dot mech" /> Mechanism</span>
+              <span className="rn-color-key-item"><span className="rn-color-dot imp" /> Implication</span>
+              <span className="rn-color-key-item"><span className="rn-color-dot link" /> Link</span>
+            </div>
+          )}
 
           {/* Key Idea */}
           {chapter.keyIdea && (

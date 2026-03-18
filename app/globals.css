@@ -1022,8 +1022,7 @@ body {
 /* Color key legend */
 .rn-color-key {
   display: flex; gap: 20px; align-items: center;
-  padding: 12px 0; margin-bottom: 28px;
-  border-bottom: 1px solid var(--border-primary);
+  padding: 0 0 16px; margin-bottom: 20px;
 }
 .rn-color-key-item {
   display: flex; align-items: center; gap: 6px;
