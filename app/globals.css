@@ -1847,7 +1847,7 @@ button.sidebar-resource-link {
 
 /* Tablet — constrain diagrams */
 @media (min-width: 768px) {
-  .diagram-container, .lm-diagram-card { max-width: 80%; }
+  .diagram-container, .lm-diagram-card { max-width: 92%; }
   .diagram-svg-wrapper svg, .diagram-svg-wrapper img { max-width: 469px; }
   .lm-interactive-svg-wrapper svg, .lm-interactive-svg-wrapper img { max-width: 442px; }
 }
@@ -1866,7 +1866,7 @@ button.sidebar-resource-link {
   .rl-flow-tl-title { font-size: 14px; }
   .rl-flow-result-text { font-size: 14px; }
   /* Diagrams — desktop */
-  .diagram-container, .lm-diagram-card { max-width: 80%; }
+  .diagram-container, .lm-diagram-card { max-width: 92%; }
   .diagram-svg-wrapper svg, .diagram-svg-wrapper img { max-width: 525px; }
   .lm-interactive-svg-wrapper svg, .lm-interactive-svg-wrapper img { max-width: 497px; }
   /* Rich notes desktop */
@@ -1884,7 +1884,7 @@ button.sidebar-resource-link {
   .rl-body-p { font-size: 15.5px; line-height: 1.75; }
   .lm-section-title { font-size: 30px; }
   /* Diagrams — ultra-wide */
-  .diagram-container, .lm-diagram-card { max-width: 80%; }
+  .diagram-container, .lm-diagram-card { max-width: 92%; }
   .diagram-svg-wrapper svg, .diagram-svg-wrapper img { max-width: 580px; }
   .lm-interactive-svg-wrapper svg, .lm-interactive-svg-wrapper img { max-width: 552px; }
   /* Rich notes ultra-wide */
