@@ -1,7 +1,7 @@
 "use client";
 import { useState } from 'react';
 
-/* ── Reorder Recall: tap to select, tap to swap ── */
+/* ── Reorder Recall: tap to select, tap to swap with animation ── */
 export default function ReorderRecall({ recall, onComplete }) {
   const [items, setItems] = useState(() => recall.shuffled.map(i => recall.correctOrder[i]));
   const [checked, setChecked] = useState(false);
@@ -9,34 +9,47 @@ export default function ReorderRecall({ recall, onComplete }) {
   const [showHint, setShowHint] = useState(false);
   const [dismissed, setDismissed] = useState(false);
   const [selectedIdx, setSelectedIdx] = useState(null);
+  const [swapPair, setSwapPair] = useState(null); // { from, to } during animation
 
   if (dismissed) return null;
 
   function handleTap(idx) {
-    if (checked) return;
+    if (checked || swapPair) return;
     if (selectedIdx === null) {
-      // First tap — select this item
       setSelectedIdx(idx);
     } else if (selectedIdx === idx) {
-      // Tap same item — deselect
       setSelectedIdx(null);
     } else {
-      // Second tap — swap the two items
-      const next = [...items];
-      [next[selectedIdx], next[idx]] = [next[idx], next[selectedIdx]];
-      setItems(next);
-      setSelectedIdx(null);
+      // Animate swap, then apply
+      setSwapPair({ from: selectedIdx, to: idx });
+      setTimeout(() => {
+        const next = [...items];
+        [next[selectedIdx], next[idx]] = [next[idx], next[selectedIdx]];
+        setItems(next);
+        setSelectedIdx(null);
+        setSwapPair(null);
+      }, 300);
     }
   }
 
   function check() {
-    const correct = items.every((item, i) => item === recall.correctOrder[i]);
+    if (swapPair) return; // Don't check during swap animation
+    const correct = items.every((item, i) => item.trim() === recall.correctOrder[i].trim());
     setIsCorrect(correct);
     setChecked(true);
     onComplete?.(correct);
   }
 
   const displayItems = checked && !isCorrect ? recall.correctOrder : items;
+
+  function getItemClass(i) {
+    let cls = 'lm-recall-item';
+    if (checked) cls += ' correct';
+    if (selectedIdx === i && !swapPair) cls += ' selected';
+    if (swapPair?.from === i) cls += ' swap-up';
+    if (swapPair?.to === i) cls += ' swap-down';
+    return cls;
+  }
 
   return (
     <div className="lm-recall-card">
@@ -55,14 +68,10 @@ export default function ReorderRecall({ recall, onComplete }) {
 
       <div className="lm-recall-items">
         {displayItems.map((item, i) => (
-          <div
-            key={`${item}-${i}`}
-            className={`lm-recall-item ${checked ? 'correct' : ''} ${selectedIdx === i ? 'selected' : ''}`}
-            onClick={() => handleTap(i)}
-          >
+          <div key={`${item}-${i}`} className={getItemClass(i)} onClick={() => handleTap(i)}>
             <span className="lm-recall-item-num">{i + 1}</span>
             <span className="lm-recall-item-text">{item}</span>
-            {!checked && selectedIdx === i && <span className="lm-recall-item-icon" style={{ color: '#a78bfa' }}>●</span>}
+            {!checked && selectedIdx === i && !swapPair && <span className="lm-recall-item-icon" style={{ color: '#a78bfa' }}>●</span>}
             {checked && <span className="lm-recall-item-icon" style={{ color: 'var(--rl-green)' }}>✓</span>}
           </div>
         ))}

@@ -96,7 +96,7 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
           <span className="overview-category-label">FREE RESOURCES</span>
           <span className="overview-category-line" />
         </div>
-        <div className="overview-grid overview-grid-3">
+        <div className="overview-grid overview-grid-4">
           <button className="overview-card overview-card-featured" onClick={() => onTabSelect('learn-mode')}>
             <span className="overview-card-icon"><LearnModeIcon size={24} /></span>
             <span className="overview-card-label">Learn</span>
@@ -163,7 +163,7 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
           <span className="overview-category-label">{isPremium ? 'PREMIUM' : 'PREMIUM \u2014 3-DAY FREE TRIAL'}</span>
           <span className="overview-category-line" />
         </div>
-        <div className="overview-grid overview-grid-3">
+        <div className="overview-grid overview-grid-4">
           <button className={`overview-card ${!isPremium ? 'overview-card-premium' : ''}`} onClick={() => onTabSelect('flashcards')}>
             {!isPremium && <span className="overview-card-lock"><Padlock size={12} /></span>}
             <span className="overview-card-icon"><CardsBlank size={24} /></span>
