@@ -56,7 +56,13 @@ const CONTENT = [
           text: "**The UK government** levies tobacco duty of over 16 per cent of the retail price plus a fixed amount per pack, making cigarettes among the most heavily taxed goods in Britain. This has contributed to a fall in adult smoking rates from 27% in 2000 to around 13% by 2023, though critics note that poorer households bear a disproportionate burden."
         },
         misconception: "Students write that indirect taxes always eliminate the externality completely. In practice, the government rarely knows the exact marginal external cost, so the tax may over- or under-correct the market failure. Instead write: indirect taxes reduce the externality but may not achieve the precise socially optimal output due to imperfect information.",
-        examMatters: "Examiners expect you to draw the tax as a leftward shift of supply and identify the new equilibrium price and quantity. Always evaluate by discussing whether the tax is set at the correct level and who bears the burden, linking this to price elasticity of demand."
+        examMatters: "Examiners expect you to draw the tax as a leftward shift of supply and identify the new equilibrium price and quantity. Always evaluate by discussing whether the tax is set at the correct level and who bears the burden, linking this to price elasticity of demand.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Tax imposed on demerit good", "Supply curve shifts left (upward)", "Price rises and quantity falls", "Output moves closer to socially optimal level"],
+          shuffled: [2, 0, 3, 1]
+        }
       },
       {
         id: "evaluating-indirect-taxes",
@@ -81,7 +87,14 @@ const CONTENT = [
           text: "**The UK Soft Drinks Industry Levy** (sugar tax), introduced in 2018, prompted manufacturers like Lucozade Ribena Suntory to reformulate drinks below the sugar threshold before the tax even took effect. This shows how the announcement of a tax can change producer behaviour, though critics argue consumers simply switched to other sugary products not covered by the levy."
         },
         misconception: "Students claim that indirect taxes are unfair and should never be used because they are regressive. While the distributional impact is a valid concern, the health and environmental benefits may outweigh the regressivity, especially if revenue is recycled to support low-income households. Instead write: the regressive nature of indirect taxes is a limitation that must be weighed against their effectiveness in reducing harmful externalities.",
-        examMatters: "In evaluation, examiners want you to discuss elasticity of demand when assessing how effective the tax will be at reducing consumption. A tax on an inelastic good raises lots of revenue but changes behaviour very little, while a tax on an elastic good changes behaviour but raises less revenue."
+        examMatters: "In evaluation, examiners want you to discuss elasticity of demand when assessing how effective the tax will be at reducing consumption. A tax on an inelastic good raises lots of revenue but changes behaviour very little, while a tax on an elastic good changes behaviour but raises less revenue.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Indirect taxes can be ___ (hit poorer households harder)", "→ ___ demand means tax barely reduces consumption", "→ High taxes may encourage ___ market activity"],
+          answers: ["regressive", "inelastic", "black"],
+          hints: ["re________", "in_______", "bl___"]
+        }
       }
     ],
     takeaway: [
@@ -128,7 +141,13 @@ const CONTENT = [
           text: "**The UK Plug-in Car Grant** subsidised the purchase of electric vehicles by up to 1,500 pounds per car before it was withdrawn in 2022. During its lifetime the scheme helped increase EV registrations from under 4,000 in 2013 to over 267,000 in 2022, demonstrating how subsidies can accelerate adoption of goods with positive externalities."
         },
         misconception: "Students write that subsidies guarantee the socially optimal output will be reached. In reality, the government faces the same information problem as with taxes — it rarely knows the exact marginal external benefit, so the subsidy may be set too high or too low. Instead write: subsidies move output toward the social optimum but imperfect information means the exact optimal level is rarely achieved.",
-        examMatters: "When drawing a subsidy diagram, examiners want you to show the supply curve shifting right by the amount of the subsidy and to clearly label the new lower price consumers pay versus the higher effective price producers receive. Always evaluate by considering the opportunity cost of the government spending."
+        examMatters: "When drawing a subsidy diagram, examiners want you to show the supply curve shifting right by the amount of the subsidy and to clearly label the new lower price consumers pay versus the higher effective price producers receive. Always evaluate by considering the opportunity cost of the government spending.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Government pays subsidy to producer", "Supply curve shifts right (downward)", "Price falls and quantity rises", "Output moves closer to socially optimal level"],
+          shuffled: [3, 1, 0, 2]
+        }
       },
       {
         id: "evaluating-subsidies",
@@ -153,7 +172,14 @@ const CONTENT = [
           text: "**The EU Common Agricultural Policy** has subsidised European farmers for decades, originally to ensure food security. However, the subsidies have been criticised for encouraging overproduction, distorting global trade, and disproportionately benefiting large agribusinesses rather than small farmers who need support most."
         },
         misconception: "Students claim subsidies are always better than taxes because they do not raise prices for consumers. This ignores the fact that subsidies must be funded through taxes elsewhere, so the cost is still borne by society. Instead write: subsidies lower prices for the subsidised good but create an opportunity cost because the funding must come from taxation or reduced spending elsewhere.",
-        examMatters: "Strong evaluation of subsidies always addresses the opportunity cost. Examiners reward you for asking what else the government could have done with the money and whether the subsidy is the most cost-effective way to correct the externality compared to alternatives like regulation or information provision."
+        examMatters: "Strong evaluation of subsidies always addresses the opportunity cost. Examiners reward you for asking what else the government could have done with the money and whether the subsidy is the most cost-effective way to correct the externality compared to alternatives like regulation or information provision.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Subsidies carry an ___ cost from taxation", "→ If set too high they cause ___", "→ Hard to ___ once interest groups depend on them"],
+          answers: ["opportunity", "overproduction", "remove"],
+          hints: ["op__________", "ov____________", "re____"]
+        }
       }
     ],
     takeaway: [
@@ -199,7 +225,13 @@ const CONTENT = [
           text: "**New York City** has maintained rent control and rent stabilisation policies since the 1940s, keeping rents below market rates for millions of tenants. While this makes existing apartments more affordable, critics point to a chronic housing shortage, deteriorating building conditions, and a thriving black market for rent-controlled units."
         },
         misconception: "Students write that maximum prices solve the affordability problem because consumers pay less. The lower price creates a shortage, so many consumers cannot buy the good at all, and black markets often emerge where prices are even higher than the original equilibrium. Instead write: maximum prices reduce the price for those who can obtain the good but create shortages and potential black-market activity.",
-        examMatters: "Examiners expect you to draw the diagram showing the maximum price below equilibrium, clearly labelling the shortage as the gap between quantity demanded and quantity supplied. Always evaluate by discussing the consequences of the shortage, including rationing, black markets and reduced quality."
+        examMatters: "Examiners expect you to draw the diagram showing the maximum price below equilibrium, clearly labelling the shortage as the gap between quantity demanded and quantity supplied. Always evaluate by discussing the consequences of the shortage, including rationing, black markets and reduced quality.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Government sets price below equilibrium", "Quantity demanded rises, quantity supplied falls", "Excess demand creates a shortage", "Rationing or black markets emerge"],
+          shuffled: [2, 3, 0, 1]
+        }
       },
       {
         id: "effects-and-evaluation-of-price-ceilings",
@@ -224,7 +256,14 @@ const CONTENT = [
           text: "**Venezuela** imposed price ceilings on basic goods including food and medicine during its economic crisis. Rather than making goods affordable, the controls caused severe shortages as producers could not cover their costs, leading to empty supermarket shelves and a booming black market where prices were many times the official ceiling."
         },
         misconception: "Students assume that if a maximum price causes problems, the government should simply set it closer to the equilibrium. A maximum price only affects the market if it is below equilibrium, and the closer it gets to equilibrium, the less impact it has on affordability. Instead write: there is an inherent trade-off between making a good affordable and avoiding the shortage that a binding price ceiling creates.",
-        examMatters: "In longer-answer questions, examiners reward you for distinguishing between short-run and long-run effects of price ceilings. Always discuss the impact on both consumers and producers, and consider whether alternative policies like subsidies might achieve the affordability goal without creating a shortage."
+        examMatters: "In longer-answer questions, examiners reward you for distinguishing between short-run and long-run effects of price ceilings. Always discuss the impact on both consumers and producers, and consider whether alternative policies like subsidies might achieve the affordability goal without creating a shortage.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Short run: some consumers benefit from lower ___", "→ Long run: producers reduce ___ and quality falls", "→ ___ markets emerge where prices exceed equilibrium"],
+          answers: ["price", "investment", "black"],
+          hints: ["pr___", "in________", "bl___"]
+        }
       }
     ],
     takeaway: [
@@ -271,7 +310,13 @@ const CONTENT = [
           text: "**Scotland** introduced minimum unit pricing for alcohol at 50p per unit in 2018, the first country in the world to do so. Research published by Public Health Scotland in 2023 found that alcohol-specific deaths fell by 13% in the first year compared to what would have been expected, suggesting the price floor was effective at reducing harmful consumption."
         },
         misconception: "Students write that minimum prices always lead to unemployment in the labour market context. Whether the National Minimum Wage causes unemployment depends on where it is set relative to the equilibrium wage and the elasticity of demand for labour. Instead write: a minimum wage above the equilibrium wage may cause some unemployment, but if set close to equilibrium or in a monopsony labour market, the effect may be minimal.",
-        examMatters: "Examiners expect you to draw the diagram with the minimum price above equilibrium, clearly labelling the surplus. For labour market questions, identify the surplus as unemployment. Always evaluate by discussing who benefits, who loses, and whether the government must intervene to buy up the surplus."
+        examMatters: "Examiners expect you to draw the diagram with the minimum price above equilibrium, clearly labelling the surplus. For labour market questions, identify the surplus as unemployment. Always evaluate by discussing who benefits, who loses, and whether the government must intervene to buy up the surplus.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Government sets price above equilibrium", "Quantity supplied rises, quantity demanded falls", "Excess supply creates a surplus", "Government may need to buy up unsold stock"],
+          shuffled: [3, 0, 2, 1]
+        }
       },
       {
         id: "effects-and-evaluation-of-price-floors",
@@ -296,7 +341,14 @@ const CONTENT = [
           text: "**The EU butter mountain** of the 1980s was a direct result of minimum prices under the Common Agricultural Policy. Guaranteed floor prices encouraged European farmers to overproduce dairy products, creating surplus stocks of over 1.2 million tonnes of butter that the EU had to buy, store in refrigerated warehouses, and eventually sell at a loss or give away as food aid."
         },
         misconception: "Students claim minimum prices are ineffective because consumers will simply stop buying the product. For necessities with inelastic demand, consumers continue buying even at the higher price, so the surplus is smaller than expected. Instead write: the size of the surplus depends on the price elasticity of both demand and supply for the good in question.",
-        examMatters: "Strong answers evaluate minimum prices by considering the elasticity of demand and supply. If demand is inelastic, the price floor reduces quantity demanded only slightly, creating a small surplus but effectively raising producer income. Examiners reward this nuanced analysis over a generic description of surpluses."
+        examMatters: "Strong answers evaluate minimum prices by considering the elasticity of demand and supply. If demand is inelastic, the price floor reduces quantity demanded only slightly, creating a small surplus but effectively raising producer income. Examiners reward this nuanced analysis over a generic description of surpluses.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Minimum prices protect producer ___", "→ But surplus is costly to ___ or destroy", "→ Minimum ___ is a price floor in the labour market"],
+          answers: ["income", "store", "wage"],
+          hints: ["in____", "st___", "wa__"]
+        }
       }
     ],
     takeaway: [
@@ -341,7 +393,13 @@ const CONTENT = [
           text: "**The EU Emissions Trading System** (EU ETS), launched in 2005, is the world's largest carbon market covering over 10,000 power stations and industrial plants across Europe. After initial problems with oversupply of permits that kept prices too low, reforms since 2019 have pushed carbon prices above 80 euros per tonne, significantly accelerating investment in renewable energy."
         },
         misconception: "Students write that permit systems allow rich firms to pollute as much as they want by simply buying more permits. The total cap on emissions is fixed regardless of who holds the permits, so buying permits does not increase total pollution. Instead write: the cap guarantees the total pollution level while the trading mechanism ensures reductions happen at the lowest cost.",
-        examMatters: "Examiners want you to explain how the trading mechanism ensures cost-efficiency by channelling reductions to firms with the lowest abatement costs. Always evaluate by discussing whether the cap is set at the right level and the risk of excess permits keeping prices too low to incentivise change."
+        examMatters: "Examiners want you to explain how the trading mechanism ensures cost-efficiency by channelling reductions to firms with the lowest abatement costs. Always evaluate by discussing whether the cap is set at the right level and the risk of excess permits keeping prices too low to incentivise change.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Government sets total emissions cap", "Permits are allocated to firms", "Firms trade permits on open market", "Emissions fall to cap at lowest overall cost"],
+          shuffled: [2, 0, 3, 1]
+        }
       },
       {
         id: "evaluating-permit-systems",
@@ -366,7 +424,14 @@ const CONTENT = [
           text: "**The US Acid Rain Program**, launched in 1990, used tradeable permits for sulphur dioxide emissions from power plants. It achieved a 50% reduction in SO2 emissions at roughly half the projected cost, and is widely regarded as one of the most successful environmental policies ever implemented."
         },
         misconception: "Students claim that tradeable permits and carbon taxes are essentially the same thing because both put a price on pollution. The critical difference is that permits fix the quantity of emissions and let the price vary, while a tax fixes the price and lets the quantity vary. Instead write: permits guarantee the pollution level but create price uncertainty, while taxes guarantee the price but create quantity uncertainty.",
-        examMatters: "A common exam question asks you to compare tradeable permits with indirect taxes as methods for reducing pollution. Structure your answer around the key trade-off: permits give quantity certainty, taxes give price certainty. Evaluate which matters more in the given context and always consider information requirements."
+        examMatters: "A common exam question asks you to compare tradeable permits with indirect taxes as methods for reducing pollution. Structure your answer around the key trade-off: permits give quantity certainty, taxes give price certainty. Evaluate which matters more in the given context and always consider information requirements.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Permits fix the ___ of pollution", "→ But let the ___ fluctuate", "→ A carbon tax does the ___ — fixes price, not quantity"],
+          answers: ["quantity", "price", "opposite"],
+          hints: ["qu______", "pr___", "op______"]
+        }
       }
     ],
     takeaway: [
@@ -412,7 +477,13 @@ const CONTENT = [
           text: "**The UK National Health Service** provides healthcare free at the point of use, funded through general taxation and National Insurance contributions. While the NHS ensures universal access regardless of income, it faces persistent waiting lists and funding pressures, illustrating the tension between equity of access and productive efficiency."
         },
         misconception: "Students write that the government must provide all merit goods because the private sector will not produce them. In reality, the private sector does provide merit goods like private schools and hospitals, but at a price that excludes many consumers. Instead write: the government provides merit goods to ensure universal access, not because the private sector is incapable of producing them.",
-        examMatters: "Examiners want you to evaluate state provision by weighing the benefit of universal access and equity against the costs of taxation, potential inefficiency, and the opportunity cost of public spending. Never just describe what state provision is — always assess whether it is the best way to correct the specific market failure."
+        examMatters: "Examiners want you to evaluate state provision by weighing the benefit of universal access and equity against the costs of taxation, potential inefficiency, and the opportunity cost of public spending. Never just describe what state provision is — always assess whether it is the best way to correct the specific market failure.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Market fails to provide the good", "Government funds provision through taxation", "Good is available free at point of use", "Everyone can access regardless of ability to pay"],
+          shuffled: [3, 1, 0, 2]
+        }
       },
       {
         id: "information-provision-and-nudge-theory",
@@ -443,7 +514,14 @@ const CONTENT = [
           text: "**The UK auto-enrolment pension scheme**, introduced in 2012, nudges employees into saving for retirement by making pension contributions the default. By 2023, over 10 million additional workers were saving into a workplace pension, demonstrating how changing the default option can dramatically shift behaviour without banning any choices."
         },
         misconception: "Students claim that providing information always corrects the market failure because rational consumers will change their behaviour once informed. In practice, behavioural biases like present bias and habit mean consumers often ignore information even when it is clearly presented. Instead write: information provision helps consumers make better choices but is limited by behavioural biases that prevent people from acting on the information they receive.",
-        examMatters: "Nudge theory is increasingly popular in exam questions. Examiners reward you for explaining how nudges preserve freedom of choice (they are libertarian paternalism) while evaluating their limitations, particularly that they rely on predictable biases and may not work for all consumers or all types of market failure."
+        examMatters: "Nudge theory is increasingly popular in exam questions. Examiners reward you for explaining how nudges preserve freedom of choice (they are libertarian paternalism) while evaluating their limitations, particularly that they rely on predictable biases and may not work for all consumers or all types of market failure.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Consumers lack key ___ about costs or benefits", "→ Government provides facts or changes choice ___", "→ ___ steer behaviour without removing freedom"],
+          answers: ["information", "architecture", "nudges"],
+          hints: ["in__________", "ar___________", "nu____"]
+        }
       }
     ],
     takeaway: [
@@ -488,7 +566,13 @@ const CONTENT = [
           text: "**The EU Euro 6 emissions standards** set strict limits on nitrogen oxide and particulate emissions from new vehicles sold in Europe. These regulations directly forced manufacturers like Volkswagen and BMW to invest billions in cleaner engine technology, though the Volkswagen dieselgate scandal revealed that some firms cheated compliance tests rather than genuinely reducing emissions."
         },
         misconception: "Students write that regulation is the most effective form of government intervention because it forces compliance. Regulation is only as effective as enforcement allows, and firms may find ways to evade rules or lobby for weaker standards. Instead write: regulation provides direct control over behaviour but its effectiveness depends entirely on the quality of monitoring and enforcement.",
-        examMatters: "Examiners often ask you to compare regulation with market-based approaches like taxes or permits. Structure your comparison around flexibility (market instruments allow firms to choose how to respond), cost-effectiveness (regulation treats all firms the same regardless of abatement costs), and certainty of outcome."
+        examMatters: "Examiners often ask you to compare regulation with market-based approaches like taxes or permits. Structure your comparison around flexibility (market instruments allow firms to choose how to respond), cost-effectiveness (regulation treats all firms the same regardless of abatement costs), and certainty of outcome.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Government identifies market failure", "Legal standard or limit is imposed", "Firms must comply or face penalties", "Behaviour changes through legal force"],
+          shuffled: [1, 3, 0, 2]
+        }
       },
       {
         id: "deregulation-and-its-effects",
@@ -513,7 +597,14 @@ const CONTENT = [
           text: "**UK airline deregulation** in the 1980s and 1990s allowed new budget carriers like easyJet and Ryanair to enter the market and compete with established airlines. Average air fares fell significantly and passenger numbers soared, but critics point to reduced service quality, crowded airports, and environmental costs from the surge in flights."
         },
         misconception: "Students claim that deregulation always improves efficiency because free markets are superior to government control. Some markets require regulation to function properly, particularly where there are externalities, natural monopolies, or information asymmetries. Instead write: deregulation improves efficiency in competitive markets but may worsen outcomes where regulation was correcting genuine market failures.",
-        examMatters: "When evaluating deregulation, examiners want you to consider why the regulation existed in the first place. If it was correcting a genuine market failure, removing it may recreate that failure. If it was simply creating unnecessary bureaucracy, removing it may improve efficiency. Context is everything in your evaluation."
+        examMatters: "When evaluating deregulation, examiners want you to consider why the regulation existed in the first place. If it was correcting a genuine market failure, removing it may recreate that failure. If it was simply creating unnecessary bureaucracy, removing it may improve efficiency. Context is everything in your evaluation.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Deregulation removes rules to boost ___", "→ Can lower costs and encourage ___", "→ But risks ___ if rules corrected genuine failures"],
+          answers: ["competition", "innovation", "instability"],
+          hints: ["co__________", "in________", "in_________"]
+        }
       }
     ],
     takeaway: [
@@ -559,7 +650,13 @@ const CONTENT = [
           text: "**US ethanol subsidies** were introduced to reduce dependence on fossil fuels by encouraging corn-based biofuel production. However, the policy diverted so much farmland to corn that food prices rose globally, rainforests were cleared for new cropland, and the net environmental benefit was negligible — a textbook case of government failure."
         },
         misconception: "Students write that government failure means the government should never intervene in markets. Government failure is a risk of intervention, not an argument against all intervention. Instead write: government failure means the specific intervention worsened the outcome, which should make governments design policies more carefully rather than abandon intervention altogether.",
-        examMatters: "Examiners frequently ask you to evaluate government intervention by considering the possibility of government failure. This is your opportunity to show high-level analysis by explaining why a well-intentioned policy might produce unintended consequences that leave society worse off than the original market failure."
+        examMatters: "Examiners frequently ask you to evaluate government intervention by considering the possibility of government failure. This is your opportunity to show high-level analysis by explaining why a well-intentioned policy might produce unintended consequences that leave society worse off than the original market failure.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Market failure is identified", "Government intervenes with a policy", "Intervention creates unintended consequences", "Resources are misallocated more than before"],
+          shuffled: [2, 0, 3, 1]
+        }
       },
       {
         id: "causes-of-government-failure",
@@ -584,7 +681,14 @@ const CONTENT = [
           text: "**The 2008 financial crisis** was partly caused by government failure through inadequate regulation of complex financial products. Regulators lacked the information and expertise to understand the risks of mortgage-backed securities, and political pressure to expand home ownership discouraged stricter oversight of lending standards."
         },
         misconception: "Students claim that government failure is always caused by corrupt or incompetent politicians. Most government failure results from the genuine difficulty of designing effective policy with incomplete information in a complex economy. Instead write: government failure typically stems from information gaps and unintended consequences rather than deliberate policy errors.",
-        examMatters: "When explaining causes of government failure, examiners want you to link each cause to a specific policy example rather than listing causes in the abstract. Saying the government has imperfect information is not enough — explain how this imperfect information leads to a specific policy being set at the wrong level."
+        examMatters: "When explaining causes of government failure, examiners want you to link each cause to a specific policy example rather than listing causes in the abstract. Saying the government has imperfect information is not enough — explain how this imperfect information leads to a specific policy being set at the wrong level.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["___ information means wrong tax or subsidy level", "→ Political ___ favours short-term wins over long-term fixes", "→ Regulatory ___ lets industries shape rules in their favour"],
+          answers: ["imperfect", "short-termism", "capture"],
+          hints: ["im________", "sh____________", "ca_____"]
+        }
       },
       {
         id: "examples-and-evaluation-of-government-failure",
@@ -615,7 +719,13 @@ const CONTENT = [
           text: "**London taxi licensing** restricted the number of black cabs through strict regulation, keeping fares high and limiting supply. When ride-sharing services like Uber entered the market, they exposed how the licensing system had created an artificial shortage, though deregulation brought its own concerns about driver pay, passenger safety and congestion."
         },
         misconception: "Students argue that government failure proves free markets are always superior to government intervention. Every economy has both market failures and government failures, and the goal is to find the right balance of intervention. Instead write: the existence of government failure means intervention should be carefully designed and evaluated, not that it should be avoided entirely.",
-        examMatters: "In any evaluation question on government intervention, bringing in the concept of government failure demonstrates the highest level of analysis. Examiners reward you for explaining that even well-designed policies can fail, and for suggesting how the policy could be improved rather than simply arguing for or against intervention."
+        examMatters: "In any evaluation question on government intervention, bringing in the concept of government failure demonstrates the highest level of analysis. Examiners reward you for explaining that even well-designed policies can fail, and for suggesting how the policy could be improved rather than simply arguing for or against intervention.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Measure the cost of market failure", "Measure the cost of intervention", "Compare the two outcomes", "If intervention costs exceed failure costs, government failure exists"],
+          shuffled: [3, 1, 0, 2]
+        }
       }
     ],
     takeaway: [

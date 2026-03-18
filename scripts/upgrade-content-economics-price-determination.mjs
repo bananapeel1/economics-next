@@ -53,7 +53,13 @@ const CONTENT = [
           text: "**Glastonbury Festival** tickets sell out in minutes because the face-value price is set below equilibrium. The result is massive excess demand, with resale sites listing tickets at several times the original price."
         },
         misconception: "Students often write \"the market is always at equilibrium.\" In reality, markets are constantly adjusting because demand and supply shift frequently. Instead write: equilibrium is the point the market tends toward, but real-world prices fluctuate around it as conditions change.",
-        examMatters: "Examiners expect you to define equilibrium precisely as the price where Qd equals Qs with no tendency to change. Always support your answer with a clearly labelled diagram showing Pe and Qe at the intersection of demand and supply."
+        examMatters: "Examiners expect you to define equilibrium precisely as the price where Qd equals Qs with no tendency to change. Always support your answer with a clearly labelled diagram showing Pe and Qe at the intersection of demand and supply.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Demand curve slopes downward", "Supply curve slopes upward", "Curves intersect at one point", "Market clears at equilibrium price"],
+          shuffled: [3, 0, 2, 1]
+        }
       },
       {
         id: "excess-demand-and-excess-supply",
@@ -84,7 +90,14 @@ const CONTENT = [
           text: "**UK rental markets** in cities like London show persistent excess demand because rent controls and planning restrictions keep supply below equilibrium. Prospective tenants queue for viewings, and many are outbid, illustrating how below-equilibrium pricing creates shortages."
         },
         misconception: "Students confuse a shift in demand with a movement along the demand curve when explaining excess demand. Excess demand occurs at a given price, not because the curve moved. Instead write: excess demand arises when price is set below equilibrium, causing quantity demanded to exceed quantity supplied at that price.",
-        examMatters: "When explaining how a market returns to equilibrium, examiners want a step-by-step price adjustment story. Show the disequilibrium on a diagram, label the excess, and explain the direction of price change that restores equilibrium."
+        examMatters: "When explaining how a market returns to equilibrium, examiners want a step-by-step price adjustment story. Show the disequilibrium on a diagram, label the excess, and explain the direction of price change that restores equilibrium.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Price below Pe → ___ exceeds Qs", "→ ___ pushes price up", "→ Market returns to ___"],
+          answers: ["Qd", "shortage", "equilibrium"],
+          hints: ["Q_", "sh______", "eq_________"]
+        }
       },
       {
         id: "changes-in-equilibrium",
@@ -115,7 +128,13 @@ const CONTENT = [
           text: "**OPEC** production cuts in 2022 shifted global oil supply to the left while post-pandemic demand shifted right. Both forces pushed oil prices sharply upward, illustrating how simultaneous shifts can reinforce each other on price."
         },
         misconception: "Students draw a shift in demand and then also move along the demand curve in the same answer. A shift changes the position of the curve; a movement along happens on the other curve in response. Instead write: when demand shifts right, there is a movement along the supply curve to a higher quantity supplied at the new, higher price.",
-        examMatters: "Diagram accuracy is critical here. Label old and new equilibrium points clearly, use arrows to show the shift, and state the effect on both price and quantity. If both curves shift, explicitly say which variable is indeterminate."
+        examMatters: "Diagram accuracy is critical here. Label old and new equilibrium points clearly, use arrows to show the shift, and state the effect on both price and quantity. If both curves shift, explicitly say which variable is indeterminate.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Non-price factor changes", "Demand or supply curve shifts", "New intersection point forms", "New equilibrium price and quantity"],
+          shuffled: [2, 3, 0, 1]
+        }
       }
     ],
     takeaway: [
@@ -157,7 +176,14 @@ const CONTENT = [
           text: "**Ryanair** sells some seats for as little as $10 on routes where many passengers would pay $100 or more. Those passengers enjoy huge consumer surplus, which is exactly why budget airlines generate such high passenger volumes."
         },
         misconception: "Students sometimes say consumer surplus means the consumer \"saves money.\" Surplus is not a saving — it is the gap between the maximum you would have paid and the price you did pay. Instead write: consumer surplus measures the extra welfare consumers receive by paying less than their valuation.",
-        examMatters: "Examiners frequently ask you to show consumer surplus on a diagram. Make sure you shade the correct triangle — below the demand curve, above the price line, and to the left of equilibrium quantity. Label it clearly."
+        examMatters: "Examiners frequently ask you to show consumer surplus on a diagram. Make sure you shade the correct triangle — below the demand curve, above the price line, and to the left of equilibrium quantity. Label it clearly.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Willingness to pay minus ___ price", "→ Equals consumer ___", "→ Area below ___ curve, above price"],
+          answers: ["market", "surplus", "demand"],
+          hints: ["ma____", "su_____", "de____"]
+        }
       },
       {
         id: "producer-surplus",
@@ -184,7 +210,13 @@ const CONTENT = [
           text: "**Saudi Aramco** can extract oil at roughly $3 per barrel while the world price often exceeds $70. The enormous gap gives Saudi Arabia one of the largest producer surpluses of any commodity producer on the planet."
         },
         misconception: "Students confuse producer surplus with profit. Producer surplus is measured against the minimum supply price on the supply curve, not against total costs of production. Instead write: producer surplus is the area above the supply curve and below the price, which is related to but not identical to accounting profit.",
-        examMatters: "When comparing consumer and producer surplus, examiners want you to shade both triangles on the same diagram. Use different shading or labelling so it is clear which area is which. Always reference the equilibrium price line."
+        examMatters: "When comparing consumer and producer surplus, examiners want you to shade both triangles on the same diagram. Use different shading or labelling so it is clear which area is which. Always reference the equilibrium price line.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Farmer willing to sell at $150", "Market price is $200", "Difference is $50 producer surplus", "Area above supply curve, below price"],
+          shuffled: [1, 3, 0, 2]
+        }
       },
       {
         id: "total-welfare-and-efficiency",
@@ -211,7 +243,14 @@ const CONTENT = [
           text: "**The US Congressional Budget Office** estimates deadweight loss when scoring tax proposals. A proposed sugar tax, for example, would reduce total welfare by shrinking the quantity traded below the free-market level, creating a measurable triangle of lost surplus."
         },
         misconception: "Students assume that any government intervention automatically reduces total welfare. Some interventions correct market failures and can actually increase welfare by moving output closer to the socially optimal level. Instead write: intervention reduces welfare only when the market was already efficient; if a market failure exists, intervention may improve total welfare.",
-        examMatters: "Examiners love asking you to compare welfare before and after a policy change. Always calculate or shade consumer surplus, producer surplus and any deadweight loss. State clearly whether total welfare has risen or fallen and explain why."
+        examMatters: "Examiners love asking you to compare welfare before and after a policy change. Always calculate or shade consumer surplus, producer surplus and any deadweight loss. State clearly whether total welfare has risen or fallen and explain why.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["CS + PS = total ___", "→ Maximised at free-market ___", "→ Any deviation creates ___ loss"],
+          answers: ["welfare", "equilibrium", "deadweight"],
+          hints: ["we_____", "eq_________", "de________"]
+        }
       }
     ],
     takeaway: [
@@ -257,7 +296,13 @@ const CONTENT = [
           text: "**De Beers** historically controlled diamond supply to keep prices high, which rationed diamonds to wealthy buyers and signalled scarcity. When lab-grown diamonds entered the market at lower prices, the price mechanism incentivised consumers to switch, pressuring natural diamond prices downward."
         },
         misconception: "Students list the three functions but fail to explain how they work through price changes. Simply naming them earns very few marks. Instead write: explain the mechanism — a price rise signals scarcity, incentivises greater supply, and rations the good to those with the highest willingness to pay.",
-        examMatters: "Examiners often give a scenario and ask you to explain how the price mechanism operates. You must identify all three functions — signalling, incentive and rationing — and apply each specifically to the context. Generic answers without application score poorly."
+        examMatters: "Examiners often give a scenario and ask you to explain how the price mechanism operates. You must identify all three functions — signalling, incentive and rationing — and apply each specifically to the context. Generic answers without application score poorly.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Price rises in the market", "Signal of higher demand sent", "Producers incentivised to supply more", "Scarce goods rationed to highest-value buyers"],
+          shuffled: [2, 0, 3, 1]
+        }
       },
       {
         id: "the-invisible-hand",
@@ -284,7 +329,14 @@ const CONTENT = [
           text: "**Supermarket supply chains** illustrate the invisible hand daily. No central planner tells farmers, millers and bakers how much bread London needs tomorrow, yet shelves are stocked because each firm responds to price signals and profit incentives along the chain."
         },
         misconception: "Students claim the invisible hand means markets always produce the best outcome for society. Smith himself acknowledged situations where self-interest leads to harmful results, particularly when competition is absent. Instead write: the invisible hand works best under competitive conditions and can fail when externalities or market power distort price signals.",
-        examMatters: "When discussing the invisible hand, examiners expect you to link it to the three functions of the price mechanism and then evaluate its limitations. Always mention at least one reason why the invisible hand may fail, such as externalities or monopoly power."
+        examMatters: "When discussing the invisible hand, examiners expect you to link it to the three functions of the price mechanism and then evaluate its limitations. Always mention at least one reason why the invisible hand may fail, such as externalities or monopoly power.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Individuals pursue ___", "→ Prices guide their ___", "→ Resources flow to highest-valued ___"],
+          answers: ["self-interest", "decisions", "uses"],
+          hints: ["se__________", "de_______", "us__"]
+        }
       }
     ],
     takeaway: [
@@ -331,7 +383,13 @@ const CONTENT = [
           text: "**UK alcohol duty** charges a fixed amount per unit of pure alcohol — a classic specific tax. Meanwhile **VAT at 20%** is added as a percentage of the pre-tax price, making it an ad valorem tax applied on top of the specific duty."
         },
         misconception: "Students draw ad valorem taxes as a parallel shift of the supply curve, identical to a specific tax. Because ad valorem is a percentage, the absolute tax amount rises with price, so the shift increases at higher quantities. Instead write: an ad valorem tax pivots the supply curve upward, with the gap widening as price increases.",
-        examMatters: "Examiners regularly ask you to compare specific and ad valorem taxes on a diagram. You must show a parallel shift for specific and a pivoting shift for ad valorem. Label the tax per unit clearly and shade the tax revenue rectangle."
+        examMatters: "Examiners regularly ask you to compare specific and ad valorem taxes on a diagram. You must show a parallel shift for specific and a pivoting shift for ad valorem. Label the tax per unit clearly and shade the tax revenue rectangle.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Government imposes indirect tax", "Supply curve shifts upward", "New equilibrium at higher price", "Output falls and tax revenue collected"],
+          shuffled: [3, 1, 0, 2]
+        }
       },
       {
         id: "tax-incidence-and-elasticity",
@@ -362,7 +420,14 @@ const CONTENT = [
           text: "**Tobacco taxes** in the UK generate large revenue because demand is highly inelastic — smokers are addicted and cannot easily cut back. The government knows consumers will absorb most of the price increase, making cigarettes an effective revenue-raising target."
         },
         misconception: "Students state that producers always pass the full tax on to consumers. This only happens when demand is perfectly inelastic. Instead write: the proportion passed on depends on relative elasticities — the more inelastic demand is relative to supply, the greater the share consumers bear.",
-        examMatters: "Tax incidence questions almost always require a diagram showing the old and new equilibrium, the consumer and producer share of the tax, and the tax revenue rectangle. Examiners award marks for correctly identifying which side bears the larger burden and explaining why using elasticity."
+        examMatters: "Tax incidence questions almost always require a diagram showing the old and new equilibrium, the consumer and producer share of the tax, and the tax revenue rectangle. Examiners award marks for correctly identifying which side bears the larger burden and explaining why using elasticity.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Tax ___ splits between consumers and producers", "→ Less ___ side bears more of the tax", "→ ___ demand means consumers pay most"],
+          answers: ["incidence", "elastic", "inelastic"],
+          hints: ["in_______", "el_____", "in_______"]
+        }
       },
       {
         id: "welfare-effects-of-taxation",
@@ -389,7 +454,13 @@ const CONTENT = [
           text: "**Hungary's 27% VAT** is the highest standard rate in the EU. Studies estimate it creates significant deadweight loss in elastic markets like luxury goods, where consumers sharply reduce purchases, while generating steady revenue from inelastic necessities like food and energy."
         },
         misconception: "Students forget to include government revenue when analysing welfare. Tax revenue is not a loss to society — it is a transfer from consumers and producers to the government. Instead write: total welfare loss is only the deadweight loss triangle, because tax revenue is redistributed by the government, not destroyed.",
-        examMatters: "Welfare analysis of taxation is a very common exam question. You must show consumer surplus, producer surplus, government revenue and deadweight loss all on one diagram. Shade each area differently and state clearly which areas have increased, decreased or been created."
+        examMatters: "Welfare analysis of taxation is a very common exam question. You must show consumer surplus, producer surplus, government revenue and deadweight loss all on one diagram. Shade each area differently and state clearly which areas have increased, decreased or been created.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Tax raises price and lowers quantity", "Consumer and producer surplus both fall", "Government gains tax revenue rectangle", "Deadweight loss triangle remains unclaimed"],
+          shuffled: [1, 3, 0, 2]
+        }
       }
     ],
     takeaway: [
@@ -435,7 +506,14 @@ const CONTENT = [
           text: "**The EU Common Agricultural Policy** pays subsidies to European farmers to keep food production high and prices affordable. Critics argue it leads to overproduction and distorts international trade, with developing-country farmers unable to compete against subsidised European exports."
         },
         misconception: "Students draw the supply curve shifting upward when a subsidy is applied. A subsidy reduces costs, so the supply curve shifts downward — producers are willing to supply the same quantity at a lower price. Instead write: a subsidy shifts the supply curve down by the subsidy per unit, reflecting the lower effective cost of production.",
-        examMatters: "Subsidy diagrams must clearly show the old and new supply curves, the subsidy per unit as the vertical distance between them, and the government cost as the shaded rectangle. Examiners penalise diagrams where the shift direction is wrong or the subsidy amount is not labelled."
+        examMatters: "Subsidy diagrams must clearly show the old and new supply curves, the subsidy per unit as the vertical distance between them, and the government cost as the shaded rectangle. Examiners penalise diagrams where the shift direction is wrong or the subsidy amount is not labelled.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Government pays ___ to producers", "→ Supply curve shifts ___", "→ Price falls, ___ rises"],
+          answers: ["subsidy", "downward", "quantity"],
+          hints: ["su_____", "do______", "qu______"]
+        }
       },
       {
         id: "effects-and-evaluation-of-subsidies",
@@ -462,7 +540,13 @@ const CONTENT = [
           text: "**Germany's Energiewende** subsidised renewable energy through feed-in tariffs, making the country a world leader in solar and wind capacity. However, the programme cost German households over 25 billion euros annually through surcharges on electricity bills, sparking debate about cost-effectiveness."
         },
         misconception: "Students assume subsidies are always beneficial because they lower prices. Subsidies funded by taxation transfer costs to taxpayers, and if the market had no failure, the subsidy creates a deadweight loss by pushing output beyond the efficient level. Instead write: subsidies improve welfare only when they correct a genuine market failure such as a positive externality.",
-        examMatters: "Evaluation is essential for top marks on subsidy questions. You should weigh the benefits of lower prices and higher output against the opportunity cost, possible overproduction and the risk of government failure in choosing which industries to subsidise."
+        examMatters: "Evaluation is essential for top marks on subsidy questions. You should weigh the benefits of lower prices and higher output against the opportunity cost, possible overproduction and the risk of government failure in choosing which industries to subsidise.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Subsidy corrects a positive externality", "Output rises toward socially optimal level", "But costs taxpayers money via taxation", "Net benefit depends on size of externality"],
+          shuffled: [2, 0, 3, 1]
+        }
       }
     ],
     takeaway: [
@@ -502,7 +586,14 @@ const CONTENT = [
           text: "**Richard Thaler** won the Nobel Prize in Economics for showing that people make predictable irrational choices. His work led the UK government to create the Behavioural Insights Team, which uses nudges like automatic pension enrolment to improve financial outcomes."
         },
         misconception: "Students write that behavioural economics proves people are irrational and traditional models are useless. Behavioural economics shows people are predictably biased in specific situations, not that all economic models should be discarded. Instead write: behavioural economics supplements traditional theory by identifying systematic deviations from rational behaviour.",
-        examMatters: "Examiners expect you to name specific biases with examples, not just say \"people are irrational.\" Link each bias to a real-world consequence and explain how a nudge could address it. This shows application, which is where the higher marks sit."
+        examMatters: "Examiners expect you to name specific biases with examples, not just say \"people are irrational.\" Link each bias to a real-world consequence and explain how a nudge could address it. This shows application, which is where the higher marks sit.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["___ means relying on first info seen", "→ Loss ___ means losses hurt twice as much", "→ ___ improve choices without removing freedom"],
+          answers: ["anchoring", "aversion", "nudges"],
+          hints: ["an_______", "av______", "nu____"]
+        }
       },
       {
         id: "bounded-rationality",
@@ -529,7 +620,13 @@ const CONTENT = [
           text: "**Amazon's recommendation algorithm** exists because bounded rationality means you cannot evaluate millions of products yourself. By narrowing your options to a curated list, Amazon helps you satisfice faster, which increases purchase rates and average order value."
         },
         misconception: "Students equate bounded rationality with irrationality. Satisficing is actually a rational response to the costs of gathering and processing information. Instead write: bounded rationality means people are rational within their constraints — they make the best decisions they can given limited information, time and cognitive resources.",
-        examMatters: "When discussing bounded rationality, examiners want you to contrast it with the traditional rational agent model. Explain why satisficing occurs, give a real-world example, and evaluate whether it leads to worse outcomes or is simply a pragmatic adaptation to real-world complexity."
+        examMatters: "When discussing bounded rationality, examiners want you to contrast it with the traditional rational agent model. Explain why satisficing occurs, give a real-world example, and evaluate whether it leads to worse outcomes or is simply a pragmatic adaptation to real-world complexity.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Consumer faces limited info and time", "Cannot calculate the optimal choice", "Searches until good-enough option found", "Satisfices rather than maximises"],
+          shuffled: [3, 1, 0, 2]
+        }
       }
     ],
     takeaway: [

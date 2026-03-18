@@ -55,7 +55,13 @@ const CONTENT = [
           text: "**China's rapid industrialisation** produced severe air pollution in cities like Beijing, where PM2.5 levels regularly exceeded WHO safe limits by ten times. The market alone failed to account for the health costs imposed on millions of residents, forcing the government to introduce strict emission controls."
         },
         misconception: "Students write \"market failure means the market has completely stopped working.\" Market failure does not mean collapse; it means the market produces an inefficient allocation where total welfare could be improved. Instead write: market failure is a situation where the free market misallocates resources, producing too much or too little of a good.",
-        examMatters: "Examiners expect you to define market failure precisely as a misallocation of resources, not just \"when something goes wrong.\" Always link market failure to a specific type, such as externalities or public goods, and explain why the free market produces the wrong quantity. Generic definitions without a mechanism score poorly."
+        examMatters: "Examiners expect you to define market failure precisely as a misallocation of resources, not just \"when something goes wrong.\" Always link market failure to a specific type, such as externalities or public goods, and explain why the free market produces the wrong quantity. Generic definitions without a mechanism score poorly.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Free market operates without intervention", "Price signals become distorted", "Resources are misallocated", "Society gets wrong mix of goods and services"],
+          shuffled: [2, 0, 3, 1]
+        }
       },
       {
         id: "allocative-inefficiency-deadweight-loss",
@@ -86,7 +92,14 @@ const CONTENT = [
           text: "**Martin Shkreli's Turing Pharmaceuticals** raised the price of Daraprim from $13.50 to $750 per tablet in 2015. This monopoly pricing meant many patients could not access the drug, creating a deadweight loss where willing buyers were priced out of a life-saving transaction."
         },
         misconception: "Students confuse allocative inefficiency with productive inefficiency. Allocative inefficiency means the wrong quantity is being produced relative to what society values, while productive inefficiency means producing at higher cost than necessary. Instead write: allocative inefficiency occurs when P does not equal MC, so the market produces the wrong amount of a good.",
-        examMatters: "When drawing deadweight loss diagrams, examiners want you to clearly label the triangle between supply, demand, and the actual output level. Always state what the deadweight loss represents in words: it is welfare that is lost because mutually beneficial trades do not occur. Unlabelled triangles score zero."
+        examMatters: "When drawing deadweight loss diagrams, examiners want you to clearly label the triangle between supply, demand, and the actual output level. Always state what the deadweight loss represents in words: it is welfare that is lost because mutually beneficial trades do not occur. Unlabelled triangles score zero.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Allocative efficiency requires P = ___", "→ When P ≠ MC, market over- or ___", "→ Lost welfare is called ___ loss"],
+          answers: ["MC", "underproduces", "deadweight"],
+          hints: ["M_", "un____________", "de________"]
+        }
       }
     ],
     takeaway: [
@@ -133,7 +146,13 @@ const CONTENT = [
           text: "**BP's Deepwater Horizon** oil spill in 2010 released 4.9 million barrels of oil into the Gulf of Mexico, devastating fishing and tourism industries. The production of oil imposed massive external costs on coastal communities, ecosystems, and businesses that had no part in BP's drilling operations."
         },
         misconception: "Students say \"negative externalities only come from pollution.\" While pollution is the most common example, noise, congestion, and visual blight from production also count as negative externalities. Instead write: any cost imposed on uninvolved third parties through the production process is a negative externality.",
-        examMatters: "When analysing negative production externalities, examiners expect you to draw the MSC above MPC and identify both the market output and socially optimal output. Always label the welfare loss triangle and explain that the market overproduces because firms ignore external costs in their production decisions."
+        examMatters: "When analysing negative production externalities, examiners expect you to draw the MSC above MPC and identify both the market output and socially optimal output. Always label the welfare loss triangle and explain that the market overproduces because firms ignore external costs in their production decisions.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Firm produces at private cost", "External costs fall on third parties", "MSC is greater than MPC", "Market overproduces beyond social optimum"],
+          shuffled: [3, 1, 0, 2]
+        }
       },
       {
         id: "negative-externalities-consumption",
@@ -164,7 +183,14 @@ const CONTENT = [
           text: "**SUV ownership in London** imposes negative consumption externalities through higher pedestrian injury risk and greater CO2 emissions per kilometre. Transport for London data shows SUVs produce roughly 25% more emissions than average cars, yet individual buyers focus only on personal comfort and safety."
         },
         misconception: "Students confuse consumption and production externalities. The key distinction is the source: if the harm comes from making the good, it is a production externality; if it comes from using the good, it is a consumption externality. Instead write: always identify whether the third-party cost arises during the production process or during the act of consumption.",
-        examMatters: "Diagrams for negative consumption externalities shift the benefit curve, not the cost curve. Examiners penalise students who draw MSC above MPC for a consumption externality. Remember that the MSB lies below MPB, and the welfare loss triangle sits between these benefit curves from the market output back to the social optimum."
+        examMatters: "Diagrams for negative consumption externalities shift the benefit curve, not the cost curve. Examiners penalise students who draw MSC above MPC for a consumption externality. Remember that the MSB lies below MPB, and the welfare loss triangle sits between these benefit curves from the market output back to the social optimum.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Consumer acts on private ___ only", "→ Third parties bear external ___", "→ MSB is less than ___"],
+          answers: ["benefit", "costs", "MPB"],
+          hints: ["be_____", "co___", "MP_"]
+        }
       },
       {
         id: "positive-externalities-production",
@@ -195,7 +221,13 @@ const CONTENT = [
           text: "**Californian almond farmers** rely on migratory beekeepers who truck hives across the state each spring. The beekeeping industry generates positive production externalities worth billions in crop pollination, far exceeding the revenue from honey sales alone."
         },
         misconception: "Students forget that positive production externalities shift the cost curve, not the benefit curve. Since production creates the spillover, it is the MSC that falls below MPC, not the MSB that rises above MPB. Instead write: for production externalities, always adjust the cost side of the diagram to show the divergence.",
-        examMatters: "Positive production externalities are tested less often but catch students off guard. Examiners want you to draw MSC below MPC and clearly show the socially optimal output is greater than the market output. Explain that the market underproduces because firms do not factor in the benefits they create for others."
+        examMatters: "Positive production externalities are tested less often but catch students off guard. Examiners want you to draw MSC below MPC and clearly show the socially optimal output is greater than the market output. Explain that the market underproduces because firms do not factor in the benefits they create for others.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Firm produces a good", "Third parties gain spillover benefits", "MSC falls below MPC", "Market underproduces relative to social optimum"],
+          shuffled: [2, 3, 0, 1]
+        }
       },
       {
         id: "positive-externalities-consumption",
@@ -226,7 +258,14 @@ const CONTENT = [
           text: "**The NHS flu vaccination programme** provides free jabs to at-risk groups because private demand alone would be too low. Public Health England estimates that every pound spent on flu vaccination saves the NHS roughly four pounds in reduced hospitalisations, demonstrating the large positive consumption externality."
         },
         misconception: "Students claim \"education is a public good because it benefits everyone.\" Education is not a public good because it is both excludable and rival. It generates positive consumption externalities, which is a completely different concept. Instead write: education is a merit good with positive consumption externalities, not a public good.",
-        examMatters: "When evaluating positive consumption externalities, examiners expect you to draw MSB above MPB and identify the welfare gain from moving to the social optimum. Always explain why the free market underproduces: consumers base decisions on MPB alone and ignore the wider social benefits that their consumption creates."
+        examMatters: "When evaluating positive consumption externalities, examiners expect you to draw MSB above MPB and identify the welfare gain from moving to the social optimum. Always explain why the free market underproduces: consumers base decisions on MPB alone and ignore the wider social benefits that their consumption creates.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Consumer buys based on ___ benefit", "→ Third parties also gain ___ benefits", "→ MSB is greater than ___"],
+          answers: ["private", "external", "MPB"],
+          hints: ["pr_____", "ex______", "MP_"]
+        }
       }
     ],
     takeaway: [
@@ -273,7 +312,13 @@ const CONTENT = [
           text: "**The UK's lighthouse system** was historically funded by the government because individual ships could not be excluded from seeing the light. Trinity House, the lighthouse authority, collects dues from ports rather than individual vessels, illustrating why public goods require non-market funding mechanisms."
         },
         misconception: "Students say \"public goods are goods provided by the government.\" The definition is about characteristics, not who provides them. A government-built swimming pool is excludable and rival, so it is not a public good. Instead write: a public good is defined by non-excludability and non-rivalry, regardless of who provides it.",
-        examMatters: "Examiners test your ability to apply the two characteristics to specific examples. For any good they mention, you must explain why it is or is not non-excludable and why it is or is not non-rival. Simply naming \"street lights\" without explaining the characteristics earns very few marks."
+        examMatters: "Examiners test your ability to apply the two characteristics to specific examples. For any good they mention, you must explain why it is or is not non-excludable and why it is or is not non-rival. Simply naming \"street lights\" without explaining the characteristics earns very few marks.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Good is non-excludable and non-rival", "No one can be charged for using it", "No firm can earn revenue from it", "Private market will not provide the good"],
+          shuffled: [3, 0, 2, 1]
+        }
       },
       {
         id: "free-rider-problem",
@@ -304,7 +349,14 @@ const CONTENT = [
           text: "**The Thames Barrier** protects 1.4 million people and property worth over 300 billion pounds from flooding. No private firm would build it because every London resident benefits regardless of payment, making it a textbook case of the free rider problem solved by government provision."
         },
         misconception: "Students write \"the free rider problem means people are being lazy or selfish.\" Free riding is economically rational behaviour, not a moral failing. If you cannot be excluded from a benefit, paying is irrational from an individual perspective. Instead write: free riding is a rational response to non-excludability that leads to an collectively inefficient outcome.",
-        examMatters: "When explaining the free rider problem, examiners want a logical chain: non-excludability leads to no incentive to pay, which leads to no revenue for firms, which leads to no production. Simply saying \"people free ride\" without explaining why is not enough. Link each step clearly to earn full analysis marks."
+        examMatters: "When explaining the free rider problem, examiners want a logical chain: non-excludability leads to no incentive to pay, which leads to no revenue for firms, which leads to no production. Simply saying \"people free ride\" without explaining why is not enough. Link each step clearly to earn full analysis marks.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Good is non-___ so no one pays", "→ Revenue is ___ for private firms", "→ Solution is government provision via ___"],
+          answers: ["excludable", "zero", "taxation"],
+          hints: ["ex_________", "ze__", "ta_______"]
+        }
       }
     ],
     takeaway: [
@@ -350,7 +402,13 @@ const CONTENT = [
           text: "**Finland's education system** provides free schooling through to university level, funded by taxation. Finnish students consistently rank among the top performers globally in PISA assessments, demonstrating that state provision of this merit good can overcome the information failure that would lead to underconsumption."
         },
         misconception: "Students claim \"merit goods are the same as public goods because the government provides both.\" Merit goods are rival and excludable, so they could be provided by the market — the issue is that the market provides too little, not zero. Instead write: merit goods are underprovided by the market due to information failure and positive externalities, whereas public goods are not provided at all.",
-        examMatters: "When discussing merit goods, examiners want you to explain both reasons for underconsumption: information failure about private benefits and ignored positive externalities. Simply saying \"people do not consume enough\" without explaining why is insufficient. Show the examiner you understand the two distinct mechanisms at work."
+        examMatters: "When discussing merit goods, examiners want you to explain both reasons for underconsumption: information failure about private benefits and ignored positive externalities. Simply saying \"people do not consume enough\" without explaining why is insufficient. Show the examiner you understand the two distinct mechanisms at work.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Consumer undervalues the good", "Positive externalities are ignored", "MPB is less than MSB", "Free market underproduces merit goods"],
+          shuffled: [3, 1, 0, 2]
+        }
       },
       {
         id: "demerit-goods",
@@ -381,7 +439,14 @@ const CONTENT = [
           text: "**The UK's tobacco tax** means a pack of cigarettes costs over 14 pounds, with roughly 80% going to the government. Since the 2007 smoking ban and sustained tax rises, adult smoking rates have fallen from 22% to under 13%, showing how policy can correct the overconsumption of a demerit good."
         },
         misconception: "Students write \"demerit goods should be banned because they are harmful.\" Banning creates black markets and removes consumer choice entirely. Economists generally prefer using taxes and information to reduce consumption to the socially optimal level, not zero. Instead write: the goal is to reduce consumption to the social optimum, not to eliminate it entirely.",
-        examMatters: "Examiners expect you to mirror the merit good analysis in reverse. Explain both information failure and negative externalities as causes of overconsumption. When evaluating government policies like sugar taxes, consider whether they successfully target the information failure, the externality, or both."
+        examMatters: "Examiners expect you to mirror the merit good analysis in reverse. Explain both information failure and negative externalities as causes of overconsumption. When evaluating government policies like sugar taxes, consider whether they successfully target the information failure, the externality, or both.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Consumer ___ the benefits of the good", "→ Negative ___ are ignored", "→ Free market ___ demerit goods"],
+          answers: ["overvalues", "externalities", "overproduces"],
+          hints: ["ov________", "ex____________", "ov__________"]
+        }
       },
       {
         id: "information-failure-merit-demerit",
@@ -412,7 +477,13 @@ const CONTENT = [
           text: "**Australia's plain packaging law** for cigarettes, introduced in 2012, removed all branding and required graphic health warnings covering most of the pack. Research published in the BMJ found the policy contributed to a significant decline in smoking prevalence by correcting information failure about health risks."
         },
         misconception: "Students assume \"information failure only affects uneducated consumers.\" Highly educated people also suffer from information failure, particularly regarding complex products like financial services, nutrition, or long-term health consequences. Instead write: information failure affects all consumers when the true costs or benefits of a good are difficult to assess, regardless of education level.",
-        examMatters: "When linking information failure to merit and demerit goods, examiners want you to specify what information is missing. Do not just say \"consumers lack information\" — explain whether they underestimate addiction risk, long-term health damage, or future earnings from education. Specificity earns the analysis marks."
+        examMatters: "When linking information failure to merit and demerit goods, examiners want you to specify what information is missing. Do not just say \"consumers lack information\" — explain whether they underestimate addiction risk, long-term health damage, or future earnings from education. Specificity earns the analysis marks.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Consumer lacks full information", "Under- or overestimates true benefit", "Chooses the wrong quantity", "Welfare is lower than it could be"],
+          shuffled: [1, 3, 0, 2]
+        }
       }
     ],
     takeaway: [
@@ -457,7 +528,14 @@ const CONTENT = [
           text: "**Carfax in the United States** built a business solving asymmetric information in used car sales. By providing vehicle history reports covering accidents, service records, and ownership changes, Carfax allows buyers to assess quality, partially correcting the market-for-lemons problem that Akerlof identified."
         },
         misconception: "Students write \"asymmetric information means one side is lying.\" Asymmetric information does not require deception; it simply means one party has more knowledge than the other, which may occur naturally. Instead write: asymmetric information is about unequal access to relevant knowledge, which distorts market outcomes whether or not anyone acts dishonestly.",
-        examMatters: "Examiners frequently use the market for lemons as a framework. You must explain the chain clearly: information asymmetry causes buyers to discount quality, which drives out high-quality sellers, which lowers average quality further. This adverse selection spiral is what you need to demonstrate in your answer."
+        examMatters: "Examiners frequently use the market for lemons as a framework. You must explain the chain clearly: information asymmetry causes buyers to discount quality, which drives out high-quality sellers, which lowers average quality further. This adverse selection spiral is what you need to demonstrate in your answer.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["One party has ___ information", "→ Buyers cannot assess ___ or risk", "→ Market for ___ drives out good sellers"],
+          answers: ["superior", "quality", "lemons"],
+          hints: ["su______", "qu_____", "le____"]
+        }
       },
       {
         id: "moral-hazard-adverse-selection",
@@ -488,7 +566,13 @@ const CONTENT = [
           text: "**The 2008 financial crisis** was partly driven by moral hazard. Banks packaged risky mortgages into securities and sold them to investors, transferring the risk while keeping the fees. Because banks no longer bore the consequences of bad lending, they had reduced incentive to check borrowers' ability to repay."
         },
         misconception: "Students mix up moral hazard and adverse selection. Moral hazard is about behaviour changing after a deal is made, while adverse selection is about the wrong people entering the market before a deal. Instead write: moral hazard is a post-agreement problem where behaviour changes; adverse selection is a pre-agreement problem where risky parties self-select.",
-        examMatters: "Examiners love insurance market examples for testing these concepts. For full marks, clearly distinguish the timing: adverse selection occurs before the contract is signed, and moral hazard occurs after. Apply each concept to a specific scenario rather than just defining them in the abstract."
+        examMatters: "Examiners love insurance market examples for testing these concepts. For full marks, clearly distinguish the timing: adverse selection occurs before the contract is signed, and moral hazard occurs after. Apply each concept to a specific scenario rather than just defining them in the abstract.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Information is asymmetric between parties", "High-risk individuals self-select into market", "Premiums rise for everyone", "Low-risk people exit and market may collapse"],
+          shuffled: [2, 0, 3, 1]
+        }
       }
     ],
     takeaway: [
@@ -534,7 +618,14 @@ const CONTENT = [
           text: "**Google** controls over 90% of the global search engine market and has faced multiple antitrust actions. The European Commission fined Google 8.25 billion euros across three cases for abusing its dominant position, arguing that its market power reduced consumer choice and harmed competitors."
         },
         misconception: "Students assume \"monopolies are always bad for consumers.\" Some monopolies achieve massive economies of scale that lower prices below what competitive firms could offer, and they may invest heavily in innovation. Instead write: monopoly power can cause welfare loss, but whether it harms consumers depends on economies of scale, innovation, and how the firm uses its dominance.",
-        examMatters: "Examiners expect you to draw a monopoly diagram showing price above MC, output below the competitive level, and the deadweight loss triangle. You must also evaluate: consider whether the monopolist achieves dynamic efficiency through innovation or economies of scale that offset the static welfare loss. One-sided answers score poorly."
+        examMatters: "Examiners expect you to draw a monopoly diagram showing price above MC, output below the competitive level, and the deadweight loss triangle. You must also evaluate: consider whether the monopolist achieves dynamic efficiency through innovation or economies of scale that offset the static welfare loss. One-sided answers score poorly.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Firm has ___ power over price", "→ Restricts output, price rises above ___", "→ Consumer surplus transfers to ___"],
+          answers: ["market", "MC", "producer"],
+          hints: ["ma____", "M_", "pr______"]
+        }
       }
     ],
     takeaway: [
@@ -581,7 +672,13 @@ const CONTENT = [
           text: "**The US sugar programme** uses import quotas and price supports that keep domestic sugar prices roughly double the world price. Economists at the American Enterprise Institute estimated the annual deadweight loss to the US economy at over 3 billion dollars in foregone consumer and producer surplus."
         },
         misconception: "Students write \"welfare loss is the same as a fall in consumer surplus.\" Consumer surplus can fall without any welfare loss if it simply transfers to producers. Deadweight loss is surplus that disappears entirely, benefiting no one. Instead write: welfare loss is the total surplus destroyed, not merely redistributed between consumers and producers.",
-        examMatters: "When calculating welfare loss on a diagram, examiners want you to clearly identify the three points that form the deadweight loss triangle. State the formula: half base times height, where the base is the difference between market and optimal quantity, and the height is the relevant price or cost gap. Show your working."
+        examMatters: "When calculating welfare loss on a diagram, examiners want you to clearly identify the three points that form the deadweight loss triangle. State the formula: half base times height, where the base is the difference between market and optimal quantity, and the height is the relevant price or cost gap. Show your working.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: ["Identify competitive equilibrium output", "Compare actual output to optimum", "Calculate surplus that is lost", "Deadweight loss triangle is the difference"],
+          shuffled: [3, 1, 0, 2]
+        }
       },
       {
         id: "diagrams-welfare-loss",
@@ -606,7 +703,14 @@ const CONTENT = [
           text: "**Arnold Harberger** pioneered the empirical measurement of deadweight loss from monopoly in his 1954 study of US manufacturing. His estimates suggested the welfare cost of monopoly power was relatively small, sparking decades of debate about whether the so-called Harberger triangles understate the true cost of market power."
         },
         misconception: "Students draw deadweight loss triangles without labelling which curves form the boundaries. An unlabelled triangle could represent anything and earns no marks. Instead write: always label the three sides of the triangle with the relevant curves and clearly state whether the market has over- or under-produced.",
-        examMatters: "Diagram accuracy is worth significant marks in economics exams. Examiners check that your curves are correctly positioned, the triangle is in the right place, and your labels match your written explanation. Practise drawing externality, public good, and monopoly diagrams until the welfare loss area becomes second nature."
+        examMatters: "Diagram accuracy is worth significant marks in economics exams. Examiners check that your curves are correctly positioned, the triangle is in the right place, and your labels match your written explanation. Practise drawing externality, public good, and monopoly diagrams until the welfare loss area becomes second nature.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Negative externality: triangle to ___ of social optimum", "→ Positive externality: market ___", "→ Monopoly: output restricted below ___ level"],
+          answers: ["right", "underproduces", "competitive"],
+          hints: ["ri___", "un____________", "co__________"]
+        }
       }
     ],
     takeaway: [
