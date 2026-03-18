@@ -1020,8 +1020,8 @@ body {
 .diagram-title { font-size: 16px; font-weight: 700; color: var(--text-primary); margin-bottom: 16px; }
 .diagram-description { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.6; }
 .diagram-svg-wrapper { display: flex; justify-content: center; padding: 16px 0; }
-.diagram-svg-wrapper svg { max-width: 440px; width: 100%; height: auto; display: block; margin: 0 auto; }
-.diagram-svg-wrapper img { max-width: 440px; width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 8px; }
+.diagram-svg-wrapper svg { max-width: 310px; width: 100%; height: auto; display: block; margin: 0 auto; }
+.diagram-svg-wrapper img { max-width: 310px; width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 8px; }
 .diagram-svg-wrapper svg text { font-family: 'DM Sans', system-ui, sans-serif; }
 .diagram-svg-wrapper svg line,
 .diagram-svg-wrapper svg path,
@@ -3219,11 +3219,11 @@ button.sidebar-resource-link {
   display: flex; justify-content: center; align-items: center;
 }
 .lm-interactive-svg-wrapper svg {
-  width: 100%; height: auto; max-width: 380px;
+  width: 100%; height: auto; max-width: 270px;
   display: block; margin: 0 auto;
 }
 .lm-interactive-svg-wrapper img {
-  max-width: 380px; width: 100%; height: auto;
+  max-width: 270px; width: 100%; height: auto;
   display: block; margin: 0 auto; border-radius: 8px;
 }
 /* Ensure all SVG text is crisp and readable */
