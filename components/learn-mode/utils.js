@@ -24,9 +24,9 @@ export function distributeItems(items, totalSteps) {
 
 /**
  * Match diagrams to content blocks by title word-overlap.
- * Returns { stepIndex: diagram } where each diagram is placed on the
- * block whose title shares the most words with the diagram title.
- * Falls back to even distribution if no meaningful matches found.
+ * Returns { stepIndex: diagram } — STRICT: only places a diagram if
+ * there is a genuine title match (score >= 1). Unmatched diagrams are
+ * skipped entirely so they never appear on an unrelated block.
  */
 export function matchDiagramsToBlocks(diagrams, blocks) {
   if (!diagrams?.length || !blocks?.length) return {};
@@ -46,15 +46,12 @@ export function matchDiagramsToBlocks(diagrams, blocks) {
       if (score > bestScore) { bestScore = score; bestIdx = idx; }
     });
 
+    // Only place if there's a genuine word match — never dump on random blocks
     if (bestScore > 0 && bestIdx >= 0) {
       map[bestIdx] = diagram;
       used.add(bestIdx);
-    } else {
-      // No match — place on first available step
-      for (let i = 0; i < blocks.length; i++) {
-        if (!used.has(i) && !map[i]) { map[i] = diagram; used.add(i); break; }
-      }
     }
+    // No match → diagram stays in Diagrams tab only, not in Learn Mode
   }
   return map;
 }
