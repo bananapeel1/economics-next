@@ -83,15 +83,8 @@ export default function LearnModeTab({
         }
       });
 
-      // Distribute any unassigned items to blocks that have no items yet
-      if (diagramsData?.length) {
-        diagramsData.forEach((d, di) => {
-          if (usedDiagrams.has(di)) return;
-          for (let i = 0; i < contentData.length; i++) {
-            if (!dMap[i]) { dMap[i] = d; break; }
-          }
-        });
-      }
+      // Unassigned items stay in their own tabs (Diagrams, Quiz, Practice)
+      // — they do NOT spill into Learn Mode blocks without explicit refs.
     } else {
       // Legacy fallback — even distribution
       Object.assign(dMap, matchDiagramsToBlocks(diagramsData, contentData));
@@ -130,13 +123,13 @@ export default function LearnModeTab({
     if (isTransitioning) return;
     setIsTransitioning(true);
     setNodePopped(true);
-    // After exit animation, switch content
+    // After exit animation (200ms), switch content smoothly
     setTimeout(() => {
+      scrollToTop();
       onStepChange(step);
       setIsTransitioning(false);
       setNodePopped(false);
-      setTimeout(scrollToTop, 50);
-    }, 250);
+    }, 200);
   }
 
   // Keyboard navigation (desktop)
