@@ -909,15 +909,14 @@ body {
   font-size: 13px; font-weight: 600; line-height: 1.35;
 }
 .rl-flow-result--good { color: var(--rl-green); }
-.rl-flow-result--good .rl-flow-result-badge { background: var(--rl-green); color: #fff; border-radius: 8px; }
+.rl-flow-result--good .rl-flow-result-badge { background: var(--rl-green-bg); border: 1px solid var(--rl-green-bd); color: var(--rl-green); border-radius: 8px; }
 .rl-flow-result--good .rl-flow-result-content { background: var(--rl-green-bg); border: 1px solid var(--rl-green-bd); }
 .rl-flow-result--bad { color: var(--rl-red); }
-.rl-flow-result--bad .rl-flow-result-badge { background: var(--rl-red); color: #fff; border-radius: 8px; }
+.rl-flow-result--bad .rl-flow-result-badge { background: var(--rl-red-bg); border: 1px solid var(--rl-red-bd); color: var(--rl-red); border-radius: 8px; }
 .rl-flow-result--bad .rl-flow-result-content { background: var(--rl-red-bg); border: 1px solid var(--rl-red-bd); }
 .rl-flow-result--neutral { color: var(--rl-blue); }
-.rl-flow-result--neutral .rl-flow-result-badge { background: var(--rl-blue); color: #fff; border-radius: 8px; }
+.rl-flow-result--neutral .rl-flow-result-badge { background: var(--rl-blue-bg); border: 1px solid var(--rl-blue-bd); color: var(--rl-blue); border-radius: 8px; }
 .rl-flow-result--neutral .rl-flow-result-content { background: var(--rl-blue-bg); border: 1px solid var(--rl-blue-bd); }
-.rl-flow-result--neutral .rl-flow-result-badge { background: var(--rl-blue); color: #fff; border-radius: 10px; }
 
 /* Real Example — teal card */
 .rl-real-example {
@@ -1730,6 +1729,29 @@ button.sidebar-resource-link {
 /* ─── Learn Mode Content Area ─── */
 .lm-container { max-width: 860px; }
 
+/* Desktop wide screen — expand content and bump font sizes */
+@media (min-width: 1280px) {
+  .lm-container { max-width: 960px; }
+  .tab-content-body { padding: 32px 48px 60px; }
+  .rl-body-p { font-size: 15px; }
+  .rl-key-idea p { font-size: 15px; }
+  .rl-real-example p { font-size: 15px; }
+  .rl-misconception p { font-size: 15px; }
+  .rl-exam-matters p { font-size: 15px; }
+  .lm-section-title { font-size: 28px; }
+  .rl-note-section { padding: 24px 28px; }
+  .rl-flow-tl-title { font-size: 14px; }
+  .rl-flow-result-text { font-size: 14px; }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1600px) {
+  .lm-container { max-width: 1060px; }
+  .tab-content-body { padding: 36px 60px 60px; }
+  .rl-body-p { font-size: 15.5px; line-height: 1.75; }
+  .lm-section-title { font-size: 30px; }
+}
+
 /* Stepper layout */
 .lm-stepper-step {
   display: flex; gap: 16px; cursor: default;
@@ -1834,7 +1856,9 @@ button.sidebar-resource-link {
 .lm-more-menu-wrapper { position: relative; }
 .lm-more-btn {
   background: none; border: 1px solid var(--border-primary); color: var(--text-tertiary);
-  font-size: 16px; padding: 2px 8px; border-radius: 6px; cursor: pointer;
+  width: 28px; height: 24px; border-radius: 6px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
   transition: all 0.15s; letter-spacing: 2px; line-height: 1;
 }
 .lm-more-btn:hover { border-color: var(--accent-green); color: var(--accent-green); }
