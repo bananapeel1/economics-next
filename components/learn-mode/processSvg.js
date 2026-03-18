@@ -53,9 +53,8 @@ export default function processSvg(svgEl) {
     }
   });
 
-  // 5. Ensure SVG is responsive
+  // 5. Ensure SVG is responsive (don't set maxWidth — let CSS control it)
   svgEl.style.width = '100%';
   svgEl.style.height = 'auto';
-  svgEl.style.maxWidth = '100%';
   svgEl.style.display = 'block';
 }
