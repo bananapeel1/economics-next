@@ -2395,6 +2395,84 @@ button.sidebar-resource-link {
   text-align: center;
 }
 
+/* ── Interactive Recall (Reorder + Fill-in) ── */
+.lm-recall-card {
+  background: rgba(167,139,250,0.06); border: 1px solid rgba(167,139,250,0.18);
+  border-radius: 12px; padding: 16px 20px; margin-bottom: 20px;
+}
+.lm-recall-label {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.07em; color: #a78bfa; margin-bottom: 8px;
+}
+.lm-recall-prompt {
+  font-size: 13.5px; color: #d4bfff; margin-bottom: 14px; line-height: 1.5;
+}
+.lm-recall-items { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+.lm-recall-item {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--bg-input); border: 1px solid var(--border-primary);
+  border-radius: 8px; padding: 10px 12px; transition: all 0.2s;
+}
+.lm-recall-item.correct { background: var(--rl-green-bg); border-color: var(--rl-green-bd); }
+.lm-recall-item.wrong { background: var(--rl-red-bg); border-color: var(--rl-red-bd); }
+.lm-recall-item-num {
+  font-size: 11px; font-weight: 700; color: var(--text-dim);
+  min-width: 18px;
+}
+.lm-recall-item.correct .lm-recall-item-num { color: var(--rl-green); }
+.lm-recall-item.wrong .lm-recall-item-num { color: var(--rl-red); }
+.lm-recall-item-text { font-size: 13px; color: var(--text-primary); flex: 1; }
+.lm-recall-item-arrows { display: flex; flex-direction: column; gap: 2px; }
+.lm-recall-arrow {
+  background: none; border: 1px solid var(--border-primary); border-radius: 4px;
+  color: var(--text-tertiary); font-size: 10px; padding: 2px 6px;
+  cursor: pointer; transition: all 0.15s;
+}
+.lm-recall-arrow:hover:not(:disabled) { border-color: #a78bfa; color: #a78bfa; }
+.lm-recall-arrow:disabled { opacity: 0.3; cursor: not-allowed; }
+.lm-recall-item-icon { font-weight: 700; font-size: 14px; }
+.lm-recall-item.correct .lm-recall-item-icon { color: var(--rl-green); }
+.lm-recall-item.wrong .lm-recall-item-icon { color: var(--rl-red); }
+.lm-recall-hint { font-size: 12px; color: #d4bfff; margin-bottom: 10px; }
+.lm-recall-hint-btn {
+  padding: 7px 14px; border-radius: 8px; border: 1px solid rgba(167,139,250,0.2);
+  background: none; color: #a78bfa; font-size: 12px; font-weight: 600;
+  cursor: pointer; transition: all 0.15s;
+}
+.lm-recall-hint-btn:hover { background: rgba(167,139,250,0.08); }
+.lm-recall-check-btn {
+  padding: 8px 18px; border-radius: 8px; border: none;
+  background: #a78bfa; color: #fff; font-size: 13px; font-weight: 700;
+  cursor: pointer; transition: all 0.15s;
+}
+.lm-recall-check-btn:hover { filter: brightness(1.1); }
+.lm-recall-check-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.lm-recall-result {
+  padding: 10px 14px; border-radius: 8px; font-size: 13px; font-weight: 600;
+  text-align: center; margin-top: 10px;
+}
+.lm-recall-result.correct { background: var(--rl-green-bg); color: var(--rl-green); }
+.lm-recall-result.wrong { background: var(--rl-red-bg); color: var(--rl-red); }
+
+/* Fill-in-the-blank chain */
+.lm-fillin-chain { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+.lm-fillin-step {
+  display: flex; align-items: center; gap: 8px; padding: 10px 14px;
+  background: var(--bg-input); border: 1px solid var(--border-primary);
+  border-radius: 8px; font-size: 13px; color: var(--text-primary); transition: all 0.2s;
+}
+.lm-fillin-step.correct { background: var(--rl-green-bg); border-color: var(--rl-green-bd); }
+.lm-fillin-step.wrong { background: var(--rl-red-bg); border-color: var(--rl-red-bd); }
+.lm-fillin-input {
+  flex: 1; padding: 6px 10px; border-radius: 6px;
+  border: 1px solid var(--border-hover); background: var(--bg-card);
+  color: var(--text-primary); font-size: 13px; font-family: inherit;
+  outline: none; transition: all 0.15s;
+}
+.lm-fillin-input:focus { border-color: #a78bfa; }
+.lm-fillin-input.correct { color: var(--rl-green); border-color: var(--rl-green-bd); }
+.lm-fillin-input.wrong { color: var(--rl-red); border-color: var(--rl-red-bd); }
+
 .lm-explain-section { margin: 24px 0 0; }
 .lm-explain-toggle {
   display: flex; align-items: center; gap: 8px;

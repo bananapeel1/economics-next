@@ -9,6 +9,8 @@ import InlineQuiz from './learn-mode/InlineQuiz';
 import PreTest from './learn-mode/PreTest';
 import CompletionScreen from './learn-mode/CompletionScreen';
 import RecallCheckpoint from './learn-mode/RecallCheckpoint';
+import ReorderRecall from './learn-mode/ReorderRecall';
+import FillInRecall from './learn-mode/FillInRecall';
 import ExplainItBackUpgraded from './learn-mode/ExplainItBackUpgraded';
 import { NoteSection, TakeawayCard } from './notes';
 
@@ -277,10 +279,16 @@ export default function LearnModeTab({
         </div>
 
         <div className={`lm-stepper-content ${isTransitioning ? 'step-exit' : 'step-enter'}`}>
-          {/* Recall checkpoint */}
-          {currentStep > 0 && prevStep?.type === 'structured' && (
+          {/* Interactive recall — reorder or fill-in-the-blank */}
+          {step?.section?.recall ? (
+            step.section.recall.type === 'reorder' ? (
+              <ReorderRecall key={`recall-${currentStep}`} recall={step.section.recall} />
+            ) : step.section.recall.type === 'fillin' ? (
+              <FillInRecall key={`recall-${currentStep}`} recall={step.section.recall} />
+            ) : null
+          ) : currentStep > 0 && prevStep?.type === 'structured' ? (
             <RecallCheckpoint key={`recall-${currentStep}`} previousBlock={{ sections: [prevStep.section] }} />
-          )}
+          ) : null}
 
           <div className="lm-section-counter">Step {currentStep + 1} of {totalSteps}</div>
 
