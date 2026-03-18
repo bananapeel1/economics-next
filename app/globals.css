@@ -888,18 +888,19 @@ body {
   line-height: 1.4;
 }
 
-/* Result card — full width below the timeline */
+/* Result card — aligned with step layout (badge = node, content = card) */
 .rl-flow-result {
   display: flex; align-items: center; gap: 10px;
-  padding: 10px 14px; border-radius: 8px;
   margin-top: 6px;
 }
 .rl-flow-result-badge {
   width: 32px; height: 32px; border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 14px; font-weight: 700; flex-shrink: 0;
+  font-size: 12px; font-weight: 700; flex-shrink: 0;
 }
-.rl-flow-result-content { flex: 1; }
+.rl-flow-result-content {
+  flex: 1; padding: 8px 14px; border-radius: 8px;
+}
 .rl-flow-result-label {
   font-size: 8px; font-weight: 700; text-transform: uppercase;
   letter-spacing: 0.07em; margin-bottom: 1px;
@@ -907,20 +908,15 @@ body {
 .rl-flow-result-text {
   font-size: 13px; font-weight: 600; line-height: 1.35;
 }
-.rl-flow-result--good {
-  background: var(--rl-green-bg); border: 1px solid var(--rl-green-bd);
-  color: var(--rl-green);
-}
-.rl-flow-result--good .rl-flow-result-badge { background: var(--rl-green); color: #fff; border-radius: 10px; }
-.rl-flow-result--bad {
-  background: var(--rl-red-bg); border: 1px solid var(--rl-red-bd);
-  color: var(--rl-red);
-}
-.rl-flow-result--bad .rl-flow-result-badge { background: var(--rl-red); color: #fff; border-radius: 10px; }
-.rl-flow-result--neutral {
-  background: var(--rl-blue-bg); border: 1px solid var(--rl-blue-bd);
-  color: var(--rl-blue);
-}
+.rl-flow-result--good { color: var(--rl-green); }
+.rl-flow-result--good .rl-flow-result-badge { background: var(--rl-green); color: #fff; border-radius: 8px; }
+.rl-flow-result--good .rl-flow-result-content { background: var(--rl-green-bg); border: 1px solid var(--rl-green-bd); }
+.rl-flow-result--bad { color: var(--rl-red); }
+.rl-flow-result--bad .rl-flow-result-badge { background: var(--rl-red); color: #fff; border-radius: 8px; }
+.rl-flow-result--bad .rl-flow-result-content { background: var(--rl-red-bg); border: 1px solid var(--rl-red-bd); }
+.rl-flow-result--neutral { color: var(--rl-blue); }
+.rl-flow-result--neutral .rl-flow-result-badge { background: var(--rl-blue); color: #fff; border-radius: 8px; }
+.rl-flow-result--neutral .rl-flow-result-content { background: var(--rl-blue-bg); border: 1px solid var(--rl-blue-bd); }
 .rl-flow-result--neutral .rl-flow-result-badge { background: var(--rl-blue); color: #fff; border-radius: 10px; }
 
 /* Real Example — teal card */
@@ -1823,6 +1819,20 @@ button.sidebar-resource-link {
   font-family: 'DM Mono', monospace;
   font-size: 13px; font-weight: 700;
   color: var(--accent-green);
+}
+
+/* Quick actions (Restart + View content) */
+.lm-quick-actions {
+  display: flex; gap: 8px; margin-bottom: 12px;
+}
+.lm-quick-action {
+  padding: 6px 12px; border-radius: 6px;
+  background: none; border: 1px solid var(--border-primary);
+  color: var(--text-tertiary); font-size: 12px; font-weight: 500;
+  cursor: pointer; transition: all 0.15s; font-family: inherit;
+}
+.lm-quick-action:hover {
+  border-color: var(--accent-green); color: var(--accent-green);
   min-width: 36px; text-align: right;
   flex-shrink: 0;
 }

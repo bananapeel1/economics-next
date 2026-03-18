@@ -296,6 +296,18 @@ export default function LearnModeTab({
         <span className="lm-progress-label">{Math.round(progressPct)}%</span>
       </div>
 
+      {/* Quick actions */}
+      {currentStep > 0 && (
+        <div className="lm-quick-actions">
+          <button className="lm-quick-action" onClick={() => { navigateToStep(0); }}>
+            &#8634; Restart
+          </button>
+          <button className="lm-quick-action" onClick={() => onNavigateToTab?.('content')}>
+            &#9776; View all content
+          </button>
+        </div>
+      )}
+
       {/* Stepper */}
       <div className="lm-stepper-step">
         <div className="lm-stepper-rail">
