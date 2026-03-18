@@ -844,34 +844,23 @@ body {
 }
 .rl-body-bullets li strong { color: var(--text-primary); }
 
-/* Flow Chain — vertical cause→effect layout */
+/* Flow Chain — horizontal cause→effect pills */
 .rl-flow-chain {
-  display: flex; flex-direction: column; align-items: center;
-  margin: 20px 0; padding: 18px 20px;
+  display: flex; flex-wrap: wrap; gap: 8px;
+  align-items: center; justify-content: center;
+  margin: 20px 0; padding: 16px 20px;
   background: var(--bg-input); border-radius: 10px;
 }
-.rl-flow-steps {
-  display: flex; flex-direction: column; align-items: center; width: 100%;
-}
-.rl-flow-step {
-  display: flex; flex-direction: column; align-items: center;
-}
 .rl-flow-pill {
-  padding: 10px 20px; border-radius: 8px;
-  font-size: 13px; font-weight: 500; line-height: 1.4; text-align: center;
+  padding: 8px 16px; border-radius: 8px;
+  font-size: 13px; font-weight: 500; line-height: 1.4;
   background: var(--bg-card); border: 1px solid var(--border-primary);
-  color: var(--text-primary); max-width: 340px;
+  color: var(--text-primary);
 }
-.rl-flow-arrow {
-  color: var(--rl-green); font-size: 14px; font-weight: 700;
-  margin: 6px 0;
-}
-.rl-flow-result-row {
-  display: flex; flex-direction: column; align-items: center;
-}
+.rl-flow-arrow { color: var(--rl-green); font-size: 16px; font-weight: 700; }
 .rl-flow-result {
-  padding: 10px 20px; border-radius: 8px; text-align: center;
-  font-size: 13px; font-weight: 600; line-height: 1.4; max-width: 360px;
+  padding: 8px 16px; border-radius: 8px;
+  font-size: 13px; font-weight: 600; line-height: 1.4;
 }
 .rl-flow-result--good {
   background: var(--rl-green-bg); border: 1px solid var(--rl-green-bd);
@@ -965,8 +954,8 @@ body {
 @media (max-width: 768px) {
   .rl-key-idea, .rl-real-example, .rl-misconception, .rl-exam-matters { padding: 10px 12px; }
   .rl-note-section-title { font-size: 15px; }
-  .rl-flow-chain { padding: 14px 12px; }
-  .rl-flow-pill { font-size: 12px; padding: 8px 14px; }
+  .rl-flow-chain { gap: 6px; padding: 12px 14px; }
+  .rl-flow-pill { font-size: 12px; padding: 6px 12px; }
   .rl-body-p { font-size: 13px; }
   .rl-takeaway-item { font-size: 13px; }
   .lm-reveal-btn { padding: 12px; font-size: 13px; }
