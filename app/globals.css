@@ -804,7 +804,7 @@ body {
 
 /* Sub-section wrapper — green-bar card */
 .rl-note-section {
-  background: rgba(255,255,255,.035); border: 1px solid var(--border-primary);
+  background: rgba(255,255,255,.05); border: 1px solid var(--border-primary);
   border-left: 4px solid var(--accent-green); border-radius: 10px;
   padding: 20px 24px; margin-bottom: 24px;
 }
@@ -1844,6 +1844,13 @@ button.sidebar-resource-link {
 
 /* ─── Learn Mode Content Area ─── */
 .lm-container { max-width: 860px; }
+
+/* Tablet — constrain diagrams */
+@media (min-width: 768px) {
+  .diagram-container, .lm-diagram-card { max-width: 380px; }
+  .diagram-svg-wrapper svg, .diagram-svg-wrapper img { max-width: 280px; }
+  .lm-interactive-svg-wrapper svg, .lm-interactive-svg-wrapper img { max-width: 260px; }
+}
 
 /* Desktop wide screen — expand content and bump font sizes */
 @media (min-width: 1280px) {
