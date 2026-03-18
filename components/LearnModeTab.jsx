@@ -38,6 +38,12 @@ export default function LearnModeTab({
   });
   const containerRef = useRef(null);
 
+  // ── Score tracking for completion breakdown ──
+  const [scores, setScores] = useState({ quiz: { correct: 0, total: 0 }, recall: { correct: 0, total: 0 }, explain: { attempts: 0, total: 0 } });
+  function onQuizResult(correct) { setScores(s => ({ ...s, quiz: { correct: s.quiz.correct + (correct ? 1 : 0), total: s.quiz.total + 1 } })); }
+  function onRecallResult(correct) { setScores(s => ({ ...s, recall: { correct: s.recall.correct + (correct ? 1 : 0), total: s.recall.total + 1 } })); }
+  function onExplainAttempt() { setScores(s => ({ ...s, explain: { attempts: s.explain.attempts + 1, total: s.explain.total + 1 } })); }
+
   // ── Flatten blocks into one-topic-per-step ──
   const flatSteps = useMemo(() => {
     if (!contentData?.length) return [];
@@ -213,7 +219,7 @@ export default function LearnModeTab({
     return (
       <CompletionScreen
         subjectId={subjectId} sectionId={sectionId} currentSection={currentSection}
-        contentData={contentData} quizData={quizData}
+        contentData={contentData} quizData={quizData} scores={scores}
         onNavigateToQuiz={onNavigateToQuiz} onNavigateToTab={onNavigateToTab}
         onStartMixedReview={onStartMixedReview}
         onRetry={() => {
@@ -282,9 +288,9 @@ export default function LearnModeTab({
           {/* Interactive recall — reorder or fill-in-the-blank */}
           {step?.section?.recall ? (
             step.section.recall.type === 'reorder' ? (
-              <ReorderRecall key={`recall-${currentStep}`} recall={step.section.recall} />
+              <ReorderRecall key={`recall-${currentStep}`} recall={step.section.recall} onComplete={onRecallResult} />
             ) : step.section.recall.type === 'fillin' ? (
-              <FillInRecall key={`recall-${currentStep}`} recall={step.section.recall} />
+              <FillInRecall key={`recall-${currentStep}`} recall={step.section.recall} onComplete={onRecallResult} />
             ) : null
           ) : currentStep > 0 && prevStep?.type === 'structured' ? (
             <RecallCheckpoint key={`recall-${currentStep}`} previousBlock={{ sections: [prevStep.section] }} />
@@ -312,7 +318,8 @@ export default function LearnModeTab({
                 {/* Quiz (on last topic of block) */}
                 {step.isLastInBlock && currentQuiz && (
                   <InlineQuiz key={`quiz-${currentStep}`} question={currentQuiz}
-                    subjectId={subjectId} sectionId={sectionId} stepIndex={currentStep} />
+                    subjectId={subjectId} sectionId={sectionId} stepIndex={currentStep}
+                    onResult={onQuizResult} />
                 )}
 
                 {/* Practice (on last topic of block) */}

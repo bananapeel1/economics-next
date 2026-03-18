@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 
 /* ── Inline Quiz Card (MCQ) with Confidence Rating ── */
-export default function InlineQuiz({ question, subjectId, sectionId, stepIndex }) {
+export default function InlineQuiz({ question, subjectId, sectionId, stepIndex, onResult }) {
   const [selected, setSelected] = useState(null);
   const [answered, setAnswered] = useState(false);
   const [revealPhase, setRevealPhase] = useState(0); // 0=unanswered, 1=user choice shown, 2=full reveal
@@ -28,6 +28,7 @@ export default function InlineQuiz({ question, subjectId, sectionId, stepIndex }
     setSelected(index);
     setAnswered(true);
     setRevealPhase(1);
+    onResult?.(index === question.correctIndex);
     // After 200ms, reveal correct answer + explanation
     setTimeout(() => {
       setRevealPhase(2);

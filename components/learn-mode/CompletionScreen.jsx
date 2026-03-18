@@ -4,10 +4,27 @@ import StrengthMeter from '../StrengthMeter';
 import PostTest from './PostTest';
 import QuickFireDrill from './QuickFireDrill';
 
+function ScoreRow({ label, emoji, score, weight }) {
+  const pct = score.total > 0 ? Math.round((score.correct / score.total) * 100) : 0;
+  return (
+    <div className="lm-score-row">
+      <div className="lm-score-row-header">
+        <span className="lm-score-row-emoji">{emoji}</span>
+        <span className="lm-score-row-label">{label}</span>
+        <span className="lm-score-row-value">{score.correct}/{score.total}</span>
+        <span className="lm-score-row-weight">{weight}</span>
+      </div>
+      <div className="lm-score-bar-track">
+        <div className="lm-score-bar-fill" style={{ width: `${pct}%` }} />
+      </div>
+    </div>
+  );
+}
+
 /* ── Completion Screen ── */
 export default function CompletionScreen({
   subjectId, sectionId, currentSection,
-  contentData, quizData,
+  contentData, quizData, scores,
   onNavigateToQuiz, onNavigateToTab,
   onStartMixedReview, onRetry,
 }) {
@@ -64,6 +81,24 @@ export default function CompletionScreen({
 
       {/* Strength meter */}
       <StrengthMeter subjectId={subjectId} sectionId={sectionId} size="medium" />
+
+      {/* Score breakdown */}
+      {scores && (scores.quiz.total > 0 || scores.recall.total > 0) && (
+        <div className="lm-score-breakdown">
+          <h3 className="lm-score-breakdown-title">Score Breakdown</h3>
+          <ScoreRow label="Quiz" emoji="&#128161;" score={scores.quiz} weight="50%" />
+          <ScoreRow label="Recall" emoji="&#129504;" score={scores.recall} weight="30%" />
+          <ScoreRow label="Explain It Back" emoji="&#128172;" score={{ correct: scores.explain.attempts, total: scores.explain.total || 1 }} weight="20%" />
+
+          {/* Weakest area callout */}
+          {scores.quiz.total > 0 && scores.quiz.correct < scores.quiz.total && (
+            <div className="lm-weakest-area">
+              <span className="lm-weakest-icon">&#9888;</span>
+              <span>Quiz questions need attention — try the quiz tab for more practice</span>
+            </div>
+          )}
+        </div>
+      )}
 
       <div className="lm-complete-divider" />
       <div className="lm-complete-summary">
