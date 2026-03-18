@@ -1017,7 +1017,26 @@ body {
 .notes-list li::before { content: '\2022'; position: absolute; left: 0; color: var(--accent-green); font-weight: 700; }
 
 /* ── Rich Notes (new format) ── */
-.rn-notes { max-width: 900px; }
+.rn-notes { max-width: 960px; }
+
+/* Color key legend */
+.rn-color-key {
+  display: flex; gap: 20px; align-items: center;
+  padding: 12px 0; margin-bottom: 28px;
+  border-bottom: 1px solid var(--border-primary);
+}
+.rn-color-key-item {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 12px; color: var(--text-tertiary); font-weight: 500;
+}
+.rn-color-dot {
+  width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0;
+}
+.rn-color-dot.def { background: var(--rl-green); }
+.rn-color-dot.mech { background: var(--rl-blue); }
+.rn-color-dot.imp { background: var(--rl-amber); }
+.rn-color-dot.link { background: var(--rl-teal); }
+
 .rn-chapter { margin-bottom: 52px; }
 .rn-chapter-heading {
   font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--text-primary);
@@ -1072,10 +1091,10 @@ body {
 .rn-note-tag.exam { background: var(--rl-blue-bg); border: 1px solid var(--rl-blue-bd); color: var(--rl-blue); }
 .rn-note-tag.calc { background: rgba(167,139,250,0.09); border: 1px solid rgba(167,139,250,0.22); color: #a78bfa; }
 
-/* Formula card */
+/* Formula card — full width */
 .rn-formula-card {
   background: var(--bg-input); border: 1px solid var(--border-primary);
-  border-radius: 8px; padding: 12px 16px; margin: 8px 0 8px 15px;
+  border-radius: 8px; padding: 12px 16px; margin: 8px 0 16px 0;
 }
 .rn-formula-label { font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: #a78bfa; margin-bottom: 4px; }
 .rn-formula-text { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--text-primary); }
@@ -1083,7 +1102,7 @@ body {
 /* Flow chain */
 .rn-flow-chain {
   display: flex; flex-wrap: wrap; align-items: center; gap: 4px;
-  margin: 12px 0 12px 15px;
+  margin: 16px 0 20px 0;
 }
 .rn-flow-step {
   background: var(--bg-input); border: 1px solid var(--border-primary);
@@ -1840,6 +1859,12 @@ button.sidebar-resource-link {
   .rl-note-section { padding: 24px 28px; }
   .rl-flow-tl-title { font-size: 14px; }
   .rl-flow-result-text { font-size: 14px; }
+  /* Rich notes desktop */
+  .rn-notes { max-width: 1060px; }
+  .rn-note-text { font-size: 14.5px; }
+  .rn-key-idea-text { font-size: 14.5px; }
+  .rn-callout-text { font-size: 14px; }
+  .rn-chapter-heading { font-size: 22px; }
 }
 
 /* Ultra-wide screens */
@@ -1848,6 +1873,11 @@ button.sidebar-resource-link {
   .tab-content-body { padding: 36px 60px 60px; }
   .rl-body-p { font-size: 15.5px; line-height: 1.75; }
   .lm-section-title { font-size: 30px; }
+  /* Rich notes ultra-wide */
+  .rn-notes { max-width: 1160px; }
+  .rn-note-text { font-size: 15px; line-height: 1.65; }
+  .rn-key-idea-text { font-size: 15px; }
+  .rn-chapter-heading { font-size: 24px; }
 }
 
 /* Stepper layout */

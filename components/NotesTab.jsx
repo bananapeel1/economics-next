@@ -35,6 +35,14 @@ export default function NotesTab({ data, glossaryTerms }) {
   // Rich format — chapters with blocks, flow chains, formulas, callouts
   return (
     <div className="rn-notes">
+      {/* Color key legend */}
+      <div className="rn-color-key">
+        <span className="rn-color-key-item"><span className="rn-color-dot def" /> Definition</span>
+        <span className="rn-color-key-item"><span className="rn-color-dot mech" /> Mechanism</span>
+        <span className="rn-color-key-item"><span className="rn-color-dot imp" /> Implication</span>
+        <span className="rn-color-key-item"><span className="rn-color-dot link" /> Link</span>
+      </div>
+
       {data.map((chapter, ci) => (
         <div className="rn-chapter" key={ci}>
           {/* Chapter heading */}
@@ -62,11 +70,6 @@ export default function NotesTab({ data, glossaryTerms }) {
                   <div className="rn-note-item" key={ii}>
                     <div className={`rn-bullet ${item.type || 'def'}`} />
                     <div className="rn-note-text" dangerouslySetInnerHTML={{ __html: g(item.text) }} />
-                    {item.tag && (
-                      <span className={`rn-note-tag ${item.tag}`}>
-                        {item.tag === 'exam' ? 'EXAM TIP' : item.tag === 'calc' ? 'FORMULA' : item.tag.toUpperCase()}
-                      </span>
-                    )}
                   </div>
                 ))}
               </div>
