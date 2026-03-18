@@ -313,8 +313,25 @@ export default function LearnModeTab({
         <div className={`lm-stepper-content ${isTransitioning ? 'step-exit' : 'step-enter'}`}>
           <div className="lm-section-counter">Step {currentStep + 1} of {totalSteps}</div>
 
-          {step?.type === 'structured' ? (
+          {step?.type === 'structured' ? (() => {
+            // Gather recalls: current step's sections + previous step's last section
+            const currentRecalls = step.sections.map(s => s.recall).filter(Boolean);
+            const prevStepData = currentStep > 0 ? flatSteps[currentStep - 1] : null;
+            const prevRecall = prevStepData?.type === 'structured'
+              ? prevStepData.sections[prevStepData.sections.length - 1]?.recall
+              : null;
+
+            return (
             <>
+              {/* Spaced recall from PREVIOUS step (appears at top) */}
+              {prevRecall && (
+                prevRecall.type === 'reorder' ? (
+                  <ReorderRecall key={`spaced-${currentStep}`} recall={prevRecall} onComplete={onRecallResult} />
+                ) : prevRecall.type === 'fillin' ? (
+                  <FillInRecall key={`spaced-${currentStep}`} recall={prevRecall} onComplete={onRecallResult} />
+                ) : null
+              )}
+
               {/* Chapter heading — only on first step of a new block */}
               {showChapterHeading && (
                 <div className="lm-chapter-heading">{step.blockTitle}</div>
@@ -354,17 +371,18 @@ export default function LearnModeTab({
                 {/* Takeaway — AFTER explain it back */}
                 {step.takeaway && <TakeawayCard items={step.takeaway} glossaryTerms={glossaryTerms} />}
 
-                {/* Recall — tests what you just learned */}
-                {step.sections.map(sec => sec.recall).filter(Boolean).map((recall, ri) => (
-                  recall.type === 'reorder' ? (
-                    <ReorderRecall key={`recall-${currentStep}-${ri}`} recall={recall} onComplete={onRecallResult} />
-                  ) : recall.type === 'fillin' ? (
-                    <FillInRecall key={`recall-${currentStep}-${ri}`} recall={recall} onComplete={onRecallResult} />
+                {/* Immediate recall — tests what you just learned on THIS step */}
+                {currentRecalls[0] && (
+                  currentRecalls[0].type === 'reorder' ? (
+                    <ReorderRecall key={`immed-${currentStep}`} recall={currentRecalls[0]} onComplete={onRecallResult} />
+                  ) : currentRecalls[0].type === 'fillin' ? (
+                    <FillInRecall key={`immed-${currentStep}`} recall={currentRecalls[0]} onComplete={onRecallResult} />
                   ) : null
-                ))}
+                )}
               </div>
             </>
-          ) : step?.type === 'legacy' ? (
+            );
+          })() : step?.type === 'legacy' ? (
             <>
               <h2 className="lm-section-title">{step.block.title || `Section ${currentStep + 1}`}</h2>
               <div className="lm-content">
