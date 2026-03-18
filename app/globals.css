@@ -2475,9 +2475,17 @@ button.sidebar-resource-link {
   background: rgba(167,139,250,0.06); border: 1px solid rgba(167,139,250,0.18);
   border-radius: 12px; padding: 16px 20px; margin-bottom: 20px;
 }
+.lm-recall-header {
+  display: flex; align-items: center; justify-content: space-between;
+}
+.lm-recall-dismiss {
+  background: none; border: none; color: var(--text-dim); font-size: 20px;
+  cursor: pointer; padding: 0 4px; line-height: 1; transition: color 0.15s;
+}
+.lm-recall-dismiss:hover { color: var(--text-secondary); }
 .lm-recall-label {
   font-size: 10px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 0.07em; color: #a78bfa; margin-bottom: 8px;
+  letter-spacing: 0.07em; color: #a78bfa; margin-bottom: 0;
 }
 .lm-recall-prompt {
   font-size: 13.5px; color: #d4bfff; margin-bottom: 14px; line-height: 1.5;

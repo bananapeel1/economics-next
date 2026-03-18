@@ -1,12 +1,29 @@
 "use client";
 import { useState } from 'react';
 
+/**
+ * Fuzzy match: accepts minor spelling variations.
+ * - Case insensitive
+ * - Strips trailing s/es (plural)
+ * - Strips trailing ly/ing/ed (verb forms)
+ * - Strips hyphens and spaces for compound words
+ */
+function fuzzyMatch(input, answer) {
+  const normalize = s => s.trim().toLowerCase()
+    .replace(/[-\s]/g, '')       // "out ward" = "outward"
+    .replace(/(s|es|ing|ed|ly)$/, ''); // "outwards" = "outward"
+  return normalize(input) === normalize(answer);
+}
+
 /* ── Fill-in-the-Blank Recall: type missing words into a chain ── */
 export default function FillInRecall({ recall, onComplete }) {
   const [inputs, setInputs] = useState(() => recall.answers.map(() => ''));
   const [checked, setChecked] = useState(false);
   const [results, setResults] = useState([]);
   const [showHint, setShowHint] = useState(false);
+  const [dismissed, setDismissed] = useState(false);
+
+  if (dismissed) return null;
 
   function updateInput(idx, value) {
     if (checked) return;
@@ -16,9 +33,7 @@ export default function FillInRecall({ recall, onComplete }) {
   }
 
   function check() {
-    const res = inputs.map((input, i) =>
-      input.trim().toLowerCase() === recall.answers[i].toLowerCase()
-    );
+    const res = inputs.map((input, i) => fuzzyMatch(input, recall.answers[i]));
     setResults(res);
     setChecked(true);
     onComplete?.(res.every(Boolean));
@@ -29,7 +44,10 @@ export default function FillInRecall({ recall, onComplete }) {
 
   return (
     <div className="lm-recall-card">
-      <div className="lm-recall-label">&#129504; Quick Recall — Fill in the Blanks</div>
+      <div className="lm-recall-header">
+        <div className="lm-recall-label">&#129504; Quick Recall — Fill in the Blanks</div>
+        <button className="lm-recall-dismiss" onClick={() => setDismissed(true)} title="Skip">&times;</button>
+      </div>
       <p className="lm-recall-prompt">{recall.prompt}</p>
 
       <div className="lm-fillin-chain">
