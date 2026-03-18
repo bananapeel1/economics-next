@@ -142,6 +142,7 @@ export default function LearnModeTab({
   }, []);
 
   const [stepComplete, setStepComplete] = useState(false);
+  const [showMoreMenu, setShowMoreMenu] = useState(false);
 
   function navigateToStep(step) {
     if (isTransitioning) return;
@@ -296,18 +297,6 @@ export default function LearnModeTab({
         <span className="lm-progress-label">{Math.round(progressPct)}%</span>
       </div>
 
-      {/* Quick actions */}
-      {currentStep > 0 && (
-        <div className="lm-quick-actions">
-          <button className="lm-quick-action" onClick={() => { navigateToStep(0); }}>
-            &#8634; Restart
-          </button>
-          <button className="lm-quick-action" onClick={() => onNavigateToTab?.('content')}>
-            &#9776; View all content
-          </button>
-        </div>
-      )}
-
       {/* Stepper */}
       <div className="lm-stepper-step">
         <div className="lm-stepper-rail">
@@ -318,7 +307,22 @@ export default function LearnModeTab({
         </div>
 
         <div className="lm-stepper-content">
-          <div className="lm-section-counter">Step {currentStep + 1} of {totalSteps}</div>
+          <div className="lm-section-counter-row">
+            <div className="lm-section-counter">Step {currentStep + 1} of {totalSteps}</div>
+            <div className="lm-more-menu-wrapper">
+              <button className="lm-more-btn" onClick={() => setShowMoreMenu(v => !v)} title="More options">⋯</button>
+              {showMoreMenu && (
+                <div className="lm-more-dropdown">
+                  <button className="lm-more-item" onClick={() => { navigateToStep(0); setShowMoreMenu(false); }}>
+                    ↺ Restart learning
+                  </button>
+                  <button className="lm-more-item" onClick={() => { onNavigateToTab?.('content'); setShowMoreMenu(false); }}>
+                    ☰ View all content
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
 
           {step?.type === 'structured' ? (() => {
             // Gather recalls: current step's sections + previous step's last section

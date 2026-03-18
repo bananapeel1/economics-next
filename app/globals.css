@@ -1821,29 +1821,42 @@ button.sidebar-resource-link {
   color: var(--accent-green);
 }
 
-/* Quick actions (Restart + View content) */
-.lm-quick-actions {
-  display: flex; gap: 8px; margin-bottom: 12px;
+/* Section counter + more menu */
+.lm-section-counter-row {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 8px;
 }
-.lm-quick-action {
-  padding: 6px 12px; border-radius: 6px;
-  background: none; border: 1px solid var(--border-primary);
-  color: var(--text-tertiary); font-size: 12px; font-weight: 500;
-  cursor: pointer; transition: all 0.15s; font-family: inherit;
-}
-.lm-quick-action:hover {
-  border-color: var(--accent-green); color: var(--accent-green);
-  min-width: 36px; text-align: right;
-  flex-shrink: 0;
-}
-
-/* Section counter */
 .lm-section-counter {
   font-size: 12px; font-weight: 700;
   letter-spacing: 0.06em; text-transform: uppercase;
-  color: var(--accent-green); margin-bottom: 8px;
-  font-family: 'DM Mono', monospace;
+  color: var(--accent-green);
 }
+.lm-more-menu-wrapper { position: relative; }
+.lm-more-btn {
+  background: none; border: 1px solid var(--border-primary); color: var(--text-tertiary);
+  font-size: 16px; padding: 2px 8px; border-radius: 6px; cursor: pointer;
+  transition: all 0.15s; letter-spacing: 2px; line-height: 1;
+}
+.lm-more-btn:hover { border-color: var(--accent-green); color: var(--accent-green); }
+.lm-more-dropdown {
+  position: absolute; right: 0; top: calc(100% + 6px); z-index: 50;
+  background: var(--bg-card); border: 1px solid var(--border-primary);
+  border-radius: 10px; padding: 6px; min-width: 180px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  animation: lmDropdownIn 0.15s ease;
+}
+@keyframes lmDropdownIn {
+  from { opacity: 0; transform: translateY(-4px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.lm-more-item {
+  display: flex; align-items: center; gap: 8px; width: 100%;
+  padding: 8px 12px; border: none; background: none;
+  color: var(--text-secondary); font-size: 13px; font-weight: 500;
+  cursor: pointer; border-radius: 6px; transition: all 0.15s;
+  font-family: inherit; text-align: left;
+}
+.lm-more-item:hover { background: var(--bg-input); color: var(--text-primary); }
 
 /* Chapter heading — shown when entering a new block */
 .lm-chapter-heading {
