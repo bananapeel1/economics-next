@@ -887,11 +887,11 @@ body {
   line-height: 1.4;
 }
 
-/* Result card — same height as step cards */
+/* Result card — full width below the timeline */
 .rl-flow-result {
   display: flex; align-items: center; gap: 10px;
-  padding: 8px 14px; border-radius: 8px;
-  margin-top: 4px; margin-left: 42px; /* align with step cards (32px node + 10px gap) */
+  padding: 10px 14px; border-radius: 8px;
+  margin-top: 6px;
 }
 .rl-flow-result-badge {
   width: 24px; height: 24px; border-radius: 6px;
@@ -1006,7 +1006,7 @@ body {
   .rl-flow-tl-card { padding: 8px 12px; }
   .rl-flow-tl-title { font-size: 12.5px; }
   .rl-flow-tl-arrow-row { padding-left: 9px; }
-  .rl-flow-result { margin-left: 0; width: 100%; }
+  .rl-flow-result { padding: 8px 12px; }
   .rl-body-p { font-size: 13px; }
   .rl-takeaway-item { font-size: 13px; }
   .lm-reveal-btn { padding: 12px; font-size: 13px; }

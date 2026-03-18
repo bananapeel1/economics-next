@@ -45,7 +45,13 @@ export default function ReorderRecall({ recall, onComplete }) {
         <button className="lm-recall-dismiss" onClick={() => setDismissed(true)} title="Skip">&times;</button>
       </div>
       <p className="lm-recall-prompt">{recall.prompt}</p>
-      {!checked && <p className="lm-recall-hint-text">Tap two items to swap them</p>}
+      {!checked && (
+        <p className="lm-recall-hint-text">
+          {selectedIdx !== null
+            ? '↑ Now tap another item to swap with the highlighted one'
+            : 'Tap an item to select it, then tap another to swap their positions'}
+        </p>
+      )}
 
       <div className="lm-recall-items">
         {displayItems.map((item, i) => (
