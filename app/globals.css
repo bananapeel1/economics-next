@@ -119,10 +119,10 @@
   --ma-peel-l-text: #9a3412;
 
   /* ── Revision Learn card tokens (light) — aligned with app accent palette ── */
-  --rl-green: #059669; --rl-green-bg: rgba(5,150,105,0.07); --rl-green-bd: rgba(5,150,105,0.2);
-  --rl-amber: #f59e0b; --rl-amber-bg: rgba(245,158,11,0.06); --rl-amber-bd: rgba(245,158,11,0.2);
-  --rl-teal: #10b981; --rl-teal-bg: rgba(16,185,129,0.06); --rl-teal-bd: rgba(16,185,129,0.2);
-  --rl-blue: #3b82f6; --rl-blue-bg: rgba(59,130,246,0.06); --rl-blue-bd: rgba(59,130,246,0.2);
+  --rl-green: #059669; --rl-green-bg: rgba(5,150,105,0.09); --rl-green-bd: rgba(5,150,105,0.2);
+  --rl-amber: #f59e0b; --rl-amber-bg: rgba(245,158,11,0.09); --rl-amber-bd: rgba(245,158,11,0.2);
+  --rl-teal: #10b981; --rl-teal-bg: rgba(16,185,129,0.09); --rl-teal-bd: rgba(16,185,129,0.2);
+  --rl-blue: #3b82f6; --rl-blue-bg: rgba(59,130,246,0.09); --rl-blue-bd: rgba(59,130,246,0.2);
   --rl-red: #ef4444; --rl-red-bg: rgba(239,68,68,0.06); --rl-red-bd: rgba(239,68,68,0.2);
 }
 
@@ -235,7 +235,7 @@
   /* ── Revision Learn card tokens (dark) — aligned with app accent palette ── */
   --rl-green: #10b981; --rl-green-bg: rgba(16,185,129,.09); --rl-green-bd: rgba(16,185,129,.22);
   --rl-amber: #f59e0b; --rl-amber-bg: rgba(245,158,11,.09); --rl-amber-bd: rgba(245,158,11,.22);
-  --rl-teal: #22c55e; --rl-teal-bg: rgba(22,163,74,.08); --rl-teal-bd: rgba(22,163,74,.22);
+  --rl-teal: #22c55e; --rl-teal-bg: rgba(22,163,74,.09); --rl-teal-bd: rgba(22,163,74,.22);
   --rl-blue: #60a5fa; --rl-blue-bg: rgba(96,165,250,.09); --rl-blue-bd: rgba(96,165,250,.22);
   --rl-red: #ef4444; --rl-red-bg: rgba(239,68,68,.09); --rl-red-bd: rgba(239,68,68,.22);
 }
@@ -873,7 +873,7 @@ body {
   padding: 3px 0 3px 11px; /* align arrow under center of 32px node */
 }
 .rl-flow-tl-arrow {
-  color: var(--rl-green); font-size: 11px; opacity: 0.5;
+  color: var(--rl-green); font-size: 14px; opacity: 1;
 }
 .rl-flow-tl-card {
   flex: 1; padding: 8px 14px; border-radius: 8px;
@@ -1858,6 +1858,11 @@ button.sidebar-resource-link {
   .rl-note-section { padding: 24px 28px; }
   .rl-flow-tl-title { font-size: 14px; }
   .rl-flow-result-text { font-size: 14px; }
+  /* Diagrams — constrain on desktop */
+  .diagram-container { max-width: 420px; }
+  .lm-diagram-card { max-width: 420px; }
+  .diagram-svg-wrapper svg, .diagram-svg-wrapper img { max-width: 340px; }
+  .lm-interactive-svg-wrapper svg, .lm-interactive-svg-wrapper img { max-width: 340px; }
   /* Rich notes desktop */
   .rn-notes { max-width: 1060px; }
   .rn-note-text { font-size: 14.5px; }
@@ -1872,6 +1877,11 @@ button.sidebar-resource-link {
   .tab-content-body { padding: 36px 60px 60px; }
   .rl-body-p { font-size: 15.5px; line-height: 1.75; }
   .lm-section-title { font-size: 30px; }
+  /* Diagrams — ultra-wide */
+  .diagram-container { max-width: 460px; }
+  .lm-diagram-card { max-width: 460px; }
+  .diagram-svg-wrapper svg, .diagram-svg-wrapper img { max-width: 380px; }
+  .lm-interactive-svg-wrapper svg, .lm-interactive-svg-wrapper img { max-width: 380px; }
   /* Rich notes ultra-wide */
   .rn-notes { max-width: 1160px; }
   .rn-note-text { font-size: 15px; line-height: 1.65; }
