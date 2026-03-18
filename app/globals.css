@@ -1034,7 +1034,7 @@ body {
 .rn-color-dot.def { background: var(--rl-green); }
 .rn-color-dot.mech { background: var(--rl-blue); }
 .rn-color-dot.imp { background: var(--rl-amber); }
-.rn-color-dot.link { background: var(--rl-teal); }
+.rn-color-dot.link { background: var(--rl-red); }
 
 .rn-chapter { margin-bottom: 52px; }
 .rn-chapter-heading {
@@ -1054,7 +1054,7 @@ body {
   border-radius: 0 8px 8px 0; padding: 10px 14px; margin-bottom: 16px;
 }
 .rn-key-idea-label { font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--rl-green); margin-bottom: 4px; }
-.rn-key-idea-text { font-size: 13.5px; color: #a8f0c4; line-height: 1.5; }
+.rn-key-idea-text { font-size: 14.5px; color: #a8f0c4; line-height: 1.5; }
 
 /* Note blocks */
 .rn-note-block { margin-bottom: 28px; }
@@ -1080,8 +1080,8 @@ body {
 .rn-bullet.def { background: var(--rl-green); }
 .rn-bullet.mech { background: var(--rl-blue); }
 .rn-bullet.imp { background: var(--rl-amber); }
-.rn-bullet.link { background: var(--rl-teal); }
-.rn-note-text { font-size: 13.5px; color: var(--text-secondary); line-height: 1.55; flex: 1; }
+.rn-bullet.link { background: var(--rl-red); }
+.rn-note-text { font-size: 14.5px; color: var(--text-secondary); line-height: 1.55; flex: 1; }
 .rn-note-text strong { color: var(--text-primary); font-weight: 600; }
 .rn-note-tag {
   font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em;
@@ -1860,8 +1860,8 @@ button.sidebar-resource-link {
   .rl-flow-result-text { font-size: 14px; }
   /* Rich notes desktop */
   .rn-notes { max-width: 1060px; }
-  .rn-note-text { font-size: 14.5px; }
-  .rn-key-idea-text { font-size: 14.5px; }
+  .rn-note-text { font-size: 15.5px; }
+  .rn-key-idea-text { font-size: 15.5px; }
   .rn-callout-text { font-size: 14px; }
   .rn-chapter-heading { font-size: 22px; }
 }
@@ -1874,8 +1874,8 @@ button.sidebar-resource-link {
   .lm-section-title { font-size: 30px; }
   /* Rich notes ultra-wide */
   .rn-notes { max-width: 1160px; }
-  .rn-note-text { font-size: 15px; line-height: 1.65; }
-  .rn-key-idea-text { font-size: 15px; }
+  .rn-note-text { font-size: 16px; line-height: 1.65; }
+  .rn-key-idea-text { font-size: 16px; }
   .rn-chapter-heading { font-size: 24px; }
 }
 
