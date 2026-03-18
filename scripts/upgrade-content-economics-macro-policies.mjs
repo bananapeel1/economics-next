@@ -54,8 +54,10 @@ const CONTENT = [
         examMatters: "When discussing the growth objective, examiners want you to specify what sustainable growth means and why it matters. Link it to employment, tax revenue and living standards rather than just stating that GDP should rise.",
         recall: {
           type: "fillin",
-          prompt: "Governments typically target around _____% annual growth for a developed economy to balance expansion with _____.",
-          answer: "2-3 / stability"
+          prompt: "Complete the chain:",
+          template: ["Target growth rate for developed economies ≈ ___% per year", "→ Balances expansion with economic ___", "→ Too fast risks inflation, too slow risks ___"],
+          answers: ["2-3", "stability", "unemployment"],
+          hints: ["2-_", "st________", "un___________"]
         }
       },
       {
@@ -87,7 +89,8 @@ const CONTENT = [
         recall: {
           type: "reorder",
           prompt: "Order the reasoning for a 2% inflation target:",
-          items: ["Avoid deflation risks", "Anchor inflation expectations", "Give central bank room to cut real rates", "Maintain stable planning environment"]
+          correctOrder: ["Avoid deflation risks", "Anchor inflation expectations", "Give central bank room to cut real rates", "Maintain stable planning environment"],
+          shuffled: [3, 1, 0, 2]
         }
       },
       {
@@ -122,8 +125,10 @@ const CONTENT = [
         examMatters: "When discussing unemployment, examiners expect you to distinguish between types of unemployment and explain which type a given policy addresses. Always link the unemployment objective to its economic cost in terms of lost output and fiscal pressure.",
         recall: {
           type: "fillin",
-          prompt: "Full employment means reaching the _____ rate of unemployment where only _____ and structural unemployment remain.",
-          answer: "natural / frictional"
+          prompt: "Complete the chain:",
+          template: ["Full employment = reaching the ___ rate of unemployment", "→ Only ___ unemployment remains (job switching)", "→ Plus ___ unemployment (skills mismatch)"],
+          answers: ["natural", "frictional", "structural"],
+          hints: ["na______", "fr________", "st________"]
         }
       },
       {
@@ -159,7 +164,8 @@ const CONTENT = [
         recall: {
           type: "reorder",
           prompt: "Order the consequences of a persistent current account deficit:",
-          items: ["Imports consistently exceed exports", "Country borrows increasingly from abroad", "External debt accumulates", "Risk of capital flight and currency crisis"]
+          correctOrder: ["Imports consistently exceed exports", "Country borrows increasingly from abroad", "External debt accumulates", "Risk of capital flight and currency crisis"],
+          shuffled: [2, 0, 3, 1]
         }
       },
       {
@@ -194,8 +200,10 @@ const CONTENT = [
         examMatters: "Evaluation questions almost always require you to discuss policy conflicts and trade-offs. Examiners reward answers that identify the specific conflict, explain the mechanism, and evaluate which objective should take priority given the economy's current circumstances.",
         recall: {
           type: "fillin",
-          prompt: "The most famous policy conflict is between low _____ and low _____, illustrated by the Phillips curve.",
-          answer: "unemployment / inflation"
+          prompt: "Complete the chain:",
+          template: ["Key policy conflict: low ___ vs low inflation", "→ Illustrated by the ___ curve", "→ Reducing one tends to ___ the other"],
+          answers: ["unemployment", "Phillips", "increase"],
+          hints: ["un___________", "Ph______", "in______"]
         }
       }
     ],
@@ -247,7 +255,8 @@ const CONTENT = [
         recall: {
           type: "reorder",
           prompt: "Order the fiscal policy transmission mechanism:",
-          items: ["Government cuts income tax", "Households have higher disposable income", "Consumer spending rises", "AD shifts right and real GDP increases"]
+          correctOrder: ["Government cuts income tax", "Households have higher disposable income", "Consumer spending rises", "AD shifts right and real GDP increases"],
+          shuffled: [1, 3, 0, 2]
         }
       },
       {
@@ -282,8 +291,10 @@ const CONTENT = [
         examMatters: "Examiners often ask you to evaluate whether expansionary or contractionary fiscal policy is appropriate for a given economy. Your answer must depend on context: the size of the output gap, the level of government debt and the current rate of inflation all matter.",
         recall: {
           type: "fillin",
-          prompt: "Expansionary fiscal policy shifts AD _____, while contractionary fiscal policy shifts AD _____.",
-          answer: "right / left"
+          prompt: "Complete the chain:",
+          template: ["Expansionary fiscal policy shifts AD ___", "→ Contractionary fiscal policy shifts AD ___", "→ Fiscal policy uses ___ and taxation as tools"],
+          answers: ["right", "left", "government spending"],
+          hints: ["ri___", "le__", "go________ ________"]
         }
       },
       {
@@ -319,7 +330,8 @@ const CONTENT = [
         recall: {
           type: "reorder",
           prompt: "Order how automatic stabilisers work during a recession:",
-          items: ["GDP falls and unemployment rises", "Tax revenues decline automatically", "Welfare spending increases automatically", "Fall in AD is partially cushioned"]
+          correctOrder: ["GDP falls and unemployment rises", "Tax revenues decline automatically", "Welfare spending increases automatically", "Fall in AD is partially cushioned"],
+          shuffled: [3, 0, 2, 1]
         }
       }
     ],
@@ -370,8 +382,10 @@ const CONTENT = [
         examMatters: "When explaining how interest rates affect the economy, examiners want you to trace the full transmission mechanism through at least two channels. Simply stating that lower rates boost spending is too vague. Explain the borrowing channel, the saving channel, the exchange rate channel or the asset price channel.",
         recall: {
           type: "fillin",
-          prompt: "The full impact of an interest rate change takes approximately _____ months to work through the economy via the _____ mechanism.",
-          answer: "12-18 / transmission"
+          prompt: "Complete the chain:",
+          template: ["Interest rate changes take approximately ___ months for full effect", "→ Works through the ___ mechanism", "→ Affects borrowing, saving, exchange rates and ___ prices"],
+          answers: ["12-18", "transmission", "asset"],
+          hints: ["12___", "tr___________", "as___"]
         }
       },
       {
@@ -407,7 +421,8 @@ const CONTENT = [
         recall: {
           type: "reorder",
           prompt: "Order the QE transmission mechanism:",
-          items: ["Central bank creates electronic money", "Purchases government bonds from banks", "Bond prices rise and yields fall", "Long-term borrowing costs decrease across the economy"]
+          correctOrder: ["Central bank creates electronic money", "Purchases government bonds from banks", "Bond prices rise and yields fall", "Long-term borrowing costs decrease across the economy"],
+          shuffled: [2, 0, 3, 1]
         }
       },
       {
@@ -442,8 +457,10 @@ const CONTENT = [
         examMatters: "Examiners reward you for explaining at least two channels of the transmission mechanism in detail. For top marks, evaluate which channel is strongest in the given economy. For example, in a country with high homeownership, the asset price channel through house prices is particularly powerful.",
         recall: {
           type: "fillin",
-          prompt: "The four channels of monetary transmission are: borrowing costs, saving incentives, the _____ rate and _____ prices.",
-          answer: "exchange / asset"
+          prompt: "Complete the chain:",
+          template: ["Monetary transmission channel 1 & 2: borrowing costs and ___ incentives", "→ Channel 3: the ___ rate (affects trade competitiveness)", "→ Channel 4: ___ prices (wealth effect on spending)"],
+          answers: ["saving", "exchange", "asset"],
+          hints: ["sa____", "ex______", "as___"]
         }
       }
     ],
@@ -495,7 +512,8 @@ const CONTENT = [
         recall: {
           type: "reorder",
           prompt: "Order these market-based supply-side policies from most to least direct:",
-          items: ["Deregulation of a specific industry", "Cuts to corporation tax", "Labour market flexibility reforms", "Trade liberalisation"]
+          correctOrder: ["Deregulation of a specific industry", "Cuts to corporation tax", "Labour market flexibility reforms", "Trade liberalisation"],
+          shuffled: [3, 1, 0, 2]
         }
       },
       {
@@ -530,8 +548,10 @@ const CONTENT = [
         examMatters: "Examiners expect you to compare market-based and interventionist approaches and evaluate which is more appropriate for a given context. Strong answers consider the type of market failure, the government's track record, the time horizon and the opportunity cost of public spending.",
         recall: {
           type: "fillin",
-          prompt: "Interventionist supply-side policies address _____ failures where private investment is below the socially _____ level.",
-          answer: "market / optimal"
+          prompt: "Complete the chain:",
+          template: ["Interventionist policies address ___ failures", "→ Private investment is below the socially ___ level", "→ Government steps in to correct the ___ in provision"],
+          answers: ["market", "optimal", "gap"],
+          hints: ["ma____", "op______", "ga_"]
         }
       },
       {
@@ -567,7 +587,8 @@ const CONTENT = [
         recall: {
           type: "reorder",
           prompt: "Order these evaluation criteria for supply-side policies by importance:",
-          items: ["Is there a genuine market failure to correct?", "How long before benefits materialise?", "Who gains and who loses?", "Can the government implement it effectively?"]
+          correctOrder: ["Is there a genuine market failure to correct?", "How long before benefits materialise?", "Who gains and who loses?", "Can the government implement it effectively?"],
+          shuffled: [1, 3, 0, 2]
         }
       }
     ],
@@ -618,8 +639,10 @@ const CONTENT = [
         examMatters: "Phillips curve questions are among the most common in macroeconomics exams. You must be able to draw and explain both the short-run and long-run curves, and explain why the trade-off breaks down over time as expectations adjust to actual inflation.",
         recall: {
           type: "fillin",
-          prompt: "The Phillips curve shows an inverse relationship between _____ and _____ in the short run.",
-          answer: "unemployment / inflation"
+          prompt: "Complete the chain:",
+          template: ["Phillips curve shows inverse link between ___ and inflation", "→ This trade-off holds in the ___ run", "→ In the long run, the curve becomes ___"],
+          answers: ["unemployment", "short", "vertical"],
+          hints: ["un___________", "sh___", "ve______"]
         }
       },
       {
@@ -655,7 +678,8 @@ const CONTENT = [
         recall: {
           type: "reorder",
           prompt: "Order the long-run adjustment process after expansionary policy:",
-          items: ["AD boosted, unemployment falls below natural rate", "Inflation rises above expectations", "Workers demand higher nominal wages", "Unemployment returns to natural rate at higher inflation"]
+          correctOrder: ["AD boosted, unemployment falls below natural rate", "Inflation rises above expectations", "Workers demand higher nominal wages", "Unemployment returns to natural rate at higher inflation"],
+          shuffled: [2, 0, 3, 1]
         }
       },
       {
@@ -690,8 +714,10 @@ const CONTENT = [
         examMatters: "The highest marks in macroeconomics require explicit discussion of trade-offs and a justified conclusion. Simply describing a policy is not enough. You must explain what is gained, what is sacrificed, and why the trade-off is acceptable given the economy's current position. This is the single most important skill for top-grade answers.",
         recall: {
           type: "fillin",
-          prompt: "If the central bank has strong _____, it can act more aggressively during recessions because inflation _____ remain anchored.",
-          answer: "credibility / expectations"
+          prompt: "Complete the chain:",
+          template: ["Central bank with strong ___ can act more aggressively", "→ Because inflation ___ remain anchored", "→ Allows bolder ___ policy during recessions"],
+          answers: ["credibility", "expectations", "monetary"],
+          hints: ["cr__________", "ex___________", "mo______"]
         }
       }
     ],

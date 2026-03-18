@@ -59,8 +59,10 @@ const CONTENT = [
         examMatters: "Examiners expect you to distinguish actual from potential growth and link actual growth to a movement along the PPF or a shift of AD within existing LRAS. Drawing a clear AD/AS diagram with the shift labelled will strengthen your answer significantly.",
         recall: {
           type: "fillin",
-          prompt: "Actual economic growth is the percentage increase in _____ over a given period.",
-          answer: "real GDP"
+          prompt: "Complete the chain:",
+          template: ["Actual growth = percentage increase in ___", "→ Measured over a given ___", "→ Uses ___ GDP not nominal"],
+          answers: ["real GDP", "time period", "real"],
+          hints: ["re__ ___", "ti__ ______", "re__"]
         }
       },
       {
@@ -96,7 +98,8 @@ const CONTENT = [
         recall: {
           type: "reorder",
           prompt: "Put these in the correct order for potential economic growth:",
-          items: ["Investment in capital or education", "Quality of factors of production improves", "LRAS shifts right", "Economy's maximum output increases"]
+          correctOrder: ["Investment in capital or education", "Quality of factors of production improves", "LRAS shifts right", "Economy's maximum output increases"],
+          shuffled: [2, 0, 3, 1]
         }
       },
       {
@@ -131,8 +134,10 @@ const CONTENT = [
         examMatters: "High-mark questions often ask you to evaluate whether demand-side or supply-side policies are more effective for growth. You must discuss both types of growth and explain that sustainable growth requires supply-side capacity expansion alongside demand-side stimulus.",
         recall: {
           type: "fillin",
-          prompt: "On a PPF diagram, actual growth is a movement _____ the curve, while potential growth is an outward _____ of the curve.",
-          answer: "toward / shift"
+          prompt: "Complete the chain:",
+          template: ["Actual growth on a PPF = movement ___ the curve", "→ Potential growth = outward ___ of the curve", "→ Both shown on the ___ frontier diagram"],
+          answers: ["toward", "shift", "production possibility"],
+          hints: ["to____", "sh___", "pr________ ___________"]
         }
       }
     ],
@@ -178,8 +183,10 @@ const CONTENT = [
         examMatters: "When identifying a positive output gap, examiners want you to explain the consequences clearly: rising inflation, falling real wages, potential current account deterioration. Always link the gap to a specific policy response such as contractionary fiscal or monetary policy.",
         recall: {
           type: "fillin",
-          prompt: "A positive output gap occurs when actual GDP _____ potential GDP, causing _____ pressure.",
-          answer: "exceeds / inflationary"
+          prompt: "Complete the chain:",
+          template: ["Positive output gap = actual GDP ___ potential GDP", "→ Economy operating beyond ___ capacity", "→ Creates ___ pressure on prices"],
+          answers: ["exceeds", "full", "inflationary"],
+          hints: ["ex_____", "fu__", "in___________"]
         }
       },
       {
@@ -215,7 +222,8 @@ const CONTENT = [
         recall: {
           type: "reorder",
           prompt: "Put these consequences of a negative output gap in logical order:",
-          items: ["AD falls below potential output", "Spare capacity and unemployment rise", "Consumer spending falls further", "Government tax revenue declines"]
+          correctOrder: ["AD falls below potential output", "Spare capacity and unemployment rise", "Consumer spending falls further", "Government tax revenue declines"],
+          shuffled: [3, 1, 0, 2]
         }
       },
       {
@@ -250,8 +258,10 @@ const CONTENT = [
         examMatters: "Evaluation marks come from discussing the difficulty of measuring the output gap and the risk of policy errors. Examiners reward you for noting that time lags, estimation uncertainty and political constraints all complicate the policy response to output gaps.",
         recall: {
           type: "fillin",
-          prompt: "A negative output gap calls for _____ policy, while a positive output gap calls for _____ policy.",
-          answer: "expansionary / contractionary"
+          prompt: "Complete the chain:",
+          template: ["Negative output gap → use ___ policy to boost AD", "→ Positive output gap → use ___ policy to cool AD", "→ Goal is to close the gap and return to ___ output"],
+          answers: ["expansionary", "contractionary", "potential"],
+          hints: ["ex___________", "co_____________", "po________"]
         }
       }
     ],
@@ -303,7 +313,8 @@ const CONTENT = [
         recall: {
           type: "reorder",
           prompt: "Order the events during a boom phase:",
-          items: ["Consumer confidence rises", "Spending and investment increase rapidly", "Unemployment falls and wages rise", "Inflation accelerates as output gap turns positive"]
+          correctOrder: ["Consumer confidence rises", "Spending and investment increase rapidly", "Unemployment falls and wages rise", "Inflation accelerates as output gap turns positive"],
+          shuffled: [1, 3, 0, 2]
         }
       },
       {
@@ -338,8 +349,10 @@ const CONTENT = [
         examMatters: "When discussing recessions, examiners expect you to explain the multiplier effect that deepens the downturn and to evaluate appropriate policy responses. Always consider whether fiscal or monetary policy is more suitable given the specific circumstances of the recession.",
         recall: {
           type: "fillin",
-          prompt: "A recession is technically defined as _____ consecutive quarters of _____ real GDP.",
-          answer: "two / falling"
+          prompt: "Complete the chain:",
+          template: ["A recession = ___ consecutive quarters of decline", "→ Measured by ___ real GDP", "→ Often accompanied by rising ___"],
+          answers: ["two", "falling", "unemployment"],
+          hints: ["tw_", "fa______", "un___________"]
         }
       },
       {
@@ -375,7 +388,8 @@ const CONTENT = [
         recall: {
           type: "reorder",
           prompt: "Put the four phases of the business cycle in order:",
-          items: ["Boom", "Downturn", "Recession", "Recovery"]
+          correctOrder: ["Boom", "Downturn", "Recession", "Recovery"],
+          shuffled: [2, 0, 3, 1]
         }
       }
     ],
@@ -426,8 +440,10 @@ const CONTENT = [
         examMatters: "When explaining demand-side growth, examiners want you to specify which component of AD has changed and why. Vague statements like 'AD increased' score poorly. You should identify whether it was consumption, investment, government spending or net exports, and explain the underlying cause.",
         recall: {
           type: "fillin",
-          prompt: "The components of aggregate demand are C (consumption), I (investment), G (government spending) and _____ (net exports).",
-          answer: "X-M"
+          prompt: "Complete the chain:",
+          template: ["AD = C + I + G + ___", "→ C = ___, I = investment, G = government spending", "→ Net exports = exports ___ imports"],
+          answers: ["X-M", "consumption", "minus"],
+          hints: ["X-_", "co__________", "mi___"]
         }
       },
       {
@@ -463,7 +479,8 @@ const CONTENT = [
         recall: {
           type: "reorder",
           prompt: "Order these supply-side causes from quickest to slowest effect:",
-          items: ["Deregulation of labour markets", "Investment in new machinery", "Education and skills reform", "Major infrastructure projects"]
+          correctOrder: ["Deregulation of labour markets", "Investment in new machinery", "Education and skills reform", "Major infrastructure projects"],
+          shuffled: [3, 1, 0, 2]
         }
       }
     ],
@@ -513,8 +530,10 @@ const CONTENT = [
         examMatters: "When discussing benefits of growth, examiners expect you to go beyond simply stating that GDP rises. Explain the mechanism through which growth improves welfare: higher incomes, more employment, better public services funded by rising tax revenues.",
         recall: {
           type: "fillin",
-          prompt: "Economic growth raises tax revenues without raising tax _____, allowing more spending on public _____.",
-          answer: "rates / services"
+          prompt: "Complete the chain:",
+          template: ["Growth raises tax revenues without raising tax ___", "→ Allows more spending on public ___", "→ This improves ___ standards over time"],
+          answers: ["rates", "services", "living"],
+          hints: ["ra___", "se_______", "li_____"]
         }
       },
       {
@@ -550,7 +569,8 @@ const CONTENT = [
         recall: {
           type: "reorder",
           prompt: "Order these costs of growth from most immediate to most long-term:",
-          items: ["Rising pollution levels", "Resource depletion", "Widening income inequality", "Climate change impacts"]
+          correctOrder: ["Rising pollution levels", "Resource depletion", "Widening income inequality", "Climate change impacts"],
+          shuffled: [2, 0, 3, 1]
         }
       },
       {
@@ -585,8 +605,10 @@ const CONTENT = [
         examMatters: "Examiners frequently ask whether economic growth necessarily improves living standards. Top answers evaluate both sides: growth provides resources but its benefits depend on distribution, sustainability and whether non-material welfare is also improving. Always mention at least one alternative indicator.",
         recall: {
           type: "fillin",
-          prompt: "The HDI combines three measures: income, _____ and _____.",
-          answer: "education / life expectancy"
+          prompt: "Complete the chain:",
+          template: ["HDI measure 1: ___ per capita (GNI)", "→ HDI measure 2: ___ (years of schooling)", "→ HDI measure 3: ___ (health indicator)"],
+          answers: ["income", "education", "life expectancy"],
+          hints: ["in____", "ed________", "li__ __________"]
         }
       }
     ],
@@ -636,8 +658,10 @@ const CONTENT = [
         examMatters: "Diagram-based questions on AD shifts are extremely common. Examiners reward correctly drawn and fully labelled diagrams that show the starting point, the shift, and the new equilibrium. Always write a sentence explaining what caused the shift and what happened to both real GDP and the price level.",
         recall: {
           type: "fillin",
-          prompt: "When AD shifts right and the economy has spare capacity, the effect falls mostly on _____ rather than _____.",
-          answer: "output / prices"
+          prompt: "Complete the chain:",
+          template: ["AD shifts right with spare capacity → effect on ___ rises", "→ Effect on ___ stays relatively stable", "→ Economy moves along the ___ section of SRAS"],
+          answers: ["output", "prices", "elastic"],
+          hints: ["ou____", "pr____", "el______"]
         }
       },
       {
@@ -673,7 +697,8 @@ const CONTENT = [
         recall: {
           type: "reorder",
           prompt: "Order the steps for LRAS-driven growth:",
-          items: ["Supply-side policy implemented", "Productivity or capacity improves", "LRAS shifts right", "Potential output rises at stable prices"]
+          correctOrder: ["Supply-side policy implemented", "Productivity or capacity improves", "LRAS shifts right", "Potential output rises at stable prices"],
+          shuffled: [1, 3, 0, 2]
         }
       },
       {
@@ -708,8 +733,10 @@ const CONTENT = [
         examMatters: "The highest-level answers combine AD and LRAS shifts on a single diagram and explain the macroeconomic outcome. Examiners particularly reward you for evaluating whether a country's current policy mix achieves this balance or whether one side is growing faster than the other.",
         recall: {
           type: "fillin",
-          prompt: "If AD grows faster than LRAS, a _____ output gap opens and _____ results.",
-          answer: "positive / inflation"
+          prompt: "Complete the chain:",
+          template: ["AD grows faster than LRAS → a ___ output gap opens", "→ Demand exceeds supply → ___ results", "→ Economy overheats beyond ___ capacity"],
+          answers: ["positive", "inflation", "full"],
+          hints: ["po______", "in________", "fu__"]
         }
       }
     ],
