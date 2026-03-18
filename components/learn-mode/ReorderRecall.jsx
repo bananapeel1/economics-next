@@ -1,12 +1,10 @@
 "use client";
 import { useState, useRef } from 'react';
 
-/* Normalize string for comparison — strips whitespace, lowercases, removes punctuation */
 function norm(s) {
   return (s || '').trim().toLowerCase().replace(/[''""]/g, "'").replace(/[—–]/g, '-').replace(/\s+/g, ' ');
 }
 
-/* ── Reorder Recall: tap to select, tap to swap ── */
 export default function ReorderRecall({ recall, onComplete }) {
   const [items, setItems] = useState(() => recall.shuffled.map(i => recall.correctOrder[i]));
   const [checked, setChecked] = useState(false);
@@ -15,8 +13,8 @@ export default function ReorderRecall({ recall, onComplete }) {
   const [dismissed, setDismissed] = useState(false);
   const [selectedIdx, setSelectedIdx] = useState(null);
   const [animating, setAnimating] = useState(false);
+  const [itemResults, setItemResults] = useState([]);
   const itemRefs = useRef([]);
-  // Store correct order once to avoid any reference issues
   const correctOrder = useRef(recall.correctOrder.map(s => s.trim())).current;
 
   if (dismissed) return null;
@@ -40,9 +38,7 @@ export default function ReorderRecall({ recall, onComplete }) {
       const fromEl = itemRefs.current[selectedIdx];
       const toEl = itemRefs.current[idx];
       if (fromEl && toEl) {
-        const fromRect = fromEl.getBoundingClientRect();
-        const toRect = toEl.getBoundingClientRect();
-        const dy = toRect.top - fromRect.top;
+        const dy = toEl.getBoundingClientRect().top - fromEl.getBoundingClientRect().top;
         fromEl.style.setProperty('--swap-dy', `${dy}px`);
         toEl.style.setProperty('--swap-dy', `${-dy}px`);
         fromEl.classList.add('swapping');
@@ -64,11 +60,12 @@ export default function ReorderRecall({ recall, onComplete }) {
 
   function check() {
     if (animating) return;
-    // Use normalized comparison to handle unicode/whitespace differences
-    const correct = items.every((item, i) => norm(item) === norm(correctOrder[i]));
-    setIsCorrect(correct);
+    const results = items.map((item, i) => norm(item) === norm(correctOrder[i]));
+    setItemResults(results);
+    const allCorrect = results.every(Boolean);
+    setIsCorrect(allCorrect);
     setChecked(true);
-    onComplete?.(correct);
+    onComplete?.(allCorrect);
   }
 
   return (
@@ -84,29 +81,47 @@ export default function ReorderRecall({ recall, onComplete }) {
         </p>
       )}
 
+      {/* User's answer — shown always */}
       <div className="lm-recall-items">
-        {(checked && !isCorrect ? correctOrder : items).map((item, i) => (
-          <div
-            key={`item-${i}`}
-            ref={el => itemRefs.current[i] = el}
-            className={`lm-recall-item ${checked && isCorrect ? 'correct' : ''} ${checked && !isCorrect ? 'show-answer' : ''} ${selectedIdx === i && !animating && !checked ? 'selected' : ''}`}
-            onClick={() => handleTap(i)}
-          >
-            <span className="lm-recall-item-num">{i + 1}</span>
-            <span className="lm-recall-item-text">{item}</span>
-            {!checked && selectedIdx === i && !animating && (
-              <span className="lm-recall-item-icon" style={{ color: '#a78bfa' }}>●</span>
-            )}
-            {checked && isCorrect && <span className="lm-recall-item-icon" style={{ color: 'var(--rl-green)' }}>✓</span>}
-            {!checked && !animating && (
-              <div className="lm-recall-arrows" onClick={e => e.stopPropagation()}>
-                <button className="lm-recall-arrow-btn" disabled={i === 0} onClick={() => moveItem(i, i - 1)}>▲</button>
-                <button className="lm-recall-arrow-btn" disabled={i === items.length - 1} onClick={() => moveItem(i, i + 1)}>▼</button>
-              </div>
-            )}
-          </div>
-        ))}
+        {items.map((item, i) => {
+          const isRight = checked && itemResults[i];
+          const isWrong = checked && !itemResults[i];
+          return (
+            <div
+              key={`item-${i}`}
+              ref={el => itemRefs.current[i] = el}
+              className={`lm-recall-item ${isRight ? 'correct' : ''} ${isWrong ? 'wrong' : ''} ${selectedIdx === i && !animating && !checked ? 'selected' : ''}`}
+              onClick={() => handleTap(i)}
+            >
+              <span className="lm-recall-item-num">{i + 1}</span>
+              <span className="lm-recall-item-text">{item}</span>
+              {!checked && selectedIdx === i && !animating && (
+                <span className="lm-recall-item-icon" style={{ color: '#a78bfa' }}>●</span>
+              )}
+              {isRight && <span className="lm-recall-item-icon" style={{ color: 'var(--rl-green)' }}>✓</span>}
+              {isWrong && <span className="lm-recall-item-icon" style={{ color: 'var(--rl-red)' }}>✗</span>}
+              {!checked && !animating && (
+                <div className="lm-recall-arrows" onClick={e => e.stopPropagation()}>
+                  <button className="lm-recall-arrow-btn" disabled={i === 0} onClick={() => moveItem(i, i - 1)}>▲</button>
+                  <button className="lm-recall-arrow-btn" disabled={i === items.length - 1} onClick={() => moveItem(i, i + 1)}>▼</button>
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
+
+      {/* Correct order — shown only when wrong */}
+      {checked && !isCorrect && (
+        <div className="lm-recall-correct-order">
+          <span className="lm-recall-correct-label">Correct order:</span>
+          <div className="lm-recall-correct-list">
+            {correctOrder.map((item, i) => (
+              <span key={i} className="lm-recall-correct-item">{i + 1}. {item}</span>
+            ))}
+          </div>
+        </div>
+      )}
 
       {showHint && !checked && (
         <p className="lm-recall-hint">
@@ -121,7 +136,9 @@ export default function ReorderRecall({ recall, onComplete }) {
         </div>
       ) : (
         <div className={`lm-recall-result ${isCorrect ? 'correct' : 'wrong'}`}>
-          {isCorrect ? '✓ Perfect order!' : '✗ Not quite — here\'s the correct order:'}
+          {isCorrect
+            ? '✓ Perfect order!'
+            : `✗ ${itemResults.filter(Boolean).length} of ${itemResults.length} in the right position`}
         </div>
       )}
     </div>

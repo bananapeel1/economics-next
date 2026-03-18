@@ -2629,16 +2629,18 @@ button.sidebar-resource-link {
 .lm-word-chip:hover { background: rgba(167,139,250,0.2); transform: translateY(-1px); }
 .lm-word-chip:active { cursor: grabbing; transform: scale(0.95); }
 
-/* Correct answers display */
-.lm-recall-correct-answers {
-  display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
-  margin-top: 10px; padding: 10px 14px;
+/* Correct answers display (fill-in + reorder) */
+.lm-recall-correct-answers, .lm-recall-correct-order {
+  margin-top: 12px; padding: 10px 14px;
   background: var(--rl-green-bg); border: 1px solid var(--rl-green-bd);
   border-radius: 8px;
 }
+.lm-recall-correct-answers { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.lm-recall-correct-list { display: flex; flex-direction: column; gap: 2px; }
+.lm-recall-correct-item { font-size: 12px; color: var(--rl-green); line-height: 1.5; }
 .lm-recall-correct-label {
   font-size: 11px; font-weight: 700; color: var(--rl-green);
-  margin-right: 4px;
+  margin-right: 4px; margin-bottom: 4px; display: block;
 }
 .lm-recall-correct-word {
   padding: 3px 10px; border-radius: 12px;
