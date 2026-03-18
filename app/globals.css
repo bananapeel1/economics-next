@@ -2530,6 +2530,7 @@ button.sidebar-resource-link {
   border-radius: 8px; padding: 10px 12px; transition: all 0.2s;
 }
 .lm-recall-item.correct { background: var(--rl-green-bg); border-color: var(--rl-green-bd); }
+.lm-recall-item.show-answer { background: var(--bg-input); border-color: var(--border-hover); }
 .lm-recall-item.wrong { background: var(--rl-red-bg); border-color: var(--rl-red-bd); }
 .lm-recall-item-num {
   font-size: 11px; font-weight: 700; color: var(--text-dim);

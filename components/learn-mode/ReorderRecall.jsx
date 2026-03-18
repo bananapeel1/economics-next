@@ -1,5 +1,10 @@
 "use client";
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef } from 'react';
+
+/* Normalize string for comparison — strips whitespace, lowercases, removes punctuation */
+function norm(s) {
+  return (s || '').trim().toLowerCase().replace(/[''""]/g, "'").replace(/[—–]/g, '-').replace(/\s+/g, ' ');
+}
 
 /* ── Reorder Recall: tap to select, tap to swap ── */
 export default function ReorderRecall({ recall, onComplete }) {
@@ -11,8 +16,19 @@ export default function ReorderRecall({ recall, onComplete }) {
   const [selectedIdx, setSelectedIdx] = useState(null);
   const [animating, setAnimating] = useState(false);
   const itemRefs = useRef([]);
+  // Store correct order once to avoid any reference issues
+  const correctOrder = useRef(recall.correctOrder.map(s => s.trim())).current;
 
   if (dismissed) return null;
+
+  function moveItem(from, to) {
+    if (from === to || from < 0 || to < 0 || from >= items.length || to >= items.length || animating || checked) return;
+    setItems(prev => {
+      const next = [...prev];
+      [next[from], next[to]] = [next[to], next[from]];
+      return next;
+    });
+  }
 
   function handleTap(idx) {
     if (checked || animating) return;
@@ -21,33 +37,24 @@ export default function ReorderRecall({ recall, onComplete }) {
     } else if (selectedIdx === idx) {
       setSelectedIdx(null);
     } else {
-      // Calculate the distance between the two items for the animation
       const fromEl = itemRefs.current[selectedIdx];
       const toEl = itemRefs.current[idx];
       if (fromEl && toEl) {
         const fromRect = fromEl.getBoundingClientRect();
         const toRect = toEl.getBoundingClientRect();
         const dy = toRect.top - fromRect.top;
-
-        // Apply CSS custom properties for the animation distance
         fromEl.style.setProperty('--swap-dy', `${dy}px`);
         toEl.style.setProperty('--swap-dy', `${-dy}px`);
         fromEl.classList.add('swapping');
         toEl.classList.add('swapping');
-
         setAnimating(true);
-
+        const fromIdx = selectedIdx;
         setTimeout(() => {
-          // Remove animation classes
           fromEl.classList.remove('swapping');
           toEl.classList.remove('swapping');
           fromEl.style.removeProperty('--swap-dy');
           toEl.style.removeProperty('--swap-dy');
-
-          // Apply the actual swap
-          const next = [...items];
-          [next[selectedIdx], next[idx]] = [next[idx], next[selectedIdx]];
-          setItems(next);
+          moveItem(fromIdx, idx);
           setSelectedIdx(null);
           setAnimating(false);
         }, 350);
@@ -57,13 +64,12 @@ export default function ReorderRecall({ recall, onComplete }) {
 
   function check() {
     if (animating) return;
-    const correct = items.every((item, i) => item.trim() === recall.correctOrder[i].trim());
+    // Use normalized comparison to handle unicode/whitespace differences
+    const correct = items.every((item, i) => norm(item) === norm(correctOrder[i]));
     setIsCorrect(correct);
     setChecked(true);
     onComplete?.(correct);
   }
-
-  const displayItems = checked && !isCorrect ? recall.correctOrder : items;
 
   return (
     <div className="lm-recall-card">
@@ -79,11 +85,11 @@ export default function ReorderRecall({ recall, onComplete }) {
       )}
 
       <div className="lm-recall-items">
-        {displayItems.map((item, i) => (
+        {(checked && !isCorrect ? correctOrder : items).map((item, i) => (
           <div
-            key={`${item}-${i}`}
+            key={`item-${i}`}
             ref={el => itemRefs.current[i] = el}
-            className={`lm-recall-item ${checked ? 'correct' : ''} ${selectedIdx === i && !animating ? 'selected' : ''}`}
+            className={`lm-recall-item ${checked && isCorrect ? 'correct' : ''} ${checked && !isCorrect ? 'show-answer' : ''} ${selectedIdx === i && !animating && !checked ? 'selected' : ''}`}
             onClick={() => handleTap(i)}
           >
             <span className="lm-recall-item-num">{i + 1}</span>
@@ -91,29 +97,11 @@ export default function ReorderRecall({ recall, onComplete }) {
             {!checked && selectedIdx === i && !animating && (
               <span className="lm-recall-item-icon" style={{ color: '#a78bfa' }}>●</span>
             )}
-            {checked && <span className="lm-recall-item-icon" style={{ color: 'var(--rl-green)' }}>✓</span>}
+            {checked && isCorrect && <span className="lm-recall-item-icon" style={{ color: 'var(--rl-green)' }}>✓</span>}
             {!checked && !animating && (
               <div className="lm-recall-arrows" onClick={e => e.stopPropagation()}>
-                <button
-                  className="lm-recall-arrow-btn"
-                  disabled={i === 0}
-                  onClick={() => {
-                    if (i === 0 || animating) return;
-                    const next = [...items];
-                    [next[i - 1], next[i]] = [next[i], next[i - 1]];
-                    setItems(next);
-                  }}
-                >▲</button>
-                <button
-                  className="lm-recall-arrow-btn"
-                  disabled={i === displayItems.length - 1}
-                  onClick={() => {
-                    if (i >= items.length - 1 || animating) return;
-                    const next = [...items];
-                    [next[i], next[i + 1]] = [next[i + 1], next[i]];
-                    setItems(next);
-                  }}
-                >▼</button>
+                <button className="lm-recall-arrow-btn" disabled={i === 0} onClick={() => moveItem(i, i - 1)}>▲</button>
+                <button className="lm-recall-arrow-btn" disabled={i === items.length - 1} onClick={() => moveItem(i, i + 1)}>▼</button>
               </div>
             )}
           </div>
@@ -122,7 +110,7 @@ export default function ReorderRecall({ recall, onComplete }) {
 
       {showHint && !checked && (
         <p className="lm-recall-hint">
-          Hint: The first step is &ldquo;<strong>{recall.correctOrder[0].substring(0, 3)}...</strong>&rdquo;
+          Hint: The first step is &ldquo;<strong>{correctOrder[0].substring(0, 3)}...</strong>&rdquo;
         </p>
       )}
 
