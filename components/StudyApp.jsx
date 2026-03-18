@@ -97,7 +97,7 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
           <span className="overview-category-line" />
         </div>
         <div className={`overview-grid ${hasDiagrams ? 'overview-grid-3' : 'overview-grid-2'}`}>
-          <button className="overview-card" onClick={() => onTabSelect('notes')}>
+          <button className="overview-card" onClick={() => onTabSelect('content')}>
             <span className="overview-card-icon"><NotesIcon size={24} /></span>
             <span className="overview-card-label">Content</span>
             <span className="overview-card-count">{notesSections || contentSteps} sections</span>

@@ -9,17 +9,19 @@ export default function FlowChain({ steps, result, resultType }) {
 
   return (
     <div className="rl-flow-chain">
-      {steps.map((step, i) => (
-        <span key={i}>
-          {i > 0 && <span className="rl-flow-arrow">→</span>}
-          <span className="rl-flow-pill">{step}</span>
-        </span>
-      ))}
+      <div className="rl-flow-steps">
+        {steps.map((step, i) => (
+          <div key={i} className="rl-flow-step">
+            {i > 0 && <span className="rl-flow-arrow">↓</span>}
+            <span className="rl-flow-pill">{step}</span>
+          </div>
+        ))}
+      </div>
       {result && (
-        <>
-          <span className="rl-flow-arrow">→</span>
+        <div className="rl-flow-result-row">
+          <span className="rl-flow-arrow">↓</span>
           <span className={`rl-flow-result ${resultClass}`}>{result}</span>
-        </>
+        </div>
       )}
     </div>
   );
