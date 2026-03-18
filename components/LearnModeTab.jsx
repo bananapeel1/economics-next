@@ -287,17 +287,6 @@ export default function LearnModeTab({
         </div>
 
         <div className={`lm-stepper-content ${isTransitioning ? 'step-exit' : 'step-enter'}`}>
-          {/* Interactive recall — reorder or fill-in-the-blank */}
-          {step?.section?.recall ? (
-            step.section.recall.type === 'reorder' ? (
-              <ReorderRecall key={`recall-${currentStep}`} recall={step.section.recall} onComplete={onRecallResult} />
-            ) : step.section.recall.type === 'fillin' ? (
-              <FillInRecall key={`recall-${currentStep}`} recall={step.section.recall} onComplete={onRecallResult} />
-            ) : null
-          ) : currentStep > 0 && prevStep?.type === 'structured' ? (
-            <RecallCheckpoint key={`recall-${currentStep}`} previousBlock={{ sections: [prevStep.section] }} />
-          ) : null}
-
           <div className="lm-section-counter">Step {currentStep + 1} of {totalSteps}</div>
 
           {step?.type === 'structured' ? (
@@ -338,6 +327,15 @@ export default function LearnModeTab({
 
                 {/* Takeaway — AFTER explain it back */}
                 {step.takeaway && <TakeawayCard items={step.takeaway} glossaryTerms={glossaryTerms} />}
+
+                {/* Recall — AFTER content is learned, tests what you just read */}
+                {step.section?.recall ? (
+                  step.section.recall.type === 'reorder' ? (
+                    <ReorderRecall key={`recall-${currentStep}`} recall={step.section.recall} onComplete={onRecallResult} />
+                  ) : step.section.recall.type === 'fillin' ? (
+                    <FillInRecall key={`recall-${currentStep}`} recall={step.section.recall} onComplete={onRecallResult} />
+                  ) : null
+                ) : null}
               </div>
             </>
           ) : step?.type === 'legacy' ? (

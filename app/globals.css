@@ -846,66 +846,66 @@ body {
 
 /* Flow Chain — vertical timeline */
 .rl-flow-chain {
-  margin: 24px 0; padding: 24px;
+  margin: 20px 0; padding: 16px 18px;
   background: var(--bg-input); border: 1px solid var(--border-primary);
-  border-radius: 14px;
+  border-radius: 12px;
 }
 .rl-flow-timeline {
   display: flex; flex-direction: column;
 }
 .rl-flow-tl-step {
-  display: flex; gap: 16px;
+  display: flex; gap: 12px; align-items: center;
 }
 .rl-flow-tl-rail {
   display: flex; flex-direction: column; align-items: center;
-  width: 44px; flex-shrink: 0;
+  width: 34px; flex-shrink: 0;
 }
 .rl-flow-tl-node {
-  width: 40px; height: 40px; border-radius: 10px;
+  width: 32px; height: 32px; border-radius: 8px;
   background: var(--bg-card); border: 1px solid var(--border-primary);
   display: flex; align-items: center; justify-content: center;
-  font-size: 12px; font-weight: 700; color: var(--rl-green);
+  font-size: 11px; font-weight: 700; color: var(--rl-green);
   flex-shrink: 0;
 }
 .rl-flow-tl-connector {
   display: flex; flex-direction: column; align-items: center;
-  padding: 6px 0;
+  padding: 3px 0;
 }
 .rl-flow-tl-arrow {
-  color: var(--rl-green); font-size: 14px; opacity: 0.5;
+  color: var(--rl-green); font-size: 12px; opacity: 0.5;
 }
 .rl-flow-tl-card {
-  flex: 1; padding: 10px 16px; border-radius: 10px;
+  flex: 1; padding: 8px 14px; border-radius: 8px;
   background: var(--bg-card); border: 1px solid var(--border-primary);
-  margin-bottom: 8px;
+  margin-bottom: 4px; min-height: 0;
 }
 .rl-flow-tl-title {
-  font-size: 14px; font-weight: 600; color: var(--text-primary);
+  font-size: 13px; font-weight: 600; color: var(--text-primary);
   line-height: 1.4;
 }
 .rl-flow-tl-subtitle {
-  font-size: 12.5px; color: var(--text-tertiary); margin-top: 4px;
-  line-height: 1.45;
+  font-size: 12px; color: var(--text-tertiary); margin-top: 3px;
+  line-height: 1.4;
 }
 
 /* Result card */
 .rl-flow-result {
-  display: flex; align-items: center; gap: 14px;
-  padding: 16px 20px; border-radius: 12px;
-  margin-top: 8px;
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 14px; border-radius: 10px;
+  margin-top: 6px;
 }
 .rl-flow-result-badge {
-  width: 38px; height: 38px; border-radius: 10px;
+  width: 30px; height: 30px; border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 18px; font-weight: 700; flex-shrink: 0;
+  font-size: 14px; font-weight: 700; flex-shrink: 0;
 }
 .rl-flow-result-content { flex: 1; }
 .rl-flow-result-label {
-  font-size: 10px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 0.07em; margin-bottom: 2px;
+  font-size: 9px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.07em; margin-bottom: 1px;
 }
 .rl-flow-result-text {
-  font-size: 15px; font-weight: 700; line-height: 1.35;
+  font-size: 13px; font-weight: 700; line-height: 1.35;
 }
 .rl-flow-result--good {
   background: var(--rl-green-bg); border: 1px solid var(--rl-green-bd);
