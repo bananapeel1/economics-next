@@ -145,30 +145,25 @@ export default function LearnModeTab({
 
   function navigateToStep(step) {
     if (isTransitioning) return;
-    // Brief checkmark pulse on the node before transitioning
+    setIsTransitioning(true);
+
     if (step > currentStep) {
+      // Going forward — checkmark pulse, then scroll + swap
       setStepComplete(true);
-      setTimeout(() => {
-        setStepComplete(false);
-        setIsTransitioning(true);
-        setNodePopped(true);
-        scrollToTop(true);
-        setTimeout(() => {
-          onStepChange(step);
-          setIsTransitioning(false);
-          setNodePopped(false);
-        }, 200);
-      }, 400);
-    } else {
-      // Going back — no celebration, just transition
-      setIsTransitioning(true);
       setNodePopped(true);
-      scrollToTop(true);
       setTimeout(() => {
+        scrollToTop(true);
+        setStepComplete(false);
         onStepChange(step);
-        setIsTransitioning(false);
         setNodePopped(false);
-      }, 200);
+        setIsTransitioning(false);
+      }, 350);
+    } else {
+      // Going back — just scroll + swap
+      scrollToTop(true);
+      onStepChange(step);
+      setNodePopped(false);
+      setIsTransitioning(false);
     }
   }
 
@@ -266,8 +261,6 @@ export default function LearnModeTab({
   const isLastStep = currentStep === totalSteps - 1;
   const progressPct = ((currentStep + 1) / totalSteps) * 100;
 
-  // Chapter heading: show when entering a new block
-  const showChapterHeading = step?.type === 'structured' && step.isFirstInBlock;
   const prevStep = currentStep > 0 ? flatSteps[currentStep - 1] : null;
 
   return (
@@ -310,7 +303,7 @@ export default function LearnModeTab({
           {!isLastStep && <div className={`lm-stepper-line ${currentStep > 0 ? 'filled' : ''}`} />}
         </div>
 
-        <div className={`lm-stepper-content ${isTransitioning ? 'step-exit' : 'step-enter'}`}>
+        <div className="lm-stepper-content">
           <div className="lm-section-counter">Step {currentStep + 1} of {totalSteps}</div>
 
           {step?.type === 'structured' ? (() => {
@@ -330,11 +323,6 @@ export default function LearnModeTab({
                 ) : prevRecall.type === 'fillin' ? (
                   <FillInRecall key={`spaced-${currentStep}`} recall={prevRecall} onComplete={onRecallResult} />
                 ) : null
-              )}
-
-              {/* Chapter heading — only on first step of a new block */}
-              {showChapterHeading && (
-                <div className="lm-chapter-heading">{step.blockTitle}</div>
               )}
 
               {/* 1-2 topics per step */}

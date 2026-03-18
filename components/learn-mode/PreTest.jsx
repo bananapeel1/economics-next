@@ -22,7 +22,7 @@ export default function PreTest({ quizData, subjectId, sectionId, onDone }) {
     if (qIdx < questions.length - 1) {
       setTimeout(() => {
         const nextQ = document.querySelector(`[data-pretest-q="${qIdx + 1}"]`);
-        nextQ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        nextQ?.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }, 200);
     }
   }

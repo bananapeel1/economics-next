@@ -96,7 +96,12 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
           <span className="overview-category-label">FREE RESOURCES</span>
           <span className="overview-category-line" />
         </div>
-        <div className={`overview-grid ${hasDiagrams ? 'overview-grid-3' : 'overview-grid-2'}`}>
+        <div className="overview-grid overview-grid-3">
+          <button className="overview-card overview-card-featured" onClick={() => onTabSelect('learn-mode')}>
+            <span className="overview-card-icon"><LearnModeIcon size={24} /></span>
+            <span className="overview-card-label">Learn</span>
+            <span className="overview-card-count">{contentSteps} steps</span>
+          </button>
           <button className="overview-card" onClick={() => onTabSelect('content')}>
             <span className="overview-card-icon"><NotesIcon size={24} /></span>
             <span className="overview-card-label">Content</span>
@@ -176,6 +181,12 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
             <span className="overview-card-icon"><TutorIcon size={24} /></span>
             <span className="overview-card-label">AI Tutor</span>
             <span className="overview-card-count">Ask anything</span>
+          </button>
+          <button className={`overview-card ${!isPremium ? 'overview-card-premium' : ''}`} onClick={() => { window.location.href = '/fun'; }}>
+            {!isPremium && <span className="overview-card-lock"><Padlock size={12} /></span>}
+            <span className="overview-card-icon" style={{ fontSize: 24 }}>&#127183;</span>
+            <span className="overview-card-label">Blackjack</span>
+            <span className="overview-card-count">Learn while you play</span>
           </button>
         </div>
       </div>
@@ -739,7 +750,6 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
                 <span className="content-header-unit-badge">Unit {currentUnit?.number}: {currentUnit?.title}</span>
                 <AuthButton />
               </div>
-              <h1 className="content-header-title">{currentSection?.title}</h1>
               <AnimatedTabBar
                 tabs={tabs}
                 activeTab={activeTab}

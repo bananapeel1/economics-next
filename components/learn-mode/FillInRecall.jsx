@@ -103,8 +103,6 @@ export default function FillInRecall({ recall, onComplete }) {
             <span
               key={`${word}-${i}`}
               className="lm-word-chip"
-              draggable
-              onDragStart={e => handleDragStartWord(e, word)}
               onClick={() => handleTapWord(word)}
             >
               {word}
