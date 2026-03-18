@@ -2642,6 +2642,20 @@ button.sidebar-resource-link {
 }
 .lm-recall-hint-text { font-size: 11px; color: var(--text-dim); margin-bottom: 10px; font-style: italic; }
 
+/* Arrow buttons for reorder */
+.lm-recall-arrows {
+  display: flex; flex-direction: column; gap: 2px;
+  margin-left: auto; flex-shrink: 0;
+}
+.lm-recall-arrow-btn {
+  background: none; border: 1px solid var(--border-primary);
+  color: var(--text-tertiary); font-size: 8px; padding: 2px 6px;
+  border-radius: 4px; cursor: pointer; transition: all 0.15s;
+  line-height: 1;
+}
+.lm-recall-arrow-btn:hover:not(:disabled) { border-color: #a78bfa; color: #a78bfa; }
+.lm-recall-arrow-btn:disabled { opacity: 0.25; cursor: not-allowed; }
+
 .lm-explain-section { margin: 24px 0 0; }
 .lm-explain-toggle {
   display: flex; align-items: center; gap: 8px;

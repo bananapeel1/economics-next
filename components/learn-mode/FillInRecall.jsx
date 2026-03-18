@@ -62,7 +62,7 @@ export default function FillInRecall({ recall, onComplete }) {
   return (
     <div className="lm-recall-card">
       <div className="lm-recall-header">
-        <div className="lm-recall-label">&#129504; Quick Recall — Drag the Labels</div>
+        <div className="lm-recall-label">&#129504; Quick Recall — Fill in the Blanks</div>
         <button className="lm-recall-dismiss" onClick={() => setDismissed(true)} title="Skip">&times;</button>
       </div>
       <p className="lm-recall-prompt">{recall.prompt}</p>

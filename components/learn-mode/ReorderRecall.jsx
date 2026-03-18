@@ -92,6 +92,30 @@ export default function ReorderRecall({ recall, onComplete }) {
               <span className="lm-recall-item-icon" style={{ color: '#a78bfa' }}>●</span>
             )}
             {checked && <span className="lm-recall-item-icon" style={{ color: 'var(--rl-green)' }}>✓</span>}
+            {!checked && !animating && (
+              <div className="lm-recall-arrows" onClick={e => e.stopPropagation()}>
+                <button
+                  className="lm-recall-arrow-btn"
+                  disabled={i === 0}
+                  onClick={() => {
+                    if (i === 0 || animating) return;
+                    const next = [...items];
+                    [next[i - 1], next[i]] = [next[i], next[i - 1]];
+                    setItems(next);
+                  }}
+                >▲</button>
+                <button
+                  className="lm-recall-arrow-btn"
+                  disabled={i === displayItems.length - 1}
+                  onClick={() => {
+                    if (i >= items.length - 1 || animating) return;
+                    const next = [...items];
+                    [next[i], next[i + 1]] = [next[i + 1], next[i]];
+                    setItems(next);
+                  }}
+                >▼</button>
+              </div>
+            )}
           </div>
         ))}
       </div>
