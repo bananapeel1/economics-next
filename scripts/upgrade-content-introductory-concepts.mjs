@@ -50,7 +50,18 @@ const CONTENT = [
           text: "When the **Bank of England** modelled the impact of Brexit on UK GDP, it assumed ceteris paribus on trade deals, migration and business investment. The model was useful but imperfect — exactly because economics cannot run a controlled experiment on a real economy."
         },
         misconception: "Students often write \"economics is not a real science because it cannot predict the future.\" That misunderstands the purpose — economics builds models to explain patterns and trade-offs, not to forecast like a weather app. Instead write: economics is a social science that uses models and ceteris paribus to study complex human behaviour.",
-        examMatters: "When asked why economics is a social science, examiners want three things: it studies human behaviour (not physical laws), it uses models based on simplifying assumptions, and it relies on ceteris paribus to isolate variables. Explain *why* each matters, do not just list them."
+        examMatters: "When asked why economics is a social science, examiners want three things: it studies human behaviour (not physical laws), it uses models based on simplifying assumptions, and it relies on ceteris paribus to isolate variables. Explain *why* each matters, do not just list them.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: [
+            "Observe human behaviour",
+            "Build a simplified model",
+            "Apply ceteris paribus",
+            "Isolate the variable of interest"
+          ],
+          shuffled: [2, 0, 3, 1]
+        }
       },
       {
         id: "positive-and-normative",
@@ -83,7 +94,14 @@ const CONTENT = [
           text: "Two economists can look at identical **NHS** waiting-time data. One says \"the NHS needs more funding\" (normative — based on a belief in universal healthcare). The other says \"private provision would reduce waits\" (also normative). The data is positive; the policy recommendation is where values enter."
         },
         misconception: "Students confuse \"positive\" with \"good\" and \"normative\" with \"bad.\" Positive simply means testable — \"smoking causes cancer\" is positive, true, and testable, but nobody would call it \"good.\" Instead write: positive = can be tested with evidence; normative = involves a value judgement.",
-        examMatters: "Every *evaluate* question you face involves normative judgement — two economists can recommend opposite policies from identical data. What earns marks is the quality of your reasoning and the evidence you cite, not which side you pick."
+        examMatters: "Every *evaluate* question you face involves normative judgement — two economists can recommend opposite policies from identical data. What earns marks is the quality of your reasoning and the evidence you cite, not which side you pick.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["___ statements can be tested with evidence", "→ ___ statements involve value judgements", "→ Giveaway words: should, ___, fairer"],
+          answers: ["Positive", "Normative", "ought to"],
+          hints: ["P______", "N________", "o_____"]
+        }
       }
     ],
     takeaway: [
@@ -128,7 +146,18 @@ const CONTENT = [
           text: "**Saudi Arabia** has enormous oil wealth, yet still faces scarcity. The government must choose between investing in NEOM (a $500bn future city), funding healthcare, or diversifying away from oil. Choosing NEOM means those billions cannot simultaneously fund other projects."
         },
         misconception: "Students write \"scarcity means there is not enough of something.\" That is too vague — it confuses scarcity with shortage. Instead write: scarcity is the permanent condition where unlimited human wants exceed finite resources, forcing every agent to make choices.",
-        examMatters: "Examiners test whether you understand scarcity as a *permanent* condition, not a temporary shortage. Always link scarcity → choice → opportunity cost as a chain. A 2-mark definition must include \"unlimited wants\" and \"finite resources.\""
+        examMatters: "Examiners test whether you understand scarcity as a *permanent* condition, not a temporary shortage. Always link scarcity → choice → opportunity cost as a chain. A 2-mark definition must include \"unlimited wants\" and \"finite resources.\"",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: [
+            "Unlimited wants exceed finite resources",
+            "Scarcity exists",
+            "Choices must be made",
+            "Opportunity cost is incurred"
+          ],
+          shuffled: [3, 1, 0, 2]
+        }
       },
       {
         id: "opportunity-cost",
@@ -159,7 +188,14 @@ const CONTENT = [
           text: "When the **UK government** committed £100bn to the HS2 rail project, the opportunity cost was not just £100bn — it was the hospitals, schools or tax cuts that money could have funded instead. Critics argued the NHS would have been a better use."
         },
         misconception: "Students list every possible alternative as the opportunity cost. That is wrong — opportunity cost is only the *next-best* alternative forgone, not a list of everything you could have done. Instead write: the opportunity cost of choosing X is the single best alternative (Y) that was sacrificed.",
-        examMatters: "Opportunity cost appears in almost every economics paper. Examiners award marks for: (1) stating it is the *next-best* alternative, (2) applying it to the specific context in the question, and (3) explaining why it matters for resource allocation."
+        examMatters: "Opportunity cost appears in almost every economics paper. Examiners award marks for: (1) stating it is the *next-best* alternative, (2) applying it to the specific context in the question, and (3) explaining why it matters for resource allocation.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Opportunity cost = the ___-best alternative forgone", "→ It is not the ___ cost", "→ Only the ___ alternative counts, not all of them"],
+          answers: ["next", "money", "single best"],
+          hints: ["n___", "m____", "si_________"]
+        }
       }
     ],
     takeaway: [
@@ -207,7 +243,18 @@ const CONTENT = [
           text: "**China** in 1990 operated well inside its PPF — millions of workers were in low-productivity agriculture. By shifting labour into manufacturing and investing in capital, China moved closer to its frontier, producing dramatically more industrial goods without sacrificing proportional farm output."
         },
         misconception: "Students say \"a point inside the PPF means the country is poor.\" That is misleading — it means resources are being wasted or left unemployed, regardless of how wealthy the country is. Instead write: a point inside the PPF indicates productive inefficiency — the economy could increase output of both goods without needing more resources.",
-        examMatters: "PPF questions often ask you to *illustrate* a concept on a diagram. Practise drawing a labelled PPF and marking: a point on the curve (efficient), inside (inefficient), outside (unattainable). Examiners penalise unlabelled axes."
+        examMatters: "PPF questions often ask you to *illustrate* a concept on a diagram. Practise drawing a labelled PPF and marking: a point on the curve (efficient), inside (inefficient), outside (unattainable). Examiners penalise unlabelled axes.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: [
+            "On the PPF curve — productively efficient",
+            "Inside the curve — resources wasted or unemployed",
+            "Outside the curve — currently unattainable",
+            "Slope of the PPF — shows opportunity cost"
+          ],
+          shuffled: [1, 3, 0, 2]
+        }
       },
       {
         id: "shifts-of-the-ppf",
@@ -238,7 +285,14 @@ const CONTENT = [
           text: "**South Korea** shifted its PPF dramatically outward between 1960 and 2000 through massive investment in education and technology. GDP per capita rose from under $1,000 to over $10,000 — a textbook example of long-run economic growth driven by human capital."
         },
         misconception: "Students confuse moving to the PPF with shifting the PPF. Moving from inside the curve to the curve means you are using existing resources better (reducing inefficiency). Only when the curve itself shifts outward is there true economic growth. Instead write: economic growth = an outward shift of the PPF, not merely reaching it.",
-        examMatters: "Examiners frequently test the difference between a *movement along* the PPF (reallocation, showing opportunity cost) and a *shift of* the PPF (growth or decline). Always state which one you mean and explain the cause."
+        examMatters: "Examiners frequently test the difference between a *movement along* the PPF (reallocation, showing opportunity cost) and a *shift of* the PPF (growth or decline). Always state which one you mean and explain the cause.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Investment in education/technology →", "___ productivity rises →", "PPF shifts ___ →", "This represents economic ___"],
+          answers: ["Labour", "outward", "growth"],
+          hints: ["L_____", "ou_____", "gr____"]
+        }
       }
     ],
     takeaway: [
@@ -290,7 +344,18 @@ const CONTENT = [
           text: "**Foxconn** in Shenzhen, China, uses extreme division of labour to assemble iPhones — each worker performs one tiny task repeatedly. Output is enormous, but the factory has faced criticism for worker monotony and poor conditions — a textbook trade-off of specialisation."
         },
         misconception: "Students write \"specialisation is always good because it increases output.\" That ignores the risks. Instead write: specialisation raises productivity and lowers costs, but creates risks of monotony, over-dependence, and structural unemployment if demand changes.",
-        examMatters: "When asked to *evaluate* specialisation, examiners want both sides. Start with the benefits (productivity, efficiency) and then counter with the risks (dependence, monotony). Use a real example to anchor each side."
+        examMatters: "When asked to *evaluate* specialisation, examiners want both sides. Start with the benefits (productivity, efficiency) and then counter with the risks (dependence, monotony). Use a real example to anchor each side.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: [
+            "Workers specialise in narrow tasks",
+            "Skills improve and time is saved",
+            "Productivity rises",
+            "Higher output per worker but risk of monotony"
+          ],
+          shuffled: [2, 3, 0, 1]
+        }
       },
       {
         id: "money-and-exchange",
@@ -317,7 +382,14 @@ const CONTENT = [
           text: "When **Zimbabwe** experienced hyperinflation in 2008 (prices doubling every 24 hours), its currency lost all four functions. People reverted to barter or used US dollars and South African rand instead — proving that money only works when people trust it."
         },
         misconception: "Students say \"money is valuable because the government says so.\" That is only partly true — money works because people *trust* it will be accepted by others. When trust collapses (as in Zimbabwe's hyperinflation), the currency becomes worthless regardless of what the government declares. Instead write: money functions as a medium of exchange only as long as it retains public confidence.",
-        examMatters: "A common short-answer question asks you to explain the four functions of money. List all four with a one-line explanation for each. Then link back to specialisation — money enables trade, which enables specialisation, which raises output."
+        examMatters: "A common short-answer question asks you to explain the four functions of money. List all four with a one-line explanation for each. Then link back to specialisation — money enables trade, which enables specialisation, which raises output.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Barter fails because of the double coincidence of ___", "→ Money acts as a medium of ___", "→ Money also serves as a store of ___, unit of ___, and standard of deferred payment"],
+          answers: ["wants", "exchange", "value, account"],
+          hints: ["w____", "ex______", "va___, ac_____"]
+        }
       }
     ],
     takeaway: [
@@ -367,7 +439,18 @@ const CONTENT = [
           text: "**North Korea** is the closest real example to a command economy — the state controls nearly all production. Meanwhile, **South Korea** operates as a mixed economy with strong market forces. The GDP per capita gap (South Korea ~$35,000 vs North Korea ~$1,800) illustrates the efficiency costs of central planning."
         },
         misconception: "Students write \"the UK is a free market economy.\" It is not — the UK is a mixed economy with significant government intervention (NHS, state education, regulation, taxation). Instead write: the UK is a mixed economy that relies primarily on the price mechanism but with substantial government provision and regulation.",
-        examMatters: "Comparison questions ask you to weigh the strengths and weaknesses of different systems. Always use a specific country example for each system and explain *why* the system leads to that outcome, not just *that* it does."
+        examMatters: "Comparison questions ask you to weigh the strengths and weaknesses of different systems. Always use a specific country example for each system and explain *why* the system leads to that outcome, not just *that* it does.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these in the right order:",
+          correctOrder: [
+            "What to produce?",
+            "How to produce it?",
+            "For whom to produce?",
+            "Market, command or mixed economy answers these"
+          ],
+          shuffled: [3, 0, 2, 1]
+        }
       },
       {
         id: "the-price-mechanism",
@@ -406,7 +489,14 @@ const CONTENT = [
           text: "When global oil prices spiked in 2022 after Russia's invasion of Ukraine, the price mechanism worked in all three ways: high prices *signalled* scarcity, *incentivised* US shale producers to ramp up drilling, and *rationed* fuel to consumers who cut back on non-essential driving."
         },
         misconception: "Students say \"the invisible hand means the market always produces the best outcome.\" That ignores market failure — externalities, public goods and information problems mean the price mechanism can produce socially harmful results. Instead write: the invisible hand allocates resources efficiently in many cases, but market failure means government intervention is sometimes needed.",
-        examMatters: "When asked about the price mechanism, always explain all three functions (signal, incentive, ration) and use a real-world example to show each in action. A 6-mark answer that names all three with examples will score full marks."
+        examMatters: "When asked about the price mechanism, always explain all three functions (signal, incentive, ration) and use a real-world example to show each in action. A 6-mark answer that names all three with examples will score full marks.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Demand rises → price rises (___)", "→ Producers expand supply (___)", "→ Only willing buyers get the good (___)"],
+          answers: ["signal", "incentive", "ration"],
+          hints: ["si____", "in________", "ra____"]
+        }
       }
     ],
     takeaway: [
