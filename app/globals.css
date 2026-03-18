@@ -1848,8 +1848,8 @@ button.sidebar-resource-link {
 /* Tablet — constrain diagrams */
 @media (min-width: 768px) {
   .diagram-container, .lm-diagram-card { max-width: 80%; }
-  .diagram-svg-wrapper svg, .diagram-svg-wrapper img { max-width: 408px; }
-  .lm-interactive-svg-wrapper svg, .lm-interactive-svg-wrapper img { max-width: 384px; }
+  .diagram-svg-wrapper svg, .diagram-svg-wrapper img { max-width: 469px; }
+  .lm-interactive-svg-wrapper svg, .lm-interactive-svg-wrapper img { max-width: 442px; }
 }
 
 /* Desktop wide screen — expand content and bump font sizes */
@@ -1867,8 +1867,8 @@ button.sidebar-resource-link {
   .rl-flow-result-text { font-size: 14px; }
   /* Diagrams — desktop */
   .diagram-container, .lm-diagram-card { max-width: 80%; }
-  .diagram-svg-wrapper svg, .diagram-svg-wrapper img { max-width: 456px; }
-  .lm-interactive-svg-wrapper svg, .lm-interactive-svg-wrapper img { max-width: 432px; }
+  .diagram-svg-wrapper svg, .diagram-svg-wrapper img { max-width: 525px; }
+  .lm-interactive-svg-wrapper svg, .lm-interactive-svg-wrapper img { max-width: 497px; }
   /* Rich notes desktop */
   .rn-notes { max-width: 1060px; }
   .rn-note-text { font-size: 14.5px; }
@@ -1885,8 +1885,8 @@ button.sidebar-resource-link {
   .lm-section-title { font-size: 30px; }
   /* Diagrams — ultra-wide */
   .diagram-container, .lm-diagram-card { max-width: 80%; }
-  .diagram-svg-wrapper svg, .diagram-svg-wrapper img { max-width: 504px; }
-  .lm-interactive-svg-wrapper svg, .lm-interactive-svg-wrapper img { max-width: 480px; }
+  .diagram-svg-wrapper svg, .diagram-svg-wrapper img { max-width: 580px; }
+  .lm-interactive-svg-wrapper svg, .lm-interactive-svg-wrapper img { max-width: 552px; }
   /* Rich notes ultra-wide */
   .rn-notes { max-width: 1160px; }
   .rn-note-text { font-size: 15px; line-height: 1.65; }
