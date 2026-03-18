@@ -51,7 +51,13 @@ const CONTENT = [
           text: "When **Aldi** entered the UK grocery market with rock-bottom prices, the rational-consumer model predicted shoppers would switch from Tesco and Sainsbury's to save money. That is broadly what happened — Aldi's UK market share rose from 2% in 2010 to over 10% by 2023."
         },
         misconception: "Students write \"rational means people always make the best decision.\" That overstates the claim — rational means they *try* to maximise net benefit given the information available, not that they succeed perfectly. Instead write: rationality is an assumption that consumers aim to maximise utility by weighing marginal costs against marginal benefits.",
-        examMatters: "Examiners often open a paper with a short question on rational decision-making. Define it as maximising utility by comparing marginal benefit to marginal cost, then note it is an assumption, not a description of how everyone actually behaves."
+        examMatters: "Examiners often open a paper with a short question on rational decision-making. Define it as maximising utility by comparing marginal benefit to marginal cost, then note it is an assumption, not a description of how everyone actually behaves.",
+        recall: {
+          type: "reorder",
+          prompt: "Put the rational decision-making process in the right order:",
+          correctOrder: ["Identify all available options", "Compare marginal benefit vs marginal cost", "Choose the option with greatest net benefit", "Utility is maximised"],
+          shuffled: [2, 0, 3, 1]
+        }
       },
       {
         id: "utility-and-utility-maximisation",
@@ -78,7 +84,14 @@ const CONTENT = [
           text: "**Domino's** \"Two for Tuesday\" deal exploits diminishing marginal utility. Your first pizza delivers high satisfaction, but a second is worth much less to you. Domino's prices the bundle cheaply enough that even the lower marginal utility of pizza two still exceeds the marginal cost you pay."
         },
         misconception: "Students confuse total utility with marginal utility and write \"utility falls as you consume more.\" Total utility keeps rising as long as marginal utility is positive — it is marginal utility that falls. Instead write: total utility increases at a decreasing rate because marginal utility diminishes with each additional unit consumed.",
-        examMatters: "If a question says \"explain how a consumer maximises utility,\" the examiner wants the equi-marginal condition: MU_A/P_A = MU_B/P_B. Show that if the ratios are unequal, the consumer can increase total utility by reallocating spending."
+        examMatters: "If a question says \"explain how a consumer maximises utility,\" the examiner wants the equi-marginal condition: MU_A/P_A = MU_B/P_B. Show that if the ratios are unequal, the consumer can increase total utility by reallocating spending.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Total ___ is overall satisfaction from all units consumed", "→ Marginal ___ is the extra satisfaction from one more unit", "→ Marginal utility ___ as you consume more of the same good"],
+          answers: ["utility", "utility", "diminishes"],
+          hints: ["ut____", "ut____", "di________"]
+        }
       },
       {
         id: "why-consumers-may-not-act-rationally",
@@ -108,7 +121,13 @@ const CONTENT = [
           text: "**Apple** exploits anchoring by showing the most expensive iPhone first on its website. When you then see the mid-range model, it feels like a bargain by comparison — even though it is still expensive in absolute terms. This is a systematic departure from rational price comparison."
         },
         misconception: "Students write \"behavioural economics proves the rational model is wrong.\" That is too strong — the rational model is a useful simplification that predicts well in many competitive markets. Instead write: behavioural economics enriches the rational model by identifying systematic biases, but does not replace the assumption entirely.",
-        examMatters: "Evaluation questions love this topic. If you argue consumers are rational, counter-argue with behavioural biases and vice versa. Name specific biases (anchoring, loss aversion, bounded rationality) rather than vaguely saying \"people are irrational.\""
+        examMatters: "Evaluation questions love this topic. If you argue consumers are rational, counter-argue with behavioural biases and vice versa. Name specific biases (anchoring, loss aversion, bounded rationality) rather than vaguely saying \"people are irrational.\"",
+        recall: {
+          type: "reorder",
+          prompt: "Put these behavioural economics concepts in order from cognitive shortcut to outcome:",
+          correctOrder: ["Consumer relies on heuristics (mental shortcuts)", "Anchoring biases their price perception", "Loss aversion distorts their cost-benefit analysis", "Decision deviates from the rational model"],
+          shuffled: [3, 1, 0, 2]
+        }
       }
     ],
     takeaway: [
@@ -150,7 +169,14 @@ const CONTENT = [
           text: "When **Samsung** cut the price of its Galaxy A-series phones by 20%, sales volumes jumped significantly in emerging markets. Consumers who previously bought cheaper brands substituted towards Samsung (substitution effect), while existing Samsung users upgraded sooner (income effect)."
         },
         misconception: "Students write \"demand fell\" when they mean quantity demanded fell. A fall in demand means the whole curve shifts left; a fall in quantity demanded is a movement along the curve caused by a price rise. Instead write: a rise in price causes a contraction in quantity demanded (movement along), not a fall in demand (shift).",
-        examMatters: "The distinction between a movement along the demand curve and a shift of the curve is tested relentlessly. If the question mentions a price change of the good itself, it is a movement along. If it mentions any other factor, it is a shift. Always state which one clearly."
+        examMatters: "The distinction between a movement along the demand curve and a shift of the curve is tested relentlessly. If the question mentions a price change of the good itself, it is a movement along. If it mentions any other factor, it is a shift. Always state which one clearly.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the chain:",
+          template: ["Demand requires willingness and ___ to pay", "→ The ___ effect: lower price makes you feel richer", "→ The ___ effect: good becomes cheaper relative to alternatives"],
+          answers: ["ability", "income", "substitution"],
+          hints: ["ab_____", "in____", "su___________"]
+        }
       },
       {
         id: "movements-along-vs-shifts",
@@ -184,7 +210,13 @@ const CONTENT = [
           text: "When **Starbucks** raises the price of a latte from £3.50 to £4.00, fewer lattes are sold — a contraction along the demand curve. But when a viral social-media health scare about coffee emerged, demand for lattes fell at every price — the whole curve shifted left."
         },
         misconception: "Students draw a shift when the question describes a price change of the good itself. A price change only ever causes a movement along the existing curve. Instead write: only non-price factors (income, tastes, substitutes, complements, population) shift the demand curve; the good's own price causes a movement along it.",
-        examMatters: "Diagram questions almost always test this distinction. Label your diagram clearly: if you show a movement, mark the old and new points on the same curve. If you show a shift, draw two separate curves (D1 and D2) and label both."
+        examMatters: "Diagram questions almost always test this distinction. Label your diagram clearly: if you show a movement, mark the old and new points on the same curve. If you show a shift, draw two separate curves (D1 and D2) and label both.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these demand curve concepts in the right order:",
+          correctOrder: ["Price of the good itself changes", "Movement along the demand curve occurs", "Non-price factor changes", "Entire demand curve shifts left or right"],
+          shuffled: [1, 3, 0, 2]
+        }
       },
       {
         id: "factors-that-shift-demand",
@@ -209,7 +241,14 @@ const CONTENT = [
           text: "When **Tesla** slashed the price of the Model 3 in 2023, demand for rival EVs from Volkswagen and Hyundai fell — their demand curves shifted left. Tesla is a close substitute, so its price cut diverted buyers away from competitors at every price point."
         },
         misconception: "Students list \"price\" as a factor that shifts demand. Price of the good itself causes a movement along, not a shift. Instead write: demand shifters are non-price factors — income, tastes, prices of substitutes or complements, population, and expectations.",
-        examMatters: "When you explain a demand shift, always name the specific factor, state the direction of the shift, and show it on a diagram. Generic answers like \"demand increased because more people wanted it\" score poorly — say *why* more people wanted it."
+        examMatters: "When you explain a demand shift, always name the specific factor, state the direction of the shift, and show it on a diagram. Generic answers like \"demand increased because more people wanted it\" score poorly — say *why* more people wanted it.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the demand shifters:",
+          template: ["___ : higher income shifts demand for normal goods right", "→ Price of a ___ rises: demand for your good shifts right", "→ ___ growth: more buyers shifts demand right"],
+          answers: ["Income", "substitute", "Population"],
+          hints: ["In____", "su_________", "Po_________"]
+        }
       }
     ],
     takeaway: [
@@ -252,7 +291,13 @@ const CONTENT = [
           text: "Studies of **UK petrol** demand consistently find a short-run PED of around -0.2. When prices spike, most drivers still need fuel to commute, so quantity demanded barely falls. This makes petrol a textbook example of price-inelastic demand."
         },
         misconception: "Students forget that PED uses percentage changes and instead plug in absolute numbers. A rise from 100 to 120 units is a 20% change, not 20. Instead write: always convert to percentage changes before dividing — PED = (% change in Qd) / (% change in P).",
-        examMatters: "Calculation questions on PED appear frequently. Show your working clearly: state the formula, plug in the percentage changes, and interpret the result. Examiners give method marks even if the final number is wrong."
+        examMatters: "Calculation questions on PED appear frequently. Show your working clearly: state the formula, plug in the percentage changes, and interpret the result. Examiners give method marks even if the final number is wrong.",
+        recall: {
+          type: "reorder",
+          prompt: "Put the PED calculation steps in the right order:",
+          correctOrder: ["State the formula: PED = % change in Qd / % change in P", "Calculate the percentage changes", "Divide to get the PED value (always negative)", "Interpret: elastic if |PED| > 1, inelastic if |PED| < 1"],
+          shuffled: [2, 0, 3, 1]
+        }
       },
       {
         id: "interpreting-ped-values",
@@ -285,7 +330,14 @@ const CONTENT = [
           text: "**Novo Nordisk** can raise the price of its diabetes drug Ozempic with relatively little drop in sales because patients have few alternatives — demand is highly inelastic. In contrast, if one brand of bottled water raises its price, consumers simply switch to another brand."
         },
         misconception: "Students write \"necessities are always inelastic.\" While broadly true, it depends on how narrowly you define the good — water as a category is very inelastic, but a specific brand of bottled water is elastic because substitutes abound. Instead write: the elasticity of a good depends on the availability of substitutes, not just whether it is a necessity.",
-        examMatters: "When interpreting PED, always state three things: the value, whether demand is elastic or inelastic, and what that means for the firm or consumer. A bare number without interpretation will not earn full marks."
+        examMatters: "When interpreting PED, always state three things: the value, whether demand is elastic or inelastic, and what that means for the firm or consumer. A bare number without interpretation will not earn full marks.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the PED interpretations:",
+          template: ["|PED| > 1 means demand is ___", "→ |PED| < 1 means demand is ___", "→ PED = 0 means demand is perfectly ___"],
+          answers: ["elastic", "inelastic", "inelastic"],
+          hints: ["el_____", "in_______", "in_______"]
+        }
       },
       {
         id: "factors-influencing-ped",
@@ -315,7 +367,13 @@ const CONTENT = [
           text: "**Philip Morris** can raise cigarette prices more than most firms because nicotine addiction makes demand highly inelastic in the short run. However, over the long run, PED rises as smokers gradually quit or switch to vapes — illustrating how time increases elasticity."
         },
         misconception: "Students list factors without explaining *why* they affect PED. Saying \"time affects elasticity\" earns no marks — you must explain that over time consumers discover substitutes and adjust habits, which is why long-run PED is higher than short-run. Instead write: always link each factor to substitutability, which is the underlying mechanism.",
-        examMatters: "A common 8-mark question asks you to explain the factors that determine PED. Structure your answer around substitutes as the core driver, then layer on time, proportion of income, and habit as supporting factors. Always use a specific product example."
+        examMatters: "A common 8-mark question asks you to explain the factors that determine PED. Structure your answer around substitutes as the core driver, then layer on time, proportion of income, and habit as supporting factors. Always use a specific product example.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these PED factors from most to least important:",
+          correctOrder: ["Number and closeness of substitutes", "Proportion of income spent on the good", "Time period (short run vs long run)", "Habit and brand loyalty"],
+          shuffled: [3, 0, 2, 1]
+        }
       },
       {
         id: "ped-and-total-revenue",
@@ -342,7 +400,14 @@ const CONTENT = [
           text: "**Ryanair** deliberately prices flights as low as possible because leisure travellers have elastic demand — they will switch to another airline or cancel the trip if fares rise. By cutting prices, Ryanair fills more seats and earns higher total revenue than it would at a higher fare."
         },
         misconception: "Students assume that raising prices always increases revenue. That is only true when demand is inelastic. If demand is elastic, a price rise causes such a large drop in quantity that total revenue actually falls. Instead write: the effect of a price change on revenue depends on PED — inelastic means price and revenue move together; elastic means they move in opposite directions.",
-        examMatters: "PED-revenue questions appear on almost every paper. Draw a quick table showing elastic vs inelastic outcomes, then apply it to the specific product in the question. Examiners reward candidates who link PED to the firm's pricing strategy."
+        examMatters: "PED-revenue questions appear on almost every paper. Draw a quick table showing elastic vs inelastic outcomes, then apply it to the specific product in the question. Examiners reward candidates who link PED to the firm's pricing strategy.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the PED-revenue rules:",
+          template: ["If demand is inelastic, a price rise ___ total revenue", "→ If demand is elastic, a price rise ___ total revenue", "→ Total revenue = ___ x quantity"],
+          answers: ["increases", "decreases", "price"],
+          hints: ["in_______", "de_______", "pr___"]
+        }
       }
     ],
     takeaway: [
@@ -384,7 +449,13 @@ const CONTENT = [
           text: "As UK average incomes rose through the 2010s, demand for **McDonald's** value-menu items stagnated while spending in mid-range restaurants grew. Value-menu items behaved as inferior goods (negative YED) — when people could afford more, they traded up."
         },
         misconception: "Students forget that the sign matters for YED and always report a positive number. The sign is the whole point: positive = normal good, negative = inferior good. Instead write: always state whether YED is positive or negative and classify the good accordingly — this is what distinguishes YED from PED.",
-        examMatters: "YED calculation questions test whether you can interpret the sign. State the formula, calculate the value with its sign, then classify the good as normal or inferior. A final sentence explaining what this means for the firm as incomes change earns full marks."
+        examMatters: "YED calculation questions test whether you can interpret the sign. State the formula, calculate the value with its sign, then classify the good as normal or inferior. A final sentence explaining what this means for the firm as incomes change earns full marks.",
+        recall: {
+          type: "reorder",
+          prompt: "Put the YED analysis steps in the right order:",
+          correctOrder: ["Calculate YED = % change in Qd / % change in income", "Check the sign of the result", "Positive YED = normal good; negative YED = inferior good", "Explain what happens to demand as incomes change"],
+          shuffled: [2, 0, 3, 1]
+        }
       },
       {
         id: "interpreting-yed-values",
@@ -413,7 +484,14 @@ const CONTENT = [
           text: "During the 2008 recession, demand for **Aldi** and **Lidl** own-brand groceries surged as household incomes fell — a classic inferior-good response. Meanwhile, premium retailer Waitrose saw sales dip, confirming that its products had a high positive YED."
         },
         misconception: "Students assume inferior goods are low-quality goods. Inferiority is about income response, not quality — bus travel is inferior not because buses are bad, but because when people earn more they switch to cars. Instead write: an inferior good is one whose demand falls as income rises, regardless of its objective quality.",
-        examMatters: "Context questions often describe an economic boom or recession and ask you to analyse the impact on different firms. Use YED to explain why luxury retailers suffer in recessions and why budget brands thrive. Always state the YED classification."
+        examMatters: "Context questions often describe an economic boom or recession and ask you to analyse the impact on different firms. Use YED to explain why luxury retailers suffer in recessions and why budget brands thrive. Always state the YED classification.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the YED classifications:",
+          template: ["YED > +1 means the good is a ___", "→ 0 < YED < +1 means the good is a ___", "→ YED < 0 means the good is ___"],
+          answers: ["luxury", "necessity", "inferior"],
+          hints: ["lu____", "ne_______", "in______"]
+        }
       },
       {
         id: "significance-of-yed",
@@ -440,7 +518,13 @@ const CONTENT = [
           text: "**Marriott International** expanded aggressively into budget hotel brands (Fairfield Inn, Moxy) alongside its luxury Ritz-Carlton line. This diversification hedges against YED risk — budget brands hold up in recessions while luxury brands capture boom-time spending."
         },
         misconception: "Students write \"firms should only sell necessities because demand is stable.\" That ignores the upside of luxuries — when incomes rise, high-YED goods see demand surge, offering far higher growth potential. Instead write: the optimal strategy depends on the economic cycle — diversifying across YED ranges reduces risk.",
-        examMatters: "Application questions ask you to advise a firm on its product strategy using YED. Link the YED value to the economic context (boom or recession), recommend a specific action, and explain the trade-off between stability and growth potential."
+        examMatters: "Application questions ask you to advise a firm on its product strategy using YED. Link the YED value to the economic context (boom or recession), recommend a specific action, and explain the trade-off between stability and growth potential.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these YED business strategy steps in order:",
+          correctOrder: ["Economy enters recession and incomes fall", "Demand for luxuries (YED > 1) drops sharply", "Demand for inferior goods (YED < 0) rises", "Firms diversify across YED ranges to hedge risk"],
+          shuffled: [3, 1, 0, 2]
+        }
       }
     ],
     takeaway: [
@@ -481,7 +565,14 @@ const CONTENT = [
           text: "When **Sony** cut the price of the PlayStation 5, demand for PS5 game titles rose sharply — a negative XED confirming they are complements. At the same time, demand for Xbox consoles dipped — a positive XED confirming PlayStation and Xbox are substitutes."
         },
         misconception: "Students mix up which good goes in the numerator and which in the denominator. The numerator is always the change in quantity demanded of Good A; the denominator is always the change in price of Good B. Instead write: XED = (% change Qd of A) / (% change P of B) — keep A on top and B on the bottom.",
-        examMatters: "Calculation questions on XED always test whether you can interpret the sign. After calculating, state whether the goods are substitutes (positive) or complements (negative), and explain what this means for the firms involved."
+        examMatters: "Calculation questions on XED always test whether you can interpret the sign. After calculating, state whether the goods are substitutes (positive) or complements (negative), and explain what this means for the firms involved.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the XED rules:",
+          template: ["XED = % change in Qd of A / % change in ___ of B", "→ Positive XED means the goods are ___", "→ Negative XED means the goods are ___"],
+          answers: ["price", "substitutes", "complements"],
+          hints: ["pr___", "su__________", "co__________"]
+        }
       },
       {
         id: "interpreting-xed-values",
@@ -510,7 +601,13 @@ const CONTENT = [
           text: "**HP** prices its printers cheaply but charges high prices for ink cartridges because the two are strong complements (XED is highly negative). A cheap printer locks you into buying expensive ink — a strategy only possible when XED confirms a strong complementary relationship."
         },
         misconception: "Students forget about the magnitude and only focus on the sign. A XED of +0.01 and +3.0 are both positive (substitutes), but the practical implications are completely different. Instead write: always comment on the size of XED — weak substitutes barely affect each other, while close substitutes are in direct competition.",
-        examMatters: "Higher-mark questions ask you to discuss the significance of XED for business strategy. Go beyond the sign: explain whether the relationship is strong or weak and what that means for pricing, marketing and competitive positioning."
+        examMatters: "Higher-mark questions ask you to discuss the significance of XED for business strategy. Go beyond the sign: explain whether the relationship is strong or weak and what that means for pricing, marketing and competitive positioning.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these XED magnitude interpretations in order from weakest to strongest relationship:",
+          correctOrder: ["XED close to zero: goods are unrelated", "XED weakly positive: distant substitutes", "XED strongly positive: close substitutes", "XED strongly negative: strong complements"],
+          shuffled: [2, 0, 3, 1]
+        }
       },
       {
         id: "significance-of-xed",
@@ -537,7 +634,14 @@ const CONTENT = [
           text: "When **Netflix** launched in the UK, it had a high positive XED with **Sky TV** subscriptions. Sky responded by cutting prices and launching its own streaming service, Now TV. The high XED forced both firms into a price war that ultimately benefited consumers."
         },
         misconception: "Students say \"XED only matters for substitutes.\" Complementary goods are equally important — printer makers, games console makers and razor companies all rely on the complementary relationship to generate profits. Instead write: XED matters for both substitutes (competitive strategy) and complements (bundling and cross-selling strategy).",
-        examMatters: "Evaluate questions on XED want you to link the concept to real business or government decisions. For businesses, discuss pricing and product strategy. For governments, discuss how regulators use XED to define markets and assess competition."
+        examMatters: "Evaluate questions on XED want you to link the concept to real business or government decisions. For businesses, discuss pricing and product strategy. For governments, discuss how regulators use XED to define markets and assess competition.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the XED business applications:",
+          template: ["High positive XED with a rival means ___ competition", "→ Strong complement relationship enables ___-leader pricing", "→ Regulators use XED to define ___ boundaries"],
+          answers: ["direct", "loss", "market"],
+          hints: ["di____", "lo__", "ma____"]
+        }
       }
     ],
     takeaway: [
@@ -576,7 +680,13 @@ const CONTENT = [
           text: "**Tesco** uses Clubcard data to estimate PED for thousands of products, then prices elastic goods aggressively low to attract shoppers and inelastic goods slightly higher to protect margins. This data-driven approach to elasticity is now standard across all major UK supermarkets."
         },
         misconception: "Students treat elasticities as purely theoretical concepts with no practical use. In reality, firms spend millions estimating PED, YED and XED to set prices and plan strategy. Instead write: elasticities are among the most practically useful tools in economics — every major pricing decision implicitly or explicitly uses them.",
-        examMatters: "Synoptic questions ask you to apply all three elasticities to a single business context. Structure your answer by covering PED (pricing), YED (product range), and XED (competitive positioning) in turn, then evaluate which is most useful for the specific scenario."
+        examMatters: "Synoptic questions ask you to apply all three elasticities to a single business context. Structure your answer by covering PED (pricing), YED (product range), and XED (competitive positioning) in turn, then evaluate which is most useful for the specific scenario.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these elasticity-business applications in the right order:",
+          correctOrder: ["PED tells the firm whether to raise or lower price", "YED helps plan for booms and recessions", "XED guides competitive and complementary strategy", "Combine all three for a complete pricing strategy"],
+          shuffled: [2, 0, 3, 1]
+        }
       },
       {
         id: "using-elasticities-for-government-policy",
@@ -607,7 +717,14 @@ const CONTENT = [
           text: "The **UK government** raises tobacco duty every year precisely because PED for cigarettes is around -0.4 — highly inelastic. Each price rise generates substantial tax revenue while only modestly reducing the quantity smoked, achieving both a fiscal and a public-health objective."
         },
         misconception: "Students write \"taxes on inelastic goods are unfair because consumers cannot avoid them.\" While this may be true from an equity standpoint, the question is usually about effectiveness, not fairness. Instead write: governments tax inelastic goods because it maximises revenue and reduces consumption at the margin, but acknowledge the regressive equity concern as an evaluation point.",
-        examMatters: "Policy-evaluation questions ask whether a tax or subsidy will achieve its objective. Always start with PED: if demand is inelastic, the tax raises revenue but barely changes behaviour. If demand is elastic, the tax changes behaviour but raises little revenue. State this trade-off explicitly."
+        examMatters: "Policy-evaluation questions ask whether a tax or subsidy will achieve its objective. Always start with PED: if demand is inelastic, the tax raises revenue but barely changes behaviour. If demand is elastic, the tax changes behaviour but raises little revenue. State this trade-off explicitly.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the government elasticity applications:",
+          template: ["Governments tax goods with ___ demand to maximise revenue", "→ YED helps plan ___ services as national income grows", "→ Regulators use ___ to define markets for merger investigations"],
+          answers: ["inelastic", "public", "XED"],
+          hints: ["in_______", "pu____", "X__"]
+        }
       }
     ],
     takeaway: [

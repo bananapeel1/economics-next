@@ -56,7 +56,13 @@ const CONTENT = [
           text: "**Saudi Arabia** increases its oil output when crude prices surge above $80 per barrel because expensive extraction methods become profitable at higher prices. When prices fell below $30 in early 2016, Saudi Aramco cut investment in costlier fields and reduced drilling activity. This real-world response demonstrates the law of supply operating in a global commodity market."
         },
         misconception: "Students write \"supply is the amount of a product that exists.\" That confuses stock with supply, which refers only to what producers are willing and able to sell at each price. Instead write: supply is the quantity offered for sale at each price level in a given time period.",
-        examMatters: "Examiners expect you to define supply precisely using the terms \"willing and able\" and \"at each price in a given time period.\" When drawing a supply curve, always label both axes and show the upward slope clearly. Marks are consistently lost for unlabelled or incorrectly sloped diagrams."
+        examMatters: "Examiners expect you to define supply precisely using the terms \"willing and able\" and \"at each price in a given time period.\" When drawing a supply curve, always label both axes and show the upward slope clearly. Marks are consistently lost for unlabelled or incorrectly sloped diagrams.",
+        recall: {
+          type: "reorder",
+          prompt: "Put the law of supply chain in the right order:",
+          correctOrder: ["Price of the good rises", "Revenue per unit increases", "Production becomes more profitable", "Firms expand output and new firms enter"],
+          shuffled: [2, 0, 3, 1]
+        }
       },
       {
         id: "movements-along-vs-shifts-of-supply",
@@ -87,7 +93,14 @@ const CONTENT = [
           text: "**John Deere** introduced GPS-guided tractors that reduced fuel costs and seed waste for American wheat farmers. This technological advance lowered production costs across the industry, shifting the supply curve for wheat to the right. More wheat was offered at every price, not because wheat prices changed, but because technology reduced costs."
         },
         misconception: "Students say \"a rise in price shifts the supply curve to the right.\" A change in the good's own price causes a movement along the existing curve, not a shift of the whole curve. Instead write: only non-price factors such as costs, technology or the number of firms shift the supply curve.",
-        examMatters: "This distinction is tested in almost every supply-related question. Examiners want you to use the correct terminology: \"extension\" or \"contraction\" for movements, and \"increase\" or \"decrease\" in supply for shifts. Labelling your diagram with arrows showing the direction of change earns additional marks."
+        examMatters: "This distinction is tested in almost every supply-related question. Examiners want you to use the correct terminology: \"extension\" or \"contraction\" for movements, and \"increase\" or \"decrease\" in supply for shifts. Labelling your diagram with arrows showing the direction of change earns additional marks.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the supply curve movements vs shifts:",
+          template: ["A change in the good's own price causes a ___ along the curve", "→ A price rise causes an ___ of supply (movement up)", "→ A change in a non-price factor causes a ___ of the supply curve"],
+          answers: ["movement", "extension", "shift"],
+          hints: ["mo______", "ex________", "sh___"]
+        }
       },
       {
         id: "factors-that-shift-supply",
@@ -123,7 +136,13 @@ const CONTENT = [
           text: "**The Chinese government** subsidised solar panel manufacturers by over $50 billion between 2010 and 2020. These subsidies dramatically lowered production costs, shifting the global supply curve for solar panels to the right. World prices fell by more than 90%, making solar energy cost-competitive with fossil fuels."
         },
         misconception: "Students list factors that shift supply but forget to explain the direction. Stating \"technology shifts supply\" earns no marks without specifying which direction and why. Instead write: improved technology lowers unit costs of production, which shifts the supply curve to the right because firms can offer more at every given price.",
-        examMatters: "When asked to explain a shift in supply, examiners want a clear chain of reasoning: identify the factor, explain how it affects costs or capacity, and state the direction of the shift. You must then show the effect on equilibrium price and quantity using a correctly labelled diagram. Simply naming the factor without tracing through the mechanism is not enough for full marks."
+        examMatters: "When asked to explain a shift in supply, examiners want a clear chain of reasoning: identify the factor, explain how it affects costs or capacity, and state the direction of the shift. You must then show the effect on equilibrium price and quantity using a correctly labelled diagram. Simply naming the factor without tracing through the mechanism is not enough for full marks.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these supply shift factors in order of explanation:",
+          correctOrder: ["Identify the factor (e.g. new technology)", "Explain how it affects costs of production", "State the direction of the supply curve shift", "Show the effect on equilibrium price and quantity"],
+          shuffled: [3, 1, 0, 2]
+        }
       }
     ],
     takeaway: [
@@ -169,7 +188,14 @@ const CONTENT = [
           text: "**Taiwan Semiconductor (TSMC)** cannot quickly expand chip production because building a new fabrication plant takes three to five years and costs over $20 billion. When global chip demand surged in 2021, TSMC's inelastic supply meant prices rose sharply while output barely increased. This illustrates how low PES causes price volatility when demand shifts."
         },
         misconception: "Students confuse PES with PED and write about consumer responsiveness. PES is about producers, not consumers -- it measures how the quantity supplied responds to a price change. Instead write: PES measures how much the quantity that producers offer for sale changes when the market price changes.",
-        examMatters: "When calculating PES, examiners check that you use the correct formula and show your working clearly. Always state the formula first, substitute the numbers, and then interpret the result. State whether supply is elastic or inelastic and explain what that means for price stability in the market."
+        examMatters: "When calculating PES, examiners check that you use the correct formula and show your working clearly. Always state the formula first, substitute the numbers, and then interpret the result. State whether supply is elastic or inelastic and explain what that means for price stability in the market.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the PES fundamentals:",
+          template: ["PES = % change in quantity ___ / % change in price", "→ PES is almost always a ___ value", "→ PES > 1 means supply is price ___"],
+          answers: ["supplied", "positive", "elastic"],
+          hints: ["su______", "po______", "el_____"]
+        }
       },
       {
         id: "interpreting-pes-values",
@@ -200,7 +226,13 @@ const CONTENT = [
           text: "**The UK housing market** has a PES estimated at just 0.4, meaning a 10% price rise leads to only a 4% increase in new homes built. Planning restrictions, land shortages and long construction times make housing supply deeply inelastic. This is a key reason UK house prices have risen faster than incomes for decades."
         },
         misconception: "Students write \"inelastic supply means supply does not change at all.\" Inelastic does not mean zero response -- it means quantity supplied changes by a smaller proportion than the price change. Instead write: inelastic supply means producers do respond to price changes, but the percentage change in quantity supplied is smaller than the percentage change in price.",
-        examMatters: "Examiners often give you data and ask you to calculate and interpret PES. After calculating, always link your answer to the real-world implications for price stability and output adjustment. Context-specific interpretation that connects the PES value to market outcomes earns the highest marks."
+        examMatters: "Examiners often give you data and ask you to calculate and interpret PES. After calculating, always link your answer to the real-world implications for price stability and output adjustment. Context-specific interpretation that connects the PES value to market outcomes earns the highest marks.",
+        recall: {
+          type: "reorder",
+          prompt: "Put these PES scenarios in order from least to most elastic:",
+          correctOrder: ["PES = 0: perfectly inelastic (vertical curve)", "PES < 1: supply is price inelastic", "PES = 1: unit elastic supply", "PES > 1: supply is price elastic"],
+          shuffled: [3, 0, 2, 1]
+        }
       },
       {
         id: "factors-influencing-pes",
@@ -234,7 +266,14 @@ const CONTENT = [
           text: "**Toyota** uses its famous just-in-time production system with minimal spare capacity and almost no stock of finished vehicles. This makes Toyota's short-run supply relatively inelastic when demand suddenly spikes. However, its flexible production lines allow quick model switches, improving elasticity compared to rivals with rigid assembly lines."
         },
         misconception: "Students claim \"agricultural supply is always inelastic.\" While crops do take months to grow, farmers can adjust planting decisions for the next season and release stored grain as buffer stock. Instead write: agricultural supply is inelastic in the short run due to growing seasons, but it becomes more elastic over time as farmers adjust planting.",
-        examMatters: "When discussing factors influencing PES, examiners want you to link each factor to a specific market rather than listing them in the abstract. Explain why supply of the particular good in the question is elastic or inelastic, using the determinants to support your reasoning. This applied approach scores far higher than generic factor lists."
+        examMatters: "When discussing factors influencing PES, examiners want you to link each factor to a specific market rather than listing them in the abstract. Explain why supply of the particular good in the question is elastic or inelastic, using the determinants to support your reasoning. This applied approach scores far higher than generic factor lists.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the PES determinants:",
+          template: ["___ capacity allows rapid output expansion", "→ Stocks of ___ goods let firms supply instantly", "→ Supply is most elastic in the ___ run"],
+          answers: ["Spare", "finished", "long"],
+          hints: ["Sp___", "fi______", "lo__"]
+        }
       }
     ],
     takeaway: [
@@ -280,7 +319,13 @@ const CONTENT = [
           text: "**Domino's Pizza** outlets have a fixed number of ovens. During Friday evening peak demand, adding a fifth or sixth worker to the kitchen raises output only slightly because workers queue to use the same ovens. Domino's experiences clear diminishing marginal returns once its fixed capital is fully utilised."
         },
         misconception: "Students write \"diminishing returns means total output falls.\" Total output continues to rise; it is the extra output added by each additional worker that falls. Instead write: diminishing marginal returns means each additional unit of the variable factor adds less to total output than the previous one.",
-        examMatters: "Examiners test whether you understand that diminishing returns is a short-run concept that requires at least one fixed factor. If you apply diminishing returns to a long-run scenario where all factors are variable, you will lose marks. Always state clearly which factor is fixed and which is variable."
+        examMatters: "Examiners test whether you understand that diminishing returns is a short-run concept that requires at least one fixed factor. If you apply diminishing returns to a long-run scenario where all factors are variable, you will lose marks. Always state clearly which factor is fixed and which is variable.",
+        recall: {
+          type: "reorder",
+          prompt: "Put the diminishing returns process in the right order:",
+          correctOrder: ["At least one factor of production is fixed", "More units of the variable factor are added", "Marginal product of each extra worker eventually falls", "Marginal cost of production rises"],
+          shuffled: [2, 0, 3, 1]
+        }
       },
       {
         id: "long-run-production-and-returns-to-scale",
@@ -311,7 +356,14 @@ const CONTENT = [
           text: "**Airbus** invested over $25 billion developing the A350 aircraft, but once production lines were established, doubling the workforce and materials more than doubled the number of planes completed per year. Specialist teams, dedicated tooling and supplier contracts all became more efficient at higher volumes. This is a textbook case of increasing returns to scale in long-run production."
         },
         misconception: "Students confuse diminishing returns with decreasing returns to scale. Diminishing returns is a short-run concept where at least one factor is fixed; decreasing returns to scale is a long-run concept where all factors increase proportionally. Instead write: diminishing returns occurs in the short run with a fixed factor, while decreasing returns to scale occurs in the long run when all inputs are increased together.",
-        examMatters: "Examiners frequently set trap questions that test whether you can distinguish short-run diminishing returns from long-run returns to scale. When writing about the long run, never mention diminishing returns -- use returns to scale terminology instead. Explain whether average costs rise, fall or stay constant as the firm expands all its inputs."
+        examMatters: "Examiners frequently set trap questions that test whether you can distinguish short-run diminishing returns from long-run returns to scale. When writing about the long run, never mention diminishing returns -- use returns to scale terminology instead. Explain whether average costs rise, fall or stay constant as the firm expands all its inputs.",
+        recall: {
+          type: "fillin",
+          prompt: "Complete the long-run production concepts:",
+          template: ["In the long run all factors of production are ___", "→ Firm doubles inputs and output more than doubles = ___ returns to scale", "→ Increasing returns to scale means average cost per unit ___"],
+          answers: ["variable", "increasing", "falls"],
+          hints: ["va______", "in________", "fa___"]
+        }
       }
     ],
     takeaway: [
