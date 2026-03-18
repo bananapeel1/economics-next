@@ -804,7 +804,7 @@ body {
 
 /* Sub-section wrapper — green-bar card */
 .rl-note-section {
-  background: rgba(255,255,255,.02); border: 1px solid var(--border-primary);
+  background: rgba(255,255,255,.035); border: 1px solid var(--border-primary);
   border-left: 4px solid var(--accent-green); border-radius: 10px;
   padding: 20px 24px; margin-bottom: 24px;
 }
@@ -1858,9 +1858,9 @@ button.sidebar-resource-link {
   .rl-note-section { padding: 24px 28px; }
   .rl-flow-tl-title { font-size: 14px; }
   .rl-flow-result-text { font-size: 14px; }
-  /* Diagrams — full-width card, compact image */
-  .diagram-svg-wrapper svg, .diagram-svg-wrapper img { max-width: 360px; }
-  .lm-interactive-svg-wrapper svg, .lm-interactive-svg-wrapper img { max-width: 340px; }
+  /* Diagrams — full-width card, small centered image */
+  .diagram-svg-wrapper svg, .diagram-svg-wrapper img { max-width: 260px; }
+  .lm-interactive-svg-wrapper svg, .lm-interactive-svg-wrapper img { max-width: 240px; }
   /* Rich notes desktop */
   .rn-notes { max-width: 1060px; }
   .rn-note-text { font-size: 14.5px; }
@@ -1875,9 +1875,9 @@ button.sidebar-resource-link {
   .tab-content-body { padding: 36px 60px 60px; }
   .rl-body-p { font-size: 15.5px; line-height: 1.75; }
   .lm-section-title { font-size: 30px; }
-  /* Diagrams — ultra-wide, compact image */
-  .diagram-svg-wrapper svg, .diagram-svg-wrapper img { max-width: 400px; }
-  .lm-interactive-svg-wrapper svg, .lm-interactive-svg-wrapper img { max-width: 380px; }
+  /* Diagrams — ultra-wide, small centered image */
+  .diagram-svg-wrapper svg, .diagram-svg-wrapper img { max-width: 300px; }
+  .lm-interactive-svg-wrapper svg, .lm-interactive-svg-wrapper img { max-width: 280px; }
   /* Rich notes ultra-wide */
   .rn-notes { max-width: 1160px; }
   .rn-note-text { font-size: 15px; line-height: 1.65; }
