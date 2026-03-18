@@ -274,6 +274,7 @@ export default function LearnModeTab({
           <div className="lm-content">
             {Array.isArray(currentBlock.sections) ? (
               <>
+                {/* Progressive reveal: sub-sections one at a time */}
                 {currentBlock.sections.slice(0, revealedIndex + 1).map((section, idx) => (
                   <div
                     key={section.id}
@@ -283,7 +284,9 @@ export default function LearnModeTab({
                     <NoteSection section={section} glossaryTerms={glossaryTerms} />
                   </div>
                 ))}
+
                 {revealedIndex < currentBlock.sections.length - 1 ? (
+                  /* Continue button — more sub-sections to reveal */
                   <button className="lm-reveal-btn" onClick={handleRevealNext}>
                     Continue &middot; {revealedIndex + 1} of {currentBlock.sections.length} topics
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -291,14 +294,70 @@ export default function LearnModeTab({
                     </svg>
                   </button>
                 ) : (
-                  currentBlock.takeaway && (
-                    <div className={currentBlock.sections.length > 1 ? 'rl-section-enter' : ''}>
+                  /* All sub-sections revealed — show extras, takeaway, then nav */
+                  <div className={currentBlock.sections.length > 1 ? 'rl-section-enter' : ''}>
+                    {/* Diagram nestled after content */}
+                    {currentDiagram && <InlineDiagram diagram={currentDiagram} />}
+
+                    {/* Quiz nestled after diagram */}
+                    {currentQuiz && (
+                      <InlineQuiz
+                        key={`quiz-${currentStep}`}
+                        question={currentQuiz}
+                        subjectId={subjectId}
+                        sectionId={sectionId}
+                        stepIndex={currentStep}
+                      />
+                    )}
+
+                    {/* Practice question */}
+                    {currentPractice && (
+                      <InlinePractice
+                        key={`practice-${currentStep}`}
+                        question={currentPractice}
+                        onAskTutor={onAskTutor}
+                        mode={getPracticeMode(currentStep)}
+                      />
+                    )}
+
+                    {/* Takeaway summary */}
+                    {currentBlock.takeaway && (
                       <TakeawayCard items={currentBlock.takeaway} glossaryTerms={glossaryTerms} />
+                    )}
+
+                    {/* Explain It Back */}
+                    {currentBlock.title && (
+                      <ExplainItBackUpgraded
+                        key={`explain-${currentStep}`}
+                        title={currentBlock.title}
+                        onAskTutor={onAskTutor}
+                        isPremium={isPremium}
+                      />
+                    )}
+
+                    {/* Navigation */}
+                    <div className="lm-nav">
+                      {currentStep > 0 && (
+                        <button className="lm-nav-back" onClick={() => navigateToStep(currentStep - 1)} disabled={isTransitioning}>
+                          &larr; Back
+                        </button>
+                      )}
+                      <div className="lm-nav-spacer" />
+                      {!isLastStep ? (
+                        <button className="lm-nav-next" onClick={() => navigateToStep(currentStep + 1)} disabled={isTransitioning}>
+                          Next section &rarr;
+                        </button>
+                      ) : (
+                        <button className="lm-nav-complete" onClick={handleComplete} disabled={isTransitioning}>
+                          Complete topic &#10003;
+                        </button>
+                      )}
                     </div>
-                  )
+                  </div>
                 )}
               </>
             ) : (
+              /* Legacy format — no progressive reveal */
               <>
                 {currentBlock.concepts?.map((concept, j) => (
                   <div className="concept-box" key={j} style={concept.accent ? { borderLeftColor: concept.accent } : {}}>
@@ -331,43 +390,34 @@ export default function LearnModeTab({
                     {currentBlock.examTip}
                   </div>
                 )}
+
+                {/* Legacy: extras outside progressive reveal */}
+                {currentDiagram && <InlineDiagram diagram={currentDiagram} />}
+                {currentQuiz && (
+                  <InlineQuiz key={`quiz-${currentStep}`} question={currentQuiz} subjectId={subjectId} sectionId={sectionId} stepIndex={currentStep} />
+                )}
+                {currentPractice && (
+                  <InlinePractice key={`practice-${currentStep}`} question={currentPractice} onAskTutor={onAskTutor} mode={getPracticeMode(currentStep)} />
+                )}
+                {currentBlock.title && (
+                  <ExplainItBackUpgraded key={`explain-${currentStep}`} title={currentBlock.title} onAskTutor={onAskTutor} isPremium={isPremium} />
+                )}
+
+                {/* Legacy: navigation always visible */}
+                <div className="lm-nav">
+                  {currentStep > 0 && (
+                    <button className="lm-nav-back" onClick={() => navigateToStep(currentStep - 1)} disabled={isTransitioning}>&larr; Back</button>
+                  )}
+                  <div className="lm-nav-spacer" />
+                  {!isLastStep ? (
+                    <button className="lm-nav-next" onClick={() => navigateToStep(currentStep + 1)} disabled={isTransitioning}>Next section &rarr;</button>
+                  ) : (
+                    <button className="lm-nav-complete" onClick={handleComplete} disabled={isTransitioning}>Complete topic &#10003;</button>
+                  )}
+                </div>
               </>
             )}
           </div>
-
-          {/* Inline diagram (if distributed to this step) */}
-          {currentDiagram && <InlineDiagram diagram={currentDiagram} />}
-
-          {/* Inline quiz question — key forces reset on step change */}
-          {currentQuiz && (
-            <InlineQuiz
-              key={`quiz-${currentStep}`}
-              question={currentQuiz}
-              subjectId={subjectId}
-              sectionId={sectionId}
-              stepIndex={currentStep}
-            />
-          )}
-
-          {/* Inline practice question with worked example fading */}
-          {currentPractice && (
-            <InlinePractice
-              key={`practice-${currentStep}`}
-              question={currentPractice}
-              onAskTutor={onAskTutor}
-              mode={getPracticeMode(currentStep)}
-            />
-          )}
-
-          {/* Explain It Back prompt with AI grading */}
-          {currentBlock.title && (
-            <ExplainItBackUpgraded
-              key={`explain-${currentStep}`}
-              title={currentBlock.title}
-              onAskTutor={onAskTutor}
-              isPremium={isPremium}
-            />
-          )}
 
           {/* Keyboard hint */}
           {showKeyboardHint && (
@@ -375,25 +425,6 @@ export default function LearnModeTab({
               Use <kbd>&larr;</kbd> <kbd>&rarr;</kbd> arrow keys to navigate
             </div>
           )}
-
-          {/* Navigation */}
-          <div className="lm-nav">
-            {currentStep > 0 && (
-              <button className="lm-nav-back" onClick={() => navigateToStep(currentStep - 1)} disabled={isTransitioning}>
-                &larr; Back
-              </button>
-            )}
-            <div className="lm-nav-spacer" />
-            {!isLastStep ? (
-              <button className="lm-nav-next" onClick={() => navigateToStep(currentStep + 1)} disabled={isTransitioning}>
-                Next section &rarr;
-              </button>
-            ) : (
-              <button className="lm-nav-complete" onClick={handleComplete} disabled={isTransitioning}>
-                Complete topic &#10003;
-              </button>
-            )}
-          </div>
         </div>
       </div>
     </div>

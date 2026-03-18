@@ -1,13 +1,22 @@
 "use client";
-import { useState } from 'react';
-import InteractiveDiagram from './InteractiveDiagram';
+import { useState, useRef, useEffect } from 'react';
+import processSvg from './processSvg';
 
-/* ── Inline Diagram Card ── */
+/* ── Inline Diagram Card (static — no hover tooltips) ── */
 export default function InlineDiagram({ diagram }) {
   const [activeScenario, setActiveScenario] = useState(0);
+  const svgRef = useRef(null);
   const scenarios = diagram.scenarios || [{ label: 'Default', svg: diagram.svg }];
   const currentSvg = scenarios[activeScenario]?.svg || diagram.svg;
   const hasImage = !!diagram.imageUrl;
+
+  // Inject and post-process SVG (static — no hover listeners)
+  useEffect(() => {
+    if (!svgRef.current || !currentSvg || hasImage) return;
+    svgRef.current.innerHTML = currentSvg;
+    const svgEl = svgRef.current.querySelector('svg');
+    if (svgEl) processSvg(svgEl);
+  }, [currentSvg, hasImage]);
 
   return (
     <div className="lm-diagram-card">
@@ -30,7 +39,7 @@ export default function InlineDiagram({ diagram }) {
             <img src={diagram.imageUrl} alt={diagram.title} />
           </div>
         ) : (
-          <InteractiveDiagram svgString={currentSvg} />
+          <div className="lm-interactive-svg-wrapper" ref={svgRef} />
         )}
 
         {diagram.checklist && (

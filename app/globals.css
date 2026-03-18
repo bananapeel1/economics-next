@@ -878,7 +878,7 @@ body {
   font-size: 10px; font-weight: 700; text-transform: uppercase;
   letter-spacing: 0.07em; color: var(--rl-teal); margin-bottom: 6px;
 }
-.rl-real-example p { color: var(--text-secondary); font-size: 13px; line-height: 1.65; margin: 0; }
+.rl-real-example p { color: var(--text-secondary); font-size: 14px; line-height: 1.65; margin: 0; }
 .rl-real-example p strong { color: var(--text-primary); }
 
 /* Misconception — amber card */
@@ -890,7 +890,7 @@ body {
   font-size: 10px; font-weight: 700; text-transform: uppercase;
   letter-spacing: 0.07em; color: var(--rl-amber); margin-bottom: 6px;
 }
-.rl-misconception p { color: var(--text-secondary); font-size: 13px; line-height: 1.65; margin: 0; }
+.rl-misconception p { color: var(--text-secondary); font-size: 14px; line-height: 1.65; margin: 0; }
 .rl-misconception p strong { color: var(--text-primary); }
 
 /* Exam Matters — blue card */
@@ -902,7 +902,7 @@ body {
   font-size: 10px; font-weight: 700; text-transform: uppercase;
   letter-spacing: 0.07em; color: var(--rl-blue); margin-bottom: 6px;
 }
-.rl-exam-matters p { color: var(--text-secondary); font-size: 13px; line-height: 1.65; margin: 0; }
+.rl-exam-matters p { color: var(--text-secondary); font-size: 14px; line-height: 1.65; margin: 0; }
 .rl-exam-matters p strong { color: var(--text-primary); }
 
 /* Takeaway — step summary */
@@ -916,7 +916,7 @@ body {
 }
 .rl-takeaway-item {
   display: flex; align-items: flex-start; gap: 8px;
-  font-size: 13.5px; color: var(--text-secondary); line-height: 1.6;
+  font-size: 14px; color: var(--text-secondary); line-height: 1.6;
   margin-bottom: 8px;
 }
 .rl-takeaway-item:last-child { margin-bottom: 0; }
@@ -1673,7 +1673,7 @@ button.sidebar-resource-link {
 }
 
 /* ─── Learn Mode Content Area ─── */
-.lm-container { max-width: 780px; }
+.lm-container { max-width: 860px; }
 
 /* Stepper layout */
 .lm-stepper-step {

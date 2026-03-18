@@ -261,8 +261,9 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     }
   }
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
-  const [sectionData, setSectionData] = useState(initialSectionData);
-  const [isInitial, setIsInitial] = useState(true);
+  const dataMatchesSection = startSection === initialSectionId;
+  const [sectionData, setSectionData] = useState(dataMatchesSection ? initialSectionData : null);
+  const [isInitial, setIsInitial] = useState(dataMatchesSection);
   const [glossaryTerms, setGlossaryTerms] = useState([]);
   const [contentStepInfo, setContentStepInfo] = useState(null);
   const [pendingTutorPrompt, setPendingTutorPrompt] = useState(null);
