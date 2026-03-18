@@ -138,8 +138,10 @@ export default function LearnModeTab({
     if (isTransitioning) return;
     setIsTransitioning(true);
     setNodePopped(true);
+    // Scroll to top immediately (while exit animation plays)
+    scrollToTop(true);
+    // After exit animation (200ms), swap content
     setTimeout(() => {
-      scrollToTop(true);
       onStepChange(step);
       setIsTransitioning(false);
       setNodePopped(false);
