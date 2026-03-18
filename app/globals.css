@@ -973,11 +973,11 @@ body {
 
 /* Progressive reveal animation */
 .rl-section-enter {
-  animation: rlSectionReveal 0.35s ease both;
+  animation: rlSectionReveal 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 @keyframes rlSectionReveal {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(14px) scale(0.99); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 /* Continue / reveal button */
@@ -997,12 +997,12 @@ body {
 @media (max-width: 768px) {
   .rl-key-idea, .rl-real-example, .rl-misconception, .rl-exam-matters { padding: 10px 12px; }
   .rl-note-section-title { font-size: 15px; }
-  .rl-flow-chain { padding: 16px 12px; }
-  .rl-flow-tl-rail { width: 36px; }
-  .rl-flow-tl-node { width: 34px; height: 34px; font-size: 11px; }
+  .rl-flow-chain { padding: 14px 10px; }
+  .rl-flow-tl-node { width: 28px; height: 28px; font-size: 10px; border-radius: 6px; }
   .rl-flow-tl-card { padding: 8px 12px; }
-  .rl-flow-tl-title { font-size: 13px; }
-  .rl-flow-result-text { font-size: 13.5px; }
+  .rl-flow-tl-title { font-size: 12.5px; }
+  .rl-flow-tl-arrow-row { padding-left: 9px; }
+  .rl-flow-result { margin-left: 0; width: 100%; }
   .rl-body-p { font-size: 13px; }
   .rl-takeaway-item { font-size: 13px; }
   .lm-reveal-btn { padding: 12px; font-size: 13px; }
@@ -1809,8 +1809,8 @@ button.sidebar-resource-link {
   height: 100%;
   background: linear-gradient(90deg, var(--accent-green), var(--accent-green-light));
   border-radius: 3px;
-  transition: width 0.4s ease;
-  box-shadow: 0 0 8px var(--green-light-30);
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 10px var(--green-light-30), 0 0 2px var(--accent-green);
   animation: lmProgressGlow 2s ease-in-out infinite;
 }
 .lm-progress-label {
@@ -3018,12 +3018,13 @@ button.sidebar-resource-link {
 
 /* ─── Learn Mode Animation Keyframes ─── */
 @keyframes lmStepExit {
-  from { opacity: 1; transform: translateY(0) scale(1); }
-  to   { opacity: 0; transform: translateY(-8px) scale(0.99); }
+  0%   { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+  100% { opacity: 0; transform: translateY(-10px) scale(0.98); filter: blur(1px); }
 }
 @keyframes lmStepEnter {
-  from { opacity: 0; transform: translateY(16px) scale(0.99); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
+  0%   { opacity: 0; transform: translateY(20px) scale(0.98); filter: blur(1px); }
+  60%  { opacity: 1; filter: blur(0); }
+  100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
 }
 @keyframes lmCelebrateScaleIn {
   from { opacity: 0; transform: scale(0.5); }
@@ -3084,8 +3085,8 @@ button.sidebar-resource-link {
 /* ─── Learn Mode Utility Classes ─── */
 .lm-animate-slide-in { animation: lmSlideIn 0.3s ease both; }
 .lm-animate-fade-in { animation: lmFadeIn 0.3s ease both; }
-.lm-stepper-content.step-exit { animation: lmStepExit 0.2s cubic-bezier(0.4, 0, 1, 1) both; }
-.lm-stepper-content.step-enter { animation: lmStepEnter 0.35s cubic-bezier(0, 0, 0.2, 1) both; }
+.lm-stepper-content.step-exit { animation: lmStepExit 0.25s cubic-bezier(0.4, 0, 1, 1) both; }
+.lm-stepper-content.step-enter { animation: lmStepEnter 0.45s cubic-bezier(0.16, 1, 0.3, 1) both; }
 .lm-stepper-node.node-pop { animation: lmNodePop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
 
 /* Button press micro-interaction */
