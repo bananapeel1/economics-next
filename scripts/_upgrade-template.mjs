@@ -178,27 +178,24 @@ async function run() {
   }
   console.log(`✓ Validation passed — ${CONTENT.length} blocks, ${CONTENT.reduce((n, b) => n + b.sections.length, 0)} sections\n`);
 
-  // Find the section record
+  // Find the section record (sections.id IS the slug)
   const { data: section, error: secErr } = await supabase
     .from('sections')
     .select('id')
-    .eq('slug', SECTION_SLUG)
-    .eq('subject_id', SUBJECT_ID)
+    .eq('id', SECTION_SLUG)
     .single();
 
   if (secErr || !section) {
-    console.error(`❌ Section "${SECTION_SLUG}" not found in ${SUBJECT_ID} sections table`);
+    console.error(`❌ Section "${SECTION_SLUG}" not found in sections table`);
     console.error(secErr?.message || '(no error detail)');
     process.exit(1);
   }
 
-  // Upsert into section_content
+  // Update section_content
   const { error } = await supabase
     .from('section_content')
-    .upsert(
-      { section_id: section.id, type: 'content', data: CONTENT },
-      { onConflict: 'section_id,type' }
-    );
+    .update({ data: CONTENT })
+    .eq('section_id', section.id);
 
   if (error) {
     console.error('❌ Supabase error:', error.message);
