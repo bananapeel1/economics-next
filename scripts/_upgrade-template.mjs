@@ -42,6 +42,10 @@ const CONTENT = [
   /* ═══ Block 1: CHAPTER TITLE ═══ */
   {
     title: "CHAPTER TITLE",
+    // Pin items to this block (optional — omit if block has no diagram/quiz/practice)
+    diagramRef: "Diagram Title",       // matches by title substring (case-insensitive)
+    quizIndices: [0],                  // indices into the section's quiz array
+    practiceIndices: [0],              // indices into the section's practice array
     sections: [
       {
         id: "unique-kebab-case-id",          // must be unique within this section

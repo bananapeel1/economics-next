@@ -15,6 +15,7 @@ const CONTENT = [
   /* ═══ Block 1: The Nature of Economics ═══ */
   {
     title: "The Nature of Economics",
+    quizIndices: [0],       // normative/positive statement question
     sections: [
       {
         id: "economics-as-a-social-science",
@@ -95,6 +96,8 @@ const CONTENT = [
   /* ═══ Block 2: Scarcity, Choice and Opportunity Cost ═══ */
   {
     title: "Scarcity, Choice and Opportunity Cost",
+    quizIndices: [1],       // opportunity cost question
+    practiceIndices: [0],   // define opportunity cost
     sections: [
       {
         id: "the-basic-economic-problem",
@@ -169,6 +172,9 @@ const CONTENT = [
   /* ═══ Block 3: Production Possibility Frontiers ═══ */
   {
     title: "Production Possibility Frontiers",
+    diagramRef: "Production Possibility Frontier",  // PPF diagram
+    quizIndices: [2, 3],    // PPF-related quiz questions
+    practiceIndices: [1],   // PPF practice question
     sections: [
       {
         id: "the-ppf-model",
@@ -246,6 +252,7 @@ const CONTENT = [
   /* ═══ Block 4: Specialisation, Division of Labour and Exchange ═══ */
   {
     title: "Specialisation, Division of Labour and Exchange",
+    quizIndices: [4],       // division of labour question
     sections: [
       {
         id: "specialisation-and-division-of-labour",
@@ -323,6 +330,7 @@ const CONTENT = [
   /* ═══ Block 5: Economic Systems ═══ */
   {
     title: "Economic Systems",
+    practiceIndices: [2],   // economic systems practice question
     sections: [
       {
         id: "free-market-command-and-mixed",

@@ -41,11 +41,38 @@ export default function LearnModeTab({
 
   const totalSteps = contentData?.length || 0;
 
-  // Distribute diagrams, practice questions, and quiz questions evenly across steps
+  // Distribute diagrams, practice questions, and quiz questions across steps.
+  // Structured blocks can declare diagramRef, quizIndices, practiceIndices
+  // to pin items to specific blocks. Falls back to even distribution.
   const sortedPractice = [...(practiceData || [])].sort((a, b) => a.marks - b.marks);
-  const diagramMap = matchDiagramsToBlocks(diagramsData, contentData) || distributeItems(diagramsData, totalSteps);
-  const practiceMap = distributeItems(sortedPractice, totalSteps);
-  const quizMap = distributeItems(quizData, totalSteps);
+
+  const { diagramMap, quizMap, practiceMap } = useMemo(() => {
+    const dMap = {}, qMap = {}, pMap = {};
+    const hasRefs = contentData?.some(b => b.diagramRef || b.quizIndices || b.practiceIndices);
+
+    if (hasRefs) {
+      // Block-level references — content is the source of truth
+      contentData.forEach((block, idx) => {
+        if (block.diagramRef && diagramsData?.length) {
+          const d = diagramsData.find(d => d.title?.toLowerCase().includes(block.diagramRef.toLowerCase())
+            || block.diagramRef.toLowerCase().includes(d.title?.toLowerCase()));
+          if (d) dMap[idx] = d;
+        }
+        if (block.quizIndices?.length && quizData?.length) {
+          qMap[idx] = quizData[block.quizIndices[0]];
+        }
+        if (block.practiceIndices?.length && sortedPractice?.length) {
+          pMap[idx] = sortedPractice[block.practiceIndices[0]];
+        }
+      });
+    } else {
+      // Legacy fallback — even distribution
+      Object.assign(dMap, matchDiagramsToBlocks(diagramsData, contentData));
+      Object.assign(qMap, distributeItems(quizData, totalSteps));
+      Object.assign(pMap, distributeItems(sortedPractice, totalSteps));
+    }
+    return { diagramMap: dMap, quizMap: qMap, practiceMap: pMap };
+  }, [contentData, diagramsData, quizData, sortedPractice, totalSteps]);
 
   // Determine practice mode for each distributed practice question (Worked Example Fading)
   const practiceStepIndices = useMemo(() => Object.keys(practiceMap).map(Number).sort((a, b) => a - b), [practiceMap]);
