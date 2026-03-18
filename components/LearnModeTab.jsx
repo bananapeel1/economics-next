@@ -149,24 +149,22 @@ export default function LearnModeTab({
     setIsTransitioning(true);
 
     if (step > currentStep) {
-      // Going forward — checkmark pulse, smooth scroll, then swap
+      // Going forward — checkmark pulse, instant scroll, then swap
       setStepComplete(true);
       setNodePopped(true);
-      scrollToTop(); // smooth scroll starts immediately
       setTimeout(() => {
+        scrollToTop(true); // instant — guarantees we're at the top
         setStepComplete(false);
         onStepChange(step);
         setNodePopped(false);
         setIsTransitioning(false);
-      }, 450); // longer delay for smooth scroll to complete
+      }, 350); // just enough for the checkmark pulse
     } else {
-      // Going back — smooth scroll + swap
-      scrollToTop();
-      setTimeout(() => {
-        onStepChange(step);
-        setNodePopped(false);
-        setIsTransitioning(false);
-      }, 300);
+      // Going back — instant scroll + swap
+      scrollToTop(true);
+      onStepChange(step);
+      setNodePopped(false);
+      setIsTransitioning(false);
     }
   }
 
