@@ -1847,9 +1847,9 @@ button.sidebar-resource-link {
 
 /* Tablet — constrain diagrams */
 @media (min-width: 768px) {
-  .diagram-container, .lm-diagram-card { max-width: 380px; }
-  .diagram-svg-wrapper svg, .diagram-svg-wrapper img { max-width: 280px; }
-  .lm-interactive-svg-wrapper svg, .lm-interactive-svg-wrapper img { max-width: 260px; }
+  .diagram-container, .lm-diagram-card { max-width: 100%; }
+  .diagram-svg-wrapper svg, .diagram-svg-wrapper img { max-width: 340px; }
+  .lm-interactive-svg-wrapper svg, .lm-interactive-svg-wrapper img { max-width: 320px; }
 }
 
 /* Desktop wide screen — expand content and bump font sizes */
