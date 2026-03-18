@@ -6,9 +6,13 @@ export default function InlineQuiz({ question, subjectId, sectionId, stepIndex }
   const [selected, setSelected] = useState(null);
   const [answered, setAnswered] = useState(false);
   const [revealPhase, setRevealPhase] = useState(0); // 0=unanswered, 1=user choice shown, 2=full reveal
-  const [confidence, setConfidence] = useState(null); // null | 'guessed' | 'somewhat' | 'certain'
+  const [confidence, setConfidence] = useState(null);
   const [confidenceTimedOut, setConfidenceTimedOut] = useState(false);
   const [feedbackMsg, setFeedbackMsg] = useState('');
+  // Remediation state
+  const [showRemediation, setShowRemediation] = useState(false);
+  const [remSelected, setRemSelected] = useState(null);
+  const [remAnswered, setRemAnswered] = useState(false);
   const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
 
   // Auto-dismiss confidence after 4s if not answered
@@ -25,7 +29,13 @@ export default function InlineQuiz({ question, subjectId, sectionId, stepIndex }
     setAnswered(true);
     setRevealPhase(1);
     // After 200ms, reveal correct answer + explanation
-    setTimeout(() => setRevealPhase(2), 200);
+    setTimeout(() => {
+      setRevealPhase(2);
+      // Show remediation after 800ms if wrong and remediation data exists
+      if (index !== question.correctIndex && question.remediation) {
+        setTimeout(() => setShowRemediation(true), 800);
+      }
+    }, 200);
   }
 
   const isCorrect = answered && selected === question.correctIndex;
@@ -112,6 +122,38 @@ export default function InlineQuiz({ question, subjectId, sectionId, stepIndex }
         )}
         {confidenceTimedOut && !confidence && (
           <div className="lm-confidence-done" style={{ fontStyle: 'italic' }}>No worries — moving on.</div>
+        )}
+
+        {/* Remediation question — slides in after wrong answer */}
+        {showRemediation && question.remediation && (
+          <div className="lm-remediation rl-section-enter">
+            <div className="lm-remediation-divider">
+              <span className="lm-remediation-label">Let&apos;s reinforce this</span>
+            </div>
+            <p className="lm-quiz-question">{question.remediation.question}</p>
+            <div className="lm-quiz-options">
+              {question.remediation.options?.map((opt, i) => {
+                let cls = '';
+                if (remAnswered) {
+                  if (i === question.remediation.correct) cls = 'correct';
+                  else if (i === remSelected && i !== question.remediation.correct) cls = 'incorrect';
+                }
+                return (
+                  <button key={i} className={`lm-quiz-option ${cls}`}
+                    onClick={() => { if (!remAnswered) { setRemSelected(i); setRemAnswered(true); } }}>
+                    <span className="lm-quiz-option-letter">{letters[i]}</span>
+                    {opt}
+                  </button>
+                );
+              })}
+            </div>
+            {remAnswered && (
+              <div className="lm-quiz-explanation lm-animate-slide-in">
+                <strong>{remSelected === question.remediation.correct ? 'Got it!' : 'Not quite.'}</strong>{' '}
+                {question.remediation.explanation}
+              </div>
+            )}
+          </div>
         )}
       </div>
     </div>

@@ -1939,6 +1939,20 @@ button.sidebar-resource-link {
   color: var(--accent-green); font-weight: 700;
 }
 
+/* Remediation question (wrong-answer follow-up) */
+.lm-remediation { margin-top: 20px; }
+.lm-remediation-divider {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 16px;
+}
+.lm-remediation-divider::before,
+.lm-remediation-divider::after {
+  content: ''; flex: 1; height: 1px; background: var(--rl-red-bd);
+}
+.lm-remediation-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--rl-red); white-space: nowrap;
+}
+
 /* Navigation */
 .lm-nav {
   display: flex; align-items: center; gap: 12px;
