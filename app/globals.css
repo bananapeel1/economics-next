@@ -844,23 +844,46 @@ body {
 }
 .rl-body-bullets li strong { color: var(--text-primary); }
 
-/* Flow Chain — horizontal cause→effect pills */
+/* Flow Chain — numbered step pills */
 .rl-flow-chain {
-  display: flex; flex-wrap: wrap; column-gap: 8px; row-gap: 12px;
-  align-items: center; justify-content: center;
-  margin: 20px 0; padding: 16px 20px;
-  background: var(--bg-input); border-radius: 10px;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  margin: 20px 0; padding: 20px;
+  background: var(--bg-input); border: 1px solid var(--border-primary);
+  border-radius: 12px;
+}
+.rl-flow-steps-row {
+  display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: center; gap: 0;
+  width: 100%;
+}
+.rl-flow-step-item {
+  display: flex; align-items: center;
 }
 .rl-flow-pill {
-  padding: 8px 16px; border-radius: 8px;
-  font-size: 13px; font-weight: 500; line-height: 1.4;
+  display: flex; flex-direction: column; gap: 4px;
+  padding: 12px 20px; border-radius: 10px; min-width: 120px;
   background: var(--bg-card); border: 1px solid var(--border-primary);
-  color: var(--text-primary);
+  text-align: left;
 }
-.rl-flow-arrow { color: var(--rl-green); font-size: 16px; font-weight: 700; }
+.rl-flow-pill-num {
+  font-size: 11px; font-weight: 700; color: var(--rl-green);
+  letter-spacing: 0.04em;
+}
+.rl-flow-pill-text {
+  font-size: 13.5px; font-weight: 500; color: var(--text-primary);
+  line-height: 1.35;
+}
+.rl-flow-arrow {
+  color: var(--text-dim); font-size: 18px; font-weight: 400;
+  padding: 0 10px; flex-shrink: 0;
+}
 .rl-flow-result {
-  padding: 8px 16px; border-radius: 8px;
-  font-size: 13px; font-weight: 600; line-height: 1.4;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 20px; border-radius: 20px;
+  font-size: 13.5px; font-weight: 600; line-height: 1.4;
+}
+.rl-flow-result-icon {
+  font-size: 14px; font-weight: 700;
 }
 .rl-flow-result--good {
   background: var(--rl-green-bg); border: 1px solid var(--rl-green-bd);
@@ -954,8 +977,11 @@ body {
 @media (max-width: 768px) {
   .rl-key-idea, .rl-real-example, .rl-misconception, .rl-exam-matters { padding: 10px 12px; }
   .rl-note-section-title { font-size: 15px; }
-  .rl-flow-chain { gap: 6px; padding: 12px 14px; }
-  .rl-flow-pill { font-size: 12px; padding: 6px 12px; }
+  .rl-flow-chain { padding: 14px 12px; }
+  .rl-flow-steps-row { flex-direction: column; gap: 8px; }
+  .rl-flow-arrow { transform: rotate(90deg); padding: 0; }
+  .rl-flow-pill { min-width: unset; width: 100%; padding: 10px 16px; }
+  .rl-flow-pill-text { font-size: 12.5px; }
   .rl-body-p { font-size: 13px; }
   .rl-takeaway-item { font-size: 13px; }
   .lm-reveal-btn { padding: 12px; font-size: 13px; }

@@ -7,19 +7,26 @@ export default function FlowChain({ steps, result, resultType }) {
       ? 'rl-flow-result--bad'
       : 'rl-flow-result--neutral';
 
+  const resultIcon = resultType === 'good' ? '✓' : resultType === 'bad' ? '✗' : 'ℹ';
+
   return (
     <div className="rl-flow-chain">
-      {steps.map((step, i) => (
-        <span key={i}>
-          {i > 0 && <span className="rl-flow-arrow">→</span>}
-          <span className="rl-flow-pill">{step}</span>
-        </span>
-      ))}
+      <div className="rl-flow-steps-row">
+        {steps.map((step, i) => (
+          <div key={i} className="rl-flow-step-item">
+            {i > 0 && <span className="rl-flow-arrow">→</span>}
+            <div className="rl-flow-pill">
+              <span className="rl-flow-pill-num">{String(i + 1).padStart(2, '0')}</span>
+              <span className="rl-flow-pill-text">{step}</span>
+            </div>
+          </div>
+        ))}
+      </div>
       {result && (
-        <>
-          <span className="rl-flow-arrow">→</span>
-          <span className={`rl-flow-result ${resultClass}`}>{result}</span>
-        </>
+        <div className={`rl-flow-result ${resultClass}`}>
+          <span className="rl-flow-result-icon">{resultIcon}</span>
+          <span>{result}</span>
+        </div>
       )}
     </div>
   );
