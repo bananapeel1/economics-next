@@ -1,4 +1,4 @@
-export default function FlowChain({ steps, result, resultType, label }) {
+export default function FlowChain({ steps, result, resultType }) {
   if (!steps?.length) return null;
 
   const resultClass = resultType === 'good'
@@ -11,38 +11,35 @@ export default function FlowChain({ steps, result, resultType, label }) {
 
   return (
     <div className="rl-flow-chain">
-      {/* Timeline */}
       <div className="rl-flow-timeline">
         {steps.map((step, i) => {
-          // Support "Title — Subtitle" format
           const parts = typeof step === 'string' ? step.split(' — ') : [step];
           const title = parts[0];
           const subtitle = parts[1] || null;
 
           return (
-            <div key={i} className="rl-flow-tl-step">
-              {/* Node + connector */}
-              <div className="rl-flow-tl-rail">
+            <div key={i}>
+              {/* Step row: node aligned with card */}
+              <div className="rl-flow-tl-step">
                 <div className="rl-flow-tl-node">
                   <span>{String(i + 1).padStart(2, '0')}</span>
                 </div>
-                {(i < steps.length - 1 || result) && (
-                  <div className="rl-flow-tl-connector">
-                    <span className="rl-flow-tl-arrow">↓</span>
-                  </div>
-                )}
+                <div className="rl-flow-tl-card">
+                  <div className="rl-flow-tl-title">{title}</div>
+                  {subtitle && <div className="rl-flow-tl-subtitle">{subtitle}</div>}
+                </div>
               </div>
-              {/* Card */}
-              <div className="rl-flow-tl-card">
-                <div className="rl-flow-tl-title">{title}</div>
-                {subtitle && <div className="rl-flow-tl-subtitle">{subtitle}</div>}
-              </div>
+              {/* Arrow between steps */}
+              {(i < steps.length - 1 || result) && (
+                <div className="rl-flow-tl-arrow-row">
+                  <span className="rl-flow-tl-arrow">↓</span>
+                </div>
+              )}
             </div>
           );
         })}
       </div>
 
-      {/* Result */}
       {result && (
         <div className={`rl-flow-result ${resultClass}`}>
           <div className="rl-flow-result-badge">{resultIcon}</div>

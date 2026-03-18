@@ -1,51 +1,68 @@
 "use client";
 import { useState } from 'react';
 
-/**
- * Fuzzy match: accepts minor spelling variations.
- * - Case insensitive
- * - Strips trailing s/es (plural)
- * - Strips trailing ly/ing/ed (verb forms)
- * - Strips hyphens and spaces for compound words
- */
-function fuzzyMatch(input, answer) {
-  const normalize = s => s.trim().toLowerCase()
-    .replace(/[-\s]/g, '')       // "out ward" = "outward"
-    .replace(/(s|es|ing|ed|ly)$/, ''); // "outwards" = "outward"
-  return normalize(input) === normalize(answer);
-}
-
-/* ── Fill-in-the-Blank Recall: type missing words into a chain ── */
+/* ── Drag-and-Drop Label Recall: drag words into blanks ── */
 export default function FillInRecall({ recall, onComplete }) {
-  const [inputs, setInputs] = useState(() => recall.answers.map(() => ''));
+  const [placed, setPlaced] = useState(() => recall.answers.map(() => null));
   const [checked, setChecked] = useState(false);
   const [results, setResults] = useState([]);
   const [showHint, setShowHint] = useState(false);
   const [dismissed, setDismissed] = useState(false);
+  const [dragWord, setDragWord] = useState(null);
+  const [shuffledWords] = useState(() => [...recall.answers].sort(() => Math.random() - 0.5));
 
   if (dismissed) return null;
 
-  function updateInput(idx, value) {
+  const availableWords = shuffledWords.filter(w => !placed.includes(w));
+
+  function handleDragStartWord(e, word) {
     if (checked) return;
-    const next = [...inputs];
-    next[idx] = value;
-    setInputs(next);
+    setDragWord(word);
+    e.dataTransfer.effectAllowed = 'move';
+  }
+
+  function handleDropOnBlank(e, blankIdx) {
+    e.preventDefault();
+    if (!dragWord || checked) return;
+    const next = [...placed];
+    next[blankIdx] = dragWord;
+    setPlaced(next);
+    setDragWord(null);
+  }
+
+  function handleTapWord(word) {
+    if (checked) return;
+    const nextEmpty = placed.indexOf(null);
+    if (nextEmpty >= 0) {
+      const next = [...placed];
+      next[nextEmpty] = word;
+      setPlaced(next);
+    }
+  }
+
+  function handleTapBlank(blankIdx) {
+    if (checked || placed[blankIdx] === null) return;
+    const next = [...placed];
+    next[blankIdx] = null;
+    setPlaced(next);
   }
 
   function check() {
-    const res = inputs.map((input, i) => fuzzyMatch(input, recall.answers[i]));
+    const res = placed.map((word, i) =>
+      word && word.toLowerCase() === recall.answers[i].toLowerCase()
+    );
     setResults(res);
     setChecked(true);
     onComplete?.(res.every(Boolean));
   }
 
-  const allFilled = inputs.every(v => v.trim().length > 0);
+  const allFilled = placed.every(w => w !== null);
   const correctCount = results.filter(Boolean).length;
 
   return (
     <div className="lm-recall-card">
       <div className="lm-recall-header">
-        <div className="lm-recall-label">&#129504; Quick Recall — Fill in the Blanks</div>
+        <div className="lm-recall-label">&#129504; Quick Recall — Drag the Labels</div>
         <button className="lm-recall-dismiss" onClick={() => setDismissed(true)} title="Skip">&times;</button>
       </div>
       <p className="lm-recall-prompt">{recall.prompt}</p>
@@ -56,24 +73,43 @@ export default function FillInRecall({ recall, onComplete }) {
           if (blankIdx < 0) {
             return <div key={i} className="lm-fillin-step">{part}</div>;
           }
+          const word = placed[blankIdx];
           const isCorrect = checked && results[blankIdx];
           const isWrong = checked && !results[blankIdx];
           return (
-            <div key={i} className={`lm-fillin-step ${isCorrect ? 'correct' : ''} ${isWrong ? 'wrong' : ''}`}>
-              {part.replace('___', '')}
-              <input
-                className={`lm-fillin-input ${isCorrect ? 'correct' : ''} ${isWrong ? 'wrong' : ''}`}
-                value={checked && isWrong ? recall.answers[blankIdx] : inputs[blankIdx]}
-                onChange={e => updateInput(blankIdx, e.target.value)}
-                placeholder={showHint ? recall.hints?.[blankIdx] || '...' : '...'}
-                disabled={checked}
-                autoComplete="off"
-                spellCheck={false}
-              />
+            <div
+              key={i}
+              className={`lm-fillin-step ${isCorrect ? 'correct' : ''} ${isWrong ? 'wrong' : ''}`}
+              onDragOver={e => e.preventDefault()}
+              onDrop={e => handleDropOnBlank(e, blankIdx)}
+            >
+              <span>{part.replace('___', '')}</span>
+              <span
+                className={`lm-fillin-blank ${word ? 'filled' : ''} ${isCorrect ? 'correct' : ''} ${isWrong ? 'wrong' : ''}`}
+                onClick={() => handleTapBlank(blankIdx)}
+              >
+                {checked && isWrong ? recall.answers[blankIdx] : word || (showHint ? recall.hints?.[blankIdx] : '___')}
+              </span>
             </div>
           );
         })}
       </div>
+
+      {!checked && availableWords.length > 0 && (
+        <div className="lm-word-bank">
+          {availableWords.map((word, i) => (
+            <span
+              key={`${word}-${i}`}
+              className="lm-word-chip"
+              draggable
+              onDragStart={e => handleDragStartWord(e, word)}
+              onClick={() => handleTapWord(word)}
+            >
+              {word}
+            </span>
+          ))}
+        </div>
+      )}
 
       {!checked ? (
         <div className="lm-recall-actions">

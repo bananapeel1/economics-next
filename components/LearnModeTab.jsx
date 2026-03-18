@@ -44,25 +44,32 @@ export default function LearnModeTab({
   function onRecallResult(correct) { setScores(s => ({ ...s, recall: { correct: s.recall.correct + (correct ? 1 : 0), total: s.recall.total + 1 } })); }
   function onExplainAttempt() { setScores(s => ({ ...s, explain: { attempts: s.explain.attempts + 1, total: s.explain.total + 1 } })); }
 
-  // ── Flatten blocks into one-topic-per-step ──
+  // ── Flatten blocks into steps — 2 topics per step where possible ──
   const flatSteps = useMemo(() => {
     if (!contentData?.length) return [];
     return contentData.flatMap((block, bi) => {
       if (Array.isArray(block.sections)) {
-        return block.sections.map((sec, si) => ({
-          type: 'structured',
-          section: sec,
-          blockTitle: block.title,
-          blockIndex: bi,
-          isLastInBlock: si === block.sections.length - 1,
-          isFirstInBlock: si === 0,
-          takeaway: si === block.sections.length - 1 ? block.takeaway : null,
-          diagramRef: block.diagramRef,
-          quizIndices: block.quizIndices,
-          practiceIndices: block.practiceIndices,
-        }));
+        const steps = [];
+        const secs = block.sections;
+        for (let si = 0; si < secs.length; si += 2) {
+          const pair = [secs[si]];
+          if (si + 1 < secs.length) pair.push(secs[si + 1]);
+          const isLast = si + pair.length >= secs.length;
+          steps.push({
+            type: 'structured',
+            sections: pair,  // 1 or 2 sections per step
+            blockTitle: block.title,
+            blockIndex: bi,
+            isLastInBlock: isLast,
+            isFirstInBlock: si === 0,
+            takeaway: isLast ? block.takeaway : null,
+            diagramRef: block.diagramRef,
+            quizIndices: block.quizIndices,
+            practiceIndices: block.practiceIndices,
+          });
+        }
+        return steps;
       }
-      // Legacy block — keep as single step
       return [{ type: 'legacy', block, blockIndex: bi }];
     });
   }, [contentData]);
@@ -291,35 +298,37 @@ export default function LearnModeTab({
 
           {step?.type === 'structured' ? (
             <>
-              {/* Chapter heading — only on first topic of a new block */}
+              {/* Chapter heading — only on first step of a new block */}
               {showChapterHeading && (
                 <div className="lm-chapter-heading">{step.blockTitle}</div>
               )}
 
-              {/* Topic title */}
-              <h2 className="lm-section-title">{step.section.title}</h2>
-
-              {/* Single NoteSection — one topic per step */}
+              {/* 1-2 topics per step */}
               <div className="lm-content">
-                <NoteSection section={step.section} glossaryTerms={glossaryTerms} />
+                {step.sections.map((sec, si) => (
+                  <div key={sec.id}>
+                    <h2 className="lm-section-title">{sec.title}</h2>
+                    <NoteSection section={sec} glossaryTerms={glossaryTerms} />
+                  </div>
+                ))}
 
-                {/* Diagram (on last topic of block) */}
+                {/* Diagram (on last step of block) */}
                 {step.isLastInBlock && currentDiagram && <InlineDiagram diagram={currentDiagram} />}
 
-                {/* Quiz (on last topic of block) */}
+                {/* Quiz (on last step of block) */}
                 {step.isLastInBlock && currentQuiz && (
                   <InlineQuiz key={`quiz-${currentStep}`} question={currentQuiz}
                     subjectId={subjectId} sectionId={sectionId} stepIndex={currentStep}
                     onResult={onQuizResult} />
                 )}
 
-                {/* Practice (on last topic of block) */}
+                {/* Practice (on last step of block) */}
                 {step.isLastInBlock && currentPractice && (
                   <InlinePractice key={`practice-${currentStep}`} question={currentPractice}
                     onAskTutor={onAskTutor} mode={getPracticeMode(currentStep)} />
                 )}
 
-                {/* Explain It Back — BEFORE takeaway (Change 2) */}
+                {/* Explain It Back — BEFORE takeaway */}
                 {step.isLastInBlock && step.blockTitle && (
                   <ExplainItBackUpgraded key={`explain-${currentStep}`} title={step.blockTitle}
                     onAskTutor={onAskTutor} isPremium={isPremium} />
@@ -328,14 +337,14 @@ export default function LearnModeTab({
                 {/* Takeaway — AFTER explain it back */}
                 {step.takeaway && <TakeawayCard items={step.takeaway} glossaryTerms={glossaryTerms} />}
 
-                {/* Recall — AFTER content is learned, tests what you just read */}
-                {step.section?.recall ? (
-                  step.section.recall.type === 'reorder' ? (
-                    <ReorderRecall key={`recall-${currentStep}`} recall={step.section.recall} onComplete={onRecallResult} />
-                  ) : step.section.recall.type === 'fillin' ? (
-                    <FillInRecall key={`recall-${currentStep}`} recall={step.section.recall} onComplete={onRecallResult} />
+                {/* Recall — tests what you just learned */}
+                {step.sections.map(sec => sec.recall).filter(Boolean).map((recall, ri) => (
+                  recall.type === 'reorder' ? (
+                    <ReorderRecall key={`recall-${currentStep}-${ri}`} recall={recall} onComplete={onRecallResult} />
+                  ) : recall.type === 'fillin' ? (
+                    <FillInRecall key={`recall-${currentStep}-${ri}`} recall={recall} onComplete={onRecallResult} />
                   ) : null
-                ) : null}
+                ))}
               </div>
             </>
           ) : step?.type === 'legacy' ? (

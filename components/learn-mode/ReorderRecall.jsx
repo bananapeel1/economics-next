@@ -1,21 +1,74 @@
 "use client";
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
-/* ── Reorder Recall: put steps in the right sequence ── */
+/* ── Drag-and-Drop Reorder Recall ── */
 export default function ReorderRecall({ recall, onComplete }) {
   const [items, setItems] = useState(() => recall.shuffled.map(i => recall.correctOrder[i]));
   const [checked, setChecked] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
   const [showHint, setShowHint] = useState(false);
   const [dismissed, setDismissed] = useState(false);
+  const [dragIdx, setDragIdx] = useState(null);
+  const [overIdx, setOverIdx] = useState(null);
+  const touchStartY = useRef(null);
+  const touchItemIdx = useRef(null);
 
   if (dismissed) return null;
 
-  function swap(from, to) {
-    if (checked || to < 0 || to >= items.length) return;
+  function handleDragStart(e, idx) {
+    if (checked) return;
+    setDragIdx(idx);
+    e.dataTransfer.effectAllowed = 'move';
+  }
+
+  function handleDragOver(e, idx) {
+    e.preventDefault();
+    if (dragIdx === null || dragIdx === idx) return;
+    setOverIdx(idx);
+  }
+
+  function handleDrop(e, idx) {
+    e.preventDefault();
+    if (dragIdx === null || dragIdx === idx) return;
     const next = [...items];
-    [next[from], next[to]] = [next[to], next[from]];
+    const [moved] = next.splice(dragIdx, 1);
+    next.splice(idx, 0, moved);
     setItems(next);
+    setDragIdx(null);
+    setOverIdx(null);
+  }
+
+  function handleDragEnd() { setDragIdx(null); setOverIdx(null); }
+
+  // Touch support for mobile
+  function handleTouchStart(e, idx) {
+    if (checked) return;
+    touchStartY.current = e.touches[0].clientY;
+    touchItemIdx.current = idx;
+    setDragIdx(idx);
+  }
+
+  function handleTouchMove(e) {
+    if (touchItemIdx.current === null) return;
+    const y = e.touches[0].clientY;
+    const diff = y - touchStartY.current;
+    const threshold = 50;
+    if (Math.abs(diff) > threshold) {
+      const from = touchItemIdx.current;
+      const to = diff > 0 ? Math.min(from + 1, items.length - 1) : Math.max(from - 1, 0);
+      if (from !== to) {
+        const next = [...items];
+        [next[from], next[to]] = [next[to], next[from]];
+        setItems(next);
+        touchItemIdx.current = to;
+        touchStartY.current = y;
+      }
+    }
+  }
+
+  function handleTouchEnd() {
+    touchItemIdx.current = null;
+    setDragIdx(null);
   }
 
   function check() {
@@ -25,7 +78,6 @@ export default function ReorderRecall({ recall, onComplete }) {
     onComplete?.(correct);
   }
 
-  // After checking, show the correct order
   const displayItems = checked && !isCorrect ? recall.correctOrder : items;
 
   return (
@@ -36,24 +88,24 @@ export default function ReorderRecall({ recall, onComplete }) {
       </div>
       <p className="lm-recall-prompt">{recall.prompt}</p>
 
-      <div className="lm-recall-items">
-        {displayItems.map((item, i) => {
-          const correctHere = checked && item === recall.correctOrder[i];
-          const wrongHere = checked && !isCorrect && items[i] !== recall.correctOrder[i];
-          return (
-            <div key={i} className={`lm-recall-item ${checked ? (correctHere ? 'correct' : '') : ''} ${wrongHere ? '' : ''}`}>
-              <span className="lm-recall-item-num">{i + 1}</span>
-              <span className="lm-recall-item-text">{item}</span>
-              {!checked && (
-                <div className="lm-recall-item-arrows">
-                  <button className="lm-recall-arrow" onClick={() => swap(i, i - 1)} disabled={i === 0}>&#9650;</button>
-                  <button className="lm-recall-arrow" onClick={() => swap(i, i + 1)} disabled={i === items.length - 1}>&#9660;</button>
-                </div>
-              )}
-              {checked && <span className="lm-recall-item-icon" style={{ color: 'var(--rl-green)' }}>✓</span>}
-            </div>
-          );
-        })}
+      <div className="lm-recall-items" onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
+        {displayItems.map((item, i) => (
+          <div
+            key={`${item}-${i}`}
+            className={`lm-recall-item ${checked ? 'correct' : ''} ${dragIdx === i ? 'dragging' : ''} ${overIdx === i ? 'drag-over' : ''}`}
+            draggable={!checked}
+            onDragStart={e => handleDragStart(e, i)}
+            onDragOver={e => handleDragOver(e, i)}
+            onDrop={e => handleDrop(e, i)}
+            onDragEnd={handleDragEnd}
+            onTouchStart={e => handleTouchStart(e, i)}
+          >
+            <span className="lm-recall-item-num">{i + 1}</span>
+            <span className="lm-recall-item-text">{item}</span>
+            {!checked && <span className="lm-recall-item-grip">⋮⋮</span>}
+            {checked && <span className="lm-recall-item-icon" style={{ color: 'var(--rl-green)' }}>✓</span>}
+          </div>
+        ))}
       </div>
 
       {showHint && !checked && (
