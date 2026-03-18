@@ -51,20 +51,47 @@ export default function LearnModeTab({
     const hasRefs = contentData?.some(b => b.diagramRef || b.quizIndices || b.practiceIndices);
 
     if (hasRefs) {
-      // Block-level references — content is the source of truth
+      // Block-level references — content is the single source of truth.
+      // Each block declares which items belong to it. Bounds-checked.
+      const usedDiagrams = new Set();
+      const usedQuiz = new Set();
+      const usedPractice = new Set();
+
       contentData.forEach((block, idx) => {
+        // Diagram: match by title substring (case-insensitive, bidirectional)
         if (block.diagramRef && diagramsData?.length) {
-          const d = diagramsData.find(d => d.title?.toLowerCase().includes(block.diagramRef.toLowerCase())
-            || block.diagramRef.toLowerCase().includes(d.title?.toLowerCase()));
-          if (d) dMap[idx] = d;
+          const ref = block.diagramRef.toLowerCase();
+          const d = diagramsData.find((d, di) => {
+            if (usedDiagrams.has(di)) return false;
+            const t = (d.title || '').toLowerCase();
+            return t.includes(ref) || ref.includes(t);
+          });
+          if (d) {
+            dMap[idx] = d;
+            usedDiagrams.add(diagramsData.indexOf(d));
+          }
         }
+        // Quiz: pick first valid index
         if (block.quizIndices?.length && quizData?.length) {
-          qMap[idx] = quizData[block.quizIndices[0]];
+          const qi = block.quizIndices.find(i => i >= 0 && i < quizData.length && !usedQuiz.has(i));
+          if (qi != null) { qMap[idx] = quizData[qi]; usedQuiz.add(qi); }
         }
+        // Practice: pick first valid index
         if (block.practiceIndices?.length && sortedPractice?.length) {
-          pMap[idx] = sortedPractice[block.practiceIndices[0]];
+          const pi = block.practiceIndices.find(i => i >= 0 && i < sortedPractice.length && !usedPractice.has(i));
+          if (pi != null) { pMap[idx] = sortedPractice[pi]; usedPractice.add(pi); }
         }
       });
+
+      // Distribute any unassigned items to blocks that have no items yet
+      if (diagramsData?.length) {
+        diagramsData.forEach((d, di) => {
+          if (usedDiagrams.has(di)) return;
+          for (let i = 0; i < contentData.length; i++) {
+            if (!dMap[i]) { dMap[i] = d; break; }
+          }
+        });
+      }
     } else {
       // Legacy fallback — even distribution
       Object.assign(dMap, matchDiagramsToBlocks(diagramsData, contentData));
@@ -219,6 +246,14 @@ export default function LearnModeTab({
         onNavigateToQuiz={onNavigateToQuiz}
         onNavigateToTab={onNavigateToTab}
         onStartMixedReview={onStartMixedReview}
+        onRetry={() => {
+          if (typeof window !== 'undefined') {
+            localStorage.removeItem(`revvy_complete_${subjectId}_${sectionId}`);
+          }
+          setIsComplete(false);
+          onStepChange(0);
+          setTimeout(scrollToTop, 50);
+        }}
       />
     );
   }

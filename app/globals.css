@@ -846,7 +846,7 @@ body {
 
 /* Flow Chain — horizontal cause→effect pills */
 .rl-flow-chain {
-  display: flex; flex-wrap: wrap; gap: 8px;
+  display: flex; flex-wrap: wrap; column-gap: 8px; row-gap: 12px;
   align-items: center; justify-content: center;
   margin: 20px 0; padding: 16px 20px;
   background: var(--bg-input); border-radius: 10px;
@@ -2048,6 +2048,16 @@ button.sidebar-resource-link {
   animation-delay: 0.93s;
 }
 .lm-complete-explore-btn:hover { border-color: var(--accent-green); color: var(--accent-green); }
+.lm-complete-retry-btn {
+  width: 100%; max-width: 320px;
+  padding: 12px; background: none;
+  border: 1.5px solid var(--accent-blue); color: var(--accent-blue);
+  border-radius: 10px; font-size: 14px; font-weight: 600;
+  cursor: pointer; transition: all 0.2s;
+  animation: lmCelebrateSlideIn 0.35s ease both;
+  animation-delay: 0.97s;
+}
+.lm-complete-retry-btn:hover { background: rgba(59,130,246,0.08); }
 .lm-complete-or {
   font-size: 13px; color: var(--text-dim);
   margin: 16px 0 0;

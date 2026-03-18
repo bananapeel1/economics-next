@@ -9,7 +9,7 @@ export default function CompletionScreen({
   subjectId, sectionId, currentSection,
   contentData, quizData,
   onNavigateToQuiz, onNavigateToTab,
-  onStartMixedReview,
+  onStartMixedReview, onRetry,
 }) {
   const [completeView, setCompleteView] = useState('main'); // 'main' | 'posttest' | 'drill'
 
@@ -95,6 +95,11 @@ export default function CompletionScreen({
       {completedCount >= 3 && onStartMixedReview && (
         <button className="lm-complete-mixed-btn" onClick={onStartMixedReview}>
           Mixed review ({completedCount} topics) &#8644;
+        </button>
+      )}
+      {onRetry && (
+        <button className="lm-complete-retry-btn" onClick={onRetry}>
+          &#128260; Retry this topic
         </button>
       )}
       <button className="lm-complete-explore-btn" onClick={() => onNavigateToTab?.('content')}>
