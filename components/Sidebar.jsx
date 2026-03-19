@@ -147,6 +147,11 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
       {/* Resources section — top items always visible */}
       <div className="sidebar-resources">
         <div className="sidebar-resources-title">Resources</div>
+        <Link href="/practice" className="sidebar-resource-link">
+          <span className="sidebar-resource-icon" style={{ fontSize: '16px' }}>⚡</span>
+          Smart Practice
+          <span className="new-badge">New</span>
+        </Link>
         {onTabSelect && (
           <button className="sidebar-resource-link sidebar-content-link" onClick={() => onTabSelect('content')}>
             <span className="sidebar-resource-icon"><BookAlt size={16} /></span>
