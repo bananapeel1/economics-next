@@ -63,22 +63,13 @@ function getLocalStats() {
 }
 
 export default function HomeScreen({ subjects, units, sections, user, isPremium, onNavigateToSection, onNavigateToTab }) {
-  const [isOnboarding, setIsOnboarding] = useState(false);
-  const [onboardingStep, setOnboardingStep] = useState(1);
-  const [selectedSubject, setSelectedSubject] = useState(null);
   const [dashData, setDashData] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    const onboarded = localStorage.getItem('revvy_onboarded');
-    if (!onboarded) {
-      setIsOnboarding(true);
-      setLoading(false);
-      return;
-    }
 
-    // Returning user: fetch dashboard data
+    // Fetch dashboard data
     if (user) {
       fetch('/api/progress/dashboard')
         .then(res => res.ok ? res.json() : null)
@@ -89,40 +80,6 @@ export default function HomeScreen({ subjects, units, sections, user, isPremium,
       setLoading(false);
     }
   }, [user]);
-
-  // Onboarding: step 1 - select subject
-  function handleSubjectSelect(subjectId) {
-    setSelectedSubject(subjectId);
-    setOnboardingStep(2);
-  }
-
-  // Onboarding: step 2 - select topic
-  function handleTopicSelect(sectionId) {
-    setOnboardingStep(3);
-    // Short delay then navigate
-    setTimeout(() => {
-      localStorage.setItem('revvy_onboarded', 'true');
-      onNavigateToSection(sectionId);
-      onNavigateToTab('learn-mode');
-    }, 1200);
-  }
-
-  // Onboarding: step 3 CTA
-  function handleOnboardCTA(sectionId) {
-    localStorage.setItem('revvy_onboarded', 'true');
-    onNavigateToSection(sectionId);
-    onNavigateToTab('learn-mode');
-  }
-
-  // Get first 3 sections of unit 1 for the selected subject
-  function getOnboardingTopics() {
-    if (!selectedSubject) return [];
-    const subjectUnits = units.filter(u => u.subject_id === selectedSubject);
-    const unit1 = subjectUnits.find(u => u.number === 1) || subjectUnits[0];
-    if (!unit1) return [];
-    const unitSections = sections.filter(s => s.unit_id === unit1.id);
-    return unitSections.slice(0, 3);
-  }
 
   // Recommendation action handler
   function handleRecommendAction(rec) {
@@ -143,65 +100,12 @@ export default function HomeScreen({ subjects, units, sections, user, isPremium,
         onNavigateToTab('learn-mode');
       }
     } else {
-      // start
-      setIsOnboarding(true);
-      setOnboardingStep(1);
-    }
-  }
-
-  // --- Onboarding Render ---
-  if (isOnboarding) {
-    if (onboardingStep === 1) {
-      return (
-        <div className="hs-onboarding">
-          <div className="hs-onboard-step">Step 1 of 3</div>
-          <h1 className="hs-onboard-title">What are you studying?</h1>
-          <p className="hs-onboard-sub">Choose your subject to get started</p>
-          <div className="hs-onboard-cards">
-            {subjects.map(sub => (
-              <button key={sub.id} className="hs-onboard-card" onClick={() => handleSubjectSelect(sub.id)}>
-                <div className="hs-onboard-card-icon">{sub.slug === 'economics' ? '\uD83D\uDCC8' : '\uD83C\uDFE2'}</div>
-                <div className="hs-onboard-card-name">{sub.name}</div>
-                <div className="hs-onboard-card-desc">{sub.slug === 'economics' ? 'Micro & Macro' : 'Units 1\u20134'}</div>
-              </button>
-            ))}
-          </div>
-        </div>
-      );
-    }
-
-    if (onboardingStep === 2) {
-      const topics = getOnboardingTopics();
-      return (
-        <div className="hs-onboarding">
-          <div className="hs-onboard-step">Step 2 of 3</div>
-          <h1 className="hs-onboard-title">Pick your first topic</h1>
-          <p className="hs-onboard-sub">We recommend starting from the beginning</p>
-          <div className="hs-onboard-topics">
-            {topics.map(sec => (
-              <button key={sec.id} className="hs-onboard-topic" onClick={() => handleTopicSelect(sec.id)}>
-                <span className="hs-onboard-topic-ref">{sec.number}</span>
-                <span className="hs-onboard-topic-name">{sec.short_title || sec.title}</span>
-              </button>
-            ))}
-          </div>
-        </div>
-      );
-    }
-
-    if (onboardingStep === 3) {
-      const topics = getOnboardingTopics();
-      const firstTopic = topics[0];
-      return (
-        <div className="hs-onboarding">
-          <div className="hs-onboard-step">Step 3 of 3</div>
-          <h1 className="hs-onboard-title">Let&apos;s test your knowledge</h1>
-          <p className="hs-onboard-sub">We&apos;ll start with a quick quiz to see where you stand</p>
-          <button className="hs-recommend-btn" onClick={() => firstTopic && handleOnboardCTA(firstTopic.id)}>
-            Start quick quiz &rarr;
-          </button>
-        </div>
-      );
+      // Default: go to first section
+      const first = sections[0];
+      if (first) {
+        onNavigateToSection(first.id);
+        onNavigateToTab('learn-mode');
+      }
     }
   }
 

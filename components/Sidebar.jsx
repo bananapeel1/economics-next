@@ -67,10 +67,10 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
   return (
     <nav className={`sidebar ${isOpen ? 'open' : ''} ${isCollapsed ? 'collapsed' : ''}`}>
       <div className="sidebar-header">
-        <div className="sidebar-logo">
+        <button className="sidebar-logo" onClick={onHomeClick} style={{ cursor: 'pointer', background: 'none', border: 'none', padding: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
           <img src="/logo.svg" alt="Revvy Learn" className="sidebar-logo-icon" />
           <span className="sidebar-logo-text">Revvy Learn</span>
-        </div>
+        </button>
         <div className="sidebar-subtitle">Edexcel International A-Level</div>
         {onToggleCollapse && (
           <button className="sidebar-collapse-btn" onClick={onToggleCollapse} title="Collapse sidebar">
@@ -78,12 +78,6 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
           </button>
         )}
       </div>
-
-      {onHomeClick && (
-        <button className="sidebar-home-btn" onClick={onHomeClick}>
-          <SidebarHomeIcon /> Home
-        </button>
-      )}
 
       {subjects && subjects.length > 1 && (
         <div className="sidebar-subject-selector">
