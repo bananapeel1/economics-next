@@ -79,6 +79,10 @@ export default function AuthButton() {
               Your Plan
             </Link>
           )}
+          <Link href="/progress" className="auth-dropdown-item" onClick={() => setMenuOpen(false)}>
+            <span style={{ marginRight: 8 }}>📊</span>
+            Learning Progress
+          </Link>
           <button className="auth-dropdown-item" onClick={() => { toggleTheme(); }}>
             <span style={{ marginRight: 8 }}>{theme === 'dark' ? '☀️' : '🌙'}</span>
             {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}

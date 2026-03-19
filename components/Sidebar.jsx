@@ -200,16 +200,6 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
         )}
       </div>
 
-      {/* Profile section */}
-      <div className="sidebar-break-time">
-        <div className="sidebar-break-title">Profile</div>
-        <Link href="/progress" className="sidebar-resource-link">
-          <span className="sidebar-resource-icon"><ProgressChart size={16} /></span>
-          Learning Progress
-          <span className="new-badge">New</span>
-        </Link>
-      </div>
-
       {/* Fun section */}
       <div className="sidebar-break-time">
         <div className="sidebar-break-title">Fun</div>
