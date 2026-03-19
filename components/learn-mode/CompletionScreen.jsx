@@ -127,6 +127,17 @@ export default function CompletionScreen({
       <button className="lm-complete-quiz-btn" onClick={onNavigateToQuiz}>
         Try the quiz &rarr;
       </button>
+
+      {/* Practice what you learned — links to Smart Practice / Flashcards */}
+      <div className="lm-complete-practice-row">
+        <a href="/practice" className="lm-complete-practice-btn">
+          &#9889; Practice questions
+        </a>
+        <a href="/flashcards-practice" className="lm-complete-practice-btn lm-complete-flashcard-btn">
+          &#127183; Review flashcards
+        </a>
+      </div>
+
       {completedCount >= 3 && onStartMixedReview && (
         <button className="lm-complete-mixed-btn" onClick={onStartMixedReview}>
           Mixed review ({completedCount} topics) &#8644;
