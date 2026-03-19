@@ -111,6 +111,18 @@ export default function EconomicsPage() {
       {/* Scroll progress bar (client component) */}
       <EconomicsScrollBar />
 
+      {/* Minimal header */}
+      <nav className="elp-nav">
+        <Link href="/" className="elp-nav-logo">
+          <span className="elp-nav-dot" />
+          Revvy Learn
+        </Link>
+        <div className="elp-nav-sep" />
+        <div className="elp-nav-crumb">
+          Economics <span>/ Revision Notes</span>
+        </div>
+      </nav>
+
       {/* Hero */}
       <section>
         <div className="elp-hero">
