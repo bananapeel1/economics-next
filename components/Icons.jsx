@@ -368,6 +368,19 @@ export function ModelAnswer(props) {
   );
 }
 
+// 📈 Progress — ascending bar chart
+export function ProgressChart(props) {
+  return wrap(
+    <>
+      <path d="M3 3v18h18" />
+      <rect x="7" y="13" width="3" height="7" rx="0.5" fill="currentColor" stroke="none" />
+      <rect x="12" y="9" width="3" height="11" rx="0.5" fill="currentColor" stroke="none" />
+      <rect x="17" y="5" width="3" height="15" rx="0.5" fill="currentColor" stroke="none" />
+    </>,
+    props
+  );
+}
+
 // 🧭 Learn Mode — compass / guided path
 export function LearnMode(props) {
   return wrap(
@@ -406,6 +419,7 @@ const Icons = {
   Moon,
   LogOut,
   LearnMode,
+  ProgressChart,
 };
 
 export default Icons;

@@ -2,7 +2,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { useAuth } from './AuthProvider';
-import { Clipboard, Glossary, Document, CardClub, PdfFile, NetworkGraph, ModelAnswer, BookAlt, BoltIcon, CardsIcon } from './Icons';
+import { Clipboard, Glossary, Document, CardClub, PdfFile, NetworkGraph, ModelAnswer, BookAlt, BoltIcon, CardsIcon, ProgressChart } from './Icons';
 import StrengthMeter from './StrengthMeter';
 
 export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, sections, units, activeSection, onSectionChange, isOpen, isCollapsed, onToggleCollapse, contentStepInfo, savedProgress, visitedFeatures = {}, onResourceVisit, learnModeCompletions = {}, onTabSelect }) {
@@ -155,6 +155,11 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
         <Link href="/flashcards-practice" className="sidebar-resource-link">
           <span className="sidebar-resource-icon"><CardsIcon size={16} /></span>
           Smart Flashcards
+          <span className="new-badge">New</span>
+        </Link>
+        <Link href="/progress" className="sidebar-resource-link">
+          <span className="sidebar-resource-icon"><ProgressChart size={16} /></span>
+          Progress
           <span className="new-badge">New</span>
         </Link>
         {onTabSelect && (

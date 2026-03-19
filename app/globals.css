@@ -6326,3 +6326,174 @@ a.auth-dropdown-item:visited {
   .sfc-rate-row { gap: 8px; }
   .sfc-rate-btn { padding: 10px; font-size: 13px; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   Learning Progress Dashboard (lpd-)
+   ═══════════════════════════════════════════════════════════ */
+
+.lpd-container { max-width: 900px; margin: 0 auto; padding: 0 0 40px; }
+
+/* Loading state */
+.lpd-loading { text-align: center; padding: 60px 20px; }
+.lpd-loading-spinner {
+  width: 32px; height: 32px; border-radius: 50%;
+  border: 3px solid var(--border-primary);
+  border-top-color: var(--accent-green);
+  animation: lpdSpin 0.7s linear infinite;
+  margin: 0 auto 16px;
+}
+@keyframes lpdSpin { to { transform: rotate(360deg); } }
+.lpd-loading-text { font-size: 14px; color: var(--text-muted); }
+
+/* Error state */
+.lpd-error {
+  text-align: center; padding: 40px 20px;
+  color: var(--text-muted); font-size: 14px;
+}
+
+/* Hero stats */
+.lpd-hero {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 32px;
+}
+.lpd-stat-card {
+  background: var(--bg-card); border: 1.5px solid var(--border-primary);
+  border-radius: 14px; padding: 20px; text-align: center;
+}
+.lpd-stat-value {
+  font-size: 32px; font-weight: 800; color: var(--text-primary);
+}
+.lpd-streak-value { color: var(--accent-amber); }
+.lpd-overdue-value { color: var(--accent-red); }
+.lpd-stat-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--text-muted); margin-top: 4px;
+}
+
+/* Mastery ring */
+.lpd-ring {
+  width: 80px; height: 80px; border-radius: 50%;
+  margin: 0 auto 8px; display: flex; align-items: center; justify-content: center;
+}
+.lpd-ring-mask {
+  width: 60px; height: 60px; border-radius: 50%;
+  background: var(--bg-card); display: flex; align-items: center; justify-content: center;
+}
+.lpd-ring-pct { font-size: 20px; font-weight: 800; }
+
+/* Subject tabs */
+.lpd-tabs { display: flex; gap: 8px; margin-bottom: 24px; }
+.lpd-tab {
+  padding: 8px 20px; border-radius: 20px;
+  border: 1.5px solid var(--border-primary); background: transparent;
+  color: var(--text-secondary); font-size: 14px; font-weight: 600;
+  cursor: pointer; font-family: inherit; transition: all 0.15s ease;
+}
+.lpd-tab:hover { border-color: var(--border-hover); }
+.lpd-tab.active {
+  border-color: var(--accent-green); background: rgba(16,185,129,.1);
+  color: var(--accent-green);
+}
+
+/* Unit groups */
+.lpd-unit-group { margin-bottom: 24px; }
+.lpd-unit-title {
+  font-size: 13px; font-weight: 700; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px;
+}
+
+/* Topic cards grid */
+.lpd-topic-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px;
+}
+.lpd-topic-card {
+  background: var(--bg-card); border: 1.5px solid var(--border-primary);
+  border-radius: 12px; padding: 16px; transition: border-color 0.15s ease;
+}
+.lpd-topic-card:hover { border-color: var(--border-hover); }
+.lpd-topic-name {
+  font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.lpd-topic-bar {
+  height: 6px; border-radius: 3px; background: var(--border-primary);
+  overflow: hidden; margin-bottom: 6px;
+}
+.lpd-topic-fill {
+  height: 100%; border-radius: 3px; transition: width 0.4s ease;
+}
+.lpd-topic-label { font-size: 11px; font-weight: 600; }
+
+/* Weakest topics */
+.lpd-weak {
+  background: rgba(245,158,11,.06); border: 1px solid rgba(245,158,11,.18);
+  border-radius: 14px; padding: 20px; margin-bottom: 24px;
+}
+.lpd-weak-title {
+  font-size: 15px; font-weight: 700; color: var(--accent-amber);
+  margin-bottom: 14px;
+}
+.lpd-weak-list { display: flex; flex-direction: column; gap: 10px; }
+.lpd-weak-item {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px;
+}
+.lpd-weak-info { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1; }
+.lpd-weak-name {
+  font-size: 14px; font-weight: 600; color: var(--text-primary);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.lpd-weak-accuracy { font-size: 12px; color: var(--text-muted); }
+.lpd-weak-link {
+  font-size: 13px; font-weight: 600; color: var(--accent-amber);
+  text-decoration: none; white-space: nowrap; flex-shrink: 0;
+}
+.lpd-weak-link:hover { text-decoration: underline; }
+
+/* Activity bars */
+.lpd-activity { margin-bottom: 24px; }
+.lpd-activity-title {
+  font-size: 15px; font-weight: 700; color: var(--text-primary); margin-bottom: 14px;
+}
+.lpd-bars {
+  display: flex; align-items: flex-end; gap: 8px; height: 100px;
+  padding: 0 4px;
+}
+.lpd-bar {
+  flex: 1; border-radius: 4px 4px 0 0; background: var(--accent-green);
+  min-height: 4px; transition: height 0.3s ease; opacity: 0.85;
+}
+.lpd-bar:hover { opacity: 1; }
+.lpd-bar-labels { display: flex; gap: 8px; margin-top: 6px; padding: 0 4px; }
+.lpd-bar-label {
+  flex: 1; text-align: center; font-size: 10px; color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* Summary footer */
+.lpd-summary-footer {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; padding: 16px; font-size: 13px; font-weight: 600;
+  color: var(--text-muted); border-top: 1px solid var(--border-primary);
+  margin-top: 8px;
+}
+.lpd-summary-mastered { color: var(--accent-green); }
+.lpd-summary-learning { color: var(--accent-amber); }
+.lpd-summary-new { color: var(--text-muted); }
+.lpd-summary-sep { color: var(--text-dim); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .lpd-hero { grid-template-columns: repeat(2, 1fr); }
+  .lpd-topic-grid { grid-template-columns: 1fr; }
+  .lpd-weak-item { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .lpd-summary-footer { flex-wrap: wrap; }
+}
+@media (max-width: 480px) {
+  .lpd-hero { gap: 10px; }
+  .lpd-stat-card { padding: 14px 10px; }
+  .lpd-stat-value { font-size: 26px; }
+  .lpd-ring { width: 64px; height: 64px; }
+  .lpd-ring-mask { width: 48px; height: 48px; }
+  .lpd-ring-pct { font-size: 16px; }
+  .lpd-tabs { flex-wrap: wrap; }
+}
