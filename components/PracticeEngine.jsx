@@ -120,6 +120,7 @@ function TopicStep({
   onBack,
   onStart,
   loading,
+  progressSummary,
 }) {
   const [expandedUnits, setExpandedUnits] = useState(new Set());
 
@@ -187,12 +188,14 @@ function TopicStep({
           return (
             <div key={unit.id} className="spe-unit-card">
               {/* Unit header row */}
-              <div className="spe-unit-header" onClick={() => toggleExpand(unit.id)}>
-                <div className="spe-unit-header-left">
-                  <span className="spe-unit-badge">{unit.number}</span>
+              <div className="spe-unit-header">
+                <button className={`spe-unit-badge${selectedCount > 0 ? ' spe-unit-badge--active' : ''}`} onClick={(e) => { e.stopPropagation(); onToggleUnit(unit.id); }} title={selectedCount === totalCount ? 'Deselect all' : 'Select all'}>
+                  {selectedCount === totalCount ? '\u2713' : unit.number}
+                </button>
+                <div className="spe-unit-header-mid" onClick={() => toggleExpand(unit.id)}>
                   <span className="spe-unit-title">{unit.title}</span>
                 </div>
-                <div className="spe-unit-header-right">
+                <div className="spe-unit-header-right" onClick={() => toggleExpand(unit.id)}>
                   <span className="spe-unit-counter-pill">
                     {selectedCount} / {totalCount}
                   </span>
@@ -210,6 +213,8 @@ function TopicStep({
                   {unitSections.map((sec, i) => {
                     const isSelected = selectedSectionIds.has(sec.id);
                     const chipColor = CHIP_COLORS[(unitStartIndex + i) % CHIP_COLORS.length];
+                    const prog = progressSummary?.[sec.id];
+                    const masteryPct = prog && prog.total > 0 ? Math.round((prog.mastered / prog.total) * 100) : 0;
                     return (
                       <button
                         key={sec.id}
@@ -219,7 +224,12 @@ function TopicStep({
                           borderBottom: `3px solid ${isSelected ? '#22c55e' : chipColor}`,
                         }}
                       >
-                        {sec.short_title || sec.title}
+                        <span className="spe-chip-text">{sec.short_title || sec.title}</span>
+                        {prog && prog.total > 0 && (
+                          <span className="spe-chip-progress">
+                            <span className="spe-chip-progress-fill" style={{ width: `${masteryPct}%` }} />
+                          </span>
+                        )}
                       </button>
                     );
                   })}
@@ -271,6 +281,25 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
   const [sessionResults, setSessionResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [questionKey, setQuestionKey] = useState(0);
+  const [progressSummary, setProgressSummary] = useState({});
+
+  /* ─── Fetch progress summary when entering topic step ─── */
+  const fetchProgressSummary = useCallback(async (subjectSlug) => {
+    const sub = subjects.find(s => s.slug === subjectSlug);
+    if (!sub) return;
+    const subUnits = units.filter(u => u.subject_id === sub.id);
+    const subSections = sections.filter(s => subUnits.some(u => u.id === s.unit_id));
+    const sectionIds = subSections.map(s => s.id);
+    if (sectionIds.length === 0) return;
+
+    try {
+      const res = await fetch(`/api/practice/progress-summary?sections=${sectionIds.join(',')}`);
+      const json = await res.json();
+      if (json.summary) setProgressSummary(json.summary);
+    } catch {
+      // silently ignore
+    }
+  }, [subjects, units, sections]);
 
   /* ─── Derived data ─── */
 
@@ -298,7 +327,8 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
     setSelectedSubjectSlug(slug);
     setSelectedSectionIds(new Set());
     setSetupStep(2);
-  }, []);
+    fetchProgressSummary(slug);
+  }, [fetchProgressSummary]);
 
   const handleBackToSubject = useCallback(() => {
     setSetupStep(1);
@@ -504,7 +534,19 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
     setPhase('summary');
   }, []);
 
-  /* ─── Restart ─── */
+  /* ─── Change topics (keep subject, go to topic selector) ─── */
+
+  const handleChangeTopics = useCallback(() => {
+    setPhase('setup');
+    setSetupStep(2);
+    setQueue([]);
+    setCurrentIndex(0);
+    setSessionResults([]);
+    setQuestionKey(0);
+    fetchProgressSummary(selectedSubjectSlug);
+  }, [selectedSubjectSlug, fetchProgressSummary]);
+
+  /* ─── Restart (full reset) ─── */
 
   const handleRestart = useCallback(() => {
     setPhase('setup');
@@ -515,6 +557,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
     setQuestionKey(0);
     setSelectedSubjectSlug('');
     setSelectedSectionIds(new Set());
+    setProgressSummary({});
   }, []);
 
   /* ─── Section title lookup ─── */
@@ -556,6 +599,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
         onBack={handleBackToSubject}
         onStart={handleStart}
         loading={loading}
+        progressSummary={progressSummary}
       />
     );
   }
@@ -622,7 +666,9 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
       <SessionSummary
         results={sessionResults}
         sections={sections}
+        totalQuestions={queue.length}
         onRestart={handleRestart}
+        onChangeTopics={handleChangeTopics}
       />
     );
   }

@@ -5915,7 +5915,11 @@ a.auth-dropdown-item:visited {
   width: 34px; height: 34px; border-radius: 8px; background: rgba(16,185,129,.12);
   color: var(--accent-green); display: flex; align-items: center; justify-content: center;
   font-size: 14px; font-weight: 800; flex-shrink: 0;
+  border: none; cursor: pointer; font-family: inherit; transition: all 0.15s;
 }
+.spe-unit-badge:hover { background: rgba(16,185,129,.2); }
+.spe-unit-badge--active { background: var(--accent-green); color: #fff; }
+.spe-unit-header-mid { flex: 1; min-width: 0; cursor: pointer; }
 .spe-unit-title { font-size: 15px; font-weight: 700; color: var(--text-primary); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .spe-unit-counter-pill {
   font-size: 13px; color: var(--text-muted); font-weight: 600;
@@ -5941,6 +5945,9 @@ a.auth-dropdown-item:visited {
 }
 .spe-section-chip:hover { border-color: var(--border-hover); color: var(--text-primary); }
 .spe-section-chip--active { border-color: var(--accent-green); color: var(--text-primary); background: rgba(16,185,129,.06); }
+.spe-chip-text { display: block; }
+.spe-chip-progress { display: block; height: 3px; border-radius: 2px; background: var(--border-primary); margin-top: 8px; overflow: hidden; }
+.spe-chip-progress-fill { display: block; height: 100%; border-radius: 2px; background: var(--accent-green); transition: width 0.4s ease; }
 
 /* ── Sticky action bar ── */
 .spe-action-bar {

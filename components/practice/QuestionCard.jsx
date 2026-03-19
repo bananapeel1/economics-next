@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 /* ── Question Card — Smart Practice Engine ── */
 export default function QuestionCard({ question, sectionTitle, questionNumber, totalQuestions, onAnswer, onNext, onSkip }) {
@@ -14,6 +14,40 @@ export default function QuestionCard({ question, sectionTitle, questionNumber, t
     setSelected(null);
     setPhase(0);
   }, [question]);
+
+  // Keyboard support: Enter to submit/advance, 1-4/A-D to select
+  useEffect(() => {
+    function handleKeyDown(e) {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      const optCount = question.options?.length || 4;
+
+      // Number keys 1-4 or letter keys A-D to select option
+      if (phase < 2) {
+        let idx = null;
+        if (e.key >= '1' && e.key <= String(optCount)) idx = parseInt(e.key) - 1;
+        else if (e.key.toLowerCase() >= 'a' && e.key.toLowerCase() <= String.fromCharCode(96 + optCount)) idx = e.key.toLowerCase().charCodeAt(0) - 97;
+        if (idx !== null && idx < optCount) {
+          e.preventDefault();
+          setSelected(idx);
+          setPhase(1);
+          return;
+        }
+      }
+
+      // Enter key
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        if (phase === 1 && selected !== null) {
+          setPhase(2);
+        } else if (phase === 2) {
+          onAnswer?.({ correct: selected === question.correctIndex });
+          onNext?.();
+        }
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [phase, selected, question, onAnswer, onNext]);
 
   function handleSelect(index) {
     if (phase >= 2) return;
