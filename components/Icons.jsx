@@ -102,6 +102,25 @@ export function Document(props) {
   );
 }
 
+// ⚡ Smart Practice — lightning bolt
+export function BoltIcon(props) {
+  return wrap(
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />,
+    props
+  );
+}
+
+// 🃏 Smart Flashcards — stacked cards
+export function CardsIcon(props) {
+  return wrap(
+    <>
+      <rect x="2" y="6" width="16" height="14" rx="2" ry="2" />
+      <path d="M6 2h12a2 2 0 0 1 2 2v12" />
+    </>,
+    props
+  );
+}
+
 // ♣ Blackjack — card with club
 export function CardClub(props) {
   return wrap(

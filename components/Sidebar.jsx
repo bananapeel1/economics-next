@@ -2,7 +2,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { useAuth } from './AuthProvider';
-import { Clipboard, Glossary, Document, CardClub, PdfFile, NetworkGraph, ModelAnswer, BookAlt } from './Icons';
+import { Clipboard, Glossary, Document, CardClub, PdfFile, NetworkGraph, ModelAnswer, BookAlt, BoltIcon, CardsIcon } from './Icons';
 import StrengthMeter from './StrengthMeter';
 
 export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, sections, units, activeSection, onSectionChange, isOpen, isCollapsed, onToggleCollapse, contentStepInfo, savedProgress, visitedFeatures = {}, onResourceVisit, learnModeCompletions = {}, onTabSelect }) {
@@ -148,12 +148,12 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
       <div className="sidebar-resources">
         <div className="sidebar-resources-title">Resources</div>
         <Link href="/practice" className="sidebar-resource-link">
-          <span className="sidebar-resource-icon" style={{ fontSize: '16px' }}>⚡</span>
+          <span className="sidebar-resource-icon"><BoltIcon size={16} /></span>
           Smart Practice
           <span className="new-badge">New</span>
         </Link>
         <Link href="/flashcards-practice" className="sidebar-resource-link">
-          <span className="sidebar-resource-icon" style={{ fontSize: '16px' }}>🃏</span>
+          <span className="sidebar-resource-icon"><CardsIcon size={16} /></span>
           Smart Flashcards
           <span className="new-badge">New</span>
         </Link>

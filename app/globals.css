@@ -6285,10 +6285,32 @@ a.auth-dropdown-item:visited {
   gap: 0;
 }
 
-/* ── Animations ── */
-@keyframes sfcSlideIn { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
+/* ── Exit animations (swipe out) ── */
+@keyframes sfcExitLeft {
+  0% { opacity: 1; transform: translateX(0) rotate(0deg); }
+  100% { opacity: 0; transform: translateX(-120px) rotate(-8deg); }
+}
+@keyframes sfcExitRight {
+  0% { opacity: 1; transform: translateX(0) rotate(0deg); }
+  100% { opacity: 0; transform: translateX(120px) rotate(8deg); }
+}
+.sfc-exit-left { animation: sfcExitLeft 0.25s ease-in forwards; pointer-events: none; }
+.sfc-exit-right { animation: sfcExitRight 0.25s ease-in forwards; pointer-events: none; }
+
+/* ── Entry animation ── */
+@keyframes sfcSlideIn { from { opacity: 0; transform: translateX(40px) scale(0.97); } to { opacity: 1; transform: translateX(0) scale(1); } }
 @keyframes sfcFadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-.sfc-card-animate { animation: sfcSlideIn 0.3s ease-out; }
+.sfc-card-animate { animation: sfcSlideIn 0.35s ease-out; }
+
+/* ── Rate button keyboard hints ── */
+.sfc-rate-key {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; border-radius: 5px; font-size: 11px; font-weight: 700;
+  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12);
+  color: var(--text-muted); margin: 0 4px;
+}
+.sfc-rate-active { transform: scale(0.95); filter: brightness(1.3); }
+.sfc-rate-btn:disabled { pointer-events: none; }
 
 /* ── Responsive ── */
 @media (max-width: 768px) {

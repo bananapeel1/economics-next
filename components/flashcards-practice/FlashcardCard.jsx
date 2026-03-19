@@ -1,13 +1,18 @@
 "use client";
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 
 /* ── Flashcard Card — Smart Flashcards Engine ── */
 export default function FlashcardCard({ card, sectionTitle, cardNumber, totalCards, onRate, onSkip }) {
   const [flipped, setFlipped] = useState(false);
+  const [exitDirection, setExitDirection] = useState(null); // 'left' | 'right' | null
+  const [activeKey, setActiveKey] = useState(null); // 'learning' | 'known' for keyboard highlight
+  const wrapperRef = useRef(null);
 
-  // Reset flipped state when card changes
+  // Reset state when card changes
   useEffect(() => {
     setFlipped(false);
+    setExitDirection(null);
+    setActiveKey(null);
   }, [card]);
 
   const handleFlip = useCallback(() => {
@@ -15,11 +20,15 @@ export default function FlashcardCard({ card, sectionTitle, cardNumber, totalCar
   }, []);
 
   const handleKnown = useCallback(() => {
-    onRate({ known: true });
+    setExitDirection('right');
+    setActiveKey('known');
+    setTimeout(() => onRate({ known: true }), 250);
   }, [onRate]);
 
   const handleLearning = useCallback(() => {
-    onRate({ known: false });
+    setExitDirection('left');
+    setActiveKey('learning');
+    setTimeout(() => onRate({ known: false }), 250);
   }, [onRate]);
 
   // Keyboard support
@@ -34,18 +43,22 @@ export default function FlashcardCard({ card, sectionTitle, cardNumber, totalCar
         return;
       }
 
-      // Only allow rating when flipped
-      if (flipped) {
+      // Only allow rating when flipped and not already exiting
+      if (flipped && !exitDirection) {
         // 1 or ArrowLeft: Still learning
         if (e.key === '1' || e.key === 'ArrowLeft') {
           e.preventDefault();
-          onRate({ known: false });
+          setExitDirection('left');
+          setActiveKey('learning');
+          setTimeout(() => onRate({ known: false }), 250);
           return;
         }
         // 2 or ArrowRight: Got it
         if (e.key === '2' || e.key === 'ArrowRight') {
           e.preventDefault();
-          onRate({ known: true });
+          setExitDirection('right');
+          setActiveKey('known');
+          setTimeout(() => onRate({ known: true }), 250);
           return;
         }
       }
@@ -85,8 +98,10 @@ export default function FlashcardCard({ card, sectionTitle, cardNumber, totalCar
     return <div className="sfc-card-content" dangerouslySetInnerHTML={{ __html: card.back }} />;
   };
 
+  const exitClass = exitDirection === 'left' ? ' sfc-exit-left' : exitDirection === 'right' ? ' sfc-exit-right' : '';
+
   return (
-    <div className="sfc-card-wrapper">
+    <div className={`sfc-card-wrapper${exitClass}`} ref={wrapperRef}>
       <div className="sfc-card-top">
         <span className="sfc-card-badge">{sectionTitle}</span>
         <span className="sfc-card-counter">{cardNumber} / {totalCards}</span>
@@ -115,11 +130,13 @@ export default function FlashcardCard({ card, sectionTitle, cardNumber, totalCar
       {/* Rating buttons — only show after flip */}
       {flipped && (
         <div className="sfc-rate-row">
-          <button className="sfc-rate-btn sfc-rate-learning" onClick={handleLearning}>
+          <button className={`sfc-rate-btn sfc-rate-learning${activeKey === 'learning' ? ' sfc-rate-active' : ''}`} onClick={handleLearning} disabled={!!exitDirection}>
+            <span className="sfc-rate-key">←</span>
             <span className="sfc-rate-icon">&times;</span> Still learning
           </button>
-          <button className="sfc-rate-btn sfc-rate-known" onClick={handleKnown}>
-            <span className="sfc-rate-icon">&#10003;</span> Got it
+          <button className={`sfc-rate-btn sfc-rate-known${activeKey === 'known' ? ' sfc-rate-active' : ''}`} onClick={handleKnown} disabled={!!exitDirection}>
+            Got it <span className="sfc-rate-icon">&#10003;</span>
+            <span className="sfc-rate-key">→</span>
           </button>
         </div>
       )}
