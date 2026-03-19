@@ -172,11 +172,6 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
           PDFs
           {!visitedFeatures['resource-pdfs'] && <span className="new-badge">New</span>}
         </Link>
-        <Link href="/topic-links" className="sidebar-resource-link" onClick={() => !visitedFeatures['resource-topic-links'] && onResourceVisit?.('resource-topic-links')}>
-          <span className="sidebar-resource-icon"><NetworkGraph size={16} /></span>
-          Topic Links
-          {!visitedFeatures['resource-topic-links'] && <span className="new-badge">New</span>}
-        </Link>
 
         {/* Collapsible "More" */}
         <button className="sidebar-resource-more-btn" onClick={() => setMoreOpen(prev => !prev)}>
@@ -184,6 +179,11 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
         </button>
         {moreOpen && (
           <>
+            <Link href="/topic-links" className="sidebar-resource-link" onClick={() => !visitedFeatures['resource-topic-links'] && onResourceVisit?.('resource-topic-links')}>
+              <span className="sidebar-resource-icon"><NetworkGraph size={16} /></span>
+              Topic Links
+              {!visitedFeatures['resource-topic-links'] && <span className="new-badge">New</span>}
+            </Link>
             <Link href="/past-papers" className="sidebar-resource-link">
               <span className="sidebar-resource-icon"><Document size={16} /></span>
               Past Papers
