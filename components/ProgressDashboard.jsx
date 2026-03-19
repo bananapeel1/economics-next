@@ -143,27 +143,8 @@ export default function ProgressDashboard() {
         </div>
       )}
 
-      {/* Mastery by Topic + Focus Areas side by side */}
-      <div className="lpd-insights-row">
-        {/* Mastery by Topic bar chart */}
-        <div className="lpd-insight-card">
-          <div className="lpd-insight-title">📊 Mastery by Topic</div>
-          <div className="lpd-mastery-bars">
-            {rankedTopics.length > 0 ? rankedTopics.map(sec => (
-              <div className="lpd-mastery-row" key={sec.id}>
-                <span className="lpd-mastery-name">{sec.title}</span>
-                <div className="lpd-mastery-track">
-                  <div className="lpd-mastery-fill" style={{ width: `${Math.max(sec.pct, 2)}%`, background: masteryColor(sec.pct) }} />
-                </div>
-                <span className="lpd-mastery-pct" style={{ color: masteryColor(sec.pct) }}>{sec.pct}%</span>
-              </div>
-            )) : (
-              <div className="lpd-focus-empty">Select a subject above to see topic mastery.</div>
-            )}
-          </div>
-        </div>
-
-        {/* Focus Areas with Practice buttons */}
+      {/* Focus Areas */}
+      <div className="lpd-insights-row" style={{ gridTemplateColumns: '1fr' }}>
         <div className="lpd-insight-card">
           <div className="lpd-insight-title">🎯 Focus Areas</div>
           {weakestTopics && weakestTopics.length > 0 ? (
