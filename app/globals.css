@@ -5751,3 +5751,111 @@ a.auth-dropdown-item:visited {
   .practice-ma-card { flex-wrap: wrap; }
   .practice-ma-arrow { margin-left: 0; width: 100%; }
 }
+
+/* ═══════════════════════════════════════════
+   Diagram enlarge modal
+   ═══════════════════════════════════════════ */
+
+/* Clickable cursor on the diagram wrapper */
+.lm-diagram-clickable {
+  cursor: zoom-in;
+}
+
+/* "Tap to enlarge" hint below diagram */
+.lm-diagram-enlarge-hint {
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 6px;
+  letter-spacing: 0.02em;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Backdrop */
+.lm-diagram-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(0px);
+  transition: background 0.2s ease, backdrop-filter 0.2s ease;
+  will-change: background, backdrop-filter;
+}
+.lm-diagram-modal-backdrop.lm-diagram-modal-visible {
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(6px);
+}
+
+/* Modal container */
+.lm-diagram-modal {
+  position: relative;
+  max-width: 90vw;
+  max-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.lm-diagram-modal-visible .lm-diagram-modal {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Close button */
+.lm-diagram-modal-close {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.lm-diagram-modal-close:hover {
+  background: var(--border-primary);
+  transform: scale(1.08);
+}
+
+/* SVG inside modal */
+.lm-diagram-modal .lm-diagram-modal-svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lm-diagram-modal .lm-diagram-modal-svg svg {
+  width: 100%;
+  height: auto;
+  max-width: 90vw;
+  max-height: 85vh;
+  display: block;
+}
+
+/* Image inside modal */
+.lm-diagram-modal img {
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: contain;
+}
