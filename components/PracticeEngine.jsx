@@ -3,6 +3,8 @@
 import { useState, useCallback } from 'react';
 import { buildQueue, computeNextReview, createDefaultProgress } from '@/lib/spaced-repetition';
 import TopicSelector from '@/components/practice/TopicSelector';
+import QuestionCard from '@/components/practice/QuestionCard';
+import SessionSummary from '@/components/practice/SessionSummary';
 
 /* ─── localStorage helpers (for non-auth users) ─── */
 
@@ -45,6 +47,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
   const [currentIndex, setCurrentIndex] = useState(0);
   const [sessionResults, setSessionResults] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [questionKey, setQuestionKey] = useState(0);
 
   /* ─── Setup callbacks ─── */
 
@@ -122,6 +125,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
       setQueue(sessionQueue);
       setCurrentIndex(0);
       setSessionResults([]);
+      setQuestionKey(Date.now());
       setPhase('session');
     } catch (err) {
       console.error('Failed to start practice session:', err);
@@ -194,6 +198,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
       setPhase('summary');
     } else {
       setCurrentIndex(nextIdx);
+      setQuestionKey(Date.now());
     }
   }, [currentIndex, queue.length]);
 
@@ -204,6 +209,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
     setQueue([]);
     setCurrentIndex(0);
     setSessionResults([]);
+    setQuestionKey(0);
     // Keep selectedSectionIds so user doesn't have to re-pick
   }, []);
 
@@ -255,24 +261,34 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
 
     const question = item.question;
     const sectionTitle = getSectionTitle(item.sectionId);
-    const hasAnswered = sessionResults.length > currentIndex;
 
     return (
       <div className="spe-session">
-        <div className="spe-session-header">
-          <span className="spe-session-progress">
-            {currentIndex + 1} / {queue.length}
+        {/* Top bar with progress */}
+        <div className="spe-session-top">
+          <button className="spe-back-btn" onClick={handleRestart}>&#x2715;</button>
+          <div className="spe-progress-bar">
+            <div
+              className="spe-progress-fill"
+              style={{ width: `${((currentIndex + 1) / queue.length) * 100}%` }}
+            />
+          </div>
+          <span className="spe-progress-count">
+            {currentIndex + 1}/{queue.length}
           </span>
-          <span className="spe-session-topic">{sectionTitle}</span>
         </div>
 
-        <QuestionCard
-          question={question}
-          sectionTitle={sectionTitle}
-          onAnswer={handleAnswer}
-          onNext={handleNext}
-          hasAnswered={hasAnswered}
-        />
+        {/* Question with animation key */}
+        <div className="spe-question-animate" key={questionKey}>
+          <QuestionCard
+            question={question}
+            sectionTitle={sectionTitle}
+            questionNumber={currentIndex + 1}
+            totalQuestions={queue.length}
+            onAnswer={handleAnswer}
+            onNext={handleNext}
+          />
+        </div>
       </div>
     );
   }
@@ -280,193 +296,12 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
   if (phase === 'summary') {
     return (
       <SessionSummary
-        sessionResults={sessionResults}
+        results={sessionResults}
         sections={sections}
         onRestart={handleRestart}
-        onHome={handleHome}
       />
     );
   }
 
   return null;
-}
-
-/* ─── QuestionCard (inline) ─── */
-
-function QuestionCard({ question, sectionTitle, onAnswer, onNext, hasAnswered }) {
-  const [selectedOption, setSelectedOption] = useState(null);
-  const [showResult, setShowResult] = useState(false);
-  const [confidence, setConfidence] = useState(null);
-
-  if (!question) return null;
-
-  const isCorrect =
-    selectedOption !== null &&
-    selectedOption === question.correctIndex;
-
-  const handleSelect = (idx) => {
-    if (showResult) return;
-    setSelectedOption(idx);
-  };
-
-  const handleConfirm = () => {
-    if (selectedOption === null) return;
-    setShowResult(true);
-    onAnswer({
-      correct: selectedOption === question.correctIndex,
-      confidence,
-    });
-  };
-
-  const handleNext = () => {
-    setSelectedOption(null);
-    setShowResult(false);
-    setConfidence(null);
-    onNext();
-  };
-
-  return (
-    <div className="spe-qcard">
-      <p className="spe-qcard-question">{question.question}</p>
-
-      <div className="spe-qcard-options">
-        {(question.options || []).map((opt, idx) => {
-          let optClass = 'spe-qcard-option';
-          if (selectedOption === idx && !showResult) {
-            optClass += ' spe-qcard-option--selected';
-          }
-          if (showResult) {
-            if (idx === question.correctIndex) {
-              optClass += ' spe-qcard-option--correct';
-            } else if (idx === selectedOption) {
-              optClass += ' spe-qcard-option--wrong';
-            }
-          }
-          return (
-            <button
-              key={idx}
-              className={optClass}
-              onClick={() => handleSelect(idx)}
-              disabled={showResult}
-            >
-              <span className="spe-qcard-option-letter">
-                {String.fromCharCode(65 + idx)}
-              </span>
-              {opt}
-            </button>
-          );
-        })}
-      </div>
-
-      {!showResult && selectedOption !== null && (
-        <div className="spe-qcard-confidence">
-          <p className="spe-qcard-confidence-label">How confident are you?</p>
-          <div className="spe-qcard-confidence-btns">
-            {[
-              { key: 'guessed', label: 'Guessed' },
-              { key: 'somewhat', label: 'Somewhat' },
-              { key: 'certain', label: 'Certain' },
-            ].map(c => (
-              <button
-                key={c.key}
-                className={`spe-confidence-btn${confidence === c.key ? ' spe-confidence-btn--active' : ''}`}
-                onClick={() => setConfidence(c.key)}
-              >
-                {c.label}
-              </button>
-            ))}
-          </div>
-          <button
-            className="spe-btn spe-btn-primary"
-            onClick={handleConfirm}
-          >
-            Submit Answer
-          </button>
-        </div>
-      )}
-
-      {showResult && (
-        <div className="spe-qcard-result">
-          <div
-            className={`spe-qcard-result-banner ${isCorrect ? 'spe-qcard-result--correct' : 'spe-qcard-result--wrong'}`}
-          >
-            {isCorrect ? 'Correct!' : 'Incorrect'}
-          </div>
-          {question.explanation && (
-            <p className="spe-qcard-explanation">{question.explanation}</p>
-          )}
-          <button className="spe-btn spe-btn-primary" onClick={handleNext}>
-            Next Question
-          </button>
-        </div>
-      )}
-    </div>
-  );
-}
-
-/* ─── SessionSummary (inline) ─── */
-
-function SessionSummary({ sessionResults, sections, onRestart, onHome }) {
-  const total = sessionResults.length;
-  const correctCount = sessionResults.filter(r => r.correct).length;
-  const pct = total > 0 ? Math.round((correctCount / total) * 100) : 0;
-
-  // Group results by section
-  const bySectionMap = {};
-  for (const r of sessionResults) {
-    if (!bySectionMap[r.sectionId]) {
-      const sec = sections.find(s => s.id === r.sectionId);
-      bySectionMap[r.sectionId] = {
-        title: sec?.short_title || sec?.title || r.sectionId,
-        correct: 0,
-        total: 0,
-      };
-    }
-    bySectionMap[r.sectionId].total += 1;
-    if (r.correct) bySectionMap[r.sectionId].correct += 1;
-  }
-
-  const bySection = Object.values(bySectionMap);
-
-  return (
-    <div className="spe-summary">
-      <h2 className="spe-summary-title">Session Complete</h2>
-
-      <div className="spe-summary-score">
-        <span className="spe-summary-pct">{pct}%</span>
-        <span className="spe-summary-fraction">
-          {correctCount} / {total} correct
-        </span>
-      </div>
-
-      {bySection.length > 1 && (
-        <div className="spe-summary-breakdown">
-          <h3 className="spe-summary-breakdown-title">By Topic</h3>
-          {bySection.map((sec, idx) => {
-            const secPct =
-              sec.total > 0
-                ? Math.round((sec.correct / sec.total) * 100)
-                : 0;
-            return (
-              <div key={idx} className="spe-summary-row">
-                <span className="spe-summary-row-title">{sec.title}</span>
-                <span className="spe-summary-row-score">
-                  {sec.correct}/{sec.total} ({secPct}%)
-                </span>
-              </div>
-            );
-          })}
-        </div>
-      )}
-
-      <div className="spe-summary-actions">
-        <button className="spe-btn spe-btn-primary" onClick={onRestart}>
-          Practice Again
-        </button>
-        <button className="spe-btn spe-btn-secondary" onClick={onHome}>
-          Back to Home
-        </button>
-      </div>
-    </div>
-  );
 }

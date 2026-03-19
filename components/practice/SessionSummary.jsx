@@ -1,6 +1,6 @@
 "use client";
 
-/* ── Session Summary / Results Screen for Smart Practice Engine ── */
+/* ── Premium Session Summary — Revvy Learn Dark Theme ── */
 export default function SessionSummary({ results, sections, onRestart }) {
   const totalQuestions = results.length;
   const totalCorrect = results.filter(r => r.correct).length;
@@ -30,10 +30,10 @@ export default function SessionSummary({ results, sections, onRestart }) {
     pct: Math.round((data.correct / data.total) * 100),
   }));
 
-  // Sort breakdown by accuracy ascending so weakest are first for the weakest list
+  // Sort breakdown by accuracy ascending so weakest are first
   const sortedByAccuracy = [...breakdown].sort((a, b) => a.pct - b.pct);
 
-  // Weakest sections: bottom 3 by accuracy
+  // Weakest sections: bottom 3 by accuracy (exclude perfect scores)
   const weakest = sortedByAccuracy.slice(0, 3).filter(s => s.pct < 100);
 
   // Color logic
@@ -52,16 +52,29 @@ export default function SessionSummary({ results, sections, onRestart }) {
     return 'Keep going! Review the material and practice again.';
   }
 
+  // Score ring: CSS conic-gradient for the arc
+  const ringColor = getColor(accuracyPct);
+  const ringStyle = {
+    background: `conic-gradient(${ringColor} ${accuracyPct * 3.6}deg, var(--border-primary) ${accuracyPct * 3.6}deg)`,
+  };
+
   return (
     <div className="spe-summary">
+      {/* Hero section */}
       <div className="spe-summary-header">
-        <div className="spe-summary-score">{totalCorrect}/{totalQuestions}</div>
-        <div className="spe-summary-pct" style={{ color: getColor(accuracyPct) }}>
-          {accuracyPct}%
+        <div className="spe-summary-ring" style={ringStyle}>
+          <div className="spe-summary-ring-mask">
+            <span className="spe-summary-ring-inner" style={{ color: ringColor }}>
+              {accuracyPct}%
+            </span>
+            <span className="spe-summary-ring-label">Score</span>
+          </div>
         </div>
+        <div className="spe-summary-fraction">{totalCorrect}/{totalQuestions} correct</div>
         <div className="spe-summary-message">{getMessage(accuracyPct)}</div>
       </div>
 
+      {/* Breakdown section */}
       <div className="spe-summary-breakdown">
         <h3>Score by Topic</h3>
         {breakdown.map(row => (
@@ -80,17 +93,20 @@ export default function SessionSummary({ results, sections, onRestart }) {
         ))}
       </div>
 
+      {/* Weak areas card */}
       {weakest.length > 0 && (
         <div className="spe-weakest">
-          <h3>Areas to Review</h3>
+          <h3>Focus on These Next Time</h3>
           {weakest.map(w => (
             <div className="spe-weakest-item" key={w.sectionId}>
-              {w.name} &mdash; {w.pct}%
+              <span>{w.name}</span>
+              <span style={{ color: getColor(w.pct), fontWeight: 700 }}>{w.pct}%</span>
             </div>
           ))}
         </div>
       )}
 
+      {/* Action buttons */}
       <div className="spe-summary-actions">
         <button className="spe-restart-btn" onClick={onRestart}>Practice Again</button>
         <a href="/" className="spe-home-link">Back to App</a>
