@@ -115,7 +115,6 @@ export default function EconomicsPage() {
       <section>
         <div className="elp-hero">
           <div className="elp-fade-up">
-            <Link href="/" className="elp-back-link">&larr; Back to App</Link>
             <div className="elp-hero-eyebrow">Edexcel IAL &middot; WEC11, WEC12, WEC13, WEC14</div>
             <h1 className="elp-hero-title">
               Economics revision<br />that <em>actually sticks</em>

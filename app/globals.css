@@ -1698,7 +1698,9 @@ body {
   cursor: pointer;
   text-align: left;
   transition: background 0.15s;
+  display: flex; align-items: center; gap: 10px;
 }
+.auth-dropdown-icon { display: flex; align-items: center; color: var(--text-muted); flex-shrink: 0; }
 
 .auth-dropdown-item:hover { background: var(--bg-input-alt); }
 
@@ -6533,19 +6535,19 @@ a.auth-dropdown-item:visited {
 
 /* --- Variables scoped to .elp-page --- */
 .elp-page {
-  --elp-bg: #0b0e14;
-  --elp-bg2: #11141c;
-  --elp-bg3: #171b26;
-  --elp-bd: #1c2236;
-  --elp-bd2: #232c45;
-  --elp-tx: #eef0f8;
-  --elp-tx-b: #b8c0d8;
-  --elp-tx-c: #6a7490;
-  --elp-tx-d: #343d5c;
-  --elp-green: #22c55e;
-  --elp-g-bg: rgba(34,197,94,.08);
-  --elp-g-bd: rgba(34,197,94,.2);
-  --elp-g-glow: rgba(34,197,94,.15);
+  --elp-bg: var(--bg-primary, #0f1117);
+  --elp-bg2: var(--bg-card, #1e2335);
+  --elp-bg3: var(--bg-input, #151825);
+  --elp-bd: var(--border-primary, #1e2436);
+  --elp-bd2: var(--border-primary, #252d42);
+  --elp-tx: var(--text-primary, #edf0f7);
+  --elp-tx-b: var(--text-secondary, #b8c0d8);
+  --elp-tx-c: var(--text-muted, #6a7490);
+  --elp-tx-d: var(--text-dim, #343d5c);
+  --elp-green: var(--accent-green, #10b981);
+  --elp-g-bg: rgba(16,185,129,.08);
+  --elp-g-bd: rgba(16,185,129,.2);
+  --elp-g-glow: rgba(16,185,129,.15);
   --elp-amber: #f59e0b;
   --elp-blue: #4f7ef8;
   --elp-b-bg: rgba(79,126,248,.08);
@@ -6555,7 +6557,7 @@ a.auth-dropdown-item:visited {
   --elp-t-bd: rgba(20,184,166,.2);
   --elp-purple: #a78bfa;
   --elp-p-bg: rgba(167,139,250,.08);
-  --elp-font: 'Inter', sans-serif;
+  --elp-font: 'DM Sans', sans-serif;
   --elp-display: 'DM Serif Display', serif;
   --elp-mono: 'DM Mono', monospace;
 
@@ -6628,7 +6630,7 @@ a.auth-dropdown-item:visited {
 
 /* --- Hero --- */
 .elp-hero {
-  padding: 40px 32px 80px; max-width: 1100px; margin: 0 auto;
+  padding: 80px 32px 80px; max-width: 1100px; margin: 0 auto;
   display: grid; grid-template-columns: 1fr 420px;
   gap: 60px; align-items: center;
 }
