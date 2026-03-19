@@ -22,13 +22,13 @@ export default function FlashcardCard({ card, sectionTitle, cardNumber, totalCar
   const handleKnown = useCallback(() => {
     setExitDirection('right');
     setActiveKey('known');
-    setTimeout(() => onRate({ known: true }), 250);
+    setTimeout(() => onRate({ known: true }), 150);
   }, [onRate]);
 
   const handleLearning = useCallback(() => {
     setExitDirection('left');
     setActiveKey('learning');
-    setTimeout(() => onRate({ known: false }), 250);
+    setTimeout(() => onRate({ known: false }), 150);
   }, [onRate]);
 
   // Keyboard support
@@ -50,7 +50,7 @@ export default function FlashcardCard({ card, sectionTitle, cardNumber, totalCar
           e.preventDefault();
           setExitDirection('left');
           setActiveKey('learning');
-          setTimeout(() => onRate({ known: false }), 250);
+          setTimeout(() => onRate({ known: false }), 150);
           return;
         }
         // 2 or ArrowRight: Got it
@@ -58,7 +58,7 @@ export default function FlashcardCard({ card, sectionTitle, cardNumber, totalCar
           e.preventDefault();
           setExitDirection('right');
           setActiveKey('known');
-          setTimeout(() => onRate({ known: true }), 250);
+          setTimeout(() => onRate({ known: true }), 150);
           return;
         }
       }
