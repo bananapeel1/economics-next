@@ -6394,60 +6394,83 @@ a.auth-dropdown-item:visited {
   color: var(--accent-green);
 }
 
-/* Unit groups */
-.lpd-unit-group { margin-bottom: 24px; }
-.lpd-unit-title {
-  font-size: 13px; font-weight: 700; color: var(--text-muted);
-  text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px;
-}
+/* Hero extras */
+.lpd-stat-cap { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 4px; }
+.lpd-stat-micro { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+.lpd-stat-hint { font-size: 11px; font-weight: 700; color: var(--accent-green); margin-top: 6px; }
+.lpd-ring-dot { width: 10px; height: 10px; border-radius: 50%; margin: 0 auto 6px; }
+.lpd-ring-sub { font-size: 8px; font-weight: 700; letter-spacing: 0.1em; color: var(--text-muted); display: block; margin-top: -2px; }
+.lpd-ring-mask { width: 60px; height: 60px; border-radius: 50%; background: var(--bg-card); display: flex; flex-direction: column; align-items: center; justify-content: center; }
 
-/* Topic cards grid */
-.lpd-topic-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px;
+/* Insights row (mastery chart + focus areas side by side) */
+.lpd-insights-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+.lpd-insight-card { background: var(--bg-card); border: 1.5px solid var(--border-primary); border-radius: 14px; padding: 20px; }
+.lpd-insight-title { font-size: 15px; font-weight: 700; color: var(--text-primary); margin-bottom: 16px; }
+
+/* Mastery by Topic horizontal bars */
+.lpd-mastery-bars { display: flex; flex-direction: column; gap: 10px; }
+.lpd-mastery-row { display: flex; align-items: center; gap: 10px; }
+.lpd-mastery-name { font-size: 12px; font-weight: 600; color: var(--text-secondary); min-width: 110px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lpd-mastery-track { flex: 1; height: 6px; border-radius: 3px; background: var(--border-primary); overflow: hidden; }
+.lpd-mastery-fill { height: 100%; border-radius: 3px; min-width: 2px; transition: width 0.4s ease; }
+.lpd-mastery-pct { font-size: 12px; font-weight: 800; min-width: 32px; text-align: right; }
+
+/* Focus Areas with Practice buttons */
+.lpd-focus-list { display: flex; flex-direction: column; gap: 12px; }
+.lpd-focus-item { display: flex; align-items: center; gap: 10px; }
+.lpd-focus-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.lpd-focus-info { flex: 1; min-width: 0; }
+.lpd-focus-name { font-size: 14px; font-weight: 600; color: var(--text-primary); display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lpd-focus-sub { font-size: 12px; color: var(--text-muted); display: block; }
+.lpd-focus-btn {
+  padding: 6px 14px; border-radius: 8px; font-size: 12px; font-weight: 700;
+  background: rgba(16,185,129,.12); color: var(--accent-green);
+  border: 1px solid rgba(16,185,129,.25); text-decoration: none;
+  white-space: nowrap; flex-shrink: 0; transition: all 0.15s;
 }
+.lpd-focus-btn:hover { background: rgba(16,185,129,.2); }
+.lpd-focus-empty { font-size: 13px; color: var(--text-muted); padding: 20px 0; text-align: center; }
+
+/* Unit groups */
+.lpd-unit-group { margin-bottom: 28px; }
+.lpd-unit-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.lpd-unit-badge { width: 28px; height: 28px; border-radius: 6px; background: rgba(16,185,129,.12); color: var(--accent-green); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; flex-shrink: 0; }
+.lpd-unit-title { font-size: 13px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; flex: 1; }
+.lpd-unit-avg { font-size: 12px; font-weight: 700; }
+
+/* Topic cards grid with badges + tooltips */
+.lpd-topic-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
 .lpd-topic-card {
   background: var(--bg-card); border: 1.5px solid var(--border-primary);
-  border-radius: 12px; padding: 16px; transition: border-color 0.15s ease;
+  border-radius: 12px; padding: 14px; transition: border-color 0.15s ease;
+  position: relative;
 }
 .lpd-topic-card:hover { border-color: var(--border-hover); }
-.lpd-topic-name {
-  font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-}
-.lpd-topic-bar {
-  height: 6px; border-radius: 3px; background: var(--border-primary);
-  overflow: hidden; margin-bottom: 6px;
-}
-.lpd-topic-fill {
-  height: 100%; border-radius: 3px; transition: width 0.4s ease;
-}
-.lpd-topic-label { font-size: 11px; font-weight: 600; }
+.lpd-topic-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
+.lpd-topic-name { font-size: 14px; font-weight: 600; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1; }
+.lpd-topic-bar { height: 5px; border-radius: 3px; background: var(--border-primary); overflow: hidden; margin-bottom: 6px; }
+.lpd-topic-fill { height: 100%; border-radius: 3px; transition: width 0.4s ease; }
+.lpd-topic-bottom { display: flex; justify-content: space-between; align-items: center; }
+.lpd-topic-label { font-size: 12px; font-weight: 800; }
+.lpd-topic-count { font-size: 11px; color: var(--text-muted); }
 
-/* Weakest topics */
-.lpd-weak {
-  background: rgba(245,158,11,.06); border: 1px solid rgba(245,158,11,.18);
-  border-radius: 14px; padding: 20px; margin-bottom: 24px;
+/* Status badges */
+.lpd-badge { font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; padding: 3px 8px; border-radius: 4px; white-space: nowrap; flex-shrink: 0; }
+.lpd-badge-new { background: rgba(59,130,246,.15); color: #60a5fa; }
+.lpd-badge-learning { background: rgba(245,158,11,.15); color: #f59e0b; }
+.lpd-badge-mastered { background: rgba(16,185,129,.15); color: var(--accent-green); }
+
+/* Hover tooltip */
+.lpd-tooltip {
+  position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  margin-top: 8px; z-index: 20; min-width: 180px;
+  background: var(--bg-card); border: 1.5px solid var(--border-primary);
+  border-radius: 10px; padding: 12px 14px; box-shadow: 0 8px 24px rgba(0,0,0,.4);
+  pointer-events: none;
 }
-.lpd-weak-title {
-  font-size: 15px; font-weight: 700; color: var(--accent-amber);
-  margin-bottom: 14px;
-}
-.lpd-weak-list { display: flex; flex-direction: column; gap: 10px; }
-.lpd-weak-item {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 12px;
-}
-.lpd-weak-info { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1; }
-.lpd-weak-name {
-  font-size: 14px; font-weight: 600; color: var(--text-primary);
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-}
-.lpd-weak-accuracy { font-size: 12px; color: var(--text-muted); }
-.lpd-weak-link {
-  font-size: 13px; font-weight: 600; color: var(--accent-amber);
-  text-decoration: none; white-space: nowrap; flex-shrink: 0;
-}
-.lpd-weak-link:hover { text-decoration: underline; }
+.lpd-tooltip-title { font-size: 13px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
+.lpd-tooltip-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-muted); padding: 2px 0; }
+.lpd-tooltip-row span:last-child { font-weight: 700; color: var(--text-secondary); }
 
 /* Activity bars */
 .lpd-activity { margin-bottom: 24px; }
@@ -6484,9 +6507,10 @@ a.auth-dropdown-item:visited {
 /* Responsive */
 @media (max-width: 768px) {
   .lpd-hero { grid-template-columns: repeat(2, 1fr); }
-  .lpd-topic-grid { grid-template-columns: 1fr; }
-  .lpd-weak-item { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .lpd-insights-row { grid-template-columns: 1fr; }
+  .lpd-topic-grid { grid-template-columns: 1fr 1fr; }
   .lpd-summary-footer { flex-wrap: wrap; }
+  .lpd-mastery-name { min-width: 80px; }
 }
 @media (max-width: 480px) {
   .lpd-hero { gap: 10px; }

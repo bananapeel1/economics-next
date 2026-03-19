@@ -7,6 +7,7 @@ export default function ProgressDashboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [activeSubject, setActiveSubject] = useState(0);
+  const [hoveredTopic, setHoveredTopic] = useState(null);
 
   useEffect(() => {
     fetch('/api/progress/dashboard')
@@ -50,19 +51,40 @@ export default function ProgressDashboard() {
   const { overall, bySubject, dailyActivity, streak, overdueCount, weakestTopics } = data;
   const currentSubject = bySubject[activeSubject];
   const maxDaily = Math.max(...(dailyActivity || []).map(d => d.count), 1);
+  const totalBank = overall.total || 1;
 
-  // Color helper for mastery percentage
   function masteryColor(pct) {
     if (pct >= 70) return 'var(--accent-green)';
-    if (pct >= 40) return 'var(--accent-amber)';
-    return 'var(--accent-red)';
+    if (pct >= 40) return '#f59e0b';
+    return '#ef4444';
   }
+
+  function statusBadge(mastered, learning, total) {
+    if (total === 0) return { label: 'NEW', cls: 'lpd-badge-new' };
+    const pct = Math.round((mastered / total) * 100);
+    if (pct >= 70) return { label: 'MASTERED', cls: 'lpd-badge-mastered' };
+    if (mastered > 0 || learning > 0) return { label: 'LEARNING', cls: 'lpd-badge-learning' };
+    return { label: 'NEW', cls: 'lpd-badge-new' };
+  }
+
+  // Build ranked mastery data for bar chart
+  const allSections = [];
+  if (currentSubject) {
+    for (const unit of currentSubject.units) {
+      for (const sec of unit.sections) {
+        const pct = sec.total > 0 ? Math.round((sec.mastered / sec.total) * 100) : 0;
+        allSections.push({ ...sec, pct });
+      }
+    }
+  }
+  const rankedTopics = [...allSections].sort((a, b) => b.pct - a.pct);
 
   return (
     <div className="lpd-container">
       {/* A. Hero stats row */}
       <div className="lpd-hero">
         <div className="lpd-stat-card">
+          <div className="lpd-ring-dot" style={{ background: masteryColor(overall.masteryPct) }} />
           <div
             className="lpd-ring"
             style={{
@@ -73,24 +95,35 @@ export default function ProgressDashboard() {
               <span className="lpd-ring-pct" style={{ color: masteryColor(overall.masteryPct) }}>
                 {overall.masteryPct}%
               </span>
+              <span className="lpd-ring-sub">MASTERY</span>
             </div>
           </div>
-          <div className="lpd-stat-label">Overall Mastery</div>
+          <div className="lpd-stat-label">OVERALL MASTERY</div>
         </div>
 
         <div className="lpd-stat-card">
+          <div className="lpd-stat-cap">DAY STREAK</div>
           <div className="lpd-stat-value lpd-streak-value">{streak}</div>
-          <div className="lpd-stat-label">Day Streak</div>
+          <div className="lpd-stat-micro">
+            {streak > 0 ? `days in a row 🔥` : 'Start today!'}
+          </div>
+          {streak > 0 && <div className="lpd-stat-hint">↑ Keep it going</div>}
         </div>
 
         <div className="lpd-stat-card">
+          <div className="lpd-stat-cap">DUE FOR REVIEW</div>
           <div className="lpd-stat-value lpd-overdue-value">{overdueCount}</div>
-          <div className="lpd-stat-label">Overdue Cards</div>
+          <div className="lpd-stat-micro">cards overdue</div>
+          <div className="lpd-stat-hint" style={{ color: overdueCount === 0 ? 'var(--accent-green)' : '#f59e0b' }}>
+            {overdueCount === 0 ? '✓ All caught up' : '→ Review now'}
+          </div>
         </div>
 
         <div className="lpd-stat-card">
+          <div className="lpd-stat-cap">REVIEWED</div>
           <div className="lpd-stat-value">{data.recentActivity?.last7days || 0}</div>
-          <div className="lpd-stat-label">Reviewed (7d)</div>
+          <div className="lpd-stat-micro">of {totalBank} this week</div>
+          <div className="lpd-stat-hint">{totalBank > 0 ? `${Math.round(((data.recentActivity?.last7days || 0) / totalBank) * 100)}% of bank` : ''}</div>
         </div>
       </div>
 
@@ -109,52 +142,104 @@ export default function ProgressDashboard() {
         </div>
       )}
 
-      {/* C. Topic mastery grid */}
-      {currentSubject && currentSubject.units.map(unit => (
-        <div className="lpd-unit-group" key={unit.number}>
-          <div className="lpd-unit-title">Unit {unit.number}: {unit.title}</div>
-          <div className="lpd-topic-grid">
-            {unit.sections.map(sec => {
-              const pct = sec.total > 0 ? Math.round((sec.mastered / sec.total) * 100) : 0;
-              const fillColor = masteryColor(pct);
-              return (
-                <div className="lpd-topic-card" key={sec.id}>
-                  <div className="lpd-topic-name">{sec.title}</div>
-                  <div className="lpd-topic-bar">
-                    <div
-                      className="lpd-topic-fill"
-                      style={{ width: `${pct}%`, background: fillColor }}
-                    />
-                  </div>
-                  <div className="lpd-topic-label" style={{ color: fillColor }}>
-                    {sec.mastered}/{sec.total} mastered
-                  </div>
+      {/* NEW: Mastery by Topic + Focus Areas side by side */}
+      <div className="lpd-insights-row">
+        {/* Mastery by Topic bar chart */}
+        <div className="lpd-insight-card">
+          <div className="lpd-insight-title">📊 Mastery by Topic</div>
+          <div className="lpd-mastery-bars">
+            {rankedTopics.map(sec => (
+              <div className="lpd-mastery-row" key={sec.id}>
+                <span className="lpd-mastery-name">{sec.title}</span>
+                <div className="lpd-mastery-track">
+                  <div className="lpd-mastery-fill" style={{ width: `${Math.max(sec.pct, 2)}%`, background: masteryColor(sec.pct) }} />
                 </div>
-              );
-            })}
-          </div>
-        </div>
-      ))}
-
-      {/* D. Weakest topics card */}
-      {weakestTopics && weakestTopics.length > 0 && (
-        <div className="lpd-weak">
-          <div className="lpd-weak-title">Focus Areas</div>
-          <div className="lpd-weak-list">
-            {weakestTopics.map(topic => (
-              <div className="lpd-weak-item" key={topic.sectionId}>
-                <div className="lpd-weak-info">
-                  <span className="lpd-weak-name">{topic.title}</span>
-                  <span className="lpd-weak-accuracy">{topic.accuracy}% mastery</span>
-                </div>
-                <Link href={`/practice?section=${topic.sectionId}`} className="lpd-weak-link">
-                  Practice Now &rarr;
-                </Link>
+                <span className="lpd-mastery-pct" style={{ color: masteryColor(sec.pct) }}>{sec.pct}%</span>
               </div>
             ))}
           </div>
         </div>
-      )}
+
+        {/* Focus Areas with Practice buttons */}
+        <div className="lpd-insight-card">
+          <div className="lpd-insight-title">🎯 Focus Areas</div>
+          {weakestTopics && weakestTopics.length > 0 ? (
+            <div className="lpd-focus-list">
+              {weakestTopics.map(topic => (
+                <div className="lpd-focus-item" key={topic.sectionId}>
+                  <div className="lpd-focus-dot" style={{ background: masteryColor(topic.accuracy) }} />
+                  <div className="lpd-focus-info">
+                    <span className="lpd-focus-name">{topic.title}</span>
+                    <span className="lpd-focus-sub">{topic.accuracy > 0 ? `${topic.accuracy}% mastery` : 'Not started'}</span>
+                  </div>
+                  <Link href={`/practice`} className="lpd-focus-btn">
+                    Practice →
+                  </Link>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="lpd-focus-empty">No weak areas yet. Start practising!</div>
+          )}
+        </div>
+      </div>
+
+      {/* C. Topic mastery grid with status badges + hover tooltips */}
+      {currentSubject && currentSubject.units.map(unit => {
+        const unitSections = unit.sections || [];
+        const unitAvg = unitSections.length > 0
+          ? Math.round(unitSections.reduce((s, sec) => s + (sec.total > 0 ? (sec.mastered / sec.total) * 100 : 0), 0) / unitSections.length)
+          : 0;
+
+        return (
+          <div className="lpd-unit-group" key={unit.number}>
+            <div className="lpd-unit-header">
+              <div className="lpd-unit-badge">{unit.number}</div>
+              <span className="lpd-unit-title">{unit.title.toUpperCase()}</span>
+              <span className="lpd-unit-avg" style={{ color: masteryColor(unitAvg) }}>{unitAvg}% avg</span>
+            </div>
+            <div className="lpd-topic-grid">
+              {unitSections.map(sec => {
+                const pct = sec.total > 0 ? Math.round((sec.mastered / sec.total) * 100) : 0;
+                const fillColor = masteryColor(pct);
+                const badge = statusBadge(sec.mastered, sec.learning, sec.total);
+                const isHovered = hoveredTopic === sec.id;
+
+                return (
+                  <div
+                    className="lpd-topic-card"
+                    key={sec.id}
+                    onMouseEnter={() => setHoveredTopic(sec.id)}
+                    onMouseLeave={() => setHoveredTopic(null)}
+                  >
+                    <div className="lpd-topic-top">
+                      <div className="lpd-topic-name">{sec.title}</div>
+                      <span className={`lpd-badge ${badge.cls}`}>{badge.label}</span>
+                    </div>
+                    <div className="lpd-topic-bar">
+                      <div className="lpd-topic-fill" style={{ width: `${pct}%`, background: fillColor }} />
+                    </div>
+                    <div className="lpd-topic-bottom">
+                      <span className="lpd-topic-label" style={{ color: fillColor }}>{pct}%</span>
+                      <span className="lpd-topic-count">{sec.mastered} / {sec.total} mastered</span>
+                    </div>
+
+                    {/* Hover tooltip */}
+                    {isHovered && (
+                      <div className="lpd-tooltip">
+                        <div className="lpd-tooltip-title">{sec.title}</div>
+                        <div className="lpd-tooltip-row"><span>Mastered</span><span>{sec.mastered}</span></div>
+                        <div className="lpd-tooltip-row"><span>Total</span><span>{sec.total}</span></div>
+                        {sec.lastReviewed && <div className="lpd-tooltip-row"><span>Last reviewed</span><span>{sec.lastReviewed}</span></div>}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        );
+      })}
 
       {/* E. Activity chart */}
       {dailyActivity && dailyActivity.length > 0 && (
@@ -178,7 +263,7 @@ export default function ProgressDashboard() {
         </div>
       )}
 
-      {/* Overall summary footer */}
+      {/* Footer */}
       <div className="lpd-summary-footer">
         <span className="lpd-summary-item lpd-summary-mastered">{overall.mastered} mastered</span>
         <span className="lpd-summary-sep">/</span>
@@ -186,7 +271,7 @@ export default function ProgressDashboard() {
         <span className="lpd-summary-sep">/</span>
         <span className="lpd-summary-item lpd-summary-new">{overall.new} new</span>
         <span className="lpd-summary-sep">/</span>
-        <span className="lpd-summary-item">{overall.total} total questions</span>
+        <span className="lpd-summary-item">{overall.total} total</span>
       </div>
     </div>
   );
