@@ -16,14 +16,18 @@ import ExtrasTab from './ExtrasTab';
 import PaywallOverlay from './PaywallOverlay';
 import AnimatedTabBar from './AnimatedTabBar';
 import LearnModeTab from './LearnModeTab';
+import HomeScreen from './HomeScreen';
 import { SpacedReview, MixedReview, countDueReviews, getDueReviews } from './ReviewMode';
 import { BookAlt, Notes as NotesIcon, ChartHistogram, DrawerAlt, CardsBlank, Quiz as QuizIcon, Mistakes as MistakesIcon, Tutor as TutorIcon, Star, Padlock, LearnMode as LearnModeIcon } from './Icons';
+
+const HomeIcon = () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>;
 
 const FREE_TABS = new Set(['learn-mode', 'content', 'notes', 'diagrams', 'practice']); // content kept for sidebar access
 const PREVIEW_TABS = new Set(['flashcards', 'quiz', 'extras']); // Show preview then full paywall card (signed-in only)
 const PREMIUM_TABS = new Set(['mistakes', 'tutor']); // Full paywall block (no preview)
 
 const allTabs = [
+  { id: 'home', label: 'Home', Icon: HomeIcon },
   { id: 'learn-mode', label: 'Learn', Icon: LearnModeIcon },
   { id: 'notes', label: 'Notes', Icon: NotesIcon },
   { id: 'diagrams', label: 'Diagrams', Icon: ChartHistogram, subjects: ['economics'] },
@@ -255,7 +259,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       : (initialSectionId || subjectSections[0]?.id);
 
   const [activeSection, setActiveSection] = useState(startSection);
-  const [activeTab, setActiveTab] = useState('overview');
+  const [activeTab, setActiveTab] = useState('home');
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   // Feature discovery badges — track which features the user has visited
@@ -657,6 +661,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     const isPreview = PREVIEW_TABS.has(activeTab) && !isPremium;
 
     switch (activeTab) {
+      case 'home': return <HomeScreen subjects={subjects} units={subjectUnits} sections={subjectSections} user={user} isPremium={isPremium} onNavigateToSection={(id) => { setActiveSection(id); setActiveTab('overview'); }} onNavigateToTab={(tab) => setActiveTab(tab)} />;
       case 'overview': return <SectionOverview section={currentSection} unit={currentUnit} sectionData={sectionData} tabs={tabs} onTabSelect={handleTabSelect} isPremium={isPremium} user={user} savedProgress={savedProgress} />;
       case 'learn-mode': {
         // If a review is active, show the review component instead
@@ -739,6 +744,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
           onResourceVisit={markFeatureVisited}
           learnModeCompletions={learnModeCompletions}
           onTabSelect={handleTabSelect}
+          onHomeClick={() => setActiveTab('home')}
         />
 
         <div className="main-content">
