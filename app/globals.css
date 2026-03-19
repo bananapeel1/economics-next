@@ -6160,14 +6160,13 @@ a.auth-dropdown-item:visited {
   min-height: 280px;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   transform-style: preserve-3d;
+  display: grid;
 }
 .sfc-card--flipped .sfc-card-inner {
   transform: rotateY(180deg);
 }
 .sfc-card-face {
-  position: absolute;
-  top: 0;
-  left: 0;
+  grid-area: 1 / 1;
   width: 100%;
   min-height: 280px;
   backface-visibility: hidden;
