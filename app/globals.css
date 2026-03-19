@@ -6131,3 +6131,177 @@ a.auth-dropdown-item:visited {
   .spe-session-label { display: none; }
   .spe-end-session-btn { padding: 6px 10px; font-size: 12px; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+ * SMART FLASHCARDS ENGINE (sfc-)
+ * ═══════════════════════════════════════════════════════════ */
+
+/* ── Container ── */
+.sfc-session { max-width: 800px; margin-left: auto; margin-right: auto; }
+
+/* ── Card wrapper ── */
+.sfc-card-wrapper { max-width: 700px; margin: 0 auto; }
+.sfc-card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.sfc-card-badge { font-size: 13px; font-weight: 600; color: var(--text-muted); padding: 4px 12px; border-radius: 8px; background: rgba(255,255,255,.04); border: 1px solid var(--border-primary); }
+.sfc-card-counter { font-size: 13px; font-weight: 600; color: var(--accent-green); }
+
+/* ── Card flip ── */
+.sfc-card {
+  position: relative;
+  width: 100%;
+  min-height: 280px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  perspective: 1000px;
+}
+.sfc-card-inner {
+  position: relative;
+  width: 100%;
+  min-height: 280px;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+.sfc-card--flipped .sfc-card-inner {
+  transform: rotateY(180deg);
+}
+.sfc-card-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 280px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 20px;
+  padding: 32px 28px;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+.sfc-card-front {
+  z-index: 2;
+}
+.sfc-card-back {
+  transform: rotateY(180deg);
+  background: var(--bg-flashcard-back);
+}
+.sfc-card-label {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+.sfc-card-content {
+  font-size: 17px;
+  color: var(--text-primary);
+  line-height: 1.6;
+  word-break: break-word;
+}
+.sfc-card-content p { margin: 0 0 8px; }
+.sfc-card-content p:last-child { margin-bottom: 0; }
+.sfc-card-content strong { font-weight: 700; }
+.sfc-card-content ul, .sfc-card-content ol { text-align: left; padding-left: 20px; margin: 8px 0; }
+.sfc-card-content li { margin-bottom: 4px; }
+.sfc-card-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 16px;
+  opacity: 0.7;
+}
+
+/* ── Rating buttons ── */
+.sfc-rate-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  animation: sfcFadeIn 0.25s ease;
+}
+.sfc-rate-btn {
+  flex: 1;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.15s;
+}
+.sfc-rate-icon {
+  font-size: 16px;
+  font-weight: 800;
+}
+.sfc-rate-learning {
+  background: rgba(239,68,68,.12);
+  color: #ef4444;
+  border: 1.5px solid rgba(239,68,68,.25);
+}
+.sfc-rate-learning:hover {
+  background: rgba(239,68,68,.2);
+  border-color: rgba(239,68,68,.4);
+}
+.sfc-rate-known {
+  background: rgba(16,185,129,.12);
+  color: var(--accent-green);
+  border: 1.5px solid rgba(16,185,129,.25);
+}
+.sfc-rate-known:hover {
+  background: rgba(16,185,129,.2);
+  border-color: rgba(16,185,129,.4);
+}
+
+/* ── Skip button ── */
+.sfc-skip-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  display: block;
+  margin: 0 auto;
+}
+.sfc-skip-btn:hover { color: var(--text-secondary); }
+
+/* ── Chain type rendering ── */
+.sfc-chain-front { width: 100%; }
+.sfc-chain-back { width: 100%; }
+.sfc-chain-back .sfc-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+/* ── Animations ── */
+@keyframes sfcSlideIn { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes sfcFadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.sfc-card-animate { animation: sfcSlideIn 0.3s ease-out; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .sfc-card { min-height: 240px; }
+  .sfc-card-inner { min-height: 240px; }
+  .sfc-card-face { min-height: 240px; padding: 24px 20px; }
+  .sfc-card-content { font-size: 15px; }
+  .sfc-rate-btn { padding: 12px; font-size: 14px; }
+}
+@media (max-width: 480px) {
+  .sfc-card { min-height: 200px; }
+  .sfc-card-inner { min-height: 200px; }
+  .sfc-card-face { min-height: 200px; padding: 20px 16px; border-radius: 16px; }
+  .sfc-rate-row { gap: 8px; }
+  .sfc-rate-btn { padding: 10px; font-size: 13px; }
+}
