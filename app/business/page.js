@@ -129,7 +129,7 @@ export default function BusinessPage() {
             ))}
           </div>
           <Link href={`/?section=${unit.firstSection}`} className="seo-unit-link">
-            Start revising Unit {unit.number} in the App &rarr;
+            Start revising Unit {unit.number} &rarr;
           </Link>
         </div>
       ))}

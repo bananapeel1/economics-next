@@ -93,7 +93,7 @@ export default function EconomicsPage() {
           ))}
         </div>
         <Link href="/?section=introductory-concepts" className="seo-unit-link">
-          Start revising Unit 1 in the App &rarr;
+          Start revising Unit 1 &rarr;
         </Link>
       </div>
 
@@ -111,7 +111,7 @@ export default function EconomicsPage() {
           ))}
         </div>
         <Link href="/?section=measures-economic-performance" className="seo-unit-link">
-          Start revising Unit 2 in the App &rarr;
+          Start revising Unit 2 &rarr;
         </Link>
       </div>
 
@@ -129,7 +129,7 @@ export default function EconomicsPage() {
           ))}
         </div>
         <Link href="/?section=types-sizes-businesses" className="seo-unit-link">
-          Start revising Unit 3 in the App &rarr;
+          Start revising Unit 3 &rarr;
         </Link>
       </div>
 
@@ -147,7 +147,7 @@ export default function EconomicsPage() {
           ))}
         </div>
         <Link href="/?section=causes-effects-globalisation" className="seo-unit-link">
-          Start revising Unit 4 in the App &rarr;
+          Start revising Unit 4 &rarr;
         </Link>
       </div>
 
