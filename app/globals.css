@@ -6628,10 +6628,12 @@ a.auth-dropdown-item:visited {
 
 /* --- Hero --- */
 .elp-hero {
-  padding: 140px 32px 80px; max-width: 1100px; margin: 0 auto;
+  padding: 40px 32px 80px; max-width: 1100px; margin: 0 auto;
   display: grid; grid-template-columns: 1fr 420px;
   gap: 60px; align-items: center;
 }
+.elp-back-link { display: inline-block; font-size: 13px; color: var(--elp-tx-c); text-decoration: none; margin-bottom: 20px; transition: color .15s; }
+.elp-back-link:hover { color: var(--elp-green); }
 .elp-hero-eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
   background: var(--elp-g-bg); border: 1px solid var(--elp-g-bd);

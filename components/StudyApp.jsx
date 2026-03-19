@@ -211,13 +211,25 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
 export default function StudyApp({ subjects, sections, units, initialSectionData, initialSectionId }) {
   const { user, isPremium } = useAuth();
 
-  // Subject state — restore last-visited subject if available
+  // Subject state — if URL has ?section=, find which subject it belongs to
+  const urlSectionParam = typeof window !== 'undefined'
+    ? new URLSearchParams(window.location.search).get('section')
+    : null;
+  const subjectForUrlSection = urlSectionParam
+    ? (() => {
+        const sec = sections.find(s => s.id === urlSectionParam);
+        if (!sec) return null;
+        const unit = units.find(u => u.id === sec.unit_id);
+        return unit ? subjects.find(s => s.id === unit.subject_id)?.id : null;
+      })()
+    : null;
+
   const savedSubjectId = typeof window !== 'undefined'
     ? localStorage.getItem('last-visited-subject')
     : null;
-  const initialSubjectId = (savedSubjectId && subjects.some(s => s.id === savedSubjectId))
-    ? savedSubjectId
-    : (subjects[0]?.id || null);
+  const initialSubjectId = subjectForUrlSection
+    || (savedSubjectId && subjects.some(s => s.id === savedSubjectId) ? savedSubjectId : null)
+    || (subjects[0]?.id || null);
   const [activeSubjectId, setActiveSubjectId] = useState(initialSubjectId);
   const activeSubject = subjects.find(s => s.id === activeSubjectId) || subjects[0];
 
@@ -701,7 +713,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     <>
       <div className="mobile-header">
         <button className="hamburger" onClick={() => setSidebarOpen(true)}>&#9776;</button>
-        <span className="mobile-title">{currentSection?.short_title}</span>
+        <span className="mobile-title">{currentSection?.short_title || 'Revvy Learn'}</span>
         <div className="mobile-header-actions">
           <AuthButton />
         </div>

@@ -111,27 +111,11 @@ export default function EconomicsPage() {
       {/* Scroll progress bar (client component) */}
       <EconomicsScrollBar />
 
-      {/* Nav */}
-      <nav className="elp-nav">
-        <Link href="/" className="elp-nav-logo">
-          <span className="elp-nav-dot" />
-          Revvy Learn
-        </Link>
-        <div className="elp-nav-sep" />
-        <div className="elp-nav-crumb">
-          Economics <span>/ Revision Notes</span>
-        </div>
-        <div className="elp-nav-right">
-          <Link href="/business" className="elp-nav-link">Business</Link>
-          <Link href="/" className="elp-nav-link">App</Link>
-          <Link href="/" className="elp-nav-cta">Start revising free &rarr;</Link>
-        </div>
-      </nav>
-
       {/* Hero */}
       <section>
         <div className="elp-hero">
           <div className="elp-fade-up">
+            <Link href="/" className="elp-back-link">&larr; Back to App</Link>
             <div className="elp-hero-eyebrow">Edexcel IAL &middot; WEC11, WEC12, WEC13, WEC14</div>
             <h1 className="elp-hero-title">
               Economics revision<br />that <em>actually sticks</em>
