@@ -259,7 +259,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       : (initialSectionId || subjectSections[0]?.id);
 
   const [activeSection, setActiveSection] = useState(startSection);
-  const [activeTab, setActiveTab] = useState('home');
+  const [activeTab, setActiveTab] = useState('overview');
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   // Feature discovery badges — track which features the user has visited
