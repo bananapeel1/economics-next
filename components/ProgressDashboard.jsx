@@ -8,6 +8,7 @@ export default function ProgressDashboard() {
   const [error, setError] = useState(null);
   const [activeSubject, setActiveSubject] = useState(0);
   const [hoveredTopic, setHoveredTopic] = useState(null);
+  const [expandedUnits, setExpandedUnits] = useState(new Set([1])); // Unit 1 expanded by default
 
   useEffect(() => {
     fetch('/api/progress/dashboard')
@@ -184,58 +185,75 @@ export default function ProgressDashboard() {
         </div>
       </div>
 
-      {/* C. Topic mastery grid with status badges + hover tooltips */}
+      {/* C. Topic mastery grid — collapsible units, Unit 1 expanded by default */}
       {currentSubject && currentSubject.units.map(unit => {
         const unitSections = unit.sections || [];
         const unitAvg = unitSections.length > 0
           ? Math.round(unitSections.reduce((s, sec) => s + (sec.total > 0 ? (sec.mastered / sec.total) * 100 : 0), 0) / unitSections.length)
           : 0;
+        const isExpanded = expandedUnits.has(unit.number);
 
         return (
-          <div className="lpd-unit-group" key={unit.number}>
-            <div className="lpd-unit-header">
+          <div className={`lpd-unit-group${isExpanded ? ' lpd-unit-group--open' : ''}`} key={unit.number}>
+            <div
+              className="lpd-unit-header"
+              onClick={() => setExpandedUnits(prev => {
+                const next = new Set(prev);
+                if (next.has(unit.number)) next.delete(unit.number);
+                else next.add(unit.number);
+                return next;
+              })}
+              style={{ cursor: 'pointer' }}
+            >
               <div className="lpd-unit-badge">{unit.number}</div>
               <span className="lpd-unit-title">{unit.title.toUpperCase()}</span>
               <span className="lpd-unit-avg" style={{ color: masteryColor(unitAvg) }}>{unitAvg}% avg</span>
+              <span className={`lpd-unit-chevron${isExpanded ? ' lpd-unit-chevron--open' : ''}`}>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </span>
             </div>
-            <div className="lpd-topic-grid">
-              {unitSections.map(sec => {
-                const pct = sec.total > 0 ? Math.round((sec.mastered / sec.total) * 100) : 0;
-                const fillColor = masteryColor(pct);
-                const badge = statusBadge(sec.mastered, sec.learning, sec.total);
-                const isHovered = hoveredTopic === sec.id;
+            <div className={`lpd-topic-grid-wrap${isExpanded ? ' lpd-topic-grid-wrap--open' : ''}`}>
+              <div className="lpd-topic-grid">
+                {unitSections.map(sec => {
+                  const pct = sec.total > 0 ? Math.round((sec.mastered / sec.total) * 100) : 0;
+                  const fillColor = masteryColor(pct);
+                  const badge = statusBadge(sec.mastered, sec.learning, sec.total);
+                  const isHovered = hoveredTopic === sec.id;
 
-                return (
-                  <div
-                    className="lpd-topic-card"
-                    key={sec.id}
-                    onMouseEnter={() => setHoveredTopic(sec.id)}
-                    onMouseLeave={() => setHoveredTopic(null)}
-                  >
-                    <div className="lpd-topic-top">
-                      <div className="lpd-topic-name">{sec.title}</div>
-                      <span className={`lpd-badge ${badge.cls}`}>{badge.label}</span>
-                    </div>
-                    <div className="lpd-topic-bar">
-                      <div className="lpd-topic-fill" style={{ width: `${pct}%`, background: fillColor }} />
-                    </div>
-                    <div className="lpd-topic-bottom">
-                      <span className="lpd-topic-label" style={{ color: fillColor }}>{pct}%</span>
-                      <span className="lpd-topic-count">{sec.mastered} / {sec.total} mastered</span>
-                    </div>
-
-                    {/* Hover tooltip */}
-                    {isHovered && (
-                      <div className="lpd-tooltip">
-                        <div className="lpd-tooltip-title">{sec.title}</div>
-                        <div className="lpd-tooltip-row"><span>Mastered</span><span>{sec.mastered}</span></div>
-                        <div className="lpd-tooltip-row"><span>Total</span><span>{sec.total}</span></div>
-                        {sec.lastReviewed && <div className="lpd-tooltip-row"><span>Last reviewed</span><span>{sec.lastReviewed}</span></div>}
+                  return (
+                    <div
+                      className="lpd-topic-card"
+                      key={sec.id}
+                      onMouseEnter={() => setHoveredTopic(sec.id)}
+                      onMouseLeave={() => setHoveredTopic(null)}
+                    >
+                      <div className="lpd-topic-top">
+                        <div className="lpd-topic-name">{sec.title}</div>
+                        <span className={`lpd-badge ${badge.cls}`}>{badge.label}</span>
                       </div>
-                    )}
-                  </div>
-                );
-              })}
+                      <div className="lpd-topic-bar">
+                        <div className="lpd-topic-fill" style={{ width: `${pct}%`, background: fillColor }} />
+                      </div>
+                      <div className="lpd-topic-bottom">
+                        <span className="lpd-topic-label" style={{ color: fillColor }}>{pct}%</span>
+                        <span className="lpd-topic-count">{sec.mastered} / {sec.total} mastered</span>
+                      </div>
+
+                      {/* Hover tooltip */}
+                      {isHovered && (
+                        <div className="lpd-tooltip">
+                          <div className="lpd-tooltip-title">{sec.title}</div>
+                          <div className="lpd-tooltip-row"><span>Mastered</span><span>{sec.mastered}</span></div>
+                          <div className="lpd-tooltip-row"><span>Total</span><span>{sec.total}</span></div>
+                          {sec.lastReviewed && <div className="lpd-tooltip-row"><span>Last reviewed</span><span>{sec.lastReviewed}</span></div>}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         );
