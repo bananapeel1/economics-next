@@ -1,8 +1,7 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { buildQueue, computeNextReview, createDefaultProgress } from '@/lib/spaced-repetition';
-import TopicSelector from '@/components/practice/TopicSelector';
 import QuestionCard from '@/components/practice/QuestionCard';
 import SessionSummary from '@/components/practice/SessionSummary';
 
@@ -33,13 +32,237 @@ function saveLocalProgress(key, progressObj) {
   }
 }
 
+/* ─── Subject icon & area maps ─── */
+
+const SUBJECT_ICONS = {
+  economics: '\u{1F4C8}',
+  business: '\u{1F3E2}',
+};
+
+const SUBJECT_AREAS = {
+  economics: 'Micro, Macro, Global',
+  business: 'Marketing, Finance, HR, Operations',
+};
+
+function getSubjectIcon(slug) {
+  return SUBJECT_ICONS[slug] || '\u{1F4D6}';
+}
+
+function getSubjectAreas(slug) {
+  return SUBJECT_AREAS[slug] || '';
+}
+
+/* ─── Chip underline color palette ─── */
+
+const CHIP_COLORS = ['#3b82f6', '#f59e0b', '#10b981', '#ef4444', '#8b5cf6', '#ec4899'];
+
+/* ─── SubjectStep (inline) ─── */
+
+function SubjectStep({ subjects, units, sections, onSelectSubject }) {
+  // Count units and sections per subject
+  const subjectStats = useMemo(() => {
+    const stats = {};
+    for (const sub of subjects) {
+      const subUnits = units.filter(u => u.subject_id === sub.id);
+      const subSections = sections.filter(s =>
+        subUnits.some(u => u.id === s.unit_id)
+      );
+      stats[sub.slug] = {
+        unitCount: subUnits.length,
+        sectionCount: subSections.length,
+      };
+    }
+    return stats;
+  }, [subjects, units, sections]);
+
+  return (
+    <div className="spe-subject-step">
+      <div className="spe-step-label">STEP 1 OF 2</div>
+      <h1 className="spe-step-heading">What are you studying?</h1>
+      <p className="spe-step-subtitle">Choose a subject &mdash; you&rsquo;ll pick specific topics next.</p>
+      <div className="spe-subject-cards">
+        {subjects.map(sub => {
+          const stats = subjectStats[sub.slug] || { unitCount: 0, sectionCount: 0 };
+          const icon = getSubjectIcon(sub.slug);
+          const areas = getSubjectAreas(sub.slug);
+          return (
+            <button
+              key={sub.slug}
+              className="spe-subject-card"
+              onClick={() => onSelectSubject(sub.slug)}
+            >
+              <span className="spe-subject-card-icon">{icon}</span>
+              <span className="spe-subject-card-name">{sub.name}</span>
+              <span className="spe-subject-card-desc">Edexcel IAL &middot; Units 1&ndash;4</span>
+              {areas && <span className="spe-subject-card-desc2">{areas}</span>}
+              <span className="spe-subject-card-badge">
+                {stats.unitCount} units &middot; {stats.sectionCount} topics
+              </span>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+/* ─── TopicStep (inline) ─── */
+
+function TopicStep({
+  subject,
+  units: allUnits,
+  sections: allSections,
+  selectedSectionIds,
+  onToggleSection,
+  onToggleUnit,
+  onSelectAll,
+  onClearAll,
+  onBack,
+  onStart,
+  loading,
+}) {
+  const [expandedUnits, setExpandedUnits] = useState(new Set());
+
+  const filteredUnits = useMemo(
+    () => (subject ? allUnits.filter(u => u.subject_id === subject.id) : []),
+    [allUnits, subject]
+  );
+
+  const sectionsByUnit = useMemo(() => {
+    const map = {};
+    for (const unit of filteredUnits) {
+      map[unit.id] = allSections.filter(s => s.unit_id === unit.id);
+    }
+    return map;
+  }, [filteredUnits, allSections]);
+
+  const selectionCount = selectedSectionIds.size;
+
+  const toggleExpand = useCallback((unitId) => {
+    setExpandedUnits(prev => {
+      const next = new Set(prev);
+      if (next.has(unitId)) {
+        next.delete(unitId);
+      } else {
+        next.add(unitId);
+      }
+      return next;
+    });
+  }, []);
+
+  // Track a running chip index across all units for color cycling
+  let globalChipIndex = 0;
+
+  return (
+    <div className="spe-topic-step">
+      <button className="spe-back-link" onClick={onBack}>
+        &larr; Change subject
+      </button>
+
+      <div className="spe-topic-header">
+        <div>
+          <h1 className="spe-topic-heading">{subject.name}</h1>
+          <p className="spe-topic-subtitle">Select the topics you want to be assessed on</p>
+        </div>
+        <div className="spe-topic-header-actions">
+          <button className="spe-pill-btn" onClick={onSelectAll}>Select all</button>
+          <button className="spe-pill-btn" onClick={onClearAll}>Clear all</button>
+        </div>
+      </div>
+
+      {/* Unit accordion cards */}
+      <div className="spe-units">
+        {filteredUnits.map(unit => {
+          const unitSections = sectionsByUnit[unit.id] || [];
+          if (unitSections.length === 0) return null;
+
+          const selectedCount = unitSections.filter(s => selectedSectionIds.has(s.id)).length;
+          const totalCount = unitSections.length;
+          const isExpanded = expandedUnits.has(unit.id);
+
+          // Save starting chip index for this unit
+          const unitStartIndex = globalChipIndex;
+          globalChipIndex += unitSections.length;
+
+          return (
+            <div key={unit.id} className="spe-unit-card">
+              {/* Unit header row */}
+              <div className="spe-unit-header" onClick={() => toggleExpand(unit.id)}>
+                <div className="spe-unit-header-left">
+                  <span className="spe-unit-badge">{unit.number}</span>
+                  <span className="spe-unit-title">{unit.title}</span>
+                </div>
+                <div className="spe-unit-header-right">
+                  <span className="spe-unit-counter-pill">
+                    {selectedCount} / {totalCount}
+                  </span>
+                  <span className={`spe-unit-chevron${isExpanded ? ' spe-unit-chevron--open' : ''}`}>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+
+              {/* Section chips grid */}
+              <div className={`spe-section-grid${isExpanded ? ' spe-section-grid--open' : ''}`}>
+                <div className="spe-section-grid-inner">
+                  {unitSections.map((sec, i) => {
+                    const isSelected = selectedSectionIds.has(sec.id);
+                    const chipColor = CHIP_COLORS[(unitStartIndex + i) % CHIP_COLORS.length];
+                    return (
+                      <button
+                        key={sec.id}
+                        className={`spe-section-chip${isSelected ? ' spe-section-chip--active' : ''}`}
+                        onClick={() => onToggleSection(sec.id)}
+                        style={{
+                          borderBottom: `3px solid ${isSelected ? '#22c55e' : chipColor}`,
+                        }}
+                      >
+                        {sec.short_title || sec.title}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Sticky start bar */}
+      <div className="spe-action-bar">
+        <div className="spe-action-bar-inner">
+          <span className="spe-action-count">
+            <span className="spe-action-count-num">{selectionCount}</span>
+            {' '}topic{selectionCount !== 1 ? 's' : ''} selected
+          </span>
+          <button
+            className="spe-start-btn"
+            disabled={selectionCount === 0 || loading}
+            onClick={onStart}
+          >
+            {loading ? (
+              <span className="spe-start-btn-loading">
+                <span className="spe-spinner" />
+                Loading...
+              </span>
+            ) : (
+              <>Start Practice &rarr;</>
+            )}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /* ─── PracticeEngine ─── */
 
 export default function PracticeEngine({ subjects, units, sections, isLoggedIn }) {
-  const [phase, setPhase] = useState('setup');
-  const [selectedSubjectSlug, setSelectedSubjectSlug] = useState(
-    subjects[0]?.slug || ''
-  );
+  const [phase, setPhase] = useState('setup');        // 'setup' | 'session' | 'summary'
+  const [setupStep, setSetupStep] = useState(1);      // 1 = subject-select, 2 = topic-select
+  const [selectedSubjectSlug, setSelectedSubjectSlug] = useState('');
   const [selectedSectionIds, setSelectedSectionIds] = useState(new Set());
   const [quizData, setQuizData] = useState({});
   const [progressMap, setProgressMap] = useState({});
@@ -49,10 +272,37 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
   const [loading, setLoading] = useState(false);
   const [questionKey, setQuestionKey] = useState(0);
 
+  /* ─── Derived data ─── */
+
+  const selectedSubject = useMemo(
+    () => subjects.find(s => s.slug === selectedSubjectSlug) || null,
+    [subjects, selectedSubjectSlug]
+  );
+
+  const filteredUnits = useMemo(
+    () => (selectedSubject ? units.filter(u => u.subject_id === selectedSubject.id) : []),
+    [units, selectedSubject]
+  );
+
+  const sectionsByUnit = useMemo(() => {
+    const map = {};
+    for (const unit of filteredUnits) {
+      map[unit.id] = sections.filter(s => s.unit_id === unit.id);
+    }
+    return map;
+  }, [filteredUnits, sections]);
+
   /* ─── Setup callbacks ─── */
 
-  const handleSubjectChange = useCallback((slug) => {
+  const handleSelectSubject = useCallback((slug) => {
     setSelectedSubjectSlug(slug);
+    setSelectedSectionIds(new Set());
+    setSetupStep(2);
+  }, []);
+
+  const handleBackToSubject = useCallback(() => {
+    setSetupStep(1);
+    setSelectedSubjectSlug('');
     setSelectedSectionIds(new Set());
   }, []);
 
@@ -66,6 +316,41 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
       }
       return next;
     });
+  }, []);
+
+  const handleToggleUnit = useCallback(
+    (unitId) => {
+      const unitSections = sectionsByUnit[unitId] || [];
+      const allSelected = unitSections.every(s => selectedSectionIds.has(s.id));
+
+      setSelectedSectionIds(prev => {
+        const next = new Set(prev);
+        for (const sec of unitSections) {
+          if (allSelected) {
+            next.delete(sec.id);
+          } else {
+            next.add(sec.id);
+          }
+        }
+        return next;
+      });
+    },
+    [sectionsByUnit, selectedSectionIds]
+  );
+
+  const handleSelectAll = useCallback(() => {
+    const allIds = new Set();
+    for (const unit of filteredUnits) {
+      const unitSections = sectionsByUnit[unit.id] || [];
+      for (const sec of unitSections) {
+        allIds.add(sec.id);
+      }
+    }
+    setSelectedSectionIds(allIds);
+  }, [filteredUnits, sectionsByUnit]);
+
+  const handleClearAll = useCallback(() => {
+    setSelectedSectionIds(new Set());
   }, []);
 
   /* ─── Start session ─── */
@@ -137,7 +422,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
   /* ─── Answer handler ─── */
 
   const handleAnswer = useCallback(
-    async ({ correct, confidence }) => {
+    async ({ correct }) => {
       const item = queue[currentIndex];
       if (!item) return;
 
@@ -148,8 +433,8 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
         progressMap[key] ||
         createDefaultProgress(item.sectionId, item.questionIndex);
 
-      // Compute next review
-      const updated = computeNextReview(current, correct, confidence);
+      // Compute next review (no confidence parameter)
+      const updated = computeNextReview(current, correct);
 
       // Save progress
       if (isLoggedIn) {
@@ -183,12 +468,23 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
           sectionId: item.sectionId,
           questionIndex: item.questionIndex,
           correct,
-          confidence,
         },
       ]);
     },
     [queue, currentIndex, progressMap, isLoggedIn]
   );
+
+  /* ─── Skip question (no recording) ─── */
+
+  const handleSkip = useCallback(() => {
+    const nextIdx = currentIndex + 1;
+    if (nextIdx >= queue.length) {
+      setPhase('summary');
+    } else {
+      setCurrentIndex(nextIdx);
+      setQuestionKey(Date.now());
+    }
+  }, [currentIndex, queue.length]);
 
   /* ─── Next question ─── */
 
@@ -202,19 +498,23 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
     }
   }, [currentIndex, queue.length]);
 
+  /* ─── End session early ─── */
+
+  const handleEndSession = useCallback(() => {
+    setPhase('summary');
+  }, []);
+
   /* ─── Restart ─── */
 
   const handleRestart = useCallback(() => {
     setPhase('setup');
+    setSetupStep(1);
     setQueue([]);
     setCurrentIndex(0);
     setSessionResults([]);
     setQuestionKey(0);
-    // Keep selectedSectionIds so user doesn't have to re-pick
-  }, []);
-
-  const handleHome = useCallback(() => {
-    window.location.href = '/';
+    setSelectedSubjectSlug('');
+    setSelectedSectionIds(new Set());
   }, []);
 
   /* ─── Section title lookup ─── */
@@ -229,22 +529,38 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
 
   /* ─── Render ─── */
 
+  // Setup phase
   if (phase === 'setup') {
+    if (setupStep === 1) {
+      return (
+        <SubjectStep
+          subjects={subjects}
+          units={units}
+          sections={sections}
+          onSelectSubject={handleSelectSubject}
+        />
+      );
+    }
+
+    // setupStep === 2
     return (
-      <TopicSelector
-        subjects={subjects}
+      <TopicStep
+        subject={selectedSubject}
         units={units}
         sections={sections}
-        selectedSubjectSlug={selectedSubjectSlug}
-        onSubjectChange={handleSubjectChange}
         selectedSectionIds={selectedSectionIds}
         onToggleSection={handleToggleSection}
+        onToggleUnit={handleToggleUnit}
+        onSelectAll={handleSelectAll}
+        onClearAll={handleClearAll}
+        onBack={handleBackToSubject}
         onStart={handleStart}
         loading={loading}
       />
     );
   }
 
+  // Session phase
   if (phase === 'session') {
     const item = queue[currentIndex];
 
@@ -266,7 +582,10 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
       <div className="spe-session">
         {/* Top bar with progress */}
         <div className="spe-session-top">
-          <button className="spe-back-btn" onClick={handleRestart}>&#x2715;</button>
+          <div className="spe-session-top-left">
+            <span className="spe-session-dot" />
+            <span className="spe-session-label">Practice</span>
+          </div>
           <div className="spe-progress-bar">
             <div
               className="spe-progress-fill"
@@ -274,8 +593,11 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
             />
           </div>
           <span className="spe-progress-count">
-            {currentIndex + 1}/{queue.length}
+            {currentIndex + 1} / {queue.length}
           </span>
+          <button className="spe-end-session-btn" onClick={handleEndSession}>
+            End session
+          </button>
         </div>
 
         {/* Question with animation key */}
@@ -287,12 +609,14 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
             totalQuestions={queue.length}
             onAnswer={handleAnswer}
             onNext={handleNext}
+            onSkip={handleSkip}
           />
         </div>
       </div>
     );
   }
 
+  // Summary phase
   if (phase === 'summary') {
     return (
       <SessionSummary
