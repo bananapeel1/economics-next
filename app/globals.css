@@ -6315,18 +6315,22 @@ a.auth-dropdown-item:visited {
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
-  .sfc-card { min-height: 240px; }
-  .sfc-card-inner { min-height: 240px; }
-  .sfc-card-face { min-height: 240px; padding: 24px 20px; }
+  .sfc-card { min-height: 220px; }
+  .sfc-card-inner { min-height: 220px; }
+  .sfc-card-face { min-height: 220px; padding: 28px 22px; }
   .sfc-card-content { font-size: 15px; }
-  .sfc-rate-btn { padding: 12px; font-size: 14px; }
+  .sfc-card-hint { font-size: 13px; margin-top: 20px; }
+  .sfc-rate-row { gap: 10px; margin-top: 4px; }
+  .sfc-rate-btn { padding: 16px 14px; font-size: 15px; border-radius: 14px; min-height: 52px; }
+  .sfc-rate-key { display: none; }
+  .sfc-skip-btn { padding: 14px; font-size: 14px; margin-top: 8px; }
 }
 @media (max-width: 480px) {
   .sfc-card { min-height: 200px; }
   .sfc-card-inner { min-height: 200px; }
-  .sfc-card-face { min-height: 200px; padding: 20px 16px; border-radius: 16px; }
+  .sfc-card-face { min-height: 200px; padding: 24px 18px; border-radius: 16px; }
   .sfc-rate-row { gap: 8px; }
-  .sfc-rate-btn { padding: 10px; font-size: 13px; }
+  .sfc-rate-btn { padding: 18px 12px; font-size: 15px; min-height: 56px; }
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -6679,15 +6683,14 @@ a.auth-dropdown-item:visited {
 /* --- Buttons --- */
 .elp-btn-primary {
   display: inline-flex; align-items: center; gap: 8px;
-  padding: 13px 26px; background: var(--elp-green); border-radius: 10px;
-  font-size: 15px; font-weight: 700; color: #071a0d;
+  padding: 13px 26px; background: #16a34a; border-radius: 10px;
+  font-size: 15px; font-weight: 700; color: #fff;
   transition: all .2s; border: none; cursor: pointer;
   font-family: var(--elp-font);
-  box-shadow: 0 2px 16px rgba(34,197,94,.2);
 }
 .elp-btn-primary:hover {
-  background: #16a34a; transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(34,197,94,.3);
+  background: #15803d; transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(22,163,74,.25);
 }
 .elp-btn-secondary {
   display: inline-flex; align-items: center; gap: 8px;
