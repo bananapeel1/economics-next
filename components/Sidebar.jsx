@@ -157,11 +157,6 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
           Smart Flashcards
           <span className="new-badge">New</span>
         </Link>
-        <Link href="/progress" className="sidebar-resource-link">
-          <span className="sidebar-resource-icon"><ProgressChart size={16} /></span>
-          Progress
-          <span className="new-badge">New</span>
-        </Link>
         {onTabSelect && (
           <button className="sidebar-resource-link sidebar-content-link" onClick={() => onTabSelect('content')}>
             <span className="sidebar-resource-icon"><BookAlt size={16} /></span>
@@ -203,6 +198,16 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
             </Link>
           </>
         )}
+      </div>
+
+      {/* Profile section */}
+      <div className="sidebar-break-time">
+        <div className="sidebar-break-title">Profile</div>
+        <Link href="/progress" className="sidebar-resource-link">
+          <span className="sidebar-resource-icon"><ProgressChart size={16} /></span>
+          Learning Progress
+          <span className="new-badge">New</span>
+        </Link>
       </div>
 
       {/* Fun section */}
