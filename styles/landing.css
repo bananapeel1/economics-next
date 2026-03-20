@@ -561,7 +561,8 @@
 .eup-topic-block { margin-bottom: 52px; scroll-margin-top: 116px; }
 .eup-topic-label-row { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
 .eup-topic-ref-badge { font-family: var(--elp-mono); font-size: 11px; font-weight: 600; color: var(--eup-accent); background: var(--eup-accent-bg); border: 1px solid var(--eup-accent-bd); border-radius: 5px; padding: 3px 9px; flex-shrink: 0; }
-.eup-topic-heading { font-family: var(--elp-display); font-size: 22px; color: var(--elp-tx); flex: 1; }
+.eup-topic-heading { font-family: var(--elp-display); font-size: 22px; color: var(--elp-tx); flex: 1; text-decoration: none; transition: color .15s; }
+.eup-topic-heading:hover { color: var(--eup-accent); }
 .eup-topic-open-link { display: flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 600; color: var(--eup-accent); padding: 6px 14px; background: var(--eup-accent-bg); border: 1px solid var(--eup-accent-bd); border-radius: 8px; transition: all .15s; flex-shrink: 0; }
 .eup-topic-open-link:hover { box-shadow: 0 0 14px var(--eup-accent-glow); }
 .eup-topic-desc { font-size: 13.5px; color: var(--elp-tx-c); line-height: 1.65; margin-bottom: 18px; max-width: 680px; }
@@ -569,7 +570,7 @@
 
 /* Subtopic grid */
 .eup-subtopic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-.eup-subtopic-tile { background: var(--elp-bg2); border: 1.5px solid var(--elp-bd); border-radius: 10px; padding: 14px 16px; display: flex; align-items: flex-start; gap: 12px; transition: all .15s; position: relative; overflow: hidden; }
+.eup-subtopic-tile { background: var(--elp-bg2); border: 1.5px solid var(--elp-bd); border-radius: 10px; padding: 14px 16px; display: flex; align-items: flex-start; gap: 12px; transition: all .15s; position: relative; overflow: hidden; text-decoration: none; color: inherit; cursor: pointer; }
 .eup-subtopic-tile::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, var(--eup-accent-bg), transparent); opacity: 0; transition: opacity .2s; }
 .eup-subtopic-tile:hover { border-color: var(--eup-accent-bd); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,.25); }
 .eup-subtopic-tile:hover::before { opacity: 1; }

@@ -204,19 +204,19 @@ export default function Unit1Page() {
             <div className="eup-topic-block elp-fade-up" id={`t-${section.ref.replace(/\./g, '')}`}>
               <div className="eup-topic-label-row">
                 <div className="eup-topic-ref-badge">{section.ref}</div>
-                <div className="eup-topic-heading">{section.title}</div>
+                <Link href={`/?section=${section.id}`} className="eup-topic-heading">{section.title}</Link>
                 <Link className="eup-topic-open-link" href={`/?section=${section.id}`}>Open in app &rarr;</Link>
               </div>
               <p className="eup-topic-desc">{section.desc}</p>
               <div className="eup-subtopic-grid">
                 {section.subtopics.map(st => (
-                  <div key={st.letter} className="eup-subtopic-tile">
+                  <Link key={st.letter} href={`/?section=${section.id}`} className="eup-subtopic-tile">
                     <div className="eup-st-num">{st.letter}</div>
                     <div className="eup-st-body">
                       <div className="eup-st-name">{st.name}</div>
                       <div className="eup-st-keywords">{st.kw}</div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
