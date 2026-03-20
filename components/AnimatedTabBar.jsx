@@ -96,7 +96,7 @@ function AnimatedTab({ tab, isActive, isPremium, onClick, isNew, isTopicComplete
         <span className="tab-icon">
           <tab.Icon size={16} />
         </span>
-        {tab.label}
+        {tab.id !== 'home' && tab.label}
         {isLocked && <span className="tab-lock-icon"><Padlock size={12} /></span>}
         {isNew && !isLocked && <span className="new-badge">New</span>}
         {isTopicComplete && <span className="learn-mode-complete-dot" />}

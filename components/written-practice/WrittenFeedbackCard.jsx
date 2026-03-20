@@ -7,6 +7,48 @@ const GRADE_CONFIG = {
   weak:      { icon: '📚', label: 'Needs Work', colorClass: 'wap-grade-weak' },
 };
 
+const AO_LABELS = {
+  ao1: { label: 'AO1 Knowledge', color: '#3b82f6' },
+  ao2: { label: 'AO2 Application', color: '#22c55e' },
+  ao3: { label: 'AO3 Analysis', color: '#f59e0b' },
+  ao4: { label: 'AO4 Evaluation', color: '#a78bfa' },
+};
+
+function AOBreakdown({ feedback, marks }) {
+  const aoKeys = ['ao1', 'ao2', 'ao3', 'ao4'];
+  const hasAO = aoKeys.some(k => feedback[k] && feedback[k].max > 0);
+  if (!hasAO) return null;
+
+  return (
+    <div className="wap-ao-breakdown">
+      <h4 className="wap-section-title" style={{ color: 'var(--elp-tx-c, #8a92ab)' }}>Assessment Objective Breakdown</h4>
+      <div className="wap-ao-grid">
+        {aoKeys.map(k => {
+          const ao = feedback[k];
+          if (!ao || ao.max === 0) return null;
+          const { label, color } = AO_LABELS[k];
+          const pct = ao.max > 0 ? Math.round((ao.marks / ao.max) * 100) : 0;
+          return (
+            <div key={k} className="wap-ao-card">
+              <div className="wap-ao-header">
+                <span className="wap-ao-label" style={{ color }}>{label}</span>
+                <span className="wap-ao-score">{ao.marks}/{ao.max}</span>
+              </div>
+              <div className="wap-ao-bar">
+                <div className="wap-ao-bar-fill" style={{ width: `${pct}%`, background: color }} />
+              </div>
+              {k === 'ao3' && typeof ao.chains === 'number' && (
+                <div className="wap-ao-chains">{ao.chains} analytical chain{ao.chains !== 1 ? 's' : ''} identified</div>
+              )}
+              {ao.comment && <div className="wap-ao-comment">{ao.comment}</div>}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 export default function WrittenFeedbackCard({ feedback, guidance, marks, onNext }) {
   const grade = GRADE_CONFIG[feedback.grade] || GRADE_CONFIG.partial;
 
@@ -23,6 +65,9 @@ export default function WrittenFeedbackCard({ feedback, guidance, marks, onNext 
 
       {/* Feedback text */}
       <p className="wap-feedback-text">{feedback.feedback}</p>
+
+      {/* AO Breakdown */}
+      <AOBreakdown feedback={feedback} marks={marks} />
 
       {/* Strengths */}
       {feedback.strengths?.length > 0 && (

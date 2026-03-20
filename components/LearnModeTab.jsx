@@ -152,6 +152,8 @@ export default function LearnModeTab({
       // Going forward — checkmark pulse, instant scroll, then swap
       setStepComplete(true);
       setNodePopped(true);
+      // Save step progress to server (fire-and-forget)
+      saveLearnModeProgress(sectionId, totalSteps, currentStep, false);
       setTimeout(() => {
         scrollToTop(true); // instant — guarantees we're at the top
         setStepComplete(false);
@@ -210,9 +212,26 @@ export default function LearnModeTab({
         } catch {}
       }
       recordReview(subjectId, sectionId, null);
+
+      // Save learn mode completion to Supabase for progress dashboard
+      saveLearnModeProgress(sectionId, totalSteps, currentStep, true);
     }
     setIsComplete(true);
     onComplete?.();
+  }
+
+  // Save learn mode progress to server (feeds into /progress dashboard)
+  function saveLearnModeProgress(secId, total, step, complete) {
+    fetch('/api/learn-mode/progress', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        sectionId: secId,
+        totalSteps: total,
+        completedStep: step,
+        isComplete: complete,
+      }),
+    }).catch(() => {}); // fire-and-forget, don't block UI
   }
 
   // Empty state
