@@ -208,7 +208,7 @@ export default function HomeScreen({ subjects, units, sections, user, isPremium,
                 const pct = sec.total > 0 ? Math.round((sec.mastered / sec.total) * 100) : 0;
                 const barColor = pct >= 70 ? 'var(--accent-green)' : pct >= 40 ? 'var(--accent-amber, #f59e0b)' : 'var(--accent-red, #ef4444)';
                 return (
-                  <div key={sec.id} className="hs-topic-row">
+                  <div key={sec.id} className="hs-topic-row" onClick={() => { onNavigateToSection(sec.id); onNavigateToTab('overview'); }} style={{ cursor: 'pointer' }} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === 'Enter') { onNavigateToSection(sec.id); onNavigateToTab('overview'); } }}>
                     <span className="hs-topic-name">{sec.title}</span>
                     <div className="hs-topic-bar">
                       <div className="hs-topic-fill" style={{ width: `${pct}%`, background: barColor }} />
