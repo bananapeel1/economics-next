@@ -3,12 +3,7 @@
  * Rewrites section_content from old concepts[] format to new sections[] format.
  * Run: node scripts/upgrade-content-influences-business.mjs
  */
-import { createClient } from '@supabase/supabase-js';
-
-const supabase = createClient(
-  'https://trweeckuswgkenckeqfb.supabase.co',
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRyd2VlY2t1c3dna2VuY2tlcWZiIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MzE0ODY2NywiZXhwIjoyMDg4NzI0NjY3fQ.P9EchrMjfJdouBPIs728fuqVTm5Jq1B0JPsEdCp4IA0'
-);
+import { supabase } from './_db.mjs';
 
 const CONTENT = [
   /* ═══════════════════════════════════════════════════

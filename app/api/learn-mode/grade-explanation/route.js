@@ -2,6 +2,7 @@ import { generateText } from 'ai';
 import { google } from '@ai-sdk/google';
 import { createClient } from '@/lib/supabase/server';
 import { createServerClient } from '@/lib/supabase-server';
+import { rateLimit } from '@/lib/rate-limit';
 
 export const maxDuration = 15;
 
@@ -27,6 +28,12 @@ export async function POST(request) {
 
   if (!isPremium && !isAdmin) {
     return Response.json({ error: 'AI grading requires a Pro subscription.' }, { status: 403 });
+  }
+
+  // Rate limit: 50 grade requests per user per day
+  const { allowed } = rateLimit(`grade-exp:${user.id}`, 50);
+  if (!allowed) {
+    return Response.json({ error: 'Daily limit reached. Please try again tomorrow.' }, { status: 429 });
   }
 
   const { topic, explanation } = await request.json();

@@ -2,6 +2,7 @@ import { generateText } from 'ai';
 import { google } from '@ai-sdk/google';
 import { createClient } from '@/lib/supabase/server';
 import { createServerClient } from '@/lib/supabase-server';
+import { rateLimit } from '@/lib/rate-limit';
 
 export const maxDuration = 30;
 
@@ -125,6 +126,12 @@ export async function POST(request) {
 
   if (!isPremium && !isAdmin) {
     return Response.json({ error: 'Written answer marking requires a Pro subscription.' }, { status: 403 });
+  }
+
+  // Rate limit: 50 evaluations per user per day
+  const { allowed, remaining } = rateLimit(`wa-eval:${user.id}`, 50);
+  if (!allowed) {
+    return Response.json({ error: 'Daily limit reached. Please try again tomorrow.' }, { status: 429 });
   }
 
   const { question, command, marks, guidance, studentAnswer } = await request.json();
