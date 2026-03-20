@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import EconomicsScrollBar from './EconomicsScrollBar';
+import '@/styles/landing.css';
 
 export const metadata = {
   title: 'Edexcel IAL Economics Revision Notes — Units 1\u20134 | Revvy Learn',

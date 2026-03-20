@@ -2,7 +2,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { useAuth } from './AuthProvider';
-import { Clipboard, Glossary, Document, CardClub, PdfFile, NetworkGraph, ModelAnswer, BookAlt, BoltIcon, CardsIcon, ProgressChart } from './Icons';
+import { Clipboard, Glossary, Document, CardClub, PdfFile, NetworkGraph, ModelAnswer, BookAlt, BoltIcon, CardsIcon, ProgressChart, PenIcon } from './Icons';
 import StrengthMeter from './StrengthMeter';
 
 const SidebarHomeIcon = () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>;
@@ -157,6 +157,11 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
         <Link href="/flashcards-practice" className="sidebar-resource-link">
           <span className="sidebar-resource-icon"><CardsIcon size={16} /></span>
           Smart Flashcards
+          <span className="new-badge">New</span>
+        </Link>
+        <Link href="/written-practice" className="sidebar-resource-link">
+          <span className="sidebar-resource-icon"><PenIcon size={16} /></span>
+          Written Practice
           <span className="new-badge">New</span>
         </Link>
         {onTabSelect && (

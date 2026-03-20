@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import BusinessScrollBar from './BusinessScrollBar';
+import '@/styles/landing.css';
 
 export const metadata = {
   title: 'Edexcel IAL Business Revision Notes — Units 1\u20134 | Revvy Learn',

@@ -381,6 +381,16 @@ export function ProgressChart(props) {
   );
 }
 
+// ✍️ Pen / Written Practice
+export function PenIcon(props) {
+  return wrap(
+    <>
+      <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z" />
+    </>,
+    props
+  );
+}
+
 // 🧭 Learn Mode — compass / guided path
 export function LearnMode(props) {
   return wrap(
