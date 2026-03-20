@@ -2373,14 +2373,14 @@ button.sidebar-resource-link {
 .lm-complete-explore-btn:hover { border-color: var(--accent-green); color: var(--accent-green); }
 .lm-complete-retry-btn {
   width: 100%; max-width: 320px;
-  padding: 12px; background: none;
-  border: 1.5px solid var(--accent-blue); color: var(--accent-blue);
-  border-radius: 10px; font-size: 14px; font-weight: 600;
-  cursor: pointer; transition: all 0.2s;
+  padding: 12px 20px; background: none;
+  border: 1.5px solid var(--border-primary); color: var(--text-tertiary);
+  border-radius: 30px; font-size: 14px; font-weight: 600;
+  cursor: pointer; font-family: inherit; transition: all 0.15s;
   animation: lmCelebrateSlideIn 0.35s ease both;
-  animation-delay: 0.97s;
+  animation-delay: 0.85s;
 }
-.lm-complete-retry-btn:hover { background: rgba(59,130,246,0.08); }
+.lm-complete-retry-btn:hover { border-color: var(--accent-blue); color: var(--accent-blue); }
 .lm-complete-or {
   font-size: 13px; color: var(--text-dim);
   margin: 16px 0 0;
