@@ -3,11 +3,12 @@ import BusinessScrollBar from './BusinessScrollBar';
 import '@/styles/landing.css';
 
 export const metadata = {
-  title: 'Edexcel IAL Business Revision Notes — Units 1\u20134 | Revvy Learn',
-  description: 'Complete revision notes for Edexcel International A-Level Business. Covers Unit 1 Marketing & People (WBS11), Unit 2 Managing Business Activities (WBS12). Free notes, flashcards, 20-mark essay guides and AI tutor.',
+  title: 'Edexcel IAL Business Studies Notes — Free Revision for Units 1–4 (2026)',
+  description: 'Free Edexcel IAL Business revision notes for all units: Marketing & People (WBS11), Managing Business Activities (WBS12), Business Decisions & Strategy (WBS13) and Global Business (WBS14). Interactive notes, flashcards, 20-mark essay guides, past paper practice and AI tutor.',
+  alternates: { canonical: 'https://revvylearn.com/business' },
   openGraph: {
-    title: 'Edexcel IAL Business Revision Notes — Units 1\u20134 | Revvy Learn',
-    description: 'Complete free revision notes for all Edexcel IAL Business units: WBS11, WBS12. Flashcards, essay guides and practice questions.',
+    title: 'Edexcel IAL Business Notes — Free Revision Units 1–4 | Revvy Learn',
+    description: 'Free interactive revision for Edexcel IAL Business. Notes, flashcards, essay guides, past papers and AI tutor.',
     url: 'https://revvylearn.com/business',
     type: 'article',
   },
@@ -97,11 +98,54 @@ export default function BusinessPage() {
     }))
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Edexcel IAL Business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Edexcel IAL (International A-Level) Business is a globally recognised qualification offered by Pearson Edexcel. It covers marketing, people, finance, strategy and global business across four units (WBS11–WBS14). IAL exams are modular and available in both January and June exam series."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many units are in Edexcel IAL Business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There are four units: Unit 1 Marketing and People (WBS11), Unit 2 Managing Business Activities (WBS12), Unit 3 Business Decisions and Strategy (WBS13), and Unit 4 Global Business (WBS14). Each unit covers five to six spec points."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What topics are covered in IAL Business Unit 1?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unit 1 (WBS11) Marketing and People covers five spec points: meeting customer needs (mass vs niche markets, market research), the market (demand, supply, elasticity), marketing mix and strategy (4Ps, product life cycle, pricing), managing people (recruitment, motivation theories, leadership), and entrepreneurs and leaders."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Edexcel IAL Business the same as A-Level Business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "IAL (International A-Level) and domestic UK A-Level Business share similar content but differ in exam structure. IAL is modular — you can sit individual units in January or June — while the UK A-Level is linear with all exams in June. IAL is designed for international students and examined at centres worldwide."
+        }
+      }
+    ]
+  };
+
   return (
     <div className="elp-page">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       {/* Scroll progress bar (client component) */}
@@ -380,6 +424,23 @@ export default function BusinessPage() {
           <p className="elp-cta-note">No signup required for notes &middot; Cancel premium anytime &middot; &euro;0.99/month</p>
         </div>
       </div>
+
+      {/* SEO copy */}
+      <section className="sr-only">
+        <h2>About Edexcel IAL Business</h2>
+        <p>
+          Edexcel International A-Level (IAL) Business is a widely studied qualification at international schools across South Korea, Hong Kong, Malaysia, Singapore, Pakistan, Sri Lanka and the Middle East. The IAL Business specification covers all core business disciplines across four units: Unit 1 Marketing and People (WBS11) introduces how businesses identify customer needs, develop marketing strategies, manage people and the role of entrepreneurs. Unit 2 Managing Business Activities (WBS12) covers raising finance, financial planning and management, resource management and external influences on business.
+        </p>
+        <p>
+          At A2 level, Unit 3 Business Decisions and Strategy (WBS13) explores strategic decision-making, business growth, quantitative techniques and managing change. Unit 4 Global Business (WBS14) examines globalisation, strategies for entering international markets, global marketing and the role of multinational corporations.
+        </p>
+        <p>
+          Revvy Learn provides free revision notes for every spec point across all four IAL Business units. Our content is specifically built for the Edexcel IAL specification — not the UK domestic A-Level — so every topic, exam tip and model answer aligns with the papers you will actually sit. Each topic includes structured notes, adaptive flashcards, exam-style practice questions with annotated model answers, and an AI tutor to help you refine your 20-mark essay technique.
+        </p>
+        <p>
+          IAL Business exams are available in both the January and June exam series, allowing you to spread your units across multiple sittings. Revvy Learn covers the complete specification for both sessions.
+        </p>
+      </section>
 
       {/* Footer */}
       <footer className="elp-footer">

@@ -1,11 +1,11 @@
-import { createServerClient } from '@/lib/supabase-server';
+import { createAnonClient } from '@/lib/supabase-anon';
 import { NextResponse } from 'next/server';
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const subjectId = searchParams.get('subject_id');
 
-  const supabase = createServerClient();
+  const supabase = createAnonClient();
   let query = supabase
     .from('glossary_terms')
     .select('term, definition')

@@ -3,11 +3,12 @@ import Link from 'next/link';
 import RelatedModelAnswers from '@/components/RelatedModelAnswers';
 
 export const metadata = {
-  title: 'Market Failure \u2014 Edexcel IAL Economics Unit 1 | Revvy Learn',
-  description: 'Free market failure revision notes for Edexcel IAL Economics (1.3.5). Covers externalities, public goods, merit goods, information failure and government intervention with diagrams, practice questions and model answers.',
+  title: 'Market Failure Notes — Edexcel IAL Economics 1.3.5 | Free Revision',
+  description: 'Complete market failure revision for Edexcel IAL Economics. Covers all 6 types: externalities, public goods, merit & demerit goods, information failure and monopoly power. Free diagrams, practice questions and model answers.',
+  alternates: { canonical: 'https://revvylearn.com/economics/market-failure' },
   openGraph: {
-    title: 'Market Failure \u2014 Edexcel IAL Economics Unit 1 | Revvy Learn',
-    description: 'Complete market failure revision notes for Edexcel IAL Economics. Externalities, public goods, merit goods and government intervention.',
+    title: 'Market Failure — Edexcel IAL Economics Revision Notes | Revvy Learn',
+    description: 'Free market failure revision notes covering externalities, public goods, merit goods and government intervention. Diagrams and practice questions included.',
     url: 'https://revvylearn.com/economics/market-failure',
     type: 'article',
   },

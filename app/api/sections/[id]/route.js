@@ -1,9 +1,9 @@
-import { createServerClient } from '@/lib/supabase-server';
+import { createAnonClient } from '@/lib/supabase-anon';
 import { NextResponse } from 'next/server';
 
 export async function GET(request, { params }) {
   const { id } = await params;
-  const supabase = createServerClient();
+  const supabase = createAnonClient();
 
   const [content, notes, diagrams, flashcards, quiz, mistakes, practice, extras] = await Promise.all([
     supabase.from('section_content').select('data').eq('section_id', id).single(),

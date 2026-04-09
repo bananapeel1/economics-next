@@ -1,9 +1,10 @@
-import { createServerClient } from '@/lib/supabase-server';
+import { createAnonClient } from '@/lib/supabase-anon';
+import guidesData from '@/data/guidesData';
 
 export default async function sitemap() {
   const baseUrl = 'https://revvylearn.com';
   const now = new Date().toISOString();
-  const supabase = createServerClient();
+  const supabase = createAnonClient();
 
   // Fetch all sections with their unit number and subject slug
   const { data: sections } = await supabase
@@ -27,11 +28,21 @@ export default async function sitemap() {
     { url: `${baseUrl}/past-papers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/model-answers`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/contact`, lastModified: now, changeFrequency: 'yearly', priority: 0.4 },
+    { url: `${baseUrl}/pdfs`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/topic-links`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+
+    // ── IAL revision pages ──
+    { url: `${baseUrl}/ial-revision`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/ial-revision/exam-series`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/ial-revision/june-2026`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/ial-revision/january-2027`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
 
     // ── Economics landing pages ──
     { url: `${baseUrl}/economics`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/economics/unit-1`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/economics/unit-2`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/economics/unit-3`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/economics/unit-4`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/economics/market-failure`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/economics/aggregate-demand`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
 
@@ -53,6 +64,8 @@ export default async function sitemap() {
     { url: `${baseUrl}/business`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/business/unit-1`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/business/unit-2`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/business/unit-3`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/business/unit-4`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
 
     // ── Business section model answers ──
     { url: `${baseUrl}/business/meeting-customer-needs-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
@@ -65,6 +78,15 @@ export default async function sitemap() {
     { url: `${baseUrl}/business/managing-finance-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/business/resource-management-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/business/external-influences-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+
+    // ── Guides ──
+    { url: `${baseUrl}/guides`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    ...guidesData.map(guide => ({
+      url: `${baseUrl}/guides/${guide.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    })),
 
     // ── Dynamic topic pages (from Supabase) ──
     ...topicPages,

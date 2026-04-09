@@ -3,11 +3,12 @@ import EconomicsScrollBar from './EconomicsScrollBar';
 import '@/styles/landing.css';
 
 export const metadata = {
-  title: 'Edexcel IAL Economics Revision Notes — Units 1\u20134 | Revvy Learn',
-  description: 'Complete revision notes for Edexcel International A-Level Economics. Covers Unit 1 Markets in Action (WEC11), Unit 2 Macroeconomic Performance (WEC12), Unit 3 Business Behaviour (WEC13) and Unit 4 Global Economy (WEC14). Free notes, diagrams and practice questions.',
+  title: 'Edexcel IAL Economics Notes — Free Revision for Units 1–4 (2026)',
+  description: 'Free Edexcel IAL Economics revision notes for all units: Markets in Action (WEC11), Macroeconomic Performance (WEC12), Business Behaviour (WEC13) and Global Economy (WEC14). Interactive notes with diagrams, flashcards, quizzes and AI tutor.',
+  alternates: { canonical: 'https://revvylearn.com/economics' },
   openGraph: {
-    title: 'Edexcel IAL Economics Revision Notes — Units 1\u20134 | Revvy Learn',
-    description: 'Complete free revision notes for all Edexcel IAL Economics units: WEC11, WEC12, WEC13, WEC14. Diagrams, flashcards and practice questions.',
+    title: 'Edexcel IAL Economics Notes — Free Revision Units 1–4 | Revvy Learn',
+    description: 'Free interactive revision for all Edexcel IAL Economics units. Notes, diagrams, flashcards, quizzes and AI tutor.',
     url: 'https://revvylearn.com/economics',
     type: 'article',
   },
@@ -102,11 +103,54 @@ export default function EconomicsPage() {
     ]
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Edexcel IAL Economics?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Edexcel IAL (International A-Level) Economics is a globally recognised qualification offered by Pearson Edexcel. It is designed for international students and covers microeconomics, macroeconomics, business behaviour and the global economy across four units (WEC11–WEC14). IAL exams are available in January and June exam series."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many units are in Edexcel IAL Economics?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There are four units: Unit 1 Markets in Action (WEC11), Unit 2 Macroeconomic Performance and Policy (WEC12), Unit 3 Business Behaviour (WEC13), and Unit 4 Developments in the Global Economy (WEC14). Each unit has six spec points covering the full range of economic theory."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What topics are covered in IAL Economics Unit 1?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unit 1 (WEC11) Markets in Action covers six spec points: introductory concepts (scarcity, PPF, specialisation), consumer behaviour and demand, supply, price determination (equilibrium, elasticity), market failure (externalities, public goods, information failure), and government intervention (taxes, subsidies, regulation)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Edexcel IAL the same as A-Level Economics?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "IAL (International A-Level) and domestic UK A-Level Economics share similar content but have different exam structures. IAL exams are modular — you can sit individual units in January or June — while the UK A-Level is linear with all exams in June. IAL is specifically designed for international students and is offered at exam centres worldwide."
+        }
+      }
+    ]
+  };
+
   return (
     <div className="elp-page">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       {/* Scroll progress bar (client component) */}
@@ -385,6 +429,23 @@ export default function EconomicsPage() {
           <p className="elp-cta-note">No signup required for notes &middot; Cancel premium anytime &middot; &euro;0.99/month</p>
         </div>
       </div>
+
+      {/* SEO copy */}
+      <section className="sr-only">
+        <h2>About Edexcel IAL Economics</h2>
+        <p>
+          Edexcel International A-Level (IAL) Economics is one of the most popular qualifications for students at international schools worldwide. Offered by Pearson Edexcel, the IAL Economics specification covers the full range of economic theory across four units: Unit 1 Markets in Action (WEC11) introduces microeconomic fundamentals including supply, demand, elasticity, market failure and government intervention. Unit 2 Macroeconomic Performance and Policy (WEC12) covers aggregate demand and supply, national income, economic growth and macroeconomic policy tools.
+        </p>
+        <p>
+          At A2 level, Unit 3 Business Behaviour (WEC13) examines the theory of the firm, market structures from perfect competition to monopoly, labour markets and competition policy. Unit 4 Developments in the Global Economy (WEC14) explores globalisation, international trade, exchange rates, poverty and inequality, and development economics.
+        </p>
+        <p>
+          Revvy Learn provides free revision notes for every spec point across all four IAL Economics units. Unlike generic revision sites, our content is specifically built for the Edexcel IAL specification and is used by students in South Korea, Hong Kong, Malaysia, Singapore, Pakistan, Sri Lanka and across the Middle East. Each topic includes structured notes, diagrams, adaptive flashcards with spaced repetition, exam-style practice questions with model answers, and an AI tutor that helps you build evaluation chains for 20-mark essays.
+        </p>
+        <p>
+          IAL Economics exams are available in both the January and June exam series, giving international students flexibility in when they sit each unit. Whether you are preparing for the January or June session, Revvy Learn covers the complete specification to help you achieve the highest grades.
+        </p>
+      </section>
 
       {/* Footer */}
       <footer className="elp-footer">

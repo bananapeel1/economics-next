@@ -7,9 +7,10 @@ export const metadata = {
   metadataBase: new URL('https://revvylearn.com'),
   alternates: {
     canonical: './',
+    languages: { 'en': 'https://revvylearn.com' },
   },
-  title: "Revvy Learn — Edexcel A-Level Revision",
-  description: "Comprehensive revision app for Edexcel International A-Level Economics and Business",
+  title: "Revvy Learn — Edexcel IAL Revision",
+  description: "Free revision notes, flashcards, past papers, model answers and AI tutor for Edexcel International A-Level Economics and Business.",
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
@@ -61,12 +62,26 @@ export default async function RootLayout({ children }) {
             "@type": "EducationalOrganization",
             "name": "Revvy Learn",
             "url": "https://revvylearn.com",
-            "description": "Comprehensive revision platform for Edexcel International A-Level Economics and Business",
+            "description": "Free revision platform for Edexcel International A-Level Economics and Business with interactive notes, flashcards, quizzes, past papers and AI tutor.",
             "sameAs": ["https://instagram.com/revvylearn"],
             "offers": {
               "@type": "Offer",
               "category": "Educational Resources",
               "description": "Edexcel IAL Economics and Business revision with interactive notes, flashcards, quizzes, and AI tutor"
+            }
+          })}}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Revvy Learn",
+            "url": "https://revvylearn.com",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://revvylearn.com/glossary?q={search_term_string}",
+              "query-input": "required name=search_term_string"
             }
           })}}
         />

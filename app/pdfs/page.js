@@ -1,4 +1,4 @@
-import { createServerClient } from '@/lib/supabase-server';
+import { createAnonClient } from '@/lib/supabase-anon';
 import Link from 'next/link';
 
 export const metadata = {
@@ -12,7 +12,7 @@ export const metadata = {
 };
 
 export default async function PdfsPage() {
-  const supabase = createServerClient();
+  const supabase = createAnonClient();
   const { data: pdfs } = await supabase
     .from('pdfs')
     .select('*')

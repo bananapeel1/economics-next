@@ -1,19 +1,20 @@
-import { createServerClient } from '@/lib/supabase-server';
+import { createAnonClient } from '@/lib/supabase-anon';
 import PastPapersPage from '@/components/PastPapersPage';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Edexcel IAL Economics & Business Past Papers — Free Download | Revvy Learn',
-  description: 'Download free Edexcel IAL Economics and Business past papers with mark schemes. All units covered: WEC11, WEC12, WEC13, WEC14, WBS11, WBS12. Organised by year and unit for easy exam practice.',
+  title: 'Edexcel IAL Past Papers & Mark Schemes 2024–2016 — Free PDF Download',
+  description: 'Download free Edexcel IAL Economics and Business past papers with mark schemes and worked answers. All units covered: WEC11, WEC12, WEC13, WEC14, WBS11, WBS12. Instant access — no sign-up required.',
+  alternates: { canonical: 'https://revvylearn.com/past-papers' },
   openGraph: {
-    title: 'Edexcel IAL Past Papers — Free Download | Revvy Learn',
-    description: 'Download free Edexcel IAL Economics and Business past papers with mark schemes. All units organised by year.',
+    title: 'Edexcel IAL Past Papers & Mark Schemes — Free PDF Download',
+    description: 'Free Edexcel IAL Economics and Business past papers with mark schemes 2024–2016. All units, instant access, no sign-up.',
     url: 'https://revvylearn.com/past-papers',
   },
 };
 
 export default async function PastPapersRoute() {
-  const supabase = createServerClient();
+  const supabase = createAnonClient();
 
   const [{ data: papers }, { data: subjects }, { data: units }] = await Promise.all([
     supabase.from('past_papers').select('*').order('year', { ascending: false }).order('session').order('paper_number'),

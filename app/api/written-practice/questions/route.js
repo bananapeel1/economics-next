@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { createServerClient } from '@/lib/supabase-server';
+import { createAnonClient } from '@/lib/supabase-anon';
 
 /**
  * GET /api/written-practice/questions?sections=section1,section2&marks=4
@@ -20,7 +20,7 @@ export async function GET(request) {
     return NextResponse.json({ error: 'No sections provided' }, { status: 400 });
   }
 
-  const db = createServerClient();
+  const db = createAnonClient();
   const { data, error } = await db
     .from('section_practice')
     .select('section_id, data')

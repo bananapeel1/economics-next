@@ -1,4 +1,4 @@
-import { createServerClient } from '@/lib/supabase-server';
+import { createAnonClient } from '@/lib/supabase-anon';
 import GlossaryPage from '@/components/GlossaryPage';
 import Link from 'next/link';
 
@@ -13,7 +13,7 @@ export const metadata = {
 };
 
 export default async function GlossaryRoute() {
-  const supabase = createServerClient();
+  const supabase = createAnonClient();
 
   const [{ data: terms }, { data: subjects }] = await Promise.all([
     supabase.from('glossary_terms').select('*').order('term'),

@@ -1,4 +1,4 @@
-import { createServerClient } from '@/lib/supabase-server';
+import { createAnonClient } from '@/lib/supabase-anon';
 import StudyApp from '@/components/StudyApp';
 
 export const revalidate = 3600;
@@ -9,7 +9,7 @@ function stripHtml(html) {
 }
 
 export async function generateStaticParams() {
-  const supabase = createServerClient();
+  const supabase = createAnonClient();
 
   const { data: sections } = await supabase
     .from('sections')
@@ -26,7 +26,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { topic } = await params;
-  const supabase = createServerClient();
+  const supabase = createAnonClient();
 
   const { data: section } = await supabase
     .from('sections')
@@ -44,6 +44,7 @@ export async function generateMetadata({ params }) {
   return {
     title,
     description,
+    alternates: { canonical: `https://revvylearn.com/economics/unit-${section.units.number}/${topic}` },
     openGraph: {
       title,
       description,
@@ -55,7 +56,7 @@ export async function generateMetadata({ params }) {
 
 export default async function EconomicsTopicPage({ params }) {
   const { topic } = await params;
-  const supabase = createServerClient();
+  const supabase = createAnonClient();
 
   // Fetch all subjects, units, sections (same as homepage)
   const [{ data: subjects }, { data: units }, { data: sections }] = await Promise.all([
@@ -119,6 +120,25 @@ export default async function EconomicsTopicPage({ params }) {
     }
   }
 
+  // JSON-LD LearningResource
+  const learningResourceLd = {
+    '@context': 'https://schema.org',
+    '@type': 'LearningResource',
+    'name': section?.title || topic,
+    'description': `Free revision notes for ${section?.title || topic} — Edexcel IAL Economics ${unit ? `Unit ${unit.number}` : ''}`,
+    'url': `https://revvylearn.com/economics/unit-${unit?.number || 1}/${topic}`,
+    'educationalLevel': 'Advanced Level',
+    'learningResourceType': 'Revision Notes',
+    'teaches': section?.title || topic,
+    'inLanguage': 'en-GB',
+    'isAccessibleForFree': true,
+    'provider': {
+      '@type': 'EducationalOrganization',
+      'name': 'Revvy Learn',
+      'url': 'https://revvylearn.com'
+    },
+  };
+
   // JSON-LD BreadcrumbList
   const breadcrumbLd = {
     '@context': 'https://schema.org',
@@ -148,6 +168,10 @@ export default async function EconomicsTopicPage({ params }) {
   return (
     <>
       {/* JSON-LD structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(learningResourceLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
