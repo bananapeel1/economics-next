@@ -1050,4 +1050,544 @@ export const EXPANSION_ANSWERS = [
     likelyScore: '7–8 / 8',
   },
 
+  // ══════════════════════════════════════════════════════════════
+  // BUSINESS UNIT 1 — GAPS
+  // ══════════════════════════════════════════════════════════════
+
+  // ── 1.1 Meeting Customer Needs — 8 marks ──
+  {
+    id: 'biz-niche-mass-advantages-8',
+    subject: 'business',
+    unit: 1,
+    sectionNumber: '1.1',
+    sectionTitle: 'Meeting Customer Needs',
+    marks: 8,
+    type: 'Analysis',
+    commandWord: 'Analyse',
+    question: 'Analyse the advantages and disadvantages of operating in a niche market.',
+    markScheme: [
+      { range: '1–2 marks', desc: 'Knowledge: definition of niche market' },
+      { range: '3–4 marks', desc: 'Application: named niche market example' },
+      { range: '5–8 marks', desc: 'Analysis: developed advantages (premium pricing, less competition) and disadvantages (limited scale, vulnerability)' },
+    ],
+    peel: {
+      point: 'Niche markets allow firms to charge premium prices and face less competition, but limit growth potential.',
+      evidence: 'E.g. Lush operates in the niche of handmade, ethical cosmetics.',
+      explain: 'Less competition means higher margins, but a small customer base makes the firm vulnerable to changes in consumer tastes or new entrants.',
+      link: 'Whether niche is advantageous depends on the firm\'s ability to build loyalty and defend its position.',
+    },
+    answerParagraphs: [
+      {
+        label: 'Para 1',
+        html: 'A <strong>niche market</strong> is a small, specialised segment of a larger market that targets customers with <strong>specific needs or preferences</strong>. <span class="ma-ann ma-ann-blue">K</span> <strong>Lush</strong>, for example, operates in the niche of handmade, ethically sourced cosmetics — a segment too small for mass-market giants like Unilever to prioritise. <span class="ma-ann ma-ann-amber">A</span>',
+      },
+      {
+        label: 'Para 2',
+        html: 'A key advantage is the ability to charge <strong>premium prices</strong>. Because niche products are differentiated and face fewer direct substitutes, customers are willing to pay more — increasing profit margins. <span class="ma-ann ma-ann-green">An</span> There is also <strong>less direct competition</strong>, as large firms often ignore segments that are too small to justify mass production. This gives the niche firm a more defensible market position. <span class="ma-ann ma-ann-green">An</span>',
+      },
+      {
+        label: 'Para 3',
+        html: 'However, niche markets have significant <strong>disadvantages</strong>. The <strong>limited customer base</strong> means the firm may struggle to achieve economies of scale, keeping unit costs high. <span class="ma-ann ma-ann-green">An</span> The firm is also <strong>vulnerable</strong> to changes in consumer tastes — if the trend shifts away from ethical cosmetics, Lush\'s entire business model is at risk. <span class="ma-ann ma-ann-amber">A</span> If a large competitor decides to enter the niche (e.g. The Body Shop expanding its ethical range), the niche firm may lack the resources to compete. <span class="ma-ann ma-ann-green">An</span>',
+      },
+    ],
+    annotationLegend: [
+      { code: 'K', label: 'Knowledge', color: 'blue' },
+      { code: 'A', label: 'Application', color: 'amber' },
+      { code: 'An', label: 'Analysis chain', color: 'green' },
+    ],
+    examinerCommentary: 'Balanced answer with clear advantages and disadvantages. Lush provides consistent application throughout. The vulnerability point — large competitors entering the niche — shows strong analytical thinking. For top marks, link back to the question by concluding whether niche is net positive for this type of business.',
+    likelyScore: '7–8 / 8',
+  },
+
+  // ── 1.3 Marketing Mix & Strategy — 8 marks ──
+  {
+    id: 'biz-product-life-cycle-8',
+    subject: 'business',
+    unit: 1,
+    sectionNumber: '1.3',
+    sectionTitle: 'Marketing Mix & Strategy',
+    marks: 8,
+    type: 'Analysis',
+    commandWord: 'Analyse',
+    question: 'Analyse how a business might use the product life cycle model to inform its marketing strategy.',
+    markScheme: [
+      { range: '1–2 marks', desc: 'Knowledge: stages of the product life cycle' },
+      { range: '3–4 marks', desc: 'Application: marketing actions linked to specific stages' },
+      { range: '5–8 marks', desc: 'Analysis: why different strategies are needed at each stage, extension strategies' },
+    ],
+    peel: {
+      point: 'The product life cycle shows how sales change over time, requiring different marketing approaches at each stage.',
+      evidence: 'E.g. Apple uses extension strategies (new colours, features) to extend the iPhone\'s maturity phase.',
+      explain: 'At launch, heavy promotion builds awareness. In growth, distribution expands. In maturity, differentiation and extension strategies maintain sales. In decline, the firm harvests profits or withdraws.',
+      link: 'Understanding the life cycle helps firms allocate marketing budgets efficiently and plan product development.',
+    },
+    answerParagraphs: [
+      {
+        label: 'Para 1',
+        html: 'The <strong>product life cycle (PLC)</strong> model identifies four stages a product passes through: <strong>introduction, growth, maturity, and decline</strong>. <span class="ma-ann ma-ann-blue">K</span> At each stage, sales volume, competition, and profitability differ — requiring distinct marketing strategies. <span class="ma-ann ma-ann-blue">K</span>',
+      },
+      {
+        label: 'Para 2',
+        html: 'During <strong>introduction</strong>, sales are low and costs high (R&D, launch marketing). The firm invests heavily in <strong>promotion</strong> to build awareness — using advertising, free samples, or introductory pricing. <span class="ma-ann ma-ann-green">An</span> In the <strong>growth</strong> phase, sales rise rapidly as the product gains acceptance. The firm expands <strong>distribution channels</strong> and may adjust pricing as competitors enter. <span class="ma-ann ma-ann-green">An</span>',
+      },
+      {
+        label: 'Para 3',
+        html: 'At <strong>maturity</strong>, sales peak but growth slows as the market saturates. Competition intensifies, putting pressure on margins. <span class="ma-ann ma-ann-green">An</span> Firms use <strong>extension strategies</strong> to prolong this stage — <strong>Apple</strong>, for example, releases new iPhone colours, camera upgrades, and software features to maintain interest without redesigning the core product. <span class="ma-ann ma-ann-amber">A</span> In <strong>decline</strong>, the firm may reduce marketing spend and <strong>harvest remaining profits</strong>, or withdraw the product entirely and redirect resources to new launches. <span class="ma-ann ma-ann-green">An</span>',
+      },
+    ],
+    annotationLegend: [
+      { code: 'K', label: 'Knowledge', color: 'blue' },
+      { code: 'A', label: 'Application', color: 'amber' },
+      { code: 'An', label: 'Analysis chain', color: 'green' },
+    ],
+    examinerCommentary: 'Covers all four stages with specific marketing actions linked to each. The Apple iPhone extension strategy is an excellent application example. For top marks, note that the PLC is a model, not a prediction — not all products follow the same pattern, and extension strategies can restart the cycle.',
+    likelyScore: '7–8 / 8',
+  },
+
+  // ── Business Unit 1 — 20 marks ──
+  {
+    id: 'biz-motivation-productivity-20',
+    subject: 'business',
+    unit: 1,
+    sectionNumber: '1.4',
+    sectionTitle: 'Managing People',
+    marks: 20,
+    type: 'Evaluation Essay',
+    commandWord: 'Evaluate',
+    question: 'Evaluate the view that financial incentives are the most effective way to motivate employees.',
+    markScheme: [
+      { range: 'AO1 (4 marks)', desc: 'Knowledge of motivation theories (Taylor, Maslow, Herzberg), financial/non-financial methods' },
+      { range: 'AO2 (4 marks)', desc: 'Application — named business examples of motivation strategies' },
+      { range: 'AO3 (6 marks)', desc: 'Analysis — how financial incentives work, their limitations, non-financial alternatives' },
+      { range: 'AO4 (6 marks)', desc: 'Evaluation — depends on job type, employee, culture; contextual judgement' },
+    ],
+    peel: {
+      point: 'Financial incentives (bonuses, commission, profit sharing) directly reward output and can boost short-term productivity.',
+      evidence: 'E.g. Amazon warehouse workers receive productivity bonuses, but high turnover suggests financial incentives alone are insufficient.',
+      explain: 'Taylor argued that workers are primarily motivated by money. Herzberg distinguished between hygiene factors (pay) that prevent dissatisfaction and motivators (recognition, responsibility) that drive true motivation.',
+      link: 'The effectiveness of financial incentives depends on the nature of the work, the level of the employee, and the organisational culture.',
+    },
+    answerParagraphs: [
+      {
+        label: 'Introduction',
+        html: '<strong>Financial incentives</strong> include bonuses, commission, profit sharing, and performance-related pay — they directly link reward to output. <span class="ma-ann ma-ann-blue">K</span> <strong>Non-financial incentives</strong> include job enrichment, empowerment, recognition, flexible working, and team-building. <span class="ma-ann ma-ann-blue">K</span> The question is whether money alone is sufficient to motivate employees, or whether non-financial factors are equally or more important.',
+      },
+      {
+        label: 'Argument 1 — Financial incentives are effective',
+        html: 'Financial incentives can be highly effective, particularly for <strong>routine, measurable tasks</strong>. <span class="ma-ann ma-ann-green">An</span> <strong>Taylor\'s Scientific Management</strong> argued that workers are primarily motivated by money — they will work harder if paid more per unit. <span class="ma-ann ma-ann-blue">K</span> Commission-based pay in sales roles (e.g. at <strong>estate agencies</strong>) directly ties effort to reward, incentivising higher output. <span class="ma-ann ma-ann-amber">A</span> Financial incentives also help with <strong>recruitment and retention</strong> — competitive salaries attract talent and reduce turnover costs. <span class="ma-ann ma-ann-green">An</span>',
+      },
+      {
+        label: 'Counter-argument — Non-financial factors matter more',
+        html: 'However, <strong>Herzberg\'s Two-Factor Theory</strong> distinguishes between <strong>hygiene factors</strong> (pay, conditions) that prevent dissatisfaction, and <strong>motivators</strong> (responsibility, achievement, recognition) that drive genuine engagement. <span class="ma-ann ma-ann-blue">K</span> Pay only prevents unhappiness — it does not create long-term motivation. <strong>Amazon</strong> warehouse workers receive competitive wages and productivity bonuses, yet the company experiences <strong>annual turnover of ~150%</strong> — suggesting financial incentives alone cannot compensate for repetitive, physically demanding work with limited autonomy. <span class="ma-ann ma-ann-amber">A</span> By contrast, <strong>Google</strong> retains talent through non-financial motivators — creative freedom, development opportunities, team culture, and meaningful projects. <span class="ma-ann ma-ann-amber">A</span>',
+      },
+      {
+        label: 'Evaluation',
+        html: 'The effectiveness of financial incentives is <strong>highly context-dependent</strong>. For <strong>low-skilled, repetitive work</strong>, financial incentives may be the primary motivator — workers have limited scope for job enrichment. <span class="ma-ann ma-ann-green">An</span> For <strong>professional and creative roles</strong>, non-financial motivators — autonomy, purpose, mastery — tend to be more powerful, as <strong>Maslow\'s hierarchy</strong> suggests that once basic financial needs are met, higher-level needs (esteem, self-actualisation) become the dominant drivers. <span class="ma-ann ma-ann-blue">K</span> The <strong>organisational culture</strong> also matters — a firm that relies solely on bonuses may create a competitive, individualistic environment that undermines teamwork. <span class="ma-ann ma-ann-green">An</span> In practice, the most effective approach is a <strong>combination</strong> — fair pay (hygiene factor) plus meaningful work, recognition, and development opportunities (motivators). <span class="ma-ann ma-ann-green">An</span>',
+      },
+      {
+        label: 'Conclusion',
+        html: 'Financial incentives are effective for <strong>short-term productivity gains and measurable tasks</strong>, but they are <strong>not the most effective way to motivate employees in all contexts</strong>. For sustained engagement and retention, non-financial factors — particularly autonomy, recognition, and meaningful work — are often more powerful. The best strategy uses <strong>competitive pay as a foundation</strong> (preventing dissatisfaction) combined with <strong>non-financial motivators</strong> (driving true engagement). <span class="ma-ann ma-ann-green">An</span>',
+      },
+    ],
+    annotationLegend: [
+      { code: 'K', label: 'Knowledge', color: 'blue' },
+      { code: 'A', label: 'Application', color: 'amber' },
+      { code: 'An', label: 'Analysis chain', color: 'green' },
+    ],
+    examinerCommentary: 'Top-band answer integrating three motivation theories (Taylor, Herzberg, Maslow) with contrasting business examples (Amazon vs Google). The 150% turnover statistic is powerful evidence. The conclusion correctly identifies financial incentives as necessary but not sufficient — exactly the nuanced position examiners reward. For full marks, consider adding how cultural context (e.g. collectivist vs individualist societies) affects the relative importance of financial incentives.',
+    likelyScore: '18–20 / 20',
+  },
+
+  // ── Business 1.5 Entrepreneurs & Leaders — 8 marks ──
+  {
+    id: 'biz-entrepreneur-role-8',
+    subject: 'business',
+    unit: 1,
+    sectionNumber: '1.5',
+    sectionTitle: 'Entrepreneurs & Leaders',
+    marks: 8,
+    type: 'Analysis',
+    commandWord: 'Analyse',
+    question: 'Analyse the qualities needed by an entrepreneur to start a successful business.',
+    markScheme: [
+      { range: '1–2 marks', desc: 'Knowledge: definition of entrepreneur, role in business formation' },
+      { range: '3–4 marks', desc: 'Application: named entrepreneur example' },
+      { range: '5–8 marks', desc: 'Analysis: why specific qualities (risk-taking, creativity, resilience) are essential for start-up success' },
+    ],
+    peel: {
+      point: 'Entrepreneurs need a combination of risk tolerance, creativity, and resilience to overcome the challenges of starting a business.',
+      evidence: 'E.g. James Dyson spent 15 years developing 5,127 prototypes before his bagless vacuum succeeded.',
+      explain: 'Starting a business involves financial risk, uncertain demand, and frequent failure. Without resilience and willingness to take calculated risks, most ventures would never launch.',
+      link: 'The relative importance of each quality depends on the industry, market conditions, and the stage of the business.',
+    },
+    answerParagraphs: [
+      {
+        label: 'Para 1',
+        html: 'An <strong>entrepreneur</strong> is an individual who identifies a business opportunity and takes on <strong>financial risk</strong> to organise the factors of production and bring a product or service to market. <span class="ma-ann ma-ann-blue">K</span> Success requires a combination of personal qualities that enable the entrepreneur to navigate uncertainty and competition. <span class="ma-ann ma-ann-blue">K</span>',
+      },
+      {
+        label: 'Para 2',
+        html: 'First, <strong>risk tolerance</strong> is essential — starting a business involves investing personal savings, leaving secure employment, and accepting the possibility of failure. <span class="ma-ann ma-ann-green">An</span> Second, <strong>creativity and innovation</strong> allow the entrepreneur to identify gaps in the market and develop products that meet unmet needs. <span class="ma-ann ma-ann-green">An</span> <strong>James Dyson</strong> spent 15 years and developed over <strong>5,127 prototypes</strong> before perfecting his bagless vacuum cleaner — demonstrating both creativity in design and extreme persistence. <span class="ma-ann ma-ann-amber">A</span>',
+      },
+      {
+        label: 'Para 3',
+        html: 'Third, <strong>resilience</strong> is critical because most start-ups face repeated setbacks — rejected pitches, cash flow problems, competitive threats. <span class="ma-ann ma-ann-green">An</span> An entrepreneur who gives up at the first obstacle will never succeed. Fourth, <strong>decision-making under pressure</strong> is needed because resources are limited and markets move quickly — the entrepreneur must make judgement calls without complete information. <span class="ma-ann ma-ann-green">An</span> Finally, <strong>leadership and communication skills</strong> are important for motivating early employees, convincing investors, and building relationships with customers and suppliers. <span class="ma-ann ma-ann-green">An</span>',
+      },
+    ],
+    annotationLegend: [
+      { code: 'K', label: 'Knowledge', color: 'blue' },
+      { code: 'A', label: 'Application', color: 'amber' },
+      { code: 'An', label: 'Analysis chain', color: 'green' },
+    ],
+    examinerCommentary: 'Five distinct qualities, each linked to start-up challenges. The Dyson example (5,127 prototypes) is memorable and demonstrates persistence powerfully. For top marks, evaluate which quality is most important — risk-taking may be fundamental because without it, the business never starts at all.',
+    likelyScore: '7–8 / 8',
+  },
+
+  // ══════════════════════════════════════════════════════════════
+  // BUSINESS UNIT 2 — GAPS
+  // ══════════════════════════════════════════════════════════════
+
+  // ── 2.1 Raising Finance — 4 marks ──
+  {
+    id: 'biz-internal-external-finance-4',
+    subject: 'business',
+    unit: 2,
+    sectionNumber: '2.1',
+    sectionTitle: 'Raising Finance',
+    marks: 4,
+    type: 'Knowledge & Application',
+    commandWord: 'Explain',
+    question: 'Explain the difference between internal and external sources of finance.',
+    markScheme: [
+      { range: '1–2 marks', desc: 'Definition of internal sources (from within the business)' },
+      { range: '3–4 marks', desc: 'Definition of external sources (from outside) with examples of each' },
+    ],
+    peel: null,
+    answerParagraphs: [
+      {
+        label: null,
+        html: '<strong>Internal sources of finance</strong> come from <strong>within the business</strong> — they do not require borrowing or selling shares. <span class="ma-ann ma-ann-blue">K</span> Examples include <strong>retained profit</strong> (reinvesting earnings), <strong>sale of assets</strong> (selling unused equipment), and <strong>reducing working capital</strong> (running down stock levels). <span class="ma-ann ma-ann-amber">A</span><br><br><strong>External sources</strong> come from <strong>outside the business</strong> and involve either borrowing or giving up equity. <span class="ma-ann ma-ann-blue">K</span> Examples include <strong>bank loans</strong> (fixed repayment schedule with interest), <strong>share capital</strong> (selling ownership stakes), and <strong>venture capital</strong> (investment from specialist firms in exchange for equity). <span class="ma-ann ma-ann-amber">A</span> Internal finance avoids interest payments and loss of control, but may be limited in amount. External finance provides larger sums but comes with obligations.',
+      },
+    ],
+    annotationLegend: [
+      { code: 'K', label: 'Knowledge/Definition', color: 'blue' },
+      { code: 'A', label: 'Application', color: 'amber' },
+    ],
+    examinerCommentary: 'Clear distinction with named examples for each. Correctly identifies the trade-off (no interest vs limited amount). Avoid listing sources without categorising them — the question asks for the difference.',
+    likelyScore: '4 / 4',
+  },
+
+  // ── 2.2 Financial Planning — 4 marks ──
+  {
+    id: 'biz-break-even-definition-4',
+    subject: 'business',
+    unit: 2,
+    sectionNumber: '2.2',
+    sectionTitle: 'Financial Planning',
+    marks: 4,
+    type: 'Knowledge & Application',
+    commandWord: 'Explain',
+    question: 'Explain what is meant by the break-even point and how it is calculated.',
+    markScheme: [
+      { range: '1–2 marks', desc: 'Definition: output level where TR = TC (no profit, no loss)' },
+      { range: '3–4 marks', desc: 'Formula and/or numerical example' },
+    ],
+    peel: null,
+    answerParagraphs: [
+      {
+        label: null,
+        html: 'The <strong>break-even point</strong> is the level of output at which <strong>total revenue equals total cost</strong> — the business makes <strong>neither a profit nor a loss</strong>. <span class="ma-ann ma-ann-blue">K</span> Any output above the break-even point generates profit; any output below it results in a loss. <span class="ma-ann ma-ann-blue">K</span><br><br>It is calculated as: <strong>Break-even = Fixed costs ÷ (Selling price – Variable cost per unit)</strong>. <span class="ma-ann ma-ann-blue">K</span> For example, if fixed costs are £10,000, the selling price is £20, and the variable cost per unit is £10, the break-even output is £10,000 ÷ (£20 – £10) = <strong>1,000 units</strong>. <span class="ma-ann ma-ann-amber">A</span> This tells the business the minimum it must sell to cover all costs.',
+      },
+    ],
+    annotationLegend: [
+      { code: 'K', label: 'Knowledge/Definition', color: 'blue' },
+      { code: 'A', label: 'Application', color: 'amber' },
+    ],
+    examinerCommentary: 'Precise definition, correct formula (contribution method), and a worked numerical example. The explanation of what happens above and below break-even shows understanding of the concept, not just the calculation.',
+    likelyScore: '4 / 4',
+  },
+
+  // ── 2.4 Resource Management — 4 marks ──
+  {
+    id: 'biz-capacity-utilisation-4',
+    subject: 'business',
+    unit: 2,
+    sectionNumber: '2.4',
+    sectionTitle: 'Resource Management',
+    marks: 4,
+    type: 'Knowledge & Application',
+    commandWord: 'Explain',
+    question: 'Explain what is meant by capacity utilisation and why low capacity utilisation is a problem.',
+    markScheme: [
+      { range: '1–2 marks', desc: 'Definition: actual output as a percentage of maximum output' },
+      { range: '3–4 marks', desc: 'Application: why low utilisation increases unit costs' },
+    ],
+    peel: null,
+    answerParagraphs: [
+      {
+        label: null,
+        html: '<strong>Capacity utilisation</strong> measures how much of a firm\'s <strong>maximum possible output</strong> is actually being used, calculated as: <strong>(actual output ÷ maximum output) × 100</strong>. <span class="ma-ann ma-ann-blue">K</span> A factory that could produce 10,000 units but only produces 6,000 has capacity utilisation of 60%. <span class="ma-ann ma-ann-amber">A</span><br><br>Low capacity utilisation is a problem because <strong>fixed costs are spread over fewer units</strong>, raising the <strong>average cost per unit</strong>. <span class="ma-ann ma-ann-blue">K</span> A factory paying £100,000 in rent produces at £10 per unit at full capacity (10,000 units) but £16.67 per unit at 60% (6,000 units). <span class="ma-ann ma-ann-amber">A</span> This makes the firm less competitive and reduces profit margins.',
+      },
+    ],
+    annotationLegend: [
+      { code: 'K', label: 'Knowledge/Definition', color: 'blue' },
+      { code: 'A', label: 'Application', color: 'amber' },
+    ],
+    examinerCommentary: 'Clear definition with formula and numerical example. The fixed cost per unit calculation makes the problem concrete — £10 vs £16.67 per unit is immediately convincing. Avoid just saying "costs increase" — show why using the fixed cost/output relationship.',
+    likelyScore: '4 / 4',
+  },
+
+  // ── Business Unit 2 — 20 marks ──
+  {
+    id: 'biz-cash-flow-profit-20',
+    subject: 'business',
+    unit: 2,
+    sectionNumber: '2.3',
+    sectionTitle: 'Managing Finance',
+    marks: 20,
+    type: 'Evaluation Essay',
+    commandWord: 'Evaluate',
+    question: 'Evaluate the view that cash flow is more important than profit for the survival of a business.',
+    markScheme: [
+      { range: 'AO1 (4 marks)', desc: 'Knowledge of cash flow, profit, working capital, and insolvency' },
+      { range: 'AO2 (4 marks)', desc: 'Application — named business examples, data on business failure' },
+      { range: 'AO3 (6 marks)', desc: 'Analysis — why profitable firms can fail, why loss-making firms can survive' },
+      { range: 'AO4 (6 marks)', desc: 'Evaluation — depends on time horizon, business stage, and industry' },
+    ],
+    peel: {
+      point: 'A business can be profitable on paper but fail if it runs out of cash to pay day-to-day obligations.',
+      evidence: 'E.g. Carillion was reporting profits right up until its collapse in 2018 — its cash flow was deeply negative.',
+      explain: 'Profit is an accounting measure over a period. Cash flow is the actual movement of money — if a firm cannot pay wages, suppliers, or rent on time, it becomes insolvent regardless of its profit position.',
+      link: 'In the short run, cash flow is critical for survival. In the long run, sustained profitability is what generates the cash flow needed for growth.',
+    },
+    answerParagraphs: [
+      {
+        label: 'Introduction',
+        html: '<strong>Cash flow</strong> is the movement of money into and out of a business over a period. <strong>Profit</strong> is the difference between total revenue and total costs. <span class="ma-ann ma-ann-blue">K</span> While related, they are fundamentally different — a business can be <strong>profitable but cash-poor</strong> (or loss-making but cash-rich) depending on the timing of payments and receipts. <span class="ma-ann ma-ann-green">An</span>',
+      },
+      {
+        label: 'Argument 1 — Cash flow is more important for survival',
+        html: 'In the short run, cash flow is <strong>critical for survival</strong> because businesses must pay wages, suppliers, rent, and loan repayments <strong>on time</strong>, regardless of their profit position. <span class="ma-ann ma-ann-green">An</span> <strong>Carillion</strong>, the UK\'s second-largest construction firm, was reporting profits until months before its collapse in January 2018 — but its operating cash flow was deeply negative, and it could not pay its 30,000 suppliers. <span class="ma-ann ma-ann-amber">A</span> A business that runs out of cash becomes <strong>insolvent</strong> — it cannot meet its liabilities as they fall due, and creditors may force it into administration. <span class="ma-ann ma-ann-green">An</span> This is especially common for fast-growing firms that offer <strong>long credit terms</strong> to customers — they have made the sale (profit) but not yet received the cash. <span class="ma-ann ma-ann-green">An</span>',
+      },
+      {
+        label: 'Counter-argument — Profit matters in the long run',
+        html: 'However, long-term <strong>profitability is essential for sustainability</strong>. A business can manage short-term cash flow problems through overdrafts, credit lines, or selling assets, but it cannot survive indefinitely without generating profit. <span class="ma-ann ma-ann-green">An</span> <strong>Amazon</strong> operated at a loss for years while building market share and infrastructure — investors accepted this because they believed future profits would materialise. <span class="ma-ann ma-ann-amber">A</span> Without the expectation of eventual profitability, no investor or lender would provide the cash flow support needed. Profit is also needed to fund investment, repay debt, and reward shareholders. <span class="ma-ann ma-ann-green">An</span>',
+      },
+      {
+        label: 'Evaluation',
+        html: 'The relative importance depends on the <strong>stage of the business</strong> and the <strong>time horizon</strong>. <span class="ma-ann ma-ann-green">An</span> For a <strong>start-up</strong>, cash flow is the immediate priority — many new businesses fail not because their idea is bad but because they run out of cash before revenue materialises. <span class="ma-ann ma-ann-green">An</span> For a <strong>mature business</strong>, sustained profitability matters more — the firm needs to generate returns for shareholders and fund long-term growth. The <strong>industry</strong> also matters — construction and retail (with long payment cycles) face greater cash flow risk than subscription businesses (with predictable monthly revenue). <span class="ma-ann ma-ann-green">An</span>',
+      },
+      {
+        label: 'Conclusion',
+        html: 'On balance, <strong>cash flow is more important for short-term survival</strong> — a profitable business that cannot pay its bills will fail, while a loss-making business with strong cash flow can survive and adapt. However, <strong>profit is more important for long-term viability</strong>, as it is the ultimate source of the cash flow needed for growth and investment. The most dangerous position is when a business mistakes profit for financial health while ignoring its cash position — as Carillion demonstrated. <span class="ma-ann ma-ann-green">An</span>',
+      },
+    ],
+    annotationLegend: [
+      { code: 'K', label: 'Knowledge', color: 'blue' },
+      { code: 'A', label: 'Application', color: 'amber' },
+      { code: 'An', label: 'Analysis chain', color: 'green' },
+    ],
+    examinerCommentary: 'Excellent answer. The Carillion case study is perfectly chosen — profitable on paper, collapsed due to cash flow. Amazon provides the counter-example (loss-making but cash-supported). The evaluation distinguishes by business stage and industry, which is the contextual depth examiners reward. The conclusion\'s final sentence is powerful and memorable.',
+    likelyScore: '18–20 / 20',
+  },
+
+  // ══════════════════════════════════════════════════════════════
+  // REMAINING ECONOMICS GAPS
+  // ══════════════════════════════════════════════════════════════
+
+  // ── 3.3.1 Types and Sizes of Businesses — 8 marks ──
+  {
+    id: 'econ-diseconomies-scale-8',
+    subject: 'economics',
+    unit: 3,
+    sectionNumber: '3.3.1',
+    sectionTitle: 'Types and Sizes of Businesses',
+    marks: 8,
+    type: 'Analysis',
+    commandWord: 'Analyse',
+    question: 'Analyse the reasons why a firm might experience diseconomies of scale.',
+    markScheme: [
+      { range: '1–2 marks', desc: 'Knowledge: definition of diseconomies of scale (rising LRAC beyond optimal output)' },
+      { range: '3–4 marks', desc: 'Application: named firm or industry example' },
+      { range: '5–8 marks', desc: 'Analysis: communication breakdown, coordination problems, worker alienation, management layers' },
+    ],
+    peel: {
+      point: 'As firms grow beyond their optimal size, coordination becomes increasingly difficult and average costs rise.',
+      evidence: 'E.g. HSBC\'s global operations across 60+ countries created management layers that slowed decision-making.',
+      explain: 'More employees mean longer communication chains, more bureaucracy, and weaker worker motivation. Decisions take longer, mistakes go unnoticed, and the firm loses the agility of a smaller competitor.',
+      link: 'Diseconomies explain why the LRAC curve eventually slopes upward and why some industries favour smaller firms.',
+    },
+    answerParagraphs: [
+      {
+        label: 'Para 1',
+        html: '<strong>Diseconomies of scale</strong> occur when a firm grows so large that its <strong>long-run average costs begin to rise</strong> as output increases. <span class="ma-ann ma-ann-blue">K</span> This means the firm has expanded beyond its <strong>minimum efficient scale (MES)</strong> — the output level where LRAC is at its lowest. <span class="ma-ann ma-ann-blue">K</span>',
+      },
+      {
+        label: 'Para 2',
+        html: 'First, <strong>communication problems</strong> arise as messages must pass through multiple management layers. Instructions become distorted, decisions are delayed, and departments may work at cross-purposes. <span class="ma-ann ma-ann-green">An</span> <strong>HSBC</strong>, operating across 60+ countries with over 200,000 employees, has repeatedly restructured to address sluggish internal communication that delayed responses to market changes. <span class="ma-ann ma-ann-amber">A</span>',
+      },
+      {
+        label: 'Para 3',
+        html: 'Second, <strong>coordination difficulties</strong> increase — ensuring thousands of employees, multiple departments, and global supply chains all work in harmony becomes exponentially harder. <span class="ma-ann ma-ann-green">An</span> Third, <strong>worker alienation</strong> may set in — in very large firms, individual workers feel like a small cog in a machine, reducing motivation and productivity. <span class="ma-ann ma-ann-green">An</span> Without the personal connection to the firm\'s mission found in smaller businesses, absenteeism rises and effort falls, increasing costs per unit. <span class="ma-ann ma-ann-green">An</span>',
+      },
+    ],
+    annotationLegend: [
+      { code: 'K', label: 'Knowledge', color: 'blue' },
+      { code: 'A', label: 'Application', color: 'amber' },
+      { code: 'An', label: 'Analysis chain', color: 'green' },
+    ],
+    examinerCommentary: 'Three distinct causes with clear analytical chains. HSBC provides strong application. Each cause is linked to the outcome (rising average costs). For top marks, note that diseconomies explain why some markets remain fragmented (e.g. restaurants, hairdressers) while others are dominated by large firms.',
+    likelyScore: '7–8 / 8',
+  },
+
+  // ── 3.3.2 Revenue, Costs and Profits — 4 marks ──
+  {
+    id: 'econ-normal-vs-supernormal-profit-4',
+    subject: 'economics',
+    unit: 3,
+    sectionNumber: '3.3.2',
+    sectionTitle: 'Revenue, Costs and Profits',
+    marks: 4,
+    type: 'Knowledge & Application',
+    commandWord: 'Explain',
+    question: 'Explain the difference between normal and supernormal profit.',
+    markScheme: [
+      { range: '1–2 marks', desc: 'Definition of normal profit (minimum to keep firm in industry, AR = AC)' },
+      { range: '3–4 marks', desc: 'Definition of supernormal profit (above normal, AR > AC) with implication' },
+    ],
+    peel: null,
+    answerParagraphs: [
+      {
+        label: null,
+        html: '<strong>Normal profit</strong> is the <strong>minimum level of profit needed to keep a firm in the industry</strong> — it covers all costs including the opportunity cost of the entrepreneur\'s time and capital. <span class="ma-ann ma-ann-blue">K</span> It is earned when <strong>average revenue (AR) equals average cost (AC)</strong>. If profit falls below normal, the firm would be better off leaving the industry and deploying its resources elsewhere. <span class="ma-ann ma-ann-amber">A</span><br><br><strong>Supernormal (abnormal) profit</strong> is any profit <strong>above the normal level</strong> — earned when <strong>AR > AC</strong>. <span class="ma-ann ma-ann-blue">K</span> In perfect competition, supernormal profit attracts new entrants who compete it away. In monopoly, barriers to entry protect supernormal profit in the long run. <span class="ma-ann ma-ann-amber">A</span>',
+      },
+    ],
+    annotationLegend: [
+      { code: 'K', label: 'Knowledge/Definition', color: 'blue' },
+      { code: 'A', label: 'Application', color: 'amber' },
+    ],
+    examinerCommentary: 'Clear definitions with the AR = AC / AR > AC conditions correctly stated. The key insight — that normal profit includes opportunity cost — is essential. Linking to market structures (competition vs monopoly) shows broader understanding.',
+    likelyScore: '4 / 4',
+  },
+
+  // ── 3.3.5 Government Intervention — 8 marks ──
+  {
+    id: 'econ-competition-policy-8',
+    subject: 'economics',
+    unit: 3,
+    sectionNumber: '3.3.5',
+    sectionTitle: 'Government Intervention',
+    marks: 8,
+    type: 'Analysis',
+    commandWord: 'Analyse',
+    question: 'Analyse how competition policy can be used to prevent the abuse of monopoly power.',
+    markScheme: [
+      { range: '1–2 marks', desc: 'Knowledge: definition of competition policy, role of CMA' },
+      { range: '3–4 marks', desc: 'Application: named example of competition policy action' },
+      { range: '5–8 marks', desc: 'Analysis: mechanisms (merger control, anti-cartel enforcement, price regulation) and their effects' },
+    ],
+    peel: {
+      point: 'Competition policy uses regulation, merger control, and anti-trust enforcement to prevent firms from exploiting market power.',
+      evidence: 'E.g. the CMA blocked Microsoft\'s initial attempt to acquire Activision Blizzard in 2023 over cloud gaming competition concerns.',
+      explain: 'Blocking anti-competitive mergers preserves choice. Breaking up cartels restores competition. Price caps on natural monopolies prevent exploitation while maintaining scale efficiencies.',
+      link: 'Effective competition policy increases allocative efficiency and protects consumer welfare.',
+    },
+    answerParagraphs: [
+      {
+        label: 'Para 1',
+        html: '<strong>Competition policy</strong> refers to government laws and regulations designed to promote competition and prevent firms from <strong>abusing market power</strong>. <span class="ma-ann ma-ann-blue">K</span> In the UK, the <strong>Competition and Markets Authority (CMA)</strong> is the primary enforcement body, with powers to investigate mergers, prohibit anti-competitive practices, and impose fines. <span class="ma-ann ma-ann-blue">K</span>',
+      },
+      {
+        label: 'Para 2',
+        html: 'First, <strong>merger control</strong> prevents monopoly power from increasing through acquisition. The CMA can <strong>block or impose conditions on mergers</strong> that would substantially lessen competition. For example, the CMA initially <strong>blocked Microsoft\'s $69bn acquisition of Activision Blizzard</strong> in 2023, citing concerns about reduced competition in cloud gaming. <span class="ma-ann ma-ann-amber">A</span> By preventing mergers that create dominant positions, competition policy preserves consumer choice and keeps prices competitive. <span class="ma-ann ma-ann-green">An</span>',
+      },
+      {
+        label: 'Para 3',
+        html: 'Second, <strong>anti-cartel enforcement</strong> targets illegal collusion between firms. Cartels fix prices, share markets, or rig bids — all of which harm consumers by eliminating competition. <span class="ma-ann ma-ann-green">An</span> Fines can be substantial — the EU fined a truck cartel <strong>€2.93bn</strong> for price-fixing. <span class="ma-ann ma-ann-amber">A</span> Third, <strong>price regulation</strong> (e.g. RPI – X price caps) limits what natural monopolies can charge, ensuring consumers are not exploited while the firm retains incentives to reduce costs. <span class="ma-ann ma-ann-green">An</span> Each mechanism aims to increase <strong>allocative efficiency</strong> — ensuring prices reflect costs and output is closer to the social optimum. <span class="ma-ann ma-ann-green">An</span>',
+      },
+    ],
+    annotationLegend: [
+      { code: 'K', label: 'Knowledge', color: 'blue' },
+      { code: 'A', label: 'Application', color: 'amber' },
+      { code: 'An', label: 'Analysis chain', color: 'green' },
+    ],
+    examinerCommentary: 'Three clear policy tools (merger control, anti-cartel, price regulation), each with an analytical chain. The Microsoft/Activision and truck cartel examples are current and memorable. The link to allocative efficiency ties the answer back to economic theory. For evaluative depth, note that competition policy can have limitations — long investigation timescales, difficulty detecting tacit collusion, and risk of discouraging beneficial mergers.',
+    likelyScore: '7–8 / 8',
+  },
+
+  // ── 4.3.2 Trade — 4 marks ──
+  {
+    id: 'econ-comparative-advantage-4',
+    subject: 'economics',
+    unit: 4,
+    sectionNumber: '4.3.2',
+    sectionTitle: 'Trade and the Global Economy',
+    marks: 4,
+    type: 'Knowledge & Application',
+    commandWord: 'Explain',
+    question: 'Explain the principle of comparative advantage.',
+    markScheme: [
+      { range: '1–2 marks', desc: 'Definition: producing at a lower opportunity cost than another country' },
+      { range: '3–4 marks', desc: 'Application: how this leads to mutual gains from specialisation and trade' },
+    ],
+    peel: null,
+    answerParagraphs: [
+      {
+        label: null,
+        html: '<strong>Comparative advantage</strong> exists when a country can produce a good at a <strong>lower opportunity cost</strong> than another country. <span class="ma-ann ma-ann-blue">K</span> Even if one country is more efficient at producing everything (absolute advantage), both countries benefit from specialising in the good where their opportunity cost is lowest, then trading. <span class="ma-ann ma-ann-blue">K</span><br><br>For example, if the UK has a lower opportunity cost of producing financial services and Bangladesh has a lower opportunity cost of producing textiles, both countries gain by <strong>specialising and trading</strong>. <span class="ma-ann ma-ann-amber">A</span> Total global output increases because each country focuses resources on what it does <strong>relatively</strong> best, then exchanges for everything else. <span class="ma-ann ma-ann-amber">A</span>',
+      },
+    ],
+    annotationLegend: [
+      { code: 'K', label: 'Knowledge/Definition', color: 'blue' },
+      { code: 'A', label: 'Application', color: 'amber' },
+    ],
+    examinerCommentary: 'Correctly defines comparative advantage as lower opportunity cost (not lower absolute cost — a common student error). The UK/Bangladesh example makes the concept concrete. The key insight — that even the less efficient country benefits — is what distinguishes good answers.',
+    likelyScore: '4 / 4',
+  },
+
+  // ── 4.3.3 Balance of Payments — 8 marks ──
+  {
+    id: 'econ-j-curve-depreciation-8',
+    subject: 'economics',
+    unit: 4,
+    sectionNumber: '4.3.3',
+    sectionTitle: 'Balance of Payments & Exchange Rates',
+    marks: 8,
+    type: 'Analysis',
+    commandWord: 'Analyse',
+    question: 'Analyse how depreciation of the exchange rate might affect a country\'s current account balance.',
+    markScheme: [
+      { range: '1–2 marks', desc: 'Knowledge: definition of depreciation, current account' },
+      { range: '3–4 marks', desc: 'Application: mechanism — exports cheaper, imports dearer' },
+      { range: '5–8 marks', desc: 'Analysis: Marshall-Lerner condition, J-curve effect, time lags' },
+    ],
+    peel: {
+      point: 'Depreciation makes exports cheaper and imports more expensive, potentially improving the current account — but only if demand is sufficiently elastic.',
+      evidence: 'E.g. the UK pound fell 15% after the 2016 Brexit vote, initially worsening the trade balance before gradually improving export competitiveness.',
+      explain: 'In the short run, existing trade contracts are at old prices and demand is inelastic — the current account worsens (J-curve). Over time, demand adjusts — if PED exports + PED imports > 1, the current account improves.',
+      link: 'Whether depreciation helps depends on the Marshall-Lerner condition and how long it takes for demand to adjust.',
+    },
+    answerParagraphs: [
+      {
+        label: 'Para 1',
+        html: '<strong>Depreciation</strong> is a fall in the value of a currency relative to others in a floating exchange rate system. <span class="ma-ann ma-ann-blue">K</span> When the pound depreciates, UK exports become <strong>cheaper</strong> in foreign currency (more competitive) and imports become <strong>more expensive</strong> in sterling (less competitive). <span class="ma-ann ma-ann-blue">K</span>',
+      },
+      {
+        label: 'Para 2',
+        html: 'In theory, this should <strong>improve the current account</strong> — export volume rises and import volume falls, improving net exports (X – M). <span class="ma-ann ma-ann-green">An</span> However, this outcome depends on the <strong>Marshall-Lerner condition</strong>: the current account improves only if the combined PED for exports and imports is greater than 1. <span class="ma-ann ma-ann-blue">K</span> If demand for both is inelastic, depreciation may actually <strong>worsen</strong> the current account — import spending rises (same volume at higher prices) while export revenue barely increases. <span class="ma-ann ma-ann-green">An</span>',
+      },
+      {
+        label: 'Para 3',
+        html: 'Even when the Marshall-Lerner condition holds, there is a <strong>time lag</strong> explained by the <strong>J-curve effect</strong>. <span class="ma-ann ma-ann-blue">K</span> In the short run, existing trade contracts are denominated in pre-depreciation prices, and consumers and firms take time to adjust their purchasing decisions. <span class="ma-ann ma-ann-green">An</span> After the UK pound fell approximately <strong>15% following the 2016 Brexit referendum</strong>, the trade balance initially worsened before gradually improving as exporters gained competitiveness. <span class="ma-ann ma-ann-amber">A</span> The J-curve shows the current account initially deteriorating (short-run inelastic demand) before improving as demand adjusts over 12–24 months. <span class="ma-ann ma-ann-green">An</span>',
+      },
+    ],
+    annotationLegend: [
+      { code: 'K', label: 'Knowledge', color: 'blue' },
+      { code: 'A', label: 'Application', color: 'amber' },
+      { code: 'An', label: 'Analysis chain', color: 'green' },
+    ],
+    examinerCommentary: 'Excellent answer integrating three key concepts: the basic mechanism, Marshall-Lerner condition, and J-curve. The Brexit depreciation example is topical and well-applied. The conditional analysis (depends on PED) shows the nuanced thinking examiners reward. A J-curve diagram would strengthen the answer further.',
+    likelyScore: '7–8 / 8',
+  },
+
 ];
