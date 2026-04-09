@@ -1,6 +1,8 @@
 /* ─── Model Answers Data ─── */
 
-export const MODEL_ANSWERS = [
+import { EXPANSION_ANSWERS } from './modelAnswersExpansion.js';
+
+const BASE_ANSWERS = [
 
   // ══════════════════════════════════════
   // ECONOMICS
@@ -1072,6 +1074,8 @@ export const MODEL_ANSWERS = [
   },
 ];
 
+export const MODEL_ANSWERS = [...BASE_ANSWERS, ...EXPANSION_ANSWERS];
+
 /* ── FAQ data for main /model-answers page SEO schema ── */
 export const MODEL_ANSWERS_FAQ = [
   {
@@ -1205,6 +1209,26 @@ export const MODEL_ANSWERS_SECTIONS = {
           { number: '2.3.4', title: 'National Income' },
           { number: '2.3.5', title: 'Economic Growth' },
           { number: '2.3.6', title: 'Macroeconomic Policies' },
+        ],
+      },
+      3: {
+        label: 'Unit 3: Business Behaviour',
+        sections: [
+          { number: '3.3.1', title: 'Types and Sizes of Businesses' },
+          { number: '3.3.2', title: 'Revenue, Costs and Profits' },
+          { number: '3.3.3', title: 'Market Structures & Contestability' },
+          { number: '3.3.4', title: 'Labour Markets' },
+          { number: '3.3.5', title: 'Government Intervention' },
+        ],
+      },
+      4: {
+        label: 'Unit 4: Developments in the Global Economy',
+        sections: [
+          { number: '4.3.1', title: 'Causes and Effects of Globalisation' },
+          { number: '4.3.2', title: 'Trade and the Global Economy' },
+          { number: '4.3.3', title: 'Balance of Payments & Exchange Rates' },
+          { number: '4.3.4', title: 'Poverty and Inequality' },
+          { number: '4.3.6', title: 'Growth and Development' },
         ],
       },
     },
