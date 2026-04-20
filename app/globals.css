@@ -5233,6 +5233,17 @@ a.auth-dropdown-item:visited {
   .seo-quick-nav { gap: 8px; }
 }
 
+/* Pillar-page: numbered types list (market failure, etc.) */
+.seo-content-section ul { padding-left: 20px; margin: 0 0 16px; }
+.seo-content-section ul li { font-size: 14px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 8px; }
+.seo-content-section ul li strong { color: var(--text-primary); }
+.seo-types-list { list-style: none; padding: 0; margin: 16px 0 0; counter-reset: types; }
+.seo-types-list > li { padding: 18px 20px; margin-bottom: 14px; background: var(--bg-section); border: 1px solid var(--border-primary); border-radius: 10px; }
+.seo-types-list > li h3 { font-size: 16px; font-weight: 700; color: var(--text-primary); margin: 0 0 8px; }
+.seo-types-list > li p { font-size: 14px; color: var(--text-secondary); line-height: 1.65; margin: 0 0 8px; }
+.seo-types-list > li p:last-child { margin-bottom: 0; }
+.seo-types-list > li p strong { color: var(--text-primary); }
+
 /* Related Model Answers card (internal linking) */
 .seo-related-model-answers {
   max-width: 800px;

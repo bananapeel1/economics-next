@@ -41,14 +41,24 @@ export async function generateMetadata({ params }) {
   const title = `${section.title} — Edexcel IAL Economics ${section.units.title} | Revvy Learn`;
   const description = `Free revision notes, diagrams, flashcards and quizzes for ${section.title}. Edexcel International A-Level Economics ${section.units.title}.`;
 
+  // Some topics have a dedicated SEO pillar page that should absorb canonical authority.
+  // Point the canonical at the pillar to consolidate ranking signals.
+  const pillarCanonicals = {
+    'market-failure': 'https://revvylearn.com/economics/market-failure',
+    'aggregate-demand': 'https://revvylearn.com/economics/aggregate-demand',
+    'macroeconomic-objectives-policies': 'https://revvylearn.com/economics/macroeconomic-objectives',
+    'causes-effects-globalisation': 'https://revvylearn.com/economics/globalisation',
+  };
+  const canonicalUrl = pillarCanonicals[topic] || `https://revvylearn.com/economics/unit-${section.units.number}/${topic}`;
+
   return {
     title,
     description,
-    alternates: { canonical: `https://revvylearn.com/economics/unit-${section.units.number}/${topic}` },
+    alternates: { canonical: canonicalUrl },
     openGraph: {
       title,
       description,
-      url: `https://revvylearn.com/economics/unit-${section.units.number}/${topic}`,
+      url: canonicalUrl,
       type: 'article',
     },
   };

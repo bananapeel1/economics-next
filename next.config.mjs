@@ -1,5 +1,24 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/guides/market-failure-complete-guide',
+        destination: '/economics/market-failure',
+        permanent: true,
+      },
+      {
+        source: '/guides/macroeconomic-objectives-guide',
+        destination: '/economics/macroeconomic-objectives',
+        permanent: true,
+      },
+      {
+        source: '/guides/globalisation-causes-effects',
+        destination: '/economics/globalisation',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
