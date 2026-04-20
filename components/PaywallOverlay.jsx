@@ -21,9 +21,12 @@ function CheckIcon() {
 }
 
 export default function PaywallOverlay({ feature = 'this feature', inline = false, previewText = '' }) {
-  const { user } = useAuth();
+  const { user, isPremium } = useAuth();
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
+
+  // Don't show paywall to premium users
+  if (isPremium) return null;
 
   async function handleUpgrade() {
     setLoading(true);

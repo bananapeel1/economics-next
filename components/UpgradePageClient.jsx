@@ -11,10 +11,12 @@ export default function UpgradePageClient() {
     setLoading(true);
     try {
       const res = await fetch('/api/stripe/checkout', { method: 'POST' });
-      if (res.ok) {
-        const { url } = await res.json();
-        if (url) window.location.href = url;
+      const data = await res.json();
+      if (!res.ok) {
+        alert(data.error || 'Something went wrong');
+        return;
       }
+      if (data.url) window.location.href = data.url;
     } catch (e) {
       console.error('Checkout error:', e);
     }
