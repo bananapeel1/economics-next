@@ -1,6 +1,8 @@
 import { createServerClient } from '@/lib/supabase-server';
 import Link from 'next/link';
+import UnitScrollBar from '../UnitScrollBar';
 import RelatedModelAnswers from '@/components/RelatedModelAnswers';
+import '@/styles/landing.css';
 
 export const metadata = {
   title: 'Market Failure | IAL Economics WEC11 Complete Revision Notes',
@@ -12,6 +14,13 @@ export const metadata = {
     url: 'https://revvylearn.com/economics/market-failure',
     type: 'article',
   },
+};
+
+const ACCENT = {
+  color: '#14b8a6',
+  bg: 'rgba(20,184,166,.08)',
+  bd: 'rgba(20,184,166,.2)',
+  glow: 'rgba(20,184,166,.15)',
 };
 
 const TYPES_OF_FAILURE = [
@@ -80,6 +89,24 @@ const TYPES_OF_FAILURE = [
   },
 ];
 
+const DIAGRAMS = [
+  { name: 'Negative externality of production', detail: 'MSC above MPC, with the welfare-loss triangle between them at the free-market quantity.' },
+  { name: 'Negative externality of consumption', detail: 'MPB above MSB, with overconsumption to the right of the social optimum.' },
+  { name: 'Positive externality of production', detail: 'MPC above MSC, with underproduction.' },
+  { name: 'Positive externality / merit good consumption', detail: 'MSB above MPB, with underconsumption.' },
+  { name: 'Public goods', detail: 'Non-excludability and non-rivalry represented by the free-rider problem.' },
+  { name: 'Monopoly market failure', detail: 'Output below P = MC, with deadweight loss triangle.' },
+];
+
+const POLICY_TOOLS = [
+  { name: 'Indirect taxes', detail: 'On demerit goods and negative externalities (e.g. tobacco duty, carbon tax).' },
+  { name: 'Subsidies', detail: 'On merit goods and positive externalities (e.g. free vaccination, solar-panel grants).' },
+  { name: 'Regulation & legislation', detail: 'Minimum legal age, emission limits, pollution permits.' },
+  { name: 'Direct provision', detail: 'Public goods funded through taxation (e.g. national defence, street lighting).' },
+  { name: 'Information provision', detail: 'Calorie labelling, financial literacy campaigns.' },
+  { name: 'Property rights', detail: 'Assigned to allow Coasian bargaining where transaction costs are low.' },
+];
+
 const FAQS = [
   {
     q: 'What is market failure in economics?',
@@ -117,6 +144,13 @@ const FAQS = [
     q: 'Is market failure the same as market inefficiency?',
     a: 'They are related but not identical. Market inefficiency is any departure from allocative or productive efficiency. Market failure is a specific cause of inefficiency, where the free market mechanism itself is unable to reach the socially optimal outcome without intervention.',
   },
+];
+
+const KEY_CONCEPTS = [
+  { icon: '\u2696\ufe0f', title: 'Markets fail when price misses costs', desc: 'Market failure is a price-mechanism failure: the price does not reflect all the social costs and benefits, so output drifts from the socially optimal point.' },
+  { icon: '\ud83d\udcc9', title: 'Diagrams carry the marks', desc: 'WEC11 examiners reward fully labelled MPC/MSC or MPB/MSB diagrams with the welfare loss shaded. Every shift and every triangle must be labelled.' },
+  { icon: '\ud83d\udd17', title: 'Always chain to welfare', desc: 'Strong answers link a specific failure type to allocative inefficiency and deadweight welfare loss \u2014 not just \u201cit is bad\u201d.' },
+  { icon: '\u2696\ufe0f', title: 'Balance with government failure', desc: 'Top-band evaluation ends with the risk that intervention creates its own distortions \u2014 information gaps, capture, unintended consequences.' },
 ];
 
 export default async function MarketFailurePillarPage() {
@@ -172,174 +206,356 @@ export default async function MarketFailurePillarPage() {
   };
 
   return (
-    <div className="resource-page">
+    <div className="elp-page eup-page" style={{ '--eup-accent': ACCENT.color, '--eup-accent-bg': ACCENT.bg, '--eup-accent-bd': ACCENT.bd, '--eup-accent-glow': ACCENT.glow }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(learningResourceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="resource-page-header">
-        <Link href="/economics/unit-1" className="resource-back-link">&larr; Unit 1: Markets in Action</Link>
-        <span className="seo-unit-badge">Section 1.3.5 &middot; WEC11</span>
-        <h1 className="resource-page-title">Market Failure &mdash; Edexcel IAL Economics (WEC11) Complete Guide</h1>
-        <p className="resource-page-subtitle">
-          Every type of market failure on the Edexcel IAL Economics specification, with diagrams, real examples, model answers and exam technique for WEC11.
-        </p>
+      <UnitScrollBar />
+      <div className="elp-scroll-bar"><div className="elp-scroll-fill" id="eup-scroll-fill" style={{ background: 'var(--eup-accent)' }} /></div>
+
+      {/* NAV */}
+      <nav className="elp-nav">
+        <Link href="/" className="elp-nav-logo"><div className="elp-nav-dot" /><span>Revvy Learn</span></Link>
+        <div className="elp-nav-sep" />
+        <div className="elp-nav-crumb">
+          <Link href="/economics">Economics</Link>
+          <span style={{ color: 'var(--elp-tx-d)', margin: '0 6px' }}>/</span>
+          <Link href="/economics/unit-1">Unit 1</Link>
+          <span style={{ color: 'var(--elp-tx-d)', margin: '0 6px' }}>/</span>
+          <span style={{ color: 'var(--eup-accent)', fontWeight: 600 }}>Market Failure</span>
+        </div>
+        <div className="elp-nav-right">
+          <Link href="/economics/unit-1" className="elp-nav-link">All Unit 1 Topics</Link>
+          <Link href="/login" className="elp-nav-cta">Sign In</Link>
+        </div>
+      </nav>
+
+      {/* TOPIC JUMP NAV */}
+      <div className="eup-topic-nav">
+        <span className="eup-tnav-label">Jump to:</span>
+        <a className="eup-tnav-pill" href="#overview">What it is</a>
+        <a className="eup-tnav-pill" href="#types">The 7 types</a>
+        <a className="eup-tnav-pill" href="#partial-complete">Partial vs complete</a>
+        <a className="eup-tnav-pill" href="#diagrams">Diagrams</a>
+        <a className="eup-tnav-pill" href="#intervention">Government</a>
+        <a className="eup-tnav-pill" href="#faq">FAQ</a>
       </div>
 
-      <div className="seo-hero-cta">
-        <div className="seo-hero-cta-content">
-          <div className="seo-hero-cta-text">
-            <span className="seo-hero-cta-label">Interactive Revision</span>
-            <p>Flashcards, quizzes, AI tutor and progress tracking for this topic</p>
+      {/* HERO */}
+      <section>
+        <div className="elp-hero" style={{ paddingTop: 144 }}>
+          <div className="elp-fade-up">
+            <div className="elp-hero-eyebrow" style={{ background: 'var(--eup-accent-bg)', borderColor: 'var(--eup-accent-bd)', color: 'var(--eup-accent)' }}>Edexcel IAL Economics &middot; WEC11 &middot; 1.3.5</div>
+            <div className="eup-unit-badge-row">
+              <span className="eup-unit-num">Section 1.3.5</span>
+              <span className="eup-unit-code">WEC11</span>
+            </div>
+            <h1 className="elp-hero-title">Market Failure &mdash;<br /><em style={{ color: 'var(--eup-accent)' }}>every type, every diagram</em></h1>
+            <p className="elp-hero-desc">The complete Edexcel IAL Economics guide to market failure. Externalities, public goods, merit and demerit goods, information failure and monopoly power &mdash; with diagrams, real examples and exam technique for WEC11.</p>
+            <div className="elp-hero-actions">
+              <Link href="/economics/unit-1/market-failure" className="elp-btn-primary">Open in app &rarr;</Link>
+              <a href="#types" className="elp-btn-secondary">Jump to types</a>
+            </div>
+            <div className="elp-hero-proof">
+              <div className="elp-proof-item"><strong>7 types</strong> fully explained</div>
+              <div className="elp-proof-dot" />
+              <div className="elp-proof-item"><strong>Free</strong> for every student</div>
+              <div className="elp-proof-dot" />
+              <div className="elp-proof-item">WEC11 exam aligned</div>
+            </div>
           </div>
-          <Link href="/economics/unit-1/market-failure" className="seo-hero-cta-button">
-            Open in app &rarr;
-          </Link>
+
+          {/* Preview card mimicking the app */}
+          <div className="elp-hero-preview elp-fade-up" style={{ transitionDelay: '.15s' }}>
+            <div className="elp-hero-badge elp-b1">
+              <span className="elp-badge-icon">&#127919;</span>
+              <div className="elp-badge-text"><span className="elp-badge-val">7 types</span><span className="elp-badge-lbl">fully spec-aligned</span></div>
+            </div>
+            <div className="elp-preview-card">
+              <div className="elp-preview-topbar">
+                <div className="elp-preview-tab elp-active" style={{ background: 'var(--eup-accent-bg)', borderColor: 'var(--eup-accent-bd)', color: 'var(--eup-accent)' }}>Notes</div>
+                <div className="elp-preview-tab">Flashcards</div>
+                <div className="elp-preview-tab">Quiz</div>
+              </div>
+              <div className="elp-preview-body">
+                <div className="elp-preview-section-title">1.3.5 &mdash; Market Failure</div>
+                <div className="elp-preview-key-idea" style={{ borderLeftColor: 'var(--eup-accent)' }}>
+                  <div className="elp-pki-label" style={{ color: 'var(--eup-accent)' }}>&#128273; Key idea</div>
+                  <div className="elp-pki-text" style={{ color: '#99f6e4' }}>Markets fail when prices give the wrong signals &mdash; causing too much or too little to be produced relative to the social optimum.</div>
+                </div>
+                <div className="elp-preview-bullets">
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#14b8a6' }} /><div className="elp-pb-text"><strong>Negative externality</strong> &mdash; cost imposed on third parties; causes overproduction.</div></div>
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#4f7ef8' }} /><div className="elp-pb-text">Private cost &lt; social cost &rarr; price too low &rarr; output above MSC = MSB.</div></div>
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#f59e0b' }} /><div className="elp-pb-text"><strong>Deadweight loss</strong> &mdash; market produces beyond social optimum.</div></div>
+                </div>
+                <div className="elp-preview-flow">
+                  <div className="elp-pf-step">Firm ignores social cost</div>
+                  <div className="elp-pf-arrow" style={{ color: 'var(--eup-accent)' }}>&rarr;</div>
+                  <div className="elp-pf-step">P too low</div>
+                  <div className="elp-pf-arrow" style={{ color: 'var(--eup-accent)' }}>&rarr;</div>
+                  <div className="elp-pf-step">Overproduction</div>
+                  <div className="elp-pf-arrow" style={{ color: 'var(--eup-accent)' }}>&rarr;</div>
+                  <div className="elp-pf-result" style={{ background: 'var(--eup-accent-bg)', borderColor: 'var(--eup-accent-bd)', color: 'var(--eup-accent)' }}>Welfare loss</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURES STRIP */}
+      <div className="elp-features-strip">
+        <div className="elp-features-inner">
+          <div className="elp-feat-item"><span className="elp-feat-icon">&#128203;</span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every WEC11 1.3.5 point covered</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon">&#128202;</span><div><div className="elp-feat-label">Labelled diagrams</div><div className="elp-feat-sub">MPC, MSC, MPB, MSB, welfare loss</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon">&#9889;</span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style with model answers</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon">&#129302;</span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any market failure question</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon">&#127758;</span><div><div className="elp-feat-label">Built for IAL</div><div className="elp-feat-sub">International A-Level focus</div></div></div>
         </div>
       </div>
 
-      <section className="seo-content-section">
-        <h2>What is market failure?</h2>
-        <p>
-          Market failure is one of the highest-weighted topics in Edexcel IAL Economics Unit 1 (WEC11) and appears in almost every paper series. It happens when the free market mechanism, left to itself, fails to allocate resources efficiently &mdash; the price paid in the market does not reflect all the costs and benefits of producing or consuming a good.
-        </p>
-        <p>
-          In a perfectly functioning market, resources flow to the point where <strong>marginal social benefit (MSB)</strong> equals <strong>marginal social cost (MSC)</strong>. When externalities, public goods, missing information or monopoly power get in the way, the market produces too much or too little of a good and total welfare falls below its potential maximum.
-        </p>
-      </section>
+      {/* OVERVIEW */}
+      <div className="elp-section" id="overview">
+        <div className="elp-fade-up" style={{ marginBottom: 24 }}>
+          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />The big picture</div>
+          <h2 className="elp-s-title">What is market failure?</h2>
+        </div>
+        <div className="eup-topic-block elp-fade-up">
+          <p className="eup-topic-desc">Market failure is one of the highest-weighted topics in Edexcel IAL Economics Unit 1 (WEC11) and appears in almost every paper series. It happens when the free market mechanism, left to itself, fails to allocate resources efficiently &mdash; the price paid in the market does not reflect all the costs and benefits of producing or consuming a good.</p>
+          <p className="eup-topic-desc">In a perfectly functioning market, resources flow to the point where <strong>marginal social benefit (MSB)</strong> equals <strong>marginal social cost (MSC)</strong>. When externalities, public goods, missing information or monopoly power get in the way, the market produces too much or too little of a good and total welfare falls below its potential maximum.</p>
+        </div>
+      </div>
 
-      <section className="seo-content-section">
-        <h2>The main types of market failure</h2>
-        <p>
-          For Edexcel IAL Economics you need to recognise and analyse each of the following types. Different textbooks count them as four, five or six categories &mdash; we cover all seven examinable forms below so you are ready for any mark scheme.
-        </p>
-
-        <ol className="seo-types-list">
-          {TYPES_OF_FAILURE.map(t => (
-            <li key={t.slug} id={t.slug}>
-              <h3>{t.number}. {t.name}</h3>
-              <p><strong>{t.shortDef}</strong></p>
-              <p>{t.detail}</p>
-              <p><em>Examples:</em> {t.example}</p>
-              <p><em>Diagram:</em> {t.diagram}</p>
-            </li>
-          ))}
-        </ol>
-      </section>
-
-      <section className="seo-content-section">
-        <h2>Partial vs complete market failure</h2>
-        <p>
-          <strong>Partial market failure</strong> occurs when a market exists but produces the wrong quantity relative to the social optimum. Every externality, every merit good and every demerit good is an example.
-        </p>
-        <p>
-          <strong>Complete market failure</strong> occurs when the market fails to form at all. Pure public goods are the classic case: because producers cannot exclude non-payers, and one person&rsquo;s use does not reduce availability, no profit-seeking firm will supply them. Only the government can provide them &mdash; usually funded through taxation.
-        </p>
-      </section>
-
-      <section className="seo-content-section">
-        <h2>Market failure diagrams</h2>
-        <p>
-          Examiners reward clear, fully labelled diagrams. The core diagrams you need to reproduce accurately for WEC11 are:
-        </p>
-        <ul>
-          <li><strong>Negative externality of production</strong> &mdash; MSC above MPC, with the welfare-loss triangle between them at the free-market quantity.</li>
-          <li><strong>Negative externality of consumption</strong> &mdash; MPB above MSB, with overconsumption to the right of the social optimum.</li>
-          <li><strong>Positive externality of production</strong> &mdash; MPC above MSC, with underproduction.</li>
-          <li><strong>Positive externality of consumption / merit good</strong> &mdash; MSB above MPB, with underconsumption.</li>
-          <li><strong>Public goods</strong> &mdash; non-excludability and non-rivalry represented by the free-rider problem rather than a supply-demand diagram.</li>
-          <li><strong>Monopoly market failure</strong> &mdash; output below P = MC, with deadweight loss triangle.</li>
-        </ul>
-        <p>
-          For every diagram: label axes (P, Q), label all curves fully (MPC, MSC, MPB, MSB, D, S), mark the free-market equilibrium, mark the socially-optimal equilibrium, and shade the welfare loss.
-        </p>
-      </section>
-
-      <section className="seo-content-section">
-        <h2>How governments correct market failure</h2>
-        <p>
-          Every WEC11 question on market failure expects you to evaluate policy responses. The main tools are:
-        </p>
-        <ul>
-          <li><strong>Indirect taxes</strong> on demerit goods and negative externalities (e.g. tobacco duty, carbon tax).</li>
-          <li><strong>Subsidies</strong> on merit goods and positive externalities (e.g. free vaccination, solar-panel grants).</li>
-          <li><strong>Regulation and legislation</strong> (e.g. minimum legal age, emission limits, pollution permits).</li>
-          <li><strong>Direct provision</strong> of public goods funded through taxation (e.g. national defence, street lighting).</li>
-          <li><strong>Information provision</strong> to reduce information failure (e.g. calorie labelling, financial literacy campaigns).</li>
-          <li><strong>Property-right assignment</strong> to allow Coasian bargaining where transaction costs are low.</li>
-        </ul>
-        <p>
-          See the full breakdown on <Link href="/economics/unit-1/government-intervention">Government Intervention</Link>. Always finish a WEC11 evaluation answer by discussing <strong>government failure</strong> &mdash; the risk that intervention itself produces a worse allocation of resources than the original market failure.
-        </p>
-      </section>
-
-      {notesData.length > 0 && (
-        <section className="seo-content-section">
-          <h2>Interactive notes preview</h2>
-          <div className="seo-stepper">
-            {notesData.slice(0, 5).map((section, i) => (
-              <div key={i} className="seo-stepper-step">
-                <div className="seo-stepper-rail">
-                  <div className="seo-stepper-node">{i + 1}</div>
-                  {i < Math.min(notesData.length, 5) - 1 && <div className="seo-stepper-line" />}
+      {/* TYPES */}
+      <div className="elp-section" id="types">
+        <div className="elp-fade-up" style={{ marginBottom: 40 }}>
+          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />All seven types</div>
+          <h2 className="elp-s-title">Every type of market failure on the WEC11 spec</h2>
+          <p className="elp-s-sub">Different textbooks count them as four, five or six categories &mdash; we cover all seven examinable forms so you are ready for any mark scheme.</p>
+        </div>
+        {TYPES_OF_FAILURE.map((type, idx) => (
+          <div key={type.slug}>
+            <div className="eup-topic-block elp-fade-up" id={type.slug}>
+              <div className="eup-topic-label-row">
+                <div className="eup-topic-ref-badge">{type.number}</div>
+                <div className="eup-topic-heading">{type.name}</div>
+              </div>
+              <p className="eup-topic-desc"><strong>{type.shortDef}</strong></p>
+              <p className="eup-topic-desc">{type.detail}</p>
+              <div className="eup-subtopic-grid">
+                <div className="eup-subtopic-tile">
+                  <div className="eup-st-num">&#128204;</div>
+                  <div className="eup-st-body">
+                    <div className="eup-st-name">Real examples</div>
+                    <div className="eup-st-keywords">{type.example}</div>
+                  </div>
                 </div>
-                <div className="seo-stepper-body">
-                  <h3>{section.title}</h3>
-                  <ul>
-                    {(section.points || []).slice(0, 3).map((point, j) => (
-                      <li key={j} dangerouslySetInnerHTML={{ __html: point }} />
-                    ))}
-                  </ul>
+                <div className="eup-subtopic-tile">
+                  <div className="eup-st-num">&#128202;</div>
+                  <div className="eup-st-body">
+                    <div className="eup-st-name">Diagram</div>
+                    <div className="eup-st-keywords">{type.diagram}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {idx < TYPES_OF_FAILURE.length - 1 && <div className="eup-topic-divider" />}
+          </div>
+        ))}
+      </div>
+
+      {/* PARTIAL VS COMPLETE */}
+      <div className="elp-section" id="partial-complete">
+        <div className="elp-fade-up" style={{ marginBottom: 24 }}>
+          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />Depth of failure</div>
+          <h2 className="elp-s-title">Partial vs complete market failure</h2>
+        </div>
+        <div className="eup-topic-block elp-fade-up">
+          <p className="eup-topic-desc"><strong>Partial market failure</strong> occurs when a market exists but produces the wrong quantity relative to the social optimum. Every externality, every merit good and every demerit good is an example.</p>
+          <p className="eup-topic-desc"><strong>Complete market failure</strong> occurs when the market fails to form at all. Pure public goods are the classic case: because producers cannot exclude non-payers, and one person&rsquo;s use does not reduce availability, no profit-seeking firm will supply them. Only the government can provide them &mdash; usually funded through taxation.</p>
+        </div>
+      </div>
+
+      {/* DIAGRAMS */}
+      <div className="elp-section" id="diagrams">
+        <div className="elp-fade-up" style={{ marginBottom: 24 }}>
+          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />Exam-ready visuals</div>
+          <h2 className="elp-s-title">Market failure diagrams</h2>
+          <p className="elp-s-sub">Examiners reward clear, fully labelled diagrams. Label axes (P, Q), every curve (MPC, MSC, MPB, MSB, D, S), free-market and socially-optimal equilibria, and shade the welfare loss.</p>
+        </div>
+        <div className="eup-topic-block elp-fade-up">
+          <div className="eup-subtopic-grid">
+            {DIAGRAMS.map((d, i) => (
+              <div key={i} className="eup-subtopic-tile">
+                <div className="eup-st-num">&#128200;</div>
+                <div className="eup-st-body">
+                  <div className="eup-st-name">{d.name}</div>
+                  <div className="eup-st-keywords">{d.detail}</div>
                 </div>
               </div>
             ))}
           </div>
-          <Link href="/economics/unit-1/market-failure" className="seo-section-link">
-            Open all market failure notes interactively &rarr;
-          </Link>
-        </section>
-      )}
+        </div>
+      </div>
 
-      {practiceData.length > 0 && (
-        <section className="seo-faq-section">
-          <h2>Exam-style practice questions</h2>
-          {practiceData.map((q, i) => (
-            <details key={i} className="seo-faq-item">
-              <summary>{q.question || q.title}</summary>
-              <div className="seo-faq-answer">
-                <p>{q.guidance || q.answer || q.modelAnswer}</p>
+      {/* GOVERNMENT INTERVENTION */}
+      <div className="elp-section" id="intervention">
+        <div className="elp-fade-up" style={{ marginBottom: 24 }}>
+          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />Policy response</div>
+          <h2 className="elp-s-title">How governments correct market failure</h2>
+          <p className="elp-s-sub">Every WEC11 question on market failure expects you to evaluate policy responses and end with the risk of government failure.</p>
+        </div>
+        <div className="eup-topic-block elp-fade-up">
+          <div className="eup-subtopic-grid">
+            {POLICY_TOOLS.map((p, i) => (
+              <div key={i} className="eup-subtopic-tile">
+                <div className="eup-st-num">&#9881;&#65039;</div>
+                <div className="eup-st-body">
+                  <div className="eup-st-name">{p.name}</div>
+                  <div className="eup-st-keywords">{p.detail}</div>
+                </div>
               </div>
-            </details>
-          ))}
-          <p style={{ marginTop: 16 }}>
-            For fully worked 8- and 20-mark model answers, see the <Link href="/economics/market-failure-model-answers">Market Failure Model Answers</Link> page.
-          </p>
-        </section>
+            ))}
+          </div>
+          <p className="eup-topic-desc" style={{ marginTop: 20 }}>See the full breakdown on <Link href="/economics/unit-1/government-intervention" style={{ color: 'var(--eup-accent)' }}>Government Intervention</Link>. Always finish a WEC11 evaluation answer by discussing <strong>government failure</strong> &mdash; the risk that intervention itself produces a worse allocation of resources than the original market failure.</p>
+        </div>
+      </div>
+
+      {/* INTERACTIVE NOTES PREVIEW (supabase-driven) */}
+      {notesData.length > 0 && (
+        <div className="elp-section" id="notes">
+          <div className="elp-fade-up" style={{ marginBottom: 24 }}>
+            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />From the app</div>
+            <h2 className="elp-s-title">Interactive notes preview</h2>
+          </div>
+          <div className="eup-topic-block elp-fade-up">
+            <div className="seo-stepper" style={{ marginTop: 0 }}>
+              {notesData.slice(0, 5).map((section, i) => (
+                <div key={i} className="seo-stepper-step">
+                  <div className="seo-stepper-rail">
+                    <div className="seo-stepper-node">{i + 1}</div>
+                    {i < Math.min(notesData.length, 5) - 1 && <div className="seo-stepper-line" />}
+                  </div>
+                  <div className="seo-stepper-body">
+                    <h3>{section.title}</h3>
+                    <ul>
+                      {(section.points || []).slice(0, 3).map((point, j) => (
+                        <li key={j} dangerouslySetInnerHTML={{ __html: point }} />
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <Link href="/economics/unit-1/market-failure" className="eup-topic-open-link" style={{ marginTop: 16, display: 'inline-block' }}>Open all notes interactively &rarr;</Link>
+          </div>
+        </div>
       )}
 
-      <section className="seo-faq-section">
-        <h2>Market failure FAQ</h2>
-        {FAQS.map((f, i) => (
-          <details key={i} className="seo-faq-item">
-            <summary>{f.q}</summary>
-            <div className="seo-faq-answer">
-              <p>{f.a}</p>
+      {/* PRACTICE QUESTIONS */}
+      {practiceData.length > 0 && (
+        <div className="elp-section" id="practice">
+          <div className="elp-fade-up" style={{ marginBottom: 24 }}>
+            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: '#f59e0b' }} />Exam practice</div>
+            <h2 className="elp-s-title">Exam-style practice questions</h2>
+          </div>
+          <div className="eup-topic-block elp-fade-up">
+            <div className="seo-faq-section" style={{ marginTop: 0, padding: 0 }}>
+              {practiceData.map((q, i) => (
+                <details key={i} className="seo-faq-item">
+                  <summary>{q.question || q.title}</summary>
+                  <div className="seo-faq-answer">
+                    <p>{q.guidance || q.answer || q.modelAnswer}</p>
+                  </div>
+                </details>
+              ))}
             </div>
-          </details>
-        ))}
-      </section>
+            <p className="eup-topic-desc" style={{ marginTop: 16 }}>For fully worked 8- and 20-mark model answers, see the <Link href="/economics/market-failure-model-answers" style={{ color: 'var(--eup-accent)' }}>Market Failure Model Answers</Link> page.</p>
+          </div>
+        </div>
+      )}
 
-      <div className="seo-related-links">
-        <h2>Continue revising</h2>
-        <div className="seo-links-grid">
-          <Link href="/economics/unit-1/government-intervention">Government Intervention</Link>
-          <Link href="/economics/unit-1/price-determination">Price Determination</Link>
-          <Link href="/economics/market-failure-model-answers">Market Failure Model Answers</Link>
-          <Link href="/economics/unit-1">All Unit 1 Topics</Link>
-          <Link href="/economics">All Economics Units</Link>
-          <Link href="/past-papers">WEC11 Past Papers</Link>
-          <Link href="/glossary">Economics Glossary</Link>
-          <Link href="/command-words">Command Words Guide</Link>
+      {/* UNIT OVERVIEW: key concepts + exam info */}
+      <div className="eup-unit-overview">
+        <div className="eup-unit-overview-inner">
+          <div className="elp-fade-up">
+            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />Topic overview</div>
+            <h2 className="elp-s-title">What you need to know for 1.3.5</h2>
+            <div className="eup-key-concepts">
+              {KEY_CONCEPTS.map((c, i) => (
+                <div key={i} className="eup-concept">
+                  <div className="eup-concept-icon">{c.icon}</div>
+                  <div>
+                    <div className="eup-concept-title">{c.title}</div>
+                    <div className="eup-concept-desc">{c.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="elp-fade-up" style={{ transitionDelay: '.1s' }}>
+            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: '#f59e0b' }} />Where it appears</div>
+            <h2 className="elp-s-title">WEC11 at a glance</h2>
+            <div className="eup-exam-info">
+              <div className="eup-ei-label">Assessment details</div>
+              <div className="eup-ei-row"><span className="eup-ei-key">Unit</span><span className="eup-ei-val" style={{ color: 'var(--eup-accent)' }}>1.3.5 &mdash; WEC11</span></div>
+              <div className="eup-ei-row"><span className="eup-ei-key">Paper duration</span><span className="eup-ei-val">1 hour 30 minutes</span></div>
+              <div className="eup-ei-row"><span className="eup-ei-key">Paper marks</span><span className="eup-ei-val">80 marks</span></div>
+              <div className="eup-ei-row"><span className="eup-ei-key">% of A-Level</span><span className="eup-ei-val">20%</span></div>
+              <div className="eup-ei-row"><span className="eup-ei-key">Question styles</span><span className="eup-ei-val eup-marks-pills-inline"><span className="eup-mp eup-mp-4">4</span><span className="eup-mp eup-mp-8">8</span><span className="eup-mp eup-mp-20">20</span></span></div>
+              <div className="eup-ei-row"><span className="eup-ei-key">Common in</span><span className="eup-ei-val">Section A data-response &amp; Section B essays</span></div>
+              <div className="eup-ei-row eup-ei-row-last"><span className="eup-ei-key">Sessions</span><span className="eup-ei-val">January, June, October</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* FAQ */}
+      <div className="elp-section" id="faq">
+        <div className="elp-fade-up" style={{ marginBottom: 24 }}>
+          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />Common questions</div>
+          <h2 className="elp-s-title">Market failure FAQ</h2>
+        </div>
+        <div className="eup-topic-block elp-fade-up">
+          <div className="seo-faq-section" style={{ marginTop: 0, padding: 0 }}>
+            {FAQS.map((f, i) => (
+              <details key={i} className="seo-faq-item">
+                <summary>{f.q}</summary>
+                <div className="seo-faq-answer">
+                  <p>{f.a}</p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* CONTINUE REVISING */}
+      <div className="elp-section-sm elp-fade-up">
+        <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--elp-green)' }} />Keep going</div>
+        <h2 className="elp-s-title" style={{ fontSize: 22, marginBottom: 8 }}>Continue revising</h2>
+        <div className="eup-continue-grid">
+          <Link className="eup-continue-card" href="/economics/unit-1/government-intervention">
+            <div className="eup-cc-icon">&#127963;</div>
+            <div className="eup-cc-body"><div className="eup-cc-name">Government Intervention</div><div className="eup-cc-sub">1.3.6 &middot; Taxes, subsidies, regulation, direct provision</div></div>
+            <div className="eup-cc-arrow">&rarr;</div>
+          </Link>
+          <Link className="eup-continue-card" href="/economics/market-failure-model-answers">
+            <div className="eup-cc-icon">&#128221;</div>
+            <div className="eup-cc-body"><div className="eup-cc-name">Market Failure Model Answers</div><div className="eup-cc-sub">Fully worked 8- and 20-mark answers</div></div>
+            <div className="eup-cc-arrow">&rarr;</div>
+          </Link>
+          <Link className="eup-continue-card" href="/economics/unit-1">
+            <div className="eup-cc-icon">&#128214;</div>
+            <div className="eup-cc-body"><div className="eup-cc-name">All Unit 1 Topics</div><div className="eup-cc-sub">WEC11 &middot; Markets in Action</div></div>
+            <div className="eup-cc-arrow">&rarr;</div>
+          </Link>
+          <Link className="eup-continue-card" href="/past-papers">
+            <div className="eup-cc-icon">&#128196;</div>
+            <div className="eup-cc-body"><div className="eup-cc-name">WEC11 Past Papers</div><div className="eup-cc-sub">Real exam questions &amp; mark schemes</div></div>
+            <div className="eup-cc-arrow">&rarr;</div>
+          </Link>
         </div>
       </div>
 
@@ -349,11 +565,36 @@ export default async function MarketFailurePillarPage() {
         count={1}
       />
 
-      <div className="seo-cta">
-        <h2>Master market failure interactively</h2>
-        <p>Use flashcards, quizzes and the AI tutor to drill every type of market failure before exam day.</p>
-        <Link href="/economics/unit-1/market-failure" className="seo-cta-button">Start revising &rarr;</Link>
+      {/* CTA */}
+      <div className="elp-cta-section">
+        <div className="elp-cta-bg" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(20,184,166,.07) 0%, transparent 65%)' }} />
+        <div className="elp-cta-inner elp-fade-up">
+          <h2 className="elp-cta-title">Ready to master market failure?</h2>
+          <p className="elp-cta-sub">Free notes for every spec point. Flashcards, quizzes and AI tutor unlock with a 3-day free trial.</p>
+          <div className="elp-cta-actions">
+            <Link href="/economics/unit-1/market-failure" className="elp-btn-primary" style={{ fontSize: 15, padding: '14px 30px' }}>Open in app &mdash; it&apos;s free &rarr;</Link>
+            <Link href="/economics/unit-1" className="elp-btn-secondary">&larr; Back to Unit 1</Link>
+          </div>
+          <p className="elp-cta-note">No signup required for notes &middot; Cancel premium anytime &middot; &euro;0.99/month</p>
+        </div>
       </div>
+
+      {/* FOOTER */}
+      <footer className="elp-footer">
+        <div className="elp-footer-inner">
+          <div className="elp-footer-logo"><div className="elp-nav-dot" style={{ width: 7, height: 7 }} />Revvy Learn</div>
+          <div className="elp-footer-sep" />
+          <div className="elp-footer-links">
+            <Link className="elp-footer-link" href="/economics">Economics</Link>
+            <Link className="elp-footer-link" href="/economics/unit-1">Unit 1</Link>
+            <Link className="elp-footer-link" href="/economics/market-failure">Market Failure</Link>
+            <Link className="elp-footer-link" href="/economics/market-failure-model-answers">Model Answers</Link>
+            <Link className="elp-footer-link" href="/glossary">Glossary</Link>
+            <Link className="elp-footer-link" href="/past-papers">Past Papers</Link>
+          </div>
+          <div className="elp-footer-right">Edexcel IAL WEC11 &copy; Revvy Learn</div>
+        </div>
+      </footer>
     </div>
   );
 }

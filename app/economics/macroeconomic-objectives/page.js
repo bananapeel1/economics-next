@@ -1,6 +1,8 @@
 import { createServerClient } from '@/lib/supabase-server';
 import Link from 'next/link';
+import UnitScrollBar from '../UnitScrollBar';
 import RelatedModelAnswers from '@/components/RelatedModelAnswers';
+import '@/styles/landing.css';
 
 export const metadata = {
   title: 'Macroeconomic Objectives | IAL Economics WEC12 Complete Guide',
@@ -12,6 +14,13 @@ export const metadata = {
     url: 'https://revvylearn.com/economics/macroeconomic-objectives',
     type: 'article',
   },
+};
+
+const ACCENT = {
+  color: '#4f7ef8',
+  bg: 'rgba(79,126,248,.08)',
+  bd: 'rgba(79,126,248,.2)',
+  glow: 'rgba(79,126,248,.15)',
 };
 
 const OBJECTIVES = [
@@ -100,6 +109,12 @@ const TRADE_OFFS = [
   },
 ];
 
+const POLICY_TOOLS = [
+  { name: 'Fiscal policy', detail: 'Government spending (G) and taxation (T). Treasury-controlled. Expansionary raises AD; contractionary reduces it.' },
+  { name: 'Monetary policy', detail: 'Interest rates and quantitative easing. Central bank-controlled. Lower rates raise AD; higher rates cool it.' },
+  { name: 'Supply-side policy', detail: 'Education, infrastructure, deregulation, tax incentives. Raises LRAS and productive capacity.' },
+];
+
 const FAQS = [
   {
     q: 'What are the macroeconomic objectives in Edexcel IAL Economics?',
@@ -133,6 +148,13 @@ const FAQS = [
     q: 'Does full employment mean zero unemployment?',
     a: 'No. Full employment means only voluntary and frictional unemployment remain. People moving between jobs, returning to the workforce, or choosing not to work at current wages will always create some measured unemployment even at \u201cfull employment\u201d. The natural rate is typically around 3\u20135%.',
   },
+];
+
+const KEY_CONCEPTS = [
+  { icon: '\ud83c\udfaf', title: 'Six objectives, four classic', desc: 'Growth, low inflation, low unemployment and BoP stability are the \u201cbig four\u201d. Income equality and environmental sustainability complete the modern set.' },
+  { icon: '\u26a1', title: 'Trade-offs are the question', desc: 'WEC12 evaluation marks reward recognising that pursuing one objective often worsens another. Always frame answers around trade-offs.' },
+  { icon: '\ud83c\udfdb\ufe0f', title: 'Three policy levers', desc: 'Fiscal, monetary and supply-side. Know what each one does, who controls it, and the time lag before it bites.' },
+  { icon: '\ud83d\udcca', title: 'Measurement matters', desc: 'CPI vs RPI, claimant count vs ILO, real vs nominal GDP \u2014 examiners reward precision in how each objective is measured.' },
 ];
 
 export default async function MacroObjectivesPillarPage() {
@@ -188,156 +210,336 @@ export default async function MacroObjectivesPillarPage() {
   };
 
   return (
-    <div className="resource-page">
+    <div className="elp-page eup-page" style={{ '--eup-accent': ACCENT.color, '--eup-accent-bg': ACCENT.bg, '--eup-accent-bd': ACCENT.bd, '--eup-accent-glow': ACCENT.glow }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(learningResourceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="resource-page-header">
-        <Link href="/economics/unit-2" className="resource-back-link">&larr; Unit 2: Macroeconomic Performance &amp; Policy</Link>
-        <span className="seo-unit-badge">Section 2.3.6 &middot; WEC12</span>
-        <h1 className="resource-page-title">Macroeconomic Objectives &mdash; Edexcel IAL Economics (WEC12) Complete Guide</h1>
-        <p className="resource-page-subtitle">
-          Every macroeconomic objective on the Edexcel IAL Economics specification, how each one is measured, the policies used to achieve them, and why they conflict. Built for WEC12.
-        </p>
+      <UnitScrollBar />
+      <div className="elp-scroll-bar"><div className="elp-scroll-fill" id="eup-scroll-fill" style={{ background: 'var(--eup-accent)' }} /></div>
+
+      <nav className="elp-nav">
+        <Link href="/" className="elp-nav-logo"><div className="elp-nav-dot" /><span>Revvy Learn</span></Link>
+        <div className="elp-nav-sep" />
+        <div className="elp-nav-crumb">
+          <Link href="/economics">Economics</Link>
+          <span style={{ color: 'var(--elp-tx-d)', margin: '0 6px' }}>/</span>
+          <Link href="/economics/unit-2">Unit 2</Link>
+          <span style={{ color: 'var(--elp-tx-d)', margin: '0 6px' }}>/</span>
+          <span style={{ color: 'var(--eup-accent)', fontWeight: 600 }}>Macroeconomic Objectives</span>
+        </div>
+        <div className="elp-nav-right">
+          <Link href="/economics/unit-2" className="elp-nav-link">All Unit 2 Topics</Link>
+          <Link href="/login" className="elp-nav-cta">Sign In</Link>
+        </div>
+      </nav>
+
+      <div className="eup-topic-nav">
+        <span className="eup-tnav-label">Jump to:</span>
+        <a className="eup-tnav-pill" href="#overview">What they are</a>
+        <a className="eup-tnav-pill" href="#objectives">The 6 objectives</a>
+        <a className="eup-tnav-pill" href="#tradeoffs">Trade-offs</a>
+        <a className="eup-tnav-pill" href="#tools">Policy tools</a>
+        <a className="eup-tnav-pill" href="#faq">FAQ</a>
       </div>
 
-      <div className="seo-hero-cta">
-        <div className="seo-hero-cta-content">
-          <div className="seo-hero-cta-text">
-            <span className="seo-hero-cta-label">Interactive Revision</span>
-            <p>Flashcards, quizzes, AI tutor and progress tracking for this topic</p>
+      <section>
+        <div className="elp-hero" style={{ paddingTop: 144 }}>
+          <div className="elp-fade-up">
+            <div className="elp-hero-eyebrow" style={{ background: 'var(--eup-accent-bg)', borderColor: 'var(--eup-accent-bd)', color: 'var(--eup-accent)' }}>Edexcel IAL Economics &middot; WEC12 &middot; 2.3.6</div>
+            <div className="eup-unit-badge-row">
+              <span className="eup-unit-num">Section 2.3.6</span>
+              <span className="eup-unit-code">WEC12</span>
+            </div>
+            <h1 className="elp-hero-title">Macroeconomic Objectives &mdash;<br /><em style={{ color: 'var(--eup-accent)' }}>every target, every trade-off</em></h1>
+            <p className="elp-hero-desc">The complete Edexcel IAL Economics guide to macroeconomic objectives. Growth, inflation, unemployment, balance of payments, equality and environment &mdash; with measurement, policy tools and trade-offs for WEC12.</p>
+            <div className="elp-hero-actions">
+              <Link href="/economics/unit-2/macroeconomic-objectives-policies" className="elp-btn-primary">Open in app &rarr;</Link>
+              <a href="#objectives" className="elp-btn-secondary">Jump to objectives</a>
+            </div>
+            <div className="elp-hero-proof">
+              <div className="elp-proof-item"><strong>6 objectives</strong> fully covered</div>
+              <div className="elp-proof-dot" />
+              <div className="elp-proof-item"><strong>5 trade-offs</strong> exam-ready</div>
+              <div className="elp-proof-dot" />
+              <div className="elp-proof-item">WEC12 exam aligned</div>
+            </div>
           </div>
-          <Link href="/economics/unit-2/macroeconomic-objectives-policies" className="seo-hero-cta-button">
-            Open in app &rarr;
-          </Link>
+
+          <div className="elp-hero-preview elp-fade-up" style={{ transitionDelay: '.15s' }}>
+            <div className="elp-hero-badge elp-b1">
+              <span className="elp-badge-icon">&#127919;</span>
+              <div className="elp-badge-text"><span className="elp-badge-val">6 objectives</span><span className="elp-badge-lbl">fully spec-aligned</span></div>
+            </div>
+            <div className="elp-preview-card">
+              <div className="elp-preview-topbar">
+                <div className="elp-preview-tab elp-active" style={{ background: 'var(--eup-accent-bg)', borderColor: 'var(--eup-accent-bd)', color: 'var(--eup-accent)' }}>Notes</div>
+                <div className="elp-preview-tab">Flashcards</div>
+                <div className="elp-preview-tab">Quiz</div>
+              </div>
+              <div className="elp-preview-body">
+                <div className="elp-preview-section-title">2.3.6 &mdash; Macroeconomic Objectives</div>
+                <div className="elp-preview-key-idea" style={{ borderLeftColor: 'var(--eup-accent)' }}>
+                  <div className="elp-pki-label" style={{ color: 'var(--eup-accent)' }}>&#128273; Key idea</div>
+                  <div className="elp-pki-text" style={{ color: '#bfdbfe' }}>The four classic objectives \u2014 growth, low inflation, low unemployment, BoP stability \u2014 conflict with each other. Trade-offs are the question.</div>
+                </div>
+                <div className="elp-preview-bullets">
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#4f7ef8' }} /><div className="elp-pb-text"><strong>Growth</strong> measured by % change in real GDP.</div></div>
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#10b981' }} /><div className="elp-pb-text"><strong>Inflation</strong> target: 2% CPI for most central banks.</div></div>
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#f59e0b' }} /><div className="elp-pb-text"><strong>Phillips Curve</strong>: short-run trade-off between inflation and unemployment.</div></div>
+                </div>
+                <div className="elp-preview-flow">
+                  <div className="elp-pf-step">Cut interest rates</div>
+                  <div className="elp-pf-arrow" style={{ color: 'var(--eup-accent)' }}>&rarr;</div>
+                  <div className="elp-pf-step">AD up</div>
+                  <div className="elp-pf-arrow" style={{ color: 'var(--eup-accent)' }}>&rarr;</div>
+                  <div className="elp-pf-step">Growth, jobs up</div>
+                  <div className="elp-pf-arrow" style={{ color: 'var(--eup-accent)' }}>&rarr;</div>
+                  <div className="elp-pf-result" style={{ background: 'var(--eup-accent-bg)', borderColor: 'var(--eup-accent-bd)', color: 'var(--eup-accent)' }}>Inflation risk</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="elp-features-strip">
+        <div className="elp-features-inner">
+          <div className="elp-feat-item"><span className="elp-feat-icon">&#128203;</span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every WEC12 2.3.6 point covered</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon">&#9878;&#65039;</span><div><div className="elp-feat-label">Trade-offs explained</div><div className="elp-feat-sub">Phillips Curve and beyond</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon">&#9889;</span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style with model answers</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon">&#129302;</span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any macro policy question</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon">&#127758;</span><div><div className="elp-feat-label">Built for IAL</div><div className="elp-feat-sub">International A-Level focus</div></div></div>
         </div>
       </div>
 
-      <section className="seo-content-section">
-        <h2>What are macroeconomic objectives?</h2>
-        <p>
-          Macroeconomic objectives are the targets that governments pursue for the economy as a whole. For Edexcel IAL Economics Unit 2 (WEC12), you need to know the six main objectives, how each is measured, the policies used to achieve them, and the conflicts between them. Expect this topic in every January, June and October paper series.
-        </p>
-        <p>
-          The four classic objectives are <strong>growth, low inflation, low unemployment and a sustainable balance of payments</strong>. Modern specifications add <strong>income equality</strong> and <strong>environmental sustainability</strong>. A strong WEC12 answer names all six, measures them correctly, and evaluates the trade-offs between them.
-        </p>
-      </section>
+      <div className="elp-section" id="overview">
+        <div className="elp-fade-up" style={{ marginBottom: 24 }}>
+          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />The big picture</div>
+          <h2 className="elp-s-title">What are macroeconomic objectives?</h2>
+        </div>
+        <div className="eup-topic-block elp-fade-up">
+          <p className="eup-topic-desc">Macroeconomic objectives are the targets that governments pursue for the economy as a whole. For Edexcel IAL Economics Unit 2 (WEC12), you need to know the six main objectives, how each is measured, the policies used to achieve them, and the conflicts between them. Expect this topic in every January, June and October paper series.</p>
+          <p className="eup-topic-desc">The four classic objectives are <strong>growth, low inflation, low unemployment and a sustainable balance of payments</strong>. Modern specifications add <strong>income equality</strong> and <strong>environmental sustainability</strong>. A strong WEC12 answer names all six, measures them correctly, and evaluates the trade-offs between them.</p>
+        </div>
+      </div>
 
-      <section className="seo-content-section">
-        <h2>The six macroeconomic objectives</h2>
-        <p>
-          For a high-mark WEC12 answer, be ready to define, measure and evaluate each objective below. Every one of them maps to a published query searched by students taking the IAL exam.
-        </p>
-
-        <ol className="seo-types-list">
-          {OBJECTIVES.map(o => (
-            <li key={o.slug} id={o.slug}>
-              <h3>{o.number}. {o.name}</h3>
-              <p><strong>{o.shortDef}</strong></p>
-              <p><em>How it is measured:</em> {o.measurement}</p>
-              <p>{o.detail}</p>
-              <p><em>Target:</em> {o.target}</p>
-              <p><em>Costs / trade-offs:</em> {o.costs}</p>
-            </li>
-          ))}
-        </ol>
-      </section>
-
-      <section className="seo-content-section">
-        <h2>Policy trade-offs and conflicts</h2>
-        <p>
-          Every evaluation-style question on macroeconomic objectives expects you to recognise that they conflict. The exam rewards answers that weigh up trade-offs instead of treating objectives in isolation.
-        </p>
-        <ul>
-          {TRADE_OFFS.map(t => (
-            <li key={t.pair}><strong>{t.pair}.</strong> {t.body}</li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="seo-content-section">
-        <h2>Policy tools used to achieve objectives</h2>
-        <p>
-          Three broad categories of policy are used to move the economy toward each objective. Expect at least one WEC12 question on policy effectiveness per paper.
-        </p>
-        <ul>
-          <li><strong>Fiscal policy</strong> &mdash; government spending (G) and taxation (T). Controlled by the Treasury. Expansionary fiscal policy raises AD; contractionary reduces it.</li>
-          <li><strong>Monetary policy</strong> &mdash; interest rates and quantitative easing. Controlled by the central bank. Lower rates raise AD; higher rates cool it.</li>
-          <li><strong>Supply-side policy</strong> &mdash; investment in education, infrastructure, deregulation, tax incentives. Raises LRAS and the productive capacity of the economy.</li>
-        </ul>
-        <p>
-          See the full breakdown on <Link href="/economics/unit-2/macroeconomic-objectives-policies">Macroeconomic Objectives &amp; Policies</Link>. Always finish a WEC12 evaluation answer by considering time lags, confidence effects, and the risk that policy has unintended consequences.
-        </p>
-      </section>
-
-      {notesData.length > 0 && (
-        <section className="seo-content-section">
-          <h2>Interactive notes preview</h2>
-          <div className="seo-stepper">
-            {notesData.slice(0, 5).map((section, i) => (
-              <div key={i} className="seo-stepper-step">
-                <div className="seo-stepper-rail">
-                  <div className="seo-stepper-node">{i + 1}</div>
-                  {i < Math.min(notesData.length, 5) - 1 && <div className="seo-stepper-line" />}
+      <div className="elp-section" id="objectives">
+        <div className="elp-fade-up" style={{ marginBottom: 40 }}>
+          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />All six objectives</div>
+          <h2 className="elp-s-title">Every macroeconomic objective on the WEC12 spec</h2>
+          <p className="elp-s-sub">Be ready to define, measure and evaluate each objective. Every one maps to a published query searched by IAL students.</p>
+        </div>
+        {OBJECTIVES.map((o, idx) => (
+          <div key={o.slug}>
+            <div className="eup-topic-block elp-fade-up" id={o.slug}>
+              <div className="eup-topic-label-row">
+                <div className="eup-topic-ref-badge">{o.number}</div>
+                <div className="eup-topic-heading">{o.name}</div>
+              </div>
+              <p className="eup-topic-desc"><strong>{o.shortDef}</strong></p>
+              <p className="eup-topic-desc">{o.detail}</p>
+              <div className="eup-subtopic-grid">
+                <div className="eup-subtopic-tile">
+                  <div className="eup-st-num">&#128202;</div>
+                  <div className="eup-st-body">
+                    <div className="eup-st-name">How it is measured</div>
+                    <div className="eup-st-keywords">{o.measurement}</div>
+                  </div>
                 </div>
-                <div className="seo-stepper-body">
-                  <h3>{section.title}</h3>
-                  <ul>
-                    {(section.points || []).slice(0, 3).map((point, j) => (
-                      <li key={j} dangerouslySetInnerHTML={{ __html: point }} />
-                    ))}
-                  </ul>
+                <div className="eup-subtopic-tile">
+                  <div className="eup-st-num">&#127919;</div>
+                  <div className="eup-st-body">
+                    <div className="eup-st-name">Target</div>
+                    <div className="eup-st-keywords">{o.target}</div>
+                  </div>
+                </div>
+                <div className="eup-subtopic-tile">
+                  <div className="eup-st-num">&#9888;&#65039;</div>
+                  <div className="eup-st-body">
+                    <div className="eup-st-name">Costs &amp; trade-offs</div>
+                    <div className="eup-st-keywords">{o.costs}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {idx < OBJECTIVES.length - 1 && <div className="eup-topic-divider" />}
+          </div>
+        ))}
+      </div>
+
+      <div className="elp-section" id="tradeoffs">
+        <div className="elp-fade-up" style={{ marginBottom: 24 }}>
+          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />The hard part</div>
+          <h2 className="elp-s-title">Policy trade-offs and conflicts</h2>
+          <p className="elp-s-sub">Every evaluation question expects you to recognise that objectives conflict. The exam rewards weighing trade-offs over treating objectives in isolation.</p>
+        </div>
+        <div className="eup-topic-block elp-fade-up">
+          <div className="eup-subtopic-grid">
+            {TRADE_OFFS.map((t, i) => (
+              <div key={i} className="eup-subtopic-tile">
+                <div className="eup-st-num">&#9878;&#65039;</div>
+                <div className="eup-st-body">
+                  <div className="eup-st-name">{t.pair}</div>
+                  <div className="eup-st-keywords">{t.body}</div>
                 </div>
               </div>
             ))}
           </div>
-          <Link href="/economics/unit-2/macroeconomic-objectives-policies" className="seo-section-link">
-            Open all macroeconomic objectives notes interactively &rarr;
-          </Link>
-        </section>
+        </div>
+      </div>
+
+      <div className="elp-section" id="tools">
+        <div className="elp-fade-up" style={{ marginBottom: 24 }}>
+          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />Policy levers</div>
+          <h2 className="elp-s-title">How governments pursue objectives</h2>
+          <p className="elp-s-sub">Three broad categories of policy. Expect at least one WEC12 question on policy effectiveness per paper.</p>
+        </div>
+        <div className="eup-topic-block elp-fade-up">
+          <div className="eup-subtopic-grid">
+            {POLICY_TOOLS.map((p, i) => (
+              <div key={i} className="eup-subtopic-tile">
+                <div className="eup-st-num">&#127963;</div>
+                <div className="eup-st-body">
+                  <div className="eup-st-name">{p.name}</div>
+                  <div className="eup-st-keywords">{p.detail}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="eup-topic-desc" style={{ marginTop: 20 }}>See the full breakdown on <Link href="/economics/unit-2/macroeconomic-objectives-policies" style={{ color: 'var(--eup-accent)' }}>Macroeconomic Objectives &amp; Policies</Link>. Always finish a WEC12 evaluation answer by considering time lags, confidence effects, and unintended consequences.</p>
+        </div>
+      </div>
+
+      {notesData.length > 0 && (
+        <div className="elp-section" id="notes">
+          <div className="elp-fade-up" style={{ marginBottom: 24 }}>
+            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />From the app</div>
+            <h2 className="elp-s-title">Interactive notes preview</h2>
+          </div>
+          <div className="eup-topic-block elp-fade-up">
+            <div className="seo-stepper" style={{ marginTop: 0 }}>
+              {notesData.slice(0, 5).map((section, i) => (
+                <div key={i} className="seo-stepper-step">
+                  <div className="seo-stepper-rail">
+                    <div className="seo-stepper-node">{i + 1}</div>
+                    {i < Math.min(notesData.length, 5) - 1 && <div className="seo-stepper-line" />}
+                  </div>
+                  <div className="seo-stepper-body">
+                    <h3>{section.title}</h3>
+                    <ul>
+                      {(section.points || []).slice(0, 3).map((point, j) => (
+                        <li key={j} dangerouslySetInnerHTML={{ __html: point }} />
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <Link href="/economics/unit-2/macroeconomic-objectives-policies" className="eup-topic-open-link" style={{ marginTop: 16, display: 'inline-block' }}>Open all notes interactively &rarr;</Link>
+          </div>
+        </div>
       )}
 
       {practiceData.length > 0 && (
-        <section className="seo-faq-section">
-          <h2>Exam-style practice questions</h2>
-          {practiceData.map((q, i) => (
-            <details key={i} className="seo-faq-item">
-              <summary>{q.question || q.title}</summary>
-              <div className="seo-faq-answer">
-                <p>{q.guidance || q.answer || q.modelAnswer}</p>
-              </div>
-            </details>
-          ))}
-          <p style={{ marginTop: 16 }}>
-            For fully worked model answers, see the <Link href="/economics/macroeconomic-policies-model-answers">Macroeconomic Policies Model Answers</Link> page.
-          </p>
-        </section>
+        <div className="elp-section" id="practice">
+          <div className="elp-fade-up" style={{ marginBottom: 24 }}>
+            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: '#f59e0b' }} />Exam practice</div>
+            <h2 className="elp-s-title">Exam-style practice questions</h2>
+          </div>
+          <div className="eup-topic-block elp-fade-up">
+            <div className="seo-faq-section" style={{ marginTop: 0, padding: 0 }}>
+              {practiceData.map((q, i) => (
+                <details key={i} className="seo-faq-item">
+                  <summary>{q.question || q.title}</summary>
+                  <div className="seo-faq-answer">
+                    <p>{q.guidance || q.answer || q.modelAnswer}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
+            <p className="eup-topic-desc" style={{ marginTop: 16 }}>For fully worked model answers, see the <Link href="/economics/macroeconomic-policies-model-answers" style={{ color: 'var(--eup-accent)' }}>Macroeconomic Policies Model Answers</Link> page.</p>
+          </div>
+        </div>
       )}
 
-      <section className="seo-faq-section">
-        <h2>Macroeconomic objectives FAQ</h2>
-        {FAQS.map((f, i) => (
-          <details key={i} className="seo-faq-item">
-            <summary>{f.q}</summary>
-            <div className="seo-faq-answer">
-              <p>{f.a}</p>
+      <div className="eup-unit-overview">
+        <div className="eup-unit-overview-inner">
+          <div className="elp-fade-up">
+            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />Topic overview</div>
+            <h2 className="elp-s-title">What you need to know for 2.3.6</h2>
+            <div className="eup-key-concepts">
+              {KEY_CONCEPTS.map((c, i) => (
+                <div key={i} className="eup-concept">
+                  <div className="eup-concept-icon">{c.icon}</div>
+                  <div>
+                    <div className="eup-concept-title">{c.title}</div>
+                    <div className="eup-concept-desc">{c.desc}</div>
+                  </div>
+                </div>
+              ))}
             </div>
-          </details>
-        ))}
-      </section>
+          </div>
+          <div className="elp-fade-up" style={{ transitionDelay: '.1s' }}>
+            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: '#f59e0b' }} />Where it appears</div>
+            <h2 className="elp-s-title">WEC12 at a glance</h2>
+            <div className="eup-exam-info">
+              <div className="eup-ei-label">Assessment details</div>
+              <div className="eup-ei-row"><span className="eup-ei-key">Unit</span><span className="eup-ei-val" style={{ color: 'var(--eup-accent)' }}>2.3.6 &mdash; WEC12</span></div>
+              <div className="eup-ei-row"><span className="eup-ei-key">Paper duration</span><span className="eup-ei-val">1 hour 30 minutes</span></div>
+              <div className="eup-ei-row"><span className="eup-ei-key">Paper marks</span><span className="eup-ei-val">80 marks</span></div>
+              <div className="eup-ei-row"><span className="eup-ei-key">% of A-Level</span><span className="eup-ei-val">20%</span></div>
+              <div className="eup-ei-row"><span className="eup-ei-key">Question styles</span><span className="eup-ei-val eup-marks-pills-inline"><span className="eup-mp eup-mp-4">4</span><span className="eup-mp eup-mp-8">8</span><span className="eup-mp eup-mp-20">20</span></span></div>
+              <div className="eup-ei-row"><span className="eup-ei-key">Common in</span><span className="eup-ei-val">Section A data-response &amp; Section B essays</span></div>
+              <div className="eup-ei-row eup-ei-row-last"><span className="eup-ei-key">Sessions</span><span className="eup-ei-val">January, June, October</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <div className="seo-related-links">
-        <h2>Continue revising</h2>
-        <div className="seo-links-grid">
-          <Link href="/economics/unit-2/economic-growth">Economic Growth</Link>
-          <Link href="/economics/unit-2/aggregate-demand">Aggregate Demand</Link>
-          <Link href="/economics/unit-2/aggregate-supply">Aggregate Supply</Link>
-          <Link href="/economics/unit-2/measures-economic-performance">Measures of Economic Performance</Link>
-          <Link href="/economics/macroeconomic-policies-model-answers">Macroeconomic Policies Model Answers</Link>
-          <Link href="/economics/unit-2">All Unit 2 Topics</Link>
-          <Link href="/past-papers">WEC12 Past Papers</Link>
-          <Link href="/command-words">Command Words Guide</Link>
+      <div className="elp-section" id="faq">
+        <div className="elp-fade-up" style={{ marginBottom: 24 }}>
+          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />Common questions</div>
+          <h2 className="elp-s-title">Macroeconomic objectives FAQ</h2>
+        </div>
+        <div className="eup-topic-block elp-fade-up">
+          <div className="seo-faq-section" style={{ marginTop: 0, padding: 0 }}>
+            {FAQS.map((f, i) => (
+              <details key={i} className="seo-faq-item">
+                <summary>{f.q}</summary>
+                <div className="seo-faq-answer">
+                  <p>{f.a}</p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="elp-section-sm elp-fade-up">
+        <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--elp-green)' }} />Keep going</div>
+        <h2 className="elp-s-title" style={{ fontSize: 22, marginBottom: 8 }}>Continue revising</h2>
+        <div className="eup-continue-grid">
+          <Link className="eup-continue-card" href="/economics/unit-2/economic-growth">
+            <div className="eup-cc-icon">&#128200;</div>
+            <div className="eup-cc-body"><div className="eup-cc-name">Economic Growth</div><div className="eup-cc-sub">2.3.5 &middot; Actual vs potential, business cycles</div></div>
+            <div className="eup-cc-arrow">&rarr;</div>
+          </Link>
+          <Link className="eup-continue-card" href="/economics/aggregate-demand">
+            <div className="eup-cc-icon">&#128293;</div>
+            <div className="eup-cc-body"><div className="eup-cc-name">Aggregate Demand</div><div className="eup-cc-sub">2.3.2 &middot; AD = C + I + G + (X &minus; M)</div></div>
+            <div className="eup-cc-arrow">&rarr;</div>
+          </Link>
+          <Link className="eup-continue-card" href="/economics/macroeconomic-policies-model-answers">
+            <div className="eup-cc-icon">&#128221;</div>
+            <div className="eup-cc-body"><div className="eup-cc-name">Macro Policies Model Answers</div><div className="eup-cc-sub">Fully worked 8- and 20-mark answers</div></div>
+            <div className="eup-cc-arrow">&rarr;</div>
+          </Link>
+          <Link className="eup-continue-card" href="/economics/unit-2">
+            <div className="eup-cc-icon">&#128214;</div>
+            <div className="eup-cc-body"><div className="eup-cc-name">All Unit 2 Topics</div><div className="eup-cc-sub">WEC12 &middot; Macroeconomic Performance</div></div>
+            <div className="eup-cc-arrow">&rarr;</div>
+          </Link>
         </div>
       </div>
 
@@ -347,11 +549,34 @@ export default async function MacroObjectivesPillarPage() {
         count={1}
       />
 
-      <div className="seo-cta">
-        <h2>Master macroeconomic objectives interactively</h2>
-        <p>Use flashcards, quizzes and the AI tutor to drill every objective, trade-off and policy tool before exam day.</p>
-        <Link href="/economics/unit-2/macroeconomic-objectives-policies" className="seo-cta-button">Start revising &rarr;</Link>
+      <div className="elp-cta-section">
+        <div className="elp-cta-bg" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(79,126,248,.07) 0%, transparent 65%)' }} />
+        <div className="elp-cta-inner elp-fade-up">
+          <h2 className="elp-cta-title">Ready to master macroeconomic objectives?</h2>
+          <p className="elp-cta-sub">Free notes for every spec point. Flashcards, quizzes and AI tutor unlock with a 3-day free trial.</p>
+          <div className="elp-cta-actions">
+            <Link href="/economics/unit-2/macroeconomic-objectives-policies" className="elp-btn-primary" style={{ fontSize: 15, padding: '14px 30px' }}>Open in app &mdash; it&apos;s free &rarr;</Link>
+            <Link href="/economics/unit-2" className="elp-btn-secondary">&larr; Back to Unit 2</Link>
+          </div>
+          <p className="elp-cta-note">No signup required for notes &middot; Cancel premium anytime &middot; &euro;0.99/month</p>
+        </div>
       </div>
+
+      <footer className="elp-footer">
+        <div className="elp-footer-inner">
+          <div className="elp-footer-logo"><div className="elp-nav-dot" style={{ width: 7, height: 7 }} />Revvy Learn</div>
+          <div className="elp-footer-sep" />
+          <div className="elp-footer-links">
+            <Link className="elp-footer-link" href="/economics">Economics</Link>
+            <Link className="elp-footer-link" href="/economics/unit-2">Unit 2</Link>
+            <Link className="elp-footer-link" href="/economics/macroeconomic-objectives">Macro Objectives</Link>
+            <Link className="elp-footer-link" href="/economics/macroeconomic-policies-model-answers">Model Answers</Link>
+            <Link className="elp-footer-link" href="/glossary">Glossary</Link>
+            <Link className="elp-footer-link" href="/past-papers">Past Papers</Link>
+          </div>
+          <div className="elp-footer-right">Edexcel IAL WEC12 &copy; Revvy Learn</div>
+        </div>
+      </footer>
     </div>
   );
 }
