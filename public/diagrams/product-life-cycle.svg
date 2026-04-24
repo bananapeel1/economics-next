@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" role="img" aria-labelledby="title desc">
+  <title id="title">Product life cycle</title>
+  <desc id="desc">Sales plotted against time pass through four stages: introduction (slow growth), growth (rapid uptake), maturity (peak plateau) and decline (falling sales).</desc>
+  <style>
+    .axis { stroke: #64748b; stroke-width: 1.5; fill: none; }
+    .text { font-family: ui-sans-serif, system-ui, sans-serif; fill: #1f2937; }
+    .axis-title { font-size: 14px; font-weight: 600; }
+    .label { font-size: 13px; font-weight: 600; }
+    .note { font-size: 12px; fill: #475569; }
+    .curve { fill: none; stroke: #4f46e5; stroke-width: 2.5; }
+    .divider { stroke: #cbd5e1; stroke-width: 1; stroke-dasharray: 4 4; }
+  </style>
+
+  <line class="axis" x1="70" y1="50" x2="70" y2="350" />
+  <line class="axis" x1="70" y1="350" x2="470" y2="350" />
+  <text class="text axis-title" x="50" y="45">Sales</text>
+  <text class="text axis-title" x="465" y="375" text-anchor="end">Time</text>
+
+  <line class="divider" x1="160" y1="50" x2="160" y2="350" />
+  <line class="divider" x1="260" y1="50" x2="260" y2="350" />
+  <line class="divider" x1="370" y1="50" x2="370" y2="350" />
+
+  <path class="curve" d="M 90 330 C 130 320, 155 310, 160 290 C 200 230, 240 130, 260 100 C 300 95, 340 100, 370 110 C 410 180, 440 290, 455 330" />
+
+  <text class="text label" x="115" y="375" text-anchor="middle">Introduction</text>
+  <text class="text label" x="210" y="375" text-anchor="middle">Growth</text>
+  <text class="text label" x="315" y="375" text-anchor="middle">Maturity</text>
+  <text class="text label" x="410" y="375" text-anchor="middle">Decline</text>
+
+  <text class="text note" x="115" y="395" text-anchor="middle">High costs,</text>
+  <text class="text note" x="210" y="395" text-anchor="middle">Rising profits,</text>
+  <text class="text note" x="315" y="395" text-anchor="middle">Peak sales,</text>
+  <text class="text note" x="410" y="395" text-anchor="middle">Extension</text>
+
+  <text class="text note" x="255" y="70">Peak</text>
+</svg>

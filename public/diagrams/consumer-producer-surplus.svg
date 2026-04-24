@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" role="img" aria-labelledby="title desc">
+  <title id="title">Consumer surplus and producer surplus</title>
+  <desc id="desc">At the equilibrium price P* and quantity Q*, consumer surplus is the area below the demand curve and above the price, producer surplus is the area above the supply curve and below the price. The sum is total economic welfare.</desc>
+  <style>
+    .axis { stroke: #64748b; stroke-width: 1.5; fill: none; }
+    .text { font-family: ui-sans-serif, system-ui, sans-serif; fill: #1f2937; }
+    .axis-title { font-size: 14px; font-weight: 600; }
+    .label { font-size: 13px; font-weight: 600; }
+    .note { font-size: 12px; fill: #475569; }
+    .d { fill: none; stroke: #4f46e5; stroke-width: 2.5; }
+    .s { fill: none; stroke: #ef4444; stroke-width: 2.5; }
+    .dashed { stroke: #94a3b8; stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
+    .cs { fill: #4f46e5; fill-opacity: 0.2; stroke: none; }
+    .ps { fill: #ef4444; fill-opacity: 0.2; stroke: none; }
+    .dot { fill: #111827; }
+  </style>
+
+  <line class="axis" x1="70" y1="50" x2="70" y2="350" />
+  <line class="axis" x1="70" y1="350" x2="470" y2="350" />
+  <text class="text axis-title" x="42" y="45">Price (P)</text>
+  <text class="text axis-title" x="465" y="375" text-anchor="end">Quantity (Q)</text>
+
+  <polygon class="cs" points="100,80 270,200 70,200 70,80" />
+  <polygon class="ps" points="100,320 270,200 70,200 70,320" />
+
+  <line class="d" x1="100" y1="80" x2="440" y2="320" />
+  <line class="s" x1="100" y1="320" x2="440" y2="80" />
+
+  <circle class="dot" cx="270" cy="200" r="4.5" />
+
+  <line class="dashed" x1="70" y1="200" x2="270" y2="200" />
+  <line class="dashed" x1="270" y1="350" x2="270" y2="200" />
+
+  <text class="text label" x="62" y="204" text-anchor="end">P*</text>
+  <text class="text label" x="270" y="368" text-anchor="middle">Q*</text>
+
+  <text class="text label" x="446" y="320" fill="#4f46e5">D</text>
+  <text class="text label" x="446" y="80" fill="#ef4444">S</text>
+
+  <text class="text label" x="160" y="140" fill="#4338ca">Consumer surplus</text>
+  <text class="text label" x="160" y="280" fill="#b91c1c">Producer surplus</text>
+
+  <text class="text note" x="250" y="390" text-anchor="middle">Total welfare = consumer surplus + producer surplus at equilibrium.</text>
+</svg>

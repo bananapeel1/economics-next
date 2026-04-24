@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" role="img" aria-labelledby="title desc">
+  <title id="title">Negative externality in production — welfare loss</title>
+  <desc id="desc">Marginal private cost (MPC) lies below marginal social cost (MSC). The free market produces at Q1 where MPC equals MPB/MSB, but the social optimum is at Q* where MSC equals MSB. Shaded triangle between Q* and Q1 is the deadweight welfare loss.</desc>
+  <style>
+    .axis { stroke: #64748b; stroke-width: 1.5; fill: none; }
+    .text { font-family: ui-sans-serif, system-ui, sans-serif; fill: #1f2937; }
+    .axis-title { font-size: 14px; font-weight: 600; }
+    .label { font-size: 13px; font-weight: 600; }
+    .note { font-size: 12px; fill: #475569; }
+    .mpc { fill: none; stroke: #ef4444; stroke-width: 2.5; }
+    .msc { fill: none; stroke: #10b981; stroke-width: 2.5; }
+    .d { fill: none; stroke: #4f46e5; stroke-width: 2.5; }
+    .dashed { stroke: #94a3b8; stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
+    .dwl { fill: #f59e0b; fill-opacity: 0.35; stroke: #d97706; stroke-width: 1; }
+    .dot { fill: #111827; }
+  </style>
+
+  <line class="axis" x1="70" y1="50" x2="70" y2="350" />
+  <line class="axis" x1="70" y1="350" x2="470" y2="350" />
+  <text class="text axis-title" x="50" y="45">Price, Cost</text>
+  <text class="text axis-title" x="465" y="375" text-anchor="end">Quantity (Q)</text>
+
+  <line class="mpc" x1="100" y1="320" x2="440" y2="80" />
+  <line class="msc" x1="100" y1="280" x2="440" y2="40" />
+  <line class="d" x1="100" y1="80" x2="440" y2="320" />
+
+  <polygon class="dwl" points="220,186 320,260 320,220" />
+
+  <circle class="dot" cx="320" cy="220" r="4" />
+  <circle class="dot" cx="220" cy="186" r="4" />
+
+  <line class="dashed" x1="70" y1="220" x2="320" y2="220" />
+  <line class="dashed" x1="320" y1="350" x2="320" y2="220" />
+  <line class="dashed" x1="70" y1="186" x2="220" y2="186" />
+  <line class="dashed" x1="220" y1="350" x2="220" y2="186" />
+
+  <text class="text label" x="62" y="224" text-anchor="end">P1</text>
+  <text class="text label" x="62" y="190" text-anchor="end">P*</text>
+  <text class="text label" x="320" y="368" text-anchor="middle">Q1</text>
+  <text class="text label" x="220" y="368" text-anchor="middle">Q*</text>
+
+  <text class="text label" x="446" y="80" fill="#ef4444">MPC</text>
+  <text class="text label" x="446" y="40" fill="#10b981">MSC</text>
+  <text class="text label" x="446" y="320" fill="#4f46e5">MPB = MSB</text>
+
+  <text class="text note" x="340" y="250">Deadweight loss</text>
+  <text class="text note" x="340" y="265">(welfare cost of</text>
+  <text class="text note" x="340" y="280">overproduction)</text>
+
+  <text class="text note" x="250" y="390" text-anchor="middle">Free market overproduces: social optimum Q* &lt; market Q1.</text>
+</svg>

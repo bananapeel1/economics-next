@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" role="img" aria-labelledby="title desc">
+  <title id="title">Firm under perfect competition — long-run equilibrium</title>
+  <desc id="desc">Under perfect competition in the long run, the firm is a price taker: price equals average revenue equals marginal revenue, a horizontal line. Marginal cost cuts the bottom of average cost at the same point, so the firm earns only normal profit (P equals minimum AC).</desc>
+  <style>
+    .axis { stroke: #64748b; stroke-width: 1.5; fill: none; }
+    .text { font-family: ui-sans-serif, system-ui, sans-serif; fill: #1f2937; }
+    .axis-title { font-size: 14px; font-weight: 600; }
+    .label { font-size: 13px; font-weight: 600; }
+    .note { font-size: 12px; fill: #475569; }
+    .p-line { fill: none; stroke: #4f46e5; stroke-width: 2.5; }
+    .mc { fill: none; stroke: #ef4444; stroke-width: 2.5; }
+    .ac { fill: none; stroke: #f59e0b; stroke-width: 2.5; }
+    .dashed { stroke: #94a3b8; stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
+    .dot { fill: #111827; }
+  </style>
+
+  <line class="axis" x1="70" y1="50" x2="70" y2="350" />
+  <line class="axis" x1="70" y1="350" x2="470" y2="350" />
+  <text class="text axis-title" x="42" y="45">Price, Cost</text>
+  <text class="text axis-title" x="465" y="375" text-anchor="end">Quantity (Q)</text>
+
+  <line class="p-line" x1="100" y1="210" x2="450" y2="210" />
+
+  <path class="mc" d="M 110 310 C 170 270, 210 225, 400 100" />
+  <path class="ac" d="M 110 260 Q 220 180 260 210 Q 330 240 400 120" />
+
+  <circle class="dot" cx="260" cy="210" r="4.5" />
+
+  <line class="dashed" x1="70" y1="210" x2="260" y2="210" />
+  <line class="dashed" x1="260" y1="350" x2="260" y2="210" />
+
+  <text class="text label" x="62" y="214" text-anchor="end">P = min AC</text>
+  <text class="text label" x="260" y="368" text-anchor="middle">Q*</text>
+
+  <text class="text label" x="455" y="210" fill="#4f46e5">P = AR = MR</text>
+  <text class="text label" x="405" y="100" fill="#ef4444">MC</text>
+  <text class="text label" x="405" y="120" fill="#f59e0b">AC</text>
+
+  <text class="text note" x="270" y="225">Normal profit only</text>
+
+  <text class="text note" x="250" y="390" text-anchor="middle">Free entry competes away supernormal profit until P = minimum AC.</text>
+</svg>

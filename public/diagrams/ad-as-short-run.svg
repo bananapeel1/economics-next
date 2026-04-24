@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" role="img" aria-labelledby="title desc">
+  <title id="title">Aggregate demand and short-run aggregate supply</title>
+  <desc id="desc">Price level on vertical axis, real GDP on horizontal axis. Downward-sloping AD intersects upward-sloping SRAS at short-run macroeconomic equilibrium (PL*, Y*).</desc>
+  <style>
+    .axis { stroke: #64748b; stroke-width: 1.5; fill: none; }
+    .text { font-family: ui-sans-serif, system-ui, sans-serif; fill: #1f2937; }
+    .axis-title { font-size: 14px; font-weight: 600; }
+    .label { font-size: 14px; font-weight: 600; }
+    .note { font-size: 12px; fill: #475569; }
+    .ad { fill: none; stroke: #4f46e5; stroke-width: 2.5; }
+    .sras { fill: none; stroke: #ef4444; stroke-width: 2.5; }
+    .dashed { stroke: #94a3b8; stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
+    .dot { fill: #111827; }
+  </style>
+
+  <line class="axis" x1="70" y1="50" x2="70" y2="350" />
+  <line class="axis" x1="70" y1="350" x2="470" y2="350" />
+  <text class="text axis-title" x="42" y="45">Price level (PL)</text>
+  <text class="text axis-title" x="465" y="375" text-anchor="end">Real GDP (Y)</text>
+
+  <line class="ad" x1="100" y1="80" x2="440" y2="320" />
+  <path class="sras" d="M 100 330 Q 220 260 440 90" />
+
+  <circle class="dot" cx="280" cy="220" r="4.5" />
+
+  <line class="dashed" x1="70" y1="220" x2="280" y2="220" />
+  <line class="dashed" x1="280" y1="350" x2="280" y2="220" />
+
+  <text class="text label" x="62" y="224" text-anchor="end">PL*</text>
+  <text class="text label" x="280" y="368" text-anchor="middle">Y*</text>
+
+  <text class="text label" x="445" y="320" fill="#4f46e5">AD</text>
+  <text class="text label" x="445" y="90" fill="#ef4444">SRAS</text>
+
+  <text class="text note" x="250" y="390" text-anchor="middle">Short-run macro equilibrium: where AD meets SRAS.</text>
+</svg>

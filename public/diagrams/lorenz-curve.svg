@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" role="img" aria-labelledby="title desc">
+  <title id="title">Lorenz curve and Gini coefficient</title>
+  <desc id="desc">Cumulative percentage of population on horizontal axis versus cumulative percentage of income on vertical axis. Line of perfect equality is the 45-degree diagonal. Actual Lorenz curve bows below the diagonal. The Gini coefficient equals area A between the diagonal and the Lorenz curve, divided by the total area under the diagonal.</desc>
+  <style>
+    .axis { stroke: #64748b; stroke-width: 1.5; fill: none; }
+    .text { font-family: ui-sans-serif, system-ui, sans-serif; fill: #1f2937; }
+    .axis-title { font-size: 14px; font-weight: 600; }
+    .label { font-size: 13px; font-weight: 600; }
+    .note { font-size: 12px; fill: #475569; }
+    .equality { fill: none; stroke: #10b981; stroke-width: 2.5; stroke-dasharray: 5 3; }
+    .lorenz { fill: none; stroke: #4f46e5; stroke-width: 2.5; }
+    .area-a { fill: #f59e0b; fill-opacity: 0.35; stroke: none; }
+    .area-b { fill: #6366f1; fill-opacity: 0.15; stroke: none; }
+    .tick { stroke: #94a3b8; stroke-width: 1; }
+  </style>
+
+  <line class="axis" x1="70" y1="50" x2="70" y2="350" />
+  <line class="axis" x1="70" y1="350" x2="420" y2="350" />
+
+  <text class="text axis-title" x="25" y="45">Cumulative</text>
+  <text class="text axis-title" x="25" y="60">income (%)</text>
+  <text class="text axis-title" x="420" y="375" text-anchor="end">Cumulative population (%)</text>
+
+  <line class="tick" x1="66" y1="50" x2="74" y2="50" />
+  <text class="text note" x="62" y="54" text-anchor="end">100</text>
+  <line class="tick" x1="420" y1="346" x2="420" y2="354" />
+  <text class="text note" x="420" y="368" text-anchor="middle">100</text>
+
+  <path class="area-a" d="M 70 350 L 420 50 Q 270 280 70 350 Z" />
+  <path class="area-b" d="M 70 350 Q 270 280 420 50 L 420 350 Z" />
+
+  <line class="equality" x1="70" y1="350" x2="420" y2="50" />
+  <path class="lorenz" d="M 70 350 Q 270 280 420 50" />
+
+  <text class="text label" x="275" y="210" fill="#b45309">A</text>
+  <text class="text label" x="340" y="310" fill="#4338ca">B</text>
+
+  <text class="text label" x="430" y="52" fill="#10b981">Line of</text>
+  <text class="text label" x="430" y="68" fill="#10b981">perfect equality</text>
+  <text class="text label" x="430" y="100" fill="#4f46e5">Lorenz curve</text>
+
+  <text class="text note" x="250" y="388" text-anchor="middle">Gini coefficient = A / (A + B). Closer to 1 = more unequal; closer to 0 = more equal.</text>
+</svg>
