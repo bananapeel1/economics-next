@@ -1,0 +1,213 @@
+/* Styles for markdown-rendered pages (data-response pilot) */
+
+.data-response-wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 48px 20px 80px;
+  color: var(--text-primary);
+}
+
+.data-response-crumbs {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+  margin-bottom: 16px;
+}
+
+.data-response-crumbs a {
+  color: var(--text-tertiary);
+  text-decoration: none;
+}
+
+.data-response-crumbs a:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
+.markdown-page {
+  line-height: 1.65;
+  color: var(--text-primary);
+}
+
+.markdown-page h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 8px;
+  color: var(--text-primary);
+}
+
+.markdown-page p em:first-child,
+.markdown-page > p:first-of-type em {
+  color: var(--text-tertiary);
+  font-style: italic;
+}
+
+.markdown-page h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 40px 0 12px;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-primary);
+  padding-bottom: 8px;
+}
+
+.markdown-page h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 28px 0 8px;
+  color: var(--text-primary);
+}
+
+.markdown-page p {
+  margin: 0 0 16px;
+  color: var(--text-secondary);
+}
+
+.markdown-page strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.markdown-page ul,
+.markdown-page ol {
+  margin: 0 0 16px;
+  padding-left: 24px;
+  color: var(--text-secondary);
+}
+
+.markdown-page li {
+  margin-bottom: 6px;
+}
+
+.markdown-page blockquote {
+  border-left: 3px solid var(--accent-blue);
+  padding: 8px 16px;
+  margin: 0 0 16px;
+  background: var(--bg-input);
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.markdown-page table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 20px;
+  font-size: 0.9375rem;
+}
+
+.markdown-page th,
+.markdown-page td {
+  padding: 10px 14px;
+  text-align: left;
+  border: 1px solid var(--border-primary);
+  color: var(--text-secondary);
+}
+
+.markdown-page th {
+  background: var(--bg-input);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.markdown-page tr:nth-child(even) td {
+  background: var(--bg-input-alt);
+}
+
+.markdown-page code {
+  background: var(--bg-input);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.875em;
+  color: var(--accent-amber);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.markdown-page hr {
+  border: 0;
+  border-top: 1px solid var(--border-primary);
+  margin: 32px 0;
+}
+
+.markdown-page a {
+  color: var(--accent-blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.markdown-page a:hover {
+  color: var(--accent-green);
+}
+
+/* Index page card grid */
+.data-response-index-intro {
+  margin-bottom: 32px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.data-response-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.data-response-card {
+  display: block;
+  padding: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.data-response-card:hover {
+  border-color: var(--accent-green);
+  transform: translateY(-1px);
+}
+
+.data-response-card-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.data-response-card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 8px;
+}
+
+.data-response-card p {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.data-response-footer {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-primary);
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 0.9375rem;
+}
+
+.data-response-footer a {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+.data-response-footer a:hover {
+  text-decoration: underline;
+}
