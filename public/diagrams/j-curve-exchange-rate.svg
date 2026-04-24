@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" role="img" aria-labelledby="title desc">
+  <title id="title">The J-curve effect after a currency depreciation</title>
+  <desc id="desc">After a depreciation at time t0 the current account first worsens (imports cost more immediately, export volumes respond slowly), then improves once volumes adjust and the Marshall-Lerner condition holds. The path traces a J-shape.</desc>
+  <style>
+    .axis { stroke: #64748b; stroke-width: 1.5; fill: none; }
+    .text { font-family: ui-sans-serif, system-ui, sans-serif; fill: #1f2937; }
+    .axis-title { font-size: 14px; font-weight: 600; }
+    .label { font-size: 13px; font-weight: 600; }
+    .note { font-size: 12px; fill: #475569; }
+    .j { fill: none; stroke: #4f46e5; stroke-width: 2.5; }
+    .zero { stroke: #64748b; stroke-width: 1; stroke-dasharray: 3 3; }
+    .dashed { stroke: #94a3b8; stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
+    .dot { fill: #111827; }
+  </style>
+
+  <line class="axis" x1="70" y1="50" x2="70" y2="350" />
+  <line class="axis" x1="70" y1="200" x2="470" y2="200" />
+  <text class="text axis-title" x="36" y="45">Current account</text>
+  <text class="text axis-title" x="36" y="60">balance</text>
+  <text class="text axis-title" x="465" y="225" text-anchor="end">Time</text>
+
+  <text class="text note" x="62" y="204" text-anchor="end">0</text>
+  <text class="text note" x="62" y="110" text-anchor="end">Surplus</text>
+  <text class="text note" x="62" y="290" text-anchor="end">Deficit</text>
+
+  <line class="dashed" x1="150" y1="50" x2="150" y2="350" />
+  <text class="text label" x="150" y="370" text-anchor="middle">t₀ (depreciation)</text>
+
+  <path class="j" d="M 90 190 L 150 200 C 170 220, 200 280, 240 300 C 300 290, 360 220, 450 90" />
+
+  <circle class="dot" cx="150" cy="200" r="4" />
+  <circle class="dot" cx="240" cy="300" r="4" />
+
+  <text class="text note" x="165" y="205">Starting CA</text>
+  <text class="text note" x="250" y="320">Worst point</text>
+
+  <text class="text note" x="250" y="390" text-anchor="middle">Short run: trade balance worsens. Long run: exports rise, imports fall — CA improves.</text>
+</svg>

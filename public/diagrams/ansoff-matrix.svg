@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" role="img" aria-labelledby="title desc">
+  <title id="title">Ansoff Matrix — growth strategies</title>
+  <desc id="desc">Two-by-two grid with products on the horizontal axis and markets on the vertical axis. Four strategies: market penetration (existing market and product), product development (existing market, new product), market development (new market, existing product), and diversification (new market and new product).</desc>
+  <style>
+    .text { font-family: ui-sans-serif, system-ui, sans-serif; fill: #1f2937; }
+    .axis-title { font-size: 14px; font-weight: 600; }
+    .quad-title { font-size: 15px; font-weight: 700; }
+    .quad-sub { font-size: 12px; fill: #475569; }
+    .risk { font-size: 11px; font-weight: 600; }
+    .grid { stroke: #cbd5e1; stroke-width: 1.5; }
+    .q-1 { fill: #d1fae5; stroke: #10b981; stroke-width: 1.5; }
+    .q-2 { fill: #fef3c7; stroke: #f59e0b; stroke-width: 1.5; }
+    .q-3 { fill: #dbeafe; stroke: #3b82f6; stroke-width: 1.5; }
+    .q-4 { fill: #fee2e2; stroke: #ef4444; stroke-width: 1.5; }
+  </style>
+
+  <rect class="q-1" x="100" y="200" width="160" height="130" />
+  <rect class="q-2" x="260" y="200" width="160" height="130" />
+  <rect class="q-3" x="100" y="70" width="160" height="130" />
+  <rect class="q-4" x="260" y="70" width="160" height="130" />
+
+  <line class="grid" x1="260" y1="70" x2="260" y2="330" />
+  <line class="grid" x1="100" y1="200" x2="420" y2="200" />
+
+  <text class="text quad-title" x="180" y="255" text-anchor="middle">Market</text>
+  <text class="text quad-title" x="180" y="275" text-anchor="middle">penetration</text>
+  <text class="text risk" x="180" y="295" text-anchor="middle" fill="#065f46">Lowest risk</text>
+  <text class="text quad-sub" x="180" y="315" text-anchor="middle">Sell more to existing customers</text>
+
+  <text class="text quad-title" x="340" y="255" text-anchor="middle">Product</text>
+  <text class="text quad-title" x="340" y="275" text-anchor="middle">development</text>
+  <text class="text risk" x="340" y="295" text-anchor="middle" fill="#92400e">Medium risk</text>
+  <text class="text quad-sub" x="340" y="315" text-anchor="middle">New product, known market</text>
+
+  <text class="text quad-title" x="180" y="125" text-anchor="middle">Market</text>
+  <text class="text quad-title" x="180" y="145" text-anchor="middle">development</text>
+  <text class="text risk" x="180" y="165" text-anchor="middle" fill="#1e40af">Medium risk</text>
+  <text class="text quad-sub" x="180" y="185" text-anchor="middle">Known product, new market</text>
+
+  <text class="text quad-title" x="340" y="125" text-anchor="middle">Diversification</text>
+  <text class="text risk" x="340" y="150" text-anchor="middle" fill="#991b1b">Highest risk</text>
+  <text class="text quad-sub" x="340" y="172" text-anchor="middle">New product,</text>
+  <text class="text quad-sub" x="340" y="188" text-anchor="middle">new market</text>
+
+  <text class="text axis-title" x="35" y="200" text-anchor="middle" transform="rotate(-90 35 200)">Markets</text>
+  <text class="text quad-sub" x="60" y="140" text-anchor="middle">New</text>
+  <text class="text quad-sub" x="60" y="270" text-anchor="middle">Existing</text>
+
+  <text class="text axis-title" x="260" y="360" text-anchor="middle">Products</text>
+  <text class="text quad-sub" x="180" y="352" text-anchor="middle">Existing</text>
+  <text class="text quad-sub" x="340" y="352" text-anchor="middle">New</text>
+</svg>

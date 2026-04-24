@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" role="img" aria-labelledby="title desc">
+  <title id="title">Circular flow of income with injections and withdrawals</title>
+  <desc id="desc">Households and firms exchange factors, goods, incomes and expenditure. Injections into the flow: government spending (G), investment (I), exports (X). Withdrawals from the flow: taxes (T), saving (S), imports (M).</desc>
+  <style>
+    .text { font-family: ui-sans-serif, system-ui, sans-serif; fill: #1f2937; }
+    .label { font-size: 14px; font-weight: 600; }
+    .small { font-size: 12px; fill: #475569; }
+    .box { fill: #eef2ff; stroke: #4f46e5; stroke-width: 2; rx: 8; }
+    .box-f { fill: #fef2f2; stroke: #ef4444; stroke-width: 2; rx: 8; }
+    .arrow-main { fill: none; stroke: #111827; stroke-width: 2; marker-end: url(#arrowhead); }
+    .arrow-inj { fill: none; stroke: #10b981; stroke-width: 2; marker-end: url(#arrowheadgreen); }
+    .arrow-with { fill: none; stroke: #d97706; stroke-width: 2; marker-end: url(#arrowheadamber); }
+    .pill { font-size: 11px; fill: #111827; font-weight: 600; }
+  </style>
+  <defs>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#111827" />
+    </marker>
+    <marker id="arrowheadgreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#10b981" />
+    </marker>
+    <marker id="arrowheadamber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#d97706" />
+    </marker>
+  </defs>
+
+  <rect class="box" x="50" y="150" width="130" height="100" />
+  <text class="text label" x="115" y="195" text-anchor="middle">Households</text>
+  <text class="text small" x="115" y="215" text-anchor="middle">supply factors,</text>
+  <text class="text small" x="115" y="230" text-anchor="middle">spend income</text>
+
+  <rect class="box-f" x="340" y="150" width="130" height="100" />
+  <text class="text label" x="405" y="195" text-anchor="middle">Firms</text>
+  <text class="text small" x="405" y="215" text-anchor="middle">produce goods,</text>
+  <text class="text small" x="405" y="230" text-anchor="middle">pay wages/rents</text>
+
+  <path class="arrow-main" d="M 180 175 C 250 135, 290 135, 335 165" />
+  <text class="text pill" x="260" y="135" text-anchor="middle">Factors of production</text>
+
+  <path class="arrow-main" d="M 340 190 C 280 215, 240 215, 182 195" />
+  <text class="text pill" x="260" y="230" text-anchor="middle">Wages, rent, interest, profit</text>
+
+  <path class="arrow-main" d="M 180 235 C 250 270, 290 270, 335 240" />
+  <text class="text pill" x="260" y="290" text-anchor="middle">Consumer expenditure</text>
+
+  <path class="arrow-main" d="M 340 215 C 280 165, 240 165, 182 210" opacity="0" />
+
+  <path class="arrow-inj" d="M 260 60 L 260 145" />
+  <text class="text pill" x="266" y="55" fill="#10b981">Injections: G + I + X</text>
+
+  <path class="arrow-with" d="M 260 260 L 260 340" />
+  <text class="text pill" x="266" y="355" fill="#d97706">Withdrawals: T + S + M</text>
+
+  <text class="text small" x="260" y="385" text-anchor="middle">Equilibrium: injections = withdrawals.</text>
+</svg>

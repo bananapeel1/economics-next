@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" role="img" aria-labelledby="title desc">
+  <title id="title">Short-run and long-run Phillips curves</title>
+  <desc id="desc">Inflation on vertical axis, unemployment on horizontal axis. Short-run Phillips curve slopes down, showing a trade-off between inflation and unemployment. Long-run Phillips curve is vertical at the natural rate of unemployment (NRU), showing no trade-off in the long run.</desc>
+  <style>
+    .axis { stroke: #64748b; stroke-width: 1.5; fill: none; }
+    .text { font-family: ui-sans-serif, system-ui, sans-serif; fill: #1f2937; }
+    .axis-title { font-size: 14px; font-weight: 600; }
+    .label { font-size: 14px; font-weight: 600; }
+    .note { font-size: 12px; fill: #475569; }
+    .srpc { fill: none; stroke: #4f46e5; stroke-width: 2.5; }
+    .srpc2 { fill: none; stroke: #4f46e5; stroke-width: 2.5; stroke-dasharray: 5 3; }
+    .lrpc { fill: none; stroke: #10b981; stroke-width: 2.5; }
+    .dashed { stroke: #94a3b8; stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
+    .dot { fill: #111827; }
+  </style>
+
+  <line class="axis" x1="70" y1="50" x2="70" y2="350" />
+  <line class="axis" x1="70" y1="350" x2="470" y2="350" />
+  <text class="text axis-title" x="36" y="45">Inflation (%)</text>
+  <text class="text axis-title" x="465" y="375" text-anchor="end">Unemployment (%)</text>
+
+  <line class="lrpc" x1="280" y1="60" x2="280" y2="350" />
+
+  <path class="srpc" d="M 110 90 Q 200 200 420 300" />
+  <path class="srpc2" d="M 150 90 Q 240 200 460 300" />
+
+  <circle class="dot" cx="280" cy="200" r="4.5" />
+
+  <line class="dashed" x1="70" y1="200" x2="280" y2="200" />
+
+  <text class="text label" x="62" y="204" text-anchor="end">π*</text>
+  <text class="text label" x="280" y="368" text-anchor="middle">NRU</text>
+
+  <text class="text label" x="425" y="300" fill="#4f46e5">SRPC</text>
+  <text class="text label" x="464" y="300" fill="#4f46e5">SRPC'</text>
+  <text class="text label" x="286" y="58" fill="#10b981">LRPC</text>
+
+  <text class="text note" x="250" y="390" text-anchor="middle">Short run: trade-off. Long run: no trade-off — only the NRU.</text>
+</svg>

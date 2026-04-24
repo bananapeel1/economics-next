@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" role="img" aria-labelledby="title desc">
+  <title id="title">Monopoly pricing and supernormal profit</title>
+  <desc id="desc">The monopolist maximises profit where marginal cost equals marginal revenue, choosing quantity Qm and setting price Pm read off the average revenue (demand) curve. Supernormal profit is the shaded rectangle between Pm and the average cost at Qm.</desc>
+  <style>
+    .axis { stroke: #64748b; stroke-width: 1.5; fill: none; }
+    .text { font-family: ui-sans-serif, system-ui, sans-serif; fill: #1f2937; }
+    .axis-title { font-size: 14px; font-weight: 600; }
+    .label { font-size: 13px; font-weight: 600; }
+    .note { font-size: 12px; fill: #475569; }
+    .ar { fill: none; stroke: #4f46e5; stroke-width: 2.5; }
+    .mr { fill: none; stroke: #6366f1; stroke-width: 2.5; stroke-dasharray: 4 3; }
+    .mc { fill: none; stroke: #ef4444; stroke-width: 2.5; }
+    .ac { fill: none; stroke: #f59e0b; stroke-width: 2.5; }
+    .dashed { stroke: #94a3b8; stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
+    .profit { fill: #10b981; fill-opacity: 0.25; stroke: #059669; stroke-width: 1; }
+    .dot { fill: #111827; }
+  </style>
+
+  <line class="axis" x1="70" y1="50" x2="70" y2="350" />
+  <line class="axis" x1="70" y1="350" x2="470" y2="350" />
+  <text class="text axis-title" x="42" y="45">Price, Cost</text>
+  <text class="text axis-title" x="465" y="375" text-anchor="end">Quantity (Q)</text>
+
+  <line class="ar" x1="100" y1="80" x2="440" y2="330" />
+  <line class="mr" x1="100" y1="80" x2="270" y2="340" />
+
+  <path class="mc" d="M 110 300 C 170 240, 220 200, 410 100" />
+  <path class="ac" d="M 110 270 Q 220 200 250 210 Q 320 230 410 130" />
+
+  <rect class="profit" x="70" y="130" width="150" height="80" />
+
+  <circle class="dot" cx="220" cy="230" r="4" />
+  <circle class="dot" cx="220" cy="130" r="4" />
+  <circle class="dot" cx="220" cy="210" r="4" />
+
+  <line class="dashed" x1="70" y1="130" x2="220" y2="130" />
+  <line class="dashed" x1="70" y1="210" x2="220" y2="210" />
+  <line class="dashed" x1="220" y1="350" x2="220" y2="130" />
+
+  <text class="text label" x="62" y="134" text-anchor="end">Pm</text>
+  <text class="text label" x="62" y="214" text-anchor="end">ACm</text>
+  <text class="text label" x="220" y="368" text-anchor="middle">Qm</text>
+
+  <text class="text label" x="445" y="330" fill="#4f46e5">AR = D</text>
+  <text class="text label" x="273" y="340" fill="#6366f1">MR</text>
+  <text class="text label" x="415" y="100" fill="#ef4444">MC</text>
+  <text class="text label" x="415" y="130" fill="#f59e0b">AC</text>
+
+  <text class="text note" x="145" y="175" text-anchor="middle">Supernormal</text>
+  <text class="text note" x="145" y="190" text-anchor="middle">profit</text>
+
+  <text class="text note" x="250" y="390" text-anchor="middle">Profit max at MC = MR → Qm; price set on AR above AC → supernormal profit.</text>
+</svg>

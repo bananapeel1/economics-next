@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" role="img" aria-labelledby="title desc">
+  <title id="title">Boston Consulting Group (BCG) Matrix</title>
+  <desc id="desc">Two-by-two grid with market growth rate on the vertical axis and relative market share on the horizontal axis. Four quadrants: Stars (high growth, high share), Cash Cows (low growth, high share), Question Marks (high growth, low share), Dogs (low growth, low share).</desc>
+  <style>
+    .text { font-family: ui-sans-serif, system-ui, sans-serif; fill: #1f2937; }
+    .axis-title { font-size: 14px; font-weight: 600; }
+    .quad-title { font-size: 16px; font-weight: 700; }
+    .quad-sub { font-size: 12px; fill: #475569; }
+    .arrow { stroke: #64748b; stroke-width: 2; fill: none; marker-end: url(#arr); }
+    .grid { stroke: #cbd5e1; stroke-width: 1.5; }
+    .q-star { fill: #fef3c7; stroke: #f59e0b; stroke-width: 1.5; }
+    .q-cow { fill: #dbeafe; stroke: #3b82f6; stroke-width: 1.5; }
+    .q-qm { fill: #ede9fe; stroke: #8b5cf6; stroke-width: 1.5; }
+    .q-dog { fill: #fee2e2; stroke: #ef4444; stroke-width: 1.5; }
+  </style>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <rect class="q-star" x="100" y="70" width="160" height="130" />
+  <rect class="q-qm" x="260" y="70" width="160" height="130" />
+  <rect class="q-cow" x="100" y="200" width="160" height="130" />
+  <rect class="q-dog" x="260" y="200" width="160" height="130" />
+
+  <line class="grid" x1="260" y1="70" x2="260" y2="330" />
+  <line class="grid" x1="100" y1="200" x2="420" y2="200" />
+
+  <text class="text quad-title" x="180" y="125" text-anchor="middle">Stars</text>
+  <text class="text quad-sub" x="180" y="148" text-anchor="middle">High share,</text>
+  <text class="text quad-sub" x="180" y="163" text-anchor="middle">high growth.</text>
+  <text class="text quad-sub" x="180" y="180" text-anchor="middle">Invest.</text>
+
+  <text class="text quad-title" x="340" y="125" text-anchor="middle">Question marks</text>
+  <text class="text quad-sub" x="340" y="148" text-anchor="middle">Low share,</text>
+  <text class="text quad-sub" x="340" y="163" text-anchor="middle">high growth.</text>
+  <text class="text quad-sub" x="340" y="180" text-anchor="middle">Decide: invest or drop.</text>
+
+  <text class="text quad-title" x="180" y="255" text-anchor="middle">Cash cows</text>
+  <text class="text quad-sub" x="180" y="278" text-anchor="middle">High share,</text>
+  <text class="text quad-sub" x="180" y="293" text-anchor="middle">low growth.</text>
+  <text class="text quad-sub" x="180" y="310" text-anchor="middle">Harvest cash.</text>
+
+  <text class="text quad-title" x="340" y="255" text-anchor="middle">Dogs</text>
+  <text class="text quad-sub" x="340" y="278" text-anchor="middle">Low share,</text>
+  <text class="text quad-sub" x="340" y="293" text-anchor="middle">low growth.</text>
+  <text class="text quad-sub" x="340" y="310" text-anchor="middle">Divest.</text>
+
+  <text class="text axis-title" x="35" y="200" text-anchor="middle" transform="rotate(-90 35 200)">Market growth</text>
+  <text class="text axis-title" x="260" y="360" text-anchor="middle">Relative market share</text>
+
+  <text class="text quad-sub" x="100" y="352" text-anchor="middle">High</text>
+  <text class="text quad-sub" x="420" y="352" text-anchor="middle">Low</text>
+</svg>
