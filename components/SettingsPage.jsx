@@ -1,6 +1,8 @@
 "use client";
 import { useState } from 'react';
 import { useAuth } from './AuthProvider';
+import { isLifetime } from '@/lib/entitlements';
+import CancelOfferModal from './CancelOfferModal';
 
 export default function SettingsPage() {
   const { user, subscription, isPremium, supabase } = useAuth();
@@ -11,6 +13,10 @@ export default function SettingsPage() {
   const [passwordLoading, setPasswordLoading] = useState(false);
   const [portalLoading, setPortalLoading] = useState(false);
   const [upgradeLoading, setUpgradeLoading] = useState(false);
+  const [lifetimeLoading, setLifetimeLoading] = useState(false);
+  const [showCancelOffer, setShowCancelOffer] = useState(false);
+
+  const hasLifetime = isLifetime(subscription);
 
   const joinedDate = user?.created_at
     ? new Date(user.created_at).toLocaleDateString('en-GB', {
@@ -83,14 +89,19 @@ export default function SettingsPage() {
     }
   }
 
-  async function handleUpgrade() {
-    setUpgradeLoading(true);
+  async function handleUpgrade(plan = 'monthly') {
+    const setLoading = plan === 'lifetime' ? setLifetimeLoading : setUpgradeLoading;
+    setLoading(true);
     try {
-      const res = await fetch('/api/stripe/checkout', { method: 'POST' });
+      const res = await fetch('/api/stripe/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ plan }),
+      });
       if (!res.ok) {
         const body = await res.json().catch(() => ({}));
         alert(body?.error || 'Could not create checkout session.');
-        setUpgradeLoading(false);
+        setLoading(false);
         return;
       }
       const { url } = await res.json();
@@ -98,11 +109,11 @@ export default function SettingsPage() {
         window.location.href = url;
       } else {
         alert('Could not create checkout session.');
-        setUpgradeLoading(false);
+        setLoading(false);
       }
     } catch {
       alert('Network error. Please try again.');
-      setUpgradeLoading(false);
+      setLoading(false);
     }
   }
 
@@ -124,7 +135,18 @@ export default function SettingsPage() {
       {/* Subscription */}
       <div className="settings-section">
         <h2 className="settings-section-title">Subscription</h2>
-        {isPremium ? (
+        {hasLifetime ? (
+          <>
+            <div className="settings-info-row">
+              <span className="settings-info-label">Plan</span>
+              <span className="settings-plan-badge premium">Lifetime</span>
+            </div>
+            <p className="settings-upgrade-hint">
+              You have permanent access to everything. There&apos;s nothing to renew
+              and you won&apos;t be billed again.
+            </p>
+          </>
+        ) : isPremium ? (
           <>
             <div className="settings-info-row">
               <span className="settings-info-label">Plan</span>
@@ -150,6 +172,13 @@ export default function SettingsPage() {
             >
               {portalLoading ? 'Loading...' : 'Manage Subscription'}
             </button>
+            <button
+              className="settings-btn secondary"
+              onClick={() => setShowCancelOffer(true)}
+              disabled={portalLoading}
+            >
+              Cancel Subscription
+            </button>
           </>
         ) : (
           <>
@@ -162,14 +191,30 @@ export default function SettingsPage() {
             </p>
             <button
               className="settings-btn primary"
-              onClick={handleUpgrade}
-              disabled={upgradeLoading}
+              onClick={() => handleUpgrade('monthly')}
+              disabled={upgradeLoading || lifetimeLoading}
             >
-              {upgradeLoading ? 'Loading...' : 'Start 3-Day Free Trial — €0.99/mo'}
+              {upgradeLoading ? 'Loading...' : 'Get Pro — £1 first month, then £1.99/mo'}
+            </button>
+            <button
+              className="settings-btn secondary"
+              onClick={() => handleUpgrade('lifetime')}
+              disabled={upgradeLoading || lifetimeLoading}
+            >
+              {lifetimeLoading ? 'Loading...' : 'Or pay once — £12 for lifetime access'}
             </button>
           </>
         )}
       </div>
+
+      <CancelOfferModal
+        open={showCancelOffer}
+        onClose={() => setShowCancelOffer(false)}
+        onDecline={() => {
+          setShowCancelOffer(false);
+          handleManageSubscription();
+        }}
+      />
 
       {/* Change Password */}
       <div className="settings-section">

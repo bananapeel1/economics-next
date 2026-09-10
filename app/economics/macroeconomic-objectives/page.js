@@ -553,12 +553,12 @@ export default async function MacroObjectivesPillarPage() {
         <div className="elp-cta-bg" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(79,126,248,.07) 0%, transparent 65%)' }} />
         <div className="elp-cta-inner elp-fade-up">
           <h2 className="elp-cta-title">Ready to master macroeconomic objectives?</h2>
-          <p className="elp-cta-sub">Free notes for every spec point. Flashcards, quizzes and AI tutor unlock with a 3-day free trial.</p>
+          <p className="elp-cta-sub">Free notes for every spec point. Flashcards, quizzes and AI tutor unlock with Pro — £1 for your first month.</p>
           <div className="elp-cta-actions">
             <Link href="/economics/unit-2/macroeconomic-objectives-policies" className="elp-btn-primary" style={{ fontSize: 15, padding: '14px 30px' }}>Open in app &mdash; it&apos;s free &rarr;</Link>
             <Link href="/economics/unit-2" className="elp-btn-secondary">&larr; Back to Unit 2</Link>
           </div>
-          <p className="elp-cta-note">No signup required for notes &middot; Cancel premium anytime &middot; &euro;0.99/month</p>
+          <p className="elp-cta-note">No signup required for notes &middot; Cancel anytime &middot; &pound;1 first month, then &pound;1.99</p>
         </div>
       </div>
 

@@ -1,5 +1,6 @@
 import { getStripe, getSubscriptionPeriodEnd } from '@/lib/stripe';
 import { createServerClient } from '@/lib/supabase-server';
+import { isLifetime, PLAN_LIFETIME } from '@/lib/entitlements';
 import { NextResponse } from 'next/server';
 
 /**
@@ -93,6 +94,82 @@ async function writeActiveSubscription(supabase, { userId, customerId, subscript
   });
 }
 
+/**
+ * Has this user already bought lifetime? Lifetime users have no active Stripe
+ * subscription, so every downgrade path must check this first — otherwise the
+ * `customer.subscription.deleted` event fired when we cancel their now-redundant
+ * subscription would immediately strip the access they just paid for.
+ */
+async function userHasLifetime(supabase, userId, logCtx) {
+  const { data, error } = await supabase
+    .from('user_subscriptions')
+    .select('plan, status')
+    .eq('user_id', userId)
+    .maybeSingle();
+
+  if (error) {
+    console.error('[webhook:%s] lifetime pre-check failed', logCtx.eventType, {
+      eventId: logCtx.eventId, userId, code: error.code, message: error.message,
+    });
+    throw error; // Safer to retry than to risk wrongly downgrading a lifetime user.
+  }
+  return isLifetime(data);
+}
+
+/**
+ * Grant permanent access after a one-time purchase (lifetime or the £6
+ * cancel-save offer), then cancel any subscription the customer still has so
+ * they never get billed again on top of a purchase that never expires.
+ */
+async function grantLifetimeAccess(supabase, stripe, { userId, customerId, source }, logCtx) {
+  const { error } = await supabase
+    .from('user_subscriptions')
+    .upsert({
+      user_id: userId,
+      stripe_customer_id: customerId,
+      stripe_subscription_id: null,
+      plan: PLAN_LIFETIME,
+      status: 'active',
+      current_period_end: null,
+      trial_end: null,
+      updated_at: new Date().toISOString(),
+    }, { onConflict: 'user_id' });
+
+  if (error) {
+    console.error('[webhook:%s] upsert(lifetime) failed', logCtx.eventType, {
+      eventId: logCtx.eventId, userId, customerId, code: error.code, message: error.message,
+    });
+    throw error;
+  }
+
+  console.log('[webhook:%s] granted lifetime access', logCtx.eventType, {
+    eventId: logCtx.eventId, userId, customerId, source: source || 'direct',
+  });
+
+  // Cancel any live subscription — they've paid once for access that never
+  // expires, so continuing to bill them would be wrong. Best-effort: the
+  // entitlement is already written, so a failure here must not fail the event.
+  try {
+    const [active, trialing, pastDue] = await Promise.all([
+      stripe.subscriptions.list({ customer: customerId, status: 'active', limit: 10 }),
+      stripe.subscriptions.list({ customer: customerId, status: 'trialing', limit: 10 }),
+      stripe.subscriptions.list({ customer: customerId, status: 'past_due', limit: 10 }),
+    ]);
+    const live = [...active.data, ...trialing.data, ...pastDue.data];
+
+    for (const s of live) {
+      await stripe.subscriptions.cancel(s.id);
+      console.log('[webhook:%s] cancelled subscription superseded by lifetime', logCtx.eventType, {
+        eventId: logCtx.eventId, userId, customerId, subscriptionId: s.id, wasStatus: s.status,
+      });
+    }
+  } catch (err) {
+    console.error('[webhook:%s] failed to cancel subscription after lifetime purchase — NEEDS OPS REVIEW', logCtx.eventType, {
+      eventId: logCtx.eventId, userId, customerId, message: err.message,
+    });
+  }
+}
+
 export async function POST(request) {
   const body = await request.text();
   const sig = request.headers.get('stripe-signature');
@@ -123,9 +200,40 @@ export async function POST(request) {
         const userId = session.metadata?.supabase_user_id;
         const subscriptionId = session.subscription;
 
-        if (!userId || !subscriptionId) {
-          console.warn('[webhook:%s] missing userId or subscriptionId', event.type, {
-            eventId: event.id, hasUserId: !!userId, hasSubscriptionId: !!subscriptionId,
+        if (!userId) {
+          console.warn('[webhook:%s] missing userId in session metadata', event.type, {
+            eventId: event.id, sessionId: session.id, mode: session.mode,
+          });
+          break;
+        }
+
+        // One-time purchase: lifetime, or the £6 cancel-save offer.
+        if (session.mode === 'payment') {
+          if (session.payment_status !== 'paid') {
+            console.log('[webhook:%s] payment-mode session not yet paid (status=%s), skipping', event.type, session.payment_status, {
+              eventId: event.id, userId, sessionId: session.id,
+            });
+            break;
+          }
+          await grantLifetimeAccess(supabase, stripe, {
+            userId,
+            customerId: session.customer,
+            source: session.metadata?.source,
+          }, logCtx);
+          break;
+        }
+
+        if (!subscriptionId) {
+          console.warn('[webhook:%s] subscription-mode session with no subscription id', event.type, {
+            eventId: event.id, userId, sessionId: session.id,
+          });
+          break;
+        }
+
+        // A lifetime user should never be downgraded to a recurring plan.
+        if (await userHasLifetime(supabase, userId, logCtx)) {
+          console.log('[webhook:%s] user has lifetime, ignoring subscription session', event.type, {
+            eventId: event.id, userId, subscriptionId,
           });
           break;
         }
@@ -137,6 +245,65 @@ export async function POST(request) {
         break;
       }
 
+      // A delayed payment method (not cards, but possible via Adaptive Pricing's
+      // local methods) confirms after checkout closes. Without this, a lifetime
+      // purchase paid that way would never grant access.
+      case 'checkout.session.async_payment_succeeded': {
+        const session = event.data.object;
+        const userId = session.metadata?.supabase_user_id;
+
+        if (!userId || session.mode !== 'payment') {
+          console.warn('[webhook:%s] ignored (userId=%s, mode=%s)', event.type, !!userId, session.mode, {
+            eventId: event.id, sessionId: session.id,
+          });
+          break;
+        }
+
+        await grantLifetimeAccess(supabase, stripe, {
+          userId,
+          customerId: session.customer,
+          source: session.metadata?.source,
+        }, logCtx);
+        break;
+      }
+
+      // Refunding a one-time purchase must revoke the access it bought —
+      // otherwise a refunded lifetime customer keeps permanent free access.
+      case 'charge.refunded': {
+        const charge = event.data.object;
+        // Only act on fully refunded one-off charges. Subscription refunds are
+        // handled by the subscription lifecycle events above.
+        if (charge.invoice || charge.amount_refunded < charge.amount) break;
+
+        const customerId = charge.customer;
+        if (!customerId) break;
+
+        const userId = await findUserIdByCustomer(supabase, stripe, customerId, logCtx);
+        if (!userId) break;
+
+        if (!(await userHasLifetime(supabase, userId, logCtx))) break;
+
+        const { error } = await supabase
+          .from('user_subscriptions')
+          .update({
+            plan: 'free',
+            status: 'refunded',
+            updated_at: new Date().toISOString(),
+          })
+          .eq('user_id', userId);
+
+        if (error) {
+          console.error('[webhook:%s] revoke(lifetime) failed', event.type, {
+            eventId: event.id, userId, customerId, code: error.code, message: error.message,
+          });
+          throw error;
+        }
+        console.log('[webhook:%s] revoked lifetime after full refund', event.type, {
+          eventId: event.id, userId, customerId, chargeId: charge.id,
+        });
+        break;
+      }
+
       case 'customer.subscription.created':
       case 'customer.subscription.updated': {
         const subscription = event.data.object;
@@ -144,6 +311,17 @@ export async function POST(request) {
 
         const userId = await findUserIdByCustomer(supabase, stripe, customerId, logCtx);
         if (!userId) break; // already logged by findUserIdByCustomer
+
+        // Lifetime is permanent and outranks any subscription state. This is
+        // the event that fires when we cancel a subscription superseded by a
+        // lifetime purchase — without this guard it would revoke the access
+        // the customer just paid for.
+        if (await userHasLifetime(supabase, userId, logCtx)) {
+          console.log('[webhook:%s] user has lifetime, ignoring subscription state change (status=%s)', event.type, subscription.status, {
+            eventId: event.id, userId, customerId,
+          });
+          break;
+        }
 
         const isActive = ['active', 'trialing'].includes(subscription.status);
 
@@ -178,6 +356,15 @@ export async function POST(request) {
 
         const userId = await findUserIdByCustomer(supabase, stripe, customerId, logCtx);
         if (!userId) break;
+
+        // See the guard in subscription.updated — cancelling the subscription
+        // that a lifetime purchase replaced must not revoke lifetime access.
+        if (await userHasLifetime(supabase, userId, logCtx)) {
+          console.log('[webhook:%s] user has lifetime, ignoring subscription deletion', event.type, {
+            eventId: event.id, userId, customerId,
+          });
+          break;
+        }
 
         const { error } = await supabase
           .from('user_subscriptions')
@@ -214,6 +401,14 @@ export async function POST(request) {
 
         const userId = await findUserIdByCustomer(supabase, stripe, customerId, logCtx);
         if (!userId) break;
+
+        // A trailing invoice must not overwrite lifetime with a plan that expires.
+        if (await userHasLifetime(supabase, userId, logCtx)) {
+          console.log('[webhook:%s] user has lifetime, ignoring subscription invoice', event.type, {
+            eventId: event.id, userId, customerId, subscriptionId,
+          });
+          break;
+        }
 
         const subscription = await stripe.subscriptions.retrieve(subscriptionId);
         if (!['active', 'trialing'].includes(subscription.status)) {

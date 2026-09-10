@@ -1,5 +1,6 @@
 "use client";
 import { createContext, useContext, useEffect, useState, useCallback } from 'react';
+import { hasPremiumAccess } from '@/lib/entitlements';
 import { createClient } from '@/lib/supabase/client';
 
 const AuthContext = createContext({
@@ -76,7 +77,7 @@ export function AuthProvider({ children, initialUser }) {
       fetch('/api/subscription')
         .then(res => res.ok ? res.json() : null)
         .then(data => {
-          if (data && data.plan === 'premium' && data.status === 'active') {
+          if (data && hasPremiumAccess(data)) {
             setSubscription(data);
             setActivating(false);
             clearInterval(poll);
@@ -98,7 +99,7 @@ export function AuthProvider({ children, initialUser }) {
     return () => clearInterval(poll);
   }, [user]);
 
-  const isPremium = subscription?.plan === 'premium' && subscription?.status === 'active';
+  const isPremium = hasPremiumAccess(subscription);
 
   return (
     <AuthContext.Provider

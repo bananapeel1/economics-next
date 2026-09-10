@@ -2,6 +2,7 @@ import { streamText } from 'ai';
 import { google } from '@ai-sdk/google';
 import { createClient } from '@/lib/supabase/server';
 import { createServerClient } from '@/lib/supabase-server';
+import { hasPremiumAccess } from '@/lib/entitlements';
 
 export const maxDuration = 30;
 
@@ -47,7 +48,7 @@ export async function POST(request) {
     .eq('user_id', user.id)
     .single();
 
-  const isPremium = sub?.plan === 'premium' && sub?.status === 'active';
+  const isPremium = hasPremiumAccess(sub);
   // Also allow admin users
   const isAdmin = user.app_metadata?.role === 'admin';
 

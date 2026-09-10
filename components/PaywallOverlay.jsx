@@ -60,7 +60,7 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
 
   const ctaButton = user ? (
     <button className="paywall-btn" onClick={handleUpgrade} disabled={loading}>
-      {loading ? 'Loading...' : 'Start Free Trial'}
+      {loading ? 'Loading...' : 'Get Pro — £1 first month'}
     </button>
   ) : (
     <Link href="/login" className="paywall-btn">Sign In to Get Started</Link>
@@ -71,7 +71,7 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
     return (
       <div className="preview-paywall-banner">
         <h3 className="preview-paywall-title">Unlock All {feature}</h3>
-        <p className="preview-paywall-desc">Full access to every section &mdash; just <strong>&euro;0.99/month</strong>. Cheaper than a coffee.</p>
+        <p className="preview-paywall-desc">Full access to every section &mdash; <strong>&pound;1 for your first month</strong>, then &pound;1.99. Cheaper than a coffee.</p>
 
         <div className="paywall-inline-features">
           {FEATURES.map(f => (
@@ -89,7 +89,7 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
         {ctaButton}
 
         <div className="paywall-trust-row-compact">
-          <span>3-day free trial</span>
+          <span>&pound;1 first month</span>
           <span className="paywall-trust-dot" />
           <span>Cancel anytime</span>
         </div>
@@ -124,18 +124,18 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
         </h2>
         <p className="paywall-subtitle">
           {user
-            ? 'Start your free trial and accelerate your revision.'
-            : 'Sign in to start your free trial and unlock everything.'
+            ? 'Get your first month for £1 and accelerate your revision.'
+            : 'Sign in to unlock everything from £1 for your first month.'
           }
         </p>
 
         {/* Price */}
         <div className="paywall-price-block">
           <div className="paywall-price">
-            <span className="paywall-price-amount">&euro;0.99</span>
+            <span className="paywall-price-amount">&pound;1.99</span>
             <span className="paywall-price-period">/ month</span>
           </div>
-          <div className="paywall-price-trial">3-day free trial</div>
+          <div className="paywall-price-trial">&pound;1 for your first month &middot; or &pound;12 once for life</div>
           <div className="paywall-price-value">Cheaper than a single coffee &mdash; for unlimited revision tools</div>
         </div>
 

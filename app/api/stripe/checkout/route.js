@@ -1,6 +1,8 @@
 import { getStripe, getSubscriptionPeriodEnd } from '@/lib/stripe';
 import { createClient } from '@/lib/supabase/server';
 import { createServerClient } from '@/lib/supabase-server';
+import { isLifetime } from '@/lib/entitlements';
+import { resolveCurrency, getPriceId, getIntroCoupon } from '@/lib/pricing';
 import { NextResponse } from 'next/server';
 
 async function ensureStripeCustomer(stripe, serviceSupabase, user) {
@@ -12,6 +14,7 @@ async function ensureStripeCustomer(stripe, serviceSupabase, user) {
     .maybeSingle();
 
   let customerId = sub?.stripe_customer_id;
+  let customer = null;
 
   // Validate that the customer exists and is not deleted in Stripe
   if (customerId) {
@@ -19,6 +22,8 @@ async function ensureStripeCustomer(stripe, serviceSupabase, user) {
       const existing = await stripe.customers.retrieve(customerId);
       if (existing.deleted) {
         customerId = null; // Customer was deleted, need a new one
+      } else {
+        customer = existing;
       }
     } catch {
       customerId = null; // Customer doesn't exist, need a new one
@@ -27,7 +32,7 @@ async function ensureStripeCustomer(stripe, serviceSupabase, user) {
 
   // Create a new Stripe customer if we don't have a valid one
   if (!customerId) {
-    const customer = await stripe.customers.create({
+    customer = await stripe.customers.create({
       email: user.email,
       metadata: { supabase_user_id: user.id },
     });
@@ -44,7 +49,7 @@ async function ensureStripeCustomer(stripe, serviceSupabase, user) {
       }, { onConflict: 'user_id' });
   }
 
-  return customerId;
+  return { customerId, customer };
 }
 
 /**
@@ -74,8 +79,17 @@ async function findActiveStripeSubscription(stripe, customerId, userId) {
   }
 }
 
-export async function POST() {
+export async function POST(request) {
   try {
+    // Which product are they buying? 'monthly' (default) or 'lifetime'.
+    let plan = 'monthly';
+    try {
+      const body = await request.json();
+      if (body?.plan === 'lifetime') plan = 'lifetime';
+    } catch {
+      // No body — keep the default. Existing callers post nothing.
+    }
+
     // Get authenticated user
     const supabase = await createClient();
     const { data: { user } } = await supabase.auth.getUser();
@@ -87,7 +101,7 @@ export async function POST() {
     const stripe = getStripe();
     const serviceSupabase = createServerClient();
 
-    const customerId = await ensureStripeCustomer(stripe, serviceSupabase, user);
+    const { customerId, customer } = await ensureStripeCustomer(stripe, serviceSupabase, user);
 
     // Read current subscription state from DB
     const { data: currentSub } = await serviceSupabase
@@ -96,14 +110,24 @@ export async function POST() {
       .eq('user_id', user.id)
       .maybeSingle();
 
+    // Lifetime is terminal — nothing left to sell them.
+    if (isLifetime(currentSub)) {
+      return NextResponse.json(
+        { error: 'You already have lifetime access' },
+        { status: 400 }
+      );
+    }
+
     const dbSaysActivePremium =
       currentSub?.plan === 'premium' &&
       currentSub?.status === 'active' &&
       currentSub?.current_period_end &&
       new Date(currentSub.current_period_end) > new Date();
 
-    // Primary block: DB says active premium → already subscribed.
-    if (dbSaysActivePremium) {
+    // An active subscriber buying lifetime is a legitimate upgrade — the
+    // webhook cancels their subscription once the payment lands. Only block
+    // duplicate *subscription* purchases.
+    if (plan === 'monthly' && dbSaysActivePremium) {
       return NextResponse.json(
         { error: 'You already have an active subscription' },
         { status: 400 }
@@ -114,71 +138,95 @@ export async function POST() {
     // have failed to write. Ask Stripe directly — if there's an active or
     // trialing subscription, sync the DB and block the duplicate purchase.
     // This is the fix for the 3×-subscription bug.
-    const liveSub = await findActiveStripeSubscription(stripe, customerId, user.id);
-    if (liveSub) {
-      const periodEnd = getSubscriptionPeriodEnd(liveSub);
-      const trialEnd = liveSub.trial_end
-        ? new Date(liveSub.trial_end * 1000).toISOString()
-        : null;
+    if (plan === 'monthly') {
+      const liveSub = await findActiveStripeSubscription(stripe, customerId, user.id);
+      if (liveSub) {
+        const periodEnd = getSubscriptionPeriodEnd(liveSub);
+        const trialEnd = liveSub.trial_end
+          ? new Date(liveSub.trial_end * 1000).toISOString()
+          : null;
 
-      const { error: syncError } = await serviceSupabase
-        .from('user_subscriptions')
-        .upsert({
-          user_id: user.id,
-          stripe_customer_id: customerId,
-          stripe_subscription_id: liveSub.id,
-          plan: 'premium',
-          status: 'active',
-          current_period_end: periodEnd,
-          trial_end: trialEnd,
-          updated_at: new Date().toISOString(),
-        }, { onConflict: 'user_id' });
+        const { error: syncError } = await serviceSupabase
+          .from('user_subscriptions')
+          .upsert({
+            user_id: user.id,
+            stripe_customer_id: customerId,
+            stripe_subscription_id: liveSub.id,
+            plan: 'premium',
+            status: 'active',
+            current_period_end: periodEnd,
+            trial_end: trialEnd,
+            updated_at: new Date().toISOString(),
+          }, { onConflict: 'user_id' });
 
-      if (syncError) {
-        console.error('[checkout] DB sync after Stripe pre-check failed', {
-          userId: user.id, customerId, code: syncError.code, message: syncError.message,
-        });
-        // Still block the duplicate purchase — Stripe is the source of truth.
-      } else {
-        console.log('[checkout] synced stale DB from Stripe during pre-check', {
-          userId: user.id, customerId, subscriptionId: liveSub.id,
-        });
+        if (syncError) {
+          console.error('[checkout] DB sync after Stripe pre-check failed', {
+            userId: user.id, customerId, code: syncError.code, message: syncError.message,
+          });
+          // Still block the duplicate purchase — Stripe is the source of truth.
+        } else {
+          console.log('[checkout] synced stale DB from Stripe during pre-check', {
+            userId: user.id, customerId, subscriptionId: liveSub.id,
+          });
+        }
+
+        return NextResponse.json(
+          {
+            error: 'You already have an active subscription',
+            synced: !syncError,
+          },
+          { status: 400 }
+        );
       }
-
-      return NextResponse.json(
-        {
-          error: 'You already have an active subscription',
-          synced: !syncError,
-        },
-        { status: 400 }
-      );
     }
 
-    // Verify price is configured
-    const priceId = process.env.STRIPE_PRICE_ID;
-    if (!priceId) {
-      return NextResponse.json({ error: 'Stripe price not configured' }, { status: 500 });
-    }
-
-    // Trial abuse prevention: any prior subscription disqualifies the trial.
-    const hadPreviousSubscription = !!currentSub?.stripe_subscription_id;
+    // Stripe locks customer.currency on the first invoice and it can never be
+    // changed. Customers who first paid in EUR must keep being charged in EUR.
+    const currency = resolveCurrency(customer);
+    const priceId = getPriceId(currency, plan === 'lifetime' ? 'lifetime' : 'monthly');
 
     const origin = process.env.NEXT_PUBLIC_SITE_URL || 'https://revvylearn.com';
 
     const sessionParams = {
       customer: customerId,
-      mode: 'subscription',
       line_items: [{ price: priceId, quantity: 1 }],
-      allow_promotion_codes: true,
-      success_url: `${origin}/?upgraded=true`,
+      success_url: `${origin}/?upgraded=${plan}`,
       cancel_url: `${origin}/?cancelled=true`,
-      metadata: { supabase_user_id: user.id },
+      metadata: { supabase_user_id: user.id, plan },
+      // Present the customer's local currency while we still settle in GBP.
+      // Stripe charges the 2–4% conversion fee to the customer, not to us.
+      adaptive_pricing: { enabled: true },
     };
 
-    // Only offer trial to new users who haven't had a subscription before
-    if (!hadPreviousSubscription) {
-      sessionParams.payment_method_collection = 'if_required';
-      sessionParams.subscription_data = { trial_period_days: 3 };
+    if (plan === 'lifetime') {
+      sessionParams.mode = 'payment';
+      sessionParams.allow_promotion_codes = true;
+      // Metadata must also live on the PaymentIntent so the webhook can
+      // recover the user even if the session object is unavailable.
+      sessionParams.payment_intent_data = {
+        metadata: { supabase_user_id: user.id, plan: 'lifetime' },
+      };
+    } else {
+      sessionParams.mode = 'subscription';
+      // Always take a card up front. Previously this was 'if_required' with a
+      // 3-day trial, which meant no card was collected at signup — only 1 of
+      // 52 trials ever converted, because converting required coming back and
+      // entering card details cold.
+      sessionParams.payment_method_collection = 'always';
+      sessionParams.subscription_data = { metadata: { supabase_user_id: user.id } };
+
+      // First month for 1.00, then full price. Only for genuinely new
+      // customers — a prior subscription disqualifies the intro offer.
+      const hadPreviousSubscription = !!currentSub?.stripe_subscription_id;
+      const introCoupon = getIntroCoupon(currency);
+
+      if (!hadPreviousSubscription && introCoupon) {
+        // `discounts` and `allow_promotion_codes` are mutually exclusive in
+        // Checkout — applying the intro offer means no promo code box.
+        sessionParams.discounts = [{ coupon: introCoupon }];
+      } else {
+        sessionParams.allow_promotion_codes = true;
+      }
     }
 
     const session = await stripe.checkout.sessions.create(sessionParams);

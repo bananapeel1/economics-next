@@ -1,5 +1,6 @@
 import { createClient } from '@/lib/supabase/server';
 import { createServerClient } from '@/lib/supabase-server';
+import { hasPremiumAccess } from '@/lib/entitlements';
 import WrittenPracticeEngine from '@/components/WrittenPracticeEngine';
 import Link from 'next/link';
 
@@ -24,7 +25,7 @@ export default async function WrittenPracticePage() {
       .select('plan, status')
       .eq('user_id', user.id)
       .single();
-    isPremium = sub?.plan === 'premium' && sub?.status === 'active';
+    isPremium = hasPremiumAccess(sub);
     isAdmin = user.app_metadata?.role === 'admin';
   }
 

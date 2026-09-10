@@ -1,5 +1,6 @@
 import { createClient } from '@/lib/supabase/server';
 import { createServerClient } from '@/lib/supabase-server';
+import { hasPremiumAccess } from '@/lib/entitlements';
 import { redirect } from 'next/navigation';
 import FunPage from '@/components/fun/FunPage';
 import Link from 'next/link';
@@ -25,7 +26,7 @@ export default async function FunRoute() {
     .eq('user_id', user.id)
     .single();
 
-  const isPremium = sub?.plan === 'premium' && sub?.status === 'active';
+  const isPremium = hasPremiumAccess(sub);
 
   return (
     <div className="resource-page">

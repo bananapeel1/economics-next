@@ -1353,6 +1353,17 @@ body {
 .modal-btn { width: 100%; padding: 12px; border-radius: 8px; background: var(--accent-green); color: white; border: none; font-size: 14px; font-weight: 600; cursor: pointer; font-family: inherit; }
 .modal-btn:disabled { opacity: 0.4; }
 
+/* Cancel-save offer */
+.cancel-offer-badge { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 10px; }
+.cancel-offer-price { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px; padding: 16px; border: 1px solid var(--border-primary); border-radius: 12px; margin-bottom: 20px; }
+.cancel-offer-price-now { font-size: 30px; font-weight: 700; color: var(--text-primary); line-height: 1; }
+.cancel-offer-price-was { font-size: 16px; color: var(--text-muted); text-decoration: line-through; }
+.cancel-offer-price-note { flex-basis: 100%; font-size: 12px; color: var(--text-muted); }
+.cancel-offer-decline { width: 100%; margin-top: 12px; padding: 12px; border-radius: 8px; background: transparent; color: var(--text-muted); border: 1px solid var(--border-primary); font-size: 13px; font-weight: 500; cursor: pointer; font-family: inherit; }
+.cancel-offer-decline:hover:not(:disabled) { color: var(--text-primary); }
+.cancel-offer-back { width: 100%; margin-top: 8px; padding: 8px; background: none; border: none; color: var(--text-muted); font-size: 12px; cursor: pointer; font-family: inherit; text-decoration: underline; }
+.cancel-offer-decline:disabled, .cancel-offer-back:disabled { opacity: 0.4; cursor: default; }
+
 /* Responsive */
 @media (max-width: 768px) {
   .mobile-header { display: flex; }
@@ -3993,6 +4004,24 @@ button.sidebar-resource-link {
   opacity: 0.6;
   cursor: not-allowed;
   transform: none;
+}
+.upgrade-cta-btn.secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-primary);
+  box-shadow: none;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px 40px;
+}
+.upgrade-cta-btn.secondary:hover {
+  border-color: var(--accent-green);
+  box-shadow: none;
+}
+.upgrade-cta-note {
+  margin: 10px 0 22px;
+  font-size: 13px;
+  color: var(--text-muted);
 }
 .upgrade-cta-active {
   display: inline-flex;

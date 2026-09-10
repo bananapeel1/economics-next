@@ -414,7 +414,7 @@ export default function EconomicsPage() {
         <div className="elp-cta-inner elp-fade-up">
           <h2 className="elp-cta-title">Ready to start revising?</h2>
           <p className="elp-cta-sub">
-            Free notes for every spec point. Adaptive flashcards, quizzes and AI tutor unlock with a 3-day free trial.
+            Free notes for every spec point. Adaptive flashcards, quizzes and AI tutor unlock with Pro — £1 for your first month.
           </p>
           <div className="elp-cta-actions">
             <Link
@@ -426,7 +426,7 @@ export default function EconomicsPage() {
             </Link>
             <Link href="/business" className="elp-btn-secondary">Business notes instead</Link>
           </div>
-          <p className="elp-cta-note">No signup required for notes &middot; Cancel premium anytime &middot; &euro;0.99/month</p>
+          <p className="elp-cta-note">No signup required for notes &middot; Cancel anytime &middot; &pound;1 first month, then &pound;1.99</p>
         </div>
       </div>
 

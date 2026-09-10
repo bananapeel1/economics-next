@@ -1,6 +1,7 @@
 import { getStripe, getSubscriptionPeriodEnd } from '@/lib/stripe';
 import { createClient } from '@/lib/supabase/server';
 import { createServerClient } from '@/lib/supabase-server';
+import { isLifetime, PLAN_LIFETIME } from '@/lib/entitlements';
 import { NextResponse } from 'next/server';
 
 /**
@@ -54,6 +55,18 @@ export async function GET() {
 
     if (!sub) {
       return NextResponse.json({ plan: 'free', status: 'inactive' });
+    }
+
+    // Lifetime access is permanent and backed by a one-time payment, so there
+    // is no Stripe subscription to reconcile against. Return before the sync
+    // below, which downgrades users it can't find an active subscription for.
+    if (isLifetime(sub)) {
+      return NextResponse.json({
+        plan: PLAN_LIFETIME,
+        status: 'active',
+        currentPeriodEnd: null,
+        trialEnd: null,
+      });
     }
 
     const logCtx = { userId: user.id };

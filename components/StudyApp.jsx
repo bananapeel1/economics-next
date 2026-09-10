@@ -164,7 +164,7 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
       <div className="overview-category">
         <div className="overview-category-header">
           <span className="overview-category-line" />
-          <span className="overview-category-label">{isPremium ? 'PREMIUM' : 'PREMIUM \u2014 3-DAY FREE TRIAL'}</span>
+          <span className="overview-category-label">{isPremium ? 'PREMIUM' : 'PREMIUM \u2014 \u00A31 FIRST MONTH'}</span>
           <span className="overview-category-line" />
         </div>
         <div className="overview-grid overview-grid-4">
@@ -200,11 +200,11 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
         <div className="overview-cta-bar">
           <span className="overview-cta-icon">&#9889;</span>
           <span className="overview-cta-text">
-            Unlock Flashcards, Quiz &amp; AI Tutor &mdash; <strong>3 days free</strong>, then &euro;0.99/month
+            Unlock Flashcards, Quiz &amp; AI Tutor &mdash; <strong>&pound;1 first month</strong>, then &pound;1.99/month
           </span>
           <span className="overview-cta-cancel">Cancel anytime</span>
           <button className="overview-cta-btn" onClick={(e) => { e.stopPropagation(); window.location.href = '/upgrade'; }}>
-            Try free &rarr;
+            Get Pro &rarr;
           </button>
         </div>
       )}

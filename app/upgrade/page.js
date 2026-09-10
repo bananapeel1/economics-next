@@ -3,10 +3,10 @@ import UpgradePageClient from '@/components/UpgradePageClient';
 
 export const metadata = {
   title: 'Revvy Learn Premium — Everything you need to ace it.',
-  description: 'Upgrade to Revvy Learn Premium for just €0.99/month. Unlock flashcards, quizzes, AI tutor, evaluation chains and more. 3-day free trial, cancel anytime.',
+  description: 'Upgrade to Revvy Learn Premium — £1 for your first month, then £1.99/month. Or pay £12 once for lifetime access. Flashcards, quizzes, AI tutor, evaluation chains and more.',
   openGraph: {
-    title: 'Revvy Learn Premium — €0.99/month',
-    description: 'Unlock flashcards, quizzes, AI tutor and revision PDFs. 3-day free trial, cancel anytime.',
+    title: 'Revvy Learn Premium — £1 first month, or £12 for life',
+    description: 'Unlock flashcards, quizzes, AI tutor and revision PDFs. Cancel anytime, or pay once and keep it forever.',
     url: 'https://revvylearn.com/upgrade',
     type: 'website',
   },
@@ -92,8 +92,8 @@ export default function UpgradePage() {
           <div className="upgrade-col upgrade-col-premium">
             <div className="upgrade-col-header">
               <div className="upgrade-col-label premium">PREMIUM</div>
-              <div className="upgrade-col-price">&euro;0.99<span className="upgrade-col-price-period">/month</span></div>
-              <div className="upgrade-col-note">After 3-day free trial</div>
+              <div className="upgrade-col-price">&pound;1.99<span className="upgrade-col-price-period">/month</span></div>
+              <div className="upgrade-col-note">&pound;1 for your first month &middot; or &pound;12 once for life</div>
               <div className="upgrade-popular-badge">&#10024; Most popular</div>
             </div>
 

@@ -2,6 +2,7 @@ import { generateText } from 'ai';
 import { google } from '@ai-sdk/google';
 import { createClient } from '@/lib/supabase/server';
 import { createServerClient } from '@/lib/supabase-server';
+import { hasPremiumAccess } from '@/lib/entitlements';
 import { rateLimit } from '@/lib/rate-limit';
 
 export const maxDuration = 15;
@@ -23,7 +24,7 @@ export async function POST(request) {
     .eq('user_id', user.id)
     .single();
 
-  const isPremium = sub?.plan === 'premium' && sub?.status === 'active';
+  const isPremium = hasPremiumAccess(sub);
   const isAdmin = user.app_metadata?.role === 'admin';
 
   if (!isPremium && !isAdmin) {
