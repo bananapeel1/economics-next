@@ -132,11 +132,11 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
         {/* Price */}
         <div className="paywall-price-block">
           <div className="paywall-price">
-            <span className="paywall-price-amount">&pound;1.99</span>
-            <span className="paywall-price-period">/ month</span>
+            <span className="paywall-price-amount">&pound;1</span>
+            <span className="paywall-price-period">first month</span>
           </div>
-          <div className="paywall-price-trial">&pound;1 for your first month &middot; or &pound;12 once for life</div>
-          <div className="paywall-price-value">Cheaper than a single coffee &mdash; for unlimited revision tools</div>
+          <div className="paywall-price-trial">then &pound;1.99/month &middot; cancel anytime &middot; or &pound;12 once for life</div>
+          <div className="paywall-price-value">Shown in GBP &mdash; you&rsquo;ll be charged in your local currency at checkout</div>
         </div>
 
         {/* Feature checklist */}
@@ -158,9 +158,9 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
           {ctaButton}
 
           <div className="paywall-trust-row">
-            <span>Cancel anytime</span>
+            <span>&pound;1 first month</span>
             <span className="paywall-trust-dot" />
-            <span>No credit card for trial</span>
+            <span>Cancel anytime</span>
           </div>
         </div>
 
