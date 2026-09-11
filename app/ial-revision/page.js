@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import BackToApp from '@/components/BackToApp';
+import { LearnMode } from '@/components/Icons';
 import IALScrollBar from './IALScrollBar';
 import '@/styles/landing.css';
 
@@ -243,6 +245,14 @@ export default function IALRevisionPage() {
       </div>
 
       {/* Footer */}
+      <BackToApp
+        icon={LearnMode}
+        heading={"Start revising, free"}
+        sub={"Every spec point in Economics and Business, no signup for notes"}
+        href="/?section=introductory-concepts"
+        cta={"Open the app"}
+      />
+
       <footer className="elp-footer">
         <div className="elp-footer-inner">
           <Link href="/" className="elp-footer-logo">

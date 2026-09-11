@@ -130,10 +130,11 @@ export default function June2026Page() {
           <h2 className="elp-cta-title">Start your June 2026 revision now</h2>
           <p className="elp-cta-sub">Free notes for every spec point. The earlier you start, the better your results.</p>
           <div className="elp-cta-actions">
-            <Link href="/" className="elp-btn-primary" style={{ fontSize: '15px', padding: '14px 30px' }}>Open Revvy Learn &rarr;</Link>
+            <Link href="/?section=introductory-concepts" className="elp-btn-primary" style={{ fontSize: '15px', padding: '14px 30px' }}>Open Revvy Learn &rarr;</Link>
           </div>
         </div>
       </div>
+
 
       <footer className="elp-footer">
         <div className="elp-footer-inner">

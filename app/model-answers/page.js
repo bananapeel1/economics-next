@@ -103,10 +103,11 @@ export default function ModelAnswersRoute() {
           <h2 className="elp-cta-title">Ready to start revising?</h2>
           <p className="elp-cta-sub">Free notes for every spec point. Practice with flashcards, quizzes and AI tutor.</p>
           <div className="elp-cta-actions">
-            <Link href="/" className="elp-btn-primary" style={{ fontSize: '15px', padding: '14px 30px' }}>Open Revvy Learn &rarr;</Link>
+            <Link href="/?section=introductory-concepts" className="elp-btn-primary" style={{ fontSize: '15px', padding: '14px 30px' }}>Open Revvy Learn &rarr;</Link>
           </div>
         </div>
       </div>
+
 
       <footer className="elp-footer">
         <div className="elp-footer-inner">
