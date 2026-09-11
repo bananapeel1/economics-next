@@ -560,7 +560,7 @@ export default async function MacroObjectivesPillarPage() {
             <Link href="/economics/unit-2/macroeconomic-objectives-policies" className="elp-btn-primary" style={{ fontSize: 15, padding: '14px 30px' }}>Open in app &mdash; it&apos;s free &rarr;</Link>
             <Link href="/economics/unit-2" className="elp-btn-secondary">&larr; Back to Unit 2</Link>
           </div>
-          <p className="elp-cta-note">No signup required for notes &middot; Cancel anytime &middot; &pound;1 first month, then &pound;1.99</p>
+          <p className="elp-cta-note">No signup required for notes &middot; Cancel anytime &middot; &pound;1 first month, then &pound;1.99 &middot; charged in your local currency</p>
         </div>
       </div>
 

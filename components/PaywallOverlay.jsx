@@ -93,6 +93,7 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
           <span className="paywall-trust-dot" />
           <span>Cancel anytime</span>
         </div>
+        <p className="paywall-currency-note">Prices in GBP &mdash; you&rsquo;ll be charged in your local currency at checkout.</p>
       </div>
     );
   }

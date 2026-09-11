@@ -203,6 +203,7 @@ export default function SettingsPage() {
             >
               {lifetimeLoading ? 'Loading...' : 'Or pay once — £12 for lifetime access'}
             </button>
+            <p className="settings-currency-note">Prices in GBP &mdash; you&rsquo;ll be charged in your local currency at checkout.</p>
           </>
         )}
       </div>

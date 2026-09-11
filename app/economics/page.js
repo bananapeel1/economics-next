@@ -426,7 +426,7 @@ export default function EconomicsPage() {
             </Link>
             <Link href="/business" className="elp-btn-secondary">Business notes instead</Link>
           </div>
-          <p className="elp-cta-note">No signup required for notes &middot; Cancel anytime &middot; &pound;1 first month, then &pound;1.99</p>
+          <p className="elp-cta-note">No signup required for notes &middot; Cancel anytime &middot; &pound;1 first month, then &pound;1.99 &middot; charged in your local currency</p>
         </div>
       </div>
 
