@@ -10,7 +10,7 @@ Plan: `audit/PLAN.md` (58 packets). Source data: `audit/README.md`.
 | # | Packet | Status | Commit | Snapshot | Validator |
 |---|--------|--------|--------|----------|-----------|
 | 0 | Day 0 hotfix | done except 3 marketing claims (blocked, see NEXT.md) | 069ddb4 | audit/snapshots/2026-09-11-{pre,post}-packet-0__* | n/a (packet 3) |
-| 1 | Measure or don't bother | done in code; app_events table needs the SQL run once (see NEXT.md) | PENDING_SHA | | n/a (packet 3) |
+| 1 | Measure or don't bother | done in code; app_events table needs the SQL run once (see NEXT.md) | cdb24dc | | n/a (packet 3) |
 | 2 | Ids and safety net | not started | | | n/a |
 | 3 | Validator v2 + golden set | not started | | | n/a |
 | 4 | Progress and mastery truth | not started | | | n/a |
