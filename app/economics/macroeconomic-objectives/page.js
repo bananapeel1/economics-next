@@ -292,16 +292,6 @@ export default async function MacroObjectivesPillarPage() {
         </div>
       </section>
 
-      <div className="elp-features-strip">
-        <div className="elp-features-inner">
-          <div className="elp-feat-item"><span className="elp-feat-icon"><Clipboard size={18} /></span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every WEC12 2.3.6 point covered</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon"><ChartHistogram size={18} /></span><div><div className="elp-feat-label">Trade-offs explained</div><div className="elp-feat-sub">Phillips Curve and beyond</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon"><BoltIcon size={18} /></span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style with model answers</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon"><Tutor size={18} /></span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any macro policy question</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon"><NetworkGraph size={18} /></span><div><div className="elp-feat-label">Built for IAL</div><div className="elp-feat-sub">International A-Level focus</div></div></div>
-        </div>
-      </div>
-
       <div className="elp-section" id="overview">
         <div className="elp-fade-up" style={{ marginBottom: 24 }}>
           <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />The big picture</div>
@@ -538,6 +528,16 @@ export default async function MacroObjectivesPillarPage() {
         count={1}
       />
 
+      <div className="elp-features-strip">
+        <div className="elp-features-inner">
+          <div className="elp-feat-item"><span className="elp-feat-icon"><Clipboard size={18} /></span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every WEC12 2.3.6 point covered</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><ChartHistogram size={18} /></span><div><div className="elp-feat-label">Trade-offs explained</div><div className="elp-feat-sub">Phillips Curve and beyond</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><BoltIcon size={18} /></span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style with model answers</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><Tutor size={18} /></span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any macro policy question</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><NetworkGraph size={18} /></span><div><div className="elp-feat-label">Built for IAL</div><div className="elp-feat-sub">International A-Level focus</div></div></div>
+        </div>
+      </div>
+
       <div className="elp-cta-section">
         <div className="elp-cta-bg" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(79,126,248,.07) 0%, transparent 65%)' }} />
         <div className="elp-cta-inner elp-fade-up">
@@ -564,7 +564,6 @@ export default async function MacroObjectivesPillarPage() {
         cta={"Open 2.3.6"}
 
       />
-
 
       <footer className="elp-footer">
         <div className="elp-footer-inner">

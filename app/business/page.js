@@ -232,47 +232,6 @@ export default function BusinessPage() {
         </div>
       </section>
 
-      {/* Features strip */}
-      <div className="elp-features-strip">
-        <div className="elp-features-inner">
-          <div className="elp-feat-item">
-            <span className="elp-feat-icon"><Clipboard size={18} /></span>
-            <div>
-              <div className="elp-feat-label">Spec-aligned notes</div>
-              <div className="elp-feat-sub">Every WBS11&ndash;14 point covered</div>
-            </div>
-          </div>
-          <div className="elp-feat-item">
-            <span className="elp-feat-icon"><CardsIcon size={18} /></span>
-            <div>
-              <div className="elp-feat-label">Spaced repetition</div>
-              <div className="elp-feat-sub">Adaptive flashcard algorithm</div>
-            </div>
-          </div>
-          <div className="elp-feat-item">
-            <span className="elp-feat-icon"><BoltIcon size={18} /></span>
-            <div>
-              <div className="elp-feat-label">Practice questions</div>
-              <div className="elp-feat-sub">Exam-style for every topic</div>
-            </div>
-          </div>
-          <div className="elp-feat-item">
-            <span className="elp-feat-icon"><Tutor size={18} /></span>
-            <div>
-              <div className="elp-feat-label">AI Tutor</div>
-              <div className="elp-feat-sub">Ask any Business question</div>
-            </div>
-          </div>
-          <div className="elp-feat-item">
-            <span className="elp-feat-icon"><ProgressChart size={18} /></span>
-            <div>
-              <div className="elp-feat-label">Progress tracking</div>
-              <div className="elp-feat-sub">See mastery across all topics</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Units section */}
       <div className="elp-section" id="units">
         <div className="elp-units-header elp-fade-up">
@@ -391,6 +350,47 @@ export default function BusinessPage() {
           <Link href="/topic-links" className="elp-resource-chip">
             <span className="elp-resource-chip-icon"><NetworkGraph size={18} /></span> Topic Links Map
           </Link>
+        </div>
+      </div>
+
+      {/* Features strip */}
+      <div className="elp-features-strip">
+        <div className="elp-features-inner">
+          <div className="elp-feat-item">
+            <span className="elp-feat-icon"><Clipboard size={18} /></span>
+            <div>
+              <div className="elp-feat-label">Spec-aligned notes</div>
+              <div className="elp-feat-sub">Every WBS11&ndash;14 point covered</div>
+            </div>
+          </div>
+          <div className="elp-feat-item">
+            <span className="elp-feat-icon"><CardsIcon size={18} /></span>
+            <div>
+              <div className="elp-feat-label">Spaced repetition</div>
+              <div className="elp-feat-sub">Adaptive flashcard algorithm</div>
+            </div>
+          </div>
+          <div className="elp-feat-item">
+            <span className="elp-feat-icon"><BoltIcon size={18} /></span>
+            <div>
+              <div className="elp-feat-label">Practice questions</div>
+              <div className="elp-feat-sub">Exam-style for every topic</div>
+            </div>
+          </div>
+          <div className="elp-feat-item">
+            <span className="elp-feat-icon"><Tutor size={18} /></span>
+            <div>
+              <div className="elp-feat-label">AI Tutor</div>
+              <div className="elp-feat-sub">Ask any Business question</div>
+            </div>
+          </div>
+          <div className="elp-feat-item">
+            <span className="elp-feat-icon"><ProgressChart size={18} /></span>
+            <div>
+              <div className="elp-feat-label">Progress tracking</div>
+              <div className="elp-feat-sub">See mastery across all topics</div>
+            </div>
+          </div>
         </div>
       </div>
 

@@ -292,17 +292,6 @@ export default async function MarketFailurePillarPage() {
         </div>
       </section>
 
-      {/* FEATURES STRIP */}
-      <div className="elp-features-strip">
-        <div className="elp-features-inner">
-          <div className="elp-feat-item"><span className="elp-feat-icon"><Clipboard size={18} /></span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every WEC11 1.3.5 point covered</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon"><ProgressChart size={18} /></span><div><div className="elp-feat-label">Labelled diagrams</div><div className="elp-feat-sub">MPC, MSC, MPB, MSB, welfare loss</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon"><BoltIcon size={18} /></span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style with model answers</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon"><Tutor size={18} /></span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any market failure question</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon"><NetworkGraph size={18} /></span><div><div className="elp-feat-label">Built for IAL</div><div className="elp-feat-sub">International A-Level focus</div></div></div>
-        </div>
-      </div>
-
       {/* OVERVIEW */}
       <div className="elp-section" id="overview">
         <div className="elp-fade-up" style={{ marginBottom: 24 }}>
@@ -552,6 +541,17 @@ export default async function MarketFailurePillarPage() {
         sectionTitle="Market Failure"
         count={1}
       />
+
+      {/* FEATURES STRIP */}
+      <div className="elp-features-strip">
+        <div className="elp-features-inner">
+          <div className="elp-feat-item"><span className="elp-feat-icon"><Clipboard size={18} /></span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every WEC11 1.3.5 point covered</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><ProgressChart size={18} /></span><div><div className="elp-feat-label">Labelled diagrams</div><div className="elp-feat-sub">MPC, MSC, MPB, MSB, welfare loss</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><BoltIcon size={18} /></span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style with model answers</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><Tutor size={18} /></span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any market failure question</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><NetworkGraph size={18} /></span><div><div className="elp-feat-label">Built for IAL</div><div className="elp-feat-sub">International A-Level focus</div></div></div>
+        </div>
+      </div>
 
       {/* CTA */}
       <div className="elp-cta-section">
