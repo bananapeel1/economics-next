@@ -2,6 +2,7 @@ import "./globals.css";
 import { createClient } from '@/lib/supabase/server';
 import { AuthProvider } from '@/components/AuthProvider';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import AnalyticsEvents from '@/components/AnalyticsEvents';
 
 export const metadata = {
   metadataBase: new URL('https://revvylearn.com'),
@@ -99,6 +100,14 @@ export default async function RootLayout({ children }) {
             }
           })();
         `}} />
+        {process.env.NEXT_PUBLIC_ANALYTICS_SRC ? (
+          <script
+            defer
+            src={process.env.NEXT_PUBLIC_ANALYTICS_SRC}
+            data-domain={process.env.NEXT_PUBLIC_ANALYTICS_DOMAIN}
+            data-website-id={process.env.NEXT_PUBLIC_ANALYTICS_SITE_ID}
+          />
+        ) : null}
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&display=swap"
           rel="stylesheet"
@@ -108,6 +117,7 @@ export default async function RootLayout({ children }) {
         <ThemeProvider>
           <AuthProvider initialUser={user}>
             {children}
+            <AnalyticsEvents />
           </AuthProvider>
         </ThemeProvider>
       </body>
