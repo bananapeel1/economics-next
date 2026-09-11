@@ -1,0 +1,1426 @@
+{
+  "meta": {
+    "id": "managing-finance",
+    "number": "2.3.3",
+    "title": "Managing Finance",
+    "subject": "business",
+    "unit": 2,
+    "unitCode": "WBS12",
+    "blocks": 4,
+    "structuredBlocks": 4,
+    "legacyBlocks": 0,
+    "subsections": 11,
+    "reorder": 4,
+    "fillin": 7,
+    "quiz": 25,
+    "practice": 5,
+    "diagrams": 0,
+    "flashcards": 24,
+    "notes": 4,
+    "mistakes": 0,
+    "extrasChains": 4,
+    "extrasEval": 3
+  },
+  "content": [
+    {
+      "title": "Understanding Profit",
+      "sections": [
+        {
+          "id": "gross-profit",
+          "body": [
+            {
+              "text": "**Gross profit** is the profit a business makes from its core trading activity — buying or making goods and selling them. It is calculated as: **Gross Profit = Revenue - Cost of Sales**. Cost of sales includes the direct costs of producing or purchasing the goods that were sold during the period.",
+              "type": "paragraph"
+            },
+            {
+              "type": "flow",
+              "steps": [
+                "Revenue from selling goods",
+                "Minus cost of sales (direct costs)",
+                "Equals gross profit"
+              ],
+              "result": "Shows profitability of the core trading activity",
+              "resultType": "good"
+            },
+            {
+              "text": "Gross profit tells you how effectively the business is managing its direct production or purchasing costs relative to its sales revenue. A rising gross profit suggests the business is either increasing prices, reducing direct costs, or selling more. A falling gross profit signals problems with pricing or cost control.",
+              "type": "paragraph"
+            },
+            {
+              "text": "The **gross profit margin** expresses gross profit as a percentage of revenue: **GPM = (Gross Profit / Revenue) x 100**. This ratio allows meaningful comparison between businesses of different sizes or the same business over different time periods.",
+              "type": "paragraph"
+            }
+          ],
+          "title": "Gross Profit",
+          "recall": {
+            "type": "fillin",
+            "hints": [
+              "Sal__",
+              "dir___",
+              "10_"
+            ],
+            "prompt": "Complete the gross profit logic:",
+            "answers": [
+              "Sales",
+              "direct",
+              "100"
+            ],
+            "template": [
+              "Gross Profit = Revenue minus Cost of ___",
+              "Cost of sales includes only ___ costs of production",
+              "Gross profit margin = (Gross Profit / Revenue) x ___"
+            ]
+          },
+          "keyIdea": "Gross profit measures how much a business earns from its core trading activity after deducting only the direct costs of making or buying the goods sold.",
+          "examMatters": "Gross profit margin calculation questions require you to show the formula, substitute correctly and express the answer as a percentage. Examiners also ask you to interpret the result — compare it to previous years or competitors and explain what it reveals about pricing and cost management.",
+          "realExample": {
+            "text": "**Nike** consistently achieves a gross profit margin above 44%, meaning for every dollar of revenue, Nike keeps 44 cents after paying for manufacturing. This high margin reflects Nike's brand power — it can charge premium prices while outsourcing production to lower-cost manufacturers.",
+            "emoji": "👟"
+          },
+          "misconception": "Students confuse gross profit with net profit, forgetting that gross profit has not yet accounted for overheads like rent, marketing and administration. A high gross profit does not guarantee overall profitability. Instead write: gross profit only deducts cost of sales — the business must still cover all operating expenses before it can claim a net profit."
+        },
+        {
+          "id": "net-profit",
+          "body": [
+            {
+              "text": "**Net profit** (also called operating profit or profit for the year, depending on the level of deduction) is what remains after all business expenses have been subtracted from revenue. The formula is: **Net Profit = Gross Profit - Expenses (overheads, interest, tax)**. This is the true measure of how much the business actually earns.",
+              "type": "paragraph"
+            },
+            {
+              "type": "flow",
+              "steps": [
+                "Start with gross profit",
+                "Subtract overheads and expenses",
+                "Subtract interest and tax"
+              ],
+              "result": "Net profit — the actual earnings available to owners",
+              "resultType": "good"
+            },
+            {
+              "text": "The **net profit margin** is calculated as: **NPM = (Net Profit / Revenue) x 100**. A business with high revenue but a low net profit margin is spending too much on overheads relative to its sales. Comparing the gross and net margins reveals how much of the gross profit is being consumed by operating expenses.",
+              "type": "paragraph"
+            },
+            {
+              "text": "Improving net profit requires either increasing gross profit or reducing expenses. Common strategies include renegotiating rent, reducing energy consumption, streamlining administration, cutting non-essential marketing spend, or refinancing debt at lower interest rates.",
+              "type": "paragraph"
+            }
+          ],
+          "title": "Net Profit",
+          "recall": {
+            "type": "reorder",
+            "prompt": "Order the profit calculation from top to bottom of income statement:",
+            "shuffled": [
+              2,
+              0,
+              3,
+              1
+            ],
+            "correctOrder": [
+              "Revenue (total sales income)",
+              "Minus cost of sales = Gross Profit",
+              "Minus operating expenses = Operating Profit",
+              "Minus interest and tax = Net Profit"
+            ]
+          },
+          "keyIdea": "Net profit is the true bottom-line profit remaining after all expenses, overheads, interest and tax have been deducted from revenue.",
+          "examMatters": "Net profit margin questions test your ability to calculate, interpret and compare. Examiners may ask why the net margin is significantly lower than the gross margin — your answer should identify specific overheads that are consuming the gross profit.",
+          "realExample": {
+            "text": "**Amazon** operated for years with extremely thin net profit margins — often below 3% — despite generating hundreds of billions in revenue. Amazon deliberately reinvested almost all gross profit into warehouse expansion, technology and delivery infrastructure, prioritising growth over short-term profitability.",
+            "emoji": "🛒"
+          },
+          "misconception": "Students assume a business with higher revenue always has higher net profit. A business with 10 million pounds in revenue and 9.5 million in costs makes less profit than one with 1 million in revenue and 500,000 in costs. Instead write: net profit depends on the gap between revenue and total costs, not on the absolute size of revenue."
+        },
+        {
+          "id": "ways-to-improve-profit",
+          "body": [
+            {
+              "text": "There are two fundamental approaches to improving profit: **increasing revenue** or **reducing costs**. On the revenue side, a business can raise prices (if demand is inelastic enough to maintain volume), sell more units through better marketing, enter new markets, or develop new product lines.",
+              "type": "paragraph"
+            },
+            {
+              "text": "On the cost side, the business can negotiate better deals with suppliers, switch to cheaper materials, improve labour productivity, adopt more efficient production technology, or reduce waste. The best approach depends on the competitive environment and the business's specific cost structure.",
+              "type": "paragraph"
+            },
+            {
+              "type": "flow",
+              "steps": [
+                "Identify whether the issue is revenue or costs",
+                "Choose targeted improvement strategies",
+                "Monitor impact on profit margin"
+              ],
+              "result": "Sustainable improvement in profitability",
+              "resultType": "good"
+            },
+            {
+              "text": "However, every cost-cutting measure carries risks. Switching to cheaper materials may damage product quality and brand reputation. Reducing staff may lower capacity and worsen customer service. Sustainable profit improvement usually requires a balanced approach that maintains quality while improving efficiency.",
+              "type": "paragraph"
+            }
+          ],
+          "title": "Ways to Improve Profit",
+          "recall": {
+            "type": "fillin",
+            "hints": [
+              "cos__",
+              "ine______",
+              "qua____"
+            ],
+            "prompt": "Complete the profit improvement logic:",
+            "answers": [
+              "costs",
+              "inelastic",
+              "quality"
+            ],
+            "template": [
+              "Profit improves by increasing revenue or reducing ___",
+              "Raising prices works best when demand is ___",
+              "Cost-cutting risks damaging product ___ and brand reputation"
+            ]
+          },
+          "keyIdea": "Profit can be improved by increasing revenue through higher prices or sales volume, or by reducing costs through efficiency gains and better purchasing.",
+          "examMatters": "When asked how a business can improve profit, examiners expect you to consider both revenue and cost strategies and evaluate which is most appropriate for the specific case study. A one-sided answer focusing only on costs or only on revenue will limit your marks.",
+          "realExample": {
+            "text": "**Costa Coffee** improved its profit margins by investing in automated coffee machines that reduced labour costs per cup while maintaining consistency. Simultaneously, Costa raised prices on premium drinks where demand was inelastic, attacking both sides of the profit equation without noticeably reducing customer footfall.",
+            "emoji": "☕"
+          },
+          "misconception": "Students recommend cutting costs as the universal solution to poor profitability. Cost-cutting has diminishing returns and can harm the business if taken too far. Instead write: improving profit requires a balanced approach — reducing costs improves margins in the short term, but sustainable profitability depends on maintaining or growing revenue through product quality and customer satisfaction."
+        }
+      ],
+      "takeaway": [
+        "Gross profit deducts only cost of sales; net profit deducts everything.",
+        "Net profit margin reveals true profitability relative to revenue.",
+        "Improving profit requires balancing revenue growth with cost efficiency."
+      ],
+      "quizIndices": [
+        0
+      ]
+    },
+    {
+      "title": "Income Statement",
+      "sections": [
+        {
+          "id": "structure-of-income-statement",
+          "body": [
+            {
+              "text": "The **income statement** (also called the profit and loss account) is a financial document that shows the revenue earned and the costs incurred by a business over a specific period, typically one year. It follows a structured format, starting with revenue at the top and working down through costs to arrive at profit at the bottom.",
+              "type": "paragraph"
+            },
+            {
+              "text": "Key Lines of the Income Statement",
+              "type": "subheading"
+            },
+            {
+              "type": "bullets",
+              "items": [
+                "**Revenue** — the total income from sales of goods or services.",
+                "**Cost of sales** — the direct costs of producing or purchasing the goods sold.",
+                "**Gross profit** — revenue minus cost of sales.",
+                "**Operating expenses** — indirect costs such as rent, wages, marketing and administration.",
+                "**Net profit** — gross profit minus all operating expenses, interest and tax."
+              ]
+            },
+            {
+              "text": "The income statement is an essential tool for stakeholders. Shareholders use it to assess profitability and dividend potential. Lenders check it to evaluate the business's ability to service debt. Managers use it to identify cost problems and measure performance against budgets.",
+              "type": "paragraph"
+            }
+          ],
+          "title": "Structure of the Income Statement",
+          "recall": {
+            "type": "reorder",
+            "prompt": "Order the income statement lines from top to bottom:",
+            "shuffled": [
+              3,
+              1,
+              0,
+              2
+            ],
+            "correctOrder": [
+              "Revenue",
+              "Minus cost of sales = Gross Profit",
+              "Minus operating expenses = Operating Profit",
+              "Minus interest and tax = Net Profit for the year"
+            ]
+          },
+          "keyIdea": "The income statement summarises a business's revenue, costs and profit over a period, following a top-down structure from revenue to net profit.",
+          "examMatters": "Examiners may provide an income statement and ask you to calculate gross profit, net profit or profit margins. Ensure you know the structure from top to bottom and can identify which costs are deducted at each stage. Label your calculations clearly.",
+          "realExample": {
+            "text": "**Marks & Spencer** publishes its income statement in its annual report, showing revenue of over 12 billion pounds and detailing how much goes to cost of sales, operating expenses and interest. Analysts scrutinise the statement to assess whether M&S is improving its profit margins year on year.",
+            "emoji": "🛍️"
+          },
+          "misconception": "Students treat the income statement as a snapshot of the business at one point in time. It covers a period — usually a financial year — and shows cumulative revenue and costs over that time. Instead write: the income statement summarises financial performance over a period, unlike the balance sheet which shows the financial position at a single point."
+        },
+        {
+          "id": "interpreting-income-statements",
+          "body": [
+            {
+              "text": "A single income statement provides limited insight on its own. The real value comes from **comparing over time** (has gross profit margin improved or declined?) and **comparing with competitors** (is this business more or less profitable than its rivals?). These comparisons reveal trends and relative performance.",
+              "type": "paragraph"
+            },
+            {
+              "text": "When interpreting, look at the gap between gross and net profit. If gross profit is healthy but net profit is low, the business has an **overhead problem** — it is spending too much on expenses like rent, administration or interest. If gross profit itself is weak, the issue lies in pricing or cost of sales.",
+              "type": "paragraph"
+            },
+            {
+              "type": "flow",
+              "steps": [
+                "Compare income statements over multiple periods",
+                "Identify trends in margins and costs",
+                "Diagnose the cause of any changes"
+              ],
+              "result": "Actionable insight for management decision-making",
+              "resultType": "good"
+            },
+            {
+              "text": "You should also consider external factors when interpreting results. A fall in net profit might reflect a deliberate investment in marketing for future growth, or an economic downturn affecting the entire industry. Context matters as much as the numbers themselves.",
+              "type": "paragraph"
+            }
+          ],
+          "title": "Interpreting Income Statements",
+          "recall": {
+            "type": "fillin",
+            "hints": [
+              "tim_",
+              "ove______",
+              "pro___________"
+            ],
+            "prompt": "Complete the income statement analysis logic:",
+            "answers": [
+              "time",
+              "overheads",
+              "profitability"
+            ],
+            "template": [
+              "Compare income statements over ___ to spot trends",
+              "A gap between gross and net profit signals high ___",
+              "External factors like recession affect ___ across the industry"
+            ]
+          },
+          "keyIdea": "Analysing an income statement over time or against competitors reveals trends in revenue growth, cost control and overall profitability.",
+          "examMatters": "Higher-mark questions often present two years of income statement data and ask you to analyse changes. Calculate the margins for both years, identify which line items changed most, and explain possible causes. Simply stating that profit went up or down without analysis will not score well.",
+          "realExample": {
+            "text": "**Apple's** income statement shows a gross profit margin consistently above 43%, far higher than Samsung's hardware division at around 35%. This comparison reveals Apple's superior pricing power and brand premium, demonstrating how income statement analysis exposes competitive advantages between rival firms.",
+            "emoji": "📱"
+          },
+          "misconception": "Students look only at the bottom line net profit figure without examining the components above it. A rise in net profit could mask a falling gross margin offset by aggressive cost-cutting that may not be sustainable. Instead write: always analyse the full income statement structure — revenue trends, gross margin and expense ratios — not just the final net profit number."
+        }
+      ],
+      "takeaway": [
+        "The income statement runs from revenue at the top to net profit at the bottom.",
+        "Compare over time and against competitors for meaningful analysis.",
+        "A wide gap between gross and net profit signals an overhead problem."
+      ],
+      "quizIndices": [
+        1
+      ],
+      "practiceIndices": [
+        0
+      ]
+    },
+    {
+      "title": "Liquidity",
+      "sections": [
+        {
+          "id": "understanding-liquidity",
+          "body": [
+            {
+              "text": "**Liquidity** refers to how easily a business can convert its assets into cash to pay short-term debts as they fall due. A **liquid asset** is one that can be quickly converted into cash without significant loss of value — cash itself is the most liquid asset, followed by trade receivables (money owed by customers) and stock.",
+              "type": "paragraph"
+            },
+            {
+              "text": "A business with strong liquidity can comfortably pay its suppliers, staff wages, rent and loan repayments on time. A business with poor liquidity may have valuable assets like property or machinery but cannot access cash quickly enough to meet its immediate obligations.",
+              "type": "paragraph"
+            },
+            {
+              "type": "flow",
+              "steps": [
+                "Bills fall due for payment",
+                "Business needs liquid assets to pay",
+                "Insufficient liquidity = payment default"
+              ],
+              "result": "Poor liquidity can force even profitable businesses to close",
+              "resultType": "bad"
+            },
+            {
+              "text": "It is entirely possible for a business to be **profitable but illiquid** — for example, if it has sold goods on credit and is waiting for customers to pay. The goods are sold, the profit is recorded, but the cash has not yet arrived to pay the business's own bills.",
+              "type": "paragraph"
+            }
+          ],
+          "title": "Understanding Liquidity",
+          "recall": {
+            "type": "fillin",
+            "hints": [
+              "sho______",
+              "cas_",
+              "ill_____"
+            ],
+            "prompt": "Complete the liquidity logic:",
+            "answers": [
+              "short-term",
+              "cash",
+              "illiquid"
+            ],
+            "template": [
+              "Liquidity measures ability to meet ___ financial obligations",
+              "The most liquid asset is ___ itself",
+              "A business can be profitable but ___ if customers pay late"
+            ]
+          },
+          "keyIdea": "Liquidity measures how easily a business can meet its short-term financial obligations using assets that can quickly be converted to cash.",
+          "examMatters": "Liquidity questions often ask you to explain why a profitable business might face financial difficulties. The answer lies in the timing difference between recording profit and actually receiving cash. Always distinguish between profit (accounting) and cash (actual money in the bank).",
+          "realExample": {
+            "text": "**Carillion** was profitable on paper when it collapsed in 2018, with billions in contracted revenue on its order book. However, it could not convert those future contracts into immediate cash to pay its 30,000 suppliers, demonstrating how a liquidity crisis can destroy even the largest companies.",
+            "emoji": "🏗️"
+          },
+          "misconception": "Students confuse liquidity with profitability, assuming a profitable business must have plenty of cash. Profit is an accounting concept that records revenue when earned, not when cash is received. Instead write: a business can be profitable but illiquid if cash from sales has not yet been collected while bills are already due for payment."
+        },
+        {
+          "id": "liquidity-ratios",
+          "body": [
+            {
+              "text": "The **current ratio** compares current assets to current liabilities: **Current Ratio = Current Assets / Current Liabilities**. Current assets include cash, trade receivables and stock. Current liabilities include trade payables, short-term loans and overdrafts. A ratio of around 1.5:1 to 2:1 is generally considered healthy.",
+              "type": "paragraph"
+            },
+            {
+              "text": "The **acid test ratio** (or quick ratio) is a stricter measure that excludes stock from current assets: **Acid Test = (Current Assets - Stock) / Current Liabilities**. Stock is excluded because it may not be easily or quickly sold at full value. A ratio above 1:1 suggests the business can meet its short-term debts without relying on selling stock.",
+              "type": "paragraph"
+            },
+            {
+              "type": "flow",
+              "steps": [
+                "Calculate current or acid test ratio",
+                "Compare to benchmark (1.5:1 or 1:1)",
+                "Identify potential liquidity problems"
+              ],
+              "result": "Early warning of cash flow difficulties",
+              "resultType": "good"
+            },
+            {
+              "text": "A ratio that is too low indicates the business may struggle to pay its debts. However, a ratio that is too high can also be problematic — it may mean the business is holding too much idle cash or too much stock, which could be invested more productively elsewhere.",
+              "type": "paragraph"
+            }
+          ],
+          "title": "Liquidity Ratios",
+          "recall": {
+            "type": "reorder",
+            "prompt": "Order these assets from most to least liquid:",
+            "shuffled": [
+              2,
+              0,
+              3,
+              1
+            ],
+            "correctOrder": [
+              "Cash in the bank",
+              "Trade receivables (money owed by customers)",
+              "Finished goods stock ready for sale",
+              "Raw materials stock awaiting production"
+            ]
+          },
+          "keyIdea": "The current ratio and acid test ratio measure whether a business has enough liquid assets to cover its short-term liabilities.",
+          "examMatters": "Ratio calculation questions require you to show the formula, substitute correctly, and state the ratio in the correct format (e.g. 1.8:1). Then interpret the result — is it above or below the benchmark, and what does this suggest about the business's financial health?",
+          "realExample": {
+            "text": "**Tesco** typically operates with a current ratio below 1:1 because supermarkets receive cash from customers immediately but pay suppliers on extended credit terms. This would alarm most industries, but for supermarkets with daily cash inflows, a low current ratio is normal and sustainable.",
+            "emoji": "🛒"
+          },
+          "misconception": "Students assume a current ratio below 2:1 automatically means the business is in trouble. The ideal ratio varies by industry — supermarkets operate safely below 1:1 because of their rapid cash cycle. Instead write: the ideal current ratio depends on the industry and the nature of the business — what matters is whether the business can reliably meet its obligations as they fall due."
+        },
+        {
+          "id": "improving-liquidity",
+          "body": [
+            {
+              "text": "If a business identifies a liquidity problem, it has several options. It can **speed up cash collection** by chasing debtors, offering early payment discounts, or requiring upfront deposits. It can **reduce stock levels** by adopting just-in-time inventory management, freeing up cash tied in unsold goods.",
+              "type": "paragraph"
+            },
+            {
+              "text": "On the liabilities side, the business can **negotiate longer payment terms** with suppliers to delay outflows, or arrange an **overdraft facility** with the bank to provide a buffer during periods of low liquidity. Selling underused assets is another option for a one-off cash injection.",
+              "type": "paragraph"
+            },
+            {
+              "type": "flow",
+              "steps": [
+                "Chase debtors for faster payment",
+                "Reduce stock levels to free cash",
+                "Negotiate extended supplier terms"
+              ],
+              "result": "Improved liquidity position without additional borrowing",
+              "resultType": "good"
+            },
+            {
+              "text": "Each improvement measure has trade-offs. Pressuring debtors for faster payment may damage customer relationships. Reducing stock too aggressively risks running out of products to sell. The business must balance liquidity improvement against maintaining effective operations and good stakeholder relationships.",
+              "type": "paragraph"
+            }
+          ],
+          "title": "Improving Liquidity",
+          "recall": {
+            "type": "fillin",
+            "hints": [
+              "deb____",
+              "sto__",
+              "sup______"
+            ],
+            "prompt": "Complete the liquidity improvement logic:",
+            "answers": [
+              "debtors",
+              "stock",
+              "suppliers"
+            ],
+            "template": [
+              "Speed up cash collection by chasing ___ for payment",
+              "Reduce ___ levels to free up cash tied in inventory",
+              "Negotiate longer payment terms with ___ to delay outflows"
+            ]
+          },
+          "keyIdea": "Businesses improve liquidity by converting assets into cash faster, reducing short-term liabilities, or securing additional short-term finance.",
+          "examMatters": "When recommending ways to improve liquidity, examiners expect you to consider the practical consequences for the business. Simply listing methods is not enough — explain why each method might or might not work in the given context and what trade-offs the business faces.",
+          "realExample": {
+            "text": "**Ryanair** maintains strong liquidity by collecting customer payments immediately through online booking while delaying payments to suppliers and aircraft lessors. This deliberate cash cycle management gives Ryanair a permanent liquidity advantage that allows it to hold significant cash reserves for strategic opportunities.",
+            "emoji": "✈️"
+          },
+          "misconception": "Students suggest selling fixed assets like buildings to improve liquidity. While this generates cash, it removes productive capacity the business needs to operate. Instead write: improving liquidity should focus on managing working capital — debtors, creditors and stock — rather than selling the fixed assets the business depends on for generating revenue."
+        }
+      ],
+      "takeaway": [
+        "Liquidity is about having cash when bills are due, not about total profit.",
+        "Current ratio includes stock; acid test excludes it for a stricter measure.",
+        "Improve liquidity through working capital management, not by selling fixed assets."
+      ],
+      "quizIndices": [
+        2
+      ],
+      "practiceIndices": [
+        1
+      ]
+    },
+    {
+      "title": "Causes of Business Failure",
+      "sections": [
+        {
+          "id": "internal-causes-of-failure",
+          "body": [
+            {
+              "text": "**Internal causes** of business failure are factors within the control of the business itself. **Poor cash flow management** is the single most common cause — businesses that fail to monitor when cash comes in and goes out can run out of money even while technically profitable.",
+              "type": "paragraph"
+            },
+            {
+              "text": "**Weak leadership and management** leads to poor decision-making, failure to adapt to market changes, and an inability to motivate and retain staff. **Lack of planning** — including inadequate market research, unrealistic financial forecasts, and failure to develop a clear business strategy — leaves the business vulnerable to predictable challenges.",
+              "type": "paragraph"
+            },
+            {
+              "type": "flow",
+              "steps": [
+                "Poor cash management or weak planning",
+                "Bills cannot be paid on time",
+                "Suppliers refuse credit, staff leave"
+              ],
+              "result": "Business enters a spiral of decline leading to failure",
+              "resultType": "bad"
+            },
+            {
+              "text": "Other internal causes include over-reliance on a single customer or product, failure to control costs, excessive borrowing that creates unsustainable interest payments, and overtrading — where a business grows faster than its cash flow can support.",
+              "type": "paragraph"
+            }
+          ],
+          "title": "Internal Causes of Failure",
+          "recall": {
+            "type": "fillin",
+            "hints": [
+              "cas_",
+              "cas_ fl__",
+              "int______"
+            ],
+            "prompt": "Complete the internal failure causes logic:",
+            "answers": [
+              "cash",
+              "cash flow",
+              "interest"
+            ],
+            "template": [
+              "Poor ___ flow management is the most common cause of failure",
+              "Overtrading means growing faster than ___ can support",
+              "Excessive borrowing creates unsustainable ___ payments"
+            ]
+          },
+          "keyIdea": "Poor financial management, weak leadership and lack of planning are internal factors within the business's control that frequently lead to failure.",
+          "examMatters": "Examiners often present a case study of a failing business and ask you to identify and evaluate the causes. Distinguish clearly between internal and external causes, and explain how internal weaknesses made the business more vulnerable to external shocks.",
+          "realExample": {
+            "text": "**Jamie Oliver's restaurant chain** collapsed into administration in 2019 owing 83 million pounds, largely due to internal factors including rapid overexpansion, high property costs and failure to adapt menus to changing consumer tastes. Despite the strong personal brand, poor financial management led to the closure of 22 restaurants.",
+            "emoji": "🍴"
+          },
+          "misconception": "Students blame business failure solely on external factors like recession or competition. While external factors play a role, most business failures have significant internal causes — better management could have avoided or mitigated the problems. Instead write: business failure usually results from a combination of internal weaknesses and external pressures, but internal factors like poor cash management are often the primary cause."
+        },
+        {
+          "id": "external-causes-of-failure",
+          "body": [
+            {
+              "text": "**External causes** of business failure are factors outside the business's direct control. An **economic downturn** reduces consumer spending power, hitting demand for non-essential products particularly hard. Businesses with high fixed costs and limited cash reserves are most vulnerable during recessions.",
+              "type": "paragraph"
+            },
+            {
+              "text": "**Changes in consumer tastes** can make a business's products obsolete if it fails to adapt quickly enough. **New competitors** — especially those with disruptive business models or lower cost bases — can steal market share rapidly. **Changes in legislation** such as new taxes, minimum wage increases or environmental regulations can raise costs unexpectedly.",
+              "type": "paragraph"
+            },
+            {
+              "type": "flow",
+              "steps": [
+                "External shock hits the market",
+                "Revenue falls or costs rise suddenly",
+                "Business lacks reserves to survive"
+              ],
+              "result": "Closure if the business cannot adapt quickly enough",
+              "resultType": "bad"
+            },
+            {
+              "text": "The businesses most resilient to external shocks are those with diversified revenue streams, strong cash reserves, low debt levels, and a culture of adaptability. External causes are not entirely unpredictable — good planning anticipates potential threats and builds contingency measures.",
+              "type": "paragraph"
+            }
+          ],
+          "title": "External Causes of Failure",
+          "recall": {
+            "type": "reorder",
+            "prompt": "Order these from most gradual to most sudden external threat:",
+            "shuffled": [
+              3,
+              1,
+              0,
+              2
+            ],
+            "correctOrder": [
+              "Gradual shift in consumer tastes over years",
+              "New competitor entering the market over months",
+              "Economic recession reducing demand over quarters",
+              "Government legislation imposing new costs immediately"
+            ]
+          },
+          "keyIdea": "Economic downturns, changing consumer tastes, new competitors and legislative changes are external forces that can overwhelm even well-managed businesses.",
+          "examMatters": "When analysing external causes of failure, examiners want you to link specific external factors to their impact on the business in the case study. Do not list generic causes — explain how a particular change in the market environment led to falling revenue or rising costs for this specific business.",
+          "realExample": {
+            "text": "**Blockbuster Video** failed primarily because of the external disruption caused by Netflix's streaming model and changing consumer preferences for on-demand entertainment. Despite having 9,000 stores globally at its peak, Blockbuster could not adapt its physical retail model fast enough to survive the shift to digital distribution.",
+            "emoji": "📀"
+          },
+          "misconception": "Students describe external causes as unforeseeable events that businesses cannot prepare for. Many external threats — like technological disruption or changing tastes — develop gradually and can be anticipated through market research and strategic planning. Instead write: while external causes are outside direct control, many can be anticipated and prepared for through scenario planning, diversification and maintaining strong cash reserves."
+        },
+        {
+          "id": "why-new-businesses-are-vulnerable",
+          "body": [
+            {
+              "text": "New businesses face a significantly higher risk of failure than established firms. Statistics consistently show that around **60% of UK start-ups fail within the first five years**. This vulnerability stems from several structural disadvantages that established businesses have already overcome.",
+              "type": "paragraph"
+            },
+            {
+              "text": "Start-ups typically have **limited access to finance** because they lack a trading history that lenders can assess. They have **no established customer base**, so revenue is uncertain. They may also lack the **management experience** needed to handle the complexity of running a business, from financial planning to people management.",
+              "type": "paragraph"
+            },
+            {
+              "type": "flow",
+              "steps": [
+                "No trading history or brand recognition",
+                "Limited finance and cash reserves",
+                "Over-reliance on founder's skills"
+              ],
+              "result": "High vulnerability to any setback in the early years",
+              "resultType": "bad"
+            },
+            {
+              "text": "Cash flow is particularly dangerous for start-ups because initial costs — premises, equipment, stock, marketing — must be paid before any revenue is generated. The gap between spending and earning can exhaust limited funds quickly if sales are slower than forecast.",
+              "type": "paragraph"
+            }
+          ],
+          "title": "Why New Businesses Are Vulnerable",
+          "recall": {
+            "type": "fillin",
+            "hints": [
+              "fiv_",
+              "tra____",
+              "rev____"
+            ],
+            "prompt": "Complete the start-up vulnerability logic:",
+            "answers": [
+              "five",
+              "trading",
+              "revenue"
+            ],
+            "template": [
+              "Around 60% of UK start-ups fail within the first ___ years",
+              "Start-ups lack a ___ history that lenders can assess",
+              "Initial costs must be paid before any ___ is generated"
+            ]
+          },
+          "keyIdea": "Start-ups face a higher failure rate because they lack trading history, have limited finance, are unproven in the market and depend heavily on the founder.",
+          "examMatters": "Examiners often ask why new businesses have a high failure rate. Structure your answer around the specific disadvantages start-ups face — limited finance, no brand, cash flow gaps, inexperience — and explain why each makes the business more vulnerable. Use the case study context to illustrate your points.",
+          "realExample": {
+            "text": "**Quibi**, the short-form streaming service, launched in 2020 with nearly 2 billion dollars in funding but shut down after just six months. Despite massive investment, Quibi failed because it misjudged consumer demand, launched during a pandemic that undermined its mobile-commuter positioning, and could not build a subscriber base fast enough to sustain operations.",
+            "emoji": "🚀"
+          },
+          "misconception": "Students assume that having a good idea is enough to succeed. A strong business concept is necessary but not sufficient — execution, timing, financial management and market conditions all determine whether the idea translates into a viable business. Instead write: business success depends on execution and financial management as much as the quality of the original idea."
+        }
+      ],
+      "takeaway": [
+        "Poor cash management is the most common internal cause of failure.",
+        "External shocks hit hardest when businesses lack reserves and flexibility.",
+        "Start-ups are most vulnerable due to limited finance and no track record.",
+        "Good planning can anticipate many threats, even external ones."
+      ],
+      "quizIndices": [
+        3
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "flow": {
+        "steps": [
+          "Revenue earned",
+          "Subtract cost of sales = Gross profit",
+          "Subtract overheads, interest, tax = Net profit"
+        ],
+        "result": "Clear diagnosis of where profit is made or lost",
+        "resultType": "good"
+      },
+      "meta": "4 concepts + formulas",
+      "title": "Profit",
+      "blocks": [
+        {
+          "items": [
+            {
+              "text": "<strong>Gross profit</strong> — revenue minus cost of sales; it measures how efficiently the firm converts raw materials and direct labour into sales income.",
+              "type": "def"
+            },
+            {
+              "tag": "exam",
+              "text": "<strong>Operating profit</strong> — gross profit minus operating expenses such as rent, marketing and administrative costs; it shows the profit generated from normal trading activities.",
+              "type": "def"
+            },
+            {
+              "text": "<strong>Net profit</strong> — operating profit minus interest and tax; it is the final bottom-line profit available to the owners or shareholders.",
+              "type": "def"
+            }
+          ],
+          "title": "DEFINITIONS"
+        },
+        {
+          "items": [
+            {
+              "text": "If gross profit is healthy but operating profit is weak, the problem lies in <strong>high overheads</strong> rather than production efficiency.",
+              "type": "mech"
+            },
+            {
+              "text": "If gross profit margin is falling, either selling prices are being cut or <strong>cost of sales is rising</strong>; managers must diagnose which.",
+              "type": "mech"
+            },
+            {
+              "tag": "exam",
+              "text": "Comparing profit margins over time and against competitors is more useful than looking at absolute profit figures, because margins <strong>control for differences in business size</strong>.",
+              "type": "imp"
+            }
+          ],
+          "title": "APPLICATION"
+        }
+      ],
+      "keyIdea": "Profit is not a single number; gross, operating and net profit each strip away a different layer of costs, revealing where the business is efficient and where money is leaking.",
+      "formulas": [
+        {
+          "text": "Gross Profit = Revenue - Cost of Sales",
+          "label": "GROSS PROFIT"
+        },
+        {
+          "text": "Operating Profit = Gross Profit - Operating Expenses",
+          "label": "OPERATING PROFIT"
+        },
+        {
+          "text": "Net Profit = Operating Profit - Interest - Tax",
+          "label": "NET PROFIT"
+        },
+        {
+          "text": "Profit Margin (%) = (Profit / Revenue) x 100",
+          "label": "PROFIT MARGIN"
+        }
+      ],
+      "takeaway": [
+        "Gross profit isolates production efficiency; operating profit reveals overhead control; net profit is the final return.",
+        "Profit margins are more informative than absolute profit because they allow comparison across firms of different sizes.",
+        "Diagnosing which layer of profit is weak tells managers exactly where to focus cost reduction or revenue growth."
+      ],
+      "examMatters": "Examiners expect you to calculate the relevant profit margin, then use it to diagnose where the problem lies. If gross margin is fine but net margin is low, focus your analysis on overheads, interest or tax, not on production costs."
+    },
+    {
+      "meta": "4 concepts",
+      "title": "Income Statement",
+      "blocks": [
+        {
+          "items": [
+            {
+              "text": "<strong>Income statement (profit & loss account)</strong> — a financial document summarising a firm's revenue, costs and profit over a trading period, typically one year.",
+              "type": "def"
+            },
+            {
+              "text": "The statement follows a <strong>layered structure</strong>: revenue at the top, then cost of sales, then operating expenses, then interest and tax, producing gross profit, operating profit and net profit in sequence.",
+              "type": "mech"
+            },
+            {
+              "text": "Stakeholders use the income statement differently: <strong>managers</strong> diagnose cost problems, <strong>investors</strong> assess profitability trends, and <strong>lenders</strong> check whether the firm can service its debts.",
+              "type": "mech"
+            }
+          ],
+          "title": "STRUCTURE"
+        },
+        {
+          "items": [
+            {
+              "tag": "exam",
+              "text": "The income statement is backward-looking; it shows <strong>past performance</strong> and cannot guarantee future profitability, so it must be used alongside forecasts and market analysis.",
+              "type": "imp"
+            },
+            {
+              "text": "Figures can be manipulated through <strong>creative accounting</strong>, such as timing when expenses are recognised, which makes it important to compare statements across multiple years.",
+              "type": "imp"
+            },
+            {
+              "text": "The income statement links to the balance sheet; net profit either flows into retained earnings (strengthening the balance sheet) or is paid out as dividends.",
+              "type": "link"
+            }
+          ],
+          "title": "EVALUATION"
+        }
+      ],
+      "keyIdea": "The income statement is a financial film, not a photograph; it shows how well the business performed over a period by recording all revenue, costs and profit in a standardised format.",
+      "takeaway": [
+        "The income statement shows financial performance over time, not the financial position at a single moment.",
+        "Reading the statement layer by layer reveals whether problems originate in production, overheads or financing.",
+        "Always compare across years or competitors to identify meaningful trends rather than relying on a single period."
+      ],
+      "examMatters": "Examiners may give you an income statement extract and ask you to calculate margins or identify trends. Always show your working, state the formula, and then interpret what the number means in context."
+    },
+    {
+      "flow": {
+        "steps": [
+          "Calculate current & acid test ratios",
+          "Compare to benchmarks",
+          "Identify and fix weak areas"
+        ],
+        "result": "Short-term solvency assured",
+        "resultType": "good"
+      },
+      "meta": "4 concepts + formulas",
+      "title": "Liquidity",
+      "blocks": [
+        {
+          "items": [
+            {
+              "text": "<strong>Liquidity</strong> — the ability of a business to meet its short-term financial obligations using assets that can be quickly converted into cash.",
+              "type": "def"
+            },
+            {
+              "tag": "exam",
+              "text": "<strong>Current ratio</strong> — current assets divided by current liabilities; a ratio around 1.5:1 to 2:1 is generally considered healthy, meaning the firm has enough short-term assets to cover its debts.",
+              "type": "def"
+            },
+            {
+              "text": "<strong>Acid test ratio</strong> — current assets minus stock, divided by current liabilities; it is a stricter test because stock is the least liquid current asset and may not sell quickly.",
+              "type": "def"
+            }
+          ],
+          "title": "DEFINITIONS"
+        },
+        {
+          "items": [
+            {
+              "text": "A current ratio <strong>below 1:1</strong> means current liabilities exceed current assets, signalling potential difficulty paying suppliers, wages or short-term loans.",
+              "type": "mech"
+            },
+            {
+              "text": "A very high current ratio, such as 4:1, may indicate <strong>idle assets</strong> that are not being invested productively, reducing the firm's overall return.",
+              "type": "mech"
+            },
+            {
+              "tag": "exam",
+              "text": "Improving liquidity often involves <strong>chasing debtors faster, negotiating longer creditor terms, or reducing stockholding</strong>, each of which has trade-offs.",
+              "type": "imp"
+            }
+          ],
+          "title": "APPLICATION"
+        }
+      ],
+      "keyIdea": "Liquidity measures whether a business can pay its short-term debts as they fall due; even highly profitable firms can fail if they cannot convert assets into cash quickly enough.",
+      "formulas": [
+        {
+          "text": "Current Ratio = Current Assets / Current Liabilities",
+          "label": "CURRENT RATIO"
+        },
+        {
+          "text": "Acid Test = (Current Assets - Stock) / Current Liabilities",
+          "label": "ACID TEST RATIO"
+        }
+      ],
+      "takeaway": [
+        "Liquidity is about timing; a firm needs cash when bills arrive, not just profit at year-end.",
+        "The acid test is stricter than the current ratio because it removes stock, which may be slow to sell.",
+        "Both too-low and too-high ratios signal problems; the goal is a balanced, efficient use of working capital."
+      ],
+      "misconception": "Students say a high current ratio is always good. Wrong because too much cash or stock sitting idle means the firm is not using its resources productively. Instead write: a healthy liquidity position balances having enough to pay bills with investing surplus assets to generate returns."
+    },
+    {
+      "flow": {
+        "steps": [
+          "Internal weakness develops",
+          "External shock hits",
+          "Cash runs out"
+        ],
+        "result": "Business becomes insolvent",
+        "resultType": "bad"
+      },
+      "meta": "5 concepts",
+      "title": "Causes of Business Failure",
+      "blocks": [
+        {
+          "items": [
+            {
+              "tag": "exam",
+              "text": "<strong>Cash-flow crisis</strong> — the most common immediate cause of failure; the business cannot pay its bills even if it is technically profitable, leading to insolvency.",
+              "type": "def"
+            },
+            {
+              "text": "Poor <strong>financial management</strong>, including lack of budgeting, no cash-flow forecasts and failure to chase debtors, accelerates the path toward failure.",
+              "type": "mech"
+            },
+            {
+              "text": "<strong>Over-expansion</strong> occurs when a firm grows faster than its finances allow, stretching cash reserves and management capacity beyond breaking point.",
+              "type": "mech"
+            }
+          ],
+          "title": "INTERNAL CAUSES"
+        },
+        {
+          "items": [
+            {
+              "text": "A sudden <strong>economic downturn</strong> reduces consumer spending, cutting revenue while many fixed costs remain, squeezing profits and cash flow simultaneously.",
+              "type": "mech"
+            },
+            {
+              "text": "<strong>New competition or disruptive technology</strong> can erode market share rapidly, especially if the firm has been slow to innovate or adapt.",
+              "type": "mech"
+            },
+            {
+              "tag": "exam",
+              "text": "Business failure rarely has a single cause; it is usually a <strong>chain of factors</strong> where internal weaknesses are exposed by external pressures.",
+              "type": "imp"
+            },
+            {
+              "text": "Causes of failure link to every topic in this unit; poor planning (2.3.1), inaccurate forecasting (2.3.2) and weak liquidity management all contribute.",
+              "type": "link"
+            }
+          ],
+          "title": "EXTERNAL CAUSES"
+        }
+      ],
+      "keyIdea": "Most businesses fail not because of one catastrophic event but because of a combination of poor cash-flow management, inadequate planning and inability to adapt to changing conditions.",
+      "takeaway": [
+        "Cash-flow failure, not lack of profit, is the most common immediate cause of business collapse.",
+        "Over-expansion is a dangerous trap; growing faster than cash flow allows can destroy otherwise successful firms.",
+        "Failure is almost always multi-causal; internal weaknesses are exposed and amplified by external shocks."
+      ],
+      "examMatters": "Examiners want multi-causal analysis. Never attribute failure to a single factor. Show how internal weaknesses such as poor cash-flow management made the firm vulnerable, and how an external shock such as a recession then triggered the actual collapse."
+    }
+  ],
+  "flashcards": [
+    {
+      "back": "<strong>Gross Profit = Revenue - Cost of Sales</strong>",
+      "front": "How is gross profit calculated?"
+    },
+    {
+      "back": "<strong>Operating Profit = Gross Profit - Operating Expenses</strong>",
+      "front": "How is operating profit calculated?"
+    },
+    {
+      "back": "<strong>Net Profit = Operating Profit - Interest - Tax</strong>",
+      "front": "How is net profit calculated?"
+    },
+    {
+      "back": "<strong>Gross Profit Margin = (Gross Profit / Revenue) x 100</strong>",
+      "front": "What is the formula for gross profit margin?"
+    },
+    {
+      "back": "<strong>Net Profit Margin = (Net Profit / Revenue) x 100</strong>",
+      "front": "What is the formula for net profit margin?"
+    },
+    {
+      "back": "<strong>Current Ratio = Current Assets / Current Liabilities</strong>. A healthy range is typically 1.5:1 to 2:1.",
+      "front": "What is the current ratio?"
+    },
+    {
+      "back": "<strong>Acid Test Ratio = (Current Assets - Inventory) / Current Liabilities</strong>. It excludes inventory because it may not be quickly convertible to cash.",
+      "front": "What is the acid test ratio?"
+    },
+    {
+      "back": "<strong>Working Capital = Current Assets - Current Liabilities</strong>. It measures the business's ability to meet short-term obligations.",
+      "front": "What is working capital?"
+    },
+    {
+      "back": "Profit includes <strong>credit sales</strong> (revenue earned but cash not yet received) and may exclude cash items like loan repayments. Cash is the actual money available.",
+      "front": "Why is profit not the same as cash?"
+    },
+    {
+      "back": "When a business <strong>grows too fast</strong> without sufficient working capital to finance the expansion, leading to cash-flow crisis.",
+      "front": "What is overtrading?"
+    },
+    {
+      "back": "1. <strong>Cash-flow problems</strong>. 2. <strong>Overtrading</strong>. 3. <strong>Poor quality or ineffective marketing</strong>.",
+      "front": "Name three internal causes of business failure."
+    },
+    {
+      "back": "1. <strong>Economic recession</strong>. 2. <strong>Increased competition</strong>. 3. <strong>Rising interest rates or exchange rate changes</strong>.",
+      "front": "Name three external causes of business failure."
+    },
+    {
+      "back": "It shows what a business <strong>owns</strong> (assets), <strong>owes</strong> (liabilities), and the <strong>owner's equity</strong> at a specific point in time.",
+      "front": "What does the statement of financial position show?"
+    },
+    {
+      "back": "Assets expected to be converted to <strong>cash within 12 months</strong>: cash, inventory, trade receivables (debtors).",
+      "front": "What are current assets?"
+    },
+    {
+      "back": "Debts due to be paid <strong>within 12 months</strong>: trade payables (creditors), overdraft, short-term loans.",
+      "front": "What are current liabilities?"
+    },
+    {
+      "back": "1. <strong>Chase trade receivables</strong> more quickly. 2. <strong>Reduce inventory levels</strong> to free up cash.",
+      "front": "Name two ways to improve liquidity."
+    },
+    {
+      "back": "Reduce <strong>cost of sales</strong> (negotiate with suppliers, reduce waste) or increase the <strong>selling price</strong>.",
+      "front": "How could a business improve its gross profit margin?"
+    },
+    {
+      "back": "<strong>Cash-flow problems</strong> — running out of cash to pay debts, even if the business is profitable on paper.",
+      "front": "What is the most common cause of business failure?"
+    },
+    {
+      "back": "Business identifies low profit margins → Analyses cost structure to find areas of waste → Reduces variable costs (e.g. sourcing cheaper suppliers, reducing wastage) → Reduces fixed costs (e.g. renegotiating rent, streamlining operations) → Alternatively, increases revenue through price rises (if PED is inelastic) or increasing sales volume → Gross and net profit margins improve → Retained profit increases, funding future growth",
+      "type": "chain",
+      "front": "Trace the steps a business can take to improve its profit margins."
+    },
+    {
+      "back": "Business holds too little working capital → Current ratio falls below acceptable levels → Difficulty paying short-term liabilities (trade payables, wages, tax) → Suppliers demand upfront payment or stop supplying → Production may halt → Customers lose confidence → Reputation is damaged → Bank may recall overdraft facilities → Business faces insolvency risk even if underlying profitability is sound",
+      "type": "chain",
+      "front": "Trace the effect of poor liquidity management on a business."
+    },
+    {
+      "back": "Business purchases raw materials (cash outflow) → Materials are converted into finished goods (production period) → Finished goods are held as inventory before sale → Goods are sold to customers (often on trade credit) → Receivables period: business waits for customers to pay → Cash is finally received (cash inflow) → The shorter the working capital cycle, the less cash is tied up → Efficient management improves liquidity and reduces the need for external finance",
+      "type": "chain",
+      "front": "Trace the working capital cycle and how its management affects business health."
+    },
+    {
+      "back": "Business identifies low profit margins → Analyses cost structure to find areas of waste → Reduces variable costs (e.g. sourcing cheaper suppliers, reducing wastage) → Reduces fixed costs (e.g. renegotiating rent, streamlining operations) → Alternatively, increases revenue through price rises (if PED is inelastic) or increasing sales volume → Gross and net profit margins improve → Retained profit increases, funding future growth",
+      "type": "chain",
+      "front": "Trace the steps a business can take to improve its profit margins."
+    },
+    {
+      "back": "Business holds too little working capital → Current ratio falls below acceptable levels → Difficulty paying short-term liabilities (trade payables, wages, tax) → Suppliers demand upfront payment or stop supplying → Production may halt → Customers lose confidence → Reputation is damaged → Bank may recall overdraft facilities → Business faces insolvency risk even if underlying profitability is sound",
+      "type": "chain",
+      "front": "Trace the effect of poor liquidity management on a business."
+    },
+    {
+      "back": "Business purchases raw materials (cash outflow) → Materials are converted into finished goods (production period) → Finished goods are held as inventory before sale → Goods are sold to customers (often on trade credit) → Receivables period: business waits for customers to pay → Cash is finally received (cash inflow) → The shorter the working capital cycle, the less cash is tied up → Efficient management improves liquidity and reduces the need for external finance",
+      "type": "chain",
+      "front": "Trace the working capital cycle and how its management affects business health."
+    }
+  ],
+  "quiz": [
+    {
+      "options": [
+        "£80,000",
+        "£30,000",
+        "£50,000",
+        "£200,000"
+      ],
+      "question": "A business has revenue of £200,000, cost of sales of £120,000, and operating expenses of £50,000. What is its operating profit?",
+      "explanation": "Gross Profit = £200,000 - £120,000 = £80,000. Operating Profit = £80,000 - £50,000 = £30,000.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "25%",
+        "60%",
+        "40%",
+        "150%"
+      ],
+      "question": "A business has a gross profit of £60,000 and revenue of £150,000. What is its gross profit margin?",
+      "explanation": "Gross Profit Margin = (£60,000 / £150,000) x 100 = 40%. This means 40p of every £1 of revenue remains as gross profit.",
+      "correctIndex": 2
+    },
+    {
+      "options": [
+        "0.5:1",
+        "2:1",
+        "25,000:1",
+        "75,000:1"
+      ],
+      "question": "A business has current assets of £50,000 and current liabilities of £25,000. What is its current ratio?",
+      "explanation": "Current Ratio = £50,000 / £25,000 = 2:1. This is within the healthy range (1.5:1 to 2:1), meaning the business has £2 of current assets for every £1 of current liabilities.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "Current ratio",
+        "Gross profit margin",
+        "Acid test ratio",
+        "Net profit margin"
+      ],
+      "question": "Which ratio excludes inventory from the calculation?",
+      "explanation": "The acid test ratio = (Current Assets - Inventory) / Current Liabilities. It excludes inventory because stock may not be easy to sell quickly, giving a more cautious view of liquidity.",
+      "correctIndex": 2
+    },
+    {
+      "options": [
+        "A business reducing prices to clear old stock",
+        "A business growing rapidly but not having enough working capital to fund the growth",
+        "A business investing in new equipment",
+        "A business paying suppliers early to get a discount"
+      ],
+      "question": "Which of the following is an example of overtrading?",
+      "explanation": "Overtrading occurs when a business expands too quickly without sufficient working capital. It takes on new orders but cannot finance the materials, labour, and overhead needed to fulfil them, leading to cash-flow crisis.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "1.33:1",
+        "0.83:1",
+        "1.5:1",
+        "0.67:1"
+      ],
+      "question": "A company has current assets of £40,000 (including £15,000 of inventory) and current liabilities of £30,000. What is its acid test ratio?",
+      "explanation": "Acid Test Ratio = (£40,000 - £15,000) / £30,000 = £25,000 / £30,000 = 0.83:1. This is below 1:1, suggesting the business may struggle to pay its short-term debts without selling inventory.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "Poor cash-flow management",
+        "Overestimating demand",
+        "A recession reducing consumer spending",
+        "Ineffective marketing"
+      ],
+      "question": "Which of the following is an EXTERNAL cause of business failure?",
+      "explanation": "A recession is an external factor beyond the business's control. Poor cash-flow management, overestimating demand, and ineffective marketing are all internal causes that the business could potentially address.",
+      "correctIndex": 2
+    },
+    {
+      "options": [
+        "Increase its current liabilities",
+        "Reduce operating expenses such as rent and admin costs",
+        "Issue more shares",
+        "Increase its inventory levels"
+      ],
+      "question": "How can a business improve its operating profit margin?",
+      "explanation": "Operating profit margin = (Operating Profit / Revenue) x 100. Reducing operating expenses directly increases operating profit, improving the margin. Issuing shares, increasing liabilities, or building inventory do not directly improve operating profit margin.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "Has too many customers",
+        "Has too much cash in the bank",
+        "Runs out of cash to pay its debts",
+        "Pays its suppliers too slowly"
+      ],
+      "question": "A business that is profitable can still fail if it:",
+      "explanation": "A profitable business can fail if it runs out of cash (e.g. because customers pay late or the business has overtraded). This is the most common cause of business failure — profit does not guarantee cash.",
+      "correctIndex": 2
+    },
+    {
+      "options": [
+        "Non-current assets - non-current liabilities",
+        "Total revenue - total costs",
+        "Current assets - current liabilities",
+        "Gross profit - operating expenses"
+      ],
+      "question": "Working capital is calculated as:",
+      "explanation": "Working capital = Current Assets - Current Liabilities. It represents the short-term financial health of the business and its ability to meet day-to-day obligations.",
+      "correctIndex": 2
+    },
+    {
+      "options": [
+        "Revenue minus all expenses",
+        "Revenue minus cost of sales (cost of goods sold)",
+        "Net profit minus tax",
+        "Total assets minus total liabilities"
+      ],
+      "question": "What is the formula for gross profit?",
+      "explanation": "Gross profit = revenue - cost of sales. It measures the profit before deducting operating expenses, overheads, and other costs.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "A firm's ability to meet long-term debts",
+        "A firm's ability to meet short-term liabilities using its current assets",
+        "The profitability of the firm",
+        "The efficiency of the firm's marketing"
+      ],
+      "question": "The current ratio measures:",
+      "explanation": "The current ratio (current assets / current liabilities) measures short-term liquidity, indicating whether a firm can pay its debts due within one year.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "(Gross profit / Revenue) x 100",
+        "(Net profit / Revenue) x 100",
+        "(Revenue / Net profit) x 100",
+        "(Net profit / Total assets) x 100"
+      ],
+      "question": "Net profit margin is calculated as:",
+      "explanation": "Net profit margin = (net profit / revenue) x 100. It shows the percentage of revenue that remains as profit after all costs are deducted.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "The total capital invested in the business",
+        "Current assets minus current liabilities",
+        "The total value of fixed assets",
+        "The amount of cash held in the bank"
+      ],
+      "question": "What is working capital?",
+      "explanation": "Working capital = current assets - current liabilities. It represents the funds available for day-to-day operations and is essential for business survival.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "It has more current assets than current liabilities",
+        "It has fewer current assets than current liabilities and may struggle to pay short-term debts",
+        "It is highly profitable",
+        "It has no debts"
+      ],
+      "question": "A business with a current ratio of 0.8 means:",
+      "explanation": "A current ratio below 1 means current liabilities exceed current assets, suggesting potential difficulty meeting short-term financial obligations.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "$200,000",
+        "$80,000",
+        "$120,000",
+        "$380,000"
+      ],
+      "question": "A business has revenue of $500,000, cost of sales of $300,000, and operating expenses of $120,000. What is the net profit?",
+      "explanation": "Gross profit = $500,000 - $300,000 = $200,000. Net profit = $200,000 - $120,000 = $80,000.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "Company A has higher total revenue",
+        "Company B is more efficient at converting revenue into profit",
+        "Company A has no costs",
+        "Company B must be charging lower prices"
+      ],
+      "question": "Company A has a net profit margin of 5% while Company B has a net profit margin of 15%. Both are in the same industry. This suggests that:",
+      "explanation": "A higher net profit margin indicates Company B retains more of each pound of revenue as profit, suggesting better cost control or stronger pricing power.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "1.33",
+        "0.83",
+        "0.50",
+        "1.50"
+      ],
+      "question": "A firm has current assets of $80,000 (including $30,000 stock) and current liabilities of $60,000. What is the acid test ratio?",
+      "explanation": "Acid test ratio = (current assets - stock) / current liabilities = ($80,000 - $30,000) / $60,000 = $50,000 / $60,000 = 0.83.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "The cost of sales has increased but the firm has cut operating expenses to compensate",
+        "Revenue has doubled",
+        "The firm has stopped paying taxes",
+        "The firm has increased its selling price"
+      ],
+      "question": "A retailer's gross profit margin has fallen from 40% to 30% over two years while its net profit margin remained stable. The most likely explanation is:",
+      "explanation": "A falling gross profit margin with stable net profit margin suggests rising cost of sales offset by reduced operating expenses (overheads), maintaining overall profitability.",
+      "correctIndex": 0
+    },
+    {
+      "options": [
+        "Buy more fixed assets",
+        "Negotiate longer payment terms with suppliers and reduce the time customers take to pay",
+        "Increase dividend payments to shareholders",
+        "Take on more long-term debt"
+      ],
+      "question": "A business wants to improve its working capital position. Which action would be most effective?",
+      "explanation": "Extending supplier payment terms (increasing current liabilities slowly) and collecting debts faster (increasing cash in current assets) directly improves the working capital position.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "Profit is the only meaningful measure of success",
+        "Profit is important but should be considered alongside cash flow, market share, customer satisfaction, and long-term sustainability",
+        "Profit is irrelevant because most successful businesses make losses",
+        "Profit is only useful for public limited companies"
+      ],
+      "question": "Evaluate the usefulness of profit as a measure of business success.",
+      "explanation": "Profit is a key measure but does not capture cash flow health, brand strength, market position, or stakeholder satisfaction. A holistic view of performance is needed.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "Yes, because a higher current ratio is always better",
+        "Not necessarily; an excessively high ratio may indicate too much capital tied up in idle current assets rather than being invested productively",
+        "Yes, because it means the firm has no debts",
+        "No, because the current ratio should always be exactly 1.0"
+      ],
+      "question": "A firm has a current ratio of 3.5. Is this necessarily a sign of good financial health?",
+      "explanation": "While a ratio above 1 is generally healthy, a very high ratio (3.5) may indicate excessive stock, idle cash, or poor asset utilisation that could be invested more productively.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "It is the most important because it only considers cost of sales",
+        "It is useful for assessing core trading performance, but net profit margin gives a fuller picture as it includes all costs",
+        "It is unimportant because it ignores revenue",
+        "It is only relevant to manufacturing businesses"
+      ],
+      "question": "To what extent is the gross profit margin the most important profitability ratio?",
+      "explanation": "Gross profit margin shows how efficiently a firm manages cost of sales, but net profit margin accounts for all expenses and gives a more complete picture of overall profitability.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "The business has no customers",
+        "Customers are paying on long credit terms, stock levels are high, and the business recently invested in fixed assets",
+        "The business is charging too high a price",
+        "The business has too few employees"
+      ],
+      "question": "A business is struggling with cash flow despite being profitable. Which explanation is most credible?",
+      "explanation": "Profitable businesses can face cash flow problems when cash is tied up in debtors, stock, or capital investments. The timing of cash flows often differs from when profits are recorded.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "Yes, because liquidity is more important than profitability",
+        "Adequate liquidity is essential for survival, but excessively high liquidity can mean poor returns on assets; the optimal level depends on the industry and business model",
+        "No, because liquidity ratios are meaningless",
+        "Yes, but only during periods of economic growth"
+      ],
+      "question": "Evaluate whether improving liquidity ratios should always be a business priority.",
+      "explanation": "Liquidity is vital for meeting obligations, but the optimal level varies by industry. Supermarkets operate on low ratios due to high cash sales; manufacturers may need higher ratios.",
+      "correctIndex": 1
+    }
+  ],
+  "common_mistakes": [
+    {
+      "title": "Confusing gross, operating, and net profit",
+      "examTip": "Draw a simple waterfall in your mind: Revenue → (minus cost of sales) → Gross Profit → (minus expenses) → Operating Profit → (minus interest/tax) → Net Profit.",
+      "mistake": "Using the terms interchangeably or calculating them incorrectly.",
+      "correction": "<strong>Gross profit</strong> deducts only cost of sales. <strong>Operating profit</strong> also deducts operating expenses. <strong>Net profit</strong> further deducts interest and tax. Each level removes more costs."
+    },
+    {
+      "title": "Treating profitability ratios as absolute measures",
+      "examTip": "Always state what you are comparing the ratio to — last year, a competitor, or an industry benchmark.",
+      "mistake": "Saying '10% net profit margin is good' without context.",
+      "correction": "Profitability ratios must be compared <strong>over time</strong> and <strong>against competitors or industry averages</strong>. A 10% margin might be excellent in food retail but poor in software."
+    },
+    {
+      "title": "Confusing liquidity with profitability",
+      "examTip": "Use the correct terminology — if the question is about liquidity, discuss current ratio and acid test ratio, not profit margins.",
+      "mistake": "Assuming a profitable business automatically has good liquidity.",
+      "correction": "<strong>Profitability</strong> measures income vs costs over a period. <strong>Liquidity</strong> measures the ability to pay short-term debts with available cash and near-cash assets. A business can be profitable but illiquid."
+    },
+    {
+      "title": "Ignoring the distinction between current ratio and acid test",
+      "examTip": "If given data on inventory, always calculate both ratios and compare them — the difference reveals how reliant the business is on selling its stock.",
+      "mistake": "Only calculating the current ratio and ignoring the acid test.",
+      "correction": "The <strong>acid test ratio</strong> is a stricter test of liquidity because it excludes inventory, which may not be easily sold. A business with a healthy current ratio but low acid test may have too much cash tied up in stock."
+    },
+    {
+      "title": "Listing causes of business failure without analysis",
+      "examTip": "Use connective words (therefore, this leads to, as a result, consequently) to build analytical chains — this is how you move from knowledge to analysis marks.",
+      "mistake": "Simply listing causes of failure without explaining HOW they lead to failure.",
+      "correction": "For each cause, build a <strong>chain of reasoning</strong>: e.g. rising interest rates → higher borrowing costs → reduced profit margins → inability to invest → loss of competitiveness → lower sales → failure."
+    }
+  ],
+  "practice": [
+    {
+      "marks": 4,
+      "command": "Define",
+      "guidance": "Gross profit margin is a measure of profitability that shows the percentage of revenue remaining after the cost of sales has been deducted (1 mark). It is calculated as: (gross profit / revenue) x 100 (1 mark). For example, if a business has revenue of $500,000 and cost of sales of $300,000, gross profit is $200,000 and the margin is 40% (1 mark). A higher gross profit margin suggests the business is managing its production or purchasing costs effectively (1 mark).",
+      "question": "Define the term 'gross profit margin' and state how it is calculated. (4 marks)"
+    },
+    {
+      "marks": 6,
+      "command": "Explain",
+      "guidance": "Reason 1: The business has taken on significant long-term debt to fund expansion or capital investment (1 mark). This is common in capital-intensive industries such as construction or manufacturing where large loans are needed for equipment and infrastructure (1 mark). While this increases financial risk, it allows growth without diluting ownership (1 mark).\n\nReason 2: The business has low levels of equity or retained profit (1 mark). This may occur in a newer business that has not yet accumulated retained earnings, or a business that distributes most of its profits as dividends (1 mark). With limited equity, even moderate borrowing can produce a high gearing ratio (1 mark).",
+      "question": "Explain two possible reasons why a business might have a high gearing ratio. (6 marks)"
+    },
+    {
+      "marks": 10,
+      "command": "Assess",
+      "guidance": "Define liquidity as the ability to meet short-term financial obligations (1 mark). Explain the overtrading risk: rapid growth can mean revenue rises but cash is tied up in stock and debtors, creating cash shortages despite profitability (2 marks).\n\nImportance: without adequate liquidity, a profitable business can still become insolvent and fail (2 marks); maintaining good supplier relationships requires timely payment (1 mark); poor liquidity limits the ability to take on new orders or invest in growth opportunities (1 mark).\n\nSolutions: negotiating longer payment terms with suppliers (1 mark); using invoice factoring or overdraft facilities (1 mark); slowing the rate of growth to match available cash flow (1 mark).\n\nNo explicit judgement mark, but assessment should weigh whether liquidity management or profitability is the more immediate concern during rapid growth.",
+      "question": "Assess the importance of liquidity management for a rapidly growing small business. (10 marks)"
+    },
+    {
+      "marks": 20,
+      "command": "Evaluate",
+      "guidance": "Introduction: Explain the purpose of ratio analysis and the types of ratios available (2 marks).\n\nProfitability ratios — ROCE and net profit margin: show how effectively each business generates returns; essential for comparing the efficiency of established vs growing firms (3 marks).\n\nLiquidity ratios — current ratio and acid test ratio: indicate short-term financial health; particularly important for the tech firm which may face cash flow pressures from rapid growth (3 marks).\n\nGearing ratio: shows reliance on debt; high gearing increases risk, especially for the tech firm with a short profit history (2 marks).\n\nEfficiency ratios — asset turnover: shows how well assets generate revenue; relevant for comparing asset-heavy retail with asset-light tech (2 marks).\n\nFor the retailer: focus on ROCE, profit margins and dividend yield as indicators of consistent, stable returns (2 marks). For the tech firm: focus on revenue growth trends, liquidity and gearing given the higher risk and shorter track record (2 marks).\n\nLimitations: ratios are based on historical data, can be distorted by window dressing, and different industries have different norms making direct comparison difficult (2 marks).\n\nEvaluation: No single ratio is sufficient — investors should use a range of ratios alongside qualitative factors such as management quality, market conditions and competitive position. The choice of 'most useful' ratio depends on the investor's risk appetite and investment horizon (2 marks).",
+      "question": "Evaluate which financial ratios would be most useful for an investor deciding between two companies: a well-established retailer with steady profits, and a fast-growing technology firm that has been profitable for only one year. (20 marks)"
+    },
+    {
+      "marks": 6,
+      "command": "Explain",
+      "guidance": "Way 1: Reduce operating expenses (1 mark) — the retailer could negotiate lower rents, reduce staff costs through improved scheduling, or switch to cheaper suppliers without compromising quality (1 mark). Lower overheads mean a greater proportion of revenue becomes net profit (1 mark).\n\nWay 2: Increase selling prices (1 mark) — if the retailer has strong brand loyalty or a differentiated product range, it can raise prices without significantly reducing demand (1 mark). This increases revenue relative to costs, widening the net profit margin (1 mark).",
+      "question": "Explain two ways a retailer could improve its net profit margin. (6 marks)"
+    }
+  ],
+  "extras": {
+    "chains": [
+      {
+        "steps": [
+          "Gross profit margin shows whether the core trading activity generates sufficient surplus after cost of sales.",
+          "Operating profit margin reveals whether overheads are under control — a declining margin signals rising expenses relative to revenue.",
+          "Net profit margin shows the final return after all costs including interest and tax.",
+          "Tracking these ratios over time reveals trends — a business with growing revenue but falling margins has a cost problem, not a sales problem."
+        ],
+        "title": "Profitability ratios reveal the quality of earnings",
+        "result": "Profitability ratios provide essential insight into the quality of earnings — revenue growth alone means nothing if margins are eroding."
+      },
+      {
+        "steps": [
+          "The current ratio (current assets ÷ current liabilities) indicates whether the business can meet its short-term obligations.",
+          "The acid test ratio excludes stock, providing a stricter test of immediate liquidity.",
+          "A ratio below 1.0 signals potential danger — the business may not be able to pay its bills as they fall due.",
+          "Managers improve liquidity by reducing debtor collection periods, negotiating longer supplier credit or arranging short-term borrowing."
+        ],
+        "title": "Liquidity ratios measure short-term survival capacity",
+        "result": "Liquidity management prevents the cash flow crises that destroy even profitable businesses — it is the most immediate measure of financial health."
+      },
+      {
+        "steps": [
+          "A strong balance sheet shows net assets significantly exceeding liabilities, with low gearing (low proportion of debt to equity).",
+          "Low gearing reduces financial risk — less profit is consumed by interest payments, leaving more for reinvestment.",
+          "Banks and investors view the business as lower risk, offering more favourable lending terms and cheaper capital.",
+          "Access to cheaper finance enables strategic investment that higher-risk competitors cannot afford."
+        ],
+        "title": "Balance sheet strength supports long-term investment",
+        "result": "Balance sheet strength builds stakeholder confidence, reduces the cost of capital and provides the financial foundation for long-term growth."
+      },
+      {
+        "steps": [
+          "Individual ratios mean little in isolation — a current ratio of 1.5 may be healthy for a retailer but dangerously low for a manufacturer.",
+          "Ratios must be compared against industry benchmarks, competitor performance and the firm's own historical trends.",
+          "Financial statements are backward-looking — they show what happened, not what will happen.",
+          "Effective analysis combines ratio analysis with qualitative assessment of brand strength, market position and management quality."
+        ],
+        "title": "Financial analysis must be contextual and comparative",
+        "result": "Financial analysis requires context and comparison to be meaningful — numbers alone do not tell the full story of business performance."
+      }
+    ],
+    "evaluation": [
+      {
+        "title": "Profitability and liquidity can conflict",
+        "content": "Investing in machinery boosts long-term profitability but drains short-term cash. Holding excessive cash ensures liquidity but earns no productive return. Managers must balance these competing objectives rather than pursuing either in isolation."
+      },
+      {
+        "title": "Financial statements can be manipulated",
+        "content": "Businesses have discretion over depreciation methods, revenue recognition and asset valuation. Creative accounting — while legal — can inflate apparent profitability or disguise weakness. Stakeholders must look beyond headline figures to underlying policies."
+      },
+      {
+        "title": "Non-financial factors may matter more",
+        "content": "Ratios cannot capture brand strength, employee morale, innovation capability or customer loyalty. A business with declining ratios may have strong prospects due to a new product; one with excellent ratios may be heading for decline due to losing key staff. Effective analysis combines financial and non-financial assessment."
+      }
+    ]
+  }
+}

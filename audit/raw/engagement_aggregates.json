@@ -1,0 +1,59 @@
+{
+  "subscriptions": {
+    "total": 62,
+    "byPlanStatus": {
+      "free/cancelled": 40,
+      "premium/active": 16,
+      "free/inactive": 6
+    },
+    "sample_columns": [
+      "plan",
+      "status",
+      "created_at",
+      "updated_at",
+      "current_period_end"
+    ]
+  },
+  "practiceProgress": {
+    "rows": 1032,
+    "distinctUsers": 44,
+    "learnMode": {
+      "rows": 0,
+      "distinctUsers": 0,
+      "completions": 0,
+      "completionsBySection": {},
+      "stepsPerUser": {
+        "p25": null,
+        "median": null,
+        "p75": null
+      }
+    },
+    "activitySpanDays": {
+      "p25": 0.0021841203703703706,
+      "median": 0.04254416666666667,
+      "p75": 5.033629976851852,
+      "max": 170.9096801388889
+    },
+    "usersActiveLast7d": 3,
+    "usersActiveLast30d": 11,
+    "usersActiveLast90d": 18,
+    "earliestRow": "2026-03-19T17:44:22.500Z",
+    "latestRow": "2026-09-09T12:53:19.723Z"
+  },
+  "user_quiz_attempts": {
+    "rows": 0,
+    "distinctUsers": 0
+  },
+  "user_flashcard_progress": {
+    "rows": 0,
+    "distinctUsers": 0
+  },
+  "user_content_progress": {
+    "rows": 0,
+    "distinctUsers": 0
+  },
+  "user_fun_progress": {
+    "rows": 15,
+    "distinctUsers": 12
+  }
+}

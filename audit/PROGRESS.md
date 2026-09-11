@@ -1,0 +1,92 @@
+# Remediation progress
+
+One row per packet. A packet is done when ALL FOUR are true: validator green on all 43 sections, push log
+complete, committed with the packet id in the subject line, this row updated.
+
+Plan: `audit/PLAN.md` (58 packets). Source data: `audit/README.md`.
+
+## Foundation and repair
+
+| # | Packet | Status | Commit | Snapshot | Validator |
+|---|--------|--------|--------|----------|-----------|
+| 0 | Day 0 hotfix | not started | | | n/a |
+| 1 | Measure or don't bother | not started | | | n/a |
+| 2 | Ids and safety net | not started | | | n/a |
+| 3 | Validator v2 + golden set | not started | | | n/a |
+| 4 | Progress and mastery truth | not started | | | n/a |
+| 5 | Step 0 | not started | | | n/a |
+| 6 | Re-entry v0 | not started | | | n/a |
+| 7 | Widget mechanics | not started | | | n/a |
+| 8 | Quiz hygiene | not started | | | n/a |
+| 9 | AI correctness | not started | | | n/a |
+| 10 | Smart Practice engine | not started | | | n/a |
+| 11 | Performance and accessibility | not started | | | n/a |
+| 12 | Monetisation coherence | not started | | | n/a |
+| 13 | Off-spec strip and dedupe | not started | | | n/a |
+
+## Content — one section per packet, traffic order
+
+| # | Section | Opens | Status | Commit | Snapshot | Validator |
+|---|---------|-------|--------|--------|----------|-----------|
+| 14 | decision-making-techniques (format pilot) | 9 | not started | | | |
+| 15 | introductory-concepts | 192 | not started | | | |
+| 16 | meeting-customer-needs | 123 | not started | | | |
+| 17 | consumer-behaviour-demand | 52 | not started | | | |
+| 18 | the-market | 44 | not started | | | |
+| 19 | planning-raising-finance | 35 | not started | | | |
+| 20 | types-sizes-businesses | 34 | not started | | | |
+| 21 | measures-economic-performance | 33 | not started | | | |
+| 22 | marketing-mix-strategy | 32 | not started | | | |
+| 23 | supply | 30 | not started | | | |
+| 24 | price-determination | 28 | not started | | | |
+| 25 | market-failure | 28 | not started | | | |
+| 26 | government-intervention | 26 | not started | | | |
+| 27 | business-objectives-strategy | 26 | not started | | | |
+| 28 | revenue-costs-profits | 25 | not started | | | |
+| 29 | market-structures-contestability | 24 | not started | | | |
+| 30 | managing-people | 22 | not started | | | |
+| 31 | financial-planning | 19 | not started | | | |
+| 32 | aggregate-demand | 19 | not started | | | |
+| 33 | globalisation (business) | 18 | not started | | | |
+| 34 | causes-effects-globalisation | 18 | not started | | | |
+| 35 | entrepreneurs-leaders | 17 | not started | | | |
+| 36 | managing-finance | 16 | not started | | | |
+| 37 | national-income | 16 | not started | | | |
+| 38 | macroeconomic-objectives-policies | 16 | not started | | | |
+| 39 | trade-global-economy | 15 | not started | | | |
+| 40 | balance-payments-exchange-rates | 14 | not started | | | |
+| 41 | external-influences | 14 | not started | | | |
+| 42 | resource-management | 13 | not started | | | |
+| 43 | economic-growth | 13 | not started | | | |
+| 44 | aggregate-supply | 13 | not started | | | |
+| 45 | labour-markets | 13 | not started | | | |
+| 46 | growth-development | 12 | not started | | | |
+| 47 | global-markets-expansion | 11 | not started | | | |
+| 48 | government-intervention-firms | 11 | not started | | | |
+| 49 | business-growth | 10 | not started | | | |
+| 50 | managing-change | 9 | not started | | | |
+| 51 | poverty-inequality | 8 | not started | | | |
+| 52 | role-state-macroeconomy | 8 | not started | | | |
+| 53 | influences-business-decisions | 7 | not started | | | |
+| 54 | assessing-competitiveness | 7 | not started | | | |
+| 55 | global-marketing | 7 | not started | | | |
+| 56 | global-industries-mncs | 6 | not started | | | |
+
+## Close
+
+| # | Packet | Status | Commit | Snapshot | Validator |
+|---|--------|--------|--------|----------|-----------|
+| 57 | Cross-surface consistency | not started | | | n/a |
+| 58 | Re-measure the funnel | not started | | | n/a |
+
+## Baselines (fill in at packet 1, never edit afterwards)
+
+- Step-0 pass rate, clean instrumentation: _pending_
+- Section completion rate: _pending_
+- Validator violation count per check: _pending (packet 3)_
+
+## Baselines from the audit (dirty instrumentation, upper bound on abandonment)
+
+- 825 of 1,093 section starts never passed step 0 (75%), 211 signed-in students
+- introductory-concepts 192 starts / 167 stuck; meeting-customer-needs 123 / 101
+- 16 premium active, 40 free/cancelled, 6 free/inactive

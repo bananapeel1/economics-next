@@ -1,0 +1,1254 @@
+{
+  "meta": {
+    "id": "revenue-costs-profits",
+    "number": "3.3.2",
+    "title": "Revenue, Costs and Profits",
+    "subject": "economics",
+    "unit": 3,
+    "unitCode": "WEC13",
+    "blocks": 4,
+    "structuredBlocks": 4,
+    "legacyBlocks": 0,
+    "subsections": 8,
+    "reorder": 0,
+    "fillin": 0,
+    "quiz": 10,
+    "practice": 5,
+    "diagrams": 4,
+    "flashcards": 18,
+    "notes": 8,
+    "mistakes": 0,
+    "extrasChains": 4,
+    "extrasEval": 3
+  },
+  "content": [
+    {
+      "title": "Revenue Concepts",
+      "sections": [
+        {
+          "id": "total-average-marginal-revenue",
+          "body": [
+            {
+              "text": "**Total revenue (TR)** is price multiplied by quantity: TR = P × Q. **Average revenue (AR)** is TR divided by Q, which simplifies to price — so the AR curve is the demand curve. **Marginal revenue (MR)** is the change in TR from selling one more unit.",
+              "type": "paragraph"
+            },
+            {
+              "text": "For a firm facing a downward-sloping demand curve, cutting price to sell more has two effects: a **gain** (more units sold) and a **loss** (every existing unit now sells at the lower price). This is why MR falls faster than AR — the MR curve has exactly twice the gradient of a linear AR curve.",
+              "type": "paragraph"
+            },
+            {
+              "text": "When demand is price elastic (PED > 1), cutting price raises TR because the quantity gain outweighs the price loss — MR is positive. When demand is inelastic (PED < 1), cutting price reduces TR — MR is negative. At unit elasticity (PED = 1), TR is maximised and MR = 0.",
+              "type": "paragraph"
+            },
+            {
+              "type": "flow",
+              "steps": [
+                "Firm lowers price to sell more",
+                "Quantity rises but revenue per unit falls",
+                "MR falls faster than AR",
+                "MR hits zero at unit elasticity"
+              ],
+              "result": "Beyond this point MR is negative — cutting price reduces total revenue",
+              "resultType": "bad"
+            }
+          ],
+          "title": "Total, Average and Marginal Revenue",
+          "keyIdea": "TR = P × Q, AR = TR/Q = the demand curve, and MR falls twice as fast as AR — so MR turns negative while AR is still positive, the point where demand becomes inelastic.",
+          "examMatters": "Examiners expect you to draw MR with exactly twice the gradient of a linear AR curve, hitting the quantity axis at half the AR intercept. Label the elastic and inelastic portions of the demand curve and show that TR is maximised where MR = 0.",
+          "realExample": {
+            "text": "Airlines like British Airways use dynamic pricing — early bookers pay high fares (elastic segment, high MR), but as the flight fills, last-minute seats are sold cheaply. The airline keeps lowering price only while MR is still positive.",
+            "emoji": "✈️"
+          },
+          "misconception": "Students say MR falls because the firm sells more. Incomplete — MR falls because reducing price applies to all units, not just the extra one. Instead write: MR falls faster than AR because the price cut applies to every unit sold, creating a growing revenue loss on inframarginal units."
+        },
+        {
+          "id": "revenue-curves-market-structures",
+          "body": [
+            {
+              "text": "In **perfect competition**, each firm is a **price taker** — it can sell any quantity at the market price. Because price does not change with output, AR = MR = P, giving a horizontal (perfectly elastic) demand curve. The firm has no pricing decision; it simply chooses how much to produce.",
+              "type": "paragraph"
+            },
+            {
+              "text": "In **imperfect competition** (monopoly, oligopoly, monopolistic competition), firms are **price makers** — they face a downward-sloping demand curve. To sell more they must lower price, so MR lies below AR. The gap between AR and MR widens as output increases.",
+              "type": "paragraph"
+            },
+            {
+              "text": "The shape of these revenue curves links directly to **price elasticity of demand** from Unit 1. A perfectly competitive firm faces infinite PED (perfectly elastic), while a monopolist faces a less elastic demand curve — giving it more power over price but not over the quantity consumers will buy at that price.",
+              "type": "paragraph"
+            },
+            {
+              "type": "flow",
+              "steps": [
+                "Market has many identical firms",
+                "Each firm too small to affect price",
+                "AR = MR = P (horizontal)"
+              ],
+              "result": "Price taker — revenue curves are flat; the firm's only decision is quantity",
+              "resultType": "neutral"
+            }
+          ],
+          "title": "Revenue Curves in Different Market Structures",
+          "keyIdea": "A price taker faces a horizontal demand curve where AR = MR = P, while a price maker faces a downward-sloping AR with MR below it — this single difference drives all market structure analysis.",
+          "examMatters": "A common question gives you a market structure and asks you to draw the correct revenue curves. Remember: horizontal AR = MR for a price taker, downward-sloping AR with steeper MR for a price maker. Getting this wrong makes every subsequent diagram incorrect.",
+          "realExample": {
+            "text": "A wheat farmer is a textbook price taker — they sell at the global market price and cannot charge more because consumers would simply buy from another farmer. Their AR and MR curves are a flat line at the market price.",
+            "emoji": "🌾"
+          },
+          "misconception": "Students draw MR below AR for a perfectly competitive firm. Wrong — because the firm can sell any quantity at the same price, the price cut effect does not exist. Instead write: in perfect competition AR = MR = P; the MR curve only lies below AR when the firm must lower price to sell more (downward-sloping demand)."
+        }
+      ],
+      "takeaway": [
+        "TR = P × Q; AR = demand curve; MR has twice the gradient of a linear AR curve.",
+        "MR is positive when demand is elastic, zero at unit elasticity, negative when inelastic.",
+        "Price takers: AR = MR = P (horizontal). Price makers: downward-sloping AR with MR below.",
+        "The shape of revenue curves determines profit-maximising output in every market structure."
+      ]
+    },
+    {
+      "title": "Cost Concepts",
+      "sections": [
+        {
+          "id": "fixed-variable-average-marginal-cost",
+          "body": [
+            {
+              "text": "**Fixed costs (FC)** do not change with output — rent, salaries of permanent staff, insurance. **Variable costs (VC)** rise as output increases — raw materials, energy, hourly wages. Together: FC + VC = **total cost (TC)**.",
+              "type": "paragraph"
+            },
+            {
+              "text": "**Average total cost (ATC)** is TC divided by Q. It is U-shaped because at low output the firm spreads fixed costs over few units (high AFC), and at high output diminishing returns push up AVC. **Marginal cost (MC)** is the addition to total cost from producing one more unit: MC = ΔTC/ΔQ.",
+              "type": "paragraph"
+            },
+            {
+              "text": "The critical relationship: **MC intersects ATC at ATC's minimum point**. When MC is below ATC, each extra unit pulls the average down. When MC is above ATC, each extra unit drags the average up. This is a mathematical certainty, not a special case — like a batsman's average: if the next innings score (marginal) is below their average, the average falls.",
+              "type": "paragraph"
+            },
+            {
+              "type": "flow",
+              "steps": [
+                "MC < ATC",
+                "Each extra unit pulls average down",
+                "ATC falls",
+                "MC crosses ATC at minimum"
+              ],
+              "result": "Beyond this point MC > ATC — average costs start to rise",
+              "resultType": "neutral"
+            }
+          ],
+          "title": "Fixed, Variable, Average and Marginal Cost",
+          "keyIdea": "FC + VC = TC, ATC = TC/Q, MC = ΔTC/ΔQ — and the key relationship is that MC always cuts ATC at its minimum point, pulling the average down then up like a batsman's batting average.",
+          "examMatters": "Drawing accurate cost curves is essential. MC must be U-shaped, cutting ATC at its minimum. AFC falls continuously. AVC is also U-shaped but sits below ATC. Examiners penalise cost curves that do not intersect at the correct points.",
+          "realExample": {
+            "text": "Netflix spends billions on fixed costs (content production) but the variable cost of one more subscriber streaming a show is almost zero. This gives Netflix a rapidly falling ATC curve as subscriber numbers grow — classic high-FC, low-VC economics.",
+            "emoji": "🎬"
+          },
+          "misconception": "Students say MC rises because costs get higher. Imprecise — MC rises because of diminishing marginal returns: adding more variable factors to a fixed factor eventually yields less additional output per unit of input. Instead write: MC rises in the short run because diminishing returns mean each additional unit of output requires progressively more variable input."
+        },
+        {
+          "id": "short-run-long-run-costs",
+          "body": [
+            {
+              "text": "The **short run** is the period in which at least one factor of production is fixed (typically capital). Adding more of the variable factor (labour) to the fixed factor eventually causes **diminishing marginal returns** — each extra worker adds less output than the previous one, causing MC to rise.",
+              "type": "paragraph"
+            },
+            {
+              "text": "The **long run** is the period in which all factors are variable — the firm can build a bigger factory, adopt new technology, or relocate. Long-run average cost (LRAC) falls due to **economies of scale**, reaches a minimum at **minimum efficient scale (MES)**, and may eventually rise due to **diseconomies of scale**.",
+              "type": "paragraph"
+            },
+            {
+              "text": "The LRAC curve is the **envelope** of all possible short-run average cost (SRAC) curves. Each SRAC curve represents a particular plant size. The firm chooses the plant size that gives the lowest average cost for its expected output. MES is the smallest output at which LRAC is minimised — it determines how many firms can efficiently operate in a market.",
+              "type": "paragraph"
+            },
+            {
+              "type": "flow",
+              "steps": [
+                "Firm expands in the short run",
+                "Diminishing returns raise MC",
+                "Firm invests in larger plant (long run)",
+                "Economies of scale lower LRAC"
+              ],
+              "result": "LRAC falls until MES — beyond that, diseconomies may set in",
+              "resultType": "neutral"
+            }
+          ],
+          "title": "Short-Run vs Long-Run Costs",
+          "keyIdea": "In the short run at least one factor is fixed, causing diminishing returns; in the long run all factors are variable, enabling economies of scale — the LRAC curve is the envelope of all possible SRAC curves.",
+          "examMatters": "Examiners frequently ask you to distinguish short-run and long-run cost behaviour. Use the correct terminology: diminishing returns for the short run, economies/diseconomies of scale for the long run. Draw the LRAC as a smooth envelope tangent to multiple SRAC curves, and label MES clearly.",
+          "realExample": {
+            "text": "Toyota operates enormous factories specifically sized for their expected output. Each factory represents one SRAC curve. If demand grows beyond that factory's optimal capacity, Toyota builds a new, larger plant — moving along the LRAC envelope to a new, lower SRAC curve.",
+            "emoji": "🏭"
+          },
+          "misconception": "Students confuse diminishing returns with diseconomies of scale. Wrong — diminishing returns is a short-run concept (one fixed factor), while diseconomies are long-run (all factors variable but management struggles). Instead write: diminishing returns explains why SRAC curves slope upward; diseconomies of scale explains why the LRAC curve may eventually slope upward."
+        }
+      ],
+      "takeaway": [
+        "FC + VC = TC; ATC = TC/Q; MC = ΔTC/ΔQ — MC cuts ATC at its minimum point.",
+        "Short run: at least one fixed factor → diminishing returns → rising MC.",
+        "Long run: all factors variable → economies of scale → falling LRAC until MES.",
+        "The LRAC envelope shows the lowest achievable average cost for each level of output."
+      ]
+    },
+    {
+      "title": "Profit",
+      "sections": [
+        {
+          "id": "normal-supernormal-profit",
+          "body": [
+            {
+              "text": "**Normal profit** is the minimum return required to keep a firm in the market — it covers the **opportunity cost of capital**, meaning the return the entrepreneur could earn in their next best alternative. Economists include normal profit as part of total cost, so when TR = TC, the firm earns exactly normal profit.",
+              "type": "paragraph"
+            },
+            {
+              "text": "**Supernormal (abnormal) profit** exists when TR > TC. This is profit above and beyond the opportunity cost of staying in the market. It represents a genuine economic surplus — the firm is earning more than is necessary to keep its resources in their current use.",
+              "type": "paragraph"
+            },
+            {
+              "text": "Supernormal profit has a crucial **signal function**: it tells other entrepreneurs that this market offers returns above the opportunity cost of capital. In contestable or competitive markets, this signal attracts entry, increasing supply and driving price down until only normal profit remains — the long-run equilibrium.",
+              "type": "paragraph"
+            },
+            {
+              "type": "flow",
+              "steps": [
+                "Firm earns supernormal profit (TR > TC)",
+                "Signal attracts new entrants",
+                "Market supply increases, price falls",
+                "Supernormal profit is competed away"
+              ],
+              "result": "Long-run equilibrium: only normal profit survives (TR = TC)",
+              "resultType": "neutral"
+            }
+          ],
+          "title": "Normal and Supernormal Profit",
+          "keyIdea": "Normal profit is not a reward but a cost — it is the minimum return needed to keep the entrepreneur in the industry. Supernormal profit is everything above that, and it acts as a signal drawing new firms in.",
+          "examMatters": "Examiners test whether you understand that normal profit is included in the cost curves. On a diagram, normal profit is where AR = ATC. Supernormal profit is the shaded rectangle between AR and ATC multiplied by quantity. Always label this area clearly and state TR > TC.",
+          "realExample": {
+            "text": "When OpenAI demonstrated massive demand for generative AI, the supernormal profits attracted Google, Meta, and dozens of startups into the market. This entry is the signal function in action — supernormal profit does not last when barriers to entry are low.",
+            "emoji": "💻"
+          },
+          "misconception": "Students say normal profit means the firm is making no profit. Misleading — the firm earns enough to cover all costs including the opportunity cost of capital; it is just not earning more than necessary to stay. Instead write: normal profit means TR = TC in the economic sense, where TC already includes the entrepreneur's opportunity cost — the firm is covering all costs, including the minimum required return."
+        },
+        {
+          "id": "profit-maximisation-rule",
+          "body": [
+            {
+              "text": "The **profit maximisation rule** states that a firm should produce where **MC = MR**. At any output below this, MR > MC — the firm gains more revenue from the next unit than it costs, so profit rises by expanding. At any output above this, MC > MR — the last unit costs more to produce than it earns, so the firm should contract.",
+              "type": "paragraph"
+            },
+            {
+              "text": "On a diagram, the process is systematic: (1) find where MC crosses MR, (2) drop a vertical line to the quantity axis to read the profit-maximising output, (3) read the price from the AR curve directly above that quantity, (4) read the average cost from the ATC curve at that quantity. If AR > ATC, the firm earns supernormal profit. If AR < ATC, it makes a loss. If AR = ATC, it earns normal profit.",
+              "type": "paragraph"
+            },
+            {
+              "text": "This rule works for every market structure — perfect competition, monopoly, oligopoly, monopolistic competition. The shapes of the curves differ, but the logic is universal: produce where the next unit adds exactly as much to revenue as it does to cost.",
+              "type": "paragraph"
+            },
+            {
+              "type": "flow",
+              "steps": [
+                "Locate MC = MR on diagram",
+                "Read Q* on horizontal axis",
+                "Read P* from AR curve above Q*",
+                "Compare AR to ATC at Q*"
+              ],
+              "result": "AR > ATC = supernormal profit; AR = ATC = normal profit; AR < ATC = loss",
+              "resultType": "neutral"
+            }
+          ],
+          "title": "The Profit Maximisation Rule",
+          "keyIdea": "A firm maximises profit where MC = MR — find this point on the diagram, read the price from the AR curve directly above, then compare AR to ATC to determine the profit or loss per unit.",
+          "examMatters": "This is the single most important diagram technique in Unit 3. Practise drawing MC = MR for every market structure: in perfect competition MC crosses a horizontal MR; in monopoly MC crosses a downward-sloping MR. Always show the four-step process: MC = MR → Q* → P* from AR → compare AR to ATC.",
+          "realExample": {
+            "text": "Shell adjusts its oil extraction rate based on MC = MR logic. When oil prices rise (MR shifts up), it is profitable to extract from more expensive wells. When prices fall, those wells are shut down because MC exceeds MR — the profit maximisation rule in practice.",
+            "emoji": "⛽"
+          },
+          "misconception": "Students confuse profit maximisation with revenue maximisation. Wrong — revenue is maximised where MR = 0, which is a higher output than MC = MR. Instead write: profit max occurs where MC = MR; revenue max occurs where MR = 0. They are different points — profit max accounts for costs, revenue max ignores them."
+        }
+      ],
+      "takeaway": [
+        "Normal profit = opportunity cost of capital, included in TC. Supernormal profit = TR > TC.",
+        "Supernormal profit signals entry; in competitive markets it is competed away in the long run.",
+        "Profit max at MC = MR — find output, read price from AR, compare to ATC for profit area.",
+        "The MC = MR rule applies universally across all market structures."
+      ]
+    },
+    {
+      "title": "Efficiency",
+      "sections": [
+        {
+          "id": "allocative-productive-efficiency",
+          "body": [
+            {
+              "text": "**Allocative efficiency** occurs where **P = MC** — the price consumers pay equals the marginal cost of production. This means the value consumers place on the last unit exactly equals the cost of the resources used to make it. No reallocation of resources could make anyone better off without making someone else worse off.",
+              "type": "paragraph"
+            },
+            {
+              "text": "**Productive efficiency** occurs at the **minimum point of the ATC curve** — the firm produces at the lowest possible average cost. No resources are wasted. In the long run, competitive pressure forces firms to be productively efficient: any firm with higher costs is undercut by rivals and exits the market.",
+              "type": "paragraph"
+            },
+            {
+              "text": "In **long-run equilibrium under perfect competition**, both conditions are met simultaneously. Price is driven down to the minimum of ATC (productive efficiency), and since P = AR = MR = MC for a price taker, P = MC (allocative efficiency). This is why perfect competition is the benchmark of static efficiency.",
+              "type": "paragraph"
+            },
+            {
+              "type": "flow",
+              "steps": [
+                "Perfect competition in long-run equilibrium",
+                "Supernormal profit competed away",
+                "P = min ATC (productive efficiency)",
+                "P = MC (allocative efficiency)"
+              ],
+              "result": "Both static efficiency conditions achieved — the welfare benchmark",
+              "resultType": "good"
+            }
+          ],
+          "title": "Allocative and Productive Efficiency",
+          "keyIdea": "Allocative efficiency (P = MC) means resources go where consumers value them most; productive efficiency (min ATC) means output is produced at the lowest possible cost — perfect competition achieves both in long-run equilibrium.",
+          "examMatters": "Examiners test whether you can identify both types of efficiency on a diagram. In perfect competition long-run equilibrium, the firm operates at P = MC = min ATC — label both conditions. For monopoly, show that P > MC (allocative inefficiency) and the firm may not produce at min ATC (productive inefficiency).",
+          "realExample": {
+            "text": "Supermarkets like Aldi and Lidl operate in a fiercely competitive market. Price competition forces them to minimise costs (productive efficiency) and price close to marginal cost (allocative efficiency). Compare this to utility companies, where less competition means prices often exceed MC.",
+            "emoji": "🛒"
+          },
+          "misconception": "Students say efficiency means low prices. Imprecise — allocative efficiency means the right price (P = MC), which may not be the lowest possible price. Instead write: allocative efficiency means the price reflects the true resource cost of production (P = MC); productive efficiency means producing at the lowest average cost (min ATC). Both are about optimal resource use, not just cheap prices."
+        },
+        {
+          "id": "dynamic-efficiency-x-inefficiency",
+          "body": [
+            {
+              "text": "**Dynamic efficiency** is about improvement over time — investing in research, new technology, and better products. It requires funds, and **supernormal profit** provides those funds. This is the Schumpeterian argument: monopoly power can be good for society if the profits drive innovation that benefits consumers in the long run.",
+              "type": "paragraph"
+            },
+            {
+              "text": "**X-inefficiency** occurs when a firm operates above its minimum cost curve — not because of its scale, but because of **organisational slack**. Without competitive pressure, managers may tolerate waste, overstaffing, or outdated processes. The firm's actual cost is higher than the lowest achievable cost for its output level.",
+              "type": "paragraph"
+            },
+            {
+              "text": "This creates the central trade-off: **perfect competition** achieves static efficiency (P = MC, min ATC) but firms earn no supernormal profit to fund innovation. **Monopoly** may generate dynamic efficiency through R&D investment, but the lack of competitive pressure risks X-inefficiency and static welfare loss. The optimal market structure depends on which efficiency matters more in a given industry.",
+              "type": "paragraph"
+            },
+            {
+              "type": "flow",
+              "steps": [
+                "Monopolist earns supernormal profit",
+                "Profit funds R&D (dynamic efficiency)",
+                "But no competitive pressure",
+                "Costs drift above minimum (X-inefficiency)"
+              ],
+              "result": "Trade-off: dynamic gains vs static losses — net effect is an empirical question",
+              "resultType": "neutral"
+            }
+          ],
+          "title": "Dynamic Efficiency and X-Inefficiency",
+          "keyIdea": "Supernormal profit can fund R&D and innovation (dynamic efficiency), but without competitive pressure a monopolist may let costs drift above the minimum (X-inefficiency) — creating a fundamental trade-off between static and dynamic efficiency.",
+          "examMatters": "The static vs dynamic efficiency trade-off is a top evaluation point. In 20-mark essays, argue both sides: perfect competition delivers allocative and productive efficiency but no innovation incentive; monopoly may deliver dynamic efficiency but at the cost of higher prices and possible X-inefficiency. Conclude that the outcome is industry-specific.",
+          "realExample": {
+            "text": "Pharmaceutical companies like Pfizer use monopoly profits from patented drugs to fund billions in R&D for new treatments — a clear example of dynamic efficiency. But critics argue that without generic competition, these firms also exhibit X-inefficiency, spending heavily on marketing rather than minimising costs.",
+            "emoji": "💊"
+          },
+          "misconception": "Students say monopoly is always bad for efficiency. Too simplistic — a monopolist earning supernormal profit may invest heavily in innovation, delivering dynamic efficiency that a perfectly competitive market cannot. Instead write: monopoly sacrifices static efficiency (P > MC) but may deliver dynamic efficiency through R&D funded by supernormal profit — the net welfare effect depends on the industry context."
+        }
+      ],
+      "takeaway": [
+        "Allocative efficiency: P = MC — resources go where consumers value them most.",
+        "Productive efficiency: min ATC — output at the lowest possible average cost.",
+        "Dynamic efficiency: supernormal profit funds innovation — the Schumpeterian defence of monopoly.",
+        "X-inefficiency: costs above minimum due to lack of competitive pressure — the monopoly critique."
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "flow": {
+        "steps": [
+          "Firm sets or accepts price",
+          "TR = P × Q",
+          "MR shows how TR changes with one more unit"
+        ],
+        "result": "Revenue analysis tells the firm how much income each extra unit generates",
+        "resultType": "good"
+      },
+      "meta": "5 concepts",
+      "title": "Revenue Concepts",
+      "blocks": [
+        {
+          "items": [
+            {
+              "text": "<strong>Total revenue (TR)</strong> — the total income from sales; TR = price × quantity sold.",
+              "type": "def"
+            },
+            {
+              "tag": "exam",
+              "text": "<strong>Average revenue (AR)</strong> — revenue per unit sold; AR = TR ÷ Q. The AR curve is the firm's demand curve.",
+              "type": "def"
+            },
+            {
+              "text": "<strong>Marginal revenue (MR)</strong> — the extra revenue gained from selling one more unit; MR = ΔTR ÷ ΔQ.",
+              "type": "def"
+            }
+          ],
+          "title": "DEFINITIONS"
+        },
+        {
+          "items": [
+            {
+              "text": "For a <strong>perfectly competitive firm</strong>, AR = MR = price because the firm is a price taker — it can sell any quantity at the market price.",
+              "type": "mech"
+            },
+            {
+              "tag": "exam",
+              "text": "For a <strong>price maker</strong> (monopoly, oligopoly), the demand curve slopes downward, so the firm must lower price to sell more. MR falls faster than AR because each price cut applies to all units, not just the extra one.",
+              "type": "mech"
+            },
+            {
+              "text": "The MR curve is always <strong>twice as steep</strong> as a straight-line AR curve and hits the x-axis at half the quantity where AR hits it. This geometric relationship is a frequent exam diagram.",
+              "type": "imp"
+            },
+            {
+              "text": "Revenue links to PED from Unit 1: when demand is elastic (PED > 1), cutting price raises TR; when demand is inelastic (PED < 1), cutting price lowers TR. MR is positive when demand is elastic.",
+              "type": "link"
+            }
+          ],
+          "title": "HOW REVENUE CURVES BEHAVE"
+        }
+      ],
+      "keyIdea": "Revenue is the income a firm earns from selling its output, and the relationship between average and marginal revenue depends on whether the firm is a price taker or a price maker.",
+      "formulas": [
+        {
+          "text": "TR = P × Q",
+          "label": "TOTAL REVENUE"
+        },
+        {
+          "text": "AR = TR ÷ Q",
+          "label": "AVERAGE REVENUE"
+        },
+        {
+          "text": "MR = ΔTR ÷ ΔQ",
+          "label": "MARGINAL REVENUE"
+        }
+      ],
+      "takeaway": [
+        "AR is the demand curve; MR shows additional revenue from one more unit.",
+        "In perfect competition AR = MR; in monopoly MR is twice as steep as AR.",
+        "MR is positive when demand is elastic, zero at revenue-maximising output."
+      ],
+      "examMatters": "Examiners often ask you to draw and label AR and MR curves for different market structures. Remember: AR = MR (horizontal) in perfect competition; MR is twice as steep as AR in monopoly. Always label both curves clearly.",
+      "misconception": "Students say MR is always positive. Wrong because when demand is inelastic, lowering price to sell one more unit reduces total revenue, making MR negative. Instead write: MR is positive when demand is elastic, zero at unit elasticity (where TR is maximised), and negative when demand is inelastic."
+    },
+    {
+      "flow": {
+        "steps": [
+          "Identify fixed and variable costs",
+          "Calculate TC, ATC, MC at each output level",
+          "MC cuts ATC at its minimum"
+        ],
+        "result": "Cost analysis tells the firm its optimal production level",
+        "resultType": "good"
+      },
+      "meta": "6 concepts",
+      "title": "Cost Concepts",
+      "blocks": [
+        {
+          "items": [
+            {
+              "text": "<strong>Fixed costs (FC)</strong> — costs that do not change with output in the short run, such as rent, salaries of permanent staff, and insurance.",
+              "type": "def"
+            },
+            {
+              "text": "<strong>Variable costs (VC)</strong> — costs that change directly with output, such as raw materials, energy, and piece-rate wages.",
+              "type": "def"
+            },
+            {
+              "text": "<strong>Total cost (TC)</strong> — the sum of fixed and variable costs at any given output level; TC = FC + VC.",
+              "type": "def"
+            },
+            {
+              "tag": "exam",
+              "text": "<strong>Average total cost (ATC)</strong> — cost per unit of output; ATC = TC ÷ Q. Also called average cost (AC).",
+              "type": "def"
+            },
+            {
+              "text": "<strong>Marginal cost (MC)</strong> — the extra cost of producing one more unit; MC = ΔTC ÷ ΔQ.",
+              "type": "def"
+            }
+          ],
+          "title": "DEFINITIONS"
+        },
+        {
+          "items": [
+            {
+              "text": "AFC (average fixed cost) falls continuously as output rises because a fixed total is spread over more units — this is why ATC falls initially.",
+              "type": "mech"
+            },
+            {
+              "tag": "exam",
+              "text": "The MC curve always <strong>cuts through the minimum point of ATC</strong>: when MC < ATC, average cost is falling; when MC > ATC, average cost is rising.",
+              "type": "mech"
+            },
+            {
+              "text": "Understanding the MC-ATC relationship is essential for diagram work: MC pulls ATC down when below it and pushes ATC up when above it, like a batting average.",
+              "type": "imp"
+            },
+            {
+              "text": "The shut-down condition depends on costs: a firm stays open in the short run as long as P ≥ AVC (it covers variable costs and contributes to fixed costs), even if it makes an overall loss.",
+              "type": "link"
+            }
+          ],
+          "title": "KEY RELATIONSHIPS"
+        }
+      ],
+      "keyIdea": "Costs are the foundation of supply decisions — a firm needs to know its fixed, variable, average, and marginal costs to decide how much to produce and whether to stay in business.",
+      "formulas": [
+        {
+          "text": "TC = FC + VC",
+          "label": "TOTAL COST"
+        },
+        {
+          "text": "ATC = TC ÷ Q",
+          "label": "AVERAGE TOTAL COST"
+        },
+        {
+          "text": "MC = ΔTC ÷ ΔQ",
+          "label": "MARGINAL COST"
+        }
+      ],
+      "takeaway": [
+        "TC = FC + VC; ATC is cost per unit; MC is the cost of one more unit.",
+        "MC cuts ATC at its minimum — a critical diagram relationship.",
+        "Short-run shut-down: close if P < AVC; in the long run close if P < ATC."
+      ],
+      "examMatters": "Examiners expect you to draw U-shaped ATC and MC curves with MC cutting ATC at the minimum. Always label the axes (cost/revenue on y-axis, output on x-axis) and mark the minimum ATC point clearly.",
+      "misconception": "Students confuse average cost falling with total cost falling. Wrong because total cost always rises with output (you use more resources); it is average cost that may fall due to fixed costs being spread. Instead write: ATC can fall while TC rises — they measure different things."
+    },
+    {
+      "flow": {
+        "steps": [
+          "At least one factor fixed",
+          "Add variable factor",
+          "Diminishing returns set in",
+          "MC rises, then ATC rises"
+        ],
+        "result": "U-shaped short-run cost curves driven by diminishing marginal returns",
+        "resultType": "neutral"
+      },
+      "meta": "4 concepts",
+      "title": "Short-Run Cost Curves",
+      "blocks": [
+        {
+          "items": [
+            {
+              "tag": "exam",
+              "text": "<strong>Short run</strong> — the time period in which at least one factor of production (usually capital) is fixed; the firm can change output only by varying labour and materials.",
+              "type": "def"
+            },
+            {
+              "text": "<strong>Law of diminishing marginal returns</strong> — as more units of a variable factor (e.g. labour) are added to a fixed factor (e.g. machinery), the marginal product of the variable factor eventually falls.",
+              "type": "def"
+            }
+          ],
+          "title": "KEY CONCEPTS"
+        },
+        {
+          "items": [
+            {
+              "text": "Initially, adding workers to fixed capital increases <strong>marginal product</strong> (specialisation benefits), so MC falls and ATC falls.",
+              "type": "mech"
+            },
+            {
+              "text": "Beyond the optimal point, diminishing returns set in: each extra worker adds less output, so MC rises. Once MC exceeds ATC, average cost also starts to rise.",
+              "type": "mech"
+            },
+            {
+              "tag": "exam",
+              "text": "The U-shape is a short-run phenomenon caused by the fixed factor. In the long run, all factors are variable, so the LRAC curve has a different shape determined by returns to scale.",
+              "type": "imp"
+            },
+            {
+              "text": "Diminishing returns links to the supply curve from Unit 1: rising MC explains why the supply curve slopes upward — firms need a higher price to justify producing more.",
+              "type": "link"
+            }
+          ],
+          "title": "WHY CURVES ARE U-SHAPED"
+        }
+      ],
+      "keyIdea": "In the short run at least one factor is fixed, so costs behave according to the law of diminishing marginal returns — which explains the distinctive U-shape of short-run cost curves.",
+      "takeaway": [
+        "Short run = at least one factor fixed; U-shaped costs from diminishing returns.",
+        "Diminishing returns ≠ diseconomies of scale — different time periods, different causes.",
+        "MC rises because each extra worker adds less output to the fixed capital."
+      ],
+      "examMatters": "Examiners test whether you can distinguish diminishing returns (short-run, one factor fixed) from diseconomies of scale (long-run, all factors variable). This is a very common confusion that costs marks.",
+      "misconception": "Students confuse diminishing returns with diseconomies of scale. Wrong because diminishing returns is a short-run concept (one factor fixed), while diseconomies of scale is a long-run concept (all factors variable). Instead write: diminishing returns causes U-shaped SRAC curves; diseconomies of scale causes the LRAC curve to eventually slope upward."
+    },
+    {
+      "flow": {
+        "steps": [
+          "All factors variable",
+          "Economies of scale lower LRAC",
+          "Constant returns at MES",
+          "Diseconomies may raise LRAC"
+        ],
+        "result": "LRAC envelope curve shows the optimal plant size for each output level",
+        "resultType": "neutral"
+      },
+      "meta": "4 concepts",
+      "title": "Long-Run Cost Curves",
+      "blocks": [
+        {
+          "items": [
+            {
+              "tag": "exam",
+              "text": "<strong>Long run</strong> — the time period in which all factors of production are variable; the firm can change its entire scale of operations.",
+              "type": "def"
+            },
+            {
+              "text": "<strong>Long-run average cost (LRAC) curve</strong> — an envelope curve tangent to a series of short-run ATC curves, each representing a different plant size.",
+              "type": "def"
+            }
+          ],
+          "title": "KEY CONCEPTS"
+        },
+        {
+          "items": [
+            {
+              "text": "The LRAC falls initially due to <strong>economies of scale</strong> (technical, purchasing, financial, managerial, risk-bearing).",
+              "type": "mech"
+            },
+            {
+              "text": "The LRAC may be flat over a range of output where the firm experiences <strong>constant returns to scale</strong>.",
+              "type": "mech"
+            },
+            {
+              "text": "Eventually LRAC may rise due to <strong>diseconomies of scale</strong> (communication, coordination, motivation problems).",
+              "type": "mech"
+            },
+            {
+              "tag": "exam",
+              "text": "In industries with a large MES (e.g. car manufacturing, pharmaceuticals), only a few firms can produce efficiently — this creates a <strong>natural barrier to entry</strong>.",
+              "type": "imp"
+            }
+          ],
+          "title": "SHAPE OF LRAC"
+        }
+      ],
+      "keyIdea": "In the long run all factors are variable, so the firm can choose its optimal scale of production — the LRAC curve is an envelope showing the lowest possible cost at each output level.",
+      "takeaway": [
+        "LRAC is an envelope of SRAC curves showing the cheapest way to produce each output.",
+        "Economies → constant returns → possible diseconomies as scale increases.",
+        "MES determines market structure: high MES → few firms; low MES → many firms."
+      ],
+      "examMatters": "Examiners often ask you to draw the LRAC curve and mark MES. Show it as an envelope of SRAC curves. If the question mentions a specific industry, explain whether MES is high (few large firms) or low (many small firms).",
+      "misconception": "Students draw the LRAC as always U-shaped. In many industries it is L-shaped — costs fall with economies of scale and then stay flat (constant returns), never rising. Instead write: the shape depends on the industry; where management is effective, diseconomies may be delayed indefinitely."
+    },
+    {
+      "flow": {
+        "steps": [
+          "Supernormal profit earned",
+          "New firms attracted to enter",
+          "Supply increases, price falls"
+        ],
+        "result": "In competitive markets, profit is competed away to normal profit in the long run",
+        "resultType": "neutral"
+      },
+      "meta": "4 concepts",
+      "title": "Profit",
+      "blocks": [
+        {
+          "items": [
+            {
+              "tag": "exam",
+              "text": "<strong>Normal profit</strong> — the minimum level of profit needed to keep a firm in the industry in the long run; it is included in the firm's cost curves as an opportunity cost.",
+              "type": "def"
+            },
+            {
+              "text": "<strong>Supernormal (abnormal) profit</strong> — profit above normal profit; TR > TC (where TC includes normal profit). This is the incentive for new firms to enter the market.",
+              "type": "def"
+            },
+            {
+              "text": "<strong>Subnormal profit (loss)</strong> — profit below normal profit; TR < TC. The firm is not covering its opportunity costs and may exit in the long run.",
+              "type": "def"
+            }
+          ],
+          "title": "DEFINITIONS"
+        },
+        {
+          "items": [
+            {
+              "text": "Supernormal profit acts as a <strong>signal</strong> to new firms to enter the market, increasing supply and driving prices down toward long-run equilibrium.",
+              "type": "mech"
+            },
+            {
+              "text": "Subnormal profit signals that resources should <strong>exit</strong> this market and be redeployed where they earn at least normal profit.",
+              "type": "mech"
+            },
+            {
+              "tag": "exam",
+              "text": "Profit is a key mechanism in the <strong>price mechanism</strong>: it allocates resources to their most valued uses by rewarding efficient firms and penalising inefficient ones.",
+              "type": "imp"
+            },
+            {
+              "text": "In perfectly competitive markets (3.3.3), supernormal profit is competed away in the long run. In monopoly, barriers to entry allow supernormal profit to persist.",
+              "type": "link"
+            }
+          ],
+          "title": "ROLE OF PROFIT"
+        }
+      ],
+      "keyIdea": "Economists define profit differently from accountants — normal profit is a cost of production (the minimum to keep the firm in the industry), while supernormal profit is the extra that attracts new entrants.",
+      "takeaway": [
+        "Normal profit = included in costs; supernormal = extra above all costs.",
+        "On diagrams: normal profit at AR = ATC; supernormal is the gap between AR and ATC.",
+        "Profit signals resource allocation: supernormal attracts entry, losses trigger exit."
+      ],
+      "examMatters": "Examiners test whether you understand that normal profit is a cost, not a surplus. On a diagram, normal profit is where AR = ATC. Supernormal profit is the shaded area between AR and ATC curves. Always shade and label this area clearly.",
+      "misconception": "Students treat normal profit as zero profit. Wrong because normal profit is positive — it is the opportunity cost of capital and entrepreneurship included in total cost. Instead write: when a firm earns normal profit it is covering all costs including the owner's opportunity cost; it has no reason to leave the industry."
+    },
+    {
+      "flow": {
+        "steps": [
+          "If MR > MC, produce more",
+          "If MC > MR, produce less",
+          "At MC = MR, profit is maximised"
+        ],
+        "result": "MC = MR is the universal profit-maximising condition for all firms",
+        "resultType": "good"
+      },
+      "meta": "4 concepts",
+      "title": "Profit Maximisation Rule",
+      "blocks": [
+        {
+          "items": [
+            {
+              "tag": "exam",
+              "text": "<strong>Profit maximisation</strong> — occurs at the output level where MC = MR, provided MC is rising through MR (cutting from below).",
+              "type": "def"
+            }
+          ],
+          "title": "THE RULE"
+        },
+        {
+          "items": [
+            {
+              "text": "If MR > MC, producing one more unit adds more to revenue than to cost, so profit increases — the firm should <strong>expand output</strong>.",
+              "type": "mech"
+            },
+            {
+              "text": "If MC > MR, the last unit costs more to produce than it earns, so profit falls — the firm should <strong>reduce output</strong>.",
+              "type": "mech"
+            },
+            {
+              "text": "At MC = MR, no reallocation of output can increase profit — this is the <strong>equilibrium condition</strong> for profit maximisation.",
+              "type": "mech"
+            },
+            {
+              "tag": "exam",
+              "text": "The condition MC = MR applies to all market structures — perfect competition, monopoly, and oligopoly. The difference is the shape of the MR curve.",
+              "type": "imp"
+            }
+          ],
+          "title": "WHY MC = MR WORKS"
+        }
+      ],
+      "keyIdea": "A profit-maximising firm produces where MC = MR — any output below this leaves money on the table, and any output above it costs more to produce than it earns in revenue.",
+      "takeaway": [
+        "MC = MR is the profit-maximising condition for ALL market structures.",
+        "If MR > MC → expand; if MC > MR → contract; at MC = MR → optimal.",
+        "On diagrams: find MC = MR, read price from AR, compare AR to ATC for profit."
+      ],
+      "examMatters": "Examiners expect you to identify the profit-maximising output on a diagram by finding where MC = MR, then reading up to the AR curve to find the price, and comparing AR to ATC to determine whether the firm earns supernormal or subnormal profit.",
+      "misconception": "Students think profit is maximised where AR is highest. Wrong because the firm must consider costs, not just revenue. Instead write: profit is maximised where the gap between TR and TC is greatest, which occurs where MC = MR."
+    },
+    {
+      "flow": {
+        "steps": [
+          "Profit max: MC = MR (lowest Q)",
+          "Revenue max: MR = 0",
+          "Allocative efficiency: P = MC",
+          "Sales max: AR = ATC (highest Q)"
+        ],
+        "result": "Each objective gives a different price-output combination on the same diagram",
+        "resultType": "neutral"
+      },
+      "meta": "4 concepts",
+      "title": "Alternative Objectives on a Diagram",
+      "blocks": [
+        {
+          "items": [
+            {
+              "tag": "exam",
+              "text": "<strong>Profit maximisation</strong> — MC = MR. Lowest output, highest price. Maximum gap between TR and TC.",
+              "type": "mech"
+            },
+            {
+              "text": "<strong>Revenue maximisation</strong> — MR = 0. Higher output than profit max, lower price. TR is at its peak but profit is lower.",
+              "type": "mech"
+            },
+            {
+              "text": "<strong>Sales maximisation</strong> — AR = ATC. Highest output without making a loss. The firm breaks even, selling as much as possible.",
+              "type": "mech"
+            },
+            {
+              "text": "<strong>Allocative efficiency</strong> — P = MC (or AR = MC). Society's ideal output where the price consumers pay equals the cost of producing the last unit.",
+              "type": "mech"
+            }
+          ],
+          "title": "THE FOUR OUTPUT LEVELS"
+        },
+        {
+          "items": [
+            {
+              "tag": "exam",
+              "text": "As we move from profit max to sales max, output increases and price decreases. The firm sacrifices profit for market share or consumer benefit.",
+              "type": "imp"
+            },
+            {
+              "text": "These objectives link to market structures (3.3.3): in perfect competition the firm is forced to produce where P = MC (allocative efficiency), while a monopolist chooses MC = MR (profit max) and produces less at a higher price.",
+              "type": "link"
+            }
+          ],
+          "title": "COMPARING ON A DIAGRAM"
+        }
+      ],
+      "keyIdea": "Different business objectives produce different output-price combinations on the same diagram, and being able to show all four on one set of axes is a powerful exam skill.",
+      "takeaway": [
+        "Profit max (MC = MR) → Revenue max (MR = 0) → Sales max (AR = ATC).",
+        "Output increases and price decreases as we move through these objectives.",
+        "Allocative efficiency (P = MC) is the socially optimal output level."
+      ],
+      "examMatters": "Examiners love asking you to show multiple objectives on one diagram. Draw the standard MC, ATC, AR, MR curves, then mark each objective with its output and price. Label everything clearly and explain why the output differs.",
+      "misconception": "Students mix up revenue maximisation and sales maximisation. Revenue max is where MR = 0 (TR peaks), while sales max is where AR = ATC (break-even, maximum quantity). Instead write: revenue maximisation focuses on maximising income; sales maximisation focuses on maximising units sold."
+    },
+    {
+      "flow": {
+        "steps": [
+          "Allocative: P = MC",
+          "Productive: min ATC",
+          "Dynamic: invest profits in R&D",
+          "X-inefficiency: complacent monopolist wastes resources"
+        ],
+        "result": "No single market structure delivers all four types of efficiency perfectly",
+        "resultType": "neutral"
+      },
+      "meta": "5 concepts",
+      "title": "Efficiency Concepts",
+      "blocks": [
+        {
+          "items": [
+            {
+              "tag": "exam",
+              "text": "<strong>Allocative efficiency</strong> — achieved when P = MC; resources are allocated so that the value consumers place on the last unit equals its cost of production.",
+              "type": "def"
+            },
+            {
+              "tag": "exam",
+              "text": "<strong>Productive efficiency</strong> — achieved when the firm produces at the minimum point of its ATC curve; no resources are wasted.",
+              "type": "def"
+            },
+            {
+              "text": "<strong>Dynamic efficiency</strong> — achieved when firms invest supernormal profits into innovation, R&D, and new technology, improving products and processes over time.",
+              "type": "def"
+            },
+            {
+              "text": "<strong>X-inefficiency</strong> — the waste that occurs when a firm is not under competitive pressure and allows costs to drift above the minimum; common in monopolies.",
+              "type": "def"
+            }
+          ],
+          "title": "DEFINITIONS"
+        },
+        {
+          "items": [
+            {
+              "text": "Perfect competition achieves both allocative (P = MC) and productive efficiency (min ATC) in long-run equilibrium, but cannot achieve dynamic efficiency because firms earn only normal profit.",
+              "type": "mech"
+            },
+            {
+              "text": "Monopoly can achieve dynamic efficiency (supernormal profits fund R&D) but typically fails on allocative and productive efficiency, and may suffer X-inefficiency.",
+              "type": "mech"
+            },
+            {
+              "tag": "exam",
+              "text": "There is a <strong>trade-off</strong> between static efficiency (allocative + productive, favoured by competition) and dynamic efficiency (favoured by some market power). This is central to competition policy debates.",
+              "type": "imp"
+            },
+            {
+              "text": "Efficiency links to government intervention in 3.3.5: regulators try to prevent monopoly abuse while preserving enough profit incentive for innovation.",
+              "type": "link"
+            }
+          ],
+          "title": "WHICH STRUCTURES DELIVER WHICH EFFICIENCY"
+        }
+      ],
+      "keyIdea": "Efficiency is not one thing — there are four distinct types, and understanding which market structures achieve which types of efficiency is the key to evaluating competition policy.",
+      "takeaway": [
+        "Allocative: P = MC; Productive: min ATC; Dynamic: R&D from supernormal profits.",
+        "Perfect competition achieves static efficiency; monopoly may achieve dynamic efficiency.",
+        "No market structure achieves all four — always evaluate the trade-off."
+      ],
+      "examMatters": "Examiners frequently ask you to assess which market structure is 'best'. The answer is always 'it depends' — perfect competition wins on static efficiency, monopoly may win on dynamic efficiency. State the trade-off clearly and use real-world examples.",
+      "misconception": "Students say perfect competition is always best because it achieves allocative and productive efficiency. Wrong because firms earn only normal profit, leaving no surplus for R&D and innovation. Instead write: perfect competition achieves static efficiency but may fail on dynamic efficiency; the optimal market structure depends on which type of efficiency matters most."
+    }
+  ],
+  "diagrams": [
+    {
+      "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <defs>\n    <marker id=\"rv1\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0,8 3,0 6\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n  <!-- Top panel: AR and MR -->\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"170\" x2=\"460\" y2=\"170\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" marker-end=\"url(#rv1)\"/>\n  <line x1=\"70\" y1=\"170\" x2=\"70\" y2=\"15\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" marker-end=\"url(#rv1)\"/>\n  <text x=\"260\" y=\"186\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\">Quantity (Q)</text>\n  <text x=\"25\" y=\"95\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" transform=\"rotate(-90,25,95)\">Revenue (£)</text>\n  <!-- AR (demand) curve -->\n  <line x1=\"70\" y1=\"30\" x2=\"430\" y2=\"170\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"435\" y=\"168\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\">AR = D</text>\n  <!-- MR curve (twice the slope) -->\n  <line x1=\"70\" y1=\"30\" x2=\"250\" y2=\"170\" stroke=\"#ef4444\" stroke-width=\"2.5\"/>\n  <text x=\"255\" y=\"168\" fill=\"#ef4444\" font-size=\"12\" font-weight=\"600\">MR</text>\n  <!-- Price intercept label -->\n  <text x=\"60\" y=\"28\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"end\">a</text>\n  <!-- Midpoint and Q labels -->\n  <line x1=\"250\" y1=\"170\" x2=\"250\" y2=\"176\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <text x=\"250\" y=\"198\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"middle\">Q/2</text>\n  <line x1=\"430\" y1=\"170\" x2=\"430\" y2=\"176\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <text x=\"430\" y=\"198\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"middle\">Q</text>\n  <!-- PED labels -->\n  <text x=\"130\" y=\"70\" fill=\"#059669\" font-size=\"9\" font-weight=\"600\">PED > 1</text>\n  <text x=\"130\" y=\"82\" fill=\"#059669\" font-size=\"8\">(elastic)</text>\n  <text x=\"300\" y=\"130\" fill=\"#f59e0b\" font-size=\"9\" font-weight=\"600\">PED < 1</text>\n  <text x=\"300\" y=\"142\" fill=\"#f59e0b\" font-size=\"8\">(inelastic)</text>\n  <!-- Unit elastic point -->\n  <circle cx=\"160\" cy=\"100\" r=\"3\" fill=\"#e8ecf5\"/>\n  <text x=\"170\" y=\"96\" fill=\"#e8ecf5\" font-size=\"8\">PED = 1</text>\n\n  <!-- Bottom panel: TR curve -->\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"330\" x2=\"460\" y2=\"330\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" marker-end=\"url(#rv1)\"/>\n  <line x1=\"70\" y1=\"330\" x2=\"70\" y2=\"210\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" marker-end=\"url(#rv1)\"/>\n  <text x=\"260\" y=\"346\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\">Quantity (Q)</text>\n  <text x=\"25\" y=\"270\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" transform=\"rotate(-90,25,270)\">TR (£)</text>\n  <!-- TR curve (inverted U) -->\n  <path d=\"M 70 330 Q 160 260, 250 230 Q 340 260, 430 330\" stroke=\"#059669\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"300\" y=\"240\" fill=\"#059669\" font-size=\"12\" font-weight=\"600\">TR</text>\n  <!-- TR max line -->\n  <line x1=\"250\" y1=\"230\" x2=\"250\" y2=\"330\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"4,3\" opacity=\"0.5\"/>\n  <text x=\"250\" y=\"225\" fill=\"#059669\" font-size=\"9\" text-anchor=\"middle\">TR max</text>\n  <text x=\"250\" y=\"342\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"middle\">MR = 0</text>\n  <!-- TR rising/falling annotations -->\n  <text x=\"140\" y=\"295\" fill=\"#059669\" font-size=\"8\">TR rising</text>\n  <text x=\"140\" y=\"305\" fill=\"#059669\" font-size=\"8\">(MR > 0)</text>\n  <text x=\"340\" y=\"295\" fill=\"#ef4444\" font-size=\"8\">TR falling</text>\n  <text x=\"340\" y=\"305\" fill=\"#ef4444\" font-size=\"8\">(MR < 0)</text>\n</svg>",
+      "title": "Revenue Curves: TR, AR and MR",
+      "checklist": [
+        "AR (demand) and MR both start at the same price-axis intercept",
+        "MR has twice the slope of a linear AR curve and hits the Q-axis at Q/2",
+        "TR is an inverted U-shape, peaking where MR = 0",
+        "PED regions labelled: elastic (MR > 0), unit elastic (MR = 0), inelastic (MR < 0)",
+        "All curves correctly aligned vertically between the two panels"
+      ],
+      "description": "Shows the relationship between total revenue, average revenue and marginal revenue for a firm facing a downward-sloping demand curve. Demonstrates how MR has twice the slope of AR, and how TR is maximised where MR = 0."
+    },
+    {
+      "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <defs>\n    <marker id=\"cc1\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0,8 3,0 6\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"290\" x2=\"460\" y2=\"290\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#cc1)\"/>\n  <line x1=\"70\" y1=\"290\" x2=\"70\" y2=\"25\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#cc1)\"/>\n  <text x=\"260\" y=\"330\" fill=\"#e8ecf5\" font-size=\"13\" text-anchor=\"middle\">Output (Q)</text>\n  <text x=\"22\" y=\"160\" fill=\"#e8ecf5\" font-size=\"13\" text-anchor=\"middle\" transform=\"rotate(-90,22,160)\">Cost (£)</text>\n\n  <!-- AFC curve (rectangular hyperbola) -->\n  <path d=\"M 100 80 Q 150 200, 200 240 Q 270 265, 430 275\" stroke=\"#f59e0b\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"6,3\"/>\n  <text x=\"435\" y=\"272\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"600\">AFC</text>\n\n  <!-- AVC curve (U-shaped, minimum at lower output) -->\n  <path d=\"M 95 230 Q 140 175, 195 155 Q 230 148, 260 150 Q 310 158, 370 200 Q 410 235, 440 270\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"445\" y=\"268\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">AVC</text>\n\n  <!-- AC curve (U-shaped, minimum at higher output) -->\n  <path d=\"M 95 195 Q 155 125, 230 108 Q 280 102, 310 105 Q 360 118, 410 158 Q 440 190, 450 210\" stroke=\"#059669\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"454\" y=\"208\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">AC</text>\n\n  <!-- MC curve (U-shaped, steeper, crosses AVC and AC at their minimums) -->\n  <path d=\"M 105 210 Q 140 170, 170 160 Q 195 155, 210 155 Q 230 155, 248 152 Q 260 152, 270 155 Q 300 168, 330 195 Q 360 230, 380 260 Q 390 275, 400 290\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"395\" y=\"310\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"600\">MC</text>\n\n  <!-- MC crosses AVC minimum -->\n  <circle cx=\"248\" cy=\"148\" r=\"4\" fill=\"#3b82f6\"/>\n  <line x1=\"248\" y1=\"148\" x2=\"248\" y2=\"290\" stroke=\"#3b82f6\" stroke-width=\"1\" stroke-dasharray=\"3,3\" opacity=\"0.4\"/>\n  <text x=\"248\" y=\"305\" fill=\"#3b82f6\" font-size=\"9\" text-anchor=\"middle\">Q₁</text>\n  <line x1=\"70\" y1=\"148\" x2=\"244\" y2=\"148\" stroke=\"#3b82f6\" stroke-width=\"1\" stroke-dasharray=\"3,3\" opacity=\"0.4\"/>\n\n  <!-- MC crosses AC minimum -->\n  <circle cx=\"305\" cy=\"104\" r=\"4\" fill=\"#059669\"/>\n  <line x1=\"305\" y1=\"104\" x2=\"305\" y2=\"290\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"3,3\" opacity=\"0.4\"/>\n  <text x=\"305\" y=\"305\" fill=\"#059669\" font-size=\"9\" text-anchor=\"middle\">Q₂</text>\n  <line x1=\"70\" y1=\"104\" x2=\"301\" y2=\"104\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"3,3\" opacity=\"0.4\"/>\n\n  <!-- AFC gap annotation -->\n  <line x1=\"355\" y1=\"130\" x2=\"355\" y2=\"190\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n  <line x1=\"350\" y1=\"130\" x2=\"360\" y2=\"130\" stroke=\"#f59e0b\" stroke-width=\"1\"/>\n  <line x1=\"350\" y1=\"190\" x2=\"360\" y2=\"190\" stroke=\"#f59e0b\" stroke-width=\"1\"/>\n  <text x=\"368\" y=\"163\" fill=\"#f59e0b\" font-size=\"9\">AFC</text>\n  <text x=\"368\" y=\"174\" fill=\"#f59e0b\" font-size=\"8\">(gap</text>\n  <text x=\"368\" y=\"185\" fill=\"#f59e0b\" font-size=\"8\">narrows)</text>\n\n  <!-- Key annotations -->\n  <text x=\"100\" y=\"45\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.8\">MC cuts AVC at AVC min (Q₁)</text>\n  <text x=\"100\" y=\"58\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.8\">MC cuts AC at AC min (Q₂)</text>\n  <text x=\"100\" y=\"71\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.8\">AC min is to the right of AVC min</text>\n  <text x=\"100\" y=\"84\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.8\">AC − AVC = AFC (gap narrows with Q)</text>\n</svg>",
+      "title": "Short-Run Cost Curves: MC, AC, AVC and AFC",
+      "checklist": [
+        "MC curve is U-shaped and steeper than AC and AVC",
+        "MC passes through the minimum of AVC first, then the minimum of AC",
+        "AC minimum is to the right of AVC minimum",
+        "AFC is a rectangular hyperbola, always falling",
+        "The vertical gap between AC and AVC equals AFC and narrows as Q increases",
+        "All curves correctly labelled with axes showing Cost and Output"
+      ],
+      "description": "Shows the key short-run cost curves and their relationships. MC passes through the minimum points of both AVC and AC. AFC falls continuously. The gap between AC and AVC equals AFC and narrows as output increases."
+    },
+    {
+      "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <defs>\n    <marker id=\"lr1\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0,8 3,0 6\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"290\" x2=\"460\" y2=\"290\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#lr1)\"/>\n  <line x1=\"70\" y1=\"290\" x2=\"70\" y2=\"25\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#lr1)\"/>\n  <text x=\"260\" y=\"330\" fill=\"#e8ecf5\" font-size=\"13\" text-anchor=\"middle\">Output (Q)</text>\n  <text x=\"22\" y=\"160\" fill=\"#e8ecf5\" font-size=\"13\" text-anchor=\"middle\" transform=\"rotate(-90,22,160)\">Cost (£)</text>\n\n  <!-- SRAC curves (3 different plant sizes) -->\n  <path d=\"M 90 220 Q 130 120, 175 105 Q 220 120, 260 200\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" fill=\"none\" opacity=\"0.35\" stroke-dasharray=\"5,3\"/>\n  <text x=\"175\" y=\"100\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.45\">SRAC₁</text>\n\n  <path d=\"M 170 180 Q 230 90, 290 80 Q 350 90, 400 160\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" fill=\"none\" opacity=\"0.35\" stroke-dasharray=\"5,3\"/>\n  <text x=\"290\" y=\"73\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.45\">SRAC₂</text>\n\n  <path d=\"M 290 145 Q 345 90, 385 95 Q 430 105, 455 170\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" fill=\"none\" opacity=\"0.35\" stroke-dasharray=\"5,3\"/>\n  <text x=\"390\" y=\"87\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.45\">SRAC₃</text>\n\n  <!-- LRAC envelope curve -->\n  <path d=\"M 95 230 Q 140 150, 200 110 Q 250 90, 300 82 Q 330 82, 350 85 Q 400 100, 445 155\" stroke=\"#059669\" stroke-width=\"3\" fill=\"none\"/>\n  <text x=\"448\" y=\"150\" fill=\"#059669\" font-size=\"12\" font-weight=\"600\">LRAC</text>\n\n  <!-- MES line -->\n  <line x1=\"300\" y1=\"82\" x2=\"300\" y2=\"290\" stroke=\"#3b82f6\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/>\n  <text x=\"300\" y=\"305\" fill=\"#3b82f6\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">MES</text>\n  <line x1=\"70\" y1=\"82\" x2=\"296\" y2=\"82\" stroke=\"#3b82f6\" stroke-width=\"1\" stroke-dasharray=\"3,3\" opacity=\"0.4\"/>\n  <text x=\"60\" y=\"86\" fill=\"#3b82f6\" font-size=\"9\" text-anchor=\"end\">Cₘ</text>\n\n  <!-- Economies of scale region -->\n  <text x=\"170\" y=\"260\" fill=\"#059669\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"600\">Economies</text>\n  <text x=\"170\" y=\"274\" fill=\"#059669\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"600\">of scale</text>\n  <path d=\"M 120 245 L 170 238 L 220 245\" stroke=\"#059669\" stroke-width=\"1.5\" fill=\"none\"/>\n  <text x=\"170\" y=\"235\" fill=\"#059669\" font-size=\"16\" text-anchor=\"middle\">↓</text>\n\n  <!-- Constant returns region -->\n  <text x=\"325\" y=\"260\" fill=\"#3b82f6\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">Constant</text>\n  <text x=\"325\" y=\"274\" fill=\"#3b82f6\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">returns</text>\n\n  <!-- Diseconomies of scale region -->\n  <text x=\"420\" y=\"240\" fill=\"#ef4444\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"600\">Diseconomies</text>\n  <text x=\"420\" y=\"254\" fill=\"#ef4444\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"600\">of scale</text>\n  <text x=\"420\" y=\"218\" fill=\"#ef4444\" font-size=\"16\" text-anchor=\"middle\">↑</text>\n\n  <!-- Annotations in box -->\n  <rect x=\"90\" y=\"33\" width=\"270\" height=\"42\" rx=\"4\" fill=\"none\" stroke=\"#e8ecf5\" stroke-width=\"1\" opacity=\"0.3\"/>\n  <text x=\"100\" y=\"50\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.8\">LRAC = envelope of all SRAC curves</text>\n  <text x=\"100\" y=\"65\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.8\">MES = Minimum Efficient Scale (lowest LRAC)</text>\n</svg>",
+      "title": "Long-Run Average Cost Curve: Economies and Diseconomies of Scale",
+      "checklist": [
+        "LRAC is U-shaped (or flattened U) and labelled as the envelope curve",
+        "At least 2-3 SRAC curves shown as dashed, with LRAC tangent to each",
+        "Economies of scale region (falling LRAC) clearly labelled on the left",
+        "Diseconomies of scale region (rising LRAC) clearly labelled on the right",
+        "MES marked at the minimum point of the LRAC curve",
+        "Constant returns to scale section shown (if present) between economies and diseconomies"
+      ],
+      "description": "Shows the U-shaped LRAC curve as an envelope of SRAC curves. Illustrates economies of scale (falling LRAC), constant returns (flat LRAC), diseconomies of scale (rising LRAC), and the minimum efficient scale (MES)."
+    },
+    {
+      "title": "Short-Run and Long-Run Shutdown Points",
+      "checklist": [
+        "MC, AC and AVC curves correctly drawn and labelled",
+        "Short-run shutdown point identified at minimum AVC",
+        "Long-run exit point identified at minimum AC",
+        "Supernormal profit shown as shaded area between AR and AC",
+        "Loss scenario shows firm between AVC and AC",
+        "Firm's short-run supply curve = MC above AVC minimum"
+      ],
+      "scenarios": [
+        {
+          "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <defs>\n    <marker id=\"sp1\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0,8 3,0 6\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"290\" x2=\"460\" y2=\"290\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#sp1)\"/>\n  <line x1=\"70\" y1=\"290\" x2=\"70\" y2=\"25\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#sp1)\"/>\n  <text x=\"260\" y=\"330\" fill=\"#e8ecf5\" font-size=\"13\" text-anchor=\"middle\">Output (Q)</text>\n  <text x=\"22\" y=\"160\" fill=\"#e8ecf5\" font-size=\"13\" text-anchor=\"middle\" transform=\"rotate(-90,22,160)\">Cost / Revenue (£)</text>\n\n  <!-- MC curve -->\n  <path d=\"M 110 230 Q 160 175, 200 165 Q 240 162, 265 168 Q 310 190, 350 240 Q 370 265, 385 285\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"375\" y=\"310\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"600\">MC</text>\n\n  <!-- AC curve -->\n  <path d=\"M 110 200 Q 175 120, 250 105 Q 310 100, 340 110 Q 390 135, 430 180\" stroke=\"#059669\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"435\" y=\"178\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">AC</text>\n\n  <!-- AVC curve -->\n  <path d=\"M 110 240 Q 165 180, 210 168 Q 255 160, 280 164 Q 330 178, 380 220 Q 410 248, 430 272\" stroke=\"#3b82f6\" stroke-width=\"2\" fill=\"none\"/>\n  <text x=\"435\" y=\"270\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">AVC</text>\n\n  <!-- AR = MR = P line (perfect competition - high price) -->\n  <line x1=\"70\" y1=\"130\" x2=\"440\" y2=\"130\" stroke=\"#f59e0b\" stroke-width=\"2\"/>\n  <text x=\"445\" y=\"128\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"600\">AR=MR=P</text>\n\n  <!-- Profit-max output where P = MC -->\n  <circle cx=\"323\" cy=\"130\" r=\"4\" fill=\"#f59e0b\"/>\n  <line x1=\"323\" y1=\"130\" x2=\"323\" y2=\"290\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"3,3\" opacity=\"0.4\"/>\n  <text x=\"323\" y=\"305\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\">Q*</text>\n\n  <!-- AC at Q* -->\n  <circle cx=\"323\" cy=\"108\" r=\"3\" fill=\"#059669\"/>\n  <line x1=\"70\" y1=\"108\" x2=\"319\" y2=\"108\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"3,3\" opacity=\"0.3\"/>\n  <text x=\"60\" y=\"112\" fill=\"#059669\" font-size=\"9\" text-anchor=\"end\">AC</text>\n\n  <!-- Supernormal profit shading -->\n  <rect x=\"225\" y=\"108\" width=\"98\" height=\"22\" fill=\"#059669\" opacity=\"0.15\" rx=\"2\"/>\n  <text x=\"274\" y=\"98\" fill=\"#059669\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">Supernormal</text>\n  <text x=\"274\" y=\"85\" fill=\"#059669\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">profit</text>\n\n  <!-- Price and AC labels on y-axis -->\n  <text x=\"60\" y=\"134\" fill=\"#f59e0b\" font-size=\"9\" text-anchor=\"end\">P</text>\n</svg>",
+          "label": "Supernormal Profit (AR > AC)"
+        },
+        {
+          "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <defs>\n    <marker id=\"sp2\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0,8 3,0 6\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"290\" x2=\"460\" y2=\"290\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#sp2)\"/>\n  <line x1=\"70\" y1=\"290\" x2=\"70\" y2=\"25\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#sp2)\"/>\n  <text x=\"260\" y=\"330\" fill=\"#e8ecf5\" font-size=\"13\" text-anchor=\"middle\">Output (Q)</text>\n  <text x=\"22\" y=\"160\" fill=\"#e8ecf5\" font-size=\"13\" text-anchor=\"middle\" transform=\"rotate(-90,22,160)\">Cost / Revenue (£)</text>\n\n  <!-- MC curve -->\n  <path d=\"M 110 230 Q 160 175, 200 165 Q 240 162, 265 168 Q 310 190, 350 240 Q 370 265, 385 285\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"375\" y=\"310\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"600\">MC</text>\n\n  <!-- AC curve -->\n  <path d=\"M 110 200 Q 175 120, 250 105 Q 310 100, 340 110 Q 390 135, 430 180\" stroke=\"#059669\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"435\" y=\"178\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">AC</text>\n\n  <!-- AVC curve -->\n  <path d=\"M 110 240 Q 165 180, 210 168 Q 255 160, 280 164 Q 330 178, 380 220 Q 410 248, 430 272\" stroke=\"#3b82f6\" stroke-width=\"2\" fill=\"none\"/>\n  <text x=\"435\" y=\"270\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">AVC</text>\n\n  <!-- AR = MR = P line (between AVC min and AC min) -->\n  <line x1=\"70\" y1=\"175\" x2=\"440\" y2=\"175\" stroke=\"#f59e0b\" stroke-width=\"2\"/>\n  <text x=\"445\" y=\"173\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"600\">AR=MR=P</text>\n\n  <!-- Profit-max output where P = MC -->\n  <circle cx=\"282\" cy=\"175\" r=\"4\" fill=\"#f59e0b\"/>\n  <line x1=\"282\" y1=\"175\" x2=\"282\" y2=\"290\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"3,3\" opacity=\"0.4\"/>\n  <text x=\"282\" y=\"305\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\">Q*</text>\n\n  <!-- AC at Q* -->\n  <circle cx=\"282\" cy=\"103\" r=\"3\" fill=\"#059669\"/>\n  <line x1=\"70\" y1=\"103\" x2=\"278\" y2=\"103\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"3,3\" opacity=\"0.3\"/>\n\n  <!-- AVC at Q* -->\n  <circle cx=\"282\" cy=\"164\" r=\"3\" fill=\"#3b82f6\"/>\n  <line x1=\"70\" y1=\"164\" x2=\"278\" y2=\"164\" stroke=\"#3b82f6\" stroke-width=\"1\" stroke-dasharray=\"3,3\" opacity=\"0.3\"/>\n\n  <!-- Loss shading -->\n  <rect x=\"210\" y=\"103\" width=\"72\" height=\"72\" fill=\"#ef4444\" opacity=\"0.12\" rx=\"2\"/>\n  <text x=\"246\" y=\"93\" fill=\"#ef4444\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">Loss</text>\n\n  <!-- Contribution to FC -->\n  <line x1=\"200\" y1=\"164\" x2=\"200\" y2=\"175\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n  <text x=\"155\" y=\"220\" fill=\"#3b82f6\" font-size=\"9\" text-anchor=\"middle\">Contributes to</text>\n  <text x=\"155\" y=\"232\" fill=\"#3b82f6\" font-size=\"9\" text-anchor=\"middle\">fixed costs</text>\n  <path d=\"M 175 215 L 198 172\" stroke=\"#3b82f6\" stroke-width=\"1\" fill=\"none\" marker-end=\"url(#sp2)\"/>\n\n  <!-- Labels -->\n  <text x=\"60\" y=\"179\" fill=\"#f59e0b\" font-size=\"9\" text-anchor=\"end\">P</text>\n  <text x=\"60\" y=\"107\" fill=\"#059669\" font-size=\"9\" text-anchor=\"end\">AC</text>\n  <text x=\"60\" y=\"168\" fill=\"#3b82f6\" font-size=\"9\" text-anchor=\"end\">AVC</text>\n\n  <!-- Annotation -->\n  <text x=\"260\" y=\"40\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.8\">AVC < P < AC: firm makes a loss but</text>\n  <text x=\"260\" y=\"54\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.8\">covers variable costs — keep producing in SR</text>\n</svg>",
+          "label": "Loss but Producing (AVC < AR < AC)"
+        },
+        {
+          "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <defs>\n    <marker id=\"sp3\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0,8 3,0 6\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"290\" x2=\"460\" y2=\"290\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#sp3)\"/>\n  <line x1=\"70\" y1=\"290\" x2=\"70\" y2=\"25\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#sp3)\"/>\n  <text x=\"260\" y=\"330\" fill=\"#e8ecf5\" font-size=\"13\" text-anchor=\"middle\">Output (Q)</text>\n  <text x=\"22\" y=\"160\" fill=\"#e8ecf5\" font-size=\"13\" text-anchor=\"middle\" transform=\"rotate(-90,22,160)\">Cost / Revenue (£)</text>\n\n  <!-- MC curve -->\n  <path d=\"M 110 230 Q 160 175, 200 165 Q 240 162, 265 168 Q 310 190, 350 240 Q 370 265, 385 285\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"375\" y=\"310\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"600\">MC</text>\n\n  <!-- AC curve -->\n  <path d=\"M 110 200 Q 175 120, 250 105 Q 310 100, 340 110 Q 390 135, 430 180\" stroke=\"#059669\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"435\" y=\"178\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">AC</text>\n\n  <!-- AVC curve -->\n  <path d=\"M 110 240 Q 165 180, 210 168 Q 255 160, 280 164 Q 330 178, 380 220 Q 410 248, 430 272\" stroke=\"#3b82f6\" stroke-width=\"2\" fill=\"none\"/>\n  <text x=\"435\" y=\"270\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">AVC</text>\n\n  <!-- AR = MR = P at shutdown point (at AVC min) -->\n  <line x1=\"70\" y1=\"160\" x2=\"440\" y2=\"160\" stroke=\"#f59e0b\" stroke-width=\"2\" stroke-dasharray=\"6,3\"/>\n  <text x=\"445\" y=\"158\" fill=\"#f59e0b\" font-size=\"10\">P₁ (shutdown)</text>\n\n  <!-- Shutdown point -->\n  <circle cx=\"255\" cy=\"160\" r=\"6\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/>\n  <circle cx=\"255\" cy=\"160\" r=\"3\" fill=\"#ef4444\"/>\n  <text x=\"220\" y=\"145\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">SR Shutdown</text>\n  <text x=\"220\" y=\"133\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">Point</text>\n\n  <!-- Long-run exit point (at AC min) -->\n  <line x1=\"70\" y1=\"100\" x2=\"440\" y2=\"100\" stroke=\"#059669\" stroke-width=\"2\" stroke-dasharray=\"6,3\"/>\n  <text x=\"445\" y=\"98\" fill=\"#059669\" font-size=\"10\">P₂ (LR exit)</text>\n\n  <!-- LR exit point -->\n  <circle cx=\"310\" cy=\"100\" r=\"6\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2\"/>\n  <circle cx=\"310\" cy=\"100\" r=\"3\" fill=\"#059669\"/>\n  <text x=\"320\" y=\"80\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\">LR Exit Point</text>\n  <text x=\"320\" y=\"68\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\">(Normal Profit)</text>\n\n  <!-- Supply curve highlight on MC -->\n  <path d=\"M 255 160 Q 310 190, 350 240 Q 370 265, 385 285\" stroke=\"#f59e0b\" stroke-width=\"4\" fill=\"none\" opacity=\"0.3\"/>\n  <text x=\"365\" y=\"220\" fill=\"#f59e0b\" font-size=\"9\">SR supply</text>\n  <text x=\"365\" y=\"232\" fill=\"#f59e0b\" font-size=\"9\">curve = MC</text>\n  <text x=\"365\" y=\"244\" fill=\"#f59e0b\" font-size=\"9\">above AVC</text>\n\n  <!-- Summary box -->\n  <rect x=\"85\" y=\"35\" width=\"260\" height=\"28\" rx=\"4\" fill=\"none\" stroke=\"#e8ecf5\" stroke-width=\"1\" opacity=\"0.3\"/>\n  <text x=\"95\" y=\"54\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.8\">Below P₁: shut down. P₁ to P₂: produce in SR, exit in LR. Above P₂: stay.</text>\n</svg>",
+          "label": "Shutdown Point (AR = AVC)"
+        }
+      ],
+      "description": "Shows the profit-maximising output (MR = MC) alongside the short-run shutdown point (AR = AVC) and the long-run shutdown point (AR = AC). Illustrates the three possible outcomes: supernormal profit, loss but still producing, and shutdown."
+    }
+  ],
+  "flashcards": [
+    {
+      "back": "<strong>Price × Quantity sold</strong>. The total income a firm receives from selling its output. TR increases when either price or quantity increases (depending on PED).",
+      "front": "What is total revenue (TR)?"
+    },
+    {
+      "back": "The <strong>additional revenue</strong> from selling one more unit. MR = change in TR / change in quantity. For a price-taker, MR = price. For a price-maker, MR < price.",
+      "front": "What is marginal revenue (MR)?"
+    },
+    {
+      "back": "<strong>TR ÷ Quantity</strong> = revenue per unit = <strong>the price</strong>. The AR curve is the firm's demand curve. In perfect competition, AR = MR = price.",
+      "front": "What is average revenue (AR)?"
+    },
+    {
+      "back": "<strong>Fixed costs</strong> do not change with output (e.g., rent, salaries). <strong>Variable costs</strong> change directly with output (e.g., raw materials, energy). TC = FC + VC.",
+      "front": "What is the difference between fixed and variable costs?"
+    },
+    {
+      "back": "The <strong>additional cost of producing one more unit</strong>. MC = change in TC / change in quantity. MC initially falls (increasing returns) then rises (diminishing returns).",
+      "front": "What is marginal cost (MC)?"
+    },
+    {
+      "back": "<strong>TC ÷ Quantity</strong>. Also called average cost (AC). U-shaped in the short run — falls initially (spreading fixed costs) then rises (diminishing returns).",
+      "front": "What is average total cost (ATC)?"
+    },
+    {
+      "back": "The <strong>minimum profit needed to keep a firm in the industry</strong> — covering all costs including the opportunity cost of the entrepreneur's time and capital. Earned when AR = AC.",
+      "front": "What is normal profit?"
+    },
+    {
+      "back": "Profit <strong>above normal profit</strong> — earned when AR > AC. In perfect competition, supernormal profit attracts new entrants; in monopoly, barriers to entry protect it.",
+      "front": "What is supernormal (abnormal) profit?"
+    },
+    {
+      "back": "In the short run, as more of a variable factor is added to a <strong>fixed factor</strong>, the marginal product of the variable factor eventually <strong>falls</strong>. Causes MC to rise.",
+      "front": "What is the law of diminishing returns?"
+    },
+    {
+      "back": "A long-run concept. <strong>Increasing returns</strong>: output grows faster than inputs (economies of scale). <strong>Constant returns</strong>: proportional. <strong>Decreasing returns</strong>: output grows slower (diseconomies).",
+      "front": "What are returns to scale?"
+    },
+    {
+      "back": "The price level below which a firm will <strong>stop production</strong>. In the short run: where price < <strong>AVC</strong> (can't cover variable costs). In the long run: where price < <strong>ATC</strong>.",
+      "front": "What is the shutdown point?"
+    },
+    {
+      "back": "Where <strong>MC = MR</strong>. Below this point, making one more unit adds more to revenue than cost. Above it, making one more unit costs more than it earns.",
+      "front": "When does a firm profit maximise?"
+    },
+    {
+      "back": "When MC < AC, average cost is <strong>falling</strong>. When MC > AC, average cost is <strong>rising</strong>. MC cuts AC at its <strong>minimum point</strong>.",
+      "front": "What is the relationship between MC and AC?"
+    },
+    {
+      "back": "Cost savings from producing <strong>a range of products</strong> rather than specialising in one. Shared resources, distribution networks, and brand reputation reduce average costs.",
+      "front": "What are economies of scope?"
+    },
+    {
+      "back": "An <strong>envelope curve</strong> showing the lowest possible average cost at each output level when all factors are variable. U-shaped due to economies then diseconomies of scale.",
+      "front": "What is the long-run average cost (LRAC) curve?"
+    },
+    {
+      "back": "The <strong>lowest output level</strong> at which a firm can achieve the minimum long-run average cost. Industries with high MES tend toward fewer, larger firms.",
+      "front": "What is minimum efficient scale (MES)?"
+    },
+    {
+      "back": "<strong>Accounting profit</strong> = TR – explicit costs. <strong>Economic profit</strong> = TR – explicit costs – implicit costs (opportunity costs). A firm can make accounting profit but economic loss.",
+      "front": "What is the difference between accounting and economic profit?"
+    },
+    {
+      "back": "Producing at the <strong>lowest point on the AC curve</strong> — using the minimum resources per unit of output. Achieved in long-run equilibrium under perfect competition.",
+      "front": "What is productive efficiency?"
+    }
+  ],
+  "quiz": [
+    {
+      "options": [
+        "MR = 100 − Q",
+        "MR = 100 − 4Q",
+        "MR = 50 − 2Q",
+        "MR = 200 − 2Q"
+      ],
+      "question": "If a firm faces a linear downward-sloping demand curve AR = 100 − 2Q, what is the marginal revenue function?",
+      "explanation": "For a linear demand curve AR = a − bQ, the MR function is MR = a − 2bQ. Here a = 100 and b = 2, so MR = 100 − 2(2)Q = 100 − 4Q. MR has the same intercept but twice the slope.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "Total revenue is zero.",
+        "Total revenue is at its maximum and PED = 1.",
+        "The firm is making normal profit.",
+        "Average revenue is at its maximum."
+      ],
+      "question": "When marginal revenue is zero, which of the following must be true?",
+      "explanation": "When MR = 0, selling one more unit adds nothing to total revenue — TR is at its peak. This occurs at the midpoint of a linear demand curve where PED = 1 (unit elastic). TR is not zero; it is at its maximum value.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "All factors of production are variable in the long run.",
+        "A firm increases its scale of production and LRAC rises.",
+        "More units of a variable factor are added to a fixed factor in the short run.",
+        "A firm experiences diseconomies of scale."
+      ],
+      "question": "The law of diminishing returns applies when:",
+      "explanation": "The law of diminishing returns is a SHORT-RUN concept. It states that as more of a variable factor (e.g. labour) is added to a fixed factor (e.g. capital), the marginal product of the variable factor eventually declines. Diseconomies of scale and rising LRAC are long-run concepts.",
+      "correctIndex": 2
+    },
+    {
+      "options": [
+        "At the maximum point of the AC curve.",
+        "At the minimum point of the AC curve.",
+        "Where AC equals AFC.",
+        "Only when the firm earns normal profit."
+      ],
+      "question": "The marginal cost curve intersects the average cost curve:",
+      "explanation": "MC intersects AC at its minimum point. When MC < AC, the average is being pulled down. When MC > AC, the average is being pulled up. At the intersection, MC = AC and AC is at its lowest — this is a mathematical relationship that always holds.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "A large firm negotiating lower interest rates from banks.",
+        "A large firm using specialist assembly-line machinery that is indivisible.",
+        "A large firm spreading advertising costs over a larger output.",
+        "A large firm buying raw materials in bulk at discounted prices."
+      ],
+      "question": "Which of the following is an example of a technical economy of scale?",
+      "explanation": "Technical economies involve the use of specialised, capital-intensive machinery and production techniques that are only viable at large scale (indivisibilities). Lower interest rates are financial economies, advertising is marketing economies, and bulk buying is purchasing economies.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "Only apply to monopolies.",
+        "Cause the LRAC curve to shift upward.",
+        "Arise from the growth of the industry rather than the individual firm.",
+        "Are a short-run phenomenon related to diminishing returns."
+      ],
+      "question": "External economies of scale differ from internal economies because they:",
+      "explanation": "External economies of scale arise from the growth of the whole industry or clustering of firms in an area (e.g. skilled labour pool, infrastructure improvements, knowledge sharing). They benefit all firms regardless of individual firm size. Internal economies arise from the individual firm's own growth.",
+      "correctIndex": 2
+    },
+    {
+      "options": [
+        "TR > TC, so it earns more than its opportunity cost.",
+        "TR = TC, meaning it covers all costs including the opportunity cost of the entrepreneur.",
+        "TR < TC, so it makes a loss but stays in the industry.",
+        "MR = 0, meaning total revenue is maximised."
+      ],
+      "question": "A firm earns normal profit when:",
+      "explanation": "Normal profit occurs when TR = TC. Since total costs include the implicit opportunity cost of the entrepreneur (normal profit is built into TC), the firm earns just enough to keep the entrepreneur in the industry with no incentive to enter or leave.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "It is not earning supernormal profit.",
+        "AR < AC (price is below average cost).",
+        "AR < AVC (price is below average variable cost).",
+        "MC > MR at all output levels."
+      ],
+      "question": "In the short run, a firm should shut down production if:",
+      "explanation": "The short-run shutdown point is where AR < AVC. If price is below AVC, the firm cannot even cover its variable costs by producing — it loses more by staying open than by shutting down (when shut, it only loses fixed costs). AR < AC means a loss, but the firm may still cover variable costs and contribute to fixed costs.",
+      "correctIndex": 2
+    },
+    {
+      "options": [
+        "The output level where MC is at its minimum.",
+        "The output level where short-run average cost is minimised.",
+        "The lowest output level at which long-run average cost is minimised.",
+        "The output level where total revenue equals total cost."
+      ],
+      "question": "The minimum efficient scale (MES) is:",
+      "explanation": "MES is the lowest level of output at which a firm fully exploits all available economies of scale, reaching the minimum point of the LRAC curve. Beyond MES, LRAC is constant or begins to rise. If MES is large relative to market demand, the industry naturally tends towards fewer firms.",
+      "correctIndex": 2
+    },
+    {
+      "options": [
+        "A firm is too small to achieve economies of scale.",
+        "A firm operates above its LRAC curve due to organisational slack and lack of competitive pressure.",
+        "A firm's marginal cost exceeds its marginal revenue.",
+        "A firm experiences increasing returns to scale."
+      ],
+      "question": "X-inefficiency occurs when:",
+      "explanation": "X-inefficiency means a firm does not minimise its costs — it operates above its LRAC curve. This typically occurs in firms with market power (e.g. monopolies) that face little competitive pressure, leading to complacency, waste, and organisational slack. It is distinct from diseconomies of scale.",
+      "correctIndex": 1
+    }
+  ],
+  "common_mistakes": [
+    {
+      "title": "Drawing MR above AR for a downward-sloping demand curve",
+      "examTip": "For a linear demand curve: if AR = a - bQ, then MR = a - 2bQ. MR starts at the same intercept but falls twice as fast.",
+      "mistake": "Students draw MR above or equal to AR when the demand curve slopes downward.",
+      "correction": "For a price-maker (downward-sloping demand), MR is always below AR (except at the first unit). The MR curve has twice the gradient of a linear AR curve. MR = AR only in perfect competition."
+    },
+    {
+      "title": "Confusing short-run and long-run cost curves",
+      "mistake": "Students use diminishing returns to explain the shape of the LRAC curve, or use economies of scale to explain short-run cost curves.",
+      "correction": "Short-run: at least one factor is fixed → diminishing returns → U-shaped SRAC. Long-run: all factors variable → economies/diseconomies of scale → U-shaped LRAC. The LRAC is the envelope of all SRAC curves."
+    },
+    {
+      "title": "Forgetting that normal profit is included in costs",
+      "examTip": "When AR = AC → normal profit (zero economic profit). When AR > AC → supernormal profit. When AR < AC → losses (sub-normal profit).",
+      "mistake": "Students treat normal profit as something separate from or additional to total costs.",
+      "correction": "Normal profit is the opportunity cost of the entrepreneur and is included in the cost curves. When AR = AC, the firm earns exactly normal profit. Supernormal profit is the additional profit above this."
+    },
+    {
+      "title": "Confusing the shutdown rule",
+      "mistake": "Students say a firm shuts down whenever it makes a loss, regardless of the time horizon.",
+      "correction": "Short-run shutdown: P < AVC (cannot cover variable costs). The firm continues if AVC < P < AC because it covers variable costs and some fixed costs. Long-run shutdown: P < AC (firm exits the industry)."
+    }
+  ],
+  "practice": [
+    {
+      "marks": 4,
+      "command": "Define",
+      "guidance": "Marginal revenue (MR) is the additional revenue a firm receives from selling one more unit of output (1 mark). It is calculated as the change in total revenue divided by the change in quantity sold (1 mark). For a perfectly competitive firm, MR equals the market price because the firm is a price taker (1 mark). For a firm with market power, MR is less than price because the firm must lower its price to sell additional units, so MR falls as output increases (1 mark).",
+      "question": "Define the term 'marginal revenue'. (4 marks)"
+    },
+    {
+      "marks": 6,
+      "command": "Explain",
+      "guidance": "Type 1: Technical economies of scale (1 mark) — large firms can invest in specialised capital equipment and production techniques that smaller firms cannot justify, such as automated assembly lines or large container ships (1 mark). The cost per unit falls because the high fixed cost of capital is spread over a much larger output (1 mark).\n\nType 2: Purchasing (bulk-buying) economies of scale (1 mark) — large firms purchase raw materials and components in much greater volumes, giving them stronger bargaining power with suppliers to negotiate lower unit prices (1 mark). For example, a major car manufacturer can secure cheaper steel prices than a small workshop (1 mark).",
+      "question": "Explain two types of economies of scale that a large manufacturing firm might experience. (6 marks)"
+    },
+    {
+      "marks": 10,
+      "command": "Assess",
+      "guidance": "Define the law of diminishing returns as stating that, in the short run, as additional units of a variable factor (e.g. labour) are added to a fixed factor (e.g. capital), the marginal product of the variable factor will eventually decrease (2 marks). Relevance: when marginal product begins to fall, marginal cost begins to rise — this explains the U-shape of the short-run marginal cost curve (2 marks); the point where diminishing returns set in also determines the shape of the average variable cost and average total cost curves, which initially fall then rise (2 marks). Important nuance: the law only applies in the short run when at least one factor is fixed — in the long run, a firm can adjust all inputs and may experience economies of scale instead (2 marks). Judgement: the law of diminishing returns is fundamental to understanding why firms face rising marginal costs in the short run and why the profit-maximising output is where MC = MR (2 marks).",
+      "question": "Assess the relevance of the law of diminishing returns for a firm's short-run cost curves. (10 marks)"
+    },
+    {
+      "marks": 20,
+      "command": "Evaluate",
+      "guidance": "Introduction: Define supernormal (abnormal) profit as profit above normal profit, where total revenue exceeds total cost including the opportunity cost of capital. Occurs when AR > AC (2 marks).\n\nFor — supernormal profits harm consumers: They indicate a lack of competition — firms with market power restrict output and charge prices above marginal cost, leading to allocative inefficiency and a deadweight welfare loss (3 marks); consumers pay higher prices and have less choice than in a competitive market (2 marks); supernormal profits may persist due to barriers to entry, preventing new firms from entering and driving prices down (2 marks).\n\nAgainst — supernormal profits can benefit consumers: Profits fund research and development — pharmaceutical companies and technology firms invest heavily in innovation that produces new and improved products for consumers (3 marks); supernormal profits may be a temporary reward for innovation and risk-taking, acting as an incentive for dynamic efficiency (2 marks); firms earning high profits may benefit from further economies of scale, potentially passing on lower costs to consumers through lower prices in the long run (2 marks).\n\nEvaluation: Whether supernormal profits are harmful depends on their source and persistence (2 marks). Profits earned through genuine innovation and efficiency are beneficial and incentivise dynamic progress. Profits sustained purely through barriers to entry and market power are more likely to harm consumers. The role of government competition policy is critical in distinguishing between the two and intervening where necessary (2 marks).",
+      "question": "Evaluate the view that supernormal profits earned by firms are always harmful to consumers. (20 marks)"
+    },
+    {
+      "marks": 4,
+      "command": "Outline",
+      "guidance": "Condition 1: A firm should shut down in the short run if total revenue falls below total variable costs — equivalently, if price (AR) falls below average variable cost (AVC) at the profit-maximising output (1 mark). At this point, the firm cannot even cover its variable costs and loses more money by producing than by stopping production (1 mark).\n\nCondition 2: If price equals or exceeds AVC but is below ATC, the firm should continue to produce in the short run (1 mark) because revenue covers all variable costs and makes a contribution towards fixed costs, which must be paid regardless — shutting down would result in even greater losses equal to total fixed costs (1 mark).",
+      "question": "Outline the conditions under which a firm will shut down in the short run. (4 marks)"
+    }
+  ],
+  "extras": {
+    "chains": [
+      {
+        "steps": [
+          "In the short run, at least one factor of production is fixed — typically capital. As more variable factors (labour) are added, output initially rises at an increasing rate.",
+          "Beyond a certain point, adding more labour to fixed capital yields diminishing marginal returns — each additional worker adds less to total output than the previous one.",
+          "Diminishing marginal returns cause marginal costs to rise, because each extra unit of output requires proportionally more variable input to produce.",
+          "Rising marginal costs eventually pull up average variable costs and average total costs, giving the short-run cost curves their characteristic U-shape."
+        ],
+        "title": "Diminishing returns lead to rising marginal costs",
+        "result": "The law of diminishing returns explains why short-run marginal and average costs eventually rise, shaping the firm's supply decision."
+      },
+      {
+        "steps": [
+          "As firms increase their scale of production in the long run, they can exploit internal economies of scale — technical, managerial, financial, marketing and risk-bearing.",
+          "Economies of scale reduce long-run average costs, allowing large firms to produce at lower unit costs than smaller rivals.",
+          "New entrants cannot immediately match these low costs, as they start at a small scale with higher average costs — this creates a natural barrier to entry.",
+          "Barriers to entry protect incumbent firms' market power and supernormal profits, reducing competitive pressure and potentially harming consumers."
+        ],
+        "title": "Economies of scale create barriers to entry",
+        "result": "Economies of scale give large incumbent firms a cost advantage that deters new entrants, sustaining market concentration and potentially reducing competition."
+      },
+      {
+        "steps": [
+          "A profit-maximising firm produces where marginal cost equals marginal revenue (MC=MR), as this is the output level where the addition to revenue from the last unit exactly equals the addition to cost.",
+          "If MR > MC, the firm can increase profit by producing more, as each extra unit adds more to revenue than to cost.",
+          "If MC > MR, the firm should reduce output, as each unit produced adds more to cost than to revenue, reducing total profit.",
+          "At MC=MR, total profit (TR - TC) is maximised, and this rule applies regardless of market structure — whether perfectly competitive, monopolistic or oligopolistic."
+        ],
+        "title": "Profit maximisation occurs at MC=MR",
+        "result": "The MC=MR rule is the universal condition for profit maximisation, providing the foundation for analysing output decisions across all market structures."
+      },
+      {
+        "steps": [
+          "When existing firms earn supernormal profits (AR > AC), this signals to potential entrants that above-normal returns are available in the market.",
+          "In markets with low barriers to entry, new firms enter attracted by the prospect of supernormal profits, increasing market supply.",
+          "The increase in supply shifts the market supply curve rightward, putting downward pressure on price and reducing profit margins for all firms.",
+          "Entry continues until supernormal profits are competed away and firms earn only normal profit (AR = AC), which is the long-run equilibrium in competitive markets."
+        ],
+        "title": "Supernormal profits attract entry in competitive markets",
+        "result": "Supernormal profits are temporary in competitive markets — entry erodes them until only normal profit remains, ensuring resources are efficiently allocated."
+      }
+    ],
+    "evaluation": [
+      {
+        "title": "Firms may not profit maximise in practice",
+        "content": "The MC=MR rule assumes firms have perfect knowledge of their cost and revenue curves, which is unrealistic. In practice, firms often use cost-plus pricing or target a specific profit margin. Additionally, the principal-agent problem means managers may pursue sales revenue maximisation or growth rather than profit maximisation. However, competitive pressure tends to push firms towards profit-maximising behaviour in the long run."
+      },
+      {
+        "title": "Diseconomies of scale can offset growth advantages",
+        "content": "As firms grow beyond their optimal scale, they may experience diseconomies of scale — communication breakdowns, coordination problems and reduced worker motivation increase long-run average costs. This means continuous growth does not guarantee lower costs. The optimal firm size varies by industry, and some markets are better served by many small firms than a few large ones."
+      },
+      {
+        "title": "Barriers to entry are not permanent",
+        "content": "Economies of scale create significant barriers, but technological change can disrupt established cost advantages. Digital platforms, for example, have dramatically reduced minimum efficient scale in many industries, enabling start-ups to compete with incumbents. Creative destruction means that barriers which seem insurmountable can be bypassed by innovation rather than overcome by scale."
+      }
+    ]
+  }
+}

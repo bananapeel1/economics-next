@@ -1,0 +1,926 @@
+{
+  "meta": {
+    "id": "government-intervention-firms",
+    "number": "3.3.5",
+    "title": "Government Intervention",
+    "subject": "economics",
+    "unit": 3,
+    "unitCode": "WEC13",
+    "blocks": 3,
+    "structuredBlocks": 3,
+    "legacyBlocks": 0,
+    "subsections": 6,
+    "reorder": 0,
+    "fillin": 0,
+    "quiz": 10,
+    "practice": 5,
+    "diagrams": 3,
+    "flashcards": 18,
+    "notes": 5,
+    "mistakes": 0,
+    "extrasChains": 4,
+    "extrasEval": 4
+  },
+  "content": [
+    {
+      "title": "Competition Policy",
+      "sections": [
+        {
+          "id": "cma-merger-control",
+          "body": [
+            {
+              "text": "The **Competition and Markets Authority (CMA)** is the UK's primary competition regulator. When firms propose a merger, the CMA investigates whether it would result in a **substantial lessening of competition (SLC)** — meaning fewer choices, higher prices, or lower quality for consumers.",
+              "type": "paragraph"
+            },
+            {
+              "text": "If the SLC test is met, the CMA can **block the merger entirely**, approve it with **behavioural or structural remedies** (such as requiring the firm to sell off certain stores or brands), or accept **binding commitments** from the merging parties. This gives the CMA a graduated toolkit rather than a simple yes-or-no decision.",
+              "type": "paragraph"
+            },
+            {
+              "text": "The CMA also runs **leniency programmes** to break cartels. By offering reduced fines to the first cartel member that confesses, the CMA exploits the **prisoner's dilemma** — each firm fears the others will confess first, so the cartel collapses from within.",
+              "type": "paragraph"
+            },
+            {
+              "type": "flow",
+              "steps": [
+                "Firms propose merger",
+                "CMA investigates market impact",
+                "SLC test applied",
+                "Merger blocked or approved with conditions"
+              ],
+              "result": "Competition protected — consumers retain choice and fair prices",
+              "resultType": "good"
+            }
+          ],
+          "title": "The CMA and Merger Control",
+          "keyIdea": "The CMA uses the 'substantial lessening of competition' (SLC) test to decide whether mergers harm consumers — it can block deals, approve them, or force divestments.",
+          "examMatters": "Examiners reward students who can explain the SLC test and distinguish between structural remedies (forced divestment) and behavioural remedies (price commitments). Always link the CMA's decision to a specific consumer harm — don't just say 'less competition'.",
+          "realExample": {
+            "text": "The CMA blocked the proposed Sainsbury's-Asda merger in 2019, concluding it would substantially lessen competition in groceries and fuel, leading to higher prices for millions of UK shoppers.",
+            "emoji": "🛒"
+          },
+          "misconception": "Students assume the CMA blocks all large mergers. Wrong — most mergers are approved, and many proceed with minor conditions. Instead write: the CMA only intervenes when it finds evidence of a substantial lessening of competition; size alone is not the trigger."
+        },
+        {
+          "id": "anti-competitive-behaviour",
+          "body": [
+            {
+              "text": "**Cartels** are secret agreements between firms to fix prices, rig bids, or divide markets. They are illegal because they replicate monopoly outcomes — higher prices and restricted output — while pretending to compete. Detection is difficult, which is why leniency programmes are essential.",
+              "type": "paragraph"
+            },
+            {
+              "text": "**Abuse of dominant position** occurs when a firm with significant market power uses it to exclude competitors or exploit consumers. This includes **predatory pricing** (setting prices below cost to drive rivals out, then raising them), **exclusive dealing** (forcing retailers to stock only your products), and **tying** (bundling products to leverage dominance from one market into another).",
+              "type": "paragraph"
+            },
+            {
+              "text": "Penalties are severe to create a credible deterrent. Fines can reach **10% of worldwide annual turnover**, and individual directors can face criminal prosecution and prison sentences. The scale of fines reflects the enormous consumer harm that anti-competitive behaviour causes.",
+              "type": "paragraph"
+            }
+          ],
+          "title": "Anti-Competitive Behaviour",
+          "keyIdea": "Cartels, abuse of dominance, and predatory pricing all distort competition — regulators can impose fines of up to 10% of global turnover to deter these practices.",
+          "examMatters": "A strong answer distinguishes between exploitative abuse (directly harming consumers through high prices) and exclusionary abuse (harming consumers indirectly by eliminating competitors). Examiners expect you to explain why the behaviour reduces allocative efficiency.",
+          "realExample": {
+            "text": "The European Commission fined Google €4.34 billion in 2018 for abusing its Android dominance by requiring phone manufacturers to pre-install Google Search and Chrome as a condition of licensing the Play Store.",
+            "emoji": "📱"
+          },
+          "misconception": "Students confuse being dominant with abusing dominance. Wrong — having a large market share is perfectly legal; it is the exploitation or exclusionary use of that position that breaks competition law. Instead write: dominance is not illegal, but using it to foreclose competitors or exploit consumers is."
+        }
+      ],
+      "takeaway": [
+        "The CMA applies the SLC test to mergers and can block, approve, or impose remedies.",
+        "Leniency programmes exploit the prisoner's dilemma to break cartels from within.",
+        "Fines up to 10% of global turnover deter anti-competitive practices like predatory pricing and abuse of dominance.",
+        "Being dominant is legal; abusing that dominance to harm competition is not."
+      ]
+    },
+    {
+      "title": "Regulation of Monopoly",
+      "sections": [
+        {
+          "id": "price-cap-regulation",
+          "body": [
+            {
+              "text": "**Price cap regulation (RPI–X)** limits the maximum annual price increase to the rate of inflation (RPI) minus an efficiency factor (X). If inflation is 3% and X is 2%, the firm can only raise prices by 1%. To maintain or grow profits, the firm must **cut costs by at least X% per year** in real terms.",
+              "type": "paragraph"
+            },
+            {
+              "text": "This is superior to **rate-of-return regulation**, which guarantees the firm a fixed percentage return on its capital. The problem with rate-of-return is the **Averch-Johnson effect** — firms over-invest in capital to inflate the base on which their guaranteed return is calculated, leading to productive inefficiency.",
+              "type": "paragraph"
+            },
+            {
+              "text": "The challenge with RPI–X is **setting X correctly**. If X is too low, the firm earns excessive profits at consumers' expense. If X is too high, the firm cannot invest in maintaining infrastructure. Regulators face an information asymmetry — the firm knows its true costs better than the regulator does.",
+              "type": "paragraph"
+            },
+            {
+              "type": "flow",
+              "steps": [
+                "Regulator sets RPI–X cap",
+                "Firm must cut real costs by X% annually",
+                "Prices fall in real terms over time",
+                "Consumers benefit from lower bills"
+              ],
+              "result": "Productive efficiency improves — firm is incentivised to innovate and cut waste",
+              "resultType": "good"
+            }
+          ],
+          "title": "Price Cap Regulation (RPI–X)",
+          "keyIdea": "Under RPI–X, prices can only rise by inflation minus an efficiency factor — forcing the firm to cut costs to protect its profits, unlike rate-of-return regulation which encourages waste.",
+          "examMatters": "Examiners expect you to evaluate RPI–X against rate-of-return regulation. The key comparison: RPI–X incentivises cost-cutting (good for productive efficiency) but risks under-investment, while rate-of-return guarantees investment but causes over-capitalisation via the Averch-Johnson effect.",
+          "realExample": {
+            "text": "Ofwat regulates English and Welsh water companies using an RPI–X framework, setting price caps every five years. This forces monopoly water suppliers to find efficiency savings rather than simply passing costs on to bill-payers.",
+            "emoji": "🚰"
+          },
+          "misconception": "Students say RPI–X means prices always fall. Wrong — prices can still rise if inflation exceeds X; what falls is the real (inflation-adjusted) price. Instead write: RPI–X ensures prices fall in real terms, but nominal prices may still increase when inflation is higher than the efficiency factor."
+        },
+        {
+          "id": "privatisation-nationalisation",
+          "body": [
+            {
+              "text": "**Privatisation** transfers state-owned enterprises to private ownership. The theoretical benefits are clear: the **profit motive** drives cost-cutting, **share price discipline** punishes inefficiency, and access to private capital markets funds investment without burdening taxpayers.",
+              "type": "paragraph"
+            },
+            {
+              "text": "However, privatising a **natural monopoly** simply replaces a public monopoly with a private one. Without regulation, the private firm will charge monopoly prices and restrict output. This is why privatisation in utilities was always accompanied by the creation of regulators like Ofgem, Ofwat, and Ofcom.",
+              "type": "paragraph"
+            },
+            {
+              "text": "**Nationalisation** pursues social objectives — universal service, cross-subsidisation, and long-term investment. The risk is **X-inefficiency**: without competitive pressure or the threat of takeover, costs drift upwards and productivity stagnates. The debate ultimately turns on whether government failure or market failure causes greater welfare loss.",
+              "type": "paragraph"
+            }
+          ],
+          "title": "Privatisation and Nationalisation",
+          "keyIdea": "Privatisation introduces profit incentives and capital market discipline, but a natural monopoly simply becomes a private monopoly without effective regulation — ownership alone does not guarantee efficiency.",
+          "examMatters": "This is a classic 25-mark essay topic. Structure your answer around: allocative efficiency (pricing), productive efficiency (costs), dynamic efficiency (investment), and equity (access and affordability). Evaluate whether the outcome depends more on ownership or on the competitive/regulatory environment.",
+          "realExample": {
+            "text": "British Rail was privatised between 1994 and 1997. Some franchises saw improved services and higher passenger numbers, but fragmentation of the network between track (Railtrack) and operators created coordination failures and contributed to safety concerns.",
+            "emoji": "🚂"
+          },
+          "misconception": "Students assume privatisation always improves efficiency. Wrong — in natural monopolies, private ownership without regulation can worsen outcomes by adding a profit extraction layer on top of monopoly power. Instead write: privatisation improves efficiency only when combined with effective competition or regulation; ownership change alone is insufficient."
+        }
+      ],
+      "takeaway": [
+        "RPI–X forces firms to cut costs in real terms, unlike rate-of-return regulation which causes the Averch-Johnson effect.",
+        "Setting X too high risks under-investment; too low allows excessive profits — information asymmetry is the core problem.",
+        "Privatisation works best with competition or strong regulation; without either, it creates private monopoly.",
+        "The privatisation vs nationalisation debate hinges on whether government failure or market failure is the greater risk."
+      ]
+    },
+    {
+      "title": "Government Failure and Minimum Wages",
+      "sections": [
+        {
+          "id": "government-failure-intervention",
+          "body": [
+            {
+              "text": "**Government failure** arises when state intervention leads to a net welfare loss — the policy creates more distortion than the market failure it was meant to correct. Four key causes: **regulatory capture** (the regulator starts serving the industry it oversees), **information asymmetry** (government lacks the data to set optimal policy), **unintended consequences** (policies produce outcomes nobody predicted), and **political short-termism** (politicians favour policies with visible short-run benefits over long-run efficiency).",
+              "type": "paragraph"
+            },
+            {
+              "text": "Regulatory capture is particularly dangerous because it is invisible. When former industry executives staff the regulator, or when the regulator depends on the industry for data and expertise, policies subtly shift to protect incumbents rather than consumers.",
+              "type": "paragraph"
+            },
+            {
+              "text": "The existence of government failure does not mean governments should never intervene — it means intervention must be carefully designed, monitored, and evaluated. The relevant comparison is not 'perfect government vs imperfect market' but 'imperfect government vs imperfect market'.",
+              "type": "paragraph"
+            },
+            {
+              "type": "flow",
+              "steps": [
+                "Market failure identified",
+                "Government intervenes with policy",
+                "Unintended consequences emerge",
+                "Net welfare may fall below pre-intervention level"
+              ],
+              "result": "Government failure — the intervention made things worse, not better",
+              "resultType": "bad"
+            }
+          ],
+          "title": "Government Failure in Intervention",
+          "keyIdea": "Government failure occurs when intervention creates a worse outcome than the market failure it was designed to fix — the cure can be worse than the disease.",
+          "examMatters": "Government failure is the strongest evaluation tool in any essay about policy. After explaining how a policy corrects market failure, always consider: could regulatory capture, information problems, or unintended consequences make the outcome worse? This turns a one-sided answer into a balanced evaluation.",
+          "realExample": {
+            "text": "UK rent controls in the 1970s were intended to keep housing affordable, but landlords withdrew properties from the market because rents could not cover costs. The policy reduced housing supply, worsening the very shortage it was designed to fix.",
+            "emoji": "🏠"
+          },
+          "misconception": "Students treat government failure as proof that markets should be left alone. Wrong — market failure still exists and still causes welfare loss. Instead write: government failure means we should compare the costs of intervention against the costs of inaction, not assume either is automatically better."
+        },
+        {
+          "id": "minimum-wage-intervention",
+          "body": [
+            {
+              "text": "In the **competitive labour market model**, a minimum wage set above the equilibrium wage creates a surplus of labour — more workers want jobs at the higher wage than firms want to hire. The result is **unemployment** equal to the gap between labour supplied and labour demanded at the minimum wage.",
+              "type": "paragraph"
+            },
+            {
+              "text": "In a **monopsony labour market**, the outcome reverses. A single dominant employer (or a few large employers acting similarly) restricts hiring below the competitive level to keep wages down. A minimum wage set between the monopsony wage and the competitive wage **eliminates the firm's incentive to restrict hiring**. The wage floor acts like a perfectly elastic labour supply curve up to a point, so the firm hires more workers at the mandated wage.",
+              "type": "paragraph"
+            },
+            {
+              "text": "The real-world effect therefore depends on **market structure**. If low-wage labour markets exhibit monopsony power — as empirical evidence increasingly suggests — minimum wages can raise pay without significant job losses. The policy conclusion flips depending on which model applies.",
+              "type": "paragraph"
+            },
+            {
+              "type": "flow",
+              "steps": [
+                "Government sets minimum wage above equilibrium",
+                "Competitive market: quantity demanded falls → unemployment",
+                "Monopsony market: firm no longer restricts hiring → employment rises",
+                "Net effect depends on degree of employer market power"
+              ],
+              "result": "Employment outcome is an empirical question — market structure determines the answer",
+              "resultType": "neutral"
+            }
+          ],
+          "title": "Minimum Wage as Intervention",
+          "keyIdea": "In a competitive labour market a minimum wage above equilibrium causes unemployment, but in a monopsony market it can raise both wages AND employment — the effect depends entirely on market structure.",
+          "examMatters": "Examiners love this topic because it tests whether you can apply two different models to the same policy and reach different conclusions. Always draw both diagrams — competitive and monopsony — and conclude that the net effect is an empirical question. This demonstrates the highest-level evaluation skill.",
+          "realExample": {
+            "text": "The UK National Living Wage has been raised repeatedly since its introduction in 2016. Empirical studies by the Low Pay Commission consistently find minimal negative employment effects, suggesting significant monopsony power exists in low-wage UK labour markets.",
+            "emoji": "💷"
+          },
+          "misconception": "Students always draw the competitive model and conclude minimum wages cause unemployment. Wrong — this ignores monopsony, which is the more realistic model for many low-wage labour markets. Instead write: the employment effect depends on market structure; in monopsony markets, a minimum wage can increase both wages and employment simultaneously."
+        }
+      ],
+      "takeaway": [
+        "Government failure occurs when intervention creates worse outcomes than the market failure it targets.",
+        "Regulatory capture, information asymmetry, and unintended consequences are the main causes of government failure.",
+        "Minimum wages cause unemployment in competitive markets but can raise employment in monopsony markets.",
+        "The real-world employment effect of minimum wages depends on market structure — empirical evidence suggests monopsony power is significant in low-wage sectors."
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "flow": {
+        "steps": [
+          "Identify market power or anti-competitive behaviour",
+          "CMA investigates",
+          "Remedies: block, divest, fine, or regulate"
+        ],
+        "result": "More competitive markets with lower prices and greater choice for consumers",
+        "resultType": "good"
+      },
+      "meta": "5 concepts",
+      "title": "Competition Policy",
+      "blocks": [
+        {
+          "items": [
+            {
+              "tag": "exam",
+              "text": "<strong>Competition policy</strong> — government laws and regulations designed to promote competition, prevent monopoly abuse, and protect consumer welfare.",
+              "type": "def"
+            },
+            {
+              "text": "<strong>CMA (Competition and Markets Authority)</strong> — the UK regulator responsible for investigating mergers, anti-competitive behaviour, and market failures.",
+              "type": "def"
+            },
+            {
+              "text": "<strong>Substantial lessening of competition (SLC)</strong> — the legal test used by the CMA to decide whether a merger should be blocked or approved with conditions.",
+              "type": "def"
+            }
+          ],
+          "title": "DEFINITIONS"
+        },
+        {
+          "items": [
+            {
+              "text": "Merger control: the CMA investigates whether proposed mergers would <strong>substantially lessen competition</strong> and may block them, approve them, or require the firm to sell off parts of the business.",
+              "type": "mech"
+            },
+            {
+              "text": "Anti-cartel enforcement: <strong>leniency programs</strong> offer reduced penalties to the first firm that reports a cartel, exploiting the prisoner's dilemma to break collusive agreements.",
+              "type": "mech"
+            },
+            {
+              "text": "Market investigations: the CMA can investigate entire markets where competition appears weak and impose <strong>remedies</strong> such as price caps, divestment, or behavioural rules.",
+              "type": "mech"
+            },
+            {
+              "tag": "exam",
+              "text": "Competition policy involves a trade-off: too much intervention discourages investment and risk-taking; too little allows monopoly abuse and consumer harm.",
+              "type": "imp"
+            }
+          ],
+          "title": "TOOLS AND EVALUATION"
+        }
+      ],
+      "keyIdea": "Competition policy aims to promote competitive markets and prevent the abuse of market power, using a toolkit that ranges from blocking mergers to fining cartels and breaking up dominant firms.",
+      "takeaway": [
+        "Competition policy: merger control, anti-cartel enforcement, market investigations.",
+        "CMA uses the 'substantial lessening of competition' test for mergers.",
+        "Trade-off: promoting competition vs preserving incentives for innovation."
+      ],
+      "examMatters": "Examiners expect you to evaluate competition policy by weighing the benefits (lower prices, more choice) against the costs (regulatory burden, risk of discouraging innovation). Use the efficiency framework: does the policy improve allocative efficiency without damaging dynamic efficiency?",
+      "misconception": "Students assume competition policy always makes markets more efficient. Wrong because regulation has costs (compliance, bureaucracy) and may discourage risk-taking if firms fear being penalised for success. Instead write: effective competition policy targets genuine abuse while preserving incentives for innovation and growth."
+    },
+    {
+      "flow": {
+        "steps": [
+          "Natural monopoly identified",
+          "Regulator sets RPI – X price cap",
+          "Firm has incentive to cut costs below X"
+        ],
+        "result": "Prices fall in real terms while the firm can still earn profit if it becomes more efficient",
+        "resultType": "good"
+      },
+      "meta": "5 concepts",
+      "title": "Regulation of Monopoly",
+      "blocks": [
+        {
+          "items": [
+            {
+              "tag": "exam",
+              "text": "<strong>Price cap regulation (RPI – X)</strong> — prices can rise by inflation minus an efficiency factor X, forcing the firm to cut costs each year to maintain profits.",
+              "type": "def"
+            },
+            {
+              "text": "<strong>Rate of return regulation</strong> — the firm is allowed to earn a 'fair' rate of return on its capital; used more commonly in the US.",
+              "type": "def"
+            },
+            {
+              "text": "<strong>Quality regulation</strong> — regulators set minimum service standards to prevent firms from cutting costs at the expense of quality.",
+              "type": "def"
+            }
+          ],
+          "title": "REGULATORY APPROACHES"
+        },
+        {
+          "items": [
+            {
+              "text": "RPI – X gives firms an <strong>incentive to cut costs</strong> below the target because they keep the extra profit — this promotes productive efficiency.",
+              "type": "mech"
+            },
+            {
+              "text": "Rate of return regulation creates an incentive to <strong>over-invest in capital</strong> (the Averch-Johnson effect) because a larger capital base allows higher absolute profits.",
+              "type": "mech"
+            },
+            {
+              "tag": "exam",
+              "text": "Setting X correctly requires <strong>asymmetric information</strong>: the regulator knows less about costs than the firm, creating a risk of regulatory capture or inefficient targets.",
+              "type": "imp"
+            },
+            {
+              "text": "Regulation links to government failure: if the regulator is captured by the industry or sets X too low, the firm earns supernormal profit at consumers' expense.",
+              "type": "link"
+            }
+          ],
+          "title": "EVALUATION"
+        }
+      ],
+      "keyIdea": "When breaking up a monopoly is impractical (especially natural monopolies), regulators use price caps and profit controls to mimic competitive outcomes without destroying economies of scale.",
+      "takeaway": [
+        "RPI – X caps price rises and incentivises cost-cutting; rate of return risks over-investment.",
+        "Information asymmetry and regulatory capture are key problems for regulators.",
+        "Regulation is second-best — better than no intervention, but imperfect."
+      ],
+      "examMatters": "Examiners expect you to compare RPI – X with rate of return regulation. RPI – X promotes cost-cutting; rate of return promotes over-investment. Always mention the information asymmetry problem — the regulator cannot perfectly observe costs.",
+      "misconception": "Students think regulation always works. Wrong because regulators face information asymmetry, regulatory capture (becoming too close to the industry), and the difficulty of setting the right level of X. Instead write: regulation is a second-best solution — it improves on unregulated monopoly but cannot perfectly replicate competitive outcomes."
+    },
+    {
+      "flow": {
+        "steps": [
+          "State-owned firm may be X-inefficient",
+          "Privatisation introduces profit motive",
+          "But natural monopoly may need regulation"
+        ],
+        "result": "Privatisation improves efficiency only if accompanied by competition or regulation",
+        "resultType": "neutral"
+      },
+      "meta": "5 concepts",
+      "title": "Privatisation and Nationalisation",
+      "blocks": [
+        {
+          "items": [
+            {
+              "tag": "exam",
+              "text": "<strong>Privatisation</strong> — transferring ownership of a state-owned enterprise to the private sector, typically through a share sale.",
+              "type": "def"
+            },
+            {
+              "text": "<strong>Nationalisation</strong> — transferring ownership of a private firm to the state, often for strategic industries (energy, rail, healthcare).",
+              "type": "def"
+            }
+          ],
+          "title": "DEFINITIONS"
+        },
+        {
+          "items": [
+            {
+              "text": "Private owners face <strong>profit incentive</strong> to cut costs, innovate, and respond to consumer demand — reducing X-inefficiency.",
+              "type": "mech"
+            },
+            {
+              "text": "Share prices act as a <strong>discipline mechanism</strong>: poor performance leads to falling share price and potential takeover.",
+              "type": "mech"
+            },
+            {
+              "text": "Privatisation reduces government borrowing needs and may generate a <strong>one-off revenue windfall</strong> from the share sale.",
+              "type": "mech"
+            }
+          ],
+          "title": "ARGUMENTS FOR PRIVATISATION"
+        },
+        {
+          "items": [
+            {
+              "text": "Natural monopolies may simply become <strong>private monopolies</strong> without competition, requiring ongoing regulation to prevent abuse.",
+              "type": "mech"
+            },
+            {
+              "text": "Private firms may <strong>cherry-pick</strong> profitable services and abandon unprofitable ones that serve a social purpose (e.g. rural bus routes).",
+              "type": "mech"
+            },
+            {
+              "tag": "exam",
+              "text": "The case for privatisation depends on whether effective competition or regulation exists to discipline the private firm — without it, privatisation may just transfer monopoly power from public to private hands.",
+              "type": "imp"
+            },
+            {
+              "text": "This debate links to contestability: privatisation works best when the market is contestable; if barriers to entry remain high, regulation must substitute for competition.",
+              "type": "link"
+            }
+          ],
+          "title": "ARGUMENTS AGAINST PRIVATISATION"
+        }
+      ],
+      "keyIdea": "The debate between public and private ownership is ultimately about incentives — private firms face competitive pressure and profit motive, while state-owned firms pursue social objectives but may lack efficiency incentives.",
+      "takeaway": [
+        "Privatisation: profit motive + share price discipline → potential efficiency gains.",
+        "Nationalisation: social objectives + universal provision, but X-inefficiency risk.",
+        "Privatisation without competition or regulation just creates a private monopoly."
+      ],
+      "examMatters": "Examiners want balanced evaluation: acknowledge that privatisation can improve efficiency through the profit motive, but only if there is competition or effective regulation. Use the concept of X-inefficiency and natural monopoly to structure your argument.",
+      "misconception": "Students assume privatisation always increases efficiency. Wrong because if a state monopoly becomes a private monopoly without effective regulation, consumers may face higher prices and lower quality. Instead write: privatisation improves efficiency when there is competition or effective regulation to discipline the firm; without these, it may simply transfer monopoly rents to private shareholders."
+    },
+    {
+      "flow": {
+        "steps": [
+          "Market failure identified",
+          "Government intervenes",
+          "Intervention creates unintended consequences or regulatory capture"
+        ],
+        "result": "Net welfare may fall — government failure can be worse than market failure",
+        "resultType": "bad"
+      },
+      "meta": "4 concepts",
+      "title": "Government Failure in Intervention",
+      "blocks": [
+        {
+          "items": [
+            {
+              "tag": "exam",
+              "text": "<strong>Government failure</strong> — when intervention leads to a net welfare loss, making the outcome worse than the original market failure it was trying to correct.",
+              "type": "def"
+            },
+            {
+              "text": "<strong>Regulatory capture</strong> — regulators become too sympathetic to the industry they regulate, setting rules that protect incumbent firms rather than consumers.",
+              "type": "mech"
+            },
+            {
+              "text": "<strong>Information failure</strong> — the government lacks the information needed to set optimal prices, output levels, or efficiency targets.",
+              "type": "mech"
+            },
+            {
+              "text": "<strong>Unintended consequences</strong> — policies may create perverse incentives; e.g. rent controls intended to help tenants can reduce housing supply.",
+              "type": "mech"
+            }
+          ],
+          "title": "TYPES OF GOVERNMENT FAILURE"
+        },
+        {
+          "items": [
+            {
+              "tag": "exam",
+              "text": "The existence of market failure does not automatically justify intervention — the cure may be worse than the disease if government failure is severe.",
+              "type": "imp"
+            },
+            {
+              "text": "Political short-termism means governments may favour policies that win votes today over policies that maximise long-term welfare.",
+              "type": "mech"
+            },
+            {
+              "text": "Government failure links to Unit 1's analysis of intervention (taxes, subsidies, price controls) — always ask: could the intervention make things worse?",
+              "type": "link"
+            }
+          ],
+          "title": "EVALUATION"
+        }
+      ],
+      "keyIdea": "Government intervention to correct market failure can itself fail — through regulatory capture, information problems, unintended consequences, and political short-termism.",
+      "takeaway": [
+        "Government failure: intervention makes things worse through capture, info gaps, or perverse incentives.",
+        "The cure can be worse than the disease — always evaluate both sides.",
+        "Best answers weigh market failure costs against government failure costs."
+      ],
+      "examMatters": "Examiners reward you for evaluating government intervention by considering government failure. Always weigh the costs of market failure against the costs of government failure. The best answers conclude with 'it depends' on the quality of information, regulatory design, and political incentives.",
+      "misconception": "Students assume government intervention always corrects market failure. Wrong because intervention faces its own problems: asymmetric information, regulatory capture, and political incentives. Instead write: intervention improves welfare only if the costs of government failure are less than the costs of the original market failure."
+    },
+    {
+      "flow": {
+        "steps": [
+          "Government sets NMW above equilibrium",
+          "Competitive market: surplus of labour (unemployment)",
+          "Monopsony: wage and employment can both rise"
+        ],
+        "result": "Employment effect depends on the structure of the labour market",
+        "resultType": "neutral"
+      },
+      "meta": "4 concepts",
+      "title": "Minimum Wage as Labour Market Intervention",
+      "blocks": [
+        {
+          "items": [
+            {
+              "tag": "exam",
+              "text": "<strong>National minimum wage (NMW)</strong> — a legally enforced floor price for labour, set above the market equilibrium to protect low-paid workers.",
+              "type": "def"
+            }
+          ],
+          "title": "DEFINITION"
+        },
+        {
+          "items": [
+            {
+              "text": "In a <strong>competitive labour market</strong>, a minimum wage above equilibrium creates a surplus of labour (unemployment) because quantity supplied exceeds quantity demanded.",
+              "type": "mech"
+            },
+            {
+              "text": "The extent of unemployment depends on the <strong>elasticity of demand for labour</strong>: if demand is inelastic (few substitutes for workers), unemployment is small.",
+              "type": "mech"
+            }
+          ],
+          "title": "COMPETITIVE MARKET ANALYSIS"
+        },
+        {
+          "items": [
+            {
+              "tag": "exam",
+              "text": "In a <strong>monopsony</strong>, the minimum wage can increase both wages and employment by eliminating the firm's incentive to restrict hiring.",
+              "type": "mech"
+            },
+            {
+              "text": "The minimum wage effectively becomes the new MCL (flat up to the minimum, then jumps to the original MCL), causing the firm to hire more workers at the higher wage.",
+              "type": "mech"
+            },
+            {
+              "text": "This is a key evaluation point for any minimum wage question: the employment effect depends on market structure, and most low-wage labour markets have some degree of monopsony power.",
+              "type": "link"
+            }
+          ],
+          "title": "MONOPSONY MARKET ANALYSIS"
+        }
+      ],
+      "keyIdea": "The minimum wage is one of the most debated interventions in economics — its effect on employment depends entirely on the structure of the labour market it is applied to.",
+      "takeaway": [
+        "Minimum wage above equilibrium → unemployment in competitive markets.",
+        "In monopsony: minimum wage can increase both wages and employment.",
+        "Always state which market model you are using — this is essential for evaluation marks."
+      ],
+      "examMatters": "Examiners always reward you for distinguishing between the competitive and monopsony models when evaluating minimum wages. Draw both diagrams and explain why the outcomes differ. The best answers consider which model is more realistic for low-paid labour markets.",
+      "misconception": "Students say minimum wages always cause unemployment. Wrong because in monopsony markets they can increase employment. Instead write: the employment effect of a minimum wage depends on market structure — it causes unemployment in competitive markets but can increase employment in monopsony markets."
+    }
+  ],
+  "diagrams": [
+    {
+      "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:transparent\">\n  <defs>\n    <marker id=\"gi1\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"20\" x2=\"70\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"70\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"70\" y1=\"20\" x2=\"70\" y2=\"15\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#gi1)\"/>\n  <line x1=\"470\" y1=\"300\" x2=\"475\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#gi1)\"/>\n  <text x=\"30\" y=\"170\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"14\" text-anchor=\"middle\" transform=\"rotate(-90,30,170)\">Price / Cost</text>\n  <text x=\"270\" y=\"335\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"14\" text-anchor=\"middle\">Quantity (Q)</text>\n\n  <!-- MC curve (upward sloping from bottom-left) -->\n  <path d=\"M100,280 Q200,260 270,200 Q340,140 420,60\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"428\" y=\"55\" fill=\"#ef4444\" font-family=\"DM Sans, sans-serif\" font-size=\"13\" font-weight=\"bold\">MC</text>\n\n  <!-- AC curve (U-shape) -->\n  <path d=\"M110,180 Q200,120 260,115 Q330,115 420,150\" stroke=\"#e8ecf5\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5,4\" opacity=\"0.6\"/>\n  <text x=\"428\" y=\"148\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"12\" opacity=\"0.6\">AC</text>\n\n  <!-- AR (Demand) curve -->\n  <line x1=\"100\" y1=\"60\" x2=\"440\" y2=\"280\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"448\" y=\"284\" fill=\"#3b82f6\" font-family=\"DM Sans, sans-serif\" font-size=\"13\" font-weight=\"bold\">AR=D</text>\n\n  <!-- MR curve (twice the slope) -->\n  <line x1=\"100\" y1=\"60\" x2=\"270\" y2=\"280\" stroke=\"#3b82f6\" stroke-width=\"2\" stroke-dasharray=\"6,4\" opacity=\"0.6\"/>\n  <text x=\"275\" y=\"290\" fill=\"#3b82f6\" font-family=\"DM Sans, sans-serif\" font-size=\"12\" opacity=\"0.6\">MR</text>\n\n  <!-- Monopoly equilibrium: MC=MR at Qm, price at Pm on AR -->\n  <circle cx=\"200\" cy=\"226\" r=\"3\" fill=\"#ef4444\" opacity=\"0.5\"/>\n  <line x1=\"200\" y1=\"226\" x2=\"200\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"3,4\" opacity=\"0.3\"/>\n  <line x1=\"200\" y1=\"120\" x2=\"200\" y2=\"226\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"3,4\" opacity=\"0.3\"/>\n  <line x1=\"70\" y1=\"120\" x2=\"200\" y2=\"120\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"3,4\" opacity=\"0.3\"/>\n  <circle cx=\"200\" cy=\"120\" r=\"4\" fill=\"#ef4444\"/>\n  <text x=\"200\" y=\"315\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.5\">Qm</text>\n  <text x=\"55\" y=\"124\" fill=\"#ef4444\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" text-anchor=\"end\">Pm</text>\n\n  <!-- Regulated price line (below Pm, above AC) -->\n  <line x1=\"70\" y1=\"170\" x2=\"400\" y2=\"170\" stroke=\"#059669\" stroke-width=\"2.5\" stroke-dasharray=\"8,4\"/>\n  <text x=\"408\" y=\"167\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"12\" font-weight=\"bold\">Preg</text>\n\n  <!-- Regulated output Qreg where Preg meets AR -->\n  <circle cx=\"268\" cy=\"170\" r=\"5\" fill=\"#059669\"/>\n  <line x1=\"268\" y1=\"170\" x2=\"268\" y2=\"300\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"5,4\"/>\n  <text x=\"268\" y=\"315\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" text-anchor=\"middle\">Qreg</text>\n\n  <!-- Supernormal profit area reduced -->\n  <rect x=\"200\" y=\"120\" width=\"0\" height=\"0\" fill=\"none\"/>\n\n  <!-- Arrow showing price reduction -->\n  <line x1=\"62\" y1=\"130\" x2=\"62\" y2=\"162\" stroke=\"#059669\" stroke-width=\"2\"/>\n  <polygon points=\"58,162 66,162 62,170\" fill=\"#059669\"/>\n\n  <!-- Arrow showing output increase -->\n  <line x1=\"210\" y1=\"292\" x2=\"256\" y2=\"292\" stroke=\"#059669\" stroke-width=\"2\"/>\n  <polygon points=\"256,288 256,296 264,292\" fill=\"#059669\"/>\n\n  <!-- Labels -->\n  <text x=\"55\" y=\"174\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"10\" text-anchor=\"end\">Preg</text>\n  <text x=\"160\" y=\"80\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" opacity=\"0.7\">Monopoly: MC=MR</text>\n  <text x=\"300\" y=\"210\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"11\">Price cap forces</text>\n  <text x=\"300\" y=\"224\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"11\">lower P, higher Q</text>\n</svg>",
+      "title": "Price Regulation of a Monopoly (RPI-X Price Cap)",
+      "checklist": [
+        "MC and AC curves drawn for the monopolist",
+        "AR (demand) and MR curves shown — MR has twice the slope of AR",
+        "Monopoly profit-maximising output at MC=MR, price read from AR curve (Pm, Qm)",
+        "Regulated price (Preg) shown as horizontal dashed line BELOW Pm",
+        "Regulated output (Qreg) shown where Preg intersects AR — output increases",
+        "Arrows indicate: price falls from Pm to Preg, output rises from Qm to Qreg",
+        "Note: price cap ideally set where MC meets AR (allocative efficiency: P=MC)"
+      ],
+      "description": "Shows how a price cap set below the monopoly profit-maximising price can increase output and reduce price, moving the market towards a more allocatively efficient outcome. The regulated price forces the monopolist to lower price from Pm to Preg, increasing output from Qm to Qreg."
+    },
+    {
+      "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:transparent\">\n  <defs>\n    <marker id=\"gi2\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"20\" x2=\"70\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"70\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"70\" y1=\"20\" x2=\"70\" y2=\"15\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#gi2)\"/>\n  <line x1=\"470\" y1=\"300\" x2=\"475\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#gi2)\"/>\n  <text x=\"28\" y=\"170\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"13\" text-anchor=\"middle\" transform=\"rotate(-90,28,170)\">Wage Rate (W)</text>\n  <text x=\"270\" y=\"335\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"14\" text-anchor=\"middle\">Quantity of Labour (L)</text>\n\n  <!-- ACL = SL (labour supply / average cost of labour) -->\n  <line x1=\"100\" y1=\"270\" x2=\"420\" y2=\"80\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"415\" y=\"70\" fill=\"#3b82f6\" font-family=\"DM Sans, sans-serif\" font-size=\"12\" font-weight=\"bold\">ACL = SL</text>\n\n  <!-- MCL (marginal cost of labour — steeper than ACL) -->\n  <line x1=\"100\" y1=\"240\" x2=\"300\" y2=\"40\" stroke=\"#ef4444\" stroke-width=\"2.5\"/>\n  <text x=\"305\" y=\"38\" fill=\"#ef4444\" font-family=\"DM Sans, sans-serif\" font-size=\"12\" font-weight=\"bold\">MCL</text>\n\n  <!-- MRPL = DL (demand for labour) -->\n  <line x1=\"100\" y1=\"60\" x2=\"420\" y2=\"260\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"425\" y=\"264\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"12\" font-weight=\"bold\">MRPL=DL</text>\n\n  <!-- Monopsony equilibrium: MCL = MRPL determines Lm -->\n  <circle cx=\"198\" cy=\"142\" r=\"3\" fill=\"#ef4444\" opacity=\"0.6\"/>\n  <line x1=\"198\" y1=\"142\" x2=\"198\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"3,4\" opacity=\"0.3\"/>\n  <text x=\"198\" y=\"315\" fill=\"#ef4444\" font-family=\"DM Sans, sans-serif\" font-size=\"10\" text-anchor=\"middle\">Lm</text>\n\n  <!-- Monopsony wage: read from ACL at Lm -->\n  <circle cx=\"198\" cy=\"208\" r=\"4\" fill=\"#ef4444\"/>\n  <line x1=\"70\" y1=\"208\" x2=\"198\" y2=\"208\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"5,4\"/>\n  <text x=\"55\" y=\"212\" fill=\"#ef4444\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" text-anchor=\"end\">Wm</text>\n\n  <!-- Competitive equilibrium where ACL = MRPL -->\n  <circle cx=\"268\" cy=\"163\" r=\"4\" fill=\"#e8ecf5\" opacity=\"0.5\"/>\n  <text x=\"275\" y=\"156\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"10\" opacity=\"0.6\">Competitive eq.</text>\n\n  <!-- Minimum wage line at competitive level (Wmin) -->\n  <line x1=\"70\" y1=\"163\" x2=\"400\" y2=\"163\" stroke=\"#059669\" stroke-width=\"2.5\" stroke-dasharray=\"8,4\"/>\n  <text x=\"408\" y=\"160\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"12\" font-weight=\"bold\">Wmin</text>\n  <text x=\"55\" y=\"167\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" text-anchor=\"end\">Wmin</text>\n\n  <!-- New employment at Lmin (where Wmin = MRPL) -->\n  <circle cx=\"268\" cy=\"163\" r=\"5\" fill=\"#059669\"/>\n  <line x1=\"268\" y1=\"163\" x2=\"268\" y2=\"300\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"5,4\"/>\n  <text x=\"268\" y=\"315\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" text-anchor=\"middle\">Lmin</text>\n\n  <!-- Arrow: wage rises from Wm to Wmin -->\n  <line x1=\"62\" y1=\"202\" x2=\"62\" y2=\"172\" stroke=\"#059669\" stroke-width=\"2\"/>\n  <polygon points=\"58,172 66,172 62,164\" fill=\"#059669\"/>\n\n  <!-- Arrow: employment rises from Lm to Lmin -->\n  <line x1=\"206\" y1=\"292\" x2=\"258\" y2=\"292\" stroke=\"#059669\" stroke-width=\"2\"/>\n  <polygon points=\"258,288 258,296 266,292\" fill=\"#059669\"/>\n\n  <!-- Labels for wage and employment increases -->\n  <text x=\"130\" y=\"45\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" opacity=\"0.7\">Monopsony: MCL=MRPL</text>\n  <text x=\"320\" y=\"240\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"10\">NMW raises W</text>\n  <text x=\"320\" y=\"254\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"10\">and L together</text>\n</svg>",
+      "title": "Minimum Wage in a Monopsony Labour Market",
+      "checklist": [
+        "ACL (= SL, labour supply) curve drawn upward-sloping",
+        "MCL curve drawn steeper and above ACL (diverges as monopsonist must raise wages for all workers to attract extra labour)",
+        "MRPL = DL (demand for labour) curve drawn downward-sloping",
+        "Monopsony equilibrium: MCL = MRPL determines Lm; wage read from ACL at Lm gives Wm (below competitive wage)",
+        "Minimum wage line (Wmin) drawn at competitive equilibrium level — horizontally",
+        "New employment at Lmin where Wmin = MRPL — both wages and employment rise",
+        "Arrows show wage increase (Wm to Wmin) and employment increase (Lm to Lmin)"
+      ],
+      "description": "Shows how a minimum wage set at the competitive equilibrium level in a monopsony labour market can increase both the wage and employment. The minimum wage flattens the MCL curve, removing the monopsonist's incentive to restrict hiring."
+    },
+    {
+      "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:transparent\">\n  <defs>\n    <marker id=\"gi3\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"20\" x2=\"70\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"70\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"70\" y1=\"20\" x2=\"70\" y2=\"15\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#gi3)\"/>\n  <line x1=\"470\" y1=\"300\" x2=\"475\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#gi3)\"/>\n  <text x=\"30\" y=\"170\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"14\" text-anchor=\"middle\" transform=\"rotate(-90,30,170)\">Price (P)</text>\n  <text x=\"270\" y=\"335\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"14\" text-anchor=\"middle\">Quantity (Q)</text>\n\n  <!-- Original supply S1 (state monopoly / pre-deregulation) -->\n  <line x1=\"120\" y1=\"270\" x2=\"430\" y2=\"55\" stroke=\"#ef4444\" stroke-width=\"2.5\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n  <text x=\"438\" y=\"50\" fill=\"#ef4444\" font-family=\"DM Sans, sans-serif\" font-size=\"13\" opacity=\"0.6\">S1</text>\n\n  <!-- New supply S2 (post-privatisation / deregulation — shifted right) -->\n  <line x1=\"180\" y1=\"270\" x2=\"450\" y2=\"80\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"455\" y=\"78\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"13\" font-weight=\"bold\">S2</text>\n\n  <!-- Demand curve D -->\n  <line x1=\"100\" y1=\"50\" x2=\"430\" y2=\"270\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"438\" y=\"275\" fill=\"#3b82f6\" font-family=\"DM Sans, sans-serif\" font-size=\"14\" font-weight=\"bold\">D</text>\n\n  <!-- Original equilibrium E1 (S1 = D) -->\n  <circle cx=\"260\" cy=\"150\" r=\"4\" fill=\"#ef4444\" opacity=\"0.5\"/>\n  <text x=\"250\" y=\"140\" fill=\"#ef4444\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" text-anchor=\"end\" opacity=\"0.7\">E1</text>\n  <line x1=\"70\" y1=\"150\" x2=\"260\" y2=\"150\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"3,4\" opacity=\"0.3\"/>\n  <line x1=\"260\" y1=\"150\" x2=\"260\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"3,4\" opacity=\"0.3\"/>\n  <text x=\"55\" y=\"154\" fill=\"#ef4444\" font-family=\"DM Sans, sans-serif\" font-size=\"10\" text-anchor=\"end\" opacity=\"0.6\">P1</text>\n  <text x=\"260\" y=\"315\" fill=\"#ef4444\" font-family=\"DM Sans, sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.6\">Q1</text>\n\n  <!-- New equilibrium E2 (S2 = D) -->\n  <circle cx=\"300\" cy=\"175\" r=\"5\" fill=\"#059669\"/>\n  <text x=\"312\" y=\"170\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" font-weight=\"bold\">E2</text>\n  <line x1=\"70\" y1=\"175\" x2=\"300\" y2=\"175\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"5,4\"/>\n  <line x1=\"300\" y1=\"175\" x2=\"300\" y2=\"300\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"5,4\"/>\n  <text x=\"55\" y=\"179\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" text-anchor=\"end\">P2</text>\n  <text x=\"300\" y=\"315\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" text-anchor=\"middle\">Q2</text>\n\n  <!-- Shift arrow from S1 to S2 -->\n  <line x1=\"290\" y1=\"110\" x2=\"330\" y2=\"110\" stroke=\"#059669\" stroke-width=\"2\"/>\n  <polygon points=\"330,106 330,114 338,110\" fill=\"#059669\"/>\n  <text x=\"310\" y=\"102\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"10\" text-anchor=\"middle\">Shift</text>\n\n  <!-- Arrow: price falls -->\n  <line x1=\"62\" y1=\"155\" x2=\"62\" y2=\"170\" stroke=\"#059669\" stroke-width=\"2\"/>\n  <polygon points=\"58,170 66,170 62,177\" fill=\"#059669\"/>\n\n  <!-- Arrow: quantity rises -->\n  <line x1=\"265\" y1=\"292\" x2=\"292\" y2=\"292\" stroke=\"#059669\" stroke-width=\"2\"/>\n  <polygon points=\"292,288 292,296 299,292\" fill=\"#059669\"/>\n\n  <!-- Annotation box -->\n  <rect x=\"110\" y=\"215\" width=\"200\" height=\"60\" rx=\"6\" fill=\"#059669\" opacity=\"0.1\" stroke=\"#059669\" stroke-width=\"1\"/>\n  <text x=\"120\" y=\"233\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"11\">Privatisation / Deregulation:</text>\n  <text x=\"120\" y=\"248\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"11\">New entry + efficiency gains</text>\n  <text x=\"120\" y=\"263\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"11\">shift S right: P falls, Q rises</text>\n</svg>",
+      "title": "Effects of Privatisation and Deregulation",
+      "checklist": [
+        "Original supply S1 drawn (representing state monopoly or pre-deregulation market)",
+        "New supply S2 drawn to the RIGHT of S1 (representing increased competition and efficiency)",
+        "Demand curve D unchanged",
+        "Original equilibrium E1 at S1=D with P1 and Q1 marked",
+        "New equilibrium E2 at S2=D with P2 (lower) and Q2 (higher) marked",
+        "Shift arrow from S1 to S2 labelled",
+        "Annotation: new entry and efficiency gains shift supply right, reducing price and increasing output"
+      ],
+      "description": "Shows how privatisation/deregulation can shift the supply curve rightward as new firms enter and efficiency improves, leading to lower prices and higher output for consumers."
+    }
+  ],
+  "flashcards": [
+    {
+      "back": "Government regulation to promote <strong>competition and prevent abuse of market power</strong>. Includes preventing monopolies, blocking anti-competitive mergers, and banning cartels.",
+      "front": "What is competition policy?"
+    },
+    {
+      "back": "The <strong>Competition and Markets Authority</strong> investigates mergers, enforces competition law, and protects consumers from anti-competitive practices in the UK.",
+      "front": "What is the role of the CMA?"
+    },
+    {
+      "back": "Transferring ownership of a business or industry from the <strong>public sector to the private sector</strong>. Aims to improve efficiency through competition and profit incentives.",
+      "front": "What is privatisation?"
+    },
+    {
+      "back": "Transferring ownership from the <strong>private sector to the government</strong>. Justified when natural monopolies need regulation or essential services should not be run for profit.",
+      "front": "What is nationalisation?"
+    },
+    {
+      "back": "Removing or reducing <strong>government regulations</strong> to encourage competition and new market entrants. Aims to lower prices and increase efficiency but may reduce standards.",
+      "front": "What is deregulation?"
+    },
+    {
+      "back": "Government controls on firms with <strong>natural monopoly power</strong> — e.g., price caps (RPI – X), quality standards, and investment requirements. Prevents exploitation while maintaining efficiency.",
+      "front": "What is regulation of natural monopolies?"
+    },
+    {
+      "back": "Limits price rises to <strong>inflation minus an efficiency factor</strong>. E.g., RPI – 3% means prices can rise 3% less than inflation. Forces firms to cut costs and improve efficiency.",
+      "front": "What is an RPI – X price cap?"
+    },
+    {
+      "back": "<strong>Profit motive improves efficiency</strong>, competition drives innovation, reduces government spending, and share ownership gives public a stake. May also reduce political interference.",
+      "front": "What are the arguments for privatisation?"
+    },
+    {
+      "back": "Natural monopolies may exploit consumers, <strong>short-termism</strong> (cutting investment for quick profits), potential job losses, and essential services may become unaffordable.",
+      "front": "What are the arguments against privatisation?"
+    },
+    {
+      "back": "When two firms <strong>combine to form a new entity</strong>. May be investigated by the CMA if it could substantially lessen competition — blocked if anti-competitive effects outweigh benefits.",
+      "front": "What is a merger?"
+    },
+    {
+      "back": "Setting prices <strong>below cost to drive competitors out</strong>, then raising prices once rivals have exited. Anti-competitive and illegal. Requires deep pockets to sustain losses.",
+      "front": "What is predatory pricing?"
+    },
+    {
+      "back": "Agreements between firms that <strong>restrict competition</strong> — e.g., price fixing, market sharing, bid rigging, exclusive dealing. Illegal under competition law.",
+      "front": "What are restrictive practices?"
+    },
+    {
+      "back": "Government payments to new entrants or smaller firms to help them <strong>compete with dominant incumbents</strong>. Lowers barriers to entry and increases contestability.",
+      "front": "What is a subsidy to encourage competition?"
+    },
+    {
+      "back": "The <strong>loss of consumer and producer surplus</strong> because a monopoly produces less and charges more than the competitive outcome. Resources are misallocated — allocative inefficiency.",
+      "front": "What is the deadweight loss from monopoly?"
+    },
+    {
+      "back": "Efficiency over time — achieved when firms <strong>invest in innovation</strong> and new technology. Monopolies may be dynamically efficient if they reinvest supernormal profits in R&D.",
+      "front": "What is dynamic efficiency?"
+    },
+    {
+      "back": "Supernormal profit funds <strong>R&D and innovation</strong> (dynamic efficiency), economies of scale reduce costs, and <strong>cross-subsidisation</strong> can maintain unprofitable but socially valuable services.",
+      "front": "Why might monopolies be beneficial?"
+    },
+    {
+      "back": "The idea that <strong>consumers determine what is produced</strong> through their spending decisions. Works well in competitive markets but is undermined by monopoly power and advertising.",
+      "front": "What is consumer sovereignty?"
+    },
+    {
+      "back": "A market where potential entry disciplines existing firms. Even a monopolist may behave competitively if <strong>barriers to entry are low and sunk costs are minimal</strong>.",
+      "front": "What is a contestable market?"
+    }
+  ],
+  "quiz": [
+    {
+      "options": [
+        "3%",
+        "4%",
+        "1%",
+        "7%"
+      ],
+      "question": "Under the RPI-X price regulation formula, a firm subject to a cap of RPI - 3% when inflation is 4% can increase its prices by a maximum of:",
+      "explanation": "RPI-X means the firm can raise prices by the rate of inflation (RPI) minus the efficiency factor (X). If RPI = 4% and X = 3%, the maximum price increase is 4% - 3% = 1%. The X factor represents expected efficiency gains — any cost savings beyond X become extra profit for the firm. Option A confuses X with the permitted increase. Option D incorrectly adds rather than subtracts. Option B ignores the efficiency deduction entirely.",
+      "correctIndex": 2
+    },
+    {
+      "options": [
+        "Under-invest in capital to minimise costs",
+        "Over-invest in capital to inflate their permitted profit base",
+        "Charge prices below marginal cost",
+        "Voluntarily reduce their market share"
+      ],
+      "question": "The Averch-Johnson effect suggests that profit regulation (rate-of-return regulation) may lead firms to:",
+      "explanation": "Under rate-of-return regulation, the firm earns a permitted percentage return on its capital base. This creates a perverse incentive to over-invest in capital — by inflating the capital base, the firm increases its absolute permitted profit (since profit = rate x capital). This leads to productive inefficiency as the firm uses more capital than is efficient. Option A is the opposite of what occurs. Options C and D are not predictions of this model.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "Lower prices and improved consumer choice",
+        "A private monopoly that charges high prices and earns supernormal profits",
+        "Increased allocative efficiency as the firm sets P = MC",
+        "Elimination of all X-inefficiency"
+      ],
+      "question": "Which of the following is most likely to result from the privatisation of a state-owned monopoly WITHOUT effective post-privatisation regulation?",
+      "explanation": "Without effective regulation or competition, privatising a monopoly simply transfers monopoly power from public to private hands. The private firm, driven by the profit motive, will maximise profits by restricting output and charging high prices — potentially worse than the state monopoly. Options A and C describe outcomes of effective competition, not unregulated privatisation. Option D is too strong — some X-inefficiency may persist.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "Cause unemployment as it is above the market-clearing wage",
+        "Have no effect on wages or employment",
+        "Increase both the wage rate and the level of employment",
+        "Reduce the wage rate but increase employment"
+      ],
+      "question": "In a monopsony labour market, a minimum wage set at the competitive equilibrium wage will most likely:",
+      "explanation": "In a monopsony, the employer pays wages below the competitive level (Wm < Wc) and employs fewer workers than the competitive level (Lm < Lc). A minimum wage set at the competitive equilibrium flattens the MCL curve — the firm no longer needs to raise all wages to hire one extra worker. Both wages rise (from Wm to Wmin) and employment rises (from Lm to Lmin). Option A applies to the competitive model, not monopsony. Option B ignores monopsony power. Option D contradicts the monopsony prediction.",
+      "correctIndex": 2
+    },
+    {
+      "options": [
+        "The government regulates too many industries simultaneously",
+        "The regulated firms influence the regulator to set rules that favour the industry",
+        "Consumers successfully lobby for stricter regulation of monopolies",
+        "Foreign regulators take control of domestic markets"
+      ],
+      "question": "Regulatory capture is best described as a situation where:",
+      "explanation": "Regulatory capture occurs when the regulator is influenced or controlled by the very firms it is supposed to regulate. Firms lobby, provide selective information, and build relationships with regulators so that rules serve industry interests rather than consumer protection. This is a key limit to intervention and a cause of government failure. Option A describes over-regulation but not capture. Option C describes successful consumer advocacy. Option D is unrelated.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "Higher tax rates always lead to higher tax revenue",
+        "There exists a tax rate beyond which further increases actually reduce total tax revenue",
+        "Tax revenue is independent of the tax rate",
+        "Progressive taxation eliminates income inequality"
+      ],
+      "question": "The Laffer curve suggests that:",
+      "explanation": "The Laffer curve shows the relationship between tax rates and tax revenue. Beyond an optimal rate, further increases reduce revenue because workers reduce labour supply (substitution effect), engage in avoidance/evasion, or leave the jurisdiction. Revenue falls because the disincentive and avoidance effects outweigh the higher rate. Option A ignores disincentive effects. Option C is illogical. Option D overstates what taxation can achieve.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "Subsidised housing to help workers relocate to areas with more jobs",
+        "Government-funded apprenticeship schemes and retraining programmes",
+        "Improved motorway and rail networks to reduce commuting times",
+        "Establishing enterprise zones in areas of high unemployment"
+      ],
+      "question": "Which of the following is an example of a measure to reduce occupational immobility?",
+      "explanation": "Occupational immobility occurs when workers lack the skills to switch between jobs or industries. Apprenticeships and retraining directly address this by equipping workers with new, transferable skills. Options A, C, and D all address geographical immobility (helping workers move to or access jobs in different locations) rather than the skills gap that causes occupational immobility.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "The government spends too much on welfare, causing a budget deficit",
+        "Workers face very high effective marginal tax rates as rising income triggers both taxation and benefit withdrawal",
+        "Multinational firms avoid paying corporation tax",
+        "Inflation erodes the real value of welfare payments"
+      ],
+      "question": "The poverty trap (benefits trap) occurs when:",
+      "explanation": "The poverty trap arises when low-income workers face high effective marginal tax rates because earning more means paying income tax AND losing means-tested benefits simultaneously. The worker keeps very little of each extra pound, destroying the incentive to work more or seek higher-paid employment. Option A describes a fiscal issue, not the poverty trap. Option C relates to corporate tax avoidance. Option D describes real benefit erosion, not the poverty trap mechanism.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "Elimination of waste collection as a public service",
+        "Increased competition among bidders, driving down costs and improving efficiency",
+        "Transfer of all risk from the government to private firms",
+        "Guaranteed improvement in service quality with no monitoring required"
+      ],
+      "question": "A government introduces competitive tendering for waste collection services. Which of the following is the most likely intended benefit?",
+      "explanation": "Competitive tendering opens public services to competitive bids from private firms. The competitive process pressures bidders to offer the lowest cost for a given quality, driving efficiency improvements. Option A is wrong — the service continues but is delivered by the winning bidder. Option C overstates risk transfer — government retains responsibility for oversight. Option D is naive — quality monitoring is still necessary to prevent cost-cutting at the expense of standards.",
+      "correctIndex": 1
+    },
+    {
+      "options": [
+        "Consumers have more information than firms about product quality",
+        "The government always has better information than the firms it regulates",
+        "Regulated firms know more about their own costs and markets than the regulator, enabling them to exploit this advantage",
+        "Asymmetric information only affects financial markets, not product markets"
+      ],
+      "question": "Which statement best explains why asymmetric information limits the effectiveness of government regulation of monopolies?",
+      "explanation": "The regulated firm has detailed knowledge of its own costs, technology, production processes, and market conditions — far more than the regulator. This information asymmetry means the firm can exaggerate costs to justify higher prices, conceal inefficiency, or manipulate data. The regulator faces a principal-agent problem and cannot set perfectly efficient prices or standards. Option A reverses the typical direction. Option B is the opposite of reality. Option D incorrectly limits the scope of information asymmetry.",
+      "correctIndex": 2
+    }
+  ],
+  "common_mistakes": [
+    {
+      "title": "Not evaluating the effectiveness of government intervention",
+      "examTip": "For every policy, give at least one reason why it might fail. This demonstrates evaluative skill and earns top marks.",
+      "mistake": "Students describe what a policy does but fail to assess whether it works in practice.",
+      "correction": "Always evaluate: regulatory capture (regulators serving industry interests), information asymmetries (government may lack information), unintended consequences, time lags, and the costs of implementation."
+    },
+    {
+      "title": "Confusing privatisation and deregulation",
+      "mistake": "Students use these terms interchangeably.",
+      "correction": "Privatisation = transferring ownership from public to private sector. Deregulation = removing legal barriers to entry. A market can be deregulated without being privatised, and vice versa."
+    },
+    {
+      "title": "One-sided arguments about minimum wage",
+      "mistake": "Students argue that minimum wage is either always good or always bad without considering different market structures.",
+      "correction": "In a competitive market, NMW above equilibrium reduces employment. In a monopsony, NMW can increase employment. The net effect depends on the magnitude of the wage increase, the market structure, and the elasticity of labour demand."
+    }
+  ],
+  "practice": [
+    {
+      "marks": 4,
+      "command": "Define",
+      "guidance": "Privatisation is the transfer of ownership of an enterprise or industry from the public sector (government) to the private sector (1 mark). It typically involves the sale of shares in state-owned businesses to private investors, either through public share offerings or direct sales (1 mark). The rationale is that private ownership improves efficiency through the profit motive and competitive pressures (1 mark). Major UK examples include the privatisation of British Telecom in 1984, British Gas in 1986 and the railways in the 1990s (1 mark).",
+      "question": "Define the term 'privatisation'. (4 marks)"
+    },
+    {
+      "marks": 6,
+      "command": "Explain",
+      "guidance": "Objective 1: Preventing the abuse of market dominance (1 mark) — competition authorities such as the Competition and Markets Authority (CMA) in the UK investigate and can penalise firms that exploit their monopoly or oligopoly position through practices such as predatory pricing, exclusive dealing or excessive pricing (1 mark). This protects consumers from exploitation and ensures firms compete on merit (1 mark).\n\nObjective 2: Regulating mergers and acquisitions (1 mark) — the CMA assesses proposed mergers to determine whether they would substantially lessen competition by creating a firm with excessive market power (1 mark). Mergers that are deemed anti-competitive can be blocked or approved only subject to conditions, such as the divestment of certain business units (1 mark).",
+      "question": "Explain two objectives of government competition policy. (6 marks)"
+    },
+    {
+      "marks": 10,
+      "command": "Assess",
+      "guidance": "Define the national minimum wage (NMW) as a legally imposed floor price for labour, set above the market equilibrium wage in low-paid labour markets (2 marks). Positive impact: raises income for the lowest-paid workers, reducing in-work poverty and narrowing wage inequality (2 marks); may increase labour productivity as firms invest in training to justify higher wage costs — the efficiency wage argument (1 mark). Negative impact: standard competitive theory predicts that a wage floor above equilibrium creates excess supply of labour — unemployment rises as quantity demanded falls below quantity supplied (2 marks); may particularly harm small businesses with tight profit margins, leading to redundancies or reduced hours (1 mark). However: in a monopsony labour market, a minimum wage can increase both wages and employment by forcing the employer to raise wages towards the competitive level (1 mark). Judgement: the impact depends on the level at which the NMW is set relative to the market wage — a moderate NMW may have minimal employment effects while boosting living standards, but setting it too high risks significant job losses (1 mark).",
+      "question": "Assess the impact of a national minimum wage on employment and living standards. (10 marks)"
+    },
+    {
+      "marks": 20,
+      "command": "Evaluate",
+      "guidance": "Introduction: Define nationalisation as the transfer of private sector enterprises into public ownership and control. Define a natural monopoly as an industry where the minimum efficient scale is so large relative to market demand that only one firm can operate profitably — average costs fall continuously over the relevant range of output (2 marks).\n\nFor nationalisation: Eliminates the profit motive that leads private monopolies to charge high prices and restrict output — a nationalised firm can set prices closer to marginal cost, improving allocative efficiency (3 marks); essential services such as water and rail have significant positive externalities — public ownership ensures universal access and investment in infrastructure based on social need rather than profitability (2 marks); avoids the costs of regulation — private natural monopolies require expensive and complex regulatory frameworks to prevent exploitation, which nationalisation makes unnecessary (2 marks).\n\nAgainst nationalisation: Government-run enterprises may suffer from X-inefficiency — without the profit motive and competitive pressure, managers have less incentive to minimise costs and innovate (3 marks); political interference may distort investment decisions — governments may underfund maintenance to redirect spending to politically popular projects (2 marks); regulatory capture suggests that even under public ownership, interest groups can influence policy for their own benefit rather than the public good (2 marks).\n\nEvaluation: The case for nationalisation is strongest where natural monopoly characteristics are most pronounced, where the service is essential, and where private regulation has demonstrably failed (2 marks). The UK experience suggests a mixed picture — privatisation improved efficiency in telecoms but has been more controversial in rail and water. The optimal approach may involve public ownership with independent management, or well-designed regulation of private firms, depending on the specific characteristics of the industry (2 marks).",
+      "question": "Evaluate the arguments for and against the nationalisation of natural monopolies such as water and rail. (20 marks)"
+    },
+    {
+      "marks": 4,
+      "command": "Outline",
+      "guidance": "Problem 1: The regulator may act in the interests of the industry it is supposed to regulate rather than in the interests of consumers (1 mark) — this can occur because regulators develop close relationships with industry executives, or because staff move between the regulator and the regulated firms (the revolving door) (1 mark).\n\nProblem 2: Regulatory capture can lead to ineffective regulation — the regulator may set overly lenient price caps, approve anti-competitive mergers or fail to enforce standards (1 mark). This undermines the purpose of government intervention and allows firms to continue earning supernormal profits at the expense of consumer welfare (1 mark).",
+      "question": "Outline two problems associated with regulatory capture in the context of government intervention. (4 marks)"
+    }
+  ],
+  "extras": {
+    "chains": [
+      {
+        "steps": [
+          "Competition authorities (such as the CMA in the UK) investigate mergers, abuse of dominant market position and anti-competitive practices like cartels and predatory pricing.",
+          "By blocking mergers that would substantially lessen competition, regulators prevent the creation of dominant firms with excessive market power.",
+          "Fines and remedies for anti-competitive behaviour deter firms from colluding on prices, dividing markets or engaging in exclusionary practices.",
+          "Effective competition policy protects consumer welfare by maintaining competitive markets that deliver lower prices, greater choice and stronger incentives for innovation."
+        ],
+        "title": "Competition policy prevents monopoly exploitation",
+        "result": "Competition policy aims to preserve competitive market structures and prevent monopoly exploitation, protecting consumers from higher prices and reduced choice."
+      },
+      {
+        "steps": [
+          "In a competitive labour market, a minimum wage above the equilibrium creates unemployment by raising the cost of labour above workers' MRP for some firms.",
+          "However, in a monopsony labour market, the employer pays below the competitive wage — a minimum wage set at the competitive level can increase both wages and employment.",
+          "This is because the minimum wage makes the supply of labour perfectly elastic up to the minimum rate, eliminating the monopsonist's incentive to restrict hiring to keep wages low.",
+          "The result is higher wages and higher employment — the minimum wage corrects the market failure caused by monopsony power without creating unemployment."
+        ],
+        "title": "Minimum wage in monopsony can increase employment",
+        "result": "The impact of minimum wages depends critically on market structure — harmful in competitive markets but potentially beneficial in monopsony markets."
+      },
+      {
+        "steps": [
+          "Privatisation transfers ownership from the public to the private sector, introducing the profit motive and market discipline that incentivise cost reduction and efficiency.",
+          "Private firms face competitive pressure and the threat of takeover, which disciplines management and promotes productive efficiency.",
+          "However, privatised natural monopolies may exploit their market power to raise prices and reduce quality if not effectively regulated.",
+          "Nationalisation ensures public control over strategic industries and can prioritise social objectives (universal service, equity) over profit — but may suffer from X-inefficiency due to the absence of competitive pressure."
+        ],
+        "title": "Privatisation vs nationalisation involves efficiency trade-offs",
+        "result": "The choice between privatisation and nationalisation involves trading off productive efficiency gains against the risks of private monopoly exploitation and the loss of social objectives."
+      },
+      {
+        "steps": [
+          "Government regulators are established to oversee industries and protect consumer interests, but they rely on information provided by the firms they regulate.",
+          "Over time, regulators may develop close relationships with the industry, leading to regulatory capture — where the regulator acts in the industry's interest rather than the public interest.",
+          "Captured regulators may set lenient price caps, approve anti-competitive mergers or fail to enforce standards, undermining the purpose of regulation.",
+          "This weakens the effectiveness of government intervention and allows firms to maintain supernormal profits and inefficient practices at the expense of consumers."
+        ],
+        "title": "Regulatory capture limits effectiveness of intervention",
+        "result": "Regulatory capture is a significant government failure that can turn regulation from a tool for consumer protection into a mechanism that protects incumbent firms from competition."
+      }
+    ],
+    "evaluation": [
+      {
+        "title": "Competition policy faces trade-offs with dynamic efficiency",
+        "content": "Breaking up monopolies or blocking mergers may improve static efficiency but could reduce dynamic efficiency. Large firms with market power may have greater ability and incentive to invest in R&D, as argued by Schumpeter. Competition authorities must balance short-term consumer welfare against long-term innovation. This is particularly relevant in technology markets where network effects create natural monopolies that deliver significant consumer benefits."
+      },
+      {
+        "title": "Minimum wage effects depend on the level set",
+        "content": "The theoretical argument for minimum wages in monopsony markets assumes the rate is set at or near the competitive equilibrium. If set too high, even monopsony employers will reduce hiring. Empirical evidence, such as Card and Krueger's study, suggests modest minimum wage increases have little negative employment effect, but very large increases could cause significant job losses, particularly for low-skilled and young workers."
+      },
+      {
+        "title": "Privatisation outcomes depend on regulatory framework",
+        "content": "The success of privatisation depends heavily on whether effective regulation accompanies the transfer of ownership. The UK's privatisation of water and rail has been criticised for delivering high profits and executive pay while underinvesting in infrastructure. By contrast, telecommunications privatisation with strong regulation delivered significant innovation and price reductions. The key is not ownership per se but the competitive and regulatory environment in which firms operate."
+      },
+      {
+        "title": "Government intervention may create unintended consequences",
+        "content": "All forms of intervention risk unintended consequences — price controls create shortages, subsidies distort resource allocation, and regulation imposes compliance costs. These government failures must be weighed against the market failures that intervention seeks to correct. The case for intervention is strongest when market failures are severe, the intervention is well-designed and regulatory institutions are independent and well-resourced."
+      }
+    ]
+  }
+}

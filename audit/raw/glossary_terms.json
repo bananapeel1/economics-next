@@ -1,0 +1,2606 @@
+[
+  {
+    "id": "dd8edac0-b34c-4dc4-bdfe-95804fc3b25a",
+    "term": "Mass market",
+    "definition": "The largest segment of a market in which products with broad appeal are targeted at the majority of consumers. Mass markets benefit from economies of scale but face intense competition.",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "2df858c7-8039-4b5d-8d5d-3c18afe84f13",
+    "term": "Niche market",
+    "definition": "A small, specialist segment of a larger market where a business targets a specific group of customers with particular needs. Niche markets tend to have less competition but a smaller customer base.",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "88d7cbd1-82d4-43ac-b8b4-ab06a6ccb653",
+    "term": "Dynamic market",
+    "definition": "A market that is subject to rapid and continuous change due to factors such as evolving consumer tastes, new technology, or increased competition.",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "eb856d8c-f9a7-4677-a2dd-ec0c349ed492",
+    "term": "Market research",
+    "definition": "The systematic gathering, recording, and analysing of data about customers, competitors, and the market. It includes primary research (original data) and secondary research (existing data).",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "c0cc9c79-3962-4e9a-8c49-d20fd7aa3f8d",
+    "term": "Product orientation",
+    "definition": "A business approach that focuses on the production process and the quality of the product itself, rather than on identifying and responding to customer needs.",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "37bb005c-f3f6-45fe-a53c-13769aec1a37",
+    "term": "Market orientation",
+    "definition": "A business approach that prioritises identifying and meeting customer needs and wants through market research before developing or modifying products.",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "5fd1b7e4-c838-4aed-8912-346734037f23",
+    "term": "Market size",
+    "definition": "The total volume or value of sales in a market over a given period. It can be measured by the number of units sold (volume) or total revenue generated (value).",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "bb325b44-1da3-4e3a-8f2f-806c2ab15680",
+    "term": "Market share",
+    "definition": "The proportion of total market sales held by one business or brand, usually expressed as a percentage. It indicates a firm's competitive position within the market.",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "6b9b8e44-71a7-4b95-bff5-d395daf640c2",
+    "term": "Market growth",
+    "definition": "The percentage increase in the total size of a market over a given period. A growing market presents opportunities for new and existing firms to increase sales.",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "bc494058-80b1-4d25-a54f-f74f85fe4d4c",
+    "term": "Demand",
+    "definition": "The quantity of a good or service that consumers are willing and able to purchase at a given price in a given time period.",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "caf48686-4ef3-412a-a997-f8ee942d05b0",
+    "term": "Supply",
+    "definition": "The quantity of a good or service that producers are willing and able to offer for sale at a given price in a given time period.",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "af345e23-44b4-4a04-9979-d95d454fb4bd",
+    "term": "Price elasticity of demand",
+    "definition": "A measure of the responsiveness of quantity demanded to a change in price. Calculated as the percentage change in quantity demanded divided by the percentage change in price.",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "1a9b6e87-11c1-40ea-ba64-8df7b966a1fb",
+    "term": "Income elasticity of demand",
+    "definition": "A measure of the responsiveness of quantity demanded to a change in consumer income. Positive values indicate normal goods; negative values indicate inferior goods.",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "7b0641ad-4d31-4be5-b032-7d1577f328bf",
+    "term": "Market mapping",
+    "definition": "A technique that positions products or brands on a grid using two key variables (e.g. price and quality) to identify gaps in the market and understand the competitive landscape.",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "68d60858-6ec8-4a23-a2a5-78ebcdeb1a21",
+    "term": "Product life cycle",
+    "definition": "The stages a product passes through from its introduction to decline: development, introduction, growth, maturity, and decline. Each stage has different marketing and cash-flow implications.",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "56d57012-55d5-48d9-943e-1526e38f0227",
+    "term": "Boston Matrix",
+    "definition": "A model that classifies a firm's products into four categories based on market share and market growth: Stars, Cash Cows, Question Marks, and Dogs. It helps firms manage their product portfolio.",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "df546180-7da3-458d-a918-9a2d8fcc9c6a",
+    "term": "Branding",
+    "definition": "The process of creating a distinctive name, logo, image, or identity for a product or business in the consumer's mind, used to differentiate it from competitors and build customer loyalty.",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "1719fb63-0879-4755-8c56-9ffa7c48660c",
+    "term": "Price skimming",
+    "definition": "A pricing strategy where a high price is initially set for a new or innovative product and then gradually lowered over time as competition increases or the novelty diminishes.",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "6b685a78-0c1f-42f9-b8fc-3fcc7df54876",
+    "term": "Penetration pricing",
+    "definition": "A pricing strategy where a low price is set when a product is first launched to attract customers and gain market share quickly, with the price raised later once established.",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "dd8a1701-ecdc-4a49-8f38-694a1e69f483",
+    "term": "Promotion",
+    "definition": "The methods a business uses to communicate with customers and persuade them to buy its products, including advertising, sales promotion, personal selling, public relations, and digital marketing.",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "27f31e49-d014-4d3b-9ec1-9b81b5127a35",
+    "term": "Distribution channel",
+    "definition": "The route through which a product travels from the producer to the final consumer. Channels may include wholesalers, retailers, agents, or direct selling.",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "38638c43-21f5-4e63-9b5b-301208318f71",
+    "term": "Product differentiation",
+    "definition": "The process of making a product distinct from competitors through design, branding, quality, or features, giving consumers a reason to choose it over alternatives.",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "f05d9ad8-4bb6-4c4a-9b24-76aac8974daf",
+    "term": "Unique selling point",
+    "definition": "A feature or characteristic that distinguishes a product or service from its competitors and provides a clear reason for customers to buy it. Also known as a USP.",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "ff6252fa-7173-45f4-b902-76979ca4487d",
+    "term": "Marketing strategy",
+    "definition": "A long-term plan that outlines how a business will use its marketing mix to achieve its marketing objectives, taking into account market conditions and competition.",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "e62fc038-8318-4ec8-a5a1-beaf156b5e6f",
+    "term": "Flexible workforce",
+    "definition": "A labour force that can be adapted to meet changing business needs, through methods such as part-time contracts, temporary workers, multi-skilling, and outsourcing.",
+    "created_at": "2026-03-12T05:14:20.548882+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "8a490c04-55c5-4853-b8e2-737c1a8d4c2a",
+    "term": "Recruitment",
+    "definition": "The process of attracting and identifying suitable candidates for a job vacancy. It can be internal (within the firm) or external (outside the firm).",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "bf52ba70-c293-4b49-898b-5a306e2ae125",
+    "term": "Training",
+    "definition": "The process of improving employees' skills and knowledge to help them perform their jobs more effectively. Types include on-the-job training, off-the-job training, and induction.",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "1e94d7ef-3f09-44c2-8ee6-92e2ebdaadcd",
+    "term": "Maslow's hierarchy of needs",
+    "definition": "A motivation theory proposing that human needs are arranged in five levels: physiological, safety, social, esteem, and self-actualisation. Lower-level needs must be met before higher-level needs motivate behaviour.",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "719a93d5-aabb-4d26-88f1-7d6c0a5e57c3",
+    "term": "Herzberg's two-factor theory",
+    "definition": "A motivation theory distinguishing between hygiene factors (e.g. pay, conditions) that prevent dissatisfaction and motivators (e.g. achievement, recognition) that actively create satisfaction and motivation.",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "e87b6825-75c9-42d3-88e0-8e1996303c22",
+    "term": "Taylor's scientific management",
+    "definition": "A management theory proposing that workers are primarily motivated by money and that productivity is maximised by breaking tasks into small, repetitive steps, closely supervising workers, and offering piece-rate pay.",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "6a007eec-2a5e-48ce-8645-1ad6374df783",
+    "term": "Labour retention",
+    "definition": "The ability of a business to keep its employees over time. High retention reduces recruitment and training costs and helps maintain organisational knowledge.",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "08109805-79c2-4f8e-967b-c7b654fb2525",
+    "term": "Organisational structure",
+    "definition": "The way in which a business arranges its staff and management into a hierarchy, defining roles, responsibilities, and lines of communication and authority.",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "5b6797b8-7657-44da-86c6-93ec4ca9612f",
+    "term": "Span of control",
+    "definition": "The number of subordinates that a manager directly supervises. A wide span means more subordinates; a narrow span means fewer, allowing closer supervision.",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "f53ceee3-0fce-475e-a5e7-39099e362333",
+    "term": "Delegation",
+    "definition": "The process of assigning authority and responsibility for a task to a subordinate, while the manager retains overall accountability for the outcome.",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "2757e797-bb6e-4c5d-97c7-3a8d861abda6",
+    "term": "Enterprise",
+    "definition": "The willingness to take risks and show initiative in starting and running a business. It is considered the fourth factor of production alongside land, labour, and capital.",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "ea841f8d-7bc5-496a-860c-863f46f028cc",
+    "term": "Intrapreneurship",
+    "definition": "Entrepreneurial behaviour within an existing organisation, where employees are encouraged to develop new ideas, products, or processes, acting as innovators inside the firm.",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "41ad99ff-1974-4f82-b82e-940fe7f3a622",
+    "term": "Barriers to entry",
+    "definition": "Obstacles that make it difficult for new firms to enter a market, such as high start-up costs, strong brand loyalty, legal regulations, or economies of scale enjoyed by existing firms.",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "ce20cca9-0d1a-4aa4-9507-6bc5602aa86c",
+    "term": "Leadership styles",
+    "definition": "The different approaches leaders use to direct, motivate, and manage their teams. Common styles include autocratic, democratic, paternalistic, and laissez-faire.",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "cebe4f1e-5cf6-4693-bdfe-97f883c8073f",
+    "term": "Stakeholder",
+    "definition": "Any individual or group that has an interest in or is affected by the activities of a business, including employees, customers, shareholders, suppliers, the government, and the local community.",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "714ddf94-4167-42c6-a866-274d69cf391a",
+    "term": "Sources of finance",
+    "definition": "The various methods a business can use to raise money, broadly classified as internal (e.g. retained profit, sale of assets) or external (e.g. bank loans, share capital, venture capital).",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "648cb341-f731-4004-81ac-a4688618fafa",
+    "term": "Venture capital",
+    "definition": "Finance provided by specialist investors to businesses with high growth potential in exchange for an equity stake. It involves high risk but offers both funding and expertise.",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "46c9e1e4-f376-4a96-9e65-7e448a4aa92d",
+    "term": "Crowd-funding",
+    "definition": "A method of raising finance by collecting small amounts of money from a large number of people, typically via online platforms, to fund a business idea or project.",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "91bb8d0f-f20a-4f03-a858-c3855feec2b8",
+    "term": "Business angel",
+    "definition": "A wealthy individual who provides capital and often mentoring to early-stage businesses in exchange for equity or convertible debt.",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "dd39b655-c5a4-4a17-9515-66ac6d5db195",
+    "term": "Trade credit",
+    "definition": "An arrangement where a supplier allows a business to receive goods or services now and pay for them at a later date, typically 30 to 90 days, providing short-term finance.",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "cd226670-7a67-4e91-a5ea-bf23122dc0fd",
+    "term": "Overdraft",
+    "definition": "A flexible, short-term source of finance that allows a business to withdraw more money from its bank account than it currently holds, up to an agreed limit. Interest is charged on the amount overdrawn.",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "b43d682e-2136-4205-8ee8-e3f4d8cbe634",
+    "term": "Cash flow forecast",
+    "definition": "A prediction of the expected cash inflows and outflows over a future period, used to anticipate cash shortages and plan borrowing or investment decisions.",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "d390b211-60b9-4310-a478-06f01ed400fc",
+    "term": "Break-even analysis",
+    "definition": "A calculation that determines the level of output at which total revenue equals total costs, resulting in neither profit nor loss. Break-even output equals fixed costs divided by contribution per unit.",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "4713e94d-e336-4c47-a642-03edb6f293b3",
+    "term": "Budget",
+    "definition": "A financial plan that estimates future income and expenditure over a set period. Budgets help control spending, allocate resources, and monitor financial performance.",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "534f7049-7004-4f19-ad86-2d01fb6fc345",
+    "term": "Variance analysis",
+    "definition": "The process of calculating and investigating the differences between budgeted figures and actual results. Favourable variances are better than expected; adverse variances are worse.",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "48e2f7dd-a9ed-4461-97e7-4438947a9745",
+    "term": "Revenue",
+    "definition": "The total income a business receives from selling its goods or services over a given period. Calculated as selling price multiplied by quantity sold.",
+    "created_at": "2026-03-12T05:14:20.661071+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "89267893-559e-4301-a9df-5fe6b5065cc3",
+    "term": "Fixed costs",
+    "definition": "Costs that do not change with the level of output in the short run, such as rent, salaries, and insurance. They must be paid regardless of production levels.",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "704e2296-7460-40bb-b9f3-e816bae877cf",
+    "term": "Variable costs",
+    "definition": "Costs that change in direct proportion to the level of output, such as raw materials and piece-rate labour. Total variable costs rise as production increases.",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "6b5d9839-183e-4352-a4c3-74841cca161c",
+    "term": "Gross profit margin",
+    "definition": "A profitability ratio calculated as gross profit divided by revenue, expressed as a percentage. It shows the proportion of revenue remaining after direct costs are deducted.",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "e1cfd175-5a89-48da-bb8c-22f9fed97556",
+    "term": "Net profit margin",
+    "definition": "A profitability ratio calculated as net profit divided by revenue, expressed as a percentage. It shows the proportion of revenue remaining after all costs, including overheads, have been deducted.",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "3b47b12d-242e-41d7-b286-42de1606d485",
+    "term": "Contribution",
+    "definition": "The amount remaining after variable costs are subtracted from sales revenue. Total contribution can be used to cover fixed costs and generate profit.",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "50899be3-dd58-4357-945e-c0f8bbd43c3b",
+    "term": "Liquidity",
+    "definition": "The ability of a business to meet its short-term financial obligations as they fall due. Common liquidity measures include the current ratio and acid test ratio.",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "070fe252-331f-4493-8c7b-636321bda83e",
+    "term": "Gearing",
+    "definition": "A measure of the proportion of a firm's capital that is financed through long-term borrowing compared to equity. High gearing means greater financial risk but may offer higher returns to shareholders.",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "4d493371-9c60-4f1a-9b26-06609393084a",
+    "term": "Capacity utilisation",
+    "definition": "The proportion of a firm's maximum output that is actually being achieved, expressed as a percentage. Low utilisation means resources are underused; high utilisation may strain resources.",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "a81b3e7d-abdd-4153-92dd-262860ef02b2",
+    "term": "Stock control",
+    "definition": "The management of inventory levels to ensure a business holds enough stock to meet demand without incurring excessive storage costs or risking stockouts.",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "e25713ac-7533-4598-bc8c-a73ac055f8bb",
+    "term": "Quality management",
+    "definition": "A systematic approach to ensuring that products or services consistently meet or exceed customer expectations, through methods such as TQM, quality circles, and benchmarking.",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "4c1504c4-738a-4a54-a69d-539d87bc40de",
+    "term": "Lean production",
+    "definition": "An approach to management that aims to minimise waste and improve efficiency at every stage of the production process while maintaining quality.",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "b49f6b72-0224-4803-829b-221bb00eee7e",
+    "term": "Kaizen",
+    "definition": "A Japanese philosophy of continuous improvement involving all employees in making small, incremental changes to processes, products, and systems to increase efficiency and quality over time.",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "539b0718-ff8d-4309-b31a-a1202ab0103d",
+    "term": "Just-in-time",
+    "definition": "A lean production method where materials and components are delivered just as they are needed in the production process, reducing the need for stockholding and associated costs.",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "6157cb02-c381-4944-860a-f1cbbfd21e11",
+    "term": "Total quality management",
+    "definition": "A management philosophy where quality is the responsibility of every employee in the organisation, not just the quality control department. It involves continuous improvement at all levels.",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "c75badb5-b840-4e79-9b3a-2aa13cb3e8a7",
+    "term": "Interest rate",
+    "definition": "The cost of borrowing money or the reward for saving, expressed as a percentage. Changes in interest rates affect consumer spending, business investment, and the exchange rate.",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "0ed195f3-cba4-4cea-a179-dcc858ad88aa",
+    "term": "Exchange rate",
+    "definition": "The price of one currency expressed in terms of another. Exchange rate fluctuations affect the cost of imports, the competitiveness of exports, and multinational profits.",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "59c2b121-466d-4ebd-ae26-b23e25056eb6",
+    "term": "Inflation",
+    "definition": "A sustained increase in the general price level of goods and services in an economy over time, reducing the purchasing power of money.",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "55a16b06-cb61-49d4-af2a-644e64560b83",
+    "term": "Taxation",
+    "definition": "Compulsory payments levied by the government on individuals and businesses. Direct taxes (e.g. income tax, corporation tax) are charged on income or profit; indirect taxes (e.g. VAT) are charged on spending.",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "b2416a8c-7b18-41b0-b8fb-34eb16a92670",
+    "term": "Business cycle",
+    "definition": "The regular pattern of fluctuations in economic activity over time, consisting of four phases: boom, recession, slump (trough), and recovery (expansion).",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "678b7aeb-5b08-4d87-b9b5-e3fb36956720",
+    "term": "Business confidence",
+    "definition": "The degree of optimism or pessimism that business leaders feel about the future prospects of the economy. High confidence encourages investment and expansion; low confidence leads to caution.",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "c5babb53-9177-428f-8f8e-81e0d4ba133c",
+    "term": "Mission statement",
+    "definition": "A brief, formal statement of the core purpose and values of a business. It communicates to stakeholders why the organisation exists and what it aims to achieve.",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "2c515aa0-32e8-4d83-9509-05749fc6d4d4",
+    "term": "Corporate objectives",
+    "definition": "The specific, measurable goals set by senior management for the whole organisation, derived from the mission statement. They guide strategic decision-making.",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "4b7ee8c3-62a4-4949-a60e-2129d74f95fa",
+    "term": "SMART targets",
+    "definition": "Objectives that are Specific, Measurable, Achievable, Realistic, and Time-bound. Setting SMART targets helps ensure goals are clear and progress can be tracked.",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "ecde98e4-15fa-41e4-b34e-823e1df00027",
+    "term": "Ansoff's Matrix",
+    "definition": "A strategic framework that identifies four growth strategies based on whether products and markets are new or existing: market penetration, market development, product development, and diversification.",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "bd85e102-1196-409d-9ff1-fb219a9b7490",
+    "term": "Porter's Generic Strategies",
+    "definition": "A framework identifying three main strategies for achieving competitive advantage: cost leadership (lowest cost producer), differentiation (unique product), and focus (targeting a narrow market segment).",
+    "created_at": "2026-03-12T05:14:20.766969+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "15a6352c-e41f-48ed-90ae-0c26aaa4baa0",
+    "term": "SWOT analysis",
+    "definition": "A strategic planning tool that evaluates a firm's internal Strengths and Weaknesses and external Opportunities and Threats, used to inform decision-making and strategy formulation.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "8e0dd9ca-a848-4d5e-a283-70824e618c70",
+    "term": "Organic growth",
+    "definition": "Internal growth achieved by a business expanding its own operations, such as increasing output, opening new stores, or developing new products, rather than through mergers or takeovers.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "a155b856-4205-4b59-afee-cd7a430b45ca",
+    "term": "Merger",
+    "definition": "The joining of two or more businesses of roughly equal size to form a new, single entity. Both firms agree to combine their operations and share ownership.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "dd957746-958b-476b-b7bc-29e352947745",
+    "term": "Takeover",
+    "definition": "The acquisition of one company by another, often by purchasing a controlling share of its stock. Takeovers can be friendly (agreed) or hostile (opposed by the target firm's board).",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "b7dbe414-1644-4609-a0da-ce0d2d8ef147",
+    "term": "Joint venture",
+    "definition": "A business arrangement where two or more firms agree to pool resources for a specific project or business activity while remaining separate entities. It allows risk and cost sharing.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "ad4a1beb-d134-4274-9568-dd226a43cfc0",
+    "term": "Franchise",
+    "definition": "A business model where a franchisor grants a franchisee the right to operate under its brand name and sell its products or services in exchange for fees and adherence to operational standards.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "246793f3-ee3d-4f08-bf59-aff7fcbc9ca6",
+    "term": "Economies of scale",
+    "definition": "The cost advantages that a business gains as it increases its scale of production, causing long-run average costs to fall. Types include purchasing, technical, managerial, and financial economies.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "63bfa04c-08ff-4b01-8f9e-3b26e88015c7",
+    "term": "Diseconomies of scale",
+    "definition": "The cost disadvantages that arise when a firm grows too large, causing long-run average costs to rise. Common causes include communication problems, coordination difficulties, and low employee motivation.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "442288df-5e0a-48bd-b864-04d834d2b13b",
+    "term": "Decision tree",
+    "definition": "A mathematical model that maps out different options, possible outcomes, and their probabilities and financial returns, helping managers make objective decisions under uncertainty.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "2df3cc8a-6ab5-4045-acff-406fbefaf5f1",
+    "term": "Investment appraisal",
+    "definition": "The process of evaluating whether a proposed investment or project is worthwhile, using techniques such as payback period, average rate of return, and net present value.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "0304033f-5b11-42e0-9786-aac40223bb89",
+    "term": "Net present value",
+    "definition": "An investment appraisal method that calculates the total present value of future cash flows minus the initial investment, using a discount rate to account for the time value of money. A positive NPV suggests the investment is worthwhile.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "a8ec88d6-2762-4383-94c5-56f2c1ca7ea6",
+    "term": "Average rate of return",
+    "definition": "An investment appraisal method that calculates the average annual profit as a percentage of the initial investment, allowing comparison with alternative investments or interest rates.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "e623b380-3757-4873-b6c5-4e03061fbf58",
+    "term": "Payback period",
+    "definition": "The length of time it takes for an investment to generate enough net cash inflows to recover its initial cost. Shorter payback periods are generally preferred as they reduce risk.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "e6e38124-e652-4da7-8ba9-8a6a446b0f3b",
+    "term": "Expected value",
+    "definition": "The predicted financial return of a decision, calculated by multiplying each possible outcome by its probability and summing the results. It is used in decision tree analysis.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "7982ba3f-55b1-41b6-a128-3bccd1b9dea1",
+    "term": "Scarcity",
+    "definition": "The fundamental economic problem: unlimited wants exceed finite resources, forcing choices to be made about how to allocate resources.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "a1451114-1560-498f-8350-292451971631",
+    "term": "Opportunity cost",
+    "definition": "The value of the next best alternative foregone when a choice is made. It represents the real cost of any decision.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "23af2c27-cacb-4ce0-80db-cb5b063ba4af",
+    "term": "Ceteris paribus",
+    "definition": "A Latin phrase meaning \"all other things being equal\". Used in economic models to isolate the effect of one variable by holding all others constant.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "eee2dc15-a855-4c8d-9327-c2458d07caec",
+    "term": "Positive statement",
+    "definition": "An objective, factual statement that can be tested and verified or falsified with evidence. E.g. \"Inflation is 3%.\"",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "b9f8ec3e-25d7-4aec-8911-232d46b3127b",
+    "term": "Normative statement",
+    "definition": "A subjective statement based on opinion or value judgements that cannot be tested. Often contains \"should\" or \"ought\". E.g. \"The government should reduce taxes.\"",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "f71ab2fb-47ab-49ad-b158-417e91e34f5e",
+    "term": "Production possibility frontier",
+    "definition": "A curve showing the maximum possible combinations of two goods that can be produced with available resources. Points inside are inefficient; points outside are unattainable.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "f3928235-1394-47de-a491-2ca99a3783d1",
+    "term": "Factors of production",
+    "definition": "The four inputs used to produce goods and services: land (natural resources), labour (human effort), capital (machinery/equipment), and enterprise (risk-taking).",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "bfbf5cd2-2129-4e57-97c2-fa69f7820033",
+    "term": "Free good",
+    "definition": "A good that is not scarce and has no opportunity cost, such as air. It does not require resources to produce or consume.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "723a48c1-6ebf-44aa-870b-ba9e0e9827dd",
+    "term": "Economic good",
+    "definition": "A good that is scarce and has an opportunity cost. Resources must be used to produce it.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "f23e2d07-5085-43cd-a280-c68882cbe3e4",
+    "term": "Specialisation",
+    "definition": "When individuals, firms, or countries concentrate on producing a limited range of goods in which they have an advantage, increasing efficiency and output.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "81af03de-dadc-48f8-8e2d-5773a67daec7",
+    "term": "Division of labour",
+    "definition": "Breaking the production process into separate tasks, with each worker specialising in one task, increasing productivity and efficiency.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "cd001f49-2d13-4495-accd-790f25741b9e",
+    "term": "Free market economy",
+    "definition": "An economic system where resource allocation is determined by market forces (supply and demand) with no government intervention.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "46c9e10f-6cad-4691-b7e1-4f0e5e34be43",
+    "term": "Mixed economy",
+    "definition": "An economic system combining elements of both free market and government intervention in the allocation of resources.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "d1b3f9a6-a5e8-4257-9064-a55bdd8105ce",
+    "term": "Demand",
+    "definition": "The quantity of a good or service that consumers are willing and able to buy at a given price in a given time period.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "ee3ab5fa-2c96-47e8-af6c-83fb813bb760",
+    "term": "Effective demand",
+    "definition": "Demand backed by the ability to pay. A want becomes effective demand only when the consumer has sufficient purchasing power.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "35445c8a-179a-4758-9d08-c7bf914fb38e",
+    "term": "Law of demand",
+    "definition": "As the price of a good rises, the quantity demanded falls, and vice versa (ceteris paribus). This gives the demand curve its downward slope.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "fff8468b-ec10-4474-a1b9-a465e929e1e6",
+    "term": "Utility",
+    "definition": "The satisfaction or benefit a consumer derives from consuming a good or service.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "e8cdc1e6-4cd4-4026-9773-004a1386104f",
+    "term": "Marginal utility",
+    "definition": "The additional satisfaction gained from consuming one more unit of a good or service. It tends to diminish as consumption increases.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "fd4a70a2-f430-4275-be46-9ce663f07a6e",
+    "term": "Diminishing marginal utility",
+    "definition": "The principle that as a consumer consumes more units of a good, the additional satisfaction from each extra unit decreases.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "78ada4be-72dd-4d78-91c9-9283e0b79589",
+    "term": "Normal good",
+    "definition": "A good for which demand increases as consumer income rises. It has a positive income elasticity of demand (YED > 0).",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "0f8f2f61-805a-47c8-ba30-ed9d10cf82ef",
+    "term": "Inferior good",
+    "definition": "A good for which demand decreases as consumer income rises, as consumers switch to better alternatives. It has a negative income elasticity of demand (YED < 0).",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "90ac69ce-9e08-4eb2-b152-2108373a796a",
+    "term": "Substitute good",
+    "definition": "A good that can be used in place of another. A rise in the price of one leads to an increase in demand for its substitute (positive XED).",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "bbef9fe2-d01b-4a5c-8374-681028339948",
+    "term": "Complementary good",
+    "definition": "A good that is consumed together with another. A rise in the price of one leads to a fall in demand for its complement (negative XED).",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "35537cc6-f1f8-47b1-9fbe-f6f95bea0e23",
+    "term": "Price elasticity of demand",
+    "definition": "A measure of the responsiveness of quantity demanded to a change in price. PED = % change in quantity demanded ÷ % change in price.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "1bfa2a4c-e11c-43b4-bb04-f8c514c66db0",
+    "term": "Income elasticity of demand",
+    "definition": "A measure of the responsiveness of demand to a change in income. YED = % change in quantity demanded ÷ % change in income.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "91864919-e793-45ba-a59e-7038a3577e39",
+    "term": "Cross elasticity of demand",
+    "definition": "A measure of the responsiveness of demand for one good to a change in the price of another good. XED = % change in Qd of A ÷ % change in price of B.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "706eb520-8423-4416-9c11-bd9aa42b693b",
+    "term": "Consumer surplus",
+    "definition": "The difference between what consumers are willing to pay for a good and what they actually pay. Shown as the area below the demand curve and above the market price.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "44f47075-3a39-418a-88a5-fc83773e1665",
+    "term": "Supply",
+    "definition": "The quantity of a good or service that producers are willing and able to offer for sale at a given price in a given time period.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "0282b1d1-66d9-4814-a115-acce17247999",
+    "term": "Law of supply",
+    "definition": "As the price of a good rises, the quantity supplied rises, and vice versa (ceteris paribus). This gives the supply curve its upward slope.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "b3ba8d29-4213-40b6-a171-13fc9f588306",
+    "term": "Price elasticity of supply",
+    "definition": "A measure of the responsiveness of quantity supplied to a change in price. PES = % change in quantity supplied ÷ % change in price.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "43f15af7-657a-42a4-9eb5-78dd755df7a3",
+    "term": "Producer surplus",
+    "definition": "The difference between the price a producer receives and the minimum price they would be willing to accept. Shown as the area above the supply curve and below the market price.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "19153bbe-16bc-4fc9-ac95-679989c17a82",
+    "term": "Equilibrium price",
+    "definition": "The price at which quantity demanded equals quantity supplied. There is no tendency for the price to change at this point.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "e5a35680-5e8e-4486-b927-0591c81a6e3f",
+    "term": "Equilibrium quantity",
+    "definition": "The quantity bought and sold at the equilibrium price, where demand equals supply.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "364f95bb-4fee-45d8-8a25-675a0a53ab2d",
+    "term": "Excess demand",
+    "definition": "When quantity demanded exceeds quantity supplied at the current price, creating upward pressure on price. Occurs when price is below equilibrium.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "8b8e077e-0e0a-413e-b58c-d09603df6384",
+    "term": "Excess supply",
+    "definition": "When quantity supplied exceeds quantity demanded at the current price, creating downward pressure on price. Occurs when price is above equilibrium.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "05aae70e-f205-4163-98c5-9d78e6f3e5ba",
+    "term": "Price mechanism",
+    "definition": "The system by which changes in price allocate scarce resources through three functions: rationing, signalling, and incentivising.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "6802b1f5-0aa9-401c-a636-faedc3590065",
+    "term": "Market failure",
+    "definition": "When the free market fails to allocate resources efficiently, resulting in a misallocation of resources and a loss of economic welfare.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "c4c2fd98-4483-415a-ac0e-e505bb43eb8d",
+    "term": "Externality",
+    "definition": "A cost or benefit that affects a third party not directly involved in the production or consumption of a good. Can be positive or negative.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "55580cff-7184-49b2-b721-af19ed22c298",
+    "term": "Negative externality",
+    "definition": "A cost imposed on third parties not involved in the economic transaction. E.g. pollution from a factory affecting local residents.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "ff8baf97-4c00-45ab-bce2-94ccdb2c6f48",
+    "term": "Positive externality",
+    "definition": "A benefit received by third parties not involved in the economic transaction. E.g. vaccination reducing disease spread to unvaccinated people.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "718f7a9d-c3a7-46f9-8e58-5d50ac1ed782",
+    "term": "Private cost",
+    "definition": "The cost of an economic activity borne by the individual or firm directly involved in the transaction.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "a57d254b-ce20-4406-a923-7517c3af9be6",
+    "term": "External cost",
+    "definition": "The cost of an economic activity borne by third parties not directly involved in the transaction. Also called a spillover cost.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "b138a1e2-9891-4763-b83a-9535926fafa1",
+    "term": "Social cost",
+    "definition": "The total cost of an economic activity, including both private costs and external costs. Social cost = private cost + external cost.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "24c798ff-2c22-4cd3-9f08-c59199680fb3",
+    "term": "Private benefit",
+    "definition": "The benefit of an economic activity received by the individual or firm directly involved in the transaction.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "e4d65e00-acfa-4eae-814c-3443562c856e",
+    "term": "External benefit",
+    "definition": "The benefit of an economic activity received by third parties not directly involved in the transaction. Also called a spillover benefit.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "b5d40200-429b-4ecf-90b5-e143965c3508",
+    "term": "Social benefit",
+    "definition": "The total benefit of an economic activity, including both private benefits and external benefits. Social benefit = private benefit + external benefit.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "ebc33f36-aae2-4295-970f-fa48080fac72",
+    "term": "Public good",
+    "definition": "A good that is non-excludable (cannot prevent non-payers from using it) and non-rivalrous (one person's use does not reduce availability for others). E.g. street lighting, national defence.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "6e320df8-b155-41b2-9c42-e7c303607373",
+    "term": "Merit good",
+    "definition": "A good that is under-consumed in a free market because consumers underestimate its private benefits, or it generates positive externalities. E.g. education, healthcare.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "3ab6f629-6f46-478f-8e0e-e7d3ea8c7211",
+    "term": "Demerit good",
+    "definition": "A good that is over-consumed in a free market because consumers underestimate its private costs, or it generates negative externalities. E.g. cigarettes, alcohol.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "7801d737-4aed-4efe-826c-9b008e58cf74",
+    "term": "Free rider problem",
+    "definition": "When individuals benefit from a good without paying for it, as they cannot be excluded. This leads to under-provision of public goods by the market.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "d0f28fea-75e9-45f9-b484-138f762ded3d",
+    "term": "Information failure",
+    "definition": "When economic agents do not have perfect knowledge, leading to a misallocation of resources. Consumers or producers may make sub-optimal decisions.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "d9939adc-0da6-4b67-80d9-0ae0bd987a7a",
+    "term": "Moral hazard",
+    "definition": "When one party takes greater risks because they know another party bears the cost. E.g. insured drivers being less careful.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "fbf7165b-432b-4a8a-8cf6-c2a64d4d5f22",
+    "term": "Deadweight loss",
+    "definition": "The loss of economic efficiency when equilibrium is not achieved. Represented as a triangle of lost consumer and producer surplus on a diagram.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "bff1b535-cb51-486c-b1d0-3417facbdf19",
+    "term": "Indirect tax",
+    "definition": "A tax placed on goods and services by the government, paid by producers but typically passed on to consumers through higher prices. E.g. VAT, excise duties.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "c7115f2a-d77b-481f-afb6-bee04f2ab44e",
+    "term": "Subsidy",
+    "definition": "A payment by the government to producers to lower costs of production, encourage output, and reduce the market price. Shifts the supply curve to the right.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "4045cb7b-fb17-47dc-acbd-a1743094fe06",
+    "term": "Maximum price",
+    "definition": "A legally imposed price ceiling set below the equilibrium price. Designed to make goods affordable but may cause excess demand and shortages.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "6190f88f-5eb1-476a-a8c3-6ad054697dcc",
+    "term": "Minimum price",
+    "definition": "A legally imposed price floor set above the equilibrium price. Designed to protect producers' incomes but may cause excess supply.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "89c303ae-8d96-477a-831e-e51f3705a7fe",
+    "term": "Tradable permits",
+    "definition": "Government-issued permits allowing firms to pollute a set amount. Firms can buy and sell permits, creating a market-based incentive to reduce pollution.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "e51ff3f9-e87f-4217-9516-7cc94955aacf",
+    "term": "Government failure",
+    "definition": "When government intervention leads to a worse allocation of resources than the free market would have achieved, or creates new inefficiencies.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "bd9c9dc5-7710-4113-8b9d-ff0adbf17150",
+    "term": "Buffer stock",
+    "definition": "A scheme where the government buys and stores surplus goods when supply is high and sells from stocks when supply is low, aiming to stabilise prices.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "a69e0686-61ad-4f38-ad35-bdef391bf1f7",
+    "term": "Regulation",
+    "definition": "Government rules and laws that control the behaviour of firms and individuals. E.g. pollution limits, minimum wage, product standards.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "60c23801-0608-429e-9cd2-cf52bd3d2640",
+    "term": "Gross Domestic Product",
+    "definition": "The total value of all goods and services produced within a country's borders in a given time period. The most common measure of national output.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "507a472b-13f6-432a-bc3b-a00eacc8fbf2",
+    "term": "Gross National Income",
+    "definition": "GDP plus net income from abroad (income earned by domestic residents overseas minus income earned by foreign residents domestically).",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "4e827fb6-76ba-42fa-9bb5-573c1d278343",
+    "term": "Real GDP",
+    "definition": "GDP adjusted for inflation, giving a more accurate picture of actual output changes over time. Measured at constant prices.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "ea4b3744-9ff8-4039-a410-80dabfa437e7",
+    "term": "Nominal GDP",
+    "definition": "GDP measured at current prices without adjusting for inflation. Also called money GDP. Can overstate actual growth during inflationary periods.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "fbebb0d2-824b-44ad-845e-aef8c2c56cc0",
+    "term": "GDP per capita",
+    "definition": "GDP divided by the total population. Used as an indicator of average living standards, though it does not show distribution of income.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "f85540ff-70e1-4718-94f8-8e14f306a2bb",
+    "term": "Inflation",
+    "definition": "A sustained increase in the general price level of goods and services over time, reducing the purchasing power of money.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "be2c6961-dc27-4b24-8eb4-9ea319b0e66c",
+    "term": "Consumer Price Index",
+    "definition": "A measure of inflation that tracks the average price change of a weighted basket of goods and services bought by a typical household.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "a7f3de14-0afb-4c8c-abdc-7e6936ce856e",
+    "term": "Deflation",
+    "definition": "A sustained decrease in the general price level. Can lead to delayed spending, falling output, and rising real debt burdens.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "9e1eab3e-9465-4703-bfea-0bf8123e49e5",
+    "term": "Disinflation",
+    "definition": "A reduction in the rate of inflation. Prices are still rising, but at a slower rate than before.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "1e4b176e-e5fc-41a1-ad31-c63b88537903",
+    "term": "Unemployment",
+    "definition": "When people who are willing and able to work at the prevailing wage rate cannot find employment.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "e8fae9e8-08b7-484d-9016-844fb6444cc2",
+    "term": "Claimant count",
+    "definition": "A measure of unemployment based on the number of people claiming unemployment-related benefits (e.g. Jobseeker's Allowance).",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "995cac7c-2c19-478b-bdc7-02929e5d34dc",
+    "term": "Labour Force Survey",
+    "definition": "An internationally standardised survey (ILO measure) that counts those without a job who have actively sought work in the past 4 weeks and are available to start.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "cfbd7e05-b003-4501-976c-63ad3260804e",
+    "term": "Balance of payments",
+    "definition": "A record of all financial transactions between a country and the rest of the world over a given period, consisting of the current account, capital account, and financial account.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "dc87d592-2226-49e5-bbc9-0e988c9bf354",
+    "term": "Current account",
+    "definition": "Part of the balance of payments recording trade in goods and services, investment income, and current transfers between a country and the rest of the world.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "905e2b1b-dc54-45b9-a6b1-85192580743d",
+    "term": "Trade deficit",
+    "definition": "When the value of a country's imports exceeds the value of its exports, resulting in a negative balance of trade.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "aa8fdd05-d88f-41cd-889e-4df85f91de18",
+    "term": "Trade surplus",
+    "definition": "When the value of a country's exports exceeds the value of its imports, resulting in a positive balance of trade.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "9ec4fad6-a80f-4131-b502-f0f0873c5471",
+    "term": "Aggregate demand",
+    "definition": "The total demand for goods and services in an economy at a given price level in a given time period. AD = C + I + G + (X - M).",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "2361137b-fdfe-4e8f-b43c-cc89e23a62c0",
+    "term": "Consumption",
+    "definition": "Spending by households on goods and services. The largest component of aggregate demand in most economies.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "93f7a838-38f4-4e27-b59d-a91aff221c4f",
+    "term": "Investment",
+    "definition": "Spending by firms on capital goods (machinery, equipment, buildings) that will be used to produce goods and services in the future.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "126cc0a0-24a8-456d-a247-257b4c887276",
+    "term": "Government spending",
+    "definition": "Spending by the government on public services, infrastructure, and transfer payments. A component of aggregate demand (G).",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "305f9286-0d21-46f6-83f2-3ce1db2a990a",
+    "term": "Net exports",
+    "definition": "The value of a country's exports minus the value of its imports (X - M). Positive net exports add to aggregate demand.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "e8b33c58-aca8-4f53-b135-aa586803c8f1",
+    "term": "Marginal propensity to consume",
+    "definition": "The proportion of each additional pound of income that is spent on consumption. MPC = change in consumption ÷ change in income.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "a051dc5e-b29b-4086-90ac-e166142d22b9",
+    "term": "Marginal propensity to save",
+    "definition": "The proportion of each additional pound of income that is saved rather than spent. MPS = change in savings ÷ change in income. MPC + MPS = 1.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "e0c037df-f80d-4287-9e97-b548a56bb838",
+    "term": "Aggregate supply",
+    "definition": "The total output of goods and services that producers in an economy are willing and able to supply at a given price level.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "a830e698-6232-4b63-aee8-3cec505cb73b",
+    "term": "Short-run aggregate supply",
+    "definition": "Aggregate supply in the short run, which slopes upward as firms respond to higher prices by increasing output. Shifts when input costs change.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "25cbc331-8ecd-4a18-9e9a-00b3a7e01ef1",
+    "term": "Long-run aggregate supply",
+    "definition": "Aggregate supply in the long run, which is vertical at the full employment level of output. Shows the economy's productive capacity.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "a40b9ee3-ead7-4e6e-93d2-f5226aa50415",
+    "term": "Full employment",
+    "definition": "The level of employment where all those willing and able to work at the prevailing wage rate are employed. Some frictional and structural unemployment may still exist.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "1a6ee0cd-9332-4d3c-afbc-75f364459006",
+    "term": "Circular flow of income",
+    "definition": "A model showing how money flows between households and firms. Income flows from firms to households (as wages/rent/profit) and back as spending on goods and services.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "a81df7c7-053a-41c8-84ce-77959b7eb543",
+    "term": "Injections",
+    "definition": "Additions to the circular flow of income that increase national income: investment (I), government spending (G), and exports (X).",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "8185720a-c5a7-445b-b599-a1a7b4399eaf",
+    "term": "Withdrawals",
+    "definition": "Leakages from the circular flow of income that reduce national income: savings (S), taxation (T), and imports (M). Also called leakages.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "ab79ec25-e55e-48ea-a969-54e17e4cf813",
+    "term": "Multiplier effect",
+    "definition": "When an initial injection into the economy leads to a larger final increase in national income. The multiplier = 1 / (1 - MPC) or 1 / MPW.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "ee6f14d1-d361-43c1-858c-8e288a064367",
+    "term": "Output gap",
+    "definition": "The difference between actual GDP and potential GDP. A positive gap means the economy is overheating; a negative gap means spare capacity exists.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "e21d9760-63ea-406a-a90e-85e6b96fb588",
+    "term": "Economic growth",
+    "definition": "An increase in the real GDP of an economy over time. Short-run growth uses spare capacity; long-run growth increases productive potential.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "1a69dba9-9cce-4c4b-81bd-37dd65ff1b63",
+    "term": "Recession",
+    "definition": "Two or more consecutive quarters of negative economic growth (falling real GDP). Associated with rising unemployment and falling living standards.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "89e51b8f-2ae9-41cc-8bb3-41e0ca458aec",
+    "term": "Potential output",
+    "definition": "The maximum level of output an economy can sustain without generating inflationary pressure. Determined by the quantity and quality of factors of production.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "2c7786bf-42a2-4b80-8173-31cc9c992c1a",
+    "term": "Human Development Index",
+    "definition": "A composite measure of development combining GNI per capita, life expectancy, and mean/expected years of schooling. Ranges from 0 to 1.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "25e0f7ce-b1a5-45f6-a086-01ae7a188f0f",
+    "term": "Fiscal policy",
+    "definition": "The use of government spending and taxation to influence aggregate demand and the economy. Expansionary = increase G or decrease T.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "16fcaee3-0be2-49f7-95d7-42f04a4b7114",
+    "term": "Monetary policy",
+    "definition": "The use of interest rates, money supply, and exchange rates by the central bank to influence aggregate demand. Expansionary = lower interest rates.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "08edad4a-4d31-4b22-a886-e51f4e841faa",
+    "term": "Supply-side policy",
+    "definition": "Government policies aimed at increasing the productive capacity of the economy (shifting LRAS right). E.g. education, deregulation, tax reform.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "af3a077a-3810-40e6-a4dd-68a61a8d9f74",
+    "term": "Interest rate",
+    "definition": "The cost of borrowing money and the reward for saving. Set by the central bank as a tool of monetary policy.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "6e282045-5003-4927-a4a9-0af0695e0753",
+    "term": "Exchange rate",
+    "definition": "The price of one currency expressed in terms of another. Affects the price of imports and exports and the current account balance.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "7efd97e4-1cf6-467b-ba1f-66c43efc972a",
+    "term": "National debt",
+    "definition": "The total amount of money owed by the government, accumulated from past budget deficits. Different from the annual budget deficit.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "85df42d9-c286-4610-a7d3-64dea9b79180",
+    "term": "Budget deficit",
+    "definition": "When government spending exceeds government revenue (taxation) in a given year. The shortfall must be financed by borrowing.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "e2f05a65-87d0-4ca3-8620-d05b2d61c88a",
+    "term": "Budget surplus",
+    "definition": "When government revenue (taxation) exceeds government spending in a given year, allowing the government to repay debt.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "fb6964f6-7200-4d3e-9a0c-c7b79ca58ac1",
+    "term": "Demand-pull inflation",
+    "definition": "Inflation caused by excessive aggregate demand growing faster than aggregate supply. \"Too much money chasing too few goods.\"",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "6e776f89-16f5-4079-a070-5af4a1ddcdbe",
+    "term": "Cost-push inflation",
+    "definition": "Inflation caused by increases in the costs of production (e.g. wages, raw materials, energy), which are passed on to consumers as higher prices.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "9c303785-6af1-4df0-b549-7208f920f330",
+    "term": "Cyclical unemployment",
+    "definition": "Unemployment caused by a downturn in the economic cycle (recession). Demand for labour falls as firms reduce output.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "a1a5699f-27d2-4a3c-9a55-49a2cc69ec46",
+    "term": "Structural unemployment",
+    "definition": "Unemployment caused by a mismatch between workers' skills and the skills demanded by employers, often due to changes in the structure of the economy.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "53dd4769-af8e-46de-aa28-228047b4a05c",
+    "term": "Frictional unemployment",
+    "definition": "Short-term unemployment that occurs when workers are between jobs, searching for new employment. Exists even in a healthy economy.",
+    "created_at": "2026-03-10T20:01:41.49079+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "dc3d5317-b5b2-439a-9845-b5615618888e",
+    "term": "Critical path analysis",
+    "definition": "A project management technique that identifies the sequence of dependent tasks (the critical path) that determines the minimum time needed to complete a project. Any delay on the critical path delays the whole project.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "e99788e8-9646-4cf0-8bae-e96115f66967",
+    "term": "Corporate culture",
+    "definition": "The shared values, beliefs, attitudes, and norms that shape behaviour within an organisation. Culture influences how employees interact, make decisions, and approach their work.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "7a181167-8d5a-42c4-a1a6-8d18149f0830",
+    "term": "Corporate social responsibility",
+    "definition": "The voluntary actions a business takes to consider and address the social, environmental, and ethical impacts of its operations beyond its legal obligations.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "ebf2e038-8e55-4933-9d0c-7f5ab51ba3b4",
+    "term": "Business ethics",
+    "definition": "The moral principles and values that guide decision-making and behaviour within a business. Ethical decisions consider what is right and fair, not just what is profitable.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "5829a13d-1e38-4a84-b25a-188a1a179ca6",
+    "term": "Stakeholder conflict",
+    "definition": "A situation where the interests of different stakeholder groups clash, requiring the business to prioritise or compromise between competing demands.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "127316ca-0022-4999-92ca-3cd4cb610edb",
+    "term": "Ratio analysis",
+    "definition": "The use of financial ratios to assess a firm's performance in areas such as profitability, liquidity, and gearing. Ratios are most useful when compared over time or against competitors.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "e3364bfa-390a-46aa-9c81-63c797d4d171",
+    "term": "Benchmarking",
+    "definition": "The process of comparing a firm's performance, processes, or products against those of industry leaders or competitors in order to identify best practices and areas for improvement.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "be32af10-5661-4edb-8ddc-638e17b2e94c",
+    "term": "Core competencies",
+    "definition": "The unique strengths, resources, and capabilities that give a business a competitive advantage and are difficult for rivals to imitate, forming the basis of its strategic position.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "1831eab9-7841-413e-bb24-44e5a7cf9c18",
+    "term": "Lewin's Force Field Analysis",
+    "definition": "A change management model that identifies the driving forces (pushing for change) and restraining forces (resisting change) acting on a situation. Change occurs when driving forces outweigh restraining forces.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "a9531d7f-aa32-4447-9b34-ac56a2914e96",
+    "term": "Barriers to change",
+    "definition": "Factors that hinder or prevent organisational change, such as employee resistance, financial constraints, organisational inertia, or poor communication from management.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "acb1398e-b4d4-4f41-b417-ba1b6fc59702",
+    "term": "Scenario planning",
+    "definition": "A strategic planning method in which managers create and analyse multiple plausible future situations to prepare the business for different outcomes and reduce the impact of uncertainty.",
+    "created_at": "2026-03-12T05:14:20.874758+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "ac12f32e-40f5-498c-8f1c-68db149f5c6d",
+    "term": "Globalisation",
+    "definition": "The increasing integration and interdependence of the world's economies through the growth of international trade, investment, and the spread of technology and cultural influences.",
+    "created_at": "2026-03-12T05:14:20.978866+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "8654c52c-7323-4abe-9209-31bd50755bd3",
+    "term": "Multinational corporation",
+    "definition": "A large company that operates in multiple countries, with production or service facilities outside its country of origin. MNCs benefit from economies of scale, access to new markets, and lower costs.",
+    "created_at": "2026-03-12T05:14:20.978866+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "25ca56ad-33aa-42f9-9e7c-64bfbdb1f51d",
+    "term": "Offshoring",
+    "definition": "The relocation of a business process or operation from one country to another, typically to take advantage of lower labour costs, favourable regulations, or proximity to new markets.",
+    "created_at": "2026-03-12T05:14:20.978866+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "a959100a-e022-4cd7-942c-193dce34a3a4",
+    "term": "Reshoring",
+    "definition": "The process of bringing business operations or manufacturing back to the company's home country, often driven by rising overseas costs, quality concerns, or a desire for shorter supply chains.",
+    "created_at": "2026-03-12T05:14:20.978866+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "e46c1fa2-1c87-4f0c-9843-710a47cded79",
+    "term": "Trade liberalisation",
+    "definition": "The removal or reduction of government restrictions on international trade, such as tariffs and quotas, to encourage the free flow of goods and services between countries.",
+    "created_at": "2026-03-12T05:14:20.978866+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "34018821-e35a-4419-94c0-84cf2450b0ac",
+    "term": "Protectionism",
+    "definition": "Government policies that restrict or restrain international trade to protect domestic industries from foreign competition. Methods include tariffs, quotas, subsidies, and regulations.",
+    "created_at": "2026-03-12T05:14:20.978866+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "a19a96c5-87ae-48a1-8a5b-2480c0338f27",
+    "term": "Tariff",
+    "definition": "A tax imposed on imported goods, raising their price to make them less competitive compared to domestically produced alternatives. Tariffs are a common form of protectionism.",
+    "created_at": "2026-03-12T05:14:20.978866+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "9a60bc0b-09ff-45af-986e-3bd4c3c539cb",
+    "term": "Quota",
+    "definition": "A physical limit placed on the quantity of a particular good that can be imported into a country over a given period, restricting foreign competition.",
+    "created_at": "2026-03-12T05:14:20.978866+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "29488bfe-2553-475d-8cb8-d5d79c2a146c",
+    "term": "Foreign direct investment",
+    "definition": "Investment made by a firm in one country into business interests in another country, typically by establishing operations or acquiring business assets such as factories or stakes in foreign firms.",
+    "created_at": "2026-03-12T05:14:20.978866+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "cd4e27a5-9864-4cee-a37c-1432a960b3e1",
+    "term": "Emerging market",
+    "definition": "A country that is transitioning from a developing to a more advanced economy, characterised by rapid industrialisation, rising incomes, and growing consumer markets.",
+    "created_at": "2026-03-12T05:14:20.978866+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "3652eb08-620b-4b7c-820f-025ed66c5457",
+    "term": "International competitiveness",
+    "definition": "The ability of a country's firms to compete successfully in global markets, influenced by factors such as productivity, exchange rates, costs of production, and innovation.",
+    "created_at": "2026-03-12T05:14:20.978866+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "f10c8095-652c-47da-b673-86735bf0a510",
+    "term": "Comparative advantage",
+    "definition": "The ability of a country to produce a good or service at a lower opportunity cost than another country, forming the basis for mutually beneficial international trade.",
+    "created_at": "2026-03-12T05:14:20.978866+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "dd37ddbb-370a-465c-914c-dbc6a05f89ce",
+    "term": "Ethnocentric approach",
+    "definition": "An international marketing approach where the home country's practices, products, and strategies are applied uniformly in all foreign markets with little or no adaptation.",
+    "created_at": "2026-03-12T05:14:20.978866+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "90256bf3-c8fd-488e-b721-71ee6285db10",
+    "term": "Polycentric approach",
+    "definition": "An international marketing approach where each foreign market is treated as unique, with products, pricing, and promotion adapted to local tastes, customs, and conditions.",
+    "created_at": "2026-03-12T05:14:20.978866+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "7f38f988-6a65-445b-b993-a73acd112208",
+    "term": "Geocentric approach",
+    "definition": "An international marketing approach that takes a global perspective, developing strategies that balance standardisation with local adaptation to serve worldwide markets effectively.",
+    "created_at": "2026-03-12T05:14:20.978866+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "65723f7a-14fe-4fd8-afb8-d4b8880b44b4",
+    "term": "Glocalisation",
+    "definition": "A business strategy that combines global standardisation with local adaptation, adjusting products, marketing, or operations to meet the specific needs and preferences of local markets.",
+    "created_at": "2026-03-12T05:14:20.978866+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "8cffba98-9ec6-4dd1-ae8c-11a83f25c083",
+    "term": "Bartlett and Ghoshal model",
+    "definition": "A framework classifying multinational strategies into four types based on the balance between global integration and local responsiveness: international, multidomestic, global, and transnational.",
+    "created_at": "2026-03-12T05:14:20.978866+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "cf9859e2-cabb-48d7-ae99-c626be67dc9e",
+    "term": "Transfer pricing",
+    "definition": "The pricing of goods, services, or assets transferred between divisions of the same multinational corporation, often set to minimise tax liabilities across different jurisdictions.",
+    "created_at": "2026-03-12T05:14:20.978866+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "0b7a4bd6-b04d-43ef-9d2f-0b0fe4b67683",
+    "term": "Global supply chain",
+    "definition": "A network of organisations, resources, and processes involved in the creation and delivery of a product across multiple countries, from raw materials to the final consumer.",
+    "created_at": "2026-03-12T05:14:20.978866+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "e0615d9a-9667-4eb0-99bf-f560fdffec93",
+    "term": "Ethical trading",
+    "definition": "Business practices that ensure products are sourced and produced in a way that respects workers' rights, provides fair wages, and minimises environmental harm throughout the supply chain.",
+    "created_at": "2026-03-12T05:14:20.978866+00:00",
+    "subject_id": 3
+  },
+  {
+    "id": "0d1e605e-73b3-42ad-866a-28e5dbb88541",
+    "term": "Sole trader",
+    "definition": "A business owned and run by one person with unlimited liability. The owner keeps all profits but is personally liable for all debts.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "5bb58678-3c1a-43e8-a739-3cc5f00ae8ba",
+    "term": "Partnership",
+    "definition": "A business owned by two or more people who share profits, responsibilities, and liabilities. Most partnerships have unlimited liability.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "8bd3eb7c-bcec-4255-b752-e8b128461e98",
+    "term": "Private limited company",
+    "definition": "A company (Ltd) with limited liability whose shares are not publicly traded. Shareholders' personal assets are protected from business debts.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "603b6302-7fa5-4576-b513-b8555b4eb213",
+    "term": "Public limited company",
+    "definition": "A company (plc) with limited liability whose shares are traded on the stock exchange, allowing it to raise large amounts of capital from the public.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "3dcc8d88-1045-45c9-aa98-851fdfd84002",
+    "term": "Limited liability",
+    "definition": "The legal protection whereby shareholders can only lose the amount they invested in the business, not their personal assets.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "247b3df9-f594-4396-bbc9-39bbb5baed19",
+    "term": "Unlimited liability",
+    "definition": "When a business owner is personally responsible for all business debts, meaning personal assets can be seized to pay creditors.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "b32f18df-c732-41f9-86ab-abe3c7f68ba0",
+    "term": "State-owned enterprise",
+    "definition": "A business owned and controlled by the government, typically operating in industries considered strategically important or natural monopolies.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "a3084a1c-0e4c-47aa-9779-dc51f6053bbd",
+    "term": "Co-operative",
+    "definition": "A business owned and democratically controlled by its members (workers, consumers, or producers), with each member having one vote regardless of investment.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "387b96da-3ef7-43af-a1f3-9a20fa59dc4e",
+    "term": "Joint venture",
+    "definition": "A strategic arrangement where two or more firms collaborate on a specific project or business activity while remaining independent entities.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "c9df0934-b82e-40bf-9540-6a050ad41e7d",
+    "term": "Organic growth",
+    "definition": "Business expansion using the firm's own resources — e.g. increasing output, opening new stores, developing new products. Also called internal growth.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "b99a07cb-34b9-4bb4-9f75-07f30c254220",
+    "term": "Horizontal integration",
+    "definition": "A merger between firms at the same stage of production in the same industry. E.g. two car manufacturers merging.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "28b23f6e-2a79-4f09-bfe2-99622b2d522a",
+    "term": "Vertical integration",
+    "definition": "A merger between firms at different stages of production in the same industry. Forward = towards consumer; backward = towards raw materials.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "4f1846af-c235-4b21-9b22-03a711e2a811",
+    "term": "Conglomerate integration",
+    "definition": "A merger between firms in completely different industries, primarily motivated by risk diversification.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "20c24606-5b3f-4bce-af76-a1de232d9384",
+    "term": "Demerger",
+    "definition": "The splitting of a business into two or more separate, independent companies. May occur to improve focus, efficiency, or unlock shareholder value.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "5250d479-0014-4faf-ad39-f33ff94d0ad2",
+    "term": "Profit maximisation",
+    "definition": "The objective of producing at the output level where marginal cost equals marginal revenue (MC = MR), maximising the difference between total revenue and total cost.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "a6ff70e4-4ffb-481a-8cdc-a3919384fe6d",
+    "term": "Revenue maximisation",
+    "definition": "The objective of producing at the output level where marginal revenue equals zero (MR = 0), maximising total revenue regardless of costs.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "ff534fc8-593d-47b2-bef4-2e39cc6b0fc6",
+    "term": "Sales maximisation",
+    "definition": "The objective of selling the maximum volume of output, subject to making at least normal profit. Occurs where AC = AR.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "2242d33f-5360-46b3-bc32-75eb960c42bb",
+    "term": "Satisficing",
+    "definition": "A behavioural theory where managers aim for satisfactory rather than maximum profits, pursuing other objectives like leisure, prestige, or market share.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "ed401e67-2479-4afd-bf65-85a75b076dc2",
+    "term": "Principal-agent problem",
+    "definition": "A conflict of interest arising from the divorce of ownership and control, where managers (agents) may pursue their own objectives rather than those of shareholders (principals).",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "ff9c2794-4698-455d-b7d1-3a27b419e035",
+    "term": "Total revenue",
+    "definition": "The total income a firm receives from selling its output. TR = Price × Quantity.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "1a4ba628-72f7-4371-b8d1-3d321f882395",
+    "term": "Average revenue",
+    "definition": "Revenue per unit of output sold. AR = TR ÷ Q. Since TR = P × Q, AR always equals the price, so the AR curve is the demand curve.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "dcfa6a45-18d3-4ce2-867e-4aff4b2474d7",
+    "term": "Marginal revenue",
+    "definition": "The additional revenue gained from selling one more unit of output. MR = ΔTR ÷ ΔQ. For a downward-sloping demand curve, MR lies below AR.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "84b6e800-5f3c-493b-9d05-3ce65588ffba",
+    "term": "Total cost",
+    "definition": "The sum of all costs of production. TC = Total Fixed Costs + Total Variable Costs.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "51c8221e-6f54-440b-8f28-71935e9cd003",
+    "term": "Fixed costs",
+    "definition": "Costs that do not change with output in the short run. E.g. rent, insurance, salaries of permanent staff.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "fa4e62b1-44f6-4b4b-bafb-cc81e0c621f9",
+    "term": "Variable costs",
+    "definition": "Costs that change directly with the level of output. E.g. raw materials, energy, wages of hourly workers.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "71c8eefe-cf0e-4971-a520-ec7047e7bd95",
+    "term": "Average cost",
+    "definition": "The cost per unit of output. AC = TC ÷ Q. The AC curve is U-shaped due to the spread of fixed costs and eventually diminishing returns.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "012b8f94-959f-413e-b555-41c420f3e58d",
+    "term": "Marginal cost",
+    "definition": "The additional cost of producing one more unit of output. MC = ΔTC ÷ ΔQ. The MC curve intersects AC at its minimum point.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "59d9d44c-3584-4d07-883b-7677ac0e7807",
+    "term": "Law of diminishing returns",
+    "definition": "A short-run concept: as more units of a variable factor are added to a fixed factor, the marginal product of the variable factor eventually declines.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "cf340eb9-1696-48ee-ad27-f5ac08c074bd",
+    "term": "Economies of scale",
+    "definition": "Reductions in long-run average cost as a firm increases its scale of production. Sources include technical, managerial, financial, marketing, and purchasing economies.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "fa6d029d-7952-4377-ab85-0d956b1efc13",
+    "term": "Diseconomies of scale",
+    "definition": "Increases in long-run average cost as a firm grows beyond its optimal size, caused by communication problems, coordination difficulties, and X-inefficiency.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "5956a88d-2121-478c-b596-c5bedd921bb1",
+    "term": "Minimum efficient scale",
+    "definition": "The smallest level of output at which long-run average costs are minimised. Beyond this point, no further economies of scale are available.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "2def5f77-9321-4abf-8788-f1d5b1b83620",
+    "term": "Internal economies of scale",
+    "definition": "Cost advantages that arise from within the firm as it grows larger. Types: technical, managerial, financial, marketing, purchasing, risk-bearing.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "ad121e85-7579-4245-bbaa-fa9a728ad748",
+    "term": "External economies of scale",
+    "definition": "Cost advantages that arise from the growth of the industry as a whole, benefiting all firms. E.g. skilled labour pool, infrastructure, knowledge sharing.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "9ca7512c-8197-4dca-b7ef-5ae17ae7eab4",
+    "term": "Normal profit",
+    "definition": "The minimum profit needed to keep a firm in the industry in the long run. It is the opportunity cost of the entrepreneur's capital and time. Occurs where AR = AC.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "677f8174-7d4e-49b8-bb03-1948d750d946",
+    "term": "Supernormal profit",
+    "definition": "Profit above normal profit, where total revenue exceeds total cost including normal profit. Also called abnormal or economic profit. Occurs where AR > AC.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "7cb5965f-acee-4e36-9f13-eaecf9bdb7c1",
+    "term": "Shutdown point",
+    "definition": "In the short run, a firm shuts down if price falls below average variable cost (P < AVC). In the long run, a firm exits if price is below average cost (P < AC).",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "3541ee58-df7a-4d07-bfd8-5ba08bb2b533",
+    "term": "Allocative efficiency",
+    "definition": "Achieved when resources are allocated to produce the combination of goods most valued by society. Occurs where P = MC (price equals marginal cost).",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "6b2be6a3-91f4-41b3-9411-2cb503855b45",
+    "term": "Productive efficiency",
+    "definition": "Achieved when a firm produces at the lowest possible average cost, using the minimum resources. Occurs at the minimum point of the AC curve.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "672b02f5-2cc0-448e-897d-da3c2646eef0",
+    "term": "Dynamic efficiency",
+    "definition": "Efficiency over time, achieved when firms invest supernormal profits in research, development, and innovation to improve products and processes.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "d7acab5a-c09d-415a-968f-d949752950a3",
+    "term": "X-inefficiency",
+    "definition": "When a firm operates above its lowest possible cost curve due to lack of competitive pressure, resulting in organisational slack and waste.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "033dfed4-f836-4795-bdd0-ecfe435c12f3",
+    "term": "Concentration ratio",
+    "definition": "The market share of the largest n firms in an industry. A high concentration ratio indicates an oligopolistic or monopolistic market structure.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "f4fc3f58-77de-4c72-95c7-e1b4ecb373d0",
+    "term": "Perfect competition",
+    "definition": "A market structure with many small firms, identical products, perfect information, and no barriers to entry or exit. Firms are price takers.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "c4a6ae2d-ac65-4017-8872-ff4a177db779",
+    "term": "Monopolistic competition",
+    "definition": "A market structure with many firms selling differentiated products, relatively low barriers to entry, and some degree of market power.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "6ec6e740-30a5-4876-8939-50f0d1d6b8d4",
+    "term": "Oligopoly",
+    "definition": "A market structure dominated by a few large firms, characterised by high barriers to entry, interdependence, and the potential for collusion.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "d54f2bd7-3990-4b02-b35b-340a38c49f15",
+    "term": "Monopoly",
+    "definition": "A market structure with a single firm or a dominant firm (25%+ market share in UK law) that is the sole supplier of a product with no close substitutes.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "fb6553c0-e8ca-45f2-90fb-22f8075b7128",
+    "term": "Natural monopoly",
+    "definition": "A market where the minimum efficient scale is so large relative to market demand that only one firm can operate profitably. Duplication of infrastructure would be wasteful.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "5dc0b3e2-c32f-4cee-a6e9-83983dae2d21",
+    "term": "Price discrimination",
+    "definition": "When a firm charges different prices to different consumers for the same product, where the price difference is not due to cost differences.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "93ece770-e8f8-4ed6-a756-fc8330f59a45",
+    "term": "Third-degree price discrimination",
+    "definition": "Charging different prices to different groups of consumers based on their elasticity of demand. Requires market segmentation, prevention of resale, and market power.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "cbd5e19e-4de6-47be-be5c-871c342086b2",
+    "term": "Collusion",
+    "definition": "When firms in an oligopoly cooperate to set prices or output levels, reducing competition. Can be formal (cartel) or informal (tacit).",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "bfe905ed-8194-47fa-b33c-c3f6896e9783",
+    "term": "Cartel",
+    "definition": "A formal agreement between firms in an oligopoly to fix prices, restrict output, or divide markets. Illegal in most countries but difficult to detect.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "164a6c48-7450-48ec-9ed2-2fbb1d1af14b",
+    "term": "Game theory",
+    "definition": "The study of strategic decision-making where each firm's optimal decision depends on the actions of rival firms. Used to analyse oligopolistic behaviour.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "18ed6fde-d4c9-49aa-824e-d1156b59d898",
+    "term": "Prisoner's dilemma",
+    "definition": "A game theory model showing that individually rational decisions can lead to collectively suboptimal outcomes, explaining why cartels tend to break down.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "0cb106a6-e8fd-4114-8d0c-bfd16a4f2e6b",
+    "term": "Predatory pricing",
+    "definition": "Setting prices below average cost to drive competitors out of the market, with the intention of raising prices once competition is eliminated.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "a98341fa-c6f3-46a5-bbe3-37ddd3c62a87",
+    "term": "Limit pricing",
+    "definition": "Setting prices low enough to deter potential new entrants from entering the market, sacrificing short-term profits to maintain long-term market power.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "ef8d3f95-e640-4984-9f24-9c68339b06d3",
+    "term": "Contestable market",
+    "definition": "A market with low barriers to entry and exit and low sunk costs, where the threat of potential competition disciplines incumbent firms' behaviour.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "7fa0edab-2ad7-4141-bfda-0f7e5188b69f",
+    "term": "Sunk costs",
+    "definition": "Costs that cannot be recovered if a firm exits the market. E.g. advertising expenditure, specialised equipment. High sunk costs reduce contestability.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "527c528a-20c8-4f3b-901f-c91bda08df27",
+    "term": "Monopsony",
+    "definition": "A market structure where there is only one buyer (or a dominant buyer). In labour markets, a monopsony employer can pay wages below the competitive level.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "6ee7ce53-d264-4bec-a8a5-59e22c1b0ee5",
+    "term": "Barriers to entry",
+    "definition": "Factors that make it difficult or costly for new firms to enter a market. E.g. economies of scale, patents, branding, sunk costs, legal barriers.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "5f88f3c0-c0ee-41b0-85ad-483524cab48e",
+    "term": "Derived demand",
+    "definition": "The demand for labour (or any factor of production) that arises from the demand for the final product it is used to produce.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "c340ecf6-54c3-4ce6-9e21-95c07bcbca4c",
+    "term": "Marginal revenue product",
+    "definition": "The additional revenue a firm earns from employing one more worker. MRP = MPP × MR. A profit-maximising firm hires where MRP = W (the wage rate).",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "734384c8-d02b-4044-b4c6-63956ff14505",
+    "term": "Marginal physical product",
+    "definition": "The additional output produced by employing one more unit of a variable factor (e.g. one more worker). Also called marginal product.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "d943da86-a3f3-44ab-ace7-3a900dc04e34",
+    "term": "Wage rate",
+    "definition": "The price of labour, determined by the interaction of labour demand and supply in a competitive market, or by employer/union power in non-competitive markets.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "c7063d5d-90f6-432b-b884-c1e786021848",
+    "term": "Trade union",
+    "definition": "An organisation of workers that collectively bargains with employers for higher wages, better working conditions, and employment protection.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "d8708d77-bc56-4d59-9f40-5ddb2e534c46",
+    "term": "Monopsony employer",
+    "definition": "An employer with significant market power as the sole or dominant buyer of labour in a market, enabling it to pay wages below the competitive equilibrium.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "6d001fc7-a9f4-4aaa-be6d-ab1599e84fd3",
+    "term": "Geographical immobility",
+    "definition": "When workers cannot or will not move to where jobs are available, due to housing costs, family ties, regional attachments, or information gaps.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "95e2c8a3-e0f3-4421-a6d9-1b02a3b2da8b",
+    "term": "Occupational immobility",
+    "definition": "When workers lack the skills, qualifications, or training needed to move between different types of jobs, causing structural unemployment.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "670dd6d0-a3a5-440f-a6a6-c6e9ba571223",
+    "term": "Compensating wage differential",
+    "definition": "Higher wages paid to workers in jobs with undesirable characteristics (danger, antisocial hours, unpleasant conditions) to attract sufficient labour supply.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "52898125-2914-4d8d-b4c7-0063774d509f",
+    "term": "Elasticity of demand for labour",
+    "definition": "The responsiveness of the quantity of labour demanded to a change in the wage rate. Depends on ease of substitution, labour cost proportion, PED for the product, and time.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "3f44c731-8e99-440a-a13e-3bf3a009b103",
+    "term": "Competition policy",
+    "definition": "Government policies designed to promote competition and prevent the abuse of market power. Includes merger control, anti-cartel enforcement, and market investigations.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "f20cfaab-a349-48ea-a947-7273d71d7994",
+    "term": "Privatisation",
+    "definition": "The transfer of ownership of state-owned enterprises to the private sector, intended to improve efficiency through the profit motive and competitive pressure.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "73a26b2a-cab9-4988-b76b-09c606578308",
+    "term": "Nationalisation",
+    "definition": "The transfer of private sector businesses into public (government) ownership, often to protect jobs, ensure universal access, or control natural monopolies.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "373597c3-d7c5-44e1-8fcf-49ad40b98132",
+    "term": "Deregulation",
+    "definition": "The removal or reduction of government regulations and barriers to entry in a market, intended to increase competition and reduce costs.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "ff9d5469-a753-4742-aaa0-017381a95954",
+    "term": "Regulatory capture",
+    "definition": "When a regulator acts in the interests of the industry it is supposed to regulate, rather than in the public interest, due to lobbying or revolving-door employment.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "e425e315-92ea-4c3b-a870-382627a8f18c",
+    "term": "Minimum wage",
+    "definition": "A legally imposed price floor on wages. Effective only when set above the market equilibrium wage. Can increase or decrease employment depending on market structure.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "731a831a-0ce1-4a2d-9e15-fa529d91e9cb",
+    "term": "Maximum wage",
+    "definition": "A legally imposed price ceiling on wages. Effective only when set below the market equilibrium wage. Can cause labour shortages in affected occupations.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "7658522b-c744-4960-b2b9-8287186ced97",
+    "term": "Competitive tendering",
+    "definition": "A process where private firms bid to provide public sector services, aiming to reduce costs and improve efficiency through competitive pressure.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "be5b5c61-9052-451b-8dc4-10f28c717adc",
+    "term": "Globalisation",
+    "definition": "The increasing integration and interdependence of world economies through the growth of international trade, capital flows, and migration.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "09e3536f-9e87-460f-9f6c-a20245a30aff",
+    "term": "Transnational corporation",
+    "definition": "A large company that operates in multiple countries, with production facilities or operations outside its home country. Also called a multinational corporation (MNC).",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "85017fa7-9c88-4118-8fb5-3e417e7c4039",
+    "term": "Foreign direct investment",
+    "definition": "Investment by a firm in productive capacity in another country, such as building factories, offices, or acquiring foreign businesses. Distinct from portfolio investment.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "8bfd02f5-119c-475a-a6c9-eb72a252cb87",
+    "term": "Trade liberalisation",
+    "definition": "The removal or reduction of barriers to international trade, such as tariffs, quotas, and non-tariff barriers, to promote free trade.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "d4f35779-39b9-4f82-861e-a2853071c672",
+    "term": "Transfer pricing",
+    "definition": "The practice by TNCs of manipulating prices charged between their own subsidiaries across countries to shift profits to low-tax jurisdictions, reducing overall tax liability.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "1e7ed3ea-8760-4309-afd1-4b8e9823b7b9",
+    "term": "Absolute advantage",
+    "definition": "When a country can produce a good using fewer resources than another country. A necessary but not sufficient condition for beneficial trade.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "9ab09015-db13-4de9-9b4c-b103f6c55b7b",
+    "term": "Comparative advantage",
+    "definition": "When a country can produce a good at a lower opportunity cost than another country. The basis for mutually beneficial trade even when one country has absolute advantage in all goods.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "da013155-6785-497d-bddd-c4b69f34a57f",
+    "term": "Terms of trade",
+    "definition": "The ratio of a country's export prices to its import prices. Calculated as (index of export prices ÷ index of import prices) × 100. An improvement means exports buy more imports.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "685c67a4-6127-4727-ba4d-530e8e647764",
+    "term": "Tariff",
+    "definition": "A tax imposed on imported goods, raising the domestic price of imports to protect domestic producers. Creates deadweight loss and reduces consumer surplus.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "b3402810-7196-4adb-949b-8a08d4edeb98",
+    "term": "Quota",
+    "definition": "A physical limit on the quantity of a good that can be imported. Restricts supply, raises domestic prices, and protects domestic producers from foreign competition.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "a4fe0dfb-6c87-4857-a50c-931448c32474",
+    "term": "Non-tariff barrier",
+    "definition": "Restrictions on imports other than tariffs, such as administrative rules, safety standards, labelling requirements, and bureaucratic procedures.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "6551495a-f5bc-401f-b9ed-8a01956c305d",
+    "term": "Dumping",
+    "definition": "When a country exports goods at prices below the cost of production or below the domestic price, often to gain market share or dispose of surplus output.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "7e7810ab-8be0-4652-9c2b-a57df3290727",
+    "term": "Free trade area",
+    "definition": "A group of countries that have eliminated tariffs and quotas between member states but maintain independent trade policies towards non-members. E.g. NAFTA/USMCA.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "44f7596f-afeb-4461-8cf9-201b77fb3f49",
+    "term": "Customs union",
+    "definition": "A group of countries with free trade between members and a common external tariff on imports from non-members. E.g. the EU Customs Union.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "c8cd3928-6a36-4c47-916d-0acb7fd91999",
+    "term": "Common market",
+    "definition": "A customs union that also allows the free movement of factors of production (labour and capital) between member states.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "bc2bcd77-d22c-4d25-9168-a0df1018b288",
+    "term": "Economic and monetary union",
+    "definition": "A common market with a shared currency and harmonised economic policies. E.g. the Eurozone.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "6431c8f0-5c8c-4f50-beb6-81d59266f424",
+    "term": "Trade creation",
+    "definition": "When joining a trading bloc leads to a shift from a high-cost domestic producer to a lower-cost producer within the bloc, increasing efficiency and welfare.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "9d9b305c-1f6b-43c2-b400-5df310737916",
+    "term": "Trade diversion",
+    "definition": "When joining a trading bloc leads to a shift from a lower-cost non-member producer to a higher-cost member producer due to the common external tariff, reducing efficiency.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "5f134b61-ab0e-4dbe-915c-7f6d0a4f141a",
+    "term": "World Trade Organization",
+    "definition": "An international organisation that sets rules for global trade, facilitates trade negotiations, and provides a dispute settlement mechanism. Successor to GATT.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "f227c05c-a6a3-4c47-8f92-9ab936a70d0e",
+    "term": "Infant industry argument",
+    "definition": "The argument that new industries in developing countries need temporary protection from established foreign competitors until they achieve economies of scale and become competitive.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "00059f1a-bb40-4090-adeb-579f2d176ee6",
+    "term": "Capital and financial account",
+    "definition": "Part of the balance of payments recording capital transfers and transactions in financial assets (FDI, portfolio investment, reserve assets).",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "789d569c-fd04-4c37-8927-8993b0c1510d",
+    "term": "Floating exchange rate",
+    "definition": "An exchange rate determined by market forces of supply and demand for the currency, without government intervention.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "304763db-2957-4f9b-b92d-8e4c439b800a",
+    "term": "Fixed exchange rate",
+    "definition": "An exchange rate set and maintained by the government or central bank at a specific level, using foreign currency reserves and interest rates.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "194f22b2-861a-4494-ab75-f7605bf06fdf",
+    "term": "Managed exchange rate",
+    "definition": "An exchange rate that is primarily market-determined but with occasional government intervention to prevent excessive volatility or misalignment.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "6d53f485-d1c4-457f-8be1-6fcc9e760d09",
+    "term": "Appreciation",
+    "definition": "An increase in the value of a currency under a floating exchange rate system, caused by market forces.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "3b92689e-17f9-475c-9af5-b16a4ef67abb",
+    "term": "Depreciation",
+    "definition": "A decrease in the value of a currency under a floating exchange rate system, caused by market forces.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "799a56f5-3404-4a90-b300-a005b5c6001b",
+    "term": "Revaluation",
+    "definition": "A deliberate increase in the value of a currency under a fixed exchange rate system, decided by the government.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "81d5344b-1f4b-4472-b19e-6a4701cec234",
+    "term": "Devaluation",
+    "definition": "A deliberate decrease in the value of a currency under a fixed exchange rate system, decided by the government.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "21147e2a-a8b2-4127-8b7d-4d0d030c4dd9",
+    "term": "Marshall-Lerner condition",
+    "definition": "A devaluation/depreciation will improve the current account only if the sum of the price elasticities of demand for exports and imports is greater than one (PEDx + PEDm > 1).",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "855bbddc-3b14-410a-aa16-38f3dfb03ccf",
+    "term": "J-curve effect",
+    "definition": "Following a depreciation, the current account initially worsens (due to inelastic demand in the short run) before improving as demand adjusts, creating a J-shaped pattern.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "46847833-bec6-4233-a71d-104791522177",
+    "term": "Purchasing power parity",
+    "definition": "The theory that exchange rates adjust so that identical goods cost the same in different countries when expressed in a common currency. Used to compare living standards.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "c34fb871-c465-421e-9b4c-4ae0fd0d6986",
+    "term": "Capital flight",
+    "definition": "The rapid movement of large sums of financial capital out of a country, typically due to political instability, economic crisis, or unfavourable policy changes.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "47455e1f-f6d7-4e97-8716-a1f419b5d4b7",
+    "term": "International competitiveness",
+    "definition": "A country's ability to sell its goods and services in international markets. Measured by relative unit labour costs, productivity, and export prices.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "a1e3792d-b3e9-47a3-b96a-d3812fa06f4d",
+    "term": "Quantitative easing",
+    "definition": "An unconventional monetary policy where the central bank purchases government bonds to increase the money supply, lower interest rates, and stimulate economic activity.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "97bd6b1e-cedb-4b41-b9dc-cd3a2fb1ae3f",
+    "term": "Absolute poverty",
+    "definition": "A condition where individuals cannot afford the basic necessities of life (food, shelter, clean water, healthcare). Measured against a fixed threshold (e.g. $2.15/day).",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "c88dc192-6fe2-4895-81d1-8d56698aa72e",
+    "term": "Relative poverty",
+    "definition": "A condition where individuals have significantly less income than the average in their society. Often defined as below 60% of median household income.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "79709613-78bf-431a-9f6f-14b96e41f548",
+    "term": "Income inequality",
+    "definition": "The unequal distribution of income across a population. Measured by the Gini coefficient and the Lorenz curve.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "7120801b-59df-4300-80c7-7781ef91a4c9",
+    "term": "Wealth inequality",
+    "definition": "The unequal distribution of assets (property, savings, investments) across a population. Typically more unequal than income distribution.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "02513779-dcb4-4a8d-993b-f6ce442d61bd",
+    "term": "Lorenz curve",
+    "definition": "A graphical representation of income or wealth distribution. The further the curve bows from the 45° line of perfect equality, the greater the inequality.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "cfd9f404-99c9-4505-9cd9-cb51beab0c58",
+    "term": "Gini coefficient",
+    "definition": "A numerical measure of inequality ranging from 0 (perfect equality) to 1 (perfect inequality). Calculated as the ratio of the area between the Lorenz curve and the line of equality to the total area below the line.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "ab7dffdb-7360-4586-baf1-51a47e66b91b",
+    "term": "Capital expenditure",
+    "definition": "Government spending on long-term assets such as infrastructure, buildings, and equipment that will provide benefits over many years.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "977b6f65-52fd-47f1-922d-b6412e97c30b",
+    "term": "Current expenditure",
+    "definition": "Government spending on day-to-day items such as wages of public sector workers, consumables, and maintenance of existing services.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "d2c551fa-f98a-4d19-9a75-830881199918",
+    "term": "Transfer payments",
+    "definition": "Payments from the government to individuals for which no goods or services are provided in return. E.g. pensions, unemployment benefits, disability allowance.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "75c07992-4780-4871-b96d-9333c8ee7b4c",
+    "term": "Progressive tax",
+    "definition": "A tax where the proportion of income paid in tax rises as income increases. E.g. income tax with increasing marginal rates.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "3bdf0ced-2942-43aa-af04-a156ab951242",
+    "term": "Regressive tax",
+    "definition": "A tax where the proportion of income paid in tax falls as income increases. E.g. VAT takes a larger share of income from lower earners.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "230ec40b-f0f7-4518-9847-ea17a8aeae08",
+    "term": "Proportional tax",
+    "definition": "A tax where the proportion of income paid in tax remains constant regardless of income level. Also called a flat tax.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "58d078e9-cd5f-4dbf-a2be-705151179a76",
+    "term": "Laffer curve",
+    "definition": "A curve showing the theoretical relationship between tax rates and total tax revenue. Suggests that beyond an optimal rate, higher taxes reduce revenue by discouraging economic activity.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "8e7d0a10-7010-4bd4-993e-f63378fdecad",
+    "term": "Fiscal deficit",
+    "definition": "When government spending exceeds tax revenue in a given year. Must be financed by borrowing, adding to the national debt.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "2d76d928-b48e-405c-8b74-39d35eca7bd9",
+    "term": "Automatic stabilisers",
+    "definition": "Fiscal mechanisms that automatically adjust government spending and tax revenue to stabilise the economy without deliberate policy action. E.g. benefits rise in recession, tax revenue falls.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "2443cf56-e0c7-4a79-9563-638f5f18c514",
+    "term": "Discretionary fiscal policy",
+    "definition": "Deliberate changes in government spending or taxation to influence aggregate demand and achieve macroeconomic objectives.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "b306bfa0-79fc-45e1-af85-5fedb83f46b7",
+    "term": "Structural deficit",
+    "definition": "The part of the fiscal deficit that persists even when the economy is at full employment. Caused by a fundamental imbalance between spending and revenue.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "0cd3d163-11e6-4ba0-9fda-f4864729f6c0",
+    "term": "Cyclical deficit",
+    "definition": "The part of the fiscal deficit caused by the economy being below full employment during a recession. Disappears when the economy recovers.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "5f0736d5-eecf-472b-a66a-64877d14dc6e",
+    "term": "Crowding out",
+    "definition": "When increased government borrowing leads to higher interest rates, which reduces private sector investment and consumption, partially offsetting the fiscal stimulus.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "088d3aca-db1c-44b4-bab7-1fb067fc07e4",
+    "term": "Economic development",
+    "definition": "A broader concept than economic growth, encompassing improvements in living standards, health, education, political freedom, and environmental quality.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "7329f623-2a3d-4dc7-bc2c-4f23eebd3412",
+    "term": "Harrod-Domar model",
+    "definition": "A growth model stating that economic growth depends on the level of savings (which determines investment) and the capital-output ratio. Growth = s/k where s = savings ratio, k = capital-output ratio.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "283a0582-5408-4d3f-a6c0-f10222be3932",
+    "term": "Lewis dual-sector model",
+    "definition": "A development model describing the structural transformation from a traditional agricultural sector (with surplus labour) to a modern industrial sector (with higher productivity).",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "bb8bf479-bb46-4248-9636-0eaa47123f17",
+    "term": "Prebisch-Singer hypothesis",
+    "definition": "The theory that the terms of trade for primary commodity exporters tend to decline over time relative to manufactured goods, trapping developing countries in poverty.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "98aab0b8-2946-474f-a267-ef6cf74e437f",
+    "term": "Primary product dependency",
+    "definition": "When a developing country relies heavily on exports of raw materials and agricultural products, making it vulnerable to commodity price volatility and declining terms of trade.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "4d4b3f7b-99c0-4459-8de4-b2079a654c27",
+    "term": "Savings gap",
+    "definition": "The difference between the level of savings needed for investment-led growth (as per the Harrod-Domar model) and the actual level of domestic savings in a developing country.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "8195f57e-d3c9-41fc-8e5b-7424c3ea41f9",
+    "term": "Foreign currency gap",
+    "definition": "When a developing country lacks sufficient foreign exchange to import the capital goods and technology needed for economic development.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "1e058324-a98b-411f-9fb5-58ea4d67ef9f",
+    "term": "Microfinance",
+    "definition": "The provision of small loans, savings accounts, and insurance products to low-income individuals and small businesses who lack access to traditional banking services.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "0b12dd8a-98ce-46f8-a88e-5b99b4dc5454",
+    "term": "Buffer stock scheme",
+    "definition": "A system where a central authority buys and stores a commodity when prices are low and sells from stocks when prices are high, aiming to stabilise prices and producer incomes.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "ae8ffa48-05bc-472d-818e-ba848bde8213",
+    "term": "Debt relief",
+    "definition": "The partial or total cancellation of debts owed by developing countries, freeing resources for investment in health, education, and infrastructure.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "74857e33-c0aa-4b56-be24-363104987d18",
+    "term": "Non-governmental organisation",
+    "definition": "A non-profit organisation independent of government, often involved in development work, humanitarian aid, and advocacy. E.g. Oxfam, Médecins Sans Frontières.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "3bf3fb24-a5b9-4132-8807-2a9310ff379d",
+    "term": "International Monetary Fund",
+    "definition": "An international institution that provides financial assistance and policy advice to countries facing balance of payments difficulties, often with conditions attached (structural adjustment).",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  },
+  {
+    "id": "560b64b8-45ef-4ca7-8cb8-355148f51d5c",
+    "term": "World Bank",
+    "definition": "An international institution that provides loans and grants to developing countries for capital projects and development programmes, aiming to reduce poverty.",
+    "created_at": "2026-03-14T11:02:37.912596+00:00",
+    "subject_id": 1
+  }
+]

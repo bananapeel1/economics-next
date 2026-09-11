@@ -1,0 +1,332 @@
+{
+  "users": 211,
+  "rows": 1093,
+  "stepDist": {
+    "0": 825,
+    "1": 67,
+    "2": 32,
+    "3": 19,
+    "4": 37,
+    "5": 25,
+    "6": 26,
+    "7": 14,
+    "8": 31,
+    "9": 2,
+    "10": 12,
+    "14": 1,
+    "15": 2
+  },
+  "pctDist": {
+    "0": 825,
+    "100": 203,
+    "1-25": 16,
+    "26-50": 24,
+    "51-75": 15,
+    "76-99": 10
+  },
+  "secRows": [
+    {
+      "id": "introductory-concepts",
+      "users": 192,
+      "completed": 15,
+      "avgPct": 10,
+      "atStep0": 167
+    },
+    {
+      "id": "meeting-customer-needs",
+      "users": 123,
+      "completed": 7,
+      "avgPct": 12,
+      "atStep0": 101
+    },
+    {
+      "id": "consumer-behaviour-demand",
+      "users": 52,
+      "completed": 10,
+      "avgPct": 24,
+      "atStep0": 37
+    },
+    {
+      "id": "the-market",
+      "users": 44,
+      "completed": 13,
+      "avgPct": 34,
+      "atStep0": 28
+    },
+    {
+      "id": "planning-raising-finance",
+      "users": 35,
+      "completed": 9,
+      "avgPct": 30,
+      "atStep0": 22
+    },
+    {
+      "id": "types-sizes-businesses",
+      "users": 34,
+      "completed": 3,
+      "avgPct": 9,
+      "atStep0": 31
+    },
+    {
+      "id": "measures-economic-performance",
+      "users": 33,
+      "completed": 5,
+      "avgPct": 18,
+      "atStep0": 26
+    },
+    {
+      "id": "marketing-mix-strategy",
+      "users": 32,
+      "completed": 9,
+      "avgPct": 34,
+      "atStep0": 20
+    },
+    {
+      "id": "supply",
+      "users": 30,
+      "completed": 8,
+      "avgPct": 28,
+      "atStep0": 21
+    },
+    {
+      "id": "price-determination",
+      "users": 28,
+      "completed": 12,
+      "avgPct": 47,
+      "atStep0": 13
+    },
+    {
+      "id": "market-failure",
+      "users": 28,
+      "completed": 4,
+      "avgPct": 17,
+      "atStep0": 21
+    },
+    {
+      "id": "government-intervention",
+      "users": 26,
+      "completed": 4,
+      "avgPct": 23,
+      "atStep0": 18
+    },
+    {
+      "id": "business-objectives-strategy",
+      "users": 26,
+      "completed": 5,
+      "avgPct": 19,
+      "atStep0": 21
+    },
+    {
+      "id": "revenue-costs-profits",
+      "users": 25,
+      "completed": 1,
+      "avgPct": 5,
+      "atStep0": 23
+    },
+    {
+      "id": "market-structures-contestability",
+      "users": 24,
+      "completed": 1,
+      "avgPct": 10,
+      "atStep0": 21
+    },
+    {
+      "id": "managing-people",
+      "users": 22,
+      "completed": 8,
+      "avgPct": 46,
+      "atStep0": 11
+    },
+    {
+      "id": "financial-planning",
+      "users": 19,
+      "completed": 7,
+      "avgPct": 43,
+      "atStep0": 10
+    },
+    {
+      "id": "aggregate-demand",
+      "users": 19,
+      "completed": 3,
+      "avgPct": 16,
+      "atStep0": 16
+    },
+    {
+      "id": "globalisation",
+      "users": 18,
+      "completed": 6,
+      "avgPct": 33,
+      "atStep0": 12
+    },
+    {
+      "id": "causes-effects-globalisation",
+      "users": 18,
+      "completed": 4,
+      "avgPct": 22,
+      "atStep0": 14
+    },
+    {
+      "id": "entrepreneurs-leaders",
+      "users": 17,
+      "completed": 5,
+      "avgPct": 31,
+      "atStep0": 11
+    },
+    {
+      "id": "managing-finance",
+      "users": 16,
+      "completed": 7,
+      "avgPct": 44,
+      "atStep0": 9
+    },
+    {
+      "id": "national-income",
+      "users": 16,
+      "completed": 3,
+      "avgPct": 21,
+      "atStep0": 12
+    },
+    {
+      "id": "macroeconomic-objectives-policies",
+      "users": 16,
+      "completed": 4,
+      "avgPct": 25,
+      "atStep0": 12
+    },
+    {
+      "id": "trade-global-economy",
+      "users": 15,
+      "completed": 4,
+      "avgPct": 27,
+      "atStep0": 11
+    },
+    {
+      "id": "balance-payments-exchange-rates",
+      "users": 14,
+      "completed": 6,
+      "avgPct": 43,
+      "atStep0": 8
+    },
+    {
+      "id": "external-influences",
+      "users": 14,
+      "completed": 2,
+      "avgPct": 14,
+      "atStep0": 12
+    },
+    {
+      "id": "resource-management",
+      "users": 13,
+      "completed": 3,
+      "avgPct": 23,
+      "atStep0": 10
+    },
+    {
+      "id": "economic-growth",
+      "users": 13,
+      "completed": 1,
+      "avgPct": 8,
+      "atStep0": 12
+    },
+    {
+      "id": "aggregate-supply",
+      "users": 13,
+      "completed": 2,
+      "avgPct": 15,
+      "atStep0": 11
+    },
+    {
+      "id": "labour-markets",
+      "users": 13,
+      "completed": 2,
+      "avgPct": 15,
+      "atStep0": 11
+    },
+    {
+      "id": "growth-development",
+      "users": 12,
+      "completed": 4,
+      "avgPct": 33,
+      "atStep0": 8
+    },
+    {
+      "id": "global-markets-expansion",
+      "users": 11,
+      "completed": 3,
+      "avgPct": 29,
+      "atStep0": 7
+    },
+    {
+      "id": "government-intervention-firms",
+      "users": 11,
+      "completed": 1,
+      "avgPct": 14,
+      "atStep0": 9
+    },
+    {
+      "id": "business-growth",
+      "users": 10,
+      "completed": 3,
+      "avgPct": 30,
+      "atStep0": 7
+    },
+    {
+      "id": "decision-making-techniques",
+      "users": 9,
+      "completed": 2,
+      "avgPct": 22,
+      "atStep0": 7
+    },
+    {
+      "id": "managing-change",
+      "users": 9,
+      "completed": 1,
+      "avgPct": 11,
+      "atStep0": 8
+    },
+    {
+      "id": "poverty-inequality",
+      "users": 8,
+      "completed": 4,
+      "avgPct": 50,
+      "atStep0": 4
+    },
+    {
+      "id": "role-state-macroeconomy",
+      "users": 8,
+      "completed": 4,
+      "avgPct": 50,
+      "atStep0": 4
+    },
+    {
+      "id": "influences-business-decisions",
+      "users": 7,
+      "completed": 2,
+      "avgPct": 29,
+      "atStep0": 5
+    },
+    {
+      "id": "assessing-competitiveness",
+      "users": 7,
+      "completed": 1,
+      "avgPct": 14,
+      "atStep0": 6
+    },
+    {
+      "id": "global-marketing",
+      "users": 7,
+      "completed": 3,
+      "avgPct": 43,
+      "atStep0": 4
+    },
+    {
+      "id": "global-industries-mncs",
+      "users": 6,
+      "completed": 2,
+      "avgPct": 33,
+      "atStep0": 4
+    }
+  ],
+  "quizAttempts": 68,
+  "flashcardRows": 609
+}
