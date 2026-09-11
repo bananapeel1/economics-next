@@ -196,6 +196,20 @@ export async function POST(request) {
       // Present the customer's local currency while we still settle in GBP.
       // Stripe charges the 2–4% conversion fee to the customer, not to us.
       adaptive_pricing: { enabled: true },
+      // Ask the issuer to authenticate the cardholder. 24 of our 27 failed
+      // payments were issuer declines (20 of them bare `generic_decline`),
+      // and only 1 of 68 attempts had ever carried 3DS data. Banks outside
+      // the UK routinely refuse un-authenticated international card-not-
+      // present payments, so sending authentication data is the single
+      // biggest lever on approval rates for this audience.
+      //
+      // 'any' prefers a frictionless flow, so most customers authenticate
+      // without seeing a prompt. Cards that don't support 3DS proceed
+      // normally rather than failing, and successful authentication shifts
+      // chargeback liability to the issuer.
+      payment_method_options: {
+        card: { request_three_d_secure: 'any' },
+      },
     };
 
     if (plan === 'lifetime') {
