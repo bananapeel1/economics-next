@@ -61,7 +61,7 @@ export default function UpgradePage() {
           <div className="upgrade-offer-points">
             <div className="upgrade-offer-point"><Check /> Full access from the moment you join</div>
             <div className="upgrade-offer-point"><Check /> No contract, no notice period</div>
-            <div className="upgrade-offer-point"><Check /> Shown in your local currency at checkout</div>
+            <div className="upgrade-offer-point"><Check /> Prices in GBP &middot; pay in your local currency at checkout</div>
           </div>
         </div>
 
@@ -134,7 +134,7 @@ export default function UpgradePage() {
           </div>
           <div className="upgrade-reassure-item">
             <strong>Your currency, not ours</strong>
-            <span>Checkout converts automatically, so you see the real price before you pay.</span>
+            <span>Prices here are in GBP. Checkout converts to your local currency automatically, so you see the real amount before you pay.</span>
           </div>
           <div className="upgrade-reassure-item">
             <strong>The notes stay free</strong>
