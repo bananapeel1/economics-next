@@ -38,7 +38,16 @@ export async function generateMetadata({ params }) {
     return { title: 'Topic Not Found | Revvy Learn' };
   }
 
-  const title = `${section.title} — Edexcel IAL Economics ${section.units.title} | Revvy Learn`;
+  // A few topic names collide with unrelated high-volume searches. "Aggregate
+  // supply" is a UK building-materials term: that page drew 1,821 impressions
+  // and zero clicks in three months from queries like "aggregate supply in
+  // dorchester". Lead with the subject and the diagram names students search.
+  const topicTitleOverrides = {
+    'aggregate-supply': 'A-Level Economics: Aggregate Supply SRAS & LRAS Diagrams — Edexcel IAL WEC12',
+  };
+
+  const title = topicTitleOverrides[topic]
+    || `${section.title} — Edexcel IAL Economics ${section.units.title} | Revvy Learn`;
   const description = `Free revision notes, diagrams, flashcards and quizzes for ${section.title}. Edexcel International A-Level Economics ${section.units.title}.`;
 
   // Some topics have a dedicated SEO pillar page that should absorb canonical authority.
@@ -248,6 +257,7 @@ export default async function EconomicsTopicPage({ params }) {
         units={units || []}
         initialSectionData={initialData}
         initialSectionId={topic}
+        requestedSectionId={topic}
       />
     </>
   );

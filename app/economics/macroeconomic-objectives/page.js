@@ -5,11 +5,11 @@ import RelatedModelAnswers from '@/components/RelatedModelAnswers';
 import '@/styles/landing.css';
 
 export const metadata = {
-  title: 'Macroeconomic Objectives | IAL Economics WEC12 Complete Guide',
+  title: 'The 4 Macroeconomic Objectives — Edexcel IAL Economics WEC12 Notes',
   description: 'Complete macroeconomic objectives revision for Edexcel IAL Economics Unit 2 (WEC12). Growth, low inflation, low unemployment, balance of payments, inequality and environment \u2014 with diagrams, trade-offs and model answers.',
   alternates: { canonical: 'https://revvylearn.com/economics/macroeconomic-objectives' },
   openGraph: {
-    title: 'Macroeconomic Objectives | IAL Economics WEC12 Complete Guide | Revvy Learn',
+    title: 'The 4 Macroeconomic Objectives — Edexcel IAL Economics WEC12 Notes | Revvy Learn',
     description: 'The complete Edexcel IAL Economics guide to macroeconomic objectives: every objective, every measurement, every policy trade-off. Growth, inflation, unemployment, BoP.',
     url: 'https://revvylearn.com/economics/macroeconomic-objectives',
     type: 'article',

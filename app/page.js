@@ -12,8 +12,13 @@ export const metadata = {
   },
 };
 
-export default async function HomePage() {
+export default async function HomePage({ searchParams }) {
   const supabase = createAnonClient();
+
+  // Honour ?section= during server render. Without this the server always
+  // assumed the first subject, and because StudyApp seeds its subject state on
+  // that first render, a Business link opened the Economics syllabus.
+  const { section: requestedSection } = (await searchParams) || {};
 
   // Fetch subjects, units and sections
   const { data: subjects } = await supabase
@@ -39,7 +44,14 @@ export default async function HomePage() {
   const defaultSectionIds = new Set(
     (sections || []).filter(s => defaultUnits.some(u => u.id === s.unit_id)).map(s => s.id)
   );
-  const firstSectionId = (sections || []).find(s => defaultSectionIds.has(s.id))?.id || null;
+  const requestedSectionId = requestedSection
+    && (sections || []).some(s => s.id === requestedSection)
+    ? requestedSection
+    : null;
+
+  const firstSectionId = requestedSectionId
+    || (sections || []).find(s => defaultSectionIds.has(s.id))?.id
+    || null;
 
   // Fetch initial section data
   let initialData = null;
@@ -75,6 +87,7 @@ export default async function HomePage() {
         units={units || []}
         initialSectionData={initialData}
         initialSectionId={firstSectionId}
+        requestedSectionId={requestedSectionId}
       />
       <section className="sr-only">
         <h2>Free Edexcel IAL Revision for International A-Level Students</h2>

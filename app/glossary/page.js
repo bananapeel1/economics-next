@@ -5,10 +5,10 @@ import LandingScrollBar from '@/components/LandingScrollBar';
 import '@/styles/landing.css';
 
 export const metadata = {
-  title: 'Edexcel IAL Economics & Business Key Terms Glossary | Revvy Learn',
+  title: 'A–Z Economics & Business Key Terms — Edexcel IAL Glossary',
   description: 'A\u2013Z glossary of key terms and definitions for Edexcel International A-Level Economics and Business. Every definition aligned to the IAL specification \u2014 perfect for quick revision and exam reference.',
   openGraph: {
-    title: 'Edexcel IAL Economics & Business Key Terms Glossary | Revvy Learn',
+    title: 'A–Z Economics & Business Key Terms — Edexcel IAL Glossary',
     description: 'A\u2013Z key terms and definitions for Edexcel IAL Economics and Business, aligned to the IAL specification.',
     url: 'https://revvylearn.com/glossary',
   },

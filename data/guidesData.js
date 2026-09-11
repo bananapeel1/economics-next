@@ -13,7 +13,7 @@ const guidesData = [
     slug: 'business-revision-guide',
     subject: 'business',
     title: 'Edexcel IAL Business Revision Guide — Complete Study Notes',
-    metaTitle: 'Edexcel IAL Business Revision Notes — Complete Study Guide (2026)',
+    metaTitle: 'Edexcel IAL Business Revision Notes & PDFs — All Units (2026)',
     metaDescription: 'Complete Edexcel IAL Business revision guide. Free study notes for Unit 1 Marketing & People and Unit 2 Managing Business Activities with exam tips, key definitions and practice questions.',
     heroSubtitle: 'Your complete revision companion for Edexcel IAL Business Studies — covering every spec point across Units 1-4 with concise notes, key definitions and exam technique tips.',
     sections: [

@@ -212,13 +212,18 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
   );
 }
 
-export default function StudyApp({ subjects, sections, units, initialSectionData, initialSectionId }) {
+export default function StudyApp({ subjects, sections, units, initialSectionData, initialSectionId, requestedSectionId = null }) {
   const { user, isPremium } = useAuth();
 
-  // Subject state — if URL has ?section=, find which subject it belongs to
-  const urlSectionParam = typeof window !== 'undefined'
-    ? new URLSearchParams(window.location.search).get('section')
-    : null;
+  // Subject state — follow whichever section we were explicitly asked to open.
+  // requestedSectionId is resolved on the server, so this produces the same
+  // answer during SSR and hydration. Reading window.location alone did not:
+  // it is undefined on the server, so the subject seeded to subjects[0] and
+  // hydration never corrected it, sending Business links into Economics.
+  const urlSectionParam = requestedSectionId
+    || (typeof window !== 'undefined'
+      ? new URLSearchParams(window.location.search).get('section')
+      : null);
   const subjectForUrlSection = urlSectionParam
     ? (() => {
         const sec = sections.find(s => s.id === urlSectionParam);

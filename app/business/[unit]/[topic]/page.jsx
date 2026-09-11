@@ -238,6 +238,7 @@ export default async function BusinessTopicPage({ params }) {
         units={units || []}
         initialSectionData={initialData}
         initialSectionId={topic}
+        requestedSectionId={topic}
       />
     </>
   );
