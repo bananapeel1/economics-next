@@ -5,11 +5,11 @@ import RelatedModelAnswers from '@/components/RelatedModelAnswers';
 import '@/styles/landing.css';
 
 export const metadata = {
-  title: 'Market Failure | IAL Economics WEC11 Complete Revision Notes',
+  title: 'Market Failure Notes & Diagrams — Edexcel IAL Economics WEC11',
   description: 'Complete market failure revision for Edexcel IAL Economics Unit 1 (WEC11). All types explained: externalities, public goods, merit & demerit goods, information failure, monopoly power. Diagrams, model answers and exam technique.',
   alternates: { canonical: 'https://revvylearn.com/economics/market-failure' },
   openGraph: {
-    title: 'Market Failure | IAL Economics WEC11 Complete Revision Notes | Revvy Learn',
+    title: 'Market Failure Notes & Diagrams — Edexcel IAL Economics WEC11 | Revvy Learn',
     description: 'The complete Edexcel IAL Economics guide to market failure: every type, every diagram, every model answer. Externalities, public goods, merit goods and more.',
     url: 'https://revvylearn.com/economics/market-failure',
     type: 'article',

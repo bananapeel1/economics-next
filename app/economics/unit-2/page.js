@@ -3,9 +3,9 @@ import UnitScrollBar from '../UnitScrollBar';
 import '@/styles/landing.css';
 
 export const metadata = {
-  title: 'Macroeconomic Performance — Edexcel IAL Economics Unit 2 (WEC12) | Revvy Learn',
+  title: 'WEC12 Notes — Edexcel IAL Economics Unit 2: Macroeconomic Performance',
   description: 'Complete revision notes for Edexcel IAL Economics Unit 2 (WEC12). AD/AS, inflation, unemployment, economic growth, fiscal and monetary policy.',
-  openGraph: { title: 'Macroeconomic Performance — Edexcel IAL Economics Unit 2 (WEC12) | Revvy Learn', url: 'https://revvylearn.com/economics/unit-2', type: 'article' },
+  openGraph: { title: 'WEC12 Notes — Edexcel IAL Economics Unit 2: Macroeconomic Performance', url: 'https://revvylearn.com/economics/unit-2', type: 'article' },
 };
 
 const UNIT = { number: 2, code: 'WEC12', title: 'Macroeconomic Performance & Policy' };
