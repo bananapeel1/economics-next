@@ -24,7 +24,7 @@ const FREE_FEATURES = [
 const PRO_FEATURES = [
   ['Evaluation chains', 'The 20-mark technique, built step by step'],
   ['Model answers', 'Full-mark responses for every topic'],
-  ['Adaptive flashcards', 'Spaced repetition that targets your weak spots'],
+  ['Flashcards', 'Spaced repetition (SM-2) schedules each card from your answers'],
   ['Quizzes with marking', 'Examiner-style feedback, not just right/wrong'],
   ['AI tutor', 'Answers in exam language, any hour of the night'],
   ['Revision PDFs', 'Download and print for offline revision'],

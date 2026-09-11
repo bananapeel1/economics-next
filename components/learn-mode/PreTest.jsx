@@ -116,7 +116,16 @@ export default function PreTest({ quizData, subjectId, sectionId, onDone }) {
           >
             Check my answers
           </button>
-          <button className="lm-pretest-skip" onClick={onDone}>
+          <button className="lm-pretest-skip" onClick={() => {
+            // Remember the skip, otherwise the test reappears on every reload of this section.
+            if (typeof window !== 'undefined') {
+              try {
+                localStorage.setItem(`revvy_pretest_${subjectId}_${sectionId}`,
+                  JSON.stringify({ completed: false, skipped: true, timestamp: Date.now() }));
+              } catch {}
+            }
+            onDone?.();
+          }}>
             Skip pre-test &rarr;
           </button>
         </div>
@@ -131,7 +140,7 @@ export default function PreTest({ quizData, subjectId, sectionId, onDone }) {
             {allCorrect
               ? 'Impressive \u2014 you already know some of this!'
               : noneCorrect
-                ? 'Perfect \u2014 your brain is now primed to learn this.'
+                ? 'Nothing wrong with 0 \u2014 this is exactly what the next steps teach.'
                 : 'Good start! Your brain is now primed for learning.'}
           </p>
           <button className="lm-pretest-continue" onClick={onDone}>

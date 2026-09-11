@@ -1,0 +1,971 @@
+{
+ "content": [
+  {
+   "title": "Demand and Factors Affecting Demand",
+   "sections": [
+    {
+     "id": "what-is-demand",
+     "body": [
+      {
+       "text": "**Demand** refers to the quantity of a product that consumers are willing and able to purchase at a given price in a given time period. The key phrase is \"willing and able\" — you might want a Ferrari, but unless you have the income to buy one, you do not represent effective demand.",
+       "type": "paragraph"
+      },
+      {
+       "text": "The **law of demand** states that, ceteris paribus (all other things being equal), as the price of a good rises, the quantity demanded falls, and vice versa. This inverse relationship exists because higher prices reduce consumers' purchasing power and because cheaper substitutes become relatively more attractive.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Price of good rises",
+        "Consumers' real income falls",
+        "Some switch to substitutes"
+       ],
+       "result": "Quantity demanded decreases (movement along curve)",
+       "resultType": "bad"
+      },
+      {
+       "text": "On a demand diagram, price is on the vertical axis and quantity on the horizontal axis. The demand curve slopes downward from left to right. A change in price causes a **movement along** the demand curve — not a shift.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "What Is Demand?",
+     "recall": {
+      "type": "fillin",
+      "hints": [
+       "ab__",
+       "mov_____",
+       "down____"
+      ],
+      "prompt": "Complete the demand logic:",
+      "answers": [
+       "able",
+       "movement",
+       "downward"
+      ],
+      "template": [
+       "Demand is the quantity consumers are willing and ___ to buy",
+       "A rise in price causes a ___ along the demand curve",
+       "The demand curve slopes ___"
+      ]
+     },
+     "keyIdea": "Demand is the quantity of a good consumers are willing and able to buy at each price — not just what they want, but what they can actually afford.",
+     "examMatters": "Examiners deduct marks if you say \"demand shifts\" when you mean a price-driven change. Use the term \"quantity demanded\" for movements along the curve and reserve \"demand\" for shifts of the whole curve caused by non-price factors.",
+     "realExample": {
+      "text": "**Sony** cut the price of the PS5 in several markets to boost sales in 2024. As the price dropped, quantity demanded rose sharply — a textbook movement along the demand curve as gaming became affordable to a wider group of consumers.",
+      "emoji": "🎮"
+     },
+     "misconception": "Students write \"demand falls when price rises\" without specifying quantity demanded. A change in price causes a movement along the demand curve, not a shift. Instead write: a rise in price causes a fall in the quantity demanded, shown as a movement along the demand curve."
+    },
+    {
+     "id": "factors-shifting-demand",
+     "body": [
+      {
+       "text": "A **shift in demand** means the entire demand curve moves to a new position. At every possible price, consumers now want to buy more (rightward shift) or less (leftward shift) than before. Shifts are caused by changes in **non-price factors**, not by a change in the good's own price.",
+       "type": "paragraph"
+      },
+      {
+       "text": "Key Factors That Shift Demand",
+       "type": "subheading"
+      },
+      {
+       "type": "bullets",
+       "items": [
+        "**Income**: if consumers' incomes rise, demand for most goods increases (rightward shift). These are called **normal goods**. For **inferior goods**, demand falls as income rises.",
+        "**Price of substitutes**: if the price of a substitute rises, demand for your product increases as consumers switch across.",
+        "**Price of complements**: if the price of a complementary good rises, demand for your product falls because the two are used together.",
+        "**Tastes and preferences**: changes in fashion, trends or advertising can increase or decrease demand.",
+        "**Population and demographics**: a growing population or a change in age structure can shift demand for particular products."
+       ]
+      },
+      {
+       "text": "You must always identify the specific factor causing the shift and explain the direction. Saying \"demand increased\" without naming a non-price cause will cost you marks in an exam.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "Factors Causing a Shift in Demand",
+     "recall": {
+      "type": "reorder",
+      "prompt": "Order these from cause to effect for a rightward demand shift:",
+      "shuffled": [
+       2,
+       0,
+       3,
+       1
+      ],
+      "correctOrder": [
+       "Consumer incomes rise",
+       "Consumers willing to buy more at every price",
+       "Demand curve shifts right from D1 to D2",
+       "Equilibrium price and quantity both increase"
+      ]
+     },
+     "keyIdea": "When something other than price changes — income, tastes, substitutes, population — the entire demand curve moves left or right.",
+     "examMatters": "In diagram questions, examiners want you to label two demand curves (D1 and D2), show the direction of the shift, and state the specific non-price factor causing it. A shift without an identified cause earns partial marks at best.",
+     "realExample": {
+      "text": "**Oatly** experienced a massive rightward shift in demand for oat milk as consumer tastes moved toward plant-based diets in 2020-2023. This was not a price change — it was a shift driven by health awareness and environmental concerns, moving the whole demand curve to the right.",
+      "emoji": "🥛"
+     },
+     "misconception": "Students confuse a movement along the curve with a shift. A lower price causes a movement along the curve, not a shift of demand. Instead write: only non-price factors such as income, tastes, or substitute prices cause a shift of the demand curve itself."
+    }
+   ],
+   "takeaway": [
+    "Demand = willingness + ability to pay at each price.",
+    "Price changes cause movements along the demand curve.",
+    "Non-price factors (income, tastes, substitutes) shift the whole curve.",
+    "Always specify the cause and direction of any demand shift."
+   ],
+   "diagramRef": "demand-curve",
+   "quizIndices": [
+    0
+   ]
+  },
+  {
+   "title": "Supply and Factors Affecting Supply",
+   "sections": [
+    {
+     "id": "what-is-supply",
+     "body": [
+      {
+       "text": "**Supply** refers to the quantity of a product that firms are willing and able to offer for sale at a given price in a given time period. Just as demand requires willingness and ability from consumers, supply requires that producers both want to sell and have the capacity to produce.",
+       "type": "paragraph"
+      },
+      {
+       "text": "The **law of supply** states that, ceteris paribus, as the price of a good rises, the quantity supplied increases. This positive relationship exists because higher prices make production more profitable, encouraging existing firms to produce more and potentially attracting new firms into the market.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Price of good rises",
+        "Profit margins increase",
+        "Firms produce more output"
+       ],
+       "result": "Quantity supplied increases (movement along curve)",
+       "resultType": "good"
+      },
+      {
+       "text": "The supply curve slopes upward from left to right on a diagram. A change in the good's own price causes a **movement along** the supply curve. You should never describe a price change as \"supply shifting\" — that is a common error.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "What Is Supply?",
+     "recall": {
+      "type": "fillin",
+      "hints": [
+       "ab__",
+       "up____",
+       "al___"
+      ],
+      "prompt": "Complete the supply logic:",
+      "answers": [
+       "able",
+       "upward",
+       "along"
+      ],
+      "template": [
+       "Supply is the quantity firms are willing and ___ to sell",
+       "The supply curve slopes ___ from left to right",
+       "A rise in price causes a movement ___ the supply curve"
+      ]
+     },
+     "keyIdea": "Supply is the quantity of a good that firms are willing and able to offer for sale at each price — higher prices incentivise greater production.",
+     "examMatters": "Just as with demand, examiners distinguish sharply between movements along the supply curve (price changes) and shifts (non-price factors). Precise language is essential — always specify whether you mean quantity supplied or supply itself.",
+     "realExample": {
+      "text": "**UK strawberry farmers** increase the quantity they supply during summer when retail prices are highest, and reduce output during off-peak months. The higher summer price makes extra labour and greenhouse costs worthwhile, showing the law of supply in action.",
+      "emoji": "☀️"
+     },
+     "misconception": "Students write \"supply increases when price goes up\" without saying quantity supplied. A price change causes a movement along the supply curve, not a shift. Instead write: a rise in price leads to a rise in the quantity supplied, shown as a movement along the supply curve."
+    },
+    {
+     "id": "factors-shifting-supply",
+     "body": [
+      {
+       "text": "A **shift in supply** occurs when the entire supply curve moves to a new position. At every price level, firms are now willing to supply more (rightward shift) or less (leftward shift). These shifts are caused by changes in conditions of supply — factors other than the good's own price.",
+       "type": "paragraph"
+      },
+      {
+       "text": "Key Factors That Shift Supply",
+       "type": "subheading"
+      },
+      {
+       "type": "bullets",
+       "items": [
+        "**Costs of production**: higher wages, raw material costs or rent shift supply left because producing each unit is more expensive.",
+        "**Technology**: improved technology reduces unit costs, shifting supply to the right as firms can produce more at every price.",
+        "**Indirect taxes and subsidies**: a tax raises costs and shifts supply left; a subsidy lowers costs and shifts supply right.",
+        "**Number of firms**: more firms entering the market shifts market supply to the right.",
+        "**External shocks**: natural disasters or supply-chain disruptions reduce supply capacity, shifting supply left."
+       ]
+      },
+      {
+       "text": "You must be precise about the direction of the shift and the cause. A rightward shift means more is supplied at every price; a leftward shift means less is supplied at every price.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "Factors Causing a Shift in Supply",
+     "recall": {
+      "type": "reorder",
+      "prompt": "Order these from cause to effect for a leftward supply shift:",
+      "shuffled": [
+       3,
+       1,
+       0,
+       2
+      ],
+      "correctOrder": [
+       "Government imposes a new indirect tax",
+       "Production costs increase for all firms",
+       "Supply curve shifts left from S1 to S2",
+       "Equilibrium price rises and quantity falls"
+      ]
+     },
+     "keyIdea": "Changes in production costs, technology, taxes or the number of firms shift the whole supply curve — more supply means a rightward shift.",
+     "examMatters": "When drawing supply shifts, always label S1 and S2 clearly, state the specific factor causing the shift, and explain why it affects the cost or willingness to produce. Vague answers such as \"supply goes up\" without a causal factor will not score well.",
+     "realExample": {
+      "text": "**Tesla's** Gigafactory investments in battery production technology dramatically reduced the per-unit cost of lithium-ion batteries. This technological advancement shifted the supply curve for electric vehicles to the right, enabling Tesla to produce more cars at every price point.",
+      "emoji": "🔋"
+     },
+     "misconception": "Students say \"supply shifts right because firms want to sell more.\" Wanting to sell more is not a supply shift — there must be a change in production conditions. Instead write: supply shifts right when production costs fall, technology improves, or subsidies are introduced, enabling firms to offer more at every price."
+    }
+   ],
+   "takeaway": [
+    "Supply = willingness + ability to sell at each price.",
+    "Price changes cause movements along the supply curve.",
+    "Cost changes, technology and taxes shift the whole curve.",
+    "Always name the factor and direction when discussing shifts."
+   ],
+   "diagramRef": "supply-curve",
+   "quizIndices": [
+    1
+   ]
+  },
+  {
+   "title": "Market Equilibrium",
+   "sections": [
+    {
+     "id": "equilibrium-price-and-quantity",
+     "body": [
+      {
+       "text": "**Market equilibrium** occurs at the price where the quantity demanded by consumers exactly equals the quantity supplied by producers. At this point, there is no excess supply (surplus) and no excess demand (shortage), so there is no pressure for the price to change.",
+       "type": "paragraph"
+      },
+      {
+       "text": "On a diagram, equilibrium is where the demand and supply curves intersect. The **equilibrium price** (Pe) is found on the vertical axis and the **equilibrium quantity** (Qe) on the horizontal axis. Any price above Pe creates a surplus — firms cannot sell all they produce, so they cut prices. Any price below Pe creates a shortage — consumers compete for limited stock, pushing prices up.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Price above equilibrium",
+        "Surplus of unsold goods",
+        "Firms lower prices to clear stock"
+       ],
+       "result": "Price falls back toward equilibrium",
+       "resultType": "neutral"
+      },
+      {
+       "text": "This self-correcting mechanism is called the **price mechanism**. Markets naturally move toward equilibrium because surpluses and shortages create incentives for buyers and sellers to adjust their behaviour.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "Equilibrium Price and Quantity",
+     "recall": {
+      "type": "fillin",
+      "hints": [
+       "sup_____",
+       "sur____",
+       "lo___"
+      ],
+      "prompt": "Complete the equilibrium logic:",
+      "answers": [
+       "supplied",
+       "surplus",
+       "lower"
+      ],
+      "template": [
+       "Equilibrium is where quantity demanded equals quantity ___",
+       "A price above equilibrium creates a ___ of goods",
+       "Firms then ___ their prices to clear the surplus"
+      ]
+     },
+     "keyIdea": "Equilibrium is the price where quantity demanded equals quantity supplied — there is no tendency for the market to change.",
+     "examMatters": "Always label your equilibrium diagram with Pe and Qe at the intersection. Examiners expect you to explain what happens above and below equilibrium — describe both the surplus and shortage mechanisms to show you understand the full adjustment process.",
+     "realExample": {
+      "text": "**UK housing markets** in areas like London show persistent excess demand because supply is constrained by planning regulations. When quantity demanded far exceeds quantity supplied at the current price, prices are pushed above the level most buyers can afford, demonstrating disequilibrium in action.",
+      "emoji": "🏠"
+     },
+     "misconception": "Students write \"equilibrium means the market is fair or efficient.\" Equilibrium simply means quantity demanded equals quantity supplied — it says nothing about whether the price is affordable or the outcome is socially desirable. Instead write: equilibrium is the price where there is no surplus or shortage, but it does not guarantee a fair or efficient outcome."
+    },
+    {
+     "id": "shifts-and-new-equilibrium",
+     "body": [
+      {
+       "text": "When the demand curve or supply curve shifts, the market moves to a **new equilibrium**. You need to identify which curve has shifted, in which direction, and then read off the new equilibrium price and quantity from the diagram.",
+       "type": "paragraph"
+      },
+      {
+       "text": "Possible Shift Outcomes",
+       "type": "subheading"
+      },
+      {
+       "type": "bullets",
+       "items": [
+        "**Demand increases (shifts right)**: equilibrium price rises and equilibrium quantity rises.",
+        "**Demand decreases (shifts left)**: equilibrium price falls and equilibrium quantity falls.",
+        "**Supply increases (shifts right)**: equilibrium price falls and equilibrium quantity rises.",
+        "**Supply decreases (shifts left)**: equilibrium price rises and equilibrium quantity falls."
+       ]
+      },
+      {
+       "text": "In more complex scenarios, both curves may shift simultaneously. When that happens, you can determine the effect on one variable but the effect on the other depends on the relative size of the shifts. You should state this uncertainty clearly in exam answers.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "Shifts and New Equilibrium",
+     "recall": {
+      "type": "reorder",
+      "prompt": "Order these steps when demand shifts right:",
+      "shuffled": [
+       1,
+       3,
+       0,
+       2
+      ],
+      "correctOrder": [
+       "Non-price factor increases demand",
+       "Demand curve shifts from D1 to D2",
+       "At the old price there is now excess demand",
+       "Price rises to a new equilibrium Pe2"
+      ]
+     },
+     "keyIdea": "When demand or supply shifts, the equilibrium price and quantity both change — you must trace the cause through to the new intersection.",
+     "examMatters": "Diagram questions often require you to show the old and new equilibrium clearly. Label the original curves D1/S1 and the new ones D2/S2, mark Pe1/Qe1 and Pe2/Qe2, and use arrows to show the direction of change. Half the marks come from the diagram itself.",
+     "realExample": {
+      "text": "**Global oil prices** spiked in 2022 after Russia's invasion of Ukraine reduced supply (leftward shift of supply). At the same time, post-pandemic recovery increased demand (rightward shift). Both shifts pushed the equilibrium price sharply upward, while the net effect on quantity depended on which shift was larger.",
+      "emoji": "⛽"
+     },
+     "misconception": "Students draw both curves shifting but forget to explain the ambiguous variable. When both demand and supply shift simultaneously, one variable has a clear direction but the other is indeterminate without knowing the relative magnitudes. Instead write: state which effect is certain and which depends on the size of the shifts."
+    }
+   ],
+   "takeaway": [
+    "Equilibrium = Qd equals Qs, no surplus or shortage.",
+    "Surpluses push prices down; shortages push prices up.",
+    "A shift in D or S creates a new equilibrium point.",
+    "When both shift, one outcome is always indeterminate."
+   ],
+   "diagramRef": "equilibrium-diagram",
+   "quizIndices": [
+    2
+   ],
+   "practiceIndices": [
+    0
+   ]
+  },
+  {
+   "title": "Price Elasticity of Demand (PED)",
+   "sections": [
+    {
+     "id": "calculating-ped",
+     "body": [
+      {
+       "text": "**Price elasticity of demand (PED)** measures the responsiveness of the quantity demanded of a good to a change in its price. It is calculated using the formula: **PED = % change in quantity demanded / % change in price**. The result is always negative (because of the inverse relationship between price and demand), but we often refer to the absolute value.",
+       "type": "paragraph"
+      },
+      {
+       "text": "If PED is greater than 1 (in absolute terms), demand is **price elastic** — a small price change causes a proportionally larger change in quantity demanded. If PED is less than 1, demand is **price inelastic** — quantity demanded is relatively unresponsive to price changes. If PED equals exactly 1, demand is **unit elastic**.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Price rises by 10%",
+        "Quantity demanded falls by 20%",
+        "PED = -20% / 10% = -2"
+       ],
+       "result": "Demand is price elastic (PED > 1)",
+       "resultType": "neutral"
+      },
+      {
+       "text": "You should always show your working clearly in exam calculations. State the formula, substitute the figures, and interpret the result by saying whether demand is elastic or inelastic and what this means for the business.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "Calculating PED",
+     "recall": {
+      "type": "fillin",
+      "hints": [
+       "qu______",
+       "pr___",
+       "ela____",
+       "ine______"
+      ],
+      "prompt": "Complete the PED calculation logic:",
+      "answers": [
+       "quantity",
+       "price",
+       "elastic",
+       "inelastic"
+      ],
+      "template": [
+       "PED = % change in ___ demanded / % change in ___",
+       "PED > 1 means demand is price ___",
+       "PED < 1 means demand is price ___"
+      ]
+     },
+     "keyIdea": "PED measures how sensitive quantity demanded is to a price change — the bigger the number, the more consumers react to a price change.",
+     "examMatters": "Calculation questions award marks for the formula, correct substitution, the final answer, and your interpretation. Even if the arithmetic is wrong, you can still pick up method marks — so always show every step of your working.",
+     "realExample": {
+      "text": "**Ryanair** knows that leisure travellers have highly elastic demand — a 10% fare increase could cut bookings by more than 10%. This is why Ryanair keeps base fares extremely low and earns revenue from inelastic add-ons like seat selection and baggage, where customers are less sensitive to price.",
+      "emoji": "✈️"
+     },
+     "misconception": "Students forget the negative sign and write PED as a positive number without explanation. PED is always negative due to the inverse relationship between price and demand. Instead write: PED is negative, and we refer to its absolute value to judge whether demand is elastic (greater than 1) or inelastic (less than 1)."
+    },
+    {
+     "id": "factors-affecting-ped",
+     "body": [
+      {
+       "text": "Several factors determine whether demand for a particular good is elastic or inelastic. The most important factor is the **availability of substitutes** — if there are many close alternatives, consumers can easily switch when the price rises, making demand elastic.",
+       "type": "paragraph"
+      },
+      {
+       "text": "Key Determinants of PED",
+       "type": "subheading"
+      },
+      {
+       "type": "bullets",
+       "items": [
+        "**Substitutes**: more substitutes = more elastic demand, because consumers can switch easily.",
+        "**Necessity vs luxury**: necessities (bread, electricity) have inelastic demand; luxuries (holidays, designer goods) have elastic demand.",
+        "**Proportion of income**: goods that take up a large share of income have more elastic demand because the price change is more noticeable.",
+        "**Time period**: demand tends to be more elastic in the long run because consumers have time to find alternatives."
+       ]
+      },
+      {
+       "text": "You should be able to apply these factors to any product in a case study. Identify which factors apply, explain how they affect PED, and use this to advise the business on its pricing strategy.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "Factors Affecting PED",
+     "recall": {
+      "type": "reorder",
+      "prompt": "Order these goods from most inelastic to most elastic demand:",
+      "shuffled": [
+       3,
+       1,
+       0,
+       2
+      ],
+      "correctOrder": [
+       "Insulin (necessity, no substitutes)",
+       "Petrol (few short-run substitutes)",
+       "Branded cereal (some substitutes)",
+       "Holiday flights (luxury, many alternatives)"
+      ]
+     },
+     "keyIdea": "The more substitutes a product has, the less essential it is, and the longer consumers have to adjust, the more elastic its demand will be.",
+     "examMatters": "Higher-mark questions ask you to evaluate whether a product has elastic or inelastic demand. Structure your answer by considering multiple factors, reaching a judgement, and supporting it with data or context from the question. One-factor answers rarely score full marks.",
+     "realExample": {
+      "text": "**UK energy suppliers** face inelastic demand because electricity and gas are necessities with few practical substitutes in the short run. Even when British Gas raised prices by 54% in April 2022, most households had little choice but to continue buying energy, demonstrating classic inelastic demand.",
+      "emoji": "⚡"
+     },
+     "misconception": "Students list the factors but fail to apply them to the specific product in the question. Knowing the theory is not enough — you must link each factor to the case study context. Instead write: always explain which factors make this specific product elastic or inelastic, using evidence from the scenario provided."
+    },
+    {
+     "id": "ped-and-revenue",
+     "body": [
+      {
+       "text": "The link between PED and **total revenue** is one of the most important concepts in business. Total revenue equals **price multiplied by quantity sold** (TR = P x Q). The impact of a price change on total revenue depends entirely on whether demand is elastic or inelastic.",
+       "type": "paragraph"
+      },
+      {
+       "text": "If demand is **price elastic** (PED > 1), a price cut increases total revenue because the percentage rise in quantity demanded is greater than the percentage fall in price. Conversely, a price rise reduces total revenue because customers desert you in large numbers.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Demand is inelastic (PED < 1)",
+        "Firm raises price by 10%",
+        "Quantity demanded falls by only 5%"
+       ],
+       "result": "Total revenue increases — the price effect outweighs the volume loss",
+       "resultType": "good"
+      },
+      {
+       "text": "This insight is crucial for pricing strategy. You should recommend price rises for inelastic products and price cuts for elastic products when the goal is to maximise revenue.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "PED and Revenue",
+     "recall": {
+      "type": "fillin",
+      "hints": [
+       "inc_____",
+       "inc_____",
+       "pr___"
+      ],
+      "prompt": "Complete the PED-revenue link:",
+      "answers": [
+       "increase",
+       "increase",
+       "price"
+      ],
+      "template": [
+       "If PED > 1, a price cut will ___ total revenue",
+       "If PED < 1, a price rise will ___ total revenue",
+       "Total revenue = ___ multiplied by quantity sold"
+      ]
+     },
+     "keyIdea": "If demand is elastic, lowering prices raises total revenue; if demand is inelastic, raising prices raises total revenue — this is the key pricing insight.",
+     "examMatters": "This is a favourite exam topic. When advising on pricing, always state the PED value or whether demand is elastic/inelastic, then explain the revenue effect using the formula TR = P x Q. Show numerically or logically why revenue rises or falls.",
+     "realExample": {
+      "text": "**UK government tobacco taxation** consistently raises cigarette prices, yet tax revenue keeps rising. Because nicotine is addictive and demand is highly inelastic, the percentage fall in quantity demanded is far smaller than the percentage increase in price, so total tax revenue increases each year.",
+      "emoji": "🚬"
+     },
+     "misconception": "Students assume that cutting prices always increases revenue. A price cut only increases revenue when demand is elastic. If demand is inelastic, cutting prices reduces revenue because the small increase in quantity sold does not compensate for the lower price. Instead write: the revenue effect of a price change depends on whether demand is elastic or inelastic."
+    }
+   ],
+   "takeaway": [
+    "PED = % change in Qd / % change in price (always negative).",
+    "Substitutes, necessity, income share and time all affect PED.",
+    "Elastic demand: cut price to raise revenue.",
+    "Inelastic demand: raise price to raise revenue."
+   ],
+   "quizIndices": [
+    3
+   ],
+   "practiceIndices": [
+    1
+   ]
+  },
+  {
+   "title": "Income Elasticity of Demand (YED)",
+   "sections": [
+    {
+     "id": "calculating-yed",
+     "body": [
+      {
+       "text": "**Income elasticity of demand (YED)** measures the responsiveness of demand to a change in consumer income. The formula is: **YED = % change in quantity demanded / % change in income**. Unlike PED, the sign of YED is meaningful — it tells you the type of good.",
+       "type": "paragraph"
+      },
+      {
+       "text": "If YED is **positive**, the good is a **normal good** — demand rises as income rises. Most goods fall into this category. If YED is **negative**, the good is an **inferior good** — demand falls as income rises because consumers trade up to better alternatives.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Consumer income rises by 10%",
+        "Demand for luxury holidays rises by 25%",
+        "YED = +25% / +10% = +2.5"
+       ],
+       "result": "Normal good with income-elastic demand (YED > 1 = luxury)",
+       "resultType": "good"
+      },
+      {
+       "text": "Normal goods with YED greater than 1 are called **luxury goods** or income-elastic goods — demand grows faster than income. Normal goods with YED between 0 and 1 are **necessities** or income-inelastic goods — demand grows but more slowly than income.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "Calculating YED",
+     "recall": {
+      "type": "fillin",
+      "hints": [
+       "inc___",
+       "nor___",
+       "inf_____"
+      ],
+      "prompt": "Complete the YED classification:",
+      "answers": [
+       "income",
+       "normal",
+       "inferior"
+      ],
+      "template": [
+       "YED = % change in quantity demanded / % change in ___",
+       "Positive YED means the good is a ___ good",
+       "Negative YED means the good is an ___ good"
+      ]
+     },
+     "keyIdea": "YED measures how quantity demanded responds to income changes — its sign tells you whether the good is normal (positive) or inferior (negative).",
+     "examMatters": "YED calculation questions require you to show the formula, substitute correctly, state the sign, and interpret it. The most common error is giving the right number but failing to explain what it means — always classify the good as normal/inferior and luxury/necessity.",
+     "realExample": {
+      "text": "**Aldi and Lidl** saw sales surge during the 2022-2023 cost-of-living crisis in the UK as real incomes fell. Their budget products have negative YED — when incomes fall, demand for cheaper alternatives rises, making discount supermarkets the winners during economic downturns.",
+      "emoji": "🍜"
+     },
+     "misconception": "Students confuse PED and YED or forget which sign matters. With PED, the negative sign is always expected and often ignored. With YED, the sign is the crucial piece of information — positive means normal good, negative means inferior good. Instead write: always state and interpret the sign of YED because it classifies the product type."
+    },
+    {
+     "id": "significance-of-yed",
+     "body": [
+      {
+       "text": "Understanding YED is vital for **strategic planning**. During an economic boom, incomes rise and demand for luxury goods (high positive YED) increases rapidly — businesses selling these goods can expect strong growth. However, demand for inferior goods (negative YED) will fall during booms as consumers trade up.",
+       "type": "paragraph"
+      },
+      {
+       "text": "During a **recession**, the opposite happens. Demand for luxury goods drops sharply while demand for inferior goods rises. Businesses that sell only income-elastic products are vulnerable in downturns, which is why diversification across product types with different YED values can stabilise revenue.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Economy enters recession",
+        "Consumer incomes fall",
+        "Demand for luxuries drops, demand for inferior goods rises"
+       ],
+       "result": "Firms with diversified YED portfolios are more resilient",
+       "resultType": "neutral"
+      },
+      {
+       "text": "Businesses also use YED to decide which markets to enter. If you expect long-term income growth in a developing economy, targeting luxury goods makes sense because demand will grow faster than income. In stagnant economies, necessities and inferior goods may be safer bets.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "Significance of YED",
+     "recall": {
+      "type": "reorder",
+      "prompt": "Order the impact of a recession on different product types:",
+      "shuffled": [
+       2,
+       0,
+       3,
+       1
+      ],
+      "correctOrder": [
+       "Economy enters recession and incomes fall",
+       "Demand for luxury goods (high YED) drops sharply",
+       "Demand for inferior goods (negative YED) rises",
+       "Diversified firms weather the downturn best"
+      ]
+     },
+     "keyIdea": "YED helps businesses predict how economic booms and recessions will affect their sales, allowing them to plan product portfolios accordingly.",
+     "examMatters": "Extended-answer questions often ask you to evaluate how economic changes affect a specific business. Use YED to structure your argument — classify the firm's products, predict the demand impact, and evaluate whether the business is well-positioned to cope with the change.",
+     "realExample": {
+      "text": "**LVMH** (owner of Louis Vuitton) reported record revenues of over EUR 86 billion in 2023, driven by rising incomes among wealthy consumers globally. Their luxury portfolio has a high positive YED, meaning profits soar during economic growth but could fall sharply in a global recession.",
+      "emoji": "👜"
+     },
+     "misconception": "Students assume inferior goods are low-quality or undesirable. Inferior goods are simply those whose demand falls when income rises because consumers switch to preferred alternatives. Instead write: inferior goods are not necessarily bad products — they are simply those replaced by preferred alternatives when consumers can afford to trade up."
+    }
+   ],
+   "takeaway": [
+    "YED sign matters: positive = normal, negative = inferior.",
+    "YED > 1 = luxury (income-elastic); 0 < YED < 1 = necessity.",
+    "Recessions hit luxury goods hardest but boost inferior goods.",
+    "Diversifying across YED values stabilises revenue."
+   ],
+   "quizIndices": [
+    4
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "options": [
+    "It shifts to the left",
+    "It shifts to the right",
+    "There is a movement along it",
+    "It remains unchanged"
+   ],
+   "question": "If the price of a substitute good increases, what happens to the demand curve for the original product?",
+   "explanation": "When a substitute becomes more expensive, consumers switch to the original product, increasing demand and shifting the demand curve to the right. A movement along the curve only occurs when the product's own price changes.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "Revenue falls because demand is elastic",
+    "Revenue rises because demand is inelastic",
+    "Revenue stays the same because demand is unit elastic",
+    "Revenue falls because supply decreases"
+   ],
+   "question": "A good has a PED of -0.4. If the firm raises its price by 10%, what happens to total revenue?",
+   "explanation": "PED of -0.4 means demand is price inelastic (|PED| < 1). When demand is inelastic, a price increase raises total revenue because the fall in quantity demanded (4%) is proportionally less than the rise in price (10%).",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "A fall in raw material costs",
+    "An improvement in technology",
+    "An increase in indirect taxation",
+    "A government subsidy to producers"
+   ],
+   "question": "Which of the following would cause the supply curve to shift to the left?",
+   "explanation": "An increase in indirect tax raises costs for producers, reducing supply and shifting the curve left. Lower costs (A), better technology (B), and subsidies (D) all increase supply, shifting the curve right.",
+   "correctIndex": 2
+  },
+  {
+   "options": [
+    "An inferior good",
+    "A necessity with inelastic income demand",
+    "A luxury with elastic income demand",
+    "A Giffen good"
+   ],
+   "question": "A product has a YED of +2.3. This means the product is:",
+   "explanation": "A positive YED means it is a normal good, and a value greater than 1 means demand is highly responsive to income changes — making it a luxury. Inferior goods have negative YED, and necessities have YED between 0 and 1.",
+   "correctIndex": 2
+  },
+  {
+   "options": [
+    "Excess supply, and prices will fall",
+    "Excess demand, and prices will rise",
+    "The market is in equilibrium",
+    "Supply shifts to the right"
+   ],
+   "question": "At a price below the equilibrium, which of the following occurs?",
+   "explanation": "Below equilibrium price, quantity demanded exceeds quantity supplied, creating excess demand (shortage). This puts upward pressure on prices as consumers compete for scarce goods, pushing the market back towards equilibrium.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "The product is a necessity",
+    "There are many close substitutes available",
+    "The product takes up a very small proportion of income",
+    "Consumers are very brand loyal"
+   ],
+   "question": "Which factor is most likely to make the PED for a product more elastic?",
+   "explanation": "Many close substitutes make demand more elastic because consumers can easily switch to alternatives if the price rises. Necessities, small income proportion, and brand loyalty all make demand more inelastic.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "Luxury goods with high positive YED",
+    "Normal goods with low positive YED",
+    "Inferior goods with negative YED",
+    "Goods with unit income elasticity"
+   ],
+   "question": "During a recession, which type of goods is likely to see an increase in demand?",
+   "explanation": "Inferior goods have negative YED, meaning demand increases when income falls. During a recession, consumers trade down to cheaper alternatives. Luxury goods (A) would see demand fall significantly.",
+   "correctIndex": 2
+  },
+  {
+   "options": [
+    "-1.0",
+    "-2.0",
+    "-0.5",
+    "-1.5"
+   ],
+   "question": "A firm sells 1,000 units at £10 each. After raising the price to £12, it sells 800 units. What is the PED?",
+   "explanation": "% change in quantity = (800-1000)/1000 × 100 = -20%. % change in price = (12-10)/10 × 100 = +20%. PED = -20%/+20% = -1.0. This is unit elastic — the percentage changes are equal.",
+   "correctIndex": 0
+  },
+  {
+   "options": [
+    "A movement along the demand curve to the right",
+    "A shift of the supply curve to the right",
+    "A shift of the demand curve to the right for normal goods",
+    "A shift of the demand curve to the left for all goods"
+   ],
+   "question": "An increase in consumer incomes would be shown on a supply and demand diagram as:",
+   "explanation": "Income is a non-price factor, so it causes a shift (not a movement along) the demand curve. For normal goods, higher incomes increase demand (shift right). For inferior goods, higher incomes would shift demand left — but option D says 'all goods', which is incorrect.",
+   "correctIndex": 2
+  },
+  {
+   "options": [
+    "If demand is elastic, raising price increases revenue",
+    "If demand is inelastic, lowering price increases revenue",
+    "If demand is elastic, lowering price increases revenue",
+    "PED has no effect on total revenue"
+   ],
+   "question": "Which statement about PED and total revenue is correct?",
+   "explanation": "When demand is elastic (|PED| > 1), a price decrease leads to a proportionally larger increase in quantity demanded, so total revenue rises. Options A and B describe the opposite of what actually happens.",
+   "correctIndex": 2
+  },
+  {
+   "options": [
+    "Price elastic",
+    "Price inelastic",
+    "Unitary elastic",
+    "Perfectly elastic"
+   ],
+   "question": "If price elasticity of demand (PED) for a product is -0.4, demand is said to be:",
+   "explanation": "A PED value between 0 and -1 indicates inelastic demand, meaning a change in price leads to a proportionally smaller change in quantity demanded.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "The price set by the government",
+    "The lowest price a producer is willing to accept",
+    "The price at which quantity demanded equals quantity supplied",
+    "The price at which profit is maximised"
+   ],
+   "question": "What is meant by 'equilibrium price' in a market?",
+   "explanation": "Equilibrium price occurs where the demand curve intersects the supply curve, meaning there is no excess supply or excess demand in the market.",
+   "correctIndex": 2
+  },
+  {
+   "options": [
+    "A decrease in the price of electric vehicles",
+    "An increase in the price of petrol (a substitute for electric vehicles)",
+    "A decrease in consumer incomes",
+    "An increase in the cost of lithium batteries"
+   ],
+   "question": "Which of the following would cause the demand curve for electric vehicles to shift to the right?",
+   "explanation": "Higher petrol prices make petrol cars more expensive to run, increasing demand for electric vehicles (a substitute) at every price level, shifting the demand curve rightward.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "Inferior goods",
+    "Normal goods",
+    "Giffen goods",
+    "Goods with perfectly inelastic demand"
+   ],
+   "question": "Income elasticity of demand (YED) is positive for:",
+   "explanation": "Normal goods have a positive YED because demand increases when consumer incomes rise. Inferior goods have negative YED as demand falls when income rises.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "The product takes several years to manufacture",
+    "The firm holds large stocks of finished goods",
+    "Raw materials are extremely scarce",
+    "The firm operates at full capacity with no spare resources"
+   ],
+   "question": "Which factor is most likely to make the supply of a product more elastic?",
+   "explanation": "If a firm holds large stocks, it can quickly increase the quantity supplied in response to a price change, making supply more elastic.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "-2.0",
+    "-0.5",
+    "-1.0",
+    "-5.0"
+   ],
+   "question": "A coffee shop raises its price by 10% and sees a 5% fall in quantity demanded. What is the PED?",
+   "explanation": "PED = % change in Qd / % change in P = -5% / 10% = -0.5. Demand is price inelastic, which is typical for habitual purchases like coffee.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "+0.33",
+    "+3.0",
+    "-3.0",
+    "+1.0"
+   ],
+   "question": "During an economic boom, demand for luxury holidays rises by 15% while incomes increase by 5%. What is the YED for luxury holidays?",
+   "explanation": "YED = % change in Qd / % change in income = 15% / 5% = +3.0. This positive value above 1 confirms luxury holidays are a luxury (normal) good with income-elastic demand.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "A shift of the demand curve to the left",
+    "A movement along the supply curve",
+    "A shift of the supply curve to the left",
+    "A shift of the demand curve to the right"
+   ],
+   "question": "A new minimum wage increase raises production costs for a fast-food chain. On a supply and demand diagram, this would be shown as:",
+   "explanation": "Higher labour costs increase the cost of production, reducing the quantity firms are willing to supply at every price, shifting the supply curve leftward.",
+   "correctIndex": 2
+  },
+  {
+   "options": [
+    "PED = -0.8, demand is inelastic so revenue rises",
+    "PED = -1.0, demand is unitary elastic so revenue stays the same",
+    "PED = -0.5, demand is inelastic so revenue rises",
+    "PED = -2.0, demand is elastic so revenue falls"
+   ],
+   "question": "A local gym charges a monthly fee of $40 and has 500 members. It raises its fee to $50 and membership falls to 400. What does this imply about PED?",
+   "explanation": "% change in Qd = -20%, % change in P = +25%. PED = -20/25 = -0.8 (inelastic). Revenue rises from $20,000 to $20,000... actually revenue = 500x40=20,000 vs 400x50=20,000. However, using the PED formula: demand is inelastic at -0.8, so a price rise should increase total revenue.",
+   "correctIndex": 0
+  },
+  {
+   "options": [
+    "The demand curve shifts right, raising equilibrium price",
+    "The supply curve shifts right, lowering equilibrium price and raising quantity",
+    "The supply curve shifts left, raising equilibrium price",
+    "There is a movement along the supply curve to a higher quantity"
+   ],
+   "question": "A government introduces a subsidy for renewable energy producers. What is the most likely effect on the market for solar panels?",
+   "explanation": "A subsidy reduces producers' costs, shifting the supply curve to the right. This leads to a lower equilibrium price and a higher equilibrium quantity of solar panels.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "Revenue will definitely fall because fewer units are sold",
+    "Competitors may respond by cutting their own prices, eventually making demand more elastic",
+    "Inelastic demand means the business cannot raise prices at all",
+    "The government will impose price controls to prevent the increase"
+   ],
+   "question": "A business has a product with inelastic demand (PED = -0.3). A manager proposes raising prices by 20%. Which concern is most valid?",
+   "explanation": "While inelastic demand supports a short-term revenue gain, competitors may react by lowering their prices, drawing customers away and making demand more elastic over time.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "It is always useful because PED values never change",
+    "It is of limited use because PED only applies to luxury goods",
+    "It is useful for pricing decisions but PED estimates may be inaccurate and can change over time",
+    "It is useless because businesses cannot measure percentage changes"
+   ],
+   "question": "To what extent is knowledge of PED useful for business decision-making?",
+   "explanation": "PED informs pricing strategy (raise prices if inelastic, lower if elastic) but estimates are based on past data and may not reflect future conditions, competitor actions, or changes in tastes.",
+   "correctIndex": 2
+  },
+  {
+   "options": [
+    "Higher interest rates always lead to a collapse in house prices",
+    "Higher interest rates increase mortgage costs, likely reducing demand, but the effect depends on consumer confidence and housing supply",
+    "Interest rates have no effect on the housing market",
+    "Higher interest rates only affect commercial property, not residential"
+   ],
+   "question": "Which statement best evaluates the impact of a rise in interest rates on the housing market?",
+   "explanation": "Higher interest rates raise borrowing costs, reducing housing demand. However, the extent depends on supply constraints, consumer confidence, and whether rates are expected to be temporary.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "Demand will fall significantly during a recession",
+    "Demand will rise during a recession as consumers switch from premium brands",
+    "Demand will remain unchanged during a recession",
+    "The product should be discontinued during a recession"
+   ],
+   "question": "A supermarket notices that demand for its own-brand baked beans has a YED of -0.8. What does this suggest about the product's position during a recession?",
+   "explanation": "A negative YED means the good is inferior, so demand increases when incomes fall. During a recession, consumers trade down from premium brands to cheaper alternatives.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "They are perfectly accurate because all markets have straight-line supply and demand curves",
+    "They are useful for illustrating basic market forces but oversimplify real markets which face multiple simultaneous shifts and imperfect information",
+    "They are useless because no business uses diagrams",
+    "They are only applicable to agricultural markets"
+   ],
+   "question": "Evaluate the usefulness of supply and demand diagrams for explaining real-world market changes.",
+   "explanation": "Supply and demand diagrams simplify complex interactions to show cause and effect, but real markets face simultaneous shocks, behavioural factors, and information asymmetries not captured in the model.",
+   "correctIndex": 1
+  }
+ ],
+ "practice": [
+  {
+   "marks": 4,
+   "command": "Define",
+   "guidance": "PED measures the responsiveness of quantity demanded to a change in price (1 mark). It is calculated as: percentage change in quantity demanded divided by percentage change in price (1 mark). A PED greater than 1 means demand is price elastic (1 mark), while a PED less than 1 means demand is price inelastic (1 mark).",
+   "question": "Define the term 'price elasticity of demand' (PED). (4 marks)"
+  },
+  {
+   "marks": 6,
+   "command": "Explain",
+   "guidance": "Factor 1: Rising fuel prices (1 mark) — as petrol and diesel become more expensive, consumers look for cheaper alternatives, making electric vehicles more attractive as their running costs are lower (1 mark). This shifts demand for electric vehicles to the right (1 mark).\n\nFactor 2: Government subsidies or tax incentives (1 mark) — if the government offers grants to reduce the purchase price of electric vehicles, they become more affordable for consumers (1 mark), increasing the quantity demanded at every price level (1 mark).",
+   "question": "Explain two factors that could cause an increase in the demand for electric vehicles. (6 marks)"
+  },
+  {
+   "marks": 10,
+   "command": "Analyse",
+   "guidance": "Define YED as the responsiveness of demand to a change in income (2 marks). Luxury goods have high positive YED — demand rises more than proportionately with income (2 marks). In a recession, incomes fall, so demand for luxury goods will fall significantly (2 marks). The retailer could diversify into lower-priced product lines, build up cash reserves, or focus marketing on wealthier customers who are less affected (2 marks). Judgement on how useful YED is as a planning tool — useful but limited because it relies on estimates and does not account for brand loyalty or other factors (2 marks).",
+   "question": "Analyse how knowledge of income elasticity of demand (YED) could help a luxury goods retailer plan for a recession. (10 marks)"
+  },
+  {
+   "marks": 20,
+   "command": "Evaluate",
+   "guidance": "Introduction: Define market positioning and its importance (2 marks).\n\nFactor 1 — Price relative to competitors: setting a price influences consumer perception of quality and value; price skimming vs penetration pricing affects positioning (3 marks).\n\nFactor 2 — Product quality and features: unique features or superior quality can justify a premium position; differentiation is key (3 marks).\n\nFactor 3 — Brand image and promotion: advertising, packaging and brand identity create perceptions in consumers' minds; new products may lack brand recognition (3 marks).\n\nFactor 4 — Target market segment: choosing which customer group to focus on determines how the product is positioned on a market map (3 marks).\n\nEvaluation: The most important factor depends on the industry and competitive landscape (3 marks). For a new entrant, differentiation and a clear USP may be most critical since the firm lacks brand recognition. However, pricing must also be competitive. No single factor alone determines positioning (3 marks).",
+   "question": "Evaluate the factors that determine the market positioning of a new product in a competitive market. (20 marks)"
+  },
+  {
+   "marks": 4,
+   "command": "Outline",
+   "guidance": "Way 1: Reduce prices below competitors to attract price-sensitive consumers (1 mark), which is particularly effective in price elastic markets (1 mark).\n\nWay 2: Increase spending on advertising and promotion (1 mark) to raise brand awareness and attract new customers from rival firms (1 mark).",
+   "question": "Outline two ways a business could increase its market share. (4 marks)"
+  }
+ ]
+}

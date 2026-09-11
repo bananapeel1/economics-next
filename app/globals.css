@@ -6884,3 +6884,26 @@ a.auth-dropdown-item:visited {
   .upgrade-tier.featured { order: -1; }
   .upgrade-final-title { font-size: 20px; }
 }
+
+/* ── Day-0 hotfix (audit/PLAN.md): optional pre-test offer + withheld practice notice ── */
+.lm-pretest-offer {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 16px;
+  margin: 0 0 16px; padding: 14px 16px;
+  background: var(--card-bg, var(--bg-secondary, transparent));
+  border: 1px solid var(--border-color, rgba(127,127,127,.25)); border-left: 4px solid var(--rl-green, #10b981);
+  border-radius: 10px;
+}
+.lm-pretest-offer-text { font-size: 14px; line-height: 1.45; color: var(--text-primary); max-width: 46ch; }
+.lm-pretest-offer-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.lm-pretest-offer-yes, .lm-pretest-offer-no {
+  min-height: 44px; padding: 10px 16px; border-radius: 999px; font-size: 14px; font-weight: 600; cursor: pointer;
+  border: 1px solid var(--border-color, rgba(127,127,127,.3));
+}
+.lm-pretest-offer-yes { background: var(--rl-green, #10b981); color: #fff; border-color: transparent; }
+.lm-pretest-offer-no { background: transparent; color: var(--text-primary); }
+.lm-pretest-offer-yes:focus-visible, .lm-pretest-offer-no:focus-visible { outline: 2px solid var(--rl-green, #10b981); outline-offset: 2px; }
+.lm-practice-withheld, .practice-withheld-note {
+  margin: 12px 0; padding: 10px 14px; border-radius: 8px; font-size: 13.5px; line-height: 1.45;
+  color: var(--text-muted); background: var(--bg-secondary, rgba(127,127,127,.08));
+  border: 1px dashed var(--border-color, rgba(127,127,127,.3));
+}
