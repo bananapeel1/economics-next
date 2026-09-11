@@ -248,6 +248,7 @@ export default async function EconomicsTopicPage({ params }) {
         units={units || []}
         initialSectionData={initialData}
         initialSectionId={topic}
+        requestedSectionId={topic}
       />
     </>
   );
