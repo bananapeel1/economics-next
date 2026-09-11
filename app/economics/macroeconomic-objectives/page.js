@@ -1,5 +1,7 @@
 import { createServerClient } from '@/lib/supabase-server';
 import Link from 'next/link';
+import BackToApp from '@/components/BackToApp';
+import { LearnMode } from '@/components/Icons';
 import UnitScrollBar from '../UnitScrollBar';
 import RelatedModelAnswers from '@/components/RelatedModelAnswers';
 import '@/styles/landing.css';
@@ -561,6 +563,21 @@ export default async function MacroObjectivesPillarPage() {
           <p className="elp-cta-note">No signup required for notes &middot; Cancel anytime &middot; &pound;1 first month, then &pound;1.99</p>
         </div>
       </div>
+
+      <BackToApp
+
+        icon={LearnMode}
+
+        heading={"Revise macro objectives in the app"}
+
+        sub={"Diagrams, flashcards and exam-style practice on this exact topic"}
+
+        href="/?section=macroeconomic-objectives-policies"
+
+        cta={"Open 2.3.6"}
+
+      />
+
 
       <footer className="elp-footer">
         <div className="elp-footer-inner">

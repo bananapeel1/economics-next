@@ -1,5 +1,7 @@
 import { createServerClient } from '@/lib/supabase-server';
 import Link from 'next/link';
+import BackToApp from '@/components/BackToApp';
+import { LearnMode } from '@/components/Icons';
 import UnitScrollBar from '../UnitScrollBar';
 import RelatedModelAnswers from '@/components/RelatedModelAnswers';
 import '@/styles/landing.css';
@@ -580,6 +582,14 @@ export default async function MarketFailurePillarPage() {
       </div>
 
       {/* FOOTER */}
+      <BackToApp
+        icon={LearnMode}
+        heading={"Revise market failure in the app"}
+        sub={"Diagrams, flashcards and exam-style practice on this exact topic"}
+        href="/?section=market-failure"
+        cta={"Open 1.3.5"}
+      />
+
       <footer className="elp-footer">
         <div className="elp-footer-inner">
           <div className="elp-footer-logo"><div className="elp-nav-dot" style={{ width: 7, height: 7 }} />Revvy Learn</div>

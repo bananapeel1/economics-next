@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import BackToApp from '@/components/BackToApp';
+import { Clipboard } from '@/components/Icons';
 import IALScrollBar from '../IALScrollBar';
 import '@/styles/landing.css';
 
@@ -144,6 +146,21 @@ export default function ExamSeriesPage() {
           </div>
         </div>
       </div>
+
+      <BackToApp
+
+        icon={Clipboard}
+
+        heading={"Know the dates. Now build the plan."}
+
+        sub={"Free notes on every spec point, in the order you will sit them"}
+
+        href="/?section=introductory-concepts"
+
+        cta={"Start at 1.3.1"}
+
+      />
+
 
       <footer className="elp-footer">
         <div className="elp-footer-inner">
