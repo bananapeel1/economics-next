@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SiteHeader from '@/components/SiteHeader';
 import UnitScrollBar from '../UnitScrollBar';
 import '@/styles/landing.css';
 
@@ -92,24 +93,11 @@ const SECTIONS = [
 
 export default function Unit1Page() {
   return (
-    <div className="elp-page eup-page" style={{ '--eup-accent': '#14b8a6', '--eup-accent-bg': 'rgba(20,184,166,.08)', '--eup-accent-bd': 'rgba(20,184,166,.2)', '--eup-accent-glow': 'rgba(20,184,166,.15)' }}>
+    <div className="elp-page eup-page" style={{ '--eup-accent': 'var(--ns-brand)', '--eup-accent-bg': 'var(--ns-brand-bg)', '--eup-accent-bd': 'var(--ns-brand-bd)', '--eup-accent-glow': 'var(--ns-brand-bd)' }}>
       <UnitScrollBar />
       <div className="elp-scroll-bar"><div className="elp-scroll-fill" id="eup-scroll-fill" style={{ background: 'var(--eup-accent)' }} /></div>
 
-      {/* NAV */}
-      <nav className="elp-nav">
-        <Link href="/" className="elp-nav-logo"><div className="elp-nav-dot" /><span>Revvy Learn</span></Link>
-        <div className="elp-nav-sep" />
-        <div className="elp-nav-crumb">
-          <Link href="/economics">Economics</Link>
-          <span style={{ color: 'var(--elp-tx-d)', margin: '0 6px' }}>/</span>
-          <span style={{ color: 'var(--eup-accent)', fontWeight: 600 }}>Unit 1</span>
-        </div>
-        <div className="elp-nav-right">
-          <Link href="/economics" className="elp-nav-link">All Units</Link>
-          <Link href="/login" className="elp-nav-cta">Sign In</Link>
-        </div>
-      </nav>
+      <SiteHeader crumb="Economics / Unit 1" />
 
       {/* TOPIC JUMP NAV */}
       <div className="eup-topic-nav">
@@ -161,9 +149,9 @@ export default function Unit1Page() {
                   <div className="elp-pki-text" style={{ color: '#99f6e4' }}>Markets fail when prices give the wrong signals &mdash; causing too much or too little to be produced relative to the social optimum.</div>
                 </div>
                 <div className="elp-preview-bullets">
-                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#14b8a6' }} /><div className="elp-pb-text"><strong>Negative externality</strong> &mdash; cost imposed on third parties; causes overproduction.</div></div>
-                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#4f7ef8' }} /><div className="elp-pb-text">Private cost &lt; social cost &rarr; price too low &rarr; output above MSC = MSB.</div></div>
-                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#f59e0b' }} /><div className="elp-pb-text"><strong>Deadweight welfare loss</strong> &mdash; market produces beyond social optimum.</div></div>
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-free)' }} /><div className="elp-pb-text"><strong>Negative externality</strong> &mdash; cost imposed on third parties; causes overproduction.</div></div>
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-blue)' }} /><div className="elp-pb-text">Private cost &lt; social cost &rarr; price too low &rarr; output above MSC = MSB.</div></div>
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-amber)' }} /><div className="elp-pb-text"><strong>Deadweight welfare loss</strong> &mdash; market produces beyond social optimum.</div></div>
                 </div>
                 <div className="elp-preview-flow">
                   <div className="elp-pf-step">Firm ignores social cost</div>
@@ -239,7 +227,7 @@ export default function Unit1Page() {
             </div>
           </div>
           <div className="elp-fade-up" style={{ transitionDelay: '.1s' }}>
-            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: '#f59e0b' }} />Exam paper info</div>
+            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--ns-amber)' }} />Exam paper info</div>
             <h2 className="elp-s-title">{UNIT.code} at a glance</h2>
             <div className="eup-exam-info">
               <div className="eup-ei-label">Assessment details</div>
@@ -307,7 +295,7 @@ export default function Unit1Page() {
       {/* FOOTER */}
       <footer className="elp-footer">
         <div className="elp-footer-inner">
-          <div className="elp-footer-logo"><div className="elp-nav-dot" style={{ width: 7, height: 7 }} />Revvy Learn</div>
+          <div className="elp-footer-logo"><img src="/logo.svg" alt="" className="elp-footer-mark" width={18} height={18} />Revvy Learn</div>
           <div className="elp-footer-sep" />
           <div className="elp-footer-links">
             <Link className="elp-footer-link" href="/economics">Economics</Link>

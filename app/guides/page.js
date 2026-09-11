@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SiteHeader from '@/components/SiteHeader';
 import guidesData from '@/data/guidesData';
 import LandingScrollBar from '@/components/LandingScrollBar';
 import '@/styles/landing.css';
@@ -22,16 +23,7 @@ export default function GuidesIndexPage() {
     <div className="elp-page">
       <LandingScrollBar />
 
-      <nav className="elp-nav">
-        <Link href="/" className="elp-nav-logo">
-          <span className="elp-nav-dot" />
-          Revvy Learn
-        </Link>
-        <div className="elp-nav-sep" />
-        <div className="elp-nav-crumb">
-          Guides <span>/ Revision Guides</span>
-        </div>
-      </nav>
+      <SiteHeader crumb="Guides / Revision Guides" />
 
       <section>
         <div className="elp-hero">
@@ -130,7 +122,7 @@ export default function GuidesIndexPage() {
 
       <footer className="elp-footer">
         <div className="elp-footer-inner">
-          <Link href="/" className="elp-footer-logo"><span className="elp-nav-dot" style={{ width: '7px', height: '7px' }} />Revvy Learn</Link>
+          <Link href="/" className="elp-footer-logo"><img src="/logo.svg" alt="" className="elp-footer-mark" width={18} height={18} />Revvy Learn</Link>
           <div className="elp-footer-sep" />
           <div className="elp-footer-links">
             <Link href="/economics" className="elp-footer-link">Economics</Link>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SiteHeader from '@/components/SiteHeader';
 import EconomicsScrollBar from './EconomicsScrollBar';
 import '@/styles/landing.css';
 
@@ -156,17 +157,7 @@ export default function EconomicsPage() {
       {/* Scroll progress bar (client component) */}
       <EconomicsScrollBar />
 
-      {/* Minimal header */}
-      <nav className="elp-nav">
-        <Link href="/" className="elp-nav-logo">
-          <span className="elp-nav-dot" />
-          Revvy Learn
-        </Link>
-        <div className="elp-nav-sep" />
-        <div className="elp-nav-crumb">
-          Economics <span>/ Revision Notes</span>
-        </div>
-      </nav>
+      <SiteHeader crumb="Economics / Revision Notes" />
 
       {/* Hero */}
       <section>
@@ -451,7 +442,7 @@ export default function EconomicsPage() {
       <footer className="elp-footer">
         <div className="elp-footer-inner">
           <Link href="/" className="elp-footer-logo">
-            <span className="elp-nav-dot" style={{ width: '7px', height: '7px' }} />
+            <img src="/logo.svg" alt="" className="elp-footer-mark" width={18} height={18} />
             Revvy Learn
           </Link>
           <div className="elp-footer-sep" />

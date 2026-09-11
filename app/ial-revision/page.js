@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SiteHeader from '@/components/SiteHeader';
 import BackToApp from '@/components/BackToApp';
 import { LearnMode } from '@/components/Icons';
 import IALScrollBar from './IALScrollBar';
@@ -78,17 +79,7 @@ export default function IALRevisionPage() {
 
       <IALScrollBar />
 
-      {/* Header */}
-      <nav className="elp-nav">
-        <Link href="/" className="elp-nav-logo">
-          <span className="elp-nav-dot" />
-          Revvy Learn
-        </Link>
-        <div className="elp-nav-sep" />
-        <div className="elp-nav-crumb">
-          IAL Revision <span>/ International A-Level</span>
-        </div>
-      </nav>
+      <SiteHeader crumb="IAL Revision / International A-Level" />
 
       {/* Hero */}
       <section>
@@ -256,7 +247,7 @@ export default function IALRevisionPage() {
       <footer className="elp-footer">
         <div className="elp-footer-inner">
           <Link href="/" className="elp-footer-logo">
-            <span className="elp-nav-dot" style={{ width: '7px', height: '7px' }} />
+            <img src="/logo.svg" alt="" className="elp-footer-mark" width={18} height={18} />
             Revvy Learn
           </Link>
           <div className="elp-footer-sep" />

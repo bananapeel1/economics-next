@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SiteHeader from '@/components/SiteHeader';
 import UnitScrollBar from '../UnitScrollBar';
 import '@/styles/landing.css';
 
@@ -57,16 +58,11 @@ const SECTIONS = [
 
 export default function Unit1Page() {
   return (
-    <div className="elp-page eup-page" style={{ '--eup-accent': '#10b981', '--eup-accent-bg': 'rgba(16,185,129,.08)', '--eup-accent-bd': 'rgba(16,185,129,.2)', '--eup-accent-glow': 'rgba(16,185,129,.15)' }}>
+    <div className="elp-page eup-page" style={{ '--eup-accent': 'var(--ns-brand)', '--eup-accent-bg': 'var(--ns-brand-bg)', '--eup-accent-bd': 'var(--ns-brand-bd)', '--eup-accent-glow': 'var(--ns-brand-bd)' }}>
       <UnitScrollBar />
       <div className="elp-scroll-bar"><div className="elp-scroll-fill" id="eup-scroll-fill" style={{ background: 'var(--eup-accent)' }} /></div>
 
-      <nav className="elp-nav">
-        <Link href="/" className="elp-nav-logo"><div className="elp-nav-dot" /><span>Revvy Learn</span></Link>
-        <div className="elp-nav-sep" />
-        <div className="elp-nav-crumb"><Link href="/business">Business</Link><span style={{ color: 'var(--elp-tx-d)', margin: '0 6px' }}>/</span><span style={{ color: 'var(--eup-accent)', fontWeight: 600 }}>Unit 1</span></div>
-        <div className="elp-nav-right"><Link href="/business" className="elp-nav-link">All Units</Link><Link href="/login" className="elp-nav-cta">Sign In</Link></div>
-      </nav>
+      <SiteHeader crumb="Business/Unit 1" />
 
       <div className="eup-topic-nav">
         <span className="eup-tnav-label">Jump to:</span>
@@ -91,8 +87,8 @@ export default function Unit1Page() {
                 <div className="elp-preview-section-title">1.3.1 &mdash; Meeting Customer Needs</div>
                 <div className="elp-preview-key-idea" style={{ borderLeftColor: 'var(--eup-accent)' }}><div className="elp-pki-label" style={{ color: 'var(--eup-accent)' }}>🔑 Key idea</div><div className="elp-pki-text" style={{ color: '#bfdbfe' }}>Understanding customer needs is the foundation of successful business activity &mdash; firms must identify, anticipate and satisfy requirements to survive in competitive markets.</div></div>
                 <div className="elp-preview-bullets">
-                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#10b981' }} /><div className="elp-pb-text"><strong>Mass market</strong> &mdash; large, undifferentiated market; benefits from economies of scale.</div></div>
-                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#f59e0b' }} /><div className="elp-pb-text"><strong>Niche market</strong> &mdash; small, specialised segment; higher margins but limited scale.</div></div>
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-free)' }} /><div className="elp-pb-text"><strong>Mass market</strong> &mdash; large, undifferentiated market; benefits from economies of scale.</div></div>
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-amber)' }} /><div className="elp-pb-text"><strong>Niche market</strong> &mdash; small, specialised segment; higher margins but limited scale.</div></div>
                 </div>
                 <div className="elp-preview-flow"><div className="elp-pf-step">Identify needs</div><div className="elp-pf-arrow" style={{ color: 'var(--eup-accent)' }}>&rarr;</div><div className="elp-pf-step">Research market</div><div className="elp-pf-arrow" style={{ color: 'var(--eup-accent)' }}>&rarr;</div><div className="elp-pf-step">Position product</div><div className="elp-pf-arrow" style={{ color: 'var(--eup-accent)' }}>&rarr;</div><div className="elp-pf-result" style={{ background: 'var(--eup-accent-bg)', borderColor: 'var(--eup-accent-bd)', color: 'var(--eup-accent)' }}>Competitive advantage</div></div>
               </div>
@@ -135,7 +131,7 @@ export default function Unit1Page() {
           </div>
         </div>
         <div className="elp-fade-up" style={{ transitionDelay: '.1s' }}>
-          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: '#f59e0b' }} />Exam paper info</div>
+          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--ns-amber)' }} />Exam paper info</div>
           <h2 className="elp-s-title">{UNIT.code} at a glance</h2>
           <div className="eup-exam-info">
             <div className="eup-ei-label">Assessment details</div>
@@ -163,7 +159,7 @@ export default function Unit1Page() {
 
       <div className="elp-cta-section"><div className="elp-cta-bg" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(16,185,129,.07) 0%, transparent 65%)' }} /><div className="elp-cta-inner elp-fade-up"><h2 className="elp-cta-title">Ready to revise Unit 1?</h2><p className="elp-cta-sub">Free notes for every spec point. Adaptive flashcards, practice questions and AI tutor unlock with Pro — £1 for your first month.</p><div className="elp-cta-actions"><Link href={`/?section=${SECTIONS[0].id}`} className="elp-btn-primary" style={{ fontSize: 15, padding: '14px 30px' }}>Open Revvy Learn — it&apos;s free &rarr;</Link><Link href="/business" className="elp-btn-secondary">&larr; Back to all units</Link></div><p className="elp-cta-note">No signup required for notes &middot; Cancel anytime &middot; &pound;1 first month, then &pound;1.99</p></div></div>
 
-      <footer className="elp-footer"><div className="elp-footer-inner"><div className="elp-footer-logo"><div className="elp-nav-dot" style={{ width: 7, height: 7 }} />Revvy Learn</div><div className="elp-footer-sep" /><div className="elp-footer-links"><Link className="elp-footer-link" href="/business">Business</Link><Link className="elp-footer-link" href="/business/unit-1">Unit 1</Link><Link className="elp-footer-link" href="/business/unit-2">Unit 2</Link><Link className="elp-footer-link" href="/business/unit-3">Unit 3</Link><Link className="elp-footer-link" href="/business/unit-4">Unit 4</Link><Link className="elp-footer-link" href="/glossary">Glossary</Link><Link className="elp-footer-link" href="/past-papers">Past Papers</Link></div><div className="elp-footer-right">Edexcel IAL {UNIT.code} &copy; Revvy Learn</div></div></footer>
+      <footer className="elp-footer"><div className="elp-footer-inner"><div className="elp-footer-logo"><img src="/logo.svg" alt="" className="elp-footer-mark" width={18} height={18} />Revvy Learn</div><div className="elp-footer-sep" /><div className="elp-footer-links"><Link className="elp-footer-link" href="/business">Business</Link><Link className="elp-footer-link" href="/business/unit-1">Unit 1</Link><Link className="elp-footer-link" href="/business/unit-2">Unit 2</Link><Link className="elp-footer-link" href="/business/unit-3">Unit 3</Link><Link className="elp-footer-link" href="/business/unit-4">Unit 4</Link><Link className="elp-footer-link" href="/glossary">Glossary</Link><Link className="elp-footer-link" href="/past-papers">Past Papers</Link></div><div className="elp-footer-right">Edexcel IAL {UNIT.code} &copy; Revvy Learn</div></div></footer>
     </div>
   );
 }

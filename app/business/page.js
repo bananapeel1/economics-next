@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SiteHeader from '@/components/SiteHeader';
 import BusinessScrollBar from './BusinessScrollBar';
 import '@/styles/landing.css';
 
@@ -151,17 +152,7 @@ export default function BusinessPage() {
       {/* Scroll progress bar (client component) */}
       <BusinessScrollBar />
 
-      {/* Minimal header */}
-      <nav className="elp-nav">
-        <Link href="/" className="elp-nav-logo">
-          <span className="elp-nav-dot" />
-          Revvy Learn
-        </Link>
-        <div className="elp-nav-sep" />
-        <div className="elp-nav-crumb">
-          Business <span>/ Revision Notes</span>
-        </div>
-      </nav>
+      <SiteHeader crumb="Business / Revision Notes" />
 
       {/* Hero */}
       <section>
@@ -446,7 +437,7 @@ export default function BusinessPage() {
       <footer className="elp-footer">
         <div className="elp-footer-inner">
           <Link href="/" className="elp-footer-logo">
-            <span className="elp-nav-dot" style={{ width: '7px', height: '7px' }} />
+            <img src="/logo.svg" alt="" className="elp-footer-mark" width={18} height={18} />
             Revvy Learn
           </Link>
           <div className="elp-footer-sep" />
