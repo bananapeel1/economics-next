@@ -166,16 +166,15 @@ export default function EconomicsPage() {
           <div className="elp-fade-up">
             <div className="elp-hero-eyebrow">Edexcel IAL &middot; WEC11, WEC12, WEC13, WEC14</div>
             <h1 className="elp-hero-title">
-              Economics revision<br />that <em>actually sticks</em>
+              Edexcel IAL<br /><em>Economics Notes</em>
             </h1>
             <p className="elp-hero-desc">
-              Free revision notes for all four Edexcel IAL Economics units &mdash; structured around the spec, with adaptive practice, AI tutor, and spaced repetition built in.
+              All 23 spec points across WEC11&ndash;14, free and without signing up. Written for the International A-Level &mdash; not the UK domestic spec &mdash; so every diagram and exam tip matches the paper you actually sit.
             </p>
             <div className="elp-hero-actions">
               <Link href="/?section=introductory-concepts" className="elp-btn-primary">
                 Start revising free &rarr;
               </Link>
-              <Link href="#units" className="elp-btn-secondary">Browse all topics</Link>
             </div>
             <div className="elp-hero-proof">
               <div className="elp-proof-item"><strong>Free</strong> notes for every spec point</div>

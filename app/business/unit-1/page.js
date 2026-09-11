@@ -75,7 +75,7 @@ export default function Unit1Page() {
           <div className="elp-fade-up">
             <div className="elp-hero-eyebrow" style={{ background: 'var(--eup-accent-bg)', borderColor: 'var(--eup-accent-bd)', color: 'var(--eup-accent)' }}>Edexcel IAL Business &middot; {UNIT.code}</div>
             <div className="eup-unit-badge-row"><span className="eup-unit-num">Unit {UNIT.number}</span><span className="eup-unit-code">{UNIT.code}</span></div>
-            <h1 className="elp-hero-title">{UNIT.title} &mdash;<br /><em style={{ color: 'var(--eup-accent)' }}>marketing fundamentals mastered</em></h1>
+            <h1 className="elp-hero-title">{UNIT.title} &mdash;<br /><em style={{ color: 'var(--eup-accent)' }}>{UNIT.code} notes</em></h1>
             <p className="elp-hero-desc">Complete revision notes for Unit 1. Meeting customer needs, the market, marketing mix, managing people and entrepreneurship &mdash; everything you need for {UNIT.code}.</p>
             <div className="elp-hero-actions"><Link href={`/?section=${SECTIONS[0].id}`} className="elp-btn-primary">Start revising free &rarr;</Link><a href="#topics" className="elp-btn-secondary">Browse all topics</a></div>
             <div className="elp-hero-proof"><div className="elp-proof-item"><strong>5 topics</strong> fully covered</div><div className="elp-proof-dot" /><div className="elp-proof-item"><strong>Free</strong> notes for every spec point</div><div className="elp-proof-dot" /><div className="elp-proof-item">{UNIT.code} exam ready</div></div>

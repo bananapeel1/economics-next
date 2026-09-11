@@ -161,16 +161,15 @@ export default function BusinessPage() {
           <div className="elp-fade-up">
             <div className="elp-hero-eyebrow">Edexcel IAL &middot; WBS11, WBS12, WBS13, WBS14</div>
             <h1 className="elp-hero-title">
-              Business revision<br />that <em>actually sticks</em>
+              Edexcel IAL<br /><em>Business Notes</em>
             </h1>
             <p className="elp-hero-desc">
-              Free revision notes for all four Edexcel IAL Business units &mdash; structured around the spec, with adaptive practice, AI tutor, and spaced repetition built in.
+              All 20 spec points across WBS11&ndash;14, free and without signing up. Written for the International A-Level &mdash; not the UK domestic spec &mdash; so every topic matches the paper you actually sit.
             </p>
             <div className="elp-hero-actions">
               <Link href="/?section=meeting-customer-needs" className="elp-btn-primary">
                 Start revising free &rarr;
               </Link>
-              <Link href="#units" className="elp-btn-secondary">Browse all topics</Link>
             </div>
             <div className="elp-hero-proof">
               <div className="elp-proof-item"><strong>Free</strong> notes for every spec point</div>

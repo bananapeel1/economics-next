@@ -117,7 +117,7 @@ export default function Unit1Page() {
               <span className="eup-unit-num">Unit {UNIT.number}</span>
               <span className="eup-unit-code">{UNIT.code}</span>
             </div>
-            <h1 className="elp-hero-title">{UNIT.title} &mdash;<br /><em style={{ color: 'var(--eup-accent)' }}>microeconomics done right</em></h1>
+            <h1 className="elp-hero-title">{UNIT.title} &mdash;<br /><em style={{ color: 'var(--eup-accent)' }}>{UNIT.code} notes</em></h1>
             <p className="elp-hero-desc">Complete revision notes for Unit 1. Demand, supply, price determination, market failure and government intervention &mdash; structured around the Edexcel spec, with flashcards, quizzes and AI tutor for every topic.</p>
             <div className="elp-hero-actions">
               <Link href="/?section=introductory-concepts" className="elp-btn-primary">Start revising free &rarr;</Link>
