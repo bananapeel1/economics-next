@@ -244,3 +244,43 @@
 .elp-page .eup-concept-icon svg   { width: 18px; height: 18px; }
 .elp-page .eup-cc-icon svg        { width: 20px; height: 20px; }
 .elp-page .elp-pki-label svg      { width: 12px; height: 12px; vertical-align: -2px; margin-right: 3px; }
+
+/* ==========================================================================
+   The mobile fold on the subject pages
+
+   Measured on a 375x812 phone, the first tappable spec point on /business
+   sat at 990px -- 1.22 screens. Somebody who searched "ial business notes"
+   had to scroll before seeing a single topic.
+
+   The hero was only 531px of that. The rest was chrome restating what the
+   hero had just said: 44px of section padding, a 158px header reading
+   "FULL SPECIFICATION / All four units, every spec point" directly under a
+   lede that already said "all 20 spec points", then a 40px gap.
+
+   None of the hero's structure changes here -- the headline, the call to
+   action and the "not the UK domestic spec" line are what earn the click,
+   so they stay. What goes is the duplication and the padding around it.
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  /* .elp-uh-tight marks the header that sits directly under the hero. The
+     mid-page ones ("What is Edexcel IAL?", "Why sit January exams?") are
+     real sections introducing new material and keep their full chrome. */
+  .elp-page .elp-uh-tight .elp-s-eyebrow { display: none; }
+  .elp-page .elp-units-header.elp-uh-tight { margin-bottom: 24px; }
+  .elp-page .elp-uh-tight .elp-s-title { font-size: 24px; }
+
+  .elp-page .elp-section,
+  .elp-page .elp-section-sm { padding-top: 24px; }
+
+  .elp-page .elp-hero { padding-bottom: 32px; }
+  .elp-page .elp-hero-eyebrow { margin-bottom: 14px; }
+  .elp-page .elp-hero-title { margin-bottom: 14px; }
+  .elp-page .elp-hero-desc { margin-bottom: 24px; font-size: 15px; line-height: 1.6; }
+  .elp-page .elp-hero-proof { margin-top: 18px; }
+
+  /* On the unit pages the badge row repeats the eyebrow directly above it --
+     the eyebrow already reads "Edexcel IAL Business - WBS11". Two rows of
+     the same unit code is 40px a phone cannot spare. */
+  .elp-page .eup-unit-badge-row { display: none; }
+}

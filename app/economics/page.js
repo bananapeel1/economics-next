@@ -169,7 +169,7 @@ export default function EconomicsPage() {
               Edexcel IAL<br /><em>Economics Notes</em>
             </h1>
             <p className="elp-hero-desc">
-              All 23 spec points across WEC11&ndash;14, free and without signing up. Written for the International A-Level &mdash; not the UK domestic spec &mdash; so every diagram and exam tip matches the paper you actually sit.
+              Written for the International A-Level &mdash; not the UK domestic spec &mdash; so every diagram and exam tip matches the paper you actually sit.
             </p>
             <div className="elp-hero-actions">
               <Link href="/?section=introductory-concepts" className="elp-btn-primary">
@@ -239,14 +239,14 @@ export default function EconomicsPage() {
 
       {/* Units section */}
       <div className="elp-section" id="units">
-        <div className="elp-units-header elp-fade-up">
+        <div className="elp-units-header elp-uh-tight elp-fade-up">
           <div className="elp-s-eyebrow">
             <div className="elp-s-eyebrow-dot" style={{ background: 'var(--elp-green)' }} />
             Full specification
           </div>
           <h2 className="elp-s-title">All four units, every spec point</h2>
           <p className="elp-s-sub">
-            Click any topic to open the full notes, diagrams, flashcards and practice questions in the app.
+            Open any topic straight in the app.
           </p>
         </div>
 

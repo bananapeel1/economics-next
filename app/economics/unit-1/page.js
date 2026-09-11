@@ -121,7 +121,7 @@ export default function Unit1Page() {
             <p className="elp-hero-desc">Complete revision notes for Unit 1. Demand, supply, price determination, market failure and government intervention &mdash; structured around the Edexcel spec, with flashcards, quizzes and AI tutor for every topic.</p>
             <div className="elp-hero-actions">
               <Link href="/?section=introductory-concepts" className="elp-btn-primary">Start revising free &rarr;</Link>
-              <a href="#topics" className="elp-btn-secondary">Browse all topics</a>
+              
             </div>
             <div className="elp-hero-proof">
               <div className="elp-proof-item"><strong>6 topics</strong> fully covered</div>
@@ -171,10 +171,10 @@ export default function Unit1Page() {
 
       {/* TOPICS */}
       <div className="elp-section" id="topics">
-        <div className="elp-fade-up" style={{ marginBottom: 40 }}>
+        <div className="elp-uh-tight elp-fade-up" style={{ marginBottom: 40 }}>
           <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />All six topics</div>
           <h2 className="elp-s-title">Everything in Unit 1, spec point by spec point</h2>
-          <p className="elp-s-sub">Click any topic to open the full notes, diagrams, flashcards and practice questions in the app.</p>
+          <p className="elp-s-sub">Open any topic straight in the app.</p>
         </div>
 
         {SECTIONS.map((section, idx) => (
