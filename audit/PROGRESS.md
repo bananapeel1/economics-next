@@ -1,7 +1,8 @@
 # Remediation progress
 
-One row per packet. A packet is done when ALL FOUR are true: validator green on all 43 sections, push log
-complete, committed with the packet id in the subject line, this row updated.
+One row per packet. A packet is done when the PROTOCOL.md gate passes: build green, every claimed ledger id
+confirmed by a verifier, walkthrough clean where applicable, validator green (packet 3+), this row updated,
+committed with the packet id in the subject line, pushed. Coverage lives in `ledger.json`.
 
 Plan: `audit/PLAN.md` (58 packets). Source data: `audit/README.md`.
 
@@ -9,8 +10,8 @@ Plan: `audit/PLAN.md` (58 packets). Source data: `audit/README.md`.
 
 | # | Packet | Status | Commit | Snapshot | Validator |
 |---|--------|--------|--------|----------|-----------|
-| 0 | Day 0 hotfix | done except 3 marketing claims (blocked, see NEXT.md) | 069ddb4 | audit/snapshots/2026-09-11-{pre,post}-packet-0__* | n/a (packet 3) |
-| 1 | Measure or don't bother | done in code; app_events table needs the SQL run once (see NEXT.md) | cdb24dc | | n/a (packet 3) |
+| 0 | Day 0 hotfix | done and verified 2026-09-12 (Verify A: 2 code + 18 content ids confirmed; Verify B walkthrough clean). 3 marketing claims open on the SEO branch, see NEXT.md | 069ddb4 | audit/snapshots/2026-09-11-{pre,post}-packet-0__* | n/a (packet 3) |
+| 1 | Measure or don't bother | done and verified 2026-09-12 (Verify A: F021 F022 F042 F043 confirmed; dead progress route deleted in the setup commit to close F023 F049; F026 F030 moved to packet 5). app_events table SQL still to run once (see NEXT.md) | cdb24dc + setup commit | | n/a (packet 3) |
 | 2 | Ids and safety net | not started | | | n/a |
 | 3 | Validator v2 + golden set | not started | | | n/a |
 | 4 | Progress and mastery truth | not started | | | n/a |

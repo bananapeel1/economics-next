@@ -50,3 +50,13 @@ Append only. Every entry needs a date and the packet that made it.
   itself happens inside Stripe's billing portal, so the reason is recorded as a `cancel_reason` event
   before the redirect. Stripe's own portal reason survey was not enabled: that is an external account
   setting and the founder's call.
+- **2026-09-12 (setup) — the ledger is the coverage record; two findings the plan did not place.** All 117
+  code findings were mapped to packets (`audit/ledger.json`). Two fit no packet's scope text and were placed
+  by decision rather than by the plan: **F032** (a `content` tab route exists with no tab-bar entry, stranding
+  the student) goes to packet 5 with the navigation fixes; **F071** (content HTML injected unescaped, and the
+  glossary definition used as a `String.replace` template so `$&` and `$1` are interpreted) goes to packet 11,
+  which already touches `lib/glossary-highlight.js`. **F025** (no onboarding) is packet 99, deliberately out of
+  scope per PLAN.md. Packet 13 carries no code findings; its work is entirely content items.
+- **2026-09-12 (setup) — packet work runs in the worktree, and a packet is done only when verified and pushed.**
+  See `audit/PROTOCOL.md`. Ship checkpoints: after packets 1, 5, 13, then every five content packets, always as
+  a PR into `main` that the founder merges.
