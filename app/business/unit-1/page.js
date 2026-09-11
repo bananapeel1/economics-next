@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { BoltIcon, CardsIcon, ChartHistogram, Clipboard, Document, DrawerAlt, LearnMode, PenIcon, ProgressChart, Star, Tutor } from '@/components/Icons';
 import SiteHeader from '@/components/SiteHeader';
 import UnitScrollBar from '../UnitScrollBar';
 import '@/styles/landing.css';
@@ -80,12 +81,12 @@ export default function Unit1Page() {
             <div className="elp-hero-proof"><div className="elp-proof-item"><strong>5 topics</strong> fully covered</div><div className="elp-proof-dot" /><div className="elp-proof-item"><strong>Free</strong> notes for every spec point</div><div className="elp-proof-dot" /><div className="elp-proof-item">{UNIT.code} exam ready</div></div>
           </div>
           <div className="elp-hero-preview elp-fade-up" style={{ transitionDelay: '.15s' }}>
-            <div className="elp-hero-badge elp-b1"><span className="elp-badge-icon">🎯</span><div className="elp-badge-text"><span className="elp-badge-val">5 topics</span><span className="elp-badge-lbl">fully spec-aligned</span></div></div>
+            <div className="elp-hero-badge elp-b1"><span className="elp-badge-icon"><Star size={18} /></span><div className="elp-badge-text"><span className="elp-badge-val">5 topics</span><span className="elp-badge-lbl">fully spec-aligned</span></div></div>
             <div className="elp-preview-card">
               <div className="elp-preview-topbar"><div className="elp-preview-tab elp-active" style={{ background: 'var(--eup-accent-bg)', borderColor: 'var(--eup-accent-bd)', color: 'var(--eup-accent)' }}>Notes</div><div className="elp-preview-tab">Flashcards</div><div className="elp-preview-tab">Quiz</div></div>
               <div className="elp-preview-body">
                 <div className="elp-preview-section-title">1.3.1 &mdash; Meeting Customer Needs</div>
-                <div className="elp-preview-key-idea" style={{ borderLeftColor: 'var(--eup-accent)' }}><div className="elp-pki-label" style={{ color: 'var(--eup-accent)' }}>🔑 Key idea</div><div className="elp-pki-text" style={{ color: '#bfdbfe' }}>Understanding customer needs is the foundation of successful business activity &mdash; firms must identify, anticipate and satisfy requirements to survive in competitive markets.</div></div>
+                <div className="elp-preview-key-idea" style={{ borderLeftColor: 'var(--eup-accent)' }}><div className="elp-pki-label" style={{ color: 'var(--eup-accent)' }}><LearnMode size={18} /> Key idea</div><div className="elp-pki-text" style={{ color: '#bfdbfe' }}>Understanding customer needs is the foundation of successful business activity &mdash; firms must identify, anticipate and satisfy requirements to survive in competitive markets.</div></div>
                 <div className="elp-preview-bullets">
                   <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-free)' }} /><div className="elp-pb-text"><strong>Mass market</strong> &mdash; large, undifferentiated market; benefits from economies of scale.</div></div>
                   <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-amber)' }} /><div className="elp-pb-text"><strong>Niche market</strong> &mdash; small, specialised segment; higher margins but limited scale.</div></div>
@@ -98,11 +99,11 @@ export default function Unit1Page() {
       </section>
 
       <div className="elp-features-strip"><div className="elp-features-inner">
-        <div className="elp-feat-item"><span className="elp-feat-icon">📋</span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every {UNIT.code} point covered</div></div></div>
-        <div className="elp-feat-item"><span className="elp-feat-icon">🔄</span><div><div className="elp-feat-label">Spaced repetition</div><div className="elp-feat-sub">Adaptive flashcard algorithm</div></div></div>
-        <div className="elp-feat-item"><span className="elp-feat-icon">⚡</span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style, every topic</div></div></div>
-        <div className="elp-feat-item"><span className="elp-feat-icon">🤖</span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any Business question</div></div></div>
-        <div className="elp-feat-item"><span className="elp-feat-icon">📊</span><div><div className="elp-feat-label">Progress tracking</div><div className="elp-feat-sub">Mastery across all spec points</div></div></div>
+        <div className="elp-feat-item"><span className="elp-feat-icon"><Clipboard size={18} /></span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every {UNIT.code} point covered</div></div></div>
+        <div className="elp-feat-item"><span className="elp-feat-icon"><CardsIcon size={18} /></span><div><div className="elp-feat-label">Spaced repetition</div><div className="elp-feat-sub">Adaptive flashcard algorithm</div></div></div>
+        <div className="elp-feat-item"><span className="elp-feat-icon"><BoltIcon size={18} /></span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style, every topic</div></div></div>
+        <div className="elp-feat-item"><span className="elp-feat-icon"><Tutor size={18} /></span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any Business question</div></div></div>
+        <div className="elp-feat-item"><span className="elp-feat-icon"><ProgressChart size={18} /></span><div><div className="elp-feat-label">Progress tracking</div><div className="elp-feat-sub">Mastery across all spec points</div></div></div>
       </div></div>
 
       <div className="elp-section" id="topics">
@@ -124,10 +125,10 @@ export default function Unit1Page() {
           <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />Unit overview</div>
           <h2 className="elp-s-title">What you need to know for {UNIT.code}</h2>
           <div className="eup-key-concepts">
-            <div className="eup-concept"><div className="eup-concept-icon">🎯</div><div><div className="eup-concept-title">Customer needs drive everything</div><div className="eup-concept-desc">Every business decision starts with understanding what customers want. Market research, segmentation and positioning are the tools to uncover and respond to those needs.</div></div></div>
-            <div className="eup-concept"><div className="eup-concept-icon">📊</div><div><div className="eup-concept-title">Elasticity matters for pricing</div><div className="eup-concept-desc">Understanding PED and YED is essential for pricing decisions and forecasting revenue changes. Always link elasticity to real business strategy in your answers.</div></div></div>
-            <div className="eup-concept"><div className="eup-concept-icon">🧩</div><div><div className="eup-concept-title">The 4Ps work together</div><div className="eup-concept-desc">Product, price, place and promotion must be consistent. Examiners reward answers that show how changes to one element of the marketing mix affect the others.</div></div></div>
-            <div className="eup-concept"><div className="eup-concept-icon">👥</div><div><div className="eup-concept-title">People are a key resource</div><div className="eup-concept-desc">Motivation theory, leadership styles and organisational design all affect productivity. Link theory to practice: Herzberg explains why pay rises alone may not boost motivation.</div></div></div>
+            <div className="eup-concept"><div className="eup-concept-icon"><Star size={18} /></div><div><div className="eup-concept-title">Customer needs drive everything</div><div className="eup-concept-desc">Every business decision starts with understanding what customers want. Market research, segmentation and positioning are the tools to uncover and respond to those needs.</div></div></div>
+            <div className="eup-concept"><div className="eup-concept-icon"><ProgressChart size={18} /></div><div><div className="eup-concept-title">Elasticity matters for pricing</div><div className="eup-concept-desc">Understanding PED and YED is essential for pricing decisions and forecasting revenue changes. Always link elasticity to real business strategy in your answers.</div></div></div>
+            <div className="eup-concept"><div className="eup-concept-icon"><Star size={18} /></div><div><div className="eup-concept-title">The 4Ps work together</div><div className="eup-concept-desc">Product, price, place and promotion must be consistent. Examiners reward answers that show how changes to one element of the marketing mix affect the others.</div></div></div>
+            <div className="eup-concept"><div className="eup-concept-icon"><DrawerAlt size={18} /></div><div><div className="eup-concept-title">People are a key resource</div><div className="eup-concept-desc">Motivation theory, leadership styles and organisational design all affect productivity. Link theory to practice: Herzberg explains why pay rises alone may not boost motivation.</div></div></div>
           </div>
         </div>
         <div className="elp-fade-up" style={{ transitionDelay: '.1s' }}>
@@ -150,10 +151,10 @@ export default function Unit1Page() {
         <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--elp-green)' }} />Keep going</div>
         <h2 className="elp-s-title" style={{ fontSize: 22, marginBottom: 8 }}>Continue revising</h2>
         <div className="eup-continue-grid">
-          <Link className="eup-continue-card" href="/business/unit-2"><div className="eup-cc-icon">💰</div><div className="eup-cc-body"><div className="eup-cc-name">Unit 2: Managing Business Activities</div><div className="eup-cc-sub">WBS12 · Finance, operations, resource management, external influences</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
-          <Link className="eup-continue-card" href="/business/unit-3"><div className="eup-cc-icon">🧭</div><div className="eup-cc-body"><div className="eup-cc-name">Unit 3: Business Decisions and Strategy</div><div className="eup-cc-sub">WBS13 · Objectives, growth, decision-making, competitiveness, change</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
-          <Link className="eup-continue-card" href="/written-practice"><div className="eup-cc-icon">✍️</div><div className="eup-cc-body"><div className="eup-cc-name">Written Practice</div><div className="eup-cc-sub">AI-marked exam answers with instant feedback</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
-          <Link className="eup-continue-card" href="/past-papers"><div className="eup-cc-icon">📄</div><div className="eup-cc-body"><div className="eup-cc-name">{UNIT.code} Past Papers</div><div className="eup-cc-sub">Practise with real exam questions and mark schemes</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
+          <Link className="eup-continue-card" href="/business/unit-2"><div className="eup-cc-icon"><ChartHistogram size={18} /></div><div className="eup-cc-body"><div className="eup-cc-name">Unit 2: Managing Business Activities</div><div className="eup-cc-sub">WBS12 · Finance, operations, resource management, external influences</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
+          <Link className="eup-continue-card" href="/business/unit-3"><div className="eup-cc-icon"><LearnMode size={18} /></div><div className="eup-cc-body"><div className="eup-cc-name">Unit 3: Business Decisions and Strategy</div><div className="eup-cc-sub">WBS13 · Objectives, growth, decision-making, competitiveness, change</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
+          <Link className="eup-continue-card" href="/written-practice"><div className="eup-cc-icon"><PenIcon size={18} />️</div><div className="eup-cc-body"><div className="eup-cc-name">Written Practice</div><div className="eup-cc-sub">AI-marked exam answers with instant feedback</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
+          <Link className="eup-continue-card" href="/past-papers"><div className="eup-cc-icon"><Document size={18} /></div><div className="eup-cc-body"><div className="eup-cc-name">{UNIT.code} Past Papers</div><div className="eup-cc-sub">Practise with real exam questions and mark schemes</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
         </div>
       </div>
 

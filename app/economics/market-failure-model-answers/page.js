@@ -15,6 +15,7 @@ export default function MarketFailureModelAnswersPage() {
   return (
     <SectionModelAnswersPage
       sectionNumber="1.3.5"
+        sectionId="market-failure"
       subject="economics"
       backLink={{ href: '/economics/unit-1', label: 'Unit 1: Markets in Action' }}
       title="Market Failure Model Answers"

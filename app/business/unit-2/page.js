@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { BoltIcon, CardsIcon, ChartHistogram, Clipboard, Document, LearnMode, NetworkGraph, PenIcon, ProgressChart, Settings, Star, Tutor } from '@/components/Icons';
 import SiteHeader from '@/components/SiteHeader';
 import UnitScrollBar from '../UnitScrollBar';
 import '@/styles/landing.css';
@@ -79,12 +80,12 @@ export default function Unit2Page() {
             <div className="elp-hero-proof"><div className="elp-proof-item"><strong>5 topics</strong> fully covered</div><div className="elp-proof-dot" /><div className="elp-proof-item"><strong>Free</strong> notes for every spec point</div><div className="elp-proof-dot" /><div className="elp-proof-item">{UNIT.code} exam ready</div></div>
           </div>
           <div className="elp-hero-preview elp-fade-up" style={{ transitionDelay: '.15s' }}>
-            <div className="elp-hero-badge elp-b1"><span className="elp-badge-icon">🎯</span><div className="elp-badge-text"><span className="elp-badge-val">5 topics</span><span className="elp-badge-lbl">fully spec-aligned</span></div></div>
+            <div className="elp-hero-badge elp-b1"><span className="elp-badge-icon"><Star size={18} /></span><div className="elp-badge-text"><span className="elp-badge-val">5 topics</span><span className="elp-badge-lbl">fully spec-aligned</span></div></div>
             <div className="elp-preview-card">
               <div className="elp-preview-topbar"><div className="elp-preview-tab elp-active" style={{ background: 'var(--eup-accent-bg)', borderColor: 'var(--eup-accent-bd)', color: 'var(--eup-accent)' }}>Notes</div><div className="elp-preview-tab">Flashcards</div><div className="elp-preview-tab">Quiz</div></div>
               <div className="elp-preview-body">
                 <div className="elp-preview-section-title">2.3.2 &mdash; Financial Planning</div>
-                <div className="elp-preview-key-idea" style={{ borderLeftColor: 'var(--eup-accent)' }}><div className="elp-pki-label" style={{ color: 'var(--eup-accent)' }}>🔑 Key idea</div><div className="elp-pki-text" style={{ color: '#bfdbfe' }}>Cash flow is the lifeblood of a business &mdash; profitable firms can still fail if they run out of cash. Forecasting, budgeting and break-even analysis are essential planning tools.</div></div>
+                <div className="elp-preview-key-idea" style={{ borderLeftColor: 'var(--eup-accent)' }}><div className="elp-pki-label" style={{ color: 'var(--eup-accent)' }}><LearnMode size={18} /> Key idea</div><div className="elp-pki-text" style={{ color: '#bfdbfe' }}>Cash flow is the lifeblood of a business &mdash; profitable firms can still fail if they run out of cash. Forecasting, budgeting and break-even analysis are essential planning tools.</div></div>
                 <div className="elp-preview-bullets">
                   <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-amber)' }} /><div className="elp-pb-text"><strong>Cash flow</strong> &mdash; the movement of money in and out of a business; timing matters as much as amount.</div></div>
                   <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-free)' }} /><div className="elp-pb-text"><strong>Break-even</strong> &mdash; the output level where total revenue equals total costs; contribution per unit is key.</div></div>
@@ -97,11 +98,11 @@ export default function Unit2Page() {
       </section>
 
       <div className="elp-features-strip"><div className="elp-features-inner">
-        <div className="elp-feat-item"><span className="elp-feat-icon">📋</span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every {UNIT.code} point covered</div></div></div>
-        <div className="elp-feat-item"><span className="elp-feat-icon">🔄</span><div><div className="elp-feat-label">Spaced repetition</div><div className="elp-feat-sub">Adaptive flashcard algorithm</div></div></div>
-        <div className="elp-feat-item"><span className="elp-feat-icon">⚡</span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style, every topic</div></div></div>
-        <div className="elp-feat-item"><span className="elp-feat-icon">🤖</span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any Business question</div></div></div>
-        <div className="elp-feat-item"><span className="elp-feat-icon">📊</span><div><div className="elp-feat-label">Progress tracking</div><div className="elp-feat-sub">Mastery across all spec points</div></div></div>
+        <div className="elp-feat-item"><span className="elp-feat-icon"><Clipboard size={18} /></span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every {UNIT.code} point covered</div></div></div>
+        <div className="elp-feat-item"><span className="elp-feat-icon"><CardsIcon size={18} /></span><div><div className="elp-feat-label">Spaced repetition</div><div className="elp-feat-sub">Adaptive flashcard algorithm</div></div></div>
+        <div className="elp-feat-item"><span className="elp-feat-icon"><BoltIcon size={18} /></span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style, every topic</div></div></div>
+        <div className="elp-feat-item"><span className="elp-feat-icon"><Tutor size={18} /></span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any Business question</div></div></div>
+        <div className="elp-feat-item"><span className="elp-feat-icon"><ProgressChart size={18} /></span><div><div className="elp-feat-label">Progress tracking</div><div className="elp-feat-sub">Mastery across all spec points</div></div></div>
       </div></div>
 
       <div className="elp-section" id="topics">
@@ -123,10 +124,10 @@ export default function Unit2Page() {
           <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />Unit overview</div>
           <h2 className="elp-s-title">What you need to know for {UNIT.code}</h2>
           <div className="eup-key-concepts">
-            <div className="eup-concept"><div className="eup-concept-icon">💰</div><div><div className="eup-concept-title">Cash flow vs profit</div><div className="eup-concept-desc">A business can be profitable yet still run out of cash. Understanding the difference between profit and cash flow is essential for every finance question.</div></div></div>
-            <div className="eup-concept"><div className="eup-concept-icon">📊</div><div><div className="eup-concept-title">Ratios tell the story</div><div className="eup-concept-desc">Profitability and liquidity ratios are the language of finance. Learn to calculate, interpret and evaluate them in context — not just in isolation.</div></div></div>
-            <div className="eup-concept"><div className="eup-concept-icon">⚙️</div><div><div className="eup-concept-title">Operations drive efficiency</div><div className="eup-concept-desc">Lean production, capacity utilisation and quality management are how businesses reduce costs and improve competitiveness. Link to real examples in your answers.</div></div></div>
-            <div className="eup-concept"><div className="eup-concept-icon">🌍</div><div><div className="eup-concept-title">External factors constrain choices</div><div className="eup-concept-desc">Interest rates, exchange rates, legislation and the competitive environment all shape business decisions. PESTLE analysis is your framework for evaluating these.</div></div></div>
+            <div className="eup-concept"><div className="eup-concept-icon"><ChartHistogram size={18} /></div><div><div className="eup-concept-title">Cash flow vs profit</div><div className="eup-concept-desc">A business can be profitable yet still run out of cash. Understanding the difference between profit and cash flow is essential for every finance question.</div></div></div>
+            <div className="eup-concept"><div className="eup-concept-icon"><ProgressChart size={18} /></div><div><div className="eup-concept-title">Ratios tell the story</div><div className="eup-concept-desc">Profitability and liquidity ratios are the language of finance. Learn to calculate, interpret and evaluate them in context — not just in isolation.</div></div></div>
+            <div className="eup-concept"><div className="eup-concept-icon"><Settings size={18} />️</div><div><div className="eup-concept-title">Operations drive efficiency</div><div className="eup-concept-desc">Lean production, capacity utilisation and quality management are how businesses reduce costs and improve competitiveness. Link to real examples in your answers.</div></div></div>
+            <div className="eup-concept"><div className="eup-concept-icon"><NetworkGraph size={18} /></div><div><div className="eup-concept-title">External factors constrain choices</div><div className="eup-concept-desc">Interest rates, exchange rates, legislation and the competitive environment all shape business decisions. PESTLE analysis is your framework for evaluating these.</div></div></div>
           </div>
         </div>
         <div className="elp-fade-up" style={{ transitionDelay: '.1s' }}>
@@ -149,10 +150,10 @@ export default function Unit2Page() {
         <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--elp-green)' }} />Keep going</div>
         <h2 className="elp-s-title" style={{ fontSize: 22, marginBottom: 8 }}>Continue revising</h2>
         <div className="eup-continue-grid">
-          <Link className="eup-continue-card" href="/business/unit-1"><div className="eup-cc-icon">📈</div><div className="eup-cc-body"><div className="eup-cc-name">Unit 1: Marketing and People</div><div className="eup-cc-sub">WBS11 · Customer needs, the market, marketing mix, managing people</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
-          <Link className="eup-continue-card" href="/business/unit-3"><div className="eup-cc-icon">🧭</div><div className="eup-cc-body"><div className="eup-cc-name">Unit 3: Business Decisions and Strategy</div><div className="eup-cc-sub">WBS13 · Objectives, growth, decision-making, competitiveness, change</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
-          <Link className="eup-continue-card" href="/written-practice"><div className="eup-cc-icon">✍️</div><div className="eup-cc-body"><div className="eup-cc-name">Written Practice</div><div className="eup-cc-sub">AI-marked exam answers with instant feedback</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
-          <Link className="eup-continue-card" href="/past-papers"><div className="eup-cc-icon">📄</div><div className="eup-cc-body"><div className="eup-cc-name">{UNIT.code} Past Papers</div><div className="eup-cc-sub">Practise with real exam questions and mark schemes</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
+          <Link className="eup-continue-card" href="/business/unit-1"><div className="eup-cc-icon"><ChartHistogram size={18} /></div><div className="eup-cc-body"><div className="eup-cc-name">Unit 1: Marketing and People</div><div className="eup-cc-sub">WBS11 · Customer needs, the market, marketing mix, managing people</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
+          <Link className="eup-continue-card" href="/business/unit-3"><div className="eup-cc-icon"><LearnMode size={18} /></div><div className="eup-cc-body"><div className="eup-cc-name">Unit 3: Business Decisions and Strategy</div><div className="eup-cc-sub">WBS13 · Objectives, growth, decision-making, competitiveness, change</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
+          <Link className="eup-continue-card" href="/written-practice"><div className="eup-cc-icon"><PenIcon size={18} />️</div><div className="eup-cc-body"><div className="eup-cc-name">Written Practice</div><div className="eup-cc-sub">AI-marked exam answers with instant feedback</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
+          <Link className="eup-continue-card" href="/past-papers"><div className="eup-cc-icon"><Document size={18} /></div><div className="eup-cc-body"><div className="eup-cc-name">{UNIT.code} Past Papers</div><div className="eup-cc-sub">Practise with real exam questions and mark schemes</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
         </div>
       </div>
 

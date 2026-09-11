@@ -220,3 +220,19 @@
    masthead CTA rendered underlined there. */
 .rlh a, a.rlh-brand, a.rlh-cta { text-decoration: none; }
 .rl-night .rlh { margin-bottom: 18px; }
+
+/* The emoji were sized by font-size on their container; SVG icons need real
+   dimensions, and should take the accent rather than a random hue. */
+.elp-page .elp-feat-icon,
+.elp-page .elp-wyg-icon,
+.elp-page .elp-resource-chip-icon,
+.elp-page .elp-badge-icon,
+.elp-page .eup-concept-icon,
+.elp-page .eup-cc-icon { display: inline-flex; align-items: center; justify-content: center; color: var(--ns-brand); }
+.elp-page .elp-feat-icon svg      { width: 20px; height: 20px; }
+.elp-page .elp-wyg-icon svg       { width: 20px; height: 20px; }
+.elp-page .elp-resource-chip-icon svg { width: 15px; height: 15px; }
+.elp-page .elp-badge-icon svg     { width: 16px; height: 16px; }
+.elp-page .eup-concept-icon svg   { width: 18px; height: 18px; }
+.elp-page .eup-cc-icon svg        { width: 20px; height: 20px; }
+.elp-page .elp-pki-label svg      { width: 12px; height: 12px; vertical-align: -2px; margin-right: 3px; }

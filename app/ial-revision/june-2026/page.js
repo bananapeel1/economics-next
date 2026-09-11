@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { BookAlt, Document, Glossary, PenIcon } from '@/components/Icons';
 import SiteHeader from '@/components/SiteHeader';
 import IALScrollBar from '../IALScrollBar';
 import '@/styles/landing.css';
@@ -114,10 +115,10 @@ export default function June2026Page() {
         <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--elp-teal)' }} />Resources</div>
         <h2 className="elp-s-title" style={{ fontSize: '22px', marginBottom: '8px' }}>Revision tools</h2>
         <div className="elp-resources-row">
-          <Link href="/past-papers" className="elp-resource-chip"><span className="elp-resource-chip-icon">&#128196;</span> Past Papers</Link>
-          <Link href="/model-answers" className="elp-resource-chip"><span className="elp-resource-chip-icon">&#128221;</span> Model Answers</Link>
-          <Link href="/command-words" className="elp-resource-chip"><span className="elp-resource-chip-icon">&#128292;</span> Command Words</Link>
-          <Link href="/guides" className="elp-resource-chip"><span className="elp-resource-chip-icon">&#128218;</span> Revision Guides</Link>
+          <Link href="/past-papers" className="elp-resource-chip"><span className="elp-resource-chip-icon"><Document size={18} /></span> Past Papers</Link>
+          <Link href="/model-answers" className="elp-resource-chip"><span className="elp-resource-chip-icon"><PenIcon size={18} /></span> Model Answers</Link>
+          <Link href="/command-words" className="elp-resource-chip"><span className="elp-resource-chip-icon"><Glossary size={18} /></span> Command Words</Link>
+          <Link href="/guides" className="elp-resource-chip"><span className="elp-resource-chip-icon"><BookAlt size={18} /></span> Revision Guides</Link>
         </div>
       </div>
 

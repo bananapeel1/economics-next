@@ -15,6 +15,7 @@ export default function EconomicPerformanceModelAnswersPage() {
   return (
     <SectionModelAnswersPage
       sectionNumber="2.3.1"
+        sectionId="measures-economic-performance"
       subject="economics"
       backLink={{ href: '/economics/unit-2', label: 'Unit 2: Macroeconomic Performance & Policy' }}
       title="Measures of Economic Performance Model Answers"

@@ -15,6 +15,7 @@ export default function EconomicGrowthModelAnswersPage() {
   return (
     <SectionModelAnswersPage
       sectionNumber="2.3.5"
+        sectionId="economic-growth"
       subject="economics"
       backLink={{ href: '/economics/unit-2', label: 'Unit 2: Macroeconomic Performance & Policy' }}
       title="Economic Growth Model Answers"

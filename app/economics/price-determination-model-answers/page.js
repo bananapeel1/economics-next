@@ -15,6 +15,7 @@ export default function PriceDeterminationModelAnswersPage() {
   return (
     <SectionModelAnswersPage
       sectionNumber="1.3.4"
+        sectionId="price-determination"
       subject="economics"
       backLink={{ href: '/economics/unit-1', label: 'Unit 1: Markets in Action' }}
       title="Price Determination Model Answers"

@@ -15,6 +15,7 @@ export default function AggregateSupplyModelAnswersPage() {
   return (
     <SectionModelAnswersPage
       sectionNumber="2.3.3"
+        sectionId="aggregate-supply"
       subject="economics"
       backLink={{ href: '/economics/unit-2', label: 'Unit 2: Macroeconomic Performance' }}
       title="Aggregate Supply Model Answers"

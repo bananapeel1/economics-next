@@ -2,7 +2,7 @@ import { createServerClient } from '@/lib/supabase-server';
 import Link from 'next/link';
 import SiteHeader from '@/components/SiteHeader';
 import BackToApp from '@/components/BackToApp';
-import { LearnMode } from '@/components/Icons';
+import { BoltIcon, BookAlt, ChartHistogram, Clipboard, DrawerAlt, LearnMode, Mistakes, NetworkGraph, PenIcon, ProgressChart, Star, Tutor } from '@/components/Icons';
 import UnitScrollBar from '../UnitScrollBar';
 import RelatedModelAnswers from '@/components/RelatedModelAnswers';
 import '@/styles/landing.css';
@@ -154,10 +154,10 @@ const FAQS = [
 ];
 
 const KEY_CONCEPTS = [
-  { icon: '\ud83c\udfaf', title: 'Six objectives, four classic', desc: 'Growth, low inflation, low unemployment and BoP stability are the \u201cbig four\u201d. Income equality and environmental sustainability complete the modern set.' },
-  { icon: '\u26a1', title: 'Trade-offs are the question', desc: 'WEC12 evaluation marks reward recognising that pursuing one objective often worsens another. Always frame answers around trade-offs.' },
-  { icon: '\ud83c\udfdb\ufe0f', title: 'Three policy levers', desc: 'Fiscal, monetary and supply-side. Know what each one does, who controls it, and the time lag before it bites.' },
-  { icon: '\ud83d\udcca', title: 'Measurement matters', desc: 'CPI vs RPI, claimant count vs ILO, real vs nominal GDP \u2014 examiners reward precision in how each objective is measured.' },
+  { icon: Star, title: 'Six objectives, four classic', desc: 'Growth, low inflation, low unemployment and BoP stability are the \u201cbig four\u201d. Income equality and environmental sustainability complete the modern set.' },
+  { icon: BoltIcon, title: 'Trade-offs are the question', desc: 'WEC12 evaluation marks reward recognising that pursuing one objective often worsens another. Always frame answers around trade-offs.' },
+  { icon: DrawerAlt, title: 'Three policy levers', desc: 'Fiscal, monetary and supply-side. Know what each one does, who controls it, and the time lag before it bites.' },
+  { icon: ProgressChart, title: 'Measurement matters', desc: 'CPI vs RPI, claimant count vs ILO, real vs nominal GDP \u2014 examiners reward precision in how each objective is measured.' },
 ];
 
 export default async function MacroObjectivesPillarPage() {
@@ -257,7 +257,7 @@ export default async function MacroObjectivesPillarPage() {
 
           <div className="elp-hero-preview elp-fade-up" style={{ transitionDelay: '.15s' }}>
             <div className="elp-hero-badge elp-b1">
-              <span className="elp-badge-icon">&#127919;</span>
+              <span className="elp-badge-icon"><Star size={18} /></span>
               <div className="elp-badge-text"><span className="elp-badge-val">6 objectives</span><span className="elp-badge-lbl">fully spec-aligned</span></div>
             </div>
             <div className="elp-preview-card">
@@ -269,7 +269,7 @@ export default async function MacroObjectivesPillarPage() {
               <div className="elp-preview-body">
                 <div className="elp-preview-section-title">2.3.6 &mdash; Macroeconomic Objectives</div>
                 <div className="elp-preview-key-idea" style={{ borderLeftColor: 'var(--eup-accent)' }}>
-                  <div className="elp-pki-label" style={{ color: 'var(--eup-accent)' }}>&#128273; Key idea</div>
+                  <div className="elp-pki-label" style={{ color: 'var(--eup-accent)' }}><LearnMode size={18} /> Key idea</div>
                   <div className="elp-pki-text" style={{ color: '#bfdbfe' }}>The four classic objectives \u2014 growth, low inflation, low unemployment, BoP stability \u2014 conflict with each other. Trade-offs are the question.</div>
                 </div>
                 <div className="elp-preview-bullets">
@@ -294,11 +294,11 @@ export default async function MacroObjectivesPillarPage() {
 
       <div className="elp-features-strip">
         <div className="elp-features-inner">
-          <div className="elp-feat-item"><span className="elp-feat-icon">&#128203;</span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every WEC12 2.3.6 point covered</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">&#9878;&#65039;</span><div><div className="elp-feat-label">Trade-offs explained</div><div className="elp-feat-sub">Phillips Curve and beyond</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">&#9889;</span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style with model answers</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">&#129302;</span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any macro policy question</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">&#127758;</span><div><div className="elp-feat-label">Built for IAL</div><div className="elp-feat-sub">International A-Level focus</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><Clipboard size={18} /></span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every WEC12 2.3.6 point covered</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><ChartHistogram size={18} /></span><div><div className="elp-feat-label">Trade-offs explained</div><div className="elp-feat-sub">Phillips Curve and beyond</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><BoltIcon size={18} /></span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style with model answers</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><Tutor size={18} /></span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any macro policy question</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><NetworkGraph size={18} /></span><div><div className="elp-feat-label">Built for IAL</div><div className="elp-feat-sub">International A-Level focus</div></div></div>
         </div>
       </div>
 
@@ -330,21 +330,21 @@ export default async function MacroObjectivesPillarPage() {
               <p className="eup-topic-desc">{o.detail}</p>
               <div className="eup-subtopic-grid">
                 <div className="eup-subtopic-tile">
-                  <div className="eup-st-num">&#128202;</div>
+                  <div className="eup-st-num"><ProgressChart size={18} /></div>
                   <div className="eup-st-body">
                     <div className="eup-st-name">How it is measured</div>
                     <div className="eup-st-keywords">{o.measurement}</div>
                   </div>
                 </div>
                 <div className="eup-subtopic-tile">
-                  <div className="eup-st-num">&#127919;</div>
+                  <div className="eup-st-num"><Star size={18} /></div>
                   <div className="eup-st-body">
                     <div className="eup-st-name">Target</div>
                     <div className="eup-st-keywords">{o.target}</div>
                   </div>
                 </div>
                 <div className="eup-subtopic-tile">
-                  <div className="eup-st-num">&#9888;&#65039;</div>
+                  <div className="eup-st-num"><Mistakes size={18} /></div>
                   <div className="eup-st-body">
                     <div className="eup-st-name">Costs &amp; trade-offs</div>
                     <div className="eup-st-keywords">{o.costs}</div>
@@ -367,7 +367,7 @@ export default async function MacroObjectivesPillarPage() {
           <div className="eup-subtopic-grid">
             {TRADE_OFFS.map((t, i) => (
               <div key={i} className="eup-subtopic-tile">
-                <div className="eup-st-num">&#9878;&#65039;</div>
+                <div className="eup-st-num"><ChartHistogram size={18} /></div>
                 <div className="eup-st-body">
                   <div className="eup-st-name">{t.pair}</div>
                   <div className="eup-st-keywords">{t.body}</div>
@@ -388,7 +388,7 @@ export default async function MacroObjectivesPillarPage() {
           <div className="eup-subtopic-grid">
             {POLICY_TOOLS.map((p, i) => (
               <div key={i} className="eup-subtopic-tile">
-                <div className="eup-st-num">&#127963;</div>
+                <div className="eup-st-num"><DrawerAlt size={18} /></div>
                 <div className="eup-st-body">
                   <div className="eup-st-name">{p.name}</div>
                   <div className="eup-st-keywords">{p.detail}</div>
@@ -460,7 +460,7 @@ export default async function MacroObjectivesPillarPage() {
             <div className="eup-key-concepts">
               {KEY_CONCEPTS.map((c, i) => (
                 <div key={i} className="eup-concept">
-                  <div className="eup-concept-icon">{c.icon}</div>
+                  <div className="eup-concept-icon">{c.icon ? <c.icon size={18} /> : null}</div>
                   <div>
                     <div className="eup-concept-title">{c.title}</div>
                     <div className="eup-concept-desc">{c.desc}</div>
@@ -510,22 +510,22 @@ export default async function MacroObjectivesPillarPage() {
         <h2 className="elp-s-title" style={{ fontSize: 22, marginBottom: 8 }}>Continue revising</h2>
         <div className="eup-continue-grid">
           <Link className="eup-continue-card" href="/economics/unit-2/economic-growth">
-            <div className="eup-cc-icon">&#128200;</div>
+            <div className="eup-cc-icon"><ChartHistogram size={18} /></div>
             <div className="eup-cc-body"><div className="eup-cc-name">Economic Growth</div><div className="eup-cc-sub">2.3.5 &middot; Actual vs potential, business cycles</div></div>
             <div className="eup-cc-arrow">&rarr;</div>
           </Link>
           <Link className="eup-continue-card" href="/economics/aggregate-demand">
-            <div className="eup-cc-icon">&#128293;</div>
+            <div className="eup-cc-icon"><BoltIcon size={18} /></div>
             <div className="eup-cc-body"><div className="eup-cc-name">Aggregate Demand</div><div className="eup-cc-sub">2.3.2 &middot; AD = C + I + G + (X &minus; M)</div></div>
             <div className="eup-cc-arrow">&rarr;</div>
           </Link>
           <Link className="eup-continue-card" href="/economics/macroeconomic-policies-model-answers">
-            <div className="eup-cc-icon">&#128221;</div>
+            <div className="eup-cc-icon"><PenIcon size={18} /></div>
             <div className="eup-cc-body"><div className="eup-cc-name">Macro Policies Model Answers</div><div className="eup-cc-sub">Fully worked 8- and 20-mark answers</div></div>
             <div className="eup-cc-arrow">&rarr;</div>
           </Link>
           <Link className="eup-continue-card" href="/economics/unit-2">
-            <div className="eup-cc-icon">&#128214;</div>
+            <div className="eup-cc-icon"><BookAlt size={18} /></div>
             <div className="eup-cc-body"><div className="eup-cc-name">All Unit 2 Topics</div><div className="eup-cc-sub">WEC12 &middot; Macroeconomic Performance</div></div>
             <div className="eup-cc-arrow">&rarr;</div>
           </Link>

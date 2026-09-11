@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { BoltIcon, CardsIcon, ChartHistogram, Clipboard, Document, DrawerAlt, LearnMode, NetworkGraph, PenIcon, ProgressChart, Star, Tutor } from '@/components/Icons';
 import SiteHeader from '@/components/SiteHeader';
 import UnitScrollBar from '../UnitScrollBar';
 import '@/styles/landing.css';
@@ -133,7 +134,7 @@ export default function Unit1Page() {
 
           <div className="elp-hero-preview elp-fade-up" style={{ transitionDelay: '.15s' }}>
             <div className="elp-hero-badge elp-b1">
-              <span className="elp-badge-icon">🎯</span>
+              <span className="elp-badge-icon"><Star size={18} /></span>
               <div className="elp-badge-text"><span className="elp-badge-val">6 topics</span><span className="elp-badge-lbl">fully spec-aligned</span></div>
             </div>
             <div className="elp-preview-card">
@@ -145,7 +146,7 @@ export default function Unit1Page() {
               <div className="elp-preview-body">
                 <div className="elp-preview-section-title">1.3.5 &mdash; Market Failure</div>
                 <div className="elp-preview-key-idea" style={{ borderLeftColor: 'var(--eup-accent)' }}>
-                  <div className="elp-pki-label" style={{ color: 'var(--eup-accent)' }}>🔑 Key idea</div>
+                  <div className="elp-pki-label" style={{ color: 'var(--eup-accent)' }}><LearnMode size={18} /> Key idea</div>
                   <div className="elp-pki-text" style={{ color: '#99f6e4' }}>Markets fail when prices give the wrong signals &mdash; causing too much or too little to be produced relative to the social optimum.</div>
                 </div>
                 <div className="elp-preview-bullets">
@@ -171,11 +172,11 @@ export default function Unit1Page() {
       {/* FEATURES STRIP */}
       <div className="elp-features-strip">
         <div className="elp-features-inner">
-          <div className="elp-feat-item"><span className="elp-feat-icon">📋</span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every {UNIT.code} point covered</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">🔄</span><div><div className="elp-feat-label">Spaced repetition</div><div className="elp-feat-sub">Adaptive flashcard algorithm</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">⚡</span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style, every topic</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">🤖</span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any Economics question</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">📊</span><div><div className="elp-feat-label">Progress tracking</div><div className="elp-feat-sub">Mastery across all spec points</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><Clipboard size={18} /></span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every {UNIT.code} point covered</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><CardsIcon size={18} /></span><div><div className="elp-feat-label">Spaced repetition</div><div className="elp-feat-sub">Adaptive flashcard algorithm</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><BoltIcon size={18} /></span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style, every topic</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><Tutor size={18} /></span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any Economics question</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><ProgressChart size={18} /></span><div><div className="elp-feat-label">Progress tracking</div><div className="elp-feat-sub">Mastery across all spec points</div></div></div>
         </div>
       </div>
 
@@ -220,10 +221,10 @@ export default function Unit1Page() {
             <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />Unit overview</div>
             <h2 className="elp-s-title">What you need to know for {UNIT.code}</h2>
             <div className="eup-key-concepts">
-              <div className="eup-concept"><div className="eup-concept-icon">⚖️</div><div><div className="eup-concept-title">The core trade-off</div><div className="eup-concept-desc">Every concept in Unit 1 links back to scarcity — resources are finite, wants are not. The price mechanism coordinates decisions without central direction.</div></div></div>
-              <div className="eup-concept"><div className="eup-concept-icon">📉</div><div><div className="eup-concept-title">Diagrams are non-negotiable</div><div className="eup-concept-desc">Examiners expect supply-demand diagrams for price determination and market failure questions. Every shift must be labelled.</div></div></div>
-              <div className="eup-concept"><div className="eup-concept-icon">🔗</div><div><div className="eup-concept-title">Chain of analysis</div><div className="eup-concept-desc">8-mark questions reward full chains: cause → mechanism → outcome. E.g. tax → supply left → P rises → Qd falls.</div></div></div>
-              <div className="eup-concept"><div className="eup-concept-icon">⚡</div><div><div className="eup-concept-title">Elasticity runs through everything</div><div className="eup-concept-desc">PED and PES determine who bears a tax, how much DWL results, and whether a policy achieves its intended effect.</div></div></div>
+              <div className="eup-concept"><div className="eup-concept-icon"><ChartHistogram size={18} />️</div><div><div className="eup-concept-title">The core trade-off</div><div className="eup-concept-desc">Every concept in Unit 1 links back to scarcity — resources are finite, wants are not. The price mechanism coordinates decisions without central direction.</div></div></div>
+              <div className="eup-concept"><div className="eup-concept-icon"><ChartHistogram size={18} /></div><div><div className="eup-concept-title">Diagrams are non-negotiable</div><div className="eup-concept-desc">Examiners expect supply-demand diagrams for price determination and market failure questions. Every shift must be labelled.</div></div></div>
+              <div className="eup-concept"><div className="eup-concept-icon"><NetworkGraph size={18} /></div><div><div className="eup-concept-title">Chain of analysis</div><div className="eup-concept-desc">8-mark questions reward full chains: cause → mechanism → outcome. E.g. tax → supply left → P rises → Qd falls.</div></div></div>
+              <div className="eup-concept"><div className="eup-concept-icon"><BoltIcon size={18} /></div><div><div className="eup-concept-title">Elasticity runs through everything</div><div className="eup-concept-desc">PED and PES determine who bears a tax, how much DWL results, and whether a policy achieves its intended effect.</div></div></div>
             </div>
           </div>
           <div className="elp-fade-up" style={{ transitionDelay: '.1s' }}>
@@ -256,22 +257,22 @@ export default function Unit1Page() {
         <h2 className="elp-s-title" style={{ fontSize: 22, marginBottom: 8 }}>Continue revising</h2>
         <div className="eup-continue-grid">
           <Link className="eup-continue-card" href="/economics/unit-2">
-            <div className="eup-cc-icon">📈</div>
+            <div className="eup-cc-icon"><ChartHistogram size={18} /></div>
             <div className="eup-cc-body"><div className="eup-cc-name">Unit 2: Macroeconomic Performance &amp; Policy</div><div className="eup-cc-sub">WEC12 · AD/AS, inflation, unemployment, fiscal &amp; monetary policy</div></div>
             <div className="eup-cc-arrow">→</div>
           </Link>
           <Link className="eup-continue-card" href="/economics/unit-3">
-            <div className="eup-cc-icon">🏭</div>
+            <div className="eup-cc-icon"><DrawerAlt size={18} /></div>
             <div className="eup-cc-body"><div className="eup-cc-name">Unit 3: Business Behaviour</div><div className="eup-cc-sub">WEC13 · Theory of the firm, market structures, labour markets</div></div>
             <div className="eup-cc-arrow">→</div>
           </Link>
           <Link className="eup-continue-card" href="/written-practice">
-            <div className="eup-cc-icon">✍️</div>
+            <div className="eup-cc-icon"><PenIcon size={18} />️</div>
             <div className="eup-cc-body"><div className="eup-cc-name">Written Practice</div><div className="eup-cc-sub">AI-marked exam answers with instant feedback</div></div>
             <div className="eup-cc-arrow">→</div>
           </Link>
           <Link className="eup-continue-card" href="/past-papers">
-            <div className="eup-cc-icon">📄</div>
+            <div className="eup-cc-icon"><Document size={18} /></div>
             <div className="eup-cc-body"><div className="eup-cc-name">{UNIT.code} Past Papers</div><div className="eup-cc-sub">Practise with real exam questions and mark schemes</div></div>
             <div className="eup-cc-arrow">→</div>
           </Link>
