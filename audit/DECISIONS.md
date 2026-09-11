@@ -35,3 +35,18 @@ Append only. Every entry needs a date and the packet that made it.
   MCQ in government-intervention-firms (quiz[5]) is off-topic but replacing it means authoring a new question
   without a validator; packet 8 / that section's packet. Three false marketing claims remain live because a
   concurrent session has those exact files staged (see NEXT.md).
+- **2026-09-11 (packet 1) — the old Learn Mode progress POST is removed, not fixed.** `LearnModeTab`
+  no longer calls `/api/learn-mode/progress`; it wrote strings into a boolean column and never stored a
+  row in the feature's lifetime. Its GET has no consumer. Packet 4 rebuilds progress on a real model; do
+  not resurrect this endpoint in the meantime. Step persistence now goes through `onPersistStep` →
+  `/api/progress/content` with the real flat step count and a never-decreasing furthest step.
+- **2026-09-11 (packet 1) — funnel events are the measurement of record.** Table `app_events`
+  (`scripts/create-app-events-table.sql`, run by hand in the SQL editor: there is no DDL path from code),
+  written only via `POST /api/events` with the service role, event names allow-listed in
+  `lib/funnel.js`. Anonymous students are included via a per-browser `anon_id`. The step-0 pass rate is
+  `step_next(step=0)` over `learn_open` per (student, section); computed by
+  `audit/scripts/funnel-events.mjs`. `user_content_progress` is a resume pointer, not a metric.
+- **2026-09-11 (packet 1) — cancel reasons are captured in our modal, not in Stripe.** Cancellation
+  itself happens inside Stripe's billing portal, so the reason is recorded as a `cancel_reason` event
+  before the redirect. Stripe's own portal reason survey was not enabled: that is an external account
+  setting and the founder's call.

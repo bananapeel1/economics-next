@@ -1,6 +1,7 @@
 "use client";
 import { useState, useMemo } from 'react';
 import { recordPretest } from '@/lib/strength';
+import { trackFunnel } from '@/lib/funnel';
 
 /* ── Pre-test Before Learning ── */
 export default function PreTest({ quizData, subjectId, sectionId, onDone }) {
@@ -61,6 +62,7 @@ export default function PreTest({ quizData, subjectId, sectionId, onDone }) {
 
     // Record to strength meter
     recordPretest(subjectId, sectionId, score);
+    trackFunnel('pretest_submitted', { sectionId, score: correct, total: questions.length });
   }
 
   const correctCount = questions.reduce((c, q, i) => c + (answers[i] === q.correctIndex ? 1 : 0), 0);
@@ -124,6 +126,7 @@ export default function PreTest({ quizData, subjectId, sectionId, onDone }) {
                   JSON.stringify({ completed: false, skipped: true, timestamp: Date.now() }));
               } catch {}
             }
+            trackFunnel('pretest_skipped', { sectionId });
             onDone?.();
           }}>
             Skip pre-test &rarr;

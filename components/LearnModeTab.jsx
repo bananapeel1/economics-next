@@ -14,6 +14,7 @@ import FillInRecall from './learn-mode/FillInRecall';
 import ExplainItBackUpgraded from './learn-mode/ExplainItBackUpgraded';
 import { NoteSection, TakeawayCard } from './notes';
 import { isPracticeVisible } from '@/lib/ial-commands';
+import { trackFunnel } from '@/lib/funnel';
 
 /* Practice items whose command word is not on the IAL list for the subject (or flagged hidden in
    content) are withheld until rewritten. See audit/PLAN.md day-0 hotfix. */
@@ -29,7 +30,7 @@ function PracticeWithheld() {
 export default function LearnModeTab({
   contentData, diagramsData, practiceData, quizData, glossaryTerms,
   sectionId, subjectId, currentSection, currentUnit,
-  currentStep, onStepChange,
+  currentStep, onStepChange, onPersistStep,
   isResuming, onResumeDismiss,
   onComplete, onNavigateToQuiz, onNavigateToTab,
   onAskTutor, isPremium,
@@ -56,6 +57,7 @@ export default function LearnModeTab({
       localStorage.setItem(`revvy_pretest_${subjectId}_${sectionId}`,
         JSON.stringify({ completed: false, skipped: true, timestamp: Date.now() }));
     } catch {}
+    trackFunnel('pretest_declined', { sectionId });
     setPretestOffered(false);
   }
   const containerRef = useRef(null);
@@ -174,8 +176,9 @@ export default function LearnModeTab({
       // Going forward — checkmark pulse, instant scroll, then swap
       setStepComplete(true);
       setNodePopped(true);
-      // Save step progress to server (fire-and-forget)
-      saveLearnModeProgress(sectionId, totalSteps, currentStep, false);
+      // The true "passed step N" signal, plus persistence of the furthest step reached
+      trackFunnel('step_next', { sectionId, step: currentStep, totalSteps });
+      onPersistStep?.(step, totalSteps);
       setTimeout(() => {
         scrollToTop(true); // instant — guarantees we're at the top
         setStepComplete(false);
@@ -235,26 +238,24 @@ export default function LearnModeTab({
       }
       recordReview(subjectId, sectionId, null);
 
-      // Save learn mode completion to Supabase for progress dashboard
-      saveLearnModeProgress(sectionId, totalSteps, currentStep, true);
+      trackFunnel('section_complete', { sectionId, totalSteps });
+      onPersistStep?.(totalSteps - 1, totalSteps, { complete: true });
     }
     setIsComplete(true);
     onComplete?.();
   }
 
-  // Save learn mode progress to server (feeds into /progress dashboard)
-  function saveLearnModeProgress(secId, total, step, complete) {
-    fetch('/api/learn-mode/progress', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        sectionId: secId,
-        totalSteps: total,
-        completedStep: step,
-        isComplete: complete,
-      }),
-    }).catch(() => {}); // fire-and-forget, don't block UI
-  }
+  // Funnel events (server-written, signed-in and anonymous). These replace the old POST to
+  // /api/learn-mode/progress, which wrote strings into a boolean column and never stored a row.
+  useEffect(() => {
+    if (contentData?.length) trackFunnel('learn_open', { sectionId, totalSteps });
+  }, [sectionId]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    if (pretestOffered && currentStep === 0) trackFunnel('pretest_offered', { sectionId });
+  }, [pretestOffered]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    if (contentData?.length && !showPretest && !isComplete) trackFunnel('step_view', { sectionId, step: currentStep, totalSteps });
+  }, [currentStep, showPretest, isComplete]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Empty state
   if (!contentData?.length) {
@@ -335,7 +336,7 @@ export default function LearnModeTab({
             <strong>Want a quick check first?</strong> Three questions on what you might already know. Optional, and nothing is marked.
           </div>
           <div className="lm-pretest-offer-actions">
-            <button className="lm-pretest-offer-yes" onClick={() => { setShowPretest(true); setTimeout(() => scrollToTop(true), 0); }}>
+            <button className="lm-pretest-offer-yes" onClick={() => { trackFunnel('pretest_started', { sectionId }); setShowPretest(true); setTimeout(() => scrollToTop(true), 0); }}>
               Test yourself first
             </button>
             <button className="lm-pretest-offer-no" onClick={declinePretest}>
