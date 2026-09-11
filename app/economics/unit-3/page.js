@@ -77,7 +77,7 @@ export default function Unit3Page() {
       </div>
 
       <section>
-        <div className="elp-hero" style={{ paddingTop: 144 }}>
+        <div className="elp-hero">
           <div className="elp-fade-up">
             <div className="elp-hero-eyebrow" style={{ background: 'var(--eup-accent-bg)', borderColor: 'var(--eup-accent-bd)', color: 'var(--eup-accent)' }}>Edexcel IAL Economics &middot; {UNIT.code}</div>
             <div className="eup-unit-badge-row"><span className="eup-unit-num">Unit {UNIT.number}</span><span className="eup-unit-code">{UNIT.code}</span></div>

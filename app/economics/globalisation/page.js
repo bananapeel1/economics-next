@@ -236,7 +236,7 @@ export default async function GlobalisationPillarPage() {
       </div>
 
       <section>
-        <div className="elp-hero" style={{ paddingTop: 144 }}>
+        <div className="elp-hero">
           <div className="elp-fade-up">
             <div className="elp-hero-eyebrow" style={{ background: 'var(--eup-accent-bg)', borderColor: 'var(--eup-accent-bd)', color: 'var(--eup-accent)' }}>Edexcel IAL Economics &middot; WEC14 &middot; 4.3.1</div>
             <div className="eup-unit-badge-row">

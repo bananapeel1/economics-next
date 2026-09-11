@@ -31,11 +31,17 @@
   --ns-ink3: #8b88a3;
   --ns-ink4: #6b6882;
 
-  /* --- violet: the colour of the actual logo mark, used structurally --- */
-  --ns-brand:    #9b7cf0;
-  --ns-brand-bg: rgba(155,124,240,.13);
-  --ns-brand-bd: rgba(155,124,240,.32);
-  --ns-on-brand: #14121f;
+  /* --- accent: the app's own green, so there is no seam between the SEO
+         pages and the product. #10b981 is --accent-green-light from
+         globals.css; the violet mark still supplies the logo. --- */
+  --ns-brand:    #10b981;
+  --ns-brand-bg: rgba(16,185,129,.12);
+  --ns-brand-bd: rgba(16,185,129,.3);
+  --ns-on-brand: #04231a;
+
+  /* the mark's violet, kept for the logo and the occasional second accent */
+  --ns-violet:    #9b7cf0;
+  --ns-violet-bg: rgba(155,124,240,.13);
 
   /* --- green now means one thing: free --- */
   --ns-free:    #34d399;
@@ -91,7 +97,7 @@
 
 /* The landing template hardcodes a few colours that the bridge cannot reach. */
 .elp-page .elp-btn-primary { background: var(--ns-brand); color: var(--ns-on-brand); }
-.elp-page .elp-btn-primary:hover { background: #8a68e8; box-shadow: 0 4px 20px var(--ns-brand-bd); }
+.elp-page .elp-btn-primary:hover { background: #059669; box-shadow: 0 4px 20px var(--ns-brand-bd); }
 .elp-page .elp-nav-cta { color: var(--ns-on-brand); }
 .elp-page .elp-preview-card { box-shadow: var(--ns-shadow); }
 .elp-page .elp-pki-text { color: var(--ns-ink2); }
@@ -181,13 +187,14 @@
   font-family: var(--ns-ui); font-size: 12.5px; font-weight: 700;
   white-space: nowrap; transition: background .15s;
 }
-.elp-page a.rlh-cta:hover, .rl-night a.rlh-cta:hover, a.rlh-cta:hover { background: #8a68e8; }
+.elp-page a.rlh-cta:hover, .rl-night a.rlh-cta:hover, a.rlh-cta:hover { background: #059669; }
 .elp-page a.rlh-brand .rlh-name, .rl-night a.rlh-brand .rlh-name { color: var(--ns-ink); }
 
-/* The old fixed nav reserved space with top padding; the masthead is sticky,
-   so that reservation has to come back out. */
-.elp-page .elp-hero { padding-top: 56px; }
-.elp-page .elp-scroll-bar { top: var(--rlh-h); }
+/* The old nav was fixed, so the hero and sections reserved space for it. */
+.elp-page .elp-section, .elp-page .elp-section-sm { padding-top: 44px; }
+.elp-page .elp-scroll-bar {
+  position: sticky; top: var(--rlh-h); z-index: 199;
+}
 
 @media (max-width: 720px) {
   .rlh { padding: 0 16px; gap: 12px; }
@@ -197,3 +204,19 @@
 /* The footer carried the same glowing dot; it uses the real mark now. */
 .elp-page .elp-footer-mark { width: 18px; height: 18px; object-fit: contain; border-radius: 4px; flex-shrink: 0; }
 .elp-page .elp-footer-logo { font-family: var(--ns-display); font-weight: var(--ns-display-w); letter-spacing: var(--ns-display-tr); }
+
+/* `.elp-page { overflow-x: hidden }` makes the page a scroll container, which
+   silently breaks `position: sticky` on the masthead and the progress bar —
+   the bar was scrolling away across the content. `clip` gives the same
+   overflow protection without establishing a scroll container. */
+.elp-page.elp-page { overflow-x: clip; }
+
+/* The hero's top padding exists in two places (base and a <=900px media rule),
+   both of which reserved room for the old fixed nav. */
+.elp-page .elp-hero { padding-top: 34px; }
+@media (max-width: 900px) { .elp-page .elp-hero { padding-top: 26px; } }
+
+/* .elp-page resets link decoration; the resource family never did, so the
+   masthead CTA rendered underlined there. */
+.rlh a, a.rlh-brand, a.rlh-cta { text-decoration: none; }
+.rl-night .rlh { margin-bottom: 18px; }

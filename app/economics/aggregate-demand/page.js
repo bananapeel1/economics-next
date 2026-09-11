@@ -1,5 +1,6 @@
 import { createServerClient } from '@/lib/supabase-server';
 import Link from 'next/link';
+import SiteHeader from '@/components/SiteHeader';
 import RelatedModelAnswers from '@/components/RelatedModelAnswers';
 
 export const metadata = {
@@ -38,7 +39,8 @@ export default async function AggregateDemandPage() {
   } : null;
 
   return (
-    <div className="resource-page">
+    <div className="resource-page rl-night">
+      <SiteHeader crumb="Economics / Aggregate demand" />
       {faqSchema && (
         <script
           type="application/ld+json"

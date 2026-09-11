@@ -1,5 +1,6 @@
 import TopicLinksPage from '@/components/topic-links/TopicLinksPage';
 import Link from 'next/link';
+import SiteHeader from '@/components/SiteHeader';
 
 export const metadata = {
   title: 'Economics Topic Linkage Map — Edexcel IAL | Revvy Learn',
@@ -13,7 +14,8 @@ export const metadata = {
 
 export default function TopicLinksRoute() {
   return (
-    <div className="resource-page">
+    <div className="resource-page rl-night">
+      <SiteHeader crumb="Topic links" />
       <div className="resource-page-header">
         <Link href="/" className="resource-back-link">&larr; Back to App</Link>
         <h1 className="resource-page-title">Topic Linkage Map</h1>

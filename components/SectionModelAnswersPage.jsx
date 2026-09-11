@@ -1,4 +1,5 @@
 import ModelAnswersPage from '@/components/ModelAnswersPage';
+import SiteHeader from '@/components/SiteHeader';
 import { MODEL_ANSWERS, SECTION_MODEL_ANSWERS_FAQ } from '@/data/modelAnswersData';
 import Link from 'next/link';
 
@@ -27,7 +28,9 @@ export default function SectionModelAnswersPage({
   } : null;
 
   return (
-    <div className="resource-page">
+    <div className="resource-page rl-night">
+      <SiteHeader crumb={`${subject === 'business' ? 'Business' : 'Economics'} / Model answers`} />
+
       {faqSchema && (
         <script
           type="application/ld+json"
