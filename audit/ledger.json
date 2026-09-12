@@ -592,8 +592,8 @@
    "fix": "Seed isPremium server-side (layout already fetches the user; fetch the subscription row too and pass as initialSubscription), and move Stripe reconciliation to a webhook/cron rather than every GET.",
    "impact": "A paying student who reloads on the Tutor tab sees the 'Unlock Tutor' paywall for the duration of two Stripe round-trips, then it disappears. It reads as 'my subscription broke'.",
    "packet": 12,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-12",
    "verified_by": null,
    "evidence": null,
    "note": null

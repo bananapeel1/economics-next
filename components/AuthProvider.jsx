@@ -20,10 +20,11 @@ const AuthContext = createContext({
 const POLL_INTERVAL_MS = 2000;
 const POLL_MAX_ATTEMPTS = 30;
 
-export function AuthProvider({ children, initialUser }) {
+export function AuthProvider({ children, initialUser, initialSubscription = null }) {
   const [user, setUser] = useState(initialUser || null);
   const [loading, setLoading] = useState(!initialUser);
-  const [subscription, setSubscription] = useState(null);
+  // Seeded from the server so a paying student's first paint is already premium (F035).
+  const [subscription, setSubscription] = useState(initialSubscription);
   const [activating, setActivating] = useState(false);
   const [activationFailed, setActivationFailed] = useState(false);
   const supabase = createClient();

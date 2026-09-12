@@ -2,6 +2,8 @@ import Script from 'next/script';
 import "./globals.css";
 import "@/styles/theme-night.css";
 import { createClient } from '@/lib/supabase/server';
+import { createServerClient } from '@/lib/supabase-server';
+import { getSubscriptionRow } from '@/lib/subscription-lookup';
 import { AuthProvider } from '@/components/AuthProvider';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import AnalyticsEvents from '@/components/AnalyticsEvents';
@@ -54,6 +56,24 @@ export const viewport = {
 export default async function RootLayout({ children }) {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
+
+  // F035: AuthProvider started with subscription=null, so `isPremium` was false until
+  // /api/subscription resolved — and that route reconciles against Stripe, twice. A paying student
+  // who reloaded on the Tutor tab watched the "Unlock Tutor" paywall for the length of two Stripe
+  // round-trips before it vanished. It reads as "my subscription broke", which is the single worst
+  // thing to show someone who just paid. The row is read here, server-side, and seeded into the
+  // provider so the first paint is already correct.
+  //
+  // This does not touch the reconciliation itself, which still runs on every GET of that route and
+  // belongs on a webhook. That half of F035 is not done.
+  let initialSubscription = null;
+  if (user) {
+    try {
+      initialSubscription = await getSubscriptionRow(createServerClient(), user.id);
+    } catch {
+      initialSubscription = null; // the client fetch will settle it
+    }
+  }
 
   return (
     <html lang="en" data-theme="dark" suppressHydrationWarning>
@@ -128,7 +148,7 @@ export default async function RootLayout({ children }) {
         />
 
         <ThemeProvider>
-          <AuthProvider initialUser={user}>
+          <AuthProvider initialUser={user} initialSubscription={initialSubscription}>
             {children}
             <AnalyticsEvents />
           </AuthProvider>
