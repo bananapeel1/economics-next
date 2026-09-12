@@ -65,25 +65,11 @@ export default async function GuidePage({ params }) {
     },
   };
 
-  const faqLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: guide.sections.slice(0, 4).map(section => ({
-      '@type': 'Question',
-      name: section.heading.endsWith('?') ? section.heading : `What is ${section.heading.toLowerCase()} in A-Level ${guide.subject === 'economics' ? 'Economics' : 'Business'}?`,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: section.content.slice(0, 300),
-      },
-    })),
-  };
-
   return (
     <div className="resource-page rl-night">
       <SiteHeader crumb="Guides" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
 
       <div className="guide-shell">
       <div className="resource-page-header">
