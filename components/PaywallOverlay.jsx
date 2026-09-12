@@ -66,6 +66,13 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
     <Link href="/login" className="paywall-btn">Sign In to Get Started</Link>
   );
 
+  // The button above goes straight to Stripe on the monthly plan, so the
+  // £12 lifetime option was invisible to anyone who never visited /upgrade
+  // — which is most people, since every gated tab lands here instead.
+  const plansLink = (
+    <Link href="/upgrade" className="paywall-plans-link">See all plans and pricing</Link>
+  );
+
   /* ── Inline variant (compact, inside preview-fade-cta) ── */
   if (inline) {
     return (
@@ -87,6 +94,7 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
         )}
 
         {ctaButton}
+        {plansLink}
 
         <div className="paywall-trust-row-compact">
           <span>&pound;1 first month</span>
@@ -157,6 +165,7 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
           )}
 
           {ctaButton}
+          {plansLink}
 
           <div className="paywall-trust-row">
             <span>&pound;1 first month</span>
