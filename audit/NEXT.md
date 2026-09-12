@@ -1,5 +1,47 @@
 # Next session brief
 
+## Packet 2 — code half landed, two actions blocked on the founder
+
+Committed `4d45478`. Verified: F013, F040, F111 (practice pins) and F041 (diagram fallback).
+Snapshot taken before anything: `audit/snapshots/2026-09-12-pre-packet-2__*` — 43 sections, 8 tables,
+restore path exercised.
+
+**Blocked action 1 — mint the ids.** Dry run is clean: 2,952 ids across 43 sections (769 quiz, 844 cards,
+215 practice, 81 diagrams, 272 recall, 583 blocks and subsections, 188 mistakes). It adds an `id` field and
+changes nothing else, so no student sees a difference.
+
+```
+node scripts/mint-item-ids.mjs             # dry run, prints the plan
+node scripts/mint-item-ids.mjs --confirm   # writes
+node scripts/mint-item-ids.mjs --verify    # asserts every item has a unique id
+```
+
+If it goes wrong: `node scripts/restore-section.mjs audit/snapshots/2026-09-12-pre-packet-2__<subject>__<section>.json --confirm`.
+
+**Blocked action 2 — run the DDL.** `scripts/packet-2-item-id.sql`, once, in the Supabase SQL editor. Read
+the comment at the top first: it lists the five silent ways the obvious version of this migration loses
+student data, and it is why the column is nullable and question_index survives. Then:
+
+```
+node scripts/backfill-item-id.mjs            # dry run
+node scripts/backfill-item-id.mjs --confirm  # writes item_id only
+```
+
+**Then, to finish packet 2:** switch the five progress routes to dual-write `item_id` alongside
+`question_index` (never instead of it), and build the draft/published state — the half of F115 that is not
+addressed. Re-pinning content by id is a section-packet job, not this one.
+
+**Still open after this packet:** F052 and F109 (9 of 24 broken diagram refs now rescued by the fallback,
+15 blocks still show nothing — 3 of those are in `the-market`, which has no diagrams in the database at all)
+and the draft/published half of F115.
+
+**The ledger was not updated.** A concurrent session holds `audit/ledger.json` for a marketing-claims audit
+(M001-M182). Claim F013, F040, F111 and F041 for packet 2 once the tree is quiet:
+`node audit/scripts/ledger.mjs claim 2 F013 F040 F111 F041`.
+
+---
+
+
 ## Packet 13.1 landed — quant engine (12 September 2026, out of calendar order)
 
 Gate passed: build green, `npm run quant-check` green, `npm run contrast` still clean, Verify A confirmed
