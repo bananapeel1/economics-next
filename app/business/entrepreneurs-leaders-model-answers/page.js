@@ -15,6 +15,7 @@ export default function EntrepreneursLeadersModelAnswersPage() {
   return (
     <SectionModelAnswersPage
       sectionNumber="1.5"
+        sectionId="entrepreneurs-leaders"
       subject="business"
       backLink={{ href: '/business/unit-1', label: 'Unit 1: Marketing & People' }}
       title="Entrepreneurs & Leaders Model Answers"

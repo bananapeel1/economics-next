@@ -15,6 +15,7 @@ export default function ResourceManagementModelAnswersPage() {
   return (
     <SectionModelAnswersPage
       sectionNumber="2.4"
+        sectionId="resource-management"
       subject="business"
       backLink={{ href: '/business/unit-2', label: 'Unit 2: Managing Business Activities' }}
       title="Resource Management Model Answers"

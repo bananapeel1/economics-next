@@ -1,6 +1,7 @@
 import { createAnonClient } from '@/lib/supabase-anon';
 import CommandWordsPage from '@/components/CommandWordsPage';
 import Link from 'next/link';
+import { BookAlt, Document, PenIcon } from '@/components/Icons';
 import SiteHeader from '@/components/SiteHeader';
 import LandingScrollBar from '@/components/LandingScrollBar';
 import '@/styles/landing.css';
@@ -82,16 +83,16 @@ export default async function CommandWordsRoute() {
         <h2 className="elp-s-title" style={{ fontSize: '22px', marginBottom: '8px' }}>Related resources</h2>
         <div className="elp-resources-row">
           <Link href="/model-answers" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128221;</span> Model Answers
+            <span className="elp-resource-chip-icon"><PenIcon size={18} /></span> Model Answers
           </Link>
           <Link href="/past-papers" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128196;</span> Past Papers
+            <span className="elp-resource-chip-icon"><Document size={18} /></span> Past Papers
           </Link>
           <Link href="/guides" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128218;</span> Revision Guides
+            <span className="elp-resource-chip-icon"><BookAlt size={18} /></span> Revision Guides
           </Link>
           <Link href="/glossary" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128214;</span> Glossary
+            <span className="elp-resource-chip-icon"><BookAlt size={18} /></span> Glossary
           </Link>
         </div>
       </div>

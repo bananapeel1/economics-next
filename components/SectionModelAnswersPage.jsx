@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 export default function SectionModelAnswersPage({
   sectionNumber,
+  sectionId,
   subject,
   backLink,
   title,
@@ -16,6 +17,8 @@ export default function SectionModelAnswersPage({
   );
 
   const faqs = SECTION_MODEL_ANSWERS_FAQ[sectionNumber] || [];
+
+  const topicName = title.replace(/\s*Model Answers\s*$/i, '').trim();
 
   const faqSchema = faqs.length > 0 ? {
     '@context': 'https://schema.org',
@@ -52,11 +55,21 @@ export default function SectionModelAnswersPage({
 
       <ModelAnswersPage answers={sectionAnswers} freeMode={true} />
 
+      {/* The old CTA sent the reader to /model-answers — another SEO page, not
+          the app. Someone who has just read worked answers wants to attempt one,
+          so this offers that, on the topic they are already reading, and it
+          keeps the ?section= form so the click is measurable. */}
       <div className="seo-cta" style={{ marginTop: 32 }}>
-        <h2>More Model Answers</h2>
-        <p>Browse all Edexcel IAL Economics &amp; Business model answers with mark scheme breakdowns and examiner commentary.</p>
-        <Link href="/model-answers" className="seo-cta-button">
-          View All Model Answers &rarr;
+        <h2>Now write one yourself</h2>
+        <p>
+          Practise {topicName} with the same question types, marked against the
+          scheme, in the app. Free, and it opens exactly where you are.
+        </p>
+        <Link
+          href={sectionId ? `/?section=${sectionId}` : '/model-answers'}
+          className="seo-cta-button"
+        >
+          Practise {topicName} &rarr;
         </Link>
       </div>
     </div>

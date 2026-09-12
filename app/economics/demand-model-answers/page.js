@@ -15,6 +15,7 @@ export default function DemandModelAnswersPage() {
   return (
     <SectionModelAnswersPage
       sectionNumber="1.3.2"
+        sectionId="consumer-behaviour-demand"
       subject="economics"
       backLink={{ href: '/economics/unit-1', label: 'Unit 1: Markets in Action' }}
       title="Consumer Demand Model Answers"
