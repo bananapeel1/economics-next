@@ -1,6 +1,7 @@
 import ModelAnswersPage from '@/components/ModelAnswersPage';
 import { MODEL_ANSWERS, MODEL_ANSWERS_FAQ, MODEL_ANSWERS_SECTIONS } from '@/data/modelAnswersData';
 import Link from 'next/link';
+import { BookAlt, ChartHistogram, Document, Glossary } from '@/components/Icons';
 import SiteHeader from '@/components/SiteHeader';
 import LandingScrollBar from '@/components/LandingScrollBar';
 import '@/styles/landing.css';
@@ -75,16 +76,16 @@ export default function ModelAnswersRoute() {
         <h2 className="elp-s-title" style={{ fontSize: '22px', marginBottom: '8px' }}>Related resources</h2>
         <div className="elp-resources-row">
           <Link href="/command-words" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128292;</span> Command Words
+            <span className="elp-resource-chip-icon"><Glossary size={18} /></span> Command Words
           </Link>
           <Link href="/past-papers" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128196;</span> Past Papers
+            <span className="elp-resource-chip-icon"><Document size={18} /></span> Past Papers
           </Link>
           <Link href="/guides" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128218;</span> Revision Guides
+            <span className="elp-resource-chip-icon"><BookAlt size={18} /></span> Revision Guides
           </Link>
           <Link href="/economics" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128200;</span> Economics Notes
+            <span className="elp-resource-chip-icon"><ChartHistogram size={18} /></span> Economics Notes
           </Link>
         </div>
       </div>

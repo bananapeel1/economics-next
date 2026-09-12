@@ -15,6 +15,7 @@ export default function FinancialPlanningModelAnswersPage() {
   return (
     <SectionModelAnswersPage
       sectionNumber="2.2"
+        sectionId="financial-planning"
       subject="business"
       backLink={{ href: '/business/unit-2', label: 'Unit 2: Managing Business Activities' }}
       title="Financial Planning Model Answers"

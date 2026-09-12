@@ -15,6 +15,7 @@ export default function ManagingFinanceModelAnswersPage() {
   return (
     <SectionModelAnswersPage
       sectionNumber="2.3"
+        sectionId="managing-finance"
       subject="business"
       backLink={{ href: '/business/unit-2', label: 'Unit 2: Managing Business Activities' }}
       title="Managing Finance Model Answers"

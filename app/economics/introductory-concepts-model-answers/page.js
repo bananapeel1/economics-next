@@ -15,6 +15,7 @@ export default function IntroductoryConceptsModelAnswersPage() {
   return (
     <SectionModelAnswersPage
       sectionNumber="1.3.1"
+        sectionId="introductory-concepts"
       subject="economics"
       backLink={{ href: '/economics/unit-1', label: 'Unit 1: Markets in Action' }}
       title="Introductory Concepts Model Answers"

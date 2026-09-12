@@ -15,6 +15,7 @@ export default function ExternalInfluencesModelAnswersPage() {
   return (
     <SectionModelAnswersPage
       sectionNumber="2.5"
+        sectionId="external-influences"
       subject="business"
       backLink={{ href: '/business/unit-2', label: 'Unit 2: Managing Business Activities' }}
       title="External Influences Model Answers"

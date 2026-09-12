@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import SiteHeader from '@/components/SiteHeader';
 import BackToApp from '@/components/BackToApp';
-import { LearnMode } from '@/components/Icons';
+import { BookAlt, Document, Glossary, LearnMode, PenIcon } from '@/components/Icons';
 import IALScrollBar from './IALScrollBar';
 import '@/styles/landing.css';
 
@@ -200,19 +200,19 @@ export default function IALRevisionPage() {
         <h2 className="elp-s-title" style={{ fontSize: '22px', marginBottom: '8px' }}>More revision tools</h2>
         <div className="elp-resources-row">
           <Link href="/past-papers" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128196;</span> IAL Past Papers
+            <span className="elp-resource-chip-icon"><Document size={18} /></span> IAL Past Papers
           </Link>
           <Link href="/model-answers" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128221;</span> Model Answers
+            <span className="elp-resource-chip-icon"><PenIcon size={18} /></span> Model Answers
           </Link>
           <Link href="/command-words" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128292;</span> Command Words
+            <span className="elp-resource-chip-icon"><Glossary size={18} /></span> Command Words
           </Link>
           <Link href="/glossary" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128214;</span> Key Terms Glossary
+            <span className="elp-resource-chip-icon"><BookAlt size={18} /></span> Key Terms Glossary
           </Link>
           <Link href="/guides" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128218;</span> Revision Guides
+            <span className="elp-resource-chip-icon"><BookAlt size={18} /></span> Revision Guides
           </Link>
         </div>
       </div>
