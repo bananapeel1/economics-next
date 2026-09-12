@@ -57,6 +57,27 @@ Append only. Every entry needs a date and the packet that made it.
   glossary definition used as a `String.replace` template so `$&` and `$1` are interpreted) goes to packet 11,
   which already touches `lib/glossary-highlight.js`. **F025** (no onboarding) is packet 99, deliberately out of
   scope per PLAN.md. Packet 13 carries no code findings; its work is entirely content items.
+- **2026-09-12 (packet 2) — item ids are matched by content, never by position.** The admin PUT replaces a
+  whole `data` array, so a save whose JSON lacks ids would drop them. The first implementation restored them
+  by array position; a verifier demonstrated that deleting one item then gives every later item its
+  neighbour's id, silently rebinding a student's review history to a different question. Ids are now matched
+  on normalised item text (`restoreIds` in `app/api/admin/sections/[id]/[type]/route.js`). An item whose text
+  was edited in the same save keeps no id and becomes a new item: losing an id is recoverable by re-minting,
+  mis-assigning one is not.
+
+- **2026-09-12 (packet 2) — the item_id migration is staged across packets 2 and 4, deliberately.** Packet 2
+  adds a nullable column and dual-writes; packet 4 switches the unique constraint and drops question_index.
+  Doing it in one step loses data five silent ways, all documented at the top of `scripts/packet-2-item-id.sql`
+  — the NOT NULL on question_index, the unique constraint treating NULL item_ids as distinct, the queue
+  builder reclassifying all 1,067 rows as new, dashboards that count rows and so keep looking right, and 27
+  `wa-` rows whose index points into a client-side filtered subset and is not backfillable at all.
+
+- **2026-09-12 (packet 2) — the diagram title fallback runs per block, not per section.** `hasRefs` was
+  section-wide, so one `quizIndices` entry anywhere in a section disabled the diagram fallback for every block
+  in it. Inline diagrams shown across the product go from 15 to 51. The fallback only fills slots a pin left
+  empty, and only from diagrams no block claimed, so it can never displace a working pin. `matchDiagramsToBlocks`
+  also gained a stopword list: it was counting 'and' and 'the' as topic matches.
+
 - **2026-09-12 (13.1) — the drill programme is split, and quant goes before the content stage.** Founder
   decision, recorded in `audit/DRILLS.md`: packets 13.1-13.4 (quantitative) run before packet 14; 13.5-13.8
   (drawing) run after the top-ten content sections. The reason is in the ledger, not in taste — 110 content
