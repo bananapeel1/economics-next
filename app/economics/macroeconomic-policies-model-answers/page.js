@@ -15,6 +15,7 @@ export default function MacroeconomicPoliciesModelAnswersPage() {
   return (
     <SectionModelAnswersPage
       sectionNumber="2.3.6"
+        sectionId="macroeconomic-objectives-policies"
       subject="economics"
       backLink={{ href: '/economics/unit-2', label: 'Unit 2: Macroeconomic Performance' }}
       title="Macroeconomic Policies Model Answers"

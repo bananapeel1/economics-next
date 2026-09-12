@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { BoltIcon, CardsIcon, ChartHistogram, Clipboard, Document, DrawerAlt, LearnMode, NetworkGraph, PenIcon, ProgressChart, Star, Tutor } from '@/components/Icons';
+import SiteHeader from '@/components/SiteHeader';
 import UnitScrollBar from '../UnitScrollBar';
 import '@/styles/landing.css';
 
@@ -92,24 +94,11 @@ const SECTIONS = [
 
 export default function Unit1Page() {
   return (
-    <div className="elp-page eup-page" style={{ '--eup-accent': '#14b8a6', '--eup-accent-bg': 'rgba(20,184,166,.08)', '--eup-accent-bd': 'rgba(20,184,166,.2)', '--eup-accent-glow': 'rgba(20,184,166,.15)' }}>
+    <div className="elp-page eup-page" style={{ '--eup-accent': 'var(--ns-brand)', '--eup-accent-bg': 'var(--ns-brand-bg)', '--eup-accent-bd': 'var(--ns-brand-bd)', '--eup-accent-glow': 'var(--ns-brand-bd)' }}>
       <UnitScrollBar />
       <div className="elp-scroll-bar"><div className="elp-scroll-fill" id="eup-scroll-fill" style={{ background: 'var(--eup-accent)' }} /></div>
 
-      {/* NAV */}
-      <nav className="elp-nav">
-        <Link href="/" className="elp-nav-logo"><div className="elp-nav-dot" /><span>Revvy Learn</span></Link>
-        <div className="elp-nav-sep" />
-        <div className="elp-nav-crumb">
-          <Link href="/economics">Economics</Link>
-          <span style={{ color: 'var(--elp-tx-d)', margin: '0 6px' }}>/</span>
-          <span style={{ color: 'var(--eup-accent)', fontWeight: 600 }}>Unit 1</span>
-        </div>
-        <div className="elp-nav-right">
-          <Link href="/economics" className="elp-nav-link">All Units</Link>
-          <Link href="/login" className="elp-nav-cta">Sign In</Link>
-        </div>
-      </nav>
+      <SiteHeader crumb="Economics / Unit 1" />
 
       {/* TOPIC JUMP NAV */}
       <div className="eup-topic-nav">
@@ -121,18 +110,18 @@ export default function Unit1Page() {
 
       {/* HERO */}
       <section>
-        <div className="elp-hero" style={{ paddingTop: 144 }}>
+        <div className="elp-hero">
           <div className="elp-fade-up">
             <div className="elp-hero-eyebrow" style={{ background: 'var(--eup-accent-bg)', borderColor: 'var(--eup-accent-bd)', color: 'var(--eup-accent)' }}>Edexcel IAL Economics &middot; {UNIT.code}</div>
             <div className="eup-unit-badge-row">
               <span className="eup-unit-num">Unit {UNIT.number}</span>
               <span className="eup-unit-code">{UNIT.code}</span>
             </div>
-            <h1 className="elp-hero-title">{UNIT.title} &mdash;<br /><em style={{ color: 'var(--eup-accent)' }}>microeconomics done right</em></h1>
+            <h1 className="elp-hero-title">{UNIT.title} &mdash;<br /><em style={{ color: 'var(--eup-accent)' }}>{UNIT.code} notes</em></h1>
             <p className="elp-hero-desc">Complete revision notes for Unit 1. Demand, supply, price determination, market failure and government intervention &mdash; structured around the Edexcel spec, with flashcards, quizzes and AI tutor for every topic.</p>
             <div className="elp-hero-actions">
               <Link href="/?section=introductory-concepts" className="elp-btn-primary">Start revising free &rarr;</Link>
-              <a href="#topics" className="elp-btn-secondary">Browse all topics</a>
+              
             </div>
             <div className="elp-hero-proof">
               <div className="elp-proof-item"><strong>6 topics</strong> fully covered</div>
@@ -145,7 +134,7 @@ export default function Unit1Page() {
 
           <div className="elp-hero-preview elp-fade-up" style={{ transitionDelay: '.15s' }}>
             <div className="elp-hero-badge elp-b1">
-              <span className="elp-badge-icon">🎯</span>
+              <span className="elp-badge-icon"><Star size={18} /></span>
               <div className="elp-badge-text"><span className="elp-badge-val">6 topics</span><span className="elp-badge-lbl">fully spec-aligned</span></div>
             </div>
             <div className="elp-preview-card">
@@ -157,13 +146,13 @@ export default function Unit1Page() {
               <div className="elp-preview-body">
                 <div className="elp-preview-section-title">1.3.5 &mdash; Market Failure</div>
                 <div className="elp-preview-key-idea" style={{ borderLeftColor: 'var(--eup-accent)' }}>
-                  <div className="elp-pki-label" style={{ color: 'var(--eup-accent)' }}>🔑 Key idea</div>
+                  <div className="elp-pki-label" style={{ color: 'var(--eup-accent)' }}><LearnMode size={18} /> Key idea</div>
                   <div className="elp-pki-text" style={{ color: '#99f6e4' }}>Markets fail when prices give the wrong signals &mdash; causing too much or too little to be produced relative to the social optimum.</div>
                 </div>
                 <div className="elp-preview-bullets">
-                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#14b8a6' }} /><div className="elp-pb-text"><strong>Negative externality</strong> &mdash; cost imposed on third parties; causes overproduction.</div></div>
-                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#4f7ef8' }} /><div className="elp-pb-text">Private cost &lt; social cost &rarr; price too low &rarr; output above MSC = MSB.</div></div>
-                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#f59e0b' }} /><div className="elp-pb-text"><strong>Deadweight welfare loss</strong> &mdash; market produces beyond social optimum.</div></div>
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-free)' }} /><div className="elp-pb-text"><strong>Negative externality</strong> &mdash; cost imposed on third parties; causes overproduction.</div></div>
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-blue)' }} /><div className="elp-pb-text">Private cost &lt; social cost &rarr; price too low &rarr; output above MSC = MSB.</div></div>
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-amber)' }} /><div className="elp-pb-text"><strong>Deadweight welfare loss</strong> &mdash; market produces beyond social optimum.</div></div>
                 </div>
                 <div className="elp-preview-flow">
                   <div className="elp-pf-step">Firm ignores social cost</div>
@@ -180,23 +169,12 @@ export default function Unit1Page() {
         </div>
       </section>
 
-      {/* FEATURES STRIP */}
-      <div className="elp-features-strip">
-        <div className="elp-features-inner">
-          <div className="elp-feat-item"><span className="elp-feat-icon">📋</span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every {UNIT.code} point covered</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">🔄</span><div><div className="elp-feat-label">Spaced repetition</div><div className="elp-feat-sub">Adaptive flashcard algorithm</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">⚡</span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style, every topic</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">🤖</span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any Economics question</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">📊</span><div><div className="elp-feat-label">Progress tracking</div><div className="elp-feat-sub">Mastery across all spec points</div></div></div>
-        </div>
-      </div>
-
       {/* TOPICS */}
       <div className="elp-section" id="topics">
-        <div className="elp-fade-up" style={{ marginBottom: 40 }}>
+        <div className="elp-uh-tight elp-fade-up" style={{ marginBottom: 40 }}>
           <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />All six topics</div>
           <h2 className="elp-s-title">Everything in Unit 1, spec point by spec point</h2>
-          <p className="elp-s-sub">Click any topic to open the full notes, diagrams, flashcards and practice questions in the app.</p>
+          <p className="elp-s-sub">Open any topic straight in the app.</p>
         </div>
 
         {SECTIONS.map((section, idx) => (
@@ -232,14 +210,14 @@ export default function Unit1Page() {
             <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />Unit overview</div>
             <h2 className="elp-s-title">What you need to know for {UNIT.code}</h2>
             <div className="eup-key-concepts">
-              <div className="eup-concept"><div className="eup-concept-icon">⚖️</div><div><div className="eup-concept-title">The core trade-off</div><div className="eup-concept-desc">Every concept in Unit 1 links back to scarcity — resources are finite, wants are not. The price mechanism coordinates decisions without central direction.</div></div></div>
-              <div className="eup-concept"><div className="eup-concept-icon">📉</div><div><div className="eup-concept-title">Diagrams are non-negotiable</div><div className="eup-concept-desc">Examiners expect supply-demand diagrams for price determination and market failure questions. Every shift must be labelled.</div></div></div>
-              <div className="eup-concept"><div className="eup-concept-icon">🔗</div><div><div className="eup-concept-title">Chain of analysis</div><div className="eup-concept-desc">8-mark questions reward full chains: cause → mechanism → outcome. E.g. tax → supply left → P rises → Qd falls.</div></div></div>
-              <div className="eup-concept"><div className="eup-concept-icon">⚡</div><div><div className="eup-concept-title">Elasticity runs through everything</div><div className="eup-concept-desc">PED and PES determine who bears a tax, how much DWL results, and whether a policy achieves its intended effect.</div></div></div>
+              <div className="eup-concept"><div className="eup-concept-icon"><ChartHistogram size={18} />️</div><div><div className="eup-concept-title">The core trade-off</div><div className="eup-concept-desc">Every concept in Unit 1 links back to scarcity — resources are finite, wants are not. The price mechanism coordinates decisions without central direction.</div></div></div>
+              <div className="eup-concept"><div className="eup-concept-icon"><ChartHistogram size={18} /></div><div><div className="eup-concept-title">Diagrams are non-negotiable</div><div className="eup-concept-desc">Examiners expect supply-demand diagrams for price determination and market failure questions. Every shift must be labelled.</div></div></div>
+              <div className="eup-concept"><div className="eup-concept-icon"><NetworkGraph size={18} /></div><div><div className="eup-concept-title">Chain of analysis</div><div className="eup-concept-desc">8-mark questions reward full chains: cause → mechanism → outcome. E.g. tax → supply left → P rises → Qd falls.</div></div></div>
+              <div className="eup-concept"><div className="eup-concept-icon"><BoltIcon size={18} /></div><div><div className="eup-concept-title">Elasticity runs through everything</div><div className="eup-concept-desc">PED and PES determine who bears a tax, how much DWL results, and whether a policy achieves its intended effect.</div></div></div>
             </div>
           </div>
           <div className="elp-fade-up" style={{ transitionDelay: '.1s' }}>
-            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: '#f59e0b' }} />Exam paper info</div>
+            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--ns-amber)' }} />Exam paper info</div>
             <h2 className="elp-s-title">{UNIT.code} at a glance</h2>
             <div className="eup-exam-info">
               <div className="eup-ei-label">Assessment details</div>
@@ -268,25 +246,36 @@ export default function Unit1Page() {
         <h2 className="elp-s-title" style={{ fontSize: 22, marginBottom: 8 }}>Continue revising</h2>
         <div className="eup-continue-grid">
           <Link className="eup-continue-card" href="/economics/unit-2">
-            <div className="eup-cc-icon">📈</div>
+            <div className="eup-cc-icon"><ChartHistogram size={18} /></div>
             <div className="eup-cc-body"><div className="eup-cc-name">Unit 2: Macroeconomic Performance &amp; Policy</div><div className="eup-cc-sub">WEC12 · AD/AS, inflation, unemployment, fiscal &amp; monetary policy</div></div>
             <div className="eup-cc-arrow">→</div>
           </Link>
           <Link className="eup-continue-card" href="/economics/unit-3">
-            <div className="eup-cc-icon">🏭</div>
+            <div className="eup-cc-icon"><DrawerAlt size={18} /></div>
             <div className="eup-cc-body"><div className="eup-cc-name">Unit 3: Business Behaviour</div><div className="eup-cc-sub">WEC13 · Theory of the firm, market structures, labour markets</div></div>
             <div className="eup-cc-arrow">→</div>
           </Link>
           <Link className="eup-continue-card" href="/written-practice">
-            <div className="eup-cc-icon">✍️</div>
+            <div className="eup-cc-icon"><PenIcon size={18} />️</div>
             <div className="eup-cc-body"><div className="eup-cc-name">Written Practice</div><div className="eup-cc-sub">AI-marked exam answers with instant feedback</div></div>
             <div className="eup-cc-arrow">→</div>
           </Link>
           <Link className="eup-continue-card" href="/past-papers">
-            <div className="eup-cc-icon">📄</div>
+            <div className="eup-cc-icon"><Document size={18} /></div>
             <div className="eup-cc-body"><div className="eup-cc-name">{UNIT.code} Past Papers</div><div className="eup-cc-sub">Practise with real exam questions and mark schemes</div></div>
             <div className="eup-cc-arrow">→</div>
           </Link>
+        </div>
+      </div>
+
+      {/* FEATURES STRIP */}
+      <div className="elp-features-strip">
+        <div className="elp-features-inner">
+          <div className="elp-feat-item"><span className="elp-feat-icon"><Clipboard size={18} /></span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every {UNIT.code} point covered</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><CardsIcon size={18} /></span><div><div className="elp-feat-label">Spaced repetition</div><div className="elp-feat-sub">Adaptive flashcard algorithm</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><BoltIcon size={18} /></span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style, every topic</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><Tutor size={18} /></span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any Economics question</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><ProgressChart size={18} /></span><div><div className="elp-feat-label">Progress tracking</div><div className="elp-feat-sub">Mastery across all spec points</div></div></div>
         </div>
       </div>
 
@@ -307,7 +296,7 @@ export default function Unit1Page() {
       {/* FOOTER */}
       <footer className="elp-footer">
         <div className="elp-footer-inner">
-          <div className="elp-footer-logo"><div className="elp-nav-dot" style={{ width: 7, height: 7 }} />Revvy Learn</div>
+          <div className="elp-footer-logo"><img src="/logo.svg" alt="" className="elp-footer-mark" width={18} height={18} />Revvy Learn</div>
           <div className="elp-footer-sep" />
           <div className="elp-footer-links">
             <Link className="elp-footer-link" href="/economics">Economics</Link>

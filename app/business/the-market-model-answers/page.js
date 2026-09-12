@@ -15,6 +15,7 @@ export default function TheMarketModelAnswersPage() {
   return (
     <SectionModelAnswersPage
       sectionNumber="1.2"
+        sectionId="the-market"
       subject="business"
       backLink={{ href: '/business/unit-1', label: 'Unit 1: Marketing & People' }}
       title="The Market Model Answers"

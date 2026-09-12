@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { BookAlt, Document, Glossary, PenIcon } from '@/components/Icons';
+import SiteHeader from '@/components/SiteHeader';
 import IALScrollBar from '../IALScrollBar';
 import '@/styles/landing.css';
 
@@ -29,11 +31,7 @@ export default function June2026Page() {
       <IALScrollBar />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
-      <nav className="elp-nav">
-        <Link href="/" className="elp-nav-logo"><span className="elp-nav-dot" />Revvy Learn</Link>
-        <div className="elp-nav-sep" />
-        <div className="elp-nav-crumb"><Link href="/ial-revision" style={{ color: 'inherit', textDecoration: 'none' }}>IAL Revision</Link> <span>/ June 2026</span></div>
-      </nav>
+      <SiteHeader crumb="IAL Revision / June 2026" />
 
       <section>
         <div className="elp-hero">
@@ -117,10 +115,10 @@ export default function June2026Page() {
         <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--elp-teal)' }} />Resources</div>
         <h2 className="elp-s-title" style={{ fontSize: '22px', marginBottom: '8px' }}>Revision tools</h2>
         <div className="elp-resources-row">
-          <Link href="/past-papers" className="elp-resource-chip"><span className="elp-resource-chip-icon">&#128196;</span> Past Papers</Link>
-          <Link href="/model-answers" className="elp-resource-chip"><span className="elp-resource-chip-icon">&#128221;</span> Model Answers</Link>
-          <Link href="/command-words" className="elp-resource-chip"><span className="elp-resource-chip-icon">&#128292;</span> Command Words</Link>
-          <Link href="/guides" className="elp-resource-chip"><span className="elp-resource-chip-icon">&#128218;</span> Revision Guides</Link>
+          <Link href="/past-papers" className="elp-resource-chip"><span className="elp-resource-chip-icon"><Document size={18} /></span> Past Papers</Link>
+          <Link href="/model-answers" className="elp-resource-chip"><span className="elp-resource-chip-icon"><PenIcon size={18} /></span> Model Answers</Link>
+          <Link href="/command-words" className="elp-resource-chip"><span className="elp-resource-chip-icon"><Glossary size={18} /></span> Command Words</Link>
+          <Link href="/guides" className="elp-resource-chip"><span className="elp-resource-chip-icon"><BookAlt size={18} /></span> Revision Guides</Link>
         </div>
       </div>
 
@@ -138,7 +136,7 @@ export default function June2026Page() {
 
       <footer className="elp-footer">
         <div className="elp-footer-inner">
-          <Link href="/" className="elp-footer-logo"><span className="elp-nav-dot" style={{ width: '7px', height: '7px' }} />Revvy Learn</Link>
+          <Link href="/" className="elp-footer-logo"><img src="/logo.svg" alt="" className="elp-footer-mark" width={18} height={18} />Revvy Learn</Link>
           <div className="elp-footer-sep" />
           <div className="elp-footer-links">
             <Link href="/economics" className="elp-footer-link">Economics</Link>

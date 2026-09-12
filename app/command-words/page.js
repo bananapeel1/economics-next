@@ -1,6 +1,8 @@
 import { createAnonClient } from '@/lib/supabase-anon';
 import CommandWordsPage from '@/components/CommandWordsPage';
 import Link from 'next/link';
+import { BookAlt, Document, PenIcon } from '@/components/Icons';
+import SiteHeader from '@/components/SiteHeader';
 import LandingScrollBar from '@/components/LandingScrollBar';
 import '@/styles/landing.css';
 
@@ -46,16 +48,7 @@ export default async function CommandWordsRoute() {
         />
       )}
 
-      <nav className="elp-nav">
-        <Link href="/" className="elp-nav-logo">
-          <span className="elp-nav-dot" />
-          Revvy Learn
-        </Link>
-        <div className="elp-nav-sep" />
-        <div className="elp-nav-crumb">
-          Command Words <span>/ Exam Guide</span>
-        </div>
-      </nav>
+      <SiteHeader crumb="Command Words / Exam Guide" />
 
       <section>
         <div className="elp-hero">
@@ -90,16 +83,16 @@ export default async function CommandWordsRoute() {
         <h2 className="elp-s-title" style={{ fontSize: '22px', marginBottom: '8px' }}>Related resources</h2>
         <div className="elp-resources-row">
           <Link href="/model-answers" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128221;</span> Model Answers
+            <span className="elp-resource-chip-icon"><PenIcon size={18} /></span> Model Answers
           </Link>
           <Link href="/past-papers" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128196;</span> Past Papers
+            <span className="elp-resource-chip-icon"><Document size={18} /></span> Past Papers
           </Link>
           <Link href="/guides" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128218;</span> Revision Guides
+            <span className="elp-resource-chip-icon"><BookAlt size={18} /></span> Revision Guides
           </Link>
           <Link href="/glossary" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128214;</span> Glossary
+            <span className="elp-resource-chip-icon"><BookAlt size={18} /></span> Glossary
           </Link>
         </div>
       </div>
@@ -118,7 +111,7 @@ export default async function CommandWordsRoute() {
 
       <footer className="elp-footer">
         <div className="elp-footer-inner">
-          <Link href="/" className="elp-footer-logo"><span className="elp-nav-dot" style={{ width: '7px', height: '7px' }} />Revvy Learn</Link>
+          <Link href="/" className="elp-footer-logo"><img src="/logo.svg" alt="" className="elp-footer-mark" width={18} height={18} />Revvy Learn</Link>
           <div className="elp-footer-sep" />
           <div className="elp-footer-links">
             <Link href="/economics" className="elp-footer-link">Economics</Link>

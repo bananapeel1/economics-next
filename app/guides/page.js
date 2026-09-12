@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { ChartHistogram, Document, DrawerAlt, PenIcon } from '@/components/Icons';
+import SiteHeader from '@/components/SiteHeader';
 import guidesData from '@/data/guidesData';
 import LandingScrollBar from '@/components/LandingScrollBar';
 import '@/styles/landing.css';
@@ -22,16 +24,7 @@ export default function GuidesIndexPage() {
     <div className="elp-page">
       <LandingScrollBar />
 
-      <nav className="elp-nav">
-        <Link href="/" className="elp-nav-logo">
-          <span className="elp-nav-dot" />
-          Revvy Learn
-        </Link>
-        <div className="elp-nav-sep" />
-        <div className="elp-nav-crumb">
-          Guides <span>/ Revision Guides</span>
-        </div>
-      </nav>
+      <SiteHeader crumb="Guides / Revision Guides" />
 
       <section>
         <div className="elp-hero">
@@ -102,16 +95,16 @@ export default function GuidesIndexPage() {
         <h2 className="elp-s-title" style={{ fontSize: '22px', marginBottom: '8px' }}>Related resources</h2>
         <div className="elp-resources-row">
           <Link href="/economics" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128200;</span> Economics Notes
+            <span className="elp-resource-chip-icon"><ChartHistogram size={18} /></span> Economics Notes
           </Link>
           <Link href="/business" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#127970;</span> Business Notes
+            <span className="elp-resource-chip-icon"><DrawerAlt size={18} /></span> Business Notes
           </Link>
           <Link href="/model-answers" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128221;</span> Model Answers
+            <span className="elp-resource-chip-icon"><PenIcon size={18} /></span> Model Answers
           </Link>
           <Link href="/past-papers" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128196;</span> Past Papers
+            <span className="elp-resource-chip-icon"><Document size={18} /></span> Past Papers
           </Link>
         </div>
       </div>
@@ -130,7 +123,7 @@ export default function GuidesIndexPage() {
 
       <footer className="elp-footer">
         <div className="elp-footer-inner">
-          <Link href="/" className="elp-footer-logo"><span className="elp-nav-dot" style={{ width: '7px', height: '7px' }} />Revvy Learn</Link>
+          <Link href="/" className="elp-footer-logo"><img src="/logo.svg" alt="" className="elp-footer-mark" width={18} height={18} />Revvy Learn</Link>
           <div className="elp-footer-sep" />
           <div className="elp-footer-links">
             <Link href="/economics" className="elp-footer-link">Economics</Link>

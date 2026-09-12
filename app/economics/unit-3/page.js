@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { BoltIcon, CardsIcon, ChartHistogram, Clipboard, Document, LearnMode, NetworkGraph, PenIcon, ProgressChart, Star, Tutor } from '@/components/Icons';
+import SiteHeader from '@/components/SiteHeader';
 import UnitScrollBar from '../UnitScrollBar';
 import '@/styles/landing.css';
 
@@ -64,16 +66,11 @@ const SECTIONS = [
 
 export default function Unit3Page() {
   return (
-    <div className="elp-page eup-page" style={{ '--eup-accent': '#ec4899', '--eup-accent-bg': 'rgba(236,72,153,.08)', '--eup-accent-bd': 'rgba(236,72,153,.2)', '--eup-accent-glow': 'rgba(236,72,153,.15)' }}>
+    <div className="elp-page eup-page" style={{ '--eup-accent': 'var(--ns-brand)', '--eup-accent-bg': 'var(--ns-brand-bg)', '--eup-accent-bd': 'var(--ns-brand-bd)', '--eup-accent-glow': 'var(--ns-brand-bd)' }}>
       <UnitScrollBar />
       <div className="elp-scroll-bar"><div className="elp-scroll-fill" id="eup-scroll-fill" style={{ background: 'var(--eup-accent)' }} /></div>
 
-      <nav className="elp-nav">
-        <Link href="/" className="elp-nav-logo"><div className="elp-nav-dot" /><span>Revvy Learn</span></Link>
-        <div className="elp-nav-sep" />
-        <div className="elp-nav-crumb"><Link href="/economics">Economics</Link><span style={{ color: 'var(--elp-tx-d)', margin: '0 6px' }}>/</span><span style={{ color: 'var(--eup-accent)', fontWeight: 600 }}>Unit 3</span></div>
-        <div className="elp-nav-right"><Link href="/economics" className="elp-nav-link">All Units</Link><Link href="/login" className="elp-nav-cta">Sign In</Link></div>
-      </nav>
+      <SiteHeader crumb="Economics/Unit 3" />
 
       <div className="eup-topic-nav">
         <span className="eup-tnav-label">Jump to:</span>
@@ -81,25 +78,25 @@ export default function Unit3Page() {
       </div>
 
       <section>
-        <div className="elp-hero" style={{ paddingTop: 144 }}>
+        <div className="elp-hero">
           <div className="elp-fade-up">
             <div className="elp-hero-eyebrow" style={{ background: 'var(--eup-accent-bg)', borderColor: 'var(--eup-accent-bd)', color: 'var(--eup-accent)' }}>Edexcel IAL Economics &middot; {UNIT.code}</div>
             <div className="eup-unit-badge-row"><span className="eup-unit-num">Unit {UNIT.number}</span><span className="eup-unit-code">{UNIT.code}</span></div>
-            <h1 className="elp-hero-title">{UNIT.title} &mdash;<br /><em style={{ color: 'var(--eup-accent)' }}>theory of the firm decoded</em></h1>
+            <h1 className="elp-hero-title">{UNIT.title} &mdash;<br /><em style={{ color: 'var(--eup-accent)' }}>{UNIT.code} notes</em></h1>
             <p className="elp-hero-desc">Complete revision notes for Unit 3. Business objectives, revenue and cost analysis, market structures, labour markets and government intervention &mdash; the theory of the firm from first principles.</p>
-            <div className="elp-hero-actions"><Link href={`/?section=${SECTIONS[0].id}`} className="elp-btn-primary">Start revising free &rarr;</Link><a href="#topics" className="elp-btn-secondary">Browse all topics</a></div>
+            <div className="elp-hero-actions"><Link href={`/?section=${SECTIONS[0].id}`} className="elp-btn-primary">Start revising free &rarr;</Link></div>
             <div className="elp-hero-proof"><div className="elp-proof-item"><strong>5 topics</strong> fully covered</div><div className="elp-proof-dot" /><div className="elp-proof-item"><strong>Free</strong> notes for every spec point</div><div className="elp-proof-dot" /><div className="elp-proof-item">{UNIT.code} exam ready</div></div>
           </div>
           <div className="elp-hero-preview elp-fade-up" style={{ transitionDelay: '.15s' }}>
-            <div className="elp-hero-badge elp-b1"><span className="elp-badge-icon">🎯</span><div className="elp-badge-text"><span className="elp-badge-val">5 topics</span><span className="elp-badge-lbl">fully spec-aligned</span></div></div>
+            <div className="elp-hero-badge elp-b1"><span className="elp-badge-icon"><Star size={18} /></span><div className="elp-badge-text"><span className="elp-badge-val">5 topics</span><span className="elp-badge-lbl">fully spec-aligned</span></div></div>
             <div className="elp-preview-card">
               <div className="elp-preview-topbar"><div className="elp-preview-tab elp-active" style={{ background: 'var(--eup-accent-bg)', borderColor: 'var(--eup-accent-bd)', color: 'var(--eup-accent)' }}>Notes</div><div className="elp-preview-tab">Flashcards</div><div className="elp-preview-tab">Quiz</div></div>
               <div className="elp-preview-body">
                 <div className="elp-preview-section-title">3.3.3 &mdash; Market Structures</div>
-                <div className="elp-preview-key-idea" style={{ borderLeftColor: 'var(--eup-accent)' }}><div className="elp-pki-label" style={{ color: 'var(--eup-accent)' }}>🔑 Key idea</div><div className="elp-pki-text" style={{ color: '#fbcfe8' }}>In perfect competition firms are price takers earning normal profit in the long run; a monopolist is a price maker earning supernormal profit &mdash; the trade-off is efficiency vs innovation.</div></div>
+                <div className="elp-preview-key-idea" style={{ borderLeftColor: 'var(--eup-accent)' }}><div className="elp-pki-label" style={{ color: 'var(--eup-accent)' }}><LearnMode size={18} /> Key idea</div><div className="elp-pki-text" style={{ color: '#fbcfe8' }}>In perfect competition firms are price takers earning normal profit in the long run; a monopolist is a price maker earning supernormal profit &mdash; the trade-off is efficiency vs innovation.</div></div>
                 <div className="elp-preview-bullets">
-                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#ec4899' }} /><div className="elp-pb-text"><strong>Perfect competition</strong> &mdash; many firms, homogeneous product, no barriers to entry.</div></div>
-                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#f59e0b' }} /><div className="elp-pb-text"><strong>Monopoly</strong> &mdash; single seller, high barriers, potential for deadweight loss.</div></div>
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-pink)' }} /><div className="elp-pb-text"><strong>Perfect competition</strong> &mdash; many firms, homogeneous product, no barriers to entry.</div></div>
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-amber)' }} /><div className="elp-pb-text"><strong>Monopoly</strong> &mdash; single seller, high barriers, potential for deadweight loss.</div></div>
                 </div>
                 <div className="elp-preview-flow"><div className="elp-pf-step">Entry barriers fall</div><div className="elp-pf-arrow" style={{ color: 'var(--eup-accent)' }}>&rarr;</div><div className="elp-pf-step">New firms enter</div><div className="elp-pf-arrow" style={{ color: 'var(--eup-accent)' }}>&rarr;</div><div className="elp-pf-step">Supernormal profit eroded</div><div className="elp-pf-arrow" style={{ color: 'var(--eup-accent)' }}>&rarr;</div><div className="elp-pf-result" style={{ background: 'var(--eup-accent-bg)', borderColor: 'var(--eup-accent-bd)', color: 'var(--eup-accent)' }}>Normal profit in LR</div></div>
               </div>
@@ -108,16 +105,8 @@ export default function Unit3Page() {
         </div>
       </section>
 
-      <div className="elp-features-strip"><div className="elp-features-inner">
-        <div className="elp-feat-item"><span className="elp-feat-icon">📋</span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every {UNIT.code} point covered</div></div></div>
-        <div className="elp-feat-item"><span className="elp-feat-icon">🔄</span><div><div className="elp-feat-label">Spaced repetition</div><div className="elp-feat-sub">Adaptive flashcard algorithm</div></div></div>
-        <div className="elp-feat-item"><span className="elp-feat-icon">⚡</span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style, every topic</div></div></div>
-        <div className="elp-feat-item"><span className="elp-feat-icon">🤖</span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any Economics question</div></div></div>
-        <div className="elp-feat-item"><span className="elp-feat-icon">📊</span><div><div className="elp-feat-label">Progress tracking</div><div className="elp-feat-sub">Mastery across all spec points</div></div></div>
-      </div></div>
-
       <div className="elp-section" id="topics">
-        <div className="elp-fade-up" style={{ marginBottom: 40 }}><div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />All five topics</div><h2 className="elp-s-title">Everything in Unit 3, spec point by spec point</h2><p className="elp-s-sub">Click any topic to open the full notes, diagrams, flashcards and practice questions in the app.</p></div>
+        <div className="elp-uh-tight elp-fade-up" style={{ marginBottom: 40 }}><div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />All five topics</div><h2 className="elp-s-title">Everything in Unit 3, spec point by spec point</h2><p className="elp-s-sub">Open any topic straight in the app.</p></div>
         {SECTIONS.map((section, idx) => (
           <div key={section.id}>
             <div className="eup-topic-block elp-fade-up" id={`t-${section.ref.replace(/\./g, '')}`}>
@@ -135,14 +124,14 @@ export default function Unit3Page() {
           <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />Unit overview</div>
           <h2 className="elp-s-title">What you need to know for {UNIT.code}</h2>
           <div className="eup-key-concepts">
-            <div className="eup-concept"><div className="eup-concept-icon">📐</div><div><div className="eup-concept-title">Diagrams drive marks</div><div className="eup-concept-desc">MC/AC/AR/MR for every market structure. Draw them accurately and label them clearly &mdash; diagrams are the backbone of Unit 3 answers.</div></div></div>
-            <div className="eup-concept"><div className="eup-concept-icon">🔗</div><div><div className="eup-concept-title">MC = MR is universal</div><div className="eup-concept-desc">The profit maximisation condition applies in every market structure. Understand why firms produce where MC = MR and you can tackle any question.</div></div></div>
-            <div className="eup-concept"><div className="eup-concept-icon">⚖️</div><div><div className="eup-concept-title">Static vs dynamic efficiency</div><div className="eup-concept-desc">The big trade-off in evaluation. Monopolies may be allocatively inefficient but can achieve dynamic efficiency through supernormal profits funding R&amp;D.</div></div></div>
-            <div className="eup-concept"><div className="eup-concept-icon">🎯</div><div><div className="eup-concept-title">Contestability changes everything</div><div className="eup-concept-desc">Focus on barriers to entry and sunk costs, not firm count. A market with few firms can still behave competitively if the threat of entry is credible.</div></div></div>
+            <div className="eup-concept"><div className="eup-concept-icon"><ChartHistogram size={18} /></div><div><div className="eup-concept-title">Diagrams drive marks</div><div className="eup-concept-desc">MC/AC/AR/MR for every market structure. Draw them accurately and label them clearly &mdash; diagrams are the backbone of Unit 3 answers.</div></div></div>
+            <div className="eup-concept"><div className="eup-concept-icon"><NetworkGraph size={18} /></div><div><div className="eup-concept-title">MC = MR is universal</div><div className="eup-concept-desc">The profit maximisation condition applies in every market structure. Understand why firms produce where MC = MR and you can tackle any question.</div></div></div>
+            <div className="eup-concept"><div className="eup-concept-icon"><ChartHistogram size={18} />️</div><div><div className="eup-concept-title">Static vs dynamic efficiency</div><div className="eup-concept-desc">The big trade-off in evaluation. Monopolies may be allocatively inefficient but can achieve dynamic efficiency through supernormal profits funding R&amp;D.</div></div></div>
+            <div className="eup-concept"><div className="eup-concept-icon"><Star size={18} /></div><div><div className="eup-concept-title">Contestability changes everything</div><div className="eup-concept-desc">Focus on barriers to entry and sunk costs, not firm count. A market with few firms can still behave competitively if the threat of entry is credible.</div></div></div>
           </div>
         </div>
         <div className="elp-fade-up" style={{ transitionDelay: '.1s' }}>
-          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: '#f59e0b' }} />Exam paper info</div>
+          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--ns-amber)' }} />Exam paper info</div>
           <h2 className="elp-s-title">{UNIT.code} at a glance</h2>
           <div className="eup-exam-info">
             <div className="eup-ei-label">Assessment details</div>
@@ -161,16 +150,24 @@ export default function Unit3Page() {
         <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--elp-green)' }} />Keep going</div>
         <h2 className="elp-s-title" style={{ fontSize: 22, marginBottom: 8 }}>Continue revising</h2>
         <div className="eup-continue-grid">
-          <Link className="eup-continue-card" href="/economics/unit-2"><div className="eup-cc-icon">📈</div><div className="eup-cc-body"><div className="eup-cc-name">Unit 2: Macroeconomic Performance</div><div className="eup-cc-sub">WEC12 · AD/AS, inflation, unemployment, economic growth</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
-          <Link className="eup-continue-card" href="/economics/unit-4"><div className="eup-cc-icon">🌍</div><div className="eup-cc-body"><div className="eup-cc-name">Unit 4: Global Economy</div><div className="eup-cc-sub">WEC14 · Trade, exchange rates, development, globalisation</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
-          <Link className="eup-continue-card" href="/written-practice"><div className="eup-cc-icon">✍️</div><div className="eup-cc-body"><div className="eup-cc-name">Written Practice</div><div className="eup-cc-sub">AI-marked exam answers with instant feedback</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
-          <Link className="eup-continue-card" href="/past-papers"><div className="eup-cc-icon">📄</div><div className="eup-cc-body"><div className="eup-cc-name">{UNIT.code} Past Papers</div><div className="eup-cc-sub">Practise with real exam questions and mark schemes</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
+          <Link className="eup-continue-card" href="/economics/unit-2"><div className="eup-cc-icon"><ChartHistogram size={18} /></div><div className="eup-cc-body"><div className="eup-cc-name">Unit 2: Macroeconomic Performance</div><div className="eup-cc-sub">WEC12 · AD/AS, inflation, unemployment, economic growth</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
+          <Link className="eup-continue-card" href="/economics/unit-4"><div className="eup-cc-icon"><NetworkGraph size={18} /></div><div className="eup-cc-body"><div className="eup-cc-name">Unit 4: Global Economy</div><div className="eup-cc-sub">WEC14 · Trade, exchange rates, development, globalisation</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
+          <Link className="eup-continue-card" href="/written-practice"><div className="eup-cc-icon"><PenIcon size={18} />️</div><div className="eup-cc-body"><div className="eup-cc-name">Written Practice</div><div className="eup-cc-sub">AI-marked exam answers with instant feedback</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
+          <Link className="eup-continue-card" href="/past-papers"><div className="eup-cc-icon"><Document size={18} /></div><div className="eup-cc-body"><div className="eup-cc-name">{UNIT.code} Past Papers</div><div className="eup-cc-sub">Practise with real exam questions and mark schemes</div></div><div className="eup-cc-arrow">&rarr;</div></Link>
         </div>
       </div>
 
+      <div className="elp-features-strip"><div className="elp-features-inner">
+        <div className="elp-feat-item"><span className="elp-feat-icon"><Clipboard size={18} /></span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every {UNIT.code} point covered</div></div></div>
+        <div className="elp-feat-item"><span className="elp-feat-icon"><CardsIcon size={18} /></span><div><div className="elp-feat-label">Spaced repetition</div><div className="elp-feat-sub">Adaptive flashcard algorithm</div></div></div>
+        <div className="elp-feat-item"><span className="elp-feat-icon"><BoltIcon size={18} /></span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style, every topic</div></div></div>
+        <div className="elp-feat-item"><span className="elp-feat-icon"><Tutor size={18} /></span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any Economics question</div></div></div>
+        <div className="elp-feat-item"><span className="elp-feat-icon"><ProgressChart size={18} /></span><div><div className="elp-feat-label">Progress tracking</div><div className="elp-feat-sub">Mastery across all spec points</div></div></div>
+      </div></div>
+
       <div className="elp-cta-section"><div className="elp-cta-bg" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(236,72,153,.07) 0%, transparent 65%)' }} /><div className="elp-cta-inner elp-fade-up"><h2 className="elp-cta-title">Ready to revise Unit 3?</h2><p className="elp-cta-sub">Free notes for every spec point. Adaptive flashcards, practice questions and AI tutor unlock with Pro — £1 for your first month.</p><div className="elp-cta-actions"><Link href={`/?section=${SECTIONS[0].id}`} className="elp-btn-primary" style={{ fontSize: 15, padding: '14px 30px' }}>Open Revvy Learn — it&apos;s free &rarr;</Link><Link href="/economics" className="elp-btn-secondary">&larr; Back to all units</Link></div><p className="elp-cta-note">No signup required for notes &middot; Cancel anytime &middot; &pound;1 first month, then &pound;1.99 &middot; charged in your local currency</p></div></div>
 
-      <footer className="elp-footer"><div className="elp-footer-inner"><div className="elp-footer-logo"><div className="elp-nav-dot" style={{ width: 7, height: 7 }} />Revvy Learn</div><div className="elp-footer-sep" /><div className="elp-footer-links"><Link className="elp-footer-link" href="/economics">Economics</Link><Link className="elp-footer-link" href="/economics/unit-1">Unit 1</Link><Link className="elp-footer-link" href="/economics/unit-2">Unit 2</Link><Link className="elp-footer-link" href="/economics/unit-3">Unit 3</Link><Link className="elp-footer-link" href="/economics/unit-4">Unit 4</Link><Link className="elp-footer-link" href="/glossary">Glossary</Link><Link className="elp-footer-link" href="/past-papers">Past Papers</Link></div><div className="elp-footer-right">Edexcel IAL {UNIT.code} &copy; Revvy Learn</div></div></footer>
+      <footer className="elp-footer"><div className="elp-footer-inner"><div className="elp-footer-logo"><img src="/logo.svg" alt="" className="elp-footer-mark" width={18} height={18} />Revvy Learn</div><div className="elp-footer-sep" /><div className="elp-footer-links"><Link className="elp-footer-link" href="/economics">Economics</Link><Link className="elp-footer-link" href="/economics/unit-1">Unit 1</Link><Link className="elp-footer-link" href="/economics/unit-2">Unit 2</Link><Link className="elp-footer-link" href="/economics/unit-3">Unit 3</Link><Link className="elp-footer-link" href="/economics/unit-4">Unit 4</Link><Link className="elp-footer-link" href="/glossary">Glossary</Link><Link className="elp-footer-link" href="/past-papers">Past Papers</Link></div><div className="elp-footer-right">Edexcel IAL {UNIT.code} &copy; Revvy Learn</div></div></footer>
     </div>
   );
 }

@@ -1,7 +1,8 @@
 import { createServerClient } from '@/lib/supabase-server';
 import Link from 'next/link';
+import SiteHeader from '@/components/SiteHeader';
 import BackToApp from '@/components/BackToApp';
-import { LearnMode } from '@/components/Icons';
+import { BoltIcon, BookAlt, CardsIcon, ChartHistogram, Clipboard, DrawerAlt, LearnMode, NetworkGraph, Star, Tutor } from '@/components/Icons';
 import UnitScrollBar from '../UnitScrollBar';
 import '@/styles/landing.css';
 
@@ -18,7 +19,7 @@ export const metadata = {
 };
 
 const ACCENT = {
-  color: '#a78bfa',
+  color: 'var(--ns-brand)',
   bg: 'rgba(167,139,250,.08)',
   bd: 'rgba(167,139,250,.2)',
   glow: 'rgba(167,139,250,.15)',
@@ -154,10 +155,10 @@ const FAQS = [
 ];
 
 const KEY_CONCEPTS = [
-  { icon: '\ud83c\udf0d', title: 'Six causes, two big drivers', desc: 'Tech and trade liberalisation are the engines. The others (finance, MNCs, politics, migration) accelerate the trend but do not start it.' },
-  { icon: '\u2696\ufe0f', title: 'Winners and losers', desc: 'Globalisation has positive net gains globally but creates clear losers within countries. Naming both is what separates good from average answers.' },
-  { icon: '\ud83c\udfed', title: 'MNCs are double-edged', desc: 'Same firm can bring jobs and FDI while extracting profit and avoiding tax. Evaluation depends on host-country regulation.' },
-  { icon: '\ud83d\udd04', title: 'It can reverse', desc: 'Slowbalisation and friendshoring are reshaping global trade. Top-band answers acknowledge globalisation is not a one-way process.' },
+  { icon: NetworkGraph, title: 'Six causes, two big drivers', desc: 'Tech and trade liberalisation are the engines. The others (finance, MNCs, politics, migration) accelerate the trend but do not start it.' },
+  { icon: ChartHistogram, title: 'Winners and losers', desc: 'Globalisation has positive net gains globally but creates clear losers within countries. Naming both is what separates good from average answers.' },
+  { icon: DrawerAlt, title: 'MNCs are double-edged', desc: 'Same firm can bring jobs and FDI while extracting profit and avoiding tax. Evaluation depends on host-country regulation.' },
+  { icon: CardsIcon, title: 'It can reverse', desc: 'Slowbalisation and friendshoring are reshaping global trade. Top-band answers acknowledge globalisation is not a one-way process.' },
 ];
 
 export default async function GlobalisationPillarPage() {
@@ -221,21 +222,7 @@ export default async function GlobalisationPillarPage() {
       <UnitScrollBar />
       <div className="elp-scroll-bar"><div className="elp-scroll-fill" id="eup-scroll-fill" style={{ background: 'var(--eup-accent)' }} /></div>
 
-      <nav className="elp-nav">
-        <Link href="/" className="elp-nav-logo"><div className="elp-nav-dot" /><span>Revvy Learn</span></Link>
-        <div className="elp-nav-sep" />
-        <div className="elp-nav-crumb">
-          <Link href="/economics">Economics</Link>
-          <span style={{ color: 'var(--elp-tx-d)', margin: '0 6px' }}>/</span>
-          <Link href="/economics/unit-4">Unit 4</Link>
-          <span style={{ color: 'var(--elp-tx-d)', margin: '0 6px' }}>/</span>
-          <span style={{ color: 'var(--eup-accent)', fontWeight: 600 }}>Globalisation</span>
-        </div>
-        <div className="elp-nav-right">
-          <Link href="/economics/unit-4" className="elp-nav-link">All Unit 4 Topics</Link>
-          <Link href="/login" className="elp-nav-cta">Sign In</Link>
-        </div>
-      </nav>
+      <SiteHeader crumb="Economics / Unit 4 / Globalisation" />
 
       <div className="eup-topic-nav">
         <span className="eup-tnav-label">Jump to:</span>
@@ -249,7 +236,7 @@ export default async function GlobalisationPillarPage() {
       </div>
 
       <section>
-        <div className="elp-hero" style={{ paddingTop: 144 }}>
+        <div className="elp-hero">
           <div className="elp-fade-up">
             <div className="elp-hero-eyebrow" style={{ background: 'var(--eup-accent-bg)', borderColor: 'var(--eup-accent-bd)', color: 'var(--eup-accent)' }}>Edexcel IAL Economics &middot; WEC14 &middot; 4.3.1</div>
             <div className="eup-unit-badge-row">
@@ -273,7 +260,7 @@ export default async function GlobalisationPillarPage() {
 
           <div className="elp-hero-preview elp-fade-up" style={{ transitionDelay: '.15s' }}>
             <div className="elp-hero-badge elp-b1">
-              <span className="elp-badge-icon">&#127919;</span>
+              <span className="elp-badge-icon"><Star size={18} /></span>
               <div className="elp-badge-text"><span className="elp-badge-val">6 causes</span><span className="elp-badge-lbl">fully spec-aligned</span></div>
             </div>
             <div className="elp-preview-card">
@@ -285,13 +272,13 @@ export default async function GlobalisationPillarPage() {
               <div className="elp-preview-body">
                 <div className="elp-preview-section-title">4.3.1 &mdash; Globalisation</div>
                 <div className="elp-preview-key-idea" style={{ borderLeftColor: 'var(--eup-accent)' }}>
-                  <div className="elp-pki-label" style={{ color: 'var(--eup-accent)' }}>&#128273; Key idea</div>
+                  <div className="elp-pki-label" style={{ color: 'var(--eup-accent)' }}><LearnMode size={18} /> Key idea</div>
                   <div className="elp-pki-text" style={{ color: '#ddd6fe' }}>Globalisation creates net global gains but produces winners and losers within every country. Evaluation = naming both.</div>
                 </div>
                 <div className="elp-preview-bullets">
-                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#a78bfa' }} /><div className="elp-pb-text"><strong>Trade liberalisation</strong> + tech are the two biggest drivers.</div></div>
-                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#10b981' }} /><div className="elp-pb-text">Developing economies: poverty reduction, but also exploitation risk.</div></div>
-                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#f59e0b' }} /><div className="elp-pb-text">Developed economies: lower prices but deindustrialisation.</div></div>
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-brand)' }} /><div className="elp-pb-text"><strong>Trade liberalisation</strong> + tech are the two biggest drivers.</div></div>
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-free)' }} /><div className="elp-pb-text">Developing economies: poverty reduction, but also exploitation risk.</div></div>
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-amber)' }} /><div className="elp-pb-text">Developed economies: lower prices but deindustrialisation.</div></div>
                 </div>
                 <div className="elp-preview-flow">
                   <div className="elp-pf-step">Tariffs fall</div>
@@ -307,16 +294,6 @@ export default async function GlobalisationPillarPage() {
           </div>
         </div>
       </section>
-
-      <div className="elp-features-strip">
-        <div className="elp-features-inner">
-          <div className="elp-feat-item"><span className="elp-feat-icon">&#128203;</span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every WEC14 4.3.1 point covered</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">&#127759;</span><div><div className="elp-feat-label">Real examples</div><div className="elp-feat-sub">China, India, Apple, the WTO</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">&#9889;</span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style with model answers</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">&#129302;</span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any globalisation question</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">&#127758;</span><div><div className="elp-feat-label">Built for IAL</div><div className="elp-feat-sub">International A-Level focus</div></div></div>
-        </div>
-      </div>
 
       <div className="elp-section" id="overview">
         <div className="elp-fade-up" style={{ marginBottom: 24 }}>
@@ -345,7 +322,7 @@ export default async function GlobalisationPillarPage() {
               <p className="eup-topic-desc">{c.detail}</p>
               <div className="eup-subtopic-grid">
                 <div className="eup-subtopic-tile">
-                  <div className="eup-st-num">&#128204;</div>
+                  <div className="eup-st-num"><Star size={18} /></div>
                   <div className="eup-st-body">
                     <div className="eup-st-name">Real example</div>
                     <div className="eup-st-keywords">{c.example}</div>
@@ -368,7 +345,7 @@ export default async function GlobalisationPillarPage() {
           <ul style={{ padding: 0, margin: 0, listStyle: 'none' }}>
             {EFFECTS_DEVELOPED.map((e, i) => (
               <li key={i} style={{ display: 'flex', gap: 12, padding: '10px 0', borderBottom: i < EFFECTS_DEVELOPED.length - 1 ? '1px solid var(--elp-bd-d)' : 'none' }}>
-                <span style={{ flexShrink: 0, fontWeight: 700, color: e.pos ? '#10b981' : '#ef4444', fontSize: 16, lineHeight: '1.5' }}>{e.pos ? '+' : '\u2212'}</span>
+                <span style={{ flexShrink: 0, fontWeight: 700, color: e.pos ? 'var(--ns-free)' : '#ef4444', fontSize: 16, lineHeight: '1.5' }}>{e.pos ? '+' : '\u2212'}</span>
                 <span style={{ color: 'var(--elp-tx)', fontSize: 14, lineHeight: '1.6' }}>{e.text}</span>
               </li>
             ))}
@@ -386,7 +363,7 @@ export default async function GlobalisationPillarPage() {
           <ul style={{ padding: 0, margin: 0, listStyle: 'none' }}>
             {EFFECTS_DEVELOPING.map((e, i) => (
               <li key={i} style={{ display: 'flex', gap: 12, padding: '10px 0', borderBottom: i < EFFECTS_DEVELOPING.length - 1 ? '1px solid var(--elp-bd-d)' : 'none' }}>
-                <span style={{ flexShrink: 0, fontWeight: 700, color: e.pos ? '#10b981' : '#ef4444', fontSize: 16, lineHeight: '1.5' }}>{e.pos ? '+' : '\u2212'}</span>
+                <span style={{ flexShrink: 0, fontWeight: 700, color: e.pos ? 'var(--ns-free)' : '#ef4444', fontSize: 16, lineHeight: '1.5' }}>{e.pos ? '+' : '\u2212'}</span>
                 <span style={{ color: 'var(--elp-tx)', fontSize: 14, lineHeight: '1.6' }}>{e.text}</span>
               </li>
             ))}
@@ -404,7 +381,7 @@ export default async function GlobalisationPillarPage() {
           <ul style={{ padding: 0, margin: 0, listStyle: 'none' }}>
             {MNC_EFFECTS.map((e, i) => (
               <li key={i} style={{ display: 'flex', gap: 12, padding: '10px 0', borderBottom: i < MNC_EFFECTS.length - 1 ? '1px solid var(--elp-bd-d)' : 'none' }}>
-                <span style={{ flexShrink: 0, fontWeight: 700, color: e.pos ? '#10b981' : '#ef4444', fontSize: 16, lineHeight: '1.5' }}>{e.pos ? '+' : '\u2212'}</span>
+                <span style={{ flexShrink: 0, fontWeight: 700, color: e.pos ? 'var(--ns-free)' : '#ef4444', fontSize: 16, lineHeight: '1.5' }}>{e.pos ? '+' : '\u2212'}</span>
                 <span style={{ color: 'var(--elp-tx)', fontSize: 14, lineHeight: '1.6' }}>{e.text}</span>
               </li>
             ))}
@@ -423,7 +400,7 @@ export default async function GlobalisationPillarPage() {
           <div className="eup-subtopic-grid">
             {EVALUATION_POINTS.map((p, i) => (
               <div key={i} className="eup-subtopic-tile">
-                <div className="eup-st-num">&#9878;&#65039;</div>
+                <div className="eup-st-num"><ChartHistogram size={18} /></div>
                 <div className="eup-st-body">
                   <div className="eup-st-name">{p.name}</div>
                   <div className="eup-st-keywords">{p.detail}</div>
@@ -467,7 +444,7 @@ export default async function GlobalisationPillarPage() {
       {practiceData.length > 0 && (
         <div className="elp-section" id="practice">
           <div className="elp-fade-up" style={{ marginBottom: 24 }}>
-            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: '#f59e0b' }} />Exam practice</div>
+            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--ns-amber)' }} />Exam practice</div>
             <h2 className="elp-s-title">Exam-style practice questions</h2>
           </div>
           <div className="eup-topic-block elp-fade-up">
@@ -493,7 +470,7 @@ export default async function GlobalisationPillarPage() {
             <div className="eup-key-concepts">
               {KEY_CONCEPTS.map((c, i) => (
                 <div key={i} className="eup-concept">
-                  <div className="eup-concept-icon">{c.icon}</div>
+                  <div className="eup-concept-icon">{c.icon ? <c.icon size={18} /> : null}</div>
                   <div>
                     <div className="eup-concept-title">{c.title}</div>
                     <div className="eup-concept-desc">{c.desc}</div>
@@ -503,7 +480,7 @@ export default async function GlobalisationPillarPage() {
             </div>
           </div>
           <div className="elp-fade-up" style={{ transitionDelay: '.1s' }}>
-            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: '#f59e0b' }} />Where it appears</div>
+            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--ns-amber)' }} />Where it appears</div>
             <h2 className="elp-s-title">WEC14 at a glance</h2>
             <div className="eup-exam-info">
               <div className="eup-ei-label">Assessment details</div>
@@ -543,25 +520,35 @@ export default async function GlobalisationPillarPage() {
         <h2 className="elp-s-title" style={{ fontSize: 22, marginBottom: 8 }}>Continue revising</h2>
         <div className="eup-continue-grid">
           <Link className="eup-continue-card" href="/economics/unit-4/trade-global-economy">
-            <div className="eup-cc-icon">&#128666;</div>
+            <div className="eup-cc-icon"><DrawerAlt size={18} /></div>
             <div className="eup-cc-body"><div className="eup-cc-name">Trade &amp; the Global Economy</div><div className="eup-cc-sub">4.3.2 &middot; Comparative advantage, protectionism</div></div>
             <div className="eup-cc-arrow">&rarr;</div>
           </Link>
           <Link className="eup-continue-card" href="/economics/unit-4/balance-payments-exchange-rates">
-            <div className="eup-cc-icon">&#128176;</div>
+            <div className="eup-cc-icon"><ChartHistogram size={18} /></div>
             <div className="eup-cc-body"><div className="eup-cc-name">Balance of Payments &amp; FX</div><div className="eup-cc-sub">4.3.3 &middot; Current account, Marshall-Lerner, J-curve</div></div>
             <div className="eup-cc-arrow">&rarr;</div>
           </Link>
           <Link className="eup-continue-card" href="/business/unit-4/globalisation">
-            <div className="eup-cc-icon">&#127970;</div>
+            <div className="eup-cc-icon"><DrawerAlt size={18} /></div>
             <div className="eup-cc-body"><div className="eup-cc-name">Globalisation in IAL Business</div><div className="eup-cc-sub">WBS14 &middot; MNCs, market entry, glocalisation</div></div>
             <div className="eup-cc-arrow">&rarr;</div>
           </Link>
           <Link className="eup-continue-card" href="/economics/unit-4">
-            <div className="eup-cc-icon">&#128214;</div>
+            <div className="eup-cc-icon"><BookAlt size={18} /></div>
             <div className="eup-cc-body"><div className="eup-cc-name">All Unit 4 Topics</div><div className="eup-cc-sub">WEC14 &middot; Developments in the Global Economy</div></div>
             <div className="eup-cc-arrow">&rarr;</div>
           </Link>
+        </div>
+      </div>
+
+      <div className="elp-features-strip">
+        <div className="elp-features-inner">
+          <div className="elp-feat-item"><span className="elp-feat-icon"><Clipboard size={18} /></span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every WEC14 4.3.1 point covered</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><NetworkGraph size={18} /></span><div><div className="elp-feat-label">Real examples</div><div className="elp-feat-sub">China, India, Apple, the WTO</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><BoltIcon size={18} /></span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style with model answers</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><Tutor size={18} /></span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any globalisation question</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><NetworkGraph size={18} /></span><div><div className="elp-feat-label">Built for IAL</div><div className="elp-feat-sub">International A-Level focus</div></div></div>
         </div>
       </div>
 
@@ -592,10 +579,9 @@ export default async function GlobalisationPillarPage() {
 
       />
 
-
       <footer className="elp-footer">
         <div className="elp-footer-inner">
-          <div className="elp-footer-logo"><div className="elp-nav-dot" style={{ width: 7, height: 7 }} />Revvy Learn</div>
+          <div className="elp-footer-logo"><img src="/logo.svg" alt="" className="elp-footer-mark" width={18} height={18} />Revvy Learn</div>
           <div className="elp-footer-sep" />
           <div className="elp-footer-links">
             <Link className="elp-footer-link" href="/economics">Economics</Link>

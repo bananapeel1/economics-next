@@ -1,7 +1,8 @@
 import { createServerClient } from '@/lib/supabase-server';
 import Link from 'next/link';
+import SiteHeader from '@/components/SiteHeader';
 import BackToApp from '@/components/BackToApp';
-import { LearnMode } from '@/components/Icons';
+import { BoltIcon, BookAlt, ChartHistogram, Clipboard, DrawerAlt, LearnMode, Mistakes, NetworkGraph, PenIcon, ProgressChart, Star, Tutor } from '@/components/Icons';
 import UnitScrollBar from '../UnitScrollBar';
 import RelatedModelAnswers from '@/components/RelatedModelAnswers';
 import '@/styles/landing.css';
@@ -19,7 +20,7 @@ export const metadata = {
 };
 
 const ACCENT = {
-  color: '#4f7ef8',
+  color: 'var(--ns-blue)',
   bg: 'rgba(79,126,248,.08)',
   bd: 'rgba(79,126,248,.2)',
   glow: 'rgba(79,126,248,.15)',
@@ -153,10 +154,10 @@ const FAQS = [
 ];
 
 const KEY_CONCEPTS = [
-  { icon: '\ud83c\udfaf', title: 'Six objectives, four classic', desc: 'Growth, low inflation, low unemployment and BoP stability are the \u201cbig four\u201d. Income equality and environmental sustainability complete the modern set.' },
-  { icon: '\u26a1', title: 'Trade-offs are the question', desc: 'WEC12 evaluation marks reward recognising that pursuing one objective often worsens another. Always frame answers around trade-offs.' },
-  { icon: '\ud83c\udfdb\ufe0f', title: 'Three policy levers', desc: 'Fiscal, monetary and supply-side. Know what each one does, who controls it, and the time lag before it bites.' },
-  { icon: '\ud83d\udcca', title: 'Measurement matters', desc: 'CPI vs RPI, claimant count vs ILO, real vs nominal GDP \u2014 examiners reward precision in how each objective is measured.' },
+  { icon: Star, title: 'Six objectives, four classic', desc: 'Growth, low inflation, low unemployment and BoP stability are the \u201cbig four\u201d. Income equality and environmental sustainability complete the modern set.' },
+  { icon: BoltIcon, title: 'Trade-offs are the question', desc: 'WEC12 evaluation marks reward recognising that pursuing one objective often worsens another. Always frame answers around trade-offs.' },
+  { icon: DrawerAlt, title: 'Three policy levers', desc: 'Fiscal, monetary and supply-side. Know what each one does, who controls it, and the time lag before it bites.' },
+  { icon: ProgressChart, title: 'Measurement matters', desc: 'CPI vs RPI, claimant count vs ILO, real vs nominal GDP \u2014 examiners reward precision in how each objective is measured.' },
 ];
 
 export default async function MacroObjectivesPillarPage() {
@@ -220,21 +221,7 @@ export default async function MacroObjectivesPillarPage() {
       <UnitScrollBar />
       <div className="elp-scroll-bar"><div className="elp-scroll-fill" id="eup-scroll-fill" style={{ background: 'var(--eup-accent)' }} /></div>
 
-      <nav className="elp-nav">
-        <Link href="/" className="elp-nav-logo"><div className="elp-nav-dot" /><span>Revvy Learn</span></Link>
-        <div className="elp-nav-sep" />
-        <div className="elp-nav-crumb">
-          <Link href="/economics">Economics</Link>
-          <span style={{ color: 'var(--elp-tx-d)', margin: '0 6px' }}>/</span>
-          <Link href="/economics/unit-2">Unit 2</Link>
-          <span style={{ color: 'var(--elp-tx-d)', margin: '0 6px' }}>/</span>
-          <span style={{ color: 'var(--eup-accent)', fontWeight: 600 }}>Macroeconomic Objectives</span>
-        </div>
-        <div className="elp-nav-right">
-          <Link href="/economics/unit-2" className="elp-nav-link">All Unit 2 Topics</Link>
-          <Link href="/login" className="elp-nav-cta">Sign In</Link>
-        </div>
-      </nav>
+      <SiteHeader crumb="Economics / Unit 2 / Macroeconomic Objectives" />
 
       <div className="eup-topic-nav">
         <span className="eup-tnav-label">Jump to:</span>
@@ -246,7 +233,7 @@ export default async function MacroObjectivesPillarPage() {
       </div>
 
       <section>
-        <div className="elp-hero" style={{ paddingTop: 144 }}>
+        <div className="elp-hero">
           <div className="elp-fade-up">
             <div className="elp-hero-eyebrow" style={{ background: 'var(--eup-accent-bg)', borderColor: 'var(--eup-accent-bd)', color: 'var(--eup-accent)' }}>Edexcel IAL Economics &middot; WEC12 &middot; 2.3.6</div>
             <div className="eup-unit-badge-row">
@@ -270,7 +257,7 @@ export default async function MacroObjectivesPillarPage() {
 
           <div className="elp-hero-preview elp-fade-up" style={{ transitionDelay: '.15s' }}>
             <div className="elp-hero-badge elp-b1">
-              <span className="elp-badge-icon">&#127919;</span>
+              <span className="elp-badge-icon"><Star size={18} /></span>
               <div className="elp-badge-text"><span className="elp-badge-val">6 objectives</span><span className="elp-badge-lbl">fully spec-aligned</span></div>
             </div>
             <div className="elp-preview-card">
@@ -282,13 +269,13 @@ export default async function MacroObjectivesPillarPage() {
               <div className="elp-preview-body">
                 <div className="elp-preview-section-title">2.3.6 &mdash; Macroeconomic Objectives</div>
                 <div className="elp-preview-key-idea" style={{ borderLeftColor: 'var(--eup-accent)' }}>
-                  <div className="elp-pki-label" style={{ color: 'var(--eup-accent)' }}>&#128273; Key idea</div>
+                  <div className="elp-pki-label" style={{ color: 'var(--eup-accent)' }}><LearnMode size={18} /> Key idea</div>
                   <div className="elp-pki-text" style={{ color: '#bfdbfe' }}>The four classic objectives \u2014 growth, low inflation, low unemployment, BoP stability \u2014 conflict with each other. Trade-offs are the question.</div>
                 </div>
                 <div className="elp-preview-bullets">
-                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#4f7ef8' }} /><div className="elp-pb-text"><strong>Growth</strong> measured by % change in real GDP.</div></div>
-                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#10b981' }} /><div className="elp-pb-text"><strong>Inflation</strong> target: 2% CPI for most central banks.</div></div>
-                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#f59e0b' }} /><div className="elp-pb-text"><strong>Phillips Curve</strong>: short-run trade-off between inflation and unemployment.</div></div>
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-blue)' }} /><div className="elp-pb-text"><strong>Growth</strong> measured by % change in real GDP.</div></div>
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-free)' }} /><div className="elp-pb-text"><strong>Inflation</strong> target: 2% CPI for most central banks.</div></div>
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-amber)' }} /><div className="elp-pb-text"><strong>Phillips Curve</strong>: short-run trade-off between inflation and unemployment.</div></div>
                 </div>
                 <div className="elp-preview-flow">
                   <div className="elp-pf-step">Cut interest rates</div>
@@ -304,16 +291,6 @@ export default async function MacroObjectivesPillarPage() {
           </div>
         </div>
       </section>
-
-      <div className="elp-features-strip">
-        <div className="elp-features-inner">
-          <div className="elp-feat-item"><span className="elp-feat-icon">&#128203;</span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every WEC12 2.3.6 point covered</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">&#9878;&#65039;</span><div><div className="elp-feat-label">Trade-offs explained</div><div className="elp-feat-sub">Phillips Curve and beyond</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">&#9889;</span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style with model answers</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">&#129302;</span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any macro policy question</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">&#127758;</span><div><div className="elp-feat-label">Built for IAL</div><div className="elp-feat-sub">International A-Level focus</div></div></div>
-        </div>
-      </div>
 
       <div className="elp-section" id="overview">
         <div className="elp-fade-up" style={{ marginBottom: 24 }}>
@@ -343,21 +320,21 @@ export default async function MacroObjectivesPillarPage() {
               <p className="eup-topic-desc">{o.detail}</p>
               <div className="eup-subtopic-grid">
                 <div className="eup-subtopic-tile">
-                  <div className="eup-st-num">&#128202;</div>
+                  <div className="eup-st-num"><ProgressChart size={18} /></div>
                   <div className="eup-st-body">
                     <div className="eup-st-name">How it is measured</div>
                     <div className="eup-st-keywords">{o.measurement}</div>
                   </div>
                 </div>
                 <div className="eup-subtopic-tile">
-                  <div className="eup-st-num">&#127919;</div>
+                  <div className="eup-st-num"><Star size={18} /></div>
                   <div className="eup-st-body">
                     <div className="eup-st-name">Target</div>
                     <div className="eup-st-keywords">{o.target}</div>
                   </div>
                 </div>
                 <div className="eup-subtopic-tile">
-                  <div className="eup-st-num">&#9888;&#65039;</div>
+                  <div className="eup-st-num"><Mistakes size={18} /></div>
                   <div className="eup-st-body">
                     <div className="eup-st-name">Costs &amp; trade-offs</div>
                     <div className="eup-st-keywords">{o.costs}</div>
@@ -380,7 +357,7 @@ export default async function MacroObjectivesPillarPage() {
           <div className="eup-subtopic-grid">
             {TRADE_OFFS.map((t, i) => (
               <div key={i} className="eup-subtopic-tile">
-                <div className="eup-st-num">&#9878;&#65039;</div>
+                <div className="eup-st-num"><ChartHistogram size={18} /></div>
                 <div className="eup-st-body">
                   <div className="eup-st-name">{t.pair}</div>
                   <div className="eup-st-keywords">{t.body}</div>
@@ -401,7 +378,7 @@ export default async function MacroObjectivesPillarPage() {
           <div className="eup-subtopic-grid">
             {POLICY_TOOLS.map((p, i) => (
               <div key={i} className="eup-subtopic-tile">
-                <div className="eup-st-num">&#127963;</div>
+                <div className="eup-st-num"><DrawerAlt size={18} /></div>
                 <div className="eup-st-body">
                   <div className="eup-st-name">{p.name}</div>
                   <div className="eup-st-keywords">{p.detail}</div>
@@ -446,7 +423,7 @@ export default async function MacroObjectivesPillarPage() {
       {practiceData.length > 0 && (
         <div className="elp-section" id="practice">
           <div className="elp-fade-up" style={{ marginBottom: 24 }}>
-            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: '#f59e0b' }} />Exam practice</div>
+            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--ns-amber)' }} />Exam practice</div>
             <h2 className="elp-s-title">Exam-style practice questions</h2>
           </div>
           <div className="eup-topic-block elp-fade-up">
@@ -473,7 +450,7 @@ export default async function MacroObjectivesPillarPage() {
             <div className="eup-key-concepts">
               {KEY_CONCEPTS.map((c, i) => (
                 <div key={i} className="eup-concept">
-                  <div className="eup-concept-icon">{c.icon}</div>
+                  <div className="eup-concept-icon">{c.icon ? <c.icon size={18} /> : null}</div>
                   <div>
                     <div className="eup-concept-title">{c.title}</div>
                     <div className="eup-concept-desc">{c.desc}</div>
@@ -483,7 +460,7 @@ export default async function MacroObjectivesPillarPage() {
             </div>
           </div>
           <div className="elp-fade-up" style={{ transitionDelay: '.1s' }}>
-            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: '#f59e0b' }} />Where it appears</div>
+            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--ns-amber)' }} />Where it appears</div>
             <h2 className="elp-s-title">WEC12 at a glance</h2>
             <div className="eup-exam-info">
               <div className="eup-ei-label">Assessment details</div>
@@ -523,22 +500,22 @@ export default async function MacroObjectivesPillarPage() {
         <h2 className="elp-s-title" style={{ fontSize: 22, marginBottom: 8 }}>Continue revising</h2>
         <div className="eup-continue-grid">
           <Link className="eup-continue-card" href="/economics/unit-2/economic-growth">
-            <div className="eup-cc-icon">&#128200;</div>
+            <div className="eup-cc-icon"><ChartHistogram size={18} /></div>
             <div className="eup-cc-body"><div className="eup-cc-name">Economic Growth</div><div className="eup-cc-sub">2.3.5 &middot; Actual vs potential, business cycles</div></div>
             <div className="eup-cc-arrow">&rarr;</div>
           </Link>
           <Link className="eup-continue-card" href="/economics/aggregate-demand">
-            <div className="eup-cc-icon">&#128293;</div>
+            <div className="eup-cc-icon"><BoltIcon size={18} /></div>
             <div className="eup-cc-body"><div className="eup-cc-name">Aggregate Demand</div><div className="eup-cc-sub">2.3.2 &middot; AD = C + I + G + (X &minus; M)</div></div>
             <div className="eup-cc-arrow">&rarr;</div>
           </Link>
           <Link className="eup-continue-card" href="/economics/macroeconomic-policies-model-answers">
-            <div className="eup-cc-icon">&#128221;</div>
+            <div className="eup-cc-icon"><PenIcon size={18} /></div>
             <div className="eup-cc-body"><div className="eup-cc-name">Macro Policies Model Answers</div><div className="eup-cc-sub">Fully worked 8- and 20-mark answers</div></div>
             <div className="eup-cc-arrow">&rarr;</div>
           </Link>
           <Link className="eup-continue-card" href="/economics/unit-2">
-            <div className="eup-cc-icon">&#128214;</div>
+            <div className="eup-cc-icon"><BookAlt size={18} /></div>
             <div className="eup-cc-body"><div className="eup-cc-name">All Unit 2 Topics</div><div className="eup-cc-sub">WEC12 &middot; Macroeconomic Performance</div></div>
             <div className="eup-cc-arrow">&rarr;</div>
           </Link>
@@ -550,6 +527,16 @@ export default async function MacroObjectivesPillarPage() {
         sectionTitle="Macroeconomic Policies"
         count={1}
       />
+
+      <div className="elp-features-strip">
+        <div className="elp-features-inner">
+          <div className="elp-feat-item"><span className="elp-feat-icon"><Clipboard size={18} /></span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every WEC12 2.3.6 point covered</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><ChartHistogram size={18} /></span><div><div className="elp-feat-label">Trade-offs explained</div><div className="elp-feat-sub">Phillips Curve and beyond</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><BoltIcon size={18} /></span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style with model answers</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><Tutor size={18} /></span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any macro policy question</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><NetworkGraph size={18} /></span><div><div className="elp-feat-label">Built for IAL</div><div className="elp-feat-sub">International A-Level focus</div></div></div>
+        </div>
+      </div>
 
       <div className="elp-cta-section">
         <div className="elp-cta-bg" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(79,126,248,.07) 0%, transparent 65%)' }} />
@@ -578,10 +565,9 @@ export default async function MacroObjectivesPillarPage() {
 
       />
 
-
       <footer className="elp-footer">
         <div className="elp-footer-inner">
-          <div className="elp-footer-logo"><div className="elp-nav-dot" style={{ width: 7, height: 7 }} />Revvy Learn</div>
+          <div className="elp-footer-logo"><img src="/logo.svg" alt="" className="elp-footer-mark" width={18} height={18} />Revvy Learn</div>
           <div className="elp-footer-sep" />
           <div className="elp-footer-links">
             <Link className="elp-footer-link" href="/economics">Economics</Link>

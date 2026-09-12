@@ -1,7 +1,8 @@
 import { createServerClient } from '@/lib/supabase-server';
 import Link from 'next/link';
+import SiteHeader from '@/components/SiteHeader';
 import BackToApp from '@/components/BackToApp';
-import { LearnMode } from '@/components/Icons';
+import { BoltIcon, BookAlt, ChartHistogram, Clipboard, Document, DrawerAlt, LearnMode, NetworkGraph, PenIcon, ProgressChart, Settings, Star, Tutor } from '@/components/Icons';
 import UnitScrollBar from '../UnitScrollBar';
 import RelatedModelAnswers from '@/components/RelatedModelAnswers';
 import '@/styles/landing.css';
@@ -19,7 +20,7 @@ export const metadata = {
 };
 
 const ACCENT = {
-  color: '#14b8a6',
+  color: 'var(--ns-free)',
   bg: 'rgba(20,184,166,.08)',
   bd: 'rgba(20,184,166,.2)',
   glow: 'rgba(20,184,166,.15)',
@@ -149,10 +150,10 @@ const FAQS = [
 ];
 
 const KEY_CONCEPTS = [
-  { icon: '\u2696\ufe0f', title: 'Markets fail when price misses costs', desc: 'Market failure is a price-mechanism failure: the price does not reflect all the social costs and benefits, so output drifts from the socially optimal point.' },
-  { icon: '\ud83d\udcc9', title: 'Diagrams carry the marks', desc: 'WEC11 examiners reward fully labelled MPC/MSC or MPB/MSB diagrams with the welfare loss shaded. Every shift and every triangle must be labelled.' },
-  { icon: '\ud83d\udd17', title: 'Always chain to welfare', desc: 'Strong answers link a specific failure type to allocative inefficiency and deadweight welfare loss \u2014 not just \u201cit is bad\u201d.' },
-  { icon: '\u2696\ufe0f', title: 'Balance with government failure', desc: 'Top-band evaluation ends with the risk that intervention creates its own distortions \u2014 information gaps, capture, unintended consequences.' },
+  { icon: ChartHistogram, title: 'Markets fail when price misses costs', desc: 'Market failure is a price-mechanism failure: the price does not reflect all the social costs and benefits, so output drifts from the socially optimal point.' },
+  { icon: ChartHistogram, title: 'Diagrams carry the marks', desc: 'WEC11 examiners reward fully labelled MPC/MSC or MPB/MSB diagrams with the welfare loss shaded. Every shift and every triangle must be labelled.' },
+  { icon: NetworkGraph, title: 'Always chain to welfare', desc: 'Strong answers link a specific failure type to allocative inefficiency and deadweight welfare loss \u2014 not just \u201cit is bad\u201d.' },
+  { icon: ChartHistogram, title: 'Balance with government failure', desc: 'Top-band evaluation ends with the risk that intervention creates its own distortions \u2014 information gaps, capture, unintended consequences.' },
 ];
 
 export default async function MarketFailurePillarPage() {
@@ -216,22 +217,7 @@ export default async function MarketFailurePillarPage() {
       <UnitScrollBar />
       <div className="elp-scroll-bar"><div className="elp-scroll-fill" id="eup-scroll-fill" style={{ background: 'var(--eup-accent)' }} /></div>
 
-      {/* NAV */}
-      <nav className="elp-nav">
-        <Link href="/" className="elp-nav-logo"><div className="elp-nav-dot" /><span>Revvy Learn</span></Link>
-        <div className="elp-nav-sep" />
-        <div className="elp-nav-crumb">
-          <Link href="/economics">Economics</Link>
-          <span style={{ color: 'var(--elp-tx-d)', margin: '0 6px' }}>/</span>
-          <Link href="/economics/unit-1">Unit 1</Link>
-          <span style={{ color: 'var(--elp-tx-d)', margin: '0 6px' }}>/</span>
-          <span style={{ color: 'var(--eup-accent)', fontWeight: 600 }}>Market Failure</span>
-        </div>
-        <div className="elp-nav-right">
-          <Link href="/economics/unit-1" className="elp-nav-link">All Unit 1 Topics</Link>
-          <Link href="/login" className="elp-nav-cta">Sign In</Link>
-        </div>
-      </nav>
+      <SiteHeader crumb="Economics / Unit 1 / Market Failure" />
 
       {/* TOPIC JUMP NAV */}
       <div className="eup-topic-nav">
@@ -246,7 +232,7 @@ export default async function MarketFailurePillarPage() {
 
       {/* HERO */}
       <section>
-        <div className="elp-hero" style={{ paddingTop: 144 }}>
+        <div className="elp-hero">
           <div className="elp-fade-up">
             <div className="elp-hero-eyebrow" style={{ background: 'var(--eup-accent-bg)', borderColor: 'var(--eup-accent-bd)', color: 'var(--eup-accent)' }}>Edexcel IAL Economics &middot; WEC11 &middot; 1.3.5</div>
             <div className="eup-unit-badge-row">
@@ -271,7 +257,7 @@ export default async function MarketFailurePillarPage() {
           {/* Preview card mimicking the app */}
           <div className="elp-hero-preview elp-fade-up" style={{ transitionDelay: '.15s' }}>
             <div className="elp-hero-badge elp-b1">
-              <span className="elp-badge-icon">&#127919;</span>
+              <span className="elp-badge-icon"><Star size={18} /></span>
               <div className="elp-badge-text"><span className="elp-badge-val">7 types</span><span className="elp-badge-lbl">fully spec-aligned</span></div>
             </div>
             <div className="elp-preview-card">
@@ -283,13 +269,13 @@ export default async function MarketFailurePillarPage() {
               <div className="elp-preview-body">
                 <div className="elp-preview-section-title">1.3.5 &mdash; Market Failure</div>
                 <div className="elp-preview-key-idea" style={{ borderLeftColor: 'var(--eup-accent)' }}>
-                  <div className="elp-pki-label" style={{ color: 'var(--eup-accent)' }}>&#128273; Key idea</div>
+                  <div className="elp-pki-label" style={{ color: 'var(--eup-accent)' }}><LearnMode size={18} /> Key idea</div>
                   <div className="elp-pki-text" style={{ color: '#99f6e4' }}>Markets fail when prices give the wrong signals &mdash; causing too much or too little to be produced relative to the social optimum.</div>
                 </div>
                 <div className="elp-preview-bullets">
-                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#14b8a6' }} /><div className="elp-pb-text"><strong>Negative externality</strong> &mdash; cost imposed on third parties; causes overproduction.</div></div>
-                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#4f7ef8' }} /><div className="elp-pb-text">Private cost &lt; social cost &rarr; price too low &rarr; output above MSC = MSB.</div></div>
-                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: '#f59e0b' }} /><div className="elp-pb-text"><strong>Deadweight loss</strong> &mdash; market produces beyond social optimum.</div></div>
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-free)' }} /><div className="elp-pb-text"><strong>Negative externality</strong> &mdash; cost imposed on third parties; causes overproduction.</div></div>
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-blue)' }} /><div className="elp-pb-text">Private cost &lt; social cost &rarr; price too low &rarr; output above MSC = MSB.</div></div>
+                  <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-amber)' }} /><div className="elp-pb-text"><strong>Deadweight loss</strong> &mdash; market produces beyond social optimum.</div></div>
                 </div>
                 <div className="elp-preview-flow">
                   <div className="elp-pf-step">Firm ignores social cost</div>
@@ -305,17 +291,6 @@ export default async function MarketFailurePillarPage() {
           </div>
         </div>
       </section>
-
-      {/* FEATURES STRIP */}
-      <div className="elp-features-strip">
-        <div className="elp-features-inner">
-          <div className="elp-feat-item"><span className="elp-feat-icon">&#128203;</span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every WEC11 1.3.5 point covered</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">&#128202;</span><div><div className="elp-feat-label">Labelled diagrams</div><div className="elp-feat-sub">MPC, MSC, MPB, MSB, welfare loss</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">&#9889;</span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style with model answers</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">&#129302;</span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any market failure question</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon">&#127758;</span><div><div className="elp-feat-label">Built for IAL</div><div className="elp-feat-sub">International A-Level focus</div></div></div>
-        </div>
-      </div>
 
       {/* OVERVIEW */}
       <div className="elp-section" id="overview">
@@ -347,14 +322,14 @@ export default async function MarketFailurePillarPage() {
               <p className="eup-topic-desc">{type.detail}</p>
               <div className="eup-subtopic-grid">
                 <div className="eup-subtopic-tile">
-                  <div className="eup-st-num">&#128204;</div>
+                  <div className="eup-st-num"><Star size={18} /></div>
                   <div className="eup-st-body">
                     <div className="eup-st-name">Real examples</div>
                     <div className="eup-st-keywords">{type.example}</div>
                   </div>
                 </div>
                 <div className="eup-subtopic-tile">
-                  <div className="eup-st-num">&#128202;</div>
+                  <div className="eup-st-num"><ProgressChart size={18} /></div>
                   <div className="eup-st-body">
                     <div className="eup-st-name">Diagram</div>
                     <div className="eup-st-keywords">{type.diagram}</div>
@@ -390,7 +365,7 @@ export default async function MarketFailurePillarPage() {
           <div className="eup-subtopic-grid">
             {DIAGRAMS.map((d, i) => (
               <div key={i} className="eup-subtopic-tile">
-                <div className="eup-st-num">&#128200;</div>
+                <div className="eup-st-num"><ChartHistogram size={18} /></div>
                 <div className="eup-st-body">
                   <div className="eup-st-name">{d.name}</div>
                   <div className="eup-st-keywords">{d.detail}</div>
@@ -412,7 +387,7 @@ export default async function MarketFailurePillarPage() {
           <div className="eup-subtopic-grid">
             {POLICY_TOOLS.map((p, i) => (
               <div key={i} className="eup-subtopic-tile">
-                <div className="eup-st-num">&#9881;&#65039;</div>
+                <div className="eup-st-num"><Settings size={18} /></div>
                 <div className="eup-st-body">
                   <div className="eup-st-name">{p.name}</div>
                   <div className="eup-st-keywords">{p.detail}</div>
@@ -459,7 +434,7 @@ export default async function MarketFailurePillarPage() {
       {practiceData.length > 0 && (
         <div className="elp-section" id="practice">
           <div className="elp-fade-up" style={{ marginBottom: 24 }}>
-            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: '#f59e0b' }} />Exam practice</div>
+            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--ns-amber)' }} />Exam practice</div>
             <h2 className="elp-s-title">Exam-style practice questions</h2>
           </div>
           <div className="eup-topic-block elp-fade-up">
@@ -487,7 +462,7 @@ export default async function MarketFailurePillarPage() {
             <div className="eup-key-concepts">
               {KEY_CONCEPTS.map((c, i) => (
                 <div key={i} className="eup-concept">
-                  <div className="eup-concept-icon">{c.icon}</div>
+                  <div className="eup-concept-icon">{c.icon ? <c.icon size={18} /> : null}</div>
                   <div>
                     <div className="eup-concept-title">{c.title}</div>
                     <div className="eup-concept-desc">{c.desc}</div>
@@ -497,7 +472,7 @@ export default async function MarketFailurePillarPage() {
             </div>
           </div>
           <div className="elp-fade-up" style={{ transitionDelay: '.1s' }}>
-            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: '#f59e0b' }} />Where it appears</div>
+            <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--ns-amber)' }} />Where it appears</div>
             <h2 className="elp-s-title">WEC11 at a glance</h2>
             <div className="eup-exam-info">
               <div className="eup-ei-label">Assessment details</div>
@@ -539,22 +514,22 @@ export default async function MarketFailurePillarPage() {
         <h2 className="elp-s-title" style={{ fontSize: 22, marginBottom: 8 }}>Continue revising</h2>
         <div className="eup-continue-grid">
           <Link className="eup-continue-card" href="/economics/unit-1/government-intervention">
-            <div className="eup-cc-icon">&#127963;</div>
+            <div className="eup-cc-icon"><DrawerAlt size={18} /></div>
             <div className="eup-cc-body"><div className="eup-cc-name">Government Intervention</div><div className="eup-cc-sub">1.3.6 &middot; Taxes, subsidies, regulation, direct provision</div></div>
             <div className="eup-cc-arrow">&rarr;</div>
           </Link>
           <Link className="eup-continue-card" href="/economics/market-failure-model-answers">
-            <div className="eup-cc-icon">&#128221;</div>
+            <div className="eup-cc-icon"><PenIcon size={18} /></div>
             <div className="eup-cc-body"><div className="eup-cc-name">Market Failure Model Answers</div><div className="eup-cc-sub">Fully worked 8- and 20-mark answers</div></div>
             <div className="eup-cc-arrow">&rarr;</div>
           </Link>
           <Link className="eup-continue-card" href="/economics/unit-1">
-            <div className="eup-cc-icon">&#128214;</div>
+            <div className="eup-cc-icon"><BookAlt size={18} /></div>
             <div className="eup-cc-body"><div className="eup-cc-name">All Unit 1 Topics</div><div className="eup-cc-sub">WEC11 &middot; Markets in Action</div></div>
             <div className="eup-cc-arrow">&rarr;</div>
           </Link>
           <Link className="eup-continue-card" href="/past-papers">
-            <div className="eup-cc-icon">&#128196;</div>
+            <div className="eup-cc-icon"><Document size={18} /></div>
             <div className="eup-cc-body"><div className="eup-cc-name">WEC11 Past Papers</div><div className="eup-cc-sub">Real exam questions &amp; mark schemes</div></div>
             <div className="eup-cc-arrow">&rarr;</div>
           </Link>
@@ -566,6 +541,17 @@ export default async function MarketFailurePillarPage() {
         sectionTitle="Market Failure"
         count={1}
       />
+
+      {/* FEATURES STRIP */}
+      <div className="elp-features-strip">
+        <div className="elp-features-inner">
+          <div className="elp-feat-item"><span className="elp-feat-icon"><Clipboard size={18} /></span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every WEC11 1.3.5 point covered</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><ProgressChart size={18} /></span><div><div className="elp-feat-label">Labelled diagrams</div><div className="elp-feat-sub">MPC, MSC, MPB, MSB, welfare loss</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><BoltIcon size={18} /></span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style with model answers</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><Tutor size={18} /></span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any market failure question</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><NetworkGraph size={18} /></span><div><div className="elp-feat-label">Built for IAL</div><div className="elp-feat-sub">International A-Level focus</div></div></div>
+        </div>
+      </div>
 
       {/* CTA */}
       <div className="elp-cta-section">
@@ -592,7 +578,7 @@ export default async function MarketFailurePillarPage() {
 
       <footer className="elp-footer">
         <div className="elp-footer-inner">
-          <div className="elp-footer-logo"><div className="elp-nav-dot" style={{ width: 7, height: 7 }} />Revvy Learn</div>
+          <div className="elp-footer-logo"><img src="/logo.svg" alt="" className="elp-footer-mark" width={18} height={18} />Revvy Learn</div>
           <div className="elp-footer-sep" />
           <div className="elp-footer-links">
             <Link className="elp-footer-link" href="/economics">Economics</Link>

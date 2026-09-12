@@ -15,6 +15,7 @@ export default function NationalIncomeModelAnswersPage() {
   return (
     <SectionModelAnswersPage
       sectionNumber="2.3.4"
+        sectionId="national-income"
       subject="economics"
       backLink={{ href: '/economics/unit-2', label: 'Unit 2: Macroeconomic Performance & Policy' }}
       title="National Income Model Answers"
