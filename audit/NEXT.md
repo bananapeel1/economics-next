@@ -4,7 +4,7 @@ Read `PROGRESS.md`, `DECISIONS.md`, then `PROTOCOL.md` (how a packet session run
 Work only in this worktree: `/Users/arongijsel/Claude APP/economics-next-remediation`, branch `remediation/2026-09`.
 Dev server: launch config `remediation-dev`, port 3001.
 
-## State at handoff (setup session, 12 September 2026)
+## State at handoff (12 September 2026)
 
 - Packets 0 and 1 are built, **verified** (Verify A on every ledger id, Verify B walkthrough at 390px for
   packet 0), and pushed. A PR into `main` is open; the founder merges it. That is ship checkpoint 1.
@@ -14,17 +14,39 @@ Dev server: launch config `remediation-dev`, port 3001.
   is started in this worktree. If the Agent tool does not list them, spawn a general `claude` agent on Sonnet
   and tell it to read the agent file first and adopt it; that is what the setup session did.
 
-## Founder to-dos that block measurement (not code)
+## Founder to-dos
 
-1. **Create the events table.** Supabase SQL editor → paste `scripts/create-app-events-table.sql` → run once.
-   Until then `POST /api/events` answers 202 and drops events, so no clean baseline accumulates.
-   Confirm with `node audit/scripts/funnel-events.mjs` (prints a summary instead of "does not exist").
-2. **Merge the open PR** so packets 0 and 1 reach students. Vercel deploys `main`.
-3. Still open from packet 0: three false marketing claims ("24 spec points", "adaptive algorithm" wording, the
-   hero badge) live in `app/economics/page.js`, `app/business/page.js`, `app/ial-revision/page.js` and the unit
-   pages. Those files belong to the SEO branch (`feat/seo-page-structure`, sibling folder `economics-next`).
-   Fix them there or after that branch merges; do not edit them in this worktree.
+1. ~~**Create the events table.**~~ **Done 12 September 2026.** `app_events` exists;
+   `node audit/scripts/funnel-events.mjs` returns a summary instead of "does not exist". The table was empty at
+   creation, so the baseline accumulating from this date is clean. Do not fill in the PROGRESS.md baseline until
+   `sectionStarts` is into the low hundreds.
+2. ~~**Merge the open PR.**~~ **Done 12 September 2026.** PR #10 merged to `main` as `2ee430e` and deployed.
+   That shipped packets 0-1 *and* the light-mode contrast pass (see below). Ship checkpoint 1 is closed.
+3. **Three false marketing claims are still live** — "24 spec points", the "Adaptive" badge and
+   "Adaptive flashcard algorithm" wording, in `app/economics/page.js`, `app/business/page.js`,
+   `app/ial-revision/page.js` and the unit pages. **The constraint on these has lifted:** they belonged to the
+   SEO branch, and that branch merged into `main` on 12 September, so they can now be fixed here like any other
+   file. Still outstanding — nothing in packets 0-1 touched them.
 4. Decisions still open in `DECISIONS.md`: IAL teacher, freemium boundary, Business extract sourcing, freeze date.
+
+## Light mode (done 12 September 2026, outside the packet plan)
+
+Ronald asked for a light-mode audit mid-session; it is shipped and is not one of the 58 packets.
+Report: https://claude.ai/code/artifact/c037aa7a-c8e8-4a15-9d4e-c2af22a7c590
+
+Five root causes, all light-only: dark-tuned colours written as CSS literals; a neutral ramp unusable on white
+(`--text-muted` 2.54:1, `--text-dim` 1.47:1); accent tokens shared across both themes; `--bg-primary` and
+`--bg-card` both `#ffffff`, so no surface hierarchy and an invisible note hover; and diagram SVG colours baked
+into the database, remapped at render time in `components/learn-mode/processSvg.js` rather than migrated.
+
+**`npm run contrast` is the guard.** Static, no browser, no dependencies, exits 1 on a light-mode regression.
+Run it before touching `app/globals.css`. `--theme dark` reports **twelve pre-existing dark-mode failures**
+(white text on bright accent fills, e.g. white on `#10b981` at 2.54:1) — a real open ticket, not part of this work.
+
+Two traps worth knowing: an alpha tint composites deeper over a page ground than over white, so accents needed a
+second darkening pass after the ground changed; and `styles/landing.css` plus `styles/theme-night.css` scope
+everything to `.elp-page` / `.rl-night`, which paint their own dark ground and ignore the theme — their pale
+colours are correct and must not be "fixed".
 
 ## Then: packet 2 — Ids and safety net
 
