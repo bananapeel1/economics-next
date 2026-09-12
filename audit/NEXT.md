@@ -29,17 +29,35 @@ Model: Opus. Bounded, specified, verifier-checked.
 1. **Packet 11** — performance and accessibility. Now carries **F118**, new: React hydration fails on every
    page load because script tags render inside React components (`app/layout.js`). Reproduce by loading a
    section page and reading the console. It costs first paint on exactly the low-end phones this cohort uses.
-2. **Packet 6** — re-entry. **Blocked on the founder**: there is no transactional email provider in the
-   project and adding one needs an account and a key.
-3. **Packet 12** — monetisation coherence. **Blocked on the founder**: the freemium boundary decision.
+2. ~~**Packet 6** — re-entry.~~ **Parked by the founder to the end of the programme.** Not urgent in his judgement.
+3. **Packet 12** — monetisation coherence. Boundary settled; one sub-decision on F086 above.
+
+
+## One decision waiting, for packet 12
+
+The founder has settled the freemium boundary: **it does not change.** That makes F086 the packet's real work,
+and it needs one answer before packet 12 runs.
+
+`GET /api/practice/questions` is unauthenticated, uses the anon client, and returns the whole `section_quiz`
+array with `correctIndex` for any section ids passed. So the quiz bank the paywall protects is free to anyone
+who calls the endpoint, and Smart Practice is built on it. Two readings of "keep the paywall as it is":
+
+- **Close the leak** (recommended). The intended boundary stands, so gate the endpoint and have Smart Practice
+  respect the same preview limit as the Quiz tab. Cost: students who use Smart Practice today lose free access
+  they currently have, which is a visible takeaway, not just a fix.
+- **Accept the leak as the real boundary.** The quiz bank is de facto free, so drop the Quiz tab paywall and
+  move the paid line elsewhere. Cost: this is redrawing the boundary the founder just chose to keep.
+
+Either way, stop serving `correctIndex` to unauthenticated callers. Marking can happen server-side; the answer
+key does not need to be in the payload at all, and that part needs no product decision.
 
 ## Founder to-dos
 
 1. Merge PR #14.
 2. Run `scripts/packet-2-draft-state.sql` in the Supabase SQL editor, once. Packet 2's draft state is inert
    until it does, and content packets 14-56 should write to `draft` rather than into `data` under live readers.
-3. Pick a transactional email provider (blocks packet 6, the most time-critical item in the plan).
-4. Decide the freemium boundary (blocks packet 12).
+3. ~~Pick a transactional email provider.~~ **Deferred by the founder to the end of the programme.** Packet 6 is parked; do not start it and do not keep raising it.
+4. ~~Decide the freemium boundary.~~ **Settled 12 September: no change.** One sub-decision remains above.
 5. Decide the freeze date. Proposed 1 November; anything later is for the June cohort, not January.
 
 ## Two corrections worth carrying forward

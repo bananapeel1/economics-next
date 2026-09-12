@@ -1451,7 +1451,7 @@
   {
    "id": "F086",
    "lens": "smart-practice-quiz-bank",
-   "sev": "low",
+   "sev": "high",
    "cat": "trust",
    "title": "Smart Practice serves all 25 questions free while the section Quiz tab paywalls the same bank after 2",
    "file": "components/QuizTab.jsx",
@@ -1463,7 +1463,7 @@
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "severity low -> high: 2026-09-12 measured: GET /api/practice/questions needs no auth and no premium check (uses the anon client), and returns the full section_quiz array including correctIndex for every section id passed. An unauthenticated curl returned 75 questions with answer keys across 3 sections; nothing limits the section list, so the whole 769-question bank is fetchable in one request. This is not an inconsistency between two tabs: the quiz paywall is decorative, and the answer keys leak with it. Raised from low after the founder chose to KEEP the current paywall boundary, which makes a non-functioning paywall the thing to fix."
   },
   {
    "id": "F087",

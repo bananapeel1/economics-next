@@ -186,3 +186,18 @@ Append only. Every entry needs a date and the packet that made it.
   Economics Unit 2 paper structure (propagated to 52 agents) and the claim that 24 of 39 chapters render no
   diagram (measured: 15 by pin plus 36 by the packet 2 fallback, so 51 render one). Rule that follows: a count
   or a spec fact stated in prose is a hypothesis. Measure it or cite the spec line before acting on it.
+
+- **2026-09-12 (founder) — the freemium boundary does not change.** Free stays notes, diagrams, Learn Mode and
+  the written practice questions. Preview-then-paywall stays flashcards, the quiz bank and extras. Paid stays
+  the AI tutor and the mistakes review; model answers stay first-free. The recommendation on file was to move
+  the whole learning loop to free and sell only the exam-shaped layer; the founder considered it and declined.
+  **Packet 12 therefore implements the existing boundary faithfully rather than redrawing it**, and the
+  "un-paywall the quiz bank until it passes the validator" option in PLAN.md is closed, not deferred.
+- **2026-09-12 — keeping the boundary makes F086 a real defect, not a tidiness item.** `GET /api/practice/questions`
+  takes no auth and no premium check, uses the anon client, and returns the full `section_quiz` array including
+  `correctIndex` for every section id it is given. Measured: an unauthenticated request returned 75 questions
+  with answer keys across three sections, and nothing bounds the section list, so the entire 769-question bank
+  is one request away. While the boundary was under review this was cosmetic. Now that the quiz bank is
+  deliberately paid, the paywall is decorative and the answer keys leak with it. Raised low to high on packet 12.
+  **One sub-decision remains for the founder** (see NEXT.md): closing the leak removes free access that students
+  have today, so it is a product change, not only a fix.
