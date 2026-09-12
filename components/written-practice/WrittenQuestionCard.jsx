@@ -19,6 +19,10 @@ export default function WrittenQuestionCard({
   sectionTitle,
   questionNumber,
   totalQuestions,
+  sectionId,
+  questionIndex,
+  subjectSlug,
+  sessionId,
   onGraded,
   onNext,
   onSkip,
@@ -54,6 +58,14 @@ export default function WrittenQuestionCard({
           marks: question.marks,
           guidance: question.guidance || '',
           studentAnswer: answer,
+          // Which item this is. The route re-resolves command, tariff and subject from
+          // section_practice rather than believing these, but without the identity it
+          // has nothing to look the question up by.
+          sectionId,
+          questionIndex,
+          subject: subjectSlug,
+          sessionId,
+          wordCount,
         }),
       });
 
@@ -72,6 +84,7 @@ export default function WrittenQuestionCard({
           marksAwarded: result.marksSuggested || 0,
           grade: result.grade || 'partial',
           feedback: result,
+          aoRunning: result.aoRunning || null,
         });
       }
     } catch (e) {
@@ -135,12 +148,23 @@ export default function WrittenQuestionCard({
 
       {/* Feedback phase */}
       {phase === 'feedback' && feedback && (
-        <WrittenFeedbackCard
-          feedback={feedback}
-          guidance={question.guidance}
-          marks={question.marks}
-          onNext={onNext}
-        />
+        <>
+          <WrittenFeedbackCard
+            feedback={feedback}
+            guidance={question.guidance}
+            marks={question.marks}
+            command={question.command}
+            subject={subjectSlug}
+            aoRunning={feedback.aoRunning || null}
+            onNext={onNext}
+          />
+          {/* The marking succeeded and is on screen above; only the AO record failed. Said
+              once, quietly, at note weight — a student must never find out later that their
+              count is short, and must never be alarmed about work that was in fact marked. */}
+          {feedback.aoStored === false && (
+            <p className="aop-note">This answer was marked, but we could not add it to your AO profile.</p>
+          )}
+        </>
       )}
     </div>
   );

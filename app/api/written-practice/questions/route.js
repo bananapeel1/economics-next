@@ -5,6 +5,8 @@ import { createAnonClient } from '@/lib/supabase-anon';
  * GET /api/written-practice/questions?sections=section1,section2&marks=4
  * Fetches written practice questions from section_practice table.
  * Optional marks param filters by mark value.
+ * Every item is returned with a `bankIndex` field: its position in the section's
+ * unfiltered bank array, stable across any filtering the caller or this route does.
  */
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
@@ -32,7 +34,10 @@ export async function GET(request) {
 
   const questions = {};
   for (const row of (data || [])) {
-    let items = row.data || [];
+    // Stamp each item's TRUE position in the unfiltered bank before anything else.
+    // The engine keys spaced repetition on this index and renders the record it
+    // carries, so a filter below must never be allowed to renumber the items.
+    let items = (row.data || []).map((q, i) => ({ ...q, bankIndex: i }));
     // Filter by marks if specified
     if (marksParam && marksParam !== 'all') {
       const targetMarks = parseInt(marksParam, 10);
