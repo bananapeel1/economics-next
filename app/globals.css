@@ -7142,3 +7142,22 @@ a.auth-dropdown-item:visited {
   background: var(--rl-green, #10b981); color: #fff;
 }
 .spe-access-note-btn:focus-visible { outline: 2px solid var(--rl-green, #10b981); outline-offset: 2px; }
+
+/* ── Smart Practice confidence row (F076): asked after the reveal, and it schedules the card ── */
+.spe-qcard-confidence { margin: 14px 0 4px; }
+.spe-qcard-confidence-label {
+  display: block; font-size: 12.5px; font-weight: 600; letter-spacing: .02em;
+  color: var(--text-muted); margin-bottom: 8px;
+}
+.spe-qcard-confidence-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.spe-qcard-conf-btn {
+  flex: 1 1 auto; min-width: 92px; min-height: 44px; padding: 0 16px;
+  border-radius: 999px; font-size: 14px; font-weight: 600; cursor: pointer;
+  color: var(--text-primary); background: transparent;
+  border: 1px solid var(--border-color, rgba(127, 127, 127, .35));
+}
+.spe-qcard-conf-btn.active {
+  background: var(--rl-green, #10b981); color: #fff; border-color: transparent;
+}
+.spe-qcard-conf-btn:focus-visible { outline: 2px solid var(--rl-green, #10b981); outline-offset: 2px; }
+.spe-qcard-next:disabled { opacity: .55; cursor: not-allowed; }
