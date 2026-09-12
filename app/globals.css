@@ -130,6 +130,24 @@
   --rl-red: #b91c1c; --rl-red-bg: rgba(239,68,68,0.06); --rl-red-bd: rgba(239,68,68,0.2);
   /* body text sitting on an --rl-*-bg tint */
   --rl-green-text: #0f3d2e; --rl-blue-text: #17306b; --rl-amber-text: #5a3208;
+
+  /* ── Diagram ink ──────────────────────────────────────────────────────────
+     Diagram SVG markup is stored per section in the database with a dark-tuned
+     palette baked into its fill/stroke attributes. processSvg.js remaps those
+     literals onto these tokens at render time, so the same markup reads in
+     both themes and no content migration is needed. Dark values are the
+     literals as authored; light values are their counterparts. */
+  --dg-ink: #1f2937;       /* body text, arrowheads, point dots  (was #e8ecf5) */
+  --dg-ink-2: #334155;     /* secondary text                     (was #e2e8f0) */
+  --dg-axis: #475569;      /* axis lines, tick values, labels    (was #94a3b8) */
+  --dg-muted: #4b5563;     /* captions                           (was #7a8299) */
+  --dg-grid: #848fa0;      /* guide lines — 3.27:1, WCAG 1.4.11  (was #475569) */
+  --dg-green: #036a4d;   --dg-green-2: #047857;
+  --dg-red: #b91c1c;     --dg-red-2: #dc2626;
+  --dg-blue: #1d4ed8;    --dg-blue-2: #2563eb;
+  --dg-amber: #9a4708;   --dg-amber-2: #b45309;
+  --dg-purple: #6d28d9;  --dg-purple-2: #7c3aed;
+  --dg-orange: #9a3412;  --dg-pink: #9d174d;  --dg-cyan: #0e7490;
 }
 
 [data-theme="dark"] {
@@ -250,6 +268,19 @@
   --rl-red: #ef4444; --rl-red-bg: rgba(239,68,68,.09); --rl-red-bd: rgba(239,68,68,.22);
   /* body text sitting on an --rl-*-bg tint */
   --rl-green-text: #a8f0c4; --rl-blue-text: #a8c4fd; --rl-amber-text: #fcd88a;
+
+  /* ── Diagram ink — the literals as authored in the stored SVG markup ── */
+  --dg-ink: #e8ecf5;
+  --dg-ink-2: #e2e8f0;
+  --dg-axis: #94a3b8;
+  --dg-muted: #7a8299;
+  --dg-grid: #475569;
+  --dg-green: #059669;   --dg-green-2: #34d399;
+  --dg-red: #ef4444;     --dg-red-2: #f87171;
+  --dg-blue: #3b82f6;    --dg-blue-2: #60a5fa;
+  --dg-amber: #f59e0b;   --dg-amber-2: #fbbf24;
+  --dg-purple: #8b5cf6;  --dg-purple-2: #a78bfa;
+  --dg-orange: #fb923c;  --dg-pink: #f472b6;  --dg-cyan: #22d3ee;
 }
 
 * {
