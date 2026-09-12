@@ -8,7 +8,7 @@ const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
  * Timed rapid-fire quiz drill using all quiz questions from the section.
  * One question at a time, 15s countdown, auto-advance after feedback.
  */
-export default function QuickFireDrill({ quizData, onClose }) {
+export default function QuickFireDrill({ quizData, onClose, onScore }) {
   const questions = useMemo(() => {
     if (!quizData?.length) return [];
     return [...quizData].sort(() => Math.random() - 0.5);
@@ -16,6 +16,7 @@ export default function QuickFireDrill({ quizData, onClose }) {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selected, setSelected] = useState(null);
+  const reportedRef = useRef(false);
   const [answered, setAnswered] = useState(false);
   const [timeLeft, setTimeLeft] = useState(TIMER_SECONDS);
   const [results, setResults] = useState([]); // { correct, timedOut, timeUsed }[]
@@ -106,6 +107,11 @@ export default function QuickFireDrill({ quizData, onClose }) {
   if (phase === 'done') {
     const correctCount = results.filter(r => r.correct).length;
     const timedOutCount = results.filter(r => r.timedOut).length;
+    // F005: report the result upward exactly once, so it can reach strength and the schedule.
+    if (!reportedRef.current && results.length) {
+      reportedRef.current = true;
+      onScore?.(results.filter(r => r.correct).length / results.length);
+    }
     const avgTime = results.length > 0
       ? Math.round(results.reduce((s, r) => s + r.timeUsed, 0) / results.length)
       : 0;

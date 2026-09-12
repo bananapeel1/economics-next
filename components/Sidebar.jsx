@@ -116,15 +116,20 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
                     >
                       <span className="sidebar-section-number">{section.number}</span>
                       <span className="sidebar-section-name">{section.short_title}</span>
+                      {/* F033: two indicators used to sit here and disagree — a Learn Mode dot from
+                          localStorage and a progress tick from the resume pointer, which counted
+                          steps against the wrong total. A student saw a section marked complete
+                          and in progress at once. One status now, completion from either source
+                          winning, because finishing is finishing however it was recorded. */}
                       {learnModeCompletions[section.id] && (
-                        <>
-                          <StrengthMeter subjectId={activeSubjectId} sectionId={section.id} size="small" />
-                          <span className="sidebar-learn-complete-dot" title="Learn Mode complete" />
-                        </>
+                        <StrengthMeter subjectId={activeSubjectId} sectionId={section.id} size="small" />
                       )}
-                      {status && (
-                        <span className={`sidebar-section-status ${status}`} title={status === 'complete' ? 'Completed' : 'In progress'}>
-                          {status === 'complete' ? (
+                      {(learnModeCompletions[section.id] || status) && (
+                        <span
+                          className={`sidebar-section-status ${learnModeCompletions[section.id] ? 'complete' : status}`}
+                          title={learnModeCompletions[section.id] || status === 'complete' ? 'Completed' : 'In progress'}
+                        >
+                          {(learnModeCompletions[section.id] || status === 'complete') ? (
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                               <circle cx="12" cy="12" r="10" />
                               <polyline points="16 8 10 16 7 13" />

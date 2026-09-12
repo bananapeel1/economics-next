@@ -3,6 +3,8 @@ import { useState } from 'react';
 import StrengthMeter from '../StrengthMeter';
 import PostTest from './PostTest';
 import QuickFireDrill from './QuickFireDrill';
+import { recordReview } from '@/lib/strength';
+import { saveSectionState } from '@/lib/section-state';
 
 function ScoreRow({ label, emoji, score }) {
   const pct = score.total > 0 ? Math.round((score.correct / score.total) * 100) : 0;
@@ -29,6 +31,21 @@ export default function CompletionScreen({
 }) {
   const [completeView, setCompleteView] = useState('main'); // 'main' | 'posttest' | 'drill'
 
+  /**
+   * F005. The post-test and the Quick Fire drill both discarded their result. They are the last
+   * two things a student does in a section and the strongest evidence available that the topic
+   * stuck, and neither touched the strength meter or the review schedule. A student who aced the
+   * drill was scheduled identically to one who skipped it.
+   *
+   * Score arrives as 0..1. It feeds the strength model's accuracy input, and a strong result
+   * counts as a review, which is what pushes the next due date out.
+   */
+  function handleDrillScore(score) {
+    if (typeof score !== 'number' || Number.isNaN(score)) return;
+    recordReview(subjectId, sectionId, score);
+    saveSectionState(subjectId, sectionId, { quizAccuracy: score, reviewed: score >= 0.6 });
+  }
+
   // Count completed sections for mixed review eligibility
   let completedCount = 0;
   if (typeof window !== 'undefined') {
@@ -46,9 +63,13 @@ export default function CompletionScreen({
   if (completeView === 'posttest') {
     return (
       <div className="lm-complete-screen">
+        {/* F005: both of these threw their score away. A strong post-test is the best evidence
+            in the whole session that the topic stuck, and it fed neither the strength meter nor
+            the review schedule. */}
         <PostTest
           subjectId={subjectId}
           sectionId={sectionId}
+          onScore={handleDrillScore}
           onClose={() => setCompleteView('main')}
         />
       </div>
@@ -61,6 +82,7 @@ export default function CompletionScreen({
       <div className="lm-complete-screen">
         <QuickFireDrill
           quizData={quizData}
+          onScore={handleDrillScore}
           onClose={() => setCompleteView('main')}
         />
       </div>

@@ -15,6 +15,7 @@ import ExplainItBackUpgraded from './learn-mode/ExplainItBackUpgraded';
 import { NoteSection, TakeawayCard } from './notes';
 import { isPracticeVisible } from '@/lib/ial-commands';
 import { trackFunnel } from '@/lib/funnel';
+import { readLocalState, writeLocalState, fetchServerState, saveSectionState } from '@/lib/section-state';
 
 /* The rubric the AI grader marks against. Built from the whole chapter, not just the step the box
    sits on, because the student is explaining the chapter. keyIdea / misconception / examMatters live
@@ -56,33 +57,59 @@ export default function LearnModeTab({
   const [showKeyboardHint, setShowKeyboardHint] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [nodePopped, setNodePopped] = useState(false);
-  const [isComplete, setIsComplete] = useState(() => {
-    if (typeof window === 'undefined') return false;
-    return localStorage.getItem(`revvy_complete_${subjectId}_${sectionId}`) === 'true';
-  });
+  // F001/F027: seeded from the local cache so the first paint is instant, then reconciled against
+  // the server below, which is the copy that follows the student between devices.
+  const [isComplete, setIsComplete] = useState(() => !!readLocalState(subjectId, sectionId)?.completed);
   // The pre-test is opt-in. It used to be the forced first screen of every section (a 3-question
   // test on material the student had not seen), and it is where three quarters of section starts
   // ended. Now: step 0 shows a small offer; the test only renders if the student chooses it.
   const [showPretest, setShowPretest] = useState(false);
   const [pretestOffered, setPretestOffered] = useState(() => {
-    if (typeof window === 'undefined') return false;
-    const done = localStorage.getItem(`revvy_pretest_${subjectId}_${sectionId}`);
-    return !done && !isResuming && (quizData?.length > 0);
+    const st = readLocalState(subjectId, sectionId);
+    return !st?.pretestState && !isResuming && (quizData?.length > 0);
   });
   function declinePretest() {
-    try {
-      localStorage.setItem(`revvy_pretest_${subjectId}_${sectionId}`,
-        JSON.stringify({ completed: false, skipped: true, timestamp: Date.now() }));
-    } catch {}
+    // Skipping has to be remembered on the server too, or the gate returns on the next device.
+    saveSectionState(subjectId, sectionId, { pretestState: 'skipped' });
     trackFunnel('pretest_declined', { sectionId });
     setPretestOffered(false);
   }
+  // F001/F027: the server is the source of truth for a signed-in student. Reconcile after the
+  // first paint so switching device, clearing storage or opening a private window no longer wipes
+  // completion, the review schedule and the pre-test choice.
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const state = await fetchServerState([sectionId]);
+      const mine = state?.[sectionId];
+      if (cancelled || !mine) return;
+      writeLocalState(subjectId, sectionId, mine);
+      if (mine.completed) setIsComplete(true);
+      if (mine.pretestState) setPretestOffered(false);
+    })();
+    return () => { cancelled = true; };
+  }, [subjectId, sectionId]);
+
   const containerRef = useRef(null);
 
   // ── Score tracking for completion breakdown ──
-  const [scores, setScores] = useState({ quiz: { correct: 0, total: 0 }, recall: { correct: 0, total: 0 }, explain: { attempts: 0, total: 0 } });
+  // F006: these were component state, so the breakdown vanished on revisit and double-counted on
+  // retry — a student who finished, looked away and came back saw a blank scoreboard for work they
+  // had done. Seeded from the local cache and written with the completion record.
+  const [scores, setScores] = useState(() => {
+    const saved = readLocalState(subjectId, sectionId)?.scores;
+    return saved || { quiz: { correct: 0, total: 0 }, recall: { correct: 0, total: 0 }, explain: { attempts: 0, total: 0 } };
+  });
   function onQuizResult(correct) { setScores(s => ({ ...s, quiz: { correct: s.quiz.correct + (correct ? 1 : 0), total: s.quiz.total + 1 } })); }
-  function onRecallResult(correct) { setScores(s => ({ ...s, recall: { correct: s.recall.correct + (correct ? 1 : 0), total: s.recall.total + 1 } })); }
+  // F007: only attempted recalls counted, so dismissing one with the × removed it from the score
+  // entirely and the completion screen reported a percentage over whatever the student chose to
+  // try. A skipped check is a check not answered, not a check that never existed.
+  function onRecallResult(correct) {
+    setScores(s => ({ ...s, recall: { correct: s.recall.correct + (correct ? 1 : 0), total: s.recall.total + 1 } }));
+  }
+  function onRecallSkipped() {
+    setScores(s => ({ ...s, recall: { ...s.recall, total: s.recall.total + 1 } }));
+  }
   function onExplainAttempt() { setScores(s => ({ ...s, explain: { attempts: s.explain.attempts + 1, total: s.explain.total + 1 } })); }
 
   // ── Flatten blocks into steps — 2 topics per step where possible ──
@@ -259,7 +286,10 @@ export default function LearnModeTab({
   // Handle completion
   function handleComplete() {
     if (typeof window !== 'undefined') {
-      localStorage.setItem(`revvy_complete_${subjectId}_${sectionId}`, 'true');
+      // Server first-class, local as cache. `reviewed: true` advances the interval ladder and sets
+      // the next due date server-side, so the schedule survives the browser (F001).
+      saveSectionState(subjectId, sectionId, { completed: true, reviewed: true });
+      writeLocalState(subjectId, sectionId, { scores });
       if (quizData?.length) {
         try {
           const existing = JSON.parse(localStorage.getItem('revvy_review_schedule') || '[]');
@@ -327,7 +357,14 @@ export default function LearnModeTab({
         onNavigateToQuiz={onNavigateToQuiz} onNavigateToTab={onNavigateToTab}
         onStartMixedReview={onStartMixedReview}
         onRetry={() => {
-          if (typeof window !== 'undefined') localStorage.removeItem(`revvy_complete_${subjectId}_${sectionId}`);
+          // F006: the breakdown used to double-count on retry, because the counters were never
+          // cleared — a second pass added to the first. Clearing the scores is what makes the
+          // second attempt's number mean something. Completion clears on the server too, so a
+          // retry is not still "complete" on another device.
+          const fresh = { quiz: { correct: 0, total: 0 }, recall: { correct: 0, total: 0 }, explain: { attempts: 0, total: 0 } };
+          setScores(fresh);
+          writeLocalState(subjectId, sectionId, { completed: false, scores: fresh });
+          saveSectionState(subjectId, sectionId, { completed: false });
           setIsComplete(false);
           onStepChange(0);
           setTimeout(scrollToTop, 50);
@@ -434,9 +471,9 @@ export default function LearnModeTab({
               {/* Spaced recall from PREVIOUS step (appears at top) */}
               {prevRecall && (
                 prevRecall.type === 'reorder' ? (
-                  <ReorderRecall key={`spaced-${currentStep}`} recall={prevRecall} onComplete={onRecallResult} />
+                  <ReorderRecall key={`spaced-${currentStep}`} recall={prevRecall} onComplete={onRecallResult} onSkip={onRecallSkipped} />
                 ) : prevRecall.type === 'fillin' ? (
-                  <FillInRecall key={`spaced-${currentStep}`} recall={prevRecall} onComplete={onRecallResult} />
+                  <FillInRecall key={`spaced-${currentStep}`} recall={prevRecall} onComplete={onRecallResult} onSkip={onRecallSkipped} />
                 ) : null
               )}
 
@@ -480,9 +517,9 @@ export default function LearnModeTab({
                 {/* Immediate recall — tests what you just learned on THIS step */}
                 {currentRecalls[0] && (
                   currentRecalls[0].type === 'reorder' ? (
-                    <ReorderRecall key={`immed-${currentStep}`} recall={currentRecalls[0]} onComplete={onRecallResult} />
+                    <ReorderRecall key={`immed-${currentStep}`} recall={currentRecalls[0]} onComplete={onRecallResult} onSkip={onRecallSkipped} />
                   ) : currentRecalls[0].type === 'fillin' ? (
-                    <FillInRecall key={`immed-${currentStep}`} recall={currentRecalls[0]} onComplete={onRecallResult} />
+                    <FillInRecall key={`immed-${currentStep}`} recall={currentRecalls[0]} onComplete={onRecallResult} onSkip={onRecallSkipped} />
                   ) : null
                 )}
               </div>

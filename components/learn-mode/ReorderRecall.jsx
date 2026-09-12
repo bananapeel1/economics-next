@@ -5,7 +5,7 @@ function norm(s) {
   return (s || '').trim().toLowerCase().replace(/[''""]/g, "'").replace(/[—–]/g, '-').replace(/\s+/g, ' ');
 }
 
-export default function ReorderRecall({ recall, onComplete }) {
+export default function ReorderRecall({ recall, onComplete , onSkip }) {
   const [items, setItems] = useState(() => recall.shuffled.map(i => recall.correctOrder[i]));
   const [checked, setChecked] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
@@ -72,7 +72,7 @@ export default function ReorderRecall({ recall, onComplete }) {
     <div className="lm-recall-card">
       <div className="lm-recall-header">
         <div className="lm-recall-label">&#129504; Quick Recall — Reorder</div>
-        <button type="button" className="lm-recall-dismiss" onClick={() => setDismissed(true)} aria-label="Skip this check" title="Skip">&times;</button>
+        <button type="button" className="lm-recall-dismiss" onClick={() => { onSkip?.(); setDismissed(true); }} aria-label="Skip this check" title="Skip">&times;</button>
       </div>
       <p className="lm-recall-prompt">{recall.prompt}</p>
       {!checked && (

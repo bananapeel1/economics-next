@@ -59,8 +59,33 @@ export async function GET() {
 
   const progressRows = allProgress || [];
 
+  // F024: the scoreboard counted Smart Practice only. A student who worked through every Learn
+  // Mode topic in Unit 1, answered the inline quizzes and finished the Quick Fire drill opened
+  // Home and read Mastery 0%, Streak 0, This Week 0, with every topic marked NEW. The product's
+  // own scoreboard told its most engaged student they had done nothing.
+  //
+  // Two more sources: section completions and review schedule (packet 4's user_section_state),
+  // and the resume pointer that Learn Mode writes on every step.
+  const [{ data: sectionState }, { data: contentProgress }] = await Promise.all([
+    db.from('user_section_state')
+      .select('section_id, completed_at, next_review, reviews, last_review, updated_at')
+      .eq('user_id', user.id)
+      .then((r) => r, () => ({ data: null })),
+    db.from('user_content_progress')
+      .select('section_id, updated_at')
+      .eq('user_id', user.id)
+      .then((r) => r, () => ({ data: null })),
+  ]);
+  const sectionStateRows = sectionState || [];
+  const contentRows = contentProgress || [];
+
   // 5. Group progress by section (merge fc- prefix back to original section)
   const progressBySec = {};
+  // A completed Learn Mode section is real evidence of learning and the scoreboard ignored it.
+  // Counted as its own signal rather than faked into the question counts, so the two stay honest.
+  const completedSections = new Set(
+    sectionStateRows.filter((r) => r.completed_at).map((r) => r.section_id)
+  );
   for (const row of progressRows) {
     const originalId = row.section_id.replace(/^fc-/, '');
     if (!progressBySec[originalId]) {
@@ -142,7 +167,16 @@ export async function GET() {
     overallTotal += sub.total;
   }
   const overallNew = Math.max(0, overallTotal - overallMastered - overallLearning);
-  const masteryPct = overallTotal > 0 ? Math.round((overallMastered / overallTotal) * 100) : 0;
+  // F024: mastery was questions-answered only, so finishing a whole section counted for nothing.
+  // Sections completed are weighted alongside items mastered. A student who has worked through
+  // Learn Mode and not yet drilled reads as progress, because they have made progress.
+  const sectionsCompleted = completedSections.size;
+  const sectionsTotal = sectionIds.length || 1;
+  const itemShare = overallTotal > 0 ? overallMastered / overallTotal : 0;
+  const sectionShare = sectionsCompleted / sectionsTotal;
+  const masteryPct = overallTotal > 0 || sectionsCompleted > 0
+    ? Math.round(((itemShare * 0.6) + (sectionShare * 0.4)) * 100)
+    : 0;
 
   // 9. Overdue count: next_review < now
   const now = new Date();
@@ -193,10 +227,11 @@ export async function GET() {
   // 12. Streak: consecutive days with activity going back from today/yesterday
   let streak = 0;
   const activityDates = new Set();
-  for (const row of progressRows) {
-    if (row.updated_at) {
-      activityDates.add(row.updated_at.slice(0, 10));
-    }
+  // Any learning activity, not only Smart Practice: a day spent in Learn Mode is a day studied.
+  for (const row of [...progressRows, ...sectionStateRows, ...contentRows]) {
+    if (row.updated_at) activityDates.add(row.updated_at.slice(0, 10));
+    if (row.last_review) activityDates.add(String(row.last_review).slice(0, 10));
+    if (row.completed_at) activityDates.add(String(row.completed_at).slice(0, 10));
   }
   const todayStr = now.toISOString().slice(0, 10);
   // Start from today; if no activity today, check if yesterday had activity
@@ -245,6 +280,8 @@ export async function GET() {
   return NextResponse.json({
     overall: {
       mastered: overallMastered,
+      sectionsCompleted,
+      sectionsTotal,
       learning: overallLearning,
       new: overallNew,
       total: overallTotal,

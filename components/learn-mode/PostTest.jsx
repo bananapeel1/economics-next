@@ -1,11 +1,11 @@
 "use client";
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 
 /**
  * Post-session assessment — re-shows pre-test questions after completing the section.
  * Compares pre-test vs post-test scores to show learning progress.
  */
-export default function PostTest({ subjectId, sectionId, onClose }) {
+export default function PostTest({ subjectId, sectionId, onClose, onScore }) {
   const [phase, setPhase] = useState('intro'); // 'intro' | 'quiz' | 'result'
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
@@ -38,6 +38,15 @@ export default function PostTest({ subjectId, sectionId, onClose }) {
   }
 
   const postScore = questions.reduce((c, q, i) => c + (answers[i] === q.correctIndex ? 1 : 0), 0);
+
+  // F005: the post-test's whole purpose is to show the topic stuck, and its result was discarded.
+  // Reported once, as a 0..1 proportion, so it reaches the strength meter and the schedule.
+  const reportedRef = useRef(false);
+  useEffect(() => {
+    if (reportedRef.current || !submitted || !questions.length) return;
+    reportedRef.current = true;
+    onScore?.(postScore / questions.length);
+  }, [submitted, postScore, questions.length, onScore]);
   const improved = postScore > pretestScore;
   const same = postScore === pretestScore;
   const perfect = postScore === questions.length;

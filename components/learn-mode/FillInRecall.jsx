@@ -2,7 +2,7 @@
 import { useState } from 'react';
 
 /* ── Drag-and-Drop Label Recall: drag words into blanks ── */
-export default function FillInRecall({ recall, onComplete }) {
+export default function FillInRecall({ recall, onComplete , onSkip }) {
   const [placed, setPlaced] = useState(() => recall.answers.map(() => null));
   const [checked, setChecked] = useState(false);
   const [results, setResults] = useState([]);
@@ -63,7 +63,7 @@ export default function FillInRecall({ recall, onComplete }) {
     <div className="lm-recall-card">
       <div className="lm-recall-header">
         <div className="lm-recall-label">&#129504; Quick Recall — Fill in the Blanks</div>
-        <button type="button" className="lm-recall-dismiss" onClick={() => setDismissed(true)} aria-label="Skip this check" title="Skip">&times;</button>
+        <button type="button" className="lm-recall-dismiss" onClick={() => { onSkip?.(); setDismissed(true); }} aria-label="Skip this check" title="Skip">&times;</button>
       </div>
       <p className="lm-recall-prompt">{recall.prompt}</p>
 
