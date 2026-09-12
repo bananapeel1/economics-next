@@ -25,6 +25,12 @@ export async function generateMetadata({ params }) {
   };
 }
 
+function formatDate(iso) {
+  return new Date(`${iso}T00:00:00Z`).toLocaleDateString('en-GB', {
+    day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
+  });
+}
+
 export default async function GuidePage({ params }) {
   const { slug } = await params;
   const guide = guidesData.find(g => g.slug === slug);
@@ -50,6 +56,8 @@ export default async function GuidePage({ params }) {
     'learningResourceType': 'Study Guide',
     'inLanguage': 'en-GB',
     'isAccessibleForFree': true,
+    ...(guide.published ? { 'datePublished': guide.published } : {}),
+    ...(guide.updated ? { 'dateModified': guide.updated } : {}),
     'provider': {
       '@type': 'EducationalOrganization',
       'name': 'Revvy Learn',
@@ -77,11 +85,17 @@ export default async function GuidePage({ params }) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
 
+      <div className="guide-shell">
       <div className="resource-page-header">
         <Link href="/guides" className="resource-back-link">&larr; All Guides</Link>
         <span className="seo-unit-badge">{guide.subject === 'economics' ? 'Economics' : 'Business'} Guide</span>
         <h1 className="resource-page-title">{guide.title}</h1>
         <p className="resource-page-subtitle">{guide.heroSubtitle}</p>
+        {guide.updated && (
+          <p className="guide-updated">
+            Updated <time dateTime={guide.updated}>{formatDate(guide.updated)}</time>
+          </p>
+        )}
       </div>
 
       {/* Hero CTA */}
@@ -98,14 +112,12 @@ export default async function GuidePage({ params }) {
       </div>
 
       {/* Table of contents */}
-      <nav style={{ marginBottom: '32px', padding: '20px', background: 'var(--card-bg, #1a1a2e)', borderRadius: '8px', border: '1px solid var(--border, #2a2a3e)' }}>
-        <div style={{ fontWeight: 600, marginBottom: '12px', color: 'var(--text-primary, #fff)' }}>In this guide:</div>
-        <ol style={{ paddingLeft: '20px', margin: 0 }}>
+      <nav className="guide-toc" aria-label="In this guide">
+        <div className="guide-toc-title">In this guide:</div>
+        <ol>
           {guide.sections.map((section, i) => (
-            <li key={i} style={{ marginBottom: '6px' }}>
-              <a href={`#section-${i}`} style={{ color: 'var(--text-secondary, #bbb)', textDecoration: 'none' }}>
-                {section.heading}
-              </a>
+            <li key={i}>
+              <a href={`#section-${i}`}>{section.heading}</a>
             </li>
           ))}
         </ol>
@@ -121,7 +133,7 @@ export default async function GuidePage({ params }) {
             </div>
             <div className="seo-stepper-body">
               <h2>{section.heading}</h2>
-              <p style={{ lineHeight: 1.7, color: 'var(--text-secondary, #ccc)' }}>{section.content}</p>
+              <p>{section.content}</p>
             </div>
           </div>
         ))}
@@ -129,7 +141,7 @@ export default async function GuidePage({ params }) {
 
       {/* Related topics */}
       {guide.relatedTopics && guide.relatedTopics.length > 0 && (
-        <div className="seo-related-links" style={{ marginTop: '32px' }}>
+        <div className="seo-related-links">
           <h2>Related Topics</h2>
           <div className="seo-links-grid">
             {guide.relatedTopics.map((topic, i) => (
@@ -140,10 +152,11 @@ export default async function GuidePage({ params }) {
       )}
 
       {/* CTA */}
-      <div className="seo-cta" style={{ marginTop: '32px' }}>
+      <div className="seo-cta">
         <h2>Master This Topic Interactively</h2>
         <p>Use flashcards, quizzes and the AI tutor to nail your understanding.</p>
         <Link href={`/${guide.subject}`} className="seo-cta-button">Start Revising &rarr;</Link>
+      </div>
       </div>
     </div>
   );
