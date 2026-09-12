@@ -364,11 +364,36 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
     try {
       const res = await fetch(`/api/practice/progress-summary?sections=${sectionIds.join(',')}`);
       const json = await res.json();
-      if (json.summary) setProgressSummary(json.summary);
+      if (!json.summary) return;
+
+      // F085: the endpoint only knows about a signed-in student's progress, so for everyone else
+      // it reports every question as due. That is not a neutral default: it tells an anonymous
+      // student who has already practised here that nothing has stuck. Their schedule lives in
+      // localStorage, so recompute due from that rather than showing a number we know is wrong.
+      if (!isLoggedIn) {
+        const local = loadLocalProgress(sectionIds);
+        const now = Date.now();
+        for (const id of sectionIds) {
+          const row = json.summary[id];
+          if (!row) continue;
+          let attempted = 0;
+          let due = 0;
+          for (const [key, val] of Object.entries(local)) {
+            if (!key.startsWith(id + ':')) continue;
+            attempted++;
+            if (!val?.nextReview || val.nextReview <= now) due++;
+          }
+          row.attempted = attempted;
+          row.mastered = 0;
+          row.due = due + Math.max(0, row.total - attempted);
+        }
+      }
+
+      setProgressSummary(json.summary);
     } catch {
       // silently ignore
     }
-  }, [subjects, units, sections]);
+  }, [subjects, units, sections, isLoggedIn]);
 
   /* ─── Derived data ─── */
 

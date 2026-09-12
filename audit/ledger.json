@@ -1323,10 +1323,10 @@
    "fix": "Distinguish states: if progress exists but nothing is due, show 'All N questions in these topics are scheduled for review; next due in Xh' with an 'Practise anyway (review early)' button that includes not-yet-due cards at low priority. Show per-chip counts: 'N questions, M due today'.",
    "impact": "This is the most direct code-level cause of the 'doesn't cover all topics' complaint: a diligent student is told outright there are no questions for the topic they just studied. They cannot tell the difference between 'you're up to date' and 'the app has no content here'.",
    "packet": 10,
-   "status": "not-fixed",
+   "status": "confirmed",
    "closed_by": "packet-10",
    "verified_by": "packet-verifier 2026-09-12",
-   "evidence": "queueStats (spaced-repetition.js:192-209) and the nothing-due/no-content split are correct, but PracticeEngine.jsx:308 wires the normal Start button as onClick={onStart} directly to handleStart(practiseEarly=false); React passes the SyntheticEvent as that argument on every ordinary click, so includeNotDue is truthy on EVERY session start, not only via 'Practise anyway'. Not-due cards get silently pulled into normal sessions and the 'nothing due' empty screen can be bypassed entirely. Also handleRestart (658-668) never clears accessNote/emptyReason, so a stale note can persist on the setup screen.",
+   "evidence": "PracticeEngine.jsx:312 and FlashcardsEngine.jsx:262 now onClick={() => onStart()}, no event leaks into handleStart(practiseEarly); handleRestart (669-682) clears accessNote/emptyReason; only other bare onClick={onStart} is WrittenPracticeEngine.jsx:216 whose handleStart (line 377) takes zero params, so no flag-leak risk there. queueStats (lib/spaced-repetition.js:190-206) correctly totals due/unseen/scheduled; nothing-due screen (PracticeEngine.jsx:730-736) names next-due time via formatNextDue; Practise anyway (742-744) calls handleStart(true), which sets includeNotDue and buildQueue (spaced-repetition.js:124-128) draws from the notDue pool, producing a non-empty queue.",
    "note": null
   },
   {
@@ -1445,7 +1445,7 @@
    "status": "not-fixed",
    "closed_by": "packet-10",
    "verified_by": "packet-verifier 2026-09-12",
-   "evidence": "First-unit-expanded default (136-142) and the indeterminate checkbox replacing the hidden badge (214-223) are correct, but the fix's 'N questions - M due' chip requirement is unmet: chips only render total question count and, when attempted>0, an unrelated 'mastered' figure (254-259) — no due count exists anywhere, and no localStorage fallback was added for anonymous users (progress-summary route only populates attempted/mastered when a user is authenticated, so anon always sees 0). Title's 'chips show no ... due counts' defect still occurs.",
+   "evidence": "Signed-in due count now correct: progress-summary/route.js:41-70 computes dueNow = ripe-scheduled + never-attempted, chip renders it (PracticeEngine.jsx:257-259, 'N questions · M due'). But the fix's explicit 'compute due count from localStorage for anonymous users' is still unimplemented: route.js:36 only queries DB 'if (user)', so anon always gets prog={attempted:0,due:0} and dueNow=total regardless of real local progress -- live curl confirms progress-summary?sections=introductory-concepts returns due:25 (=total) signed-out. This is not moot under F086: curl GET /practice returns 200 signed-out and the TopicStep chips render before any auth check; only /api/practice/questions (the Start fetch) 401s. So an anon visitor with genuine local practice history still sees an inflated, misleading due count on the picker itself before hitting the sign-in wall. Localstorage fallback: unmet, not waived.",
    "note": null
   },
   {
