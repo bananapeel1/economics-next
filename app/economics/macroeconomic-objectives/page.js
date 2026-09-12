@@ -78,14 +78,14 @@ const OBJECTIVES = [
     costs: 'Work-incentive reductions from high taxation, brain drain of top earners, political tensions if inequality is too high.',
   },
   {
-    slug: 'environmental-sustainability',
+    slug: 'balanced-government-budget',
     number: 6,
-    name: 'Environmental sustainability',
-    shortDef: 'Growth without depleting natural capital or damaging the environment.',
-    measurement: 'CO\u2082 emissions, air and water quality indices, biodiversity loss, renewable energy share.',
-    detail: 'Often treated as a constraint on other objectives. Green growth aims to decouple GDP from emissions. Policy tools include carbon taxes, pollution permits, subsidies for renewables and environmental regulation.',
-    target: 'Net-zero emissions by 2050 is the widely-adopted commitment.',
-    costs: 'Transition costs to green industries, regressive effects of carbon taxes, international competitiveness if other countries do not match action.',
+    name: 'Balanced government budget',
+    shortDef: 'Government spending matched by tax revenue, so borrowing does not keep adding to national debt.',
+    measurement: 'The budget deficit or surplus as a percentage of GDP, and national debt as a percentage of GDP.',
+    detail: 'Separate the cyclical deficit, which rises automatically in a recession as tax receipts fall and benefit spending rises, from the structural deficit, which remains at full employment. Reducing a deficit through austerity cuts aggregate demand, so this objective conflicts directly with growth and low unemployment. Sustained borrowing raises debt interest and may crowd out private investment.',
+    target: 'There is no single official target. The EU reference values, a deficit under 3% of GDP and debt under 60% of GDP, are the figures most often quoted.',
+    costs: 'Austerity lowers AD, growth and employment in the short run. Cutting capital spending weakens long-run productive capacity. Raising taxes to close a deficit can blunt work and investment incentives.',
   },
 ];
 
@@ -125,7 +125,7 @@ const FAQS = [
   },
   {
     q: 'What are the 4 main macroeconomic objectives?',
-    a: 'The traditional four macroeconomic objectives are: economic growth, low inflation, low unemployment, and balance of payments stability. These are the core objectives you must be ready to analyse in any WEC12 answer \u2014 income equality and environmental sustainability are usually treated as additional modern objectives.',
+    a: 'The traditional four macroeconomic objectives are: economic growth, low inflation, low unemployment, and balance of payments stability. These are the core objectives you must be ready to analyse in any WEC12 answer \u2014 spec 2.3.6 adds two more, a balanced government budget and greater income equality.',
   },
   {
     q: 'Why do macroeconomic objectives conflict?',
@@ -137,7 +137,7 @@ const FAQS = [
   },
   {
     q: 'How are macroeconomic objectives measured?',
-    a: 'Growth is measured by real GDP change. Inflation by CPI. Unemployment by the claimant count and ILO Labour Force Survey. The balance of payments by the current account as a % of GDP. Income inequality by the Gini coefficient. Environmental sustainability by CO\u2082 emissions and other green indicators.',
+    a: 'Growth is measured by real GDP change. Inflation by CPI. Unemployment by the claimant count and ILO Labour Force Survey. The balance of payments by the current account as a % of GDP. Income inequality by the Gini coefficient. The government budget by the deficit or surplus as a % of GDP, alongside national debt as a % of GDP.',
   },
   {
     q: 'What is the difference between fiscal and monetary policy?',
@@ -189,7 +189,7 @@ export default async function MacroObjectivesPillarPage() {
     url: 'https://revvylearn.com/economics/macroeconomic-objectives',
     educationalLevel: 'Advanced Level',
     learningResourceType: 'Revision Notes',
-    teaches: 'Macroeconomic objectives, economic growth, inflation, unemployment, balance of payments, income inequality, environmental sustainability, policy trade-offs',
+    teaches: 'Macroeconomic objectives, economic growth, inflation, unemployment, balance of payments, income inequality, balanced government budget, policy trade-offs',
     educationalUse: 'revision',
     inLanguage: 'en-GB',
     isAccessibleForFree: true,
@@ -258,7 +258,7 @@ export default async function MacroObjectivesPillarPage() {
           <div className="elp-hero-preview elp-fade-up" style={{ transitionDelay: '.15s' }}>
             <div className="elp-hero-badge elp-b1">
               <span className="elp-badge-icon"><Star size={18} /></span>
-              <div className="elp-badge-text"><span className="elp-badge-val">6 objectives</span><span className="elp-badge-lbl">fully spec-aligned</span></div>
+              <div className="elp-badge-text"><span className="elp-badge-val">6 objectives</span><span className="elp-badge-lbl">all six explained</span></div>
             </div>
             <div className="elp-preview-card">
               <div className="elp-preview-topbar">

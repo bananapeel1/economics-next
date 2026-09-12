@@ -10,7 +10,7 @@ Plan: `audit/PLAN.md` (58 packets). Source data: `audit/README.md`.
 
 | # | Packet | Status | Commit | Snapshot | Validator |
 |---|--------|--------|--------|----------|-----------|
-| 0 | Day 0 hotfix | done and verified 2026-09-12 (Verify A: 2 code + 18 content ids confirmed; Verify B walkthrough clean). 3 marketing claims open on the SEO branch, see NEXT.md | 069ddb4 | audit/snapshots/2026-09-11-{pre,post}-packet-0__* | n/a (packet 3) |
+| 0 | Day 0 hotfix | done and verified. Code + content 2026-09-12 (2 code + 18 content ids). Marketing: 182 claims found, all corrected and confirmed (M001-M182), gate clear |  069ddb4 | audit/snapshots/2026-09-11-{pre,post}-packet-0__* | n/a (packet 3) |
 | 1 | Measure or don't bother | done and verified 2026-09-12 (Verify A: F021 F022 F042 F043 confirmed; dead progress route deleted in the setup commit to close F023 F049; F026 F030 moved to packet 5). app_events table SQL still to run once (see NEXT.md) | cdb24dc + setup commit | | n/a (packet 3) |
 | 2 | Ids and safety net | **part landed 2026-09-12** — code half done and verified (F013, F040, F111, F041 confirmed). Blocked on two founder actions: the id-minting DB write, and running `scripts/packet-2-item-id.sql`. F052/F109 improved but still open (9 of 24 broken refs now rescued by the fallback, 15 still show nothing); F115 partly addressed (ids + id-preserving admin save) — draft/published state still to build | pending | audit/snapshots/2026-09-12-pre-packet-2__* | n/a |
 | 3 | Validator v2 + golden set | not started | | | n/a |

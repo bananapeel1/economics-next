@@ -86,7 +86,7 @@ const TYPES_OF_FAILURE = [
     number: 7,
     name: 'Monopoly power and abuse of market power',
     shortDef: 'A single firm or small group restricts output to raise price.',
-    detail: 'When firms have significant market power they can charge a price above marginal cost, reducing allocative efficiency and creating a deadweight welfare loss. This is often treated as a separate category or analysed in Unit 3 (WEC13), but is examinable as a form of market failure in Unit 1 too.',
+    detail: 'When firms have significant market power they can charge a price above marginal cost, reducing allocative efficiency and creating a deadweight welfare loss. The IAL spec examines this in Unit 3 (WEC13) under market structures, not as a form of market failure in Unit 1 too.',
     example: 'Natural monopolies (utilities), dominant tech platforms, pharmaceutical patents.',
     diagram: 'Monopoly diagram: price above P = MC, quantity below socially optimum, deadweight loss triangle.',
   },

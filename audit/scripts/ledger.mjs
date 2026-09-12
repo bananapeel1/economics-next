@@ -32,7 +32,7 @@ const [cmd, ...rest] = process.argv.slice(2);
 const flag = (name) => { const i = rest.indexOf(`--${name}`); return i >= 0 ? rest[i + 1] : undefined; };
 const ids = rest.filter((a, i) => !a.startsWith('--') && (i === 0 || !rest[i - 1].startsWith('--')));
 const get = (id) => { const r = byId.get(id); if (!r) { console.error(`no such id: ${id}`); process.exit(1); } return r; };
-const line = (r) => `${r.id.padEnd(46)} ${String(r.sev || r.kind).padEnd(9)} ${r.status.padEnd(10)} ${(r.title || r.text).slice(0, 90)}`;
+const line = (r) => `${r.id.padEnd(46)} ${String(r.sev || r.kind).padEnd(9)} ${r.status.padEnd(10)} ${String(r.title || r.text || r.quote || '').slice(0, 90)}`;
 
 switch (cmd) {
   case 'summary': {

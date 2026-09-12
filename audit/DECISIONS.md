@@ -105,3 +105,24 @@ Append only. Every entry needs a date and the packet that made it.
 - **2026-09-12 (setup) — packet work runs in the worktree, and a packet is done only when verified and pushed.**
   See `audit/PROTOCOL.md`. Ship checkpoints: after packets 1, 5, 13, then every five content packets, always as
   a PR into `main` that the founder merges.
+- **2026-09-12 (packet 0, marketing) — the public copy was fact-checked in full, and the ledger now tracks it.**
+  Packet 0's fourth item was written as "fix three false marketing claims". A sweep of every public page against
+  the code and the official Pearson specs found 259 candidates; 182 survived an adversarial defence pass and are
+  recorded as `M001`-`M182` in the `marketing` array of `audit/ledger.json`, with the raw evidence in
+  `audit/raw/marketing-claims-2026-09-12.json`. All 182 are corrected. The three original claims were a small
+  part of a much larger problem, most of it introduced by the SEO work after the audit was taken.
+- **2026-09-12 — canonical free/paid boundary, for all future copy.** Free: notes, diagrams, practice questions,
+  Learn Mode. Preview then paywall: flashcards, quizzes, extras. Paid with no preview: the AI tutor and the
+  mistakes review. Model answers: the first is free, the rest are Pro. The canonical sentence is "Notes, diagrams
+  and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro." No page may describe
+  the tutor, flashcards or model answers as free.
+- **2026-09-12 — banned marketing phrases.** "Adaptive" applied to flashcards (the schedule is simplified SM-2),
+  any claim of adaptive difficulty (none exists), "every spec point" and equivalents (340 sub-topic gaps are
+  known), diagrams for Business (it has none), and "24 spec points" (23 Economics sections exist). A grep for
+  these is the cheapest possible guard and should run before any copy change.
+- **2026-09-12 — a canonical-facts sheet is itself a source of error.** The sheet handed to the fix agents stated
+  the Economics Unit 2 paper as Section A/B/C ending in two essays from three. The spec says Unit 2 is identical
+  to Unit 1: Sections A-D ending in one 20-mark essay from a choice of two. Units 3 and 4 are the two-from-three
+  papers. The fix agents read the spec and got it right; the checker, which trusted the sheet, flagged the
+  correct answer as wrong. **Exam structure is verified against `audit/raw/econ_spec.txt` and `bus_spec.txt`
+  only.** The correct structures are recorded in `audit/PROTOCOL.md`.

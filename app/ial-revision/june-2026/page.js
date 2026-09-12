@@ -10,7 +10,7 @@ export const metadata = {
   alternates: { canonical: 'https://revvylearn.com/ial-revision/june-2026' },
   openGraph: {
     title: 'IAL June 2026 Revision — Edexcel Economics & Business | Revvy Learn',
-    description: 'Free revision for the June 2026 IAL exam series. Economics and Business notes, flashcards and past papers.',
+    description: 'Revision for the June 2026 IAL exam series. Economics and Business notes, practice questions and past papers are free; flashcards and quizzes unlock with Pro.',
     url: 'https://revvylearn.com/ial-revision/june-2026',
   },
 };

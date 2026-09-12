@@ -47,7 +47,7 @@ const SECTIONS = [
       { letter: 'd', name: 'Stakeholder vs Shareholder Model', kw: 'Mendelow\'s matrix · Friedman vs Freeman · internal & external stakeholders · shareholder returns' },
     ] },
   { id: 'assessing-competitiveness', ref: '3.3.5', title: 'Assessing Competitiveness',
-    desc: 'How businesses measure and improve their competitive position — financial ratios, core competencies, Porter\'s generic strategies and benchmarking against rivals.',
+    desc: 'How businesses measure and improve their competitive position — financial statements and ratios, HR performance metrics, and how firms respond when competitiveness changes.',
     subtopics: [
       { letter: 'a', name: 'Financial Ratios', kw: 'Gearing · ROCE · labour productivity · unit costs · efficiency' },
       { letter: 'b', name: 'HR Performance Metrics', kw: 'Labour productivity · labour turnover & retention · absenteeism' },

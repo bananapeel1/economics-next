@@ -16385,10 +16385,10 @@
    "groundTruth": "app/api/chat/route.js:44-58; components/StudyApp.jsx:28 PREMIUM_TABS = new Set(['mistakes', 'tutor']); app/upgrade/page.js:21 sells 'AI tutor' as a Pro feature",
    "fix": "For app/page.js line 6 (metadata.description) and line 9 (openGraph.description), replace the identical string with:\n\n\"Free interactive revision for Edexcel International A-Level Economics and Business — notes, diagrams and practice questions, all mapped to the IAL spec. Flashcards, quizzes and AI tutor unlock with Pro.\"\n\nThis keeps the original selling intent (comprehensive, IAL-specific, free-to-start revision platform) and still name-drops flashcards/quizzes/AI tutor as reasons to upgrade, but it no longer claims they're part of the free offer. It also matches language the site already uses correctly elsewhere (app/economics/page.js:292, app/business/page.js:287: \"Notes are free. Flashcards, quizzes and AI tutor unlock with a subscription.\"), so the fix is consistent with existing on-site copy rather than inventing new claims. Note: the same false pattern also appears in app/layout.js:15,34,43,67,72 and in several per-subject/unit pages' metadata — worth a follow-up pass since the reviewer's fix request only covers app/page.js.",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/page.js:6,9 description now says AI tutor unlocks with Pro, no longer bundled as free",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -16402,10 +16402,10 @@
    "groundTruth": "audit/raw/section-index.json — diagrams = 0 for all 20 business sections; audit/raw/research-ial-spec-coverage.md section 1 'Coverage gaps are one level down (the numbered sub-topics inside each heading)'; ledger finding F114 'Business has zero diagrams across all … sections; the Diagrams tab (a free tab) is empty and Business Learn Mode never shows a diagram'",
    "fix": "Every unit in the syllabus has a dedicated section, with concise exam-focused notes and spaced-repetition flashcards that adapt to your strengths and weaknesses — plus clear exam diagrams for every Economics topic (Business diagrams launching soon).",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/page.js:101 diagrams claim scoped to Economics only, adaptive-to-strengths wording and every-spec-point claim removed",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -16980,10 +16980,10 @@
    "groundTruth": "audit/raw/research-ial-spec-coverage.md lines 127-129",
    "fix": "Yes — Section C",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/economics/unit-2/page.js:141 Yes Section A changed to Yes Section C 34 marks, matching econ_spec.txt WEC12 Section C data response",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -16997,10 +16997,10 @@
    "groundTruth": "audit/raw/research-ial-spec-coverage.md lines 128 and 130",
    "fix": "Essay questions: \"Section D — choose 1 of 2\" (one 20-mark Evaluate essay, chosen from two; keep \"Data response\" pointing to Section C rather than A while fixing this, since that row has the same section-letter error per the same source lines 127-130).",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/economics/unit-2/page.js:142 Section B choose 1 of 2 changed to Section D choose 1 of 2, matching econ_spec.txt WEC12 Section D essay",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -17422,10 +17422,10 @@
    "groundTruth": "audit/raw/bus_spec.txt lines 984, 990, 994; audit/content-sections/business__resource-management.json (0 hits for each term); audit/raw/section-index.json (diagrams: 0 for all 20 Business sections)",
    "fix": "Replace \"Every {UNIT.code} point covered\" with a topic-level claim that's actually true, e.g.:\n\"Spec-aligned notes\" / \"Every {UNIT.code} topic covered\"\nor\n\"Spec-aligned notes\" / \"All {UNIT.code} topics, explained\"\n\n\"Topic\" (vs \"point\") matches what's actually true: all major spec areas of Resource Management (production/productivity, capacity utilisation, inventory management, quality management) have dedicated notes — it just isn't a literal claim that every lettered sub-bullet, including the diagram-interpretation skill the app has no diagram support for anywhere, is individually covered. This keeps the same selling intent (comprehensive, nothing skipped) without the falsifiable \"every point\" guarantee. Worth flagging that the identical string is reused across every other unit/topic page, so the same swap should be applied there too.",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/business/unit-2/page.js:153 Every WBS12 point covered replaced with All 5 WBS12 topics covered",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -17456,10 +17456,10 @@
    "groundTruth": "audit/raw/section-index.json (4.3.1-4.3.4); audit/raw/bus_spec.txt line 1472",
    "fix": "Revision notes for Edexcel IAL Business Unit 4 (WBS14), covering globalisation, global markets and expansion, global marketing, and global industries and multinational corporations.",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "main-session 2026-09-12",
+   "evidence": "app/business/unit-4/page.js:70 hero no longer claims Complete or everything you need",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -17541,10 +17541,10 @@
    "groundTruth": "audit/raw/bus_spec.txt (0 hits for 'core competence'/'value chain'; 3.3.5 at lines 1218-1249); audit/raw/research-ial-spec-coverage.md ('Second block \"Core Competencies\" … is NOT in the IAL spec at all')",
    "fix": "Replace the tile with content that actually matches IAL spec 3.3.5 item 3 (Human resources), which the audit shows is currently under-represented in this same section — same selling intent (a fourth angle on \"assessing competitiveness\"), but true and coverable by real spec content:\n\n{ letter: 'b', name: 'HR Performance Metrics', kw: 'Labour productivity · labour turnover & retention · absenteeism · HR strategies' }\n\nThis keeps the four-tile grid and the \"spec point by spec point\" framing intact while pointing at content that is (a) genuinely in the Edexcel IAL Business spec's 3.3.5, and (b) something the notes for this section can actually deliver, closing the coverage gap the audit already flagged instead of promising off-spec, unbuilt content.",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "main-session 2026-09-12",
+   "evidence": "app/business/unit-3/page.js:50 desc now names financial statements and HR performance metrics; core competencies removed",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -17745,10 +17745,10 @@
    "groundTruth": "components/FlashcardsTab.jsx:13 + components/StudyApp.jsx:27; app/past-papers/page.js:11,46-48 (Unit 1 only, 2020–2024); data/modelAnswersData.js + data/modelAnswersExpansion.js — 66 answers spanning Economics 1.3.1–4.3.6 minus 4.3.5, and Business Units 1–2 only (sectionNumbers 1.1–2.5), zero for WBS13/WBS14",
    "fix": "Revision guide for the Edexcel IAL June 2026 exam series. Free notes and practice questions for IAL Economics (WEC11–WEC14) and Business (WBS11–WBS14), plus Unit 1 past papers, model answers and flashcard previews. Last-minute revision tips and exam preparation.",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "main-session 2026-09-12",
+   "evidence": "app/ial-revision/june-2026/page.js:13 openGraph now splits free notes/practice/past papers from Pro flashcards and quizzes",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -17864,10 +17864,10 @@
    "groundTruth": "audit/raw/econ_spec.txt lines 1136-1142 (2.3.6 'Macroeconomic objectives': a) Economic growth b) Low and stable rate of inflation c) Low unemployment d) Balance of payments equilibrium on current account e) Balanced government budget f) Greater income equality). The string 'balanced government budget' appears nowhere in app/economics/macroeconomic-objectives/page.js.",
    "fix": "The six macroeconomic objectives you need to know for WEC12 (Edexcel IAL spec 2.3.6.1) are: (1) economic growth, (2) low and stable inflation, (3) low unemployment, (4) balance of payments equilibrium on the current account, (5) a balanced government budget, and (6) greater income equality. The first four are the classic “big four” — a balanced government budget and income equality are the two extra objectives the spec adds. (Environmental sustainability isn't one of the six named objectives — it shows up in 2.3.6.2 as a conflict: growth often worsens it, which is exactly the kind of trade-off WEC12 evaluation questions reward.)",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "main-session 2026-09-12",
+   "evidence": "app/economics/macroeconomic-objectives/page.js objective 6 is now balanced government budget per econ_spec.txt:1141; OBJECTIVES array, JSON-LD teaches, badge and two FAQ answers all corrected",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -17881,10 +17881,10 @@
    "groundTruth": "audit/raw/econ_spec.txt line 1141 ('e) Balanced government budget') vs the OBJECTIVES array at app/economics/macroeconomic-objectives/page.js lines 29-90",
    "fix": "The six macroeconomic objectives for WEC12 economics",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "main-session 2026-09-12",
+   "evidence": "app/economics/macroeconomic-objectives/page.js objective 6 is now balanced government budget per econ_spec.txt:1141; OBJECTIVES array, JSON-LD teaches, badge and two FAQ answers all corrected",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -17898,10 +17898,10 @@
    "groundTruth": "audit/raw/econ_spec.txt lines 728-735 and 777-789; audit/raw/research-ial-spec-coverage.md lines 43-44 and 94 ('the words merit/demerit appear 0 times in the IAL Economics spec'; 'Market Power as Market Failure: not in IAL 1.3.5; monopoly is Unit 3 (3.3.3.6)')",
    "fix": "description: 'Market failure revision for Edexcel IAL Economics Unit 1 (WEC11): externalities, public goods, merit & demerit goods, information failure and moral hazard — plus monopoly power as tested in Unit 3. Diagrams, model answers and exam technique.'",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/economics/market-failure/page.js:12 description hedges monopoly to Unit 3 and adds moral hazard, no completeness overclaim",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -17915,10 +17915,10 @@
    "groundTruth": "audit/raw/econ_spec.txt lines 734-735, 781-789; audit/raw/research-ial-spec-coverage.md line 68 ('entire sub-topic 6 Speculation and market bubbles ... 0 hits. The WEC11 Jan 2023 Section C data response was entirely about a New Zealand housing bubble')",
    "fix": "Different textbooks count them as four, five or six categories — we break down externalities, public goods, information failure (including moral hazard) and monopoly power in full IAL depth, so you're not left with just a surface-level list.\n\n(Longer-term, the real fix is a content fix, not just a copy fix: add moral hazard as its own tile — spec 1.3.5.5, covering both insurance and banking — and add speculation and market bubbles — spec 1.3.5.6, covering housing and stocks and shares, which was the entire WEC11 Jan 2023 Section C data response — and drop or relabel merit/demerit goods and monopoly power, which are not IAL 1.3.5 vocabulary. Once that's done, the page can honestly say \"we cover all six IAL-examinable forms, including moral hazard and speculation and market bubbles, so you're ready for any mark scheme.\")",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/economics/market-failure/page.js:312 no longer claims ready for any mark scheme or spec alignment",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -17932,10 +17932,10 @@
    "groundTruth": "audit/raw/econ_spec.txt lines 728-735, 781-789; audit/raw/research-ial-spec-coverage.md lines 43, 44, 68",
    "fix": "Heading: \"Every source of market failure on the WEC11 1.3.5 spec\"\nSubhead: \"The five spec sources — externalities, public goods, information failure, moral hazard, and speculation and market bubbles — split into six worked types, plus monopoly power and merit/demerit goods for wider context.\"",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/economics/market-failure/page.js:311 heading now the seven types of market failure explained, drops every type on the WEC11 spec",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -18102,10 +18102,10 @@
    "groundTruth": "audit/raw/econ_spec.txt lines 1595-1602 (4.3.1.2a: trade liberalisation; increased number and size of trading blocs; political change; reduced cost of transport and communications; increased significance of TNCs) and line 1594 (migration under 'Characteristics of globalisation')",
    "fix": "WEC14's specification (4.3.1.2a) names five causes of globalisation: trade liberalisation, the growth in number and size of trading blocs (e.g. the EU, ASEAN), political change and the opening of markets (the end of the Soviet system, China's reforms), reduced transport and communication costs, and the growing significance of transnational corporations (TNCs) — plus FDI by TNCs as a related sub-topic (4.3.1.2b). Migration is examined separately as a characteristic of globalisation (4.3.1.1), not a cause, and financial deregulation — while a widely cited real-world driver — isn't a named WEC14 cause, so don't lead an exam answer with it.",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "main-session 2026-09-12",
+   "evidence": "app/economics/globalisation/page.js metadata and JSON-LD now say transnational companies per econ_spec.txt:1592; CAUSES array is the spec's five with trading blocs added and migration relabelled a characteristic",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -18136,10 +18136,10 @@
    "groundTruth": "audit/raw/econ_spec.txt lines 728-735, 781-789; audit/raw/research-ial-spec-coverage.md lines 43, 44, 68",
    "fix": "Drop the spec-conformity claim and state only what's verifiably true — a count of what the page teaches, without asserting it maps 1:1 onto WEC11 1.3.5:\n\n\"7 types explained\" (badge), keeping \"Free for every student\" and \"WEC11 exam aligned\" as separate, more defensible claims elsewhere — but \"WEC11 exam aligned\" should also be re-examined separately, since it sits right next to the same overclaim.\n\nIf the product team wants to keep an alignment claim, the honest version requires either fixing the content (add moral hazard and speculation/market bubbles as their own cards, and stop presenting merit/demerit goods and monopoly power as 1.3.5 content) or rewording to something true today, e.g.: \"7 types explained, incl. content beyond 1.3.5\" or simply \"Market failure, fully explained\" (drops the false spec-precision claim while keeping the completeness/confidence selling point).",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/economics/market-failure/page.js:261 badge changed from 7 types fully spec-aligned to 7 types fully explained",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -18153,10 +18153,10 @@
    "groundTruth": "audit/raw/research-ial-spec-coverage.md lines 43-44 and 94 and 98; audit/raw/econ_spec.txt lines 728-735, 781-789",
    "fix": "Replace the FAQ answer (app/economics/market-failure/page.js, FAQS entry \"What are the main types of market failure in Edexcel IAL Economics?\") with:\n\n\"For WEC11 (Unit 1: Markets in action) the spec lists five sources of market failure: externalities (positive and negative, in production and consumption), the free-rider problem behind under-provision of public goods, imperfect market information, moral hazard, and speculation and market bubbles. Note two things IAL does differently from UK A-level: mark schemes credit 'external benefit/cost of consumption' rather than 'merit good' or 'demerit good', and moral hazard plus market bubbles sit inside Unit 1 here, not Unit 4. Monopoly and other forms of market power are examinable, but as Unit 3 (WEC13) market structures content, not WEC11 market failure.\"\n\nThis keeps the original selling point (showing IAL-specific depth and exam-scoped precision) while being accurate, and turns two things the site was previously missing (moral hazard, market bubbles) into an explicit differentiator versus UK GCE-focused competitors, per audit/raw/research-ial-spec-coverage.md line 98.",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "main-session 2026-09-12",
+   "evidence": "app/economics/market-failure/page.js:89 monopoly card now says the spec examines it in Unit 3 WEC13, matching the FAQ",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -18170,10 +18170,10 @@
    "groundTruth": "audit/raw/research-ial-spec-coverage.md lines 43, 44, 94; audit/raw/econ_spec.txt lines 728-735",
    "fix": "\"The six-type framework covers: (1) negative externalities, (2) positive externalities, (3) public goods, (4) merit goods, (5) demerit goods, (6) information failure. This is the standard textbook version, but it borrows vocabulary from general economics, not from the Edexcel IAL specification. For IAL Economics Unit 1 (WEC11), the spec terms are external benefits/costs of consumption (not 'merit/demerit goods'), plus externalities, public goods and imperfect market information — and monopoly power isn't examined until Unit 3, not Unit 1.\"",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "main-session 2026-09-12",
+   "evidence": "app/economics/market-failure/page.js:89 monopoly card now says the spec examines it in Unit 3 WEC13, matching the FAQ",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -18187,10 +18187,10 @@
    "groundTruth": "audit/raw/research-ial-spec-coverage.md lines 68-69",
    "fix": "Replace with a true, specific, still-strong claim that doesn't assert total completeness, e.g.: \"In-depth notes on externalities, public goods, information failure & moral hazard\" (or, shorter for the feature-strip format: \"Deep coverage of core 1.3.5 concepts\"). Either keeps the \"spec-aligned, thorough\" selling point without the falsifiable \"every point\" claim. If bubbles/speculation content gets added later, \"Every WEC11 1.3.5 point covered\" would then be honestly restorable.",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/economics/market-failure/page.js no occurrence of Every WEC11 1.3.5 point covered remains, not replaced by an equivalent overclaim",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -18255,10 +18255,10 @@
    "groundTruth": "audit/raw/econ_spec.txt lines 1136-1142",
    "fix": "The four classic objectives are growth, low inflation, low unemployment and a sustainable balance of payments. The WEC12 spec adds two more: a balanced government budget and greater income equality. A strong WEC12 answer names all six, measures them correctly, and evaluates the trade-offs between them.",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "main-session 2026-09-12",
+   "evidence": "app/economics/macroeconomic-objectives/page.js objective 6 is now balanced government budget per econ_spec.txt:1141; OBJECTIVES array, JSON-LD teaches, badge and two FAQ answers all corrected",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -18272,10 +18272,10 @@
    "groundTruth": "audit/raw/econ_spec.txt lines 1136-1142",
    "fix": "Macroeconomic objectives revision for Edexcel IAL Economics Unit 2 (WEC12): growth, inflation, unemployment, balance of payments and income equality, plus the growth-vs-environment trade-off — with diagrams, trade-offs and model answers.",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "main-session 2026-09-12",
+   "evidence": "app/economics/macroeconomic-objectives/page.js objective 6 is now balanced government budget per econ_spec.txt:1141; OBJECTIVES array, JSON-LD teaches, badge and two FAQ answers all corrected",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -18289,10 +18289,10 @@
    "groundTruth": "audit/raw/econ_spec.txt lines 1136-1142",
    "fix": "Growth, low inflation, low unemployment and BoP stability are the \"big four\". A balanced government budget and greater income equality complete the spec's six — environmental sustainability shows up in the trade-offs (growth vs. the environment), not the core objectives list.",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "main-session 2026-09-12",
+   "evidence": "app/economics/macroeconomic-objectives/page.js objective 6 is now balanced government budget per econ_spec.txt:1141; OBJECTIVES array, JSON-LD teaches, badge and two FAQ answers all corrected",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -18374,10 +18374,10 @@
    "groundTruth": "audit/raw/econ_spec.txt lines 1592-1593 and 1603 ('Increase in importance of transnational companies (TNCs)'; 'FDI by TNCs'); audit/raw/research-ial-spec-coverage.md line 106 ('spec and mark schemes use ... \"TNCs\" (not MNCs) in Economics Unit 4; Business uses \"MNCs\"'); audit/content-sections/economics__causes-effects-globalisation.json practice[1] and practice[4]",
    "fix": "Change the heading at line 377 from \"MNCs and globalisation\" to \"TNCs and globalisation\" — matching the Edexcel IAL spec's own term (4.3.1.1b/4.3.1.2b: \"transnational companies (TNCs)\") and the wording the app's own practice questions on this same page already use (e.g. \"transnational corporations (TNCs)\", \"TNCs may use transfer pricing\"). For a student meeting the term for the first time, consider \"TNCs (transnational corporations) and globalisation\" so it stays self-explanatory while using the exam-credited term. This same rename should be applied consistently to the CAUSES entry (line 53: \"Growth of multinational corporations\" → \"Growth of transnational corporations\"), the MNC_EFFECTS list, the FAQ answers (lines 148-149), and the tab-nav pill (line 233) so the whole page uses one term the student will actually recognise in the question stem — leaving \"MNC\" only where the page explicitly discusses the Business-subject term for contrast.",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "main-session 2026-09-12",
+   "evidence": "app/economics/globalisation/page.js metadata and JSON-LD now say transnational companies per econ_spec.txt:1592; CAUSES array is the spec's five with trading blocs added and migration relabelled a characteristic",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -18748,10 +18748,10 @@
    "groundTruth": "data/modelAnswersData.js - subject 'business' + sectionNumber '1.4'; keyword scan: workforce plan=0",
    "fix": "Free annotated model answers for Edexcel IAL Business managing people (1.4). Covers Maslow's hierarchy of needs and internal vs external recruitment, with mark scheme breakdowns and examiner tips.",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/business/managing-people-model-answers/page.js:5 workforce planning claim dropped, replaced with financial incentives which the three real answers cover",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -18765,10 +18765,10 @@
    "groundTruth": "data/modelAnswersData.js - subject 'economics' + sectionNumber '1.3.6' returns 2 answers; keyword scan: subsidy=0, subsidies=0, regulation=0",
    "fix": "Free annotated model answers for Edexcel IAL Economics government intervention (1.3.6). Two indirect-tax questions on correcting market failure, with full mark scheme breakdowns.",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/economics/government-intervention-model-answers/page.js:5 description now only claims indirect-tax coverage, drops subsidies and regulation",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -18799,10 +18799,10 @@
    "groundTruth": "audit/raw/bus_spec.txt:504 '1.3.1 Meeting customer needs'; audit/raw/section-index.json id 'meeting-customer-needs' number '1.3.1'; audit/raw/research-ial-spec-coverage.md:19",
    "fix": "Section 1.3.1 — Annotated model answers for <strong>market segmentation</strong>, customer needs, and product differentiation.\n\n(Also update the sectionNumber=\"1.1\" prop and the \"(1.1)\" in the page's metadata description in the same file, and note this is a site-wide pattern: every Business model-answers page — the-market (should be 1.3.2), marketing-mix (1.3.3), managing-people (1.3.4), entrepreneurs-leaders (1.3.5), and the Unit 2–4 equivalents — uses the same wrong sequential-topic numbering instead of real IAL spec numbers, while the Economics model-answers pages already do this correctly. Fixing just this one file will still leave students confused on the other nine.)",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/business/meeting-customer-needs-model-answers/page.js:22 subtitle now Section 1.3.1 matching bus_spec.txt line 504",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -18969,10 +18969,10 @@
    "groundTruth": "data/modelAnswersData.js - subject 'business' + sectionNumber '1.5' returns 2 answers (biz-entrepreneur-role-4, biz-entrepreneur-qualities-8); keyword scan: autocratic/democratic/paternalistic/laissez/leadership style = 0",
    "fix": "Free annotated model answers for Edexcel IAL Business entrepreneurs and leaders (1.5). Covers the role of the entrepreneur, risk-taking, and the key qualities needed for success, with mark scheme breakdowns.\n\n(And update the matching on-page subtitle in app/business/entrepreneurs-leaders-model-answers/page.js to: \"Section 1.5 — Annotated model answers for the role of entrepreneurs, risk-taking, and the qualities needed to succeed.\" — it currently repeats the same 'leadership styles' claim as visible page copy, not just metadata.)",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/business/entrepreneurs-leaders-model-answers/page.js:5 drops leadership styles, lists role, risk-taking, qualities which the two real answers cover",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -18986,10 +18986,10 @@
    "groundTruth": "components/StudyApp.jsx:26-40 (FREE_TABS / PREVIEW_TABS / PREMIUM_TABS) and components/PaywallOverlay.jsx:7-13; pricing in lib/pricing.js + app/upgrade/page.js:4-13",
    "fix": "Free revision notes, past papers and model answers for Edexcel International A-Level Economics and Business — plus premium flashcards and AI tutor from £1.",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/layout.js:15 description no longer bundles flashcards or AI tutor into free",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -19003,10 +19003,10 @@
    "groundTruth": "components/StudyApp.jsx:26-40; components/PaywallOverlay.jsx:7-13; app/upgrade/page.js:4-13",
    "fix": "Line 67 (`description`): \"Revision platform for Edexcel International A-Level Economics and Business. Free notes, diagrams and past papers, plus premium flashcards, quizzes and AI tutor.\"\n\nLine 69-73 (`offers`): separate the free and paid parts instead of one undifferentiated offer with no price — e.g. `\"offers\": { \"@type\": \"Offer\", \"category\": \"Educational Resources\", \"description\": \"Premium subscription unlocking flashcards, quizzes and AI tutor\", \"price\": \"1.00\", \"priceCurrency\": \"GBP\" }`, and if a free tier should also be represented in the graph, give it its own zero-price Offer listing only notes/diagrams/past papers rather than folding paid items into an unpriced one.\n\nThis keeps the selling point (there's a generous free tier plus a well-featured paid tier) without asserting flashcards, quizzes, or the AI tutor — which is 100% gated behind payment with no preview at all — are free.",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/layout.js:67 description fixed plus offers array now split into a free offer and a separate Pro offer for flashcards quizzes tutor",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -19020,10 +19020,10 @@
    "groundTruth": "components/StudyApp.jsx:36-39; audit/README.md 'Command-word tariffs' section; audit/raw/research-ial-spec-coverage.md §1 'Content in the app that is NOT in the IAL spec' and §4 lines 136-154",
    "fix": "Free Edexcel IAL Economics and Business revision: full notes and past papers for every unit, always free — no signup for notes. Flashcards, quizzes and an AI tutor go deeper on Premium. Every section is organised on the official IAL specification, unit by unit.",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/page.js:6 identical string to M002, same fix applies",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -19139,10 +19139,10 @@
    "groundTruth": "audit/README.md 'Command-word tariffs' ('There is no 10-mark question, no \"Assess\" and no \"Outline\"' in IAL Economics); audit/raw/research-ial-spec-coverage.md §4 lines 136-138",
    "fix": "Real 2024–2026 scenarios, 2-to-20-mark question ladders, KAA+E model answers with examiner commentary.\n\n(This keeps the numeric specificity and escalating-difficulty selling point without asserting a tariff that doesn't exist — 2 and 20 are genuine endpoints in both the Economics and Business command-word tables, so it's true regardless of subject. The underlying content bug should still be fixed separately: the three Economics files' Question 3 should move to a real tariff — Examine 8, Discuss 14, or Evaluate 20 — and the two Business files using Evaluate-10/Discuss-10 should be corrected to Assess-10, per audit/raw/research-ial-spec-coverage.md §4.)",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/data-response/page.jsx:6 2/6/10-mark question ladders replaced with three-question ladders, no invalid tariff claimed",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
@@ -19190,10 +19190,10 @@
    "groundTruth": "audit/raw/bus_spec.txt:504 '1.3.1 Meeting customer needs'; audit/raw/research-ial-spec-coverage.md §1 ('Business: 1.3.1-1.3.5, 2.3.1-2.3.5, 3.3.1-3.3.6, 4.3.1-4.3.4'); audit/raw/section-index.json id meeting-customer-needs number 1.3.1",
    "fix": "Update app/business/meeting-customer-needs-model-answers/page.js:5 (and the matching subtitle/sectionNumber prop) to use the correct IAL number:\n\n\"Free annotated model answers for Edexcel IAL Business meeting customer needs (1.3.1). Covers market segmentation, customer needs, and product differentiation with mark scheme breakdowns.\"\n\nAlso fix line 17 (`sectionNumber=\"1.1\"` → `sectionNumber=\"1.3.1\"`) and the subtitle prop (\"Section 1.1\" → \"Section 1.3.1\"), and note that the same wrong unit.position numbering scheme (1.1-1.5, 2.1-2.5) appears across all ten business model-answers pages and in data/modelAnswersData.js — those should be corrected to the real IAL numbers (1.3.1-1.3.5, 2.3.1-2.3.5, etc.) to match section-index.json, which is otherwise correct.",
    "packet": 0,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-0",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/business/meeting-customer-needs-model-answers/page.js:5 description now says 1.3.1 matching bus_spec.txt line 504",
    "note": "first pass incomplete; sibling occurrences swept centrally 2026-09-12, needs re-verification"
   },
   {
