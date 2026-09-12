@@ -4,7 +4,7 @@ import { useAuth } from './AuthProvider';
 import PaywallOverlay from './PaywallOverlay';
 import { CardsBlank } from './Icons';
 
-export default function FlashcardsTab({ cards, sectionId, previewMode = false }) {
+export default function FlashcardsTab({ cards, sectionId, previewMode = false, totalCount }) {
   const { user } = useAuth();
   const storageKey = `flashcards-${sectionId}`;
   const containerRef = useRef(null);
@@ -215,7 +215,7 @@ export default function FlashcardsTab({ cards, sectionId, previewMode = false })
   if (previewEnded) {
     return (
       <div className="flashcard-container">
-        <PaywallOverlay feature="Flashcards" previewText={`You've previewed ${PREVIEW_LIMIT} of ${cards.length} flashcards`} />
+        <PaywallOverlay feature="Flashcards" previewText={`You've previewed ${PREVIEW_LIMIT} of ${totalCount ?? cards.length} flashcards`} />
       </div>
     );
   }

@@ -732,11 +732,11 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       case 'notes': return <NotesTab data={sectionData.notes} glossaryTerms={glossaryTerms} />;
       case 'diagrams': return <DiagramsTab data={sectionData.diagrams} />;
       case 'practice': return <PracticeQuestionsTab questions={sectionData.practice} onAskTutor={isPremium ? goToTutor : null} sectionNumber={currentSection?.number} unitCode={currentUnit?.code} />;
-      case 'flashcards': return <FlashcardsTab cards={sectionData.flashcards} sectionId={activeSection} previewMode={isPreview} />;
-      case 'quiz': return <QuizTab questions={sectionData.quiz} sectionId={activeSection} onAskTutor={isPremium ? goToTutor : null} previewMode={isPreview} />;
+      case 'flashcards': return <FlashcardsTab cards={sectionData.flashcards} totalCount={sectionData.counts?.flashcards} sectionId={activeSection} previewMode={isPreview} />;
+      case 'quiz': return <QuizTab questions={sectionData.quiz} totalCount={sectionData.counts?.quiz} sectionId={activeSection} onAskTutor={isPremium ? goToTutor : null} previewMode={isPreview} />;
       case 'mistakes': return <MistakesTab data={sectionData.mistakes} />;
       case 'tutor': return <TutorTab section={currentSection} unit={currentUnit} contentData={sectionData.content} pendingPrompt={pendingTutorPrompt} onPromptConsumed={() => setPendingTutorPrompt(null)} />;
-      case 'extras': return <ExtrasTab data={sectionData.extras} previewMode={isPreview} />;
+      case 'extras': return <ExtrasTab data={sectionData.extras} totalCount={(sectionData.counts?.extrasChains || 0) + (sectionData.counts?.extrasEvaluation || 0)} previewMode={isPreview} />;
       default: return null;
     }
   }

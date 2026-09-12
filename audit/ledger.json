@@ -1451,7 +1451,7 @@
   {
    "id": "F086",
    "lens": "smart-practice-quiz-bank",
-   "sev": "low",
+   "sev": "high",
    "cat": "trust",
    "title": "Smart Practice serves all 25 questions free while the section Quiz tab paywalls the same bank after 2",
    "file": "components/QuizTab.jsx",
@@ -1459,11 +1459,11 @@
    "fix": "Decide one policy: either make Quiz tab preview larger and point its paywall at premium-only value (explanations + Ask Tutor + attempt history), or gate /practice consistently. Whichever is chosen, link the two surfaces so students know where the full bank lives.",
    "impact": "A free student who hits the Quiz-tab paywall and then finds /practice sees the identical questions for free and infers the paywall is arbitrary; a student who does not find /practice believes they have access to 2 questions per section. Either way the gating story is incoherent.",
    "packet": 12,
-   "status": "claimed",
+   "status": "not-fixed",
    "closed_by": "packet-12",
-   "verified_by": null,
-   "evidence": null,
-   "note": null
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/api/sections/[id]/route.js:1-28 uses createAnonClient with zero auth/premium check and returns quiz: quiz.data?.data unsliced (full 25-question array incl. correctIndex). components/StudyApp.jsx:472,736 + QuizTab.jsx:15-16 confirm this route IS the Quiz tab's own data source (QuizTab only slices client-side after receiving the full array). curl http://localhost:3001/api/sections/introductory-concepts unauthenticated returned 200 with 25 questions + correctIndex on every item. /api/practice/questions is correctly fixed (401 unauth, PREVIEW_LIMIT=2 matches QuizTab, MAX_SECTIONS=50 bound verified via curl), but the defect the finding names -- the Quiz tab's paywall being decorative because the full answer-keyed bank is already reachable -- still occurs, just via the untouched sibling route, so the leak is not closed.",
+   "note": "severity low -> high: 2026-09-12 measured: GET /api/practice/questions needs no auth and no premium check (uses the anon client), and returns the full section_quiz array including correctIndex for every section id passed. An unauthenticated curl returned 75 questions with answer keys across 3 sections; nothing limits the section list, so the whole 769-question bank is fetchable in one request. This is not an inconsistency between two tabs: the quiz paywall is decorative, and the answer keys leak with it. Raised from low after the founder chose to KEEP the current paywall boundary, which makes a non-functioning paywall the thing to fix."
   },
   {
    "id": "F087",
@@ -1956,7 +1956,7 @@
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "2026-09-12: the draft/published infrastructure now EXISTS — the founder ran scripts/packet-2-draft-state.sql, all eight content tables carry draft + published_at, and scripts/publish-section.mjs runs. What remains for this finding is adoption, not plumbing: no content script writes to draft yet, so a push is still a blind overwrite in practice. Close it when the first content packet writes to draft and publishes in one statement."
   },
   {
    "id": "F116",
@@ -2008,6 +2008,23 @@
    "verified_by": null,
    "evidence": null,
    "note": "Found 2026-09-12 during packet 9 browser verification, not by the September audit. Reproduce: load a section page and read the console."
+  },
+  {
+   "id": "F119",
+   "lens": "smart-practice-quiz-bank",
+   "sev": "medium",
+   "cat": "monetisation",
+   "title": "The Blackjack question pool requires sign-in but never checks premium, so a free account gets the unbounded bank",
+   "file": "app/api/fun/questions/route.js",
+   "line": 1,
+   "fix": "Apply the same entitlement the rest of the quiz bank now uses: getSubscriptionRow plus hasPremiumAccess, and cap a free account to the preview slice from lib/preview-limits.js, or decide deliberately that the fun surface is free and record that in DECISIONS.md. Do not leave it as the one unguarded door into the same content.",
+   "impact": "F086 closed the two routes that serve the quiz bank to the section view and to Smart Practice. This third route still serves the same questions to any signed-in account, free or paid, with no cap. Anyone can create a free account, so the paywall on the quiz bank is one signup away from bypassed. Found by the packet verifier while checking F086, not by the September audit.",
+   "packet": 12,
+   "status": "open",
+   "closed_by": null,
+   "verified_by": null,
+   "evidence": null,
+   "note": "Found 2026-09-12 during F086 verification. Reproduce: sign in with a free account and call GET /api/fun/questions."
   }
  ],
  "content": [

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useRef } from 'react';
 import { buildQueue, computeNextReview, createDefaultProgress } from '@/lib/spaced-repetition';
 import QuestionCard from '@/components/practice/QuestionCard';
 import SessionSummary from '@/components/practice/SessionSummary';
@@ -292,6 +292,8 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
   // state can say what happened instead of reading as missing content (F086, and F084's complaint
   // that "no questions available" looks like the section is empty).
   const [accessNote, setAccessNote] = useState(null);
+  // Keys already re-queued this session, so a wrong answer comes back exactly once (F077).
+  const requeuedRef = useRef(new Set());
   const [questionKey, setQuestionKey] = useState(0);
   const [progressSummary, setProgressSummary] = useState({});
 
@@ -406,6 +408,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
 
       // 1. Fetch quiz data
       setAccessNote(null);
+      requeuedRef.current = new Set();
       const qRes = await fetch(
         `/api/practice/questions?sections=${sectionArr.join(',')}`
       );
@@ -482,7 +485,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
   /* ─── Answer handler ─── */
 
   const handleAnswer = useCallback(
-    async ({ correct }) => {
+    async ({ correct, confidence = null }) => {
       const item = queue[currentIndex];
       if (!item) return;
 
@@ -493,8 +496,9 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
         progressMap[key] ||
         createDefaultProgress(item.sectionId, item.questionIndex);
 
-      // Compute next review (no confidence parameter)
-      const updated = computeNextReview(current, correct);
+      // F076: confidence reaches the scheduler. computeNextReview already understood
+      // 'guessed' and 'certain'; nothing had ever passed them.
+      const updated = computeNextReview(current, correct, confidence);
 
       // Save progress
       if (isLoggedIn) {
@@ -531,8 +535,17 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
           sectionId: item.sectionId,
           questionIndex: item.questionIndex,
           correct,
+          confidence,
         },
       ]);
+
+      // F077: the card told the student "this question will come back" and nothing ever brought
+      // it back within the session. Re-append a wrong item once, so the sentence is true. Once,
+      // not repeatedly: a student who keeps missing it would never reach the end otherwise.
+      if (!correct && !requeuedRef.current.has(key)) {
+        requeuedRef.current.add(key);
+        setQueue(prev => [...prev, { ...item, requeued: true }]);
+      }
     },
     [queue, currentIndex, progressMap, isLoggedIn]
   );
