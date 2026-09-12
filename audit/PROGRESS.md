@@ -32,7 +32,7 @@ content stage, drawing (13.5-13.8) after the top-ten sections.
 
 | # | Packet | Status | Commit | Snapshot | Validator |
 |---|--------|--------|--------|----------|-----------|
-| 13.1 | Quant engine | done and verified 2026-09-12 (Verify A: D001-D008 confirmed with file:line evidence; the verifier independently reproduced the guard failing on an in-tolerance slip). Verify B n/a — no student-facing surface. Built out of calendar order: no prerequisite, adds only new files, so it cannot conflict with packet 2 | | none — no content write | n/a (packet 3) |
+| 13.1 | Quant engine | done and verified 2026-09-12 (Verify A: D001-D008 confirmed with file:line evidence; the verifier independently reproduced the guard failing on an in-tolerance slip). Verify B n/a — no student-facing surface. Built out of calendar order: no prerequisite, adds only new files, so it cannot conflict with packet 2 | d67a644 | none — no content write | n/a (packet 3) |
 | 13.2 | Six templates, Learn Mode and Quiz | blocked on packet 2 (item ids) | | | |
 | 13.3 | Twelve more templates, Smart Practice | blocked on packet 2 (`item_id`) | | | |
 | 13.4 | Calculations session + funnel events | blocked on 13.2, 13.3 | | | |
