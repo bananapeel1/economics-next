@@ -31,11 +31,18 @@ const allTabs = [
   { id: 'home', label: 'Home', Icon: HomeIcon },
   { id: 'learn-mode', label: 'Learn', Icon: LearnModeIcon },
   { id: 'notes', label: 'Notes', Icon: NotesIcon },
+  /* Diagrams stays Economics-only for now, deliberately. All 23 sections holding diagram rows are
+     Economics; no Business section has one at all, so opening the tab for Business would show an
+     empty tab rather than a missing one. The fix is the content, not the gate — see F114. */
   { id: 'diagrams', label: 'Diagrams', Icon: ChartHistogram, subjects: ['economics'] },
   { id: 'practice', label: 'Practice', Icon: DrawerAlt },
   { id: 'flashcards', label: 'Flashcards', Icon: CardsBlank, premium: true },
   { id: 'quiz', label: 'Quiz', Icon: QuizIcon, premium: true },
-  { id: 'mistakes', label: 'Mistakes', Icon: MistakesIcon, premium: true, subjects: ['business'] },
+  /* F114, the half that is a code fix. This was `subjects: ['business']`, but all 43 sections
+     carry common_mistakes data — so 23 Economics sections held content written for them that no
+     student could ever open, while the upgrade page sold "Mistakes review" to both subjects.
+     Verified against the database before removing the gate: 43 of 43 rows are populated. */
+  { id: 'mistakes', label: 'Mistakes', Icon: MistakesIcon, premium: true },
   { id: 'tutor', label: 'Tutor', Icon: TutorIcon, premium: true },
   { id: 'extras', label: 'Extras', Icon: Star, premium: true },
 ];

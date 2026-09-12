@@ -1927,7 +1927,7 @@
   {
    "id": "F114",
    "lens": "content-pipeline",
-   "sev": "medium",
+   "sev": "high",
    "cat": "content-pipeline",
    "title": "Business has zero diagrams across all 19 sections; the Diagrams tab (a free tab) is empty and Business Learn Mode never shows a diagram",
    "file": "scripts/audit-diagrams.mjs",
@@ -1935,11 +1935,11 @@
    "fix": "Reuse economics demand/supply/equilibrium/elasticity SVGs for business the-market immediately; commission break-even, cash-flow, decision-tree, Boston Matrix, Ansoff, product life cycle SVGs; extend audit-diagrams.mjs to both subjects and fail on empty.",
    "impact": "A Business student (half the catalogue) never gets InlineDiagram or DiagramLabelDrill; the Diagrams tab shows nothing; 1.3.2 The Market, 2.3.2 Financial Planning (break-even chart) and 3.3.3 Decision-Making (decision trees) are diagram-based exam topics with no visual.",
    "packet": 12,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-12",
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "severity medium -> high: 2026-09-12 measured: no Business section has a section_diagrams row at all (23 of 23 rows are Economics), so it is absent content, not a broken reference. Wiring it means AUTHORING: diagrams store an inline SVG plus a marks checklist and description, and the checklist states what earns marks in IAL Business. That is content authoring and belongs behind the packet-3 validator and the content gate, not in a repair packet. 18 drawn SVGs already sit in public/diagrams/ and four are Business material (ansoff-matrix, boston-matrix, product-life-cycle, supply-demand-equilibrium), so the authoring job is checklists and descriptions around existing art, not drawing. Raised low to high because the upgrade page sells diagrams and 20 Business sections have none. The CODE half is done: the Mistakes tab is no longer Business-only."
   },
   {
    "id": "F115",
