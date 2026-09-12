@@ -2,11 +2,11 @@ import { createAnonClient } from '@/lib/supabase-anon';
 import StudyApp from '@/components/StudyApp';
 
 export const metadata = {
-  title: 'Edexcel IAL Economics & Business Revision | Free Notes, Flashcards & Quizzes | Revvy Learn',
-  description: 'Free interactive revision for Edexcel International A-Level Economics and Business. Notes, flashcards, quizzes, past papers and AI tutor — all mapped to the IAL spec.',
+  title: 'Edexcel IAL Economics & Business Revision | Free Notes & Practice | Revvy Learn',
+  description: 'Interactive revision for Edexcel International A-Level Economics and Business, across 23 Economics and 20 Business sections. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.',
   openGraph: {
-    title: 'Edexcel IAL Economics & Business Revision | Free Notes, Flashcards & Quizzes | Revvy Learn',
-    description: 'Free interactive revision for Edexcel International A-Level Economics and Business. Notes, flashcards, quizzes, past papers and AI tutor — all mapped to the IAL spec.',
+    title: 'Edexcel IAL Economics & Business Revision | Free Notes & Practice | Revvy Learn',
+    description: 'Interactive revision for Edexcel International A-Level Economics and Business, across 23 Economics and 20 Business sections. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.',
     url: 'https://revvylearn.com',
     type: 'website',
   },
@@ -80,7 +80,7 @@ export default async function HomePage({ searchParams }) {
 
   return (
     <>
-      <h1 className="sr-only">Edexcel IAL Economics &amp; Business Revision — Free Notes, Flashcards &amp; Quizzes</h1>
+      <h1 className="sr-only">Edexcel IAL Economics &amp; Business Revision — Free Notes and Practice Questions</h1>
       <StudyApp
         subjects={subjects || []}
         sections={sections || []}
@@ -95,10 +95,10 @@ export default async function HomePage({ searchParams }) {
           Revvy Learn is a free interactive revision platform built specifically for the Edexcel International A-Level (IAL) specification in Economics and Business. Every topic is mapped directly to the IAL syllabus, covering all four Economics units (WEC11, WEC12, WEC13, WEC14) and all four Business units (WBS11, WBS12, WBS13, WBS14).
         </p>
         <p>
-          Whether you are studying at an international school in Hong Kong, South Korea, Malaysia, Singapore, Pakistan, Sri Lanka or the Middle East, Revvy Learn gives you everything you need to revise for your Edexcel IAL exams. Our revision notes, adaptive flashcards, exam-style practice questions, model answers and AI tutor are all free to access — no signup required for notes.
+          Whether you are studying at an international school in Hong Kong, South Korea, Malaysia, Singapore, Pakistan, Sri Lanka or the Middle East, Revvy Learn gives you everything you need to revise for your Edexcel IAL exams. Our revision notes, diagrams and exam-style practice questions are free to access, with no signup required for notes, and the first model answer on every page is free to read. Flashcards, quizzes and the AI tutor unlock with Pro.
         </p>
         <p>
-          Unlike general A-Level revision sites, Revvy Learn is purpose-built for the International A-Level. Every spec point is covered with concise, exam-focused notes, clear diagrams, and spaced-repetition flashcards that adapt to your strengths and weaknesses. Our AI tutor answers any Economics or Business question instantly, helping you build evaluation chains and check your reasoning before exam day.
+          Unlike general A-Level revision sites, Revvy Learn is purpose-built for the International A-Level. All 23 Economics sections and all 20 Business sections have concise, exam-focused notes, and every Economics section comes with clear exam diagrams. Flashcards use spaced repetition (SM-2), so the cards you get wrong come back sooner. Our AI tutor answers any Economics or Business question instantly, helping you build evaluation chains and check your reasoning before exam day.
         </p>
         <p>
           Revvy Learn covers both the January and June exam series, so whether you are sitting papers in the winter or summer session, your revision is always aligned to the right content. Start revising today — choose Economics or Business and work through every topic at your own pace.

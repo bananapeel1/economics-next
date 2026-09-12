@@ -6,11 +6,11 @@ import '@/styles/landing.css';
 
 export const metadata = {
   title: 'Edexcel IAL Economics Notes — Free Revision for Units 1–4 (2026)',
-  description: 'Free Edexcel IAL Economics revision notes for all units: Markets in Action (WEC11), Macroeconomic Performance (WEC12), Business Behaviour (WEC13) and Global Economy (WEC14). Interactive notes with diagrams, flashcards, quizzes and AI tutor.',
+  description: 'Free Edexcel IAL Economics revision notes for all units: Markets in Action (WEC11), Macroeconomic Performance (WEC12), Business Behaviour (WEC13) and Global Economy (WEC14). Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.',
   alternates: { canonical: 'https://revvylearn.com/economics' },
   openGraph: {
     title: 'Edexcel IAL Economics Notes — Free Revision Units 1–4 | Revvy Learn',
-    description: 'Free interactive revision for all Edexcel IAL Economics units. Notes, diagrams, flashcards, quizzes and AI tutor.',
+    description: 'Interactive revision for all Edexcel IAL Economics units. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.',
     url: 'https://revvylearn.com/economics',
     type: 'article',
   },
@@ -122,7 +122,7 @@ export default function EconomicsPage() {
         "name": "How many units are in Edexcel IAL Economics?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "There are four units: Unit 1 Markets in Action (WEC11), Unit 2 Macroeconomic Performance and Policy (WEC12), Unit 3 Business Behaviour (WEC13), and Unit 4 Developments in the Global Economy (WEC14). Each unit has six spec points covering the full range of economic theory."
+          "text": "There are four units: Unit 1 Markets in Action (WEC11), Unit 2 Macroeconomic Performance and Policy (WEC12), Unit 3 Business Behaviour (WEC13), and Unit 4 Developments in the Global Economy (WEC14). Units 1, 2 and 4 each have six spec points and Unit 3 has five: 23 in total, covering the full range of economic theory."
         }
       },
       {
@@ -169,7 +169,7 @@ export default function EconomicsPage() {
               Edexcel IAL<br /><em>Economics Notes</em>
             </h1>
             <p className="elp-hero-desc">
-              Written for the International A-Level &mdash; not the UK domestic spec &mdash; so every diagram and exam tip matches the paper you actually sit.
+              Structured around the Edexcel International A-Level specification &mdash; not the UK domestic spec &mdash; so your notes follow the units and topics of the paper you actually sit.
             </p>
             <div className="elp-hero-actions">
               <Link href="/?section=introductory-concepts" className="elp-btn-primary">
@@ -177,9 +177,9 @@ export default function EconomicsPage() {
               </Link>
             </div>
             <div className="elp-hero-proof">
-              <div className="elp-proof-item"><strong>Free</strong> notes for every spec point</div>
+              <div className="elp-proof-item"><strong>Free</strong> notes across all four units</div>
               <div className="elp-proof-dot" />
-              <div className="elp-proof-item"><strong>4 units</strong> &middot; 24 spec points</div>
+              <div className="elp-proof-item"><strong>4 units</strong> &middot; 23 spec points</div>
               <div className="elp-proof-dot" />
               <div className="elp-proof-item">No signup needed</div>
             </div>
@@ -190,7 +190,7 @@ export default function EconomicsPage() {
             <div className="elp-hero-badge elp-b1">
               <span className="elp-badge-icon"><Star size={18} /></span>
               <div className="elp-badge-text">
-                <span className="elp-badge-val">Adaptive</span>
+                <span className="elp-badge-val">SM-2</span>
                 <span className="elp-badge-lbl">spaced repetition</span>
               </div>
             </div>
@@ -244,7 +244,7 @@ export default function EconomicsPage() {
             <div className="elp-s-eyebrow-dot" style={{ background: 'var(--elp-green)' }} />
             Full specification
           </div>
-          <h2 className="elp-s-title">All four units, every spec point</h2>
+          <h2 className="elp-s-title">All four units, topic by topic</h2>
           <p className="elp-s-sub">
             Open any topic straight in the app.
           </p>
@@ -289,7 +289,7 @@ export default function EconomicsPage() {
               What&apos;s included
             </div>
             <h2 className="elp-s-title">Everything you need to revise Economics</h2>
-            <p className="elp-s-sub">Notes are free. Flashcards, quizzes and AI tutor unlock with a subscription.</p>
+            <p className="elp-s-sub">Notes are free. Flashcards, quizzes and the AI tutor unlock with Pro.</p>
           </div>
           <div className="elp-wyg-grid">
             <div className="elp-wyg-card elp-fade-up">
@@ -300,14 +300,14 @@ export default function EconomicsPage() {
             </div>
             <div className="elp-wyg-card elp-fade-up" style={{ transitionDelay: '.07s' }}>
               <div className="elp-wyg-icon" style={{ background: 'var(--elp-b-bg)', border: '1px solid var(--elp-b-bd)' }}><CardsIcon size={18} /></div>
-              <div className="elp-wyg-title">Adaptive Flashcards</div>
-              <div className="elp-wyg-desc">Spaced repetition that learns from you &mdash; topics you struggle with come back sooner, mastered ones space out automatically.</div>
+              <div className="elp-wyg-title">Flashcards</div>
+              <div className="elp-wyg-desc">Spaced repetition on the SM-2 schedule &mdash; cards you get wrong come back sooner, cards you know space out.</div>
               <span className="elp-wyg-tag elp-tag-pro">Premium</span>
             </div>
             <div className="elp-wyg-card elp-fade-up" style={{ transitionDelay: '.14s' }}>
               <div className="elp-wyg-icon" style={{ background: 'var(--elp-t-bg)', border: '1px solid var(--elp-t-bd)' }}><BoltIcon size={18} /></div>
               <div className="elp-wyg-title">Practice Questions</div>
-              <div className="elp-wyg-desc">Exam-style questions with model answers for every unit &mdash; adaptive difficulty based on your performance.</div>
+              <div className="elp-wyg-desc">Exam-style questions for every unit, free to practise &mdash; filter by mark value to drill the tariffs you need. The first model answer on each page is free; the rest unlock with Pro.</div>
               <span className="elp-wyg-tag elp-tag-free">Free</span>
             </div>
             <div className="elp-wyg-card elp-fade-up" style={{ transitionDelay: '.21s' }}>
@@ -319,13 +319,13 @@ export default function EconomicsPage() {
             <div className="elp-wyg-card elp-fade-up" style={{ transitionDelay: '.28s' }}>
               <div className="elp-wyg-icon" style={{ background: 'rgba(245,158,11,.08)', border: '1px solid rgba(245,158,11,.2)' }}><ProgressChart size={18} /></div>
               <div className="elp-wyg-title">Progress Tracking</div>
-              <div className="elp-wyg-desc">See your mastery across all 24 spec points. Identify weaknesses before your exam and focus your revision where it matters most.</div>
-              <span className="elp-wyg-tag elp-tag-pro">Premium</span>
+              <div className="elp-wyg-desc">See your mastery across all 23 spec points, based on your quiz and flashcard answers. Identify weaknesses before your exam and focus your revision where it matters most.</div>
+              <span className="elp-wyg-tag elp-tag-free">Free</span>
             </div>
             <div className="elp-wyg-card elp-fade-up" style={{ transitionDelay: '.35s' }}>
               <div className="elp-wyg-icon" style={{ background: 'var(--elp-g-bg)', border: '1px solid var(--elp-g-bd)' }}><NetworkGraph size={18} /></div>
               <div className="elp-wyg-title">Topic Links Map</div>
-              <div className="elp-wyg-desc">Visual map showing how Economics topics connect &mdash; essential for 12-mark evaluation questions that expect chains of reasoning across units.</div>
+              <div className="elp-wyg-desc">Visual map showing how Economics topics connect within each unit &mdash; useful for building the chains of reasoning that Analyse, Discuss and Evaluate questions expect.</div>
               <span className="elp-wyg-tag elp-tag-free">Free</span>
             </div>
           </div>
@@ -372,7 +372,7 @@ export default function EconomicsPage() {
             <span className="elp-feat-icon"><CardsIcon size={18} /></span>
             <div>
               <div className="elp-feat-label">Spaced repetition</div>
-              <div className="elp-feat-sub">Adaptive flashcard algorithm</div>
+              <div className="elp-feat-sub">Cards you miss come back sooner</div>
             </div>
           </div>
           <div className="elp-feat-item">
@@ -405,7 +405,7 @@ export default function EconomicsPage() {
         <div className="elp-cta-inner elp-fade-up">
           <h2 className="elp-cta-title">Ready to start revising?</h2>
           <p className="elp-cta-sub">
-            Free notes for every spec point. Adaptive flashcards, quizzes and AI tutor unlock with Pro — £1 for your first month.
+            Free notes across all four units. Flashcards, quizzes and the AI tutor unlock with Pro — £1 for your first month.
           </p>
           <div className="elp-cta-actions">
             <Link
@@ -431,10 +431,10 @@ export default function EconomicsPage() {
           At A2 level, Unit 3 Business Behaviour (WEC13) examines the theory of the firm, market structures from perfect competition to monopoly, labour markets and competition policy. Unit 4 Developments in the Global Economy (WEC14) explores globalisation, international trade, exchange rates, poverty and inequality, and development economics.
         </p>
         <p>
-          Revvy Learn provides free revision notes for every spec point across all four IAL Economics units. Unlike generic revision sites, our content is specifically built for the Edexcel IAL specification and is used by students in South Korea, Hong Kong, Malaysia, Singapore, Pakistan, Sri Lanka and across the Middle East. Each topic includes structured notes, diagrams, adaptive flashcards with spaced repetition, exam-style practice questions with model answers, and an AI tutor that helps you build evaluation chains for 20-mark essays.
+          Revvy Learn provides free revision notes across all four IAL Economics units. Unlike generic revision sites, our content is specifically built for the Edexcel IAL specification and is used by students in South Korea, Hong Kong, Malaysia, Singapore, Pakistan, Sri Lanka and across the Middle East. Each topic includes structured notes, diagrams and exam-style practice questions, all free. Flashcards on a spaced repetition schedule, quizzes, model answers and an AI tutor that helps you build evaluation chains for 20-mark essays unlock with Pro.
         </p>
         <p>
-          IAL Economics exams are available in both the January and June exam series, giving international students flexibility in when they sit each unit. Whether you are preparing for the January or June session, Revvy Learn covers the complete specification to help you achieve the highest grades.
+          IAL Economics exams are available in both the January and June exam series, giving international students flexibility in when they sit each unit. Whether you are preparing for the January or June session, Revvy Learn&apos;s notes are organised around every unit and topic heading in the Edexcel IAL specification, giving you a clear structure to revise from in the run-up to each paper.
         </p>
       </section>
 

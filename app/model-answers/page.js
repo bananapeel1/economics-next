@@ -8,13 +8,13 @@ import '@/styles/landing.css';
 
 export const metadata = {
   title: 'Edexcel IAL Economics & Business Model Answers | Revvy Learn',
-  description: 'Free annotated model answers for Edexcel IAL Economics and Business exam questions. Full mark 4, 8 and 20-mark responses with mark scheme breakdowns, examiner tips and evaluation frameworks.',
+  description: 'Annotated model answers for Edexcel IAL Economics and Business exam questions. Top-band 4, 8 and 20-mark responses with mark scheme breakdowns, PEEL structure and examiner commentary.',
   alternates: {
     canonical: '/model-answers',
   },
   openGraph: {
     title: 'Edexcel IAL Economics & Business Model Answers | Revvy Learn',
-    description: 'Free annotated model answers for Edexcel IAL Economics and Business. 4, 8 and 20-mark exam questions with mark scheme commentary.',
+    description: 'Annotated model answers for Edexcel IAL Economics and Business. 4, 8 and 20-mark exam questions with mark scheme commentary.',
     url: 'https://revvylearn.com/model-answers',
   },
 };
@@ -94,7 +94,7 @@ export default function ModelAnswersRoute() {
         <div className="elp-cta-bg" />
         <div className="elp-cta-inner elp-fade-up">
           <h2 className="elp-cta-title">Ready to start revising?</h2>
-          <p className="elp-cta-sub">Free notes for every spec point. Practice with flashcards, quizzes and AI tutor.</p>
+          <p className="elp-cta-sub">Free notes across all four units. Flashcards, quizzes and the AI tutor unlock with Pro.</p>
           <div className="elp-cta-actions">
             <Link href="/?section=introductory-concepts" className="elp-btn-primary" style={{ fontSize: '15px', padding: '14px 30px' }}>Open Revvy Learn &rarr;</Link>
           </div>

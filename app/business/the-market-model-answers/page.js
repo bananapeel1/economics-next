@@ -2,11 +2,11 @@ import SectionModelAnswersPage from '@/components/SectionModelAnswersPage';
 
 export const metadata = {
   title: 'Edexcel IAL The Market Model Answers | Business | Revvy Learn',
-  description: 'Free annotated model answers for Edexcel IAL Business the market (1.2). Covers market research, demand, supply, and competition with mark scheme breakdowns and examiner tips.',
+  description: 'Annotated model answer for Edexcel IAL Business The Market (1.3.2): primary market research, with the mark scheme broken down band by band and commentary on what scores.',
   alternates: { canonical: '/business/the-market-model-answers' },
   openGraph: {
     title: 'Edexcel IAL The Market Model Answers | Revvy Learn',
-    description: 'Step-by-step model answers for Edexcel IAL Business market research and competition questions.',
+    description: 'A step-by-step model answer for Edexcel IAL Business primary market research, with the mark scheme broken down band by band.',
     url: 'https://revvylearn.com/business/the-market-model-answers',
   },
 };
@@ -19,7 +19,7 @@ export default function TheMarketModelAnswersPage() {
       subject="business"
       backLink={{ href: '/business/unit-1', label: 'Unit 1: Marketing & People' }}
       title="The Market Model Answers"
-      subtitle="Section 1.2 — Annotated model answers for <strong>market research</strong>, demand, supply, and competitive analysis."
+      subtitle="Section 1.3.2 — An annotated model answer on <strong>primary market research</strong>, with the mark scheme broken down band by band."
     />
   );
 }

@@ -6,7 +6,7 @@ import '@/styles/landing.css';
 
 export const metadata = {
   title: 'Global Business — Edexcel IAL Business Unit 4 (WBS14) | Revvy Learn',
-  description: 'Complete revision notes for Edexcel IAL Business Unit 4 (WBS14). Globalisation, global markets and expansion, global marketing, global industries and multinational corporations.',
+  description: 'Revision notes for Edexcel IAL Business Unit 4 (WBS14), covering globalisation, global markets and expansion, global marketing, and global industries and multinational corporations.',
   openGraph: { title: 'Global Business — Edexcel IAL Business Unit 4 (WBS14) | Revvy Learn', url: 'https://revvylearn.com/business/unit-4', type: 'article' },
 };
 
@@ -17,26 +17,25 @@ const SECTIONS = [
     desc: 'The forces driving globalisation — why businesses trade internationally, the role of trade blocs, the impact on developed and developing economies, and the debate around free trade vs protectionism.',
     subtopics: [
       { letter: 'a', name: 'Causes of Globalisation', kw: 'Technology · trade liberalisation · deregulation · transport costs' },
-      { letter: 'b', name: 'Trade Blocs & Agreements', kw: 'EU · NAFTA/USMCA · ASEAN · WTO · free trade areas · customs unions' },
+      { letter: 'b', name: 'Trade Blocs & Agreements', kw: 'EU & the single market · NAFTA/USMCA · WTO · free trade areas · customs unions' },
       { letter: 'c', name: 'Protectionism', kw: 'Tariffs · quotas · subsidies · infant industry · dumping' },
       { letter: 'd', name: 'Impact of Globalisation', kw: 'FDI · cultural convergence · inequality · environmental impact' },
     ] },
   { id: 'global-markets-expansion', ref: '4.3.2', title: 'Global Markets & Expansion',
-    desc: 'How businesses enter and compete in global markets — market entry strategies, assessing international opportunities, managing risk and Bartlett & Ghoshal\'s framework.',
+    desc: 'How businesses enter and compete in global markets — market entry strategies, assessing international opportunities, applying Ansoff\'s matrix abroad and managing the risks of global expansion.',
     subtopics: [
       { letter: 'a', name: 'Market Entry Strategies', kw: 'Exporting · licensing · franchising · joint ventures · FDI · subsidiaries' },
       { letter: 'b', name: 'Assessing Opportunities', kw: 'Market size · growth potential · cultural distance · political risk' },
       { letter: 'c', name: 'Managing International Risk', kw: 'Exchange rate risk · political instability · legal differences · corruption' },
       { letter: 'd', name: 'Ansoff\'s Matrix (Global)', kw: 'Market development · diversification · existing vs new markets/products' },
-      { letter: 'e', name: 'Bartlett & Ghoshal', kw: 'Global · transnational · international · multi-domestic strategies' },
     ] },
   { id: 'global-marketing', ref: '4.3.3', title: 'Global Marketing',
     desc: 'Adapting the marketing mix for international markets — standardisation vs adaptation, glocalisation, cultural differences and the challenges of marketing across borders.',
     subtopics: [
       { letter: 'a', name: 'Standardisation vs Adaptation', kw: 'Global branding · cost savings · local responsiveness · trade-offs' },
       { letter: 'b', name: 'Glocalisation', kw: 'Think global, act local · adapting products · pricing · promotion' },
-      { letter: 'c', name: 'Cultural Differences', kw: 'Hofstede · language · religion · consumer behaviour · taboos' },
-      { letter: 'd', name: 'Global Pricing', kw: 'Transfer pricing · price discrimination · exchange rate impact · grey markets' },
+      { letter: 'c', name: 'Hofstede\'s Cultural Dimensions', kw: 'Individualism vs collectivism · power distance · uncertainty avoidance' },
+      { letter: 'd', name: 'Cultural Mistakes & Brand Impact', kw: 'Language & translation · religion · social norms · brand reputation' },
     ] },
   { id: 'global-industries-mncs', ref: '4.3.4', title: 'Global Industries & MNCs',
     desc: 'The role and impact of multinational corporations — transfer pricing, FDI, ethical issues, the impact on host and home countries, and the power of global brands.',
@@ -68,9 +67,9 @@ export default function Unit4Page() {
             <div className="elp-hero-eyebrow" style={{ background: 'var(--eup-accent-bg)', borderColor: 'var(--eup-accent-bd)', color: 'var(--eup-accent)' }}>Edexcel IAL Business &middot; {UNIT.code}</div>
             <div className="eup-unit-badge-row"><span className="eup-unit-num">Unit {UNIT.number}</span><span className="eup-unit-code">{UNIT.code}</span></div>
             <h1 className="elp-hero-title">{UNIT.title} &mdash;<br /><em style={{ color: 'var(--eup-accent)' }}>{UNIT.code} notes</em></h1>
-            <p className="elp-hero-desc">Complete revision notes for Unit 4. Globalisation, global markets, international marketing and multinational corporations &mdash; everything you need for {UNIT.code}.</p>
+            <p className="elp-hero-desc">Revision notes for Unit 4. Globalisation, global markets and expansion, global marketing, and global industries and multinational corporations &mdash; the four topics of {UNIT.code}.</p>
             <div className="elp-hero-actions"><Link href={`/?section=${SECTIONS[0].id}`} className="elp-btn-primary">Start revising free &rarr;</Link></div>
-            <div className="elp-hero-proof"><div className="elp-proof-item"><strong>4 topics</strong> fully covered</div><div className="elp-proof-dot" /><div className="elp-proof-item"><strong>Free</strong> notes for every spec point</div><div className="elp-proof-dot" /><div className="elp-proof-item">{UNIT.code} exam ready</div></div>
+            <div className="elp-hero-proof"><div className="elp-proof-item"><strong>4 topics</strong> fully covered</div><div className="elp-proof-dot" /><div className="elp-proof-item"><strong>Free</strong> notes across all four units</div><div className="elp-proof-dot" /><div className="elp-proof-item">{UNIT.code} exam ready</div></div>
           </div>
           <div className="elp-hero-preview elp-fade-up" style={{ transitionDelay: '.15s' }}>
             <div className="elp-hero-badge elp-b1"><span className="elp-badge-icon"><Star size={18} /></span><div className="elp-badge-text"><span className="elp-badge-val">4 topics</span><span className="elp-badge-lbl">fully spec-aligned</span></div></div>
@@ -111,7 +110,7 @@ export default function Unit4Page() {
           <div className="eup-key-concepts">
             <div className="eup-concept"><div className="eup-concept-icon"><NetworkGraph size={18} /></div><div><div className="eup-concept-title">Globalisation is a double-edged sword</div><div className="eup-concept-desc">Trade creates winners and losers. Always evaluate both sides — economic growth and job creation vs inequality, cultural erosion and environmental damage.</div></div></div>
             <div className="eup-concept"><div className="eup-concept-icon"><BoltIcon size={18} /></div><div><div className="eup-concept-title">Entry strategy depends on context</div><div className="eup-concept-desc">Exporting, licensing, franchising, JVs and FDI each carry different levels of risk, cost and control. Match the strategy to the market conditions and business resources.</div></div></div>
-            <div className="eup-concept"><div className="eup-concept-icon"><PenIcon size={18} /></div><div><div className="eup-concept-title">Glocalisation is the sweet spot</div><div className="eup-concept-desc">The best global businesses balance standardisation (cost efficiency) with adaptation (local relevance). Use Bartlett & Ghoshal to frame your analysis.</div></div></div>
+            <div className="eup-concept"><div className="eup-concept-icon"><PenIcon size={18} /></div><div><div className="eup-concept-title">Glocalisation is the sweet spot</div><div className="eup-concept-desc">The best global businesses balance standardisation (cost efficiency) with adaptation (local relevance). Weigh both sides before you recommend a strategy.</div></div></div>
             <div className="eup-concept"><div className="eup-concept-icon"><ChartHistogram size={18} />️</div><div><div className="eup-concept-title">MNCs face ethical scrutiny</div><div className="eup-concept-desc">Transfer pricing, labour standards and environmental impact are key evaluation themes. Examiners want you to weigh economic benefits against ethical concerns.</div></div></div>
           </div>
         </div>
@@ -126,7 +125,7 @@ export default function Unit4Page() {
             <div className="eup-ei-row"><span className="eup-ei-key">% of A-Level</span><span className="eup-ei-val">25%</span></div>
             <div className="eup-ei-row"><span className="eup-ei-key">Question types</span><span className="eup-ei-val eup-marks-pills-inline"><span className="eup-mp eup-mp-4">4</span><span className="eup-mp eup-mp-8">8</span><span className="eup-mp eup-mp-20">20</span></span></div>
             <div className="eup-ei-row"><span className="eup-ei-key">Data response</span><span className="eup-ei-val">Yes &mdash; Section A</span></div>
-            <div className="eup-ei-row eup-ei-row-last"><span className="eup-ei-key">Essay questions</span><span className="eup-ei-val">Section B &mdash; choose 1 of 2</span></div>
+            <div className="eup-ei-row eup-ei-row-last"><span className="eup-ei-key">Essay questions</span><span className="eup-ei-val">Sections B &amp; C &mdash; one compulsory each</span></div>
           </div>
         </div>
       </div></div>
@@ -144,13 +143,13 @@ export default function Unit4Page() {
 
       <div className="elp-features-strip"><div className="elp-features-inner">
         <div className="elp-feat-item"><span className="elp-feat-icon"><Clipboard size={18} /></span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every {UNIT.code} point covered</div></div></div>
-        <div className="elp-feat-item"><span className="elp-feat-icon"><CardsIcon size={18} /></span><div><div className="elp-feat-label">Spaced repetition</div><div className="elp-feat-sub">Adaptive flashcard algorithm</div></div></div>
+        <div className="elp-feat-item"><span className="elp-feat-icon"><CardsIcon size={18} /></span><div><div className="elp-feat-label">Spaced repetition</div><div className="elp-feat-sub">Cards you miss come back sooner</div></div></div>
         <div className="elp-feat-item"><span className="elp-feat-icon"><BoltIcon size={18} /></span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style, every topic</div></div></div>
         <div className="elp-feat-item"><span className="elp-feat-icon"><Tutor size={18} /></span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any Business question</div></div></div>
-        <div className="elp-feat-item"><span className="elp-feat-icon"><ProgressChart size={18} /></span><div><div className="elp-feat-label">Progress tracking</div><div className="elp-feat-sub">Mastery across all spec points</div></div></div>
+        <div className="elp-feat-item"><span className="elp-feat-icon"><ProgressChart size={18} /></span><div><div className="elp-feat-label">Progress tracking</div><div className="elp-feat-sub">Mastery across the topics you study</div></div></div>
       </div></div>
 
-      <div className="elp-cta-section"><div className="elp-cta-bg" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(167,139,250,.07) 0%, transparent 65%)' }} /><div className="elp-cta-inner elp-fade-up"><h2 className="elp-cta-title">Ready to revise Unit 4?</h2><p className="elp-cta-sub">Free notes for every spec point. Adaptive flashcards, practice questions and AI tutor unlock with Pro — £1 for your first month.</p><div className="elp-cta-actions"><Link href={`/?section=${SECTIONS[0].id}`} className="elp-btn-primary" style={{ fontSize: 15, padding: '14px 30px' }}>Open Revvy Learn — it&apos;s free &rarr;</Link><Link href="/business" className="elp-btn-secondary">&larr; Back to all units</Link></div><p className="elp-cta-note">No signup required for notes &middot; Cancel anytime &middot; &pound;1 first month, then &pound;1.99 &middot; charged in your local currency</p></div></div>
+      <div className="elp-cta-section"><div className="elp-cta-bg" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(167,139,250,.07) 0%, transparent 65%)' }} /><div className="elp-cta-inner elp-fade-up"><h2 className="elp-cta-title">Ready to revise Unit 4?</h2><p className="elp-cta-sub">Free notes across all four units. Flashcards, quizzes and the AI tutor unlock with Pro — £1 for your first month.</p><div className="elp-cta-actions"><Link href={`/?section=${SECTIONS[0].id}`} className="elp-btn-primary" style={{ fontSize: 15, padding: '14px 30px' }}>Open Revvy Learn — it&apos;s free &rarr;</Link><Link href="/business" className="elp-btn-secondary">&larr; Back to all units</Link></div><p className="elp-cta-note">No signup required for notes &middot; Cancel anytime &middot; &pound;1 first month, then &pound;1.99 &middot; charged in your local currency</p></div></div>
 
       <footer className="elp-footer"><div className="elp-footer-inner"><div className="elp-footer-logo"><img src="/logo.svg" alt="" className="elp-footer-mark" width={18} height={18} />Revvy Learn</div><div className="elp-footer-sep" /><div className="elp-footer-links"><Link className="elp-footer-link" href="/business">Business</Link><Link className="elp-footer-link" href="/business/unit-1">Unit 1</Link><Link className="elp-footer-link" href="/business/unit-2">Unit 2</Link><Link className="elp-footer-link" href="/business/unit-3">Unit 3</Link><Link className="elp-footer-link" href="/business/unit-4">Unit 4</Link><Link className="elp-footer-link" href="/glossary">Glossary</Link><Link className="elp-footer-link" href="/past-papers">Past Papers</Link></div><div className="elp-footer-right">Edexcel IAL {UNIT.code} &copy; Revvy Learn</div></div></footer>
     </div>

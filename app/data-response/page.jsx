@@ -3,7 +3,7 @@ import './markdown-page.css';
 
 export const metadata = {
   title: 'IAL Data-Response Practice — Edexcel Economics & Business | Revvy Learn',
-  description: 'Free stimulus-based data-response practice for Edexcel IAL Economics and Business. Real 2024–2026 scenarios, 2/6/10-mark question ladders, KAA+E model answers with examiner commentary.',
+  description: 'Free stimulus-based data-response practice for Edexcel IAL Economics and Business. Real 2024–2026 scenarios, three-question ladders that build to a full evaluation, KAA+E model answers with examiner commentary.',
   alternates: { canonical: 'https://revvylearn.com/data-response' },
   openGraph: {
     title: 'IAL Data-Response Practice | Revvy Learn',
@@ -61,7 +61,7 @@ export default function DataResponseIndex() {
       <h1>IAL Data-Response Practice</h1>
       <p className="data-response-index-intro">
         Stimulus-based practice pieces mapped to the Edexcel IAL Economics and Business specs.
-        Each piece uses a recent (2024–2026) real-world scenario, a 2/6/10-mark question ladder,
+        Each piece uses a recent (2024–2026) real-world scenario, a three-question ladder that builds to a full evaluation,
         and fully worked KAA+E model answers with Level 3 vs Level 4 examiner notes and common-mistake callouts.
         All free to use — no signup required.
       </p>

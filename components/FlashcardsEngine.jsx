@@ -484,6 +484,9 @@ export default function FlashcardsEngine({ subjects, units, sections, isLoggedIn
             body: JSON.stringify({
               sectionId: updated.sectionId,
               questionIndex: updated.questionIndex,
+              // Packet 2 dual-write. buildQueue carries the source item, which now has an id.
+              // Sent alongside the index, never instead of it; packet 4 switches the key.
+              itemId: item.question?.id,
               ease: updated.ease,
               intervalDays: updated.intervalDays,
               repetitions: updated.repetitions,

@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Written Practice — Revvy Learn',
-  description: 'Practise written exam answers and receive instant AI marking with structured feedback. 4, 6, 10, and 20-mark questions.',
+  description: 'Practise written exam answers, from short responses to full 20-mark essays, and receive instant AI marking with structured feedback.',
 };
 
 export default async function WrittenPracticePage() {
@@ -54,8 +54,10 @@ export default async function WrittenPracticePage() {
             <span className="wap-paywall-icon">✍️</span>
             <h2 className="wap-paywall-title">Premium Feature</h2>
             <p className="wap-paywall-text">
-              Written answer practice uses AI to mark your answers against
-              Edexcel mark schemes. Upgrade to Pro for unlimited access.
+              Written answer practice uses AI to mark your answers against the
+              Edexcel assessment objectives: knowledge, application, analysis
+              and evaluation. Upgrade to Pro for AI marking of up to 50 answers
+              a day.
             </p>
             {!isLoggedIn ? (
               <Link href="/login" className="spe-btn spe-btn-primary">Sign in to continue</Link>

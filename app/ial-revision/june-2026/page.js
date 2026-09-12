@@ -6,11 +6,11 @@ import '@/styles/landing.css';
 
 export const metadata = {
   title: 'IAL June 2026 Revision — Edexcel Economics & Business Exam Preparation | Revvy Learn',
-  description: 'Revision guide for the Edexcel IAL June 2026 exam series. Free notes, flashcards, past papers and model answers for IAL Economics (WEC11–WEC14) and Business (WBS11–WBS14). Last-minute revision tips and exam preparation.',
+  description: 'Revision guide for the Edexcel IAL June 2026 exam series. Free notes and practice questions for IAL Economics (WEC11–WEC14) and Business (WBS11–WBS14), plus free past papers and mark schemes for all four units and mark schemes. Last-minute revision tips and exam preparation.',
   alternates: { canonical: 'https://revvylearn.com/ial-revision/june-2026' },
   openGraph: {
     title: 'IAL June 2026 Revision — Edexcel Economics & Business | Revvy Learn',
-    description: 'Free revision for the June 2026 IAL exam series. Economics and Business notes, flashcards and past papers.',
+    description: 'Revision for the June 2026 IAL exam series. Economics and Business notes, practice questions and past papers are free; flashcards and quizzes unlock with Pro.',
     url: 'https://revvylearn.com/ial-revision/june-2026',
   },
 };
@@ -39,7 +39,7 @@ export default function June2026Page() {
             <div className="elp-hero-eyebrow">Edexcel IAL &middot; June 2026 Exam Series</div>
             <h1 className="elp-hero-title">June 2026<br /><em>IAL revision guide</em></h1>
             <p className="elp-hero-desc">
-              The June 2026 Edexcel IAL exam series runs from late May to mid-June. Whether you are sitting Economics units (WEC11&ndash;WEC14) or Business units (WBS11&ndash;WBS14), Revvy Learn has free revision resources for every spec point.
+              The June 2026 Edexcel IAL exam series runs from late May to mid-June. Whether you are sitting Economics units (WEC11&ndash;WEC14) or Business units (WBS11&ndash;WBS14), Revvy Learn has free revision notes and practice questions for both subjects.
             </p>
             <div className="elp-hero-actions">
               <Link href="/economics" className="elp-btn-primary">Economics revision &rarr;</Link>
@@ -126,7 +126,7 @@ export default function June2026Page() {
         <div className="elp-cta-bg" />
         <div className="elp-cta-inner elp-fade-up">
           <h2 className="elp-cta-title">Start your June 2026 revision now</h2>
-          <p className="elp-cta-sub">Free notes for every spec point. The earlier you start, the better your results.</p>
+          <p className="elp-cta-sub">Free notes across all four units. The earlier you start, the better your results.</p>
           <div className="elp-cta-actions">
             <Link href="/?section=introductory-concepts" className="elp-btn-primary" style={{ fontSize: '15px', padding: '14px 30px' }}>Open Revvy Learn &rarr;</Link>
           </div>

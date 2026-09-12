@@ -1,0 +1,1224 @@
+{
+ "section_id": "market-structures-contestability",
+ "subject": "economics",
+ "label": "2026-09-12-pre-packet-2",
+ "tables": {
+  "section_content": [
+   {
+    "title": "Perfect Competition & Monopolistic Competition",
+    "sections": [
+     {
+      "id": "perfect-competition",
+      "body": [
+       {
+        "text": "**Perfect competition** is a market structure with many firms, each selling a **homogeneous (identical) product**. Because no single firm is large enough to influence the market price, each is a **price taker** — it accepts the price set by market supply and demand. This means the firm's demand curve is perfectly elastic: AR = MR = P.",
+        "type": "paragraph"
+       },
+       {
+        "text": "In the **short run**, a perfectly competitive firm can earn supernormal profit if the market price is above average total cost. However, because there are **no barriers to entry**, new firms are attracted by supernormal profit. As they enter, market supply shifts right, the price falls, and supernormal profit is competed away. In **long-run equilibrium**, each firm earns **normal profit** only (AR = ATC). At this point, the firm produces where **P = MC** (allocative efficiency) and at the **minimum point of ATC** (productive efficiency).",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Firms earn supernormal profit",
+         "New firms enter the market",
+         "Market supply increases",
+         "Market price falls"
+        ],
+        "result": "Normal profit only in long run — allocative and productive efficiency achieved",
+        "resultType": "good"
+       }
+      ],
+      "title": "Perfect Competition",
+      "keyIdea": "Many firms sell identical products and are price takers — in the long run, freedom of entry competes away all supernormal profit, leaving firms earning just normal profit at P = MC.",
+      "examMatters": "Examiners expect you to draw the two-panel diagram: the market (supply and demand setting the price) and the firm (horizontal AR = MR = P line, with MC and ATC). Practise showing the shift from short-run supernormal profit to long-run normal profit — this is one of the most frequently tested diagram sequences.",
+      "realExample": {
+       "text": "Agricultural commodity markets like wheat approximate perfect competition. Thousands of farmers sell an identical product, no single farmer can influence the world price, and entry barriers are relatively low — making them price takers in a global market.",
+       "emoji": "🌾"
+      },
+      "misconception": "Students say perfectly competitive firms earn no profit. Wrong — they earn normal profit, which is the minimum return needed to keep the entrepreneur in the industry. Supernormal (above-normal) profit is what gets competed away. Instead write: in long-run equilibrium, firms earn normal profit — enough to stay in business, but no more."
+     },
+     {
+      "id": "monopolistic-competition",
+      "body": [
+       {
+        "text": "**Monopolistic competition** combines elements of both perfect competition and monopoly. There are **many firms**, each selling a **slightly differentiated product** — think different restaurant cuisines, branding, or quality levels. Because products are not identical, each firm has a small degree of market power and faces a **downward-sloping demand curve**.",
+        "type": "paragraph"
+       },
+       {
+        "text": "In the **short run**, firms can earn supernormal profit if demand is strong enough. But because **barriers to entry are low**, new firms enter, attracted by profit. Entry shifts each existing firm's demand curve leftward (customers are shared among more firms). In **long-run equilibrium**, the AR curve is **tangent to the ATC curve** — the firm earns normal profit only. Crucially, the tangency point is **not at the minimum of ATC**, meaning the firm has **excess capacity** — it could produce more at a lower average cost but chooses not to.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Firms earn supernormal profit",
+         "Low barriers attract new entrants",
+         "Each firm's demand shifts left",
+         "AR tangent to ATC"
+        ],
+        "result": "Normal profit but excess capacity — firms produce below the cost-minimising output",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Monopolistic Competition",
+      "keyIdea": "Many firms sell differentiated products with low barriers to entry — supernormal profit is possible in the short run, but entry competes it away, leaving excess capacity in the long run.",
+      "examMatters": "The key diagram skill is drawing the long-run tangency: AR just touching ATC at exactly one point, to the left of ATC's minimum. Examiners penalise diagrams where AR cuts through ATC (that would show supernormal or subnormal profit, not normal profit). Label the excess capacity gap clearly.",
+      "realExample": {
+       "text": "The restaurant industry is a classic example of monopolistic competition. Hundreds of restaurants in any city sell differentiated meals (Italian, Thai, vegan), entry costs are low, and while a popular new restaurant may earn supernormal profit initially, rival openings soon erode it.",
+       "emoji": "🍽️"
+      },
+      "misconception": "Students confuse monopolistic competition with monopoly because of the similar name. Wrong — monopolistic competition has many firms and low barriers, whereas monopoly has one firm and high barriers. Instead write: the 'monopolistic' part refers only to product differentiation giving a small degree of pricing power, not to dominance."
+     }
+    ],
+    "takeaway": [
+     "Perfect competition: P = MC and minimum ATC in long run — the benchmark for static efficiency.",
+     "Monopolistic competition: normal profit in long run but excess capacity due to product differentiation.",
+     "In both structures, freedom of entry is the mechanism that competes away supernormal profit over time."
+    ]
+   },
+   {
+    "title": "Oligopoly",
+    "sections": [
+     {
+      "id": "oligopoly-kinked-demand",
+      "body": [
+       {
+        "text": "An **oligopoly** is a market dominated by a **few large firms** that together hold a significant share of total output. Key features include **high barriers to entry** (economies of scale, branding, patents), **interdependence** (each firm must consider rivals' reactions before changing price or output), and products that may be differentiated or homogeneous.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The **kinked demand curve** model explains why prices in oligopolies tend to be **sticky**. If one firm raises its price, rivals do not follow — the firm loses customers and demand is elastic above the current price. If the firm cuts its price, rivals match the cut to protect market share — demand is inelastic below the current price. This creates a **kink** at the prevailing price and a **discontinuous gap in the MR curve**. Costs can shift within this gap without changing the profit-maximising price or output.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Firm considers raising price",
+         "Rivals do not follow — firm loses customers",
+         "Firm considers cutting price",
+         "Rivals match — little gain in market share"
+        ],
+        "result": "Price stickiness — prices tend to remain stable even when costs change",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Oligopoly Characteristics & the Kinked Demand Curve",
+      "keyIdea": "A market dominated by a few large interdependent firms — the kinked demand curve explains price stickiness because rivals match price cuts but ignore price rises.",
+      "examMatters": "Examiners expect you to draw the kinked demand curve with the discontinuous MR gap. Show how a shift in MC that stays within the MR gap does not change price or output. This is the diagram that explains price rigidity — make sure the kink is clearly at the prevailing price level.",
+      "realExample": {
+       "text": "The UK supermarket industry — dominated by Tesco, Sainsbury's, Asda, and Morrisons — is a classic oligopoly. When one supermarket launches a price-matching campaign, rivals respond immediately, making sustained price cuts unprofitable and keeping prices broadly stable.",
+       "emoji": "🛒"
+      },
+      "misconception": "Students say oligopolies always charge high prices. Wrong — intense rivalry between interdependent firms can lead to price wars and competitive pricing. Instead write: oligopoly outcomes depend on whether firms compete or collude — interdependence can lead to either aggressive competition or tacit cooperation."
+     },
+     {
+      "id": "game-theory-collusion",
+      "body": [
+       {
+        "text": "**Game theory** analyses strategic interaction between interdependent firms. The **prisoner's dilemma** illustrates the core problem: if both firms cooperate (keep prices high), they share monopoly profit. But each firm has a **dominant strategy to cheat** — cutting its price to steal market share. When both cheat, they end up worse off than if they had cooperated. This is the **Nash equilibrium**: neither firm can improve its position by changing strategy alone.",
+        "type": "paragraph"
+       },
+       {
+        "text": "A **cartel** is a formal agreement between firms to fix prices, restrict output, or divide markets. By acting as a collective monopoly, cartel members can earn supernormal profit. However, cartels are **inherently unstable** because each member has an incentive to secretly increase output above its quota — gaining revenue at other members' expense. **Tacit collusion** avoids illegal agreements: firms follow a **price leader** (usually the largest firm) without explicit communication.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Firms form cartel to restrict output",
+         "Each member tempted to cheat for extra revenue",
+         "One firm secretly exceeds quota",
+         "Others retaliate or cartel collapses"
+        ],
+        "result": "Cartels are unstable — the incentive to cheat undermines cooperation",
+        "resultType": "bad"
+       }
+      ],
+      "title": "Game Theory, Collusion & Cartels",
+      "keyIdea": "The prisoner's dilemma shows why collusion is unstable — every cartel member has a dominant strategy to cheat by secretly increasing output, which is why most cartels eventually collapse.",
+      "examMatters": "Examiners love a simple 2x2 payoff matrix. Practise drawing one showing: mutual cooperation (high profit each), mutual cheating (low profit each), and the temptation payoff (one cheats while the other cooperates). Clearly identify the Nash equilibrium and explain why it differs from the jointly optimal outcome.",
+      "realExample": {
+       "text": "OPEC is the world's most prominent cartel, coordinating oil output among member nations. Yet OPEC regularly struggles with compliance — members like Iraq and Nigeria frequently exceed their production quotas to boost national revenue, undermining the cartel's ability to keep prices high.",
+       "emoji": "🛢️"
+      },
+      "misconception": "Students assume collusion always succeeds in raising prices. Wrong — collusion is difficult to maintain because the incentive to cheat is built into the structure. Instead write: collusion raises joint profits only if all members comply; the prisoner's dilemma shows why defection is the dominant strategy, making cartels inherently fragile."
+     }
+    ],
+    "takeaway": [
+     "Oligopoly = few firms, high barriers, interdependence — the kinked demand curve explains price stickiness.",
+     "Game theory reveals why collusion is the jointly rational outcome but cheating is the individually rational strategy.",
+     "Cartels like OPEC are unstable because every member has an incentive to secretly exceed its quota."
+    ]
+   },
+   {
+    "title": "Monopoly",
+    "sections": [
+     {
+      "id": "monopoly-equilibrium-welfare",
+      "body": [
+       {
+        "text": "A **pure monopoly** is a single firm that is the sole supplier in a market, protected by **high barriers to entry** (legal, technical, or strategic). The monopolist faces the entire market demand curve, which slopes downward — to sell more, it must lower the price on all units, so **MR < AR** at every output level.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The monopolist maximises profit at **MC = MR**, then charges the price consumers are willing to pay on the **AR (demand) curve** above. Because **P > MC**, the monopolist is **allocatively inefficient** — it produces too little and charges too much relative to the competitive outcome. The gap between the monopoly outcome and the competitive outcome creates a **deadweight loss triangle**, representing surplus that is lost to society entirely. Unlike in perfect competition, **supernormal profit persists in the long run** because barriers to entry prevent new firms from entering.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Monopolist sets MC = MR",
+         "Reads price from AR curve above",
+         "P > MC at equilibrium",
+         "Output restricted below competitive level"
+        ],
+        "result": "Deadweight loss — allocative inefficiency with persistent supernormal profit",
+        "resultType": "bad"
+       }
+      ],
+      "title": "Monopoly Equilibrium & Welfare Loss",
+      "keyIdea": "A monopolist sets MC = MR then reads price from the AR curve — charging P > MC creates allocative inefficiency and a deadweight loss triangle that represents lost consumer and producer surplus.",
+      "examMatters": "The monopoly diagram is the most important in the entire unit. Practise drawing: downward-sloping AR, MR below AR (twice the slope), MC = MR intersection to find output, then read price from AR. Shade the supernormal profit rectangle (P minus ATC times quantity) and the deadweight loss triangle. Label everything.",
+      "realExample": {
+       "text": "Thames Water is a regional monopoly supplying water to 15 million customers in London and the South East. Customers cannot switch supplier, giving Thames Water significant market power — which is why Ofwat regulates its prices to prevent exploitation.",
+       "emoji": "🚰"
+      },
+      "misconception": "Students say monopolies are always bad for consumers. Wrong — monopolies can achieve economies of scale that lower costs, and supernormal profit can fund R&D and innovation (dynamic efficiency). Instead write: monopoly creates static inefficiency (deadweight loss) but may promote dynamic efficiency — the net effect depends on the specific market."
+     },
+     {
+      "id": "price-discrimination",
+      "body": [
+       {
+        "text": "**Price discrimination** occurs when a firm charges **different prices to different consumers** for the same product, where the price difference is not justified by cost differences. There are three degrees: **first-degree** (each consumer pays their maximum willingness to pay — all consumer surplus extracted), **second-degree** (different prices for different quantities — e.g. bulk discounts), and **third-degree** (different prices for different groups identified by elasticity — e.g. student discounts, peak pricing).",
+        "type": "paragraph"
+       },
+       {
+        "text": "Three conditions must hold: the firm must have **market power** (downward-sloping demand), it must be able to **separate consumers** into groups with different price elasticities, and there must be **no possibility of resale** between groups. Third-degree discrimination is the most common and exam-relevant: the firm charges a higher price in the market with inelastic demand and a lower price where demand is elastic.",
+        "type": "paragraph"
+       },
+       {
+        "text": "A key evaluation point: price discrimination can **increase total output** above the single-price monopoly level. Some consumers who would have been priced out under a single price now receive the product at a lower price. This can improve allocative efficiency, though it also transfers consumer surplus to the producer.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Firm identifies groups with different elasticities",
+         "Charges higher price to inelastic group",
+         "Charges lower price to elastic group",
+         "Total output rises above single-price level"
+        ],
+        "result": "Higher profit for the firm and potentially greater output — but consumer surplus is redistributed",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Price Discrimination",
+      "keyIdea": "Charging different prices to different consumers for the same product — it requires market power, consumer separation, and no resale, and can actually increase total output above the single-price level.",
+      "examMatters": "Examiners test the three conditions (market power, separation, no resale) almost every session. For a top-band answer, draw two side-by-side diagrams: one for the inelastic market (high price) and one for the elastic market (low price), showing MC = MR in each. Explain that combined output exceeds the single-price monopoly level.",
+      "realExample": {
+       "text": "Train operators like Avanti West Coast charge vastly different fares for the same journey — peak-time commuters with inelastic demand pay far more than off-peak leisure travellers. The same seat, same route, same service, but different prices based on time of travel and willingness to pay.",
+       "emoji": "🚂"
+      },
+      "misconception": "Students say price discrimination is always harmful to consumers. Wrong — third-degree discrimination can extend the market to price-sensitive consumers who would otherwise be excluded. Instead write: price discrimination redistributes surplus from consumers to the firm, but can increase total output and allow some consumers access to goods they could not otherwise afford."
+     }
+    ],
+    "takeaway": [
+     "Monopoly: MC = MR, price from AR, P > MC creates deadweight loss — supernormal profit persists in the long run.",
+     "Price discrimination requires market power, consumer separation, and no resale — three conditions, always state them.",
+     "Monopoly is statically inefficient but may be dynamically efficient — this trade-off is central to evaluation."
+    ]
+   },
+   {
+    "title": "Contestable Markets",
+    "sections": [
+     {
+      "id": "contestable-markets-theory",
+      "body": [
+       {
+        "text": "The theory of **contestable markets**, developed by William Baumol, argues that the **threat of entry** matters more than the actual number of firms in a market. A perfectly contestable market has **zero sunk costs** — meaning a firm can enter, compete, and exit without losing any investment. In such a market, even a single incumbent firm (a monopoly) would be forced to behave competitively.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The key concept is **hit-and-run entry**: if an incumbent earns supernormal profit, a new firm can enter, undercut the price, capture the profit, and exit before the incumbent can respond — provided there are no sunk costs trapping the entrant. **Sunk costs are the crucial barrier** to contestability: the higher the sunk costs (advertising, specialised equipment, brand building), the less contestable the market. Contestability shifts the focus from market structure to market behaviour — a monopoly in a contestable market may produce outcomes closer to perfect competition.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Incumbent earns supernormal profit",
+         "Low sunk costs make entry easy",
+         "Threat of hit-and-run entry",
+         "Incumbent forced to lower price"
+        ],
+        "result": "Competitive behaviour despite few firms — the threat of entry disciplines the market",
+        "resultType": "good"
+       }
+      ],
+      "title": "Theory of Contestable Markets",
+      "keyIdea": "What disciplines firm behaviour is not the number of existing competitors but the threat of entry — if sunk costs are low, even a monopolist must price competitively or face hit-and-run entry.",
+      "examMatters": "Examiners reward students who distinguish between fixed costs and sunk costs. A factory (fixed cost) can be resold; a national advertising campaign (sunk cost) cannot. Sunk costs are the true measure of contestability — always make this distinction explicitly in your answer.",
+      "realExample": {
+       "text": "The budget airline industry demonstrates contestability. Airlines like Ryanair and easyJet lease aircraft rather than buying them (reducing sunk costs), can quickly switch routes, and face low exit costs — making the threat of new entrants on any profitable route a constant discipline on pricing.",
+       "emoji": "✈️"
+      },
+      "misconception": "Students say a market is contestable simply because there are few barriers to entry. Incomplete — contestability specifically requires low **sunk** costs, not just low entry barriers. Instead write: a market is contestable when sunk costs are low, allowing costless exit as well as easy entry — it is the ability to leave without loss that enables hit-and-run competition."
+     },
+     {
+      "id": "evaluating-market-structures",
+      "body": [
+       {
+        "text": "**Allocative efficiency** (P = MC) and **productive efficiency** (minimum ATC) are both achieved in long-run perfect competition. However, perfectly competitive firms earn only normal profit and have no funds for research and development — they lack **dynamic efficiency** (innovation and technological progress over time). The identical products and tiny firm sizes leave no room for investment in new processes or products.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Monopoly** is the mirror image: persistent supernormal profit funds R&D and innovation (Schumpeter's argument for dynamic efficiency), but P > MC means allocative inefficiency and production may not occur at minimum ATC. The policy question becomes whether the long-run gains from innovation outweigh the short-run losses from higher prices and restricted output.",
+        "type": "paragraph"
+       },
+       {
+        "text": "This trade-off is **central to competition policy**. Regulators like the CMA must weigh static efficiency losses (deadweight loss, higher prices) against potential dynamic efficiency gains (new products, lower future costs). Patent systems explicitly make this trade-off: they grant a **temporary monopoly** to incentivise innovation, accepting short-run inefficiency for long-run gains.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Perfect competition: static efficiency but no dynamic",
+         "Monopoly: possible dynamic efficiency but static inefficiency",
+         "Policy must weigh short-run costs vs long-run gains"
+        ],
+        "result": "No single structure is best — the optimal outcome depends on the specific market and time horizon",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Evaluating Market Structures & Efficiency",
+      "keyIdea": "No single market structure achieves every type of efficiency — perfect competition delivers static efficiency but not dynamic, while monopoly may deliver dynamic efficiency but not static. This trade-off is the heart of competition policy.",
+      "examMatters": "Top-band 25-mark essays always discuss the efficiency trade-off. Structure your evaluation: static efficiency favours perfect competition, dynamic efficiency may favour monopoly, and contestability shows that the threat of entry can achieve competitive outcomes regardless of structure. Conclude that the best policy depends on the specific market — there is no one-size-fits-all answer.",
+      "realExample": {
+       "text": "Pharmaceutical patents grant companies like Pfizer a 20-year monopoly on new drugs. The resulting high prices are allocatively inefficient, but without the monopoly profit incentive, firms would not invest the billions required for R&D — a deliberate policy trade-off between static and dynamic efficiency.",
+       "emoji": "💊"
+      },
+      "misconception": "Students rank market structures from best to worst and conclude perfect competition is always ideal. Wrong — perfect competition has zero dynamic efficiency, meaning no innovation, no new products, and no technological progress. Instead write: perfect competition is the benchmark for static efficiency, but the absence of supernormal profit means it cannot fund the R&D that drives long-run growth and consumer welfare improvements."
+     }
+    ],
+    "takeaway": [
+     "Contestability: sunk costs are the key barrier — low sunk costs enable hit-and-run entry that disciplines incumbent behaviour.",
+     "Perfect competition achieves static efficiency (P = MC, min ATC) but not dynamic efficiency (no R&D funds).",
+     "The efficiency trade-off between market structures is the central evaluation point in competition policy questions."
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "flow": {
+     "steps": [
+      "Many firms, no barriers → perfect competition",
+      "Many firms, differentiated products → monopolistic competition",
+      "Few large firms, high barriers → oligopoly",
+      "One firm, very high barriers → monopoly"
+     ],
+     "result": "Market power and barriers increase along the spectrum",
+     "resultType": "neutral"
+    },
+    "meta": "4 concepts",
+    "title": "Spectrum of Market Structures",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Market structure</strong> — the competitive environment in which a firm operates, determined by the number and size of firms, barriers to entry, product differentiation, and information availability.",
+        "type": "def"
+       },
+       {
+        "text": "The spectrum runs: <strong>perfect competition → monopolistic competition → oligopoly → monopoly</strong>, with increasing market power and barriers to entry at each stage.",
+        "type": "mech"
+       },
+       {
+        "text": "As we move toward monopoly, firms gain <strong>price-making power</strong> — they face a downward-sloping demand curve and can influence the market price by changing their output.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Examiners expect you to identify the market structure from a scenario by checking: how many firms? Are products differentiated? Are there barriers to entry? Can firms influence price?",
+        "type": "imp"
+       }
+      ],
+      "title": "KEY CHARACTERISTICS"
+     }
+    ],
+    "keyIdea": "Market structure is a spectrum from perfect competition to pure monopoly — each point on the spectrum is defined by the number of firms, barriers to entry, product differentiation, and the degree of price-setting power.",
+    "takeaway": [
+     "Market structure depends on: number of firms, barriers, product differentiation, information.",
+     "The spectrum runs from perfect competition (no power) to monopoly (maximum power).",
+     "Most real markets fall between the textbook extremes."
+    ],
+    "examMatters": "Examiners ask you to compare market structures. Use a table approach: columns for number of firms, barriers to entry, product type, price-making power, long-run profit, and efficiency. This earns structure marks.",
+    "misconception": "Students treat market structures as rigid categories. In reality, most real-world markets are somewhere between the textbook models. Instead write: market structures are theoretical benchmarks — use them as tools for analysis, not exact descriptions of reality."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Firms earn supernormal profit",
+      "New firms enter (no barriers)",
+      "Supply increases, price falls",
+      "Long-run: P = MC = min ATC, normal profit only"
+     ],
+     "result": "Perfect competition achieves allocative and productive efficiency in the long run",
+     "resultType": "good"
+    },
+    "meta": "6 concepts",
+    "title": "Perfect Competition",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Perfect competition</strong> — a market with many buyers and sellers, homogeneous products, perfect information, no barriers to entry or exit, and all firms are price takers.",
+        "type": "def"
+       },
+       {
+        "text": "Each firm is a <strong>price taker</strong>: it faces a perfectly elastic (horizontal) demand curve at the market price, so AR = MR = P.",
+        "type": "mech"
+       },
+       {
+        "text": "Firms are so small relative to the market that no individual firm can influence the price — they accept the market-determined price.",
+        "type": "mech"
+       }
+      ],
+      "title": "CHARACTERISTICS"
+     },
+     {
+      "items": [
+       {
+        "text": "In the short run, a perfectly competitive firm can earn <strong>supernormal profit</strong> if P > ATC at the profit-maximising output (MC = MR).",
+        "type": "mech"
+       },
+       {
+        "text": "If P < ATC but P > AVC, the firm makes a loss but continues to operate in the short run because it covers its variable costs and contributes toward fixed costs.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "The firm's short-run supply curve is the MC curve above the AVC curve — it shows how much the firm will supply at each price.",
+        "type": "imp"
+       }
+      ],
+      "title": "SHORT-RUN EQUILIBRIUM"
+     },
+     {
+      "items": [
+       {
+        "text": "Supernormal profit attracts new entrants → market supply shifts right → price falls until <strong>P = ATC</strong> (normal profit only).",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "At long-run equilibrium: P = MC (allocative efficiency) and P = min ATC (productive efficiency). No firm earns supernormal profit.",
+        "type": "mech"
+       },
+       {
+        "text": "Perfect competition achieves static efficiency but not dynamic efficiency — firms have no supernormal profit to invest in R&D, linking to the efficiency trade-off debate.",
+        "type": "link"
+       }
+      ],
+      "title": "LONG-RUN EQUILIBRIUM"
+     }
+    ],
+    "keyIdea": "Perfect competition is the benchmark of efficiency — many small firms selling identical products at the market price, with free entry and exit ensuring that only normal profit survives in the long run.",
+    "takeaway": [
+     "Price taker: AR = MR = P (horizontal demand curve for each firm).",
+     "Long-run equilibrium: P = MC = min ATC → allocative + productive efficiency.",
+     "No supernormal profit in the long run → limited dynamic efficiency."
+    ],
+    "examMatters": "Examiners expect two diagrams: short-run (showing supernormal profit) and long-run (showing normal profit). Draw the market diagram (S & D) alongside the firm diagram (MC, ATC, AR = MR). Always show the adjustment process.",
+    "misconception": "Students say perfect competition is 'the best' market structure. Wrong because while it achieves static efficiency, it fails on dynamic efficiency since firms have no profit to fund innovation. Instead write: perfect competition is allocatively and productively efficient, but may not be dynamically efficient."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Differentiated products give some pricing power",
+      "Short-run supernormal profit possible",
+      "Free entry erodes profit in the long run"
+     ],
+     "result": "Long-run normal profit but productive inefficiency (excess capacity)",
+     "resultType": "neutral"
+    },
+    "meta": "4 concepts",
+    "title": "Monopolistic Competition",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Monopolistic competition</strong> — many firms selling differentiated products with low barriers to entry; each firm has a small downward-sloping demand curve.",
+        "type": "def"
+       },
+       {
+        "text": "Product differentiation (branding, quality, location) gives each firm a degree of <strong>price-making power</strong> — they face a downward-sloping AR curve, unlike in perfect competition.",
+        "type": "mech"
+       }
+      ],
+      "title": "CHARACTERISTICS"
+     },
+     {
+      "items": [
+       {
+        "text": "Short run: firms can earn supernormal profit if their brand is strong enough (P > ATC at MC = MR output).",
+        "type": "mech"
+       },
+       {
+        "text": "Long run: new firms enter with similar products → each firm's demand curve shifts left → profit falls to <strong>normal profit</strong> (AR tangent to ATC).",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "In long-run equilibrium the firm produces on the downward-sloping part of ATC, not at its minimum — this means <strong>excess capacity</strong> and no productive efficiency.",
+        "type": "imp"
+       },
+       {
+        "text": "Monopolistic competition links to non-price competition from Unit 1: firms compete through branding, advertising, and product design rather than just price.",
+        "type": "link"
+       }
+      ],
+      "title": "SHORT AND LONG RUN"
+     }
+    ],
+    "keyIdea": "Monopolistic competition gives firms a small amount of market power through product differentiation, but free entry ensures that supernormal profit is competed away in the long run — leaving firms with excess capacity.",
+    "takeaway": [
+     "Many firms + differentiated products + low barriers = monopolistic competition.",
+     "Long run: AR tangent to ATC → normal profit but excess capacity.",
+     "Neither allocatively nor productively efficient, but offers consumer choice."
+    ],
+    "examMatters": "Examiners expect you to show that in long-run equilibrium the AR curve is tangent to ATC — not at the minimum of ATC. This tangency creates a gap between actual output and efficient output (excess capacity).",
+    "misconception": "Students think monopolistic competition is just like monopoly because the demand curve slopes downward. Wrong because low barriers to entry mean supernormal profit is competed away. Instead write: monopolistic competition shares features of both models — some pricing power like monopoly, but free entry like perfect competition."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Few dominant firms with high barriers",
+      "Each firm's decisions affect rivals",
+      "Kinked demand creates price rigidity"
+     ],
+     "result": "Prices tend to be sticky in oligopoly unless there is a major cost shock",
+     "resultType": "neutral"
+    },
+    "meta": "5 concepts",
+    "title": "Oligopoly: Characteristics",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Oligopoly</strong> — a market dominated by a few large firms with high barriers to entry, where each firm's decisions affect and are affected by rivals' decisions.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Concentration ratio</strong> — the combined market share of the largest firms (e.g. a 5-firm concentration ratio of 60% means the top 5 firms hold 60% of the market).",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Interdependence</strong> — each firm must consider rivals' likely reactions before making pricing or output decisions; this is the defining feature of oligopoly.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "If an oligopolist raises price, rivals do <strong>not follow</strong> — customers switch to cheaper rivals, so demand is elastic above the current price.",
+        "type": "mech"
+       },
+       {
+        "text": "If an oligopolist cuts price, rivals <strong>match the cut</strong> — nobody gains market share, so demand is inelastic below the current price.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "This creates a <strong>kink</strong> in the demand curve at the current price, with a gap in the MR curve that explains price stickiness.",
+        "type": "mech"
+       },
+       {
+        "text": "The kinked demand model explains why prices in oligopolies are sticky even when costs change — as long as MC stays within the gap in the MR curve, the profit-maximising output does not change.",
+        "type": "imp"
+       }
+      ],
+      "title": "THE KINKED DEMAND CURVE"
+     }
+    ],
+    "keyIdea": "Oligopoly is defined by interdependence — each firm's best strategy depends on what rivals do, creating a tension between competing aggressively and colluding for mutual benefit.",
+    "takeaway": [
+     "Oligopoly = few firms + high barriers + interdependence.",
+     "Kinked demand explains price stickiness, not price determination.",
+     "The gap in MR means costs can change without affecting the optimal price."
+    ],
+    "examMatters": "Examiners expect you to draw the kinked demand curve with the gap in MR. Show MC passing through the gap and explain that small cost changes do not change the profit-maximising output or price.",
+    "misconception": "Students think the kinked demand curve explains how the price is set. Wrong — it only explains why the price is sticky once set. It does not explain how the initial price was determined. Instead write: the kinked demand model is a theory of price rigidity, not a theory of price determination."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Firms recognise mutual benefit of high prices",
+      "Form cartel or tacit agreement",
+      "Individual incentive to cheat breaks the agreement"
+     ],
+     "result": "Cartels are inherently unstable — the prisoner's dilemma undermines cooperation",
+     "resultType": "bad"
+    },
+    "meta": "5 concepts",
+    "title": "Game Theory and Collusion",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Game theory</strong> — a framework for analysing strategic decision-making where the outcome depends on the choices of multiple players who are interdependent.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Collusion</strong> — firms agreeing (formally or tacitly) to restrict competition by fixing prices, limiting output, or dividing markets.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Cartel</strong> — a formal agreement between firms to collude, typically by setting a common price and allocating output quotas; illegal in most countries.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Tacit collusion</strong> — firms coordinate behaviour without an explicit agreement, often through price leadership where smaller firms follow the dominant firm's pricing.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "If both firms collude (charge high price), both earn high profit. If one cheats (cuts price), the cheater gains at the other's expense.",
+        "type": "mech"
+       },
+       {
+        "text": "The <strong>dominant strategy</strong> for each firm is to cheat, because cheating is better regardless of what the rival does — leading to a sub-optimal outcome for both.",
+        "type": "mech"
+       },
+       {
+        "text": "Cartels are unstable because every member has an incentive to secretly increase output above their quota, undercutting the agreed price to steal market share.",
+        "type": "imp"
+       },
+       {
+        "text": "Game theory links to competition policy (3.3.5): regulators use leniency programs that reward the first firm to report cartel behaviour, exploiting the incentive to cheat.",
+        "type": "link"
+       }
+      ],
+      "title": "THE PRISONER'S DILEMMA"
+     }
+    ],
+    "keyIdea": "Oligopolists face a prisoner's dilemma — they would all be better off colluding on high prices, but each firm has an individual incentive to cheat, making cartels inherently unstable.",
+    "takeaway": [
+     "Game theory analyses strategic decisions where outcomes depend on rivals' actions.",
+     "The prisoner's dilemma: rational individual behaviour leads to a collectively worse outcome.",
+     "Cartels are unstable because each member has an incentive to cheat on the agreement."
+    ],
+    "examMatters": "Examiners often present a payoff matrix and ask you to identify the dominant strategy and Nash equilibrium. Show that the rational outcome (both cheat) is worse for both firms than the cooperative outcome (both collude) — this is the prisoner's dilemma.",
+    "misconception": "Students assume firms always collude in oligopoly. Wrong because the prisoner's dilemma shows that cheating is the dominant strategy. Instead write: while collusion would maximise joint profit, each firm has an incentive to cheat, making cartels unstable unless enforced by strong external mechanisms."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Single firm, high barriers to entry",
+      "Profit max at MC = MR, price from AR curve",
+      "P > MC → deadweight loss"
+     ],
+     "result": "Supernormal profit persists; allocatively and productively inefficient",
+     "resultType": "bad"
+    },
+    "meta": "6 concepts",
+    "title": "Monopoly",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Pure monopoly</strong> — a single firm supplies the entire market; the firm's demand curve is the market demand curve.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Legal monopoly</strong> — in UK/EU competition law, a firm with 25%+ market share; this is the practical definition used by regulators.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Natural monopoly</strong> — an industry where the MES is so large relative to market demand that only one firm can produce at minimum average cost.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "A monopolist profit-maximises at MC = MR and charges the price on the AR curve above that output — earning <strong>supernormal profit</strong> in both the short and long run.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "P > MC → allocative inefficiency (too little is produced). The firm does not produce at min ATC → productive inefficiency.",
+        "type": "mech"
+       },
+       {
+        "text": "The <strong>deadweight welfare loss</strong> is the triangle between the competitive output (where P = MC) and the monopoly output, representing the lost consumer and producer surplus.",
+        "type": "imp"
+       }
+      ],
+      "title": "MONOPOLY EQUILIBRIUM"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Against</strong>: higher prices, lower output, allocative and productive inefficiency, X-inefficiency, reduced consumer choice.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>For</strong>: supernormal profits fund R&D (dynamic efficiency), economies of scale may lower costs, cross-subsidisation of loss-making services, natural monopoly arguments.",
+        "type": "mech"
+       },
+       {
+        "text": "Schumpeter argued that monopoly profits are the engine of innovation — temporary monopoly power rewards risk-taking and funds research that benefits consumers in the long run.",
+        "type": "link"
+       }
+      ],
+      "title": "ARGUMENTS FOR AND AGAINST MONOPOLY"
+     }
+    ],
+    "keyIdea": "A monopolist is the sole seller in a market protected by high barriers to entry, giving it the power to set prices above competitive levels — but whether this harms consumers depends on whether the firm innovates.",
+    "takeaway": [
+     "Monopoly: single firm, high barriers, P > MC, supernormal profit persists.",
+     "Deadweight welfare loss from restricted output and higher prices.",
+     "Key debate: static inefficiency vs dynamic efficiency (the Schumpeter argument)."
+    ],
+    "examMatters": "Examiners expect you to draw the monopoly diagram: downward-sloping AR, MR (twice as steep), U-shaped MC and ATC. Show supernormal profit as the shaded rectangle between AR and ATC. Mark deadweight loss. Then evaluate using the efficiency trade-off.",
+    "misconception": "Students say monopoly is always bad. Wrong because monopolies can achieve dynamic efficiency through R&D funded by supernormal profits, and natural monopolies benefit from economies of scale. Instead write: whether a monopoly is harmful depends on whether it passes on cost savings to consumers and reinvests profits in innovation."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Low sunk costs → easy entry and exit",
+      "Threat of entry disciplines incumbents",
+      "Even a monopoly behaves competitively"
+     ],
+     "result": "Contestable markets achieve near-competitive outcomes regardless of market structure",
+     "resultType": "good"
+    },
+    "meta": "5 concepts",
+    "title": "Contestable Markets",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Contestable market</strong> — a market where entry and exit are free (no sunk costs), so the threat of potential competition keeps prices close to competitive levels even if few firms actually operate.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Sunk costs</strong> — costs that cannot be recovered if a firm exits the market (e.g. advertising spend, specialised equipment); they are the key barrier to contestability.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Hit-and-run entry</strong> — firms enter a market to exploit supernormal profits and exit when profits are competed away, without incurring unrecoverable costs.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "In a perfectly contestable market, even a monopolist earns only <strong>normal profit</strong> because any supernormal profit would attract hit-and-run entrants.",
+        "type": "mech"
+       },
+       {
+        "text": "The key insight: it is not the number of firms that determines competitive behaviour, but the <strong>threat of potential entry</strong>.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Policy implication: rather than breaking up large firms, governments can improve competition by <strong>reducing barriers to entry</strong> (deregulation, reducing sunk costs, open access).",
+        "type": "imp"
+       },
+       {
+        "text": "Contestability links to competition policy (3.3.5): regulators focus on reducing barriers rather than targeting firm size, because a contestable monopoly can behave competitively.",
+        "type": "link"
+       }
+      ],
+      "title": "WHY CONTESTABILITY MATTERS"
+     }
+    ],
+    "keyIdea": "Market structure alone does not determine competition — what matters is whether new firms can easily enter and exit, because the threat of entry disciplines even a monopolist to keep prices competitive.",
+    "takeaway": [
+     "Contestability depends on sunk costs and freedom of entry/exit, not firm numbers.",
+     "Hit-and-run entry means even monopolies can face competitive discipline.",
+     "Policy focus: reduce sunk costs and barriers to entry to increase contestability."
+    ],
+    "examMatters": "Examiners love asking whether a market is contestable. Look for: sunk costs (high = not contestable), regulatory barriers, brand loyalty, and switching costs. Conclude by saying whether the threat of entry is credible.",
+    "misconception": "Students confuse barriers to entry with sunk costs. Barriers to entry include all factors that prevent new firms from entering (legal, brand loyalty, economies of scale). Sunk costs are a specific type that cannot be recovered. Instead write: sunk costs are the critical barrier to contestability specifically — other barriers affect entry but only sunk costs determine whether exit is costless."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Firm has market power",
+      "Identifies groups with different PED",
+      "Charges higher price where demand is inelastic"
+     ],
+     "result": "Higher profit for the firm; ambiguous welfare effects for consumers",
+     "resultType": "neutral"
+    },
+    "meta": "5 concepts",
+    "title": "Price Discrimination",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Price discrimination</strong> — charging different prices to different consumers for the same product, where the price difference is not justified by cost differences.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>First-degree</strong> — each consumer is charged their maximum willingness to pay; all consumer surplus is extracted. Theoretical ideal.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Second-degree</strong> — prices vary by quantity purchased (e.g. bulk discounts) or version (e.g. economy vs business class).",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Third-degree</strong> — different prices for different groups of consumers (e.g. student discounts, peak vs off-peak); the most common form in practice.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Three conditions needed: the firm must have <strong>price-making power</strong>, be able to <strong>separate markets</strong>, and prevent <strong>resale</strong> between groups.",
+        "type": "mech"
+       },
+       {
+        "text": "Price discrimination can <strong>increase output</strong> above the single-price monopoly level because the firm serves consumers who would otherwise be priced out.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Whether price discrimination benefits consumers depends on the context: it can increase access (student discounts) but also extract surplus from those with inelastic demand.",
+        "type": "imp"
+       }
+      ],
+      "title": "CONDITIONS AND EVALUATION"
+     }
+    ],
+    "keyIdea": "Price discrimination allows a firm with market power to charge different prices to different consumers for the same product, extracting more consumer surplus and potentially increasing both profit and output.",
+    "takeaway": [
+     "Three types: 1st (individual), 2nd (quantity), 3rd (group) — 3rd is most common.",
+     "Conditions: market power + market separation + no resale.",
+     "Welfare effects are ambiguous — output may rise but surplus is transferred to the firm."
+    ],
+    "examMatters": "Examiners expect you to state the three conditions, classify the type of price discrimination, and evaluate the welfare effects. Always consider: does total output increase? Are some consumers better off (those who now gain access) while others are worse off (those charged more)?",
+    "misconception": "Students say price discrimination always harms consumers. Wrong because it can increase output and allow consumers with lower willingness to pay to access the product (e.g. off-peak rail fares). Instead write: price discrimination transfers consumer surplus to producers but can increase total welfare if it raises output and gives access to previously excluded consumers."
+   }
+  ],
+  "section_quiz": [
+   {
+    "options": [
+     "The firm produces at the minimum of its average cost curve",
+     "Price equals marginal cost (P = MC)",
+     "The firm earns only normal profit",
+     "Total revenue is maximised"
+    ],
+    "question": "Allocative efficiency is achieved when:",
+    "explanation": "Allocative efficiency occurs where P = MC — the price consumers pay equals the cost of producing the last unit. This ensures resources are allocated to their most valued uses. Productive efficiency is at minimum AC, normal profit relates to long-run equilibrium, and revenue maximisation is where MR = 0.",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "P > MC and earns supernormal profit",
+     "P = MC = AC at the minimum of the AC curve",
+     "MR < MC and earns normal profit",
+     "P = MC but above the minimum of the AC curve"
+    ],
+    "question": "In the long run in perfect competition, the firm produces where:",
+    "explanation": "In long-run equilibrium in perfect competition, entry and exit drive economic profit to zero. The firm produces where P = MC = AC at the minimum of AC. This means the firm is both allocatively efficient (P = MC) and productively efficient (minimum AC), earning only normal profit.",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "Price equals average total cost (P = AC)",
+     "Marginal revenue equals zero (MR = 0)",
+     "Price equals minimum average variable cost (P = min AVC)",
+     "Marginal cost equals average cost (MC = AC)"
+    ],
+    "question": "The shutdown point in the short run occurs where:",
+    "explanation": "The short-run shutdown point is where P = AVC at its minimum. Below this price, the firm cannot cover even its variable costs and should cease production. At the shutdown price, the firm is indifferent between producing (loss = TFC) and shutting down (loss = TFC).",
+    "correctIndex": 2
+   },
+   {
+    "options": [
+     "The firm produces beyond the minimum of its AC curve",
+     "The AR curve is tangent to AC to the LEFT of the minimum AC point",
+     "The firm earns supernormal profit, attracting entry",
+     "The demand curve is perfectly elastic"
+    ],
+    "question": "In the long run in monopolistic competition, excess capacity exists because:",
+    "explanation": "In long-run equilibrium, the downward-sloping AR curve is tangent to AC to the left of its minimum point. The firm produces at a higher average cost than the minimum — it has spare capacity it does not use. This is productive inefficiency caused by product differentiation.",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "How the initial equilibrium price is determined",
+     "Why oligopolists always collude",
+     "Price rigidity — why prices tend to be 'sticky'",
+     "Why oligopolists always engage in price wars"
+    ],
+    "question": "The kinked demand curve model for oligopoly explains:",
+    "explanation": "The kinked demand curve model explains price rigidity (sticky prices). Above the current price, demand is elastic (rivals don't follow rises), and below it demand is inelastic (rivals match cuts). This creates a discontinuity in MR, so MC can shift within this gap without changing the profit-maximising price or output. It does NOT explain how the initial price is set.",
+    "correctIndex": 2
+   },
+   {
+    "options": [
+     "The firm must be a price maker with market power",
+     "The firm must be able to identify groups with different elasticities of demand",
+     "Resale (arbitrage) between consumer groups must be prevented",
+     "The firm must be productively efficient"
+    ],
+    "question": "Which of the following is NOT a condition required for price discrimination?",
+    "explanation": "The three conditions for price discrimination are: (1) market power, (2) ability to identify and separate consumer groups by PED, and (3) prevention of resale/arbitrage. Productive efficiency is not a condition — indeed, monopolists who price discriminate are often not productively efficient.",
+    "correctIndex": 3
+   },
+   {
+    "options": [
+     "A U-shaped LRAC curve with minimum efficient scale at a small output",
+     "A continuously falling LRAC curve over the relevant range of output",
+     "Many firms competing for market share",
+     "Zero barriers to entry and exit"
+    ],
+    "question": "A natural monopoly is characterised by:",
+    "explanation": "A natural monopoly has a continuously falling LRAC curve over the relevant range of output — the minimum efficient scale (MES) is so large relative to demand that only one firm can operate at efficient scale. High fixed costs and low marginal costs (e.g., water, railways) mean duplication of infrastructure would be wasteful.",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "Both firms cooperating and earning maximum joint profit",
+     "Both firms cheating (cutting prices) — individually rational but collectively suboptimal",
+     "One firm cooperating while the other cheats",
+     "Both firms exiting the market"
+    ],
+    "question": "In the Prisoner's Dilemma applied to oligopoly, the Nash Equilibrium typically results in:",
+    "explanation": "In the Prisoner's Dilemma, the Nash Equilibrium is both firms cheating (e.g., cutting prices or increasing output). Each firm has a dominant strategy to cheat regardless of what the other does. The outcome is individually rational but collectively suboptimal — both would earn more by cooperating, but the incentive to cheat makes cooperation unstable.",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "The number of firms currently in the market",
+     "The level of product differentiation",
+     "The threat of potential entry and the level of sunk costs",
+     "The concentration ratio of the industry"
+    ],
+    "question": "Contestable market theory (Baumol) argues that competitive behaviour is determined by:",
+    "explanation": "Baumol's contestable markets theory argues that it is the threat of potential entry — not the number of existing firms — that determines how competitively firms behave. The key determinant is sunk costs: if sunk costs are zero, hit-and-run entry is possible and even a monopolist must price competitively.",
+    "correctIndex": 2
+   },
+   {
+    "options": [
+     "Pay suppliers a higher price than in a competitive market",
+     "Buy more than the competitive quantity of inputs",
+     "Pay suppliers less and buy fewer inputs than in a competitive market",
+     "Have no effect on input prices or quantities"
+    ],
+    "question": "A monopsony buyer will tend to:",
+    "explanation": "A monopsony buyer drives down the price paid to suppliers below the competitive level and purchases fewer inputs. The monopsonist's marginal cost of purchasing (MCL) lies above the supply curve, so it restricts purchases to where MCL = marginal benefit, then pays the lower price from the supply curve.",
+    "correctIndex": 2
+   },
+   {
+    "options": [
+     "Economies of scale in production",
+     "High natural resource requirements",
+     "Limit pricing by incumbent firms",
+     "High minimum efficient scale"
+    ],
+    "question": "Which of the following is an example of a strategic (artificial) barrier to entry?",
+    "explanation": "Limit pricing is a strategic (artificial) barrier — incumbent firms deliberately set prices low enough to make entry unprofitable. Economies of scale, high resource requirements, and high MES are structural (natural) barriers that exist due to the nature of the industry rather than deliberate firm action.",
+    "correctIndex": 2
+   },
+   {
+    "options": [
+     "Perfect competition — because intense competition drives innovation",
+     "Monopolistic competition — because product differentiation requires R&D",
+     "Monopoly or oligopoly — because supernormal profits fund R&D investment",
+     "A perfectly contestable market — because the threat of entry forces innovation"
+    ],
+    "question": "Which market structure is most likely to achieve dynamic efficiency?",
+    "explanation": "Dynamic efficiency requires supernormal profits to fund R&D and innovation. Monopoly and oligopoly are most likely to achieve this because they can earn and sustain supernormal profits due to high barriers to entry. Perfectly competitive firms earn only normal profit in the long run and lack funds for significant innovation — the Schumpeterian argument.",
+    "correctIndex": 2
+   }
+  ],
+  "section_practice": [
+   {
+    "marks": 4,
+    "command": "Define",
+    "guidance": "A perfectly competitive market has many buyers and sellers, each too small to influence the market price — firms are price takers (1 mark). Products are homogeneous — identical in the eyes of consumers, so there is no brand loyalty (1 mark). There is perfect information — all buyers and sellers have complete knowledge of prices, quality and production methods (1 mark). There are no barriers to entry or exit — firms can freely enter and leave the market in the long run, ensuring that only normal profit is earned in long-run equilibrium (1 mark).",
+    "question": "Define the characteristics of a perfectly competitive market. (4 marks)"
+   },
+   {
+    "marks": 6,
+    "command": "Explain",
+    "guidance": "Condition 1: The firm must have market power — it must be a price maker with a downward-sloping demand curve, so it can set different prices in different segments (1 mark). A perfectly competitive firm cannot price discriminate because it is a price taker facing a perfectly elastic demand curve (1 mark). Monopolies and oligopolies are therefore the market structures where price discrimination is most common (1 mark).\n\nCondition 2: The firm must be able to separate markets and prevent arbitrage — consumers in the lower-price segment must not be able to resell to those in the higher-price segment (1 mark). Markets can be separated by time (peak vs off-peak), age (student vs adult tickets) or geography (domestic vs export prices) (1 mark). If resale is possible, consumers will buy at the low price and sell at the high price, eliminating the firm's ability to charge different prices (1 mark).",
+    "question": "Explain two conditions necessary for a firm to successfully practise price discrimination. (6 marks)"
+   },
+   {
+    "marks": 10,
+    "command": "Assess",
+    "guidance": "Define allocative efficiency (P = MC) and productive efficiency (producing at minimum ATC) (2 marks). Monopoly is less efficient: a monopolist restricts output below the competitive level and charges a higher price, creating a deadweight welfare loss — allocative inefficiency because P > MC (2 marks); without competitive pressure, a monopolist may become X-inefficient, failing to minimise costs because there is no incentive to eliminate waste (2 marks). Monopoly may not always be worse: a natural monopoly benefits from such large economies of scale that a single firm can supply the whole market at a lower average cost than multiple firms, meaning productive efficiency may be superior (2 marks); monopoly profits can fund investment in research and development, promoting dynamic efficiency — Schumpeter argued that monopoly is the engine of innovation (1 mark). Judgement: monopoly is allocatively inefficient compared with perfect competition in static terms, but may deliver greater dynamic efficiency through innovation over time — the net effect depends on the industry and regulatory environment (1 mark).",
+    "question": "Assess whether monopoly is always less efficient than perfect competition. (10 marks)"
+   },
+   {
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Define oligopoly as a market dominated by a few large firms with significant interdependence, and game theory as a framework for analysing strategic decision-making where the outcome for each firm depends on the actions of rivals (2 marks).\n\nFor — game theory is useful: The Prisoners' Dilemma explains why oligopolists may engage in price wars even when collusion would be mutually beneficial — each firm has an incentive to undercut because it cannot trust rivals to cooperate (3 marks); Nash equilibrium helps predict stable outcomes where no firm can improve its position by unilaterally changing strategy (2 marks); game theory explains real-world phenomena such as price rigidity — the kinked demand curve model suggests firms avoid price changes because rivals will match price cuts but not price rises (2 marks).\n\nLimitations: Assumes firms are fully rational and have complete knowledge of rivals' payoffs, which is unrealistic in practice — firms operate under uncertainty (3 marks); real markets involve repeated interactions, learning and changing conditions that simple one-shot games cannot capture (2 marks); many other factors influence oligopolistic behaviour — brand loyalty, advertising, regulation and market conditions — that game theory models tend to oversimplify (2 marks).\n\nEvaluation: Game theory provides a powerful analytical framework for understanding strategic interdependence, which is the defining feature of oligopoly (2 marks). However, it is best used as one tool among many rather than a complete explanation — its simplifying assumptions limit its predictive accuracy, and real-world oligopolistic behaviour is often shaped by factors that formal models do not fully capture (2 marks).",
+    "question": "Evaluate the usefulness of game theory in explaining the behaviour of firms in an oligopolistic market. (20 marks)"
+   },
+   {
+    "marks": 4,
+    "command": "Outline",
+    "guidance": "Characteristic 1: Freedom of entry and exit — there are no significant barriers preventing new firms from entering the market or existing firms from leaving (1 mark). This means sunk costs are low or zero, so firms can enter to exploit profit opportunities and exit without incurring irrecoverable losses (1 mark).\n\nCharacteristic 2: The threat of hit-and-run competition disciplines incumbent firms (1 mark) — even if a market is dominated by one or a few firms, the possibility that new entrants will enter if supernormal profits are being earned forces incumbents to keep prices low and maintain efficiency (1 mark).",
+    "question": "Outline two characteristics of a contestable market. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "back": "A market with <strong>many small firms</strong>, identical products, perfect information, and <strong>no barriers to entry or exit</strong>. Firms are price-takers — they accept the market price.",
+    "front": "What is perfect competition?"
+   },
+   {
+    "back": "A market with a <strong>single dominant seller</strong> (or >25% market share in UK law). High barriers to entry protect supernormal profit. The monopolist is a price-maker.",
+    "front": "What is a monopoly?"
+   },
+   {
+    "back": "A market dominated by a <strong>few large firms</strong> with high concentration ratios. Key feature: <strong>interdependence</strong> — each firm's decisions affect and are affected by rivals' actions.",
+    "front": "What is an oligopoly?"
+   },
+   {
+    "back": "Many firms selling <strong>differentiated products</strong> with low barriers to entry. Firms have some price-setting power from differentiation but face competition from close substitutes.",
+    "front": "What is monopolistic competition?"
+   },
+   {
+    "back": "Obstacles that prevent new firms from entering a market — e.g., <strong>economies of scale</strong>, <strong>patents</strong>, <strong>brand loyalty</strong>, <strong>legal barriers</strong>, and <strong>high start-up costs</strong>.",
+    "front": "What are barriers to entry?"
+   },
+   {
+    "back": "The <strong>market share of the largest firms</strong> — e.g., a 5-firm concentration ratio of 80% means the top 5 firms control 80% of the market. Higher ratio = more oligopolistic.",
+    "front": "What is the concentration ratio?"
+   },
+   {
+    "back": "Charging <strong>different prices to different consumers</strong> for the same product — based on willingness to pay. Requires market power, ability to segment, and prevention of resale.",
+    "front": "What is price discrimination?"
+   },
+   {
+    "back": "<strong>First degree</strong>: each consumer pays maximum willingness to pay. <strong>Second degree</strong>: prices vary by quantity (bulk discounts). <strong>Third degree</strong>: prices vary by market segment (e.g., student discounts).",
+    "front": "What are the three degrees of price discrimination?"
+   },
+   {
+    "back": "A market where the <strong>threat of entry</strong> disciplines existing firms — even if few firms operate. Low barriers to entry and exit mean firms behave competitively to deter potential entrants.",
+    "front": "What is a contestable market?"
+   },
+   {
+    "back": "Costs that <strong>cannot be recovered</strong> if a firm exits the market — e.g., advertising, specialised equipment. High sunk costs reduce contestability because exit is costly.",
+    "front": "What are sunk costs?"
+   },
+   {
+    "back": "When firms in an oligopoly <strong>agree to restrict competition</strong> — fixing prices, output, or market shares. Illegal in most countries but tacit collusion (unspoken coordination) is hard to prove.",
+    "front": "What is collusion?"
+   },
+   {
+    "back": "A <strong>formal agreement between firms</strong> to collude — fixing prices or restricting output. Acts like a monopoly. E.g., OPEC. Illegal in most countries but persists internationally.",
+    "front": "What is a cartel?"
+   },
+   {
+    "back": "Explains <strong>price rigidity in oligopoly</strong>. If a firm raises price, rivals don't follow (elastic demand → revenue falls). If it cuts price, rivals match (inelastic → revenue falls). So prices stay stable.",
+    "front": "What is the kinked demand curve model?"
+   },
+   {
+    "back": "The study of <strong>strategic decision-making</strong> where outcomes depend on rivals' actions. The prisoner's dilemma shows why firms may compete rather than collude, even when collusion benefits both.",
+    "front": "What is game theory?"
+   },
+   {
+    "back": "Achieved when <strong>P = MC</strong>. Resources are allocated to produce the combination of goods that maximises consumer welfare. Occurs in perfect competition but not in monopoly.",
+    "front": "What is allocative efficiency?"
+   },
+   {
+    "back": "When a firm operates <strong>above its lowest possible cost curve</strong> due to lack of competitive pressure. Common in monopolies — no incentive to minimise costs.",
+    "front": "What is X-inefficiency?"
+   },
+   {
+    "back": "An industry where the <strong>MES is so large</strong> relative to market demand that only one firm can operate efficiently. Duplication would raise costs — e.g., water supply, rail networks.",
+    "front": "What is natural monopoly?"
+   },
+   {
+    "back": "A game theory model showing why two rational firms may <strong>not cooperate</strong> even when it's in their mutual interest. Each fears being undercut, so both compete — reaching a worse outcome.",
+    "front": "What is the prisoner's dilemma?"
+   }
+  ],
+  "section_diagrams": [
+   {
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:transparent\">\n  <defs>\n    <marker id=\"ms1\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"20\" x2=\"70\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"70\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"70\" y1=\"20\" x2=\"70\" y2=\"15\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ms1)\"/>\n  <line x1=\"470\" y1=\"300\" x2=\"475\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ms1)\"/>\n  <text x=\"28\" y=\"170\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"13\" text-anchor=\"middle\" transform=\"rotate(-90,28,170)\">Costs / Revenue</text>\n  <text x=\"270\" y=\"335\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"14\" text-anchor=\"middle\">Output (Q)</text>\n\n  <!-- AC curve (U-shaped) -->\n  <path d=\"M 110,120 Q 200,230 260,200 Q 310,180 420,220\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"428\" y=\"218\" fill=\"#3b82f6\" font-family=\"DM Sans, sans-serif\" font-size=\"13\" font-weight=\"bold\">AC</text>\n\n  <!-- MC curve (U-shaped, steeper) -->\n  <path d=\"M 140,200 Q 200,230 240,200 Q 280,160 310,120 Q 340,70 380,30\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2.5\"/>\n  <text x=\"385\" y=\"30\" fill=\"#ef4444\" font-family=\"DM Sans, sans-serif\" font-size=\"13\" font-weight=\"bold\">MC</text>\n\n  <!-- AR = MR = P (horizontal line) -->\n  <line x1=\"70\" y1=\"130\" x2=\"450\" y2=\"130\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"455\" y=\"128\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"12\" font-weight=\"bold\">AR = MR = P</text>\n\n  <!-- Profit-max output where MR = MC -->\n  <circle cx=\"300\" cy=\"130\" r=\"4\" fill=\"#f59e0b\"/>\n  <line x1=\"300\" y1=\"130\" x2=\"300\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"5,4\"/>\n  <text x=\"300\" y=\"315\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"12\" text-anchor=\"middle\">Q*</text>\n\n  <!-- AC at Q* (approx 185) -->\n  <line x1=\"70\" y1=\"185\" x2=\"300\" y2=\"185\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"5,4\"/>\n  <text x=\"58\" y=\"189\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" text-anchor=\"end\">AC</text>\n\n  <!-- Supernormal profit rectangle -->\n  <rect x=\"70\" y=\"130\" width=\"230\" height=\"55\" fill=\"#059669\" opacity=\"0.18\" stroke=\"#059669\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/>\n  <text x=\"185\" y=\"163\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">Supernormal Profit</text>\n</svg>",
+    "title": "Perfect Competition — Short-Run Supernormal Profit",
+    "checklist": [
+     "Horizontal AR = MR = P line drawn (firm is a price taker)",
+     "MC curve drawn — U-shaped and rising through the AR line",
+     "AC curve drawn — U-shaped, below AR at profit-maximising output",
+     "Profit-maximising output Q* shown where MR = MC",
+     "Supernormal profit area shaded between AR and AC from 0 to Q*",
+     "Axes labelled: Costs/Revenue (y-axis), Output (x-axis)"
+    ],
+    "description": "Shows a perfectly competitive firm earning supernormal profit in the short run. The firm is a price taker (horizontal AR = MR line) and produces where MR = MC. Since AR > AC at this output, supernormal profit is earned (shaded area)."
+   },
+   {
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:transparent\">\n  <defs>\n    <marker id=\"ms2\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"20\" x2=\"70\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"70\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"70\" y1=\"20\" x2=\"70\" y2=\"15\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ms2)\"/>\n  <line x1=\"470\" y1=\"300\" x2=\"475\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ms2)\"/>\n  <text x=\"28\" y=\"170\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"13\" text-anchor=\"middle\" transform=\"rotate(-90,28,170)\">Costs / Revenue</text>\n  <text x=\"270\" y=\"335\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"14\" text-anchor=\"middle\">Output (Q)</text>\n\n  <!-- AC curve (U-shaped, min at Q*) -->\n  <path d=\"M 110,120 Q 200,220 270,170 Q 320,155 430,200\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"438\" y=\"198\" fill=\"#3b82f6\" font-family=\"DM Sans, sans-serif\" font-size=\"13\" font-weight=\"bold\">AC</text>\n\n  <!-- MC curve (U-shaped, crosses AC at min) -->\n  <path d=\"M 150,220 Q 210,210 250,170 Q 275,140 310,100 Q 340,60 370,20\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2.5\"/>\n  <text x=\"375\" y=\"20\" fill=\"#ef4444\" font-family=\"DM Sans, sans-serif\" font-size=\"13\" font-weight=\"bold\">MC</text>\n\n  <!-- AR = MR = P (tangent to AC at minimum) -->\n  <line x1=\"70\" y1=\"160\" x2=\"450\" y2=\"160\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"455\" y=\"158\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"12\" font-weight=\"bold\">AR = MR = P</text>\n\n  <!-- Equilibrium point where MC crosses AR at min AC -->\n  <circle cx=\"270\" cy=\"160\" r=\"5\" fill=\"#f59e0b\"/>\n  <text x=\"280\" y=\"148\" fill=\"#f59e0b\" font-family=\"DM Sans, sans-serif\" font-size=\"12\" font-weight=\"bold\">E</text>\n\n  <!-- Dashed lines to axes -->\n  <line x1=\"270\" y1=\"160\" x2=\"270\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"5,4\"/>\n  <text x=\"270\" y=\"315\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"12\" text-anchor=\"middle\">Q*</text>\n  <text x=\"58\" y=\"164\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" text-anchor=\"end\">P*</text>\n\n  <!-- Annotations -->\n  <text x=\"360\" y=\"280\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" font-weight=\"bold\">P = MC = AC (min)</text>\n  <text x=\"360\" y=\"295\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"10\">Normal profit only</text>\n</svg>",
+    "title": "Perfect Competition — Long-Run Equilibrium",
+    "checklist": [
+     "Horizontal AR = MR = P line tangent to AC at its minimum point",
+     "MC curve passes through the minimum of AC and through the AR line at the same point",
+     "Single equilibrium point E clearly marked",
+     "P = MC = AC (at min AC) labelled — showing both allocative and productive efficiency",
+     "Normal profit outcome clearly stated",
+     "Axes labelled: Costs/Revenue (y-axis), Output (x-axis)"
+    ],
+    "description": "Shows a perfectly competitive firm in long-run equilibrium earning only normal profit. AR = MR is tangent to the AC curve at its minimum point, where MC also passes through. The firm is both allocatively efficient (P = MC) and productively efficient (min AC)."
+   },
+   {
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:transparent\">\n  <defs>\n    <marker id=\"ms3\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"20\" x2=\"70\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"70\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"70\" y1=\"20\" x2=\"70\" y2=\"15\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ms3)\"/>\n  <line x1=\"470\" y1=\"300\" x2=\"475\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ms3)\"/>\n  <text x=\"28\" y=\"170\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"13\" text-anchor=\"middle\" transform=\"rotate(-90,28,170)\">Costs / Revenue</text>\n  <text x=\"270\" y=\"335\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"14\" text-anchor=\"middle\">Output (Q)</text>\n\n  <!-- AR (Demand) curve — downward sloping -->\n  <line x1=\"90\" y1=\"40\" x2=\"440\" y2=\"280\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"445\" y=\"285\" fill=\"#3b82f6\" font-family=\"DM Sans, sans-serif\" font-size=\"13\" font-weight=\"bold\">AR (D)</text>\n\n  <!-- MR curve — steeper, below AR -->\n  <line x1=\"90\" y1=\"40\" x2=\"270\" y2=\"280\" stroke=\"#3b82f6\" stroke-width=\"2\" stroke-dasharray=\"6,3\"/>\n  <text x=\"275\" y=\"285\" fill=\"#3b82f6\" font-family=\"DM Sans, sans-serif\" font-size=\"12\">MR</text>\n\n  <!-- MC curve -->\n  <path d=\"M 120,250 Q 170,230 200,200 Q 240,150 280,100 Q 320,50 360,10\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2.5\"/>\n  <text x=\"365\" y=\"15\" fill=\"#ef4444\" font-family=\"DM Sans, sans-serif\" font-size=\"13\" font-weight=\"bold\">MC</text>\n\n  <!-- AC curve (U-shaped) -->\n  <path d=\"M 100,140 Q 180,200 240,175 Q 310,158 420,190\" fill=\"none\" stroke=\"#e8ecf5\" stroke-width=\"2\" stroke-dasharray=\"5,3\"/>\n  <text x=\"428\" y=\"192\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"12\">AC</text>\n\n  <!-- MR = MC intersection (profit-max output) -->\n  <circle cx=\"210\" cy=\"170\" r=\"4\" fill=\"#f59e0b\"/>\n\n  <!-- Dashed line down from MR=MC to Q axis -->\n  <line x1=\"210\" y1=\"170\" x2=\"210\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"5,4\"/>\n  <text x=\"210\" y=\"315\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"12\" text-anchor=\"middle\">Qm</text>\n\n  <!-- Price from AR curve at Qm (approx y=108) -->\n  <circle cx=\"210\" cy=\"108\" r=\"4\" fill=\"#059669\"/>\n  <line x1=\"70\" y1=\"108\" x2=\"210\" y2=\"108\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"5,4\"/>\n  <text x=\"58\" y=\"112\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"12\" text-anchor=\"end\">Pm</text>\n\n  <!-- AC at Qm (approx y=178) -->\n  <line x1=\"70\" y1=\"178\" x2=\"210\" y2=\"178\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"4,4\" opacity=\"0.5\"/>\n\n  <!-- Supernormal profit rectangle -->\n  <rect x=\"70\" y=\"108\" width=\"140\" height=\"70\" fill=\"#059669\" opacity=\"0.15\" stroke=\"#059669\" stroke-width=\"1.5\"/>\n  <text x=\"140\" y=\"148\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\">Supernormal</text>\n  <text x=\"140\" y=\"161\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\">Profit</text>\n\n  <!-- Competitive output for DWL (where MC = AR, approx x=290, y=153) -->\n  <line x1=\"290\" y1=\"153\" x2=\"290\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"4,4\" opacity=\"0.4\"/>\n  <text x=\"290\" y=\"315\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" text-anchor=\"middle\" opacity=\"0.6\">Qc</text>\n\n  <!-- Deadweight loss triangle -->\n  <polygon points=\"210,108 290,153 210,170\" fill=\"#ef4444\" opacity=\"0.2\" stroke=\"#ef4444\" stroke-width=\"1.5\"/>\n  <text x=\"245\" y=\"150\" fill=\"#ef4444\" font-family=\"DM Sans, sans-serif\" font-size=\"9\" font-weight=\"bold\">DWL</text>\n</svg>",
+    "title": "Monopoly — Profit-Maximising Equilibrium",
+    "checklist": [
+     "Downward-sloping AR (demand) curve drawn and labelled",
+     "MR curve below AR with twice the gradient, labelled",
+     "MC curve rising through MR to find profit-maximising output Qm",
+     "Price Pm read from the AR curve (not the MR curve) at Qm",
+     "AC curve below AR at Qm — supernormal profit rectangle shaded",
+     "Deadweight loss triangle identified between AR and MC from Qm to Qc",
+     "Competitive output Qc (where MC = AR) shown for comparison"
+    ],
+    "description": "Shows a monopolist maximising profit where MR = MC. The price is read from the demand (AR) curve, which is above AC — generating supernormal profit (shaded rectangle). The deadweight loss triangle shows the welfare cost compared to perfect competition."
+   },
+   {
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:transparent\">\n  <defs>\n    <marker id=\"ms4\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"20\" x2=\"70\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"70\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"70\" y1=\"20\" x2=\"70\" y2=\"15\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ms4)\"/>\n  <line x1=\"470\" y1=\"300\" x2=\"475\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ms4)\"/>\n  <text x=\"28\" y=\"170\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"13\" text-anchor=\"middle\" transform=\"rotate(-90,28,170)\">Costs / Revenue</text>\n  <text x=\"270\" y=\"335\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"14\" text-anchor=\"middle\">Output (Q)</text>\n\n  <!-- AC curve (U-shaped, min at around x=300) -->\n  <path d=\"M 110,100 Q 200,195 280,165 Q 340,152 440,185\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"445\" y=\"183\" fill=\"#3b82f6\" font-family=\"DM Sans, sans-serif\" font-size=\"13\" font-weight=\"bold\">AC</text>\n\n  <!-- MC curve (U-shaped, crosses AC at min) -->\n  <path d=\"M 145,220 Q 200,210 245,175 Q 280,140 320,90 Q 350,45 375,10\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2.5\"/>\n  <text x=\"380\" y=\"15\" fill=\"#ef4444\" font-family=\"DM Sans, sans-serif\" font-size=\"13\" font-weight=\"bold\">MC</text>\n\n  <!-- AR (Demand) curve — tangent to AC to the LEFT of AC minimum -->\n  <line x1=\"100\" y1=\"60\" x2=\"380\" y2=\"280\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"385\" y=\"285\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"13\" font-weight=\"bold\">AR (D)</text>\n\n  <!-- MR curve — below AR, steeper -->\n  <line x1=\"100\" y1=\"60\" x2=\"240\" y2=\"280\" stroke=\"#059669\" stroke-width=\"2\" stroke-dasharray=\"6,3\"/>\n  <text x=\"245\" y=\"285\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"12\">MR</text>\n\n  <!-- Tangency point of AR and AC (x≈225, y≈148) -->\n  <circle cx=\"225\" cy=\"148\" r=\"5\" fill=\"#f59e0b\"/>\n  <text x=\"235\" y=\"140\" fill=\"#f59e0b\" font-family=\"DM Sans, sans-serif\" font-size=\"12\" font-weight=\"bold\">E</text>\n\n  <!-- Profit-max output (MR = MC) at approx x=195 -->\n  <circle cx=\"195\" cy=\"170\" r=\"3\" fill=\"#ef4444\" opacity=\"0.7\"/>\n\n  <!-- Dashed lines from tangency to axes -->\n  <line x1=\"70\" y1=\"148\" x2=\"225\" y2=\"148\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"5,4\"/>\n  <line x1=\"225\" y1=\"148\" x2=\"225\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"5,4\"/>\n  <text x=\"58\" y=\"152\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" text-anchor=\"end\">P</text>\n  <text x=\"225\" y=\"315\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"12\" text-anchor=\"middle\">Q</text>\n\n  <!-- Min AC point for comparison -->\n  <line x1=\"295\" y1=\"152\" x2=\"295\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"4,4\" opacity=\"0.4\"/>\n  <text x=\"295\" y=\"315\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" text-anchor=\"middle\" opacity=\"0.5\">Q<tspan font-size=\"9\" baseline-shift=\"-3\">eff</tspan></text>\n\n  <!-- Excess capacity bracket -->\n  <line x1=\"225\" y1=\"290\" x2=\"295\" y2=\"290\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n  <line x1=\"225\" y1=\"286\" x2=\"225\" y2=\"294\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n  <line x1=\"295\" y1=\"286\" x2=\"295\" y2=\"294\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n  <text x=\"260\" y=\"283\" fill=\"#f59e0b\" font-family=\"DM Sans, sans-serif\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"bold\">Excess</text>\n  <text x=\"260\" y=\"270\" fill=\"#f59e0b\" font-family=\"DM Sans, sans-serif\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"bold\">Capacity</text>\n</svg>",
+    "title": "Monopolistic Competition — Long-Run Equilibrium",
+    "checklist": [
+     "Downward-sloping AR (demand) curve tangent to AC curve — NOT at AC's minimum",
+     "MR curve below AR with twice the gradient",
+     "MC and AC curves drawn — MC passes through AC at its minimum",
+     "Tangency point E marked where AR just touches AC (normal profit)",
+     "Firm output Q is to the LEFT of the minimum efficient scale Qeff",
+     "Excess capacity gap labelled between Q and Qeff",
+     "Allocative inefficiency: P > MC clearly visible at the firm's output"
+    ],
+    "description": "Shows a monopolistically competitive firm in long-run equilibrium. AR is tangent to AC (normal profit only), but NOT at the minimum of AC — demonstrating excess capacity and productive inefficiency. The firm remains allocatively inefficient (P > MC)."
+   },
+   {
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:transparent\">\n  <defs>\n    <marker id=\"ms5\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"20\" x2=\"70\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"70\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"70\" y1=\"20\" x2=\"70\" y2=\"15\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ms5)\"/>\n  <line x1=\"470\" y1=\"300\" x2=\"475\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ms5)\"/>\n  <text x=\"28\" y=\"170\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"13\" text-anchor=\"middle\" transform=\"rotate(-90,28,170)\">Price / Revenue</text>\n  <text x=\"270\" y=\"335\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"14\" text-anchor=\"middle\">Output (Q)</text>\n\n  <!-- Kinked demand curve — elastic portion above kink -->\n  <line x1=\"100\" y1=\"50\" x2=\"250\" y2=\"140\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"95\" y=\"42\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"11\">D (elastic)</text>\n\n  <!-- Kinked demand curve — inelastic portion below kink -->\n  <line x1=\"250\" y1=\"140\" x2=\"400\" y2=\"280\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"405\" y=\"280\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"11\">D (inelastic)</text>\n\n  <!-- Kink point -->\n  <circle cx=\"250\" cy=\"140\" r=\"5\" fill=\"#f59e0b\"/>\n  <text x=\"262\" y=\"132\" fill=\"#f59e0b\" font-family=\"DM Sans, sans-serif\" font-size=\"12\" font-weight=\"bold\">Kink</text>\n\n  <!-- MR — upper portion (elastic section MR) -->\n  <line x1=\"100\" y1=\"50\" x2=\"250\" y2=\"160\" stroke=\"#3b82f6\" stroke-width=\"2\" stroke-dasharray=\"6,3\"/>\n\n  <!-- MR — discontinuity (vertical gap) -->\n  <line x1=\"250\" y1=\"160\" x2=\"250\" y2=\"210\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"230\" y=\"190\" fill=\"#3b82f6\" font-family=\"DM Sans, sans-serif\" font-size=\"10\" text-anchor=\"end\" font-weight=\"bold\">MR gap</text>\n\n  <!-- MR — lower portion (inelastic section MR) -->\n  <line x1=\"250\" y1=\"210\" x2=\"330\" y2=\"290\" stroke=\"#3b82f6\" stroke-width=\"2\" stroke-dasharray=\"6,3\"/>\n  <text x=\"335\" y=\"292\" fill=\"#3b82f6\" font-family=\"DM Sans, sans-serif\" font-size=\"12\">MR</text>\n\n  <!-- MC curve 1 — within the gap -->\n  <path d=\"M 160,260 Q 210,230 240,200 Q 260,180 290,140 Q 310,105 340,60\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2.5\"/>\n  <text x=\"345\" y=\"55\" fill=\"#ef4444\" font-family=\"DM Sans, sans-serif\" font-size=\"13\" font-weight=\"bold\">MC</text>\n\n  <!-- MC' curve — shifted up, still within the gap -->\n  <path d=\"M 180,260 Q 225,230 250,200 Q 270,170 300,130 Q 325,90 350,50\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"5,4\" opacity=\"0.5\"/>\n  <text x=\"355\" y=\"45\" fill=\"#ef4444\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" opacity=\"0.6\">MC'</text>\n\n  <!-- Dashed lines from kink to axes -->\n  <line x1=\"70\" y1=\"140\" x2=\"250\" y2=\"140\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"5,4\"/>\n  <line x1=\"250\" y1=\"140\" x2=\"250\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"5,4\"/>\n  <text x=\"58\" y=\"144\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"12\" text-anchor=\"end\">P*</text>\n  <text x=\"250\" y=\"315\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"12\" text-anchor=\"middle\">Q*</text>\n\n  <!-- Annotation -->\n  <text x=\"365\" y=\"310\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"10\">MC shifts within gap</text>\n  <text x=\"365\" y=\"322\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"10\">→ P* and Q* unchanged</text>\n</svg>",
+    "title": "Oligopoly — The Kinked Demand Curve",
+    "checklist": [
+     "Demand curve with a clear KINK at the current price — elastic above, inelastic below",
+     "MR curve with a vertical DISCONTINUITY (gap) directly below the kink",
+     "Upper MR segment corresponds to elastic portion of demand",
+     "Lower MR segment corresponds to inelastic portion of demand",
+     "MC curve passes through the vertical gap in MR — showing price rigidity",
+     "MC' (shifted) also passes through the gap — demonstrating that cost changes within the gap do not affect P or Q",
+     "Current price P* and output Q* marked with dashed lines to axes"
+    ],
+    "description": "Shows the kinked demand curve model for a non-collusive oligopoly. The demand curve has a kink at the current price: elastic above (rivals don't follow price rises) and inelastic below (rivals match price cuts). This creates a discontinuity in the MR curve, explaining price rigidity."
+   }
+  ],
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "In perfect competition, many firms sell homogeneous products with perfect information and no barriers to entry or exit.",
+      "Individual firms are price takers — they face a perfectly elastic demand curve and cannot influence market price.",
+      "In long-run equilibrium, firms produce where P = MC (allocative efficiency) and at the minimum point of the AC curve (productive efficiency).",
+      "Consumers benefit from the lowest possible prices, and resources are allocated to their most valued uses, maximising total economic welfare."
+     ],
+     "title": "Perfect competition drives allocative efficiency",
+     "result": "Perfect competition achieves both allocative and productive efficiency in long-run equilibrium, maximising consumer welfare and resource allocation."
+    },
+    {
+     "steps": [
+      "A monopolist faces the entire market demand curve and can set price above marginal cost, earning persistent supernormal profits due to high barriers to entry.",
+      "Supernormal profits provide the funds and incentive for research and development — Schumpeter argued monopoly is the engine of innovation.",
+      "Innovation leads to dynamic efficiency — new products, processes and technologies that shift cost curves downward and expand consumer choice over time.",
+      "If dynamic efficiency gains are large enough, they can outweigh the static welfare losses (deadweight loss) caused by monopoly pricing, resulting in net social benefit."
+     ],
+     "title": "Monopoly can enable dynamic efficiency through supernormal profits",
+     "result": "Monopoly creates static inefficiency but may promote dynamic efficiency through innovation funded by supernormal profits — the net effect is an empirical question."
+    },
+    {
+     "steps": [
+      "Oligopolistic markets are characterised by a few dominant firms with high market concentration, creating strategic interdependence — each firm's decisions affect its rivals.",
+      "Game theory models this interdependence: in a prisoner's dilemma, each firm has an incentive to undercut rivals' prices, but if all do so, profits fall for everyone.",
+      "This creates a tendency towards collusion (tacit or explicit) to maintain high prices and joint profit maximisation, acting as a cartel.",
+      "However, collusion is unstable because each firm has an incentive to cheat on the agreement to gain market share, and competition authorities actively prosecute cartels."
+     ],
+     "title": "Game theory explains interdependence in oligopoly",
+     "result": "Oligopolistic behaviour is characterised by strategic interdependence, with tension between the incentive to collude for joint profits and the temptation to cheat for individual gain."
+    },
+    {
+     "steps": [
+      "A contestable market has low barriers to entry and exit — including low sunk costs — so potential entrants can easily enter if incumbent firms earn supernormal profits.",
+      "The threat of hit-and-run entry forces incumbent firms to keep prices close to average cost, even if they hold a dominant market position.",
+      "In a perfectly contestable market, even a monopolist would earn only normal profit, as any supernormal profit would immediately attract entry.",
+      "Contestability theory suggests that market structure alone does not determine outcomes — the degree of potential competition matters as much as actual competition."
+     ],
+     "title": "Contestability disciplines monopoly pricing",
+     "result": "Contestability shows that the threat of entry can discipline incumbent firms, meaning market performance depends on barriers to entry, not just the number of existing firms."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "Perfect competition is a theoretical benchmark, not a realistic market",
+     "content": "No real-world market perfectly satisfies all conditions of perfect competition — homogeneous products, perfect information and zero barriers to entry are unrealistic. However, the model remains valuable as a benchmark for evaluating the efficiency of real markets. Markets that approximate these conditions, such as agricultural commodity markets, tend to produce outcomes closer to the competitive ideal."
+    },
+    {
+     "title": "Monopoly and innovation: the evidence is mixed",
+     "content": "Schumpeter's argument that monopoly drives innovation is not universally supported. Many breakthrough innovations come from small, competitive firms and start-ups rather than established monopolists. Monopolists may become complacent and use profits for rent-seeking rather than R&D. The relationship between market structure and innovation is complex and depends on industry characteristics, regulatory environment and competitive dynamics."
+    },
+    {
+     "title": "Contestability is limited by sunk costs in practice",
+     "content": "In most industries, entry requires significant sunk costs — investment in brand building, specialised equipment or regulatory compliance that cannot be recovered on exit. These sunk costs undermine contestability by making hit-and-run entry unprofitable. However, digital markets and platform economies have reduced sunk costs in some sectors, increasing contestability and challenging traditional monopolies."
+    },
+    {
+     "title": "Collusion is difficult to detect and prove",
+     "content": "While competition authorities prohibit explicit collusion, tacit collusion through price leadership or parallel pricing is harder to identify and prosecute. Oligopolists may achieve collusive outcomes without direct communication, making enforcement challenging. The effectiveness of competition policy depends on the resources and legal powers of regulatory bodies, which vary significantly across countries."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "title": "Not clearly stating the assumptions of each market structure",
+    "examTip": "Start market structure essays by listing 2-3 key assumptions. This sets up your analysis and earns easy marks.",
+    "mistake": "Students analyse market behaviour without first stating the relevant assumptions, losing definition marks.",
+    "correction": "Always state assumptions: Perfect competition = many firms, homogeneous product, perfect info, free entry/exit. Monopoly = single seller, high barriers, no close substitutes. Oligopoly = few large firms, high barriers, interdependence."
+   },
+   {
+    "title": "Saying monopoly is always bad for consumers",
+    "mistake": "Students give a one-sided view that monopoly always leads to higher prices and lower output without considering dynamic efficiency.",
+    "correction": "Evaluate: monopolies may invest supernormal profits in R&D (dynamic efficiency), achieve economies of scale (lower costs), and cross-subsidise loss-making services. Natural monopolies can be more efficient than multiple firms."
+   },
+   {
+    "title": "Confusing the kinked demand curve model with game theory",
+    "mistake": "Students mix up these two models of oligopoly behaviour.",
+    "correction": "The kinked demand curve explains price rigidity (rivals match price cuts but not rises). Game theory (prisoner's dilemma) explains why firms may collude or compete. They are complementary but distinct models."
+   },
+   {
+    "title": "Forgetting the conditions for price discrimination",
+    "mistake": "Students describe price discrimination without stating the necessary conditions.",
+    "correction": "Three conditions: (1) the firm must have market power (price maker), (2) consumers must have different price elasticities of demand (market segmentation), (3) resale must be prevented (arbitrage impossible)."
+   }
+  ]
+ }
+}

@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Learning Progress — Revvy Learn',
-  description: 'Track your mastery across all topics with detailed analytics and progress insights.',
+  description: 'Track your Smart Practice and Smart Flashcards mastery, topic by topic, with detailed analytics and progress insights.',
 };
 
 export default async function ProgressPage() {
@@ -22,7 +22,7 @@ export default async function ProgressPage() {
         <Link href="/" className="resource-back-link">&larr; Back to App</Link>
         <h1 className="resource-page-title">Learning Progress</h1>
         <p className="resource-page-subtitle">
-          Track your mastery across all topics
+          Track your Smart Practice and Smart Flashcards mastery, topic by topic
         </p>
       </div>
       <ProgressDashboard />

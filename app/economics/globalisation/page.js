@@ -8,11 +8,11 @@ import '@/styles/landing.css';
 
 export const metadata = {
   title: 'Globalisation | IAL Economics WEC14 Complete Revision Guide',
-  description: 'Complete globalisation revision for Edexcel IAL Economics Unit 4 (WEC14). Causes, effects on developed and developing countries, multinational corporations, evaluation and exam technique with model answers.',
+  description: 'Globalisation revision for Edexcel IAL Economics Unit 4 (WEC14). Causes, effects on developed and developing countries, transnational companies, evaluation and exam technique with model answers.',
   alternates: { canonical: 'https://revvylearn.com/economics/globalisation' },
   openGraph: {
     title: 'Globalisation | IAL Economics WEC14 Complete Guide | Revvy Learn',
-    description: 'The complete Edexcel IAL Economics guide to globalisation: causes, effects, MNCs, evaluation framework. Built for WEC14.',
+    description: 'The Edexcel IAL Economics guide to globalisation: causes, effects, TNCs and an evaluation framework. Built for WEC14.',
     url: 'https://revvylearn.com/economics/globalisation',
     type: 'article',
   },
@@ -41,17 +41,17 @@ const CAUSES = [
     example: 'Containerisation cut shipping costs by ~90% between 1950 and 2000. A call from London to New York in 1930 cost \u00a3300 in today\u2019s money; in 2026 it is free over the internet.',
   },
   {
-    slug: 'financial-deregulation',
+    slug: 'trading-blocs',
     number: 3,
-    name: 'Financial deregulation',
-    detail: 'The lifting of capital controls from the 1980s allowed money to flow between countries far more freely. Banking deregulation and the rise of global capital markets mean a pension fund in Qatar can buy shares in a Brazilian mining firm instantly.',
-    example: 'Global foreign direct investment rose from $54bn in 1980 to over $1.5trn in recent years.',
+    name: 'Growth in the number and size of trading blocs',
+    detail: 'Spec 4.3.1 names trading blocs as a cause in their own right, separate from general trade liberalisation. Members remove internal tariffs and align standards, so trade is created between them. Blocs have both widened, taking in more members, and deepened, moving from free trade areas to customs unions and single markets.',
+    example: 'The African Continental Free Trade Area, in force since 2021, links 54 countries and about 1.4 billion people. ASEAN has moved from a free trade area to an economic community.',
   },
   {
     slug: 'mncs',
     number: 4,
-    name: 'Growth of multinational corporations',
-    detail: 'MNCs drive globalisation by operating supply chains across borders \u2014 designing in one country, sourcing components from many, assembling in low-cost locations, and selling worldwide. They shift profits, technology and jobs internationally.',
+    name: 'Growth of transnational corporations (TNCs)',
+    detail: 'TNCs drive globalisation by operating supply chains across borders \u2014 designing in one country, sourcing components from many, assembling in low-cost locations, and selling worldwide. They shift profits, technology and jobs internationally.',
     example: 'Apple designs in California, sources components from over 40 countries, assembles in China and Vietnam, and sells in more than 170 markets.',
   },
   {
@@ -64,8 +64,8 @@ const CAUSES = [
   {
     slug: 'migration',
     number: 6,
-    name: 'Migration',
-    detail: 'Labour flows across borders driven by wage differentials, demographic imbalances and the search for opportunity. Migration spreads skills, remittances and cultural exchange \u2014 and is itself both a cause and an effect of globalisation.',
+    name: 'Migration (a characteristic, not a cause)',
+    detail: 'Read the spec carefully here. 4.3.1 lists rising migration under the CHARACTERISTICS of globalisation, alongside trade as a share of GDP and the growth of TNCs and FDI. It is not one of the five named causes. Examiners reward students who can tell a characteristic from a cause, so treat migration as evidence that globalisation is happening rather than as an explanation of why.',
     example: 'Remittances from migrants in 2024 exceeded $650bn globally, dwarfing official aid and rivalling foreign direct investment into many developing economies.',
   },
 ];
@@ -97,7 +97,7 @@ const EFFECTS_DEVELOPING = [
   { pos: false, text: 'Vulnerability to global shocks and capital flight.' },
 ];
 
-const MNC_EFFECTS = [
+const TNC_EFFECTS = [
   { pos: true, text: 'Job creation, often at wages above the local average.' },
   { pos: true, text: 'Tax revenue for the host government.' },
   { pos: true, text: 'Technology transfer and training of local workforce.' },
@@ -122,15 +122,15 @@ const EVALUATION_POINTS = [
 const FAQS = [
   {
     q: 'What is globalisation?',
-    a: 'Globalisation is the increasing interdependence and integration of the world\u2019s economies, societies and cultures through cross-border trade, investment, migration and the spread of technology. For Edexcel IAL Economics, the exam focus is on economic globalisation \u2014 trade, FDI, MNCs and the international labour market.',
+    a: 'Globalisation is the increasing interdependence and integration of the world\u2019s economies, societies and cultures through cross-border trade, investment, migration and the spread of technology. For Edexcel IAL Economics, the exam focus is on economic globalisation \u2014 trade, FDI, TNCs and the international labour market.',
   },
   {
     q: 'What are the main causes of globalisation?',
-    a: 'The six main causes examined in Edexcel IAL Economics Unit 4 (WEC14) are: (1) trade liberalisation through the WTO and regional agreements, (2) advances in technology and communications, (3) financial deregulation, (4) the growth of multinational corporations, (5) political change and the opening of markets, and (6) migration. Technology and trade liberalisation are usually the two strongest drivers.',
+    a: 'The Edexcel IAL Economics Unit 4 (WEC14) specification names five causes at 4.3.1.2: (1) trade liberalisation, (2) the increased number and size of trading blocs such as the EU and ASEAN, (3) political change and the opening of markets (the breakdown of the Soviet system, China\u2019s reforms), (4) the reduced cost of transport and communications, and (5) the increased significance of transnational corporations (TNCs), together with the FDI they carry. Trade liberalisation and falling transport and communication costs are usually the two strongest drivers. Migration is examined as a characteristic of globalisation rather than a cause, and financial deregulation, though a real driver in the wider literature, is not one of the named spec causes.',
   },
   {
     q: 'What are the causes and effects of globalisation?',
-    a: 'The causes are trade liberalisation, technology, financial deregulation, MNC growth, political change and migration. The effects differ for developed and developing countries: developed economies see lower consumer prices, deindustrialisation and rising inequality; developing economies see growth, poverty reduction, technology transfer, but also environmental damage, exploitation and dependency risks. A full answer evaluates both groups.',
+    a: 'The causes are trade liberalisation, technology, financial deregulation, TNC growth, political change and migration. The effects differ for developed and developing countries: developed economies see lower consumer prices, deindustrialisation and rising inequality; developing economies see growth, poverty reduction, technology transfer, but also environmental damage, exploitation and dependency risks. A full answer evaluates both groups.',
   },
   {
     q: 'What are the causes of globalisation in economics?',
@@ -145,8 +145,8 @@ const FAQS = [
     a: 'Good evaluation recognises that globalisation is not inherently good or bad. Discuss: (1) the country\u2019s level of development, (2) the strength of its institutions and regulation, (3) which industries and workers benefit vs lose, (4) the short-run vs long-run balance, and (5) whether gains are redistributed. Use real-world examples \u2014 China\u2019s export-led growth, UK deindustrialisation, the 2008 financial crisis, the global semiconductor supply chain.',
   },
   {
-    q: 'What is the role of multinational corporations in globalisation?',
-    a: 'MNCs are both a cause and a consequence of globalisation. They organise production across borders, integrate supply chains, shift capital and technology, and create jobs in host countries. They can bring investment and productivity gains, but also use transfer pricing to reduce tax bills and may exploit weaker regulation. The net impact depends heavily on the host country\u2019s regulatory framework.',
+    q: 'What is the role of transnational corporations (TNCs) in globalisation?',
+    a: 'TNCs are both a cause and a consequence of globalisation. They organise production across borders, integrate supply chains, shift capital and technology, and create jobs in host countries. They can bring investment and productivity gains, but also use transfer pricing to reduce tax bills and may exploit weaker regulation. The net impact depends heavily on the host country\u2019s regulatory framework.',
   },
   {
     q: 'Is globalisation reversing?',
@@ -155,9 +155,9 @@ const FAQS = [
 ];
 
 const KEY_CONCEPTS = [
-  { icon: NetworkGraph, title: 'Six causes, two big drivers', desc: 'Tech and trade liberalisation are the engines. The others (finance, MNCs, politics, migration) accelerate the trend but do not start it.' },
+  { icon: NetworkGraph, title: 'Five causes, two big drivers', desc: 'Trade liberalisation and cheaper transport and communications are the engines. Trading blocs, political change and the rise of TNCs accelerate the trend. Migration is a characteristic of globalisation, not a cause.' },
   { icon: ChartHistogram, title: 'Winners and losers', desc: 'Globalisation has positive net gains globally but creates clear losers within countries. Naming both is what separates good from average answers.' },
-  { icon: DrawerAlt, title: 'MNCs are double-edged', desc: 'Same firm can bring jobs and FDI while extracting profit and avoiding tax. Evaluation depends on host-country regulation.' },
+  { icon: DrawerAlt, title: 'TNCs are double-edged', desc: 'Same firm can bring jobs and FDI while extracting profit and avoiding tax. Evaluation depends on host-country regulation.' },
   { icon: CardsIcon, title: 'It can reverse', desc: 'Slowbalisation and friendshoring are reshaping global trade. Top-band answers acknowledge globalisation is not a one-way process.' },
 ];
 
@@ -186,11 +186,11 @@ export default async function GlobalisationPillarPage() {
     '@context': 'https://schema.org',
     '@type': 'LearningResource',
     name: 'Globalisation \u2014 Edexcel IAL Economics (WEC14) Complete Guide',
-    description: 'Comprehensive revision notes on globalisation for Edexcel International A-Level Economics Unit 4 (WEC14). Causes, effects on developed and developing countries, MNCs and evaluation.',
+    description: 'Revision notes on globalisation for Edexcel International A-Level Economics Unit 4 (WEC14). Causes, effects on developed and developing countries, TNCs and evaluation.',
     url: 'https://revvylearn.com/economics/globalisation',
     educationalLevel: 'Advanced Level',
     learningResourceType: 'Revision Notes',
-    teaches: 'Globalisation, causes of globalisation, effects of globalisation, multinational corporations, trade liberalisation, foreign direct investment',
+    teaches: 'Globalisation, causes of globalisation, effects of globalisation, transnational companies, trade liberalisation, foreign direct investment',
     educationalUse: 'revision',
     inLanguage: 'en-GB',
     isAccessibleForFree: true,
@@ -230,7 +230,7 @@ export default async function GlobalisationPillarPage() {
         <a className="eup-tnav-pill" href="#causes">Causes</a>
         <a className="eup-tnav-pill" href="#effects-developed">Developed countries</a>
         <a className="eup-tnav-pill" href="#effects-developing">Developing countries</a>
-        <a className="eup-tnav-pill" href="#mncs">MNCs</a>
+        <a className="eup-tnav-pill" href="#mncs">TNCs</a>
         <a className="eup-tnav-pill" href="#evaluation">Evaluation</a>
         <a className="eup-tnav-pill" href="#faq">FAQ</a>
       </div>
@@ -244,7 +244,7 @@ export default async function GlobalisationPillarPage() {
               <span className="eup-unit-code">WEC14</span>
             </div>
             <h1 className="elp-hero-title">Globalisation &mdash;<br /><em style={{ color: 'var(--eup-accent)' }}>causes, effects, evaluation</em></h1>
-            <p className="elp-hero-desc">The complete Edexcel IAL Economics guide to globalisation. Causes, effects on developed and developing countries, the role of multinational corporations and a full evaluation framework for WEC14.</p>
+            <p className="elp-hero-desc">The complete Edexcel IAL Economics guide to globalisation. Causes, effects on developed and developing countries, the role of transnational corporations (TNCs) and a full evaluation framework for WEC14.</p>
             <div className="elp-hero-actions">
               <Link href="/economics/unit-4/causes-effects-globalisation" className="elp-btn-primary">Open in app &rarr;</Link>
               <a href="#causes" className="elp-btn-secondary">Jump to causes</a>
@@ -261,7 +261,7 @@ export default async function GlobalisationPillarPage() {
           <div className="elp-hero-preview elp-fade-up" style={{ transitionDelay: '.15s' }}>
             <div className="elp-hero-badge elp-b1">
               <span className="elp-badge-icon"><Star size={18} /></span>
-              <div className="elp-badge-text"><span className="elp-badge-val">6 causes</span><span className="elp-badge-lbl">fully spec-aligned</span></div>
+              <div className="elp-badge-text"><span className="elp-badge-val">6 causes</span><span className="elp-badge-lbl">with real examples</span></div>
             </div>
             <div className="elp-preview-card">
               <div className="elp-preview-topbar">
@@ -301,14 +301,14 @@ export default async function GlobalisationPillarPage() {
           <h2 className="elp-s-title">What is globalisation?</h2>
         </div>
         <div className="eup-topic-block elp-fade-up">
-          <p className="eup-topic-desc">Globalisation is the increasing interdependence of national economies through cross-border trade in goods and services, flows of capital and labour, and the spread of technology and ideas. It is the dominant force shaping the global economy in Unit 4 of Edexcel IAL Economics (WEC14) and appears in every paper series in both short-answer and 20-mark form.</p>
-          <p className="eup-topic-desc">Globalisation is not new &mdash; the first wave ran from the 1870s to 1914 &mdash; but it has accelerated dramatically since the 1980s. For WEC14, you need to explain the causes, weigh up the effects on different types of country, and evaluate the role of multinational corporations.</p>
+          <p className="eup-topic-desc">Globalisation is the increasing interdependence of national economies through cross-border trade in goods and services, flows of capital and labour, and the spread of technology and ideas. It is the dominant force shaping the global economy in Unit 4 of Edexcel IAL Economics (WEC14) and can be examined anywhere on the paper, from the five-part data response in Section B to a 20-mark Evaluate essay in Section C.</p>
+          <p className="eup-topic-desc">Globalisation is not new &mdash; the first wave ran from the 1870s to 1914 &mdash; but it has accelerated dramatically since the 1980s. For WEC14, you need to explain the causes, weigh up the effects on different types of country, and evaluate the role of transnational corporations.</p>
         </div>
       </div>
 
       <div className="elp-section" id="causes">
         <div className="elp-fade-up" style={{ marginBottom: 40 }}>
-          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />All six causes</div>
+          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />The five causes, and one common trap</div>
           <h2 className="elp-s-title">Causes of globalisation</h2>
           <p className="elp-s-sub">Strong WEC14 answers identify the most important cause for the specific context of the question and explain why &mdash; not just list them.</p>
         </div>
@@ -373,14 +373,14 @@ export default async function GlobalisationPillarPage() {
 
       <div className="elp-section" id="mncs">
         <div className="elp-fade-up" style={{ marginBottom: 24 }}>
-          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />Multinational corporations</div>
-          <h2 className="elp-s-title">MNCs and globalisation</h2>
+          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />Transnational corporations</div>
+          <h2 className="elp-s-title">TNCs and globalisation</h2>
           <p className="elp-s-sub">Both a cause and an outcome of globalisation. Same firm can bring jobs and FDI while extracting profit and avoiding tax.</p>
         </div>
         <div className="eup-topic-block elp-fade-up">
           <ul style={{ padding: 0, margin: 0, listStyle: 'none' }}>
-            {MNC_EFFECTS.map((e, i) => (
-              <li key={i} style={{ display: 'flex', gap: 12, padding: '10px 0', borderBottom: i < MNC_EFFECTS.length - 1 ? '1px solid var(--elp-bd-d)' : 'none' }}>
+            {TNC_EFFECTS.map((e, i) => (
+              <li key={i} style={{ display: 'flex', gap: 12, padding: '10px 0', borderBottom: i < TNC_EFFECTS.length - 1 ? '1px solid var(--elp-bd-d)' : 'none' }}>
                 <span style={{ flexShrink: 0, fontWeight: 700, color: e.pos ? 'var(--ns-free)' : '#ef4444', fontSize: 16, lineHeight: '1.5' }}>{e.pos ? '+' : '\u2212'}</span>
                 <span style={{ color: 'var(--elp-tx)', fontSize: 14, lineHeight: '1.6' }}>{e.text}</span>
               </li>
@@ -486,9 +486,9 @@ export default async function GlobalisationPillarPage() {
               <div className="eup-ei-label">Assessment details</div>
               <div className="eup-ei-row"><span className="eup-ei-key">Unit</span><span className="eup-ei-val" style={{ color: 'var(--eup-accent)' }}>4.3.1 &mdash; WEC14</span></div>
               <div className="eup-ei-row"><span className="eup-ei-key">Paper duration</span><span className="eup-ei-val">2 hours</span></div>
-              <div className="eup-ei-row"><span className="eup-ei-key">Paper marks</span><span className="eup-ei-val">100 marks</span></div>
-              <div className="eup-ei-row"><span className="eup-ei-key">% of A-Level</span><span className="eup-ei-val">30%</span></div>
-              <div className="eup-ei-row"><span className="eup-ei-key">Question styles</span><span className="eup-ei-val eup-marks-pills-inline"><span className="eup-mp eup-mp-4">5</span><span className="eup-mp eup-mp-8">10</span><span className="eup-mp eup-mp-20">15</span></span></div>
+              <div className="eup-ei-row"><span className="eup-ei-key">Paper marks</span><span className="eup-ei-val">80 marks</span></div>
+              <div className="eup-ei-row"><span className="eup-ei-key">% of A-Level</span><span className="eup-ei-val">25%</span></div>
+              <div className="eup-ei-row"><span className="eup-ei-key">Question styles</span><span className="eup-ei-val eup-marks-pills-inline"><span className="eup-mp eup-mp-4">4</span><span className="eup-mp eup-mp-8">8</span><span className="eup-mp eup-mp-20">20</span></span></div>
               <div className="eup-ei-row"><span className="eup-ei-key">Common in</span><span className="eup-ei-val">Synoptic essays drawing across all four units</span></div>
               <div className="eup-ei-row eup-ei-row-last"><span className="eup-ei-key">Sessions</span><span className="eup-ei-val">January, June, October</span></div>
             </div>
@@ -556,7 +556,7 @@ export default async function GlobalisationPillarPage() {
         <div className="elp-cta-bg" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(167,139,250,.07) 0%, transparent 65%)' }} />
         <div className="elp-cta-inner elp-fade-up">
           <h2 className="elp-cta-title">Ready to master globalisation?</h2>
-          <p className="elp-cta-sub">Free notes for every spec point. Flashcards, quizzes and AI tutor unlock with Pro — £1 for your first month.</p>
+          <p className="elp-cta-sub">Free notes across all four units. Flashcards, quizzes and AI tutor unlock with Pro — £1 for your first month.</p>
           <div className="elp-cta-actions">
             <Link href="/economics/unit-4/causes-effects-globalisation" className="elp-btn-primary" style={{ fontSize: 15, padding: '14px 30px' }}>Open in app &mdash; it&apos;s free &rarr;</Link>
             <Link href="/economics/unit-4" className="elp-btn-secondary">&larr; Back to Unit 4</Link>

@@ -12,7 +12,7 @@ export const metadata = {
     languages: { 'en': 'https://revvylearn.com' },
   },
   title: "Revvy Learn — Edexcel IAL Revision",
-  description: "Free revision notes, flashcards, past papers, model answers and AI tutor for Edexcel International A-Level Economics and Business.",
+  description: "Free revision notes, diagrams and practice questions for Edexcel International A-Level Economics and Business. Flashcards, quizzes and the AI tutor unlock with Pro.",
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
@@ -31,7 +31,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'Revvy Learn — Edexcel IAL Economics & Business Revision',
-    description: 'Free interactive revision for Edexcel International A-Level Economics and Business. Notes, flashcards, quizzes, past papers and AI tutor.',
+    description: 'Interactive revision for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.',
     url: 'https://revvylearn.com',
     siteName: 'Revvy Learn',
     type: 'website',
@@ -40,7 +40,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Revvy Learn — Edexcel IAL Economics & Business Revision',
-    description: 'Free interactive revision for Edexcel International A-Level Economics and Business. Notes, flashcards, quizzes, past papers and AI tutor.',
+    description: 'Interactive revision for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.',
   },
 };
 
@@ -64,13 +64,24 @@ export default async function RootLayout({ children }) {
             "@type": "EducationalOrganization",
             "name": "Revvy Learn",
             "url": "https://revvylearn.com",
-            "description": "Free revision platform for Edexcel International A-Level Economics and Business with interactive notes, flashcards, quizzes, past papers and AI tutor.",
+            "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
             "sameAs": ["https://instagram.com/revvylearn"],
-            "offers": {
-              "@type": "Offer",
-              "category": "Educational Resources",
-              "description": "Edexcel IAL Economics and Business revision with interactive notes, flashcards, quizzes, and AI tutor"
-            }
+            "offers": [
+              {
+                "@type": "Offer",
+                "category": "Educational Resources",
+                "name": "Free",
+                "price": "0",
+                "priceCurrency": "GBP",
+                "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+              },
+              {
+                "@type": "Offer",
+                "category": "Educational Resources",
+                "name": "Revvy Learn Pro",
+                "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+              }
+            ]
           })}}
         />
         <script

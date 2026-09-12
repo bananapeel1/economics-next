@@ -2,7 +2,7 @@ import SectionModelAnswersPage from '@/components/SectionModelAnswersPage';
 
 export const metadata = {
   title: 'Edexcel IAL Meeting Customer Needs Model Answers | Business | Revvy Learn',
-  description: 'Free annotated model answers for Edexcel IAL Business meeting customer needs (1.1). Covers market segmentation, customer needs, and product differentiation with mark scheme breakdowns.',
+  description: 'Annotated model answers for Edexcel IAL Business meeting customer needs (1.3.1). Covers market segmentation, customer needs, and product differentiation with mark scheme breakdowns.',
   alternates: { canonical: '/business/meeting-customer-needs-model-answers' },
   openGraph: {
     title: 'Edexcel IAL Meeting Customer Needs Model Answers | Revvy Learn',
@@ -19,7 +19,7 @@ export default function MeetingCustomerNeedsModelAnswersPage() {
       subject="business"
       backLink={{ href: '/business/unit-1', label: 'Unit 1: Marketing & People' }}
       title="Meeting Customer Needs Model Answers"
-      subtitle="Section 1.1 — Annotated model answers for <strong>market segmentation</strong>, customer needs, and product differentiation."
+      subtitle="Section 1.3.1 — Annotated model answers for <strong>market segmentation</strong>, customer needs, and product differentiation."
     />
   );
 }

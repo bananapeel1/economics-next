@@ -4,10 +4,10 @@ import SiteHeader from '@/components/SiteHeader';
 
 export const metadata = {
   title: 'Economics Topic Linkage Map — Edexcel IAL | Revvy Learn',
-  description: 'Interactive visual map showing how Edexcel IAL Economics topics connect across micro and macro units. Spot cross-topic evaluation points for higher-mark exam answers.',
+  description: 'Interactive visual map showing how Edexcel IAL Economics topics connect within Unit 1 (Microeconomics) and within Unit 2 (Macroeconomics). Spot cross-topic evaluation points for higher-mark exam answers.',
   openGraph: {
     title: 'Economics Topic Linkage Map — Edexcel IAL | Revvy Learn',
-    description: 'Interactive visual map showing how Edexcel IAL Economics topics connect across micro and macro units.',
+    description: 'Interactive visual map showing how Edexcel IAL Economics topics connect within Unit 1 (Microeconomics) and within Unit 2 (Macroeconomics).',
     url: 'https://revvylearn.com/topic-links',
   },
 };

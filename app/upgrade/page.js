@@ -2,11 +2,11 @@ import Link from 'next/link';
 import UpgradeButton from '@/components/UpgradeButton';
 
 export const metadata = {
-  title: 'Revvy Learn Pro — your first month is £1',
-  description: 'Get every Revvy Learn revision tool for £1 for your first month, then £1.99/month. Or pay £12 once and keep it for life. Flashcards, quizzes, AI tutor, evaluation chains and model answers for Edexcel IAL Economics and Business.',
+  title: 'Revvy Learn Pro — £1 first month for new subscribers',
+  description: 'New subscribers get every Revvy Learn revision tool for £1 for the first month, then £1.99/month. Or pay £12 once and keep it for life. Flashcards, quizzes, AI tutor, evaluation chains and model answers for Edexcel IAL Economics and Business.',
   openGraph: {
-    title: 'Revvy Learn Pro — your first month is £1',
-    description: 'Every revision tool for £1 for your first month, then £1.99. Cancel anytime, or pay £12 once and keep it forever.',
+    title: 'Revvy Learn Pro — £1 first month for new subscribers',
+    description: 'New subscribers get every revision tool for £1 for the first month, then £1.99. Cancel anytime, or pay £12 once and keep it forever.',
     url: 'https://revvylearn.com/upgrade',
     type: 'website',
   },
@@ -15,16 +15,15 @@ export const metadata = {
 const MONTHLY_FEATURES = [
   ['Everything in Free', null],
   ['Evaluation chains', 'The 20-mark technique, built step by step'],
-  ['Model answers', 'Full-mark responses for every topic'],
-  ['Flashcards', 'Spaced repetition scheduled from your answers'],
+  ['Model answers', 'Top-band responses across IAS and IA2 Economics'],
+  ['Flashcards', 'Every card unlocked, and the ones you miss come back each round'],
   ['Quizzes with marking', 'Examiner-style feedback, not just right or wrong'],
   ['AI tutor', 'Answers in exam language, any hour of the night'],
-  ['Revision PDFs', 'Download and print for offline revision'],
 ];
 
 const LIFETIME_FEATURES = [
   ['Everything in Pro', null],
-  ['Both years', 'AS and A2, all four units'],
+  ['Both years', 'IAS and IA2, all four units'],
   ['Every exam series', 'January and June, for as long as you need'],
   ['Every future update', 'New topics and tools, included'],
   ['No renewals, ever', 'One payment and you are done'],
@@ -74,7 +73,7 @@ export default function UpgradePage() {
         <div className="upgrade-header">
           <Link href="/" className="upgrade-back-link">&larr; Back to App</Link>
           <div className="upgrade-badge">REVVY LEARN PRO</div>
-          <h1 className="upgrade-title">Your first month is £1.</h1>
+          <h1 className="upgrade-title">New subscribers get their first month for £1.</h1>
           <p className="upgrade-subtitle">
             Every note stays free. Pro unlocks the tools that turn reading into marks.
           </p>
@@ -93,9 +92,9 @@ export default function UpgradePage() {
               <div className="upgrade-plan-price">
                 £1<span className="upgrade-plan-unit">first month</span>
               </div>
-              <div className="upgrade-plan-sub">then £1.99/month &middot; cancel anytime</div>
+              <div className="upgrade-plan-sub">new subscribers &middot; then £1.99/month &middot; cancel anytime</div>
             </div>
-            <UpgradeButton plan="monthly" label="Get Pro for £1 →" className="primary" />
+            <UpgradeButton plan="monthly" label="Start Pro →" className="primary" />
             <FeatureList items={MONTHLY_FEATURES} />
           </div>
 
@@ -118,8 +117,8 @@ export default function UpgradePage() {
 
         <div className="upgrade-reassure">
           <div className="upgrade-reassure-item">
-            <strong>Cancel in two clicks</strong>
-            <span>Settings → Cancel. No email, no waiting on a reply, no notice period.</span>
+            <strong>Cancel anytime in Settings</strong>
+            <span>Settings → Cancel Subscription, then confirm in Stripe. No email, no waiting on a reply, no notice period.</span>
           </div>
           <div className="upgrade-reassure-item">
             <strong>Your currency, not ours</strong>
@@ -127,17 +126,17 @@ export default function UpgradePage() {
           </div>
           <div className="upgrade-reassure-item">
             <strong>The notes stay free</strong>
-            <span>Every spec point is readable without an account. Pro is the practice, not the content.</span>
+            <span>The notes are readable without an account. Pro is the practice, not the content.</span>
           </div>
         </div>
 
         <div className="upgrade-final">
-          <h2 className="upgrade-final-title">One pound. One month. See if it works for you.</h2>
+          <h2 className="upgrade-final-title">New here? One pound. One month. See if it works for you.</h2>
           <p className="upgrade-final-sub">
             If it doesn&apos;t, cancel before month two and you&apos;ve spent a pound finding out.
           </p>
           <div className="upgrade-final-cta">
-            <UpgradeButton plan="monthly" label="Get Pro for £1 →" className="primary" />
+            <UpgradeButton plan="monthly" label="Start Pro →" className="primary" />
           </div>
           <div className="upgrade-signin">
             Already subscribed? <Link href="/settings">Manage your plan</Link>

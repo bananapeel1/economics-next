@@ -1,0 +1,833 @@
+{
+ "section_id": "balance-payments-exchange-rates",
+ "subject": "economics",
+ "label": "2026-09-12-pre-packet-2",
+ "tables": {
+  "section_content": [
+   {
+    "title": "Balance of Payments and Exchange Rates",
+    "sections": [
+     {
+      "id": "balance-of-payments",
+      "body": [
+       {
+        "text": "The **balance of payments (BoP)** is a record of all economic transactions between residents of a country and the rest of the world over a given period. It has two main components: the **current account** and the **financial account**. The current account records trade in goods and services, primary income (investment returns), and secondary income (transfers such as foreign aid). The financial account records capital flows — FDI, portfolio investment, and changes in reserves.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The BoP must always **balance** — a current account deficit must be financed by a financial account surplus (capital inflows). If a country imports more than it exports, foreigners accumulate that country's currency, which flows back as investment. A persistent current account deficit is not automatically a problem, but it does mean the country is borrowing from abroad and accumulating external liabilities.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The causes of a current account deficit include: a **strong exchange rate** making exports expensive and imports cheap, **high domestic demand** sucking in imports, **low productivity** reducing export competitiveness, and a **declining manufacturing base** if deindustrialisation has hollowed out tradeable goods production.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Imports exceed exports",
+         "Current account moves into deficit",
+         "Must be financed by financial account surplus",
+         "Foreign capital flows in (FDI, portfolio investment, borrowing)"
+        ],
+        "result": "BoP balances — but the country accumulates external debt or sells assets to foreigners",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "The Balance of Payments",
+      "keyIdea": "The balance of payments records all transactions between a country and the rest of the world — the current and financial accounts must always sum to zero, so a deficit on one is offset by a surplus on the other.",
+      "examMatters": "Examiners test whether you understand that the BoP always balances. A current account deficit is not 'money disappearing' — it is matched by capital inflows on the financial account. Always explain the financing mechanism, not just the deficit itself.",
+      "realExample": {
+       "text": "The UK has run a persistent current account deficit since the 1980s, reaching over 5% of GDP in some years. It is financed by foreign investment in UK assets — property, government bonds, and equities. This makes the UK dependent on continued investor confidence.",
+       "emoji": "🇬🇧"
+      },
+      "misconception": "Students say a current account deficit means the economy is failing. Wrong — a deficit can reflect strong domestic demand and attractive investment opportunities drawing in capital. Instead write: a current account deficit may signal underlying weakness (low competitiveness) or strength (strong growth attracting imports and investment). The cause matters more than the number."
+     },
+     {
+      "id": "exchange-rate-systems",
+      "body": [
+       {
+        "text": "A **floating exchange rate** is determined by market forces of supply and demand with no government intervention. If demand for a currency falls, it depreciates automatically, making exports cheaper and imports dearer — this acts as an **automatic stabiliser** for the current account. The central bank retains full **monetary policy independence** to set interest rates for domestic objectives.",
+        "type": "paragraph"
+       },
+       {
+        "text": "A **fixed exchange rate** is pegged to another currency or a basket. The central bank must intervene — buying or selling its own currency — to maintain the peg. This provides **exchange rate stability**, reducing uncertainty for traders and investors. However, maintaining a fixed rate requires large **foreign exchange reserves** and the central bank must set interest rates to defend the peg rather than for domestic needs, sacrificing monetary independence.",
+        "type": "paragraph"
+       },
+       {
+        "text": "A **managed float** is a hybrid — the currency is broadly market-determined but the central bank intervenes to smooth excessive volatility or prevent misalignment. Most major economies operate some version of a managed float. The fundamental trade-off across all systems is between **stability** (fixed) and **flexibility** (floating) — no system delivers both perfectly.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Exchange Rate Systems",
+      "keyIdea": "Floating rates adjust automatically and preserve monetary independence but create volatility; fixed rates provide stability but require large reserves and sacrifice independent monetary policy.",
+      "examMatters": "A classic essay question asks you to evaluate whether a country should adopt a fixed or floating exchange rate. Structure: floating (auto-adjustment, monetary independence, no reserves needed) vs fixed (stability, credibility, lower transaction costs). Evaluate: it depends on the country's trade openness, inflation history, and reserve holdings.",
+      "realExample": {
+       "text": "China operates a managed float for the yuan, setting a daily reference rate and allowing the currency to move within a band. This gives China some control over its exchange rate to support exports while gradually allowing market forces more influence — a pragmatic middle ground between fixed and floating.",
+       "emoji": "🇨🇳"
+      },
+      "misconception": "Students say floating rates are always better because they adjust automatically. Wrong — floating rates can overshoot dramatically, creating destabilising volatility that harms trade and investment. Instead write: floating rates provide flexibility and monetary independence but at the cost of volatility; the optimal system depends on the country's openness, capital mobility, and institutional capacity."
+     }
+    ],
+    "takeaway": [
+     "The BoP always balances — a current account deficit is financed by capital inflows on the financial account.",
+     "Current account deficits are caused by strong exchange rates, high domestic demand, low productivity, or deindustrialisation.",
+     "Floating rates offer flexibility and monetary independence; fixed rates offer stability but require reserves and sacrifice policy autonomy.",
+     "Most countries operate a managed float — a pragmatic compromise between stability and flexibility."
+    ]
+   },
+   {
+    "title": "Competitiveness",
+    "sections": [
+     {
+      "id": "exchange-rate-determination",
+      "body": [
+       {
+        "text": "In a floating system, the exchange rate is the **price of one currency in terms of another**, determined by supply and demand in the foreign exchange market. **Demand** for a currency comes from foreigners buying the country's exports, investing in its assets (FDI and portfolio investment), and speculative flows. **Supply** comes from residents buying imports, investing abroad, and sending remittances.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Interest rate differentials** are a powerful short-run driver. If a country raises interest rates relative to others, it attracts **hot money** — short-term capital seeking higher returns. This increases demand for the currency and causes appreciation. Central bank interest rate decisions therefore have immediate exchange rate consequences, which in turn affect trade competitiveness.",
+        "type": "paragraph"
+       },
+       {
+        "text": "In the long run, exchange rates tend to reflect **relative price levels** (purchasing power parity) and **productivity differentials**. A country with persistently higher inflation will see its currency depreciate as its goods become less competitive. A country with faster productivity growth will see its currency appreciate as its exports become more attractive.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "US Federal Reserve raises interest rates",
+         "Higher returns attract global capital to US assets",
+         "Demand for dollars rises, supply of other currencies rises",
+         "Dollar appreciates"
+        ],
+        "result": "Stronger dollar — US exports become more expensive, imports cheaper",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Exchange Rate Determination",
+      "keyIdea": "Exchange rates are determined by supply and demand for a currency — exports, FDI inflows, and higher interest rates increase demand, while imports and capital outflows increase supply.",
+      "examMatters": "Examiners expect you to draw a supply and demand diagram for the currency market and shift curves correctly. Higher interest rates shift demand right (appreciation). A rise in imports shifts supply right (depreciation). Always label the axes correctly: price of the currency (exchange rate) on the y-axis, quantity of currency on the x-axis.",
+      "realExample": {
+       "text": "When the US Federal Reserve aggressively raised interest rates in 2022-2023 to combat inflation, the dollar strengthened dramatically against almost all major currencies. The strong dollar made US exports less competitive but reduced import costs, helping to dampen inflation — illustrating the direct link between monetary policy and exchange rates.",
+       "emoji": "🇺🇸"
+      },
+      "misconception": "Students say a strong currency is always good. Wrong — appreciation makes exports more expensive and can worsen the current account. Instead write: currency appreciation benefits consumers (cheaper imports) but harms exporters (less competitive abroad). Whether it is 'good' depends on the country's priorities — controlling inflation or supporting export-led growth."
+     },
+     {
+      "id": "marshall-lerner-j-curve",
+      "body": [
+       {
+        "text": "The **Marshall-Lerner condition** states that a currency depreciation will improve the current account only if the sum of the price elasticity of demand for exports and imports exceeds one: **|PEDx| + |PEDm| > 1**. If this condition is met, the volume effect (more exports sold, fewer imports bought) outweighs the price effect (each import costing more in domestic currency). If demand is inelastic on both sides, depreciation worsens the current account because import spending rises without a sufficient increase in export revenue.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Even when Marshall-Lerner is satisfied in the long run, the **J-curve effect** means the current account initially worsens before improving. In the **short run**, trade contracts are fixed in foreign currency, export and import volumes are slow to adjust, and consumers take time to switch away from imports. The immediate effect of depreciation is simply a higher import bill. In the **long run**, exporters win new orders, importers find domestic substitutes, and the current account improves — tracing out a J-shape over time.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The length of the J-curve depends on the flexibility of the economy. Countries with diversified export bases and responsive supply sides adjust faster. Countries dependent on a narrow range of essential imports — like energy — may find the J-curve long and painful, as they cannot easily reduce import volumes even when prices rise.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "The Marshall-Lerner Condition and the J-Curve",
+      "keyIdea": "A depreciation only improves the current account if the sum of export and import price elasticities exceeds one (Marshall-Lerner), and even then the improvement is delayed — the J-curve shows a short-run worsening before long-run gains.",
+      "examMatters": "This is a high-frequency exam topic. You must be able to: (1) state the Marshall-Lerner condition precisely, (2) explain why the current account worsens in the short run (contracts fixed, volumes slow to adjust), and (3) draw the J-curve showing the time path. Always link ML to elasticities and the J-curve to the time lag in adjustment.",
+      "realExample": {
+       "text": "After the Brexit referendum in June 2016, sterling depreciated by around 15% against the dollar. The UK's current account initially worsened as import costs rose immediately, but export volumes were slow to respond. Over the following two years, UK exports gradually became more competitive — a textbook J-curve.",
+       "emoji": "🇬🇧"
+      },
+      "misconception": "Students assume depreciation automatically fixes a current account deficit. Wrong — it only works if Marshall-Lerner is satisfied, and even then the improvement is delayed. Instead write: depreciation improves the current account only if demand for exports and imports is sufficiently elastic (ML condition met), and the adjustment follows a J-curve — worsening before improving."
+     }
+    ],
+    "takeaway": [
+     "Exchange rates are driven by trade flows, capital movements, and interest rate differentials — higher rates attract hot money and cause appreciation.",
+     "Marshall-Lerner: depreciation improves the current account only if |PEDx| + |PEDm| > 1.",
+     "The J-curve: even when ML is met, the current account worsens in the short run before improving as volumes adjust."
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "flow": {
+     "steps": [
+      "Country imports more than it exports",
+      "Current account deficit develops",
+      "Financed by financial account surplus (FDI, borrowing)"
+     ],
+     "result": "BoP always balances — a current account deficit = financial account surplus",
+     "resultType": "neutral"
+    },
+    "meta": "5 concepts",
+    "title": "Balance of Payments",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Balance of payments (BoP)</strong> — a record of all financial transactions between residents of a country and the rest of the world over a given period.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Current account</strong> — records trade in goods (visible trade), trade in services (invisible trade), primary income (investment income), and secondary income (transfers).",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Financial (capital) account</strong> — records inflows and outflows of FDI, portfolio investment, and other financial assets.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "A <strong>current account deficit</strong> means the country imports more than it exports (in value) — it must be financed by a surplus on the financial account (e.g. foreign borrowing or FDI inflows).",
+        "type": "mech"
+       },
+       {
+        "text": "Causes: <strong>strong exchange rate</strong> (makes exports expensive), high domestic demand (sucks in imports), low productivity (uncompetitive exports), deindustrialisation.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "A current account deficit is not necessarily a problem — it may reflect strong consumer demand or FDI flowing in. It becomes a problem if financed by unsustainable borrowing.",
+        "type": "imp"
+       },
+       {
+        "text": "BoP links to exchange rates: a current account deficit puts downward pressure on the currency (more currency is being sold to buy imports than is being bought for exports).",
+        "type": "link"
+       }
+      ],
+      "title": "CURRENT ACCOUNT DEFICIT"
+     }
+    ],
+    "keyIdea": "The balance of payments records all international transactions — the current account tracks trade in goods and services, while the financial account tracks investment flows, and they must always sum to zero.",
+    "takeaway": [
+     "Current account = trade in goods/services + income + transfers.",
+     "BoP always balances: current account deficit = financial account surplus.",
+     "Deficit significance depends on cause (structural vs cyclical) and financing method."
+    ],
+    "examMatters": "Examiners test whether you can explain causes of a current account deficit, evaluate its significance, and discuss policies to correct it. Always distinguish between the structural causes (productivity, deindustrialisation) and cyclical causes (strong demand, exchange rate movements).",
+    "misconception": "Students say a current account deficit is always bad. Wrong because it may be financed by productive FDI that boosts future growth. Instead write: the significance of a current account deficit depends on its cause and how it is financed — FDI-financed deficits are less concerning than debt-financed ones."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Floating: supply & demand set rate",
+      "Fixed: central bank defends the peg",
+      "Managed: market with occasional intervention"
+     ],
+     "result": "Trade-off between exchange rate stability and monetary policy independence",
+     "resultType": "neutral"
+    },
+    "meta": "5 concepts",
+    "title": "Exchange Rate Systems",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Floating exchange rate</strong> — determined by supply and demand for the currency in the foreign exchange market, with no government intervention.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Fixed exchange rate</strong> — pegged to another currency (or gold) by the central bank, which buys or sells its own currency to maintain the rate.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Managed float</strong> — primarily market-determined, but the central bank intervenes occasionally to prevent excessive volatility or misalignment.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Floating</strong>: automatic adjustment (depreciation corrects deficits), monetary policy independence, but exchange rate volatility can deter trade and investment.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Fixed</strong>: stability encourages trade and investment, disciplines inflation, but requires large reserves and sacrifices monetary policy independence.",
+        "type": "mech"
+       },
+       {
+        "text": "In practice most major currencies float with occasional central bank intervention — a managed float attempts to combine flexibility with stability.",
+        "type": "mech"
+       },
+       {
+        "text": "Exchange rate systems link to macroeconomic policy (Unit 2): under a fixed rate, monetary policy is constrained because interest rates must be used to defend the peg rather than manage domestic demand.",
+        "type": "link"
+       }
+      ],
+      "title": "EVALUATION"
+     }
+    ],
+    "keyIdea": "Exchange rates can be determined by the market (floating), fixed by the government (pegged), or managed within a band — each system offers a different trade-off between stability and flexibility.",
+    "takeaway": [
+     "Floating: auto-adjustment, monetary independence, but volatility risk.",
+     "Fixed: stability, trade confidence, but sacrifices monetary policy.",
+     "Most currencies use a managed float in practice."
+    ],
+    "examMatters": "Examiners expect you to compare floating and fixed systems using: stability vs flexibility, automatic adjustment vs reserves requirement, and monetary policy independence. The best answers use real-world examples (e.g. eurozone as a fixed system, USD/GBP as floating).",
+    "misconception": "Students think floating rates are always volatile. While they fluctuate day-to-day, long-term trends reflect economic fundamentals. Instead write: floating rates adjust to reflect changes in relative productivity, inflation, and capital flows — short-term volatility can be managed with hedging, while long-term movements provide useful signals about competitiveness."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Higher interest rates attract capital inflows",
+      "Demand for currency rises",
+      "Currency appreciates"
+     ],
+     "result": "Exchange rate reflects the balance of trade, capital flows, and speculation",
+     "resultType": "neutral"
+    },
+    "meta": "4 concepts",
+    "title": "Exchange Rate Determination",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Demand for a currency</strong> comes from: exports (foreigners need the currency to buy goods), FDI inflows, portfolio investment, and tourism income.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Supply of a currency</strong> comes from: imports (residents sell the currency to buy foreign goods), FDI outflows, portfolio investment abroad, and tourism spending abroad.",
+        "type": "mech"
+       }
+      ],
+      "title": "DEMAND AND SUPPLY"
+     },
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Interest rate differentials</strong> — higher domestic interest rates attract 'hot money' inflows, increasing demand for the currency and causing appreciation.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Relative inflation</strong> — higher domestic inflation makes exports less competitive, reducing demand for the currency and causing depreciation.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Speculation</strong> — if traders expect a currency to appreciate, they buy it now, creating a self-fulfilling prophecy (and vice versa).",
+        "type": "mech"
+       },
+       {
+        "text": "Exchange rate changes link to AD from Unit 2: a depreciation makes exports cheaper (increasing X) and imports more expensive (reducing M), shifting AD right.",
+        "type": "link"
+       }
+      ],
+      "title": "FACTORS CAUSING CHANGES"
+     }
+    ],
+    "keyIdea": "Under a floating system, exchange rates are driven by the demand and supply of currency — which in turn reflect trade flows, capital flows, speculation, and central bank interest rates.",
+    "takeaway": [
+     "Currency demand: exports, FDI inflows, higher interest rates.",
+     "Currency supply: imports, FDI outflows, lower interest rates.",
+     "Appreciation/depreciation for floating; revaluation/devaluation for fixed."
+    ],
+    "examMatters": "Examiners often ask you to explain why a currency has appreciated or depreciated. Use a supply-demand diagram for the currency market and explain the shift: interest rates, inflation, growth, or speculation. Always link back to the impact on trade.",
+    "misconception": "Students confuse appreciation/revaluation and depreciation/devaluation. Appreciation and depreciation are market-driven (floating rate). Revaluation and devaluation are policy decisions (fixed rate). Instead write: use appreciation/depreciation for floating systems and revaluation/devaluation for fixed systems — examiners notice the difference."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Currency depreciates",
+      "Short run: inelastic demand, trade balance worsens (J-curve)",
+      "Long run: demand becomes elastic, trade balance improves"
+     ],
+     "result": "Depreciation helps the current account only if the Marshall-Lerner condition is met",
+     "resultType": "neutral"
+    },
+    "meta": "5 concepts",
+    "title": "Competitiveness and the Marshall-Lerner Condition",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Marshall-Lerner condition</strong> — a depreciation improves the current account only if the sum of PED for exports and PED for imports is greater than 1 (|PEDx| + |PEDm| > 1).",
+        "type": "def"
+       },
+       {
+        "text": "<strong>J-curve effect</strong> — in the short run, a depreciation worsens the current account (because contracts are fixed and demand is inelastic), but improves it in the long run as consumers and firms adjust.",
+        "type": "def"
+       }
+      ],
+      "title": "KEY CONCEPTS"
+     },
+     {
+      "items": [
+       {
+        "text": "A depreciation lowers the foreign-currency price of exports (boosting demand) and raises the domestic-currency price of imports (reducing demand).",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "If demand for exports and imports is <strong>elastic</strong> (ML condition met), the volume effects outweigh the price effects and the trade balance improves.",
+        "type": "mech"
+       },
+       {
+        "text": "In the <strong>short run</strong>, demand is inelastic (contracts locked in, slow switching) so the trade balance initially worsens — the J-curve.",
+        "type": "mech"
+       },
+       {
+        "text": "The J-curve links to PED from Unit 1: elasticity increases over time as consumers find substitutes and firms switch suppliers.",
+        "type": "link"
+       }
+      ],
+      "title": "HOW IT WORKS"
+     }
+    ],
+    "formula": {
+     "text": "|PEDx| + |PEDm| > 1 → depreciation improves current account",
+     "label": "MARSHALL-LERNER CONDITION"
+    },
+    "keyIdea": "A depreciation makes exports cheaper and imports dearer, but whether it improves the current account depends on elasticities — the Marshall-Lerner condition tells us when depreciation helps and the J-curve shows the time lag.",
+    "takeaway": [
+     "Marshall-Lerner: |PEDx| + |PEDm| > 1 → depreciation improves trade balance.",
+     "J-curve: short-run worsening then long-run improvement after depreciation.",
+     "Demand elasticity increases over time as contracts expire and substitutes are found."
+    ],
+    "examMatters": "Examiners frequently test Marshall-Lerner and the J-curve together. Draw the J-curve (x-axis = time, y-axis = current account balance). Explain that the initial worsening reflects inelastic short-run demand, while long-run improvement reflects elastic demand as contracts expire and consumers adjust.",
+    "misconception": "Students say depreciation always improves the trade balance. Wrong because in the short run, demand is inelastic and the trade balance may worsen. Instead write: depreciation improves the current account only if the Marshall-Lerner condition is met, and even then there is a short-run J-curve effect where the balance initially worsens before improving."
+   }
+  ],
+  "section_quiz": [
+   {
+    "options": [
+     "Trade in goods",
+     "Foreign direct investment",
+     "Primary income",
+     "Secondary income (current transfers)"
+    ],
+    "question": "Which of the following is NOT a component of the current account?",
+    "explanation": "Foreign direct investment (FDI) is recorded in the FINANCIAL account, not the current account. The current account has four components: trade in goods, trade in services, primary income (investment income &mdash; profits, dividends, interest), and secondary income (current transfers &mdash; aid, remittances). This is a common exam mistake &mdash; students confuse the financial account with the current account.",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "A deficit on the financial account",
+     "A surplus on the financial account",
+     "An increase in government spending",
+     "A reduction in interest rates"
+    ],
+    "question": "A country has a current account deficit. This must be financed by:",
+    "explanation": "A current account deficit (net outflow of money for trade, income, and transfers) must be offset by a financial account surplus (net inflow of capital &mdash; FDI, portfolio investment, loans, or running down reserves). The BoP must always balance: Current A/C + Capital A/C + Financial A/C + Errors = 0. So a negative current account requires a positive financial account.",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "Depreciate, because higher rates reduce consumption",
+     "Appreciate, because hot money flows into the UK",
+     "Remain unchanged, because interest rates do not affect exchange rates",
+     "Depreciate, because higher rates discourage investment"
+    ],
+    "question": "Under a floating exchange rate system, a rise in UK interest rates would most likely cause the pound to:",
+    "explanation": "Higher UK interest rates attract 'hot money' &mdash; short-term capital flows seeking the best return. Foreign investors need to buy pounds to invest in UK assets, increasing demand for the pound and causing it to APPRECIATE. This is one of the most important short-run determinants of floating exchange rates. While higher rates may reduce domestic consumption and investment, the hot money effect on the exchange rate typically dominates.",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "The price elasticity of demand for exports is greater than 1",
+     "The price elasticity of demand for imports is greater than 1",
+     "The sum of the price elasticities of demand for exports and imports is greater than 1",
+     "The income elasticity of demand for imports is less than 1"
+    ],
+    "question": "The Marshall-Lerner condition states that a depreciation will improve the current account if:",
+    "explanation": "The Marshall-Lerner condition states that a depreciation will improve the current account if |PED for exports| + |PED for imports| > 1. This means the combined responsiveness of export and import volumes to price changes must be large enough to outweigh the adverse price effect (imports become more expensive in domestic currency). Neither individual elasticity needs to exceed 1 &mdash; it is the SUM that matters.",
+    "correctIndex": 2
+   },
+   {
+    "options": [
+     "Exporters immediately increase production to meet higher demand",
+     "Demand for exports and imports is price inelastic, so the current account initially worsens",
+     "Consumers immediately switch from imports to domestic goods",
+     "The government imposes tariffs to support the depreciation"
+    ],
+    "question": "The J-curve effect occurs because, in the short run after a depreciation:",
+    "explanation": "In the short run, demand for exports and imports is price INELASTIC because: (1) contracts are fixed in advance; (2) consumers and firms take time to find alternative suppliers; (3) habit and brand loyalty slow switching. So when the currency depreciates, import prices rise but import volumes do not fall much &mdash; the import bill actually increases, worsening the current account. Over time, demand becomes more elastic and the current account improves &mdash; tracing a 'J' shape.",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "Depreciation",
+     "Devaluation",
+     "Deflation",
+     "Disinflation"
+    ],
+    "question": "Which term correctly describes a deliberate decrease in a fixed exchange rate by the government?",
+    "explanation": "A DEVALUATION is a deliberate decrease in the value of a currency under a FIXED exchange rate system &mdash; it is a government decision. A DEPRECIATION is a fall in value under a FLOATING system caused by market forces. Using the correct term is essential in exams &mdash; mixing up devaluation and depreciation loses marks. Deflation is a fall in the price level; disinflation is a reduction in the rate of inflation.",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "Reduce cost-push inflation and increase purchasing power",
+     "Increase cost-push inflation and reduce purchasing power",
+     "Have no effect on inflation if the economy has spare capacity",
+     "Reduce the price of imports and increase real wages"
+    ],
+    "question": "A depreciation of the exchange rate is likely to:",
+    "explanation": "A depreciation makes imports MORE expensive in domestic currency terms. This causes COST-PUSH INFLATION as: (1) imported raw materials and components cost more for firms; (2) imported consumer goods become more expensive; (3) reduced import competition allows domestic firms to raise prices. Real purchasing power falls because the same amount of domestic currency buys fewer foreign goods. This is a major disadvantage of depreciation as a policy tool.",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "Total wages paid divided by the number of workers",
+     "Average wage divided by labour productivity",
+     "Total output divided by total labour costs",
+     "Labour productivity divided by average wage"
+    ],
+    "question": "Unit labour costs (ULC) are calculated as:",
+    "explanation": "Unit Labour Costs = Average Wage / Labour Productivity (or equivalently, Total Labour Costs / Total Output). ULC measures the labour cost of producing ONE unit of output. If wages rise by 3% but productivity rises by 5%, ULC FALLS &mdash; meaning improved competitiveness. A country can have HIGH wages and LOW ULC if its productivity is sufficiently high (e.g. Germany, Switzerland).",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "Devaluing the exchange rate",
+     "Imposing tariffs on imports",
+     "Investing in education, training, and infrastructure",
+     "Reducing interest rates to zero"
+    ],
+    "question": "Which of the following is most likely to improve a country's international competitiveness in the long run?",
+    "explanation": "Investing in education, training, and infrastructure improves LONG-RUN competitiveness by raising productivity, human capital quality, and reducing business costs. Devaluation gives only a temporary boost (inflation erodes the advantage). Tariffs invite retaliation and do not address underlying competitiveness weaknesses. Reducing interest rates is a short-run demand-side measure. Sustainable competitiveness requires supply-side improvements.",
+    "correctIndex": 2
+   },
+   {
+    "options": [
+     "It forces the country to increase government spending",
+     "It means all other countries must also run surpluses",
+     "It implies other countries must run corresponding deficits, potentially accumulating unsustainable debt",
+     "It automatically leads to inflation in the surplus country"
+    ],
+    "question": "A persistent current account surplus in one country can be problematic for the global economy because:",
+    "explanation": "Global trade is a zero-sum game in terms of balances &mdash; if one country runs a persistent surplus, other countries must run corresponding deficits. These deficit countries may accumulate unsustainable foreign debt, leading to financial instability. Large global imbalances contributed to the 2008 financial crisis: surplus countries (China, Germany) recycled excess savings into deficit countries (US, UK), fuelling credit booms. The IMF and G20 have called for 'rebalancing' to reduce these risks.",
+    "correctIndex": 2
+   },
+   {
+    "options": [
+     "It eliminates exchange rate uncertainty for businesses",
+     "It provides automatic adjustment to balance of payments disequilibria",
+     "It requires the central bank to hold large foreign currency reserves",
+     "It prevents competitive devaluations between countries"
+    ],
+    "question": "Which of the following best describes an advantage of a floating exchange rate system?",
+    "explanation": "A key advantage of a floating exchange rate is AUTOMATIC ADJUSTMENT. If a country develops a current account deficit, market forces cause the currency to depreciate, making exports cheaper and imports dearer &mdash; this tends to correct the deficit without government intervention. Eliminating uncertainty and preventing competitive devaluations are advantages of FIXED rates, not floating. Floating rates do NOT require large reserves since the central bank does not need to intervene.",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "A current account surplus due to expensive high-quality exports",
+     "A current account deficit due to reduced export competitiveness",
+     "Rapid economic growth due to high wages boosting consumption",
+     "Lower inflation due to higher productivity"
+    ],
+    "question": "A country with high unit labour costs relative to its competitors is likely to experience:",
+    "explanation": "High relative unit labour costs mean that the labour cost of producing each unit of output is higher than in competitor countries. This makes exports more expensive and less competitive internationally, reducing export demand and potentially increasing import penetration as consumers switch to cheaper foreign goods. The result is likely to be a worsening of the CURRENT ACCOUNT &mdash; a deficit. High ULC indicates that wages are rising faster than productivity.",
+    "correctIndex": 1
+   }
+  ],
+  "section_practice": [
+   {
+    "marks": 4,
+    "command": "Define",
+    "guidance": "The current account is a section of the balance of payments that records a country's transactions with the rest of the world in goods, services, primary income and secondary income (1 mark). Trade in goods covers visible exports and imports such as manufactured products and raw materials (1 mark). Trade in services covers invisible items such as financial services, tourism and insurance (1 mark). Primary income includes investment income and wages, while secondary income includes transfers such as overseas aid and remittances (1 mark).",
+    "question": "Define the term 'current account of the balance of payments'. (4 marks)"
+   },
+   {
+    "marks": 6,
+    "command": "Explain",
+    "guidance": "Cause 1: Low international competitiveness (1 mark) — if a country's goods and services are relatively expensive or low quality compared to foreign alternatives, exports will be weak and import penetration high (1 mark). This may result from high relative unit labour costs, low productivity or an overvalued exchange rate (1 mark).\n\nCause 2: Strong domestic demand for imports (1 mark) — if consumer spending and investment are growing rapidly, demand for imported consumer goods and capital equipment rises (1 mark). This is particularly significant if the country has a high marginal propensity to import because it lacks a strong domestic manufacturing base (1 mark).",
+    "question": "Explain two causes of a persistent current account deficit. (6 marks)"
+   },
+   {
+    "marks": 10,
+    "command": "Assess",
+    "guidance": "Define depreciation as a fall in the value of a currency in a floating exchange rate system (1 mark). Theory: a weaker currency makes exports cheaper and imports more expensive, which should increase export volumes and reduce import volumes, improving the current account (2 marks). Marshall-Lerner condition: the current account will only improve if the sum of the price elasticities of demand for exports and imports exceeds one (2 marks). J-curve effect: in the short run, the current account may worsen because demand for imports and exports is price inelastic — contracts are fixed, consumers take time to adjust — so the higher import bill outweighs any rise in export revenue (2 marks). Other factors: improvement depends on spare capacity in export industries, inflation eroding the competitive gain, and whether trading partners retaliate (2 marks). Judgement: depreciation is not guaranteed to improve the current account, particularly in the short run or when demand elasticities are low (1 mark).",
+    "question": "Assess whether a depreciation of the exchange rate will necessarily improve a country's current account balance. (10 marks)"
+   },
+   {
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Define a floating exchange rate as one determined by market forces of supply and demand, and a fixed exchange rate as one set and maintained by the government or central bank (2 marks).\n\nFor floating: Automatic adjustment — the exchange rate adjusts to correct balance of payments disequilibria without the need for government intervention (3 marks); monetary policy independence — the central bank can set interest rates to target domestic objectives such as inflation or growth, rather than defending the exchange rate (2 marks); no need to hold large foreign currency reserves for intervention (2 marks).\n\nAgainst — advantages of fixed: Exchange rate certainty — businesses can plan trade and investment without worrying about currency fluctuations, which reduces transaction costs and promotes international trade (3 marks); anti-inflationary discipline — a fixed rate commitment prevents governments from pursuing inflationary policies (2 marks); speculative instability — floating rates can be subject to destabilising speculation, causing volatility that damages trade and investment (2 marks).\n\nEvaluation: The best system depends on the country's circumstances (2 marks). Large, diversified economies like the UK benefit from the flexibility of a floating rate, while small, open economies heavily dependent on trade with one partner may benefit from a fixed or pegged rate. In practice, many countries use managed floats — intervening occasionally to prevent excessive volatility while retaining some flexibility (2 marks).",
+    "question": "Evaluate the view that a floating exchange rate system is more beneficial for an economy than a fixed exchange rate system. (20 marks)"
+   },
+   {
+    "marks": 4,
+    "command": "Outline",
+    "guidance": "Measure 1: Relative unit labour costs — this compares the cost of labour per unit of output across countries (1 mark). A country with lower unit labour costs can produce goods more cheaply, making it more competitive in international markets (1 mark).\n\nMeasure 2: Real effective exchange rate — this measures the value of a currency against a weighted basket of trading partners' currencies, adjusted for relative inflation rates (1 mark). A rise in the real effective exchange rate indicates a loss of price competitiveness because exports become more expensive relative to foreign goods (1 mark).",
+    "question": "Outline two measures of international competitiveness. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "back": "A record of all <strong>financial transactions</strong> between one country and the rest of the world. Must balance overall — current account + capital/financial account = 0.",
+    "front": "What is the balance of payments?"
+   },
+   {
+    "back": "<strong>Trade in goods</strong>, <strong>trade in services</strong>, <strong>primary income</strong> (investment returns), and <strong>secondary income</strong> (transfers, e.g., foreign aid, remittances).",
+    "front": "What are the components of the current account?"
+   },
+   {
+    "back": "<strong>Imports exceed exports</strong> — may be due to strong consumer demand, uncompetitive exports, a strong exchange rate, or a loss of manufacturing base.",
+    "front": "What causes a current account deficit?"
+   },
+   {
+    "back": "An exchange rate determined by <strong>market forces of supply and demand</strong> with no government intervention. The rate adjusts freely to economic conditions.",
+    "front": "What is a floating exchange rate?"
+   },
+   {
+    "back": "An exchange rate <strong>pegged by the government</strong> to another currency or gold. The central bank intervenes (buying/selling currency) to maintain the rate.",
+    "front": "What is a fixed exchange rate?"
+   },
+   {
+    "back": "Increased demand for the currency — due to <strong>higher interest rates</strong> (attracting capital), <strong>strong export demand</strong>, <strong>FDI inflows</strong>, or <strong>speculation</strong> that the currency will rise.",
+    "front": "What causes a currency to appreciate?"
+   },
+   {
+    "back": "Increased supply of the currency — due to <strong>lower interest rates</strong>, <strong>high imports</strong>, <strong>capital outflows</strong>, or <strong>speculation</strong> that the currency will fall.",
+    "front": "What causes a currency to depreciate?"
+   },
+   {
+    "back": "Exports become <strong>cheaper</strong> (more competitive) and imports become <strong>more expensive</strong>. If demand is elastic, net exports improve — but there is a <strong>time lag</strong> (J-curve effect).",
+    "front": "How does depreciation affect the current account?"
+   },
+   {
+    "back": "After depreciation, the current account <strong>initially worsens</strong> (existing contracts at old prices, inelastic short-run demand) before <strong>improving</strong> as demand adjusts to new prices.",
+    "front": "What is the J-curve effect?"
+   },
+   {
+    "back": "A depreciation improves the current account only if the <strong>sum of PED for exports and PED for imports is greater than 1</strong>. If demand is inelastic, depreciation may worsen the deficit.",
+    "front": "What is the Marshall-Lerner condition?"
+   },
+   {
+    "back": "An exchange rate that is mainly market-determined but the central bank <strong>intervenes occasionally</strong> to smooth excessive volatility or prevent misalignment.",
+    "front": "What is a managed float?"
+   },
+   {
+    "back": "<strong>Automatic adjustment</strong> to trade imbalances, <strong>monetary policy independence</strong> (can set own interest rates), and no need to hold large <strong>foreign exchange reserves</strong>.",
+    "front": "What are the advantages of a floating exchange rate?"
+   },
+   {
+    "back": "<strong>Exchange rate certainty</strong> for businesses (reduces risk), <strong>disciplines inflation</strong> (can't devalue to solve problems), and encourages foreign investment.",
+    "front": "What are the advantages of a fixed exchange rate?"
+   },
+   {
+    "back": "A country's ability to <strong>sell goods and services in international markets</strong>. Depends on relative prices, exchange rates, quality, productivity, and non-price factors (brand, innovation).",
+    "front": "What is international competitiveness?"
+   },
+   {
+    "back": "Records <strong>flows of capital</strong> between countries — FDI, portfolio investment (shares, bonds), and other financial flows. A financial account surplus finances a current account deficit.",
+    "front": "What is the financial account?"
+   },
+   {
+    "back": "A current account deficit is <strong>financed by a financial account surplus</strong> (capital inflows). Borrowing from abroad pays for the excess imports. The two accounts sum to zero.",
+    "front": "Why does the balance of payments always balance?"
+   },
+   {
+    "back": "Higher interest rates attract <strong>hot money flows</strong> (short-term capital) → demand for the currency rises → the currency <strong>appreciates</strong>. Lower rates have the opposite effect.",
+    "front": "How do interest rate differentials affect exchange rates?"
+   },
+   {
+    "back": "The theory that exchange rates should adjust so that identical goods cost the <strong>same in different countries</strong>. In practice, PPP rarely holds exactly due to transport costs and non-traded goods.",
+    "front": "What is purchasing power parity (PPP)?"
+   }
+  ],
+  "section_diagrams": [
+   {
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n\n  <!-- Title -->\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">Exchange Rate Determination (Floating System)</text>\n\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"40\" x2=\"70\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <line x1=\"70\" y1=\"310\" x2=\"470\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <text x=\"28\" y=\"175\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" transform=\"rotate(-90 28 175)\">Exchange Rate ($/&#163;)</text>\n  <text x=\"270\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\">Quantity of &#163;</text>\n\n  <!-- Supply curve (S) - upward sloping -->\n  <path d=\"M 100 270 Q 200 200 300 150 Q 380 110 450 75\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"455\" y=\"70\" fill=\"#ef4444\" font-size=\"12\" font-weight=\"600\">S&#163;</text>\n\n  <!-- Demand curve (D) - downward sloping -->\n  <path d=\"M 100 75 Q 180 120 260 170 Q 340 220 450 270\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"455\" y=\"265\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\">D&#163;</text>\n\n  <!-- Equilibrium point -->\n  <circle cx=\"260\" cy=\"170\" r=\"5\" fill=\"#059669\"/>\n  <text x=\"275\" y=\"163\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">E</text>\n\n  <!-- Equilibrium dashed lines -->\n  <line x1=\"70\" y1=\"170\" x2=\"260\" y2=\"170\" stroke=\"#e8ecf5\" stroke-width=\"0.8\" stroke-dasharray=\"4,3\" opacity=\"0.5\"/>\n  <line x1=\"260\" y1=\"170\" x2=\"260\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"0.8\" stroke-dasharray=\"4,3\" opacity=\"0.5\"/>\n  <text x=\"60\" y=\"174\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"10\">e*</text>\n  <text x=\"260\" y=\"325\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">Q*</text>\n\n  <!-- Annotation box - Supply -->\n  <rect x=\"330\" y=\"38\" width=\"150\" height=\"50\" rx=\"5\" fill=\"#ef4444\" opacity=\"0.1\" stroke=\"#ef4444\" stroke-width=\"0.5\"/>\n  <text x=\"405\" y=\"52\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\" font-weight=\"600\">Supply of &#163;</text>\n  <text x=\"405\" y=\"64\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">UK residents selling &#163;</text>\n  <text x=\"405\" y=\"74\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">to buy imports, invest</text>\n  <text x=\"405\" y=\"84\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">abroad, travel overseas</text>\n\n  <!-- Annotation box - Demand -->\n  <rect x=\"100\" y=\"275\" width=\"150\" height=\"32\" rx=\"5\" fill=\"#3b82f6\" opacity=\"0.1\" stroke=\"#3b82f6\" stroke-width=\"0.5\"/>\n  <text x=\"175\" y=\"288\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"9\" font-weight=\"600\">Demand for &#163;</text>\n  <text x=\"175\" y=\"300\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Foreigners buying &#163; for UK exports, FDI, tourism</text>\n</svg>",
+    "title": "Exchange Rate Determination (Floating System)",
+    "checklist": [
+     "Draw upward-sloping supply curve (S) and downward-sloping demand curve (D)",
+     "Label axes: Exchange Rate ($/&#163;) on vertical, Quantity of &#163; on horizontal",
+     "Mark the equilibrium exchange rate where S and D intersect",
+     "To show appreciation: shift D right or S left &mdash; new equilibrium at higher exchange rate",
+     "To show depreciation: shift S right or D left &mdash; new equilibrium at lower exchange rate",
+     "Explain the mechanism: what caused the shift and why it affects the exchange rate"
+    ],
+    "scenarios": [
+     {
+      "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">Currency Appreciation (Rise in Demand for &#163;)</text>\n\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"40\" x2=\"70\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <line x1=\"70\" y1=\"310\" x2=\"470\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <text x=\"28\" y=\"175\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" transform=\"rotate(-90 28 175)\">Exchange Rate ($/&#163;)</text>\n  <text x=\"270\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\">Quantity of &#163;</text>\n\n  <!-- Supply curve (S) -->\n  <path d=\"M 100 270 Q 200 200 300 150 Q 380 110 450 75\" stroke=\"#ef4444\" stroke-width=\"2\" fill=\"none\"/>\n  <text x=\"455\" y=\"70\" fill=\"#ef4444\" font-size=\"12\" font-weight=\"600\">S&#163;</text>\n\n  <!-- Original Demand (D) -->\n  <path d=\"M 100 75 Q 180 120 260 170 Q 340 220 450 270\" stroke=\"#3b82f6\" stroke-width=\"1.5\" fill=\"none\" opacity=\"0.4\"/>\n  <text x=\"455\" y=\"265\" fill=\"#3b82f6\" font-size=\"11\" opacity=\"0.4\">D&#163;</text>\n\n  <!-- New Demand (D') - shifted right -->\n  <path d=\"M 160 75 Q 240 120 320 170 Q 400 220 470 250\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"475\" y=\"245\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\">D&#163;'</text>\n\n  <!-- Shift arrow -->\n  <line x1=\"210\" y1=\"155\" x2=\"260\" y2=\"155\" stroke=\"#f59e0b\" stroke-width=\"2\" marker-end=\"url(#arrowY1)\"/>\n  <defs><marker id=\"arrowY1\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0, 8 3, 0 6\" fill=\"#f59e0b\"/></marker></defs>\n\n  <!-- Old equilibrium -->\n  <circle cx=\"260\" cy=\"170\" r=\"3\" fill=\"#e8ecf5\" opacity=\"0.4\"/>\n  <line x1=\"70\" y1=\"170\" x2=\"260\" y2=\"170\" stroke=\"#e8ecf5\" stroke-width=\"0.6\" stroke-dasharray=\"3,3\" opacity=\"0.3\"/>\n  <text x=\"60\" y=\"174\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.5\">e1</text>\n\n  <!-- New equilibrium -->\n  <circle cx=\"310\" cy=\"140\" r=\"5\" fill=\"#059669\"/>\n  <text x=\"325\" y=\"133\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">E'</text>\n  <line x1=\"70\" y1=\"140\" x2=\"310\" y2=\"140\" stroke=\"#059669\" stroke-width=\"0.8\" stroke-dasharray=\"4,3\" opacity=\"0.5\"/>\n  <text x=\"60\" y=\"144\" text-anchor=\"end\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\">e2</text>\n\n  <!-- Upward arrow showing appreciation -->\n  <line x1=\"55\" y1=\"167\" x2=\"55\" y2=\"145\" stroke=\"#059669\" stroke-width=\"2\" marker-end=\"url(#arrowG1)\"/>\n  <defs><marker id=\"arrowG1\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0, 8 3, 0 6\" fill=\"#059669\"/></marker></defs>\n\n  <!-- Annotation -->\n  <rect x=\"120\" y=\"50\" width=\"220\" height=\"55\" rx=\"5\" fill=\"#059669\" opacity=\"0.1\" stroke=\"#059669\" stroke-width=\"0.5\"/>\n  <text x=\"230\" y=\"65\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\" font-weight=\"600\">Causes of increased demand for &#163;:</text>\n  <text x=\"130\" y=\"78\" fill=\"#e8ecf5\" font-size=\"8\">- UK interest rates rise (hot money inflows)</text>\n  <text x=\"130\" y=\"89\" fill=\"#e8ecf5\" font-size=\"8\">- UK exports become more popular</text>\n  <text x=\"130\" y=\"100\" fill=\"#e8ecf5\" font-size=\"8\">- Inward FDI increases / speculation</text>\n</svg>",
+      "label": "Appreciation (Increase in Demand)",
+      "description": "When demand for the pound increases (e.g. higher UK interest rates attracting hot money, rising demand for UK exports, or increased inward FDI), the demand curve shifts right from D to D'. The equilibrium exchange rate rises from e1 to e2 &mdash; the pound has appreciated."
+     },
+     {
+      "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">Currency Depreciation (Rise in Supply of &#163;)</text>\n\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"40\" x2=\"70\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <line x1=\"70\" y1=\"310\" x2=\"470\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <text x=\"28\" y=\"175\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" transform=\"rotate(-90 28 175)\">Exchange Rate ($/&#163;)</text>\n  <text x=\"270\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\">Quantity of &#163;</text>\n\n  <!-- Original Supply (S) -->\n  <path d=\"M 100 270 Q 200 200 300 150 Q 380 110 450 75\" stroke=\"#ef4444\" stroke-width=\"1.5\" fill=\"none\" opacity=\"0.4\"/>\n  <text x=\"455\" y=\"70\" fill=\"#ef4444\" font-size=\"11\" opacity=\"0.4\">S&#163;</text>\n\n  <!-- New Supply (S') - shifted right -->\n  <path d=\"M 160 270 Q 260 200 360 150 Q 420 120 470 100\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"475\" y=\"95\" fill=\"#ef4444\" font-size=\"12\" font-weight=\"600\">S&#163;'</text>\n\n  <!-- Shift arrow -->\n  <line x1=\"250\" y1=\"180\" x2=\"300\" y2=\"180\" stroke=\"#f59e0b\" stroke-width=\"2\" marker-end=\"url(#arrowY2)\"/>\n  <defs><marker id=\"arrowY2\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0, 8 3, 0 6\" fill=\"#f59e0b\"/></marker></defs>\n\n  <!-- Demand curve (D) -->\n  <path d=\"M 100 75 Q 180 120 260 170 Q 340 220 450 270\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"455\" y=\"265\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\">D&#163;</text>\n\n  <!-- Old equilibrium -->\n  <circle cx=\"260\" cy=\"170\" r=\"3\" fill=\"#e8ecf5\" opacity=\"0.4\"/>\n  <line x1=\"70\" y1=\"170\" x2=\"260\" y2=\"170\" stroke=\"#e8ecf5\" stroke-width=\"0.6\" stroke-dasharray=\"3,3\" opacity=\"0.3\"/>\n  <text x=\"60\" y=\"174\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.5\">e1</text>\n\n  <!-- New equilibrium -->\n  <circle cx=\"310\" cy=\"198\" r=\"5\" fill=\"#ef4444\"/>\n  <text x=\"325\" y=\"193\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"600\">E'</text>\n  <line x1=\"70\" y1=\"198\" x2=\"310\" y2=\"198\" stroke=\"#ef4444\" stroke-width=\"0.8\" stroke-dasharray=\"4,3\" opacity=\"0.5\"/>\n  <text x=\"60\" y=\"202\" text-anchor=\"end\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">e2</text>\n\n  <!-- Downward arrow showing depreciation -->\n  <line x1=\"55\" y1=\"173\" x2=\"55\" y2=\"195\" stroke=\"#ef4444\" stroke-width=\"2\" marker-end=\"url(#arrowR1)\"/>\n  <defs><marker id=\"arrowR1\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0, 8 3, 0 6\" fill=\"#ef4444\"/></marker></defs>\n\n  <!-- Annotation -->\n  <rect x=\"250\" y=\"245\" width=\"210\" height=\"55\" rx=\"5\" fill=\"#ef4444\" opacity=\"0.1\" stroke=\"#ef4444\" stroke-width=\"0.5\"/>\n  <text x=\"355\" y=\"260\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\" font-weight=\"600\">Causes of increased supply of &#163;:</text>\n  <text x=\"260\" y=\"273\" fill=\"#e8ecf5\" font-size=\"8\">- UK imports rise (more &#163; sold for foreign currency)</text>\n  <text x=\"260\" y=\"284\" fill=\"#e8ecf5\" font-size=\"8\">- Capital outflows / UK investors buying abroad</text>\n  <text x=\"260\" y=\"295\" fill=\"#e8ecf5\" font-size=\"8\">- Loss of confidence / capital flight</text>\n</svg>",
+      "label": "Depreciation (Increase in Supply)",
+      "description": "When supply of the pound increases (e.g. UK consumers buying more imports, capital outflows, or loss of confidence), the supply curve shifts right from S to S'. The equilibrium exchange rate falls from e1 to e2 &mdash; the pound has depreciated."
+     }
+    ],
+    "description": "Supply and demand diagram for the foreign exchange market showing how a floating exchange rate is determined, with shifts illustrating appreciation and depreciation"
+   },
+   {
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n\n  <!-- Title -->\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">The J-Curve Effect</text>\n\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"40\" x2=\"70\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <line x1=\"70\" y1=\"310\" x2=\"470\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <text x=\"25\" y=\"175\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" transform=\"rotate(-90 25 175)\">Current Account Balance</text>\n  <text x=\"270\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\">Time</text>\n\n  <!-- Zero line (balance) -->\n  <line x1=\"70\" y1=\"170\" x2=\"470\" y2=\"170\" stroke=\"#e8ecf5\" stroke-width=\"0.8\" stroke-dasharray=\"4,3\" opacity=\"0.4\"/>\n  <text x=\"478\" y=\"168\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.5\">0</text>\n\n  <!-- Surplus / Deficit labels -->\n  <text x=\"60\" y=\"100\" text-anchor=\"end\" fill=\"#059669\" font-size=\"9\" opacity=\"0.6\">Surplus</text>\n  <text x=\"60\" y=\"240\" text-anchor=\"end\" fill=\"#ef4444\" font-size=\"9\" opacity=\"0.6\">Deficit</text>\n\n  <!-- Initial deficit line (before depreciation) -->\n  <line x1=\"70\" y1=\"200\" x2=\"150\" y2=\"200\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" opacity=\"0.5\"/>\n\n  <!-- Depreciation marker -->\n  <line x1=\"150\" y1=\"40\" x2=\"150\" y2=\"310\" stroke=\"#f59e0b\" stroke-width=\"1\" stroke-dasharray=\"6,3\" opacity=\"0.5\"/>\n  <text x=\"150\" y=\"322\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"9\" font-weight=\"600\">Depreciation</text>\n  <text x=\"150\" y=\"333\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"8\">occurs here</text>\n\n  <!-- J-Curve path -->\n  <path d=\"M 150 200 Q 170 215 195 240 Q 220 260 240 255 Q 280 240 320 190 Q 360 140 400 110 Q 440 90 465 80\" stroke=\"#3b82f6\" stroke-width=\"3\" fill=\"none\"/>\n\n  <!-- Key points on curve -->\n  <!-- Starting point -->\n  <circle cx=\"150\" cy=\"200\" r=\"4\" fill=\"#3b82f6\"/>\n\n  <!-- Worst point -->\n  <circle cx=\"215\" cy=\"258\" r=\"4\" fill=\"#ef4444\"/>\n  <text x=\"225\" y=\"275\" fill=\"#ef4444\" font-size=\"9\" font-weight=\"600\">Worst point</text>\n  <text x=\"225\" y=\"286\" fill=\"#e8ecf5\" font-size=\"8\">(demand inelastic</text>\n  <text x=\"225\" y=\"296\" fill=\"#e8ecf5\" font-size=\"8\">in short run)</text>\n\n  <!-- Break-even point -->\n  <circle cx=\"295\" cy=\"200\" r=\"4\" fill=\"#059669\"/>\n\n  <!-- Improvement zone -->\n  <circle cx=\"420\" cy=\"100\" r=\"4\" fill=\"#059669\"/>\n  <text x=\"385\" y=\"65\" fill=\"#059669\" font-size=\"9\" font-weight=\"600\">Long-run improvement</text>\n  <text x=\"385\" y=\"76\" fill=\"#e8ecf5\" font-size=\"8\">(demand becomes elastic;</text>\n  <text x=\"385\" y=\"87\" fill=\"#e8ecf5\" font-size=\"8\">M-L condition met)</text>\n\n  <!-- Annotations -->\n  <rect x=\"85\" y=\"44\" width=\"130\" height=\"52\" rx=\"5\" fill=\"#ef4444\" opacity=\"0.1\" stroke=\"#ef4444\" stroke-width=\"0.5\"/>\n  <text x=\"150\" y=\"58\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\" font-weight=\"600\">Short Run</text>\n  <text x=\"150\" y=\"70\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Import prices rise but</text>\n  <text x=\"150\" y=\"81\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">volumes unchanged</text>\n  <text x=\"150\" y=\"92\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">(contracts, habit)</text>\n\n  <rect x=\"330\" y=\"120\" width=\"130\" height=\"42\" rx=\"5\" fill=\"#059669\" opacity=\"0.1\" stroke=\"#059669\" stroke-width=\"0.5\"/>\n  <text x=\"395\" y=\"134\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\" font-weight=\"600\">Long Run</text>\n  <text x=\"395\" y=\"146\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Consumers switch to</text>\n  <text x=\"395\" y=\"157\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">cheaper domestic goods</text>\n\n  <!-- Arrow showing the J shape -->\n  <text x=\"100\" y=\"245\" fill=\"#3b82f6\" font-size=\"18\" font-weight=\"bold\" opacity=\"0.15\">J</text>\n</svg>",
+    "title": "The J-Curve Effect",
+    "checklist": [
+     "Draw time on the horizontal axis and current account balance on the vertical axis",
+     "Show a horizontal zero (balance) line to distinguish surplus from deficit",
+     "Mark the point of depreciation clearly on the time axis",
+     "Show the current account initially worsening (dipping below its starting level)",
+     "Then show improvement as the curve rises above the starting point &mdash; forming a J shape",
+     "Explain: short-run inelastic demand &rarr; worsening; long-run elastic demand &rarr; improvement"
+    ],
+    "scenarios": [
+     {
+      "label": "Shallow J-Curve (Nearly Elastic Demand)",
+      "description": "When demand for exports and imports is already relatively elastic in the short run (e.g. for standardised manufactured goods with many substitutes), the initial worsening of the current account is small, and the recovery is faster."
+     },
+     {
+      "label": "Deep J-Curve (Very Inelastic Demand)",
+      "description": "When demand is highly inelastic in the short run (e.g. for essential imports like oil with no substitutes, or long-term contracts), the initial worsening is severe and prolonged before any improvement occurs."
+     }
+    ],
+    "description": "Shows how the current account initially worsens after a depreciation before improving, tracing a J-shaped path over time"
+   },
+   {
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n\n  <!-- Title -->\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">The Marshall-Lerner Condition</text>\n  <text x=\"250\" y=\"38\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\" opacity=\"0.7\">Will a depreciation improve the current account?</text>\n\n  <!-- Central divider -->\n  <line x1=\"250\" y1=\"55\" x2=\"250\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"0.5\" opacity=\"0.3\"/>\n\n  <!-- LEFT SIDE: Condition MET -->\n  <rect x=\"20\" y=\"55\" width=\"215\" height=\"35\" rx=\"6\" fill=\"#059669\" opacity=\"0.2\" stroke=\"#059669\" stroke-width=\"1.5\"/>\n  <text x=\"127\" y=\"76\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"12\" font-weight=\"600\">Condition MET</text>\n\n  <text x=\"127\" y=\"105\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\">|PED(X)| + |PED(M)| &gt; 1</text>\n\n  <rect x=\"30\" y=\"118\" width=\"195\" height=\"72\" rx=\"5\" fill=\"#059669\" opacity=\"0.08\"/>\n  <text x=\"127\" y=\"135\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Demand for exports and imports is</text>\n  <text x=\"127\" y=\"148\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\">relatively elastic</text>\n  <text x=\"127\" y=\"165\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Volume changes are large enough to</text>\n  <text x=\"127\" y=\"178\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">outweigh the price changes</text>\n\n  <!-- Result arrow -->\n  <line x1=\"127\" y1=\"198\" x2=\"127\" y2=\"218\" stroke=\"#059669\" stroke-width=\"2\" marker-end=\"url(#arrowGML)\"/>\n  <defs><marker id=\"arrowGML\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0, 8 3, 0 6\" fill=\"#059669\"/></marker></defs>\n\n  <rect x=\"30\" y=\"222\" width=\"195\" height=\"50\" rx=\"6\" fill=\"#059669\" opacity=\"0.15\" stroke=\"#059669\" stroke-width=\"1\"/>\n  <text x=\"127\" y=\"242\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">Current account IMPROVES</text>\n  <text x=\"127\" y=\"258\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Export revenue rises &gt; import spending</text>\n\n  <!-- When? -->\n  <rect x=\"30\" y=\"280\" width=\"195\" height=\"30\" rx=\"5\" fill=\"#059669\" opacity=\"0.05\"/>\n  <text x=\"127\" y=\"298\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">More likely in the <tspan fill=\"#059669\" font-weight=\"600\">long run</tspan></text>\n\n  <!-- RIGHT SIDE: Condition NOT MET -->\n  <rect x=\"265\" y=\"55\" width=\"215\" height=\"35\" rx=\"6\" fill=\"#ef4444\" opacity=\"0.2\" stroke=\"#ef4444\" stroke-width=\"1.5\"/>\n  <text x=\"372\" y=\"76\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"12\" font-weight=\"600\">Condition NOT MET</text>\n\n  <text x=\"372\" y=\"105\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\">|PED(X)| + |PED(M)| &lt; 1</text>\n\n  <rect x=\"275\" y=\"118\" width=\"195\" height=\"72\" rx=\"5\" fill=\"#ef4444\" opacity=\"0.08\"/>\n  <text x=\"372\" y=\"135\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Demand for exports and imports is</text>\n  <text x=\"372\" y=\"148\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">relatively inelastic</text>\n  <text x=\"372\" y=\"165\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Volume changes are too small to</text>\n  <text x=\"372\" y=\"178\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">offset the higher import prices</text>\n\n  <!-- Result arrow -->\n  <line x1=\"372\" y1=\"198\" x2=\"372\" y2=\"218\" stroke=\"#ef4444\" stroke-width=\"2\" marker-end=\"url(#arrowRML)\"/>\n  <defs><marker id=\"arrowRML\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0, 8 3, 0 6\" fill=\"#ef4444\"/></marker></defs>\n\n  <rect x=\"275\" y=\"222\" width=\"195\" height=\"50\" rx=\"6\" fill=\"#ef4444\" opacity=\"0.15\" stroke=\"#ef4444\" stroke-width=\"1\"/>\n  <text x=\"372\" y=\"242\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"600\">Current account WORSENS</text>\n  <text x=\"372\" y=\"258\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Import spending rises &gt; export revenue</text>\n\n  <!-- When? -->\n  <rect x=\"275\" y=\"280\" width=\"195\" height=\"30\" rx=\"5\" fill=\"#ef4444\" opacity=\"0.05\"/>\n  <text x=\"372\" y=\"298\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">More likely in the <tspan fill=\"#ef4444\" font-weight=\"600\">short run</tspan></text>\n\n  <!-- Bottom key insight -->\n  <rect x=\"80\" y=\"318\" width=\"340\" height=\"24\" rx=\"5\" fill=\"#3b82f6\" opacity=\"0.1\" stroke=\"#3b82f6\" stroke-width=\"0.5\"/>\n  <text x=\"250\" y=\"334\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"600\">Links to J-curve: short-run inelastic = worsens; long-run elastic = improves</text>\n</svg>",
+    "title": "The Marshall-Lerner Condition",
+    "checklist": [
+     "State the condition: |PED(X)| + |PED(M)| > 1 for a depreciation to improve the current account",
+     "Explain that elastic demand means volume changes outweigh price changes",
+     "Explain that inelastic demand means price changes dominate &mdash; current account worsens",
+     "Link to the J-curve: demand is inelastic in the short run, elastic in the long run",
+     "Note that empirical evidence suggests the condition IS met for most countries in the long run"
+    ],
+    "scenarios": [
+     {
+      "label": "Condition Met (Long Run)",
+      "description": "In the long run, consumers have time to adjust buying patterns, find domestic substitutes, and renegotiate contracts. Demand becomes more elastic, so the combined PED exceeds 1 and depreciation improves the current account."
+     },
+     {
+      "label": "Condition Not Met (Short Run)",
+      "description": "In the short run, contracts are fixed, switching costs are high, and consumers are slow to change habits. Demand is inelastic, so import spending rises (prices up, volumes unchanged) while export revenue does not increase enough to compensate."
+     }
+    ],
+    "description": "Visual showing when a depreciation improves or worsens the current account, depending on the combined price elasticity of demand for exports and imports"
+   },
+   {
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n\n  <!-- Title -->\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">Balance of Payments Structure</text>\n\n  <!-- Main BoP box at top -->\n  <rect x=\"150\" y=\"35\" width=\"200\" height=\"28\" rx=\"6\" fill=\"#3b82f6\" opacity=\"0.25\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/>\n  <text x=\"250\" y=\"54\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\">Balance of Payments = 0</text>\n\n  <!-- Connecting lines down to three accounts -->\n  <line x1=\"120\" y1=\"63\" x2=\"120\" y2=\"80\" stroke=\"#e8ecf5\" stroke-width=\"1\" opacity=\"0.5\"/>\n  <line x1=\"250\" y1=\"63\" x2=\"250\" y2=\"80\" stroke=\"#e8ecf5\" stroke-width=\"1\" opacity=\"0.5\"/>\n  <line x1=\"400\" y1=\"63\" x2=\"400\" y2=\"80\" stroke=\"#e8ecf5\" stroke-width=\"1\" opacity=\"0.5\"/>\n  <line x1=\"120\" y1=\"63\" x2=\"400\" y2=\"63\" stroke=\"#e8ecf5\" stroke-width=\"1\" opacity=\"0.5\"/>\n\n  <!-- CURRENT ACCOUNT -->\n  <rect x=\"15\" y=\"80\" width=\"180\" height=\"28\" rx=\"5\" fill=\"#059669\" opacity=\"0.25\" stroke=\"#059669\" stroke-width=\"1.5\"/>\n  <text x=\"105\" y=\"98\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\">Current Account</text>\n\n  <!-- Sub-items -->\n  <rect x=\"20\" y=\"115\" width=\"170\" height=\"22\" rx=\"4\" fill=\"#059669\" opacity=\"0.08\" stroke=\"#059669\" stroke-width=\"0.5\"/>\n  <text x=\"105\" y=\"130\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Trade in Goods (visibles)</text>\n\n  <rect x=\"20\" y=\"142\" width=\"170\" height=\"22\" rx=\"4\" fill=\"#059669\" opacity=\"0.08\" stroke=\"#059669\" stroke-width=\"0.5\"/>\n  <text x=\"105\" y=\"157\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Trade in Services (invisibles)</text>\n\n  <rect x=\"20\" y=\"169\" width=\"170\" height=\"22\" rx=\"4\" fill=\"#059669\" opacity=\"0.08\" stroke=\"#059669\" stroke-width=\"0.5\"/>\n  <text x=\"105\" y=\"184\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Primary Income (investment)</text>\n\n  <rect x=\"20\" y=\"196\" width=\"170\" height=\"22\" rx=\"4\" fill=\"#059669\" opacity=\"0.08\" stroke=\"#059669\" stroke-width=\"0.5\"/>\n  <text x=\"105\" y=\"211\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Secondary Income (transfers)</text>\n\n  <!-- CAPITAL ACCOUNT -->\n  <rect x=\"215\" y=\"80\" width=\"130\" height=\"28\" rx=\"5\" fill=\"#f59e0b\" opacity=\"0.25\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n  <text x=\"280\" y=\"98\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"10\" font-weight=\"600\">Capital Account</text>\n\n  <!-- Sub-items -->\n  <rect x=\"220\" y=\"115\" width=\"120\" height=\"22\" rx=\"4\" fill=\"#f59e0b\" opacity=\"0.08\" stroke=\"#f59e0b\" stroke-width=\"0.5\"/>\n  <text x=\"280\" y=\"130\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Capital transfers</text>\n\n  <rect x=\"220\" y=\"142\" width=\"120\" height=\"22\" rx=\"4\" fill=\"#f59e0b\" opacity=\"0.08\" stroke=\"#f59e0b\" stroke-width=\"0.5\"/>\n  <text x=\"280\" y=\"157\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Non-produced assets</text>\n\n  <text x=\"280\" y=\"180\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"8\" opacity=\"0.7\">(Typically very small)</text>\n\n  <!-- FINANCIAL ACCOUNT -->\n  <rect x=\"365\" y=\"80\" width=\"120\" height=\"28\" rx=\"5\" fill=\"#3b82f6\" opacity=\"0.25\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/>\n  <text x=\"425\" y=\"98\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"600\">Financial Account</text>\n\n  <!-- Sub-items -->\n  <rect x=\"355\" y=\"115\" width=\"140\" height=\"22\" rx=\"4\" fill=\"#3b82f6\" opacity=\"0.08\" stroke=\"#3b82f6\" stroke-width=\"0.5\"/>\n  <text x=\"425\" y=\"130\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">FDI (10%+ ownership)</text>\n\n  <rect x=\"355\" y=\"142\" width=\"140\" height=\"22\" rx=\"4\" fill=\"#3b82f6\" opacity=\"0.08\" stroke=\"#3b82f6\" stroke-width=\"0.5\"/>\n  <text x=\"425\" y=\"157\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Portfolio Investment</text>\n\n  <rect x=\"355\" y=\"169\" width=\"140\" height=\"22\" rx=\"4\" fill=\"#3b82f6\" opacity=\"0.08\" stroke=\"#3b82f6\" stroke-width=\"0.5\"/>\n  <text x=\"425\" y=\"184\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Other Investment</text>\n\n  <rect x=\"355\" y=\"196\" width=\"140\" height=\"22\" rx=\"4\" fill=\"#3b82f6\" opacity=\"0.08\" stroke=\"#3b82f6\" stroke-width=\"0.5\"/>\n  <text x=\"425\" y=\"211\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Reserve Assets</text>\n\n  <!-- Key relationship box -->\n  <rect x=\"30\" y=\"235\" width=\"440\" height=\"40\" rx=\"6\" fill=\"#3b82f6\" opacity=\"0.1\" stroke=\"#3b82f6\" stroke-width=\"0.8\"/>\n  <text x=\"250\" y=\"252\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\">Key Identity: Current A/C + Capital A/C + Financial A/C + Errors &amp; Omissions = 0</text>\n  <text x=\"250\" y=\"267\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.8\">A current account deficit must be financed by a financial account surplus (capital inflows)</text>\n\n  <!-- Credit/Debit key -->\n  <rect x=\"80\" y=\"285\" width=\"150\" height=\"30\" rx=\"5\" fill=\"#059669\" opacity=\"0.1\" stroke=\"#059669\" stroke-width=\"0.5\"/>\n  <text x=\"155\" y=\"300\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\" font-weight=\"600\">Credit (+) = Money inflows</text>\n  <text x=\"155\" y=\"312\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Exports, inward FDI, income earned</text>\n\n  <rect x=\"270\" y=\"285\" width=\"150\" height=\"30\" rx=\"5\" fill=\"#ef4444\" opacity=\"0.1\" stroke=\"#ef4444\" stroke-width=\"0.5\"/>\n  <text x=\"345\" y=\"300\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\" font-weight=\"600\">Debit (-) = Money outflows</text>\n  <text x=\"345\" y=\"312\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Imports, outward FDI, income paid</text>\n\n  <!-- Connecting lines from main boxes to sub-items -->\n  <line x1=\"105\" y1=\"108\" x2=\"105\" y2=\"115\" stroke=\"#059669\" stroke-width=\"0.5\" opacity=\"0.5\"/>\n  <line x1=\"280\" y1=\"108\" x2=\"280\" y2=\"115\" stroke=\"#f59e0b\" stroke-width=\"0.5\" opacity=\"0.5\"/>\n  <line x1=\"425\" y1=\"108\" x2=\"425\" y2=\"115\" stroke=\"#3b82f6\" stroke-width=\"0.5\" opacity=\"0.5\"/>\n</svg>",
+    "title": "Balance of Payments Structure",
+    "checklist": [
+     "Identify the three main accounts: current, capital, and financial",
+     "List the four components of the current account (goods, services, primary income, secondary income)",
+     "List the components of the financial account (FDI, portfolio, other, reserves)",
+     "State the key identity: the BoP must always balance (sum = 0)",
+     "Explain how a current account deficit is financed by the financial account"
+    ],
+    "scenarios": [
+     {
+      "label": "Deficit Country (e.g. UK)",
+      "description": "The UK typically has a large current account deficit (especially on trade in goods), financed by a financial account surplus &mdash; foreign investors buy UK assets (property, bonds, shares, companies). The capital account is very small."
+     },
+     {
+      "label": "Surplus Country (e.g. Germany)",
+      "description": "Germany typically runs a large current account surplus (strong manufacturing exports). This is offset by a financial account deficit &mdash; German investors acquire foreign assets, and Germany is a net lender to the rest of the world."
+     }
+    ],
+    "description": "Visual breakdown of the three main accounts of the balance of payments and their sub-components"
+   },
+   {
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n\n  <!-- Title -->\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">Effects of a Currency Depreciation</text>\n\n  <!-- Central box -->\n  <rect x=\"175\" y=\"38\" width=\"150\" height=\"32\" rx=\"8\" fill=\"#f59e0b\" opacity=\"0.25\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n  <text x=\"250\" y=\"59\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"600\">DEPRECIATION</text>\n\n  <!-- Connecting lines from centre -->\n  <line x1=\"175\" y1=\"54\" x2=\"90\" y2=\"95\" stroke=\"#e8ecf5\" stroke-width=\"0.8\" opacity=\"0.4\"/>\n  <line x1=\"250\" y1=\"70\" x2=\"250\" y2=\"95\" stroke=\"#e8ecf5\" stroke-width=\"0.8\" opacity=\"0.4\"/>\n  <line x1=\"325\" y1=\"54\" x2=\"410\" y2=\"95\" stroke=\"#e8ecf5\" stroke-width=\"0.8\" opacity=\"0.4\"/>\n\n  <!-- Top row: Direct price effects -->\n  <rect x=\"10\" y=\"95\" width=\"155\" height=\"38\" rx=\"5\" fill=\"#059669\" opacity=\"0.15\" stroke=\"#059669\" stroke-width=\"1\"/>\n  <text x=\"87\" y=\"112\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\" font-weight=\"600\">Exports cheaper</text>\n  <text x=\"87\" y=\"125\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">in foreign currency terms</text>\n\n  <rect x=\"175\" y=\"95\" width=\"150\" height=\"38\" rx=\"5\" fill=\"#ef4444\" opacity=\"0.15\" stroke=\"#ef4444\" stroke-width=\"1\"/>\n  <text x=\"250\" y=\"112\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\" font-weight=\"600\">Imports dearer</text>\n  <text x=\"250\" y=\"125\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">in domestic currency terms</text>\n\n  <rect x=\"335\" y=\"95\" width=\"155\" height=\"38\" rx=\"5\" fill=\"#3b82f6\" opacity=\"0.15\" stroke=\"#3b82f6\" stroke-width=\"1\"/>\n  <text x=\"412\" y=\"112\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"9\" font-weight=\"600\">FDI attracted</text>\n  <text x=\"412\" y=\"125\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">country is cheaper to invest in</text>\n\n  <!-- Connecting lines to second row -->\n  <line x1=\"87\" y1=\"133\" x2=\"87\" y2=\"152\" stroke=\"#e8ecf5\" stroke-width=\"0.8\" opacity=\"0.4\"/>\n  <line x1=\"250\" y1=\"133\" x2=\"250\" y2=\"152\" stroke=\"#e8ecf5\" stroke-width=\"0.8\" opacity=\"0.4\"/>\n\n  <!-- Second row: Consequences -->\n  <rect x=\"10\" y=\"152\" width=\"155\" height=\"52\" rx=\"5\" fill=\"#059669\" opacity=\"0.08\" stroke=\"#059669\" stroke-width=\"0.5\"/>\n  <text x=\"87\" y=\"166\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"8\" font-weight=\"600\">Current Account</text>\n  <text x=\"87\" y=\"178\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Improves IF Marshall-Lerner</text>\n  <text x=\"87\" y=\"189\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">condition met (long run)</text>\n  <text x=\"87\" y=\"200\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"8\">J-curve: worsens first</text>\n\n  <rect x=\"175\" y=\"152\" width=\"150\" height=\"52\" rx=\"5\" fill=\"#ef4444\" opacity=\"0.08\" stroke=\"#ef4444\" stroke-width=\"0.5\"/>\n  <text x=\"250\" y=\"166\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"8\" font-weight=\"600\">Inflation</text>\n  <text x=\"250\" y=\"178\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Cost-push: imported inputs</text>\n  <text x=\"250\" y=\"189\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">and consumer goods dearer</text>\n  <text x=\"250\" y=\"200\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Demand-pull: higher net X</text>\n\n  <rect x=\"335\" y=\"152\" width=\"155\" height=\"52\" rx=\"5\" fill=\"#3b82f6\" opacity=\"0.08\" stroke=\"#3b82f6\" stroke-width=\"0.5\"/>\n  <text x=\"412\" y=\"166\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"8\" font-weight=\"600\">Economic Growth</text>\n  <text x=\"412\" y=\"178\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Net exports rise (if M-L met)</text>\n  <text x=\"412\" y=\"189\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">AD shifts right</text>\n  <text x=\"412\" y=\"200\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Depends on spare capacity</text>\n\n  <!-- Third row -->\n  <rect x=\"10\" y=\"218\" width=\"155\" height=\"42\" rx=\"5\" fill=\"#059669\" opacity=\"0.08\" stroke=\"#059669\" stroke-width=\"0.5\"/>\n  <text x=\"87\" y=\"232\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"8\" font-weight=\"600\">Employment</text>\n  <text x=\"87\" y=\"244\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Jobs created in export and</text>\n  <text x=\"87\" y=\"255\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">import-competing industries</text>\n\n  <rect x=\"175\" y=\"218\" width=\"150\" height=\"42\" rx=\"5\" fill=\"#ef4444\" opacity=\"0.08\" stroke=\"#ef4444\" stroke-width=\"0.5\"/>\n  <text x=\"250\" y=\"232\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"8\" font-weight=\"600\">Living Standards</text>\n  <text x=\"250\" y=\"244\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Real purchasing power falls</text>\n  <text x=\"250\" y=\"255\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">(imports cost more)</text>\n\n  <rect x=\"335\" y=\"218\" width=\"155\" height=\"42\" rx=\"5\" fill=\"#f59e0b\" opacity=\"0.08\" stroke=\"#f59e0b\" stroke-width=\"0.5\"/>\n  <text x=\"412\" y=\"232\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"8\" font-weight=\"600\">Competitive Devaluation Risk</text>\n  <text x=\"412\" y=\"244\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Trading partners may retaliate</text>\n  <text x=\"412\" y=\"255\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">with own depreciations</text>\n\n  <!-- Key evaluation box -->\n  <rect x=\"30\" y=\"275\" width=\"440\" height=\"55\" rx=\"6\" fill=\"#3b82f6\" opacity=\"0.1\" stroke=\"#3b82f6\" stroke-width=\"0.8\"/>\n  <text x=\"250\" y=\"292\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"600\">Key Evaluation Points</text>\n  <text x=\"250\" y=\"306\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Short run vs long run (J-curve); Depends on spare capacity in the economy</text>\n  <text x=\"250\" y=\"318\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Inflationary consequences may offset trade benefits; Does not fix underlying competitiveness</text>\n</svg>",
+    "title": "Impact of Depreciation on the Economy",
+    "checklist": [
+     "Identify the two direct price effects: exports cheaper, imports dearer",
+     "Apply the Marshall-Lerner condition and J-curve to assess the current account impact",
+     "Explain the inflationary effect: cost-push from imports, demand-pull from net exports",
+     "Discuss the effect on growth, employment, and FDI",
+     "Evaluate: depends on spare capacity, time horizon, and whether the M-L condition is met"
+    ],
+    "scenarios": [
+     {
+      "label": "Depreciation with Spare Capacity",
+      "description": "When the economy has spare capacity (output gap), depreciation can boost real GDP without causing significant demand-pull inflation. Firms can increase production to meet higher export demand."
+     },
+     {
+      "label": "Depreciation Near Full Capacity",
+      "description": "When the economy is near full capacity, depreciation mainly causes inflation rather than real growth. Firms cannot easily increase output, so higher demand from net exports pulls up prices."
+     }
+    ],
+    "description": "Overview diagram showing the multiple macroeconomic effects of a currency depreciation on different parts of the economy"
+   }
+  ],
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "A current account deficit occurs when the value of imports of goods, services, primary income and secondary income exceeds exports — meaning the country spends more abroad than it earns.",
+      "Persistent deficits may reflect structural problems such as low productivity, weak international competitiveness, over-reliance on imported energy or consumer goods, and deindustrialisation.",
+      "A current account deficit must be financed by a surplus on the financial account — through foreign borrowing, inward FDI or the sale of domestic assets to foreign investors.",
+      "Sustained reliance on financial inflows makes the economy vulnerable to sudden capital flight, currency crises and rising external debt, which can trigger severe economic disruption."
+     ],
+     "title": "Current account deficits reflect structural weaknesses",
+     "result": "Persistent current account deficits can signal structural economic weaknesses and create vulnerability to financial instability if financed by unsustainable capital inflows."
+    },
+    {
+     "steps": [
+      "A depreciation of the exchange rate makes exports cheaper in foreign currency and imports more expensive in domestic currency, which should improve the trade balance over time.",
+      "In the short run, however, the trade balance initially worsens — import volumes are slow to adjust due to existing contracts, while the higher cost of imports raises the import bill immediately.",
+      "Over time, the volume effects dominate as consumers switch from expensive imports to domestic substitutes, and foreign buyers increase purchases of now-cheaper exports.",
+      "This pattern — initial deterioration followed by improvement — traces out a J-curve, with the trade balance eventually improving if the Marshall-Lerner condition is satisfied."
+     ],
+     "title": "Exchange rate depreciation and the J-curve effect",
+     "result": "Exchange rate depreciation follows a J-curve pattern, with the trade balance worsening before improving as volumes adjust to the new relative prices."
+    },
+    {
+     "steps": [
+      "The Marshall-Lerner condition states that a depreciation will improve the trade balance only if the sum of the price elasticities of demand for exports and imports exceeds one (PEDx + PEDm > 1).",
+      "If demand for exports and imports is relatively elastic, the volume changes following depreciation will be large enough to outweigh the adverse price effect of more expensive imports.",
+      "If demand is inelastic (PEDx + PEDm < 1), depreciation worsens the trade balance — export revenue rises only slightly while the import bill increases significantly.",
+      "In the long run, demand tends to be more price elastic as consumers and firms have time to find alternatives, making depreciation more effective at improving the trade balance over time."
+     ],
+     "title": "Marshall-Lerner condition for devaluation to improve BoP",
+     "result": "Depreciation only improves the trade balance if the Marshall-Lerner condition is met — the effectiveness depends on the price elasticity of demand for imports and exports."
+    },
+    {
+     "steps": [
+      "International competitiveness depends on both price factors (unit labour costs, exchange rate, relative inflation) and non-price factors (quality, design, reliability, after-sales service).",
+      "Countries with lower unit labour costs relative to trading partners can offer goods at competitive prices, increasing export market share and improving the current account.",
+      "Non-price competitiveness is increasingly important in global markets — countries like Germany and Japan maintain strong export performance despite relatively high labour costs through quality and innovation.",
+      "Improving competitiveness requires long-term supply-side reforms — investment in education, infrastructure, R&D and institutions that support productivity growth."
+     ],
+     "title": "International competitiveness drives export performance",
+     "result": "Sustained export performance depends on both price and non-price competitiveness, which requires long-term investment in productivity-enhancing factors."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "Current account deficits are not always problematic",
+     "content": "A current account deficit financed by productive FDI can reflect economic strength rather than weakness — it shows the country is an attractive destination for investment. Fast-growing developing economies often run deficits as they import capital goods to build productive capacity. The sustainability of a deficit depends on how the foreign borrowing is used — if invested productively, future export earnings can service the debt."
+    },
+    {
+     "title": "Exchange rate policy involves significant trade-offs",
+     "content": "A depreciation improves export competitiveness but raises import costs, contributing to cost-push inflation. For countries dependent on imported raw materials, energy or food, depreciation can significantly reduce real living standards. Fixed exchange rate regimes provide stability for trade and investment but remove the exchange rate as an adjustment mechanism, requiring alternative methods to correct imbalances."
+    },
+    {
+     "title": "Competitiveness is multidimensional and hard to measure",
+     "content": "Simple measures like the real effective exchange rate capture price competitiveness but miss non-price factors that often determine trade success. Global value chains complicate the picture further — a country's exports may contain a high proportion of imported components, so depreciation benefits are offset by higher input costs. Improving competitiveness requires a comprehensive strategy addressing productivity, skills, infrastructure and institutions simultaneously."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "title": "Forgetting the J-curve when discussing depreciation",
+    "examTip": "Always mention the J-curve and Marshall-Lerner condition when discussing depreciation and the current account. These are key evaluation tools.",
+    "mistake": "Students assume depreciation immediately improves the current account.",
+    "correction": "In the short run, depreciation may worsen the current account (J-curve effect) because demand is price inelastic — import prices rise but volumes take time to adjust. The current account only improves once demand becomes more elastic."
+   },
+   {
+    "title": "Confusing appreciation/depreciation with revaluation/devaluation",
+    "mistake": "Students use these terms interchangeably.",
+    "correction": "Appreciation/depreciation = market-driven changes under a FLOATING exchange rate. Revaluation/devaluation = government decisions under a FIXED exchange rate. The mechanism is different."
+   },
+   {
+    "title": "Not stating the Marshall-Lerner condition precisely",
+    "mistake": "Students say \"depreciation improves the current account\" without stating the condition.",
+    "correction": "A depreciation only improves the current account if the sum of PED for exports and PED for imports is greater than 1 (PEDx + PEDm > 1). This is the Marshall-Lerner condition."
+   }
+  ]
+ }
+}

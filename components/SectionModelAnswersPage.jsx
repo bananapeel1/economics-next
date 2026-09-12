@@ -60,10 +60,12 @@ export default function SectionModelAnswersPage({
           so this offers that, on the topic they are already reading, and it
           keeps the ?section= form so the click is measurable. */}
       <div className="seo-cta" style={{ marginTop: 32 }}>
-        <h2>Now write one yourself</h2>
+        <h2>Now try one yourself</h2>
         <p>
-          Practise {topicName} with the same question types, marked against the
-          scheme, in the app. Free, and it opens exactly where you are.
+          Practise {topicName} in the app: exam-style questions filtered by mark
+          value, each with model answer guidance you can open when you are ready.
+          Free, and it opens exactly where you are. Getting your own written
+          answers AI-marked is a Pro feature.
         </p>
         <Link
           href={sectionId ? `/?section=${sectionId}` : '/model-answers'}

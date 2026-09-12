@@ -66,6 +66,18 @@ All of these, in order, or the packet is not done:
 Rewrite `NEXT.md` for the next packet only: what to read, what to do, exit criteria, and anything this packet
 discovered that the next one must know. Append irreversible choices to `DECISIONS.md`. Clear context.
 
+## Canonical IAL paper structures
+
+Verified against `audit/raw/econ_spec.txt` and `audit/raw/bus_spec.txt`. Never restate these from memory or
+from a summary; a wrong version of this table was propagated to 52 agents on 12 September.
+
+| Paper | Structure |
+|---|---|
+| Economics Unit 1 (WEC11) and Unit 2 (WEC12), identical | A six multiple choice (6) · B five short answers (20) · C five-part data question (34) · D one 20-mark essay from a choice of two (20) |
+| Economics Unit 3 (WEC13) and Unit 4 (WEC14), identical | A six multiple choice (6) · B five-part data question (34) · C two 20-mark essays from a choice of three (40) |
+| Business Units 1 and 2 | A source-based short and extended response (30) · B same format, different sources (30) · C one 20-mark essay from sources (20) |
+| Business Units 3 and 4 | A short and extended response from sources (40) · B one 20-mark essay (20) · C one 20-mark essay (20) |
+
 ## Shipping
 
 A packet that is committed is not shipped. Students see `main`, which Vercel deploys. Ship checkpoints:

@@ -10,9 +10,9 @@ Plan: `audit/PLAN.md` (58 packets). Source data: `audit/README.md`.
 
 | # | Packet | Status | Commit | Snapshot | Validator |
 |---|--------|--------|--------|----------|-----------|
-| 0 | Day 0 hotfix | done and verified 2026-09-12 (Verify A: 2 code + 18 content ids confirmed; Verify B walkthrough clean). 3 marketing claims open on the SEO branch, see NEXT.md | 069ddb4 | audit/snapshots/2026-09-11-{pre,post}-packet-0__* | n/a (packet 3) |
+| 0 | Day 0 hotfix | done and verified. Code + content 2026-09-12 (2 code + 18 content ids). Marketing: 182 claims found, all corrected and confirmed (M001-M182), gate clear |  069ddb4 | audit/snapshots/2026-09-11-{pre,post}-packet-0__* | n/a (packet 3) |
 | 1 | Measure or don't bother | done and verified 2026-09-12 (Verify A: F021 F022 F042 F043 confirmed; dead progress route deleted in the setup commit to close F023 F049; F026 F030 moved to packet 5). app_events table SQL still to run once (see NEXT.md) | cdb24dc + setup commit | | n/a (packet 3) |
-| 2 | Ids and safety net | not started | | | n/a |
+| 2 | Ids and safety net | **done 2026-09-12** — 2,952 item ids minted, item_id column added and 1,041 of 1,069 progress rows backfilled (28 NULL by design: 27 written-practice rows whose index points into a filtered subset, 1 stale index). Pin resolution fixed and verified (F013 F040 F111 F041 confirmed). Dual-write live on all three progress routes and engines. Draft/published tooling written; `scripts/packet-2-draft-state.sql` still to run. F052/F109 improved not closed; F115 substantially addressed | 4d45478 + | audit/snapshots/2026-09-12-pre-packet-2__* | n/a |
 | 3 | Validator v2 + golden set | not started | | | n/a |
 | 4 | Progress and mastery truth | not started | | | n/a |
 | 5 | Step 0 | not started | | | n/a |
@@ -24,6 +24,22 @@ Plan: `audit/PLAN.md` (58 packets). Source data: `audit/README.md`.
 | 11 | Performance and accessibility | not started | | | n/a |
 | 12 | Monetisation coherence | not started | | | n/a |
 | 13 | Off-spec strip and dedupe | not started | | | n/a |
+
+## Drill programme — packets 13.1 to 13.8
+
+Plan: `audit/DRILLS.md`. Founder decision 2026-09-12: split the programme, quant (13.1-13.4) before the
+content stage, drawing (13.5-13.8) after the top-ten sections.
+
+| # | Packet | Status | Commit | Snapshot | Validator |
+|---|--------|--------|--------|----------|-----------|
+| 13.1 | Quant engine | done and verified 2026-09-12 (Verify A: D001-D008 confirmed with file:line evidence; the verifier independently reproduced the guard failing on an in-tolerance slip). Verify B n/a — no student-facing surface. Built out of calendar order: no prerequisite, adds only new files, so it cannot conflict with packet 2 | d67a644 | none — no content write | n/a (packet 3) |
+| 13.2 | Six templates, Learn Mode and Quiz | blocked on packet 2 (item ids) | | | |
+| 13.3 | Twelve more templates, Smart Practice | blocked on packet 2 (`item_id`) | | | |
+| 13.4 | Calculations session + funnel events | blocked on 13.2, 13.3 | | | |
+| 13.5 | Diagram spec format and marking | deferred per the split | | | |
+| 13.6 | The drill component | deferred per the split | | | |
+| 13.7 | Six Economics specs | deferred; needs packets 5 and 7 | | | |
+| 13.8 | Six Business specs + Business surface | deferred; needs packet 12 | | | |
 
 ## Content — one section per packet, traffic order
 

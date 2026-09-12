@@ -17,7 +17,7 @@ import Link from 'next/link';
 export default function BackToApp({
   icon: Icon,
   heading = 'Back to Revvy Learn',
-  sub = 'Notes, flashcards and practice for every spec point',
+  sub = 'Notes, diagrams and practice questions, free for both subjects',
   href = '/',
   cta = 'Open the app',
 }) {

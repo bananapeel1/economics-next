@@ -39,7 +39,7 @@ export async function generateMetadata({ params }) {
   }
 
   const title = `${section.title} — Edexcel IAL Business ${section.units.title} | Revvy Learn`;
-  const description = `Free revision notes, diagrams, flashcards and quizzes for ${section.title}. Edexcel International A-Level Business ${section.units.title}.`;
+  const description = `Free revision notes and practice questions for ${section.title}, plus flashcards and quizzes with Pro. Edexcel International A-Level Business ${section.units.title}.`;
 
   return {
     title,

@@ -9,7 +9,7 @@ import '@/styles/landing.css';
 
 export const metadata = {
   title: 'The 4 Macroeconomic Objectives — Edexcel IAL Economics WEC12 Notes',
-  description: 'Complete macroeconomic objectives revision for Edexcel IAL Economics Unit 2 (WEC12). Growth, low inflation, low unemployment, balance of payments, inequality and environment \u2014 with diagrams, trade-offs and model answers.',
+  description: 'Macroeconomic objectives revision for Edexcel IAL Economics Unit 2 (WEC12). Growth, low inflation, low unemployment, balance of payments, a balanced government budget and income equality \u2014 with diagrams, trade-offs and model answers.',
   alternates: { canonical: 'https://revvylearn.com/economics/macroeconomic-objectives' },
   openGraph: {
     title: 'The 4 Macroeconomic Objectives — Edexcel IAL Economics WEC12 Notes | Revvy Learn',
@@ -78,14 +78,14 @@ const OBJECTIVES = [
     costs: 'Work-incentive reductions from high taxation, brain drain of top earners, political tensions if inequality is too high.',
   },
   {
-    slug: 'environmental-sustainability',
+    slug: 'balanced-government-budget',
     number: 6,
-    name: 'Environmental sustainability',
-    shortDef: 'Growth without depleting natural capital or damaging the environment.',
-    measurement: 'CO\u2082 emissions, air and water quality indices, biodiversity loss, renewable energy share.',
-    detail: 'Often treated as a constraint on other objectives. Green growth aims to decouple GDP from emissions. Policy tools include carbon taxes, pollution permits, subsidies for renewables and environmental regulation.',
-    target: 'Net-zero emissions by 2050 is the widely-adopted commitment.',
-    costs: 'Transition costs to green industries, regressive effects of carbon taxes, international competitiveness if other countries do not match action.',
+    name: 'Balanced government budget',
+    shortDef: 'Government spending matched by tax revenue, so borrowing does not keep adding to national debt.',
+    measurement: 'The budget deficit or surplus as a percentage of GDP, and national debt as a percentage of GDP.',
+    detail: 'Separate the cyclical deficit, which rises automatically in a recession as tax receipts fall and benefit spending rises, from the structural deficit, which remains at full employment. Reducing a deficit through austerity cuts aggregate demand, so this objective conflicts directly with growth and low unemployment. Sustained borrowing raises debt interest and may crowd out private investment.',
+    target: 'There is no single official target. The EU reference values, a deficit under 3% of GDP and debt under 60% of GDP, are the figures most often quoted.',
+    costs: 'Austerity lowers AD, growth and employment in the short run. Cutting capital spending weakens long-run productive capacity. Raising taxes to close a deficit can blunt work and investment incentives.',
   },
 ];
 
@@ -121,11 +121,11 @@ const POLICY_TOOLS = [
 const FAQS = [
   {
     q: 'What are the macroeconomic objectives in Edexcel IAL Economics?',
-    a: 'The six macroeconomic objectives you need to know for WEC12 are: (1) sustained economic growth, (2) low and stable inflation, (3) low unemployment, (4) a sustainable balance of payments, (5) a fair distribution of income, and (6) environmental sustainability. The first four are the classic \u201cbig four\u201d \u2014 income equality and environmental sustainability are increasingly emphasised in modern exams.',
+    a: 'The six macroeconomic objectives you need to know for WEC12 (spec 2.3.6) are: (1) economic growth, (2) low and stable inflation, (3) low unemployment, (4) balance of payments equilibrium on the current account, (5) a balanced government budget, and (6) greater income equality. The first four are the classic \u201cbig four\u201d \u2014 the balanced budget and income equality are the two the spec adds. Environmental sustainability is not one of the six: it appears in 2.3.6 as a conflict with growth, which is exactly the trade-off WEC12 evaluation questions reward.',
   },
   {
     q: 'What are the 4 main macroeconomic objectives?',
-    a: 'The traditional four macroeconomic objectives are: economic growth, low inflation, low unemployment, and balance of payments stability. These are the core objectives you must be ready to analyse in any WEC12 answer \u2014 income equality and environmental sustainability are usually treated as additional modern objectives.',
+    a: 'The traditional four macroeconomic objectives are: economic growth, low inflation, low unemployment, and balance of payments stability. These are the core objectives you must be ready to analyse in any WEC12 answer \u2014 spec 2.3.6 adds two more, a balanced government budget and greater income equality.',
   },
   {
     q: 'Why do macroeconomic objectives conflict?',
@@ -137,7 +137,7 @@ const FAQS = [
   },
   {
     q: 'How are macroeconomic objectives measured?',
-    a: 'Growth is measured by real GDP change. Inflation by CPI. Unemployment by the claimant count and ILO Labour Force Survey. The balance of payments by the current account as a % of GDP. Income inequality by the Gini coefficient. Environmental sustainability by CO\u2082 emissions and other green indicators.',
+    a: 'Growth is measured by real GDP change. Inflation by CPI. Unemployment by the claimant count and ILO Labour Force Survey. The balance of payments by the current account as a % of GDP. Income inequality by the Gini coefficient. The government budget by the deficit or surplus as a % of GDP, alongside national debt as a % of GDP.',
   },
   {
     q: 'What is the difference between fiscal and monetary policy?',
@@ -154,7 +154,7 @@ const FAQS = [
 ];
 
 const KEY_CONCEPTS = [
-  { icon: Star, title: 'Six objectives, four classic', desc: 'Growth, low inflation, low unemployment and BoP stability are the \u201cbig four\u201d. Income equality and environmental sustainability complete the modern set.' },
+  { icon: Star, title: 'Six objectives, four classic', desc: 'Growth, low inflation, low unemployment and BoP stability are the \u201cbig four\u201d. A balanced government budget and greater income equality complete the six on the WEC12 spec.' },
   { icon: BoltIcon, title: 'Trade-offs are the question', desc: 'WEC12 evaluation marks reward recognising that pursuing one objective often worsens another. Always frame answers around trade-offs.' },
   { icon: DrawerAlt, title: 'Three policy levers', desc: 'Fiscal, monetary and supply-side. Know what each one does, who controls it, and the time lag before it bites.' },
   { icon: ProgressChart, title: 'Measurement matters', desc: 'CPI vs RPI, claimant count vs ILO, real vs nominal GDP \u2014 examiners reward precision in how each objective is measured.' },
@@ -189,7 +189,7 @@ export default async function MacroObjectivesPillarPage() {
     url: 'https://revvylearn.com/economics/macroeconomic-objectives',
     educationalLevel: 'Advanced Level',
     learningResourceType: 'Revision Notes',
-    teaches: 'Macroeconomic objectives, economic growth, inflation, unemployment, balance of payments, income inequality, environmental sustainability, policy trade-offs',
+    teaches: 'Macroeconomic objectives, economic growth, inflation, unemployment, balance of payments, income inequality, balanced government budget, policy trade-offs',
     educationalUse: 'revision',
     inLanguage: 'en-GB',
     isAccessibleForFree: true,
@@ -258,7 +258,7 @@ export default async function MacroObjectivesPillarPage() {
           <div className="elp-hero-preview elp-fade-up" style={{ transitionDelay: '.15s' }}>
             <div className="elp-hero-badge elp-b1">
               <span className="elp-badge-icon"><Star size={18} /></span>
-              <div className="elp-badge-text"><span className="elp-badge-val">6 objectives</span><span className="elp-badge-lbl">fully spec-aligned</span></div>
+              <div className="elp-badge-text"><span className="elp-badge-val">6 objectives</span><span className="elp-badge-lbl">all six explained</span></div>
             </div>
             <div className="elp-preview-card">
               <div className="elp-preview-topbar">
@@ -299,14 +299,14 @@ export default async function MacroObjectivesPillarPage() {
         </div>
         <div className="eup-topic-block elp-fade-up">
           <p className="eup-topic-desc">Macroeconomic objectives are the targets that governments pursue for the economy as a whole. For Edexcel IAL Economics Unit 2 (WEC12), you need to know the six main objectives, how each is measured, the policies used to achieve them, and the conflicts between them. Expect this topic in every January, June and October paper series.</p>
-          <p className="eup-topic-desc">The four classic objectives are <strong>growth, low inflation, low unemployment and a sustainable balance of payments</strong>. Modern specifications add <strong>income equality</strong> and <strong>environmental sustainability</strong>. A strong WEC12 answer names all six, measures them correctly, and evaluates the trade-offs between them.</p>
+          <p className="eup-topic-desc">The four classic objectives are <strong>growth, low inflation, low unemployment and a sustainable balance of payments</strong>. The WEC12 spec adds two more: <strong>a balanced government budget</strong> and <strong>greater income equality</strong>. A strong WEC12 answer names all six, measures them correctly, and evaluates the trade-offs between them.</p>
         </div>
       </div>
 
       <div className="elp-section" id="objectives">
         <div className="elp-fade-up" style={{ marginBottom: 40 }}>
           <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />All six objectives</div>
-          <h2 className="elp-s-title">Every macroeconomic objective on the WEC12 spec</h2>
+          <h2 className="elp-s-title">Macroeconomic objectives, defined and measured</h2>
           <p className="elp-s-sub">Be ready to define, measure and evaluate each objective. Every one maps to a published query searched by IAL students.</p>
         </div>
         {OBJECTIVES.map((o, idx) => (
@@ -465,11 +465,11 @@ export default async function MacroObjectivesPillarPage() {
             <div className="eup-exam-info">
               <div className="eup-ei-label">Assessment details</div>
               <div className="eup-ei-row"><span className="eup-ei-key">Unit</span><span className="eup-ei-val" style={{ color: 'var(--eup-accent)' }}>2.3.6 &mdash; WEC12</span></div>
-              <div className="eup-ei-row"><span className="eup-ei-key">Paper duration</span><span className="eup-ei-val">1 hour 30 minutes</span></div>
+              <div className="eup-ei-row"><span className="eup-ei-key">Paper duration</span><span className="eup-ei-val">1 hour 45 minutes</span></div>
               <div className="eup-ei-row"><span className="eup-ei-key">Paper marks</span><span className="eup-ei-val">80 marks</span></div>
-              <div className="eup-ei-row"><span className="eup-ei-key">% of A-Level</span><span className="eup-ei-val">20%</span></div>
+              <div className="eup-ei-row"><span className="eup-ei-key">% of A-Level</span><span className="eup-ei-val">25%</span></div>
               <div className="eup-ei-row"><span className="eup-ei-key">Question styles</span><span className="eup-ei-val eup-marks-pills-inline"><span className="eup-mp eup-mp-4">4</span><span className="eup-mp eup-mp-8">8</span><span className="eup-mp eup-mp-20">20</span></span></div>
-              <div className="eup-ei-row"><span className="eup-ei-key">Common in</span><span className="eup-ei-val">Section A data-response &amp; Section B essays</span></div>
+              <div className="eup-ei-row"><span className="eup-ei-key">Common in</span><span className="eup-ei-val">Data-response &amp; 20-mark essay questions</span></div>
               <div className="eup-ei-row eup-ei-row-last"><span className="eup-ei-key">Sessions</span><span className="eup-ei-val">January, June, October</span></div>
             </div>
           </div>
@@ -525,7 +525,7 @@ export default async function MacroObjectivesPillarPage() {
       <RelatedModelAnswers
         href="/economics/macroeconomic-policies-model-answers"
         sectionTitle="Macroeconomic Policies"
-        count={1}
+        count={2}
       />
 
       <div className="elp-features-strip">
@@ -542,7 +542,7 @@ export default async function MacroObjectivesPillarPage() {
         <div className="elp-cta-bg" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(79,126,248,.07) 0%, transparent 65%)' }} />
         <div className="elp-cta-inner elp-fade-up">
           <h2 className="elp-cta-title">Ready to master macroeconomic objectives?</h2>
-          <p className="elp-cta-sub">Free notes for every spec point. Flashcards, quizzes and AI tutor unlock with Pro — £1 for your first month.</p>
+          <p className="elp-cta-sub">Free notes across all four units. Flashcards, quizzes and AI tutor unlock with Pro — £1 for your first month.</p>
           <div className="elp-cta-actions">
             <Link href="/economics/unit-2/macroeconomic-objectives-policies" className="elp-btn-primary" style={{ fontSize: 15, padding: '14px 30px' }}>Open in app &mdash; it&apos;s free &rarr;</Link>
             <Link href="/economics/unit-2" className="elp-btn-secondary">&larr; Back to Unit 2</Link>

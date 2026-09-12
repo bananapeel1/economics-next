@@ -63,7 +63,7 @@ export default function ProgressDashboard() {
   function statusBadge(mastered, learning, total) {
     if (total === 0) return { label: 'NEW', cls: 'lpd-badge-new' };
     const pct = Math.round((mastered / total) * 100);
-    if (pct >= 70) return { label: 'MASTERED', cls: 'lpd-badge-mastered' };
+    if (pct >= 70) return { label: 'ON TRACK', cls: 'lpd-badge-mastered', hint: '70%+ of this topic answered correctly 3 times in a row in spaced review' };
     if (mastered > 0 || learning > 0) return { label: 'LEARNING', cls: 'lpd-badge-learning' };
     return { label: 'NEW', cls: 'lpd-badge-new' };
   }
@@ -114,7 +114,7 @@ export default function ProgressDashboard() {
         <div className="lpd-stat-card">
           <div className="lpd-stat-cap">DUE FOR REVIEW</div>
           <div className="lpd-stat-value lpd-overdue-value">{overdueCount}</div>
-          <div className="lpd-stat-micro">cards overdue</div>
+          <div className="lpd-stat-micro">items overdue</div>
           <div className="lpd-stat-hint" style={{ color: overdueCount === 0 ? 'var(--accent-green)' : '#f59e0b' }}>
             {overdueCount === 0 ? '✓ All caught up' : '→ Review now'}
           </div>
@@ -214,7 +214,7 @@ export default function ProgressDashboard() {
                     >
                       <div className="lpd-topic-top">
                         <div className="lpd-topic-name">{sec.title}</div>
-                        <span className={`lpd-badge ${badge.cls}`}>{badge.label}</span>
+                        <span className={`lpd-badge ${badge.cls}`} title={badge.hint}>{badge.label}</span>
                       </div>
                       <div className="lpd-topic-bar">
                         <div className="lpd-topic-fill" style={{ width: `${pct}%`, background: fillColor }} />

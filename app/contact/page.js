@@ -61,7 +61,7 @@ export default function ContactPage() {
         <div className="elp-cta-bg" />
         <div className="elp-cta-inner elp-fade-up">
           <h2 className="elp-cta-title">Ready to start revising?</h2>
-          <p className="elp-cta-sub">Free notes for every spec point. Flashcards, quizzes and AI tutor included.</p>
+          <p className="elp-cta-sub">Free notes across all four units. Flashcards, quizzes and the AI tutor unlock with Pro.</p>
           <div className="elp-cta-actions">
             <Link href="/?section=introductory-concepts" className="elp-btn-primary" style={{ fontSize: '15px', padding: '14px 30px' }}>Open Revvy Learn &rarr;</Link>
           </div>

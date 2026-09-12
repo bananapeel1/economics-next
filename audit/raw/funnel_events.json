@@ -1,0 +1,42 @@
+{
+  "since": "2026-09-11",
+  "events": 20,
+  "students": {
+    "signedIn": 1,
+    "anonymous": 3
+  },
+  "sectionStarts": 6,
+  "passedStep0": 0,
+  "passedStep0Pct": 0,
+  "completed": 0,
+  "completedPct": 0,
+  "pretest": {
+    "offered": 6,
+    "started": 0,
+    "submitted": 0,
+    "skipped": 0,
+    "declined": 0
+  },
+  "progressWriteFailures": 0,
+  "cancelReasons": {},
+  "perSection": {
+    "the-market": {
+      "starts": 3,
+      "passedStep0": 0,
+      "completed": 0,
+      "passedStep0Pct": 0
+    },
+    "meeting-customer-needs": {
+      "starts": 2,
+      "passedStep0": 0,
+      "completed": 0,
+      "passedStep0Pct": 0
+    },
+    "types-sizes-businesses": {
+      "starts": 1,
+      "passedStep0": 0,
+      "completed": 0,
+      "passedStep0Pct": 0
+    }
+  }
+}

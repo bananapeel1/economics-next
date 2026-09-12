@@ -1,0 +1,606 @@
+{
+ "section_id": "global-markets-expansion",
+ "subject": "business",
+ "label": "2026-09-12-pre-packet-2",
+ "tables": {
+  "section_content": [
+   {
+    "title": "Market Entry Methods",
+    "sections": [
+     {
+      "id": "exporting-licensing-franchising",
+      "body": [
+       {
+        "text": "**Exporting** means producing domestically and selling abroad. It requires the lowest investment and risk — the firm does not need foreign premises or staff. However, it gives limited control over marketing and distribution, and the product faces tariffs, shipping costs, and exchange rate risk that squeeze margins.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Licensing** grants a foreign firm the right to use intellectual property (patents, technology, brand name) in exchange for a royalty fee. **Franchising** is a specific form of licensing where the franchisee replicates the entire business format — branding, operations manual, supply chain — in return for franchise fees and ongoing royalties.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Both licensing and franchising allow rapid international expansion with minimal capital investment. The trade-off is control: the licensor or franchisor depends on the partner to maintain quality and brand standards. A poorly run franchise can damage the global brand overnight.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Firm wants international revenue",
+         "Low capital available or risk-averse",
+         "Licenses IP or franchises business model"
+        ],
+        "result": "Income from foreign markets with low investment — but limited control over quality and brand",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Exporting, Licensing & Franchising",
+      "keyIdea": "Exporting is the simplest way to go global with low investment but low control, while licensing and franchising let firms earn income from foreign markets without running operations themselves.",
+      "examMatters": "Examiners ask you to recommend an entry method for a given scenario. Match the method to the firm's resources and objectives: exporting suits firms testing a market; franchising suits firms with a replicable format; neither suits firms needing tight quality control over complex products.",
+      "realExample": {
+       "text": "McDonald's operates over 40,000 restaurants in 100+ countries, with roughly 93% run by franchisees. The franchising model allowed McDonald's to scale globally without bearing the capital cost of building every restaurant — but it depends entirely on franchisees maintaining consistent quality, from Tokyo to Johannesburg.",
+       "emoji": "🍔"
+      },
+      "misconception": "Students say franchising means the parent company has no control. Wrong — franchise agreements include strict operational standards, regular inspections, and the right to terminate underperforming franchisees. Instead write: franchising trades direct operational control for contractual control — the franchisor sets standards but relies on the franchisee to execute them."
+     },
+     {
+      "id": "joint-ventures-fdi",
+      "body": [
+       {
+        "text": "A **joint venture (JV)** is a separate business entity created by two or more firms, often one local and one foreign. The foreign firm gains the local partner's market knowledge, distribution networks, and regulatory contacts. The local firm gains capital, technology, and global brand recognition. Profits and decisions are shared.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Foreign direct investment (FDI)** means establishing or acquiring production facilities in another country — building a factory, buying a local company, or setting up a wholly owned subsidiary. FDI gives the firm **maximum control** over operations, quality, and strategy, but requires the **highest capital commitment** and exposes the firm to full political and economic risk in the host country.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The choice between entry methods depends on three factors: **resources** (how much capital the firm can invest), **market characteristics** (regulatory requirements, cultural distance, political risk), and **speed** (how quickly the firm needs to establish a presence). There is no universally best method — it depends on the firm's context.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Firm assesses target market risk and opportunity",
+         "High control needed → FDI",
+         "Moderate risk tolerance → Joint venture",
+         "Low capital → Exporting or franchising"
+        ],
+        "result": "Entry method chosen based on balance of control, risk, and resources",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Joint Ventures & Foreign Direct Investment",
+      "keyIdea": "Joint ventures share risk and local knowledge with a partner, while FDI gives the firm maximum control by owning foreign operations outright — but both require significant commitment and capital.",
+      "examMatters": "A strong exam answer compares at least two entry methods, explaining why one is more suitable than another for a specific firm. Always use the framework: control vs risk vs resources vs speed. Conclude with 'it depends on' to show evaluative thinking.",
+      "realExample": {
+       "text": "Toyota's FDI strategy in the UK saw it build a major manufacturing plant in Derbyshire, employing over 3,000 workers. By producing inside the EU market (pre-Brexit), Toyota avoided tariffs and gained 'made in Britain' credibility — a textbook example of how FDI provides control and market proximity that exporting cannot.",
+       "emoji": "🚗"
+      },
+      "misconception": "Students assume FDI is always the best entry method because it gives the most control. Wrong — FDI also carries the highest risk: political instability, nationalisation, currency depreciation, and cultural mismanagement can destroy the investment. Instead write: FDI maximises control but also maximises exposure; firms should only use it when the market opportunity justifies the risk and capital commitment."
+     }
+    ],
+    "takeaway": [
+     "Entry methods ranked by control and risk: exporting < licensing/franchising < joint venture < FDI.",
+     "Franchising allows rapid scale with low capital but depends on partner quality.",
+     "FDI gives maximum control but requires the highest capital and risk exposure.",
+     "The best entry method depends on the firm's resources, market characteristics, and how quickly it needs to establish a presence."
+    ]
+   },
+   {
+    "title": "Strategic Analysis for Global Expansion",
+    "sections": [
+     {
+      "id": "ansoff-global-context",
+      "body": [
+       {
+        "text": "**Ansoff's matrix** maps four growth strategies based on whether the product and market are new or existing. In a global context, **market development** — selling an existing product in a new geographical market — is the most relevant quadrant. The product is proven, but the new market introduces uncertainty around consumer preferences, regulation, and competition.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Market penetration** (existing product, existing market) means growing share domestically — less risky but limited by market saturation. **Product development** (new product, existing market) keeps the firm in familiar territory but requires R&D investment. **Diversification** (new product, new market) is the riskiest quadrant — a firm enters an unfamiliar market with an untested product.",
+        "type": "paragraph"
+       },
+       {
+        "text": "For most firms going global, the strategic choice is market development: take what works at home and adapt it for abroad. The key risk is assuming that domestic success automatically translates overseas — cultural differences, regulatory requirements, and established local competitors can derail even strong products.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Firm saturates domestic market",
+         "Seeks growth via market development",
+         "Enters new country with existing product"
+        ],
+        "result": "Growth achieved if local adaptation succeeds — but cultural and regulatory risks remain",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Ansoff's Matrix in a Global Context",
+      "keyIdea": "Taking an existing product to a new country is market development on Ansoff's matrix — it carries more risk than market penetration but less than diversification, making it the most common global growth strategy.",
+      "examMatters": "Examiners love asking which Ansoff quadrant a firm is using. Always identify the quadrant, then evaluate the level of risk. For market development: acknowledge that the product is proven but the market is uncertain — success depends on understanding local consumers and adapting appropriately.",
+      "realExample": {
+       "text": "Netflix's international expansion is textbook market development on Ansoff's matrix. It took its existing streaming service to 190 countries, keeping the core product (subscription streaming) but adapting content libraries to local tastes — investing in Korean dramas, Spanish thrillers, and Indian films to suit each market.",
+       "emoji": "🎬"
+      },
+      "misconception": "Students confuse market development with diversification when a firm enters a new country. Wrong — if the product is essentially the same (even with minor local tweaks), it is market development. Diversification requires both a genuinely new product and a new market. Instead write: entering a new country with your existing product is market development; diversification means entering a new market with a fundamentally different product."
+     },
+     {
+      "id": "pestle-bartlett-ghoshal",
+      "body": [
+       {
+        "text": "**PESTLE analysis** evaluates a target market across six dimensions: **Political** (stability, corruption, trade policy), **Economic** (GDP growth, inflation, exchange rates), **Social** (culture, demographics, consumer habits), **Technological** (infrastructure, digital adoption), **Legal** (employment law, intellectual property protection), and **Environmental** (climate regulations, sustainability expectations). For global expansion, PESTLE identifies country-specific risks that domestic analysis would miss.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The **Bartlett and Ghoshal framework** classifies MNC strategies based on two pressures: the need for **global integration** (cost efficiency through standardisation) and the need for **local responsiveness** (adapting to local tastes and regulations). This produces four strategies: **International** (low-low, export home model), **Multi-domestic** (low integration, high responsiveness), **Global** (high integration, low responsiveness), and **Transnational** (high-high, the ideal but hardest to achieve).",
+        "type": "paragraph"
+       },
+       {
+        "text": "In practice, most successful MNCs aim for the **transnational** approach — achieving scale economies through global integration while adapting products and marketing to local markets. This is extremely difficult because it requires balancing contradictory pressures: centralised efficiency vs decentralised flexibility.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "PESTLE identifies country-specific risks",
+         "Bartlett-Ghoshal determines strategy type",
+         "Firm balances global integration vs local responsiveness"
+        ],
+        "result": "Optimal strategy matches the firm's capabilities to the market's demands",
+        "resultType": "good"
+       }
+      ],
+      "title": "PESTLE Analysis & the Bartlett-Ghoshal Framework",
+      "keyIdea": "PESTLE assesses the external environment of a target country across six dimensions, while Bartlett and Ghoshal's framework helps firms decide whether to standardise globally or adapt locally.",
+      "examMatters": "Examiners reward application over description. Do not just list P-E-S-T-L-E — pick the two or three factors most relevant to the firm in the question and explain how they influence the entry method or strategy. Link PESTLE to Bartlett-Ghoshal: if Social factors demand adaptation, the firm needs a multi-domestic or transnational strategy, not a global one.",
+      "realExample": {
+       "text": "Uber's global expansion illustrates both tools. A PESTLE analysis would have flagged regulatory barriers (political/legal) — in London, TfL repeatedly threatened Uber's licence over safety concerns. In Germany, courts banned UberPop. Uber learned that a purely global strategy fails when local regulation demands responsiveness, pushing it toward a more transnational approach.",
+       "emoji": "🚕"
+      },
+      "misconception": "Students list PESTLE factors without applying them to a specific business decision. Wrong — PESTLE is only useful when linked to strategic action. Instead write: identify the PESTLE factor, explain the specific risk or opportunity it creates, and state how the firm should respond — for example, 'weak IP law (Legal) means the firm should use FDI rather than licensing to protect its technology'."
+     }
+    ],
+    "takeaway": [
+     "Ansoff's market development = existing product, new country — the most common global growth route.",
+     "PESTLE identifies country-specific risks across Political, Economic, Social, Technological, Legal, Environmental dimensions.",
+     "Bartlett-Ghoshal: international, multi-domestic, global, or transnational — depends on integration vs responsiveness pressures.",
+     "The transnational strategy (high integration + high responsiveness) is the ideal but hardest to execute."
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "flow": {
+     "steps": [
+      "Assess resources and risk appetite",
+      "Choose entry method (export → licensing → JV → FDI)",
+      "Balance risk, control, and local responsiveness"
+     ],
+     "result": "Entry method aligned to firm's capabilities and the target market's characteristics",
+     "resultType": "neutral"
+    },
+    "meta": "5 concepts",
+    "title": "Methods of Entering Global Markets",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Exporting</strong> — selling domestically produced goods to foreign customers; lowest risk and investment but limited control and local responsiveness.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Licensing/franchising</strong> — granting a foreign firm the right to produce or sell your product; generates income with low investment but risks quality control and brand dilution.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Joint venture</strong> — partnering with a local firm to share costs, risks, and local expertise; useful for navigating unfamiliar markets.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Foreign direct investment (FDI)</strong> — establishing wholly owned operations abroad (factory, office); highest control but highest risk and capital commitment.",
+        "type": "def"
+       }
+      ],
+      "title": "ENTRY METHODS"
+     },
+     {
+      "items": [
+       {
+        "text": "Risk and control increase together: exporting (low risk, low control) → licensing → joint venture → FDI (high risk, high control).",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "The choice depends on: the firm's <strong>financial resources</strong>, the <strong>target market's legal and cultural environment</strong>, the need for <strong>local knowledge</strong>, and the <strong>speed of entry</strong> required.",
+        "type": "imp"
+       },
+       {
+        "text": "Market entry links to Ansoff's matrix: entering a new geographical market with existing products is market development; entering with a new product is diversification.",
+        "type": "link"
+       }
+      ],
+      "title": "CHOOSING THE RIGHT METHOD"
+     }
+    ],
+    "keyIdea": "Firms can enter foreign markets in many ways — from low-risk exporting to high-commitment FDI — and the right method depends on the firm's resources, the target market's characteristics, and its risk appetite.",
+    "takeaway": [
+     "Entry methods: export → license/franchise → JV → FDI (risk and control increase).",
+     "Choice depends on resources, market characteristics, and strategic goals.",
+     "Start low-risk (export), then escalate commitment as the market proves itself."
+    ],
+    "examMatters": "Examiners expect you to recommend and justify an entry method using case study evidence. Don't just list methods — explain why one is most appropriate given the firm's financial position, the market's characteristics, and the firm's strategic objectives.",
+    "misconception": "Students say FDI is always the best method because it gives the most control. Wrong because it also requires the most capital, involves the most risk, and takes the longest to set up. Instead write: FDI is appropriate for firms with deep pockets and a long-term commitment to a market, but smaller firms may be better served by exporting or licensing initially."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Existing product + new country = market development",
+      "New product + new country = diversification",
+      "Add PESTLE risks to Ansoff assessment"
+     ],
+     "result": "Global Ansoff analysis includes both product-market risk and country-specific risk",
+     "resultType": "neutral"
+    },
+    "meta": "4 concepts",
+    "title": "Ansoff's Matrix in a Global Context",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "Selling existing products in a new country = <strong>market development</strong> — leverages the firm's existing product expertise while learning a new market.",
+        "type": "mech"
+       },
+       {
+        "text": "Launching a new product in a new country = <strong>diversification</strong> — the riskiest strategy because the firm has no experience in either the product or the market.",
+        "type": "mech"
+       },
+       {
+        "text": "Global expansion adds layers of risk beyond domestic Ansoff: <strong>cultural differences</strong>, language barriers, legal/regulatory differences, and exchange rate volatility.",
+        "type": "mech"
+       }
+      ],
+      "title": "APPLYING ANSOFF GLOBALLY"
+     },
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "Examiners expect you to assess the risk of global expansion using PESTLE analysis alongside Ansoff: political stability, economic conditions, social/cultural factors, technological infrastructure, legal environment, and environmental regulations.",
+        "type": "imp"
+       },
+       {
+        "text": "Ansoff's global application links to entry methods: lower-risk Ansoff strategies (market development) pair well with lower-risk entry methods (exporting); higher-risk strategies (diversification) may require FDI or joint ventures.",
+        "type": "link"
+       }
+      ],
+      "title": "RISK ASSESSMENT"
+     }
+    ],
+    "keyIdea": "When applied globally, Ansoff's matrix reveals that international expansion is inherently a market development or diversification strategy — with additional risks from cultural, legal, and economic differences across countries.",
+    "takeaway": [
+     "Global expansion is at least market development risk + country risk.",
+     "Use PESTLE alongside Ansoff to assess country-specific risks.",
+     "Match Ansoff quadrant to entry method: higher risk → higher commitment."
+    ],
+    "examMatters": "Examiners expect you to use Ansoff's matrix with PESTLE analysis when evaluating international expansion. State the Ansoff quadrant, then layer on country-specific risks from PESTLE.",
+    "misconception": "Students apply Ansoff without adjusting for international risk factors. Wrong because entering a new country adds political, legal, cultural, and exchange rate risks beyond the product-market risks in the standard matrix. Instead write: Ansoff should be combined with PESTLE analysis when used in a global context — country risk amplifies the standard Ansoff risk."
+   }
+  ],
+  "section_quiz": [
+   {
+    "options": [
+     "Access to economies of scale in larger markets",
+     "A saturated domestic market with limited growth",
+     "Lower production costs available in foreign countries",
+     "The ability to spread risk across multiple markets"
+    ],
+    "question": "Which of the following is a 'push' factor for international expansion?",
+    "explanation": "A saturated domestic market is a push factor — it forces firms out of their home market due to limited growth potential. The other options are pull factors that attract firms to foreign markets.",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "Outsourcing",
+     "Franchising",
+     "Off-shoring",
+     "Licensing"
+    ],
+    "question": "A UK manufacturer moves its factory to Vietnam to take advantage of lower wages. This is an example of:",
+    "explanation": "Off-shoring involves relocating production or business processes to another country to reduce costs. The firm retains ownership but operates in a foreign location.",
+    "correctIndex": 2
+   },
+   {
+    "options": [
+     "To increase the price of the product in the domestic market",
+     "To sell products reaching decline at home in markets where demand is still growing",
+     "To reduce the quality of the product for cheaper production",
+     "To avoid domestic taxation on mature products"
+    ],
+    "question": "Which of the following best explains why a firm might extend its product life cycle through international expansion?",
+    "explanation": "Products in the decline stage at home can find new growth in developing or emerging markets where consumers are just beginning to adopt them, extending the product life cycle.",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "Infrastructure quality",
+     "Political stability",
+     "Repatriation of profits",
+     "Government incentives"
+    ],
+    "question": "When assessing a country as a production location, which factor relates to the ability to move profits back to the home country?",
+    "explanation": "Some countries restrict how much profit foreign firms can transfer out. Repatriation of profits is a key financial consideration when choosing a production location.",
+    "correctIndex": 2
+   },
+   {
+    "options": [
+     "A hostile takeover",
+     "A joint venture",
+     "Off-shoring",
+     "A franchise agreement"
+    ],
+    "question": "A Japanese car manufacturer forms a 50/50 partnership with a Chinese firm to produce vehicles in China. This is an example of:",
+    "explanation": "A joint venture involves two firms sharing ownership, costs, risks and profits. This approach is common when entering markets that require local knowledge or where governments mandate local partnerships.",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "Exports become cheaper and more competitive abroad",
+     "Exports become more expensive and less competitive abroad",
+     "The cost of imported raw materials increases",
+     "Domestic wages fall, reducing production costs"
+    ],
+    "question": "How does a strengthening domestic currency affect an exporting business?",
+    "explanation": "A stronger domestic currency means foreign buyers need to pay more in their own currency for the same product, making exports more expensive and less competitive internationally.",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "Competitive rivalry",
+     "Threat of new entrants",
+     "Buyer power",
+     "Threat of substitutes"
+    ],
+    "question": "Which of Porter's Five Forces would a firm consider when assessing whether it is easy for competitors to enter a new foreign market?",
+    "explanation": "The threat of new entrants assesses how easy it is for new competitors to enter the market — high barriers to entry (capital requirements, regulation, brand loyalty) make a market more attractive for existing firms.",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "Its large domestic consumer market",
+     "Low corporation tax rates and EU single market access",
+     "Abundant natural resources for manufacturing",
+     "Weak labour regulations allowing low wages"
+    ],
+    "question": "Ireland attracted significant FDI from US technology companies primarily because of:",
+    "explanation": "Ireland's low corporation tax rate (12.5%) combined with its EU membership — giving tariff-free access to the single market — made it a highly attractive production and operational base for US tech firms.",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "It avoids the need to understand local market conditions",
+     "It provides instant access to established distribution networks and brand recognition",
+     "It eliminates all risks associated with international expansion",
+     "It guarantees higher profit margins in the new market"
+    ],
+    "question": "Which of the following is the BEST reason for a firm to acquire a foreign company rather than start from scratch?",
+    "explanation": "Acquiring a foreign company provides instant access to established distribution networks, customer bases and brand recognition, which would take years and significant investment to build from scratch.",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "By buying forward contracts to lock in exchange rates",
+     "By matching revenues and costs in the same currency",
+     "By only trading in the domestic market",
+     "By increasing prices to offset currency fluctuations"
+    ],
+    "question": "How can a firm use 'natural hedging' to manage exchange rate risk?",
+    "explanation": "Natural hedging involves matching revenues and costs in the same currency — e.g. a UK firm earning euros and paying European suppliers in euros — reducing the impact of exchange rate movements on profit.",
+    "correctIndex": 1
+   }
+  ],
+  "section_practice": [
+   {
+    "marks": 4,
+    "command": "Define",
+    "guidance": "FDI involves a business investing directly in facilities, operations or assets in a foreign country, such as building a factory or acquiring a local firm (1 mark). It gives the investor significant control over operations in the host country (1 mark). Licensing grants a foreign firm the right to produce or sell your product in exchange for a fee or royalty, without the licensor making a direct investment (1 mark). The key difference is that FDI requires substantial capital and carries high risk but gives full control, while licensing involves minimal investment and lower risk but less control over quality and brand (1 mark).",
+    "question": "Define the term 'foreign direct investment' (FDI) and explain how it differs from licensing. (4 marks)"
+   },
+   {
+    "marks": 6,
+    "command": "Analyse",
+    "guidance": "Advantages: access to the local partner's market knowledge, distribution networks and government contacts reduces the risk of entering an unfamiliar market (1 mark); shared financial risk and investment costs — neither party bears the full burden (1 mark); the local partner understands Indian construction standards and regulations, helping navigate legal and cultural barriers more quickly (1 mark).\n\nDisadvantages: profits must be shared with the joint venture partner, reducing returns (1 mark); potential conflict over strategic decisions and management control if partners disagree on direction (1 mark); risk of the local partner becoming a future competitor after learning the UK company's technology and expertise (1 mark).",
+    "question": "A UK construction materials company is considering a joint venture with a local firm to enter the Indian market. Analyse the advantages and disadvantages of this entry method. (6 marks)"
+   },
+   {
+    "marks": 10,
+    "command": "Assess",
+    "guidance": "Economic risks: currency volatility affecting revenues when converted back to euros, and economic instability including inflation that erodes purchasing power (2 marks). Political and legal risks: changing regulations, political instability, corruption, and weak intellectual property protection increasing the risk of counterfeiting (2 marks). Market risks: different consumer preferences and cultural attitudes towards luxury, price sensitivity in markets with lower average incomes, and difficulty building brand awareness (2 marks). Operational risks: supply chain complexity, finding and training skilled retail staff, and high setup costs for flagship stores in premium locations (2 marks).\n\nJudgement: the potential rewards of accessing large, growing middle-class populations may justify the risks, but a phased approach — starting with one market before committing to all three — would be more prudent than simultaneous entry (2 marks).",
+    "question": "An Italian luxury fashion brand plans to open flagship stores in Brazil, India and Nigeria. Currently 90% of revenue comes from Europe and North America. Assess the risks of expanding into emerging markets. (10 marks)"
+   },
+   {
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Define market entry methods and explain why the choice matters strategically (2 marks).\n\nExporting: low initial risk and cost (2 marks), but high transport costs for appliances, potential tariff barriers, and limited market presence make it difficult to build a premium brand (1 mark).\n\nLicensing: quick market access with low investment (1 mark), but loss of quality control is unsuitable for a premium brand, and the licensee could become a competitor (2 marks).\n\nJoint venture: shared risk and access to a European partner's market knowledge (2 marks), but shared profits, potential management conflicts, and risk of IP leakage (1 mark).\n\nFDI (Poland plant): full control over quality and production, avoids tariffs within the EU, access to skilled but cheaper labour (3 marks), but highest cost and risk, and long time to establish (1 mark).\n\nKey determining factors: financial resources and risk tolerance, importance of quality control for a premium brand, competitive landscape in Europe, regulatory environment, and strategic importance of the European market (2 marks).\n\nEvaluation: for a high-end brand, control over quality and brand image is paramount — this favours FDI or a joint venture over licensing. A phased approach (exporting first to test demand, then FDI once the market is proven) may balance speed with risk management. The best method depends on the company's financial strength and its long-term commitment to Europe (3 marks).",
+    "question": "A South Korean high-end home appliances company is considering entering the European market for the first time. It is evaluating exporting, licensing, a joint venture, and building a manufacturing plant in Poland. Evaluate the factors that determine the most appropriate method of entry. (20 marks)"
+   },
+   {
+    "marks": 4,
+    "command": "Outline",
+    "guidance": "Reason 1: The domestic market may be saturated or growing slowly (1 mark), so expanding overseas provides access to larger customer bases and higher revenue potential (1 mark).\n\nReason 2: Diversification of risk across multiple geographic markets (1 mark) — if one market experiences an economic downturn, revenue from other markets can compensate, providing more stable overall income (1 mark).",
+    "question": "Outline two reasons why a business might choose to expand into overseas markets. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "back": "A market where <strong>demand has reached its peak</strong> and growth has stalled, often pushing businesses to seek expansion opportunities abroad.",
+    "front": "What is a saturated market?"
+   },
+   {
+    "back": "Relocating <strong>business processes or production to another country</strong> to reduce costs — e.g. Apple manufacturing iPhones in China through Foxconn.",
+    "front": "What is off-shoring?"
+   },
+   {
+    "back": "<strong>Off-shoring</strong> is about location (moving operations abroad). <strong>Outsourcing</strong> is about ownership (contracting a function to an external provider). They can overlap but are distinct.",
+    "front": "What is the difference between off-shoring and outsourcing?"
+   },
+   {
+    "back": "Products reaching <strong>decline</strong> in mature markets can find <strong>new growth</strong> in developing or emerging markets where demand is just beginning.",
+    "front": "How does extending the product life cycle motivate international trade?"
+   },
+   {
+    "back": "<strong>Disposable income levels</strong>, <strong>ease of doing business</strong> and <strong>political stability</strong>. Also: infrastructure quality, exchange rates and income growth rates.",
+    "front": "Name three factors used to assess a country as a market."
+   },
+   {
+    "back": "A <strong>weak domestic currency</strong> makes exports cheaper abroad (more competitive), while a <strong>strong currency</strong> makes exports more expensive but imports cheaper.",
+    "front": "How do exchange rates affect international competitiveness?"
+   },
+   {
+    "back": "A framework assessing industry attractiveness through five factors: <strong>competitive rivalry</strong>, <strong>threat of new entrants</strong>, <strong>threat of substitutes</strong>, <strong>buyer power</strong> and <strong>supplier power</strong>.",
+    "front": "What is Porter's Five Forces model?"
+   },
+   {
+    "back": "Joint ventures require <strong>less capital</strong>, <strong>share risk</strong> with a local partner and provide <strong>local market knowledge</strong> without the full commitment of acquisition.",
+    "front": "Why might a firm choose a joint venture over a full acquisition?"
+   },
+   {
+    "back": "<strong>Tax breaks</strong>, <strong>grants</strong>, <strong>special economic zones</strong>, reduced regulation and subsidised infrastructure — e.g. Ireland's low corporation tax rate.",
+    "front": "What government incentives attract FDI to a production location?"
+   },
+   {
+    "back": "Producing inside a trade bloc gives <strong>tariff-free access</strong> to all member markets and avoids <strong>common external tariffs</strong> that non-member producers face.",
+    "front": "Why is location within a trade bloc important for production?"
+   },
+   {
+    "back": "Using <strong>forward contracts</strong> to lock in a future exchange rate, protecting against adverse currency movements and providing greater certainty over costs and revenues.",
+    "front": "What is hedging in the context of exchange rate risk?"
+   },
+   {
+    "back": "To gain access to <strong>premium brand recognition</strong>, <strong>advanced technology</strong>, established <strong>distribution networks</strong> in Western markets and to move up the value chain.",
+    "front": "Why might Tata Motors have acquired Jaguar Land Rover?"
+   },
+   {
+    "back": "<strong>Matching revenues and costs in the same currency</strong> — e.g. a UK firm earning dollars and paying suppliers in dollars, reducing exchange rate exposure.",
+    "front": "What is natural hedging?"
+   },
+   {
+    "back": "Skill shortages lead to <strong>higher wage costs</strong>, <strong>slower innovation</strong>, <strong>reduced productivity</strong> and may force firms to off-shore operations to countries with available talent.",
+    "front": "How do skill shortages affect international competitiveness?"
+   },
+   {
+    "back": "A <strong>saturated domestic market</strong> where growth has stalled, forcing firms to seek new customers and revenue streams in foreign markets.",
+    "front": "What is a common push factor for international expansion?"
+   },
+   {
+    "back": "Political instability increases the risk of <strong>policy changes</strong>, <strong>asset seizure</strong>, <strong>corruption</strong> and <strong>civil unrest</strong>, all of which threaten long-term investment returns.",
+    "front": "Why does political stability matter for production location decisions?"
+   },
+   {
+    "back": "Merging operations increases total output, <strong>spreading fixed costs</strong> over more units, reducing <strong>average costs</strong> and improving price competitiveness.",
+    "front": "How do economies of scale motivate global mergers?"
+   },
+   {
+    "back": "A <strong>World Bank measure</strong> ranking countries on factors like starting a business, enforcing contracts, registering property and obtaining credit — indicating the regulatory environment.",
+    "front": "What is the Ease of Doing Business index?"
+   },
+   {
+    "back": "A weaker pound makes UK exports <strong>cheaper in foreign currencies</strong>, potentially increasing demand and sales revenue from international customers.",
+    "front": "How might a weakening pound affect a UK exporter?"
+   }
+  ],
+  "section_diagrams": null,
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "Exporting is lowest risk — minimal investment, easy withdrawal — but offers limited control over marketing and brand in the foreign market.",
+      "Licensing and franchising achieve rapid market coverage with low capital — but risk quality control issues and potential creation of future competitors.",
+      "Joint ventures share risk and gain local knowledge — but require sharing profits and decision-making with partners.",
+      "Wholly owned subsidiaries (FDI) offer maximum control and profit retention — but require the highest capital commitment and risk exposure."
+     ],
+     "title": "Entry mode choice balances risk against control",
+     "result": "The optimal entry mode depends on the firm's resources, risk tolerance, need for control and the characteristics of the target market."
+    },
+    {
+     "steps": [
+      "A Western firm partners with a local company, each contributing capital and expertise.",
+      "The local partner provides market knowledge, government relationships and understanding of consumer preferences.",
+      "The Western firm contributes brand strength, management systems and supply chain capabilities.",
+      "Shared investment reduces financial risk while combining complementary resources that neither partner could achieve alone."
+     ],
+     "title": "Joint ventures reduce risk in unfamiliar markets",
+     "result": "Joint ventures are particularly valuable in markets with high political risk or complex regulation — but partner conflicts over strategy and profits are common."
+    },
+    {
+     "steps": [
+      "A multinational builds a manufacturing plant in the host country (greenfield investment), giving complete control over operations and quality.",
+      "Local production avoids import tariffs and reduces transport costs, improving price competitiveness.",
+      "The subsidiary creates local employment and supplier relationships, building goodwill with the host government.",
+      "However, the firm bears full operational and political risk — changes in government policy, regulation or economic conditions directly affect returns."
+     ],
+     "title": "FDI creates deep market presence but high exposure",
+     "result": "FDI offers the greatest strategic control and market integration — but requires confidence in the host country's stability and the firm's ability to manage distant operations."
+    },
+    {
+     "steps": [
+      "International strategy: centralised control, limited adaptation — suits firms with strong home-market products.",
+      "Multidomestic strategy: high local responsiveness, little global integration — suits culturally diverse markets.",
+      "Global strategy: high integration, standardised worldwide — suits products with universal demand.",
+      "Transnational strategy: both global integration and local responsiveness — theoretically optimal but extremely complex to manage."
+     ],
+     "title": "Bartlett and Ghoshal's framework guides global strategy",
+     "result": "The framework helps firms position their global strategy on the axes of integration vs responsiveness — but the transnational ideal is difficult to achieve in practice."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "There is no single best entry mode",
+     "content": "Many firms adopt a staged approach — beginning with exports to learn about the market, then progressing to joint ventures or FDI as confidence grows. The key question is whether the potential returns justify the risks and resource commitments of deeper engagement."
+    },
+    {
+     "title": "Joint ventures require careful governance",
+     "content": "Cultural differences between partners can cause communication breakdowns and strategic paralysis. Divergent long-term objectives — one partner wanting growth, the other wanting exit — create tension. Success depends on partner compatibility, clear governance and defined exit mechanisms."
+    },
+    {
+     "title": "The transnational strategy is hard to implement",
+     "content": "Combining global efficiency with local responsiveness simultaneously creates enormous organisational complexity and coordination costs. Most firms must prioritise either integration or responsiveness based on their competitive environment. The framework is most useful as a diagnostic tool, not a prescriptive model."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "title": "Confusing Off-shoring and Outsourcing",
+    "examTip": "If the question refers to moving production abroad, use 'off-shoring'. If it refers to using a third-party provider, use 'outsourcing'. If both apply, explain the overlap.",
+    "mistake": "Using off-shoring and outsourcing interchangeably or treating them as the same concept.",
+    "correction": "Off-shoring is about location — moving operations to another country. Outsourcing is about ownership — contracting a function to an external provider. A firm can offshore without outsourcing (e.g. setting up its own factory abroad) or outsource domestically (e.g. using a UK-based IT services firm)."
+   },
+   {
+    "title": "Applying Porter's Five Forces Too Generically",
+    "examTip": "Examiners award application marks for context-specific analysis. Name the market, identify the competitors and link to the scenario provided.",
+    "mistake": "Describing Porter's Five Forces in theory without applying it to the specific country or market in the question.",
+    "correction": "Always contextualise each force — e.g. 'competitive rivalry in the Chinese coffee market is increasing as local brands challenge Starbucks' rather than just stating 'competitive rivalry is one of the five forces'."
+   },
+   {
+    "title": "Ignoring Exchange Rate Impact on Costs",
+    "examTip": "Always consider both revenue and cost effects of exchange rate changes — one-sided analysis limits marks.",
+    "mistake": "Only discussing how exchange rates affect export prices, forgetting the impact on imported input costs.",
+    "correction": "A weakening domestic currency makes exports cheaper (good for sales) but also makes imported raw materials more expensive (bad for costs). Many firms both export and import, so the net effect depends on the balance between foreign revenue and foreign costs."
+   },
+   {
+    "title": "Listing Factors Without Evaluating",
+    "examTip": "Use phrases like 'the most significant factor is likely to be...' or 'this depends on the type of business' to show evaluative thinking.",
+    "mistake": "Simply listing factors for assessing a country (income, stability, infrastructure) without weighing their relative importance.",
+    "correction": "Make a judgement about which factors matter most in context — e.g. for a tech firm, skilled labour and digital infrastructure may outweigh low wages, while for a garment manufacturer, labour costs might be the decisive factor."
+   },
+   {
+    "title": "Assuming Joint Ventures Are Always Preferred",
+    "examTip": "Always evaluate the trade-offs between joint ventures and acquisitions — consider control, cost, risk, speed of entry and cultural fit.",
+    "mistake": "Presenting joint ventures as always superior to mergers or acquisitions without considering drawbacks.",
+    "correction": "Joint ventures involve shared control, which can lead to conflicts over strategy, slower decision-making and disagreements over profit distribution. Full acquisition gives complete control but requires more capital and carries greater risk. The best choice depends on the firm's resources, risk appetite and market conditions."
+   }
+  ]
+ }
+}

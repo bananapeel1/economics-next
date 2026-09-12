@@ -57,6 +57,107 @@ Append only. Every entry needs a date and the packet that made it.
   glossary definition used as a `String.replace` template so `$&` and `$1` are interpreted) goes to packet 11,
   which already touches `lib/glossary-highlight.js`. **F025** (no onboarding) is packet 99, deliberately out of
   scope per PLAN.md. Packet 13 carries no code findings; its work is entirely content items.
+- **2026-09-12 (packet 2) — PostgREST truncates a select at 1,000 rows and says nothing.** The first
+  backfill read the progress table unpaged, silently processed an arbitrary window and reported a clean run.
+  Every script that reads a table which can exceed 1,000 rows must page with `.order(...).range(...)` —
+  `practice_question_progress` is at 1,069 today. The content tables are one row per section so they are
+  safe, for now.
+
+- **2026-09-12 (packet 2) — writes go to `draft`, students read `data`.** `scripts/packet-2-draft-state.sql`
+  adds `draft` and `published_at` to all eight content tables; `scripts/publish-section.mjs` copies draft into
+  data in one step per section. Nothing on the student path reads `draft`, so the columns are inert until a
+  content script starts writing to them — which packets 14-56 should, from the first one.
+
+- **2026-09-12 (packet 2) — item ids are matched by content, never by position.** The admin PUT replaces a
+  whole `data` array, so a save whose JSON lacks ids would drop them. The first implementation restored them
+  by array position; a verifier demonstrated that deleting one item then gives every later item its
+  neighbour's id, silently rebinding a student's review history to a different question. Ids are now matched
+  on normalised item text (`restoreIds` in `app/api/admin/sections/[id]/[type]/route.js`). An item whose text
+  was edited in the same save keeps no id and becomes a new item: losing an id is recoverable by re-minting,
+  mis-assigning one is not.
+
+- **2026-09-12 (packet 2) — the item_id migration is staged across packets 2 and 4, deliberately.** Packet 2
+  adds a nullable column and dual-writes; packet 4 switches the unique constraint and drops question_index.
+  Doing it in one step loses data five silent ways, all documented at the top of `scripts/packet-2-item-id.sql`
+  — the NOT NULL on question_index, the unique constraint treating NULL item_ids as distinct, the queue
+  builder reclassifying all 1,067 rows as new, dashboards that count rows and so keep looking right, and 27
+  `wa-` rows whose index points into a client-side filtered subset and is not backfillable at all.
+
+- **2026-09-12 (packet 2) — the diagram title fallback runs per block, not per section.** `hasRefs` was
+  section-wide, so one `quizIndices` entry anywhere in a section disabled the diagram fallback for every block
+  in it. Inline diagrams shown across the product go from 15 to 51. The fallback only fills slots a pin left
+  empty, and only from diagrams no block claimed, so it can never displace a working pin. `matchDiagramsToBlocks`
+  also gained a stopword list: it was counting 'and' and 'the' as topic matches.
+
+- **2026-09-12 (13.1) — the drill programme is split, and quant goes before the content stage.** Founder
+  decision, recorded in `audit/DRILLS.md`: packets 13.1-13.4 (quantitative) run before packet 14; 13.5-13.8
+  (drawing) run after the top-ten content sections. The reason is in the ledger, not in taste — 110 content
+  items across 24 sections ask for quantitative material, `section_quiz` cannot hold any of it, and those
+  items are scheduled into packets 14-56. Eighteen templates authored once replace per-section quantitative
+  authoring; twelve diagram specs would instead add twelve authoring jobs.
+
+- **2026-09-12 (13.1) — a quant item is never stored; `{ template, seed }` is.** The numbers are rebuilt on
+  demand by `buildItem()`, identically, in any process. Contract: `lib/quant/schema.md`. Two consequences
+  later packets must respect: the SM-2 row in packet 13.3 stores the pair, not a question; and a template
+  can be corrected without migrating a single stored item. Packet 3 adopts this shape for its
+  quantitative-item count rather than defining its own.
+
+- **2026-09-12 (13.1) — a named wrong method ("slip") scores zero, and no slip may fall within tolerance of
+  the answer.** A slip inside tolerance marks the wrong method correct, which teaches the wrong method
+  silently and cannot be caught by reading the file. `npm run quant-check` asserts the separation on every
+  draw of every template and is the gate for any template change. It has already forced one design change:
+  a leakage total of 0.5 makes the MPC 0.5 too, so `multiplier.mjs` excludes that total.
+
+- **2026-09-12 (13.1) — feature work gets its own ledger ids.** `audit/ledger.json` gained a `feature` array
+  and `ledger.mjs` an `add` subcommand. Packets that build something new mint `D0xx` ids, one per acceptance
+  check, so `claim` / `confirm` / `unverified` gate them exactly like audit findings. Audit findings are still
+  never invented: they come only from the corpus.
+
 - **2026-09-12 (setup) — packet work runs in the worktree, and a packet is done only when verified and pushed.**
   See `audit/PROTOCOL.md`. Ship checkpoints: after packets 1, 5, 13, then every five content packets, always as
   a PR into `main` that the founder merges.
+- **2026-09-12 (packet 0, marketing) — the public copy was fact-checked in full, and the ledger now tracks it.**
+  Packet 0's fourth item was written as "fix three false marketing claims". A sweep of every public page against
+  the code and the official Pearson specs found 259 candidates; 182 survived an adversarial defence pass and are
+  recorded as `M001`-`M182` in the `marketing` array of `audit/ledger.json`, with the raw evidence in
+  `audit/raw/marketing-claims-2026-09-12.json`. All 182 are corrected. The three original claims were a small
+  part of a much larger problem, most of it introduced by the SEO work after the audit was taken.
+- **2026-09-12 — canonical free/paid boundary, for all future copy.** Free: notes, diagrams, practice questions,
+  Learn Mode. Preview then paywall: flashcards, quizzes, extras. Paid with no preview: the AI tutor and the
+  mistakes review. Model answers: the first is free, the rest are Pro. The canonical sentence is "Notes, diagrams
+  and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro." No page may describe
+  the tutor, flashcards or model answers as free.
+- **2026-09-12 — banned marketing phrases.** "Adaptive" applied to flashcards (the schedule is simplified SM-2),
+  any claim of adaptive difficulty (none exists), "every spec point" and equivalents (340 sub-topic gaps are
+  known), diagrams for Business (it has none), and "24 spec points" (23 Economics sections exist). A grep for
+  these is the cheapest possible guard and should run before any copy change.
+- **2026-09-12 — a canonical-facts sheet is itself a source of error.** The sheet handed to the fix agents stated
+  the Economics Unit 2 paper as Section A/B/C ending in two essays from three. The spec says Unit 2 is identical
+  to Unit 1: Sections A-D ending in one 20-mark essay from a choice of two. Units 3 and 4 are the two-from-three
+  papers. The fix agents read the spec and got it right; the checker, which trusted the sheet, flagged the
+  correct answer as wrong. **Exam structure is verified against `audit/raw/econ_spec.txt` and `bus_spec.txt`
+  only.** The correct structures are recorded in `audit/PROTOCOL.md`.
+
+- **2026-09-12 (founder) — no paid examiner, and all questions are authored originally.** The plan assumed a
+  qualified IAL teacher would sign off every section, roughly 20-40 hours of paid expert time. There is no
+  budget for it. All practice questions, data-response stimulus and mark schemes are authored from scratch
+  rather than taken from any existing source, which also removes the copyright exposure that hung over the
+  Business extract question. **The examiner is replaced, not deleted**: see `audit/CONTENT-GATE.md`. Reading a
+  real Pearson paper and its mark scheme to calibrate command word, tariff, assessment-objective shape and
+  levels structure is allowed and expected; reproducing Pearson wording, stimulus or descriptors is not.
+  The bar is unchanged: a student who revises here walks into the exam as well prepared as one who used
+  expert-authored material. The `Business extract sourcing` open decision is closed by this: we author them.
+- **2026-09-12 — the quant engine and the interactive diagrams are built but NOT shipped.** Checked across
+  every branch: no student-facing file imports `lib/quant`, `components/quant`, `InteractiveDiagram` or
+  `DiagramLabelDrill`, and the 19 SVGs in `public/diagrams/` are referenced by nothing. The quant engine is
+  reachable only from `app/admin/quant`. This is the same "component exists, never mounted" finding the audit
+  made in March. **Do not remove this work from the plan on the belief that it is done.** What remains is
+  wiring, not building: packets 13.2 and 13.3 wire the quant engine into Learn Mode, Quiz and Smart Practice;
+  packet 7 mounts `InteractiveDiagram` and `DiagramLabelDrill`; packet 5 makes diagrams legible on a phone;
+  packet 2 fixes the 24 of 39 diagram references that resolve to nothing.
+- **2026-09-12 — model allocation, and the rule behind it.** Use the strongest available model where a mistake
+  propagates silently and no verifier can catch it. Use the next tier where the build, the ledger or a verifier
+  catches mistakes. That puts Fable 5.1 on packets 3, 5, 7 and 14 only, Opus on every other packet, and Sonnet
+  on all verification and mechanical sweeps. Recorded in `audit/PROTOCOL.md` under Agents and models. If a
+  packet built on the lower tier is rejected by its verifier more than once, that is evidence the task needed
+  the higher tier: move it and say so here.

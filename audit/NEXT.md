@@ -1,11 +1,81 @@
 # Next session brief
 
+## Packet 2 — code half landed, two actions blocked on the founder
+
+Committed `4d45478`. Verified: F013, F040, F111 (practice pins) and F041 (diagram fallback).
+Snapshot taken before anything: `audit/snapshots/2026-09-12-pre-packet-2__*` — 43 sections, 8 tables,
+restore path exercised.
+
+**Blocked action 1 — mint the ids.** Dry run is clean: 2,952 ids across 43 sections (769 quiz, 844 cards,
+215 practice, 81 diagrams, 272 recall, 583 blocks and subsections, 188 mistakes). It adds an `id` field and
+changes nothing else, so no student sees a difference.
+
+```
+node scripts/mint-item-ids.mjs             # dry run, prints the plan
+node scripts/mint-item-ids.mjs --confirm   # writes
+node scripts/mint-item-ids.mjs --verify    # asserts every item has a unique id
+```
+
+If it goes wrong: `node scripts/restore-section.mjs audit/snapshots/2026-09-12-pre-packet-2__<subject>__<section>.json --confirm`.
+
+**Blocked action 2 — run the DDL.** `scripts/packet-2-item-id.sql`, once, in the Supabase SQL editor. Read
+the comment at the top first: it lists the five silent ways the obvious version of this migration loses
+student data, and it is why the column is nullable and question_index survives. Then:
+
+```
+node scripts/backfill-item-id.mjs            # dry run
+node scripts/backfill-item-id.mjs --confirm  # writes item_id only
+```
+
+**Then, to finish packet 2:** switch the five progress routes to dual-write `item_id` alongside
+`question_index` (never instead of it), and build the draft/published state — the half of F115 that is not
+addressed. Re-pinning content by id is a section-packet job, not this one.
+
+**Still open after this packet:** F052 and F109 (9 of 24 broken diagram refs now rescued by the fallback,
+15 blocks still show nothing — 3 of those are in `the-market`, which has no diagrams in the database at all)
+and the draft/published half of F115.
+
+**The ledger was not updated.** A concurrent session holds `audit/ledger.json` for a marketing-claims audit
+(M001-M182). Claim F013, F040, F111 and F041 for packet 2 once the tree is quiet:
+`node audit/scripts/ledger.mjs claim 2 F013 F040 F111 F041`.
+
+---
+
+
+## Packet 13.1 landed — quant engine (12 September 2026, out of calendar order)
+
+Gate passed: build green, `npm run quant-check` green, `npm run contrast` still clean, Verify A confirmed
+D001-D008 with `file:line` evidence (the verifier independently reproduced the guard failing on an
+in-tolerance slip). Verify B did not apply: no student-facing surface changed.
+
+It ran now rather than after packet 13 because it is the only packet in `audit/DRILLS.md` with no
+prerequisite — it adds `lib/quant/`, a guard script, one admin page and one nav link, touches no student
+component, no table and no content row, so it cannot collide with packet 2.
+
+**What exists now:** `lib/quant/` (seeded RNG, marking with the own figure rule and slip detection, four
+templates — break-even WBS12, PED WEC11, ARR WBS13, the multiplier WEC12), `npm run quant-check`,
+`components/quant/CalculationItem.jsx`, and `/admin/quant` behind the existing admin gate.
+Contract: `lib/quant/schema.md`. Read that before touching a template.
+
+**What 13.2 needs from packet 2:** stable item ids, so a quant item can be pinned to a block the way
+`quizIndices` pins a question. 13.3 needs `item_id` on `practice_question_progress` so a template can sit
+in the SM-2 queue. Both are already in the packet 2 spec below — no extra work, just don't drop them.
+
+**One thing packet 3 inherits:** the quantitative item contract is settled (`lib/quant/schema.md`), so the
+validator's "minimum quantitative-item count per unit" check counts items of this shape rather than
+defining its own. Tier it DEBT until 13.2 puts real items in sections.
+
+---
+
+
 Read `PROGRESS.md`, `DECISIONS.md`, then `PROTOCOL.md` (how a packet session runs), then this file.
 Work only in this worktree: `/Users/arongijsel/Claude APP/economics-next-remediation`, branch `remediation/2026-09`.
 Dev server: launch config `remediation-dev`, port 3001.
 
 ## State at handoff (12 September 2026)
 
+- Packet 13.1 (quant engine) is built, verified and pushed — see the section below. The rest of the drill
+  programme (13.2-13.8) is specified in `audit/DRILLS.md` and blocked on packets 2, 5, 7 and 12.
 - Packets 0 and 1 are built, **verified** (Verify A on every ledger id, Verify B walkthrough at 390px for
   packet 0), and pushed. A PR into `main` is open; the founder merges it. That is ship checkpoint 1.
 - The ledger exists: `node audit/scripts/ledger.mjs summary`. Every code finding has a packet. Content items
@@ -27,7 +97,11 @@ Dev server: launch config `remediation-dev`, port 3001.
    `app/ial-revision/page.js` and the unit pages. **The constraint on these has lifted:** they belonged to the
    SEO branch, and that branch merged into `main` on 12 September, so they can now be fixed here like any other
    file. Still outstanding — nothing in packets 0-1 touched them.
-4. Decisions still open in `DECISIONS.md`: IAL teacher, freemium boundary, Business extract sourcing, freeze date.
+4. **Click through `/admin/quant` once**, signed in as an admin: pick each of the four templates, answer a
+   step wrong and mark it, press "New numbers". Verify A confirmed the code path by inspection; nobody has
+   yet looked at the rendered page, and it is a sixty-second check.
+5. Decisions still open in `DECISIONS.md`: IAL teacher, freemium boundary, Business extract sourcing, freeze
+   date — plus, now, whether the drills are free or premium (due with the freemium boundary before packet 8).
 
 ## Light mode (done 12 September 2026, outside the packet plan)
 

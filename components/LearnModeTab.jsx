@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { highlightGlossaryTerms } from '@/lib/glossary-highlight';
 import { recordReview } from '@/lib/strength';
-import { distributeItems, matchDiagramsToBlocks } from './learn-mode/utils';
+import { distributeItems, matchDiagramsToBlocks, resolvePinnedItem, resolvePinnedDiagram } from './learn-mode/utils';
 import InlineDiagram from './learn-mode/InlineDiagram';
 import InlinePractice from './learn-mode/InlinePractice';
 import InlineQuiz from './learn-mode/InlineQuiz';
@@ -90,6 +90,10 @@ export default function LearnModeTab({
             diagramRef: block.diagramRef,
             quizIndices: block.quizIndices,
             practiceIndices: block.practiceIndices,
+            // Id pins (packet 2 onward). A block carrying these ignores its own indices.
+            diagramId: block.diagramId,
+            quizIds: block.quizIds,
+            practiceIds: block.practiceIds,
           });
         }
         return steps;
@@ -107,7 +111,7 @@ export default function LearnModeTab({
     const dMap = {}, qMap = {}, pMap = {};
     if (!flatSteps.length) return { diagramMap: dMap, quizMap: qMap, practiceMap: pMap };
 
-    const hasRefs = flatSteps.some(s => s.diagramRef || s.quizIndices || s.practiceIndices);
+    const hasRefs = flatSteps.some(s => s.diagramRef || s.quizIndices || s.practiceIndices || s.diagramId || s.quizIds || s.practiceIds);
 
     if (hasRefs) {
       const usedDiagrams = new Set();
@@ -118,24 +122,43 @@ export default function LearnModeTab({
         // Only place items on last-in-block steps (end of chapter)
         if (step.type !== 'structured' || !step.isLastInBlock) return;
 
-        if (step.diagramRef && diagramsData?.length) {
-          const ref = step.diagramRef.toLowerCase();
-          const d = diagramsData.find((d, di) => {
-            if (usedDiagrams.has(di)) return false;
-            const t = (d.title || '').toLowerCase();
-            return t.includes(ref) || ref.includes(t);
-          });
-          if (d) { dMap[idx] = d; usedDiagrams.add(diagramsData.indexOf(d)); }
-        }
-        if (step.quizIndices?.length && quizData?.length) {
-          const qi = step.quizIndices.find(i => i >= 0 && i < quizData.length && !usedQuiz.has(i));
-          if (qi != null) { qMap[idx] = quizData[qi]; usedQuiz.add(qi); }
-        }
-        if (step.practiceIndices?.length && sortedPractice?.length) {
-          const pi = step.practiceIndices.find(i => i >= 0 && i < sortedPractice.length && !usedPractice.has(i));
-          if (pi != null) { pMap[idx] = sortedPractice[pi]; usedPractice.add(pi); }
-        }
+        const diagram = resolvePinnedDiagram(diagramsData, { id: step.diagramId, ref: step.diagramRef }, usedDiagrams);
+        if (diagram) dMap[idx] = diagram;
+
+        const quiz = resolvePinnedItem(quizData, { ids: step.quizIds, indices: step.quizIndices }, usedQuiz);
+        if (quiz) qMap[idx] = quiz;
+
+        // practiceIndices are authored against the RAW practiceData order, so they must
+        // resolve against it. Indexing them into sortedPractice put the wrong question at
+        // the end of 39 of 64 pinned blocks, across 19 sections (F013, F040, F111).
+        // sortedPractice stays below: the legacy fallback wants an easy-to-hard ramp.
+        const practice = resolvePinnedItem(practiceData, { ids: step.practiceIds, indices: step.practiceIndices }, usedPractice);
+        if (practice) pMap[idx] = practice;
       });
+
+      // Title fallback, per block rather than per section (F041). `hasRefs` is true if ANY
+      // block in the section carries ANY pin, so one quizIndices entry used to disable the
+      // diagram fallback for every block in that section — 24 of 39 refs match nothing, and
+      // four sections rendered no inline diagram at all. This only fills slots left empty by
+      // a failed or absent ref, and only from diagrams no block has claimed, so it can never
+      // displace a pin that worked.
+      const unclaimed = (diagramsData || []).map((d, di) => ({ d, di })).filter(({ di }) => !usedDiagrams.has(di));
+      if (unclaimed.length) {
+        const remaining = {};
+        flatSteps.forEach((step, idx) => {
+          if (step.type !== 'structured' || !step.isLastInBlock || dMap[idx]) return;
+          remaining[idx] = { title: step.blockTitle, sections: step.sections };
+        });
+        const byTitle = matchDiagramsToBlocks(
+          unclaimed.map(({ d }) => d),
+          Object.values(remaining).map(b => ({ title: b.title })),
+        );
+        const stepIndices = Object.keys(remaining).map(Number);
+        for (const [localIdx, diagram] of Object.entries(byTitle)) {
+          const stepIdx = stepIndices[Number(localIdx)];
+          if (stepIdx != null && !dMap[stepIdx]) dMap[stepIdx] = diagram;
+        }
+      }
     } else {
       // Legacy fallback
       Object.assign(dMap, matchDiagramsToBlocks(diagramsData, contentData));
@@ -143,7 +166,7 @@ export default function LearnModeTab({
       Object.assign(pMap, distributeItems(sortedPractice, totalSteps));
     }
     return { diagramMap: dMap, quizMap: qMap, practiceMap: pMap };
-  }, [flatSteps, contentData, diagramsData, quizData, sortedPractice, totalSteps]);
+  }, [flatSteps, contentData, diagramsData, quizData, practiceData, sortedPractice, totalSteps]);
 
   const practiceStepIndices = useMemo(() => Object.keys(practiceMap).map(Number).sort((a, b) => a - b), [practiceMap]);
   function getPracticeMode(stepIndex) {

@@ -6,11 +6,11 @@ import '@/styles/landing.css';
 
 export const metadata = {
   title: 'Edexcel IAL Business Studies Notes — Free Revision for Units 1–4 (2026)',
-  description: 'Free Edexcel IAL Business revision notes for all units: Marketing & People (WBS11), Managing Business Activities (WBS12), Business Decisions & Strategy (WBS13) and Global Business (WBS14). Interactive notes, flashcards, 20-mark essay guides, past paper practice and AI tutor.',
+  description: 'Free Edexcel IAL Business revision notes for all units: Marketing & People (WBS11), Managing Business Activities (WBS12), Business Decisions & Strategy (WBS13) and Global Business (WBS14). Notes and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.',
   alternates: { canonical: 'https://revvylearn.com/business' },
   openGraph: {
     title: 'Edexcel IAL Business Notes — Free Revision Units 1–4 | Revvy Learn',
-    description: 'Free interactive revision for Edexcel IAL Business. Notes, flashcards, essay guides, past papers and AI tutor.',
+    description: 'Interactive revision for Edexcel IAL Business. Notes and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.',
     url: 'https://revvylearn.com/business',
     type: 'article',
   },
@@ -117,7 +117,7 @@ export default function BusinessPage() {
         "name": "How many units are in Edexcel IAL Business?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "There are four units: Unit 1 Marketing and People (WBS11), Unit 2 Managing Business Activities (WBS12), Unit 3 Business Decisions and Strategy (WBS13), and Unit 4 Global Business (WBS14). Each unit covers five to six spec points."
+          "text": "There are four units: Unit 1 Marketing and People (WBS11), Unit 2 Managing Business Activities (WBS12), Unit 3 Business Decisions and Strategy (WBS13), and Unit 4 Global Business (WBS14). Each unit covers four to six spec points, 20 in total."
         }
       },
       {
@@ -164,7 +164,7 @@ export default function BusinessPage() {
               Edexcel IAL<br /><em>Business Notes</em>
             </h1>
             <p className="elp-hero-desc">
-              Written for the International A-Level &mdash; not the UK domestic spec &mdash; so every topic matches the paper you actually sit.
+              Written for the International A-Level &mdash; not the UK domestic spec &mdash; organised by the same WBS11&ndash;WBS14 units and spec points as your papers.
             </p>
             <div className="elp-hero-actions">
               <Link href="/?section=meeting-customer-needs" className="elp-btn-primary">
@@ -172,7 +172,7 @@ export default function BusinessPage() {
               </Link>
             </div>
             <div className="elp-hero-proof">
-              <div className="elp-proof-item"><strong>Free</strong> notes for every spec point</div>
+              <div className="elp-proof-item"><strong>Free</strong> notes across all four units</div>
               <div className="elp-proof-dot" />
               <div className="elp-proof-item"><strong>4 units</strong> &middot; 20 spec points</div>
               <div className="elp-proof-dot" />
@@ -185,7 +185,7 @@ export default function BusinessPage() {
             <div className="elp-hero-badge elp-b1">
               <span className="elp-badge-icon"><Star size={18} /></span>
               <div className="elp-badge-text">
-                <span className="elp-badge-val">Adaptive</span>
+                <span className="elp-badge-val">SM-2</span>
                 <span className="elp-badge-lbl">spaced repetition</span>
               </div>
             </div>
@@ -239,7 +239,7 @@ export default function BusinessPage() {
             <div className="elp-s-eyebrow-dot" style={{ background: 'var(--elp-green)' }} />
             Full specification
           </div>
-          <h2 className="elp-s-title">All four units, every spec point</h2>
+          <h2 className="elp-s-title">All four units, topic by topic</h2>
           <p className="elp-s-sub">
             Open any topic straight in the app.
           </p>
@@ -284,7 +284,7 @@ export default function BusinessPage() {
               What&apos;s included
             </div>
             <h2 className="elp-s-title">Everything you need to revise Business</h2>
-            <p className="elp-s-sub">Notes are free. Flashcards, quizzes and AI tutor unlock with a subscription.</p>
+            <p className="elp-s-sub">Notes are free. Flashcards, quizzes and the AI tutor unlock with Pro.</p>
           </div>
           <div className="elp-wyg-grid">
             <div className="elp-wyg-card elp-fade-up">
@@ -295,14 +295,14 @@ export default function BusinessPage() {
             </div>
             <div className="elp-wyg-card elp-fade-up" style={{ transitionDelay: '.07s' }}>
               <div className="elp-wyg-icon" style={{ background: 'var(--elp-b-bg)', border: '1px solid var(--elp-b-bd)' }}><CardsIcon size={18} /></div>
-              <div className="elp-wyg-title">Adaptive Flashcards</div>
-              <div className="elp-wyg-desc">Spaced repetition that learns from you &mdash; topics you struggle with come back sooner, mastered ones space out automatically.</div>
+              <div className="elp-wyg-title">Flashcards</div>
+              <div className="elp-wyg-desc">Spaced repetition on the SM-2 schedule &mdash; cards you get wrong come back sooner, cards you know space out.</div>
               <span className="elp-wyg-tag elp-tag-pro">Premium</span>
             </div>
             <div className="elp-wyg-card elp-fade-up" style={{ transitionDelay: '.14s' }}>
               <div className="elp-wyg-icon" style={{ background: 'var(--elp-t-bg)', border: '1px solid var(--elp-t-bd)' }}><BoltIcon size={18} /></div>
               <div className="elp-wyg-title">Practice Questions</div>
-              <div className="elp-wyg-desc">Exam-style questions with model answers for every unit &mdash; adaptive difficulty based on your performance.</div>
+              <div className="elp-wyg-desc">Exam-style questions for every unit &mdash; filter by mark value (4, 6, 10 or 20 marks) to target your revision.</div>
               <span className="elp-wyg-tag elp-tag-free">Free</span>
             </div>
             <div className="elp-wyg-card elp-fade-up" style={{ transitionDelay: '.21s' }}>
@@ -315,12 +315,12 @@ export default function BusinessPage() {
               <div className="elp-wyg-icon" style={{ background: 'rgba(245,158,11,.08)', border: '1px solid rgba(245,158,11,.2)' }}><ProgressChart size={18} /></div>
               <div className="elp-wyg-title">Progress Tracking</div>
               <div className="elp-wyg-desc">See your mastery across all 20 spec points. Identify weaknesses before your exam and focus your revision where it matters most.</div>
-              <span className="elp-wyg-tag elp-tag-pro">Premium</span>
+              <span className="elp-wyg-tag elp-tag-free">Free</span>
             </div>
             <div className="elp-wyg-card elp-fade-up" style={{ transitionDelay: '.35s' }}>
               <div className="elp-wyg-icon" style={{ background: 'var(--elp-g-bg)', border: '1px solid var(--elp-g-bd)' }}><NetworkGraph size={18} /></div>
               <div className="elp-wyg-title">Topic Links Map</div>
-              <div className="elp-wyg-desc">Visual map showing how Business topics connect &mdash; essential for 20-mark evaluation questions that expect chains of reasoning across units.</div>
+              <div className="elp-wyg-desc">Visual map of how Economics topics connect &mdash; demand, supply, elasticity and government intervention, the same theory behind Unit 1.3.2 The Market.</div>
               <span className="elp-wyg-tag elp-tag-free">Free</span>
             </div>
           </div>
@@ -367,7 +367,7 @@ export default function BusinessPage() {
             <span className="elp-feat-icon"><CardsIcon size={18} /></span>
             <div>
               <div className="elp-feat-label">Spaced repetition</div>
-              <div className="elp-feat-sub">Adaptive flashcard algorithm</div>
+              <div className="elp-feat-sub">Cards you miss come back sooner</div>
             </div>
           </div>
           <div className="elp-feat-item">
@@ -400,7 +400,7 @@ export default function BusinessPage() {
         <div className="elp-cta-inner elp-fade-up">
           <h2 className="elp-cta-title">Ready to start revising?</h2>
           <p className="elp-cta-sub">
-            Free notes for every spec point. Adaptive flashcards, quizzes and AI tutor unlock with Pro — £1 for your first month.
+            Free notes across all four units. Flashcards, quizzes and the AI tutor unlock with Pro — £1 for your first month.
           </p>
           <div className="elp-cta-actions">
             <Link
@@ -426,10 +426,10 @@ export default function BusinessPage() {
           At A2 level, Unit 3 Business Decisions and Strategy (WBS13) explores strategic decision-making, business growth, quantitative techniques and managing change. Unit 4 Global Business (WBS14) examines globalisation, strategies for entering international markets, global marketing and the role of multinational corporations.
         </p>
         <p>
-          Revvy Learn provides free revision notes for every spec point across all four IAL Business units. Our content is specifically built for the Edexcel IAL specification — not the UK domestic A-Level — so every topic, exam tip and model answer aligns with the papers you will actually sit. Each topic includes structured notes, adaptive flashcards, exam-style practice questions with annotated model answers, and an AI tutor to help you refine your 20-mark essay technique.
+          Revvy Learn provides free revision notes across all four IAL Business units. Our content is structured around the Edexcel IAL specification — not the UK domestic A-Level — using the same unit and spec point numbering, 1.3.1 through to 4.3.4, that you will see on your papers, so you revise the syllabus you are actually sitting rather than a generic UK Theme 1–4 course. Each topic includes structured notes, flashcards on a spaced repetition schedule, and exam-style practice questions. Notes and practice questions are free; flashcards, quizzes and the AI tutor unlock with Pro.
         </p>
         <p>
-          IAL Business exams are available in both the January and June exam series, allowing you to spread your units across multiple sittings. Revvy Learn covers the complete specification for both sessions.
+          IAL Business exams are available in both the January and June exam series, allowing you to spread your units across multiple sittings. Revvy Learn&apos;s notes are organised by the same four units and spec points, whichever session you sit.
         </p>
       </section>
 

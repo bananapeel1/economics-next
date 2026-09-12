@@ -1,0 +1,981 @@
+{
+ "section_id": "growth-development",
+ "subject": "economics",
+ "label": "2026-09-12-pre-packet-2",
+ "tables": {
+  "section_content": [
+   {
+    "title": "Growth vs Development",
+    "sections": [
+     {
+      "id": "growth-vs-development",
+      "body": [
+       {
+        "text": "**Economic growth** is defined as an increase in real GDP over time. It measures the expansion of a country's productive output and is relatively straightforward to calculate. However, growth tells us nothing about who benefits, what is produced, or whether citizens are healthier, better educated, or freer. A country can experience strong GDP growth while its people remain poor, uneducated, and politically oppressed.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Economic development** is a broader concept encompassing improvements in living standards, reduction in poverty, better health and education outcomes, greater political freedom, and environmental sustainability. Development is multidimensional and harder to measure. The **Human Development Index (HDI)** combines three dimensions: life expectancy at birth, mean and expected years of schooling, and GNI per capita (PPP). It ranges from 0 to 1, with scores above 0.8 considered 'very high human development'.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The distinction matters because growth is necessary but not sufficient for development. A country may achieve growth through resource extraction that enriches a small elite while leaving the majority in poverty — growth without development. Conversely, targeted investment in health and education can improve development outcomes even at relatively low GDP levels.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Country experiences rapid GDP growth from resource extraction",
+         "Revenue concentrated among political elite",
+         "Health, education, and freedom remain poor",
+         "High GDP per capita but low HDI"
+        ],
+        "result": "Growth without development — GDP alone is a misleading indicator of progress",
+        "resultType": "bad"
+       }
+      ],
+      "title": "Economic Growth vs Development",
+      "keyIdea": "Growth means rising real GDP — a narrow output measure — while development captures broader wellbeing including health, education, and freedom, measured by the HDI.",
+      "examMatters": "Examiners frequently test the distinction between growth and development. Always define both, give the HDI components (life expectancy, education, GNI per capita), and provide an example where they diverge. This is a foundation for almost every development essay.",
+      "realExample": {
+       "text": "Equatorial Guinea has one of Africa's highest GDP per capita figures due to oil wealth, yet ranks poorly on the HDI. Oil revenues are concentrated among a small elite, while most citizens lack access to clean water, healthcare, and quality education — a stark example of growth without development.",
+       "emoji": "🇬🇶"
+      },
+      "misconception": "Students use growth and development interchangeably. Wrong — growth is a quantitative increase in GDP, while development is a qualitative improvement in living standards across multiple dimensions. Instead write: growth is necessary for development but not sufficient — a country needs growth, but it must be inclusive and invested in health, education, and institutions."
+     },
+     {
+      "id": "barriers-development",
+      "body": [
+       {
+        "text": "The **Harrod-Domar model** highlights the **savings gap**: investment requires savings, but poor countries have low incomes leaving little to save. Without investment, capital stock does not grow, productivity stagnates, and incomes remain low — a vicious cycle. Foreign aid and FDI are proposed solutions, but both have limitations: aid may create dependency and FDI profits are often repatriated.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Primary commodity dependence** exposes countries to volatile world prices and long-term declining terms of trade (the **Prebisch-Singer hypothesis**). When copper or coffee prices crash, government revenues collapse. The **debt burden** compounds this: many developing countries borrowed heavily and now spend more on debt service than on health and education. **Weak institutions** — corruption, lack of property rights, poor governance — deter investment and prevent efficient resource allocation.",
+        "type": "paragraph"
+       },
+       {
+        "text": "These barriers interact to create a **poverty trap**: a self-reinforcing cycle where low income leads to low savings, low investment, low productivity, and back to low income. Breaking the trap requires a coordinated 'big push' — simultaneous investment in infrastructure, education, health, and institutions — rather than piecemeal interventions that are swallowed by the cycle.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Low income means low savings",
+         "Low savings means low investment",
+         "Low investment means low productivity growth",
+         "Low productivity keeps incomes low"
+        ],
+        "result": "Poverty trap — a self-reinforcing cycle that is extremely difficult to escape without external intervention",
+        "resultType": "bad"
+       }
+      ],
+      "title": "Barriers to Development",
+      "keyIdea": "Development is blocked by the savings gap (Harrod-Domar), primary commodity dependence, debt burdens, weak institutions, low human capital, and geography — often forming a self-reinforcing poverty trap.",
+      "examMatters": "Examiners reward candidates who show how barriers interact rather than treating them as a checklist. Draw the poverty trap cycle, then evaluate whether external intervention (aid, FDI, debt relief) or internal reform (institutions, education) is more likely to break it. The best answers consider both.",
+      "realExample": {
+       "text": "The Democratic Republic of Congo possesses vast mineral wealth — cobalt, copper, diamonds — yet remains one of the world's poorest countries. Weak institutions, decades of conflict, colonial extraction, and the resource curse have trapped it in a cycle where natural wealth fuels corruption and conflict rather than development.",
+       "emoji": "🇨🇩"
+      },
+      "misconception": "Students list barriers as if they operate independently. Wrong — barriers to development are deeply interconnected and self-reinforcing. Instead write: the poverty trap concept shows how low income, low savings, low investment, weak institutions, and low human capital form a vicious cycle — addressing one barrier alone is often insufficient."
+     }
+    ],
+    "takeaway": [
+     "Growth = rising real GDP; development = broader improvements in wellbeing (HDI: life expectancy + education + GNI per capita).",
+     "Growth is necessary but not sufficient for development — it must be inclusive.",
+     "The Harrod-Domar savings gap, commodity dependence, debt, and weak institutions create poverty traps.",
+     "Barriers are interconnected — breaking the cycle requires coordinated, multi-dimensional intervention."
+    ]
+   },
+   {
+    "title": "Development Strategies",
+    "sections": [
+     {
+      "id": "market-led-strategies",
+      "body": [
+       {
+        "text": "**Trade liberalisation** removes tariffs and quotas, allowing developing countries to specialise according to comparative advantage. By accessing global markets, firms achieve economies of scale and consumers benefit from lower prices. **FDI attraction** — through low tax rates, special economic zones, and deregulation — brings capital, technology, and management expertise that domestic firms lack.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Structural adjustment programmes (SAPs)**, promoted by the IMF and World Bank from the 1980s, required countries to liberalise markets, privatise state enterprises, balance budgets, and reduce trade barriers in exchange for loans. While the theory is sound — removing government distortions should improve efficiency — SAPs often caused severe short-term pain: cuts to health and education spending hit the poorest hardest.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Microfinance** provides small loans to entrepreneurs who lack access to traditional banking, enabling them to start businesses and escape poverty. The key insight is that the poor are creditworthy — they just lack collateral. However, high interest rates on microloans and the small scale of enterprises funded mean microfinance alone cannot drive economy-wide transformation.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Country liberalises trade and attracts FDI",
+         "Export sector grows, technology transfers occur",
+         "Tax revenue from growth funds public investment",
+         "Sustained development if institutions are strong enough to manage the transition"
+        ],
+        "result": "Market-led development can succeed — but only where institutions channel growth into broad-based improvement",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Market-Led Strategies",
+      "keyIdea": "Trade liberalisation, FDI attraction, structural adjustment, and microfinance harness market forces for development — they worked spectacularly in East Asia but require functioning institutions to succeed.",
+      "examMatters": "Examiners want nuanced evaluation of market-led strategies. Do not simply say 'free markets work' — acknowledge that the most successful examples (South Korea, Taiwan, Singapore) combined market openness with significant state intervention. This challenges the pure market-led narrative and demonstrates analytical sophistication.",
+      "realExample": {
+       "text": "South Korea's export-led growth transformed it from a GDP per capita of $67 in 1953 to over $35,000 today. Strategic trade liberalisation, massive investment in education, and strong state direction of industrial policy created globally competitive firms like Samsung and Hyundai — though notably, the state played an active role alongside markets.",
+       "emoji": "🇰🇷"
+      },
+      "misconception": "Students present market-led strategies as universally effective. Wrong — they worked in East Asia partly because of strong state institutions that directed investment and protected infant industries during the transition. Instead write: market-led strategies require functioning institutions, rule of law, and often active state support to succeed — they are not a simple formula applicable everywhere."
+     },
+     {
+      "id": "interventionist-strategies",
+      "body": [
+       {
+        "text": "**Import Substitution Industrialisation (ISI)** protects domestic infant industries with tariffs and quotas, allowing them to develop behind trade barriers before facing international competition. The logic is sound: new firms cannot compete with established multinationals from day one. However, protection often becomes permanent — firms never become competitive because they face no pressure to innovate or reduce costs.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**State investment** in infrastructure, education, and healthcare addresses market failures that the private sector will not fix. Roads, ports, and electricity grids are prerequisites for private investment. **Buffer stocks** aim to stabilise commodity prices by buying when prices are low and selling when high — protecting farmers from devastating price swings. In practice, buffer stocks are expensive to maintain and often fail when governments run out of funds to keep buying.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Foreign aid** can fill the savings gap identified by the Harrod-Domar model, funding investment that poor countries cannot finance domestically. However, aid creates **dependency** if it substitutes for rather than complements domestic effort. Poorly targeted aid may prop up corrupt governments or distort local markets. The evidence suggests aid works best when tied to governance reform and invested in health and education rather than given as general budget support.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Government imposes tariffs to protect infant industries",
+         "Domestic firms grow behind trade barriers",
+         "But without competitive pressure, firms remain inefficient",
+         "Protection becomes permanent, consumers pay higher prices"
+        ],
+        "result": "ISI can build industries but risks creating long-run inefficiency and rent-seeking",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Interventionist Strategies",
+      "keyIdea": "Import substitution, state investment, buffer stocks, and aid use government power to drive development — but risk long-run inefficiency, government failure, and aid dependency.",
+      "examMatters": "Examiners love the ISI debate. Structure your answer: explain the infant industry argument (temporary protection to build capacity), then evaluate — does protection actually remain temporary? Use India as a case study of both the achievements (industrial base) and failures (inefficiency, slow growth) of ISI to demonstrate balanced analysis.",
+      "realExample": {
+       "text": "India pursued import substitution from 1947 to 1991 under the 'Licence Raj' — extensive government control over industrial production and imports. While this built a domestic industrial base (steel, textiles, chemicals), chronic inefficiency, slow growth of around 3.5% per year (the 'Hindu rate of growth'), and consumer shortages led to liberalisation in 1991, after which growth accelerated dramatically.",
+       "emoji": "🇮🇳"
+      },
+      "misconception": "Students dismiss all government intervention as inefficient. Wrong — state investment in infrastructure and human capital addresses genuine market failures, and infant industry protection can work if it is temporary and conditional on performance. Instead write: interventionist strategies risk government failure, but targeted, time-limited intervention in infrastructure, education, and infant industries has a strong track record when designed well."
+     }
+    ],
+    "takeaway": [
+     "Market-led: trade liberalisation, FDI, structural adjustment, microfinance — effective but require strong institutions.",
+     "Interventionist: ISI, state investment, buffer stocks, aid — address market failures but risk government failure.",
+     "The most successful development stories (East Asia) combined market openness with strategic state intervention.",
+     "Aid works best when tied to governance reform and invested in human capital, not given as untargeted budget support."
+    ]
+   },
+   {
+    "title": "Sustainability",
+    "sections": [
+     {
+      "id": "sustainable-development",
+      "body": [
+       {
+        "text": "**Sustainable development**, as defined by the Brundtland Commission (1987), means meeting the needs of the present without compromising the ability of future generations to meet their own needs. This requires maintaining **natural capital** — the stock of natural resources and ecosystem services — alongside physical and human capital. If economic growth depletes natural capital faster than it regenerates, current prosperity comes at future generations' expense.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The **Environmental Kuznets Curve (EKC)** hypothesis suggests that environmental degradation first increases with economic growth, then decreases after a turning point as countries become wealthy enough to afford environmental protection. Evidence for the EKC is mixed — it holds for some local pollutants (SO2, particulates) but not for CO2 or biodiversity loss, which continue rising with income.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Climate change disproportionately affects the poorest countries, which have contributed least to emissions. Low-lying nations face flooding, Sub-Saharan Africa faces drought, and agricultural economies are most vulnerable to temperature changes. This raises profound questions of **intergenerational and international equity** — those who caused the problem are not those who suffer most from it.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Economic growth increases resource extraction and emissions",
+         "Natural capital is depleted faster than it regenerates",
+         "Environmental damage disproportionately harms the poorest",
+         "Future generations inherit degraded ecosystems and climate instability"
+        ],
+        "result": "Unsustainable growth — present prosperity at the cost of future wellbeing",
+        "resultType": "bad"
+       }
+      ],
+      "title": "Sustainable Development",
+      "keyIdea": "Sustainable development meets present needs without compromising future generations' ability to meet theirs — requiring preservation of natural capital and challenging the assumption that growth can continue indefinitely.",
+      "examMatters": "Examiners expect you to define sustainable development precisely (Brundtland definition), explain the concept of natural capital, and evaluate the Environmental Kuznets Curve. For top marks, discuss the international equity dimension — why should developing countries sacrifice growth when rich countries industrialised without environmental constraints?",
+      "realExample": {
+       "text": "Costa Rica generates 99% of its electricity from renewable sources and has reversed decades of deforestation, with forest cover rising from 21% in 1987 to over 60% today. Despite being a middle-income developing country, it demonstrates that environmental sustainability and economic progress can coexist — though it still faces challenges in transport emissions and inequality.",
+       "emoji": "🇨🇷"
+      },
+      "misconception": "Students assume sustainable development means stopping economic growth. Wrong — it means changing the pattern of growth so that natural capital is preserved alongside economic expansion. Instead write: sustainable development does not oppose growth but requires that growth maintains natural capital — through renewable energy, circular economy practices, and pricing environmental externalities."
+     },
+     {
+      "id": "green-growth",
+      "body": [
+       {
+        "text": "**Green growth** is the pursuit of economic growth that is compatible with environmental sustainability. Key mechanisms include **carbon pricing** (carbon taxes or emissions trading schemes that internalise the negative externality of CO2), **technology transfer** (sharing clean energy and agricultural technologies with developing countries), and **investment in renewable energy** infrastructure. The goal is to decouple GDP growth from environmental degradation.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**International cooperation** is essential because climate change is a global public good problem — no single country has the incentive to bear the full cost of reducing emissions when all countries benefit. This is the free rider problem on a planetary scale. Agreements like the Paris Accord attempt to solve this through nationally determined contributions (NDCs), but enforcement is weak and commitments often fall short of what climate science requires.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The deepest tension in green growth is between developing and developed countries. Rich nations industrialised by burning fossil fuels for two centuries; asking developing countries to forgo the same cheap energy path raises fundamental fairness questions. The principle of **common but differentiated responsibilities** acknowledges this — all countries must act, but richer countries should bear a larger share of the cost and transfer technology and finance to the developing world.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Carbon price raises cost of fossil fuel use",
+         "Firms and consumers switch to cleaner alternatives",
+         "Technology transfer enables developing countries to leapfrog dirty industrialisation",
+         "International cooperation ensures burden-sharing"
+        ],
+        "result": "Growth continues but is decoupled from emissions — if cooperation holds and technology advances fast enough",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Green Growth",
+      "keyIdea": "Green growth combines economic expansion with environmental protection through carbon pricing, technology transfer, and international cooperation — but tensions remain between developing countries' growth needs and global climate targets.",
+      "examMatters": "Examiners want you to evaluate whether green growth is achievable. Consider: can technology advance fast enough? Will international cooperation hold when short-term national interests conflict with long-term global goals? Is decoupling GDP from emissions actually happening at the required pace? The best answers acknowledge both the necessity and the difficulty of the green growth agenda.",
+      "realExample": {
+       "text": "The Paris Agreement (2015) committed 196 countries to limiting global warming to 1.5 degrees Celsius above pre-industrial levels. It established the principle of nationally determined contributions, with rich countries pledging $100 billion annually in climate finance for developing nations — though delivery has consistently fallen short of promises.",
+       "emoji": "🌍"
+      },
+      "misconception": "Students present green growth as a cost-free solution. Wrong — transitioning to a green economy involves real costs: stranded fossil fuel assets, higher short-term energy prices, and job losses in carbon-intensive industries. Instead write: green growth is necessary but involves significant transition costs that must be managed through retraining, investment, and compensating affected communities."
+     }
+    ],
+    "takeaway": [
+     "Sustainable development preserves natural capital for future generations — the Brundtland definition.",
+     "The Environmental Kuznets Curve may hold for local pollutants but not for CO2 or biodiversity.",
+     "Green growth requires carbon pricing, technology transfer, and international cooperation.",
+     "The fairness tension: rich countries industrialised with fossil fuels but ask developing countries to choose a costlier path."
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "flow": {
+     "steps": [
+      "GDP rises (economic growth)",
+      "But if gains go to the rich, HDI barely improves",
+      "True development requires inclusive growth + better health/education"
+     ],
+     "result": "Growth is necessary but not sufficient for development",
+     "resultType": "neutral"
+    },
+    "meta": "4 concepts",
+    "title": "Economic Growth vs Development",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Economic growth</strong> — a sustained increase in real GDP over time; can be measured by GDP per capita to adjust for population changes.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Economic development</strong> — a broader concept including improvements in living standards, health, education, political freedom, and environmental sustainability.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Human Development Index (HDI)</strong> — a composite measure combining life expectancy, education (years of schooling), and GNI per capita; used to compare development across countries.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Growth can bypass the poor if it is concentrated in enclave sectors (e.g. oil) that employ few workers and generate profits for foreign firms.",
+        "type": "mech"
+       },
+       {
+        "text": "GDP ignores <strong>distribution</strong>, environmental degradation, unpaid work, and the informal economy — all of which affect actual well-being.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "HDI is preferred to GDP per capita for measuring development because it captures health and education alongside income, though it still ignores inequality and sustainability.",
+        "type": "imp"
+       },
+       {
+        "text": "Growth links to Unit 2's macroeconomics: policies that boost GDP (fiscal stimulus, monetary easing) may not improve development unless they also fund health, education, and infrastructure.",
+        "type": "link"
+       }
+      ],
+      "title": "WHY GROWTH ≠ DEVELOPMENT"
+     }
+    ],
+    "keyIdea": "Growth measures the increase in GDP, but development is a broader concept encompassing health, education, freedom, and sustainability — a country can have growth without development if the gains are narrowly concentrated.",
+    "takeaway": [
+     "Growth = rising GDP; development = broader well-being (health, education, freedom).",
+     "HDI is better than GDP per capita but still has limitations.",
+     "Growth is necessary but not sufficient — distribution and quality of life matter."
+    ],
+    "examMatters": "Examiners frequently ask you to distinguish growth from development. Use HDI as a better measure than GDP per capita, but acknowledge its limitations. The strongest answers give examples of countries with high GDP but low HDI (e.g. oil exporters) and vice versa.",
+    "misconception": "Students equate growth with development. Wrong because growth measures output quantity while development measures quality of life. Instead write: growth is necessary for development (it provides the resources), but not sufficient — the benefits must be distributed through investments in health, education, and social infrastructure."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Low income → low savings → low investment",
+      "Weak institutions deter FDI",
+      "Primary commodity dependence creates volatility"
+     ],
+     "result": "Poverty trap: a self-reinforcing cycle that is difficult to escape",
+     "resultType": "bad"
+    },
+    "meta": "5 concepts",
+    "title": "Barriers to Development",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Savings gap</strong> — low incomes mean low savings, which limits domestic investment; Harrod-Domar model shows that low savings → low investment → low growth.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Primary commodity dependence</strong> — reliance on raw materials exposes economies to volatile prices and declining terms of trade (Prebisch-Singer hypothesis).",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Debt burden</strong> — servicing external debt diverts government revenue from health, education, and infrastructure.",
+        "type": "mech"
+       }
+      ],
+      "title": "ECONOMIC BARRIERS"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Weak institutions</strong> — corruption, poor rule of law, and insecure property rights deter investment and misallocate resources.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Low human capital</strong> — poor education and health systems limit productivity; disease burdens (malaria, HIV) reduce the effective labour force.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Geography and climate</strong> — landlocked countries face higher trade costs; tropical climates increase disease burden and reduce agricultural productivity.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Barriers are <strong>interconnected</strong>: poverty → low savings → low investment → low growth → poverty. Breaking this cycle requires simultaneous action on multiple fronts.",
+        "type": "imp"
+       }
+      ],
+      "title": "NON-ECONOMIC BARRIERS"
+     }
+    ],
+    "keyIdea": "Developing countries face a web of interconnected barriers — from savings gaps and corruption to weak institutions and dependence on primary commodities — that trap them in cycles of poverty.",
+    "takeaway": [
+     "Economic barriers: savings gap, commodity dependence, debt burden.",
+     "Non-economic barriers: weak institutions, low human capital, geography.",
+     "Barriers are interconnected — the poverty trap is self-reinforcing."
+    ],
+    "examMatters": "Examiners expect you to identify specific barriers and explain how they interact. The best answers show cause-and-effect chains (e.g. corruption → low FDI → low growth → continued poverty) rather than listing barriers in isolation.",
+    "misconception": "Students list barriers without explaining how they connect. Examiners reward analysis of the poverty trap mechanism — how each barrier reinforces the others. Instead write: barriers to development are interconnected; for example, low incomes lead to low savings, which limits investment, which keeps incomes low — creating a self-reinforcing poverty trap."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Remove trade barriers, attract FDI",
+      "Export-led growth boosts incomes",
+      "But requires good institutions to distribute gains"
+     ],
+     "result": "Market-led strategies work when institutions are strong, but fail in their absence",
+     "resultType": "neutral"
+    },
+    "meta": "4 concepts",
+    "title": "Development Strategies: Market-Led",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Trade liberalisation</strong> — opening to international trade allows specialisation according to comparative advantage and access to larger markets.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>FDI attraction</strong> — creating a business-friendly environment (low taxes, stable regulation) to attract multinational investment, technology, and jobs.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Structural adjustment</strong> — IMF/World Bank conditions requiring privatisation, deregulation, and fiscal discipline in exchange for loans.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Microfinance</strong> — providing small loans to the poor to fund micro-enterprises, bypassing the savings gap at the individual level.",
+        "type": "mech"
+       }
+      ],
+      "title": "KEY STRATEGIES"
+     },
+     {
+      "items": [
+       {
+        "text": "East Asian 'tigers' (South Korea, Taiwan, Singapore) used export-led growth to transform from poor to high-income within a generation.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Market-led strategies assume functioning institutions (property rights, courts, regulatory capacity) that many developing countries lack — without these, markets may produce inequality and exploitation rather than broad-based growth.",
+        "type": "imp"
+       },
+       {
+        "text": "Links to Washington Consensus vs post-Washington Consensus debate: pure market liberalisation has given way to a more nuanced approach that includes institutional development.",
+        "type": "link"
+       }
+      ],
+      "title": "EVALUATION"
+     }
+    ],
+    "keyIdea": "Market-led strategies rely on free markets, trade openness, and FDI to drive development — they worked spectacularly in East Asia but their success depends on pre-existing institutional quality.",
+    "takeaway": [
+     "Market-led: trade liberalisation, FDI, structural adjustment, microfinance.",
+     "East Asian success shows export-led growth can work spectacularly.",
+     "Requires functioning institutions — without them, markets generate inequality."
+    ],
+    "examMatters": "Examiners expect you to evaluate market-led strategies by considering whether the preconditions exist: stable institutions, rule of law, educated workforce. Use East Asia as a success example and Sub-Saharan Africa as a case where structural adjustment programs had mixed results.",
+    "misconception": "Students say free markets always work. Wrong because without strong institutions, free markets can lead to corruption, inequality, and environmental degradation. Instead write: market-led strategies are effective when complemented by strong institutions, investment in human capital, and active government support for infrastructure."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Protect infant industries, invest in infrastructure",
+      "Domestic firms grow behind tariff wall",
+      "Risk: inefficiency, corruption, never becoming competitive"
+     ],
+     "result": "Interventionist strategies can work short-term but risk government failure long-term",
+     "resultType": "neutral"
+    },
+    "meta": "4 concepts",
+    "title": "Development Strategies: Interventionist",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Import substitution industrialisation (ISI)</strong> — protecting domestic industries with tariffs so they can grow behind a wall of protection before facing international competition.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>State-led investment</strong> — government funds infrastructure (roads, energy, telecoms) that the private sector would under-provide due to externalities and long payback periods.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Buffer stock schemes</strong> — government buys and stores commodities when prices are low and sells when prices are high, stabilising farm incomes.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Aid</strong> — bilateral and multilateral aid transfers resources from rich to poor countries to fund development projects.",
+        "type": "mech"
+       }
+      ],
+      "title": "KEY STRATEGIES"
+     },
+     {
+      "items": [
+       {
+        "text": "ISI often fails in the long run: protected firms become <strong>inefficient</strong> behind tariff walls and never achieve international competitiveness.",
+        "type": "mech"
+       },
+       {
+        "text": "State investment can crowd out private investment and is vulnerable to <strong>corruption and misallocation</strong> when governance is weak.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Aid can create dependency, fund corrupt regimes, and distort local markets — its effectiveness depends on governance quality and targeting.",
+        "type": "imp"
+       },
+       {
+        "text": "The ISI vs export-led debate mirrors the protectionism vs free trade debate from 4.3.2 — the optimal strategy likely lies between pure intervention and pure market liberalisation.",
+        "type": "link"
+       }
+      ],
+      "title": "EVALUATION"
+     }
+    ],
+    "keyIdea": "Interventionist strategies use the state to direct development through planning, protectionism, and targeted investment — they can overcome market failures but risk government failure and corruption.",
+    "takeaway": [
+     "Interventionist: ISI, state investment, buffer stocks, aid.",
+     "ISI risks long-run inefficiency; aid risks dependency and corruption.",
+     "The best approach combines strategic state intervention with market forces."
+    ],
+    "examMatters": "Examiners expect balanced evaluation: acknowledge that state intervention can overcome market failures (infrastructure, coordination) but carries risks of corruption, inefficiency, and aid dependency. The best answers conclude that a mixed approach — strategic state intervention within a market framework — is most effective.",
+    "misconception": "Students say aid always helps. Wrong because poorly targeted aid can create dependency, fund corrupt officials, and undermine local producers. Instead write: the effectiveness of aid depends on governance quality, targeting, and whether it builds capacity rather than creating dependency."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Developing country industrialises rapidly",
+      "Environmental degradation rises",
+      "At higher income, investment in sustainability increases"
+     ],
+     "result": "Sustainable development requires balancing growth with environmental and social goals",
+     "resultType": "neutral"
+    },
+    "meta": "4 concepts",
+    "title": "Sustainability and Development",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Sustainable development</strong> — development that meets the needs of the present without compromising the ability of future generations to meet their own needs (Brundtland definition).",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Natural capital</strong> — the stock of natural resources (forests, fisheries, clean air, biodiversity) that provides ecosystem services essential for human well-being.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Rapid industrialisation in developing countries often comes at the cost of <strong>environmental degradation</strong>: deforestation, pollution, and carbon emissions.",
+        "type": "mech"
+       },
+       {
+        "text": "The <strong>Environmental Kuznets Curve</strong> hypothesis suggests that pollution rises with income initially but falls after a certain income level as societies invest in clean technology and regulation.",
+        "type": "mech"
+       },
+       {
+        "text": "Climate change disproportionately affects the <strong>poorest countries</strong> (flooding, drought, crop failure), creating a cruel irony where those least responsible suffer most.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "The tension between growth and sustainability is central to development policy: should developing countries be asked to sacrifice growth for environmental protection when rich countries industrialised without such constraints?",
+        "type": "imp"
+       }
+      ],
+      "title": "THE CHALLENGE"
+     }
+    ],
+    "keyIdea": "Sustainable development meets present needs without compromising future generations — it requires balancing economic growth with environmental protection and social inclusion.",
+    "takeaway": [
+     "Sustainable development balances present needs with future generations' needs.",
+     "Environmental Kuznets Curve: pollution may fall after a certain income level.",
+     "Green growth + technology transfer is the policy ideal; trade-offs are inevitable."
+    ],
+    "examMatters": "Examiners expect you to discuss the trade-off between growth and sustainability, using the Environmental Kuznets Curve as a framework. Evaluate whether developing countries should prioritise growth now and clean up later, or pursue sustainable development from the start.",
+    "misconception": "Students say developing countries should stop growing to protect the environment. Wrong because absolute poverty is an immediate threat while environmental damage is often longer-term. Instead write: the challenge is to pursue green growth — development strategies that raise living standards while minimising environmental damage, supported by technology transfer and international cooperation."
+   }
+  ],
+  "section_quiz": [
+   {
+    "options": [
+     "Life expectancy at birth",
+     "Mean years of schooling and expected years of schooling",
+     "GNI per capita at purchasing power parity",
+     "Gini coefficient measuring income inequality"
+    ],
+    "question": "Which of the following is NOT a component of the Human Development Index (HDI)?",
+    "explanation": "The HDI has three components: Health (life expectancy at birth), Education (mean years of schooling + expected years of schooling), and Income (GNI per capita at PPP). The Gini coefficient measures income inequality and is NOT part of the HDI — this is actually a key limitation of the HDI, as it uses national averages and ignores inequality within countries.",
+    "correctIndex": 3
+   },
+   {
+    "options": [
+     "Improving terms of trade as global demand for commodities rises",
+     "Stable terms of trade due to inelastic demand for food and raw materials",
+     "Declining terms of trade relative to manufactured goods over time",
+     "Rapid industrialisation driven by commodity export revenues"
+    ],
+    "question": "According to the Prebisch-Singer Hypothesis, developing countries that rely heavily on primary product exports will experience:",
+    "explanation": "The Prebisch-Singer Hypothesis states that the terms of trade for primary products tend to decline over time relative to manufactured goods. This is because: (1) income elasticity of demand for primary products is low (Engel's Law — as incomes rise, people spend proportionally less on food/raw materials); (2) YED for manufactured goods is high; (3) technological progress reduces raw material intensity; (4) synthetic substitutes replace natural commodities.",
+    "correctIndex": 2
+   },
+   {
+    "options": [
+     "36%",
+     "4%",
+     "0.25%",
+     "15%"
+    ],
+    "question": "In the Harrod-Domar model, if a country has a savings ratio of 12% and a capital-output ratio of 3, the predicted rate of economic growth is:",
+    "explanation": "Using the Harrod-Domar formula: Growth rate = s / k = 12% / 3 = 4%. The model predicts that a country saving 12% of national income, with 3 units of capital needed per unit of output, will grow at 4% per year. This illustrates why low savings ratios in developing countries (due to low incomes) constrain growth — the vicious cycle of poverty.",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "The modern sector begins to generate profits for the first time",
+     "All surplus labour in the traditional sector has been absorbed by the modern sector",
+     "Agricultural output begins to decline due to rural-urban migration",
+     "The government begins to invest in industrialisation programmes"
+    ],
+    "question": "In the Lewis Dual-Sector Model, the 'Lewis turning point' occurs when:",
+    "explanation": "The Lewis turning point is reached when all surplus labour (workers with zero or near-zero marginal product in the traditional sector) has been absorbed by the modern industrial sector. Beyond this point, further industrial expansion requires attracting workers with higher wages, as there is no more 'free' surplus labour. Wages rise in both sectors, signalling structural transformation of the economy.",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "Aid always reduces the savings ratio in recipient countries",
+     "Aid can only be used for infrastructure projects, not social programmes",
+     "Aid inflows may cause Dutch disease, appreciating the exchange rate and reducing export competitiveness",
+     "Aid has no effect on the foreign currency gap identified by the Harrod-Domar model"
+    ],
+    "question": "Which of the following is a valid criticism of using foreign aid to promote development?",
+    "explanation": "Large aid inflows increase demand for the domestic currency, causing real exchange rate appreciation. This makes the country's exports more expensive and less competitive internationally — the 'Dutch disease' effect. This can undermine the very export sectors that the country needs to develop. Option A is too absolute; Option B is incorrect (aid funds many purposes); Option D is wrong — aid does help fill the foreign exchange gap, which is one of its justifications.",
+    "correctIndex": 2
+   },
+   {
+    "options": [
+     "The country will become too dependent on foreign direct investment",
+     "Protected domestic industries may remain permanently inefficient due to lack of competitive pressure",
+     "The country will experience a balance of payments surplus from reduced imports",
+     "Consumers will benefit from lower prices due to domestic production"
+    ],
+    "question": "A developing country decides to pursue import-substitution industrialisation (ISI). Which of the following is the most likely long-run risk?",
+    "explanation": "The main long-run risk of ISI is that protected industries, shielded from foreign competition by tariffs and quotas, have little incentive to become efficient (X-inefficiency). They may remain permanently dependent on protection, never achieving the competitiveness needed to survive in global markets. This was the experience of many Latin American countries in the 1950s-70s. Option C is unlikely as ISI countries often still need to import capital goods; Option D is wrong — protection typically raises prices.",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "Large-scale government lending programmes to fund infrastructure projects",
+     "IMF loans to developing countries experiencing balance of payments crises",
+     "Small loans, savings, and insurance products for low-income individuals excluded from formal banking",
+     "Foreign direct investment by multinational corporations in developing countries"
+    ],
+    "question": "Microfinance is most accurately described as:",
+    "explanation": "Microfinance provides small-scale financial services — including small loans (microcredit), savings accounts, and insurance — to low-income individuals and micro-entrepreneurs who lack access to traditional banking. Pioneered by Muhammad Yunus and the Grameen Bank in Bangladesh, it promotes financial inclusion and empowers women. It is distinct from government infrastructure lending (Option A), IMF crisis lending (Option B), and FDI (Option D).",
+    "correctIndex": 2
+   },
+   {
+    "options": [
+     "Increases the domestic money supply and causes inflation",
+     "Drains investable funds from the economy, worsening the savings gap and weakening the exchange rate",
+     "Leads to an increase in foreign direct investment as international firms fill the gap",
+     "Reduces the country's external debt burden"
+    ],
+    "question": "Capital flight is most harmful to developing countries because it:",
+    "explanation": "Capital flight removes financial capital from the domestic economy, reducing the pool of investable funds and worsening the Harrod-Domar savings gap. It also weakens the exchange rate (as capital flows out), reduces the tax base, and undermines confidence — creating a vicious cycle of disinvestment. Option A is wrong (capital leaves, it does not increase domestic money supply); Option C is unlikely (capital flight signals instability, deterring FDI); Option D is wrong (capital flight does not reduce external debt).",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "Provide too much financial assistance without any conditions",
+     "Focus exclusively on long-term development projects rather than short-term stabilisation",
+     "Often require fiscal austerity that can worsen poverty by cutting public services relied upon by the poor",
+     "Only assist developed countries and exclude developing nations from receiving funds"
+    ],
+    "question": "The IMF's structural adjustment programmes (SAPs) have been criticised primarily because they:",
+    "explanation": "SAP conditionality typically requires fiscal austerity (cutting government spending), trade liberalisation, privatisation, and deregulation. Critics argue that austerity cuts public services (healthcare, education, food subsidies) that the poorest citizens depend on, worsening poverty in the short run. SAPs have also been criticised as 'one-size-fits-all' prescriptions that may not suit individual country circumstances. Option A is the opposite — SAPs are known for strict conditionality; Option B describes the World Bank, not the IMF; Option D is factually incorrect.",
+    "correctIndex": 2
+   },
+   {
+    "options": [
+     "GNI per capita at purchasing power parity",
+     "Life expectancy at birth",
+     "Percentage of adult male labour force employed in agriculture",
+     "Number of mobile phone users per 1,000 population"
+    ],
+    "question": "Which development indicator would best capture the structural transformation of an economy from subsistence agriculture to manufacturing and services?",
+    "explanation": "The percentage of the adult male labour force in agriculture directly measures structural transformation — as economies develop, workers shift from agriculture (low productivity, subsistence farming) to manufacturing and services (higher productivity, higher value-added). A declining agricultural share indicates industrialisation and development. GNI per capita (Option A) measures income but not structure; life expectancy (Option B) measures health; mobile phones (Option D) measure technology access, not economic structure.",
+    "correctIndex": 2
+   },
+   {
+    "options": [
+     "Labour is the only factor of production that matters for growth",
+     "All savings in the economy are automatically channelled into productive investment",
+     "Government spending has no impact on economic growth",
+     "Population growth always exceeds the rate of economic growth"
+    ],
+    "question": "A key assumption of the Harrod-Domar model that is unrealistic for many developing countries is that:",
+    "explanation": "The Harrod-Domar model assumes that S = I — all savings are automatically converted into productive investment. In many developing countries, this assumption fails because financial institutions are underdeveloped (many people are 'unbanked'), savings may be held as cash or physical assets rather than deposited in banks, and there is no efficient mechanism to intermediate savings into productive investment. This is a critical limitation of the model.",
+    "correctIndex": 1
+   },
+   {
+    "options": [
+     "Excessive government spending on healthcare reduces funds available for industrial investment",
+     "Large resource revenues cause the real exchange rate to appreciate, making non-resource exports uncompetitive",
+     "Dutch colonial trade policies continue to constrain development in former colonies",
+     "High rates of immigration from the Netherlands reduce domestic wages and living standards"
+    ],
+    "question": "Which of the following best explains the 'Dutch disease' effect in resource-rich developing countries?",
+    "explanation": "Dutch disease occurs when large inflows of revenue from natural resources (or foreign aid) increase demand for the domestic currency, causing the real exchange rate to appreciate. This makes the country's other exports (manufactures, agricultural goods) more expensive and less competitive internationally, causing those sectors to shrink. The economy becomes increasingly dependent on the resource sector, reducing diversification and long-term development prospects.",
+    "correctIndex": 1
+   }
+  ],
+  "section_practice": [
+   {
+    "marks": 4,
+    "command": "Define",
+    "guidance": "The HDI is a composite measure of development published by the United Nations Development Programme (1 mark). It combines three dimensions: health, measured by life expectancy at birth (1 mark); education, measured by mean years of schooling and expected years of schooling (1 mark); and standard of living, measured by gross national income per capita at purchasing power parity (1 mark).",
+    "question": "Define the term 'Human Development Index' (HDI). (4 marks)"
+   },
+   {
+    "marks": 6,
+    "command": "Explain",
+    "guidance": "Constraint 1: Inadequate infrastructure (1 mark) — poor transport networks, unreliable energy supply and limited telecommunications raise production costs and deter private investment (1 mark). This limits the development of industry and services, keeping the economy dependent on low-value primary production (1 mark).\n\nConstraint 2: Capital flight and corruption (1 mark) — weak governance and corruption divert resources away from productive investment into private hands, reducing the effectiveness of public spending (1 mark). Political instability and institutional weakness also encourage domestic and foreign investors to move capital abroad, reducing the funds available for domestic development (1 mark).",
+    "question": "Explain two constraints on economic development in developing countries. (6 marks)"
+   },
+   {
+    "marks": 10,
+    "command": "Assess",
+    "guidance": "Define the Harrod-Domar model as a growth model that states the rate of economic growth depends on the savings ratio and the capital-output ratio — growth = savings ratio / capital-output ratio (2 marks). Useful: highlights the importance of savings and investment for growth, providing a clear policy implication that developing countries should increase saving or attract foreign capital (2 marks); explains why aid and FDI can boost growth by supplementing low domestic savings (1 mark). Limitations: assumes a fixed capital-output ratio, ignoring diminishing returns and productivity improvements (2 marks); ignores the role of human capital, technology, institutions and governance in driving growth (2 marks). Judgement: the model provides a useful starting point but is too simplistic to capture the complex, multifaceted nature of development — modern growth theory emphasises institutions, innovation and human capital alongside physical investment (1 mark).",
+    "question": "Assess the usefulness of the Harrod-Domar model in explaining economic growth in developing countries. (10 marks)"
+   },
+   {
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Define market-oriented strategies as policies that rely on free markets, trade liberalisation and private sector activity, and interventionist strategies as government-led approaches including planning, protectionism and state-owned enterprises (2 marks).\n\nFor market-oriented strategies: Trade liberalisation allows countries to exploit comparative advantage and attract FDI — this approach drove rapid growth in the Asian Tiger economies (3 marks); privatisation and deregulation can increase efficiency and attract private investment into previously state-run industries (2 marks); microfinance and property rights empower individuals and small businesses to participate in the market economy (2 marks).\n\nFor interventionist strategies: Infant industry protection gives new industries time to develop economies of scale before facing international competition — successfully used by South Korea and Japan in their early development (3 marks); state investment in infrastructure, education and healthcare addresses market failures and builds the foundations for long-term growth (2 marks); institutions like the World Bank and IMF can provide conditional lending that supports strategic government programmes (2 marks).\n\nEvaluation: Neither approach is universally superior — the most successful developing countries have used a pragmatic mix (2 marks). East Asian economies combined market openness with strategic state intervention in education, infrastructure and targeted industries. The key is institutional quality: market-oriented strategies fail without rule of law and property rights, while interventionist strategies fail without competent and accountable governance (2 marks).",
+    "question": "Evaluate the effectiveness of market-oriented strategies versus interventionist strategies in promoting economic development. (20 marks)"
+   },
+   {
+    "marks": 4,
+    "command": "Outline",
+    "guidance": "Role 1: Emergency lending — the IMF provides financial assistance to countries facing balance of payments crises, preventing defaults and stabilising their economies (1 mark). This lending typically comes with conditions requiring structural reforms such as fiscal consolidation and trade liberalisation (1 mark).\n\nRole 2: Technical assistance and surveillance — the IMF monitors member countries' economic policies and provides expert advice on fiscal management, monetary policy and financial regulation (1 mark). This helps developing countries strengthen their institutions and improve macroeconomic stability (1 mark).",
+    "question": "Outline two roles of the International Monetary Fund (IMF) in supporting developing countries. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "back": "A broader concept than growth — includes improvements in <strong>living standards, health, education, and quality of life</strong>. Measured by HDI, not just GDP.",
+    "front": "What is economic development?"
+   },
+   {
+    "back": "<strong>Growth</strong> = increase in real GDP (quantitative). <strong>Development</strong> = improvement in quality of life, education, health, and political freedoms (qualitative). Growth is necessary but not sufficient.",
+    "front": "What is the difference between growth and development?"
+   },
+   {
+    "back": "Low <strong>GDP per capita</strong>, high <strong>poverty rates</strong>, poor <strong>infrastructure</strong>, reliance on <strong>primary commodities</strong>, low life expectancy, and weak institutions.",
+    "front": "What are the characteristics of developing countries?"
+   },
+   {
+    "back": "<strong>Corruption</strong>, <strong>poor governance</strong>, <strong>debt burden</strong>, <strong>primary product dependency</strong>, <strong>lack of infrastructure</strong>, <strong>conflict</strong>, and <strong>geographical disadvantages</strong> (landlocked, prone to natural disasters).",
+    "front": "What are the barriers to development?"
+   },
+   {
+    "back": "An economy reliant on exporting <strong>raw materials or agricultural goods</strong>. Vulnerable to price volatility, declining terms of trade, and the resource curse.",
+    "front": "What is primary product dependency?"
+   },
+   {
+    "back": "The long-run <strong>terms of trade for primary products decline</strong> relative to manufactured goods. Countries exporting commodities face worsening terms of trade over time.",
+    "front": "What is the Prebisch-Singer hypothesis?"
+   },
+   {
+    "back": "Financial or technical assistance from <strong>developed to developing countries</strong>. Can be bilateral (government-to-government) or multilateral (via organisations like the World Bank).",
+    "front": "What is foreign aid?"
+   },
+   {
+    "back": "Fills the <strong>savings gap</strong> (provides capital for investment), funds <strong>infrastructure and education</strong>, provides <strong>emergency relief</strong>, and can support institutional development.",
+    "front": "What are the arguments for foreign aid?"
+   },
+   {
+    "back": "May create <strong>dependency</strong>, be lost to <strong>corruption</strong>, distort local markets, serve <strong>donor interests</strong> (tied aid), or fail to address root causes of underdevelopment.",
+    "front": "What are the arguments against foreign aid?"
+   },
+   {
+    "back": "Small loans provided to <strong>low-income individuals</strong> who lack access to conventional banking. Enables entrepreneurship and self-employment. Pioneered by Grameen Bank in Bangladesh.",
+    "front": "What is microfinance?"
+   },
+   {
+    "back": "Growth depends on the <strong>savings ratio</strong> and the <strong>capital-output ratio</strong>. Higher savings → more investment → more growth. Developing countries may need external finance to fill the savings gap.",
+    "front": "What is the Harrod-Domar growth model?"
+   },
+   {
+    "back": "A <strong>dual-sector model</strong>: surplus labour moves from low-productivity agriculture to high-productivity industry. This structural change drives economic development.",
+    "front": "What is the Lewis model of development?"
+   },
+   {
+    "back": "Countries rich in <strong>natural resources often grow slower</strong> than resource-poor countries. Caused by currency appreciation (Dutch disease), corruption, conflict over resource rents, and neglect of other sectors.",
+    "front": "What is the resource curse?"
+   },
+   {
+    "back": "The <strong>International Monetary Fund</strong> provides financial assistance and policy advice to countries facing <strong>balance of payments crises</strong>. Often requires structural reforms as conditions.",
+    "front": "What is the role of the IMF?"
+   },
+   {
+    "back": "Provides <strong>long-term loans and grants</strong> to developing countries for projects that reduce poverty — infrastructure, education, healthcare, and institutional reform.",
+    "front": "What is the role of the World Bank?"
+   },
+   {
+    "back": "A strategy where a country <strong>replaces imports with domestic production</strong> by protecting infant industries. Reduces dependency but may create inefficient firms shielded from competition.",
+    "front": "What is import substitution industrialisation (ISI)?"
+   },
+   {
+    "back": "A strategy focusing on <strong>producing goods for export</strong> rather than the domestic market. Exploits comparative advantage. Successful examples: South Korea, China, Singapore.",
+    "front": "What is export-led growth?"
+   },
+   {
+    "back": "When a developing country borrows to fund development but <strong>cannot repay</strong> — interest payments divert resources from essential spending. New loans service old debt in a vicious cycle.",
+    "front": "What is the debt trap?"
+   }
+  ],
+  "section_diagrams": [
+   {
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:transparent\">\n  <!-- Title -->\n  <text x=\"250\" y=\"28\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"16\" font-weight=\"bold\" text-anchor=\"middle\">Human Development Index (HDI)</text>\n\n  <!-- Three component boxes -->\n  <!-- Health -->\n  <rect x=\"25\" y=\"55\" width=\"140\" height=\"120\" rx=\"8\" fill=\"#059669\" fill-opacity=\"0.15\" stroke=\"#059669\" stroke-width=\"2\"/>\n  <text x=\"95\" y=\"78\" fill=\"#059669\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\">HEALTH</text>\n  <line x1=\"45\" y1=\"85\" x2=\"145\" y2=\"85\" stroke=\"#059669\" stroke-width=\"1\" opacity=\"0.4\"/>\n  <text x=\"95\" y=\"105\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\">Life expectancy</text>\n  <text x=\"95\" y=\"120\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\">at birth</text>\n  <text x=\"95\" y=\"145\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.7\">Min: 20 years</text>\n  <text x=\"95\" y=\"160\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.7\">Max: 85 years</text>\n\n  <!-- Education -->\n  <rect x=\"180\" y=\"55\" width=\"140\" height=\"120\" rx=\"8\" fill=\"#3b82f6\" fill-opacity=\"0.15\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n  <text x=\"250\" y=\"78\" fill=\"#3b82f6\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\">EDUCATION</text>\n  <line x1=\"200\" y1=\"85\" x2=\"300\" y2=\"85\" stroke=\"#3b82f6\" stroke-width=\"1\" opacity=\"0.4\"/>\n  <text x=\"250\" y=\"105\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\">Mean years of</text>\n  <text x=\"250\" y=\"120\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\">schooling (25+)</text>\n  <text x=\"250\" y=\"140\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\">Expected years</text>\n  <text x=\"250\" y=\"155\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\">of schooling</text>\n\n  <!-- Income -->\n  <rect x=\"335\" y=\"55\" width=\"140\" height=\"120\" rx=\"8\" fill=\"#ef4444\" fill-opacity=\"0.15\" stroke=\"#ef4444\" stroke-width=\"2\"/>\n  <text x=\"405\" y=\"78\" fill=\"#ef4444\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\">INCOME</text>\n  <line x1=\"355\" y1=\"85\" x2=\"455\" y2=\"85\" stroke=\"#ef4444\" stroke-width=\"1\" opacity=\"0.4\"/>\n  <text x=\"405\" y=\"105\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\">GNI per capita</text>\n  <text x=\"405\" y=\"120\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\">at PPP (US$)</text>\n  <text x=\"405\" y=\"145\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.7\">Min: $100</text>\n  <text x=\"405\" y=\"160\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.7\">Max: $75,000</text>\n\n  <!-- Arrows down from each box -->\n  <line x1=\"95\" y1=\"175\" x2=\"95\" y2=\"210\" stroke=\"#059669\" stroke-width=\"2\"/>\n  <polygon points=\"95,215 90,205 100,205\" fill=\"#059669\"/>\n  <line x1=\"250\" y1=\"175\" x2=\"250\" y2=\"210\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n  <polygon points=\"250,215 245,205 255,205\" fill=\"#3b82f6\"/>\n  <line x1=\"405\" y1=\"175\" x2=\"405\" y2=\"210\" stroke=\"#ef4444\" stroke-width=\"2\"/>\n  <polygon points=\"405,215 400,205 410,205\" fill=\"#ef4444\"/>\n\n  <!-- Index labels -->\n  <text x=\"95\" y=\"232\" fill=\"#059669\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"bold\">Health Index</text>\n  <text x=\"250\" y=\"232\" fill=\"#3b82f6\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"bold\">Education Index</text>\n  <text x=\"405\" y=\"232\" fill=\"#ef4444\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"bold\">Income Index</text>\n\n  <!-- Converging lines to HDI box -->\n  <line x1=\"95\" y1=\"240\" x2=\"200\" y2=\"275\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" opacity=\"0.5\"/>\n  <line x1=\"250\" y1=\"240\" x2=\"250\" y2=\"275\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" opacity=\"0.5\"/>\n  <line x1=\"405\" y1=\"240\" x2=\"300\" y2=\"275\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" opacity=\"0.5\"/>\n\n  <!-- HDI Result box -->\n  <rect x=\"165\" y=\"275\" width=\"170\" height=\"55\" rx=\"8\" fill=\"#e8ecf5\" fill-opacity=\"0.1\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"250\" y=\"298\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">HDI = Geometric Mean</text>\n  <text x=\"250\" y=\"318\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" opacity=\"0.8\">Score: 0 (low) to 1 (high)</text>\n</svg>",
+    "title": "HDI Components and Measurement",
+    "checklist": [
+     "Three HDI components shown: Health, Education, Income",
+     "Health measured by life expectancy at birth",
+     "Education measured by mean years of schooling + expected years of schooling",
+     "Income measured by GNI per capita at PPP",
+     "Each component normalised to an index between 0 and 1",
+     "HDI calculated as geometric mean of the three indices",
+     "Score ranges from 0 (lowest) to 1 (highest development)"
+    ],
+    "description": "Shows the three components of the Human Development Index (health, education, income) and how they combine into a composite measure of development."
+   },
+   {
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:transparent\">\n  <!-- Title -->\n  <text x=\"250\" y=\"25\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\">Harrod-Domar Growth Model</text>\n\n  <!-- Formula box -->\n  <rect x=\"155\" y=\"35\" width=\"190\" height=\"32\" rx=\"6\" fill=\"#3b82f6\" fill-opacity=\"0.15\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/>\n  <text x=\"250\" y=\"56\" fill=\"#3b82f6\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Growth rate (g) = s / k</text>\n\n  <!-- Circular flow: 4 boxes arranged in a cycle -->\n  <!-- Box 1: Income (top) -->\n  <rect x=\"175\" y=\"85\" width=\"150\" height=\"45\" rx=\"8\" fill=\"#059669\" fill-opacity=\"0.15\" stroke=\"#059669\" stroke-width=\"2\"/>\n  <text x=\"250\" y=\"108\" fill=\"#059669\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">National Income</text>\n  <text x=\"250\" y=\"122\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.7\">(GDP / Output)</text>\n\n  <!-- Box 2: Savings (right) -->\n  <rect x=\"345\" y=\"160\" width=\"130\" height=\"45\" rx=\"8\" fill=\"#3b82f6\" fill-opacity=\"0.15\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n  <text x=\"410\" y=\"183\" fill=\"#3b82f6\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Savings (s)</text>\n  <text x=\"410\" y=\"197\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.7\">Savings ratio</text>\n\n  <!-- Box 3: Investment (bottom) -->\n  <rect x=\"175\" y=\"240\" width=\"150\" height=\"45\" rx=\"8\" fill=\"#ef4444\" fill-opacity=\"0.15\" stroke=\"#ef4444\" stroke-width=\"2\"/>\n  <text x=\"250\" y=\"263\" fill=\"#ef4444\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Investment (I)</text>\n  <text x=\"250\" y=\"277\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.7\">Capital accumulation</text>\n\n  <!-- Box 4: Capital stock (left) -->\n  <rect x=\"25\" y=\"160\" width=\"130\" height=\"45\" rx=\"8\" fill=\"#f59e0b\" fill-opacity=\"0.15\" stroke=\"#f59e0b\" stroke-width=\"2\"/>\n  <text x=\"90\" y=\"178\" fill=\"#f59e0b\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Capital Stock</text>\n  <text x=\"90\" y=\"197\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.7\">Capital-output</text>\n  <text x=\"90\" y=\"209\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.7\">ratio (k)</text>\n\n  <!-- Arrows connecting the cycle: Income -> Savings -> Investment -> Capital -> Income -->\n  <!-- Income -> Savings (top-right) -->\n  <path d=\"M325,115 Q370,120 365,160\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2\"/>\n  <polygon points=\"365,160 360,150 370,150\" fill=\"#059669\"/>\n  <text x=\"360\" y=\"135\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.7\">Proportion</text>\n  <text x=\"360\" y=\"146\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.7\">saved</text>\n\n  <!-- Savings -> Investment (right-bottom) -->\n  <path d=\"M390,205 Q370,240 325,257\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n  <polygon points=\"325,257 335,252 335,262\" fill=\"#3b82f6\"/>\n  <text x=\"375\" y=\"237\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"start\" opacity=\"0.7\">S = I</text>\n\n  <!-- Investment -> Capital (bottom-left) -->\n  <path d=\"M175,262 Q130,260 135,205\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/>\n  <polygon points=\"135,205 130,215 140,215\" fill=\"#ef4444\"/>\n  <text x=\"135\" y=\"250\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.7\">Adds to</text>\n  <text x=\"135\" y=\"261\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.7\">capital</text>\n\n  <!-- Capital -> Income (left-top) -->\n  <path d=\"M110,160 Q125,120 175,110\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\"/>\n  <polygon points=\"175,110 165,105 165,115\" fill=\"#f59e0b\"/>\n  <text x=\"120\" y=\"128\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.7\">Generates</text>\n  <text x=\"120\" y=\"139\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.7\">output</text>\n\n  <!-- Vicious cycle label at bottom -->\n  <rect x=\"100\" y=\"305\" width=\"300\" height=\"35\" rx=\"6\" fill=\"#ef4444\" fill-opacity=\"0.1\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/>\n  <text x=\"250\" y=\"322\" fill=\"#ef4444\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\">Low income &#x2192; Low savings &#x2192; Low investment &#x2192;</text>\n  <text x=\"250\" y=\"335\" fill=\"#ef4444\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\">Low capital &#x2192; Low growth (Vicious cycle of poverty)</text>\n</svg>",
+    "title": "Harrod-Domar Growth Model",
+    "checklist": [
+     "Formula shown: growth rate = s / k (savings ratio / capital-output ratio)",
+     "Circular flow: National Income -> Savings -> Investment -> Capital Stock -> Output/Income",
+     "Savings ratio (s) determines how much income is available for investment",
+     "Capital-output ratio (k) determines how much capital is needed per unit of output",
+     "Vicious cycle of poverty illustrated: low income -> low savings -> low investment -> low growth",
+     "S = I assumption: all savings are channelled into productive investment"
+    ],
+    "description": "Illustrates the circular relationship in the Harrod-Domar model: savings fund investment, investment increases capital stock, capital drives output growth, and growth generates income for further savings."
+   },
+   {
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:transparent\">\n  <defs>\n    <marker id=\"gd1\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n  <!-- Title -->\n  <text x=\"250\" y=\"22\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\">Lewis Dual-Sector Model</text>\n\n  <!-- Left panel: Traditional Sector -->\n  <text x=\"130\" y=\"48\" fill=\"#ef4444\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Traditional / Agricultural</text>\n\n  <!-- Axes left -->\n  <line x1=\"40\" y1=\"60\" x2=\"40\" y2=\"240\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <line x1=\"40\" y1=\"240\" x2=\"235\" y2=\"240\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <text x=\"18\" y=\"150\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" transform=\"rotate(-90,18,150)\">Output / Wages</text>\n  <text x=\"137\" y=\"256\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\">Labour</text>\n\n  <!-- MPL curve in traditional sector (diminishing, approaching zero) -->\n  <path d=\"M50,80 Q90,100 120,160 Q150,210 220,230\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2.5\"/>\n  <text x=\"222\" y=\"222\" fill=\"#ef4444\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\">MPL</text>\n\n  <!-- Subsistence wage line -->\n  <line x1=\"40\" y1=\"190\" x2=\"235\" y2=\"190\" stroke=\"#f59e0b\" stroke-width=\"1.5\" stroke-dasharray=\"5,3\"/>\n  <text x=\"30\" y=\"186\" fill=\"#f59e0b\" font-family=\"sans-serif\" font-size=\"9\" text-anchor=\"end\">W*</text>\n\n  <!-- Surplus labour zone (where MPL < W*) -->\n  <rect x=\"145\" y=\"190\" width=\"75\" height=\"50\" fill=\"#ef4444\" fill-opacity=\"0.1\"/>\n  <text x=\"183\" y=\"210\" fill=\"#ef4444\" font-family=\"sans-serif\" font-size=\"9\" text-anchor=\"middle\">Surplus</text>\n  <text x=\"183\" y=\"220\" fill=\"#ef4444\" font-family=\"sans-serif\" font-size=\"9\" text-anchor=\"middle\">labour</text>\n\n  <!-- Arrow showing labour transfer -->\n  <line x1=\"240\" y1=\"150\" x2=\"270\" y2=\"150\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#gd1)\"/>\n  <text x=\"255\" y=\"140\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"9\" text-anchor=\"middle\">Labour</text>\n  <text x=\"255\" y=\"165\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"9\" text-anchor=\"middle\">transfer</text>\n\n  <!-- Right panel: Modern Sector -->\n  <text x=\"380\" y=\"48\" fill=\"#059669\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Modern / Industrial</text>\n\n  <!-- Axes right -->\n  <line x1=\"280\" y1=\"60\" x2=\"280\" y2=\"240\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <line x1=\"280\" y1=\"240\" x2=\"475\" y2=\"240\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <text x=\"258\" y=\"150\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" transform=\"rotate(-90,258,150)\">Output / Wages</text>\n  <text x=\"377\" y=\"256\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\">Labour</text>\n\n  <!-- Demand for labour (D1 - initial, lower) -->\n  <line x1=\"290\" y1=\"100\" x2=\"440\" y2=\"230\" stroke=\"#059669\" stroke-width=\"2\" stroke-dasharray=\"6,3\" opacity=\"0.5\"/>\n  <text x=\"445\" y=\"228\" fill=\"#059669\" font-family=\"sans-serif\" font-size=\"10\" opacity=\"0.6\">D1</text>\n\n  <!-- Demand for labour (D2 - expanded after reinvestment) -->\n  <line x1=\"310\" y1=\"80\" x2=\"460\" y2=\"210\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"465\" y=\"208\" fill=\"#059669\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\">D2</text>\n\n  <!-- Industrial wage (above subsistence) -->\n  <line x1=\"280\" y1=\"175\" x2=\"475\" y2=\"175\" stroke=\"#3b82f6\" stroke-width=\"1.5\" stroke-dasharray=\"5,3\"/>\n  <text x=\"270\" y=\"171\" fill=\"#3b82f6\" font-family=\"sans-serif\" font-size=\"9\" text-anchor=\"end\">Wi</text>\n\n  <!-- Elastic labour supply at Wi -->\n  <line x1=\"290\" y1=\"175\" x2=\"460\" y2=\"175\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"460\" y=\"170\" fill=\"#3b82f6\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\">SL</text>\n\n  <!-- Profit area -->\n  <polygon points=\"310,80 338,175 290,175 290,100\" fill=\"#059669\" opacity=\"0.12\"/>\n  <text x=\"310\" y=\"148\" fill=\"#059669\" font-family=\"sans-serif\" font-size=\"9\" text-anchor=\"middle\">Profits</text>\n  <text x=\"310\" y=\"159\" fill=\"#059669\" font-family=\"sans-serif\" font-size=\"9\" text-anchor=\"middle\">reinvested</text>\n\n  <!-- Employment levels -->\n  <line x1=\"365\" y1=\"175\" x2=\"365\" y2=\"240\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"3,3\" opacity=\"0.5\"/>\n  <text x=\"365\" y=\"252\" fill=\"#059669\" font-family=\"sans-serif\" font-size=\"9\" text-anchor=\"middle\" opacity=\"0.7\">L1</text>\n  <line x1=\"400\" y1=\"175\" x2=\"400\" y2=\"240\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <text x=\"400\" y=\"252\" fill=\"#059669\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\">L2</text>\n\n  <!-- Process description at bottom -->\n  <rect x=\"30\" y=\"275\" width=\"440\" height=\"60\" rx=\"6\" fill=\"#3b82f6\" fill-opacity=\"0.08\" stroke=\"#3b82f6\" stroke-width=\"1\"/>\n  <text x=\"250\" y=\"293\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\">1. Surplus labour (MPL near 0) migrates from agriculture to industry</text>\n  <text x=\"250\" y=\"308\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\">2. Firms pay Wi &gt; W* (subsistence), earn profits, and reinvest (D1 &#x2192; D2)</text>\n  <text x=\"250\" y=\"323\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\">3. Modern sector expands, absorbs more labour &#x2192; structural transformation</text>\n</svg>",
+    "title": "Lewis Dual-Sector Model",
+    "checklist": [
+     "Two sectors shown: Traditional (agricultural) and Modern (industrial)",
+     "Traditional sector: MPL curve showing diminishing marginal product approaching zero",
+     "Surplus labour zone identified where MPL is near zero",
+     "Subsistence wage (W*) marked in traditional sector",
+     "Arrow showing labour transfer from traditional to modern sector",
+     "Modern sector: demand for labour curves (D1 -> D2 as profits are reinvested)",
+     "Elastic labour supply at industrial wage Wi (above subsistence W*)",
+     "Profit area shown -- reinvested to expand the modern sector",
+     "Process: surplus labour migrates -> firms profit -> reinvest -> sector expands -> structural transformation"
+    ],
+    "description": "Shows the transfer of surplus labour from the low-productivity traditional (agricultural) sector to the high-productivity modern (industrial) sector, driving structural transformation and development."
+   },
+   {
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:transparent\">\n  <!-- Title -->\n  <text x=\"250\" y=\"22\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\">Prebisch-Singer Hypothesis</text>\n  <text x=\"250\" y=\"40\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" opacity=\"0.7\">Declining Terms of Trade for Primary Products</text>\n\n  <!-- Axes -->\n  <line x1=\"60\" y1=\"55\" x2=\"60\" y2=\"270\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <line x1=\"60\" y1=\"270\" x2=\"470\" y2=\"270\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n\n  <!-- Axis labels -->\n  <text x=\"30\" y=\"160\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" transform=\"rotate(-90,30,160)\">Terms of Trade Index</text>\n  <text x=\"265\" y=\"295\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\">Time</text>\n\n  <!-- Y-axis markers -->\n  <text x=\"52\" y=\"78\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"9\" text-anchor=\"end\" opacity=\"0.6\">High</text>\n  <text x=\"52\" y=\"268\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"9\" text-anchor=\"end\" opacity=\"0.6\">Low</text>\n  <line x1=\"56\" y1=\"75\" x2=\"64\" y2=\"75\" stroke=\"#e8ecf5\" stroke-width=\"1\" opacity=\"0.4\"/>\n\n  <!-- Manufactured goods ToT line (flat/rising) -->\n  <path d=\"M80,110 Q150,108 220,103 Q300,98 370,90 Q420,85 450,80\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"455\" y=\"75\" fill=\"#3b82f6\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\">Manufactures</text>\n\n  <!-- Primary products ToT line (declining with volatility) -->\n  <path d=\"M80,130 Q110,120 130,145 Q150,160 170,140 Q200,165 220,175 Q240,160 260,185 Q280,195 300,180 Q320,200 340,210 Q360,200 380,215 Q400,225 420,220 Q440,235 450,240\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2.5\"/>\n  <text x=\"455\" y=\"245\" fill=\"#ef4444\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\">Primary</text>\n  <text x=\"455\" y=\"257\" fill=\"#ef4444\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\">products</text>\n\n  <!-- Trend line for primary products (dashed, showing decline) -->\n  <line x1=\"80\" y1=\"125\" x2=\"450\" y2=\"235\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n  <text x=\"380\" y=\"270\" fill=\"#ef4444\" font-family=\"sans-serif\" font-size=\"9\" opacity=\"0.7\" text-anchor=\"middle\">Long-run trend</text>\n\n  <!-- Gap arrows showing widening terms of trade gap -->\n  <line x1=\"160\" y1=\"106\" x2=\"160\" y2=\"142\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n  <polygon points=\"160,142 156,134 164,134\" fill=\"#f59e0b\"/>\n  <polygon points=\"160,106 156,114 164,114\" fill=\"#f59e0b\"/>\n\n  <line x1=\"350\" y1=\"92\" x2=\"350\" y2=\"207\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n  <polygon points=\"350,207 346,199 354,199\" fill=\"#f59e0b\"/>\n  <polygon points=\"350,92 346,100 354,100\" fill=\"#f59e0b\"/>\n\n  <text x=\"172\" y=\"128\" fill=\"#f59e0b\" font-family=\"sans-serif\" font-size=\"9\">Gap</text>\n  <text x=\"362\" y=\"155\" fill=\"#f59e0b\" font-family=\"sans-serif\" font-size=\"9\" font-weight=\"bold\">Widening</text>\n  <text x=\"362\" y=\"167\" fill=\"#f59e0b\" font-family=\"sans-serif\" font-size=\"9\" font-weight=\"bold\">gap</text>\n\n  <!-- Reasons box at bottom -->\n  <rect x=\"65\" y=\"305\" width=\"410\" height=\"38\" rx=\"6\" fill=\"#3b82f6\" fill-opacity=\"0.08\" stroke=\"#3b82f6\" stroke-width=\"1\"/>\n  <text x=\"270\" y=\"320\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"9.5\" text-anchor=\"middle\">Causes: Low YED for commodities (Engel's Law) | High YED for manufactures</text>\n  <text x=\"270\" y=\"336\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"9.5\" text-anchor=\"middle\">Synthetic substitutes | Reduced raw material intensity | Price volatility</text>\n</svg>",
+    "title": "Prebisch-Singer: Declining Terms of Trade",
+    "checklist": [
+     "Terms of trade for primary products shown declining over time",
+     "Terms of trade for manufactured goods shown stable or rising",
+     "Widening gap between manufactures and primary products illustrated",
+     "Price volatility of primary products visible (fluctuations around trend)",
+     "Causes listed: low YED (Engel's Law), high YED for manufactures, synthetic substitutes, reduced raw material intensity",
+     "Implications: developing countries must export more to import the same volume of manufactures"
+    ],
+    "scenarios": [
+     {
+      "label": "Commodity Price Boom",
+      "description": "Temporary spikes in commodity prices (e.g., oil boom) may briefly improve the terms of trade for primary exporters, but the long-run trend remains downward as structural factors (low YED, substitutes, technology) reassert themselves."
+     },
+     {
+      "label": "Diversification Away from Primary Products",
+      "description": "If a developing country successfully diversifies into manufactured exports (e.g., through EOI), it can escape the Prebisch-Singer decline. The East Asian Tigers achieved this by investing in human capital and industry."
+     }
+    ],
+    "description": "Illustrates the Prebisch-Singer hypothesis that the terms of trade for primary products decline over time relative to manufactured goods, trapping commodity-dependent developing countries in a cycle of falling real export earnings."
+   },
+   {
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:transparent\">\n  <!-- Title -->\n  <text x=\"250\" y=\"22\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"15\" font-weight=\"bold\" text-anchor=\"middle\">Development Strategies Comparison</text>\n\n  <!-- Left column: Market-Orientated -->\n  <rect x=\"15\" y=\"38\" width=\"225\" height=\"255\" rx=\"8\" fill=\"#3b82f6\" fill-opacity=\"0.08\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n  <text x=\"127\" y=\"58\" fill=\"#3b82f6\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Market-Orientated</text>\n  <line x1=\"35\" y1=\"65\" x2=\"220\" y2=\"65\" stroke=\"#3b82f6\" stroke-width=\"1\" opacity=\"0.3\"/>\n\n  <circle cx=\"35\" cy=\"85\" r=\"3\" fill=\"#3b82f6\"/>\n  <text x=\"45\" y=\"89\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"11\">Trade liberalisation</text>\n  <circle cx=\"35\" cy=\"108\" r=\"3\" fill=\"#3b82f6\"/>\n  <text x=\"45\" y=\"112\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"11\">FDI promotion</text>\n  <circle cx=\"35\" cy=\"131\" r=\"3\" fill=\"#3b82f6\"/>\n  <text x=\"45\" y=\"135\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"11\">Subsidy removal</text>\n  <circle cx=\"35\" cy=\"154\" r=\"3\" fill=\"#3b82f6\"/>\n  <text x=\"45\" y=\"158\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"11\">Privatisation</text>\n  <circle cx=\"35\" cy=\"177\" r=\"3\" fill=\"#3b82f6\"/>\n  <text x=\"45\" y=\"181\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"11\">Floating exchange rates</text>\n  <circle cx=\"35\" cy=\"200\" r=\"3\" fill=\"#3b82f6\"/>\n  <text x=\"45\" y=\"204\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"11\">Microfinance schemes</text>\n\n  <line x1=\"35\" y1=\"220\" x2=\"220\" y2=\"220\" stroke=\"#3b82f6\" stroke-width=\"1\" opacity=\"0.3\"/>\n  <text x=\"127\" y=\"240\" fill=\"#3b82f6\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.8\">Relies on price mechanism</text>\n  <text x=\"127\" y=\"255\" fill=\"#3b82f6\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.8\">Minimal state role</text>\n  <text x=\"127\" y=\"270\" fill=\"#3b82f6\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.8\">Washington Consensus</text>\n  <text x=\"127\" y=\"285\" fill=\"#3b82f6\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.8\">(IMF/World Bank 1980s-90s)</text>\n\n  <!-- Right column: Interventionist -->\n  <rect x=\"260\" y=\"38\" width=\"225\" height=\"255\" rx=\"8\" fill=\"#059669\" fill-opacity=\"0.08\" stroke=\"#059669\" stroke-width=\"2\"/>\n  <text x=\"372\" y=\"58\" fill=\"#059669\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" text-anchor=\"middle\">Interventionist</text>\n  <line x1=\"280\" y1=\"65\" x2=\"465\" y2=\"65\" stroke=\"#059669\" stroke-width=\"1\" opacity=\"0.3\"/>\n\n  <circle cx=\"280\" cy=\"85\" r=\"3\" fill=\"#059669\"/>\n  <text x=\"290\" y=\"89\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"11\">Human capital development</text>\n  <circle cx=\"280\" cy=\"108\" r=\"3\" fill=\"#059669\"/>\n  <text x=\"290\" y=\"112\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"11\">Protectionism (infant ind.)</text>\n  <circle cx=\"280\" cy=\"131\" r=\"3\" fill=\"#059669\"/>\n  <text x=\"290\" y=\"135\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"11\">Managed exchange rates</text>\n  <circle cx=\"280\" cy=\"154\" r=\"3\" fill=\"#059669\"/>\n  <text x=\"290\" y=\"158\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"11\">Infrastructure development</text>\n  <circle cx=\"280\" cy=\"177\" r=\"3\" fill=\"#059669\"/>\n  <text x=\"290\" y=\"181\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"11\">Joint ventures with TNCs</text>\n  <circle cx=\"280\" cy=\"200\" r=\"3\" fill=\"#059669\"/>\n  <text x=\"290\" y=\"204\" fill=\"#e8ecf5\" font-family=\"sans-serif\" font-size=\"11\">Buffer stock schemes</text>\n\n  <line x1=\"280\" y1=\"220\" x2=\"465\" y2=\"220\" stroke=\"#059669\" stroke-width=\"1\" opacity=\"0.3\"/>\n  <text x=\"372\" y=\"240\" fill=\"#059669\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.8\">Active government role</text>\n  <text x=\"372\" y=\"255\" fill=\"#059669\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.8\">Corrects market failure</text>\n  <text x=\"372\" y=\"270\" fill=\"#059669\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.8\">East Asian model</text>\n  <text x=\"372\" y=\"285\" fill=\"#059669\" font-family=\"sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.8\">(S. Korea, China, etc.)</text>\n\n  <!-- Bottom bar: Other strategies -->\n  <rect x=\"15\" y=\"300\" width=\"470\" height=\"40\" rx=\"6\" fill=\"#f59e0b\" fill-opacity=\"0.1\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n  <text x=\"250\" y=\"318\" fill=\"#f59e0b\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"bold\">Other: Industrialisation (ISI/EOI) | Tourism | Aid | Debt Relief</text>\n  <text x=\"250\" y=\"334\" fill=\"#f59e0b\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" opacity=\"0.8\">Institutions: World Bank | IMF | NGOs</text>\n</svg>",
+    "title": "Development Strategies Comparison",
+    "checklist": [
+     "Market-orientated strategies listed: trade liberalisation, FDI, subsidy removal, privatisation, floating rates, microfinance",
+     "Interventionist strategies listed: human capital, protectionism, managed rates, infrastructure, joint ventures, buffer stocks",
+     "Market approach labelled as Washington Consensus / minimal state role",
+     "Interventionist approach labelled as East Asian model / active government",
+     "Other strategies shown: industrialisation (ISI/EOI), tourism, aid, debt relief",
+     "International institutions noted: World Bank, IMF, NGOs"
+    ],
+    "description": "Compares market-orientated and interventionist strategies for promoting growth and development, highlighting the key trade-offs and policy options."
+   }
+  ],
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "The Harrod-Domar model states that the rate of economic growth depends on the savings ratio (s) divided by the capital-output ratio (k): g = s/k.",
+      "Higher domestic savings fund greater investment in physical capital — machinery, infrastructure and technology — which increases the productive capacity of the economy.",
+      "If a developing country has a low savings ratio, it faces a 'savings gap' that constrains investment and growth, trapping the economy in a cycle of low income and low savings.",
+      "The model suggests that foreign aid or FDI can fill the savings gap, providing the capital needed to break out of the cycle and achieve sustained economic growth."
+     ],
+     "title": "Harrod-Domar model links savings to growth",
+     "result": "The Harrod-Domar model identifies savings and capital accumulation as the key drivers of growth, implying that developing countries need external capital to overcome domestic savings constraints."
+    },
+    {
+     "steps": [
+      "The Lewis dual-sector model divides the economy into a traditional agricultural sector with surplus labour and a modern industrial sector with higher productivity.",
+      "Wages in the modern sector are set above subsistence, attracting surplus labour from the traditional sector — this transfer is possible without reducing agricultural output due to the labour surplus.",
+      "Industrial sector profits are reinvested, expanding capacity and drawing more labour from agriculture — creating a virtuous cycle of capital accumulation and structural transformation.",
+      "Development occurs as the share of the economy in the modern sector grows, raising average productivity, real wages and national income until surplus labour is fully absorbed."
+     ],
+     "title": "Lewis model explains structural transformation",
+     "result": "The Lewis model explains development as a process of structural transformation driven by the transfer of surplus labour from low-productivity agriculture to high-productivity industry."
+    },
+    {
+     "steps": [
+      "Many developing countries rely on exports of primary commodities (agricultural products, minerals, fuels) which face volatile and often declining world prices.",
+      "Price volatility makes export revenue unpredictable, complicating government budgeting, discouraging long-term investment and creating boom-bust economic cycles.",
+      "The Prebisch-Singer hypothesis argues that the terms of trade for primary products decline relative to manufactured goods over time, meaning developing countries must export more to afford the same imports.",
+      "Resource dependency can also cause 'Dutch disease' — commodity export revenues strengthen the exchange rate, making other exports uncompetitive and hindering industrial diversification."
+     ],
+     "title": "Primary product dependency constrains development",
+     "result": "Primary product dependency traps developing countries in a cycle of volatile revenue, deteriorating terms of trade and failed diversification, constraining sustainable development."
+    },
+    {
+     "steps": [
+      "International institutions such as the World Bank, IMF and regional development banks provide loans, grants and technical assistance to developing countries to fund infrastructure, education and institutional reform.",
+      "IMF structural adjustment programmes (SAPs) require recipient countries to implement market-oriented reforms — trade liberalisation, privatisation, fiscal austerity and deregulation — as conditions for financial support.",
+      "These conditions aim to improve economic efficiency and governance, but critics argue they impose a one-size-fits-all approach that ignores local circumstances and can worsen poverty in the short run.",
+      "Aid effectiveness depends on good governance, institutional quality and policy ownership in recipient countries — without these, aid may be misallocated, fuel corruption or create dependency."
+     ],
+     "title": "International institutions can help but with conditions",
+     "result": "International institutions provide essential financial and technical support, but the conditions attached and the quality of governance in recipient countries determine whether aid translates into sustainable development."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "The Harrod-Domar model oversimplifies the growth process",
+     "content": "The model assumes a fixed capital-output ratio and that savings automatically translate into productive investment, ignoring the role of institutions, governance, human capital and technology. In practice, many developing countries with high savings rates have not achieved sustained growth due to corruption, poor infrastructure and weak property rights. Modern growth theory emphasises total factor productivity and institutional quality rather than capital accumulation alone."
+    },
+    {
+     "title": "Structural transformation does not guarantee development",
+     "content": "The Lewis model assumes that the modern sector will absorb surplus labour and that industrial profits will be reinvested productively. In reality, urbanisation without industrialisation has left many developing countries with large informal sectors offering low wages and poor conditions. Premature deindustrialisation — where countries move to services before fully industrialising — further complicates the Lewis model's predictions."
+    },
+    {
+     "title": "Aid effectiveness is highly contested",
+     "content": "Supporters argue that aid fills financing gaps, builds infrastructure and provides essential services. Critics like Dambisa Moyo argue that aid creates dependency, undermines governance through corruption and reduces incentives for domestic resource mobilisation. The evidence suggests that aid is most effective when targeted at specific sectors (health, education), accompanied by good governance, and delivered through recipient-owned strategies rather than donor-imposed conditions."
+    },
+    {
+     "title": "Diversification is essential but difficult to achieve",
+     "content": "Escaping primary product dependency requires deliberate industrial policy — investment in education, infrastructure, technology and institutions that support diversification into manufacturing and services. However, this requires resources that commodity-dependent countries often lack, creating a chicken-and-egg problem. Successful diversifiers like South Korea and Botswana combined strong governance, strategic investment and selective openness to trade, but their experiences may not be easily replicable."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "title": "Confusing economic growth with economic development",
+    "examTip": "Growth is necessary but not sufficient for development. Always explain that development requires growth to be inclusive, sustainable, and distributed across the population.",
+    "mistake": "Students use these terms interchangeably.",
+    "correction": "Growth = increase in real GDP (quantitative). Development = broader improvement in living standards, health, education, political freedom, and environmental quality (qualitative). A country can have growth without development."
+   },
+   {
+    "title": "Not stating the limitations of the HDI",
+    "mistake": "Students use HDI uncritically as a perfect measure of development.",
+    "correction": "HDI limitations: uses averages (hides inequality within countries), limited to three indicators (ignores environment, political freedom, safety), data quality varies between countries, and the weighting of indicators is arbitrary."
+   },
+   {
+    "title": "Over-relying on the Harrod-Domar model",
+    "mistake": "Students present Harrod-Domar as a complete explanation of growth without noting its assumptions and limitations.",
+    "correction": "Harrod-Domar assumes: savings are automatically channelled into investment (may not be true in LDCs with poor financial systems), a constant capital-output ratio (unrealistic), and does not account for institutional factors, governance, or human capital."
+   },
+   {
+    "title": "Not evaluating aid critically",
+    "mistake": "Students say aid either always helps or always hinders development without nuance.",
+    "correction": "Aid can help if: well-targeted, supports infrastructure/education, and builds capacity. Aid can harm if: it creates dependency, enables corruption, distorts markets, or comes with conditions that serve donor interests. The type and quality of aid matters."
+   }
+  ]
+ }
+}

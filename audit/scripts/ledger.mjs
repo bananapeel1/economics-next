@@ -11,6 +11,11 @@
 //   node audit/scripts/ledger.mjs wontfix <id> --note "<reason>"
 //   node audit/scripts/ledger.mjs reopen <id>... --note "<why>"    back to open (e.g. moved to a later packet)
 //   node audit/scripts/ledger.mjs unverified <n>                claimed-but-unconfirmed ids for packet n (gate check)
+//   node audit/scripts/ledger.mjs add <n> <id> "<title>" [--file <path>]   mint a feature item (no audit finding behind it)
+//
+// Audit findings arrive from the audit corpus and are never invented. Feature work has no
+// finding behind it, so packets that build something new mint their own ids with `add` —
+// one per acceptance check — and the same claim / confirm / unverified gate then applies.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -18,7 +23,7 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const file = path.join(root, 'audit', 'ledger.json');
 const ledger = JSON.parse(fs.readFileSync(file, 'utf8'));
-const all = () => [...ledger.code, ...ledger.content];
+const all = () => [...ledger.code, ...ledger.content, ...(ledger.feature || []), ...(ledger.marketing || [])];
 const byId = new Map(all().map((x) => [x.id, x]));
 const save = () => fs.writeFileSync(file, JSON.stringify(ledger, null, 1) + '\n');
 const today = new Date().toISOString().slice(0, 10);
@@ -27,7 +32,7 @@ const [cmd, ...rest] = process.argv.slice(2);
 const flag = (name) => { const i = rest.indexOf(`--${name}`); return i >= 0 ? rest[i + 1] : undefined; };
 const ids = rest.filter((a, i) => !a.startsWith('--') && (i === 0 || !rest[i - 1].startsWith('--')));
 const get = (id) => { const r = byId.get(id); if (!r) { console.error(`no such id: ${id}`); process.exit(1); } return r; };
-const line = (r) => `${r.id.padEnd(46)} ${String(r.sev || r.kind).padEnd(9)} ${r.status.padEnd(10)} ${(r.title || r.text).slice(0, 90)}`;
+const line = (r) => `${r.id.padEnd(46)} ${String(r.sev || r.kind).padEnd(9)} ${r.status.padEnd(10)} ${String(r.title || r.text || r.quote || '').slice(0, 90)}`;
 
 switch (cmd) {
   case 'summary': {
@@ -96,6 +101,25 @@ switch (cmd) {
     for (const r of rows) console.log(line(r));
     console.log(rows.length ? `\nGATE BLOCKED: ${rows.length} claimed item(s) not confirmed` : 'gate clear: every claimed item is confirmed');
     process.exit(rows.length ? 2 : 0);
+  }
+  case 'add': {
+    const n = Number(ids[0]);
+    const id = ids[1];
+    const title = ids[2];
+    if (!Number.isFinite(n) || !id || !title) {
+      console.error('usage: ledger.mjs add <packet> <id> "<title>" [--file <path>]');
+      process.exit(1);
+    }
+    if (byId.has(id)) { console.error(`id already exists: ${id}`); process.exit(1); }
+    ledger.feature ||= [];
+    ledger.feature.push({
+      id, kind: 'feature', title, file: flag('file') || null,
+      packet: n, status: 'open', closed_by: null, verified_by: null, evidence: null, note: null,
+      added: today,
+    });
+    save();
+    console.log(`added ${id} to packet ${n}`);
+    break;
   }
   default:
     console.log(fs.readFileSync(fileURLToPath(import.meta.url), 'utf8').split('\n').filter((l) => l.startsWith('//')).join('\n'));
