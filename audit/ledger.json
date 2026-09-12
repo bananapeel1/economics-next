@@ -524,8 +524,8 @@
    "fix": "Single source of truth for the feature matrix (one constant consumed by overview, upgrade page, paywall); pass trialEligible from /api/subscription and switch copy to 'Subscribe' when false; verify or remove the 1,200+ claim.",
    "impact": "A student told 'no card needed' who is then asked for a card (because they trialled last term) loses trust at the checkout. A student who read 'Model answers' as free on the overview hits a paywall on the page. The audience is 16-18-year-olds paying with parents' cards; inconsistent claims are the kind of thing that ends in a chargeback or a bad word in a school group chat.",
    "packet": 12,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-12",
    "verified_by": null,
    "evidence": null,
    "note": null
@@ -2020,8 +2020,8 @@
    "fix": "Apply the same entitlement the rest of the quiz bank now uses: getSubscriptionRow plus hasPremiumAccess, and cap a free account to the preview slice from lib/preview-limits.js, or decide deliberately that the fun surface is free and record that in DECISIONS.md. Do not leave it as the one unguarded door into the same content.",
    "impact": "F086 closed the two routes that serve the quiz bank to the section view and to Smart Practice. This third route still serves the same questions to any signed-in account, free or paid, with no cap. Anyone can create a free account, so the paywall on the quiz bank is one signup away from bypassed. Found by the packet verifier while checking F086, not by the September audit.",
    "packet": 12,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-12",
    "verified_by": null,
    "evidence": null,
    "note": "Found 2026-09-12 during F086 verification. Reproduce: sign in with a free account and call GET /api/fun/questions."

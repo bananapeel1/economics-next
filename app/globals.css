@@ -7232,3 +7232,13 @@ a.auth-dropdown-item:visited {
   outline: 2px solid var(--accent-green, #10b981);
   outline-offset: 2px;
 }
+
+/* The free tier, stated on the page that sells the paid one (F031) */
+.upgrade-free-note {
+  margin: 14px auto 0; max-width: 52ch; padding: 10px 16px;
+  border-radius: 10px; font-size: 13.5px; line-height: 1.5;
+  color: var(--text-secondary);
+  background: var(--bg-secondary, rgba(127,127,127,.07));
+  border: 1px solid var(--border-color, rgba(127,127,127,.22));
+}
+.upgrade-free-note strong { color: var(--text-primary); }

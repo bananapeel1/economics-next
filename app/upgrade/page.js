@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import UpgradeButton from '@/components/UpgradeButton';
+import { FREE_FEATURES, PRO_FEATURES, LIFETIME_FEATURES } from '@/lib/feature-matrix';
 
 export const metadata = {
   title: 'Revvy Learn Pro — £1 first month for new subscribers',
@@ -12,23 +13,9 @@ export const metadata = {
   },
 };
 
-const MONTHLY_FEATURES = [
-  ['Everything in Free', null],
-  ['Evaluation chains', 'The 20-mark technique, built step by step'],
-  ['Model answers', 'Top-band responses across IAS and IA2 Economics'],
-  ['Flashcards', 'Every card unlocked, and the ones you miss come back each round'],
-  ['Quizzes with marking', 'Examiner-style feedback, not just right or wrong'],
-  ['AI tutor', 'Answers in exam language, any hour of the night'],
-];
-
-const LIFETIME_FEATURES = [
-  ['Everything in Pro', null],
-  ['Both years', 'IAS and IA2, all four units'],
-  ['Every exam series', 'January and June, for as long as you need'],
-  ['Every future update', 'New topics and tools, included'],
-  ['No renewals, ever', 'One payment and you are done'],
-];
-
+/* F031: these three arrays used to live here and disagreed with the paywall overlay's own copy
+   and with the subject hubs' prose. They come from lib/feature-matrix.js now, which is also what
+   the paywall reads, so the surfaces cannot contradict each other again. */
 function Check() {
   return (
     <svg className="upgrade-check" width="15" height="15" viewBox="0 0 24 24" fill="none"
@@ -75,8 +62,18 @@ export default function UpgradePage() {
           <div className="upgrade-badge">REVVY LEARN PRO</div>
           <h1 className="upgrade-title">New subscribers get their first month for £1.</h1>
           <p className="upgrade-subtitle">
-            Every note stays free. Pro unlocks the tools that turn reading into marks.
+            The teaching stays free. Pro unlocks the tools that turn reading into marks.
           </p>
+          {/* F031: the page asserted a free tier in one line of prose and then listed only the two
+              paid plans, while the paywall overlay and the subject hubs each described the
+              boundary differently. Showing what free actually includes, from the one matrix all
+              three surfaces now read, is what stops them contradicting each other. */}
+          <div className="upgrade-free-note">
+            <strong>Free, with no account:</strong>{' '}
+            {FREE_FEATURES.map(([name], i) => (
+              <span key={name}>{i > 0 ? ' · ' : ''}{name}</span>
+            ))}
+          </div>
           <div className="upgrade-currency-pill">
             <Globe />
             <span>Pay in your local currency at checkout</span>
@@ -95,7 +92,7 @@ export default function UpgradePage() {
               <div className="upgrade-plan-sub">new subscribers &middot; then £1.99/month &middot; cancel anytime</div>
             </div>
             <UpgradeButton plan="monthly" label="Start Pro →" className="primary" />
-            <FeatureList items={MONTHLY_FEATURES} />
+            <FeatureList items={PRO_FEATURES} />
           </div>
 
           <div className="upgrade-plan">
