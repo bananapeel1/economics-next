@@ -16249,5 +16249,111 @@
    "evidence": null,
    "note": null
   }
+ ],
+ "feature": [
+  {
+   "id": "D001",
+   "kind": "feature",
+   "title": "Seeded generation is reproducible: the same (template, seed) rebuilds an identical item, a different seed does not",
+   "file": "lib/quant/rng.mjs",
+   "packet": 13.1,
+   "status": "confirmed",
+   "closed_by": "packet-13.1",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "lib/quant/index.mjs:44-46 buildItem('breakeven','abc') called twice returns identical stem+data; buildItem('breakeven','xyz') differs — verified via node -e",
+   "note": null,
+   "added": "2026-09-12"
+  },
+  {
+   "id": "D002",
+   "kind": "feature",
+   "title": "Marking is pure and deterministic: tolerance, exact match and choice steps, no network and no model call",
+   "file": "lib/quant/marking.mjs",
+   "packet": 13.1,
+   "status": "confirmed",
+   "closed_by": "packet-13.1",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "lib/quant/marking.mjs:26-73 markStep/markItem pure sync fns, no fetch/await/process.env in lib/quant (grep clean); node -e repeat call on ped item byte-identical result, choice step (verdict) scores correct/wrong as expected",
+   "note": null,
+   "added": "2026-09-12"
+  },
+  {
+   "id": "D003",
+   "kind": "feature",
+   "title": "Own figure rule: a step built correctly on the student's own wrong earlier answer scores its marks, outcome 'ofr'",
+   "file": "lib/quant/marking.mjs",
+   "packet": 13.1,
+   "status": "confirmed",
+   "closed_by": "packet-13.1",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "lib/quant/marking.mjs:56-66 ofr branch; templates/breakeven.mjs:66,77 declare ofr(v)=>fixed/v.contribution etc; node -e on buildItem('breakeven','seedtest1') with wrong contribution+63 fed through breakEven/margin scored 3/4, outcome 'ofr' on both dependent steps",
+   "note": null,
+   "added": "2026-09-12"
+  },
+  {
+   "id": "D004",
+   "kind": "feature",
+   "title": "Slip detection: a response matching a named wrong method returns outcome 'slip' with that slip's feedback, awarded 0",
+   "file": "lib/quant/marking.mjs",
+   "packet": 13.1,
+   "status": "confirmed",
+   "closed_by": "packet-13.1",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "lib/quant/marking.mjs:68-69 slip lookup; node -e on buildItem('breakeven','sliptest') with contribution response = d.price (declared slip) returned outcome 'slip', awarded 0, note matched slip.note",
+   "note": null,
+   "added": "2026-09-12"
+  },
+  {
+   "id": "D005",
+   "kind": "feature",
+   "title": "npm run quant-check exists, is static (no browser, network or database) and exits 1 on failure",
+   "file": "audit/scripts/quant-check.mjs",
+   "packet": 13.1,
+   "status": "confirmed",
+   "closed_by": "packet-13.1",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "package.json:9 quant-check script; ran npm run quant-check -> exit 0, '4 templates x 200 draws = 800 items, all clean'; then ran a scratch copy of audit/scripts/quant-check.mjs with breakeven slip value changed to equal the answer -> exit 1, 200 'slips' failures naming template breakeven and step contribution",
+   "note": null,
+   "added": "2026-09-12"
+  },
+  {
+   "id": "D006",
+   "kind": "feature",
+   "title": "The guard asserts no slip value falls within its step's tolerance of the answer, on every draw of every template",
+   "file": "audit/scripts/quant-check.mjs",
+   "packet": 13.1,
+   "status": "confirmed",
+   "closed_by": "packet-13.1",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "audit/scripts/quant-check.mjs:66-79 slip-tolerance check; same scratch-copy repro as D005 shows the guard catching an in-tolerance slip and failing with exit 1",
+   "note": null,
+   "added": "2026-09-12"
+  },
+  {
+   "id": "D007",
+   "kind": "feature",
+   "title": "Four templates (breakeven, ped, arr, multiplier) draw clean answers across 200 draws each, each with at least 500 number sets",
+   "file": "lib/quant/templates",
+   "packet": 13.1,
+   "status": "confirmed",
+   "closed_by": "packet-13.1",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "lib/quant/templates/{breakeven,ped,arr,multiplier}.mjs declare variants (15*22*76*27*7, 5*3*6*5*6, 5*5*40*7, COMBINATIONS.length*19) all far over 500; npm run quant-check's own MIN_VARIANTS=500 and 'variety' distinct-stem checks passed clean across 200 draws/template (800 items, 0 failures)",
+   "note": null,
+   "added": "2026-09-12"
+  },
+  {
+   "id": "D008",
+   "kind": "feature",
+   "title": "/admin/quant renders an item, marks it and reseeds, behind the existing admin auth gate",
+   "file": "app/admin/quant/page.js",
+   "packet": 13.1,
+   "status": "confirmed",
+   "closed_by": "packet-13.1",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/admin/layout.js:8-19 server-side admin role gate wraps all /admin/* routes including new app/admin/quant/page.js; app/admin/quant/page.js:20 buildItem renders CalculationItem (renders), CalculationItem.jsx:106 'Mark my working' button calls markItem (marks), page.js:75 'New numbers' button calls setSeed(newSeed()) which remounts CalculationItem via key=item.id (reseeds)",
+   "note": null,
+   "added": "2026-09-12"
+  }
  ]
 }

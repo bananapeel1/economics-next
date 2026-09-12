@@ -75,6 +75,12 @@ export default async function AdminLayout({ children }) {
           }}>
             PDFs
           </Link>
+          <Link href="/admin/quant" style={{
+            display: 'block', padding: '8px 20px', fontSize: 13, color: '#8892a8',
+            textDecoration: 'none', transition: 'all 0.15s'
+          }}>
+            Quant drills
+          </Link>
           <div style={{ borderTop: '1px solid #2a3045', margin: '12px 20px' }} />
           <Link href="/" style={{
             display: 'block', padding: '8px 20px', fontSize: 13, color: '#6b7a99',

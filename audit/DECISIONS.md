@@ -57,6 +57,30 @@ Append only. Every entry needs a date and the packet that made it.
   glossary definition used as a `String.replace` template so `$&` and `$1` are interpreted) goes to packet 11,
   which already touches `lib/glossary-highlight.js`. **F025** (no onboarding) is packet 99, deliberately out of
   scope per PLAN.md. Packet 13 carries no code findings; its work is entirely content items.
+- **2026-09-12 (13.1) — the drill programme is split, and quant goes before the content stage.** Founder
+  decision, recorded in `audit/DRILLS.md`: packets 13.1-13.4 (quantitative) run before packet 14; 13.5-13.8
+  (drawing) run after the top-ten content sections. The reason is in the ledger, not in taste — 110 content
+  items across 24 sections ask for quantitative material, `section_quiz` cannot hold any of it, and those
+  items are scheduled into packets 14-56. Eighteen templates authored once replace per-section quantitative
+  authoring; twelve diagram specs would instead add twelve authoring jobs.
+
+- **2026-09-12 (13.1) — a quant item is never stored; `{ template, seed }` is.** The numbers are rebuilt on
+  demand by `buildItem()`, identically, in any process. Contract: `lib/quant/schema.md`. Two consequences
+  later packets must respect: the SM-2 row in packet 13.3 stores the pair, not a question; and a template
+  can be corrected without migrating a single stored item. Packet 3 adopts this shape for its
+  quantitative-item count rather than defining its own.
+
+- **2026-09-12 (13.1) — a named wrong method ("slip") scores zero, and no slip may fall within tolerance of
+  the answer.** A slip inside tolerance marks the wrong method correct, which teaches the wrong method
+  silently and cannot be caught by reading the file. `npm run quant-check` asserts the separation on every
+  draw of every template and is the gate for any template change. It has already forced one design change:
+  a leakage total of 0.5 makes the MPC 0.5 too, so `multiplier.mjs` excludes that total.
+
+- **2026-09-12 (13.1) — feature work gets its own ledger ids.** `audit/ledger.json` gained a `feature` array
+  and `ledger.mjs` an `add` subcommand. Packets that build something new mint `D0xx` ids, one per acceptance
+  check, so `claim` / `confirm` / `unverified` gate them exactly like audit findings. Audit findings are still
+  never invented: they come only from the corpus.
+
 - **2026-09-12 (setup) — packet work runs in the worktree, and a packet is done only when verified and pushed.**
   See `audit/PROTOCOL.md`. Ship checkpoints: after packets 1, 5, 13, then every five content packets, always as
   a PR into `main` that the founder merges.

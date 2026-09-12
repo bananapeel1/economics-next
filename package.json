@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "contrast": "node audit/scripts/contrast-check.mjs"
+    "contrast": "node audit/scripts/contrast-check.mjs",
+    "quant-check": "node audit/scripts/quant-check.mjs"
   },
   "dependencies": {
     "@ai-sdk/google": "^3.0.43",
