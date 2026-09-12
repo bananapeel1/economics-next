@@ -2,13 +2,16 @@
 import { useState, useRef, useEffect } from 'react';
 import WrittenFeedbackCard from './WrittenFeedbackCard';
 
+// Tokens, not literals: these are painted as text on a 12% tint of themselves,
+// and the raw hues were tuned for a dark card (amber sat at 2.15:1 on white).
+// Each token's dark value is the literal it replaced.
 const COMMAND_COLORS = {
-  'Define':   '#3b82f6',
-  'Outline':  '#8b5cf6',
-  'Explain':  '#f59e0b',
-  'Analyse':  '#ec4899',
-  'Assess':   '#ef4444',
-  'Evaluate': '#ef4444',
+  'Define':   'var(--accent-blue)',
+  'Outline':  'var(--accent-violet)',
+  'Explain':  'var(--accent-amber)',
+  'Analyse':  'var(--accent-pink)',
+  'Assess':   'var(--accent-red)',
+  'Evaluate': 'var(--accent-red)',
 };
 
 export default function WrittenQuestionCard({
@@ -27,7 +30,7 @@ export default function WrittenQuestionCard({
   const textareaRef = useRef(null);
 
   const wordCount = answer.trim() ? answer.trim().split(/\s+/).length : 0;
-  const commandColor = COMMAND_COLORS[question.command] || '#6b7280';
+  const commandColor = COMMAND_COLORS[question.command] || 'var(--text-muted)';
 
   // Auto-focus textarea on mount
   useEffect(() => {

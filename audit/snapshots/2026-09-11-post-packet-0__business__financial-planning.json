@@ -1,0 +1,1069 @@
+{
+ "content": [
+  {
+   "title": "Sales, Revenue and Costs",
+   "sections": [
+    {
+     "id": "revenue-calculations",
+     "body": [
+      {
+       "text": "**Total revenue** (TR) is the total income a business earns from selling goods or services over a given period. It is calculated using the formula: **TR = Price x Quantity sold**. Revenue is not the same as profit — it is the top line of the income statement before any costs are deducted.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Set selling price",
+        "Sell units to customers",
+        "TR = Price x Quantity"
+       ],
+       "result": "Total revenue is the starting point for calculating profit",
+       "resultType": "good"
+      },
+      {
+       "text": "A business can increase revenue by raising the price per unit or by selling more units. However, these two levers often pull in opposite directions — raising the price typically reduces quantity demanded, so the net effect on revenue depends on **price elasticity of demand**.",
+       "type": "paragraph"
+      },
+      {
+       "text": "You should distinguish between revenue and **turnover** — in practice these terms are used interchangeably for most businesses. Revenue can also come from multiple product lines, so total revenue is often the sum of revenues from each product the business sells.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "Revenue Calculations",
+     "recall": {
+      "type": "fillin",
+      "hints": [
+       "pri__",
+       "to_",
+       "pro___________"
+      ],
+      "prompt": "Complete the revenue logic:",
+      "answers": [
+       "price",
+       "top",
+       "profitability"
+      ],
+      "template": [
+       "Total revenue = ___ multiplied by quantity sold",
+       "Revenue is the ___ line of the income statement",
+       "High revenue does not guarantee ___ if costs are too high"
+      ]
+     },
+     "keyIdea": "Total revenue is the income a business receives from selling its output, calculated as the selling price multiplied by the quantity sold.",
+     "examMatters": "Revenue calculation questions are straightforward but examiners award marks for showing the formula and your working. Always write TR = P x Q, substitute the figures, and state the answer with correct units. Losing marks on easy calculations is avoidable.",
+     "realExample": {
+      "text": "**Spotify** generates revenue from two streams: premium subscriptions and advertising on the free tier. In 2023 Spotify's total revenue exceeded 13 billion euros, with subscription income accounting for approximately 87% of the total, demonstrating how businesses can combine pricing models to maximise revenue.",
+      "emoji": "🎵"
+     },
+     "misconception": "Students confuse revenue with profit, writing that a business with high revenue must be successful. A business can have millions in revenue and still make a loss if costs exceed income. Instead write: revenue is total income before costs are deducted, so high revenue does not guarantee profitability."
+    },
+    {
+     "id": "fixed-variable-costs",
+     "body": [
+      {
+       "text": "**Fixed costs** (FC) are costs that do not change with the level of output. Rent, salaries of permanent staff, insurance and loan repayments must all be paid whether the business produces one unit or one million. They are sometimes called **overheads**.",
+       "type": "paragraph"
+      },
+      {
+       "text": "**Variable costs** (VC) change directly in proportion to output. Raw materials, packaging and direct labour paid per unit are typical variable costs. If output doubles, total variable costs roughly double.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Total costs = Fixed costs + Variable costs",
+        "TC = FC + (VC per unit x Quantity)"
+       ],
+       "result": "Understanding cost structure is essential for pricing and profit",
+       "resultType": "good"
+      },
+      {
+       "text": "The **cost structure** of a business — the ratio of fixed to variable costs — has significant implications. A business with high fixed costs needs high sales volume to spread those costs across many units. A business with mostly variable costs is more flexible but may have higher per-unit costs.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "Fixed and Variable Costs",
+     "recall": {
+      "type": "reorder",
+      "prompt": "Classify these costs from most fixed to most variable:",
+      "shuffled": [
+       2,
+       0,
+       3,
+       1
+      ],
+      "correctOrder": [
+       "Annual factory rent",
+       "Monthly insurance premium",
+       "Raw materials per unit",
+       "Packaging cost per item"
+      ]
+     },
+     "keyIdea": "Fixed costs stay the same regardless of output, while variable costs change directly with the number of units produced, and together they form total costs.",
+     "examMatters": "Examiners often provide cost data and ask you to calculate total costs or identify fixed and variable components. Classify each cost carefully — wages can be fixed (salaried staff) or variable (piece-rate workers). Show your working clearly.",
+     "realExample": {
+      "text": "**EasyJet** has a high fixed cost structure — aircraft leases, airport charges and crew salaries must be paid regardless of how many seats are filled. This is why EasyJet aggressively discounts unsold seats close to departure, because any revenue above the tiny variable cost per passenger contributes to covering those fixed costs.",
+      "emoji": "✈️"
+     },
+     "misconception": "Students claim that fixed costs never change. Fixed costs are fixed relative to output, but they can change over time — rent may increase at renewal, or insurance premiums may rise. Instead write: fixed costs do not change with output in the short run, but they can change due to contractual renegotiation or external factors."
+    },
+    {
+     "id": "profit-and-loss",
+     "body": [
+      {
+       "text": "**Profit** is the financial reward for taking risk in business. It is calculated as **Total Revenue minus Total Costs**. If revenue exceeds costs, the business makes a profit. If costs exceed revenue, it makes a **loss**. Profit is the primary objective of most private-sector businesses.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Calculate total revenue",
+        "Subtract total costs",
+        "Positive = profit, Negative = loss"
+       ],
+       "result": "Profit is the financial measure of business success",
+       "resultType": "good"
+      },
+      {
+       "text": "You should understand the difference between **gross profit** (revenue minus cost of sales) and **net profit** (gross profit minus all other expenses including overheads, interest and tax). Net profit is the true measure of how much the business earns after everything is paid.",
+       "type": "paragraph"
+      },
+      {
+       "text": "A business can improve profit by increasing revenue, reducing costs, or both. However, cost-cutting has limits — reducing quality or staff too aggressively may damage sales in the long run. Sustainable profit growth usually requires a balance of revenue growth and cost efficiency.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "Profit and Loss",
+     "recall": {
+      "type": "fillin",
+      "hints": [
+       "Rev____",
+       "sal__",
+       "ta_"
+      ],
+      "prompt": "Complete the profit logic:",
+      "answers": [
+       "Revenue",
+       "sales",
+       "tax"
+      ],
+      "template": [
+       "Profit = Total ___ minus Total Costs",
+       "Gross profit deducts only cost of ___",
+       "Net profit deducts all expenses including overheads and ___"
+      ]
+     },
+     "keyIdea": "Profit is the surplus remaining when total costs are subtracted from total revenue, and a loss occurs when costs exceed revenue.",
+     "examMatters": "Profit calculation questions require you to show the formula, substitute figures accurately and state whether the result is a profit or loss. Examiners also ask you to suggest ways to improve profit — always consider both the revenue side and the cost side.",
+     "realExample": {
+      "text": "**Ocado** reported revenues of over 2.8 billion pounds in 2023 but still recorded a net loss due to heavy investment in technology and warehouse infrastructure. This shows that a business can generate substantial revenue yet remain unprofitable when costs — particularly fixed costs from expansion — outstrip income.",
+      "emoji": "🛒"
+     },
+     "misconception": "Students write that making a loss means the business is failing. Many successful businesses make losses in their early years while they invest in growth and build market share. Instead write: a loss means costs currently exceed revenue, but it may be a deliberate strategy during a period of investment rather than a sign of business failure."
+    }
+   ],
+   "takeaway": [
+    "Total revenue = Price x Quantity; it is income before any costs.",
+    "Fixed costs stay constant with output; variable costs change per unit.",
+    "Profit = Revenue minus Costs; a loss is not always a sign of failure."
+   ],
+   "quizIndices": [
+    0
+   ]
+  },
+  {
+   "title": "Sales Forecasting",
+   "sections": [
+    {
+     "id": "purpose-of-sales-forecasting",
+     "body": [
+      {
+       "text": "A **sales forecast** is an estimate of the value or volume of sales a business expects to achieve over a future period. It forms the foundation of most business planning — production schedules, staffing levels, raw material orders and cash flow projections all depend on how many units the business expects to sell.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Analyse past sales data",
+        "Consider market trends",
+        "Produce sales forecast"
+       ],
+       "result": "Informed planning for production, staffing and finance",
+       "resultType": "good"
+      },
+      {
+       "text": "Forecasts can be based on **quantitative methods** such as extrapolation of past trends, or **qualitative methods** such as expert opinion and market research. Most businesses use a combination, adjusting historical data with judgements about future market conditions.",
+       "type": "paragraph"
+      },
+      {
+       "text": "The accuracy of a sales forecast depends on the quality of the data, the stability of the market and the time horizon. Short-term forecasts in stable markets tend to be more accurate than long-term forecasts in dynamic or new markets where there is little historical data.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "Purpose of Sales Forecasting",
+     "recall": {
+      "type": "fillin",
+      "hints": [
+       "val__",
+       "cas_",
+       "sta______"
+      ],
+      "prompt": "Complete the sales forecasting logic:",
+      "answers": [
+       "value",
+       "cash",
+       "stability"
+      ],
+      "template": [
+       "A sales forecast estimates future sales ___ or volume",
+       "It helps plan production, staffing and ___ flow",
+       "Accuracy depends on data quality and market ___"
+      ]
+     },
+     "keyIdea": "Sales forecasting predicts future sales based on past data and market analysis, helping businesses plan production, staffing and cash flow.",
+     "examMatters": "When evaluating sales forecasts, examiners want you to discuss factors that affect accuracy — market stability, data quality and time horizon. Simply stating the forecast is useful without questioning its reliability will limit your marks.",
+     "realExample": {
+      "text": "**Zara** uses real-time sales data from its stores to forecast demand for each product line on a weekly basis. This short-cycle forecasting allows Zara to adjust production within two weeks, minimising unsold stock and ensuring popular items are replenished quickly across its global store network.",
+      "emoji": "🧥"
+     },
+     "misconception": "Students treat sales forecasts as accurate predictions of the future. Forecasts are estimates based on assumptions that may prove wrong, especially in volatile markets. Instead write: a sales forecast is a best estimate that carries inherent uncertainty, and its usefulness depends on the quality of underlying data and assumptions."
+    },
+    {
+     "id": "factors-affecting-forecasts",
+     "body": [
+      {
+       "text": "Several external and internal factors can cause actual sales to deviate from the forecast. **Consumer trends** shift as tastes, fashions and social attitudes change. A product that was growing steadily may see demand collapse if consumer preferences move in a different direction.",
+       "type": "paragraph"
+      },
+      {
+       "text": "**Economic conditions** such as changes in income levels, interest rates and unemployment directly affect consumer spending power. During a recession, demand for non-essential products falls sharply, making forecasts based on boom-time data unreliable.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Competitor launches rival product",
+        "Market share is redistributed",
+        "Original forecast becomes inaccurate"
+       ],
+       "result": "Actual sales fall below the forecast",
+       "resultType": "bad"
+      },
+      {
+       "text": "**Seasonal variations** are more predictable — ice cream sales peak in summer, toy sales surge before Christmas. Businesses that understand seasonal patterns can adjust their forecasts accordingly, but unexpected weather or events can still disrupt even well-established seasonal trends.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "Factors Affecting Sales Forecasts",
+     "recall": {
+      "type": "reorder",
+      "prompt": "Order these from most to least predictable impact on forecasts:",
+      "shuffled": [
+       3,
+       1,
+       0,
+       2
+      ],
+      "correctOrder": [
+       "Seasonal demand patterns",
+       "Gradual changes in consumer trends",
+       "Economic recession reducing spending power",
+       "Sudden competitor entry or political shock"
+      ]
+     },
+     "keyIdea": "Consumer trends, economic conditions, competitor actions and seasonal patterns can all cause actual sales to differ significantly from forecasts.",
+     "examMatters": "Examiners may give you a scenario where a forecast has proven inaccurate and ask you to explain why. Link specific factors to the deviation — do not give a generic list. If the case mentions a new competitor, explain how that competitor's entry redistributed market share.",
+     "realExample": {
+      "text": "**Huawei** saw its European smartphone sales forecasts become worthless after US government sanctions restricted its access to Google services in 2019. No amount of historical sales data could have predicted this political intervention, demonstrating how external shocks can render even sophisticated forecasts obsolete overnight.",
+      "emoji": "📱"
+     },
+     "misconception": "Students list factors that affect forecasts without explaining how each factor specifically impacts sales. Naming a factor is not analysis — you must explain the mechanism. Instead write: identify the specific factor, explain how it changes consumer behaviour or market conditions, and show why this makes the original forecast inaccurate."
+    }
+   ],
+   "takeaway": [
+    "Sales forecasts underpin production, staffing and cash flow planning.",
+    "Forecasts are estimates, not facts — accuracy depends on data and stability.",
+    "External shocks like competitor actions or recessions can invalidate forecasts."
+   ],
+   "quizIndices": [
+    1
+   ]
+  },
+  {
+   "title": "Break-Even Analysis",
+   "sections": [
+    {
+     "id": "break-even-calculation",
+     "body": [
+      {
+       "text": "The **break-even point** (BEP) is the level of output at which total revenue equals total costs. At this point, the business covers all its fixed and variable costs but earns zero profit. The formula is: **BEP = Fixed Costs / (Selling Price per unit - Variable Cost per unit)**.",
+       "type": "paragraph"
+      },
+      {
+       "text": "The denominator — selling price minus variable cost — is called the **contribution per unit**. Each unit sold contributes this amount toward covering fixed costs. Once enough units have been sold to cover all fixed costs, every additional unit sold generates pure profit.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Calculate contribution per unit",
+        "Divide fixed costs by contribution",
+        "Result is the break-even output"
+       ],
+       "result": "Business knows the minimum sales needed to avoid a loss",
+       "resultType": "good"
+      },
+      {
+       "text": "For example, if fixed costs are 10,000 pounds, the selling price is 20 pounds and the variable cost is 12 pounds, the contribution per unit is 8 pounds. BEP = 10,000 / 8 = 1,250 units. The business must sell at least 1,250 units to break even.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "Break-Even Calculation",
+     "recall": {
+      "type": "fillin",
+      "hints": [
+       "Con__________",
+       "Var_____",
+       "pro___"
+      ],
+      "prompt": "Complete the break-even formula:",
+      "answers": [
+       "Contribution",
+       "Variable",
+       "profit"
+      ],
+      "template": [
+       "BEP = Fixed Costs / ___ per unit",
+       "Contribution = Selling Price minus ___ Cost per unit",
+       "At break-even the business makes zero ___"
+      ]
+     },
+     "keyIdea": "The break-even point is the output level where total revenue exactly equals total costs, meaning the business makes neither a profit nor a loss.",
+     "examMatters": "Break-even calculation questions are very common. Always show the formula, identify contribution per unit, and present the final answer with units. If asked to show break-even on a chart, label both axes, plot the TR and TC lines, and mark the break-even point clearly.",
+     "realExample": {
+      "text": "**Domino's Pizza** franchisees calculate their break-even point before signing a franchise agreement to ensure the local market can support enough sales. With high fixed costs from rent, equipment and franchise fees, a typical outlet might need to sell 200 pizzas per day to break even, guiding location decisions.",
+      "emoji": "🍕"
+     },
+     "misconception": "Students think break-even is the target for a business. Breaking even means zero profit — it is the minimum acceptable level of sales, not the goal. Instead write: break-even shows the minimum output needed to cover costs, but the business aims to sell well above this level to generate a worthwhile profit."
+    },
+    {
+     "id": "break-even-charts",
+     "body": [
+      {
+       "text": "A **break-even chart** is a graph with output (units) on the horizontal axis and costs/revenue (pounds) on the vertical axis. Three lines are plotted: **fixed costs** (a horizontal line), **total costs** (starting at fixed costs and rising with output), and **total revenue** (starting at zero and rising with output).",
+       "type": "paragraph"
+      },
+      {
+       "text": "The point where the total revenue line crosses the total cost line is the **break-even point**. To the left of this intersection, the business makes a **loss** because costs exceed revenue. To the right, it makes a **profit** because revenue exceeds costs.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Plot FC, TC and TR lines",
+        "Identify the intersection point",
+        "Read break-even output from x-axis"
+       ],
+       "result": "Visual representation of profit, loss and margin of safety",
+       "resultType": "good"
+      },
+      {
+       "text": "The **margin of safety** is the difference between the actual or forecast output and the break-even output. A large margin of safety means the business can absorb a significant fall in sales before it starts making a loss. It is calculated as: **Margin of Safety = Actual Output - Break-even Output**.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "Break-Even Charts",
+     "recall": {
+      "type": "reorder",
+      "prompt": "Order the steps to draw a break-even chart:",
+      "shuffled": [
+       2,
+       0,
+       3,
+       1
+      ],
+      "correctOrder": [
+       "Draw axes: output on x-axis, costs/revenue on y-axis",
+       "Plot the fixed cost line as a horizontal line",
+       "Plot total costs starting from fixed costs, rising with output",
+       "Plot total revenue from the origin, mark the intersection as BEP"
+      ]
+     },
+     "keyIdea": "A break-even chart plots total revenue and total costs against output, visually showing the break-even point, profit zone and loss zone.",
+     "examMatters": "Break-even chart questions require precise drawing. Label both axes with correct units, start the TC line at fixed costs not zero, and clearly mark the break-even point with dotted lines to both axes. The margin of safety should be shown as a labelled distance on the x-axis.",
+     "realExample": {
+      "text": "**The National Theatre** uses break-even charts when planning new productions to determine how many seats must be sold per performance to cover production costs. A West End show with high fixed costs from set design and marketing might need 75% seat occupancy to break even, making the margin of safety critical to decision-making.",
+      "emoji": "🎭"
+     },
+     "misconception": "Students draw break-even charts with the total cost line starting at zero. Total costs include fixed costs, so the TC line must start at the level of fixed costs on the y-axis, not at the origin. Instead write: the total cost line begins at the fixed cost level because these costs exist even when output is zero."
+    },
+    {
+     "id": "break-even-evaluation",
+     "body": [
+      {
+       "text": "Break-even analysis offers several clear benefits. It tells the business the **minimum output** needed to avoid a loss, helps with **pricing decisions** by showing how price changes affect the break-even point, and provides a simple visual tool that is easy for non-financial managers to understand.",
+       "type": "paragraph"
+      },
+      {
+       "text": "However, it has significant limitations. It assumes the selling price is **constant at all output levels**, which ignores the reality that businesses often offer discounts for bulk purchases. It also assumes **variable costs per unit are constant**, ignoring economies of scale or rising input prices.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Assumes constant price and costs",
+        "Real-world prices and costs fluctuate"
+       ],
+       "result": "Break-even output is an estimate, not a precise figure",
+       "resultType": "neutral"
+      },
+      {
+       "text": "Furthermore, break-even analysis only considers **costs and revenue** — it ignores other factors such as cash flow timing, market conditions and competitor behaviour. A business might sell above break-even but still fail if customers pay late and cash runs out before costs are due.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "Evaluating Break-Even Analysis",
+     "recall": {
+      "type": "fillin",
+      "hints": [
+       "con_____",
+       "eco______",
+       "tim___"
+      ],
+      "prompt": "Complete the break-even evaluation:",
+      "answers": [
+       "constant",
+       "economies",
+       "timing"
+      ],
+      "template": [
+       "Break-even assumes selling price is ___ at all output levels",
+       "It ignores ___ of scale that reduce unit costs at high output",
+       "It does not account for cash flow ___ issues"
+      ]
+     },
+     "keyIdea": "Break-even analysis is a useful planning tool, but it relies on assumptions about constant prices and costs that rarely hold in real business situations.",
+     "examMatters": "Evaluation of break-even analysis is a common higher-mark question. Examiners want you to discuss both strengths and limitations, and to explain how the assumptions limit its real-world usefulness. A one-sided answer — either entirely positive or entirely negative — will score poorly.",
+     "realExample": {
+      "text": "**Tata Steel UK** found that its break-even analysis significantly underestimated the true break-even point when energy prices surged in 2022. The assumption of constant variable costs proved dangerously optimistic, demonstrating how external cost shocks can invalidate break-even calculations.",
+      "emoji": "🏭"
+     },
+     "misconception": "Students present break-even analysis as if it gives a definitive answer. It is a model based on simplifying assumptions, not a precise prediction. Instead write: break-even analysis provides a useful estimate for planning, but its accuracy is limited by the assumptions of constant prices, costs and the exclusion of cash flow timing."
+    }
+   ],
+   "takeaway": [
+    "BEP = Fixed Costs / Contribution per unit; it shows minimum viable output.",
+    "Break-even charts visually show profit zones, loss zones and margin of safety.",
+    "The model assumes constant prices and costs, which limits real-world accuracy."
+   ],
+   "quizIndices": [
+    2
+   ],
+   "practiceIndices": [
+    0
+   ]
+  },
+  {
+   "title": "Cash-Flow Forecasting",
+   "sections": [
+    {
+     "id": "cash-flow-basics",
+     "body": [
+      {
+       "text": "**Cash flow** refers to the actual movement of money into (**cash inflows**) and out of (**cash outflows**) a business over a period of time. Cash inflows come from sales revenue, loans, investment and asset sales. Cash outflows include payments for raw materials, wages, rent, loan repayments and tax.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Cash inflows arrive from sales and investment",
+        "Cash outflows leave for costs and debts",
+        "Net cash flow = Inflows minus Outflows"
+       ],
+       "result": "Positive net cash flow means more came in than went out",
+       "resultType": "good"
+      },
+      {
+       "text": "The critical distinction is between **cash flow** and **profit**. A business can be profitable on paper but still run out of cash if customers pay late or if large bills are due before revenue arrives. Cash flow is about **timing** — when money actually enters and leaves the bank account.",
+       "type": "paragraph"
+      },
+      {
+       "text": "Poor cash flow management is the number one cause of small business failure. Even growing businesses can fail if they expand faster than their cash inflows can support, a problem known as **overtrading**.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "Cash Flow Basics",
+     "recall": {
+      "type": "fillin",
+      "hints": [
+       "out_____",
+       "tim___",
+       "cas_"
+      ],
+      "prompt": "Complete the cash flow logic:",
+      "answers": [
+       "outflows",
+       "timing",
+       "cash"
+      ],
+      "template": [
+       "Net cash flow = Cash inflows minus Cash ___",
+       "Cash flow is about the ___ of money movements",
+       "A profitable business can still fail if it runs out of ___"
+      ]
+     },
+     "keyIdea": "Cash flow is the movement of money into and out of a business, and running out of cash is the most common reason small businesses fail.",
+     "examMatters": "The distinction between profit and cash flow is a favourite exam topic. Examiners reward students who can explain with an example why a profitable business might face a cash crisis — for instance, when customers take 90 days to pay but suppliers demand payment in 30 days.",
+     "realExample": {
+      "text": "**Carillion**, the UK construction giant, collapsed in 2018 despite having billions in contracted revenue. The company's cash flow was devastated by late-paying government contracts and aggressive use of supplier payment terms, proving that even large, profitable-looking companies can fail when cash runs out.",
+      "emoji": "🏗️"
+     },
+     "misconception": "Students equate profit with cash flow, assuming a profitable business always has cash available. Profit is an accounting measure recorded when a sale is made, but cash only flows when payment is actually received. Instead write: profit records revenue when earned, but cash flow tracks when money actually moves — a business can be profitable yet cash-poor."
+    },
+    {
+     "id": "cash-flow-forecasts",
+     "body": [
+      {
+       "text": "A **cash-flow forecast** is a financial document that estimates the expected cash inflows and outflows for each month over a future period, typically 12 months. It shows the **net cash flow** for each month and the **cumulative closing balance** — the total cash position at the end of each month.",
+       "type": "paragraph"
+      },
+      {
+       "text": "The forecast allows managers to identify months where cash outflows are expected to exceed inflows, creating a negative net cash flow. By spotting these shortfalls in advance, the business can arrange finance — such as an overdraft — before the crisis hits.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Estimate monthly inflows and outflows",
+        "Calculate net cash flow per month",
+        "Identify months with negative balances"
+       ],
+       "result": "Arrange finance in advance to cover shortfalls",
+       "resultType": "good"
+      },
+      {
+       "text": "Like all forecasts, cash-flow predictions are only as reliable as the assumptions behind them. If sales are overestimated or costs are underestimated, the forecast may paint a misleadingly positive picture. Regular comparison of forecast versus actual figures allows the business to adjust its plans.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "Cash-Flow Forecasts",
+     "recall": {
+      "type": "reorder",
+      "prompt": "Order the cash-flow forecast calculation steps:",
+      "shuffled": [
+       3,
+       1,
+       0,
+       2
+      ],
+      "correctOrder": [
+       "Start with the opening cash balance for the month",
+       "Add all expected cash inflows for the month",
+       "Subtract all expected cash outflows for the month",
+       "The result is the closing balance, carried forward as next month's opening"
+      ]
+     },
+     "keyIdea": "A cash-flow forecast predicts monthly inflows and outflows to identify periods when the business may need additional finance to avoid running out of cash.",
+     "examMatters": "Cash-flow forecast questions often provide a partially completed table and ask you to fill in missing figures. Practise the structure: opening balance + net cash flow = closing balance. The closing balance of one month becomes the opening balance of the next.",
+     "realExample": {
+      "text": "**UK farming businesses** rely heavily on cash-flow forecasts because their revenue is seasonal — harvest income arrives in late summer, but costs such as seed, fertiliser and machinery run throughout the year. Without accurate forecasting, a farm could run out of cash in spring just when planting costs are highest.",
+      "emoji": "🌾"
+     },
+     "misconception": "Students confuse a cash-flow forecast with an income statement. The income statement shows revenue and costs for a period, while the cash-flow forecast tracks when cash physically enters and leaves the bank account. Instead write: a cash-flow forecast focuses on the timing of actual cash movements, not on when revenue is earned or costs are incurred in accounting terms."
+    },
+    {
+     "id": "improving-cash-flow",
+     "body": [
+      {
+       "text": "When a business identifies a potential cash flow problem, it has several strategies available. On the **inflow side**, it can offer early payment discounts to customers, chase overdue invoices more aggressively, demand deposits on large orders, or switch from credit sales to cash sales.",
+       "type": "paragraph"
+      },
+      {
+       "text": "On the **outflow side**, the business can negotiate longer payment terms with suppliers, lease equipment instead of buying it outright, reduce stockholding to free up cash tied up in inventory, or delay non-essential spending until cash flow improves.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Speed up customer payments",
+        "Delay supplier payments",
+        "Reduce cash tied in stock"
+       ],
+       "result": "More cash available when the business needs it most",
+       "resultType": "good"
+      },
+      {
+       "text": "Each method has trade-offs. Chasing customers aggressively may damage relationships. Delaying supplier payments may lead to worse terms or loss of supply. The business must balance cash flow improvement against maintaining good stakeholder relationships.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "Improving Cash Flow",
+     "recall": {
+      "type": "fillin",
+      "hints": [
+       "dis______",
+       "pay____",
+       "sto__"
+      ],
+      "prompt": "Complete the cash flow improvement logic:",
+      "answers": [
+       "discounts",
+       "payment",
+       "stock"
+      ],
+      "template": [
+       "Speed up inflows by offering early payment ___ to customers",
+       "Delay outflows by negotiating longer ___ terms with suppliers",
+       "Reduce cash tied up in ___ by ordering smaller quantities"
+      ]
+     },
+     "keyIdea": "Businesses can improve cash flow by speeding up inflows, delaying outflows, or securing short-term finance to bridge timing gaps.",
+     "examMatters": "When recommending ways to improve cash flow, examiners want you to consider the impact on other stakeholders. Delaying supplier payments may damage the supply relationship. Always evaluate the trade-offs, not just the cash flow benefit.",
+     "realExample": {
+      "text": "**Tesco** famously improved its cash flow by negotiating extended payment terms with suppliers — paying them after 30 to 90 days while receiving cash from customers at the point of sale. This created a substantial cash float that Tesco could invest, though it placed significant pressure on smaller suppliers who needed earlier payment.",
+      "emoji": "🛒"
+     },
+     "misconception": "Students suggest borrowing as the first solution to cash flow problems. Borrowing adds interest costs and future outflows, potentially worsening the problem long-term. Instead write: improving cash flow should first focus on managing the timing of existing inflows and outflows before resorting to additional borrowing."
+    }
+   ],
+   "takeaway": [
+    "Cash flow is about timing, not profit — profitable firms can run out of cash.",
+    "Forecasts identify months when extra finance is needed before a crisis hits.",
+    "Improve cash flow by speeding inflows and delaying outflows, but mind the trade-offs."
+   ],
+   "quizIndices": [
+    3
+   ],
+   "practiceIndices": [
+    1
+   ]
+  },
+  {
+   "title": "Budgets",
+   "sections": [
+    {
+     "id": "purpose-of-budgets",
+     "body": [
+      {
+       "text": "A **budget** is a financial target or plan for a given period, setting out the expected income and expenditure for a department, project or the entire business. Budgets translate strategic objectives into concrete financial targets — they turn \"we want to grow sales\" into \"we plan to spend 50,000 pounds on marketing to generate 200,000 pounds of revenue.\"",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Set financial targets for the period",
+        "Allocate resources to departments",
+        "Monitor actual vs budget monthly"
+       ],
+       "result": "Controlled spending and clear accountability",
+       "resultType": "good"
+      },
+      {
+       "text": "Budgets serve several purposes. They **control spending** by setting limits, **motivate managers** by giving them targets, **coordinate activities** across departments, and provide a basis for **performance evaluation**. A manager who delivers results within budget is clearly performing well.",
+       "type": "paragraph"
+      },
+      {
+       "text": "However, budgets can also be restrictive. If set too tightly, they may discourage initiative and risk-taking. Managers may focus on staying within budget rather than pursuing opportunities that require additional spending but would generate higher returns.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "Purpose of Budgets",
+     "recall": {
+      "type": "fillin",
+      "hints": [
+       "spe_____",
+       "mot_____",
+       "bud___"
+      ],
+      "prompt": "Complete the budgeting logic:",
+      "answers": [
+       "spending",
+       "motivate",
+       "budget"
+      ],
+      "template": [
+       "A budget sets ___ limits and revenue targets for a period",
+       "Budgets help control spending and ___ managers with targets",
+       "The value lies in comparing actual results against the ___"
+      ]
+     },
+     "keyIdea": "A budget is a financial plan that sets spending limits and revenue targets for a future period, providing a benchmark against which actual performance is measured.",
+     "examMatters": "Examiners often ask about the benefits and drawbacks of budgeting. A balanced answer discusses how budgets aid planning and control while also noting they can be inflexible and may become outdated in rapidly changing markets. Always link your answer to the business context.",
+     "realExample": {
+      "text": "**UK state schools** operate under strict annual budgets set by local authorities and central government funding. Head teachers must allocate fixed budgets across staffing, resources and maintenance, making difficult trade-offs when costs rise faster than budget allocations allow.",
+      "emoji": "🎓"
+     },
+     "misconception": "Students assume budgets are always accurate predictions of what will happen. A budget is a plan and a target, not a forecast of actual results. Instead write: a budget sets out what the business plans to spend and earn, but actual results will almost always differ — the value lies in comparing actual against budget to identify and respond to variances."
+    },
+    {
+     "id": "variance-analysis",
+     "body": [
+      {
+       "text": "**Variance analysis** compares actual financial performance against the budget. A **favourable variance** occurs when actual results are better than budgeted — for example, revenue higher than expected or costs lower than expected. An **adverse variance** is the opposite — lower revenue or higher costs than planned.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Compare actual figures to budget",
+        "Identify favourable or adverse variances",
+        "Investigate causes of significant variances"
+       ],
+       "result": "Management action to correct problems or replicate success",
+       "resultType": "good"
+      },
+      {
+       "text": "The real value of variance analysis is not just identifying the difference but **investigating why** it occurred. An adverse cost variance might reveal waste in production, unexpected price increases from suppliers, or poor stock management. A favourable sales variance might reflect a successful marketing campaign worth repeating.",
+       "type": "paragraph"
+      },
+      {
+       "text": "Managers should focus on **significant variances** rather than investigating every small difference. Setting a threshold — for example, investigating any variance greater than 5% — allows managers to focus their time where it matters most.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "Variance Analysis",
+     "recall": {
+      "type": "reorder",
+      "prompt": "Order the variance analysis process:",
+      "shuffled": [
+       2,
+       0,
+       3,
+       1
+      ],
+      "correctOrder": [
+       "Set the budget targets for the period",
+       "Record actual income and expenditure as the period progresses",
+       "Calculate the variance between budget and actual figures",
+       "Investigate significant variances and take corrective action"
+      ]
+     },
+     "keyIdea": "A variance is the difference between a budgeted figure and the actual figure, classified as favourable if it improves profit or adverse if it worsens it.",
+     "examMatters": "Variance analysis questions typically provide budget and actual figures and ask you to calculate and interpret the variances. Always state whether each variance is favourable or adverse and explain a possible cause. Examiners reward students who go beyond the calculation to analyse why the variance occurred.",
+     "realExample": {
+      "text": "**NHS trusts** use variance analysis monthly to compare actual spending against departmental budgets. A hospital that discovers a 15% adverse variance in agency staffing costs can investigate whether it is caused by higher-than-expected sickness absence and take corrective action before the budget is exhausted.",
+      "emoji": "🏥"
+     },
+     "misconception": "Students assume a favourable variance is always good. A favourable cost variance might mean the business underspent on essential maintenance or training, which could lead to bigger problems later. Instead write: favourable variances are not automatically positive — underspending may indicate neglected investment that harms the business in the long run."
+    }
+   ],
+   "takeaway": [
+    "Budgets set spending limits and revenue targets for planning and control.",
+    "Favourable variances improve profit; adverse variances worsen it.",
+    "Investigate significant variances to find causes and take corrective action."
+   ],
+   "quizIndices": [
+    4
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "options": [
+    "£3,000",
+    "£7,000",
+    "£10,000",
+    "£6,000"
+   ],
+   "question": "A business sells 500 units at £20 each. Variable costs are £8 per unit and fixed costs are £3,000. What is the total profit?",
+   "explanation": "Total Revenue = 500 x £20 = £10,000. Total Variable Costs = 500 x £8 = £4,000. Total Costs = £4,000 + £3,000 = £7,000. Profit = £10,000 - £7,000 = £3,000.",
+   "correctIndex": 0
+  },
+  {
+   "options": [
+    "1,200 units",
+    "2,000 units",
+    "3,000 units",
+    "1,500 units"
+   ],
+   "question": "If fixed costs are £60,000, selling price is £50 and variable cost per unit is £30, what is the break-even output?",
+   "explanation": "Contribution per unit = £50 - £30 = £20. Break-even output = £60,000 / £20 = 3,000 units.",
+   "correctIndex": 2
+  },
+  {
+   "options": [
+    "3,500 units",
+    "1,500 units",
+    "5,000 units",
+    "8,500 units"
+   ],
+   "question": "A business forecasts sales of 5,000 units. The break-even point is 3,500 units. What is the margin of safety?",
+   "explanation": "Margin of Safety = Actual Output - Break-Even Output = 5,000 - 3,500 = 1,500 units. This means sales could fall by 1,500 units before the business starts making a loss.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "£500",
+    "-£1,500",
+    "-£500",
+    "£10,500"
+   ],
+   "question": "In a cash-flow forecast, the opening balance is £2,000, total inflows are £8,000, and total outflows are £9,500. What is the closing balance?",
+   "explanation": "Net Cash Flow = £8,000 - £9,500 = -£1,500. Closing Balance = £2,000 + (-£1,500) = £500. The business still has a positive closing balance despite negative net cash flow.",
+   "correctIndex": 0
+  },
+  {
+   "options": [
+    "It assumes all output is sold",
+    "It is useful for single-product businesses",
+    "It assumes a constant selling price",
+    "It ignores changes in fixed costs"
+   ],
+   "question": "Which of the following is NOT a limitation of break-even analysis?",
+   "explanation": "Being useful for single-product businesses is a feature, not a limitation. The fact that it only works well for a single product is a limitation (most businesses sell multiple products). The other options are genuine limitations.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "A favourable variance of £800",
+    "An adverse variance of £800",
+    "A favourable variance of £5,800",
+    "No variance"
+   ],
+   "question": "A budgeted cost of £5,000 and an actual cost of £5,800 would result in:",
+   "explanation": "Actual costs (£5,800) are higher than budgeted costs (£5,000), so costs are worse than expected. This is an adverse variance of £800.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "Historical budgeting",
+    "Incremental budgeting",
+    "Zero-based budgeting",
+    "Flexible budgeting"
+   ],
+   "question": "Which type of budgeting requires every item of expenditure to be justified from scratch?",
+   "explanation": "Zero-based budgeting requires managers to justify every item of spending from zero each budget period, rather than simply adjusting last year's figures. Historical/incremental budgeting uses past figures as a starting point.",
+   "correctIndex": 2
+  },
+  {
+   "options": [
+    "Profit is always equal to cash",
+    "Customers may not pay on time and costs may be paid before revenue is received",
+    "Fixed costs are always paid in advance",
+    "Variable costs do not affect cash flow"
+   ],
+   "question": "A profitable business can still face cash-flow problems because:",
+   "explanation": "Profit is not the same as cash. A business may record high sales (profit) but if customers pay on credit, the cash has not yet been received. Meanwhile, suppliers and wages still need to be paid, creating cash-flow problems.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "A stable economy with low inflation",
+    "A well-established product in a mature market",
+    "A brand-new business with no historical data",
+    "Consistent consumer spending patterns"
+   ],
+   "question": "Which factor would make sales forecasting MORE difficult?",
+   "explanation": "A brand-new business has no past sales data to base forecasts on, making predictions much harder. Stable economies, mature markets, and consistent consumer spending all make forecasting easier.",
+   "correctIndex": 2
+  },
+  {
+   "options": [
+    "Variable costs fall to zero",
+    "Fixed costs are spread over a larger number of units",
+    "Selling price increases with output",
+    "Total costs decrease as output rises"
+   ],
+   "question": "Average cost per unit will typically fall as output increases because:",
+   "explanation": "As output increases, the same fixed costs are divided by more units, so the fixed cost per unit falls. This causes the average cost per unit to fall. Variable costs per unit remain constant and total costs still increase.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "Total revenue exceeds total cost by the maximum amount",
+    "Total revenue equals total cost, resulting in neither profit nor loss",
+    "Fixed costs equal variable costs",
+    "The business reaches maximum capacity"
+   ],
+   "question": "Break-even output is the point where:",
+   "explanation": "Break-even occurs where total revenue = total cost (TR = TC). At this point, the business covers all its costs but makes zero profit.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "Raw materials",
+    "Delivery charges per unit",
+    "Annual rent on premises",
+    "Packaging costs per unit"
+   ],
+   "question": "Which of the following is a fixed cost?",
+   "explanation": "Rent is a fixed cost because it remains the same regardless of the level of output. Variable costs like raw materials change with the quantity produced.",
+   "correctIndex": 2
+  },
+  {
+   "options": [
+    "To calculate a business's profit or loss",
+    "To predict the timing of cash inflows and outflows to ensure the business can meet its financial obligations",
+    "To determine the market share of a business",
+    "To calculate the break-even output"
+   ],
+   "question": "What is the purpose of a cash flow forecast?",
+   "explanation": "A cash flow forecast predicts when cash enters and leaves the business, helping managers identify potential shortfalls and plan borrowing or spending accordingly.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "Selling price per unit minus total costs",
+    "Selling price per unit minus variable cost per unit",
+    "Total revenue minus total fixed costs",
+    "Fixed costs divided by number of units sold"
+   ],
+   "question": "The formula for contribution per unit is:",
+   "explanation": "Contribution per unit = selling price - variable cost per unit. This amount 'contributes' towards covering fixed costs and then generating profit.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "The actual amount of money a business has in its bank account",
+    "A financial plan that sets spending and revenue targets for a future period",
+    "A record of all past transactions",
+    "The total debt of a business"
+   ],
+   "question": "What is a budget?",
+   "explanation": "A budget is a forward-looking financial plan that sets targets for income and expenditure, helping managers control costs and coordinate activities.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "4,000 units",
+    "6,667 units",
+    "10,000 units",
+    "3,333 units"
+   ],
+   "question": "A firm has fixed costs of $120,000 per year, sells its product at $30, and has variable costs of $18 per unit. What is the break-even output?",
+   "explanation": "Break-even = fixed costs / contribution per unit = $120,000 / ($30 - $18) = $120,000 / $12 = 10,000 units.",
+   "correctIndex": 2
+  },
+  {
+   "options": [
+    "$13,000",
+    "-$3,000",
+    "$3,000",
+    "-$8,000"
+   ],
+   "question": "A business has the following cash flow data for March: opening balance $5,000, cash inflows $20,000, cash outflows $28,000. What is the closing balance?",
+   "explanation": "Closing balance = opening balance + inflows - outflows = $5,000 + $20,000 - $28,000 = -$3,000. The business has a negative cash balance and needs additional funding.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "5,000 units",
+    "10,000 units",
+    "15,000 units",
+    "2,500 units"
+   ],
+   "question": "A company sells 15,000 units at $20 each. Variable costs are $12 per unit and fixed costs are $80,000. What is the margin of safety?",
+   "explanation": "Break-even = $80,000 / ($20 - $12) = 10,000 units. Margin of safety = actual output - break-even = 15,000 - 10,000 = 5,000 units.",
+   "correctIndex": 0
+  },
+  {
+   "options": [
+    "A favourable variance of $5,000",
+    "An adverse variance of $5,000",
+    "A balanced budget",
+    "A revenue surplus"
+   ],
+   "question": "A department was budgeted to spend $50,000 on materials but actually spent $55,000. This is known as:",
+   "explanation": "Spending $5,000 more than budgeted is an adverse (unfavourable) variance, indicating costs exceeded the plan and profits may be lower than expected.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "Close the business permanently",
+    "Arrange an overdraft facility in advance to cover the seasonal cash shortfall",
+    "Increase ice cream prices in winter to boost revenue",
+    "Stop paying suppliers during winter months"
+   ],
+   "question": "A seasonal ice cream business forecasts negative cash flow from November to February. Which action is most appropriate?",
+   "explanation": "Seasonal businesses can predict cash shortfalls using forecasts and arrange overdraft facilities in advance. This is a planned, temporary measure to bridge the gap.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "It is always perfectly accurate because costs and revenues are easy to predict",
+    "It helps estimate the minimum sales needed but assumes constant selling price and costs, which is unrealistic in practice",
+    "It is useless because new businesses have no data",
+    "It can only be used by manufacturing businesses"
+   ],
+   "question": "Evaluate the usefulness of break-even analysis for a new business.",
+   "explanation": "Break-even analysis provides a useful target for minimum sales but assumes fixed selling prices, linear costs, and single products, which may not reflect real trading conditions.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "No, because profit is the only measure that matters",
+    "Yes, because a profitable business can still fail if it runs out of cash to pay bills; cash flow is critical for short-term survival",
+    "No, because cash flow and profit are the same thing",
+    "Yes, but only for businesses in the service sector"
+   ],
+   "question": "A manager argues that cash flow forecasting is more important than profit forecasting for a start-up. Is this justified?",
+   "explanation": "A business can be profitable on paper but insolvent if cash is tied up in stock or debtors. Cash flow forecasting ensures the business can meet day-to-day obligations.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "They are always effective because they prevent overspending completely",
+    "They provide clear targets and enable variance analysis, but may be based on inaccurate forecasts and can discourage flexibility if applied too rigidly",
+    "They are ineffective because managers always ignore them",
+    "They are only useful in the public sector"
+   ],
+   "question": "To what extent are budgets an effective tool for controlling business performance?",
+   "explanation": "Budgets help set targets and identify variances, but rigid budgets can stifle initiative, and the targets themselves may be based on flawed assumptions.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "8,200 units is too many for any business to produce",
+    "The margin of safety is only 200 units (2.4%), meaning even a small drop in demand could push the firm into a loss",
+    "Break-even analysis does not use real data",
+    "The firm should stop producing at exactly 8,000 units"
+   ],
+   "question": "A business has a break-even point of 8,000 units but currently sells 8,200 units. The manager considers this a safe position. Which challenge to this view is most valid?",
+   "explanation": "A margin of safety of just 200 units is very thin. Any decline in demand, increase in costs, or disruption could easily push sales below break-even.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "They cannot predict any future cash flows",
+    "They are based on estimates and assumptions that may prove inaccurate, particularly regarding the timing and amount of customer payments",
+    "They are illegal for businesses to use",
+    "They only cover a single day"
+   ],
+   "question": "Which is the most significant limitation of cash flow forecasts?",
+   "explanation": "Cash flow forecasts rely on assumptions about future sales, payment timing, and costs. Late payments, unexpected expenses, or lower-than-expected sales can make forecasts inaccurate.",
+   "correctIndex": 1
+  }
+ ],
+ "practice": [
+  {
+   "marks": 4,
+   "command": "Define",
+   "guidance": "Break-even output is the level of production or sales at which total revenue equals total costs (1 mark), meaning the business is making neither a profit nor a loss (1 mark). It is calculated using the formula: fixed costs divided by contribution per unit (selling price minus variable cost per unit) (1 mark). Any output above break-even generates profit, while output below break-even results in a loss (1 mark).",
+   "question": "Define the term 'break-even output'. (4 marks)"
+  },
+  {
+   "marks": 6,
+   "command": "Explain",
+   "guidance": "Reason 1: Unexpected changes in sales revenue (1 mark) — the forecast is based on predicted demand, but actual sales may be lower due to increased competition, a downturn in the economy, or seasonal fluctuations that were not anticipated (1 mark). This would cause cash inflows to fall below forecast (1 mark).\n\nReason 2: Unforeseen cost increases (1 mark) — supplier prices may rise, unexpected repair costs may occur, or new regulations may require additional spending (1 mark). These unplanned outflows would reduce the net cash flow below the forecast figure (1 mark).",
+   "question": "Explain two reasons why a cash flow forecast might prove to be inaccurate. (6 marks)"
+  },
+  {
+   "marks": 10,
+   "command": "Assess",
+   "guidance": "Benefits of budgets: provide financial targets that help managers plan and control spending (2 marks); enable variance analysis to identify areas of over- or under-spending (2 marks); support delegation by giving individual restaurant managers accountability for their own budgets (1 mark); can motivate managers if linked to performance bonuses (1 mark).\n\nLimitations: budgets may be based on inaccurate forecasts, especially during rapid growth (1 mark); inflexible budgets may prevent managers from responding to local market conditions (1 mark); managers may pad budgets to make targets easier to achieve, or cut essential spending to stay within limits (1 mark).\n\nJudgement: Budgets are a valuable management tool but should be used flexibly, with regular reviews and adjustments. For a growing chain, flexible or rolling budgets are more appropriate than fixed annual ones (1 mark).",
+   "question": "Assess the usefulness of budgets as a tool for managing business performance in a growing restaurant chain. (10 marks)"
+  },
+  {
+   "marks": 20,
+   "command": "Evaluate",
+   "guidance": "Introduction: Define break-even analysis and explain how it works — fixed costs, variable costs, contribution per unit, break-even chart (2 marks).\n\nArguments for usefulness: provides a clear sales target showing the minimum output needed to cover costs (2 marks); simple to calculate and easy to present to stakeholders such as banks (2 marks); useful for comparing different scenarios — e.g., different selling prices or cost structures (2 marks); helps identify the margin of safety, indicating how much sales can fall before losses occur (2 marks).\n\nArguments against: assumes all output is sold at the same price, which is unrealistic — businesses often offer discounts (2 marks); assumes fixed and variable costs remain constant, which is unlikely as output changes (2 marks); only considers costs and revenue — ignores qualitative factors such as competition, brand strength and market conditions (2 marks); it is a static model that provides a snapshot, not a dynamic tool for ongoing decision-making (2 marks).\n\nEvaluation: Break-even analysis is a useful starting point but should not be relied upon in isolation. It is best used alongside other tools such as cash flow forecasts, investment appraisal and market research. Its simplicity is both its strength and its weakness (2 marks).",
+   "question": "Evaluate the extent to which break-even analysis is a useful tool for business decision-making. (20 marks)"
+  },
+  {
+   "marks": 4,
+   "command": "Outline",
+   "guidance": "Way 1: Reduce costs by negotiating better terms with suppliers or cutting non-essential expenditure (1 mark), which would lower cash outflows and improve the net cash position (1 mark).\n\nWay 2: Improve the speed of cash inflows by offering early payment discounts to customers or using invoice factoring (1 mark), which converts credit sales into immediate cash (1 mark).",
+   "question": "Outline two ways a business could improve a negative cash flow position. (4 marks)"
+  }
+ ]
+}

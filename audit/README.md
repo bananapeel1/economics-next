@@ -24,6 +24,20 @@ Headline: 75% of Learn Mode section opens never pass step 0 (825 of 1,093 starts
 | `raw/econ_spec.txt`, `raw/bus_spec.txt` | Extracted text of the official Pearson IAL specifications |
 | `content-sections/*.json` | Snapshot of live content for all 43 sections (content, notes, diagrams, flashcards, quiz, practice, extras) as of the audit |
 
+## Working files (added 12 September, the setup session)
+
+| File | Contents |
+|---|---|
+| `PROTOCOL.md` | How every packet session runs: brief, build, Verify A, Verify B, gate, handoff. Read after PROGRESS, DECISIONS, NEXT |
+| `ledger.json` | Every audit item with a stable id and a packet: `F001`–`F117` code findings, `C-<section>-<kind>-<nn>` content items. Status moves open → claimed → confirmed only through the CLI |
+| `scripts/ledger.mjs` | The ledger CLI: `summary`, `packet <n>`, `show`, `claim`, `confirm`, `reject`, `wontfix`, `unverified <n>` (the gate check) |
+| `scripts/build-ledger.mjs` | Rebuilds `ledger.json` from `raw/`; idempotent and preserves statuses. Only needed if `raw/` ever changes, which it should not |
+| `../.claude/agents/packet-verifier.md` | Read-only Sonnet agent that confirms or rejects each claimed ledger id with file:line evidence (Verify A) |
+| `../.claude/agents/student-walkthrough.md` | Sonnet agent that replays a 390px first-time-student script against the dev server (Verify B) |
+
+The remediation branch lives in its own worktree: `/Users/arongijsel/Claude APP/economics-next-remediation`.
+The sibling `economics-next` folder is the marketing/SEO branch. Packet work never happens there.
+
 ## Command-word tariffs (the single most-needed fact)
 
 Every one of the 215 live practice questions uses tariffs that do not exist in IAL papers. The real sets:

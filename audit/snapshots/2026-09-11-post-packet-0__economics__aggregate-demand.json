@@ -1,0 +1,1127 @@
+{
+ "content": [
+  {
+   "title": "Components of Aggregate Demand",
+   "sections": [
+    {
+     "id": "ad-formula-and-components",
+     "body": [
+      {
+       "text": "**Aggregate demand (AD)** is the total planned expenditure on goods and services in an economy at a given price level over a given time period. It is calculated using the formula: **AD = C + I + G + (X - M)**. This is the same as the expenditure method of measuring GDP, but viewed from the demand side.",
+       "type": "paragraph"
+      },
+      {
+       "type": "bullets",
+       "items": [
+        "**C (Consumption)** -- household spending on goods and services; typically the largest component (60-70% of AD).",
+        "**I (Investment)** -- spending by firms on capital goods (machinery, factories, technology).",
+        "**G (Government spending)** -- government expenditure on public services and infrastructure (excludes transfer payments).",
+        "**(X - M) (Net exports)** -- the value of exports minus imports; positive if exports exceed imports."
+       ]
+      },
+      {
+       "text": "Understanding what drives each component is essential because any change in C, I, G or (X - M) will shift the AD curve. A rise in any component increases AD; a fall decreases it. The relative importance of each component varies between countries.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "The AD Formula",
+     "recall": {
+      "type": "fillin",
+      "hints": [
+       "_",
+       "co_________",
+       "tr_______"
+      ],
+      "prompt": "Complete the AD formula and components:",
+      "answers": [
+       "M",
+       "consumption",
+       "transfer"
+      ],
+      "template": [
+       "AD = C + I + G + (X - ___)",
+       "→ C is household ___ on goods and services",
+       "→ G excludes ___ payments like pensions and benefits"
+      ]
+     },
+     "keyIdea": "Aggregate demand is total planned spending in an economy and is calculated as AD = C + I + G + (X - M), where each component is driven by different factors.",
+     "examMatters": "Examiners expect you to state the AD formula and define each component precisely. When analysing a change in AD, identify which component is changing and explain why. Simply stating \"AD increases\" without linking to a specific component earns minimal marks.",
+     "realExample": {
+      "text": "**In the UK economy**, consumption accounts for roughly 63% of AD, government spending about 20%, investment around 17%, and net exports are typically negative at about -2%. This composition means changes in consumer confidence have the largest impact on UK aggregate demand.",
+      "emoji": "🇬🇧"
+     },
+     "misconception": "Students include transfer payments like pensions in G. Government spending in the AD formula only includes spending on goods and services (teachers' salaries, road building), not transfer payments. Instead write: G in the AD formula counts government purchases of goods and services, not transfers like benefits which are counted when recipients spend them as part of C."
+    },
+    {
+     "id": "determinants-of-consumption",
+     "body": [
+      {
+       "text": "**Consumption (C)** is household spending on goods and services. It is the largest component of AD in most economies. The main determinant is **disposable income** -- the income left after taxes and benefits. As disposable income rises, consumption rises, but not by as much because some is saved.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Disposable income rises",
+        "Households spend more (but also save more)",
+        "Consumption increases"
+       ],
+       "result": "AD shifts right -- economic activity expands",
+       "resultType": "good"
+      },
+      {
+       "text": "Other determinants include **interest rates** (lower rates reduce saving and borrowing costs, boosting consumption), **consumer confidence** (optimistic households spend more), **wealth effects** (rising house or share prices make people feel richer), and **availability of credit** (easier access to loans increases spending). Tax changes also affect disposable income directly.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "Determinants of Consumption (C)",
+     "recall": {
+      "type": "reorder",
+      "prompt": "Put the interest rate effect on consumption in order:",
+      "shuffled": [
+       2,
+       0,
+       3,
+       1
+      ],
+      "correctOrder": [
+       "Central bank cuts interest rates",
+       "Saving becomes less attractive; borrowing becomes cheaper",
+       "Households increase spending on credit-financed goods",
+       "Consumption rises, shifting AD to the right"
+      ]
+     },
+     "keyIdea": "Consumption depends on disposable income, interest rates, consumer confidence, wealth effects and the availability of credit -- it is the largest and most stable component of AD; investment is the most volatile.",
+     "examMatters": "When explaining a change in consumption, examiners want you to identify the specific factor (income, interest rates, confidence, wealth, credit) and trace the chain to AD. A vague statement like \"people spend more\" without identifying the driver is insufficient.",
+     "realExample": {
+      "text": "**UK house prices** rose by over 25% between 2020 and 2022, creating a massive positive wealth effect. Homeowners felt richer and increased their spending, boosting consumption and AD. When house prices later stalled and interest rates rose sharply in 2023, the wealth effect reversed and consumption growth slowed significantly.",
+      "emoji": "🏠"
+     },
+     "misconception": "Students write \"a rise in income means consumption rises by the same amount.\" The marginal propensity to consume is less than 1 -- households save a portion of any extra income. Instead write: consumption rises with income, but by less than the full increase because households also save a proportion, determined by the marginal propensity to save."
+    },
+    {
+     "id": "determinants-of-investment",
+     "body": [
+      {
+       "text": "**Investment (I)** is spending by firms on **capital goods** -- machinery, equipment, factories, technology and new buildings. It does not include financial investments like buying shares. Investment is the most **volatile** component of AD because it depends heavily on expectations about the future, which can change rapidly.",
+       "type": "paragraph"
+      },
+      {
+       "text": "The main determinants are **interest rates** (lower rates reduce the cost of borrowing for investment), **business confidence** (firms invest more when they expect strong future demand), **expected profitability** (higher expected returns make projects worthwhile), and **technological change** (new technology creates investment opportunities).",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Interest rates fall",
+        "Cost of borrowing decreases",
+        "More investment projects become profitable"
+       ],
+       "result": "Investment rises, shifting AD to the right",
+       "resultType": "good"
+      }
+     ],
+     "title": "Determinants of Investment (I)",
+     "recall": {
+      "type": "fillin",
+      "hints": [
+       "ca_____",
+       "bo________",
+       "co________"
+      ],
+      "prompt": "Complete the determinants of investment:",
+      "answers": [
+       "capital",
+       "borrowing",
+       "confidence"
+      ],
+      "template": [
+       "Investment is spending by firms on ___ goods",
+       "→ Lower interest rates reduce the cost of ___",
+       "→ Business ___ is often more important than interest rates"
+      ]
+     },
+     "keyIdea": "Investment depends on interest rates, business confidence, expected profits, technological change and the availability of finance -- it is the most volatile component of AD.",
+     "examMatters": "Questions on investment frequently ask you to evaluate the relative importance of different determinants. A strong answer discusses interest rates but also argues that animal spirits (business confidence) and expected demand may matter more. Use real examples to support your argument.",
+     "realExample": {
+      "text": "**Apple** invested over $20 billion in R&D in 2023, driven by expected profitability from AI and augmented reality products rather than current interest rates. When business confidence is high and firms expect technological breakthroughs, investment can surge even when borrowing costs are elevated. This shows that expectations matter as much as interest rates.",
+      "emoji": "📱"
+     },
+     "misconception": "Students assume investment only depends on interest rates. Business confidence and expected future demand are often more important, especially for large firms that fund investment from retained profits. Instead write: while interest rates affect the cost of borrowing, business confidence and expected profitability are often the primary drivers of investment decisions."
+    },
+    {
+     "id": "determinants-of-gov-spending-net-exports",
+     "body": [
+      {
+       "text": "**Government spending (G)** on goods and services is determined by fiscal policy decisions. Governments may increase G to stimulate the economy during a recession (expansionary fiscal policy) or cut G to reduce a budget deficit (austerity). G includes spending on healthcare, education, defence and infrastructure but excludes transfer payments.",
+       "type": "paragraph"
+      },
+      {
+       "text": "**Net exports (X - M)** depend on several factors. A **weaker exchange rate** makes exports cheaper and imports more expensive, improving net exports. **Higher incomes in trading partner countries** boost demand for your exports. **Relative inflation rates** affect competitiveness -- if your prices rise faster than competitors', exports become less attractive.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Exchange rate depreciates",
+        "Exports become cheaper abroad",
+        "Imports become more expensive domestically"
+       ],
+       "result": "Net exports improve, shifting AD to the right",
+       "resultType": "good"
+      }
+     ],
+     "title": "Government Spending (G) and Net Exports (X-M)",
+     "recall": {
+      "type": "reorder",
+      "prompt": "Put the exchange rate effect on net exports in order:",
+      "shuffled": [
+       3,
+       1,
+       0,
+       2
+      ],
+      "correctOrder": [
+       "Exchange rate depreciates (currency weakens)",
+       "Export prices fall in foreign currency terms",
+       "Import prices rise in domestic currency terms",
+       "Net exports improve, increasing AD"
+      ]
+     },
+     "keyIdea": "Government spending is a policy choice influenced by fiscal priorities, while net exports depend on exchange rates, relative competitiveness and trading partner incomes.",
+     "examMatters": "When analysing net exports, examiners expect you to consider the exchange rate, relative inflation, and foreign income levels. If given data on exchange rate changes, trace the effect through to exports, imports and then AD. Remember that exchange rate effects take time -- the J-curve effect means net exports may initially worsen before improving.",
+     "realExample": {
+      "text": "**After the Brexit referendum** in June 2016, the pound fell by approximately 15% against the dollar. This depreciation made British exports cheaper for foreign buyers and imports more expensive for UK consumers. The UK's net export position temporarily improved, partially offsetting the negative confidence shock to consumption and investment.",
+      "emoji": "💷"
+     },
+     "misconception": "Students forget that government transfer payments are excluded from G. Unemployment benefits and pensions are transfers, not government purchases of goods and services. Instead write: G in the AD formula only counts government purchases of goods and services; transfer payments affect AD indirectly when recipients spend them, which is captured in C."
+    }
+   ],
+   "takeaway": [
+    "AD = C + I + G + (X - M); consumption is the largest component.",
+    "Investment is the most volatile, driven by confidence and interest rates.",
+    "G excludes transfer payments; only goods and services count.",
+    "Net exports depend on exchange rates, competitiveness and foreign incomes."
+   ],
+   "quizIndices": [
+    0
+   ]
+  },
+  {
+   "title": "The AD Curve",
+   "sections": [
+    {
+     "id": "shape-of-ad-curve",
+     "body": [
+      {
+       "text": "The **AD curve** shows the relationship between the **general price level** and the **total quantity of real output demanded** in the economy. It slopes **downward from left to right**, meaning that as the price level falls, the total quantity of goods and services demanded rises. This is not the same as a microeconomic demand curve -- it applies to the whole economy.",
+       "type": "paragraph"
+      },
+      {
+       "text": "Three effects explain the downward slope. The **wealth effect (Pigou effect)**: a lower price level increases the real value of people's savings, making them feel wealthier and spend more. The **interest rate effect (Keynes effect)**: lower prices reduce the demand for money, pushing interest rates down and boosting consumption and investment. The **trade effect**: lower domestic prices make exports more competitive and imports relatively expensive, improving net exports.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "General price level falls",
+        "Real wealth rises, interest rates fall, exports become cheaper",
+        "C, I and (X-M) all increase"
+       ],
+       "result": "Total real output demanded rises -- movement along AD",
+       "resultType": "good"
+      }
+     ],
+     "title": "Shape of the AD Curve",
+     "recall": {
+      "type": "fillin",
+      "hints": [
+       "we____",
+       "mo___",
+       "tr___"
+      ],
+      "prompt": "Complete the three effects explaining the AD curve's slope:",
+      "answers": [
+       "wealth",
+       "money",
+       "trade"
+      ],
+      "template": [
+       "The ___ effect: lower prices increase real value of savings",
+       "→ The interest rate effect: lower prices reduce demand for ___, cutting interest rates",
+       "→ The ___ effect: lower domestic prices make exports more competitive"
+      ]
+     },
+     "keyIdea": "The AD curve slopes downward because a lower price level increases real wealth, reduces interest rates and makes exports cheaper, all of which boost total spending.",
+     "examMatters": "Examiners frequently ask why the AD curve slopes downward. You must explain at least two of the three macro effects (wealth, interest rate, trade) to access full marks. Simply saying \"lower prices mean people buy more\" without explaining the transmission mechanism is not sufficient.",
+     "realExample": {
+      "text": "**During the 2008-2009 global financial crisis**, many economies saw price levels stabilise or fall slightly. The wealth effect should have boosted spending, but confidence collapsed so severely that the theoretical effects were overwhelmed. This shows that the AD curve's slope assumes other factors remain constant (ceteris paribus).",
+      "emoji": "📊"
+     },
+     "misconception": "Students explain the AD curve's downward slope using microeconomic reasoning like substitution between goods. The AD curve slopes down because of the wealth, interest rate and trade effects at the macroeconomic level. Instead write: the AD curve slopes downward due to the wealth effect, the interest rate effect and the trade effect -- not because consumers substitute between goods."
+    },
+    {
+     "id": "movements-along-ad",
+     "body": [
+      {
+       "text": "A **movement along the AD curve** occurs when the **general price level** changes and nothing else. If the price level rises, you move up and to the left along the AD curve -- the total quantity of real output demanded falls. If the price level falls, you move down and to the right -- the total quantity demanded rises.",
+       "type": "paragraph"
+      },
+      {
+       "text": "This is directly analogous to the micro distinction between movements along and shifts of a demand curve. The price level is on the vertical axis, so any change in the price level is represented by a movement along the existing AD curve. Changes in anything else (C, I, G, X or M determinants) cause a shift.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "General price level rises",
+        "Wealth, interest rate and trade effects reduce spending"
+       ],
+       "result": "Movement up-left along AD: less real output demanded",
+       "resultType": "neutral"
+      }
+     ],
+     "title": "Movements Along the AD Curve",
+     "recall": {
+      "type": "reorder",
+      "prompt": "Put the movement along AD in the correct order:",
+      "shuffled": [
+       3,
+       1,
+       0,
+       2
+      ],
+      "correctOrder": [
+       "General price level changes",
+       "Wealth, interest rate and trade effects activate",
+       "Total quantity of real output demanded changes",
+       "This is shown as a movement along the existing AD curve"
+      ]
+     },
+     "keyIdea": "A change in the general price level causes a movement along the AD curve -- not a shift -- because the price level is on the vertical axis.",
+     "examMatters": "This is the single most common mistake in macroeconomics diagrams. If you show a price-level change as a shift rather than a movement, you will lose marks on any AD/AS diagram question. Always check: is the change in the price level (movement) or in something else (shift)?",
+     "realExample": {
+      "text": "**When UK inflation surged** above 10% in 2022, the rising price level caused a movement along the AD curve. Higher prices eroded real wealth (wealth effect), pushed the Bank of England to raise interest rates (interest rate effect), and made UK exports less competitive (trade effect). All three effects reduced the quantity of real output demanded.",
+      "emoji": "⬆️"
+     },
+     "misconception": "Students say a rise in the price level \"shifts AD to the left.\" A price-level change causes a movement along the AD curve, not a shift. Instead write: the price level is on the vertical axis, so changes in the price level cause movements along AD; only changes in the underlying determinants of C, I, G or (X-M) shift the curve."
+    }
+   ],
+   "takeaway": [
+    "AD slopes down due to wealth, interest rate and trade effects.",
+    "A price-level change causes a movement along AD, not a shift.",
+    "Do not use micro reasoning (substitution) for the macro AD curve."
+   ],
+   "diagramRef": "Aggregate Demand Curve",
+   "quizIndices": [
+    1
+   ]
+  },
+  {
+   "title": "Shifts in Aggregate Demand",
+   "sections": [
+    {
+     "id": "factors-shifting-ad-right",
+     "body": [
+      {
+       "text": "A **rightward shift of the AD curve** means that at every price level, the total quantity of real output demanded is higher. This occurs when any of the four components of AD increases for reasons other than a change in the general price level. You must identify which component is changing and explain the mechanism.",
+       "type": "paragraph"
+      },
+      {
+       "type": "bullets",
+       "items": [
+        "**Rise in consumer confidence or wealth** -- boosts C, shifting AD right.",
+        "**Cut in interest rates** -- encourages borrowing and spending (C and I rise).",
+        "**Tax cuts or higher government spending** -- directly increases C or G.",
+        "**Depreciation of the exchange rate** -- improves net exports (X-M).",
+        "**Rise in trading partner incomes** -- increases demand for exports (X rises)."
+       ]
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Central bank cuts interest rates",
+        "Borrowing costs fall for households and firms",
+        "Consumption and investment increase"
+       ],
+       "result": "AD shifts right at every price level",
+       "resultType": "good"
+      }
+     ],
+     "title": "Factors That Shift AD to the Right",
+     "recall": {
+      "type": "fillin",
+      "hints": [
+       "di_________",
+       "ri___",
+       "ri___"
+      ],
+      "prompt": "Complete the AD rightward shift chain:",
+      "answers": [
+       "disposable",
+       "rises",
+       "right"
+      ],
+      "template": [
+       "A cut in income tax increases household ___ income",
+       "→ Consumption (C) ___",
+       "→ AD shifts to the ___ at every price level"
+      ]
+     },
+     "keyIdea": "AD shifts right when any component (C, I, G or net exports) increases due to a factor other than the price level, meaning more output is demanded at every price level.",
+     "examMatters": "When drawing and explaining an AD shift, examiners want three things: the cause (name the specific factor), the transmission mechanism (explain how it affects a component of AD), and the consequence (show the shift on a diagram and explain the effect on price level and real output). Missing any step costs marks.",
+     "realExample": {
+      "text": "**The UK government's** 2020 furlough scheme injected over $70 billion into the economy, maintaining household incomes and consumption when the private sector had shut down. This massive fiscal expansion shifted AD sharply to the right, preventing a deeper collapse in output. GDP still fell 11% that year, but without the scheme the fall would have been far worse.",
+      "emoji": "💰"
+     },
+     "misconception": "Students draw AD shifting right and say \"because demand increased\" without explaining which component changed or why. A shift must be linked to a specific factor affecting C, I, G or (X-M). Instead write: identify the specific factor (e.g. tax cut increases disposable income), explain which AD component it affects (C rises), and then state that AD shifts right."
+    },
+    {
+     "id": "factors-shifting-ad-left",
+     "body": [
+      {
+       "text": "A **leftward shift of the AD curve** means that at every price level, less real output is demanded. This happens when any component of AD falls. Common causes include **rising interest rates** (which reduce C and I), **falling consumer or business confidence** (which cuts spending), and **government austerity** (cuts to G).",
+       "type": "paragraph"
+      },
+      {
+       "type": "bullets",
+       "items": [
+        "**Rise in interest rates** -- discourages borrowing, reduces C and I.",
+        "**Fall in consumer confidence** -- households save more and spend less (C falls).",
+        "**Appreciation of the exchange rate** -- makes exports expensive and imports cheap (X-M worsens).",
+        "**Government spending cuts or tax rises** -- austerity directly reduces G or C.",
+        "**Recession in trading partner economies** -- demand for exports falls (X drops)."
+       ]
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Central bank raises interest rates",
+        "Borrowing becomes more expensive",
+        "Consumption and investment both fall"
+       ],
+       "result": "AD shifts left -- output and employment decline",
+       "resultType": "bad"
+      }
+     ],
+     "title": "Factors That Shift AD to the Left",
+     "recall": {
+      "type": "reorder",
+      "prompt": "Put the interest rate rise effect on AD in order:",
+      "shuffled": [
+       2,
+       0,
+       3,
+       1
+      ],
+      "correctOrder": [
+       "Central bank raises the base interest rate",
+       "Cost of borrowing rises for households and firms",
+       "Consumption and investment both decline",
+       "AD curve shifts to the left"
+      ]
+     },
+     "keyIdea": "AD shifts left when spending falls at every price level, caused by factors like rising interest rates, falling confidence, austerity, or a currency appreciation.",
+     "examMatters": "Examiners penalise imprecise language. Say \"AD shifts left\" not \"AD falls\" or \"AD decreases.\" On your diagram, show two clearly labelled AD curves (AD1 and AD2) with an arrow indicating the direction of the shift. Always link the shift to a specific cause and explain the effect on equilibrium.",
+     "realExample": {
+      "text": "**The Bank of England** raised interest rates from 0.1% to 5.25% between December 2021 and August 2023 to combat inflation. Higher mortgage payments and borrowing costs reduced household consumption and business investment, shifting AD to the left. The economy narrowly avoided a recession, with GDP growth stalling near zero.",
+      "emoji": "🏦"
+     },
+     "misconception": "Students write \"AD falls\" when they mean AD shifts left. AD is a curve, not a number -- it shifts position. Instead write: when a non-price-level factor reduces planned spending, the AD curve shifts to the left, meaning less real output is demanded at every price level."
+    }
+   ],
+   "takeaway": [
+    "AD shifts right when C, I, G or (X-M) increase for non-price reasons.",
+    "AD shifts left when spending components fall (higher rates, lower confidence).",
+    "Always name the specific factor, the component affected, and the direction.",
+    "Say \"AD shifts left/right\" not \"AD falls/rises\" -- AD is a curve."
+   ],
+   "diagramRef": "Shifts in Aggregate Demand",
+   "quizIndices": [
+    2
+   ],
+   "practiceIndices": [
+    0
+   ]
+  },
+  {
+   "title": "The Multiplier",
+   "sections": [
+    {
+     "id": "multiplier-definition",
+     "body": [
+      {
+       "text": "The **multiplier effect** describes how an initial change in a component of AD (such as government spending or investment) leads to a **larger final change in real GDP**. This happens because one person's spending becomes another person's income, who then spends a proportion of it, creating further income for others.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Government spends $100m on infrastructure",
+        "Construction workers earn income and spend $80m",
+        "Shopkeepers earn $80m and spend $64m",
+        "Process continues with diminishing rounds"
+       ],
+       "result": "Final GDP increase is much larger than the initial $100m",
+       "resultType": "good"
+      },
+      {
+       "text": "The multiplier works because each injection of spending circulates through the economy multiple times. However, at each round some income **leaks out** through saving, taxation and imports. These **withdrawals** reduce the amount passed on at each stage, which is why the process eventually fizzles out rather than continuing indefinitely.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "The Multiplier Concept",
+     "recall": {
+      "type": "reorder",
+      "prompt": "Put the multiplier process in order:",
+      "shuffled": [
+       2,
+       0,
+       3,
+       1
+      ],
+      "correctOrder": [
+       "Initial injection of spending (e.g. government investment)",
+       "Recipients earn income and spend a proportion",
+       "Their spending becomes income for others",
+       "Process continues but diminishes due to leakages"
+      ]
+     },
+     "keyIdea": "The multiplier means that an initial injection of spending into the economy creates a larger final increase in GDP because each round of spending becomes someone else's income.",
+     "examMatters": "Examiners expect you to explain the multiplier process step by step, showing how spending becomes income which generates further spending. You must mention leakages (saving, tax, imports) as the reason the process has a finite outcome. Vague references to \"money going round the economy\" are insufficient.",
+     "realExample": {
+      "text": "**The London 2012 Olympics** cost approximately $9 billion in direct government investment, but the total economic impact was estimated at $17-20 billion due to the multiplier effect. Spending on construction, catering and transport generated multiple rounds of income and consumption throughout the UK economy.",
+      "emoji": "🏗️"
+     },
+     "misconception": "Students think the multiplier means the government gets back more than it spends. The multiplier measures the total increase in GDP, not government revenue. Instead write: the multiplier shows that an initial injection creates a larger increase in national income because spending recirculates, but leakages mean the final effect is finite and the government does not recoup all its spending."
+    },
+    {
+     "id": "multiplier-formula",
+     "body": [
+      {
+       "text": "The **multiplier (k)** can be calculated using the formula: **k = 1 / (1 - MPC)** where MPC is the **marginal propensity to consume** -- the proportion of each extra pound of income that is spent on domestic goods and services. Equivalently, **k = 1 / MPW** where MPW is the **marginal propensity to withdraw** (save + tax + import).",
+       "type": "paragraph"
+      },
+      {
+       "text": "If the MPC is 0.8 (households spend 80p of every extra $1 earned), then k = 1 / (1 - 0.8) = 1 / 0.2 = **5**. This means an initial injection of $10 million would eventually increase GDP by $50 million. The higher the MPC, the larger the multiplier because less leaks out at each round.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "MPC = 0.8, so MPW = 0.2",
+        "k = 1 / 0.2 = 5",
+        "Initial injection of $10m"
+       ],
+       "result": "Final change in GDP = $10m x 5 = $50m",
+       "resultType": "neutral"
+      }
+     ],
+     "title": "The Multiplier Formula",
+     "recall": {
+      "type": "fillin",
+      "hints": [
+       "M__",
+       "_",
+       "im_____"
+      ],
+      "prompt": "Complete the multiplier formula:",
+      "answers": [
+       "MPC",
+       "5",
+       "imports"
+      ],
+      "template": [
+       "Multiplier (k) = 1 / (1 - ___)",
+       "→ If MPC = 0.8, then k = 1 / 0.2 = ___",
+       "→ The three leakages are saving, taxation and ___"
+      ]
+     },
+     "keyIdea": "The multiplier equals 1 divided by the marginal propensity to withdraw, or equivalently 1 divided by (1 minus the marginal propensity to consume).",
+     "examMatters": "Calculation questions require you to show the formula, substitute values and interpret the result. If given the MPC, first calculate MPW as (1 - MPC) and then find k. If given individual leakages (MPS, MPT, MPM), add them to find MPW. Always show your working clearly.",
+     "realExample": {
+      "text": "**The UK's Office for Budget Responsibility** estimates fiscal multipliers of around 0.5 to 1.0 for most government spending changes, well below the theoretical maximum. This is because the UK has high marginal tax rates and a large import share, which increase leakages and shrink the multiplier in practice.",
+      "emoji": "🔢"
+     },
+     "misconception": "Students calculate the multiplier but forget that leakages include taxes and imports, not just saving. The MPW equals the marginal propensity to save plus the marginal rate of tax plus the marginal propensity to import. Instead write: the multiplier is 1/MPW where MPW = MPS + MPT + MPM, covering all three leakages from the circular flow."
+    },
+    {
+     "id": "multiplier-size-determinants",
+     "body": [
+      {
+       "text": "The size of the multiplier depends on the **marginal propensity to withdraw (MPW)**. A smaller MPW means less leaks out at each round, so more income is passed on and the multiplier is larger. Three factors determine MPW: the **marginal propensity to save (MPS)**, the **marginal rate of tax (MPT)**, and the **marginal propensity to import (MPM)**.",
+       "type": "paragraph"
+      },
+      {
+       "type": "bullets",
+       "items": [
+        "**Low MPS** -- if households save less, more income is spent, enlarging the multiplier.",
+        "**Low tax rates** -- less income is withdrawn through taxation at each round.",
+        "**Low MPM** -- if the economy is relatively closed, less spending leaks abroad on imports.",
+        "**High consumer confidence** -- willing to spend rather than save, increasing MPC."
+       ]
+      },
+      {
+       "text": "In practice, open economies with high tax rates (like the UK) tend to have smaller multipliers than closed economies with low taxes. The multiplier is also larger during recessions, because spare capacity means injections create real output rather than just higher prices.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "What Determines the Size of the Multiplier?",
+     "recall": {
+      "type": "reorder",
+      "prompt": "Put the factors affecting multiplier size in order of logic:",
+      "shuffled": [
+       3,
+       1,
+       0,
+       2
+      ],
+      "correctOrder": [
+       "Identify the three leakages: saving, tax, imports",
+       "Higher leakages mean a larger MPW",
+       "A larger MPW gives a smaller multiplier",
+       "Near full capacity, the multiplier effect is mostly inflationary"
+      ]
+     },
+     "keyIdea": "The multiplier is larger when leakages are small -- low tax rates, low saving rates and low import spending all mean more income recirculates domestically.",
+     "examMatters": "Evaluation questions on the multiplier expect you to discuss why it may be larger or smaller in different contexts. Mention the size of leakages, the state of the economy (spare capacity or near full employment) and the time lag before the full effect materialises. This is where strong candidates distinguish themselves.",
+     "realExample": {
+      "text": "**Singapore** has a small multiplier despite low tax rates because its marginal propensity to import is extremely high -- the small city-state imports nearly everything it consumes. An injection of government spending quickly leaks abroad through imports, limiting the domestic multiplier effect. This is why Singapore relies more on trade policy than fiscal stimulus.",
+      "emoji": "🇸🇬"
+     },
+     "misconception": "Students assume the multiplier always works at full strength. Near full employment, extra spending may push up prices rather than real output, reducing the real multiplier to near zero. Instead write: the multiplier is strongest when the economy has significant spare capacity; near full employment, injections cause inflation rather than output growth, reducing the effective multiplier."
+    }
+   ],
+   "takeaway": [
+    "The multiplier: initial spending creates a larger final GDP change.",
+    "k = 1 / (1 - MPC) = 1 / MPW; higher MPC means a bigger multiplier.",
+    "Leakages (saving, tax, imports) reduce the multiplier's size.",
+    "Near full capacity, the multiplier mainly causes inflation, not growth."
+   ],
+   "quizIndices": [
+    3
+   ],
+   "practiceIndices": [
+    1
+   ]
+  },
+  {
+   "title": "The Accelerator Effect",
+   "sections": [
+    {
+     "id": "accelerator-definition",
+     "body": [
+      {
+       "text": "The **accelerator effect** (or accelerator principle) states that the level of **net investment** depends on the **rate of change of national income (GDP)**. When GDP is growing rapidly, firms need to invest heavily in new capital to expand capacity and meet rising demand. When GDP growth merely slows (even if still positive), investment can fall sharply.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "GDP growth rate increases",
+        "Firms need more capital to meet rising demand",
+        "Net investment surges"
+       ],
+       "result": "Investment is highly sensitive to changes in the growth rate",
+       "resultType": "neutral"
+      },
+      {
+       "text": "The key insight is that investment responds to the **change in the change** -- not the level of GDP but its rate of growth. If GDP grows at 3% this year and 2% next year, the economy is still growing but the growth rate has slowed. According to the accelerator, investment may fall even though GDP is still rising. This makes investment inherently volatile.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "The Accelerator Principle",
+     "recall": {
+      "type": "fillin",
+      "hints": [
+       "ch____",
+       "su___",
+       "sl_______"
+      ],
+      "prompt": "Complete the accelerator principle:",
+      "answers": [
+       "change",
+       "surge",
+       "slowdown"
+      ],
+      "template": [
+       "Net investment depends on the rate of ___ of GDP",
+       "→ Faster growth causes investment to ___",
+       "→ Even a ___ in the growth rate can cause investment to fall"
+      ]
+     },
+     "keyIdea": "The accelerator says that investment depends on the rate of change of GDP -- when growth speeds up, investment surges; when growth slows, investment can collapse.",
+     "examMatters": "The accelerator is a favourite evaluation point in essay questions about investment or the business cycle. Examiners want you to explain why investment is so volatile by linking it to changes in the rate of GDP growth. A strong answer contrasts the accelerator with the interest-rate theory of investment.",
+     "realExample": {
+      "text": "**UK car manufacturers** invested heavily in new production lines during 2014-2016 when demand was growing rapidly. When demand growth slowed in 2017-2018 (partly due to Brexit uncertainty), investment fell sharply even though car sales were still at historically high levels. The accelerator explains why a slowdown in growth, not an actual decline, triggered the investment collapse.",
+      "emoji": "🚗"
+     },
+     "misconception": "Students write \"investment falls because GDP falls.\" The accelerator shows investment can fall even when GDP is still rising, as long as the growth rate slows. Instead write: the accelerator predicts that investment depends on the rate of change of GDP, so a slowdown in growth (not necessarily a decline) can cause investment to fall."
+    },
+    {
+     "id": "accelerator-and-business-cycle",
+     "body": [
+      {
+       "text": "The accelerator interacts with the **multiplier** to amplify economic fluctuations. During a boom, rising consumer spending (via the multiplier) accelerates GDP growth, which triggers a surge in investment (via the accelerator). This extra investment spending then feeds back through the multiplier, creating further income and spending -- a **virtuous cycle**.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "GDP growth accelerates (boom)",
+        "Accelerator: investment surges",
+        "Multiplier: investment creates further income",
+        "GDP grows even faster -- cycle reinforces itself"
+       ],
+       "result": "The multiplier-accelerator interaction amplifies the boom",
+       "resultType": "neutral"
+      },
+      {
+       "text": "The reverse happens in a downturn. When GDP growth slows, the accelerator causes investment to fall. Falling investment reduces income through the reverse multiplier, slowing growth further. The economy can spiral downward rapidly. This **multiplier-accelerator interaction** explains why business cycles can be so pronounced and why investment is the most volatile component of AD.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "The Accelerator and the Business Cycle",
+     "recall": {
+      "type": "reorder",
+      "prompt": "Put the multiplier-accelerator boom cycle in order:",
+      "shuffled": [
+       2,
+       0,
+       3,
+       1
+      ],
+      "correctOrder": [
+       "Consumer spending rises (multiplier creates income)",
+       "GDP growth rate accelerates",
+       "Accelerator triggers a surge in investment",
+       "Investment spending feeds back through the multiplier"
+      ]
+     },
+     "keyIdea": "The accelerator amplifies economic cycles: investment surges when growth accelerates during booms, and collapses when growth slows during downturns.",
+     "examMatters": "For top marks in business cycle essays, explain the multiplier-accelerator interaction as a self-reinforcing mechanism. Show how the accelerator makes investment the key amplifier of booms and recessions. This demonstrates synoptic thinking that links multiple concepts, which examiners reward highly.",
+     "realExample": {
+      "text": "**During the 2008 financial crisis**, UK business investment fell by 22% in a single year -- far more than the 6% fall in GDP. The accelerator explains this disproportionate collapse: as GDP growth turned sharply negative, firms slashed investment plans dramatically. The resulting fall in investment then deepened the recession through the reverse multiplier.",
+      "emoji": "📉"
+     },
+     "misconception": "Students treat the accelerator and multiplier as the same thing. The multiplier shows how spending creates income; the accelerator shows how changes in income drive investment. Instead write: the multiplier converts an initial injection into a larger GDP change, while the accelerator shows that the rate of GDP change determines the level of investment -- together they amplify economic cycles."
+    },
+    {
+     "id": "limitations-of-accelerator",
+     "body": [
+      {
+       "text": "The simple accelerator model has several limitations. It assumes firms have **no spare capacity** -- in reality, firms can often meet rising demand by using existing equipment more intensively before investing in new capital. If there is significant spare capacity, the accelerator effect will be weak or absent.",
+       "type": "paragraph"
+      },
+      {
+       "text": "The model also ignores **business confidence**. Firms may not invest even when demand is rising if they expect the growth to be temporary or if economic uncertainty is high. **Access to finance** also matters -- during credit crunches, firms cannot borrow to invest even if demand warrants it.",
+       "type": "paragraph"
+      },
+      {
+       "type": "bullets",
+       "items": [
+        "**Spare capacity** -- firms with unused equipment do not need to invest when demand rises.",
+        "**Confidence and expectations** -- uncertain firms delay investment regardless of current demand.",
+        "**Access to finance** -- credit restrictions can prevent investment even when it would be profitable.",
+        "**Time lags** -- investment decisions take time to plan, approve and implement."
+       ]
+      }
+     ],
+     "title": "Limitations of the Accelerator",
+     "recall": {
+      "type": "fillin",
+      "hints": [
+       "sp___",
+       "co________",
+       "ac____"
+      ],
+      "prompt": "Complete the accelerator limitations:",
+      "answers": [
+       "spare",
+       "confidence",
+       "access"
+      ],
+      "template": [
+       "Firms with ___ capacity do not need to invest when demand rises",
+       "→ Low business ___ can delay investment even when demand is growing",
+       "→ Credit restrictions limit firms' ___ to finance for new investment"
+      ]
+     },
+     "keyIdea": "The accelerator assumes firms respond mechanically to demand changes, but in reality spare capacity, business confidence and access to finance all influence investment decisions.",
+     "examMatters": "When using the accelerator in an essay, always evaluate its limitations. Examiners reward candidates who explain why the accelerator might not work as predicted in the real world. Discussing spare capacity and confidence as limiting factors demonstrates evaluative sophistication.",
+     "realExample": {
+      "text": "**After the 2020 lockdowns**, many UK firms had significant spare capacity because demand had collapsed. As demand recovered in 2021, firms initially met it by reactivating existing capacity rather than investing in new capital. The accelerator effect was muted in the short term because spare capacity absorbed the demand increase.",
+      "emoji": "🏭"
+     },
+     "misconception": "Students apply the accelerator rigidly as if investment always mirrors GDP changes. In practice, spare capacity, uncertainty and credit conditions can break the link between GDP growth and investment. Instead write: the accelerator is a useful theoretical model, but its predictions are weakened by spare capacity, low business confidence and restricted access to finance."
+    }
+   ],
+   "takeaway": [
+    "The accelerator: investment depends on the rate of change of GDP.",
+    "Multiplier-accelerator interaction amplifies booms and recessions.",
+    "Spare capacity, confidence and credit conditions limit the accelerator.",
+    "Investment is the most volatile AD component because of the accelerator."
+   ],
+   "quizIndices": [
+    4
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "options": [
+    "The total output produced in an economy in one year",
+    "The total planned expenditure on goods and services at a given price level",
+    "The total income earned by all factors of production",
+    "The total government spending in an economy"
+   ],
+   "question": "Aggregate demand is defined as:",
+   "explanation": "Aggregate demand is the total planned expenditure on goods and services in an economy at a given price level over a given time period. It includes spending by households (C), firms (I), the government (G), and the net overseas sector (X-M). It is NOT the same as total output (GDP) or total income.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "Consumers substitute towards cheaper goods",
+    "The real value of wealth rises, international competitiveness improves, and interest rates fall",
+    "Firms produce more output at lower costs",
+    "Government spending automatically increases"
+   ],
+   "question": "The AD curve slopes downward because, when the price level falls:",
+   "explanation": "The three reasons for the downward-sloping AD curve are: (1) the wealth effect — lower prices increase the real value of savings, boosting spending; (2) international competitiveness — lower domestic prices make exports cheaper; (3) the interest rate effect — lower prices reduce demand for money, lowering interest rates and boosting C and I. It is NOT about substitution between individual goods (that is the micro demand curve).",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "0.6",
+    "1.6",
+    "2.5",
+    "6"
+   ],
+   "question": "If the marginal propensity to consume (MPC) is 0.6, what is the value of the multiplier?",
+   "explanation": "Multiplier = 1/(1-MPC) = 1/(1-0.6) = 1/0.4 = 2.5. This means an initial injection of spending will lead to a final increase in national income 2.5 times larger. For example, a $10 billion increase in government spending would ultimately increase GDP by $25 billion.",
+   "correctIndex": 2
+  },
+  {
+   "options": [
+    "$8 billion",
+    "$20 billion",
+    "$50 billion",
+    "$80 billion"
+   ],
+   "question": "Government spending increased by $20 billion. If MPW = 0.4, the total increase in national income will be:",
+   "explanation": "Multiplier = 1/MPW = 1/0.4 = 2.5. Total change in national income = Multiplier x Initial change = 2.5 x $20bn = $50 billion. MPW (marginal propensity to withdraw) includes savings, taxation, and import leakages.",
+   "correctIndex": 2
+  },
+  {
+   "options": [
+    "A fall in interest rates",
+    "A rise in consumer confidence",
+    "An appreciation of the exchange rate",
+    "An increase in government infrastructure spending"
+   ],
+   "question": "Which of the following would cause a leftward shift of the AD curve?",
+   "explanation": "An appreciation of the exchange rate makes exports more expensive (X falls) and imports cheaper (M rises), so net exports (X-M) decrease, shifting AD to the left. A fall in interest rates, rise in consumer confidence, and increase in government spending would all shift AD to the RIGHT.",
+   "correctIndex": 2
+  },
+  {
+   "options": [
+    "The tendency of consumers to follow trends in spending",
+    "The instinctive confidence or pessimism that drives business investment decisions",
+    "The effect of inflation on household wealth",
+    "The government's tendency to increase spending before elections"
+   ],
+   "question": "Keynes used the term 'animal spirits' to describe:",
+   "explanation": "Keynes used 'animal spirits' to describe the waves of optimism and pessimism among business leaders that influence investment decisions. He argued that investment is not always based on rational calculation but is heavily influenced by confidence and expectations about the future.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "A high marginal propensity to import",
+    "High rates of income tax",
+    "A high marginal propensity to consume",
+    "A large financial sector encouraging saving"
+   ],
+   "question": "The multiplier is likely to be LARGER in an economy that has:",
+   "explanation": "The multiplier = 1/(1-MPC). A higher MPC means less is leaked from the circular flow at each round of spending, so the multiplier effect is larger. High imports, high taxes, and high savings are all leakages (part of MPW) that reduce the multiplier.",
+   "correctIndex": 2
+  },
+  {
+   "options": [
+    "National income is rising at an increasing rate",
+    "National income is still rising but at a decreasing rate",
+    "Interest rates are cut by the central bank",
+    "Business confidence increases significantly"
+   ],
+   "question": "The accelerator theory suggests that net investment will FALL when:",
+   "explanation": "The accelerator theory states that net investment depends on the RATE OF CHANGE of national income. When income is still rising but at a decreasing rate, less additional capacity is needed, so net investment falls. This makes investment highly volatile and helps explain the severity of the business cycle.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "NHS spending on medical equipment",
+    "Jobseeker's Allowance payments to unemployed workers",
+    "Salaries paid to teachers in state schools",
+    "Construction of a new motorway"
+   ],
+   "question": "Which of the following is NOT counted in the government spending (G) component of AD?",
+   "explanation": "Jobseeker's Allowance is a transfer payment — it is a redistribution of income, not a direct purchase of goods or services. Transfer payments are excluded from the G component of AD because they do not directly represent demand for output. NHS spending, teacher salaries, and motorway construction are all government purchases of goods and services.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "Consumption, Saving, Taxation",
+    "Investment, Government Spending, Exports",
+    "Wages, Rent, Profit",
+    "Saving, Taxation, Imports"
+   ],
+   "question": "In the circular flow model, which of the following correctly identifies the three injections?",
+   "explanation": "The three injections into the circular flow are Investment (I), Government Spending (G), and Exports (X). These add spending to the economy from outside the basic household-to-firm flow. The three leakages are Savings (S), Taxation (T), and Imports (M). In equilibrium, total injections equal total leakages: I + G + X = S + T + M.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "AD = C + I + G + (X - M)",
+    "AD = C + S + T + M",
+    "AD = GDP + Inflation",
+    "AD = C + I + G + X + M"
+   ],
+   "question": "Aggregate demand is composed of:",
+   "explanation": "Aggregate demand (AD) = Consumer spending (C) + Investment (I) + Government spending (G) + Net exports (X - M). This represents total planned expenditure on goods and services at each price level.",
+   "correctIndex": 0
+  },
+  {
+   "options": [
+    "4",
+    "5",
+    "0.8",
+    "1.25"
+   ],
+   "question": "If the marginal propensity to consume (MPC) is 0.8, the value of the multiplier is:",
+   "explanation": "The multiplier = 1 / (1 - MPC) = 1 / (1 - 0.8) = 1 / 0.2 = 5. This means an initial increase in spending generates a final increase in national income five times larger.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "A cut in income tax rates",
+    "An increase in government spending on infrastructure",
+    "A rise in interest rates by the central bank",
+    "A depreciation of the exchange rate"
+   ],
+   "question": "Which of the following would cause a leftward shift of the aggregate demand curve?",
+   "explanation": "Higher interest rates increase the cost of borrowing and the return on saving. This reduces consumer spending (C) and investment (I), shifting the AD curve to the left.",
+   "correctIndex": 2
+  },
+  {
+   "options": [
+    "Higher prices reduce the real value of wealth, reducing consumer spending",
+    "Higher prices increase exports, reducing domestic demand",
+    "Higher prices lead to government spending cuts",
+    "Higher prices encourage firms to invest more"
+   ],
+   "question": "The wealth effect explains why the AD curve slopes downward because:",
+   "explanation": "When the price level rises, the real value of household wealth (savings, assets) falls. Consumers feel poorer and reduce spending, contributing to the downward slope of the AD curve.",
+   "correctIndex": 0
+  },
+  {
+   "options": [
+    "0",
+    "0.5",
+    "1",
+    "The multiplier"
+   ],
+   "question": "The marginal propensity to save (MPS) plus the marginal propensity to consume (MPC) equals:",
+   "explanation": "In a simple two-sector model, all additional income is either consumed or saved. Therefore MPC + MPS = 1. If MPC is 0.75, then MPS is 0.25.",
+   "correctIndex": 2
+  },
+  {
+   "options": [
+    "The level of interest rates",
+    "The rate of change of national income (output)",
+    "Government subsidies for businesses",
+    "The current level of profits"
+   ],
+   "question": "The accelerator theory suggests that investment is primarily determined by:",
+   "explanation": "The accelerator theory states that investment spending depends on the rate of change of output/income. When output is growing, firms invest in new capital to expand capacity; when growth slows, investment falls sharply.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "It makes UK exports cheaper and imports more expensive, improving net exports",
+    "It increases the purchasing power of UK consumers",
+    "It reduces the cost of imported raw materials",
+    "It causes the Bank of England to cut interest rates"
+   ],
+   "question": "A depreciation of the pound sterling would most likely shift the AD curve to the right because:",
+   "explanation": "A weaker pound makes UK exports cheaper for foreign buyers (boosting X) and imports more expensive for UK consumers (reducing M). The improvement in net exports (X - M) shifts AD to the right.",
+   "correctIndex": 0
+  },
+  {
+   "options": [
+    "$10 billion",
+    "$12.5 billion",
+    "$25 billion",
+    "$4 billion"
+   ],
+   "question": "If the government increases spending by $10 billion and the multiplier is 2.5, the final increase in national income will be:",
+   "explanation": "Final change in income = initial injection x multiplier = $10bn x 2.5 = $25 billion. The multiplier process amplifies the initial spending through successive rounds of consumption.",
+   "correctIndex": 2
+  },
+  {
+   "options": [
+    "Investment",
+    "Government spending",
+    "Exports",
+    "Taxation"
+   ],
+   "question": "Which of the following is a withdrawal (leakage) from the circular flow of income?",
+   "explanation": "Withdrawals (leakages) reduce spending in the circular flow. They are saving (S), taxation (T), and imports (M). Investment, government spending, and exports are injections.",
+   "correctIndex": 3
+  },
+  {
+   "options": [
+    "Confident consumers save a larger proportion of their income",
+    "Optimistic consumers spend more and borrow more, anticipating future income growth",
+    "Consumer confidence reduces interest rates",
+    "Confident consumers pay less tax"
+   ],
+   "question": "Consumer confidence is most likely to increase consumption spending because:",
+   "explanation": "When consumer confidence is high, households are optimistic about future income and employment prospects. They spend more of their current income and are more willing to borrow, increasing consumption (C).",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "A rise in the domestic price level makes exports less competitive and imports relatively cheaper",
+    "A rise in the price level encourages more government spending",
+    "A rise in the price level increases investment",
+    "A rise in the price level reduces the money supply"
+   ],
+   "question": "The international trade effect explains the downward slope of AD because:",
+   "explanation": "When the domestic price level rises, exports become more expensive for foreign buyers (reducing X) and imports become relatively cheaper (increasing M). The fall in net exports reduces AD, contributing to the downward slope.",
+   "correctIndex": 0
+  },
+  {
+   "options": [
+    "1 / MPS",
+    "1 / (MPS + MPT + MPM)",
+    "1 / (1 - MPC)",
+    "MPC / (1 - MPC)"
+   ],
+   "question": "In an open economy with government, the multiplier formula is:",
+   "explanation": "In an open economy with government, the multiplier = 1 / (MPS + MPT + MPM), where MPT is the marginal propensity to tax and MPM is the marginal propensity to import. More leakages reduce the multiplier.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "It increases the cost of borrowing, making fewer investment projects profitable",
+    "It encourages firms to expand production immediately",
+    "It reduces the cost of raw materials",
+    "It increases consumer spending on durable goods"
+   ],
+   "question": "An increase in interest rates is likely to reduce investment because:",
+   "explanation": "Higher interest rates raise the cost of borrowing for firms. Investment projects must generate a return exceeding the interest rate to be worthwhile, so higher rates make fewer projects viable, reducing total investment.",
+   "correctIndex": 0
+  },
+  {
+   "options": [
+    "Higher saving always leads to higher investment and growth",
+    "If everyone tries to save more simultaneously, national income falls, potentially reducing total saving",
+    "Thrifty consumers always benefit the economy",
+    "Saving is always bad for economic growth"
+   ],
+   "question": "The paradox of thrift states that:",
+   "explanation": "The paradox of thrift (Keynes) argues that if all households increase saving simultaneously, consumption falls, reducing AD and national income. The resulting fall in income may actually reduce total saving.",
+   "correctIndex": 1
+  },
+  {
+   "options": [
+    "An increase in the marginal rate of income tax",
+    "A decrease in the marginal propensity to consume",
+    "A decrease in the marginal propensity to import",
+    "An increase in the marginal propensity to save"
+   ],
+   "question": "Which of the following would increase the size of the multiplier?",
+   "explanation": "The multiplier is larger when leakages (MPS, MPT, MPM) are smaller. A decrease in the marginal propensity to import means more spending stays in the domestic economy, amplifying the multiplier effect.",
+   "correctIndex": 2
+  }
+ ],
+ "practice": [
+  {
+   "marks": 4,
+   "command": "Define",
+   "guidance": "Aggregate demand is the total demand for goods and services in an economy at a given price level over a given time period (1 mark). It consists of four components: consumption (C), investment (I), government spending (G) and net exports (X-M) (1 mark). It is represented by a downward-sloping curve showing that as the price level falls, the quantity of real output demanded increases (1 mark). The formula is AD = C + I + G + (X - M) (1 mark).",
+   "question": "Define the term 'aggregate demand'. (4 marks)"
+  },
+  {
+   "marks": 6,
+   "command": "Explain",
+   "guidance": "Factor 1: A fall in interest rates (1 mark) — lower rates reduce the cost of borrowing and the incentive to save, encouraging households to spend more on goods and services (1 mark). This is particularly significant for mortgage holders, whose disposable income rises as monthly payments fall (1 mark).\n\nFactor 2: Rising consumer confidence (1 mark) — when households are optimistic about future job security and income growth, they are more willing to spend and less inclined to save (1 mark). This can be reinforced by rising house prices, which create a positive wealth effect (1 mark).",
+   "question": "Explain two factors that could cause an increase in consumer spending (C) in the UK. (6 marks)"
+  },
+  {
+   "marks": 10,
+   "command": "Analyse",
+   "guidance": "A depreciation of the pound means it buys fewer units of foreign currency (1 mark). Impact on exports: UK goods become cheaper for foreign buyers, so export demand should rise (X increases) (2 marks). Impact on imports: Foreign goods become more expensive for UK consumers, so import spending may fall (M decreases) (2 marks). Net effect on AD: If the Marshall-Lerner condition is met — the sum of PED for exports and PED for imports exceeds 1 — net exports improve and AD shifts right (2 marks). However, in the short run there may be a J-curve effect where the trade balance initially worsens because existing import contracts are priced in foreign currency (2 marks). Overall, a depreciation is likely to boost AD in the medium term but may also increase imported inflation (1 mark).",
+   "question": "Analyse the likely impact of a fall in the value of the pound on aggregate demand. (10 marks)"
+  },
+  {
+   "marks": 20,
+   "command": "Evaluate",
+   "guidance": "Introduction: Define aggregate demand and explain the transmission mechanism — the Bank of England reduces the base rate to stimulate spending and investment (2 marks).\n\nEffective: Lower borrowing costs encourage consumer spending on credit and mortgage-financed housing (3 marks); lower cost of capital encourages business investment in new projects (2 marks); reduced savings incentive shifts household spending from saving to consumption (2 marks); may weaken the exchange rate, boosting net exports (1 mark).\n\nLimitations: The liquidity trap — if rates are already very low or near zero, further cuts have limited effect (3 marks); banks may not pass on rate cuts to customers if they are trying to rebuild margins (2 marks); consumer and business confidence may be so low that even cheap credit does not stimulate borrowing (2 marks); time lags — monetary policy takes 18-24 months to have full effect on the economy (1 mark).\n\nEvaluation: Interest rate cuts are a powerful tool in normal economic conditions, but their effectiveness is significantly reduced during deep recessions or when rates are already near zero (2 marks). In such cases, unconventional monetary policy (quantitative easing) or fiscal stimulus may be more effective complements (2 marks).",
+   "question": "Evaluate the effectiveness of a reduction in interest rates as a tool for increasing aggregate demand. (20 marks)"
+  },
+  {
+   "marks": 4,
+   "command": "Outline",
+   "guidance": "Reason 1: Government spending (G) is a direct component of AD (1 mark), so an increase in G directly raises planned expenditure in the economy (1 mark).\n\nReason 2: The multiplier effect amplifies the initial spending (1 mark) — for example, public sector workers spend their wages on goods and services, creating income for other businesses and households in successive rounds of spending (1 mark).",
+   "question": "Outline two reasons why an increase in government spending shifts the AD curve to the right. (4 marks)"
+  }
+ ],
+ "diagrams": [
+  {
+   "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'DM Sans', sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n\n  <!-- Title -->\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">The Aggregate Demand Curve</text>\n\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"40\" x2=\"70\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <line x1=\"70\" y1=\"310\" x2=\"470\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n\n  <!-- Axis labels -->\n  <text x=\"30\" y=\"175\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90 30 175)\">Price Level (PL)</text>\n  <text x=\"270\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">Real GDP (Y)</text>\n\n  <!-- AD curve -->\n  <path d=\"M 110 70 Q 200 140 280 200 Q 360 260 440 290\" stroke=\"#059669\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"445\" y=\"282\" fill=\"#059669\" font-size=\"13\" font-weight=\"600\">AD</text>\n\n  <!-- Price level markers -->\n  <text x=\"60\" y=\"137\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"10\">P1</text>\n  <line x1=\"63\" y1=\"133\" x2=\"70\" y2=\"133\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"2,2\"/>\n\n  <text x=\"60\" y=\"227\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"10\">P2</text>\n  <line x1=\"63\" y1=\"223\" x2=\"70\" y2=\"223\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"2,2\"/>\n\n  <!-- GDP markers -->\n  <text x=\"200\" y=\"325\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">Y1</text>\n  <line x1=\"200\" y1=\"310\" x2=\"200\" y2=\"315\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n\n  <text x=\"340\" y=\"325\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">Y2</text>\n  <line x1=\"340\" y1=\"310\" x2=\"340\" y2=\"315\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n\n  <!-- Dashed lines for P1,Y1 -->\n  <line x1=\"70\" y1=\"133\" x2=\"200\" y2=\"133\" stroke=\"#e8ecf5\" stroke-width=\"0.8\" stroke-dasharray=\"4,3\" opacity=\"0.5\"/>\n  <line x1=\"200\" y1=\"133\" x2=\"200\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"0.8\" stroke-dasharray=\"4,3\" opacity=\"0.5\"/>\n\n  <!-- Dashed lines for P2,Y2 -->\n  <line x1=\"70\" y1=\"223\" x2=\"340\" y2=\"223\" stroke=\"#e8ecf5\" stroke-width=\"0.8\" stroke-dasharray=\"4,3\" opacity=\"0.5\"/>\n  <line x1=\"340\" y1=\"223\" x2=\"340\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"0.8\" stroke-dasharray=\"4,3\" opacity=\"0.5\"/>\n\n  <!-- Points -->\n  <circle cx=\"200\" cy=\"133\" r=\"4\" fill=\"#059669\"/>\n  <circle cx=\"340\" cy=\"223\" r=\"4\" fill=\"#059669\"/>\n\n  <!-- Annotation -->\n  <text x=\"280\" y=\"60\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\" opacity=\"0.8\">AD slopes downward due to:</text>\n  <text x=\"280\" y=\"74\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.7\">1. Wealth effect  2. Trade competitiveness  3. Interest rate effect</text>\n</svg>",
+   "title": "The AD Curve",
+   "checklist": [
+    "Draw AD sloping downward from left to right",
+    "Label axes correctly: Price Level (vertical) and Real GDP (horizontal)",
+    "Explain at least two reasons for the downward slope",
+    "Show the direction of shift clearly and label AD and AD'",
+    "Identify the factor causing the shift (e.g. rise in consumer confidence)"
+   ],
+   "scenarios": [
+    {
+     "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'DM Sans', sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">Increase in Aggregate Demand</text>\n\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"40\" x2=\"70\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <line x1=\"70\" y1=\"310\" x2=\"470\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <text x=\"30\" y=\"175\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90 30 175)\">Price Level (PL)</text>\n  <text x=\"270\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">Real GDP (Y)</text>\n\n  <!-- Original AD -->\n  <path d=\"M 110 70 Q 200 140 280 200 Q 360 260 440 290\" stroke=\"#059669\" stroke-width=\"2\" fill=\"none\" opacity=\"0.5\"/>\n  <text x=\"445\" y=\"282\" fill=\"#059669\" font-size=\"12\" opacity=\"0.5\">AD</text>\n\n  <!-- Shifted AD (right) -->\n  <path d=\"M 170 70 Q 260 140 340 200 Q 420 260 470 280\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"475\" y=\"272\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\">AD'</text>\n\n  <!-- Shift arrow -->\n  <line x1=\"250\" y1=\"195\" x2=\"310\" y2=\"195\" stroke=\"#f59e0b\" stroke-width=\"2\" marker-end=\"url(#arrowYellow2)\"/>\n  <defs><marker id=\"arrowYellow2\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0, 8 3, 0 6\" fill=\"#f59e0b\"/></marker></defs>\n\n  <!-- Annotation box -->\n  <rect x=\"100\" y=\"52\" width=\"200\" height=\"80\" rx=\"6\" fill=\"#3b82f6\" opacity=\"0.1\" stroke=\"#3b82f6\" stroke-width=\"0.5\"/>\n  <text x=\"200\" y=\"68\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\">AD shifts RIGHT when:</text>\n  <text x=\"110\" y=\"82\" fill=\"#e8ecf5\" font-size=\"9\">- Consumer confidence rises</text>\n  <text x=\"110\" y=\"94\" fill=\"#e8ecf5\" font-size=\"9\">- Interest rates are cut</text>\n  <text x=\"110\" y=\"106\" fill=\"#e8ecf5\" font-size=\"9\">- Government spending increases</text>\n  <text x=\"110\" y=\"118\" fill=\"#e8ecf5\" font-size=\"9\">- Exchange rate depreciates</text>\n  <text x=\"110\" y=\"130\" fill=\"#e8ecf5\" font-size=\"9\">- Tax cuts raise disposable income</text>\n</svg>",
+     "label": "Increase in AD"
+    },
+    {
+     "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'DM Sans', sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">Decrease in Aggregate Demand</text>\n\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"40\" x2=\"70\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <line x1=\"70\" y1=\"310\" x2=\"470\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <text x=\"30\" y=\"175\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90 30 175)\">Price Level (PL)</text>\n  <text x=\"270\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">Real GDP (Y)</text>\n\n  <!-- Original AD -->\n  <path d=\"M 170 70 Q 260 140 340 200 Q 420 260 470 280\" stroke=\"#059669\" stroke-width=\"2\" fill=\"none\" opacity=\"0.5\"/>\n  <text x=\"475\" y=\"272\" fill=\"#059669\" font-size=\"12\" opacity=\"0.5\">AD</text>\n\n  <!-- Shifted AD (left) -->\n  <path d=\"M 110 70 Q 200 140 280 200 Q 360 260 440 290\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"445\" y=\"282\" fill=\"#ef4444\" font-size=\"12\" font-weight=\"600\">AD'</text>\n\n  <!-- Shift arrow -->\n  <line x1=\"310\" y1=\"195\" x2=\"250\" y2=\"195\" stroke=\"#f59e0b\" stroke-width=\"2\" marker-end=\"url(#arrowYellow3)\"/>\n  <defs><marker id=\"arrowYellow3\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0, 8 3, 0 6\" fill=\"#f59e0b\"/></marker></defs>\n\n  <!-- Annotation box -->\n  <rect x=\"100\" y=\"52\" width=\"200\" height=\"80\" rx=\"6\" fill=\"#ef4444\" opacity=\"0.1\" stroke=\"#ef4444\" stroke-width=\"0.5\"/>\n  <text x=\"200\" y=\"68\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\">AD shifts LEFT when:</text>\n  <text x=\"110\" y=\"82\" fill=\"#e8ecf5\" font-size=\"9\">- Consumer confidence falls</text>\n  <text x=\"110\" y=\"94\" fill=\"#e8ecf5\" font-size=\"9\">- Interest rates rise</text>\n  <text x=\"110\" y=\"106\" fill=\"#e8ecf5\" font-size=\"9\">- Government cuts spending</text>\n  <text x=\"110\" y=\"118\" fill=\"#e8ecf5\" font-size=\"9\">- Exchange rate appreciates</text>\n  <text x=\"110\" y=\"130\" fill=\"#e8ecf5\" font-size=\"9\">- Tax increases reduce income</text>\n</svg>",
+     "label": "Decrease in AD"
+    }
+   ],
+   "description": "Aggregate Demand curve showing the inverse relationship between the price level and real GDP, with shift scenarios"
+  },
+  {
+   "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'DM Sans', sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n\n  <!-- Title -->\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">The Multiplier Effect (MPC = 0.8, Multiplier = 5)</text>\n\n  <!-- Round bars -->\n  <!-- Initial injection -->\n  <text x=\"15\" y=\"63\" fill=\"#e8ecf5\" font-size=\"10\">Initial</text>\n  <rect x=\"80\" y=\"48\" width=\"300\" height=\"22\" rx=\"3\" fill=\"#059669\"/>\n  <text x=\"235\" y=\"63\" text-anchor=\"middle\" fill=\"#ffffff\" font-size=\"10\" font-weight=\"600\">$100m (Government spending)</text>\n\n  <!-- Round 1 -->\n  <text x=\"15\" y=\"100\" fill=\"#e8ecf5\" font-size=\"10\">Round 1</text>\n  <rect x=\"80\" y=\"85\" width=\"240\" height=\"22\" rx=\"3\" fill=\"#3b82f6\"/>\n  <text x=\"204\" y=\"100\" text-anchor=\"middle\" fill=\"#ffffff\" font-size=\"10\">$80m spent (MPC=0.8)</text>\n  <rect x=\"320\" y=\"85\" width=\"60\" height=\"22\" rx=\"3\" fill=\"#ef4444\" opacity=\"0.6\"/>\n  <text x=\"350\" y=\"100\" text-anchor=\"middle\" fill=\"#ffffff\" font-size=\"9\">$20m saved</text>\n\n  <!-- Round 2 -->\n  <text x=\"15\" y=\"137\" fill=\"#e8ecf5\" font-size=\"10\">Round 2</text>\n  <rect x=\"80\" y=\"122\" width=\"192\" height=\"22\" rx=\"3\" fill=\"#3b82f6\" opacity=\"0.85\"/>\n  <text x=\"180\" y=\"137\" text-anchor=\"middle\" fill=\"#ffffff\" font-size=\"10\">$64m spent</text>\n  <rect x=\"272\" y=\"122\" width=\"48\" height=\"22\" rx=\"3\" fill=\"#ef4444\" opacity=\"0.5\"/>\n  <text x=\"296\" y=\"137\" text-anchor=\"middle\" fill=\"#ffffff\" font-size=\"9\">$16m</text>\n\n  <!-- Round 3 -->\n  <text x=\"15\" y=\"174\" fill=\"#e8ecf5\" font-size=\"10\">Round 3</text>\n  <rect x=\"80\" y=\"159\" width=\"154\" height=\"22\" rx=\"3\" fill=\"#3b82f6\" opacity=\"0.7\"/>\n  <text x=\"160\" y=\"174\" text-anchor=\"middle\" fill=\"#ffffff\" font-size=\"10\">$51.2m spent</text>\n  <rect x=\"234\" y=\"159\" width=\"38\" height=\"22\" rx=\"3\" fill=\"#ef4444\" opacity=\"0.4\"/>\n  <text x=\"253\" y=\"174\" text-anchor=\"middle\" fill=\"#ffffff\" font-size=\"8\">$12.8m</text>\n\n  <!-- Round 4 -->\n  <text x=\"15\" y=\"211\" fill=\"#e8ecf5\" font-size=\"10\">Round 4</text>\n  <rect x=\"80\" y=\"196\" width=\"123\" height=\"22\" rx=\"3\" fill=\"#3b82f6\" opacity=\"0.55\"/>\n  <text x=\"145\" y=\"211\" text-anchor=\"middle\" fill=\"#ffffff\" font-size=\"10\">$41.0m spent</text>\n\n  <!-- Dots for continuation -->\n  <text x=\"145\" y=\"242\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\">. . .</text>\n\n  <!-- Total -->\n  <line x1=\"15\" y1=\"255\" x2=\"485\" y2=\"255\" stroke=\"#e8ecf5\" stroke-width=\"0.5\" opacity=\"0.3\"/>\n  <rect x=\"80\" y=\"265\" width=\"400\" height=\"28\" rx=\"4\" fill=\"#f59e0b\" opacity=\"0.2\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n  <text x=\"280\" y=\"283\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"12\" font-weight=\"600\">TOTAL: $100m x 5 = $500m increase in national income</text>\n\n  <!-- Formula box -->\n  <rect x=\"100\" y=\"305\" width=\"300\" height=\"30\" rx=\"6\" fill=\"#059669\" opacity=\"0.1\" stroke=\"#059669\" stroke-width=\"0.5\"/>\n  <text x=\"250\" y=\"324\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\">Multiplier = 1/(1-MPC) = 1/(1-0.8) = 1/0.2 = <tspan font-weight=\"600\" fill=\"#059669\">5</tspan></text>\n\n  <!-- Legend -->\n  <rect x=\"395\" y=\"85\" width=\"10\" height=\"10\" fill=\"#3b82f6\"/>\n  <text x=\"410\" y=\"94\" fill=\"#e8ecf5\" font-size=\"9\">Spent</text>\n  <rect x=\"395\" y=\"100\" width=\"10\" height=\"10\" fill=\"#ef4444\" opacity=\"0.6\"/>\n  <text x=\"410\" y=\"109\" fill=\"#e8ecf5\" font-size=\"9\">Leaked (saved)</text>\n</svg>",
+   "title": "The Multiplier Effect",
+   "checklist": [
+    "Show successive rounds of spending getting smaller",
+    "Identify the leakage at each round (savings, taxes, imports)",
+    "State the MPC and calculate the multiplier correctly",
+    "Show the final change in national income is larger than the initial injection",
+    "Know the formula: Multiplier = 1/(1-MPC) or 1/MPW"
+   ],
+   "description": "Visual representation of how an initial injection leads to a larger final change in national income through successive rounds of spending"
+  },
+  {
+   "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'DM Sans', sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n\n  <!-- Title -->\n  <text x=\"250\" y=\"20\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">Circular Flow: Injections and Leakages</text>\n\n  <!-- Households box -->\n  <rect x=\"30\" y=\"130\" width=\"120\" height=\"50\" rx=\"8\" fill=\"#059669\" opacity=\"0.2\" stroke=\"#059669\" stroke-width=\"1.5\"/>\n  <text x=\"90\" y=\"160\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\">Households</text>\n\n  <!-- Firms box -->\n  <rect x=\"350\" y=\"130\" width=\"120\" height=\"50\" rx=\"8\" fill=\"#3b82f6\" opacity=\"0.2\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/>\n  <text x=\"410\" y=\"160\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\">Firms</text>\n\n  <!-- Top flow: Spending (C) -->\n  <path d=\"M 150 140 Q 250 100 350 140\" stroke=\"#059669\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#arrowG4)\"/>\n  <defs><marker id=\"arrowG4\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0, 8 3, 0 6\" fill=\"#059669\"/></marker></defs>\n  <text x=\"250\" y=\"112\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">Consumption (C)</text>\n  <text x=\"250\" y=\"125\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.7\">Spending on goods &amp; services</text>\n\n  <!-- Bottom flow: Income -->\n  <path d=\"M 350 170 Q 250 210 150 170\" stroke=\"#3b82f6\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#arrowB4)\"/>\n  <defs><marker id=\"arrowB4\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0, 8 3, 0 6\" fill=\"#3b82f6\"/></marker></defs>\n  <text x=\"250\" y=\"203\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">Factor Incomes (Y)</text>\n  <text x=\"250\" y=\"216\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.7\">Wages, rent, interest, profit</text>\n\n  <!-- LEAKAGES (downward arrows from flow) -->\n  <text x=\"250\" y=\"250\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"12\" font-weight=\"600\">LEAKAGES (W)</text>\n\n  <!-- Savings -->\n  <rect x=\"55\" y=\"270\" width=\"100\" height=\"35\" rx=\"6\" fill=\"#ef4444\" opacity=\"0.12\" stroke=\"#ef4444\" stroke-width=\"1\"/>\n  <text x=\"105\" y=\"283\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">Savings (S)</text>\n  <text x=\"105\" y=\"297\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">MPS</text>\n  <line x1=\"90\" y1=\"180\" x2=\"90\" y2=\"270\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"4,3\" opacity=\"0.5\"/>\n\n  <!-- Taxes -->\n  <rect x=\"195\" y=\"270\" width=\"110\" height=\"35\" rx=\"6\" fill=\"#ef4444\" opacity=\"0.12\" stroke=\"#ef4444\" stroke-width=\"1\"/>\n  <text x=\"250\" y=\"283\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">Taxation (T)</text>\n  <text x=\"250\" y=\"297\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">MPT</text>\n  <line x1=\"250\" y1=\"216\" x2=\"250\" y2=\"270\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"4,3\" opacity=\"0.5\"/>\n\n  <!-- Imports -->\n  <rect x=\"345\" y=\"270\" width=\"100\" height=\"35\" rx=\"6\" fill=\"#ef4444\" opacity=\"0.12\" stroke=\"#ef4444\" stroke-width=\"1\"/>\n  <text x=\"395\" y=\"283\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">Imports (M)</text>\n  <text x=\"395\" y=\"297\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">MPM</text>\n  <line x1=\"410\" y1=\"180\" x2=\"410\" y2=\"270\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"4,3\" opacity=\"0.5\"/>\n\n  <!-- INJECTIONS (upward arrows into flow) -->\n  <text x=\"250\" y=\"50\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"12\" font-weight=\"600\">INJECTIONS (J)</text>\n\n  <!-- Investment -->\n  <rect x=\"55\" y=\"55\" width=\"100\" height=\"35\" rx=\"6\" fill=\"#059669\" opacity=\"0.12\" stroke=\"#059669\" stroke-width=\"1\"/>\n  <text x=\"105\" y=\"68\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\">Investment (I)</text>\n  <text x=\"105\" y=\"82\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Firm spending</text>\n  <line x1=\"105\" y1=\"90\" x2=\"105\" y2=\"130\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"4,3\" opacity=\"0.5\"/>\n\n  <!-- Gov Spending -->\n  <rect x=\"195\" y=\"55\" width=\"110\" height=\"35\" rx=\"6\" fill=\"#059669\" opacity=\"0.12\" stroke=\"#059669\" stroke-width=\"1\"/>\n  <text x=\"250\" y=\"68\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\">Gov. Spending (G)</text>\n  <text x=\"250\" y=\"82\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Public services</text>\n  <line x1=\"250\" y1=\"90\" x2=\"250\" y2=\"112\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"4,3\" opacity=\"0.5\"/>\n\n  <!-- Exports -->\n  <rect x=\"345\" y=\"55\" width=\"100\" height=\"35\" rx=\"6\" fill=\"#059669\" opacity=\"0.12\" stroke=\"#059669\" stroke-width=\"1\"/>\n  <text x=\"395\" y=\"68\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\">Exports (X)</text>\n  <text x=\"395\" y=\"82\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Foreign spending</text>\n  <line x1=\"395\" y1=\"90\" x2=\"395\" y2=\"130\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"4,3\" opacity=\"0.5\"/>\n\n  <!-- Equilibrium note -->\n  <text x=\"250\" y=\"330\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"10\" font-weight=\"500\">Equilibrium: J = W (i.e. I + G + X = S + T + M)</text>\n  <text x=\"250\" y=\"345\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.7\">If J > W, national income rises | If W > J, national income falls</text>\n</svg>",
+   "title": "Circular Flow of Income with AD Components",
+   "checklist": [
+    "Identify the two key flows: spending on goods/services and factor incomes",
+    "Know the three injections (I, G, X) and three leakages (S, T, M)",
+    "Understand equilibrium: J = W (injections equal withdrawals)",
+    "If injections > leakages, national income rises (AD increases)",
+    "If leakages > injections, national income falls (AD decreases)"
+   ],
+   "description": "The circular flow model showing how C, I, G, and (X-M) contribute to aggregate demand through injections and leakages"
+  }
+ ]
+}

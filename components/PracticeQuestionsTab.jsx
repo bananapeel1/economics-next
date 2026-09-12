@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { DrawerAlt } from './Icons';
 import { SECTION_MODEL_ANSWERS_LINKS } from '@/data/modelAnswersData';
 import Link from 'next/link';
+import { isPracticeVisible } from '@/lib/ial-commands';
 
 const MARK_COLORS = {
   4: { bg: 'var(--practice-4-bg)', border: 'var(--practice-4-border)', badge: 'var(--practice-4-badge)' },
@@ -19,9 +20,14 @@ const MARK_FILTERS = [
   { value: 20, label: '20 Marks' },
 ];
 
-export default function PracticeQuestionsTab({ questions = [], onAskTutor, sectionNumber }) {
+export default function PracticeQuestionsTab({ questions: allQuestions = [], onAskTutor, sectionNumber, unitCode }) {
   const [activeFilter, setActiveFilter] = useState('all');
   const [expandedIds, setExpandedIds] = useState(new Set());
+
+  // Withhold items whose command word is not on the IAL list for this subject (or flagged hidden).
+  // They rehearse a question shape the student will never sit. See audit/PLAN.md day-0 hotfix.
+  const questions = allQuestions.filter(q => isPracticeVisible(q, unitCode));
+  const withheldCount = allQuestions.length - questions.length;
 
   if (!questions.length) {
     return (
@@ -62,6 +68,11 @@ export default function PracticeQuestionsTab({ questions = [], onAskTutor, secti
         <p className="practice-subtitle">
           Exam-style questions to test your understanding. Click &quot;Show Guidance&quot; to see model answer structures.
         </p>
+        {withheldCount > 0 && (
+          <p className="practice-withheld-note" role="note">
+            {withheldCount} question{withheldCount === 1 ? ' is' : 's are'} being rewritten to match the IAL exam format and {withheldCount === 1 ? 'is' : 'are'} hidden for now.
+          </p>
+        )}
       </div>
 
       {sectionNumber && SECTION_MODEL_ANSWERS_LINKS[sectionNumber] && (

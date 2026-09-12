@@ -1,0 +1,99 @@
+# Packet protocol — how every remediation session runs
+
+Read this after `PROGRESS.md`, `DECISIONS.md` and `NEXT.md`. It is the fourth handoff file. It does not change
+between packets; if it needs to, change it in its own commit and say why in `DECISIONS.md`.
+
+## Invariants
+
+- **Work happens in the remediation worktree**: `/Users/arongijsel/Claude APP/economics-next-remediation`, branch
+  `remediation/2026-09`. The sibling folder `economics-next` is the SEO/marketing tree on another branch. Never
+  do packet work there, and never run `git checkout` of another branch inside either tree.
+- **Dev server for verification**: launch config `remediation-dev`, port 3001 (the SEO tree owns 3000).
+- **One packet per session.** Finish the lifecycle below, then clear context. Do not start the next packet in
+  the same session even if there is budget left; the handoff is the product.
+- **The ledger is the definition of coverage.** `audit/ledger.json` holds every audit item with a stable id
+  (`F001`–`F117` code findings, `C-<section>-<kind>-<nn>` content items). A finding is closed when a verifier
+  confirms it, not when the builder says so. Use `node audit/scripts/ledger.mjs` to change it; never hand-edit.
+- **Content writes are snapshot first.** `audit/scripts/snapshot-touched-sections.mjs` before any DB write;
+  `audit/content-sections/` is the t=0 restore point. Until packet 2 lands, in-place edits only (see DECISIONS).
+
+## The lifecycle
+
+### 1. Brief (main session, ~5 minutes)
+
+1. Read `PROGRESS.md`, `DECISIONS.md`, `NEXT.md`, then `node audit/scripts/ledger.mjs packet <n> --open`.
+2. Read only the audit slices the packet needs (the `NEXT.md` brief names them). Do not read `audit/raw/` wholesale.
+3. Write the packet spec at the top of `NEXT.md` under a `## Packet <n> spec` heading: the ledger ids it will
+   close, any ids it deliberately leaves for a later packet (with the packet number), and the acceptance checks
+   a verifier can run without the conversation. For packets that touch the student-facing step, the acceptance
+   check is a 390px walkthrough script (which section, which steps, what must be visible).
+
+### 2. Build
+
+- Snapshot first if content is touched. Then implement. Prefer the main session for packets 2–5 (they need
+  judgment across many files); a single implementer agent is fine for narrow packets (6, 9, 10, 11).
+- `npm run build` must pass before anything is claimed. There are no tests in this repo; the build is the floor.
+- Claim: `node audit/scripts/ledger.mjs claim <n> F0xx F0yy C-...`. Claim only what was actually changed.
+
+### 3. Verify A — finding check (agent `packet-verifier`, read-only, fresh context)
+
+Spawn with the Agent tool, `subagent_type: packet-verifier`. Give it three things and nothing else: the packet
+number, the commit range or `git diff` to inspect, and the instruction to run `ledger.mjs packet <n>` itself.
+It confirms or rejects each claimed id with `file:line` evidence, using the CLI. It must not see this
+conversation, and it must not be told what the builder believes it did.
+
+### 4. Verify B — student walkthrough (agent `student-walkthrough`, or the main session if the agent cannot
+reach the Browser pane)
+
+Only for packets that change what a student sees (0, 5, 7, 10, 11, 12, every content packet). Start
+`remediation-dev`, set the viewport to 390×844, and replay the acceptance script from the packet spec. Output
+is what was seen, step by step, plus console errors. Anything the audit's walkthrough section complained about
+that is still visible is a rejection.
+
+### 5. Gate
+
+All of these, in order, or the packet is not done:
+
+1. `npm run build` green.
+2. `node audit/scripts/ledger.mjs unverified <n>` exits 0 (every claimed id confirmed or marked wont-fix with a note).
+3. Verify B report attached to `NEXT.md` under the packet spec (a few lines is enough), when it applied.
+4. Validator green on all 43 sections (from packet 3 onward).
+5. `PROGRESS.md` row updated: status, commit, snapshot path, validator result.
+6. Commit with `packet-<n>:` at the start of the subject. Then `git push -u origin remediation/2026-09`.
+
+### 6. Handoff
+
+Rewrite `NEXT.md` for the next packet only: what to read, what to do, exit criteria, and anything this packet
+discovered that the next one must know. Append irreversible choices to `DECISIONS.md`. Clear context.
+
+## Shipping
+
+A packet that is committed is not shipped. Students see `main`, which Vercel deploys. Ship checkpoints:
+
+- after packet 1 (this is the Day 0 hotfix plus honest measurement; it is overdue),
+- after packet 5 (the step-0 change; start the two-week clean-baseline clock here),
+- after packet 13,
+- after every five content packets.
+
+Shipping is a PR from `remediation/2026-09` into `main`, merged by the founder. Rebase on `main` first if the
+SEO branch has merged in between. Do not merge from a session; open the PR and stop.
+
+## Agents and models
+
+| Role | Agent | Model | Why |
+|---|---|---|---|
+| Orchestrate, brief, gate, handoff | main session | Fable or Opus | Judgment across the whole packet |
+| Build, packets 2–5 and 7 | main session | Fable or Opus | Cross-file design decisions |
+| Build, narrow packets | `claude` general agent | Opus | Bounded scope, clear spec |
+| Verify A | `packet-verifier` | Sonnet | Mechanical: read diff, check each id, cite line |
+| Verify B | `student-walkthrough` | Sonnet | Scripted browser replay |
+| Content packets (14–56) | workflow, one section per run | mixed | Author on Opus under the validator, examiner and skeptic reviewers on Sonnet, founder reviews the rendered diff |
+
+Token discipline: the main session reads reports, not files. Verifier reports are short by construction (one
+line per id). If a packet needs more than one session, stop at a committed, verified sub-point and hand off; do
+not stretch a session to finish.
+
+## Definition of done, restated
+
+Build green · every claimed ledger id confirmed · walkthrough clean where applicable · validator green (packet 3+)
+· PROGRESS row updated · committed with the packet id · pushed. Shipped at the next checkpoint.

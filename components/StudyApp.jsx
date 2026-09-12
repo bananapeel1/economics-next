@@ -19,6 +19,7 @@ import LearnModeTab from './LearnModeTab';
 import HomeScreen from './HomeScreen';
 import { SpacedReview, MixedReview, countDueReviews, getDueReviews } from './ReviewMode';
 import { BookAlt, Notes as NotesIcon, ChartHistogram, DrawerAlt, CardsBlank, Quiz as QuizIcon, Mistakes as MistakesIcon, Tutor as TutorIcon, Star, Padlock, LearnMode as LearnModeIcon } from './Icons';
+import { trackFunnel } from '@/lib/funnel';
 
 const HomeIcon = () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>;
 
@@ -398,15 +399,26 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   // because useCallback variables are in the temporal dead zone before their declaration.
   // See commit 45d4583 for the fix.
 
-  // Persist Learn Mode section to localStorage (no DB dependency — safe here)
-  useEffect(() => {
+  // Learn Mode step persistence.
+  // This used to be an effect keyed on [learnModeSection, activeSection]. On a section change it fired
+  // BEFORE the step for the new section was loaded, so it stamped the previous section's step onto the
+  // new section's key (audit: cross-section resume contamination). Persist only from an explicit step
+  // change, for the section that step belongs to; load with one helper used by every navigation path.
+  function readSavedStep(subjectId, sectionId) {
+    if (typeof window === 'undefined') return 0;
+    const db = user && savedProgress?.[sectionId];
+    if (db && Number.isFinite(db.furthest_step)) return db.furthest_step;
+    try {
+      const local = localStorage.getItem(`revvy_learnmode_${subjectId}_${sectionId}_section`);
+      return local ? (parseInt(local, 10) || 0) : 0;
+    } catch { return 0; }
+  }
+  function handleLearnStepChange(step) {
+    setLearnModeSection(step);
     if (typeof window !== 'undefined' && activeSubjectId && activeSection) {
-      localStorage.setItem(
-        `revvy_learnmode_${activeSubjectId}_${activeSection}_section`,
-        String(learnModeSection)
-      );
+      try { localStorage.setItem(`revvy_learnmode_${activeSubjectId}_${activeSection}_section`, String(step)); } catch {}
     }
-  }, [learnModeSection, activeSubjectId, activeSection]);
+  }
 
   // Fetch glossary terms for active subject
   useEffect(() => {
@@ -570,18 +582,28 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
         furthest_step: furthestStep,
         total_steps: totalSteps,
       }),
-    }).catch(() => {});
+    }).then(res => {
+      if (!res.ok) {
+        console.warn('[progress] save failed', res.status);
+        trackFunnel('progress_write_failed', { sectionId, step: furthestStep, status: res.status });
+      }
+    }).catch(err => {
+      console.warn('[progress] save failed', err?.message);
+      trackFunnel('progress_write_failed', { sectionId, step: furthestStep, status: 0 });
+    });
   }, [user]);
 
-  // Debounced DB save for learn mode step changes (1s)
-  useEffect(() => {
-    if (user && activeSection && sectionData?.content?.length) {
-      const timer = setTimeout(() => {
-        saveProgress(activeSection, learnModeSection, sectionData.content.length);
-      }, 1000);
-      return () => clearTimeout(timer);
-    }
-  }, [learnModeSection, activeSection, user, sectionData, saveProgress]);
+  // Learn Mode progress is persisted from explicit step actions in LearnModeTab (onPersistStep), never
+  // from an effect. The effect version wrote a furthest_step=0 row the moment any section loaded on any
+  // tab, with the BLOCK count as total_steps; that is why 825 of 1,093 "starts" in the audit sat at
+  // step 0 and why the overview showed the wrong step count on 21 sections. `totalSteps` here is the
+  // real flat step count from LearnModeTab, and furthest never goes backwards.
+  const persistLearnStep = useCallback((step, totalSteps, { complete = false } = {}) => {
+    if (!user || !activeSection || !totalSteps) return;
+    const prev = savedProgress?.[activeSection]?.furthest_step ?? -1;
+    const furthest = complete ? Math.max(prev, totalSteps - 1) : Math.max(prev, step);
+    saveProgress(activeSection, furthest, totalSteps);
+  }, [user, activeSection, savedProgress, saveProgress]);
 
   const handleStepChange = useCallback((info) => {
     setContentStepInfo(info);
@@ -610,6 +632,10 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       setSectionData(null);
       setActiveTab('learn-mode');
       setContentStepInfo(null);
+      // Load the new section's own saved step instead of carrying the old section's step across.
+      const step = readSavedStep(subjectId, firstId);
+      setLearnModeSection(step);
+      setLearnModeResuming(step > 0);
       fetch(`/api/sections/${firstId}`)
         .then(res => res.ok ? res.json() : null)
         .then(data => { if (data) setSectionData(data); })
@@ -634,15 +660,10 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       }
     }
 
-    // Learn Mode: check for saved progress — prefer DB for logged-in, fallback to localStorage
-    if (typeof window !== 'undefined') {
-      const dbProgress = user && savedProgress[sectionId];
-      const dbStep = dbProgress ? dbProgress.furthest_step : null;
-      const localStep = localStorage.getItem(`revvy_learnmode_${activeSubjectId}_${sectionId}_section`);
-      const step = dbStep ?? (localStep ? parseInt(localStep, 10) : 0);
-      setLearnModeSection(step);
-      setLearnModeResuming(step > 0);
-    }
+    // Learn Mode: resume from saved progress (DB for signed-in students, else this browser)
+    const step = readSavedStep(activeSubjectId, sectionId);
+    setLearnModeSection(step);
+    setLearnModeResuming(step > 0);
   }
 
   function renderTab() {
@@ -666,7 +687,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     const isPreview = PREVIEW_TABS.has(activeTab) && !isPremium;
 
     switch (activeTab) {
-      case 'home': return <HomeScreen subjects={subjects} units={subjectUnits} sections={subjectSections} user={user} isPremium={isPremium} onNavigateToSection={(id) => { setActiveSection(id); setActiveTab('overview'); }} onNavigateToTab={(tab) => setActiveTab(tab)} />;
+      case 'home': return <HomeScreen subjects={subjects} units={subjectUnits} sections={subjectSections} user={user} isPremium={isPremium} onNavigateToSection={(id) => { setActiveSection(id); setActiveTab('overview'); const step = readSavedStep(activeSubjectId, id); setLearnModeSection(step); setLearnModeResuming(step > 0); }} onNavigateToTab={(tab) => setActiveTab(tab)} />;
       case 'overview': return <SectionOverview section={currentSection} unit={currentUnit} sectionData={sectionData} tabs={tabs} onTabSelect={handleTabSelect} isPremium={isPremium} user={user} savedProgress={savedProgress} />;
       case 'learn-mode': {
         // If a review is active, show the review component instead
@@ -689,7 +710,8 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
             currentSection={currentSection}
             currentUnit={currentUnit}
             currentStep={learnModeSection}
-            onStepChange={setLearnModeSection}
+            onStepChange={handleLearnStepChange}
+            onPersistStep={persistLearnStep}
             isResuming={learnModeResuming}
             onResumeDismiss={() => setLearnModeResuming(false)}
             onComplete={() => {
@@ -709,7 +731,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       case 'content': return <ContentTab key={activeSection} data={sectionData.content} glossaryTerms={glossaryTerms} onStepChange={handleStepChange} initialPosition={stepperPositions.current[activeSection] || null} />;
       case 'notes': return <NotesTab data={sectionData.notes} glossaryTerms={glossaryTerms} />;
       case 'diagrams': return <DiagramsTab data={sectionData.diagrams} />;
-      case 'practice': return <PracticeQuestionsTab questions={sectionData.practice} onAskTutor={isPremium ? goToTutor : null} sectionNumber={currentSection?.number} />;
+      case 'practice': return <PracticeQuestionsTab questions={sectionData.practice} onAskTutor={isPremium ? goToTutor : null} sectionNumber={currentSection?.number} unitCode={currentUnit?.code} />;
       case 'flashcards': return <FlashcardsTab cards={sectionData.flashcards} sectionId={activeSection} previewMode={isPreview} />;
       case 'quiz': return <QuizTab questions={sectionData.quiz} sectionId={activeSection} onAskTutor={isPremium ? goToTutor : null} previewMode={isPreview} />;
       case 'mistakes': return <MistakesTab data={sectionData.mistakes} />;

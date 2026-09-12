@@ -1,5 +1,17 @@
 "use client";
 import { useEffect, useState } from 'react';
+import { trackFunnel } from '@/lib/funnel';
+
+/* Forty subscribers cancelled before this existed and not one reason was recorded. */
+const CANCEL_REASONS = [
+  ['not_using', "I'm not using it enough"],
+  ['content_quality', 'The content or exercises were not good enough'],
+  ['missing_content', "It doesn't cover what I need"],
+  ['exams_over', 'My exams are over'],
+  ['too_expensive', "It's too expensive"],
+  ['technical', 'Something was broken or confusing'],
+  ['other', 'Something else'],
+];
 
 /**
  * The cancel-save offer, shown to every subscriber who clicks "Cancel
@@ -19,6 +31,14 @@ export default function CancelOfferModal({ open, onClose, onDecline }) {
   const [terms, setTerms] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [reason, setReason] = useState('');
+  const [comment, setComment] = useState('');
+
+  function handleDecline() {
+    if (!reason) return;
+    trackFunnel('cancel_reason', { reason, comment: comment.trim().slice(0, 500) || null });
+    onDecline?.();
+  }
 
   useEffect(() => {
     if (!open) return;
@@ -86,7 +106,34 @@ export default function CancelOfferModal({ open, onClose, onDecline }) {
           {loading ? 'Opening checkout…' : `Get lifetime access — ${price}`}
         </button>
 
-        <button className="cancel-offer-decline" onClick={onDecline} disabled={loading}>
+        <div className="cancel-reason">
+          <label className="settings-label" htmlFor="cancel-reason-select">
+            Before you cancel, what is the main reason?
+          </label>
+          <select
+            id="cancel-reason-select"
+            className="settings-input"
+            value={reason}
+            onChange={e => setReason(e.target.value)}
+            disabled={loading}
+            required
+          >
+            <option value="">Choose one…</option>
+            {CANCEL_REASONS.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
+          </select>
+          <input
+            className="settings-input"
+            type="text"
+            placeholder="Anything else? (optional)"
+            value={comment}
+            onChange={e => setComment(e.target.value)}
+            disabled={loading}
+            maxLength={500}
+          />
+        </div>
+
+        <button className="cancel-offer-decline" onClick={handleDecline} disabled={loading || !reason}
+          title={reason ? undefined : 'Choose a reason first'}>
           No thanks, cancel my subscription
         </button>
 
