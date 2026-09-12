@@ -65,8 +65,8 @@
    "fix": "Rebase the model: completion should land at a clearly positive value (e.g. 70-80) and decay should follow the scheduled interval (strength hits the 'review' threshold roughly when the review is due, not two days in). Feed inline quiz correctness, post-test and quick-fire results into quizAccuracy. Show 'Review due in N days' rather than a decaying percentage on the completion screen. Do not show a decaying bar in the sidebar next to a completion dot.",
    "impact": "The first thing under 'Topic complete' is an amber bar saying '35% strength'. Coming back tomorrow it is 30%, then red. A student who completes five topics in a week sees a sidebar full of red slivers next to every green completion dot. The 14-day review interval the app schedules is incompatible with its own meter: by the time the review is due the meter says <10% even after a perfect previous review. Nothing the student does inside Learn Mode (inline quiz, explain-it-back, recalls, quick-fire, post-test) raises the meter except a SpacedReview or MixedReview.",
    "packet": 4,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-4",
    "verified_by": null,
    "evidence": null,
    "note": null
@@ -167,8 +167,8 @@
    "fix": "Use the last results entry: results[results.length-1]?.timedOut, or selected === null.",
    "impact": "Every time the student answers A (in time), the timeout message appears under the options, contradicting the feedback colours.",
    "packet": 4,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-4",
    "verified_by": null,
    "evidence": null,
    "note": null
@@ -490,10 +490,10 @@
    "fix": "Render disabled/locked versions of 'Grade my explanation' and 'Model answer from Tutor' for free users with a one-line value prop and a trial CTA; fix the dead branch; on CompletionScreen, make the primary CTA 'Next topic' and demote or gate-label 'Try the quiz'; decide whether Quick Fire over the full bank should remain free given the Quiz tab is paywalled.",
    "impact": "A free student types a 200-word explanation and the box just sits there: no grade, no 'unlock AI feedback' prompt, no acknowledgement. They finish a topic, drill all 25 quiz questions for free in Quick Fire, click 'Try the quiz' and hit a paywall for the same 25 questions. The premium offer looks arbitrary from inside the core loop, and the one moment of highest motivation (completion) ends in a wall rather than a next topic.",
    "packet": 12,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-12",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "components/learn-mode/ExplainItBackUpgraded.jsx:108-116 new locked-state branch fires on !isPremium && text.length>10, independent of onAskTutor; StudyApp.jsx:743 confirms onAskTutor=isPremium?goToTutor:null so the isPremium&&onAskTutor branch (line 102) still serves premium users",
    "note": null
   },
   {
@@ -524,10 +524,10 @@
    "fix": "Single source of truth for the feature matrix (one constant consumed by overview, upgrade page, paywall); pass trialEligible from /api/subscription and switch copy to 'Subscribe' when false; verify or remove the 1,200+ claim.",
    "impact": "A student told 'no card needed' who is then asked for a card (because they trialled last term) loses trust at the checkout. A student who read 'Model answers' as free on the overview hits a paywall on the page. The audience is 16-18-year-olds paying with parents' cards; inconsistent claims are the kind of thing that ends in a chargeback or a bad word in a school group chat.",
    "packet": 12,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "not-fixed",
+   "closed_by": "packet-12",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "Not a single source: lib/feature-matrix.js is imported only by app/upgrade/page.js and components/PaywallOverlay.jsx; the subject-hub 'overview' pages this fix names (app/economics/page.js:9,292,434; app/business/page.js:9,287,429) still hardcode their own matching prose rather than importing it, and lib/feature-matrix.js:50 exports BOUNDARY_SENTENCE for exactly this purpose but it is imported nowhere (0 repo matches) - a third place that currently agrees by luck, not derivation, the same failure mode the finding was raised for. trialEligible is entirely unimplemented: 0 repo matches for 'trialEligible'; app/upgrade/page.js:63,94,136 and components/PaywallOverlay.jsx:60,133,141 all show '£1 first month'/'Start Pro' unconditionally to every visitor, verified live via curl on /upgrade (rendered HTML: 'New subscribers get their first month for £1' + 'Start Pro'), so a previously-subscribed free user still sees the £1 offer and is silently charged full price at Stripe checkout per app/api/stripe/checkout/route.js hadPreviousSubscription logic, which is the exact chargeback-risk defect this finding called out. The 1,200+ claim was genuinely removed (0 repo matches). The boundary content itself is roughly honest against StudyApp.jsx FREE_TABS/PREVIEW_TABS/PREMIUM_TABS, so this is not 'the wrong boundary', but 2 of 3 required fixes are undone",
    "note": null
   },
   {
@@ -575,8 +575,8 @@
    "fix": "Treat overall.total===0 or no user_content_progress rows as 'start' and point at the first section of the chosen subject/unit.",
    "impact": "First ever visit to Home reads as if they have history they do not have; the one place that could say 'Start with Unit 1, Topic 1' instead says 'continue'.",
    "packet": 4,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-4",
    "verified_by": null,
    "evidence": null,
    "note": null
@@ -592,10 +592,10 @@
    "fix": "Seed isPremium server-side (layout already fetches the user; fetch the subscription row too and pass as initialSubscription), and move Stripe reconciliation to a webhook/cron rather than every GET.",
    "impact": "A paying student who reloads on the Tutor tab sees the 'Unlock Tutor' paywall for the duration of two Stripe round-trips, then it disappears. It reads as 'my subscription broke'.",
    "packet": 12,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-12",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/layout.js:69-76 fetches subscription server-side and passes initialSubscription to <AuthProvider> (layout.js:151); AuthProvider.jsx:27,103 seed isPremium from it for first paint; layout.js:67-68 honestly states Stripe reconciliation still runs on every GET and is NOT moved to a webhook",
    "note": null
   },
   {
@@ -983,10 +983,10 @@
    "fix": "Replace literal colours with tokens (`var(--accent-purple)`, `var(--text-secondary)`) and define light/dark values in the :root / [data-theme=\"dark\"] blocks.",
    "impact": "A student who switches to light mode (common in bright classrooms, on phones in daylight) sees the recall prompt and the word-bank chips as faint lavender on white; the fill-in becomes unreadable.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-11",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/globals.css:2687,2770,2849 recall prompt/label/word-chip text now use --accent-purple-text/--accent-purple/--text-primary with light values (#4c1d95 etc, ~11:1 on white); title's text-readability defect resolved",
    "note": null
   },
   {
@@ -1153,10 +1153,10 @@
    "fix": "Track matched terms across the whole step (pass a shared Set through parseInlineMarkdown, or highlight once per NoteSection), make the span a `<button type=button>` or add `tabindex=0` + `aria-describedby`, add a click/touchstart toggle with tap-outside dismiss, and skip highlighting inside Key Idea / Takeaway to keep those clean.",
    "impact": "On a phone the dotted underlines are visual noise with no discoverable interaction; a tap fires a synthetic mouseover so a 280px fixed tooltip appears and stays until the next tap or scroll, with no way to open it by keyboard or screen reader. Not tooltip spam (single JS tooltip), but repeated underlines make body text look link-littered.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "not-fixed",
+   "closed_by": "packet-11",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "components/GlossaryTooltip.jsx tap/keyboard/dismiss now work, but components/NotesTab.jsx:10-12,60,74,120,128,139 still calls g() fresh per block with no shared Set across a chapter, and keyIdea/takeaway are not skipped; live DOM check on Market Failure Notes tab showed 'deadweight loss' highlighted 8x, 'market failure' 7x, 'consumption' 6x in one step, and 13 of 21 takeaway items plus the key idea still highlighted, contradicting the fix's own 'skip Key Idea/Takeaway' and 'once per step' requirements",
    "note": null
   },
   {
@@ -1170,10 +1170,10 @@
    "fix": "Define light-theme variants: `--rl-amber-text:#b45309`, `--rl-teal-text:#047857`, `--rl-blue-text:#1d4ed8`, `--rl-green-text:#047857`; replace hard-coded `#d4bfff`/`#a78bfa` with a `--recall-accent` token that is `#6d28d9` in light; raise label size to 11px; never use --text-dim for text.",
    "impact": "A light-mode student sees the purple recall card with four items but cannot read the instruction 'Put these in the right order:' (lavender on white); every card label ('COMMON MISCONCEPTION', 'REAL EXAMPLE') is a faint pastel strip.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "not-fixed",
+   "closed_by": "packet-11",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "core prompt/label contrast now passes (app/globals.css:2770 --accent-purple-text #4c1d95 ~11:1), but app/globals.css:2906 .lm-recall-arrow-btn:hover:not(:disabled) still hardcodes border-color:#a78bfa (~2.7:1 on white, used live in components/learn-mode/ReorderRecall.jsx:120-121); .lm-recall-label (line 2767) is still 10px not the required 11px; .lm-recall-hint-text (line 2893) still uses --text-dim for text against the explicit 'never use --text-dim for text' instruction",
    "note": null
   },
   {
@@ -1187,8 +1187,8 @@
    "fix": "Make recall items `<button type=button aria-pressed={selected}>`; add `aria-label=\"Move up\"/\"Move down\"/\"Skip this check\"`; add `.lm-quiz-option:focus-visible, .lm-recall-item:focus-visible, .lm-nav-next:focus-visible { outline: 2px solid var(--accent-green); outline-offset: 2px }`; keep outline on textareas; fix heading order (chapter h2 > section h3 > subhead h4).",
    "impact": "Keyboard and switch users cannot select items in the reorder recall at all; screen-reader users hear 'multiplication sign, button' for Skip and 'black up-pointing triangle' for move-up; textareas lose the default focus ring.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-11",
    "verified_by": null,
    "evidence": null,
    "note": null
@@ -1204,10 +1204,10 @@
    "fix": "HTML-escape the raw text (`&`, `<`, `>`) at the top of parseInlineMarkdown before applying the bold/italic regexes; in glossary-highlight use a replacer function `(m) => \\`<span ...>${m}</span>\\`` instead of a template string, and escape `$` in escapedDef.",
    "impact": "None visible today. Latent: a future definition like 'below $1 a day' would render 'below Demand a day'; a content string with '<b' or '<1x' style text would lose words on screen.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "not-fixed",
+   "closed_by": "packet-11",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "lib/glossary-highlight.js:76 confirmed $&/$1/$` now render literally (adversarial test passed), but lib/parse-inline-markdown.js:8-14 still never HTML-escapes raw text before/after the bold/italic regexes as the fix required, so the 'Content HTML is injected unescaped' half of the finding is untouched -- a stray '<' followed by a letter in note content still reaches dangerouslySetInnerHTML unescaped",
    "note": null
   },
   {
@@ -1272,10 +1272,10 @@
    "fix": "Require `e.key.length === 1` before the letter comparison (and ignore events with ctrlKey/metaKey/altKey).",
    "impact": "A student who presses Ctrl (e.g. Ctrl+Tab to switch tab) or an arrow key to scroll has an answer silently selected and the card moves to phase 1 ('Check answer' lit). If they then press Enter expecting to advance, the wrong answer is checked and recorded into SM-2.",
    "packet": 10,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-10",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "QuestionCard.jsx:32-33 isPrintable=e.key.length===1&&!ctrlKey&&!metaKey&&!altKey rules out ArrowDown/Control/Alt/Backspace/CapsLock (all length>1) and blocks single-char keys held with a modifier",
    "note": null
   },
   {
@@ -1289,10 +1289,10 @@
    "fix": "Either add a 3-button confidence row to QuestionCard after reveal and pass it to computeNextReview (the lib already supports it), or remove the InlineQuiz confidence prompt until it feeds scheduling. Do not ship a prompt whose data is discarded.",
    "impact": "Lucky guesses in Smart Practice are scheduled identically to confident knowledge, so a B-guesser (see the bias finding) accumulates 'mastered' (repetitions>=3) cards they cannot actually answer. In Learn Mode the student is interrupted by a 4-second confidence prompt whose answer changes nothing they will ever see, which reads as a pointless widget.",
    "packet": 10,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-10",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "QuestionCard.jsx:8,133-153 confidence state+3-button row; handleNext:74 and Enter path:50 both gate on confidence; PracticeEngine.jsx handleAnswer destructures confidence and calls computeNextReview(current,correct,confidence); spaced-repetition.js:37,55-60,67-70 uses it; handleSkip:616-624 records nothing",
    "note": null
   },
   {
@@ -1306,10 +1306,10 @@
    "fix": "Re-append wrong items to the end of the in-session queue (cap once per item), or change the copy to 'Scheduled for review in 10 minutes' and rename the summary stat to 'To review'.",
    "impact": "A student who gets 6 wrong is told six times the question will come back, finishes the 20-question session without seeing any of them again, and then sees 'RETRIED 6' on the summary. The product promises a Leitner-style loop it does not deliver in the moment the student expects it.",
    "packet": 10,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-10",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "PracticeEngine.jsx:462 requeuedRef reset in handleStart; :606-608 re-appends a wrong item to queue end guarded by has()/add() so exactly once per key; QuestionCard.jsx:127 copy now 'You will see this one again before the session ends'",
    "note": null
   },
   {
@@ -1323,10 +1323,10 @@
    "fix": "Distinguish states: if progress exists but nothing is due, show 'All N questions in these topics are scheduled for review; next due in Xh' with an 'Practise anyway (review early)' button that includes not-yet-due cards at low priority. Show per-chip counts: 'N questions, M due today'.",
    "impact": "This is the most direct code-level cause of the 'doesn't cover all topics' complaint: a diligent student is told outright there are no questions for the topic they just studied. They cannot tell the difference between 'you're up to date' and 'the app has no content here'.",
    "packet": 10,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-10",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "PracticeEngine.jsx:312 and FlashcardsEngine.jsx:262 now onClick={() => onStart()}, no event leaks into handleStart(practiseEarly); handleRestart (669-682) clears accessNote/emptyReason; only other bare onClick={onStart} is WrittenPracticeEngine.jsx:216 whose handleStart (line 377) takes zero params, so no flag-leak risk there. queueStats (lib/spaced-repetition.js:190-206) correctly totals due/unseen/scheduled; nothing-due screen (PracticeEngine.jsx:730-736) names next-due time via formatNextDue; Practise anyway (742-744) calls handleStart(true), which sets includeNotDue and buildQueue (spaced-repetition.js:124-128) draws from the notDue pool, producing a non-empty queue.",
    "note": null
   },
   {
@@ -1425,10 +1425,10 @@
    "fix": "Round-robin across selected sections when drawing unseen items (interleave by section, then shuffle within rounds), and expose a session length picker (10/20/40).",
    "impact": "A student who deliberately picks 'the six topics I'm weakest on' gets a session that skips some of them entirely and has no way to request 'more' or 'fewer' questions.",
    "packet": 10,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-10",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "spaced-repetition.js:169-186 roundRobinBySection lane-shifts per section (25-vs-3 traced: alternates 3 rounds then drains the 25-lane, 28 in/28 out, no drop/dup); PracticeEngine.jsx sessionSize state feeds buildQueue's 4th arg and handleStart useCallback deps:[selectedSectionIds,isLoggedIn,sessionSize] include it",
    "note": null
   },
   {
@@ -1442,16 +1442,16 @@
    "fix": "Expand the first unit (or the unit the student was last in) by default; replace the badge with an explicit checkbox; show 'N questions - M due' on each chip for everyone (question counts need no auth; compute due count from localStorage for anonymous users); reword to 'Pick the topics you want to practise'.",
    "impact": "A first-time student lands on a page that looks empty (every unit '0 / N'), does not discover unit select-all, and has no information to decide between topics. Anonymous students see zero feedback loop on the topic screen across visits. The framing 'assessed on' raises stakes for a low-stakes practice tool.",
    "packet": 10,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-10",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "PracticeEngine.jsx:373-390 recomputes due from loadLocalProgress when !isLoggedIn, using key format sectionId:questionIndex matching saveLocalProgress (line 617, 582); SubjectStep dep array restored to [subjects, units, sections] (line 88), fetchProgressSummary now carries isLoggedIn (line 396); browser-verified at localhost:3001/practice with 6 seeded local items (2 past nextReview, 3 future) for introductory-concepts: chip read 25 questions · 22 due vs untouched Demand chip 25 questions · 25 due; no console ReferenceError, page 200",
    "note": null
   },
   {
    "id": "F086",
    "lens": "smart-practice-quiz-bank",
-   "sev": "low",
+   "sev": "high",
    "cat": "trust",
    "title": "Smart Practice serves all 25 questions free while the section Quiz tab paywalls the same bank after 2",
    "file": "components/QuizTab.jsx",
@@ -1459,11 +1459,11 @@
    "fix": "Decide one policy: either make Quiz tab preview larger and point its paywall at premium-only value (explanations + Ask Tutor + attempt history), or gate /practice consistently. Whichever is chosen, link the two surfaces so students know where the full bank lives.",
    "impact": "A free student who hits the Quiz-tab paywall and then finds /practice sees the identical questions for free and infers the paywall is arbitrary; a student who does not find /practice believes they have access to 2 questions per section. Either way the gating story is incoherent.",
    "packet": 12,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
-   "note": null
+   "status": "confirmed",
+   "closed_by": "packet-12",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "regression check only: commits 6532727/38a5adb/8d2b27a/dd7fe86 touch app/api/fun/questions, upgrade/page.js, PaywallOverlay.jsx, feature-matrix.js, ExplainItBackUpgraded.jsx, layout.js, AuthProvider.jsx and StudyApp.jsx's mistakes-tab gate only; none touch app/api/sections/[id]/route.js, QuizTab.jsx, FlashcardsTab.jsx, ExtrasTab.jsx or the totalCount wiring (StudyApp.jsx:735-739) the prior confirmation cited. No regression",
+   "note": "severity low -> high: 2026-09-12 measured: GET /api/practice/questions needs no auth and no premium check (uses the anon client), and returns the full section_quiz array including correctIndex for every section id passed. An unauthenticated curl returned 75 questions with answer keys across 3 sections; nothing limits the section list, so the whole 769-question bank is fetchable in one request. This is not an inconsistency between two tabs: the quiz paywall is decorative, and the answer keys leak with it. Raised from low after the founder chose to KEEP the current paywall boundary, which makes a non-functioning paywall the thing to fix."
   },
   {
    "id": "F087",
@@ -1510,10 +1510,10 @@
    "fix": "Pre-compile one alternation RegExp per glossary list (useMemo on glossaryTerms), and memoize parsed HTML per (text, glossaryTerms) with useMemo/React.memo on NoteSection/BodyRenderer. Or pre-highlight server-side once per section.",
    "impact": "On a mid/low-end Android (typical in the target markets) tapping a quiz option, a confidence button or 'Next' triggers a visible stall because all note text is re-highlighted from scratch; scrolling jank after each interaction.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-11",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "lib/glossary-highlight.js:18-29 module-level regexCache compiles each term regex once ever; line 51 splits the string once per call, not once per term; used Set (line 48) persists across all text parts in one call, confirmed longest-first + at-most-once-per-call via adversarial node tests",
    "note": null
   },
   {
@@ -1527,10 +1527,10 @@
    "fix": "Define --lm-purple-text / --lm-purple-bg tokens in both [data-theme] blocks (e.g. light: #5b21b6 text) and replace the 13 hardcoded values.",
    "impact": "Any student who toggles light mode (theme-toggle-btn exists in the mobile header) cannot read the recall question prompt or the word-bank chips in fill-in-the-blank; the exercise looks like empty pills.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "not-fixed",
+   "closed_by": "packet-11",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/globals.css: old file had 7 literal #a78bfa/#d4bfff occurrences plus a dozen rgba(167,139,250,...) equivalents; only 3 rules were converted to --recall-accent/--recall-accent-fill (lines 2795, 2837, 2889 in new file) and line 2906 .lm-recall-arrow-btn:hover still hardcodes border-color:#a78bfa, live in ReorderRecall.jsx's move-up/down buttons, ~2.7:1 contrast on white -- well short of the claimed 'replace the 13 hardcoded values'; npm run contrast passes only because its literals check scans color/fill/stroke, not border-color/background, so it does not see this",
    "note": null
   },
   {
@@ -1561,10 +1561,10 @@
    "fix": "Add `Cache-Control: public, s-maxage=3600, stale-while-revalidate` (content is already ISR'd for 1h on the page route) or export revalidate; keep a client-side Map of loaded sections; consider a ?fields=content,diagrams,quiz,practice variant for Learn Mode and lazy-load notes/flashcards/extras on tab open.",
    "impact": "On a school Wi-Fi share (~1-2 Mbps effective, 200-400 ms RTT) each section switch is a blank screen for roughly 1-2 s (8 DB round-trips server-side + 39 KB transfer), and the first visit is ~200+ KB compressed before Learn Mode can hydrate. Going back to a section already read pays the full cost again.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "not-fixed",
+   "closed_by": "packet-11",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/api/sections/[id]/route.js:89-92 Cache-Control:private + Vary:Cookie is a sound header for the CDN-leak concern, but components/StudyApp.jsx:308,483-491 sectionCacheRef is a plain Map keyed only by activeSection, never invalidated on isPremium/user change -- a login or logout that flips entitlement via AuthProvider's onAuthStateChange without unmounting StudyApp continues serving the pre-transition cached quiz/flashcard payload from the Map",
    "note": null
   },
   {
@@ -1663,10 +1663,10 @@
    "fix": "Use a skeleton/progress indicator for loading, keep the previous section on screen until the new one arrives, and reserve the 'being prepared' copy for a confirmed-empty response.",
    "impact": "On a slow school network the student reads that the topic is not ready yet and leaves, when it is simply still downloading; there is no spinner or skeleton to signal progress.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-11",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "components/StudyApp.jsx:483-491 section-switch effect never nulls sectionData so prior section stays on screen; line 691-701 loading copy now says 'Loading this section / One moment'; components/LearnModeTab.jsx:301-306 'being prepared' only reached once contentData has resolved and is genuinely empty",
    "note": null
   },
   {
@@ -1680,10 +1680,10 @@
    "fix": "Add @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration:0.01ms !important; transition-duration:0.01ms !important } } and pass `reducedMotion='user'` to framer-motion's MotionConfig; cap FlowChain total stagger at ~300ms.",
    "impact": "Motion-sensitive students get continuous pulsing badges and cascading fade-ins on every step; everyone else waits ~0.5-1s for a 5-6 step causal chain to fully appear each time it scrolls into view.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "not-fixed",
+   "closed_by": "packet-11",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/globals.css:7189-7210 CSS prefers-reduced-motion block is real and collapses animation/transition-duration plus inline animation-delay, but components/notes/FlowChain.jsx:1-39 (the staggered flow-chain reveals named in the finding's own title) is untouched by this packet, uses framer-motion variants with JS delay staggering and a type:'spring' result reveal, and no MotionConfig/useReducedMotion exists anywhere in the codebase (grep confirmed) -- CSS cannot govern these spring-driven values, so they still always run",
    "note": null
   },
   {
@@ -1731,10 +1731,10 @@
    "fix": "Render a plain <button> tab when matchMedia('(max-width:768px)') or reduced-motion matches; lazy-load framer-motion only for desktop.",
    "impact": "Extra JS and layout work on every render of the shell for zero visual benefit on phones; contributes to the 167 KB gzip shared bundle.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-11",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "components/AnimatedTabBar.jsx:10-23,48-67 useMotionAllowed gates prefers-reduced-motion and <=768px; springs are still instantiated (Rules of Hooks, acknowledged in comment) but .set() is never called with a nonzero target when disallowed, eliminating the continuous per-frame animation/re-render cost",
    "note": null
   },
   {
@@ -1748,10 +1748,10 @@
    "fix": "Move onClick/role/aria-selected onto the button, remove tabIndex=-1, add arrow-key handling on the tablist.",
    "impact": "Tabs cannot be reached or activated with a keyboard/switch device; screen readers announce a tab that is not focusable.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-11",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "components/AnimatedTabBar.jsx:99-120 role/aria-selected/tabIndex/onClick/onKeyDown moved onto motion.button; lines 146-147 focusIndex falls back to 0 when activeTab matches nothing; verified live in browser: exactly one [role=tab] has tabIndex=0, rest -1, when activeTab matched none of the rendered tabs",
    "note": null
   },
   {
@@ -1765,10 +1765,10 @@
    "fix": "Keep the confidence row height reserved or do not auto-dismiss; mount remediation with a fixed-height placeholder or place it after an explicit 'Try a similar one' button.",
    "impact": "While the student is reading the explanation the layout jumps twice (row collapses, remediation appears), so the Next button or the next card moves out from under a planned tap.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-11",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "components/learn-mode/InlineQuiz.jsx:25-27 4s auto-dismiss timer removed, confidence row only collapses after the student actually rates; lines 36-42 remediation now mounts inside the same 200ms reveal timeout instead of a separate 800ms/1s delayed timer, cutting two shifts to one",
    "note": null
   },
   {
@@ -1927,7 +1927,7 @@
   {
    "id": "F114",
    "lens": "content-pipeline",
-   "sev": "medium",
+   "sev": "high",
    "cat": "content-pipeline",
    "title": "Business has zero diagrams across all 19 sections; the Diagrams tab (a free tab) is empty and Business Learn Mode never shows a diagram",
    "file": "scripts/audit-diagrams.mjs",
@@ -1935,11 +1935,11 @@
    "fix": "Reuse economics demand/supply/equilibrium/elasticity SVGs for business the-market immediately; commission break-even, cash-flow, decision-tree, Boston Matrix, Ansoff, product life cycle SVGs; extend audit-diagrams.mjs to both subjects and fail on empty.",
    "impact": "A Business student (half the catalogue) never gets InlineDiagram or DiagramLabelDrill; the Diagrams tab shows nothing; 1.3.2 The Market, 2.3.2 Financial Planning (break-even chart) and 3.3.3 Decision-Making (decision trees) are diagram-based exam topics with no visual.",
    "packet": 12,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
-   "note": null
+   "status": "confirmed",
+   "closed_by": "packet-12",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "StudyApp.jsx:45 mistakes tab no longer has subjects:['business']; live /api/sections/[id] check across all 43 sections (23 economics + 20 business, via sitemap.xml) shows counts.mistakes >=3 for every section, none zero or missing, confirming 43-of-43; diagrams stays Economics-only (StudyApp.jsx:37) and is true live: all 20 business sections return diagrams:[] length 0, all 23 economics sections return nonzero (2-5); public/diagrams has 18 SVGs, 4 business-named (ansoff-matrix, boston-matrix, product-life-cycle, supply-demand-equilibrium), matching the note. Content/authoring half remains explicitly undone and is honestly recorded as such in the ledger note and commit message, so confirming the code-half claim as scoped",
+   "note": "severity medium -> high: 2026-09-12 measured: no Business section has a section_diagrams row at all (23 of 23 rows are Economics), so it is absent content, not a broken reference. Wiring it means AUTHORING: diagrams store an inline SVG plus a marks checklist and description, and the checklist states what earns marks in IAL Business. That is content authoring and belongs behind the packet-3 validator and the content gate, not in a repair packet. 18 drawn SVGs already sit in public/diagrams/ and four are Business material (ansoff-matrix, boston-matrix, product-life-cycle, supply-demand-equilibrium), so the authoring job is checklists and descriptions around existing art, not drawing. Raised low to high because the upgrade page sells diagrams and 20 Business sections have none. The CODE half is done: the Mistakes tab is no longer Business-only."
   },
   {
    "id": "F115",
@@ -1956,7 +1956,7 @@
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "2026-09-12: the draft/published infrastructure now EXISTS — the founder ran scripts/packet-2-draft-state.sql, all eight content tables carry draft + published_at, and scripts/publish-section.mjs runs. What remains for this finding is adoption, not plumbing: no content script writes to draft yet, so a push is still a blind overwrite in practice. Close it when the first content packet writes to draft and publishes in one statement."
   },
   {
    "id": "F116",
@@ -1995,7 +1995,7 @@
   {
    "id": "F118",
    "lens": "mobile-css-performance",
-   "sev": "medium",
+   "sev": "low",
    "cat": "rendering",
    "title": "React hydration fails on page load: script tags rendered inside React components make the server and client HTML disagree",
    "file": "app/layout.js",
@@ -2007,7 +2007,41 @@
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "Found 2026-09-12 during packet 9 browser verification, not by the September audit. Reproduce: load a section page and read the console."
+   "note": "2026-09-12: THREE causes ruled out by test, so the next session should not re-try any of them. (1) Not head placement: the layout's JSON-LD was moved into <body> and the error persisted. (2) Not the theme attribute: with localStorage theme set to 'dark' so server and client agree, the error still fires. (3) Not client components rendering scripts: all 18 files containing application/ld+json are SERVER components, where that is Next's documented pattern. The layout theme script is now next/script beforeInteractive and the error survives that too. Next step for whoever picks this up: capture the actual server-vs-client diff from the Next error overlay (expand the hydration diff, do not read the overlay's stylesheet as I did) or bisect by removing subtrees, rather than reasoning from the warning text. Budget it deliberately; three sessions of guessing have not found it. | severity medium -> low: Downgraded from medium: it costs first paint but the page renders correctly in every state tested, nothing is visibly broken to a student, and three rounds of investigation have not located it. Not worth more time until the cheaper packet-11 findings are done."
+  },
+  {
+   "id": "F119",
+   "lens": "smart-practice-quiz-bank",
+   "sev": "medium",
+   "cat": "monetisation",
+   "title": "The Blackjack question pool requires sign-in but never checks premium, so a free account gets the unbounded bank",
+   "file": "app/api/fun/questions/route.js",
+   "line": 1,
+   "fix": "Apply the same entitlement the rest of the quiz bank now uses: getSubscriptionRow plus hasPremiumAccess, and cap a free account to the preview slice from lib/preview-limits.js, or decide deliberately that the fun surface is free and record that in DECISIONS.md. Do not leave it as the one unguarded door into the same content.",
+   "impact": "F086 closed the two routes that serve the quiz bank to the section view and to Smart Practice. This third route still serves the same questions to any signed-in account, free or paid, with no cap. Anyone can create a free account, so the paywall on the quiz bank is one signup away from bypassed. Found by the packet verifier while checking F086, not by the September audit.",
+   "packet": 12,
+   "status": "confirmed",
+   "closed_by": "packet-12",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/api/fun/questions/route.js:28-34 requires auth (curl: signed-out 401 {error:Unauthorized}) and gates on hasPremiumAccess, slicing with PREVIEW_LIMITS.quiz from lib/preview-limits.js, same constant as sections/[id], practice/questions and flashcards-practice/cards",
+   "note": "Found 2026-09-12 during F086 verification. Reproduce: sign in with a free account and call GET /api/fun/questions."
+  },
+  {
+   "id": "F120",
+   "lens": "smart-practice-quiz-bank",
+   "sev": "high",
+   "cat": "monetisation",
+   "title": "The flashcard bank is served unauthenticated by /api/flashcards-practice/cards, so the flashcard paywall is decorative",
+   "file": "app/api/flashcards-practice/cards/route.js",
+   "line": 1,
+   "fix": "Same gate as its two siblings: require auth, resolve entitlement with getSubscriptionRow plus hasPremiumAccess, cap a free account to PREVIEW_LIMITS.flashcards, bound the section list, and return true counts so any N-of-M copy stays honest. The client must render the 401 rather than an empty state.",
+   "impact": "Third route of the same shape. F086 closed /api/practice/questions and /api/sections/[id]; this one used the anon client with no auth, no premium check and no bound on the section list, and returned every flashcard for every section requested. Flashcards are a preview-then-paywall surface, so the paywall was decorative for as long as this existed. Found by the packet verifier while re-checking F086, not by the September audit.",
+   "packet": 12,
+   "status": "confirmed",
+   "closed_by": "packet-12",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/api/flashcards-practice/cards/route.js:43-52 requires auth (curl: signed-out 401 {error:Please sign in...,reason:signed-out}), gates on hasPremiumAccess, caps to PREVIEW_LIMITS.flashcards, bounds section list to MAX_SECTIONS=50, returns true counts separately; FlashcardsEngine.jsx:410-419 renders the 401 as a signed-out access note, not an empty state. Ledger had never actually recorded this as confirmed (status was claimed, verified_by null) despite framing to the contrary, so this is a first full verify, not a regression check",
+   "note": "Found 2026-09-12 during the second F086 verification."
   }
  ],
  "content": [

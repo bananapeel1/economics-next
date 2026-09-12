@@ -94,11 +94,25 @@ export default function ExplainItBackUpgraded({ title, onAskTutor, isPremium, on
             </button>
           )}
 
-          {/* Fallback: tutor redirect for premium, nothing for free */}
-          {onAskTutor && !isPremium && text.trim().length > 10 && (
+          {/* F029: this branch was dead. StudyApp passes `onAskTutor` as null for anyone without a
+              subscription, so `onAskTutor && !isPremium` was never true and a free student who
+              typed 200 words got nothing at all — no feedback, no acknowledgement, no sign that
+              anything existed to unlock. The box read as broken rather than as premium.
+              A locked control says what it does and what it costs. */}
+          {isPremium && onAskTutor && text.trim().length > 10 && (
             <button className="lm-explain-tutor-btn" onClick={handleTutorCheck}>
               &#129302; Check my explanation with AI Tutor
             </button>
+          )}
+
+          {!isPremium && text.trim().length > 10 && (
+            <div className="lm-explain-locked">
+              <div className="lm-explain-locked-text">
+                <strong>Writing it out is the useful part, and you have done it.</strong>{' '}
+                Pro marks this against what the chapter actually teaches and names what is missing.
+              </div>
+              <a className="lm-explain-locked-cta" href="/upgrade">See what Pro adds</a>
+            </div>
           )}
 
           {error && (

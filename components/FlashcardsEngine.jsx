@@ -119,8 +119,7 @@ function TopicStep({
   onBack,
   onStart,
   loading,
-  progressSummary,
-}) {
+  progressSummary, accessNote }) {
   const [expandedUnits, setExpandedUnits] = useState(new Set());
 
   const filteredUnits = useMemo(
@@ -238,16 +237,29 @@ function TopicStep({
       </div>
 
       {/* Sticky start bar */}
+      {accessNote && accessNote.kind !== 'preview' && (
+        <div className="spe-access-note" role="alert">
+          <span>{accessNote.message}</span>
+          {accessNote.kind === 'signed-out' && (
+            <a className="spe-access-note-btn" href="/login">Sign in</a>
+          )}
+        </div>
+      )}
+
       <div className="spe-action-bar">
         <div className="spe-action-bar-inner">
           <span className="spe-action-count">
             <span className="spe-action-count-num">{selectionCount}</span>
             {' '}topic{selectionCount !== 1 ? 's' : ''} selected
           </span>
+          {/* Not `onClick={onStart}`: React passes the click event as the first argument, and
+              handleStart's first parameter is `practiseEarly`. An event object is truthy, so every
+              ordinary Start was pulling in not-yet-due cards and quietly defeating the spaced
+              schedule. Caught by the packet verifier, not by the build. */}
           <button
             className="spe-start-btn"
             disabled={selectionCount === 0 || loading}
-            onClick={onStart}
+            onClick={() => onStart()}
           >
             {loading ? (
               <span className="spe-start-btn-loading">
@@ -272,6 +284,9 @@ export default function FlashcardsEngine({ subjects, units, sections, isLoggedIn
   const [selectedSubjectSlug, setSelectedSubjectSlug] = useState('');
   const [selectedSectionIds, setSelectedSectionIds] = useState(new Set());
   const [cardData, setCardData] = useState({});
+  // Why a session could not start, so the gate explains itself instead of reading as missing
+  // content. Same shape as PracticeEngine (F086).
+  const [accessNote, setAccessNote] = useState(null);
   const [progressMap, setProgressMap] = useState({});
   const [queue, setQueue] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -390,10 +405,28 @@ export default function FlashcardsEngine({ subjects, units, sections, isLoggedIn
       const sectionArr = Array.from(selectedSectionIds);
 
       // 1. Fetch flashcard data
+      setAccessNote(null);
       const cRes = await fetch(
         `/api/flashcards-practice/cards?sections=${sectionArr.join(',')}`
       );
-      const cJson = await cRes.json();
+      const cJson = await cRes.json().catch(() => ({}));
+
+      if (!cRes.ok) {
+        setAccessNote(
+          cRes.status === 401
+            ? { kind: 'signed-out', message: cJson.error || 'Please sign in to practise flashcards.' }
+            : { kind: 'error', message: cJson.error || 'Could not load flashcards. Please try again.' }
+        );
+        setLoading(false);
+        return;
+      }
+      if (cJson.limited) {
+        setAccessNote({
+          kind: 'preview',
+          message: `Showing the first ${cJson.previewLimit} cards per topic, ${cJson.totalReturned} of ${cJson.totalAvailable}. The full set is part of Pro.`,
+        });
+      }
+
       const fetchedCardData = cJson.cards || {};
       setCardData(fetchedCardData);
 
@@ -608,6 +641,7 @@ export default function FlashcardsEngine({ subjects, units, sections, isLoggedIn
         onStart={handleStart}
         loading={loading}
         progressSummary={progressSummary}
+        accessNote={accessNote}
       />
     );
   }
@@ -619,8 +653,15 @@ export default function FlashcardsEngine({ subjects, units, sections, isLoggedIn
     if (!item) {
       return (
         <div className="spe-empty">
-          <p>No flashcards available for the selected topics.</p>
-          <button className="spe-btn spe-btn-primary" onClick={handleRestart}>
+          <p>
+            {accessNote?.kind === 'signed-out' || accessNote?.kind === 'error'
+              ? accessNote.message
+              : 'Nothing is due in these topics right now. Come back when the next review falls due, or pick more topics.'}
+          </p>
+          {accessNote?.kind === 'signed-out' && (
+            <a className="spe-btn spe-btn-primary" href="/login">Sign in</a>
+          )}
+          <button className="spe-btn spe-btn-secondary" onClick={handleRestart}>
             Back to Setup
           </button>
         </div>

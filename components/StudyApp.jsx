@@ -31,11 +31,18 @@ const allTabs = [
   { id: 'home', label: 'Home', Icon: HomeIcon },
   { id: 'learn-mode', label: 'Learn', Icon: LearnModeIcon },
   { id: 'notes', label: 'Notes', Icon: NotesIcon },
+  /* Diagrams stays Economics-only for now, deliberately. All 23 sections holding diagram rows are
+     Economics; no Business section has one at all, so opening the tab for Business would show an
+     empty tab rather than a missing one. The fix is the content, not the gate — see F114. */
   { id: 'diagrams', label: 'Diagrams', Icon: ChartHistogram, subjects: ['economics'] },
   { id: 'practice', label: 'Practice', Icon: DrawerAlt },
   { id: 'flashcards', label: 'Flashcards', Icon: CardsBlank, premium: true },
   { id: 'quiz', label: 'Quiz', Icon: QuizIcon, premium: true },
-  { id: 'mistakes', label: 'Mistakes', Icon: MistakesIcon, premium: true, subjects: ['business'] },
+  /* F114, the half that is a code fix. This was `subjects: ['business']`, but all 43 sections
+     carry common_mistakes data — so 23 Economics sections held content written for them that no
+     student could ever open, while the upgrade page sold "Mistakes review" to both subjects.
+     Verified against the database before removing the gate: 43 of 43 rows are populated. */
+  { id: 'mistakes', label: 'Mistakes', Icon: MistakesIcon, premium: true },
   { id: 'tutor', label: 'Tutor', Icon: TutorIcon, premium: true },
   { id: 'extras', label: 'Extras', Icon: Star, premium: true },
 ];
@@ -296,6 +303,9 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const dataMatchesSection = startSection === initialSectionId;
   const [sectionData, setSectionData] = useState(dataMatchesSection ? initialSectionData : null);
+  // Sections already fetched this visit (F092). Per-visit only: it is not a correctness cache,
+  // and a reload gets fresh data, which is what we want while content is still being rewritten.
+  const sectionCacheRef = useRef(new Map());
   const [isInitial, setIsInitial] = useState(dataMatchesSection);
   const [glossaryTerms, setGlossaryTerms] = useState([]);
   const [contentStepInfo, setContentStepInfo] = useState(null);
@@ -467,11 +477,21 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       return;
     }
     async function loadSection() {
-      setSectionData(null);
+      // F092: a student moving between sections and back refetched 152 KB every time. Keep what
+      // has already been loaded this visit, and keep the previous section on screen while the new
+      // one arrives rather than blanking to a loading card (F098).
+      // Keyed by section AND by who is asking. The payload varies by entitlement since F086, so a
+      // cache keyed on the section alone would keep serving a free student's 2-question quiz after
+      // they subscribed, and worse, a paying student's 25 after they signed out. Caught by the
+      // packet verifier; it was a bug I introduced with the cache itself.
+      const cacheKey = `${activeSection}:${user?.id || 'anon'}:${isPremium ? 'pro' : 'free'}`;
+      const cached = sectionCacheRef.current.get(cacheKey);
+      if (cached) { setSectionData(cached); return; }
       try {
         const res = await fetch(`/api/sections/${activeSection}`);
         if (res.ok) {
           const data = await res.json();
+          sectionCacheRef.current.set(cacheKey, data);
           setSectionData(data);
         }
       } catch (e) {
@@ -479,7 +499,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       }
     }
     loadSection();
-  }, [activeSection]);
+  }, [activeSection, user?.id, isPremium]);  // refetch when entitlement changes, not just the section
 
   // Reset scroll state when section or tab changes
   useEffect(() => {
@@ -676,9 +696,14 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     if (!sectionData) {
       return (
         <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--text-muted)' }}>
+          {/* F098: this screen was shown both while the fetch was in flight and when a section
+              genuinely had nothing, with the same words either way. "Content for this section is
+              being prepared" told a student on a slow school connection that the topic does not
+              exist yet, when it was about to arrive. Loading now says it is loading, and the
+              "being prepared" wording is reserved for a response that really came back empty. */}
           <div style={{ fontSize: 48, marginBottom: 16 }}>&#128218;</div>
-          <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 8, color: 'var(--text-primary)' }}>Loading content...</div>
-          <div style={{ fontSize: 14 }}>Content for this section is being prepared.</div>
+          <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 8, color: 'var(--text-primary)' }}>Loading this section</div>
+          <div style={{ fontSize: 14 }}>One moment.</div>
         </div>
       );
     }
@@ -732,11 +757,11 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       case 'notes': return <NotesTab data={sectionData.notes} glossaryTerms={glossaryTerms} />;
       case 'diagrams': return <DiagramsTab data={sectionData.diagrams} />;
       case 'practice': return <PracticeQuestionsTab questions={sectionData.practice} onAskTutor={isPremium ? goToTutor : null} sectionNumber={currentSection?.number} unitCode={currentUnit?.code} />;
-      case 'flashcards': return <FlashcardsTab cards={sectionData.flashcards} sectionId={activeSection} previewMode={isPreview} />;
-      case 'quiz': return <QuizTab questions={sectionData.quiz} sectionId={activeSection} onAskTutor={isPremium ? goToTutor : null} previewMode={isPreview} />;
+      case 'flashcards': return <FlashcardsTab cards={sectionData.flashcards} totalCount={sectionData.counts?.flashcards} sectionId={activeSection} previewMode={isPreview} />;
+      case 'quiz': return <QuizTab questions={sectionData.quiz} totalCount={sectionData.counts?.quiz} sectionId={activeSection} onAskTutor={isPremium ? goToTutor : null} previewMode={isPreview} />;
       case 'mistakes': return <MistakesTab data={sectionData.mistakes} />;
       case 'tutor': return <TutorTab section={currentSection} unit={currentUnit} contentData={sectionData.content} pendingPrompt={pendingTutorPrompt} onPromptConsumed={() => setPendingTutorPrompt(null)} />;
-      case 'extras': return <ExtrasTab data={sectionData.extras} previewMode={isPreview} />;
+      case 'extras': return <ExtrasTab data={sectionData.extras} totalCount={(sectionData.counts?.extrasChains || 0) + (sectionData.counts?.extrasEvaluation || 0)} previewMode={isPreview} />;
       default: return null;
     }
   }

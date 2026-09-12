@@ -2,15 +2,12 @@
 import { useState } from 'react';
 import { useAuth } from './AuthProvider';
 import Link from 'next/link';
+import { PAYWALL_FEATURES as FEATURES } from '@/lib/feature-matrix';
 
 /* ── Feature checklist ── */
-const FEATURES = [
-  'Interactive Flashcards',
-  'Practice Quizzes with Feedback',
-  'AI Tutor for Exam Prep',
-  'Chains of Analysis & Evaluation',
-  'Full Model Answers, Not Just the First',
-];
+/* F031: this list used to be written here and disagreed with the upgrade page — it promised
+   "Full Model Answers, Not Just the First" while the upgrade page sold "Model answers" flatly,
+   and neither matched the subject hubs. Derived from the one matrix now. */
 
 function CheckIcon() {
   return (

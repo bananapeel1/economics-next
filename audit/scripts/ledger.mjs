@@ -9,6 +9,7 @@
 //   node audit/scripts/ledger.mjs confirm <id> --by "<who>" --evidence "<file:line or repro>"
 //   node audit/scripts/ledger.mjs reject <id> --by "<who>" --evidence "<why it is not fixed>"
 //   node audit/scripts/ledger.mjs wontfix <id> --note "<reason>"
+//   node audit/scripts/ledger.mjs sev <id>... --to <level> --note "<evidence>"   re-grade severity
 //   node audit/scripts/ledger.mjs reopen <id>... --note "<why>"    back to open (e.g. moved to a later packet)
 //   node audit/scripts/ledger.mjs unverified <n>                claimed-but-unconfirmed ids for packet n (gate check)
 //   node audit/scripts/ledger.mjs add <n> <id> "<title>" [--file <path>]   mint a feature item (no audit finding behind it)
@@ -81,6 +82,19 @@ switch (cmd) {
     if (!by || !evidence) { console.error('--by and --evidence are required'); process.exit(1); }
     for (const id of ids) { const r = get(id); r.status = cmd === 'confirm' ? 'confirmed' : 'not-fixed'; r.verified_by = `${by} ${today}`; r.evidence = evidence; }
     save(); console.log(`${cmd}ed ${ids.length} item(s)`);
+    break;
+  }
+  case 'sev': {
+    const to = flag('to'), note = flag('note');
+    if (!to || !note) { console.error('--to and --note are required'); process.exit(1); }
+    for (const id of ids) {
+      const r = get(id);
+      const was = r.sev || r.kind;
+      r.sev = to;
+      r.note = `${r.note ? r.note + ' | ' : ''}severity ${was} -> ${to}: ${note}`;
+      console.log(`${id}: ${was} -> ${to}`);
+    }
+    save();
     break;
   }
   case 'wontfix': {

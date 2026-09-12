@@ -5,7 +5,7 @@ import PaywallOverlay from './PaywallOverlay';
 import { Quiz as QuizIcon, CardClub } from './Icons';
 import Link from 'next/link';
 
-export default function QuizTab({ questions, sectionId, onAskTutor, previewMode = false }) {
+export default function QuizTab({ questions, sectionId, onAskTutor, previewMode = false, totalCount }) {
   const { user } = useAuth();
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
@@ -86,7 +86,9 @@ export default function QuizTab({ questions, sectionId, onAskTutor, previewMode 
     : 'var(--accent-red)'
     : 'var(--accent-green)';
 
-  const totalQuizQuestions = questions?.length || 0;
+  // The server now sends only the preview slice, so the array length is the preview size, not the
+  // bank size. The true total comes from the API's counts (F086).
+  const totalQuizQuestions = totalCount ?? questions?.length ?? 0;
 
   return (
     <div>

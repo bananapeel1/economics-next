@@ -72,7 +72,7 @@ export default function ReorderRecall({ recall, onComplete }) {
     <div className="lm-recall-card">
       <div className="lm-recall-header">
         <div className="lm-recall-label">&#129504; Quick Recall — Reorder</div>
-        <button className="lm-recall-dismiss" onClick={() => setDismissed(true)} title="Skip">&times;</button>
+        <button type="button" className="lm-recall-dismiss" onClick={() => setDismissed(true)} aria-label="Skip this check" title="Skip">&times;</button>
       </div>
       <p className="lm-recall-prompt">{recall.prompt}</p>
       {!checked && (
@@ -82,16 +82,31 @@ export default function ReorderRecall({ recall, onComplete }) {
       )}
 
       {/* User's answer — shown always */}
-      <div className="lm-recall-items">
+      <div className="lm-recall-items" role="group" aria-label="Put these in the right order. Use the arrow keys to move an item.">
         {items.map((item, i) => {
           const isRight = checked && itemResults[i];
           const isWrong = checked && !itemResults[i];
           return (
+            /* F070: this was a click-only <div> with no role, no keyboard path and no announced
+               state, so the whole reorder exercise was unusable without a mouse and a screen
+               reader was told nothing about what it was or where an item sat. It is a button
+               now, it says its position, and the arrows say what they do. */
             <div
               key={`item-${i}`}
               ref={el => itemRefs.current[i] = el}
+              role="button"
+              tabIndex={checked ? -1 : 0}
+              aria-pressed={selectedIdx === i && !animating && !checked}
+              aria-label={`${item}. Position ${i + 1} of ${items.length}.${checked ? (isRight ? ' Correct.' : ' Wrong position.') : ''}`}
               className={`lm-recall-item ${isRight ? 'correct' : ''} ${isWrong ? 'wrong' : ''} ${selectedIdx === i && !animating && !checked ? 'selected' : ''}`}
               onClick={() => handleTap(i)}
+              onKeyDown={(e) => {
+                if (checked || animating) return;
+                if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); handleTap(i); return; }
+                // Arrow keys move the item itself, which is the whole point of the exercise.
+                if (e.key === 'ArrowUp' && i > 0) { e.preventDefault(); moveItem(i, i - 1); }
+                if (e.key === 'ArrowDown' && i < items.length - 1) { e.preventDefault(); moveItem(i, i + 1); }
+              }}
             >
               <span className="lm-recall-item-num">{i + 1}</span>
               <span className="lm-recall-item-text">{item}</span>
@@ -102,8 +117,8 @@ export default function ReorderRecall({ recall, onComplete }) {
               {isWrong && <span className="lm-recall-item-icon" style={{ color: 'var(--rl-red)' }}>✗</span>}
               {!checked && !animating && (
                 <div className="lm-recall-arrows" onClick={e => e.stopPropagation()}>
-                  <button className="lm-recall-arrow-btn" disabled={i === 0} onClick={() => moveItem(i, i - 1)}>▲</button>
-                  <button className="lm-recall-arrow-btn" disabled={i === items.length - 1} onClick={() => moveItem(i, i + 1)}>▼</button>
+                  <button type="button" className="lm-recall-arrow-btn" aria-label={`Move "${item}" up`} disabled={i === 0} onClick={() => moveItem(i, i - 1)}>▲</button>
+                  <button type="button" className="lm-recall-arrow-btn" aria-label={`Move "${item}" down`} disabled={i === items.length - 1} onClick={() => moveItem(i, i + 1)}>▼</button>
                 </div>
               )}
             </div>

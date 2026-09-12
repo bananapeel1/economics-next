@@ -1,6 +1,26 @@
 "use client";
 import { useState, useRef, useEffect } from 'react';
 import { motion, useSpring } from 'framer-motion';
+
+/* F102: five springs and two motion elements per tab, 45 springs across the bar, on phones where
+   the 3D tilt they drive is invisible and on machines whose owner asked for less motion. The
+   springs still have to be instantiated because hooks cannot be called conditionally, but the
+   values they produce are ignored, so nothing animates and no motion element re-renders on every
+   frame. */
+function useMotionAllowed() {
+  const [allowed, setAllowed] = useState(false);
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) return;
+    const wide = window.matchMedia('(min-width: 769px)');
+    const calm = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const update = () => setAllowed(wide.matches && !calm.matches);
+    update();
+    wide.addEventListener('change', update);
+    calm.addEventListener('change', update);
+    return () => { wide.removeEventListener('change', update); calm.removeEventListener('change', update); };
+  }, []);
+  return allowed;
+}
 import { Padlock } from './Icons';
 
 // All tabs use green accent for hover/active — matches site UI
@@ -10,24 +30,13 @@ const GREEN_GLOW = [5, 150, 105]; // --accent-green rgb
 const SPRING_CONFIG = { stiffness: 170, damping: 26, mass: 1 };
 const GLOW_SPRING = { stiffness: 120, damping: 20, mass: 0.8 };
 
-function AnimatedTab({ tab, isActive, isPremium, onClick, isNew, isTopicComplete }) {
+function AnimatedTab({ tab, isActive, isFocusable, isPremium, onClick, onKeyDown, isNew, isTopicComplete }) {
   const [isHovered, setIsHovered] = useState(false);
   const isLocked = tab.premium && !isPremium;
 
-  // Detect mobile / reduced motion
-  const isMobileRef = useRef(false);
-  useEffect(() => {
-    const mq = window.matchMedia('(max-width: 768px)');
-    const motionMq = window.matchMedia('(prefers-reduced-motion: reduce)');
-    isMobileRef.current = mq.matches || motionMq.matches;
-    const handler = () => { isMobileRef.current = mq.matches || motionMq.matches; };
-    mq.addEventListener('change', handler);
-    motionMq.addEventListener('change', handler);
-    return () => {
-      mq.removeEventListener('change', handler);
-      motionMq.removeEventListener('change', handler);
-    };
-  }, []);
+  // The old ref-based version of this checked the same two media queries but stored the answer in
+  // a ref, so a student who turned reduced motion on, or rotated a tablet across the breakpoint,
+  // kept the old behaviour until something else re-rendered. useMotionAllowed re-renders (F102).
 
   // Fluid springs — gentle tilt instead of full flip
   const tiltX = useSpring(0, SPRING_CONFIG);
@@ -36,8 +45,12 @@ function AnimatedTab({ tab, isActive, isPremium, onClick, isNew, isTopicComplete
   const glowOpacity = useSpring(isActive ? 0.35 : 0, GLOW_SPRING);
   const glowScale = useSpring(isActive ? 1.1 : 0.8, GLOW_SPRING);
 
+  const motionAllowed = useMotionAllowed();
+
   useEffect(() => {
-    if (isMobileRef.current) return;
+    // F102: was `isMobileRef.current` only, so a desktop user who asked for reduced motion still
+    // got the tilt. One gate now covers narrow screens and the motion preference together.
+    if (!motionAllowed) return;
     if (isHovered) {
       tiltX.set(-8);
       liftY.set(-2);
@@ -51,7 +64,7 @@ function AnimatedTab({ tab, isActive, isPremium, onClick, isNew, isTopicComplete
       glowOpacity.set(isActive ? 0.35 : 0);
       glowScale.set(isActive ? 1.1 : 0.8);
     }
-  }, [isHovered, isActive, tiltX, liftY, itemScale, glowOpacity, glowScale]);
+  }, [isHovered, isActive, motionAllowed, tiltX, liftY, itemScale, glowOpacity, glowScale]);
 
   // Always green glow — no per-tab color change
   const [r, g, b] = GREEN_GLOW;
@@ -63,14 +76,14 @@ function AnimatedTab({ tab, isActive, isPremium, onClick, isNew, isTopicComplete
     isLocked ? 'tab-premium' : '',
   ].filter(Boolean).join(' ');
 
+  // F103: role="tab" and the click handler used to sit on this wrapper div while the real
+  // <button> inside carried tabIndex={-1}, so the tab bar was unreachable by keyboard and a
+  // screen reader was told the wrong element was the tab. The button below is the tab now.
   return (
     <div
       className={wrapperClasses}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={onClick}
-      role="tab"
-      aria-selected={isActive}
     >
       {/* Radial gradient glow — always green */}
       <motion.div
@@ -91,7 +104,11 @@ function AnimatedTab({ tab, isActive, isPremium, onClick, isNew, isTopicComplete
           scale: itemScale,
           transformOrigin: 'center bottom',
         }}
-        tabIndex={-1}
+        role="tab"
+        aria-selected={isActive}
+        tabIndex={isFocusable ? 0 : -1}
+        onClick={onClick}
+        onKeyDown={onKeyDown}
       >
         <span className="tab-icon">
           <tab.Icon size={16} />
@@ -106,9 +123,32 @@ function AnimatedTab({ tab, isActive, isPremium, onClick, isNew, isTopicComplete
 }
 
 export default function AnimatedTabBar({ tabs, activeTab, setActiveTab, isPremium, visitedFeatures = {}, learnModeCompletions = {}, activeSection }) {
+  // F103: arrow keys move between tabs, which is what a tablist is expected to do. Home and End
+  // jump to the ends. The focused tab is activated, matching how the mouse behaves here.
+  function handleKeyDown(e, index) {
+    const last = tabs.length - 1;
+    let next = null;
+    if (e.key === 'ArrowRight') next = index === last ? 0 : index + 1;
+    else if (e.key === 'ArrowLeft') next = index === 0 ? last : index - 1;
+    else if (e.key === 'Home') next = 0;
+    else if (e.key === 'End') next = last;
+    if (next === null) return;
+    e.preventDefault();
+    setActiveTab(tabs[next].id);
+    const bar = e.currentTarget.closest('.tab-bar');
+    const target = bar?.querySelectorAll('[role="tab"]')[next];
+    if (target) target.focus();
+  }
+
+  // A tablist needs exactly one tab in the tab order. When activeTab matches nothing on screen
+  // (the overview, for instance) every tab would otherwise be tabIndex=-1 and the whole bar would
+  // be unreachable by keyboard — worse than the defect this fixes. Fall back to the first tab.
+  const activeIndex = tabs.findIndex((t) => t.id === activeTab);
+  const focusIndex = activeIndex >= 0 ? activeIndex : 0;
+
   return (
     <div className="tab-bar" role="tablist">
-      {tabs.map(tab => {
+      {tabs.map((tab, tabIndex) => {
         const isLearnMode = tab.id === 'learn-mode';
         const isTopicComplete = isLearnMode && learnModeCompletions[activeSection];
         const isNew = isLearnMode
@@ -120,8 +160,10 @@ export default function AnimatedTabBar({ tabs, activeTab, setActiveTab, isPremiu
             key={tab.id}
             tab={tab}
             isActive={activeTab === tab.id}
+            isFocusable={tabIndex === focusIndex}
             isPremium={isPremium}
             onClick={() => setActiveTab(tab.id)}
+            onKeyDown={(e) => handleKeyDown(e, tabIndex)}
             isNew={isNew}
             isTopicComplete={isTopicComplete}
           />

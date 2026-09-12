@@ -15,13 +15,16 @@ export default function InlineQuiz({ question, subjectId, sectionId, stepIndex, 
   const [remAnswered, setRemAnswered] = useState(false);
   const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
 
-  // Auto-dismiss confidence after 4s if not answered
+  // F104: the confidence row used to disappear on a 4-second timer and the remediation slid in
+  // 800ms after the answer, so the page moved under the student's thumb twice while they were
+  // reading. A question they are still thinking about is not a question they have declined to
+  // answer. The row now stays until they answer it or move on, and the remediation appears with
+  // the explanation rather than on its own delay.
+  //
+  // The auto-dismiss state is kept so the row can still be hidden once confidence is given.
   useEffect(() => {
-    if (answered && !confidence && !confidenceTimedOut) {
-      const timer = setTimeout(() => setConfidenceTimedOut(true), 4000);
-      return () => clearTimeout(timer);
-    }
-  }, [answered, confidence, confidenceTimedOut]);
+    if (confidence) setConfidenceTimedOut(true);
+  }, [confidence]);
 
   function handleSelect(index) {
     if (answered) return;
@@ -32,9 +35,9 @@ export default function InlineQuiz({ question, subjectId, sectionId, stepIndex, 
     // After 200ms, reveal correct answer + explanation
     setTimeout(() => {
       setRevealPhase(2);
-      // Show remediation after 800ms if wrong and remediation data exists
+      // Appears with the explanation, not 800ms later, so nothing shifts under the reader.
       if (index !== question.correctIndex && question.remediation) {
-        setTimeout(() => setShowRemediation(true), 800);
+        setShowRemediation(true);
       }
     }, 200);
   }
@@ -88,11 +91,16 @@ export default function InlineQuiz({ question, subjectId, sectionId, stepIndex, 
       <div className="lm-card-label">&#128161; Quick quiz</div>
       <div className="lm-quiz-inner">
         <p className="lm-quiz-question">{question.question}</p>
-        <div className="lm-quiz-options">
+        {/* F070: real buttons already, but nothing announced which was chosen or what the result
+            was, and the group had no name. */}
+        <div className="lm-quiz-options" role="group" aria-label="Answer options">
           {question.options?.map((option, i) => (
             <button
               key={i}
+              type="button"
               className={`lm-quiz-option ${getOptionClass(i)}`}
+              aria-pressed={selected === i}
+              disabled={answered}
               onClick={() => handleSelect(i)}
             >
               <span className="lm-quiz-option-letter">{letters[i]}</span>
@@ -101,12 +109,12 @@ export default function InlineQuiz({ question, subjectId, sectionId, stepIndex, 
           ))}
         </div>
         {revealPhase >= 2 && (
-          <div className="lm-quiz-explanation lm-animate-slide-in">
+          <div className="lm-quiz-explanation lm-animate-slide-in" role="status" aria-live="polite">
             <strong>{isCorrect ? 'Correct!' : 'Not quite.'}</strong>{' '}
             {question.explanation}
           </div>
         )}
-        {/* Confidence rating — auto-dismisses after 4s */}
+        {/* Confidence rating */}
         {answered && !confidence && !confidenceTimedOut && (
           <div className="lm-confidence-row lm-animate-fade-in">
             <span className="lm-confidence-prompt">How sure were you?</span>
@@ -149,7 +157,7 @@ export default function InlineQuiz({ question, subjectId, sectionId, stepIndex, 
               })}
             </div>
             {remAnswered && (
-              <div className="lm-quiz-explanation lm-animate-slide-in">
+              <div className="lm-quiz-explanation lm-animate-slide-in" role="status" aria-live="polite">
                 <strong>{remSelected === question.remediation.correct ? 'Got it!' : 'Not quite.'}</strong>{' '}
                 {question.remediation.explanation}
               </div>

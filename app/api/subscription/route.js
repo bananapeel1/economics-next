@@ -1,4 +1,5 @@
 import { getStripe, getSubscriptionPeriodEnd } from '@/lib/stripe';
+import { isTrialEligible } from '@/lib/trial-eligibility';
 import { createClient } from '@/lib/supabase/server';
 import { createServerClient } from '@/lib/supabase-server';
 import { isLifetime, PLAN_LIFETIME } from '@/lib/entitlements';
@@ -43,7 +44,7 @@ export async function GET() {
     const { data: { user } } = await supabase.auth.getUser();
 
     if (!user) {
-      return NextResponse.json({ plan: 'free', status: 'inactive' });
+      return NextResponse.json({ plan: 'free', status: 'inactive', trialEligible: true });
     }
 
     const serviceSupabase = createServerClient();
@@ -54,7 +55,7 @@ export async function GET() {
       .maybeSingle();
 
     if (!sub) {
-      return NextResponse.json({ plan: 'free', status: 'inactive' });
+      return NextResponse.json({ plan: 'free', status: 'inactive', trialEligible: true });
     }
 
     // Lifetime access is permanent and backed by a one-time payment, so there
@@ -169,9 +170,12 @@ export async function GET() {
       status: sub.status,
       currentPeriodEnd: sub.current_period_end,
       trialEnd: sub.trial_end || null,
+      // F031: the interface advertised "£1 first month" to everyone while checkout withheld the
+      // coupon from anyone who had subscribed before. 43 accounts carry a cancelled row.
+      trialEligible: isTrialEligible(sub),
     });
   } catch (err) {
     console.error('Subscription check error:', err);
-    return NextResponse.json({ plan: 'free', status: 'inactive' });
+    return NextResponse.json({ plan: 'free', status: 'inactive', trialEligible: true });
   }
 }

@@ -1,5 +1,6 @@
 "use client";
 import { createContext, useContext, useEffect, useState, useCallback } from 'react';
+import { isTrialEligible } from '@/lib/trial-eligibility';
 import { hasPremiumAccess } from '@/lib/entitlements';
 import { createClient } from '@/lib/supabase/client';
 
@@ -8,6 +9,7 @@ const AuthContext = createContext({
   loading: true,
   supabase: null,
   subscription: null,
+  trialEligible: true,
   isPremium: false,
   activating: false,
   activationFailed: false,
@@ -20,10 +22,11 @@ const AuthContext = createContext({
 const POLL_INTERVAL_MS = 2000;
 const POLL_MAX_ATTEMPTS = 30;
 
-export function AuthProvider({ children, initialUser }) {
+export function AuthProvider({ children, initialUser, initialSubscription = null }) {
   const [user, setUser] = useState(initialUser || null);
   const [loading, setLoading] = useState(!initialUser);
-  const [subscription, setSubscription] = useState(null);
+  // Seeded from the server so a paying student's first paint is already premium (F035).
+  const [subscription, setSubscription] = useState(initialSubscription);
   const [activating, setActivating] = useState(false);
   const [activationFailed, setActivationFailed] = useState(false);
   const supabase = createClient();
@@ -100,6 +103,9 @@ export function AuthProvider({ children, initialUser }) {
   }, [user]);
 
   const isPremium = hasPremiumAccess(subscription);
+  // F031: whether the "£1 first month" offer applies to this account. Seeded server-side with the
+  // subscription itself, so the price shown on first paint is the price checkout will charge.
+  const trialEligible = subscription ? isTrialEligible(subscription) : true;
 
   return (
     <AuthContext.Provider
@@ -108,6 +114,7 @@ export function AuthProvider({ children, initialUser }) {
         loading,
         supabase,
         subscription,
+        trialEligible,
         isPremium,
         activating,
         activationFailed,
