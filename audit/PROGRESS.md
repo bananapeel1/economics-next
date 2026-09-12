@@ -12,14 +12,14 @@ Plan: `audit/PLAN.md` (58 packets). Source data: `audit/README.md`.
 |---|--------|--------|--------|----------|-----------|
 | 0 | Day 0 hotfix | done and verified. Code + content 2026-09-12 (2 code + 18 content ids). Marketing: 182 claims found, all corrected and confirmed (M001-M182), gate clear |  069ddb4 | audit/snapshots/2026-09-11-{pre,post}-packet-0__* | n/a (packet 3) |
 | 1 | Measure or don't bother | done and verified 2026-09-12 (Verify A: F021 F022 F042 F043 confirmed; dead progress route deleted in the setup commit to close F023 F049; F026 F030 moved to packet 5). app_events table SQL still to run once (see NEXT.md) | cdb24dc + setup commit | | n/a (packet 3) |
-| 2 | Ids and safety net | **done 2026-09-12** — 2,952 item ids minted, item_id column added and 1,041 of 1,069 progress rows backfilled (28 NULL by design: 27 written-practice rows whose index points into a filtered subset, 1 stale index). Pin resolution fixed and verified (F013 F040 F111 F041 confirmed). Dual-write live on all three progress routes and engines. Draft/published tooling written; `scripts/packet-2-draft-state.sql` still to run. F052/F109 improved not closed; F115 substantially addressed | 4d45478 + | audit/snapshots/2026-09-12-pre-packet-2__* | n/a |
+| 2 | Ids and safety net | **done except F052, F109, F115** (diagram blocks still pin by ref: 0 of 39 carry diagramId, 24 of 39 resolve to nothing; no draft/published state). 2026-09-12: — 2,952 item ids minted, item_id column added and 1,041 of 1,069 progress rows backfilled (28 NULL by design: 27 written-practice rows whose index points into a filtered subset, 1 stale index). Pin resolution fixed and verified (F013 F040 F111 F041 confirmed). Dual-write live on all three progress routes and engines. Draft/published tooling written; `scripts/packet-2-draft-state.sql` still to run. F052/F109 improved not closed; F115 substantially addressed | 4d45478 + | audit/snapshots/2026-09-12-pre-packet-2__* | n/a |
 | 3 | Validator v2 + golden set | not started | | | n/a |
 | 4 | Progress and mastery truth | not started | | | n/a |
 | 5 | Step 0 | not started | | | n/a |
 | 6 | Re-entry v0 | not started | | | n/a |
 | 7 | Widget mechanics | not started | | | n/a |
 | 8 | Quiz hygiene | not started | | | n/a |
-| 9 | AI correctness | not started | | | n/a |
+| 9 | AI correctness | **done 2026-09-12** — F003, F014, F015, F018, F020 confirmed; F019 wont-fix with reason (shared limiter, still per-instance memory). New: `lib/ial-marking.js` (spec-sourced tariffs, paper structures, 20-mark structure) and `lib/subscription-lookup.js`. Verify B: completion screen checked live at 390px | (this commit) | n/a | n/a (packet 3) |
 | 10 | Smart Practice engine | not started | | | n/a |
 | 11 | Performance and accessibility | not started | | | n/a |
 | 12 | Monetisation coherence | not started | | | n/a |

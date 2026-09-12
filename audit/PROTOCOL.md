@@ -92,18 +92,30 @@ SEO branch has merged in between. Do not merge from a session; open the PR and s
 
 ## Agents and models
 
-| Role | Agent | Model | Why |
-|---|---|---|---|
-| Orchestrate, brief, gate, handoff | main session | Fable or Opus | Judgment across the whole packet |
-| Build, packets 2–5 and 7 | main session | Fable or Opus | Cross-file design decisions |
-| Build, narrow packets | `claude` general agent | Opus | Bounded scope, clear spec |
-| Verify A | `packet-verifier` | Sonnet | Mechanical: read diff, check each id, cite line |
-| Verify B | `student-walkthrough` | Sonnet | Scripted browser replay |
-| Content packets (14–56) | workflow, one section per run | mixed | Author on Opus under the validator, examiner and skeptic reviewers on Sonnet, founder reviews the rendered diff |
+**The rule:** the strongest model goes where a mistake propagates silently and no verifier can catch it.
+The next tier goes where the build, the ledger or a verifier catches mistakes. Tier is chosen per packet,
+never split mid-packet.
+
+| Packet | Model | Why |
+|---|---|---|
+| **3** Validator v2 | **Fable 5.1** | A rule nobody thinks to write is invisible, is caught by nothing, and governs all 43 content packets. It now also absorbs the examiner's structural job |
+| **5** Step 0 | **Fable 5.1** | Product design under interacting constraints: cognitive load, 390px, the measurement baseline, pedagogy. The largest single lever on churn |
+| **7** Widget mechanics | **Fable 5.1** | Defines the exercise types 338 recalls get authored into. Wrong here means authoring them twice, as in March |
+| **14** First content section | **Fable 5.1** | Sets the template for 42 more and, with no examiner, is where the quality bar is actually set |
+| 2, 4, 6, 8, 9, 10, 11, 12, 13, 13.2-13.8 | Opus | Bounded and specified. The ledger says what must become true, a verifier cites the line, the build must pass |
+| 15-56 content sections | Opus | Once packet 14's template is proven. Escalate a section to Fable only if its audit grade is D or it carries a rewrite |
+| Verify A and Verify B | Sonnet | Mechanical: read the diff, check each id, cite a line |
+| Mechanical sweeps, skeptic passes | Sonnet | Grep-shaped work and second opinions |
+
+Honest caveat: this is reasoning about task shape, not a benchmark. On well-specified work inside this
+harness the gap between tiers is narrower than the tier names suggest, which is the whole point of the
+ledger and the verifier. Where the lower tier proves insufficient, the evidence will be a packet whose
+verifier rejects it more than once; move that packet up a tier and record it in `DECISIONS.md`.
 
 Token discipline: the main session reads reports, not files. Verifier reports are short by construction (one
 line per id). If a packet needs more than one session, stop at a committed, verified sub-point and hand off; do
-not stretch a session to finish.
+not stretch a session to finish. Anything expected to cost more than a few million subagent tokens is checked
+with the founder first.
 
 ## Definition of done, restated
 

@@ -149,14 +149,17 @@ The only audit items no packet implements. Each needs its own decision, not a de
 
 ## Decisions that are the founder's, not the plan's
 
-- **Name and book the IAL teacher in week 1.** Sign-off is roughly 20-40 hours of qualified time against a
+- ~~**Name and book the IAL teacher in week 1.**~~ **CLOSED 12 September: no paid examiner.** All content is
+  authored originally and gated by `audit/CONTENT-GATE.md`. Packet 3 builds its layers 1-3; packet 14 pilots
+  4-7. The founder's time is 45-60 minutes on packet 14, then ~15 minutes per section spent only on the
+  corroboration list. Superseded text: Sign-off is roughly 20-40 hours of qualified time against a
   product with ~16 premium users. Either resource it as an out-of-pocket line item, or write the gate
   honestly as "the founder reviews it" and stop calling it independent.
 - **The freemium boundary.** The free tier is the entire teaching surface; the paid tier is drills containing
   the worst-verified content in the product. Consider un-paywalling the quiz bank until it passes the
   validator. Leave the price alone: the £1 first month already suppresses price as a churn cause.
-- **Where Business extracts come from.** 6 exist in `content/data-response/`; 20 sections need them. Author,
-  adapt or license, and answer the copyright question before the Business sections come up.
+- ~~**Where Business extracts come from.**~~ **CLOSED 12 September: we author them.** Original stimulus only,
+  calibrated against real papers for command word, tariff and levels shape but never reproducing Pearson text.
 - **The freeze date.** Today is 11 September. 58 sessions at one a day ends early December, which collides
   with the January series. Decide what January students get: the realistic answer is the foundation, the
   repair packets and the top ten sections by traffic, with the rest landing for June.

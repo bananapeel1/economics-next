@@ -3,30 +3,13 @@ import { google } from '@ai-sdk/google';
 import { createClient } from '@/lib/supabase/server';
 import { createServerClient } from '@/lib/supabase-server';
 import { hasPremiumAccess } from '@/lib/entitlements';
+import { getSubscriptionRow } from '@/lib/subscription-lookup';
+import { rateLimit } from '@/lib/rate-limit';
+import { specForUnitCode, markingGuidance, ESSAY_20_STRUCTURE } from '@/lib/ial-marking';
 
 export const maxDuration = 30;
 
-// Simple in-memory rate limiter: 30 messages per user per day
-const rateLimitMap = new Map();
 const DAILY_LIMIT = 30;
-
-function checkRateLimit(userId) {
-  const now = Date.now();
-  const dayMs = 24 * 60 * 60 * 1000;
-  const entry = rateLimitMap.get(userId);
-
-  if (!entry || now - entry.start > dayMs) {
-    rateLimitMap.set(userId, { start: now, count: 1 });
-    return true;
-  }
-
-  if (entry.count >= DAILY_LIMIT) {
-    return false;
-  }
-
-  entry.count++;
-  return true;
-}
 
 export async function POST(request) {
   // Auth check — require logged-in user
@@ -42,11 +25,7 @@ export async function POST(request) {
 
   // Check subscription — require premium
   const supabase = createServerClient();
-  const { data: sub } = await supabase
-    .from('user_subscriptions')
-    .select('plan, status')
-    .eq('user_id', user.id)
-    .single();
+  const sub = await getSubscriptionRow(supabase, user.id);
 
   const isPremium = hasPremiumAccess(sub);
   // Also allow admin users
@@ -59,8 +38,10 @@ export async function POST(request) {
     });
   }
 
-  // Rate limiting
-  if (!checkRateLimit(user.id)) {
+  // Rate limiting. Shared limiter, so the two AI routes cannot each grant a separate allowance.
+  // Honest caveat: this is per-instance memory, so on Vercel it bounds a burst rather than a day.
+  // A durable limiter needs a store; tracked as F019 and out of scope for a prompt-correctness packet.
+  if (!rateLimit(`chat:${user.id}`, DAILY_LIMIT).allowed) {
     return new Response(
       JSON.stringify({ error: 'Daily limit reached (30 messages). Try again tomorrow!' }),
       { status: 429, headers: { 'Content-Type': 'application/json' } }
@@ -68,7 +49,7 @@ export async function POST(request) {
   }
 
   const body = await request.json();
-  const { messages: rawMessages, section, unit } = body;
+  const { messages: rawMessages, section, unit, sectionBrief } = body;
 
   // Convert UIMessages (parts-based) to ModelMessages (content-based) for streamText
   const messages = (rawMessages || []).map(msg => {
@@ -87,38 +68,57 @@ export async function POST(request) {
     return { role: msg.role, content: '' };
   });
 
-  // Detect subject from unit code prefix
   const unitCode = unit?.code || '';
-  const isBusinessSubject = unitCode.startsWith('WBS');
-  const subjectName = isBusinessSubject ? 'Business' : 'Economics';
 
-  const system = `You are a tutor for the **Edexcel International AS/A-Level (IAL)** ${subjectName} specification. This is the INTERNATIONAL qualification (unit codes ${isBusinessSubject ? 'WBS11-WBS14' : 'WEC11-WEC12'}), NOT the domestic UK GCE.
+  // The chapter the student is actually on. Without this the tutor answers from general knowledge
+  // and can contradict the notes on screen — the substance of finding F018.
+  const briefBlock = Array.isArray(sectionBrief) && sectionBrief.length
+    ? `WHAT THIS SECTION TEACHES. Answer from this first, and say so if the student asks about
+something outside it. Do not contradict these; if you believe one is wrong, say the notes say X and
+explain the distinction rather than asserting the opposite.
+
+${sectionBrief.map((c) => {
+        const ideas = (c.keyIdeas || []).map((k) => `    - ${k}`).join('\n');
+        const exam = (c.examMatters || []).map((k) => `    Exam: ${k}`).join('\n');
+        return `  ${c.title}\n${ideas}${exam ? `\n${exam}` : ''}`;
+      }).join('\n')}
+`
+    : '';
+
+  const spec = specForUnitCode(unitCode);
+  const subjectName = spec.subject;
+
+  const system = `You are a tutor for the Edexcel International A-Level (IAL) ${subjectName} specification.
 
 Section: ${section?.number} — ${section?.title}
 Unit: Unit ${unit?.number} — ${unit?.title} (${unitCode})
+${briefBlock}
+
+${markingGuidance(spec)}
 
 RESPONSE STYLE — keep it simple and scannable:
-- Use **bullet points** for explanations, not long paragraphs
-- **Bold** key terms and definitions
-- Keep answers SHORT — under 150 words unless the student asks for a full model answer
-- For definitions: 1-2 clear sentences only
-- For explanations: use cause → effect bullet chains
-- For diagrams: briefly list axes, curves, shifts and label changes
-- For essay structures: outline the key points per paragraph, don't write full prose unless asked
+- Use bullet points for explanations, not long paragraphs
+- Bold key terms and definitions
+- Keep answers SHORT, under 150 words, unless the student asks for a full model answer
+- For definitions: one or two clear sentences
+- For explanations: cause and effect bullet chains
+- For diagrams: list axes, curves, shifts and the label changes that earn marks
+- For essay structures: outline the points per paragraph rather than writing the prose
 
-IAL EXAM TECHNIQUE:
-- Mark scheme structure: **Knowledge** (define key terms) → **Application** (use context/data) → **Analysis** (build cause→effect chains) → **Evaluation** (weigh up, consider limitations, reach a justified judgement)
-- Command words matter: "Define" = 2-4 marks (brief definition + example). "Explain" = 4-6 marks (definition + cause→effect chain). "Assess/Evaluate/Discuss" = 10-20 marks (KAAE structure with balanced argument)
-- Always identify the **command word** and match your answer depth to the marks available
-- For 20-mark essays: introduction not needed. Go straight into analysis paragraphs, then evaluation, then a justified conclusion
+ANSWERING ABOUT MARKS:
+- Always name the command word first and match the depth of your answer to its tariff above.
+- Never quote a tariff that is not in the list for this subject. If a student asks about one of
+  ${spec.absent.join(' or ')}, tell them it does not appear in IAL ${subjectName} and give them the
+  command word their paper actually uses.
+${ESSAY_20_STRUCTURE}
 
-Focus on the content in this section. Use proper ${subjectName.toLowerCase()} terminology throughout.`;
+Stay on the content of this section. Use proper ${subjectName.toLowerCase()} terminology throughout.`;
 
   const result = streamText({
     model: google('gemini-2.5-flash-lite'),
     system,
     messages,
-    maxTokens: 800,
+    maxOutputTokens: 800,
   });
 
   return result.toUIMessageStreamResponse();

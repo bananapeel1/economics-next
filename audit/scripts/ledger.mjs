@@ -99,8 +99,20 @@ switch (cmd) {
     const n = Number(ids[0]);
     const rows = all().filter((r) => r.closed_by === `packet-${n}` && r.status !== 'confirmed' && r.status !== 'wont-fix');
     for (const r of rows) console.log(line(r));
-    console.log(rows.length ? `\nGATE BLOCKED: ${rows.length} claimed item(s) not confirmed` : 'gate clear: every claimed item is confirmed');
-    process.exit(rows.length ? 2 : 0);
+    // A packet can also pass by claiming less than its scope. Surface that: items assigned to this
+    // packet that were never claimed are unfinished scope, not absent scope.
+    const unclaimed = all().filter((r) => r.packet === n && r.status === 'open' && !r.closed_by);
+    if (unclaimed.length) {
+      console.log(`\nUNCLAIMED SCOPE (${unclaimed.length}) — assigned to packet ${n}, never claimed:`);
+      for (const r of unclaimed) console.log('  ' + line(r));
+      console.log('  Either fix and claim them, mark them wont-fix with a note, or reassign them to a later');
+      console.log('  packet with `reopen --note`. Do not record the packet as done while these are open.');
+    }
+    const blocked = rows.length > 0;
+    console.log(blocked ? `\nGATE BLOCKED: ${rows.length} claimed item(s) not confirmed`
+      : unclaimed.length ? `\ngate clear on claims, but ${unclaimed.length} scope item(s) are unclaimed — see above`
+      : 'gate clear: every claimed item is confirmed and no scope is left unclaimed');
+    process.exit(blocked ? 2 : 0);
   }
   case 'add': {
     const n = Number(ids[0]);

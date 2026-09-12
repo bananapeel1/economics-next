@@ -16,6 +16,23 @@ import { NoteSection, TakeawayCard } from './notes';
 import { isPracticeVisible } from '@/lib/ial-commands';
 import { trackFunnel } from '@/lib/funnel';
 
+/* The rubric the AI grader marks against. Built from the whole chapter, not just the step the box
+   sits on, because the student is explaining the chapter. keyIdea / misconception / examMatters live
+   on the subsection, so they are gathered across the block. Packet 9, finding F015: the old grader
+   received only the chapter title and marked against its own general knowledge. */
+function chapterRubric(contentData, blockIndex, unitCode) {
+  const block = Array.isArray(contentData) ? contentData[blockIndex] : null;
+  const subs = Array.isArray(block?.sections) ? block.sections : [];
+  const join = (key) => subs.map((x) => x && x[key]).filter(Boolean).join('\n');
+  return {
+    unitCode,
+    keyIdea: join('keyIdea'),
+    takeaway: block?.takeaway || null,
+    misconception: join('misconception'),
+    examMatters: join('examMatters'),
+  };
+}
+
 /* Practice items whose command word is not on the IAL list for the subject (or flagged hidden in
    content) are withheld until rewritten. See audit/PLAN.md day-0 hotfix. */
 function PracticeWithheld() {
@@ -453,7 +470,8 @@ export default function LearnModeTab({
                 {/* Explain It Back — BEFORE takeaway */}
                 {step.isLastInBlock && step.blockTitle && (
                   <ExplainItBackUpgraded key={`explain-${currentStep}`} title={step.blockTitle}
-                    onAskTutor={onAskTutor} isPremium={isPremium} />
+                    onAskTutor={onAskTutor} isPremium={isPremium} onAttempt={onExplainAttempt}
+                    rubric={chapterRubric(contentData, step.blockIndex, currentUnit?.code)} />
                 )}
 
                 {/* Takeaway — AFTER explain it back */}
@@ -494,7 +512,7 @@ export default function LearnModeTab({
                     ? <InlinePractice key={`practice-${currentStep}`} question={currentPractice} onAskTutor={onAskTutor} mode={getPracticeMode(currentStep)} />
                     : <PracticeWithheld key={`practice-${currentStep}`} />
                 )}
-                {step.block.title && <ExplainItBackUpgraded key={`explain-${currentStep}`} title={step.block.title} onAskTutor={onAskTutor} isPremium={isPremium} />}
+                {step.block.title && <ExplainItBackUpgraded key={`explain-${currentStep}`} title={step.block.title} onAskTutor={onAskTutor} isPremium={isPremium} onAttempt={onExplainAttempt} rubric={chapterRubric(contentData, step.blockIndex, currentUnit?.code)} />}
               </div>
             </>
           ) : null}
