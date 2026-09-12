@@ -23,7 +23,7 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const file = path.join(root, 'audit', 'ledger.json');
 const ledger = JSON.parse(fs.readFileSync(file, 'utf8'));
-const all = () => [...ledger.code, ...ledger.content, ...(ledger.feature || [])];
+const all = () => [...ledger.code, ...ledger.content, ...(ledger.feature || []), ...(ledger.marketing || [])];
 const byId = new Map(all().map((x) => [x.id, x]));
 const save = () => fs.writeFileSync(file, JSON.stringify(ledger, null, 1) + '\n');
 const today = new Date().toISOString().slice(0, 10);

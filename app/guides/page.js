@@ -6,12 +6,12 @@ import LandingScrollBar from '@/components/LandingScrollBar';
 import '@/styles/landing.css';
 
 export const metadata = {
-  title: 'Edexcel IAL Revision Guides — Economics & Business | Revvy Learn',
-  description: 'Free in-depth revision guides for Edexcel IAL Economics and Business. Comprehensive study guides covering market failure, macroeconomic objectives, globalisation and more.',
+  title: 'Edexcel IAL Business Revision Guide | Revvy Learn',
+  description: 'Free in-depth revision guide for Edexcel IAL Business, plus free Economics notes on market failure, macroeconomic objectives, globalisation and more.',
   alternates: { canonical: 'https://revvylearn.com/guides' },
   openGraph: {
-    title: 'Edexcel IAL Revision Guides — Economics & Business | Revvy Learn',
-    description: 'Free in-depth revision guides for Edexcel IAL Economics and Business.',
+    title: 'Edexcel IAL Business Revision Guide | Revvy Learn',
+    description: 'Free in-depth revision guide for Edexcel IAL Business, plus free Economics and Business topic notes.',
     url: 'https://revvylearn.com/guides',
   },
 };
@@ -34,7 +34,7 @@ export default function GuidesIndexPage() {
               Revision<br /><em>Guides</em>
             </h1>
             <p className="elp-hero-desc">
-              In-depth guides for key Edexcel IAL Economics and Business topics. Each guide covers everything you need to know for your exams &mdash; with diagrams, exam tips, and evaluation frameworks.
+              In-depth guides for key Edexcel IAL Business topics. Each guide works through the topic section by section &mdash; with key definitions, exam technique tips, and common mistakes to avoid.
             </p>
             <div className="elp-hero-proof">
               <div className="elp-proof-item"><strong>{economicsGuides.length}</strong> Economics guides</div>

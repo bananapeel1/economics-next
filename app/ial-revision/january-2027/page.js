@@ -5,11 +5,11 @@ import '@/styles/landing.css';
 
 export const metadata = {
   title: 'IAL January 2027 Revision — Edexcel Economics & Business Exam Preparation | Revvy Learn',
-  description: 'Revision guide for the Edexcel IAL January 2027 exam series. Free notes, flashcards, past papers and model answers for IAL Economics (WEC11–WEC14) and Business (WBS11–WBS14). Start your revision early.',
+  description: 'Revision guide for the Edexcel IAL January 2027 exam series. Free notes, practice questions and Unit 1 past papers for IAL Economics (WEC11–WEC14) and Business (WBS11–WBS14). Flashcards, quizzes and the AI tutor unlock with Pro. Start your revision early.',
   alternates: { canonical: 'https://revvylearn.com/ial-revision/january-2027' },
   openGraph: {
     title: 'IAL January 2027 Revision — Edexcel Economics & Business | Revvy Learn',
-    description: 'Free revision for the January 2027 IAL exam series. Economics and Business notes, flashcards and past papers.',
+    description: 'Free revision for the January 2027 IAL exam series. Economics and Business notes, practice questions and Unit 1 past papers.',
     url: 'https://revvylearn.com/ial-revision/january-2027',
   },
 };
@@ -106,7 +106,7 @@ export default function January2027Page() {
         <div className="elp-cta-bg" />
         <div className="elp-cta-inner elp-fade-up">
           <h2 className="elp-cta-title">Get ahead for January 2027</h2>
-          <p className="elp-cta-sub">Free notes for every spec point. Start early, revise smart.</p>
+          <p className="elp-cta-sub">Free notes across all four units. Start early, revise smart.</p>
           <div className="elp-cta-actions">
             <Link href="/?section=introductory-concepts" className="elp-btn-primary" style={{ fontSize: '15px', padding: '14px 30px' }}>Open Revvy Learn &rarr;</Link>
           </div>

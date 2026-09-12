@@ -8,10 +8,10 @@ import '@/styles/landing.css';
 
 export const metadata = {
   title: 'A–Z Economics & Business Key Terms — Edexcel IAL Glossary',
-  description: 'A\u2013Z glossary of key terms and definitions for Edexcel International A-Level Economics and Business. Every definition aligned to the IAL specification \u2014 perfect for quick revision and exam reference.',
+  description: 'A\u2013Z glossary of key terms and definitions for Edexcel International A-Level Economics and Business. Search by term or filter by subject \u2014 perfect for quick revision and exam reference.',
   openGraph: {
     title: 'A–Z Economics & Business Key Terms — Edexcel IAL Glossary',
-    description: 'A\u2013Z key terms and definitions for Edexcel IAL Economics and Business, aligned to the IAL specification.',
+    description: 'A\u2013Z key terms and definitions for Edexcel IAL Economics and Business. Search by term or filter by subject.',
     url: 'https://revvylearn.com/glossary',
   },
 };
@@ -38,7 +38,7 @@ export default async function GlossaryRoute() {
               Economics &amp; Business<br /><em>Glossary</em>
             </h1>
             <p className="elp-hero-desc">
-              A&ndash;Z glossary of key terms and definitions for Edexcel International A-Level Economics and Business. Every definition aligned to the IAL specification &mdash; perfect for quick revision and exam reference.
+              A&ndash;Z glossary of key terms and definitions for Edexcel International A-Level Economics and Business. Search by term or filter by subject &mdash; perfect for quick revision and exam reference.
             </p>
             <div className="elp-hero-proof">
               <div className="elp-proof-item"><strong>{(terms || []).length}</strong> key terms</div>
@@ -81,7 +81,7 @@ export default async function GlossaryRoute() {
         <div className="elp-cta-bg" />
         <div className="elp-cta-inner elp-fade-up">
           <h2 className="elp-cta-title">Ready to start revising?</h2>
-          <p className="elp-cta-sub">Free notes for every spec point. Test your knowledge with flashcards and quizzes.</p>
+          <p className="elp-cta-sub">Free notes across all four units. Test your knowledge with flashcards and quizzes.</p>
           <div className="elp-cta-actions">
             <Link href="/?section=introductory-concepts" className="elp-btn-primary" style={{ fontSize: '15px', padding: '14px 30px' }}>Open Revvy Learn &rarr;</Link>
           </div>

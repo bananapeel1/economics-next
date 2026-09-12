@@ -1084,7 +1084,7 @@ export const MODEL_ANSWERS_FAQ = [
   },
   {
     question: 'What is the mark scheme structure for Edexcel IAL Business 8-mark questions?',
-    answer: 'Edexcel IAL Business 8-mark questions award marks across Knowledge (1-2 marks), Application to context (2-3 marks), and Analysis/Explanation (3-4 marks). You must use the case study context and develop a chain of reasoning to access the higher mark bands.',
+    answer: 'Edexcel IAL Business 8-mark questions use the command word "Discuss" and are marked with a levels-based mark scheme, not a point split across separate Knowledge, Application and Analysis bands (point-based marking applies to the shorter items such as Explain 4 and Analyse 6). A Discuss 8 needs logical chains of reasoning in the case study context, showing causes and effects, plus a brief assessment showing awareness of competing arguments or factors.',
   },
   {
     question: 'What is the PEEL structure for Economics essays?',

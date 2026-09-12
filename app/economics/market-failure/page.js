@@ -9,7 +9,7 @@ import '@/styles/landing.css';
 
 export const metadata = {
   title: 'Market Failure Notes & Diagrams — Edexcel IAL Economics WEC11',
-  description: 'Complete market failure revision for Edexcel IAL Economics Unit 1 (WEC11). All types explained: externalities, public goods, merit & demerit goods, information failure, monopoly power. Diagrams, model answers and exam technique.',
+  description: 'Market failure revision for Edexcel IAL Economics Unit 1 (WEC11): externalities, public goods, merit & demerit goods, information failure and moral hazard, plus monopoly power as tested in Unit 3. Diagrams, real examples and exam technique.',
   alternates: { canonical: 'https://revvylearn.com/economics/market-failure' },
   openGraph: {
     title: 'Market Failure Notes & Diagrams — Edexcel IAL Economics WEC11 | Revvy Learn',
@@ -117,7 +117,7 @@ const FAQS = [
   },
   {
     q: 'What are the main types of market failure in Edexcel IAL Economics?',
-    a: 'For WEC11 you should be able to explain negative externalities, positive externalities, public goods, merit goods, demerit goods, and information failure. Monopoly power and abuse of market power are also examinable as a form of market failure. Some mark schemes group merit/demerit goods with externalities, which is why you will see the types listed as four, five or six depending on the source.',
+    a: 'For WEC11 (Unit 1: Markets in action) the spec lists five sources of market failure: externalities, the free-rider problem and non-provision of public goods, imperfect market information, moral hazard, and speculation and market bubbles. Two things work differently from UK A-level: mark schemes credit \u201cexternal benefits or costs of consumption\u201d rather than \u201cmerit good\u201d or \u201cdemerit good\u201d, and moral hazard plus market bubbles sit inside Unit 1 here. Monopoly power is examinable too, but as Unit 3 (WEC13) market structures rather than WEC11 market failure.',
   },
   {
     q: 'What are the 4 types of market failure?',
@@ -129,7 +129,7 @@ const FAQS = [
   },
   {
     q: 'What are the 6 types of market failure?',
-    a: 'The six-type framework covers: (1) negative externalities, (2) positive externalities, (3) public goods, (4) merit goods, (5) demerit goods, (6) information failure. Some textbooks replace one of these with monopoly power. All are examinable in IAL Economics Unit 1.',
+    a: 'The six-type framework covers: (1) negative externalities, (2) positive externalities, (3) public goods, (4) merit goods, (5) demerit goods, (6) information failure. That is the standard textbook version, but it borrows its vocabulary from general economics rather than from the Edexcel IAL specification. For WEC11 the spec terms are external benefits and costs of consumption rather than \u201cmerit\u201d or \u201cdemerit\u201d goods, alongside externalities, public goods, imperfect market information, moral hazard, and speculation and market bubbles. Monopoly power is not examined until Unit 3.',
   },
   {
     q: 'What is the difference between partial and complete market failure?',
@@ -258,7 +258,7 @@ export default async function MarketFailurePillarPage() {
           <div className="elp-hero-preview elp-fade-up" style={{ transitionDelay: '.15s' }}>
             <div className="elp-hero-badge elp-b1">
               <span className="elp-badge-icon"><Star size={18} /></span>
-              <div className="elp-badge-text"><span className="elp-badge-val">7 types</span><span className="elp-badge-lbl">fully spec-aligned</span></div>
+              <div className="elp-badge-text"><span className="elp-badge-val">7 types</span><span className="elp-badge-lbl">fully explained</span></div>
             </div>
             <div className="elp-preview-card">
               <div className="elp-preview-topbar">
@@ -308,8 +308,8 @@ export default async function MarketFailurePillarPage() {
       <div className="elp-section" id="types">
         <div className="elp-fade-up" style={{ marginBottom: 40 }}>
           <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />All seven types</div>
-          <h2 className="elp-s-title">Every type of market failure on the WEC11 spec</h2>
-          <p className="elp-s-sub">Different textbooks count them as four, five or six categories &mdash; we cover all seven examinable forms so you are ready for any mark scheme.</p>
+          <h2 className="elp-s-title">The seven types of market failure, explained</h2>
+          <p className="elp-s-sub">Different textbooks count them as four, five or six categories &mdash; we work through seven, each with a clear definition, real examples and the diagram that goes with it.</p>
         </div>
         {TYPES_OF_FAILURE.map((type, idx) => (
           <div key={type.slug}>
@@ -381,7 +381,7 @@ export default async function MarketFailurePillarPage() {
         <div className="elp-fade-up" style={{ marginBottom: 24 }}>
           <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />Policy response</div>
           <h2 className="elp-s-title">How governments correct market failure</h2>
-          <p className="elp-s-sub">Every WEC11 question on market failure expects you to evaluate policy responses and end with the risk of government failure.</p>
+          <p className="elp-s-sub">WEC11 evaluation questions on market failure &mdash; Examine (8), Discuss (14) and Evaluate (20) &mdash; expect you to weigh up policy responses and end with the risk of government failure.</p>
         </div>
         <div className="eup-topic-block elp-fade-up">
           <div className="eup-subtopic-grid">
@@ -448,7 +448,7 @@ export default async function MarketFailurePillarPage() {
                 </details>
               ))}
             </div>
-            <p className="eup-topic-desc" style={{ marginTop: 16 }}>For fully worked 8- and 20-mark model answers, see the <Link href="/economics/market-failure-model-answers" style={{ color: 'var(--eup-accent)' }}>Market Failure Model Answers</Link> page.</p>
+            <p className="eup-topic-desc" style={{ marginTop: 16 }}>For a fully worked model answer with the mark scheme and annotations, see the <Link href="/economics/market-failure-model-answers" style={{ color: 'var(--eup-accent)' }}>Market Failure Model Answers</Link> page.</p>
           </div>
         </div>
       )}
@@ -477,11 +477,11 @@ export default async function MarketFailurePillarPage() {
             <div className="eup-exam-info">
               <div className="eup-ei-label">Assessment details</div>
               <div className="eup-ei-row"><span className="eup-ei-key">Unit</span><span className="eup-ei-val" style={{ color: 'var(--eup-accent)' }}>1.3.5 &mdash; WEC11</span></div>
-              <div className="eup-ei-row"><span className="eup-ei-key">Paper duration</span><span className="eup-ei-val">1 hour 30 minutes</span></div>
+              <div className="eup-ei-row"><span className="eup-ei-key">Paper duration</span><span className="eup-ei-val">1 hour 45 minutes</span></div>
               <div className="eup-ei-row"><span className="eup-ei-key">Paper marks</span><span className="eup-ei-val">80 marks</span></div>
-              <div className="eup-ei-row"><span className="eup-ei-key">% of A-Level</span><span className="eup-ei-val">20%</span></div>
+              <div className="eup-ei-row"><span className="eup-ei-key">% of A-Level</span><span className="eup-ei-val">25%</span></div>
               <div className="eup-ei-row"><span className="eup-ei-key">Question styles</span><span className="eup-ei-val eup-marks-pills-inline"><span className="eup-mp eup-mp-4">4</span><span className="eup-mp eup-mp-8">8</span><span className="eup-mp eup-mp-20">20</span></span></div>
-              <div className="eup-ei-row"><span className="eup-ei-key">Common in</span><span className="eup-ei-val">Section A data-response &amp; Section B essays</span></div>
+              <div className="eup-ei-row"><span className="eup-ei-key">Common in</span><span className="eup-ei-val">Section C data-response &amp; Section D essay</span></div>
               <div className="eup-ei-row eup-ei-row-last"><span className="eup-ei-key">Sessions</span><span className="eup-ei-val">January, June, October</span></div>
             </div>
           </div>
@@ -520,7 +520,7 @@ export default async function MarketFailurePillarPage() {
           </Link>
           <Link className="eup-continue-card" href="/economics/market-failure-model-answers">
             <div className="eup-cc-icon"><PenIcon size={18} /></div>
-            <div className="eup-cc-body"><div className="eup-cc-name">Market Failure Model Answers</div><div className="eup-cc-sub">Fully worked 8- and 20-mark answers</div></div>
+            <div className="eup-cc-body"><div className="eup-cc-name">Market Failure Model Answers</div><div className="eup-cc-sub">1.3.5 &middot; Annotated 4-mark answer with mark scheme</div></div>
             <div className="eup-cc-arrow">&rarr;</div>
           </Link>
           <Link className="eup-continue-card" href="/economics/unit-1">
@@ -545,7 +545,7 @@ export default async function MarketFailurePillarPage() {
       {/* FEATURES STRIP */}
       <div className="elp-features-strip">
         <div className="elp-features-inner">
-          <div className="elp-feat-item"><span className="elp-feat-icon"><Clipboard size={18} /></span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every WEC11 1.3.5 point covered</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><Clipboard size={18} /></span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Externalities, public goods &amp; information failure</div></div></div>
           <div className="elp-feat-item"><span className="elp-feat-icon"><ProgressChart size={18} /></span><div><div className="elp-feat-label">Labelled diagrams</div><div className="elp-feat-sub">MPC, MSC, MPB, MSB, welfare loss</div></div></div>
           <div className="elp-feat-item"><span className="elp-feat-icon"><BoltIcon size={18} /></span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style with model answers</div></div></div>
           <div className="elp-feat-item"><span className="elp-feat-icon"><Tutor size={18} /></span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any market failure question</div></div></div>
@@ -558,7 +558,7 @@ export default async function MarketFailurePillarPage() {
         <div className="elp-cta-bg" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(20,184,166,.07) 0%, transparent 65%)' }} />
         <div className="elp-cta-inner elp-fade-up">
           <h2 className="elp-cta-title">Ready to master market failure?</h2>
-          <p className="elp-cta-sub">Free notes for every spec point. Flashcards, quizzes and AI tutor unlock with Pro — £1 for your first month.</p>
+          <p className="elp-cta-sub">Free notes across all four units. Flashcards, quizzes and AI tutor unlock with Pro — £1 for your first month.</p>
           <div className="elp-cta-actions">
             <Link href="/economics/unit-1/market-failure" className="elp-btn-primary" style={{ fontSize: 15, padding: '14px 30px' }}>Open in app &mdash; it&apos;s free &rarr;</Link>
             <Link href="/economics/unit-1" className="elp-btn-secondary">&larr; Back to Unit 1</Link>

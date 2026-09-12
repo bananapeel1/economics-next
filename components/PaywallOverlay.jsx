@@ -9,7 +9,7 @@ const FEATURES = [
   'Practice Quizzes with Feedback',
   'AI Tutor for Exam Prep',
   'Chains of Analysis & Evaluation',
-  'Common Mistakes Analysis',
+  'Full Model Answers, Not Just the First',
 ];
 
 function CheckIcon() {

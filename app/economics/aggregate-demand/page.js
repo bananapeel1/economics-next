@@ -5,10 +5,10 @@ import RelatedModelAnswers from '@/components/RelatedModelAnswers';
 
 export const metadata = {
   title: 'Aggregate Demand \u2014 Edexcel IAL Economics Unit 2 | Revvy Learn',
-  description: 'Free aggregate demand revision notes for Edexcel IAL Economics (2.3.2). Covers components of AD (C+I+G+X\u2212M), the AD curve, shifts in AD, the multiplier effect and fiscal policy with diagrams and practice questions.',
+  description: 'Free aggregate demand revision notes for Edexcel IAL Economics (2.3.2). Covers components of AD (C+I+G+X\u2212M), the AD curve, shifts in AD, the multiplier and the accelerator effect, with practice questions and diagrams in the app.',
   openGraph: {
     title: 'Aggregate Demand \u2014 Edexcel IAL Economics Unit 2 | Revvy Learn',
-    description: 'Complete aggregate demand revision notes for Edexcel IAL Economics. AD components, shifts, multiplier and fiscal policy.',
+    description: 'Complete aggregate demand revision notes for Edexcel IAL Economics. AD components, shifts, the multiplier and the accelerator effect.',
     url: 'https://revvylearn.com/economics/aggregate-demand',
     type: 'article',
   },
@@ -61,7 +61,7 @@ export default async function AggregateDemandPage() {
         <div className="seo-hero-cta-content">
           <div className="seo-hero-cta-text">
             <span className="seo-hero-cta-label">Interactive Revision</span>
-            <p>Flashcards, quizzes, AI tutor &amp; progress tracking for this topic</p>
+            <p>Flashcards, quizzes &amp; AI tutor for this topic. Unlock with Pro.</p>
           </div>
           <Link href="/?section=aggregate-demand" className="seo-hero-cta-button">
             Open in App &rarr;
@@ -127,7 +127,7 @@ export default async function AggregateDemandPage() {
 
       <div className="seo-cta">
         <h2>Master Aggregate Demand Interactively</h2>
-        <p>Use flashcards, quizzes and the AI tutor to nail this topic.</p>
+        <p>Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro, &pound;1 for your first month.</p>
         <Link href="/?section=aggregate-demand" className="seo-cta-button">Start Revising &rarr;</Link>
       </div>
     </div>

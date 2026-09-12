@@ -2,7 +2,7 @@ import SectionModelAnswersPage from '@/components/SectionModelAnswersPage';
 
 export const metadata = {
   title: 'Edexcel IAL Economic Performance Model Answers | Economics | Revvy Learn',
-  description: 'Free annotated model answers for Edexcel IAL Economics measures of economic performance (2.3.1). Covers CPI, inflation, unemployment, and GDP with mark scheme breakdowns and examiner tips.',
+  description: 'Annotated model answers for Edexcel IAL Economics measures of economic performance (2.3.1). Covers CPI, inflation, and unemployment with mark scheme breakdowns and examiner-style commentary.',
   alternates: { canonical: '/economics/economic-performance-model-answers' },
   openGraph: {
     title: 'Edexcel IAL Economic Performance Model Answers | Revvy Learn',

@@ -48,7 +48,7 @@ export async function generateMetadata({ params }) {
 
   const title = topicTitleOverrides[topic]
     || `${section.title} — Edexcel IAL Economics ${section.units.title} | Revvy Learn`;
-  const description = `Free revision notes, diagrams, flashcards and quizzes for ${section.title}. Edexcel International A-Level Economics ${section.units.title}.`;
+  const description = `Free revision notes, diagrams and practice questions for ${section.title}. Flashcards and quizzes unlock with Pro. Edexcel International A-Level Economics ${section.units.title}.`;
 
   // Some topics have a dedicated SEO pillar page that should absorb canonical authority.
   // Point the canonical at the pillar to consolidate ranking signals.

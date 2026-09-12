@@ -2,7 +2,7 @@ import SectionModelAnswersPage from '@/components/SectionModelAnswersPage';
 
 export const metadata = {
   title: 'Edexcel IAL Entrepreneurs & Leaders Model Answers | Business | Revvy Learn',
-  description: 'Free annotated model answers for Edexcel IAL Business entrepreneurs and leaders (1.5). Covers the role of entrepreneurs, risk-taking, and leadership styles with mark scheme breakdowns.',
+  description: 'Annotated model answers for Edexcel IAL Business entrepreneurs and leaders (1.3.5). Covers the role of the entrepreneur, risk-taking, and the qualities needed to succeed, with mark scheme breakdowns.',
   alternates: { canonical: '/business/entrepreneurs-leaders-model-answers' },
   openGraph: {
     title: 'Edexcel IAL Entrepreneurs & Leaders Model Answers | Revvy Learn',
@@ -19,7 +19,7 @@ export default function EntrepreneursLeadersModelAnswersPage() {
       subject="business"
       backLink={{ href: '/business/unit-1', label: 'Unit 1: Marketing & People' }}
       title="Entrepreneurs & Leaders Model Answers"
-      subtitle="Section 1.5 — Annotated model answers for the <strong>role of entrepreneurs</strong>, risk-taking, and leadership styles."
+      subtitle="Section 1.3.5 — Annotated model answers for the <strong>role of entrepreneurs</strong>, risk-taking, and the qualities needed to succeed."
     />
   );
 }

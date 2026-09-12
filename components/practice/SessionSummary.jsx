@@ -46,7 +46,7 @@ export default function SessionSummary({ results, sections, totalQuestions, onRe
         </div>
         <div className="spe-stat-card">
           <span className="spe-stat-num spe-stat-amber">{totalRetried}</span>
-          <span className="spe-stat-label">RETRIED</span>
+          <span className="spe-stat-label">TO RETRY</span>
         </div>
         <div className="spe-stat-card">
           <span className="spe-stat-num spe-stat-gray">{totalAnswered}</span>

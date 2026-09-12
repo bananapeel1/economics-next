@@ -2,7 +2,7 @@ import SectionModelAnswersPage from '@/components/SectionModelAnswersPage';
 
 export const metadata = {
   title: 'Edexcel IAL Government Intervention Model Answers | Economics | Revvy Learn',
-  description: 'Free annotated model answers for Edexcel IAL Economics government intervention (1.3.6). Covers indirect taxes, subsidies, regulation, and correcting market failure with mark scheme breakdowns.',
+  description: 'Worked model answers for Edexcel IAL Economics government intervention (1.3.6). Indirect-tax questions on correcting market failure, with annotated paragraphs and full mark scheme breakdowns.',
   alternates: { canonical: '/economics/government-intervention-model-answers' },
   openGraph: {
     title: 'Edexcel IAL Government Intervention Model Answers | Revvy Learn',

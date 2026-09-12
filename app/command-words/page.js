@@ -8,11 +8,11 @@ import '@/styles/landing.css';
 
 export const metadata = {
   title: 'Edexcel IAL Command Words: Define, Explain, Analyse, Evaluate — Exam Guide',
-  description: 'Master every Edexcel IAL command word with example answers and mark breakdowns. Learn exactly what Define, Explain, Analyse, Assess and Evaluate mean, how marks are awarded, and model opening sentences that hit top bands.',
+  description: 'Understand what Edexcel IAL command words mean and what examiners expect from each one, with a sample question for every word covered. Define, Explain, Analyse, Assess and Evaluate, for Economics and Business.',
   alternates: { canonical: 'https://revvylearn.com/command-words' },
   openGraph: {
     title: 'Edexcel IAL Command Words — Exam Guide | Revvy Learn',
-    description: 'Complete guide to Edexcel IAL command words with example answers and mark breakdowns. Define, Explain, Analyse, Assess, Evaluate.',
+    description: 'Edexcel IAL command words explained, with what examiners expect and a sample question for each. Define, Explain, Analyse, Assess, Evaluate.',
     url: 'https://revvylearn.com/command-words',
   },
 };
@@ -65,7 +65,7 @@ export default async function CommandWordsRoute() {
               <div className="elp-proof-dot" />
               <div className="elp-proof-item">Example answers included</div>
               <div className="elp-proof-dot" />
-              <div className="elp-proof-item">Mark breakdowns</div>
+              <div className="elp-proof-item">Examiner expectations</div>
             </div>
           </div>
         </div>
@@ -101,7 +101,7 @@ export default async function CommandWordsRoute() {
         <div className="elp-cta-bg" />
         <div className="elp-cta-inner elp-fade-up">
           <h2 className="elp-cta-title">Ready to start revising?</h2>
-          <p className="elp-cta-sub">Free notes for every spec point. Practice with exam-style questions and model answers.</p>
+          <p className="elp-cta-sub">Free notes across all four units. Practice with exam-style questions and model answers.</p>
           <div className="elp-cta-actions">
             <Link href="/?section=introductory-concepts" className="elp-btn-primary" style={{ fontSize: '15px', padding: '14px 30px' }}>Open Revvy Learn &rarr;</Link>
           </div>

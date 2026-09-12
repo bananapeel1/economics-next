@@ -6,8 +6,8 @@ import IALScrollBar from '../IALScrollBar';
 import '@/styles/landing.css';
 
 export const metadata = {
-  title: 'Edexcel IAL Timetable — January 2027 & June 2026 Exam Dates | Revvy Learn',
-  description: 'Full Edexcel IAL exam timetable for January 2027 and June 2026. Economics (WEC11–14) and Business (WBS11–14) exam dates, R papers for different time zones, unit structure and revision planning for International A-Level Economics and Business.',
+  title: 'Edexcel IAL Exam Series — January 2027 & June 2026 | Revvy Learn',
+  description: 'How the Edexcel IAL January and June exam series work: session windows, results months, R papers for different time zones, retakes and modular unit planning for International A-Level Economics (WEC11–14) and Business (WBS11–14). Exact timetables are published by Pearson Edexcel.',
   alternates: { canonical: 'https://revvylearn.com/ial-revision/exam-series' },
   openGraph: {
     title: 'Edexcel IAL Exam Series — January & June Dates | Revvy Learn',
@@ -150,7 +150,7 @@ export default function ExamSeriesPage() {
 
         heading={"Know the dates. Now build the plan."}
 
-        sub={"Free notes on every spec point, in the order you will sit them"}
+        sub={"Free notes for both subjects, in the order you will sit them"}
 
         href="/?section=introductory-concepts"
 

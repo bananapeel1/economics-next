@@ -75,7 +75,7 @@ const SECTIONS = [
       { letter: 'c', name: 'Positive Externalities', kw: 'MPB < MSB · underproduction · education & healthcare · MSB diagram' },
       { letter: 'd', name: 'Public Goods', kw: 'Non-excludable · non-rival · free-rider problem · complete market failure' },
       { letter: 'e', name: 'Information Failure', kw: 'Asymmetric information · merit goods underprovided · demerit goods overconsumed' },
-      { letter: 'f', name: 'Moral Hazard & Bubbles', kw: 'Post-contract information failure · speculation · irrational behaviour · 2008' },
+      { letter: 'f', name: 'Moral Hazard & Adverse Selection', kw: 'Post-contract behaviour change · insurance · used car market · 2008 banks' },
     ],
   },
   {
@@ -126,7 +126,7 @@ export default function Unit1Page() {
             <div className="elp-hero-proof">
               <div className="elp-proof-item"><strong>6 topics</strong> fully covered</div>
               <div className="elp-proof-dot" />
-              <div className="elp-proof-item"><strong>Free</strong> notes for every spec point</div>
+              <div className="elp-proof-item"><strong>Free</strong> notes for all six topics</div>
               <div className="elp-proof-dot" />
               <div className="elp-proof-item">{UNIT.code} exam ready</div>
             </div>
@@ -135,7 +135,7 @@ export default function Unit1Page() {
           <div className="elp-hero-preview elp-fade-up" style={{ transitionDelay: '.15s' }}>
             <div className="elp-hero-badge elp-b1">
               <span className="elp-badge-icon"><Star size={18} /></span>
-              <div className="elp-badge-text"><span className="elp-badge-val">6 topics</span><span className="elp-badge-lbl">fully spec-aligned</span></div>
+              <div className="elp-badge-text"><span className="elp-badge-val">6 topics</span><span className="elp-badge-lbl">one per spec heading</span></div>
             </div>
             <div className="elp-preview-card">
               <div className="elp-preview-topbar">
@@ -173,7 +173,7 @@ export default function Unit1Page() {
       <div className="elp-section" id="topics">
         <div className="elp-uh-tight elp-fade-up" style={{ marginBottom: 40 }}>
           <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />All six topics</div>
-          <h2 className="elp-s-title">Everything in Unit 1, spec point by spec point</h2>
+          <h2 className="elp-s-title">Every Unit 1 topic, scarcity to government failure</h2>
           <p className="elp-s-sub">Open any topic straight in the app.</p>
         </div>
 
@@ -222,9 +222,9 @@ export default function Unit1Page() {
             <div className="eup-exam-info">
               <div className="eup-ei-label">Assessment details</div>
               <div className="eup-ei-row"><span className="eup-ei-key">Exam paper</span><span className="eup-ei-val" style={{ color: 'var(--eup-accent)' }}>{UNIT.code}</span></div>
-              <div className="eup-ei-row"><span className="eup-ei-key">Duration</span><span className="eup-ei-val">1 hour 30 minutes</span></div>
+              <div className="eup-ei-row"><span className="eup-ei-key">Duration</span><span className="eup-ei-val">1 hour 45 minutes</span></div>
               <div className="eup-ei-row"><span className="eup-ei-key">Total marks</span><span className="eup-ei-val">80 marks</span></div>
-              <div className="eup-ei-row"><span className="eup-ei-key">% of A-Level</span><span className="eup-ei-val">20%</span></div>
+              <div className="eup-ei-row"><span className="eup-ei-key">% of IAL</span><span className="eup-ei-val">25%</span></div>
               <div className="eup-ei-row">
                 <span className="eup-ei-key">Question types</span>
                 <span className="eup-ei-val eup-marks-pills-inline">
@@ -233,8 +233,8 @@ export default function Unit1Page() {
                   <span className="eup-mp eup-mp-20">20</span>
                 </span>
               </div>
-              <div className="eup-ei-row"><span className="eup-ei-key">Data response</span><span className="eup-ei-val">Yes &mdash; Section A</span></div>
-              <div className="eup-ei-row eup-ei-row-last"><span className="eup-ei-key">Essay questions</span><span className="eup-ei-val">Section B &mdash; choose 1 of 2</span></div>
+              <div className="eup-ei-row"><span className="eup-ei-key">Data response</span><span className="eup-ei-val">Yes &mdash; Section C (34 marks)</span></div>
+              <div className="eup-ei-row eup-ei-row-last"><span className="eup-ei-key">Essay questions</span><span className="eup-ei-val">Section D &mdash; choose 1 of 2</span></div>
             </div>
           </div>
         </div>
@@ -271,11 +271,11 @@ export default function Unit1Page() {
       {/* FEATURES STRIP */}
       <div className="elp-features-strip">
         <div className="elp-features-inner">
-          <div className="elp-feat-item"><span className="elp-feat-icon"><Clipboard size={18} /></span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every {UNIT.code} point covered</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon"><CardsIcon size={18} /></span><div><div className="elp-feat-label">Spaced repetition</div><div className="elp-feat-sub">Adaptive flashcard algorithm</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><Clipboard size={18} /></span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every {UNIT.code} topic covered</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><CardsIcon size={18} /></span><div><div className="elp-feat-label">Spaced repetition</div><div className="elp-feat-sub">Cards you miss come back sooner</div></div></div>
           <div className="elp-feat-item"><span className="elp-feat-icon"><BoltIcon size={18} /></span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style, every topic</div></div></div>
           <div className="elp-feat-item"><span className="elp-feat-icon"><Tutor size={18} /></span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any Economics question</div></div></div>
-          <div className="elp-feat-item"><span className="elp-feat-icon"><ProgressChart size={18} /></span><div><div className="elp-feat-label">Progress tracking</div><div className="elp-feat-sub">Mastery across all spec points</div></div></div>
+          <div className="elp-feat-item"><span className="elp-feat-icon"><ProgressChart size={18} /></span><div><div className="elp-feat-label">Progress tracking</div><div className="elp-feat-sub">Mastery across the topics you study</div></div></div>
         </div>
       </div>
 
@@ -284,7 +284,7 @@ export default function Unit1Page() {
         <div className="elp-cta-bg" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(20,184,166,.07) 0%, transparent 65%)' }} />
         <div className="elp-cta-inner elp-fade-up">
           <h2 className="elp-cta-title">Ready to revise Unit 1?</h2>
-          <p className="elp-cta-sub">Free notes for every spec point. Adaptive flashcards, practice questions and AI tutor unlock with Pro — £1 for your first month.</p>
+          <p className="elp-cta-sub">Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro — £1 for your first month.</p>
           <div className="elp-cta-actions">
             <Link href="/?section=introductory-concepts" className="elp-btn-primary" style={{ fontSize: 15, padding: '14px 30px' }}>Open Revvy Learn — it&apos;s free →</Link>
             <Link href="/economics" className="elp-btn-secondary">← Back to all units</Link>

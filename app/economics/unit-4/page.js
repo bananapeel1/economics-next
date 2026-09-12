@@ -6,7 +6,7 @@ import '@/styles/landing.css';
 
 export const metadata = {
   title: 'Developments in the Global Economy — Edexcel IAL Economics Unit 4 (WEC14) | Revvy Learn',
-  description: 'Complete revision notes for Edexcel IAL Economics Unit 4 (WEC14). Globalisation, international trade, exchange rates, poverty and inequality, the role of the state, and economic development.',
+  description: 'Revision notes for Edexcel IAL Economics Unit 4 (WEC14): globalisation, international trade, exchange rates, poverty and inequality, the role of the state, and economic development.',
   openGraph: { title: 'Developments in the Global Economy — Edexcel IAL Economics Unit 4 (WEC14) | Revvy Learn', url: 'https://revvylearn.com/economics/unit-4', type: 'article' },
 };
 
@@ -45,12 +45,12 @@ const SECTIONS = [
       { letter: 'c', name: 'Causes & Consequences', kw: 'wages · wealth · globalisation · social mobility' },
     ] },
   { id: 'role-state-macroeconomy', ref: '4.3.5', title: 'The Role of the State in the Macroeconomy',
-    desc: 'Public goods, merit goods, redistribution, and the full policy toolkit — fiscal, monetary and supply-side approaches to managing the economy.',
+    desc: 'Public expenditure, taxation, borrowing and debt, and the full policy toolkit — fiscal, monetary and supply-side approaches to managing the economy.',
     subtopics: [
-      { letter: 'a', name: 'Public Goods & Market Failure', kw: 'non-excludable · non-rival · free rider' },
-      { letter: 'b', name: 'Merit Goods & Redistribution', kw: 'information failure · paternalism · equity' },
-      { letter: 'c', name: 'Government Macro Intervention', kw: 'fiscal · monetary · supply-side · trade-offs' },
-      { letter: 'd', name: 'Income Redistribution', kw: 'progressive tax · transfers · equity vs efficiency' },
+      { letter: 'a', name: 'Public Expenditure', kw: 'capital vs current · crowding out · % of GDP' },
+      { letter: 'b', name: 'Taxation', kw: 'direct vs indirect · progressive vs regressive · Laffer curve' },
+      { letter: 'c', name: 'Borrowing & National Debt', kw: 'fiscal deficit · automatic stabilisers · debt servicing' },
+      { letter: 'd', name: 'Macroeconomic Policies', kw: 'fiscal · monetary · supply-side · trade-offs' },
     ] },
   { id: 'growth-development', ref: '4.3.6', title: 'Growth and Development',
     desc: 'Economic growth vs development — HDI, barriers to development, market-led vs interventionist strategies, and the challenge of sustainability.',
@@ -82,9 +82,9 @@ export default function Unit4Page() {
             <div className="elp-hero-eyebrow" style={{ background: 'var(--eup-accent-bg)', borderColor: 'var(--eup-accent-bd)', color: 'var(--eup-accent)' }}>Edexcel IAL Economics &middot; {UNIT.code}</div>
             <div className="eup-unit-badge-row"><span className="eup-unit-num">Unit {UNIT.number}</span><span className="eup-unit-code">{UNIT.code}</span></div>
             <h1 className="elp-hero-title">{UNIT.title} &mdash;<br /><em style={{ color: 'var(--eup-accent)' }}>{UNIT.code} notes</em></h1>
-            <p className="elp-hero-desc">Complete revision notes for Unit 4. Globalisation, international trade, exchange rates, poverty and inequality, the role of the state, and economic development &mdash; the global perspective.</p>
+            <p className="elp-hero-desc">Revision notes for Unit 4: globalisation, international trade, exchange rates, poverty and inequality, the role of the state, and economic development &mdash; the global perspective.</p>
             <div className="elp-hero-actions"><Link href={`/?section=${SECTIONS[0].id}`} className="elp-btn-primary">Start revising free &rarr;</Link></div>
-            <div className="elp-hero-proof"><div className="elp-proof-item"><strong>6 topics</strong> fully covered</div><div className="elp-proof-dot" /><div className="elp-proof-item"><strong>Free</strong> notes for every spec point</div><div className="elp-proof-dot" /><div className="elp-proof-item">{UNIT.code} exam ready</div></div>
+            <div className="elp-hero-proof"><div className="elp-proof-item"><strong>6 topics</strong> fully covered</div><div className="elp-proof-dot" /><div className="elp-proof-item"><strong>Free</strong> notes across all four units</div><div className="elp-proof-dot" /><div className="elp-proof-item">{UNIT.code} exam ready</div></div>
           </div>
           <div className="elp-hero-preview elp-fade-up" style={{ transitionDelay: '.15s' }}>
             <div className="elp-hero-badge elp-b1"><span className="elp-badge-icon"><Star size={18} /></span><div className="elp-badge-text"><span className="elp-badge-val">6 topics</span><span className="elp-badge-lbl">fully spec-aligned</span></div></div>
@@ -135,12 +135,12 @@ export default function Unit4Page() {
           <div className="eup-exam-info">
             <div className="eup-ei-label">Assessment details</div>
             <div className="eup-ei-row"><span className="eup-ei-key">Exam paper</span><span className="eup-ei-val" style={{ color: 'var(--eup-accent)' }}>{UNIT.code}</span></div>
-            <div className="eup-ei-row"><span className="eup-ei-key">Duration</span><span className="eup-ei-val">1 hour 30 minutes</span></div>
+            <div className="eup-ei-row"><span className="eup-ei-key">Duration</span><span className="eup-ei-val">2 hours</span></div>
             <div className="eup-ei-row"><span className="eup-ei-key">Total marks</span><span className="eup-ei-val">80 marks</span></div>
-            <div className="eup-ei-row"><span className="eup-ei-key">% of A-Level</span><span className="eup-ei-val">20%</span></div>
+            <div className="eup-ei-row"><span className="eup-ei-key">% of IAL</span><span className="eup-ei-val">25%</span></div>
             <div className="eup-ei-row"><span className="eup-ei-key">Question types</span><span className="eup-ei-val eup-marks-pills-inline"><span className="eup-mp eup-mp-4">4</span><span className="eup-mp eup-mp-8">8</span><span className="eup-mp eup-mp-20">20</span></span></div>
-            <div className="eup-ei-row"><span className="eup-ei-key">Data response</span><span className="eup-ei-val">Yes &mdash; Section A</span></div>
-            <div className="eup-ei-row eup-ei-row-last"><span className="eup-ei-key">Essay questions</span><span className="eup-ei-val">Section B &mdash; choose 1 of 2</span></div>
+            <div className="eup-ei-row"><span className="eup-ei-key">Data response</span><span className="eup-ei-val">Yes &mdash; Section B</span></div>
+            <div className="eup-ei-row eup-ei-row-last"><span className="eup-ei-key">Essay questions</span><span className="eup-ei-val">Section C &mdash; choose 2 of 3</span></div>
           </div>
         </div>
       </div></div>
@@ -152,19 +152,19 @@ export default function Unit4Page() {
           <Link className="eup-continue-card" href="/economics/unit-1"><div className="eup-cc-icon"><ChartHistogram size={18} /></div><div className="eup-cc-body"><div className="eup-cc-name">Unit 1: Markets in Action</div><div className="eup-cc-sub">WEC11 · Demand, supply, market failure, government intervention</div></div><div className="eup-cc-arrow">→</div></Link>
           <Link className="eup-continue-card" href="/economics/unit-3"><div className="eup-cc-icon"><DrawerAlt size={18} /></div><div className="eup-cc-body"><div className="eup-cc-name">Unit 3: Business Behaviour</div><div className="eup-cc-sub">WEC13 · Theory of the firm, market structures, labour markets</div></div><div className="eup-cc-arrow">→</div></Link>
           <Link className="eup-continue-card" href="/written-practice"><div className="eup-cc-icon"><PenIcon size={18} />️</div><div className="eup-cc-body"><div className="eup-cc-name">Written Practice</div><div className="eup-cc-sub">AI-marked exam answers with instant feedback</div></div><div className="eup-cc-arrow">→</div></Link>
-          <Link className="eup-continue-card" href="/past-papers"><div className="eup-cc-icon"><Document size={18} /></div><div className="eup-cc-body"><div className="eup-cc-name">{UNIT.code} Past Papers</div><div className="eup-cc-sub">Practise with real exam questions and mark schemes</div></div><div className="eup-cc-arrow">→</div></Link>
+          <Link className="eup-continue-card" href="/past-papers"><div className="eup-cc-icon"><Document size={18} /></div><div className="eup-cc-body"><div className="eup-cc-name">Past Papers</div><div className="eup-cc-sub">Real exam papers and mark schemes · Unit 1 available now</div></div><div className="eup-cc-arrow">→</div></Link>
         </div>
       </div>
 
       <div className="elp-features-strip"><div className="elp-features-inner">
         <div className="elp-feat-item"><span className="elp-feat-icon"><Clipboard size={18} /></span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every {UNIT.code} point covered</div></div></div>
-        <div className="elp-feat-item"><span className="elp-feat-icon"><CardsIcon size={18} /></span><div><div className="elp-feat-label">Spaced repetition</div><div className="elp-feat-sub">Adaptive flashcard algorithm</div></div></div>
+        <div className="elp-feat-item"><span className="elp-feat-icon"><CardsIcon size={18} /></span><div><div className="elp-feat-label">Spaced repetition</div><div className="elp-feat-sub">SM-2 flashcard scheduling</div></div></div>
         <div className="elp-feat-item"><span className="elp-feat-icon"><BoltIcon size={18} /></span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style, every topic</div></div></div>
         <div className="elp-feat-item"><span className="elp-feat-icon"><Tutor size={18} /></span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any Economics question</div></div></div>
-        <div className="elp-feat-item"><span className="elp-feat-icon"><ProgressChart size={18} /></span><div><div className="elp-feat-label">Progress tracking</div><div className="elp-feat-sub">Mastery across all spec points</div></div></div>
+        <div className="elp-feat-item"><span className="elp-feat-icon"><ProgressChart size={18} /></span><div><div className="elp-feat-label">Progress tracking</div><div className="elp-feat-sub">Mastery across the topics you study</div></div></div>
       </div></div>
 
-      <div className="elp-cta-section"><div className="elp-cta-bg" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(167,139,250,.07) 0%, transparent 65%)' }} /><div className="elp-cta-inner elp-fade-up"><h2 className="elp-cta-title">Ready to revise Unit 4?</h2><p className="elp-cta-sub">Free notes for every spec point. Adaptive flashcards, practice questions and AI tutor unlock with Pro — £1 for your first month.</p><div className="elp-cta-actions"><Link href={`/?section=${SECTIONS[0].id}`} className="elp-btn-primary" style={{ fontSize: 15, padding: '14px 30px' }}>Open Revvy Learn — it&apos;s free →</Link><Link href="/economics" className="elp-btn-secondary">← Back to all units</Link></div><p className="elp-cta-note">No signup required for notes · Cancel anytime · £1 first month, then £1.99 · charged in your local currency</p></div></div>
+      <div className="elp-cta-section"><div className="elp-cta-bg" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(167,139,250,.07) 0%, transparent 65%)' }} /><div className="elp-cta-inner elp-fade-up"><h2 className="elp-cta-title">Ready to revise Unit 4?</h2><p className="elp-cta-sub">Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro — £1 for your first month.</p><div className="elp-cta-actions"><Link href={`/?section=${SECTIONS[0].id}`} className="elp-btn-primary" style={{ fontSize: 15, padding: '14px 30px' }}>Open Revvy Learn — it&apos;s free →</Link><Link href="/economics" className="elp-btn-secondary">← Back to all units</Link></div><p className="elp-cta-note">No signup required for notes · Cancel anytime · £1 first month, then £1.99 · charged in your local currency</p></div></div>
 
       <footer className="elp-footer"><div className="elp-footer-inner"><div className="elp-footer-logo"><img src="/logo.svg" alt="" className="elp-footer-mark" width={18} height={18} />Revvy Learn</div><div className="elp-footer-sep" /><div className="elp-footer-links"><Link className="elp-footer-link" href="/economics">Economics</Link><Link className="elp-footer-link" href="/economics/unit-1">Unit 1</Link><Link className="elp-footer-link" href="/economics/unit-2">Unit 2</Link><Link className="elp-footer-link" href="/economics/unit-3">Unit 3</Link><Link className="elp-footer-link" href="/economics/unit-4">Unit 4</Link><Link className="elp-footer-link" href="/glossary">Glossary</Link><Link className="elp-footer-link" href="/past-papers">Past Papers</Link></div><div className="elp-footer-right">Edexcel IAL {UNIT.code} © Revvy Learn</div></div></footer>
     </div>

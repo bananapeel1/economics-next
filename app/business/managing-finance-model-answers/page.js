@@ -2,7 +2,7 @@ import SectionModelAnswersPage from '@/components/SectionModelAnswersPage';
 
 export const metadata = {
   title: 'Edexcel IAL Managing Finance Model Answers | Business | Revvy Learn',
-  description: 'Free annotated model answers for Edexcel IAL Business managing finance (2.3). Covers liquidity, cash flow management, and financial ratios with mark scheme breakdowns and examiner commentary.',
+  description: 'Annotated model answers for Edexcel IAL Business managing finance (2.3.3). Covers liquidity, cash flow management, and the cash flow vs. profit debate, with mark scheme breakdowns and examiner commentary.',
   alternates: { canonical: '/business/managing-finance-model-answers' },
   openGraph: {
     title: 'Edexcel IAL Managing Finance Model Answers | Revvy Learn',
@@ -19,7 +19,7 @@ export default function ManagingFinanceModelAnswersPage() {
       subject="business"
       backLink={{ href: '/business/unit-2', label: 'Unit 2: Managing Business Activities' }}
       title="Managing Finance Model Answers"
-      subtitle="Section 2.3 — Annotated model answers for <strong>liquidity</strong>, cash flow management, and financial ratios."
+      subtitle="Section 2.3.3 — Annotated model answers for <strong>liquidity</strong>, cash flow management, and the cash flow vs. profit debate."
     />
   );
 }
