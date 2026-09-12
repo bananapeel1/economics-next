@@ -255,7 +255,7 @@ function TopicStep({
                         {prog && prog.total > 0 && (
                           <span className="spe-chip-count">
                             {prog.total} question{prog.total === 1 ? '' : 's'}
-                            {prog.attempted > 0 ? ` \u00b7 ${prog.mastered} mastered` : ''}
+                            {typeof prog.due === 'number' ? ` \u00b7 ${prog.due} due` : ''}
                           </span>
                         )}
                         {prog && prog.total > 0 && (
@@ -302,10 +302,14 @@ function TopicStep({
             <span className="spe-action-count-num">{selectionCount}</span>
             {' '}topic{selectionCount !== 1 ? 's' : ''} selected
           </span>
+          {/* Not `onClick={onStart}`: React passes the click event as the first argument, and
+              handleStart's first parameter is `practiseEarly`. An event object is truthy, so every
+              ordinary Start was pulling in not-yet-due cards and quietly defeating the spaced
+              schedule. Caught by the packet verifier, not by the build. */}
           <button
             className="spe-start-btn"
             disabled={selectionCount === 0 || loading}
-            onClick={onStart}
+            onClick={() => onStart()}
           >
             {loading ? (
               <span className="spe-start-btn-loading">
@@ -658,6 +662,8 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
   const handleRestart = useCallback(() => {
     setPhase('setup');
     setSetupStep(1);
+    setAccessNote(null);
+    setEmptyReason(null);
     setQueue([]);
     setCurrentIndex(0);
     setSessionResults([]);

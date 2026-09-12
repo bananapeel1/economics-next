@@ -1272,10 +1272,10 @@
    "fix": "Require `e.key.length === 1` before the letter comparison (and ignore events with ctrlKey/metaKey/altKey).",
    "impact": "A student who presses Ctrl (e.g. Ctrl+Tab to switch tab) or an arrow key to scroll has an answer silently selected and the card moves to phase 1 ('Check answer' lit). If they then press Enter expecting to advance, the wrong answer is checked and recorded into SM-2.",
    "packet": 10,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-10",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "QuestionCard.jsx:32-33 isPrintable=e.key.length===1&&!ctrlKey&&!metaKey&&!altKey rules out ArrowDown/Control/Alt/Backspace/CapsLock (all length>1) and blocks single-char keys held with a modifier",
    "note": null
   },
   {
@@ -1289,10 +1289,10 @@
    "fix": "Either add a 3-button confidence row to QuestionCard after reveal and pass it to computeNextReview (the lib already supports it), or remove the InlineQuiz confidence prompt until it feeds scheduling. Do not ship a prompt whose data is discarded.",
    "impact": "Lucky guesses in Smart Practice are scheduled identically to confident knowledge, so a B-guesser (see the bias finding) accumulates 'mastered' (repetitions>=3) cards they cannot actually answer. In Learn Mode the student is interrupted by a 4-second confidence prompt whose answer changes nothing they will ever see, which reads as a pointless widget.",
    "packet": 10,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-10",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "QuestionCard.jsx:8,133-153 confidence state+3-button row; handleNext:74 and Enter path:50 both gate on confidence; PracticeEngine.jsx handleAnswer destructures confidence and calls computeNextReview(current,correct,confidence); spaced-repetition.js:37,55-60,67-70 uses it; handleSkip:616-624 records nothing",
    "note": null
   },
   {
@@ -1306,10 +1306,10 @@
    "fix": "Re-append wrong items to the end of the in-session queue (cap once per item), or change the copy to 'Scheduled for review in 10 minutes' and rename the summary stat to 'To review'.",
    "impact": "A student who gets 6 wrong is told six times the question will come back, finishes the 20-question session without seeing any of them again, and then sees 'RETRIED 6' on the summary. The product promises a Leitner-style loop it does not deliver in the moment the student expects it.",
    "packet": 10,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-10",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "PracticeEngine.jsx:462 requeuedRef reset in handleStart; :606-608 re-appends a wrong item to queue end guarded by has()/add() so exactly once per key; QuestionCard.jsx:127 copy now 'You will see this one again before the session ends'",
    "note": null
   },
   {
@@ -1323,10 +1323,10 @@
    "fix": "Distinguish states: if progress exists but nothing is due, show 'All N questions in these topics are scheduled for review; next due in Xh' with an 'Practise anyway (review early)' button that includes not-yet-due cards at low priority. Show per-chip counts: 'N questions, M due today'.",
    "impact": "This is the most direct code-level cause of the 'doesn't cover all topics' complaint: a diligent student is told outright there are no questions for the topic they just studied. They cannot tell the difference between 'you're up to date' and 'the app has no content here'.",
    "packet": 10,
-   "status": "claimed",
+   "status": "not-fixed",
    "closed_by": "packet-10",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "queueStats (spaced-repetition.js:192-209) and the nothing-due/no-content split are correct, but PracticeEngine.jsx:308 wires the normal Start button as onClick={onStart} directly to handleStart(practiseEarly=false); React passes the SyntheticEvent as that argument on every ordinary click, so includeNotDue is truthy on EVERY session start, not only via 'Practise anyway'. Not-due cards get silently pulled into normal sessions and the 'nothing due' empty screen can be bypassed entirely. Also handleRestart (658-668) never clears accessNote/emptyReason, so a stale note can persist on the setup screen.",
    "note": null
   },
   {
@@ -1425,10 +1425,10 @@
    "fix": "Round-robin across selected sections when drawing unseen items (interleave by section, then shuffle within rounds), and expose a session length picker (10/20/40).",
    "impact": "A student who deliberately picks 'the six topics I'm weakest on' gets a session that skips some of them entirely and has no way to request 'more' or 'fewer' questions.",
    "packet": 10,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-10",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "spaced-repetition.js:169-186 roundRobinBySection lane-shifts per section (25-vs-3 traced: alternates 3 rounds then drains the 25-lane, 28 in/28 out, no drop/dup); PracticeEngine.jsx sessionSize state feeds buildQueue's 4th arg and handleStart useCallback deps:[selectedSectionIds,isLoggedIn,sessionSize] include it",
    "note": null
   },
   {
@@ -1442,10 +1442,10 @@
    "fix": "Expand the first unit (or the unit the student was last in) by default; replace the badge with an explicit checkbox; show 'N questions - M due' on each chip for everyone (question counts need no auth; compute due count from localStorage for anonymous users); reword to 'Pick the topics you want to practise'.",
    "impact": "A first-time student lands on a page that looks empty (every unit '0 / N'), does not discover unit select-all, and has no information to decide between topics. Anonymous students see zero feedback loop on the topic screen across visits. The framing 'assessed on' raises stakes for a low-stakes practice tool.",
    "packet": 10,
-   "status": "claimed",
+   "status": "not-fixed",
    "closed_by": "packet-10",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "First-unit-expanded default (136-142) and the indeterminate checkbox replacing the hidden badge (214-223) are correct, but the fix's 'N questions - M due' chip requirement is unmet: chips only render total question count and, when attempted>0, an unrelated 'mastered' figure (254-259) — no due count exists anywhere, and no localStorage fallback was added for anonymous users (progress-summary route only populates attempted/mastered when a user is authenticated, so anon always sees 0). Title's 'chips show no ... due counts' defect still occurs.",
    "note": null
   },
   {
@@ -2007,7 +2007,7 @@
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "Found 2026-09-12 during packet 9 browser verification, not by the September audit. Reproduce: load a section page and read the console."
+   "note": "2026-09-12 investigation, two causes ruled out by test. (1) NOT the head placement: the two JSON-LD blocks in app/layout.js were moved into <body> and the error persisted. (2) NOT the theme attribute: the server hardcodes data-theme='dark' and the init script can flip it before hydration, but with localStorage theme set to 'dark' so server and client agree, the error still fires. What remains is the ~10 <script type=application/ld+json> blocks rendered inside PAGE components (app/model-answers, app/command-words, app/ial-revision/*, app/economics/*, data-driven pages). A section page renders 10 of them. The fix is repo-wide: move every JSON-LD out of the React component tree, or emit it via the route's Metadata rather than as a child. Do not re-try the layout-only fix; it is already done and did not work."
   },
   {
    "id": "F119",

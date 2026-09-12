@@ -41,17 +41,21 @@ export async function GET(request) {
   if (user) {
     const { data: progressRows } = await db
       .from('practice_question_progress')
-      .select('section_id, question_index, repetitions')
+      .select('section_id, question_index, repetitions, next_review')
       .eq('user_id', user.id)
       .in('section_id', sectionIds);
 
     for (const row of (progressRows || [])) {
       if (!progressBySec[row.section_id]) {
-        progressBySec[row.section_id] = { attempted: 0, mastered: 0 };
+        progressBySec[row.section_id] = { attempted: 0, mastered: 0, due: 0 };
       }
       progressBySec[row.section_id].attempted += 1;
       if (row.repetitions >= 3) {
         progressBySec[row.section_id].mastered += 1;
+      }
+      // F085: the chips promised "N questions, M due" and no due figure was ever computed.
+      if (row.next_review && new Date(row.next_review).getTime() <= Date.now()) {
+        progressBySec[row.section_id].due += 1;
       }
     }
   }
@@ -60,8 +64,11 @@ export async function GET(request) {
   const summary = {};
   for (const id of sectionIds) {
     const total = questionCounts[id] || 0;
-    const prog = progressBySec[id] || { attempted: 0, mastered: 0 };
-    summary[id] = { total, attempted: prog.attempted, mastered: prog.mastered };
+    const prog = progressBySec[id] || { attempted: 0, mastered: 0, due: 0 };
+    // An unseen question is due in the sense the student cares about: it is available to practise
+    // now. So "due" is what is scheduled and ripe, plus everything never attempted.
+    const dueNow = (prog.due || 0) + Math.max(0, total - prog.attempted);
+    summary[id] = { total, attempted: prog.attempted, mastered: prog.mastered, due: dueNow };
   }
 
   return NextResponse.json({ summary });
