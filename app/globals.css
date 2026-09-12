@@ -40,6 +40,8 @@
   --accent-blue: #1d4ed8;
   --accent-indigo: #4f46e5;
   --accent-purple: #6d28d9;
+  --accent-violet: #6d28d9;
+  --accent-pink: #9d174d;
   --accent-blue-light: #1d4ed8;
   --accent-green-bright: #036a4d;
   --accent-purple-text: #4c1d95;
@@ -178,6 +180,8 @@
   --accent-blue: #3b82f6;
   --accent-indigo: #818cf8;
   --accent-purple: #a78bfa;
+  --accent-violet: #8b5cf6;
+  --accent-pink: #ec4899;
   --accent-blue-light: #60a5fa;
   --accent-green-bright: #22c55e;
   --accent-purple-text: #d4bfff;
@@ -6187,6 +6191,9 @@ a.auth-dropdown-item:visited {
   padding: 12px 28px; border-radius: 10px; background: var(--accent-green); color: #000;
   font-size: 15px; font-weight: 700; border: none; cursor: pointer; font-family: inherit;
 }
+/* --accent-green is dark enough in light mode that black text no longer clears AA on it */
+[data-theme="light"] .spe-qcard-next,
+[data-theme="light"] .spe-summary-btn-primary { color: #fff; }
 .spe-summary-btn-primary:hover { filter: brightness(1.1); }
 .spe-summary-btn-secondary {
   padding: 12px 28px; border-radius: 10px; background: transparent;
@@ -6661,7 +6668,7 @@ a.auth-dropdown-item:visited {
 .wap-qcard-marks { font-size: 12px; font-weight: 700; color: var(--accent-green); background: rgba(16,185,129,.1); padding: 4px 10px; border-radius: 6px; }
 
 /* Command badge */
-.wap-command-badge { display: inline-block; padding: 5px 14px; border-radius: 8px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: color-mix(in srgb, var(--cmd-color, #6b7280) 12%, transparent); color: var(--cmd-color, #6b7280); border: 1px solid color-mix(in srgb, var(--cmd-color, #6b7280) 25%, transparent); margin-bottom: 14px; }
+.wap-command-badge { display: inline-block; padding: 5px 14px; border-radius: 8px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: color-mix(in srgb, var(--cmd-color, var(--text-muted)) 12%, transparent); color: var(--cmd-color, var(--text-muted)); border: 1px solid color-mix(in srgb, var(--cmd-color, var(--text-muted)) 25%, transparent); margin-bottom: 14px; }
 
 /* Question text */
 .wap-qcard-question { font-size: 17px; font-weight: 600; color: var(--text-primary); line-height: 1.55; margin-bottom: 20px; }
