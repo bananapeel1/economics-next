@@ -116,3 +116,37 @@ restart cleared it. Suspect the cache before suspecting the code when an error s
 - **The gate now reports unclaimed scope.** `ledger.mjs unverified <n>` used to check only claimed items, so
   a packet could pass by claiming less than its scope. Do not record a packet done while its scope is open.
 
+
+---
+
+## Handed over from another session, 12 Sep 2026 — specification coverage audit
+
+**Not a packet. Nothing actioned. Read before costing the Content stage.**
+
+`audit/SPEC-COVERAGE.md` (narrative) and `audit/raw/spec-coverage.json` (per-topic data) were produced in
+the worksheets/AO-profile session by checking all 43 live sections requirement-by-requirement against the
+verbatim spec in `audit/raw/econ_spec.txt` / `bus_spec.txt` — the same source packet 9 built
+`lib/ial-marking.js` from.
+
+Three things that bear on this plan:
+
+1. **Scope reconciliation needed.** PLAN.md budgets "all 340 spec gaps". This audit counts 175 MISSING
+   plus 237 THIN = 412 across 1,073 requirements (62% properly taught). The definitions may differ, but
+   the gap is roughly 20 sessions of work and should be reconciled before the Content stage is costed.
+
+2. **The diagnosis, which reframes the Content stage.** The notes read as adapted from UK GCE A-level
+   rather than built from the IAL spec. Business 3.3.5 teaches VRIO, Porter's Five Forces, the balanced
+   scorecard and the triple bottom line — none in IAL 3.3.5 — while the spec's own content (financial
+   statements, acid test, labour turnover/retention/absenteeism, four HR strategies) is absent. AS is 73%
+   taught, A2 49%; Business Unit 4 is 40%. Treat any A2 topic as inherited-until-checked. This is the
+   inverse of packet 13's off-spec strip and belongs in the same pass.
+
+3. **Per-section work lists already exist.** Each Content packet's "spec gaps" step can start from that
+   section's `missingItems` / `thinItems` in the JSON instead of re-deriving them. Every MISSING was
+   attacked by a second agent trying to overturn it; 23 of 197 were overturned and downgraded, so expect
+   a residual error rate and spot-check before writing to a gap.
+
+Cheapest live item: seven topics quiz students on content the notes never teach (HR half of Business
+3.3.5, contingency planning in 3.3.6, PESTLE/Porter's five forces in 3.3.1, stakeholder distinction in
+3.3.4, profit satisficing and cost efficiency in 1.3.5, specific vs ad valorem in Economics 1.3.3, FDI in
+Economics 2.3.5). Wording already exists in the flashcards/quizzes; it just isn't taught.

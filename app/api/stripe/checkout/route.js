@@ -3,6 +3,7 @@ import { createClient } from '@/lib/supabase/server';
 import { createServerClient } from '@/lib/supabase-server';
 import { isLifetime } from '@/lib/entitlements';
 import { resolveCurrency, getPriceId, getIntroCoupon } from '@/lib/pricing';
+import { isTrialEligible } from '@/lib/trial-eligibility';
 import { NextResponse } from 'next/server';
 
 async function ensureStripeCustomer(stripe, serviceSupabase, user) {
@@ -231,7 +232,9 @@ export async function POST(request) {
 
       // First month for 1.00, then full price. Only for genuinely new
       // customers — a prior subscription disqualifies the intro offer.
-      const hadPreviousSubscription = !!currentSub?.stripe_subscription_id;
+      // Same rule the interface shows, from one module, so the page cannot advertise a price
+      // checkout will not honour (F031).
+      const hadPreviousSubscription = !isTrialEligible(currentSub);
       const introCoupon = getIntroCoupon(currency);
 
       if (!hadPreviousSubscription && introCoupon) {

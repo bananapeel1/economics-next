@@ -1,5 +1,6 @@
 "use client";
 import { createContext, useContext, useEffect, useState, useCallback } from 'react';
+import { isTrialEligible } from '@/lib/trial-eligibility';
 import { hasPremiumAccess } from '@/lib/entitlements';
 import { createClient } from '@/lib/supabase/client';
 
@@ -8,6 +9,7 @@ const AuthContext = createContext({
   loading: true,
   supabase: null,
   subscription: null,
+  trialEligible: true,
   isPremium: false,
   activating: false,
   activationFailed: false,
@@ -101,6 +103,9 @@ export function AuthProvider({ children, initialUser, initialSubscription = null
   }, [user]);
 
   const isPremium = hasPremiumAccess(subscription);
+  // F031: whether the "£1 first month" offer applies to this account. Seeded server-side with the
+  // subscription itself, so the price shown on first paint is the price checkout will charge.
+  const trialEligible = subscription ? isTrialEligible(subscription) : true;
 
   return (
     <AuthContext.Provider
@@ -109,6 +114,7 @@ export function AuthProvider({ children, initialUser, initialSubscription = null
         loading,
         supabase,
         subscription,
+        trialEligible,
         isPremium,
         activating,
         activationFailed,

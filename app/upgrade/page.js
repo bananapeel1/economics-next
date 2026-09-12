@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import UpgradeButton from '@/components/UpgradeButton';
+import MonthlyPlanCard from '@/components/MonthlyPlanCard';
 import { FREE_FEATURES, PRO_FEATURES, LIFETIME_FEATURES } from '@/lib/feature-matrix';
 
 export const metadata = {
@@ -60,7 +61,7 @@ export default function UpgradePage() {
         <div className="upgrade-header">
           <Link href="/" className="upgrade-back-link">&larr; Back to App</Link>
           <div className="upgrade-badge">REVVY LEARN PRO</div>
-          <h1 className="upgrade-title">New subscribers get their first month for £1.</h1>
+          <h1 className="upgrade-title">Pro unlocks the tools that turn reading into marks.</h1>
           <p className="upgrade-subtitle">
             The teaching stays free. Pro unlocks the tools that turn reading into marks.
           </p>
@@ -82,18 +83,10 @@ export default function UpgradePage() {
 
         <div className="upgrade-plans">
 
-          <div className="upgrade-plan featured">
-            <div className="upgrade-plan-flag">Most popular</div>
-            <div className="upgrade-plan-head">
-              <div className="upgrade-plan-for">If you&rsquo;re revising for one series</div>
-              <div className="upgrade-plan-price">
-                £1<span className="upgrade-plan-unit">first month</span>
-              </div>
-              <div className="upgrade-plan-sub">new subscribers &middot; then £1.99/month &middot; cancel anytime</div>
-            </div>
-            <UpgradeButton plan="monthly" label="Start Pro →" className="primary" />
-            <FeatureList items={PRO_FEATURES} />
-          </div>
+          {/* F031: the price depends on whether this account can still get the intro offer, and
+              only the client knows that. Checkout has always withheld the coupon from returning
+              subscribers; the page had not caught up. */}
+          <MonthlyPlanCard features={PRO_FEATURES} />
 
           <div className="upgrade-plan">
             <div className="upgrade-plan-flag alt">Save 50%</div>
