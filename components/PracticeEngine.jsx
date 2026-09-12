@@ -1,5 +1,10 @@
 'use client';
 
+import { useState, useCallback, useMemo, useRef } from 'react';
+import { buildQueue, queueStats, computeNextReview, createDefaultProgress } from '@/lib/spaced-repetition';
+import QuestionCard from '@/components/practice/QuestionCard';
+import SessionSummary from '@/components/practice/SessionSummary';
+
 /** "Next due in 6 hours" / "Next due tomorrow", from a timestamp. Empty string if nothing is scheduled. */
 function formatNextDue(nextReview) {
   if (!nextReview) return '';
@@ -11,11 +16,6 @@ function formatNextDue(nextReview) {
   const days = Math.round(hours / 24);
   return `The next one is due in ${days} day${days === 1 ? '' : 's'}.`;
 }
-
-import { useState, useCallback, useMemo, useRef } from 'react';
-import { buildQueue, queueStats, computeNextReview, createDefaultProgress } from '@/lib/spaced-repetition';
-import QuestionCard from '@/components/practice/QuestionCard';
-import SessionSummary from '@/components/practice/SessionSummary';
 
 /* ─── localStorage helpers (for non-auth users) ─── */
 

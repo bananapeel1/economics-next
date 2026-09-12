@@ -71,6 +71,31 @@ who calls the endpoint, and Smart Practice is built on it. Two readings of "keep
 Either way, stop serving `correctIndex` to unauthenticated callers. Marking can happen server-side; the answer
 key does not need to be in the payload at all, and that part needs no product decision.
 
+
+## Packet 10 Verify B, 12 September
+
+Run at 390px, signed out, after a dev-server restart and cache clear.
+
+| Check | Result |
+|---|---|
+| Topic picker opens with the first unit expanded | PASS, one unit open |
+| Unit select-all is an explicit labelled control, not the unit number | PASS, and its indeterminate state is correct: unchecked, then indeterminate after one chip, then checked after select-all |
+| Every chip shows how many questions it holds | PASS, "25 questions" |
+| Session length control offers 10 / 20 / 40 | PASS |
+| Instruction reworded | PASS, "Pick the topics you want to practise" |
+| Gated start explains itself with a sign-in link | PASS |
+
+**Four of the acceptance checks could not be run, and that is a consequence of our own work.** The
+keyboard handler, the confidence control, the wrong-answer requeue and the nothing-due screen all
+live inside a session, and F086 closed Smart Practice to signed-out visitors. Verifying paid or
+signed-in surfaces in a browser now needs an account. If you want that coverage, create a free test
+account and a premium one and say so here; do not put credentials in chat, and no session should ask
+for them. Until then those four are covered by code verification only.
+
+**A trap that cost time twice.** Turbopack served a stale `ReferenceError: useRef is not defined`
+through several reloads after the import was already correct. `rm -rf .next/cache` and a dev-server
+restart cleared it. Suspect the cache before suspecting the code when an error survives a fix.
+
 ## Founder to-dos
 
 1. Merge PR #14.
