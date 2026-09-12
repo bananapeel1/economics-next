@@ -15,6 +15,7 @@ export default function ManagingPeopleModelAnswersPage() {
   return (
     <SectionModelAnswersPage
       sectionNumber="1.4"
+        sectionId="managing-people"
       subject="business"
       backLink={{ href: '/business/unit-1', label: 'Unit 1: Marketing & People' }}
       title="Managing People Model Answers"

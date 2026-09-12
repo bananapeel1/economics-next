@@ -1,6 +1,7 @@
 import { createAnonClient } from '@/lib/supabase-anon';
 import PastPapersPage from '@/components/PastPapersPage';
 import Link from 'next/link';
+import { ChartHistogram, DrawerAlt, Glossary, PenIcon } from '@/components/Icons';
 import SiteHeader from '@/components/SiteHeader';
 import LandingScrollBar from '@/components/LandingScrollBar';
 import '@/styles/landing.css';
@@ -64,16 +65,16 @@ export default async function PastPapersRoute() {
         <h2 className="elp-s-title" style={{ fontSize: '22px', marginBottom: '8px' }}>Related resources</h2>
         <div className="elp-resources-row">
           <Link href="/model-answers" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128221;</span> Model Answers
+            <span className="elp-resource-chip-icon"><PenIcon size={18} /></span> Model Answers
           </Link>
           <Link href="/command-words" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128292;</span> Command Words
+            <span className="elp-resource-chip-icon"><Glossary size={18} /></span> Command Words
           </Link>
           <Link href="/economics" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128200;</span> Economics Notes
+            <span className="elp-resource-chip-icon"><ChartHistogram size={18} /></span> Economics Notes
           </Link>
           <Link href="/business" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#127970;</span> Business Notes
+            <span className="elp-resource-chip-icon"><DrawerAlt size={18} /></span> Business Notes
           </Link>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { BoltIcon, CardsIcon, ChartHistogram, Clipboard, Document, DrawerAlt, LearnMode, PenIcon, ProgressChart, Star, Tutor } from '@/components/Icons';
 import SiteHeader from '@/components/SiteHeader';
 import UnitScrollBar from '../UnitScrollBar';
 import '@/styles/landing.css';
@@ -79,18 +80,18 @@ export default function Unit2Page() {
           <div className="elp-fade-up">
             <div className="elp-hero-eyebrow" style={{ background: 'var(--eup-accent-bg)', borderColor: 'var(--eup-accent-bd)', color: 'var(--eup-accent)' }}>Edexcel IAL Economics &middot; {UNIT.code}</div>
             <div className="eup-unit-badge-row"><span className="eup-unit-num">Unit {UNIT.number}</span><span className="eup-unit-code">{UNIT.code}</span></div>
-            <h1 className="elp-hero-title">{UNIT.title} &mdash;<br /><em style={{ color: 'var(--eup-accent)' }}>the big picture of the economy</em></h1>
+            <h1 className="elp-hero-title">{UNIT.title} &mdash;<br /><em style={{ color: 'var(--eup-accent)' }}>{UNIT.code} notes</em></h1>
             <p className="elp-hero-desc">Complete revision notes for Unit 2. Aggregate demand and supply, inflation, unemployment, economic growth and the policy toolkit &mdash; everything you need for {UNIT.code}.</p>
-            <div className="elp-hero-actions"><Link href={`/?section=${SECTIONS[0].id}`} className="elp-btn-primary">Start revising free &rarr;</Link><a href="#topics" className="elp-btn-secondary">Browse all topics</a></div>
+            <div className="elp-hero-actions"><Link href={`/?section=${SECTIONS[0].id}`} className="elp-btn-primary">Start revising free &rarr;</Link></div>
             <div className="elp-hero-proof"><div className="elp-proof-item"><strong>6 topics</strong> fully covered</div><div className="elp-proof-dot" /><div className="elp-proof-item"><strong>Free</strong> notes for every spec point</div><div className="elp-proof-dot" /><div className="elp-proof-item">{UNIT.code} exam ready</div></div>
           </div>
           <div className="elp-hero-preview elp-fade-up" style={{ transitionDelay: '.15s' }}>
-            <div className="elp-hero-badge elp-b1"><span className="elp-badge-icon">🎯</span><div className="elp-badge-text"><span className="elp-badge-val">6 topics</span><span className="elp-badge-lbl">fully spec-aligned</span></div></div>
+            <div className="elp-hero-badge elp-b1"><span className="elp-badge-icon"><Star size={18} /></span><div className="elp-badge-text"><span className="elp-badge-val">6 topics</span><span className="elp-badge-lbl">fully spec-aligned</span></div></div>
             <div className="elp-preview-card">
               <div className="elp-preview-topbar"><div className="elp-preview-tab elp-active" style={{ background: 'var(--eup-accent-bg)', borderColor: 'var(--eup-accent-bd)', color: 'var(--eup-accent)' }}>Notes</div><div className="elp-preview-tab">Flashcards</div><div className="elp-preview-tab">Quiz</div></div>
               <div className="elp-preview-body">
                 <div className="elp-preview-section-title">2.3.2 &mdash; Aggregate Demand</div>
-                <div className="elp-preview-key-idea" style={{ borderLeftColor: 'var(--eup-accent)' }}><div className="elp-pki-label" style={{ color: 'var(--eup-accent)' }}>🔑 Key idea</div><div className="elp-pki-text" style={{ color: '#bfdbfe' }}>AD = C + I + G + (X&ndash;M). Understanding what shifts each component is the key to macro analysis and policy evaluation.</div></div>
+                <div className="elp-preview-key-idea" style={{ borderLeftColor: 'var(--eup-accent)' }}><div className="elp-pki-label" style={{ color: 'var(--eup-accent)' }}><LearnMode size={18} /> Key idea</div><div className="elp-pki-text" style={{ color: '#bfdbfe' }}>AD = C + I + G + (X&ndash;M). Understanding what shifts each component is the key to macro analysis and policy evaluation.</div></div>
                 <div className="elp-preview-bullets">
                   <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-blue)' }} /><div className="elp-pb-text"><strong>Consumption</strong> &mdash; largest component; driven by income, confidence, interest rates.</div></div>
                   <div className="elp-pb"><div className="elp-pb-line" style={{ background: 'var(--ns-amber)' }} /><div className="elp-pb-text"><strong>The multiplier</strong> &mdash; an initial injection creates a larger final change in GDP.</div></div>
@@ -102,16 +103,8 @@ export default function Unit2Page() {
         </div>
       </section>
 
-      <div className="elp-features-strip"><div className="elp-features-inner">
-        <div className="elp-feat-item"><span className="elp-feat-icon">📋</span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every {UNIT.code} point covered</div></div></div>
-        <div className="elp-feat-item"><span className="elp-feat-icon">🔄</span><div><div className="elp-feat-label">Spaced repetition</div><div className="elp-feat-sub">Adaptive flashcard algorithm</div></div></div>
-        <div className="elp-feat-item"><span className="elp-feat-icon">⚡</span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style, every topic</div></div></div>
-        <div className="elp-feat-item"><span className="elp-feat-icon">🤖</span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any Economics question</div></div></div>
-        <div className="elp-feat-item"><span className="elp-feat-icon">📊</span><div><div className="elp-feat-label">Progress tracking</div><div className="elp-feat-sub">Mastery across all spec points</div></div></div>
-      </div></div>
-
       <div className="elp-section" id="topics">
-        <div className="elp-fade-up" style={{ marginBottom: 40 }}><div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />All six topics</div><h2 className="elp-s-title">Everything in Unit 2, spec point by spec point</h2><p className="elp-s-sub">Click any topic to open the full notes, diagrams, flashcards and practice questions in the app.</p></div>
+        <div className="elp-uh-tight elp-fade-up" style={{ marginBottom: 40 }}><div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />All six topics</div><h2 className="elp-s-title">Everything in Unit 2, spec point by spec point</h2><p className="elp-s-sub">Open any topic straight in the app.</p></div>
         {SECTIONS.map((section, idx) => (
           <div key={section.id}>
             <div className="eup-topic-block elp-fade-up" id={`t-${section.ref.replace(/\./g, '')}`}>
@@ -129,10 +122,10 @@ export default function Unit2Page() {
           <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />Unit overview</div>
           <h2 className="elp-s-title">What you need to know for {UNIT.code}</h2>
           <div className="eup-key-concepts">
-            <div className="eup-concept"><div className="eup-concept-icon">📊</div><div><div className="eup-concept-title">AD/AS is your bread and butter</div><div className="eup-concept-desc">Almost every Unit 2 question can be answered with an AD/AS diagram. Master the shifts and you master the unit.</div></div></div>
-            <div className="eup-concept"><div className="eup-concept-icon">🔄</div><div><div className="eup-concept-title">The multiplier effect</div><div className="eup-concept-desc">Any injection into the circular flow creates a larger final change in national income. k = 1/(1&ndash;MPC) is a must-know formula.</div></div></div>
-            <div className="eup-concept"><div className="eup-concept-icon">⚖️</div><div><div className="eup-concept-title">Policy trade-offs are everything</div><div className="eup-concept-desc">Examiners reward you for recognising that pursuing one objective (e.g. low unemployment) may conflict with another (e.g. low inflation).</div></div></div>
-            <div className="eup-concept"><div className="eup-concept-icon">🕐</div><div><div className="eup-concept-title">Short run vs long run</div><div className="eup-concept-desc">Distinguish demand-side effects (short-run, shifts AD) from supply-side effects (long-run, shifts LRAS) in every answer.</div></div></div>
+            <div className="eup-concept"><div className="eup-concept-icon"><ProgressChart size={18} /></div><div><div className="eup-concept-title">AD/AS is your bread and butter</div><div className="eup-concept-desc">Almost every Unit 2 question can be answered with an AD/AS diagram. Master the shifts and you master the unit.</div></div></div>
+            <div className="eup-concept"><div className="eup-concept-icon"><CardsIcon size={18} /></div><div><div className="eup-concept-title">The multiplier effect</div><div className="eup-concept-desc">Any injection into the circular flow creates a larger final change in national income. k = 1/(1&ndash;MPC) is a must-know formula.</div></div></div>
+            <div className="eup-concept"><div className="eup-concept-icon"><ChartHistogram size={18} />️</div><div><div className="eup-concept-title">Policy trade-offs are everything</div><div className="eup-concept-desc">Examiners reward you for recognising that pursuing one objective (e.g. low unemployment) may conflict with another (e.g. low inflation).</div></div></div>
+            <div className="eup-concept"><div className="eup-concept-icon"><LearnMode size={18} /></div><div><div className="eup-concept-title">Short run vs long run</div><div className="eup-concept-desc">Distinguish demand-side effects (short-run, shifts AD) from supply-side effects (long-run, shifts LRAS) in every answer.</div></div></div>
           </div>
         </div>
         <div className="elp-fade-up" style={{ transitionDelay: '.1s' }}>
@@ -155,12 +148,20 @@ export default function Unit2Page() {
         <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--elp-green)' }} />Keep going</div>
         <h2 className="elp-s-title" style={{ fontSize: 22, marginBottom: 8 }}>Continue revising</h2>
         <div className="eup-continue-grid">
-          <Link className="eup-continue-card" href="/economics/unit-1"><div className="eup-cc-icon">📐</div><div className="eup-cc-body"><div className="eup-cc-name">Unit 1: Markets in Action</div><div className="eup-cc-sub">WEC11 · Demand, supply, market failure, government intervention</div></div><div className="eup-cc-arrow">→</div></Link>
-          <Link className="eup-continue-card" href="/economics/unit-3"><div className="eup-cc-icon">🏭</div><div className="eup-cc-body"><div className="eup-cc-name">Unit 3: Business Behaviour</div><div className="eup-cc-sub">WEC13 · Theory of the firm, market structures, labour markets</div></div><div className="eup-cc-arrow">→</div></Link>
-          <Link className="eup-continue-card" href="/written-practice"><div className="eup-cc-icon">✍️</div><div className="eup-cc-body"><div className="eup-cc-name">Written Practice</div><div className="eup-cc-sub">AI-marked exam answers with instant feedback</div></div><div className="eup-cc-arrow">→</div></Link>
-          <Link className="eup-continue-card" href="/past-papers"><div className="eup-cc-icon">📄</div><div className="eup-cc-body"><div className="eup-cc-name">{UNIT.code} Past Papers</div><div className="eup-cc-sub">Practise with real exam questions and mark schemes</div></div><div className="eup-cc-arrow">→</div></Link>
+          <Link className="eup-continue-card" href="/economics/unit-1"><div className="eup-cc-icon"><ChartHistogram size={18} /></div><div className="eup-cc-body"><div className="eup-cc-name">Unit 1: Markets in Action</div><div className="eup-cc-sub">WEC11 · Demand, supply, market failure, government intervention</div></div><div className="eup-cc-arrow">→</div></Link>
+          <Link className="eup-continue-card" href="/economics/unit-3"><div className="eup-cc-icon"><DrawerAlt size={18} /></div><div className="eup-cc-body"><div className="eup-cc-name">Unit 3: Business Behaviour</div><div className="eup-cc-sub">WEC13 · Theory of the firm, market structures, labour markets</div></div><div className="eup-cc-arrow">→</div></Link>
+          <Link className="eup-continue-card" href="/written-practice"><div className="eup-cc-icon"><PenIcon size={18} />️</div><div className="eup-cc-body"><div className="eup-cc-name">Written Practice</div><div className="eup-cc-sub">AI-marked exam answers with instant feedback</div></div><div className="eup-cc-arrow">→</div></Link>
+          <Link className="eup-continue-card" href="/past-papers"><div className="eup-cc-icon"><Document size={18} /></div><div className="eup-cc-body"><div className="eup-cc-name">{UNIT.code} Past Papers</div><div className="eup-cc-sub">Practise with real exam questions and mark schemes</div></div><div className="eup-cc-arrow">→</div></Link>
         </div>
       </div>
+
+      <div className="elp-features-strip"><div className="elp-features-inner">
+        <div className="elp-feat-item"><span className="elp-feat-icon"><Clipboard size={18} /></span><div><div className="elp-feat-label">Spec-aligned notes</div><div className="elp-feat-sub">Every {UNIT.code} point covered</div></div></div>
+        <div className="elp-feat-item"><span className="elp-feat-icon"><CardsIcon size={18} /></span><div><div className="elp-feat-label">Spaced repetition</div><div className="elp-feat-sub">Adaptive flashcard algorithm</div></div></div>
+        <div className="elp-feat-item"><span className="elp-feat-icon"><BoltIcon size={18} /></span><div><div className="elp-feat-label">Practice questions</div><div className="elp-feat-sub">Exam-style, every topic</div></div></div>
+        <div className="elp-feat-item"><span className="elp-feat-icon"><Tutor size={18} /></span><div><div className="elp-feat-label">AI Tutor</div><div className="elp-feat-sub">Ask any Economics question</div></div></div>
+        <div className="elp-feat-item"><span className="elp-feat-icon"><ProgressChart size={18} /></span><div><div className="elp-feat-label">Progress tracking</div><div className="elp-feat-sub">Mastery across all spec points</div></div></div>
+      </div></div>
 
       <div className="elp-cta-section"><div className="elp-cta-bg" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(79,126,248,.07) 0%, transparent 65%)' }} /><div className="elp-cta-inner elp-fade-up"><h2 className="elp-cta-title">Ready to revise Unit 2?</h2><p className="elp-cta-sub">Free notes for every spec point. Adaptive flashcards, practice questions and AI tutor unlock with Pro — £1 for your first month.</p><div className="elp-cta-actions"><Link href={`/?section=${SECTIONS[0].id}`} className="elp-btn-primary" style={{ fontSize: 15, padding: '14px 30px' }}>Open Revvy Learn — it&apos;s free →</Link><Link href="/economics" className="elp-btn-secondary">← Back to all units</Link></div><p className="elp-cta-note">No signup required for notes · Cancel anytime · £1 first month, then £1.99</p></div></div>
 

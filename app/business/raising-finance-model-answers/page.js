@@ -15,6 +15,7 @@ export default function RaisingFinanceModelAnswersPage() {
   return (
     <SectionModelAnswersPage
       sectionNumber="2.1"
+        sectionId="planning-raising-finance"
       subject="business"
       backLink={{ href: '/business/unit-2', label: 'Unit 2: Managing Business Activities' }}
       title="Raising Finance Model Answers"

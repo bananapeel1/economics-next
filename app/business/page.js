@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { BoltIcon, BookAlt, CardsIcon, ChartHistogram, Clipboard, Document, Glossary, LearnMode, NetworkGraph, ProgressChart, Star, Tutor } from '@/components/Icons';
 import SiteHeader from '@/components/SiteHeader';
 import BusinessScrollBar from './BusinessScrollBar';
 import '@/styles/landing.css';
@@ -160,16 +161,15 @@ export default function BusinessPage() {
           <div className="elp-fade-up">
             <div className="elp-hero-eyebrow">Edexcel IAL &middot; WBS11, WBS12, WBS13, WBS14</div>
             <h1 className="elp-hero-title">
-              Business revision<br />that <em>actually sticks</em>
+              Edexcel IAL<br /><em>Business Notes</em>
             </h1>
             <p className="elp-hero-desc">
-              Free revision notes for all four Edexcel IAL Business units &mdash; structured around the spec, with adaptive practice, AI tutor, and spaced repetition built in.
+              Written for the International A-Level &mdash; not the UK domestic spec &mdash; so every topic matches the paper you actually sit.
             </p>
             <div className="elp-hero-actions">
               <Link href="/?section=meeting-customer-needs" className="elp-btn-primary">
                 Start revising free &rarr;
               </Link>
-              <Link href="#units" className="elp-btn-secondary">Browse all topics</Link>
             </div>
             <div className="elp-hero-proof">
               <div className="elp-proof-item"><strong>Free</strong> notes for every spec point</div>
@@ -183,7 +183,7 @@ export default function BusinessPage() {
           {/* Preview card */}
           <div className="elp-hero-preview elp-fade-up" style={{ transitionDelay: '.15s' }}>
             <div className="elp-hero-badge elp-b1">
-              <span className="elp-badge-icon">&#127919;</span>
+              <span className="elp-badge-icon"><Star size={18} /></span>
               <div className="elp-badge-text">
                 <span className="elp-badge-val">Adaptive</span>
                 <span className="elp-badge-lbl">spaced repetition</span>
@@ -198,7 +198,7 @@ export default function BusinessPage() {
               <div className="elp-preview-body">
                 <div className="elp-preview-section-title">1.3.1 &mdash; Meeting Customer Needs</div>
                 <div className="elp-preview-key-idea">
-                  <div className="elp-pki-label">&#128273; Key idea</div>
+                  <div className="elp-pki-label"><LearnMode size={18} /> Key idea</div>
                   <div className="elp-pki-text">
                     Understanding customer needs is the foundation of successful business activity &mdash; firms must identify, anticipate and satisfy customer requirements to survive in competitive markets.
                   </div>
@@ -232,57 +232,16 @@ export default function BusinessPage() {
         </div>
       </section>
 
-      {/* Features strip */}
-      <div className="elp-features-strip">
-        <div className="elp-features-inner">
-          <div className="elp-feat-item">
-            <span className="elp-feat-icon">&#128203;</span>
-            <div>
-              <div className="elp-feat-label">Spec-aligned notes</div>
-              <div className="elp-feat-sub">Every WBS11&ndash;14 point covered</div>
-            </div>
-          </div>
-          <div className="elp-feat-item">
-            <span className="elp-feat-icon">&#128260;</span>
-            <div>
-              <div className="elp-feat-label">Spaced repetition</div>
-              <div className="elp-feat-sub">Adaptive flashcard algorithm</div>
-            </div>
-          </div>
-          <div className="elp-feat-item">
-            <span className="elp-feat-icon">&#9889;</span>
-            <div>
-              <div className="elp-feat-label">Practice questions</div>
-              <div className="elp-feat-sub">Exam-style for every topic</div>
-            </div>
-          </div>
-          <div className="elp-feat-item">
-            <span className="elp-feat-icon">&#129302;</span>
-            <div>
-              <div className="elp-feat-label">AI Tutor</div>
-              <div className="elp-feat-sub">Ask any Business question</div>
-            </div>
-          </div>
-          <div className="elp-feat-item">
-            <span className="elp-feat-icon">&#128202;</span>
-            <div>
-              <div className="elp-feat-label">Progress tracking</div>
-              <div className="elp-feat-sub">See mastery across all topics</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Units section */}
       <div className="elp-section" id="units">
-        <div className="elp-units-header elp-fade-up">
+        <div className="elp-units-header elp-uh-tight elp-fade-up">
           <div className="elp-s-eyebrow">
             <div className="elp-s-eyebrow-dot" style={{ background: 'var(--elp-green)' }} />
             Full specification
           </div>
           <h2 className="elp-s-title">All four units, every spec point</h2>
           <p className="elp-s-sub">
-            Click any topic to open the full notes, diagrams, flashcards and practice questions in the app.
+            Open any topic straight in the app.
           </p>
         </div>
 
@@ -329,37 +288,37 @@ export default function BusinessPage() {
           </div>
           <div className="elp-wyg-grid">
             <div className="elp-wyg-card elp-fade-up">
-              <div className="elp-wyg-icon" style={{ background: 'var(--elp-g-bg)', border: '1px solid var(--elp-g-bd)' }}>&#128203;</div>
+              <div className="elp-wyg-icon" style={{ background: 'var(--elp-g-bg)', border: '1px solid var(--elp-g-bd)' }}><Clipboard size={18} /></div>
               <div className="elp-wyg-title">Structured Notes</div>
               <div className="elp-wyg-desc">Concise, spec-aligned notes for every topic &mdash; with key ideas, definitions, flow chains and exam tips. No textbook padding.</div>
               <span className="elp-wyg-tag elp-tag-free">Free</span>
             </div>
             <div className="elp-wyg-card elp-fade-up" style={{ transitionDelay: '.07s' }}>
-              <div className="elp-wyg-icon" style={{ background: 'var(--elp-b-bg)', border: '1px solid var(--elp-b-bd)' }}>&#128260;</div>
+              <div className="elp-wyg-icon" style={{ background: 'var(--elp-b-bg)', border: '1px solid var(--elp-b-bd)' }}><CardsIcon size={18} /></div>
               <div className="elp-wyg-title">Adaptive Flashcards</div>
               <div className="elp-wyg-desc">Spaced repetition that learns from you &mdash; topics you struggle with come back sooner, mastered ones space out automatically.</div>
               <span className="elp-wyg-tag elp-tag-pro">Premium</span>
             </div>
             <div className="elp-wyg-card elp-fade-up" style={{ transitionDelay: '.14s' }}>
-              <div className="elp-wyg-icon" style={{ background: 'var(--elp-t-bg)', border: '1px solid var(--elp-t-bd)' }}>&#9889;</div>
+              <div className="elp-wyg-icon" style={{ background: 'var(--elp-t-bg)', border: '1px solid var(--elp-t-bd)' }}><BoltIcon size={18} /></div>
               <div className="elp-wyg-title">Practice Questions</div>
               <div className="elp-wyg-desc">Exam-style questions with model answers for every unit &mdash; adaptive difficulty based on your performance.</div>
               <span className="elp-wyg-tag elp-tag-free">Free</span>
             </div>
             <div className="elp-wyg-card elp-fade-up" style={{ transitionDelay: '.21s' }}>
-              <div className="elp-wyg-icon" style={{ background: 'var(--elp-p-bg)', border: '1px solid rgba(167,139,250,.2)' }}>&#129302;</div>
+              <div className="elp-wyg-icon" style={{ background: 'var(--elp-p-bg)', border: '1px solid rgba(167,139,250,.2)' }}><Tutor size={18} /></div>
               <div className="elp-wyg-title">AI Tutor</div>
               <div className="elp-wyg-desc">Ask any Business question and get an instant, exam-relevant answer. Works best for evaluating arguments and checking your reasoning.</div>
               <span className="elp-wyg-tag elp-tag-pro">Premium</span>
             </div>
             <div className="elp-wyg-card elp-fade-up" style={{ transitionDelay: '.28s' }}>
-              <div className="elp-wyg-icon" style={{ background: 'rgba(245,158,11,.08)', border: '1px solid rgba(245,158,11,.2)' }}>&#128202;</div>
+              <div className="elp-wyg-icon" style={{ background: 'rgba(245,158,11,.08)', border: '1px solid rgba(245,158,11,.2)' }}><ProgressChart size={18} /></div>
               <div className="elp-wyg-title">Progress Tracking</div>
               <div className="elp-wyg-desc">See your mastery across all 20 spec points. Identify weaknesses before your exam and focus your revision where it matters most.</div>
               <span className="elp-wyg-tag elp-tag-pro">Premium</span>
             </div>
             <div className="elp-wyg-card elp-fade-up" style={{ transitionDelay: '.35s' }}>
-              <div className="elp-wyg-icon" style={{ background: 'var(--elp-g-bg)', border: '1px solid var(--elp-g-bd)' }}>&#128506;</div>
+              <div className="elp-wyg-icon" style={{ background: 'var(--elp-g-bg)', border: '1px solid var(--elp-g-bd)' }}><NetworkGraph size={18} /></div>
               <div className="elp-wyg-title">Topic Links Map</div>
               <div className="elp-wyg-desc">Visual map showing how Business topics connect &mdash; essential for 20-mark evaluation questions that expect chains of reasoning across units.</div>
               <span className="elp-wyg-tag elp-tag-free">Free</span>
@@ -377,20 +336,61 @@ export default function BusinessPage() {
         <h2 className="elp-s-title" style={{ fontSize: '22px', marginBottom: '8px' }}>Related resources</h2>
         <div className="elp-resources-row">
           <Link href="/glossary" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128214;</span> Business Glossary
+            <span className="elp-resource-chip-icon"><BookAlt size={18} /></span> Business Glossary
           </Link>
           <Link href="/command-words" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128292;</span> Command Words Guide
+            <span className="elp-resource-chip-icon"><Glossary size={18} /></span> Command Words Guide
           </Link>
           <Link href="/past-papers" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128196;</span> Past Papers &amp; Mark Schemes
+            <span className="elp-resource-chip-icon"><Document size={18} /></span> Past Papers &amp; Mark Schemes
           </Link>
           <Link href="/economics" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128200;</span> Economics Revision Notes
+            <span className="elp-resource-chip-icon"><ChartHistogram size={18} /></span> Economics Revision Notes
           </Link>
           <Link href="/topic-links" className="elp-resource-chip">
-            <span className="elp-resource-chip-icon">&#128506;</span> Topic Links Map
+            <span className="elp-resource-chip-icon"><NetworkGraph size={18} /></span> Topic Links Map
           </Link>
+        </div>
+      </div>
+
+      {/* Features strip */}
+      <div className="elp-features-strip">
+        <div className="elp-features-inner">
+          <div className="elp-feat-item">
+            <span className="elp-feat-icon"><Clipboard size={18} /></span>
+            <div>
+              <div className="elp-feat-label">Spec-aligned notes</div>
+              <div className="elp-feat-sub">Every WBS11&ndash;14 point covered</div>
+            </div>
+          </div>
+          <div className="elp-feat-item">
+            <span className="elp-feat-icon"><CardsIcon size={18} /></span>
+            <div>
+              <div className="elp-feat-label">Spaced repetition</div>
+              <div className="elp-feat-sub">Adaptive flashcard algorithm</div>
+            </div>
+          </div>
+          <div className="elp-feat-item">
+            <span className="elp-feat-icon"><BoltIcon size={18} /></span>
+            <div>
+              <div className="elp-feat-label">Practice questions</div>
+              <div className="elp-feat-sub">Exam-style for every topic</div>
+            </div>
+          </div>
+          <div className="elp-feat-item">
+            <span className="elp-feat-icon"><Tutor size={18} /></span>
+            <div>
+              <div className="elp-feat-label">AI Tutor</div>
+              <div className="elp-feat-sub">Ask any Business question</div>
+            </div>
+          </div>
+          <div className="elp-feat-item">
+            <span className="elp-feat-icon"><ProgressChart size={18} /></span>
+            <div>
+              <div className="elp-feat-label">Progress tracking</div>
+              <div className="elp-feat-sub">See mastery across all topics</div>
+            </div>
+          </div>
         </div>
       </div>
 

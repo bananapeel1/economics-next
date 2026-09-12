@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Camera } from '@/components/Icons';
 import SiteHeader from '@/components/SiteHeader';
 import { Headset } from '../../components/Icons';
 import LandingScrollBar from '@/components/LandingScrollBar';
@@ -48,7 +49,7 @@ export default function ContactPage() {
           </a>
           <a href="https://instagram.com/revvylearn" target="_blank" rel="noopener noreferrer" className="elp-wyg-card elp-fade-up" style={{ textDecoration: 'none', transitionDelay: '.07s' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '8px' }}>
-              <div className="elp-wyg-icon" style={{ background: 'var(--elp-b-bg)', border: '1px solid var(--elp-b-bd)' }}>&#128248;</div>
+              <div className="elp-wyg-icon" style={{ background: 'var(--elp-b-bg)', border: '1px solid var(--elp-b-bd)' }}><Camera size={18} /></div>
               <div className="elp-wyg-title">Instagram</div>
             </div>
             <div className="elp-wyg-desc">@revvylearn</div>

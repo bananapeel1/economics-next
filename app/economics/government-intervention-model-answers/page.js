@@ -15,6 +15,7 @@ export default function GovernmentInterventionModelAnswersPage() {
   return (
     <SectionModelAnswersPage
       sectionNumber="1.3.6"
+        sectionId="government-intervention"
       subject="economics"
       backLink={{ href: '/economics/unit-1', label: 'Unit 1: Markets in Action' }}
       title="Government Intervention Model Answers"
