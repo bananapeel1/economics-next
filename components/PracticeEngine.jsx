@@ -120,8 +120,7 @@ function TopicStep({
   onBack,
   onStart,
   loading,
-  progressSummary,
-}) {
+  progressSummary, accessNote }) {
   const [expandedUnits, setExpandedUnits] = useState(new Set());
 
   const filteredUnits = useMemo(
@@ -240,6 +239,15 @@ function TopicStep({
         })}
       </div>
 
+      {accessNote && accessNote.kind !== 'preview' && (
+        <div className="spe-access-note" role="alert">
+          <span>{accessNote.message}</span>
+          {accessNote.kind === 'signed-out' && (
+            <a className="spe-access-note-btn" href="/login">Sign in</a>
+          )}
+        </div>
+      )}
+
       {/* Sticky start bar */}
       <div className="spe-action-bar">
         <div className="spe-action-bar-inner">
@@ -280,6 +288,10 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
   const [currentIndex, setCurrentIndex] = useState(0);
   const [sessionResults, setSessionResults] = useState([]);
   const [loading, setLoading] = useState(false);
+  // Why a session could not start, or started short. Set from the questions endpoint so the empty
+  // state can say what happened instead of reading as missing content (F086, and F084's complaint
+  // that "no questions available" looks like the section is empty).
+  const [accessNote, setAccessNote] = useState(null);
   const [questionKey, setQuestionKey] = useState(0);
   const [progressSummary, setProgressSummary] = useState({});
 
@@ -393,10 +405,28 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
       const sectionArr = Array.from(selectedSectionIds);
 
       // 1. Fetch quiz data
+      setAccessNote(null);
       const qRes = await fetch(
         `/api/practice/questions?sections=${sectionArr.join(',')}`
       );
-      const qJson = await qRes.json();
+      const qJson = await qRes.json().catch(() => ({}));
+
+      if (!qRes.ok) {
+        setAccessNote(
+          qRes.status === 401
+            ? { kind: 'signed-out', message: qJson.error || 'Please sign in to use Smart Practice.' }
+            : { kind: 'error', message: qJson.error || 'Could not load questions. Please try again.' }
+        );
+        setLoading(false);
+        return;
+      }
+      if (qJson.limited) {
+        setAccessNote({
+          kind: 'preview',
+          message: `Showing the first ${qJson.previewLimit} questions per topic, ${qJson.totalReturned} of ${qJson.totalAvailable}. The full bank is part of Pro.`,
+        });
+      }
+
       const fetchedQuizData = qJson.questions || {};
       setQuizData(fetchedQuizData);
 
@@ -603,6 +633,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
         onStart={handleStart}
         loading={loading}
         progressSummary={progressSummary}
+        accessNote={accessNote}
       />
     );
   }
@@ -614,7 +645,16 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
     if (!item) {
       return (
         <div className="spe-empty">
-          <p>No questions available for the selected topics.</p>
+          <p>
+            {accessNote?.kind === 'signed-out'
+              ? accessNote.message
+              : accessNote?.kind === 'error'
+                ? accessNote.message
+                : 'You have answered everything due in these topics. Come back when the next review falls due, or pick more topics.'}
+          </p>
+          {accessNote?.kind === 'signed-out' && (
+            <a className="spe-btn spe-btn-primary" href="/login">Sign in</a>
+          )}
           <button className="spe-btn spe-btn-primary" onClick={handleRestart}>
             Back to Setup
           </button>
@@ -627,6 +667,11 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
 
     return (
       <div className="spe-session">
+        {accessNote?.kind === 'preview' && (
+          <div className="spe-preview-note" role="note">
+            {accessNote.message}
+          </div>
+        )}
         {/* Top bar with progress */}
         <div className="spe-session-top">
           <div className="spe-session-top-left">
