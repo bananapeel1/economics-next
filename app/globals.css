@@ -7182,3 +7182,25 @@ a.auth-dropdown-item:visited {
 }
 .spe-session-size-btn.active { color: #fff; background: var(--rl-green, #10b981); border-color: transparent; }
 .spe-session-size-btn:focus-visible { outline: 2px solid var(--rl-green, #10b981); outline-offset: 2px; }
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Reduced motion (F099). The app ships 20+ keyframes, staggered flow-chain
+   reveals and spring-driven tab transitions, and honoured none of the
+   operating-system preference. Vestibular disorders are not rare and the
+   setting is a direct request, not a hint. 0.01ms rather than 0 keeps
+   animationend/transitionend handlers firing, so nothing that waits on one
+   silently stalls.
+   ────────────────────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  /* Staggered reveals set their own delay inline; collapse those too. */
+  [style*="animation-delay"], [style*="transition-delay"] {
+    animation-delay: 0ms !important;
+    transition-delay: 0ms !important;
+  }
+}

@@ -1204,8 +1204,8 @@
    "fix": "HTML-escape the raw text (`&`, `<`, `>`) at the top of parseInlineMarkdown before applying the bold/italic regexes; in glossary-highlight use a replacer function `(m) => \\`<span ...>${m}</span>\\`` instead of a template string, and escape `$` in escapedDef.",
    "impact": "None visible today. Latent: a future definition like 'below $1 a day' would render 'below Demand a day'; a content string with '<b' or '<1x' style text would lose words on screen.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-11",
    "verified_by": null,
    "evidence": null,
    "note": null
@@ -1510,8 +1510,8 @@
    "fix": "Pre-compile one alternation RegExp per glossary list (useMemo on glossaryTerms), and memoize parsed HTML per (text, glossaryTerms) with useMemo/React.memo on NoteSection/BodyRenderer. Or pre-highlight server-side once per section.",
    "impact": "On a mid/low-end Android (typical in the target markets) tapping a quiz option, a confidence button or 'Next' triggers a visible stall because all note text is re-highlighted from scratch; scrolling jank after each interaction.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-11",
    "verified_by": null,
    "evidence": null,
    "note": null
@@ -1663,8 +1663,8 @@
    "fix": "Use a skeleton/progress indicator for loading, keep the previous section on screen until the new one arrives, and reserve the 'being prepared' copy for a confirmed-empty response.",
    "impact": "On a slow school network the student reads that the topic is not ready yet and leaves, when it is simply still downloading; there is no spinner or skeleton to signal progress.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-11",
    "verified_by": null,
    "evidence": null,
    "note": null
@@ -1680,8 +1680,8 @@
    "fix": "Add @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration:0.01ms !important; transition-duration:0.01ms !important } } and pass `reducedMotion='user'` to framer-motion's MotionConfig; cap FlowChain total stagger at ~300ms.",
    "impact": "Motion-sensitive students get continuous pulsing badges and cascading fade-ins on every step; everyone else waits ~0.5-1s for a 5-6 step causal chain to fully appear each time it scrolls into view.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-11",
    "verified_by": null,
    "evidence": null,
    "note": null
@@ -1748,8 +1748,8 @@
    "fix": "Move onClick/role/aria-selected onto the button, remove tabIndex=-1, add arrow-key handling on the tablist.",
    "impact": "Tabs cannot be reached or activated with a keyboard/switch device; screen readers announce a tab that is not focusable.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-11",
    "verified_by": null,
    "evidence": null,
    "note": null
@@ -1995,7 +1995,7 @@
   {
    "id": "F118",
    "lens": "mobile-css-performance",
-   "sev": "medium",
+   "sev": "low",
    "cat": "rendering",
    "title": "React hydration fails on page load: script tags rendered inside React components make the server and client HTML disagree",
    "file": "app/layout.js",
@@ -2007,7 +2007,7 @@
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "2026-09-12 investigation, two causes ruled out by test. (1) NOT the head placement: the two JSON-LD blocks in app/layout.js were moved into <body> and the error persisted. (2) NOT the theme attribute: the server hardcodes data-theme='dark' and the init script can flip it before hydration, but with localStorage theme set to 'dark' so server and client agree, the error still fires. What remains is the ~10 <script type=application/ld+json> blocks rendered inside PAGE components (app/model-answers, app/command-words, app/ial-revision/*, app/economics/*, data-driven pages). A section page renders 10 of them. The fix is repo-wide: move every JSON-LD out of the React component tree, or emit it via the route's Metadata rather than as a child. Do not re-try the layout-only fix; it is already done and did not work."
+   "note": "2026-09-12: THREE causes ruled out by test, so the next session should not re-try any of them. (1) Not head placement: the layout's JSON-LD was moved into <body> and the error persisted. (2) Not the theme attribute: with localStorage theme set to 'dark' so server and client agree, the error still fires. (3) Not client components rendering scripts: all 18 files containing application/ld+json are SERVER components, where that is Next's documented pattern. The layout theme script is now next/script beforeInteractive and the error survives that too. Next step for whoever picks this up: capture the actual server-vs-client diff from the Next error overlay (expand the hydration diff, do not read the overlay's stylesheet as I did) or bisect by removing subtrees, rather than reasoning from the warning text. Budget it deliberately; three sessions of guessing have not found it. | severity medium -> low: Downgraded from medium: it costs first paint but the page renders correctly in every state tested, nothing is visibly broken to a student, and three rounds of investigation have not located it. Not worth more time until the cheaper packet-11 findings are done."
   },
   {
    "id": "F119",

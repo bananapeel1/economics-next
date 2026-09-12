@@ -10,7 +10,7 @@ const GREEN_GLOW = [5, 150, 105]; // --accent-green rgb
 const SPRING_CONFIG = { stiffness: 170, damping: 26, mass: 1 };
 const GLOW_SPRING = { stiffness: 120, damping: 20, mass: 0.8 };
 
-function AnimatedTab({ tab, isActive, isPremium, onClick, isNew, isTopicComplete }) {
+function AnimatedTab({ tab, isActive, isFocusable, isPremium, onClick, onKeyDown, isNew, isTopicComplete }) {
   const [isHovered, setIsHovered] = useState(false);
   const isLocked = tab.premium && !isPremium;
 
@@ -63,14 +63,14 @@ function AnimatedTab({ tab, isActive, isPremium, onClick, isNew, isTopicComplete
     isLocked ? 'tab-premium' : '',
   ].filter(Boolean).join(' ');
 
+  // F103: role="tab" and the click handler used to sit on this wrapper div while the real
+  // <button> inside carried tabIndex={-1}, so the tab bar was unreachable by keyboard and a
+  // screen reader was told the wrong element was the tab. The button below is the tab now.
   return (
     <div
       className={wrapperClasses}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={onClick}
-      role="tab"
-      aria-selected={isActive}
     >
       {/* Radial gradient glow — always green */}
       <motion.div
@@ -91,7 +91,11 @@ function AnimatedTab({ tab, isActive, isPremium, onClick, isNew, isTopicComplete
           scale: itemScale,
           transformOrigin: 'center bottom',
         }}
-        tabIndex={-1}
+        role="tab"
+        aria-selected={isActive}
+        tabIndex={isFocusable ? 0 : -1}
+        onClick={onClick}
+        onKeyDown={onKeyDown}
       >
         <span className="tab-icon">
           <tab.Icon size={16} />
@@ -106,9 +110,32 @@ function AnimatedTab({ tab, isActive, isPremium, onClick, isNew, isTopicComplete
 }
 
 export default function AnimatedTabBar({ tabs, activeTab, setActiveTab, isPremium, visitedFeatures = {}, learnModeCompletions = {}, activeSection }) {
+  // F103: arrow keys move between tabs, which is what a tablist is expected to do. Home and End
+  // jump to the ends. The focused tab is activated, matching how the mouse behaves here.
+  function handleKeyDown(e, index) {
+    const last = tabs.length - 1;
+    let next = null;
+    if (e.key === 'ArrowRight') next = index === last ? 0 : index + 1;
+    else if (e.key === 'ArrowLeft') next = index === 0 ? last : index - 1;
+    else if (e.key === 'Home') next = 0;
+    else if (e.key === 'End') next = last;
+    if (next === null) return;
+    e.preventDefault();
+    setActiveTab(tabs[next].id);
+    const bar = e.currentTarget.closest('.tab-bar');
+    const target = bar?.querySelectorAll('[role="tab"]')[next];
+    if (target) target.focus();
+  }
+
+  // A tablist needs exactly one tab in the tab order. When activeTab matches nothing on screen
+  // (the overview, for instance) every tab would otherwise be tabIndex=-1 and the whole bar would
+  // be unreachable by keyboard — worse than the defect this fixes. Fall back to the first tab.
+  const activeIndex = tabs.findIndex((t) => t.id === activeTab);
+  const focusIndex = activeIndex >= 0 ? activeIndex : 0;
+
   return (
     <div className="tab-bar" role="tablist">
-      {tabs.map(tab => {
+      {tabs.map((tab, tabIndex) => {
         const isLearnMode = tab.id === 'learn-mode';
         const isTopicComplete = isLearnMode && learnModeCompletions[activeSection];
         const isNew = isLearnMode
@@ -120,8 +147,10 @@ export default function AnimatedTabBar({ tabs, activeTab, setActiveTab, isPremiu
             key={tab.id}
             tab={tab}
             isActive={activeTab === tab.id}
+            isFocusable={tabIndex === focusIndex}
             isPremium={isPremium}
             onClick={() => setActiveTab(tab.id)}
+            onKeyDown={(e) => handleKeyDown(e, tabIndex)}
             isNew={isNew}
             isTopicComplete={isTopicComplete}
           />

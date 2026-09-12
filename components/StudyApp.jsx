@@ -676,9 +676,14 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     if (!sectionData) {
       return (
         <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--text-muted)' }}>
+          {/* F098: this screen was shown both while the fetch was in flight and when a section
+              genuinely had nothing, with the same words either way. "Content for this section is
+              being prepared" told a student on a slow school connection that the topic does not
+              exist yet, when it was about to arrive. Loading now says it is loading, and the
+              "being prepared" wording is reserved for a response that really came back empty. */}
           <div style={{ fontSize: 48, marginBottom: 16 }}>&#128218;</div>
-          <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 8, color: 'var(--text-primary)' }}>Loading content...</div>
-          <div style={{ fontSize: 14 }}>Content for this section is being prepared.</div>
+          <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 8, color: 'var(--text-primary)' }}>Loading this section</div>
+          <div style={{ fontSize: 14 }}>One moment.</div>
         </div>
       );
     }
