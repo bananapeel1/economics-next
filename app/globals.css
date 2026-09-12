@@ -6714,7 +6714,10 @@ a.auth-dropdown-item:visited {
 
 /* Strengths & gaps sections */
 .wap-feedback-section { margin-bottom: 16px; }
-.wap-section-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+/* The class carries the colour; the green/amber variants below override it. It used
+   to come from an inline var(--elp-tx-c) in the JSX, a token defined only inside
+   .elp-page in styles/landing.css, so the heading fell back to a raw literal. */
+.wap-section-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; color: var(--text-muted); }
 .wap-section-green { color: var(--accent-green-bright); }
 .wap-section-amber { color: var(--accent-amber); }
 .wap-feedback-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
@@ -6748,10 +6751,13 @@ a.auth-dropdown-item:visited {
 .wap-ao-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
 .wap-ao-card { background: rgba(255,255,255,.02); border: 1px solid var(--border-primary); border-radius: 10px; padding: 12px 14px; }
 .wap-ao-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
-.wap-ao-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+/* --wap-ao-color is set inline per card from lib/ao-labels.js, as a var() token
+   string rather than a hex, so light mode gets the light hue and npm run contrast
+   is not asked to score a colour that only exists in JSX. */
+.wap-ao-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--wap-ao-color); }
 .wap-ao-score { font-size: 13px; font-weight: 700; color: var(--text-primary); }
 .wap-ao-bar { height: 5px; border-radius: 3px; background: var(--border-primary); overflow: hidden; }
-.wap-ao-bar-fill { height: 100%; border-radius: 3px; transition: width 0.4s ease; }
+.wap-ao-bar-fill { height: 100%; border-radius: 3px; background: var(--wap-ao-color); transition: width 0.4s ease; }
 .wap-ao-chains { font-size: 11px; font-weight: 600; color: var(--accent-amber); margin-top: 5px; }
 .wap-ao-comment { font-size: 11.5px; color: var(--text-muted); margin-top: 4px; line-height: 1.45; }
 
@@ -6778,6 +6784,99 @@ a.auth-dropdown-item:visited {
   .wap-marks-pill { min-width: 80px; padding: 14px 16px; }
   .wap-qcard-question { font-size: 15px; }
   .wap-feedback-header { flex-wrap: wrap; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+ * AO PROFILE (aop-)
+ * ═══════════════════════════════════════════════════════════ */
+
+/* Two surfaces: the panel, mounted inside .spe-summary-card on the session
+   summary, and .aop-running, one line inside the feedback card.
+
+   Objective colour arrives from lib/ao-labels.js as a var() token string and is
+   applied by the component through an inline custom property on the row —
+   style={{ '--aop-ao-color': color }} — never as an inline hex, which
+   audit/scripts/contrast-check.mjs cannot see because it reads only globals.css.
+   --aop-color is accepted as a second spelling because lib/ao-labels.js
+   documents that name; the fallback chain resolves whichever the row sets. */
+
+.aop-card {
+  background: var(--bg-card); border: 1.5px solid var(--border-primary);
+  border-radius: 14px; padding: 20px;
+  margin: 24px 0;
+  text-align: left; /* .spe-summary-card centres everything it holds */
+}
+
+.aop-eyebrow { font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
+
+/* font-size sits in the same rule as colour deliberately: contrast-check.mjs reads
+   both from one rule and holds a size it cannot see to the 4.5:1 body threshold. */
+.aop-headline { font-size: 16px; font-weight: 600; color: var(--text-primary); line-height: 1.55; margin: 0; }
+.aop-technique { font-size: 13.5px; color: var(--text-secondary); line-height: 1.5; margin: 8px 0 0; }
+
+/* Objective rows — fixed AO1→AO4 order, four sub-surfaces on the card */
+.aop-rows { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+.aop-row { background: var(--white-subtle); border: 1px solid var(--border-primary); border-radius: 10px; padding: 12px 14px; }
+.aop-row-top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.aop-row-label { font-size: 13px; font-weight: 700; color: var(--aop-ao-color, var(--aop-color, var(--text-primary))); }
+.aop-row-figures { display: flex; align-items: baseline; gap: 10px; flex-shrink: 0; }
+.aop-row-fraction { font-size: 13px; font-weight: 700; color: var(--text-secondary); }
+.aop-row-pct { font-size: 13px; font-weight: 800; color: var(--text-primary); min-width: 34px; text-align: right; }
+/* The below-floor and never-assessed sentences — the row's own words, set at
+   reading size rather than as a caption under a figure it is replacing. */
+.aop-row-note { font-size: 12.5px; color: var(--text-tertiary); line-height: 1.45; margin: 8px 0 0; }
+
+/* Bars — geometry lifted from .wap-ao-bar so the two AO surfaces read as one */
+.aop-bar { height: 6px; border-radius: 3px; background: var(--border-primary); overflow: hidden; }
+.aop-bar-fill { height: 100%; border-radius: 3px; min-width: 2px; background: var(--aop-ao-color, var(--aop-color, var(--text-muted))); transition: width 0.4s ease; }
+/* Never assessed is not zero. A dashed empty track with no fill child at all, so
+   it cannot be mistaken for a bar that was filled to nothing. */
+.aop-bar--none { height: 6px; border-radius: 3px; background: transparent; border: 1px dashed var(--text-muted); }
+
+/* Lines under the rows */
+.aop-record, .aop-chains { font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 14px 0 0; }
+.aop-note, .aop-floor, .aop-exclusions, .aop-disclosure { font-size: 12px; color: var(--text-tertiary); line-height: 1.45; margin: 10px 0 0; }
+/* The disclosure is the second half of the sentence every percentage above makes,
+   so it is never collapsed, clamped or set smaller than the rest of the note text.
+   Nothing here may gain a max-height, a line-clamp or a display: none. */
+.aop-disclosure { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border-primary); }
+
+/* Action — the .spe-summary-btn-primary recipe, since that is the button ten
+   pixels below it on the same card */
+.aop-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin-top: 18px; }
+.aop-action { padding: 12px 24px; border-radius: 10px; background: var(--accent-green); color: #000; font-size: 15px; font-weight: 700; border: none; cursor: pointer; font-family: inherit; transition: filter 0.15s; }
+/* --accent-green is dark enough in light mode that black text no longer clears AA */
+[data-theme="light"] .aop-action { color: #fff; }
+.aop-action:hover { filter: brightness(1.1); }
+.aop-action-sub { font-size: 12px; color: var(--text-tertiary); line-height: 1.45; margin: 0; }
+.aop-link { padding: 0; background: none; border: none; font-family: inherit; font-size: 13.5px; font-weight: 600; color: var(--accent-green-light); cursor: pointer; text-align: left; text-decoration: underline; text-underline-offset: 3px; }
+.aop-link:hover { opacity: 0.85; }
+.aop-link-sub { font-size: 12px; color: var(--text-tertiary); line-height: 1.45; margin: 0; }
+
+/* Empty state — one sentence and one button, no bars and no zeros */
+.aop-empty { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin: 0; }
+/* The summary panel renders nothing while its fetch is in flight; this is here for
+   a placement that needs a line rather than a blank, and never as a skeleton. */
+.aop-loading { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+
+/* The running line, inside the feedback card below the per-answer AO breakdown.
+   Tinted and rule-marked because it is the one surface that reaches a student
+   mid-flow, and it must not read as another paragraph of the marking. */
+.aop-running { margin-top: 14px; padding: 12px 14px; background: var(--white-subtle); border-left: 2px solid var(--accent-green); border-radius: 0 10px 10px 0; }
+.aop-running-text { font-size: 13.5px; font-weight: 600; color: var(--text-primary); line-height: 1.55; margin: 0; }
+.aop-running-tip { font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 6px 0 0; }
+/* Attribution for the one running-line branch that prints a percentage. Quiet, but never hidden. */
+.aop-running-note { font-size: 11.5px; color: var(--text-muted); line-height: 1.45; margin: 8px 0 0; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .aop-card { padding: 16px; }
+  .aop-headline { font-size: 15px; }
+  .aop-row-top { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .aop-row-figures { width: 100%; justify-content: space-between; }
+  .aop-row-pct { text-align: left; }
+  .aop-actions { align-items: stretch; }
+  .aop-action { width: 100%; }
 }
 
 /* ═══════════════════════════════════════════════════════════

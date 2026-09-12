@@ -1,13 +1,19 @@
 'use client';
 
+import AOProfilePanel from '@/components/written-practice/AOProfilePanel';
+
+// Tokens, not literals. The four hues here were picked for a dark card and light mode
+// inherited them unchanged; the grade bar sat at roughly 2:1 against a white surface until
+// the September 2026 light-mode audit. Each token's DARK value is the literal it replaces
+// (#22c55e, #4ade80, #f59e0b, #ef4444), so dark mode is untouched and only light changes.
 const GRADE_LABELS = {
-  excellent: { label: 'Excellent', color: '#22c55e' },
-  good:      { label: 'Good',      color: '#4ade80' },
-  partial:   { label: 'Partial',   color: '#f59e0b' },
-  weak:      { label: 'Needs Work', color: '#ef4444' },
+  excellent: { label: 'Excellent', color: 'var(--accent-green-bright)' },
+  good:      { label: 'Good',      color: 'var(--accent-green-light)' },
+  partial:   { label: 'Partial',   color: 'var(--accent-amber)' },
+  weak:      { label: 'Needs Work', color: 'var(--accent-red)' },
 };
 
-export default function WrittenSummary({ results, sections, onRestart, onChangeTopics }) {
+export default function WrittenSummary({ results, aoRunning, subjectSlug, sections, onRestart, onChangeTopics }) {
   const totalMarks = results.reduce((sum, r) => sum + (r.marks || 0), 0);
   const earnedMarks = results.reduce((sum, r) => sum + (r.marksAwarded || 0), 0);
   const scorePct = totalMarks > 0 ? Math.round((earnedMarks / totalMarks) * 100) : 0;
@@ -20,7 +26,7 @@ export default function WrittenSummary({ results, sections, onRestart, onChangeT
   });
 
   // Ring color
-  const ringColor = scorePct >= 70 ? '#22c55e' : scorePct >= 40 ? '#f59e0b' : '#ef4444';
+  const ringColor = scorePct >= 70 ? 'var(--accent-green-bright)' : scorePct >= 40 ? 'var(--accent-amber)' : 'var(--accent-red)';
 
   // Motivational message
   let emoji, message;
@@ -51,7 +57,7 @@ export default function WrittenSummary({ results, sections, onRestart, onChangeT
 
       {/* Stat cards */}
       <div className="spe-summary-stats">
-        <div className="spe-stat-card" style={{ '--stat-color': '#22c55e' }}>
+        <div className="spe-stat-card" style={{ '--stat-color': 'var(--accent-green-bright)' }}>
           <span className="spe-stat-value">{earnedMarks}</span>
           <span className="spe-stat-label">Earned</span>
         </div>
@@ -64,6 +70,17 @@ export default function WrittenSummary({ results, sections, onRestart, onChangeT
           <span className="spe-stat-label">Answered</span>
         </div>
       </div>
+
+      {/* AO profile. It owns its own fetch, its own loading state and its own error state, and
+          renders nothing at all in either — a failing AO query must never cost a student the
+          session summary they just earned. Sits above the grade breakdown because the marks
+          ring answers "how did I do"; this answers "what keeps happening". */}
+      <AOProfilePanel
+        variant="summary"
+        results={results}
+        aoRunning={aoRunning}
+        subject={subjectSlug}
+      />
 
       {/* Grade breakdown */}
       <div className="wap-grade-breakdown">
@@ -78,7 +95,7 @@ export default function WrittenSummary({ results, sections, onRestart, onChangeT
                 className="wap-breakdown-segment"
                 style={{
                   width: `${pct}%`,
-                  backgroundColor: GRADE_LABELS[grade]?.color || '#6b7280',
+                  backgroundColor: GRADE_LABELS[grade]?.color || 'var(--text-muted)',
                 }}
                 title={`${GRADE_LABELS[grade]?.label}: ${count}`}
               />

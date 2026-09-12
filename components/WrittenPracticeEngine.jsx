@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useEffect, useRef } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { buildQueue, computeNextReview, createDefaultProgress } from '@/lib/spaced-repetition';
 import WrittenQuestionCard from '@/components/written-practice/WrittenQuestionCard';
 import WrittenSummary from '@/components/written-practice/WrittenSummary';
@@ -10,7 +11,6 @@ import WrittenSummary from '@/components/written-practice/WrittenSummary';
 const SUBJECT_ICONS = { economics: '\u{1F4C8}', business: '\u{1F3E2}' };
 const SUBJECT_AREAS = { economics: 'Micro, Macro, Global', business: 'Marketing, Finance, HR, Operations' };
 const CHIP_COLORS = ['#3b82f6', '#f59e0b', '#10b981', '#ef4444', '#8b5cf6', '#ec4899'];
-const MARK_OPTIONS = ['all', '4', '6', '10', '20'];
 
 /* ─── SubjectStep (inline) ─── */
 
@@ -157,16 +157,27 @@ function TopicStep({
 /* ─── MarkFilterStep (inline) ─── */
 
 function MarkFilterStep({ questionData, selectedMarks, onSelectMarks, onBack, onStart, loading }) {
-  // Count available questions per mark value
+  // Count available questions per mark value. Open-keyed so a tariff the bank
+  // carries but the old hardcoded list did not still gets a truthful count.
   const markCounts = useMemo(() => {
-    const counts = { all: 0, 4: 0, 6: 0, 10: 0, 20: 0 };
+    const counts = { all: 0 };
     for (const questions of Object.values(questionData)) {
       for (const q of questions) {
-        if (counts[q.marks] !== undefined) counts[q.marks]++;
+        if (Number.isInteger(q.marks)) counts[q.marks] = (counts[q.marks] || 0) + 1;
         counts.all++;
       }
     }
     return counts;
+  }, [questionData]);
+
+  // Pills come from the bank the student actually has, never a fixed list: a pill
+  // for a tariff with nothing behind it is a filter that returns an empty session.
+  const markOptions = useMemo(() => {
+    const seen = new Set();
+    for (const questions of Object.values(questionData)) {
+      for (const q of questions) if (Number.isInteger(q.marks)) seen.add(q.marks);
+    }
+    return ['all', ...Array.from(seen).sort((a, b) => a - b).map(String)];
   }, [questionData]);
 
   return (
@@ -177,7 +188,7 @@ function MarkFilterStep({ questionData, selectedMarks, onSelectMarks, onBack, on
       <p className="spe-step-subtitle">Filter by question difficulty or practise all mark values.</p>
 
       <div className="wap-marks-pills">
-        {MARK_OPTIONS.map(opt => {
+        {markOptions.map(opt => {
           const label = opt === 'all' ? 'All marks' : `${opt} marks`;
           const count = markCounts[opt] || 0;
           return (
@@ -232,6 +243,16 @@ export default function WrittenPracticeEngine({ subjects, units, sections, isLog
   const [loading, setLoading] = useState(false);
   const [questionKey, setQuestionKey] = useState(0);
   const [progressSummary, setProgressSummary] = useState({});
+  // Identifies one sitting. Nothing else in the app does: questionKey is reset per
+  // question, so it cannot stand in for a session.
+  const [sessionId, setSessionId] = useState(null);
+  const [aoRunning, setAoRunning] = useState(null);
+
+  const searchParams = useSearchParams();
+  const prefillDone = useRef(false);
+  // A deep-linked tariff arrives before the bank does, so it waits here until the
+  // questions are fetched and it can be checked against them.
+  const pendingMarksRef = useRef(null);
 
   /* ─── Fetch progress summary ─── */
   const fetchProgressSummary = useCallback(async (subjectSlug) => {
@@ -270,6 +291,21 @@ export default function WrittenPracticeEngine({ subjects, units, sections, isLog
     setSetupStep(2);
     fetchProgressSummary(slug);
   }, [fetchProgressSummary]);
+
+  /* ─── Deep link: /written-practice?subject=<slug>&marks=<tariff> ─── */
+  // One shot, and never auto-starts: the student still chooses topics and presses
+  // start. Absent params are the normal case and must leave setup untouched.
+  useEffect(() => {
+    if (prefillDone.current) return;
+    prefillDone.current = true;
+
+    const marksParam = searchParams?.get('marks');
+    if (marksParam && /^\d+$/.test(marksParam)) pendingMarksRef.current = marksParam;
+
+    const subjectParam = searchParams?.get('subject');
+    if (!subjectParam || !subjects.some(sub => sub.slug === subjectParam)) return;
+    handleSelectSubject(subjectParam);
+  }, [searchParams, subjects, handleSelectSubject]);
 
   const handleBackToSubject = useCallback(() => {
     setSetupStep(1);
@@ -315,8 +351,16 @@ export default function WrittenPracticeEngine({ subjects, units, sections, isLog
       const sectionArr = Array.from(selectedSectionIds);
       const res = await fetch(`/api/written-practice/questions?sections=${sectionArr.join(',')}`);
       const json = await res.json();
-      setQuestionData(json.questions || {});
-      setSelectedMarks('all');
+      const fetched = json.questions || {};
+      setQuestionData(fetched);
+      // Honour a deep-linked tariff only when the chosen topics actually carry it;
+      // otherwise the student would land on a filter that returns nothing.
+      const wanted = pendingMarksRef.current;
+      pendingMarksRef.current = null;
+      const target = wanted === null ? null : parseInt(wanted, 10);
+      const hasWanted = target !== null
+        && Object.values(fetched).some(qs => qs.some(q => q.marks === target));
+      setSelectedMarks(hasWanted ? wanted : 'all');
       setSetupStep(3);
     } catch (err) {
       console.error('Failed to fetch written questions:', err);
@@ -335,15 +379,18 @@ export default function WrittenPracticeEngine({ subjects, units, sections, isLog
     try {
       const sectionArr = Array.from(selectedSectionIds);
 
-      // Filter questions by selected marks
+      // Filter questions by selected marks. Each item carries the bankIndex the
+      // serving route stamped, which is what buildQueue keys the schedule on and
+      // what the renderer needs: filtering here must not be allowed to renumber it.
+      // questionData is the unfiltered bank, so a missing stamp can still be
+      // recovered from the position here — never from the filtered array below.
+      const target = selectedMarks === 'all' ? null : parseInt(selectedMarks, 10);
       let filteredData = {};
       for (const [secId, questions] of Object.entries(questionData)) {
-        if (selectedMarks === 'all') {
-          filteredData[secId] = questions;
-        } else {
-          const target = parseInt(selectedMarks, 10);
-          filteredData[secId] = questions.filter(q => q.marks === target);
-        }
+        const stamped = questions.map((q, i) => (
+          Number.isInteger(q.bankIndex) ? q : { ...q, bankIndex: i }
+        ));
+        filteredData[secId] = target === null ? stamped : stamped.filter(q => q.marks === target);
       }
 
       // Fetch progress
@@ -377,7 +424,12 @@ export default function WrittenPracticeEngine({ subjects, units, sections, isLog
       setQueue(sessionQueue);
       setCurrentIndex(0);
       setSessionResults([]);
+      setAoRunning(null);
       setQuestionKey(Date.now());
+      setSessionId(
+        globalThis.crypto?.randomUUID?.()
+        || `s-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`
+      );
       setPhase('session');
     } catch (err) {
       console.error('Failed to start written practice session:', err);
@@ -388,15 +440,20 @@ export default function WrittenPracticeEngine({ subjects, units, sections, isLog
 
   /* ─── Handle graded answer ─── */
   const handleGraded = useCallback(
-    async ({ marksAwarded, grade, feedback }) => {
+    async ({ marksAwarded, grade, feedback, aoRunning: running }) => {
       const item = queue[currentIndex];
       if (!item) return;
 
+      setAoRunning(running || null);
+
       const correct = grade === 'excellent' || grade === 'good';
       const waSectionId = `wa-${item.sectionId}`;
-      const key = `${waSectionId}:${item.questionIndex}`;
+      // The bank index, not the position in this session's filtered list: the same
+      // physical question must resolve to one schedule row whichever pill was used.
+      const bankIndex = item.question?.bankIndex ?? item.questionIndex;
+      const key = `${waSectionId}:${bankIndex}`;
 
-      const current = progressMap[key] || createDefaultProgress(waSectionId, item.questionIndex);
+      const current = progressMap[key] || createDefaultProgress(waSectionId, bankIndex);
       const updated = computeNextReview(current, correct);
 
       // Save progress
@@ -423,20 +480,28 @@ export default function WrittenPracticeEngine({ subjects, units, sections, isLog
 
       setProgressMap(prev => ({ ...prev, [key]: updated }));
 
-      // Get the question to record marks
-      const q = questionData[item.sectionId]?.[item.questionIndex];
+      // The record the queue carries — the only copy guaranteed to be the question
+      // that was actually served and marked.
+      const q = item.question;
       setSessionResults(prev => [
         ...prev,
         {
           sectionId: item.sectionId,
-          questionIndex: item.questionIndex,
+          questionIndex: bankIndex,
           marks: q?.marks || 0,
           marksAwarded,
           grade,
+          command: q?.command || null,
+          ao: {
+            ao1: feedback?.ao1 || null,
+            ao2: feedback?.ao2 || null,
+            ao3: feedback?.ao3 || null,
+            ao4: feedback?.ao4 || null,
+          },
         },
       ]);
     },
-    [queue, currentIndex, progressMap, questionData, isLoggedIn]
+    [queue, currentIndex, progressMap, isLoggedIn]
   );
 
   /* ─── Next question ─── */
@@ -468,6 +533,8 @@ export default function WrittenPracticeEngine({ subjects, units, sections, isLog
     setQueue([]);
     setCurrentIndex(0);
     setSessionResults([]);
+    setSessionId(null);
+    setAoRunning(null);
   }, []);
 
   const handleChangeTopics = useCallback(() => {
@@ -476,6 +543,8 @@ export default function WrittenPracticeEngine({ subjects, units, sections, isLog
     setQueue([]);
     setCurrentIndex(0);
     setSessionResults([]);
+    setSessionId(null);
+    setAoRunning(null);
   }, []);
 
   /* ─── Render ─── */
@@ -531,7 +600,7 @@ export default function WrittenPracticeEngine({ subjects, units, sections, isLog
     const item = queue[currentIndex];
     if (!item) return null;
 
-    const q = questionData[item.sectionId]?.[item.questionIndex];
+    const q = item.question;
     if (!q) return null;
 
     const sec = sections.find(s => s.id === item.sectionId);
@@ -555,6 +624,10 @@ export default function WrittenPracticeEngine({ subjects, units, sections, isLog
         <WrittenQuestionCard
           key={questionKey}
           question={q}
+          sectionId={item.sectionId}
+          questionIndex={q.bankIndex ?? item.questionIndex}
+          subjectSlug={selectedSubjectSlug}
+          sessionId={sessionId}
           sectionTitle={sectionTitle}
           questionNumber={currentIndex + 1}
           totalQuestions={queue.length}
@@ -571,6 +644,12 @@ export default function WrittenPracticeEngine({ subjects, units, sections, isLog
     return (
       <WrittenSummary
         results={sessionResults}
+        aoRunning={aoRunning}
+        // Without this the panel below fetches every subject at once, so a student who has
+        // written in both would read a pooled Economics-plus-Business figure at the end of an
+        // Economics session — and the subject-scoped copy (which specification, which command
+        // words carry evaluation) would go silent because the rows disagree.
+        subjectSlug={selectedSubjectSlug}
         sections={sections}
         onRestart={handleRestart}
         onChangeTopics={handleChangeTopics}

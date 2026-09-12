@@ -1,5 +1,8 @@
 'use client';
 
+import { AO_DISPLAY, AO_KEYS } from '@/lib/ao-labels';
+import { aoShortfallLine, aoUnmappedLine } from '@/lib/ao-profile';
+
 const GRADE_CONFIG = {
   excellent: { icon: '🎯', label: 'Excellent', colorClass: 'wap-grade-excellent' },
   good:      { icon: '✅', label: 'Good',      colorClass: 'wap-grade-good' },
@@ -7,35 +10,71 @@ const GRADE_CONFIG = {
   weak:      { icon: '📚', label: 'Needs Work', colorClass: 'wap-grade-weak' },
 };
 
-const AO_LABELS = {
-  ao1: { label: 'AO1 Knowledge', color: '#3b82f6' },
-  ao2: { label: 'AO2 Application', color: '#22c55e' },
-  ao3: { label: 'AO3 Analysis', color: '#f59e0b' },
-  ao4: { label: 'AO4 Evaluation', color: '#a78bfa' },
-};
+/**
+ * The explanatory line under the breakdown, and never a sentence this component wrote:
+ * every student-facing claim in the AO feature is assembled in lib/ao-profile.js so the
+ * card and the profile can never phrase the same fact two ways. Null means there is
+ * nothing true to say, and the try/catch means a fault in the AO additions costs a
+ * caveat rather than the marking the student came for.
+ */
+function shortfallLine({ subject, command, tariff }) {
+  try {
+    return aoShortfallLine({ subject, command, tariff }) || null;
+  } catch {
+    return null;
+  }
+}
 
-function AOBreakdown({ feedback, marks }) {
-  const aoKeys = ['ao1', 'ao2', 'ao3', 'ao4'];
-  const hasAO = aoKeys.some(k => feedback[k] && feedback[k].max > 0);
-  if (!hasAO) return null;
+function AOBreakdown({ feedback, marks, subject, command }) {
+  const hasAO = AO_KEYS.some(k => feedback[k] && feedback[k].max > 0);
+
+  // No breakdown at all means the command word is off-spec, which is a statement worth making
+  // rather than an empty space. Guarded like the shortfall line: a fault here costs the caveat,
+  // never the marking.
+  if (!hasAO) {
+    let unmapped = null;
+    try {
+      unmapped = aoUnmappedLine({ subject, command, tariff: marks });
+    } catch {
+      unmapped = null;
+    }
+    return unmapped ? <p className="aop-note">{unmapped}</p> : null;
+  }
+
+  // An answer's four maxima can legitimately total less than the tariff it was served at:
+  // Appendix 6 says Define requires knowledge and understanding only, so an Economics
+  // Define served at 4 marks assesses 2. Without a line saying so, a student reads a
+  // "3 / 4 marks" header above rows totalling 2 and concludes the app is broken. The
+  // maxima are never renormalised up to the tariff — that would invent an allocation.
+  // subject and command are the client's copy of the same bank record the route resolved
+  // server-side; the gate is the server's own maxima, so a disagreement makes the line
+  // absent rather than wrong.
+  const aoTotal = AO_KEYS.reduce((sum, k) => sum + (feedback[k]?.max || 0), 0);
+  const shortfall = aoTotal < marks ? shortfallLine({ subject, command, tariff: marks }) : null;
 
   return (
     <div className="wap-ao-breakdown">
-      <h4 className="wap-section-title" style={{ color: 'var(--elp-tx-c, #8a92ab)' }}>Assessment Objective Breakdown</h4>
+      <h4 className="wap-section-title">Assessment Objective Breakdown</h4>
       <div className="wap-ao-grid">
-        {aoKeys.map(k => {
+        {AO_KEYS.map(k => {
           const ao = feedback[k];
+          // Not assessed is absent, not zero. This is the same max > 0 test the aggregate
+          // uses, which is what stops the card and the profile ever disagreeing about
+          // whether an objective was in play.
           if (!ao || ao.max === 0) return null;
-          const { label, color } = AO_LABELS[k];
+          const { label, color } = AO_DISPLAY[k];
           const pct = ao.max > 0 ? Math.round((ao.marks / ao.max) * 100) : 0;
           return (
-            <div key={k} className="wap-ao-card">
+            // The colour rides a custom property rather than an inline color/background:
+            // .wap-ao-label and .wap-ao-bar-fill read it from globals.css, where
+            // npm run contrast can see it. A hex in JSX is invisible to that guard.
+            <div key={k} className="wap-ao-card" style={{ '--wap-ao-color': color }}>
               <div className="wap-ao-header">
-                <span className="wap-ao-label" style={{ color }}>{label}</span>
+                <span className="wap-ao-label">{label}</span>
                 <span className="wap-ao-score">{ao.marks}/{ao.max}</span>
               </div>
               <div className="wap-ao-bar">
-                <div className="wap-ao-bar-fill" style={{ width: `${pct}%`, background: color }} />
+                <div className="wap-ao-bar-fill" style={{ width: `${pct}%` }} />
               </div>
               {k === 'ao3' && typeof ao.chains === 'number' && (
                 <div className="wap-ao-chains">{ao.chains} analytical chain{ao.chains !== 1 ? 's' : ''} identified</div>
@@ -45,11 +84,12 @@ function AOBreakdown({ feedback, marks }) {
           );
         })}
       </div>
+      {shortfall && <p className="aop-note">{shortfall}</p>}
     </div>
   );
 }
 
-export default function WrittenFeedbackCard({ feedback, guidance, marks, onNext }) {
+export default function WrittenFeedbackCard({ feedback, guidance, marks, subject, command, aoRunning, onNext }) {
   const grade = GRADE_CONFIG[feedback.grade] || GRADE_CONFIG.partial;
 
   return (
@@ -67,7 +107,17 @@ export default function WrittenFeedbackCard({ feedback, guidance, marks, onNext 
       <p className="wap-feedback-text">{feedback.feedback}</p>
 
       {/* AO Breakdown */}
-      <AOBreakdown feedback={feedback} marks={marks} />
+      <AOBreakdown feedback={feedback} marks={marks} subject={subject} command={command} />
+
+      {/* What keeps happening across this student's answers. The server produced the
+          sentence; null means no floor was cleared and there is nothing to render. */}
+      {aoRunning && aoRunning.text && (
+        <div className="aop-running">
+          <p className="aop-running-text">{aoRunning.text}</p>
+          {aoRunning.technique && <p className="aop-running-tip">{aoRunning.technique}</p>}
+          {aoRunning.disclosure && <p className="aop-running-note">{aoRunning.disclosure}</p>}
+        </div>
+      )}
 
       {/* Strengths */}
       {feedback.strengths?.length > 0 && (
