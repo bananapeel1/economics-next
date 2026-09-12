@@ -218,10 +218,10 @@
    "fix": "Index practiceIndices into the raw practiceData array (or sort only for the legacy distributeItems fallback). Add a content-lint check that each block's referenced practice question shares vocabulary with the block title.",
    "impact": "The practice question at the end of a block frequently has nothing to do with the block just studied, which makes the worked/guided/independent progression look random and undermines trust in the content.",
    "packet": 2,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-2",
+   "verified_by": "main-session + packet-verifier 2026-09-12",
+   "evidence": "components/LearnModeTab.jsx:135 resolves practiceIndices against raw practiceData; 39 of 64 pins measured wrong before, 0 after",
    "note": null
   },
   {
@@ -677,10 +677,10 @@
    "fix": "Index practiceIndices into the original practiceData (`practiceData[pi]`) and drop the sort in the pinned path; keep the sort only for the legacy distributeItems fallback.",
    "impact": "The 'Guided practice' on the PPF step is about model assumptions; the 'Quick check' on Economic Systems is about the basic economic problem. Questions look randomly attached to the wrong topic.",
    "packet": 2,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-2",
+   "verified_by": "main-session + packet-verifier 2026-09-12",
+   "evidence": "components/LearnModeTab.jsx:135, same fix",
    "note": null
   },
   {
@@ -694,10 +694,10 @@
    "fix": "Fall back per block: if diagramRef is absent or unmatched, try matchDiagramsToBlocks word-overlap for that block; add a build-time/admin check that every diagramRef resolves. Same per-block fallback for quizIndices (currently 55/170 blocks have none).",
    "impact": "Diagram-heavy macro topics show no diagram during learning even though the Diagrams tab has them; a broken ref in one block silently hides the diagram.",
    "packet": 2,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-2",
+   "verified_by": "main-session + packet-verifier 2026-09-12",
+   "evidence": "components/LearnModeTab.jsx:139-160 per-block fallback; inline diagrams 15 to 51 measured against live data",
    "note": null
   },
   {
@@ -1884,10 +1884,10 @@
    "fix": "Index into the unsorted practice array (or pin by a stable practice id) and add a validator that prints the resolved question text next to each pin so the author can eyeball it.",
    "impact": "At the end of the PPF chapter in the most-started section, the written practice question is about model assumptions, not the PPF the student just studied; the 'economic systems' chapter gets a question about scarcity. The practice feels randomly attached because it is.",
    "packet": 2,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-2",
+   "verified_by": "main-session + packet-verifier 2026-09-12",
+   "evidence": "components/LearnModeTab.jsx:135, same fix",
    "note": null
   },
   {
