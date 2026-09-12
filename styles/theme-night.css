@@ -1,0 +1,222 @@
+/* ==========================================================================
+   Night School — the theme for the public SEO pages
+   ==========================================================================
+
+   Scoped deliberately. `.elp-page` covers the 23 landing/unit routes;
+   `.rl-night` is an explicit opt-in for the model-answer and resource pages,
+   because `.resource-page` is also used by /practice, /progress and /settings,
+   which are part of the app and must not be themed.
+
+   The app at / and the topic routes carry neither class, so they are untouched.
+
+   Two things this replaces:
+   - the forked palette in landing.css (--elp-green #22c55e, which is not the
+     app's green and is the most common accent in generated landing pages);
+   - the dark-only assumption — these tokens are a deliberate dark theme rather
+     than an accident of having no light mode.
+   ========================================================================== */
+
+.elp-page.elp-page,
+.rl-night.rl-night {
+  /* --- surfaces: an indigo-black, not a neutral near-black --- */
+  --ns-bg:      #0e0f16;
+  --ns-surface: #171a26;
+  --ns-card:    #1a1d2b;
+  --ns-bd:      #262b3c;
+  --ns-bd2:     #353c52;
+
+  /* --- ink: carries a faint violet cast rather than neutral grey --- */
+  --ns-ink:  #e9e7f2;
+  --ns-ink2: #b9b6cc;
+  --ns-ink3: #8b88a3;
+  --ns-ink4: #6b6882;
+
+  /* --- accent: the app's own green, so there is no seam between the SEO
+         pages and the product. #10b981 is --accent-green-light from
+         globals.css; the violet mark still supplies the logo. --- */
+  --ns-brand:    #10b981;
+  --ns-brand-bg: rgba(16,185,129,.12);
+  --ns-brand-bd: rgba(16,185,129,.3);
+  --ns-on-brand: #04231a;
+
+  /* the mark's violet, kept for the logo and the occasional second accent */
+  --ns-violet:    #9b7cf0;
+  --ns-violet-bg: rgba(155,124,240,.13);
+
+  /* --- green now means one thing: free --- */
+  --ns-free:    #34d399;
+  --ns-free-bg: rgba(52,211,153,.12);
+  --ns-free-bd: rgba(52,211,153,.28);
+
+  /* --- supporting, matched to the app's existing mark-band roles --- */
+  --ns-blue:  #6fa8ff; --ns-blue-bg:  rgba(111,168,255,.12);
+  --ns-amber: #f5b544; --ns-amber-bg: rgba(245,181,68,.12);
+  --ns-pink:  #f47bb0; --ns-pink-bg:  rgba(244,123,176,.12);
+
+  /* --- type --- */
+  --ns-display: 'Archivo', -apple-system, system-ui, sans-serif;
+  --ns-ui:      'DM Sans', -apple-system, system-ui, sans-serif;
+  --ns-mono:    'DM Mono', ui-monospace, monospace;
+  --ns-display-w:  800;
+  --ns-display-tr: -.035em;
+
+  --ns-shadow: 0 1px 2px rgba(0,0,0,.4), 0 18px 44px -18px rgba(0,0,0,.8);
+}
+
+/* --------------------------------------------------------------------------
+   Bridge: the landing template's own variables now resolve to Night School,
+   so the existing elp- and eup- rules retheme without being rewritten.
+   -------------------------------------------------------------------------- */
+.elp-page.elp-page {
+  --elp-bg:     var(--ns-bg);
+  --elp-bg2:    var(--ns-card);
+  --elp-bg3:    var(--ns-surface);
+  --elp-bd:     var(--ns-bd);
+  --elp-bd2:    var(--ns-bd2);
+  --elp-tx:     var(--ns-ink);
+  --elp-tx-b:   var(--ns-ink2);
+  --elp-tx-c:   var(--ns-ink3);
+  --elp-tx-d:   var(--ns-ink4);
+  --elp-green:  var(--ns-brand);          /* the accent is violet now */
+  --elp-g-bg:   var(--ns-brand-bg);
+  --elp-g-bd:   var(--ns-brand-bd);
+  --elp-g-glow: var(--ns-brand-bd);
+  --elp-blue:   var(--ns-blue);
+  --elp-b-bg:   var(--ns-blue-bg);
+  --elp-b-bd:   var(--ns-brand-bd);
+  --elp-amber:  var(--ns-amber);
+  --elp-teal:   var(--ns-free);
+  --elp-t-bg:   var(--ns-free-bg);
+  --elp-t-bd:   var(--ns-free-bd);
+  --elp-purple: var(--ns-brand);
+  --elp-p-bg:   var(--ns-brand-bg);
+  --elp-font:    var(--ns-ui);
+  --elp-display: var(--ns-display);
+  --elp-mono:    var(--ns-mono);
+}
+
+/* The landing template hardcodes a few colours that the bridge cannot reach. */
+.elp-page .elp-btn-primary { background: var(--ns-brand); color: var(--ns-on-brand); }
+.elp-page .elp-btn-primary:hover { background: #059669; box-shadow: 0 4px 20px var(--ns-brand-bd); }
+.elp-page .elp-nav-cta { color: var(--ns-on-brand); }
+.elp-page .elp-preview-card { box-shadow: var(--ns-shadow); }
+.elp-page .elp-pki-text { color: var(--ns-ink2); }
+.elp-page .elp-cta-bg { background: radial-gradient(ellipse at 50% 50%, var(--ns-brand-bg) 0%, transparent 65%); }
+.elp-page .elp-topic-tile::before { background: linear-gradient(135deg, var(--ns-brand-bg), transparent); }
+.elp-page .elp-unit-cta { background: var(--ns-brand-bg); border-color: var(--ns-brand-bd); }
+.elp-page .eup-continue-card:hover .eup-cc-arrow { color: var(--ns-brand); }
+
+/* Headings take the display face at weight, not a serif. */
+.elp-page .elp-hero-title,
+.elp-page .elp-s-title,
+.elp-page .elp-cta-title,
+.elp-page .eup-topic-heading {
+  font-family: var(--ns-display);
+  font-weight: var(--ns-display-w);
+  letter-spacing: var(--ns-display-tr);
+}
+.elp-page .elp-hero-title em { font-style: normal; color: var(--ns-brand); }
+
+/* Mark-band pills follow the app's roles: 4 blue, 8 pink, 20 amber. */
+.elp-page .eup-mp-4  { background: var(--ns-blue-bg);  border-color: transparent; color: var(--ns-blue); }
+.elp-page .eup-mp-8  { background: var(--ns-pink-bg);  border-color: transparent; color: var(--ns-pink); }
+.elp-page .eup-mp-20 { background: var(--ns-amber-bg); border-color: transparent; color: var(--ns-amber); }
+
+/* --------------------------------------------------------------------------
+   Opt-in for the model-answer and resource pages, which use the app's tokens.
+   Overriding them inside this scope only leaves the app itself alone.
+   -------------------------------------------------------------------------- */
+.rl-night.rl-night {
+  --bg-primary:     var(--ns-bg);
+  --bg-card:        var(--ns-card);
+  --bg-section:     var(--ns-surface);
+  --bg-input:       var(--ns-surface);
+  --bg-card-hover:  var(--ns-bd);
+  --border-primary: var(--ns-bd);
+  --border-hover:   var(--ns-bd2);
+  --text-primary:   var(--ns-ink);
+  --text-secondary: var(--ns-ink2);
+  --text-tertiary:  var(--ns-ink3);
+  --text-muted:     var(--ns-ink4);
+  --text-dim:       var(--ns-ink4);
+  --accent-green:       var(--ns-brand);
+  --accent-green-light: var(--ns-brand);
+  --accent-blue:        var(--ns-blue);
+  --accent-amber:       var(--ns-amber);
+  background: var(--ns-bg);
+  color: var(--ns-ink);
+  font-family: var(--ns-ui);
+}
+
+
+/* ==========================================================================
+   Site masthead (rlh-*)
+   Shared by every public SEO page. The mark and wordmark are the app's own.
+   ========================================================================== */
+.elp-page.elp-page, .rl-night.rl-night { --rlh-h: 60px; }
+
+.rlh {
+  position: sticky; top: 0; z-index: 200;
+  height: var(--rlh-h);
+  display: flex; align-items: center; gap: 16px;
+  padding: 0 24px;
+  background: rgba(14,15,22,.88);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--ns-bd);
+}
+.rlh-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.rlh-mark { width: 30px; height: 30px; object-fit: contain; border-radius: 7px; flex-shrink: 0; }
+.rlh-id { display: flex; flex-direction: column; line-height: 1.05; }
+.rlh-name {
+  font-family: var(--ns-display); font-weight: var(--ns-display-w);
+  letter-spacing: var(--ns-display-tr); font-size: 16.5px; color: var(--ns-ink);
+}
+.rlh-board {
+  font-family: var(--ns-mono); font-size: 8.5px; text-transform: uppercase;
+  letter-spacing: .05em; color: var(--ns-ink4); margin-top: 3px; white-space: nowrap;
+}
+.rlh-right { margin-left: auto; display: flex; align-items: center; gap: 14px; }
+.rlh-crumb {
+  font-family: var(--ns-mono); font-size: 11px; color: var(--ns-ink4);
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+/* `.elp-page a { color: inherit }` is (0,1,1) and would win otherwise. */
+.elp-page a.rlh-cta, .rl-night a.rlh-cta, a.rlh-cta {
+  padding: 9px 17px; border-radius: 9px;
+  background: var(--ns-brand); color: var(--ns-on-brand);
+  font-family: var(--ns-ui); font-size: 12.5px; font-weight: 700;
+  white-space: nowrap; transition: background .15s;
+}
+.elp-page a.rlh-cta:hover, .rl-night a.rlh-cta:hover, a.rlh-cta:hover { background: #059669; }
+.elp-page a.rlh-brand .rlh-name, .rl-night a.rlh-brand .rlh-name { color: var(--ns-ink); }
+
+/* The old nav was fixed, so the hero and sections reserved space for it. */
+.elp-page .elp-section, .elp-page .elp-section-sm { padding-top: 44px; }
+.elp-page .elp-scroll-bar {
+  position: sticky; top: var(--rlh-h); z-index: 199;
+}
+
+@media (max-width: 720px) {
+  .rlh { padding: 0 16px; gap: 12px; }
+  .rlh-board, .rlh-crumb { display: none; }
+}
+
+/* The footer carried the same glowing dot; it uses the real mark now. */
+.elp-page .elp-footer-mark { width: 18px; height: 18px; object-fit: contain; border-radius: 4px; flex-shrink: 0; }
+.elp-page .elp-footer-logo { font-family: var(--ns-display); font-weight: var(--ns-display-w); letter-spacing: var(--ns-display-tr); }
+
+/* `.elp-page { overflow-x: hidden }` makes the page a scroll container, which
+   silently breaks `position: sticky` on the masthead and the progress bar —
+   the bar was scrolling away across the content. `clip` gives the same
+   overflow protection without establishing a scroll container. */
+.elp-page.elp-page { overflow-x: clip; }
+
+/* The hero's top padding exists in two places (base and a <=900px media rule),
+   both of which reserved room for the old fixed nav. */
+.elp-page .elp-hero { padding-top: 34px; }
+@media (max-width: 900px) { .elp-page .elp-hero { padding-top: 26px; } }
+
+/* .elp-page resets link decoration; the resource family never did, so the
+   masthead CTA rendered underlined there. */
+.rlh a, a.rlh-brand, a.rlh-cta { text-decoration: none; }
+.rl-night .rlh { margin-bottom: 18px; }

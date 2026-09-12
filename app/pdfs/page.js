@@ -1,5 +1,6 @@
 import { createAnonClient } from '@/lib/supabase-anon';
 import Link from 'next/link';
+import SiteHeader from '@/components/SiteHeader';
 
 export const metadata = {
   title: 'Edexcel IAL Revision PDFs — Free Downloads | Revvy Learn',
@@ -32,7 +33,8 @@ export default async function PdfsPage() {
   const categories = Object.keys(grouped);
 
   return (
-    <div className="resource-page">
+    <div className="resource-page rl-night">
+      <SiteHeader crumb="PDFs" />
       <div className="resource-page-header">
         <Link href="/" className="resource-back-link">&larr; Back to App</Link>
         <h1 className="resource-page-title">Useful PDFs</h1>

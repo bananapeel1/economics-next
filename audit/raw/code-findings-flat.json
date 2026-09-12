@@ -1,0 +1,1172 @@
+[
+ {
+  "lens": "pretest-completion-spacing",
+  "sev": "critical",
+  "cat": "retention",
+  "title": "Entire retention loop (review schedule, strength, completion flags, pre-test) lives only in localStorage; the one server write fails silently",
+  "file": "components/LearnModeTab.jsx",
+  "line": 200,
+  "fix": "Persist completion, review schedule and strength server-side keyed by user_id (a small user_section_state table: completed_at, review_interval_idx, next_due, reviews, quiz_accuracy, pretest_score, pretest_questions). Fix or delete /api/learn-mode/progress: either change last_result to TEXT or stop writing strings; check the upsert error and return 500 so the failure is visible. Hydrate localStorage from the server on login as a cache, not the source of truth.",
+  "impact": "A student who completes a topic on their school laptop and opens Revvy on their phone (or in incognito, or after Safari's 7-day ITP storage eviction, or after clearing site data) has: no completion dot in the sidebar, no strength bar, no scheduled reviews, no pre-test record, and the section re-opens at the DB-saved step with the pre-test gate suppressed only because isResuming is true. The 1/3/7/14-day spaced review promise is broken for anyone who is not on the exact same browser profile every time. Logged-in status changes nothing."
+ },
+ {
+  "lens": "pretest-completion-spacing",
+  "sev": "high",
+  "cat": "retention",
+  "title": "Nothing ever brings a student back for a due review; the only 'review due' banner is hidden on the screens a returning student actually lands on",
+  "file": "components/LearnModeTab.jsx",
+  "line": 289,
+  "fix": "Surface due learn-mode reviews on HomeScreen and on the CompletionScreen itself ('Your review of this topic is due tomorrow at ...'). Once the schedule is server-side, add a daily email/push digest of due reviews. Also render the banner above the pre-test gate and completion screen, not just the step view.",
+  "impact": "Day 1 after completing 'introductory-concepts', a student re-opens the app. Every section change lands on the Learn tab; if they open the section they finished, they see the Completion screen (no banner). If they open a new section they first hit the pre-test gate (no banner). Only once they are inside the step view of an unfinished section do they see '1 review due'. Nobody outside the app is told; the review exists only if the student stumbles into it."
+ },
+ {
+  "lens": "pretest-completion-spacing",
+  "sev": "high",
+  "cat": "bug",
+  "title": "Explain It Back always reads 0/1 with an empty bar on every completion screen because the attempt callback is never wired",
+  "file": "components/LearnModeTab.jsx",
+  "line": 390,
+  "fix": "Pass onExplainAttempt into ExplainItBackUpgraded and call it on submit (or on graded result for premium). Hide the Explain row when total is 0, and hide the 20% weight label unless a composite score is actually computed and shown.",
+  "impact": "Every student who answers at least one quiz or recall sees a 'Score Breakdown' in which 'Explain It Back 0/1' sits with an empty bar and a 20% weight, regardless of whether they wrote three paragraphs and got AI feedback. It reads as 'you failed this' or 'the app is broken'. Free users, who cannot get their explanation graded, are told they scored 0 on a component they were never allowed to complete."
+ },
+ {
+  "lens": "pretest-completion-spacing",
+  "sev": "high",
+  "cat": "pedagogy",
+  "title": "Strength meter maths guarantee a completed topic is amber on the completion screen, red within 2 days, ~11% after a week",
+  "file": "lib/strength.js",
+  "line": 42,
+  "fix": "Rebase the model: completion should land at a clearly positive value (e.g. 70-80) and decay should follow the scheduled interval (strength hits the 'review' threshold roughly when the review is due, not two days in). Feed inline quiz correctness, post-test and quick-fire results into quizAccuracy. Show 'Review due in N days' rather than a decaying percentage on the completion screen. Do not show a decaying bar in the sidebar next to a completion dot.",
+  "impact": "The first thing under 'Topic complete' is an amber bar saying '35% strength'. Coming back tomorrow it is 30%, then red. A student who completes five topics in a week sees a sidebar full of red slivers next to every green completion dot. The 14-day review interval the app schedules is incompatible with its own meter: by the time the review is due the meter says <10% even after a perfect previous review. Nothing the student does inside Learn Mode (inline quiz, explain-it-back, recalls, quick-fire, post-test) raises the meter except a SpacedReview or MixedReview."
+ },
+ {
+  "lens": "pretest-completion-spacing",
+  "sev": "medium",
+  "cat": "retention",
+  "title": "Post-test and Quick Fire results are discarded: they never affect strength, the review schedule, or the server",
+  "file": "components/learn-mode/PostTest.jsx",
+  "line": 34,
+  "fix": "On post-test and drill completion, call recordReview(subjectId, sectionId, score) and (once server-side) update the schedule: a strong post-test could push the first review from 1 day to 3.",
+  "impact": "A student who does the post-test and goes 1/3 -> 3/3 sees 'Perfect score! You've mastered this topic', then the strength meter above it still says 35% and tomorrow's review is still due. Effort in the optional activities has no visible consequence anywhere else in the app."
+ },
+ {
+  "lens": "pretest-completion-spacing",
+  "sev": "medium",
+  "cat": "trust",
+  "title": "Score Breakdown is component state: it disappears on revisit and double-counts on Retry; weights 50/30/20 label a composite that is never computed",
+  "file": "components/learn-mode/CompletionScreen.jsx",
+  "line": 86,
+  "fix": "Persist per-attempt scores with the completion record; reset scores in onRetry; drop the weight labels or compute and display the composite; require at least 3 quiz answers before the 'needs attention' callout.",
+  "impact": "First time: a breakdown with 'Quiz 0/1 50%' and a warning 'Quiz questions need attention' after a single wrong click. Tomorrow: the same screen with no breakdown at all. After Retry: 'Quiz 1/2' even though they answered the single question right the second time. The percentages imply a mastery score the app never calculates."
+ },
+ {
+  "lens": "pretest-completion-spacing",
+  "sev": "medium",
+  "cat": "trust",
+  "title": "Recall score counts only attempted widgets; dismissing with the x is invisible",
+  "file": "components/learn-mode/ReorderRecall.jsx",
+  "line": 75,
+  "fix": "Report skips to the parent (onComplete(null) or an onSkip prop) and show 'Recall 1 of 10 attempted, 1 correct'; de-duplicate by recall prompt so the spaced re-attempt updates rather than appends.",
+  "impact": "Skip nine reorders, check one: 'Recall 1/1' with a full bar. Do the same fill-in twice: 2/2. The number is technically not false but it does not measure what the label implies."
+ },
+ {
+  "lens": "pretest-completion-spacing",
+  "sev": "medium",
+  "cat": "pedagogy",
+  "title": "Same MCQ bank is reused for pre-test, inline quiz, spaced review (identical 5 forever), quick fire, and the Quiz tab; pre-test reveals the answers first",
+  "file": "components/learn-mode/PreTest.jsx",
+  "line": 90,
+  "fix": "Do not reveal correct answers on the pre-test (score only, or reveal after completion). Partition the bank: reserve questions not used in pre-test/inline for reviews, and re-sample review questions from the section at each interval rather than freezing them at completion. Retire an entry after the 14-day pass or extend to 30/60 days.",
+  "impact": "A section with 8 MCQs: the student sees three of them (with answers revealed) before learning, sees them again inline, again in the post-test, again in quick fire, again in the Quiz tab, and the same 5 every 1, 3, 7, 14, 14, 14... days. 'Improvement' on the post-test mostly measures having seen the green highlight 20 minutes earlier. Reviews become answer-recognition, not retrieval."
+ },
+ {
+  "lens": "pretest-completion-spacing",
+  "sev": "medium",
+  "cat": "ux",
+  "title": "Skipping the pre-test stores nothing, so the gate re-appears on the next visit at step 0",
+  "file": "components/learn-mode/PreTest.jsx",
+  "line": 119,
+  "fix": "Record the skip (e.g. { skipped: true, timestamp }) so the gate is shown once; consider making the pre-test opt-in ('Want to test what you know first?') rather than a gate, and offer the post-test from a fresh sample when no pre-test exists.",
+  "impact": "Student skips, reads step 1, closes the tab. Comes back: pre-test again. Given 167 of 192 starters of 'introductory-concepts' never left step 0, a meaningful share of them may be hitting this gate repeatedly. A student who skips loses the post-test with no warning."
+ },
+ {
+  "lens": "pretest-completion-spacing",
+  "sev": "low",
+  "cat": "bug",
+  "title": "Quick Fire shows 'Time's up!' when the student picks option A",
+  "file": "components/learn-mode/QuickFireDrill.jsx",
+  "line": 188,
+  "fix": "Use the last results entry: results[results.length-1]?.timedOut, or selected === null.",
+  "impact": "Every time the student answers A (in time), the timeout message appears under the options, contradicting the feedback colours."
+ },
+ {
+  "lens": "pretest-completion-spacing",
+  "sev": "low",
+  "cat": "retention",
+  "title": "Mixed review never advances the schedule and Review now only serves one entry per click",
+  "file": "components/ReviewMode.jsx",
+  "line": 217,
+  "fix": "Advance each section's schedule entry from the mixed review's per-section score; queue all due entries in one session.",
+  "impact": "A student who does a 10-question mixed review still sees 'N reviews due' afterwards. With three overdue topics they must click 'Review now' three times."
+ },
+ {
+  "lens": "ai-grading-tutor",
+  "sev": "high",
+  "cat": "ux",
+  "title": "ExplainItBack is a silent dead end for free students; the tutor fallback button is unreachable for everyone",
+  "file": "components/learn-mode/ExplainItBackUpgraded.jsx",
+  "line": 87,
+  "fix": "For free users add a non-AI close-the-loop: after typing, reveal the block's section keyIdea values (already in content) as 'Compare with the key ideas' plus a 2-3 item self-check, and call onExplainAttempt. Wire onExplainAttempt into the component. Either delete the dead tutor branch or make it a real upsell that preserves the typed text. Persist the draft per block in localStorage.",
+  "impact": "On the last step of every block (including step 0 of introductory-concepts where 167 of 192 users are stuck) the student is invited to explain in their own words and gets zero response of any kind. At completion their Explain It Back score reads 0 regardless of effort."
+ },
+ {
+  "lens": "ai-grading-tutor",
+  "sev": "high",
+  "cat": "bug",
+  "title": "practiceIndices are resolved against a marks-sorted array, so 39 of 64 blocks show the wrong practice question",
+  "file": "components/LearnModeTab.jsx",
+  "line": 113,
+  "fix": "Index practiceIndices into the raw practiceData array (or sort only for the legacy distributeItems fallback). Add a content-lint check that each block's referenced practice question shares vocabulary with the block title.",
+  "impact": "The practice question at the end of a block frequently has nothing to do with the block just studied, which makes the worked/guided/independent progression look random and undermines trust in the content."
+ },
+ {
+  "lens": "ai-grading-tutor",
+  "sev": "medium",
+  "cat": "performance",
+  "title": "maxTokens is not a valid option in AI SDK v6; every AI route runs with no output cap",
+  "file": "app/api/learn-mode/grade-explanation/route.js",
+  "line": 57,
+  "fix": "Rename to maxOutputTokens in all three routes. For grading use generateText with Output.object (zod schema) instead of regex parsing.",
+  "impact": "Grading output is uncapped (usually harmless since the schema is short, but a chatty model can run long and slow the 15s maxDuration). Tutor replies are capped only by the 'under 150 words' instruction; a model-answer request can stream a very long response and cost more than intended."
+ },
+ {
+  "lens": "ai-grading-tutor",
+  "sev": "medium",
+  "cat": "trust",
+  "title": "Grading prompt is generic Edexcel A-Level, has no section content, no key ideas, no mark scheme, and no retry on parse failure",
+  "file": "app/api/learn-mode/grade-explanation/route.js",
+  "line": 48,
+  "fix": "Pass the block's section keyIdea, misconception and examMatters fields as grading context; say IAL; use Output.object with a zod schema and one automatic retry; cap explanation at ~1500 chars; align model with the rest of the app.",
+  "impact": "A premium student's feedback can praise or penalise things the notes never covered, and cannot flag a misconception the section explicitly warns about. Parse failures surface as a generic error; the student must click Grade again manually (the button remains because feedback stays null)."
+ },
+ {
+  "lens": "ai-grading-tutor",
+  "sev": "medium",
+  "cat": "pedagogy",
+  "title": "InlinePractice never lets the student write; all three modes are read-only views of the same guidance text",
+  "file": "components/learn-mode/InlinePractice.jsx",
+  "line": 48,
+  "fix": "Add an optional answer box with a self-mark checklist generated from the guidance paragraphs (each '(n marks)' fragment becomes a tick box). Count it toward completion. For free users show the tutor button as a real paywall upsell rather than hiding it. The existing WrittenQuestionCard plus /api/written-practice/evaluate (already IAL AO-based) could be reused for premium.",
+  "impact": "For a 20-mark Evaluate question a free student reads the question, clicks reveal, reads a mark-allocated skeleton, and moves on. No writing, no self-marking, no model answer. The 'practice' card practises nothing."
+ },
+ {
+  "lens": "ai-grading-tutor",
+  "sev": "medium",
+  "cat": "retention",
+  "title": "InlineQuiz: wrong answers feed only a local completion counter; confidence data is written but never read; remediation code is dead",
+  "file": "components/learn-mode/InlineQuiz.jsx",
+  "line": 30,
+  "fix": "Feed wrong answers into the localStorage review schedule already created on completion, and into the mistakes tab for premium. Either author remediation questions or remove the dead code. Remove the 4s auto-dismiss or start it after the explanation is scrolled into view. Use confidence x correctness to prioritise the QuickFireDrill.",
+  "impact": "A student who gets the MCQ wrong sees the explanation, then the wrong answer vanishes from the system: it does not reappear in reviews, mistakes, or the post-test, and the 'How sure were you' click changes nothing later."
+ },
+ {
+  "lens": "ai-grading-tutor",
+  "sev": "medium",
+  "cat": "trust",
+  "title": "Tutor system prompt has the wrong Economics unit range, no section content, and contradicts the practice guidance on essay structure",
+  "file": "app/api/chat/route.js",
+  "line": 96,
+  "fix": "Fix unit range to WEC11-WEC14; inject the section's keyIdeas and examMatters into the system prompt; align 20-mark structure guidance with content; make the empty-state copy subject-aware and add Business quick prompts; parse the JSON error body client-side or return plain text.",
+  "impact": "A premium Business student opens a tab titled AI Economics Tutor with Economics-flavoured framing. The tutor cannot reference what the student just read and can confidently give advice that differs from the notes and practice guidance. Hitting the daily limit shows a raw JSON blob."
+ },
+ {
+  "lens": "ai-grading-tutor",
+  "sev": "low",
+  "cat": "performance",
+  "title": "In-memory rate limiter does not enforce limits on Vercel; chat route duplicates it with a second Map",
+  "file": "lib/rate-limit.js",
+  "line": 7,
+  "fix": "Move both limits to a shared store (Supabase table with a daily counter, or Vercel KV/Upstash). Have chat/route.js import lib/rate-limit.js so there is one implementation.",
+  "impact": "No direct student harm; the 50/day grading and 30/day tutor limits are advisory only, so cost exposure is unbounded for a determined user. Not a cause of the step-0 drop-off."
+ },
+ {
+  "lens": "ai-grading-tutor",
+  "sev": "low",
+  "cat": "bug",
+  "title": "Subscription lookup uses .single(); a user with more than one user_subscriptions row is treated as free",
+  "file": "app/api/learn-mode/grade-explanation/route.js",
+  "line": 24,
+  "fix": "Use .order('created_at', {ascending: false}).limit(1).maybeSingle(), or filter status = 'active' first. Verify with a count of user_id duplicates.",
+  "impact": "If duplicates exist (e.g. a cancelled row plus an active row), a paying student sees the grade button (client AuthProvider may resolve differently) and then a 403 error on click."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "high",
+  "cat": "bug",
+  "title": "Progress rows are auto-written at step 0 on any section visit, and the saved value is the current step, not the furthest",
+  "file": "components/StudyApp.jsx",
+  "line": 572,
+  "fix": "Only save when activeTab === 'learn-mode' and the student has actually rendered a step; send Math.max(prevFurthest, currentStep) (keep furthest separately in state), and have the API do GREATEST(furthest_step, new) on conflict.",
+  "impact": "A student who clicks through the sidebar to look at three topics' overviews is recorded as having 'started' three topics at step 0. The live stat '825 of 1093 section starts never advanced past step 0' is therefore heavily inflated by overview visits and cannot be read as Learn Mode abandonment. A student who goes back two steps to re-read and then leaves resumes from the earlier step next time, not their furthest."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "high",
+  "cat": "bug",
+  "title": "total_steps is the block count while furthest_step is a flat step index, so overview % and 'Completed' ticks are wrong on half the sections",
+  "file": "components/StudyApp.jsx",
+  "line": 575,
+  "fix": "Have LearnModeTab report its flatSteps.length up to StudyApp (e.g. via onStepChange({step,total})) and save that as total_steps; clamp progressPct to 100; backfill existing rows by recomputing total_steps from content.",
+  "impact": "On macroeconomic-objectives-policies a student at step 4 of 11 sees a green 'Completed' tick in the sidebar and 100% on the overview hero; at step 7 the hero text reads '160%' (the bar is clipped by overflow:hidden but the number is not). Progress the student can see contradicts the 'Step 7 of 11' counter inside Learn Mode."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "high",
+  "cat": "bug",
+  "title": "/api/learn-mode/progress can never write (string into boolean last_result) and even a successful write would be invisible to the dashboard",
+  "file": "app/api/learn-mode/progress/route.js",
+  "line": 37,
+  "fix": "Either drop this endpoint and write Learn Mode events to user_content_progress (add completed_at, pretest/posttest columns), or create a dedicated learn_mode_progress table; check and log upsert errors; if keeping the lm- convention, strip it in the dashboard and decide explicitly whether Learn Mode steps count toward mastery and streak.",
+  "impact": "Nothing a student does inside Learn Mode reaches the server-side progress model. Zero rows with 'lm-' prefix exist in the live DB. The comment 'feeds into the learning progress dashboard' is false; if the column were fixed without also fixing the prefix handling, Learn Mode would start inflating streaks and 'Overdue' counts without touching mastery."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "high",
+  "cat": "retention",
+  "title": "Home 'Mastery', 'Streak', 'This Week' and /progress ignore Learn Mode, Quiz tab and Flashcards tab entirely",
+  "file": "app/api/progress/dashboard/route.js",
+  "line": 48,
+  "fix": "Define one mastery model that ingests Learn Mode inline quiz/recall results, Quiz tab attempts and Flashcards tab reviews alongside Smart Practice; compute streak from any learning activity (including user_content_progress.updated_at); until then, hide the Mastery/Streak tiles for users with no practice rows rather than showing zeros.",
+  "impact": "A student who completes every Learn Mode topic in Unit 1, scores well on inline quizzes and the completion Quick-Fire drill, opens Home and sees Mastery 0%, Streak 0, This Week 0, and every topic red at 0% labelled NEW. The product's own scoreboard tells the most engaged Learn Mode user they have done nothing. Because Learn Mode is the recommended 'START HERE' path, this is the default experience for most logged-in users."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "high",
+  "cat": "retention",
+  "title": "No exam date, unit selection, subject choice, or any onboarding after sign-up; new users land on the first Economics section's launchpad",
+  "file": "app/auth/callback/route.js",
+  "line": 7,
+  "fix": "Add a 2-step first-run: pick subject (Economics/Business) and units being sat this series, plus exam session (Jan/June) and optional date; store in a user_profile table; make Home the post-login landing with a 'Next up' card computed from those choices.",
+  "impact": "A Business student in an international school signs up, confirms email, and is dropped on 'Introductory Concepts' in Economics with 'RECOMMENDED · START HERE'. A Year 12 student taking only WEC11/WEC12 sees all four units and no way to say so. Nobody is asked when their exam is (Jan vs June series), so no countdown, pacing, or 'you have N topics and M weeks' framing exists. The 'introductory-concepts' section receiving 192 of 1093 starts is consistent with everyone being funnelled to the same first section regardless of subject or unit."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "high",
+  "cat": "bug",
+  "title": "Every section change forces the Learn tab, which combines with the PreTest gate to interrupt browsing; HomeScreen/subject-switch navigation bypasses the resume logic and carries a stale step into the new section",
+  "file": "components/StudyApp.jsx",
+  "line": 617,
+  "fix": "Route all section navigation through handleSectionChange (pass it to HomeScreen and use it in handleSubjectChange); preserve the current tab on section change when it is a free content tab (notes/diagrams/practice), defaulting to Learn only from the overview hero; clamp currentStep to totalSteps-1 inside LearnModeTab as a guard.",
+  "impact": "(a) A student reading Diagrams across five topics is bounced to Learn on each sidebar click and, for any topic they have not started, is met by a 3-question pre-test before seeing anything. (b) From Home, 'Continue Learning' or 'Practice <weak topic>' can open a section showing 'Step 9 of 5', a 180% progress bar, an empty body and a 'Complete topic' button. (c) Switching subject in the sidebar drops the student into the first section of the other subject at whatever step they were on before."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "medium",
+  "cat": "retention",
+  "title": "Cross-device resume and pre-test state are localStorage-only; the DB step is never applied on first load",
+  "file": "components/StudyApp.jsx",
+  "line": 299,
+  "fix": "On mount, once savedProgress arrives, set learnModeSection to max(local, db) for the active section and show the resume banner; persist pretest/completion/review-schedule to the server for logged-in users (a user_learn_state JSON column keyed by section would suffice).",
+  "impact": "A student who worked on their laptop at school and opens the app on their phone at home lands on step 1 of the same section, is shown the pre-test again, sees no completion ticks or due reviews, and the Home 'Continue Learning' button does nothing if last-visited-section is missing (HomeScreen.jsx:178 silently no-ops). Everything that makes the app feel like 'their' app is tied to one browser."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "medium",
+  "cat": "retention",
+  "title": "Nothing surfaces due spaced reviews outside the Learn tab, and the app runs two unconnected review systems",
+  "file": "components/LearnModeTab.jsx",
+  "line": 277,
+  "fix": "Show a due-review count on Home and in the sidebar header; consolidate the two schedules (move Learn Mode review entries to the server); add a daily digest email via Supabase edge function or Resend for users with due reviews or an approaching exam date.",
+  "impact": "The 1/3/7/14-day reviews scheduled at topic completion (LearnModeTab.jsx:204-217) are only discoverable if the student happens to open Learn Mode on a day one is due. Nothing pulls them back: no email 'your Demand review is due', no badge on the sidebar or Home. Median activity span of about one hour for practice users is consistent with a product that has no return trigger."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "medium",
+  "cat": "ux",
+  "title": "Inside Learn Mode the premium delta is nearly invisible: free users never see the locked buttons, and a dead branch means they get no feedback and no upsell after 'Explain it back'",
+  "file": "components/learn-mode/ExplainItBackUpgraded.jsx",
+  "line": 87,
+  "fix": "Render disabled/locked versions of 'Grade my explanation' and 'Model answer from Tutor' for free users with a one-line value prop and a trial CTA; fix the dead branch; on CompletionScreen, make the primary CTA 'Next topic' and demote or gate-label 'Try the quiz'; decide whether Quick Fire over the full bank should remain free given the Quiz tab is paywalled.",
+  "impact": "A free student types a 200-word explanation and the box just sits there: no grade, no 'unlock AI feedback' prompt, no acknowledgement. They finish a topic, drill all 25 quiz questions for free in Quick Fire, click 'Try the quiz' and hit a paywall for the same 25 questions. The premium offer looks arbitrary from inside the core loop, and the one moment of highest motivation (completion) ends in a wall rather than a next topic."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "medium",
+  "cat": "ux",
+  "title": "Overview says '{blocks} steps' while Learn Mode counts flat steps, so the numbers disagree on screen",
+  "file": "components/StudyApp.jsx",
+  "line": 79,
+  "fix": "Compute the flat step count once (shared util from learn-mode/utils) and use it in both places; or drop the count and show estimated minutes.",
+  "impact": "On business financial-planning the launchpad promises '5 steps'; clicking Start shows 'Step 1 of 8'. The student's first data point about how long a topic takes is wrong by 60%."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "medium",
+  "cat": "trust",
+  "title": "Free vs premium messaging contradicts itself across overview, upgrade page and paywall",
+  "file": "app/upgrade/page.js",
+  "line": 108,
+  "fix": "Single source of truth for the feature matrix (one constant consumed by overview, upgrade page, paywall); pass trialEligible from /api/subscription and switch copy to 'Subscribe' when false; verify or remove the 1,200+ claim.",
+  "impact": "A student told 'no card needed' who is then asked for a card (because they trialled last term) loses trust at the checkout. A student who read 'Model answers' as free on the overview hits a paywall on the page. The audience is 16-18-year-olds paying with parents' cards; inconsistent claims are the kind of thing that ends in a chargeback or a bad word in a school group chat."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "low",
+  "cat": "ux",
+  "title": "'content' tab exists in the app but not in the tab bar, leaving no active tab and no obvious way back",
+  "file": "components/StudyApp.jsx",
+  "line": 25,
+  "fix": "Either add Content to the tab bar (free) or retire it and route 'View all content' to Notes.",
+  "impact": "Student clicks 'View all content', the tab strip shows nothing selected, and 'Learn' looks un-selected even though they were just in it. Mild disorientation on a screen that is meant to reduce it."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "low",
+  "cat": "ux",
+  "title": "Two competing completion indicators in the sidebar that disagree, and anonymous users get only one",
+  "file": "components/Sidebar.jsx",
+  "line": 119,
+  "fix": "Show one status derived from a single source (server for logged-in, local otherwise) once total_steps is fixed.",
+  "impact": "A section can show a clock 'In progress' icon next to a green 'Learn Mode complete' dot, or a 'Completed' tick with no dot. Students learn to ignore both."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "low",
+  "cat": "ux",
+  "title": "Recommendation card tells brand-new users to 'Continue where you left off'",
+  "file": "components/HomeScreen.jsx",
+  "line": 5,
+  "fix": "Treat overall.total===0 or no user_content_progress rows as 'start' and point at the first section of the chosen subject/unit.",
+  "impact": "First ever visit to Home reads as if they have history they do not have; the one place that could say 'Start with Unit 1, Topic 1' instead says 'continue'."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "low",
+  "cat": "performance",
+  "title": "isPremium is false until /api/subscription (which calls Stripe twice) resolves, so premium users briefly see padlocks and the Tutor paywall",
+  "file": "app/api/subscription/route.js",
+  "line": 60,
+  "fix": "Seed isPremium server-side (layout already fetches the user; fetch the subscription row too and pass as initialSubscription), and move Stripe reconciliation to a webhook/cron rather than every GET.",
+  "impact": "A paying student who reloads on the Tutor tab sees the 'Unlock Tutor' paywall for the duration of two Stripe round-trips, then it disappears. It reads as 'my subscription broke'."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "high",
+  "cat": "pedagogy",
+  "title": "Same recall shown twice back-to-back on every single-section step",
+  "file": "components/LearnModeTab.jsx",
+  "line": 346,
+  "fix": "Compute prevRecall only from a previous-step section that was NOT already used as that step's immediate recall (e.g. if prevStep.sections.length === 1, prevRecall = null), or switch to: immediate = every section's recall on its own step, spaced = a recall from >= 2 steps back.",
+  "impact": "Student completes a reorder, clicks Next, and the first thing on the new step is the exact same reorder in the exact same shuffled order. Feels like a bug, trains them to dismiss recalls, and inflates the recall score on the completion screen."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "medium",
+  "cat": "pedagogy",
+  "title": "Second section's recall is deferred to the next step, and never shown on the final step",
+  "file": "components/LearnModeTab.jsx",
+  "line": 398,
+  "fix": "Render every section's recall on the step that teaches it (after the section or at step end), and use the top-of-step slot for a genuinely older recall (2+ steps back or from the review schedule).",
+  "impact": "Half the authored recall exercises appear before the student has seen any heading on the new step, and the last block's second recall is silently lost. No true spacing happens."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "high",
+  "cat": "ux",
+  "title": "Spaced recall is the first element on a new step, above the title, with no 'from last step' cue",
+  "file": "components/LearnModeTab.jsx",
+  "line": 355,
+  "fix": "Either move the spaced recall below the new content, or wrap it in a card header like 'Recall from step 1: Positive and normative statements' using prevStepData.sections[last].title, and show the step's headings first.",
+  "impact": "Student lands on 'Step 2 of 5' and is immediately asked to fill blanks about positive/normative statements with no heading telling them what step 2 is about. This is the single biggest source of the 'disjointed' feeling."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "medium",
+  "cat": "ux",
+  "title": "Block (chapter) title is never rendered on structured steps",
+  "file": "components/LearnModeTab.jsx",
+  "line": 389,
+  "fix": "Render a block eyebrow on every structured step (e.g. `<div className=\"lm-block-title\">{step.blockTitle} · part {n} of {m}</div>` above the first h2) and use isFirstInBlock to style chapter starts.",
+  "impact": "In measures-economic-performance step 2 the student sees only h2 'GDP per capita' and is then asked to 'Explain it back: Gross Domestic Product (GDP)' — a title they have never seen. No sense of which chapter they are in or how many steps it spans."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "high",
+  "cat": "content-pipeline",
+  "title": "practiceIndices resolve against a marks-sorted array, so the pinned practice question is usually the wrong one",
+  "file": "components/LearnModeTab.jsx",
+  "line": 110,
+  "fix": "Index practiceIndices into the original practiceData (`practiceData[pi]`) and drop the sort in the pinned path; keep the sort only for the legacy distributeItems fallback.",
+  "impact": "The 'Guided practice' on the PPF step is about model assumptions; the 'Quick check' on Economic Systems is about the basic economic problem. Questions look randomly attached to the wrong topic."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "medium",
+  "cat": "content-pipeline",
+  "title": "diagramRef pinning matches only 15 of 39 refs and disables the title fallback, leaving 15 sections with zero diagrams in Learn Mode",
+  "file": "components/LearnModeTab.jsx",
+  "line": 86,
+  "fix": "Fall back per block: if diagramRef is absent or unmatched, try matchDiagramsToBlocks word-overlap for that block; add a build-time/admin check that every diagramRef resolves. Same per-block fallback for quizIndices (currently 55/170 blocks have none).",
+  "impact": "Diagram-heavy macro topics show no diagram during learning even though the Diagrams tab has them; a broken ref in one block silently hides the diagram."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "critical",
+  "cat": "bug",
+  "title": "DB progress stores current step (not furthest) against BLOCK count, so completion/percent are wrong for any section with 3+-section blocks",
+  "file": "components/StudyApp.jsx",
+  "line": 575,
+  "fix": "Have LearnModeTab report { activeStep, furthestStep: max(prev, step), totalSteps: flatSteps.length } via onStepChange/handleStepChange, persist furthest = Math.max(existing, step) server-side, and clamp percent to 100.",
+  "impact": "Overview card says 150% / 'completed' halfway through a topic; pressing Start over wipes progress; cross-device resume lands on wrong step; progress analytics are unreliable."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "high",
+  "cat": "retention",
+  "title": "A progress row at step 0 is written on every section open, before the student reads anything",
+  "file": "components/StudyApp.jsx",
+  "line": 571,
+  "fix": "Only save when learnModeSection changes from a user action (skip the initial effect run, or save from navigateToStep), and record a separate event for pretest done/skipped.",
+  "impact": "Not a student-facing bug, but it means the '75% never advanced past step 0' metric conflates 'opened the section' with 'started learning and stalled', and cannot distinguish pretest abandonment from step-1 abandonment."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "high",
+  "cat": "bug",
+  "title": "Skipping the PreTest is not persisted; the gate reappears on Back-to-step-1, Restart, Retry and reload",
+  "file": "components/learn-mode/PreTest.jsx",
+  "line": 127,
+  "fix": "Write the revvy_pretest key with {skipped:true} on skip; only show the gate when currentStep === 0 AND the section has never been started; ignore keyboard nav while showPretest or isComplete.",
+  "impact": "A student who skipped the pretest and later presses Back or Restart is suddenly shown 'Quick pre-test' mid-topic; on desktop, an accidental arrow key during the pretest jumps them into the middle of the content."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "medium",
+  "cat": "bug",
+  "title": "Keyboard navigation uses a stale closure and stays active on the PreTest and Completion screens",
+  "file": "components/LearnModeTab.jsx",
+  "line": 174,
+  "fix": "Use a ref for isTransitioning, include showPretest/isComplete in the guard, and ignore keydown when document.activeElement is inside .lm-recall-card/.lm-quiz-card or a modal.",
+  "impact": "Desktop students can skip past the pretest or lose an in-progress quiz/recall by pressing an arrow key; step counter can desync from what is on screen."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "low",
+  "cat": "ux",
+  "title": "Step transition: 350ms freeze then hard cut; enter/exit animations are defined but never applied",
+  "file": "components/LearnModeTab.jsx",
+  "line": 157,
+  "fix": "Apply step-exit/step-enter classes around onStepChange, or drop the 350ms delay and use the enter animation only; render a real multi-node rail (or block-level dots) with onClick for visited steps.",
+  "impact": "Every Next is a brief freeze followed by an abrupt jump to a page whose top is a recall widget; Back gives no acknowledgement. The rail looks clickable but does nothing and conveys no position."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "medium",
+  "cat": "pedagogy",
+  "title": "2-per-step pairing yields ~600-word steps that also carry all end-of-block widgets, with an uneven 600/300 rhythm on 3-section blocks",
+  "file": "components/LearnModeTab.jsx",
+  "line": 54,
+  "fix": "Make one section = one step (or pair only when combined words < ~350), keep end-of-block widgets on a dedicated 'check-in' step, and base the progress bar on flat steps + widgets completed.",
+  "impact": "Each step is an 8-12 minute wall; 'Step 1 of 5' feels misleadingly short; on 3-section blocks the short step is the heavy one, so effort per step is unpredictable. Combined with the pretest this explains stalling at step 0/1."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "low",
+  "cat": "ux",
+  "title": "Resume banner only appears after an in-app section change, not on reload/deep link; DB pointer beats local pointer",
+  "file": "components/StudyApp.jsx",
+  "line": 632,
+  "fix": "Compute isResuming from step > 0 on mount too; take Math.max(dbStep, localStep) and treat DB furthest as a high-water mark.",
+  "impact": "A student reloading at step 4 is dropped straight into step 4 with no 'continue or restart' choice; a student switching sections quickly can be sent back a step on return."
+ },
+ {
+  "lens": "shell-onboarding-retention",
+  "sev": "low",
+  "cat": "trust",
+  "title": "/api/learn-mode/progress writes never succeed and its GET has no consumer",
+  "file": "app/api/learn-mode/progress/route.js",
+  "line": 38,
+  "fix": "Delete the endpoint or move completion + pre/post scores into user_content_progress (add completed_at, pretest_score, posttest_score columns) and read them in the dashboard.",
+  "impact": "None directly; one wasted failing request per step and a misleading 'feeds the progress dashboard' comment. Completion is only stored in localStorage (197), so it does not survive a device change."
+ },
+ {
+  "lens": "recall-widgets",
+  "sev": "high",
+  "cat": "bug",
+  "title": "FillInRecall can never be completed for 6 live sections (Check stays disabled; only exit is the unlabelled ×)",
+  "file": "components/learn-mode/FillInRecall.jsx",
+  "line": 16,
+  "fix": "Track placement by chip index, not word string (`placed` holds indices into shuffledWords; availableWords filters by index). Validate at content load or in a script: number of '___' occurrences across template must equal answers.length and each part must contain at most one '___' (or make blankIdx count '___' occurrences, not parts). Add a content-lint that fails on the 6 sections above.",
+  "impact": "Student fills the visible blanks, the Check button stays greyed out with no message, the word bank has disappeared, and the only way out is the × in the corner. Nothing tells them the widget is broken; it reads as 'I did something wrong'."
+ },
+ {
+  "lens": "recall-widgets",
+  "sev": "high",
+  "cat": "bug",
+  "title": "Multi-word blanks written as '___ ___' silently delete the rest of the sentence (10 template lines across 8 sections)",
+  "file": "components/learn-mode/FillInRecall.jsx",
+  "line": 79,
+  "fix": "Render all segments: `part.split('___')` → interleave text segments with blanks, incrementing a running blank counter; or normalise content so a multi-word answer uses a single '___'. Add the lint from the previous finding.",
+  "impact": "The fill-in line reads as a bare blank with no sentence, e.g. just '[____]' or '[____]-'. The student has no cue what the blank means and the 'store of value, unit of account, standard of deferred payment' chain loses its third function."
+ },
+ {
+  "lens": "recall-widgets",
+  "sev": "high",
+  "cat": "content-pipeline",
+  "title": "62% of diagramRefs never match a diagram, so the block silently renders no diagram (24 of 39 refs; all 3 Business refs)",
+  "file": "components/LearnModeTab.jsx",
+  "line": 98,
+  "fix": "Match on a stable diagram `id`/slug and normalise both sides (lowercase, strip non-alphanumerics) before substring comparison; in dev, `console.warn` unmatched refs; add a lint that reports refs without a diagram. Author the 3 missing Business diagrams or drop the refs.",
+  "impact": "An Economics student finishing the 'Output Gaps' or 'The AD Curve' block, which the content author explicitly tagged for a diagram, sees no diagram at all; a Business student in The Market gets no demand/supply/equilibrium diagram even though the block asks for one. The founder's 'diagrams are passive' concern is preceded by 'diagrams are absent' for most tagged blocks."
+ },
+ {
+  "lens": "recall-widgets",
+  "sev": "high",
+  "cat": "pedagogy",
+  "title": "'Spaced' recall is often the identical widget shown twice, seconds apart, and counted twice (54 of 237 steps)",
+  "file": "components/LearnModeTab.jsx",
+  "line": 346,
+  "fix": "Track answered recalls by section id in a Set; never render a recall that has been shown in the last N steps; for 1-section steps skip the immediate recall and rely on the spaced showing. Randomise the reorder start order on mount (seeded by attempt).",
+  "impact": "Student answers a reorder, taps Next, and the first thing on the new screen is the same reorder in the same scrambled state. It feels like a bug, doubles the recall count on the completion screen, and the 'spaced' label is untrue (the gap is one tap)."
+ },
+ {
+  "lens": "recall-widgets",
+  "sev": "high",
+  "cat": "pedagogy",
+  "title": "Fill-in is a prefix-matching task, not recall: closed 3-word bank + 'Pr____' hints + answer words visible in the template",
+  "file": "components/learn-mode/FillInRecall.jsx",
+  "line": 92,
+  "fix": "Add distractor chips (2-3 plausible wrong terms from the section's glossary) so elimination fails; make hints semantic ('the term for satisfaction from one more unit') or first-letter only without length; reject templates whose non-blank text contains an answer word; consider typed input with fuzzy match for premium.",
+  "impact": "A student who knows nothing about the topic scores 3/3 by matching first letters to chips. The score is inflated and the completion screen tells them recall is strong when it was never tested."
+ },
+ {
+  "lens": "recall-widgets",
+  "sev": "medium",
+  "cat": "retention",
+  "title": "Dismiss (×) records nothing; the recall score on the completion screen only counts what the student chose to attempt",
+  "file": "components/learn-mode/ReorderRecall.jsx",
+  "line": 75,
+  "fix": "Treat dismiss as a skip: call `onComplete(null)` and track `{correct,total,skipped}`; show 'Skipped 6 recalls' on the completion screen and feed skipped ids into the 1/3/7/14-day review scheduler. Replace × with a visible 'Skip' text button.",
+  "impact": "Dismissing is free and invisible, so the path of least resistance is to × every recall; the completion screen then either hides the score or reports a flattering ratio. Nothing is persisted (the /api/learn-mode/progress write fails per the product context), so dismissed recalls never come back as review items."
+ },
+ {
+  "lens": "recall-widgets",
+  "sev": "medium",
+  "cat": "pedagogy",
+  "title": "ReorderRecall gives one attempt, no retry, and 'Correct order' with no reason; a single wrong swap is a fail",
+  "file": "components/learn-mode/ReorderRecall.jsx",
+  "line": 61,
+  "fix": "Allow 'Try again' after a wrong check (keep correct items locked, unlock wrong ones); show partial-credit ('3 items are one place off'); add an optional `why` string per correctOrder item in content so the wrong-state panel can render a one-line rationale per step.",
+  "impact": "Near-miss and total-miss look the same, and the only feedback is the answer key. The student learns 'I was wrong', not the causal chain the widget is supposed to teach, and cannot try again to consolidate."
+ },
+ {
+  "lens": "recall-widgets",
+  "sev": "medium",
+  "cat": "content-pipeline",
+  "title": "19 of 131 reorder prompts ask for an order that has no canonical answer",
+  "file": "scratchpad/db/sections/business__entrepreneurs-leaders.json",
+  "line": 1,
+  "fix": "Content rule: reorder only for genuine sequences (process steps, causal chains, calculation order). Convert rankings to a 'sort into two groups' or fill-in; convert 'match X to Y' to a pairing widget. Lint on prompt keywords rank/most/least/important/typical.",
+  "impact": "A student who understands the topic can still be marked wrong for a defensible order, which is the demotivation the founder heard in feedback. It also teaches false precision (there is no spec-sanctioned ranking of PED factors)."
+ },
+ {
+  "lens": "recall-widgets",
+  "sev": "medium",
+  "cat": "accessibility",
+  "title": "Recall card text colours are hard-coded for dark theme; near-invisible in light theme",
+  "file": "app/globals.css",
+  "line": 2704,
+  "fix": "Replace literal colours with tokens (`var(--accent-purple)`, `var(--text-secondary)`) and define light/dark values in the :root / [data-theme=\"dark\"] blocks.",
+  "impact": "A student who switches to light mode (common in bright classrooms, on phones in daylight) sees the recall prompt and the word-bank chips as faint lavender on white; the fill-in becomes unreadable."
+ },
+ {
+  "lens": "recall-widgets",
+  "sev": "medium",
+  "cat": "ux",
+  "title": "Reorder arrows and dismiss are far below touch-target size; swap semantics differ from the drag mental model",
+  "file": "app/globals.css",
+  "line": 2834,
+  "fix": "Minimum 44x44 targets (`min-width/height: 44px`), one combined 'move up/down' control, or drop arrows and make tap-select then tap-position an insert (splice) not a swap. Make the instruction 13px and non-italic.",
+  "impact": "On a phone the student either misses the tiny arrow and selects the card instead (purple ring appears, unclear why), or hits ▲ when aiming for ▼. Swapping instead of inserting leads to 'I moved it up and something else jumped to the bottom'."
+ },
+ {
+  "lens": "recall-widgets",
+  "sev": "medium",
+  "cat": "ux",
+  "title": "FillIn drag-and-drop is dead code on every platform (chips are never draggable), so tap is the only path and it cannot target a blank",
+  "file": "components/learn-mode/FillInRecall.jsx",
+  "line": 18,
+  "fix": "Delete the DnD handlers and cursor:grab; add 'select a blank, then tap a chip' (highlight the active blank) and tap-on-filled-blank returns the word to the bank; or implement pointer-event drag like DiagramLabelDrill.",
+  "impact": "Tap works on iOS/Android (the good news) but a student who tries to drag, as the cursor and the file header 'Drag-and-Drop Label Recall' promise, sees nothing happen. Correcting a mistake in an earlier blank is a clear-and-refill dance."
+ },
+ {
+  "lens": "recall-widgets",
+  "sev": "medium",
+  "cat": "content-pipeline",
+  "title": "Three shipped components are never mounted: InteractiveDiagram, DiagramLabelDrill, RecallCheckpoint",
+  "file": "components/LearnModeTab.jsx",
+  "line": 11,
+  "fix": "Remove the RecallCheckpoint import and dead CSS; delete InteractiveDiagram (mouse-only); wire DiagramLabelDrill behind a 'Label this diagram' button on InlineDiagram for SVG diagrams that have `text.draggable` labels (audit how many do).",
+  "impact": "The only interaction a student gets with a diagram is 'tap to enlarge'. The label drill that would make diagrams active exists, tested with touch in mind, but nobody sees it."
+ },
+ {
+  "lens": "recall-widgets",
+  "sev": "low",
+  "cat": "ux",
+  "title": "'Tap to enlarge' on a phone opens a modal no larger than the inline diagram; no zoom",
+  "file": "components/learn-mode/InlineDiagram.jsx",
+  "line": 118,
+  "fix": "On viewports <768px render the modal SVG at a fixed larger width inside an overflow:auto container (2x with horizontal scroll), or use a pinch-zoom lib; hide the 'Tap to enlarge' hint when the modal would not be bigger.",
+  "impact": "Student taps a dense AD/AS diagram expecting to read small labels; the modal is the same size, darker, with a × in the corner. It reads as broken."
+ },
+ {
+  "lens": "recall-widgets",
+  "sev": "low",
+  "cat": "ux",
+  "title": "Wrong fill-in answers are overwritten by the correct word, so the student cannot see what they put",
+  "file": "components/learn-mode/FillInRecall.jsx",
+  "line": 92,
+  "fix": "Show `word` struck through with the correct answer beside it; drop the redundant answer strip.",
+  "impact": "After checking, the student sees a red box containing the right answer and has no record of their own mistake to reflect on."
+ },
+ {
+  "lens": "notes-rendering",
+  "sev": "high",
+  "cat": "bug",
+  "title": "Every subsection title is rendered twice, back-to-back (h2 then h3)",
+  "file": "components/LearnModeTab.jsx",
+  "line": 367,
+  "fix": "Remove the `<h2>` at LearnModeTab.jsx:367 or pass a `hideTitle` prop into NoteSection and skip the h3 when set. Keep exactly one heading per subsection.",
+  "impact": "On step 1 the student reads 'Economics as a Social Science' in 20px bold, then 2px below it 'Economics as a Social Science' again in 15px inside the card, for every subsection on every step. It reads as a rendering glitch and wastes ~45px per subsection."
+ },
+ {
+  "lens": "notes-rendering",
+  "sev": "high",
+  "cat": "retention",
+  "title": "One Learn Mode step is ~5,300-5,900px tall on a 390px phone (7.5-8.5 screens, 13-15 cards) with no progressive disclosure and the Next button only at the bottom",
+  "file": "components/LearnModeTab.jsx",
+  "line": 343,
+  "fix": "Either (a) one subsection per step (halves height; flatSteps at LearnModeTab.jsx:48-60 pairs 2), or (b) collapse RealExample/Misconception/ExamMatters into a single tabbed or accordion strip per subsection with only KeyIdea + body open by default, and (c) add a sticky bottom bar with Next/progress on mobile so the exit is always visible.",
+  "impact": "The student lands on step 1 and sees a quiz widget, a huge title, a duplicated title, a green card, three paragraphs, a flow timeline, three more coloured cards ... and must scroll ~8 screens past two more coloured card stacks, a quiz, a practice question and a takeaway before the first 'Next' button appears. This matches the live data (75% never advance past step 0): from a phone the step has no visible end, so 'progress' is invisible."
+ },
+ {
+  "lens": "notes-rendering",
+  "sev": "medium",
+  "cat": "pedagogy",
+  "title": "Recall widget of the PREVIOUS step is injected above the new step's content, pushing the reading ~310px down and making steps 2+ open on a quiz before any teaching",
+  "file": "components/LearnModeTab.jsx",
+  "line": 353,
+  "fix": "Render the spaced recall after the step's own content (or as a separate 'checkpoint' mini-step), keep at most one recall widget per step, and use the section title as the first visible element.",
+  "impact": "Step 2 opens with 'Complete the chain: Positive / Normative / ought to' before the student has seen the step title. Combined with the pre-test gate, the first three things a new user meets are tests, not teaching."
+ },
+ {
+  "lens": "notes-rendering",
+  "sev": "medium",
+  "cat": "pedagogy",
+  "title": "No visual hierarchy: Key Idea, body, Real Example, Misconception, Exam Matters all share the same size, weight and card treatment; only hue changes",
+  "file": "app/globals.css",
+  "line": 817,
+  "fix": "Make Key Idea the single dominant element (larger type, filled background); demote Real Example / Misconception / Exam Matters to a compact secondary style (no coloured fill, small icon + label, or a single 'Exam lens' strip); render `step.blockTitle` as the chapter eyebrow above the section title; give the Takeaway the strongest treatment on last-in-block steps.",
+  "impact": "A student scanning on a phone cannot tell which of the 5 cards per subsection to read first or which one the exam rewards; the misconception (amber) is visually louder than the key idea; the chapter they are in is only revealed inside the collapsed 'Explain it back: The Nature of Economics' toggle at the bottom."
+ },
+ {
+  "lens": "notes-rendering",
+  "sev": "medium",
+  "cat": "ux",
+  "title": "Glossary highlighting re-underlines the same term in every card and paragraph; tooltip is mouseover-only with no touch/keyboard path",
+  "file": "lib/glossary-highlight.js",
+  "line": 17,
+  "fix": "Track matched terms across the whole step (pass a shared Set through parseInlineMarkdown, or highlight once per NoteSection), make the span a `<button type=button>` or add `tabindex=0` + `aria-describedby`, add a click/touchstart toggle with tap-outside dismiss, and skip highlighting inside Key Idea / Takeaway to keep those clean.",
+  "impact": "On a phone the dotted underlines are visual noise with no discoverable interaction; a tap fires a synthetic mouseover so a 280px fixed tooltip appears and stays until the next tap or scroll, with no way to open it by keyboard or screen reader. Not tooltip spam (single JS tooltip), but repeated underlines make body text look link-littered."
+ },
+ {
+  "lens": "notes-rendering",
+  "sev": "medium",
+  "cat": "accessibility",
+  "title": "Light theme: card labels and recall prompt fail contrast; the reorder/fill-in prompt is effectively invisible",
+  "file": "app/globals.css",
+  "line": 2704,
+  "fix": "Define light-theme variants: `--rl-amber-text:#b45309`, `--rl-teal-text:#047857`, `--rl-blue-text:#1d4ed8`, `--rl-green-text:#047857`; replace hard-coded `#d4bfff`/`#a78bfa` with a `--recall-accent` token that is `#6d28d9` in light; raise label size to 11px; never use --text-dim for text.",
+  "impact": "A light-mode student sees the purple recall card with four items but cannot read the instruction 'Put these in the right order:' (lavender on white); every card label ('COMMON MISCONCEPTION', 'REAL EXAMPLE') is a faint pastel strip."
+ },
+ {
+  "lens": "notes-rendering",
+  "sev": "medium",
+  "cat": "accessibility",
+  "title": "Interactive recall items are click-only <div>s; zero ARIA across the step widgets; no :focus-visible styling anywhere",
+  "file": "components/learn-mode/ReorderRecall.jsx",
+  "line": 90,
+  "fix": "Make recall items `<button type=button aria-pressed={selected}>`; add `aria-label=\"Move up\"/\"Move down\"/\"Skip this check\"`; add `.lm-quiz-option:focus-visible, .lm-recall-item:focus-visible, .lm-nav-next:focus-visible { outline: 2px solid var(--accent-green); outline-offset: 2px }`; keep outline on textareas; fix heading order (chapter h2 > section h3 > subhead h4).",
+  "impact": "Keyboard and switch users cannot select items in the reorder recall at all; screen-reader users hear 'multiplication sign, button' for Skip and 'black up-pointing triangle' for move-up; textareas lose the default focus ring."
+ },
+ {
+  "lens": "notes-rendering",
+  "sev": "low",
+  "cat": "trust",
+  "title": "Content HTML is injected unescaped; glossary definition is used as a String.replace template so `$1` / `$&` sequences would be interpreted",
+  "file": "lib/parse-inline-markdown.js",
+  "line": 11,
+  "fix": "HTML-escape the raw text (`&`, `<`, `>`) at the top of parseInlineMarkdown before applying the bold/italic regexes; in glossary-highlight use a replacer function `(m) => \\`<span ...>${m}</span>\\`` instead of a template string, and escape `$` in escapedDef.",
+  "impact": "None visible today. Latent: a future definition like 'below $1 a day' would render 'below Demand a day'; a content string with '<b' or '<1x' style text would lose words on screen."
+ },
+ {
+  "lens": "notes-rendering",
+  "sev": "low",
+  "cat": "ux",
+  "title": ".rl-note-section keeps 24px horizontal padding on mobile, leaving a ~257px text column (~175px inside FlowChain cards) on a 390px phone",
+  "file": "app/globals.css",
+  "line": 810,
+  "fix": "Add `.rl-note-section { padding: 14px 12px; }` and `.lm-stepper-step { gap: 10px }` / hide the rail on mobile (use the top progress bar instead); consider removing the outer .rl-note-section card on mobile entirely.",
+  "impact": "Card text wraps every 5-6 words and flow-timeline titles like 'Isolate the variable of interest' wrap to 2 lines, inflating step height and making the coloured-card stack feel even taller."
+ },
+ {
+  "lens": "notes-rendering",
+  "sev": "low",
+  "cat": "content-pipeline",
+  "title": "FlowChain subtitle feature depends on an ' — ' separator that content almost never uses",
+  "file": "components/notes/FlowChain.jsx",
+  "line": 56,
+  "fix": "Either document the ' — ' convention in the content skill or accept an explicit `{title, subtitle}` object; run flow titles through parseInlineMarkdown for consistency.",
+  "impact": "None today (the subtitle simply never appears); if authors start writing '–' or ' - ' the split silently fails. Minor inconsistency: flow steps cannot carry bold or glossary terms while every other text field can."
+ },
+ {
+  "lens": "smart-practice-quiz-bank",
+  "sev": "critical",
+  "cat": "content-pipeline",
+  "title": "64% of correct answers are option B; options are never shuffled anywhere",
+  "file": "components/practice/QuestionCard.jsx",
+  "line": 94,
+  "fix": "Shuffle options per render with a seeded permutation (seed = sectionId:questionIndex:userId or Date) and map the selected index back through the permutation before comparing to correctIndex; do this once in a shared helper used by all six renderers. Separately, run a one-off content pass to rebalance correctIndex across A-D and to shorten correct options / lengthen distractors so length is not a tell.",
+  "impact": "A student who always picks B scores ~64% on the pre-test, inline quizzes, Quick Fire and Smart Practice without reading; a student who picks the longest option scores ~70%. Pre/post-test 'improvement' and the SM-2 ease values are measuring pattern-spotting, not knowledge. Students who notice this (and IAL students are drilled to spot MCQ patterns) lose trust in the assessment."
+ },
+ {
+  "lens": "smart-practice-quiz-bank",
+  "sev": "medium",
+  "cat": "bug",
+  "title": "Any key whose name starts with a-d (Ctrl, Alt, Arrow keys, Backspace, CapsLock) selects an answer",
+  "file": "components/practice/QuestionCard.jsx",
+  "line": 28,
+  "fix": "Require `e.key.length === 1` before the letter comparison (and ignore events with ctrlKey/metaKey/altKey).",
+  "impact": "A student who presses Ctrl (e.g. Ctrl+Tab to switch tab) or an arrow key to scroll has an answer silently selected and the card moves to phase 1 ('Check answer' lit). If they then press Enter expecting to advance, the wrong answer is checked and recorded into SM-2."
+ },
+ {
+  "lens": "smart-practice-quiz-bank",
+  "sev": "high",
+  "cat": "pedagogy",
+  "title": "Confidence is never collected in Smart Practice; Learn Mode's confidence prompt writes to a localStorage key nothing reads",
+  "file": "components/PracticeEngine.jsx",
+  "line": 467,
+  "fix": "Either add a 3-button confidence row to QuestionCard after reveal and pass it to computeNextReview (the lib already supports it), or remove the InlineQuiz confidence prompt until it feeds scheduling. Do not ship a prompt whose data is discarded.",
+  "impact": "Lucky guesses in Smart Practice are scheduled identically to confident knowledge, so a B-guesser (see the bias finding) accumulates 'mastered' (repetitions>=3) cards they cannot actually answer. In Learn Mode the student is interrupted by a 4-second confidence prompt whose answer changes nothing they will ever see, which reads as a pointless widget."
+ },
+ {
+  "lens": "smart-practice-quiz-bank",
+  "sev": "medium",
+  "cat": "trust",
+  "title": "'This question will come back' is false within a session; 'RETRIED' stat counts questions that were never retried",
+  "file": "components/practice/QuestionCard.jsx",
+  "line": 116,
+  "fix": "Re-append wrong items to the end of the in-session queue (cap once per item), or change the copy to 'Scheduled for review in 10 minutes' and rename the summary stat to 'To review'.",
+  "impact": "A student who gets 6 wrong is told six times the question will come back, finishes the 20-question session without seeing any of them again, and then sees 'RETRIED 6' on the summary. The product promises a Leitner-style loop it does not deliver in the moment the student expects it."
+ },
+ {
+  "lens": "smart-practice-quiz-bank",
+  "sev": "high",
+  "cat": "retention",
+  "title": "After a good session the same topic shows 'No questions available' with no explanation, reading as missing content",
+  "file": "components/PracticeEngine.jsx",
+  "line": 611,
+  "fix": "Distinguish states: if progress exists but nothing is due, show 'All N questions in these topics are scheduled for review; next due in Xh' with an 'Practise anyway (review early)' button that includes not-yet-due cards at low priority. Show per-chip counts: 'N questions, M due today'.",
+  "impact": "This is the most direct code-level cause of the 'doesn't cover all topics' complaint: a diligent student is told outright there are no questions for the topic they just studied. They cannot tell the difference between 'you're up to date' and 'the app has no content here'."
+ },
+ {
+  "lens": "smart-practice-quiz-bank",
+  "sev": "high",
+  "cat": "pedagogy",
+  "title": "Pre-test questions reappear as the block's inline quiz (~50% of sections) and the post-test is the identical 3 questions in identical order",
+  "file": "components/learn-mode/PreTest.jsx",
+  "line": 9,
+  "fix": "Exclude the union of all blocks' quizIndices from the pre-test pool; for the post-test, sample 3 DIFFERENT questions on the same sub-topics (or at least re-shuffle options) and label it honestly. Also fix the pre-test copy: 'Perfect — your brain is now primed' after 0/3 (PreTest.jsx:135) reads as sarcasm to a nervous student.",
+  "impact": "Half of students see a pre-test question again a few minutes later as the 'Quick quiz' with the answer already revealed, and every student takes a post-test where remembering 'it was B' counts as improvement. The pre/post delta shown on the completion screen is not evidence of learning."
+ },
+ {
+  "lens": "smart-practice-quiz-bank",
+  "sev": "medium",
+  "cat": "content-pipeline",
+  "title": "Learn Mode only ever surfaces ~5 of each section's 25 questions; 20 are reachable only via paywalled Quiz tab, Quick Fire, or /practice",
+  "file": "components/LearnModeTab.jsx",
+  "line": 107,
+  "fix": "Map every block to at least 2 quiz indices in the content pipeline (auto-assign unmapped questions by sub-topic keyword), and surface a 'Practise these 25 questions' CTA on the completion screen that pre-selects this section in Smart Practice (CompletionScreen already links /practice at line 133 but without preselecting).",
+  "impact": "A free student who completes Learn Mode has met ~5 MCQs (3 pre-test + 4-5 inline, overlapping) out of 25 written for the section, then hits a paywall on the Quiz tab after 2. They perceive the section as lightly assessed, while the very same 25 questions are free at /practice, which they may never find (it lives outside the section tabs)."
+ },
+ {
+  "lens": "smart-practice-quiz-bank",
+  "sev": "medium",
+  "cat": "content-pipeline",
+  "title": "Near-duplicate and identical-stem questions within sections; two identical stems have different 'correct' answers",
+  "file": "scratchpad/db/sections/economics__measures-economic-performance.json",
+  "line": 1,
+  "fix": "Dedupe pass in the content pipeline (Jaccard on stem >= 0.5 or identical correct-option text); rewrite the second of each pair to test a different angle (e.g. numerical, diagram-based, or an 'odd one out' on the evaluation point).",
+  "impact": "In Quick Fire and a single-topic Smart Practice session the student answers what feels like the same question 2-3 times, and in the GDP case the 'same' question has two different right answers, which reads as an error. The effective bank per section is closer to 18-20 distinct items than 25."
+ },
+ {
+  "lens": "smart-practice-quiz-bank",
+  "sev": "medium",
+  "cat": "content-pipeline",
+  "title": "Examiner review of 10 questions: evaluative command words forced into MCQ, hedged-option tells, and some contestable keys",
+  "file": "scratchpad/db/sections/business__meeting-customer-needs.json",
+  "line": 1,
+  "fix": "Content rules for the pipeline: no 'Evaluate/Assess/To what extent' stems in MCQ; max one absolute-word distractor per question; every key must be defensible against the Edexcel IAL definition; use international or neutral contexts (Singapore MAS, HKMA, Bank Negara, generic 'central bank'); one currency convention per subject.",
+  "impact": "IAL students report 'odd wording' because stems borrow essay command words, several keys are debatable, and the hedged/absolute pattern lets them get questions right for the wrong reason. Contexts are UK-domestic (NHS, CMA, Bank of England) for an audience in HK/Singapore/Malaysia/Pakistan sitting a paper that uses international contexts."
+ },
+ {
+  "lens": "smart-practice-quiz-bank",
+  "sev": "high",
+  "cat": "content-pipeline",
+  "title": "Units 3-4 are a fraction of Units 1-2 (2 blocks, 4 sub-sections, 10 questions vs 5-8 blocks, 10-24 sub-sections, 25 questions)",
+  "file": "scratchpad/db/index.json",
+  "line": 1,
+  "fix": "Prioritise the content pipeline on Units 3-4 to Unit-1 depth (aim 25 questions, >=4 blocks, recalls). Until then, show honest depth signals: on the topic chips and section header display 'N questions' and a 'Coming soon: more content' badge instead of silently shipping 10.",
+  "impact": "A Year 13 student (the cohort revising WEC13/WEC14/WBS13/WBS14 for the summer exams) opens a section and finishes it in two steps with 2 quizzes, sees no reorder/fill-in activities they saw in Unit 1, and concludes the app 'doesn't cover' their year. This is the second concrete source of the 'doesn't cover all topics' complaint, and Smart Practice for a whole Unit 3 selection is at most ~60 questions."
+ },
+ {
+  "lens": "smart-practice-quiz-bank",
+  "sev": "low",
+  "cat": "pedagogy",
+  "title": "Session composition is random across selected topics; a 20-question session can be dominated by one topic",
+  "file": "lib/spaced-repetition.js",
+  "line": 127,
+  "fix": "Round-robin across selected sections when drawing unseen items (interleave by section, then shuffle within rounds), and expose a session length picker (10/20/40).",
+  "impact": "A student who deliberately picks 'the six topics I'm weakest on' gets a session that skips some of them entirely and has no way to request 'more' or 'fewer' questions."
+ },
+ {
+  "lens": "smart-practice-quiz-bank",
+  "sev": "medium",
+  "cat": "ux",
+  "title": "Topic picker: all units collapsed by default, unit-number badge is the hidden select-all, chips show no question/due counts",
+  "file": "components/PracticeEngine.jsx",
+  "line": 125,
+  "fix": "Expand the first unit (or the unit the student was last in) by default; replace the badge with an explicit checkbox; show 'N questions - M due' on each chip for everyone (question counts need no auth; compute due count from localStorage for anonymous users); reword to 'Pick the topics you want to practise'.",
+  "impact": "A first-time student lands on a page that looks empty (every unit '0 / N'), does not discover unit select-all, and has no information to decide between topics. Anonymous students see zero feedback loop on the topic screen across visits. The framing 'assessed on' raises stakes for a low-stakes practice tool."
+ },
+ {
+  "lens": "smart-practice-quiz-bank",
+  "sev": "low",
+  "cat": "trust",
+  "title": "Smart Practice serves all 25 questions free while the section Quiz tab paywalls the same bank after 2",
+  "file": "components/QuizTab.jsx",
+  "line": 15,
+  "fix": "Decide one policy: either make Quiz tab preview larger and point its paywall at premium-only value (explanations + Ask Tutor + attempt history), or gate /practice consistently. Whichever is chosen, link the two surfaces so students know where the full bank lives.",
+  "impact": "A free student who hits the Quiz-tab paywall and then finds /practice sees the identical questions for free and infers the paywall is arbitrary; a student who does not find /practice believes they have access to 2 questions per section. Either way the gating story is incoherent."
+ },
+ {
+  "lens": "smart-practice-quiz-bank",
+  "sev": "low",
+  "cat": "ux",
+  "title": "QuizTab preview scores are computed over 2 questions but the CTA copy implies the student's score",
+  "file": "components/QuizTab.jsx",
+  "line": 48,
+  "fix": "Fold into the gating decision above; at minimum allow retry in preview and show the best-of-2 to logged-in free users.",
+  "impact": "Minor: the free student gets a 2-question 'quiz', cannot retry, and has no score history, so the tab feels like a demo rather than a feature."
+ },
+ {
+  "lens": "mobile-css-performance",
+  "sev": "critical",
+  "cat": "ux",
+  "title": "Diagram SVGs render at 270px on phones: 500-unit viewBox text at 9-10px becomes ~5px on screen; 'enlarge' modal is only ~25% bigger and has no pinch-zoom",
+  "file": "app/globals.css",
+  "line": 3378,
+  "fix": "On <768px set .lm-interactive-svg-wrapper svg { max-width:100% } (the card already constrains width), enforce a minimum SVG font-size in processSvg (e.g. scale text to >=14 viewBox units, or set font-size via CSS `svg text { font-size: max(12px, ...)}`), and make the modal a full-screen sheet with touch-action:pinch-zoom / a simple CSS transform zoom. Consider a landscape hint for wide diagrams.",
+  "impact": "On any phone the inline economics diagram is a coloured blob with unreadable labels; 'Tap to enlarge' opens a modal that is barely larger, still unreadable, and cannot be zoomed. Diagrams are a core Economics exam skill and the founder already flags them as 'passive'; on mobile they are effectively absent."
+ },
+ {
+  "lens": "mobile-css-performance",
+  "sev": "high",
+  "cat": "performance",
+  "title": "Glossary highlighting re-runs ~372 regex builds + HTML splits per paragraph on every LearnModeTab re-render (quiz tap, menu toggle, transition flag)",
+  "file": "lib/glossary-highlight.js",
+  "line": 15,
+  "fix": "Pre-compile one alternation RegExp per glossary list (useMemo on glossaryTerms), and memoize parsed HTML per (text, glossaryTerms) with useMemo/React.memo on NoteSection/BodyRenderer. Or pre-highlight server-side once per section.",
+  "impact": "On a mid/low-end Android (typical in the target markets) tapping a quiz option, a confidence button or 'Next' triggers a visible stall because all note text is re-highlighted from scratch; scrolling jank after each interaction."
+ },
+ {
+  "lens": "mobile-css-performance",
+  "sev": "high",
+  "cat": "accessibility",
+  "title": "Recall-card text uses hardcoded lavender (#d4bfff) with no light-theme override: ~1.4:1 contrast on white",
+  "file": "app/globals.css",
+  "line": 2704,
+  "fix": "Define --lm-purple-text / --lm-purple-bg tokens in both [data-theme] blocks (e.g. light: #5b21b6 text) and replace the 13 hardcoded values.",
+  "impact": "Any student who toggles light mode (theme-toggle-btn exists in the mobile header) cannot read the recall question prompt or the word-bank chips in fill-in-the-blank; the exercise looks like empty pills."
+ },
+ {
+  "lens": "mobile-css-performance",
+  "sev": "high",
+  "cat": "ux",
+  "title": "Reorder arrow buttons are ~12x20px tap targets; dismiss (x), more (...) and hint buttons are also far below 44px",
+  "file": "app/globals.css",
+  "line": 2834,
+  "fix": "On <768px give .lm-recall-arrow-btn min 36x36 (or drop arrows on touch and rely on tap-to-swap), .lm-recall-dismiss/.lm-more-btn 40x40 with negative margin, chips/blanks min-height 40px, tab-face min-height 40px.",
+  "impact": "Students mis-tap the up/down arrows (hitting the row instead, which selects the item for a swap), accidentally dismiss recall cards, and cannot reliably remove a wrongly placed word from a blank. Every 'quick' recall becomes fiddly on a phone."
+ },
+ {
+  "lens": "mobile-css-performance",
+  "sev": "medium",
+  "cat": "performance",
+  "title": "Section API payload is 152 KB raw / ~39 KB gzip, fetched uncached on every section switch, and 40% of it is tabs Learn Mode never shows",
+  "file": "app/api/sections/[id]/route.js",
+  "line": 8,
+  "fix": "Add `Cache-Control: public, s-maxage=3600, stale-while-revalidate` (content is already ISR'd for 1h on the page route) or export revalidate; keep a client-side Map of loaded sections; consider a ?fields=content,diagrams,quiz,practice variant for Learn Mode and lazy-load notes/flashcards/extras on tab open.",
+  "impact": "On a school Wi-Fi share (~1-2 Mbps effective, 200-400 ms RTT) each section switch is a blank screen for roughly 1-2 s (8 DB round-trips server-side + 39 KB transfer), and the first visit is ~200+ KB compressed before Learn Mode can hydrate. Going back to a section already read pays the full cost again."
+ },
+ {
+  "lens": "mobile-css-performance",
+  "sev": "medium",
+  "cat": "ux",
+  "title": "Next/Back are at the very bottom of a long step and not sticky; on mobile 'Back' is stacked full-width ABOVE 'Next'",
+  "file": "app/globals.css",
+  "line": 1415,
+  "fix": "Reverse order on mobile (Next first via flex-direction:column-reverse or order:), and/or add a compact sticky bottom bar (position:sticky; bottom:env(safe-area-inset-bottom)) with Back/Next and the step counter.",
+  "impact": "A student scrolls through 6-8 screens of content and exercises, reaches the bottom, and the first big button is 'Back'. There is no persistent way to advance; 75% of logged-in starts never leave step 0."
+ },
+ {
+  "lens": "mobile-css-performance",
+  "sev": "medium",
+  "cat": "bug",
+  "title": "Explain-It-Back textarea is 13px on mobile, which triggers iOS Safari's auto-zoom on focus",
+  "file": "app/globals.css",
+  "line": 3109,
+  "fix": "Set font-size:16px on .lm-explain-textarea and .lm-recall-textarea at all widths (visually reduce with transform if desired).",
+  "impact": "Tapping the free-text explanation box on an iPhone zooms the whole page in; after typing the layout stays zoomed and the student has to pinch out to see the Next button and cards."
+ },
+ {
+  "lens": "mobile-css-performance",
+  "sev": "medium",
+  "cat": "ux",
+  "title": "Stepper rail consumes 52px of horizontal space on phones with no mobile override; note text column is ~230px wide at 360px",
+  "file": "app/globals.css",
+  "line": 1900,
+  "fix": "On <768px hide the rail (or render the node inline in the counter row), set .lm-stepper-step { gap:0 }, and reduce .rl-note-section padding to 14px 14px and .lm-recall-card to 12px 14px.",
+  "impact": "Text wraps to ~30 characters per line, reorder items become 4-5 line blocks, and the whole step is 30-40% longer than it needs to be, all for a single number circle on the left."
+ },
+ {
+  "lens": "mobile-css-performance",
+  "sev": "medium",
+  "cat": "ux",
+  "title": "Only 4 of 9 tabs fit at 360-390px; the other 5 are hidden behind a 28px fade with no scroll affordance",
+  "file": "app/globals.css",
+  "line": 1372,
+  "fix": "Show a chevron/overflow indicator when scrollWidth > clientWidth, or move secondary tabs into a 'More' sheet on mobile; scroll the active tab into view on change.",
+  "impact": "Learn is visible, which is fine, but students never discover Flashcards/Quiz/Tutor/Extras (the paid features) unless they happen to swipe the strip; the fade looks like the row simply ends at Practice."
+ },
+ {
+  "lens": "mobile-css-performance",
+  "sev": "medium",
+  "cat": "ux",
+  "title": "'Next' is disabled for 350ms of pure timer before the step swaps; the step-exit/enter animations that would justify it are never applied",
+  "file": "components/LearnModeTab.jsx",
+  "line": 157,
+  "fix": "Swap immediately (or after ~120ms) and animate the incoming content with the existing lmStepEnter keyframe, or use the View Transitions API. Do not block input on the timer.",
+  "impact": "Each tap on Next feels laggy: the button greys, nothing happens for a third of a second, then content jumps. Combined with the glossary re-render cost this can approach 0.5s+ on a slow phone."
+ },
+ {
+  "lens": "mobile-css-performance",
+  "sev": "medium",
+  "cat": "trust",
+  "title": "Loading state on section switch shows 'Content for this section is being prepared.' — same copy as the empty state",
+  "file": "components/StudyApp.jsx",
+  "line": 650,
+  "fix": "Use a skeleton/progress indicator for loading, keep the previous section on screen until the new one arrives, and reserve the 'being prepared' copy for a confirmed-empty response.",
+  "impact": "On a slow school network the student reads that the topic is not ready yet and leaves, when it is simply still downloading; there is no spinner or skeleton to signal progress."
+ },
+ {
+  "lens": "mobile-css-performance",
+  "sev": "medium",
+  "cat": "accessibility",
+  "title": "No prefers-reduced-motion handling in CSS: 20+ keyframes, staggered flow-chain reveals and blur transitions always run",
+  "file": "app/globals.css",
+  "line": 3260,
+  "fix": "Add @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration:0.01ms !important; transition-duration:0.01ms !important } } and pass `reducedMotion='user'` to framer-motion's MotionConfig; cap FlowChain total stagger at ~300ms.",
+  "impact": "Motion-sensitive students get continuous pulsing badges and cascading fade-ins on every step; everyone else waits ~0.5-1s for a 5-6 step causal chain to fully appear each time it scrolls into view."
+ },
+ {
+  "lens": "mobile-css-performance",
+  "sev": "medium",
+  "cat": "pedagogy",
+  "title": "First thing on every new step is the PREVIOUS step's recall card, before any content",
+  "file": "components/LearnModeTab.jsx",
+  "line": 355,
+  "fix": "Render the spaced recall collapsed (one-line header + 'Try it' expander) or place it after the first NoteSection; keep the section title at the top.",
+  "impact": "A student who pressed Next expecting the next topic is immediately quizzed on wording from the last card, on a full-screen purple exercise, with the section title pushed below the fold. Dismiss (x) is a 20px target."
+ },
+ {
+  "lens": "mobile-css-performance",
+  "sev": "low",
+  "cat": "accessibility",
+  "title": "Body text is 13px on mobile across notes, takeaways, recall items and fill-in steps; labels are 10-11px",
+  "file": "app/globals.css",
+  "line": 1006,
+  "fix": "Use 15-16px body on mobile (drop the 13px override), 12px minimum for labels/hints.",
+  "impact": "Long revision reading sessions on a phone at 13px/1.7 with a ~230px column; students zoom (no maximumScale, good) which then breaks the fixed header layout."
+ },
+ {
+  "lens": "mobile-css-performance",
+  "sev": "low",
+  "cat": "performance",
+  "title": "AnimatedTabBar instantiates 5 springs + 2 motion elements per tab (45 springs) on mobile where the effect is disabled anyway",
+  "file": "components/AnimatedTabBar.jsx",
+  "line": 33,
+  "fix": "Render a plain <button> tab when matchMedia('(max-width:768px)') or reduced-motion matches; lazy-load framer-motion only for desktop.",
+  "impact": "Extra JS and layout work on every render of the shell for zero visual benefit on phones; contributes to the 167 KB gzip shared bundle."
+ },
+ {
+  "lens": "mobile-css-performance",
+  "sev": "low",
+  "cat": "accessibility",
+  "title": "Tab bar click handler is on a div with role=tab; the real <button> has tabIndex=-1",
+  "file": "components/AnimatedTabBar.jsx",
+  "line": 66,
+  "fix": "Move onClick/role/aria-selected onto the button, remove tabIndex=-1, add arrow-key handling on the tablist.",
+  "impact": "Tabs cannot be reached or activated with a keyboard/switch device; screen readers announce a tab that is not focusable."
+ },
+ {
+  "lens": "mobile-css-performance",
+  "sev": "low",
+  "cat": "ux",
+  "title": "Quiz confidence row auto-dismisses after 4s and remediation slides in 1s after a wrong answer, causing layout shifts under the thumb",
+  "file": "components/learn-mode/InlineQuiz.jsx",
+  "line": 19,
+  "fix": "Keep the confidence row height reserved or do not auto-dismiss; mount remediation with a fixed-height placeholder or place it after an explicit 'Try a similar one' button.",
+  "impact": "While the student is reading the explanation the layout jumps twice (row collapses, remediation appears), so the Next button or the next card moves out from under a planned tap."
+ },
+ {
+  "lens": "content-pipeline",
+  "sev": "critical",
+  "cat": "bug",
+  "title": "MCQ correct answer sits at option B 64% of the time; option A/D almost never",
+  "file": "scripts/expand-quiz-economics-u1u2.mjs",
+  "line": 2044,
+  "fix": "Shuffle options at render time (store correct option text, not index) in InlineQuiz/PreTest/PostTest/QuickFireDrill; add a validator rule: per-section correctIndex histogram must have no bucket >40% and every bucket ≥10%; one-off script to rotate existing banks.",
+  "impact": "A student who always taps B scores ~64% on the pre-test, post-test and quick-fire drill and 'improves' without learning; students notice this pattern quickly and stop trusting the quiz as a measure. Also a strong tell that questions were machine-generated and never reviewed."
+ },
+ {
+  "lens": "content-pipeline",
+  "sev": "high",
+  "cat": "bug",
+  "title": "Four fill-in recalls are unsolvable: duplicate answers make the last blank unfillable",
+  "file": "components/learn-mode/FillInRecall.jsx",
+  "line": 16,
+  "fix": "Track chips by index (placed stores chip indices, not strings) so duplicates are independent; validator: answers must be unique case-insensitively within one recall, or rewrite the 5 recalls.",
+  "impact": "Student places 'Hawthorne' in blank 1, the second 'Hawthorne' chip vanishes, blank 2 can never be filled, the Check button stays greyed out forever; the only way forward is the × dismiss. In 1.3.2 Consumer Behaviour (the second economics section) this happens twice."
+ },
+ {
+  "lens": "content-pipeline",
+  "sev": "high",
+  "cat": "pedagogy",
+  "title": "~20% of reorder recalls have no genuine order but are graded position-exact",
+  "file": "components/learn-mode/ReorderRecall.jsx",
+  "line": 63,
+  "fix": "Restrict type:'reorder' to cause→effect chains and processes; convert the rest to a 'match' or 'classify' recall type or to MCQ. Validator: reject prompts without an explicit criterion ('Put these in the right order:'), reject prompts beginning Match/Classify/Rank/Order ... by importance, and flag correctOrder items that share a leading token (e.g. 'Management:' ×2, 'Leadership:' ×2).",
+  "impact": "Student is told they are wrong for placing 'Rent rewards land' before 'Wages reward labour' or 'Inside the curve' before 'Outside the curve'. This is exactly the founder's user-feedback hypothesis and it is concentrated in introductory-concepts, the section with 192 starts and 167 stuck at step 0: 2 of its 5 reorders (PPF model, economic systems) are non-sequences and a third (social-science 'Observe → Build model → Apply ceteris paribus → Isolate variable') is contrived."
+ },
+ {
+  "lens": "content-pipeline",
+  "sev": "high",
+  "cat": "retention",
+  "title": "Unit 2 → Unit 3 cliff: half the steps, zero recall widgets, no pinned quiz/practice/diagram, denser text",
+  "file": "scripts/upgrade-content-labour-markets.mjs",
+  "line": 8,
+  "fix": "Bring U3-4 to the U1-2 template: ≥4 blocks, 1 recall per subsection (chains only), 25 MCQs, pins per block; add a validator rule that fails a push when a section's blocks < 4 or recalls/subsection < 0.5 or quiz < 20; prioritise economics 3.3.1-3.3.3 and business 3.3.1-3.3.2 (most-traversed after U2).",
+  "impact": "A student finishing 2.3.6 (5 blocks, 17 subsections, 17 recalls, 4 pinned diagrams, 25-question bank) opens 3.3.1 and gets 4 blocks/8 subsections with no recall widgets, no inline diagram/quiz/practice at chapter ends, longer paragraphs, a 10-question bank where the pre-test (3 random) and post-test (same 3, PostTest.jsx:18-23) and quick-fire (all 10) overlap heavily. Unit 4 sections are 2-3 steps total. The product visibly downgrades exactly when the student reaches the harder, exam-year content."
+ },
+ {
+  "lens": "content-pipeline",
+  "sev": "high",
+  "cat": "bug",
+  "title": "24 of 39 diagramRef pins silently resolve to nothing; economic-growth and macro-policies lose every inline diagram",
+  "file": "components/LearnModeTab.jsx",
+  "line": 97,
+  "fix": "Give diagrams an id and pin by id; run the same resolver in the validator before push; fix the 24 refs now (title strings) and fail the push on any unresolved ref.",
+  "impact": "In 2.3.5 Economic Growth and 2.3.6 Macro Policies the student reads about output gaps, the trade cycle, fiscal/monetary transmission and the Phillips curve and never sees the diagram inline (InlineDiagram/DiagramLabelDrill never render), even though the SVG exists one tab away. Diagrams are the one active element in these sections."
+ },
+ {
+  "lens": "content-pipeline",
+  "sev": "high",
+  "cat": "content-pipeline",
+  "title": "Validator only checks lengths/presence; half the content scripts have no validator at all; check-learn-content.mjs counts a field that no longer exists",
+  "file": "scripts/_upgrade-template.mjs",
+  "line": 101,
+  "fix": "One shared validate() imported by every script (and run against the DB row after push), checking: reorder — 3-5 items, shuffled is a permutation, not identity, prompt states criterion; fillin — answers unique, blanks == answers, one blank per line, hint prefix and length match answer, no comma answers; quiz — 4 unique options, correctIndex in range, no duplicate stems, per-section correctIndex histogram, explanation references the correct option; pins — quizIndices/practiceIndices in range and not reused across blocks, diagramRef resolves with the runtime matcher; coverage — blocks ≥4, recalls/subsection ≥0.5, quiz ≥20, Learn Mode block titles ⊇ Notes titles. Delete or fix check-learn-content.mjs.",
+  "impact": "Every one of the bugs above reached production because nothing between the author's editor and the live table could see them. The student meets them in the first two economics sections."
+ },
+ {
+  "lens": "content-pipeline",
+  "sev": "medium",
+  "cat": "bug",
+  "title": "practiceIndices are applied to the marks-sorted array, so the pinned practice question is not the one the author chose",
+  "file": "components/LearnModeTab.jsx",
+  "line": 80,
+  "fix": "Index into the unsorted practice array (or pin by a stable practice id) and add a validator that prints the resolved question text next to each pin so the author can eyeball it.",
+  "impact": "At the end of the PPF chapter in the most-started section, the written practice question is about model assumptions, not the PPF the student just studied; the 'economic systems' chapter gets a question about scarcity. The practice feels randomly attached because it is."
+ },
+ {
+  "lens": "content-pipeline",
+  "sev": "medium",
+  "cat": "bug",
+  "title": "Fill-in templates with 2+ blanks on one line are truncated on screen and need comma answers",
+  "file": "components/learn-mode/FillInRecall.jsx",
+  "line": 79,
+  "fix": "Validator: exactly one '___' per template line and answers must be single tokens (or support multiple blanks per line in the renderer); rewrite the 8 recalls.",
+  "impact": "Student sees a sentence cut off mid-clause and a word-bank chip 'rises, rises' or 'value, account' that gives the structure away; drag-and-drop of a comma pair into a single blank reads as broken."
+ },
+ {
+  "lens": "content-pipeline",
+  "sev": "medium",
+  "cat": "pedagogy",
+  "title": "Only 6 shuffle permutations across 131 reorders; two of them cover 76%, so the fix pattern is memorisable",
+  "file": "components/learn-mode/ReorderRecall.jsx",
+  "line": 9,
+  "fix": "Drop `shuffled` from content; Fisher-Yates at mount with a rejection rule (not identity, first item not already in place).",
+  "impact": "Every reorder in a section is displayed as [step3, step1, step4, step2] or [step4, step2, step1, step3]; after two or three the student solves it by pattern ('swap 1↔2, then 3↔4') rather than by recalling the chain, which also inflates recall scores fed to the completion screen."
+ },
+ {
+  "lens": "content-pipeline",
+  "sev": "medium",
+  "cat": "content-pipeline",
+  "title": "Business has zero diagrams across all 19 sections; the Diagrams tab (a free tab) is empty and Business Learn Mode never shows a diagram",
+  "file": "scripts/audit-diagrams.mjs",
+  "line": 3,
+  "fix": "Reuse economics demand/supply/equilibrium/elasticity SVGs for business the-market immediately; commission break-even, cash-flow, decision-tree, Boston Matrix, Ansoff, product life cycle SVGs; extend audit-diagrams.mjs to both subjects and fail on empty.",
+  "impact": "A Business student (half the catalogue) never gets InlineDiagram or DiagramLabelDrill; the Diagrams tab shows nothing; 1.3.2 The Market, 2.3.2 Financial Planning (break-even chart) and 3.3.3 Decision-Making (decision trees) are diagram-based exam topics with no visual."
+ },
+ {
+  "lens": "content-pipeline",
+  "sev": "medium",
+  "cat": "content-pipeline",
+  "title": "No item ids, no versioning, no review step: pushes are blind full overwrites of live data",
+  "file": "scripts/_upgrade-template.mjs",
+  "line": 190,
+  "fix": "Add id to every quiz/practice/diagram item and pin by id; store content_version + previous JSON (or a section_content_history table) on every update; make the push script print a resolved-pins report and a diff and require a --confirm flag; add a staging section_id or a draft column reviewed in the admin UI before publish.",
+  "impact": "A bad push (or the practiceIndices bug above) goes live instantly for all 211 users with nothing to roll back to; when content is fixed later, pins drift and chapter-end quizzes/practice quietly vanish."
+ },
+ {
+  "lens": "content-pipeline",
+  "sev": "medium",
+  "cat": "content-pipeline",
+  "title": "Content was bulk-generated from a template and is UK-centric for an international IAL audience",
+  "file": "scripts/upgrade-content-introductory-concepts.mjs",
+  "line": 73,
+  "fix": "Keep generation but add a human edit pass per section with a checklist (criterion in every prompt, example relevant to IAL markets, RPI/UK-only content removed), and make the validator enforce the mechanical parts so the human pass can focus on meaning.",
+  "impact": "A student in Lahore or Hong Kong reads Brexit, NHS and council-tax examples in a course that is sold as IAL-specific; the sameness of prompts and shapes reads as filler, and the founder's 'question wording is odd' feedback follows from unedited generation."
+ },
+ {
+  "lens": "content-pipeline",
+  "sev": "low",
+  "cat": "ux",
+  "title": "Practice question text embeds '(N marks)' while InlinePractice also renders an 'N marks' badge",
+  "file": "components/learn-mode/InlinePractice.jsx",
+  "line": 41,
+  "fix": "Strip the trailing '(N marks)' in the seed (one regex) and rely on the marks field.",
+  "impact": "'Define the term opportunity cost. (4 marks)  [4 marks]' — small, but it is the first written question a student sees and it looks unedited."
+ }
+]

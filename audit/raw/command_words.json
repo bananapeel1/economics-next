@@ -1,0 +1,164 @@
+[
+  {
+    "id": "c14c7d97-f41e-4a2d-92f1-bc36d96b0784",
+    "word": "Define",
+    "definition": "Give the exact meaning of a term or concept.",
+    "examiner_expects": "A precise, concise definition using correct economic terminology. Usually worth 2 marks. No explanation or examples needed unless asked.",
+    "example": "\"Define the term price elasticity of demand.\" — State the formula or a clear definition linking % change in quantity demanded to % change in price.",
+    "sort_order": 1,
+    "created_at": "2026-03-10T20:01:41.137854+00:00"
+  },
+  {
+    "id": "d937ad3d-a6fc-49cc-967e-0f4b3ad4ed93",
+    "word": "State",
+    "definition": "Give a brief, factual answer without explanation.",
+    "examiner_expects": "A short, direct answer. No elaboration required. Often worth 1 mark per point stated.",
+    "example": "\"State two factors that cause a shift in the demand curve.\" — Just name them, e.g. changes in income, changes in tastes.",
+    "sort_order": 2,
+    "created_at": "2026-03-10T20:01:41.137854+00:00"
+  },
+  {
+    "id": "f80643c3-6f2d-4232-a31d-7b8966712c55",
+    "word": "Identify",
+    "definition": "Recognise and name a feature, trend, or factor.",
+    "examiner_expects": "Select the correct item from data, a diagram, or a scenario. Brief — no explanation needed.",
+    "example": "\"Identify the equilibrium price from the diagram.\" — Read the value directly from where supply and demand intersect.",
+    "sort_order": 3,
+    "created_at": "2026-03-10T20:01:41.137854+00:00"
+  },
+  {
+    "id": "f11894eb-ebd9-4de8-b763-9c17cc00fdc2",
+    "word": "Calculate",
+    "definition": "Work out a numerical answer using given data, showing your working.",
+    "examiner_expects": "A clear calculation with workings shown. Include the formula, substitute values, and give the final answer with correct units.",
+    "example": "\"Calculate the price elasticity of demand.\" — Show: PED = % change in Qd / % change in P = -20% / 10% = -2.",
+    "sort_order": 4,
+    "created_at": "2026-03-10T20:01:41.137854+00:00"
+  },
+  {
+    "id": "a267bf84-0a60-42f2-849f-87cd7ab5068b",
+    "word": "Draw",
+    "definition": "Produce a diagram or graph to illustrate an economic concept.",
+    "examiner_expects": "A clearly labelled diagram with axes, curves, and key points marked (equilibrium, shifts, areas). Labels are essential for marks.",
+    "example": "\"Draw a diagram to show the effect of an indirect tax.\" — Show S shifting left/up, new equilibrium, tax wedge, and deadweight loss area.",
+    "sort_order": 5,
+    "created_at": "2026-03-10T20:01:41.137854+00:00"
+  },
+  {
+    "id": "d746e286-af36-47f6-9a63-7b23adec0081",
+    "word": "Outline",
+    "definition": "Describe briefly the main features or points.",
+    "examiner_expects": "More than just naming — give a brief description of each point but without detailed analysis. Think of it as a summary.",
+    "example": "\"Outline how a subsidy corrects a positive externality.\" — Briefly describe the shift in supply, lower price, higher output moving towards social optimum.",
+    "sort_order": 6,
+    "created_at": "2026-03-10T20:01:41.137854+00:00"
+  },
+  {
+    "id": "1dcdabc9-c386-4a2a-94b6-9436622174cf",
+    "word": "Describe",
+    "definition": "Give a detailed account of features, characteristics, or processes.",
+    "examiner_expects": "A clear factual account of what happens, step by step or feature by feature. More detail than \"outline\" but no analysis of why.",
+    "example": "\"Describe the trend in unemployment shown in the data.\" — State whether it rose or fell, by how much, and identify any turning points.",
+    "sort_order": 7,
+    "created_at": "2026-03-10T20:01:41.137854+00:00"
+  },
+  {
+    "id": "ad3981bf-337d-43f5-a5c6-233f6aea599b",
+    "word": "Explain",
+    "definition": "Give reasons or make relationships between things clear.",
+    "examiner_expects": "Not just what happens, but WHY it happens. Use chains of reasoning (because → this leads to → therefore). Link cause and effect explicitly.",
+    "example": "\"Explain why a rise in income increases demand for normal goods.\" — Higher income → more purchasing power → consumers buy more → demand curve shifts right.",
+    "sort_order": 8,
+    "created_at": "2026-03-10T20:01:41.137854+00:00"
+  },
+  {
+    "id": "8f9442e0-d905-4392-ae34-c3768af24880",
+    "word": "Analyse",
+    "definition": "Break down an issue into its component parts and examine each in detail.",
+    "examiner_expects": "Detailed chains of reasoning showing cause and effect. Use economic theory, diagrams, and real-world context. Go beyond a simple explanation — show HOW and WHY.",
+    "example": "\"Analyse the impact of a minimum wage above the equilibrium.\" — Discuss: wage floor → surplus of labour (unemployment) → which workers benefit/lose → firm responses.",
+    "sort_order": 9,
+    "created_at": "2026-03-10T20:01:41.137854+00:00"
+  },
+  {
+    "id": "afb9250a-b5cb-4907-8015-2c4c45a6e179",
+    "word": "Assess",
+    "definition": "Weigh up the importance, significance, or effectiveness of something.",
+    "examiner_expects": "Present evidence for and against, then make a supported judgement. Consider relative importance, short-run vs long-run, and stakeholder perspectives.",
+    "example": "\"Assess the effectiveness of indirect taxes in reducing negative externalities.\" — Analyse how taxes work, then evaluate limitations (inelastic demand, smuggling, regressive).",
+    "sort_order": 10,
+    "created_at": "2026-03-10T20:01:41.137854+00:00"
+  },
+  {
+    "id": "6bb1777f-b74d-4883-99c0-080ac59bb6d3",
+    "word": "Evaluate",
+    "definition": "Make a judgement based on evidence, considering different perspectives.",
+    "examiner_expects": "The highest-level skill. Present arguments for and against, consider assumptions, short-run vs long-run, different stakeholders, and reach a reasoned conclusion. Must include a final judgement.",
+    "example": "\"Evaluate whether supply-side policies are the best way to reduce unemployment.\" — Analyse supply-side policies, compare with demand-side, consider trade-offs, conclude.",
+    "sort_order": 11,
+    "created_at": "2026-03-10T20:01:41.137854+00:00"
+  },
+  {
+    "id": "9463225c-f30f-4274-b8f4-686b747b423c",
+    "word": "Discuss",
+    "definition": "Present different sides of an argument or issue.",
+    "examiner_expects": "Similar to evaluate — examine arguments for and against. Consider different viewpoints and contexts. A balanced response with a conclusion.",
+    "example": "\"Discuss whether economic growth always benefits an economy.\" — Consider benefits (jobs, income) vs costs (inequality, environment), short vs long run.",
+    "sort_order": 12,
+    "created_at": "2026-03-10T20:01:41.137854+00:00"
+  },
+  {
+    "id": "2ba55a67-9361-43fc-80dc-969a40aa7fca",
+    "word": "Distinguish",
+    "definition": "Identify the differences between two or more concepts.",
+    "examiner_expects": "Clear, direct comparison highlighting the key differences. Use contrasting language: \"whereas\", \"unlike\", \"on the other hand\".",
+    "example": "\"Distinguish between a movement along and a shift of the demand curve.\" — Movement along = price change; shift = non-price factor change.",
+    "sort_order": 13,
+    "created_at": "2026-03-10T20:01:41.137854+00:00"
+  },
+  {
+    "id": "242037b2-c3f2-4b85-92dc-d319ff892fe3",
+    "word": "Compare",
+    "definition": "Identify similarities and differences between two or more items.",
+    "examiner_expects": "Both similarities AND differences should be addressed. Use comparative language and make direct, paired comparisons.",
+    "example": "\"Compare fiscal and monetary policy.\" — Both manage AD; fiscal uses G and T, monetary uses interest rates; different time lags and side effects.",
+    "sort_order": 14,
+    "created_at": "2026-03-10T20:01:41.137854+00:00"
+  },
+  {
+    "id": "99f23919-7c72-48dc-8afa-2d2ab5d6884c",
+    "word": "Justify",
+    "definition": "Give reasons to support a particular view or action.",
+    "examiner_expects": "Provide strong evidence and reasoning to defend a position. Explain WHY something is the best option or WHY a conclusion is valid.",
+    "example": "\"Justify the use of subsidies to correct a positive externality.\" — Because marginal social benefit > marginal private benefit, subsidy closes the gap.",
+    "sort_order": 15,
+    "created_at": "2026-03-10T20:01:41.137854+00:00"
+  },
+  {
+    "id": "eb307745-9046-48f0-93f9-aad1002b36ec",
+    "word": "Suggest",
+    "definition": "Apply your knowledge to propose a solution or possibility.",
+    "examiner_expects": "Use your understanding to make a reasonable proposal. It does not have to be definitive — \"suggest\" allows for possibilities.",
+    "example": "\"Suggest a reason why demand for cigarettes is price inelastic.\" — Addictive nature means consumers are unresponsive to price changes.",
+    "sort_order": 16,
+    "created_at": "2026-03-10T20:01:41.137854+00:00"
+  },
+  {
+    "id": "f46cdf2c-9170-4bdb-9451-8a621e72958e",
+    "word": "To what extent",
+    "definition": "Consider how far a statement or claim is true.",
+    "examiner_expects": "Evaluate the degree to which something is true. Consider evidence for and against, then make a balanced judgement about the extent.",
+    "example": "\"To what extent does free trade benefit developing countries?\" — Consider gains from specialisation vs dependency, terms of trade, infant industries.",
+    "sort_order": 17,
+    "created_at": "2026-03-10T20:01:41.137854+00:00"
+  },
+  {
+    "id": "5416d9ca-c085-42fa-9f8c-d5251cf2220b",
+    "word": "Consider",
+    "definition": "Think carefully about something, weighing up different aspects.",
+    "examiner_expects": "Similar to assess or evaluate. Review the evidence, think about implications, and present a thoughtful response.",
+    "example": "\"Consider the impact of rising inflation on different stakeholders.\" — Workers (real wages fall), savers (lose), borrowers (gain), firms (uncertainty).",
+    "sort_order": 18,
+    "created_at": "2026-03-10T20:01:41.137854+00:00"
+  }
+]

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SiteHeader from '@/components/SiteHeader';
 import guidesData from '@/data/guidesData';
 import { notFound } from 'next/navigation';
 
@@ -70,7 +71,8 @@ export default async function GuidePage({ params }) {
   };
 
   return (
-    <div className="resource-page">
+    <div className="resource-page rl-night">
+      <SiteHeader crumb="Guides" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SiteHeader from '@/components/SiteHeader';
 import IALScrollBar from '../IALScrollBar';
 import '@/styles/landing.css';
 
@@ -29,11 +30,7 @@ export default function June2026Page() {
       <IALScrollBar />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
-      <nav className="elp-nav">
-        <Link href="/" className="elp-nav-logo"><span className="elp-nav-dot" />Revvy Learn</Link>
-        <div className="elp-nav-sep" />
-        <div className="elp-nav-crumb"><Link href="/ial-revision" style={{ color: 'inherit', textDecoration: 'none' }}>IAL Revision</Link> <span>/ June 2026</span></div>
-      </nav>
+      <SiteHeader crumb="IAL Revision / June 2026" />
 
       <section>
         <div className="elp-hero">
@@ -138,7 +135,7 @@ export default function June2026Page() {
 
       <footer className="elp-footer">
         <div className="elp-footer-inner">
-          <Link href="/" className="elp-footer-logo"><span className="elp-nav-dot" style={{ width: '7px', height: '7px' }} />Revvy Learn</Link>
+          <Link href="/" className="elp-footer-logo"><img src="/logo.svg" alt="" className="elp-footer-mark" width={18} height={18} />Revvy Learn</Link>
           <div className="elp-footer-sep" />
           <div className="elp-footer-links">
             <Link href="/economics" className="elp-footer-link">Economics</Link>
