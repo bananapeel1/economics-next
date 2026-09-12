@@ -1442,10 +1442,10 @@
    "fix": "Expand the first unit (or the unit the student was last in) by default; replace the badge with an explicit checkbox; show 'N questions - M due' on each chip for everyone (question counts need no auth; compute due count from localStorage for anonymous users); reword to 'Pick the topics you want to practise'.",
    "impact": "A first-time student lands on a page that looks empty (every unit '0 / N'), does not discover unit select-all, and has no information to decide between topics. Anonymous students see zero feedback loop on the topic screen across visits. The framing 'assessed on' raises stakes for a low-stakes practice tool.",
    "packet": 10,
-   "status": "not-fixed",
+   "status": "confirmed",
    "closed_by": "packet-10",
    "verified_by": "packet-verifier 2026-09-12",
-   "evidence": "Signed-in due count now correct: progress-summary/route.js:41-70 computes dueNow = ripe-scheduled + never-attempted, chip renders it (PracticeEngine.jsx:257-259, 'N questions · M due'). But the fix's explicit 'compute due count from localStorage for anonymous users' is still unimplemented: route.js:36 only queries DB 'if (user)', so anon always gets prog={attempted:0,due:0} and dueNow=total regardless of real local progress -- live curl confirms progress-summary?sections=introductory-concepts returns due:25 (=total) signed-out. This is not moot under F086: curl GET /practice returns 200 signed-out and the TopicStep chips render before any auth check; only /api/practice/questions (the Start fetch) 401s. So an anon visitor with genuine local practice history still sees an inflated, misleading due count on the picker itself before hitting the sign-in wall. Localstorage fallback: unmet, not waived.",
+   "evidence": "PracticeEngine.jsx:373-390 recomputes due from loadLocalProgress when !isLoggedIn, using key format sectionId:questionIndex matching saveLocalProgress (line 617, 582); SubjectStep dep array restored to [subjects, units, sections] (line 88), fetchProgressSummary now carries isLoggedIn (line 396); browser-verified at localhost:3001/practice with 6 seeded local items (2 past nextReview, 3 future) for introductory-concepts: chip read 25 questions · 22 due vs untouched Demand chip 25 questions · 25 due; no console ReferenceError, page 200",
    "note": null
   },
   {

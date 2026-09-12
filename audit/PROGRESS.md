@@ -20,7 +20,7 @@ Plan: `audit/PLAN.md` (58 packets). Source data: `audit/README.md`.
 | 7 | Widget mechanics | not started | | | n/a |
 | 8 | Quiz hygiene | not started | | | n/a |
 | 9 | AI correctness | **done 2026-09-12** — F003, F014, F015, F018, F020 confirmed; F019 wont-fix with reason (shared limiter, still per-instance memory). New: `lib/ial-marking.js` (spec-sourced tariffs, paper structures, 20-mark structure) and `lib/subscription-lookup.js`. Verify B: completion screen checked live at 390px | (this commit) | n/a | n/a (packet 3) |
-| 10 | Smart Practice engine | **built, verifying** — F075 F076 F077 F078 F084 F085. Code landed inside 999b378 and 2aec587, which carry packet-12 subjects: both packets touched the same files in one session, so the commit subjects understate what is in them. Look there, not for a `packet-10:` commit | 999b378 + 2aec587 | n/a | n/a (packet 3) |
+| 10 | Smart Practice engine | **done and verified 2026-09-12** — all six confirmed (F075 F076 F077 F078 F084 F085). Verify A rejected three times: the event-object leak into `practiseEarly`, the missing due counts, and the missing anonymous fallback. Verify B at 390px covered the picker; the four in-session checks now need an account, see below | 999b378 + 2aec587 | n/a | n/a (packet 3) |
 | 11 | Performance and accessibility | not started | | | n/a |
 | 12 | Monetisation coherence | not started | | | n/a |
 | 13 | Off-spec strip and dedupe | not started | | | n/a |
