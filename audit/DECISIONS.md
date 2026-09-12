@@ -57,6 +57,17 @@ Append only. Every entry needs a date and the packet that made it.
   glossary definition used as a `String.replace` template so `$&` and `$1` are interpreted) goes to packet 11,
   which already touches `lib/glossary-highlight.js`. **F025** (no onboarding) is packet 99, deliberately out of
   scope per PLAN.md. Packet 13 carries no code findings; its work is entirely content items.
+- **2026-09-12 (packet 2) — PostgREST truncates a select at 1,000 rows and says nothing.** The first
+  backfill read the progress table unpaged, silently processed an arbitrary window and reported a clean run.
+  Every script that reads a table which can exceed 1,000 rows must page with `.order(...).range(...)` —
+  `practice_question_progress` is at 1,069 today. The content tables are one row per section so they are
+  safe, for now.
+
+- **2026-09-12 (packet 2) — writes go to `draft`, students read `data`.** `scripts/packet-2-draft-state.sql`
+  adds `draft` and `published_at` to all eight content tables; `scripts/publish-section.mjs` copies draft into
+  data in one step per section. Nothing on the student path reads `draft`, so the columns are inert until a
+  content script starts writing to them — which packets 14-56 should, from the first one.
+
 - **2026-09-12 (packet 2) — item ids are matched by content, never by position.** The admin PUT replaces a
   whole `data` array, so a save whose JSON lacks ids would drop them. The first implementation restored them
   by array position; a verifier demonstrated that deleting one item then gives every later item its
@@ -126,3 +137,27 @@ Append only. Every entry needs a date and the packet that made it.
   papers. The fix agents read the spec and got it right; the checker, which trusted the sheet, flagged the
   correct answer as wrong. **Exam structure is verified against `audit/raw/econ_spec.txt` and `bus_spec.txt`
   only.** The correct structures are recorded in `audit/PROTOCOL.md`.
+
+- **2026-09-12 (founder) — no paid examiner, and all questions are authored originally.** The plan assumed a
+  qualified IAL teacher would sign off every section, roughly 20-40 hours of paid expert time. There is no
+  budget for it. All practice questions, data-response stimulus and mark schemes are authored from scratch
+  rather than taken from any existing source, which also removes the copyright exposure that hung over the
+  Business extract question. **The examiner is replaced, not deleted**: see `audit/CONTENT-GATE.md`. Reading a
+  real Pearson paper and its mark scheme to calibrate command word, tariff, assessment-objective shape and
+  levels structure is allowed and expected; reproducing Pearson wording, stimulus or descriptors is not.
+  The bar is unchanged: a student who revises here walks into the exam as well prepared as one who used
+  expert-authored material. The `Business extract sourcing` open decision is closed by this: we author them.
+- **2026-09-12 — the quant engine and the interactive diagrams are built but NOT shipped.** Checked across
+  every branch: no student-facing file imports `lib/quant`, `components/quant`, `InteractiveDiagram` or
+  `DiagramLabelDrill`, and the 19 SVGs in `public/diagrams/` are referenced by nothing. The quant engine is
+  reachable only from `app/admin/quant`. This is the same "component exists, never mounted" finding the audit
+  made in March. **Do not remove this work from the plan on the belief that it is done.** What remains is
+  wiring, not building: packets 13.2 and 13.3 wire the quant engine into Learn Mode, Quiz and Smart Practice;
+  packet 7 mounts `InteractiveDiagram` and `DiagramLabelDrill`; packet 5 makes diagrams legible on a phone;
+  packet 2 fixes the 24 of 39 diagram references that resolve to nothing.
+- **2026-09-12 — model allocation, and the rule behind it.** Use the strongest available model where a mistake
+  propagates silently and no verifier can catch it. Use the next tier where the build, the ledger or a verifier
+  catches mistakes. That puts Fable 5.1 on packets 3, 5, 7 and 14 only, Opus on every other packet, and Sonnet
+  on all verification and mechanical sweeps. Recorded in `audit/PROTOCOL.md` under Agents and models. If a
+  packet built on the lower tier is rejected by its verifier more than once, that is evidence the task needed
+  the higher tier: move it and say so here.

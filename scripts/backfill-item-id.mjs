@@ -22,6 +22,9 @@
 //     while every reader indexes the unfiltered array. Unless the student had no filter set,
 //     the index does not mean what it appears to mean. All 27 are reported, none are written.
 //   * Any row whose question_index now exceeds its array length — content moved in packet 0.
+//
+// The read pages explicitly. PostgREST returns at most 1,000 rows per request and gives no
+// indication that it truncated, so an unpaged read looks like a complete, successful run.
 import { supabase } from './_db.mjs';
 
 const args = process.argv.slice(2);
@@ -49,10 +52,19 @@ if (probe.error) {
   process.exit(1);
 }
 
-const { data: rows, error } = await supabase
-  .from('practice_question_progress')
-  .select('id, user_id, section_id, question_index, item_id');
-if (error) { console.error(`read failed: ${error.message}`); process.exit(1); }
+// PostgREST caps a select at 1,000 rows and says nothing about it. Reading without
+// paging silently processed an arbitrary window of the table and reported a clean run.
+const rows = [];
+for (let from = 0; ; from += 1000) {
+  const { data, error } = await supabase
+    .from('practice_question_progress')
+    .select('id, user_id, section_id, question_index, item_id')
+    .order('id')
+    .range(from, from + 999);
+  if (error) { console.error(`read failed: ${error.message}`); process.exit(1); }
+  rows.push(...data);
+  if (data.length < 1000) break;
+}
 
 // ── prerequisite 2: ids exist on content ──
 const cache = new Map();

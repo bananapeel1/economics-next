@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import { createServerClient } from '@/lib/supabase-server';
+import { buildProgressRow, PROGRESS_CONFLICT_TARGET } from '@/lib/progress-row';
 
 /**
  * GET /api/practice/progress?sections=section1,section2,...
@@ -43,7 +44,7 @@ export async function POST(request) {
   if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
   const body = await request.json();
-  const { sectionId, questionIndex, ease, intervalDays, repetitions, nextReview, lastResult, lastConfidence } = body;
+  const { sectionId, questionIndex, itemId, ease, intervalDays, repetitions, nextReview, lastResult, lastConfidence } = body;
 
   if (!sectionId || questionIndex === undefined) {
     return NextResponse.json({ error: 'Missing sectionId or questionIndex' }, { status: 400 });
@@ -52,20 +53,14 @@ export async function POST(request) {
   const db = createServerClient();
   const { data, error } = await db
     .from('practice_question_progress')
-    .upsert({
-      user_id: user.id,
-      section_id: sectionId,
-      question_index: questionIndex,
-      ease: ease ?? 2.5,
-      interval_days: intervalDays ?? 0,
-      repetitions: repetitions ?? 0,
-      next_review: nextReview ? new Date(nextReview).toISOString() : new Date().toISOString(),
-      last_result: lastResult ?? null,
-      last_confidence: lastConfidence ?? null,
-      updated_at: new Date().toISOString(),
-    }, {
-      onConflict: 'user_id,section_id,question_index',
-    })
+    .upsert(
+      buildProgressRow({
+        userId: user.id,
+        sectionId, questionIndex, itemId,
+        ease, intervalDays, repetitions, nextReview, lastResult, lastConfidence,
+      }),
+      { onConflict: PROGRESS_CONFLICT_TARGET },
+    )
     .select()
     .single();
 
