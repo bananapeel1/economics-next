@@ -185,7 +185,10 @@ export default function QuickFireDrill({ quizData, onClose }) {
         ))}
       </div>
 
-      {answered && !selected && (
+      {/* F010: this was `!selected`, and `selected` is an option INDEX starting at 0. Picking
+          option A gave 0, which is falsy, so a student who answered A was told their time had run
+          out. `selected === null` is the actual "did not answer" state. */}
+      {answered && selected === null && (
         <div className="lm-drill-timeout-msg">Time&apos;s up! The correct answer was highlighted.</div>
       )}
     </div>

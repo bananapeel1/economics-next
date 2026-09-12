@@ -65,8 +65,8 @@
    "fix": "Rebase the model: completion should land at a clearly positive value (e.g. 70-80) and decay should follow the scheduled interval (strength hits the 'review' threshold roughly when the review is due, not two days in). Feed inline quiz correctness, post-test and quick-fire results into quizAccuracy. Show 'Review due in N days' rather than a decaying percentage on the completion screen. Do not show a decaying bar in the sidebar next to a completion dot.",
    "impact": "The first thing under 'Topic complete' is an amber bar saying '35% strength'. Coming back tomorrow it is 30%, then red. A student who completes five topics in a week sees a sidebar full of red slivers next to every green completion dot. The 14-day review interval the app schedules is incompatible with its own meter: by the time the review is due the meter says <10% even after a perfect previous review. Nothing the student does inside Learn Mode (inline quiz, explain-it-back, recalls, quick-fire, post-test) raises the meter except a SpacedReview or MixedReview.",
    "packet": 4,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-4",
    "verified_by": null,
    "evidence": null,
    "note": null
@@ -167,8 +167,8 @@
    "fix": "Use the last results entry: results[results.length-1]?.timedOut, or selected === null.",
    "impact": "Every time the student answers A (in time), the timeout message appears under the options, contradicting the feedback colours.",
    "packet": 4,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-4",
    "verified_by": null,
    "evidence": null,
    "note": null
@@ -575,8 +575,8 @@
    "fix": "Treat overall.total===0 or no user_content_progress rows as 'start' and point at the first section of the chosen subject/unit.",
    "impact": "First ever visit to Home reads as if they have history they do not have; the one place that could say 'Start with Unit 1, Topic 1' instead says 'continue'.",
    "packet": 4,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-4",
    "verified_by": null,
    "evidence": null,
    "note": null

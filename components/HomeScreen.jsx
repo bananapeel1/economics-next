@@ -11,6 +11,20 @@ function getRecommendation(data) {
   if (data.weakestTopics?.length > 0 && data.weakestTopics[0].accuracy < 50) {
     return { type: 'practice', text: `Practice ${data.weakestTopics[0].title}`, sub: `${data.weakestTopics[0].accuracy}% mastery \u2014 needs work`, action: 'Practice \u2192' };
   }
+  /* F034: this was the fallback for everyone, so a student who had just confirmed their email and
+     never opened a section was told to "continue where you left off". There is nowhere to
+     continue from. `data` exists for anyone signed in, so it cannot stand in for having done
+     something — the counts have to. */
+  // Fields the dashboard route actually returns, checked against
+  // app/api/progress/dashboard/route.js rather than guessed at.
+  const hasHistory =
+    (data.overall?.mastered || 0) > 0 ||
+    (data.overall?.learning || 0) > 0 ||
+    (data.recentActivity?.last30days || 0) > 0 ||
+    (data.weakestTopics?.length || 0) > 0;
+  if (!hasHistory) {
+    return { type: 'start', text: 'Start with your first topic', sub: 'Pick a section and Learn Mode will take you through it', action: 'Get started' };
+  }
   return { type: 'continue', text: 'Continue where you left off', sub: 'Keep building your knowledge', action: 'Continue \u2192' };
 }
 
