@@ -490,8 +490,8 @@
    "fix": "Render disabled/locked versions of 'Grade my explanation' and 'Model answer from Tutor' for free users with a one-line value prop and a trial CTA; fix the dead branch; on CompletionScreen, make the primary CTA 'Next topic' and demote or gate-label 'Try the quiz'; decide whether Quick Fire over the full bank should remain free given the Quiz tab is paywalled.",
    "impact": "A free student types a 200-word explanation and the box just sits there: no grade, no 'unlock AI feedback' prompt, no acknowledgement. They finish a topic, drill all 25 quiz questions for free in Quick Fire, click 'Try the quiz' and hit a paywall for the same 25 questions. The premium offer looks arbitrary from inside the core loop, and the one moment of highest motivation (completion) ends in a wall rather than a next topic.",
    "packet": 12,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-12",
    "verified_by": null,
    "evidence": null,
    "note": null

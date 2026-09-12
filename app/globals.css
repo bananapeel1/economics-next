@@ -7242,3 +7242,20 @@ a.auth-dropdown-item:visited {
   border: 1px solid var(--border-color, rgba(127,127,127,.22));
 }
 .upgrade-free-note strong { color: var(--text-primary); }
+
+/* Explain It Back: what a free student sees instead of nothing (F029) */
+.lm-explain-locked {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 10px 16px; margin-top: 12px; padding: 12px 14px; border-radius: 10px;
+  background: var(--bg-secondary, rgba(127,127,127,.07));
+  border: 1px solid var(--border-color, rgba(127,127,127,.25));
+  border-left: 3px solid var(--rl-green, #10b981);
+}
+.lm-explain-locked-text { font-size: 13.5px; line-height: 1.45; color: var(--text-secondary); max-width: 46ch; }
+.lm-explain-locked-text strong { color: var(--text-primary); }
+.lm-explain-locked-cta {
+  min-height: 44px; display: inline-flex; align-items: center; padding: 0 18px; flex: none;
+  border-radius: 999px; font-size: 13.5px; font-weight: 600; text-decoration: none;
+  background: var(--rl-green, #10b981); color: #fff;
+}
+.lm-explain-locked-cta:focus-visible { outline: 2px solid var(--rl-green, #10b981); outline-offset: 2px; }
