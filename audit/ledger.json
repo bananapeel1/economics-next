@@ -983,8 +983,8 @@
    "fix": "Replace literal colours with tokens (`var(--accent-purple)`, `var(--text-secondary)`) and define light/dark values in the :root / [data-theme=\"dark\"] blocks.",
    "impact": "A student who switches to light mode (common in bright classrooms, on phones in daylight) sees the recall prompt and the word-bank chips as faint lavender on white; the fill-in becomes unreadable.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-11",
    "verified_by": null,
    "evidence": null,
    "note": null
@@ -1153,8 +1153,8 @@
    "fix": "Track matched terms across the whole step (pass a shared Set through parseInlineMarkdown, or highlight once per NoteSection), make the span a `<button type=button>` or add `tabindex=0` + `aria-describedby`, add a click/touchstart toggle with tap-outside dismiss, and skip highlighting inside Key Idea / Takeaway to keep those clean.",
    "impact": "On a phone the dotted underlines are visual noise with no discoverable interaction; a tap fires a synthetic mouseover so a 280px fixed tooltip appears and stays until the next tap or scroll, with no way to open it by keyboard or screen reader. Not tooltip spam (single JS tooltip), but repeated underlines make body text look link-littered.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-11",
    "verified_by": null,
    "evidence": null,
    "note": null
@@ -1170,8 +1170,8 @@
    "fix": "Define light-theme variants: `--rl-amber-text:#b45309`, `--rl-teal-text:#047857`, `--rl-blue-text:#1d4ed8`, `--rl-green-text:#047857`; replace hard-coded `#d4bfff`/`#a78bfa` with a `--recall-accent` token that is `#6d28d9` in light; raise label size to 11px; never use --text-dim for text.",
    "impact": "A light-mode student sees the purple recall card with four items but cannot read the instruction 'Put these in the right order:' (lavender on white); every card label ('COMMON MISCONCEPTION', 'REAL EXAMPLE') is a faint pastel strip.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-11",
    "verified_by": null,
    "evidence": null,
    "note": null
@@ -1527,8 +1527,8 @@
    "fix": "Define --lm-purple-text / --lm-purple-bg tokens in both [data-theme] blocks (e.g. light: #5b21b6 text) and replace the 13 hardcoded values.",
    "impact": "Any student who toggles light mode (theme-toggle-btn exists in the mobile header) cannot read the recall question prompt or the word-bank chips in fill-in-the-blank; the exercise looks like empty pills.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-11",
    "verified_by": null,
    "evidence": null,
    "note": null

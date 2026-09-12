@@ -45,6 +45,11 @@
   --accent-blue-light: #1d4ed8;
   --accent-green-bright: #036a4d;
   --accent-purple-text: #4c1d95;
+  /* F058/F069/F090: recall widgets used a dark-tuned lavender literal for the borders and fills
+     that signal state (a filled blank, a hovered arrow). On white those read as barely-there, so
+     "filled" and "empty" looked the same. Light gets a border that is actually visible. */
+  --recall-accent: #6d28d9;
+  --recall-accent-fill: rgba(109, 40, 217, 0.10);
   --accent-green-muted: #065f46;
   --green-5: rgba(5,150,105,0.05);
   --green-10: rgba(5,150,105,0.08);
@@ -185,6 +190,8 @@
   --accent-blue-light: #60a5fa;
   --accent-green-bright: #22c55e;
   --accent-purple-text: #d4bfff;
+  --recall-accent: #a78bfa;
+  --recall-accent-fill: rgba(167, 139, 250, 0.10);
   --accent-green-muted: #d1fae5;
   --green-5: rgba(5,150,105,0.05);
   --green-10: rgba(5,150,105,0.1);
@@ -2785,7 +2792,7 @@ button.sidebar-resource-link {
   color: var(--text-tertiary); font-size: 10px; padding: 2px 6px;
   cursor: pointer; transition: all 0.15s;
 }
-.lm-recall-arrow:hover:not(:disabled) { border-color: #a78bfa; color: var(--accent-purple); }
+.lm-recall-arrow:hover:not(:disabled) { border-color: var(--recall-accent); color: var(--accent-purple); }
 .lm-recall-arrow:disabled { opacity: 0.3; cursor: not-allowed; }
 .lm-recall-item-icon { font-weight: 700; font-size: 14px; }
 .lm-recall-item.correct .lm-recall-item-icon { color: var(--rl-green); }
@@ -2827,7 +2834,7 @@ button.sidebar-resource-link {
   background: var(--bg-card); color: var(--text-dim);
   font-size: 13px; text-align: center; cursor: pointer; transition: all 0.15s;
 }
-.lm-fillin-blank.filled { border-style: solid; border-color: #a78bfa; color: var(--text-primary); background: rgba(167,139,250,0.08); }
+.lm-fillin-blank.filled { border-style: solid; border-color: var(--recall-accent); color: var(--text-primary); background: var(--recall-accent-fill); }
 .lm-fillin-blank.correct { border-color: var(--rl-green-bd); color: var(--rl-green); background: var(--rl-green-bg); }
 .lm-fillin-blank.wrong { border-color: var(--rl-red-bd); color: var(--rl-red); background: var(--rl-red-bg); }
 
@@ -2879,7 +2886,7 @@ button.sidebar-resource-link {
   100% { transform: translateY(var(--swap-dy, 0)) scale(1); box-shadow: none; }
 }
 .lm-recall-item.selected {
-  border-color: #a78bfa; background: rgba(167,139,250,0.1);
+  border-color: var(--recall-accent); background: var(--recall-accent-fill);
   box-shadow: 0 0 0 2px rgba(167,139,250,0.2);
   transform: scale(1.02);
 }
@@ -7203,4 +7210,25 @@ a.auth-dropdown-item:visited {
     animation-delay: 0ms !important;
     transition-delay: 0ms !important;
   }
+}
+
+/* Glossary term is reachable by keyboard and tap, not hover alone (F068) */
+.glossary-highlight:focus-visible {
+  outline: 2px solid var(--accent-green, #10b981);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* Focus is visible on every interactive step widget (F070). These were click-only with no
+   focus styling at all, so a keyboard user could not see where they were. */
+.lm-quiz-option:focus-visible,
+.lm-recall-item:focus-visible,
+.lm-recall-arrow:focus-visible,
+.lm-fillin-blank:focus-visible,
+.lm-fillin-word:focus-visible,
+.lm-nav-next:focus-visible,
+.lm-nav-back:focus-visible,
+.spe-section-chip:focus-visible {
+  outline: 2px solid var(--accent-green, #10b981);
+  outline-offset: 2px;
 }
