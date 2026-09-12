@@ -24,21 +24,23 @@
   --bg-auth-google-hover: #f0f2f5;
   --text-primary: #111827;
   --text-secondary: #374151;
-  --text-tertiary: #6b7280;
-  --text-muted: #9ca3af;
+  --text-tertiary: #4b5563;
+  --text-muted: #5b6472;
   --text-muted-alt: #6b7280;
-  --text-dim: #d1d5db;
+  --text-dim: #646c7a;
   --border-primary: #e5e7eb;
   --border-hover: #d1d5db;
-  --accent-green: #059669;
-  --accent-green-light: #10b981;
-  --accent-green-dark: #047857;
-  --accent-amber: #f59e0b;
-  --accent-amber-light: #fbbf24;
-  --accent-red: #ef4444;
-  --accent-red-light: #f87171;
-  --accent-blue: #3b82f6;
-  --accent-indigo: #818cf8;
+  --accent-green: #047857;
+  --accent-green-light: #047857;
+  --accent-green-dark: #03624a;
+  --accent-amber: #ad4f08;
+  --accent-amber-light: #ad4f08;
+  --accent-red: #b91c1c;
+  --accent-red-light: #b91c1c;
+  --accent-blue: #1d4ed8;
+  --accent-indigo: #4f46e5;
+  --accent-purple: #7c3aed;
+  --accent-purple-text: #4c1d95;
   --accent-green-muted: #065f46;
   --green-5: rgba(5,150,105,0.05);
   --green-10: rgba(5,150,105,0.08);
@@ -79,14 +81,14 @@
   --practice-20-border: #f9a8d4;
   --practice-20-badge: #db2777;
   --practice-guidance-bg: #f8fafc;
-  --chain-accent: #3b82f6;
+  --chain-accent: #1d4ed8;
   --chain-bg: #eff6ff;
   --chain-border: #bfdbfe;
   --chain-dot: #3b82f6;
   --chain-line: #bfdbfe;
   --chain-step-bg: #f0f7ff;
   --chain-result-bg: #dbeafe;
-  --eval-accent: #059669;
+  --eval-accent: #047857;
   --eval-bg: #ecfdf5;
   --eval-border: #a7f3d0;
   --eval-content-bg: #f0fdf4;
@@ -119,11 +121,11 @@
   --ma-peel-l-text: #9a3412;
 
   /* ── Revision Learn card tokens (light) — aligned with app accent palette ── */
-  --rl-green: #059669; --rl-green-bg: rgba(5,150,105,0.09); --rl-green-bd: rgba(5,150,105,0.2);
-  --rl-amber: #f59e0b; --rl-amber-bg: rgba(245,158,11,0.09); --rl-amber-bd: rgba(245,158,11,0.2);
-  --rl-teal: #10b981; --rl-teal-bg: rgba(16,185,129,0.09); --rl-teal-bd: rgba(16,185,129,0.2);
-  --rl-blue: #3b82f6; --rl-blue-bg: rgba(59,130,246,0.09); --rl-blue-bd: rgba(59,130,246,0.2);
-  --rl-red: #ef4444; --rl-red-bg: rgba(239,68,68,0.06); --rl-red-bd: rgba(239,68,68,0.2);
+  --rl-green: #047857; --rl-green-bg: rgba(5,150,105,0.09); --rl-green-bd: rgba(5,150,105,0.2);
+  --rl-amber: #ad4f08; --rl-amber-bg: rgba(245,158,11,0.09); --rl-amber-bd: rgba(245,158,11,0.2);
+  --rl-teal: #0f766e; --rl-teal-bg: rgba(16,185,129,0.09); --rl-teal-bd: rgba(16,185,129,0.2);
+  --rl-blue: #1d4ed8; --rl-blue-bg: rgba(59,130,246,0.09); --rl-blue-bd: rgba(59,130,246,0.2);
+  --rl-red: #b91c1c; --rl-red-bg: rgba(239,68,68,0.06); --rl-red-bd: rgba(239,68,68,0.2);
 }
 
 [data-theme="dark"] {
@@ -153,6 +155,8 @@
   --accent-red-light: #f87171;
   --accent-blue: #3b82f6;
   --accent-indigo: #818cf8;
+  --accent-purple: #a78bfa;
+  --accent-purple-text: #d4bfff;
   --accent-green-muted: #d1fae5;
   --green-5: rgba(5,150,105,0.05);
   --green-10: rgba(5,150,105,0.1);
