@@ -1459,8 +1459,8 @@
    "fix": "Decide one policy: either make Quiz tab preview larger and point its paywall at premium-only value (explanations + Ask Tutor + attempt history), or gate /practice consistently. Whichever is chosen, link the two surfaces so students know where the full bank lives.",
    "impact": "A free student who hits the Quiz-tab paywall and then finds /practice sees the identical questions for free and infers the paywall is arbitrary; a student who does not find /practice believes they have access to 2 questions per section. Either way the gating story is incoherent.",
    "packet": 12,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-12",
    "verified_by": null,
    "evidence": null,
    "note": "severity low -> high: 2026-09-12 measured: GET /api/practice/questions needs no auth and no premium check (uses the anon client), and returns the full section_quiz array including correctIndex for every section id passed. An unauthenticated curl returned 75 questions with answer keys across 3 sections; nothing limits the section list, so the whole 769-question bank is fetchable in one request. This is not an inconsistency between two tabs: the quiz paywall is decorative, and the answer keys leak with it. Raised from low after the founder chose to KEEP the current paywall boundary, which makes a non-functioning paywall the thing to fix."

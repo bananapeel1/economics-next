@@ -7117,3 +7117,28 @@ a.auth-dropdown-item:visited {
 }
 .paywall-card a.paywall-plans-link:hover,
 .preview-paywall-banner a.paywall-plans-link:hover { color: var(--text-secondary); }
+
+/* ── Smart Practice preview notice (F086): a free student sees why the session is short ── */
+.spe-preview-note {
+  margin: 0 0 14px; padding: 10px 14px; border-radius: 8px;
+  font-size: 13.5px; line-height: 1.45; color: var(--text-primary);
+  background: var(--bg-secondary, rgba(127, 127, 127, .08));
+  border: 1px solid var(--border-color, rgba(127, 127, 127, .3));
+  border-left: 3px solid var(--rl-green, #10b981);
+}
+
+/* Smart Practice: why a session could not start (F086). Sits above the sticky start bar. */
+.spe-access-note {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px;
+  margin: 16px 0 96px; padding: 12px 16px; border-radius: 10px;
+  font-size: 14px; line-height: 1.45; color: var(--text-primary);
+  background: var(--bg-secondary, rgba(127, 127, 127, .08));
+  border: 1px solid var(--border-color, rgba(127, 127, 127, .3));
+  border-left: 3px solid var(--rl-green, #10b981);
+}
+.spe-access-note-btn {
+  min-height: 44px; display: inline-flex; align-items: center; padding: 0 18px;
+  border-radius: 999px; font-size: 14px; font-weight: 600; text-decoration: none;
+  background: var(--rl-green, #10b981); color: #fff;
+}
+.spe-access-note-btn:focus-visible { outline: 2px solid var(--rl-green, #10b981); outline-offset: 2px; }
