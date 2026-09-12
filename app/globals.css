@@ -2903,7 +2903,7 @@ button.sidebar-resource-link {
   border-radius: 4px; cursor: pointer; transition: all 0.15s;
   line-height: 1;
 }
-.lm-recall-arrow-btn:hover:not(:disabled) { border-color: #a78bfa; color: var(--accent-purple); }
+.lm-recall-arrow-btn:hover:not(:disabled) { border-color: var(--recall-accent); color: var(--accent-purple); }
 .lm-recall-arrow-btn:disabled { opacity: 0.25; cursor: not-allowed; }
 
 .lm-explain-section { margin: 24px 0 0; }

@@ -480,13 +480,18 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       // F092: a student moving between sections and back refetched 152 KB every time. Keep what
       // has already been loaded this visit, and keep the previous section on screen while the new
       // one arrives rather than blanking to a loading card (F098).
-      const cached = sectionCacheRef.current.get(activeSection);
+      // Keyed by section AND by who is asking. The payload varies by entitlement since F086, so a
+      // cache keyed on the section alone would keep serving a free student's 2-question quiz after
+      // they subscribed, and worse, a paying student's 25 after they signed out. Caught by the
+      // packet verifier; it was a bug I introduced with the cache itself.
+      const cacheKey = `${activeSection}:${user?.id || 'anon'}:${isPremium ? 'pro' : 'free'}`;
+      const cached = sectionCacheRef.current.get(cacheKey);
       if (cached) { setSectionData(cached); return; }
       try {
         const res = await fetch(`/api/sections/${activeSection}`);
         if (res.ok) {
           const data = await res.json();
-          sectionCacheRef.current.set(activeSection, data);
+          sectionCacheRef.current.set(cacheKey, data);
           setSectionData(data);
         }
       } catch (e) {
@@ -494,7 +499,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       }
     }
     loadSection();
-  }, [activeSection]);
+  }, [activeSection, user?.id, isPremium]);  // refetch when entitlement changes, not just the section
 
   // Reset scroll state when section or tab changes
   useEffect(() => {

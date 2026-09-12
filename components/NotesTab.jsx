@@ -1,5 +1,5 @@
 "use client";
-import { highlightGlossaryTerms } from '@/lib/glossary-highlight';
+import { highlightGlossaryTerms, newHighlightScope } from '@/lib/glossary-highlight';
 
 /* ── Rich Notes Tab — matches RevvyLearn Notes Redesign ── */
 export default function NotesTab({ data, glossaryTerms }) {
@@ -7,8 +7,17 @@ export default function NotesTab({ data, glossaryTerms }) {
     return <div style={{ color: 'var(--text-muted)', textAlign: 'center', padding: 40 }}>No notes available.</div>;
   }
 
+  // F068: one scope per chapter, so a term is underlined the first time it appears in that
+  // chapter and not again in every card below it. `gPlain` skips highlighting entirely for the
+  // surfaces where a tooltip competes with the point being made — the key idea a student is meant
+  // to absorb, and the takeaways that summarise it.
+  let scope = newHighlightScope();
+  function resetScope() { scope = newHighlightScope(); }
   function g(html) {
-    return highlightGlossaryTerms(html, glossaryTerms);
+    return highlightGlossaryTerms(html, glossaryTerms, scope);
+  }
+  function gPlain(html) {
+    return highlightGlossaryTerms(html, null);
   }
 
   // Detect format: new rich format has "blocks" array, old format has "points" array
@@ -35,7 +44,11 @@ export default function NotesTab({ data, glossaryTerms }) {
   // Rich format — chapters with blocks, flow chains, formulas, callouts
   return (
     <div className="rn-notes">
-      {data.map((chapter, ci) => (
+      {data.map((chapter, ci) => {
+        // A term is worth underlining once per chapter. Starting a fresh scope here is what makes
+        // that true, rather than once per section or once per card (F068).
+        resetScope();
+        return (
         <div className="rn-chapter" key={ci}>
           {/* Chapter heading */}
           <div className="rn-chapter-heading">
@@ -57,7 +70,7 @@ export default function NotesTab({ data, glossaryTerms }) {
           {chapter.keyIdea && (
             <div className="rn-key-idea">
               <div className="rn-key-idea-label">✦ KEY IDEA</div>
-              <div className="rn-key-idea-text" dangerouslySetInnerHTML={{ __html: g(chapter.keyIdea) }} />
+              <div className="rn-key-idea-text" dangerouslySetInnerHTML={{ __html: gPlain(chapter.keyIdea) }} />
             </div>
           )}
 
@@ -136,13 +149,14 @@ export default function NotesTab({ data, glossaryTerms }) {
               {chapter.takeaway.map((t, ti) => (
                 <div className="rn-takeaway-item" key={ti}>
                   <span className="rn-check">✓</span>
-                  <span dangerouslySetInnerHTML={{ __html: g(t) }} />
+                  <span dangerouslySetInnerHTML={{ __html: gPlain(t) }} />
                 </div>
               ))}
             </div>
           )}
         </div>
-      ))}
+        );
+      })}
     </div>
   );
 }

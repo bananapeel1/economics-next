@@ -983,10 +983,10 @@
    "fix": "Replace literal colours with tokens (`var(--accent-purple)`, `var(--text-secondary)`) and define light/dark values in the :root / [data-theme=\"dark\"] blocks.",
    "impact": "A student who switches to light mode (common in bright classrooms, on phones in daylight) sees the recall prompt and the word-bank chips as faint lavender on white; the fill-in becomes unreadable.",
    "packet": 11,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-11",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/globals.css:2687,2770,2849 recall prompt/label/word-chip text now use --accent-purple-text/--accent-purple/--text-primary with light values (#4c1d95 etc, ~11:1 on white); title's text-readability defect resolved",
    "note": null
   },
   {
@@ -1153,10 +1153,10 @@
    "fix": "Track matched terms across the whole step (pass a shared Set through parseInlineMarkdown, or highlight once per NoteSection), make the span a `<button type=button>` or add `tabindex=0` + `aria-describedby`, add a click/touchstart toggle with tap-outside dismiss, and skip highlighting inside Key Idea / Takeaway to keep those clean.",
    "impact": "On a phone the dotted underlines are visual noise with no discoverable interaction; a tap fires a synthetic mouseover so a 280px fixed tooltip appears and stays until the next tap or scroll, with no way to open it by keyboard or screen reader. Not tooltip spam (single JS tooltip), but repeated underlines make body text look link-littered.",
    "packet": 11,
-   "status": "claimed",
+   "status": "not-fixed",
    "closed_by": "packet-11",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "components/GlossaryTooltip.jsx tap/keyboard/dismiss now work, but components/NotesTab.jsx:10-12,60,74,120,128,139 still calls g() fresh per block with no shared Set across a chapter, and keyIdea/takeaway are not skipped; live DOM check on Market Failure Notes tab showed 'deadweight loss' highlighted 8x, 'market failure' 7x, 'consumption' 6x in one step, and 13 of 21 takeaway items plus the key idea still highlighted, contradicting the fix's own 'skip Key Idea/Takeaway' and 'once per step' requirements",
    "note": null
   },
   {
@@ -1170,10 +1170,10 @@
    "fix": "Define light-theme variants: `--rl-amber-text:#b45309`, `--rl-teal-text:#047857`, `--rl-blue-text:#1d4ed8`, `--rl-green-text:#047857`; replace hard-coded `#d4bfff`/`#a78bfa` with a `--recall-accent` token that is `#6d28d9` in light; raise label size to 11px; never use --text-dim for text.",
    "impact": "A light-mode student sees the purple recall card with four items but cannot read the instruction 'Put these in the right order:' (lavender on white); every card label ('COMMON MISCONCEPTION', 'REAL EXAMPLE') is a faint pastel strip.",
    "packet": 11,
-   "status": "claimed",
+   "status": "not-fixed",
    "closed_by": "packet-11",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "core prompt/label contrast now passes (app/globals.css:2770 --accent-purple-text #4c1d95 ~11:1), but app/globals.css:2906 .lm-recall-arrow-btn:hover:not(:disabled) still hardcodes border-color:#a78bfa (~2.7:1 on white, used live in components/learn-mode/ReorderRecall.jsx:120-121); .lm-recall-label (line 2767) is still 10px not the required 11px; .lm-recall-hint-text (line 2893) still uses --text-dim for text against the explicit 'never use --text-dim for text' instruction",
    "note": null
   },
   {
@@ -1204,10 +1204,10 @@
    "fix": "HTML-escape the raw text (`&`, `<`, `>`) at the top of parseInlineMarkdown before applying the bold/italic regexes; in glossary-highlight use a replacer function `(m) => \\`<span ...>${m}</span>\\`` instead of a template string, and escape `$` in escapedDef.",
    "impact": "None visible today. Latent: a future definition like 'below $1 a day' would render 'below Demand a day'; a content string with '<b' or '<1x' style text would lose words on screen.",
    "packet": 11,
-   "status": "claimed",
+   "status": "not-fixed",
    "closed_by": "packet-11",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "lib/glossary-highlight.js:76 confirmed $&/$1/$` now render literally (adversarial test passed), but lib/parse-inline-markdown.js:8-14 still never HTML-escapes raw text before/after the bold/italic regexes as the fix required, so the 'Content HTML is injected unescaped' half of the finding is untouched -- a stray '<' followed by a letter in note content still reaches dangerouslySetInnerHTML unescaped",
    "note": null
   },
   {
@@ -1510,10 +1510,10 @@
    "fix": "Pre-compile one alternation RegExp per glossary list (useMemo on glossaryTerms), and memoize parsed HTML per (text, glossaryTerms) with useMemo/React.memo on NoteSection/BodyRenderer. Or pre-highlight server-side once per section.",
    "impact": "On a mid/low-end Android (typical in the target markets) tapping a quiz option, a confidence button or 'Next' triggers a visible stall because all note text is re-highlighted from scratch; scrolling jank after each interaction.",
    "packet": 11,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-11",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "lib/glossary-highlight.js:18-29 module-level regexCache compiles each term regex once ever; line 51 splits the string once per call, not once per term; used Set (line 48) persists across all text parts in one call, confirmed longest-first + at-most-once-per-call via adversarial node tests",
    "note": null
   },
   {
@@ -1527,10 +1527,10 @@
    "fix": "Define --lm-purple-text / --lm-purple-bg tokens in both [data-theme] blocks (e.g. light: #5b21b6 text) and replace the 13 hardcoded values.",
    "impact": "Any student who toggles light mode (theme-toggle-btn exists in the mobile header) cannot read the recall question prompt or the word-bank chips in fill-in-the-blank; the exercise looks like empty pills.",
    "packet": 11,
-   "status": "claimed",
+   "status": "not-fixed",
    "closed_by": "packet-11",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/globals.css: old file had 7 literal #a78bfa/#d4bfff occurrences plus a dozen rgba(167,139,250,...) equivalents; only 3 rules were converted to --recall-accent/--recall-accent-fill (lines 2795, 2837, 2889 in new file) and line 2906 .lm-recall-arrow-btn:hover still hardcodes border-color:#a78bfa, live in ReorderRecall.jsx's move-up/down buttons, ~2.7:1 contrast on white -- well short of the claimed 'replace the 13 hardcoded values'; npm run contrast passes only because its literals check scans color/fill/stroke, not border-color/background, so it does not see this",
    "note": null
   },
   {
@@ -1561,10 +1561,10 @@
    "fix": "Add `Cache-Control: public, s-maxage=3600, stale-while-revalidate` (content is already ISR'd for 1h on the page route) or export revalidate; keep a client-side Map of loaded sections; consider a ?fields=content,diagrams,quiz,practice variant for Learn Mode and lazy-load notes/flashcards/extras on tab open.",
    "impact": "On a school Wi-Fi share (~1-2 Mbps effective, 200-400 ms RTT) each section switch is a blank screen for roughly 1-2 s (8 DB round-trips server-side + 39 KB transfer), and the first visit is ~200+ KB compressed before Learn Mode can hydrate. Going back to a section already read pays the full cost again.",
    "packet": 11,
-   "status": "claimed",
+   "status": "not-fixed",
    "closed_by": "packet-11",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/api/sections/[id]/route.js:89-92 Cache-Control:private + Vary:Cookie is a sound header for the CDN-leak concern, but components/StudyApp.jsx:308,483-491 sectionCacheRef is a plain Map keyed only by activeSection, never invalidated on isPremium/user change -- a login or logout that flips entitlement via AuthProvider's onAuthStateChange without unmounting StudyApp continues serving the pre-transition cached quiz/flashcard payload from the Map",
    "note": null
   },
   {
@@ -1663,10 +1663,10 @@
    "fix": "Use a skeleton/progress indicator for loading, keep the previous section on screen until the new one arrives, and reserve the 'being prepared' copy for a confirmed-empty response.",
    "impact": "On a slow school network the student reads that the topic is not ready yet and leaves, when it is simply still downloading; there is no spinner or skeleton to signal progress.",
    "packet": 11,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-11",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "components/StudyApp.jsx:483-491 section-switch effect never nulls sectionData so prior section stays on screen; line 691-701 loading copy now says 'Loading this section / One moment'; components/LearnModeTab.jsx:301-306 'being prepared' only reached once contentData has resolved and is genuinely empty",
    "note": null
   },
   {
@@ -1680,10 +1680,10 @@
    "fix": "Add @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration:0.01ms !important; transition-duration:0.01ms !important } } and pass `reducedMotion='user'` to framer-motion's MotionConfig; cap FlowChain total stagger at ~300ms.",
    "impact": "Motion-sensitive students get continuous pulsing badges and cascading fade-ins on every step; everyone else waits ~0.5-1s for a 5-6 step causal chain to fully appear each time it scrolls into view.",
    "packet": 11,
-   "status": "claimed",
+   "status": "not-fixed",
    "closed_by": "packet-11",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/globals.css:7189-7210 CSS prefers-reduced-motion block is real and collapses animation/transition-duration plus inline animation-delay, but components/notes/FlowChain.jsx:1-39 (the staggered flow-chain reveals named in the finding's own title) is untouched by this packet, uses framer-motion variants with JS delay staggering and a type:'spring' result reveal, and no MotionConfig/useReducedMotion exists anywhere in the codebase (grep confirmed) -- CSS cannot govern these spring-driven values, so they still always run",
    "note": null
   },
   {
@@ -1731,10 +1731,10 @@
    "fix": "Render a plain <button> tab when matchMedia('(max-width:768px)') or reduced-motion matches; lazy-load framer-motion only for desktop.",
    "impact": "Extra JS and layout work on every render of the shell for zero visual benefit on phones; contributes to the 167 KB gzip shared bundle.",
    "packet": 11,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-11",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "components/AnimatedTabBar.jsx:10-23,48-67 useMotionAllowed gates prefers-reduced-motion and <=768px; springs are still instantiated (Rules of Hooks, acknowledged in comment) but .set() is never called with a nonzero target when disallowed, eliminating the continuous per-frame animation/re-render cost",
    "note": null
   },
   {
@@ -1748,10 +1748,10 @@
    "fix": "Move onClick/role/aria-selected onto the button, remove tabIndex=-1, add arrow-key handling on the tablist.",
    "impact": "Tabs cannot be reached or activated with a keyboard/switch device; screen readers announce a tab that is not focusable.",
    "packet": 11,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-11",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "components/AnimatedTabBar.jsx:99-120 role/aria-selected/tabIndex/onClick/onKeyDown moved onto motion.button; lines 146-147 focusIndex falls back to 0 when activeTab matches nothing; verified live in browser: exactly one [role=tab] has tabIndex=0, rest -1, when activeTab matched none of the rendered tabs",
    "note": null
   },
   {
@@ -1765,10 +1765,10 @@
    "fix": "Keep the confidence row height reserved or do not auto-dismiss; mount remediation with a fixed-height placeholder or place it after an explicit 'Try a similar one' button.",
    "impact": "While the student is reading the explanation the layout jumps twice (row collapses, remediation appears), so the Next button or the next card moves out from under a planned tap.",
    "packet": 11,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-11",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "components/learn-mode/InlineQuiz.jsx:25-27 4s auto-dismiss timer removed, confidence row only collapses after the student actually rates; lines 36-42 remediation now mounts inside the same 200ms reveal timeout instead of a separate 800ms/1s delayed timer, cutting two shifts to one",
    "note": null
   },
   {

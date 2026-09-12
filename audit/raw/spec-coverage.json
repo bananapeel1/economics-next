@@ -1,0 +1,1068 @@
+{
+  "totals": {
+    "topics": 43,
+    "worksheetReady": 0,
+    "withMissing": 41,
+    "totalMissing": 175,
+    "totalThin": 237,
+    "gapClaimsOverturned": 23
+  },
+  "bySection": [
+    {
+      "key": "business__assessing-competitiveness",
+      "subject": "business",
+      "number": "3.3.5",
+      "title": "Assessing Competitiveness",
+      "covered": 6,
+      "thin": 4,
+      "missing": 11,
+      "worksheetReady": false,
+      "headline": "Only the financial-ratio half of 3.3.5 is taught (and it omits the acid test and substitutes operating profit margin for the spec's profit for the year margin): the two financial statements are never introduced, stakeholder interest appears nowhere, and the entire human resources section \u2014 labour productivity, turnover, retention, absenteeism, their limitations, and all four HR strategies \u2014 exists only in flashcards and quiz answers, while the notes instead teach off-spec UK A-level material (VRIO, Porter's Five Forces, balanced scorecard, benchmarking, triple bottom line).",
+      "missingItems": [
+        "1a Statement of comprehensive income: stakeholder interest",
+        "1b Statement of financial position: stakeholder interest",
+        "2a Calculate liquidity: acid test ratio",
+        "3a Calculate and interpret labour turnover",
+        "3a Calculate and interpret labour retention",
+        "3a Calculate and interpret absenteeism",
+        "3b Limitations of the human resource calculations",
+        "3c Human resource strategy: financial rewards",
+        "3c Human resource strategy: employee share ownership",
+        "3c Human resource strategy: consultation strategies",
+        "3c Human resource strategy: empowerment strategies"
+      ],
+      "thinItems": [
+        "1a Statement of comprehensive income (profit and loss account): key information",
+        "1b Statement of financial position (balance sheet): key information",
+        "2a Calculate profitability: profit for the year margin",
+        "3a Calculate and interpret labour productivity"
+      ]
+    },
+    {
+      "key": "business__business-growth",
+      "subject": "business",
+      "number": "3.3.2",
+      "title": "Business Growth",
+      "covered": 13,
+      "thin": 4,
+      "missing": 2,
+      "worksheetReady": false,
+      "headline": "Integration and organic-vs-external growth are taught well, but two spec sub-points are absent from the teaching content entirely \u2014 overtrading (4c) and external economies of scale \u2014 and four growth objectives (market power, brand recognition, profitability, internal communication) are named in passing without being taught, so a worksheet built from these notes would miss roughly a quarter of what 3.3.2 can ask.",
+      "missingItems": [
+        "Objectives of growth: external economies of scale",
+        "Problems arising from growth: overtrading"
+      ],
+      "thinItems": [
+        "Objectives of growth: increased market power over customers and suppliers",
+        "Objectives of growth: increased brand recognition",
+        "Objectives of growth: increased profitability",
+        "Problems arising from growth: internal communication"
+      ]
+    },
+    {
+      "key": "business__business-objectives-strategy",
+      "subject": "business",
+      "number": "3.3.1",
+      "title": "Business objectives and strategy",
+      "covered": 6,
+      "thin": 2,
+      "missing": 4,
+      "worksheetReady": false,
+      "headline": "The notes teach heading 1 (objectives/mission), heading 2's two matrices and heading 3 (SWOT) well, but the whole of heading 4 is absent from the teaching content \u2014 PESTLE and Porter's five forces exist only in flashcards and quizzes, the changing competitive environment is a passing phrase, and portfolio analysis plus the resource impact of strategic/tactical decisions are missing entirely.",
+      "missingItems": [
+        "2b) Aim of portfolio analysis (why firms analyse the balance of their product portfolio, e.g. BCG)",
+        "2c) Effect of strategic and tactical decisions on human, physical and financial resources",
+        "4a) PESTLE \u2014 political, economic, social, technological, legal and environmental influences",
+        "4c) Porter's five forces"
+      ],
+      "thinItems": [
+        "2c) Distinction between strategic and tactical decisions",
+        "4b) The changing competitive environment"
+      ]
+    },
+    {
+      "key": "business__decision-making-techniques",
+      "subject": "business",
+      "number": "3.3.3",
+      "title": "Decision-Making Techniques",
+      "covered": 9,
+      "thin": 10,
+      "missing": 4,
+      "worksheetReady": false,
+      "headline": "Decision trees and the strategic side of CPA are taught well, but the whole of section 5 (contribution) is absent from the teaching content, investment appraisal exists only as four sentences in an extras chain with no formulas or worked calculations, and the EST/LFT and network-drawing rules are named without ever being given - so 4 of 23 requirements are MISSING and 10 more are THIN.",
+      "missingItems": [
+        "2d Calculations of the figures generated by payback, ARR and NPV",
+        "5a Nature and purpose of contribution",
+        "5b Calculation and interpretation of contribution",
+        "5c Use of contribution as a decision-making technique"
+      ],
+      "thinItems": [
+        "1a Calculation of a FOUR-QUARTER moving average (even-period series, i.e. the centring step)",
+        "1b Interpretation of scatter graphs",
+        "2a Simple payback",
+        "2b Average (accounting) rate of return",
+        "2c Discounted cash flow (net present value only)",
+        "2d Interpretation of the figures generated by investment appraisal techniques",
+        "2e Limitations of the investment appraisal techniques",
+        "4b Complete and interpret simple networks to identify the critical path",
+        "4c Calculate earliest start time (EST)",
+        "4c Calculate latest finish time (LFT)"
+      ]
+    },
+    {
+      "key": "business__entrepreneurs-leaders",
+      "subject": "business",
+      "number": "1.3.5",
+      "title": "Entrepreneurs and Leaders",
+      "covered": 16,
+      "thin": 3,
+      "missing": 3,
+      "worksheetReady": false,
+      "headline": "Strong on entrepreneurs, motives, opportunity cost and trade-offs, but three named spec items are absent from the teaching content - profit satisficing, home working and cost efficiency - and two of them (satisficing, cost efficiency) exist only in the quiz and flashcards, so students are tested on concepts the notes never teach.",
+      "missingItems": [
+        "2b) Financial motive: profit satisficing",
+        "2b) Non-financial motive: home working",
+        "3c) Other objective: cost efficiency"
+      ],
+      "thinItems": [
+        "1e) Anticipating risk and uncertainty in the business environment",
+        "2b) Non-financial motive: ethical stance",
+        "3c) Other objective: employee welfare"
+      ]
+    },
+    {
+      "key": "business__external-influences",
+      "subject": "business",
+      "number": "2.3.5",
+      "title": "External Influences",
+      "covered": 11,
+      "thin": 6,
+      "missing": 2,
+      "worksheetReady": false,
+      "headline": "Strong on economics and competition, but four spec requirements are absent from the notes entirely \u2014 government spending, environmental protection, copyright and trademarks \u2014 and competition policy, health and safety, patents and small-business competitive strategy are named without being taught.",
+      "missingItems": [
+        "Economic influences: government spending",
+        "Legislation: environmental protection"
+      ],
+      "thinItems": [
+        "Legislation: competition policy",
+        "Legislation: health and safety",
+        "Legislation: intellectual property rights \u2014 patents",
+        "Legislation: intellectual property rights \u2014 copyright",
+        "Legislation: intellectual property rights \u2014 trademarks",
+        "Ways for a small business to compete in a competitive market"
+      ]
+    },
+    {
+      "key": "business__financial-planning",
+      "subject": "business",
+      "number": "2.3.2",
+      "title": "Financial Planning",
+      "covered": 20,
+      "thin": 2,
+      "missing": 4,
+      "worksheetReady": false,
+      "headline": "Break-even, cash flow and budgeting/variance are taught well, but the notes never teach average costs, zero-based budgeting, historical/incremental budgeting or any method of raising sales volume \u2014 four spec requirements a worksheet built from these notes would silently omit.",
+      "missingItems": [
+        "1b) Calculation of average costs",
+        "1c) Ways of improving sales volumes",
+        "5b) Type of budget: based on historical figures",
+        "5b) Type of budget: zero based"
+      ],
+      "thinItems": [
+        "1a) Calculation of sales volume",
+        "1c) Ways of improving sales revenues"
+      ]
+    },
+    {
+      "key": "business__global-industries-mncs",
+      "subject": "business",
+      "number": "4.3.4",
+      "title": "Global Industries and Companies (MNCs)",
+      "covered": 17,
+      "thin": 7,
+      "missing": 4,
+      "worksheetReady": false,
+      "headline": "Strong on MNC economic impact, labour ethics and tax, but the whole marketing-ethics bullet (misleading labelling, inappropriate marketing) is absent, along with sustainability and social media as a control on MNCs \u2014 4 of 28 requirements missing and 7 more thin.",
+      "missingItems": [
+        "2b) Environmental considerations: sustainability",
+        "2d) Marketing considerations: misleading product labelling",
+        "2d) Marketing considerations: inappropriate marketing activities",
+        "3) Controlling MNCs: social media"
+      ],
+      "thinItems": [
+        "1b) Impact of MNCs on the balance of payments",
+        "1b) Impact of MNCs on consumers in the host/national economy",
+        "1b) Impact of MNCs on business culture in the host economy",
+        "2b) Environmental considerations: emissions and waste disposal",
+        "2c) Supply chain considerations: child labour",
+        "3) Controlling MNCs: political influence of MNCs",
+        "3) Controlling MNCs: pressure groups"
+      ]
+    },
+    {
+      "key": "business__global-marketing",
+      "subject": "business",
+      "number": "4.3.3",
+      "title": "Global Marketing",
+      "covered": 10,
+      "thin": 3,
+      "missing": 2,
+      "worksheetReady": false,
+      "headline": "Strong on standardisation, glocalisation, the 4Ps and culture, but the notes never teach the three named marketing approaches (ethnocentric/geocentric/polycentric), never mention Ansoff, give Porter one passing sentence, and cover global niche markets only in a single evaluation paragraph with no 4Ps application.",
+      "missingItems": [
+        "1d) Application of Ansoff's matrix to global marketing decisions",
+        "2c) Application and adaptation of the marketing mix (4Ps) to suit global niches"
+      ],
+      "thinItems": [
+        "1b) Domestic / ethnocentric marketing approach",
+        "1d) Application of Porter's matrix (generic strategies) to global marketing decisions",
+        "2b) Features of global niche markets"
+      ]
+    },
+    {
+      "key": "business__global-markets-expansion",
+      "subject": "business",
+      "number": "4.3.2",
+      "title": "Global Markets and Business Expansion",
+      "covered": 4,
+      "thin": 10,
+      "missing": 18,
+      "worksheetReady": false,
+      "headline": "The notes teach market entry methods (export/licence/franchise/JV/FDI) plus Ansoff, PESTLE and Bartlett-Ghoshal, but 4.3.2 asks for push/pull trade drivers, country-as-market and country-as-production-location criteria, reasons for global M&A, and exchange-rate/skill-shortage uncertainty: 18 of 32 requirements are absent entirely, including Porter's five forces, off-shoring, outsourcing, product life cycle extension, disposable income, labour skills, government incentives and natural resources.",
+      "missingItems": [
+        "Push factor: competition (domestic competitive pressure pushing firms abroad)",
+        "Pull factor: risk spreading (spreading risk across several national markets)",
+        "Cost competitiveness by off-shoring",
+        "Cost competitiveness by outsourcing",
+        "Extending the product life cycle (through overseas markets)",
+        "Assessing a country as a market: levels and growth of disposable income",
+        "Assessing a country as a market / production location: ease of doing business",
+        "Application of Porter's five forces in assessing potential markets",
+        "Assessing a country as a production location: costs of production",
+        "Assessing a country as a production location: skills and availability of the labour force",
+        "Assessing a country as a production location: government incentives",
+        "Assessing a country as a production location: natural resources",
+        "Reason for global M&A/JV: acquiring national/international brand names or patents",
+        "Reason for global M&A/JV: securing resources or supplies",
+        "Reason for global M&A/JV: maintaining or increasing global competitiveness",
+        "Reason for global M&A/JV: reducing competition",
+        "Reason for global M&A/JV: government or legal requirement (e.g. a state requiring a local partner)",
+        "Global expansion and uncertainty: skill shortages and their impact on international competitiveness"
+      ],
+      "thinItems": [
+        "Push factor: saturated markets",
+        "Pull factor: increased sales and profitability",
+        "Pull factor: economies of scale",
+        "Assessing a country as a market / production location: infrastructure",
+        "Assessing a country as a market: exchange rates as a selection criterion",
+        "Assessing a country as a production location: location in a trade bloc",
+        "Assessing a country as a production location: likely return on investment",
+        "Global mergers and takeovers as vehicles for expansion (what they are, distinct from a joint venture)",
+        "Reason for global M&A/JV: accessing supply chains or distribution networks",
+        "Global expansion and uncertainty: the impact on businesses of movements in exchange rates"
+      ]
+    },
+    {
+      "key": "business__globalisation",
+      "subject": "business",
+      "number": "4.3.1",
+      "title": "Globalisation",
+      "covered": 11,
+      "thin": 11,
+      "missing": 7,
+      "worksheetReady": false,
+      "headline": "The notes teach globalisation's drivers, business impacts, protectionism and trade blocs well, but the entire \"Growing economies\" strand (developed/developing/emerging characteristics, the rise of Asia and Africa, GDP, GDP per capita and HDI) is absent, along with ASEAN, domestic subsidies and structural change - 7 of 29 spec requirements MISSING and 11 more THIN.",
+      "missingItems": [
+        "1a Characteristics of developed, developing and emerging economies",
+        "1b Growing economic power of countries within Asia, Africa and other parts of the world",
+        "1d Indicator of growth: gross domestic product (GDP) and GDP per capita",
+        "1d Indicator of growth: human development index (HDI)",
+        "3h Structural change",
+        "4d Other trade barriers: domestic subsidies",
+        "5a Expansion of trading blocs: ASEAN"
+      ],
+      "thinItems": [
+        "1c Implications of economic growth for businesses: trade opportunities",
+        "1c Implications of economic growth for individuals: employment patterns",
+        "2a Exports and imports",
+        "2b Implications of increasing specialisation by countries and businesses",
+        "3a Role of the WTO",
+        "3b Political change as a driver of globalisation",
+        "3d Increased significance of global (multinational) corporations (MNCs)",
+        "3f Migration within and between economies",
+        "3g Growth of the global labour force",
+        "4c Import quotas",
+        "4d Other trade barriers: government legislation"
+      ]
+    },
+    {
+      "key": "business__influences-business-decisions",
+      "subject": "business",
+      "number": "3.3.4",
+      "title": "Influences on Business Decisions",
+      "covered": 13,
+      "thin": 2,
+      "missing": 1,
+      "worksheetReady": false,
+      "headline": "Culture types, the Friedman/Freeman debate, ethics and CSR are taught well, but the internal/external stakeholder distinction is taught nowhere in the notes (it exists only in a quiz answer and two flashcards), and \"how culture is formed\" and \"pay and rewards\" are each a single passing clause \u2014 so a worksheet built from these notes would silently skip three spec bullets.",
+      "missingItems": [
+        "2a) Internal and external stakeholders (the distinction, and which groups fall in each)"
+      ],
+      "thinItems": [
+        "1c) How corporate culture is formed",
+        "3b) Pay and rewards"
+      ]
+    },
+    {
+      "key": "business__managing-change",
+      "subject": "business",
+      "number": "3.3.6",
+      "title": "Managing Change",
+      "covered": 1,
+      "thin": 4,
+      "missing": 6,
+      "worksheetReady": false,
+      "headline": "Only 1 of 11 spec requirements is genuinely taught: the whole of contingency planning (risk assessment, natural disasters, IT failure, loss of key staff, business continuity, succession planning) is missing from the notes and exists only in the flashcards and quiz, while culture, size, speed and transformative leadership get a clause each.",
+      "missingItems": [
+        "Key factors in change: b) Size of organisation",
+        "Contingency planning: key risks \u2014 natural disasters",
+        "Contingency planning: key risks \u2014 IT systems failure",
+        "Contingency planning: key risks \u2014 loss of key staff",
+        "Contingency planning: b) Planning for risk mitigation \u2014 business continuity",
+        "Contingency planning: b) Planning for risk mitigation \u2014 succession planning"
+      ],
+      "thinItems": [
+        "Key factors in change: a) Organisational culture",
+        "Key factors in change: c) Time/speed of change",
+        "Key factors in change: e) Transformative (transformational) leadership",
+        "Contingency planning: a) Identifying key risks through risk assessment"
+      ]
+    },
+    {
+      "key": "business__managing-finance",
+      "subject": "business",
+      "number": "2.3.3",
+      "title": "Managing Finance",
+      "covered": 21,
+      "thin": 8,
+      "missing": 4,
+      "worksheetReady": false,
+      "headline": "Profit and liquidity ratios are taught well, but four spec items have no teaching content at all \u2014 factoring, exchange rates, supplier problems and natural phenomena \u2014 and the business-failure bullets (inventory control, marketing, quality, overestimation of sales, interest rates) plus working capital and the balance sheet itself are only passing mentions, so a worksheet built from these notes would overstate its coverage.",
+      "missingItems": [
+        "2b) Ways to improve liquidity: factoring",
+        "3b) External cause: exchange rates",
+        "3b) External cause: supplier problems",
+        "3b) External cause: natural phenomena"
+      ],
+      "thinItems": [
+        "1c) Measuring profitability: calculation of operating profit margin",
+        "2b) Statement of financial position (balance sheet): what it is and what it shows",
+        "2c) Working capital and its management",
+        "3a) Internal cause: overestimation of sales",
+        "3a) Internal cause: poor inventory control",
+        "3a) Internal cause: poor marketing",
+        "3a) Internal cause: poor quality",
+        "3b) External cause: interest rates"
+      ]
+    },
+    {
+      "key": "business__managing-people",
+      "subject": "business",
+      "number": "1.3.4",
+      "title": "Managing People",
+      "covered": 25,
+      "thin": 4,
+      "missing": 0,
+      "worksheetReady": false,
+      "headline": "No outright gaps in 1.3.4 \u2014 25 of 29 spec requirements are properly taught \u2014 but four named spec items are only glanced at: centralised/decentralised (two lines in an extras chain, absent from the notes tier), induction training (one parenthesis, absent from the notes tier), the individual approach to employer/employee relations (one subordinate clause), and home working (two evaluative asides, no definition), so a worksheet built from these notes would silently skip them until those four short additions are made.",
+      "missingItems": [],
+      "thinItems": [
+        "1b) Home working",
+        "1d) Individual approach to employer/employee relations",
+        "2c) Induction training",
+        "3a) Centralised and decentralised structures"
+      ]
+    },
+    {
+      "key": "business__marketing-mix-strategy",
+      "subject": "business",
+      "number": "1.3.3",
+      "title": "Marketing Mix and Strategy",
+      "covered": 20,
+      "thin": 6,
+      "missing": 2,
+      "worksheetReady": false,
+      "headline": "Strong on the frameworks (PLC, Boston Matrix, 4Ps, design mix, branding benefits) but two spec bullets are absent entirely \u2014 niche market strategy and types of branding \u2014 and six more (mass markets, revenue as an objective, designing for waste/re-use/recycling, USPs, sponsorship, emotional branding) exist only as passing mentions.",
+      "missingItems": [
+        "Marketing strategy appropriate for niche markets",
+        "Types of branding"
+      ],
+      "thinItems": [
+        "Marketing objective: increase revenue",
+        "Marketing strategy appropriate for mass markets",
+        "Changes in the design mix to reflect concern over resource depletion: designing for waste minimisation, re-use and recycling",
+        "Way to build a brand: unique selling points (USPs)/differentiation",
+        "Way to build a brand: sponsorship",
+        "Change in branding and promotion reflecting social trends: emotional branding"
+      ]
+    },
+    {
+      "key": "business__meeting-customer-needs",
+      "subject": "business",
+      "number": "1.3.1",
+      "title": "Meeting customer needs",
+      "covered": 27,
+      "thin": 5,
+      "missing": 3,
+      "worksheetReady": false,
+      "headline": "Strong on markets, positioning and sampling, but the secondary-research source list is skeletal: consumer panels, social media and databases are taught nowhere, and online retailing, test marketing, websites and print/broadcast media are named without being taught.",
+      "missingItems": [
+        "Primary method: consumer panels",
+        "Secondary source: social media",
+        "Secondary source: databases"
+      ],
+      "thinItems": [
+        "Dynamic markets: online retailing",
+        "Research used to quantify likely demand",
+        "Primary method: product trials / test marketing",
+        "Secondary source: websites",
+        "Secondary sources: newspapers / magazines / TV / radio"
+      ]
+    },
+    {
+      "key": "business__planning-raising-finance",
+      "subject": "business",
+      "number": "2.3.1",
+      "title": "Planning a Business and Raising Finance",
+      "covered": 17,
+      "thin": 4,
+      "missing": 7,
+      "worksheetReady": false,
+      "headline": "Strong on the core finance sources and liability, but seven named spec items are absent from the teaching content entirely \u2014 peer-to-peer funding, business angels, other businesses, grants, franchising, social enterprise and online businesses \u2014 so a worksheet built from these notes would silently skip most of \"Forms of business\" 4b and three of the six named external sources.",
+      "missingItems": [
+        "3a) External source \u2014 peer-to-peer funding.",
+        "3a) External source \u2014 business angels.",
+        "3a) External source \u2014 other businesses.",
+        "3b) Method of finance \u2014 grants.",
+        "4b) Form of business \u2014 franchising.",
+        "4b) Form of business \u2014 social enterprise.",
+        "4b) Form of business \u2014 online businesses."
+      ],
+      "thinItems": [
+        "3a) External source \u2014 family and friends.",
+        "3b) Method of finance \u2014 leasing.",
+        "3b) Method of finance \u2014 trade credit.",
+        "4b) Form of business \u2014 lifestyle businesses."
+      ]
+    },
+    {
+      "key": "business__resource-management",
+      "subject": "business",
+      "number": "2.3.4",
+      "title": "Resource Management",
+      "covered": 21,
+      "thin": 7,
+      "missing": 2,
+      "worksheetReady": false,
+      "headline": "Strong on production methods, capacity utilisation, JIT/lean and quality, but three spec requirements are absent from the teaching content \u2014 the inventory control diagram (no diagram, no reorder/max/min stock vocabulary at all), any definition of efficiency as production at minimum average cost, and any strategy for dealing with OVER-utilised capacity \u2014 with cell production, quality circles, short product lead-in times and the factors/ways bullets on efficiency and productivity present only as passing mentions.",
+      "missingItems": [
+        "2c) Ways of dealing with OVER-utilisation of capacity",
+        "3a) Interpretation of inventory control diagram"
+      ],
+      "thinItems": [
+        "1a) Methods of production: cell",
+        "1b) Factors influencing productivity",
+        "1c) Efficiency: production at minimum average cost",
+        "1c) Factors influencing efficiency",
+        "1c) Ways to improve efficiency",
+        "1e) Competitive advantage from short product lead-in times",
+        "4a) Quality circles"
+      ]
+    },
+    {
+      "key": "business__the-market",
+      "subject": "business",
+      "number": "1.3.2",
+      "title": "The Market",
+      "covered": 22,
+      "thin": 2,
+      "missing": 2,
+      "worksheetReady": false,
+      "headline": "Strong on demand, supply, equilibrium and both elasticities, but two spec bullets are absent from the teaching content entirely - external shocks as a cause of demand shifts, and the factors influencing YED - with marketing/advertising/branding and seasonality taught in a single line each.",
+      "missingItems": [
+        "Demand: external shocks",
+        "YED: the factors influencing income elasticity of demand"
+      ],
+      "thinItems": [
+        "Demand: marketing, advertising and branding",
+        "Demand: seasonality"
+      ]
+    },
+    {
+      "key": "economics__aggregate-demand",
+      "subject": "economics",
+      "number": "2.3.2",
+      "title": "Aggregate demand (AD)",
+      "covered": 17,
+      "thin": 7,
+      "missing": 7,
+      "worksheetReady": false,
+      "headline": "The AD curve, the four components and their main determinants are taught well, but 8 of 31 spec requirements are absent from the notes entirely \u2014 the savings ratio and its causes/effects, the gross-versus-net investment distinction, all three government policies to promote investment (tax relief, subsidies, corporation tax cuts), correction of market failures and political priorities as influences on G, and the degree of protectionism \u2014 with a further 6 (welfare payments, tax on company profits, level of economic activity, real income, non-price factors) named only in a list and never explained.",
+      "missingItems": [
+        "2c. The definition of the 'savings ratio'",
+        "3a. The distinction between gross investment and net investment",
+        "3c. Government policy to promote investment: tax relief",
+        "3c. Government policy to promote investment: subsidies",
+        "4a. Influence on government expenditure: correction of market failures",
+        "4a. Influence on government expenditure: political priorities",
+        "5a. Impact on the net trade balance of the degree of protectionism"
+      ],
+      "thinItems": [
+        "2a. Influence on consumption: level of welfare payments",
+        "2d. Causes and effects of changes in the savings ratio",
+        "3b. Influence on investment: tax on company profits",
+        "3c. Government policy to promote investment: reductions in the rate of corporation tax",
+        "4a. Influence on government expenditure: the level of economic activity",
+        "5a. Impact on the net trade balance of changes in real income",
+        "5a. Impact on the net trade balance of non-price factors"
+      ]
+    },
+    {
+      "key": "economics__aggregate-supply",
+      "subject": "economics",
+      "number": "2.3.3",
+      "title": "Aggregate Supply",
+      "covered": 11,
+      "thin": 3,
+      "missing": 2,
+      "worksheetReady": false,
+      "headline": "SRAS, the two AS curve shapes and the movement/shift distinction are taught thoroughly, but the LRAS determinants list is a single four-bullet summary: demography and tax-as-incentive are absent entirely, and regulation, net migration and competition policy are named in passing without any mechanism a student could answer from.",
+      "missingItems": [
+        "3b) Factors influencing LRAS: changes in tax (tax as a long-run incentive affecting productive capacity)",
+        "3b) Factors influencing LRAS: changes in demography"
+      ],
+      "thinItems": [
+        "3b) Factors influencing LRAS: changes in government regulations",
+        "3b) Factors influencing LRAS: changes in net migration",
+        "3b) Factors influencing LRAS: changes in competition policy"
+      ]
+    },
+    {
+      "key": "economics__balance-payments-exchange-rates",
+      "subject": "economics",
+      "number": "4.3.3",
+      "title": "Balance of Payments, Exchange Rates and International Competitiveness",
+      "covered": 15,
+      "thin": 10,
+      "missing": 3,
+      "worksheetReady": false,
+      "headline": "Strong on the exam-famous core (BoP identity, fixed/floating, Marshall-Lerner, J-curve) but 3 spec bullets are absent from the teaching text entirely (quantitative easing as currency intervention, global factors such as commodity price falls, the significance of global trade imbalances) and a further 10 - including every non-current-account impact of an exchange rate change - are one-line mentions, five of which survive only as labels inside a diagram.",
+      "missingItems": [
+        "1d) The significance of GLOBAL trade imbalances",
+        "2b) Government intervention in currency markets through quantitative easing",
+        "2c) Factor influencing floating exchange rates: global factors, e.g. falls in commodity prices"
+      ],
+      "thinItems": [
+        "1a) Components of the balance of payments: the CAPITAL account as an account distinct from the financial account",
+        "1b) Causes of surpluses on the current account",
+        "1c) Measures to reduce a country's imbalance on the current account",
+        "2c) Factor influencing floating exchange rates: strength of the economy",
+        "2c) Factor influencing floating exchange rates: capital flight",
+        "2f) Impact of exchange rate changes on the capital and financial accounts of the balance of payments",
+        "2f) Impact of exchange rate changes on economic growth",
+        "2f) Impact of exchange rate changes on employment and unemployment",
+        "2f) Impact of exchange rate changes on FDI flows",
+        "2g) Competitive depreciations/devaluations and their consequences"
+      ]
+    },
+    {
+      "key": "economics__causes-effects-globalisation",
+      "subject": "economics",
+      "number": "4.3.1",
+      "title": "Causes and Effects of Globalisation",
+      "covered": 19,
+      "thin": 4,
+      "missing": 0,
+      "worksheetReady": false,
+      "headline": "Nothing is outright missing and the causes and effects are taught well, but two of the three \"Characteristics of globalisation\" (trade as a proportion of GDP, and migration) exist only as words in a list and a line on a chart, so a worksheet built from these notes could not honestly claim to cover the first third of the spec point \u2014 consumer surplus and TNC influence on domestic policy are similarly name-only.",
+      "missingItems": [],
+      "thinItems": [
+        "Characteristics of globalisation: increase in trade as a proportion of GDP",
+        "Characteristics of globalisation: increase in migration",
+        "Benefit of globalisation: higher consumer surplus",
+        "Cost of globalisation: the influence of TNCs on domestic economic policy"
+      ]
+    },
+    {
+      "key": "economics__consumer-behaviour-demand",
+      "subject": "economics",
+      "number": "1.3.2",
+      "title": "Consumer Behaviour &amp; Demand",
+      "covered": 28,
+      "thin": 5,
+      "missing": 4,
+      "worksheetReady": false,
+      "headline": "Strong on demand and the three elasticities, but four spec bullets are absent from the teaching notes entirely \u2014 inertia, the need to feel valued, framing, and durability as a PED factor \u2014 with herding, poor computational skills, age distribution, branding and PED along a straight-line curve each surviving on a single line.",
+      "missingItems": [
+        "1b) Inertia",
+        "1b) The need to feel valued",
+        "1b) Framing",
+        "3d) Durability of the product as a factor influencing PED"
+      ],
+      "thinItems": [
+        "1b) The influence of other people's behaviour (herding)",
+        "1b) Poor computational skills",
+        "2d) Changes in the age distribution of the population as a demand shifter",
+        "3d) Branding as a factor influencing PED",
+        "3f) How price elasticity of demand varies along a straight line demand curve"
+      ]
+    },
+    {
+      "key": "economics__economic-growth",
+      "subject": "economics",
+      "number": "2.3.5",
+      "title": "Economic growth",
+      "covered": 18,
+      "thin": 4,
+      "missing": 2,
+      "worksheetReady": false,
+      "headline": "Strong on actual vs potential growth, output gaps and the business cycle, but two spec causes of potential growth are absent from the teaching content entirely (FDI is taught nowhere outside a practice question; \"degree of competition\" appears nowhere at all), and export-led growth, opportunity cost, balance of trade deficits and profits for firms are only glancing mentions.",
+      "missingItems": [
+        "1d) Cause of potential growth: foreign direct investment (FDI)",
+        "1d) Cause of potential growth: the degree of competition"
+      ],
+      "thinItems": [
+        "1c) The importance of international trade for export-led growth.",
+        "2a) Benefit of growth: increased profits for firms",
+        "3a) Cost of growth: opportunity costs",
+        "3a) Cost of growth: balance of trade deficits"
+      ]
+    },
+    {
+      "key": "economics__government-intervention",
+      "subject": "economics",
+      "number": "1.3.6",
+      "title": "Government Intervention",
+      "covered": 20,
+      "thin": 2,
+      "missing": 3,
+      "worksheetReady": false,
+      "headline": "The eight intervention methods and government failure are taught well, but extension of property rights, moral hazard and the commodities context are entirely absent from the teaching content, and \"lack of incentives\" is never taught as a cause of government failure.",
+      "missingItems": [
+        "1b) Extension of property rights",
+        "1c) Context: commodities",
+        "2b) Cause of government failure: moral hazard"
+      ],
+      "thinItems": [
+        "1c) Context: energy",
+        "2b) Cause of government failure: lack of incentives"
+      ]
+    },
+    {
+      "key": "economics__government-intervention-firms",
+      "subject": "economics",
+      "number": "3.3.5",
+      "title": "Government Intervention",
+      "covered": 15,
+      "thin": 6,
+      "missing": 14,
+      "worksheetReady": false,
+      "headline": "Deep on competition policy, price and profit regulation, privatisation and the minimum wage, but 14 of 35 spec requirements are absent from the notes entirely - every \"promote competition and contestability\" measure except privatisation, every supplier/employee protection except nationalisation and monopsony restraint, and four of the five labour-market interventions.",
+      "missingItems": [
+        "1b) Performance targets",
+        "1c) Tax incentives and grants to promote small businesses",
+        "1c) Tax incentives and grants to promote FDI",
+        "1c) Competitive tendering for public sector contracts",
+        "1c) Trade liberalisation",
+        "1d) Local sourcing of raw materials and components",
+        "1d) Employment legislation to protect workers from exploitation",
+        "1d) Barriers to entry of foreign firms",
+        "1f) Limits to intervention: lack of regulatory power",
+        "2b) Maximum wage controls",
+        "2b) Direct taxes on firms and employment (e.g. national insurance contributions, corporation tax) and their labour market effects",
+        "2b) Measures to reduce geographical immobility of labour",
+        "2b) Measures to reduce occupational immobility of labour",
+        "2b) Measures to reduce discrimination"
+      ],
+      "thinItems": [
+        "1b) Quality standards",
+        "1c) Deregulation",
+        "1e) Impact of measures on choice",
+        "1f) Limits to intervention: inadequate resources",
+        "2a) The case for government intervention in labour markets",
+        "2b) Measures to reduce exploitation of workers"
+      ]
+    },
+    {
+      "key": "economics__growth-development",
+      "subject": "economics",
+      "number": "4.3.6",
+      "title": "Growth and Development",
+      "covered": 10,
+      "thin": 9,
+      "missing": 1,
+      "worksheetReady": false,
+      "headline": "Ten of the twenty spec bullets are properly taught, but seven are entirely absent \u2014 both exchange-rate bullets, subsidy removal, joint ventures with TNCs, tourism, primary industries and NGOs \u2014 so a worksheet built from these notes would silently skip a third of spec point 4.3.6.",
+      "missingItems": [
+        "3c) Other strategies: development of primary industries"
+      ],
+      "thinItems": [
+        "3a) Market-orientated strategies: removal of government subsidies",
+        "3a) Market-orientated strategies: privatisation",
+        "3a) Market-orientated strategies: floating exchange rate systems",
+        "3b) Interventionist strategies: managed exchange rates",
+        "3b) Interventionist strategies: promoting joint ventures with TNCs",
+        "3c) Other strategies: development of tourism",
+        "3c) Other strategies: debt relief",
+        "3d) The role of international institutions: the World Bank",
+        "3d) The role of international institutions: non-government organisations (NGOs)"
+      ]
+    },
+    {
+      "key": "economics__introductory-concepts",
+      "subject": "economics",
+      "number": "1.3.1",
+      "title": "Introductory Concepts",
+      "covered": 15,
+      "thin": 3,
+      "missing": 6,
+      "worksheetReady": false,
+      "headline": "Spec point 5c (the role of financial markets) is entirely absent from the teaching content and renewable vs non-renewable resources is never mentioned, while capital vs consumer goods survives only as an unexplained PPF axis label \u2014 a worksheet built from these notes would silently skip a quarter of the spec.",
+      "missingItems": [
+        "3b) The distinction between renewable and non-renewable resources",
+        "5c) The role of financial markets: to facilitate saving",
+        "5c) The role of financial markets: to make funds available to businesses and individuals",
+        "5c) The role of financial markets: to facilitate the exchange of goods and services",
+        "5c) The role of financial markets: to provide forward markets in commodities and currencies",
+        "5c) The role of financial markets: to provide a market for equities"
+      ],
+      "thinItems": [
+        "3d) The distinction between free goods and economic goods",
+        "4c) The distinction between capital goods and consumer goods",
+        "4d) The significance of capital goods for productivity and economic growth"
+      ]
+    },
+    {
+      "key": "economics__labour-markets",
+      "subject": "economics",
+      "number": "3.3.4",
+      "title": "Labour Markets",
+      "covered": 9,
+      "thin": 7,
+      "missing": 1,
+      "worksheetReady": false,
+      "headline": "Strong on MRP, monopsony and immobility, but income tax rates are taught nowhere in the notes and seven further spec bullets (product price, wage vs price of capital, both elasticities, population size, welfare benefits, government regulations, public sector wage setting) survive only as unexplained list entries.",
+      "missingItems": [
+        "2c) Income tax rates as a factor influencing labour supply"
+      ],
+      "thinItems": [
+        "1a) Price of the product as a factor influencing labour demand",
+        "1a) Wage rate relative to the price of capital (substituting capital for labour)",
+        "1b) Factors that influence the elasticity of demand for labour",
+        "2c) Size of population as a factor influencing labour supply",
+        "2c) Level of welfare benefits as a factor influencing labour supply",
+        "2c) Government regulations as a factor influencing labour supply",
+        "3c) Wage setting in the public sector / state-owned enterprises"
+      ]
+    },
+    {
+      "key": "economics__macroeconomic-objectives-policies",
+      "subject": "economics",
+      "number": "2.3.6",
+      "title": "Macroeconomic Objectives &amp; Policies",
+      "covered": 8,
+      "thin": 1,
+      "missing": 4,
+      "worksheetReady": false,
+      "headline": "Strong on interest rates, QE and fiscal policy, but the notes teach nothing about the central bank as banker to the government or lender of last resort, and nothing about lending criteria or reserve/liquidity requirements as monetary instruments \u2014 four of the spec's ten demand-side items are absent, and the IAL terms \"reflationary\" and \"deflationary policy\" never appear at all.",
+      "missingItems": [
+        "c) Monetary policy instruments: changes in lending criteria",
+        "c) Monetary policy instruments: reserve asset (liquidity) requirements",
+        "d) The role of central banks: as banker to the government",
+        "d) The role of central banks: as banker to the banks \u2013 lender of last resort"
+      ],
+      "thinItems": [
+        "a) Demand-side policies: the distinction between reflationary and deflationary policies"
+      ]
+    },
+    {
+      "key": "economics__market-failure",
+      "subject": "economics",
+      "number": "1.3.5",
+      "title": "Market Failure",
+      "covered": 23,
+      "thin": 3,
+      "missing": 3,
+      "worksheetReady": false,
+      "headline": "Strong on externalities, public goods and welfare loss, but three spec items are absent from the teaching content entirely: speculation and market bubbles (a named source of market failure), externalities in a financial context, and pensions as an information-failure context.",
+      "missingItems": [
+        "1b) Source of market failure: speculation and market bubbles",
+        "2e) The impact of externalities in a financial context",
+        "4c) How imperfect market information leads to misallocation in pensions"
+      ],
+      "thinItems": [
+        "3a) Private goods: rival and excludable",
+        "4a) The distinction between symmetric and asymmetric information.",
+        "4c) How imperfect market information leads to misallocation in healthcare"
+      ]
+    },
+    {
+      "key": "economics__market-structures-contestability",
+      "subject": "economics",
+      "number": "3.3.3",
+      "title": "Market Structures and Contestability",
+      "covered": 20,
+      "thin": 12,
+      "missing": 4,
+      "worksheetReady": false,
+      "headline": "The four market-structure models are taught well, but the spec's competitive-behaviour and measurement content is not: limit pricing and predatory pricing are entirely absent, collusion's effects on workers and governments are never mentioned, and price wars, X-inefficiency, the shutdown point, concentration-ratio calculation and the three types of product differentiation are one-line mentions at best.",
+      "missingItems": [
+        "Oligopoly 5b: barrier to entry \u2014 limit pricing",
+        "Oligopoly 5d: costs and benefits of collusion to workers",
+        "Oligopoly 5d: costs and benefits of collusion to governments",
+        "Oligopoly 5e: predatory pricing"
+      ],
+      "thinItems": [
+        "Efficiency 1a: the concept of X-inefficiency",
+        "Concentration ratio 2a: calculation of n-firm concentration ratios",
+        "Concentration ratio 2b: the significance of concentration ratios",
+        "Perfect competition 3c: the short-run shutdown point",
+        "Perfect competition 3d: productive and allocative efficiency in the short run and long run",
+        "Monopolistic competition 4b: physical product differentiation \u2014 product features",
+        "Monopolistic competition 4b: marketing differentiation \u2014 advertising, packaging",
+        "Monopolistic competition 4b: distribution differentiation \u2014 shop, online, telephone",
+        "Oligopoly 5b: barrier to entry \u2014 economies of scale",
+        "Oligopoly 5b: barrier to entry \u2014 legal",
+        "Oligopoly 5c and 5e: price wars",
+        "Oligopoly 5d: costs and benefits of collusion to consumers"
+      ]
+    },
+    {
+      "key": "economics__measures-economic-performance",
+      "subject": "economics",
+      "number": "2.3.1",
+      "title": "Measures of Economic Performance",
+      "covered": 17,
+      "thin": 4,
+      "missing": 3,
+      "worksheetReady": false,
+      "headline": "Growth and inflation are taught well, but three monetary/price-index requirements are absent entirely (producer price index, excessive money supply growth as a cause of inflation, falling money supply as a cause of deflation) and four more are only glanced at (value vs volume, positive vs negative growth, and both national-happiness bullets).",
+      "missingItems": [
+        "2d) The producer (wholesale) price index as an indicator of future trends in the rate of inflation",
+        "2e) Cause of inflation: excessive growth of the money supply",
+        "2f) Cause of deflation: a fall in the money supply"
+      ],
+      "thinItems": [
+        "1c) Distinction between value and volume measures of GDP/GNI",
+        "1f) The distinction between positive economic growth rates and negative economic growth rates",
+        "1i) Indicators of national happiness and wellbeing",
+        "1i) The relationship between real incomes and subjective happiness"
+      ]
+    },
+    {
+      "key": "economics__national-income",
+      "subject": "economics",
+      "number": "2.3.4",
+      "title": "National Income",
+      "covered": 16,
+      "thin": 3,
+      "missing": 1,
+      "worksheetReady": false,
+      "headline": "Circular flow, injections/withdrawals and the multiplier are taught thoroughly, but spec 1b (income vs wealth) and the AS half of spec 3b are absent from the teaching content entirely, and the AD-shift framing of 3b is one passing cross-reference.",
+      "missingItems": [
+        "1b) The distinction between income and wealth"
+      ],
+      "thinItems": [
+        "3b-i) Causes of changes in equilibrium real national output as a result of shifts in the AD curve",
+        "3b-ii) Causes of changes in equilibrium real national output as a result of shifts in the AS curve",
+        "4b-iii) Marginal propensity to tax (MPT) and its effect on the multiplier"
+      ]
+    },
+    {
+      "key": "economics__poverty-inequality",
+      "subject": "economics",
+      "number": "4.3.4",
+      "title": "Poverty and Inequality",
+      "covered": 13,
+      "thin": 6,
+      "missing": 3,
+      "worksheetReady": false,
+      "headline": "Strong on definitions, measurement and causes of inequality, but four spec bullets are absent from the teaching content entirely (structural change, aid, civil wars/conflict as causes of poverty change; migration as an impact of inequality) and five more are thin.",
+      "missingItems": [
+        "1c) Cause of changes in poverty: aid",
+        "1c) Cause of changes in poverty: civil wars and conflict",
+        "2d) The impact of inequality on migration"
+      ],
+      "thinItems": [
+        "1c) Cause of changes in poverty: education and training",
+        "1c) Cause of changes in poverty: structural changes in the economy",
+        "2a) The distinction between wealth inequality and income inequality.",
+        "2c) Causes of inequality in income and wealth BETWEEN countries.",
+        "2d) The impact of inequality on savings",
+        "2d) The impact of inequality on life expectancy"
+      ]
+    },
+    {
+      "key": "economics__price-determination",
+      "subject": "economics",
+      "number": "1.3.4",
+      "title": "Price determination",
+      "covered": 14,
+      "thin": 2,
+      "missing": 1,
+      "worksheetReady": false,
+      "headline": "Strong on equilibrium, surplus, the three price functions and indirect taxes, but spec 3b (the price mechanism in local, national and global markets) is entirely absent, the effect of demand and supply SHIFTS on consumer and producer surplus is only ever taught as a price change, and the subsidy-incidence rule is stated in two contradictory directions within the same note.",
+      "missingItems": [
+        "3b) The price mechanism in the context of different types of markets, including local, national and global markets"
+      ],
+      "thinItems": [
+        "2b) How changes in DEMAND or SUPPLY might affect consumer and producer surplus",
+        "4d) The incidence of subsidies on consumers and producers (how the benefit is split)"
+      ]
+    },
+    {
+      "key": "economics__revenue-costs-profits",
+      "subject": "economics",
+      "number": "3.3.2",
+      "title": "Revenue, costs and profits",
+      "covered": 16,
+      "thin": 10,
+      "missing": 7,
+      "worksheetReady": false,
+      "headline": "Revenue, cost and profit theory is taught well, but the economies-of-scale half of the spec is largely a bracketed word-list: external economies of scale are absent entirely (skilled labour, transport links, knowledge sharing appear only in a quiz answer), the internal/external distinction is never drawn, all six internal sources are named but none explained, and three further gaps sit in the cost section (average product to average cost, total product to total cost, and any PED calculation).",
+      "missingItems": [
+        "1b) PED calculations (calculating PED, and calculating the revenue effect numerically)",
+        "2d) The relationship between average product and average cost",
+        "2d) The relationship between total product and total cost",
+        "3c) Distinction between internal and external economies of scale",
+        "3e) Source of external economies of scale: availability of skilled labour",
+        "3e) Source of external economies of scale: access to transport links",
+        "3e) Source of external economies of scale: sharing knowledge"
+      ],
+      "thinItems": [
+        "2c) Average fixed cost: formula and behaviour",
+        "2c) Average variable cost: formula and behaviour",
+        "3d) Source of internal economies of scale: financial",
+        "3d) Source of internal economies of scale: technical",
+        "3d) Source of internal economies of scale: managerial",
+        "3d) Source of internal economies of scale: marketing",
+        "3d) Source of internal economies of scale: purchasing",
+        "3d) Source of internal economies of scale: risk bearing",
+        "3f) Source of diseconomies of scale: communication problems",
+        "3f) Source of diseconomies of scale: coordination problems"
+      ]
+    },
+    {
+      "key": "economics__role-state-macroeconomy",
+      "subject": "economics",
+      "number": "4.3.5",
+      "title": "The Role of the State in the Macroeconomy",
+      "covered": 7,
+      "thin": 8,
+      "missing": 13,
+      "worksheetReady": false,
+      "headline": "The notes for 4.3.5 teach public goods, merit goods and general policy tools instead of the spec's actual content: 14 of 28 requirements are wholly absent, including capital/current expenditure, every reason for changing public expenditure, the direct/indirect and progressive/proportional/regressive tax distinctions, automatic stabilisers, structural vs cyclical deficits, debt servicing and intergenerational equity.",
+      "missingItems": [
+        "1a) Capital expenditure \u2014 what it is, with examples (spec: 'The distinction between capital expenditure, current expenditure and transfer payments')",
+        "1a) Current expenditure \u2014 day-to-day running costs of the state, with examples",
+        "1b) Changing incomes as a reason for the changing size and pattern of public expenditure internationally",
+        "1b) Changing age distributions (demographics) as a reason for the changing size and pattern of public expenditure",
+        "1b) Changing expectations as a reason for the changing size and pattern of public expenditure",
+        "1c) The significance of the level of public expenditure as a proportion of GDP for productivity and growth",
+        "2a) The distinction between direct and indirect taxes, with examples of each",
+        "2b) Proportional taxes \u2014 definition and effect",
+        "2b) Regressive taxes \u2014 definition and effect",
+        "2c) Effect of changes in tax rates on the trade balance",
+        "3a) The distinction between automatic stabilisers and discretionary fiscal policy",
+        "3c) The significance of fiscal deficits and national debts: debt servicing",
+        "3c) The significance of fiscal deficits and national debts: intergenerational equity"
+      ],
+      "thinItems": [
+        "1a) Transfer payments as a distinct third category of public expenditure, distinguished from capital and current expenditure",
+        "1c) The significance of the level of public expenditure as a proportion of GDP for levels of taxation",
+        "2c) Effect of changes in tax rates on the price level",
+        "2c) Effect of changes in tax rates on FDI flows",
+        "3a) The distinction between fiscal deficits and fiscal surpluses",
+        "3a) The distinction between a fiscal deficit (annual flow) and the national debt (accumulated stock)",
+        "3a) The distinction between structural and cyclical fiscal deficits",
+        "3b) Factors influencing the size of fiscal deficits and national debts"
+      ]
+    },
+    {
+      "key": "economics__supply",
+      "subject": "economics",
+      "number": "1.3.3",
+      "title": "Supply",
+      "covered": 20,
+      "thin": 2,
+      "missing": 1,
+      "worksheetReady": false,
+      "headline": "Strong overall coverage of 1.3.3, but the specific vs ad valorem tax distinction is taught nowhere in the notes (it exists only in flashcards and a quiz), and two named PES determinants - perishability and legal constraints - appear only as an unexplained diagram label and a passing clause in a housing example.",
+      "missingItems": [
+        "1c) Indirect taxes: the distinction between SPECIFIC and AD VALOREM taxes (and their different effects on the supply curve - parallel shift vs pivot)"
+      ],
+      "thinItems": [
+        "2c) Factor influencing PES: perishability (whether the good can be stored)",
+        "2c) Factor influencing PES: legal constraints"
+      ]
+    },
+    {
+      "key": "economics__trade-global-economy",
+      "subject": "economics",
+      "number": "4.3.2",
+      "title": "Trade and the Global Economy",
+      "covered": 15,
+      "thin": 17,
+      "missing": 1,
+      "worksheetReady": false,
+      "headline": "Comparative advantage, free trade, protectionism and the WTO are taught properly, but two of the spec's four sub-headings have almost no teaching behind them: the entire Terms of Trade strand and all four trading-bloc types exist only as diagram labels, not in any content block, note or extra, while the impact of emerging economies and bloc transaction costs are absent altogether.",
+      "missingItems": [
+        "2a Factor influencing patterns of trade: impact of emerging economies"
+      ],
+      "thinItems": [
+        "2a Factor influencing patterns of trade: growth in trading blocs and bilateral trading agreements",
+        "2a Factor influencing patterns of trade: changes in relative exchange rates",
+        "2b Changes in trade flows between countries, and the reasons for these changes",
+        "3a Calculation of the terms of trade",
+        "3b Factor influencing terms of trade: relative inflation rates",
+        "3b Factor influencing terms of trade: relative productivity rates",
+        "3b Factor influencing terms of trade: relative labour costs",
+        "3b Factor influencing terms of trade: the exchange rate",
+        "3c Impact of terms of trade changes on export revenues",
+        "3c Impact of terms of trade changes on the balance of trade",
+        "4b Type of trading bloc: free-trade areas",
+        "4b Type of trading bloc: customs unions",
+        "4b Type of trading bloc: common markets",
+        "4b Type of trading bloc: economic and monetary unions",
+        "4c Cost/benefit of bloc membership: costs and prices",
+        "4c Cost/benefit of bloc membership: transaction costs",
+        "4c Cost/benefit of bloc membership: movement of factors of production"
+      ]
+    },
+    {
+      "key": "economics__types-sizes-businesses",
+      "subject": "economics",
+      "number": "3.3.1",
+      "title": "Types and Sizes of Businesses",
+      "covered": 25,
+      "thin": 5,
+      "missing": 3,
+      "worksheetReady": false,
+      "headline": "Growth, integration and business objectives are taught to a high standard, but the whole of spec section 1 \"Types of businesses\" is half-absent \u2014 state-owned enterprises, not-for-profit organisations, co-operatives and joint ventures are taught nowhere in the notes under any name.",
+      "missingItems": [
+        "Types of businesses: state-owned enterprises (public sector)",
+        "Types of businesses: not-for-profit organisations",
+        "Types of businesses: joint ventures"
+      ],
+      "thinItems": [
+        "Constraints on business growth: size of market",
+        "Constraints on business growth: owner objectives",
+        "Impact of growth of firms on WORKERS",
+        "Impact of demergers on WORKERS",
+        "Impact of demergers on CONSUMERS"
+      ]
+    }
+  ],
+  "report": "# Revvy Learn: specification coverage audit\n\n**43 topics checked against the Edexcel IAL specification. Written 12 September 2026.**\n\n---\n\n## 1. The headline numbers\n\n| | Topics | Spec requirements | Properly taught | Named only (thin) | Missing |\n|---|---|---|---|---|---|\n| Economics | 23 | 591 | 371 (63%) | 133 (23%) | 87 (15%) |\n| Business | 20 | 482 | 290 (60%) | 104 (22%) | 88 (18%) |\n| **Total** | **43** | **1,073** | **661 (62%)** | **237 (22%)** | **175 (16%)** |\n\n**Worksheet-ready today: 0 of 43.**\n\n175 spec requirements are taught nowhere in the notes. A further 237 are named in a list or a passing clause with no definition and no explanation, so a student could not answer an exam question from them. Together that is 412 requirements, 38% of the specification, that a worksheet generated from the notes would either skip or cover with a single unexplained word.\n\nTwo topics have no outright gaps at all: Business 1.3.4 Managing People and Economics 4.3.1 Causes and Effects of Globalisation. Both still have four thin items each, so neither is ready without a short patch.\n\nEconomics and Business are about equally bad overall. Business is slightly worse per requirement (18% missing against 15%), and much worse where it matters, which is the next section.\n\n---\n\n## 2. The pattern that should drive your decisions\n\n### 2.1 The gaps are almost entirely in A2 (Units 3 and 4)\n\n| Unit | Requirements | Taught | Thin | Missing | % taught |\n|---|---|---|---|---|---|\n| Economics Unit 1 | 155 | 120 | 17 | 18 | 77% |\n| Economics Unit 2 | 128 | 87 | 22 | 19 | 68% |\n| Economics Unit 3 | 154 | 85 | 40 | 29 | 55% |\n| Economics Unit 4 | 154 | 79 | 54 | 21 | 51% |\n| Business Unit 1 | 140 | 110 | 20 | 10 | 79% |\n| Business Unit 2 | 136 | 90 | 27 | 19 | 66% |\n| Business Unit 3 | 102 | 48 | 26 | 28 | 47% |\n| Business Unit 4 | 104 | 42 | 31 | 31 | 40% |\n\nAS (Units 1 and 2): 73% of the spec is properly taught.\nA2 (Units 3 and 4): 49%. The missing rate doubles, from 12% to 21%.\n\n109 of the 175 missing requirements, 62%, sit in Units 3 and 4. Business A2 is the worst quarter of the product by a distance: 206 requirements, only 90 taught, 59 missing. Business Unit 4 is 40% taught. If an A2 student is paying the same price as an AS student, they are getting roughly half the product.\n\n### 2.2 What is missing is descriptive, not analytical\n\nI classified all 175 missing items by hand:\n\n- **About 119 (68%) are a named item from a list in the spec.** Types of business, sources of finance, policy instruments, named institutions, location criteria, sources of economies of scale, reasons for a merger, causes of poverty, secondary research sources.\n- **About 30 (17%) are a formal definition or distinction.** Capital versus current expenditure; direct versus indirect tax; progressive, proportional, regressive; gross versus net investment; internal versus external economies of scale; income versus wealth; specific versus ad valorem; internal versus external stakeholders; automatic stabilisers versus discretionary policy.\n- **About 9 (5%) are a calculation.** Acid test, labour turnover, labour retention, absenteeism, contribution, payback/ARR/NPV figures, average costs, PED.\n- **Only about 17 (10%) are analysis, chains or evaluation.**\n\nThe notes are strong wherever the content is a model with a diagram: AD/AS, elasticity, market structures, break-even, decision trees, Marshall-Lerner, the J-curve, the four integration types. They are weak wherever the spec simply lists things a student is expected to name and define. The writer taught economics and business; he did not work through the spec's lists.\n\nThis matters for marks, not just for coverage. IAL knowledge and application marks are awarded for naming and defining. The notes are strongest on the part of the paper students find hardest and weakest on the part they should be banking.\n\n### 2.3 The gaps come in whole spec sub-headings, not scattered bullets\n\n- Business 3.3.5: the entire human resources half (heading 3) is absent from the notes.\n- Business 3.3.6: the entire contingency planning section is absent.\n- Business 3.3.1: the whole of heading 4 (PESTLE, Porter, competitive environment) is absent.\n- Business 4.3.1: the whole \"growing economies\" strand, including GDP, GDP per capita and HDI.\n- Economics 1.3.1: all five roles of financial markets (5c).\n- Economics 2.3.6: the entire role of the central bank.\n- Economics 3.3.2: all of external economies of scale.\n- Economics 4.3.5: most of the fiscal content the spec actually asks for.\n\nA worksheet built on these notes would not miss a stray term. It would miss an entire question type.\n\n### 2.4 The likely cause: the notes look adapted from UK GCE A-level, not built from the IAL spec\n\nThree pieces of evidence:\n\n- Business 3.3.5 teaches VRIO, Porter's Five Forces, the balanced scorecard, benchmarking and the triple bottom line. None of those are in IAL 3.3.5. The spec's own content (the two financial statements, the acid test, labour turnover, retention, absenteeism, four HR strategies) is missing.\n- Business 3.3.5 teaches operating profit margin where the IAL spec asks for profit for the year margin.\n- Economics 4.3.5 teaches public goods, merit goods and general policy tools instead of the spec's capital/current expenditure, tax classification, automatic stabilisers and deficits.\n\nThis explains pattern 2.1 neatly. Where IAL and UK A-level overlap, which is mostly AS micro and macro theory, coverage is strong. Where IAL diverges, which is mostly the applied and institutional content of Units 3 and 4, coverage collapses. Assume any A2 topic inherited from UK material is wrong until checked.\n\n### 2.5 Students are being tested on things the notes never teach\n\nIn at least seven topics, a concept exists only in flashcards, a quiz option or a mark scheme: the whole HR section of Business 3.3.5, contingency planning in Business 3.3.6, PESTLE and Porter in Business 3.3.1, the stakeholder distinction in Business 3.3.4, profit satisficing and cost efficiency in Business 1.3.5, specific versus ad valorem tax in Economics 1.3.3, FDI in Economics 2.3.5.\n\nThese are your cheapest fixes, because some usable wording already exists, and your highest credibility risk, because a student meets a quiz question about something the notes never covered.\n\n---\n\n## 3. The worst topics\n\nRanked by how little of the spec is actually taught.\n\n1. **Business 3.3.6 Managing Change: 1 of 11 requirements taught (9%).** All of contingency planning is missing: risk assessment, natural disasters, IT failure, loss of key staff, business continuity, succession planning. Culture, size, speed and transformative leadership get one clause each. This is a rewrite, not a patch.\n2. **Business 4.3.2 Global Markets and Business Expansion: 4 of 32 (13%). 18 missing.** The notes teach entry methods, Ansoff, PESTLE and Bartlett-Ghoshal. The spec asks for push and pull trade drivers, criteria for judging a country as a market and as a production location, reasons for global mergers and joint ventures, and exchange-rate and skill-shortage uncertainty. Off-shoring, outsourcing, product life cycle extension, disposable income, labour skills, government incentives, natural resources and Porter's five forces are all absent. Worst single topic in the product.\n3. **Economics 4.3.5 The Role of the State in the Macroeconomy: 7 of 28 (25%). 13 missing.** The notes teach the wrong topic. Missing: capital and current expenditure, every reason for changing public expenditure, direct versus indirect tax, progressive/proportional/regressive, automatic stabilisers, structural versus cyclical deficits, debt servicing, intergenerational equity.\n4. **Business 3.3.5 Assessing Competitiveness: 6 of 21 (29%). 11 missing.** Only the financial ratio half is taught, and it omits the acid test and substitutes the wrong margin. Neither financial statement is introduced. The whole HR section (labour productivity, turnover, retention, absenteeism, their limitations, four HR strategies) is absent from the notes. Off-spec UK material fills the space.\n5. **Business 4.3.1 Globalisation: 11 of 29 (38%). 7 missing.** The entire growing-economies strand: developed, developing and emerging characteristics; the rise of Asia and Africa; GDP and GDP per capita; HDI. Plus ASEAN, domestic subsidies, structural change.\n6. **Business 3.3.3 Decision-Making Techniques: 9 of 23 (39%). 4 missing, 10 thin.** All of contribution is absent. Investment appraisal is four sentences with no formulas and no worked calculation. The EST and LFT rules are named but never given.\n7. **Economics 3.3.5 Government Intervention: 15 of 35 taught, 14 missing.** Every measure to promote competition except privatisation; every supplier and employee protection except nationalisation and monopsony restraint; four of the five labour market interventions.\n8. **Economics 3.3.2 Revenue, costs and profits: 7 missing, 10 thin.** The economies of scale half of the spec is a bracketed word list: all six internal sources are named and none explained, external economies of scale are absent entirely, and the internal/external distinction is never drawn.\n\nAlso worth naming even though they are not the worst on percentage: **Economics 1.3.1** (6 missing, including all five roles of financial markets; this is the first topic a student ever opens) and **Business 2.3.1** (7 missing, including three of six named external finance sources and three forms of business; an AS topic with high traffic).\n\n**One accuracy error surfaced in passing, unrelated to coverage:** Economics 1.3.4 states the subsidy incidence rule in two contradictory directions inside the same note. Fix that today; it is wrong, not merely absent.\n\n---\n\n## 4. Recommended build order\n\nThe principle: do not commission a worksheet for a topic whose notes have a hole, because the worksheet will inherit the hole and report itself complete. Patch the notes first, then commission.\n\n### Tier 0: fix now, this week, regardless of worksheets\n\n- Economics 1.3.4: the contradictory subsidy incidence statement.\n- Business 3.3.5: operating profit margin taught where the spec asks profit for the year margin.\n\nBoth are live wrong content, not gaps.\n\n### Tier 1: commission worksheets now, after a short patch of 2 to 9 short additions each (14 topics)\n\nBusiness 1.3.4, Economics 4.3.1, Economics 1.3.3, Economics 1.3.4, Business 3.3.4, Economics 2.3.4, Business 1.3.2, Economics 2.3.3, Economics 2.3.5, Business 3.3.2, Business 4.3.3, Business 1.3.3, Business 2.3.5, Business 2.3.4.\n\nAll have 2 or fewer missing requirements. Most of the work is expanding thin items from a name into a short teaching paragraph. This tier is almost entirely AS, so it also matches where most of your students are.\n\n### Tier 2: one writing session of notes per topic, then the worksheet (16 topics)\n\nEconomics 1.3.5, Economics 1.3.6, Economics 2.3.1, Economics 2.3.6, Economics 3.3.1, Economics 4.3.4, Economics 4.3.3, Economics 1.3.2, Economics 3.3.3, Business 1.3.1, Business 1.3.5, Business 2.3.2, Business 2.3.3, Business 3.3.3, Business 3.3.1, Business 4.3.4.\n\nEach has 3 or 4 missing requirements. Business 3.3.1 and Business 3.3.3 are at the heavy end: each needs a whole sub-heading written (heading 4, and contribution respectively).\n\n### Tier 3: write a substantial new section first (8 topics)\n\nEconomics 1.3.1, Economics 2.3.2, Economics 3.3.2, Economics 3.3.4, Economics 4.3.2, Economics 4.3.6, Business 2.3.1, Business 4.3.1.\n\nEither 6 to 7 missing requirements, or a very high thin count that amounts to the same thing. Economics 4.3.2 has only 1 missing but 17 thin: two of its four sub-headings exist only as diagram labels, with no teaching text at all.\n\n### Tier 4: rewrite the notes before any worksheet is commissioned (5 topics)\n\nBusiness 4.3.2, Economics 3.3.5, Economics 4.3.5, Business 3.3.5, Business 3.3.6.\n\nThese five hold 62 of the 175 missing requirements, 35% of the total, from 5 of 43 topics. Commissioning worksheets for them now would be paying for work you throw away.\n\n### Sequencing advice\n\nRun Tier 1 and Tier 2 in unit order, AS before A2, so the topics students hit first are fixed first, and the cheap wins land early. Then do Tier 4 as a block, because it is a single, coherent job: it is the A2 applied content that the UK-derived notes never covered, and doing it as one project keeps the vocabulary consistent.\n\nI have no traffic or revenue data. If you know which topics are actually opened most, overlay that on the tiers before you start: a Tier 2 topic with heavy traffic beats a Tier 1 topic nobody reads.\n\n---\n\n## 5. What this audit cannot tell you\n\n**It judged teaching content only.** Content blocks, notes and extras. Quiz options, flashcards and practice-question mark schemes were deliberately excluded, because a student cannot learn a concept from the answer key to a question about something else. So \"MISSING\" means \"not taught in the notes\", not \"absent from the site\". In at least seven topics, a missing concept does exist somewhere in a quiz or a flashcard. Those are cheaper to fix than a true blank, and the audit does not distinguish them for you beyond what is noted above.\n\n**The denominators are my judgement.** The spec writes compound bullets: \"skilled labour, transport links, knowledge sharing\" is one bullet. I split it into three requirements. A different person splitting would produce a different total, so 1,073 is not a number to quote externally. Per-topic percentages are more reliable than the absolute counts, and the counts are comparable between topics in this audit because one method was applied throughout.\n\n**THIN is the softest of the three categories.** The line between \"named but not teachable from\" and \"briefly taught\" is a judgement, and reasonable people would move some items across it. MISSING is the firmest: it required an active search under alternative wording before the claim was allowed to stand.\n\n**The 23 overturned claims tell you the error rate.** An earlier pass proposed 198 gaps; verification knocked out 23 of them, about one in eight. Those were cases where the notes taught the concept under different words: a co-operative called a mutual, forward integration described as buying a distributor. The 175 that survived were each re-checked for alternative wording and required a direct quotation from the teaching text as evidence. The residual error rate should therefore be well below one in eight, but it is not zero. Expect a handful of the 175 to be wrong.\n\nTwo practical consequences. First, before you commission a rewrite for any topic, spend five minutes searching that topic's notes for the missing items under other names; the cost of that check is small against the cost of writing content that already exists. Second, in the raw results the narrative paragraph for a topic sometimes names more gaps than the verified list beneath it, because the paragraphs were written before verification. Where they disagree, **the itemised list is right and the paragraph is stale.**\n\n**This is a coverage audit only.** It says nothing about whether the content that exists is accurate, well pitched for students working in a second language, or good exam preparation. One factual error surfaced by accident (Economics 1.3.4). There are almost certainly others, and finding them is a different job."
+}
