@@ -7,12 +7,12 @@ import LandingScrollBar from '@/components/LandingScrollBar';
 import '@/styles/landing.css';
 
 export const metadata = {
-  title: 'Edexcel IAL Past Papers & Mark Schemes 2024–2016 — Free PDF Download',
-  description: 'Download free Edexcel IAL Economics and Business past papers with mark schemes and worked answers. All units covered: WEC11, WEC12, WEC13, WEC14, WBS11, WBS12. Instant access — no sign-up required.',
+  title: 'Edexcel IAL Past Papers & Mark Schemes 2024–2020 — Free PDF Download',
+  description: 'Download free Edexcel IAL Economics and Business past papers with mark schemes for Unit 1: WEC11 (Economics) and WBS11 (Business). Instant access — no sign-up required.',
   alternates: { canonical: 'https://revvylearn.com/past-papers' },
   openGraph: {
     title: 'Edexcel IAL Past Papers & Mark Schemes — Free PDF Download',
-    description: 'Free Edexcel IAL Economics and Business past papers with mark schemes 2024–2016. All units, instant access, no sign-up.',
+    description: 'Free Edexcel IAL Economics and Business Unit 1 past papers with mark schemes, 2024–2020. Instant access, no sign-up.',
     url: 'https://revvylearn.com/past-papers',
   },
 };
@@ -40,12 +40,12 @@ export default async function PastPapersRoute() {
               IAL Past Papers<br />&amp; <em>Mark Schemes</em>
             </h1>
             <p className="elp-hero-desc">
-              Download previous exam papers and mark schemes for Edexcel International A-Level Economics and Business. All units covered &mdash; instant access, no sign-up required.
+              Download previous exam papers and mark schemes for Edexcel International A-Level Economics and Business, Unit 1 &mdash; instant access, no sign-up required.
             </p>
             <div className="elp-hero-proof">
-              <div className="elp-proof-item"><strong>2016&ndash;2024</strong> papers</div>
+              <div className="elp-proof-item"><strong>2020&ndash;2024</strong> papers</div>
               <div className="elp-proof-dot" />
-              <div className="elp-proof-item">All units covered</div>
+              <div className="elp-proof-item">Unit 1 covered</div>
               <div className="elp-proof-dot" />
               <div className="elp-proof-item">Free PDF download</div>
             </div>
