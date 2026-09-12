@@ -5,11 +5,11 @@ import '@/styles/landing.css';
 
 export const metadata = {
   title: 'IAL January 2027 Revision — Edexcel Economics & Business Exam Preparation | Revvy Learn',
-  description: 'Revision guide for the Edexcel IAL January 2027 exam series. Free notes, practice questions and Unit 1 past papers for IAL Economics (WEC11–WEC14) and Business (WBS11–WBS14). Flashcards, quizzes and the AI tutor unlock with Pro. Start your revision early.',
+  description: 'Revision guide for the Edexcel IAL January 2027 exam series. Free notes, practice questions and past papers for all four units for IAL Economics (WEC11–WEC14) and Business (WBS11–WBS14). Flashcards, quizzes and the AI tutor unlock with Pro. Start your revision early.',
   alternates: { canonical: 'https://revvylearn.com/ial-revision/january-2027' },
   openGraph: {
     title: 'IAL January 2027 Revision — Edexcel Economics & Business | Revvy Learn',
-    description: 'Free revision for the January 2027 IAL exam series. Economics and Business notes, practice questions and Unit 1 past papers.',
+    description: 'Free revision for the January 2027 IAL exam series. Economics and Business notes, practice questions and past papers for all four units.',
     url: 'https://revvylearn.com/ial-revision/january-2027',
   },
 };

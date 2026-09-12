@@ -7,7 +7,7 @@ import '@/styles/landing.css';
 
 export const metadata = {
   title: 'Edexcel IAL Revision — Free International A-Level Economics & Business Notes | Revvy Learn',
-  description: 'Free revision notes and practice questions for Edexcel International A-Level (IAL) Economics and Business, plus free Unit 1 past papers. Flashcards, quizzes and the AI tutor unlock with Pro. Built for IAL students worldwide. January and June exam series covered.',
+  description: 'Free revision notes and practice questions for Edexcel International A-Level (IAL) Economics and Business, plus free past papers and mark schemes for all four units. Flashcards, quizzes and the AI tutor unlock with Pro. Built for IAL students worldwide. January and June exam series covered.',
   alternates: { canonical: 'https://revvylearn.com/ial-revision' },
   openGraph: {
     title: 'Edexcel IAL Revision — Free International A-Level Notes | Revvy Learn',
@@ -90,7 +90,7 @@ export default function IALRevisionPage() {
               IAL revision built for<br /><em>international students</em>
             </h1>
             <p className="elp-hero-desc">
-              Free revision notes, practice questions and Unit 1 past papers for Edexcel IAL Economics and Business, with flashcards, quizzes and the AI tutor on Pro &mdash; built specifically for the International A-Level specification used at schools in Hong Kong, South Korea, Malaysia, Singapore, Pakistan, Sri Lanka and across the Middle East.
+              Free revision notes, practice questions and past papers for all four units for Edexcel IAL Economics and Business, with flashcards, quizzes and the AI tutor on Pro &mdash; built specifically for the International A-Level specification used at schools in Hong Kong, South Korea, Malaysia, Singapore, Pakistan, Sri Lanka and across the Middle East.
             </p>
             <div className="elp-hero-actions">
               <Link href="/economics" className="elp-btn-primary">
@@ -161,7 +161,7 @@ export default function IALRevisionPage() {
           <Link href="/business" className="elp-wyg-card elp-fade-up" style={{ textDecoration: 'none', transitionDelay: '.07s' }}>
             <div className="elp-wyg-title">IAL Business</div>
             <div className="elp-wyg-desc">4 units &middot; 20 spec points &middot; WBS11&ndash;WBS14</div>
-            <div className="elp-wyg-desc">Marketing, people, finance, strategy and global business. Notes, practice questions and Unit 1 past papers are free. Flashcards, quizzes and the AI tutor unlock with Pro.</div>
+            <div className="elp-wyg-desc">Marketing, people, finance, strategy and global business. Notes, practice questions and past papers for all four units are free. Flashcards, quizzes and the AI tutor unlock with Pro.</div>
           </Link>
         </div>
       </div>

@@ -6,7 +6,7 @@ import '@/styles/landing.css';
 
 export const metadata = {
   title: 'IAL June 2026 Revision — Edexcel Economics & Business Exam Preparation | Revvy Learn',
-  description: 'Revision guide for the Edexcel IAL June 2026 exam series. Free notes and practice questions for IAL Economics (WEC11–WEC14) and Business (WBS11–WBS14), plus free Unit 1 past papers and mark schemes. Last-minute revision tips and exam preparation.',
+  description: 'Revision guide for the Edexcel IAL June 2026 exam series. Free notes and practice questions for IAL Economics (WEC11–WEC14) and Business (WBS11–WBS14), plus free past papers and mark schemes for all four units and mark schemes. Last-minute revision tips and exam preparation.',
   alternates: { canonical: 'https://revvylearn.com/ial-revision/june-2026' },
   openGraph: {
     title: 'IAL June 2026 Revision — Edexcel Economics & Business | Revvy Learn',
