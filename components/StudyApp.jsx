@@ -296,6 +296,9 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const dataMatchesSection = startSection === initialSectionId;
   const [sectionData, setSectionData] = useState(dataMatchesSection ? initialSectionData : null);
+  // Sections already fetched this visit (F092). Per-visit only: it is not a correctness cache,
+  // and a reload gets fresh data, which is what we want while content is still being rewritten.
+  const sectionCacheRef = useRef(new Map());
   const [isInitial, setIsInitial] = useState(dataMatchesSection);
   const [glossaryTerms, setGlossaryTerms] = useState([]);
   const [contentStepInfo, setContentStepInfo] = useState(null);
@@ -467,11 +470,16 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       return;
     }
     async function loadSection() {
-      setSectionData(null);
+      // F092: a student moving between sections and back refetched 152 KB every time. Keep what
+      // has already been loaded this visit, and keep the previous section on screen while the new
+      // one arrives rather than blanking to a loading card (F098).
+      const cached = sectionCacheRef.current.get(activeSection);
+      if (cached) { setSectionData(cached); return; }
       try {
         const res = await fetch(`/api/sections/${activeSection}`);
         if (res.ok) {
           const data = await res.json();
+          sectionCacheRef.current.set(activeSection, data);
           setSectionData(data);
         }
       } catch (e) {

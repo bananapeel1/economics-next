@@ -15,13 +15,16 @@ export default function InlineQuiz({ question, subjectId, sectionId, stepIndex, 
   const [remAnswered, setRemAnswered] = useState(false);
   const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
 
-  // Auto-dismiss confidence after 4s if not answered
+  // F104: the confidence row used to disappear on a 4-second timer and the remediation slid in
+  // 800ms after the answer, so the page moved under the student's thumb twice while they were
+  // reading. A question they are still thinking about is not a question they have declined to
+  // answer. The row now stays until they answer it or move on, and the remediation appears with
+  // the explanation rather than on its own delay.
+  //
+  // The auto-dismiss state is kept so the row can still be hidden once confidence is given.
   useEffect(() => {
-    if (answered && !confidence && !confidenceTimedOut) {
-      const timer = setTimeout(() => setConfidenceTimedOut(true), 4000);
-      return () => clearTimeout(timer);
-    }
-  }, [answered, confidence, confidenceTimedOut]);
+    if (confidence) setConfidenceTimedOut(true);
+  }, [confidence]);
 
   function handleSelect(index) {
     if (answered) return;
@@ -32,9 +35,9 @@ export default function InlineQuiz({ question, subjectId, sectionId, stepIndex, 
     // After 200ms, reveal correct answer + explanation
     setTimeout(() => {
       setRevealPhase(2);
-      // Show remediation after 800ms if wrong and remediation data exists
+      // Appears with the explanation, not 800ms later, so nothing shifts under the reader.
       if (index !== question.correctIndex && question.remediation) {
-        setTimeout(() => setShowRemediation(true), 800);
+        setShowRemediation(true);
       }
     }, 200);
   }

@@ -1,6 +1,26 @@
 "use client";
 import { useState, useRef, useEffect } from 'react';
 import { motion, useSpring } from 'framer-motion';
+
+/* F102: five springs and two motion elements per tab, 45 springs across the bar, on phones where
+   the 3D tilt they drive is invisible and on machines whose owner asked for less motion. The
+   springs still have to be instantiated because hooks cannot be called conditionally, but the
+   values they produce are ignored, so nothing animates and no motion element re-renders on every
+   frame. */
+function useMotionAllowed() {
+  const [allowed, setAllowed] = useState(false);
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) return;
+    const wide = window.matchMedia('(min-width: 769px)');
+    const calm = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const update = () => setAllowed(wide.matches && !calm.matches);
+    update();
+    wide.addEventListener('change', update);
+    calm.addEventListener('change', update);
+    return () => { wide.removeEventListener('change', update); calm.removeEventListener('change', update); };
+  }, []);
+  return allowed;
+}
 import { Padlock } from './Icons';
 
 // All tabs use green accent for hover/active — matches site UI
@@ -14,20 +34,9 @@ function AnimatedTab({ tab, isActive, isFocusable, isPremium, onClick, onKeyDown
   const [isHovered, setIsHovered] = useState(false);
   const isLocked = tab.premium && !isPremium;
 
-  // Detect mobile / reduced motion
-  const isMobileRef = useRef(false);
-  useEffect(() => {
-    const mq = window.matchMedia('(max-width: 768px)');
-    const motionMq = window.matchMedia('(prefers-reduced-motion: reduce)');
-    isMobileRef.current = mq.matches || motionMq.matches;
-    const handler = () => { isMobileRef.current = mq.matches || motionMq.matches; };
-    mq.addEventListener('change', handler);
-    motionMq.addEventListener('change', handler);
-    return () => {
-      mq.removeEventListener('change', handler);
-      motionMq.removeEventListener('change', handler);
-    };
-  }, []);
+  // The old ref-based version of this checked the same two media queries but stored the answer in
+  // a ref, so a student who turned reduced motion on, or rotated a tablet across the breakpoint,
+  // kept the old behaviour until something else re-rendered. useMotionAllowed re-renders (F102).
 
   // Fluid springs — gentle tilt instead of full flip
   const tiltX = useSpring(0, SPRING_CONFIG);
@@ -36,8 +45,12 @@ function AnimatedTab({ tab, isActive, isFocusable, isPremium, onClick, onKeyDown
   const glowOpacity = useSpring(isActive ? 0.35 : 0, GLOW_SPRING);
   const glowScale = useSpring(isActive ? 1.1 : 0.8, GLOW_SPRING);
 
+  const motionAllowed = useMotionAllowed();
+
   useEffect(() => {
-    if (isMobileRef.current) return;
+    // F102: was `isMobileRef.current` only, so a desktop user who asked for reduced motion still
+    // got the tilt. One gate now covers narrow screens and the motion preference together.
+    if (!motionAllowed) return;
     if (isHovered) {
       tiltX.set(-8);
       liftY.set(-2);
@@ -51,7 +64,7 @@ function AnimatedTab({ tab, isActive, isFocusable, isPremium, onClick, onKeyDown
       glowOpacity.set(isActive ? 0.35 : 0);
       glowScale.set(isActive ? 1.1 : 0.8);
     }
-  }, [isHovered, isActive, tiltX, liftY, itemScale, glowOpacity, glowScale]);
+  }, [isHovered, isActive, motionAllowed, tiltX, liftY, itemScale, glowOpacity, glowScale]);
 
   // Always green glow — no per-tab color change
   const [r, g, b] = GREEN_GLOW;

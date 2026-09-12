@@ -1561,8 +1561,8 @@
    "fix": "Add `Cache-Control: public, s-maxage=3600, stale-while-revalidate` (content is already ISR'd for 1h on the page route) or export revalidate; keep a client-side Map of loaded sections; consider a ?fields=content,diagrams,quiz,practice variant for Learn Mode and lazy-load notes/flashcards/extras on tab open.",
    "impact": "On a school Wi-Fi share (~1-2 Mbps effective, 200-400 ms RTT) each section switch is a blank screen for roughly 1-2 s (8 DB round-trips server-side + 39 KB transfer), and the first visit is ~200+ KB compressed before Learn Mode can hydrate. Going back to a section already read pays the full cost again.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-11",
    "verified_by": null,
    "evidence": null,
    "note": null
@@ -1731,8 +1731,8 @@
    "fix": "Render a plain <button> tab when matchMedia('(max-width:768px)') or reduced-motion matches; lazy-load framer-motion only for desktop.",
    "impact": "Extra JS and layout work on every render of the shell for zero visual benefit on phones; contributes to the 167 KB gzip shared bundle.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-11",
    "verified_by": null,
    "evidence": null,
    "note": null
@@ -1765,8 +1765,8 @@
    "fix": "Keep the confidence row height reserved or do not auto-dismiss; mount remediation with a fixed-height placeholder or place it after an explicit 'Try a similar one' button.",
    "impact": "While the student is reading the explanation the layout jumps twice (row collapses, remediation appears), so the Next button or the next card moves out from under a planned tap.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-11",
    "verified_by": null,
    "evidence": null,
    "note": null

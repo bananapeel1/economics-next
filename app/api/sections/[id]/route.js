@@ -21,6 +21,12 @@ import { PREVIEW_LIMITS } from '@/lib/preview-limits';
  * and reports true totals separately so the paywall can still say "2 of 25" honestly.
  */
 export async function GET(request, { params }) {
+  // F092: 152 KB raw per section, refetched on every section switch with no cache header at all.
+  //
+  // It cannot be a shared public cache: since F086 this response depends on who is asking (a free
+  // student gets 2 quiz questions, a paying one gets 25), so `s-maxage` on a CDN would serve one
+  // student's entitlement to another. `private` keeps it in the student's own browser, which is
+  // where the repeat cost actually falls when they move between sections and back.
   const { id } = await params;
 
   const supabaseAuth = await createClient();
@@ -80,5 +86,10 @@ export async function GET(request, { params }) {
       mistakes: arr(mistakes).length,
     },
     isPremium,
+  }, {
+    headers: {
+      'Cache-Control': 'private, max-age=300, stale-while-revalidate=3600',
+      Vary: 'Cookie',
+    },
   });
 }
