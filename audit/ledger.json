@@ -1459,10 +1459,10 @@
    "fix": "Decide one policy: either make Quiz tab preview larger and point its paywall at premium-only value (explanations + Ask Tutor + attempt history), or gate /practice consistently. Whichever is chosen, link the two surfaces so students know where the full bank lives.",
    "impact": "A free student who hits the Quiz-tab paywall and then finds /practice sees the identical questions for free and infers the paywall is arbitrary; a student who does not find /practice believes they have access to 2 questions per section. Either way the gating story is incoherent.",
    "packet": 12,
-   "status": "not-fixed",
+   "status": "confirmed",
    "closed_by": "packet-12",
    "verified_by": "packet-verifier 2026-09-12",
-   "evidence": "app/api/sections/[id]/route.js:1-28 uses createAnonClient with zero auth/premium check and returns quiz: quiz.data?.data unsliced (full 25-question array incl. correctIndex). components/StudyApp.jsx:472,736 + QuizTab.jsx:15-16 confirm this route IS the Quiz tab's own data source (QuizTab only slices client-side after receiving the full array). curl http://localhost:3001/api/sections/introductory-concepts unauthenticated returned 200 with 25 questions + correctIndex on every item. /api/practice/questions is correctly fixed (401 unauth, PREVIEW_LIMIT=2 matches QuizTab, MAX_SECTIONS=50 bound verified via curl), but the defect the finding names -- the Quiz tab's paywall being decorative because the full answer-keyed bank is already reachable -- still occurs, just via the untouched sibling route, so the leak is not closed.",
+   "evidence": "app/api/sections/[id]/route.js:23-83 now auths via createClient/getSubscriptionRow, curl signed-out on introductory-concepts returns quiz/flashcards/extras capped to 2/2/1+1 (counts:25/18/4/3) and mistakes:[]; free surfaces content/notes/diagrams/practice returned unsliced (5/5/3/5); lib/preview-limits.js (quiz:2,flashcards:2,extrasChains:1,extrasEvaluation:1) matches hardcoded PREVIEW_LIMIT in QuizTab.jsx:15, FlashcardsTab.jsx:13, ExtrasTab.jsx:9; StudyApp.jsx:735-739 passes totalCount from sectionData.counts (not array length) into all three tabs; /api/practice/questions still 401s signed-out (curl verified), not regressed. F119 (fun/questions) confirmed already logged status:open, correctly excluded.",
    "note": "severity low -> high: 2026-09-12 measured: GET /api/practice/questions needs no auth and no premium check (uses the anon client), and returns the full section_quiz array including correctIndex for every section id passed. An unauthenticated curl returned 75 questions with answer keys across 3 sections; nothing limits the section list, so the whole 769-question bank is fetchable in one request. This is not an inconsistency between two tabs: the quiz paywall is decorative, and the answer keys leak with it. Raised from low after the founder chose to KEEP the current paywall boundary, which makes a non-functioning paywall the thing to fix."
   },
   {
@@ -2025,6 +2025,23 @@
    "verified_by": null,
    "evidence": null,
    "note": "Found 2026-09-12 during F086 verification. Reproduce: sign in with a free account and call GET /api/fun/questions."
+  },
+  {
+   "id": "F120",
+   "lens": "smart-practice-quiz-bank",
+   "sev": "high",
+   "cat": "monetisation",
+   "title": "The flashcard bank is served unauthenticated by /api/flashcards-practice/cards, so the flashcard paywall is decorative",
+   "file": "app/api/flashcards-practice/cards/route.js",
+   "line": 1,
+   "fix": "Same gate as its two siblings: require auth, resolve entitlement with getSubscriptionRow plus hasPremiumAccess, cap a free account to PREVIEW_LIMITS.flashcards, bound the section list, and return true counts so any N-of-M copy stays honest. The client must render the 401 rather than an empty state.",
+   "impact": "Third route of the same shape. F086 closed /api/practice/questions and /api/sections/[id]; this one used the anon client with no auth, no premium check and no bound on the section list, and returned every flashcard for every section requested. Flashcards are a preview-then-paywall surface, so the paywall was decorative for as long as this existed. Found by the packet verifier while re-checking F086, not by the September audit.",
+   "packet": 12,
+   "status": "claimed",
+   "closed_by": "packet-12",
+   "verified_by": null,
+   "evidence": null,
+   "note": "Found 2026-09-12 during the second F086 verification."
   }
  ],
  "content": [

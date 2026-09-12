@@ -7161,3 +7161,24 @@ a.auth-dropdown-item:visited {
 }
 .spe-qcard-conf-btn:focus-visible { outline: 2px solid var(--rl-green, #10b981); outline-offset: 2px; }
 .spe-qcard-next:disabled { opacity: .55; cursor: not-allowed; }
+
+/* ── Smart Practice topic picker (F085): explicit select-all, and counts on every chip ── */
+.spe-unit-selectall {
+  display: inline-flex; align-items: center; gap: 6px; flex: none;
+  min-height: 44px; padding: 0 10px; cursor: pointer;
+  font-size: 12.5px; font-weight: 600; color: var(--text-muted);
+}
+.spe-unit-selectall input { width: 18px; height: 18px; cursor: pointer; accent-color: var(--rl-green, #10b981); }
+.spe-unit-selectall-text { letter-spacing: .02em; }
+.spe-chip-count { display: block; margin-top: 3px; font-size: 11.5px; font-weight: 500; color: var(--text-muted); }
+
+/* Smart Practice session length (F084) */
+.spe-session-size { display: inline-flex; gap: 4px; flex: none; }
+.spe-session-size-btn {
+  min-width: 40px; min-height: 44px; padding: 0 10px; cursor: pointer;
+  border-radius: 8px; font-size: 13px; font-weight: 600;
+  color: var(--text-muted); background: transparent;
+  border: 1px solid var(--border-color, rgba(127, 127, 127, .3));
+}
+.spe-session-size-btn.active { color: #fff; background: var(--rl-green, #10b981); border-color: transparent; }
+.spe-session-size-btn:focus-visible { outline: 2px solid var(--rl-green, #10b981); outline-offset: 2px; }
