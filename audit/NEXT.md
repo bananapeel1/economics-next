@@ -1,43 +1,52 @@
 # Next session brief
 
-## Packet 2 — code half landed, two actions blocked on the founder
+## Shipped 12 September 2026 — `60ec062`, live
 
-Committed `4d45478`. Verified: F013, F040, F111 (practice pins) and F041 (diagram fallback).
-Snapshot taken before anything: `audit/snapshots/2026-09-12-pre-packet-2__*` — 43 sections, 8 tables,
-restore path exercised.
+Ship checkpoint merged via PR #13. Live on revvylearn.com and verified: the 182 false marketing claims are
+gone from the public pages. Also in it: the practice-pin fix (39 of 64 blocks were serving an unrelated
+question), the per-block diagram fallback (inline diagrams 15 → 51), packet 2's ids and safety net, and the
+packet 13.1 quant engine.
 
-**Blocked action 1 — mint the ids.** Dry run is clean: 2,952 ids across 43 sections (769 quiz, 844 cards,
-215 practice, 81 diagrams, 272 recall, 583 blocks and subsections, 188 mistakes). It adds an `id` field and
-changes nothing else, so no student sees a difference.
+**Packet 2 is done.** 2,952 item ids minted; `item_id` added and 1,041 of 1,069 progress rows backfilled
+(28 NULL by design); all three progress routes and engines dual-write. F013, F040, F111 and F041 confirmed
+in the ledger.
 
-```
-node scripts/mint-item-ids.mjs             # dry run, prints the plan
-node scripts/mint-item-ids.mjs --confirm   # writes
-node scripts/mint-item-ids.mjs --verify    # asserts every item has a unique id
-```
-
-If it goes wrong: `node scripts/restore-section.mjs audit/snapshots/2026-09-12-pre-packet-2__<subject>__<section>.json --confirm`.
-
-**Blocked action 2 — run the DDL.** `scripts/packet-2-item-id.sql`, once, in the Supabase SQL editor. Read
-the comment at the top first: it lists the five silent ways the obvious version of this migration loses
-student data, and it is why the column is nullable and question_index survives. Then:
+**One SQL step is still outstanding** and packet 2's draft state is inert until it runs:
 
 ```
-node scripts/backfill-item-id.mjs            # dry run
-node scripts/backfill-item-id.mjs --confirm  # writes item_id only
+scripts/packet-2-draft-state.sql     paste into the Supabase SQL editor, once
+node scripts/publish-section.mjs     then this reports what is waiting to go live
 ```
 
-**Then, to finish packet 2:** switch the five progress routes to dual-write `item_id` alongside
-`question_index` (never instead of it), and build the draft/published state — the half of F115 that is not
-addressed. Re-pinning content by id is a section-packet job, not this one.
+Content packets 14-56 should write to `draft` and publish in one step rather than writing into `data` while
+students read it. That only works once the columns exist.
 
-**Still open after this packet:** F052 and F109 (9 of 24 broken diagram refs now rescued by the fallback,
-15 blocks still show nothing — 3 of those are in `the-market`, which has no diagrams in the database at all)
-and the draft/published half of F115.
+## Then: packet 3 — validator v2 and the golden set
 
-**The ledger was not updated.** A concurrent session holds `audit/ledger.json` for a marketing-claims audit
-(M001-M182). Claim F013, F040, F111 and F041 for packet 2 once the tree is quiet:
-`node audit/scripts/ledger.mjs claim 2 F013 F040 F111 F041`.
+**Check the model tier first.** The revision of `PROTOCOL.md` in flight assigns packet 3 to **Fable 5.1**,
+not Opus, on the grounds that a rule nobody thinks to write is invisible, is caught by nothing, and governs
+all 43 content packets. Start this packet on that model, or settle the tier table before starting.
+
+Read `PLAN.md` packet 3 and `node audit/scripts/ledger.mjs packet 3` (10 findings). Its scope: fixtures from
+the real papers first, then ~35 checks tiered BLOCK / DEBT / INFO placed inside the write path, the tariff
+table seeded from all eight units with per-row citation, a terminology lint keyed on subject and unit, a
+synoptic exception for Units 3-4, a minimum quantitative-item count per unit, a words-per-step cap, and a
+committed baseline and debt ledger.
+
+Three things packet 3 inherits from work already done:
+
+- **The quantitative item contract is settled** — `lib/quant/schema.md`. The quantitative-item count should
+  count items of that shape rather than defining its own. Tier it DEBT until packet 13.2 puts real items in
+  sections.
+- **`npm run pin-check` already exists** and holds a baseline of 15 blocks that render no diagram. Adopt it
+  rather than rewriting it, and give it a proper baseline file instead of the `--max-broken 15` flag.
+- **`npm run contrast` and `npm run quant-check`** are the precedent for guard shape: static, no browser, no
+  network, exit non-zero.
+
+## Also now unblocked: packet 13.2
+
+Item ids exist, so quant items can be pinned to blocks. 13.2 is six templates wired into Learn Mode and the
+Quiz tab — `audit/DRILLS.md` has the spec. The tier table assigns it to Opus.
 
 ---
 
