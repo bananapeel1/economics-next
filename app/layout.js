@@ -1,6 +1,5 @@
 import "./globals.css";
 import "@/styles/theme-night.css";
-import { createClient } from '@/lib/supabase/server';
 import { AuthProvider } from '@/components/AuthProvider';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import AnalyticsEvents from '@/components/AnalyticsEvents';
@@ -50,10 +49,7 @@ export const viewport = {
   viewportFit: 'cover',
 };
 
-export default async function RootLayout({ children }) {
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
-
+export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="dark" suppressHydrationWarning>
       <head>
@@ -127,7 +123,7 @@ export default async function RootLayout({ children }) {
       </head>
       <body>
         <ThemeProvider>
-          <AuthProvider initialUser={user}>
+          <AuthProvider>
             {children}
             <AnalyticsEvents />
           </AuthProvider>
