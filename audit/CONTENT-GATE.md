@@ -54,6 +54,46 @@ Blocking rules, each with its measured hit rate against the live corpus:
 correct IAL phrasing *is* the paper's phrasing, and the median stem is 15 words. Copyright is handled by
 Layer 4's attestation, not by forcing questions to sound unlike the exam.
 
+
+## Layer 1a — the reorder rule the audit was not strict enough about
+
+**Added 12 September, from the founder's own observation, against the audit's verdict.**
+
+The founder pointed at this live exercise as an example of the worst flaw in the product:
+
+> Put these supply shift factors in order of explanation:
+> Identify the factor · Explain how it affects costs · State the direction of the shift ·
+> Show the effect on equilibrium price and quantity
+
+The audit graded that item **`genuine-sequence`** — one of the 64 it kept — on the grounds that a
+taught student can reconstruct factor to cost to shift to equilibrium. By the audit's test it is
+sound, and the planned rewrite of the 66 bad reorders would never have touched it.
+
+The founder is right and the audit's test is too weak. "In order of explanation" does not say what
+is being ordered. A student who reasons *factor, so supply shifts right, because costs fell, so
+equilibrium moves* has produced a defensible order and is marked wrong. The exercise is not
+unorderable; it is **underspecified**, which feels identical from the student's chair and does the
+same damage to trust.
+
+Measured across all 43 sections: of the 64 reorders the audit called sound, **46 have a prompt that
+never names the ordering principle.** "Order these steps when demand shifts right." "Order these
+business plan steps logically." So this is not one item, it is 72% of the reorders the audit told
+us to keep.
+
+**Two blocking rules, added to Layer 1:**
+
+1. **The prompt must name the ordering principle** in words the student can apply: chronological,
+   causal, by size, in the order you would write it in an answer. "Logically" and "in order of
+   explanation" fail. A static check on the prompt string catches these.
+2. **A reorder must have exactly one defensible order, not merely one intended order.** Where a
+   second reading survives, the item becomes a different exercise type — the chain-build with
+   distractor links, or classify — rather than being reworded. Packet 7 provides those types.
+
+**And regardless of either rule:** a wrong answer must say *why* that order is right. Today it
+returns "0 of 4 in the right position" and the correct list, with no reasoning, which is the moment
+the founder describes as the platform's authority dropping to zero. That is packet 7's `why` field,
+and it is what makes a defensible-but-hard order survivable instead of infuriating.
+
 ## Layer 2 — Reference assets, each verified against source
 
 Two assets unlock Tier B. Both are generated **by a script from the specification text**, spot-verified

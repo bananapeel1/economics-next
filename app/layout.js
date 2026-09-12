@@ -6,6 +6,7 @@ import { createServerClient } from '@/lib/supabase-server';
 import { getSubscriptionRow } from '@/lib/subscription-lookup';
 import { AuthProvider } from '@/components/AuthProvider';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import MotionProvider from '@/components/MotionProvider';
 import AnalyticsEvents from '@/components/AnalyticsEvents';
 
 export const metadata = {
@@ -148,10 +149,14 @@ export default async function RootLayout({ children }) {
         />
 
         <ThemeProvider>
-          <AuthProvider initialUser={user} initialSubscription={initialSubscription}>
-            {children}
-            <AnalyticsEvents />
-          </AuthProvider>
+          {/* F099: one switch so every motion component honours the preference, rather than
+              gating them one at a time and missing the next one added. */}
+          <MotionProvider>
+            <AuthProvider initialUser={user} initialSubscription={initialSubscription}>
+              {children}
+              <AnalyticsEvents />
+            </AuthProvider>
+          </MotionProvider>
         </ThemeProvider>
       </body>
     </html>

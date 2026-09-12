@@ -14,8 +14,8 @@
    "fix": "Persist completion, review schedule and strength server-side keyed by user_id (a small user_section_state table: completed_at, review_interval_idx, next_due, reviews, quiz_accuracy, pretest_score, pretest_questions). Fix or delete /api/learn-mode/progress: either change last_result to TEXT or stop writing strings; check the upsert error and return 500 so the failure is visible. Hydrate localStorage from the server on login as a cache, not the source of truth.",
    "impact": "A student who completes a topic on their school laptop and opens Revvy on their phone (or in incognito, or after Safari's 7-day ITP storage eviction, or after clearing site data) has: no completion dot in the sidebar, no strength bar, no scheduled reviews, no pre-test record, and the section re-opens at the DB-saved step with the pre-test gate suppressed only because isResuming is true. The 1/3/7/14-day spaced review promise is broken for anyone who is not on the exact same browser profile every time. Logged-in status changes nothing.",
    "packet": 4,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-4",
    "verified_by": null,
    "evidence": null,
    "note": null
@@ -456,8 +456,8 @@
    "fix": "On mount, once savedProgress arrives, set learnModeSection to max(local, db) for the active section and show the resume banner; persist pretest/completion/review-schedule to the server for logged-in users (a user_learn_state JSON column keyed by section would suffice).",
    "impact": "A student who worked on their laptop at school and opens the app on their phone at home lands on step 1 of the same section, is shown the pre-test again, sees no completion ticks or due reviews, and the Home 'Continue Learning' button does nothing if last-visited-section is missing (HomeScreen.jsx:178 silently no-ops). Everything that makes the app feel like 'their' app is tied to one browser.",
    "packet": 4,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-4",
    "verified_by": null,
    "evidence": null,
    "note": null
@@ -1153,10 +1153,10 @@
    "fix": "Track matched terms across the whole step (pass a shared Set through parseInlineMarkdown, or highlight once per NoteSection), make the span a `<button type=button>` or add `tabindex=0` + `aria-describedby`, add a click/touchstart toggle with tap-outside dismiss, and skip highlighting inside Key Idea / Takeaway to keep those clean.",
    "impact": "On a phone the dotted underlines are visual noise with no discoverable interaction; a tap fires a synthetic mouseover so a 280px fixed tooltip appears and stays until the next tap or scroll, with no way to open it by keyboard or screen reader. Not tooltip spam (single JS tooltip), but repeated underlines make body text look link-littered.",
    "packet": 11,
-   "status": "not-fixed",
+   "status": "confirmed",
    "closed_by": "packet-11",
    "verified_by": "packet-verifier 2026-09-12",
-   "evidence": "components/GlossaryTooltip.jsx tap/keyboard/dismiss now work, but components/NotesTab.jsx:10-12,60,74,120,128,139 still calls g() fresh per block with no shared Set across a chapter, and keyIdea/takeaway are not skipped; live DOM check on Market Failure Notes tab showed 'deadweight loss' highlighted 8x, 'market failure' 7x, 'consumption' 6x in one step, and 13 of 21 takeaway items plus the key idea still highlighted, contradicting the fix's own 'skip Key Idea/Takeaway' and 'once per step' requirements",
+   "evidence": "components/NotesTab.jsx:14-21,50 shared scope reset once per chapter via resetScope(), gPlain passes null glossaryTerms so Key Idea/Takeaway are fully skipped; live DOM check on Market Failure Notes tab: 0 duplicate highlights within any of 7 chapters, 0/7 key ideas and 0/21 takeaway items highlighted",
    "note": null
   },
   {
@@ -1173,7 +1173,7 @@
    "status": "not-fixed",
    "closed_by": "packet-11",
    "verified_by": "packet-verifier 2026-09-12",
-   "evidence": "core prompt/label contrast now passes (app/globals.css:2770 --accent-purple-text #4c1d95 ~11:1), but app/globals.css:2906 .lm-recall-arrow-btn:hover:not(:disabled) still hardcodes border-color:#a78bfa (~2.7:1 on white, used live in components/learn-mode/ReorderRecall.jsx:120-121); .lm-recall-label (line 2767) is still 10px not the required 11px; .lm-recall-hint-text (line 2893) still uses --text-dim for text against the explicit 'never use --text-dim for text' instruction",
+   "evidence": "app/globals.css:2767 .lm-recall-label still font-size:10px, not the required 11px; app/globals.css:2893 .lm-recall-hint-text still color:var(--text-dim) against the fix's own 'never use --text-dim for text'; contrast-check.mjs extension to border-color/background is real (line 265) and ACCEPTED_LITERALS additions are legitimate fixed-hue state colours, but the two label/hint sub-claims remain unmet",
    "note": null
   },
   {
@@ -1187,10 +1187,10 @@
    "fix": "Make recall items `<button type=button aria-pressed={selected}>`; add `aria-label=\"Move up\"/\"Move down\"/\"Skip this check\"`; add `.lm-quiz-option:focus-visible, .lm-recall-item:focus-visible, .lm-nav-next:focus-visible { outline: 2px solid var(--accent-green); outline-offset: 2px }`; keep outline on textareas; fix heading order (chapter h2 > section h3 > subhead h4).",
    "impact": "Keyboard and switch users cannot select items in the reorder recall at all; screen-reader users hear 'multiplication sign, button' for Skip and 'black up-pointing triangle' for move-up; textareas lose the default focus ring.",
    "packet": 11,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-11",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "components/learn-mode/ReorderRecall.jsx:97-121 items are role=button/tabIndex/aria-label/aria-pressed with onKeyDown moving items via moveItem() swap (lines 22-27, verified ArrowUp/Down genuinely swaps state); FillInRecall.jsx:91-131 blanks and word chips are role=button+keyboard; InlineQuiz.jsx:96-108 options carry aria-pressed and a role=status live region",
    "note": null
   },
   {
@@ -1204,10 +1204,10 @@
    "fix": "HTML-escape the raw text (`&`, `<`, `>`) at the top of parseInlineMarkdown before applying the bold/italic regexes; in glossary-highlight use a replacer function `(m) => \\`<span ...>${m}</span>\\`` instead of a template string, and escape `$` in escapedDef.",
    "impact": "None visible today. Latent: a future definition like 'below $1 a day' would render 'below Demand a day'; a content string with '<b' or '<1x' style text would lose words on screen.",
    "packet": 11,
-   "status": "not-fixed",
+   "status": "confirmed",
    "closed_by": "packet-11",
    "verified_by": "packet-verifier 2026-09-12",
-   "evidence": "lib/glossary-highlight.js:76 confirmed $&/$1/$` now render literally (adversarial test passed), but lib/parse-inline-markdown.js:8-14 still never HTML-escapes raw text before/after the bold/italic regexes as the fix required, so the 'Content HTML is injected unescaped' half of the finding is untouched -- a stray '<' followed by a letter in note content still reaches dangerouslySetInnerHTML unescaped",
+   "evidence": "lib/parse-inline-markdown.js:13-24 escapeHtml() runs before bold/italic regexes; tested live: '<10, >5, demand & supply' renders as &lt;/&gt;/&amp; text, **bold**/*italic* still convert to strong/em, and glossary term adjacent to an escaped char still highlights correctly",
    "note": null
   },
   {
@@ -1527,10 +1527,10 @@
    "fix": "Define --lm-purple-text / --lm-purple-bg tokens in both [data-theme] blocks (e.g. light: #5b21b6 text) and replace the 13 hardcoded values.",
    "impact": "Any student who toggles light mode (theme-toggle-btn exists in the mobile header) cannot read the recall question prompt or the word-bank chips in fill-in-the-blank; the exercise looks like empty pills.",
    "packet": 11,
-   "status": "not-fixed",
+   "status": "confirmed",
    "closed_by": "packet-11",
    "verified_by": "packet-verifier 2026-09-12",
-   "evidence": "app/globals.css: old file had 7 literal #a78bfa/#d4bfff occurrences plus a dozen rgba(167,139,250,...) equivalents; only 3 rules were converted to --recall-accent/--recall-accent-fill (lines 2795, 2837, 2889 in new file) and line 2906 .lm-recall-arrow-btn:hover still hardcodes border-color:#a78bfa, live in ReorderRecall.jsx's move-up/down buttons, ~2.7:1 contrast on white -- well short of the claimed 'replace the 13 hardcoded values'; npm run contrast passes only because its literals check scans color/fill/stroke, not border-color/background, so it does not see this",
+   "evidence": "app/globals.css:2906 .lm-recall-arrow-btn:hover now uses border-color:var(--recall-accent) (was hardcoded #a78bfa); light tokens at lines 42/47/51 (accent-purple #6d28d9, accent-purple-text #4c1d95, recall-accent #6d28d9) vs dark at 187/192/193; npm run contrast --theme light exits 0 clean",
    "note": null
   },
   {
@@ -1561,10 +1561,10 @@
    "fix": "Add `Cache-Control: public, s-maxage=3600, stale-while-revalidate` (content is already ISR'd for 1h on the page route) or export revalidate; keep a client-side Map of loaded sections; consider a ?fields=content,diagrams,quiz,practice variant for Learn Mode and lazy-load notes/flashcards/extras on tab open.",
    "impact": "On a school Wi-Fi share (~1-2 Mbps effective, 200-400 ms RTT) each section switch is a blank screen for roughly 1-2 s (8 DB round-trips server-side + 39 KB transfer), and the first visit is ~200+ KB compressed before Learn Mode can hydrate. Going back to a section already read pays the full cost again.",
    "packet": 11,
-   "status": "not-fixed",
+   "status": "confirmed",
    "closed_by": "packet-11",
    "verified_by": "packet-verifier 2026-09-12",
-   "evidence": "app/api/sections/[id]/route.js:89-92 Cache-Control:private + Vary:Cookie is a sound header for the CDN-leak concern, but components/StudyApp.jsx:308,483-491 sectionCacheRef is a plain Map keyed only by activeSection, never invalidated on isPremium/user change -- a login or logout that flips entitlement via AuthProvider's onAuthStateChange without unmounting StudyApp continues serving the pre-transition cached quiz/flashcard payload from the Map",
+   "evidence": "components/StudyApp.jsx:487-488,494,502 cacheKey includes activeSection+user.id+isPremium, used identically for get(488) and set(494), and effect deps [activeSection,user?.id,isPremium] force a refetch under a new key on login/logout so a pre-transition payload is never served",
    "note": null
   },
   {
@@ -1683,7 +1683,7 @@
    "status": "not-fixed",
    "closed_by": "packet-11",
    "verified_by": "packet-verifier 2026-09-12",
-   "evidence": "app/globals.css:7189-7210 CSS prefers-reduced-motion block is real and collapses animation/transition-duration plus inline animation-delay, but components/notes/FlowChain.jsx:1-39 (the staggered flow-chain reveals named in the finding's own title) is untouched by this packet, uses framer-motion variants with JS delay staggering and a type:'spring' result reveal, and no MotionConfig/useReducedMotion exists anywhere in the codebase (grep confirmed) -- CSS cannot govern these spring-driven values, so they still always run",
+   "evidence": "components/notes/FlowChain.jsx:42 useReducedMotion called unconditionally before the line-47 early return and hidden states resolve to opacity:1/0.5 (never 0) when calm -- correct, but components/topic-links/TopicLinksInfoPanel.jsx:20-25 and components/topic-links/TopicLinksGraph.jsx:100-109 still use motion.div/motion.svg with initial/animate/transition and no useReducedMotion or MotionConfig, so other framer-motion components in the repo still animate unconditionally",
    "note": null
   },
   {
