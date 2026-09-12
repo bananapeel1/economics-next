@@ -3,7 +3,7 @@ import UpgradeButton from '@/components/UpgradeButton';
 
 export const metadata = {
   title: 'Revvy Learn Pro — your first month is £1',
-  description: 'Get every Revvy Learn revision tool for £1 for your first month, then £1.99/month. Cancel anytime. Or pay £12 once and keep it for life. Flashcards, quizzes, AI tutor, evaluation chains and model answers for Edexcel IAL Economics and Business.',
+  description: 'Get every Revvy Learn revision tool for £1 for your first month, then £1.99/month. Or pay £12 once and keep it for life. Flashcards, quizzes, AI tutor, evaluation chains and model answers for Edexcel IAL Economics and Business.',
   openGraph: {
     title: 'Revvy Learn Pro — your first month is £1',
     description: 'Every revision tool for £1 for your first month, then £1.99. Cancel anytime, or pay £12 once and keep it forever.',
@@ -12,26 +12,58 @@ export const metadata = {
   },
 };
 
-const FREE_FEATURES = [
-  ['Revision notes', 'Every spec point, Units 1–4'],
-  ['Diagrams', 'Every exam diagram, fully labelled'],
-  ['Practice questions', 'Per topic, with mark schemes'],
-  ['Past papers', 'Papers plus mark schemes'],
-  ['Glossary & command words', null],
-  ['Learn Mode', 'Guided walkthrough'],
-];
-
-const PRO_FEATURES = [
+const MONTHLY_FEATURES = [
+  ['Everything in Free', null],
   ['Evaluation chains', 'The 20-mark technique, built step by step'],
   ['Model answers', 'Full-mark responses for every topic'],
-  ['Adaptive flashcards', 'Spaced repetition that targets your weak spots'],
-  ['Quizzes with marking', 'Examiner-style feedback, not just right/wrong'],
+  ['Flashcards', 'Spaced repetition scheduled from your answers'],
+  ['Quizzes with marking', 'Examiner-style feedback, not just right or wrong'],
   ['AI tutor', 'Answers in exam language, any hour of the night'],
   ['Revision PDFs', 'Download and print for offline revision'],
 ];
 
-function Check({ muted }) {
-  return <span className={`upgrade-check ${muted ? 'muted' : ''}`}>&#10003;</span>;
+const LIFETIME_FEATURES = [
+  ['Everything in Pro', null],
+  ['Both years', 'AS and A2, all four units'],
+  ['Every exam series', 'January and June, for as long as you need'],
+  ['Every future update', 'New topics and tools, included'],
+  ['No renewals, ever', 'One payment and you are done'],
+];
+
+function Check() {
+  return (
+    <svg className="upgrade-check" width="15" height="15" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M20 6 9 17l-5-5" />
+    </svg>
+  );
+}
+
+function Globe() {
+  return (
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      strokeWidth="1.7" strokeLinecap="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3 12h18" />
+      <path d="M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z" />
+    </svg>
+  );
+}
+
+function FeatureList({ items }) {
+  return (
+    <ul className="upgrade-plan-list">
+      {items.map(([name, desc]) => (
+        <li key={name}>
+          <Check />
+          <div>
+            <strong>{name}</strong>
+            {desc && <span>{desc}</span>}
+          </div>
+        </li>
+      ))}
+    </ul>
+  );
 }
 
 export default function UpgradePage() {
@@ -44,89 +76,46 @@ export default function UpgradePage() {
           <div className="upgrade-badge">REVVY LEARN PRO</div>
           <h1 className="upgrade-title">Your first month is £1.</h1>
           <p className="upgrade-subtitle">
-            Then £1.99 a month, and you can cancel whenever you like. Every note on
-            Revvy Learn stays free — Pro unlocks the tools that turn reading into marks.
+            Every note stays free. Pro unlocks the tools that turn reading into marks.
           </p>
-        </div>
-
-        {/* Hero offer band */}
-        <div className="upgrade-offer">
-          <div className="upgrade-offer-main">
-            <div className="upgrade-offer-price">
-              <span className="upgrade-offer-amount">£1</span>
-              <span className="upgrade-offer-unit">for your first month</span>
-            </div>
-            <div className="upgrade-offer-then">then £1.99/month · cancel anytime</div>
-          </div>
-          <div className="upgrade-offer-points">
-            <div className="upgrade-offer-point"><Check /> Full access from the moment you join</div>
-            <div className="upgrade-offer-point"><Check /> No contract, no notice period</div>
-            <div className="upgrade-offer-point"><Check /> Prices in GBP &middot; pay in your local currency at checkout</div>
+          <div className="upgrade-currency-pill">
+            <Globe />
+            <span>Pay in your local currency at checkout</span>
           </div>
         </div>
 
-        <p className="upgrade-series-note">
-          The January 2027 series is the next one up. Everything below is ready for it{' '}
-          <Link href="/ial-revision/january-2027">see what&apos;s covered</Link>.
-        </p>
+        <div className="upgrade-plans">
 
-        {/* Three tiers */}
-        <div className="upgrade-tiers">
-
-          <div className="upgrade-tier">
-            <div className="upgrade-tier-label">FREE</div>
-            <div className="upgrade-tier-price">£0</div>
-            <div className="upgrade-tier-note">Always free. No sign-up needed.</div>
-            <Link href="/" className="upgrade-btn ghost">Start reading</Link>
-            <ul className="upgrade-list">
-              {FREE_FEATURES.map(([name, desc]) => (
-                <li key={name}>
-                  <Check muted />
-                  <div><strong>{name}</strong>{desc && <span>{desc}</span>}</div>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="upgrade-tier featured">
-            <div className="upgrade-tier-flag">Most popular</div>
-            <div className="upgrade-tier-label">PRO — MONTHLY</div>
-            <div className="upgrade-tier-price">
-              £1<span className="upgrade-tier-period">first month</span>
+          <div className="upgrade-plan featured">
+            <div className="upgrade-plan-flag">Most popular</div>
+            <div className="upgrade-plan-head">
+              <div className="upgrade-plan-for">If you&rsquo;re revising for one series</div>
+              <div className="upgrade-plan-price">
+                £1<span className="upgrade-plan-unit">first month</span>
+              </div>
+              <div className="upgrade-plan-sub">then £1.99/month &middot; cancel anytime</div>
             </div>
-            <div className="upgrade-tier-note">then £1.99/month · cancel anytime</div>
             <UpgradeButton plan="monthly" label="Get Pro for £1 →" className="primary" />
-            <ul className="upgrade-list">
-              <li><Check /><div><strong>Everything in Free</strong></div></li>
-              {PRO_FEATURES.map(([name, desc]) => (
-                <li key={name}>
-                  <Check />
-                  <div><strong>{name}</strong>{desc && <span>{desc}</span>}</div>
-                </li>
-              ))}
-            </ul>
+            <FeatureList items={MONTHLY_FEATURES} />
           </div>
 
-          <div className="upgrade-tier value">
-            <div className="upgrade-tier-flag alt">Best value</div>
-            <div className="upgrade-tier-label">PRO — LIFETIME</div>
-            <div className="upgrade-tier-price">
-              £12<span className="upgrade-tier-period">once</span>
+          <div className="upgrade-plan">
+            <div className="upgrade-plan-flag alt">Save 50%</div>
+            <div className="upgrade-plan-head">
+              <div className="upgrade-plan-for">If you&rsquo;ve got both years ahead of you</div>
+              <div className="upgrade-plan-price">
+                £12<span className="upgrade-plan-unit">once</span>
+              </div>
+              <div className="upgrade-plan-sub">
+                <span className="upgrade-strike">£23.88 a year on monthly</span> &middot; pays for itself in 6 months
+              </div>
             </div>
-            <div className="upgrade-tier-note">no renewals, ever</div>
             <UpgradeButton plan="lifetime" label="Pay once — £12 →" className="value" />
-            <ul className="upgrade-list">
-              <li><Check /><div><strong>Everything in Pro</strong></div></li>
-              <li><Check /><div><strong>Both years</strong><span>AS and A2, all four units</span></div></li>
-              <li><Check /><div><strong>Every future update</strong><span>New topics and tools, included</span></div></li>
-              <li><Check /><div><strong>Every exam series</strong><span>January and June, for as long as you need</span></div></li>
-              <li><Check /><div><strong>Pays for itself in 6 months</strong><span>Cheaper than monthly if you revise past March</span></div></li>
-            </ul>
+            <FeatureList items={LIFETIME_FEATURES} />
           </div>
 
         </div>
 
-        {/* Reassurance */}
         <div className="upgrade-reassure">
           <div className="upgrade-reassure-item">
             <strong>Cancel in two clicks</strong>
@@ -147,9 +136,13 @@ export default function UpgradePage() {
           <p className="upgrade-final-sub">
             If it doesn&apos;t, cancel before month two and you&apos;ve spent a pound finding out.
           </p>
-          <UpgradeButton plan="monthly" label="Get Pro for £1 →" className="primary large" />
+          <div className="upgrade-final-cta">
+            <UpgradeButton plan="monthly" label="Get Pro for £1 →" className="primary" />
+          </div>
           <div className="upgrade-signin">
             Already subscribed? <Link href="/settings">Manage your plan</Link>
+            {' · '}
+            <Link href="/ial-revision/january-2027">January 2027 series</Link>
           </div>
         </div>
 

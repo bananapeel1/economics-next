@@ -6801,88 +6801,115 @@ a.auth-dropdown-item:visited {
   .hs-topic-name { min-width: 100px; font-size: 12px; }
 }
 
-/* ═══ Upgrade page — £1 first month layout ═══ */
+/* ═══ Upgrade page — two plans, aligned ═══ */
 
-.upgrade-offer {
-  display: flex; flex-wrap: wrap; align-items: center; gap: 28px;
-  justify-content: space-between;
-  padding: 28px 32px; margin: 8px 0 18px;
-  border: 1px solid var(--accent-green); border-radius: 18px;
-  background: linear-gradient(135deg, rgba(5,150,105,0.10), rgba(16,185,129,0.03));
+.upgrade-currency-pill {
+  display: inline-flex; align-items: center; gap: 9px;
+  margin-top: 4px; padding: 9px 16px;
+  border: 1px solid var(--accent-green); border-radius: 999px;
+  background: rgba(5,150,105,0.12);
+  font-size: 13.5px; font-weight: 600; color: var(--text-primary);
 }
-.upgrade-offer-price { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
-.upgrade-offer-amount { font-size: 56px; font-weight: 800; line-height: 1; color: var(--text-primary); letter-spacing: -0.02em; }
-.upgrade-offer-unit { font-size: 16px; font-weight: 600; color: var(--text-primary); }
-.upgrade-offer-then { margin-top: 8px; font-size: 14px; color: var(--text-muted); }
-.upgrade-offer-points { display: flex; flex-direction: column; gap: 8px; }
-.upgrade-offer-point { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-primary); }
+.upgrade-currency-pill svg { color: var(--accent-green-light); flex-shrink: 0; }
 
-.upgrade-series-note { margin: 0 0 28px; font-size: 13px; color: var(--text-muted); text-align: center; }
-.upgrade-series-note a { color: var(--accent-green-light); text-decoration: underline; }
+.upgrade-plans {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px; align-items: stretch; margin-top: 30px;
+}
 
-.upgrade-tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: start; }
-.upgrade-tier {
-  position: relative; padding: 28px 24px;
+/* Cards stretch to equal height and each CTA is pinned to the bottom with
+   margin-top:auto, so the buttons stay on one line however the copy wraps.
+   The previous per-card sizing drifted by 41px. */
+.upgrade-plan {
+  position: relative; display: flex; flex-direction: column;
+  padding: 28px 26px;
   background: var(--bg-card); border: 1px solid var(--border-primary);
   border-radius: 18px; box-shadow: var(--card-shadow);
 }
-.upgrade-tier.featured { border-color: var(--accent-green); border-width: 2px; }
-.upgrade-tier.value { border-color: var(--border-primary); }
-.upgrade-tier-flag {
-  position: absolute; top: -11px; left: 24px;
+.upgrade-plan.featured { border-color: var(--accent-green); border-width: 2px; padding: 27px 25px; }
+
+.upgrade-plan-flag {
+  position: absolute; top: -11px; left: 26px;
   padding: 4px 12px; border-radius: 999px;
   background: var(--accent-green); color: #fff;
   font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
 }
-.upgrade-tier-flag.alt { background: var(--text-primary); color: var(--bg-card); }
-.upgrade-tier-label { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 10px; }
-.upgrade-tier-price { font-size: 40px; font-weight: 800; line-height: 1; color: var(--text-primary); letter-spacing: -0.02em; }
-.upgrade-tier-period { display: block; margin-top: 6px; font-size: 13px; font-weight: 500; color: var(--text-muted); letter-spacing: 0; }
-.upgrade-tier-note { margin: 10px 0 18px; font-size: 13px; color: var(--text-muted); }
+.upgrade-plan-flag.alt { background: var(--text-primary); color: var(--bg-card); }
 
+.upgrade-plan-for { font-size: 12.5px; font-weight: 600; color: var(--text-muted); line-height: 1.5; }
+.upgrade-plan-price {
+  margin-top: 16px; font-size: 54px; font-weight: 800;
+  line-height: 1; letter-spacing: -0.03em; color: var(--text-primary);
+}
+.upgrade-plan-unit { margin-left: 9px; font-size: 14px; font-weight: 600; letter-spacing: 0; color: var(--text-secondary); }
+.upgrade-plan-sub { margin-top: 9px; font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+.upgrade-strike { text-decoration: line-through; }
+/* The head block is min-height'd so both CTAs land on the same line even
+   though the lifetime sub-line wraps and the monthly one does not. The
+   previous per-card sizing drifted by 41px. */
+.upgrade-plan-head { min-height: 132px; }
+
+.upgrade-plan-list {
+  list-style: none; margin: 22px 0 0; padding: 22px 0 0;
+  border-top: 1px solid var(--border-primary);
+  display: flex; flex-direction: column; gap: 14px;
+}
+.upgrade-plan-list li { display: flex; align-items: flex-start; gap: 10px; }
+.upgrade-plan-list li strong { display: block; font-size: 13.5px; font-weight: 600; color: var(--text-primary); }
+.upgrade-plan-list li span { display: block; margin-top: 2px; font-size: 12.5px; line-height: 1.5; color: var(--text-muted); }
+
+.upgrade-check { flex-shrink: 0; margin-top: 3px; color: var(--accent-green-light); }
+
+/* Plan CTAs. Only .primary and .value are used — the ghost/large variants
+   went with the three-tier layout. */
 .upgrade-btn {
-  display: block; width: 100%; padding: 13px 20px; margin-bottom: 20px;
-  border: 1px solid var(--border-primary); border-radius: 10px;
+  display: block; width: 100%; padding: 15px 20px; margin: 0;
+  border: 1px solid var(--border-primary); border-radius: 11px;
   background: transparent; color: var(--text-primary);
-  font-size: 14px; font-weight: 600; font-family: inherit;
+  font-family: inherit; font-size: 15px; font-weight: 700;
   text-align: center; text-decoration: none; cursor: pointer;
-  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+  transition: transform 0.15s, box-shadow 0.15s;
 }
 .upgrade-btn:hover:not(:disabled) { transform: translateY(-1px); }
 .upgrade-btn:disabled { opacity: 0.55; cursor: default; transform: none; }
-.upgrade-btn.primary { background: var(--accent-green); border-color: var(--accent-green); color: #fff; box-shadow: 0 4px 16px rgba(5,150,105,0.28); }
+.upgrade-btn.primary {
+  background: var(--accent-green); border-color: var(--accent-green); color: #fff;
+  box-shadow: 0 4px 16px rgba(5,150,105,0.28);
+}
 .upgrade-btn.primary:hover:not(:disabled) { box-shadow: 0 6px 22px rgba(5,150,105,0.38); }
 .upgrade-btn.value { background: var(--text-primary); border-color: var(--text-primary); color: var(--bg-card); }
-.upgrade-btn.ghost { color: var(--text-muted); }
-.upgrade-btn.large { max-width: 340px; margin: 0 auto 14px; padding: 16px 32px; font-size: 16px; }
+
 .upgrade-owned {
-  padding: 13px 20px; margin-bottom: 20px; border-radius: 10px;
+  padding: 15px 20px; border-radius: 11px;
   background: rgba(5,150,105,0.12); color: var(--accent-green-light);
   font-size: 13px; font-weight: 600; text-align: center;
 }
 
-.upgrade-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 13px; }
-.upgrade-list li { display: flex; gap: 10px; align-items: flex-start; }
-.upgrade-list li strong { display: block; font-size: 13px; font-weight: 600; color: var(--text-primary); }
-.upgrade-list li span { display: block; margin-top: 2px; font-size: 12px; color: var(--text-muted); line-height: 1.5; }
-.upgrade-check { flex-shrink: 0; color: var(--accent-green-light); font-size: 13px; line-height: 1.5; }
-.upgrade-check.muted { color: var(--text-muted); }
+.upgrade-reassure {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px; margin-top: 30px;
+}
+.upgrade-reassure-item { padding: 20px 22px; border: 1px solid var(--border-primary); border-radius: 14px; }
+.upgrade-reassure-item strong { display: block; font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin-bottom: 7px; }
+.upgrade-reassure-item span { font-size: 12.5px; color: var(--text-muted); line-height: 1.65; }
 
-.upgrade-reassure { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 36px 0 8px; }
-.upgrade-reassure-item { padding: 18px 20px; border: 1px solid var(--border-primary); border-radius: 14px; }
-.upgrade-reassure-item strong { display: block; font-size: 13px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; }
-.upgrade-reassure-item span { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+.upgrade-final {
+  margin-top: 40px; padding: 40px 24px 8px;
+  border-top: 1px solid var(--border-primary); text-align: center;
+}
+.upgrade-final-title { margin: 0 0 9px; font-size: 25px; font-weight: 800; letter-spacing: -0.015em; color: var(--text-primary); }
+.upgrade-final-sub { margin: 0 0 24px; font-size: 14px; color: var(--text-muted); }
+.upgrade-final-cta { max-width: 330px; margin: 0 auto 16px; }
 
-.upgrade-final { margin: 44px 0 8px; padding: 36px 24px; text-align: center; border-top: 1px solid var(--border-primary); }
-.upgrade-final-title { font-size: 24px; font-weight: 800; color: var(--text-primary); margin: 0 0 8px; letter-spacing: -0.01em; }
-.upgrade-final-sub { font-size: 14px; color: var(--text-muted); margin: 0 0 22px; }
-
-@media (max-width: 900px) {
-  .upgrade-tiers, .upgrade-reassure { grid-template-columns: 1fr; }
-  .upgrade-offer { flex-direction: column; align-items: flex-start; gap: 18px; padding: 24px; }
-  .upgrade-offer-amount { font-size: 44px; }
-  .upgrade-tier.featured { order: -1; }
-  .upgrade-final-title { font-size: 20px; }
+@media (max-width: 860px) {
+  .upgrade-plans, .upgrade-reassure { grid-template-columns: 1fr; }
+  .upgrade-plans { gap: 26px; }
+  .upgrade-plan-head { min-height: 0; }
+  .upgrade-plan-price { font-size: 46px; }
+  .upgrade-final-title { font-size: 21px; }
+}
+@media (max-width: 520px) {
+  .upgrade-currency-pill { font-size: 12.5px; padding: 9px 14px; }
 }
 
 /* Local-currency notice, shown wherever a price appears */
