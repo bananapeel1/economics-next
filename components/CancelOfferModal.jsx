@@ -97,7 +97,7 @@ export default function CancelOfferModal({ open, onClose, onDecline }) {
         <div className="cancel-offer-price">
           <span className="cancel-offer-price-now">{price}</span>
           <span className="cancel-offer-price-was">{normal}</span>
-          <span className="cancel-offer-price-note">one payment · never billed again</span>
+          <span className="cancel-offer-price-note">one payment · never billed again · charged in your local currency</span>
         </div>
 
         {error && <div className="settings-error">{error}</div>}

@@ -6907,3 +6907,13 @@ a.auth-dropdown-item:visited {
   color: var(--text-muted); background: var(--bg-secondary, rgba(127,127,127,.08));
   border: 1px dashed var(--border-color, rgba(127,127,127,.3));
 }
+/* Local-currency notice, shown wherever a price appears */
+.paywall-currency-note,
+.settings-currency-note {
+  margin: 10px 0 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  text-align: center;
+}
+.settings-currency-note { text-align: left; }

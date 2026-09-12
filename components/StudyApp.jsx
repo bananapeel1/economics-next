@@ -203,7 +203,7 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
           <span className="overview-cta-text">
             Unlock Flashcards, Quiz &amp; AI Tutor &mdash; <strong>&pound;1 first month</strong>, then &pound;1.99/month
           </span>
-          <span className="overview-cta-cancel">Cancel anytime</span>
+          <span className="overview-cta-cancel">Cancel anytime &middot; local currency</span>
           <button className="overview-cta-btn" onClick={(e) => { e.stopPropagation(); window.location.href = '/upgrade'; }}>
             Get Pro &rarr;
           </button>
