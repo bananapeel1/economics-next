@@ -91,11 +91,16 @@ export default function InlineQuiz({ question, subjectId, sectionId, stepIndex, 
       <div className="lm-card-label">&#128161; Quick quiz</div>
       <div className="lm-quiz-inner">
         <p className="lm-quiz-question">{question.question}</p>
-        <div className="lm-quiz-options">
+        {/* F070: real buttons already, but nothing announced which was chosen or what the result
+            was, and the group had no name. */}
+        <div className="lm-quiz-options" role="group" aria-label="Answer options">
           {question.options?.map((option, i) => (
             <button
               key={i}
+              type="button"
               className={`lm-quiz-option ${getOptionClass(i)}`}
+              aria-pressed={selected === i}
+              disabled={answered}
               onClick={() => handleSelect(i)}
             >
               <span className="lm-quiz-option-letter">{letters[i]}</span>
@@ -104,12 +109,12 @@ export default function InlineQuiz({ question, subjectId, sectionId, stepIndex, 
           ))}
         </div>
         {revealPhase >= 2 && (
-          <div className="lm-quiz-explanation lm-animate-slide-in">
+          <div className="lm-quiz-explanation lm-animate-slide-in" role="status" aria-live="polite">
             <strong>{isCorrect ? 'Correct!' : 'Not quite.'}</strong>{' '}
             {question.explanation}
           </div>
         )}
-        {/* Confidence rating — auto-dismisses after 4s */}
+        {/* Confidence rating */}
         {answered && !confidence && !confidenceTimedOut && (
           <div className="lm-confidence-row lm-animate-fade-in">
             <span className="lm-confidence-prompt">How sure were you?</span>
@@ -152,7 +157,7 @@ export default function InlineQuiz({ question, subjectId, sectionId, stepIndex, 
               })}
             </div>
             {remAnswered && (
-              <div className="lm-quiz-explanation lm-animate-slide-in">
+              <div className="lm-quiz-explanation lm-animate-slide-in" role="status" aria-live="polite">
                 <strong>{remSelected === question.remediation.correct ? 'Got it!' : 'Not quite.'}</strong>{' '}
                 {question.remediation.explanation}
               </div>

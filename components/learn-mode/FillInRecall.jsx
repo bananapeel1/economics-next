@@ -63,7 +63,7 @@ export default function FillInRecall({ recall, onComplete }) {
     <div className="lm-recall-card">
       <div className="lm-recall-header">
         <div className="lm-recall-label">&#129504; Quick Recall — Fill in the Blanks</div>
-        <button className="lm-recall-dismiss" onClick={() => setDismissed(true)} title="Skip">&times;</button>
+        <button type="button" className="lm-recall-dismiss" onClick={() => setDismissed(true)} aria-label="Skip this check" title="Skip">&times;</button>
       </div>
       <p className="lm-recall-prompt">{recall.prompt}</p>
 
@@ -85,9 +85,24 @@ export default function FillInRecall({ recall, onComplete }) {
               onDrop={e => handleDropOnBlank(e, blankIdx)}
             >
               {before && <span>{before}</span>}
+              {/* F070: a click-only span. No role, no keyboard path, and a screen reader read it
+                  as loose text, so a blank was neither reachable nor identifiable. */}
               <span
+                role="button"
+                tabIndex={checked ? -1 : 0}
+                aria-label={
+                  checked
+                    ? `Blank ${blankIdx + 1}. ${isCorrect ? 'Correct' : `Wrong, the answer is ${recall.answers[blankIdx]}`}.`
+                    : word
+                      ? `Blank ${blankIdx + 1}, filled with ${word}. Activate to clear it.`
+                      : `Blank ${blankIdx + 1}, empty. Activate after choosing a word.`
+                }
                 className={`lm-fillin-blank ${word ? 'filled' : ''} ${isCorrect ? 'correct' : ''} ${isWrong ? 'wrong' : ''}`}
                 onClick={() => handleTapBlank(blankIdx)}
+                onKeyDown={(e) => {
+                  if (checked) return;
+                  if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); handleTapBlank(blankIdx); }
+                }}
               >
                 {checked && isWrong ? recall.answers[blankIdx] : word || (showHint ? recall.hints?.[blankIdx] : '___')}
               </span>
@@ -98,12 +113,18 @@ export default function FillInRecall({ recall, onComplete }) {
       </div>
 
       {!checked && availableWords.length > 0 && (
-        <div className="lm-word-bank">
+        <div className="lm-word-bank" role="group" aria-label="Word bank. Choose a word, then choose a blank.">
           {availableWords.map((word, i) => (
             <span
               key={`${word}-${i}`}
+              role="button"
+              tabIndex={0}
+              aria-label={`Use the word ${word}`}
               className="lm-word-chip"
               onClick={() => handleTapWord(word)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); handleTapWord(word); }
+              }}
             >
               {word}
             </span>

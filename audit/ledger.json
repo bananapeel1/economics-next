@@ -1187,8 +1187,8 @@
    "fix": "Make recall items `<button type=button aria-pressed={selected}>`; add `aria-label=\"Move up\"/\"Move down\"/\"Skip this check\"`; add `.lm-quiz-option:focus-visible, .lm-recall-item:focus-visible, .lm-nav-next:focus-visible { outline: 2px solid var(--accent-green); outline-offset: 2px }`; keep outline on textareas; fix heading order (chapter h2 > section h3 > subhead h4).",
    "impact": "Keyboard and switch users cannot select items in the reorder recall at all; screen-reader users hear 'multiplication sign, button' for Skip and 'black up-pointing triangle' for move-up; textareas lose the default focus ring.",
    "packet": 11,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-11",
    "verified_by": null,
    "evidence": null,
    "note": null
