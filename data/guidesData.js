@@ -12,10 +12,12 @@ const guidesData = [
   {
     slug: 'business-revision-guide',
     subject: 'business',
-    title: 'Edexcel IAL Business Revision Guide — Complete Study Notes',
-    metaTitle: 'Edexcel IAL Business Revision Notes & PDFs — All Units (2026)',
-    metaDescription: 'Free Edexcel IAL Business revision notes for Unit 1 Marketing & People and Unit 2 Managing Business Activities, with exam tips and key definitions. Practice questions are free in the app.',
-    heroSubtitle: 'Your revision companion for Edexcel IAL Business Studies — concise Unit 1 and Unit 2 notes, key definitions and exam technique tips here, plus all 20 Business sections in the app.',
+    title: 'Edexcel IAL Business Revision Guide — Units 1 and 2',
+    metaTitle: 'Edexcel IAL Business Revision Guide — Units 1 & 2 (2026)',
+    metaDescription: 'Edexcel IAL Business revision for Unit 1 (WBS11) and Unit 2 (WBS12): key definitions, exam command words and the mistakes that cost marks.',
+    heroSubtitle: 'Unit 1 and Unit 2 essentials — key definitions, exam technique and the mistakes that cost marks. All 20 Business sections are in the app.',
+    published: '2026-09-11',
+    updated: '2026-09-12',
     sections: [
       {
         heading: 'How to Revise Edexcel IAL Business Effectively',

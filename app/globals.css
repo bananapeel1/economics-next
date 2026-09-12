@@ -5128,6 +5128,123 @@ a.auth-dropdown-item:visited {
   background: var(--accent-green);
 }
 
+/* ─── Guide pages ───
+ *
+ * Only `.resource-page-header` was ever capped (800px, centred); the contents
+ * box, the stepper, the related links and the CTA ran to the full window. At a
+ * 1512px viewport the headline started 281px further in than the paragraph
+ * under it, and body text ran to 177 characters a line. One shell fixes both:
+ * the header's own 800px cap resolves to the shell's width from the inside.
+ *
+ * The type scale is scoped to the shell so the other resource pages that share
+ * `.resource-page` are untouched.
+ */
+.guide-shell {
+  /* 640px of DM Sans at 18px is ~78 characters a line. */
+  max-width: 640px;
+  margin-inline: auto;
+}
+.guide-shell .resource-page-header {
+  margin-bottom: 28px;
+}
+.guide-shell .resource-page-title {
+  font-size: 40px;
+  line-height: 1.12;
+  letter-spacing: -0.021em;
+  margin: 14px 0 10px;
+  text-wrap: balance;
+}
+.guide-shell .resource-page-subtitle {
+  font-size: 18px;
+  line-height: 1.55;
+}
+.guide-updated {
+  font-size: 13px;
+  /* --text-muted is 3.58:1 on this ground, under the 4.5:1 AA floor for 13px. */
+  color: var(--text-tertiary);
+  margin: 14px 0 0;
+}
+.guide-shell .seo-stepper-body h2 {
+  font-size: 24px;
+  line-height: 1.25;
+  letter-spacing: -0.012em;
+  margin: 0 0 12px;
+  text-wrap: balance;
+}
+.guide-shell .seo-stepper-body p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+}
+.guide-shell .seo-stepper-body {
+  padding-bottom: 36px;
+}
+
+/* Table of contents — was inline hex fallbacks in the JSX, which bypassed the
+ * token set entirely (`--card-bg` is not a token, so #1a1a2e was what rendered). */
+.guide-toc {
+  margin-bottom: 36px;
+  padding: 20px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: 10px;
+}
+.guide-toc-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 12px;
+}
+.guide-toc ol {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.guide-toc li {
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--text-tertiary);
+}
+.guide-toc a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.guide-toc a:hover,
+.guide-toc a:focus-visible {
+  color: var(--accent-green);
+}
+.guide-shell .seo-related-links,
+.guide-shell .seo-cta {
+  margin-top: 32px;
+}
+
+/* The numbered rail sits in the left gutter where there is room for it, so the
+ * headline, the section headings and the body text share one left edge. Below
+ * that it goes back in flow and indents the text, which is fine on a phone. */
+@media (min-width: 900px) {
+  .guide-shell .seo-stepper-step { position: relative; }
+  .guide-shell .seo-stepper-rail {
+    position: absolute;
+    left: -52px;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .guide-shell .resource-page-title { font-size: 30px; line-height: 1.16; }
+  .guide-shell .resource-page-subtitle { font-size: 16px; }
+  .guide-shell .seo-stepper-body h2 { font-size: 21px; }
+  .guide-shell .seo-stepper-body p { font-size: 17px; }
+  .guide-toc { padding: 16px 18px; }
+}
+
 /* Hero CTA — prominent banner at top of unit pages */
 .seo-hero-cta {
   margin: 0 0 24px;
