@@ -5,12 +5,21 @@ import { useState } from 'react';
  * Enhanced ExplainItBack with inline AI grading for premium users.
  * Free users get the same self-review experience (no AI button).
  */
-export default function ExplainItBackUpgraded({ title, onAskTutor, isPremium }) {
+export default function ExplainItBackUpgraded({ title, onAskTutor, isPremium, onAttempt, rubric }) {
   const [expanded, setExpanded] = useState(false);
   const [text, setText] = useState('');
   const [grading, setGrading] = useState(false);
   const [feedback, setFeedback] = useState(null); // { grade, feedback, strengths, gaps }
   const [error, setError] = useState('');
+  // One attempt per mounted box, however many times the student re-grades. The completion screen
+  // counts boxes engaged with, not button presses.
+  const [counted, setCounted] = useState(false);
+
+  function countAttempt() {
+    if (counted) return;
+    setCounted(true);
+    if (typeof onAttempt === 'function') onAttempt();
+  }
 
   async function handleGrade() {
     if (!text.trim() || text.trim().length < 10) return;
@@ -20,7 +29,7 @@ export default function ExplainItBackUpgraded({ title, onAskTutor, isPremium }) 
       const res = await fetch('/api/learn-mode/grade-explanation', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topic: title, explanation: text }),
+        body: JSON.stringify({ topic: title, explanation: text, ...(rubric || {}) }),
       });
       if (!res.ok) {
         const body = await res.json().catch(() => ({}));
@@ -30,6 +39,7 @@ export default function ExplainItBackUpgraded({ title, onAskTutor, isPremium }) 
       }
       const result = await res.json();
       setFeedback(result);
+      countAttempt();
     } catch (e) {
       setError('Network error. Please try again.');
     }
@@ -69,6 +79,7 @@ export default function ExplainItBackUpgraded({ title, onAskTutor, isPremium }) 
             placeholder="In my own words, this topic is about..."
             value={text}
             onChange={(e) => setText(e.target.value)}
+            onBlur={() => { if (text.trim().length >= 10) countAttempt(); }}
             rows={4}
           />
 

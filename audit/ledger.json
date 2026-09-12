@@ -48,10 +48,10 @@
    "fix": "Pass onExplainAttempt into ExplainItBackUpgraded and call it on submit (or on graded result for premium). Hide the Explain row when total is 0, and hide the 20% weight label unless a composite score is actually computed and shown.",
    "impact": "Every student who answers at least one quiz or recall sees a 'Score Breakdown' in which 'Explain It Back 0/1' sits with an empty bar and a 20% weight, regardless of whether they wrote three paragraphs and got AI feedback. It reads as 'you failed this' or 'the app is broken'. Free users, who cannot get their explanation graded, are told they scored 0 on a component they were never allowed to complete.",
    "packet": 9,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-9",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "components/LearnModeTab.jsx:83-86 onExplainAttempt wired to both ExplainItBackUpgraded instances (lines 473,515); components/learn-mode/CompletionScreen.jsx:94-101 row hidden when total=0, weight labels removed; components/learn-mode/ExplainItBackUpgraded.jsx:16-22 free users counted via onBlur (line 81), premium via handleGrade (line 40)",
    "note": null
   },
   {
@@ -235,10 +235,10 @@
    "fix": "Rename to maxOutputTokens in all three routes. For grading use generateText with Output.object (zod schema) instead of regex parsing.",
    "impact": "Grading output is uncapped (usually harmless since the schema is short, but a chatty model can run long and slow the 15s maxDuration). Tutor replies are capped only by the 'under 150 words' instruction; a model-answer request can stream a very long response and cost more than intended.",
    "packet": 9,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-9",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "grep -rn maxTokens across repo returns zero hits; app/api/chat/route.js:106 and app/api/learn-mode/grade-explanation/route.js:139 now use maxOutputTokens (ai@6.0.116 requires this name)",
    "note": null
   },
   {
@@ -252,10 +252,10 @@
    "fix": "Pass the block's section keyIdea, misconception and examMatters fields as grading context; say IAL; use Output.object with a zod schema and one automatic retry; cap explanation at ~1500 chars; align model with the rest of the app.",
    "impact": "A premium student's feedback can praise or penalise things the notes never covered, and cannot flag a misconception the section explicitly warns about. Parse failures surface as a generic error; the student must click Grade again manually (the button remains because feedback stays null).",
    "packet": 9,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-9",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/api/learn-mode/grade-explanation/route.js:16-30 buildRubric injects keyIdea/misconception/examMatters/takeaway; components/LearnModeTab.jsx:19-31 chapterRubric correctly reads these from block.sections[] (subsection level, matches content-sections JSON shape); route.js:129-146 two-attempt retry replaces old regex-then-500 parse",
    "note": null
   },
   {
@@ -303,10 +303,10 @@
    "fix": "Fix unit range to WEC11-WEC14; inject the section's keyIdeas and examMatters into the system prompt; align 20-mark structure guidance with content; make the empty-state copy subject-aware and add Business quick prompts; parse the JSON error body client-side or return plain text.",
    "impact": "A premium Business student opens a tab titled AI Economics Tutor with Economics-flavoured framing. The tutor cannot reference what the student just read and can confidently give advice that differs from the notes and practice guidance. Hitting the daily limit shows a raw JSON blob.",
    "packet": 9,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-9",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "lib/ial-marking.js:104-113 ESSAY_20_STRUCTURE matches modelAnswersData.js Introduction paragraphs (521,621,1047 define key terms w/ K tags), FAQ line 1083 ('a clear introduction defining key terms'), guidesData.js:38 ('introduction (define key terms)'); 'no introduction' text removed repo-wide (grep clean outside the explanatory comment at ial-marking.js:96); interpolated inside system template literal at route.js:113 (backtick 91-115) and grade-explanation/route.js:117 (backtick 111-124); does not contradict markingGuidance()'s judgement-criterion line (lib/ial-marking.js:84-85), it elaborates it; req1 (ial-marking.js:15 WEC11-WEC14), req2 (briefBlock route.js:75-95, TutorTab.jsx:182), req4 (TutorTab.jsx:234-247,287-289), req5 (TutorTab.jsx:143-154) all still intact.",
    "note": null
   },
   {
@@ -320,11 +320,11 @@
    "fix": "Move both limits to a shared store (Supabase table with a daily counter, or Vercel KV/Upstash). Have chat/route.js import lib/rate-limit.js so there is one implementation.",
    "impact": "No direct student harm; the 50/day grading and 30/day tutor limits are advisory only, so cost exposure is unbounded for a determined user. Not a cause of the step-0 drop-off.",
    "packet": 9,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "packet-9: partially addressed. The duplicate limiter in app/api/chat/route.js is gone and both AI routes now share lib/rate-limit.js, so one user cannot get two separate allowances. The underlying defect stands: the limiter is per-instance memory, so on Vercel it bounds a burst rather than a day. A durable limiter needs a store (Upstash/Vercel KV) and an account decision, which is outside a prompt-correctness packet. Re-open when a store exists."
   },
   {
    "id": "F020",
@@ -337,10 +337,10 @@
    "fix": "Use .order('created_at', {ascending: false}).limit(1).maybeSingle(), or filter status = 'active' first. Verify with a count of user_id duplicates.",
    "impact": "If duplicates exist (e.g. a cancelled row plus an active row), a paying student sees the grade button (client AuthProvider may resolve differently) and then a 403 error on click.",
    "packet": 9,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-9",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "lib/subscription-lookup.js:16-35 getSubscriptionRow orders by created_at desc and returns data.find(active) ?? data[0]; used by app/api/chat/route.js:28, app/api/learn-mode/grade-explanation/route.js:87, app/api/written-practice/evaluate/route.js:69 — all three AI routes, no .single() remains",
    "note": null
   },
   {
@@ -885,7 +885,7 @@
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "2026-09-12 measured against live content: 170 chapters, 15 get a diagram by pin and 36 by the per-block title fallback added in packet 2 (F041), so 51 render one, not 15. The refs themselves are still wrong (24 of 39 match nothing) and the fallback is a mitigation, not a fix: it can place a diagram the author did not choose. Of the 119 chapters with no diagram, the bulk is the 20 Business sections that hold zero diagrams in the database at all, which is a content gap owned by packet 12 and the section packets, not a pinning bug. Fix here = write diagramId onto the 39 blocks that carry a ref."
   },
   {
    "id": "F053",
@@ -1854,7 +1854,7 @@
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "2026-09-12 measured against live content: 170 chapters, 15 get a diagram by pin and 36 by the per-block title fallback added in packet 2 (F041), so 51 render one, not 15. The refs themselves are still wrong (24 of 39 match nothing) and the fallback is a mitigation, not a fix: it can place a diagram the author did not choose. Of the 119 chapters with no diagram, the bulk is the 20 Business sections that hold zero diagrams in the database at all, which is a content gap owned by packet 12 and the section packets, not a pinning bug. Fix here = write diagramId onto the 39 blocks that carry a ref."
   },
   {
    "id": "F110",
@@ -1991,6 +1991,23 @@
    "verified_by": null,
    "evidence": null,
    "note": null
+  },
+  {
+   "id": "F118",
+   "lens": "mobile-css-performance",
+   "sev": "medium",
+   "cat": "rendering",
+   "title": "React hydration fails on page load: script tags rendered inside React components make the server and client HTML disagree",
+   "file": "app/layout.js",
+   "line": 60,
+   "fix": "Move the JSON-LD and analytics script tags out of the React component tree. In the App Router, structured data belongs in a route Metadata field or a next/script component with an explicit strategy, not an inline script rendered as a child. Verify with a clean console on a section page.",
+   "impact": "Next.js logs \"Encountered a script tag while rendering React component\" and then \"Hydration failed because the server rendered HTML did not match the client\" on load. A hydration failure makes React discard the server markup and re-render on the client, costing first paint on exactly the low-end phones and school networks this cohort uses, and it can drop handlers attached to the server markup. Found live on /?section=supply during packet 9 verification; it predates packet 9 and is unrelated to it.",
+   "packet": 11,
+   "status": "open",
+   "closed_by": null,
+   "verified_by": null,
+   "evidence": null,
+   "note": "Found 2026-09-12 during packet 9 browser verification, not by the September audit. Reproduce: load a section page and read the console."
   }
  ],
  "content": [

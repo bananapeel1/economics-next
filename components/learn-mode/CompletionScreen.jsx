@@ -4,7 +4,7 @@ import StrengthMeter from '../StrengthMeter';
 import PostTest from './PostTest';
 import QuickFireDrill from './QuickFireDrill';
 
-function ScoreRow({ label, emoji, score, weight }) {
+function ScoreRow({ label, emoji, score }) {
   const pct = score.total > 0 ? Math.round((score.correct / score.total) * 100) : 0;
   return (
     <div className="lm-score-row">
@@ -12,7 +12,6 @@ function ScoreRow({ label, emoji, score, weight }) {
         <span className="lm-score-row-emoji">{emoji}</span>
         <span className="lm-score-row-label">{label}</span>
         <span className="lm-score-row-value">{score.correct}/{score.total}</span>
-        <span className="lm-score-row-weight">{weight}</span>
       </div>
       <div className="lm-score-bar-track">
         <div className="lm-score-bar-fill" style={{ width: `${pct}%` }} />
@@ -83,12 +82,24 @@ export default function CompletionScreen({
       <StrengthMeter subjectId={subjectId} sectionId={sectionId} size="medium" />
 
       {/* Score breakdown */}
-      {scores && (scores.quiz.total > 0 || scores.recall.total > 0) && (
+      {scores && (scores.quiz.total > 0 || scores.recall.total > 0 || scores.explain.total > 0) && (
         <div className="lm-score-breakdown">
           <h3 className="lm-score-breakdown-title">Score Breakdown</h3>
-          <ScoreRow label="Quiz" emoji="&#128161;" score={scores.quiz} weight="50%" />
-          <ScoreRow label="Recall" emoji="&#129504;" score={scores.recall} weight="30%" />
-          <ScoreRow label="Explain It Back" emoji="&#128172;" score={{ correct: scores.explain.attempts, total: scores.explain.total || 1 }} weight="20%" />
+          {/* No weight labels. The 50/30/20 percentages named a composite score that was never
+              computed anywhere, and the Explain row used `total || 1`, so every completion screen
+              read "0/1" even for a student who never opened the box. Packet 9, finding F003.
+              Each row now shows only what was actually measured, and a row with nothing measured
+              is not shown at all. */}
+          {scores.quiz.total > 0 && (
+            <ScoreRow label="Quiz" emoji="&#128161;" score={scores.quiz} />
+          )}
+          {scores.recall.total > 0 && (
+            <ScoreRow label="Recall" emoji="&#129504;" score={scores.recall} />
+          )}
+          {scores.explain.total > 0 && (
+            <ScoreRow label="Explain It Back" emoji="&#128172;"
+              score={{ correct: scores.explain.attempts, total: scores.explain.total }} />
+          )}
 
           {/* Weakest area callout */}
           {scores.quiz.total > 0 && scores.quiz.correct < scores.quiz.total && (

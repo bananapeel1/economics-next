@@ -134,7 +134,37 @@ function clearChatHistory(sectionId) {
   }
 }
 
-export default function TutorTab({ section, unit, pendingPrompt, onPromptConsumed }) {
+/* What the tutor is allowed to know about the chapter the student is on. The route used to receive
+   only the section number and title, so the tutor answered from general knowledge and could
+   contradict the notes the student had just read. Packet 9, finding F018. Capped so a long section
+   cannot crowd out the conversation. */
+/* The API returns JSON errors, and useChat surfaces the raw body as error.message, so hitting the
+   daily limit used to show the student a JSON blob. Packet 9, finding F018. */
+function friendlyError(error) {
+  const raw = (error && error.message) || '';
+  try {
+    const parsed = JSON.parse(raw);
+    if (parsed && typeof parsed.error === 'string') return parsed.error;
+  } catch { /* not JSON; fall through */ }
+  const m = raw.match(/"error"\s*:\s*"([^"]+)"/);
+  if (m) return m[1];
+  if (/\b429\b/.test(raw)) return 'Daily limit reached. Please try again tomorrow.';
+  if (/\b(401|403)\b/.test(raw)) return 'The AI tutor is a Pro feature. Please sign in with a Pro subscription.';
+  return raw && raw.length < 120 && !raw.trim().startsWith('{') ? raw : 'Something went wrong. Please try again.';
+}
+
+function sectionBrief(contentData) {
+  if (!Array.isArray(contentData) || !contentData.length) return null;
+  const chapters = contentData.slice(0, 8).map((block) => {
+    const subs = Array.isArray(block?.sections) ? block.sections : [];
+    const ideas = subs.map((x) => x && x.keyIdea).filter(Boolean).slice(0, 4);
+    const exam = subs.map((x) => x && x.examMatters).filter(Boolean).slice(0, 2);
+    return { title: block?.title || '', keyIdeas: ideas, examMatters: exam };
+  }).filter((c) => c.title || c.keyIdeas.length);
+  return chapters.length ? chapters : null;
+}
+
+export default function TutorTab({ section, unit, contentData, pendingPrompt, onPromptConsumed }) {
   const [input, setInput] = useState('');
   const messagesEndRef = useRef(null);
   const prevSectionId = useRef(section?.id);
@@ -149,7 +179,7 @@ export default function TutorTab({ section, unit, pendingPrompt, onPromptConsume
     setMessages,
   } = useChat({
     api: '/api/chat',
-    body: { section, unit },
+    body: { section, unit, sectionBrief: sectionBrief(contentData) },
   });
 
   const isLoading = status === 'submitted' || status === 'streaming';
@@ -199,12 +229,22 @@ export default function TutorTab({ section, unit, pendingPrompt, onPromptConsume
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  const quickPrompts = quickPromptsBySection[section?.id] || [
+  // Subject comes from the unit code, the same way the API route decides it, so the tab and the
+  // tutor never disagree about which qualification the student is sitting.
+  const isBusiness = String(unit?.code || '').toUpperCase().startsWith('WBS');
+  const subjectName = isBusiness ? 'Business' : 'Economics';
+
+  const quickPrompts = quickPromptsBySection[section?.id] || (isBusiness ? [
+    'Explain the key concepts in this topic',
+    'How should I structure a 20-mark Evaluate answer?',
+    'Give me an exam-style question with a model answer',
+    'What are common mistakes students make here?',
+  ] : [
     'Explain the key concepts in this topic',
     'What are the main diagrams I need to know?',
-    'Give me an exam-style question with model answer',
-    'What are common mistakes students make?',
-  ];
+    'Give me an exam-style question with a model answer',
+    'What are common mistakes students make here?',
+  ]);
 
   function handleSend(text) {
     const trimmed = (text || '').trim();
@@ -244,9 +284,9 @@ export default function TutorTab({ section, unit, pendingPrompt, onPromptConsume
         {messages.length === 0 && (
           <div style={{ textAlign: 'center', padding: '40px 20px', color: 'var(--text-muted)' }}>
             <div style={{ fontSize: 32, marginBottom: 12 }}>&#129302;</div>
-            <div style={{ fontSize: 15, fontWeight: 600, color: 'var(--text-primary)', marginBottom: 6 }}>AI Economics Tutor</div>
+            <div style={{ fontSize: 15, fontWeight: 600, color: 'var(--text-primary)', marginBottom: 6 }}>AI {subjectName} Tutor</div>
             <div style={{ fontSize: 13, marginBottom: 20 }}>
-              Ask me anything about {section?.title}. I&apos;m focused on Edexcel IAS exam technique.
+              Ask me anything about {section?.title}. I&apos;m focused on Edexcel IAL {subjectName} exam technique.
             </div>
           </div>
         )}
@@ -278,7 +318,7 @@ export default function TutorTab({ section, unit, pendingPrompt, onPromptConsume
           <div className="tutor-message ai">
             <div className="tutor-avatar ai">&#129302;</div>
             <div className="tutor-bubble" style={{ color: 'var(--accent-red, #ef4444)' }}>
-              {error.message || 'Something went wrong. Please try again.'}
+              {friendlyError(error)}
             </div>
           </div>
         )}

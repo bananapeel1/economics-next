@@ -161,3 +161,28 @@ Append only. Every entry needs a date and the packet that made it.
   on all verification and mechanical sweeps. Recorded in `audit/PROTOCOL.md` under Agents and models. If a
   packet built on the lower tier is rejected by its verifier more than once, that is evidence the task needed
   the higher tier: move it and say so here.
+
+- **2026-09-12 (packet 9) — IAL marking facts live in `lib/ial-marking.js`, and nowhere else.** The tutor and
+  the grader each carried their own half-remembered version: the tutor told students Economics runs WEC11 to
+  WEC12 (it runs to WEC14) and offered a tariff table containing "Assess", which does not exist in IAL
+  Economics. Tariffs, paper structures and the 20-mark essay structure are now one module, sourced from
+  `audit/raw/econ_spec.txt` and `bus_spec.txt` and verified against them line by line by the packet verifier.
+  Import it; never restate these facts in a prompt.
+- **2026-09-12 (packet 9) — the tutor must not contradict the site's own content.** Its prompt said a 20-mark
+  essay needs no introduction while every 20-mark model answer in `data/modelAnswersData.js` opens with a
+  labelled Introduction, the FAQ requires "a clear introduction defining key terms", and `data/guidesData.js`
+  says the same for Business. The content is right: defining the key terms is where the Knowledge marks are
+  earned. Both AI routes now share `ESSAY_20_STRUCTURE`. Any future guidance a route gives about structure or
+  marking goes in that module so the two surfaces cannot drift apart again.
+- **2026-09-12 (packet 9) — F019, the rate limiter, is wont-fix rather than done.** The duplicate limiter in
+  the chat route is gone and all AI routes share `lib/rate-limit.js`, so one user can no longer draw two
+  separate allowances. The limiter is still per-instance memory, so on Vercel it bounds a burst, not a day.
+  A durable limiter needs a store (Upstash or Vercel KV) and an account decision. Re-open when one exists.
+- **2026-09-12 — the gate now reports unclaimed scope.** `ledger.mjs unverified <n>` only checked CLAIMED
+  items, so a packet could pass by claiming less than its scope; packet 2 was recorded done with F052, F109
+  and F115 still open. It now lists items assigned to the packet that were never claimed. A packet is not
+  done while those are open: fix and claim them, mark them wont-fix with a note, or reassign them.
+- **2026-09-12 — two of my own summaries were wrong this session, both caught by checking the source.** The
+  Economics Unit 2 paper structure (propagated to 52 agents) and the claim that 24 of 39 chapters render no
+  diagram (measured: 15 by pin plus 36 by the packet 2 fallback, so 51 render one). Rule that follows: a count
+  or a spec fact stated in prose is a hypothesis. Measure it or cite the spec line before acting on it.

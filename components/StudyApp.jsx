@@ -735,7 +735,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       case 'flashcards': return <FlashcardsTab cards={sectionData.flashcards} sectionId={activeSection} previewMode={isPreview} />;
       case 'quiz': return <QuizTab questions={sectionData.quiz} sectionId={activeSection} onAskTutor={isPremium ? goToTutor : null} previewMode={isPreview} />;
       case 'mistakes': return <MistakesTab data={sectionData.mistakes} />;
-      case 'tutor': return <TutorTab section={currentSection} unit={currentUnit} pendingPrompt={pendingTutorPrompt} onPromptConsumed={() => setPendingTutorPrompt(null)} />;
+      case 'tutor': return <TutorTab section={currentSection} unit={currentUnit} contentData={sectionData.content} pendingPrompt={pendingTutorPrompt} onPromptConsumed={() => setPendingTutorPrompt(null)} />;
       case 'extras': return <ExtrasTab data={sectionData.extras} previewMode={isPreview} />;
       default: return null;
     }

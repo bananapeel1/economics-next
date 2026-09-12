@@ -3,6 +3,7 @@ import { google } from '@ai-sdk/google';
 import { createClient } from '@/lib/supabase/server';
 import { createServerClient } from '@/lib/supabase-server';
 import { hasPremiumAccess } from '@/lib/entitlements';
+import { getSubscriptionRow } from '@/lib/subscription-lookup';
 import { rateLimit } from '@/lib/rate-limit';
 import { practiceCommand } from '@/lib/ial-commands';
 import { normaliseAO } from '@/lib/ao-spec';
@@ -64,11 +65,7 @@ export async function POST(request) {
 
   // Premium check
   const supabase = createServerClient();
-  const { data: sub } = await supabase
-    .from('user_subscriptions')
-    .select('plan, status')
-    .eq('user_id', user.id)
-    .single();
+  const sub = await getSubscriptionRow(supabase, user.id);
 
   const isPremium = hasPremiumAccess(sub);
   const isAdmin = user.app_metadata?.role === 'admin';
