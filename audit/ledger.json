@@ -1952,8 +1952,8 @@
    "fix": "Add id to every quiz/practice/diagram item and pin by id; store content_version + previous JSON (or a section_content_history table) on every update; make the push script print a resolved-pins report and a diff and require a --confirm flag; add a staging section_id or a draft column reviewed in the admin UI before publish.",
    "impact": "A bad push (or the practiceIndices bug above) goes live instantly for all 211 users with nothing to roll back to; when content is fixed later, pins drift and chapter-end quizzes/practice quietly vanish.",
    "packet": 2,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-2",
    "verified_by": null,
    "evidence": null,
    "note": "2026-09-12: the draft/published infrastructure now EXISTS — the founder ran scripts/packet-2-draft-state.sql, all eight content tables carry draft + published_at, and scripts/publish-section.mjs runs. What remains for this finding is adoption, not plumbing: no content script writes to draft yet, so a push is still a blind overwrite in practice. Close it when the first content packet writes to draft and publishes in one statement."
