@@ -69,6 +69,7 @@ export default function CompletionScreen({
         <PostTest
           subjectId={subjectId}
           sectionId={sectionId}
+          quizData={quizData}
           onScore={handleDrillScore}
           onClose={() => setCompleteView('main')}
         />

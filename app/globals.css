@@ -7266,3 +7266,22 @@ a.auth-dropdown-item:visited {
   background: var(--rl-green, #10b981); color: #fff;
 }
 .lm-explain-locked-cta:focus-visible { outline: 2px solid var(--rl-green, #10b981); outline-offset: 2px; }
+
+
+/* F017: the student's own wrong answers, shown above the authored common mistakes. */
+.mistakes-own { margin-bottom: 28px; }
+.mistakes-own-title {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 16px; font-weight: 600; color: var(--text-primary); margin: 0 0 4px;
+}
+.mistakes-own-count {
+  font-size: 12px; font-weight: 600; color: var(--accent-amber);
+  background: var(--amber-10, rgba(217, 148, 32, 0.12));
+  border-radius: 999px; padding: 2px 9px;
+}
+.mistakes-own-sub { font-size: 13px; color: var(--text-muted); margin: 0 0 14px; }
+.mistake-card-own { border-left: 3px solid var(--accent-amber); }
+.mistake-own-q { font-weight: 600; color: var(--text-primary); margin-bottom: 8px; line-height: 1.45; }
+.mistake-own-answer { font-size: 14px; color: var(--text-secondary); margin-bottom: 6px; }
+.mistake-own-why { font-size: 14px; color: var(--text-secondary); line-height: 1.55; }
+.mistake-own-meta { font-size: 12.5px; color: var(--text-muted); margin-top: 8px; font-style: italic; }

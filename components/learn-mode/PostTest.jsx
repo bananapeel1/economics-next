@@ -1,11 +1,12 @@
 "use client";
 import { useState, useMemo, useRef, useEffect } from 'react';
+import { readAnswerLog, orderByPriority } from '@/lib/answer-log';
 
 /**
  * Post-session assessment — re-shows pre-test questions after completing the section.
  * Compares pre-test vs post-test scores to show learning progress.
  */
-export default function PostTest({ subjectId, sectionId, onClose, onScore }) {
+export default function PostTest({ subjectId, sectionId, onClose, onScore, quizData }) {
   const [phase, setPhase] = useState('intro'); // 'intro' | 'quiz' | 'result'
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
@@ -20,7 +21,25 @@ export default function PostTest({ subjectId, sectionId, onClose, onScore }) {
     } catch { return null; }
   }, [subjectId, sectionId]);
 
-  const questions = pretestData?.questions || [];
+  /*
+   * F017. A student who skipped the pre-test got no post-test at all — this returned null — so
+   * the section ended with nothing checking whether any of it stuck, and the questions they had
+   * just got wrong in the inline quizzes were never asked again.
+   *
+   * The pre-test comparison is left exactly as it was when there is one: it must ask the same
+   * questions or the before-and-after number means nothing. The fallback only fills the case
+   * where there is nothing to compare against, and it asks what they got wrong.
+   */
+  const fallback = useMemo(() => {
+    if (pretestData?.questions?.length) return [];
+    if (!quizData?.length) return [];
+    const log = readAnswerLog(subjectId, sectionId);
+    if (!log.some((e) => e.correct === false)) return [];
+    return orderByPriority(quizData, log).slice(0, 5);
+  }, [pretestData, quizData, subjectId, sectionId]);
+
+  const questions = pretestData?.questions?.length ? pretestData.questions : fallback;
+  const isComparison = !!pretestData?.questions?.length;
   const pretestScore = pretestData?.score ?? 0;
   const pretestTotal = pretestData?.total ?? 0;
 
@@ -56,13 +75,19 @@ export default function PostTest({ subjectId, sectionId, onClose, onScore }) {
       <div className="lm-posttest-container">
         <div className="lm-posttest-intro">
           <div className="lm-posttest-intro-icon">&#128200;</div>
-          <h3 className="lm-posttest-intro-title">Test your improvement</h3>
+          <h3 className="lm-posttest-intro-title">
+            {isComparison ? 'Test your improvement' : 'The ones you got wrong'}
+          </h3>
           <p className="lm-posttest-intro-desc">
-            Answer the same {questions.length} questions from your pre-test to see how much you&apos;ve learned.
+            {isComparison
+              ? `Answer the same ${questions.length} questions from your pre-test to see how much you have learned.`
+              : `You did not take the pre-test, so there is nothing to compare against. These are the ${questions.length} questions you got wrong on the way through.`}
           </p>
-          <div className="lm-posttest-intro-pretest">
-            Pre-test score: <strong>{pretestScore} / {pretestTotal}</strong>
-          </div>
+          {isComparison && (
+            <div className="lm-posttest-intro-pretest">
+              Pre-test score: <strong>{pretestScore} / {pretestTotal}</strong>
+            </div>
+          )}
           <button className="lm-posttest-start-btn" onClick={() => setPhase('quiz')}>
             Start post-test &rarr;
           </button>
@@ -76,24 +101,33 @@ export default function PostTest({ subjectId, sectionId, onClose, onScore }) {
       <div className="lm-posttest-container">
         <div className="lm-posttest-result">
           <div className="lm-posttest-comparison">
-            <div className="lm-posttest-score-card lm-posttest-pre">
-              <div className="lm-posttest-score-label">Pre-test</div>
-              <div className="lm-posttest-score-value">{pretestScore} / {pretestTotal}</div>
-            </div>
-            <div className="lm-posttest-arrow">&rarr;</div>
+            {isComparison && (
+              <>
+                <div className="lm-posttest-score-card lm-posttest-pre">
+                  <div className="lm-posttest-score-label">Pre-test</div>
+                  <div className="lm-posttest-score-value">{pretestScore} / {pretestTotal}</div>
+                </div>
+                <div className="lm-posttest-arrow">&rarr;</div>
+              </>
+            )}
             <div className="lm-posttest-score-card lm-posttest-post">
-              <div className="lm-posttest-score-label">Post-test</div>
+              <div className="lm-posttest-score-label">{isComparison ? 'Post-test' : 'Second attempt'}</div>
               <div className="lm-posttest-score-value">{postScore} / {questions.length}</div>
             </div>
           </div>
           <p className="lm-posttest-message">
-            {perfect
-              ? 'Perfect score! You\'ve mastered this topic.'
-              : improved
-                ? 'Great improvement! Your studying paid off.'
-                : same
-                  ? 'Same score \u2014 review the areas you found tricky.'
-                  : 'Keep practising \u2014 revision is a marathon, not a sprint.'}
+            {/* Without a pre-test there is no improvement to claim, so it does not claim one. */}
+            {!isComparison
+              ? (perfect
+                  ? 'All of them, second time round. Those are the ones you had wrong.'
+                  : `You got ${postScore} of the ${questions.length} you had wrong. The rest are worth another look.`)
+              : perfect
+                ? 'Perfect score! You\'ve mastered this topic.'
+                : improved
+                  ? 'Great improvement! Your studying paid off.'
+                  : same
+                    ? 'Same score \u2014 review the areas you found tricky.'
+                    : 'Keep practising \u2014 revision is a marathon, not a sprint.'}
           </p>
           <button className="lm-posttest-close-btn" onClick={onClose}>
             Done

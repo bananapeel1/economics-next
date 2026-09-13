@@ -1,7 +1,8 @@
 "use client";
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { useAuth } from './AuthProvider';
 import Sidebar from './Sidebar';
+import { shuffleAllOptions } from '@/lib/shuffle-options';
 import ContentTab from './ContentTab';
 import NotesTab from './NotesTab';
 import DiagramsTab from './DiagramsTab';
@@ -336,7 +337,26 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   }
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const dataMatchesSection = startSection === initialSectionId;
-  const [sectionData, setSectionData] = useState(dataMatchesSection ? initialSectionData : null);
+  const [rawSectionData, setSectionData] = useState(dataMatchesSection ? initialSectionData : null);
+
+  /*
+   * F074, critical. Of 769 quiz questions in the corpus the correct answer is option B in 492 of
+   * them: **a student who picks B every time, without reading the question, scores 64%.** Option A
+   * is correct 4.8% of the time. Nothing shuffled anywhere, so the pattern is learnable in one
+   * sitting, and after that every score the product reports is measuring pattern-matching.
+   *
+   * Shuffled once, here, where the section's questions enter the app, so the inline quiz, the quiz
+   * tab, the pre-test, the post-test, the drill, the review schedule and the mistakes tab all see
+   * the same order. Shuffling per surface would show a student the same question with its options
+   * in two different arrangements and make the ordering feel like a bug.
+   *
+   * The shuffle is deterministic on the question text — see lib/shuffle-options.js for why it must
+   * be, which is F118 and the stored-attempt problem.
+   */
+  const sectionData = useMemo(() => {
+    if (!rawSectionData?.quiz?.length) return rawSectionData;
+    return { ...rawSectionData, quiz: shuffleAllOptions(rawSectionData.quiz) };
+  }, [rawSectionData]);
   // Sections already fetched this visit (F092). Per-visit only: it is not a correctness cache,
   // and a reload gets fresh data, which is what we want while content is still being rewritten.
   const sectionCacheRef = useRef(new Map());
@@ -825,7 +845,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       case 'practice': return <PracticeQuestionsTab questions={sectionData.practice} onAskTutor={isPremium ? goToTutor : null} sectionNumber={currentSection?.number} unitCode={currentUnit?.code} />;
       case 'flashcards': return <FlashcardsTab cards={sectionData.flashcards} totalCount={sectionData.counts?.flashcards} sectionId={activeSection} previewMode={isPreview} />;
       case 'quiz': return <QuizTab questions={sectionData.quiz} totalCount={sectionData.counts?.quiz} sectionId={activeSection} onAskTutor={isPremium ? goToTutor : null} previewMode={isPreview} />;
-      case 'mistakes': return <MistakesTab data={sectionData.mistakes} />;
+      case 'mistakes': return <MistakesTab data={sectionData.mistakes} subjectId={activeSubjectId} sectionId={activeSection} quizData={sectionData.quiz} />;
       case 'tutor': return <TutorTab section={currentSection} unit={currentUnit} contentData={sectionData.content} pendingPrompt={pendingTutorPrompt} onPromptConsumed={() => setPendingTutorPrompt(null)} />;
       case 'extras': return <ExtrasTab data={sectionData.extras} totalCount={(sectionData.counts?.extrasChains || 0) + (sectionData.counts?.extrasEvaluation || 0)} previewMode={isPreview} />;
       default: return null;

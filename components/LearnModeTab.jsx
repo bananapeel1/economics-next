@@ -6,6 +6,7 @@ import { distributeItems, matchDiagramsToBlocks, resolvePinnedItem, resolvePinne
 import InlineDiagram from './learn-mode/InlineDiagram';
 import InlinePractice from './learn-mode/InlinePractice';
 import InlineQuiz from './learn-mode/InlineQuiz';
+import { readAnswerLog, orderByPriority } from '@/lib/answer-log';
 import PreTest from './learn-mode/PreTest';
 import CompletionScreen from './learn-mode/CompletionScreen';
 import RecallCheckpoint from './learn-mode/RecallCheckpoint';
@@ -294,11 +295,21 @@ export default function LearnModeTab({
         try {
           const existing = JSON.parse(localStorage.getItem('revvy_review_schedule') || '[]');
           if (!existing.find(r => r.sectionId === sectionId && r.subjectId === subjectId)) {
-            const shuffled = [...quizData].sort(() => Math.random() - 0.5);
+            /*
+             * F017. This was `sort(() => Math.random() - 0.5)` sliced to five, so the five
+             * questions a student saw in every future review of this section were picked by a
+             * coin toss and fixed forever. A question they had just answered wrong had exactly
+             * the same chance of being reviewed as one they were certain about.
+             *
+             * Ordered by the answer log now: wrong-while-certain first, then wrong, then never
+             * seen, then the ones they are solid on. The five that survive the slice are the five
+             * worth asking again.
+             */
+            const ordered = orderByPriority(quizData, readAnswerLog(subjectId, sectionId));
             existing.push({
               sectionId, subjectId,
               title: currentSection?.title || 'Unknown section',
-              questions: shuffled.slice(0, Math.min(5, shuffled.length)),
+              questions: ordered.slice(0, Math.min(5, ordered.length)),
               intervals: [1, 3, 7, 14], currentInterval: 0,
               nextDue: Date.now() + 1 * 24 * 60 * 60 * 1000, lastScore: null,
             });
