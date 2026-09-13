@@ -5224,6 +5224,130 @@ a.auth-dropdown-item:visited {
   margin-top: 32px;
 }
 
+/* Links inside the prose. Underlined rather than colour-only, so they are
+ * distinguishable without relying on hue. */
+.guide-inline-link {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-green);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.15s;
+}
+.guide-inline-link:hover,
+.guide-inline-link:focus-visible {
+  color: var(--accent-green);
+}
+
+/* Lists and tables inside a guide section. The stepper already had `ul`/`li`
+ * rules that nothing ever used; these scope them to the guide and add the
+ * table, which has to scroll in its own box so the page never does. */
+.guide-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.guide-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+.guide-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-green);
+}
+
+.guide-table-wrap {
+  margin: 18px 0 0;
+  overflow-x: auto;
+  border: 1px solid var(--border-primary);
+  border-radius: 10px;
+  background: var(--bg-card);
+}
+.guide-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 460px;
+  font-size: 15px;
+  text-align: left;
+}
+.guide-table caption {
+  caption-side: top;
+  padding: 12px 16px 0;
+  font-size: 13px;
+  color: var(--text-tertiary);
+  text-align: left;
+}
+.guide-table th,
+.guide-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border-primary);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.guide-table thead th {
+  font-size: 12px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.guide-table tbody th {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+.guide-table td {
+  color: var(--text-secondary);
+}
+.guide-table tbody tr:last-child th,
+.guide-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Contextual CTA, sitting directly under the section that earns it. */
+.guide-inline-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  color: var(--accent-green);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+.guide-inline-cta:hover,
+.guide-inline-cta:focus-visible {
+  border-color: var(--accent-green);
+  background: var(--bg-card-hover);
+}
+.guide-inline-cta span {
+  transition: transform 0.15s;
+}
+.guide-inline-cta:hover span {
+  transform: translateX(2px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .guide-inline-cta span { transition: none; }
+  .guide-inline-cta:hover span { transform: none; }
+}
+
 /* The numbered rail sits in the left gutter where there is room for it, so the
  * headline, the section headings and the body text share one left edge. Below
  * that it goes back in flow and indents the text, which is fine on a phone. */
@@ -5242,6 +5366,8 @@ a.auth-dropdown-item:visited {
   .guide-shell .resource-page-subtitle { font-size: 16px; }
   .guide-shell .seo-stepper-body h2 { font-size: 21px; }
   .guide-shell .seo-stepper-body p { font-size: 17px; }
+  .guide-list li { font-size: 16px; }
+  .guide-table { font-size: 14px; }
   .guide-toc { padding: 16px 18px; }
 }
 
