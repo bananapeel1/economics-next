@@ -183,8 +183,6 @@ export default async function BusinessTopicPage({ params }) {
         />
       )}
 
-      {/* Set localStorage BEFORE React hydrates so StudyApp opens the correct section */}
-      <script dangerouslySetInnerHTML={{ __html: `try{localStorage.setItem('last-visited-section',${JSON.stringify(topic)});localStorage.setItem('last-visited-subject',${JSON.stringify(unit?.subject_id || '')})}catch(e){}` }} />
 
       {/* SSR content for Google (visually hidden, accessible) */}
       <div className="sr-only">

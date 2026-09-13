@@ -228,10 +228,13 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   // answer during SSR and hydration. Reading window.location alone did not:
   // it is undefined on the server, so the subject seeded to subjects[0] and
   // hydration never corrected it, sending Business links into Economics.
-  const urlSectionParam = requestedSectionId
-    || (typeof window !== 'undefined'
-      ? new URLSearchParams(window.location.search).get('section')
-      : null);
+  //
+  // F118. The `window.location.search` fallback that used to sit here is gone. It is null during
+  // SSR and a real value on the client, so the first client render disagreed with the server's
+  // markup and React threw the whole server tree away and re-rendered — the hydration failure
+  // three earlier sessions hunted through the script tags. `requestedSectionId` is resolved on
+  // the server by both mount sites, so it gives the same answer in both passes.
+  const urlSectionParam = requestedSectionId;
   const subjectForUrlSection = urlSectionParam
     ? (() => {
         const sec = sections.find(s => s.id === urlSectionParam);
@@ -241,12 +244,9 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       })()
     : null;
 
-  const savedSubjectId = typeof window !== 'undefined'
-    ? localStorage.getItem('last-visited-subject')
-    : null;
-  const initialSubjectId = subjectForUrlSection
-    || (savedSubjectId && subjects.some(s => s.id === savedSubjectId) ? savedSubjectId : null)
-    || (subjects[0]?.id || null);
+  // F118: `last-visited-subject` is read after hydration, never during render. localStorage does
+  // not exist on the server, so any render that consults it produces two different trees.
+  const initialSubjectId = subjectForUrlSection || (subjects[0]?.id || null);
   const [activeSubjectId, setActiveSubjectId] = useState(initialSubjectId);
   const activeSubject = subjects.find(s => s.id === activeSubjectId) || subjects[0];
 
@@ -258,20 +258,54 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   const subjectSectionIds = new Set(sections.filter(s => subjectUnits.some(u => u.id === s.unit_id)).map(s => s.id));
   const subjectSections = sections.filter(s => subjectSectionIds.has(s.id));
 
-  // Determine starting section: URL param > localStorage last-visited > initial > first
-  const urlSection = typeof window !== 'undefined'
-    ? new URLSearchParams(window.location.search).get('section')
-    : null;
-  const lastVisited = typeof window !== 'undefined'
-    ? localStorage.getItem('last-visited-section')
-    : null;
-  const startSection = (urlSection && subjectSections.some(s => s.id === urlSection))
-    ? urlSection
-    : (lastVisited && subjectSections.some(s => s.id === lastVisited))
-      ? lastVisited
-      : (initialSectionId || subjectSections[0]?.id);
+  /*
+   * Starting section: what the server was asked for, then what it rendered, then the first.
+   *
+   * F118. This used to read `window.location.search` and `localStorage` right here, in the render
+   * body. Both are empty on the server and populated on the client, so on `/?section=supply` the
+   * server rendered the first section of Economics and the client rendered Supply — two different
+   * apps from the same markup. React cannot reconcile that, so it discards the server HTML and
+   * re-renders from scratch, which is the cost this finding names: a wasted first paint on the
+   * low-end phones and school networks this cohort actually uses.
+   *
+   * The two topic pages used to paper over it by writing `last-visited-section` in an inline
+   * script placed before hydration, which made the mismatch worse rather than better — it changed
+   * the client's answer without changing the server's. Both scripts are deleted.
+   *
+   * `last-visited-section` is still honoured, in an effect below, once hydration is finished.
+   */
+  const startSection = (urlSectionParam && subjectSections.some(s => s.id === urlSectionParam))
+    ? urlSectionParam
+    : (initialSectionId && subjectSections.some(s => s.id === initialSectionId))
+      ? initialSectionId
+      : subjectSections[0]?.id;
 
   const [activeSection, setActiveSection] = useState(startSection);
+  const [hydrated, setHydrated] = useState(false);
+  const restoreDoneRef = useRef(false);
+  useEffect(() => { setHydrated(true); }, []);
+
+  // F118: the client-only preferences, applied after the server's markup has been adopted. Only
+  // when the URL did not name a section — an explicit link always beats where they were last.
+  useEffect(() => {
+    // Only an explicit request wins over where they were last. `requestedSectionId` is that
+    // request — the ?section= param on home, the topic in the path on a topic page.
+    // `initialSectionId` is NOT: on home it is simply the first section, a default, and guarding
+    // on it would mean a returning student always landed on section one.
+    if (!hydrated) return;
+    if (urlSectionParam) { restoreDoneRef.current = true; return; }
+    let lastSection = null;
+    let lastSubject = null;
+    try {
+      lastSection = localStorage.getItem('last-visited-section');
+      lastSubject = localStorage.getItem('last-visited-subject');
+    } catch { return; }
+    if (lastSubject && subjects.some((s) => s.id === lastSubject)) setActiveSubjectId(lastSubject);
+    if (lastSection && sections.some((s) => s.id === lastSection)) setActiveSection(lastSection);
+    restoreDoneRef.current = true;
+    // Once, on mount. Re-running would drag a reading student back to where they started.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hydrated]);
   const [activeTab, setActiveTab] = useState('overview');
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -390,18 +424,24 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     if (saved === 'true') setSidebarCollapsed(true);
   }, []);
 
-  // Persist last-visited section and subject to localStorage
+  /*
+   * Persist last-visited section and subject.
+   *
+   * Held until the restore above has run. These fire on mount too, and on the home page the
+   * section on mount is simply the first one — so without the guard, opening Home overwrote the
+   * memory of where the student actually was with "section one" before anything had read it. The
+   * topic pages used to hide that behind an inline pre-hydration script, which is the same script
+   * that caused F118.
+   */
   useEffect(() => {
-    if (activeSection) {
-      localStorage.setItem('last-visited-section', activeSection);
-    }
-  }, [activeSection]);
+    if (!restoreDoneRef.current || !activeSection) return;
+    try { localStorage.setItem('last-visited-section', activeSection); } catch {}
+  }, [activeSection, hydrated]);
 
   useEffect(() => {
-    if (activeSubjectId) {
-      localStorage.setItem('last-visited-subject', activeSubjectId);
-    }
-  }, [activeSubjectId]);
+    if (!restoreDoneRef.current || !activeSubjectId) return;
+    try { localStorage.setItem('last-visited-subject', activeSubjectId); } catch {}
+  }, [activeSubjectId, hydrated]);
 
   // ⚠️  TDZ GUARD: Effects that reference `saveProgress` (defined below with useCallback)
   // MUST be placed AFTER the saveProgress definition (~line 435). Placing them here
