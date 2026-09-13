@@ -4,16 +4,31 @@ import { recordPretest } from '@/lib/strength';
 import { trackFunnel } from '@/lib/funnel';
 
 /* ── Pre-test Before Learning ── */
-export default function PreTest({ quizData, subjectId, sectionId, onDone }) {
+export default function PreTest({ quizData, subjectId, sectionId, onDone, reservedQuestions }) {
+  /*
+   * F079. The pre-test drew from the whole bank, so in about half of sections a student met one of
+   * these three again a few minutes later as the block's "Quick quiz" — with the answer already
+   * revealed. Answering a question you were shown the answer to is not a check on anything.
+   *
+   * The blocks' own questions are excluded here. If a section has too few left over, the excluded
+   * ones come back rather than showing a shorter pre-test, because two questions still beat none;
+   * they are appended last so they are only reached when there is nothing else.
+   */
   const questions = useMemo(() => {
     if (!quizData?.length) return [];
-    const shuffled = [...quizData].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, Math.min(3, shuffled.length));
-  }, [quizData]);
+    const reserved = new Set(
+      (reservedQuestions || []).map((q) => String(q?.question || '').replace(/\s+/g, ' ').trim()),
+    );
+    const key = (q) => String(q?.question || '').replace(/\s+/g, ' ').trim();
+    const free = quizData.filter((q) => !reserved.has(key(q)));
+    const rest = quizData.filter((q) => reserved.has(key(q)));
+    // Stable order, so a reload does not silently swap the questions under a half-finished test.
+    const pool = [...free, ...rest];
+    return pool.slice(0, Math.min(3, pool.length));
+  }, [quizData, reservedQuestions]);
 
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
-  const [revealIndex, setRevealIndex] = useState(-1);
   const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
 
   function handleSelect(qIdx, optIdx) {
@@ -31,10 +46,15 @@ export default function PreTest({ quizData, subjectId, sectionId, onDone }) {
   function handleSubmit() {
     if (Object.keys(answers).length < questions.length) return;
     setSubmitted(true);
-    // Stagger reveal each question's answer
-    questions.forEach((_, i) => {
-      setTimeout(() => setRevealIndex(i), (i + 1) * 150);
-    });
+    /*
+     * F008. This used to reveal the correct answer to all three. The same questions then reappear
+     * as the block's quick quiz, in the post-test and in the reviews, so revealing them here hands
+     * the student the answers to their own later assessments and makes every improvement score
+     * meaningless. The pre-test's job is to prime and to measure, and it can do both with a score.
+     *
+     * The answers are not withheld for good: the post-test shows them at the end of the section,
+     * which is the point at which knowing them is learning rather than leakage.
+     */
 
     // Calculate score
     let correct = 0;
@@ -87,13 +107,9 @@ export default function PreTest({ quizData, subjectId, sectionId, onDone }) {
           <p className="lm-pretest-q-text">{qIdx + 1}. {q.question}</p>
           <div className="lm-quiz-options">
             {q.options?.map((option, i) => {
-              let cls = '';
-              if (submitted && revealIndex >= qIdx) {
-                if (i === q.correctIndex) cls = 'correct';
-                else if (i === answers[qIdx] && i !== q.correctIndex) cls = 'incorrect';
-              } else if (answers[qIdx] === i) {
-                cls = 'selected';
-              }
+              // Only ever the student's own choice. No correct/incorrect colouring here — see
+              // handleSubmit for why the answers are not revealed until the post-test.
+              const cls = answers[qIdx] === i ? 'selected' : '';
               return (
                 <button
                   key={i}
@@ -145,6 +161,10 @@ export default function PreTest({ quizData, subjectId, sectionId, onDone }) {
               : noneCorrect
                 ? 'Nothing wrong with 0 \u2014 this is exactly what the next steps teach.'
                 : 'Good start! Your brain is now primed for learning.'}
+          </p>
+          {/* F008: said plainly, so withholding the answers does not read as a bug. */}
+          <p className="lm-pretest-note">
+            Answers are held back until the end, so the same questions can still test you later.
           </p>
           <button className="lm-pretest-continue" onClick={onDone}>
             Start learning &#8594;

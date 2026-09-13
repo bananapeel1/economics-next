@@ -311,7 +311,11 @@ export default function LearnModeTab({
               title: currentSection?.title || 'Unknown section',
               // F074: quizData reaches here already shuffled, so ReviewMode must not shuffle again.
               optionsShuffled: true,
-              questions: ordered.slice(0, Math.min(5, ordered.length)),
+              // F008: this stored five and replayed the identical five at 1, 3, 7, 14 and 30 days,
+              // so a section's reviews were the same five questions for a month while twenty sat
+              // unused. Fifteen are stored, worst first, and ReviewMode moves a window of five
+              // along them at each interval.
+              questions: ordered.slice(0, Math.min(15, ordered.length)),
               intervals: [1, 3, 7, 14], currentInterval: 0,
               nextDue: Date.now() + 1 * 24 * 60 * 60 * 1000, lastScore: null,
             });
@@ -356,6 +360,7 @@ export default function LearnModeTab({
     return (
       <div className="lm-container">
         <PreTest quizData={quizData} subjectId={subjectId} sectionId={sectionId}
+          reservedQuestions={blockQuizQuestions}
           onDone={() => { setShowPretest(false); setPretestOffered(false); setTimeout(scrollToTop, 50); }} />
       </div>
     );
@@ -390,6 +395,13 @@ export default function LearnModeTab({
   const step = flatSteps[currentStep];
   const currentDiagram = diagramMap[currentStep];
   const currentPractice = practiceMap[currentStep];
+  /*
+   * F079: every question the blocks will ask inline, so the pre-test can avoid them. Derived from
+   * the same map the blocks render from, rather than re-deriving the mapping, so the two cannot
+   * drift apart.
+   */
+  const blockQuizQuestions = useMemo(() => Object.values(quizMap).filter(Boolean), [quizMap]);
+
   const currentQuiz = quizMap[currentStep];
   const isLastStep = currentStep === totalSteps - 1;
   const progressPct = ((currentStep + 1) / totalSteps) * 100;

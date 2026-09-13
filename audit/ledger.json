@@ -133,8 +133,8 @@
    "fix": "Do not reveal correct answers on the pre-test (score only, or reveal after completion). Partition the bank: reserve questions not used in pre-test/inline for reviews, and re-sample review questions from the section at each interval rather than freezing them at completion. Retire an entry after the 14-day pass or extend to 30/60 days.",
    "impact": "A section with 8 MCQs: the student sees three of them (with answers revealed) before learning, sees them again inline, again in the post-test, again in quick fire, again in the Quiz tab, and the same 5 every 1, 3, 7, 14, 14, 14... days. 'Improvement' on the post-test mostly measures having seen the green highlight 20 minutes earlier. Reviews become answer-recognition, not retrieval.",
    "packet": 8,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-8",
    "verified_by": null,
    "evidence": null,
    "note": null
@@ -1340,8 +1340,8 @@
    "fix": "Exclude the union of all blocks' quizIndices from the pre-test pool; for the post-test, sample 3 DIFFERENT questions on the same sub-topics (or at least re-shuffle options) and label it honestly. Also fix the pre-test copy: 'Perfect — your brain is now primed' after 0/3 (PreTest.jsx:135) reads as sarcasm to a nervous student.",
    "impact": "Half of students see a pre-test question again a few minutes later as the 'Quick quiz' with the answer already revealed, and every student takes a post-test where remembering 'it was B' counts as improvement. The pre/post delta shown on the completion screen is not evidence of learning.",
    "packet": 8,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-8",
    "verified_by": null,
    "evidence": null,
    "note": null
@@ -1357,8 +1357,8 @@
    "fix": "Map every block to at least 2 quiz indices in the content pipeline (auto-assign unmapped questions by sub-topic keyword), and surface a 'Practise these 25 questions' CTA on the completion screen that pre-selects this section in Smart Practice (CompletionScreen already links /practice at line 133 but without preselecting).",
    "impact": "A free student who completes Learn Mode has met ~5 MCQs (3 pre-test + 4-5 inline, overlapping) out of 25 written for the section, then hits a paywall on the Quiz tab after 2. They perceive the section as lightly assessed, while the very same 25 questions are free at /practice, which they may never find (it lives outside the section tabs).",
    "packet": 8,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-8",
    "verified_by": null,
    "evidence": null,
    "note": null
@@ -1373,12 +1373,12 @@
    "line": 1,
    "fix": "Dedupe pass in the content pipeline (Jaccard on stem >= 0.5 or identical correct-option text); rewrite the second of each pair to test a different angle (e.g. numerical, diagram-based, or an 'odd one out' on the evaluation point).",
    "impact": "In Quick Fire and a single-topic Smart Practice session the student answers what feels like the same question 2-3 times, and in the GDP case the 'same' question has two different right answers, which reads as an error. The effective bank per section is closer to 18-20 distinct items than 25.",
-   "packet": 8,
+   "packet": 13,
    "status": "open",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "Reassigned from packet 8 to packet 13 on 13 Sep 2026. F081 is a content fix: near-duplicate and identical stems, and one pair of identical stems with different correct answers. Deduping and rewriting stems is a content push, and packet 3 builds the blocking validator that must sit in the write path before any content push. Packet 8's code half (F008, F074, F079, F080) is done without it."
   },
   {
    "id": "F082",

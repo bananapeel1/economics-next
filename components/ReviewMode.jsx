@@ -85,7 +85,18 @@ function saveSchedule(schedule) {
 
 /* ── Spaced Review Component ── */
 export function SpacedReview({ reviewEntry, onFinish }) {
-  const questions = reviewEntry?.questions || [];
+  /*
+   * F008. A review used to ask the identical five questions at every interval, frozen at the
+   * moment the student finished the section — so a month of spaced repetition rehearsed five of
+   * the section's twenty-five and never touched the rest. The window moves along the stored list
+   * at each interval, so the second review is not the first one again.
+   */
+  const questions = useMemo(() => {
+    const all = reviewEntry?.questions || [];
+    if (all.length <= 5) return all;
+    const start = ((reviewEntry?.currentInterval || 0) * 5) % all.length;
+    return [...all.slice(start), ...all.slice(0, start)].slice(0, 5);
+  }, [reviewEntry]);
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const letters = ['A', 'B', 'C', 'D', 'E', 'F'];

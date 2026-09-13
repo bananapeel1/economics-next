@@ -201,8 +201,11 @@ export default function CompletionScreen({
 
       {/* Practice what you learned — links to Smart Practice / Flashcards */}
       <div className="lm-complete-practice-row">
-        <a href="/practice" className="lm-complete-practice-btn">
-          &#9889; Practice questions
+        {/* F080: a student who finishes here has met about five of this topic's questions. The
+            rest are only reachable through Smart Practice, so this arrives with the topic already
+            chosen and says how many are waiting, rather than dropping them on a list of 43. */}
+        <a href={`/practice?section=${encodeURIComponent(sectionId)}`} className="lm-complete-practice-btn">
+          &#9889; {quizData?.length ? `Practise all ${quizData.length} questions on this topic` : 'Practice questions'}
         </a>
         <a href="/flashcards-practice" className="lm-complete-practice-btn lm-complete-flashcard-btn">
           &#127183; Review flashcards

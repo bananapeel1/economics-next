@@ -334,6 +334,29 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
   const [setupStep, setSetupStep] = useState(1);      // 1 = subject-select, 2 = topic-select
   const [selectedSubjectSlug, setSelectedSubjectSlug] = useState('');
   const [selectedSectionIds, setSelectedSectionIds] = useState(new Set());
+
+  /*
+   * F080. A student who finishes a topic in Learn Mode has met about five of its twenty-five
+   * questions; the other twenty are only reachable here, and only after finding this page and
+   * picking the topic out of a list of forty-three. The completion screen now links straight in
+   * with the topic chosen.
+   *
+   * Read in an effect, never during render: the address bar does not exist on the server, and
+   * reading it in the render body is what caused F118.
+   */
+  useEffect(() => {
+    let wanted = null;
+    try { wanted = new URLSearchParams(window.location.search).get('section'); } catch { return; }
+    if (!wanted) return;
+    const sec = sections.find((x) => String(x.id) === String(wanted));
+    if (!sec) return;
+    const unit = units.find((u) => u.id === sec.unit_id);
+    const subject = unit ? subjects.find((sub) => sub.id === unit.subject_id) : null;
+    if (subject?.slug) setSelectedSubjectSlug(subject.slug);
+    setSelectedSectionIds(new Set([sec.id]));
+    // Once, on mount. Re-running would fight the student's own selections.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const [quizData, setQuizData] = useState({});
   const [progressMap, setProgressMap] = useState({});
   const [queue, setQueue] = useState([]);
