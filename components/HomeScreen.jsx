@@ -149,14 +149,19 @@ export default function HomeScreen({ subjects, units, sections, user, isPremium,
   const thisWeek = dashData?.recentActivity?.last7days || 0;
   const overdueCount = dashData?.overdueCount || 0;
 
-  // Topic mastery: use the active subject from localStorage or first subject
+  /*
+   * Topic mastery for the subject the student was last in.
+   *
+   * `sub.id === activeSubjectSlug` compared a numeric subject id against the string localStorage
+   * always returns, so the match never succeeded and this panel silently always showed the first
+   * subject — a Business student was shown their Economics mastery. Same bug as the one fixed in
+   * StudyApp's restore, found by the same verification pass.
+   */
   const activeSubjectSlug = typeof window !== 'undefined' ? localStorage.getItem('last-visited-subject') : null;
   const activeSubjectData = dashData?.bySubject?.find(s => {
-    if (activeSubjectSlug) {
-      const matchSubject = subjects.find(sub => sub.id === activeSubjectSlug);
-      return matchSubject && s.slug === matchSubject.slug;
-    }
-    return false;
+    if (!activeSubjectSlug) return false;
+    const matchSubject = subjects.find(sub => String(sub.id) === String(activeSubjectSlug));
+    return matchSubject && s.slug === matchSubject.slug;
   }) || dashData?.bySubject?.[0];
 
   return (

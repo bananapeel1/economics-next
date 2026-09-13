@@ -289,7 +289,7 @@ export default function Unit1Page() {
             <Link href="/?section=introductory-concepts" className="elp-btn-primary" style={{ fontSize: 15, padding: '14px 30px' }}>Open Revvy Learn — it&apos;s free →</Link>
             <Link href="/economics" className="elp-btn-secondary">← Back to all units</Link>
           </div>
-          <p className="elp-cta-note">No signup required for notes · Cancel anytime · £1 first month, then £1.99 · charged in your local currency</p>
+          <p className="elp-cta-note">No signup required for notes · Cancel anytime · £1 first month for new subscribers, then £1.99 · charged in your local currency</p>
         </div>
       </div>
 

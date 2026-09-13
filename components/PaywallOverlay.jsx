@@ -142,7 +142,9 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
         <p className="paywall-subtitle">
           {user
             ? offer.headline
-            : 'Sign in to unlock everything from \u00a31 for your first month.'
+            // F031: a signed-out visitor may well be a returning subscriber, and this page cannot
+            // know. It says who the price is for rather than promising it to whoever is reading.
+            : 'Sign in to unlock everything. New subscribers get their first month for \u00a31.'
           }
         </p>
 

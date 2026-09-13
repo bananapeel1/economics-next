@@ -27,6 +27,9 @@ export function AuthProvider({ children, initialUser, initialSubscription = null
   const [loading, setLoading] = useState(!initialUser);
   // Seeded from the server so a paying student's first paint is already premium (F035).
   const [subscription, setSubscription] = useState(initialSubscription);
+  // F031: "we could not find out" is not the same fact as "there is no subscription", and only one
+  // of them means the student is entitled to the intro price.
+  const [lookupFailed, setLookupFailed] = useState(false);
   const [activating, setActivating] = useState(false);
   const [activationFailed, setActivationFailed] = useState(false);
   const supabase = createClient();
@@ -50,9 +53,10 @@ export function AuthProvider({ children, initialUser, initialSubscription = null
     fetch('/api/subscription')
       .then(res => res.ok ? res.json() : null)
       .then(data => {
-        if (data) setSubscription(data);
+        if (data) { setSubscription(data); setLookupFailed(false); }
+        else setLookupFailed(true);
       })
-      .catch(() => setSubscription(null));
+      .catch(() => { setSubscription(null); setLookupFailed(true); });
   }, [user]);
 
   // Fetch subscription status when user changes
@@ -110,7 +114,12 @@ export function AuthProvider({ children, initialUser, initialSubscription = null
   // verbatim when it is present. The earlier version of this line asked the payload for a column
   // the payload has never carried, so it answered "eligible" for everybody, including the 43
   // accounts with a cancelled subscription who are then charged £1.99 at the till.
-  const trialEligible = subscription ? isTrialEligible(subscription) : true;
+  //
+  // Signed in with no row is a positive fact — nobody has a row until they check out — so that is
+  // genuinely eligible. A FAILED lookup is not that fact, and the previous line treated the two
+  // identically: a returning subscriber whose lookup errored was shown £1 and charged £1.99.
+  // When we cannot tell, we quote the price we know we will honour.
+  const trialEligible = lookupFailed ? false : subscription ? isTrialEligible(subscription) : true;
 
   return (
     <AuthContext.Provider
