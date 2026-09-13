@@ -27,6 +27,21 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
    * £1.99 — the contradiction the finding is named for, made worse rather than better.
    */
   const offer = introOffer(trialEligible);
+
+  /*
+   * What this page is allowed to say about the price.
+   *
+   * `trialEligible` defaults to true for a signed-out visitor, because there is no account to
+   * check — but a signed-out visitor may perfectly well be a returning subscriber who has not
+   * logged in yet, and checkout will charge them £1.99. So while nobody is signed in, the offer is
+   * described as belonging to new subscribers rather than promised to whoever is reading.
+   *
+   * Derived once and used by BOTH variants. The previous fix put this reasoning in a comment above
+   * the full overlay's subtitle and applied it only there, while the inline variant sixty lines
+   * above went on promising £1 flat — and the inline one is the variant a signed-out reader
+   * actually meets, on the model answers page and the fun quiz.
+   */
+  const priceChip = user ? `${offer.price} ${offer.unit}` : '\u00a31 first month for new subscribers';
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
 
@@ -84,8 +99,17 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
       <div className="preview-paywall-banner">
         <h3 className="preview-paywall-title">Unlock All {feature}</h3>
         <p className="preview-paywall-desc">
-          Full access to every section &mdash; <strong>{offer.price} {offer.unit}</strong>
-          {trialEligible ? ', then \u00a31.99. Cheaper than a coffee.' : '. Cancel anytime.'}
+          {user ? (
+            <>
+              Full access to every section &mdash; <strong>{offer.price} {offer.unit}</strong>
+              {trialEligible ? ', then \u00a31.99. Cheaper than a coffee.' : '. Cancel anytime.'}
+            </>
+          ) : (
+            <>
+              Full access to every section. <strong>New subscribers get their first month for
+              &pound;1</strong>, then &pound;1.99. Cheaper than a coffee.
+            </>
+          )}
         </p>
 
         <div className="paywall-inline-features">
@@ -105,7 +129,7 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
         {plansLink}
 
         <div className="paywall-trust-row-compact">
-          <span>{offer.price} {offer.unit}</span>
+          <span>{priceChip}</span>
           <span className="paywall-trust-dot" />
           <span>Cancel anytime</span>
         </div>
@@ -152,7 +176,7 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
         <div className="paywall-price-block">
           <div className="paywall-price">
             <span className="paywall-price-amount">{offer.price}</span>
-            <span className="paywall-price-period">{offer.unit}</span>
+            <span className="paywall-price-period">{user ? offer.unit : 'first month, new subscribers'}</span>
           </div>
           <div className="paywall-price-trial">
             {trialEligible
@@ -182,7 +206,7 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
           {plansLink}
 
           <div className="paywall-trust-row">
-            <span>{offer.price} {offer.unit}</span>
+            <span>{priceChip}</span>
             <span className="paywall-trust-dot" />
             <span>Cancel anytime</span>
           </div>

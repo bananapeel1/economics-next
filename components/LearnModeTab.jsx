@@ -309,6 +309,8 @@ export default function LearnModeTab({
             existing.push({
               sectionId, subjectId,
               title: currentSection?.title || 'Unknown section',
+              // F074: quizData reaches here already shuffled, so ReviewMode must not shuffle again.
+              optionsShuffled: true,
               questions: ordered.slice(0, Math.min(5, ordered.length)),
               intervals: [1, 3, 7, 14], currentInterval: 0,
               nextDue: Date.now() + 1 * 24 * 60 * 60 * 1000, lastScore: null,

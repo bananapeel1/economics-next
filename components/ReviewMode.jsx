@@ -1,14 +1,30 @@
 "use client";
 import { useState, useMemo } from 'react';
+import { shuffleAllOptions } from '@/lib/shuffle-options';
 import { recordReview } from '@/lib/strength';
 
 /**
  * Get all review schedule entries from localStorage.
+ *
+ * F074. A schedule entry stores whole question objects, copied at the moment the student finished
+ * the section. Entries written from today carry already-shuffled options and are marked
+ * `optionsShuffled`; entries written before that hold the original order, where the correct answer
+ * is option B 64% of the time. Those are shuffled here on read, so a student who finished a topic
+ * last week does not keep meeting the pattern in every review of it.
+ *
+ * The flag is what stops a new entry being shuffled twice, which would be harmless but would show
+ * the same question in a different order from the Quiz tab.
  */
 export function getReviewSchedule() {
   if (typeof window === 'undefined') return [];
   try {
-    return JSON.parse(localStorage.getItem('revvy_review_schedule') || '[]');
+    const raw = JSON.parse(localStorage.getItem('revvy_review_schedule') || '[]');
+    if (!Array.isArray(raw)) return [];
+    return raw.map((entry) =>
+      entry && !entry.optionsShuffled && Array.isArray(entry.questions)
+        ? { ...entry, questions: shuffleAllOptions(entry.questions) }
+        : entry,
+    );
   } catch {
     return [];
   }
