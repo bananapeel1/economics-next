@@ -5224,6 +5224,53 @@ a.auth-dropdown-item:visited {
   margin-top: 32px;
 }
 
+/* Links inside the prose. Underlined rather than colour-only, so they are
+ * distinguishable without relying on hue. */
+.guide-inline-link {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-green);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.15s;
+}
+.guide-inline-link:hover,
+.guide-inline-link:focus-visible {
+  color: var(--accent-green);
+}
+
+/* Contextual CTA, sitting directly under the section that earns it. */
+.guide-inline-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  color: var(--accent-green);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+.guide-inline-cta:hover,
+.guide-inline-cta:focus-visible {
+  border-color: var(--accent-green);
+  background: var(--bg-card-hover);
+}
+.guide-inline-cta span {
+  transition: transform 0.15s;
+}
+.guide-inline-cta:hover span {
+  transform: translateX(2px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .guide-inline-cta span { transition: none; }
+  .guide-inline-cta:hover span { transform: none; }
+}
+
 /* The numbered rail sits in the left gutter where there is room for it, so the
  * headline, the section headings and the body text share one left edge. Below
  * that it goes back in flow and indents the text, which is fine on a phone. */

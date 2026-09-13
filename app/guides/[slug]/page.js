@@ -25,6 +25,27 @@ export async function generateMetadata({ params }) {
   };
 }
 
+// Section prose carries `[label](/path)` links so concepts can point at the topic
+// page that teaches them. Only site-relative paths are accepted — an external
+// href simply will not match, so nothing in the data can emit an outbound link.
+const INLINE_LINK = /\[([^\]]+)\]\((\/[^)\s]*)\)/g;
+
+function renderProse(text) {
+  const out = [];
+  let cursor = 0;
+  for (const match of text.matchAll(INLINE_LINK)) {
+    if (match.index > cursor) out.push(text.slice(cursor, match.index));
+    out.push(
+      <Link key={match.index} href={match[2]} className="guide-inline-link">
+        {match[1]}
+      </Link>
+    );
+    cursor = match.index + match[0].length;
+  }
+  if (cursor < text.length) out.push(text.slice(cursor));
+  return out;
+}
+
 function formatDate(iso) {
   return new Date(`${iso}T00:00:00Z`).toLocaleDateString('en-GB', {
     day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
@@ -85,17 +106,18 @@ export default async function GuidePage({ params }) {
       </div>
 
       {/* Hero CTA */}
-      <div className="seo-hero-cta">
-        <div className="seo-hero-cta-content">
-          <div className="seo-hero-cta-text">
-            <span className="seo-hero-cta-label">Interactive Revision</span>
-            <p>Flashcards, quizzes, AI tutor &amp; progress tracking for this topic</p>
+      {guide.heroCta && (
+        <div className="seo-hero-cta">
+          <div className="seo-hero-cta-content">
+            <div className="seo-hero-cta-text">
+              <p>{guide.heroCta.blurb}</p>
+            </div>
+            <Link href={guide.heroCta.href} className="seo-hero-cta-button">
+              {guide.heroCta.label} &rarr;
+            </Link>
           </div>
-          <Link href={`/${guide.subject}`} className="seo-hero-cta-button">
-            Open in App &rarr;
-          </Link>
         </div>
-      </div>
+      )}
 
       {/* Table of contents */}
       <nav className="guide-toc" aria-label="In this guide">
@@ -119,7 +141,13 @@ export default async function GuidePage({ params }) {
             </div>
             <div className="seo-stepper-body">
               <h2>{section.heading}</h2>
-              <p>{section.content}</p>
+              <p>{renderProse(section.content)}</p>
+              {section.cta && (
+                <Link href={section.cta.href} className="guide-inline-cta">
+                  {section.cta.label}
+                  <span aria-hidden="true">&rarr;</span>
+                </Link>
+              )}
             </div>
           </div>
         ))}
@@ -138,11 +166,15 @@ export default async function GuidePage({ params }) {
       )}
 
       {/* CTA */}
-      <div className="seo-cta">
-        <h2>Master This Topic Interactively</h2>
-        <p>Use flashcards, quizzes and the AI tutor to nail your understanding.</p>
-        <Link href={`/${guide.subject}`} className="seo-cta-button">Start Revising &rarr;</Link>
-      </div>
+      {guide.closingCta && (
+        <div className="seo-cta">
+          <h2>{guide.closingCta.heading}</h2>
+          <p>{guide.closingCta.blurb}</p>
+          <Link href={guide.closingCta.href} className="seo-cta-button">
+            {guide.closingCta.label} &rarr;
+          </Link>
+        </div>
+      )}
       </div>
     </div>
   );
