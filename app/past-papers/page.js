@@ -85,7 +85,7 @@ export default async function PastPapersRoute() {
           <h2 className="elp-cta-title">Ready to start revising?</h2>
           <p className="elp-cta-sub">Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.</p>
           <div className="elp-cta-actions">
-            <Link href="/?section=introductory-concepts" className="elp-btn-primary" style={{ fontSize: '15px', padding: '14px 30px' }}>Open Revvy Learn &rarr;</Link>
+            <Link href="/economics/unit-1/introductory-concepts" className="elp-btn-primary" style={{ fontSize: '15px', padding: '14px 30px' }}>Open Revvy Learn &rarr;</Link>
           </div>
         </div>
       </div>

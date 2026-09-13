@@ -573,7 +573,7 @@ export default async function GlobalisationPillarPage() {
 
         sub={"Diagrams, flashcards and exam-style practice on this exact topic"}
 
-        href="/?section=causes-effects-globalisation"
+        href="/economics/unit-4/causes-effects-globalisation"
 
         cta={"Open 4.3.1"}
 

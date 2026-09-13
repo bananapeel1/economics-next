@@ -63,7 +63,7 @@ export default async function AggregateDemandPage() {
             <span className="seo-hero-cta-label">Interactive Revision</span>
             <p>Flashcards, quizzes &amp; AI tutor for this topic. Unlock with Pro.</p>
           </div>
-          <Link href="/?section=aggregate-demand" className="seo-hero-cta-button">
+          <Link href="/economics/unit-2/aggregate-demand" className="seo-hero-cta-button">
             Open in App &rarr;
           </Link>
         </div>
@@ -91,7 +91,7 @@ export default async function AggregateDemandPage() {
         </div>
       )}
 
-      <Link href="/?section=aggregate-demand" className="seo-section-link" style={{ display: 'block', marginBottom: '24px' }}>
+      <Link href="/economics/unit-2/aggregate-demand" className="seo-section-link" style={{ display: 'block', marginBottom: '24px' }}>
         View all notes interactively in the app &rarr;
       </Link>
 
@@ -112,8 +112,8 @@ export default async function AggregateDemandPage() {
       <div className="seo-related-links">
         <h2>Related Topics</h2>
         <div className="seo-links-grid">
-          <Link href="/?section=aggregate-supply">Aggregate Supply</Link>
-          <Link href="/?section=national-income">National Income</Link>
+          <Link href="/economics/unit-2/aggregate-supply">Aggregate Supply</Link>
+          <Link href="/economics/unit-2/national-income">National Income</Link>
           <Link href="/economics/unit-2">All Unit 2 Topics</Link>
           <Link href="/glossary">Economics Glossary</Link>
         </div>
@@ -128,7 +128,7 @@ export default async function AggregateDemandPage() {
       <div className="seo-cta">
         <h2>Master Aggregate Demand Interactively</h2>
         <p>Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro, &pound;1 for your first month.</p>
-        <Link href="/?section=aggregate-demand" className="seo-cta-button">Start Revising &rarr;</Link>
+        <Link href="/economics/unit-2/aggregate-demand" className="seo-cta-button">Start Revising &rarr;</Link>
       </div>
     </div>
   );

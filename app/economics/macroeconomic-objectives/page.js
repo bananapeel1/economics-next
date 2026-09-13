@@ -559,7 +559,7 @@ export default async function MacroObjectivesPillarPage() {
 
         sub={"Diagrams, flashcards and exam-style practice on this exact topic"}
 
-        href="/?section=macroeconomic-objectives-policies"
+        href="/economics/unit-2/macroeconomic-objectives-policies"
 
         cta={"Open 2.3.6"}
 

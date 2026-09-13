@@ -152,7 +152,7 @@ export default function ExamSeriesPage() {
 
         sub={"Free notes for both subjects, in the order you will sit them"}
 
-        href="/?section=introductory-concepts"
+        href="/economics/unit-1/introductory-concepts"
 
         cta={"Start at 1.3.1"}
 
