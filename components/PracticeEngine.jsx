@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useMemo, useRef } from 'react';
+import { useState, useCallback, useMemo, useRef, useEffect } from 'react';
 import { shuffleAllOptions } from '@/lib/shuffle-options';
 import { buildQueue, queueStats, computeNextReview, createDefaultProgress } from '@/lib/spaced-repetition';
 import QuestionCard from '@/components/practice/QuestionCard';
@@ -352,8 +352,15 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
     if (!sec) return;
     const unit = units.find((u) => u.id === sec.unit_id);
     const subject = unit ? subjects.find((sub) => sub.id === unit.subject_id) : null;
-    if (subject?.slug) setSelectedSubjectSlug(subject.slug);
+    if (subject?.slug) {
+      setSelectedSubjectSlug(subject.slug);
+      fetchProgressSummary(subject.slug);
+    }
     setSelectedSectionIds(new Set([sec.id]));
+    // Straight to topic selection with the topic already ticked. Going through
+    // handleSelectSubject would clear the selection on its second line, which is why the link
+    // did nothing at all before.
+    setSetupStep(2);
     // Once, on mount. Re-running would fight the student's own selections.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

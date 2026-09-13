@@ -214,6 +214,18 @@ export default function LearnModeTab({
   }, [flatSteps, contentData, diagramsData, quizData, practiceData, sortedPractice, totalSteps]);
 
   const practiceStepIndices = useMemo(() => Object.keys(practiceMap).map(Number).sort((a, b) => a - b), [practiceMap]);
+
+  /*
+   * F079: every question the blocks will ask inline, so the pre-test can avoid them. Derived from
+   * the same map the blocks render from, so the two cannot drift apart.
+   *
+   * Declared HERE, beside the other memos, and not next to its one use further down. The file's
+   * own TDZ warning is about exactly this: the pre-test renders from an early return above the
+   * point where this used to be declared, so reading it there threw a ReferenceError the moment a
+   * student accepted the offer — and a hook after a conditional return is a second bug on top. The
+   * production build compiled it happily; only running the screen finds it.
+   */
+  const blockQuizQuestions = useMemo(() => Object.values(quizMap).filter(Boolean), [quizMap]);
   function getPracticeMode(stepIndex) {
     const ordinal = practiceStepIndices.indexOf(stepIndex);
     const total = practiceStepIndices.length;
@@ -395,13 +407,6 @@ export default function LearnModeTab({
   const step = flatSteps[currentStep];
   const currentDiagram = diagramMap[currentStep];
   const currentPractice = practiceMap[currentStep];
-  /*
-   * F079: every question the blocks will ask inline, so the pre-test can avoid them. Derived from
-   * the same map the blocks render from, rather than re-deriving the mapping, so the two cannot
-   * drift apart.
-   */
-  const blockQuizQuestions = useMemo(() => Object.values(quizMap).filter(Boolean), [quizMap]);
-
   const currentQuiz = quizMap[currentStep];
   const isLastStep = currentStep === totalSteps - 1;
   const progressPct = ((currentStep + 1) / totalSteps) * 100;

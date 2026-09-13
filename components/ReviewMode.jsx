@@ -20,9 +20,11 @@ export function getReviewSchedule() {
   try {
     const raw = JSON.parse(localStorage.getItem('revvy_review_schedule') || '[]');
     if (!Array.isArray(raw)) return [];
+    // Stamped as it is shuffled. Without the stamp the next read shuffles the already-shuffled
+    // copy again, and the order drifts a little further from the Quiz tab at every review.
     return raw.map((entry) =>
       entry && !entry.optionsShuffled && Array.isArray(entry.questions)
-        ? { ...entry, questions: shuffleAllOptions(entry.questions) }
+        ? { ...entry, questions: shuffleAllOptions(entry.questions), optionsShuffled: true }
         : entry,
     );
   } catch {
@@ -68,6 +70,15 @@ function advanceReview(entry, score) {
   return {
     ...entry,
     currentInterval: nextIdx,
+    /*
+     * F008. The question window used to move on `currentInterval`, which is capped at the last
+     * interval — so with 15 stored the windows ran 0, 5, 10, then 0 again, and an entry that
+     * reached the last interval replayed the same five every fortnight for good. `reviewsDone`
+     * only ever counts up, so the window keeps walking whatever the schedule does.
+     */
+    reviewsDone: (entry.reviewsDone || 0) + 1,
+    // Written back shuffled, so the next read does not shuffle it a second time.
+    optionsShuffled: true,
     nextDue: Date.now() + nextDays * 24 * 60 * 60 * 1000,
     lastScore: score,
   };
@@ -94,7 +105,7 @@ export function SpacedReview({ reviewEntry, onFinish }) {
   const questions = useMemo(() => {
     const all = reviewEntry?.questions || [];
     if (all.length <= 5) return all;
-    const start = ((reviewEntry?.currentInterval || 0) * 5) % all.length;
+    const start = ((reviewEntry?.reviewsDone || 0) * 5) % all.length;
     return [...all.slice(start), ...all.slice(0, start)].slice(0, 5);
   }, [reviewEntry]);
   const [answers, setAnswers] = useState({});
