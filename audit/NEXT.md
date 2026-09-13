@@ -106,6 +106,25 @@ restart cleared it. Suspect the cache before suspecting the code when an error s
 4. ~~Decide the freemium boundary.~~ **Settled 12 September: no change.** One sub-decision remains above.
 5. Decide the freeze date. Proposed 1 November; anything later is for the June cohort, not January.
 
+## Packet 4's migration is run — 13 September 2026
+
+`scripts/packet-4-section-state.sql` was run in the Supabase SQL editor by the founder and verified
+end to end from here, read-only:
+
+- `user_section_state` exists with every column the app writes, checked against a deliberately fake
+  table name as a control so the probe itself is meaningful.
+- Row-level security is ON with no insert policy: an anon-key insert is refused with `42501`
+  *before* the foreign key is evaluated, which is how we know RLS blocked it rather than the FK.
+  Writes can therefore only happen server-side through the service role.
+- An anon select returns zero rows, scoped to the signed-in owner.
+- Each route's exact query runs: the state route's GET and its read-before-upsert, and the
+  dashboard's read. The upsert's `onConflict: 'user_id,section_id'` resolves, so the unique
+  constraint it depends on is there.
+- Nothing was written during verification.
+
+Learn Mode state now follows a student between devices. **Do not re-run the file** — it is safely
+re-runnable (the policy is dropped and recreated), but there is no reason to.
+
 ## Two corrections worth carrying forward
 
 - **Packet 2 is done except F052, F109 and F115.** Diagram blocks still pin by ref: 0 of 39 carry a
