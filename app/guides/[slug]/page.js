@@ -142,6 +142,38 @@ export default async function GuidePage({ params }) {
             <div className="seo-stepper-body">
               <h2>{section.heading}</h2>
               <p>{renderProse(section.content)}</p>
+              {section.list && (
+                <ul className="guide-list">
+                  {section.list.map((item, j) => (
+                    <li key={j}>{renderProse(item)}</li>
+                  ))}
+                </ul>
+              )}
+              {section.table && (
+                <div className="guide-table-wrap">
+                  <table className="guide-table">
+                    {section.table.caption && <caption>{section.table.caption}</caption>}
+                    <thead>
+                      <tr>
+                        {section.table.head.map((cell, j) => (
+                          <th key={j} scope="col">{cell}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {section.table.rows.map((row, j) => (
+                        <tr key={j}>
+                          {row.map((cell, k) => (
+                            k === 0
+                              ? <th key={k} scope="row">{renderProse(cell)}</th>
+                              : <td key={k}>{renderProse(cell)}</td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
               {section.cta && (
                 <Link href={section.cta.href} className="guide-inline-cta">
                   {section.cta.label}
