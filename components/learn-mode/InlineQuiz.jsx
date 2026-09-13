@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
+import { recordAnswer, recordConfidence } from '@/lib/answer-log';
 
 /* ── Inline Quiz Card (MCQ) with Confidence Rating ── */
 export default function InlineQuiz({ question, subjectId, sectionId, stepIndex, onResult }) {
@@ -9,17 +10,16 @@ export default function InlineQuiz({ question, subjectId, sectionId, stepIndex, 
   const [confidence, setConfidence] = useState(null);
   const [confidenceTimedOut, setConfidenceTimedOut] = useState(false);
   const [feedbackMsg, setFeedbackMsg] = useState('');
-  // Remediation state
-  const [showRemediation, setShowRemediation] = useState(false);
-  const [remSelected, setRemSelected] = useState(null);
-  const [remAnswered, setRemAnswered] = useState(false);
   const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
 
-  // F104: the confidence row used to disappear on a 4-second timer and the remediation slid in
-  // 800ms after the answer, so the page moved under the student's thumb twice while they were
-  // reading. A question they are still thinking about is not a question they have declined to
-  // answer. The row now stays until they answer it or move on, and the remediation appears with
-  // the explanation rather than on its own delay.
+  // F104: the confidence row used to disappear on a 4-second timer, so a question the student was
+  // still thinking about was treated as one they had declined to answer. It now stays until they
+  // answer it or skip it.
+  //
+  // F017: the follow-up "let's reinforce this" question that used to slide in here is gone. It
+  // read `question.remediation`, and not one of the 43 sections has ever carried that field, so
+  // the branch had never run. Authoring 769 remediation questions is a content decision, not a
+  // dead branch to leave lying in the component.
   //
   // The auto-dismiss state is kept so the row can still be hidden once confidence is given.
   useEffect(() => {
@@ -31,14 +31,14 @@ export default function InlineQuiz({ question, subjectId, sectionId, stepIndex, 
     setSelected(index);
     setAnswered(true);
     setRevealPhase(1);
-    onResult?.(index === question.correctIndex);
+    const wasCorrect = index === question.correctIndex;
+    onResult?.(wasCorrect);
+    // F017: the wrong answer used to end here, as +0 on a counter. Logged now, so the post-test
+    // can ask it again and a later session can see it.
+    recordAnswer(subjectId, sectionId, question, wasCorrect);
     // After 200ms, reveal correct answer + explanation
     setTimeout(() => {
       setRevealPhase(2);
-      // Appears with the explanation, not 800ms later, so nothing shifts under the reader.
-      if (index !== question.correctIndex && question.remediation) {
-        setShowRemediation(true);
-      }
     }, 200);
   }
 
@@ -57,20 +57,10 @@ export default function InlineQuiz({ question, subjectId, sectionId, stepIndex, 
     };
     setFeedbackMsg(messages[level]);
 
-    // Save to localStorage
-    if (typeof window !== 'undefined' && subjectId && sectionId) {
-      try {
-        const key = `revvy_confidence_${subjectId}_${sectionId}`;
-        const existing = JSON.parse(localStorage.getItem(key) || '[]');
-        existing.push({
-          questionIndex: stepIndex,
-          correct: isCorrect,
-          confidence: level,
-          timestamp: Date.now(),
-        });
-        localStorage.setItem(key, JSON.stringify(existing));
-      } catch {}
-    }
+    // F017: this used to write to `revvy_confidence_*`, a key nothing has ever read. It goes to
+    // the shared answer log now, where the drill orders questions by it — being wrong while
+    // certain is what a student most needs asked again.
+    recordConfidence(subjectId, sectionId, question, level);
   }
 
   function getOptionClass(index) {
@@ -133,37 +123,6 @@ export default function InlineQuiz({ question, subjectId, sectionId, stepIndex, 
           <div className="lm-confidence-done" style={{ fontStyle: 'italic' }}>No worries — moving on.</div>
         )}
 
-        {/* Remediation question — slides in after wrong answer */}
-        {showRemediation && question.remediation && (
-          <div className="lm-remediation rl-section-enter">
-            <div className="lm-remediation-divider">
-              <span className="lm-remediation-label">Let&apos;s reinforce this</span>
-            </div>
-            <p className="lm-quiz-question">{question.remediation.question}</p>
-            <div className="lm-quiz-options">
-              {question.remediation.options?.map((opt, i) => {
-                let cls = '';
-                if (remAnswered) {
-                  if (i === question.remediation.correct) cls = 'correct';
-                  else if (i === remSelected && i !== question.remediation.correct) cls = 'incorrect';
-                }
-                return (
-                  <button key={i} className={`lm-quiz-option ${cls}`}
-                    onClick={() => { if (!remAnswered) { setRemSelected(i); setRemAnswered(true); } }}>
-                    <span className="lm-quiz-option-letter">{letters[i]}</span>
-                    {opt}
-                  </button>
-                );
-              })}
-            </div>
-            {remAnswered && (
-              <div className="lm-quiz-explanation lm-animate-slide-in" role="status" aria-live="polite">
-                <strong>{remSelected === question.remediation.correct ? 'Got it!' : 'Not quite.'}</strong>{' '}
-                {question.remediation.explanation}
-              </div>
-            )}
-          </div>
-        )}
       </div>
     </div>
   );

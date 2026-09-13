@@ -81,6 +81,8 @@ export default function CompletionScreen({
     return (
       <div className="lm-complete-screen">
         <QuickFireDrill
+          subjectId={subjectId}
+          sectionId={sectionId}
           quizData={quizData}
           onScore={handleDrillScore}
           onClose={() => setCompleteView('main')}
@@ -123,13 +125,33 @@ export default function CompletionScreen({
               score={{ correct: scores.explain.attempts, total: scores.explain.total }} />
           )}
 
-          {/* Weakest area callout */}
-          {scores.quiz.total > 0 && scores.quiz.correct < scores.quiz.total && (
-            <div className="lm-weakest-area">
-              <span className="lm-weakest-icon">&#9888;</span>
-              <span>Quiz questions need attention — try the quiz tab for more practice</span>
-            </div>
-          )}
+          {/* F006: the weakest area, only when there is enough evidence to name one.
+              This fired whenever `quiz.correct < quiz.total`, so one wrong answer out of one
+              produced "Quiz questions need attention" on a completion screen — a verdict on a
+              single data point, delivered at the moment the student had just finished. It also
+              only ever accused the quiz, even when recall was the worse of the two.
+              Three answers minimum, below 70%, and it names whichever measured area is actually
+              weakest. */}
+          {(() => {
+            const MIN_ANSWERS = 3;
+            const WEAK_BELOW = 0.7;
+            const areas = [
+              { key: 'quiz', label: 'Quiz questions', advice: 'try the Quiz tab for more practice', s: scores.quiz },
+              { key: 'recall', label: 'The recall exercises', advice: 'work back through the topic and try them again', s: scores.recall },
+            ]
+              .filter((a) => a.s && a.s.total >= MIN_ANSWERS && a.s.correct / a.s.total < WEAK_BELOW)
+              .sort((a, b) => a.s.correct / a.s.total - b.s.correct / b.s.total);
+            if (!areas.length) return null;
+            const worst = areas[0];
+            return (
+              <div className="lm-weakest-area">
+                <span className="lm-weakest-icon" aria-hidden="true">&#9888;</span>
+                <span>
+                  {worst.label} need attention — you got {worst.s.correct} of {worst.s.total}. {worst.advice}.
+                </span>
+              </div>
+            );
+          })()}
         </div>
       )}
 

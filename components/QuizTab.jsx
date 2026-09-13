@@ -14,6 +14,8 @@ export default function QuizTab({ questions, sectionId, onAskTutor, previewMode 
 
   const PREVIEW_LIMIT = 2;
   const displayQuestions = previewMode ? (questions || []).slice(0, PREVIEW_LIMIT) : (questions || []);
+  // How many questions this student is actually being asked, which is what a score is out of.
+  const quizLength = displayQuestions.length;
 
   // Reset state and load best score on section change
   useEffect(() => {
@@ -21,17 +23,25 @@ export default function QuizTab({ questions, sectionId, onAskTutor, previewMode 
     setSubmitted(false);
     setBestScore(null);
 
-    if (user && sectionId && !previewMode) {
+    // F087. This used to require `!previewMode`, so a signed-in free student — who gets the same
+    // two-question preview as a stranger — had their attempt discarded and never saw a best. Being
+    // signed in did nothing, which is the opposite of what an account is for. Signed in is the
+    // only condition that matters here; the preview is a smaller quiz, not a different student.
+    if (user && sectionId) {
       fetch(`/api/progress/quiz?sectionId=${sectionId}`)
         .then(res => res.ok ? res.json() : null)
         .then(data => {
           if (!data || !data.attempts || data.attempts.length === 0) return;
-          const best = Math.max(...data.attempts.map(a => a.score));
-          setBestScore({ score: best, total: data.attempts[0].total });
+          // Only compare like with like. A 2/2 preview and an 18/25 full attempt live in the same
+          // table, and taking the max score across both would show "your best: 2" to somebody who
+          // has answered eighteen correctly, or hide a perfect preview behind a longer attempt.
+          const sameLength = data.attempts.filter(a => a.total === quizLength);
+          if (!sameLength.length) return;
+          setBestScore({ score: Math.max(...sameLength.map(a => a.score)), total: quizLength });
         })
         .catch(() => {});
     }
-  }, [sectionId, user, previewMode]);
+  }, [sectionId, user, previewMode, quizLength]);
 
   if (!questions || !questions.length) {
     return <div style={{ color: 'var(--text-muted)', textAlign: 'center', padding: 40 }}>No quiz available.</div>;
@@ -47,8 +57,9 @@ export default function QuizTab({ questions, sectionId, onAskTutor, previewMode 
 
     const finalScore = displayQuestions.reduce((acc, q, i) => acc + (answers[i] === q.correctIndex ? 1 : 0), 0);
 
-    // Save to database if logged in (skip in preview mode)
-    if (user && !previewMode) {
+    // Saved for any signed-in student, preview included (F087). The row already records its own
+    // `total`, so a two-question attempt cannot be mistaken for a full one later.
+    if (user) {
       setSaving(true);
       fetch('/api/progress/quiz', {
         method: 'POST',
@@ -92,7 +103,7 @@ export default function QuizTab({ questions, sectionId, onAskTutor, previewMode 
 
   return (
     <div>
-      {bestScore && !submitted && !previewMode && (
+      {bestScore && !submitted && (
         <div className="quiz-best-score">
           Your best: {bestScore.score}/{bestScore.total}
         </div>

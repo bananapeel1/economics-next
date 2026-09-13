@@ -543,7 +543,7 @@ export default function LearnModeTab({
                 ))}
                 {step.block.examTip && <div className="exam-tip"><div className="exam-tip-label">Exam Tip</div>{step.block.examTip}</div>}
                 {currentDiagram && <InlineDiagram diagram={currentDiagram} />}
-                {currentQuiz && <InlineQuiz key={`quiz-${currentStep}`} question={currentQuiz} subjectId={subjectId} sectionId={sectionId} stepIndex={currentStep} />}
+                {currentQuiz && <InlineQuiz key={`quiz-${currentStep}`} question={currentQuiz} subjectId={subjectId} sectionId={sectionId} stepIndex={currentStep} onResult={onQuizResult} />}
                 {currentPractice && (
                   isPracticeVisible(currentPractice, currentUnit?.code)
                     ? <InlinePractice key={`practice-${currentStep}`} question={currentPractice} onAskTutor={onAskTutor} mode={getPracticeMode(currentStep)} />

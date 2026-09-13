@@ -67,6 +67,9 @@ export async function GET() {
         status: 'active',
         currentPeriodEnd: null,
         trialEnd: null,
+        // A lifetime buyer has paid more than anyone and their stripe_subscription_id is nulled
+        // by the one-time-payment webhook, so an absence test would call them a new customer.
+        trialEligible: false,
       });
     }
 
@@ -123,6 +126,7 @@ export async function GET() {
             status: 'active',
             currentPeriodEnd: periodEnd,
             trialEnd,
+            trialEligible: false,
           });
         }
 
@@ -147,7 +151,8 @@ export async function GET() {
             });
           }
 
-          return NextResponse.json({ plan: 'free', status: 'cancelled' });
+          // Free again, but NOT a new customer: this is the 43-account case the finding is about.
+          return NextResponse.json({ plan: 'free', status: 'cancelled', trialEligible: false });
         }
       } catch (e) {
         // If Stripe check fails, fall through to DB-based response.
@@ -161,7 +166,7 @@ export async function GET() {
     if (sub.status === 'active' && sub.current_period_end) {
       const endDate = new Date(sub.current_period_end);
       if (endDate < new Date()) {
-        return NextResponse.json({ plan: 'free', status: 'expired' });
+        return NextResponse.json({ plan: 'free', status: 'expired', trialEligible: isTrialEligible(sub) });
       }
     }
 

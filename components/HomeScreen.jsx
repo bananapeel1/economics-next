@@ -95,6 +95,20 @@ export default function HomeScreen({ subjects, units, sections, user, isPremium,
     }
   }, [user]);
 
+  /*
+   * F027. Both "Continue Learning" entry points used to read `last-visited-section` from
+   * localStorage and, finding nothing, do nothing — a button that silently ignores the click on
+   * any device the student has not used before. The server's answer comes first now, the local
+   * pointer is the fallback, and there is always a destination.
+   */
+  function continueLearning() {
+    const local = typeof window !== 'undefined' ? localStorage.getItem('last-visited-section') : null;
+    const target = dashData?.continueSection || local || sections?.[0]?.id;
+    if (!target) return;
+    onNavigateToSection(target);
+    onNavigateToTab('learn-mode');
+  }
+
   // Recommendation action handler
   function handleRecommendAction(rec) {
     if (rec.type === 'review') {
@@ -108,11 +122,7 @@ export default function HomeScreen({ subjects, units, sections, user, isPremium,
         window.location.href = '/practice';
       }
     } else if (rec.type === 'continue') {
-      const lastSection = typeof window !== 'undefined' ? localStorage.getItem('last-visited-section') : null;
-      if (lastSection) {
-        onNavigateToSection(lastSection);
-        onNavigateToTab('learn-mode');
-      }
+      continueLearning();
     } else {
       // Default: go to first section
       const first = sections[0];
@@ -187,10 +197,7 @@ export default function HomeScreen({ subjects, units, sections, user, isPremium,
 
       {/* Quick Access Grid */}
       <div className="hs-quick">
-        <button className="hs-quick-card" onClick={() => {
-          const lastSection = typeof window !== 'undefined' ? localStorage.getItem('last-visited-section') : null;
-          if (lastSection) { onNavigateToSection(lastSection); onNavigateToTab('learn-mode'); }
-        }}>
+        <button className="hs-quick-card" onClick={continueLearning}>
           <span className="hs-quick-icon">{'\uD83D\uDCDA'}</span>
           Continue Learning
         </button>

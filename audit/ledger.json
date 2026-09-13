@@ -14,10 +14,10 @@
    "fix": "Persist completion, review schedule and strength server-side keyed by user_id (a small user_section_state table: completed_at, review_interval_idx, next_due, reviews, quiz_accuracy, pretest_score, pretest_questions). Fix or delete /api/learn-mode/progress: either change last_result to TEXT or stop writing strings; check the upsert error and return 500 so the failure is visible. Hydrate localStorage from the server on login as a cache, not the source of truth.",
    "impact": "A student who completes a topic on their school laptop and opens Revvy on their phone (or in incognito, or after Safari's 7-day ITP storage eviction, or after clearing site data) has: no completion dot in the sidebar, no strength bar, no scheduled reviews, no pre-test record, and the section re-opens at the DB-saved step with the pre-test gate suppressed only because isResuming is true. The 1/3/7/14-day spaced review promise is broken for anyone who is not on the exact same browser profile every time. Logged-in status changes nothing.",
    "packet": 4,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-4",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-13",
+   "evidence": "app/api/learn-mode/state/route.js:78-101 reads existing row before upsert so a partial write can't blank other fields; lib/section-state.js:29-40 migrates legacy revvy_complete_/revvy_pretest_ keys on first read; saveSectionState (section-state.js:82-99) writes local first and no-ops safely on 401 signed-out; GET returns {state:{},signedIn:false} when signed out (curl-verified) and {unavailable:true} rather than 500 when the table errors (route.js:58-64)",
    "note": null
   },
   {
@@ -65,10 +65,10 @@
    "fix": "Rebase the model: completion should land at a clearly positive value (e.g. 70-80) and decay should follow the scheduled interval (strength hits the 'review' threshold roughly when the review is due, not two days in). Feed inline quiz correctness, post-test and quick-fire results into quizAccuracy. Show 'Review due in N days' rather than a decaying percentage on the completion screen. Do not show a decaying bar in the sidebar next to a completion dot.",
    "impact": "The first thing under 'Topic complete' is an amber bar saying '35% strength'. Coming back tomorrow it is 30%, then red. A student who completes five topics in a week sees a sidebar full of red slivers next to every green completion dot. The 14-day review interval the app schedules is incompatible with its own meter: by the time the review is due the meter says <10% even after a perfect previous review. Nothing the student does inside Learn Mode (inline quiz, explain-it-back, recalls, quick-fire, post-test) raises the meter except a SpacedReview or MixedReview.",
    "packet": 4,
-   "status": "claimed",
+   "status": "not-fixed",
    "closed_by": "packet-4",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-13",
+   "evidence": "lib/strength.js:60-84 maths verified correct (finish=100 green, +7d single review ~4.5% red, 3 reviews ~42% at 7d) but fix also required 'do not show a decaying bar in the sidebar next to a completion dot'; components/Sidebar.jsx:124-126 still renders <StrengthMeter size=\"small\"> beside the completion dot (line 127-144), and StrengthMeter.jsx:42-48 always renders the lm-strength-fill decaying bar regardless of size (isSmall only hides the text label at line 49) — the exact thing the fix forbids",
    "note": null
   },
   {
@@ -82,10 +82,10 @@
    "fix": "On post-test and drill completion, call recordReview(subjectId, sectionId, score) and (once server-side) update the schedule: a strong post-test could push the first review from 1 day to 3.",
    "impact": "A student who does the post-test and goes 1/3 -> 3/3 sees 'Perfect score! You've mastered this topic', then the strength meter above it still says 35% and tomorrow's review is still due. Effort in the optional activities has no visible consequence anywhere else in the app.",
    "packet": 4,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-4",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-13",
+   "evidence": "PostTest.jsx:43-49 and QuickFireDrill.jsx:110-114 each report onScore exactly once via a reportedRef guard; both wired to CompletionScreen.jsx:43-47 handleDrillScore, which calls recordReview() and saveSectionState({quizAccuracy, reviewed}) at lines 45-46, reaching strength.js and the server schedule",
    "note": null
   },
   {
@@ -99,10 +99,10 @@
    "fix": "Persist per-attempt scores with the completion record; reset scores in onRetry; drop the weight labels or compute and display the composite; require at least 3 quiz answers before the 'needs attention' callout.",
    "impact": "First time: a breakdown with 'Quiz 0/1 50%' and a warning 'Quiz questions need attention' after a single wrong click. Tomorrow: the same screen with no breakdown at all. After Retry: 'Quiz 1/2' even though they answered the single question right the second time. The percentages imply a mastery score the app never calculates.",
    "packet": 4,
-   "status": "claimed",
+   "status": "not-fixed",
    "closed_by": "packet-4",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-13",
+   "evidence": "Persistence/reset done: LearnModeTab.jsx writes scores with the completion record (handleComplete, ~line 289) and resets fresh scores in onRetry; weight labels dropped in CompletionScreen.jsx. But fix also required 'require at least 3 quiz answers before the needs attention callout' — CompletionScreen.jsx:127-132 still fires on scores.quiz.total>0 && correct<total with no >=3 gate, so the impact's own example (a single wrong click triggering the warning) still reproduces",
    "note": null
   },
   {
@@ -116,10 +116,10 @@
    "fix": "Report skips to the parent (onComplete(null) or an onSkip prop) and show 'Recall 1 of 10 attempted, 1 correct'; de-duplicate by recall prompt so the spaced re-attempt updates rather than appends.",
    "impact": "Skip nine reorders, check one: 'Recall 1/1' with a full bar. Do the same fill-in twice: 2/2. The number is technically not false but it does not measure what the label implies.",
    "packet": 4,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-4",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-13",
+   "evidence": "onSkip wired at all 4 mount sites in LearnModeTab.jsx (lines 474,476,520,522, spaced+immediate x ReorderRecall+FillInRecall); ReorderRecall.jsx:75 and FillInRecall.jsx:66 call onSkip?.() from the dismiss (x) button before setDismissed(true)",
    "note": null
   },
   {
@@ -167,10 +167,10 @@
    "fix": "Use the last results entry: results[results.length-1]?.timedOut, or selected === null.",
    "impact": "Every time the student answers A (in time), the timeout message appears under the options, contradicting the feedback colours.",
    "packet": 4,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-4",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-13",
+   "evidence": "components/learn-mode/QuickFireDrill.jsx:197 now gates the timeout message on 'selected === null' instead of the falsy '!selected', so picking option A (index 0) no longer shows Time's up!",
    "note": null
   },
   {
@@ -286,10 +286,10 @@
    "fix": "Feed wrong answers into the localStorage review schedule already created on completion, and into the mistakes tab for premium. Either author remediation questions or remove the dead code. Remove the 4s auto-dismiss or start it after the explanation is scrolled into view. Use confidence x correctness to prioritise the QuickFireDrill.",
    "impact": "A student who gets the MCQ wrong sees the explanation, then the wrong answer vanishes from the system: it does not reappear in reviews, mistakes, or the post-test, and the 'How sure were you' click changes nothing later.",
    "packet": 4,
-   "status": "claimed",
+   "status": "not-fixed",
    "closed_by": "packet-4",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-13",
+   "evidence": "components/learn-mode/InlineQuiz.jsx is untouched by this packet (absent from git diff 6a53255^..f2fceb4). Confidence is still only written to localStorage at line 63 (revvy_confidence_*) and never read anywhere in the repo (grep confirms single write site, no reader); wrong answers still feed only the local onQuizResult counter with no wiring into the review schedule or a premium mistakes tab; remediation question support is unchanged",
    "note": null
   },
   {
@@ -405,10 +405,10 @@
    "fix": "Define one mastery model that ingests Learn Mode inline quiz/recall results, Quiz tab attempts and Flashcards tab reviews alongside Smart Practice; compute streak from any learning activity (including user_content_progress.updated_at); until then, hide the Mastery/Streak tiles for users with no practice rows rather than showing zeros.",
    "impact": "A student who completes every Learn Mode topic in Unit 1, scores well on inline quizzes and the completion Quick-Fire drill, opens Home and sees Mastery 0%, Streak 0, This Week 0, and every topic red at 0% labelled NEW. The product's own scoreboard tells the most engaged Learn Mode user they have done nothing. Because Learn Mode is the recommended 'START HERE' path, this is the default experience for most logged-in users.",
    "packet": 4,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-4",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-13",
+   "evidence": "app/api/progress/dashboard/route.js:69-88 queries user_section_state/user_content_progress; empirically verified live against this Supabase project that querying a missing table resolves {data:null,error} rather than throwing, so these queries cannot 500 the dashboard pre-migration; masteryPct blends section completion at lines 170-179; streak at lines 227-235 counts sectionStateRows/contentRows as activity",
    "note": null
   },
   {
@@ -456,10 +456,10 @@
    "fix": "On mount, once savedProgress arrives, set learnModeSection to max(local, db) for the active section and show the resume banner; persist pretest/completion/review-schedule to the server for logged-in users (a user_learn_state JSON column keyed by section would suffice).",
    "impact": "A student who worked on their laptop at school and opens the app on their phone at home lands on step 1 of the same section, is shown the pre-test again, sees no completion ticks or due reviews, and the Home 'Continue Learning' button does nothing if last-visited-section is missing (HomeScreen.jsx:178 silently no-ops). Everything that makes the app feel like 'their' app is tied to one browser.",
    "packet": 4,
-   "status": "claimed",
+   "status": "not-fixed",
    "closed_by": "packet-4",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-13",
+   "evidence": "components/StudyApp.jsx: no effect reconciles learnModeSection/learnModeResuming against savedProgress for the section active at mount — readSavedStep+setLearnModeSection only run from explicit nav handlers (handleSubjectChange:657-658, handleSectionChange:684-686, HomeScreen onNavigateToSection:715), not from a mount-time effect once the savedProgress fetch (lines 445-462) resolves, so opening a section directly on a new device still starts at local step 0. HomeScreen.jsx:190-193 'Continue Learning' still silently no-ops when last-visited-section is absent, unchanged by this packet's actual HomeScreen diff. Packet 4's real StudyApp.jsx diff only reworked the entitlement-aware section cache key, not this path",
    "note": null
   },
   {
@@ -526,8 +526,8 @@
    "packet": 12,
    "status": "not-fixed",
    "closed_by": "packet-12",
-   "verified_by": "packet-verifier 2026-09-12",
-   "evidence": "Not a single source: lib/feature-matrix.js is imported only by app/upgrade/page.js and components/PaywallOverlay.jsx; the subject-hub 'overview' pages this fix names (app/economics/page.js:9,292,434; app/business/page.js:9,287,429) still hardcode their own matching prose rather than importing it, and lib/feature-matrix.js:50 exports BOUNDARY_SENTENCE for exactly this purpose but it is imported nowhere (0 repo matches) - a third place that currently agrees by luck, not derivation, the same failure mode the finding was raised for. trialEligible is entirely unimplemented: 0 repo matches for 'trialEligible'; app/upgrade/page.js:63,94,136 and components/PaywallOverlay.jsx:60,133,141 all show '£1 first month'/'Start Pro' unconditionally to every visitor, verified live via curl on /upgrade (rendered HTML: 'New subscribers get their first month for £1' + 'Start Pro'), so a previously-subscribed free user still sees the £1 offer and is silently charged full price at Stripe checkout per app/api/stripe/checkout/route.js hadPreviousSubscription logic, which is the exact chargeback-risk defect this finding called out. The 1,200+ claim was genuinely removed (0 repo matches). The boundary content itself is roughly honest against StudyApp.jsx FREE_TABS/PREVIEW_TABS/PREMIUM_TABS, so this is not 'the wrong boundary', but 2 of 3 required fixes are undone",
+   "verified_by": "packet-verifier 2026-09-13",
+   "evidence": "lib/subscription-lookup.js:24 selects plan,status,current_period_end,created_at -- omits stripe_subscription_id; components/AuthProvider.jsx:108 recomputes isTrialEligible(subscription) from that object (and from the /api/subscription JSON, which also never exposes stripe_subscription_id), so !undefined is always true and the correct trialEligible field the API already computed at app/api/subscription/route.js:175 is discarded; components/MonthlyPlanCard.jsx:30-31 consumes this always-true value, so a previously-subscribed user still sees the £1/Start Pro card live at /upgrade -- unchanged defect, just moved to Stripe's own checkout page since checkout/route.js correctly withholds the coupon. Separately, lib/trial-eligibility.js:16's rule itself misclassifies a lifetime buyer as trial-eligible (app/api/stripe/webhook/route.js:132 sets stripe_subscription_id:null on lifetime grant) -- currently masked only because checkout/route.js:113 and app/api/subscription/route.js:66-71 both special-case isLifetime before reaching the rule, not because the rule is correct. BOUNDARY_SENTENCE is genuinely adopted by both hubs (app/economics/page.js:295, app/business/page.js:290) so that part is fixed.",
    "note": null
   },
   {
@@ -558,10 +558,10 @@
    "fix": "Show one status derived from a single source (server for logged-in, local otherwise) once total_steps is fixed.",
    "impact": "A section can show a clock 'In progress' icon next to a green 'Learn Mode complete' dot, or a 'Completed' tick with no dot. Students learn to ignore both.",
    "packet": 4,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-4",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-13",
+   "evidence": "components/Sidebar.jsx:119-144 now renders one status indicator per section (learnModeCompletions[id] || status), completion from either source winning, for both signed-in and anonymous users",
    "note": null
   },
   {
@@ -575,10 +575,10 @@
    "fix": "Treat overall.total===0 or no user_content_progress rows as 'start' and point at the first section of the chosen subject/unit.",
    "impact": "First ever visit to Home reads as if they have history they do not have; the one place that could say 'Start with Unit 1, Topic 1' instead says 'continue'.",
    "packet": 4,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-4",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-13",
+   "evidence": "components/HomeScreen.jsx:14-28 gates the 'continue' message behind hasHistory (mastered/learning/last30days/weakestTopics); a genuinely brand-new user now sees 'Start with your first topic'. Residual gap: hasHistory does not check data.overall.sectionsCompleted, so a Learn-Mode-only user could see 'start' instead of 'continue' — inverse of the titled defect, not the defect itself",
    "note": null
   },
   {
@@ -1170,10 +1170,10 @@
    "fix": "Define light-theme variants: `--rl-amber-text:#b45309`, `--rl-teal-text:#047857`, `--rl-blue-text:#1d4ed8`, `--rl-green-text:#047857`; replace hard-coded `#d4bfff`/`#a78bfa` with a `--recall-accent` token that is `#6d28d9` in light; raise label size to 11px; never use --text-dim for text.",
    "impact": "A light-mode student sees the purple recall card with four items but cannot read the instruction 'Put these in the right order:' (lavender on white); every card label ('COMMON MISCONCEPTION', 'REAL EXAMPLE') is a faint pastel strip.",
    "packet": 11,
-   "status": "not-fixed",
+   "status": "confirmed",
    "closed_by": "packet-11",
-   "verified_by": "packet-verifier 2026-09-12",
-   "evidence": "app/globals.css:2767 .lm-recall-label still font-size:10px, not the required 11px; app/globals.css:2893 .lm-recall-hint-text still color:var(--text-dim) against the fix's own 'never use --text-dim for text'; contrast-check.mjs extension to border-color/background is real (line 265) and ACCEPTED_LITERALS additions are legitimate fixed-hue state colours, but the two label/hint sub-claims remain unmet",
+   "verified_by": "packet-verifier 2026-09-13",
+   "evidence": "app/globals.css:2769 .lm-recall-label is 11px (was 10px); app/globals.css:2897 .lm-recall-hint-text now uses --text-secondary not --text-dim; npm run contrast passes and manual WCAG calc gives ~9.8:1 (hint) and ~6.7:1 (label) against the card's rendered light-theme bg, both above 4.5:1",
    "note": null
   },
   {
@@ -1476,10 +1476,10 @@
    "fix": "Fold into the gating decision above; at minimum allow retry in preview and show the best-of-2 to logged-in free users.",
    "impact": "Minor: the free student gets a 2-question 'quiz', cannot retry, and has no score history, so the tab feels like a demo rather than a feature.",
    "packet": 12,
-   "status": "claimed",
+   "status": "not-fixed",
    "closed_by": "packet-12",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-13",
+   "evidence": "components/QuizTab.jsx:106-109 preview copy now says 'in the preview' and names the real bank size (title defect fixed); QuizTab.jsx:123-124 Try Again button renders unconditionally so retry works in preview (fixed). But the fix's own 'at minimum ... show the best-of-2 to logged-in free users' is not done: bestScore fetch is skipped for previewMode (QuizTab.jsx:24), bestScore is never saved in previewMode (QuizTab.jsx:46-47), and bestScore display is gated on !previewMode (QuizTab.jsx:96) -- and StudyApp.jsx:761 passes the same previewMode=isPreview to logged-in free users as to anonymous visitors, so the named audience gets no score history, unchanged from the original impact.",
    "note": null
   },
   {
@@ -1680,10 +1680,10 @@
    "fix": "Add @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration:0.01ms !important; transition-duration:0.01ms !important } } and pass `reducedMotion='user'` to framer-motion's MotionConfig; cap FlowChain total stagger at ~300ms.",
    "impact": "Motion-sensitive students get continuous pulsing badges and cascading fade-ins on every step; everyone else waits ~0.5-1s for a 5-6 step causal chain to fully appear each time it scrolls into view.",
    "packet": 11,
-   "status": "not-fixed",
+   "status": "confirmed",
    "closed_by": "packet-11",
-   "verified_by": "packet-verifier 2026-09-12",
-   "evidence": "components/notes/FlowChain.jsx:42 useReducedMotion called unconditionally before the line-47 early return and hidden states resolve to opacity:1/0.5 (never 0) when calm -- correct, but components/topic-links/TopicLinksInfoPanel.jsx:20-25 and components/topic-links/TopicLinksGraph.jsx:100-109 still use motion.div/motion.svg with initial/animate/transition and no useReducedMotion or MotionConfig, so other framer-motion components in the repo still animate unconditionally",
+   "verified_by": "packet-verifier 2026-09-13",
+   "evidence": "app/layout.js:154-159 MotionProvider wraps AuthProvider/children (whole tree) inside ThemeProvider; components/MotionProvider.jsx:17 sets reducedMotion=user; node_modules/framer-motion/dist/framer-motion.dev.js:3909-3910,3455 confirm shouldReduceMotion only forces {type:false} for positionalKeys (transform/layout), opacity untouched; TopicLinksInfoPanel.jsx:22 (y transform) and TopicLinksGraph.jsx:106 (opacity-only) now render inside the MotionConfig tree with no local override",
    "note": null
   },
   {

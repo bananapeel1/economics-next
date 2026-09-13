@@ -412,6 +412,9 @@ body {
 }
 .sidebar-section-status.complete { color: var(--accent-green-light); }
 .sidebar-section-status.in-progress { color: var(--text-dim); }
+/* F004: a finished topic that has come round again. Amber, not red — it is a prompt, not a
+   failure, and the student earned the tick it replaces. */
+.sidebar-section-status.due { color: var(--accent-amber); }
 
 /* Sidebar collapse/expand buttons */
 .sidebar-collapse-btn {

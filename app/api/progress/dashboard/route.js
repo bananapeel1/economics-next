@@ -277,7 +277,33 @@ export async function GET() {
   weakCandidates.sort((a, b) => a.accuracy - b.accuracy);
   const weakestTopics = weakCandidates.slice(0, 5);
 
+  /*
+   * F027. "Continue Learning" read `localStorage.getItem('last-visited-section')` and did nothing
+   * at all when that was empty — a dead button on any device the student had not used before,
+   * which is exactly the student this is for. The server knows the answer: the most recently
+   * touched section, from the Learn Mode state and the resume pointer.
+   *
+   * A section the student has already finished is a poor thing to "continue", so an unfinished
+   * one wins when there is one.
+   */
+  const touched = [
+    ...sectionStateRows.map((r) => ({
+      sectionId: r.section_id,
+      at: Date.parse(r.updated_at || r.last_review || 0) || 0,
+      done: !!r.completed_at,
+    })),
+    ...contentRows.map((r) => ({
+      sectionId: r.section_id.replace(/^fc-/, ''),
+      at: Date.parse(r.updated_at || 0) || 0,
+      done: false,
+    })),
+  ].filter((r) => r.sectionId && r.at);
+  touched.sort((a, b) => b.at - a.at);
+  const continueSection =
+    touched.find((r) => !r.done)?.sectionId ?? touched[0]?.sectionId ?? null;
+
   return NextResponse.json({
+    continueSection,
     overall: {
       mastered: overallMastered,
       sectionsCompleted,

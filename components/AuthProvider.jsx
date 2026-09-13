@@ -103,8 +103,13 @@ export function AuthProvider({ children, initialUser, initialSubscription = null
   }, [user]);
 
   const isPremium = hasPremiumAccess(subscription);
-  // F031: whether the "£1 first month" offer applies to this account. Seeded server-side with the
-  // subscription itself, so the price shown on first paint is the price checkout will charge.
+  // F031: whether the "£1 first month" offer applies to this account.
+  //
+  // Read from the payload, not recomputed here. `/api/subscription` decides it against the
+  // database row and puts `trialEligible` on every response; `isTrialEligible` returns that
+  // verbatim when it is present. The earlier version of this line asked the payload for a column
+  // the payload has never carried, so it answered "eligible" for everybody, including the 43
+  // accounts with a cancelled subscription who are then charged £1.99 at the till.
   const trialEligible = subscription ? isTrialEligible(subscription) : true;
 
   return (

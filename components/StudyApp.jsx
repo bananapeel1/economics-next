@@ -423,6 +423,32 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       return local ? (parseInt(local, 10) || 0) : 0;
     } catch { return 0; }
   }
+  /*
+   * F027, the half the verifier caught. `learnModeSection` is seeded from localStorage in its
+   * useState initialiser and `savedProgress` arrives from the server a moment later, so nothing
+   * reconciled the two for the section that is already open at mount — only the explicit
+   * navigation handlers called `readSavedStep`. A student who reached step 9 on a school laptop
+   * and opened Revvy on their phone landed on step 0 of the same topic, which is the exact
+   * failure the whole server-state finding is about, still live on the commonest path.
+   *
+   * Applied once per section, and only when the server is genuinely ahead: a student who has
+   * deliberately gone back a step must not be dragged forward again by a later fetch.
+   */
+  const learnStepRef = useRef(learnModeSection);
+  useEffect(() => { learnStepRef.current = learnModeSection; }, [learnModeSection]);
+  const resumeAppliedRef = useRef(false);
+  useEffect(() => { resumeAppliedRef.current = false; }, [activeSection, activeSubjectId]);
+  useEffect(() => {
+    if (!user || !activeSection || resumeAppliedRef.current) return;
+    const serverStep = savedProgress?.[activeSection]?.furthest_step;
+    if (!Number.isFinite(serverStep)) return;
+    resumeAppliedRef.current = true;
+    if (serverStep > learnStepRef.current) {
+      setLearnModeSection(serverStep);
+      setLearnModeResuming(true);
+    }
+  }, [user, activeSection, activeSubjectId, savedProgress]);
+
   function handleLearnStepChange(step) {
     setLearnModeSection(step);
     if (typeof window !== 'undefined' && activeSubjectId && activeSection) {

@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useRef, useMemo } from 'react';
+import { readAnswerLog, orderByPriority } from '@/lib/answer-log';
 
 const TIMER_SECONDS = 15;
 const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
@@ -8,11 +9,22 @@ const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
  * Timed rapid-fire quiz drill using all quiz questions from the section.
  * One question at a time, 15s countdown, auto-advance after feedback.
  */
-export default function QuickFireDrill({ quizData, onClose, onScore }) {
+export default function QuickFireDrill({ quizData, onClose, onScore, subjectId, sectionId }) {
+  /*
+   * F017. This was a flat shuffle, so the post-test was as likely to open with a question the
+   * student had already answered confidently as with the one they got wrong ten minutes earlier.
+   * The drill now leads with what they got wrong — worst first, where "worst" is wrong while
+   * certain — then questions they have never seen, and only then the ones they are solid on.
+   *
+   * Read once on mount. Re-reading as they answer would reorder the queue under them.
+   */
   const questions = useMemo(() => {
     if (!quizData?.length) return [];
-    return [...quizData].sort(() => Math.random() - 0.5);
-  }, [quizData]);
+    const log = readAnswerLog(subjectId, sectionId);
+    if (!log.length) return [...quizData].sort(() => Math.random() - 0.5);
+    return orderByPriority(quizData, log);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [quizData, subjectId, sectionId]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selected, setSelected] = useState(null);
