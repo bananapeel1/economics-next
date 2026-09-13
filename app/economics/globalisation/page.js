@@ -1,4 +1,4 @@
-import { createServerClient } from '@/lib/supabase-server';
+import { createAnonClient } from '@/lib/supabase-anon';
 import Link from 'next/link';
 import SiteHeader from '@/components/SiteHeader';
 import BackToApp from '@/components/BackToApp';
@@ -162,7 +162,7 @@ const KEY_CONCEPTS = [
 ];
 
 export default async function GlobalisationPillarPage() {
-  const supabase = createServerClient();
+  const supabase = createAnonClient();
 
   const [{ data: notes }, { data: practice }] = await Promise.all([
     supabase.from('section_notes').select('data').eq('section_id', 'causes-effects-globalisation').single(),
