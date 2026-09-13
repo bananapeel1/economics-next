@@ -3,6 +3,8 @@ import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { useAuth } from './AuthProvider';
 import Sidebar from './Sidebar';
 import { shuffleAllOptions } from '@/lib/shuffle-options';
+import { introOffer } from '@/lib/trial-eligibility';
+import { useClientValue } from '@/lib/use-client-storage';
 import ContentTab from './ContentTab';
 import NotesTab from './NotesTab';
 import DiagramsTab from './DiagramsTab';
@@ -50,6 +52,9 @@ const allTabs = [
 
 /* ── Section Overview (Dashboard Launchpad) ── */
 function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPremium, user, savedProgress }) {
+  // F031: the price on this bar must be the price checkout will charge.
+  const { trialEligible } = useAuth();
+  const offer = introOffer(trialEligible);
   const contentSteps = sectionData?.content?.length || 0;
   const notesSections = sectionData?.notes?.length || 0;
   const diagramCount = sectionData?.diagrams?.length || 0;
@@ -209,7 +214,10 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
         <div className="overview-cta-bar">
           <span className="overview-cta-icon">&#9889;</span>
           <span className="overview-cta-text">
-            Unlock Flashcards, Quiz &amp; AI Tutor &mdash; <strong>&pound;1 first month</strong>, then &pound;1.99/month
+            {/* F031: the overview bar hardcoded the intro price for everyone, including the 43
+                accounts that cannot have it. */}
+            Unlock Flashcards, Quiz &amp; AI Tutor &mdash; <strong>{offer.price} {offer.unit}</strong>
+            {trialEligible ? ', then \u00a31.99/month' : ' \u00b7 cancel anytime'}
           </span>
           <span className="overview-cta-cancel">Cancel anytime &middot; local currency</span>
           <button className="overview-cta-btn" onClick={(e) => { e.stopPropagation(); window.location.href = '/upgrade'; }}>
@@ -301,8 +309,29 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       lastSection = localStorage.getItem('last-visited-section');
       lastSubject = localStorage.getItem('last-visited-subject');
     } catch { return; }
-    if (lastSubject && subjects.some((s) => s.id === lastSubject)) setActiveSubjectId(lastSubject);
-    if (lastSection && sections.some((s) => s.id === lastSection)) setActiveSection(lastSection);
+    /*
+     * Restore subject and section together, from the section.
+     *
+     * The first version of this compared `s.id === lastSubject`, a number against the string
+     * localStorage always hands back, so the subject was never restored. It then validated the
+     * section against every section in the product rather than the ones in the active subject, so
+     * visiting a Business topic and returning to Home opened Economics 1.3.1 with nothing
+     * highlighted in the sidebar, and overwrote the stored subject on the way past — losing the
+     * memory it had just failed to use. Caught in verification.
+     *
+     * The section is the more specific fact, so it decides. Its own unit names its subject, and
+     * the two can no longer disagree.
+     */
+    const section = lastSection ? sections.find((x) => String(x.id) === String(lastSection)) : null;
+    if (section) {
+      const unit = units.find((u) => u.id === section.unit_id);
+      const subjectId = unit ? subjects.find((x) => x.id === unit.subject_id)?.id : null;
+      if (subjectId != null) setActiveSubjectId(subjectId);
+      setActiveSection(section.id);
+    } else if (lastSubject) {
+      const subject = subjects.find((x) => String(x.id) === String(lastSubject));
+      if (subject) setActiveSubjectId(subject.id);
+    }
     restoreDoneRef.current = true;
     // Once, on mount. Re-running would drag a reading student back to where they started.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -310,12 +339,13 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   const [activeTab, setActiveTab] = useState('overview');
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  // Feature discovery badges — track which features the user has visited
-  const [visitedFeatures, setVisitedFeatures] = useState(() => {
-    if (typeof window === 'undefined') return {};
-    try { return JSON.parse(localStorage.getItem('visited-features') || '{}'); }
-    catch { return {}; }
-  });
+  // Feature discovery badges. F118: read after hydration, never during the first render — this
+  // one alone reproduced both hydration errors as soon as a student had clicked the PDFs link.
+  const [visitedFeatures, setVisitedFeatures] = useClientValue(
+    () => JSON.parse(localStorage.getItem('visited-features') || '{}'),
+    {},
+    [],
+  );
 
   function markFeatureVisited(featureId) {
     setVisitedFeatures(prev => {
@@ -365,31 +395,35 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   const [contentStepInfo, setContentStepInfo] = useState(null);
   const [pendingTutorPrompt, setPendingTutorPrompt] = useState(null);
 
-  // Learn Mode state — current step persisted to localStorage
-  const [learnModeSection, setLearnModeSection] = useState(() => {
-    if (typeof window === 'undefined') return 0;
-    const saved = localStorage.getItem(`revvy_learnmode_${activeSubjectId}_${activeSection}_section`);
-    return saved ? parseInt(saved, 10) : 0;
-  });
+  // Learn Mode step. F118: the server renders step 0 and the stored step arrives on the second
+  // render. The server-progress reconcile below then overrides it when the server is further on.
+  const [learnModeSection, setLearnModeSection] = useClientValue(
+    () => {
+      const saved = localStorage.getItem(`revvy_learnmode_${activeSubjectId}_${activeSection}_section`);
+      return saved ? (parseInt(saved, 10) || 0) : 0;
+    },
+    0,
+    [activeSubjectId, activeSection],
+  );
   const [learnModeResuming, setLearnModeResuming] = useState(false);
 
-  // Learn Mode completions — scan localStorage on mount
-  const [learnModeCompletions, setLearnModeCompletions] = useState(() => {
-    if (typeof window === 'undefined') return {};
-    const completions = {};
-    subjectSections.forEach(s => {
-      if (localStorage.getItem(`revvy_complete_${activeSubjectId}_${s.id}`) === 'true') {
-        completions[s.id] = true;
-      }
-    });
-    return completions;
-  });
+  // Learn Mode completions. F118: same reason — the sidebar ticks cannot be in the server markup.
+  const [learnModeCompletions, setLearnModeCompletions] = useClientValue(
+    () => {
+      const completions = {};
+      subjectSections.forEach((sec) => {
+        if (localStorage.getItem(`revvy_complete_${activeSubjectId}_${sec.id}`) === 'true') {
+          completions[sec.id] = true;
+        }
+      });
+      return completions;
+    },
+    {},
+    [activeSubjectId, subjectSections.length],
+  );
 
-  // Review mode state
-  const [dueReviewCount, setDueReviewCount] = useState(() => {
-    if (typeof window === 'undefined') return 0;
-    return countDueReviews();
-  });
+  // Review mode state. F118: the due badge is a browser fact, so it appears on the second render.
+  const [dueReviewCount, setDueReviewCount] = useClientValue(() => countDueReviews(), 0, []);
   const [activeReview, setActiveReview] = useState(null); // null | { type: 'spaced', entry } | { type: 'mixed' }
 
   function refreshDueReviews() {

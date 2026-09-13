@@ -403,7 +403,7 @@ export default function BusinessPage() {
         <div className="elp-cta-inner elp-fade-up">
           <h2 className="elp-cta-title">Ready to start revising?</h2>
           <p className="elp-cta-sub">
-            Free notes across all four units. Flashcards, quizzes and the AI tutor unlock with Pro — £1 for your first month.
+            Free notes across all four units. Flashcards, quizzes and the AI tutor unlock with Pro — £1 for your first month as a new subscriber.
           </p>
           <div className="elp-cta-actions">
             <Link
@@ -415,7 +415,7 @@ export default function BusinessPage() {
             </Link>
             <Link href="/economics" className="elp-btn-secondary">Economics notes instead</Link>
           </div>
-          <p className="elp-cta-note">No signup required for notes &middot; Cancel anytime &middot; &pound;1 first month, then &pound;1.99 &middot; charged in your local currency</p>
+          <p className="elp-cta-note">No signup required for notes &middot; Cancel anytime &middot; &pound;1 first month for new subscribers, then &pound;1.99 &middot; charged in your local currency</p>
         </div>
       </div>
 

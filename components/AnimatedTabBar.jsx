@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from 'react';
+import { useClientValue } from '@/lib/use-client-storage';
 import { motion, useSpring } from 'framer-motion';
 
 /* F102: five springs and two motion elements per tab, 45 springs across the bar, on phones where
@@ -146,13 +147,21 @@ export default function AnimatedTabBar({ tabs, activeTab, setActiveTab, isPremiu
   const activeIndex = tabs.findIndex((t) => t.id === activeTab);
   const focusIndex = activeIndex >= 0 ? activeIndex : 0;
 
+  const [learnModeSeen] = useClientValue(
+    () => localStorage.getItem('revvy_learnmode_seen') === 'true',
+    false,
+    [],
+  );
+
   return (
     <div className="tab-bar" role="tablist">
       {tabs.map((tab, tabIndex) => {
         const isLearnMode = tab.id === 'learn-mode';
         const isTopicComplete = isLearnMode && learnModeCompletions[activeSection];
+        // F118: this read localStorage during render, so the server drew the "New" badge and the
+        // client did not. `learnModeSeen` comes from an effect instead.
         const isNew = isLearnMode
-          ? (!visitedFeatures['tab-learn-mode'] && (typeof window === 'undefined' || localStorage.getItem('revvy_learnmode_seen') !== 'true'))
+          ? (!visitedFeatures['tab-learn-mode'] && !learnModeSeen)
           : (tab.id === 'extras' && !visitedFeatures[`tab-${tab.id}`]);
 
         return (

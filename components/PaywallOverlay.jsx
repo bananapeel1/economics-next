@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { useAuth } from './AuthProvider';
+import { introOffer } from '@/lib/trial-eligibility';
 import Link from 'next/link';
 import { PAYWALL_FEATURES as FEATURES } from '@/lib/feature-matrix';
 
@@ -18,7 +19,14 @@ function CheckIcon() {
 }
 
 export default function PaywallOverlay({ feature = 'this feature', inline = false, previewText = '' }) {
-  const { user, isPremium } = useAuth();
+  const { user, isPremium, trialEligible } = useAuth();
+  /*
+   * F031, the surfaces the first fix missed. /upgrade was corrected to show the price checkout
+   * will actually charge, and this component went on hardcoding "£1 first month" in six places.
+   * A student who has subscribed before was told £1 here and £1.99 on /upgrade, and charged
+   * £1.99 — the contradiction the finding is named for, made worse rather than better.
+   */
+  const offer = introOffer(trialEligible);
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
 
@@ -57,7 +65,7 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
 
   const ctaButton = user ? (
     <button className="paywall-btn" onClick={handleUpgrade} disabled={loading}>
-      {loading ? 'Loading...' : 'Get Pro — £1 first month'}
+      {loading ? 'Loading...' : `Get Pro \u2014 ${offer.price} ${offer.unit}`}
     </button>
   ) : (
     <Link href="/login" className="paywall-btn">Sign In to Get Started</Link>
@@ -75,7 +83,10 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
     return (
       <div className="preview-paywall-banner">
         <h3 className="preview-paywall-title">Unlock All {feature}</h3>
-        <p className="preview-paywall-desc">Full access to every section &mdash; <strong>&pound;1 for your first month</strong>, then &pound;1.99. Cheaper than a coffee.</p>
+        <p className="preview-paywall-desc">
+          Full access to every section &mdash; <strong>{offer.price} {offer.unit}</strong>
+          {trialEligible ? ', then \u00a31.99. Cheaper than a coffee.' : '. Cancel anytime.'}
+        </p>
 
         <div className="paywall-inline-features">
           {FEATURES.map(f => (
@@ -94,7 +105,7 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
         {plansLink}
 
         <div className="paywall-trust-row-compact">
-          <span>&pound;1 first month</span>
+          <span>{offer.price} {offer.unit}</span>
           <span className="paywall-trust-dot" />
           <span>Cancel anytime</span>
         </div>
@@ -130,18 +141,22 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
         </h2>
         <p className="paywall-subtitle">
           {user
-            ? 'Get your first month for £1 and accelerate your revision.'
-            : 'Sign in to unlock everything from £1 for your first month.'
+            ? offer.headline
+            : 'Sign in to unlock everything from \u00a31 for your first month.'
           }
         </p>
 
         {/* Price */}
         <div className="paywall-price-block">
           <div className="paywall-price">
-            <span className="paywall-price-amount">&pound;1</span>
-            <span className="paywall-price-period">first month</span>
+            <span className="paywall-price-amount">{offer.price}</span>
+            <span className="paywall-price-period">{offer.unit}</span>
           </div>
-          <div className="paywall-price-trial">then &pound;1.99/month &middot; cancel anytime &middot; or &pound;12 once for life</div>
+          <div className="paywall-price-trial">
+            {trialEligible
+              ? 'then \u00a31.99/month \u00b7 cancel anytime \u00b7 or \u00a312 once for life'
+              : 'you have subscribed before, so the \u00a31 first month does not apply \u00b7 cancel anytime \u00b7 or \u00a312 once for life'}
+          </div>
           <div className="paywall-price-value">Shown in GBP &mdash; you&rsquo;ll be charged in your local currency at checkout</div>
         </div>
 
@@ -165,7 +180,7 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
           {plansLink}
 
           <div className="paywall-trust-row">
-            <span>&pound;1 first month</span>
+            <span>{offer.price} {offer.unit}</span>
             <span className="paywall-trust-dot" />
             <span>Cancel anytime</span>
           </div>

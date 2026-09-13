@@ -181,6 +181,9 @@ export async function GET() {
     });
   } catch (err) {
     console.error('Subscription check error:', err);
-    return NextResponse.json({ plan: 'free', status: 'inactive', trialEligible: true });
+    // F031: this returned `trialEligible: true`, which fails OPEN against the rule's own doctrine
+    // — when we cannot tell, we quote the price we know we will honour. An unknown error is
+    // exactly the case where we cannot tell.
+    return NextResponse.json({ plan: 'free', status: 'inactive', trialEligible: false });
   }
 }

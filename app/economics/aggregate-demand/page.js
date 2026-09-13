@@ -127,7 +127,7 @@ export default async function AggregateDemandPage() {
 
       <div className="seo-cta">
         <h2>Master Aggregate Demand Interactively</h2>
-        <p>Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro, &pound;1 for your first month.</p>
+        <p>Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro, &pound;1 for your first month as a new subscriber.</p>
         <Link href="/?section=aggregate-demand" className="seo-cta-button">Start Revising &rarr;</Link>
       </div>
     </div>

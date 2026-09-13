@@ -1,5 +1,7 @@
 "use client";
 import { useState } from 'react';
+import { useClientValue } from '@/lib/use-client-storage';
+import { readAnswerLog } from '@/lib/answer-log';
 import StrengthMeter from '../StrengthMeter';
 import PostTest from './PostTest';
 import QuickFireDrill from './QuickFireDrill';
@@ -47,17 +49,30 @@ export default function CompletionScreen({
   }
 
   // Count completed sections for mixed review eligibility
-  let completedCount = 0;
-  if (typeof window !== 'undefined') {
-    try {
-      const schedule = JSON.parse(localStorage.getItem('revvy_review_schedule') || '[]');
-      completedCount = schedule.length;
-    } catch {}
-  }
+  // F118: both of these read localStorage in the render body, so they are read after hydration now.
+  const [completedCount] = useClientValue(
+    () => JSON.parse(localStorage.getItem('revvy_review_schedule') || '[]').length,
+    0,
+    [],
+  );
 
-  // Check if pre-test data exists for post-test
-  const hasPretestData = typeof window !== 'undefined' &&
-    (() => { try { const d = JSON.parse(localStorage.getItem(`revvy_pretest_${subjectId}_${sectionId}`) || '{}'); return d.questions?.length > 0; } catch { return false; } })();
+  /*
+   * Whether there is a post-test to offer.
+   *
+   * F017: this used to require pre-test data, so the post-test button was hidden from every
+   * student who skipped the pre-test — which is most of them, and exactly the students whose
+   * wrong answers had nowhere to reappear. The fallback post-test asks what they got wrong, so
+   * having logged a wrong answer also earns the button.
+   */
+  const [hasPostTest] = useClientValue(
+    () => {
+      const pre = JSON.parse(localStorage.getItem(`revvy_pretest_${subjectId}_${sectionId}`) || '{}');
+      if (pre.questions?.length > 0) return true;
+      return quizData?.length > 0 && readAnswerLog(subjectId, sectionId).some((e) => e.correct === false);
+    },
+    false,
+    [subjectId, sectionId, quizData],
+  );
 
   // Post-test sub-view
   if (completeView === 'posttest') {
@@ -167,7 +182,7 @@ export default function CompletionScreen({
       </div>
 
       {/* Post-test: re-test pre-test questions */}
-      {hasPretestData && (
+      {hasPostTest && (
         <button className="lm-complete-posttest-btn" onClick={() => setCompleteView('posttest')}>
           &#128200; Test your improvement
         </button>

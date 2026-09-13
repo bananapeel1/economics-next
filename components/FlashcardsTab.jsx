@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { useClientValue } from '@/lib/use-client-storage';
 import { useAuth } from './AuthProvider';
 import PaywallOverlay from './PaywallOverlay';
 import { CardsBlank } from './Icons';
@@ -29,13 +30,17 @@ export default function FlashcardsTab({ cards, sectionId, previewMode = false, t
     }
   }
 
-  const [statuses, setStatuses] = useState(() => {
-    if (typeof window === 'undefined' || previewMode) return {};
-    try {
+  // F118: a lazy initialiser reading localStorage still runs during the first client render, which
+  // is the render React compares against the server's. This reads after hydration instead.
+  const [statuses, setStatuses] = useClientValue(
+    () => {
+      if (previewMode) return {};
       const saved = localStorage.getItem(storageKey);
       return saved ? JSON.parse(saved) : {};
-    } catch { return {}; }
-  });
+    },
+    {},
+    [storageKey, previewMode],
+  );
   const syncTimer = useRef(null);
 
   // Deck = indices of cards to review this round
