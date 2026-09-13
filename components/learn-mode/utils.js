@@ -103,6 +103,11 @@ export function resolvePinnedItem(items, pin, used) {
  * @param {object} pin  { id?: string, ref?: string }
  * @param {Set} used
  */
+/** Letters and digits only, so punctuation and spacing cannot break a pin. */
+export function norm(s) {
+  return String(s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
 export function resolvePinnedDiagram(diagrams, pin, used) {
   if (!Array.isArray(diagrams) || !diagrams.length) return null;
 
@@ -113,13 +118,26 @@ export function resolvePinnedDiagram(diagrams, pin, used) {
   }
 
   if (pin?.ref) {
-    const ref = String(pin.ref).toLowerCase();
-    const idx = diagrams.findIndex((d, di) => {
-      if (used.has(di)) return false;
-      const title = (d.title || '').toLowerCase();
-      return title.includes(ref) || ref.includes(title);
-    });
-    if (idx >= 0) { used.add(idx); return diagrams[idx]; }
+    // F052. The old comparison lowercased but kept punctuation and spacing, so a block asking for
+    // "fiscal-policy-ad" never matched the diagram titled "Fiscal Policy: AD/AS Impact" and the
+    // block silently rendered nothing. Normalising both sides to letters and digits recovers four
+    // of the twenty-four broken pins; the other twenty name a diagram that does not exist, which
+    // is a content gap and is reported by `npm run diagrams` rather than hidden here.
+    const ref = norm(pin.ref);
+    if (ref) {
+      const idx = diagrams.findIndex((d, di) => {
+        if (used.has(di)) return false;
+        const title = norm(d.title);
+        return title && (title.includes(ref) || ref.includes(title));
+      });
+      if (idx >= 0) { used.add(idx); return diagrams[idx]; }
+    }
+    if (process.env.NODE_ENV !== 'production') {
+      console.warn(
+        `[diagrams] pin "${pin.ref}" matched no diagram. Available: ` +
+          (diagrams.map((d) => d.title).join(' | ') || '(none)'),
+      );
+    }
   }
 
   return null;
