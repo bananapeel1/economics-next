@@ -183,12 +183,12 @@
    "line": 217,
    "fix": "Advance each section's schedule entry from the mixed review's per-section score; queue all due entries in one session.",
    "impact": "A student who does a 10-question mixed review still sees 'N reviews due' afterwards. With three overdue topics they must click 'Review now' three times.",
-   "packet": 4,
+   "packet": 6,
    "status": "open",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "2026-09-13: deferred from packet 4 to packet 6. Mixed review advancing the schedule only matters once there is something bringing students back to use it, and packet 6 (re-entry) owns that. Low severity, and doing it now would be building a feature for a surface nobody arrives at."
   },
   {
    "id": "F012",
@@ -1476,8 +1476,8 @@
    "fix": "Fold into the gating decision above; at minimum allow retry in preview and show the best-of-2 to logged-in free users.",
    "impact": "Minor: the free student gets a 2-question 'quiz', cannot retry, and has no score history, so the tab feels like a demo rather than a feature.",
    "packet": 12,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-12",
    "verified_by": null,
    "evidence": null,
    "note": null

@@ -104,15 +104,20 @@ export default function QuizTab({ questions, sectionId, onAskTutor, previewMode 
             {score}/{displayQuestions.length}
           </div>
           <div className="quiz-score-label">
+            {/* F087: the preview score reads like a quiz result when it is two questions out of a
+                bank of 25, so "2/2" looked like mastery and "0/2" like failure. Say which it is,
+                and name the real size so the number cannot be mistaken for a section score. */}
             {previewMode
-              ? `You answered ${score} of ${displayQuestions.length} questions correctly.`
+              ? `${score} of ${displayQuestions.length} in the preview. The full quiz for this section has ${totalQuizQuestions} questions.`
               : score === displayQuestions.length ? 'Perfect score!' :
                 score >= displayQuestions.length * 0.8 ? 'Great work!' :
                 score >= displayQuestions.length * 0.5 ? 'Good effort — review the explanations below.' :
                 'Keep studying — review the explanations below.'}
           </div>
           {saving && <div style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 4 }}>Saving...</div>}
-          {!previewMode && <button className="quiz-reset-btn" onClick={handleReset}>Try Again</button>}
+          {/* Retry works in preview too. Refusing it made a two-question sample feel like a
+              one-shot test the student had already failed. */}
+          <button className="quiz-reset-btn" onClick={handleReset}>Try Again</button>
         </div>
       )}
 
