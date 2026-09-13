@@ -21,11 +21,15 @@ function CheckIcon() {
 }
 
 export default function PaywallOverlay({ feature = 'this feature', inline = false, previewText = '' }) {
-  const { user, isPremium } = useAuth();
+  const { user, isPremium, loading: authLoading, subscriptionLoaded } = useAuth();
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
 
-  // Don't show paywall to premium users
+  // Don't show the paywall to premium users — and don't show it to anyone until
+  // we know which they are. `subscription` is fetched after auth resolves, so
+  // `isPremium` is false for a beat on every cold load; rendering on that
+  // showed paying subscribers an upsell for the thing they already pay for.
+  if (authLoading || !subscriptionLoaded) return null;
   if (isPremium) return null;
 
   async function handleUpgrade() {

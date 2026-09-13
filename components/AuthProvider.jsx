@@ -9,6 +9,7 @@ const AuthContext = createContext({
   supabase: null,
   subscription: null,
   isPremium: false,
+  subscriptionLoaded: false,
   activating: false,
   activationFailed: false,
   refreshSubscription: () => {},
@@ -24,6 +25,7 @@ export function AuthProvider({ children, initialUser }) {
   const [user, setUser] = useState(initialUser || null);
   const [loading, setLoading] = useState(!initialUser);
   const [subscription, setSubscription] = useState(null);
+  const [subscriptionLoaded, setSubscriptionLoaded] = useState(false);
   const [activating, setActivating] = useState(false);
   const [activationFailed, setActivationFailed] = useState(false);
   const supabase = createClient();
@@ -42,14 +44,17 @@ export function AuthProvider({ children, initialUser }) {
   const fetchSubscription = useCallback(() => {
     if (!user) {
       setSubscription(null);
+      setSubscriptionLoaded(true);
       return;
     }
+    setSubscriptionLoaded(false);
     fetch('/api/subscription')
       .then(res => res.ok ? res.json() : null)
       .then(data => {
         if (data) setSubscription(data);
       })
-      .catch(() => setSubscription(null));
+      .catch(() => setSubscription(null))
+      .finally(() => setSubscriptionLoaded(true));
   }, [user]);
 
   // Fetch subscription status when user changes
@@ -108,6 +113,7 @@ export function AuthProvider({ children, initialUser }) {
         loading,
         supabase,
         subscription,
+        subscriptionLoaded,
         isPremium,
         activating,
         activationFailed,
