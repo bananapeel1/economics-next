@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useCallback, useMemo, useRef } from 'react';
+import { shuffleAllOptions } from '@/lib/shuffle-options';
 import { buildQueue, queueStats, computeNextReview, createDefaultProgress } from '@/lib/spaced-repetition';
 import QuestionCard from '@/components/practice/QuestionCard';
 import SessionSummary from '@/components/practice/SessionSummary';
@@ -510,7 +511,18 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
         });
       }
 
-      const fetchedQuizData = qJson.questions || {};
+      /*
+       * F074. Smart Practice draws the same bank as the Quiz tab, where the correct answer is
+       * option B in 64% of questions, and this surface was not shuffled — the finding names
+       * components/practice/QuestionCard.jsx by file and line. Shuffled here, at the point the
+       * bank enters the engine, with the same deterministic per-question order the section
+       * surfaces use, so a question looks the same wherever the student meets it.
+       */
+      const raw = qJson.questions || {};
+      const fetchedQuizData = {};
+      for (const [sectionId, list] of Object.entries(raw)) {
+        fetchedQuizData[sectionId] = Array.isArray(list) ? shuffleAllOptions(list) : list;
+      }
       setQuizData(fetchedQuizData);
 
       // 2. Fetch progress
