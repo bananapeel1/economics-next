@@ -55,7 +55,19 @@ export default function PostTest({ subjectId, sectionId, onClose, onScore, quizD
   const questions = useMemo(() => {
     const base = pretestData?.questions?.length ? pretestData.questions : fallback;
     return base.map((q) => {
-      const moved = shuffleOptions(q, 'post-test');
+      /*
+       * The post-test's order must DIFFER from the pre-test's, not merely be shuffled again. An
+       * independent shuffle lands on the same arrangement about one time in twenty-four, which
+       * across a three-question pre-test is roughly a one-in-five chance that at least one question
+       * looks untouched — and "it was the second one" works again for that question. Salts are
+       * tried until the order actually moves.
+       */
+      let moved = q;
+      for (let attempt = 0; attempt < 8; attempt += 1) {
+        moved = shuffleOptions(q, `post-test${attempt || ''}`);
+        if (moved === q) break; // declined, and a declined question is left alone on purpose
+        if (JSON.stringify(moved.options) !== JSON.stringify(q.options)) break;
+      }
       if (moved === q || typeof q.userAnswer !== 'number') return moved;
       const chosen = q.options?.[q.userAnswer];
       const at = moved.options?.indexOf(chosen);

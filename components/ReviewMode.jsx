@@ -35,22 +35,32 @@ export function getReviewSchedule() {
 /**
  * Count how many reviews are currently due.
  */
+/**
+ * Is this entry due?
+ *
+ * F008. There were two due filters: this one, and the one `getDueReviews` used. I added the
+ * retirement rule to only one of them, so the banner counted retired topics and offered a "Review
+ * now" button that opened nothing — a dead control, which is worse than the growing number it was
+ * meant to fix. One predicate now, used by both.
+ */
+function isDue(entry, now) {
+  return !!entry && !entry.retired && entry.nextDue <= now;
+}
+
 export function countDueReviews() {
-  const schedule = getReviewSchedule();
   const now = Date.now();
-  return schedule.filter(r => r.nextDue <= now).length;
+  return getReviewSchedule().filter((r) => isDue(r, now)).length;
 }
 
 /**
  * Get all due review entries.
  */
 export function getDueReviews() {
-  const schedule = getReviewSchedule();
+  // A retired topic is one answered well at every rung of the ladder. It stays in the schedule so
+  // its history survives, but it stops counting as due — otherwise the number a student sees only
+  // ever grows and stops meaning "these need attention".
   const now = Date.now();
-  // F008: a retired topic is one answered well at every rung of the ladder. It stays in the
-  // schedule so its history survives, but it stops being counted as due — otherwise the number a
-  // student sees on Home grows forever and stops meaning "these need attention".
-  return schedule.filter(r => !r.retired && r.nextDue <= now);
+  return getReviewSchedule().filter((r) => isDue(r, now));
 }
 
 /**
@@ -271,9 +281,44 @@ export function MixedReview({ onFinish }) {
       if (answers[i] === q.correctIndex) sectionScores[key].correct++;
     });
 
-    Object.values(sectionScores).forEach(s => {
-      recordReview(s.subjectId, s.sectionId, s.total > 0 ? s.correct / s.total : 0);
+    /*
+     * F008. This fed the strength meter and stopped, so the schedule never learned anything from a
+     * mixed review — and that made retirement a one-way door. A retired topic is excluded from the
+     * due list, the due list is the only route into the spaced review, and the spaced review was
+     * the only thing that could ever clear the flag. Once retired, gone for good, however badly
+     * the student went on to do on it.
+     *
+     * Mixed review already pulls retired topics into its pool. It now writes the result back, so a
+     * topic the student has started getting wrong comes back into the schedule on its own.
+     * Deliberately only ever brings a topic BACK: a good mixed-review score does not advance the
+     * ladder, because ten interleaved questions across several topics is a weaker signal than a
+     * focused review of one, and advancing on it would space topics out on thin evidence.
+     */
+    const schedule = getReviewSchedule();
+    let changed = false;
+    Object.values(sectionScores).forEach((sec) => {
+      const score = sec.total > 0 ? sec.correct / sec.total : 0;
+      recordReview(sec.subjectId, sec.sectionId, score);
+
+      const idx = schedule.findIndex(
+        (r) => r.sectionId === sec.sectionId && r.subjectId === sec.subjectId,
+      );
+      if (idx < 0) return;
+      const entry = schedule[idx];
+      if (score >= 0.6 || !entry.retired) return;
+
+      const intervals = entry.intervals || [1, 3, 7, 14, 30, 60];
+      const back = Math.max((entry.currentInterval || 0) - 1, 0);
+      schedule[idx] = {
+        ...entry,
+        retired: false,
+        currentInterval: back,
+        nextDue: Date.now() + (intervals[back] || 1) * 24 * 60 * 60 * 1000,
+        lastScore: score,
+      };
+      changed = true;
     });
+    if (changed) saveSchedule(schedule);
   }
 
   const correctCount = allQuestions.reduce((c, q, i) => c + (answers[i] === q.correctIndex ? 1 : 0), 0);
