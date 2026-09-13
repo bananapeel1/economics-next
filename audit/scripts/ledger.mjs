@@ -72,6 +72,15 @@ switch (cmd) {
   }
   case 'claim': {
     const n = Number(ids[0]);
+    // `claim F004 F006` (no packet number) used to write closed_by = "packet-NaN" and report
+    // success. The gate matches on `closed_by === packet-<n>`, so those items became invisible to
+    // their own packet and it reported clear with unverified work sitting in it — the precise
+    // failure this gate exists to prevent, produced by a typo. It is now an error.
+    if (!Number.isInteger(n) || n < 0) {
+      console.error(`claim needs a packet number first: ledger.mjs claim <n> <id>...  (got "${ids[0]}")`);
+      process.exit(1);
+    }
+    if (ids.length < 2) { console.error('claim needs at least one id'); process.exit(1); }
     for (const id of ids.slice(1)) { const r = get(id); if (r.status === 'open' || r.status === 'not-fixed') { r.status = 'claimed'; r.closed_by = `packet-${n}`; } }
     save(); console.log(`claimed ${ids.length - 1} items for packet ${n}`);
     break;
