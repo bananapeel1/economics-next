@@ -167,7 +167,7 @@ export default function BusinessPage() {
               Written for the International A-Level &mdash; not the UK domestic spec &mdash; organised by the same WBS11&ndash;WBS14 units and spec points as your papers.
             </p>
             <div className="elp-hero-actions">
-              <Link href="/?section=meeting-customer-needs" className="elp-btn-primary">
+              <Link href="/business/unit-1/meeting-customer-needs" className="elp-btn-primary">
                 Start revising free &rarr;
               </Link>
             </div>
@@ -256,7 +256,7 @@ export default function BusinessPage() {
               <p className="elp-unit-desc">{unit.desc}</p>
               <div className="elp-topics-grid">
                 {unit.sections.map((s) => (
-                  <Link key={s.id} href={`/?section=${s.id}`} className="elp-topic-tile">
+                  <Link key={s.id} href={`/business/unit-${unit.num}/${s.id}`} className="elp-topic-tile">
                     <div className="elp-tt-ref">{s.number}</div>
                     <div className="elp-tt-body">
                       <div className="elp-tt-name">{s.title}</div>
@@ -266,7 +266,7 @@ export default function BusinessPage() {
                   </Link>
                 ))}
               </div>
-              <Link href={`/?section=${unit.ctaSection}`} className="elp-unit-cta">
+              <Link href={`/business/unit-${unit.num}/${unit.ctaSection}`} className="elp-unit-cta">
                 Start revising Unit {unit.num} &rarr;
               </Link>
             </div>

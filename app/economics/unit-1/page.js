@@ -120,7 +120,7 @@ export default function Unit1Page() {
             <h1 className="elp-hero-title">{UNIT.title} &mdash;<br /><em style={{ color: 'var(--eup-accent)' }}>{UNIT.code} notes</em></h1>
             <p className="elp-hero-desc">Complete revision notes for Unit 1. Demand, supply, price determination, market failure and government intervention &mdash; structured around the Edexcel spec, with flashcards, quizzes and AI tutor for every topic.</p>
             <div className="elp-hero-actions">
-              <Link href="/?section=introductory-concepts" className="elp-btn-primary">Start revising free &rarr;</Link>
+              <Link href="/economics/unit-1/introductory-concepts" className="elp-btn-primary">Start revising free &rarr;</Link>
               
             </div>
             <div className="elp-hero-proof">
@@ -182,13 +182,13 @@ export default function Unit1Page() {
             <div className="eup-topic-block elp-fade-up" id={`t-${section.ref.replace(/\./g, '')}`}>
               <div className="eup-topic-label-row">
                 <div className="eup-topic-ref-badge">{section.ref}</div>
-                <Link href={`/?section=${section.id}`} className="eup-topic-heading">{section.title}</Link>
-                <Link className="eup-topic-open-link" href={`/?section=${section.id}`}>Open in app &rarr;</Link>
+                <Link href={`/economics/unit-1/${section.id}`} className="eup-topic-heading">{section.title}</Link>
+                <Link className="eup-topic-open-link" href={`/economics/unit-1/${section.id}`}>Open in app &rarr;</Link>
               </div>
               <p className="eup-topic-desc">{section.desc}</p>
               <div className="eup-subtopic-grid">
                 {section.subtopics.map(st => (
-                  <Link key={st.letter} href={`/?section=${section.id}`} className="eup-subtopic-tile">
+                  <Link key={st.letter} href={`/economics/unit-1/${section.id}`} className="eup-subtopic-tile">
                     <div className="eup-st-num">{st.letter}</div>
                     <div className="eup-st-body">
                       <div className="eup-st-name">{st.name}</div>
@@ -286,7 +286,7 @@ export default function Unit1Page() {
           <h2 className="elp-cta-title">Ready to revise Unit 1?</h2>
           <p className="elp-cta-sub">Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro — £1 for your first month.</p>
           <div className="elp-cta-actions">
-            <Link href="/?section=introductory-concepts" className="elp-btn-primary" style={{ fontSize: 15, padding: '14px 30px' }}>Open Revvy Learn — it&apos;s free →</Link>
+            <Link href="/economics/unit-1/introductory-concepts" className="elp-btn-primary" style={{ fontSize: 15, padding: '14px 30px' }}>Open Revvy Learn — it&apos;s free →</Link>
             <Link href="/economics" className="elp-btn-secondary">← Back to all units</Link>
           </div>
           <p className="elp-cta-note">No signup required for notes · Cancel anytime · £1 first month, then £1.99 · charged in your local currency</p>

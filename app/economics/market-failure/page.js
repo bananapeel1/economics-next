@@ -572,7 +572,7 @@ export default async function MarketFailurePillarPage() {
         icon={LearnMode}
         heading={"Revise market failure in the app"}
         sub={"Diagrams, flashcards and exam-style practice on this exact topic"}
-        href="/?section=market-failure"
+        href="/economics/unit-1/market-failure"
         cta={"Open 1.3.5"}
       />
 

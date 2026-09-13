@@ -115,7 +115,7 @@ export default function GuidesIndexPage() {
           <h2 className="elp-cta-title">Start revising interactively</h2>
           <p className="elp-cta-sub">Use flashcards, quizzes and the AI tutor alongside these guides.</p>
           <div className="elp-cta-actions">
-            <Link href="/?section=introductory-concepts" className="elp-btn-primary" style={{ fontSize: '15px', padding: '14px 30px' }}>Open Revvy Learn &rarr;</Link>
+            <Link href="/economics/unit-1/introductory-concepts" className="elp-btn-primary" style={{ fontSize: '15px', padding: '14px 30px' }}>Open Revvy Learn &rarr;</Link>
           </div>
         </div>
       </div>
