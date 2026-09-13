@@ -130,9 +130,16 @@ verbatim spec in `audit/raw/econ_spec.txt` / `bus_spec.txt` — the same source 
 
 Three things that bear on this plan:
 
-1. **Scope reconciliation needed.** PLAN.md budgets "all 340 spec gaps". This audit counts 175 MISSING
-   plus 237 THIN = 412 across 1,073 requirements (62% properly taught). The definitions may differ, but
-   the gap is roughly 20 sessions of work and should be reconciled before the Content stage is costed.
+1. ~~**Scope reconciliation needed.**~~ **Done 13 September.** Matched section by section against the
+   ledger: 156 of the 175 MISSING and 166 of the 237 THIN were already described by an existing ledger
+   item. **Net new scope is 90 items, not 412** — 19 gaps and 71 thin — which is about two per section and
+   fits inside the existing per-session budget. The Content stage does not grow by twenty sessions. All 90
+   are in the ledger; see the reconciliation table in `PLAN.md`.
+
+   Two by-products, both bigger than the counts: **154 ledger items cite UK GCE spec numbers that do not
+   exist in the IAL spec** (every real IAL topic number has 3 as its middle digit), now annotated with the
+   correct topic for their section; and **17 requirements across 12 sections are quizzed but never taught**
+   (`audit/raw/assessed-not-taught-2026-09-13.json`), which is the cheapest work in the whole Content stage.
 
 2. **The diagnosis, which reframes the Content stage.** The notes read as adapted from UK GCE A-level
    rather than built from the IAL spec. Business 3.3.5 teaches VRIO, Porter's Five Forces, the balanced
@@ -146,7 +153,9 @@ Three things that bear on this plan:
    attacked by a second agent trying to overturn it; 23 of 197 were overturned and downgraded, so expect
    a residual error rate and spot-check before writing to a gap.
 
-Cheapest live item: seven topics quiz students on content the notes never teach (HR half of Business
+Measured across all 43 sections on 13 September, this is 17 requirements in 12 sections — the list is in
+`audit/raw/assessed-not-taught-2026-09-13.json`. The original estimate named seven topics that quiz
+students on content the notes never teach (HR half of Business
 3.3.5, contingency planning in 3.3.6, PESTLE/Porter's five forces in 3.3.1, stakeholder distinction in
 3.3.4, profit satisficing and cost efficiency in 1.3.5, specific vs ad valorem in Economics 1.3.3, FDI in
 Economics 2.3.5). Wording already exists in the flashcards/quizzes; it just isn't taught.
