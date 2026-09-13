@@ -55,6 +55,38 @@ correct IAL phrasing *is* the paper's phrasing, and the median stem is 15 words.
 Layer 4's attestation, not by forcing questions to sound unlike the exam.
 
 
+## Layer 1b — option letters in explanations
+
+**Added 13 September 2026, from five rounds of verification on F074.**
+
+Options are now shuffled at render, because the correct answer was option B in 492 of 769 questions
+and a student who always picked B scored 64% without reading. 109 explanations refer to options by
+letter — "Option A describes a mass market", "TV ads (A)" — so those letters have to move with the
+options they name.
+
+Telling a reference from a coincidence turned out to be genuinely hard, and five separate rules were
+each defeated by a real or constructed case, twice in ways that made an explanation contradict its
+own question. The code's final answer is to rewrite only what a keyword marks — "Option D",
+"Options A, C and D", "(Options A and C)" — and to **decline to shuffle the whole question**
+wherever a letter's meaning is not certain. 25 of 769 decline today.
+
+That works, but it means every declining question keeps the answer-position bias. These are
+blocking rules on authored content, so the gate shrinks that set rather than living with it:
+
+1. **Refer to an option only as "Option X", never as a bare "(X)".** "TV ads (A)" is ambiguous with
+   the Consumption symbol and with the article; "TV ads (Option A)" is not. 14 questions decline
+   today for this reason alone and would shuffle immediately if reworded.
+2. **Never put a capital A-F next to a digit or inside an equation in an explanation** — "B2B",
+   "C + I + G", "A / (A + B)". Where the economics needs the identity, name the options in a
+   separate sentence from the equation.
+3. **Never interrupt a list of option letters with prose and then resume it.** "Option C, B to D on
+   the diagram" reads as a three-option list and is not one.
+4. **Do not name a diagram's labelled points with letters A-F in an explanation that also refers to
+   options.** Use "point one" or a described position.
+
+The first is the one that matters: it converts an unshuffleable question into a shuffleable one at
+the cost of six characters.
+
 ## Layer 1a — the reorder rule the audit was not strict enough about
 
 **Added 12 September, from the founder's own observation, against the audit's verdict.**
