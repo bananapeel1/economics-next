@@ -47,7 +47,10 @@ export function countDueReviews() {
 export function getDueReviews() {
   const schedule = getReviewSchedule();
   const now = Date.now();
-  return schedule.filter(r => r.nextDue <= now);
+  // F008: a retired topic is one answered well at every rung of the ladder. It stays in the
+  // schedule so its history survives, but it stops being counted as due — otherwise the number a
+  // student sees on Home grows forever and stops meaning "these need attention".
+  return schedule.filter(r => !r.retired && r.nextDue <= now);
 }
 
 /**
@@ -55,7 +58,9 @@ export function getDueReviews() {
  * >=60% correct: move to next interval. <40%: move back one interval.
  */
 function advanceReview(entry, score) {
-  const intervals = entry.intervals || [1, 3, 7, 14];
+  // F008: older entries were written with a four-rung ladder that stopped at 14 days. They get the
+  // longer one on their next review rather than being stuck at a fortnight for good.
+  const intervals = (entry.intervals && entry.intervals.length >= 6) ? entry.intervals : [1, 3, 7, 14, 30, 60];
   let nextIdx = entry.currentInterval;
 
   if (score >= 0.6) {
@@ -65,7 +70,19 @@ function advanceReview(entry, score) {
   }
   // 40-60%: stay at same interval
 
-  const nextDays = intervals[nextIdx] || 14;
+  const nextDays = intervals[nextIdx] || 60;
+
+  /*
+   * F008, retirement. Without this, a topic never leaves the schedule: a student who has answered
+   * it correctly at every rung is still asked about it every 60 days for as long as they use the
+   * product, and the due count they see never reflects what actually needs attention.
+   *
+   * A topic retires when it reaches the top of the ladder and is still answered well. It comes
+   * straight back if a later mixed review goes badly, because `retired` is cleared on any score
+   * below the threshold.
+   */
+  const atTop = nextIdx === intervals.length - 1;
+  const retired = atTop && score >= 0.8;
 
   return {
     ...entry,
@@ -77,6 +94,8 @@ function advanceReview(entry, score) {
      * only ever counts up, so the window keeps walking whatever the schedule does.
      */
     reviewsDone: (entry.reviewsDone || 0) + 1,
+    intervals,
+    retired,
     // Written back shuffled, so the next read does not shuffle it a second time.
     optionsShuffled: true,
     nextDue: Date.now() + nextDays * 24 * 60 * 60 * 1000,

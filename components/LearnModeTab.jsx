@@ -317,18 +317,47 @@ export default function LearnModeTab({
              * seen, then the ones they are solid on. The five that survive the slice are the five
              * worth asking again.
              */
-            const ordered = orderByPriority(quizData, readAnswerLog(subjectId, sectionId));
+            /*
+             * F008, the bank partition. The pre-test's three questions were eligible for the
+             * review schedule too, so a student could be asked in review the very question they
+             * were asked before the topic was taught — the one whose answer they may simply
+             * remember. Those three go to the back of the queue: still reachable once everything
+             * else has been through, never chosen first.
+             */
+            let pretestKeys = new Set();
+            try {
+              const raw = localStorage.getItem(`revvy_pretest_${subjectId}_${sectionId}`);
+              const pre = raw ? JSON.parse(raw) : null;
+              pretestKeys = new Set(
+                (pre?.questions || []).map((q) => String(q?.question || '').replace(/\s+/g, ' ').trim()),
+              );
+            } catch { /* no pre-test recorded, nothing to hold back */ }
+            const key = (q) => String(q?.question || '').replace(/\s+/g, ' ').trim();
+            const prioritised = orderByPriority(quizData, readAnswerLog(subjectId, sectionId));
+            const ordered = [
+              ...prioritised.filter((q) => !pretestKeys.has(key(q))),
+              ...prioritised.filter((q) => pretestKeys.has(key(q))),
+            ];
             existing.push({
               sectionId, subjectId,
               title: currentSection?.title || 'Unknown section',
               // F074: quizData reaches here already shuffled, so ReviewMode must not shuffle again.
               optionsShuffled: true,
-              // F008: this stored five and replayed the identical five at 1, 3, 7, 14 and 30 days,
-              // so a section's reviews were the same five questions for a month while twenty sat
-              // unused. Fifteen are stored, worst first, and ReviewMode moves a window of five
-              // along them at each interval.
-              questions: ordered.slice(0, Math.min(15, ordered.length)),
-              intervals: [1, 3, 7, 14], currentInterval: 0,
+              /*
+               * F008. This stored five and replayed the identical five at every interval, so a
+               * section's reviews were the same five questions while twenty sat unused. Then it
+               * stored fifteen, which still left ten of a twenty-five-question section unreachable.
+               * The whole bank is stored, worst first, and ReviewMode walks a window of five along
+               * it — so every question a section has is eventually reviewed.
+               *
+               * Twenty-five questions of a few hundred bytes each is a few tens of kilobytes per
+               * completed section; localStorage holds several megabytes.
+               */
+              questions: ordered,
+              // F008: the ladder stopped at 14 days and stayed there for good, so a topic a
+              // student knew well was still asked every fortnight forever. It now reaches a month
+              // and then two, matching the schedule the product's own copy promises, and retires.
+              intervals: [1, 3, 7, 14, 30, 60], currentInterval: 0,
               nextDue: Date.now() + 1 * 24 * 60 * 60 * 1000, lastScore: null,
             });
             localStorage.setItem('revvy_review_schedule', JSON.stringify(existing));

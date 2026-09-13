@@ -1,6 +1,7 @@
 "use client";
 import { useState, useMemo, useRef, useEffect } from 'react';
 import { readAnswerLog, orderByPriority } from '@/lib/answer-log';
+import { shuffleOptions } from '@/lib/shuffle-options';
 
 /**
  * Post-session assessment — re-shows pre-test questions after completing the section.
@@ -38,12 +39,33 @@ export default function PostTest({ subjectId, sectionId, onClose, onScore, quizD
     return orderByPriority(quizData, log).slice(0, 5);
   }, [pretestData, quizData, subjectId, sectionId]);
 
-  const questions = pretestData?.questions?.length ? pretestData.questions : fallback;
+  /*
+   * F079. The post-test replayed the pre-test verbatim: same three stems, same order, and the same
+   * option order. "It was the second one" is then a perfectly good way to score full marks, and the
+   * before-and-after number measures recall of a position rather than of any economics.
+   *
+   * Same questions, different option order. The stems have to match or the comparison is not a
+   * comparison, but nothing requires the options to sit where they sat an hour ago. A different
+   * salt gives each question a different arrangement from the one the pre-test showed, and it is
+   * still deterministic, so re-rendering does not move the answer under the student.
+   *
+   * The student's own pre-test choice is carried across to wherever that option now sits, so the
+   * stored record still says which option they picked rather than which slot.
+   */
+  const questions = useMemo(() => {
+    const base = pretestData?.questions?.length ? pretestData.questions : fallback;
+    return base.map((q) => {
+      const moved = shuffleOptions(q, 'post-test');
+      if (moved === q || typeof q.userAnswer !== 'number') return moved;
+      const chosen = q.options?.[q.userAnswer];
+      const at = moved.options?.indexOf(chosen);
+      return { ...moved, userAnswer: at >= 0 ? at : q.userAnswer };
+    });
+  }, [pretestData, fallback]);
+
   const isComparison = !!pretestData?.questions?.length;
   const pretestScore = pretestData?.score ?? 0;
   const pretestTotal = pretestData?.total ?? 0;
-
-  if (!questions.length) return null;
 
   function handleSelect(qIdx, optIdx) {
     if (submitted) return;
@@ -66,6 +88,16 @@ export default function PostTest({ subjectId, sectionId, onClose, onScore, quizD
     reportedRef.current = true;
     onScore?.(postScore / questions.length);
   }, [submitted, postScore, questions.length, onScore]);
+  /*
+   * Every hook is above this line. It used to sit before the two below, and before packet 8 that
+   * was safe because `questions` came from a memo on the ids alone and its length could not change
+   * mid-mount. The fallback made it depend on a prop and on the answer log, so the hook count could
+   * go up between renders and React would throw. Not reachable today, because the button that
+   * mounts this is gated on the same data — which is exactly the kind of luck that stops being
+   * true after one unrelated edit.
+   */
+  if (!questions.length) return null;
+
   const improved = postScore > pretestScore;
   const same = postScore === pretestScore;
   const perfect = postScore === questions.length;
