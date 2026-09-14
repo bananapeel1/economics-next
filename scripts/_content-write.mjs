@@ -1,7 +1,7 @@
 /**
  * The one way content reaches the database from a script. Packet 3.
  *
- *   import { stageSection, validateLive, loadBundle, contextFor } from './_content-write.mjs';
+ *   import { stageSection, stageBundle, validateLive, loadBundle, contextFor } from './_content-write.mjs';
  *
  * Every content write goes through `stageSection`, which validates the WHOLE section as it would be
  * after the write — the drafted table plus the live copies of the other seven — and refuses on any
@@ -87,7 +87,44 @@ export async function stageSection(sectionId, table, payload, { dryRun = false }
 
   if (!verdict.ok) return { ...verdict, created: false };
   if (dryRun) return { ...verdict, created: false, dryRun: true };
+  const created = await writeDraft(sectionId, table, payload);
+  return { ...verdict, created };
+}
 
+/**
+ * Stage a WHOLE section at once. Packet 14, the first section rewrite.
+ *
+ * `stageSection` validates one table against the LIVE copies of the other seven. That is right for a
+ * packet that touches one table and wrong for a rewrite: new content pins into a new quiz array and new
+ * diagrams, so staged one table at a time the content is refused for pointing past the live quiz, or the
+ * quiz goes first and the live content is judged against it. A rewrite is therefore validated once, as the
+ * whole section it will be after publish — the same bundle scripts/publish-section.mjs validates — and every
+ * table whose payload differs from live is written to `draft` and read back. Tables equal to their live
+ * payload are left alone, so publish shows only what changed.
+ *
+ * Returns { ok, findings, summary, newBlocks, newDebt, staged, unchanged, wouldStage }. Nothing is written
+ * when `ok` is false or `dryRun` is set.
+ */
+export async function stageBundle(sectionId, bundle, { dryRun = false } = {}) {
+  for (const key of Object.keys(bundle)) if (!Object.values(TABLE_TO_KEY).includes(key)) throw new Error(`${key} is not a content table key`);
+  const [live, ctx] = await Promise.all([loadBundle(sectionId), contextFor(sectionId)]);
+  const next = { ...live };
+  for (const key of Object.keys(bundle)) next[key] = bundle[key];
+  const verdict = gateSection(next, ctx, loadBaseline());
+  const tables = Object.entries(TABLE_TO_KEY).filter(([, key]) => key in bundle);
+  const wouldStage = tables.filter(([, key]) => !sameJson(live[key], bundle[key])).map(([t]) => t);
+  const unchanged = tables.filter(([, key]) => sameJson(live[key], bundle[key])).map(([t]) => t);
+  if (!verdict.ok || dryRun) return { ...verdict, staged: [], unchanged, wouldStage, dryRun };
+  const staged = [];
+  for (const table of wouldStage) {
+    await writeDraft(sectionId, table, bundle[TABLE_TO_KEY[table]]);
+    staged.push(table);
+  }
+  return { ...verdict, staged, unchanged, wouldStage };
+}
+
+/** Write one table's draft and read it back. Returns true when the row had to be created. */
+async function writeDraft(sectionId, table, payload) {
   // PostgREST does not error on an update that matches no row, so ask for the rows back and
   // count them. Verification found the old path reporting ok:true having written nothing.
   const upd = await supabase.from(table).update({ draft: payload }).eq('section_id', sectionId).select('section_id');
@@ -111,7 +148,7 @@ export async function stageSection(sectionId, table, payload, { dryRun = false }
   if (!back || !sameJson(back.draft, payload)) {
     throw new Error(`${sectionId} ${table}: read-back does not match the staged payload; nothing to publish`);
   }
-  return { ...verdict, created };
+  return created;
 }
 
 /** Print findings the way every caller should: BLOCK first, then DEBT counts, then INFO. */

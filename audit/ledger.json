@@ -1833,10 +1833,10 @@
    "fix": "Bring U3-4 to the U1-2 template: ≥4 blocks, 1 recall per subsection (chains only), 25 MCQs, pins per block; add a validator rule that fails a push when a section's blocks < 4 or recalls/subsection < 0.5 or quiz < 20; prioritise economics 3.3.1-3.3.3 and business 3.3.1-3.3.2 (most-traversed after U2).",
    "impact": "A student finishing 2.3.6 (5 blocks, 17 subsections, 17 recalls, 4 pinned diagrams, 25-question bank) opens 3.3.1 and gets 4 blocks/8 subsections with no recall widgets, no inline diagram/quiz/practice at chapter ends, longer paragraphs, a 10-question bank where the pre-test (3 random) and post-test (same 3, PostTest.jsx:18-23) and quick-fire (all 10) overlap heavily. Unit 4 sections are 2-3 steps total. The product visibly downgrades exactly when the student reaches the harder, exam-year content.",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "scripts/packet-14-decision-making-techniques.mjs:109 dry-run - 5 blocks, 15 subsections, 15 recalls, 32 quiz; every block carries diagramId+quizIndices+practiceIndices, meeting the Unit 1 template for this section per NEXT.md Packet 14 spec",
    "note": "14 Sep 2026, packet 3: the validator rule is built and fails a push that would leave a section below 4 blocks, 0.5 recalls per subsection or 20 quiz items (DEBT, baselined). Bringing Units 3-4 to the Unit 1 template is authoring, not code: it is the content stage, starting with packet 14's template section. Reassigned there."
   },
   {
@@ -6910,10 +6910,10 @@
    "rank": 0,
    "text": "Add an Investment Appraisal block (simple payback incl. part-year formula, ARR, NPV with a discount-factor table and worked example, limitations of each) so the 5 MCQs, 4 practice questions and 7 flashcards that test it are actually taught; add a matching notes[] entry.",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "scripts/_packet14-content.mjs:131-271 payback, ARR and NPV subsections with worked examples; NOTES chapter at :636-671",
    "note": null
   },
   {
@@ -6923,10 +6923,10 @@
    "rank": 1,
    "text": "Add diagrams for every subsection: a decision tree (squares/circles, roll-back arrows, worked figures), an Edexcel-style CPA network with node circles showing node/EST/LFT plus a float table, a time-series chart with 3-period moving average and extrapolated trend, and a scatter graph showing positive/negative/spurious correlation.",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "scripts/_packet14-diagrams.mjs:28-225 five SVGs (time series plus moving average, scatter, decision tree, CPA network, contribution), each pinned via diagramId in tables.content",
    "note": null
   },
   {
@@ -6936,10 +6936,10 @@
    "rank": 2,
    "text": "Replace off-spec assessment items: quiz[7] and quiz[8] (Unit 2 contribution/break-even) and practice[3] (sensitivity analysis) with items on extrapolation limits, correlation vs causation, CPA limitations and decision-tree limitations; add a CPA calculation practice (e.g. 'Calculate the float of activity X and identify the critical path', 4-6 marks) and a sales-forecasting one ('Calculate the 3-period moving average and comment on the trend').",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "old quiz id d35ddac6 (break-even) and practice id ef16797f (sensitivity) absent from audit/snapshots/packet-14-bundle__business__decision-making-techniques.json; CPA-float and moving-average Calculate practice added at scripts/_packet14-assessment.mjs:125-136",
    "note": null
   },
   {
@@ -6949,10 +6949,10 @@
    "rank": 3,
    "text": "Introduce recall widgets where the sequence is genuine: reorder for decision-tree roll-back (assign probabilities/payoffs -> EMV at chance nodes -> subtract cost -> choose highest net gain at decision node), CPA (list dependencies -> forward pass ESTs -> backward pass LFTs -> float -> critical path), forecasting (collect data -> moving average -> trend -> extrapolate); fillin for Float = LFT - duration - EST and EMV formula.",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "scripts/_packet14-content.mjs:329-344 tree roll-back reorder, :443-457 CPA reorder, :78-94 forecasting reorder, :403-414 float fillin; all 15 recalls present per runner output (4 reorder, 5 fillin, 2 match, 4 classify)",
    "note": null
   },
   {
@@ -6962,10 +6962,10 @@
    "rank": 4,
    "text": "Restructure to 4 blocks in spec order (3.3.1 Sales forecasting, 3.3.2 Investment appraisal, 3.3.3 Decision trees, 3.3.4 CPA), fix the section number/title to Pearson's '3.3 Decision-making techniques', and set quizIndices/practiceIndices on each block so inline quiz/practice match what the step just taught.",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "tables.content in packet-14-bundle snapshot has 5 blocks in spec order Sales Forecasting through Contribution, each with quizIndices and practiceIndices; audit/raw/bus_spec.txt:1146 shows the heading is 3.3.3, so the relabel-to-3.3 half of this finding was itself wrong and correctly not done",
    "note": null
   },
   {
@@ -6974,10 +6974,10 @@
    "kind": "quiz",
    "text": "q1: Tests payback (spec 3.3.2), which is never taught in this section's content[] or notes[]. Because PreTest samples 3 random MCQs from this bank, a learner can be gated on wholly untaught material.",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "old id decision-making-techniques:quiz:3542b01c kept in the Investment Appraisal block; scripts/_packet14-content.mjs:131-164 payback subsection now teaches it",
    "note": null
   },
   {
@@ -6986,10 +6986,10 @@
    "kind": "quiz",
    "text": "q2: ARR never taught in Learn Mode content or notes. Question itself is correct (10%).",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "old id decision-making-techniques:quiz:2fe633eb kept; scripts/_packet14-content.mjs:166-208 arr subsection teaches ARR",
    "note": null
   },
   {
@@ -6998,10 +6998,10 @@
    "kind": "quiz",
    "text": "q3: NPV never taught in Learn Mode content or notes. Question correct (reject).",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "old id decision-making-techniques:quiz:fb473d08 kept; scripts/_packet14-content.mjs:210-242 npv subsection teaches NPV and discounted cash flow",
    "note": null
   },
   {
@@ -7010,10 +7010,10 @@
    "kind": "quiz",
    "text": "q7: Contribution is WBS12 Unit 2 (2.2.3 break-even) content, not IAL 3.3 Decision-making techniques. Off-spec for this section and untaught here.",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "audit/raw/bus_spec.txt:1175-1177 shows contribution is sub-topic 5 of 3.3.3, in spec not Unit 2; old id b5977ab6 kept and now taught at scripts/_packet14-content.mjs:492-523; see also audit/DECISIONS.md 2026-09-14 correction entry",
    "note": "SPEC NUMBERING: this item cites 2.2.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.3. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -7022,10 +7022,10 @@
    "kind": "quiz",
    "text": "q8: Break-even is Unit 2 content, off-spec for this section and untaught here.",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "old id decision-making-techniques:quiz:d35ddac6 (break-even) absent from packet-14-bundle snapshot; break-even reduced to two synoptic mentions at bundle lines 869 and 1378, neither in quiz or practice",
    "note": null
   },
   {
@@ -7034,10 +7034,10 @@
    "kind": "practice",
    "text": "p3: 'Explain how sensitivity analysis can improve business decision-making' (4 marks) - sensitivity analysis is not in the IAL Business spec (3.3.2 lists simple payback, ARR, NPV and their limitations only). Off-spec.",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "old id decision-making-techniques:practice:ef16797f (sensitivity, Outline) absent from the bundle; zero sensitivity and zero Outline hits anywhere in audit/snapshots/packet-14-bundle__business__decision-making-techniques.json",
    "note": null
   },
   {
@@ -7046,10 +7046,10 @@
    "kind": "structure",
    "text": "Scope mismatch: content[] and notes[] cover decision trees, CPA, moving averages/extrapolation, correlation - but investment appraisal (payback/ARR/NPV, spec 3.3.2) is absent while quiz (4/10), practice (4/5), flashcards (7/20), common_mistakes (2/6) and extras chains (1/4) are dominated by it. The Learn Mode never teaches what its own assessments test.",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "content now teaches Investment Appraisal (scripts/_packet14-content.mjs:131-271) and Contribution (:492-552), closing the mismatch between content and quiz/practice/flashcards",
    "note": null
   },
   {
@@ -7058,10 +7058,10 @@
    "kind": "structure",
    "text": "Block order does not follow the spec (3.3.1 sales forecasting, 3.3.2 investment appraisal, 3.3.3 decision trees, 3.3.4 CPA); block 1 title 'Quantitative Techniques' is a misnomer since block 2 (sales forecasting) is equally quantitative.",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "tables.content blocks are in order Sales Forecasting, Investment Appraisal, Decision Trees, Critical Path Analysis, Contribution; no Quantitative Techniques title remains in the bundle",
    "note": null
   },
   {
@@ -7070,10 +7070,10 @@
    "kind": "structure",
    "text": "Only 2 blocks -> 2 learn steps, each pairing two calculation-heavy topics (decision trees + CPA; moving averages + correlation). Each step carries ~6 paragraphs, 2 flows, 2 examples, 2 misconceptions, 2 examMatters plus inline quiz/practice/explain-back - cognitive overload for 'introduce and practise a calculation' content. Should be 4 blocks (one per spec sub-point).",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "5 blocks and 15 subsections replace the old 2 blocks seen in audit/snapshots/2026-09-14-pre-packet-14__business__decision-making-techniques.json (Quantitative Techniques plus Sales Forecasting only)",
    "note": null
   },
   {
@@ -7082,10 +7082,10 @@
    "kind": "structure",
    "text": "Neither block sets quizIndices or practiceIndices, so InlineQuiz/InlinePractice cannot be block-matched; a learner finishing the decision-trees/CPA step may be served an NPV/payback practice question they have not been taught.",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "every block in tables.content carries quizIndices and practiceIndices, e.g. Sales Forecasting quiz 3,0,1,2,4,5,6 practice 0,4",
    "note": null
   },
   {
@@ -7094,10 +7094,10 @@
    "kind": "structure",
    "text": "0 diagrams for the most diagram-dependent topic in WBS13: no decision-tree diagram (spec: 'construct and interpret simple decision tree diagrams'), no Edexcel-style network with node circles (spec: 'complete and interpret simple networks'), no time series with trend line, no scatter graph for correlation. InlineDiagram renders nothing on either step.",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "5 diagrams in scripts/_packet14-diagrams.mjs:204-225, one per block, each pinned by diagramId",
    "note": null
   },
   {
@@ -7106,10 +7106,10 @@
    "kind": "structure",
    "text": "0 recall widgets, despite this section containing the course's most genuinely procedural sequences (roll-back: EMV at chance nodes -> net gain -> choose at decision node; CPA: list dependencies -> forward pass ESTs -> backward pass LFTs -> float -> critical path; MA -> trend -> extrapolate). These are the rare cases where reorder recalls would be legitimate, and formula fill-ins (Float = LFT - duration - EST) would be non-ambiguous.",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "15 recall widgets, one per subsection; dry-run output reports 15 recalls, 4 reorder, 5 fillin, 2 match, 4 classify",
    "note": null
   },
   {
@@ -7118,10 +7118,10 @@
    "kind": "structure",
    "text": "No worked numerical CPA example (network, EST/LFT table, float) and no worked moving-average table; examMatters tells students to 'practise the forward and backward pass' and 'practise the arithmetic' but the section gives nothing to practise on. The decision-trees pharma example is the only numerical walkthrough.",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "worked CPA network at scripts/_packet14-content.mjs:426-430 (forward and backward pass, float, arithmetic independently checked) and worked moving-average table at :30-37",
    "note": null
   },
   {
@@ -7130,10 +7130,10 @@
    "kind": "structure",
    "text": "Quiz coverage: all 10 MCQs are calculation/definition; none test extrapolation's continuity assumption, correlation vs causation, decision-tree limitations or CPA limitations - i.e. none test block 2's second subsection or any evaluation content the examMatters emphasise.",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "new quiz on the continuity assumption and correlation vs causation (scripts/_packet14-assessment.mjs Sales Forecasting items), decision-tree limitations and CPA limitations (Decision Trees and Critical Path Analysis items)",
    "note": null
   },
   {
@@ -7142,10 +7142,10 @@
    "kind": "structure",
    "text": "Misconceptions: decision-trees ('EMV is the actual outcome') and correlation ('strong correlation proves causation') are real student errors; moving-averages ('MA predicts the future') is acceptable; CPA ('critical path is the most important path') is soft - the observed student errors are 'shortest path' or 'path with most activities' (which quiz Q6 correctly uses as distractors).",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "scripts/_packet14-content.mjs:401 cpaNature misconception now reads - Students call the critical path the most important or the shortest route",
    "note": null
   },
   {
@@ -7154,10 +7154,10 @@
    "kind": "structure",
    "text": "Takeaways accurately match their blocks (no issue).",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "buildContent block takeaways at scripts/_packet14-content.mjs:567-596 checked against each blocks own subsections and are accurate",
    "note": null
   },
   {
@@ -7166,10 +7166,10 @@
    "kind": "specGap",
    "text": "3.3.2 Investment appraisal: simple payback (calculation incl. part-year formula), average rate of return, net present value with discount factors, limitations of each - entirely absent from content[] and notes[] (only present in flashcards/quiz/practice/common_mistakes/extras).",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "scripts/_packet14-content.mjs:131-271 Learn Mode and :636-671 Notes now teach payback, ARR and NPV with worked examples and limitations",
    "note": null
   },
   {
@@ -7178,10 +7178,10 @@
    "kind": "specGap",
    "text": "3.3.1 Quantitative sales forecasting: calculation of moving averages (3-period/4-period incl. centring) from a data table, plotting/identifying the trend and extrapolating from it - no worked calculation shown.",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "scripts/_packet14-content.mjs:30-37 worked 3-period moving-average table (40,46,43,48,54,50 to 43.0,45.7,48.3,50.7) plus the 4-quarter centring paragraph at :38",
    "note": null
   },
   {
@@ -7190,10 +7190,10 @@
    "kind": "specGap",
    "text": "3.3.1 Correlation as examined in IAL: scatter graphs and line of best fit, positive/negative/no correlation, using a correlation to forecast (e.g. advertising spend vs sales) - content gives the coefficient range but not the scatter-graph interpretation skill papers use.",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "scripts/_packet14-content.mjs:58-95 scatter and extrapolation subsection plus scatterSvg diagram at scripts/_packet14-diagrams.mjs:61-85",
    "note": null
   },
   {
@@ -7202,10 +7202,10 @@
    "kind": "specGap",
    "text": "3.3.3 Decision trees: constructing the diagram and rolling back through multiple decision nodes; treating option cost on the decision branch - no diagram, roll-back procedure not in Learn Mode body.",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "scripts/_packet14-content.mjs:275-346 constructingTrees and rollingBack subsections build and roll back the cold-brew tree with worked EMVs and net gains, in Learn Mode body not only a mistake card",
    "note": null
   },
   {
@@ -7214,10 +7214,10 @@
    "kind": "specGap",
    "text": "3.3.4 Critical path analysis: completing a network diagram (node number/EST/LFT), dummy activities (unsure whether IAL requires them), calculating EST/LFT on a given network, and the fuller set of CPA limitations - no network shown, one limitation only.",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "scripts/_packet14-content.mjs:418-459 completingNetwork subsection: worked forward and backward pass and float table for the 6-activity network, arithmetic independently verified; bus_spec.txt has no dummy-activity requirement under 4c so its absence is not a gap",
    "note": null
   },
   {
@@ -7226,10 +7226,10 @@
    "kind": "specGap",
    "text": "Sensitivity analysis and contribution/break-even (assessed in practice[3] and quiz[7],[8]) are NOT part of 3.3 - reverse gap: off-spec material being taught/tested.",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "zero sensitivity hits and only 2 synoptic break-even hits, both outside quiz and practice, in the packet-14-bundle snapshot; contribution corrected to in-spec and taught per audit/raw/bus_spec.txt:1175-1177",
    "note": null
   },
   {
@@ -16318,10 +16318,10 @@
    "kind": "specThin",
    "text": "3.3.3 2c Discounted cash flow (net present value only) — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "scripts/_packet14-content.mjs:210-242 npv subsection defines discount factor, present value and NPV with a worked 50000-dollar van example",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16330,10 +16330,10 @@
    "kind": "specThin",
    "text": "3.3.3 4c Calculate earliest start time (EST) — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "scripts/_packet14-content.mjs:427 completingNetwork - forward pass EST defined and worked node by node",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16342,10 +16342,10 @@
    "kind": "specThin",
    "text": "3.3.3 4c Calculate latest finish time (LFT) — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 14,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "scripts/_packet14-content.mjs:428 completingNetwork - backward pass LFT defined and worked node by node",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -17781,6 +17781,19 @@
    "closed_by": "packet-7",
    "verified_by": "packet-verifier 2026-09-14",
    "evidence": "audit/CONTENT-GATE.md 'The recall contract' section (four types table + why/converting/renderer-forgives subsections); lib/content-validator.mjs adds schema.recall-type, match.count, match.unique, classify.groups, classify.unique, match.prompt, classify.prompt, recall.why, fillin.distractors, fillin.leak and retires reorder.permutation/identity/shuffle-reuse and fillin.one-per-line; lib/recall-widgets.js + lib/recall-widgets.test.mjs (132/132 tests pass, npm run validate exit 0 with 0 new-block/new-debt)",
+   "note": null,
+   "added": "2026-09-14"
+  },
+  {
+   "id": "C-decision-making-techniques-specGap-07",
+   "kind": "feature",
+   "title": "3.3.3.5a-c Contribution: nature and purpose, calculation and interpretation, use as a decision-making technique — absent from the section (spec-coverage MISSING ×3); the March audit called contribution off-spec by UK GCE numbering, but it is sub-topic 5 of IAL 3.3.3 (bus_spec.txt:1175-1177)",
+   "file": "audit/raw/spec-coverage.json",
+   "packet": 14,
+   "status": "confirmed",
+   "closed_by": "packet-14",
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "scripts/_packet14-content.mjs:492-552 Contribution block plus NOTES at :735-766, quiz items 28-31 and an Assess-12 practice item; audit/raw/bus_spec.txt:1175-1177 leaves 5a-c now taught",
    "note": null,
    "added": "2026-09-14"
   }

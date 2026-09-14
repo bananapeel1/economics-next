@@ -95,8 +95,8 @@ tree (13.5-13.7 own the labels; the tree carries three `draggable` labels so the
 2. Step 1 "Moving averages": one heading, chapter eyebrow "Sales Forecasting · part 1 of 3", key idea, the
    worked bullets (43.0, 45.7, 48.3, 50.7), then the fill-in recall BELOW the teaching with three blanks and
    five chips (mean · middle · centred · total · trend). Place a wrong chip, Check → partial line and "Try
-   again"; second wrong check → the answer with a reason line. Skip is a text button. Next visible without
-   scrolling past the recall.
+   again"; second wrong check → the completed sentence is shown (a fill-in carries no `why` lines; only reorder,
+   match and classify do). Skip is a text button. Next visible without scrolling past the recall.
 3. Step 2 "Scatter graphs…": reorder with four items in a non-identity order; the prompt ends "from first to
    last"; Check shows the why lines on a wrong order.
 4. Step 3: match recall; pairing by tap works; one distractor chip remains unpaired at the end.
@@ -110,9 +110,129 @@ tree (13.5-13.7 own the labels; the tree carries three `draggable` labels so the
 8. Chapter 3 check-in: the decision tree shows a "Label this diagram" button; tapping it opens the drill with
    three labels and closing it restores the diagram.
 9. Chapter 4 check-in: the network diagram; enlarged, the node numbers and the EST | LFT figures are legible.
-10. Chapter 5 check-in: the contribution bar; the practice item is an Assess (12 marks) with the levels note
-    ("questions above 6 marks are levels-marked").
+10. Chapter 5 check-in: the contribution bar; the practice item is an Assess (12 marks); type an answer and tap
+    "Mark my answer" → the self-mark checklist carries the note "questions above 6 marks are levels-marked".
 11. Completion screen reached; console shows no errors other than the signed-out 401.
+
+### Verify A (packet-verifier on Sonnet, 14 September 2026)
+
+32 of 32 confirmed on round 1 with file:line evidence; `ledger.mjs unverified 14` clear; unclaimed but relevant:
+none. The verifier read the spec text itself and confirmed that the "off-spec" premise of quiz-04 / specGap-06 was
+wrong and that topFix-05's "relabel as 3.3" was rightly left undone.
+
+### Verify B report (student-walkthrough on Sonnet, 390×844, signed out, 14 September 2026)
+
+9 of 11 PASS; no audit complaint visible; no console errors; scrolling with real wheel input never jumped back.
+Seen: overview "Learn · 20 steps"; step 1 heading, eyebrow "Chapter 1 of 5 · Sales Forecasting · part 1 of 3",
+the worked bullets 43.0 / 45.7 / 48.3 / 50.7, the fill-in below the teaching with three blanks and five chips,
+"2 of 3 right" then Try again, Skip as a text button, Next visible; step 2 reorder in a non-identity order with
+the why lines on "Show the answer"; step 3 match with one distractor left over; check-in 1 with the two-scenario
+diagram, a legible enlarged sheet, the scatter quiz item, a 4-mark Calculate with an answer box and a four-item
+self-mark checklist, no spaced recall, explain-it-back, a four-line takeaway; chapter 2's fill-in / reorder /
+fill-in / three-group classify; check-in 2's "Recall from chapter 1 · Moving averages" cue and the NPV Calculate;
+the decision tree's "Label this diagram" opening a 0/3 drill and closing back to the card; the network's
+node number and EST | LFT figures legible when enlarged; the contribution bar and the 12-mark Assess; the
+completion screen naming all five chapters.
+
+The two FAILs are the script's, not the product's: (1) the script expected "a reason line" on a fill-in's
+second wrong check, but the recall contract gives `why` lines to reorder, match and classify only — a fill-in
+shows the completed sentence, which is its explanation (a `why` per blank would be a widget-contract change for
+a later packet, not content); (2) the script expected the "questions above 6 marks are levels-marked" note on
+the Assess card, but that note renders only once "Mark my answer" opens the self-mark checklist, which the
+script did not ask for. Both scripts are corrected in the template above for the next packet.
+
+Two side observations: the header chip still said "More content coming · 10 questions so far" — the depth
+route is served with `max-age=300, s-maxage=3600`, so the chip catches up within the hour and needs no fix;
+and about fifty `POST /api/events` showed `net::ERR_ABORTED` in the network log, yet `app_events` holds 43 rows
+for this section from the walkthrough (learn_open, 20 step_view, 19 step_next, section_complete), so the
+aborted posts were cancelled duplicates, not lost events. Packet 58 should know both.
+
+## Handoff — what comes next (written after packet 14, 14 September 2026)
+
+Packet 14 was the format pilot. Next is **packet 15, introductory-concepts** (Economics 1.3.1, 192 opens, the
+section with the worst step-0 abandonment: 167 of 192 starts stuck), 32 ledger items, March grade C, **on Opus**
+per PROTOCOL (Fable only for a D grade or a rewrite; the summary says the prose is sound and the scaffolding is
+not — recalls, quiz bank, pins, the PPF SVG). Run it in a NEW session. Packet 13's round 4 is confirmed and its
+session is committing on this branch, so stage files explicitly and never `git add -A`.
+
+### The template, as built and verified here
+
+Copy the packet-14 files and rename: `scripts/packet-14-decision-making-techniques.mjs` (the runner),
+`scripts/_packet14-content.mjs` (blocks and notes), `scripts/_packet14-assessment.mjs` (quiz, practice, cards,
+mistakes, extras), `scripts/_packet14-diagrams.mjs` (SVGs), `scripts/_packet14-util.mjs` (ids, the word counter).
+The runner is the first reader of the section: it prints every subsection's word count, refuses on the section's
+own banned phrases, checks the worked figures appear on more than one surface, runs the validator over the
+whole bundle against the baseline, and stages through `stageBundle()` (`scripts/_content-write.mjs`: the whole
+section validated once, every changed table written to `draft` and read back). `--dump` writes the bundle to
+`audit/snapshots/packet-<n>-bundle__*.json` for the verifier. Then `scripts/publish-section.mjs <id> --confirm`.
+
+The lifecycle that worked, in order: read the spec span for the topic and check every ledger item's scope claim
+against it (four packet-14 items were wrong about contribution) → write the spec block in NEXT.md → snapshot →
+author → dry run until 0 BLOCK and 0 new DEBT → stage → preview the SVGs (drop the preview HTML into `public/`
+for the running dev server on 3001, look, delete it) → **Layer 6**: an adversarial Sonnet review on a COPY of
+the bundle with two planted canaries (brief and procedure now in `CONTENT-GATE.md`, "Layer 6 — as run in
+packet 14"); void the report if it misses a canary → fix → re-stage → publish → census, `npm run validate`,
+`--baseline` diff read then `--baseline --confirm`, pin-check → claim → Verify A and Verify B in parallel
+(Verify B holds the Browser pane; do not use it meanwhile) → gate → commit → push → handoff.
+
+What a section costs, measured on this one: about 15 subsections at 250-343 words each, 32 quiz items, 8
+practice items, 5 SVGs, 27 cards, 8 mistakes, 6 chains, one review round of eight findings, one Verify A and
+one Verify B. Budget a full session; do not start a second section in it.
+
+### Rules the pilot settled (all recorded in DECISIONS.md, 14 September, packet 14)
+
+1. **The 350-word budget is hard and calculation subsections fill it.** `teachingWords()` in
+   `scripts/_packet14-util.mjs` counts exactly as `step.words` does (a "÷" and an "=" are words). Worked numbers
+   go in `bullets`; the notes chapter and the diagram description carry the fuller table.
+2. **One fictional firm carries the worked figures across the section** ("Kopi Kita" here) so the body, the
+   notes, the diagrams, the quiz explanations and the practice guidance show the same numbers; the runner checks
+   the figures by string. The Real Example card holds only real things; a real example that names an entity and a
+   year or a figure carries its source in parentheses, otherwise it names no figure.
+3. **One currency per section, chosen once.** This section is in dollars. An Economics section already in
+   pounds can stay in pounds; the rule is one, not which.
+4. **The coverage rule is lexical: put the specification's phrase in a notes item that teaches.** Three leaves
+   worded "Calculations and interpretations of figures generated by these techniques" were taught in substance
+   and still uncovered until a notes item used the phrase and said what the interpretation is.
+5. **Quiz construction beyond the validator.** Keep the correct option within about 1.2× the longest distractor
+   (the validator allows 1.5× and the reviewer still found five length tells); no hedge in the correct option
+   when two distractors are absolute; retained items keep their ids; balance positions by hand (8·8·9·7 here).
+6. **Practice above 6 marks is levels-shaped**, with the calculations the data allow written into the guidance
+   at enough precision that the displayed figures add up (a rounding tell was one of the review's findings).
+7. **Diagrams**: 500-unit box, labels 9-13 units from the palette in `processSvg.js`, nothing placed on a line;
+   the packet-5 sheet makes 9 units 15px on a phone. Draggable labels only where the paper asks the student to
+   construct the diagram (the decision tree here, three labels); the rest wait for 13.5-13.7.
+8. **Pins**: the first index in each block's `quizIndices` / `practiceIndices` is what the check-in shows; put
+   the best chapter-closing item first and the sequence stops being 0,1,2,… by itself.
+
+### Discovered in packet 14, for whoever it concerns
+
+- `app/business/unit-3/page.js` still lists this section's sub-topics in the March order and omits contribution
+  (packet 57, with D014's file list). The Notes tab, Learn Mode and the flashcards are consistent.
+- `pin-check --verbose` reports "weak" pins for calculation questions whose stems share no title word with their
+  block ("A project costs $200,000…" under Investment Appraisal). That lint is lexical and never fails; a
+  calculation stem rarely names its topic. Leave it.
+- The Browser pane cannot screenshot a `file://` page; serve a preview through the running dev server instead.
+- The other session's commit `539e60f` swept this packet's NEXT.md spec and pre-packet snapshot into its own
+  commit. Harmless, but it is why the packet-14 commit shows fewer new files than the packet wrote.
+
+### For the founder — Layer 7, 45-60 minutes on this section (CONTENT-GATE Layer 7)
+
+Three questions only: does this look like a question from the paper; is this claim true; would you put this in
+front of a student. Open `/business/unit-3/decision-making-techniques` and the Notes tab. The claims that name
+a real entity with a year or figure, each with the source the text cites:
+
+| Where | Claim | Source cited |
+|---|---|---|
+| Sales Forecasting › Scatter graphs | Blockbuster's revenue peaked in 2004; Chapter 11 on 23 September 2010 | Blockbuster 2004 annual report; the petition |
+| Sales Forecasting › Limitations | Global passenger traffic fell by about two-thirds in 2020 | IATA press release, 3 February 2021 |
+| Decision Trees › Constructing | About 8% of candidates entering human trials reach approval | BIO, Clinical Development Success Rates 2011–2020 (7.9%) |
+| CPA › Nature and purpose | Critical path methods date from the late 1950s: DuPont; the US Navy's Polaris programme | Kelley and Walker 1959; Malcolm et al. 1959 |
+| CPA › Limitations | Sydney Opera House planned for 1963, opened 1973 | Sydney Opera House, "Our story" |
+
+Real names used without figures (no source needed, but say if any reads wrong for a student in Lagos or
+Karachi): Grab, AirAsia, DuPont, shipyards in South Korea, mining companies, budget airlines, hotels on
+last-minute apps. Fictional firms, presented as worked examples and never as real: Kopi Kita (Kuala Lumpur),
+Sunrise Bakery (Nairobi), Palm Bay Hotel (Penang), a courier in Lagos, a logistics company in Dubai.
 
 ## Packet 7 spec — Widget mechanics (built and VERIFIED 14 September 2026, Fable 5.1 — Verify A 14 of 14 on round 1, Verify B 15 of 16 with the one failure fixed post-gate; commits bcd62ce · 2c57920 · the gate commit; base cb6b894)
 

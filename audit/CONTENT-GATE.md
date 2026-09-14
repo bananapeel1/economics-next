@@ -360,6 +360,37 @@ Two corrections the critics forced:
   often, against a pass condition of "zero findings at critical or high" — which pays it to downgrade.
   A downgrade below high requires named evidence, and the adversary's own downgrade rate is monitored.
 
+## Layer 6 — as run in packet 14, 14 September 2026
+
+The first section to go through the whole gate ran Layer 6 as one adversarial reviewer on Sonnet, before publish,
+over a COPY of the staged bundle into which two defects had been planted: a quiz explanation whose arithmetic
+contradicted the marked option, and a backward-pass figure in the notes that contradicted the body and the
+diagram. The reviewer never sees the live bundle, so a canary cannot leak into content. It caught both canaries
+and six real defects (an overstated figure from a cited source, a card that renamed EMV, a rounding tell in a
+20-mark guidance, five length tells inside the validator's 1.5× threshold, a scatter graph that failed its own
+"balanced above and below" rule, a trend stated as 2.5 that was 2.6), all fixed before publish. The census line
+it returned ("read 15/15 subsections, 32/32 quiz, … 136 calculations recomputed, 65 contradiction pairs
+examined") is what makes the report checkable.
+
+The brief, to reuse for every section (replace the counts):
+
+> You are an adversarial reviewer of revision content for Edexcel IAL <subject> Unit <n>, topic <number title>.
+> Read-only. Assume the author is wrong until the text proves otherwise. Inputs: the bundle copy at <path>
+> (describe the eight tables and their counts); the specification span at `audit/raw/<subject>_spec.txt`
+> lines <a>-<b>, the ONLY authority on scope; Appendix 6 for command words and tariffs; the recall contract in
+> `audit/CONTENT-GATE.md`. Check, in order, reporting a count for each: (A) recompute EVERY calculation,
+> including the numbers in the SVG text; (B) contradictions between surfaces, counted in pairs; (C) correctness
+> against the specification, plus anything taught that the spec does not contain and any leaf not taught;
+> (D) every recall's defensibility (one order, one group, one pairing, one chip per blank, no hint that gives
+> the answer); (E) every quiz item (one correct option, no defensible distractor, explanation consistent with
+> the key, no length or hedge give-away); (F) every practice item (command and tariff per Appendix 6, guidance
+> correct, no point allocation above 6 marks); (G) every real example: corroborate the sourced claims with
+> search, report anything overstated; (H) UK-only institutions or default UK framing, a second currency, any
+> uncited claim about examiners. Output only: a census line; numbered findings, most serious first, each with
+> severity, table + path, the exact string, why it is wrong, the one-line fix; one line on fitness to publish.
+
+If the report misses a canary, void it and re-run on the next tier; record both in DECISIONS.
+
 ## Layer 7 — The founder, honestly scoped
 
 Every design claimed 8 to 12 minutes per section. The critics measured the real inventory: a **median of
