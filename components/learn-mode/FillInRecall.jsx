@@ -95,7 +95,10 @@ export default function FillInRecall({ recall, onComplete, onSkip, showing = 'fi
               {line.segments.map((seg, si) => {
                 if ('text' in seg) return <span key={si}>{seg.text}</span>;
                 const b = seg.blank;
-                if (b >= live) return <span key={si} className="lm-fillin-blank lm-fillin-blank-inert" aria-hidden="true">___</span>;
+                // A blank with no answer behind it (the template and the answers disagree, F050). It is
+                // drawn as text, not as a box, so it does not read as a question the student failed to
+                // answer; the note under the chain says why. The section packet rewrites the content.
+                if (b >= live) return <span key={si} className="lm-fillin-blank-inert" title="This blank is still being written and is not checked">___</span>;
                 const word = wordAt(b);
                 const isRight = (checked && grade?.results[b]) || (!checked && locked[b]);
                 const isWrong = checked && !grade?.results[b];
@@ -136,6 +139,12 @@ export default function FillInRecall({ recall, onComplete, onSkip, showing = 'fi
         })}
       </div>
 
+      {parsed.blanks > live && (
+        <p className="lm-fillin-note" role="note">
+          {parsed.blanks - live === 1 ? 'One blank in this exercise' : `${parsed.blanks - live} blanks in this exercise`} still being written and not checked yet.
+        </p>
+      )}
+
       {showHint && !checked && hints && (
         <ul className="lm-fillin-hints">
           {answers.slice(0, live).map((a, i) => (
@@ -173,6 +182,7 @@ export default function FillInRecall({ recall, onComplete, onSkip, showing = 'fi
         <RecallOutcome
           allCorrect={grade.allCorrect}
           line={`${partialLine('fillin', grade.correct, live)}`}
+          doneLine={parsed.blanks > live ? `✓ ${live} of ${live} right` : '✓ All correct!'}
           canRetry={!grade.allCorrect}
           onRetry={retry}
           canShowAnswer={false}

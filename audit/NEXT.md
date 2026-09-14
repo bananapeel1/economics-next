@@ -1,6 +1,6 @@
 # Next session brief
 
-## Packet 7 spec — Widget mechanics (building, 14 September 2026, Fable 5.1; base commit cb6b894)
+## Packet 7 spec — Widget mechanics (built and VERIFIED 14 September 2026, Fable 5.1 — Verify A 14 of 14 on round 1, Verify B 15 of 16 with the one failure fixed post-gate; commits bcd62ce · 2c57920 · the gate commit; base cb6b894)
 
 The packet that defines what a recall IS, so that the 338 recalls the content packets author (272 to rewrite,
 20 Business sections to give their first) are written once into widgets that work. Twelve ledger ids, all on
@@ -87,6 +87,62 @@ W003 (gallery) W004 (contract + validator). Leaves F057 F107 → packet 57 with 
    classify — tap an item then a group, Check, Try again; label drill — drag a chip onto its dashed slot.
 7. Console: no hydration warning on a fresh load of /economics with introductory-concepts.
 
+
+### Verify B report (student-walkthrough on Sonnet, 390×844, 14 September 2026)
+
+Steps 1-3, 5-6 PASS as scripted: the reorder's start order is not the answer and the first item is not in place;
+Skip is a text button and there is no ×; "2 of 4 in the right position" → Try again locks the two correct items
+(no arrows) → a second wrong check lists the correct order by itself (no why lines: live content has none yet);
+the fill-in bank holds 5 chips for 3 blanks (money and exchange drawn from the section), hints read
+'starts with "P"' and never "Po____", tap-blank-then-chip targets blank 2, tapping it returns the chip,
+three wrong answers show struck through beside the right ones with no answer strip, Try again clears only the
+wrong blanks; Skip on step 5 collapses to "Skipped. This check comes back at the next chapter check-in." and
+step 9's "Recall from chapter 2" card IS the skipped Opportunity Cost fill-in; the completion screen reads
+"1/4 · 1 skipped"; in the gallery match, classify and the label drill (drag → "1 / 4") all behave.
+**Step 4 FAIL, fixed post-gate:** the money fill-in (4 blanks in the template, 3 answers — content debt,
+`fillin.blanks`, packet 15) drew its spare blank as a dashed box the student could never fill, and said
+"All correct" beside it. Now a spare blank is drawn as text, a note under the chain says one blank is still
+being written and not checked, and the result line reads "3 of 3 right" rather than "All correct". Measured
+in the browser, not re-verified. **Step 7:** the walkthrough saw the React "key" warning in the seed tab's
+console; it is the entry logged before `2c57920` (the pane keeps console history across navigations) — a
+brand-new tab loaded after the fix shows no error and no hydration warning.
+
+## Handoff — what comes next (written after packet 7, 14 September 2026)
+
+Packet 7 was the last widget packet before content. Next is **packet 14, decision-making-techniques, the
+format pilot, on Fable 5.1**, in a NEW session; the drill packets 13.2-13.4 (Opus) can run before or after
+it, and packet 13's round 3 waits on the founder's five publish commands (done at 17:12 on 14 September —
+five `auto-prepublish` snapshots appeared while packet 7 was being verified; that session owns them and its
+seven new DEBT keys).
+
+What a content session must know from this packet, on top of packets 3 and 13's notes:
+1. **Recalls are authored into the contract in `CONTENT-GATE.md` ("The recall contract").** Four types.
+   Copy the exemplars in `lib/recall-fixtures.js`; look at them live at `/dev/widgets` on the dev server.
+   Every recall needs its `why` (per reorder item, per pair, per group) and every fill-in its 2-3
+   `distractors` and semantic hints; `recall.why`, `fillin.distractors`, `fillin.leak` and `fillin.hint`
+   report what is missing, and they are DEBT the section packet clears. Delete `shuffled` on any reorder you
+   touch — it is inert.
+2. **Convert, do not reword, a bad reorder.** The March verdicts (`audit/raw/content-audits.json`,
+   `recallAudit[]` per section) name each section's not-orderable and weak reorders. "Match X to Y" → `match`;
+   a ranking, "most to least", "sort into" or parallel facts → `classify`; a chain with one defensible order
+   but a vague prompt stays a `reorder` with the principle named. F057 and F107 sit in packet 57 and close
+   when the census of live reorders carrying a bad March verdict is zero.
+3. **A section with zero recalls (20 Business sections, `section.no-recall` BLOCK) must ship at least one**, and
+   `depth.recalls` wants one per two subsections. Decision-making-techniques has none today.
+4. **Verify B for a content packet can use the gallery for widget behaviour, but the section itself is the
+   acceptance surface**: 390×844, every recall reachable, checkable, retryable, and the why visible on a
+   wrong check.
+
+Discovered in packet 7, for whoever it concerns:
+- No live diagram carries `text.draggable`, so the "Label this diagram" button appears nowhere; packets
+  13.5-13.7 author the labels (`lib/recall-fixtures.js` `LABEL_DRILL_SVG` shows the markup).
+- Skipped recall ids live in local state only (`recallSkipped`); a server column and a review-mode consumer
+  for recalls are open product decisions (DECISIONS, packet 7).
+- The `.claude/agents/` definitions are not registered as agent types in a session started from the parent
+  folder: spawn `general-purpose` on Sonnet and tell it to read the agent file first. Both verifiers worked
+  that way this packet.
+- Another session's dev server holds port 3001 and serves this worktree; `preview_start` refuses, but
+  `preview_start` with the URL, or `navigate`, works. Check `curl localhost:3001/dev/widgets` first.
 
 ## Packet 5 spec — Step 0 (built, Verify-B'd and VERIFIED 14 September 2026, Fable 5.1 — Verify A passed on round 3, commit d032302; NOT shipped until the checkpoint, ~26 September)
 

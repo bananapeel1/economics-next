@@ -847,10 +847,10 @@
    "fix": "Track placement by chip index, not word string (`placed` holds indices into shuffledWords; availableWords filters by index). Validate at content load or in a script: number of '___' occurrences across template must equal answers.length and each part must contain at most one '___' (or make blankIdx count '___' occurrences, not parts). Add a content-lint that fails on the 6 sections above.",
    "impact": "Student fills the visible blanks, the Check button stays greyed out with no message, the word bank has disappeared, and the only way out is the × in the corner. Nothing tells them the widget is broken; it reads as 'I did something wrong'.",
    "packet": 7,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-7",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "components/learn-mode/FillInRecall.jsx:24,39,78 live=Math.min(parsed.blanks,answers.length); allFilled/Check only require the live blanks; lib/recall-widgets.test.mjs:78-86 covers mismatched blank/answer counts",
    "note": null
   },
   {
@@ -864,10 +864,10 @@
    "fix": "Render all segments: `part.split('___')` → interleave text segments with blanks, incrementing a running blank counter; or normalise content so a multi-word answer uses a single '___'. Add the lint from the previous finding.",
    "impact": "The fill-in line reads as a bare blank with no sentence, e.g. just '[____]' or '[____]-'. The student has no cue what the blank means and the 'store of value, unit of account, standard of deferred payment' chain loses its third function.",
    "packet": 7,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-7",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "lib/recall-widgets.js:140-155 parseFillinTemplate interleaves text/blank segments with a running counter; FillInRecall.jsx:89-137 renders every segment; test lib/recall-widgets.test.mjs:68-76 asserts no text lost across '___ ___' and two-blanks-per-line",
    "note": null
   },
   {
@@ -915,10 +915,10 @@
    "fix": "Add distractor chips (2-3 plausible wrong terms from the section's glossary) so elimination fails; make hints semantic ('the term for satisfaction from one more unit') or first-letter only without length; reject templates whose non-blank text contains an answer word; consider typed input with fuzzy match for premium.",
    "impact": "A student who knows nothing about the topic scores 3/3 by matching first letters to chips. The score is inflated and the completion screen tells them recall is strong when it was never tested.",
    "packet": 7,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-7",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "lib/recall-widgets.js:157-206 hintLeaks/displayHint mask prefix+length-reveal hints to first-letter only, pickDistractors draws 2-3 chips (authored or from the section pool) excluding answers/printed words; FillInRecall.jsx:139-145 renders masked hints only",
    "note": null
   },
   {
@@ -932,10 +932,10 @@
    "fix": "Treat dismiss as a skip: call `onComplete(null)` and track `{correct,total,skipped}`; show 'Skipped 6 recalls' on the completion screen and feed skipped ids into the 1/3/7/14-day review scheduler. Replace × with a visible 'Skip' text button.",
    "impact": "Dismissing is free and invisible, so the path of least resistance is to × every recall; the completion screen then either hides the score or reports a flattering ratio. Nothing is persisted (the /api/learn-mode/progress write fails per the product context), so dismissed recalls never come back as review items.",
    "packet": 7,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-7",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "components/learn-mode/RecallFrame.jsx:27-29 visible text Skip button (no x); LearnModeTab.jsx:142-148 onRecallSkipped adds to total+skipped and persists id via writeLocalState; lib/learn-steps.js:95-111 pickSpacedRecall prefers a skipped id at the next check-in; CompletionScreen.jsx:15-24 shows 'N skipped'",
    "note": null
   },
   {
@@ -949,10 +949,10 @@
    "fix": "Allow 'Try again' after a wrong check (keep correct items locked, unlock wrong ones); show partial-credit ('3 items are one place off'); add an optional `why` string per correctOrder item in content so the wrong-state panel can render a one-line rationale per step.",
    "impact": "Near-miss and total-miss look the same, and the only feedback is the answer key. The student learns 'I was wrong', not the causal chain the widget is supposed to teach, and cannot try again to consolidate.",
    "packet": 7,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-7",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "components/learn-mode/ReorderRecall.jsx:74-78 retry() locks results.slice() and unchecks; lib/recall-widgets.js:90-101 gradeReorder returns oneOff near-miss count; ReorderRecall.jsx:150 renders partialLine with oneOff, :158-160 RecallAnswer renders recall.why per item",
    "note": null
   },
   {
@@ -1017,10 +1017,10 @@
    "fix": "Delete the DnD handlers and cursor:grab; add 'select a blank, then tap a chip' (highlight the active blank) and tap-on-filled-blank returns the word to the bank; or implement pointer-event drag like DiagramLabelDrill.",
    "impact": "Tap works on iOS/Android (the good news) but a student who tries to drag, as the cursor and the file header 'Drag-and-Drop Label Recall' promise, sees nothing happen. Correcting a mistake in an earlier blank is a clear-and-refill dance.",
    "packet": 7,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-7",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "components/learn-mode/FillInRecall.jsx: no onDrag/dataTransfer handlers remain (grep clean); handleTapBlank:50-54 and handleTapChip:41-48 implement tap-to-target then tap-to-fill and tap-filled-to-return; app/globals.css:2764-2767 cursor:grab/grabbing removed, replaced with cursor:pointer",
    "note": null
   },
   {
@@ -1034,10 +1034,10 @@
    "fix": "Remove the RecallCheckpoint import and dead CSS; delete InteractiveDiagram (mouse-only); wire DiagramLabelDrill behind a 'Label this diagram' button on InlineDiagram for SVG diagrams that have `text.draggable` labels (audit how many do).",
    "impact": "The only interaction a student gets with a diagram is 'tap to enlarge'. The label drill that would make diagrams active exists, tested with touch in mind, but nobody sees it.",
    "packet": 7,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-7",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "components/learn-mode/RecallCheckpoint.jsx and InteractiveDiagram.jsx deleted (git diff --stat: -113/-208 lines, files gone, zero remaining imports repo-wide); app/globals.css:2661-2664 dead CSS block removed; InlineDiagram.jsx:105-167 wires DiagramLabelDrill behind a 'Label this diagram' button shown only when drillLabels>=3 (text.draggable count); DiagramLabelDrill.jsx:37-40 fallback that extracted every <text> is deleted",
    "note": null
   },
   {
@@ -1068,10 +1068,10 @@
    "fix": "Show `word` struck through with the correct answer beside it; drop the redundant answer strip.",
    "impact": "After checking, the student sees a red box containing the right answer and has no record of their own mistake to reflect on.",
    "packet": 7,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-7",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "components/learn-mode/FillInRecall.jsx:125-131 wrong blanks render <s>{word}</s> struck through beside the correct answer; :181-182 the old separate answer strip is explicitly removed (comment + null render)",
    "note": null
   },
   {
@@ -1901,10 +1901,10 @@
    "fix": "Validator: exactly one '___' per template line and answers must be single tokens (or support multiple blanks per line in the renderer); rewrite the 8 recalls.",
    "impact": "Student sees a sentence cut off mid-clause and a word-bank chip 'rises, rises' or 'value, account' that gives the structure away; drag-and-drop of a comma pair into a single blank reads as broken.",
    "packet": 7,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-7",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "lib/recall-widgets.js:140-155 parseFillinTemplate supports any number of blanks per line via a running counter; lib/content-validator.mjs fillin.token now refuses commas only (not multi-blank lines); test lib/recall-widgets.test.mjs:68-76 covers a line with three blanks rendering whole",
    "note": "14 Sep 2026, packet 3: the validator refuses new multi-blank lines and multi-token answers (fillin.one-per-line, fillin.token, both BLOCK). The 8 live recalls are baselined for their sections. The fix's renderer half — support several blanks per line — is widget mechanics and goes with the fill-in distractor work in packet 7; the content rewrite of the 8 goes with their sections."
   },
   {
@@ -1918,10 +1918,10 @@
    "fix": "Drop `shuffled` from content; Fisher-Yates at mount with a rejection rule (not identity, first item not already in place).",
    "impact": "Every reorder in a section is displayed as [step3, step1, step4, step2] or [step4, step2, step1, step3]; after two or three the student solves it by pattern ('swap 1↔2, then 3↔4') rather than by recalling the chain, which also inflates recall scores fed to the completion screen.",
    "packet": 7,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-7",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "lib/recall-widgets.js:80-84 reorderStartOrder is a seeded Fisher-Yates permutation per recall id+showing, rejecting identity and first-item-in-place; stored shuffled field ignored; test lib/recall-widgets.test.mjs:14-26 measures >=8 distinct orders across 200 recalls (was 6 total across 131)",
    "note": null
   },
   {
@@ -17738,10 +17738,10 @@
    "title": "match recall type: pairs rendered as a left column and a shuffled right-hand chip bank, tap-to-pair, graded per pair, retry with correct pairs locked, why per pair",
    "file": "components/learn-mode/MatchRecall.jsx",
    "packet": 7,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-7",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "components/learn-mode/MatchRecall.jsx:1-140 tap-left-then-chip or chip-then-left pairing, matchChips seeded shuffle of rights+distractors (lib/recall-widgets.js:220-226), gradeMatch per-pair (recall-widgets.js:229-237), retry:69-75 locks correct pairs, RecallAnswer renders p.why; test lib/recall-widgets.test.mjs:113-124",
    "note": null,
    "added": "2026-09-14"
   },
@@ -17751,10 +17751,10 @@
    "title": "classify recall type: 2-3 named groups, a shuffled item bank, tap item then group, graded per item, retry with correct items locked, why per group",
    "file": "components/learn-mode/ClassifyRecall.jsx",
    "packet": 7,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-7",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "components/learn-mode/ClassifyRecall.jsx:1-141 tap-item-then-group or group-then-item, classifyItems seeded shuffle rejecting a contiguous-by-group order (lib/recall-widgets.js:242-251), gradeClassify per-item (recall-widgets.js:254-258), retry:63-71 locks correct items, RecallAnswer renders g.why; test lib/recall-widgets.test.mjs:126-136",
    "note": null,
    "added": "2026-09-14"
   },
@@ -17764,10 +17764,10 @@
    "title": "widget gallery: /admin/widgets and /dev/widgets render one exemplar of each recall type and the label drill from lib/recall-fixtures.js",
    "file": "app/dev/widgets/page.js",
    "packet": 7,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-7",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "app/dev/widgets/page.js:12 notFound() when NODE_ENV==='production'; app/admin/widgets/page.js + app/admin/layout.js:9-19 redirect non-admins; components/learn-mode/WidgetGallery.jsx:33-51 renders one exemplar of each of the four types plus the label drill from lib/recall-fixtures.js",
    "note": null,
    "added": "2026-09-14"
   },
@@ -17777,10 +17777,10 @@
    "title": "the recall contract: four types documented in CONTENT-GATE.md, enforced by validator rules with fixtures, grading logic in lib/recall-widgets.js with tests",
    "file": "lib/recall-widgets.js",
    "packet": 7,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-7",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14",
+   "evidence": "audit/CONTENT-GATE.md 'The recall contract' section (four types table + why/converting/renderer-forgives subsections); lib/content-validator.mjs adds schema.recall-type, match.count, match.unique, classify.groups, classify.unique, match.prompt, classify.prompt, recall.why, fillin.distractors, fillin.leak and retires reorder.permutation/identity/shuffle-reuse and fillin.one-per-line; lib/recall-widgets.js + lib/recall-widgets.test.mjs (132/132 tests pass, npm run validate exit 0 with 0 new-block/new-debt)",
    "note": null,
    "added": "2026-09-14"
   }

@@ -2841,7 +2841,8 @@ button.sidebar-resource-link {
 .lm-word-chip.locked { cursor: default; }
 /* F060: the targeted blank. */
 .lm-fillin-blank.selected { border-style: solid; border-color: var(--recall-accent); box-shadow: 0 0 0 2px rgba(167,139,250,0.25); color: var(--text-primary); }
-.lm-fillin-blank-inert { cursor: default; opacity: 0.6; }
+.lm-fillin-blank-inert { cursor: help; color: var(--text-dim); letter-spacing: 0.05em; }
+.lm-fillin-note { font-size: 12px; color: var(--text-secondary); margin: -6px 0 12px; line-height: 1.45; }
 /* F063: the student's word, struck through, beside the answer. */
 .lm-fillin-was { color: var(--rl-red); text-decoration: line-through; margin-right: 6px; opacity: 0.85; }
 .lm-fillin-answer { color: var(--rl-green); font-weight: 600; }
