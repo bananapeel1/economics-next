@@ -1,5 +1,93 @@
 # Next session brief
 
+## Packet 7 spec — Widget mechanics (building, 14 September 2026, Fable 5.1; base commit cb6b894)
+
+The packet that defines what a recall IS, so that the 338 recalls the content packets author (272 to rewrite,
+20 Business sections to give their first) are written once into widgets that work. Twelve ledger ids, all on
+the two recall widgets and the three never-mounted components, plus four minted feature ids for the parts that
+have no audit finding behind them (the two new types, the gallery, the contract).
+
+**The recall contract (W004).** Four types, documented for authors in `CONTENT-GATE.md` under "The recall
+contract", enforced by the validator, rendered by `components/learn-mode/*Recall.jsx`, with the pure grading
+and ordering logic in `lib/recall-widgets.js` so it is testable without a browser.
+- `reorder` — `correctOrder` (3-5), a prompt that names the ordering principle, and `why[]`: one line per item
+  saying why it sits where it does. `shuffled` is dropped: the start order is a seeded permutation of the recall
+  id (never the identity, never with the first item already in place, and on the spaced showing never the first
+  showing's order either), so the six memorisable patterns of F113 cannot recur and the server and client agree.
+- `fillin` — `template[]` lines with any number of `___` per line, `answers[]` one per blank in reading order
+  (multi-word answers are one chip), `hints[]` semantic, and `distractors[]` (2-3 plausible wrong chips). The
+  renderer never shows a letter-prefix hint: a stored hint that is a prefix of its answer or reveals its length
+  is replaced on screen by the first letter alone. Where a recall carries no distractors the engine draws two
+  from the section's other fill-in answers, seeded by the recall id, so the bank is never a closed set (F054).
+- `match` — `pairs[{ left, right, why? }]` (3-5) plus optional `distractors[]` on the right-hand side. The
+  rights are a shuffled chip bank; tap a left item then a chip, or a chip then a left item.
+- `classify` — `groups[{ name, items[], why? }]` (2-3 groups, 4-8 items). Items are a shuffled bank; tap an
+  item then a group, or a group then items.
+
+**Mechanics shared by all four.** Check → per-item marks and a partial-credit line → *Try again* with the
+correct items locked and only the wrong ones live → the wrong-state panel shows the answer and the `why` lines
+where the content carries them. The score reported to the engine is the FIRST check only (retry consolidates,
+it does not inflate). A visible **Skip** text button replaces the unlabelled × (F055): a skip counts in the
+recall total, is counted separately as skipped, and the skipped recall comes back as the spaced recall at the
+next chapter check-in in preference to the default pick; the completion screen shows "N skipped". Skipped ids
+persist in the section's local state (there is no server column for them; a review-mode consumer for recalls
+does not exist, and adding one is not this packet).
+
+**Fill-in specifics (F050 F051 F054 F060 F063 F112).** The template is parsed into text and blank segments
+with a running blank counter, so a line with `___ ___` or two blanks renders whole (F051, F112). Blank count
+is derived from the template: answers beyond it become extra chips, blanks beyond the answers render as inert
+underscores, and Check needs only the live blanks, so the 8 live mismatches are completable (F050). Tap a blank
+to target it, tap a chip to fill the targeted (else first empty) blank, tap a filled blank to return its chip
+(F060; the drag-and-drop handlers and `cursor: grab` are deleted). After Check a wrong blank shows the
+student's word struck through with the correct answer beside it and the "Correct answers:" strip is gone (F063).
+
+**Reorder specifics (F056 F057 F107 F113).** Retry with locked correct items; partial credit says how many
+are in place and how many are one place off; `why` per item in the wrong-state panel. F057 and F107's content
+half — the 18 not-orderable and 48 weak reorders — is converted section by section into `match`/`classify`
+(the March verdicts in `audit/raw/content-audits.json` name them; the gallery's match and classify exemplars
+ARE two of them, converted). After this packet the two ids are reassigned to packet 57 with a note; they close
+when no live reorder carries a not-orderable or weak March verdict.
+
+**Dead components (F061).** `RecallCheckpoint` and `InteractiveDiagram` deleted with their CSS.
+`DiagramLabelDrill` is wired behind a "Label this diagram" button on `InlineDiagram`, shown only when the
+SVG carries three or more `text.draggable` labels; its fallback that extracted every `<text>` is removed
+(measured: it would have produced 6-40 "labels" per live diagram, titles and axis values included). 0 of 74
+live diagrams and 0 of 18 in `public/diagrams/` carry the class today, so the button appears nowhere until
+packets 13.5-13.7 author labels; the gallery proves it works with a fixture SVG.
+
+**Validator.** New rules: `schema.recall-type` (BLOCK), `match.count`, `match.unique`, `classify.groups`,
+`classify.unique` (BLOCK), `match.prompt`, `classify.prompt`, `reorder.why`, `fillin.distractors`,
+`fillin.leak` (DEBT). Retired: `reorder.permutation`, `reorder.identity`, `reorder.shuffle-reuse` (the field
+is inert), `fillin.one-per-line` (the renderer copes). Relaxed: `fillin.token` refuses commas only. The
+baseline is rewritten once, in this packet, and the DECISIONS entry lists the by-rule delta.
+
+**Gallery (W003).** `/admin/widgets` (admin-gated, for the founder) and `/dev/widgets` (404 in production)
+render one exemplar of each type and the label drill from `lib/recall-fixtures.js`, at any viewport.
+
+Ledger: closes F050 F051 F054 F055 F056 F060 F061 F063 F112 F113 and the minted W001 (match) W002 (classify)
+W003 (gallery) W004 (contract + validator). Leaves F057 F107 → packet 57 with a note (content half).
+
+### Acceptance — Verify B at 390×844, economics / introductory-concepts, signed out
+1. Step 0 (reorder). Four items; the order shown is not the answer and the first item is not "Observe/Identify"
+   (whatever the true first is); a text button "Skip" in the card header; no ×. Tap "Check order" without
+   moving anything: a result line "N of 4 in the right position" (plus "M one place off" when M>0), a "Try again"
+   button, and the correct order listed. Tap "Try again": items marked correct stay green with no arrows; the
+   others still move. Put them right, Check: "Perfect order".
+2. Step 1 (fill-in, answers Positive · Normative · ought to). The word bank holds MORE chips than blanks (3
+   answers + 2 distractors). "Show hints" never shows a letter prefix like "Po____". Tap blank 2 first, then a
+   chip: it lands in blank 2. Tap that blank: the chip returns. Fill all three wrong, Check: each wrong blank
+   shows the wrong word struck through with the right one beside it; there is no "Correct answers:" strip.
+   "Try again" clears only the wrong blanks.
+3. Step 4 (fill-in, Opportunity Cost): press Skip. Step 8 (chapter 3 check-in): the "Recall from chapter 2"
+   card is the Opportunity Cost fill-in (the skipped one), not the chapter 1 recall.
+4. Step 10 (fill-in "Money also serves as a store of ___, unit of ___, and standard of deferred payment"):
+   the whole sentence is visible with two blanks; the widget can be filled and checked.
+5. Complete the section: the Recall score row shows "x/y" and "1 skipped".
+6. `/dev/widgets` at 390px: match — tap a left item then a chip, pairs fill, Check, Try again, the why lines;
+   classify — tap an item then a group, Check, Try again; label drill — drag a chip onto its dashed slot.
+7. Console: no hydration warning on a fresh load of /economics with introductory-concepts.
+
+
 ## Packet 5 spec — Step 0 (built, Verify-B'd and VERIFIED 14 September 2026, Fable 5.1 — Verify A passed on round 3, commit d032302; NOT shipped until the checkpoint, ~26 September)
 
 The churn packet. 75% of Learn Mode section opens never pass step 0. Packet 0 already made the pre-test opt-in;
@@ -148,6 +236,25 @@ fixed AFTER the gate as one-line CSS changes and checked by measurement only (no
 The verifier's measurement caveat is worth keeping: with the Browser pane hidden the sheet's scale-in does not
 run and rect-based numbers read 0.92×; read computed styles, or front the tab. **Ship at the checkpoint** once
 the funnel baseline has two weeks behind it (~26 September), as a PR the founder merges.
+
+**Post-gate, 14 September: every Vercel preview since 8288315 failed to build, and the cause was packet 5's
+own new route.** `app/api/sections/depth/route.js` carried `export const revalidate = 3600`, which makes Next
+run the handler during `next build`, and the handler used `createServerClient()` — the SERVICE ROLE key, which
+is Production-only in this project. So the build called Supabase with no key and died: "supabaseKey is
+required. Export encountered an error on /api/sections/depth/route, exiting the build." Local builds passed
+throughout because `.env.local` has every key. Fixed by `export const dynamic = 'force-dynamic'` (the hourly
+cache is the CDN's job, through the `s-maxage` header the route already sets, not the build's) and by reading
+with `createAnonClient()`: these are public counts over tables the public topic pages already read
+anonymously, and that client falls back to a no-op when env vars are missing, so a missing variable degrades
+the depth chip instead of breaking a deployment. After: static pages 157 → 156 (the route is no longer
+prerendered), local build exit 0, `/api/sections/depth` returns 43 sections and 22 thin with the cache header
+intact. **The rule: nothing that talks to Supabase may run during `next build` unless it uses the anon client.**
+Only `app/economics/[unit]/[topic]/page.jsx` and `app/business/[unit]/[topic]/page.jsx` prerender now, and both
+already use the anon client. See [[revvylearn-guides-seo-audit]] for the first time this env trap cost a day.
+
+**A note on the gate.** `npm run validate` reads live content, so a run can fail transiently while another
+session publishes. One run exited 1 here; three consecutive runs then exited 0 at 902 BLOCK / 1285 DEBT with
+0 new, matching the packet-13 verifier's figures. Re-run before believing a red validator.
 
 **Post-gate, 14 September, found by the founder on localhost: scrolling "forces you back up".** The tab strip's
 keep-the-active-tab-visible effect (packet 5, F096) called `scrollIntoView` — which scrolls ancestors

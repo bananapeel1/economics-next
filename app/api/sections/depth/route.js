@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { createServerClient } from '@/lib/supabase-server';
+import { createAnonClient } from '@/lib/supabase-anon';
 
 /**
  * GET /api/sections/depth — how much each section holds, for the honest depth signal (F083).
@@ -12,14 +12,26 @@ import { createServerClient } from '@/lib/supabase-server';
  *
  * Public, no entitlement involved: counts only, no content. Cached for an hour at the edge; the
  * numbers move only when a content packet publishes.
+ *
+ * Two deployment facts this route learned the hard way, on the Vercel preview for packet 5:
+ *
+ *  1. It must NOT be prerendered. `export const revalidate` made Next run the handler during
+ *     `next build`, and a build that talks to Supabase fails wherever the key is absent — which is
+ *     every Preview deployment, because `SUPABASE_SERVICE_ROLE_KEY` is Production-only. The build
+ *     failed with "supabaseKey is required" and took the whole deployment with it. The hourly cache
+ *     is the CDN's job, via the `s-maxage` header below, not the build's.
+ *  2. It reads with the ANON key. These are public counts over tables the public topic pages already
+ *     read anonymously, so the service role buys nothing and costs the Preview environment. And
+ *     `createAnonClient()` falls back to a no-op client when the env vars are missing, so a missing
+ *     variable degrades the depth chip instead of breaking a build.
  */
-export const revalidate = 3600;
+export const dynamic = 'force-dynamic';
 
 const MIN_CHAPTERS = 4;
 const MIN_QUIZ = 20;
 
 export async function GET() {
-  const db = createServerClient();
+  const db = createAnonClient();
   const [{ data: quiz, error: qErr }, { data: content, error: cErr }] = await Promise.all([
     db.from('section_quiz').select('section_id, data'),
     db.from('section_content').select('section_id, data'),

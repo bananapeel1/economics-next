@@ -352,6 +352,14 @@ Append only. Every entry needs a date and the packet that made it.
   the 12px phone rule; a three-part modal selector outranking the 200vw sheet rule; a keyboard-hint hide rule
   declared before the base rule that showed it. The appended "Packet 5" phone block is where phone rules live,
   and a rule that must beat an earlier selector uses the same selector so it wins by order, not by guesswork.
+- **2026-09-14 (packet 5, post-gate) — nothing that talks to Supabase runs during `next build` unless it uses
+  the anon client.** The depth route's `export const revalidate` made Next prerender it, and it read with the
+  service-role key, which is Production-only: every Vercel preview from `8288315` on failed with "supabaseKey
+  is required", while local builds passed because `.env.local` has every key. An API route gets its cache from
+  the CDN (`s-maxage`), not from build-time prerendering, and public counts get read with the anon key, whose
+  client already no-ops when the variables are absent. The second time this environment trap has cost the
+  project a chunk of a day; the first is in the guides SEO teardown. **A green local build is not evidence
+  that a preview builds** — check the deployment, or at least know which env vars the build touches.
 - **2026-09-14 (packet 5, post-gate) — never call `scrollIntoView` from a render-driven effect.** It scrolls every
   scrollable ancestor, not just the strip it was meant for, and an effect keyed on an array rebuilt each render
   runs on every render — which, in this app, is every scroll frame. The founder felt it as scrolling that forces
