@@ -382,6 +382,13 @@ Append only. Every entry needs a date and the packet that made it.
   heading in aggregate-demand — which is true, and is the deferred merge. D011 was narrowed to what was done
   (six of seven rows) and the seventh minted as D013 on packet 37, because "done except one, on a document that
   says so" is not "done".
+- **2026-09-14 (packet 13, after Verify A round 3) — fix the field, then read every other field of the same
+  entry.** Three rounds running, a fix landed on the fields the verifier had named and left the same defect in
+  the field beside them: the keyIdea was corrected while the flow four lines down still taught the old thing,
+  and a subsection was cleaned while its notes twin was not. Rules written against prose cannot match a flow
+  step or a takeaway, so a substitution pass is not evidence about them. From here, a content fix reads every
+  string of the entry it touches — and, for an ownership claim, every string of all 43 sections, because the
+  census reads titles only.
 - **2026-09-14 (packet 13, at publish) — the baseline diff is the last reader of a content pass.** Publishing
   passes 3's five sections re-fingerprinted four DEBT findings, which is the design, and revealed two the pass
   had created: a fill-in whose answer was printed in its own template, and a subsection two words over the

@@ -1,5 +1,119 @@
 # Next session brief
 
+## Packet 14 spec — decision-making-techniques, the first content section and the format pilot (Fable 5.1, 14 September 2026)
+
+The section that sets the template for the 42 that follow. Business Unit 3 (WBS13), IAL topic **3.3.3
+Decision-making techniques**, `audit/raw/bus_spec.txt:1146-1177`, 23 countable leaves in five sub-topics:
+1 quantitative sales forecasting, 2 investment appraisal, 3 decision trees, 4 critical path analysis,
+**5 contribution**. Grade D in March; 2 blocks, 4 subsections, 0 recalls, 0 diagrams, 10 quiz items, 5 practice
+items; validator on 14 September: 11 BLOCK, 22 DEBT, 60% lexical coverage. Nine section opens since the audit,
+which is why it is the pilot.
+
+**One correction to the ledger before anything else.** Four items say contribution is "Unit 2 content, off-spec
+for this section" (`quiz-04`, `specGap-06`, half of `topFix-03`, and the audit's flashcard note). That is UK GCE
+reasoning: in the IAL specification contribution is sub-topic 5 of this very topic (3.3.3.5a-c, spec lines
+1175-1177), and `audit/raw/spec-coverage.json` lists all three of its leaves as MISSING here. So this packet
+**teaches** contribution rather than removing it. Break-even (2.3.2.3, owned by financial-planning) and
+sensitivity analysis (0 occurrences in either specification) are the off-spec material, and they go.
+Likewise `topFix-05` and the audit's first accuracy issue ask for the section to be relabelled "3.3" with
+sub-points 3.3.1-3.3.4: that is the UK Theme 3 numbering. The `sections` row already says `3.3.3`, which is
+the IAL number, and it is not changed.
+
+### Scope — the 31 ledger ids assigned to packet 14, plus one minted
+
+All 31 are claimed. What "closed" means for each:
+
+- **F108** (the Unit 2 → Unit 3 cliff, reassigned here by packet 3): closed *for this section*, which is the
+  first Unit 3-4 section to reach the Unit 1 template — ≥4 blocks, one recall per subsection, ≥20 quiz items,
+  pins on every block, a diagram per chapter. The validator rules packet 3 built (`depth.blocks`,
+  `depth.recalls`, `depth.quiz`, `section.no-recall`) hold every later section to the same floor; the other
+  Unit 3-4 sections close it under their own packets. If the verifier reads F108 as programme-wide, reassign
+  it to packet 57 rather than reject.
+- **topFix-01, specGap-01, specThin-01, quiz-01/02/03, structure-01**: an Investment Appraisal block of four
+  subsections (payback with the part-year fraction, ARR, NPV with discount factors, comparing the three), each
+  with a worked example, plus a matching notes chapter, so the payback/ARR/NPV quiz and practice items are taught.
+- **topFix-02, structure-05**: five diagrams in `section_diagrams`, one pinned by `diagramId` on every block:
+  time series with a three-period moving average and an extrapolated trend (a second scenario: scatter graph
+  with a line of best fit), cumulative cash flow with the payback point, a worked decision tree, an
+  activity-on-arrow network with node number / EST / LFT circles and the float shown, and a contribution bar.
+- **topFix-03, quiz-05, practice-01, specGap-06**: quiz[8] (break-even output) and practice[4] (sensitivity
+  analysis, an `Outline`) deleted; quiz[7] (contribution per unit) kept and now taught. New items on
+  extrapolation's continuity assumption, correlation and causation, decision-tree limitations, CPA
+  limitations; a CPA float-and-critical-path Calculate; a moving-average Calculate.
+- **topFix-04, structure-06**: 15 recalls, one per subsection: 5 fill-ins (moving-average rule, payback,
+  NPV, critical path, contribution chain), 4 reorders (the forecasting steps, the ARR calculation, rolling
+  back a tree, completing a network — each a genuine procedure sourced from a flow in its own subsection),
+  2 matches (forecasting limitations, decision-tree limitations), 4 classifies (payback/ARR/NPV statements,
+  decision vs chance nodes, CPA strengths vs limitations, accept vs reject on contribution). Every one carries
+  its `why`; every fill-in its 2 distractors and semantic hints.
+- **topFix-05, structure-02, structure-03, structure-04**: five blocks in specification order (Sales
+  Forecasting · Investment Appraisal · Decision Trees · Critical Path Analysis · Contribution), 15 subsections,
+  `quizIndices` and `practiceIndices` on every block so the check-in asks about the chapter just taught.
+  The "3.3" relabel half of topFix-05 is not done, for the reason above.
+- **structure-07, specGap-02, specGap-05, specThin-02, specThin-03**: worked calculations in the body:
+  a six-month three-period moving average, the four-quarter centring rule, a 2.8-year payback, ARR 12.5%,
+  an NPV of +$3,850, EMVs and net gains for a two-option tree, and a six-activity network with both passes
+  and every float (A-B-D-F, 10 days).
+- **specGap-03**: a subsection on scatter graphs, the line of best fit, the three correlations and reading a
+  forecast off the line.
+- **specGap-04**: constructing the tree (squares, circles, probabilities summing to 1, costs on option
+  branches) and rolling back through the decision node, in the Learn Mode body, not only in a mistake card.
+- **structure-08**: quiz items on the continuity assumption, correlation vs causation, tree limitations and
+  CPA limitations (see the quiz map in the plan script).
+- **structure-09**: the CPA misconception is now "the most important or the shortest route"; decision-tree and
+  correlation misconceptions kept in substance.
+- **structure-10** ("takeaways match their blocks, no issue"): claimed as no-change; the new takeaways are per
+  block and the verifier can read them.
+- **C-decision-making-techniques-specGap-07** (minted this packet from `spec-coverage.json`'s three MISSING
+  contribution leaves): a Contribution block, two subsections (per unit and total; the decision uses: special
+  orders, product mix, dropping a product, make or buy), notes chapter, flashcards, quiz and an Assess (12).
+
+Deliberately not in this packet: the public Unit 3 landing copy at `app/business/unit-3/page.js`, which
+still lists the section's sub-topics in the March order and omits contribution — a cross-surface item for
+packet 57 (add to D014's file list); the quant drill wiring (13.2); diagram label drills beyond the decision
+tree (13.5-13.7 own the labels; the tree carries three `draggable` labels so the button appears once).
+
+### Acceptance checks a verifier can run without this conversation
+
+1. `node audit/scripts/validate-content.mjs --section decision-making-techniques` → 0 BLOCK, DEBT ≤ 3, 0 new
+   against the baseline; `spec.coverage` ≥ 90% (was 60%); `section.counts` reports 5 blocks · 15 subsections
+   · 15 recalls · ≥28 quiz · 8 practice · 5 diagrams.
+2. `node audit/scripts/pin-check.mjs --section decision-making-techniques` → 0 broken pins.
+3. `node audit/scripts/packet-13-census.mjs` → exit 0 (no banned term introduced).
+4. Live content (read the post-publish snapshot `audit/snapshots/auto-prepublish-*__business__decision-making-techniques.json`
+   or the plan `scripts/_packet14-*.mjs`): no `£`, no "sensitivity", no "break-even" outside the one synoptic
+   sentence in the contribution subsection, no "Outline", no sentence beginning "Examiners …" without a
+   citation, every subsection's teaching text ≤ 350 words (the runner prints the count).
+5. The reorder recalls' `correctOrder` paraphrase a flow in the same subsection in the same order; every
+   reorder prompt names its principle ("from first to last", "from the right of the tree to the decision").
+6. Every real example that names an entity and a year or figure carries a source in parentheses (Layer 4).
+7. `npm test`, `npm run build`, `npm run validate` exit 0; baseline rewritten smaller.
+
+### Verify B — 390×844, `/business/unit-3/decision-making-techniques`, signed out
+
+1. Overview shows 20 steps (15 teach + 5 check-ins); tap Learn.
+2. Step 1 "Moving averages": one heading, chapter eyebrow "Sales Forecasting · part 1 of 3", key idea, the
+   worked bullets (43.0, 45.7, 48.3, 50.7), then the fill-in recall BELOW the teaching with three blanks and
+   five chips (mean · middle · centred · total · trend). Place a wrong chip, Check → partial line and "Try
+   again"; second wrong check → the answer with a reason line. Skip is a text button. Next visible without
+   scrolling past the recall.
+3. Step 2 "Scatter graphs…": reorder with four items in a non-identity order; the prompt ends "from first to
+   last"; Check shows the why lines on a wrong order.
+4. Step 3: match recall; pairing by tap works; one distractor chip remains unpaired at the end.
+5. Step 4 "Chapter check-in" (chapter 1): diagram "Sales over time: moving average and trend" with a scenario
+   switcher (two scenarios), "Tap to enlarge" opens the sheet and the axis labels are readable; a quiz item
+   about forecasting; a Calculate (4 marks) practice with an answer box and a four-item self-mark checklist;
+   NO spaced recall (first chapter); explain-it-back; takeaway with 4 lines.
+6. Chapter 2 teach steps: payback fill-in, ARR reorder, NPV fill-in, classify with three groups and six items.
+7. Check-in 2: cumulative cash flow diagram; the spaced recall is from chapter 1 with the cue "Recall from
+   chapter 1"; a practice item (NPV Calculate).
+8. Chapter 3 check-in: the decision tree shows a "Label this diagram" button; tapping it opens the drill with
+   three labels and closing it restores the diagram.
+9. Chapter 4 check-in: the network diagram; enlarged, the node numbers and the EST | LFT figures are legible.
+10. Chapter 5 check-in: the contribution bar; the practice item is an Assess (12 marks) with the levels note
+    ("questions above 6 marks are levels-marked").
+11. Completion screen reached; console shows no errors other than the signed-out 401.
+
 ## Packet 7 spec — Widget mechanics (built and VERIFIED 14 September 2026, Fable 5.1 — Verify A 14 of 14 on round 1, Verify B 15 of 16 with the one failure fixed post-gate; commits bcd62ce · 2c57920 · the gate commit; base cb6b894)
 
 The packet that defines what a recall IS, so that the 338 recalls the content packets author (272 to rewrite,
@@ -324,7 +438,7 @@ still slides it to 238-326, clear of the chevron at 326. No verifier round: meas
 verifier brief: **scroll the page with real input while the app is re-rendering**; the round-1/2/3 walkthroughs
 scrolled with `scrollTo` once and never saw it.
 
-## Packet 13 spec — the off-spec strip and dedupe (built 14 September 2026; Verify A rounds 1 and 2 each rejected D010 and D011; passes 3, 3b and 3c PUBLISHED to live content 14 September; round 3 running)
+## Packet 13 spec — the off-spec strip and dedupe (built 14 September 2026; Verify A rounds 1, 2 and 3 each rejected D010 and D011; passes 3, 3b, 3c and 4 published to live content 14 September; round 4 running)
 
 **What it had to make true.** No framework the IAL specification does not contain is taught or assessed anywhere in
 live content. No section teaches a specification bullet another section owns. Nothing this packet removed is still
@@ -412,6 +526,36 @@ right-edge legend word, neither touched by this packet).
   the notes entry the verifier spotted (`aggregate-demand` `notes[3]`).
 - The verifier's D014 note (the public `app/economics/market-failure/page.js` FAQ contradicts itself on the
   same vocabulary) is added to D014's ledger note for packet 57.
+
+**Verify A, round 3 (14 September, commit 4293ba4): D010 and D011 rejected again, both correctly, and the
+sentence to keep from the report is "it is the third round in which a heading-level or field-level fix left the
+teaching beside it."** What it found, and what pass 4 did:
+- **D010, the over-reach, in the fields pass 3 did not reach.** `role-state-macroeconomy` `notes[1]`'s FLOW
+  still read "Consumers undervalue long-term benefits" → "Under-consumption creates welfare loss": the
+  information mechanism as the definition of the class, one card away from the keyIdea pass 3 had fixed. A flow
+  step is not a sentence in prose, so no substitution rule could match it. Both misconceptions still merged the
+  externality with information failure, and the subsection's own exam tip tells the student not to merge them.
+  `market-failure`'s education quiz keyed the same merge.
+- **D011, a topic another section owns, taught below heading level.** `business-growth` kept two demerger
+  takeaways after the demerger subsection went; `introductory-concepts` kept a takeaway naming the three
+  functions of the price mechanism and a flashcard testing them — 1.3.4.3a-b taught AND assessed in 1.3.1.
+- **What is genuinely done**, per the same report: all class-(a) swap artefacts gone, `DWL` at 0 hits over
+  43 sections × 8 tables with all six labels correct, 450 snapshot-vs-live strings read with no other damaged
+  sentence, and the monopoly row of the ownership map true at last.
+
+**Pass 4 (`scripts/_packet13-pass4-plan.mjs`), published the same day.** It does not fix only the fields it was
+shown. Every field of the two role-state entries was read, and the ownership map was re-run over BODY TEXT in
+all 43 sections: that turned up the two D011 instances the verifier named and two more of the same class it did
+not (the `introductory-concepts` notes item that taught the three functions, and — checked and kept — four
+references that are legitimately references). The flashcard is rewritten rather than deleted: ids are stable and
+progress rows point at them, so a delete would take a student's review history with it. Deliberately left, with
+reasons recorded in the plan file so round 4 need not re-litigate them: government-intervention's two
+cross-referenced mentions of the rationing function inside its own price-controls treatment; external-influences'
+five-forces subsection, which the map already defers to that section's content packet;
+government-intervention's nudge subsection, which is an intervention method under 1.3.6 rather than the
+behavioural bullet at 1.3.2.1b; and government-intervention-firms' monopoly welfare-loss flashcard, same unit
+and paper as the owner. Gate after publish: 7 tables staged and published across four sections, MUST_NOT_SURVIVE
+0 survivors, census exit 0, validate exit 0, tests and build exit 0, baseline a single clean re-key (+1 −1).
 
 **Round-3 replay.** `node audit/scripts/packet-13-census.mjs` exit 0 with DWL at 0. Snapshot-vs-live
 diff over the five sections: every changed string named by a pass-3 rule. Read role-state-macroeconomy
