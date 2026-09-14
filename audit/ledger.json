@@ -201,10 +201,10 @@
    "fix": "For free users add a non-AI close-the-loop: after typing, reveal the block's section keyIdea values (already in content) as 'Compare with the key ideas' plus a 2-3 item self-check, and call onExplainAttempt. Wire onExplainAttempt into the component. Either delete the dead tutor branch or make it a real upsell that preserves the typed text. Persist the draft per block in localStorage.",
    "impact": "On the last step of every block (including step 0 of introductory-concepts where 167 of 192 users are stuck) the student is invited to explain in their own words and gets zero response of any kind. At completion their Explain It Back score reads 0 regardless of effort.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
-   "evidence": "Compare/self-check/onAttempt are done (components/learn-mode/ExplainItBackUpgraded.jsx:129-155 reveal the chapter keyIdeas with checkboxes and countAttempt on compare; observed signed out on step 14: 40 chars typed -> 'Compare with the key ideas' -> 1 key idea with a checkbox, tick -> 'All of them'). The draft clause fails: the write effect at :101-104 runs on mount with text='' (the useClientValue fallback) and calls localStorage.removeItem(draftKey) before the read at :90 has landed, so the stored draft is deleted on every mount. Reproduced twice at 390x844 on the dev server: draft 'Free markets allocate via price signals.' was in revvy_explain_introductory-concepts_4 before reload; after reload -> Continue -> reopen, textarea '' and the key null. Planted 'PLANTED DRAFT for chapter 5', stepped Back then Next (component remounts): key null, textarea ''. The acceptance script's 'reload and reopen -> the draft text is still there' does not hold. (In a non-StrictMode build the second render re-writes the value, so this is an effect-ordering bug that dev exposes and prod merely races.) The locked CTA links to /upgrade; with the draft wiped on remount, 'preserves the typed text' is not met either.",
+   "verified_by": "packet-verifier 2026-09-14 r2 2026-09-14",
+   "evidence": "components/learn-mode/ExplainItBackUpgraded.jsx:27-35 reads the draft in an effect and resets a dirty ref; :44-47 writes only when dirty.current, which onChange sets at :108. Reproduced 390x844, signed out, storage cleared: step 3, typed 56 chars -> key revvy_explain_introductory-concepts_0 written; reload -> Start learning -> banner 'step 3 of 14' -> Continue -> reopen: the textarea holds the draft and 'draft saved' shows on the collapsed toggle; Back -> Next (remount): key intact, textarea holds the draft; typing after the remount appends and persists. Compare / self-check / locked Pro CTA unchanged from round 1.",
    "note": null
   },
   {
@@ -269,10 +269,10 @@
    "fix": "Add an optional answer box with a self-mark checklist generated from the guidance paragraphs (each '(n marks)' fragment becomes a tick box). Count it toward completion. For free users show the tutor button as a real paywall upsell rather than hiding it. The existing WrittenQuestionCard plus /api/written-practice/evaluate (already IAL AO-based) could be reused for premium.",
    "impact": "For a 20-mark Evaluate question a free student reads the question, clicks reveal, reads a mark-allocated skeleton, and moves on. No writing, no self-marking, no model answer. The 'practice' card practises nothing.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
-   "evidence": "Answer box in all three modes (components/learn-mode/InlinePractice.jsx:99-133 answerBox rendered in worked :150, guided :167, independent :173), 'Mark my answer' disabled below 15 chars and enabled at 15 (measured 14 -> disabled, 15 -> enabled), practice counted on completion (LearnModeTab.jsx:129-130, CompletionScreen.jsx:145-147), locked Pro control for free students (InlinePractice.jsx:84-92: '🔒 Full model answer, marked to the IAL grid — Pro' -> /upgrade, observed signed out on steps 6 and 9), textarea 16px. REJECTED for the checklist split at :23-31: the lookbehind split leaves the punctuation after the last '(n marks)' as its own item, so a bare '.' tick-box with no marks appears; observed on step 9 (P1, 6 x '(1 mark)' -> 7 checkboxes, the 7th is '.') and items begin with '— ' and '. '. Census over the 215 live practice items with the same function: 164 produce a punctuation-only checkbox and 165 produce punctuation-led items. A '.' checkbox on three quarters of practice cards is a visible regression introduced by the fix; filter items with no word characters and trim leading punctuation.",
+   "verified_by": "packet-verifier 2026-09-14 r2 2026-09-14",
+   "evidence": "components/learn-mode/InlinePractice.jsx:13-18 strips leading space/.;:,/dashes and trailing space/.;:, per fragment and drops rows with no letter or digit. Census over the 215 practice items in audit/content-sections with the same function: 1,032 rows, 0 punctuation-only, 0 punctuation-led, 0 empty checklists. Browser 390x844: step 6 (4 marks) -> 4 rows each '1 mark', none '.'; step 9 (P1, 6 marks; round 1 saw 7 rows with a '.' seventh) -> 6 rows, none punctuation-only or punctuation-led. Mark my answer disabled below 15 chars, textarea 16px, locked Pro control present.",
    "note": null
   },
   {
@@ -541,10 +541,10 @@
    "fix": "Either add Content to the tab bar (free) or retire it and route 'View all content' to Notes.",
    "impact": "Student clicks 'View all content', the tab strip shows nothing selected, and 'Learn' looks un-selected even though they were just in it. Mild disorientation on a screen that is meant to reduce it.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
-   "evidence": "The Learn Mode more-menu (LearnModeTab.jsx:485-487 -> 'notes') and the overview card (StudyApp.jsx:125-131 -> 'notes') were retired, but components/Sidebar.jsx:214-218 still renders a 'Content Explorer' button that calls onTabSelect('content'), and StudyApp.jsx:30 keeps 'content' in FREE_TABS with :913 still rendering ContentTab. Reproduced at 390x844: hamburger -> Content Explorer -> the content stepper renders ('1 The Nature of Economics') with aria-selected=true on no tab (anyTabSelected=false). The defect in the title is still reachable from the sidebar of every section.",
+   "verified_by": "packet-verifier 2026-09-14 r2 2026-09-14",
+   "evidence": "components/Sidebar.jsx:215-218: the button is 'Full notes' and calls onTabSelect('notes'); no caller of the 'content' tab remains (grep over components/ and app/: only the dead render branch at StudyApp.jsx:912 and the FREE_TABS entry at :30). Browser 390x844: hamburger -> 'Full notes' -> Notes tab aria-selected=true, no content stepper rendered, 0 'Content Explorer' buttons.",
    "note": null
   },
   {
@@ -813,10 +813,10 @@
    "fix": "Compute isResuming from step > 0 on mount too; take Math.max(dbStep, localStep) and treat DB furthest as a high-water mark.",
    "impact": "A student reloading at step 4 is dropped straight into step 4 with no 'continue or restart' choice; a student switching sections quickly can be sent back a step on return.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
-   "evidence": "Mount/deep-link banner: DONE - StudyApp.jsx:545-549 sets learnModeResuming when readSavedStep > 0 after hydration; observed after a reload at step 14: 'You left off at step 14 of 14', Continue and Start over (-> Step 1, local key '0') work. max(db, local): WRITTEN at :529-537 but not effective in-app for a signed-in student: navigateToSection (:571-573) sets learnModeSection to the max, then the useClientValue at :404-411 re-runs its effect on [activeSubjectId, activeSection] and setValue()s the LOCAL value alone (0 when this browser has no key); the reconcile effect at :591-600 does not rescue it because learnStepRef (:587) already holds the max when it compares, so it marks resumeApplied and never runs again. Net: sidebar/Home navigation to a section whose server furthest_step is 8 with no local entry lands on step 1 with no banner - the title's 'DB pointer beats local' is inverted, not removed, and the impact 'sent back a step on return' remains for the cross-device case (the F027 scenario). Code-traced, not browser-reproduced (requires sign-in). Also note: because handleLearnStepChange (:603) stores the CURRENT step locally, max(db,current) can pull a student who went back deliberately forward again on the next navigation.",
+   "verified_by": "packet-verifier 2026-09-14 r2 2026-09-14",
+   "evidence": "components/StudyApp.jsx:408 learnModeSection is a plain useState(0); the only writers are readSavedStep (:521-533, max of server furthest_step and local key) via the entry effect :543-548, navigateToSection :570-572, and the F027 reconcile :589-598 (applies a later-arriving server step only when it is ahead). The useClientValue re-read that overrode the max on every section change is gone. Signed-out repro 390x844: set revvy_learnmode_1_supply_section=4 -> hamburger -> Supply -> Learn tab still active, 'Step 5 of 11', banner 'You left off at step 5 of 11'; reload on introductory-concepts at step 3 -> banner offered. The signed-in half is by code trace only (no test account).",
    "note": null
   },
   {
@@ -1053,8 +1053,8 @@
    "packet": 5,
    "status": "claimed",
    "closed_by": "packet-5",
-   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
-   "evidence": "The sheet exists (InlineDiagram.jsx:57-79 role=dialog, title bar, pane, hint; globals.css:7460-7469 full-screen at <=768px; Escape closes - all observed) but the SVG inside it is NOT larger: measured 351px wide at 390px viewport (0.9x, vs 313px inline) because the modal clones the processed inline SVG (InlineDiagram.jsx:22-30) which carries style='width:100%' from processSvg.js:127, and that inline style beats '.lm-diagram-modal-pane svg { width: 200vw }' at globals.css:7468. So the modal is the inline diagram plus 12%, darker, with a close button - the defect in the title. The hint gate (InlineDiagram.jsx:110-118 canEnlarge = narrow.matches || ...) shows 'Tap to enlarge' on every phone regardless, so the 'hide the hint when the modal would not be bigger' clause fails too. touch-action: pinch-zoom on the pane is set (measured).",
+   "verified_by": "packet-verifier 2026-09-14 r2 2026-09-14",
+   "evidence": "Round-1 defect fixed: components/learn-mode/InlineDiagram.jsx:30-34 strips the clone's inline size and app/globals.css:5975-5979 sets 200vw in a same-specificity phone rule; measured 390x844: sheet svg 780px (2.0x viewport, 2.49x the 313px inline), pane scrollWidth 804 vs clientWidth 390, programmatic scrollLeft 0..414 reaches both edges, close 44x44, hint shown. REJECTED on the input a phone actually has: app/globals.css:7467 sets touch-action: pinch-zoom on .lm-diagram-modal-pane, the scroll container itself. Per the Pointer Events touch-action spec, pinch-zoom alone permits only multi-finger page zoom and pan; single-finger scrolling of that element is disallowed (pan-x/pan-y or manipulation are needed). In round 1 the rule was harmless because the SVG fitted the pane; now the pane is 414px wider than the viewport, so the right half of every diagram is unreachable by a one-finger drag, and page pinch-zoom cannot scroll the pane's clipped overflow. Not touch-reproduced here (the emulated pane delivers mouse input); computed touchAction read 'pinch-zoom' in the open sheet. One-line fix: touch-action: manipulation. The rule was suggested verbatim in F088's fix text, which is why it was followed.",
    "note": null
   },
   {
@@ -1495,8 +1495,8 @@
    "packet": 5,
    "status": "claimed",
    "closed_by": "packet-5",
-   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
-   "evidence": "Inline width: DONE - globals.css:7459 max-width 100% at <=768px; measured svg 313px = wrapper width (was 270). Minimum label size: DONE as written - processSvg.js:132-142 raises text below viewBox/28 (17.9 units on the 500-wide boxes; measured min 17.9 on the step-14 SVG). Modal: NOT DONE - the sheet is full-screen with touch-action: pinch-zoom (measured) but its SVG is 351px = 0.9x the viewport, because the cloned SVG's inline style='width:100%' (processSvg.js:127, cloned at InlineDiagram.jsx:22-30) beats the 200vw rule at globals.css:7468; see F062. And the floor as calibrated is a regression on dense diagrams: census over the 74 live SVGs (all viewBox 500 wide): 1,419 of 1,420 labels are raised, median x1.79, p90 x2.23, max x2.55 (7-unit labels), so it is a global relayout rather than a floor. Measured overlapping label pairs at 390px, authored vs after the floor: supply 'PES: Visual Comparison' (45 labels) 0 -> 21, 'PES Over Time' (17) 1 -> 10; introductory-concepts 'Economic Systems Comparison' (38) visibly collides in a screenshot ('+ Efficient allocation' runs into '+ Corrects failure', 'Private & public sector' clipped). The finding suggested >=14 units; 17.9 trades unreadably small for unreadably overlapped on the 12 diagrams with >=25 labels. processSvg also runs in DiagramsTab/InteractiveDiagram/DiagramLabelDrill, so this applies at every width.",
+   "verified_by": "packet-verifier 2026-09-14 r2 2026-09-14",
+   "evidence": "Inline width DONE (svg 313px = card width, globals.css:7459). Sheet DONE at 2x the viewport (see F062, where its touch-action rule is recorded). REJECTED on the label floor, the round-1 ground: processSvg.js:140 minSize = vbWidth/36 = 13.9 units still relays out dense diagrams. Census over the 86 live SVGs in audit/content-sections (all viewBox 500): 1,281 of 1,377 labels are raised (93%; authored sizes run 7-13 units), median factor 1.39x, max 1.98x on 7-unit labels, against the commit's 'at most 1.4x'. Measured at 390px, authored vs floored bbox overlaps: introductory-concepts 'Economic Systems Comparison' (38 labels, step 14) 0 -> 18, and 2 labels now cross their box border where 0 did ('Private & public sector' overshoots the Mixed box by 16.3 units and runs into 'State ownership'; '+ Equity & efficiency' by 3.3), visible in a screenshot; supply Diagrams tab 'PES: Visual Comparison' (45) 2 -> 16, 'PES Over Time' (17) 1 -> 10 with 4 border crossings (0 authored). Overlaps are in viewBox units, so the 2x sheet inherits them. The floor buys nothing inline: 13.9 units at 313px is 8.7px on screen, still unreadable, while in the 780px sheet the authored 10-unit labels are already 15.6px with no floor. Drop the floor for the inline render, or gate it per label on measured room (getBBox); the sheet is the readability path.",
    "note": null
   },
   {
@@ -1714,10 +1714,10 @@
    "fix": "Use 15-16px body on mobile (drop the 13px override), 12px minimum for labels/hints.",
    "impact": "Long revision reading sessions on a phone at 13px/1.7 with a ~230px column; students zoom (no maximumScale, good) which then breaks the fixed header layout.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
-   "evidence": "Body: DONE - globals.css:1064-1065 .rl-body-p and .rl-takeaway-item 15px at <=768px, :7437-7438 key idea 16px and lens text/recall items/fill-in/chips/blanks/prompt 15px; measured 15px body, 15px takeaway items, 15px recall items, 15px fill-in. Labels: NOT DONE - the fix asks for a 12px minimum for labels/hints, but .rl-lenses .rl-real-example-label/.rl-misconception-label/.rl-exam-matters-label are 11px at :7331-7333 (two-class selector, outside the media query) and outrank the 12px phone rule at :7440; measured 11px on step 1 at 390px for all three lens labels. New labels this packet added are also below 12px: .lm-spaced-cue-label 11px (:7359), .lm-explain-toggle-draft 11px (:7367), .lm-practice-write-label 11px (:7380), .content-header-depth 11px (:7482), .sidebar-section-depth 10.5px (:7477); measured spaced cue 11px, header depth 11px, sidebar chip 10.5px. The '10-11px labels' half of the title is still on screen.",
+   "verified_by": "packet-verifier 2026-09-14 r2 2026-09-14",
+   "evidence": "app/globals.css: lens labels 12px at :7350-7352 and again in the phone block :7456-7460 with the two-class selectors; spaced cue :7368, draft :7379, practice label :7394, sidebar depth :7437, header depth :7441, flow numerals :925 and :1058, RESULT :962, kbd :2296 all 12px; .lm-keyboard-hint hidden in the phone block :7486. Measured 390x844 across all 14 introductory-concepts steps: no visible non-SVG text under 12px inside .lm-container on any step; lens labels 12px; flow numerals and RESULT 12px; sidebar chip '3 ch' and header depth 12px on supply; keyboard hint not rendered; tab-bar chevron and sheet close 44x44.",
    "note": null
   },
   {

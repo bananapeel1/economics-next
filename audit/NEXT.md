@@ -1,6 +1,6 @@
 # Next session brief
 
-## Packet 5 spec — Step 0 (built and Verify-B'd 14 September 2026, Fable 5.1; Verify A round 1 rejected seven, fixed the same day; round 2 pending)
+## Packet 5 spec — Step 0 (built and Verify-B'd 14 September 2026, Fable 5.1; Verify A round 1 rejected seven, round 2 rejected two of those, both fixed the same day; round 3 pending)
 
 The churn packet. 75% of Learn Mode section opens never pass step 0. Packet 0 already made the pre-test opt-in;
 this packet rebuilds the step itself so that what the student meets on step 0 is one subsection, readable on a
@@ -113,6 +113,27 @@ Start learning → Continue → reopen: the draft is there. Step 6 → type 15+ 
 none "." and none starting with punctuation. Step 14 → tap the diagram: the sheet's SVG is ~2× the viewport
 and scrolls to both edges; close is 44×44. Sidebar → Full notes: Notes tab. Set
 `revvy_learnmode_1_supply_section` = 4 → sidebar Supply → Learn: "step 5 of 11".
+
+**Verify A, round 2 (14 September, commit 680c654): F012 F016 F032 F048 F101 confirmed; F062 and F088 rejected,
+both correctly, both fixed the same day.** The round-1 defects were gone; each fix had one more thing wrong:
+- **F062** — the pane had `touch-action: pinch-zoom`, copied from F088's own fix text. That value permits only
+  multi-finger zoom and forbids one-finger panning, and the pane is the scroll container for a diagram now
+  wider than the screen: on a real phone the right half of every diagram was unreachable by a drag. It is
+  `manipulation` (pan and pinch; only the double-tap delay dropped). Measured `touchAction: manipulation`.
+- **F088** — the 1/36 floor still relaid out dense diagrams: 1,281 of 1,377 labels lifted (authored sizes are
+  7-13 units), 18 new overlapping pairs on the step-14 diagram that had none, and inline it bought nothing
+  (13.9 units at 313px is 8.7px). The floor is gone. The sheet is 220vw instead of 200: with every live
+  diagram on a 500-unit box and the smallest authored label 7 units (census over 73 SVGs, 1,390 labels), the
+  smallest label in the sheet is 12.0px at 390px, and page pinch-zoom goes further. Measured: no `style`
+  font-size on any inline label, 0 overlapping pairs inline and in the sheet, sheet SVG 858px, smallest
+  label on step 14 17.2px.
+- Also from the verifier's notes: the tab strip now scrolls 44px past its last tab so no label stays under the
+  chevron.
+
+**Round-3 replay additions.** Step 14 → tap the diagram: the sheet's SVG is 858px at 390 (2.2×), the pane's
+computed `touch-action` is `manipulation`, no label carries an inline `font-size` style, and the label
+bounding boxes overlap no more than the authored diagram (0 on this one). Census: `node -e` over every live
+`section_diagrams` row — `font-size` minimum 7, viewBox width 500, so 7 × 858 / 500 = 12.0px.
 
 ## Packet 13 spec — the off-spec strip and dedupe (built 14 September 2026; Verify A round 1 rejected D010 and D011, fixed the same day; round 2 pending)
 

@@ -329,11 +329,19 @@ Append only. Every entry needs a date and the packet that made it.
   the stored draft before the read that would have restored it had run. The pattern for any localStorage-backed
   input from here: a `dirty` ref set in `onChange`, the write effect a no-op until it is set, the read effect
   clearing it. StrictMode's double-mount made this visible in dev; production would have raced.
-- **2026-09-14 (packet 5, after Verify A round 1) — a minimum is a floor, not a relayout.** The diagram label
-  floor at 1/28 of the viewBox width raised 1,419 of the 1,420 labels across the 74 live SVGs (median 1.8×) and
-  made dense diagrams collide. The verifier's census, not the fix's own check, showed it. The floor is 1/36:
-  14 units on a 500 box, the finding's own figure, lifting only what is below it and by at most 1.4×. Small
-  labels become readable in the 2× sheet, which is what the sheet is for.
+- **2026-09-14 (packet 5, after Verify A rounds 1 and 2) — no font floor on diagram labels; the sheet is the
+  phone answer.** Two floors were tried. 1/28 of the viewBox raised 1,419 of 1,420 labels; 1/36 still raised
+  1,281 of 1,377 (authored sizes are 7-13 units) and put 18 overlapping pairs on a diagram that had none.
+  A label's size and its neighbours' positions were authored together, so any floor is a relayout, and inline
+  it bought nothing: 14 units at 313px is 8.7px. Labels keep their authored size. The full-screen sheet draws
+  the diagram at 220vw, chosen from the census: every live diagram is a 500-unit box and the smallest label is
+  7 units, so the smallest label in the sheet is 12px at 390px; pinch-zoom goes further. If a diagram is ever
+  authored with labels under 7 units, the validator is the place to catch it, not the renderer.
+- **2026-09-14 (packet 5, after Verify A round 2) — `touch-action` on a scroll container is `manipulation`,
+  never `pinch-zoom` alone.** `pinch-zoom` forbids one-finger panning; on the pane that scrolls a diagram
+  wider than the screen it made the right half unreachable on a real phone. The mouse-driven browser pane
+  could not show it; the verifier read the computed value against the spec. A value copied from a finding's
+  fix text is still a value to check.
 - **2026-09-14 (packet 5, after Verify A round 1) — the Learn step pointer has one writer.** A `useClientValue`
   that re-read the local step on every section change silently overrode the max-of-server-and-local every
   navigation handler had just computed. `readSavedStep` is the only source now, from the entry effect and the
