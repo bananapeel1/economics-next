@@ -7460,7 +7460,10 @@ a.auth-dropdown-item:visited {
   .lm-recall-item { min-height: 44px; }
   .lm-recall-dismiss { min-width: 44px; min-height: 44px; margin: -10px -10px -10px 0; display: inline-flex; align-items: center; justify-content: center; }
   .lm-more-btn { width: 44px; height: 44px; }
-  .lm-word-chip, .lm-fillin-blank { min-height: 40px; display: inline-flex; align-items: center; }
+  .lm-word-chip, .lm-fillin-blank { min-height: 40px; display: inline-flex; align-items: center; white-space: nowrap; }
+  /* A blank was shrinking inside its flex row and breaking "underproduces" mid-word; the row wraps instead. */
+  .lm-fillin-step { flex-wrap: wrap; row-gap: 6px; }
+  .lm-fillin-blank { flex-shrink: 0; max-width: 100%; }
   .tab-face { min-height: 40px; }
   .tab-bar-more { display: flex; }
 

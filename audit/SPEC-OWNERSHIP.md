@@ -19,7 +19,7 @@ carries the source line for every requirement, so the question is always answera
 |---|---|---|---|---|
 | The price mechanism: rationing, incentive, signalling | economics 1.3.4.3a-b | `price-determination` | `introductory-concepts` (1.3.1), one subsection | **Done.** The duplicate subsection was removed 14 Sep. |
 | Demergers: reasons and impact | economics 3.3.1.2g | `types-sizes-businesses` | `business-growth` (3.3.2), one subsection | **Done.** The duplicate subsection was removed 14 Sep. |
-| The multiplier and the multiplier process | economics 2.3.4.4a-d | `national-income` | `aggregate-demand` (2.3.2), a three-subsection block | **Not done.** See below. |
+| The multiplier and the multiplier process | economics 2.3.4.4a-d | `national-income` | `aggregate-demand` (2.3.2), a three-subsection block | **Not done — ledger D013, packet 37.** See below. The census reports it under its own heading in aggregate-demand until it is. |
 | Porter's five forces | business 3.3.1.4c, 4.3.2.2b | `business-objectives-strategy`, `global-markets-expansion` | `assessing-competitiveness` (3.3.5) taught and assessed it | **Done.** Removed from 3.3.5 on 14 Sep. `external-influences` (2.3.5) still refers to it inside a subsection on competitive pressure, which is a reference rather than a second treatment; its content packet decides whether to keep the reference. |
 | Monopoly and welfare loss | economics 3.3.3.6 | `market-structures-contestability` | `market-failure` (1.3.5), a block | **Done.** Removed from 1.3.5 on 14 Sep — it is a different unit and a different paper. |
 | Behavioural influences on consumer choice | economics 1.3.2.1b | `consumer-behaviour-demand` | `price-determination` (1.3.4), a two-subsection block | **Done.** Removed from 1.3.4 on 14 Sep. 1.3.4 has eleven lettered requirements and none is behavioural. |
@@ -47,8 +47,9 @@ So it is left whole, and this is the manifest for whoever does it:
 3. The eight multiplier quiz items and four flashcards in `aggregate-demand` move to
    `national-income`, keeping their ids so review history follows them, or are rewritten in place to
    test the AD application rather than the derivation.
-4. Whichever packet runs second re-runs `node audit/scripts/packet-13-census.mjs` and checks that the
-   multiplier row above reads "taught under its own heading" in one section only.
+4. Whichever packet runs second re-runs `node audit/scripts/packet-13-census.mjs` and checks that its D011
+   block reports the multiplier "taught under its own heading elsewhere in: nowhere". (The first version of
+   that check could not fail; it carries a `--self-test` now.)
 
 Both sections are Unit 2 and sit the same paper, so the cost of leaving this until then is a student's
 time, not a wrong answer. That is why it is second in the queue rather than first.

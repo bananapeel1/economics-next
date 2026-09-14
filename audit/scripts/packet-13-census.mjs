@@ -47,7 +47,10 @@ const BANNED = [
  */
 const OWNED_ELSEWHERE = [
   { re: /\bfive forces\b/i, label: "Porter's five forces", owners: ['business-objectives-strategy', 'global-markets-expansion'], spec: 'business 3.3.1.4c and 4.3.2.2b' },
-  { re: /\bthe multiplier\b/i, label: 'the multiplier', owners: ['national-income', 'aggregate-demand'], spec: 'economics 2.3.4.4a-d' },
+  // The specification's owner is national-income alone. aggregate-demand still teaches it under its own
+  // heading; that is the deferred merge in SPEC-OWNERSHIP.md (packets 32 and 37), and it must show here
+  // until it is done, so the owners list does not paper over it.
+  { re: /\bmultiplier\b/i, label: 'the multiplier', owners: ['national-income'], spec: 'economics 2.3.4.4a-d' },
   { re: /\bdemerger/i, label: 'demergers', owners: ['types-sizes-businesses'], spec: 'economics 3.3.1.2g' },
   { re: /\bprice mechanism\b/i, label: 'the price mechanism', owners: ['price-determination'], spec: 'economics 1.3.4.3a-b' },
 ];
@@ -65,6 +68,25 @@ function strings(value, path = '', out = [], key = null) {
   return out;
 }
 
+/**
+ * A block or subsection TITLE in section_content. The first version of this tested the path for a
+ * leading ".content", but the walker starts each table at "", so every path began "[0]" and the
+ * predicate was false for every string: the D011 report printed "nowhere" whatever the truth. Caught
+ * by the packet 13 verifier. The table is passed in explicitly now, and the shape is asserted by
+ * `--self-test` below so this cannot go quiet again.
+ */
+function isContentTitle(table, path) {
+  return table === 'content' && /(^|\])\.title$/.test(path) && !/\.(body|recall|takeaway)\b/.test(path);
+}
+
+if (process.argv.includes('--self-test')) {
+  const sample = { content: [{ title: 'The Multiplier', sections: [{ id: 'x', title: 'The Multiplier Formula', body: [{ type: 'paragraph', text: 'the multiplier' }] }] }] };
+  const titles = strings(sample.content).filter(([path]) => isContentTitle('content', path)).map(([, t]) => t);
+  if (titles.join('|') !== 'The Multiplier|The Multiplier Formula') { console.error(`self-test failed: titles seen = ${JSON.stringify(titles)}`); process.exit(1); }
+  console.log('self-test ok: block and subsection titles are seen, body text is not');
+  process.exit(0);
+}
+
 const { data: sections, error } = await supabase.from('sections').select('id').order('sort_order');
 if (error) { console.error(`sections: ${error.message}`); process.exit(1); }
 
@@ -78,8 +100,7 @@ for (const { id } of sections) {
         // Only a TITLE counts as teaching a topic. Every section may mention the price mechanism in
         // passing; the duplication signal is a block or subsection built around it, which is what
         // the ownership map is about.
-        const isTitle = /\.title$/.test(path) && /^\.content/.test(path);
-        if (isTitle && term.re.test(text) && !term.owners.includes(id)) hits.push({ id, table, path, text, term, owned: true });
+        if (isContentTitle(table, path) && term.re.test(text) && !term.owners.includes(id)) hits.push({ id, table, path, text, term, owned: true });
       }
     }
   }

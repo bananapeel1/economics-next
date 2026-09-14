@@ -65,9 +65,14 @@ const args = process.argv.slice(2);
 const STAGE = args.includes('--stage');
 const ONLY = (() => { const i = args.indexOf('--section'); return i >= 0 ? args[i + 1] : null; })();
 const WHICH = (() => { const i = args.indexOf('--plan'); return i >= 0 ? args[i + 1] : 'strip'; })();
-const PLAN_FILES = { strip: './_packet13-plan.mjs', residual: './_packet13-residual-plan.mjs', dedupe: './_packet13-dedupe-plan.mjs' };
+const PLAN_FILES = { strip: './_packet13-plan.mjs', residual: './_packet13-residual-plan.mjs', dedupe: './_packet13-dedupe-plan.mjs', polish: './_packet13-polish-plan.mjs' };
 if (!PLAN_FILES[WHICH]) { console.error(`--plan must be one of ${Object.keys(PLAN_FILES).join(', ')}`); process.exit(1); }
-const { PLAN } = await import(PLAN_FILES[WHICH]);
+const planModule = await import(PLAN_FILES[WHICH]);
+const { PLAN } = planModule;
+// A plan may declare phrases that must not survive it. Checked over the WHOLE would-be section, so a
+// substitution that silently matched nothing is caught here rather than by the next verifier.
+const MUST_NOT_SURVIVE = planModule.MUST_NOT_SURVIVE || [];
+const allStrings = (v, out = []) => { if (typeof v === 'string') out.push(v); else if (Array.isArray(v)) v.forEach((x) => allStrings(x, out)); else if (v && typeof v === 'object') Object.values(v).forEach((x) => allStrings(x, out)); return out; };
 
 /* ── run ───────────────────────────────────────────────────────────────────── */
 
@@ -87,6 +92,9 @@ for (const sectionId of sections) {
   console.log(`\n=== ${sectionId} (${ctx.number} ${ctx.unitCode}) — ${changed.length} table(s) change`);
   log.forEach((l) => console.log(l));
 
+  const survivors = MUST_NOT_SURVIVE.filter((phrase) => allStrings(next).some((t) => t.includes(phrase)));
+  if (survivors.length) { console.log(`  SURVIVED (plan says these must be gone): ${survivors.map((x) => JSON.stringify(x)).join(', ')}`); }
+
   const afterAll = validateSection(next, ctx);
   const newBlocks = afterAll.findings.filter((f) => f.tier === 'BLOCK' && !baseline.has(f.key));
   const clearedBlocks = beforeFindings.filter((f) => f.tier === 'BLOCK' && baseline.has(f.key) && !afterAll.findings.some((g) => g.key === f.key));
@@ -100,6 +108,7 @@ for (const sectionId of sections) {
 
   if (!STAGE) continue;
   if (newBlocks.length) { console.log('  NOT STAGED: would introduce a BLOCK finding'); refused += 1; continue; }
+  if (survivors.length) { console.log('  NOT STAGED: a phrase the plan says must be gone is still there'); refused += 1; continue; }
   for (const table of Object.keys(TABLE_TO_KEY)) {
     const key = TABLE_TO_KEY[table];
     if (!changed.includes(key)) continue;

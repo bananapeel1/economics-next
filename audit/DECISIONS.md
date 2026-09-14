@@ -323,4 +323,27 @@ Append only. Every entry needs a date and the packet that made it.
 - **2026-09-14 (packet 5) — 44px, not 36.** F091 asked for 36×36 on the reorder arrows and 40×40 on dismiss and
   more; the sticky bar, arrows, dismiss and more are 44px, the platform minimum, and rows are 44px tall. Chips
   and blanks are 40px, as the finding asked, because 44px chips wrap a word bank onto a third line at 390px.
+- **2026-09-14 (packet 13, after Verify A round 1) — a vocabulary swap is read afterwards, sentence by sentence,
+  or it is not done.** The verifier diffed all 43 snapshots against live and found eight damaged sentences the
+  substitutions had produced: a tautology ("welfare loss or welfare loss", from a source that said the words the
+  other way round), an ungrammatical phrase from a rule added after the text it was meant for had been written,
+  a circular model answer, a repeated word, and — the serious one — a claim widened past its truth: "goods with
+  external benefits are excludable and rivalrous" is true of merit goods by definition and false of the wider
+  class the new label names. Each is patched by hand in `scripts/_packet13-polish-plan.mjs`, and a plan can now
+  declare phrases that must not survive it, which the runner checks over the whole would-be section before
+  staging. The rule for the content packets: after any mechanical rewrite, diff the sentences and read them.
+- **2026-09-14 (packet 13, after Verify A round 1) — an acceptance check that cannot fail is not a check.** The
+  census's ownership branch tested every path for a leading ".content" that no path ever had, so it printed
+  "nowhere" for all four topics whatever the truth. It now takes the table explicitly, carries a `--self-test`
+  that asserts a block title is seen and body text is not, and reports the multiplier taught under its own
+  heading in aggregate-demand — which is true, and is the deferred merge. D011 was narrowed to what was done
+  (six of seven rows) and the seventh minted as D013 on packet 37, because "done except one, on a document that
+  says so" is not "done".
+- **2026-09-14 (packet 13) — the public revision pages still teach what the app removed, and that is packet 57's.**
+  The verifier counted 45 mentions of merit goods, deadweight loss, the accelerator and monopoly-as-market-failure
+  across eight files under `app/economics/`, the tutor prompt and the model-answer data — surfaces the census
+  cannot see and a student can. Some of those mentions are correct (the market-failure page explains that the
+  IAL says "external benefits of consumption" where the UK course says "merit good"), so this is a reading pass
+  over marketing copy, not a substitution, and it belongs with cross-surface consistency (packet 57). Minted as
+  D014 with the file list so it cannot be forgotten.
 

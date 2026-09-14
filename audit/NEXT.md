@@ -76,7 +76,7 @@ questions shows "10 q" in the sidebar and the depth note in the header. Reorder 
 **Shipping.** Build and verify now; SHIP at the next checkpoint once the funnel baseline (clean since 12 Sep) has
 two weeks behind it, per PLAN — otherwise the packet 58 re-measure cannot attribute the change.
 
-## Packet 13 spec — the off-spec strip and dedupe (done and verified 14 September 2026)
+## Packet 13 spec — the off-spec strip and dedupe (built 14 September 2026; Verify A round 1 rejected D010 and D011, fixed the same day; round 2 pending)
 
 **What it had to make true.** No framework the IAL specification does not contain is taught or assessed anywhere in
 live content. No section teaches a specification bullet another section owns. Nothing this packet removed is still
@@ -87,10 +87,29 @@ each op carries the evidence for itself. Five blocks removed across four section
 replaces the GCE labels in 13 sections; two of three cross-section duplications resolved and the third written up
 as a manifest in `audit/SPEC-OWNERSHIP.md`; 19 duplicate stems rewritten to test a different angle.
 
-**Acceptance script (Verify A).** Read-only. `npm test` 97/97. `npm run validate` exit 0. `npm run build` green.
-`node audit/scripts/packet-13-census.mjs` exits 0 with every banned term at 0 hits and D012 clear. Both `--check`
-builders pass. Then the five claimed ids. The baseline must be SMALLER than at packet 3: 2,489 -> 2,189 keys,
-BLOCK 1,131 -> 902, `terms.off-spec` 19 -> 0, `quiz.near-dup` 36 -> 17.
+**Acceptance script (Verify A).** Read-only. `npm test` green (105 with packet 5's suite registered). `npm run
+validate` exit 0. `npm run build` green. `node audit/scripts/packet-13-census.mjs` exits 0 with every banned term
+at 0 hits and D012 clear, and `--self-test` passes; its D011 block must report the multiplier under its own heading
+in aggregate-demand and nothing else anywhere. Both `--check` builders pass. Then the five claimed ids. The baseline
+must be SMALLER than at packet 3: 2,489 -> 2,187 keys, BLOCK 1,131 -> 902, `terms.off-spec` 19 -> 0,
+`quiz.near-dup` 36 -> 17.
+
+**Verify A, round 1 (14 September): F081, D009, D012 confirmed; D010 and D011 rejected, both correctly.**
+- D010: the vocabulary swap was complete but eight sentences came out damaged — a tautology ("welfare loss or
+  welfare loss"), an ungrammatical phrase, a circular model answer, a repeated word, and a claim widened past its
+  truth ("goods with external benefits are excludable and rivalrous"). Each is patched by hand in
+  `scripts/_packet13-polish-plan.mjs`; the runner now refuses to stage while any phrase a plan says must be gone
+  survives. The same pass fixed two market-failure quiz pins the rewrites had made wrong and the sentence that
+  still listed monopoly power as a type of market failure. Published; the verifier's sentence diff is the check.
+- D011: the census's ownership check was dead code (its path test could never be true), and the map's own
+  multiplier row says "not resolved". The predicate is fixed with a `--self-test`, the census now reports the
+  multiplier under its own heading in aggregate-demand, D011 is narrowed to the six resolved rows, and the
+  seventh is D013 on packet 37 with the manifest in `audit/SPEC-OWNERSHIP.md`.
+- New, not in this packet's scope: the public revision pages, the tutor prompt and the model-answer data still
+  carry 45 mentions of the removed material across eight files. Minted as D014 on packet 57 (cross-surface
+  consistency) with the file list; some of those mentions are correct explanations of the IAL vocabulary, so it
+  is a reading pass, not a substitution.
+- Two 390px nits on the rewritten fill-in (words breaking inside chips) are fixed in the stylesheet.
 
 **Verify B.** *Done 14 September, main session, fresh tab, storage cleared.* market-failure Learn Mode is 5 blocks
 (was 7), with no "Merit Goods & Demerit Goods" and no "Market Power as Market Failure"; the block that was "Welfare
