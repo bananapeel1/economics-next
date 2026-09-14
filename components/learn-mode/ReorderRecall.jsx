@@ -5,8 +5,16 @@ function norm(s) {
   return (s || '').trim().toLowerCase().replace(/[''""]/g, "'").replace(/[—–]/g, '-').replace(/\s+/g, ' ');
 }
 
-export default function ReorderRecall({ recall, onComplete , onSkip }) {
-  const [items, setItems] = useState(() => recall.shuffled.map(i => recall.correctOrder[i]));
+/**
+ * `startOrder` — a permutation to start from instead of the stored `shuffled`. Packet 5 passes one
+ * for a recall's second, spaced showing so it is a different puzzle rather than the same scrambled
+ * state a chapter later (F053).
+ */
+export default function ReorderRecall({ recall, onComplete, onSkip, startOrder }) {
+  const [items, setItems] = useState(() => {
+    const order = Array.isArray(startOrder) && startOrder.length === recall.correctOrder.length ? startOrder : recall.shuffled;
+    return order.map(i => recall.correctOrder[i]);
+  });
   const [checked, setChecked] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
   const [showHint, setShowHint] = useState(false);
@@ -19,11 +27,16 @@ export default function ReorderRecall({ recall, onComplete , onSkip }) {
 
   if (dismissed) return null;
 
+  /* F059: this swapped the two items, so "move it up" made something else jump to the bottom.
+     It is an insert now — the item leaves its slot and is placed at the target, everything between
+     shifts by one — which is what dragging does and what a student expects. The arrows move by
+     one position, which is the same operation with |from - to| = 1. */
   function moveItem(from, to) {
     if (from === to || from < 0 || to < 0 || from >= items.length || to >= items.length || animating || checked) return;
     setItems(prev => {
       const next = [...prev];
-      [next[from], next[to]] = [next[to], next[from]];
+      const [moved] = next.splice(from, 1);
+      next.splice(to, 0, moved);
       return next;
     });
   }
@@ -38,18 +51,15 @@ export default function ReorderRecall({ recall, onComplete , onSkip }) {
       const fromEl = itemRefs.current[selectedIdx];
       const toEl = itemRefs.current[idx];
       if (fromEl && toEl) {
+        // The moved item travels to the target's slot; the target itself only shifts by one row.
         const dy = toEl.getBoundingClientRect().top - fromEl.getBoundingClientRect().top;
         fromEl.style.setProperty('--swap-dy', `${dy}px`);
-        toEl.style.setProperty('--swap-dy', `${-dy}px`);
         fromEl.classList.add('swapping');
-        toEl.classList.add('swapping');
         setAnimating(true);
         const fromIdx = selectedIdx;
         setTimeout(() => {
           fromEl.classList.remove('swapping');
-          toEl.classList.remove('swapping');
           fromEl.style.removeProperty('--swap-dy');
-          toEl.style.removeProperty('--swap-dy');
           moveItem(fromIdx, idx);
           setSelectedIdx(null);
           setAnimating(false);
@@ -77,7 +87,7 @@ export default function ReorderRecall({ recall, onComplete , onSkip }) {
       <p className="lm-recall-prompt">{recall.prompt}</p>
       {!checked && (
         <p className="lm-recall-hint-text">
-          Tap an item to select it, then tap another to swap their positions
+          Tap an item, then tap the position it belongs in. The arrows move it one place.
         </p>
       )}
 

@@ -44,27 +44,40 @@ function DiagramModal({ svgRef, imageUrl, title, onClose }) {
     return () => document.removeEventListener('keydown', handleKey);
   }, [handleClose]);
 
+  /* F088/F062: on a phone the modal used to be the same 270px diagram, darker, with a close
+     button — it read as broken. It is a full-screen sheet now: the diagram is drawn at twice the
+     viewport width inside a scrolling, pinch-zoomable pane, so labels that were 5px inline are
+     readable, and the sheet says so. */
   return createPortal(
     <div
       className={`lm-diagram-modal-backdrop ${visible ? 'lm-diagram-modal-visible' : ''}`}
       onClick={handleClose}
+      role="dialog"
+      aria-modal="true"
+      aria-label={title ? `${title}, enlarged` : 'Enlarged diagram'}
     >
       <div
         className="lm-diagram-modal"
         onClick={(e) => e.stopPropagation()}
       >
-        <button
-          className="lm-diagram-modal-close"
-          onClick={handleClose}
-          aria-label="Close enlarged diagram"
-        >
-          &times;
-        </button>
-        {imageUrl ? (
-          <img src={imageUrl} alt={title || 'Diagram'} />
-        ) : (
-          <div ref={modalContentRef} className="lm-diagram-modal-svg" />
-        )}
+        <div className="lm-diagram-modal-bar">
+          <span className="lm-diagram-modal-title">{title || 'Diagram'}</span>
+          <button
+            className="lm-diagram-modal-close"
+            onClick={handleClose}
+            aria-label="Close enlarged diagram"
+          >
+            &times;
+          </button>
+        </div>
+        <div className="lm-diagram-modal-pane">
+          {imageUrl ? (
+            <img src={imageUrl} alt={title || 'Diagram'} />
+          ) : (
+            <div ref={modalContentRef} className="lm-diagram-modal-svg" />
+          )}
+        </div>
+        <div className="lm-diagram-modal-hint">Pinch or scroll to zoom</div>
       </div>
     </div>,
     document.body
@@ -92,6 +105,19 @@ export default function InlineDiagram({ diagram }) {
     setEnlarged(true);
   }, []);
 
+  // F062: the hint only when enlarging would actually show more. The inline card is capped at
+  // 442-552px on wide screens; the sheet draws at 2× the viewport width on narrow ones.
+  const [canEnlarge, setCanEnlarge] = useState(true);
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) return;
+    const narrow = window.matchMedia('(max-width: 767px)');
+    const update = () => setCanEnlarge(narrow.matches || (svgRef.current?.clientWidth || 0) < 500);
+    update();
+    narrow.addEventListener('change', update);
+    window.addEventListener('resize', update);
+    return () => { narrow.removeEventListener('change', update); window.removeEventListener('resize', update); };
+  }, []);
+
   return (
     <div className="lm-diagram-card">
       <div className="lm-card-label">&#128202; Diagram</div>
@@ -115,7 +141,7 @@ export default function InlineDiagram({ diagram }) {
         ) : (
           <div className="lm-interactive-svg-wrapper lm-diagram-clickable" ref={svgRef} onClick={handleDiagramClick} />
         )}
-        <div className="lm-diagram-enlarge-hint">Tap to enlarge</div>
+        {canEnlarge && <div className="lm-diagram-enlarge-hint">Tap to enlarge</div>}
 
         {diagram.checklist && (
           <div className="diagram-checklist">

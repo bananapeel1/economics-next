@@ -122,7 +122,7 @@ export default function CompletionScreen({
       <StrengthMeter subjectId={subjectId} sectionId={sectionId} size="medium" />
 
       {/* Score breakdown */}
-      {scores && (scores.quiz.total > 0 || scores.recall.total > 0 || scores.explain.total > 0) && (
+      {scores && (scores.quiz.total > 0 || scores.recall.total > 0 || scores.explain.total > 0 || scores.practice?.total > 0) && (
         <div className="lm-score-breakdown">
           <h3 className="lm-score-breakdown-title">Score Breakdown</h3>
           {/* No weight labels. The 50/30/20 percentages named a composite score that was never
@@ -139,6 +139,11 @@ export default function CompletionScreen({
           {scores.explain.total > 0 && (
             <ScoreRow label="Explain It Back" emoji="&#128172;"
               score={{ correct: scores.explain.attempts, total: scores.explain.total }} />
+          )}
+          {/* F016: written practice answers count now. `correct` here is "attempted": the student
+              marks these against a checklist themselves, so the row reads answered / shown. */}
+          {scores.practice?.total > 0 && (
+            <ScoreRow label="Written practice" emoji="&#9997;&#65039;" score={scores.practice} />
           )}
 
           {/* F006: the weakest area, only when there is enough evidence to name one.

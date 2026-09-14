@@ -7,7 +7,7 @@ import { getStrengthData, nextReviewAt } from '@/lib/strength';
 
 const SidebarHomeIcon = () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>;
 
-export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, sections, units, activeSection, onSectionChange, isOpen, isCollapsed, onToggleCollapse, contentStepInfo, savedProgress, visitedFeatures = {}, onResourceVisit, learnModeCompletions = {}, onTabSelect, onHomeClick }) {
+export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, sections, units, activeSection, onSectionChange, isOpen, isCollapsed, onToggleCollapse, contentStepInfo, savedProgress, visitedFeatures = {}, onResourceVisit, learnModeCompletions = {}, onTabSelect, onHomeClick, depth = null }) {
   const { user, isPremium } = useAuth();
   const [moreOpen, setMoreOpen] = useState(false);
 
@@ -145,6 +145,14 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
                     >
                       <span className="sidebar-section-number">{section.number}</span>
                       <span className="sidebar-section-name">{section.short_title}</span>
+                      {/* F083: a section below the Unit 1 template says how many questions it holds,
+                          so a Year 13 student is told rather than left to conclude the app skips
+                          their year. Thresholds are the validator's (/api/sections/depth). */}
+                      {depth?.[section.id]?.thin && (
+                        <span className="sidebar-section-depth" title="Shorter than a full section — more content coming">
+                          {depth[section.id].quiz < 20 ? `${depth[section.id].quiz} q` : `${depth[section.id].chapters} ch`}
+                        </span>
+                      )}
                       {/* F033: two indicators used to sit here and disagree — a Learn Mode dot from
                           localStorage and a progress tick from the resume pointer, which counted
                           steps against the wrong total. A student saw a section marked complete

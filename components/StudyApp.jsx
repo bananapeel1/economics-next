@@ -23,6 +23,7 @@ import HomeScreen from './HomeScreen';
 import { SpacedReview, MixedReview, countDueReviews, getDueReviews } from './ReviewMode';
 import { BookAlt, Notes as NotesIcon, ChartHistogram, DrawerAlt, CardsBlank, Quiz as QuizIcon, Mistakes as MistakesIcon, Tutor as TutorIcon, Star, Padlock, LearnMode as LearnModeIcon } from './Icons';
 import { trackFunnel } from '@/lib/funnel';
+import { countSteps } from '@/lib/learn-steps';
 
 const HomeIcon = () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>;
 
@@ -55,7 +56,8 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
   // F031: the price on this bar must be the price checkout will charge.
   const { trialEligible } = useAuth();
   const offer = introOffer(trialEligible);
-  const contentSteps = sectionData?.content?.length || 0;
+  // F030: the same function the engine uses, so the launchpad and "Step 1 of N" agree.
+  const contentSteps = countSteps(sectionData?.content);
   const notesSections = sectionData?.notes?.length || 0;
   const diagramCount = sectionData?.diagrams?.length || 0;
   const practiceCount = sectionData?.practice?.length || 0;
@@ -120,10 +122,12 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
             <span className="overview-card-label">Learn</span>
             <span className="overview-card-count">{contentSteps} steps</span>
           </button>
-          <button className="overview-card" onClick={() => onTabSelect('content')}>
+          {/* F032: this opened a 'content' tab that has no entry in the tab bar, so nothing was
+              selected and there was no obvious way back. The notes are the readable whole. */}
+          <button className="overview-card" onClick={() => onTabSelect('notes')}>
             <span className="overview-card-icon"><NotesIcon size={24} /></span>
-            <span className="overview-card-label">Content</span>
-            <span className="overview-card-count">{notesSections || contentSteps} sections</span>
+            <span className="overview-card-label">Notes</span>
+            <span className="overview-card-count">{notesSections} topics</span>
           </button>
           {hasDiagrams && (
             <button className={`overview-card ${diagramCount === 0 ? 'dimmed' : ''}`} onClick={() => onTabSelect('diagrams')}>
@@ -407,6 +411,15 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   );
   const [learnModeResuming, setLearnModeResuming] = useState(false);
 
+  // F083: which sections are below the Unit 1 template, so the sidebar and header can say so.
+  const [depth, setDepth] = useState(null);
+  useEffect(() => {
+    fetch('/api/sections/depth')
+      .then((res) => (res.ok ? res.json() : null))
+      .then((json) => { if (json?.depth) setDepth(json.depth); })
+      .catch(() => {});
+  }, []);
+
   // Learn Mode completions. F118: same reason — the sidebar ticks cannot be in the server markup.
   const [learnModeCompletions, setLearnModeCompletions] = useClientValue(
     () => {
@@ -510,12 +523,54 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   // change, for the section that step belongs to; load with one helper used by every navigation path.
   function readSavedStep(subjectId, sectionId) {
     if (typeof window === 'undefined') return 0;
+    // F048: the server's furthest step used to beat the local one outright, so a student who moved
+    // ahead in a browser whose write had not landed was sent back on return. Both are high-water
+    // marks; the further one wins. LearnModeTab clamps the result into the current step range.
     const db = user && savedProgress?.[sectionId];
-    if (db && Number.isFinite(db.furthest_step)) return db.furthest_step;
+    const dbStep = db && Number.isFinite(db.furthest_step) ? db.furthest_step : 0;
+    let localStep = 0;
     try {
       const local = localStorage.getItem(`revvy_learnmode_${subjectId}_${sectionId}_section`);
-      return local ? (parseInt(local, 10) || 0) : 0;
-    } catch { return 0; }
+      localStep = local ? (parseInt(local, 10) || 0) : 0;
+    } catch { /* blocked storage: the server copy is the whole story */ }
+    return Math.max(dbStep, localStep);
+  }
+
+  /*
+   * F048: the resume banner only appeared after an in-app section change, because only the
+   * navigation handlers set `learnModeResuming`. A reload or a deep link at step 4 dropped the
+   * student straight into step 4 with no "continue or start over". Offered on entry to any section
+   * whose saved step is above 0, once hydration has made the stored value readable.
+   */
+  useEffect(() => {
+    if (!hydrated || !activeSection) return;
+    if (readSavedStep(activeSubjectId, activeSection) > 0) setLearnModeResuming(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hydrated, activeSection, activeSubjectId]);
+
+  /*
+   * F026: one path for every section navigation. It keeps the tab the student is on — a student
+   * reading Diagrams across five topics stays on Diagrams — and only Home hands over to the
+   * overview, which is the launchpad. It updates the URL, and it reads the saved step for the NEW
+   * section, so nothing carries the old section's step across (the cross-section contamination
+   * the audit measured). HomeScreen, the sidebar and the subject switch all come through here.
+   */
+  function navigateToSection(sectionId, { tab } = {}) {
+    setActiveSection(sectionId);
+    setActiveTab(tab || (activeTab === 'home' ? 'overview' : activeTab));
+    setSidebarOpen(false);
+    setContentStepInfo(null);
+    if (typeof window !== 'undefined') {
+      const sec = sections.find(s => s.id === sectionId);
+      const unit = units.find(u => u.id === sec?.unit_id);
+      const subject = unit ? subjects.find(s => s.id === unit.subject_id) : null;
+      if (sec && unit && subject) {
+        try { window.history.replaceState(null, '', `/${subject.slug}/unit-${unit.number}/${sec.id}`); } catch { /* ignore */ }
+      }
+    }
+    const step = readSavedStep(activeSubjectId, sectionId);
+    setLearnModeSection(step);
+    setLearnModeResuming(step > 0);
   }
   /*
    * F027, the half the verifier caught. `learnModeSection` is seeded from localStorage in its
@@ -770,7 +825,8 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       setActiveSection(firstId);
       setIsInitial(false);
       setSectionData(null);
-      setActiveTab('learn-mode');
+      // F026: a subject switch used to force the Learn tab too.
+      setActiveTab(activeTab === 'home' ? 'overview' : activeTab);
       setContentStepInfo(null);
       // Load the new section's own saved step instead of carrying the old section's step across.
       const step = readSavedStep(subjectId, firstId);
@@ -784,26 +840,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   }
 
   function handleSectionChange(sectionId) {
-    setActiveSection(sectionId);
-    setActiveTab('learn-mode');
-    setSidebarOpen(false);
-    setContentStepInfo(null);
-
-    // Update URL so page refresh loads the correct section
-    if (typeof window !== 'undefined') {
-      const sec = subjectSections.find(s => s.id === sectionId);
-      const unit = subjectUnits.find(u => u.id === sec?.unit_id);
-      const subject = subjects.find(s => s.id === activeSubjectId);
-      if (sec && unit && subject) {
-        const newUrl = `/${subject.slug}/unit-${unit.number}/${sec.id}`;
-        window.history.replaceState(null, '', newUrl);
-      }
-    }
-
-    // Learn Mode: resume from saved progress (DB for signed-in students, else this browser)
-    const step = readSavedStep(activeSubjectId, sectionId);
-    setLearnModeSection(step);
-    setLearnModeResuming(step > 0);
+    navigateToSection(sectionId);
   }
 
   function renderTab() {
@@ -832,7 +869,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     const isPreview = PREVIEW_TABS.has(activeTab) && !isPremium;
 
     switch (activeTab) {
-      case 'home': return <HomeScreen subjects={subjects} units={subjectUnits} sections={subjectSections} user={user} isPremium={isPremium} onNavigateToSection={(id) => { setActiveSection(id); setActiveTab('overview'); const step = readSavedStep(activeSubjectId, id); setLearnModeSection(step); setLearnModeResuming(step > 0); }} onNavigateToTab={(tab) => setActiveTab(tab)} />;
+      case 'home': return <HomeScreen subjects={subjects} units={subjectUnits} sections={subjectSections} user={user} isPremium={isPremium} onNavigateToSection={(id) => navigateToSection(id, { tab: 'overview' })} onNavigateToTab={(tab) => setActiveTab(tab)} />;
       case 'overview': return <SectionOverview section={currentSection} unit={currentUnit} sectionData={sectionData} tabs={tabs} onTabSelect={handleTabSelect} isPremium={isPremium} user={user} savedProgress={savedProgress} />;
       case 'learn-mode': {
         // If a review is active, show the review component instead
@@ -917,6 +954,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
           learnModeCompletions={learnModeCompletions}
           onTabSelect={handleTabSelect}
           onHomeClick={() => setActiveTab('home')}
+          depth={depth}
         />
 
         <div className="main-content">
@@ -938,6 +976,14 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
                 )}
                 <span className="content-header-section-num">Section {currentSection?.number}</span>
                 <span className="content-header-unit-badge">Unit {currentUnit?.number}: {currentUnit?.title}</span>
+                {/* F083: an honest depth signal on the thin sections, until their content packets land. */}
+                {depth?.[activeSection]?.thin && (
+                  <span className="content-header-depth" title={`${depth[activeSection].chapters} chapter${depth[activeSection].chapters === 1 ? '' : 's'}, ${depth[activeSection].quiz} questions so far`}>
+                    More content coming &middot; {depth[activeSection].quiz < 20
+                      ? `${depth[activeSection].quiz} questions so far`
+                      : `${depth[activeSection].chapters} chapter${depth[activeSection].chapters === 1 ? '' : 's'} so far`}
+                  </span>
+                )}
                 <AuthButton />
               </div>
               <AnimatedTabBar

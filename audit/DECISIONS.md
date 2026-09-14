@@ -301,3 +301,26 @@ Append only. Every entry needs a date and the packet that made it.
   correct answers. Twenty-five merely share a frame and were left alone, so `quiz.near-dup` still reports them and
   the rule stays honest about being lexical. Each rewrite tests a different angle on the same specification bullet,
   so the bank widened rather than shrank; near-duplicate findings fell from 36 to 17.
+- **2026-09-14 (packet 5) — a step is one subsection, and a chapter ends with a check-in.** The old pairing put
+  two subsections and every end-of-chapter widget on one step and the previous step's recall above the next
+  step's title: 5,300-5,900px steps on a phone, the same recall twice in a row, half the recalls never shown.
+  `lib/learn-steps.js` now builds `teach` steps (one subsection, its recall below) and one `checkin` per chapter
+  (diagram, quiz, practice, spaced recall, explain, takeaway), and both the engine and the overview count from
+  it, so the launchpad and "Step 1 of N" agree. Steps = subsections + chapters; a section's saved
+  `furthest_step` from the old model is clamped into the new range on load rather than shown as "Step 9 of 5".
+- **2026-09-14 (packet 5) — a spaced recall is from an earlier chapter, chosen once per session, never the same
+  widget twice in a row.** On a check-in, the earliest recall from a previous chapter not yet used as a spaced
+  recall is shown with a "Recall from chapter N" cue; a reorder starts from a different seeded order the second
+  time. Chosen once per check-in and remembered, so Back and Next show the same one. The first chapter's check-in
+  has nothing earlier and shows none, which is correct rather than a gap.
+- **2026-09-14 (packet 5) — build now, ship at the checkpoint.** PLAN says the funnel baseline (clean since 12
+  September) needs two weeks behind it before Step 0 changes, or the packet 58 re-measure cannot attribute the
+  change. This packet is verified on the branch and holds until that checkpoint; it is not merged early.
+- **2026-09-14 (packet 5) — the depth signal uses the validator's own thresholds.** `/api/sections/depth` marks a
+  section thin below 4 chapters or 20 quiz questions, which is exactly what `depth.blocks` and `depth.quiz` say,
+  so the product's "More content coming" and the gate's baseline name the same 22 sections. The chip says which
+  shortfall it is — "10 q" or "3 ch" — because "25 questions, more coming" read as a contradiction.
+- **2026-09-14 (packet 5) — 44px, not 36.** F091 asked for 36×36 on the reorder arrows and 40×40 on dismiss and
+  more; the sticky bar, arrows, dismiss and more are 44px, the platform minimum, and rows are 44px tall. Chips
+  and blanks are 40px, as the finding asked, because 44px chips wrap a word bank onto a third line at 390px.
+

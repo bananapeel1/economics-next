@@ -127,4 +127,19 @@ export default function processSvg(svgEl) {
   svgEl.style.width = '100%';
   svgEl.style.height = 'auto';
   svgEl.style.display = 'block';
+
+  // 7. F088: a minimum label size in viewBox units. A 500-unit-wide diagram drawn at 360px scales
+  //    by 0.72, so 12-unit text lands at 8.6px and 9-unit text at 6.5px. Labels are raised to at
+  //    least 1/28 of the viewBox width (18 units on a 500 box: 13px at 360px, 16px at 442px),
+  //    which is what the audit measured as the floor for a phone. Authored sizes above it stay.
+  const vb = (svgEl.getAttribute('viewBox') || '').trim().split(/[\s,]+/).map(Number);
+  const vbWidth = vb.length === 4 && Number.isFinite(vb[2]) && vb[2] > 0 ? vb[2] : null;
+  if (vbWidth) {
+    const minSize = vbWidth / 28;
+    textEls.forEach((textEl) => {
+      const declared = parseFloat(textEl.getAttribute('font-size') || textEl.style.fontSize || '');
+      const current = Number.isFinite(declared) ? declared : vbWidth / 40;
+      if (current < minSize) textEl.style.setProperty('font-size', `${minSize.toFixed(1)}px`);
+    });
+  }
 }

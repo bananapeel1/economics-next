@@ -1,5 +1,81 @@
 # Next session brief
 
+## Packet 5 spec — Step 0 (built and Verify-B'd 14 September 2026, Fable 5.1; Verify A pending)
+
+The churn packet. 75% of Learn Mode section opens never pass step 0. Packet 0 already made the pre-test opt-in;
+this packet rebuilds the step itself so that what the student meets on step 0 is one subsection, readable on a
+phone, with the exit always in view. Thirty-two ledger ids, all in Learn Mode.
+
+**The step model (F047 F036 F037 F038 F053 F064 F065 F066 F100 F039).** `lib/learn-steps.js` is the one place
+steps are built, used by the engine and by the overview count (F030).
+- One subsection = one `teach` step. Its own recall renders BELOW the teaching. Exactly one heading per step
+  (`NoteSection` gets `hideTitle`), with a chapter eyebrow: "Chapter 2 of 5 · The AD Curve · part 1 of 2".
+- Every chapter ends with one `checkin` step: diagram, quick quiz, practice, a spaced recall, explain-it-back,
+  takeaway. Nothing is ever injected above a step's title.
+- The spaced recall on a check-in is the earliest recall from an EARLIER chapter not yet used as a spaced recall
+  this session, so it is at least a full chapter away from its first showing and is never the same widget twice
+  in a row. A reorder shown the second time starts from a different seeded order.
+- Steps = subsections + chapters. `total_steps` in saved progress changes accordingly; `currentStep` is
+  clamped into range (F026), so an old pointer cannot show "Step 9 of 5".
+
+**Mobile pass (F065 F072 F088 F091 F059 F093 F094 F095 F096 F101 F062).** 390px readability is the acceptance
+criterion. Rail hidden on phones; card padding 14/12; body 15px, labels ≥12px; sticky bottom bar with Back ·
+step counter · Next; 44px touch targets on reorder arrows, dismiss, more, chips, blanks and tabs; reorder tap
+is insert-at-position, not swap; textareas 16px so iOS does not zoom; inline diagrams fill the card width with
+a minimum label size enforced in viewBox units; the enlarge modal is a full-screen sheet at 2× with scroll and
+pinch-zoom, and the "Tap to enlarge" hint only shows when it would be bigger; the tab strip scrolls the active
+tab into view and shows a chevron when more tabs are hidden.
+
+**Interaction (F045 F046 F097 F067).** Next swaps immediately with the enter animation; no 350ms input block.
+Keyboard navigation reads refs, is off on the pre-test and completion screens, and ignores keys while focus is
+inside a widget. Key Idea is the dominant element; Real Example, Misconception and Exam Matters are demoted to a
+compact lens style; the Takeaway is the strongest element on a check-in. A clickable chapter-dot strip replaces
+the single decorative node.
+
+**Navigation and resume (F026 F030 F032 F048).** All section navigation goes through one handler that keeps the
+current tab when it is a browsing tab (only Home → Overview changes it), updates the URL, and reads the saved
+step for the NEW section. The resume banner appears on reload and deep link when the saved step is above 0;
+the saved step is the max of server and local. Overview says the same step count the engine will show. The
+'content' tab is retired from the menus; "View all content" goes to Notes.
+
+**Writing (F012 F016 F117).** Explain It Back: after typing, free students get "Compare with the key ideas"
+(the chapter's key ideas) and a tick-list self-check, the attempt is counted, and the draft is kept per chapter
+in localStorage. InlinePractice: an optional answer box in all three modes with a self-mark checklist built
+from the "(n marks)" fragments of the guidance, counted on the completion screen as "Written practice";
+free students see the model-answer button as a locked Pro control rather than nothing. "(N marks)" is stripped
+from the question text at render since the badge already says it.
+
+**Depth signal (F083).** Sections below the Unit 1 template (fewer than 20 quiz questions or 4 chapters) show
+their question count on the sidebar row and a "More content coming" note in the section header, from a small
+`/api/sections/depth` route, so a Year 13 student is told rather than left to conclude the app skips their year.
+
+**Acceptance script (Verify A).** `npm test` green including `lib/learn-steps.test.mjs`. `npm run build`.
+`npm run validate` exit 0 (no content is written). Each of the 32 ids against its `fix` text.
+
+**Verify B — done 14 September, main session, fresh tab, storage cleared, 390×844, signed out.** Overview says
+"14 steps"; Learn Mode says "Step 1 of 14". Step 1: eyebrow "CHAPTER 1 OF 5 · The Nature of Economics · part 1 of
+2", one h2 and zero duplicate h3, key idea at 16px medium over 15px body, lenses unfilled, its recall below the
+teaching, rail hidden, sticky nav with Next inside the viewport without scrolling, step scroll height 2,812px.
+All 14 steps walked: 9 teach steps each with one recall below the title; check-in 1 with quiz, explain and
+takeaway and no spaced recall; check-ins 2-5 each with exactly one spaced recall from an earlier chapter and the
+cue ("RECALL FROM CHAPTER 1 · Economics as a Social Science" on step 6); the two spaced reorders start in a
+different order from their first showing. Arrows, dismiss and ⋯ measure 44×44. Diagrams tab → sidebar → Supply:
+still on Diagrams, URL and header updated. Reload introductory-concepts → Start learning: "You left off at step 14
+of 14" banner; Start over → Step 1. Business assessing-competitiveness header: "More content coming · 10 questions
+so far"; sidebar chips on six Unit 3 rows. Console: only the signed-out 401s.
+
+**The script, for the verifier to replay (390×844, storage cleared, signed out).** introductory-concepts → Start learning → Just teach me:
+step 1 shows ONE subsection, one heading, a chapter eyebrow, Key Idea visibly dominant, its recall below the
+teaching, no recall above the title, and a sticky bar with Next reachable without scrolling to the bottom of
+8 screens. Step 2 opens on the title, not on a recall. The first check-in step shows the quiz and takeaway and
+no spaced recall (nothing earlier to space). The second chapter's check-in shows a spaced recall with the
+"Recall from chapter 1" cue and, if it is a reorder, not in the same order as before. Sidebar → Diagrams tab →
+click another section: still on Diagrams. Reload at step 4: resume banner offered. A section with 10 quiz
+questions shows "10 q" in the sidebar and the depth note in the header. Reorder arrows, ×, ⋯ are ≥44px.
+
+**Shipping.** Build and verify now; SHIP at the next checkpoint once the funnel baseline (clean since 12 Sep) has
+two weeks behind it, per PLAN — otherwise the packet 58 re-measure cannot attribute the change.
+
 ## Packet 13 spec — the off-spec strip and dedupe (done and verified 14 September 2026)
 
 **What it had to make true.** No framework the IAL specification does not contain is taught or assessed anywhere in

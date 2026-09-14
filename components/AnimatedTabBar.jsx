@@ -124,6 +124,30 @@ function AnimatedTab({ tab, isActive, isFocusable, isPremium, onClick, onKeyDown
 }
 
 export default function AnimatedTabBar({ tabs, activeTab, setActiveTab, isPremium, visitedFeatures = {}, learnModeCompletions = {}, activeSection }) {
+  /* F096: at 360-390px only four of the nine tabs fit, and the rest sat behind a fade that looked
+     like the end of the row. The strip now scrolls the active tab into view when it changes, and
+     shows a chevron while there is more to the right. */
+  const barRef = useRef(null);
+  const [moreRight, setMoreRight] = useState(false);
+  useEffect(() => {
+    const bar = barRef.current;
+    if (!bar) return;
+    const update = () => setMoreRight(bar.scrollWidth - bar.clientWidth - bar.scrollLeft > 8);
+    update();
+    bar.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    return () => { bar.removeEventListener('scroll', update); window.removeEventListener('resize', update); };
+  }, [tabs.length]);
+  useEffect(() => {
+    const bar = barRef.current;
+    if (!bar) return;
+    const idx = tabs.findIndex((t) => t.id === activeTab);
+    const el = idx >= 0 ? bar.querySelectorAll('[role="tab"]')[idx] : null;
+    if (el && typeof el.scrollIntoView === 'function') {
+      try { el.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' }); } catch { el.scrollIntoView(); }
+    }
+  }, [activeTab, tabs]);
+
   // F103: arrow keys move between tabs, which is what a tablist is expected to do. Home and End
   // jump to the ends. The focused tab is activated, matching how the mouse behaves here.
   function handleKeyDown(e, index) {
@@ -154,7 +178,8 @@ export default function AnimatedTabBar({ tabs, activeTab, setActiveTab, isPremiu
   );
 
   return (
-    <div className="tab-bar" role="tablist">
+    <div className="tab-bar-wrap">
+    <div className="tab-bar" role="tablist" ref={barRef}>
       {tabs.map((tab, tabIndex) => {
         const isLearnMode = tab.id === 'learn-mode';
         const isTopicComplete = isLearnMode && learnModeCompletions[activeSection];
@@ -178,6 +203,13 @@ export default function AnimatedTabBar({ tabs, activeTab, setActiveTab, isPremiu
           />
         );
       })}
+    </div>
+    {moreRight && (
+      <button type="button" className="tab-bar-more" aria-label="More tabs"
+        onClick={() => { const bar = barRef.current; if (bar) bar.scrollBy({ left: Math.max(160, bar.clientWidth * 0.6), behavior: 'smooth' }); }}>
+        &rsaquo;
+      </button>
+    )}
     </div>
   );
 }
