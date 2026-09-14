@@ -3,7 +3,7 @@ import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { highlightGlossaryTerms } from '@/lib/glossary-highlight';
 import { recordReview } from '@/lib/strength';
 import { distributeItems, matchDiagramsToBlocks, resolvePinnedItem, resolvePinnedDiagram } from './learn-mode/utils';
-import { buildSteps, pickSpacedRecall, spacedPermutation, clampStep, firstStepOfBlock } from '@/lib/learn-steps';
+import { buildSteps, pickSpacedRecall, clampStep, firstStepOfBlock } from '@/lib/learn-steps';
 import InlineDiagram from './learn-mode/InlineDiagram';
 import InlinePractice from './learn-mode/InlinePractice';
 import InlineQuiz from './learn-mode/InlineQuiz';
@@ -12,6 +12,9 @@ import PreTest from './learn-mode/PreTest';
 import CompletionScreen from './learn-mode/CompletionScreen';
 import ReorderRecall from './learn-mode/ReorderRecall';
 import FillInRecall from './learn-mode/FillInRecall';
+import MatchRecall from './learn-mode/MatchRecall';
+import ClassifyRecall from './learn-mode/ClassifyRecall';
+import { recallId } from '@/lib/learn-steps';
 import ExplainItBackUpgraded from './learn-mode/ExplainItBackUpgraded';
 import { NoteSection, TakeawayCard } from './notes';
 import { isPracticeVisible } from '@/lib/ial-commands';
@@ -45,16 +48,24 @@ function PracticeWithheld() {
   );
 }
 
-/** One recall widget, by type. `startOrder` only matters to a reorder shown for the second time. */
-function Recall({ recall, keyPrefix, startOrder, onComplete, onSkip }) {
+/**
+ * One recall widget, by type (packet 7: four types, lib/recall-widgets.js). `showing` is 'first' on
+ * the recall's own step and 'spaced' on a later check-in; every widget derives its own seeded order
+ * from it. `pool` is the section's other fill-in answers, the distractor source for a fill-in that
+ * carries none of its own.
+ */
+function Recall({ recall, keyPrefix, showing = 'first', pool, onComplete, onSkip }) {
   if (!recall || typeof recall !== 'object') return null;
-  if (recall.type === 'reorder') return <ReorderRecall key={keyPrefix} recall={recall} startOrder={startOrder} onComplete={onComplete} onSkip={onSkip} />;
-  if (recall.type === 'fillin') return <FillInRecall key={keyPrefix} recall={recall} onComplete={onComplete} onSkip={onSkip} />;
+  const props = { key: keyPrefix, recall, showing, onComplete, onSkip };
+  if (recall.type === 'reorder') return <ReorderRecall {...props} />;
+  if (recall.type === 'fillin') return <FillInRecall {...props} pool={pool} />;
+  if (recall.type === 'match') return <MatchRecall {...props} />;
+  if (recall.type === 'classify') return <ClassifyRecall {...props} />;
   return null;
 }
 
 const EMPTY_SCORES = () => ({
-  quiz: { correct: 0, total: 0 }, recall: { correct: 0, total: 0 },
+  quiz: { correct: 0, total: 0 }, recall: { correct: 0, total: 0, skipped: 0 },
   explain: { attempts: 0, total: 0 }, practice: { correct: 0, total: 0 },
 });
 
@@ -119,12 +130,29 @@ export default function LearnModeTab({
   function onQuizResult(correct) { setScores(s => ({ ...s, quiz: { correct: s.quiz.correct + (correct ? 1 : 0), total: s.quiz.total + 1 } })); }
   // F007: only attempted recalls counted, so dismissing one with the × removed it from the score
   // entirely. A skipped check is a check not answered, not a check that never existed.
-  function onRecallResult(correct) {
-    setScores(s => ({ ...s, recall: { correct: s.recall.correct + (correct ? 1 : 0), total: s.recall.total + 1 } }));
+  // F055 (packet 7): a skip is also counted as skipped, its id is kept — in the section's local
+  // state, so it survives a reload — and the spaced pick below shows it again at the next check-in.
+  const skippedRef = useRef(new Set());
+  useEffect(() => {
+    skippedRef.current = new Set(readLocalState(subjectId, sectionId)?.recallSkipped || []);
+  }, [subjectId, sectionId]);
+  function persistSkipped() {
+    writeLocalState(subjectId, sectionId, { recallSkipped: [...skippedRef.current] });
   }
-  function onRecallSkipped() {
-    setScores(s => ({ ...s, recall: { ...s.recall, total: s.recall.total + 1 } }));
+  function onRecallResult(correct, id) {
+    if (id && skippedRef.current.has(id)) { skippedRef.current.delete(id); persistSkipped(); }
+    setScores(s => ({ ...s, recall: { ...s.recall, correct: s.recall.correct + (correct ? 1 : 0), total: s.recall.total + 1 } }));
   }
+  function onRecallSkipped(id) {
+    if (id) { skippedRef.current.add(id); persistSkipped(); }
+    setScores(s => ({ ...s, recall: { ...s.recall, total: s.recall.total + 1, skipped: (s.recall.skipped || 0) + 1 } }));
+  }
+  // The distractor pool for fill-ins that carry none: every other fill-in answer in this section.
+  const fillinPool = useMemo(() => {
+    const words = [];
+    for (const b of contentData || []) for (const sec of b?.sections || []) if (sec?.recall?.type === 'fillin') words.push(...(sec.recall.answers || []));
+    return words;
+  }, [contentData]);
   function onExplainAttempt() { setScores(s => ({ ...s, explain: { attempts: s.explain.attempts + 1, total: s.explain.total + 1 } })); }
   function onPracticeShown() { setScores(s => ({ ...s, practice: { ...s.practice, total: (s.practice?.total || 0) + 1 } })); }
   function onPracticeAttempt() { setScores(s => ({ ...s, practice: { correct: (s.practice?.correct || 0) + 1, total: s.practice?.total || 0 } })); }
@@ -206,7 +234,7 @@ export default function LearnModeTab({
   const spacedUsed = useRef(new Set());
   function spacedFor(stepIdx) {
     if (stepIdx in spacedByStep.current) return spacedByStep.current[stepIdx];
-    const pick = pickSpacedRecall(flatSteps, stepIdx, spacedUsed.current);
+    const pick = pickSpacedRecall(flatSteps, stepIdx, spacedUsed.current, skippedRef.current);
     if (pick) spacedUsed.current.add(pick.id);
     spacedByStep.current[stepIdx] = pick;
     return pick;
@@ -508,7 +536,9 @@ export default function LearnModeTab({
                   {/* Its own recall, below the teaching it tests (F036, F038, F066, F100). */}
                   {step.section.recall && (
                     <div className="lm-recall-slot lm-recall-own">
-                      <Recall recall={step.section.recall} keyPrefix={`own-${step.key}`} onComplete={onRecallResult} onSkip={onRecallSkipped} />
+                      <Recall recall={step.section.recall} keyPrefix={`own-${step.key}`} showing="first" pool={fillinPool}
+                        onComplete={(ok) => onRecallResult(ok, recallId(step.section.recall, step))}
+                        onSkip={() => onRecallSkipped(recallId(step.section.recall, step))} />
                     </div>
                   )}
                 </div>
@@ -540,9 +570,9 @@ export default function LearnModeTab({
                         <span className="lm-spaced-cue-label">Recall from chapter {spaced.fromBlockIndex + 1}</span>
                         <span className="lm-spaced-cue-title">{spaced.fromTitle}</span>
                       </div>
-                      <Recall recall={spaced.recall} keyPrefix={`spaced-${step.key}`}
-                        startOrder={spaced.recall.type === 'reorder' ? spacedPermutation(spaced.recall) : undefined}
-                        onComplete={onRecallResult} onSkip={onRecallSkipped} />
+                      <Recall recall={spaced.recall} keyPrefix={`spaced-${step.key}`} showing="spaced" pool={fillinPool}
+                        onComplete={(ok) => onRecallResult(ok, spaced.id)}
+                        onSkip={() => onRecallSkipped(spaced.id)} />
                     </div>
                   )}
 

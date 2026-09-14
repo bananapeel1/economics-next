@@ -56,8 +56,8 @@ live diagrams and 0 of 18 in `public/diagrams/` carry the class today, so the bu
 packets 13.5-13.7 author labels; the gallery proves it works with a fixture SVG.
 
 **Validator.** New rules: `schema.recall-type` (BLOCK), `match.count`, `match.unique`, `classify.groups`,
-`classify.unique` (BLOCK), `match.prompt`, `classify.prompt`, `reorder.why`, `fillin.distractors`,
-`fillin.leak` (DEBT). Retired: `reorder.permutation`, `reorder.identity`, `reorder.shuffle-reuse` (the field
+`classify.unique` (BLOCK), `match.prompt`, `classify.prompt`, `recall.why` (one rule for the reorder item,
+match pair and classify group lines), `fillin.distractors`, `fillin.leak` (DEBT). Retired: `reorder.permutation`, `reorder.identity`, `reorder.shuffle-reuse` (the field
 is inert), `fillin.one-per-line` (the renderer copes). Relaxed: `fillin.token` refuses commas only. The
 baseline is rewritten once, in this packet, and the DECISIONS entry lists the by-rule delta.
 
@@ -75,7 +75,7 @@ W003 (gallery) W004 (contract + validator). Leaves F057 F107 → packet 57 with 
    others still move. Put them right, Check: "Perfect order".
 2. Step 1 (fill-in, answers Positive · Normative · ought to). The word bank holds MORE chips than blanks (3
    answers + 2 distractors). "Show hints" never shows a letter prefix like "Po____". Tap blank 2 first, then a
-   chip: it lands in blank 2. Tap that blank: the chip returns. Fill all three wrong, Check: each wrong blank
+   chip: it lands in blank 2 (and the target moves on to the next empty blank). Tap that blank: the chip returns. Fill all three wrong, Check: each wrong blank
    shows the wrong word struck through with the right one beside it; there is no "Correct answers:" strip.
    "Try again" clears only the wrong blanks.
 3. Step 4 (fill-in, Opportunity Cost): press Skip. Step 8 (chapter 3 check-in): the "Recall from chapter 2"

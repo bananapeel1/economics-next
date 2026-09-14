@@ -43,7 +43,8 @@ Blocking rules, each with its measured hit rate against the live corpus:
 - **Fill-in hints**: reject any hint that is a case-insensitive prefix of its answer or reveals its length.
   Fires on all 141 live fill-ins, against 130 known failures.
 - **Reorder**: reject any reorder whose items are not a set-match for a flow or extras chain in the same
-  subsection, and reject re-use of an over-used shuffle permutation.
+  subsection. (The shuffle-permutation rule was retired in packet 7: the start order is seeded at render
+  and the stored field is ignored.)
 - **Wiring**: every quiz and practice index referenced by exactly one block; no identity `quizIndices`
   sequence; every `diagramRef` resolves; no section ships with zero recalls.
 - **Localisation**: UK-institution token denylist, and one currency per section.
@@ -127,7 +128,7 @@ rose from the first run's 886 because `locale.institution` is now counted per se
 | `quiz.essay-stem` | BLOCK | 28 | Evaluate/Assess/Discuss opening an MCQ |
 | `section.no-recall` | BLOCK | 24 | 20 Business sections have zero recalls |
 | `pins.diagram` | BLOCK | 20 | resolves to nothing after the title fallback |
-| `fillin.token` / `one-per-line` / `blanks` / `dup-answers` | BLOCK | 14 / 11 / 8 / 5 | F112, F106 |
+| `fillin.token` / `blanks` / `dup-answers` | BLOCK | 3 / 8 / 5 | F112, F106; `one-per-line` retired in packet 7 (the renderer draws every segment) and `token` refuses commas only |
 | `fillin.hint` | DEBT | 427 | hint is a prefix of the answer (every recall) |
 | `spec.uncovered` | DEBT | 213 | Layer 3, mechanical floor |
 | `reorder.criterion` / `lead` / `source` | DEBT | 57 / 23 / 22 | Layer 1a; see the limit below |
@@ -192,6 +193,44 @@ it, requiring the leaf's distinctive terms to co-occur inside one text field. It
 assessed-but-never-taught items found on 13 September. Its mean coverage is 81% against the reading audit's
 62%: it is a lexical floor, and the 19 points between them are the reading the content packets do.
 
+## The recall contract — built 14 September 2026 (packet 7)
+
+The four exercise types a section's recalls are written into. The widgets are `components/learn-mode/*Recall.jsx`,
+the grading and ordering logic is `lib/recall-widgets.js` (tested), the exemplars authors copy are
+`lib/recall-fixtures.js`, and the gallery that renders them is `/admin/widgets` (founder) and `/dev/widgets`
+(dev server). Every recall sits at `section.recall` with an `id` (packet 2 mints one) and a `prompt`.
+
+**What every type does, so an author knows what the student meets.** Check marks each item; a wrong check
+says how near it was and offers *Try again* with the right items locked; the answer, with the `why` lines,
+appears on request after the first wrong check and by itself after the second. The score the engine records
+is the first check only. A visible *Skip* counts the recall as skipped, and the skipped recall comes back as
+the spaced recall at the next chapter check-in (F055). Start orders are seeded from the recall id, never
+random and never stored: the same recall is a different puzzle on its spaced showing (F053, F113).
+
+| Type | Use it for | Shape | Rules |
+|---|---|---|---|
+| `reorder` | A genuine sequence: cause to effect, a process, a calculation. Never a ranking, never parallel facts | `correctOrder[]` 3-5, `why[]` one line per item, a prompt that names the ordering principle | `reorder.count` BLOCK · `reorder.criterion` / `source` / `lead` DEBT · `recall.why` DEBT |
+| `fillin` | A term or a number the student should produce | `template[]` lines with `___` blanks (any number per line), `answers[]` one per blank in reading order (multi-word is one chip), `hints[]` semantic, `distractors[]` 2-3 | `fillin.blanks` / `dup-answers` / `token` BLOCK · `fillin.hint` / `distractors` / `leak` DEBT |
+| `match` | "X goes with Y": a source with its use, a term with its definition, a policy with its effect | `pairs[{ left, right, why }]` 3-5, `distractors[]` 0-2 extra rights | `match.count` / `unique` BLOCK · `match.prompt` / `recall.why` DEBT |
+| `classify` | Membership: fixed or variable, injection or leakage, micro or macro. Also every ranking and "sort into" the March audit wrote as a reorder | `groups[{ name, items[], why }]` 2-3 groups, 4-8 items | `classify.groups` / `unique` BLOCK · `classify.prompt` / `recall.why` DEBT |
+
+**Writing the `why`.** One line, the reason, not a restatement: for a reorder item, why it follows the one
+before ("excess demand bids the price up"); for a pair, why that use and not another; for a group, the rule
+that decides membership ("they do not change with output in the short run"). It is what the student reads at
+the moment the audit says the platform's authority used to drop to zero.
+
+**Converting a bad reorder.** The March verdicts in `audit/raw/content-audits.json` name 18 not-orderable and
+48 weak reorders. "Match X to Y" becomes a `match`; a ranking, "most to least", "sort into" or a list of
+parallel facts becomes a `classify`; a chain with one defensible order but an underspecified prompt stays a
+`reorder` with the principle named; a chain with two defensible orders is rewritten or replaced. The two
+converted exemplars in `lib/recall-fixtures.js` are the template.
+
+**What the renderer forgives, and what it does not.** A template whose blank count disagrees with its answers
+is still completable (spare answers become chips, spare blanks go inert), a line with `___ ___` renders whole,
+a stored letter-prefix hint is shown as the first letter only, and a fill-in with no distractors gets two from
+the section's other answers. None of that makes the content right: the validator still reports it, and a
+section packet clears it.
+
 ## The per-section edit pass — the checklist (F116)
 
 The validator enforces what is mechanical so that a person's pass can spend its minutes on meaning. Every
@@ -199,10 +238,12 @@ content packet runs this list once per section, after staging and before `publis
 and records "checklist done" in its PROGRESS.md row. It is short on purpose; Layer 7 says why longer lists
 are theatre.
 
-1. **Every recall prompt names its criterion.** Not "put these in the right order" but the direction or the
-   named sequence ("from launch to maturity", "the recruitment process"). `reorder.criterion` catches the
-   wording; read the items and ask whether a student who was taught this could reconstruct the order for
-   the reason the prompt gives.
+1. **Every recall is the right type, names its criterion, and carries its `why`.** A reorder only for a
+   genuine sequence (cause to effect, a process, a calculation); a pairing is a `match`; a ranking, a
+   "sort into" or a set of parallel facts is a `classify`; a term is a `fillin` with 2-3 distractors and
+   semantic hints. See "The recall contract" below. `reorder.criterion` catches the wording; read the items
+   and ask whether a student who was taught this could reconstruct the order for the reason the prompt
+   gives. Delete `shuffled` when you touch a reorder; it is ignored.
 2. **Every example is one an IAL candidate can picture.** Centres sit WEC/WBS in Hong Kong, Singapore,
    Malaysia, Pakistan, the Gulf, Nigeria and Kenya. A UK example is allowed as one of several; the default
    frame is the student's own market or a global name. `locale.institution` refuses the NHS, HMRC, council
@@ -249,13 +290,13 @@ us to keep.
    causal, by size, in the order you would write it in an answer. "Logically" and "in order of
    explanation" fail. A static check on the prompt string catches these.
 2. **A reorder must have exactly one defensible order, not merely one intended order.** Where a
-   second reading survives, the item becomes a different exercise type — the chain-build with
-   distractor links, or classify — rather than being reworded. Packet 7 provides those types.
+   second reading survives, the item becomes a different exercise type — `match` or `classify` —
+   rather than being reworded. Packet 7 built those types; see "The recall contract" above.
 
-**And regardless of either rule:** a wrong answer must say *why* that order is right. Today it
-returns "0 of 4 in the right position" and the correct list, with no reasoning, which is the moment
-the founder describes as the platform's authority dropping to zero. That is packet 7's `why` field,
-and it is what makes a defensible-but-hard order survivable instead of infuriating.
+**And regardless of either rule:** a wrong answer must say *why* that order is right. Until packet 7 it
+returned "0 of 4 in the right position" and the correct list, with no reasoning, which is the moment
+the founder describes as the platform's authority dropping to zero. The `why` field exists now, the
+widget shows it, and `recall.why` reports every recall that lacks it; content packets write it.
 
 ## Layer 2 — Reference assets, each verified against source
 

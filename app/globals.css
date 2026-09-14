@@ -2661,103 +2661,7 @@ button.sidebar-resource-link {
 [data-theme="dark"] .lm-guided-expand-btn:hover { border-color: #FBBF24; }
 
 /* ─── Explain It Back ─── */
-/* Recall Checkpoint */
-.lm-recall-checkpoint {
-  padding: 16px 18px; margin-bottom: 20px;
-  background: var(--bg-card);
-  border: 1.5px solid var(--border-primary);
-  border-radius: 14px;
-  border-left: 3px solid var(--accent-blue, #3b82f6);
-  transition: opacity 0.35s ease, transform 0.35s ease, max-height 0.35s ease,
-              padding 0.35s ease, margin 0.35s ease;
-  max-height: 500px;
-  overflow: visible;
-}
-.lm-recall-dismissing {
-  opacity: 0; transform: translateY(-12px);
-  max-height: 0 !important; margin-bottom: 0; padding-top: 0; padding-bottom: 0;
-  overflow: hidden;
-}
-.lm-recall-header {
-  display: flex; align-items: center; gap: 8px; margin-bottom: 10px;
-}
-.lm-recall-icon { font-size: 18px; }
-.lm-recall-title {
-  font-size: 13px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 0.06em; color: var(--accent-blue, #3b82f6);
-  font-family: 'DM Mono', monospace;
-}
-.lm-recall-dismiss {
-  margin-left: auto; background: none; border: none;
-  font-size: 18px; color: var(--text-muted); cursor: pointer;
-  padding: 0 4px; line-height: 1;
-}
-.lm-recall-dismiss:hover { color: var(--text-primary); }
-.lm-recall-prompt {
-  font-size: 15px; color: var(--text-secondary); margin: 0 0 12px; line-height: 1.5;
-}
-.lm-recall-prompt strong { color: var(--text-primary); }
-.lm-recall-textarea {
-  width: 100%; min-height: 70px; padding: 10px 14px;
-  font-size: 14px; font-family: inherit; line-height: 1.5;
-  border: 1.5px solid var(--border-primary);
-  border-radius: 10px; background: var(--bg-input, var(--bg-primary));
-  color: var(--text-primary); resize: vertical;
-}
-.lm-recall-textarea:focus { outline: none; border-color: var(--accent-blue, #3b82f6); }
-.lm-recall-actions { display: flex; gap: 8px; margin-top: 10px; }
-.lm-recall-reveal-btn {
-  padding: 8px 18px; background: var(--accent-blue, #3b82f6); color: #fff;
-  border: none; border-radius: 20px;
-  font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit;
-  transition: all 0.2s;
-}
-.lm-recall-reveal-btn:disabled { opacity: 0.4; cursor: not-allowed; }
-.lm-recall-reveal-btn:hover:not(:disabled) { filter: brightness(1.1); transform: translateY(-1px); }
-.lm-recall-skip-btn {
-  padding: 8px 18px; background: none;
-  border: 1.5px solid var(--border-primary); color: var(--text-secondary);
-  border-radius: 20px; font-size: 13px; font-weight: 600;
-  cursor: pointer; font-family: inherit; transition: all 0.2s;
-}
-.lm-recall-skip-btn:hover { border-color: var(--text-muted); color: var(--text-primary); }
-.lm-recall-model-answer {
-  padding: 14px 16px; margin-top: 12px;
-  background: var(--green-light-6); border: 1px solid var(--green-light-20);
-  border-radius: 10px;
-}
-.lm-recall-model-label {
-  font-size: 11px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 0.06em; color: var(--accent-green);
-  margin-bottom: 6px; font-family: 'DM Mono', monospace;
-}
-.lm-recall-model-answer p {
-  font-size: 14px; color: var(--text-primary); margin: 0; line-height: 1.5;
-}
-.lm-recall-rating { margin-top: 14px; }
-.lm-recall-rating-prompt {
-  font-size: 13px; font-weight: 600; color: var(--text-secondary);
-  display: block; margin-bottom: 8px;
-}
-.lm-recall-rating-buttons { display: flex; gap: 8px; }
-.lm-recall-rate-btn {
-  padding: 7px 16px; border-radius: 20px;
-  font-size: 13px; font-weight: 600; cursor: pointer;
-  font-family: inherit; transition: all 0.15s; border: 1.5px solid;
-  background: none;
-}
-.lm-rate-got-it { border-color: var(--accent-green); color: var(--accent-green); }
-.lm-rate-got-it:hover { background: var(--accent-green); color: #fff; }
-.lm-rate-partial { border-color: var(--accent-amber, #f59e0b); color: var(--accent-amber, #f59e0b); }
-.lm-rate-partial:hover { background: var(--accent-amber, #f59e0b); color: #fff; }
-.lm-rate-missed { border-color: var(--accent-red, #ef4444); color: var(--accent-red, #ef4444); }
-.lm-rate-missed:hover { background: var(--accent-red, #ef4444); color: #fff; }
-.lm-recall-feedback {
-  margin-top: 12px; padding: 10px 14px;
-  font-size: 14px; font-weight: 500; color: var(--text-secondary);
-  background: var(--green-light-6); border-radius: 10px;
-  text-align: center;
-}
+/* (RecallCheckpoint's CSS was here; the component was never mounted and is deleted, F061.) */
 
 /* ── Interactive Recall (Reorder + Fill-in) ── */
 .lm-recall-card {
@@ -2858,10 +2762,11 @@ button.sidebar-resource-link {
   padding: 6px 14px; border-radius: 20px;
   background: rgba(167,139,250,0.12); border: 1px solid rgba(167,139,250,0.25);
   color: var(--accent-purple-text); font-size: 13px; font-weight: 500;
-  cursor: grab; user-select: none; transition: all 0.15s;
+  cursor: pointer; user-select: none; transition: all 0.15s;
 }
 .lm-word-chip:hover { background: rgba(167,139,250,0.2); transform: translateY(-1px); }
-.lm-word-chip:active { cursor: grabbing; transform: scale(0.95); }
+.lm-word-chip:active { transform: scale(0.95); }
+.lm-word-chip.selected { background: var(--recall-accent-fill); border-color: var(--recall-accent); box-shadow: 0 0 0 2px rgba(167,139,250,0.25); color: var(--text-primary); }
 
 /* Correct answers display (fill-in + reorder) */
 .lm-recall-correct-answers, .lm-recall-correct-order {
@@ -2918,6 +2823,74 @@ button.sidebar-resource-link {
 }
 .lm-recall-arrow-btn:hover:not(:disabled) { border-color: var(--recall-accent); color: var(--accent-purple); }
 .lm-recall-arrow-btn:disabled { opacity: 0.25; cursor: not-allowed; }
+
+/* ── Packet 7: the recall contract's shared mechanics ── */
+.lm-recall-actions { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+/* F055: a visible Skip in place of the unlabelled ×. */
+.lm-recall-skip {
+  background: none; border: 1px solid var(--border-primary); border-radius: 8px;
+  color: var(--text-secondary); font-size: 12px; font-weight: 600; padding: 6px 12px;
+  cursor: pointer; font-family: inherit; transition: all 0.15s;
+}
+.lm-recall-skip:hover { border-color: var(--text-muted); color: var(--text-primary); }
+.lm-recall-card-skipped { opacity: 0.85; }
+.lm-recall-skipped-note { font-size: 13px; color: var(--text-secondary); margin: 8px 0 0; line-height: 1.5; }
+/* Retry: what was right stays put. */
+.lm-recall-item.locked { background: var(--rl-green-bg); border-color: var(--rl-green-bd); cursor: default; }
+.lm-fillin-blank.locked, .lm-match-slot.locked { border-style: solid; border-color: var(--rl-green-bd); color: var(--rl-green); background: var(--rl-green-bg); cursor: default; }
+.lm-word-chip.locked { cursor: default; }
+/* F060: the targeted blank. */
+.lm-fillin-blank.selected { border-style: solid; border-color: var(--recall-accent); box-shadow: 0 0 0 2px rgba(167,139,250,0.25); color: var(--text-primary); }
+.lm-fillin-blank-inert { cursor: default; opacity: 0.6; }
+/* F063: the student's word, struck through, beside the answer. */
+.lm-fillin-was { color: var(--rl-red); text-decoration: line-through; margin-right: 6px; opacity: 0.85; }
+.lm-fillin-answer { color: var(--rl-green); font-weight: 600; }
+.lm-fillin-hints { margin: 0 0 12px; padding-left: 0; list-style: none; font-size: 13px; color: var(--accent-purple-text); line-height: 1.5; }
+.lm-fillin-hint-num { font-weight: 700; margin-right: 4px; }
+/* F056: the why line under each answer. */
+.lm-recall-correct-entry { display: flex; flex-direction: column; margin-bottom: 6px; }
+.lm-recall-why { font-size: 12px; color: var(--text-secondary); line-height: 1.45; padding-left: 14px; border-left: 2px solid var(--rl-green-bd); margin-top: 2px; }
+/* Match (W001) */
+.lm-match-rows { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+.lm-match-row {
+  display: flex; align-items: center; gap: 10px; padding: 8px 12px;
+  background: var(--bg-input); border: 1px solid var(--border-primary); border-radius: 8px;
+}
+.lm-match-row.correct { background: var(--rl-green-bg); border-color: var(--rl-green-bd); }
+.lm-match-row.wrong { background: var(--rl-red-bg); border-color: var(--rl-red-bd); }
+.lm-match-left { font-size: 13px; font-weight: 600; color: var(--text-primary); flex: 0 1 38%; }
+.lm-match-slot {
+  flex: 1 1 auto; min-height: 34px; display: inline-flex; align-items: center; padding: 4px 10px;
+  border: 1.5px dashed var(--border-hover); border-radius: 6px; background: var(--bg-card);
+  color: var(--text-dim); font-size: 13px; cursor: pointer; transition: all 0.15s;
+}
+.lm-match-slot.filled { border-style: solid; border-color: var(--recall-accent); color: var(--text-primary); background: var(--recall-accent-fill); }
+.lm-match-slot.selected { border-style: solid; border-color: var(--recall-accent); box-shadow: 0 0 0 2px rgba(167,139,250,0.25); color: var(--text-primary); }
+.lm-match-slot.correct { border-color: var(--rl-green-bd); color: var(--rl-green); background: var(--rl-green-bg); }
+.lm-match-slot.wrong { border-color: var(--rl-red-bd); background: var(--rl-red-bg); flex-wrap: wrap; }
+/* Classify (W002) */
+.lm-classify-groups { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+.lm-classify-group { border: 1px solid var(--border-primary); border-radius: 10px; background: var(--bg-input); padding: 8px; }
+.lm-classify-group.selected { border-color: var(--recall-accent); box-shadow: 0 0 0 2px rgba(167,139,250,0.25); }
+.lm-classify-group-name {
+  display: block; width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+  font-family: inherit; font-size: 13px; font-weight: 700; color: var(--accent-purple-text); padding: 6px 6px 8px;
+}
+.lm-classify-group-name:disabled { cursor: default; }
+.lm-classify-members { display: flex; flex-wrap: wrap; gap: 8px; min-height: 36px; padding: 0 4px 4px; }
+.lm-classify-empty { font-size: 12px; color: var(--text-dim); padding: 6px 4px; }
+.lm-classify-chip.correct { background: var(--rl-green-bg); border-color: var(--rl-green-bd); color: var(--rl-green); }
+.lm-classify-chip.wrong { background: var(--rl-red-bg); border-color: var(--rl-red-bd); color: var(--rl-red); }
+.lm-classify-home { font-weight: 400; color: var(--rl-red); }
+/* Gallery (W003) */
+.lm-gallery { max-width: 620px; margin: 0 auto; padding: 16px; }
+.lm-gallery-title { font-size: 22px; font-weight: 800; color: var(--text-primary); margin: 0 0 8px; }
+.lm-gallery-intro { font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin: 0 0 12px; }
+.lm-gallery-controls { display: flex; gap: 8px; margin-bottom: 8px; }
+.lm-gallery-controls .lm-recall-hint-btn.active { background: var(--recall-accent-fill); border-color: var(--recall-accent); }
+.lm-gallery-heading { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-muted); margin: 20px 0 0; }
+.lm-gallery-section .lm-recall-card { margin-top: 8px; }
+.lm-gallery-log { font-size: 12px; color: var(--text-secondary); background: var(--bg-input); border: 1px solid var(--border-primary); border-radius: 8px; padding: 10px 12px; white-space: pre-wrap; }
 
 .lm-explain-section { margin: 24px 0 0; }
 .lm-explain-toggle {
@@ -3387,10 +3360,6 @@ button.sidebar-resource-link {
   from { transform: scale(0.8); opacity: 0; }
   to   { transform: scale(1); opacity: 1; }
 }
-@keyframes lmTooltipIn {
-  from { opacity: 0; transform: translate(-50%, -90%); }
-  to   { opacity: 1; transform: translate(-50%, -100%); }
-}
 @keyframes lmShake {
   0%, 100% { transform: translateX(0); }
   25%      { transform: translateX(-4px); }
@@ -3443,14 +3412,7 @@ button.sidebar-resource-link {
   animation: lmStreakPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Interactive diagram */
-.lm-interactive-diagram {
-  position: relative;
-  padding: 20px 12px;
-  border-radius: 12px;
-  background: var(--bg-input);
-  margin: 16px 0;
-}
+/* Inline diagram (InteractiveDiagram, hover-only and never mounted, was deleted in packet 7, F061) */
 .lm-interactive-svg-wrapper {
   display: flex; justify-content: center; align-items: center;
 }
@@ -3476,29 +3438,6 @@ button.sidebar-resource-link {
 .lm-interactive-svg-wrapper svg circle {
   shape-rendering: geometricPrecision;
 }
-.lm-diagram-tooltip {
-  position: absolute; transform: translate(-50%, -100%);
-  padding: 8px 14px; background: var(--bg-card);
-  border: 1.5px solid var(--border-primary); border-left: 3px solid;
-  border-radius: 8px;
-  font-size: 12px; font-weight: 600;
-  color: var(--text-primary);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
-  pointer-events: none; white-space: nowrap; z-index: 10;
-  animation: lmTooltipIn 0.15s ease;
-}
-.lm-diagram-tooltip-label {
-  font-size: 13px; font-weight: 700; color: var(--text-primary);
-}
-.lm-diagram-tooltip-role {
-  display: flex; align-items: center; gap: 6px;
-  font-size: 11px; color: var(--text-muted); margin-top: 3px;
-}
-.lm-diagram-tooltip-dot {
-  display: inline-block; width: 8px; height: 8px;
-  border-radius: 50%; flex-shrink: 0;
-}
-
 /* Diagram label drill */
 .lm-label-drill {
   position: relative; padding: 16px 0;
@@ -7256,6 +7195,10 @@ a.auth-dropdown-item:visited {
 .lm-recall-arrow:focus-visible,
 .lm-fillin-blank:focus-visible,
 .lm-fillin-word:focus-visible,
+  .lm-match-slot:focus-visible,
+  .lm-word-chip:focus-visible,
+  .lm-classify-group-name:focus-visible,
+  .lm-recall-skip:focus-visible,
 .lm-nav-next:focus-visible,
 .lm-nav-back:focus-visible,
 .spe-section-chip:focus-visible {
@@ -7487,6 +7430,13 @@ a.auth-dropdown-item:visited {
   .lm-recall-arrow-btn { min-width: 44px; min-height: 44px; font-size: 12px; padding: 0; }
   .lm-recall-item { min-height: 44px; }
   .lm-recall-dismiss { min-width: 44px; min-height: 44px; margin: -10px -10px -10px 0; display: inline-flex; align-items: center; justify-content: center; }
+  .lm-recall-skip { min-height: 44px; min-width: 64px; margin: -8px 0; }
+  .lm-match-slot, .lm-classify-chip, .lm-classify-group-name { min-height: 44px; }
+  .lm-match-row { flex-wrap: wrap; }
+  .lm-match-left { flex-basis: 100%; }
+  .lm-match-slot, .lm-fillin-was, .lm-fillin-answer, .lm-recall-why, .lm-fillin-hints, .lm-recall-skipped-note { font-size: 15px; }
+  .lm-recall-why { font-size: 13px; }
+  .lm-gallery { padding: 12px; }
   .lm-more-btn { width: 44px; height: 44px; }
   .lm-word-chip, .lm-fillin-blank { min-height: 40px; display: inline-flex; align-items: center; white-space: nowrap; }
   /* A blank was shrinking inside its flex row and breaking "underproduces" mid-word; the row wraps instead. */

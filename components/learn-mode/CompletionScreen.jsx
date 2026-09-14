@@ -10,12 +10,18 @@ import { saveSectionState } from '@/lib/section-state';
 
 function ScoreRow({ label, emoji, score }) {
   const pct = score.total > 0 ? Math.round((score.correct / score.total) * 100) : 0;
+  // F055: a skipped check counts against the score (it is in `total`) and is named as skipped, so
+  // the path of least resistance is visible on the screen it used to hide from.
+  const skipped = score.skipped || 0;
   return (
     <div className="lm-score-row">
       <div className="lm-score-row-header">
         <span className="lm-score-row-emoji">{emoji}</span>
         <span className="lm-score-row-label">{label}</span>
-        <span className="lm-score-row-value">{score.correct}/{score.total}</span>
+        <span className="lm-score-row-value">
+          {score.correct}/{score.total}
+          {skipped > 0 && <span className="lm-score-row-skipped"> · {skipped} skipped</span>}
+        </span>
       </div>
       <div className="lm-score-bar-track">
         <div className="lm-score-bar-fill" style={{ width: `${pct}%` }} />

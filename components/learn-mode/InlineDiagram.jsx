@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import processSvg from './processSvg';
+import DiagramLabelDrill from './DiagramLabelDrill';
 
 /* ── Enlarged modal overlay ── */
 function DiagramModal({ svgRef, imageUrl, title, onClose }) {
@@ -101,12 +102,19 @@ export default function InlineDiagram({ diagram }) {
   const currentSvg = scenarios[activeScenario]?.svg || diagram.svg;
   const hasImage = !!diagram.imageUrl;
 
+  // F061 (packet 7): the label drill, behind a button that exists only when the SVG has labels
+  // to drill — three or more <text class="draggable">. Counted here, on the injected copy.
+  const [drillLabels, setDrillLabels] = useState(0);
+  const [drilling, setDrilling] = useState(false);
+
   // Inject and post-process SVG (static — no hover listeners)
   useEffect(() => {
     if (!svgRef.current || !currentSvg || hasImage) return;
     svgRef.current.innerHTML = currentSvg;
     const svgEl = svgRef.current.querySelector('svg');
     if (svgEl) processSvg(svgEl);
+    setDrillLabels(svgEl ? svgEl.querySelectorAll('text.draggable').length : 0);
+    setDrilling(false);
   }, [currentSvg, hasImage]);
 
   const handleDiagramClick = useCallback(() => {
@@ -147,9 +155,16 @@ export default function InlineDiagram({ diagram }) {
             <img src={diagram.imageUrl} alt={diagram.title} />
           </div>
         ) : (
-          <div className="lm-interactive-svg-wrapper lm-diagram-clickable" ref={svgRef} onClick={handleDiagramClick} />
+          /* Kept mounted (hidden) while the drill is open, so the injected SVG survives the round trip. */
+          <div className="lm-interactive-svg-wrapper lm-diagram-clickable" ref={svgRef} onClick={handleDiagramClick} hidden={drilling} />
         )}
-        {canEnlarge && <div className="lm-diagram-enlarge-hint">Tap to enlarge</div>}
+        {canEnlarge && !drilling && <div className="lm-diagram-enlarge-hint">Tap to enlarge</div>}
+        {!hasImage && drillLabels >= 3 && !drilling && (
+          <button type="button" className="lm-label-drill-toggle" onClick={() => setDrilling(true)}>
+            &#127919; Label this diagram
+          </button>
+        )}
+        {drilling && <DiagramLabelDrill svgString={currentSvg} onClose={() => setDrilling(false)} />}
 
         {diagram.checklist && (
           <div className="diagram-checklist">

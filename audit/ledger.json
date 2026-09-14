@@ -17731,6 +17731,58 @@
    "evidence": null,
    "note": "Found by the packet 13 verifier. Files: app/economics/market-failure/page.js (24, incl. merit/demerit teaching sections, a Deadweight loss heading and a JSON-LD FAQ saying monopoly is a sixth category), app/economics/unit-1/page.js, app/economics/aggregate-demand/page.js (meta description advertises the accelerator), app/economics/page.js, app/economics/market-failure-model-answers/page.js, components/TutorTab.jsx, data/modelAnswersData.js, data/modelAnswersExpansion.js. Some mentions are legitimate (the page explains that the IAL says external benefits of consumption rather than merit good) so this is a reading pass, not a substitution; it belongs to the cross-surface consistency packet. [Packet 13 round-2 verifier, 14 Sep] app/economics/market-failure/page.js: lines 116-118 and 128-130 explain the IAL vocabulary correctly, but 105-106, 112-114, 120-122, 124-126, 136-142 and the KEY_CONCEPTS line teach the removed material as IAL, and FAQ 3/4 contradict FAQ 2 on the same page. Pull this file forward inside packet 57.",
    "added": "2026-09-14"
+  },
+  {
+   "id": "W001",
+   "kind": "feature",
+   "title": "match recall type: pairs rendered as a left column and a shuffled right-hand chip bank, tap-to-pair, graded per pair, retry with correct pairs locked, why per pair",
+   "file": "components/learn-mode/MatchRecall.jsx",
+   "packet": 7,
+   "status": "open",
+   "closed_by": null,
+   "verified_by": null,
+   "evidence": null,
+   "note": null,
+   "added": "2026-09-14"
+  },
+  {
+   "id": "W002",
+   "kind": "feature",
+   "title": "classify recall type: 2-3 named groups, a shuffled item bank, tap item then group, graded per item, retry with correct items locked, why per group",
+   "file": "components/learn-mode/ClassifyRecall.jsx",
+   "packet": 7,
+   "status": "open",
+   "closed_by": null,
+   "verified_by": null,
+   "evidence": null,
+   "note": null,
+   "added": "2026-09-14"
+  },
+  {
+   "id": "W003",
+   "kind": "feature",
+   "title": "widget gallery: /admin/widgets and /dev/widgets render one exemplar of each recall type and the label drill from lib/recall-fixtures.js",
+   "file": "app/dev/widgets/page.js",
+   "packet": 7,
+   "status": "open",
+   "closed_by": null,
+   "verified_by": null,
+   "evidence": null,
+   "note": null,
+   "added": "2026-09-14"
+  },
+  {
+   "id": "W004",
+   "kind": "feature",
+   "title": "the recall contract: four types documented in CONTENT-GATE.md, enforced by validator rules with fixtures, grading logic in lib/recall-widgets.js with tests",
+   "file": "lib/recall-widgets.js",
+   "packet": 7,
+   "status": "open",
+   "closed_by": null,
+   "verified_by": null,
+   "evidence": null,
+   "note": null,
+   "added": "2026-09-14"
   }
  ],
  "marketing": [
