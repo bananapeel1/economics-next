@@ -322,6 +322,16 @@ at each ship checkpoint as a programme health metric.
 
 Stated plainly so nobody mistakes the gate for an examiner.
 
+- **A write that does not go through PostgREST's table API.** The client guard covers `from()` on the client,
+  on `schema()` and on `rest`, for update, upsert, insert and delete. It cannot see `rpc()`. There is no
+  SQL-executing function in this project's database and none must be created (`seed/setup-pdfs.mjs` calls one
+  named `exec_sql` that does not exist); if one ever is, the gate has a hole no client can close. Likewise a
+  write from the Supabase dashboard or SQL editor: the founder is the only person with that access, and
+  `npm run validate` is the check that runs afterwards.
+- **A rewrite that keeps a baselined BLOCK and changes nothing about the item.** Keys are fingerprinted on the
+  item, so this cannot happen by editing the item; it can happen by leaving it alone, which is what the
+  baseline is for.
+
 - A conceptual error stated **consistently** across every surface of a section. Layer 5 catches
   disagreement; a uniformly wrong section reads as coherent.
 - A plausible invented specific that search cannot disprove, though Layer 4's delete-by-default shrinks

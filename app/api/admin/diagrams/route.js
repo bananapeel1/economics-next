@@ -34,6 +34,15 @@ async function refuseIfBlocked(supabase, sectionId, diagrams) {
   }, { status: 422 });
 }
 
+/** The row students now read must hold what was sent. Returns null when it does, or the response to send. */
+async function readBack(supabase, sectionId, diagrams) {
+  const { data, error } = await supabase.from('section_diagrams').select('data').eq('section_id', sectionId).single();
+  if (error || JSON.stringify(data?.data) !== JSON.stringify(diagrams)) {
+    return NextResponse.json({ error: `Written, but the row read back does not match what was sent${error ? `: ${error.message}` : ''}. Check the section before trusting it.` }, { status: 500 });
+  }
+  return null;
+}
+
 // GET — fetch diagrams for a section
 export async function GET(request) {
   const auth = await checkAdmin();
@@ -107,6 +116,8 @@ export async function POST(request) {
     );
 
   if (upsertErr) return NextResponse.json({ error: upsertErr.message }, { status: 500 });
+  const back = await readBack(supabase, sectionId, diagrams);
+  if (back) return back;
 
   return NextResponse.json({ success: true, imageUrl, diagrams });
 }
@@ -145,5 +156,7 @@ export async function DELETE(request) {
     .eq('section_id', sectionId);
 
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  const back = await readBack(supabase, sectionId, diagrams);
+  if (back) return back;
   return NextResponse.json({ success: true, diagrams });
 }

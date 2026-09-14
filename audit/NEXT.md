@@ -174,6 +174,18 @@ so it cannot say whether the international example chosen is relevant — the ch
   unchanged), and the two tariff rows that carried page-footer text no longer do.
 `npm test` is 95/95.
 
+**Verify A, round 2 (14 September, commit 507e09b): F073, F110 and F116 confirmed; `unverified 3` clear.** The
+verifier re-measured the italic change itself (6 strings differ, all star notation; 41 real emphasis runs
+unchanged), re-keyed a live essay stem and watched its key change while a rotated quiz array changed none,
+built its own UK-only and UK-among-others fixtures, and re-ran the spec-items census (0 missing). Its remaining
+notes, all acted on the same day or written down: `.delete()` on a content table is now refused by the guard
+and scanned for by the write-path test; `schema().rest` no longer throws from the proxy; the diagrams route
+reads back after both writes. Not fixable at the client and recorded in CONTENT-GATE ("What this still will
+not catch"): `rpc()` passes the proxy, so a SQL-executing function in the database would be a bypass no client
+guard can police (`seed/setup-pdfs.mjs` calls one named `exec_sql`; it does not exist in this project's
+database, and must not be created). The baseline's fingerprints match live rows, not any snapshot, so it can
+only be regenerated against the database.
+
 ## Handoff — what comes next
 
 Packet 3 is the last code packet before content. With it in place the order is 13 (off-spec strip, now

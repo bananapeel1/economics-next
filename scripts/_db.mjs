@@ -76,6 +76,9 @@ function guarded(table, builder) {
   return new Proxy(builder, {
     get(target, prop) {
       if (prop === 'update' || prop === 'upsert' || prop === 'insert') return refuse(prop);
+      // A delete removes a section's whole table; nothing in this repo deletes a content row, so
+      // it is refused outright rather than checked for a payload (packet 3 verification note).
+      if (prop === 'delete') return () => { throw new Error(`Refusing to delete rows on ${table} directly. Restore from a snapshot with scripts/restore-section.mjs, or set REVVY_ALLOW_RAW_WRITE=1 and say why.`); };
       const v = target[prop];
       return typeof v === 'function' ? v.bind(target) : v;
     },
@@ -90,7 +93,7 @@ function withGuardedFrom(target) {
     get(t, prop) {
       if (prop === 'from') return (table) => guarded(table, t.from(table));
       if (prop === 'schema') return (...a) => withGuardedFrom(t.schema(...a));
-      if (prop === 'rest') return withGuardedFrom(t.rest);
+      if (prop === 'rest') return t.rest ? withGuardedFrom(t.rest) : t.rest;
       const v = t[prop];
       return typeof v === 'function' ? v.bind(t) : v;
     },
