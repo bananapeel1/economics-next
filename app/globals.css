@@ -1442,6 +1442,9 @@ body {
     padding: 4px 0 8px;
     margin: 0 -14px;
     padding-left: 14px; padding-right: 58px;
+    /* A tapped tab that is only partly visible must slide clear of the chevron too: scrollIntoView
+       ('nearest') otherwise counts it as visible. Round-3 note, F096's area. */
+    scroll-padding-inline-end: 58px;
     /* The 44px chevron sits over the right edge; the strip fades under it and scrolls 44px past its last tab
        so every tab label can be brought fully clear of it. */
     mask-image: linear-gradient(to right, transparent 0px, black 14px, black calc(100% - 52px), transparent 100%);
@@ -5962,9 +5965,13 @@ a.auth-dropdown-item:visited {
   justify-content: center;
 }
 .lm-diagram-modal .lm-diagram-modal-svg svg {
-  width: 100%;
+  /* A definite width, not 100%: the sheet, its pane and the wrapper all shrink to fit their content,
+     so "100%" resolved to the SVG's 300px intrinsic default once the clone lost its width attribute
+     (round-3 note): the desktop sheet was 1.1x the inline diagram. Same figure as the pane rule at
+     the sheet block, which this three-part selector used to outrank. */
+  width: min(80vw, 900px);
   height: auto;
-  max-width: 90vw;
+  max-width: none;
   max-height: 85vh;
   display: block;
 }

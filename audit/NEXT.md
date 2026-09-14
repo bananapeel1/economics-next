@@ -1,6 +1,6 @@
 # Next session brief
 
-## Packet 5 spec — Step 0 (built and Verify-B'd 14 September 2026, Fable 5.1; Verify A round 1 rejected seven, round 2 rejected two of those, both fixed the same day; round 3 pending)
+## Packet 5 spec — Step 0 (built, Verify-B'd and VERIFIED 14 September 2026, Fable 5.1 — Verify A passed on round 3, commit d032302; NOT shipped until the checkpoint, ~26 September)
 
 The churn packet. 75% of Learn Mode section opens never pass step 0. Packet 0 already made the pre-test opt-in;
 this packet rebuilds the step itself so that what the student meets on step 0 is one subsection, readable on a
@@ -134,6 +134,20 @@ both correctly, both fixed the same day.** The round-1 defects were gone; each f
 computed `touch-action` is `manipulation`, no label carries an inline `font-size` style, and the label
 bounding boxes overlap no more than the authored diagram (0 on this one). Census: `node -e` over every live
 `section_diagrams` row — `font-size` minimum 7, viewBox width 500, so 7 × 858 / 500 = 12.0px.
+
+**Verify A, round 3 (14 September, commit d032302): F062 and F088 confirmed; `unverified 5` clear — the gate
+passed.** The verifier's census (108 live SVGs, 1,797 labels, every viewBox 500 wide, minimum font-size 7)
+measured the smallest label at 12.01px in the settled sheet. Two notes came back, both pre-existing, both
+fixed AFTER the gate as one-line CSS changes and checked by measurement only (no fourth verifier round):
+- a tapped tab that was only partly visible stayed under the 44px chevron, because `scrollIntoView('nearest')`
+  counts it as visible: `scroll-padding-inline-end: 58px` on the phone `.tab-bar`. Measured: tapping the
+  half-hidden "Practice" tab slides it to 238-326px, exactly clear of the chevron at 326.
+- above 768px the sheet's SVG was 300px, the intrinsic default, because the three-part selector said
+  `width: 100%` of a shrink-to-fit sheet: it is `min(80vw, 900px)` there now. Measured 819px at 1024 (was
+  300; inline is 270).
+The verifier's measurement caveat is worth keeping: with the Browser pane hidden the sheet's scale-in does not
+run and rect-based numbers read 0.92×; read computed styles, or front the tab. **Ship at the checkpoint** once
+the funnel baseline has two weeks behind it (~26 September), as a PR the founder merges.
 
 ## Packet 13 spec — the off-spec strip and dedupe (built 14 September 2026; Verify A rounds 1 and 2 each rejected D010 and D011; pass 3 STAGED as drafts 14 September, publish pending; round 3 after publish)
 
