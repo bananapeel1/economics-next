@@ -25,7 +25,9 @@
 import { supabase } from './_db.mjs';
 import { CONTENT_TABLES, readSection, subjectBySection } from './snapshot-section.mjs';
 import { writeFileSync, mkdirSync } from 'node:fs';
-import { describeChange, unresolvedPins } from './_publish-checks.mjs';
+import { describeChange } from './_publish-checks.mjs';
+import { validateSection } from '../lib/content-validator.mjs';
+import { contextFor, loadBaseline } from './_content-write.mjs';
 
 const args = process.argv.slice(2);
 const CONFIRM = args.includes('--confirm');
@@ -76,7 +78,7 @@ const subjects = await subjectBySection();
 /** Copy the live payload to disk before it is overwritten. Returns the path. */
 async function snapshotBeforePublish(sectionId) {
   const payload = await readSection(sectionId);
-  const subject = subjects[sectionId] || 'unknown';
+  const subject = subjects.get(sectionId) || 'unknown';
   mkdirSync(SNAP_DIR, { recursive: true });
   const label = `auto-prepublish-${STAMP}`;
   const path = `${SNAP_DIR}/${label}__${subject}__${sectionId}.json`;
@@ -98,20 +100,26 @@ for (const sectionId of targets) {
     for (const extra of lines.slice(1)) console.log(`  ${''.padEnd(18)} ${extra}`);
   }
 
-  // The pins are checked against what WOULD be live after this publish: the drafted content and
-  // the drafted diagrams where they exist, falling back to whatever is live for the other.
-  const byTable = Object.fromEntries(tables.map((t) => [t.table, t]));
-  const nextContent = byTable.section_content ? byTable.section_content.draft : (await readSection(sectionId)).section_content;
-  const nextDiagrams = byTable.section_diagrams ? byTable.section_diagrams.draft : (await readSection(sectionId)).section_diagrams;
-  const bad = unresolvedPins(nextContent, nextDiagrams);
-  if (bad.length) {
-    console.log(`  PINS        ${bad.length} diagram pin(s) resolve to nothing: ${bad.map((b) => JSON.stringify(b)).join(', ')}`);
-    console.log('              Those blocks would render no diagram. Fix the pin or author the diagram.');
-    if (CONFIRM) {
-      console.error(`  BLOCKED ${sectionId}: not published.\n`);
-      blocked++;
-      continue;
-    }
+  // Validate the section as it WOULD be after this publish: drafted tables where they exist,
+  // live copies of the rest. Packet 3 — the same validator the staging path ran, run again here,
+  // because a draft can sit for days while the other seven tables change underneath it.
+  const live = await readSection(sectionId);
+  const next = {
+    content: live.section_content, notes: live.section_notes, quiz: live.section_quiz, practice: live.section_practice,
+    flashcards: live.section_flashcards, diagrams: live.section_diagrams, extras: live.section_extras, mistakes: live.section_common_mistakes,
+  };
+  const keyOf = { section_content: 'content', section_notes: 'notes', section_quiz: 'quiz', section_practice: 'practice', section_flashcards: 'flashcards', section_diagrams: 'diagrams', section_extras: 'extras', section_common_mistakes: 'mistakes' };
+  for (const { table, draft } of tables) next[keyOf[table]] = draft;
+  const ctx = await contextFor(sectionId);
+  const { findings } = validateSection(next, ctx);
+  const baseline = loadBaseline();
+  const newBlocks = findings.filter((f) => f.tier === 'BLOCK' && !baseline.has(f.key));
+  const newDebt = findings.filter((f) => f.tier === 'DEBT' && !baseline.has(f.key));
+  for (const f of newBlocks) console.log(`  BLOCK       ${f.rule.padEnd(24)} ${f.detail}`);
+  if (newDebt.length) console.log(`  debt        ${newDebt.length} new DEBT finding(s) — allowed, ledgered`);
+  if (newBlocks.length) {
+    console.log(`  ${newBlocks.length} BLOCK finding(s) not in the baseline. Fix them; this publish would put them in front of students.`);
+    if (CONFIRM) { console.error(`  BLOCKED ${sectionId}: not published.\n`); blocked++; continue; }
   }
 
   if (!CONFIRM) { console.log(''); continue; }
@@ -121,6 +129,9 @@ for (const sectionId of targets) {
   console.log(`  backup      ${snap.path}`);
 
   const stamp = new Date().toISOString();
+  // This is the one sanctioned write of `data`. The client guard in _db.mjs refuses it everywhere
+  // else; here the section has just been validated, so the override is set for this loop only.
+  process.env.REVVY_ALLOW_RAW_WRITE = '1';
   for (const { table, draft } of tables) {
     const { error } = await supabase
       .from(table)
@@ -130,18 +141,19 @@ for (const sectionId of targets) {
       // Tables are written one at a time, so a failure here leaves the section half-published.
       // The snapshot above is the whole recovery path, so it is named again rather than assumed.
       console.error(`FAILED ${sectionId} ${table}: ${error.message}`);
-      console.error(`Restore with: node scripts/restore-section.mjs ${sectionId} --label ${snap.label}`);
+      console.error(`Restore with: node scripts/restore-section.mjs ${snap.path} --confirm`);
       process.exit(1);
     }
   }
+  delete process.env.REVVY_ALLOW_RAW_WRITE;
   published++;
-  console.log(`  published ${tables.length} table(s) · undo: node scripts/restore-section.mjs ${sectionId} --label ${snap.label}\n`);
+  console.log(`  published ${tables.length} table(s) · undo: node scripts/restore-section.mjs ${snap.path} --confirm\n`);
 }
 
 if (!CONFIRM) {
   console.log('dry run. Add --confirm to publish.');
   console.log('A backup is written automatically on publish; you do not need to snapshot by hand.');
 } else {
-  console.log(`${published} section(s) published${blocked ? `, ${blocked} BLOCKED on unresolved diagram pins` : ''}`);
+  console.log(`${published} section(s) published${blocked ? `, ${blocked} BLOCKED by the validator` : ''}`);
   if (blocked) process.exit(1);
 }

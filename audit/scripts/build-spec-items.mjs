@@ -70,6 +70,7 @@ function parse({ subject, prefix, file }) {
     const nextStop = stops.find((i) => i > line) ?? lines.length;
     const end = Math.min(nextTopic, nextStop);
     let sub = null;      // current sub-topic number
+    let subLabel = '';   // the left-column label of the current sub-topic, e.g. "The demand curve"
     let req = null;      // current lettered requirement row
     let bullet = null;   // current bullet row
     const letterColumn = { at: null }; // indent where the letter column starts, learned per topic
@@ -82,7 +83,7 @@ function parse({ subject, prefix, file }) {
 
       const b = BULLET.exec(raw);
       if (b && req) {
-        bullet = { id: `${req.id}-${req.bullets.length + 1}`, subject, topic, title, subtopic: req.subtopic, letter: req.letter, kind: 'leaf', parent: req.id, wording: b[1].trim(), lines: [i + 1, i + 1] };
+        bullet = { id: `${req.id}-${req.bullets.length + 1}`, subject, topic, title, subtopic: req.subtopic, subtopicLabel: req.subtopicLabel, letter: req.letter, kind: 'leaf', parent: req.id, wording: b[1].trim(), lines: [i + 1, i + 1] };
         req.bullets.push(bullet);
         items.push(bullet);
         continue;
@@ -92,17 +93,20 @@ function parse({ subject, prefix, file }) {
       if (lm) {
         const left = lm[1];
         const sm = SUBTOPIC.exec(left);
-        if (sm) sub = Number(sm[1]);
+        if (sm) { sub = Number(sm[1]); subLabel = sm[2].trim(); }
+        else if (left.trim() && !/\(continued\)/.test(left)) { subLabel = `${subLabel} ${left.trim()}`.replace(/\s+/g, ' ').trim(); }
         if (letterColumn.at == null) letterColumn.at = left.length;
         if (sub == null) sub = 0;
-        req = { id: `${prefix}-${topic}-${sub}${lm[2]}`, subject, topic, title, subtopic: sub, letter: lm[2], kind: 'requirement', wording: lm[3].trim(), lines: [i + 1, i + 1], bullets: [] };
+        req = { id: `${prefix}-${topic}-${sub}${lm[2]}`, subject, topic, title, subtopic: sub, subtopicLabel: subLabel, letter: lm[2], kind: 'requirement', wording: lm[3].trim(), lines: [i + 1, i + 1], bullets: [] };
         bullet = null;
         items.push(req);
         continue;
       }
 
       const sm = SUBTOPIC.exec(raw);
-      if (sm && raw.search(/\S/) < 6) { sub = Number(sm[1]); bullet = null; continue; } // a sub-topic label with no letter on the same line
+      if (sm && raw.search(/\S/) < 6) { sub = Number(sm[1]); subLabel = sm[2].trim(); bullet = null; continue; } // a sub-topic label with no letter on the same line
+      // A wrapped label line ("   decision making") extends the current label when no requirement text sits to its right.
+      if (letterColumn.at != null && raw.search(/\S/) < letterColumn.at - 2 && !raw.slice(letterColumn.at - 1).trim() && !/\(continued\)/.test(raw)) { subLabel = `${subLabel} ${raw.trim()}`.replace(/\s+/g, ' ').trim(); continue; }
 
       // Continuation prose. The left column may hold a wrapped sub-topic label on the same row as
       // the requirement's continuation ("   price mechanism          mechanism for allocating…"), so

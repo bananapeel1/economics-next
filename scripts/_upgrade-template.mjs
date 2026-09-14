@@ -14,7 +14,7 @@
  *   takeaway      — 3–4 bullet strings, each ≤ 100 chars
  */
 
-import { supabase } from './_db.mjs';
+import { stageSection, printFindings } from './_content-write.mjs';
 
 /* ── 1. SET THESE ──────────────────────────────────────────────────────────── */
 
@@ -95,110 +95,25 @@ const CONTENT = [
 ];
 
 /* ── 3. VALIDATION ──────────────────────────────────────────────────────────
-   Run automatically before pushing. Catches common writing-rule violations.
+   Done by lib/content-validator.mjs, inside the write path, via stageSection().
+   This file used to carry its own validate() — as did 21 copies of it, while 22
+   other section scripts had none (F110). There is one validator now and no
+   script can skip it: scripts/_db.mjs refuses a direct write of `data`.
    ─────────────────────────────────────────────────────────────────────────── */
-
-function validate(content) {
-  const errors = [];
-  const ids = new Set();
-
-  content.forEach((block, bi) => {
-    const bLabel = `Block ${bi + 1} "${block.title}"`;
-
-    if (!block.title) errors.push(`${bLabel}: missing title`);
-    if (!Array.isArray(block.sections) || block.sections.length === 0)
-      errors.push(`${bLabel}: sections[] must be a non-empty array`);
-    if (!Array.isArray(block.takeaway) || block.takeaway.length < 3)
-      errors.push(`${bLabel}: takeaway[] must have at least 3 items`);
-
-    block.takeaway?.forEach((t, ti) => {
-      if (t.length > 100) errors.push(`${bLabel} takeaway[${ti}]: ${t.length} chars (max 100)`);
-    });
-
-    block.sections?.forEach((sec, si) => {
-      const sLabel = `${bLabel} > Section ${si + 1} "${sec.title}"`;
-
-      if (!sec.id) errors.push(`${sLabel}: missing id`);
-      if (ids.has(sec.id)) errors.push(`${sLabel}: duplicate id "${sec.id}"`);
-      ids.add(sec.id);
-
-      if (!sec.title) errors.push(`${sLabel}: missing title`);
-
-      if (!sec.keyIdea) {
-        errors.push(`${sLabel}: missing keyIdea`);
-      } else {
-        if (sec.keyIdea.length > 180)
-          errors.push(`${sLabel}: keyIdea is ${sec.keyIdea.length} chars (max 180)`);
-        if (sec.keyIdea.includes('**'))
-          errors.push(`${sLabel}: keyIdea must not contain **bold** — it is rendered plain`);
-      }
-
-      if (!Array.isArray(sec.body) || sec.body.length === 0)
-        errors.push(`${sLabel}: body[] must be a non-empty array`);
-
-      sec.body?.forEach((b, bi2) => {
-        if (!b.type) errors.push(`${sLabel} body[${bi2}]: missing type`);
-        if (b.type === 'flow') {
-          if (!Array.isArray(b.steps) || b.steps.length < 2)
-            errors.push(`${sLabel} body[${bi2}]: flow needs at least 2 steps`);
-          if (b.steps?.length > 4)
-            errors.push(`${sLabel} body[${bi2}]: flow has ${b.steps.length} steps (max 4)`);
-          if (!['good', 'bad', 'neutral'].includes(b.resultType))
-            errors.push(`${sLabel} body[${bi2}]: flow resultType must be "good", "bad", or "neutral"`);
-        }
-      });
-
-      if (!sec.realExample?.text)
-        errors.push(`${sLabel}: missing realExample.text`);
-      if (!sec.misconception)
-        errors.push(`${sLabel}: missing misconception`);
-      if (!sec.examMatters)
-        errors.push(`${sLabel}: missing examMatters`);
-    });
-  });
-
-  return errors;
-}
 
 /* ── 4. PUSH ─────────────────────────────────────────────────────────────── */
 
 async function run() {
-  console.log(`\nValidating content for "${SECTION_SLUG}"...`);
-  const errors = validate(CONTENT);
-
-  if (errors.length > 0) {
-    console.error('\n❌ Validation failed — fix these before pushing:\n');
-    errors.forEach(e => console.error(`  • ${e}`));
+  console.log(`\nValidating and staging content for "${SECTION_SLUG}"...`);
+  const result = await stageSection(SECTION_SLUG, 'section_content', CONTENT);
+  printFindings(result.findings);
+  if (!result.ok) {
+    console.error(`\n❌ ${result.newBlocks.length} BLOCK finding(s) not in the baseline — nothing was written.`);
     process.exit(1);
   }
-  console.log(`✓ Validation passed — ${CONTENT.length} blocks, ${CONTENT.reduce((n, b) => n + b.sections.length, 0)} sections\n`);
-
-  // Find the section record (sections.id IS the slug)
-  const { data: section, error: secErr } = await supabase
-    .from('sections')
-    .select('id')
-    .eq('id', SECTION_SLUG)
-    .single();
-
-  if (secErr || !section) {
-    console.error(`❌ Section "${SECTION_SLUG}" not found in sections table`);
-    console.error(secErr?.message || '(no error detail)');
-    process.exit(1);
-  }
-
-  // Update section_content
-  const { error } = await supabase
-    .from('section_content')
-    .update({ data: CONTENT })
-    .eq('section_id', section.id);
-
-  if (error) {
-    console.error('❌ Supabase error:', error.message);
-    process.exit(1);
-  }
-
-  console.log(`✅ "${SECTION_SLUG}" updated successfully`);
-  console.log(`   ${CONTENT.length} blocks · ${CONTENT.reduce((n, b) => n + b.sections.length, 0)} sections · ${CONTENT.reduce((n, b) => n + b.takeaway.length, 0)} takeaway items`);
+  console.log(`\n✅ "${SECTION_SLUG}" staged as a draft (${CONTENT.length} blocks). Students still see the previous version.`);
+  console.log(`   Review:  node scripts/publish-section.mjs ${SECTION_SLUG}`);
+  console.log(`   Publish: node scripts/publish-section.mjs ${SECTION_SLUG} --confirm`);
 }
 
 run();

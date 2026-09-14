@@ -201,3 +201,37 @@ Append only. Every entry needs a date and the packet that made it.
   deliberately paid, the paywall is decorative and the answer keys leak with it. Raised low to high on packet 12.
   **One sub-decision remains for the founder** (see NEXT.md): closing the leak removes free access that students
   have today, so it is a product change, not only a fix.
+- **2026-09-14 (packet 3) — the content gate is "no regression against a committed baseline", not "zero findings".**
+  Live content fails the validator 2,239 times (886 BLOCK, 1,353 DEBT). A gate that refused all of it would be
+  switched off by Friday, which is what happened in March. `audit/validator-baseline.json` holds every finding
+  key live at the moment the validator landed; `npm run validate` fails only on keys not in it. The file only
+  shrinks: a section packet that clears its debt reruns `--baseline --confirm` and commits the smaller file.
+  Growing it by hand is the thing the gate exists to make visible; the rewrite prints exactly what it would add.
+- **2026-09-14 (packet 3) — a direct write of `data` on any content table is refused at the client.**
+  `scripts/_db.mjs` refuses `update`/`upsert`/`insert` carrying `data` on the eight `section_*` tables unless
+  `REVVY_ALLOW_RAW_WRITE=1` is set for that run. Eighty-four scripts wrote `data` directly; 22 of the 43
+  section-upgrade scripts had no validator at all (F110). Content now goes `stageSection()` → `draft` →
+  `publish-section.mjs` → `data`, validated at both ends. `restore-section.mjs` and `mint-item-ids.mjs` need
+  the override and should say why in the commit.
+- **2026-09-14 (packet 3) — tariffs are stated once, in `lib/ial-marking.js`, and tested against the spec.**
+  `lib/ial-commands.js` imports them rather than carrying a copy. Both are asserted equal to
+  `audit/raw/tariff-census.json`, which is parsed from Appendix 6 of each specification with a source line on
+  every row. Two copies that agree today is how the 12 September Unit 2 error happened.
+- **2026-09-14 (packet 3) — `audit/raw/spec-items.json` is the coverage oracle, and it does not reconcile to the
+  1,073 of `spec-coverage.json` on purpose.** 1,125 leaves, parsed from the spec text with a line range each.
+  Where the two counts disagree most they were read against the source: Economics 1.3.4 has 11 lettered
+  requirements and no bullets (this file 11, the earlier audit 17); Economics 2.3.1 requirement 3c has six
+  bullets (this file 6, the audit fewer). The disagreement is the earlier audit's granularity. Do not bend the
+  parser toward 1,073. Mechanical completeness holds (0 leaks, 0 missed, both subjects) and a deterministic
+  30-row sample was hand-read: 30 of 30 verbatim. Layer 3 coverage is measured against this file; it is a
+  lexical floor (mean 81%), not the reading audit's verdict (62%), and the content packets should treat the
+  gap between the two as their reading work.
+- **2026-09-14 (packet 3) — the reorder rules are lexical and their limit is written down.** Against the March
+  per-recall verdicts (64 genuine, 66 weak or not orderable) the three rules together flag 51 of the 66 and
+  27 of the 64; the criterion rule alone flags exactly the 17 underspecified prompts, fifteen of them "Put these
+  in the right order". The 15 bad recalls no rule catches are bad because of what the items mean. Content
+  packets read the March verdicts for those; do not tune the rules toward a semantic oracle.
+- **2026-09-14 (packet 3) — bracketed option letters in explanations are a content rule, not a code rule.**
+  Layer 1b in CONTENT-GATE.md. The shuffle declines 25 questions rather than guess; "Option A" instead of a bare
+  "(A)" makes fourteen of them shuffleable again, and the validator flags the form (`quiz.letter-in-explanation`).
+

@@ -9,7 +9,12 @@
     "contrast": "node audit/scripts/contrast-check.mjs",
     "quant-check": "node audit/scripts/quant-check.mjs",
     "pin-check": "node audit/scripts/pin-check.mjs --max-broken 15",
-    "diagrams": "node audit/scripts/diagram-pins.mjs"
+    "diagrams": "node audit/scripts/diagram-pins.mjs",
+    "validate": "node audit/scripts/validate-content.mjs",
+    "validate:baseline": "node audit/scripts/validate-content.mjs --baseline",
+    "test": "node --test lib/content-validator.test.mjs",
+    "spec-items": "node audit/scripts/build-spec-items.mjs --check",
+    "tariff-census": "node audit/scripts/build-tariff-census.mjs --check"
   },
   "dependencies": {
     "@ai-sdk/google": "^3.0.43",

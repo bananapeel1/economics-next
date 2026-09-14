@@ -57,7 +57,7 @@ All of these, in order, or the packet is not done:
 1. `npm run build` green.
 2. `node audit/scripts/ledger.mjs unverified <n>` exits 0 (every claimed id confirmed or marked wont-fix with a note).
 3. Verify B report attached to `NEXT.md` under the packet spec (a few lines is enough), when it applied.
-4. Validator green on all 43 sections (from packet 3 onward).
+4. `npm run validate` exits 0 — no BLOCK or DEBT finding outside `audit/validator-baseline.json` — and `npm test` passes (from packet 3 onward). A section packet that clears its debt reruns `node audit/scripts/validate-content.mjs --baseline --confirm` and commits the smaller baseline; the file only ever shrinks.
 5. `PROGRESS.md` row updated: status, commit, snapshot path, validator result.
 6. Commit with `packet-<n>:` at the start of the subject. Then `git push -u origin remediation/2026-09`.
 
@@ -119,5 +119,5 @@ with the founder first.
 
 ## Definition of done, restated
 
-Build green · every claimed ledger id confirmed · walkthrough clean where applicable · validator green (packet 3+)
+Build green · every claimed ledger id confirmed · walkthrough clean where applicable · `npm run validate` and `npm test` green (packet 3+)
 · PROGRESS row updated · committed with the packet id · pushed. Shipped at the next checkpoint.

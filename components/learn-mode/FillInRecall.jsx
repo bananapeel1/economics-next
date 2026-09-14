@@ -3,39 +3,51 @@ import { useState } from 'react';
 
 /* ── Drag-and-Drop Label Recall: drag words into blanks ── */
 export default function FillInRecall({ recall, onComplete , onSkip }) {
-  const [placed, setPlaced] = useState(() => recall.answers.map(() => null));
+  /*
+   * F106. Chips were tracked by their TEXT: `placed` held strings and the word bank hid any word
+   * already placed. A recall whose answers repeat — "utility", "utility", "diminishes" — therefore
+   * lost its second chip the moment the first was placed, the second blank could never be filled,
+   * and Check stayed disabled for good. Five live recalls do this. The validator now refuses new
+   * ones; this makes the existing five solvable today by tracking chips by index instead.
+   */
+  const [placed, setPlaced] = useState(() => recall.answers.map(() => null)); // chip index per blank
   const [checked, setChecked] = useState(false);
   const [results, setResults] = useState([]);
   const [showHint, setShowHint] = useState(false);
   const [dismissed, setDismissed] = useState(false);
-  const [dragWord, setDragWord] = useState(null);
-  const [shuffledWords] = useState(() => [...recall.answers].sort(() => Math.random() - 0.5));
+  const [dragChip, setDragChip] = useState(null);
+  // Deterministic order, so the server and client agree (F118) and the bank does not reshuffle mid-attempt.
+  const [chips] = useState(() => recall.answers.map((word, i) => ({ id: i, word })).sort((a, b) => {
+    const h = (x) => { let n = 0; for (const c of `${x.word}|${x.id}`) n = (n * 31 + c.charCodeAt(0)) >>> 0; return n; };
+    return h(a) - h(b);
+  }));
 
   if (dismissed) return null;
 
-  const availableWords = shuffledWords.filter(w => !placed.includes(w));
+  const availableChips = chips.filter((c) => !placed.includes(c.id));
+  const wordAt = (blankIdx) => (placed[blankIdx] == null ? null : chips.find((c) => c.id === placed[blankIdx])?.word ?? null);
 
-  function handleDragStartWord(e, word) {
+  function handleDragStartWord(e, chipId) {
     if (checked) return;
-    setDragWord(word);
+    setDragChip(chipId);
     e.dataTransfer.effectAllowed = 'move';
   }
 
   function handleDropOnBlank(e, blankIdx) {
     e.preventDefault();
-    if (!dragWord || checked) return;
+    if (dragChip == null || checked) return;
     const next = [...placed];
-    next[blankIdx] = dragWord;
+    next[blankIdx] = dragChip;
     setPlaced(next);
-    setDragWord(null);
+    setDragChip(null);
   }
 
-  function handleTapWord(word) {
+  function handleTapWord(chipId) {
     if (checked) return;
     const nextEmpty = placed.indexOf(null);
     if (nextEmpty >= 0) {
       const next = [...placed];
-      next[nextEmpty] = word;
+      next[nextEmpty] = chipId;
       setPlaced(next);
     }
   }
@@ -48,7 +60,7 @@ export default function FillInRecall({ recall, onComplete , onSkip }) {
   }
 
   function check() {
-    const res = placed.map((word, i) =>
+    const res = placed.map((chipId, i) => wordAt(i)).map((word, i) =>
       word && word.toLowerCase() === recall.answers[i].toLowerCase()
     );
     setResults(res);
@@ -73,7 +85,7 @@ export default function FillInRecall({ recall, onComplete , onSkip }) {
           if (blankIdx < 0) {
             return <div key={i} className="lm-fillin-step">{part}</div>;
           }
-          const word = placed[blankIdx];
+          const word = wordAt(blankIdx);
           const isCorrect = checked && results[blankIdx];
           const isWrong = checked && !results[blankIdx];
           const [before, after] = part.split('___');
@@ -112,21 +124,21 @@ export default function FillInRecall({ recall, onComplete , onSkip }) {
         })}
       </div>
 
-      {!checked && availableWords.length > 0 && (
+      {!checked && availableChips.length > 0 && (
         <div className="lm-word-bank" role="group" aria-label="Word bank. Choose a word, then choose a blank.">
-          {availableWords.map((word, i) => (
+          {availableChips.map((chip) => (
             <span
-              key={`${word}-${i}`}
+              key={chip.id}
               role="button"
               tabIndex={0}
-              aria-label={`Use the word ${word}`}
+              aria-label={`Use the word ${chip.word}`}
               className="lm-word-chip"
-              onClick={() => handleTapWord(word)}
+              onClick={() => handleTapWord(chip.id)}
               onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); handleTapWord(word); }
+                if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); handleTapWord(chip.id); }
               }}
             >
-              {word}
+              {chip.word}
             </span>
           ))}
         </div>

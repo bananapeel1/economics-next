@@ -1,4 +1,4 @@
-// The two checks scripts/publish-section.mjs runs before overwriting live content.
+// The change description scripts/publish-section.mjs prints before overwriting live content.
 //
 // Split out of that script so they can be tested on their own. publish-section.mjs does work the
 // moment it is imported, so anything left inside it can only be tested by running a publish, and a
@@ -37,29 +37,5 @@ export function describeChange(live, draft) {
   return lines;
 }
 
-/** Resolve the draft's diagram pins the way the app does. Returns the ones that reach nothing. */
-export function unresolvedPins(content, diagrams) {
-  if (!Array.isArray(content)) return [];
-  const list = Array.isArray(diagrams) ? diagrams : [];
-  const used = new Set();
-  const bad = [];
-  for (const block of content) {
-    const pin = block?.diagramId || block?.diagramRef;
-    if (!pin) continue;
-    let idx = -1;
-    if (block.diagramId) {
-      idx = list.findIndex((d, i) => d?.id === block.diagramId && !used.has(i));
-    } else {
-      const ref = norm(block.diagramRef);
-      idx = list.findIndex((d, i) => {
-        if (used.has(i)) return false;
-        const t = norm(d?.title);
-        return t && ref && (t.includes(ref) || ref.includes(t));
-      });
-    }
-    if (idx >= 0) used.add(idx);
-    else bad.push(pin);
-  }
-  return bad;
-}
-
+// Diagram pin resolution moved to lib/content-validator.mjs (unresolvedDiagramPins), which the
+// publish path now runs as part of the full validator.

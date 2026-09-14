@@ -125,6 +125,43 @@ end to end from here, read-only:
 Learn Mode state now follows a student between devices. **Do not re-run the file** — it is safely
 re-runnable (the policy is dropped and recreated), but there is no reason to.
 
+## Packet 3 spec — Validator v2 and golden set (built 14 September 2026)
+
+**What it must make true.** No content reaches `data` without `lib/content-validator.mjs` having run over the
+whole section; a push with a BLOCK finding outside the committed baseline is refused; the two reference assets
+are generated from the specification text and cited per row; every rule has a failing fixture; the gate is
+`npm run validate` and `npm test`, both green.
+
+**Acceptance script (Verify A).** Read-only. `npm test` 72/72. `npm run validate` exit 0. `npm run build` green.
+`node audit/scripts/build-tariff-census.mjs --check` and `build-spec-items.mjs --check` pass. In a node
+one-liner, `supabase.from('section_quiz').update({ data: [] })` from `scripts/_db.mjs` throws synchronously
+and `.update({ draft: [] })` returns a builder (do not execute it). A fill-in recall with duplicate answers
+(consumer-behaviour-demand, "utility" ×2) can be completed in the browser. Then the six claimed ids.
+
+**Verify B.** Only the FillInRecall change is student-facing: place both "utility" chips, confirm Check enables.
+*Done 14 September, main session, fresh tab, storage cleared:* consumer-behaviour-demand → Start learning → Just
+teach me → step 1 holds the recall with chips "diminishes", "utility", "utility" rendered as three buttons.
+Tapped utility → utility → diminishes: blanks filled utility / utility / diminishes, bank emptied, Check enabled,
+"✓ All correct!" with 3 correct blanks and 0 wrong. Console: only the signed-out 401. Under the previous renderer
+the second "utility" tap had no chip to find.
+
+**Known limits, stated so nobody is surprised.** Reorder rules are lexical (51 of 66 bad recalls caught, 15 are
+semantic). Layer 3 is a lexical floor (81% mean vs the reading audit's 62%). Twenty-five questions decline to
+shuffle over bare "(A)" letters until their explanations say "Option A". The baseline holds 2,239 keys and is
+the content stage's to-do list, section by section.
+
+## Handoff — what comes next
+
+Packet 3 is the last code packet before content. With it in place the order is 13 (off-spec strip, now
+measurable: `terms.off-spec` and `terms.later-unit` list every instance), 13.1-13.8 (drills), 13.9-13.12
+(exam practice, which hands the validator its `specItems` contract), then 14 (the template section on Fable).
+Every content session starts with `npm run validate --section <id>` and ends with the section's baseline
+smaller than it found it.
+
+Two things a content session must know: the baseline is per finding key, so rewriting an item retires its
+old keys and any new finding on the rewritten item is a real regression, not noise; and `spec.uncovered` for
+a section lists exactly which leaves it is expected to teach, with the spec line to read.
+
 ## Two corrections worth carrying forward
 
 - **Packet 2 is done except F052, F109 and F115.** Diagram blocks still pin by ref: 0 of 39 carry a

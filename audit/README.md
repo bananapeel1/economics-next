@@ -34,6 +34,12 @@ Headline: 75% of Learn Mode section opens never pass step 0 (825 of 1,093 starts
 | `scripts/build-ledger.mjs` | Rebuilds `ledger.json` from `raw/`; idempotent and preserves statuses. Only needed if `raw/` ever changes, which it should not |
 | `../.claude/agents/packet-verifier.md` | Read-only Sonnet agent that confirms or rejects each claimed ledger id with file:line evidence (Verify A) |
 | `../.claude/agents/student-walkthrough.md` | Sonnet agent that replays a 390px first-time-student script against the dev server (Verify B) |
+| `../lib/content-validator.mjs` | The content validator (packet 3): 48 rules tiered BLOCK/DEBT/INFO, pure, run inside the write path |
+| `../scripts/_content-write.mjs` | The one way content reaches the database: validate the whole section, write `draft`; `scripts/publish-section.mjs` re-validates and copies to `data` |
+| `scripts/validate-content.mjs` | `npm run validate`: every section against `validator-baseline.json`; `--baseline --confirm` rewrites it |
+| `validator-baseline.json` | Finding keys live when the validator landed. Only ever shrinks |
+| `fixtures/validator/cases.json` | Golden set: a failing case per rule, passing cases for the judgement rules; `npm test` |
+| `raw/tariff-census.json`, `raw/spec-items.json` | Layer 2 reference assets, generated from the spec text by `scripts/build-tariff-census.mjs` / `scripts/build-spec-items.mjs`, cited per row |
 
 The remediation branch lives in its own worktree: `/Users/arongijsel/Claude APP/economics-next-remediation`.
 The sibling `economics-next` folder is the marketing/SEO branch. Packet work never happens there.

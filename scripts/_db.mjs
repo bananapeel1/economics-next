@@ -43,4 +43,49 @@ if (!url || !key) {
   process.exit(1);
 }
 
-export const supabase = createClient(url, key);
+const client = createClient(url, key);
+
+const CONTENT_TABLES = new Set([
+  'section_content', 'section_notes', 'section_quiz', 'section_practice',
+  'section_flashcards', 'section_diagrams', 'section_extras', 'section_common_mistakes',
+]);
+
+/*
+ * Packet 3. Every content write goes through scripts/_content-write.mjs, which validates the whole
+ * section and writes to `draft`; scripts/publish-section.mjs validates again and copies draft to
+ * `data`. Eighty-four scripts in this folder used to write `data` directly, and F110 counted 22 of
+ * the 43 section-upgrade scripts with no validator at all. So a direct write of `data` on a content
+ * table is refused here, at the client, where no script can forget to opt in.
+ *
+ * Reads, and writes to `draft`, are untouched. Set REVVY_ALLOW_RAW_WRITE=1 to bypass for one run —
+ * the restore script and the id-minting script need it — and say why in the commit.
+ */
+function guarded(table, builder) {
+  if (!CONTENT_TABLES.has(table) || process.env.REVVY_ALLOW_RAW_WRITE === '1') return builder;
+  const refuse = (method) => (payload, ...rest) => {
+    const touchesData = payload && typeof payload === 'object' && (Array.isArray(payload) ? payload.some((r) => r && 'data' in r) : 'data' in payload);
+    if (touchesData) {
+      throw new Error(
+        `Refusing to ${method} \`data\` on ${table} directly. Stage it with stageSection() from scripts/_content-write.mjs ` +
+        `and publish with scripts/publish-section.mjs, which validate the section first. ` +
+        `(Set REVVY_ALLOW_RAW_WRITE=1 to override for one run, and say why.)`,
+      );
+    }
+    return builder[method](payload, ...rest);
+  };
+  return new Proxy(builder, {
+    get(target, prop) {
+      if (prop === 'update' || prop === 'upsert' || prop === 'insert') return refuse(prop);
+      const v = target[prop];
+      return typeof v === 'function' ? v.bind(target) : v;
+    },
+  });
+}
+
+export const supabase = new Proxy(client, {
+  get(target, prop) {
+    if (prop === 'from') return (table) => guarded(table, target.from(table));
+    const v = target[prop];
+    return typeof v === 'function' ? v.bind(target) : v;
+  },
+});
