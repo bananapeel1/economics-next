@@ -1,5 +1,6 @@
 'use client';
 import { motion, useReducedMotion } from 'framer-motion';
+import { parseInlineMarkdown } from '@/lib/parse-inline-markdown';
 
 /**
  * F099. The CSS reduced-motion rule collapses CSS animations and transitions, but these reveals
@@ -37,7 +38,23 @@ const makeResultVariants = (calm) => ({
   }),
 });
 
-export default function FlowChain({ steps, result, resultType }) {
+/**
+ * F073. A step was a string split on ' — ' (space, em dash, space) to find a subtitle, a convention
+ * no author was told about and that almost no content used; an en dash or a hyphen silently gave
+ * no subtitle. Steps may now also be `{ title, subtitle }` objects, which is the explicit form the
+ * content skill documents. Either form reaches the same renderer. Titles and subtitles go through
+ * the inline markdown parser so a flow step can carry **bold** and glossary terms like every other
+ * text field on the page; the bare string path could not.
+ */
+function stepParts(step) {
+  if (step && typeof step === 'object') {
+    return { title: String(step.title || ''), subtitle: step.subtitle ? String(step.subtitle) : null };
+  }
+  const parts = typeof step === 'string' ? step.split(/\s+[—–-]\s+/) : [String(step ?? '')];
+  return { title: parts[0], subtitle: parts.length > 1 ? parts.slice(1).join(' — ') : null };
+}
+
+export default function FlowChain({ steps, result, resultType, glossaryTerms }) {
   // Reads the same media query the CSS rule does, so JS-driven motion and CSS motion agree.
   const calm = useReducedMotion();
   const stepVariants = makeStepVariants(calm);
@@ -58,9 +75,7 @@ export default function FlowChain({ steps, result, resultType }) {
     <div className="rl-flow-chain">
       <div className="rl-flow-timeline">
         {steps.map((step, i) => {
-          const parts = typeof step === 'string' ? step.split(' — ') : [step];
-          const title = parts[0];
-          const subtitle = parts[1] || null;
+          const { title, subtitle } = stepParts(step);
 
           return (
             <div key={i}>
@@ -76,8 +91,10 @@ export default function FlowChain({ steps, result, resultType }) {
                   <span>{String(i + 1).padStart(2, '0')}</span>
                 </div>
                 <div className="rl-flow-tl-card">
-                  <div className="rl-flow-tl-title">{title}</div>
-                  {subtitle && <div className="rl-flow-tl-subtitle">{subtitle}</div>}
+                  <div className="rl-flow-tl-title" dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(title, glossaryTerms) }} />
+                  {subtitle && (
+                    <div className="rl-flow-tl-subtitle" dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(subtitle, glossaryTerms) }} />
+                  )}
                 </div>
               </motion.div>
               {(i < steps.length - 1 || result) && (
