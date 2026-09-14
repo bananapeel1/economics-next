@@ -138,15 +138,29 @@ export default function AnimatedTabBar({ tabs, activeTab, setActiveTab, isPremiu
     window.addEventListener('resize', update);
     return () => { bar.removeEventListener('scroll', update); window.removeEventListener('resize', update); };
   }, [tabs.length]);
+  // Keep the active tab visible in the strip — HORIZONTALLY, and once per tab change. The first
+  // version called scrollIntoView on every render (its `tabs` dependency is a fresh array each render,
+  // and the page re-renders on every scroll frame for the reading-progress bar), and scrollIntoView
+  // also scrolls ancestors vertically: with the sticky header hidden mid-scroll it pulled `.tab-content`
+  // back up by the header's height on every wheel tick. The founder felt it as scrolling that "forces
+  // you back up". Only the strip's own scrollLeft moves now, and nothing can move the page.
+  const lastScrolledTab = useRef(null);
   useEffect(() => {
     const bar = barRef.current;
-    if (!bar) return;
+    if (!bar || lastScrolledTab.current === activeTab) return;
+    lastScrolledTab.current = activeTab;
     const idx = tabs.findIndex((t) => t.id === activeTab);
     const el = idx >= 0 ? bar.querySelectorAll('[role="tab"]')[idx] : null;
-    if (el && typeof el.scrollIntoView === 'function') {
-      try { el.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' }); } catch { el.scrollIntoView(); }
-    }
-  }, [activeTab, tabs]);
+    if (!el) return;
+    const b = bar.getBoundingClientRect();
+    const r = el.getBoundingClientRect();
+    const padStart = 14;
+    const padEnd = parseFloat(getComputedStyle(bar).scrollPaddingInlineEnd) || 14; // clears the ⋯ chevron on phones
+    let delta = 0;
+    if (r.right > b.right - padEnd) delta = r.right - (b.right - padEnd);
+    else if (r.left < b.left + padStart) delta = r.left - (b.left + padStart);
+    if (delta) { try { bar.scrollBy({ left: delta, behavior: 'smooth' }); } catch { bar.scrollLeft += delta; } }
+  }, [activeTab, tabs.length]);
 
   // F103: arrow keys move between tabs, which is what a tablist is expected to do. Home and End
   // jump to the ends. The focused tab is activated, matching how the mouse behaves here.

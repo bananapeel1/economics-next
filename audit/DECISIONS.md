@@ -352,6 +352,12 @@ Append only. Every entry needs a date and the packet that made it.
   the 12px phone rule; a three-part modal selector outranking the 200vw sheet rule; a keyboard-hint hide rule
   declared before the base rule that showed it. The appended "Packet 5" phone block is where phone rules live,
   and a rule that must beat an earlier selector uses the same selector so it wins by order, not by guesswork.
+- **2026-09-14 (packet 5, post-gate) — never call `scrollIntoView` from a render-driven effect.** It scrolls every
+  scrollable ancestor, not just the strip it was meant for, and an effect keyed on an array rebuilt each render
+  runs on every render — which, in this app, is every scroll frame. The founder felt it as scrolling that forces
+  you back up; three verifier rounds and a walkthrough did not, because they scrolled by script, once. A strip
+  keeps its active item visible by moving its own `scrollLeft`, once per change; and the walkthrough script now
+  says to scroll with real input while the page is re-rendering.
 - **2026-09-14 (packet 13, after Verify A round 1) — a vocabulary swap is read afterwards, sentence by sentence,
   or it is not done.** The verifier diffed all 43 snapshots against live and found eight damaged sentences the
   substitutions had produced: a tautology ("welfare loss or welfare loss", from a source that said the words the

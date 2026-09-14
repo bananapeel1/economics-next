@@ -149,6 +149,18 @@ The verifier's measurement caveat is worth keeping: with the Browser pane hidden
 run and rect-based numbers read 0.92×; read computed styles, or front the tab. **Ship at the checkpoint** once
 the funnel baseline has two weeks behind it (~26 September), as a PR the founder merges.
 
+**Post-gate, 14 September, found by the founder on localhost: scrolling "forces you back up".** The tab strip's
+keep-the-active-tab-visible effect (packet 5, F096) called `scrollIntoView` — which scrolls ancestors
+vertically — on EVERY render, because its `tabs` dependency is a fresh array each render and the app re-renders
+on every scroll frame for the reading-progress bar. With the sticky header hidden mid-scroll it pulled
+`.tab-content` back up by the header's height on each wheel tick. Reproduced by script at 390px: 24 scroll
+steps produced 70 scroll events and a 72px jump back after the last. Fixed in `AnimatedTabBar.jsx`: the strip
+moves only its own `scrollLeft`, once per tab change, with the chevron clearance read from
+`scroll-padding-inline-end`. After: 24 events, no drops, final = max; tapping the half-hidden Practice tab
+still slides it to 238-326, clear of the chevron at 326. No verifier round: measured only. A lesson for the
+verifier brief: **scroll the page with real input while the app is re-rendering**; the round-1/2/3 walkthroughs
+scrolled with `scrollTo` once and never saw it.
+
 ## Packet 13 spec — the off-spec strip and dedupe (built 14 September 2026; Verify A rounds 1 and 2 each rejected D010 and D011; pass 3 STAGED as drafts 14 September, publish pending; round 3 after publish)
 
 **What it had to make true.** No framework the IAL specification does not contain is taught or assessed anywhere in
