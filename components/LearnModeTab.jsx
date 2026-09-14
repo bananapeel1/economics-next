@@ -56,11 +56,11 @@ function PracticeWithheld() {
  */
 function Recall({ recall, keyPrefix, showing = 'first', pool, onComplete, onSkip }) {
   if (!recall || typeof recall !== 'object') return null;
-  const props = { key: keyPrefix, recall, showing, onComplete, onSkip };
-  if (recall.type === 'reorder') return <ReorderRecall {...props} />;
-  if (recall.type === 'fillin') return <FillInRecall {...props} pool={pool} />;
-  if (recall.type === 'match') return <MatchRecall {...props} />;
-  if (recall.type === 'classify') return <ClassifyRecall {...props} />;
+  const props = { recall, showing, onComplete, onSkip };
+  if (recall.type === 'reorder') return <ReorderRecall key={keyPrefix} {...props} />;
+  if (recall.type === 'fillin') return <FillInRecall key={keyPrefix} {...props} pool={pool} />;
+  if (recall.type === 'match') return <MatchRecall key={keyPrefix} {...props} />;
+  if (recall.type === 'classify') return <ClassifyRecall key={keyPrefix} {...props} />;
   return null;
 }
 

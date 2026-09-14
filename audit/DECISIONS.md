@@ -407,3 +407,47 @@ Append only. Every entry needs a date and the packet that made it.
   over marketing copy, not a substitution, and it belongs with cross-surface consistency (packet 57). Minted as
   D014 with the file list so it cannot be forgotten.
 
+- **2026-09-14 (packet 7) — a recall is one of four types, and the contract is the widget, the validator
+  and the exemplar together.** `reorder`, `fillin`, `match`, `classify`, written out in CONTENT-GATE.md
+  ("The recall contract"), graded in `lib/recall-widgets.js`, enforced by `lib/content-validator.mjs`, and
+  rendered from `lib/recall-fixtures.js` at `/admin/widgets` and `/dev/widgets`. Match and classify exist
+  because 66 of the 131 live reorders are rankings, pairings or parallel facts (March verdicts), and no
+  rewording makes a ranking orderable. The two gallery exemplars are two of those 66, converted; they are
+  the template for the rest. Content packets author into this contract, and the 18 not-orderable and 48
+  weak reorders are converted one section at a time (F057, F107 → packet 57, which closes them by census).
+- **2026-09-14 (packet 7) — `shuffled` is not content.** The start order of every widget is a Fisher-Yates
+  permutation seeded by the recall id and the showing: never the identity, never with the first item
+  already in place, and the spaced showing never the first showing's order. Random-at-mount was rejected
+  because section content is server-rendered on first load (F118 was a hydration mismatch). The stored
+  field is ignored by the renderer and the validator; the three rules about it (`reorder.permutation`,
+  `reorder.identity`, `reorder.shuffle-reuse`) are retired, and a section packet deletes the field when it
+  touches a reorder. `fillin.one-per-line` is retired too: the renderer draws every segment of a line, so a
+  line with two blanks is a legitimate exercise, not a truncation. `fillin.token` refuses commas only —
+  "rises, rises" is two answers in one blank; "next best alternative" is one chip.
+- **2026-09-14 (packet 7) — the validator baseline grew, once, by rule.** 2,187 → 2,455 keys: +137
+  `fillin.distractors`, +127 `recall.why`, +30 `fillin.leak`; −11 `fillin.one-per-line`, −11 `fillin.token`,
+  −4 `reorder.shuffle-reuse`. The rule that the file only shrinks holds for content work; a packet that adds
+  a rule adds that rule's live debt to the baseline in the same commit and records the delta here, so the
+  growth is visible and attributable. No BLOCK was added: the new BLOCK rules (`schema.recall-type`,
+  `match.*`, `classify.*`) fire on nothing live.
+- **2026-09-14 (packet 7) — one score, unlimited tries.** A widget reports to the engine once, on its first
+  check; Try again locks what was right and frees what was wrong; the answer, with the `why` lines, is on
+  request after the first wrong check and automatic after the second. Retry is for consolidation; if it fed
+  the score, every recall would be 100% and the completion screen would mean nothing (the F054 inflation by
+  another route).
+- **2026-09-14 (packet 7) — skipping has a consequence a student can see, and no server column.** Skip is
+  a text button; a skip counts in the recall total and separately as skipped ("3/8 · 2 skipped" on the
+  completion screen), and the skipped recall is preferred as the spaced recall at the next chapter check-in.
+  Skipped ids persist in the section's local state only: `learn_mode_state` has no column for them, the
+  route whitelists its fields, and adding a column is founder SQL. A review-mode consumer for recalls does
+  not exist (ReviewMode renders MCQs), so the F055 fix's "feed skipped ids into the 1/3/7/14-day scheduler"
+  is not done; the in-session return is the consequence that exists.
+- **2026-09-14 (packet 7) — `InteractiveDiagram` and `RecallCheckpoint` are deleted, not mounted.** The
+  12 September note above says packet 7 "mounts `InteractiveDiagram` and `DiagramLabelDrill`"; the plan and
+  F061 say delete the two dead components and wire the drill. InteractiveDiagram was hover-only (fourteen
+  mouse handlers, nothing for touch) on a mobile-heavy cohort, and RecallCheckpoint was the "recall at the
+  top of the next step" pattern packet 5 removed on purpose. The drill is wired behind a "Label this diagram"
+  button that appears only when the SVG carries three or more `text.draggable` labels. Measured: 0 of 74 live
+  diagrams and 0 of 18 in `public/diagrams/` do, and the drill's old fallback (every `<text>` that was not
+  a number) would have produced 6-40 "labels" per diagram, so the fallback is gone. The button appears
+  nowhere until packets 13.5-13.7 author labels; the gallery proves it works on a fixture.
