@@ -438,7 +438,7 @@ still slides it to 238-326, clear of the chevron at 326. No verifier round: meas
 verifier brief: **scroll the page with real input while the app is re-rendering**; the round-1/2/3 walkthroughs
 scrolled with `scrollTo` once and never saw it.
 
-## Packet 13 spec — the off-spec strip and dedupe (built 14 September 2026; Verify A rounds 1, 2 and 3 each rejected D010 and D011; passes 3, 3b, 3c and 4 published to live content 14 September; round 4 running)
+## Packet 13 spec — the off-spec strip and dedupe (built and VERIFIED 14 September 2026; Verify A passed on round 4 — D010 and D011 confirmed, `unverified 13` clear; all content published to live)
 
 **What it had to make true.** No framework the IAL specification does not contain is taught or assessed anywhere in
 live content. No section teaches a specification bullet another section owns. Nothing this packet removed is still
@@ -556,6 +556,24 @@ government-intervention's nudge subsection, which is an intervention method unde
 behavioural bullet at 1.3.2.1b; and government-intervention-firms' monopoly welfare-loss flashcard, same unit
 and paper as the owner. Gate after publish: 7 tables staged and published across four sections, MUST_NOT_SURVIVE
 0 survivors, census exit 0, validate exit 0, tests and build exit 0, baseline a single clean re-key (+1 −1).
+
+**Verify A, round 4 (14 September, commit 539e60f): D010 and D011 CONFIRMED; `unverified 13` clear — the gate
+passed.** The verifier read every string of both role-state entries, swept all 43 live sections for any
+remaining definition of the class by information failure (15 candidate hits, none of them a definition),
+re-checked classes (a), (c) and (d) for regression, and diffed the four pass-4 sections against their
+pre-publish snapshots string by string: 12 added, 11 removed, every one named by the plan and no collateral
+edit. For D011 it checked all six "Done" rows of the ownership map against body text in every non-owner
+section, and agreed with all four of the references pass 4 deliberately kept.
+
+**Two nits it handed back, neither a rejection, both for the `introductory-concepts` content packet:**
+- `market-failure` `practice[4]` guidance, example 2, attributes under-consumption of "goods with external
+  benefits such as education" to underestimating the private benefit with no mention of the externality. It is
+  correct for its own stem, which asks for two examples of information failure, but the sentence would read
+  better without the class name in it.
+- `introductory-concepts` flashcards 6, 7 and 8 now overlap with the rewritten card 9. Pass 4 rewrote 9 in
+  place rather than deleting it, because ids are stable and progress rows point at them; the redundancy is the
+  price of keeping a student's review history, and the section's own content packet should resolve it when it
+  rewrites that deck.
 
 **Round-3 replay.** `node audit/scripts/packet-13-census.mjs` exit 0 with DWL at 0. Snapshot-vs-live
 diff over the five sections: every changed string named by a pass-3 rule. Read role-state-macroeconomy
