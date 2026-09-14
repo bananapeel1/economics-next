@@ -368,6 +368,23 @@ Append only. Every entry needs a date and the packet that made it.
   heading in aggregate-demand — which is true, and is the deferred merge. D011 was narrowed to what was done
   (six of seven rows) and the seventh minted as D013 on packet 37, because "done except one, on a document that
   says so" is not "done".
+- **2026-09-14 (packet 13, after Verify A round 2) — "removed from a section" means its body text too, and a
+  census that reads titles cannot say it.** The ownership map called monopoly "Done" for market-failure after the
+  block went; a paragraph, an exam tip, two real examples, a list item and a recall line still taught it, and
+  the title-only census reported "nowhere". The row now states the limit and the pass-3 rules clear the text.
+  A "Done" in that table is a claim about every string in the section, checked by reading, not by the census.
+- **2026-09-14 (packet 13, after Verify A round 2) — a relabelled diagram is re-placed, not re-worded.** "Welfare
+  loss" is five times wider than "DWL" and the triangles it names are 30-40 viewBox units across, so a word-for-
+  word swap would have written the label across the curves. Each of the six is placed from the diagram's own
+  geometry (curves, dashed lines, neighbouring labels), just outside its triangle, with a leader where the gap
+  is wide; the tariff and quota triangles keep their letters ("Loss (b)") because the key under the axis
+  already says "Net welfare loss = b+d". The census bans the abbreviation so it cannot come back.
+- **2026-09-14 (packet 13, after Verify A round 2) — the over-reach class is cleared by rewriting the definition,
+  not the word.** Round 1 fixed one sentence that widened "goods with external benefits" past its truth; round 2
+  found the whole role-state-macroeconomy subsection still DEFINING the class by information failure. Under
+  1.3.5.2c-d the class is under-consumed because the buyer ignores the benefit to third parties; imperfect
+  information (1.3.5.4b) is a separate source that can widen the gap. Every sentence in that subsection and its
+  notes says the first and, where it mentions information, says it is the second.
 - **2026-09-14 (packet 13) — the public revision pages still teach what the app removed, and that is packet 57's.**
   The verifier counted 45 mentions of merit goods, deadweight loss, the accelerator and monopoly-as-market-failure
   across eight files under `app/economics/`, the tutor prompt and the model-answer data — surfaces the census

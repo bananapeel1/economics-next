@@ -32,6 +32,8 @@ const BANNED = [
     why: '"merit" appears 0 times in the IAL Economics specification; it says external benefits and costs of consumption (1.3.5.2c) and information gaps (1.3.5.4b)' },
   { re: /\bdeadweight\b/i, label: 'deadweight', owner: null,
     why: 'the specification says "welfare loss or gain areas" (1.3.5.2d) and "a net welfare loss" (1.3.6.2a), never deadweight' },
+  { re: /\bDWL\b/, label: 'DWL (the abbreviation, in diagram labels)', owner: null,
+    why: 'six SVG labels still read DWL after the word was gone; the round-2 verifier saw them and the deadweight check could not' },
   { re: /\bVRIO\b/, label: 'VRIO', owner: null, why: '0 occurrences in the IAL Business specification' },
   { re: /\bcore competenc(y|ies|e)\b/i, label: 'core competencies', owner: null, why: '0 occurrences in the IAL Business specification' },
   { re: /\bdistinctive capabilit/i, label: 'distinctive capabilities', owner: null, why: '0 occurrences in the IAL Business specification' },

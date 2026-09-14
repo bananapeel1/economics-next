@@ -65,7 +65,7 @@ const args = process.argv.slice(2);
 const STAGE = args.includes('--stage');
 const ONLY = (() => { const i = args.indexOf('--section'); return i >= 0 ? args[i + 1] : null; })();
 const WHICH = (() => { const i = args.indexOf('--plan'); return i >= 0 ? args[i + 1] : 'strip'; })();
-const PLAN_FILES = { strip: './_packet13-plan.mjs', residual: './_packet13-residual-plan.mjs', dedupe: './_packet13-dedupe-plan.mjs', polish: './_packet13-polish-plan.mjs' };
+const PLAN_FILES = { strip: './_packet13-plan.mjs', residual: './_packet13-residual-plan.mjs', dedupe: './_packet13-dedupe-plan.mjs', polish: './_packet13-polish-plan.mjs', pass3: './_packet13-pass3-plan.mjs' };
 if (!PLAN_FILES[WHICH]) { console.error(`--plan must be one of ${Object.keys(PLAN_FILES).join(', ')}`); process.exit(1); }
 const planModule = await import(PLAN_FILES[WHICH]);
 const { PLAN } = planModule;

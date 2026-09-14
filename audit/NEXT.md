@@ -135,7 +135,7 @@ computed `touch-action` is `manipulation`, no label carries an inline `font-size
 bounding boxes overlap no more than the authored diagram (0 on this one). Census: `node -e` over every live
 `section_diagrams` row — `font-size` minimum 7, viewBox width 500, so 7 × 858 / 500 = 12.0px.
 
-## Packet 13 spec — the off-spec strip and dedupe (built 14 September 2026; Verify A round 1 rejected D010 and D011, fixed the same day; round 2 pending)
+## Packet 13 spec — the off-spec strip and dedupe (built 14 September 2026; Verify A rounds 1 and 2 each rejected D010 and D011; pass 3 STAGED as drafts 14 September, publish pending; round 3 after publish)
 
 **What it had to make true.** No framework the IAL specification does not contain is taught or assessed anywhere in
 live content. No section teaches a specification bullet another section owns. Nothing this packet removed is still
@@ -169,6 +169,52 @@ must be SMALLER than at packet 3: 2,489 -> 2,187 keys, BLOCK 1,131 -> 902, `term
   consistency) with the file list; some of those mentions are correct explanations of the IAL vocabulary, so it
   is a reading pass, not a substitution.
 - Two 390px nits on the rewritten fill-in (words breaking inside chips) are fixed in the stylesheet.
+
+**Verify A, round 2 (14 September, commit a91265f): D010 and D011 rejected again, both correctly.** Round 1's eight
+sentences were closed; the same read found the same classes still live. Pass 3 (`scripts/_packet13-pass3-plan.mjs`,
+`--plan pass3`) answers each, one rule per sentence, and is **staged as drafts but NOT published**: the publish
+step was refused by this session's permission classifier as a production deploy. To publish, from the worktree:
+`node scripts/publish-section.mjs government-intervention --confirm` and the same for `market-failure`,
+`role-state-macroeconomy`, `market-structures-contestability`, `trade-global-economy` (each prints its dry-run
+diff without `--confirm`; a backup is taken automatically). Then `node audit/scripts/packet-13-census.mjs` (DWL
+is banned now), `npm run validate`, `node audit/scripts/validate-content.mjs --baseline --confirm` if it reports
+re-keyed debt, claim D010 D011 and launch round 3.
+- **D010, class 1 — swap artefacts:** "access to public and goods with external benefits" (government-intervention
+  takeaway), "the argument for goods with external benefits and external costs" (market-failure note), "goods with
+  external benefits or goods with positive externalities" (government-intervention note), and "Marks follow you
+  for" ×4 (the rule swapped "Examiners reward" and left "you for"). Each rewritten by hand.
+- **D010, class 2 — the over-reach:** role-state-macroeconomy's whole subsection "External Benefits and
+  Redistribution" (key idea, first paragraph, flow step, exam tip, real example, two takeaways) and its notes
+  entry (key idea, both definitions, the regulation line, takeaway, exam tip) DEFINED goods with external benefits
+  by information failure, and market-failure's chain "Information failure leads to misallocation" did the same.
+  Every sentence now says the 1.3.5.2c-d thing — the buyer ignores the benefit to third parties — and, where it
+  mentions information, says it is a separate source (1.3.5.4b) that widens the gap.
+- **D010, class 3 — six SVG labels reading "DWL"** (government-intervention max and min price, monopoly
+  equilibrium, tariff, quota, tax incidence). The census's `\bdeadweight\b` could not see the abbreviation; it
+  bans `\bDWL\b` now. Each label is re-placed by hand from the diagram's geometry (`scripts/_p13-geom.mjs`:
+  curves, dashed lines, neighbouring text), because "Welfare loss" is five times wider than "DWL" and the
+  triangles are 30-40 units across: "Welfare loss" just outside its triangle in the clear space the curves leave
+  (max price, min price, monopoly), "Loss (b)" / "Loss (d)" under the dashed quantity lines with leaders on the
+  tariff and quota diagrams (whose key already reads "Net welfare loss = b+d"), and "Welfare loss" below the
+  demand curve with a leader on tax incidence. `scripts/_p13-draft-svgs.mjs <out.html>` renders the six DRAFT
+  diagrams to one page for the eye; the verifier should look at them at 390px after publish.
+- **D011 — monopoly taught below heading level in market-failure:** the "Diagrams for Welfare Loss" paragraph,
+  its exam tip ("monopoly diagrams"), its real example (Harberger) and recall line ("Monopoly: output restricted
+  below ___ level"), the "Measuring Welfare Loss" sentence listing "a monopolist restricting output", the
+  "Allocative Inefficiency" real example (Shkreli), and a quiz distractor. Each replaced with the Unit 1 case
+  the specification does put there: an intervention that overshoots (1.3.6.2a, government failure as a net
+  welfare loss) and the uncorrected externality (Stern Review; the World Bank/IHME air-pollution estimate).
+  `SPEC-OWNERSHIP.md`'s monopoly row now says what "Done" means: body text too. Its multiplier manifest gains
+  the notes entry the verifier spotted (`aggregate-demand` `notes[3]`).
+- The verifier's D014 note (the public `app/economics/market-failure/page.js` FAQ contradicts itself on the
+  same vocabulary) is added to D014's ledger note for packet 57.
+
+**Round-3 replay (after publish).** `node audit/scripts/packet-13-census.mjs` exit 0 with DWL at 0. Snapshot-vs-live
+diff over the five sections: every changed string named by a pass-3 rule. Read role-state-macroeconomy
+"External Benefits and Redistribution" end to end: no sentence defines the class by information failure. Read
+market-failure block 5 end to end: no monopoly teaching; the recall's third line is the tax-above-external-cost
+case. Diagrams tab at 390px for the six relabelled diagrams: the label reads "Welfare loss" or "Loss (b)/(d)",
+sits clear of curves and other labels, and the leader (where there is one) ends at its triangle.
 
 **Verify B.** *Done 14 September, main session, fresh tab, storage cleared.* market-failure Learn Mode is 5 blocks
 (was 7), with no "Merit Goods & Demerit Goods" and no "Market Power as Market Failure"; the block that was "Welfare
