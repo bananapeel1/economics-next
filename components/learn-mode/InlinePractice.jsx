@@ -7,11 +7,14 @@ import { MARK_COLORS } from './utils';
 function checklistFrom(guidance) {
   const text = String(guidance || '');
   if (!text.trim()) return [];
-  const parts = text.split(/(?<=\(\s*\d+\s*marks?\s*\))/i).map((p) => p.trim()).filter(Boolean);
+  // Split after each "(n marks)"; drop the punctuation that trails the last one, and the punctuation
+  // that leads the next (". Explain Y" -> "Explain Y"). The first version left a checkbox labelled "."
+  // on 164 of the 215 live practice items. Caught by the packet 5 verifier.
+  const parts = text.split(/(?<=\(\s*\d+\s*marks?\s*\))/i).map((p) => p.replace(/^[\s.;:,–—-]+/, '').trim()).filter(Boolean);
   return parts.map((p) => {
     const m = /\((\s*\d+)\s*marks?\s*\)\s*$/i.exec(p);
-    return { text: p.replace(/\s*\(\s*\d+\s*marks?\s*\)\s*$/i, '').trim(), marks: m ? Number(m[1]) : null };
-  }).filter((c) => c.text);
+    return { text: p.replace(/\s*\(\s*\d+\s*marks?\s*\)\s*$/i, '').replace(/[\s.;:,]+$/, '').trim(), marks: m ? Number(m[1]) : null };
+  }).filter((c) => /[a-z0-9]/i.test(c.text));
 }
 
 /* F117: the question text carries "(N marks)" and the badge says it again. Strip it at render. */

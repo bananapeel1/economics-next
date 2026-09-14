@@ -1,6 +1,6 @@
 # Next session brief
 
-## Packet 5 spec — Step 0 (built and Verify-B'd 14 September 2026, Fable 5.1; Verify A pending)
+## Packet 5 spec — Step 0 (built and Verify-B'd 14 September 2026, Fable 5.1; Verify A round 1 rejected seven, fixed the same day; round 2 pending)
 
 The churn packet. 75% of Learn Mode section opens never pass step 0. Packet 0 already made the pre-test opt-in;
 this packet rebuilds the step itself so that what the student meets on step 0 is one subsection, readable on a
@@ -75,6 +75,44 @@ questions shows "10 q" in the sidebar and the depth note in the header. Reorder 
 
 **Shipping.** Build and verify now; SHIP at the next checkpoint once the funnel baseline (clean since 12 Sep) has
 two weeks behind it, per PLAN — otherwise the packet 58 re-measure cannot attribute the change.
+
+**Verify A, round 1 (14 September, commit 8288315): 25 of 32 confirmed; F012 F016 F032 F048 F062 F088 F101 rejected,
+all correctly, all fixed the same day.** What the verifier found, and what changed:
+- **F012** — the draft was wiped on every mount: the write effect ran with the empty first-render value before
+  the read had landed, and removed the stored key. Now the draft is only ever written after the student has
+  typed (a `dirty` ref set in `onChange`); the read effect resets it. Reload → Continue → reopen: the draft is
+  in the box; step away and back (remount): still there.
+- **F016** — the checklist split left the punctuation after the last "(n marks)" as its own item: a "." checkbox
+  on 164 of 215 live practice items. Leading and trailing punctuation are stripped and rows with no letters
+  are dropped. Census over all 215 items: 1,032 rows, 0 punctuation-only, 0 empty checklists.
+- **F032** — the sidebar's "Content Explorer" still opened the orphaned `content` tab. It is "Full notes" and
+  opens Notes.
+- **F048** — `learnModeSection` was a `useClientValue` that re-read the LOCAL step alone on every section change,
+  overriding the max-of-server-and-local the handlers had just chosen: a signed-in student with server progress
+  and no local key landed on step 1 with no banner. It is a plain `useState` now with one writer,
+  `readSavedStep`, called from the entry effect and every navigation handler; the F027 reconcile still applies a
+  later-arriving server step. (Signed-out check only: local key 4 on `supply` → sidebar → Learn: "step 5 of 11".
+  The signed-in half is by code reading; the verifier should exercise it if a test account is to hand.)
+- **F062 / F088** — the sheet's SVG was 0.9× the viewport: the clone carried `style="width:100%"` from
+  `processSvg`, and then a three-part selector at :5962 (`width:100%; max-width:90vw`) outranked the 200vw
+  phone rule. The clone drops the inline size, a same-specificity phone rule sets 200vw, and — found while
+  fixing it — the sheet's centred flex column had let the pane shrink-wrap to the 2× diagram and sit half
+  off-screen with overflow hidden, so the left of every diagram was unreachable. The pane is now the viewport's
+  width and scrolls. Measured: 780px sheet vs 313px inline (2.49×), scrollable from "Free Market" to "Command".
+  The font floor was 1/28 of the viewBox (17.9 units on a 500 box) and raised 1,419 of 1,420 labels, colliding
+  on dense diagrams; it is 1/36 (13.9 units), lifting only labels under 14 units by at most 1.4×.
+- **F101** — the lens labels (11px, two-class selector outranking the phone rule), spaced cue, "draft saved",
+  "Your answer", sidebar depth chip (10.5px) and header depth (11px) are all 12px; so are the flow-diagram
+  numerals and "RESULT" (8px) and the `kbd` glyphs, and the arrow-key hint — meaningless on a phone, and its
+  hide rule at :1492 lost to the base rule declared after it — is hidden in the phone block. The ⋯ tab-bar
+  chevron and the sheet's close button are 44px. Measured on steps 1, 3, 6 and 14 at 390px: no visible text
+  under 12px in the Learn container.
+
+**Round-2 replay additions (390×844, storage cleared, signed out).** Step 3 → Explain it back → type → reload →
+Start learning → Continue → reopen: the draft is there. Step 6 → type 15+ chars → Mark my answer: four rows,
+none "." and none starting with punctuation. Step 14 → tap the diagram: the sheet's SVG is ~2× the viewport
+and scrolls to both edges; close is 44×44. Sidebar → Full notes: Notes tab. Set
+`revvy_learnmode_1_supply_section` = 4 → sidebar Supply → Learn: "step 5 of 11".
 
 ## Packet 13 spec — the off-spec strip and dedupe (built 14 September 2026; Verify A round 1 rejected D010 and D011, fixed the same day; round 2 pending)
 

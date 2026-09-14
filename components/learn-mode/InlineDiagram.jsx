@@ -23,6 +23,14 @@ function DiagramModal({ svgRef, imageUrl, title, onClose }) {
       const svgEl = svgRef.current.querySelector('svg');
       if (svgEl) {
         const clone = svgEl.cloneNode(true);
+        // processSvg gave the inline copy `style="width:100%"`, and an inline style beats the sheet's
+        // `width: 200vw`, so the "enlarged" diagram measured 0.9x the viewport. The clone is sized by
+        // the stylesheet alone. Caught by the packet 5 verifier.
+        clone.style.removeProperty('width');
+        clone.style.removeProperty('height');
+        clone.style.removeProperty('max-width');
+        clone.removeAttribute('width');
+        clone.removeAttribute('height');
         modalContentRef.current.innerHTML = '';
         modalContentRef.current.appendChild(clone);
       }

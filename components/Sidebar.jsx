@@ -211,10 +211,11 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
           Written Practice
           <span className="new-badge">New</span>
         </Link>
+        {/* F032: this opened a 'content' tab with no entry in the tab bar. The notes are the readable whole. */}
         {onTabSelect && (
-          <button className="sidebar-resource-link sidebar-content-link" onClick={() => onTabSelect('content')}>
+          <button className="sidebar-resource-link sidebar-content-link" onClick={() => onTabSelect('notes')}>
             <span className="sidebar-resource-icon"><BookAlt size={16} /></span>
-            Content Explorer
+            Full notes
           </button>
         )}
         <Link href="/model-answers" className="sidebar-resource-link">

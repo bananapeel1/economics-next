@@ -400,15 +400,12 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   const [pendingTutorPrompt, setPendingTutorPrompt] = useState(null);
 
   // Learn Mode step. F118: the server renders step 0 and the stored step arrives on the second
-  // render. The server-progress reconcile below then overrides it when the server is further on.
-  const [learnModeSection, setLearnModeSection] = useClientValue(
-    () => {
-      const saved = localStorage.getItem(`revvy_learnmode_${activeSubjectId}_${activeSection}_section`);
-      return saved ? (parseInt(saved, 10) || 0) : 0;
-    },
-    0,
-    [activeSubjectId, activeSection],
-  );
+  // render, from the effect below. F048, the half the verifier caught: this used to be a
+  // `useClientValue` that re-read the LOCAL pointer alone on every section change and set it, which
+  // overrode the max-of-server-and-local that `navigateToSection` had just chosen — a signed-in
+  // student with server progress and no local key landed on step 1 with no banner. One path sets
+  // it now: `readSavedStep`, from the entry effect below and from the navigation handlers.
+  const [learnModeSection, setLearnModeSection] = useState(0);
   const [learnModeResuming, setLearnModeResuming] = useState(false);
 
   // F083: which sections are below the Unit 1 template, so the sidebar and header can say so.
@@ -544,7 +541,9 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
    */
   useEffect(() => {
     if (!hydrated || !activeSection) return;
-    if (readSavedStep(activeSubjectId, activeSection) > 0) setLearnModeResuming(true);
+    const step = readSavedStep(activeSubjectId, activeSection);
+    setLearnModeSection(step);
+    if (step > 0) setLearnModeResuming(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hydrated, activeSection, activeSubjectId]);
 

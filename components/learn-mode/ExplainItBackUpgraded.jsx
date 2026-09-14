@@ -1,6 +1,5 @@
 "use client";
-import { useState, useEffect } from 'react';
-import { useClientValue } from '@/lib/use-client-storage';
+import { useState, useEffect, useRef } from 'react';
 
 /**
  * Explain It Back, with a real close-the-loop for everyone.
@@ -21,8 +20,19 @@ import { useClientValue } from '@/lib/use-client-storage';
 export default function ExplainItBackUpgraded({ title, onAskTutor, isPremium, onAttempt, rubric, sectionId, blockIndex }) {
   const draftKey = sectionId != null && blockIndex != null ? `revvy_explain_${sectionId}_${blockIndex}` : null;
   const [expanded, setExpanded] = useState(false);
-  // F118: a stored draft is read after hydration, never during the first render.
-  const [text, setText] = useClientValue(() => (draftKey ? localStorage.getItem(draftKey) || '' : ''), '', [draftKey]);
+  // F118: a stored draft is read after hydration, never during the first render. And it is only
+  // ever WRITTEN after the student has typed: the first version persisted on every change of `text`,
+  // including the empty fallback the first render starts from, so the stored draft was removed
+  // before the read that would have restored it had run. Caught by the packet 5 verifier.
+  const [text, setText] = useState('');
+  const dirty = useRef(false);
+  useEffect(() => {
+    if (!draftKey) return;
+    let stored = '';
+    try { stored = localStorage.getItem(draftKey) || ''; } catch { /* blocked storage */ }
+    dirty.current = false;
+    setText(stored);
+  }, [draftKey]);
   const [grading, setGrading] = useState(false);
   const [feedback, setFeedback] = useState(null); // { grade, feedback, strengths, gaps }
   const [error, setError] = useState('');
@@ -32,7 +42,7 @@ export default function ExplainItBackUpgraded({ title, onAskTutor, isPremium, on
   const [counted, setCounted] = useState(false);
 
   useEffect(() => {
-    if (!draftKey) return;
+    if (!draftKey || !dirty.current) return;
     try { if (text) localStorage.setItem(draftKey, text); else localStorage.removeItem(draftKey); } catch { /* storage blocked */ }
   }, [text, draftKey]);
 
@@ -95,7 +105,7 @@ export default function ExplainItBackUpgraded({ title, onAskTutor, isPremium, on
             className="lm-explain-textarea"
             placeholder="In my own words, this chapter is about..."
             value={text}
-            onChange={(e) => setText(e.target.value)}
+            onChange={(e) => { dirty.current = true; setText(e.target.value); }}
             rows={4}
           />
 

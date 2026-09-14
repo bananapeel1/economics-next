@@ -922,7 +922,7 @@ body {
   width: 32px; height: 32px; border-radius: 8px;
   background: var(--bg-card); border: 1px solid var(--border-primary);
   display: flex; align-items: center; justify-content: center;
-  font-size: 11px; font-weight: 700; color: var(--rl-green);
+  font-size: 12px; font-weight: 700; color: var(--rl-green);
   flex-shrink: 0;
 }
 .rl-flow-tl-arrow-row {
@@ -959,7 +959,7 @@ body {
   flex: 1; padding: 8px 14px; border-radius: 8px;
 }
 .rl-flow-result-label {
-  font-size: 8px; font-weight: 700; text-transform: uppercase;
+  font-size: 12px; font-weight: 700; text-transform: uppercase;
   letter-spacing: 0.07em; margin-bottom: 1px;
 }
 .rl-flow-result-text {
@@ -1055,7 +1055,7 @@ body {
   .rl-key-idea, .rl-real-example, .rl-misconception, .rl-exam-matters { padding: 10px 12px; }
   .rl-note-section-title { font-size: 15px; }
   .rl-flow-chain { padding: 14px 10px; }
-  .rl-flow-tl-node { width: 28px; height: 28px; font-size: 10px; border-radius: 6px; }
+  .rl-flow-tl-node { width: 28px; height: 28px; font-size: 12px; border-radius: 6px; }
   .rl-flow-tl-card { padding: 8px 12px; }
   .rl-flow-tl-title { font-size: 12.5px; }
   .rl-flow-tl-arrow-row { padding-left: 9px; }
@@ -2293,7 +2293,7 @@ button.sidebar-resource-link {
   display: inline-flex; align-items: center; justify-content: center;
   min-width: 24px; padding: 2px 6px;
   background: var(--bg-input); border: 1px solid var(--border-primary);
-  border-radius: 4px; font-size: 11px;
+  border-radius: 4px; font-size: 12px;
   font-family: 'DM Mono', monospace; color: var(--text-secondary);
 }
 @keyframes lmHintFade { 0%, 80% { opacity: 1; } 100% { opacity: 0; } }
@@ -5966,6 +5966,17 @@ a.auth-dropdown-item:visited {
   max-height: 85vh;
   display: block;
 }
+/* F062/F088: on a phone the sheet's job is to be BIGGER than the inline diagram. The rule above
+   (three-part selector) outranked the 200vw phone rule, so the sheet was 300px at 390px: the
+   verifier's second catch after the cloned inline style. Same selector, so it wins by order. */
+@media (max-width: 768px) {
+  /* The sheet is a centred flex column, so the pane shrink-wrapped to the 2x diagram and sat half
+     off-screen with the sheet's overflow hidden: the left of every diagram unreachable. The pane
+     is the viewport's width and scrolls; the diagram inside it is the wide thing. */
+  .lm-diagram-modal .lm-diagram-modal-pane { width: 100%; max-width: 100%; align-self: stretch; overflow: auto; }
+  .lm-diagram-modal .lm-diagram-modal-svg { display: block; width: max-content; }
+  .lm-diagram-modal .lm-diagram-modal-svg svg { width: 200vw; max-width: none; max-height: none; }
+}
 
 /* Image inside modal */
 .lm-diagram-modal img {
@@ -7326,7 +7337,7 @@ a.auth-dropdown-item:visited {
 .rl-key-idea {
   border-left-width: 4px; padding: 16px 18px; margin-bottom: 18px;
 }
-.rl-key-idea-label { font-size: 11px; }
+.rl-key-idea-label { font-size: 12px; }
 .rl-key-idea p { font-size: 16px; line-height: 1.55; font-weight: 500; color: var(--text-primary); }
 .rl-lenses { display: grid; gap: 10px; margin-top: 6px; }
 .rl-lenses .rl-real-example, .rl-lenses .rl-misconception, .rl-lenses .rl-exam-matters {
@@ -7337,14 +7348,14 @@ a.auth-dropdown-item:visited {
 .rl-lenses .rl-misconception { border-left-color: var(--rl-red); }
 .rl-lenses .rl-exam-matters { border-left-color: var(--rl-blue); }
 .rl-lenses .rl-real-example-label, .rl-lenses .rl-misconception-label, .rl-lenses .rl-exam-matters-label {
-  font-size: 11px; margin-bottom: 3px;
+  font-size: 12px; margin-bottom: 3px;
 }
 .rl-lenses p { font-size: 14px; line-height: 1.6; color: var(--text-secondary); }
 .lm-step-body .rl-takeaway {
   border: 1.5px solid var(--accent-green); background: var(--green-light-6);
   box-shadow: 0 0 0 4px var(--green-light-6);
 }
-.lm-step-body .rl-takeaway-label { color: var(--accent-green); font-size: 11px; }
+.lm-step-body .rl-takeaway-label { color: var(--accent-green); font-size: 12px; }
 
 /* Recall slots: a subsection's own recall sits below its teaching; a spaced one carries its cue. */
 .lm-recall-own { margin-top: 8px; }
@@ -7354,7 +7365,7 @@ a.auth-dropdown-item:visited {
   margin: 26px 0 0; padding-left: 2px;
 }
 .lm-spaced-cue-label {
-  font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
   color: var(--accent-purple, #8b5cf6);
 }
 .lm-spaced-cue-title { font-size: 13px; color: var(--text-tertiary); }
@@ -7365,7 +7376,7 @@ a.auth-dropdown-item:visited {
 .lm-nav-placeholder { width: 0; }
 
 /* Explain it back: the path everyone has (F012) */
-.lm-explain-toggle-draft { margin-left: auto; font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.lm-explain-toggle-draft { margin-left: auto; font-size: 12px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
 .lm-explain-compare-btn {
   display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; padding: 9px 16px;
   background: var(--accent-green); color: #fff; border: none; border-radius: 20px;
@@ -7380,7 +7391,7 @@ a.auth-dropdown-item:visited {
 
 /* Inline practice: the answer box and the self-mark checklist (F016, F117) */
 .lm-practice-write { margin-top: 12px; }
-.lm-practice-write-label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; }
+.lm-practice-write-label { display: block; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; }
 .lm-practice-textarea {
   width: 100%; min-height: 96px; padding: 12px 14px; font-size: 16px; font-family: inherit; line-height: 1.6;
   color: var(--text-primary); background: var(--bg-input); border: 1.5px solid var(--border-primary);
@@ -7406,8 +7417,8 @@ a.auth-dropdown-item:visited {
 .tab-bar-wrap { position: relative; }
 .tab-bar-more {
   display: none; position: absolute; right: 0; top: 50%; transform: translateY(-50%);
-  width: 36px; height: 36px; border-radius: 18px; border: 1px solid var(--border-primary);
-  background: var(--bg-card); color: var(--text-secondary); font-size: 22px; line-height: 1;
+  width: 44px; height: 44px; border-radius: 22px; border: 1px solid var(--border-primary);
+  background: var(--bg-card); color: var(--text-secondary); font-size: 24px; line-height: 1;
   align-items: center; justify-content: center; cursor: pointer; z-index: 2;
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
@@ -7416,18 +7427,18 @@ a.auth-dropdown-item:visited {
 .lm-diagram-modal { flex-direction: column; background: var(--bg-card); border-radius: 12px; padding: 0; overflow: hidden; }
 .lm-diagram-modal-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 12px 10px 16px; border-bottom: 1px solid var(--border-primary); }
 .lm-diagram-modal-title { font-size: 14px; font-weight: 600; color: var(--text-primary); }
-.lm-diagram-modal-close { position: static; box-shadow: none; background: var(--bg-input); }
+.lm-diagram-modal-close { position: static; box-shadow: none; background: var(--bg-input); width: 44px; height: 44px; }
 .lm-diagram-modal-pane { overflow: auto; padding: 16px; max-height: calc(85vh - 90px); }
 .lm-diagram-modal-pane svg, .lm-diagram-modal-pane img { width: min(80vw, 900px); max-width: none; height: auto; display: block; }
 .lm-diagram-modal-hint { display: none; font-size: 12px; color: var(--text-muted); text-align: center; padding: 8px; border-top: 1px solid var(--border-primary); }
 
 /* Depth signal (F083) */
 .sidebar-section-depth {
-  flex-shrink: 0; font-size: 10.5px; font-weight: 700; color: var(--accent-amber-light, #f59e0b);
+  flex-shrink: 0; font-size: 12px; font-weight: 700; color: var(--accent-amber-light, #f59e0b);
   background: rgba(245,158,11,0.12); padding: 1px 6px; border-radius: 8px; letter-spacing: 0.02em;
 }
 .content-header-depth {
-  font-size: 11px; font-weight: 600; color: var(--accent-amber-light, #f59e0b);
+  font-size: 12px; font-weight: 600; color: var(--accent-amber-light, #f59e0b);
   background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.28);
   padding: 2px 8px; border-radius: 10px; white-space: nowrap;
 }
@@ -7443,7 +7454,10 @@ a.auth-dropdown-item:visited {
   .rl-key-idea p { font-size: 16px; }
   .rl-lenses p, .lm-recall-item-text, .lm-fillin-step, .lm-word-chip, .lm-fillin-blank, .lm-recall-prompt { font-size: 15px; }
   .rl-key-idea-label, .rl-real-example-label, .rl-misconception-label, .rl-exam-matters-label,
-  .rl-takeaway-label, .lm-recall-label, .lm-card-label, .lm-eyebrow { font-size: 12px; }
+  .rl-lenses .rl-real-example-label, .rl-lenses .rl-misconception-label, .rl-lenses .rl-exam-matters-label,
+  .rl-takeaway-label, .lm-recall-label, .lm-card-label, .lm-eyebrow, .lm-eyebrow-part,
+  .lm-spaced-cue-label, .lm-practice-write-label, .lm-explain-toggle-draft, .lm-diagram-enlarge-hint,
+  .lm-recall-item-num, .lm-practice-check-marks, .lm-nav-counter { font-size: 12px; }
   .lm-section-title { font-size: 22px; }
 
   /* Diagrams fill the card; the 270px cap was the 5px-label complaint (F088). */
@@ -7468,6 +7482,9 @@ a.auth-dropdown-item:visited {
   .tab-bar-more { display: flex; }
 
   /* The exit is always in view: a sticky bar with Back · step · Next (F093, F065). */
+  /* F101: the arrow-key hint is meaningless on a phone, and the rule that hid it at :1492 lost to the
+     base rule declared after it. Hidden here, where the phone block wins. */
+  .lm-keyboard-hint { display: none; }
   .lm-container .lm-nav {
     position: sticky; bottom: 0; z-index: 30;
     flex-wrap: nowrap; align-items: center; gap: 10px;

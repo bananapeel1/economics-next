@@ -323,6 +323,27 @@ Append only. Every entry needs a date and the packet that made it.
 - **2026-09-14 (packet 5) — 44px, not 36.** F091 asked for 36×36 on the reorder arrows and 40×40 on dismiss and
   more; the sticky bar, arrows, dismiss and more are 44px, the platform minimum, and rows are 44px tall. Chips
   and blanks are 40px, as the finding asked, because 44px chips wrap a word bank onto a third line at 390px.
+- **2026-09-14 (packet 5, after Verify A round 1) — a persisted draft is written only after the student has
+  typed.** The explain-it-back draft was read in an effect (F118: never during render) and written in another
+  effect on every change of the text — including the empty value the first render starts from, which removed
+  the stored draft before the read that would have restored it had run. The pattern for any localStorage-backed
+  input from here: a `dirty` ref set in `onChange`, the write effect a no-op until it is set, the read effect
+  clearing it. StrictMode's double-mount made this visible in dev; production would have raced.
+- **2026-09-14 (packet 5, after Verify A round 1) — a minimum is a floor, not a relayout.** The diagram label
+  floor at 1/28 of the viewBox width raised 1,419 of the 1,420 labels across the 74 live SVGs (median 1.8×) and
+  made dense diagrams collide. The verifier's census, not the fix's own check, showed it. The floor is 1/36:
+  14 units on a 500 box, the finding's own figure, lifting only what is below it and by at most 1.4×. Small
+  labels become readable in the 2× sheet, which is what the sheet is for.
+- **2026-09-14 (packet 5, after Verify A round 1) — the Learn step pointer has one writer.** A `useClientValue`
+  that re-read the local step on every section change silently overrode the max-of-server-and-local every
+  navigation handler had just computed. `readSavedStep` is the only source now, from the entry effect and the
+  handlers; a later-arriving server step is applied by the F027 reconcile. Two writers for one pointer is the
+  bug class, whichever one happens to run last.
+- **2026-09-14 (packet 5, after Verify A round 1) — a phone rule goes in the phone block, with the selector it
+  has to beat.** Three of the seven rejections were specificity: an 11px two-class lens-label rule outranking
+  the 12px phone rule; a three-part modal selector outranking the 200vw sheet rule; a keyboard-hint hide rule
+  declared before the base rule that showed it. The appended "Packet 5" phone block is where phone rules live,
+  and a rule that must beat an earlier selector uses the same selector so it wins by order, not by guesswork.
 - **2026-09-14 (packet 13, after Verify A round 1) — a vocabulary swap is read afterwards, sentence by sentence,
   or it is not done.** The verifier diffed all 43 snapshots against live and found eight damaged sentences the
   substitutions had produced: a tautology ("welfare loss or welfare loss", from a source that said the words the

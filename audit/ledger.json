@@ -203,8 +203,8 @@
    "packet": 5,
    "status": "claimed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "Compare/self-check/onAttempt are done (components/learn-mode/ExplainItBackUpgraded.jsx:129-155 reveal the chapter keyIdeas with checkboxes and countAttempt on compare; observed signed out on step 14: 40 chars typed -> 'Compare with the key ideas' -> 1 key idea with a checkbox, tick -> 'All of them'). The draft clause fails: the write effect at :101-104 runs on mount with text='' (the useClientValue fallback) and calls localStorage.removeItem(draftKey) before the read at :90 has landed, so the stored draft is deleted on every mount. Reproduced twice at 390x844 on the dev server: draft 'Free markets allocate via price signals.' was in revvy_explain_introductory-concepts_4 before reload; after reload -> Continue -> reopen, textarea '' and the key null. Planted 'PLANTED DRAFT for chapter 5', stepped Back then Next (component remounts): key null, textarea ''. The acceptance script's 'reload and reopen -> the draft text is still there' does not hold. (In a non-StrictMode build the second render re-writes the value, so this is an effect-ordering bug that dev exposes and prod merely races.) The locked CTA links to /upgrade; with the draft wiped on remount, 'preserves the typed text' is not met either.",
    "note": null
   },
   {
@@ -271,8 +271,8 @@
    "packet": 5,
    "status": "claimed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "Answer box in all three modes (components/learn-mode/InlinePractice.jsx:99-133 answerBox rendered in worked :150, guided :167, independent :173), 'Mark my answer' disabled below 15 chars and enabled at 15 (measured 14 -> disabled, 15 -> enabled), practice counted on completion (LearnModeTab.jsx:129-130, CompletionScreen.jsx:145-147), locked Pro control for free students (InlinePractice.jsx:84-92: '🔒 Full model answer, marked to the IAL grid — Pro' -> /upgrade, observed signed out on steps 6 and 9), textarea 16px. REJECTED for the checklist split at :23-31: the lookbehind split leaves the punctuation after the last '(n marks)' as its own item, so a bare '.' tick-box with no marks appears; observed on step 9 (P1, 6 x '(1 mark)' -> 7 checkboxes, the 7th is '.') and items begin with '— ' and '. '. Census over the 215 live practice items with the same function: 164 produce a punctuation-only checkbox and 165 produce punctuation-led items. A '.' checkbox on three quarters of practice cards is a visible regression introduced by the fix; filter items with no word characters and trim leading punctuation.",
    "note": null
   },
   {
@@ -439,10 +439,10 @@
    "fix": "Route all section navigation through handleSectionChange (pass it to HomeScreen and use it in handleSubjectChange); preserve the current tab on section change when it is a free content tab (notes/diagrams/practice), defaulting to Learn only from the overview hero; clamp currentStep to totalSteps-1 inside LearnModeTab as a guard.",
    "impact": "(a) A student reading Diagrams across five topics is bounced to Learn on each sidebar click and, for any topic they have not started, is met by a 3-question pre-test before seeing anything. (b) From Home, 'Continue Learning' or 'Practice <weak topic>' can open a section showing 'Step 9 of 5', a 180% progress bar, an empty body and a 'Complete topic' button. (c) Switching subject in the sidebar drops the student into the first section of the other subject at whatever step they were on before.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": "packet-verifier 2026-09-11",
-   "evidence": "components/StudyApp.jsx:633,648 handleSubjectChange/handleSectionChange still call setActiveTab('learn-mode') unconditionally; only the stale-step carry-over (readSavedStep) was fixed, so browsing Diagrams/Practice across sections still bounces to Learn Mode and the PreTest gate on unstarted sections",
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "components/StudyApp.jsx:558-575 navigateToSection keeps activeTab unless it is 'home' (-> 'overview'), replaceState()s the URL and reads the NEW section's step; :843 handleSectionChange and :872 HomeScreen route through it; :828 handleSubjectChange no longer forces 'learn-mode'. Clamp: lib/learn-steps.js:149-152 clampStep, applied in LearnModeTab.jsx:110-113 (safeStep, written back via onStepChange). Browser 390x844: Diagrams tab -> sidebar Supply: tab still Diagrams, URL /economics/unit-1/supply, header updated; Home -> Continue Learning lands on Learn step 1 of 14. Note for F048: the max(db,local) read this handler does is then overridden by the useClientValue re-read at :404-411 for signed-in students (see F048).",
    "note": "2026-09-12 setup: moved from packet 1 to packet 5 (tab forcing on section change and overview step count are step/navigation work per PLAN.md packet 5)"
   },
   {
@@ -507,10 +507,10 @@
    "fix": "Compute the flat step count once (shared util from learn-mode/utils) and use it in both places; or drop the count and show estimated minutes.",
    "impact": "On business financial-planning the launchpad promises '5 steps'; clicking Start shows 'Step 1 of 8'. The student's first data point about how long a topic takes is wrong by 60%.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "components/StudyApp.jsx:59-60 contentSteps = countSteps(sectionData?.content), the same lib/learn-steps.js:73-75 function LearnModeTab counts from (:106). Browser: overview card '14 steps', Learn Mode 'Step 1 of 14' on introductory-concepts (9 subsections + 5 chapters).",
    "note": "2026-09-12 setup: moved from packet 1 to packet 5 (tab forcing on section change and overview step count are step/navigation work per PLAN.md packet 5)"
   },
   {
@@ -543,8 +543,8 @@
    "packet": 5,
    "status": "claimed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "The Learn Mode more-menu (LearnModeTab.jsx:485-487 -> 'notes') and the overview card (StudyApp.jsx:125-131 -> 'notes') were retired, but components/Sidebar.jsx:214-218 still renders a 'Content Explorer' button that calls onTabSelect('content'), and StudyApp.jsx:30 keeps 'content' in FREE_TABS with :913 still rendering ContentTab. Reproduced at 390x844: hamburger -> Content Explorer -> the content stepper renders ('1 The Nature of Economics') with aria-selected=true on no tab (anyTabSelected=false). The defect in the title is still reachable from the sidebar of every section.",
    "note": null
   },
   {
@@ -609,10 +609,10 @@
    "fix": "Compute prevRecall only from a previous-step section that was NOT already used as that step's immediate recall (e.g. if prevStep.sections.length === 1, prevRecall = null), or switch to: immediate = every section's recall on its own step, spaced = a recall from >= 2 steps back.",
    "impact": "Student completes a reorder, clicks Next, and the first thing on the new step is the exact same reorder in the exact same shuffled order. Feels like a bug, trains them to dismiss recalls, and inflates the recall score on the completion screen.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "lib/learn-steps.js:93-107 pickSpacedRecall only considers teach steps with blockIndex < the check-in's blockIndex and skips ids in the used set; a teach step never carries a spaced recall (LearnModeTab.jsx:523-539 renders only the subsection's own recall). Walk of all 14 introductory-concepts steps: max one .lm-recall-card per step, and no recall prompt/chips repeated on two consecutive steps; lib/learn-steps.test.mjs 'never adjacent' and the 43-section walk pass (npm test 105/105).",
    "note": null
   },
   {
@@ -626,10 +626,10 @@
    "fix": "Render every section's recall on the step that teaches it (after the section or at step end), and use the top-of-step slot for a genuinely older recall (2+ steps back or from the review schedule).",
    "impact": "Half the authored recall exercises appear before the student has seen any heading on the new step, and the last block's second recall is silently lost. No true spacing happens.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "Every subsection's recall renders on the step that teaches it, below the teaching (LearnModeTab.jsx:534-538 lm-recall-own); 9 of 9 introductory-concepts recalls seen once each on their own teach step, in content order. The older-recall slot is the check-in's spaced recall from a previous chapter (learn-steps.js:93-107), gap >= 2 steps asserted by the tests; observed picks: step 6 <- chapter 1 sub 1, step 9 <- chapter 1 sub 2, step 12 <- chapter 2 sub 1, step 14 <- chapter 2 sub 2.",
    "note": null
   },
   {
@@ -643,10 +643,10 @@
    "fix": "Either move the spaced recall below the new content, or wrap it in a card header like 'Recall from step 1: Positive and normative statements' using prevStepData.sections[last].title, and show the step's headings first.",
    "impact": "Student lands on 'Step 2 of 5' and is immediately asked to fill blanks about positive/normative statements with no heading telling them what step 2 is about. This is the single biggest source of the 'disjointed' feeling.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "LearnModeTab.jsx:573-583 renders the spaced recall inside the check-in body after the diagram, quiz and practice, wrapped in .lm-spaced-cue 'Recall from chapter N' + the source subsection title (fromBlockIndex/fromTitle from learn-steps.js:104). Walk: on none of the 14 steps does a .lm-recall-card precede the h2 (precedesH2=false for all 14 recalls); cues observed 'Recall from chapter 1 · Economics as a Social Science' (step 6), '... chapter 1 · Positive and Normative Economics' (9), '... chapter 2 · The Basic Economic Problem' (12), '... chapter 2 · Opportunity Cost' (14).",
    "note": null
   },
   {
@@ -660,10 +660,10 @@
    "fix": "Render a block eyebrow on every structured step (e.g. `<div className=\"lm-block-title\">{step.blockTitle} · part {n} of {m}</div>` above the first h2) and use isFirstInBlock to style chapter starts.",
    "impact": "In measures-economic-performance step 2 the student sees only h2 'GDP per capita' and is then asked to 'Explain it back: Gross Domestic Product (GDP)' — a title they have never seen. No sense of which chapter they are in or how many steps it spans.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "LearnModeTab.jsx:525-531 renders .lm-eyebrow on every teach step ('Chapter N of M · <block title> · part i of n', part omitted when partCount is 1) and :556-560 on every check-in, above the single h2; isFirstInBlock/isLastInBlock exposed by learn-steps.js:48-49. Measured on all 14 steps, e.g. 'Chapter 1 of 5 · The Nature of Economics · part 1 of 2', 'Chapter 5 of 5 · Economic Systems'.",
    "note": null
   },
   {
@@ -762,10 +762,10 @@
    "fix": "Use a ref for isTransitioning, include showPretest/isComplete in the guard, and ignore keydown when document.activeElement is inside .lm-recall-card/.lm-quiz-card or a modal.",
    "impact": "Desktop students can skip past the pretest or lose an in-progress quiz/recall by pressing an arrow key; step counter can desync from what is on screen.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "LearnModeTab.jsx:276-296: navRef/keyState refs replace the stale closure (listener registered once with [] deps); the handler returns when showPretest or isComplete, and when document.activeElement is an input/textarea/contentEditable or inside .lm-recall-card/.lm-quiz-card/.lm-practice-card/.lm-explain-section/.lm-diagram-modal/[role=dialog]. Browser 390x844: with focus on a reorder arrow inside .lm-recall-card, ArrowRight left the counter at 'Step 13 of 14'; with focus on body it advanced to 'Step 14 of 14'. Fresh cleared session: Start learning -> Test yourself first -> two ArrowRight events: still on 'Quick pre-test' question 1, no learnmode step key written.",
    "note": null
   },
   {
@@ -779,10 +779,10 @@
    "fix": "Apply step-exit/step-enter classes around onStepChange, or drop the 350ms delay and use the enter animation only; render a real multi-node rail (or block-level dots) with onClick for visited steps.",
    "impact": "Every Next is a brief freeze followed by an abrupt jump to a page whose top is a recall widget; Back gives no acknowledgement. The rail looks clickable but does nothing and conveys no position.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "The 350ms timer is gone: LearnModeTab.jsx:243-256 navigateToStep calls onStepChange immediately; the step body is keyed per step (:521 key={step.key}) with .lm-step-body.step-enter -> lmStepEnter 0.35s (globals.css:7297), measured animationName lmStepEnter 0.35s. Chapter dots: LearnModeTab.jsx:463-479 one button per chapter, disabled until reached (furthestRef :232-234), onClick -> firstStepOfBlock; observed disabled=[false,true,true,true,true] on step 1 and all reached by step 14. The old single rail node is aria-hidden and hidden on phones. Global prefers-reduced-motion rule (globals.css:7209-7221, present in the loaded sheet as '*, ::before, ::after { animation-duration: 0.01ms !important }') collapses the enter animation; not emulated here (no reduced-motion emulation in the pane).",
    "note": null
   },
   {
@@ -796,10 +796,10 @@
    "fix": "Make one section = one step (or pair only when combined words < ~350), keep end-of-block widgets on a dedicated 'check-in' step, and base the progress bar on flat steps + widgets completed.",
    "impact": "Each step is an 8-12 minute wall; 'Step 1 of 5' feels misleadingly short; on 3-section blocks the short step is the heavy one, so effort per step is unpredictable. Combined with the pretest this explains stalling at step 0/1.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "lib/learn-steps.js:33-70 buildSteps: one 'teach' step per subsection and one 'checkin' per chapter carrying takeaway/diagram/quiz/practice pins; countSteps = subsections + chapters (test over 43 live sections). Walk: introductory-concepts is 9 teach + 5 check-in steps, widgets only on check-ins (quiz on 3/6/9/12, diagram on 9/14, practice on 6/9), progress bar from safeStep/totalSteps (LearnModeTab.jsx:389).",
    "note": null
   },
   {
@@ -815,8 +815,8 @@
    "packet": 5,
    "status": "claimed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "Mount/deep-link banner: DONE - StudyApp.jsx:545-549 sets learnModeResuming when readSavedStep > 0 after hydration; observed after a reload at step 14: 'You left off at step 14 of 14', Continue and Start over (-> Step 1, local key '0') work. max(db, local): WRITTEN at :529-537 but not effective in-app for a signed-in student: navigateToSection (:571-573) sets learnModeSection to the max, then the useClientValue at :404-411 re-runs its effect on [activeSubjectId, activeSection] and setValue()s the LOCAL value alone (0 when this browser has no key); the reconcile effect at :591-600 does not rescue it because learnStepRef (:587) already holds the max when it compares, so it marks resumeApplied and never runs again. Net: sidebar/Home navigation to a section whose server furthest_step is 8 with no local entry lands on step 1 with no banner - the title's 'DB pointer beats local' is inverted, not removed, and the impact 'sent back a step on return' remains for the cross-device case (the F027 scenario). Code-traced, not browser-reproduced (requires sign-in). Also note: because handleLearnStepChange (:603) stores the CURRENT step locally, max(db,current) can pull a student who went back deliberately forward again on the next navigation.",
    "note": null
   },
   {
@@ -898,10 +898,10 @@
    "fix": "Track answered recalls by section id in a Set; never render a recall that has been shown in the last N steps; for 1-section steps skip the immediate recall and rely on the spaced showing. Randomise the reorder start order on mount (seeded by attempt).",
    "impact": "Student answers a reorder, taps Next, and the first thing on the new screen is the same reorder in the same scrambled state. It feels like a bug, doubles the recall count on the completion screen, and the 'spaced' label is untrue (the gap is one tap).",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "Spaced recall is chosen once per check-in from an EARLIER chapter and never adjacent (lib/learn-steps.js:93-107; tests incl. the 43-section walk), remembered in refs so Back/Next show the same one (LearnModeTab.jsx:207-216; LearnModeTab is keyed by section in StudyApp.jsx:884 so the refs reset per section). Second showing of a reorder uses spacedPermutation (learn-steps.js:129-146), seeded by recall id, avoiding identity and (n>=3) the stored order; I ran it over all 131 live reorders: none n<3, none identity or stored. Observed: chapter-1 reorder [ceteris, observe, isolate, build] first, [ceteris, observe, build, isolate] spaced; chapter-2 reorder [opportunity, scarcity, wants, choices] first, [choices, wants, opportunity, scarcity] spaced. Deliberate narrowing: seeded by id rather than 'by attempt', so the second order is identical across sessions - stated in the code comment and acceptable.",
    "note": null
   },
   {
@@ -1000,10 +1000,10 @@
    "fix": "Minimum 44x44 targets (`min-width/height: 44px`), one combined 'move up/down' control, or drop arrows and make tap-select then tap-position an insert (splice) not a swap. Make the instruction 13px and non-italic.",
    "impact": "On a phone the student either misses the tiny arrow and selects the card instead (purple ring appears, unclear why), or hits ▲ when aiming for ▼. Swapping instead of inserting leads to 'I moved it up and something else jumped to the bottom'.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "components/learn-mode/ReorderRecall.jsx:33-40 moveItem splices (insert), not swaps; observed on step 13: tap item 1 then item 4 -> [What, For whom, How, Market...] (the insert result), not the swap; arrow moves one place. globals.css:7453-7454: .lm-recall-arrow-btn min 44x44 on phones (8 arrows measured 44x44), rows min-height 44 (measured 66); hint text 13px, italic removed (:2901). Chips/blanks 40px per the finding.",
    "note": null
   },
   {
@@ -1053,8 +1053,8 @@
    "packet": 5,
    "status": "claimed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "The sheet exists (InlineDiagram.jsx:57-79 role=dialog, title bar, pane, hint; globals.css:7460-7469 full-screen at <=768px; Escape closes - all observed) but the SVG inside it is NOT larger: measured 351px wide at 390px viewport (0.9x, vs 313px inline) because the modal clones the processed inline SVG (InlineDiagram.jsx:22-30) which carries style='width:100%' from processSvg.js:127, and that inline style beats '.lm-diagram-modal-pane svg { width: 200vw }' at globals.css:7468. So the modal is the inline diagram plus 12%, darker, with a close button - the defect in the title. The hint gate (InlineDiagram.jsx:110-118 canEnlarge = narrow.matches || ...) shows 'Tap to enlarge' on every phone regardless, so the 'hide the hint when the modal would not be bigger' clause fails too. touch-action: pinch-zoom on the pane is set (measured).",
    "note": null
   },
   {
@@ -1085,10 +1085,10 @@
    "fix": "Remove the `<h2>` at LearnModeTab.jsx:367 or pass a `hideTitle` prop into NoteSection and skip the h3 when set. Keep exactly one heading per subsection.",
    "impact": "On step 1 the student reads 'Economics as a Social Science' in 20px bold, then 2px below it 'Economics as a Social Science' again in 15px inside the card, for every subsection on every step. It reads as a rendering glitch and wastes ~45px per subsection.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "components/notes/NoteSection.jsx:12,19 hideTitle prop skips the h3; LearnModeTab.jsx:532-533 renders the one h2 and passes hideTitle. Measured on all 14 steps: h2Count=1, h3.rl-note-section-title=0. Notes tab keeps its h3 (default false).",
    "note": null
   },
   {
@@ -1102,10 +1102,10 @@
    "fix": "Either (a) one subsection per step (halves height; flatSteps at LearnModeTab.jsx:48-60 pairs 2), or (b) collapse RealExample/Misconception/ExamMatters into a single tabbed or accordion strip per subsection with only KeyIdea + body open by default, and (c) add a sticky bottom bar with Next/progress on mobile so the exit is always visible.",
    "impact": "The student lands on step 1 and sees a quiz widget, a huge title, a duplicated title, a green card, three paragraphs, a flow timeline, three more coloured cards ... and must scroll ~8 screens past two more coloured card stacks, a quiz, a practice question and a takeaway before the first 'Next' button appears. This matches the live data (75% never advance past step 0): from a phone the step has no visible end, so 'progress' is invisible.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "Option (a) one subsection per step (learn-steps.js:33-70) and (c) sticky bottom bar (globals.css:7490-7500, .lm-nav position:sticky bottom:0 at <=768px) are done; (b) was offered as an alternative. Measured at 390x844: .tab-content scrollHeight 2,824px on step 1 (2,390px step body), 1,437-3,725px across the 14 steps (max on step 9: diagram+quiz+practice+spaced+explain+takeaway) against the audit's 5,300-5,900; .lm-nav-next inside the viewport without scrolling on all 14 steps (step 1: top 790, bottom 834).",
    "note": null
   },
   {
@@ -1119,10 +1119,10 @@
    "fix": "Render the spaced recall after the step's own content (or as a separate 'checkpoint' mini-step), keep at most one recall widget per step, and use the section title as the first visible element.",
    "impact": "Step 2 opens with 'Complete the chain: Positive / Normative / ought to' before the student has seen the step title. Combined with the pre-test gate, the first three things a new user meets are tests, not teaching.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "LearnModeTab.jsx:523-539: a teach step renders eyebrow, h2, NoteSection, then its own recall; the spaced recall lives only on check-ins after the widgets (:573-583). Walk: no recall precedes the h2 on any of 14 steps and every step has at most one .lm-recall-card; step 2 opens on the eyebrow and 'Positive and Normative Economics'.",
    "note": null
   },
   {
@@ -1136,10 +1136,10 @@
    "fix": "Make Key Idea the single dominant element (larger type, filled background); demote Real Example / Misconception / Exam Matters to a compact secondary style (no coloured fill, small icon + label, or a single 'Exam lens' strip); render `step.blockTitle` as the chapter eyebrow above the section title; give the Takeaway the strongest treatment on last-in-block steps.",
    "impact": "A student scanning on a phone cannot tell which of the 5 cards per subsection to read first or which one the exam rewards; the misconception (amber) is visually louder than the key idea; the chapter they are in is only revealed inside the collapsed 'Explain it back: The Nature of Economics' toggle at the bottom.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "globals.css:7318-7345: .rl-key-idea 4px rule, 16px/500 text on a filled background; .rl-lenses demote Real Example/Misconception/Exam Matters to transparent, 2px left rule, 14px; .lm-step-body .rl-takeaway 1.5px green border + glow. Measured on step 1: key idea 16px weight 500 bg rgba(16,185,129,0.09) over 15px body; three lenses backgroundColor transparent with 2px left borders; eyebrow rendered (F039); takeaway border 1.5px rgb(5,150,105) on step 14. NoteSection.jsx:22-38 wraps the lenses.",
    "note": null
   },
   {
@@ -1221,10 +1221,10 @@
    "fix": "Add `.rl-note-section { padding: 14px 12px; }` and `.lm-stepper-step { gap: 10px }` / hide the rail on mobile (use the top progress bar instead); consider removing the outer .rl-note-section card on mobile entirely.",
    "impact": "Card text wraps every 5-6 words and flow-timeline titles like 'Isolate the variable of interest' wrap to 2 lines, inflating step height and making the coloured-card stack feel even taller.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "globals.css:7432-7435 at <=768px: .rl-note-section padding 14px 12px, .lm-stepper-step gap 0, .lm-stepper-rail display none. Measured at 390px: noteSectionPadding '14px 12px', stepperGap '0px', railDisplay 'none'; recall card padding '12px 14px'.",
    "note": null
   },
   {
@@ -1408,10 +1408,10 @@
    "fix": "Prioritise the content pipeline on Units 3-4 to Unit-1 depth (aim 25 questions, >=4 blocks, recalls). Until then, show honest depth signals: on the topic chips and section header display 'N questions' and a 'Coming soon: more content' badge instead of silently shipping 10.",
    "impact": "A Year 13 student (the cohort revising WEC13/WEC14/WBS13/WBS14 for the summer exams) opens a section and finishes it in two steps with 2 quizzes, sees no reorder/fill-in activities they saw in Unit 1, and concludes the app 'doesn't cover' their year. This is the second concrete source of the 'doesn't cover all topics' complaint, and Smart Practice for a whole Unit 3 selection is at most ~60 questions.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "app/api/sections/depth/route.js:19-45 (thin = chapters < 4 or quiz < 20, the validator's thresholds); curl: 43 entries, 22 thin, and the 22 ids equal exactly the 22 sections carrying depth.blocks/depth.quiz keys in audit/validator-baseline.json. StudyApp.jsx:414-421 fetches it, :979-986 renders the header note, Sidebar.jsx:148-153 the chip. Observed at 390x844 on /business/unit-3/assessing-competitiveness: header 'More content coming · 10 questions so far' (title '1 chapter, 10 questions so far'); sidebar chips on all six Unit 3 rows (10 q x5, 9 q on Influences); supply shows '3 ch' and '... 3 chapters so far'. Note: chip 10.5px and header 11px are below the 12px label floor (see F101).",
    "note": "14 Sep 2026, packet 3: the validator half is built — depth.blocks / depth.recalls / depth.quiz fire as DEBT on all 25 sections below the Unit 1 template and are baselined per section. The other half of this fix is student-facing: an honest 'N questions' count and a 'more content coming' signal on the topic chips and section header. That is navigation/Step 0 work and moves to packet 5. Do not record F083 done until the signal ships."
   },
   {
@@ -1495,8 +1495,8 @@
    "packet": 5,
    "status": "claimed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "Inline width: DONE - globals.css:7459 max-width 100% at <=768px; measured svg 313px = wrapper width (was 270). Minimum label size: DONE as written - processSvg.js:132-142 raises text below viewBox/28 (17.9 units on the 500-wide boxes; measured min 17.9 on the step-14 SVG). Modal: NOT DONE - the sheet is full-screen with touch-action: pinch-zoom (measured) but its SVG is 351px = 0.9x the viewport, because the cloned SVG's inline style='width:100%' (processSvg.js:127, cloned at InlineDiagram.jsx:22-30) beats the 200vw rule at globals.css:7468; see F062. And the floor as calibrated is a regression on dense diagrams: census over the 74 live SVGs (all viewBox 500 wide): 1,419 of 1,420 labels are raised, median x1.79, p90 x2.23, max x2.55 (7-unit labels), so it is a global relayout rather than a floor. Measured overlapping label pairs at 390px, authored vs after the floor: supply 'PES: Visual Comparison' (45 labels) 0 -> 21, 'PES Over Time' (17) 1 -> 10; introductory-concepts 'Economic Systems Comparison' (38) visibly collides in a screenshot ('+ Efficient allocation' runs into '+ Corrects failure', 'Private & public sector' clipped). The finding suggested >=14 units; 17.9 trades unreadably small for unreadably overlapped on the 12 diagrams with >=25 labels. processSvg also runs in DiagramsTab/InteractiveDiagram/DiagramLabelDrill, so this applies at every width.",
    "note": null
   },
   {
@@ -1544,10 +1544,10 @@
    "fix": "On <768px give .lm-recall-arrow-btn min 36x36 (or drop arrows on touch and rely on tap-to-swap), .lm-recall-dismiss/.lm-more-btn 40x40 with negative margin, chips/blanks min-height 40px, tab-face min-height 40px.",
    "impact": "Students mis-tap the up/down arrows (hitting the row instead, which selects the item for a swap), accidentally dismiss recall cards, and cannot reliably remove a wrongly placed word from a blank. Every 'quick' recall becomes fiddly on a phone.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "globals.css:7452-7458 at <=768px: .lm-recall-arrow-btn min 44x44, .lm-recall-dismiss 44x44 with negative margin, .lm-more-btn 44x44, .lm-word-chip/.lm-fillin-blank min-height 40, .tab-face min-height 40. Measured at 390px: 8 arrows 44x44, dismiss 44x44, more 44x44, chips 40 tall, blanks 40 tall, tab-face 40. The narrowing to 44 rather than 36/40 (DECISIONS 2026-09-14) exceeds the finding. Not in this finding's list but noted: the new .tab-bar-more chevron (36x36, :7409) and the diagram modal close (36x36, :5930) are below 44.",
    "note": null
   },
   {
@@ -1578,10 +1578,10 @@
    "fix": "Reverse order on mobile (Next first via flex-direction:column-reverse or order:), and/or add a compact sticky bottom bar (position:sticky; bottom:env(safe-area-inset-bottom)) with Back/Next and the step counter.",
    "impact": "A student scrolls through 6-8 screens of content and exercises, reaches the bottom, and the first big button is 'Back'. There is no persistent way to advance; 75% of logged-in starts never leave step 0.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "globals.css:7490-7508 at <=768px: .lm-container .lm-nav position sticky bottom 0 with safe-area padding, Back (44px, text hidden) · counter · Next, no column stacking. Measured at 390x844: computed position sticky; mid-scroll the bar is pinned at 779-844; Next visible on every one of 14 steps without scrolling; at the bottom of step 9 (3,725px) the takeaway's bottom (687) sits above the bar's top (711), so nothing is covered; background var(--bg-primary) resolves in both themes (rgb(15,17,23) dark, rgb(244,246,250) light, toggled and measured).",
    "note": null
   },
   {
@@ -1595,10 +1595,10 @@
    "fix": "Set font-size:16px on .lm-explain-textarea and .lm-recall-textarea at all widths (visually reduce with transform if desired).",
    "impact": "Tapping the free-text explanation box on an iPhone zooms the whole page in; after typing the layout stays zoomed and the student has to pinch out to see the Next button and cards.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "globals.css:7401 '.lm-explain-textarea, .lm-recall-textarea, .lm-practice-textarea { font-size: 16px }' outside any media query (the 13px mobile override at :3183 removed). Measured at 390px: explain textarea 16px (step 14), practice textarea 16px (step 9).",
    "note": null
   },
   {
@@ -1612,10 +1612,10 @@
    "fix": "On <768px hide the rail (or render the node inline in the counter row), set .lm-stepper-step { gap:0 }, and reduce .rl-note-section padding to 14px 14px and .lm-recall-card to 12px 14px.",
    "impact": "Text wraps to ~30 characters per line, reorder items become 4-5 line blocks, and the whole step is 30-40% longer than it needs to be, all for a single number circle on the left.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "globals.css:7432-7436: rail display none at <=768px, .lm-stepper-step gap 0, .rl-note-section 14px 12px, .lm-recall-card 12px 14px. All four measured at 390px (railDisplay none, gap 0px, padding '14px 12px', '12px 14px'); .lm-stepper-content spans the full 390px column.",
    "note": null
   },
   {
@@ -1629,10 +1629,10 @@
    "fix": "Show a chevron/overflow indicator when scrollWidth > clientWidth, or move secondary tabs into a 'More' sheet on mobile; scroll the active tab into view on change.",
    "impact": "Learn is visible, which is fine, but students never discover Flashcards/Quiz/Tutor/Extras (the paid features) unless they happen to swipe the strip; the fade looks like the row simply ends at Practice.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "components/AnimatedTabBar.jsx:130-149: scrollWidth/clientWidth/scrollLeft check toggles a .tab-bar-more chevron, active tab scrollIntoView on change; :207-212 the chevron scrolls the strip. Measured at 390px: bar 384/920px, Quiz tab at 512-599 (off-screen) before, 296-384 (in view, selected) after clicking it; chevron present at scrollLeft 0 and after the click, absent at scrollLeft 536 (end); clicking the chevron scrolled the bar. Chevron is 36x36.",
    "note": null
   },
   {
@@ -1646,10 +1646,10 @@
    "fix": "Swap immediately (or after ~120ms) and animate the incoming content with the existing lmStepEnter keyframe, or use the View Transitions API. Do not block input on the timer.",
    "impact": "Each tap on Next feels laggy: the button greys, nothing happens for a third of a second, then content jumps. Combined with the glossary re-render cost this can approach 0.5s+ on a slow phone.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "LearnModeTab.jsx:243-256: navigateToStep clamps, tracks, persists and calls onStepChange synchronously; no isTransitioning state and no disabled prop on Next/Back (:579-590); the pulse on the node is a decoration on its own 400ms timer that blocks nothing. The remounted .lm-step-body.step-enter carries lmStepEnter 0.35s (globals.css:7297, measured). The 350ms setTimeout and setIsTransitioning are gone from the file.",
    "note": null
   },
   {
@@ -1697,10 +1697,10 @@
    "fix": "Render the spaced recall collapsed (one-line header + 'Try it' expander) or place it after the first NoteSection; keep the section title at the top.",
    "impact": "A student who pressed Next expecting the next topic is immediately quizzed on wording from the last card, on a full-screen purple exercise, with the section title pushed below the fold. Dismiss (x) is a 20px target.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "Nothing renders above a step's title: LearnModeTab.jsx:523-539 (teach) and :556-590 (check-in) start with the eyebrow and h2. Walk of 14 steps: for every recall, precedesH2=false; the previous step's recall is never shown on the next step (the spaced pick is from an earlier chapter, learn-steps.js:97). Dismiss is 44x44 (F091).",
    "note": null
   },
   {
@@ -1716,8 +1716,8 @@
    "packet": 5,
    "status": "claimed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "Body: DONE - globals.css:1064-1065 .rl-body-p and .rl-takeaway-item 15px at <=768px, :7437-7438 key idea 16px and lens text/recall items/fill-in/chips/blanks/prompt 15px; measured 15px body, 15px takeaway items, 15px recall items, 15px fill-in. Labels: NOT DONE - the fix asks for a 12px minimum for labels/hints, but .rl-lenses .rl-real-example-label/.rl-misconception-label/.rl-exam-matters-label are 11px at :7331-7333 (two-class selector, outside the media query) and outrank the 12px phone rule at :7440; measured 11px on step 1 at 390px for all three lens labels. New labels this packet added are also below 12px: .lm-spaced-cue-label 11px (:7359), .lm-explain-toggle-draft 11px (:7367), .lm-practice-write-label 11px (:7380), .content-header-depth 11px (:7482), .sidebar-section-depth 10.5px (:7477); measured spaced cue 11px, header depth 11px, sidebar chip 10.5px. The '10-11px labels' half of the title is still on screen.",
    "note": null
   },
   {
@@ -1986,10 +1986,10 @@
    "fix": "Strip the trailing '(N marks)' in the seed (one regex) and rely on the marks field.",
    "impact": "'Define the term opportunity cost. (4 marks)  [4 marks]' — small, but it is the first written question a student sees and it looks unedited.",
    "packet": 5,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-5",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
+   "evidence": "components/learn-mode/InlinePractice.jsx:34 stripMarks removes a trailing '(N marks)' at render, applied at :140; the badge (:141-143) carries the marks. Observed on steps 6 and 9: \"Define the term 'opportunity cost'.\" with '4 marks', and 'Explain two reasons ... governments.' with '6 marks', neither ending in '(N marks)'. Census: 165 of 215 live practice questions carry a trailing '(N marks)'; 0 still carry it after stripMarks. Deliberate narrowing: the finding asked for a seed-time strip; this packet writes no content, so the strip is at render and the stored text is unchanged - the Practice tab and any other renderer of question text still show the parenthetical, which is outside this finding's scope (InlinePractice).",
    "note": null
   },
   {
@@ -17673,10 +17673,10 @@
    "title": "The specification's own vocabulary replaces the UK GCE labels: merit/demerit goods and deadweight loss",
    "file": "audit/SPEC-OWNERSHIP.md",
    "packet": 13,
-   "status": "claimed",
+   "status": "not-fixed",
    "closed_by": "packet-13",
-   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
-   "evidence": "The swap is complete but it introduced student-visible regressions. Diffed all 43 pre-packet-13 snapshots against live (439 strings added, 1009 removed, 20 sections changed) and read the pairs. (1) market-failure section_notes examMatters now reads 'Label it clearly as welfare loss or welfare loss.' - the source said 'deadweight loss or welfare loss' and WELFARE_LOSS in scripts/_packet13-plan.mjs:46 only covers the reverse order, so /deadweight loss/ -> 'welfare loss' produced a tautology in an instruction. (2) role-state-macroeconomy content: 'Paternalism is the key criticism of good with external benefits of consumption intervention' and (3) its notes: 'that justify good with external benefits of consumption intervention' - SPEC_VOCAB now HAS a 'merit good intervention' rule (_packet13-plan.mjs:69-70) added in the residual pass, so the plan file no longer reproduces live content and a reader cannot tell what was done. (4) market-failure mistakes model answer: 'Instead write: education is a good with external benefits of consumption with positive consumption externalities' - circular and ungrammatical. (5) price-determination: 'creates a welfare loss triangle of welfare that nobody receives' and 'total welfare loss is only the welfare loss triangle' - the second is a tautology that destroys the point of the misconception card (the source said 'only the deadweight loss triangle'). (6) ECONOMICALLY OVER-REACHING, twice: market-failure mistakes and role-state-macroeconomy notes now assert 'Goods with external benefits are excludable and rivalrous (like private goods)' - true of merit goods by definition, false of the wider class the new label names. SVGs and diagram checklists are CLEAN: the only <text> label changed is role-state-macroeconomy 'Tax Incidence' [19] 'Deadweight loss (DWL): triangle' -> 'Welfare loss: triangle' (shorter, geometry safe); market-failure/price-determination/government-intervention checklists swapped correctly.",
+   "verified_by": "packet-verifier round 2 2026-09-14 2026-09-14",
+   "evidence": "ROUND-1 HOLES: all eight closed, verified by diffing the three pre-polish snapshots (auto-prepublish-2026-09-14T15-06-28-927Z) against live: market-failure notes[4].examMatters now 'Label it clearly as the welfare loss.'; role-state content[0].takeaway[3] and notes[1].examMatters 'intervention of this kind' (referent: the subsection/note titled External Benefits and Redistribution); market-failure content[1].sections[3].misconception 'education is excludable and rival, so it is a private good; its market failure is the external benefit of consumption that the buyer does not count'; price-determination content[3].sections[2].keyIdea 'a welfare loss: a triangle of surplus that nobody receives' and misconception 'the welfare loss is only the triangle between the curves'; both 'goods with external benefits are excludable and rivalrous' sentences now say 'healthcare and education are excludable and rival'. Types sentence content[0].sections[0].body[2] matches econ_spec.txt 1.3.5.1b exactly (externalities; free-rider/non-provision of public goods; imperfect market information; moral hazard; speculation and market bubbles). Pins: Information Failures quiz[14] (lemons) + practice[4] (information failure); Welfare Loss quiz[5] (welfare loss area on a negative production externality diagram); no pin duplicated or out of range across market-failure (quiz 24, practice 5). MUST_NOT_SURVIVE: zero survivors over all 43x8 by my own sweep; the gate proven with a scratch copy of the runner (stageSection stubbed to throw): a no-match plan prints SURVIVED on the dry run and NOT STAGED / 1 refused on --stage, stub never called. Browser 390x844, storage cleared: chips MC / underproduces / welfare render whole in the tray and inside blanks, 'loss' stays beside blank 3; console only the signed-out 401 (the Sidebar.jsx parse errors in the console are another session's uncommitted mid-edit of components/Sidebar.jsx, outside this range). REJECTED BECAUSE the same read-every-sentence pass over all 43 pre-packet snapshots vs live (+441/-1011 strings, 22 sections, every one named by a committed plan) finds the same defect classes still live and student-visible. (c) ungrammatical: government-intervention content[5].takeaway[0] 'State provision ensures access to public and goods with external benefits for all' (was 'public and merit goods'); market-failure notes[3].blocks[1].items[3] 'Information failures reinforce the argument for goods with external benefits and external costs' (was 'the argument for merit and demerit goods', now incoherent). (b) tautology: government-intervention notes[1].blocks[1].items[3] 'underconsumption of goods with external benefits or goods with positive externalities'. (d) over-reaching class claims, the category round 1 named, still define the class by the merit-good mechanism in role-state-macroeconomy content[0].sections[1]: body[0] 'Goods with external benefits are goods that generate greater benefits than individuals realise... under-consume them because of information failure'; keyIdea 'under-consumed because individuals underestimate their private benefits due to information failure'; examMatters 'the answer is information failure, not just they are good for society' (wrong for the class: per 1.3.5.2c-d the answer is MSB above MPB; and it contradicts the polished misconception one field away); takeaway[1] and body[3].steps[0] the same; notes[1].keyIdea and flow.steps[0] the same; market-failure extras.chains[2].result 'Information failure causes systematic under-consumption of goods with external benefits' and steps[1]. (e) the GCE label survives as its abbreviation in six diagrams whose visible svg text still reads DWL: government-intervention diagrams[0],[1]; market-structures-contestability [2]; trade-global-economy [1],[2]; role-state-macroeconomy [4] - the census regex for the word deadweight cannot see it, so 'deadweight 0 hits clear' is true of the word only. Minor: market-structures notes[5].takeaway[1] now begins lowercase 'welfare loss from restricted output...'; 'Marks follow you for ...' x3 in government-intervention examMatters is not idiomatic. Fix shape: one more polish plan (about 12 sentences plus six svg labels), then re-diff.",
    "note": null,
    "added": "2026-09-14"
   },
@@ -17686,10 +17686,10 @@
    "title": "No section teaches a spec bullet another section owns, per audit/SPEC-OWNERSHIP.md — six of its seven rows; the seventh (the multiplier) is deferred with a written manifest to packet 37 as D013",
    "file": "audit/SPEC-OWNERSHIP.md",
    "packet": 13,
-   "status": "claimed",
+   "status": "not-fixed",
    "closed_by": "packet-13",
-   "verified_by": "packet-verifier 2026-09-14 2026-09-14",
-   "evidence": "Six of seven rows verify; the title does not hold and the check that was to police it is dead code. VERIFIED GOOD: all seven spec references resolve in audit/raw/spec-items.json with source lines (ECON-1.3.4-3a/3b econ_spec:707-710; ECON-3.3.1-2g :1274; ECON-2.3.4-4a..4d :1078-1087; BUS-3.3.1-4c bus_spec:1110 and BUS-4.3.2-2b :1390; ECON-3.3.3-6a..6h :1424-1431; ECON-1.3.2-1b :583; ECON-1.3.5-2c/2d :741,:746). Live content confirms every 'Done' row: price-determination keeps its 'Functions of the Price Mechanism' block, types-sizes-businesses keeps 'Diseconomies of Scale and Demergers', introductory-concepts and business-growth lost only the duplicate subsections, market-structures-contestability still teaches 'Monopoly Equilibrium & Welfare Loss', consumer-behaviour-demand still teaches 'Why Consumers May Not Act Rationally'. REJECTED BECAUSE: aggregate-demand still teaches a block titled 'The Multiplier' with three subsections, a bullet SPEC-OWNERSHIP.md itself assigns to national-income (ECON-2.3.4-4a-d), so 'No section teaches a spec bullet another section owns' is false on the packet's own document. Leaving it is DEFENSIBLE (I counted the assessment myself: 8 of aggregate-demand's 23 quiz items test the multiplier, exactly as claimed; flashcards are 5-6 on the multiplier, not the 4 claimed, which strengthens the argument), but a defensible deferral is a deferral, not a closure. Compounding it: the census's D011 branch is DEAD CODE - audit/scripts/packet-13-census.mjs:81 computes isTitle as /\\.title$/.test(path) && /^\\.content/.test(path), but strings() is called per-table with path='' so every path begins '[0]' and ^\\.content can never match. I reproduced the walker: '[0].title'='The Multiplier' gives isTitle=false. The census therefore prints 'taught under its own heading elsewhere in: nowhere' for all four mapped topics regardless of the truth, and SPEC-OWNERSHIP.md step 4 tells packets 32/37 to rely on that check, which can never fail.",
+   "verified_by": "packet-verifier round 2 2026-09-14 2026-09-14",
+   "evidence": "VERIFIED: isContentTitle and strings extracted verbatim from the census and run on my own sample: block title and subsection title count; body paragraph, body-item title, recall, takeaway, realExample, keyIdea, notes title, notes block title, diagrams title and extras chain title are all ignored. --self-test exit 0. Census D011 block reports the multiplier under its own heading only in aggregate-demand ('The Multiplier', 'The Multiplier Concept', 'The Multiplier Formula', 'What Determines the Size of the Multiplier?') and nowhere for five forces, demergers and the price mechanism; my independent listing of every content[*].title and content[*].sections[*].title across all 43 sections matching multiplier|demerger|price mechanism|five forces agrees exactly (aggregate-demand content[3] plus three subs; national-income content[3], owner; price-determination content[2], owner; types-sizes-businesses content[3].sections[1], owner; nothing else). Narrowing to six rows plus D013 on packet 37 is honest: the map row says Not done - ledger D013, DECISIONS records why, D011.note keeps the previous title, and the manifest is concrete. D014 is a legitimate scope boundary, not a dodge: packet 13's claim is about live DB content and app/economics/market-failure/page.js is another surface; lines 116-118 (FAQ 2) and 128-130 (FAQ 5) explain the IAL vocabulary correctly, but lines 105-106, 112-114 (FAQ 1 lists monopoly power among the causes), 120-122 (FAQ 3 says the IAL expects merit and demerit goods as distinct categories), 124-126 (FAQ 4 says add monopoly power as a sixth category for WEC11), 136-138, 140-142 and the KEY_CONCEPTS 'deadweight welfare loss' teach the removed material as IAL, and FAQ 3/4 contradict FAQ 2 on the same page - worth pulling forward inside packet 57. REJECTED BECAUSE one of the six Done rows is not done: 'Monopoly and welfare loss - Removed from 1.3.5'. The block is gone (market-failure is 5 blocks, none on market power), but content[4] Welfare Loss, sections[1] 'Diagrams for Welfare Loss', body[2] still teaches 'For monopoly, welfare loss appears between the demand curve and the supply curve (or MC curve), from the monopoly output to the competitive output. The monopolist restricts quantity below the efficient level...'; its examMatters tells a Unit 1 student to 'Practise drawing externality, public good, and monopoly diagrams'; its realExample is Harberger's 1954 measurement of monopoly welfare loss; sections[0].body[3] lists 'a monopolist restricting output' among the distortions; and content[0].sections[1].realExample (Shkreli) illustrates welfare loss via monopoly pricing. That is 3.3.3.6 taught in 1.3.5 in body text, which the title-only census cannot see - a limit the five-forces row states for external-influences but the monopoly row does not. Note for D013's packet: the census also ignores notes titles, and aggregate-demand notes[3] 'The Multiplier' must go with the block.",
    "note": "2026-09-14: title narrowed after Verify A round 1 rejected it as written (the map itself says the multiplier is unresolved). The deferred half is D013 on packet 37. Previous title: \"No section teaches a spec bullet another section owns, per audit/SPEC-OWNERSHIP.md\"",
    "added": "2026-09-14"
   },
