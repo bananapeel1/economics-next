@@ -324,7 +324,7 @@ still slides it to 238-326, clear of the chevron at 326. No verifier round: meas
 verifier brief: **scroll the page with real input while the app is re-rendering**; the round-1/2/3 walkthroughs
 scrolled with `scrollTo` once and never saw it.
 
-## Packet 13 spec — the off-spec strip and dedupe (built 14 September 2026; Verify A rounds 1 and 2 each rejected D010 and D011; pass 3 STAGED as drafts 14 September, publish pending; round 3 after publish)
+## Packet 13 spec — the off-spec strip and dedupe (built 14 September 2026; Verify A rounds 1 and 2 each rejected D010 and D011; passes 3, 3b and 3c PUBLISHED to live content 14 September; round 3 running)
 
 **What it had to make true.** No framework the IAL specification does not contain is taught or assessed anywhere in
 live content. No section teaches a specification bullet another section owns. Nothing this packet removed is still
@@ -361,13 +361,27 @@ must be SMALLER than at packet 3: 2,489 -> 2,187 keys, BLOCK 1,131 -> 902, `term
 
 **Verify A, round 2 (14 September, commit a91265f): D010 and D011 rejected again, both correctly.** Round 1's eight
 sentences were closed; the same read found the same classes still live. Pass 3 (`scripts/_packet13-pass3-plan.mjs`,
-`--plan pass3`) answers each, one rule per sentence, and is **staged as drafts but NOT published**: the publish
-step was refused by this session's permission classifier as a production deploy. To publish, from the worktree:
-`node scripts/publish-section.mjs government-intervention --confirm` and the same for `market-failure`,
-`role-state-macroeconomy`, `market-structures-contestability`, `trade-global-economy` (each prints its dry-run
-diff without `--confirm`; a backup is taken automatically). Then `node audit/scripts/packet-13-census.mjs` (DWL
-is banned now), `npm run validate`, `node audit/scripts/validate-content.mjs --baseline --confirm` if it reports
-re-keyed debt, claim D010 D011 and launch round 3.
+`--plan pass3`) answers each, one rule per sentence, and is **published to live content** (14 September, on the
+founder's instruction; 13 tables across five sections, each with an automatic pre-publish snapshot in
+`audit/snapshots/auto-prepublish-2026-09-14T17-*`, each read back and re-validated before the next).
+
+**After the publish, two more one-item passes, both found by the baseline diff rather than by a person.**
+`node audit/scripts/validate-content.mjs --baseline` wanted to add five DEBT keys. Four were the same findings
+those items already carried, re-fingerprinted because the text around them changed — the fingerprint design
+working as intended. Two were not, and neither was re-baselined:
+- **pass 3b** — the rewritten "Diagrams for Welfare Loss" recall asked for `social` as an answer while the
+  first line of its own template printed "social optimum": `fillin.leak`, an answer readable off the exercise,
+  introduced by pass 3. The blank moved to `efficient`, and the item gained the two-to-three distractors
+  `fillin.distractors` has always wanted, so both findings cleared instead of being forgiven.
+- **pass 3c** — my replacement paragraph took that subsection to 352 words against the 350-word budget. Four
+  words came out of the sentence. "The baseline only ever shrinks" stops meaning anything the first time a
+  packet writes its own new debt into it.
+
+Baseline then rewritten: **2,455 → 2,448 keys**, the four re-keys in and eleven out. Census exit 0 with every
+banned term at 0 hits, including `DWL`. Gate: `npm test` 105/105, `npm run build` exit 0, `npm run validate`
+exit 0. The six relabelled diagrams measured over live content: 0 overlapping label pairs and no label of mine
+outside its viewBox (the two the crude width estimate flags are a rotated axis title and a pre-existing
+right-edge legend word, neither touched by this packet).
 - **D010, class 1 — swap artefacts:** "access to public and goods with external benefits" (government-intervention
   takeaway), "the argument for goods with external benefits and external costs" (market-failure note), "goods with
   external benefits or goods with positive externalities" (government-intervention note), and "Marks follow you
@@ -385,8 +399,9 @@ re-keyed debt, claim D010 D011 and launch round 3.
   triangles are 30-40 units across: "Welfare loss" just outside its triangle in the clear space the curves leave
   (max price, min price, monopoly), "Loss (b)" / "Loss (d)" under the dashed quantity lines with leaders on the
   tariff and quota diagrams (whose key already reads "Net welfare loss = b+d"), and "Welfare loss" below the
-  demand curve with a leader on tax incidence. `scripts/_p13-draft-svgs.mjs <out.html>` renders the six DRAFT
-  diagrams to one page for the eye; the verifier should look at them at 390px after publish.
+  demand curve with a leader on tax incidence. The verifier should look at all six on the Diagrams tab at
+  390px. The two scratch tools used to place them (`_p13-geom.mjs`, `_p13-draft-svgs.mjs`) are deleted now that
+  the pass has landed, since they read drafts and a label that no longer exist.
 - **D011 — monopoly taught below heading level in market-failure:** the "Diagrams for Welfare Loss" paragraph,
   its exam tip ("monopoly diagrams"), its real example (Harberger) and recall line ("Monopoly: output restricted
   below ___ level"), the "Measuring Welfare Loss" sentence listing "a monopolist restricting output", the
@@ -398,7 +413,7 @@ re-keyed debt, claim D010 D011 and launch round 3.
 - The verifier's D014 note (the public `app/economics/market-failure/page.js` FAQ contradicts itself on the
   same vocabulary) is added to D014's ledger note for packet 57.
 
-**Round-3 replay (after publish).** `node audit/scripts/packet-13-census.mjs` exit 0 with DWL at 0. Snapshot-vs-live
+**Round-3 replay.** `node audit/scripts/packet-13-census.mjs` exit 0 with DWL at 0. Snapshot-vs-live
 diff over the five sections: every changed string named by a pass-3 rule. Read role-state-macroeconomy
 "External Benefits and Redistribution" end to end: no sentence defines the class by information failure. Read
 market-failure block 5 end to end: no monopoly teaching; the recall's third line is the tax-above-external-cost

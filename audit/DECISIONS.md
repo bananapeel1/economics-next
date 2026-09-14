@@ -382,6 +382,14 @@ Append only. Every entry needs a date and the packet that made it.
   heading in aggregate-demand — which is true, and is the deferred merge. D011 was narrowed to what was done
   (six of seven rows) and the seventh minted as D013 on packet 37, because "done except one, on a document that
   says so" is not "done".
+- **2026-09-14 (packet 13, at publish) — the baseline diff is the last reader of a content pass.** Publishing
+  passes 3's five sections re-fingerprinted four DEBT findings, which is the design, and revealed two the pass
+  had created: a fill-in whose answer was printed in its own template, and a subsection two words over the
+  reading budget. Neither was visible in the dry run's "new DEBT" count, because the items were new to the
+  baseline either way. Both were fixed (passes 3b and 3c) rather than baselined, and the baseline shrank
+  2,455 → 2,448. **Run `--baseline` without `--confirm` after every content publish and read every key it
+  wants to add**: a re-key of the same rule on the same item is the fingerprint working, anything else is
+  debt the packet just wrote.
 - **2026-09-14 (packet 13, after Verify A round 2) — "removed from a section" means its body text too, and a
   census that reads titles cannot say it.** The ownership map called monopoly "Done" for market-failure after the
   block went; a paragraph, an exam tip, two real examples, a list item and a recall line still taught it, and
