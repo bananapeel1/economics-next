@@ -261,3 +261,43 @@ Append only. Every entry needs a date and the packet that made it.
   "Float = LFT - EST - duration" as a title and a subtitle; the italic regex rendered "P*" and "Q*" as an
   emphasis run. Both were live for a day. `lib/flow-step.js` and the flanking rule in `parse-inline-markdown`
   are the fix, each with tests; the object form `{ title, subtitle }` is the documented way to add a subtitle.
+- **2026-09-14 (packet 13) — the specification decides what is taught, and `audit/raw/spec-items.json` is how that
+  is settled.** Every removal in this packet is a claim that a term appears zero times in the Edexcel IAL
+  specification, checked against the parsed spec text rather than against anyone's memory of A-level economics.
+  Gone from live content: merit and demerit goods, deadweight loss, VRIO, core competencies, distinctive
+  capabilities, the balanced scorecard, the triple bottom line, and the accelerator. Where the economics is
+  on-specification and only the label was not — merit/demerit goods, deadweight loss — the label changed and the
+  teaching stayed. Where the material is real but belongs to another topic — monopoly at 3.3.3.6, behavioural
+  choice at 1.3.2.1b, Porter's five forces at 3.3.1.4c — it was removed from the section that did not own it.
+  `audit/scripts/packet-13-census.mjs` asks the database, not the plan, and is the acceptance check.
+- **2026-09-14 (packet 13) — a section owns a specification bullet, and `audit/SPEC-OWNERSHIP.md` is the map.**
+  Three topics were taught twice in full. Two duplicates were removed. The multiplier was not: the specification
+  puts it at 2.3.4.4, so national-income owns it, but aggregate-demand assesses it in eight quiz items and four
+  flashcards, and deleting the teaching while leaving the assessment would manufacture the assessed-but-never-taught
+  defect this programme is clearing. Moving assessment across sections is a migration with a manifest (packet 8's
+  own decision), so the manifest is written in the map and the merge belongs to packets 32 and 37. Both sections
+  are Unit 2 and sit the same paper, so the cost of waiting is a student's time, not a wrong answer.
+- **2026-09-14 (packet 13) — touching a sentence means owning its defects, and that is what makes the baseline
+  shrink.** Packet 3's keys are fingerprinted on the item, so rewriting a sentence retires its findings and any that
+  survive are new. This packet inherited, and therefore fixed: three command words that do not exist in IAL
+  Economics ("Outline" twice, "Assess" in an Economics section), two tariffs that contradicted Appendix 6, four
+  UK-only institutions, seven questions whose correct option was the longest, and two sections with no recall at
+  all. None of that was in the packet's scope as written; all of it was the price of the edits that were. The
+  baseline fell from 2,489 keys to 2,189, and BLOCK findings from 1,131 to 902.
+- **2026-09-14 (packet 13) — `jsonb` normalises key order, so a read-back check cannot compare strings.** Packet 3
+  added read-back verification to the write path and the verifier reasoned about it without executing it. The first
+  hand-authored object this packet staged was refused by it: PostgreSQL sorts an object's keys by length then
+  bytewise, so the payload read back was deep-equal to what was sent and not string-equal. `sameJson` in
+  `lib/content-gate.mjs` compares canonically and is used by all five read-back checks. A guard that has never run
+  against the real thing is a guard with an unknown failure mode.
+- **2026-09-14 (packet 13) — an acronym belongs in the UK-institution list only when the subject has no other use
+  for it.** `MPC` was producing 130 BLOCK findings as the Bank of England's Monetary Policy Committee. In this
+  corpus it means marginal private cost or marginal propensity to consume in 129 of 131 sentences, and the two that
+  mean the committee name it in the same sentence. It is out of the list, "Monetary Policy Committee" is in, and a
+  test holds both directions.
+- **2026-09-14 (packet 13) — a duplicate quiz stem is a judgement, not a Jaccard score (F081).** The lexical rule
+  flags 44 pairs at 0.5 because nearly every stem opens "Which of the following". Nineteen were real: a student who
+  could answer one could answer the other with nothing extra, including two pairs with identical stems and different
+  correct answers. Twenty-five merely share a frame and were left alone, so `quiz.near-dup` still reports them and
+  the rule stays honest about being lexical. Each rewrite tests a different angle on the same specification bullet,
+  so the bank widened rather than shrank; near-duplicate findings fell from 36 to 17.

@@ -1,7 +1,7 @@
 import { createServerClient } from '@/lib/supabase-server';
 import { createClient } from '@/lib/supabase/server';
 import { NextResponse } from 'next/server';
-import { buildContext, gateSection, loadBundle } from '@/lib/content-gate.mjs';
+import { buildContext, gateSection, loadBundle, sameJson } from '@/lib/content-gate.mjs';
 import specItems from '@/audit/raw/spec-items.json';
 import baseline from '@/audit/validator-baseline.json';
 
@@ -37,7 +37,7 @@ async function refuseIfBlocked(supabase, sectionId, diagrams) {
 /** The row students now read must hold what was sent. Returns null when it does, or the response to send. */
 async function readBack(supabase, sectionId, diagrams) {
   const { data, error } = await supabase.from('section_diagrams').select('data').eq('section_id', sectionId).single();
-  if (error || JSON.stringify(data?.data) !== JSON.stringify(diagrams)) {
+  if (error || !sameJson(data?.data, diagrams)) {
     return NextResponse.json({ error: `Written, but the row read back does not match what was sent${error ? `: ${error.message}` : ''}. Check the section before trusting it.` }, { status: 500 });
   }
   return null;

@@ -21,7 +21,7 @@
  */
 import { readFileSync } from 'node:fs';
 import { supabase } from './_db.mjs';
-import { buildContext, gateSection, loadBundle as loadBundleWith, TABLE_TO_KEY } from '../lib/content-gate.mjs';
+import { buildContext, gateSection, loadBundle as loadBundleWith, sameJson, TABLE_TO_KEY } from '../lib/content-gate.mjs';
 
 export { TABLE_TO_KEY };
 
@@ -108,7 +108,7 @@ export async function stageSection(sectionId, table, payload, { dryRun = false }
   // Read back: the draft column must hold exactly what was sent.
   const { data: back, error: backErr } = await supabase.from(table).select('draft').eq('section_id', sectionId).maybeSingle();
   if (backErr) throw new Error(`${sectionId} ${table}: read-back failed: ${backErr.message}`);
-  if (!back || JSON.stringify(back.draft) !== JSON.stringify(payload)) {
+  if (!back || !sameJson(back.draft, payload)) {
     throw new Error(`${sectionId} ${table}: read-back does not match the staged payload; nothing to publish`);
   }
   return { ...verdict, created };

@@ -1,0 +1,2010 @@
+{
+ "section_id": "government-intervention",
+ "subject": "economics",
+ "label": "auto-prepublish-2026-09-14T14-15-33-584Z",
+ "tables": {
+  "section_content": [
+   {
+    "id": "government-intervention:block:2d353b2b",
+    "title": "Indirect Taxes to Correct Negative Externalities",
+    "sections": [
+     {
+      "id": "government-intervention:sub:how-indirect-taxes-correct-market-failure",
+      "body": [
+       {
+        "text": "An **indirect tax** is a tax placed on the production or sale of a good rather than on income. When a good generates **negative externalities** — such as pollution from petrol or health costs from cigarettes — the market price is too low because it ignores the external costs imposed on third parties. The market overproduces relative to the socially optimal quantity.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Tax imposed on good with external costs of consumption",
+         "Supply curve shifts left (upward)",
+         "Price rises, quantity falls"
+        ],
+        "result": "Output moves closer to socially optimal level",
+        "resultType": "good"
+       },
+       {
+        "text": "There are two types of indirect tax. A **specific tax** adds a fixed amount per unit (e.g. 50p per litre), creating a parallel shift of the supply curve. An **ad valorem tax** is a percentage of the price (e.g. VAT at 20%), causing a pivotal shift. Both raise the price consumers pay and reduce the quantity consumed.",
+        "type": "paragraph"
+       },
+       {
+        "text": "If the tax is set equal to the **marginal external cost** at the socially optimal output, it perfectly internalises the externality. You should think of the tax as forcing producers and consumers to face the full social cost of their decisions.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "How Indirect Taxes Correct Market Failure",
+      "recall": {
+       "id": "government-intervention:sub:how-indirect-taxes-correct-market-failure:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Tax imposed on good with external costs of consumption",
+        "Supply curve shifts left (upward)",
+        "Price rises and quantity falls",
+        "Output moves closer to socially optimal level"
+       ]
+      },
+      "keyIdea": "Governments tax goods that create negative externalities, raising the private cost to reflect the true social cost and reducing consumption toward the socially optimal level.",
+      "examMatters": "You should draw the tax as a leftward shift of supply and identify the new equilibrium price and quantity. Always evaluate by discussing whether the tax is set at the correct level and who bears the burden, linking this to price elasticity of demand.",
+      "realExample": {
+       "text": "**The UK government** levies tobacco duty of over 16 per cent of the retail price plus a fixed amount per pack, making cigarettes among the most heavily taxed goods in Britain. This has contributed to a fall in adult smoking rates from 27% in 2000 to around 13% by 2023, though critics note that poorer households bear a disproportionate burden.",
+       "emoji": "🚬"
+      },
+      "misconception": "Students write that indirect taxes always eliminate the externality completely. In practice, the government rarely knows the exact marginal external cost, so the tax may over- or under-correct the market failure. Instead write: indirect taxes reduce the externality but may not achieve the precise socially optimal output due to imperfect information."
+     },
+     {
+      "id": "government-intervention:sub:evaluating-indirect-taxes",
+      "body": [
+       {
+        "text": "The main strength of indirect taxes is that they use the **price mechanism** to reduce consumption — you do not need to ban the good, just make it more expensive. They also generate **tax revenue** that can fund solutions to the externality, such as spending tobacco tax revenue on public health services.",
+        "type": "paragraph"
+       },
+       {
+        "text": "However, indirect taxes are often **regressive** — they take a larger proportion of income from poorer households. If demand for the good is **price inelastic** (as with cigarettes or petrol), the tax raises revenue but does little to reduce consumption. The externality may persist even after the tax is imposed.",
+        "type": "paragraph"
+       },
+       {
+        "text": "There are also practical problems. Governments face **information failure** when setting the tax rate because the exact marginal external cost is difficult to measure. High taxes can encourage **smuggling** or **black market** activity, and firms may relocate production to countries with lower taxes, creating **carbon leakage**.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Evaluating Indirect Taxes",
+      "recall": {
+       "id": "government-intervention:sub:evaluating-indirect-taxes:recall",
+       "type": "fillin",
+       "hints": [
+        "re________",
+        "in_______",
+        "bl___"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "regressive",
+        "inelastic",
+        "black"
+       ],
+       "template": [
+        "Indirect taxes can be ___ (hit poorer households harder)",
+        "→ ___ demand means tax barely reduces consumption",
+        "→ High taxes may encourage ___ market activity"
+       ]
+      },
+      "keyIdea": "Indirect taxes generate revenue and discourage harmful consumption, but they can be regressive, hard to calibrate, and may simply shift activity to untaxed alternatives.",
+      "examMatters": "In evaluation, you should discuss elasticity of demand when assessing how effective the tax will be at reducing consumption. A tax on an inelastic good raises lots of revenue but changes behaviour very little, while a tax on an elastic good changes behaviour but raises less revenue.",
+      "realExample": {
+       "text": "**The UK Soft Drinks Industry Levy** (sugar tax), introduced in 2018, prompted manufacturers like Lucozade Ribena Suntory to reformulate drinks below the sugar threshold before the tax even took effect. This shows how the announcement of a tax can change producer behaviour, though critics argue consumers simply switched to other sugary products not covered by the levy.",
+       "emoji": "🥤"
+      },
+      "misconception": "Students claim that indirect taxes are unfair and should never be used because they are regressive. While the distributional impact is a valid concern, the health and environmental benefits may outweigh the regressivity, especially if revenue is recycled to support low-income households. Instead write: the regressive nature of indirect taxes is a limitation that must be weighed against their effectiveness in reducing harmful externalities."
+     }
+    ],
+    "takeaway": [
+     "Indirect taxes shift supply left, raising price and cutting output",
+     "A tax equal to the marginal external cost internalises the externality",
+     "Effectiveness depends on price elasticity of demand for the good",
+     "Taxes are regressive and may encourage black-market substitution"
+    ],
+    "diagramRef": "Indirect Tax",
+    "quizIndices": [
+     0
+    ]
+   },
+   {
+    "id": "government-intervention:block:245d89cb",
+    "title": "Subsidies to Correct Positive Externalities",
+    "sections": [
+     {
+      "id": "government-intervention:sub:how-subsidies-correct-market-failure",
+      "body": [
+       {
+        "text": "A **subsidy** is a grant given by the government to producers (or sometimes consumers) to lower the cost of providing a good or service. Subsidies are used when a good generates **positive externalities** — benefits to third parties that are not reflected in the market price. Because these external benefits are ignored, the free market **under-produces** goods with external benefits relative to the socially optimal quantity.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Government pays subsidy to producer",
+         "Supply curve shifts right (downward)",
+         "Price falls, quantity rises"
+        ],
+        "result": "Output moves closer to socially optimal level",
+        "resultType": "good"
+       },
+       {
+        "text": "When the subsidy is set equal to the **marginal external benefit** at the socially optimal output, it closes the gap between private and social benefit. You should see the subsidy as making goods with external benefits cheaper so that more people consume them, capturing the wider benefits for society.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Common examples include subsidies on education, healthcare, public transport and renewable energy. In each case, the individual consumer does not capture all the benefits of their consumption, so the government steps in to encourage more of it.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "How Subsidies Correct Market Failure",
+      "recall": {
+       "id": "government-intervention:sub:how-subsidies-correct-market-failure:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Government pays subsidy to producer",
+        "Supply curve shifts right (downward)",
+        "Price falls and quantity rises",
+        "Output moves closer to socially optimal level"
+       ]
+      },
+      "keyIdea": "A subsidy is a payment from the government to producers or consumers that lowers the cost of a good with external benefits of consumption, increasing consumption toward the socially optimal level.",
+      "examMatters": "When drawing a subsidy diagram, you should show the supply curve shifting right by the amount of the subsidy and to clearly label the new lower price consumers pay versus the higher effective price producers receive. Always evaluate by considering the opportunity cost of the government spending.",
+      "realExample": {
+       "text": "**The UK Plug-in Car Grant** subsidised the purchase of electric vehicles by up to 1,500 pounds per car before it was withdrawn in 2022. During its lifetime the scheme helped increase EV registrations from under 4,000 in 2013 to over 267,000 in 2022, demonstrating how subsidies can accelerate adoption of goods with positive externalities.",
+       "emoji": "🔋"
+      },
+      "misconception": "Students write that subsidies guarantee the socially optimal output will be reached. In reality, the government faces the same information problem as with taxes — it rarely knows the exact marginal external benefit, so the subsidy may be set too high or too low. Instead write: subsidies move output toward the social optimum but imperfect information means the exact optimal level is rarely achieved."
+     },
+     {
+      "id": "government-intervention:sub:evaluating-subsidies",
+      "body": [
+       {
+        "text": "The strength of subsidies is that they work with the market rather than against it — you keep consumer choice while nudging behaviour toward the socially optimal outcome. They can be precisely **targeted** at specific goods, regions or income groups, making them a flexible policy tool.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The main weakness is the **opportunity cost**. Every pound spent on subsidies is a pound not spent on hospitals, schools or debt reduction. Subsidies must be funded through taxation or borrowing, which creates its own distortions. If set too high, subsidies can lead to **overproduction** and waste.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Subsidies can also be **difficult to remove** once interest groups become dependent on them. Farmers, energy companies or transport operators may lobby fiercely to keep subsidies in place long after the original market failure has been addressed. This creates **government failure** where the intervention itself becomes a problem.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Evaluating Subsidies",
+      "recall": {
+       "id": "government-intervention:sub:evaluating-subsidies:recall",
+       "type": "fillin",
+       "hints": [
+        "op__________",
+        "ov____________",
+        "re____"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "opportunity",
+        "overproduction",
+        "remove"
+       ],
+       "template": [
+        "Subsidies carry an ___ cost from taxation",
+        "→ If set too high they cause ___",
+        "→ Hard to ___ once interest groups depend on them"
+       ]
+      },
+      "keyIdea": "Subsidies increase consumption of goods with external benefits and can be targeted, but they carry an opportunity cost, may distort markets, and can be difficult to remove once established.",
+      "examMatters": "Strong evaluation of subsidies always addresses the opportunity cost. Marks follow you for asking what else the government could have done with the money and whether the subsidy is the most cost-effective way to correct the externality compared to alternatives like regulation or information provision.",
+      "realExample": {
+       "text": "**The EU Common Agricultural Policy** has subsidised European farmers for decades, originally to ensure food security. However, the subsidies have been criticised for encouraging overproduction, distorting global trade, and disproportionately benefiting large agribusinesses rather than small farmers who need support most.",
+       "emoji": "🌾"
+      },
+      "misconception": "Students claim subsidies are always better than taxes because they do not raise prices for consumers. This ignores the fact that subsidies must be funded through taxes elsewhere, so the cost is still borne by society. Instead write: subsidies lower prices for the subsidised good but create an opportunity cost because the funding must come from taxation or reduced spending elsewhere."
+     }
+    ],
+    "takeaway": [
+     "Subsidies shift supply right, lowering price and raising output",
+     "Set equal to marginal external benefit, they correct under-consumption",
+     "Every subsidy has an opportunity cost funded by taxation",
+     "Subsidies can become entrenched and hard to remove politically"
+    ],
+    "diagramRef": "Subsidy",
+    "quizIndices": [
+     1
+    ],
+    "practiceIndices": [
+     0
+    ]
+   },
+   {
+    "id": "government-intervention:block:4fdcb8f4",
+    "title": "Maximum Prices (Price Ceilings)",
+    "sections": [
+     {
+      "id": "government-intervention:sub:how-maximum-prices-work",
+      "body": [
+       {
+        "text": "A **maximum price** (or **price ceiling**) is a legally imposed upper limit on the price that can be charged for a good or service. For it to have any effect, it must be set **below the free-market equilibrium price**. If set above equilibrium, the market would simply clear at the lower equilibrium price and the ceiling would be irrelevant.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Government sets price below equilibrium",
+         "Quantity demanded rises, quantity supplied falls",
+         "Excess demand creates a shortage"
+        ],
+        "result": "Good is cheaper but not everyone can get it",
+        "resultType": "neutral"
+       },
+       {
+        "text": "Governments impose maximum prices to make essential goods **affordable** for consumers, particularly those on low incomes. Common examples include **rent controls** on housing and **price caps** on basic foodstuffs during emergencies. The aim is to protect consumers from exploitation or ensure access to necessities.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The inevitable consequence is a **shortage** — at the lower price, more people want to buy the good but fewer producers are willing or able to supply it. This shortage must be managed somehow, usually through queuing, rationing, or allocation by sellers.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "How Maximum Prices Work",
+      "recall": {
+       "id": "government-intervention:sub:how-maximum-prices-work:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        2,
+        3,
+        0,
+        1
+       ],
+       "correctOrder": [
+        "Government sets price below equilibrium",
+        "Quantity demanded rises, quantity supplied falls",
+        "Excess demand creates a shortage",
+        "Rationing or black markets emerge"
+       ]
+      },
+      "keyIdea": "A maximum price is a legal ceiling set below the equilibrium, making a good more affordable but creating a shortage because quantity demanded exceeds quantity supplied.",
+      "examMatters": "You should draw the diagram showing the maximum price below equilibrium, clearly labelling the shortage as the gap between quantity demanded and quantity supplied. Always evaluate by discussing the consequences of the shortage, including rationing, black markets and reduced quality.",
+      "realExample": {
+       "text": "**New York City** has maintained rent control and rent stabilisation policies since the 1940s, keeping rents below market rates for millions of tenants. While this makes existing apartments more affordable, critics point to a chronic housing shortage, deteriorating building conditions, and a thriving black market for rent-controlled units.",
+       "emoji": "🏠"
+      },
+      "misconception": "Students write that maximum prices solve the affordability problem because consumers pay less. The lower price creates a shortage, so many consumers cannot buy the good at all, and black markets often emerge where prices are even higher than the original equilibrium. Instead write: maximum prices reduce the price for those who can obtain the good but create shortages and potential black-market activity."
+     },
+     {
+      "id": "government-intervention:sub:effects-and-evaluation-of-price-ceilings",
+      "body": [
+       {
+        "text": "In the **short run**, a maximum price benefits consumers who manage to purchase the good at the lower price. However, because supply falls, a system of **rationing** or allocation is needed. This can take the form of queues, waiting lists, or informal favouritism by sellers.",
+        "type": "paragraph"
+       },
+       {
+        "text": "In the **long run**, the effects are more damaging. Producers earn lower returns, so they **reduce investment** in the product. With rent controls, landlords spend less on maintenance, leading to deteriorating housing quality. New supply is discouraged because the controlled price does not cover the cost of new construction.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Black markets** are a common consequence — some consumers are willing to pay above the ceiling, and some suppliers are willing to sell illegally at higher prices. The very people the policy was designed to protect may end up paying more on the black market than they would have at the free-market equilibrium.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Effects and Evaluation of Price Ceilings",
+      "recall": {
+       "id": "government-intervention:sub:effects-and-evaluation-of-price-ceilings:recall",
+       "type": "fillin",
+       "hints": [
+        "pr___",
+        "in________",
+        "bl___"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "price",
+        "investment",
+        "black"
+       ],
+       "template": [
+        "Short run: some consumers benefit from lower ___",
+        "→ Long run: producers reduce ___ and quality falls",
+        "→ ___ markets emerge where prices exceed equilibrium"
+       ]
+      },
+      "keyIdea": "Price ceilings protect some consumers in the short run but can reduce supply, quality and investment in the long run, often hurting the people they aim to help.",
+      "examMatters": "In longer-answer questions, marks follow you for distinguishing between short-run and long-run effects of price ceilings. Always discuss the impact on both consumers and producers, and consider whether alternative policies like subsidies might achieve the affordability goal without creating a shortage.",
+      "realExample": {
+       "text": "**Venezuela** imposed price ceilings on basic goods including food and medicine during its economic crisis. Rather than making goods affordable, the controls caused severe shortages as producers could not cover their costs, leading to empty supermarket shelves and a booming black market where prices were many times the official ceiling.",
+       "emoji": "🇻🇪"
+      },
+      "misconception": "Students assume that if a maximum price causes problems, the government should simply set it closer to the equilibrium. A maximum price only affects the market if it is below equilibrium, and the closer it gets to equilibrium, the less impact it has on affordability. Instead write: there is an inherent trade-off between making a good affordable and avoiding the shortage that a binding price ceiling creates."
+     }
+    ],
+    "takeaway": [
+     "Maximum prices must be set below equilibrium to be effective",
+     "They create shortages because Qd exceeds Qs at the lower price",
+     "Black markets and reduced quality are common long-run effects",
+     "Subsidies may achieve affordability without creating shortages"
+    ],
+    "diagramRef": "Maximum Price",
+    "quizIndices": [
+     2
+    ]
+   },
+   {
+    "id": "government-intervention:block:447b02cd",
+    "title": "Minimum Prices (Price Floors)",
+    "sections": [
+     {
+      "id": "government-intervention:sub:how-minimum-prices-work",
+      "body": [
+       {
+        "text": "A **minimum price** (or **price floor**) is a legally imposed lower limit on the price of a good or service. For it to have any effect, it must be set **above the free-market equilibrium price**. If set below equilibrium, the market would simply clear at the higher equilibrium price and the floor would be irrelevant.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Government sets price above equilibrium",
+         "Quantity supplied rises, quantity demanded falls",
+         "Excess supply creates a surplus"
+        ],
+        "result": "Producers get a higher price but face unsold stock",
+        "resultType": "neutral"
+       },
+       {
+        "text": "Governments use minimum prices to **protect producers** by guaranteeing them a higher income, or to **discourage consumption** of goods with external costs by keeping the price high. The **National Minimum Wage** is a price floor in the labour market, and **minimum unit pricing** for alcohol aims to reduce harmful drinking.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The direct consequence is a **surplus** — at the higher price, producers want to sell more but consumers want to buy less. The government may need to purchase the surplus itself, store it, or destroy it to maintain the minimum price.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "How Minimum Prices Work",
+      "recall": {
+       "id": "government-intervention:sub:how-minimum-prices-work:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        3,
+        0,
+        2,
+        1
+       ],
+       "correctOrder": [
+        "Government sets price above equilibrium",
+        "Quantity supplied rises, quantity demanded falls",
+        "Excess supply creates a surplus",
+        "Government may need to buy up unsold stock"
+       ]
+      },
+      "keyIdea": "A minimum price is a legal floor set above the equilibrium, guaranteeing producers a higher income but creating a surplus because quantity supplied exceeds quantity demanded.",
+      "examMatters": "You should draw the diagram with the minimum price above equilibrium, clearly labelling the surplus. For labour market questions, identify the surplus as unemployment. Always evaluate by discussing who benefits, who loses, and whether the government must intervene to buy up the surplus.",
+      "realExample": {
+       "text": "**Scotland** introduced minimum unit pricing for alcohol at 50p per unit in 2018, the first country in the world to do so. Research published by Public Health Scotland in 2023 found that alcohol-specific deaths fell by 13% in the first year compared to what would have been expected, suggesting the price floor was effective at reducing harmful consumption.",
+       "emoji": "🍺"
+      },
+      "misconception": "Students write that minimum prices always lead to unemployment in the labour market context. Whether the National Minimum Wage causes unemployment depends on where it is set relative to the equilibrium wage and the elasticity of demand for labour. Instead write: a minimum wage above the equilibrium wage may cause some unemployment, but if set close to equilibrium or in a monopsony labour market, the effect may be minimal."
+     },
+     {
+      "id": "government-intervention:sub:effects-and-evaluation-of-price-floors",
+      "body": [
+       {
+        "text": "The main benefit of a minimum price is **income protection** for producers. Farmers guaranteed a floor price can plan investment with greater certainty, and workers on a minimum wage earn enough to cover basic living costs. Minimum prices on goods with external costs like alcohol reduce consumption of harmful products.",
+        "type": "paragraph"
+       },
+       {
+        "text": "However, the **surplus** created by a minimum price is a significant problem. In agricultural markets, governments may have to buy and store or destroy surplus produce, which is expensive and wasteful. In the labour market, a minimum wage set too high could price low-skilled workers out of employment entirely.",
+        "type": "paragraph"
+       },
+       {
+        "text": "There is also an **equity concern**. Minimum prices on goods like alcohol are regressive — they disproportionately affect low-income consumers who spend a larger share of their budget on these items. Meanwhile, producers of premium goods are largely unaffected because their prices already exceed the floor.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Effects and Evaluation of Price Floors",
+      "recall": {
+       "id": "government-intervention:sub:effects-and-evaluation-of-price-floors:recall",
+       "type": "fillin",
+       "hints": [
+        "in____",
+        "st___",
+        "wa__"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "income",
+        "store",
+        "wage"
+       ],
+       "template": [
+        "Minimum prices protect producer ___",
+        "→ But surplus is costly to ___ or destroy",
+        "→ Minimum ___ is a price floor in the labour market"
+       ]
+      },
+      "keyIdea": "Price floors guarantee producer income and can reduce harmful consumption, but surpluses are costly and the policy may hurt the consumers or workers it was designed to protect.",
+      "examMatters": "Strong answers evaluate minimum prices by considering the elasticity of demand and supply. If demand is inelastic, the price floor reduces quantity demanded only slightly, creating a small surplus but effectively raising producer income. Marks follow this nuanced analysis over a generic description of surpluses.",
+      "realExample": {
+       "text": "**The EU butter mountain** of the 1980s was a direct result of minimum prices under the Common Agricultural Policy. Guaranteed floor prices encouraged European farmers to overproduce dairy products, creating surplus stocks of over 1.2 million tonnes of butter that the EU had to buy, store in refrigerated warehouses, and eventually sell at a loss or give away as food aid.",
+       "emoji": "🧈"
+      },
+      "misconception": "Students claim minimum prices are ineffective because consumers will simply stop buying the product. For necessities with inelastic demand, consumers continue buying even at the higher price, so the surplus is smaller than expected. Instead write: the size of the surplus depends on the price elasticity of both demand and supply for the good in question."
+     }
+    ],
+    "takeaway": [
+     "Minimum prices must be set above equilibrium to be effective",
+     "They create surpluses that the government may need to buy up",
+     "Effectiveness at reducing consumption depends on elasticity",
+     "The National Minimum Wage is a price floor in the labour market"
+    ],
+    "diagramRef": "Minimum Price",
+    "quizIndices": [
+     3
+    ],
+    "practiceIndices": [
+     1
+    ]
+   },
+   {
+    "id": "government-intervention:block:13a6d299",
+    "title": "Tradeable Pollution Permits",
+    "sections": [
+     {
+      "id": "government-intervention:sub:how-permit-systems-work",
+      "body": [
+       {
+        "text": "A **tradeable pollution permit** (also called **cap and trade**) is a market-based approach to reducing pollution. The government sets an overall **cap** on the total quantity of a pollutant that can be emitted, then distributes or auctions **permits** that give firms the right to emit a certain amount. Each permit allows a fixed quantity of pollution.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Government sets a total emissions cap",
+         "Permits are allocated to firms",
+         "Firms trade permits on an open market"
+        ],
+        "result": "Emissions fall to the cap at lowest overall cost",
+        "resultType": "good"
+       },
+       {
+        "text": "The key innovation is that permits are **tradeable**. Firms that can reduce their emissions cheaply do so and sell their spare permits for profit. Firms that find it expensive to cut emissions buy extra permits instead. This means pollution reductions happen where they are cheapest, minimising the total cost to the economy.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Over time, the government can **tighten the cap** by reducing the total number of permits issued, gradually lowering the overall level of pollution. As permits become scarcer, their price rises, giving firms an increasing financial incentive to invest in cleaner technology.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "How Permit Systems Work",
+      "recall": {
+       "id": "government-intervention:sub:how-permit-systems-work:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Government sets total emissions cap",
+        "Permits are allocated to firms",
+        "Firms trade permits on open market",
+        "Emissions fall to cap at lowest overall cost"
+       ]
+      },
+      "keyIdea": "The government caps total pollution and issues tradeable permits, so firms that cut emissions cheaply sell spare permits to firms where reductions cost more.",
+      "examMatters": "You should explain how the trading mechanism ensures cost-efficiency by channelling reductions to firms with the lowest abatement costs. Always evaluate by discussing whether the cap is set at the right level and the risk of excess permits keeping prices too low to incentivise change.",
+      "realExample": {
+       "text": "**The EU Emissions Trading System** (EU ETS), launched in 2005, is the world's largest carbon market covering over 10,000 power stations and industrial plants across Europe. After initial problems with oversupply of permits that kept prices too low, reforms since 2019 have pushed carbon prices above 80 euros per tonne, significantly accelerating investment in renewable energy.",
+       "emoji": "🏭"
+      },
+      "misconception": "Students write that permit systems allow rich firms to pollute as much as they want by simply buying more permits. The total cap on emissions is fixed regardless of who holds the permits, so buying permits does not increase total pollution. Instead write: the cap guarantees the total pollution level while the trading mechanism ensures reductions happen at the lowest cost."
+     },
+     {
+      "id": "government-intervention:sub:evaluating-permit-systems",
+      "body": [
+       {
+        "text": "The main advantage of tradeable permits is that they combine **environmental certainty** with **economic efficiency**. The cap guarantees the maximum level of pollution, and the market ensures reductions happen where they are cheapest. Unlike a tax, you know exactly how much pollution will occur.",
+        "type": "paragraph"
+       },
+       {
+        "text": "However, permit systems face serious practical challenges. If too many permits are issued, the price collapses and firms have no incentive to invest in cleaner technology. **Monitoring and enforcement** are expensive — you need to verify that firms are not emitting more than their permits allow. There is also a risk of **fraud** in permit trading.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Compared to a carbon tax, permits fix the **quantity** of pollution but let the **price** fluctuate, which creates uncertainty for firms planning long-term investment. A carbon tax does the opposite — it fixes the price but lets the quantity vary. Neither instrument is clearly superior; the best choice depends on whether quantity or price certainty matters more.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Evaluating Permit Systems",
+      "recall": {
+       "id": "government-intervention:sub:evaluating-permit-systems:recall",
+       "type": "fillin",
+       "hints": [
+        "qu______",
+        "pr___",
+        "op______"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "quantity",
+        "price",
+        "opposite"
+       ],
+       "template": [
+        "Permits fix the ___ of pollution",
+        "→ But let the ___ fluctuate",
+        "→ A carbon tax does the ___ — fixes price, not quantity"
+       ]
+      },
+      "keyIdea": "Cap and trade achieves a guaranteed emissions reduction at low cost, but effectiveness depends on the cap being tight enough and the market being well-regulated.",
+      "examMatters": "A common exam question asks you to compare tradeable permits with indirect taxes as methods for reducing pollution. Structure your answer around the key trade-off: permits give quantity certainty, taxes give price certainty. Evaluate which matters more in the given context and always consider information requirements.",
+      "realExample": {
+       "text": "**The US Acid Rain Program**, launched in 1990, used tradeable permits for sulphur dioxide emissions from power plants. It achieved a 50% reduction in SO2 emissions at roughly half the projected cost, and is widely regarded as one of the most successful environmental policies ever implemented.",
+       "emoji": "🇺🇸"
+      },
+      "misconception": "Students claim that tradeable permits and carbon taxes are essentially the same thing because both put a price on pollution. The critical difference is that permits fix the quantity of emissions and let the price vary, while a tax fixes the price and lets the quantity vary. Instead write: permits guarantee the pollution level but create price uncertainty, while taxes guarantee the price but create quantity uncertainty."
+     }
+    ],
+    "takeaway": [
+     "Cap and trade sets a pollution limit and lets firms trade permits",
+     "Reductions occur where abatement costs are lowest",
+     "Permits fix quantity of pollution; taxes fix the price",
+     "Oversupply of permits can collapse the price and weaken incentives"
+    ],
+    "quizIndices": [
+     4
+    ]
+   },
+   {
+    "id": "government-intervention:block:0f1d4330",
+    "title": "State Provision & Provision of Information",
+    "sections": [
+     {
+      "id": "government-intervention:sub:direct-state-provision",
+      "body": [
+       {
+        "text": "**Direct state provision** means the government itself produces and supplies a good or service, typically funded through **taxation**. This is the standard approach for **public goods** like national defence and street lighting, which the market will not provide because of the **free-rider problem** — you cannot exclude non-payers from benefiting.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Market fails to provide the good",
+         "Government funds provision through taxation",
+         "Good is available free at point of use"
+        ],
+        "result": "Everyone can access the good regardless of ability to pay",
+        "resultType": "good"
+       },
+       {
+        "text": "The government also directly provides many **goods with external benefits** like state education and public healthcare. These could be provided by the market, but would be **under-consumed** if left to private provision because consumers undervalue the external benefits or cannot afford the market price.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The trade-off is that state provision requires **tax revenue**, which has an opportunity cost. Publicly provided services may also suffer from **productive inefficiency** because they lack the competitive pressure that drives private firms to minimise costs and innovate.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Direct State Provision",
+      "recall": {
+       "id": "government-intervention:sub:direct-state-provision:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Market fails to provide the good",
+        "Government funds provision through taxation",
+        "Good is available free at point of use",
+        "Everyone can access regardless of ability to pay"
+       ]
+      },
+      "keyIdea": "When the free market under-provides public goods or goods with external benefits, the government can step in and provide them directly, funded through general taxation.",
+      "examMatters": "You should evaluate state provision by weighing the benefit of universal access and equity against the costs of taxation, potential inefficiency, and the opportunity cost of public spending. Never just describe what state provision is — always assess whether it is the best way to correct the specific market failure.",
+      "realExample": {
+       "text": "**The UK National Health Service** provides healthcare free at the point of use, funded through general taxation and National Insurance contributions. While the NHS ensures universal access regardless of income, it faces persistent waiting lists and funding pressures, illustrating the tension between equity of access and productive efficiency.",
+       "emoji": "🏥"
+      },
+      "misconception": "Students write that the government must provide all goods with external benefits because the private sector will not produce them. In reality, the private sector does provide goods with external benefits like private schools and hospitals, but at a price that excludes many consumers. Instead write: the government provides goods with external benefits to ensure universal access, not because the private sector is incapable of producing them."
+     },
+     {
+      "id": "government-intervention:sub:information-provision-and-nudge-theory",
+      "body": [
+       {
+        "text": "**Information provision** addresses market failure caused by **information asymmetry** or **imperfect information**. When consumers do not fully understand the costs or benefits of their choices — such as the health risks of smoking or the long-term returns to education — they make decisions that reduce their own welfare and society's welfare.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Government responses include **mandatory labelling** (calorie counts on food), **public health campaigns** (anti-smoking advertisements), and **compulsory disclosure** (firms must publish ingredients or safety ratings). The goal is to help consumers make better-informed decisions without restricting their freedom of choice.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Consumers lack key information",
+         "Government provides facts or changes choice architecture",
+         "Better-informed decisions are made"
+        ],
+        "result": "Consumption moves closer to socially optimal level",
+        "resultType": "good"
+       },
+       {
+        "text": "**Nudge theory** takes this further by designing the choice environment to steer people toward better decisions without removing options. Examples include making pension auto-enrolment the default (you must opt out rather than opt in) and placing healthier foods at eye level in canteens. Nudges are cheap and preserve freedom of choice, but they may be seen as paternalistic.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Information Provision and Nudge Theory",
+      "recall": {
+       "id": "government-intervention:sub:information-provision-and-nudge-theory:recall",
+       "type": "fillin",
+       "hints": [
+        "in__________",
+        "ar___________",
+        "nu____"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "information",
+        "architecture",
+        "nudges"
+       ],
+       "template": [
+        "Consumers lack key ___ about costs or benefits",
+        "→ Government provides facts or changes choice ___",
+        "→ ___ steer behaviour without removing freedom"
+       ]
+      },
+      "keyIdea": "When consumers make poor choices because they lack information, the government can correct this by providing facts or designing choices that nudge people toward better decisions.",
+      "examMatters": "Nudge theory is increasingly popular in exam questions. Marks follow you for explaining how nudges preserve freedom of choice (they are libertarian paternalism) while evaluating their limitations, particularly that they rely on predictable biases and may not work for all consumers or all types of market failure.",
+      "realExample": {
+       "text": "**The UK auto-enrolment pension scheme**, introduced in 2012, nudges employees into saving for retirement by making pension contributions the default. By 2023, over 10 million additional workers were saving into a workplace pension, demonstrating how changing the default option can dramatically shift behaviour without banning any choices.",
+       "emoji": "💰"
+      },
+      "misconception": "Students claim that providing information always corrects the market failure because rational consumers will change their behaviour once informed. In practice, behavioural biases like present bias and habit mean consumers often ignore information even when it is clearly presented. Instead write: information provision helps consumers make better choices but is limited by behavioural biases that prevent people from acting on the information they receive."
+     }
+    ],
+    "takeaway": [
+     "State provision ensures access to public and goods with external benefits for all",
+     "Information campaigns correct failures from imperfect knowledge",
+     "Nudges steer behaviour without removing freedom of choice",
+     "All state provision carries an opportunity cost funded by taxation"
+    ],
+    "quizIndices": [
+     5
+    ],
+    "practiceIndices": [
+     2
+    ]
+   },
+   {
+    "id": "government-intervention:block:9ee6fbc9",
+    "title": "Regulation & Deregulation",
+    "sections": [
+     {
+      "id": "government-intervention:sub:types-of-regulation",
+      "body": [
+       {
+        "text": "**Regulation** is the use of laws and rules imposed by the government to control the behaviour of firms and individuals. Unlike taxes and subsidies, which use financial incentives to change behaviour, regulation **directly prohibits or mandates** certain actions. You must comply or face fines, closure, or criminal prosecution.",
+        "type": "paragraph"
+       },
+       {
+        "text": "There are several types of regulation relevant to correcting market failure. **Environmental regulation** sets maximum pollution limits (e.g. emissions standards for cars). **Consumer protection regulation** ensures product safety and honest advertising. **Competition regulation** prevents monopoly abuse and protects consumers from anti-competitive behaviour.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Government identifies market failure",
+         "Legal standard or limit is imposed",
+         "Firms must comply or face penalties"
+        ],
+        "result": "Behaviour changes directly through legal force",
+        "resultType": "neutral"
+       },
+       {
+        "text": "The advantage of regulation is **certainty** — a ban on dumping toxic waste is absolute, unlike a tax which a firm might simply absorb. However, regulation can be **costly to enforce**, may stifle innovation by removing flexibility, and is vulnerable to **regulatory capture** where industries influence the rules in their own favour.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Types of Regulation",
+      "recall": {
+       "id": "government-intervention:sub:types-of-regulation:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        1,
+        3,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Government identifies market failure",
+        "Legal standard or limit is imposed",
+        "Firms must comply or face penalties",
+        "Behaviour changes through legal force"
+       ]
+      },
+      "keyIdea": "Regulation uses legal rules to directly control market behaviour, setting limits on pollution, prices, or business practices that firms must obey or face penalties.",
+      "examMatters": "Examiners often ask you to compare regulation with market-based approaches like taxes or permits. Structure your comparison around flexibility (market instruments allow firms to choose how to respond), cost-effectiveness (regulation treats all firms the same regardless of abatement costs), and certainty of outcome.",
+      "realExample": {
+       "text": "**The EU Euro 6 emissions standards** set strict limits on nitrogen oxide and particulate emissions from new vehicles sold in Europe. These regulations directly forced manufacturers like Volkswagen and BMW to invest billions in cleaner engine technology, though the Volkswagen dieselgate scandal revealed that some firms cheated compliance tests rather than genuinely reducing emissions.",
+       "emoji": "🚗"
+      },
+      "misconception": "Students write that regulation is the most effective form of government intervention because it forces compliance. Regulation is only as effective as enforcement allows, and firms may find ways to evade rules or lobby for weaker standards. Instead write: regulation provides direct control over behaviour but its effectiveness depends entirely on the quality of monitoring and enforcement."
+     },
+     {
+      "id": "government-intervention:sub:deregulation-and-its-effects",
+      "body": [
+       {
+        "text": "**Deregulation** is the removal or reduction of government rules and restrictions on business activity. The aim is to **increase competition**, **reduce costs** for firms, and allow market forces to allocate resources more efficiently. It was a major policy trend in the UK from the 1980s onward, affecting industries like telecoms, energy, airlines and financial services.",
+        "type": "paragraph"
+       },
+       {
+        "text": "When deregulation works well, it can deliver significant benefits. The deregulation of UK bus services and airlines brought new entrants, lower prices and greater consumer choice. Removing unnecessary **red tape** reduces costs for businesses and can encourage entrepreneurship and innovation.",
+        "type": "paragraph"
+       },
+       {
+        "text": "However, deregulation can go wrong if the regulations being removed existed for good reason. The deregulation of financial markets has been linked to increased risk-taking and financial instability. Without rules, firms may cut corners on safety, exploit workers, or damage the environment. You should always ask whether the regulation being removed was addressing a genuine market failure.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Deregulation and Its Effects",
+      "recall": {
+       "id": "government-intervention:sub:deregulation-and-its-effects:recall",
+       "type": "fillin",
+       "hints": [
+        "co__________",
+        "in________",
+        "in_________"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "competition",
+        "innovation",
+        "instability"
+       ],
+       "template": [
+        "Deregulation removes rules to boost ___",
+        "→ Can lower costs and encourage ___",
+        "→ But risks ___ if rules corrected genuine failures"
+       ]
+      },
+      "keyIdea": "Deregulation removes government rules to boost competition and efficiency, but risks instability when the original regulations were correcting genuine market failures.",
+      "examMatters": "When evaluating deregulation, you should consider why the regulation existed in the first place. If it was correcting a genuine market failure, removing it may recreate that failure. If it was simply creating unnecessary bureaucracy, removing it may improve efficiency. Context is everything in your evaluation.",
+      "realExample": {
+       "text": "**UK airline deregulation** in the 1980s and 1990s allowed new budget carriers like easyJet and Ryanair to enter the market and compete with established airlines. Average air fares fell significantly and passenger numbers soared, but critics point to reduced service quality, crowded airports, and environmental costs from the surge in flights.",
+       "emoji": "✈️"
+      },
+      "misconception": "Students claim that deregulation always improves efficiency because free markets are superior to government control. Some markets require regulation to function properly, particularly where there are externalities, natural monopolies, or information asymmetries. Instead write: deregulation improves efficiency in competitive markets but may worsen outcomes where regulation was correcting genuine market failures."
+     }
+    ],
+    "takeaway": [
+     "Regulation directly controls behaviour through legal rules",
+     "It provides certainty but can be costly to enforce",
+     "Deregulation increases competition but risks market instability",
+     "Always assess whether removed regulations served a genuine purpose"
+    ],
+    "quizIndices": [
+     6
+    ]
+   },
+   {
+    "id": "government-intervention:block:e0ce3b11",
+    "title": "Government Failure",
+    "sections": [
+     {
+      "id": "government-intervention:sub:what-is-government-failure",
+      "body": [
+       {
+        "text": "**Government failure** occurs when government intervention in the economy leads to a **net welfare loss** — the intervention makes the situation worse rather than better, or creates new inefficiencies that outweigh the benefits of correcting the original market failure. It is the government equivalent of market failure.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Market failure identified",
+         "Government intervenes",
+         "Intervention creates worse outcome"
+        ],
+        "result": "Resources are misallocated more than before",
+        "resultType": "bad"
+       },
+       {
+        "text": "Government failure does not mean the government made a bad decision on purpose. It can result from **unintended consequences**, **imperfect information**, **political pressures**, or simply the sheer difficulty of designing policies that work as intended in complex economies.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should recognise that the existence of market failure does not automatically justify government intervention. If the cure is worse than the disease — that is, if the costs of intervention exceed the costs of the market failure — then doing nothing may actually be the better option.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "What Is Government Failure",
+      "recall": {
+       "id": "government-intervention:sub:what-is-government-failure:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Market failure is identified",
+        "Government intervenes with a policy",
+        "Intervention creates unintended consequences",
+        "Resources are misallocated more than before"
+       ]
+      },
+      "keyIdea": "Government failure occurs when intervention to correct a market failure actually makes the allocation of resources worse than it would have been without the intervention.",
+      "examMatters": "Examiners frequently ask you to evaluate government intervention by considering the possibility of government failure. This is your opportunity to show high-level analysis by explaining why a well-intentioned policy might produce unintended consequences that leave society worse off than the original market failure.",
+      "realExample": {
+       "text": "**US ethanol subsidies** were introduced to reduce dependence on fossil fuels by encouraging corn-based biofuel production. However, the policy diverted so much farmland to corn that food prices rose globally, rainforests were cleared for new cropland, and the net environmental benefit was negligible — a textbook case of government failure.",
+       "emoji": "🌽"
+      },
+      "misconception": "Students write that government failure means the government should never intervene in markets. Government failure is a risk of intervention, not an argument against all intervention. Instead write: government failure means the specific intervention worsened the outcome, which should make governments design policies more carefully rather than abandon intervention altogether."
+     },
+     {
+      "id": "government-intervention:sub:causes-of-government-failure",
+      "body": [
+       {
+        "text": "The most fundamental cause of government failure is **imperfect information**. To set the correct tax rate or subsidy level, the government needs to know the exact marginal external cost or benefit — information it rarely has. If a carbon tax is set too low, pollution continues; if set too high, firms relocate and jobs are lost.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Political short-termism** is another major cause. Politicians face elections every few years, so they may favour policies that deliver visible short-term benefits over those that address long-term problems. Subsidies to declining industries may win votes today but delay necessary economic adjustment and waste resources.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Regulatory capture** occurs when the industries being regulated gain influence over the regulator, shaping rules to benefit themselves rather than the public interest. **Unintended consequences** are inevitable in complex economies — banning plastic bags may increase demand for thicker, more resource-intensive reusable bags.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Causes of Government Failure",
+      "recall": {
+       "id": "government-intervention:sub:causes-of-government-failure:recall",
+       "type": "fillin",
+       "hints": [
+        "im________",
+        "sh____________",
+        "ca_____"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "imperfect",
+        "short-termism",
+        "capture"
+       ],
+       "template": [
+        "___ information means wrong tax or subsidy level",
+        "→ Political ___ favours short-term wins over long-term fixes",
+        "→ Regulatory ___ lets industries shape rules in their favour"
+       ]
+      },
+      "keyIdea": "Government failure is caused by imperfect information, political short-termism, unintended consequences, and the influence of special interest groups on policy design.",
+      "examMatters": "When explaining causes of government failure, you should link each cause to a specific policy example rather than listing causes in the abstract. Saying the government has imperfect information is not enough — explain how this imperfect information leads to a specific policy being set at the wrong level.",
+      "realExample": {
+       "text": "**The 2008 financial crisis** was partly caused by government failure through inadequate regulation of complex financial products. Regulators lacked the information and expertise to understand the risks of mortgage-backed securities, and political pressure to expand home ownership discouraged stricter oversight of lending standards.",
+       "emoji": "🏦"
+      },
+      "misconception": "Students claim that government failure is always caused by corrupt or incompetent politicians. Most government failure results from the genuine difficulty of designing effective policy with incomplete information in a complex economy. Instead write: government failure typically stems from information gaps and unintended consequences rather than deliberate policy errors."
+     },
+     {
+      "id": "government-intervention:sub:examples-and-evaluation-of-government-failure",
+      "body": [
+       {
+        "text": "When you evaluate any government intervention, you should apply a simple test: is the outcome **better or worse** than it would have been without the intervention? If the costs of the policy — including administration costs, distortions, and unintended consequences — exceed the welfare gain from correcting the market failure, then government failure has occurred.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Measure the cost of market failure",
+         "Measure the cost of intervention",
+         "Compare the two outcomes"
+        ],
+        "result": "If intervention costs exceed market failure costs, government failure exists",
+        "resultType": "neutral"
+       },
+       {
+        "text": "Common examples include agricultural subsidies that lead to overproduction and environmental damage, rent controls that reduce housing supply and quality, and minimum wages set so high that they create significant unemployment. In each case, the intervention was well-intentioned but the outcome was worse than the problem it aimed to solve.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The policy implication is not that governments should stop intervening, but that they should intervene **more carefully**. Pilot schemes, sunset clauses, cost-benefit analysis and independent evaluation can all help reduce the risk of government failure. The best policies are those that correct the market failure with the fewest unintended side effects.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Examples and Evaluation",
+      "recall": {
+       "id": "government-intervention:sub:examples-and-evaluation-of-government-failure:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Measure the cost of market failure",
+        "Measure the cost of intervention",
+        "Compare the two outcomes",
+        "If intervention costs exceed failure costs, government failure exists"
+       ]
+      },
+      "keyIdea": "Evaluating intervention requires weighing the cost of the market failure against the cost of the policy itself, including any unintended consequences that arise.",
+      "examMatters": "In any evaluation question on government intervention, bringing in the concept of government failure demonstrates the highest level of analysis. Marks follow you for explaining that even well-designed policies can fail, and for suggesting how the policy could be improved rather than simply arguing for or against intervention.",
+      "realExample": {
+       "text": "**London taxi licensing** restricted the number of black cabs through strict regulation, keeping fares high and limiting supply. When ride-sharing services like Uber entered the market, they exposed how the licensing system had created an artificial shortage, though deregulation brought its own concerns about driver pay, passenger safety and congestion.",
+       "emoji": "🚕"
+      },
+      "misconception": "Students argue that government failure proves free markets are always superior to government intervention. Every economy has both market failures and government failures, and the goal is to find the right balance of intervention. Instead write: the existence of government failure means intervention should be carefully designed and evaluated, not that it should be avoided entirely."
+     }
+    ],
+    "takeaway": [
+     "Government failure means intervention worsens resource allocation",
+     "Imperfect information and political short-termism are key causes",
+     "Always compare the cost of intervention with the market failure",
+     "Good policy design reduces but cannot eliminate the risk"
+    ],
+    "quizIndices": [
+     7
+    ],
+    "practiceIndices": [
+     3
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "flow": {
+     "steps": [
+      "Identify external cost",
+      "Set tax equal to external cost per unit",
+      "Supply shifts up, output falls to social optimum"
+     ],
+     "result": "Externality internalised; welfare loss reduced",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "Indirect Taxes to Correct Externalities",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Pigouvian tax</strong> — a tax set equal to the external cost per unit so that MPC plus the tax equals MSC, internalising the externality and achieving the socially optimal output.",
+        "type": "def"
+       },
+       {
+        "text": "The tax shifts the supply curve upward by the amount of the <strong>external cost</strong>, raising the price and reducing quantity to the socially optimal level.",
+        "type": "mech"
+       },
+       {
+        "text": "Tax revenue can be <strong>hypothecated</strong> to fund clean-up or compensate those harmed by the externality, further correcting the market failure.",
+        "type": "mech"
+       }
+      ],
+      "title": "HOW TAXES CORRECT FAILURE"
+     },
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "Setting the tax at exactly the right level requires <strong>accurate measurement</strong> of external costs, which is extremely difficult in practice.",
+        "type": "imp"
+       },
+       {
+        "text": "If demand is highly inelastic, the tax raises revenue but <strong>barely reduces consumption</strong>, failing to correct the externality.",
+        "type": "imp"
+       },
+       {
+        "text": "This connects to indirect taxes in 1.3.4; the analysis of incidence and welfare loss applies, but here the tax is intended to reduce a welfare loss rather than create one.",
+        "type": "link"
+       }
+      ],
+      "title": "EVALUATION"
+     }
+    ],
+    "keyIdea": "By making polluters pay for the damage they cause, an indirect tax forces the private cost up to the social cost, nudging output toward the level society actually wants.",
+    "takeaway": [
+     "A Pigouvian tax internalises the externality by making the polluter pay the full social cost.",
+     "Effectiveness depends on accurate measurement of external costs and the elasticity of demand.",
+     "Tax revenue can be used to compensate victims or fund environmental clean-up."
+    ],
+    "examMatters": "You should show the tax on a diagram by shifting the supply curve up to MSC. Then evaluate whether the tax can be accurately set and whether demand elasticity limits its effectiveness.",
+    "misconception": "Students say taxes always solve externalities. Wrong because if the tax is set too high or too low, the output will still not be at the social optimum, and if demand is inelastic, the quantity change may be minimal. Instead write: a Pigouvian tax can theoretically achieve the social optimum, but information problems and inelastic demand may limit its effectiveness in practice."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Identify external benefit",
+      "Set subsidy equal to external benefit per unit",
+      "Supply shifts right, output rises to social optimum"
+     ],
+     "result": "Positive externality internalised; welfare gain",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "Subsidies to Correct Externalities",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "A subsidy equal to the <strong>external benefit</strong> per unit shifts the supply curve right, lowering the price and increasing quantity to where MSB equals MSC.",
+        "type": "mech"
+       },
+       {
+        "text": "Alternatively, the subsidy can be given directly to consumers to shift the <strong>demand curve</strong> right, achieving the same increase in quantity consumed.",
+        "type": "mech"
+       }
+      ],
+      "title": "HOW SUBSIDIES CORRECT FAILURE"
+     },
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "Subsidies have a significant <strong>opportunity cost</strong>; the government revenue spent on the subsidy cannot be used for other priorities like infrastructure or debt reduction.",
+        "type": "imp"
+       },
+       {
+        "text": "Subsidies may create <strong>dependency</strong> if producers rely on them to stay profitable, reducing incentives to become more efficient.",
+        "type": "imp"
+       },
+       {
+        "text": "Measuring the exact size of the external benefit is difficult, so the subsidy may be <strong>too large or too small</strong> to hit the social optimum.",
+        "type": "imp"
+       },
+       {
+        "text": "This mirrors the subsidy analysis in 1.3.4 but here the goal is correcting underconsumption of goods with external benefits or goods with positive externalities.",
+        "type": "link"
+       }
+      ],
+      "title": "EVALUATION"
+     }
+    ],
+    "keyIdea": "When a good generates benefits that spill over to society but the market ignores them, a subsidy closes the gap by making it cheaper to produce or consume, pulling output up to the socially optimal level.",
+    "takeaway": [
+     "A subsidy equal to the external benefit per unit can achieve the socially optimal output.",
+     "The opportunity cost of subsidies means the money cannot be spent on alternative public priorities.",
+     "Measuring external benefits accurately is just as difficult as measuring external costs."
+    ],
+    "examMatters": "You should show the subsidy on a diagram by shifting supply right so that the new equilibrium quantity equals the socially optimal quantity. Always evaluate by discussing opportunity cost and the difficulty of measuring external benefits."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Government sets price above or below equilibrium",
+      "Quantity demanded and supplied diverge",
+      "Excess demand or supply emerges"
+     ],
+     "result": "Shortages or surpluses; price mechanism overridden",
+     "resultType": "bad"
+    },
+    "meta": "4 concepts",
+    "title": "Maximum & Minimum Prices",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Maximum price (price ceiling)</strong> — a legally imposed upper limit on price set below the equilibrium, designed to keep essential goods affordable for consumers.",
+        "type": "def"
+       },
+       {
+        "text": "At the maximum price, quantity demanded exceeds quantity supplied, creating <strong>excess demand</strong> and shortages that require rationing by methods other than price.",
+        "type": "mech"
+       },
+       {
+        "text": "Price ceilings can lead to <strong>black markets</strong> where goods are sold illegally above the maximum price, and reduced quality as producers cut costs to survive at the lower price.",
+        "type": "imp"
+       }
+      ],
+      "title": "PRICE CEILINGS"
+     },
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Minimum price (price floor)</strong> — a legally imposed lower limit on price set above the equilibrium, designed to protect producers by guaranteeing a minimum income per unit.",
+        "type": "def"
+       },
+       {
+        "text": "At the minimum price, quantity supplied exceeds quantity demanded, creating <strong>excess supply</strong> which the government may need to buy up or store at additional cost.",
+        "type": "mech"
+       },
+       {
+        "text": "Minimum prices on alcohol aim to reduce consumption of a good with external costs of consumption; minimum wages aim to protect workers, but both create <strong>surplus in the market</strong>.",
+        "type": "imp"
+       },
+       {
+        "text": "Price controls override the rationing function of the price mechanism from 1.3.4; goods are no longer allocated by willingness to pay but by queuing, luck, or government decision.",
+        "type": "link"
+       }
+      ],
+      "title": "PRICE FLOORS"
+     }
+    ],
+    "keyIdea": "Governments sometimes override the price mechanism by capping how high or how low a price can go, protecting consumers or producers but always creating a gap between quantity demanded and supplied.",
+    "takeaway": [
+     "Maximum prices are set below equilibrium and create shortages; minimum prices are set above equilibrium and create surpluses.",
+     "Both override the price mechanism and require alternative rationing methods.",
+     "Unintended consequences include black markets, quality reduction, and government storage costs."
+    ],
+    "examMatters": "You should draw the diagram showing the maximum or minimum price, clearly label the excess demand or supply, and then evaluate unintended consequences such as black markets, reduced quality, or government storage costs.",
+    "misconception": "Students confuse which is set above and which below equilibrium. Wrong because a maximum price is set below equilibrium to keep prices low, while a minimum price is set above equilibrium to keep prices high. Instead write: a price ceiling is below equilibrium (protecting buyers); a price floor is above equilibrium (protecting sellers)."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Government sets emissions cap",
+      "Firms trade permits on a market",
+      "Reductions occur where cheapest"
+     ],
+     "result": "Total pollution falls at minimum cost",
+     "resultType": "good"
+    },
+    "meta": "3 concepts",
+    "title": "Tradeable Pollution Permits",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Tradeable pollution permit</strong> — a government-issued licence allowing a firm to emit a set amount of pollution; permits can be bought and sold on a market, creating a price for pollution.",
+        "type": "def"
+       },
+       {
+        "text": "The government sets an overall <strong>cap</strong> on total emissions and distributes permits; firms that can reduce pollution cheaply sell their spare permits to firms where reduction is expensive.",
+        "type": "mech"
+       },
+       {
+        "text": "Over time the government can <strong>reduce the cap</strong>, cutting the total number of permits available, raising their price, and driving further emission reductions.",
+        "type": "mech"
+       }
+      ],
+      "title": "HOW CAP AND TRADE WORKS"
+     },
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "Cap and trade uses the <strong>market mechanism</strong> to find the cheapest way to reduce pollution, making it more cost-effective than uniform regulation.",
+        "type": "imp"
+       },
+       {
+        "text": "The permit price can be <strong>volatile</strong>, making it hard for firms to plan long-term investment in clean technology.",
+        "type": "imp"
+       },
+       {
+        "text": "Wealthy firms can simply <strong>buy permits</strong> rather than reducing pollution, meaning local pollution hotspots may persist.",
+        "type": "imp"
+       },
+       {
+        "text": "Tradeable permits combine market incentives with government control, sitting between pure taxation and direct regulation as a policy tool.",
+        "type": "link"
+       }
+      ],
+      "title": "EVALUATION"
+     }
+    ],
+    "keyIdea": "Instead of taxing pollution directly, the government sets a total limit and lets firms trade the right to pollute, so reductions happen where they are cheapest and the market discovers the true cost of emissions.",
+    "takeaway": [
+     "Cap and trade sets a quantity limit on pollution and lets the market find the cheapest reductions.",
+     "Reducing the cap over time raises permit prices and drives further emission cuts.",
+     "Price volatility and the ability of wealthy firms to buy permits are key evaluation points."
+    ],
+    "examMatters": "You should explain how the market for permits works using a supply and demand diagram for permits. The supply is fixed by the cap (vertical supply curve), and demand comes from firms needing to pollute. Reducing the cap shifts supply left, raising the permit price."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Market fails or consumers choose poorly",
+      "Government provides directly or nudges behaviour",
+      "Consumption moves toward social optimum"
+     ],
+     "result": "Welfare improved without banning choices",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "State Provision & Nudge Theory",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>State provision</strong> — the government directly supplies goods and services, funded by taxation, when the free market fails to provide them at all or in sufficient quantity.",
+        "type": "def"
+       },
+       {
+        "text": "Public goods like national defence require state provision because the <strong>free rider problem</strong> makes private provision impossible.",
+        "type": "mech"
+       },
+       {
+        "text": "Merit goods like healthcare and education are provided by the state to ensure <strong>universal access</strong> regardless of ability to pay, correcting both underconsumption and inequality.",
+        "type": "mech"
+       }
+      ],
+      "title": "DIRECT PROVISION"
+     },
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Nudge theory</strong> — the idea that small changes to the choice environment can alter behaviour in predictable ways without banning options or changing financial incentives.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Default options</strong> are a powerful nudge; auto-enrolling workers into pensions dramatically increases saving rates because most people never opt out.",
+        "type": "mech"
+       },
+       {
+        "text": "Nudges are <strong>low-cost and preserve freedom</strong> of choice, making them politically attractive compared to taxes or bans.",
+        "type": "imp"
+       },
+       {
+        "text": "Critics argue nudges are <strong>paternalistic</strong> and may not work for deep-rooted behaviours like addiction, where stronger intervention is needed.",
+        "type": "imp"
+       },
+       {
+        "text": "Nudge theory directly applies behavioural economics from 1.3.4; bounded rationality justifies nudges because fully rational consumers would not need them.",
+        "type": "link"
+       }
+      ],
+      "title": "NUDGE THEORY"
+     }
+    ],
+    "keyIdea": "When markets completely fail or persistently underprovide, the government can step in to supply the good directly; when the problem is irrational choices, a gentle nudge can steer behaviour without removing freedom.",
+    "takeaway": [
+     "State provision is essential for public goods and ensures universal access to goods with external benefits.",
+     "Nudges alter behaviour through choice architecture without restricting freedom.",
+     "Nudges work best for mild biases; severe market failures may require stronger intervention."
+    ],
+    "examMatters": "You should evaluate nudges by comparing them to harder interventions like taxes and bans. The strongest answers discuss when nudges are sufficient and when the severity of the market failure requires stronger measures."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Market failure identified",
+      "Government imposes rules or removes them",
+      "Firm behaviour changes"
+     ],
+     "result": "Outcome depends on quality of regulation",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "Regulation & Deregulation",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Regulation</strong> — government-imposed rules and standards that firms must follow, designed to correct market failures by controlling behaviour directly rather than through price signals.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Environmental regulation</strong> sets emission limits, bans harmful substances, or mandates clean production methods, directly reducing negative externalities.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Competition regulation</strong> prevents mergers that reduce competition, bans anti-competitive practices, and can break up monopolies to restore allocative efficiency.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Information regulation</strong> requires firms to disclose ingredients, risks, or prices, correcting asymmetric information and allowing consumers to make informed choices.",
+        "type": "mech"
+       }
+      ],
+      "title": "TYPES OF REGULATION"
+     },
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Deregulation</strong> — the removal or reduction of government rules to increase competition, lower costs, and improve efficiency in a market.",
+        "type": "def"
+       },
+       {
+        "text": "Deregulation can lower prices and increase choice through <strong>greater competition</strong>, but it may also reduce safety standards and worker protections.",
+        "type": "imp"
+       },
+       {
+        "text": "The 2008 financial crisis is often cited as evidence that <strong>excessive deregulation</strong> of banking allowed reckless risk-taking that harmed the entire economy.",
+        "type": "imp"
+       },
+       {
+        "text": "Regulation links to government failure in the next chapter; poorly designed rules create unintended costs, distort markets, and may make the original failure worse.",
+        "type": "link"
+       }
+      ],
+      "title": "DEREGULATION"
+     }
+    ],
+    "keyIdea": "Rules backed by law can force firms to behave in socially desirable ways, but too many rules stifle competition and innovation; the challenge is finding the right balance between control and freedom.",
+    "takeaway": [
+     "Regulation directly controls firm behaviour through environmental, competition, and information rules.",
+     "Deregulation increases competition but can reduce protections, as the 2008 financial crisis showed.",
+     "The net effect depends on whether the regulation is well-targeted and proportionate to the failure."
+    ],
+    "examMatters": "You should name the specific type of regulation being discussed and evaluate it in context. Never say regulation is simply good or bad; instead, analyse whether the benefits of correcting the market failure outweigh the costs of compliance and enforcement.",
+    "misconception": "Students say all regulation reduces efficiency. Wrong because well-designed regulation corrects market failures and can increase total welfare by moving the market closer to the social optimum. Instead write: regulation can improve efficiency when it corrects a genuine market failure, but poorly designed regulation imposes costs that may exceed the benefits."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Government intervenes to correct failure",
+      "Policy is poorly designed or implemented",
+      "New inefficiency or worse misallocation results"
+     ],
+     "result": "Net welfare falls despite good intentions",
+     "resultType": "bad"
+    },
+    "meta": "5 concepts",
+    "title": "Government Failure",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Government failure</strong> — occurs when government intervention leads to a worse allocation of resources than the free market would have achieved, or creates new inefficiencies.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Inadequate information</strong> means the government may set taxes, subsidies, or regulations at the wrong level because it cannot accurately measure external costs and benefits.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Unintended consequences</strong> arise when intervention produces side effects that were not anticipated, such as rent controls reducing the supply of housing.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Administrative costs</strong> of implementing and enforcing policy may exceed the welfare gains from correcting the market failure.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Political self-interest</strong> means politicians may design policies to win votes rather than maximise welfare, leading to short-term populist measures that harm long-term efficiency.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Regulatory capture</strong> occurs when the firms being regulated influence the regulator to act in the industry's interest rather than the public interest.",
+        "type": "mech"
+       }
+      ],
+      "title": "CAUSES OF GOVERNMENT FAILURE"
+     },
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "Government failure does not mean the government should never intervene; it means the <strong>net benefit</strong> of intervention must be weighed against the risk of making things worse.",
+        "type": "imp"
+       },
+       {
+        "text": "The existence of market failure is a <strong>necessary but not sufficient</strong> condition for intervention; the cure must not be worse than the disease.",
+        "type": "imp"
+       },
+       {
+        "text": "Government failure is the ultimate evaluation tool for every policy in this section; use it to balance any argument for intervention with the risks of getting it wrong.",
+        "type": "link"
+       }
+      ],
+      "title": "EVALUATION"
+     }
+    ],
+    "keyIdea": "Intervening in a market failure does not guarantee improvement; governments can make things worse through poor information, perverse incentives, unintended consequences, and the influence of special interests.",
+    "takeaway": [
+     "Government failure means intervention makes the allocation of resources worse, not better.",
+     "Key causes include poor information, unintended consequences, political self-interest, and regulatory capture.",
+     "Always weigh the risk of government failure against the cost of the market failure when evaluating policy."
+    ],
+    "examMatters": "Examiners love government failure as an evaluation point. Whenever you argue for a policy, follow up with the risk of government failure. Name a specific cause such as inadequate information or unintended consequences rather than making a vague reference.",
+    "misconception": "Students say government failure means the government should never intervene. Wrong because government failure is about the quality of intervention, not the principle of it; many interventions succeed. Instead write: government failure reminds us to evaluate the costs and risks of intervention against the costs of the market failure, and to design policies carefully."
+   }
+  ],
+  "section_quiz": [
+   {
+    "id": "government-intervention:quiz:498d80fe",
+    "options": [
+     "The total social cost of production",
+     "The marginal external cost (MEC) at the socially optimal output level",
+     "The price elasticity of demand for the good",
+     "The total amount of pollution caused by all firms"
+    ],
+    "question": "An indirect tax on a good with a negative production externality should ideally be set equal to:",
+    "explanation": "The optimal tax equals the MEC at Qopt — this is the exact per-unit external cost at the socially optimal output. This shifts MPC up to align with MSC, internalising the externality. Option A is incorrect because the tax should equal the marginal external cost, not total social cost. Option C is a measure of responsiveness, not a cost. Option D confuses the total externality with the marginal cost needed for the tax.",
+    "correctIndex": 1
+   },
+   {
+    "id": "government-intervention:quiz:4669d10a",
+    "options": [
+     "Excess supply and falling prices",
+     "Excess demand, potential shortages, and possible black market activity",
+     "An increase in producer surplus and quantity supplied",
+     "The elimination of welfare loss"
+    ],
+    "question": "A maximum price set below the equilibrium will lead to:",
+    "explanation": "A price ceiling below equilibrium means the price cannot rise to clear the market: Qd > Qs at the controlled price, creating a shortage. Since legal supply is insufficient, black markets may emerge where the good trades above the legal price. Option A describes the effect of a minimum price. Option C is the opposite — producer surplus falls. Option D is wrong because price controls create, not eliminate, welfare loss.",
+    "correctIndex": 1
+   },
+   {
+    "id": "government-intervention:quiz:b27f2f23",
+    "options": [
+     "Increase the quantity of alcohol consumed",
+     "Create a shortage of alcohol in shops",
+     "Reduce consumption of alcohol and create excess supply",
+     "Eliminate the negative externalities associated with alcohol"
+    ],
+    "question": "A minimum price on alcohol set above the equilibrium price is most likely to:",
+    "explanation": "A minimum price above equilibrium raises the price consumers pay, reducing Qd (less alcohol consumed). Meanwhile Qs increases, creating excess supply (surplus). Option A is wrong — higher prices reduce consumption. Option B describes a maximum price effect. Option D is too strong — a minimum price reduces but is unlikely to eliminate all negative externalities, as some consumers will still drink.",
+    "correctIndex": 2
+   },
+   {
+    "id": "government-intervention:quiz:4542df57",
+    "options": [
+     "They provide price certainty for firms planning their costs",
+     "They guarantee a specific reduction in total emissions",
+     "They are cheaper for the government to administer",
+     "They eliminate the need for monitoring firm emissions"
+    ],
+    "question": "Which of the following is an advantage of tradeable pollution permits over an indirect tax on pollution?",
+    "explanation": "The key advantage of permits is quantity certainty — the cap fixes total emissions at a known level. A tax only controls the price of pollution, not the total amount. Option A is actually an advantage of a tax (firms know the tax rate), not permits (where the permit price fluctuates). Option C is unlikely — both require significant administration. Option D is incorrect — permits still require monitoring to ensure compliance.",
+    "correctIndex": 1
+   },
+   {
+    "id": "government-intervention:quiz:b9230721",
+    "options": [
+     "The government does not intervene in a market with externalities",
+     "Government intervention leads to a net welfare loss or fails to improve the allocation of resources",
+     "The government runs a budget deficit",
+     "The government provides public goods funded by taxation"
+    ],
+    "question": "Government failure is best described as a situation where:",
+    "explanation": "Government failure occurs when intervention makes the allocation of resources worse rather than better, or fails to correct the market failure it targeted. It represents a net welfare loss from the intervention. Option A describes non-intervention, not government failure. Option C is a fiscal outcome, not a market efficiency issue. Option D describes a normal and appropriate role of government, not failure.",
+    "correctIndex": 1
+   },
+   {
+    "id": "government-intervention:quiz:6baa2355",
+    "options": [
+     "A carbon tax that successfully reduces CO₂ emissions to the socially optimal level",
+     "A subsidy on renewable energy that increases output of clean electricity",
+     "Rent controls that lead to a housing shortage and deteriorating property quality",
+     "A ban on smoking in public places that reduces passive smoking"
+    ],
+    "question": "Which of the following is an example of government failure?",
+    "explanation": "Rent controls (a maximum price below equilibrium) create a housing shortage, reduce landlord incentive to maintain properties, and may lead to worse outcomes than the free market — this is government failure. Options A, B, and D describe policies that achieve their intended goals (correcting externalities), which are examples of successful intervention, not government failure.",
+    "correctIndex": 2
+   },
+   {
+    "id": "government-intervention:quiz:a7912d59",
+    "options": [
+     "Are public goods that would otherwise not be provided at all",
+     "Generate positive externalities of consumption and are underconsumed in a free market",
+     "Have perfectly elastic demand so the subsidy will only lower prices",
+     "Are goods with external costs that need to be discouraged"
+    ],
+    "question": "A subsidy given to producers of vaccinations is justified because vaccinations:",
+    "explanation": "Vaccinations generate positive consumption externalities (herd immunity benefits non-vaccinated people) and are underconsumed because individuals do not account for these social benefits. A subsidy lowers the price and increases consumption towards Qopt. Option A is wrong — vaccinations are not public goods (they are rival and excludable). Option C makes an unsupported elasticity claim. Option D is the opposite — vaccinations are goods with external benefits, not goods with external costs.",
+    "correctIndex": 1
+   },
+   {
+    "id": "government-intervention:quiz:c4ef74a8",
+    "options": [
+     "The government imposes excessive regulation that stifles competition",
+     "Firms being regulated influence the regulator to set rules that favour the industry",
+     "Consumers demand stronger regulation of monopoly firms",
+     "International regulations override domestic government policy"
+    ],
+    "question": "Regulatory capture occurs when:",
+    "explanation": "Regulatory capture means the regulator is influenced or controlled by the very firms it is supposed to regulate, leading to rules that serve industry interests rather than consumer or public interests. This is a cause of government failure. Option A describes over-regulation but not capture. Option C describes consumer advocacy, not capture. Option D describes a jurisdictional issue, not regulatory capture.",
+    "correctIndex": 1
+   },
+   {
+    "id": "government-intervention:quiz:3de02151",
+    "options": [
+     "Cigarette companies can provide counter-information that cancels out the government message",
+     "Consumers are already fully informed about the health risks of smoking",
+     "Consumers may exhibit present bias and bounded rationality, so knowing the risks does not always change behaviour",
+     "Information provision is too expensive for the government to implement"
+    ],
+    "question": "Which of the following best explains why information provision alone may not reduce cigarette consumption?",
+    "explanation": "Behavioural economics shows that consumers suffer from present bias (overvaluing the immediate pleasure of smoking vs. future health costs) and bounded rationality (difficulty processing or acting on information). Even with full knowledge of risks, addictive and habitual behaviour persists. Option A is possible but not the best explanation. Option B is factually incorrect — many smokers underestimate risks. Option D is wrong — information campaigns are relatively cheap.",
+    "correctIndex": 2
+   },
+   {
+    "id": "government-intervention:quiz:5e7a4299",
+    "options": [
+     "The subsidy increases the quantity of solar panels installed",
+     "The subsidy reduces the price consumers pay for solar panels",
+     "The subsidy disproportionately benefits wealthy homeowners who can afford the upfront cost, while funded by all taxpayers",
+     "The subsidy encourages innovation in solar technology"
+    ],
+    "question": "A government introduces a subsidy for solar panel installation. Which of the following is a potential cause of government failure from this policy?",
+    "explanation": "If the subsidy mainly benefits wealthy homeowners (who can afford solar installation), while the cost is funded by taxation on all citizens (including the poor), this creates an equity problem and represents poor targeting — a form of government failure. Options A and B are intended effects, not failures. Option D is a positive outcome. The distributional inequity in Option C represents an unintended consequence that worsens outcomes.",
+    "correctIndex": 2
+   },
+   {
+    "id": "government-intervention:quiz:33fc6273",
+    "options": [
+     "Excess supply in the market",
+     "Excess demand in the market",
+     "An increase in the equilibrium price",
+     "No effect on the market"
+    ],
+    "question": "A maximum price (price ceiling) set below the equilibrium price will lead to:",
+    "explanation": "A maximum price below equilibrium means the price is held artificially low. At this lower price, quantity demanded exceeds quantity supplied, creating a shortage (excess demand).",
+    "correctIndex": 1
+   },
+   {
+    "id": "government-intervention:quiz:4fe381c9",
+    "options": [
+     "To reduce consumer surplus",
+     "To guarantee farmers a stable and sufficient income",
+     "To create excess demand for food products",
+     "To encourage consumers to buy more food"
+    ],
+    "question": "Which of the following is the most likely reason for a government imposing a minimum price on agricultural products?",
+    "explanation": "Governments set minimum prices (price floors) above equilibrium in agriculture to protect farmers from volatile and low prices, ensuring they receive enough income to remain viable.",
+    "correctIndex": 1
+   },
+   {
+    "id": "government-intervention:quiz:ff839675",
+    "options": [
+     "Increase production to the socially optimal level",
+     "Internalise the external cost so that the market price reflects social cost",
+     "Generate government revenue to fund public services",
+     "Eliminate all production of the polluting good"
+    ],
+    "question": "A Pigouvian tax on a good with negative externalities aims to:",
+    "explanation": "A Pigouvian tax is set equal to the external cost at the socially optimal output level. By internalising the externality, it ensures producers and consumers face the true social cost, reducing output to the efficient level.",
+    "correctIndex": 1
+   },
+   {
+    "id": "government-intervention:quiz:5ac42ef5",
+    "options": [
+     "The government fails to win an election",
+     "Government intervention leads to a net welfare loss or makes the situation worse than the free market",
+     "The market reaches equilibrium without government help",
+     "Government spending falls below tax revenue"
+    ],
+    "question": "Government failure occurs when:",
+    "explanation": "Government failure occurs when intervention creates a worse outcome than the market failure it sought to correct, often due to unintended consequences, poor information, or political self-interest.",
+    "correctIndex": 1
+   },
+   {
+    "id": "government-intervention:quiz:57048ec9",
+    "options": [
+     "Taxes always eliminate the externality completely",
+     "It is difficult to accurately measure the external cost, so the tax may be set at the wrong level",
+     "Indirect taxes always reduce government revenue",
+     "Consumers always reduce consumption to zero when a tax is imposed"
+    ],
+    "question": "Which of the following is an argument against the use of indirect taxes to correct negative externalities?",
+    "explanation": "A key problem with Pigouvian taxes is the difficulty of measuring external costs precisely. If the tax is set too high or too low, the market outcome will not reach the socially optimal level.",
+    "correctIndex": 1
+   },
+   {
+    "id": "government-intervention:quiz:c9cddc08",
+    "options": [
+     "Decrease supply and raise the price",
+     "Increase supply and lower price, raising consumption",
+     "Increase the external costs of production",
+     "Reduce the quality of the good supplied"
+    ],
+    "question": "A subsidy granted to producers of a good with external benefits of consumption is intended to:",
+    "explanation": "A subsidy lowers the cost of supply, shifting the supply curve right. The lower price raises the quantity consumed towards the level where marginal social benefit equals marginal social cost, which is the point of the intervention when consumers count only their private benefit.",
+    "correctIndex": 1
+   },
+   {
+    "id": "government-intervention:quiz:1460d7a0",
+    "options": [
+     "Banning all pollution from firms",
+     "Setting a total pollution cap and allowing firms to buy and sell permits to pollute",
+     "Taxing firms based on their output level",
+     "Subsidising firms that pollute the least"
+    ],
+    "question": "Tradable pollution permits work by:",
+    "explanation": "Tradable permits set an overall cap on pollution and allocate permits to firms. Firms that can reduce pollution cheaply sell excess permits; those facing high abatement costs buy them, achieving the target efficiently.",
+    "correctIndex": 1
+   },
+   {
+    "id": "government-intervention:quiz:1a6119d9",
+    "options": [
+     "Reduce unemployment",
+     "Create unemployment as quantity of labour supplied exceeds quantity demanded",
+     "Have no effect on the labour market",
+     "Increase both wages and employment simultaneously"
+    ],
+    "question": "The introduction of a national minimum wage above the equilibrium wage in a competitive labour market would be expected to:",
+    "explanation": "A minimum wage above equilibrium increases the wage (attracting more workers) but reduces the quantity of labour demanded by firms. The result is excess supply of labour, i.e., unemployment.",
+    "correctIndex": 1
+   },
+   {
+    "id": "government-intervention:quiz:6baa2355-2",
+    "options": [
+     "A carbon tax successfully reducing emissions to the target level",
+     "The prohibition of alcohol in the 1920s USA, which led to a thriving black market",
+     "A subsidy increasing the consumption of goods with external benefits",
+     "Regulation improving food safety standards"
+    ],
+    "question": "Which of the following is an example of government failure?",
+    "explanation": "Prohibition aimed to eliminate alcohol consumption but instead created extensive black markets, organised crime, and loss of tax revenue. The intervention produced worse outcomes than the problem it aimed to solve.",
+    "correctIndex": 1
+   },
+   {
+    "id": "government-intervention:quiz:960fea05",
+    "options": [
+     "It always leads to lower prices for consumers",
+     "It can be costly to enforce and may be avoided through regulatory capture",
+     "It always increases production efficiency",
+     "It eliminates all forms of market failure"
+    ],
+    "question": "Regulation as a form of government intervention is often criticised because:",
+    "explanation": "Regulation faces enforcement costs and the risk of regulatory capture, where regulated industries influence regulators to act in the industry's interest rather than the public interest, undermining the policy's effectiveness.",
+    "correctIndex": 1
+   },
+   {
+    "id": "government-intervention:quiz:4e31763c",
+    "options": [
+     "Increase the supply of cigarettes sold",
+     "Close the information gap about the true costs",
+     "Create a monopoly in the cigarette market",
+     "Increase tax revenue from cigarette sales"
+    ],
+    "question": "Provision of information (e.g., health warnings on cigarettes) is a government policy that aims to:",
+    "explanation": "A health warning addresses an information gap: it tells the consumer what the consumption actually costs them and others. A better-informed consumer moves their own consumption towards the social optimum without the price changing at all.",
+    "correctIndex": 1
+   },
+   {
+    "id": "government-intervention:quiz:dfd847f1",
+    "options": [
+     "Taxing farmers when prices are high and subsidising them when prices are low",
+     "Buying surplus output when prices are low and selling from stocks when prices are high",
+     "Setting a fixed price for all agricultural goods permanently",
+     "Allowing free market forces to determine agricultural prices"
+    ],
+    "question": "A buffer stock scheme to stabilise agricultural prices involves:",
+    "explanation": "Buffer stock schemes stabilise prices by purchasing and storing surplus output in times of low prices (supporting the price) and releasing stocks when prices are high (reducing the price), keeping prices within a target range.",
+    "correctIndex": 1
+   },
+   {
+    "id": "government-intervention:quiz:1225bc7f",
+    "options": [
+     "All government policies work as planned",
+     "Government policies may produce unexpected and often undesirable outcomes",
+     "The private sector always responds positively to government intervention",
+     "Market forces can always correct government failure"
+    ],
+    "question": "The law of unintended consequences in the context of government intervention means:",
+    "explanation": "The law of unintended consequences recognises that policies can have unforeseen effects. For example, rent controls may reduce housing quality and supply, worsening the housing shortage they aimed to fix.",
+    "correctIndex": 1
+   },
+   {
+    "id": "government-intervention:quiz:d0df31c0",
+    "options": [
+     "Consumers bear most of the tax burden and quantity falls significantly",
+     "Producers bear most of the tax burden and quantity falls significantly",
+     "Consumers bear most of the tax burden and quantity hardly changes",
+     "Producers bear most of the tax burden and quantity hardly changes"
+    ],
+    "question": "Which of the following best describes the effect of a specific tax on a market with price elastic demand?",
+    "explanation": "With elastic demand, consumers are price-sensitive and will significantly reduce purchases if the price rises. Producers cannot pass much of the tax on, so they bear most of the burden, and the quantity traded falls substantially.",
+    "correctIndex": 1
+   },
+   {
+    "id": "government-intervention:quiz:1ef86c09",
+    "options": [
+     "Public goods are always produced more efficiently by the government",
+     "The free rider problem means private firms cannot charge for public goods, leading to non-provision",
+     "Public goods have no opportunity cost when provided by the state",
+     "Consumers always prefer government-provided goods"
+    ],
+    "question": "State provision of public goods is justified because:",
+    "explanation": "Because public goods are non-excludable, people can benefit without paying. This means private firms cannot profit from providing them, so without government provision, public goods would not be supplied at all.",
+    "correctIndex": 1
+   }
+  ],
+  "section_practice": [
+   {
+    "id": "government-intervention:practice:d5e87f16",
+    "marks": 4,
+    "command": "Define",
+    "guidance": "Government failure occurs when government intervention in the economy leads to a net welfare loss (1 mark), meaning the intervention makes the allocation of resources worse rather than better (1 mark). This can happen when policies have unintended consequences or are implemented inefficiently (1 mark). For example, a minimum price for alcohol could encourage a black market in cheap unregulated spirits (1 mark).",
+    "question": "Define the term 'government failure'. (4 marks)"
+   },
+   {
+    "id": "government-intervention:practice:be4d573c",
+    "marks": 6,
+    "command": "Explain",
+    "guidance": "Way 1: Tax on goods with negative externalities of consumption (1 mark) — for example, a tax on cigarettes raises the price, reducing the quantity demanded and bringing consumption closer to the socially optimal level (1 mark). This internalises the external cost so the price better reflects the true cost to society (1 mark).\n\nWay 2: Tax on goods with negative externalities of production (1 mark) — for example, a carbon tax on fossil fuels increases production costs for polluting firms (1 mark), incentivising them to reduce emissions or switch to cleaner technologies while raising revenue for green investment (1 mark).",
+    "question": "Explain two ways in which indirect taxes can be used to correct market failure. (6 marks)"
+   },
+   {
+    "id": "government-intervention:practice:a220d299",
+    "marks": 8,
+    "command": "Examine",
+    "guidance": "Define a subsidy as a payment to producers that lowers the cost of supply. Develop the mechanism: supply shifts right, price falls, quantity rises towards the social optimum where MSB meets MSC. Then examine it: the size of the quantity response depends on the elasticity of demand; the spending has an opportunity cost and must be funded; the external benefit has to be valued accurately enough to set the subsidy at the right level; and if the underconsumption is caused by an information gap rather than by price, a subsidy does not close it. Compare with direct provision or an information campaign.",
+    "question": "Examine the effectiveness of subsidies as a method of raising consumption of a good with external benefits. (8 marks)"
+   },
+   {
+    "id": "government-intervention:practice:02af5456",
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Define market failure and government failure (2 marks).\n\nFor — intervention leads to government failure: Imperfect information — governments may not have enough data to set optimal taxes, subsidies or regulations (3 marks); unintended consequences — e.g. rent controls intended to help tenants can reduce housing supply (2 marks); regulatory capture — industries may influence regulators to act in their own interest rather than the public interest (2 marks); bureaucratic inefficiency — public sector organisations may lack the profit incentive to operate efficiently (2 marks).\n\nAgainst — intervention does not always fail: Many interventions succeed — clean air legislation has significantly reduced pollution in the UK (2 marks); provision of public goods like national defence and street lighting cannot be achieved by the market alone (2 marks); education and healthcare subsidies have raised living standards (1 mark).\n\nEvaluation: It is too strong to say intervention 'inevitably' leads to failure. The risk of government failure depends on the quality of information, the design of the policy, and the accountability of decision-makers (2 marks). A cost-benefit approach — intervening only when the expected net benefit exceeds the expected net cost of inaction — is the most sensible framework (2 marks).",
+    "question": "Evaluate the view that government intervention to correct market failure inevitably leads to government failure. (20 marks)"
+   },
+   {
+    "id": "government-intervention:practice:dc23155f",
+    "marks": 4,
+    "command": "Outline",
+    "guidance": "Disadvantage 1: Excess demand — a maximum price below the equilibrium creates a shortage because quantity demanded exceeds quantity supplied (1 mark), leading to queues, rationing or waiting lists (1 mark).\n\nDisadvantage 2: Black markets — producers may sell illegally at higher prices to ration the scarce supply (1 mark), undermining the policy's aim of keeping prices affordable and potentially reducing consumer protection (1 mark).",
+    "question": "Outline two potential disadvantages of imposing a maximum price on a good. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "id": "government-intervention:card:c4ebb8ab",
+    "back": "To <strong>correct market failure</strong> — reallocate resources toward the socially efficient level, reduce inequality, and provide goods the market would not supply (e.g., public goods).",
+    "front": "Why do governments intervene in markets?"
+   },
+   {
+    "id": "government-intervention:card:0dc66a0f",
+    "back": "A tax equal to the external cost makes producers <strong>internalise the externality</strong>. It raises the private cost to equal social cost, reducing output to the socially optimal level.",
+    "front": "How can an indirect tax correct a negative externality?"
+   },
+   {
+    "id": "government-intervention:card:3949b942",
+    "back": "A subsidy equal to the external benefit <strong>reduces the price</strong> and encourages greater consumption. It closes the gap between MPB and MSB, increasing output toward the social optimum.",
+    "front": "How can a subsidy correct a positive externality?"
+   },
+   {
+    "id": "government-intervention:card:92cff44b",
+    "back": "A government-issued right to emit a set amount of pollution. Firms that pollute less can <strong>sell surplus permits</strong> to heavier polluters. Creates a market-based incentive to reduce emissions.",
+    "front": "What is a tradable pollution permit?"
+   },
+   {
+    "id": "government-intervention:card:2dbc1731",
+    "back": "Government-imposed <strong>rules and laws</strong> that restrict behaviour — e.g., minimum standards, banned substances, planning restrictions. Effective but costly to monitor and enforce.",
+    "front": "What is regulation as a response to market failure?"
+   },
+   {
+    "id": "government-intervention:card:217830a6",
+    "back": "<strong>Direct provision</strong>: government supplies the good itself (e.g., NHS, state education). <strong>Indirect provision</strong>: government funds private firms to supply it (e.g., outsourcing waste collection).",
+    "front": "What is the difference between direct and indirect provision?"
+   },
+   {
+    "id": "government-intervention:card:2b5a6a49",
+    "back": "When government intervention <strong>makes the allocation of resources worse</strong> than it would have been without intervention. The cure is worse than the disease.",
+    "front": "What is government failure?"
+   },
+   {
+    "id": "government-intervention:card:01ef5673",
+    "back": "<strong>Unintended consequences</strong> (policy creates new problems), <strong>information failure</strong> (government lacks data to set optimal tax/subsidy), and <strong>regulatory capture</strong> (regulators serve industry, not public interest).",
+    "front": "Name three causes of government failure."
+   },
+   {
+    "id": "government-intervention:card:3eda7477",
+    "back": "Government-funded advertising to <strong>correct information failure</strong> — e.g., anti-smoking campaigns, nutritional labelling. Aims to shift demand by changing consumer behaviour.",
+    "front": "What is an information campaign?"
+   },
+   {
+    "id": "government-intervention:card:5f0e1333",
+    "back": "May be <strong>regressive</strong> (hits low-income households harder), difficult to set the <strong>correct level</strong> (requires knowing the exact external cost), and may encourage <strong>black markets</strong> if too high.",
+    "front": "What are the disadvantages of an indirect tax?"
+   },
+   {
+    "id": "government-intervention:card:0f117ab8",
+    "back": "Set a <strong>guaranteed limit</strong> on total pollution, create a <strong>financial incentive</strong> to cut emissions, and allow the market to find the <strong>lowest-cost reduction</strong> method.",
+    "front": "What are the advantages of tradable pollution permits?"
+   },
+   {
+    "id": "government-intervention:card:2592aa61",
+    "back": "A <strong>price floor</strong> set above equilibrium to discourage consumption — e.g., minimum unit pricing for alcohol. Raises price without generating tax revenue for the government.",
+    "front": "What is a minimum price in the context of goods with external costs?"
+   },
+   {
+    "id": "government-intervention:card:582498f3",
+    "back": "A <strong>price ceiling</strong> set below equilibrium to keep essential goods affordable — e.g., rent controls. Helps consumers but may cause shortages and reduce supply in the long run.",
+    "front": "What is a maximum price in the context of essential goods?"
+   },
+   {
+    "id": "government-intervention:card:8520f810",
+    "back": "When a regulatory body <strong>acts in the interest of the industry</strong> it is supposed to regulate, rather than the public interest. Leads to ineffective regulation and government failure.",
+    "front": "What is regulatory capture?"
+   },
+   {
+    "id": "government-intervention:card:8b1b1915",
+    "back": "Subsidies may <strong>distort market signals</strong>, keep inefficient firms alive, be set at the wrong level, or be <strong>costly to taxpayers</strong>. They may also create dependency rather than solving the root problem.",
+    "front": "Why might subsidies lead to government failure?"
+   },
+   {
+    "id": "government-intervention:card:fab004e4",
+    "back": "A system where an agency <strong>buys surplus when prices are low</strong> and <strong>sells stock when prices are high</strong>, stabilising prices. Often used in agricultural markets.",
+    "front": "What is a buffer stock scheme?"
+   },
+   {
+    "id": "government-intervention:card:3f90a5f6",
+    "back": "Assigning clear <strong>legal ownership</strong> allows those affected by externalities to negotiate or sue for compensation. Based on the <strong>Coase theorem</strong> — if transaction costs are low, parties can reach an efficient outcome.",
+    "front": "How can property rights solve externalities?"
+   },
+   {
+    "id": "government-intervention:card:fb8a71cd",
+    "back": "If <strong>property rights are well-defined</strong> and <strong>transaction costs are low</strong>, private bargaining between parties can lead to an efficient allocation of resources without government intervention.",
+    "front": "What is the Coase theorem?"
+   }
+  ],
+  "section_diagrams": [
+   {
+    "id": "government-intervention:diagram:8fe83772",
+    "svg": "<svg viewBox=\"0 0 500 360\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n<defs>\n  <marker id=\"ah\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\">\n    <polygon points=\"0 0,10 3.5,0 7\" fill=\"#e8ecf5\"/>\n  </marker>\n</defs>\n<!-- Axes -->\n<line x1=\"80\" y1=\"280\" x2=\"460\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<line x1=\"80\" y1=\"280\" x2=\"80\" y2=\"35\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<text x=\"28\" y=\"165\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\" transform=\"rotate(-90,28,165)\">Price</text>\n<text x=\"265\" y=\"325\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\">Quantity</text>\n\n<!-- Supply -->\n<line x1=\"90\" y1=\"260\" x2=\"440\" y2=\"80\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n<text x=\"444\" y=\"84\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">S</text>\n\n<!-- Demand -->\n<line x1=\"90\" y1=\"60\" x2=\"440\" y2=\"260\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n<text x=\"444\" y=\"264\" fill=\"#059669\" font-size=\"12\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">D</text>\n\n<!-- Equilibrium dashed lines -->\n<line x1=\"274.2\" y1=\"165.3\" x2=\"80\" y2=\"165.3\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<line x1=\"274.2\" y1=\"165.3\" x2=\"274.2\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<text x=\"72\" y=\"169.3\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"end\">Pe</text>\n<text x=\"274.2\" y=\"296\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Qe</text>\n<circle cx=\"274.2\" cy=\"165.3\" r=\"3.5\" fill=\"#e8ecf5\"/>\n\n<!-- Price ceiling line (Pmax) -->\n<line x1=\"80\" y1=\"205.3\" x2=\"450\" y2=\"205.3\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"8,5\"/>\n<text x=\"72\" y=\"209.3\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"end\">Pmax</text>\n\n<!-- Dashed lines from Qs and Qd to x-axis -->\n<line x1=\"196.4\" y1=\"205.3\" x2=\"196.4\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<line x1=\"344.2\" y1=\"205.3\" x2=\"344.2\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<text x=\"196.4\" y=\"296\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Qs</text>\n<text x=\"344.2\" y=\"296\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Qd</text>\n\n<!-- Excess demand shading -->\n<rect x=\"196.4\" y=\"197.3\" width=\"147.8\" height=\"16\" fill=\"#ef4444\" fill-opacity=\"0.1\" rx=\"2\"/>\n<line x1=\"196.4\" y1=\"205.3\" x2=\"344.2\" y2=\"205.3\" stroke=\"#ef4444\" stroke-width=\"2.5\"/>\n<!-- Arrows showing excess demand -->\n<text x=\"270.3\" y=\"235.3\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\" font-family=\"'DM Sans',sans-serif\">Excess Demand</text>\n<line x1=\"204.4\" y1=\"227.3\" x2=\"336.2\" y2=\"227.3\" stroke=\"#ef4444\" stroke-width=\"1\" marker-end=\"url(#ah)\"/>\n\n<!-- Welfare loss triangle -->\n<polygon points=\"274.2,165.3 196.4,205.3 196.4,120.8\" fill=\"#f59e0b\" fill-opacity=\"0.15\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n<text x=\"202.4\" y=\"187.3\" fill=\"#f59e0b\" font-size=\"9\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">DWL</text>\n\n<!-- Dots on Pmax line -->\n<circle cx=\"196.4\" cy=\"205.3\" r=\"3.5\" fill=\"#3b82f6\"/>\n<circle cx=\"344.2\" cy=\"205.3\" r=\"3.5\" fill=\"#059669\"/>\n\n</svg>",
+    "title": "Maximum Price (Price Ceiling)",
+    "checklist": [
+     "D and S curves correctly drawn with equilibrium marked",
+     "Maximum price line drawn BELOW equilibrium (dashed, labelled Pmax)",
+     "Qs shown on supply curve at Pmax (less than Qe)",
+     "Qd shown on demand curve at Pmax (greater than Qe)",
+     "Shortage (Qd - Qs) clearly labelled with bracket",
+     "Welfare loss triangle shown between Qs, equilibrium, and Pmax line",
+     "Original equilibrium shown faintly for reference"
+    ],
+    "description": "Shows how a price ceiling set below equilibrium creates a shortage (excess demand), with the resulting welfare loss."
+   },
+   {
+    "id": "government-intervention:diagram:1e0d8169",
+    "svg": "<svg viewBox=\"0 0 500 360\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n<defs>\n  <marker id=\"ah\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\">\n    <polygon points=\"0 0,10 3.5,0 7\" fill=\"#e8ecf5\"/>\n  </marker>\n</defs>\n<!-- Axes -->\n<line x1=\"80\" y1=\"280\" x2=\"460\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<line x1=\"80\" y1=\"280\" x2=\"80\" y2=\"35\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<text x=\"28\" y=\"165\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\" transform=\"rotate(-90,28,165)\">Price</text>\n<text x=\"265\" y=\"325\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\">Quantity</text>\n\n<!-- Supply -->\n<line x1=\"90\" y1=\"260\" x2=\"440\" y2=\"80\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n<text x=\"444\" y=\"84\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">S</text>\n\n<!-- Demand -->\n<line x1=\"90\" y1=\"60\" x2=\"440\" y2=\"260\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n<text x=\"444\" y=\"264\" fill=\"#059669\" font-size=\"12\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">D</text>\n\n<!-- Equilibrium dashed lines -->\n<line x1=\"274.2\" y1=\"165.3\" x2=\"80\" y2=\"165.3\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<line x1=\"274.2\" y1=\"165.3\" x2=\"274.2\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<text x=\"72\" y=\"169.3\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"end\">Pe</text>\n<text x=\"274.2\" y=\"296\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Qe</text>\n<circle cx=\"274.2\" cy=\"165.3\" r=\"3.5\" fill=\"#e8ecf5\"/>\n\n<!-- Price floor line (Pmin) -->\n<line x1=\"80\" y1=\"125.3\" x2=\"450\" y2=\"125.3\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"8,5\"/>\n<text x=\"72\" y=\"129.3\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"end\">Pmin</text>\n\n<!-- Dashed lines from Qd and Qs to x-axis -->\n<line x1=\"204.2\" y1=\"125.3\" x2=\"204.2\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<line x1=\"352\" y1=\"125.3\" x2=\"352\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<text x=\"204.2\" y=\"296\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Qd</text>\n<text x=\"352\" y=\"296\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Qs</text>\n\n<!-- Excess supply shading -->\n<rect x=\"204.2\" y=\"117.3\" width=\"147.8\" height=\"16\" fill=\"#ef4444\" fill-opacity=\"0.1\" rx=\"2\"/>\n<line x1=\"204.2\" y1=\"125.3\" x2=\"352\" y2=\"125.3\" stroke=\"#ef4444\" stroke-width=\"2.5\"/>\n<!-- Excess supply label -->\n<text x=\"278.1\" y=\"111.3\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\" font-family=\"'DM Sans',sans-serif\">Excess Supply</text>\n<line x1=\"212.2\" y1=\"117.3\" x2=\"344\" y2=\"117.3\" stroke=\"#ef4444\" stroke-width=\"1\" marker-end=\"url(#ah)\"/>\n\n<!-- Welfare loss triangle -->\n<polygon points=\"274.2,165.3 204.2,125.3 204.2,201.3\" fill=\"#f59e0b\" fill-opacity=\"0.15\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n<text x=\"210.2\" y=\"147.3\" fill=\"#f59e0b\" font-size=\"9\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">DWL</text>\n\n<!-- Dots on Pmin line -->\n<circle cx=\"204.2\" cy=\"125.3\" r=\"3.5\" fill=\"#059669\"/>\n<circle cx=\"352\" cy=\"125.3\" r=\"3.5\" fill=\"#3b82f6\"/>\n\n</svg>",
+    "title": "Minimum Price (Price Floor)",
+    "checklist": [
+     "D and S curves correctly drawn with equilibrium marked",
+     "Minimum price line drawn ABOVE equilibrium (dashed, labelled Pmin)",
+     "Qd shown on demand curve at Pmin (less than Qe)",
+     "Qs shown on supply curve at Pmin (greater than Qe)",
+     "Surplus (Qs - Qd) clearly labelled with bracket",
+     "Welfare loss triangle shown",
+     "Note: government may need to buy the surplus"
+    ],
+    "description": "Shows how a price floor set above equilibrium creates a surplus (excess supply), with the resulting welfare loss."
+   },
+   {
+    "id": "government-intervention:diagram:a9b14020",
+    "svg": "<svg viewBox=\"0 0 500 360\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n<defs>\n  <marker id=\"ah\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\">\n    <polygon points=\"0 0,10 3.5,0 7\" fill=\"#e8ecf5\"/>\n  </marker>\n</defs>\n<!-- Axes -->\n<line x1=\"80\" y1=\"280\" x2=\"460\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<line x1=\"80\" y1=\"280\" x2=\"80\" y2=\"35\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<text x=\"28\" y=\"165\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\" transform=\"rotate(-90,28,165)\">Price / Cost</text>\n<text x=\"265\" y=\"325\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\">Quantity</text>\n\n<!-- MPC line -->\n<line x1=\"90\" y1=\"260\" x2=\"440\" y2=\"80\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n<text x=\"444\" y=\"84\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">MPC</text>\n\n<!-- MSC line -->\n<line x1=\"90\" y1=\"210\" x2=\"440\" y2=\"40\" stroke=\"#ef4444\" stroke-width=\"2.5\"/>\n<text x=\"444\" y=\"38\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">MSC</text>\n\n<!-- MPC + Tax dashed line (overlapping MSC) -->\n<line x1=\"90\" y1=\"210\" x2=\"440\" y2=\"40\" stroke=\"#8b5cf6\" stroke-width=\"2\" stroke-dasharray=\"6,4\"/>\n<text x=\"88\" y=\"202\" fill=\"#8b5cf6\" font-size=\"10\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">MPC + Tax</text>\n\n<!-- D = MPB = MSB line -->\n<line x1=\"90\" y1=\"60\" x2=\"440\" y2=\"260\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n<text x=\"350\" y=\"276\" fill=\"#059669\" font-size=\"11\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">D = MPB = MSB</text>\n\n<!-- Dashed lines: market eq -->\n<line x1=\"274.2\" y1=\"165.3\" x2=\"80\" y2=\"165.3\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<line x1=\"274.2\" y1=\"165.3\" x2=\"274.2\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<text x=\"72\" y=\"169.3\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"end\">Pe</text>\n<text x=\"274.2\" y=\"296\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Qe</text>\n<circle cx=\"274.2\" cy=\"165.3\" r=\"3.5\" fill=\"#3b82f6\"/>\n\n<!-- Dashed lines: social optimum -->\n<line x1=\"231.9\" y1=\"141.1\" x2=\"80\" y2=\"141.1\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<line x1=\"231.9\" y1=\"141.1\" x2=\"231.9\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<text x=\"72\" y=\"145.1\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"end\">Pc</text>\n<text x=\"231.9\" y=\"296\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Qopt</text>\n<circle cx=\"231.9\" cy=\"141.1\" r=\"3.5\" fill=\"#ef4444\"/>\n\n<!-- Dashed line from producer price to y-axis -->\n<line x1=\"231.9\" y1=\"187\" x2=\"80\" y2=\"187\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<text x=\"72\" y=\"191\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"end\">Pp</text>\n\n<!-- Tax wedge bracket -->\n<line x1=\"217.9\" y1=\"141.1\" x2=\"217.9\" y2=\"187\" stroke=\"#8b5cf6\" stroke-width=\"2\"/>\n<line x1=\"213.9\" y1=\"141.1\" x2=\"221.9\" y2=\"141.1\" stroke=\"#8b5cf6\" stroke-width=\"2\"/>\n<line x1=\"213.9\" y1=\"187\" x2=\"221.9\" y2=\"187\" stroke=\"#8b5cf6\" stroke-width=\"2\"/>\n<text x=\"209.9\" y=\"168.1\" fill=\"#8b5cf6\" font-size=\"10\" font-weight=\"700\" text-anchor=\"end\" font-family=\"'DM Sans',sans-serif\">Tax</text>\n\n<!-- Arrow showing shift from Qe to Qopt -->\n<line x1=\"269.2\" y1=\"310\" x2=\"236.9\" y2=\"310\" stroke=\"#8b5cf6\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/>\n\n</svg>",
+    "title": "Tax to Correct Negative Externality",
+    "checklist": [
+     "MPC curve drawn (original private supply) shown dashed/faint",
+     "MSC curve drawn above MPC (social cost including externality)",
+     "D = MPB = MSB drawn (no consumption externality)",
+     "Tax shifts MPC up to align with MSC — tax = MEC at Qopt",
+     "Original market output Qm shown (where MPC = MPB)",
+     "New output at Qopt (where MSC = MSB) — welfare loss eliminated",
+     "Tax bracket shown between MPC and MSC at Qopt"
+    ],
+    "description": "Shows how an indirect tax equal to the MEC can shift MPC up to align with MSC, moving the market from overproduction (Qm) to the socially optimal output (Qopt)."
+   },
+   {
+    "id": "government-intervention:diagram:071934e3",
+    "svg": "<svg viewBox=\"0 0 500 360\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n<defs>\n  <marker id=\"ah\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\">\n    <polygon points=\"0 0,10 3.5,0 7\" fill=\"#e8ecf5\"/>\n  </marker>\n</defs>\n<!-- Axes -->\n<line x1=\"80\" y1=\"280\" x2=\"460\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<line x1=\"80\" y1=\"280\" x2=\"80\" y2=\"35\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<text x=\"28\" y=\"165\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\" transform=\"rotate(-90,28,165)\">Price / Cost</text>\n<text x=\"265\" y=\"325\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\">Quantity</text>\n\n<!-- S = MPC -->\n<line x1=\"90\" y1=\"260\" x2=\"440\" y2=\"80\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n<text x=\"444\" y=\"84\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">S = MPC</text>\n\n<!-- D = MPB -->\n<line x1=\"90\" y1=\"60\" x2=\"440\" y2=\"260\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n<text x=\"385\" y=\"276\" fill=\"#059669\" font-size=\"11\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">D = MPB</text>\n\n<!-- MSB -->\n<line x1=\"140\" y1=\"50\" x2=\"450\" y2=\"253.4\" stroke=\"#f59e0b\" stroke-width=\"2.5\"/>\n<text x=\"426\" y=\"269.4\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">MSB</text>\n\n<!-- S + Subsidy (dashed purple, shifted right) -->\n<line x1=\"90\" y1=\"285.2\" x2=\"440\" y2=\"105.2\" stroke=\"#8b5cf6\" stroke-width=\"2\" stroke-dasharray=\"6,4\"/>\n<text x=\"444\" y=\"109.2\" fill=\"#8b5cf6\" font-size=\"10\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">S + Sub</text>\n\n<!-- Dashed lines: market eq -->\n<line x1=\"274.2\" y1=\"165.3\" x2=\"80\" y2=\"165.3\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<line x1=\"274.2\" y1=\"165.3\" x2=\"274.2\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<text x=\"72\" y=\"169.3\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"end\">Pe</text>\n<text x=\"274.2\" y=\"296\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Qe</text>\n<circle cx=\"274.2\" cy=\"165.3\" r=\"3.5\" fill=\"#059669\"/>\n\n<!-- Dashed lines: social optimum (S+Sub intersect MPB) -->\n<line x1=\"297.4\" y1=\"178.5\" x2=\"80\" y2=\"178.5\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<line x1=\"297.4\" y1=\"178.5\" x2=\"297.4\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<text x=\"72\" y=\"182.5\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"end\">Pc</text>\n<text x=\"297.4\" y=\"296\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Qopt</text>\n<circle cx=\"297.4\" cy=\"178.5\" r=\"3.5\" fill=\"#8b5cf6\"/>\n\n<!-- Dashed line from producer receives price -->\n<line x1=\"297.4\" y1=\"153.3\" x2=\"80\" y2=\"153.3\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<text x=\"72\" y=\"157.3\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"end\">Pp</text>\n\n<!-- Subsidy bracket -->\n<line x1=\"311.4\" y1=\"153.3\" x2=\"311.4\" y2=\"178.5\" stroke=\"#8b5cf6\" stroke-width=\"2\"/>\n<line x1=\"307.4\" y1=\"153.3\" x2=\"315.4\" y2=\"153.3\" stroke=\"#8b5cf6\" stroke-width=\"2\"/>\n<line x1=\"307.4\" y1=\"178.5\" x2=\"315.4\" y2=\"178.5\" stroke=\"#8b5cf6\" stroke-width=\"2\"/>\n<text x=\"319.4\" y=\"169.9\" fill=\"#8b5cf6\" font-size=\"10\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">Subsidy</text>\n\n</svg>",
+    "title": "Subsidy to Correct Positive Externality",
+    "checklist": [
+     "S = MPC = MSC drawn (no production externality)",
+     "MPB curve drawn (private demand)",
+     "MSB curve drawn ABOVE MPB, with vertical gap = MEB",
+     "MPC - subsidy curve drawn below MPC (parallel shift down)",
+     "Subsidy per unit = MEB at Qopt",
+     "Market output moves from Qm to Qopt",
+     "Welfare gain triangle shown (area between MSB and MSC from Qm to Qopt)"
+    ],
+    "description": "Shows how a subsidy equal to the MEB can shift MPC down, increasing output from the market level (Qm) to the socially optimal level (Qopt)."
+   }
+  ],
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "An indirect tax on a good with negative externalities raises its price, increasing the private cost to match the social cost.",
+      "The higher price reduces quantity demanded, moving output closer to the socially optimal level.",
+      "The tax generates revenue that can fund the clean-up of external costs or compensate affected third parties.",
+      "The welfare loss from the externality is reduced, improving allocative efficiency."
+     ],
+     "title": "Indirect taxes correct negative externalities",
+     "result": "Indirect taxes internalise external costs, aligning private and social costs to reduce overproduction."
+    },
+    {
+     "steps": [
+      "A subsidy on a good with external benefits of consumption (e.g. education, vaccination) lowers the price to consumers, making it more affordable.",
+      "Lower prices increase consumption towards the socially optimal level, as more consumers can access the good.",
+      "The subsidy corrects the information failure by ensuring consumption reflects the full social benefit, not just the private benefit.",
+      "Society benefits from the positive externalities generated — a better-educated workforce, reduced disease transmission."
+     ],
+     "title": "Subsidies encourage consumption of goods with external benefits",
+     "result": "Subsidies correct under-consumption of goods with external benefits by lowering price barriers and capturing social benefits."
+    },
+    {
+     "steps": [
+      "The government sets a cap on total emissions and issues permits allowing firms to pollute up to a fixed amount.",
+      "Firms that can reduce pollution cheaply sell their surplus permits to firms where abatement is more expensive.",
+      "Trading creates a market price for pollution, giving firms a financial incentive to invest in cleaner technology.",
+      "Total emissions fall to the capped level while the market determines the most cost-effective allocation of abatement."
+     ],
+     "title": "Tradable pollution permits use market incentives",
+     "result": "Tradable permits combine the certainty of a pollution cap with the efficiency of market-based allocation."
+    },
+    {
+     "steps": [
+      "Government intervention may fail due to imperfect information — policymakers may not know the true size of externalities or the optimal tax rate.",
+      "Regulation can create unintended consequences — price ceilings cause shortages, minimum prices create surpluses.",
+      "Administrative and enforcement costs may exceed the benefits of the intervention, making it net welfare-reducing.",
+      "Political pressures and lobbying can distort policy away from the social optimum towards the interests of powerful groups."
+     ],
+     "title": "Government failure can worsen outcomes",
+     "result": "Government failure means that intervention does not always improve on market outcomes — the cure can be worse than the disease."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "Setting the correct tax rate requires perfect information",
+     "content": "To fully internalise an externality, the tax must equal the marginal external cost. But measuring external costs precisely is extremely difficult — pollution damage, health costs and environmental harm are uncertain and context-dependent. An incorrect tax rate leads to either continued overproduction (too low) or excessive reduction in output (too high)."
+    },
+    {
+     "title": "Subsidies can be costly and create dependency",
+     "content": "Subsidies require government spending funded by taxation, which has its own welfare loss. Firms and consumers may become dependent on subsidies, making them politically difficult to remove. Subsidies can also distort competition by favouring subsidised goods over unsubsidised alternatives, potentially reducing dynamic efficiency."
+    },
+    {
+     "title": "Regulation vs market-based approaches involves trade-offs",
+     "content": "Direct regulation (bans, standards) provides certainty of outcome but is inflexible and may impose high compliance costs. Market-based approaches (taxes, permits) are more efficient but outcomes are less predictable. The best approach depends on the specific context — regulation works well for dangerous pollutants, while permits suit situations where cost-effective abatement varies between firms."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "id": "government-intervention:mistake:b1cfb52c",
+    "title": "Not explaining the incidence of an indirect tax correctly",
+    "examTip": "On your diagram, show the tax as a shift LEFT of supply. The consumer burden = P₂ - P₁. The producer burden = P₁ - (P₂ - tax). Always identify the welfare loss triangle.",
+    "mistake": "Students say \"consumers pay the tax\" or \"producers pay the tax\" — when in reality the burden is shared, depending on elasticity.",
+    "correction": "The tax burden is shared between consumers (higher price) and producers (lower revenue per unit). The more inelastic side bears a greater share of the tax. If demand is perfectly inelastic, consumers pay it all."
+   },
+   {
+    "id": "government-intervention:mistake:653a744e",
+    "title": "Forgetting to discuss government failure when evaluating intervention",
+    "mistake": "Students analyse the policy but fail to consider that intervention can create its own problems — bureaucracy, unintended consequences, information gaps.",
+    "correction": "Always evaluate by considering: the cost of implementation, unintended consequences, regulatory capture, lack of information, and whether the intervention creates new distortions worse than the original market failure."
+   },
+   {
+    "id": "government-intervention:mistake:cf7a607b",
+    "title": "Confusing maximum and minimum prices",
+    "examTip": "Remember: maximum price = below equilibrium = shortage. Minimum price = above equilibrium = surplus. Draw the diagram to make this visual.",
+    "mistake": "Students set a maximum price above equilibrium or a minimum price below equilibrium, which would have no effect.",
+    "correction": "A maximum price (price ceiling) must be set BELOW equilibrium to have an effect — it creates excess demand. A minimum price (price floor) must be set ABOVE equilibrium — it creates excess supply."
+   }
+  ]
+ }
+}

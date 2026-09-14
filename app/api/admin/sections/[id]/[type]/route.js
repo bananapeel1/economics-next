@@ -1,7 +1,7 @@
 import { createServerClient } from '@/lib/supabase-server';
 import { createClient } from '@/lib/supabase/server';
 import { NextResponse } from 'next/server';
-import { buildContext, gateSection, loadBundle, TABLE_TO_KEY } from '@/lib/content-gate.mjs';
+import { buildContext, gateSection, loadBundle, sameJson, TABLE_TO_KEY } from '@/lib/content-gate.mjs';
 import specItems from '@/audit/raw/spec-items.json';
 import baseline from '@/audit/validator-baseline.json';
 
@@ -146,7 +146,7 @@ export async function PUT(request, { params }) {
 
   // Read back the row students now read.
   const { data: back, error: backErr } = await supabase.from(tableName).select('data').eq('section_id', id).single();
-  if (backErr || JSON.stringify(back?.data) !== JSON.stringify(payload)) {
+  if (backErr || !sameJson(back?.data, payload)) {
     return NextResponse.json({ error: `Written, but the row read back does not match what was sent${backErr ? `: ${backErr.message}` : ''}. Check the section before trusting it.` }, { status: 500 });
   }
 

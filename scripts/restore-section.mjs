@@ -15,6 +15,7 @@ import { supabase } from './_db.mjs';
 import { readFileSync } from 'node:fs';
 import { CONTENT_TABLES, readSection } from './snapshot-section.mjs';
 import { validateLive, printFindings } from './_content-write.mjs';
+import { sameJson } from '../lib/content-gate.mjs';
 
 const args = process.argv.slice(2);
 const file = args.find((a) => !a.startsWith('--'));
@@ -95,7 +96,7 @@ for (const { table, want } of plan) {
 delete process.env.REVVY_ALLOW_RAW_WRITE;
 
 const after = await readSection(sectionId);
-const wrong = plan.filter(({ table, want }) => JSON.stringify(after[table]) !== JSON.stringify(want)).map((p) => p.table);
+const wrong = plan.filter(({ table, want }) => !sameJson(after[table], want)).map((p) => p.table);
 if (wrong.length) {
   console.error(`FAILED: live row still differs from the snapshot on ${wrong.join(', ')}`);
   process.exit(1);

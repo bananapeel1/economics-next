@@ -1,0 +1,1590 @@
+{
+ "section_id": "planning-raising-finance",
+ "subject": "business",
+ "label": "2026-09-14-pre-packet-13",
+ "tables": {
+  "section_content": [
+   {
+    "id": "planning-raising-finance:block:efe8040a",
+    "title": "Business Planning",
+    "sections": [
+     {
+      "id": "planning-raising-finance:sub:purpose-of-business-plans",
+      "body": [
+       {
+        "text": "A **business plan** is a formal written document that describes the business idea, its objectives, the market it operates in, the marketing strategy, operational details and financial forecasts. It serves as a roadmap for the entrepreneur and a key document when approaching lenders or investors for finance.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Define objectives",
+         "Research market",
+         "Plan finances",
+         "Present to stakeholders"
+        ],
+        "result": "Clear direction and improved chances of securing funding",
+        "resultType": "good"
+       },
+       {
+        "text": "For the entrepreneur, a business plan forces disciplined thinking about every aspect of the venture before committing resources. It identifies potential problems early and sets measurable targets against which progress can be tracked. Without a plan, decisions are made reactively rather than strategically.",
+        "type": "paragraph"
+       },
+       {
+        "text": "For lenders and investors, the plan provides evidence that the entrepreneur has thoroughly researched the market and has realistic financial projections. Banks are far more likely to approve a loan when a detailed business plan demonstrates a clear path to profitability.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Purpose of Business Plans",
+      "recall": {
+       "id": "planning-raising-finance:sub:purpose-of-business-plans:recall",
+       "type": "fillin",
+       "hints": [
+        "for______",
+        "inv______",
+        "upd_____"
+       ],
+       "prompt": "Complete the business plan logic:",
+       "answers": [
+        "forecasts",
+        "investors",
+        "updated"
+       ],
+       "template": [
+        "A business plan sets out objectives, strategies and financial ___",
+        "It helps attract finance from lenders and ___",
+        "The plan must be ___ as market conditions change"
+       ]
+      },
+      "keyIdea": "A business plan is a written document that sets out the objectives, strategies and financial forecasts of a business, used to guide decisions and attract finance.",
+      "examMatters": "Examiners often ask you to evaluate the usefulness of a business plan. Always consider both sides — it provides direction and attracts finance, but it may be based on inaccurate forecasts and can become outdated quickly in dynamic markets.",
+      "realExample": {
+       "text": "**Deliveroo** used a detailed business plan to secure its early-stage funding from venture capital investors in 2013. The plan outlined the gap in restaurant delivery logistics, projected growth in key cities, and detailed how the technology platform would scale, helping convince investors to commit millions.",
+       "emoji": "🍔"
+      },
+      "misconception": "Students assume a business plan guarantees success because it has been carefully prepared. A plan is only as good as its assumptions — if market conditions change or forecasts prove inaccurate, the plan becomes unreliable. Instead write: a business plan reduces risk through preparation but cannot eliminate uncertainty, and must be updated as conditions change."
+     },
+     {
+      "id": "planning-raising-finance:sub:contents-of-business-plans",
+      "body": [
+       {
+        "text": "A typical business plan contains several key sections that together provide a complete picture of the proposed venture. Each section serves a specific purpose and answers questions that stakeholders need resolved before committing support or resources.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Key Components",
+        "type": "subheading"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Executive summary** — a brief overview of the entire plan, written last but placed first to hook the reader.",
+         "**Market analysis** — research on the target market, competitors and customer needs, showing the opportunity exists.",
+         "**Marketing strategy** — how the business will attract and retain customers through the marketing mix.",
+         "**Operations plan** — details of premises, suppliers, production methods and staffing requirements.",
+         "**Financial forecasts** — projected revenue, costs, cash flow and break-even analysis covering at least the first year."
+        ]
+       },
+       {
+        "text": "The financial section is often the most scrutinised by investors and lenders. It must include realistic assumptions and demonstrate that the business can generate sufficient cash flow to cover costs and repay any borrowing. Overly optimistic figures damage credibility.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Contents of a Business Plan",
+      "recall": {
+       "id": "planning-raising-finance:sub:contents-of-business-plans:recall",
+       "type": "reorder",
+       "prompt": "Order these business plan steps logically:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Research the target market and competitors",
+        "Develop marketing and operations strategies",
+        "Produce financial forecasts and cash-flow projections",
+        "Write the executive summary as an overview"
+       ]
+      },
+      "keyIdea": "A complete business plan includes an executive summary, market analysis, marketing and operations plans, management details and financial projections.",
+      "examMatters": "When asked about the contents of a business plan, examiners reward you for linking each section to its purpose. Do not simply list headings — explain why financial projections matter to a bank or why market analysis matters to an investor.",
+      "realExample": {
+       "text": "**Grind**, the London-based coffee chain, included detailed financial projections and a clear operations plan when raising funds through crowdfunding in 2020. The transparency of their plan helped them raise over one million pounds from individual investors who could see exactly how funds would be deployed.",
+       "emoji": "☕"
+      },
+      "misconception": "Students list every possible section of a business plan without explaining why each matters. Examiners want you to understand the purpose of each component, not just name it. Instead write: explain how each section of the plan addresses a specific concern of stakeholders, such as market viability or financial sustainability."
+     }
+    ],
+    "takeaway": [
+     "A business plan provides direction and helps secure external finance.",
+     "Financial forecasts are the most scrutinised section by lenders.",
+     "Plans must be realistic and updated as conditions change."
+    ],
+    "quizIndices": [
+     0
+    ]
+   },
+   {
+    "id": "planning-raising-finance:block:8afdabca",
+    "title": "Internal Sources of Finance",
+    "sections": [
+     {
+      "id": "planning-raising-finance:sub:retained-profit",
+      "body": [
+       {
+        "text": "**Retained profit** is the most common source of internal finance. It is the profit left over after all costs, tax and dividends to shareholders have been paid. The business keeps this money to reinvest in expansion, new equipment, research or to build a cash reserve for future needs.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Business earns revenue",
+         "Deduct costs, tax and dividends",
+         "Remaining profit is retained"
+        ],
+        "result": "Free finance with no interest or loss of ownership",
+        "resultType": "good"
+       },
+       {
+        "text": "The major advantage of retained profit is that it has **no cost** — there is no interest to pay and no dilution of ownership. It also keeps the business independent from external lenders. However, it is only available to businesses already making profit, meaning start-ups cannot use this source.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The limitation is that shareholders may prefer higher dividends rather than seeing profits retained. There can be a tension between reinvesting for long-term growth and satisfying shareholders who want short-term returns.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Retained Profit",
+      "recall": {
+       "id": "planning-raising-finance:sub:retained-profit:recall",
+       "type": "fillin",
+       "hints": [
+        "div______",
+        "int______",
+        "pro___"
+       ],
+       "prompt": "Complete the retained profit logic:",
+       "answers": [
+        "dividends",
+        "interest",
+        "profit"
+       ],
+       "template": [
+        "Retained profit is net profit kept after ___ are paid",
+        "It has no ___ charges and no dilution of ownership",
+        "Only available to businesses already making a ___"
+       ]
+      },
+      "keyIdea": "Retained profit is the portion of net profit kept in the business after dividends are paid, providing a free and flexible source of finance for growth.",
+      "examMatters": "Examiners often ask you to recommend a source of finance for a given scenario. Retained profit is ideal for established, profitable firms but unsuitable for start-ups or loss-making businesses. Always link your recommendation to the business context.",
+      "realExample": {
+       "text": "**Aldi** has historically relied on retained profits to fund its aggressive UK expansion, opening hundreds of new stores without issuing shares or taking on significant debt. As a privately owned business, Aldi retains virtually all of its profits, giving it the financial firepower to grow rapidly without external pressure.",
+       "emoji": "🛒"
+      },
+      "misconception": "Students claim retained profit is free money that appears without cost. While there is no interest charge, there is an opportunity cost — shareholders sacrifice dividends and the funds could have been invested elsewhere for a higher return. Instead write: retained profit has no direct cost but carries an opportunity cost for shareholders who forgo dividends."
+     },
+     {
+      "id": "planning-raising-finance:sub:sale-of-assets",
+      "body": [
+       {
+        "text": "A business can raise finance internally by **selling assets** it no longer needs or that are underperforming. This could include surplus machinery, vehicles, property or even entire divisions of the business. The cash generated can then be redirected toward more productive uses.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Identify underused asset",
+         "Sell to generate cash",
+         "Reinvest proceeds"
+        ],
+        "result": "One-off cash injection without borrowing",
+        "resultType": "neutral"
+       },
+       {
+        "text": "This approach is useful when a business is restructuring or refocusing on its core activities. It avoids the need to borrow and does not dilute ownership. However, the asset is gone permanently, so the business must be confident it will not need it in the future.",
+        "type": "paragraph"
+       },
+       {
+        "text": "A specific form is **sale and leaseback**, where the business sells an asset such as property and immediately leases it back from the buyer. This raises cash while the business continues to use the asset, though it now incurs ongoing lease payments.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Sale of Assets",
+      "recall": {
+       "id": "planning-raising-finance:sub:sale-of-assets:recall",
+       "type": "reorder",
+       "prompt": "Order the sale and leaseback process:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Business identifies an asset it owns outright",
+        "Asset is sold to a finance company for cash",
+        "Business leases the asset back for ongoing use",
+        "Cash is reinvested but lease costs are now incurred"
+       ]
+      },
+      "keyIdea": "Selling unwanted or underused assets converts them into cash, but the business permanently loses those resources and any future income they generated.",
+      "examMatters": "When evaluating sale of assets as a source of finance, examiners want you to consider what the business loses by selling. A factory sold today cannot support production expansion tomorrow. Always weigh the short-term cash benefit against the long-term strategic impact.",
+      "realExample": {
+       "text": "**British Airways** used sale and leaseback on several aircraft during the Covid-19 pandemic to raise emergency cash while still operating the planes. This allowed BA to generate immediate liquidity without losing access to the aircraft, though it committed to long-term lease payments that increased operating costs.",
+       "emoji": "✈️"
+      },
+      "misconception": "Students treat sale of assets as a reliable ongoing source of finance. It is a one-off measure — once an asset is sold, it cannot be sold again. Instead write: sale of assets provides a one-time cash injection and is not a sustainable long-term source of finance for growth."
+     },
+     {
+      "id": "planning-raising-finance:sub:owner-capital",
+      "body": [
+       {
+        "text": "**Owner's capital** refers to the personal funds that an entrepreneur invests directly into their business. This is often the first source of finance used when starting a new venture, because the business has no trading history and may struggle to secure external funding.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Using personal savings shows commitment to the business idea. Lenders and investors look more favourably on entrepreneurs who have put their own money at risk — it signals confidence and aligns the owner's interests with the success of the business.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Owner invests personal savings",
+         "Business launched with no debt"
+        ],
+        "result": "Full control retained but personal risk is high",
+        "resultType": "neutral"
+       },
+       {
+        "text": "The obvious limitation is that personal savings are finite. Most individuals cannot fund significant expansion from personal wealth alone, which means owner's capital is typically a start-up source that must be supplemented by other finance as the business grows.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Owner's Capital",
+      "recall": {
+       "id": "planning-raising-finance:sub:owner-capital:recall",
+       "type": "fillin",
+       "hints": [
+        "sav____",
+        "com_______",
+        "wea___"
+       ],
+       "prompt": "Complete the owner's capital logic:",
+       "answers": [
+        "savings",
+        "commitment",
+        "wealth"
+       ],
+       "template": [
+        "Owner's capital comes from the entrepreneur's personal ___",
+        "It signals ___ to potential lenders and investors",
+        "It is limited by the owner's personal ___"
+       ]
+      },
+      "keyIdea": "The owner invests their own personal savings into the business, which is essential at start-up but limited by personal wealth.",
+      "examMatters": "In questions about start-up finance, examiners expect you to explain why owner's capital is often the first source used and why it has limitations. Link your answer to the concepts of personal risk and the difficulty new businesses face in securing external finance.",
+      "realExample": {
+       "text": "**Sara Blakely** invested her entire personal savings of $5,000 to launch Spanx in 2000, avoiding any external investors or debt. This meant she retained 100% ownership, and when the company was valued at over $1 billion, Blakely became the youngest self-made female billionaire.",
+       "emoji": "👗"
+      },
+      "misconception": "Students assume using personal savings means there is no financial risk. The owner risks losing their personal wealth if the business fails, which can affect their mortgage, pension and family finances. Instead write: owner's capital avoids external debt but exposes the entrepreneur's personal wealth to the risk of total loss if the business fails."
+     }
+    ],
+    "takeaway": [
+     "Retained profit is free of interest but only available to profitable firms.",
+     "Sale of assets provides one-off cash but permanently loses resources.",
+     "Owner's capital shows commitment but is limited by personal wealth."
+    ],
+    "quizIndices": [
+     1
+    ]
+   },
+   {
+    "id": "planning-raising-finance:block:22a94dd2",
+    "title": "External Sources of Finance",
+    "sections": [
+     {
+      "id": "planning-raising-finance:sub:bank-loans-overdrafts",
+      "body": [
+       {
+        "text": "A **bank loan** is a fixed sum of money borrowed from a bank and repaid in regular instalments over an agreed period, typically with interest. Loans are suitable for purchasing specific assets such as equipment or property, because the repayment period can be matched to the asset's useful life.",
+        "type": "paragraph"
+       },
+       {
+        "text": "A **bank overdraft** allows a business to spend more than it has in its current account, up to an agreed limit. Overdrafts are designed for short-term cash flow management — covering a gap between paying suppliers and receiving payment from customers. Interest is only charged on the amount overdrawn.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Cash flow shortfall identified",
+         "Overdraft covers the gap temporarily",
+         "Customer payments arrive"
+        ],
+        "result": "Cash flow smoothed without a long-term commitment",
+        "resultType": "good"
+       },
+       {
+        "text": "The key distinction is time horizon: loans are **medium to long-term**, while overdrafts are **short-term**. Overdrafts are more expensive per pound borrowed because interest rates are higher, but they offer flexibility. Banks can also recall an overdraft at any time, making it unreliable for long-term needs.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Bank Loans and Overdrafts",
+      "recall": {
+       "id": "planning-raising-finance:sub:bank-loans-overdrafts:recall",
+       "type": "reorder",
+       "prompt": "Order these from shortest to longest term finance:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Bank overdraft (days to weeks)",
+        "Trade credit (30-90 days)",
+        "Bank loan (1-25 years)",
+        "Mortgage (10-30 years)"
+       ]
+      },
+      "keyIdea": "Bank loans provide a lump sum repaid with interest over a fixed period, while overdrafts offer flexible short-term borrowing when cash flow is tight.",
+      "examMatters": "Examiners frequently ask you to choose between different sources of finance. Always match the source to the purpose — short-term need equals overdraft, long-term asset purchase equals loan. Justifying the time horizon match is essential for full marks.",
+      "realExample": {
+       "text": "**JCB** took out long-term bank loans to finance the construction of its new factory in Staffordshire, matching the 20-year loan repayment to the expected life of the building. For day-to-day cash flow gaps caused by seasonal demand fluctuations, JCB uses an overdraft facility rather than additional borrowing.",
+       "emoji": "🏗️"
+      },
+      "misconception": "Students recommend overdrafts for buying fixed assets like machinery. Overdrafts are short-term and can be recalled by the bank at any time, making them unsuitable for long-term investment. Instead write: overdrafts are designed for short-term cash flow smoothing, while bank loans should be used for long-term asset purchases."
+     },
+     {
+      "id": "planning-raising-finance:sub:share-capital",
+      "body": [
+       {
+        "text": "**Share capital** is raised by selling ownership stakes in the business to investors. For a private limited company (Ltd), shares are sold to family, friends or private investors. For a public limited company (PLC), shares are sold on the stock exchange to the general public through an **initial public offering (IPO)**.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Company issues new shares",
+         "Investors buy shares and provide capital",
+         "Ownership is diluted"
+        ],
+        "result": "Large sums raised but original owners lose some control",
+        "resultType": "neutral"
+       },
+       {
+        "text": "Share capital is **permanent** — it does not need to be repaid. There are no interest charges, though shareholders expect dividends and capital growth in return. This makes it ideal for funding major expansion, acquisitions or research and development.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The main disadvantage is **dilution of ownership**. Each new share issued reduces the existing owners' percentage stake, potentially weakening their control over strategic decisions. Founders may eventually become minority shareholders if too many shares are issued.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Share Capital",
+      "recall": {
+       "id": "planning-raising-finance:sub:share-capital:recall",
+       "type": "fillin",
+       "hints": [
+        "equ___",
+        "rep___",
+        "dil_____"
+       ],
+       "prompt": "Complete the share capital logic:",
+       "answers": [
+        "equity",
+        "repaid",
+        "dilution"
+       ],
+       "template": [
+        "Share capital is ___ finance, not debt",
+        "It does not need to be ___ to investors",
+        "The main disadvantage is ___ of ownership and control"
+       ]
+      },
+      "keyIdea": "Selling shares raises large sums of permanent capital with no repayment obligation, but the original owners give up a proportion of ownership and control.",
+      "examMatters": "When comparing debt and equity finance, examiners want you to discuss the trade-off between maintaining control (debt) and avoiding repayment obligations (equity). Always consider the business context — a founder who values control will prefer loans over shares.",
+      "realExample": {
+       "text": "**Raspberry Pi** floated on the London Stock Exchange in 2024, raising significant capital through its IPO to fund expansion of its computer hardware range. While the IPO gave Raspberry Pi access to large-scale funding, founder Eben Upton's personal ownership stake was reduced as millions of new shares were issued to public investors.",
+       "emoji": "🎮"
+      },
+      "misconception": "Students write that selling shares means the business goes into debt. Shares are equity, not debt — there is no obligation to repay the capital and no interest is charged. Instead write: share capital is equity finance that provides permanent funds without repayment, but it dilutes the original owners' control and requires dividend payments to attract investors."
+     },
+     {
+      "id": "planning-raising-finance:sub:venture-capital-crowdfunding",
+      "body": [
+       {
+        "text": "**Venture capital** involves professional investors or firms providing substantial funding to businesses with high growth potential, typically in exchange for a significant equity stake and a seat on the board. Venture capitalists bring expertise, contacts and strategic guidance alongside their money.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Crowdfunding** uses online platforms like Kickstarter or Seedrs to raise small amounts from a large number of individuals. It can be **reward-based** (backers receive a product), **equity-based** (backers receive shares) or **donation-based** (backers give for social causes).",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Business pitches on platform",
+         "Many small investors contribute",
+         "Target amount reached"
+        ],
+        "result": "Finance raised plus market validation of the idea",
+        "resultType": "good"
+       },
+       {
+        "text": "Crowdfunding also acts as a marketing tool — it generates publicity and tests whether consumers actually want the product before it is fully developed. However, campaigns that fail to reach their target raise nothing, and sharing the idea publicly risks competitors copying it.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Venture Capital and Crowdfunding",
+      "recall": {
+       "id": "planning-raising-finance:sub:venture-capital-crowdfunding:recall",
+       "type": "reorder",
+       "prompt": "Order the crowdfunding process from start to finish:",
+       "shuffled": [
+        1,
+        3,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Business creates a pitch on an online platform",
+        "Many individuals pledge small amounts of money",
+        "Funding target is met and capital is received",
+        "Product is developed and delivered to backers"
+       ]
+      },
+      "keyIdea": "Venture capitalists invest large sums in high-growth businesses in exchange for equity and influence, while crowdfunding raises smaller sums from many individuals online.",
+      "examMatters": "When evaluating venture capital or crowdfunding, examiners want you to consider the suitability for the specific business. A high-tech start-up may suit venture capital; a consumer product with broad appeal may suit crowdfunding. Always justify your recommendation with context.",
+      "realExample": {
+       "text": "**BrewDog** raised over 90 million pounds through its Equity for Punks crowdfunding campaigns, selling shares directly to beer fans online. This gave BrewDog capital to expand internationally while creating a passionate community of investor-customers who actively promoted the brand.",
+       "emoji": "🍺"
+      },
+      "misconception": "Students assume venture capitalists simply hand over money with no conditions. Venture capitalists typically demand a significant equity stake, board representation and strict performance targets. Instead write: venture capital provides large-scale funding but comes with loss of ownership, strategic influence from the investor, and pressure to deliver rapid growth."
+     }
+    ],
+    "takeaway": [
+     "Match finance to purpose: overdrafts for short-term, loans for long-term.",
+     "Share capital is permanent with no repayment but dilutes ownership.",
+     "Crowdfunding raises finance and validates demand simultaneously.",
+     "Venture capital brings expertise but demands equity and influence."
+    ],
+    "quizIndices": [
+     2
+    ],
+    "practiceIndices": [
+     0
+    ]
+   },
+   {
+    "id": "planning-raising-finance:block:782aa312",
+    "title": "Forms of Business",
+    "sections": [
+     {
+      "id": "planning-raising-finance:sub:sole-traders-partnerships",
+      "body": [
+       {
+        "text": "A **sole trader** is an individual who owns and runs a business alone. It is the simplest business structure — there are no legal formation requirements beyond registering with HMRC for tax. The owner makes all decisions, keeps all profits and bears all risk personally.",
+        "type": "paragraph"
+       },
+       {
+        "text": "A **partnership** is a business owned by two or more people who share responsibility, decision-making and profits. A formal **deed of partnership** typically sets out how profits are divided, the roles of each partner, and procedures for resolving disputes or admitting new partners.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Simple to set up",
+         "Owner keeps all profit",
+         "Unlimited personal liability"
+        ],
+        "result": "Full control but personal assets are at risk",
+        "resultType": "neutral"
+       },
+       {
+        "text": "Both structures carry **unlimited liability**, meaning the owners are personally responsible for all business debts. If the business fails, creditors can claim against the owner's personal assets — their home, savings and possessions.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Sole Traders and Partnerships",
+      "recall": {
+       "id": "planning-raising-finance:sub:sole-traders-partnerships:recall",
+       "type": "fillin",
+       "hints": [
+        "unl______",
+        "pro____",
+        "div_____"
+       ],
+       "prompt": "Complete the sole trader logic:",
+       "answers": [
+        "unlimited",
+        "profits",
+        "divided"
+       ],
+       "template": [
+        "A sole trader has ___ liability for business debts",
+        "All ___ belong to the owner but so do all losses",
+        "A deed of partnership sets out how profits are ___"
+       ]
+      },
+      "keyIdea": "Sole traders and partnerships are simple to set up and give owners direct control, but both carry the burden of unlimited liability.",
+      "examMatters": "Examiners frequently test your understanding of unlimited liability. When discussing sole traders or partnerships, always explain what unlimited liability means in practice — personal assets at risk — and why this might deter some entrepreneurs from choosing this structure.",
+      "realExample": {
+       "text": "**Pimlico Plumbers**, founded by Charlie Mullins as a sole trader in 1979, grew into one of London's largest independent plumbing companies. Mullins later converted the business to a limited company to gain the protection of limited liability as the firm's contracts and workforce expanded significantly.",
+       "emoji": "🔧"
+      },
+      "misconception": "Students assume sole traders always work alone. A sole trader is the sole owner, but they can employ as many staff as they wish. Instead write: sole trader refers to sole ownership, not sole employment — the owner has unlimited liability and retains all profits, but can hire employees to help run the business."
+     },
+     {
+      "id": "planning-raising-finance:sub:private-public-limited-companies",
+      "body": [
+       {
+        "text": "A **private limited company (Ltd)** is a separate legal entity from its owners. Shares are sold privately and cannot be traded on the stock exchange. This gives owners **limited liability** — they can only lose the amount they invested in shares, not their personal assets.",
+        "type": "paragraph"
+       },
+       {
+        "text": "A **public limited company (PLC)** can sell shares to the general public on the stock exchange. PLCs can raise far larger sums of capital than Ltds, but they must comply with extensive regulations including publishing annual accounts and holding annual general meetings.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Business incorporates as Ltd or PLC",
+         "Owners' liability limited to investment",
+         "Must file accounts with Companies House"
+        ],
+        "result": "Protection for owners but loss of financial privacy",
+        "resultType": "neutral"
+       },
+       {
+        "text": "The key trade-off is between access to capital and control. A PLC can raise millions through share issues but risks hostile takeovers if outside investors accumulate a majority stake. An Ltd retains tighter ownership control but has limited access to large-scale funding.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Private and Public Limited Companies",
+      "recall": {
+       "id": "planning-raising-finance:sub:private-public-limited-companies:recall",
+       "type": "reorder",
+       "prompt": "Order the progression from simplest to most complex structure:",
+       "shuffled": [
+        3,
+        0,
+        2,
+        1
+       ],
+       "correctOrder": [
+        "Sole trader — single owner, unlimited liability",
+        "Partnership — shared ownership, unlimited liability",
+        "Private limited company (Ltd) — limited liability, private shares",
+        "Public limited company (PLC) — shares traded on stock exchange"
+       ]
+      },
+      "keyIdea": "Limited companies are separate legal entities that protect owners with limited liability, but face more regulation and public disclosure requirements.",
+      "examMatters": "When comparing business structures, examiners expect a clear distinction between unlimited and limited liability. Use the specific terms Ltd and PLC, explain who can buy shares in each, and evaluate which structure suits the business in the case study based on its size and growth ambitions.",
+      "realExample": {
+       "text": "**ASOS** converted from a private limited company to a PLC in 2001, listing on the London Stock Exchange's AIM market. The IPO gave ASOS access to significant investment capital that funded its rapid international expansion, but it also required the company to publish financial results and face public scrutiny from shareholders and analysts.",
+       "emoji": "🛍️"
+      },
+      "misconception": "Students write that limited liability means the business cannot lose money. Limited liability protects the owners personally — the business itself can still lose everything and go bankrupt. Instead write: limited liability means shareholders can only lose the value of their shares, not their personal assets, but the business itself faces no such protection."
+     }
+    ],
+    "takeaway": [
+     "Sole traders keep all profit but face unlimited personal liability.",
+     "Limited companies protect owners but require public financial disclosure.",
+     "PLCs access more capital than Ltds but risk losing ownership control."
+    ],
+    "quizIndices": [
+     3
+    ],
+    "practiceIndices": [
+     1
+    ]
+   },
+   {
+    "id": "planning-raising-finance:block:fd00cde5",
+    "title": "Liability and Appropriate Finance",
+    "sections": [
+     {
+      "id": "planning-raising-finance:sub:unlimited-vs-limited-liability",
+      "body": [
+       {
+        "text": "**Unlimited liability** means there is no legal distinction between the owner and the business. If the business cannot pay its debts, creditors can pursue the owner's personal assets — house, car, savings. This applies to sole traders and partners in an ordinary partnership.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Limited liability** means the business is a separate legal entity from its owners. Shareholders can only lose the money they invested in purchasing shares. Their personal assets are protected even if the business goes bankrupt. This is one of the most important reasons businesses choose to incorporate.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Business fails with debts",
+         "Unlimited: personal assets seized",
+         "Limited: only share value lost"
+        ],
+        "result": "Liability type determines the personal risk to owners",
+        "resultType": "neutral"
+       },
+       {
+        "text": "The protection of limited liability encourages investment and entrepreneurship because it reduces the personal financial risk. Without it, fewer people would be willing to invest in businesses, and economic growth would be slower.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Unlimited vs Limited Liability",
+      "recall": {
+       "id": "planning-raising-finance:sub:unlimited-vs-limited-liability:recall",
+       "type": "fillin",
+       "hints": [
+        "ass___",
+        "inv_____",
+        "inv________"
+       ],
+       "prompt": "Complete the liability comparison:",
+       "answers": [
+        "assets",
+        "invested",
+        "investment"
+       ],
+       "template": [
+        "Unlimited liability means personal ___ are at risk",
+        "Limited liability caps losses at the amount ___ in shares",
+        "Limited liability encourages more ___ and entrepreneurship"
+       ]
+      },
+      "keyIdea": "Unlimited liability puts the owner's personal wealth at risk for all business debts, while limited liability caps losses at the amount invested in shares.",
+      "examMatters": "Liability is a fundamental concept that connects to business structure, finance and risk. Examiners expect you to explain its practical implications — why does it matter when choosing between a sole trader and a limited company? Always link liability to the owner's willingness to take financial risk.",
+      "realExample": {
+       "text": "**BHS** collapsed in 2016 with a pension deficit of 571 million pounds, but shareholders under the limited company structure could only lose the value of their shares. Pensioners and creditors bore the financial pain, illustrating both the protection limited liability offers shareholders and its limitations for other stakeholders.",
+       "emoji": "🏪"
+      },
+      "misconception": "Students confuse limited liability with limited risk. Limited liability only protects personal assets from business debts — the owner still loses their entire investment if the company fails. Instead write: limited liability caps personal losses at the value of shares held, but shareholders still risk losing their full investment in the business."
+     },
+     {
+      "id": "planning-raising-finance:sub:choosing-appropriate-finance",
+      "body": [
+       {
+        "text": "There is no single best source of finance — the appropriate choice depends on several factors. The **purpose** of the finance matters most: short-term cash flow needs suit overdrafts or trade credit, while long-term investments in assets require loans, share capital or retained profit.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Key Factors in Choosing Finance",
+        "type": "subheading"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Amount required** — small sums suit personal savings or overdrafts; large sums require loans or share capital.",
+         "**Time period** — short-term needs suit overdrafts; long-term needs suit loans or equity.",
+         "**Business stage** — start-ups rely on owner's capital; established firms can use retained profit.",
+         "**Control** — debt finance preserves ownership; equity finance dilutes it."
+        ]
+       },
+       {
+        "text": "A common mistake is for businesses to use short-term finance for long-term purposes — for example, funding a factory purchase with an overdraft. This creates dangerous cash flow pressure because the finance can be recalled before the asset generates returns.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Choosing Appropriate Finance",
+      "recall": {
+       "id": "planning-raising-finance:sub:choosing-appropriate-finance:recall",
+       "type": "reorder",
+       "prompt": "Match the finance source to the most appropriate use:",
+       "shuffled": [
+        2,
+        3,
+        0,
+        1
+       ],
+       "correctOrder": [
+        "Overdraft — covering a temporary cash flow gap",
+        "Bank loan — purchasing a delivery vehicle",
+        "Share capital — funding major international expansion",
+        "Retained profit — upgrading office equipment"
+       ]
+      },
+      "keyIdea": "The right source of finance depends on the purpose, amount needed, business stage and the owner's willingness to share control or take on debt.",
+      "examMatters": "This is a favourite evaluation question. Examiners want you to weigh up at least two options, consider the business context, and reach a justified recommendation. Simply describing sources without applying them to the scenario scores poorly.",
+      "realExample": {
+       "text": "**Tesla** used a deliberate mix of share capital, government loans and retained profits to fund its gigafactory construction. Elon Musk matched each source to its purpose — equity for long-term capacity building, government loans for green energy eligibility, and retained profit for ongoing operational investment.",
+       "emoji": "🚗"
+      },
+      "misconception": "Students recommend one source of finance for every situation without considering context. The best answer always depends on the specific circumstances of the business. Instead write: the appropriate source of finance depends on the amount needed, the time horizon, the business stage and the owner's attitude to risk and control."
+     }
+    ],
+    "takeaway": [
+     "Unlimited liability risks personal assets; limited caps losses at shares.",
+     "Match finance duration to the purpose: short-term need, short-term source.",
+     "Context determines the best source — there is no universal answer.",
+     "Using short-term finance for long-term needs creates cash flow danger."
+    ],
+    "quizIndices": [
+     4
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "flow": {
+     "steps": [
+      "Research market & costs",
+      "Write financial forecasts",
+      "Present plan to lenders/investors"
+     ],
+     "result": "Finance secured and risk reduced",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "Business Planning",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Business plan</strong> — a formal written document setting out a business's objectives, strategies, market analysis, financial forecasts and operational details, used to guide decision-making and attract investors.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Executive summary</strong> — a concise overview at the start of the plan covering the business idea, target market, competitive advantage and financial projections.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "A plan forces entrepreneurs to <strong>test assumptions</strong> about costs, revenue and market demand before committing resources, reducing the risk of costly surprises.",
+        "type": "mech"
+       },
+       {
+        "text": "Banks and investors use the plan to <strong>assess viability</strong>; without credible financial forecasts, most external finance is unavailable to start-ups.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Plans can become outdated quickly in dynamic markets, so firms must treat them as <strong>living documents</strong> that are regularly revised rather than fixed blueprints.",
+        "type": "imp"
+       },
+       {
+        "text": "Business planning links directly to cash-flow forecasting and budgeting in 2.3.2; the plan provides the assumptions that drive those financial tools.",
+        "type": "link"
+       }
+      ],
+      "title": "PURPOSE & EVALUATION"
+     }
+    ],
+    "keyIdea": "A business plan is the roadmap that turns an entrepreneur's vision into a structured strategy; without one, securing finance and managing early growth is far harder.",
+    "takeaway": [
+     "A business plan reduces risk by forcing entrepreneurs to research and quantify their assumptions before launch.",
+     "The primary audience for a plan is often external financiers, so credibility of the numbers matters most.",
+     "Plans are living documents; a plan written once and never updated loses its value in a changing market."
+    ],
+    "examMatters": "Examiners want you to evaluate whether a business plan guarantees success. It does not, because forecasts rely on assumptions that may prove wrong, but it significantly improves the chances by forcing structured thinking and attracting finance."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Firm earns profit",
+      "Retains portion after dividends",
+      "Reinvests in growth"
+     ],
+     "result": "Growth funded without debt or ownership dilution",
+     "resultType": "good"
+    },
+    "meta": "3 concepts",
+    "title": "Internal Finance",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Retained profit</strong> — profit kept in the business after tax and dividends have been paid, reinvested to fund growth or build reserves; it is the most common source of finance for established firms.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Sale of assets</strong> — raising cash by selling items the business owns, such as property, vehicles or equipment that are no longer needed or can be leased back.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Retained profit carries <strong>no repayment obligation</strong> and no dilution of ownership, making it the cheapest long-term source of finance available.",
+        "type": "mech"
+       },
+       {
+        "text": "However, relying on retained profit <strong>limits growth speed</strong> because the firm can only invest what it has already earned, which may be too slow in fast-moving markets.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Sale of assets provides a one-off cash injection but <strong>reduces productive capacity</strong> unless the asset was genuinely surplus; selling core machinery to pay bills signals financial distress.",
+        "type": "imp"
+       },
+       {
+        "text": "Internal finance links to profit management in 2.3.3; a firm that maximises operating efficiency generates more retained profit to reinvest.",
+        "type": "link"
+       }
+      ],
+      "title": "EVALUATION"
+     }
+    ],
+    "keyIdea": "Internal sources of finance come from within the business itself, meaning no interest payments or loss of ownership, but availability depends entirely on the firm's existing wealth.",
+    "takeaway": [
+     "Retained profit is the cheapest source of finance but limits growth to the pace of past earnings.",
+     "Sale of assets works as a one-off measure but should not involve selling resources the firm still needs.",
+     "Internal finance preserves ownership and control, which matters most to sole traders and partnerships."
+    ],
+    "misconception": "Students say retained profit is free. Wrong because it has an opportunity cost; shareholders forgo dividends, so they expect reinvested profit to generate returns at least as good as alternative investments. Instead write: retained profit avoids interest costs but carries an opportunity cost to shareholders who receive lower dividends."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Identify funding gap",
+      "Choose debt or equity source",
+      "Accept cost/control trade-off"
+     ],
+     "result": "Growth financed beyond internal means",
+     "resultType": "good"
+    },
+    "meta": "5 concepts",
+    "title": "External Finance",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Bank loan</strong> — a fixed sum borrowed from a bank and repaid with interest over an agreed period; it gives certainty on repayment amounts but requires collateral and creates a legal obligation to repay.",
+        "type": "def"
+       },
+       {
+        "text": "Loans suit <strong>long-term capital expenditure</strong> like buying premises because repayments are spread over years, matching the useful life of the asset purchased.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "High interest rates or poor credit history can make bank loans <strong>expensive or inaccessible</strong>, pushing firms toward alternative sources.",
+        "type": "imp"
+       }
+      ],
+      "title": "DEBT FINANCE"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Venture capital</strong> — investment from specialist firms or individuals who provide large sums in exchange for an equity stake and often a say in management; suited to high-growth start-ups.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Crowd-funding</strong> — raising small amounts from a large number of people, typically via online platforms; it also tests market demand before launch but offers less capital than venture funding.",
+        "type": "def"
+       },
+       {
+        "text": "Venture capitalists bring <strong>expertise and networks</strong> alongside money, accelerating growth, but founders sacrifice equity and some strategic control.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Crowd-funding doubles as <strong>free market research</strong>; if the campaign fails to attract backers, it signals weak demand before significant resources are committed.",
+        "type": "imp"
+       }
+      ],
+      "title": "EQUITY & ALTERNATIVE FINANCE"
+     }
+    ],
+    "keyIdea": "External finance unlocks growth beyond what retained profits can fund, but every source carries a trade-off between cost, control, and repayment pressure.",
+    "takeaway": [
+     "Bank loans preserve ownership but create fixed repayment obligations that pressure cash flow.",
+     "Venture capital suits high-growth firms willing to trade equity for expertise and large-scale funding.",
+     "Crowd-funding tests demand and raises capital simultaneously, making it uniquely useful for innovative products."
+    ],
+    "examMatters": "Examiners reward answers that match the source of finance to the business context. A sole trader cannot issue shares; a high-risk start-up may not qualify for bank loans. Always justify your recommendation by linking the source to the firm's size, risk profile and objectives."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Sole trader starts up",
+      "Growth demands more capital",
+      "Incorporates as Ltd or PLC"
+     ],
+     "result": "Access to equity finance and limited liability",
+     "resultType": "good"
+    },
+    "meta": "5 concepts",
+    "title": "Forms of Business",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Sole trader</strong> — a business owned and controlled by one person who keeps all profits but bears unlimited liability; the simplest and cheapest structure to set up.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Partnership</strong> — a business owned by two or more people who share profits, responsibilities and unlimited liability according to a deed of partnership.",
+        "type": "def"
+       },
+       {
+        "text": "Unincorporated businesses have <strong>no separate legal identity</strong> from their owners, meaning personal assets are at risk if the business cannot pay its debts.",
+        "type": "mech"
+       }
+      ],
+      "title": "UNINCORPORATED BUSINESSES"
+     },
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Private limited company (Ltd)</strong> — an incorporated business whose shares are sold privately to invited investors; it offers limited liability but cannot sell shares on the stock exchange.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Public limited company (PLC)</strong> — an incorporated business whose shares are traded on the stock exchange, giving access to large-scale equity finance but exposing the firm to hostile takeovers and short-term shareholder pressure.",
+        "type": "def"
+       },
+       {
+        "text": "Incorporation creates a <strong>separate legal entity</strong>, so the company can own assets, enter contracts and sue in its own name, independent of its shareholders.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "PLCs face pressure to deliver <strong>short-term dividends</strong> to satisfy stock market investors, which can conflict with long-term strategic investment.",
+        "type": "imp"
+       }
+      ],
+      "title": "INCORPORATED BUSINESSES"
+     }
+    ],
+    "keyIdea": "The legal structure a business chooses determines how it raises finance, who controls decisions, and how profits and risks are shared among owners.",
+    "takeaway": [
+     "Sole traders and partnerships are simple but expose owners to unlimited personal liability.",
+     "Incorporation as an Ltd protects personal assets while keeping ownership private and controlled.",
+     "PLCs can raise vast sums on the stock exchange but must manage shareholder expectations and takeover risk."
+    ],
+    "examMatters": "Examiners expect you to recommend a business structure by linking it to the firm's size, growth ambitions and risk appetite. Do not simply list advantages and disadvantages; explain why a particular structure suits the scenario given."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Business debts exceed assets",
+      "Unlimited: personal assets seized",
+      "Limited: loss capped at investment"
+     ],
+     "result": "Limited liability protects personal wealth",
+     "resultType": "good"
+    },
+    "meta": "3 concepts",
+    "title": "Liability",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Unlimited liability</strong> — the owner is personally responsible for all business debts; if the business fails, personal assets such as a house or car can be seized to repay creditors.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Limited liability</strong> — the owners' financial responsibility is restricted to the amount they invested in the business; personal assets are protected if the business fails.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Limited liability <strong>encourages investment</strong> because shareholders know the maximum they can lose, making people more willing to buy shares in risky ventures.",
+        "type": "mech"
+       },
+       {
+        "text": "Unlimited liability <strong>discourages risk-taking</strong> and makes it harder for sole traders and partnerships to attract external investors who fear losing personal wealth.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "The shift from unlimited to limited liability through incorporation is often the <strong>critical turning point</strong> that allows a small business to scale up and attract serious external finance.",
+        "type": "imp"
+       },
+       {
+        "text": "Liability links directly to forms of business; the choice of legal structure automatically determines whether owners face limited or unlimited liability.",
+        "type": "link"
+       }
+      ],
+      "title": "IMPLICATIONS"
+     }
+    ],
+    "keyIdea": "The distinction between limited and unlimited liability is one of the most important concepts in business; it determines how much personal wealth an owner risks when things go wrong.",
+    "takeaway": [
+     "Unlimited liability puts personal assets at risk; limited liability caps losses at the amount invested.",
+     "Limited liability is the main reason entrepreneurs incorporate, as it encourages both investment and risk-taking.",
+     "Moving from sole trader to Ltd is often the single most important structural decision a growing business makes."
+    ],
+    "misconception": "Students say limited liability means the business cannot go bankrupt. Wrong because limited liability only protects the owners' personal assets; the business itself can still fail and all invested capital can be lost. Instead write: limited liability caps the owner's loss at their investment but does not prevent the business from failing."
+   }
+  ],
+  "section_quiz": [
+   {
+    "id": "planning-raising-finance:quiz:6a7bb3cd",
+    "options": [
+     "Bank loan",
+     "Retained profit",
+     "Venture capital",
+     "Crowdfunding"
+    ],
+    "question": "Which of the following is an internal source of finance?",
+    "explanation": "Retained profit is an internal source of finance because it comes from within the business — it is profit that has been kept in the business rather than distributed to owners. Bank loans, venture capital, and crowdfunding are all external sources.",
+    "correctIndex": 1
+   },
+   {
+    "id": "planning-raising-finance:quiz:c50e7c04",
+    "options": [
+     "They cannot employ staff",
+     "Their personal assets are at risk if the business fails",
+     "They must pay corporation tax",
+     "They cannot take out a bank loan"
+    ],
+    "question": "What is the key disadvantage of unlimited liability for a sole trader?",
+    "explanation": "Unlimited liability means the owner's personal assets (house, savings, car) can be used to pay business debts. Sole traders can employ staff and take out loans, and they pay income tax rather than corporation tax.",
+    "correctIndex": 1
+   },
+   {
+    "id": "planning-raising-finance:quiz:54499c33",
+    "options": [
+     "Venture capital",
+     "Business angel investment",
+     "Stock market flotation (IPO)",
+     "Private share issue"
+    ],
+    "question": "Which source of finance involves selling shares to the general public on the stock exchange?",
+    "explanation": "Stock market flotation (IPO) is when a company becomes a plc and offers shares for sale to the general public on the stock exchange. Venture capital and business angel investments are private arrangements.",
+    "correctIndex": 2
+   },
+   {
+    "id": "planning-raising-finance:quiz:1155642a",
+    "options": [
+     "Share issue",
+     "Long-term bank loan",
+     "Bank overdraft",
+     "Venture capital"
+    ],
+    "question": "A business needs short-term finance to cover a temporary cash shortage. Which is most appropriate?",
+    "explanation": "A bank overdraft is the most suitable option for a temporary cash shortage because it provides flexible, short-term access to funds. Share issues, long-term loans, and venture capital are designed for longer-term finance needs.",
+    "correctIndex": 2
+   },
+   {
+    "id": "planning-raising-finance:quiz:47142422",
+    "options": [
+     "Sole trader",
+     "General partnership",
+     "Private limited company (Ltd)",
+     "Lifestyle business"
+    ],
+    "question": "Which business type has a separate legal identity from its owners?",
+    "explanation": "A private limited company (Ltd) is a separate legal entity from its owners (shareholders). This means the company can own assets, enter contracts, and be sued in its own name. Sole traders and general partnerships do not have this separation.",
+    "correctIndex": 2
+   },
+   {
+    "id": "planning-raising-finance:quiz:a30f4704",
+    "options": [
+     "Complete control over all business decisions",
+     "No fees or royalties to pay",
+     "An established brand name and proven business model",
+     "Unlimited liability protection"
+    ],
+    "question": "What is a key benefit of franchising for the franchisee?",
+    "explanation": "The main benefit for a franchisee is operating under an established brand with a proven business model, reducing risk. Franchisees must pay fees/royalties and follow franchisor rules, so they have limited control. Franchising does not automatically grant limited liability.",
+    "correctIndex": 2
+   },
+   {
+    "id": "planning-raising-finance:quiz:0dc75421",
+    "options": [
+     "Market analysis",
+     "Financial forecasts",
+     "Employee holiday schedules",
+     "Marketing strategy"
+    ],
+    "question": "Which of these is NOT a typical section of a business plan?",
+    "explanation": "A business plan typically includes market analysis, financial forecasts, marketing strategy, an operational plan, and management details. Employee holiday schedules are an operational detail, not a strategic component of a business plan.",
+    "correctIndex": 2
+   },
+   {
+    "id": "planning-raising-finance:quiz:1f3f07cf",
+    "options": [
+     "Selling products on credit and leasing equipment",
+     "Selling an asset and then leasing it back for continued use",
+     "Leasing a property and then buying it at a discount",
+     "Selling shares and using the money to lease assets"
+    ],
+    "question": "What is sale and leaseback?",
+    "explanation": "Sale and leaseback involves selling an owned asset (e.g. a building) to raise cash and then leasing it back so the business can continue using it. This releases capital tied up in the asset while maintaining its use.",
+    "correctIndex": 1
+   },
+   {
+    "id": "planning-raising-finance:quiz:51dedb66",
+    "options": [
+     "Does not make any profit",
+     "Has a primary aim of social or environmental benefit",
+     "Must be a public limited company",
+     "Cannot employ paid staff"
+    ],
+    "question": "A social enterprise differs from a traditional business primarily because it:",
+    "explanation": "Social enterprises aim primarily to achieve social, environmental, or community objectives. They can and do make profits, but these are reinvested into their social mission rather than primarily distributed to shareholders.",
+    "correctIndex": 1
+   },
+   {
+    "id": "planning-raising-finance:quiz:f4933add",
+    "options": [
+     "The colour of the company logo",
+     "The cost of the finance (interest, fees)",
+     "The purpose and time period of the need",
+     "Whether the owner is willing to give up control"
+    ],
+    "question": "Which factor is LEAST important when choosing a source of finance?",
+    "explanation": "The colour of the company logo has no relevance to choosing finance. Key factors include the cost of finance, the purpose (short-term or long-term need), the amount required, and whether the owner wants to retain full control.",
+    "correctIndex": 0
+   },
+   {
+    "id": "planning-raising-finance:quiz:1c3624e3",
+    "options": [
+     "A bank loan",
+     "Retained profits",
+     "Venture capital",
+     "Issuing shares on the stock market"
+    ],
+    "question": "Which of the following is an example of internal finance?",
+    "explanation": "Retained profits are generated internally from the business's own trading activities and do not require external borrowing or giving up ownership.",
+    "correctIndex": 1
+   },
+   {
+    "id": "planning-raising-finance:quiz:ee8225f0",
+    "options": [
+     "A government grant for small businesses",
+     "Finance provided by specialist investors in exchange for equity in high-growth potential businesses",
+     "A type of bank overdraft",
+     "Profits reinvested from the previous financial year"
+    ],
+    "question": "What is venture capital?",
+    "explanation": "Venture capitalists invest in businesses with high growth potential in exchange for a share of ownership (equity), often providing expertise alongside funding.",
+    "correctIndex": 1
+   },
+   {
+    "id": "planning-raising-finance:quiz:aafb2c9d",
+    "options": [
+     "To guarantee the business will be profitable",
+     "To set out the objectives, strategy, and financial forecasts of a business to guide operations and attract finance",
+     "To avoid paying taxes",
+     "To register the business with the government"
+    ],
+    "question": "What is the main purpose of a business plan?",
+    "explanation": "A business plan outlines objectives, market analysis, operational details, and financial projections. It serves as a roadmap for the business and a tool for attracting investors or lenders.",
+    "correctIndex": 1
+   },
+   {
+    "id": "planning-raising-finance:quiz:95b5a5a3",
+    "options": [
+     "Borrowing large sums from a single bank",
+     "Raising small amounts of money from a large number of people, typically via online platforms",
+     "Selling shares on the London Stock Exchange",
+     "Using personal savings to fund a business"
+    ],
+    "question": "Crowdfunding involves:",
+    "explanation": "Crowdfunding raises finance from many individual contributors, often through platforms like Kickstarter. It can also help validate demand for a product before launch.",
+    "correctIndex": 1
+   },
+   {
+    "id": "planning-raising-finance:quiz:4a8e3e86",
+    "options": [
+     "A loan is interest-free; an overdraft charges interest",
+     "A loan is a fixed amount repaid over an agreed period; an overdraft allows flexible short-term borrowing up to a set limit",
+     "An overdraft is always cheaper than a loan",
+     "A loan can only be used for purchasing property"
+    ],
+    "question": "What is the key difference between a bank loan and an overdraft?",
+    "explanation": "A bank loan provides a fixed sum repaid in instalments over time. An overdraft allows flexible, short-term borrowing up to an agreed limit, useful for managing cash flow gaps.",
+    "correctIndex": 1
+   },
+   {
+    "id": "planning-raising-finance:quiz:dec6ec51",
+    "options": [
+     "A bank loan secured against property",
+     "Venture capital or angel investment",
+     "Retained profits",
+     "A trade credit arrangement"
+    ],
+    "question": "A start-up tech company needs $500,000 to develop its app. It has no trading history or assets. Which source of finance is most appropriate?",
+    "explanation": "With no assets or trading history, bank loans are difficult to obtain. Venture capitalists and angel investors specialise in funding high-risk start-ups in exchange for equity.",
+    "correctIndex": 1
+   },
+   {
+    "id": "planning-raising-finance:quiz:16031985",
+    "options": [
+     "Share capital",
+     "Retained profit (internal finance)",
+     "A bank overdraft",
+     "Crowdfunding"
+    ],
+    "question": "A restaurant owner uses $10,000 from last year's profits to buy a new oven. This is financed through:",
+    "explanation": "Using previous profits to fund investment is retained profit, an internal source of finance that avoids interest payments and dilution of ownership.",
+    "correctIndex": 1
+   },
+   {
+    "id": "planning-raising-finance:quiz:66849b06",
+    "options": [
+     "Debt finance",
+     "Reward-based crowdfunding",
+     "Equity crowdfunding",
+     "A government grant"
+    ],
+    "question": "A small craft business raises $15,000 on Kickstarter by offering early backers the first products at a discount. This is an example of:",
+    "explanation": "Reward-based crowdfunding offers backers a product, service, or perk in return for their pledge, rather than equity or interest payments.",
+    "correctIndex": 1
+   },
+   {
+    "id": "planning-raising-finance:quiz:4840b4de",
+    "options": [
+     "An overdraft facility",
+     "Trade credit from suppliers",
+     "A long-term bank loan or share issue",
+     "Selling off existing inventory"
+    ],
+    "question": "A growing retail chain wants to open 10 new stores over 5 years. The most appropriate long-term finance source would be:",
+    "explanation": "Large-scale expansion requires long-term finance. A bank loan or share issue provides substantial, long-term funding suited to multi-year investment plans.",
+    "correctIndex": 2
+   },
+   {
+    "id": "planning-raising-finance:quiz:221f19b8",
+    "options": [
+     "Why the business expects any revenue at all",
+     "Whether the projected profit margin is sufficient to repay the loan and sustain the business",
+     "Why the entrepreneur wants to start a business",
+     "Whether the business is in the technology sector"
+    ],
+    "question": "A business plan shows projected revenues of $200,000, costs of $180,000, and the entrepreneur needs $50,000 start-up capital. A bank is most likely to question:",
+    "explanation": "A bank will scrutinise whether projected profit ($20,000) is sufficient to cover loan repayments, living costs, and unexpected expenses, testing the plan's financial viability.",
+    "correctIndex": 1
+   },
+   {
+    "id": "planning-raising-finance:quiz:9479e905",
+    "options": [
+     "It is useless because markets are unpredictable",
+     "It is essential for attracting finance and providing direction, but plans are based on assumptions that may prove wrong",
+     "It guarantees success if followed precisely",
+     "It is only useful for large corporations"
+    ],
+    "question": "Evaluate the usefulness of a business plan for a new start-up.",
+    "explanation": "Business plans help secure funding and provide strategic direction. However, they are based on forecasts and assumptions that may not materialise, so they must be regularly reviewed.",
+    "correctIndex": 1
+   },
+   {
+    "id": "planning-raising-finance:quiz:0c6c8e13",
+    "options": [
+     "Venture capitalists never invest in start-ups",
+     "The entrepreneur must give up a share of ownership and may lose some control over business decisions",
+     "Venture capital is only available for businesses in decline",
+     "Venture capital must always be repaid within one year"
+    ],
+    "question": "Which is the strongest argument against using venture capital to finance a start-up?",
+    "explanation": "Venture capital requires giving up equity (ownership) and often a board seat. This dilutes the founder's control and share of future profits.",
+    "correctIndex": 1
+   },
+   {
+    "id": "planning-raising-finance:quiz:8b40e493",
+    "options": [
+     "It is always superior because it is free money",
+     "Crowdfunding avoids debt and can validate market demand, but it is uncertain, time-consuming, and requires strong marketing to succeed",
+     "Bank loans are always better because they are guaranteed",
+     "Crowdfunding is illegal for most business types"
+    ],
+    "question": "To what extent is crowdfunding a superior source of finance compared to bank loans for start-ups?",
+    "explanation": "Crowdfunding offers market validation without debt, but campaigns are uncertain, require significant effort, and may not raise the target amount. Bank loans provide certainty but require repayment.",
+    "correctIndex": 1
+   },
+   {
+    "id": "planning-raising-finance:quiz:e00933a1",
+    "options": [
+     "The owner wants to maintain full control and ownership of the business",
+     "The business has no assets and no trading history",
+     "The owner cannot afford any repayments",
+     "The business is in a highly volatile market"
+    ],
+    "question": "A small business owner is choosing between a bank loan and selling equity to an investor. Which factor most favours the bank loan?",
+    "explanation": "A bank loan preserves full ownership and control, making it preferable if the owner values independence. However, it requires collateral and regular repayments.",
+    "correctIndex": 0
+   },
+   {
+    "id": "planning-raising-finance:quiz:42b4430d",
+    "options": [
+     "Yes, because it has no costs whatsoever",
+     "No, because retained profits may be insufficient for major investments, and using them has an opportunity cost of not distributing dividends or investing elsewhere",
+     "Yes, because external finance is always too expensive",
+     "No, because internal finance is not real money"
+    ],
+    "question": "Evaluate whether internal finance is always the best option for funding business growth.",
+    "explanation": "Internal finance avoids interest and dilution but may be insufficient for large projects. Using retained profit also has an opportunity cost and may reduce dividends.",
+    "correctIndex": 1
+   }
+  ],
+  "section_practice": [
+   {
+    "id": "planning-raising-finance:practice:7a4b8bfe",
+    "marks": 4,
+    "command": "Define",
+    "guidance": "Cash flow refers to the movement of money into and out of a business over a given period (1 mark). Cash inflows include revenue from sales, loans received, and capital invested by owners (1 mark). Cash outflows include payments for wages, rent, raw materials and loan repayments (1 mark). Positive cash flow occurs when inflows exceed outflows, while negative cash flow means the business is spending more than it receives (1 mark).",
+    "question": "Define the term 'cash flow'. (4 marks)"
+   },
+   {
+    "id": "planning-raising-finance:practice:5d61421e",
+    "marks": 6,
+    "command": "Explain",
+    "guidance": "Advantage 1: Venture capitalists provide large sums of capital that may not be available from banks, especially for unprofitable start-ups without collateral (1 mark), enabling rapid growth and product development (1 mark).\n\nAdvantage 2: Venture capitalists often bring strategic expertise, industry contacts and mentoring to the business (1 mark), which can be invaluable for inexperienced founders (1 mark).\n\nDisadvantage: The venture capitalist will require an equity stake, diluting the founders' ownership and control (1 mark). They may also push for an aggressive growth strategy or early exit that conflicts with the founders' vision (1 mark).",
+    "question": "Explain two advantages and one disadvantage of using venture capital as a source of finance for a technology start-up. (6 marks)"
+   },
+   {
+    "id": "planning-raising-finance:practice:853321d9",
+    "marks": 10,
+    "command": "Assess",
+    "guidance": "Option 1 — Retained profit: available without interest or ownership dilution (1 mark), but may be insufficient for a large investment and reduces the cash buffer (1 mark).\n\nOption 2 — Bank loan: maintains ownership (1 mark), but incurs interest costs and may require collateral; suitable for fixed, known amounts (1 mark).\n\nOption 3 — Leasing: avoids large upfront capital outlay and includes maintenance (1 mark), but is more expensive over the long term than outright purchase (1 mark).\n\nOption 4 — Trade credit from suppliers: delays payment but is typically short-term only (1 mark).\n\nJudgement: Given the constraint of no ownership dilution, a combination of retained profit and a bank loan is likely most appropriate, as this balances cost with preserving working capital. Leasing is a viable alternative if cash flow is a concern (3 marks).",
+    "question": "Assess the most appropriate source of finance for a profitable medium-sized business that wants to invest in new equipment without giving up ownership. (10 marks)"
+   },
+   {
+    "id": "planning-raising-finance:practice:d2744d79",
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Define a business plan and its typical contents — market analysis, financial forecasts, marketing strategy, operations plan (2 marks).\n\nFor the business plan being most important: provides strategic direction and forces the entrepreneur to think through key decisions (2 marks); essential for securing external finance from banks and investors (2 marks); sets measurable targets for monitoring performance (2 marks); helps anticipate potential problems and plan contingencies (2 marks).\n\nAgainst: markets are unpredictable and plans can quickly become outdated, especially in dynamic markets (2 marks); over-planning can delay action — execution matters more than documentation (2 marks); other factors such as the entrepreneur's skills, market conditions, cash flow management and luck may be more important (2 marks); many successful entrepreneurs emphasise adaptability over rigid planning (2 marks).\n\nEvaluation: A business plan is valuable as a framework but is not sufficient on its own. Its importance varies by business type — a capital-intensive manufacturing firm needs detailed planning more than a lean online start-up. Ultimately, the plan is only as good as the entrepreneur's ability to execute and adapt it (2 marks).",
+    "question": "Evaluate the view that a detailed business plan is the most important factor in determining whether a new business will succeed. (20 marks)"
+   },
+   {
+    "id": "planning-raising-finance:practice:284a4ffc",
+    "marks": 4,
+    "command": "Outline",
+    "guidance": "Difference 1: Debt finance involves borrowing money that must be repaid with interest (1 mark), whereas equity finance involves selling ownership shares in the business in exchange for capital with no obligation to repay (1 mark).\n\nDifference 2: Debt finance does not dilute the owner's control over the business (1 mark), whereas equity finance gives investors a share of ownership and potentially a say in decision-making (1 mark).",
+    "question": "Outline two differences between debt finance and equity finance. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "id": "planning-raising-finance:card:78e8fb8c",
+    "back": "A written document setting out a business's <strong>objectives, strategies, market analysis, and financial forecasts</strong>, used to guide the business and attract finance.",
+    "front": "What is a business plan?"
+   },
+   {
+    "id": "planning-raising-finance:card:94bb2899",
+    "back": "<strong>Owner's capital</strong>, <strong>retained profit</strong>, and <strong>sale of assets</strong>.",
+    "front": "Name three internal sources of finance."
+   },
+   {
+    "id": "planning-raising-finance:card:fe5cee5f",
+    "back": "The portion of <strong>net profit</strong> kept in the business after dividends or drawings — the most common source of finance for established businesses.",
+    "front": "What is retained profit?"
+   },
+   {
+    "id": "planning-raising-finance:card:509bb2ce",
+    "back": "A <strong>bank loan</strong> is a fixed sum repaid over an agreed period. An <strong>overdraft</strong> allows spending beyond the account balance up to a limit — more flexible but usually higher interest.",
+    "front": "What is the difference between a bank loan and an overdraft?"
+   },
+   {
+    "id": "planning-raising-finance:card:5dcadf8e",
+    "back": "Finance provided by specialist firms investing large sums in <strong>high-growth potential</strong> businesses in exchange for equity and often a management role.",
+    "front": "What is venture capital?"
+   },
+   {
+    "id": "planning-raising-finance:card:4ae3e19c",
+    "back": "Raising small amounts of money from a <strong>large number of people</strong> via online platforms such as Kickstarter or Seedrs.",
+    "front": "What is crowdfunding?"
+   },
+   {
+    "id": "planning-raising-finance:card:090ed6ad",
+    "back": "A <strong>wealthy individual</strong> who invests personal funds in a business in exchange for equity, often also providing mentoring and contacts.",
+    "front": "What is a business angel?"
+   },
+   {
+    "id": "planning-raising-finance:card:490d9162",
+    "back": "An arrangement where a business <strong>receives goods now and pays later</strong> (typically 30-90 days), acting as interest-free short-term finance.",
+    "front": "What is trade credit?"
+   },
+   {
+    "id": "planning-raising-finance:card:db329014",
+    "back": "Leasing <strong>preserves cash flow</strong> — the business pays regular rental charges instead of a large one-off purchase, and maintenance is often included.",
+    "front": "What is the main advantage of leasing over buying?"
+   },
+   {
+    "id": "planning-raising-finance:card:14a30261",
+    "back": "The owner is <strong>personally responsible</strong> for all business debts — personal assets can be seized if the business cannot pay what it owes.",
+    "front": "What is unlimited liability?"
+   },
+   {
+    "id": "planning-raising-finance:card:b6e78987",
+    "back": "Shareholders can only lose <strong>the amount they invested</strong> in shares — their personal assets are protected from business debts.",
+    "front": "What is limited liability?"
+   },
+   {
+    "id": "planning-raising-finance:card:7bac96ce",
+    "back": "A business owned and controlled by <strong>one person</strong> with unlimited liability — the simplest legal structure.",
+    "front": "What is a sole trader?"
+   },
+   {
+    "id": "planning-raising-finance:card:48070c93",
+    "back": "A company with <strong>limited liability</strong> whose shares are sold privately (not on the stock exchange) and require directors' approval to transfer.",
+    "front": "What is a private limited company (Ltd)?"
+   },
+   {
+    "id": "planning-raising-finance:card:34d9cb65",
+    "back": "The process of a company <strong>becoming a plc</strong> and selling shares to the public on the stock exchange for the first time.",
+    "front": "What is stock market flotation (IPO)?"
+   },
+   {
+    "id": "planning-raising-finance:card:2ecd8a84",
+    "back": "A business model where the <strong>franchisee</strong> pays to operate under the <strong>franchisor's</strong> established brand, systems, and support.",
+    "front": "What is a franchise?"
+   },
+   {
+    "id": "planning-raising-finance:card:e0bcc21b",
+    "back": "A business that primarily aims to achieve <strong>social, environmental, or community objectives</strong> rather than maximise profit. E.g. The Big Issue.",
+    "front": "What is a social enterprise?"
+   },
+   {
+    "id": "planning-raising-finance:card:0b7218da",
+    "back": "Start-ups lack a <strong>trading history</strong> and <strong>proven cash flow</strong>, making them higher risk for lenders.",
+    "front": "Why might a start-up struggle to get a bank loan?"
+   },
+   {
+    "id": "planning-raising-finance:card:1aedb852",
+    "back": "Often <strong>lower interest rates</strong> than traditional bank loans and a <strong>faster application process</strong> via online platforms.",
+    "front": "Name two advantages of peer-to-peer lending."
+   },
+   {
+    "id": "planning-raising-finance:card:82a0dfc2",
+    "back": "Entrepreneur prepares a detailed business plan (market analysis, financial projections, strategy) → Plan demonstrates viability and potential returns → Business plan is presented to potential investors or lenders → Credibility and confidence in the business increase → Finance is secured (e.g. bank loan, venture capital, angel investment) → Capital is invested in assets, stock, or marketing → Business is funded to launch or expand",
+    "type": "chain",
+    "front": "Trace the chain from writing a business plan to securing finance for growth."
+   },
+   {
+    "id": "planning-raising-finance:card:426a5a7a",
+    "back": "Business takes on debt finance (e.g. bank loan) → Ownership and control are retained by existing shareholders → Interest payments create a fixed financial obligation → Cash flow must be sufficient to cover repayments → Gearing ratio increases → Financial risk rises (especially if revenue is volatile) → However, profits are not shared with external investors → If the business succeeds, returns are concentrated with existing owners",
+    "type": "chain",
+    "front": "Trace the effect of choosing debt finance over equity finance for a growing business."
+   },
+   {
+    "id": "planning-raising-finance:card:adcaa1ea",
+    "back": "Start-up has no trading history or track record → Limited financial data makes risk assessment difficult for lenders → Lack of assets means little collateral for secured loans → Banks perceive high risk of failure → Interest rates offered are high, or loan applications are rejected → Entrepreneur may rely on personal savings, family, or crowdfunding → Limited finance constrains growth and competitiveness in early stages",
+    "type": "chain",
+    "front": "Trace why a start-up may struggle to raise finance."
+   },
+   {
+    "id": "planning-raising-finance:card:82a0dfc2-2",
+    "back": "Entrepreneur prepares a detailed business plan (market analysis, financial projections, strategy) → Plan demonstrates viability and potential returns → Business plan is presented to potential investors or lenders → Credibility and confidence in the business increase → Finance is secured (e.g. bank loan, venture capital, angel investment) → Capital is invested in assets, stock, or marketing → Business is funded to launch or expand",
+    "type": "chain",
+    "front": "Trace the chain from writing a business plan to securing finance for growth."
+   },
+   {
+    "id": "planning-raising-finance:card:426a5a7a-2",
+    "back": "Business takes on debt finance (e.g. bank loan) → Ownership and control are retained by existing shareholders → Interest payments create a fixed financial obligation → Cash flow must be sufficient to cover repayments → Gearing ratio increases → Financial risk rises (especially if revenue is volatile) → However, profits are not shared with external investors → If the business succeeds, returns are concentrated with existing owners",
+    "type": "chain",
+    "front": "Trace the effect of choosing debt finance over equity finance for a growing business."
+   },
+   {
+    "id": "planning-raising-finance:card:adcaa1ea-2",
+    "back": "Start-up has no trading history or track record → Limited financial data makes risk assessment difficult for lenders → Lack of assets means little collateral for secured loans → Banks perceive high risk of failure → Interest rates offered are high, or loan applications are rejected → Entrepreneur may rely on personal savings, family, or crowdfunding → Limited finance constrains growth and competitiveness in early stages",
+    "type": "chain",
+    "front": "Trace why a start-up may struggle to raise finance."
+   }
+  ],
+  "section_diagrams": null,
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "An entrepreneur prepares a business plan detailing the market opportunity, financial forecasts and competitive strategy.",
+      "The plan demonstrates to lenders and investors that risks have been considered and returns are realistic.",
+      "Banks offer loans on more favourable terms, or investors provide equity at a higher valuation, due to perceived lower risk.",
+      "The business secures sufficient start-up or growth capital to begin operations or fund expansion."
+     ],
+     "title": "Business plans reduce risk and attract finance",
+     "result": "A well-researched business plan is essential for accessing external finance — it reduces perceived risk and builds lender or investor confidence."
+    },
+    {
+     "steps": [
+      "Short-term needs (cash flow gaps, seasonal stock) suit overdrafts or trade credit — flexible and quick to arrange.",
+      "Medium-term needs (equipment, vehicles) suit bank loans or hire purchase — matched repayment to asset life.",
+      "Long-term needs (expansion, new premises) suit share capital, venture capital or long-term loans — larger sums over longer periods.",
+      "Matching the finance source to the purpose ensures costs are minimised and repayment is manageable."
+     ],
+     "title": "The choice of finance source depends on business needs",
+     "result": "Choosing the right finance source depends on the purpose, amount needed and the firm's willingness to share ownership or take on debt."
+    },
+    {
+     "steps": [
+      "Debt finance (loans, overdrafts) preserves ownership but creates fixed repayment obligations with interest.",
+      "Equity finance (shares, venture capital) avoids repayment pressure but permanently dilutes the owner's control and profit share.",
+      "In a downturn, debt becomes a burden as repayments continue regardless of revenue — increasing insolvency risk.",
+      "Equity investors share the risk but may demand influence over strategy and expect high returns."
+     ],
+     "title": "Debt vs equity involves fundamental trade-offs",
+     "result": "The optimal debt-equity balance depends on risk tolerance, cash flow stability and the owner's willingness to share control — there is no universally correct answer."
+    },
+    {
+     "steps": [
+      "A business may be profitable on paper but still fail if cash outflows exceed inflows at critical points.",
+      "Cash flow forecasts identify periods of potential shortfall, allowing managers to arrange overdrafts or chase debtors in advance.",
+      "Proactive cash flow management — negotiating supplier credit, reducing debtor days, controlling stock levels — prevents liquidity crises.",
+      "Maintaining positive cash flow ensures the business can pay wages, suppliers and creditors on time, avoiding insolvency."
+     ],
+     "title": "Cash flow management determines survival",
+     "result": "Cash flow management is the most common determinant of business survival — profitable businesses fail when they run out of cash."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "Business plans are based on assumptions",
+     "content": "Financial forecasts rely on assumptions about demand, costs and market conditions that may prove inaccurate. Overly optimistic projections mislead investors; overly cautious estimates may fail to attract funding. The value lies in the quality of thinking, not the precision of numbers."
+    },
+    {
+     "title": "Venture capital is not suitable for all businesses",
+     "content": "VCs seek high-growth businesses with clear exit strategies. Lifestyle businesses or slow-growth firms are unlikely to attract VC interest. Venture capital involves significant loss of control and pressure for rapid returns that may conflict with the founder's vision."
+    },
+    {
+     "title": "Internal finance limits growth speed",
+     "content": "Relying solely on retained profit constrains investment to the amount of profit generated. In fast-moving markets, competitors with external funding may scale more quickly and capture market share. Businesses must weigh the lower risk of internal finance against potentially slower growth."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "id": "planning-raising-finance:mistake:ff37fed1",
+    "title": "Confusing internal and external sources of finance",
+    "examTip": "Ask yourself: 'Does the money come from inside the business or from someone else?' This simple test will always give the correct classification.",
+    "mistake": "Students often classify trade credit or overdrafts as internal finance because they seem like everyday business activities.",
+    "correction": "Internal finance comes from <strong>within the business</strong> (owner's capital, retained profit, sale of assets). Any finance from outside parties — banks, investors, suppliers — is <strong>external</strong>."
+   },
+   {
+    "id": "planning-raising-finance:mistake:8e208ccf",
+    "title": "Suggesting retained profit for start-ups",
+    "examTip": "Always check the context — if the business is a start-up, immediately rule out retained profit and focus on owner's capital, family/friends, crowdfunding, or business angels.",
+    "mistake": "Recommending retained profit as a source of finance for a new business that has not yet started trading.",
+    "correction": "Retained profit can <strong>only</strong> be used by businesses that have already been trading and generating profit. Start-ups have no profits to retain."
+   },
+   {
+    "id": "planning-raising-finance:mistake:658e0b11",
+    "title": "Thinking limited liability means no risk",
+    "examTip": "Use precise language: 'limited to the amount invested' rather than 'no risk'. Examiners reward accuracy.",
+    "mistake": "Assuming that limited liability means shareholders face zero risk.",
+    "correction": "Limited liability means shareholders can lose <strong>up to the amount they invested</strong>. If a shareholder invested £50,000, they could still lose all £50,000 — but their personal assets beyond that are protected."
+   },
+   {
+    "id": "planning-raising-finance:mistake:f8bdbe90",
+    "title": "Confusing Ltd with plc",
+    "examTip": "Remember: Ltd = private (restricted share sales), plc = public (shares traded on the stock exchange).",
+    "mistake": "Stating that Ltd companies can sell shares on the stock exchange.",
+    "correction": "Only <strong>plcs</strong> can sell shares on the stock exchange. <strong>Ltd</strong> companies sell shares privately and require directors' approval for share transfers."
+   },
+   {
+    "id": "planning-raising-finance:mistake:f5f20dee",
+    "title": "Not matching finance to the need",
+    "examTip": "In 'justify' or 'recommend' questions, explicitly state why the duration and purpose of the finance match the business situation.",
+    "mistake": "Recommending long-term finance (e.g. a 5-year bank loan) for a short-term cash-flow problem.",
+    "correction": "The <strong>duration of the finance</strong> should match the <strong>duration of the need</strong>. Short-term needs use overdrafts or trade credit; long-term needs use loans or equity."
+   }
+  ]
+ }
+}

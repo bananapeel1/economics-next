@@ -1,0 +1,1805 @@
+{
+ "section_id": "price-determination",
+ "subject": "economics",
+ "label": "auto-prepublish-2026-09-14T14-02-27-720Z",
+ "tables": {
+  "section_content": [
+   {
+    "id": "price-determination:block:08fdb782",
+    "title": "Equilibrium Price & Quantity",
+    "sections": [
+     {
+      "id": "price-determination:sub:how-markets-reach-equilibrium",
+      "body": [
+       {
+        "text": "When you draw a demand curve and a supply curve on the same diagram, they cross at one point. That intersection is **equilibrium** — the price at which quantity demanded equals quantity supplied. At this price every unit consumers want to buy is matched by a unit producers want to sell, so the market clears.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Demand curve slopes downward",
+         "Supply curve slopes upward",
+         "Curves intersect"
+        ],
+        "result": "Equilibrium price (Pe) and equilibrium quantity (Qe)",
+        "resultType": "good"
+       },
+       {
+        "text": "You should think of equilibrium as a resting point, not a permanent state. If nothing else changes the market stays there, but any shift in demand or supply will move you to a new equilibrium. The word itself comes from the Latin for \"equal balance.\"",
+        "type": "paragraph"
+       }
+      ],
+      "title": "How Markets Reach Equilibrium",
+      "recall": {
+       "id": "price-determination:sub:how-markets-reach-equilibrium:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        3,
+        0,
+        2,
+        1
+       ],
+       "correctOrder": [
+        "Demand curve slopes downward",
+        "Supply curve slopes upward",
+        "Curves intersect at one point",
+        "Market clears at equilibrium price"
+       ]
+      },
+      "keyIdea": "Equilibrium is the price where the quantity buyers want to purchase exactly matches the quantity sellers want to offer, so there is no pressure for the price to change.",
+      "examMatters": "Examiners expect you to define equilibrium precisely as the price where Qd equals Qs with no tendency to change. Always support your answer with a clearly labelled diagram showing Pe and Qe at the intersection of demand and supply.",
+      "realExample": {
+       "text": "**Glastonbury Festival** tickets sell out in minutes because the face-value price is set below equilibrium. The result is massive excess demand, with resale sites listing tickets at several times the original price.",
+       "emoji": "🎫"
+      },
+      "misconception": "Students often write \"the market is always at equilibrium.\" In reality, markets are constantly adjusting because demand and supply shift frequently. Instead write: equilibrium is the point the market tends toward, but real-world prices fluctuate around it as conditions change."
+     },
+     {
+      "id": "price-determination:sub:excess-demand-and-excess-supply",
+      "body": [
+       {
+        "text": "If the price is **below equilibrium**, quantity demanded exceeds quantity supplied. You get **excess demand** — shoppers want more than sellers can offer at that price. This shortage puts upward pressure on the price as buyers compete for the limited stock.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Price below Pe",
+         "Qd > Qs",
+         "Shortage pushes price up"
+        ],
+        "result": "Market moves back toward equilibrium",
+        "resultType": "good"
+       },
+       {
+        "text": "If the price is **above equilibrium**, quantity supplied exceeds quantity demanded. You get **excess supply** — producers have unsold inventory piling up. Sellers respond by cutting prices, which attracts more buyers and discourages some production until the surplus disappears.",
+        "type": "paragraph"
+       },
+       {
+        "text": "This self-correcting mechanism is central to how free markets work. You do not need a planner to fix the imbalance — the price signal does the job automatically.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Excess Demand and Excess Supply",
+      "recall": {
+       "id": "price-determination:sub:excess-demand-and-excess-supply:recall",
+       "type": "fillin",
+       "hints": [
+        "Q_",
+        "sh______",
+        "eq_________"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "Qd",
+        "shortage",
+        "equilibrium"
+       ],
+       "template": [
+        "Price below Pe → ___ exceeds Qs",
+        "→ ___ pushes price up",
+        "→ Market returns to ___"
+       ]
+      },
+      "keyIdea": "When price is away from equilibrium, either buyers queue up because there is not enough supply, or sellers pile up unsold stock because there are not enough buyers.",
+      "examMatters": "When explaining how a market returns to equilibrium, examiners want a step-by-step price adjustment story. Show the disequilibrium on a diagram, label the excess, and explain the direction of price change that restores equilibrium.",
+      "realExample": {
+       "text": "**UK rental markets** in cities like London show persistent excess demand because rent controls and planning restrictions keep supply below equilibrium. Prospective tenants queue for viewings, and many are outbid, illustrating how below-equilibrium pricing creates shortages.",
+       "emoji": "🏠"
+      },
+      "misconception": "Students confuse a shift in demand with a movement along the demand curve when explaining excess demand. Excess demand occurs at a given price, not because the curve moved. Instead write: excess demand arises when price is set below equilibrium, causing quantity demanded to exceed quantity supplied at that price."
+     },
+     {
+      "id": "price-determination:sub:changes-in-equilibrium",
+      "body": [
+       {
+        "text": "When a non-price factor changes — rising incomes, new technology, higher input costs — it shifts the demand or supply curve. You then get a **new equilibrium** with a different price and quantity. The old equilibrium is no longer relevant.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Non-price factor changes",
+         "Curve shifts left or right",
+         "New intersection point"
+        ],
+        "result": "New equilibrium price and quantity",
+        "resultType": "neutral"
+       },
+       {
+        "text": "You need to be precise about the direction. An increase in demand shifts the curve right, raising both price and quantity. An increase in supply also shifts right, but raises quantity while lowering price. Getting this wrong in an exam is one of the most common errors.",
+        "type": "paragraph"
+       },
+       {
+        "text": "When both curves shift simultaneously, you can predict the direction of one variable but not the other without knowing the relative size of each shift. This is a favourite examiner trick — always state what is indeterminate.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Changes in Equilibrium",
+      "recall": {
+       "id": "price-determination:sub:changes-in-equilibrium:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        2,
+        3,
+        0,
+        1
+       ],
+       "correctOrder": [
+        "Non-price factor changes",
+        "Demand or supply curve shifts",
+        "New intersection point forms",
+        "New equilibrium price and quantity"
+       ]
+      },
+      "keyIdea": "A shift in the demand or supply curve moves the equilibrium point, changing both the market price and the quantity traded.",
+      "examMatters": "Diagram accuracy is critical here. Label old and new equilibrium points clearly, use arrows to show the shift, and state the effect on both price and quantity. If both curves shift, explicitly say which variable is indeterminate.",
+      "realExample": {
+       "text": "**OPEC** production cuts in 2022 shifted global oil supply to the left while post-pandemic demand shifted right. Both forces pushed oil prices sharply upward, illustrating how simultaneous shifts can reinforce each other on price.",
+       "emoji": "⛽"
+      },
+      "misconception": "Students draw a shift in demand and then also move along the demand curve in the same answer. A shift changes the position of the curve; a movement along happens on the other curve in response. Instead write: when demand shifts right, there is a movement along the supply curve to a higher quantity supplied at the new, higher price."
+     }
+    ],
+    "takeaway": [
+     "Equilibrium: Qd = Qs, no tendency to change.",
+     "Below Pe causes shortage; above Pe causes surplus.",
+     "Shifts in D or S create a new equilibrium.",
+     "Simultaneous shifts leave one variable indeterminate."
+    ],
+    "diagramRef": "Equilibrium",
+    "quizIndices": [
+     0
+    ],
+    "practiceIndices": [
+     0
+    ]
+   },
+   {
+    "id": "price-determination:block:bd2ea7a9",
+    "title": "Consumer Surplus & Producer Surplus",
+    "sections": [
+     {
+      "id": "price-determination:sub:consumer-surplus",
+      "body": [
+       {
+        "text": "Imagine you would pay up to $5 for a coffee but the market price is $3. That $2 gap is your **consumer surplus** — the difference between your willingness to pay and what you actually pay. On a diagram it is the triangle below the demand curve and above the market price.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Willingness to pay",
+         "Minus market price"
+        ],
+        "result": "Consumer surplus for each unit",
+        "resultType": "good"
+       },
+       {
+        "text": "Total consumer surplus for the whole market is the area of that triangle. When the price falls, the triangle gets bigger because more consumers can now buy and existing buyers save more. When the price rises, consumer surplus shrinks.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Consumer Surplus",
+      "recall": {
+       "id": "price-determination:sub:consumer-surplus:recall",
+       "type": "fillin",
+       "hints": [
+        "ma____",
+        "su_____",
+        "de____"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "market",
+        "surplus",
+        "demand"
+       ],
+       "template": [
+        "Willingness to pay minus ___ price",
+        "→ Equals consumer ___",
+        "→ Area below ___ curve, above price"
+       ]
+      },
+      "keyIdea": "Consumer surplus is the extra satisfaction you get because you paid less than the maximum you were willing to pay for a good.",
+      "examMatters": "Examiners frequently ask you to show consumer surplus on a diagram. Make sure you shade the correct triangle — below the demand curve, above the price line, and to the left of equilibrium quantity. Label it clearly.",
+      "realExample": {
+       "text": "**Ryanair** sells some seats for as little as $10 on routes where many passengers would pay $100 or more. Those passengers enjoy huge consumer surplus, which is exactly why budget airlines generate such high passenger volumes.",
+       "emoji": "✈️"
+      },
+      "misconception": "Students sometimes say consumer surplus means the consumer \"saves money.\" Surplus is not a saving — it is the gap between the maximum you would have paid and the price you did pay. Instead write: consumer surplus measures the extra welfare consumers receive by paying less than their valuation."
+     },
+     {
+      "id": "price-determination:sub:producer-surplus",
+      "body": [
+       {
+        "text": "A farmer might be willing to sell wheat for $150 per tonne, but the market price is $200. That $50 difference is the farmer's **producer surplus**. On a diagram it is the triangle above the supply curve and below the market price.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Market price received",
+         "Minus minimum acceptable price"
+        ],
+        "result": "Producer surplus for each unit",
+        "resultType": "good"
+       },
+       {
+        "text": "Total producer surplus for the whole market is the area of that triangle. When the price rises, producer surplus increases because sellers receive more above their cost. When the price falls, the triangle shrinks and some high-cost producers may exit.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Producer Surplus",
+      "recall": {
+       "id": "price-determination:sub:producer-surplus:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        1,
+        3,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Farmer willing to sell at $150",
+        "Market price is $200",
+        "Difference is $50 producer surplus",
+        "Area above supply curve, below price"
+       ]
+      },
+      "keyIdea": "Producer surplus is the extra benefit sellers receive because the market price is higher than the minimum they would have accepted to supply the good.",
+      "examMatters": "When comparing consumer and producer surplus, examiners want you to shade both triangles on the same diagram. Use different shading or labelling so it is clear which area is which. Always reference the equilibrium price line.",
+      "realExample": {
+       "text": "**Saudi Aramco** can extract oil at roughly $3 per barrel while the world price often exceeds $70. The enormous gap gives Saudi Arabia one of the largest producer surpluses of any commodity producer on the planet.",
+       "emoji": "🛢️"
+      },
+      "misconception": "Students confuse producer surplus with profit. Producer surplus is measured against the minimum supply price on the supply curve, not against total costs of production. Instead write: producer surplus is the area above the supply curve and below the price, which is related to but not identical to accounting profit."
+     },
+     {
+      "id": "price-determination:sub:total-welfare-and-efficiency",
+      "body": [
+       {
+        "text": "Add consumer surplus and producer surplus together and you get **total economic welfare** — the combined benefit the market creates for society. At the free-market equilibrium, this total is as large as it can be. No reallocation of resources could make one group better off without making another worse off.",
+        "type": "paragraph"
+       },
+       {
+        "text": "This is the concept of **allocative efficiency** — the market produces exactly the quantity where the value to the last consumer equals the cost to the last producer. Any quantity above or below this creates a **deadweight loss**, a triangle of welfare that nobody receives.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "CS + PS = total welfare",
+         "Maximised at free-market equilibrium"
+        ],
+        "result": "Allocative efficiency — no deadweight loss",
+        "resultType": "good"
+       }
+      ],
+      "title": "Total Welfare and Efficiency",
+      "recall": {
+       "id": "price-determination:sub:total-welfare-and-efficiency:recall",
+       "type": "fillin",
+       "hints": [
+        "we_____",
+        "eq_________",
+        "de________"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "welfare",
+        "equilibrium",
+        "deadweight"
+       ],
+       "template": [
+        "CS + PS = total ___",
+        "→ Maximised at free-market ___",
+        "→ Any deviation creates ___ loss"
+       ]
+      },
+      "keyIdea": "Total welfare is consumer surplus plus producer surplus, and it is maximised at the free-market equilibrium where no deadweight loss exists.",
+      "examMatters": "Examiners love asking you to compare welfare before and after a policy change. Always calculate or shade consumer surplus, producer surplus and any deadweight loss. State clearly whether total welfare has risen or fallen and explain why.",
+      "realExample": {
+       "text": "**The US Congressional Budget Office** estimates deadweight loss when scoring tax proposals. A proposed sugar tax, for example, would reduce total welfare by shrinking the quantity traded below the free-market level, creating a measurable triangle of lost surplus.",
+       "emoji": "📊"
+      },
+      "misconception": "Students assume that any government intervention automatically reduces total welfare. Some interventions correct market failures and can actually increase welfare by moving output closer to the socially optimal level. Instead write: intervention reduces welfare only when the market was already efficient; if a market failure exists, intervention may improve total welfare."
+     }
+    ],
+    "takeaway": [
+     "Consumer surplus: area below D, above price.",
+     "Producer surplus: area above S, below price.",
+     "Total welfare = CS + PS, maximised at equilibrium.",
+     "Deadweight loss appears when output deviates from Qe."
+    ],
+    "diagramRef": "Consumer Surplus",
+    "quizIndices": [
+     1
+    ]
+   },
+   {
+    "id": "price-determination:block:c8c56ea6",
+    "title": "Functions of the Price Mechanism",
+    "sections": [
+     {
+      "id": "price-determination:sub:signalling-incentive-rationing",
+      "body": [
+       {
+        "text": "The **signalling function** means prices act as information carriers. A rising price signals to producers that consumers want more of a good, while a falling price signals that demand has weakened. You do not need a government planner to broadcast this information — the price does it automatically.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Price rises",
+         "Signals higher demand",
+         "Producers increase supply",
+         "Consumers reduce purchases"
+        ],
+        "result": "Resources reallocated toward higher-value uses",
+        "resultType": "good"
+       },
+       {
+        "text": "The **incentive function** means price changes motivate action. Higher prices give producers an incentive to supply more because profits are greater, and they give consumers an incentive to buy less or switch to substitutes. The stronger the price change, the stronger the behavioural response.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The **rationing function** means prices allocate scarce goods to those who value them most. When supply is limited, a higher price rations the good by excluding consumers whose willingness to pay is below the market price. This is how markets decide \"who gets what\" without queuing or government allocation.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Signalling, Incentive, and Rationing Functions",
+      "recall": {
+       "id": "price-determination:sub:signalling-incentive-rationing:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Price rises in the market",
+        "Signal of higher demand sent",
+        "Producers incentivised to supply more",
+        "Scarce goods rationed to highest-value buyers"
+       ]
+      },
+      "keyIdea": "Prices carry information, motivate responses and allocate scarce goods — three functions that allow markets to coordinate millions of decisions without central control.",
+      "examMatters": "Examiners often give a scenario and ask you to explain how the price mechanism operates. You must identify all three functions — signalling, incentive and rationing — and apply each specifically to the context. Generic answers without application score poorly.",
+      "realExample": {
+       "text": "**De Beers** historically controlled diamond supply to keep prices high, which rationed diamonds to wealthy buyers and signalled scarcity. When lab-grown diamonds entered the market at lower prices, the price mechanism incentivised consumers to switch, pressuring natural diamond prices downward.",
+       "emoji": "💎"
+      },
+      "misconception": "Students list the three functions but fail to explain how they work through price changes. Simply naming them earns very few marks. Instead write: explain the mechanism — a price rise signals scarcity, incentivises greater supply, and rations the good to those with the highest willingness to pay."
+     },
+     {
+      "id": "price-determination:sub:the-invisible-hand",
+      "body": [
+       {
+        "text": "The **invisible hand** is Adam Smith's metaphor for how free markets coordinate activity without central direction. When you buy the cheapest loaf of bread, you reward the most efficient baker. When a firm chases higher profits, it moves resources toward the goods society values most. Neither you nor the firm is trying to help society — yet the outcome benefits everyone.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Individuals pursue self-interest",
+         "Prices guide their decisions",
+         "Resources flow to highest-valued uses"
+        ],
+        "result": "Socially beneficial allocation without planning",
+        "resultType": "good"
+       },
+       {
+        "text": "The invisible hand only works well when markets are competitive and there are no significant market failures. When externalities, monopoly power or information asymmetries exist, self-interested behaviour can lead to outcomes that are bad for society. This is why economists study market failure alongside the price mechanism.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "The Invisible Hand",
+      "recall": {
+       "id": "price-determination:sub:the-invisible-hand:recall",
+       "type": "fillin",
+       "hints": [
+        "se__________",
+        "de_______",
+        "us__"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "self-interest",
+        "decisions",
+        "uses"
+       ],
+       "template": [
+        "Individuals pursue ___",
+        "→ Prices guide their ___",
+        "→ Resources flow to highest-valued ___"
+       ]
+      },
+      "keyIdea": "Adam Smith argued that individuals pursuing their own self-interest unintentionally promote the well-being of society through the price mechanism.",
+      "examMatters": "When discussing the invisible hand, examiners expect you to link it to the three functions of the price mechanism and then evaluate its limitations. Always mention at least one reason why the invisible hand may fail, such as externalities or monopoly power.",
+      "realExample": {
+       "text": "**Supermarket supply chains** illustrate the invisible hand daily. No central planner tells farmers, millers and bakers how much bread London needs tomorrow, yet shelves are stocked because each firm responds to price signals and profit incentives along the chain.",
+       "emoji": "🍞"
+      },
+      "misconception": "Students claim the invisible hand means markets always produce the best outcome for society. Smith himself acknowledged situations where self-interest leads to harmful results, particularly when competition is absent. Instead write: the invisible hand works best under competitive conditions and can fail when externalities or market power distort price signals."
+     }
+    ],
+    "takeaway": [
+     "Signalling: prices transmit information to buyers and sellers.",
+     "Incentive: price changes motivate behavioural responses.",
+     "Rationing: prices allocate scarce goods by willingness to pay.",
+     "The invisible hand relies on competitive markets to work."
+    ],
+    "quizIndices": [
+     2
+    ],
+    "practiceIndices": [
+     1
+    ]
+   },
+   {
+    "id": "price-determination:block:82c4beca",
+    "title": "Indirect Taxes",
+    "sections": [
+     {
+      "id": "price-determination:sub:specific-and-ad-valorem-taxes",
+      "body": [
+       {
+        "text": "An **indirect tax** is levied on the sale of a good or service rather than directly on income. The two main types are **specific taxes** (a fixed amount per unit, like 59p per litre on petrol) and **ad valorem taxes** (a percentage of the selling price, like 20% VAT).",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Government imposes tax",
+         "Supply curve shifts upward by tax amount",
+         "New equilibrium: higher price, lower quantity"
+        ],
+        "result": "Tax revenue collected, but output falls",
+        "resultType": "neutral"
+       },
+       {
+        "text": "On a diagram, a specific tax shifts the supply curve upward by the same vertical distance at every quantity — the curves stay parallel. An ad valorem tax shifts the supply curve upward by an increasing amount as quantity rises, so the new curve diverges from the old one.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should remember that the tax is paid to the government by the producer, but part of the burden is passed on to the consumer through a higher price. How much is passed on depends on elasticity.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Specific and Ad Valorem Taxes",
+      "recall": {
+       "id": "price-determination:sub:specific-and-ad-valorem-taxes:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Government imposes indirect tax",
+        "Supply curve shifts upward",
+        "New equilibrium at higher price",
+        "Output falls and tax revenue collected"
+       ]
+      },
+      "keyIdea": "A specific tax adds a fixed amount per unit sold, shifting supply up in parallel, while an ad valorem tax adds a percentage, causing the supply curve to pivot upward.",
+      "examMatters": "Examiners regularly ask you to compare specific and ad valorem taxes on a diagram. You must show a parallel shift for specific and a pivoting shift for ad valorem. Label the tax per unit clearly and shade the tax revenue rectangle.",
+      "realExample": {
+       "text": "**UK alcohol duty** charges a fixed amount per unit of pure alcohol — a classic specific tax. Meanwhile **VAT at 20%** is added as a percentage of the pre-tax price, making it an ad valorem tax applied on top of the specific duty.",
+       "emoji": "🍺"
+      },
+      "misconception": "Students draw ad valorem taxes as a parallel shift of the supply curve, identical to a specific tax. Because ad valorem is a percentage, the absolute tax amount rises with price, so the shift increases at higher quantities. Instead write: an ad valorem tax pivots the supply curve upward, with the gap widening as price increases."
+     },
+     {
+      "id": "price-determination:sub:tax-incidence-and-elasticity",
+      "body": [
+       {
+        "text": "**Tax incidence** describes how the burden of a tax is split between consumers and producers. The consumer burden is the rise in the price they pay; the producer burden is the fall in the price they effectively receive after remitting the tax. Together they add up to the total tax per unit.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Tax imposed",
+         "Check elasticity of demand and supply",
+         "Less elastic side bears more of the tax"
+        ],
+        "result": "Tax incidence determined by relative elasticities",
+        "resultType": "neutral"
+       },
+       {
+        "text": "When demand is perfectly inelastic, consumers bear the entire tax because they cannot reduce their purchases. When demand is perfectly elastic, producers bear all of it because any price rise would destroy demand completely. Most real markets sit between these extremes.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should practise drawing diagrams with different elasticities to see how the consumer and producer shares change. This is one of the most diagram-heavy topics in the specification.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Tax Incidence and Elasticity",
+      "recall": {
+       "id": "price-determination:sub:tax-incidence-and-elasticity:recall",
+       "type": "fillin",
+       "hints": [
+        "in_______",
+        "el_____",
+        "in_______"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "incidence",
+        "elastic",
+        "inelastic"
+       ],
+       "template": [
+        "Tax ___ splits between consumers and producers",
+        "→ Less ___ side bears more of the tax",
+        "→ ___ demand means consumers pay most"
+       ]
+      },
+      "keyIdea": "The burden of an indirect tax falls more heavily on whichever side of the market is less elastic — if demand is inelastic, consumers bear most of the tax.",
+      "examMatters": "Tax incidence questions almost always require a diagram showing the old and new equilibrium, the consumer and producer share of the tax, and the tax revenue rectangle. Examiners award marks for correctly identifying which side bears the larger burden and explaining why using elasticity.",
+      "realExample": {
+       "text": "**Tobacco taxes** in the UK generate large revenue because demand is highly inelastic — smokers are addicted and cannot easily cut back. The government knows consumers will absorb most of the price increase, making cigarettes an effective revenue-raising target.",
+       "emoji": "🚬"
+      },
+      "misconception": "Students state that producers always pass the full tax on to consumers. This only happens when demand is perfectly inelastic. Instead write: the proportion passed on depends on relative elasticities — the more inelastic demand is relative to supply, the greater the share consumers bear."
+     },
+     {
+      "id": "price-determination:sub:welfare-effects-of-taxation",
+      "body": [
+       {
+        "text": "When a tax is imposed, the market price rises and quantity falls. Consumer surplus shrinks because buyers pay more for fewer units. Producer surplus shrinks because sellers receive a lower effective price. Part of the lost surplus becomes **government tax revenue**, but part is lost entirely — this is the **deadweight loss**.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Tax raises price, lowers quantity",
+         "CS and PS both fall",
+         "Government gains tax revenue rectangle"
+        ],
+        "result": "Deadweight loss triangle — welfare lost to nobody",
+        "resultType": "bad"
+       },
+       {
+        "text": "The size of the deadweight loss depends on elasticity. The more elastic demand and supply are, the greater the fall in quantity and the larger the deadweight loss. This is why economists prefer taxing goods with inelastic demand — revenue is high and deadweight loss is small.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Welfare Effects of Taxation",
+      "recall": {
+       "id": "price-determination:sub:welfare-effects-of-taxation:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        1,
+        3,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Tax raises price and lowers quantity",
+        "Consumer and producer surplus both fall",
+        "Government gains tax revenue rectangle",
+        "Deadweight loss triangle remains unclaimed"
+       ]
+      },
+      "keyIdea": "An indirect tax reduces consumer and producer surplus while generating government revenue, but it also creates a deadweight loss triangle of welfare that nobody receives.",
+      "examMatters": "Welfare analysis of taxation is a very common exam question. You must show consumer surplus, producer surplus, government revenue and deadweight loss all on one diagram. Shade each area differently and state clearly which areas have increased, decreased or been created.",
+      "realExample": {
+       "text": "**Hungary's 27% VAT** is the highest standard rate in the EU. Studies estimate it creates significant deadweight loss in elastic markets like luxury goods, where consumers sharply reduce purchases, while generating steady revenue from inelastic necessities like food and energy.",
+       "emoji": "📉"
+      },
+      "misconception": "Students forget to include government revenue when analysing welfare. Tax revenue is not a loss to society — it is a transfer from consumers and producers to the government. Instead write: total welfare loss is only the deadweight loss triangle, because tax revenue is redistributed by the government, not destroyed."
+     }
+    ],
+    "takeaway": [
+     "Specific tax: parallel shift; ad valorem: pivot.",
+     "Tax incidence falls on the less elastic side.",
+     "Tax revenue = tax per unit x quantity sold.",
+     "Deadweight loss is the welfare nobody receives."
+    ],
+    "diagramRef": "Indirect Tax",
+    "quizIndices": [
+     3
+    ],
+    "practiceIndices": [
+     2
+    ]
+   },
+   {
+    "id": "price-determination:block:56bf94d0",
+    "title": "Subsidies",
+    "sections": [
+     {
+      "id": "price-determination:sub:how-subsidies-work",
+      "body": [
+       {
+        "text": "A **subsidy** is a per-unit payment from the government to producers, designed to encourage production or consumption of a good. On a diagram, the supply curve shifts **downward** (or rightward) by the amount of the subsidy per unit, because the effective cost of production has fallen.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Government pays subsidy to producers",
+         "Supply shifts down by subsidy amount",
+         "Price falls, quantity rises"
+        ],
+        "result": "More output at a lower price for consumers",
+        "resultType": "good"
+       },
+       {
+        "text": "The benefit of the subsidy is shared between consumers and producers. Consumers gain because the market price falls. Producers gain because the price they effectively receive (market price plus subsidy) is higher than before. The split again depends on the relative elasticities of demand and supply.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should note that the government must fund the subsidy from tax revenue, so there is always an opportunity cost. The total cost to the government is the subsidy per unit multiplied by the new quantity traded.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "How Subsidies Work",
+      "recall": {
+       "id": "price-determination:sub:how-subsidies-work:recall",
+       "type": "fillin",
+       "hints": [
+        "su_____",
+        "do______",
+        "qu______"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "subsidy",
+        "downward",
+        "quantity"
+       ],
+       "template": [
+        "Government pays ___ to producers",
+        "→ Supply curve shifts ___",
+        "→ Price falls, ___ rises"
+       ]
+      },
+      "keyIdea": "A subsidy is a payment from the government to producers that shifts the supply curve downward, lowering the market price and increasing the quantity traded.",
+      "examMatters": "Subsidy diagrams must clearly show the old and new supply curves, the subsidy per unit as the vertical distance between them, and the government cost as the shaded rectangle. Examiners penalise diagrams where the shift direction is wrong or the subsidy amount is not labelled.",
+      "realExample": {
+       "text": "**The EU Common Agricultural Policy** pays subsidies to European farmers to keep food production high and prices affordable. Critics argue it leads to overproduction and distorts international trade, with developing-country farmers unable to compete against subsidised European exports.",
+       "emoji": "🌾"
+      },
+      "misconception": "Students draw the supply curve shifting upward when a subsidy is applied. A subsidy reduces costs, so the supply curve shifts downward — producers are willing to supply the same quantity at a lower price. Instead write: a subsidy shifts the supply curve down by the subsidy per unit, reflecting the lower effective cost of production."
+     },
+     {
+      "id": "price-determination:sub:effects-and-evaluation-of-subsidies",
+      "body": [
+       {
+        "text": "The positive effects of a subsidy include lower prices for consumers, higher output, and support for industries the government considers important — such as renewable energy or public transport. Subsidies can also correct **positive externalities** by encouraging consumption or production closer to the socially optimal level.",
+        "type": "paragraph"
+       },
+       {
+        "text": "However, subsidies have significant drawbacks. They carry an **opportunity cost** because the money could be spent on healthcare or education instead. They can lead to **allocative inefficiency** if output is pushed beyond the socially optimal level, creating a deadweight loss. They may also keep **inefficient firms** in business, reducing competitive pressure to innovate.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Subsidy corrects market failure",
+         "But costs taxpayers money",
+         "May cause overproduction"
+        ],
+        "result": "Net benefit depends on size of the externality",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Effects and Evaluation of Subsidies",
+      "recall": {
+       "id": "price-determination:sub:effects-and-evaluation-of-subsidies:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Subsidy corrects a positive externality",
+        "Output rises toward socially optimal level",
+        "But costs taxpayers money via taxation",
+        "Net benefit depends on size of externality"
+       ]
+      },
+      "keyIdea": "Subsidies increase output and lower prices but they cost taxpayers money, can create deadweight loss, and may prop up inefficient producers.",
+      "examMatters": "Evaluation is essential for top marks on subsidy questions. You should weigh the benefits of lower prices and higher output against the opportunity cost, possible overproduction and the risk of government failure in choosing which industries to subsidise.",
+      "realExample": {
+       "text": "**Germany's Energiewende** subsidised renewable energy through feed-in tariffs, making the country a world leader in solar and wind capacity. However, the programme cost German households over 25 billion euros annually through surcharges on electricity bills, sparking debate about cost-effectiveness.",
+       "emoji": "⚡"
+      },
+      "misconception": "Students assume subsidies are always beneficial because they lower prices. Subsidies funded by taxation transfer costs to taxpayers, and if the market had no failure, the subsidy creates a deadweight loss by pushing output beyond the efficient level. Instead write: subsidies improve welfare only when they correct a genuine market failure such as a positive externality."
+     }
+    ],
+    "takeaway": [
+     "Subsidy shifts supply down, lowering price and raising output.",
+     "Benefit split depends on elasticity of D and S.",
+     "Government cost = subsidy per unit x new quantity.",
+     "Only justified if correcting a genuine market failure."
+    ],
+    "diagramRef": "Subsidy",
+    "quizIndices": [
+     4
+    ]
+   },
+   {
+    "id": "price-determination:block:7001303c",
+    "title": "Alternative Views of Consumer & Producer Behaviour",
+    "sections": [
+     {
+      "id": "price-determination:sub:behavioural-economics",
+      "body": [
+       {
+        "text": "Traditional economics assumes consumers maximise utility and firms maximise profit through perfectly rational calculation. **Behavioural economics** draws on psychology to show that real decisions are full of predictable errors. People use mental shortcuts — **heuristics** — that are fast but often inaccurate.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Key biases include **anchoring** (relying too heavily on the first piece of information you see), **loss aversion** (losses hurt roughly twice as much as equivalent gains feel good), and the **availability heuristic** (judging probability by how easily examples come to mind). These are not random mistakes — they are systematic patterns.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Traditional model assumes rationality",
+         "Behavioural research finds systematic biases",
+         "Policy uses nudges to improve outcomes"
+        ],
+        "result": "Better decisions without removing freedom of choice",
+        "resultType": "good"
+       }
+      ],
+      "title": "Behavioural Economics",
+      "recall": {
+       "id": "price-determination:sub:behavioural-economics:recall",
+       "type": "fillin",
+       "hints": [
+        "an_______",
+        "av______",
+        "nu____"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "anchoring",
+        "aversion",
+        "nudges"
+       ],
+       "template": [
+        "___ means relying on first info seen",
+        "→ Loss ___ means losses hurt twice as much",
+        "→ ___ improve choices without removing freedom"
+       ]
+      },
+      "keyIdea": "Behavioural economics challenges the assumption that people are rational by showing how cognitive biases systematically distort real-world decision-making.",
+      "examMatters": "Examiners expect you to name specific biases with examples, not just say \"people are irrational.\" Link each bias to a real-world consequence and explain how a nudge could address it. This shows application, which is where the higher marks sit.",
+      "realExample": {
+       "text": "**Richard Thaler** won the Nobel Prize in Economics for showing that people make predictable irrational choices. His work led the UK government to create the Behavioural Insights Team, which uses nudges like automatic pension enrolment to improve financial outcomes.",
+       "emoji": "🧠"
+      },
+      "misconception": "Students write that behavioural economics proves people are irrational and traditional models are useless. Behavioural economics shows people are predictably biased in specific situations, not that all economic models should be discarded. Instead write: behavioural economics supplements traditional theory by identifying systematic deviations from rational behaviour."
+     },
+     {
+      "id": "price-determination:sub:bounded-rationality",
+      "body": [
+       {
+        "text": "**Bounded rationality**, a concept developed by Herbert Simon, argues that humans cannot process all available information perfectly. You face three constraints: **limited information** (you do not know everything), **limited cognitive ability** (your brain cannot crunch every number), and **limited time** (decisions must be made quickly).",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Limited info, time and brainpower",
+         "Cannot calculate optimal choice",
+         "Settle for satisfactory option"
+        ],
+        "result": "Satisficing rather than maximising",
+        "resultType": "neutral"
+       },
+       {
+        "text": "Instead of maximising, people **satisfice** — they search until they find an option that meets a minimum acceptable threshold and then stop. You do not compare every phone on the market before buying one; you compare a few and pick one that seems good enough. Firms do the same when setting prices or choosing suppliers.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Bounded Rationality",
+      "recall": {
+       "id": "price-determination:sub:bounded-rationality:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Consumer faces limited info and time",
+        "Cannot calculate the optimal choice",
+        "Searches until good-enough option found",
+        "Satisfices rather than maximises"
+       ]
+      },
+      "keyIdea": "People do not optimise perfectly because they face limited information, limited time and limited mental processing power, so they settle for good-enough decisions.",
+      "examMatters": "When discussing bounded rationality, examiners want you to contrast it with the traditional rational agent model. Explain why satisficing occurs, give a real-world example, and evaluate whether it leads to worse outcomes or is simply a pragmatic adaptation to real-world complexity.",
+      "realExample": {
+       "text": "**Amazon's recommendation algorithm** exists because bounded rationality means you cannot evaluate millions of products yourself. By narrowing your options to a curated list, Amazon helps you satisfice faster, which increases purchase rates and average order value.",
+       "emoji": "📱"
+      },
+      "misconception": "Students equate bounded rationality with irrationality. Satisficing is actually a rational response to the costs of gathering and processing information. Instead write: bounded rationality means people are rational within their constraints — they make the best decisions they can given limited information, time and cognitive resources."
+     }
+    ],
+    "takeaway": [
+     "Behavioural economics identifies systematic cognitive biases.",
+     "Nudges improve choices without restricting freedom.",
+     "Bounded rationality: people satisfice, not optimise.",
+     "Traditional models are useful but incomplete."
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "flow": {
+     "steps": [
+      "Demand or supply shifts",
+      "Excess demand or supply at old price",
+      "Price adjusts to clear the market"
+     ],
+     "result": "New equilibrium price and quantity",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "Equilibrium",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Equilibrium price</strong> — the price at which quantity demanded equals quantity supplied, so the market clears with no excess demand or supply.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Equilibrium quantity</strong> — the amount bought and sold at the equilibrium price, where demand and supply intersect.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Excess demand</strong> — occurs when price is below equilibrium, so quantity demanded exceeds quantity supplied, creating a shortage that pushes price upward.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Excess supply</strong> — occurs when price is above equilibrium, so quantity supplied exceeds quantity demanded, creating a surplus that pushes price downward.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "When demand shifts right, the original price creates a shortage; <strong>competition among buyers</strong> bids the price up until a new, higher equilibrium is reached.",
+        "type": "mech"
+       },
+       {
+        "text": "When supply shifts right, the original price creates a surplus; <strong>firms cut prices</strong> to sell excess stock until a new, lower equilibrium is reached.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Equilibrium is not necessarily desirable; it simply means there is <strong>no tendency to change</strong>, even if the outcome is inefficient or unfair.",
+        "type": "imp"
+       },
+       {
+        "text": "Shifts in supply and demand from 1.3.2 and 1.3.3 are the mechanism that moves equilibrium; always identify which curve shifts and why before drawing the new equilibrium.",
+        "type": "link"
+       }
+      ],
+      "title": "HOW EQUILIBRIUM ADJUSTS"
+     }
+    ],
+    "keyIdea": "When the plans of buyers and sellers align at a single price and quantity, the market clears with no pressure for change; any other price creates a surplus or shortage that pushes the market back toward balance.",
+    "takeaway": [
+     "Equilibrium is where quantity demanded equals quantity supplied; any other price triggers automatic adjustment.",
+     "Always identify the curve shift first, then trace the adjustment through excess demand or supply.",
+     "Equilibrium is stable, but it is not automatically socially desirable."
+    ],
+    "examMatters": "Examiners expect you to draw the diagram first, label the old and new equilibrium clearly, then explain the adjustment process step by step. Never jump straight to the new equilibrium without explaining how excess demand or supply drives the change.",
+    "misconception": "Students say equilibrium means the market is working well. Wrong because equilibrium only means there is no pressure for price to change; the market can be in equilibrium while producing harmful goods or excluding the poor. Instead write: equilibrium is a stable position, not necessarily a fair or efficient one."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Buyers willing to pay more than price",
+      "Sellers willing to accept less than price",
+      "Both sides gain from trade"
+     ],
+     "result": "Total welfare maximised at equilibrium",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "Consumer & Producer Surplus",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Consumer surplus</strong> — the difference between what a consumer is willing to pay and the price they actually pay, shown as the area below the demand curve and above the market price.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Producer surplus</strong> — the difference between the price a producer receives and the minimum price they would have accepted, shown as the area above the supply curve and below the market price.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "When price falls, consumer surplus <strong>expands</strong> because buyers capture more of the gap between willingness to pay and the lower market price.",
+        "type": "mech"
+       },
+       {
+        "text": "When price rises, producer surplus <strong>expands</strong> because sellers capture more of the gap between the higher market price and their minimum acceptable price.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Total economic welfare equals <strong>consumer surplus plus producer surplus</strong>; any policy that reduces total surplus creates a deadweight loss.",
+        "type": "imp"
+       },
+       {
+        "text": "Surplus analysis is central to evaluating taxes, subsidies, and price controls later in this section because each policy redistributes or destroys surplus.",
+        "type": "link"
+       }
+      ],
+      "title": "HOW SURPLUS CHANGES"
+     }
+    ],
+    "keyIdea": "Every voluntary transaction creates a bonus for both sides: buyers pay less than they would have been willing to, and sellers receive more than they needed to; these surpluses measure the welfare gains from trade.",
+    "takeaway": [
+     "Consumer surplus is the area below demand and above price; producer surplus is the area above supply and below price.",
+     "Total welfare is maximised at the free-market equilibrium where the combined surplus is greatest.",
+     "Any intervention that moves price away from equilibrium redistributes surplus and can create deadweight loss."
+    ],
+    "examMatters": "Examiners award marks for correctly shading surplus areas on a diagram. Always shade consumer surplus between the demand curve and the price line, and producer surplus between the price line and the supply curve."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Price rises due to scarcity",
+      "Signal reaches producers",
+      "Producers supply more, buyers buy less"
+     ],
+     "result": "Resources reallocated efficiently",
+     "resultType": "good"
+    },
+    "meta": "3 concepts",
+    "title": "The Price Mechanism",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Signalling function</strong> — price changes carry information to buyers and sellers about the relative scarcity or abundance of a good, guiding their decisions without any central authority.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Incentive function</strong> — higher prices reward producers with greater profit, encouraging them to shift resources toward the goods consumers value most.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Rationing function</strong> — price allocates scarce goods to those consumers with the highest willingness and ability to pay, preventing excess demand from persisting.",
+        "type": "def"
+       }
+      ],
+      "title": "THREE FUNCTIONS OF PRICE"
+     },
+     {
+      "items": [
+       {
+        "text": "Rising prices <strong>signal</strong> scarcity, <strong>incentivise</strong> producers to supply more, and <strong>ration</strong> the good to fewer buyers, all working together to restore equilibrium.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "The price mechanism allocates resources efficiently only when markets are competitive; <strong>market failures</strong> break one or more of these functions.",
+        "type": "imp"
+       },
+       {
+        "text": "The price mechanism is the core argument for free markets; sections 1.3.5 and 1.3.6 examine when it fails and how governments try to fix it.",
+        "type": "link"
+       }
+      ],
+      "title": "HOW THE FUNCTIONS CONNECT"
+     }
+    ],
+    "keyIdea": "Prices are the invisible language of a market economy: they signal where resources are scarce, give producers incentives to respond, and ration goods to those willing and able to pay.",
+    "takeaway": [
+     "Signalling conveys information, incentives motivate a response, and rationing distributes the good.",
+     "The three functions work as a chain: signal triggers incentive, which achieves rationing.",
+     "The price mechanism fails when externalities, public goods, or monopoly power distort the signals."
+    ],
+    "examMatters": "Examiners want all three functions named and applied. A common mistake is describing only one. For full marks, explain how signalling triggers the incentive, and how the incentive leads to rationing, forming a chain.",
+    "misconception": "Students describe the price mechanism as only about rationing. Wrong because rationing is just one of three interconnected functions. Instead write: the price mechanism works through signalling, incentivising, and rationing, and all three operate simultaneously to allocate resources."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Tax imposed on producers",
+      "Supply curve shifts up",
+      "Price rises, quantity falls"
+     ],
+     "result": "Burden split by elasticity; deadweight loss created",
+     "resultType": "bad"
+    },
+    "meta": "5 concepts",
+    "title": "Indirect Taxes",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Specific tax</strong> — a fixed amount per unit sold, such as 50p per litre of fuel, which shifts the supply curve upward by a constant vertical distance.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Ad valorem tax</strong> — a percentage of the selling price, such as 20% VAT, which shifts the supply curve upward by an increasing amount as price rises, creating a widening gap.",
+        "type": "def"
+       }
+      ],
+      "title": "TYPES OF TAX"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Tax incidence</strong> — the division of the tax burden between consumers and producers, determined by the relative elasticities of demand and supply.",
+        "type": "def"
+       },
+       {
+        "text": "When demand is <strong>price inelastic</strong>, consumers bear most of the tax because they cannot easily reduce purchases, so producers pass on a large share of the tax as higher prices.",
+        "type": "mech"
+       },
+       {
+        "text": "When supply is <strong>price inelastic</strong>, producers bear most of the tax because they cannot easily reduce output, so they absorb the tax through lower revenue per unit.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Indirect taxes reduce both consumer and producer surplus and create a <strong>deadweight loss</strong> triangle, representing welfare destroyed by the tax.",
+        "type": "imp"
+       },
+       {
+        "text": "Elasticity from 1.3.2 and 1.3.3 directly determines tax incidence; always link PED and PES to who bears the burden.",
+        "type": "link"
+       }
+      ],
+      "title": "TAX INCIDENCE"
+     }
+    ],
+    "keyIdea": "Governments place taxes on goods rather than income to raise revenue and discourage harmful consumption, but the burden falls on whichever side of the market is less able to escape the tax.",
+    "formulas": [
+     {
+      "text": "Tax Revenue = Tax per Unit x Quantity Sold after Tax",
+      "label": "TAX REVENUE"
+     }
+    ],
+    "takeaway": [
+     "Specific taxes shift supply up by a fixed amount; ad valorem taxes shift supply by an increasing percentage.",
+     "Tax incidence depends on elasticity: the more inelastic side bears the greater share of the burden.",
+     "Every indirect tax creates deadweight loss by reducing the quantity traded below the free-market level."
+    ],
+    "examMatters": "Examiners expect you to distinguish specific from ad valorem on a diagram. For specific tax, draw a parallel upward shift; for ad valorem, draw a pivoting shift that widens as price increases. Always shade the deadweight loss triangle and label who bears the greater burden.",
+    "misconception": "Students say the producer always pays the tax because the government collects it from them. Wrong because the economic burden depends on elasticity, not who writes the cheque. Instead write: the legal incidence falls on the producer, but the economic incidence is shared according to relative elasticities of demand and supply."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Government pays subsidy to producers",
+      "Supply shifts right, price falls",
+      "Quantity consumed increases"
+     ],
+     "result": "Greater consumption but at a fiscal cost",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "Subsidies",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Subsidy</strong> — a payment from the government to producers that reduces their costs of production, shifting the supply curve downward and to the right.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "The subsidy shifts supply right, lowering the <strong>equilibrium price</strong> and increasing the equilibrium quantity, making the good more affordable and more widely consumed.",
+        "type": "mech"
+       },
+       {
+        "text": "When demand is price inelastic, consumers gain <strong>less of the subsidy</strong> as a price reduction because they would have bought nearly the same amount anyway; producers capture most of the benefit.",
+        "type": "mech"
+       },
+       {
+        "text": "When demand is price elastic, consumers gain <strong>more of the subsidy</strong> as a price reduction because lower prices significantly increase their purchases.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Subsidies have an <strong>opportunity cost</strong>; the money spent on the subsidy could have funded healthcare, education, or other public services.",
+        "type": "imp"
+       },
+       {
+        "text": "Subsidies are the mirror image of indirect taxes; the incidence analysis in the previous chapter applies in reverse.",
+        "type": "link"
+       }
+      ],
+      "title": "HOW SUBSIDIES WORK"
+     }
+    ],
+    "keyIdea": "A subsidy is a tax in reverse: the government pays producers to lower the price and boost consumption, but just like taxes, who benefits most depends on elasticity.",
+    "formulas": [
+     {
+      "text": "Total Subsidy Cost = Subsidy per Unit x Quantity Sold after Subsidy",
+      "label": "TOTAL SUBSIDY COST"
+     }
+    ],
+    "takeaway": [
+     "A subsidy shifts supply right, lowering price and raising quantity traded.",
+     "Subsidy incidence mirrors tax incidence: the more inelastic side captures the greater share of the benefit.",
+     "Always evaluate subsidies against their opportunity cost and potential for government failure."
+    ],
+    "examMatters": "Examiners want you to shade the total cost of the subsidy on a diagram as the rectangle between the new and old supply curves, up to the new quantity. Then evaluate whether the benefit to consumers and producers justifies the government spending."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Consumers face complex choices",
+      "Bounded rationality leads to shortcuts",
+      "Decisions deviate from rational model"
+     ],
+     "result": "Market outcomes differ from the efficient prediction",
+     "resultType": "bad"
+    },
+    "meta": "5 concepts",
+    "title": "Behavioural Economics",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Bounded rationality</strong> — the idea that consumers have limited information, limited time, and limited ability to process data, so they satisfice rather than optimise.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Bounded self-control</strong> — the tendency for people to act on short-term impulses even when they know the long-term consequences are harmful, such as overeating or under-saving.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Bias and heuristics</strong> — systematic mental shortcuts like anchoring, loss aversion, and the status quo bias that cause decisions to deviate predictably from the rational model.",
+        "type": "def"
+       }
+      ],
+      "title": "KEY CONCEPTS"
+     },
+     {
+      "items": [
+       {
+        "text": "Because consumers are not fully rational, the <strong>demand curve</strong> may not reflect true preferences; people may overconsume demerit goods or underconsume merit goods.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Default options</strong> and choice architecture powerfully influence behaviour; people tend to stick with whatever option is pre-selected rather than actively choosing.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Behavioural economics provides a justification for <strong>nudge policies</strong> where governments alter the choice environment rather than restricting freedom, such as auto-enrolling workers into pensions.",
+        "type": "imp"
+       },
+       {
+        "text": "Behavioural economics challenges the assumption behind the price mechanism that consumers respond rationally to price signals, linking to market failure in 1.3.5.",
+        "type": "link"
+       }
+      ],
+      "title": "IMPLICATIONS FOR MARKETS"
+     }
+    ],
+    "keyIdea": "Traditional economics assumes people are perfectly rational calculators, but real humans use mental shortcuts, are swayed by how choices are presented, and often act against their own long-term interests.",
+    "takeaway": [
+     "Bounded rationality means consumers satisfice rather than optimise, undermining the traditional demand model.",
+     "Default options and choice architecture shape behaviour more than people realise.",
+     "Behavioural economics justifies nudge policies as a less intrusive alternative to regulation or taxation."
+    ],
+    "examMatters": "Examiners increasingly test behavioural economics as an evaluation point. Use it to challenge the assumption that the price mechanism allocates resources efficiently; if consumers are not rational, price signals may not lead to welfare-maximising outcomes.",
+    "misconception": "Students say behavioural economics proves markets never work. Wrong because most market transactions still function well through the price mechanism; behavioural economics identifies specific, predictable biases that cause problems in certain contexts. Instead write: behavioural economics refines the rational model by showing where systematic biases lead to suboptimal choices, not that all choices are irrational."
+   }
+  ],
+  "section_quiz": [
+   {
+    "id": "price-determination:quiz:4361208c",
+    "options": [
+     "Quantity demanded equals quantity supplied and there is no tendency for price to change",
+     "There is excess demand which pushes the price upward",
+     "Total consumer surplus equals total producer surplus",
+     "The government receives maximum tax revenue"
+    ],
+    "question": "At the market equilibrium price, which of the following is true?",
+    "explanation": "At equilibrium, Qd = Qs and the market clears — there is no excess demand or supply, so no market force acts to change the price. Option B describes a disequilibrium situation below equilibrium. Option C is incorrect because CS and PS are not necessarily equal — their relative sizes depend on the slopes of D and S. Option D is irrelevant to the definition of equilibrium.",
+    "correctIndex": 0
+   },
+   {
+    "id": "price-determination:quiz:32b9b3c8",
+    "options": [
+     "Price rises, quantity falls",
+     "Price falls, quantity rises",
+     "Price rises, quantity rises",
+     "Price falls, quantity falls"
+    ],
+    "question": "If the demand for a good increases while supply remains unchanged, what will happen to equilibrium price and quantity?",
+    "explanation": "An increase in demand shifts the demand curve rightward. At the original price there is now excess demand, so the price is bid up. The higher price also causes an extension along the supply curve, so equilibrium quantity increases. Both price and quantity rise. Option A would occur with a decrease in supply. Option B would occur with an increase in supply. Option D would occur with a decrease in demand.",
+    "correctIndex": 2
+   },
+   {
+    "id": "price-determination:quiz:ff368191",
+    "options": [
+     "Prices ensure goods are allocated to those who can afford them",
+     "Higher prices motivate producers to supply more output",
+     "Prices convey information about the relative scarcity of goods to buyers and sellers",
+     "Prices create deadweight losses that reduce total welfare"
+    ],
+    "question": "Which of the following correctly describes the signalling function of the price mechanism?",
+    "explanation": "The signalling function refers to prices conveying information about relative scarcity: rising prices signal greater scarcity or higher demand, while falling prices signal oversupply or lower demand. Option A describes the rationing function. Option B describes the incentive function. Option D is not a function of the price mechanism.",
+    "correctIndex": 2
+   },
+   {
+    "id": "price-determination:quiz:990ac326",
+    "options": [
+     "Shift leftward in a parallel manner",
+     "Pivot upward, with the gap between old and new supply curves widening at higher prices",
+     "Shift rightward in a parallel manner",
+     "Pivot downward, with the gap narrowing at higher prices"
+    ],
+    "question": "An ad valorem tax is imposed on a good. On a supply and demand diagram, the supply curve will:",
+    "explanation": "An ad valorem tax is a percentage of the selling price. At low prices, the absolute tax is small; at high prices, it is larger. Therefore the supply curve pivots upward with the gap widening at higher prices. A parallel shift (Option A) would result from a specific (fixed per unit) tax. Options C and D describe movements that do not correspond to any form of indirect tax.",
+    "correctIndex": 1
+   },
+   {
+    "id": "price-determination:quiz:31cd2a52",
+    "options": [
+     "Producers bear most of the tax burden because they cannot pass the cost on",
+     "The tax will significantly reduce the quantity of cigarettes sold",
+     "Consumers bear most of the tax burden through higher prices",
+     "The deadweight loss will be very large relative to tax revenue"
+    ],
+    "question": "The demand for cigarettes is price inelastic. If the government imposes a specific tax on cigarettes, which of the following is most likely?",
+    "explanation": "When demand is price inelastic, consumers are relatively unresponsive to price changes — they continue buying even at higher prices. This means producers can pass most of the tax on as higher prices, so consumers bear the greater burden. Option A is the opposite of what happens with inelastic demand. Option B is unlikely because inelastic demand means quantity changes little. Option D is incorrect because with inelastic demand the deadweight loss triangle is relatively small compared to the tax revenue rectangle.",
+    "correctIndex": 2
+   },
+   {
+    "id": "price-determination:quiz:a0cced8c",
+    "options": [
+     "An increase in the equilibrium quantity of electric vehicles sold",
+     "A fall in the market price paid by consumers",
+     "An increase in producer surplus",
+     "A reduction in government expenditure on transport"
+    ],
+    "question": "A subsidy is granted to producers of electric vehicles. Which of the following will NOT result from the subsidy?",
+    "explanation": "A subsidy shifts the supply curve rightward, lowering the market price (B) and increasing quantity (A). Producers receive a higher effective price, increasing their surplus (C). However, the subsidy increases government expenditure — the government must pay the subsidy (subsidy per unit x quantity) — so Option D is incorrect. The subsidy represents a cost to the taxpayer, not a saving.",
+    "correctIndex": 3
+   },
+   {
+    "id": "price-determination:quiz:7f0313d2",
+    "options": [
+     "Above the supply curve and below the equilibrium price",
+     "Below the demand curve and above the equilibrium price, up to the equilibrium quantity",
+     "Between the demand and supply curves, up to the equilibrium quantity",
+     "Below the demand curve and above the supply curve, for all quantities"
+    ],
+    "question": "Consumer surplus is shown on a diagram as the area:",
+    "explanation": "Consumer surplus is the difference between willingness to pay (shown by the demand curve) and the actual price paid (the equilibrium price line), summed over all units up to the equilibrium quantity. This gives the triangle below D, above price, and bounded at Q*. Option A describes producer surplus. Option C describes total economic surplus (CS + PS). Option D incorrectly extends beyond the equilibrium quantity.",
+    "correctIndex": 1
+   },
+   {
+    "id": "price-determination:quiz:0aaeeb3a",
+    "options": [
+     "Always maximise their utility by comparing all available options",
+     "Use limited information and cognitive shortcuts to make decisions that are 'good enough'",
+     "Are only rational when buying expensive goods",
+     "Behave identically to profit-maximising firms"
+    ],
+    "question": "According to the concept of bounded rationality, consumers:",
+    "explanation": "Bounded rationality (Herbert Simon) states that consumers have limited time, information, and cognitive ability, so they 'satisfice' — choosing options that meet an acceptable threshold rather than optimising perfectly. Option A describes the traditional rational consumer model, which bounded rationality challenges. Option C has no basis in economic theory. Option D conflates consumer and producer theory.",
+    "correctIndex": 1
+   },
+   {
+    "id": "price-determination:quiz:90e324e2",
+    "options": [
+     "Excess demand will cause the price to rise further",
+     "Excess supply will cause producers to reduce the price",
+     "Both consumer surplus and producer surplus will be maximised",
+     "The government will need to intervene to restore equilibrium"
+    ],
+    "question": "If the price of a good is above the equilibrium level, which of the following will occur?",
+    "explanation": "Above equilibrium, Qs > Qd, creating excess supply (a surplus). Producers unable to sell their output will reduce prices to attract buyers. As price falls, Qd extends and Qs contracts until equilibrium is restored. Option A describes a situation below equilibrium. Option C is only true at the equilibrium price. Option D is incorrect — free markets self-correct without government intervention through the price mechanism.",
+    "correctIndex": 1
+   },
+   {
+    "id": "price-determination:quiz:d8765382",
+    "options": [
+     "Price rises, consumer surplus increases",
+     "Price falls, consumer surplus increases",
+     "Price rises, consumer surplus decreases",
+     "Price falls, consumer surplus decreases"
+    ],
+    "question": "A government removes a subsidy on rice production. Which combination of effects on equilibrium price and consumer surplus is most likely?",
+    "explanation": "Removing a subsidy shifts the supply curve leftward (back to its original position), raising the equilibrium price and reducing the equilibrium quantity. Consumers now pay a higher price for fewer units, so consumer surplus decreases. Options A and B are incorrect because removing a subsidy raises, not lowers, the price. Option D contradicts the relationship between price and consumer surplus.",
+    "correctIndex": 2
+   },
+   {
+    "id": "price-determination:quiz:ab1ac466",
+    "options": [
+     "Excess demand, putting upward pressure on price",
+     "Excess supply, putting downward pressure on price",
+     "Equilibrium, with no tendency for price to change",
+     "Excess demand, putting downward pressure on price"
+    ],
+    "question": "In a free market, if the current price is above the equilibrium price, there will be:",
+    "explanation": "Above equilibrium, quantity supplied exceeds quantity demanded, creating excess supply (surplus). Producers will lower prices to sell unsold stock, moving the market back toward equilibrium.",
+    "correctIndex": 1
+   },
+   {
+    "id": "price-determination:quiz:e0ad14c8",
+    "options": [
+     "Entirely on the producer",
+     "Entirely on the consumer",
+     "Equally on the consumer and producer",
+     "Mainly on the producer"
+    ],
+    "question": "The government imposes a specific tax of $3 per unit on a good. If the supply curve is perfectly elastic, the burden of the tax falls:",
+    "explanation": "With perfectly elastic supply, producers pass the entire tax on to consumers because they will not accept a lower price. The consumer price rises by the full $3, and the producer price is unchanged.",
+    "correctIndex": 1
+   },
+   {
+    "id": "price-determination:quiz:075a03fa",
+    "options": [
+     "An increase in equilibrium price",
+     "A decrease in equilibrium price",
+     "An increase in equilibrium quantity",
+     "A decrease in equilibrium quantity"
+    ],
+    "question": "An increase in both demand and supply for a good will definitely cause:",
+    "explanation": "When both demand and supply increase, equilibrium quantity definitely rises. However, the effect on price is ambiguous: it depends on the relative magnitudes of the shifts.",
+    "correctIndex": 2
+   },
+   {
+    "id": "price-determination:quiz:60295c7a",
+    "options": [
+     "Shift the demand curve for solar panels to the right",
+     "Shift the supply curve for solar panels to the right, reducing price",
+     "Shift the supply curve for solar panels to the left, increasing price",
+     "Have no effect on the market for solar panels"
+    ],
+    "question": "A subsidy granted to producers of solar panels would:",
+    "explanation": "A subsidy reduces production costs for firms, enabling them to supply more at every price. This shifts the supply curve to the right, leading to a lower equilibrium price and higher quantity.",
+    "correctIndex": 1
+   },
+   {
+    "id": "price-determination:quiz:986b4596",
+    "options": [
+     "Consumer surplus definitely increases",
+     "Consumer surplus definitely decreases",
+     "The effect on consumer surplus is ambiguous",
+     "Consumer surplus remains unchanged"
+    ],
+    "question": "If the demand for a good increases while supply remains constant, what happens to consumer surplus?",
+    "explanation": "An increase in demand raises the equilibrium price (reducing surplus per unit) but also increases the number of consumers in the market. The net effect on total consumer surplus is ambiguous without knowing the exact curves.",
+    "correctIndex": 2
+   },
+   {
+    "id": "price-determination:quiz:2e39a179",
+    "options": [
+     "$5 per unit",
+     "$3 per unit",
+     "$2 per unit",
+     "$0 per unit"
+    ],
+    "question": "A specific tax of $5 is imposed on a good. The price rises from $20 to $23. The incidence of the tax on the consumer is:",
+    "explanation": "The consumer pays $3 more ($23 - $20), so the consumer incidence is $3. The remaining $2 of the $5 tax is borne by the producer, who now receives $18 ($23 - $5) instead of $20.",
+    "correctIndex": 1
+   },
+   {
+    "id": "price-determination:quiz:8a7b9756",
+    "options": [
+     "An increase in demand",
+     "A decrease in demand",
+     "An increase in supply",
+     "A decrease in supply"
+    ],
+    "question": "Which of the following will result in a decrease in the equilibrium price and an increase in the equilibrium quantity?",
+    "explanation": "An increase in supply (rightward shift) leads to a lower equilibrium price and a higher equilibrium quantity. This is because more is available at every price level, driving down the market price.",
+    "correctIndex": 2
+   },
+   {
+    "id": "price-determination:quiz:53a65169",
+    "options": [
+     "The government collects revenue from the tax",
+     "Some mutually beneficial transactions no longer take place",
+     "Producers earn higher profits after the tax",
+     "Consumer surplus increases after the tax"
+    ],
+    "question": "The deadweight loss from an indirect tax arises because:",
+    "explanation": "An indirect tax raises the price and reduces the quantity traded. Some transactions that would have benefited both buyers and sellers no longer occur, creating a loss of economic welfare (deadweight loss).",
+    "correctIndex": 1
+   },
+   {
+    "id": "price-determination:quiz:561eeedd",
+    "options": [
+     "Entirely on the producer",
+     "Entirely on the consumer",
+     "Equally on consumer and producer",
+     "Mainly on the producer"
+    ],
+    "question": "If demand is perfectly price inelastic and a tax is imposed, the tax burden falls:",
+    "explanation": "With perfectly inelastic demand (vertical demand curve), consumers have no alternatives and will buy the same quantity regardless of price. The entire tax is passed on to consumers through higher prices.",
+    "correctIndex": 1
+   },
+   {
+    "id": "price-determination:quiz:c8861aff",
+    "options": [
+     "Definitely decrease price and definitely decrease quantity",
+     "Definitely decrease price, with an ambiguous effect on quantity",
+     "Definitely increase quantity, with an ambiguous effect on price",
+     "Have ambiguous effects on both price and quantity"
+    ],
+    "question": "A simultaneous decrease in demand and increase in supply will:",
+    "explanation": "Both a decrease in demand and increase in supply put downward pressure on price, so price definitely falls. However, decreased demand reduces quantity while increased supply raises it, making the net effect on quantity ambiguous.",
+    "correctIndex": 1
+   },
+   {
+    "id": "price-determination:quiz:766f71dc",
+    "options": [
+     "$4.00",
+     "$2.50",
+     "$1.50",
+     "$6.50"
+    ],
+    "question": "A government provides a subsidy of $4 per unit. The price to consumers falls by $2.50. The benefit to producers per unit is:",
+    "explanation": "The $4 subsidy is shared: consumers benefit by $2.50 (through lower prices) and producers benefit by $1.50 ($4.00 - $2.50) through receiving a higher effective price.",
+    "correctIndex": 2
+   },
+   {
+    "id": "price-determination:quiz:66e8d0a5",
+    "options": [
+     "Ensures all consumers can afford the good",
+     "Eliminates both excess demand and excess supply",
+     "Guarantees that producers make a profit",
+     "Prevents the government from intervening in the market"
+    ],
+    "question": "In a competitive market, the equilibrium price acts as a rationing mechanism because it:",
+    "explanation": "The equilibrium price rations scarce goods by ensuring quantity demanded equals quantity supplied. Consumers willing to pay at least the equilibrium price obtain the good; those who are not are rationed out.",
+    "correctIndex": 1
+   },
+   {
+    "id": "price-determination:quiz:fd63956e",
+    "options": [
+     "Increase both price and quantity",
+     "Increase price but have no effect on quantity",
+     "Increase quantity but have no effect on price",
+     "Decrease price and increase quantity"
+    ],
+    "question": "If the supply of a good is perfectly inelastic, an increase in demand will:",
+    "explanation": "Perfectly inelastic supply means quantity supplied is fixed regardless of price (vertical supply curve). An increase in demand can only push the price up; quantity cannot change.",
+    "correctIndex": 1
+   },
+   {
+    "id": "price-determination:quiz:f4c2d25d",
+    "options": [
+     "The demand curve shifts left by the amount of the tax",
+     "The supply curve shifts up/left by the amount of the tax",
+     "Both curves shift to the left equally",
+     "The supply curve shifts to the right by the amount of the tax"
+    ],
+    "question": "Which diagram best represents the effect of an indirect tax on a market?",
+    "explanation": "An indirect tax on producers increases their costs, shifting the supply curve upward (or leftward) by the amount of the tax per unit. This results in a higher consumer price and lower quantity traded.",
+    "correctIndex": 1
+   },
+   {
+    "id": "price-determination:quiz:16108a51",
+    "options": [
+     "The government does not intervene in the market",
+     "Any deviation from equilibrium triggers market forces that return the price to equilibrium",
+     "Supply and demand curves are both perfectly elastic",
+     "There are no external shocks to the market"
+    ],
+    "question": "Market equilibrium is described as stable if:",
+    "explanation": "Stable equilibrium exists when market forces automatically correct any disequilibrium. Excess supply pushes prices down; excess demand pushes prices up, naturally restoring equilibrium.",
+    "correctIndex": 1
+   }
+  ],
+  "section_practice": [
+   {
+    "id": "price-determination:practice:307f8845",
+    "marks": 4,
+    "command": "Define",
+    "guidance": "The equilibrium price is the price at which the quantity demanded by consumers equals the quantity supplied by producers (1 mark), so there is no excess supply or excess demand in the market (1 mark). It is determined by the intersection of the demand and supply curves (1 mark). At this price, the market clears and there is no tendency for the price to change (1 mark).",
+    "question": "Define the term 'equilibrium price'. (4 marks)"
+   },
+   {
+    "id": "price-determination:practice:084cfd83",
+    "marks": 6,
+    "command": "Explain",
+    "guidance": "Excess supply occurs when the price is above the equilibrium level (1 mark) — at this price, quantity supplied exceeds quantity demanded, creating unsold stock (1 mark). Producers respond by lowering prices to clear surplus inventory (1 mark). As the price falls, quantity demanded increases because more consumers are willing and able to buy (1 mark), and quantity supplied decreases as it becomes less profitable for some producers (1 mark). This process continues until price reaches equilibrium where Qd = Qs (1 mark).",
+    "question": "Explain how a market moves from a position of excess supply to equilibrium. (6 marks)"
+   },
+   {
+    "id": "price-determination:practice:3512032a",
+    "marks": 10,
+    "command": "Assess",
+    "guidance": "Define the price mechanism as the interaction of supply and demand to determine prices and allocate resources (2 marks). Effective: acts as a signal — rising prices indicate increased scarcity or demand, directing producers to supply more (2 marks); acts as an incentive — higher profits attract new firms and investment into growing markets (1 mark); acts as a rationing device — higher prices reduce quantity demanded, ensuring goods go to those willing to pay most (1 mark). Limitations: market failures such as externalities mean the price mechanism leads to over- or under-production of some goods (2 marks); information asymmetry and irrational behaviour reduce efficiency (1 mark). Judgement: effective in competitive markets but requires government intervention where market failures exist (1 mark).",
+    "question": "Assess the effectiveness of the price mechanism in allocating scarce resources. (10 marks)"
+   },
+   {
+    "id": "price-determination:practice:4bb349e0",
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Explain that oil is a key input in production and transport, so price changes have widespread effects (2 marks).\n\nNegative impacts: Cost-push inflation — higher oil prices increase production and transport costs, pushing up the general price level (3 marks); reduced consumer spending power — higher petrol and energy prices reduce real disposable income (2 marks); increased costs for businesses, potentially leading to lower output and job losses (2 marks).\n\nPositive or mitigating factors: Incentive for investment in renewable energy and energy efficiency (2 marks); North Sea oil producers benefit from higher revenues (2 marks); the impact depends on the UK's energy mix and the degree to which consumers and firms can substitute away from oil (2 marks).\n\nEvaluation: The net effect depends on the magnitude and duration of the price rise (2 marks). A temporary spike may be absorbed, but a sustained increase would likely reduce GDP growth and raise inflation, requiring careful monetary policy responses from the Bank of England (3 marks).",
+    "question": "Evaluate the impact of a significant increase in global oil prices on the UK economy. (20 marks)"
+   },
+   {
+    "id": "price-determination:practice:9c009a3c",
+    "marks": 4,
+    "command": "Outline",
+    "guidance": "Effect 1: Excess supply (surplus) — the minimum price is above equilibrium, so the quantity supplied exceeds the quantity demanded (1 mark). For example, a minimum wage above the equilibrium wage may create unemployment (1 mark).\n\nEffect 2: Government intervention costs — the government may need to purchase surplus output to maintain the floor price (1 mark), creating a fiscal burden on taxpayers (1 mark).",
+    "question": "Outline two effects of a price floor set above the equilibrium price. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "id": "price-determination:card:3dfd5adc",
+    "back": "The point where <strong>quantity demanded equals quantity supplied</strong>. There is no tendency for price to change — the market clears with no excess supply or demand.",
+    "front": "What is market equilibrium?"
+   },
+   {
+    "id": "price-determination:card:f89b13dd",
+    "back": "There is <strong>excess supply</strong> (surplus). Producers cannot sell all their output, so they reduce prices. Price falls back toward equilibrium.",
+    "front": "What happens when price is above equilibrium?"
+   },
+   {
+    "id": "price-determination:card:d8abc944",
+    "back": "There is <strong>excess demand</strong> (shortage). Consumers compete for limited goods, bidding up the price. Price rises back toward equilibrium.",
+    "front": "What happens when price is below equilibrium?"
+   },
+   {
+    "id": "price-determination:card:78c3da34",
+    "back": "The demand curve shifts right, creating temporary <strong>excess demand</strong>. Equilibrium price <strong>rises</strong> and equilibrium quantity <strong>increases</strong>.",
+    "front": "What is the effect of an increase in demand on equilibrium?"
+   },
+   {
+    "id": "price-determination:card:f08a7da2",
+    "back": "The supply curve shifts right, creating temporary <strong>excess supply</strong>. Equilibrium price <strong>falls</strong> and equilibrium quantity <strong>increases</strong>.",
+    "front": "What is the effect of an increase in supply on equilibrium?"
+   },
+   {
+    "id": "price-determination:card:f10418c3",
+    "back": "A government-imposed <strong>upper limit</strong> on the price of a good, set below equilibrium. Aims to keep goods affordable but creates <strong>excess demand</strong> and potential shortages.",
+    "front": "What is a price ceiling (maximum price)?"
+   },
+   {
+    "id": "price-determination:card:34f548e4",
+    "back": "A government-imposed <strong>lower limit</strong> on the price of a good, set above equilibrium. E.g., minimum wage. Creates <strong>excess supply</strong> — e.g., unemployment in labour markets.",
+    "front": "What is a price floor (minimum price)?"
+   },
+   {
+    "id": "price-determination:card:0b5fc5ac",
+    "back": "How the <strong>burden of an indirect tax</strong> is shared between producers and consumers. If demand is inelastic, consumers bear more of the tax. If demand is elastic, producers bear more.",
+    "front": "What is the incidence of a tax?"
+   },
+   {
+    "id": "price-determination:card:b0959d9a",
+    "back": "If demand is <strong>inelastic</strong>, consumers pay a larger share (they cannot easily switch). If demand is <strong>elastic</strong>, producers absorb more of the tax (they cannot pass it on without losing sales).",
+    "front": "How does PED determine the incidence of a tax?"
+   },
+   {
+    "id": "price-determination:card:1e6ac56b",
+    "back": "Supply shifts right → equilibrium price <strong>falls</strong>, quantity <strong>increases</strong>. Both consumers (lower price) and producers (higher effective price) benefit.",
+    "front": "What is the effect of a subsidy on equilibrium?"
+   },
+   {
+    "id": "price-determination:card:b18fa648",
+    "back": "A <strong>loss of economic efficiency</strong> that occurs when equilibrium is not achieved — e.g., from taxes, subsidies, or price controls. Represents lost consumer and producer surplus.",
+    "front": "What is deadweight loss?"
+   },
+   {
+    "id": "price-determination:card:46d417cb",
+    "back": "The sum of <strong>consumer surplus and producer surplus</strong>. Maximised at the free-market equilibrium where there is no deadweight loss.",
+    "front": "What is total economic welfare?"
+   },
+   {
+    "id": "price-determination:card:8417a92a",
+    "back": "When <strong>quantity demanded exceeds quantity supplied</strong> at the current price. The market price is below equilibrium. Solved by price rising or supply increasing.",
+    "front": "What is a shortage?"
+   },
+   {
+    "id": "price-determination:card:1767ce7d",
+    "back": "When <strong>quantity supplied exceeds quantity demanded</strong> at the current price. The market price is above equilibrium. Solved by price falling or demand increasing.",
+    "front": "What is a surplus?"
+   },
+   {
+    "id": "price-determination:card:f77e9063",
+    "back": "Quantity <strong>definitely increases</strong>. The effect on price is <strong>ambiguous</strong> — it depends on which shift is larger. If demand increases more, price rises; if supply increases more, price falls.",
+    "front": "What happens when both demand and supply increase simultaneously?"
+   },
+   {
+    "id": "price-determination:card:4ea5a220",
+    "back": "The system by which <strong>changes in price</strong> allocate scarce resources in a market economy. Prices adjust to eliminate shortages and surpluses, signalling to buyers and sellers.",
+    "front": "What is a price mechanism?"
+   },
+   {
+    "id": "price-determination:card:a9309f42",
+    "back": "By creating a <strong>shortage</strong>, a price ceiling means some consumers cannot buy at the official price. They may be willing to pay <strong>above the ceiling</strong> illegally, creating an underground market.",
+    "front": "Why might a price ceiling cause a black market?"
+   },
+   {
+    "id": "price-determination:card:5c4b78de",
+    "back": "Supply shifts <strong>left</strong> → price <strong>rises</strong> and quantity <strong>falls</strong>. Consumers pay more and producers sell less. Used as a cost-cutting measure by governments.",
+    "front": "What is the effect of removing a subsidy?"
+   }
+  ],
+  "section_diagrams": [
+   {
+    "id": "price-determination:diagram:495988e1",
+    "title": "Supply & Demand Equilibrium",
+    "checklist": [
+     "Correctly labelled axes (Price on y-axis, Quantity on x-axis)",
+     "Original D and S curves correctly drawn and labelled",
+     "Equilibrium point marked and labelled (E, or E1/E2 for shifts)",
+     "Dashed lines from equilibrium to both axes showing P* and Q*",
+     "For shifts: original curve shown dashed, new curve solid, direction of shift indicated",
+     "For taxes: S+tax curve parallel above S; consumer price Pc, producer price Pp, and quantity Qt labelled",
+     "Tax revenue rectangle and deadweight loss triangle clearly identified",
+     "Arrow showing the direction of the shift"
+    ],
+    "scenarios": [
+     {
+      "svg": "<svg width=\"500\" height=\"420\" viewBox=\"0 0 500 420\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\">\n  <defs>\n  <marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker>\n</defs>\n  \n  <line x1=\"80\" y1=\"330\" x2=\"465\" y2=\"330\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <line x1=\"80\" y1=\"330\" x2=\"80\" y2=\"30\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <text x=\"265\" y=\"380\" fill=\"#94a3b8\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" letter-spacing=\"0.5\">QUANTITY (Q)</text>\n  <text x=\"35\" y=\"190\" fill=\"#94a3b8\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" letter-spacing=\"0.5\" transform=\"rotate(-90,35,190)\">PRICE (P)</text>\n\n  <!-- Supply -->\n  <line x1=\"80\" y1=\"302\" x2=\"431.5\" y2=\"89.20000000000002\" stroke=\"#60a5fa\" stroke-width=\"3\"/>\n  <text x=\"405.6\" y=\"73\" fill=\"#60a5fa\" font-size=\"15\" font-weight=\"700\" class=\"draggable\">S</text>\n\n  <!-- Demand -->\n  <line x1=\"80\" y1=\"78\" x2=\"431.5\" y2=\"290.8\" stroke=\"#34d399\" stroke-width=\"3\"/>\n  <text x=\"405.6\" y=\"302\" fill=\"#34d399\" font-size=\"15\" font-weight=\"700\" class=\"draggable\">D</text>\n\n  <!-- Equilibrium -->\n  <line x1=\"265\" y1=\"190\" x2=\"80\" y2=\"190\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/>\n  <line x1=\"265\" y1=\"190\" x2=\"265\" y2=\"330\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/>\n  <circle cx=\"265\" cy=\"190\" r=\"6\" fill=\"#fb923c\"/>\n  <text x=\"66\" y=\"195\" fill=\"#94a3b8\" font-size=\"13\" font-weight=\"700\" text-anchor=\"end\" class=\"draggable\">Pe</text>\n  <text x=\"265\" y=\"352\" fill=\"#94a3b8\" font-size=\"13\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">Qe</text>\n  <text x=\"279\" y=\"180\" fill=\"#fb923c\" font-size=\"13\" font-weight=\"700\" class=\"draggable\">E</text>\n</svg>",
+      "label": "Base Equilibrium"
+     },
+     {
+      "svg": "<svg width=\"500\" height=\"420\" viewBox=\"0 0 500 420\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\">\n  <defs>\n  <marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker>\n</defs>\n  \n  <line x1=\"80\" y1=\"330\" x2=\"465\" y2=\"330\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <line x1=\"80\" y1=\"330\" x2=\"80\" y2=\"30\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <text x=\"265\" y=\"380\" fill=\"#94a3b8\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" letter-spacing=\"0.5\">QUANTITY (Q)</text>\n  <text x=\"35\" y=\"190\" fill=\"#94a3b8\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" letter-spacing=\"0.5\" transform=\"rotate(-90,35,190)\">PRICE (P)</text>\n\n  <!-- Supply -->\n  <line x1=\"80\" y1=\"302\" x2=\"431.5\" y2=\"89.20000000000002\" stroke=\"#60a5fa\" stroke-width=\"3\"/>\n  <text x=\"405.6\" y=\"73\" fill=\"#60a5fa\" font-size=\"15\" font-weight=\"700\" class=\"draggable\">S</text>\n\n  <!-- D1 (dashed) -->\n  <line x1=\"80\" y1=\"78\" x2=\"431.5\" y2=\"290.8\" stroke=\"#475569\" stroke-width=\"2\" stroke-dasharray=\"8,5\"/>\n  <text x=\"413\" y=\"296.4\" fill=\"#475569\" font-size=\"12\" class=\"draggable\">D₁</text>\n\n  <!-- D2 -->\n  <line x1=\"80\" y1=\"36\" x2=\"431.5\" y2=\"248.8\" stroke=\"#34d399\" stroke-width=\"3\"/>\n  <text x=\"394.5\" y=\"251.6\" fill=\"#34d399\" font-size=\"15\" font-weight=\"700\" class=\"draggable\">D₂</text>\n\n  <!-- Old eq (faded) -->\n  <line x1=\"265\" y1=\"190\" x2=\"80\" y2=\"190\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/>\n  <line x1=\"265\" y1=\"190\" x2=\"265\" y2=\"330\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/>\n  <circle cx=\"265\" cy=\"190\" r=\"4\" fill=\"#475569\"/>\n  <text x=\"66\" y=\"195\" fill=\"#94a3b8\" font-size=\"13\" font-weight=\"700\" text-anchor=\"end\" class=\"draggable\">P₁</text>\n  <text x=\"265\" y=\"352\" fill=\"#94a3b8\" font-size=\"13\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">Q₁</text>\n\n  <!-- New eq -->\n  <line x1=\"299.78\" y1=\"169\" x2=\"80\" y2=\"169\" stroke=\"#fb923c\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/>\n  <line x1=\"299.78\" y1=\"169\" x2=\"299.78\" y2=\"330\" stroke=\"#fb923c\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/>\n  <circle cx=\"299.78\" cy=\"169\" r=\"6\" fill=\"#fb923c\"/>\n  <text x=\"66\" y=\"174\" fill=\"#94a3b8\" font-size=\"13\" font-weight=\"700\" text-anchor=\"end\" class=\"draggable\">P₂</text>\n  <text x=\"299.78\" y=\"352\" fill=\"#94a3b8\" font-size=\"13\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">Q₂</text>\n\n  <!-- Shift arrow -->\n  <line x1=\"265\" y1=\"176\" x2=\"309.4\" y2=\"176\" stroke=\"#34d399\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n</svg>",
+      "label": "Increase in Demand"
+     }
+    ],
+    "description": "Shows how equilibrium price and quantity are determined at the intersection of demand and supply, and how shifts in demand or supply — or the imposition of a tax — change the equilibrium."
+   },
+   {
+    "id": "price-determination:diagram:423ff13e",
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:transparent\">\n  <defs>\n    <marker id=\"ah5\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"20\" x2=\"70\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"70\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"70\" y1=\"20\" x2=\"70\" y2=\"15\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ah5)\"/>\n  <line x1=\"470\" y1=\"300\" x2=\"475\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ah5)\"/>\n  <text x=\"30\" y=\"170\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"14\" text-anchor=\"middle\" transform=\"rotate(-90,30,170)\">Price (P)</text>\n  <text x=\"270\" y=\"335\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"14\" text-anchor=\"middle\">Quantity (Q)</text>\n\n  <!-- Consumer surplus area (blue) -->\n  <polygon points=\"70,50 265,160 70,160\" fill=\"#3b82f6\" opacity=\"0.2\"/>\n  <text x=\"130\" y=\"120\" fill=\"#3b82f6\" font-family=\"DM Sans, sans-serif\" font-size=\"13\" font-weight=\"bold\">CS</text>\n\n  <!-- Producer surplus area (green) -->\n  <polygon points=\"70,270 265,160 70,160\" fill=\"#059669\" opacity=\"0.2\"/>\n  <text x=\"130\" y=\"220\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"13\" font-weight=\"bold\">PS</text>\n\n  <!-- Demand curve D -->\n  <line x1=\"70\" y1=\"50\" x2=\"430\" y2=\"270\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"440\" y=\"275\" fill=\"#3b82f6\" font-family=\"DM Sans, sans-serif\" font-size=\"14\" font-weight=\"bold\">D</text>\n\n  <!-- Supply curve S -->\n  <line x1=\"70\" y1=\"270\" x2=\"430\" y2=\"50\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"440\" y=\"55\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"14\" font-weight=\"bold\">S</text>\n\n  <!-- Equilibrium point -->\n  <circle cx=\"265\" cy=\"160\" r=\"5\" fill=\"#f59e0b\"/>\n  <text x=\"278\" y=\"152\" fill=\"#f59e0b\" font-family=\"DM Sans, sans-serif\" font-size=\"13\" font-weight=\"bold\">E</text>\n\n  <!-- Dashed lines to axes -->\n  <line x1=\"70\" y1=\"160\" x2=\"265\" y2=\"160\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" stroke-dasharray=\"5,4\"/>\n  <line x1=\"265\" y1=\"160\" x2=\"265\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"5,4\"/>\n  <text x=\"55\" y=\"165\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"12\" text-anchor=\"end\">P*</text>\n  <text x=\"265\" y=\"315\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"12\" text-anchor=\"middle\">Q*</text>\n\n  <!-- Annotations -->\n  <text x=\"350\" y=\"130\" fill=\"#3b82f6\" font-family=\"DM Sans, sans-serif\" font-size=\"11\">CS = Willingness to</text>\n  <text x=\"350\" y=\"145\" fill=\"#3b82f6\" font-family=\"DM Sans, sans-serif\" font-size=\"11\">pay minus price paid</text>\n  <text x=\"350\" y=\"195\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"11\">PS = Price received</text>\n  <text x=\"350\" y=\"210\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"11\">minus cost of supply</text>\n</svg>",
+    "title": "Consumer & Producer Surplus",
+    "checklist": [
+     "Consumer surplus: triangle below D curve, above equilibrium price",
+     "Producer surplus: triangle above S curve, below equilibrium price",
+     "Both areas correctly shaded and labelled CS and PS",
+     "Equilibrium price and quantity clearly marked with dashed lines",
+     "Total surplus = CS + PS (maximised at free-market equilibrium)"
+    ],
+    "description": "Shows consumer surplus (area below D, above price) and producer surplus (area above S, below price) at market equilibrium."
+   }
+  ],
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "The market equilibrium occurs where the quantity demanded equals quantity supplied — the point where the demand and supply curves intersect.",
+      "At prices above equilibrium, there is excess supply (surplus), which puts downward pressure on price as firms compete for buyers.",
+      "At prices below equilibrium, there is excess demand (shortage), which puts upward pressure on price as consumers compete for limited goods.",
+      "The market self-corrects towards equilibrium through the price adjustment mechanism."
+     ],
+     "title": "Supply and demand determine equilibrium price",
+     "result": "Free markets automatically move towards equilibrium through the interaction of supply and demand."
+    },
+    {
+     "steps": [
+      "The signalling function: rising prices signal to producers that a good is in high demand, encouraging them to increase supply.",
+      "The incentive function: higher prices incentivise new firms to enter the market and existing firms to expand output.",
+      "The rationing function: when goods are scarce, rising prices ration the limited supply to those with the highest willingness to pay.",
+      "Together, these functions allocate scarce resources without the need for central planning."
+     ],
+     "title": "The price mechanism performs three key functions",
+     "result": "The price mechanism coordinates millions of independent decisions through signalling, incentives and rationing."
+    },
+    {
+     "steps": [
+      "An increase in demand (rightward shift) raises both equilibrium price and quantity, ceteris paribus.",
+      "An increase in supply (rightward shift) raises equilibrium quantity but lowers equilibrium price.",
+      "When both curves shift simultaneously, the outcome depends on the relative magnitude of each shift.",
+      "Elasticity determines whether the price effect or quantity effect dominates — inelastic supply amplifies price changes."
+     ],
+     "title": "Demand and supply shifts change equilibrium",
+     "result": "Predicting market outcomes requires analysing both the direction and magnitude of demand and supply shifts."
+    },
+    {
+     "steps": [
+      "An indirect tax (e.g. VAT, excise duty) shifts the supply curve leftward by the amount of the tax, raising the price consumers pay.",
+      "The tax burden is shared between consumers and producers — the split depends on the relative elasticity of demand and supply.",
+      "A subsidy shifts the supply curve rightward, reducing the price consumers pay and increasing equilibrium quantity.",
+      "Both taxes and subsidies create a deadweight welfare loss by moving the market away from the free-market equilibrium."
+     ],
+     "title": "Taxes and subsidies distort market equilibrium",
+     "result": "Government taxes and subsidies alter equilibrium outcomes and create welfare losses, but can be justified if they correct market failures."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "Markets may not reach equilibrium in practice",
+     "content": "The equilibrium model assumes perfect information, rational behaviour and flexible prices. In reality, prices can be sticky, information is imperfect and market power can prevent adjustment. Some markets (housing, labour) may remain in persistent disequilibrium, meaning the self-correcting mechanism does not always work efficiently."
+    },
+    {
+     "title": "The price mechanism can produce inequitable outcomes",
+     "content": "Rationing by price means only those with sufficient purchasing power can access goods. Essential goods like healthcare and housing may be priced beyond the reach of low-income households. This raises questions about whether allocative efficiency (as defined by willingness to pay) is the same as a socially desirable allocation."
+    },
+    {
+     "title": "Tax incidence depends on elasticity, not intention",
+     "content": "Governments may intend for producers to bear a tax burden, but the actual incidence depends on PED and PES. When demand is inelastic (e.g. cigarettes), most of the tax is passed on to consumers. This means indirect taxes on necessities can be regressive, disproportionately affecting low-income households."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "id": "price-determination:mistake:3b10bc4e",
+    "title": "Not explaining HOW the market returns to equilibrium",
+    "examTip": "Walk through the process step by step. \"At the initial price, there is excess demand of X units. This puts upward pressure on price. As price rises, Qd contracts and Qs extends until a new equilibrium is reached.\"",
+    "mistake": "Students state that \"the market moves to a new equilibrium\" without explaining the mechanism of excess demand/supply driving price changes.",
+    "correction": "Always explain the adjustment process: excess demand → upward pressure on price → quantity supplied rises, quantity demanded falls → equilibrium. Excess supply → downward pressure on price → the opposite."
+   },
+   {
+    "id": "price-determination:mistake:2872c6ef",
+    "title": "Confusing consumer surplus and producer surplus on diagrams",
+    "mistake": "Students label the surplus areas the wrong way around, or cannot identify them on a non-standard diagram.",
+    "correction": "Consumer surplus = area BELOW the demand curve and ABOVE the market price. Producer surplus = area ABOVE the supply curve and BELOW the market price. Both are triangles at equilibrium."
+   },
+   {
+    "id": "price-determination:mistake:ecf71579",
+    "title": "Forgetting to show the shift AND the new equilibrium on diagrams",
+    "examTip": "Diagram marks are often awarded for: correct axes labels, correct shift direction, and clearly marked new equilibrium.",
+    "mistake": "Students shift a curve but forget to mark the new equilibrium price and quantity, losing easy marks.",
+    "correction": "Always mark: the original equilibrium (P₁, Q₁), the shift of the curve, and the new equilibrium (P₂, Q₂). Use arrows to show direction of change."
+   }
+  ]
+ }
+}

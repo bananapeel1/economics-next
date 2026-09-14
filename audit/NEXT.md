@@ -1,129 +1,54 @@
 # Next session brief
 
-## Packet 10 spec — Smart Practice engine (in progress this session)
+## Packet 13 spec — the off-spec strip and dedupe (done and verified 14 September 2026)
 
-Closing: F075, F076, F077, F078, F084, F085. Model: Opus. Touches no content, so nothing blocks it.
+**What it had to make true.** No framework the IAL specification does not contain is taught or assessed anywhere in
+live content. No section teaches a specification bullet another section owns. Nothing this packet removed is still
+being tested. Near-duplicate and identical quiz stems within a section are gone (F081).
 
-| id | What must become true |
-|---|---|
-| F075 | A modifier or navigation key never selects an answer. Only a single printable character does, and never with ctrl/meta/alt held |
-| F076 | Confidence is collected after the reveal and reaches `computeNextReview`, which already accepts it. No prompt whose data is discarded |
-| F077 | "This question will come back" is true: a wrong item returns later in the same session, once. The summary stat counts what actually happened |
-| F078 | "Nothing due" and "no content" are different screens. A student who has scheduled everything sees when it is next due and can practise early |
-| F084 | A session interleaves across the selected topics instead of being dominated by one, and the student can choose its length |
-| F085 | The first unit is open, selecting a whole unit is an explicit control rather than a badge, and every chip shows how many questions it holds |
+**What it did.** Read `scripts/_packet13-plan.mjs`, `_packet13-residual-plan.mjs` and `_packet13-dedupe-plan.mjs`:
+each op carries the evidence for itself. Five blocks removed across four sections; the specification's vocabulary
+replaces the GCE labels in 13 sections; two of three cross-section duplications resolved and the third written up
+as a manifest in `audit/SPEC-OWNERSHIP.md`; 19 duplicate stems rewritten to test a different angle.
 
-Acceptance, runnable without this conversation:
-1. At 390px, signed out: pressing ArrowDown, Control and Backspace on a question selects nothing.
-2. Answer one wrong. It reappears before the session ends, exactly once.
-3. After the reveal, a confidence control is present, and choosing one is what advances.
-4. With every question scheduled, the empty screen names the next due time and offers practising early.
-5. On the topic picker the first unit is expanded and each chip shows a question count.
+**Acceptance script (Verify A).** Read-only. `npm test` 97/97. `npm run validate` exit 0. `npm run build` green.
+`node audit/scripts/packet-13-census.mjs` exits 0 with every banned term at 0 hits and D012 clear. Both `--check`
+builders pass. Then the five claimed ids. The baseline must be SMALLER than at packet 3: 2,489 -> 2,189 keys,
+BLOCK 1,131 -> 902, `terms.off-spec` 19 -> 0, `quiz.near-dup` 36 -> 17.
 
-## Packet 9 is done and pushed — PR #14, awaiting merge
+**Verify B.** *Done 14 September, main session, fresh tab, storage cleared.* market-failure Learn Mode is 5 blocks
+(was 7), with no "Merit Goods & Demerit Goods" and no "Market Power as Market Failure"; the block that was "Welfare
+Loss & Deadweight Loss" reads "Welfare Loss"; the words "merit good" and "deadweight" appear nowhere on the page.
+Step 2 of 6 holds the rewritten fill-in: chips MC / underproduces / welfare, placed in order, blanks read
+"P = MC", "over- or underproduces", "the surplus that is lost is called welfare loss", "✓ All correct!", 3 correct
+blanks and 0 wrong. aggregate-demand is 4 blocks with no accelerator. assessing-competitiveness is 1 block with no
+VRIO, competencies, scorecard or five forces. Console: only the signed-out 401.
 
-`lib/ial-marking.js` is now the ONLY place IAL tariffs, paper structures and the 20-mark essay structure are
-stated. Import it; never restate them in a prompt. It is sourced from `audit/raw/econ_spec.txt` and
-`bus_spec.txt` and was checked against them line by line. `lib/subscription-lookup.js` replaces `.single()`
-in every AI route.
+**Known limits, stated so nobody is surprised.**
+- **assessing-competitiveness (business 3.3.5) is now one block.** Its second block taught VRIO and core
+  competencies, which the specification does not contain; what 3.3.5 does contain — financial statements, the HR
+  metrics and the four HR strategies — was never written. The section is thin and honest rather than fuller and
+  wrong. Packet 54 fills it, and `spec.uncovered` now names the two HR-strategy leaves it is missing.
+- **The multiplier duplication is not resolved.** See the manifest in `audit/SPEC-OWNERSHIP.md`; it belongs to
+  packets 32 and 37 together.
+- **`external-influences` (business 2.3.5) still refers to Porter's five forces** inside a subsection on
+  competitive pressure. That is a reference, not a second treatment, and its own packet decides.
+- **Twenty-five near-duplicate pairs were deliberately left.** They share a stem frame and test different things.
+  `quiz.near-dup` still reports them, which is the honest state of a lexical rule.
 
-The verifier rejected F018 twice before it passed. Both rejections were right, and both were the same shape:
-part of a finding fixed, the rest of the same finding untouched. **Read the whole `fix` field of a finding
-before claiming it**, not just its title.
+## Handoff — what comes next
 
-## Then: packet 10 — Smart Practice engine
+Packet 13 was the last packet before the content stage proper. The order from here is 13.1-13.8 (the quant drills,
+blocked behind packets 5 and 7), 13.9-13.12 (exam practice), then 14, the first content section, on Fable.
 
-`node audit/scripts/ledger.mjs packet 10` lists the six code findings. Read `PLAN.md` packet 10 and the
-finding records; do not read `audit/raw/` wholesale. This is the surface a paying student uses most and it
-touches no content, so it needs nothing from packet 2 or 3.
-
-Scope from the plan: the keyboard handler that treats Ctrl and arrow keys as answers; "no questions
-available" that reads as missing content; the false "this question will come back"; the RETRIED stat; the
-topic picker's hidden select-all and missing counts; collect confidence BEFORE the reveal and actually read
-it. Verify B applies: this is student-facing, so script a 390px walkthrough of a practice session.
-
-Model: Opus. Bounded, specified, verifier-checked.
-
-## After that, still unblocked and content-free, in this order
-
-1. **Packet 11** — performance and accessibility. Now carries **F118**, new: React hydration fails on every
-   page load because script tags render inside React components (`app/layout.js`). Reproduce by loading a
-   section page and reading the console. It costs first paint on exactly the low-end phones this cohort uses.
-2. ~~**Packet 6** — re-entry.~~ **Parked by the founder to the end of the programme.** Not urgent in his judgement.
-3. **Packet 12** — monetisation coherence. Boundary settled; one sub-decision on F086 above.
-
-
-## One decision waiting, for packet 12
-
-The founder has settled the freemium boundary: **it does not change.** That makes F086 the packet's real work,
-and it needs one answer before packet 12 runs.
-
-`GET /api/practice/questions` is unauthenticated, uses the anon client, and returns the whole `section_quiz`
-array with `correctIndex` for any section ids passed. So the quiz bank the paywall protects is free to anyone
-who calls the endpoint, and Smart Practice is built on it. Two readings of "keep the paywall as it is":
-
-- **Close the leak** (recommended). The intended boundary stands, so gate the endpoint and have Smart Practice
-  respect the same preview limit as the Quiz tab. Cost: students who use Smart Practice today lose free access
-  they currently have, which is a visible takeaway, not just a fix.
-- **Accept the leak as the real boundary.** The quiz bank is de facto free, so drop the Quiz tab paywall and
-  move the paid line elsewhere. Cost: this is redrawing the boundary the founder just chose to keep.
-
-Either way, stop serving `correctIndex` to unauthenticated callers. Marking can happen server-side; the answer
-key does not need to be in the payload at all, and that part needs no product decision.
-
-
-## Packet 10 Verify B, 12 September
-
-Run at 390px, signed out, after a dev-server restart and cache clear.
-
-| Check | Result |
-|---|---|
-| Topic picker opens with the first unit expanded | PASS, one unit open |
-| Unit select-all is an explicit labelled control, not the unit number | PASS, and its indeterminate state is correct: unchecked, then indeterminate after one chip, then checked after select-all |
-| Every chip shows how many questions it holds | PASS, "25 questions" |
-| Session length control offers 10 / 20 / 40 | PASS |
-| Instruction reworded | PASS, "Pick the topics you want to practise" |
-| Gated start explains itself with a sign-in link | PASS |
-
-**Four of the acceptance checks could not be run, and that is a consequence of our own work.** The
-keyboard handler, the confidence control, the wrong-answer requeue and the nothing-due screen all
-live inside a session, and F086 closed Smart Practice to signed-out visitors. Verifying paid or
-signed-in surfaces in a browser now needs an account. If you want that coverage, create a free test
-account and a premium one and say so here; do not put credentials in chat, and no session should ask
-for them. Until then those four are covered by code verification only.
-
-**A trap that cost time twice.** Turbopack served a stale `ReferenceError: useRef is not defined`
-through several reloads after the import was already correct. `rm -rf .next/cache` and a dev-server
-restart cleared it. Suspect the cache before suspecting the code when an error survives a fix.
-
-## Founder to-dos
-
-1. Merge PR #14.
-2. ~~Run `scripts/packet-2-draft-state.sql`.~~ **Done 12 September.** Verified: all eight content tables carry
-   `draft` and `published_at`, and `node scripts/publish-section.mjs` reports "nothing drafted: every section
-   is published". Content packets 14-56 must now write to `draft` and publish in one step.
-3. ~~Pick a transactional email provider.~~ **Deferred by the founder to the end of the programme.** Packet 6 is parked; do not start it and do not keep raising it.
-4. ~~Decide the freemium boundary.~~ **Settled 12 September: no change.** One sub-decision remains above.
-5. Decide the freeze date. Proposed 1 November; anything later is for the June cohort, not January.
-
-## Packet 4's migration is run — 13 September 2026
-
-`scripts/packet-4-section-state.sql` was run in the Supabase SQL editor by the founder and verified
-end to end from here, read-only:
-
-- `user_section_state` exists with every column the app writes, checked against a deliberately fake
-  table name as a control so the probe itself is meaningful.
-- Row-level security is ON with no insert policy: an anon-key insert is refused with `42501`
-  *before* the foreign key is evaluated, which is how we know RLS blocked it rather than the FK.
-  Writes can therefore only happen server-side through the service role.
-- An anon select returns zero rows, scoped to the signed-in owner.
-- Each route's exact query runs: the state route's GET and its read-before-upsert, and the
-  dashboard's read. The upsert's `onConflict: 'user_id,section_id'` resolves, so the unique
-  constraint it depends on is there.
-- Nothing was written during verification.
-
-Learn Mode state now follows a student between devices. **Do not re-run the file** — it is safely
-re-runnable (the policy is dropped and recreated), but there is no reason to.
+Three things a content session must know, in addition to packet 3's two:
+1. **Write through `stageSection`, publish with `scripts/publish-section.mjs`.** Both read the row back and
+   validate it. `scripts/_content-ops.mjs` is there for declarative surgery: it deletes by id and renumbers
+   `quizIndices` / `practiceIndices` for you, which is the thing that is easy to get silently wrong.
+2. **Run the per-section checklist in `CONTENT-GATE.md` between staging and publishing**, and re-run
+   `node audit/scripts/validate-content.mjs --baseline --confirm` at the end so the baseline shrinks by your work.
+3. **Touching a sentence means owning its findings.** Budget for it: this packet's second-order fixes were about a
+   third of its edits, and they are why the baseline moved.
 
 ## Packet 3 spec — Validator v2 and golden set (built 14 September 2026)
 

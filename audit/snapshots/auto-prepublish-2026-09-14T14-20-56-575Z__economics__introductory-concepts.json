@@ -1,0 +1,1483 @@
+{
+ "section_id": "introductory-concepts",
+ "subject": "economics",
+ "label": "auto-prepublish-2026-09-14T14-20-56-575Z",
+ "tables": {
+  "section_content": [
+   {
+    "id": "introductory-concepts:block:218ccd38",
+    "title": "The Nature of Economics",
+    "sections": [
+     {
+      "id": "introductory-concepts:sub:economics-as-a-social-science",
+      "body": [
+       {
+        "text": "**Economics** is classified as a **social science** because it studies how individuals, firms and governments decide what to produce, how to produce it, and who gets the output. Unlike physics or chemistry, the \"particles\" being studied — people — have opinions, biases and emotions that change over time.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Because you cannot run controlled lab experiments on an entire economy, economists build **models** — simplified representations of reality that isolate the relationship you care about. Every model rests on **assumptions**, the most important being **ceteris paribus** (\"all other things being equal\"), which lets you change one variable while holding everything else constant.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Two Branches",
+        "type": "subheading"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Microeconomics (individual markets)",
+         "Macroeconomics (the whole economy)"
+        ],
+        "result": "Same underlying logic — scarcity forcing choices",
+        "resultType": "neutral"
+       },
+       {
+        "text": "**Microeconomics** zooms in on individual consumers, firms and markets — think demand curves and pricing. **Macroeconomics** zooms out to GDP, inflation, unemployment and government policy. Both branches start from the same root: resources are scarce, so every choice has a cost.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Economics as a Social Science",
+      "recall": {
+       "id": "introductory-concepts:sub:economics-as-a-social-science:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Observe human behaviour",
+        "Build a simplified model",
+        "Apply ceteris paribus",
+        "Isolate the variable of interest"
+       ]
+      },
+      "keyIdea": "Economics studies messy, unpredictable human behaviour — not physical laws — so it relies on simplified models and assumptions to make sense of the world.",
+      "examMatters": "When asked why economics is a social science, examiners want three things: it studies human behaviour (not physical laws), it uses models based on simplifying assumptions, and it relies on ceteris paribus to isolate variables. Explain *why* each matters, do not just list them.",
+      "realExample": {
+       "text": "When the **Bank of England** modelled the impact of Brexit on UK GDP, it assumed ceteris paribus on trade deals, migration and business investment. The model was useful but imperfect — exactly because economics cannot run a controlled experiment on a real economy.",
+       "emoji": "🔬"
+      },
+      "misconception": "Students often write \"economics is not a real science because it cannot predict the future.\" That misunderstands the purpose — economics builds models to explain patterns and trade-offs, not to forecast like a weather app. Instead write: economics is a social science that uses models and ceteris paribus to study complex human behaviour."
+     },
+     {
+      "id": "introductory-concepts:sub:positive-and-normative",
+      "body": [
+       {
+        "text": "\"UK unemployment rose by 2% last year\" — you can check that against ONS data. \"Unemployment is too high\" — who decides what counts as *too high*? The first is a **positive statement**, the second is a **normative statement**.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Factual claim",
+         "Can be tested with evidence"
+        ],
+        "result": "Positive statement",
+        "resultType": "neutral"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Contains a value judgement",
+         "Cannot be settled by data alone"
+        ],
+        "result": "Normative statement",
+        "resultType": "neutral"
+       },
+       {
+        "text": "Normative statements almost always contain giveaway language: *should*, *ought to*, *better*, *fairer*, *too much*. The tricky part is that the line blurs in practice. \"Inequality has increased\" is positive (measure the Gini coefficient). \"Inequality is a problem\" is normative — that is an opinion about what matters.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Positive and Normative Economics",
+      "recall": {
+       "id": "introductory-concepts:sub:positive-and-normative:recall",
+       "type": "fillin",
+       "hints": [
+        "P______",
+        "N________",
+        "o_____"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "Positive",
+        "Normative",
+        "ought to"
+       ],
+       "template": [
+        "___ statements can be tested with evidence",
+        "→ ___ statements involve value judgements",
+        "→ Giveaway words: should, ___, fairer"
+       ]
+      },
+      "keyIdea": "Positive statements describe \"what is\" and can be tested with data; normative statements express \"what ought to be\" and rest on value judgements no dataset can settle.",
+      "examMatters": "Every *evaluate* question you face involves normative judgement — two economists can recommend opposite policies from identical data. What earns marks is the quality of your reasoning and the evidence you cite, not which side you pick.",
+      "realExample": {
+       "text": "Two economists can look at identical **NHS** waiting-time data. One says \"the NHS needs more funding\" (normative — based on a belief in universal healthcare). The other says \"private provision would reduce waits\" (also normative). The data is positive; the policy recommendation is where values enter.",
+       "emoji": "📊"
+      },
+      "misconception": "Students confuse \"positive\" with \"good\" and \"normative\" with \"bad.\" Positive simply means testable — \"smoking causes cancer\" is positive, true, and testable, but nobody would call it \"good.\" Instead write: positive = can be tested with evidence; normative = involves a value judgement."
+     }
+    ],
+    "takeaway": [
+     "Economics is a social science that uses models and **ceteris paribus** to study complex human behaviour.",
+     "Positive statements can be tested with evidence; normative statements involve value judgements.",
+     "Every policy recommendation blends positive analysis with normative values — learn to spot where the facts end and the opinions begin."
+    ],
+    "quizIndices": [
+     0
+    ]
+   },
+   {
+    "id": "introductory-concepts:block:f8c0ef00",
+    "title": "Scarcity, Choice and Opportunity Cost",
+    "sections": [
+     {
+      "id": "introductory-concepts:sub:the-basic-economic-problem",
+      "body": [
+       {
+        "text": "The **basic economic problem** is that **wants are unlimited** but the **resources** (land, labour, capital, enterprise) available to satisfy them are **finite**. No matter how wealthy a country becomes, it still faces scarcity — even Singapore, with a GDP per capita above $80,000, cannot give every citizen everything they want.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Scarcity forces three fundamental questions: **What** to produce? **How** to produce it? **For whom** to produce? Every economic system — whether market, command or mixed — is an attempt to answer these questions.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Unlimited wants",
+         "Finite resources",
+         "Scarcity"
+        ],
+        "result": "Choices must be made",
+        "resultType": "bad"
+       },
+       {
+        "text": "Notice that scarcity is not the same as shortage. A **shortage** is temporary — it can be fixed by producing more or raising the price. **Scarcity** is permanent — it exists because human desires always outpace available resources.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "The Basic Economic Problem",
+      "recall": {
+       "id": "introductory-concepts:sub:the-basic-economic-problem:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Unlimited wants exceed finite resources",
+        "Scarcity exists",
+        "Choices must be made",
+        "Opportunity cost is incurred"
+       ]
+      },
+      "keyIdea": "Human wants are unlimited but the resources to satisfy them are finite — this mismatch is scarcity, and it forces every household, firm and government to choose.",
+      "examMatters": "Examiners test whether you understand scarcity as a *permanent* condition, not a temporary shortage. Always link scarcity → choice → opportunity cost as a chain. A 2-mark definition must include \"unlimited wants\" and \"finite resources.\"",
+      "realExample": {
+       "text": "**Saudi Arabia** has enormous oil wealth, yet still faces scarcity. The government must choose between investing in NEOM (a $500bn future city), funding healthcare, or diversifying away from oil. Choosing NEOM means those billions cannot simultaneously fund other projects.",
+       "emoji": "🇸🇦"
+      },
+      "misconception": "Students write \"scarcity means there is not enough of something.\" That is too vague — it confuses scarcity with shortage. Instead write: scarcity is the permanent condition where unlimited human wants exceed finite resources, forcing every agent to make choices."
+     },
+     {
+      "id": "introductory-concepts:sub:opportunity-cost",
+      "body": [
+       {
+        "text": "**Opportunity cost** is the benefit of the **next-best alternative forgone** when a choice is made. It is not the money cost — it is what you could have had instead. If you spend Saturday revising economics, your opportunity cost might be the football match you missed.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Opportunity cost applies to every economic agent. A **consumer** choosing a holiday over a new laptop. A **firm** investing in R&D instead of marketing. A **government** spending on defence rather than education. In each case, the true cost is not just money spent — it is the benefit of the road not taken.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Make a choice",
+         "Give up the next-best alternative"
+        ],
+        "result": "Opportunity cost incurred",
+        "resultType": "bad"
+       },
+       {
+        "text": "Opportunity cost is only ever the *next-best* alternative, not all the alternatives combined. If you choose A over B, C and D, the opportunity cost is only B (assuming B was your second choice), not B + C + D.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Opportunity Cost",
+      "recall": {
+       "id": "introductory-concepts:sub:opportunity-cost:recall",
+       "type": "fillin",
+       "hints": [
+        "n___",
+        "m____",
+        "si_________"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "next",
+        "money",
+        "single best"
+       ],
+       "template": [
+        "Opportunity cost = the ___-best alternative forgone",
+        "→ It is not the ___ cost",
+        "→ Only the ___ alternative counts, not all of them"
+       ]
+      },
+      "keyIdea": "Every choice has a hidden price tag — opportunity cost is the value of the next-best alternative you gave up when you made your decision.",
+      "examMatters": "Opportunity cost appears in almost every economics paper. Examiners award marks for: (1) stating it is the *next-best* alternative, (2) applying it to the specific context in the question, and (3) explaining why it matters for resource allocation.",
+      "realExample": {
+       "text": "When the **UK government** committed £100bn to the HS2 rail project, the opportunity cost was not just £100bn — it was the hospitals, schools or tax cuts that money could have funded instead. Critics argued the NHS would have been a better use.",
+       "emoji": "🇬🇧"
+      },
+      "misconception": "Students list every possible alternative as the opportunity cost. That is wrong — opportunity cost is only the *next-best* alternative forgone, not a list of everything you could have done. Instead write: the opportunity cost of choosing X is the single best alternative (Y) that was sacrificed."
+     }
+    ],
+    "takeaway": [
+     "Scarcity is permanent — unlimited wants exceed finite resources, forcing every agent to choose.",
+     "Opportunity cost is the next-best alternative forgone, not all alternatives or the money cost.",
+     "Always link the chain: scarcity → choice → opportunity cost — examiners expect this logic in every answer."
+    ],
+    "quizIndices": [
+     1
+    ],
+    "practiceIndices": [
+     0
+    ]
+   },
+   {
+    "id": "introductory-concepts:block:ac7121f8",
+    "title": "Production Possibility Frontiers",
+    "sections": [
+     {
+      "id": "introductory-concepts:sub:the-ppf-model",
+      "body": [
+       {
+        "text": "The **production possibility frontier** (PPF) is a curve showing all the maximum possible combinations of two goods an economy can produce when it uses all its resources fully and efficiently. It is one of the most important models in the entire syllabus.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Three Key Positions",
+        "type": "subheading"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**On the curve** — productively efficient: all resources are fully employed and used in their best combination.",
+         "**Inside the curve** — inefficient: resources are unemployed or misallocated. The economy could produce more of both goods.",
+         "**Outside the curve** — currently unattainable with existing resources and technology."
+        ]
+       },
+       {
+        "text": "The **slope** (gradient) of the PPF represents the **opportunity cost** of producing one more unit of Good A in terms of Good B. A straight-line PPF means constant opportunity cost; a bowed-out (concave) PPF means *increasing* opportunity cost — which is the more realistic case, because not all resources are equally suited to producing both goods.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "The PPF Model",
+      "recall": {
+       "id": "introductory-concepts:sub:the-ppf-model:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        1,
+        3,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "On the PPF curve — productively efficient",
+        "Inside the curve — resources wasted or unemployed",
+        "Outside the curve — currently unattainable",
+        "Slope of the PPF — shows opportunity cost"
+       ]
+      },
+      "keyIdea": "A PPF shows the maximum combinations of two goods an economy can produce — points on the curve are efficient, inside means wasted resources, outside is currently impossible.",
+      "examMatters": "PPF questions often ask you to *illustrate* a concept on a diagram. Practise drawing a labelled PPF and marking: a point on the curve (efficient), inside (inefficient), outside (unattainable). Examiners penalise unlabelled axes.",
+      "realExample": {
+       "text": "**China** in 1990 operated well inside its PPF — millions of workers were in low-productivity agriculture. By shifting labour into manufacturing and investing in capital, China moved closer to its frontier, producing dramatically more industrial goods without sacrificing proportional farm output.",
+       "emoji": "🇨🇳"
+      },
+      "misconception": "Students say \"a point inside the PPF means the country is poor.\" That is misleading — it means resources are being wasted or left unemployed, regardless of how wealthy the country is. Instead write: a point inside the PPF indicates productive inefficiency — the economy could increase output of both goods without needing more resources."
+     },
+     {
+      "id": "introductory-concepts:sub:shifts-of-the-ppf",
+      "body": [
+       {
+        "text": "An **outward shift** of the PPF means the economy can now produce more of *both* goods. This represents **economic growth** — caused by increases in the quantity or quality of resources: more workers, better technology, new natural resource discoveries, or more capital investment.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Investment in education/technology",
+         "Labour productivity rises",
+         "PPF shifts outward"
+        ],
+        "result": "Potential output increases (economic growth)",
+        "resultType": "good"
+       },
+       {
+        "text": "An **inward shift** means the economy's productive capacity has fallen — perhaps due to a natural disaster, war, or depletion of resources. A shift along *one axis only* (a pivoted shift) means growth in one sector but not the other — for example, a technology breakthrough in manufacturing but not agriculture.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Moving from a point *inside* the PPF *to* the frontier is **not** economic growth — it is simply better use of existing resources (reducing unemployment or improving efficiency). True growth means the frontier itself moves outward.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Shifts of the PPF",
+      "recall": {
+       "id": "introductory-concepts:sub:shifts-of-the-ppf:recall",
+       "type": "fillin",
+       "hints": [
+        "L_____",
+        "ou_____",
+        "gr____"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "Labour",
+        "outward",
+        "growth"
+       ],
+       "template": [
+        "Investment in education/technology →",
+        "___ productivity rises →",
+        "PPF shifts ___ →",
+        "This represents economic ___"
+       ]
+      },
+      "keyIdea": "When an economy gains more or better resources the entire PPF shifts outward — this is economic growth; losing resources shifts it inward.",
+      "examMatters": "Examiners frequently test the difference between a *movement along* the PPF (reallocation, showing opportunity cost) and a *shift of* the PPF (growth or decline). Always state which one you mean and explain the cause.",
+      "realExample": {
+       "text": "**South Korea** shifted its PPF dramatically outward between 1960 and 2000 through massive investment in education and technology. GDP per capita rose from under $1,000 to over $10,000 — a textbook example of long-run economic growth driven by human capital.",
+       "emoji": "🇰🇷"
+      },
+      "misconception": "Students confuse moving to the PPF with shifting the PPF. Moving from inside the curve to the curve means you are using existing resources better (reducing inefficiency). Only when the curve itself shifts outward is there true economic growth. Instead write: economic growth = an outward shift of the PPF, not merely reaching it."
+     }
+    ],
+    "takeaway": [
+     "The PPF shows maximum output combinations — on = efficient, inside = waste, outside = unattainable.",
+     "The slope of the PPF represents opportunity cost; a bowed-out curve means increasing opportunity cost.",
+     "Outward shift = economic growth (more/better resources); moving to the curve = better use of existing resources.",
+     "Always label axes, mark the point, and explain whether the curve shifts or the point moves."
+    ],
+    "diagramRef": "Production Possibility Frontier",
+    "quizIndices": [
+     2,
+     3
+    ],
+    "practiceIndices": [
+     1
+    ]
+   },
+   {
+    "id": "introductory-concepts:block:ba0854c5",
+    "title": "Specialisation, Division of Labour and Exchange",
+    "sections": [
+     {
+      "id": "introductory-concepts:sub:specialisation-and-division-of-labour",
+      "body": [
+       {
+        "text": "**Specialisation** means concentrating on producing a narrow range of goods or services. It can happen at the level of the worker (a surgeon performs only surgery), the firm (Toyota makes cars), the region (Silicon Valley focuses on tech), or the country (Saudi Arabia exports oil).",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Division of labour** — splitting a production process into separate tasks, each performed by a different worker — is how specialisation works inside a firm. Adam Smith's famous **pin factory** example showed that 10 workers specialising could produce 48,000 pins a day, versus just 10 if each worked alone.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Benefits and Risks",
+        "type": "subheading"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Workers specialise",
+         "Skills improve + time saved",
+         "Productivity rises"
+        ],
+        "result": "Higher output per worker",
+        "resultType": "good"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Benefits**: higher productivity, economies of scale, lower unit costs, higher quality through practice.",
+         "**Risks**: monotony and demotivation, structural unemployment if demand shifts, over-dependence on one product or market."
+        ]
+       }
+      ],
+      "title": "Specialisation and Division of Labour",
+      "recall": {
+       "id": "introductory-concepts:sub:specialisation-and-division-of-labour:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        2,
+        3,
+        0,
+        1
+       ],
+       "correctOrder": [
+        "Workers specialise in narrow tasks",
+        "Skills improve and time is saved",
+        "Productivity rises",
+        "Higher output per worker but risk of monotony"
+       ]
+      },
+      "keyIdea": "When workers, firms or countries focus on what they do best and then trade, total output rises — but over-specialisation creates vulnerability.",
+      "examMatters": "When asked to *evaluate* specialisation, examiners want both sides. Start with the benefits (productivity, efficiency) and then counter with the risks (dependence, monotony). Use a real example to anchor each side.",
+      "realExample": {
+       "text": "**Foxconn** in Shenzhen, China, uses extreme division of labour to assemble iPhones — each worker performs one tiny task repeatedly. Output is enormous, but the factory has faced criticism for worker monotony and poor conditions — a textbook trade-off of specialisation.",
+       "emoji": "🏭"
+      },
+      "misconception": "Students write \"specialisation is always good because it increases output.\" That ignores the risks. Instead write: specialisation raises productivity and lowers costs, but creates risks of monotony, over-dependence, and structural unemployment if demand changes."
+     },
+     {
+      "id": "introductory-concepts:sub:money-and-exchange",
+      "body": [
+       {
+        "text": "In a **barter system**, you can only trade if each person wants exactly what the other has — this is the **double coincidence of wants**. A farmer with wheat who needs shoes must find a cobbler who happens to want wheat. This is hopelessly inefficient once an economy has more than a handful of goods.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Barter requires double coincidence",
+         "Very difficult to arrange",
+         "Limits trade and specialisation"
+        ],
+        "result": "Economy stays small and inefficient",
+        "resultType": "bad"
+       },
+       {
+        "text": "**Money** solves this by performing four functions: a **medium of exchange** (accepted by everyone), a **store of value** (you can save it for later), a **unit of account** (prices can be compared), and a **standard of deferred payment** (you can agree to pay in the future). Without money, large-scale specialisation and trade would be impossible.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Money and Exchange",
+      "recall": {
+       "id": "introductory-concepts:sub:money-and-exchange:recall",
+       "type": "fillin",
+       "hints": [
+        "w____",
+        "ex______",
+        "va___, ac_____"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "wants",
+        "exchange",
+        "value, account"
+       ],
+       "template": [
+        "Barter fails because of the double coincidence of ___",
+        "→ Money acts as a medium of ___",
+        "→ Money also serves as a store of ___, unit of ___, and standard of deferred payment"
+       ]
+      },
+      "keyIdea": "Barter fails because it needs a double coincidence of wants — money solves this by acting as a medium of exchange, store of value, and unit of account.",
+      "examMatters": "A common short-answer question asks you to explain the four functions of money. List all four with a one-line explanation for each. Then link back to specialisation — money enables trade, which enables specialisation, which raises output.",
+      "realExample": {
+       "text": "When **Zimbabwe** experienced hyperinflation in 2008 (prices doubling every 24 hours), its currency lost all four functions. People reverted to barter or used US dollars and South African rand instead — proving that money only works when people trust it.",
+       "emoji": "🇿🇼"
+      },
+      "misconception": "Students say \"money is valuable because the government says so.\" That is only partly true — money works because people *trust* it will be accepted by others. When trust collapses (as in Zimbabwe's hyperinflation), the currency becomes worthless regardless of what the government declares. Instead write: money functions as a medium of exchange only as long as it retains public confidence."
+     }
+    ],
+    "takeaway": [
+     "Specialisation raises productivity but creates risks of over-dependence and structural unemployment.",
+     "Division of labour splits production into tasks — Adam Smith's pin factory is the classic example.",
+     "Money replaces barter by solving the double coincidence of wants, enabling large-scale trade and specialisation."
+    ],
+    "quizIndices": [
+     4
+    ]
+   },
+   {
+    "id": "introductory-concepts:block:9a2ee055",
+    "title": "Economic Systems",
+    "sections": [
+     {
+      "id": "introductory-concepts:sub:free-market-command-and-mixed",
+      "body": [
+       {
+        "text": "In a **free market economy**, resources are allocated by the **price mechanism** — no central authority decides what to produce. Consumers signal their wants through demand, and firms respond because they want profit. Prices rise when goods are scarce and fall when they are abundant.",
+        "type": "paragraph"
+       },
+       {
+        "text": "In a **command (planned) economy**, the **state** decides what to produce, how to produce it, and who gets the output. Central planners set production targets and distribute goods. The advantage is that the government can pursue equality and public goods; the disadvantage is that planners lack the information prices provide, leading to inefficiency and shortages.",
+        "type": "paragraph"
+       },
+       {
+        "text": "In practice, every real economy is a **mixed economy** — combining market forces with some government intervention. The UK, Singapore, and the UAE are all mixed economies, but the *degree* of state involvement varies significantly.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Comparing Systems",
+        "type": "subheading"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Free market**: efficient allocation via prices, but can produce inequality and market failure.",
+         "**Command**: can pursue equity and public goods, but suffers from information problems and inefficiency.",
+         "**Mixed**: balances market efficiency with government correction, but risks government failure."
+        ]
+       }
+      ],
+      "title": "Free Market, Command and Mixed Economies",
+      "recall": {
+       "id": "introductory-concepts:sub:free-market-command-and-mixed:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        3,
+        0,
+        2,
+        1
+       ],
+       "correctOrder": [
+        "What to produce?",
+        "How to produce it?",
+        "For whom to produce?",
+        "Market, command or mixed economy answers these"
+       ]
+      },
+      "keyIdea": "Every economy must answer what, how and for whom to produce — the three systems (market, command, mixed) are different ways of answering these questions.",
+      "examMatters": "Comparison questions ask you to weigh the strengths and weaknesses of different systems. Always use a specific country example for each system and explain *why* the system leads to that outcome, not just *that* it does.",
+      "realExample": {
+       "text": "**North Korea** is the closest real example to a command economy — the state controls nearly all production. Meanwhile, **South Korea** operates as a mixed economy with strong market forces. The GDP per capita gap (South Korea ~$35,000 vs North Korea ~$1,800) illustrates the efficiency costs of central planning.",
+       "emoji": "🇰🇵"
+      },
+      "misconception": "Students write \"the UK is a free market economy.\" It is not — the UK is a mixed economy with significant government intervention (NHS, state education, regulation, taxation). Instead write: the UK is a mixed economy that relies primarily on the price mechanism but with substantial government provision and regulation."
+     }
+    ],
+    "takeaway": [
+     "Free market economies use prices to allocate resources; command economies use state planning; mixed economies combine both.",
+     "The price mechanism works through three functions: signalling, incentivising and rationing.",
+     "Adam Smith's invisible hand explains how self-interest can coordinate an economy — but market failure means it does not always work.",
+     "Every real economy is mixed — the question is always *how much* government intervention, not whether to have any."
+    ],
+    "practiceIndices": [
+     2
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "flow": {
+     "steps": [
+      "Observe real-world problem",
+      "Build simplified model",
+      "Apply ceteris paribus",
+      "Predict outcome"
+     ],
+     "result": "Testable economic theory",
+     "resultType": "good"
+    },
+    "meta": "5 concepts",
+    "title": "The Nature of Economics",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Economics</strong> — the social science that studies how societies allocate scarce resources among competing unlimited wants.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Ceteris paribus</strong> — a Latin phrase meaning 'all other things being equal', used to isolate the effect of one variable while holding everything else constant.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Positive statement</strong> — an objective claim that can be tested against real-world data, whether it turns out to be true or false.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Normative statement</strong> — a subjective opinion based on value judgements that cannot be proven or disproven with data alone.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Economists build simplified <strong>models</strong> of the real world, stripping away complexity so they can predict how one change ripples through an economy.",
+        "type": "mech"
+       },
+       {
+        "text": "Ceteris paribus allows economists to examine cause and effect by <strong>changing one variable</strong> at a time, just as a scientist controls an experiment.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Distinguishing positive from normative statements matters because <strong>policy debates</strong> often disguise opinions as facts, and examiners expect you to spot the difference.",
+        "type": "imp"
+       },
+       {
+        "text": "Every diagram in economics relies on ceteris paribus; when you shift a demand curve, you assume income, tastes, and all other factors stay the same.",
+        "type": "link"
+       }
+      ],
+      "title": "HOW ECONOMISTS THINK"
+     }
+    ],
+    "keyIdea": "Before studying any market or policy, economists need a shared toolkit of thinking methods that strip away noise and isolate the effect of one variable at a time.",
+    "takeaway": [
+     "Economics is a social science that uses models and ceteris paribus to simplify a complex world.",
+     "Positive statements can be tested with evidence; normative statements reflect opinions and values.",
+     "Every curve shift on a diagram assumes ceteris paribus, so always state what is held constant."
+    ],
+    "examMatters": "Examiners often give a list of statements and ask you to identify which are positive and which are normative. Positive statements contain measurable claims ('inflation is 3%'); normative statements contain value words like 'should', 'better', or 'fair'.",
+    "misconception": "Students say positive statements must be true. Wrong because a positive statement only needs to be testable, not correct. 'Inflation is 50%' is positive because you can check the data, even though the claim is false. Instead write: positive statements are objective and testable; normative statements are subjective and based on values."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Resources are scarce",
+      "Choices must be made",
+      "Every choice has an opportunity cost"
+     ],
+     "result": "Trade-offs are unavoidable in all economic decisions",
+     "resultType": "bad"
+    },
+    "meta": "4 concepts",
+    "title": "Scarcity, Choice & Opportunity Cost",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Scarcity</strong> — the fundamental economic problem that arises because resources are finite while human wants are infinite, forcing societies to make choices.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Factors of production</strong> — the four categories of scarce resources used to produce goods and services: land, labour, capital, and enterprise.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Opportunity cost</strong> — the value of the next best alternative foregone when a choice is made; it is the real cost of every decision.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Free good</strong> — a resource that is not scarce and therefore has no opportunity cost, such as air in most situations.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Scarcity forces three fundamental questions on every society: <strong>what</strong> to produce, <strong>how</strong> to produce it, and <strong>for whom</strong> to produce.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Opportunity cost applies to individuals, firms, and governments alike; a government spending more on defence has <strong>less to spend on healthcare</strong>.",
+        "type": "imp"
+       },
+       {
+        "text": "Opportunity cost is the engine behind the PPF; every point on the curve represents a trade-off between two goods.",
+        "type": "link"
+       }
+      ],
+      "title": "WHY IT MATTERS"
+     }
+    ],
+    "keyIdea": "Because resources are limited but human wants are not, every decision means giving something up, and the true cost of any choice is the best alternative you sacrificed.",
+    "takeaway": [
+     "Scarcity is the root of all economics; without it there would be no need to make choices.",
+     "Opportunity cost is always the next best alternative, never the total of everything sacrificed.",
+     "Every economic agent, from households to governments, faces trade-offs driven by scarcity."
+    ],
+    "examMatters": "Examiners expect you to identify the specific opportunity cost in context, not just say 'there is an opportunity cost'. Name the next best alternative and explain what is sacrificed.",
+    "misconception": "Students say opportunity cost is the total of everything you give up. Wrong because opportunity cost is only the single next best alternative foregone, not the sum of all alternatives. Instead write: opportunity cost is the value of the one best option you did not choose."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Resources increase or improve",
+      "PPF shifts outward",
+      "Economy can produce more"
+     ],
+     "result": "Economic growth expands possibilities",
+     "resultType": "good"
+    },
+    "meta": "5 concepts",
+    "title": "Production Possibility Frontiers",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Production possibility frontier (PPF)</strong> — a curve showing the maximum combinations of two goods an economy can produce when all resources are used efficiently.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Productive efficiency</strong> — achieved at any point on the PPF where all resources are fully and efficiently employed, so producing more of one good requires producing less of another.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Economic growth</strong> — an outward shift of the entire PPF, caused by an increase in the quantity or quality of factors of production.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Points on the PPF are <strong>productively efficient</strong>; points inside it represent unemployed or misallocated resources; points outside it are currently unattainable.",
+        "type": "mech"
+       },
+       {
+        "text": "The PPF is concave (bowed outward) because of <strong>increasing opportunity cost</strong>; as you produce more of one good, resources less suited to it must be diverted, raising the sacrifice.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "An outward shift means the economy can produce <strong>more of both goods</strong>, caused by better technology, more resources, or improved education.",
+        "type": "imp"
+       },
+       {
+        "text": "An inward shift signals a loss of productive capacity, caused by natural disasters, war, or <strong>depletion of resources</strong>.",
+        "type": "imp"
+       },
+       {
+        "text": "The PPF is the graphical expression of scarcity and opportunity cost; moving along the curve shows exactly how much of one good must be sacrificed for more of the other.",
+        "type": "link"
+       }
+      ],
+      "title": "READING THE DIAGRAM"
+     }
+    ],
+    "keyIdea": "A single curved line captures an economy's maximum output, its trade-offs, its efficiency, and how growth or decline shifts what is possible.",
+    "takeaway": [
+     "The PPF shows maximum output, trade-offs, and efficiency in one diagram.",
+     "Moving along the PPF shows opportunity cost; shifting the PPF shows economic growth or decline.",
+     "The concave shape reflects increasing opportunity cost as resources are transferred between uses."
+    ],
+    "examMatters": "Examiners want you to distinguish between a movement along the PPF (reallocation with no growth) and a shift of the PPF (actual growth or decline). Always label which type you are describing and state the cause.",
+    "misconception": "Students say a point inside the PPF means the economy is shrinking. Wrong because it simply means resources are not fully employed or are misallocated. Instead write: a point inside the PPF indicates inefficiency or unemployment, not a smaller economy."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Workers specialise",
+      "Output per worker rises",
+      "Money enables easy exchange"
+     ],
+     "result": "Higher living standards through trade",
+     "resultType": "good"
+    },
+    "meta": "5 concepts",
+    "title": "Specialisation & Money",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Specialisation</strong> — when individuals, firms, or countries concentrate on producing the goods or services where they have the greatest efficiency advantage.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Division of labour</strong> — breaking a production process into separate tasks, each performed by a different worker, increasing speed, skill, and output per worker.",
+        "type": "def"
+       },
+       {
+        "text": "Specialisation raises productivity because workers develop <strong>expertise</strong>, waste less time switching tasks, and allow machinery to be used more efficiently.",
+        "type": "mech"
+       },
+       {
+        "text": "Over-specialisation creates risks: workers may suffer <strong>boredom and demotivation</strong>, and the firm becomes vulnerable if one specialist link in the chain breaks down.",
+        "type": "imp"
+       }
+      ],
+      "title": "SPECIALISATION"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Money</strong> — anything widely accepted as a medium of exchange that also serves as a store of value, a unit of account, and a standard of deferred payment.",
+        "type": "def"
+       },
+       {
+        "text": "Barter requires a <strong>double coincidence of wants</strong>; money eliminates this problem by providing a universally accepted medium, making trade far more efficient.",
+        "type": "mech"
+       },
+       {
+        "text": "Without money, specialisation would collapse because workers could not easily <strong>exchange their output</strong> for the many different goods they need.",
+        "type": "imp"
+       },
+       {
+        "text": "Specialisation and trade link directly to the PPF; countries trading along comparative advantage lines can consume beyond their own production possibilities.",
+        "type": "link"
+       }
+      ],
+      "title": "MONEY & EXCHANGE"
+     }
+    ],
+    "keyIdea": "When people and nations focus on what they do best and then trade, total output rises for everyone, but this only works smoothly when money replaces the clumsy barter system.",
+    "takeaway": [
+     "Specialisation increases output and efficiency, but over-reliance creates vulnerability.",
+     "Division of labour is one form of specialisation applied within a single production process.",
+     "Money's four functions make specialisation and trade practical; without it, barter's inefficiency would limit exchange."
+    ],
+    "examMatters": "Examiners want you to evaluate specialisation by discussing both its benefits (higher productivity, lower costs) and its drawbacks (worker boredom, structural unemployment, dependency). Always provide a two-sided argument.",
+    "misconception": "Students say division of labour and specialisation are the same thing. Wrong because division of labour is one specific form of specialisation applied within a production process, while specialisation also applies to firms, regions, and entire countries. Instead write: division of labour is the splitting of tasks within production; specialisation is the broader concept of focusing on what you do best."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Society faces scarcity",
+      "Must answer what/how/for whom",
+      "Chooses market, state, or mix"
+     ],
+     "result": "Resource allocation method determines efficiency and equity",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "Economic Systems",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Free market economy</strong> — an economic system where resources are allocated through the price mechanism with minimal government intervention; consumers and producers make decisions based on self-interest.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Command economy</strong> — an economic system where the government owns the factors of production and makes all decisions about what, how, and for whom to produce.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Mixed economy</strong> — an economic system combining elements of both free market and command economies, where the private sector and government share resource allocation decisions.",
+        "type": "def"
+       }
+      ],
+      "title": "TYPES OF SYSTEM"
+     },
+     {
+      "items": [
+       {
+        "text": "In a free market, the <strong>price mechanism</strong> acts as a signal, incentive, and rationing device, automatically directing resources to where they are most valued.",
+        "type": "mech"
+       },
+       {
+        "text": "In a command economy, central planners decide output levels and prices, which avoids some inequality but often leads to <strong>inefficiency and shortages</strong> because planners lack perfect information.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Most real-world economies are mixed; the debate centres on <strong>where the boundary</strong> between market and state should lie.",
+        "type": "imp"
+       },
+       {
+        "text": "Free markets can fail through externalities, public goods, and inequality, which is why even market-oriented economies use government intervention to <strong>correct market failures</strong>.",
+        "type": "imp"
+       },
+       {
+        "text": "Economic systems link to the role of government in Unit 1; understanding why markets fail explains why mixed economies exist.",
+        "type": "link"
+       }
+      ],
+      "title": "HOW THEY COMPARE"
+     }
+    ],
+    "keyIdea": "Every society must answer the three basic economic questions, but they differ radically in whether they hand that power to markets, governments, or some combination of both.",
+    "takeaway": [
+     "Free markets use the price mechanism to allocate resources efficiently but can fail on equity and externalities.",
+     "Command economies can address inequality but suffer from information problems and inefficiency.",
+     "Mixed economies combine market efficiency with government intervention to correct failures; the real debate is where to draw the line."
+    ],
+    "examMatters": "Examiners want you to evaluate each system, not just describe it. Discuss the trade-off between efficiency (free markets) and equity (command economies), and explain why most countries choose a mixed approach.",
+    "misconception": "Students say free markets always produce the best outcome. Wrong because free markets fail when externalities, public goods, or monopoly power exist, leading to inefficient or unfair outcomes. Instead write: free markets are efficient at allocating most resources but require government intervention to correct specific failures like pollution or under-provision of public goods."
+   }
+  ],
+  "section_quiz": [
+   {
+    "id": "introductory-concepts:quiz:d552e630",
+    "options": [
+     "The government should increase spending on healthcare to reduce inequality.",
+     "An increase in the minimum wage led to higher unemployment among young workers.",
+     "The UK inflation rate was 2.1% in 2023.",
+     "A fall in interest rates tends to increase consumer borrowing."
+    ],
+    "question": "Which of the following is a normative statement?",
+    "explanation": "'Should' signals a value judgement, making this normative. The other options are positive statements that can be tested against data.",
+    "correctIndex": 0
+   },
+   {
+    "id": "introductory-concepts:quiz:644bacaf",
+    "options": [
+     "The £10 billion spent on defence.",
+     "The monetary value of all other possible spending options combined.",
+     "The next best alternative use of the £10 billion that is forgone.",
+     "The total tax revenue required to fund the spending."
+    ],
+    "question": "The opportunity cost of a government choosing to spend £10 billion on defence is best described as:",
+    "explanation": "Opportunity cost is the value of the NEXT BEST alternative forgone, not the monetary cost or all alternatives combined.",
+    "correctIndex": 2
+   },
+   {
+    "id": "introductory-concepts:quiz:29215910",
+    "options": [
+     "The economy is producing at maximum efficiency.",
+     "Resources are either unemployed or being used inefficiently.",
+     "Economic growth has occurred.",
+     "The economy cannot produce any more output."
+    ],
+    "question": "A point inside the production possibility frontier indicates that:",
+    "explanation": "A point inside the PPF means the economy is not using all its resources fully or efficiently. Points ON the curve represent full efficiency; points outside are unattainable.",
+    "correctIndex": 1
+   },
+   {
+    "id": "introductory-concepts:quiz:105dee75",
+    "options": [
+     "A decrease in unemployment as idle workers are re-employed.",
+     "An improvement in technology that increases productivity.",
+     "A movement from an inefficient point to a point on the PPF.",
+     "A reallocation of resources from consumer goods to capital goods."
+    ],
+    "question": "Which of the following would cause an outward shift of the PPF?",
+    "explanation": "Improved technology increases productive capacity, shifting the PPF outward. Re-employing idle workers is a movement TO the PPF (not a shift). Reallocation is a movement ALONG the PPF.",
+    "correctIndex": 1
+   },
+   {
+    "id": "introductory-concepts:quiz:01f3c156",
+    "options": [
+     "Workers receive higher wages, motivating them to work harder.",
+     "Workers develop specialist skills, save time, and machinery can be introduced.",
+     "Competition between workers drives up quality.",
+     "Firms can employ fewer workers to produce the same output."
+    ],
+    "question": "Adam Smith argued that the division of labour increases output because:",
+    "explanation": "Smith identified three key benefits: workers gain dexterity from repetition, time is saved by not switching tasks, and specialisation enables the development and use of machinery.",
+    "correctIndex": 1
+   },
+   {
+    "id": "introductory-concepts:quiz:d5f96819",
+    "options": [
+     "Medium of exchange",
+     "Unit of account",
+     "Store of value",
+     "Standard of deferred payment"
+    ],
+    "question": "Which function of money is most undermined by high inflation?",
+    "explanation": "High inflation erodes the purchasing power of money over time, directly undermining its function as a store of value. Money saved today will buy less in the future.",
+    "correctIndex": 2
+   },
+   {
+    "id": "introductory-concepts:quiz:1314c98c",
+    "options": [
+     "The price mechanism operating through supply and demand.",
+     "Central government planning and direction.",
+     "Consumer sovereignty expressed through spending decisions.",
+     "The profit motive driving firms' decisions."
+    ],
+    "question": "In a command economy, the main mechanism for allocating resources is:",
+    "explanation": "In a command economy, the state (central planning authority) decides what, how and for whom to produce, replacing the price mechanism.",
+    "correctIndex": 1
+   },
+   {
+    "id": "introductory-concepts:quiz:488bdffc",
+    "options": [
+     "An immediate outward shift of the PPF.",
+     "A movement along the PPF with no change in productive capacity.",
+     "An inward shift of the PPF in the short run.",
+     "A movement along the PPF now and an outward shift in the future."
+    ],
+    "question": "An economy currently producing on its PPF chooses to produce more capital goods and fewer consumer goods. This is most likely to result in:",
+    "explanation": "Reallocating resources is a movement along the PPF (short run). However, producing more capital goods increases future productive capacity, causing the PPF to shift outward over time.",
+    "correctIndex": 3
+   },
+   {
+    "id": "introductory-concepts:quiz:987a82bb",
+    "options": [
+     "Tap water in a developed country",
+     "Sunlight on a beach",
+     "A bus ride provided by the government at no charge",
+     "Education provided free at the point of use"
+    ],
+    "question": "Which of the following is most likely to be classified as a free good?",
+    "explanation": "Sunlight exists in abundance with no opportunity cost. Tap water requires treatment (resources used), a 'free' bus ride is funded by taxation, and 'free' education has an opportunity cost in terms of resources used.",
+    "correctIndex": 1
+   },
+   {
+    "id": "introductory-concepts:quiz:67f59d74",
+    "options": [
+     "Ensure economic models are always accurate.",
+     "Isolate the effect of one variable by holding all other factors constant.",
+     "Prove that economic theories are scientifically valid.",
+     "Remove the need for value judgements in economic analysis."
+    ],
+    "question": "The ceteris paribus assumption is used in economics to:",
+    "explanation": "Ceteris paribus ('all other things being equal') allows economists to examine the relationship between two variables in isolation, making complex reality manageable in models.",
+    "correctIndex": 1
+   },
+   {
+    "id": "introductory-concepts:quiz:c8d177e4",
+    "options": [
+     "A government choosing to build a hospital instead of a school",
+     "A firm increasing the price of its product",
+     "A consumer buying two goods at the same time",
+     "A worker receiving a pay rise"
+    ],
+    "question": "Which of the following best illustrates the concept of opportunity cost?",
+    "explanation": "Opportunity cost is the next best alternative forgone. When the government builds a hospital, the school it could have built is the opportunity cost. The other options do not clearly show a trade-off between alternatives.",
+    "correctIndex": 0
+   },
+   {
+    "id": "introductory-concepts:quiz:572fb5f6",
+    "options": [
+     "Economic growth",
+     "A more efficient use of existing resources",
+     "An increase in the quantity of resources available",
+     "A reallocation of resources between two goods"
+    ],
+    "question": "A movement from a point inside the production possibility frontier (PPF) to a point on the frontier represents:",
+    "explanation": "A point inside the PPF indicates unemployed or inefficiently allocated resources. Moving to the frontier means using existing resources more efficiently, not growth (which would shift the PPF outward).",
+    "correctIndex": 1
+   },
+   {
+    "id": "introductory-concepts:quiz:7639d863",
+    "options": [
+     "Positive statements can be tested with evidence; normative statements involve value judgements",
+     "Normative statements are always true; positive statements are opinions",
+     "Positive economics deals with what should be; normative economics deals with what is",
+     "Both positive and normative statements can be proven with data"
+    ],
+    "question": "Which statement about positive and normative economics is correct?",
+    "explanation": "Positive statements are objective and testable (e.g., 'inflation is 3%'), while normative statements contain value judgements about what ought to be (e.g., 'the government should reduce inflation').",
+    "correctIndex": 0
+   },
+   {
+    "id": "introductory-concepts:quiz:76124830",
+    "options": [
+     "A fall in unemployment from 8% to 4%",
+     "An improvement in technology used in production",
+     "A reallocation of resources from consumer goods to capital goods",
+     "A movement along the PPF from one combination to another"
+    ],
+    "question": "An outward shift of the PPF could be caused by:",
+    "explanation": "An outward shift of the PPF represents economic growth caused by an increase in the quantity or quality of resources. Technological improvement increases productive capacity. Reducing unemployment moves towards the frontier, not beyond it.",
+    "correctIndex": 1
+   },
+   {
+    "id": "introductory-concepts:quiz:1f85cce8",
+    "options": [
+     "Governments do not allocate resources efficiently",
+     "Resources are scarce relative to unlimited wants",
+     "Firms aim to maximise profits rather than social welfare",
+     "International trade creates imbalances between countries"
+    ],
+    "question": "The basic economic problem exists because:",
+    "explanation": "The fundamental economic problem is scarcity: human wants are infinite but the resources available to satisfy them are finite. This forces societies to make choices about how to allocate resources.",
+    "correctIndex": 1
+   },
+   {
+    "id": "introductory-concepts:quiz:b7d26d87",
+    "options": [
+     "Money held in a bank account",
+     "A delivery van used by a business",
+     "Shares purchased on the stock market",
+     "The wages paid to factory workers"
+    ],
+    "question": "Which of the following is a factor of production classified as 'capital'?",
+    "explanation": "In economics, capital refers to man-made aids to production (machinery, equipment, vehicles), not financial capital. A delivery van is a physical asset used in the production process.",
+    "correctIndex": 1
+   },
+   {
+    "id": "introductory-concepts:quiz:e8152d63",
+    "options": [
+     "Constant opportunity costs of production",
+     "Increasing opportunity costs of production",
+     "Decreasing opportunity costs of production",
+     "That the economy is in recession"
+    ],
+    "question": "A PPF that is concave to the origin (bowed outward) indicates:",
+    "explanation": "A concave PPF shows increasing opportunity costs: as more of one good is produced, progressively larger amounts of the other good must be sacrificed because resources are not perfectly substitutable between uses.",
+    "correctIndex": 1
+   },
+   {
+    "id": "introductory-concepts:quiz:9912af07",
+    "options": [
+     "The UK's inflation rate rose to 4.2% in December",
+     "Higher interest rates tend to reduce consumer spending",
+     "The government ought to spend more on the NHS",
+     "Unemployment in the eurozone is currently 6.5%"
+    ],
+    "question": "Which of the following is an example of a normative economic statement?",
+    "explanation": "The word 'ought' signals a value judgement, making this a normative statement. The other options are positive statements that can be verified with data.",
+    "correctIndex": 2
+   },
+   {
+    "id": "introductory-concepts:quiz:8ea6a1b7",
+    "options": [
+     "Whether to produce luxury goods or necessities",
+     "Whether to use labour-intensive or capital-intensive methods",
+     "Whether output should be distributed equally among citizens",
+     "Whether to produce more consumer goods or capital goods"
+    ],
+    "question": "Which question does the economic problem of 'how to produce' address?",
+    "explanation": "The 'how to produce' question concerns the combination of resources and techniques used in production, such as choosing between labour-intensive and capital-intensive methods.",
+    "correctIndex": 1
+   },
+   {
+    "id": "introductory-concepts:quiz:18140b14",
+    "options": [
+     "In the long run all factors are variable",
+     "Resources are scarce relative to wants",
+     "All other things being held equal",
+     "The economy is in a state of equilibrium"
+    ],
+    "question": "The concept of ceteris paribus in economics means:",
+    "explanation": "Ceteris paribus means 'all other things being equal'. Economists use this assumption to isolate the effect of one variable on another while holding all other factors constant.",
+    "correctIndex": 2
+   },
+   {
+    "id": "introductory-concepts:quiz:19bc8985",
+    "options": [
+     "The PPF will shift inward",
+     "The PPF will shift outward in the future",
+     "There will be no change to the PPF",
+     "The economy will move inside the PPF"
+    ],
+    "question": "If an economy is producing on its PPF and decides to produce more capital goods, what is the most likely long-run effect?",
+    "explanation": "Producing more capital goods (investment) increases the economy's productive capacity over time, leading to an outward shift of the PPF in the future, though it means fewer consumer goods in the short run.",
+    "correctIndex": 1
+   },
+   {
+    "id": "introductory-concepts:quiz:61bb3579",
+    "options": [
+     "Government central planning committees",
+     "The price mechanism through supply and demand",
+     "Trade unions negotiating with employers",
+     "International organisations setting quotas"
+    ],
+    "question": "In a free market economy, the allocation of resources is primarily determined by:",
+    "explanation": "In a free market economy, the price mechanism (market forces of supply and demand) determines what is produced, how it is produced, and for whom, without significant government intervention.",
+    "correctIndex": 1
+   },
+   {
+    "id": "introductory-concepts:quiz:68346561",
+    "options": [
+     "Greater self-sufficiency for individual workers",
+     "Higher productivity but potential monotony for workers",
+     "A reduction in the need for international trade",
+     "Lower output per worker due to repetitive tasks"
+    ],
+    "question": "Specialisation and the division of labour are most likely to lead to:",
+    "explanation": "Specialisation increases productivity through greater skill development and efficiency, but can lead to monotony and boredom for workers performing repetitive tasks, which is a key drawback.",
+    "correctIndex": 1
+   },
+   {
+    "id": "introductory-concepts:quiz:083ad70a",
+    "options": [
+     "A general increase in the labour force",
+     "A technological advance specific to the production of good X",
+     "An increase in government spending on education",
+     "Discovery of new natural resources used in both goods"
+    ],
+    "question": "Which of the following would cause a pivoted (asymmetric) outward shift of the PPF for good X only?",
+    "explanation": "A technological advance specific to good X increases the maximum output of X only, causing the PPF to pivot outward along the X axis while the maximum output of the other good remains unchanged.",
+    "correctIndex": 1
+   },
+   {
+    "id": "introductory-concepts:quiz:1d667998",
+    "options": [
+     "Provide manual labour in the production process",
+     "Bear the risk of organising factors of production",
+     "Supply raw materials to the production process",
+     "Lend financial capital to businesses at interest"
+    ],
+    "question": "The entrepreneur is rewarded with profit because they:",
+    "explanation": "The entrepreneur's role is to organise the other factors of production and bear the risk of business failure. Profit is the reward for this risk-taking and organisational function.",
+    "correctIndex": 1
+   }
+  ],
+  "section_practice": [
+   {
+    "id": "introductory-concepts:practice:daea62ef",
+    "marks": 4,
+    "command": "Define",
+    "guidance": "Opportunity cost is the next best alternative forgone (1 mark) when a choice is made about how to allocate scarce resources (1 mark). For example, if a student chooses to study economics instead of working part-time, the opportunity cost is the wages they could have earned (1 mark). It arises because resources are scarce relative to unlimited wants (1 mark).",
+    "question": "Define the term 'opportunity cost'. (4 marks)"
+   },
+   {
+    "id": "introductory-concepts:practice:81d54f89",
+    "marks": 6,
+    "command": "Explain",
+    "guidance": "Reason 1: Individuals face scarcity of income (1 mark) — they have limited budgets but unlimited wants, so they must make choices about what to consume, creating opportunity costs with every spending decision (1 mark). For example, spending on a holiday means forgoing new furniture (1 mark).\n\nReason 2: Governments face scarcity of tax revenue (1 mark) — they must allocate limited public funds between competing priorities such as healthcare, defence and education (1 mark). Increased spending on the NHS, for instance, may mean reduced investment in infrastructure (1 mark).",
+    "question": "Explain two reasons why the basic economic problem is relevant to both individuals and governments. (6 marks)"
+   },
+   {
+    "id": "introductory-concepts:practice:d0eaebbd",
+    "marks": 10,
+    "command": "Assess",
+    "guidance": "Define the PPF as a curve showing the maximum possible output of two goods given available resources and technology (2 marks). Usefulness: shows scarcity — points beyond the PPF are unattainable with current resources (2 marks); shows opportunity cost — movement along the curve means producing more of one good at the expense of the other (2 marks); shows economic growth — an outward shift illustrates increased productive capacity (1 mark). Limitations: oversimplifies reality by assuming only two goods (1 mark); does not show what combination society should choose or how resources are actually allocated (1 mark). Judgement — useful as a teaching tool for core concepts but too simplistic for real-world policy decisions (1 mark).",
+    "question": "Assess the usefulness of a production possibility frontier (PPF) diagram in illustrating the basic economic problem. (10 marks)"
+   },
+   {
+    "id": "introductory-concepts:practice:b99104dd",
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Define specialisation as the concentration of production on a narrow range of goods, and division of labour as the breaking down of production into separate tasks (2 marks).\n\nFor improved outcomes: Higher productivity — workers become more skilled at repetitive tasks, increasing output per worker (3 marks); economies of scale — firms can exploit lower unit costs through mass production (2 marks); higher living standards — increased output leads to lower prices and greater consumer choice (2 marks).\n\nAgainst — not always improved: Worker boredom and demotivation — repetitive tasks reduce job satisfaction and can increase absenteeism and staff turnover (3 marks); structural unemployment — workers develop narrow skills that may become obsolete if industries decline (2 marks); over-dependence on trade — countries that specialise rely heavily on imports for goods they do not produce, creating vulnerability to supply disruptions (2 marks).\n\nEvaluation: Whether outcomes improve depends on the extent of specialisation and the flexibility of the labour market (2 marks). Moderate specialisation generally benefits economies, but extreme specialisation carries risks, particularly for developing countries dependent on primary commodities (2 marks).",
+    "question": "Evaluate the view that specialisation and the division of labour always lead to improved economic outcomes. (20 marks)"
+   },
+   {
+    "id": "introductory-concepts:practice:0312027b",
+    "marks": 4,
+    "command": "Outline",
+    "guidance": "Assumption 1: Ceteris paribus — economists assume all other variables remain constant when analysing the effect of one variable on another (1 mark). This isolates the relationship being studied but rarely holds in reality (1 mark).\n\nAssumption 2: Rational economic agents — it is assumed that consumers aim to maximise utility and firms aim to maximise profit (1 mark). In practice, decisions may be influenced by habit, emotion or imperfect information (1 mark).",
+    "question": "Outline two assumptions commonly made when constructing economic models. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "id": "introductory-concepts:card:1d34b61b",
+    "back": "The <strong>fundamental economic problem</strong> — human wants are unlimited but resources are finite. Because resources are scarce, societies must make choices about how to allocate them.",
+    "front": "What is scarcity?"
+   },
+   {
+    "id": "introductory-concepts:card:f7314892",
+    "back": "The <strong>next best alternative forgone</strong> when a choice is made. E.g., if a government spends £10bn on defence, the opportunity cost is the hospitals or schools that money could have funded.",
+    "front": "What is opportunity cost?"
+   },
+   {
+    "id": "introductory-concepts:card:8cfe89af",
+    "back": "A curve showing the <strong>maximum output combinations</strong> of two goods an economy can produce using all available resources efficiently. Points inside the PPF indicate inefficiency; points outside are unattainable.",
+    "front": "What is a production possibility frontier (PPF)?"
+   },
+   {
+    "id": "introductory-concepts:card:67ddb5da",
+    "back": "An increase in the economy's <strong>productive capacity</strong> — caused by investment in capital, technological progress, improved education, or discovery of new resources.",
+    "front": "What causes a shift outward of the PPF?"
+   },
+   {
+    "id": "introductory-concepts:card:01f4d488",
+    "back": "When individuals, firms, or countries concentrate on producing a <strong>narrow range of goods</strong> in which they have an advantage, then trade for the rest. Increases efficiency and output.",
+    "front": "What is specialisation?"
+   },
+   {
+    "id": "introductory-concepts:card:2f9b8418",
+    "back": "Breaking production into <strong>separate tasks</strong>, each performed by a different worker. Increases productivity through repetition but can lead to boredom and inflexibility.",
+    "front": "What is the division of labour?"
+   },
+   {
+    "id": "introductory-concepts:card:74b18302",
+    "back": "An economy where resources are allocated by the <strong>price mechanism</strong> with minimal government intervention. Prices are determined by supply and demand.",
+    "front": "What is a free market economy?"
+   },
+   {
+    "id": "introductory-concepts:card:a3ca5141",
+    "back": "An economy where the <strong>government decides</strong> what, how, and for whom to produce. Central planning replaces market forces. May reduce inequality but often leads to inefficiency.",
+    "front": "What is a command economy?"
+   },
+   {
+    "id": "introductory-concepts:card:2856addc",
+    "back": "An economy with <strong>both private and public sectors</strong> — the price mechanism allocates most resources, but the government intervenes to correct market failures and provide public goods.",
+    "front": "What is a mixed economy?"
+   },
+   {
+    "id": "introductory-concepts:card:b569db79",
+    "back": "<strong>Signalling</strong> (prices convey information about scarcity), <strong>incentive</strong> (rising prices encourage supply, falling prices discourage it), and <strong>rationing</strong> (prices allocate scarce goods to those willing to pay).",
+    "front": "Name the three functions of the price mechanism."
+   },
+   {
+    "id": "introductory-concepts:card:69778e32",
+    "back": "<strong>Land</strong> (natural resources), <strong>labour</strong> (human effort), <strong>capital</strong> (machinery, equipment), and <strong>enterprise</strong> (risk-taking, organising the other factors). Each earns a factor income: rent, wages, interest, profit.",
+    "front": "What are the four factors of production?"
+   },
+   {
+    "id": "introductory-concepts:card:c64e6b0a",
+    "back": "<strong>Positive statements</strong> are factual and can be tested (e.g., \"inflation is 3%\"). <strong>Normative statements</strong> are value judgements (e.g., \"the government should reduce inequality\").",
+    "front": "What is the difference between positive and normative statements?"
+   },
+   {
+    "id": "introductory-concepts:card:4632212e",
+    "back": "Resources are allocated so that <strong>maximum output</strong> is achieved from given inputs and goods go to those who <strong>value them most</strong>. Includes both productive and allocative efficiency.",
+    "front": "What is meant by economic efficiency?"
+   },
+   {
+    "id": "introductory-concepts:card:87f96585",
+    "back": "Producing at the <strong>lowest possible average cost</strong> — using the minimum resources to produce a given output. Achieved at the bottom of the AC curve.",
+    "front": "What is productive efficiency?"
+   },
+   {
+    "id": "introductory-concepts:card:90c9a274",
+    "back": "Resources are distributed to produce the combination of goods that <strong>best matches consumer preferences</strong>. Achieved where <strong>P = MC</strong> (price equals marginal cost).",
+    "front": "What is allocative efficiency?"
+   },
+   {
+    "id": "introductory-concepts:card:a9149d61",
+    "back": "<strong>Inefficiency</strong> — the economy is not using all its available resources or is using them wastefully. Could be due to unemployment or underemployment.",
+    "front": "What does a point inside the PPF represent?"
+   },
+   {
+    "id": "introductory-concepts:card:c818a36e",
+    "back": "How to allocate <strong>scarce resources</strong> among competing uses. Every society must answer three questions: <strong>what</strong> to produce, <strong>how</strong> to produce it, and <strong>for whom</strong> to produce.",
+    "front": "What is the economic problem?"
+   },
+   {
+    "id": "introductory-concepts:card:f92a6fe9",
+    "back": "When workers or countries specialise, they produce <strong>more of one good than they need</strong> and less of others. They must trade their surplus for the goods they no longer produce themselves.",
+    "front": "Why does specialisation lead to trade?"
+   }
+  ],
+  "section_diagrams": [
+   {
+    "id": "introductory-concepts:diagram:682b24c2",
+    "title": "Production Possibility Frontier (PPF)",
+    "checklist": [
+     "Axes clearly labelled with two goods (e.g. capital goods and consumer goods)",
+     "PPF drawn as a concave curve (bowed outward from origin)",
+     "Points on, inside and outside the PPF correctly identified",
+     "Direction of shift clearly shown with arrows for growth/decline",
+     "Opportunity cost shown as movement along the curve"
+    ],
+    "scenarios": [
+     {
+      "svg": "<svg width=\"500\" height=\"420\" viewBox=\"0 0 500 420\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\">\n  <defs>\n  <marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker>\n</defs>\n  \n  <line x1=\"80\" y1=\"330\" x2=\"465\" y2=\"330\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <line x1=\"80\" y1=\"330\" x2=\"80\" y2=\"30\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <text x=\"265\" y=\"380\" fill=\"#94a3b8\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" letter-spacing=\"0.5\">CONSUMER GOODS</text>\n  <text x=\"35\" y=\"190\" fill=\"#94a3b8\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" letter-spacing=\"0.5\" transform=\"rotate(-90,35,190)\">CAPITAL GOODS</text>\n\n  <!-- Axis values -->\n  <line x1=\"80\" y1=\"50\" x2=\"74\" y2=\"50\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n  <text x=\"66\" y=\"55\" fill=\"#94a3b8\" font-size=\"13\" font-weight=\"600\" text-anchor=\"end\">200</text>\n  <line x1=\"80\" y1=\"120\" x2=\"74\" y2=\"120\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n  <text x=\"66\" y=\"125\" fill=\"#94a3b8\" font-size=\"13\" font-weight=\"600\" text-anchor=\"end\">150</text>\n  <line x1=\"80\" y1=\"190\" x2=\"74\" y2=\"190\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n  <text x=\"66\" y=\"195\" fill=\"#94a3b8\" font-size=\"13\" font-weight=\"600\" text-anchor=\"end\">100</text>\n  <line x1=\"228\" y1=\"330\" x2=\"228\" y2=\"336\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n  <text x=\"228\" y=\"352\" fill=\"#94a3b8\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\">120</text>\n  <line x1=\"357.5\" y1=\"330\" x2=\"357.5\" y2=\"336\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n  <text x=\"357.5\" y=\"352\" fill=\"#94a3b8\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\">225</text>\n  <line x1=\"450\" y1=\"330\" x2=\"450\" y2=\"336\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n  <text x=\"450\" y=\"352\" fill=\"#94a3b8\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\">300</text>\n\n  <!-- Dashed reference lines from C and D -->\n  <line x1=\"228\" y1=\"120\" x2=\"80\" y2=\"120\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/>\n  <line x1=\"228\" y1=\"120\" x2=\"228\" y2=\"330\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/>\n  <line x1=\"357.5\" y1=\"190\" x2=\"80\" y2=\"190\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/>\n  <line x1=\"357.5\" y1=\"190\" x2=\"357.5\" y2=\"330\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/>\n\n  <!-- PPF Curve -->\n  <path d=\"M 80 50 C 140 50, 208 90, 228 120 S 327.5 180, 357.5 190 S 450 290, 450 330\" stroke=\"#e2e8f0\" stroke-width=\"3\" fill=\"none\"/>\n\n  <!-- Points -->\n  <circle cx=\"80\" cy=\"50\" r=\"14\" fill=\"#f472b6\" stroke=\"#f472b6\" stroke-width=\"2\"/>\n  <text x=\"80\" y=\"55\" fill=\"#fff\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">B</text>\n<text x=\"100\" y=\"50\" fill=\"#7a8299\" font-size=\"9\" font-family=\"DM Sans, sans-serif\" font-weight=\"400\">All capital goods</text>\n  <circle cx=\"228\" cy=\"120\" r=\"14\" fill=\"#fbbf24\" stroke=\"#fbbf24\" stroke-width=\"2\"/>\n  <text x=\"228\" y=\"125\" fill=\"#fff\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">C</text>\n<text x=\"258\" y=\"120\" fill=\"#7a8299\" font-size=\"9\" font-family=\"DM Sans, sans-serif\" font-weight=\"400\">Efficient (on PPF)</text>\n  <circle cx=\"357.5\" cy=\"190\" r=\"14\" fill=\"#34d399\" stroke=\"#34d399\" stroke-width=\"2\"/>\n  <text x=\"357.5\" y=\"195\" fill=\"#fff\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">D</text>\n<text x=\"377.5\" y=\"215\" fill=\"#7a8299\" font-size=\"9\" font-family=\"DM Sans, sans-serif\" font-weight=\"400\">Efficient (on PPF)</text>\n  <circle cx=\"450\" cy=\"330\" r=\"14\" fill=\"#f87171\" stroke=\"#f87171\" stroke-width=\"2\"/>\n  <text x=\"450\" y=\"335\" fill=\"#fff\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">A</text>\n<text x=\"440\" y=\"355\" fill=\"#7a8299\" font-size=\"9\" font-family=\"DM Sans, sans-serif\" font-weight=\"400\">All consumer goods</text>\n  <circle cx=\"252.66666666666666\" cy=\"176\" r=\"14\" fill=\"#22d3ee\" stroke=\"#22d3ee\" stroke-width=\"2\"/>\n  <text x=\"252.66666666666666\" y=\"181\" fill=\"#fff\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">E</text>\n<text x=\"272.66666666666663\" y=\"201\" fill=\"#7a8299\" font-size=\"9\" font-family=\"DM Sans, sans-serif\" font-weight=\"400\">Inefficient (inside)</text>\n  <circle cx=\"326.66666666666663\" cy=\"127\" r=\"14\" fill=\"#a78bfa\" stroke=\"#a78bfa\" stroke-width=\"2\"/>\n  <text x=\"326.66666666666663\" y=\"132\" fill=\"#fff\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">F</text>\n<text x=\"346.66666666666663\" y=\"127\" fill=\"#7a8299\" font-size=\"9\" font-family=\"DM Sans, sans-serif\" font-weight=\"400\">Unattainable (outside)</text>\n\n  <!-- Curve label -->\n  <text x=\"380\" y=\"95\" fill=\"#e2e8f0\" font-size=\"15\" font-weight=\"700\" class=\"draggable\">PPF</text>\n</svg>",
+      "label": "Base PPF"
+     },
+     {
+      "svg": "<svg width=\"500\" height=\"420\" viewBox=\"0 0 500 420\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\">\n  <defs>\n  <marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker>\n</defs>\n  \n  <line x1=\"80\" y1=\"330\" x2=\"465\" y2=\"330\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <line x1=\"80\" y1=\"330\" x2=\"80\" y2=\"30\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <text x=\"265\" y=\"380\" fill=\"#94a3b8\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" letter-spacing=\"0.5\">CONSUMER GOODS</text>\n  <text x=\"35\" y=\"190\" fill=\"#94a3b8\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" letter-spacing=\"0.5\" transform=\"rotate(-90,35,190)\">CAPITAL GOODS</text>\n\n  <!-- Original PPF (dashed) -->\n  <path d=\"M 80 106 C 143.42857142857144 106, 333.7142857142857 218, 397.1428571428571 330\" stroke=\"#475569\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"8,5\"/>\n  <text x=\"354.8571428571429\" y=\"267.8\" fill=\"#94a3b8\" font-size=\"12\" class=\"draggable\">PPF₁</text>\n\n  <!-- New PPF -->\n  <path d=\"M 80 50 C 164.57142857142856 50, 386.5714285714286 195.6, 450 330\" stroke=\"#e2e8f0\" stroke-width=\"3\" fill=\"none\"/>\n  <text x=\"407.7142857142857\" y=\"208\" fill=\"#e2e8f0\" font-size=\"15\" font-weight=\"700\" class=\"draggable\">PPF₂</text>\n\n  <!-- Shift arrows -->\n  <line x1=\"249.14285714285714\" y1=\"173.2\" x2=\"291.42857142857144\" y2=\"134\" stroke=\"#60a5fa\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <line x1=\"333.7142857142857\" y1=\"240.39999999999998\" x2=\"376\" y2=\"212.4\" stroke=\"#60a5fa\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n\n  <text x=\"265\" y=\"400\" fill=\"#94a3b8\" font-size=\"11\" text-anchor=\"middle\" opacity=\"0.7\">More resources, better technology, or improved education shifts PPF outward</text>\n</svg>",
+      "label": "Economic Growth (Outward Shift)"
+     },
+     {
+      "svg": "<svg width=\"500\" height=\"420\" viewBox=\"0 0 500 420\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\">\n  <defs>\n  <marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker>\n</defs>\n  \n  <line x1=\"80\" y1=\"330\" x2=\"465\" y2=\"330\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <line x1=\"80\" y1=\"330\" x2=\"80\" y2=\"30\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <text x=\"265\" y=\"380\" fill=\"#94a3b8\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" letter-spacing=\"0.5\">CONSUMER GOODS</text>\n  <text x=\"35\" y=\"190\" fill=\"#94a3b8\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" letter-spacing=\"0.5\" transform=\"rotate(-90,35,190)\">CAPITAL GOODS</text>\n\n  <!-- Shaded inefficient region -->\n  <path d=\"M 80 50 C 141.66666666666666 50, 388.33333333333337 190, 450 330 L 450 330 L 80 330 Z\" fill=\"#f87171\" opacity=\"0.06\"/>\n\n  <!-- PPF Curve -->\n  <path d=\"M 80 50 C 141.66666666666666 50, 388.33333333333337 190, 450 330\" stroke=\"#e2e8f0\" stroke-width=\"3\" fill=\"none\"/>\n  <text x=\"400.6666666666667\" y=\"147\" fill=\"#e2e8f0\" font-size=\"15\" font-weight=\"700\" class=\"draggable\">PPF</text>\n\n  <!-- Point X (inefficient) -->\n  <circle cx=\"265\" cy=\"218\" r=\"14\" fill=\"#f87171\" stroke=\"#f87171\" stroke-width=\"2\"/>\n  <text x=\"265\" y=\"223\" fill=\"#fff\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">X</text>\n\n  <!-- Arrows showing potential movement -->\n  <line x1=\"265\" y1=\"198\" x2=\"265\" y2=\"134\" stroke=\"#22d3ee\" stroke-width=\"2.5\" stroke-dasharray=\"6,4\" marker-end=\"url(#arr)\"/>\n  <text x=\"283\" y=\"176\" fill=\"#22d3ee\" font-size=\"11\" font-weight=\"600\" class=\"draggable\">More capital</text>\n\n  <line x1=\"285\" y1=\"218\" x2=\"363.6666666666667\" y2=\"218\" stroke=\"#22d3ee\" stroke-width=\"2.5\" stroke-dasharray=\"6,4\" marker-end=\"url(#arr)\"/>\n  <text x=\"314.33333333333337\" y=\"240\" fill=\"#22d3ee\" font-size=\"11\" font-weight=\"600\" class=\"draggable\">More consumer</text>\n\n  <text x=\"265\" y=\"400\" fill=\"#94a3b8\" font-size=\"11\" text-anchor=\"middle\" opacity=\"0.7\">Unemployment or misallocation places the economy inside the PPF</text>\n</svg>",
+      "label": "Inefficient Allocation"
+     }
+    ],
+    "description": "Shows the maximum combinations of two goods that an economy can produce with full and efficient use of resources. Points on the curve are efficient, inside are inefficient, and outside are unattainable."
+   },
+   {
+    "id": "introductory-concepts:diagram:91a55351",
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <defs>\n    <marker id=\"cfa\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0,8 3,0 6\" fill=\"#059669\"/></marker>\n    <marker id=\"cfb\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0,8 3,0 6\" fill=\"#3b82f6\"/></marker>\n  </defs>\n  <!-- Households box -->\n  <rect x=\"30\" y=\"130\" width=\"140\" height=\"60\" rx=\"8\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n  <text x=\"100\" y=\"165\" fill=\"#3b82f6\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">Households</text>\n  <!-- Firms box -->\n  <rect x=\"330\" y=\"130\" width=\"140\" height=\"60\" rx=\"8\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2\"/>\n  <text x=\"400\" y=\"165\" fill=\"#059669\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">Firms</text>\n  <!-- Top flow: Spending on goods -->\n  <path d=\"M 170 140 Q 250 60, 330 140\" stroke=\"#059669\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#cfa)\"/>\n  <text x=\"250\" y=\"75\" fill=\"#059669\" font-size=\"11\" text-anchor=\"middle\">Spending on goods &amp; services</text>\n  <!-- Bottom flow: Factor incomes -->\n  <path d=\"M 330 180 Q 250 265, 170 180\" stroke=\"#3b82f6\" stroke-width=\"2\" fill=\"none\" marker-end=\"url(#cfb)\"/>\n  <text x=\"250\" y=\"280\" fill=\"#3b82f6\" font-size=\"11\" text-anchor=\"middle\">Factor incomes (wages, rent, profit)</text>\n  <!-- Top reverse: Goods & services -->\n  <text x=\"250\" y=\"50\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.7\">Goods &amp; services flow</text>\n  <!-- Bottom reverse: Labour, land, capital -->\n  <text x=\"250\" y=\"300\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.7\">Factors of production flow</text>\n  <!-- Product market label -->\n  <rect x=\"200\" y=\"90\" width=\"100\" height=\"24\" rx=\"4\" fill=\"none\" stroke=\"#e8ecf5\" stroke-width=\"1\" opacity=\"0.4\"/>\n  <text x=\"250\" y=\"107\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.7\">Product Market</text>\n  <!-- Factor market label -->\n  <rect x=\"200\" y=\"230\" width=\"100\" height=\"24\" rx=\"4\" fill=\"none\" stroke=\"#e8ecf5\" stroke-width=\"1\" opacity=\"0.4\"/>\n  <text x=\"250\" y=\"247\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.7\">Factor Market</text>\n</svg>",
+    "title": "Circular Flow of Income",
+    "checklist": [
+     "Households and firms clearly identified",
+     "Flow of factor services from households to firms",
+     "Flow of goods and services from firms to households",
+     "Flow of factor incomes (wages, rent, interest, profit) from firms to households",
+     "Flow of spending from households to firms"
+    ],
+    "description": "Shows the flow of income, spending and resources between households and firms in a simple two-sector economy, illustrating how specialisation and exchange work through markets."
+   },
+   {
+    "id": "introductory-concepts:diagram:88569cd6",
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <!-- Spectrum bar -->\n  <defs>\n    <linearGradient id=\"specGrad\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"0%\">\n      <stop offset=\"0%\" style=\"stop-color:#059669;stop-opacity:1\"/>\n      <stop offset=\"50%\" style=\"stop-color:#3b82f6;stop-opacity:1\"/>\n      <stop offset=\"100%\" style=\"stop-color:#ef4444;stop-opacity:1\"/>\n    </linearGradient>\n  </defs>\n  <rect x=\"50\" y=\"50\" width=\"400\" height=\"16\" rx=\"8\" fill=\"url(#specGrad)\" opacity=\"0.7\"/>\n  <!-- Labels on spectrum -->\n  <text x=\"50\" y=\"40\" fill=\"#059669\" font-size=\"12\" font-weight=\"600\">Free Market</text>\n  <text x=\"210\" y=\"40\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">Mixed</text>\n  <text x=\"450\" y=\"40\" fill=\"#ef4444\" font-size=\"12\" font-weight=\"600\" text-anchor=\"end\">Command</text>\n  <!-- Markers -->\n  <line x1=\"80\" y1=\"66\" x2=\"80\" y2=\"85\" stroke=\"#059669\" stroke-width=\"2\"/>\n  <text x=\"80\" y=\"98\" fill=\"#059669\" font-size=\"10\" text-anchor=\"middle\">Hong Kong</text>\n  <line x1=\"170\" y1=\"66\" x2=\"170\" y2=\"85\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"170\" y=\"98\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\">USA</text>\n  <line x1=\"250\" y1=\"66\" x2=\"250\" y2=\"85\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n  <text x=\"250\" y=\"98\" fill=\"#3b82f6\" font-size=\"10\" text-anchor=\"middle\">UK</text>\n  <line x1=\"320\" y1=\"66\" x2=\"320\" y2=\"85\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"320\" y=\"98\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\">Sweden</text>\n  <line x1=\"420\" y1=\"66\" x2=\"420\" y2=\"85\" stroke=\"#ef4444\" stroke-width=\"2\"/>\n  <text x=\"420\" y=\"98\" fill=\"#ef4444\" font-size=\"10\" text-anchor=\"middle\">N. Korea</text>\n  <!-- Comparison boxes -->\n  <!-- Free Market -->\n  <rect x=\"30\" y=\"120\" width=\"140\" height=\"210\" rx=\"6\" fill=\"none\" stroke=\"#059669\" stroke-width=\"1.5\"/>\n  <text x=\"100\" y=\"140\" fill=\"#059669\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">Free Market</text>\n  <text x=\"40\" y=\"162\" fill=\"#e8ecf5\" font-size=\"10\">Price mechanism</text>\n  <text x=\"40\" y=\"178\" fill=\"#e8ecf5\" font-size=\"10\">Private ownership</text>\n  <text x=\"40\" y=\"194\" fill=\"#e8ecf5\" font-size=\"10\">Profit motive</text>\n  <text x=\"40\" y=\"210\" fill=\"#e8ecf5\" font-size=\"10\">Consumer choice</text>\n  <text x=\"40\" y=\"232\" fill=\"#059669\" font-size=\"10\">+ Efficient allocation</text>\n  <text x=\"40\" y=\"248\" fill=\"#059669\" font-size=\"10\">+ Innovation</text>\n  <text x=\"40\" y=\"270\" fill=\"#ef4444\" font-size=\"10\">– Market failure</text>\n  <text x=\"40\" y=\"286\" fill=\"#ef4444\" font-size=\"10\">– Inequality</text>\n  <text x=\"40\" y=\"302\" fill=\"#ef4444\" font-size=\"10\">– Instability</text>\n  <!-- Mixed -->\n  <rect x=\"180\" y=\"120\" width=\"140\" height=\"210\" rx=\"6\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/>\n  <text x=\"250\" y=\"140\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">Mixed Economy</text>\n  <text x=\"190\" y=\"162\" fill=\"#e8ecf5\" font-size=\"10\">Market + state</text>\n  <text x=\"190\" y=\"178\" fill=\"#e8ecf5\" font-size=\"10\">Private &amp; public sector</text>\n  <text x=\"190\" y=\"194\" fill=\"#e8ecf5\" font-size=\"10\">Regulation</text>\n  <text x=\"190\" y=\"210\" fill=\"#e8ecf5\" font-size=\"10\">Welfare provision</text>\n  <text x=\"190\" y=\"232\" fill=\"#059669\" font-size=\"10\">+ Corrects failure</text>\n  <text x=\"190\" y=\"248\" fill=\"#059669\" font-size=\"10\">+ Equity &amp; efficiency</text>\n  <text x=\"190\" y=\"270\" fill=\"#ef4444\" font-size=\"10\">– Govt. failure risk</text>\n  <text x=\"190\" y=\"286\" fill=\"#ef4444\" font-size=\"10\">– Disagreement on</text>\n  <text x=\"190\" y=\"300\" fill=\"#ef4444\" font-size=\"10\">  balance</text>\n  <!-- Command -->\n  <rect x=\"330\" y=\"120\" width=\"140\" height=\"210\" rx=\"6\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"1.5\"/>\n  <text x=\"400\" y=\"140\" fill=\"#ef4444\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">Command</text>\n  <text x=\"340\" y=\"162\" fill=\"#e8ecf5\" font-size=\"10\">Central planning</text>\n  <text x=\"340\" y=\"178\" fill=\"#e8ecf5\" font-size=\"10\">State ownership</text>\n  <text x=\"340\" y=\"194\" fill=\"#e8ecf5\" font-size=\"10\">Directed output</text>\n  <text x=\"340\" y=\"210\" fill=\"#e8ecf5\" font-size=\"10\">Limited choice</text>\n  <text x=\"340\" y=\"232\" fill=\"#059669\" font-size=\"10\">+ Equity possible</text>\n  <text x=\"340\" y=\"248\" fill=\"#059669\" font-size=\"10\">+ Public goods</text>\n  <text x=\"340\" y=\"270\" fill=\"#ef4444\" font-size=\"10\">– Inefficiency</text>\n  <text x=\"340\" y=\"286\" fill=\"#ef4444\" font-size=\"10\">– No incentives</text>\n  <text x=\"340\" y=\"302\" fill=\"#ef4444\" font-size=\"10\">– Shortages</text>\n</svg>",
+    "title": "Economic Systems Comparison",
+    "checklist": [
+     "Three systems clearly identified and contrasted",
+     "Key features of each system listed",
+     "Advantages and disadvantages noted for each",
+     "Real-world examples referenced"
+    ],
+    "description": "Visual comparison of free market, command and mixed economies showing the spectrum of government involvement in resource allocation."
+   }
+  ],
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "Resources (land, labour, capital, enterprise) are finite, but human wants are unlimited — this is the basic economic problem.",
+      "Because resources are scarce, economic agents must make choices about how to allocate them between competing uses.",
+      "Every choice involves an opportunity cost — the value of the next best alternative forgone.",
+      "Rational agents compare marginal costs and marginal benefits to allocate resources to their highest-valued use."
+     ],
+     "title": "Scarcity forces choice and opportunity cost",
+     "result": "Scarcity makes choice unavoidable, and opportunity cost is the measure of what is sacrificed with every decision."
+    },
+    {
+     "steps": [
+      "The production possibility frontier shows the maximum combinations of two goods an economy can produce with its existing resources.",
+      "Points on the PPF are productively efficient; points inside represent unemployed or misallocated resources.",
+      "A movement along the PPF demonstrates opportunity cost — producing more of one good requires producing less of the other.",
+      "An outward shift of the PPF, caused by investment in capital or improvements in technology, represents potential economic growth."
+     ],
+     "title": "The PPF illustrates scarcity, choice and growth",
+     "result": "The PPF is a core diagram for illustrating the trade-off between current consumption and future growth."
+    },
+    {
+     "steps": [
+      "When workers or countries focus on tasks where they have the lowest opportunity cost, they specialise.",
+      "Specialisation increases labour productivity through repetition, skill development and reduced time switching between tasks.",
+      "Higher productivity means more output from the same resources, shifting the PPF outward.",
+      "Greater total output enables higher living standards measured by real GDP per capita."
+     ],
+     "title": "Specialisation raises productivity and output",
+     "result": "Specialisation based on comparative advantage allows economies to produce beyond self-sufficiency levels."
+    },
+    {
+     "steps": [
+      "Countries that specialise can trade their surplus output for goods produced more efficiently elsewhere.",
+      "Trade gives consumers access to a wider variety of goods at lower prices, increasing consumer surplus.",
+      "Lower prices and greater choice improve material living standards and economic welfare.",
+      "However, trade requires a medium of exchange — money overcomes the inefficiencies of barter by acting as a store of value, unit of account and medium of exchange."
+     ],
+     "title": "Trade enables gains from specialisation",
+     "result": "Trade turns the productivity gains from specialisation into tangible welfare improvements for consumers."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "Rational decision-making is an oversimplification",
+     "content": "The assumption that agents rationally weigh marginal costs and benefits ignores behavioural factors. Consumers suffer from bounded rationality, cognitive biases (anchoring, loss aversion) and imperfect information. However, the rational model remains useful for predicting broad patterns of market behaviour, even if individual decisions often deviate."
+    },
+    {
+     "title": "Specialisation creates vulnerability",
+     "content": "Over-specialisation leaves workers and economies exposed to structural change. If demand shifts away from a specialised product, workers face structural unemployment due to occupational immobility. The UK's deindustrialisation showed how regions dependent on single industries can suffer lasting decline. The benefits of specialisation must be weighed against dependency risks."
+    },
+    {
+     "title": "Comparative advantage relies on unrealistic assumptions",
+     "content": "The theory assumes constant opportunity costs, perfect factor mobility and no transport costs. In reality, opportunity costs are increasing, factors are occupationally and geographically immobile, and transport costs can erode trade gains. It is also a static model — countries can develop new advantages through industrial policy and innovation."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "id": "introductory-concepts:mistake:ff3c3528",
+    "title": "Confusing positive and normative statements",
+    "examTip": "If the statement can be tested with data, it is positive — even if it sounds controversial. \"Unemployment is 5%\" is positive; \"Unemployment is too high\" is normative.",
+    "mistake": "Students often say a statement is normative simply because it contains a fact they disagree with, or label a statement as positive because it sounds \"reasonable\".",
+    "correction": "Positive statements can be tested with evidence (true or false). Normative statements contain value judgements — look for words like \"should\", \"ought\", \"fair\", or \"better\"."
+   },
+   {
+    "id": "introductory-concepts:mistake:231f098b",
+    "title": "Forgetting opportunity cost is the NEXT BEST alternative",
+    "examTip": "Always specify ONE alternative when discussing opportunity cost. \"The opportunity cost of building a hospital is the school that could have been built instead.\"",
+    "mistake": "Students list all the things that were given up, rather than identifying the single next best alternative that was foregone.",
+    "correction": "Opportunity cost is specifically the value of the next best alternative — not all alternatives combined. If you choose A over B and C, the opportunity cost is only B (the next best)."
+   },
+   {
+    "id": "introductory-concepts:mistake:dde07cb9",
+    "title": "Drawing the PPF incorrectly",
+    "examTip": "Points ON the curve = productively efficient. Points INSIDE = inefficient (unemployed resources). Points OUTSIDE = currently unattainable.",
+    "mistake": "Students draw the PPF as a straight line when it should be concave, or forget to label the axes with specific goods.",
+    "correction": "A PPF is typically concave (bowed outward) because of increasing opportunity costs — resources are not perfectly adaptable between uses. Always label both axes with the two goods."
+   },
+   {
+    "id": "introductory-concepts:mistake:12819186",
+    "title": "Confusing a shift of the PPF with a movement along it",
+    "mistake": "Students say any change in production shifts the PPF. A reallocation of resources is a movement along the curve, not a shift.",
+    "correction": "A shift outward of the PPF requires an increase in the quantity or quality of resources (e.g. new technology, more labour). Moving from an interior point to the curve is improved efficiency, not a shift."
+   }
+  ]
+ }
+}

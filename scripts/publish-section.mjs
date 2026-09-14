@@ -26,7 +26,7 @@ import { supabase } from './_db.mjs';
 import { CONTENT_TABLES, readSection, subjectBySection } from './snapshot-section.mjs';
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { describeChange } from './_publish-checks.mjs';
-import { gateSection, TABLE_TO_KEY } from '../lib/content-gate.mjs';
+import { gateSection, sameJson, TABLE_TO_KEY } from '../lib/content-gate.mjs';
 import { contextFor, loadBaseline } from './_content-write.mjs';
 
 const args = process.argv.slice(2);
@@ -145,7 +145,7 @@ for (const sectionId of targets) {
   // Read back and validate the row students now read (F110: "run against the DB row after push").
   // The prediction above was over the drafts in memory; this is over what the database holds.
   const after = await readSection(sectionId);
-  const mismatched = tables.filter(({ table, draft }) => JSON.stringify(after[table]) !== JSON.stringify(draft)).map((t) => t.table);
+  const mismatched = tables.filter(({ table, draft }) => !sameJson(after[table], draft)).map((t) => t.table);
   if (mismatched.length) {
     console.error(`FAILED ${sectionId}: live row differs from the published draft on ${mismatched.join(', ')}`);
     console.error(`Restore with: node scripts/restore-section.mjs ${snap.path} --confirm`);

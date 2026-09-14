@@ -1,0 +1,915 @@
+{
+ "section_id": "trade-global-economy",
+ "subject": "economics",
+ "label": "2026-09-14-pre-packet-13",
+ "tables": {
+  "section_content": [
+   {
+    "id": "trade-global-economy:block:c0410ec9",
+    "title": "The Case for Free Trade",
+    "sections": [
+     {
+      "id": "trade-global-economy:sub:comparative-advantage",
+      "body": [
+       {
+        "text": "**Comparative advantage** is the foundation of the economic case for free trade. A country has a comparative advantage in a good if it can produce that good at a **lower opportunity cost** than another country. Crucially, even a country that is less efficient at producing everything (absolute disadvantage in all goods) still benefits from trade by specialising in its least-worst product.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The logic is precise. Calculate the opportunity cost of each good in each country. Each country should **specialise** in the good where its opportunity cost is lower. If the **terms of trade** (the exchange ratio) fall between the two countries' opportunity cost ratios, both countries can consume beyond their production possibility frontier. Trade is not zero-sum — it expands the total pie.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The model rests on assumptions: constant costs, perfect factor mobility within countries, zero transport costs, and no trade barriers. In reality, these rarely hold — but the core insight remains powerful. Countries that trade according to comparative advantage achieve higher output and consumption than those that try to produce everything domestically.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Calculate opportunity costs for each good in each country",
+         "Each country specialises in the lower opportunity cost good",
+         "Trade at terms between the two OC ratios",
+         "Both consume beyond their PPF"
+        ],
+        "result": "Mutual gains from trade — total world output rises through specialisation",
+        "resultType": "good"
+       }
+      ],
+      "title": "Comparative Advantage",
+      "keyIdea": "A country has a comparative advantage when it can produce a good at a lower opportunity cost than another — and both countries gain from trade if terms of trade fall between their opportunity cost ratios.",
+      "examMatters": "Examiners frequently set numerical questions asking you to identify comparative advantage from a table. Practise: calculate opportunity costs for both goods in both countries, identify who has the lower OC in each good, then state the range of mutually beneficial terms of trade.",
+      "realExample": {
+       "text": "Bangladesh has a comparative advantage in textiles due to low labour costs, while Germany has a comparative advantage in precision machinery due to its skilled workforce and capital stock. Both gain when Bangladesh exports garments and imports German engineering — each focusing on what it does relatively best.",
+       "emoji": "🇧🇩"
+      },
+      "misconception": "Students confuse comparative and absolute advantage. Wrong — a country can have an absolute disadvantage in everything and still gain from trade. Instead write: comparative advantage is about relative efficiency (opportunity cost), not absolute efficiency. Even if one country is better at producing everything, both gain by specialising in their lowest opportunity cost good."
+     },
+     {
+      "id": "trade-global-economy:sub:benefits-free-trade",
+      "body": [
+       {
+        "text": "Free trade generates several categories of benefit. **Allocative efficiency** improves because resources flow to where they are most productive globally — countries specialise according to comparative advantage. **Consumer prices fall** as competition from imports forces domestic firms to cut costs. **Economies of scale** become achievable when firms can sell to global markets rather than just domestic ones.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The **dynamic gains** may matter even more than the static ones. Exposure to international competition drives **innovation** — firms that cannot compete with imports must improve or exit. Access to foreign technology and ideas accelerates productivity growth. Over time, these dynamic effects compound, raising the economy's long-run growth rate.",
+        "type": "paragraph"
+       },
+       {
+        "text": "However, the textbook gains assume frictionless adjustment. In practice, **factor immobility** means workers displaced by imports cannot easily retrain or relocate. **Transport costs** reduce the gains, especially for heavy or perishable goods. **Exchange rate distortions** — such as a currency held artificially low — can undermine comparative advantage and create unfair competition.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Benefits of Free Trade",
+      "keyIdea": "Free trade delivers allocative efficiency, lower prices, economies of scale, and dynamic gains from competition — though real-world frictions like immobility and exchange rate distortions limit these benefits.",
+      "examMatters": "A strong evaluation distinguishes static gains (allocative efficiency, lower prices) from dynamic gains (innovation, productivity growth). Examiners reward answers that acknowledge the theoretical case is strong but identify real-world frictions that limit the gains — particularly factor immobility and structural unemployment.",
+      "realExample": {
+       "text": "The EU single market removed trade barriers between member states and intra-EU trade grew by an estimated 60%. Firms like Airbus could spread development costs across a continent-wide market, achieving economies of scale that would be impossible in any single European country.",
+       "emoji": "🇪🇺"
+      },
+      "misconception": "Students list benefits of trade without considering limitations. Wrong — the gains from free trade assume perfect factor mobility and no market distortions. Instead write: while free trade raises total welfare, the gains depend on the ability of displaced workers to move between sectors and on the absence of exchange rate manipulation or large transport costs."
+     }
+    ],
+    "takeaway": [
+     "Comparative advantage: specialise where opportunity cost is lowest — both countries gain if terms of trade fall between OC ratios.",
+     "Static gains: allocative efficiency, lower prices, economies of scale. Dynamic gains: innovation and productivity growth.",
+     "Real-world frictions — factor immobility, transport costs, exchange rate distortions — limit but do not eliminate the case for free trade."
+    ]
+   },
+   {
+    "id": "trade-global-economy:block:5c36a2d2",
+    "title": "Protectionism and the WTO",
+    "sections": [
+     {
+      "id": "trade-global-economy:sub:methods-of-protectionism",
+      "body": [
+       {
+        "text": "**Protectionism** means government intervention to restrict imports and shield domestic producers from foreign competition. The main tools are: **tariffs** (taxes on imports that raise the price to consumers), **quotas** (physical limits on the quantity of imports), **subsidies** to domestic producers (lowering their costs to compete with imports), and **non-tariff barriers (NTBs)** such as excessive regulation, bureaucratic customs procedures, or discriminatory standards.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The **arguments for** protectionism include: protecting **infant industries** that need time to achieve economies of scale, safeguarding **national security** in strategic sectors like defence and food, preventing **dumping** (selling below cost to destroy competitors), and protecting **jobs** in politically sensitive regions. Each argument has some theoretical validity but is routinely abused to protect inefficient firms with political connections.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The **arguments against** are powerful: protectionism raises prices for consumers, creates **deadweight loss**, reduces competitive pressure (so firms become less efficient over time), and invites **retaliation** from trading partners. History shows that trade wars escalate — the Smoot-Hawley tariffs of 1930 deepened the Great Depression by collapsing world trade.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Government imposes tariff on imports",
+         "Import price rises above world price",
+         "Domestic producers gain, consumers lose",
+         "Deadweight loss created"
+        ],
+        "result": "Net welfare loss — producer gains are smaller than consumer losses plus government revenue",
+        "resultType": "bad"
+       }
+      ],
+      "title": "Methods of Protectionism",
+      "keyIdea": "Tariffs, quotas, subsidies, and non-tariff barriers all restrict imports — each raises domestic prices and creates deadweight loss, though governments argue they protect jobs, infant industries, and national security.",
+      "examMatters": "Examiners love tariff diagrams. You must be able to draw one showing: world price, tariff-inclusive price, domestic production expanding, imports contracting, consumer surplus lost, producer surplus gained, government revenue, and deadweight loss triangles. Practise until this is automatic.",
+      "realExample": {
+       "text": "The US-China tariff war of 2018-2020 saw the US impose tariffs on over $360 billion of Chinese goods. China retaliated with tariffs on US agriculture. Studies showed American consumers bore most of the cost through higher prices, while US farmers lost export markets — illustrating the costs of protectionism and retaliation.",
+       "emoji": "🇺🇸"
+      },
+      "misconception": "Students say tariffs protect domestic jobs. Partially true in the short run, but wrong in the long run — tariffs raise input costs for other industries, invite retaliation, and reduce competitiveness. Instead write: tariffs may save jobs in the protected sector but destroy jobs elsewhere through higher costs and retaliatory tariffs from trading partners."
+     },
+     {
+      "id": "trade-global-economy:sub:the-wto",
+      "body": [
+       {
+        "text": "The **World Trade Organisation (WTO)**, established in 1995, provides the rules-based framework for international trade. Its core principles are: **most-favoured-nation (MFN)** — any tariff concession given to one member must be extended to all; **national treatment** — imported goods must be treated no less favourably than domestic ones once inside the border; and **reciprocity** — trade concessions should be mutual.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The WTO's **dispute settlement mechanism** is often called the 'jewel in the crown' of the trading system. It provides a binding legal process for resolving trade disputes, preventing countries from unilaterally imposing protectionist measures without consequence. Over 600 disputes have been brought since 1995.",
+        "type": "paragraph"
+       },
+       {
+        "text": "However, the WTO faces serious challenges. The **Doha Development Round**, launched in 2001 to address developing countries' concerns, has effectively stalled due to disagreements between rich and poor nations over agriculture subsidies and market access. The rise of **bilateral and regional trade deals** — such as the CPTPP and RCEP — threatens to fragment the multilateral system. Critics argue the WTO is too slow and too consensus-dependent to handle modern trade challenges like digital trade and climate-related border measures.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "The World Trade Organisation (WTO)",
+      "keyIdea": "The WTO promotes free trade through the most-favoured-nation principle and dispute resolution, but the Doha Round's failure has shifted momentum toward bilateral and regional deals.",
+      "examMatters": "A common question asks you to evaluate the effectiveness of the WTO. Structure: successes (MFN principle, dispute resolution, reduced average tariffs) vs failures (Doha stalled, slow decision-making, rise of bilateralism). Conclude with a judgement: the WTO remains essential but needs reform to stay relevant.",
+      "realExample": {
+       "text": "The 16-year WTO dispute between the EU and US over subsidies to Airbus and Boeing is a landmark case. Both sides were found to have provided illegal subsidies, and retaliatory tariffs were authorised. It demonstrated the WTO's power to adjudicate but also its limitations — the dispute took so long that billions in distortionary subsidies were paid before any resolution.",
+       "emoji": "✈️"
+      },
+      "misconception": "Students assume the WTO enforces free trade. Wrong — the WTO is a negotiating forum and dispute-resolution body; it cannot force countries to liberalise. Instead write: the WTO provides rules and a mechanism for settling disputes, but its power depends on members' willingness to comply. It facilitates trade liberalisation rather than imposing it."
+     }
+    ],
+    "takeaway": [
+     "Protectionism (tariffs, quotas, subsidies, NTBs) raises prices and creates deadweight loss — arguments for it are often abused.",
+     "The WTO promotes trade through MFN, national treatment, and dispute resolution — but the Doha Round has stalled.",
+     "Bilateral and regional deals are increasingly replacing multilateral WTO negotiations."
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "flow": {
+     "steps": [
+      "Calculate opportunity costs for each good in each country",
+      "Each country specialises in its lower-opportunity-cost good",
+      "Trade at mutually beneficial terms of trade"
+     ],
+     "result": "Total world output increases; both countries can consume more",
+     "resultType": "good"
+    },
+    "meta": "5 concepts",
+    "title": "Absolute and Comparative Advantage",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Absolute advantage</strong> — a country can produce a good using fewer resources than another country.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Comparative advantage</strong> — a country can produce a good at a lower opportunity cost than another country; the basis of the case for free trade.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Even if Country A is better at producing both goods, trade is beneficial if each country specialises in the good where its <strong>opportunity cost is lowest</strong>.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "After specialisation, total world output rises and both countries can consume beyond their individual PPFs through trade.",
+        "type": "mech"
+       },
+       {
+        "text": "The terms of trade must fall between the two countries' opportunity cost ratios for both to gain — if the terms of trade favour one country too heavily, the gains are unevenly distributed.",
+        "type": "imp"
+       },
+       {
+        "text": "Comparative advantage links to the PPF from Unit 1: specialisation and trade allow a country to consume at a point beyond its own PPF.",
+        "type": "link"
+       }
+      ],
+      "title": "THE LAW OF COMPARATIVE ADVANTAGE"
+     }
+    ],
+    "keyIdea": "Trade benefits countries even when one is more efficient at producing everything — what matters is relative efficiency (comparative advantage), not absolute superiority.",
+    "takeaway": [
+     "Comparative advantage is based on opportunity cost, not absolute output.",
+     "Specialisation and trade raise total world output beyond what autarky achieves.",
+     "Both countries gain if the terms of trade lie between their opportunity cost ratios."
+    ],
+    "examMatters": "Examiners frequently ask you to calculate comparative advantage from a data table. Compare opportunity cost ratios, not absolute efficiency. The country with the lower opportunity cost has the comparative advantage in that good.",
+    "misconception": "Students confuse absolute and comparative advantage. Absolute advantage means producing more with the same resources; comparative advantage means producing at a lower opportunity cost. Instead write: a country always has a comparative advantage in something, even if it has an absolute disadvantage in everything — what matters is relative efficiency."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Countries remove trade barriers",
+      "Specialisation according to comparative advantage",
+      "Prices fall, output rises, innovation increases"
+     ],
+     "result": "Net global welfare gain, but adjustment costs for displaced workers and industries",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "The Case for Free Trade",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Allocative efficiency</strong> — resources are directed to their most productive use globally; countries produce what they are relatively best at.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Lower prices and greater choice</strong> — consumers access cheaper imports and a wider variety of goods.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Economies of scale</strong> — firms can sell to a larger global market, reducing unit costs.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Dynamic gains</strong> — exposure to international competition forces firms to innovate and improve productivity over time.",
+        "type": "mech"
+       }
+      ],
+      "title": "BENEFITS OF FREE TRADE"
+     },
+     {
+      "items": [
+       {
+        "text": "Assumptions of comparative advantage may not hold: factors are <strong>not perfectly mobile</strong>, there are transport costs, and exchange rate movements can distort trade patterns.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Free trade benefits the economy as a whole but imposes concentrated costs on specific industries and workers — the political challenge is compensating losers.",
+        "type": "imp"
+       }
+      ],
+      "title": "LIMITATIONS"
+     }
+    ],
+    "keyIdea": "Free trade promotes allocative efficiency by allowing each country to specialise according to comparative advantage, generating consumer surplus, competitive pressure, and dynamic gains — but it creates losers as well as winners.",
+    "takeaway": [
+     "Free trade promotes specialisation, lower prices, economies of scale, and innovation.",
+     "Assumptions may not hold: immobility, transport costs, exchange rate distortions.",
+     "Aggregate gains but concentrated losses — requires policies to support affected workers."
+    ],
+    "examMatters": "Examiners expect both sides. Acknowledge the efficiency gains from free trade but evaluate by considering: structural unemployment, infant industry arguments, strategic trade policy, and whether the assumptions of comparative advantage hold in practice.",
+    "misconception": "Students say free trade benefits everyone. Wrong because while total welfare rises, specific workers and industries lose out. Instead write: free trade increases aggregate welfare through specialisation and competition, but creates losers who need support through retraining and social safety nets."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Government imposes tariff/quota",
+      "Domestic producers gain, imports fall",
+      "Consumers pay higher prices, retaliation risk"
+     ],
+     "result": "Short-run gain for protected industry, long-run efficiency loss for the economy",
+     "resultType": "bad"
+    },
+    "meta": "6 concepts",
+    "title": "Protectionism",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Tariff</strong> — a tax on imported goods that raises their price, making domestic goods more competitive.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Quota</strong> — a quantitative limit on the volume of imports allowed into a country.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Subsidy to domestic producers</strong> — government payment that lowers domestic costs, enabling firms to compete with cheaper imports without raising consumer prices.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Non-tariff barriers</strong> — regulations, standards, bureaucratic procedures, and licensing requirements that make it harder for foreign firms to sell in the domestic market.",
+        "type": "def"
+       }
+      ],
+      "title": "METHODS OF PROTECTION"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Infant industry</strong> — new industries need temporary protection to achieve economies of scale before competing with established foreign rivals.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Strategic trade policy</strong> — protect industries vital for national security or future growth (e.g. semiconductors, defence).",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Anti-dumping</strong> — tariffs counter foreign firms selling below cost to destroy domestic competition.",
+        "type": "mech"
+       },
+       {
+        "text": "Evaluation: infant industry protection only works if it is <strong>temporary</strong> and the industry eventually becomes competitive — in practice, protection is hard to remove once granted.",
+        "type": "imp"
+       }
+      ],
+      "title": "ARGUMENTS FOR PROTECTIONISM"
+     },
+     {
+      "items": [
+       {
+        "text": "Tariffs raise consumer prices and reduce welfare — the deadweight loss from a tariff is similar to that from a tax in Unit 1.",
+        "type": "mech"
+       },
+       {
+        "text": "Protection invites <strong>retaliation</strong> — trading partners impose their own barriers, reducing global trade and harming everyone.",
+        "type": "mech"
+       },
+       {
+        "text": "Protectionism links to government failure (Unit 3): once protection is granted, industries lobby to keep it, creating rent-seeking behaviour and misallocation of resources.",
+        "type": "link"
+       }
+      ],
+      "title": "ARGUMENTS AGAINST"
+     }
+    ],
+    "keyIdea": "Protectionism restricts imports to support domestic industries — but the gains for protected producers come at the cost of higher prices for consumers, reduced choice, and potential retaliation from trading partners.",
+    "takeaway": [
+     "Main tools: tariffs, quotas, subsidies, non-tariff barriers.",
+     "Case for: infant industry (temporary), national security, anti-dumping.",
+     "Case against: higher prices, deadweight loss, retaliation, rent-seeking."
+    ],
+    "examMatters": "Examiners expect you to draw a tariff diagram: world price, tariff-inclusive price, domestic supply and demand, areas of consumer surplus loss, government revenue, and deadweight loss. Then evaluate using infant industry, strategic trade, and anti-dumping arguments.",
+    "misconception": "Students say tariffs help the economy. Wrong because while they help specific producers, they harm consumers through higher prices and reduce overall welfare. Instead write: tariffs redistribute from consumers to domestic producers and the government, but create a deadweight welfare loss — they are only justified in specific circumstances (infant industry, national security)."
+   },
+   {
+    "flow": {
+     "steps": [
+      "WTO negotiates multilateral tariff reductions",
+      "Disputes settled through binding arbitration",
+      "Doha Round stalls on agriculture and development"
+     ],
+     "result": "Significant tariff reductions historically, but multilateral progress has slowed",
+     "resultType": "neutral"
+    },
+    "meta": "4 concepts",
+    "title": "The WTO and Trade Liberalisation",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>World Trade Organization (WTO)</strong> — an international body that sets the rules for global trade, negotiates tariff reductions, and resolves trade disputes between member nations.",
+        "type": "def"
+       },
+       {
+        "text": "The WTO's key principles: <strong>most-favoured nation</strong> (treat all members equally), <strong>national treatment</strong> (treat imports the same as domestic goods), and <strong>reciprocity</strong> (mutual concessions).",
+        "type": "mech"
+       },
+       {
+        "text": "WTO trade rounds have progressively lowered tariffs — the average tariff on manufactured goods has fallen from around 40% after WWII to under 5% today.",
+        "type": "mech"
+       }
+      ],
+      "title": "KEY CONCEPTS"
+     },
+     {
+      "items": [
+       {
+        "text": "The <strong>Doha Round</strong> (launched 2001) aimed to help developing nations but stalled due to disagreements over agricultural subsidies and market access.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "The rise of bilateral and regional trade agreements outside the WTO reflects frustration with the multilateral process, but risks fragmenting global trade rules.",
+        "type": "imp"
+       },
+       {
+        "text": "WTO rules link to trade blocs (4.3.1): regional agreements must comply with WTO Article XXIV, which requires them to cover 'substantially all trade' and not raise barriers against non-members.",
+        "type": "link"
+       }
+      ],
+      "title": "CHALLENGES"
+     }
+    ],
+    "keyIdea": "The WTO provides the institutional framework for negotiating trade liberalisation and settling disputes — but the Doha Round's stalling shows the difficulty of reaching agreement when developing and developed nations have divergent interests.",
+    "takeaway": [
+     "WTO: rules-based system for multilateral trade liberalisation and dispute resolution.",
+     "Key principles: most-favoured nation, national treatment, reciprocity.",
+     "Doha Round stalled, but the WTO remains the institutional backbone of global trade."
+    ],
+    "examMatters": "Examiners expect you to explain the WTO's role and evaluate its effectiveness. Strengths: rules-based system, dispute settlement. Weaknesses: slow progress, difficulty of consensus, limited enforcement power over large economies.",
+    "misconception": "Students say the WTO is irrelevant because of bilateral deals. Wrong because the WTO still provides the baseline rules for global trade and a dispute resolution mechanism. Instead write: while bilateral and regional agreements have proliferated, the WTO remains the foundation of the global trading system and its most-favoured-nation principle prevents complete fragmentation."
+   }
+  ],
+  "section_quiz": [
+   {
+    "id": "trade-global-economy:quiz:9eb895dc",
+    "options": [
+     "Country X, because it can produce more total output",
+     "Country Y, because the opportunity cost of 1 unit of machinery is 0.5 food (compared to 2 food for Country X)",
+     "Country X, because the opportunity cost of 1 unit of machinery is 2 food",
+     "Neither country &mdash; comparative advantage requires absolute advantage"
+    ],
+    "question": "Country X can produce 60 units of food or 30 units of machinery. Country Y can produce 20 units of food or 40 units of machinery. Which country has a comparative advantage in machinery?",
+    "explanation": "Country X's opportunity cost of 1 machinery = 60/30 = 2 food. Country Y's opportunity cost of 1 machinery = 20/40 = 0.5 food. Country Y has the lower opportunity cost (0.5 < 2), so Country Y has the comparative advantage in machinery. Country X has the comparative advantage in food (its opportunity cost is 0.5 machinery vs Country Y's 2 machinery).",
+    "correctIndex": 1
+   },
+   {
+    "id": "trade-global-economy:quiz:4b6e785a",
+    "options": [
+     "They have deteriorated to 91.7",
+     "They have improved to 109.1",
+     "They have remained unchanged at 100",
+     "They have improved to 120"
+    ],
+    "question": "If a country's export price index rises from 100 to 120 and its import price index rises from 100 to 110, what has happened to its terms of trade?",
+    "explanation": "Terms of Trade = (Export Price Index / Import Price Index) x 100 = (120/110) x 100 = 109.1. Since the index has risen above 100 (the base), the terms of trade have improved &mdash; export prices have risen faster than import prices, meaning each unit of exports now buys more imports.",
+    "correctIndex": 1
+   },
+   {
+    "id": "trade-global-economy:quiz:9f64a059",
+    "options": [
+     "Free movement of labour between member states",
+     "A common currency shared by all members",
+     "A common external tariff on imports from non-member countries",
+     "Harmonised fiscal policies across members"
+    ],
+    "question": "Which of the following is the key feature that distinguishes a customs union from a free trade area?",
+    "explanation": "The key distinguishing feature of a customs union is the Common External Tariff (CET) &mdash; all member countries apply the same tariff rate on imports from non-member countries. A free trade area has internal free trade but each member sets its own external tariffs. Free movement of labour is a feature of a common market, a common currency belongs to a monetary union, and harmonised fiscal policies are part of economic union.",
+    "correctIndex": 2
+   },
+   {
+    "id": "trade-global-economy:quiz:2f4d56cd",
+    "options": [
+     "A trading bloc causes production to shift from high-cost domestic producers to lower-cost member producers",
+     "A trading bloc causes imports to switch from lower-cost non-member producers to higher-cost member producers due to the common external tariff",
+     "Total world trade increases as a result of bloc formation",
+     "Countries within a bloc specialise according to comparative advantage"
+    ],
+    "question": "Trade diversion occurs when:",
+    "explanation": "Trade diversion is a welfare loss that occurs when the formation of a trading bloc causes imports to switch from an efficient, low-cost non-member producer to a less efficient, higher-cost member producer. This happens because the common external tariff makes non-member goods more expensive, even though the non-member is the most efficient global producer. Option A describes trade creation (a welfare gain).",
+    "correctIndex": 1
+   },
+   {
+    "id": "trade-global-economy:quiz:99a75345",
+    "options": [
+     "The tariff revenue collected by the government",
+     "The increase in producer surplus for domestic steel firms",
+     "The domestic production of steel at a higher cost than the world price",
+     "The rise in the domestic price of steel"
+    ],
+    "question": "A government imposes a tariff on imported steel. Which of the following is a deadweight welfare loss from the tariff?",
+    "explanation": "A deadweight loss from a tariff occurs because domestic firms now produce units of steel that could have been imported at a lower world price &mdash; this is production inefficiency. Resources are wasted producing domestically what could be imported more cheaply. Government revenue and producer surplus are transfers (redistributed from consumers), not deadweight losses. The price rise itself is not a loss but the mechanism through which the other effects occur.",
+    "correctIndex": 2
+   },
+   {
+    "id": "trade-global-economy:quiz:6d58badf",
+    "options": [
+     "The industry has been established for decades but faces foreign competition",
+     "The domestic industry has potential to achieve economies of scale and become internationally competitive, and protection is temporary",
+     "The industry provides goods essential for national security",
+     "Foreign producers are dumping goods below cost"
+    ],
+    "question": "The infant industry argument for protectionism is strongest when:",
+    "explanation": "The infant industry argument states that new domestic industries may need temporary protection from established foreign competitors while they grow, develop economies of scale, and gain experience. The argument is strongest when there is genuine potential for the industry to become competitive AND protection is strictly temporary. Option A describes a geriatric (declining) industry. Options C and D are valid reasons for protection but are separate arguments from the infant industry case.",
+    "correctIndex": 1
+   },
+   {
+    "id": "trade-global-economy:quiz:beca776e",
+    "options": [
+     "Improving terms of trade over time due to rising commodity demand",
+     "Stable terms of trade because commodity prices are set by world markets",
+     "Deteriorating terms of trade over time relative to manufactured goods exporters",
+     "Improving terms of trade because primary goods have inelastic supply"
+    ],
+    "question": "According to the Prebisch-Singer hypothesis, developing countries that rely on primary commodity exports will experience:",
+    "explanation": "The Prebisch-Singer hypothesis argues that the terms of trade for primary commodity exporters tend to deteriorate over the long run. This is because: (1) demand for primary products is income inelastic &mdash; as world incomes rise, demand grows slowly compared to manufactured goods; (2) synthetic substitutes reduce demand further; (3) developed countries add value through manufacturing and capture more gains from trade. The implication is that developing countries should industrialise rather than depend on primary exports.",
+    "correctIndex": 2
+   },
+   {
+    "id": "trade-global-economy:quiz:42d4848e",
+    "options": [
+     "National Treatment",
+     "Reciprocity",
+     "Most Favoured Nation (MFN)",
+     "Transparency"
+    ],
+    "question": "Which WTO principle requires that any trade concession given to one member must be extended to all members?",
+    "explanation": "The Most Favoured Nation (MFN) principle is the cornerstone WTO rule that members must treat all trading partners equally &mdash; any tariff reduction or trade concession given to one WTO member must be automatically extended to all other members. National Treatment means imported goods must be treated equally to domestic goods once inside the market. Reciprocity means trade liberalisation should be mutual. Transparency means trade policies must be published and predictable.",
+    "correctIndex": 2
+   },
+   {
+    "id": "trade-global-economy:quiz:cbbc46fa",
+    "options": [
+     "The terms of trade improve as a result",
+     "The sum of the price elasticities of demand for exports and imports is greater than 1 (Marshall-Lerner condition)",
+     "The country has a comparative advantage in most of its exports",
+     "The depreciation is caused by lower interest rates"
+    ],
+    "question": "A depreciation of the exchange rate will improve a country's trade balance if:",
+    "explanation": "The Marshall-Lerner condition states that a depreciation will improve the trade balance only if PED(X) + PED(M) > 1. This is because a depreciation makes exports cheaper (volume rises) and imports more expensive (volume falls), but it also worsens the terms of trade (lower export prices in foreign currency). Only if demand is sufficiently elastic will the volume effect outweigh the price effect. In the short run, demand may be inelastic (J-curve effect), but in the long run the condition is more likely to be met.",
+    "correctIndex": 1
+   },
+   {
+    "id": "trade-global-economy:quiz:46a392d1",
+    "options": [
+     "Economies of scale from access to a larger market",
+     "Reduced transaction costs from harmonised regulations",
+     "The ability to set independent trade policy with non-member countries",
+     "Trade creation as production shifts to lower-cost member producers"
+    ],
+    "question": "Which of the following is NOT a benefit of trading bloc membership?",
+    "explanation": "The ability to set independent trade policy is actually LOST when joining a trading bloc, particularly a customs union or above, where a common external tariff applies. This loss of sovereignty is a COST, not a benefit, of membership. Economies of scale, reduced transaction costs, and trade creation are all genuine benefits of bloc membership.",
+    "correctIndex": 2
+   },
+   {
+    "id": "trade-global-economy:quiz:df70854b",
+    "options": [
+     "A quota generates government revenue whereas a tariff does not",
+     "A quota creates quota rent for licence holders instead of government revenue",
+     "A quota does not raise the domestic price above the world price",
+     "A quota benefits consumers more than a tariff"
+    ],
+    "question": "How does a quota differ from a tariff in its welfare effects?",
+    "explanation": "The key difference is that a tariff generates government revenue (area c in the tariff diagram), whereas a quota creates quota rent &mdash; an economic surplus that goes to whoever holds the import licences (which may be foreign exporters). Both raise the domestic price, both harm consumers, and both create deadweight losses. Quotas are generally considered worse than tariffs because no revenue is generated for the government and they are less transparent.",
+    "correctIndex": 1
+   },
+   {
+    "id": "trade-global-economy:quiz:ddc2e111",
+    "options": [
+     "The country's exchange rate has depreciated sharply",
+     "Rising domestic inflation has pushed up export prices, reducing competitiveness and export volumes",
+     "World demand for the country's exports has increased strongly",
+     "The country has imposed tariffs on imports, reducing import spending"
+    ],
+    "question": "A country's terms of trade have 'improved' but its export revenue and trade balance have both worsened. Which explanation is most likely?",
+    "explanation": "Rising domestic inflation pushes up export prices (causing a numerical 'improvement' in the ToT) but worsens international competitiveness. If demand for exports is price elastic, higher prices lead to a proportionally larger fall in export volumes, reducing total export revenue. The trade balance worsens because fewer exports are sold while import spending may remain high. This illustrates why a terms of trade 'improvement' is not always beneficial &mdash; it depends on the cause.",
+    "correctIndex": 1
+   },
+   {
+    "id": "trade-global-economy:quiz:0266d003",
+    "options": [
+     "A 15% ad valorem tariff on imported electronics",
+     "A quota limiting car imports to 50,000 units per year",
+     "Requiring imported food products to meet extremely strict labelling and safety standards that are difficult for foreign producers to comply with",
+     "A government subsidy to domestic car manufacturers"
+    ],
+    "question": "Which of the following is the best example of a non-tariff barrier to trade?",
+    "explanation": "Non-tariff barriers (NTBs) are regulatory and administrative measures that restrict trade without being tariffs or quotas. Strict product standards, labelling requirements, and safety regulations that foreign producers find difficult to comply with are classic examples of NTBs. Option A is a tariff, option B is a quota (a quantitative restriction), and option D is a subsidy &mdash; none of these are non-tariff barriers in the strict sense.",
+    "correctIndex": 2
+   },
+   {
+    "id": "trade-global-economy:quiz:41d3c1c7",
+    "options": [
+     "A country with an absolute advantage in all goods has a comparative advantage in all goods",
+     "Comparative advantage is determined by which country has the lowest opportunity cost of producing a good",
+     "Comparative advantage can only exist if both countries have different absolute advantages",
+     "Comparative advantage is only relevant when there are no trade barriers"
+    ],
+    "question": "Which of the following statements about comparative advantage is correct?",
+    "explanation": "Comparative advantage is determined by opportunity cost &mdash; whichever country gives up less of the other good has the comparative advantage. A country CANNOT have a comparative advantage in all goods (even if it has absolute advantage in all goods), because opportunity costs are reciprocal. Comparative advantage does not require different absolute advantages &mdash; Ricardo showed that even if one country is better at everything, trade is still beneficial. The theory applies regardless of trade barriers, though barriers may prevent countries from fully exploiting it.",
+    "correctIndex": 1
+   }
+  ],
+  "section_practice": [
+   {
+    "id": "trade-global-economy:practice:a9f1d212",
+    "marks": 4,
+    "command": "Define",
+    "guidance": "Comparative advantage exists when a country can produce a good at a lower opportunity cost than another country (1 mark). This differs from absolute advantage, which refers to producing more output with the same resources (1 mark). According to Ricardo's theory, countries should specialise in and export goods in which they have a comparative advantage, and import goods in which they have a comparative disadvantage (1 mark). This pattern of specialisation and trade increases total world output and allows all countries to consume beyond their production possibility frontiers (1 mark).",
+    "question": "Define the term 'comparative advantage'. (4 marks)"
+   },
+   {
+    "id": "trade-global-economy:practice:e3345b30",
+    "marks": 6,
+    "command": "Explain",
+    "guidance": "Effect 1: Higher prices for consumers (1 mark) — a tariff is a tax on imports that raises the price of the imported good above the world price, reducing consumer surplus (1 mark). Domestic consumers pay more and consume less, leading to a welfare loss (1 mark).\n\nEffect 2: Protection of domestic producers (1 mark) — the higher import price allows domestic firms to increase output because they become more price-competitive relative to imports (1 mark). However, this can lead to productive inefficiency as firms face less competitive pressure to minimise costs (1 mark).",
+    "question": "Explain two economic effects of imposing a tariff on imported goods. (6 marks)"
+   },
+   {
+    "id": "trade-global-economy:practice:f297c506",
+    "marks": 10,
+    "command": "Assess",
+    "guidance": "Define a customs union as a group of countries that eliminate tariffs between members and adopt a common external tariff against non-members (2 marks). Benefits — trade creation: removal of internal barriers increases trade between members as goods are sourced from the lowest-cost producer within the union, improving allocative efficiency (2 marks); larger market size allows firms to exploit economies of scale, lowering unit costs (1 mark). Costs — trade diversion: the common external tariff may divert imports away from more efficient non-member producers towards less efficient member producers (2 marks); loss of independent trade policy — members cannot negotiate their own trade deals with non-member countries (1 mark). Judgement: the net benefit depends on whether trade creation exceeds trade diversion and on the level of the common external tariff (2 marks).",
+    "question": "Assess the economic impact of the formation of a customs union on member countries. (10 marks)"
+   },
+   {
+    "id": "trade-global-economy:practice:09d7629f",
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Define free trade as the absence of government-imposed barriers to international trade, and protectionism as the use of tariffs, quotas and other measures to restrict imports (2 marks).\n\nFor free trade: Comparative advantage — specialisation according to comparative advantage increases world output and allows countries to consume beyond their PPF (3 marks); lower prices and greater choice for consumers through access to global markets (2 marks); competitive pressure drives innovation and efficiency among domestic firms (2 marks).\n\nAgainst — arguments for protectionism: Infant industry argument — new industries in developing countries may need temporary protection from established foreign competitors until they achieve economies of scale (3 marks); protection of strategic industries — countries may wish to maintain domestic capacity in defence or food production for national security (2 marks); anti-dumping measures — protection may be justified when foreign firms sell below cost to destroy domestic competition (2 marks).\n\nEvaluation: Free trade generally increases global welfare, but 'always preferable' is too strong (2 marks). Temporary, targeted protectionism may be justified in specific circumstances, but the risk of government failure — protection becoming permanent due to political lobbying — and retaliation from trading partners means protectionism should be used cautiously and sparingly (2 marks).",
+    "question": "Evaluate the view that free trade is always preferable to protectionism. (20 marks)"
+   },
+   {
+    "id": "trade-global-economy:practice:899b5425",
+    "marks": 4,
+    "command": "Outline",
+    "guidance": "Factor 1: A fall in the price of exports — if a country relies heavily on exporting primary commodities such as oil or copper, a fall in world commodity prices will reduce the average price of exports relative to imports (1 mark), worsening the terms of trade (1 mark).\n\nFactor 2: A rise in the price of imports — if the prices of essential imports such as energy or manufactured goods increase, the terms of trade deteriorate (1 mark) because the country must export more to finance the same volume of imports (1 mark).",
+    "question": "Outline two factors that may cause a deterioration in a country's terms of trade. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "id": "trade-global-economy:card:9d01beaa",
+    "back": "A country has comparative advantage if it can produce a good at a <strong>lower opportunity cost</strong> than another country. Even if one country is better at everything, both benefit from specialisation and trade.",
+    "front": "What is comparative advantage?"
+   },
+   {
+    "id": "trade-global-economy:card:0705291e",
+    "back": "A country has absolute advantage if it can produce a good using <strong>fewer resources</strong> than another country. But comparative advantage, not absolute, determines trade patterns.",
+    "front": "What is absolute advantage?"
+   },
+   {
+    "id": "trade-global-economy:card:f3b00a11",
+    "back": "Trade without <strong>government-imposed barriers</strong> (tariffs, quotas, regulations). Allows countries to specialise according to comparative advantage, increasing global output.",
+    "front": "What is free trade?"
+   },
+   {
+    "id": "trade-global-economy:card:9911051c",
+    "back": "A <strong>tax on imports</strong> that raises the price of foreign goods. Protects domestic firms but raises prices for consumers and may provoke retaliation.",
+    "front": "What is a tariff?"
+   },
+   {
+    "id": "trade-global-economy:card:1e30a477",
+    "back": "A <strong>physical limit on the quantity of imports</strong> allowed into a country. Restricts foreign competition but reduces consumer choice and raises prices.",
+    "front": "What is a quota?"
+   },
+   {
+    "id": "trade-global-economy:card:bfadca91",
+    "back": "Government policies that <strong>restrict international trade</strong> to protect domestic industries — through tariffs, quotas, subsidies, or regulations. Reduces competition but may harm consumers.",
+    "front": "What is protectionism?"
+   },
+   {
+    "id": "trade-global-economy:card:ad6fc9e0",
+    "back": "Protecting <strong>infant industries</strong>, preventing <strong>dumping</strong> (selling below cost), and maintaining <strong>national security</strong> (strategic industries like defence or food production).",
+    "front": "Name three arguments for protectionism."
+   },
+   {
+    "id": "trade-global-economy:card:757b2a72",
+    "back": "Raises <strong>consumer prices</strong>, reduces <strong>choice and efficiency</strong>, may provoke <strong>trade wars</strong> (retaliation), and protects inefficient firms from competition.",
+    "front": "Name three arguments against protectionism."
+   },
+   {
+    "id": "trade-global-economy:card:f68c9c5d",
+    "back": "Selling exports at a price <strong>below the cost of production</strong> in the foreign market. Used to gain market share or dispose of surplus. Can destroy domestic industries in the importing country.",
+    "front": "What is dumping?"
+   },
+   {
+    "id": "trade-global-economy:card:83f18d1b",
+    "back": "New industries in developing countries need <strong>temporary protection</strong> from established foreign competitors until they achieve economies of scale and can compete independently.",
+    "front": "What is an infant industry argument?"
+   },
+   {
+    "id": "trade-global-economy:card:75bb91ff",
+    "back": "Countries agree to <strong>eliminate tariffs between members</strong> but maintain individual external tariffs with non-members. E.g., NAFTA/USMCA.",
+    "front": "What is a free trade area?"
+   },
+   {
+    "id": "trade-global-economy:card:5c41afb0",
+    "back": "A free trade area with a <strong>common external tariff</strong> applied to all non-member imports. E.g., the EU's customs union.",
+    "front": "What is a customs union?"
+   },
+   {
+    "id": "trade-global-economy:card:a551427e",
+    "back": "When a trade bloc replaces <strong>high-cost domestic production with lower-cost imports</strong> from a member country. Increases efficiency and consumer welfare.",
+    "front": "What is trade creation?"
+   },
+   {
+    "id": "trade-global-economy:card:38cfc034",
+    "back": "When a trade bloc diverts imports from a <strong>lower-cost non-member to a higher-cost member</strong>. Reduces efficiency — the external tariff makes non-member goods artificially expensive.",
+    "front": "What is trade diversion?"
+   },
+   {
+    "id": "trade-global-economy:card:0613159a",
+    "back": "The ratio of <strong>export prices to import prices</strong> (index of export prices ÷ index of import prices × 100). An improvement means exports buy more imports.",
+    "front": "What is the terms of trade?"
+   },
+   {
+    "id": "trade-global-economy:card:4cd18cc6",
+    "back": "Assumes <strong>constant costs</strong>, <strong>no transport costs</strong>, <strong>perfect mobility</strong>, and <strong>two-country/two-good models</strong>. In reality, countries face increasing costs, trade barriers, and many trading partners.",
+    "front": "What are the limitations of comparative advantage theory?"
+   },
+   {
+    "id": "trade-global-economy:card:9765fc26",
+    "back": "A government payment to domestic exporters to <strong>reduce their costs and make exports cheaper</strong>. A form of protectionism that distorts trade. Banned under WTO rules in most cases.",
+    "front": "What is an export subsidy?"
+   },
+   {
+    "id": "trade-global-economy:card:b3a29e6a",
+    "back": "Any trade restriction that is <strong>not a tariff</strong> — e.g., quotas, regulations, licensing, safety standards, bureaucratic delays. Often harder to identify and challenge than tariffs.",
+    "front": "What is a non-tariff barrier?"
+   }
+  ],
+  "section_diagrams": [
+   {
+    "id": "trade-global-economy:diagram:5866621c",
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n\n  <!-- Title -->\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">Comparative Advantage: Numerical Example</text>\n\n  <!-- Table header background -->\n  <rect x=\"40\" y=\"38\" width=\"420\" height=\"28\" rx=\"4\" fill=\"#3b82f6\" opacity=\"0.2\"/>\n\n  <!-- Table headers -->\n  <text x=\"140\" y=\"56\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\">Output per Worker</text>\n  <text x=\"310\" y=\"56\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\">Opportunity Cost</text>\n\n  <!-- Column sub-headers -->\n  <line x1=\"40\" y1=\"66\" x2=\"460\" y2=\"66\" stroke=\"#e8ecf5\" stroke-width=\"0.5\" opacity=\"0.3\"/>\n  <text x=\"60\" y=\"82\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\">Country</text>\n  <text x=\"135\" y=\"82\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"10\">Wheat</text>\n  <text x=\"200\" y=\"82\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"10\">Cars</text>\n  <text x=\"290\" y=\"82\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"10\">1 Wheat</text>\n  <text x=\"390\" y=\"82\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"10\">1 Car</text>\n\n  <line x1=\"40\" y1=\"88\" x2=\"460\" y2=\"88\" stroke=\"#e8ecf5\" stroke-width=\"0.5\" opacity=\"0.3\"/>\n\n  <!-- Country A row -->\n  <text x=\"60\" y=\"108\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\">Country A</text>\n  <text x=\"135\" y=\"108\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"12\" font-weight=\"600\">100</text>\n  <text x=\"200\" y=\"108\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\">50</text>\n  <text x=\"290\" y=\"108\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\">0.5 cars</text>\n  <text x=\"390\" y=\"108\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\">2 wheat</text>\n\n  <!-- Country B row -->\n  <text x=\"60\" y=\"132\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\">Country B</text>\n  <text x=\"135\" y=\"132\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"12\" font-weight=\"600\">40</text>\n  <text x=\"200\" y=\"132\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\">10</text>\n  <text x=\"290\" y=\"132\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\">0.25 cars</text>\n  <text x=\"390\" y=\"132\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\">4 wheat</text>\n\n  <line x1=\"40\" y1=\"142\" x2=\"460\" y2=\"142\" stroke=\"#e8ecf5\" stroke-width=\"0.5\" opacity=\"0.3\"/>\n\n  <!-- Comparative advantage indicators -->\n  <rect x=\"45\" y=\"152\" width=\"200\" height=\"26\" rx=\"4\" fill=\"#059669\" opacity=\"0.15\" stroke=\"#059669\" stroke-width=\"1\"/>\n  <text x=\"145\" y=\"169\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\">Country B: CA in Wheat (0.25 &lt; 0.5)</text>\n\n  <rect x=\"255\" y=\"152\" width=\"200\" height=\"26\" rx=\"4\" fill=\"#3b82f6\" opacity=\"0.15\" stroke=\"#3b82f6\" stroke-width=\"1\"/>\n  <text x=\"355\" y=\"169\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"600\">Country A: CA in Cars (2 &lt; 4)</text>\n\n  <!-- Before and After Trade -->\n  <text x=\"250\" y=\"202\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\">Gains from Specialisation</text>\n\n  <!-- Before trade -->\n  <rect x=\"40\" y=\"210\" width=\"200\" height=\"70\" rx=\"6\" fill=\"#ef4444\" opacity=\"0.1\" stroke=\"#ef4444\" stroke-width=\"0.8\"/>\n  <text x=\"140\" y=\"228\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">Before (each splits 50:50)</text>\n  <text x=\"140\" y=\"244\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">A: 50 wheat + 25 cars</text>\n  <text x=\"140\" y=\"258\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">B: 20 wheat + 5 cars</text>\n  <text x=\"140\" y=\"272\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\">Total: 70W + 30C</text>\n\n  <!-- Arrow -->\n  <line x1=\"250\" y1=\"245\" x2=\"270\" y2=\"245\" stroke=\"#f59e0b\" stroke-width=\"2\" marker-end=\"url(#arrowCA)\"/>\n  <defs><marker id=\"arrowCA\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0, 8 3, 0 6\" fill=\"#f59e0b\"/></marker></defs>\n\n  <!-- After specialisation -->\n  <rect x=\"260\" y=\"210\" width=\"200\" height=\"70\" rx=\"6\" fill=\"#059669\" opacity=\"0.1\" stroke=\"#059669\" stroke-width=\"0.8\"/>\n  <text x=\"360\" y=\"228\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\">After (B fully, A partly specialised)</text>\n  <text x=\"360\" y=\"244\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">A: 30 wheat + 35 cars</text>\n  <text x=\"360\" y=\"258\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">B: 40 wheat + 0 cars</text>\n  <text x=\"360\" y=\"272\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\">Total: 70W + 35C</text>\n\n  <!-- Gains box -->\n  <rect x=\"100\" y=\"290\" width=\"300\" height=\"30\" rx=\"6\" fill=\"#f59e0b\" opacity=\"0.15\" stroke=\"#f59e0b\" stroke-width=\"1\"/>\n  <text x=\"250\" y=\"309\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"600\">Net gain: +5 cars, same wheat (more output from same resources)</text>\n\n  <!-- Key insight -->\n  <text x=\"250\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.7\">Trade ratio must be between 2 and 4 wheat per car for both to gain</text>\n</svg>",
+    "title": "Comparative Advantage: Numerical Example",
+    "checklist": [
+     "Calculate opportunity costs correctly for both countries and both goods",
+     "Identify which country has comparative advantage in which good (lowest opportunity cost)",
+     "Show that total world output increases after specialisation",
+     "State the range within which the terms of trade must fall for mutual benefit",
+     "Note that Country A has absolute advantage in BOTH goods but trade still benefits both"
+    ],
+    "scenarios": [
+     {
+      "label": "No trade",
+      "description": "Each country produces both goods. Total world output is lower because resources are not allocated according to comparative advantage."
+     },
+     {
+      "label": "Specialisation by comparative advantage",
+      "description": "Country B produces only wheat (its comparative advantage). Country A shifts resources towards cars but keeps producing some wheat. World output rises from 70 wheat + 30 cars to 70 wheat + 35 cars: the same wheat and five more cars from the same resources. Both can consume more through trade at a rate between 2 and 4 wheat per car."
+     }
+    ],
+    "description": "A two-country, two-good model showing how both countries gain from trade by specialising according to comparative advantage (lowest opportunity cost), even when one country has an absolute advantage in both goods."
+   },
+   {
+    "id": "trade-global-economy:diagram:2ed3a5c6",
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n\n  <!-- Title -->\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">Welfare Effects of a Tariff</text>\n\n  <!-- Axes -->\n  <line x1=\"60\" y1=\"40\" x2=\"60\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <line x1=\"60\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <text x=\"25\" y=\"170\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" transform=\"rotate(-90 25 170)\">Price</text>\n  <text x=\"265\" y=\"320\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\">Quantity</text>\n\n  <!-- Domestic Supply curve (upward sloping) -->\n  <line x1=\"80\" y1=\"270\" x2=\"400\" y2=\"80\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"405\" y=\"75\" fill=\"#059669\" font-size=\"12\" font-weight=\"600\">S(domestic)</text>\n\n  <!-- Domestic Demand curve (downward sloping) -->\n  <line x1=\"80\" y1=\"60\" x2=\"440\" y2=\"280\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"443\" y=\"286\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\">D</text>\n\n  <!-- World price line (Pw) -->\n  <line x1=\"60\" y1=\"220\" x2=\"450\" y2=\"220\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" stroke-dasharray=\"6,3\"/>\n  <text x=\"455\" y=\"224\" fill=\"#e8ecf5\" font-size=\"10\">Pw</text>\n  <text x=\"52\" y=\"224\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"10\">Pw</text>\n\n  <!-- World price + tariff line (Pw+t) -->\n  <line x1=\"60\" y1=\"190\" x2=\"450\" y2=\"190\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"6,3\"/>\n  <text x=\"455\" y=\"194\" fill=\"#ef4444\" font-size=\"10\">Pw+t</text>\n  <text x=\"52\" y=\"194\" text-anchor=\"end\" fill=\"#ef4444\" font-size=\"10\">Pw+t</text>\n\n  <!-- Tariff bracket -->\n  <line x1=\"462\" y1=\"195\" x2=\"462\" y2=\"215\" stroke=\"#ef4444\" stroke-width=\"1\"/>\n  <text x=\"480\" y=\"209\" fill=\"#ef4444\" font-size=\"9\">tariff</text>\n\n  <!-- Q1 line (domestic supply at Pw) -->\n  <line x1=\"131\" y1=\"220\" x2=\"131\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.5\"/>\n  <text x=\"131\" y=\"312\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Q1</text>\n\n  <!-- Q2 line (domestic supply at Pw+t) -->\n  <line x1=\"167\" y1=\"190\" x2=\"167\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.5\"/>\n  <text x=\"167\" y=\"312\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Q2</text>\n\n  <!-- Q3 line (domestic demand at Pw+t) -->\n  <line x1=\"343\" y1=\"190\" x2=\"343\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.5\"/>\n  <text x=\"343\" y=\"312\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Q3</text>\n\n  <!-- Q4 line (domestic demand at Pw) -->\n  <line x1=\"379\" y1=\"220\" x2=\"379\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.5\"/>\n  <text x=\"379\" y=\"312\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Q4</text>\n\n  <!-- Producer surplus gain (a) -->\n  <polygon points=\"80,220 131,220 167,190 80,190\" fill=\"#059669\" opacity=\"0.2\"/>\n  <text x=\"120\" y=\"208\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"8\" font-weight=\"600\">PS gain (a)</text>\n\n  <!-- Deadweight loss triangle 1 (production inefficiency) (b) -->\n  <polygon points=\"131,220 167,190 167,220\" fill=\"#ef4444\" opacity=\"0.3\"/>\n  <text x=\"148\" y=\"240\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"8\" font-weight=\"600\">DWL (b)</text>\n\n  <!-- Government revenue rectangle (c) -->\n  <rect x=\"167\" y=\"190\" width=\"176\" height=\"30\" fill=\"#3b82f6\" opacity=\"0.2\" stroke=\"#3b82f6\" stroke-width=\"0.8\"/>\n  <text x=\"255\" y=\"209\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"9\" font-weight=\"600\">Gov. Revenue (c)</text>\n\n  <!-- Deadweight loss triangle 2 (consumption loss) (d) -->\n  <polygon points=\"343,220 343,190 379,220\" fill=\"#ef4444\" opacity=\"0.3\"/>\n  <text x=\"362\" y=\"240\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"8\" font-weight=\"600\">DWL (d)</text>\n\n  <!-- Legend box -->\n  <rect x=\"60\" y=\"328\" width=\"410\" height=\"16\" rx=\"3\" fill=\"transparent\"/>\n  <text x=\"65\" y=\"340\" fill=\"#e8ecf5\" font-size=\"8\" opacity=\"0.8\">CS loss = a+b+c+d | PS gain = a | Gov revenue = c | Net welfare loss = b+d</text>\n\n  <!-- Import brackets -->\n  <line x1=\"131\" y1=\"225\" x2=\"379\" y2=\"225\" stroke=\"#e8ecf5\" stroke-width=\"1\" opacity=\"0.4\"/>\n  <text x=\"255\" y=\"234\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\" opacity=\"0.6\">Imports before tariff (Q4 - Q1)</text>\n\n  <line x1=\"167\" y1=\"185\" x2=\"343\" y2=\"185\" stroke=\"#ef4444\" stroke-width=\"1\" opacity=\"0.4\"/>\n  <text x=\"255\" y=\"182\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"8\" opacity=\"0.8\">Imports after tariff (Q3 - Q2)</text>\n</svg>",
+    "title": "The Effect of a Tariff (Welfare Analysis)",
+    "checklist": [
+     "Draw domestic supply (upward) and demand (downward) curves with correctly labelled axes",
+     "Show the world price (Pw) as a horizontal line below the domestic equilibrium price",
+     "Show the tariff-inclusive price (Pw+t) as a second horizontal line above Pw",
+     "Identify Q1 to Q4: domestic supply and demand at each price level",
+     "Label and shade: producer surplus gain (a), deadweight losses (b and d), government revenue (c)",
+     "State that consumer surplus loss = a + b + c + d and net welfare loss = b + d",
+     "Note that imports fall from (Q4 - Q1) to (Q3 - Q2)"
+    ],
+    "scenarios": [
+     {
+      "label": "Free trade",
+      "description": "At world price Pw, domestic supply is Q1 and domestic demand is Q4. Imports fill the gap (Q4 - Q1). Consumer surplus is maximised."
+     },
+     {
+      "label": "After tariff",
+      "description": "Price rises to Pw+t. Domestic supply expands to Q2, demand contracts to Q3. Imports fall to (Q3 - Q2). Consumers lose surplus, producers gain, government earns revenue, but two triangles of deadweight loss remain."
+     }
+    ],
+    "description": "A supply and demand diagram showing the welfare effects of imposing a tariff on imports, including consumer surplus loss, producer surplus gain, government revenue, and the two deadweight loss triangles."
+   },
+   {
+    "id": "trade-global-economy:diagram:37257b86",
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n\n  <!-- Title -->\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">Welfare Effects of an Import Quota</text>\n\n  <!-- Axes -->\n  <line x1=\"60\" y1=\"40\" x2=\"60\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <line x1=\"60\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <text x=\"25\" y=\"170\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" transform=\"rotate(-90 25 170)\">Price</text>\n  <text x=\"265\" y=\"320\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\">Quantity</text>\n\n  <!-- Domestic Supply curve -->\n  <line x1=\"80\" y1=\"270\" x2=\"400\" y2=\"80\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"405\" y=\"75\" fill=\"#059669\" font-size=\"12\" font-weight=\"600\">S(domestic)</text>\n\n  <!-- S(domestic) + Quota curve: parallel to S, shifted right by quota amount -->\n  <!-- At Pw, domestic supply is at x=131. Quota adds fixed horizontal distance. -->\n  <!-- S+Q line: same slope as S but shifted right by quota quantity -->\n  <line x1=\"240\" y1=\"270\" x2=\"460\" y2=\"128\" stroke=\"#8b5cf6\" stroke-width=\"2\" stroke-dasharray=\"5,3\"/>\n  <text x=\"462\" y=\"122\" fill=\"#8b5cf6\" font-size=\"10\" font-weight=\"600\">S+quota</text>\n\n  <!-- Domestic Demand curve -->\n  <line x1=\"80\" y1=\"60\" x2=\"440\" y2=\"280\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"443\" y=\"286\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\">D</text>\n\n  <!-- World price line (Pw) -->\n  <line x1=\"60\" y1=\"220\" x2=\"450\" y2=\"220\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" stroke-dasharray=\"6,3\"/>\n  <text x=\"455\" y=\"224\" fill=\"#e8ecf5\" font-size=\"10\">Pw</text>\n  <text x=\"52\" y=\"224\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"10\">Pw</text>\n\n  <!-- New equilibrium price with quota (Pq) -->\n  <line x1=\"60\" y1=\"190\" x2=\"450\" y2=\"190\" stroke=\"#f59e0b\" stroke-width=\"1.5\" stroke-dasharray=\"6,3\"/>\n  <text x=\"455\" y=\"194\" fill=\"#f59e0b\" font-size=\"10\">Pq</text>\n  <text x=\"52\" y=\"194\" text-anchor=\"end\" fill=\"#f59e0b\" font-size=\"10\">Pq</text>\n\n  <!-- Q1: domestic supply at Pw -->\n  <line x1=\"131\" y1=\"220\" x2=\"131\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.5\"/>\n  <text x=\"131\" y=\"312\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Q1</text>\n\n  <!-- Q2: domestic supply at Pq -->\n  <line x1=\"167\" y1=\"190\" x2=\"167\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.5\"/>\n  <text x=\"167\" y=\"312\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Q2</text>\n\n  <!-- Q3: domestic demand at Pq -->\n  <line x1=\"343\" y1=\"190\" x2=\"343\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.5\"/>\n  <text x=\"343\" y=\"312\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Q3</text>\n\n  <!-- Q4: domestic demand at Pw -->\n  <line x1=\"379\" y1=\"220\" x2=\"379\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.5\"/>\n  <text x=\"379\" y=\"312\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Q4</text>\n\n  <!-- Producer surplus gain (a) -->\n  <polygon points=\"80,220 131,220 167,190 80,190\" fill=\"#059669\" opacity=\"0.2\"/>\n  <text x=\"118\" y=\"208\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"8\" font-weight=\"600\">PS gain (a)</text>\n\n  <!-- DWL triangle 1 (b) -->\n  <polygon points=\"131,220 167,190 167,220\" fill=\"#ef4444\" opacity=\"0.3\"/>\n  <text x=\"148\" y=\"240\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"8\" font-weight=\"600\">DWL (b)</text>\n\n  <!-- Quota rent rectangle (c) - goes to licence holders, NOT government -->\n  <rect x=\"167\" y=\"190\" width=\"176\" height=\"30\" fill=\"#f59e0b\" opacity=\"0.2\" stroke=\"#f59e0b\" stroke-width=\"0.8\"/>\n  <text x=\"255\" y=\"205\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"9\" font-weight=\"600\">Quota Rent (c)</text>\n  <text x=\"255\" y=\"216\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"7\" opacity=\"0.9\">to licence holders, NOT gov't</text>\n\n  <!-- DWL triangle 2 (d) -->\n  <polygon points=\"343,220 343,190 379,220\" fill=\"#ef4444\" opacity=\"0.3\"/>\n  <text x=\"362\" y=\"240\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"8\" font-weight=\"600\">DWL (d)</text>\n\n  <!-- Quota bracket -->\n  <line x1=\"167\" y1=\"185\" x2=\"343\" y2=\"185\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n  <text x=\"255\" y=\"180\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"8\" font-weight=\"600\">Quota = Q3 - Q2 (fixed imports)</text>\n\n  <!-- Legend -->\n  <text x=\"65\" y=\"340\" fill=\"#e8ecf5\" font-size=\"8\" opacity=\"0.8\">CS loss = a+b+c+d | PS gain = a | Quota rent = c (NOT gov revenue) | Net welfare loss = b+c+d (if rent goes abroad)</text>\n</svg>",
+    "title": "The Effect of a Quota (Welfare Analysis)",
+    "checklist": [
+     "Draw domestic supply and demand curves with labelled axes",
+     "Show the world price (Pw) as a horizontal dashed line",
+     "Show the new higher price (Pq) after the quota is imposed",
+     "Identify Q1 to Q4 and the fixed quota quantity (Q3 - Q2)",
+     "Label quota rent (c) and emphasise it is NOT government revenue",
+     "Shade the two deadweight loss triangles (b and d)",
+     "Explain that quotas are generally worse than equivalent tariffs because no revenue is generated"
+    ],
+    "scenarios": [
+     {
+      "label": "Free trade",
+      "description": "At world price Pw, domestic supply is Q1, domestic demand is Q4. Imports are Q4 - Q1. Maximum consumer surplus."
+     },
+     {
+      "label": "With quota",
+      "description": "The quota restricts imports to Q3 - Q2. Price rises to Pq. Unlike a tariff, area c is quota rent accruing to licence holders rather than government revenue. If the rent goes to foreign exporters, welfare loss is even larger."
+     }
+    ],
+    "description": "A supply and demand diagram showing the welfare effects of imposing an import quota, highlighting how quota rent differs from tariff revenue and the resulting deadweight losses."
+   },
+   {
+    "id": "trade-global-economy:diagram:8de1ab9d",
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n\n  <!-- Title -->\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">Terms of Trade: Changes and Their Impact</text>\n\n  <!-- Formula box -->\n  <rect x=\"100\" y=\"35\" width=\"300\" height=\"28\" rx=\"6\" fill=\"#3b82f6\" opacity=\"0.15\" stroke=\"#3b82f6\" stroke-width=\"1\"/>\n  <text x=\"250\" y=\"53\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">ToT = (Export Price Index / Import Price Index) x 100</text>\n\n  <!-- Improvement column -->\n  <rect x=\"30\" y=\"75\" width=\"215\" height=\"30\" rx=\"5\" fill=\"#059669\" opacity=\"0.2\" stroke=\"#059669\" stroke-width=\"1\"/>\n  <text x=\"137\" y=\"94\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"11\" font-weight=\"700\">IMPROVEMENT (ToT rises)</text>\n\n  <text x=\"35\" y=\"120\" fill=\"#e8ecf5\" font-size=\"9\">Export prices rise relative to</text>\n  <text x=\"35\" y=\"132\" fill=\"#e8ecf5\" font-size=\"9\">import prices (index &gt; 100)</text>\n\n  <!-- Causes of improvement -->\n  <rect x=\"30\" y=\"142\" width=\"215\" height=\"68\" rx=\"4\" fill=\"#059669\" opacity=\"0.08\"/>\n  <text x=\"35\" y=\"156\" fill=\"#059669\" font-size=\"9\" font-weight=\"600\">Causes:</text>\n  <text x=\"35\" y=\"170\" fill=\"#e8ecf5\" font-size=\"8\">- Exchange rate appreciation</text>\n  <text x=\"35\" y=\"182\" fill=\"#e8ecf5\" font-size=\"8\">- Rising domestic inflation</text>\n  <text x=\"35\" y=\"194\" fill=\"#e8ecf5\" font-size=\"8\">- Rising commodity export prices</text>\n  <text x=\"35\" y=\"206\" fill=\"#e8ecf5\" font-size=\"8\">- Higher quality/branded exports</text>\n\n  <!-- Deterioration column -->\n  <rect x=\"255\" y=\"75\" width=\"215\" height=\"30\" rx=\"5\" fill=\"#ef4444\" opacity=\"0.2\" stroke=\"#ef4444\" stroke-width=\"1\"/>\n  <text x=\"362\" y=\"94\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"700\">DETERIORATION (ToT falls)</text>\n\n  <text x=\"260\" y=\"120\" fill=\"#e8ecf5\" font-size=\"9\">Export prices fall relative to</text>\n  <text x=\"260\" y=\"132\" fill=\"#e8ecf5\" font-size=\"9\">import prices (index &lt; 100)</text>\n\n  <!-- Causes of deterioration -->\n  <rect x=\"255\" y=\"142\" width=\"215\" height=\"68\" rx=\"4\" fill=\"#ef4444\" opacity=\"0.08\"/>\n  <text x=\"260\" y=\"156\" fill=\"#ef4444\" font-size=\"9\" font-weight=\"600\">Causes:</text>\n  <text x=\"260\" y=\"170\" fill=\"#e8ecf5\" font-size=\"8\">- Exchange rate depreciation</text>\n  <text x=\"260\" y=\"182\" fill=\"#e8ecf5\" font-size=\"8\">- Falling commodity prices</text>\n  <text x=\"260\" y=\"194\" fill=\"#e8ecf5\" font-size=\"8\">- Increased productivity (lower costs)</text>\n  <text x=\"260\" y=\"206\" fill=\"#e8ecf5\" font-size=\"8\">- Increased global competition</text>\n\n  <!-- Impact section -->\n  <line x1=\"30\" y1=\"220\" x2=\"470\" y2=\"220\" stroke=\"#e8ecf5\" stroke-width=\"0.5\" opacity=\"0.3\"/>\n  <text x=\"250\" y=\"238\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\">Impact Depends on the CAUSE and ELASTICITY</text>\n\n  <!-- Impact boxes -->\n  <rect x=\"30\" y=\"248\" width=\"140\" height=\"60\" rx=\"5\" fill=\"#3b82f6\" opacity=\"0.1\" stroke=\"#3b82f6\" stroke-width=\"0.8\"/>\n  <text x=\"100\" y=\"263\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"9\" font-weight=\"600\">Export Revenue</text>\n  <text x=\"100\" y=\"277\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">If PED &lt; 1: ToT improvement</text>\n  <text x=\"100\" y=\"288\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">raises revenue</text>\n  <text x=\"100\" y=\"300\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">If PED &gt; 1: revenue falls</text>\n\n  <rect x=\"180\" y=\"248\" width=\"140\" height=\"60\" rx=\"5\" fill=\"#059669\" opacity=\"0.1\" stroke=\"#059669\" stroke-width=\"0.8\"/>\n  <text x=\"250\" y=\"263\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\" font-weight=\"600\">Trade Balance</text>\n  <text x=\"250\" y=\"277\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Marshall-Lerner condition:</text>\n  <text x=\"250\" y=\"288\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">PEDx + PEDm &gt; 1</text>\n  <text x=\"250\" y=\"300\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">then depreciation improves BoT</text>\n\n  <rect x=\"330\" y=\"248\" width=\"140\" height=\"60\" rx=\"5\" fill=\"#f59e0b\" opacity=\"0.1\" stroke=\"#f59e0b\" stroke-width=\"0.8\"/>\n  <text x=\"400\" y=\"263\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"9\" font-weight=\"600\">Living Standards</text>\n  <text x=\"400\" y=\"277\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Improvement: cheaper imports</text>\n  <text x=\"400\" y=\"288\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">raise real incomes</text>\n  <text x=\"400\" y=\"300\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">BUT may lose competitiveness</text>\n\n  <!-- Key insight -->\n  <rect x=\"80\" y=\"316\" width=\"340\" height=\"24\" rx=\"5\" fill=\"#ef4444\" opacity=\"0.1\" stroke=\"#ef4444\" stroke-width=\"0.8\"/>\n  <text x=\"250\" y=\"332\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\" font-weight=\"600\">KEY: An 'improvement' in ToT is NOT always beneficial &mdash; depends on the cause</text>\n</svg>",
+    "title": "Terms of Trade: Impact of Changes",
+    "checklist": [
+     "State and apply the ToT formula correctly",
+     "Distinguish between improvement (index rises) and deterioration (index falls)",
+     "List at least three factors that influence the terms of trade",
+     "Explain that the impact depends on PED &mdash; link to Marshall-Lerner condition",
+     "Evaluate: an 'improvement' caused by inflation/costs is harmful; one caused by quality/demand is beneficial"
+    ],
+    "scenarios": [
+     {
+      "label": "Demand-driven improvement",
+      "description": "Export prices rise due to stronger world demand or higher quality. Export revenue likely rises, trade balance may improve, living standards increase. This is a genuinely beneficial improvement."
+     },
+     {
+      "label": "Cost-driven improvement",
+      "description": "Export prices rise due to inflation or higher unit labour costs. Competitiveness falls, export volumes drop, trade balance may worsen, unemployment may rise. This 'improvement' is actually harmful."
+     }
+    ],
+    "description": "Diagram showing how changes in the terms of trade affect export revenue, the trade balance, and living standards, depending on the cause and the elasticity of demand."
+   },
+   {
+    "id": "trade-global-economy:diagram:93bba7cd",
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n\n  <!-- Title -->\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">Types of Trading Blocs: Levels of Integration</text>\n\n  <!-- Ascending arrow on left -->\n  <line x1=\"30\" y1=\"310\" x2=\"30\" y2=\"50\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" marker-end=\"url(#arrowUp2)\"/>\n  <defs><marker id=\"arrowUp2\" markerWidth=\"8\" markerHeight=\"8\" refX=\"4\" refY=\"0\" orient=\"auto\"><polygon points=\"0 8, 4 0, 8 8\" fill=\"#e8ecf5\"/></marker></defs>\n  <text x=\"18\" y=\"180\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\" transform=\"rotate(-90 18 180)\">Increasing Integration</text>\n\n  <!-- Level 1: Free Trade Area -->\n  <rect x=\"50\" y=\"268\" width=\"440\" height=\"50\" rx=\"8\" fill=\"#059669\" opacity=\"0.15\" stroke=\"#059669\" stroke-width=\"1.5\"/>\n  <text x=\"70\" y=\"288\" fill=\"#059669\" font-size=\"12\" font-weight=\"700\">1. Free Trade Area</text>\n  <text x=\"70\" y=\"304\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.9\">No internal tariffs/quotas between members. Each keeps own external tariffs.</text>\n  <text x=\"420\" y=\"290\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\" font-weight=\"500\">e.g. USMCA</text>\n\n  <!-- Level 2: Customs Union -->\n  <rect x=\"50\" y=\"205\" width=\"440\" height=\"55\" rx=\"8\" fill=\"#3b82f6\" opacity=\"0.15\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/>\n  <text x=\"70\" y=\"225\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"700\">2. Customs Union</text>\n  <text x=\"70\" y=\"241\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.9\">Free trade area + Common External Tariff (CET) on non-members.</text>\n  <text x=\"70\" y=\"253\" fill=\"#e8ecf5\" font-size=\"8\" opacity=\"0.7\">Eliminates trade deflection. Members negotiate trade deals as a bloc.</text>\n  <text x=\"420\" y=\"230\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"9\" font-weight=\"500\">e.g. SACU</text>\n\n  <!-- Level 3: Common Market -->\n  <rect x=\"50\" y=\"138\" width=\"440\" height=\"58\" rx=\"8\" fill=\"#f59e0b\" opacity=\"0.15\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n  <text x=\"70\" y=\"158\" fill=\"#f59e0b\" font-size=\"12\" font-weight=\"700\">3. Common Market (Single Market)</text>\n  <text x=\"70\" y=\"174\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.9\">Customs union + Free movement of labour, capital, and enterprise.</text>\n  <text x=\"70\" y=\"186\" fill=\"#e8ecf5\" font-size=\"8\" opacity=\"0.7\">Factors of production move freely. Harmonised regulations for goods/services.</text>\n  <text x=\"420\" y=\"163\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"9\" font-weight=\"500\">e.g. EU Single Market</text>\n\n  <!-- Level 4: Economic & Monetary Union -->\n  <rect x=\"50\" y=\"55\" width=\"440\" height=\"75\" rx=\"8\" fill=\"#ef4444\" opacity=\"0.15\" stroke=\"#ef4444\" stroke-width=\"1.5\"/>\n  <text x=\"70\" y=\"78\" fill=\"#ef4444\" font-size=\"12\" font-weight=\"700\">4. Economic &amp; Monetary Union</text>\n  <text x=\"70\" y=\"94\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.9\">Common market + Common currency + Harmonised economic policies.</text>\n  <text x=\"70\" y=\"106\" fill=\"#e8ecf5\" font-size=\"8\" opacity=\"0.7\">Members share central bank and monetary policy. No exchange rate fluctuations.</text>\n  <text x=\"70\" y=\"118\" fill=\"#e8ecf5\" font-size=\"8\" opacity=\"0.7\">Members lose independent monetary/exchange rate policy.</text>\n  <text x=\"420\" y=\"90\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\" font-weight=\"500\">e.g. Eurozone</text>\n\n  <!-- Cumulative feature note -->\n  <text x=\"250\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.6\">Each level includes ALL features of the levels below it</text>\n</svg>",
+    "title": "Types of Trading Blocs (Levels of Integration)",
+    "checklist": [
+     "List the four types in order: FTA, Customs Union, Common Market, Economic/Monetary Union",
+     "Know the key distinguishing feature of each level",
+     "Provide a real-world example for each type",
+     "Understand that each level includes all features of those below it",
+     "Explain that higher integration means greater benefits but also greater loss of sovereignty"
+    ],
+    "scenarios": [
+     {
+      "label": "Low integration (FTA)",
+      "description": "Countries remove barriers between themselves but retain sovereignty over external trade policy. Simple to negotiate but risk of trade deflection."
+     },
+     {
+      "label": "High integration (Monetary Union)",
+      "description": "Countries share a currency and harmonise economic policies. Maximum trade benefits and lowest transaction costs, but significant loss of policy sovereignty and flexibility."
+     }
+    ],
+    "description": "A visual diagram showing the four types of trading blocs in ascending order of economic integration, from free trade areas to economic and monetary unions, with their distinguishing features and real-world examples."
+   }
+  ],
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "The theory of comparative advantage states that countries should specialise in producing goods where they have the lowest opportunity cost, even if they lack an absolute advantage.",
+      "By specialising according to comparative advantage and trading, both countries can consume beyond their production possibility frontiers — total world output increases.",
+      "Specialisation leads to higher productivity, economies of scale and more efficient resource allocation, raising real GDP and living standards in trading nations.",
+      "The gains from trade include lower prices for consumers, greater product variety, access to resources unavailable domestically and competitive pressure that drives innovation."
+     ],
+     "title": "Comparative advantage shows gains from trade",
+     "result": "Comparative advantage demonstrates that free trade is mutually beneficial, enabling countries to consume beyond their domestic production capabilities."
+    },
+    {
+     "steps": [
+      "A tariff is a tax on imported goods that raises the domestic price above the world price, protecting domestic producers from foreign competition.",
+      "The higher price reduces consumer surplus as consumers pay more and consume less, while domestic producers gain surplus by producing more at the higher price.",
+      "The government gains tariff revenue on remaining imports, but the net welfare effect is negative — two deadweight loss triangles represent the production inefficiency and consumption loss.",
+      "Tariffs also invite retaliation from trading partners, potentially triggering trade wars that reduce global trade volumes and harm all participating economies."
+     ],
+     "title": "Tariffs create deadweight loss and reduce welfare",
+     "result": "Tariffs create net welfare losses by raising prices above efficient levels, and risk escalating into destructive trade wars through retaliation."
+    },
+    {
+     "steps": [
+      "Trading blocs such as customs unions and free trade areas eliminate tariffs between member states, while maintaining common or individual external tariffs against non-members.",
+      "Trade creation occurs when bloc membership shifts production from high-cost domestic producers to lower-cost member state producers, improving allocative efficiency.",
+      "Trade diversion occurs when the common external tariff shifts imports from the lowest-cost world producer (outside the bloc) to a higher-cost member state producer.",
+      "The net welfare effect depends on the balance between trade creation and trade diversion — blocs are beneficial if trade creation dominates, harmful if diversion dominates."
+     ],
+     "title": "Trading blocs create trade creation and diversion",
+     "result": "Trading blocs generate both trade creation (efficiency-improving) and trade diversion (efficiency-reducing), with the net effect depending on relative magnitudes."
+    },
+    {
+     "steps": [
+      "The terms of trade measure the ratio of export prices to import prices (index of export prices / index of import prices × 100) — an improvement means export prices rise relative to import prices.",
+      "An improvement in the terms of trade means a country can buy more imports for each unit of exports, increasing the purchasing power of its output and raising real living standards.",
+      "However, a terms of trade improvement caused by rising export prices may reduce export competitiveness, leading to lower export volumes and potential current account deterioration.",
+      "Developing countries dependent on primary commodities face volatile and deteriorating terms of trade as commodity prices fluctuate and manufactured goods prices rise over time (Prebisch-Singer hypothesis)."
+     ],
+     "title": "Terms of trade affect real living standards",
+     "result": "Changes in the terms of trade directly affect real living standards, but improvements must be balanced against potential competitiveness effects and commodity dependency risks."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "Comparative advantage has limitations as a guide to policy",
+     "content": "The theory assumes constant opportunity costs, perfect factor mobility within countries, zero transport costs and no externalities. In reality, dynamic comparative advantages can be created through industrial policy and investment in human capital. Countries that follow static comparative advantage may be locked into low-value primary production, while those that develop new industries through strategic intervention may achieve higher long-run growth."
+    },
+    {
+     "title": "Infant industry protection may be justified in some cases",
+     "content": "Developing countries may need temporary protection for nascent industries that cannot yet compete with established foreign rivals. Tariffs give domestic firms time to develop economies of scale, learning-by-doing and technological capabilities. However, infant industry protection is often captured by politically connected firms, and 'temporary' protection frequently becomes permanent, reducing long-run efficiency and consumer welfare."
+    },
+    {
+     "title": "Trading blocs may undermine global free trade",
+     "content": "While trading blocs promote free trade among members, they maintain barriers against non-members, creating a discriminatory trading system. The proliferation of overlapping bilateral and regional agreements creates a 'spaghetti bowl' of complex rules of origin and regulatory requirements. The WTO's multilateral approach to trade liberalisation may be undermined if countries pursue preferential arrangements rather than global negotiations."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "id": "trade-global-economy:mistake:8ccfa3f6",
+    "title": "Confusing absolute and comparative advantage",
+    "examTip": "When calculating comparative advantage, always work out the opportunity cost of producing each good in each country. The country with the lower opportunity cost has comparative advantage in that good.",
+    "mistake": "Students say countries trade based on who can produce more (absolute advantage) rather than who has the lower opportunity cost.",
+    "correction": "Trade is based on comparative advantage (lowest opportunity cost), NOT absolute advantage. Even if Country A is better at producing everything, both countries benefit if each specialises in the good with the lowest opportunity cost."
+   },
+   {
+    "id": "trade-global-economy:mistake:896fb614",
+    "title": "Not showing deadweight loss on a tariff diagram",
+    "mistake": "Students draw the tariff diagram but forget to identify and shade the deadweight loss triangles.",
+    "correction": "A tariff creates TWO deadweight loss triangles: one representing lost consumer surplus (production inefficiency) and one representing lost consumer surplus (consumption inefficiency). Mark both clearly."
+   },
+   {
+    "id": "trade-global-economy:mistake:aafcbcbb",
+    "title": "Confusing trade creation and trade diversion",
+    "mistake": "Students mix up these concepts when evaluating trading blocs.",
+    "correction": "Trade creation = switching from a high-cost domestic producer to a lower-cost bloc member (good). Trade diversion = switching from a low-cost non-member to a higher-cost bloc member due to the common external tariff (bad)."
+   }
+  ]
+ }
+}

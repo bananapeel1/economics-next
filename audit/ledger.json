@@ -1374,8 +1374,8 @@
    "fix": "Dedupe pass in the content pipeline (Jaccard on stem >= 0.5 or identical correct-option text); rewrite the second of each pair to test a different angle (e.g. numerical, diagram-based, or an 'odd one out' on the evaluation point).",
    "impact": "In Quick Fire and a single-topic Smart Practice session the student answers what feels like the same question 2-3 times, and in the GDP case the 'same' question has two different right answers, which reads as an error. The effective bank per section is closer to 18-20 distinct items than 25.",
    "packet": 13,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-13",
    "verified_by": null,
    "evidence": null,
    "note": "Reassigned from packet 8 to packet 13 on 13 Sep 2026. F081 is a content fix: near-duplicate and identical stems, and one pair of identical stems with different correct answers. Deduping and rewriting stems is a content push, and packet 3 builds the blocking validator that must sit in the write path before any content push. Packet 8's code half (F008, F074, F079, F080) is done without it."
@@ -17653,6 +17653,58 @@
    "evidence": "app/admin/layout.js:8-19 server-side admin role gate wraps all /admin/* routes including new app/admin/quant/page.js; app/admin/quant/page.js:20 buildItem renders CalculationItem (renders), CalculationItem.jsx:106 'Mark my working' button calls markItem (marks), page.js:75 'New numbers' button calls setSeed(newSeed()) which remounts CalculationItem via key=item.id (reseeds)",
    "note": null,
    "added": "2026-09-12"
+  },
+  {
+   "id": "D009",
+   "kind": "feature",
+   "title": "No IAL-absent framework is taught in live content: VRIO, core competencies, balanced scorecard, triple bottom line, the accelerator",
+   "file": "lib/content-validator.mjs",
+   "packet": 13,
+   "status": "claimed",
+   "closed_by": "packet-13",
+   "verified_by": null,
+   "evidence": null,
+   "note": null,
+   "added": "2026-09-14"
+  },
+  {
+   "id": "D010",
+   "kind": "feature",
+   "title": "The specification's own vocabulary replaces the UK GCE labels: merit/demerit goods and deadweight loss",
+   "file": "audit/SPEC-OWNERSHIP.md",
+   "packet": 13,
+   "status": "claimed",
+   "closed_by": "packet-13",
+   "verified_by": null,
+   "evidence": null,
+   "note": null,
+   "added": "2026-09-14"
+  },
+  {
+   "id": "D011",
+   "kind": "feature",
+   "title": "No section teaches a spec bullet another section owns, per audit/SPEC-OWNERSHIP.md",
+   "file": "audit/SPEC-OWNERSHIP.md",
+   "packet": 13,
+   "status": "claimed",
+   "closed_by": "packet-13",
+   "verified_by": null,
+   "evidence": null,
+   "note": null,
+   "added": "2026-09-14"
+  },
+  {
+   "id": "D012",
+   "kind": "feature",
+   "title": "Nothing removed is still assessed: no quiz, practice or flashcard item tests teaching this packet deleted",
+   "file": "audit/scripts/packet-13-census.mjs",
+   "packet": 13,
+   "status": "claimed",
+   "closed_by": "packet-13",
+   "verified_by": null,
+   "evidence": null,
+   "note": null,
+   "added": "2026-09-14"
   }
  ],
  "marketing": [
