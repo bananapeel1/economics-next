@@ -54,6 +54,8 @@ function parse({ subject, file, header, stop }) {
     if (!current) continue;
     const t = line.trim();
     if (!t) continue;
+    // Page footers fall inside the table's span in the text dump; they are not part of any row.
+    if (/^\d+\s+Pearson Edexcel International/.test(t) || /© Pearson Education/.test(t)) continue;
     // Business "Assess" carries a second marks value on its own line with a unit qualifier.
     const alt = /^(\d+)\s*$/.exec(t);
     if (alt && current.command === 'Assess') { current.marks.push(Number(alt[1])); current.lines[1] = i + 1; continue; }

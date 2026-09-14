@@ -111,9 +111,14 @@ function parse({ subject, prefix, file }) {
       // Continuation prose. The left column may hold a wrapped sub-topic label on the same row as
       // the requirement's continuation ("   price mechanism          mechanism for allocating…"), so
       // the line is split at the letter column and only the right-hand part is kept.
+      // A two-column row has a run of spaces before the letter column; a full-width prose line that
+      // merely starts left of it does not, and slicing it there cut words in half ("onomies of
+      // scale", "he distinction") in 20 of 1,319 rows until the token census in npm test caught it.
       const indent = raw.search(/\S/);
       let text;
-      if (letterColumn.at != null && indent < letterColumn.at - 2) {
+      const left = letterColumn.at != null ? raw.slice(0, letterColumn.at - 1) : '';
+      const gap = (left.match(/\s+$/) || [''])[0].length;
+      if (letterColumn.at != null && indent < letterColumn.at - 2 && gap >= 2) {
         text = raw.slice(letterColumn.at - 1).trim();
         if (!text) continue;
       } else {

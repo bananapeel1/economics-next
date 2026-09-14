@@ -6,14 +6,13 @@
  *   node scripts/upload-diagrams.mjs --section demand --subject economics ./diagrams/*.png
  */
 
-import { createClient } from '@supabase/supabase-js';
 import fs from 'fs';
 import path from 'path';
-
-const supabase = createClient(
-  process.env.SUPABASE_URL || process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_KEY || 'process.env.SUPABASE_SERVICE_KEY'
-);
+// Packet 3 (F110): the shared, guarded client, and the staging path for the table write. Diagram
+// rows used to be upserted straight into `data`; they now land in `draft` after the section has
+// been validated, and publish-section.mjs puts them in front of students.
+import { supabase } from './_db.mjs';
+import { stageSection, printFindings } from './_content-write.mjs';
 
 const BUCKET = 'assets';
 
@@ -105,20 +104,16 @@ async function run() {
     console.log(`  Uploaded: ${title} → ${urlData.publicUrl}`);
   }
 
-  // Upsert
-  const { error } = await supabase
-    .from('section_diagrams')
-    .upsert(
-      { section_id: section.id, data: diagrams },
-      { onConflict: 'section_id' }
-    );
-
-  if (error) {
-    console.error(`\nSupabase upsert error: ${error.message}`);
+  // Stage: validates the whole section with the new diagram list in place, writes `draft`.
+  const verdict = await stageSection(section.id, 'section_diagrams', diagrams);
+  printFindings(verdict.findings);
+  if (!verdict.ok) {
+    console.error(`\nRefused: ${verdict.newBlocks.length} BLOCK finding(s) not in the baseline. Nothing was written.`);
     process.exit(1);
   }
 
-  console.log(`\nDone — ${diagrams.length} total diagrams for "${sectionSlug}"`);
+  console.log(`\nStaged ${diagrams.length} diagrams for "${sectionSlug}" as a draft.`);
+  console.log(`Publish with: node scripts/publish-section.mjs ${section.id} --confirm`);
 }
 
 run();

@@ -1,6 +1,7 @@
 'use client';
 import { motion, useReducedMotion } from 'framer-motion';
 import { parseInlineMarkdown } from '@/lib/parse-inline-markdown';
+import { stepParts } from '@/lib/flow-step';
 
 /**
  * F099. The CSS reduced-motion rule collapses CSS animations and transitions, but these reveals
@@ -39,21 +40,13 @@ const makeResultVariants = (calm) => ({
 });
 
 /**
- * F073. A step was a string split on ' — ' (space, em dash, space) to find a subtitle, a convention
- * no author was told about and that almost no content used; an en dash or a hyphen silently gave
- * no subtitle. Steps may now also be `{ title, subtitle }` objects, which is the explicit form the
- * content skill documents. Either form reaches the same renderer. Titles and subtitles go through
- * the inline markdown parser so a flow step can carry **bold** and glossary terms like every other
- * text field on the page; the bare string path could not.
+ * F073. A step is either a string, split on ' — ' (space, em dash, space) for a subtitle, or an
+ * explicit `{ title, subtitle }` object; lib/flow-step.js is the one place that decides, and the
+ * upgrade template and CONTENT-GATE.md document the object form. The split is em dash only: a
+ * wider split took "Float = LFT - EST - duration" apart. Titles and subtitles go through the
+ * inline markdown parser so a flow step can carry **bold** and glossary terms like every other
+ * text field on the page; the parser leaves P* and Q* notation alone (see parse-inline-markdown).
  */
-function stepParts(step) {
-  if (step && typeof step === 'object') {
-    return { title: String(step.title || ''), subtitle: step.subtitle ? String(step.subtitle) : null };
-  }
-  const parts = typeof step === 'string' ? step.split(/\s+[—–-]\s+/) : [String(step ?? '')];
-  return { title: parts[0], subtitle: parts.length > 1 ? parts.slice(1).join(' — ') : null };
-}
-
 export default function FlowChain({ steps, result, resultType, glossaryTerms }) {
   // Reads the same media query the CSS rule does, so JS-driven motion and CSS motion agree.
   const calm = useReducedMotion();

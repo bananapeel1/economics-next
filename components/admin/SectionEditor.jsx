@@ -17,22 +17,28 @@ export default function SectionEditor({ sectionId, initialData }) {
   const [data, setData] = useState(initialData);
   const [saving, setSaving] = useState(false);
   const [saveMessage, setSaveMessage] = useState('');
+  // Packet 3: the route runs the content validator and refuses a save that adds a BLOCK finding.
+  // The findings come back in the body and are listed here so the person can fix them.
+  const [findings, setFindings] = useState([]);
 
   async function handleSave() {
     setSaving(true);
     setSaveMessage('');
+    setFindings([]);
     try {
       const res = await fetch(`/api/admin/sections/${sectionId}/${activeTab}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ data: data[activeTab] }),
       });
+      const body = await res.json();
       if (res.ok) {
-        setSaveMessage('Saved successfully!');
-        setTimeout(() => setSaveMessage(''), 3000);
+        const v = body.validator;
+        setSaveMessage(v && v.newDebt ? `Saved. The validator counts ${v.newDebt} new DEBT finding${v.newDebt === 1 ? '' : 's'} on this section (allowed; see npm run validate --section ${sectionId} --debt).` : 'Saved successfully!');
+        setTimeout(() => setSaveMessage(''), 6000);
       } else {
-        const err = await res.json();
-        setSaveMessage(`Error: ${err.error}`);
+        setSaveMessage(`Error: ${body.error}`);
+        if (Array.isArray(body.findings)) setFindings(body.findings);
       }
     } catch (err) {
       setSaveMessage(`Error: ${err.message}`);
@@ -109,6 +115,15 @@ export default function SectionEditor({ sectionId, initialData }) {
           </span>
         )}
       </div>
+      {findings.length > 0 && (
+        <ul style={{ marginTop: 12, paddingLeft: 18, fontSize: 13, color: '#ef4444', lineHeight: 1.5 }}>
+          {findings.map((f, i) => (
+            <li key={i}>
+              <code style={{ fontSize: 12 }}>{f.rule}</code> · {f.where} — {f.detail}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

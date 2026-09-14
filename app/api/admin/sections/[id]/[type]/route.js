@@ -1,6 +1,9 @@
 import { createServerClient } from '@/lib/supabase-server';
 import { createClient } from '@/lib/supabase/server';
 import { NextResponse } from 'next/server';
+import { buildContext, gateSection, loadBundle, TABLE_TO_KEY } from '@/lib/content-gate.mjs';
+import specItems from '@/audit/raw/spec-items.json';
+import baseline from '@/audit/validator-baseline.json';
 
 const TABLE_MAP = {
   content: 'section_content',
@@ -70,6 +73,14 @@ function restoreIds(oldItems, newItems) {
   });
 }
 
+/**
+ * Packet 3 (F110). This route writes `data` directly — it is the founder's live editor and has no
+ * draft step — so it is the third sanctioned writer of `data`, after publish and restore, and it
+ * runs the same gate they do: the whole section as it would be after this save, against the
+ * committed baseline. A save that adds a BLOCK finding is refused with the findings in the body,
+ * and the editor shows them. New DEBT is allowed and counted in the response. After the write the
+ * row is read back and compared, so `success` means the database holds what was sent.
+ */
 export async function PUT(request, { params }) {
   // Auth check — require admin role
   const supabaseAuth = await createClient();
@@ -88,24 +99,43 @@ export async function PUT(request, { params }) {
   const supabase = createServerClient();
 
   // Check if row exists, and keep its item ids
-  const { data: existing } = await supabase
+  const { data: existing, error: existingErr } = await supabase
     .from(tableName)
     .select('id, data')
     .eq('section_id', id)
-    .single();
+    .maybeSingle();
+  if (existingErr) return NextResponse.json({ error: existingErr.message }, { status: 500 });
+
+  const payload = existing ? restoreIds(existing.data, jsonData) : jsonData;
+
+  // The gate: whole section, live copies of the other seven tables, this table as it would be.
+  let verdict;
+  try {
+    const [live, ctx] = await Promise.all([loadBundle(supabase, id), buildContext(supabase, id, specItems.items)]);
+    verdict = gateSection({ ...live, [TABLE_TO_KEY[tableName]]: payload }, ctx, baseline.keys);
+  } catch (err) {
+    return NextResponse.json({ error: `Could not validate the section: ${err.message}` }, { status: 500 });
+  }
+  if (!verdict.ok) {
+    return NextResponse.json({
+      error: `The validator refused this save: ${verdict.newBlocks.length} BLOCK finding${verdict.newBlocks.length === 1 ? '' : 's'} not in the baseline. Nothing was written.`,
+      findings: verdict.newBlocks.map((f) => ({ rule: f.rule, where: f.where, detail: f.detail })),
+      newDebt: verdict.newDebt.length,
+    }, { status: 422 });
+  }
 
   let result;
   if (existing) {
     result = await supabase
       .from(tableName)
-      .update({ data: restoreIds(existing.data, jsonData) })
+      .update({ data: payload })
       .eq('section_id', id)
       .select()
       .single();
   } else {
     result = await supabase
       .from(tableName)
-      .insert({ section_id: id, data: jsonData })
+      .insert({ section_id: id, data: payload })
       .select()
       .single();
   }
@@ -114,5 +144,15 @@ export async function PUT(request, { params }) {
     return NextResponse.json({ error: result.error.message }, { status: 500 });
   }
 
-  return NextResponse.json({ success: true, data: result.data });
+  // Read back the row students now read.
+  const { data: back, error: backErr } = await supabase.from(tableName).select('data').eq('section_id', id).single();
+  if (backErr || JSON.stringify(back?.data) !== JSON.stringify(payload)) {
+    return NextResponse.json({ error: `Written, but the row read back does not match what was sent${backErr ? `: ${backErr.message}` : ''}. Check the section before trusting it.` }, { status: 500 });
+  }
+
+  return NextResponse.json({
+    success: true,
+    data: result.data,
+    validator: { newDebt: verdict.newDebt.length, block: verdict.summary.block, debt: verdict.summary.debt },
+  });
 }

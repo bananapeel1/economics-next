@@ -89,12 +89,33 @@ the cost of six characters.
 
 ## Layer 1 — built, 14 September 2026 (packet 3)
 
-`lib/content-validator.mjs`, 48 rules, run inside the write path by `scripts/_content-write.mjs` and again
-by `scripts/publish-section.mjs`; `scripts/_db.mjs` refuses a direct write of `data`, so no script can skip
-it. Golden set: `audit/fixtures/validator/cases.json`, a failing case for every rule; `npm test` (72).
-Gate: `npm run validate`, no regression against `audit/validator-baseline.json`.
+`lib/content-validator.mjs`, 50 rules, run inside the write path by `scripts/_content-write.mjs` and again
+by `scripts/publish-section.mjs`, which reads the live row back afterwards and validates that; the decision
+itself is `lib/content-gate.mjs`, shared with the two admin routes that write `data` from the editor. Golden
+set: `audit/fixtures/validator/cases.json`, a failing case for every rule; `npm test` (95). Gate: `npm run
+validate`, no regression against `audit/validator-baseline.json`.
 
-Live hit rates on 14 September, from the gate's first run over all 43 sections (886 BLOCK, 1,353 DEBT):
+**The write path is closed, and a test says so.** `scripts/_db.mjs` refuses a direct write of `data` on the
+eight content tables through `from()`, `schema().from()` and `rest.from()`. Every seed and one-off script
+imports that client; `lib/write-path.test.mjs` scans `scripts/`, `seed/`, `audit/scripts/` and `app/api/` and
+fails on any file that writes a content table with a client of its own unless it is on a named allowlist with
+a reason. Three writers of `data` remain by design and each is gated: `publish-section.mjs` (validates, writes,
+reads back, validates the read-back), `restore-section.mjs` (the undo; validates after and reports),
+and the admin routes `api/admin/sections/[id]/[type]` and `api/admin/diagrams` (validate in-route, refuse with
+the findings in the body, read back). Everything else stages a `draft` through `stageSection()`, which also
+reads its write back and refuses to report success on a row it did not change.
+
+**Keys.** A finding's key is `section | rule | where | fingerprint`, where the fingerprint hashes the item the
+finding is about — the quiz question, the practice item, the recall, the subsection's teaching text, the
+block's own fields. A rewritten item with the same id therefore gets new keys, and a finding that survives the
+rewrite is a real regression, not baselined noise; ids alone could not say that, because packet 2 minted ids a
+rewrite keeps. Section-level findings (histogram, depth, currency, the UK ratio) are fingerprinted on their
+detail so a changed aggregate is re-reported. Term-count findings (off-spec vocabulary, later-unit terms) keep
+a count-free key on purpose: removing one mention must not read as a regression. UK institutions are one
+finding per sentence for the same reason. `lib/content-validator.test.mjs` holds a test for each of these.
+
+Live hit rates on 14 September over all 43 sections (1,131 BLOCK, 1,358 DEBT; 2,489 keys). The BLOCK total
+rose from the first run's 886 because `locale.institution` is now counted per sentence, not per term:
 
 | Rule | Tier | Live | Note |
 |---|---|---|---|
@@ -102,7 +123,7 @@ Live hit rates on 14 September, from the gate's first run over all 43 sections (
 | `quiz.long-correct` | BLOCK | 185 | correct option >1.5× the longest distractor |
 | `practice.tariff` | BLOCK | 93 | e.g. "Define (4)"; Business Assess 10/12 by unit |
 | `practice.command` | BLOCK | 60 | Outline anywhere; Assess in Economics |
-| `locale.institution` | BLOCK | 53 | NHS, Bank of England, council tax… |
+| `locale.institution` | BLOCK | 298 | sentences naming the NHS, Bank of England, council tax…; one key per sentence |
 | `quiz.essay-stem` | BLOCK | 28 | Evaluate/Assess/Discuss opening an MCQ |
 | `section.no-recall` | BLOCK | 24 | 20 Business sections have zero recalls |
 | `pins.diagram` | BLOCK | 20 | resolves to nothing after the title fallback |
@@ -112,6 +133,9 @@ Live hit rates on 14 September, from the gate's first run over all 43 sections (
 | `reorder.criterion` / `lead` / `source` | DEBT | 57 / 23 / 22 | Layer 1a; see the limit below |
 | `quiz.histogram` | DEBT | 41 | sections with a bucket >40% or <10% |
 | `depth.recalls` / `quiz` / `blocks` | DEBT | 24 / 21 / 19 | F083, F108 |
+| `locale.uk` | DEBT | 16 | sections where UK-framed mentions outnumber every other country's (F116) |
+| `depth.notes-titles` | DEBT | 3 | a Notes topic no Learn Mode block or subsection title shares words with |
+| `quiz.explanation-option` | DEBT | 0 | explanation quotes a distractor verbatim and shares no word with the answer |
 
 **What Layer 1 will not catch, measured.** Against the March per-recall verdicts, the three reorder rules
 together flag 51 of the 66 weak or not-orderable recalls. The other 15 are bad because of what the items
@@ -138,6 +162,32 @@ are checked against their generators by `npm test`.
 it, requiring the leaf's distinctive terms to co-occur inside one text field. It sees 14 of the 17
 assessed-but-never-taught items found on 13 September. Its mean coverage is 81% against the reading audit's
 62%: it is a lexical floor, and the 19 points between them are the reading the content packets do.
+
+## The per-section edit pass — the checklist (F116)
+
+The validator enforces what is mechanical so that a person's pass can spend its minutes on meaning. Every
+content packet runs this list once per section, after staging and before `publish-section.mjs --confirm`,
+and records "checklist done" in its PROGRESS.md row. It is short on purpose; Layer 7 says why longer lists
+are theatre.
+
+1. **Every recall prompt names its criterion.** Not "put these in the right order" but the direction or the
+   named sequence ("from launch to maturity", "the recruitment process"). `reorder.criterion` catches the
+   wording; read the items and ask whether a student who was taught this could reconstruct the order for
+   the reason the prompt gives.
+2. **Every example is one an IAL candidate can picture.** Centres sit WEC/WBS in Hong Kong, Singapore,
+   Malaysia, Pakistan, the Gulf, Nigeria and Kenya. A UK example is allowed as one of several; the default
+   frame is the student's own market or a global name. `locale.institution` refuses the NHS, HMRC, council
+   tax and the rest; `locale.uk` fires when UK mentions outnumber everywhere else. Neither can judge whether
+   the example is *relevant* — that is this step.
+3. **Nothing UK-only survives as content.** RPI, the Chancellor, Ofgem, furlough: not renamed, removed, with
+   the international equivalent in its place (CPI; the finance ministry; the sector regulator; wage subsidy).
+4. **Flow steps carry a subtitle only as `{ title, subtitle }`.** A string containing " — " is the legacy
+   convention and `flow.separator` reports it; hyphens and en dashes in a string are never split, so a formula
+   like "Float = LFT - EST - duration" is safe.
+5. **Every examiner claim points at a source.** `claim.uncited` refuses a sentence about what examiners
+   reward without one; the person checks that the cited paper and question actually say it.
+6. **The section's baseline shrank.** `node audit/scripts/validate-content.mjs --section <id>` before and
+   after; the packet is not done while the section carries more baselined findings than it started with.
 
 ## Layer 1a — the reorder rule the audit was not strict enough about
 

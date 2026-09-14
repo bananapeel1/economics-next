@@ -234,4 +234,30 @@ Append only. Every entry needs a date and the packet that made it.
 - **2026-09-14 (packet 3) — bracketed option letters in explanations are a content rule, not a code rule.**
   Layer 1b in CONTENT-GATE.md. The shuffle declines 25 questions rather than guess; "Option A" instead of a bare
   "(A)" makes fourteen of them shuffleable again, and the validator flags the form (`quiz.letter-in-explanation`).
-
+- **2026-09-14 (packet 3, after verification) — a finding key carries a fingerprint of the item it is about.**
+  The verifier showed that `section|rule|where` masked a rewritten item: `where` is the item's id, packet 2
+  minted 2,952 ids, and a rewrite keeps them, so a rewritten stem that was still an essay stem kept its
+  baselined key. Keys are now `section|rule|where|fingerprint` (hash of the quiz item, practice item, recall,
+  subsection teaching text or block fields; of the detail for section-level findings; none for per-term counts,
+  where removing a mention must not read as a regression). The baseline was rewritten under the new format:
+  2,239 → 2,489 keys, and only the three rules that were deliberately changed moved (`locale.institution` per
+  sentence 53 → 298, `locale.uk` 14 → 16, `depth.notes-titles` 0 → 3); the other 33 are identical. The
+  discipline this buys: touching an item that carries a baselined BLOCK obliges the session to clear it.
+- **2026-09-14 (packet 3, after verification) — the admin editor writes `data` directly, gated in-route.**
+  The founder's editor has no draft step and turning it into one is a product change. So its two routes run
+  the same `lib/content-gate.mjs` decision the scripts do, refuse with 422 and the findings in the body, and
+  read the row back. They are the only files allowed to write a content table with a client of their own, and
+  `lib/write-path.test.mjs` fails if another appears. Seeds and one-off scripts import the guarded client and
+  need `REVVY_ALLOW_RAW_WRITE=1` on the command line, which is the point: the bypass is in the shell history.
+- **2026-09-14 (packet 3, after verification) — UK framing is a ratio, and institutions are counted per sentence.**
+  `locale.uk` used to fire at three UK-framed mentions per section, so "Brexit ×2, Tesco and Aldi" with no other
+  country passed. It now fires when UK-framed mentions outnumber mentions from anywhere else (17 sections live,
+  the same set at one-or-more and at two-or-more), which encodes the rule as stated: one UK example among
+  several is fine, the UK as the default is not. It cannot judge relevance; the per-section checklist in
+  CONTENT-GATE.md does, and PROTOCOL now names it as a build step for content packets. `locale.institution` is
+  one BLOCK per sentence so a new mention is a new key and a removed one is not a regression.
+- **2026-09-14 (packet 3, after verification) — flow steps split on an em dash only, and emphasis follows
+  CommonMark flanking.** The packet's first attempt widened the split to hyphens and en dashes and rendered
+  "Float = LFT - EST - duration" as a title and a subtitle; the italic regex rendered "P*" and "Q*" as an
+  emphasis run. Both were live for a day. `lib/flow-step.js` and the flanking rule in `parse-inline-markdown`
+  are the fix, each with tests; the object form `{ title, subtitle }` is the documented way to add a subtitle.

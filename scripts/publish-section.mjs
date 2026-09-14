@@ -26,7 +26,7 @@ import { supabase } from './_db.mjs';
 import { CONTENT_TABLES, readSection, subjectBySection } from './snapshot-section.mjs';
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { describeChange } from './_publish-checks.mjs';
-import { validateSection } from '../lib/content-validator.mjs';
+import { gateSection, TABLE_TO_KEY } from '../lib/content-gate.mjs';
 import { contextFor, loadBaseline } from './_content-write.mjs';
 
 const args = process.argv.slice(2);
@@ -104,17 +104,12 @@ for (const sectionId of targets) {
   // live copies of the rest. Packet 3 — the same validator the staging path ran, run again here,
   // because a draft can sit for days while the other seven tables change underneath it.
   const live = await readSection(sectionId);
-  const next = {
-    content: live.section_content, notes: live.section_notes, quiz: live.section_quiz, practice: live.section_practice,
-    flashcards: live.section_flashcards, diagrams: live.section_diagrams, extras: live.section_extras, mistakes: live.section_common_mistakes,
-  };
-  const keyOf = { section_content: 'content', section_notes: 'notes', section_quiz: 'quiz', section_practice: 'practice', section_flashcards: 'flashcards', section_diagrams: 'diagrams', section_extras: 'extras', section_common_mistakes: 'mistakes' };
-  for (const { table, draft } of tables) next[keyOf[table]] = draft;
+  const next = {};
+  for (const table of CONTENT_TABLES) next[TABLE_TO_KEY[table]] = live[table];
+  for (const { table, draft } of tables) next[TABLE_TO_KEY[table]] = draft;
   const ctx = await contextFor(sectionId);
-  const { findings } = validateSection(next, ctx);
   const baseline = loadBaseline();
-  const newBlocks = findings.filter((f) => f.tier === 'BLOCK' && !baseline.has(f.key));
-  const newDebt = findings.filter((f) => f.tier === 'DEBT' && !baseline.has(f.key));
+  const { newBlocks, newDebt } = gateSection(next, ctx, baseline);
   for (const f of newBlocks) console.log(`  BLOCK       ${f.rule.padEnd(24)} ${f.detail}`);
   if (newDebt.length) console.log(`  debt        ${newDebt.length} new DEBT finding(s) — allowed, ledgered`);
   if (newBlocks.length) {
@@ -146,7 +141,27 @@ for (const sectionId of targets) {
     }
   }
   delete process.env.REVVY_ALLOW_RAW_WRITE;
+
+  // Read back and validate the row students now read (F110: "run against the DB row after push").
+  // The prediction above was over the drafts in memory; this is over what the database holds.
+  const after = await readSection(sectionId);
+  const mismatched = tables.filter(({ table, draft }) => JSON.stringify(after[table]) !== JSON.stringify(draft)).map((t) => t.table);
+  if (mismatched.length) {
+    console.error(`FAILED ${sectionId}: live row differs from the published draft on ${mismatched.join(', ')}`);
+    console.error(`Restore with: node scripts/restore-section.mjs ${snap.path} --confirm`);
+    process.exit(1);
+  }
+  const liveBundle = {};
+  for (const table of CONTENT_TABLES) liveBundle[TABLE_TO_KEY[table]] = after[table];
+  const liveVerdict = gateSection(liveBundle, ctx, baseline);
+  if (!liveVerdict.ok) {
+    console.error(`FAILED ${sectionId}: the live row fails the validator after publish (${liveVerdict.newBlocks.length} BLOCK):`);
+    for (const f of liveVerdict.newBlocks) console.error(`  BLOCK       ${f.rule.padEnd(24)} ${f.detail}`);
+    console.error(`Restore with: node scripts/restore-section.mjs ${snap.path} --confirm`);
+    process.exit(1);
+  }
   published++;
+  console.log(`  verified    live row matches the draft and passes the validator (${liveVerdict.summary.block} baselined BLOCK, ${liveVerdict.summary.debt} DEBT)`);
   console.log(`  published ${tables.length} table(s) · undo: node scripts/restore-section.mjs ${snap.path} --confirm\n`);
 }
 

@@ -10,8 +10,16 @@
  *   realExample   — real named entity, 2–3 sentences, starts with entity name
  *   misconception — 3 sentences: wrong claim → why wrong → what to write instead
  *   examMatters   — 2–3 sentences on what the examiner specifically awards
- *   flow steps    — max 4 pills; result must be "good" | "bad" | "neutral"
+ *   flow steps    — 2–4 pills; result must be "good" | "bad" | "neutral". A step is a plain string
+ *                   ("Costs fall") or, when it needs a subtitle, an object:
+ *                   { title: "Identify", subtitle: "list every option" }. Do not encode a subtitle
+ *                   with " — " inside a string (the legacy form; the validator reports it), and a
+ *                   hyphen or en dash in a string is never split, so formulae are safe (F073).
  *   takeaway      — 3–4 bullet strings, each ≤ 100 chars
+ *
+ * Before publishing, run the per-section checklist in audit/CONTENT-GATE.md ("The per-section
+ * edit pass"): criterion in every recall prompt, examples an IAL candidate can picture, nothing
+ * UK-only, every examiner claim sourced, the section's baseline smaller than it started (F116).
  */
 
 import { stageSection, printFindings } from './_content-write.mjs';

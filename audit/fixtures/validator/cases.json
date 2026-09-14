@@ -995,7 +995,7 @@
     {
       "rule": "locale.uk",
       "fail": {
-        "content.0.sections.0.realExample.text": "After Brexit the UK saw prices rise. UK government data show it. In the UK, demand fell."
+        "content.*.sections.*.realExample.text": "After Brexit the UK saw prices rise. UK government data show it. In the UK, demand fell."
       }
     },
     {
@@ -1094,6 +1094,58 @@
     {
       "rule": "section.counts",
       "fail": {}
+    },
+    {
+      "rule": "quiz.explanation-option",
+      "fail": {
+        "quiz.0.options": [
+          "Inertia",
+          "A lower price for the good",
+          "Higher income",
+          "A larger population"
+        ],
+        "quiz.0.explanation": "A lower price for the good raises quantity demanded along the curve."
+      }
+    },
+    {
+      "rule": "quiz.explanation-option",
+      "pass": {
+        "quiz.0.options": [
+          "Inertia",
+          "A lower price for the good",
+          "Higher income",
+          "A larger population"
+        ],
+        "quiz.0.explanation": "Inertia keeps a consumer where they are; a lower price for the good would not."
+      }
+    },
+    {
+      "rule": "depth.notes-titles",
+      "fail": {
+        "notes": [
+          {
+            "title": "Branding and differentiation",
+            "blocks": []
+          }
+        ]
+      }
+    },
+    {
+      "rule": "depth.notes-titles",
+      "pass": {
+        "notes": [
+          {
+            "title": "Rational decision making",
+            "blocks": []
+          }
+        ]
+      }
+    },
+    {
+      "rule": "locale.uk",
+      "pass": {
+        "content.0.sections.0.realExample.text": "After Brexit prices rose in the UK, one of several markets; the base fixture's other examples are in Kuala Lumpur, Singapore, Hong Kong, Pakistan and Jakarta."
+      }
     }
   ]
 }

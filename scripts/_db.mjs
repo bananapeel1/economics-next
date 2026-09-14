@@ -82,10 +82,19 @@ function guarded(table, builder) {
   });
 }
 
-export const supabase = new Proxy(client, {
-  get(target, prop) {
-    if (prop === 'from') return (table) => guarded(table, target.from(table));
-    const v = target[prop];
-    return typeof v === 'function' ? v.bind(target) : v;
-  },
-});
+// `from` is guarded on the client itself and on the two other objects that expose a `from`:
+// `client.schema('public')` returns a PostgrestClient and `client.rest` is one, and both were a
+// way round the guard with no callers (packet 3 verification, F110).
+function withGuardedFrom(target) {
+  return new Proxy(target, {
+    get(t, prop) {
+      if (prop === 'from') return (table) => guarded(table, t.from(table));
+      if (prop === 'schema') return (...a) => withGuardedFrom(t.schema(...a));
+      if (prop === 'rest') return withGuardedFrom(t.rest);
+      const v = t[prop];
+      return typeof v === 'function' ? v.bind(t) : v;
+    },
+  });
+}
+
+export const supabase = withGuardedFrom(client);

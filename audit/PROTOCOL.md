@@ -32,7 +32,11 @@ between packets; if it needs to, change it in its own commit and say why in `DEC
 
 - Snapshot first if content is touched. Then implement. Prefer the main session for packets 2–5 (they need
   judgment across many files); a single implementer agent is fine for narrow packets (6, 9, 10, 11).
-- `npm run build` must pass before anything is claimed. There are no tests in this repo; the build is the floor.
+- `npm run build`, `npm test` and `npm run validate` must pass before anything is claimed (tests and the
+  content gate exist from packet 3; the build alone is no longer the floor).
+- Content packets write through `stageSection()` → `draft` → `scripts/publish-section.mjs --confirm`, never
+  `data` directly (the client refuses), and run the per-section checklist in `CONTENT-GATE.md` ("The
+  per-section edit pass") between staging and publishing.
 - Claim: `node audit/scripts/ledger.mjs claim <n> F0xx F0yy C-...`. Claim only what was actually changed.
 
 ### 3. Verify A — finding check (agent `packet-verifier`, read-only, fresh context)
