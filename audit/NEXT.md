@@ -1,5 +1,237 @@
 # Next session brief
 
+## Packet 15 spec — introductory-concepts, the section students meet first (Opus, 15 September 2026)
+
+Economics Unit 1 (WEC11), IAL topic **1.3.1 Introductory concepts**, `audit/raw/econ_spec.txt:510-568`,
+25 countable leaves in six sub-topics: 1 the nature of economics, 2 positive and normative economics,
+3 scarcity, 4 production possibility frontiers, 5 specialisation and the role of money and financial
+markets, 6 free market, mixed and command economies. Grade C in March. **192 section opens and 167 of
+192 starts stuck on step 0** — the worst abandonment in the product, and the reason this section is next.
+
+State on 15 September, before the packet: 5 blocks · 9 subsections · 9 recalls (5 reorder, 4 fill-in, 0
+match, 0 classify, types strictly alternating) · 25 quiz · 5 practice · 3 diagrams · 4 chains; validator
+**25 BLOCK, 53 DEBT, 64% coverage**. The prose is sound; the scaffolding is not.
+
+### Four ledger claims the specification refutes — read before building
+
+Same rule as packet 14: a scope or numbering claim in a finding is a hypothesis until the spec line is read.
+
+1. **`structure-11` is wrong and nothing is renumbered.** It says the app's `1.3.1` "is not IAL spec
+   numbering (IAL Unit 1 topic 1.1 'Scarcity, choice and potential conflicts')". `econ_spec.txt:510` reads
+   `1.3.1 Introductory concepts` — the app's number *and* the app's title are the specification's own.
+   The claim is UK GCE reasoning, exactly the "relabel as 3.3" trap of packet 14. Closed as no-change.
+2. **`specGap-01` (factors of production *and their rewards* — rent, wages, interest, profit) is off-spec.**
+   No leaf of 1.3.1 requires it; the spec's phrase is "finite resources" (3a). "Rewards to factors" appears
+   nowhere in Unit 1. The *defect* it describes is real but belongs to the quiz: `quiz-03`'s q24 tests
+   untaught, unrequired material and is **deleted**. The four factors are named in one sentence inside 3a
+   as the standard classification of resources — that is what makes "capital goods" mean something in 4c/4d —
+   and no rewards subsection is built.
+3. **`specGap-07` half-refuted.** "No reference to Hayek or Marx alongside Smith, which the spec names" —
+   the IAL spec names **Adam Smith only** (`econ_spec.txt:540`). Marx does not appear in the document at all;
+   Hayek appears once, at `2636`, in a general co-teaching note, not as a requirement. Smith is taught, Marx
+   and Hayek are not added. The other half is valid: 6c "the role of the state in a mixed economy" is one
+   sentence and gets its own subsection.
+4. **`specGap-06`: comparative advantage is not Unit 1.** 5a asks for "the advantages and disadvantages of
+   specialisation and the division of labour in organising production; Adam Smith's views". No comparative
+   advantage anywhere in 1.3.1. So the advantages *and disadvantages* are taught properly and the unexplained
+   comparative-advantage wording is removed from `extras`, not explained.
+
+`structure-07` cites "1.2.7" for the price mechanism, which is UK numbering, but its recommendation is right
+for the right reason: rationing, incentive and signalling are **1.3.4 Price determination**
+(`econ_spec.txt:707-709`), a different section that already exists. The price-mechanism material is trimmed
+out of the Economic Systems block, leaving 6a/6b/6c.
+
+### The shape — six blocks in specification order, 18 subsections
+
+One block per spec sub-topic, one subsection per skill, so no step carries two ideas. This is the step-0 fix:
+nine 5-interaction mega-steps become eighteen small ones.
+
+1. **The Nature of Economics** — Economics as a social science (1a) · Models, assumptions and ceteris paribus (1b, 1c)
+2. **Positive and Normative Economics** — Testable statements and value judgements (2a) · Value judgements in policy (2b)
+3. **Scarcity, Choice and Opportunity Cost** — Unlimited wants and finite resources (3a) · Renewable and non-renewable resources (3b) · Scarcity and opportunity cost (3c) · Free goods and economic goods (3d)
+4. **Production Possibility Frontiers** — Reading the PPF (4a) · Opportunity cost through marginal analysis (4a·4, worked) · Movements along and shifts in the PPF (4b, and growth/decline) · Capital goods and consumer goods (4c, 4d)
+5. **Specialisation, Money and Financial Markets** — Specialisation and the division of labour (5a, Smith, both sides) · The functions of money (5b) · The role of financial markets (5c, all five bullets)
+6. **Free Market, Mixed and Command Economies** — The three systems (6a) · Advantages and disadvantages (6b) · The role of the state in a mixed economy (6c)
+
+`quizIndices` and `practiceIndices` on every block, the check-in item first. 24 steps in all (18 teach + 6 check-ins).
+
+### Scope — the 32 ledger ids assigned to packet 15
+
+- **topFix-01, structure-05**: 18 recalls, one per subsection, across all four contract types — no
+  mechanical alternation and no recall that is a visible flow retyped. The four named reorders become the
+  exercises the item asks for: efficient/inefficient/unattainable point tagging, shift vs movement sorting,
+  positive vs normative classification, benefit vs risk sorting. Reorders **paraphrase** a flow in their own
+  subsection in the same order, which satisfies `reorder.source` without measuring copying. The item's other
+  half — "make fill-in matching stem-tolerant so 'signalling'/'ought' are accepted" — is **obsolete under
+  packet 7's recall contract**: a fill-in is a chip bank (`lib/recall-widgets.js:199-208`) graded by
+  `gradeFillin` on the chip's own text (`212-219`), so there is no free text to be intolerant of. Recorded, not built.
+- **topFix-02, structure-01, structure-06, quiz-01, quiz-02, quiz-03**: the quiz bank rebuilt to ≥28 items,
+  every one reachable. Near-duplicates deleted (q13 of q3, q19 of q9, q11 of q2, q23 of q3, one of q0/q12/q17).
+  q8 (free good) **kept and now taught** by 3d. q15 rewritten from "factor of production classified as capital"
+  to capital goods vs consumer goods, which is 4c. q24 (the entrepreneur's reward) **deleted** — off-spec, see above.
+  Retained items keep their ids. Answer positions balanced by hand (currently 16/64/12/8).
+- **structure-06, second half**: the pre-test draws the first three *unpinned* items in array order — stable
+  since F079, not random (`components/learn-mode/PreTest.jsx:17-28`) — so three representative, definitely-taught
+  items are placed at the front of the unpinned run by construction. The post-test re-asking an item is
+  deliberate (`PostTest.jsx:28`, priority by what was got wrong) and is not changed.
+- **topFix-03, accuracy-01, specGap-05**: the Base PPF redrawn as a single concave curve whose gradient
+  steepens monotonically (the current path bulges convex between C and D while the checklist tells students a
+  PPF is concave and `mistakes[2]` says they lose marks for drawing it that way), and a worked
+  marginal-opportunity-cost calculation read off its own axis values in subsection 4.2.
+- **accuracy-02**: the China 1990 example is rewritten or replaced. As written it says China "operated well
+  inside its PPF" and then "by shifting labour into manufacturing and **investing in capital**, China moved
+  closer to its frontier" — investment in capital shifts the frontier, so the example muddles the exact
+  distinction subsection 4.3's misconception warns about.
+- **topFix-04, structure-02, structure-03**: every diagram and every practice item reachable. The **Circular
+  Flow of Income diagram is deleted** — it is Unit 2 (WEC12) macro content and off-spec here. Five diagrams,
+  each pinned: scarcity → choice → opportunity cost (block 3), the concave PPF with its three point types and
+  the calculation's values (block 4, **keeping the March PPF diagram's id — topFix-03 says redraw, not
+  replace**), movements along versus shifts of the PPF (block 4), money and the double
+  coincidence of wants (block 5), the retained Economic Systems Comparison (block 6). Blocks 1 and 2 carry
+  flows rather than a diagram: a drawing of "a model" would be decoration, and `pins.diagram` only requires
+  that a pin resolves.
+- **topFix-05, practice.command, practice.tariff, practice.levels**: the practice set rebuilt to the IAL
+  **Economics** command words and their own tariffs from Appendix 6 (`audit/raw/tariff-census.json`):
+  Define 2 · Calculate 2 or 4 · Draw 4 · Explain 4 · Analyse 6 · Examine 8 · Discuss 14 · Evaluate 20.
+  There is no **Assess** and no **Outline** in IAL Economics, so practice[2] and practice[4] cannot stand as
+  written. **All five March items keep their ids and their subjects**, re-commanded to a tariff the subject
+  actually uses: Define (4)→(2) opportunity cost, Explain (6)→(4) the basic economic problem, Outline (4)→
+  Explain (4) on modelling assumptions, Assess (10)→**Examine (8)** on the usefulness of a PPF diagram, and the
+  20-mark Evaluate unchanged but with an explicit judgement on the word "always". Four more are new — a
+  Calculate, a Draw, an Explain on positive and normative, an Analyse on the state — for nine in all, and
+  guidance above 6 marks is levels-shaped and allocates no "(n marks)".
+- **specGap-02** (free vs economic goods), **specGap-03** (renewable vs non-renewable), **specGap-04**
+  (capital vs consumer goods and the consumption-versus-growth trade-off, currently only in the paywalled
+  extras chain): each becomes its own subsection, taught in Learn Mode, not only in extras.
+- **specGap-09, specGap-10, specGap-11** and **two minted this packet**
+  (`C-introductory-concepts-specGap-12`, `-13`): 5c is entirely absent today and has **five** bullets, not the
+  three the ledger holds. Subsection 5.3 teaches all five — to facilitate saving, to make funds available to
+  businesses and individuals, to facilitate the exchange of goods and services, to provide forward markets in
+  commodities and currencies, to provide a market for equities — each in a notes item using the
+  specification's own phrase, per the lexical coverage rule.
+- **specGap-06** (both sides of specialisation), **specGap-07** (the state's role in a mixed economy): built
+  as above, without comparative advantage and without Marx or Hayek.
+- **specGap-08** (economic agents and their objectives): **reassigned, not built.** Consumers maximising
+  utility and firms maximising profits is 1.3.2·1 (`econ_spec.txt:565-568`), the `consumer-behaviour`
+  section's own topic. Moved to that section's packet rather than taught twice.
+- **structure-04**: closed by the shape above — 18 subsections means one idea per step.
+- **structure-08**: block 4's takeaway name-checks the pin factory while its quiz q4 tests Smith's three
+  reasons, which the body never lists. The three reasons (dexterity, time saved switching tasks, the
+  introduction of machinery) go into 5.1's body so the question is answerable from the teaching.
+- **structure-09**: the "economics is not a real science because it cannot predict" misconception is filler
+  whose "Instead write" is just the keyIdea; it is replaced with a genuine first-topic error. The other six
+  are genuine and are kept in substance.
+- **structure-10** ("difficulty ramp is sensible") and **structure-11**: claimed as no-change, with the
+  ordering now the specification's own.
+- **claim.uncited (11) and locale.institution (8)**: not ledger items but BLOCKs in the way. Every
+  "examiners want / penalise / expect" sentence is rewritten to say what the command word and the mark scheme
+  require, or carries a source. Every UK-only institutional frame (NHS ×4, Bank of England, ONS, HS2) is
+  replaced — this is an IAL cohort sitting the paper in Hong Kong, Singapore, Malaysia and Pakistan.
+  Target: **0 of both**, not "at least half" as `topFix-05` asks.
+- **Currency**: one per section. The section currently mixes GBP and USD; it becomes **US dollars**
+  throughout, matching the international examples.
+- **The worked figures**: one fictional economy, **Maraya**, carries the PPF numbers across the body, the
+  diagram's axis values, the notes chapter, the Calculate practice item and the quiz explanations, checked
+  by string in the runner.
+
+Deliberately not in this packet: the quant drill wiring (13.2); diagram label drills (13.5-13.7); the
+public Unit 1 landing copy, which belongs to packet 57 with D014.
+
+### Acceptance checks a verifier can run without this conversation
+
+1. `node audit/scripts/validate-content.mjs --section introductory-concepts` → 0 BLOCK, DEBT ≤ 3, 0 new
+   against the baseline; `spec.coverage` = 100% (was 64%); `section.counts` reports 6 blocks · 18 subsections
+   · 18 recalls using all four types · ≥28 quiz · 9 practice · 5 diagrams.
+2. `node audit/scripts/pin-check.mjs --section introductory-concepts` → 0 broken pins; every quiz index,
+   practice index and diagram pinned by exactly one block, and `pins.identity` clear.
+3. `node audit/scripts/packet-13-census.mjs` → exit 0.
+4. Live content: no `£`, no "Assess", no "Outline", no "comparative advantage", no "signalling"/"rationing"/
+   "invisible hand", no NHS / Bank of England / ONS / HS2, no sentence asserting what examiners do without a
+   citation, every subsection's teaching text ≤ 350 words (the runner prints the count).
+5. The Base PPF path is concave: sampling it left to right, |dy/dx| increases monotonically. The
+   opportunity-cost calculation in 4.2 uses that diagram's own axis values and the same numbers appear in the
+   notes and in the Calculate practice item.
+6. Every practice command word and tariff appears in `audit/raw/tariff-census.json` for `subject: economics`.
+   Compared with `audit/snapshots/2026-09-15-pre-packet-15__*`, **no flashcard, practice, mistake, subsection
+   or diagram id is dropped** except the Circular Flow diagram, and the only quiz ids dropped are the six
+   deleted on purpose (`572fb5f6`, `7639d863`, `76124830`, `18140b14`, `083ad70a`, `1d667998`).
+7. `npm test`, `npm run build`, `npm run validate` exit 0; baseline rewritten smaller.
+
+### Layer 6 — adversarial review (Sonnet, read-only, canary copy, 15 September 2026)
+
+**Both canaries caught, so the report stands.** The planted defects were a quiz explanation that divided the
+opportunity-cost ratio backwards (10 ÷ 8 = 1.25 against a key of 0.8) and a notes coordinate reading D (30, 27)
+against D (30, 25) everywhere else. The reviewer found both and reasoned each out from the surfaces that
+contradicted it, rather than from the arithmetic alone. Census: 18/18 subsections, 6/6 notes chapters, 32/32
+quiz, 8/8 practice, 34/34 cards, 5/5 diagrams across 8 SVG images and 115 `<text>` nodes, 6 chains, 8 mistakes;
+14 calculations recomputed, 121 cross-surface pairs examined, one web search.
+
+Six real findings. **Four fixed:**
+
+1. *(critical)* **Allocative efficiency was on two flashcards and taught nowhere.** Cards `4632212e` and
+   `90c9a274` — both kept from March — defined a term with 0 occurrences anywhere else in the bundle and no
+   leaf in 1.3.1; 4a asks only for "efficient or inefficient allocation of resources", which the section
+   teaches as productive efficiency and the on/inside/beyond distinction. The reviewer's fix was to delete one
+   card; packet 13's rule is that flashcards are **rewritten in place, never deleted**, because ids are stable
+   and progress rows point at them, so both were rewritten onto material the section does teach ("What does
+   the PPF show about efficiency?" and "What does a point beyond the PPF represent?").
+2. *(major)* **Default-UK framing inside the one retained SVG.** The March economic-systems diagram put "UK"
+   at x=250 — the exact midpoint of a spectrum bar running 50 to 450 — in the same `#3b82f6` as the "Mixed"
+   label itself, with "USA" beside it, while the block's own text names Hong Kong, Singapore, the Nordic
+   economies and North Korea. The diagram was presenting the UK as the canonical mixed economy to a cohort
+   sitting the paper in Hong Kong, Singapore, Malaysia and Pakistan. `locale.institution` cannot see this: it
+   matches institutions, not country framing, and the text nodes are inside a retained asset. Markers are now
+   Hong Kong, Singapore, Sweden and North Korea — every one named in the block's text — and no country sits
+   at dead centre, which is truer to the claim that every real economy is mixed.
+3. *(major, partially upheld)* **A fourth unpinned quiz item.** The reviewer read the unpinned items 6, 13, 22
+   and 29 as "the same off-by-one, four times over". Three of them are deliberate — `PreTest.jsx` takes the
+   first three unreserved items in array order, so those three ARE the pre-test — but the reviewer was right
+   about the fourth: item 29 could never reach the pre-test, which slices at three, so it was simply a
+   question no block surfaced, which is `structure-01`'s complaint in miniature. Item 29 is now pinned.
+4. *(minor)* **One example reused for two unrelated concepts.** Mobile payments illustrated both the functions
+   of money and an outward PPF shift. The PPF-shift subsection now uses rural electrification, which is a
+   change in the resources available rather than a rewording of the same story.
+
+**Two not acted on, with reasons:**
+
+5. *(major, as briefed)* The reviewer flagged the whole "Role of the State" subsection and its six dependents
+   as outside the authorised span, because the brief gave `econ_spec.txt:510-568` and 6c sits at **569**. The
+   brief was one line short; 6c is a genuine leaf (`ECON-1.3.1-6c`, lines [569,569]) and the reviewer said as
+   much — "most likely a truncation, since it cuts the numbered list of six mid-item". No content change.
+   **Next section packet: check the span's last line before writing the brief.**
+6. *(minor)* The four factors of production and the what/how/for-whom trio are not in 3a's literal wording.
+   Both are standard vocabulary that the spec's own "finite resources" and "who decides" rest on, and the
+   four factors are what make "capital goods" mean anything in 4c/4d. Kept, as recorded in DECISIONS.
+
+After the fixes: "allocative" 0 occurrences, no UK marker, 34 cards with all 18 March ids intact, validator
+still 0 BLOCK / 0 DEBT / 100%, `npm test` 132/132, census PASS, and the independent arithmetic re-check
+(a quadratic fitted through only three of the points the *text* names) still recovers every labelled point.
+
+### Verify B — 390×844, `/economics/unit-1/introductory-concepts`, signed out
+
+1. Overview shows 24 steps (18 teach + 6 check-ins); tap Learn.
+2. Step 1 "Economics as a Social Science": one heading, chapter eyebrow "Chapter 1 of 6 · The Nature of
+   Economics · part 1 of 2", key idea, teaching text, then ONE recall below the teaching. No UK institution
+   anywhere on the step. Next is visible without scrolling past the recall.
+3. Scroll with real wheel input while the step is re-rendering: the page does not jump back up (`cb6b894`).
+4. Step 5 "Unlimited wants and finite resources": the four factors are named once; the recall is not a
+   retyped copy of a flow on the same screen.
+5. Chapter 3 check-in: the scarcity → choice → opportunity cost diagram, "Tap to enlarge" readable; a quiz
+   item; a practice item whose command word is one of the eight; NO spaced recall on chapter 1's check-in,
+   a "Recall from chapter …" cue from chapter 2 onward.
+6. Chapter 4, step "Opportunity cost through marginal analysis": the worked calculation's numbers match the
+   PPF diagram's axis values on the same check-in.
+7. Chapter 4 check-in: the PPF diagram is visibly bowed outward from the origin with no bulge, and the
+   movements-vs-shifts diagram distinguishes the two.
+8. Chapter 5 check-in: the money diagram; the financial-markets subsection names all five roles.
+9. Chapter 6 check-in: the Economic Systems Comparison diagram; a 20-mark Evaluate; "Mark my answer" opens a
+   self-mark checklist carrying the levels note.
+10. Completion screen reached, naming all six chapters; console shows no errors other than the signed-out 401.
+
+---
+
+## Previous brief — packet 14 (kept for the template and its rules)
+
 ## Packet 14 spec — decision-making-techniques, the first content section and the format pilot (Fable 5.1, 14 September 2026)
 
 The section that sets the template for the 42 that follow. Business Unit 3 (WBS13), IAL topic **3.3.3
@@ -146,6 +378,33 @@ route is served with `max-age=300, s-maxage=3600`, so the chip catches up within
 and about fifty `POST /api/events` showed `net::ERR_ABORTED` in the network log, yet `app_events` holds 43 rows
 for this section from the walkthrough (learn_open, 20 step_view, 19 step_next, section_complete), so the
 aborted posts were cancelled duplicates, not lost events. Packet 58 should know both.
+
+## Correction, written after packet 14 was reverted (14 September 2026, late)
+
+**Packet 14 is NOT live.** It was published, then reverted the same evening: its content uses two recall types
+(`match`, `classify`) whose rendering code (packet 7) is not on `main`. `decision-making-techniques` is back to
+its exact pre-packet-14 state, verified byte-identical against the pre-publish snapshot. The built, reviewed,
+Verify-A-confirmed content is intact and untouched at `scripts/_packet14-*.mjs` and
+`audit/snapshots/packet-14-bundle__business__decision-making-techniques.json`; nothing needs re-authoring.
+
+**Publish it at the packet 5/7 checkpoint, not before.** When packets 5 and 7 are merged into `main` and
+deployed, re-stage and publish:
+```
+node scripts/packet-14-decision-making-techniques.mjs --stage
+node scripts/publish-section.mjs decision-making-techniques --confirm
+```
+Then rerun `npm run validate` and `--baseline --confirm` to drop back to the 2,415-key baseline.
+
+**New rule for every content packet before publish:** grep the new content's recall types and body-item types
+against what `origin/main` actually has, e.g. `git show origin/main:components/LearnModeTab.jsx | grep Recall`.
+A packet using only `reorder`/`fillin` recalls can publish standalone (main has both); a packet using
+`match`/`classify` cannot, until the checkpoint. This applies to packet 15 and every section after it — check
+before staging, not after a live crash.
+
+**A separate, pre-existing bug was found on this section while checking.** `decision-making-techniques`'s Learn
+Mode throws an uncaught error on `main` as deployed, independent of packet 14 — see DECISIONS.md, "a
+pre-existing production crash on this section". Not triaged into a packet; worth the founder's attention on its
+own, since it is a real crash a student would hit today, on `main`, regardless of anything this programme does.
 
 ## Handoff — what comes next (written after packet 14, 14 September 2026)
 

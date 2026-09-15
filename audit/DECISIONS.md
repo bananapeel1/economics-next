@@ -517,3 +517,142 @@ Append only. Every entry needs a date and the packet that made it.
 - **2026-09-14 (packet 14) — the public Unit 3 landing page is out of date and belongs to packet 57.**
   `app/business/unit-3/page.js` lists this section's sub-topics in the March order and omits contribution. It is a
   marketing surface, not content; added to D014's file list rather than fixed here.
+- **2026-09-15 (packet 15) — the app's `1.3.1` is the specification's own number, and four more ledger claims
+  were checked against the spec before they were acted on.** `structure-11` said the number "is not IAL spec
+  numbering (IAL Unit 1 topic 1.1 'Scarcity, choice and potential conflicts')". `econ_spec.txt:510` reads
+  `1.3.1 Introductory concepts` — the number *and* the title are the specification's. Nothing was renumbered;
+  the item is closed as no-change, like packet 14's "relabel as 3.3". The other three: `specGap-01` asks for
+  factors of production **and their rewards** (rent, wages, interest, profit), which is no leaf of 1.3.1 — the
+  four factors are named once inside 3a, because "capital" has to mean something for 4c/4d, and the rewards are
+  not taught; quiz q24, which tested them, is deleted. `specGap-07` says the spec "names" Hayek and Marx: the
+  IAL document names **Adam Smith only** (`:540`); Marx does not appear in it at all and Hayek appears once, at
+  `:2636`, in a general co-teaching note. `specGap-06` asks whether comparative advantage belongs here: 5a asks
+  for the advantages and disadvantages of specialisation and the division of labour, so the term was removed
+  from `extras` rather than explained. `structure-07` cites "1.2.7" for the price mechanism, which is UK
+  numbering, but its recommendation stands for the right reason — rationing, incentive and signalling are
+  **1.3.4** (`:707-709`), a section that already exists, so that material left this one.
+- **2026-09-15 (packet 15) — `C-introductory-concepts-specGap-08` moved to packet 17.** Economic agents and
+  their objectives — consumers maximising utility, firms maximising profits — is 1.3.2·1 (`econ_spec.txt:565-568`),
+  the `consumer-behaviour` section's own topic. Teaching it here would duplicate it. Reassigned rather than
+  built, so the coverage it represents is still owed by someone.
+- **2026-09-15 (packet 15) — 5c has five bullets and the ledger held three.** `specGap-09/10/11` cover saving,
+  making funds available, and forward markets. The specification also asks for "to facilitate the exchange of
+  goods and services" and "to provide a market for equities" (`econ_spec.txt:549, 551`). Minted as
+  `specGap-12` and `specGap-13` and taught, the same way packet 14 minted its contribution item. A spec-derived
+  ledger is not a complete one; the spec text is the oracle, and the count is read off it.
+- **2026-09-15 (packet 15) — a diagram whose geometry is a claim is drawn by sampling the function it claims.**
+  `accuracy-01` measured the March PPF path bulging convex between C and D while the checklist beside it told
+  students a PPF is concave. The fix is not a better-drawn Bézier: `ppfK()` in `scripts/_packet15-util.mjs`
+  defines K = −0.015C² − 0.05C + 40, the six labelled points are its exact values, and the SVG is a 101-point
+  polyline sampled from it, so the curve a student sees IS the function the body works. The runner then
+  re-samples the emitted path and refuses to stage if the gradient eases anywhere. That check earned its keep
+  immediately: raising the sample count made the one-decimal screen coordinates round into a false wobble at
+  the flat end, which the check caught and two decimals fixed. **Where a diagram asserts a mathematical
+  property, generate it from the property and verify the output, rather than drawing it and asserting.**
+- **2026-09-15 (packet 15) — the pre-test is the first three unpinned quiz items, so which three is a
+  content decision.** `structure-06` described a random draw; since F079 `components/learn-mode/PreTest.jsx`
+  takes the first three items no block has reserved, in stable array order. Pinning all 32 items would have
+  pushed the pre-test onto reserved questions a student meets again minutes later. Four core items — one each
+  from chapters 3, 4, 5 and 6 — are deliberately left unpinned, and the first three of those are the pre-test.
+  The post-test re-asking an item is NOT changed: `PostTest.jsx:28` prioritises what the student got wrong,
+  which is the point of it.
+- **2026-09-15 (packet 15) — eighteen small steps, not fifteen medium ones.** Packet 14's template said one
+  subsection per spec skill; this section has 25 leaves in six sub-topics, which came out as 18 subsections
+  against packet 14's 15. That is the treatment, not an overrun: the section's defect is 167 of 192 starts
+  stopping on step 0, and the fix for a step that is too full is more steps, not denser ones. Every subsection
+  lands between 298 and 350 words of the 350 budget. A section packet should size its blocks from the spec's
+  own sub-topics and let the step count follow.
+- **2026-09-15 (packet 15) — no real example in this section names a year or a figure.** Layer 4 requires a
+  source on any real example that does, and packet 14's Layer 6 still found an overstated sourced figure. For
+  a conceptual first topic the examples do not need statistics to work, so they carry none: the eighteen
+  examples are structural (two similar economies choosing different housing policies, a metro map as a model,
+  an overfished stock, a congestion charge). Nothing to overstate is a stronger guarantee than a citation.
+- **2026-09-15 (packet 15) — a word-bank fill-in cannot be "stem-tolerant", so half of `topFix-01` is
+  obsolete.** The item asks for fill-in matching that accepts "signalling"/"ought". Under packet 7's recall
+  contract a fill-in is a chip bank (`lib/recall-widgets.js:199-208`) graded on the chip's own text by
+  `gradeFillin` (`:212-219`); the student never types, so there is no stem variant to be intolerant of. Closed
+  with that evidence rather than built. The other half — replacing the four non-genuine reorders with
+  sort/match exercises — is built.
+- **2026-09-15 (packet 15) — the coverage oracle itself is missing 60 specification bullets, and fixing it
+  is NOT part of this packet.** `audit/scripts/build-spec-items.mjs` matches a bullet with
+  `/^\s*[•●▪‣]\s*(.*)$/`, anchored to the start of the line. The extracted specification puts the left-hand
+  topic-title column on the same line as a list's first bullets — `   possibility                    •   the
+  maximum productive potential of an economy` — so those lines never match. Counting bullet characters in the
+  raw text against the ones the builder parsed: **31 dropped in Economics, 29 in Business, 60 in all.**
+  `spec-items.json` is what `spec.coverage` and `spec.uncovered` are computed from, so those requirements are
+  invisible to every content packet: 1.3.1's point 4a keeps three of its five bullets, and Business loses
+  Ansoff's Matrix and Porter's Strategic Matrix among others. A section can report 100% coverage while never
+  teaching them, which is exactly what this section's 4a did.
+  Minted as **V001 in packet 3.1** rather than fixed here. Regenerating the asset changes the leaf count for
+  all 43 sections and will add `spec.uncovered` DEBT across many of them; that is a cross-cutting change with
+  its own baseline diff to read, and it does not belong inside a section packet. **It should be done before
+  packet 16**, because every content packet from here measures itself against the incomplete oracle.
+  Found the way [[revvylearn-verify-independently]] says to: by counting the raw specification independently,
+  rather than by asking the generated asset whether it was complete.
+- **2026-09-15 (packet 15) — Layer 6 found two things no automated check in this repo can see, and both were
+  inside assets the packet *kept*.** The validator, the census, the runner's own phrase bans and the
+  independent arithmetic re-check all passed on a bundle that still carried (a) two March flashcards defining
+  **allocative efficiency**, a term with zero occurrences anywhere else in the section and no leaf in 1.3.1,
+  and (b) the retained economic-systems SVG placing **"UK" at the exact midpoint of the spectrum bar, colour-
+  matched to the "Mixed" label**, with "USA" beside it, while the block's own text names Hong Kong, Singapore,
+  the Nordic economies and North Korea. `locale.institution` matches institutions, not country framing, and
+  `depth.notes-titles` compares titles, not card bodies. **The lesson is about retained assets specifically:
+  a packet audits what it writes and trusts what it keeps.** A section packet should read every kept card,
+  mistake and diagram against the spec span and against the audience, exactly as it reads the new ones — the
+  packet-13 finding ("a substitution rule written for prose cannot match a flow step, a takeaway or a
+  flashcard") one step further out.
+- **2026-09-15 (packet 15) — leave exactly three quiz items unpinned, not four.** `PreTest.jsx` slices the
+  unreserved pool at three, so a fourth unpinned item reaches no surface a block links to — `structure-01`'s
+  complaint in miniature. Layer 6 read the four-item version as an off-by-one repeated in four blocks, which
+  is a fair reading of what it looked like from outside. The number of deliberately unpinned items is exactly
+  the pre-test's slice size, and the runner says so in a comment so the next reader does not have to infer it.
+- **2026-09-15 (packet 15) — write the Layer 6 brief's spec span from the last leaf, not the last page.**
+  The brief gave `econ_spec.txt:510-568`; 6c sits at 569, so the reviewer correctly reported an entire
+  subsection and its six dependents as out of scope, then correctly guessed the span had been truncated
+  mid-list. No content was wrong. Check the span's final line against `spec-items.json` before briefing.
+- **2026-09-15 (packet 15) — `npm run validate` is a WHOLE-DATABASE gate in a worktree several sessions
+  write to, so a packet can be blocked by another packet's live content.** Mid-build, `decision-making-
+  techniques` was restored to its pre-packet-14 state by the packet-14 session on the founder's instruction.
+  Between two `npm run validate` runs minutes apart the totals went from 0 new findings to 11 new BLOCK and
+  22 new DEBT, all in that one section. Packet 15's own section was and stayed 0 BLOCK / 0 DEBT / 100%.
+  Two things to carry forward. **First, diagnose before alarming:** the `updated_at` column on those rows read
+  March, which looked like a smoking gun until the freshly published `introductory-concepts` row showed March
+  too — that column is not maintained on write. The signal that actually distinguishes a restore from a publish
+  is `published_at` (untouched) plus an empty `draft`, because `restore-section.mjs` writes only `data`.
+  **Second, the baseline is shared state:** this packet's `--baseline --confirm` removed 78 keys, all its own,
+  at a moment when that other section was still packet-14 content. If the restore is permanent, that section's
+  33 keys have to go back, and that is the restoring session's call. A packet should record what its own
+  baseline write changed (+0 −78 here) so a concurrent write can be told apart from its own.
+- **2026-09-14 (packet 14, post-gate) — reverted from live content; packet 14 is built and verified, not shipped.**
+  Packet 14's PROTOCOL lifecycle treated publish as a normal content-packet step, the way packet 13's was, without
+  checking whether the new content instantiated a code dependency packet 13's did not. It did: two of the four
+  recall types (`match`, `classify`) and the `MatchRecall`/`ClassifyRecall`/`lib/recall-widgets.js` code that
+  renders them exist only on `remediation/2026-09` (packet 7), not on `main`. A live console error on
+  `revvylearn.com` was seen right after publish and (wrongly, at first) attributed to that gap; the section's
+  content was restored from the automatic pre-publish snapshot
+  (`audit/snapshots/auto-prepublish-2026-09-14T18-26-00-292Z__business__decision-making-techniques.json`) and the
+  validator baseline reverted alongside it (2,415 → 2,448 keys, matching `origin/main`'s commit at the time).
+  Both are confirmed exact: `npm run validate` reports the section's original 11 BLOCK / 22 DEBT / 60%, and a
+  table-by-table diff of the restored live bundle against the snapshot is byte-identical on all 8 tables.
+  **The rule for every content packet from here: check `git show origin/main:<path>` for the components and
+  library files the new content's recall types or body-item types need, BEFORE publishing, not after a crash.**
+  A packet whose recalls are all `reorder`/`fillin` (main has both) can publish standalone; a packet using
+  `match`/`classify` cannot until the checkpoint ships packet 7's code. The rewritten content itself is untouched
+  and safe: `scripts/_packet14-*.mjs` and `audit/snapshots/packet-14-bundle__business__decision-making-techniques.json`
+  hold the verified, reviewed version exactly as Verify A confirmed it. Publish it with
+  `node scripts/publish-section.mjs decision-making-techniques --confirm` (content already staged as `draft`
+  needs re-staging first via `node scripts/packet-14-decision-making-techniques.mjs --stage`, since the restore
+  overwrote `data` but the `draft` column was already null from the original publish) once packets 5 and 7 are
+  on `main`.
+- **2026-09-14 (packet 14, post-revert) — a pre-existing production crash on this section, unrelated to packet 14.**
+  With the content back to its exact pre-packet-14 state, `decision-making-techniques`'s Learn Mode still throws
+  an uncaught `TypeError: Cannot read properties of undefined (reading 'map')` on the first click into it, on
+  `main` as deployed. It is not this packet's bug: `business-growth`, never touched this session, throws the
+  identical error at the identical script location and renders correctly regardless; `origin/main` has no
+  `components/learn-mode/FlowChain.jsx` at all (production's Learn Mode is a materially older, more monolithic
+  version of this code than the remediation branch), so the two branches have diverged further than file-level
+  feature gaps and a file-by-file diff will not quickly find this. Not investigated further this session — flagged
+  here rather than guessed at again on the live site. Whoever picks this up: start from `git show
+  origin/main:components/LearnModeTab.jsx` and this section's restored `content[]` (the two blocks with `flow`
+  body items are the one structural thing distinguishing it from sections that load cleanly), and check
+  Vercel's function logs for the actual thrown line, which is faster than re-deriving it from a diff.
