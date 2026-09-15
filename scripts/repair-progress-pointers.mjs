@@ -27,11 +27,41 @@
 //
 // This only ever LOWERS a pointer, and only for rows that are genuinely out of range. A row whose
 // furthest_step still exists is left exactly as it is, so re-running is safe and idempotent.
+//
+// SNAPSHOT FIRST, the same rule content writes follow. These are real students' rows and the old values
+// are not recoverable from anywhere else, so --confirm writes every affected row to
+// audit/snapshots/progress-repair-<stamp>.json before it changes one, and refuses to write if it cannot.
+// Restore is `--restore <file>`, which puts the recorded furthest_step and total_steps back.
 import { supabase } from './_db.mjs';
 import { countSteps } from '../lib/learn-steps.js';
+import { writeFileSync, readFileSync } from 'node:fs';
 
 const args = process.argv.slice(2);
 const confirm = args.includes('--confirm');
+const restoreFile = (() => { const i = args.indexOf('--restore'); return i >= 0 ? args[i + 1] : null; })();
+if (restoreFile) {
+  const snap = JSON.parse(readFileSync(restoreFile, 'utf8'));
+  if (!Array.isArray(snap.rows)) {
+    console.error(`${restoreFile} is not a snapshot written by this script`);
+    process.exit(1);
+  }
+  console.log(`${confirm ? 'RESTORING' : 'DRY RUN — would restore'} ${snap.rows.length} rows from ${restoreFile} (taken ${snap.taken})`);
+  for (const r of snap.rows) {
+    console.log(`  ${r.section_id.padEnd(32)} ${r.user_id.slice(0, 8)}  back to furthest_step=${r.furthest_step} total_steps=${r.total_steps}`);
+  }
+  if (!confirm) { console.log('\nNothing written. Re-run with --confirm to apply.'); process.exit(0); }
+  let back = 0;
+  for (const r of snap.rows) {
+    const { error } = await supabase
+      .from('user_content_progress')
+      .update({ furthest_step: r.furthest_step, total_steps: r.total_steps })
+      .eq('id', r.id);
+    if (error) console.error(`FAILED ${r.id}: ${error.message}`); else back += 1;
+  }
+  console.log(`\nrestored ${back} of ${snap.rows.length} rows`);
+  process.exit(back === snap.rows.length ? 0 : 1);
+}
+
 const model = (() => {
   const i = args.indexOf('--model');
   const v = i >= 0 ? args[i + 1] : 'steps';
@@ -111,6 +141,21 @@ console.log(`${broken.length} rows, ${new Set(broken.map((b) => b.user_id)).size
 if (!confirm) {
   console.log('\nNothing written. Re-run with --confirm to apply.');
   process.exit(0);
+}
+
+const stamp = new Date().toISOString().replace(/[:.]/g, '-');
+const snapPath = `audit/snapshots/progress-repair-${stamp}.json`;
+try {
+  writeFileSync(snapPath, JSON.stringify({
+    taken: new Date().toISOString(),
+    model,
+    rows: broken.map(({ id, user_id, section_id, furthest_step, total_steps }) =>
+      ({ id, user_id, section_id, furthest_step, total_steps })),
+  }, null, 1));
+  console.log(`\nsnapshot: ${snapPath}  (restore with --restore ${snapPath} --confirm)`);
+} catch (e) {
+  console.error(`could not write the snapshot (${e.message}); refusing to change rows that could not be restored`);
+  process.exit(1);
 }
 
 let written = 0;
