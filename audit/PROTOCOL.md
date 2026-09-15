@@ -52,6 +52,11 @@ number, the commit range or `git diff` to inspect, and the instruction to run `l
 It confirms or rejects each claimed id with `file:line` evidence, using the CLI. It must not see this
 conversation, and it must not be told what the builder believes it did.
 
+**The verifier's agent type must be able to WRITE `audit/ledger.json`.** Where `packet-verifier` is not
+available, substitute a type with Bash write access — not a read-only search agent. Packet 16 used one, and it
+judged all 32 ids and then declined to run a single `ledger.mjs confirm`, because the CLI writes a file; the
+whole pass had to be re-run. Read-only is about what it may change, and `ledger.mjs` is the one thing it may.
+
 ### 4. Verify B — student walkthrough (agent `student-walkthrough`, or the main session if the agent cannot
 reach the Browser pane)
 
