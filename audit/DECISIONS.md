@@ -12,6 +12,16 @@ Append only. Every entry needs a date and the packet that made it.
 
 ## Settled
 
+- **2026-09-15 — the three lenses keep their filled boxes, against F067's fix text.** F067 asked for the Key
+  Idea to dominate and, in the same sentence, for Real Example / Misconception / Exam Matters to be demoted to
+  a compact style with "no coloured fill". Packet 5 shipped that and a verifier confirmed it. The founder saw
+  the result and asked for the boxes back: easier on the eyes, and friendlier. They are back, matching the
+  Notes tab and production. **F067's goal is kept by making the Key Idea stronger, not the lenses weaker**: a
+  4px left rule against their 1px border, 16px/500 text against their 14px, and more padding. A verifier
+  reading F067's wording will see a departure from it; it is deliberate, and this entry is the authority.
+  Do not re-flatten the lenses without asking the founder.
+
+
 - **2026-09-15 — content may not depend on unshipped code, and the test is field-level.** Packet 14 was reverted
   for using `match`/`classify`; the rule that came out of it said `reorder`/`fillin` were safe, and packet 15
   published three `reorder` recalls authored to the packet-7 contract, which drops `shuffled`. Main's

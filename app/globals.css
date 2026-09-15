@@ -7286,9 +7286,13 @@ a.auth-dropdown-item:visited {
 .lm-chapter-dot:disabled { cursor: default; }
 .lm-chapter-dot:focus-visible { outline: 2px solid var(--accent-green); outline-offset: 2px; }
 
-/* Visual hierarchy (F067): the Key Idea is the one dominant element; the three lenses are
-   demoted to a compact strip with a hairline rule and a small label; the takeaway is the
-   strongest element on a check-in. */
+/* Visual hierarchy (F067): the Key Idea is the one dominant element and the takeaway is the strongest
+   element on a check-in. F067's own wording asked for the three lenses to lose their coloured fill as
+   well, and packet 5 shipped that; the founder asked for the boxes back on 15 September — easier on the
+   eyes, and friendlier — so they keep the filled cards they have on the Notes tab and in production.
+   The hierarchy is carried by the Key Idea being stronger than they are rather than by stripping them:
+   a 4px rule against their 1px border, 16px/500 text against their 14px, and more padding.
+   Do not re-flatten the lenses without asking; this is a deliberate departure from F067's fix text. */
 .rl-key-idea {
   border-left-width: 4px; padding: 16px 18px; margin-bottom: 18px;
 }
@@ -7296,12 +7300,9 @@ a.auth-dropdown-item:visited {
 .rl-key-idea p { font-size: 16px; line-height: 1.55; font-weight: 500; color: var(--text-primary); }
 .rl-lenses { display: grid; gap: 10px; margin-top: 6px; }
 .rl-lenses .rl-real-example, .rl-lenses .rl-misconception, .rl-lenses .rl-exam-matters {
-  background: transparent; border: 0; border-left: 2px solid var(--border-hover);
-  border-radius: 0; padding: 2px 0 2px 12px; margin: 0;
+  /* the filled card comes from the base rules; the grid gap owns the spacing */
+  margin: 0;
 }
-.rl-lenses .rl-real-example { border-left-color: var(--rl-amber); }
-.rl-lenses .rl-misconception { border-left-color: var(--rl-red); }
-.rl-lenses .rl-exam-matters { border-left-color: var(--rl-blue); }
 .rl-lenses .rl-real-example-label, .rl-lenses .rl-misconception-label, .rl-lenses .rl-exam-matters-label {
   font-size: 12px; margin-bottom: 3px;
 }
