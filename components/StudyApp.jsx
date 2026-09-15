@@ -652,10 +652,25 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     });
   }
 
+  /*
+   * Draft preview, development only (packet 16). `?draft=1` on the page URL is forwarded to
+   * /api/sections/[id], which serves the staged `draft` payload instead of the live `data` — the
+   * only way to walk a section that is finished but held back from publishing. The API refuses the
+   * flag in any production build, so this is inert for a student; it is forwarded rather than
+   * gated here so that one guard, on the server, is the whole of it.
+   */
+  const draftFlag = () => (typeof window === 'undefined' ? null : new URLSearchParams(window.location.search).get('draft'));
+  const sectionUrl = (id) => {
+    const draft = draftFlag();
+    return draft ? `/api/sections/${id}?draft=${encodeURIComponent(draft)}` : `/api/sections/${id}`;
+  };
+
   useEffect(() => {
+    // The first section arrives server-rendered as initialSectionData, read from the live `data`
+    // column — so a draft preview has to refetch it rather than trust what the page shipped.
     if (isInitial) {
       setIsInitial(false);
-      return;
+      if (!draftFlag()) return;
     }
     async function loadSection() {
       // F092: a student moving between sections and back refetched 152 KB every time. Keep what
@@ -665,11 +680,11 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       // cache keyed on the section alone would keep serving a free student's 2-question quiz after
       // they subscribed, and worse, a paying student's 25 after they signed out. Caught by the
       // packet verifier; it was a bug I introduced with the cache itself.
-      const cacheKey = `${activeSection}:${user?.id || 'anon'}:${isPremium ? 'pro' : 'free'}`;
+      const cacheKey = `${sectionUrl(activeSection)}:${user?.id || 'anon'}:${isPremium ? 'pro' : 'free'}`;
       const cached = sectionCacheRef.current.get(cacheKey);
       if (cached) { setSectionData(cached); return; }
       try {
-        const res = await fetch(`/api/sections/${activeSection}`);
+        const res = await fetch(sectionUrl(activeSection));
         if (res.ok) {
           const data = await res.json();
           sectionCacheRef.current.set(cacheKey, data);
@@ -839,7 +854,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       const step = readSavedStep(subjectId, firstId);
       setLearnModeSection(step);
       setLearnModeResuming(step > 0);
-      fetch(`/api/sections/${firstId}`)
+      fetch(sectionUrl(firstId))
         .then(res => res.ok ? res.json() : null)
         .then(data => { if (data) setSectionData(data); })
         .catch(() => {});

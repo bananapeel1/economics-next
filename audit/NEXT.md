@@ -1,4 +1,163 @@
 # Next session brief
+
+## Packet 16 spec — meeting-customer-needs, the Business section students meet first (Opus, 15 September 2026)
+
+Business Unit 1 (WBS11), IAL topic **1.3.1 Meeting customer needs**, `audit/raw/bus_spec.txt:504-544`,
+**29 countable leaves** under 6 lettered requirements in three sub-topics: 1 The market, 2 Market research,
+3 Market positioning. 123 section opens and **101 of 123 starts stuck on step 0** — the second-worst
+abandonment in the product, and the reason this section is next.
+
+State on 15 September, before the packet: 6 blocks · 15 subsections · **0 recalls** · 25 quiz (5 reachable,
+19 of 25 correct at position B) · 5 practice · **0 diagrams** · 4 chains; validator **25 BLOCK, 16 DEBT,
+86% coverage**.
+
+**V001 does not reach this section, and that was measured rather than assumed.** The handoff asks packet 16
+to fix packet 3.1's dropped-bullet bug first or knowingly accept an incomplete oracle. Counting bullet
+characters in `bus_spec.txt:504-545` independently: **21 bullets, all of them at line start, and all 29
+leaves present in `spec-items.json`**. The builder's line-anchored regex drops nothing in this span, so the
+coverage oracle is complete *here*. V001 stays packet 3.1's, unfixed, and the next Business packet must
+re-measure rather than inherit this result — Ansoff and Porter's Strategic Matrix are dropped in other spans.
+
+### Six ledger claims the specification refutes or redirects — read before building
+
+Same rule as packets 14 and 15. Every `1.1.x` number in this packet's ledger is **UK GCE Theme 1 numbering**;
+the IAL topic is 1.3.1 and the section row already carries it.
+
+1. **`structure-07` is wrong about sampling, and `topFix-04` acts on it.** It calls sampling "not on the
+   IAL spec" and `topFix-04` asks to "shrink the sampling block to a single 'sample size and bias'
+   subsection". `bus_spec.txt:534-537` reads `d) Sampling methods: • random • quota • stratified` — three
+   required leaves. Acting on the claim would delete required content, which is the trap rule 1 exists for.
+   The **weighting** half stands: sampling is 3 of 29 leaves and had a whole block of two subsections. It
+   gets **one subsection teaching all three named methods**, and sample size and bias stay as a paragraph
+   inside it rather than a step of their own.
+2. **`structure-06` is wrong: the block order already follows the IAL specification.** It says orientation
+   belongs with market research and segmentation is misplaced. In IAL, **product and market orientation is
+   3a**, the first leaf of *Market positioning* (`:538`), and **segmentation is 3c** (`:541`) beside
+   competitive advantage 3d, differentiation 3e and adding value 3f. The app's blocks 4 and 5 are exactly
+   that. Closed as no-change, like packet 15's `structure-11`.
+3. **`specGap-05` "limitations of market research (as a topic)" is not a leaf of 1.3.1.** The string
+   "limitation" appears eight times in the Business specification and never inside this topic
+   (`:906, :908, :1154, :1161, :1165, :1174, :1236, :1242`). It is UK GCE 1.1.2. The **defect it describes
+   is real** — `practice[2]`'s guidance demands material the section never teaches, exactly like packet 15's
+   `quiz` q24. The fix is in the practice item, not a new subsection: limitations are taught as the
+   *evaluation* attached to the research subsections (cost, time, what people say against what they do,
+   data going out of date), which is where the AO3/AO4 marks for them actually sit.
+4. **`specGap-06` is half-refuted and redirected.** "ICT" appears **nowhere** in the Business specification,
+   and neither does "social networking". But `2c` names `• websites/social media` (`:530`) and
+   `• databases.` (`:533`) as **secondary research methods**. So the material is required — under the
+   specification's own frame, not the UK GCE's "use of ICT". Built as a *Methods of secondary research*
+   subsection, which is also what closes `specThin-02`, `specThin-03` and three `spec.uncovered` leaves.
+5. **`topFix-01`'s suggested wording is not the IAL command word.** It asks for "What is meant by a niche
+   market? (2)". Appendix 6 (`:2213-2215`) names the command **Define**, 2 marks. The tariff in the claim is
+   right and the wording is wrong; `practice-01`'s "IAL Business definitions are 2-mark 'What is meant by…'
+   items" is wrong the same way. Every practice stem uses an Appendix 6 command word.
+6. **`structure-09` and `structure-11` are observations, not defects.** "Takeaways match their blocks well
+   (good)"; "misconceptions are genuine student errors — this is a strength, not filler". Both close as
+   no-change, and the packet **keeps** those misconceptions rather than rewriting them, having read each one
+   against the spec span (the packet-15 rule about retained assets).
+
+`topFix-03` asks for an *interactive* market map ("drag a brand onto price/quality axes"). Packet 7 settled
+that: `InteractiveDiagram` is deleted, and the drill appears only on an SVG carrying three or more
+`text.draggable` labels. The market map is built as a static SVG with scenarios; no drill labels, because
+packets 13.5-13.7 decide the label set per diagram type.
+
+### The shape — six blocks in specification order, 21 subsections
+
+One block per half of a spec sub-topic, one subsection per skill, so no step carries two ideas. Nine of the
+fifteen March subsections survive by id; twelve are new.
+
+1. **The Market: Mass and Niche** (1a) — Mass markets · Niche markets · Market size, share and growth
+   (worked) · Brands and brand loyalty
+2. **Dynamic Markets, Competition and Risk** (1b, 1c, 1d) — Online retailing and how markets change ·
+   Innovation, market growth and adapting to change · How competition affects the market · Risk and uncertainty
+3. **What Market Research Is For** (2a) — Primary and secondary research · Quantitative and qualitative data ·
+   Identifying and anticipating customer needs · Quantifying likely demand (worked)
+4. **Research Methods and Sampling** (2b, 2c, 2d) — Methods of primary research · Methods of secondary
+   research · Sampling methods
+5. **Orientation and Market Mapping** (3a, 3b) — Product and market orientation · Market mapping
+6. **Segmentation, Advantage and Value** (3c, 3d, 3e, 3f) — Market segmentation · Competitive advantage ·
+   The purpose of product differentiation · Adding value
+
+`quizIndices` and `practiceIndices` on every block, the check-in item first. **27 steps** through
+`buildSteps()` (21 teach + 6 check-ins), against fifteen crowded ones today.
+
+**One fictional firm carries every worked figure.** Zuri Juice, a chilled-juice maker in Nairobi, with
+fictional rivals Tamu, Mkali, Safi and Halo. Dollars throughout, one currency in the section. Market
+$32m last year → $40m this year (growth 25%); Zuri's sales $6m (share 15%); inputs $0.45 a bottle against a
+$1.20 price (value added $0.75); a 600-shopper survey with 18% weekly buyers over a 500,000-shopper
+population (90,000 buyers, $108,000 a week). Nothing about Zuri is real, so there is nothing to overstate;
+real examples in the Real Example cards carry no figure or year unless they carry a source (Layer 4).
+
+### Scope — the 32 ledger ids assigned to packet 16
+
+- **Built:** `topFix-01` `topFix-02` `topFix-03` `topFix-05` · `quiz-01` `quiz-02` · `practice-01`
+  `practice-02` `practice-03` · `structure-01` `structure-02` `structure-03` `structure-04` `structure-05`
+  `structure-08` `structure-10` `structure-12` · `specGap-01` `specGap-02` `specGap-03` `specGap-04`
+  `specGap-07` · `specThin-01` `specThin-02` `specThin-03`
+- **Built, against the claim's own remedy:** `topFix-04` (sampling shrinks to one subsection, it is not
+  removed), `structure-07` (weighting rebalanced, sampling kept), `specGap-05` (limitations taught as
+  evaluation and the practice guidance fixed, no off-spec subsection), `specGap-06` (built as secondary
+  research methods, not as "use of ICT")
+- **Closed as no-change, with the spec line:** `structure-06`, `structure-09`, `structure-11`
+- **Nothing deferred to a later packet.** No ids minted: all four uncovered leaves already have one.
+
+### Acceptance checks a verifier can run without this conversation
+
+1. `node scripts/packet-16-meeting-customer-needs.mjs --dump` prints no PROBLEMS and no new BLOCK, and
+   writes the bundle to `audit/snapshots/packet-16-bundle__business__meeting-customer-needs.json`.
+2. Against that bundle: 6 blocks, 21 subsections, 21 recalls across all four contract types, every recall
+   with a `why`, every fill-in with distractors; 30 quiz with exactly three unpinned; 8 practice; 5 diagrams,
+   every one pinned to a block by `diagramId`.
+3. Every practice `command` is in `audit/raw/tariff-census.json` for **business**, its `marks` match, and no
+   guidance above 6 marks contains `(n marks)`. No "Outline" anywhere in the bundle. No "Examine" (that is
+   Economics). Assess is **10**, this being Unit 1.
+4. Every one of the 29 leaves in `spec-items.json` for `business` `1.3.1` is evidenced: the section validator
+   reports **100% coverage, 0 BLOCK**, and DEBT only from `terms.later-unit` ("niche markets" is also a Unit 4
+   sub-topic label — a lint false positive on a leaf the spec puts at `:508`) and `quant.unit` (no WBS11 drill
+   template until packet 13.2).
+5. `£` appears nowhere; `$` figures agree across body, diagrams, notes, quiz and practice: `40`/`32`/`25%`,
+   `6`/`15%`, `0.45`/`1.20`/`0.75`, `600`/`18%`/`500,000`/`90,000`/`108,000`.
+6. No sentence asserts what examiners reward, expect or penalise without a citation (15 do today).
+7. `npm test`, `npm run build`, `npm run validate` exit 0; `node audit/scripts/ledger.mjs unverified 16` is clear.
+
+### Verify B — 390×844, `/business/unit-1/meeting-customer-needs`, signed out
+
+The section is **NOT published** (see the publish hold below), so Verify B runs against the staged draft via
+the section preview, and the script is about what the student ends up with:
+
+1. Open the section, storage cleared. The pre-test offers **three** questions, and every one is on material
+   the section teaches. Step 1 of 27 is "Mass Markets", one heading, and **Next is reachable without
+   scrolling past the recall**.
+2. Walk to the chapter 1 check-in. The student sees the market-share diagram, one quiz question, one practice
+   question, a takeaway, and no spaced recall (there is no earlier chapter).
+3. On the chapter 2 check-in a **spaced recall from chapter 1** appears with its cue, in a different start
+   order from its first showing.
+4. On the chapter 5 check-in the **market map** renders at card width, its scenarios step through plotting,
+   the gap and the demand caveat, and the pinch-zoom sheet opens.
+5. Every classify recall's chips **wrap** — no horizontal scroll on the document at any step (the packet-15
+   regression).
+6. Finish the section. The completion screen names the recall score and any skips, and "Complete topic ✓" is
+   offered on step 27.
+
+### The publish hold
+
+**Nothing in this packet is published.** DECISIONS 2026-09-15: content authored to the packet-7 recall
+contract crashes `main`, because main's `ReorderRecall` reads `recall.shuffled` in a `useState` initialiser
+and this packet's reorders do not carry it. Packet 15 took the most-opened section in the product down that
+way. The bundle is staged as `draft`, the ledger is claimed on the staged bundle, and the publish command is
+handed to the founder for the packet 5/7 checkpoint:
+
+```
+node scripts/packet-16-meeting-customer-needs.mjs --stage
+node scripts/publish-section.mjs meeting-customer-needs --confirm
+```
+
+Because nothing is published, **`audit/validator-baseline.json` is not rewritten by this packet**: the live
+row is unchanged, so its 41 baselined findings are still true of what students see. The baseline shrinks by
+this section's own keys at the checkpoint, in the same session that publishes.
+
+---
+
 ## Handoff — after packet 15 (written 15 September 2026)
 
 **Next is packet 16, `meeting-customer-needs`** (Business Unit 1, WBS11, IAL topic **1.3.1** — the Business

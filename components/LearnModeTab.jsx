@@ -167,6 +167,8 @@ export default function LearnModeTab({
     if (totalSteps && currentStep !== safeStep) onStepChange(safeStep);
   }, [currentStep, safeStep, totalSteps]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  const pretestCount = Math.min(3, (quizData || []).length);
+
   // ── Distribute diagrams/quiz/practice to check-in steps ──
   const sortedPractice = useMemo(() => [...(practiceData || [])].sort((a, b) => a.marks - b.marks), [practiceData]);
 
@@ -447,11 +449,18 @@ export default function LearnModeTab({
         </div>
       )}
 
-      {/* Optional pre-test offer (step 0 only, first visit only) */}
-      {pretestOffered && safeStep === 0 && (
+      {/*
+        * Optional pre-test offer (step 0 only, first visit only).
+        *
+        * The count is computed, not written. PreTest slices its pool at three, and a signed-out or
+        * free student is served only PREVIEW_LIMITS.quiz items by the API (F086), so on the busiest
+        * path in the product the offer promised three questions and delivered two. Packet 16's
+        * walkthrough.
+        */}
+      {pretestOffered && safeStep === 0 && pretestCount > 0 && (
         <div className="lm-pretest-offer" role="region" aria-label="Optional pre-test">
           <div className="lm-pretest-offer-text">
-            <strong>Want a quick check first?</strong> Three questions on what you might already know. Optional, and nothing is marked.
+            <strong>Want a quick check first?</strong> {pretestCount === 1 ? 'One question' : `${pretestCount === 2 ? 'Two' : 'Three'} questions`} on what you might already know. Optional, and nothing is marked.
           </div>
           <div className="lm-pretest-offer-actions">
             <button className="lm-pretest-offer-yes" onClick={() => { trackFunnel('pretest_started', { sectionId }); setShowPretest(true); setTimeout(() => scrollToTop(true), 0); }}>

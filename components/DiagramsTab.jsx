@@ -61,7 +61,10 @@ function DiagramCard({ diagram }) {
 
       {diagram.checklist && (
         <div className="diagram-checklist">
-          <div className="diagram-checklist-title">What examiners look for</div>
+          {/* Not "what examiners look for": that is the uncited claim about marking the content gate
+              blocks in prose (claim.uncited), printed by the app itself over every diagram in the
+              product. The checklist says what a correct diagram contains, which is checkable. */}
+            <div className="diagram-checklist-title">What a correct diagram shows</div>
           <ul>
             {diagram.checklist.map((item, i) => (
               <li key={i}>{item}</li>

@@ -39,21 +39,39 @@ export async function GET(request, { params }) {
     isPremium = hasPremiumAccess(sub) || user.app_metadata?.role === 'admin';
   }
 
+  /*
+   * Draft preview, development only (packet 16).
+   *
+   * Since packet 2 a content packet stages to `draft` and a student reads `data`, and since the
+   * 15 September decision a section authored to the packet-7 recall contract may not be published
+   * until packets 5 and 7 are on main. Three finished sections are now held that way, and the
+   * PROTOCOL still requires a 390x844 walkthrough of each before its gate passes — which had no
+   * route, because nothing on the student path reads `draft`.
+   *
+   * `?draft=1` selects `draft` and falls back to `data` per table, so a staged section renders
+   * through the real components with the real engine. It is OFF in any production build, including
+   * Vercel previews, which build with NODE_ENV=production: the flag cannot reach a student.
+   */
+  const wantDraft = process.env.NODE_ENV !== 'production'
+    && new URL(request.url).searchParams.get('draft') === '1';
+  const cols = wantDraft ? 'data, draft' : 'data';
+
   const [content, notes, diagrams, flashcards, quiz, mistakes, practice, extras] = await Promise.all([
-    db.from('section_content').select('data').eq('section_id', id).maybeSingle(),
-    db.from('section_notes').select('data').eq('section_id', id).maybeSingle(),
-    db.from('section_diagrams').select('data').eq('section_id', id).maybeSingle(),
-    db.from('section_flashcards').select('data').eq('section_id', id).maybeSingle(),
-    db.from('section_quiz').select('data').eq('section_id', id).maybeSingle(),
-    db.from('section_common_mistakes').select('data').eq('section_id', id).maybeSingle(),
-    db.from('section_practice').select('data').eq('section_id', id).maybeSingle(),
-    db.from('section_extras').select('data').eq('section_id', id).maybeSingle(),
+    db.from('section_content').select(cols).eq('section_id', id).maybeSingle(),
+    db.from('section_notes').select(cols).eq('section_id', id).maybeSingle(),
+    db.from('section_diagrams').select(cols).eq('section_id', id).maybeSingle(),
+    db.from('section_flashcards').select(cols).eq('section_id', id).maybeSingle(),
+    db.from('section_quiz').select(cols).eq('section_id', id).maybeSingle(),
+    db.from('section_common_mistakes').select(cols).eq('section_id', id).maybeSingle(),
+    db.from('section_practice').select(cols).eq('section_id', id).maybeSingle(),
+    db.from('section_extras').select(cols).eq('section_id', id).maybeSingle(),
   ]);
 
-  const arr = (r) => (Array.isArray(r.data?.data) ? r.data.data : []);
+  const payload = (r) => (wantDraft && r.data?.draft != null ? r.data.draft : r.data?.data);
+  const arr = (r) => (Array.isArray(payload(r)) ? payload(r) : []);
   const allQuiz = arr(quiz);
   const allCards = arr(flashcards);
-  const rawExtras = extras.data?.data || { chains: [], evaluation: [] };
+  const rawExtras = payload(extras) || { chains: [], evaluation: [] };
   const chains = Array.isArray(rawExtras.chains) ? rawExtras.chains : [];
   const evaluation = Array.isArray(rawExtras.evaluation) ? rawExtras.evaluation : [];
 
@@ -88,7 +106,8 @@ export async function GET(request, { params }) {
     isPremium,
   }, {
     headers: {
-      'Cache-Control': 'private, max-age=300, stale-while-revalidate=3600',
+      // A draft preview must never be cached: it is re-staged repeatedly while a packet is built.
+      'Cache-Control': wantDraft ? 'no-store' : 'private, max-age=300, stale-while-revalidate=3600',
       Vary: 'Cookie',
     },
   });
