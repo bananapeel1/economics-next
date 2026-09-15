@@ -1295,9 +1295,12 @@ exit 0. It ships WITH packets 5 and 7 at the checkpoint (~26 Sep), not before.
 
 **Exit criteria still open:**
 
-1. **Verify A has not been run.** Spawn `packet-verifier` on D015 D016 D017 with the diff for this commit.
-   `node audit/scripts/ledger.mjs unverified 5.1` currently lists all three.
-2. **The repair has not been run against live data.** It needs Ronald's go-ahead, and the model matters:
+1. ~~**Verify A has not been run.**~~ DONE 2026-09-15: 3 of 3 confirmed on round 1, `unverified 5.1` exits 0.
+   The verifier re-derived the clamp by hand rather than reusing `clampStep`, and cross-checked both models
+   against the live database — the independent check this programme asks for.
+2. **Half done.** `--model pair --confirm` was run 2026-09-15 14:39Z: 28 rows / 18 students, snapshot at
+   `audit/snapshots/progress-repair-2026-09-15T14-39-17-573Z.json`, both models now clean. **Still owed: re-run
+   `--model steps --confirm` at the checkpoint merge**, because the denominator changes that day. Original note: It needs Ronald's go-ahead, and the model matters:
    `node scripts/repair-progress-pointers.mjs --model pair --confirm` unbreaks the 24 rows / 17 students
    against what main serves today; `--model steps --confirm` (the default) is the right one to run after
    packets 5, 7 and 5.1 merge. Re-run the dry run first — it prints every row it would touch.
@@ -1320,3 +1323,17 @@ exit 0. It ships WITH packets 5 and 7 at the checkpoint (~26 Sep), not before.
   means **`sectionStarts` is inflated by roughly 10-16%** — deflate it before filling in the baseline in
   PROGRESS.md. The phantom mount is NOT fixed by this packet; it needs its own packet (the fetch effect
   wants a stale-response guard and `sectionData` wants to be nulled in the same commit as `activeSection`).
+
+**Two things Verify A turned up that are not ledger items:**
+
+- `handleStepChange` (`components/StudyApp.jsx:810-823`, wired to `ContentTab`, not `LearnModeTab`) is a
+  SECOND writer to `user_content_progress` and it bypasses `furthestStep()`. It cannot reproduce D015 today —
+  `ContentTab` bounds its own pointer to `[0, data.length - 1]` and `data.length` (the block count) is always
+  `<= countSteps(content)`, since every block contributes at least one step — but that is an invariant nobody
+  is checking. If a future model ever lets a block contribute zero steps, this writer poisons rows again.
+  Either route it through `furthestStep()` or assert the invariant in `lib/learn-steps.test.mjs`.
+- The out-of-range count drifted from 24 rows / 17 students to 28 / 18 in the three hours between measuring it
+  and repairing it, because packets 14 and 15 republished two sections in between. That is not noise; it is the
+  defect's own mechanism. **Every content packet that changes a section's step count poisons the pointers of
+  everyone mid-way through it**, and will keep doing so until 5.1 is merged. Re-run the dry run immediately
+  before any `--confirm`, and expect the repair to be needed once more at the checkpoint.
