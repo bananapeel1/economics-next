@@ -1,4 +1,67 @@
 # Next session brief
+## Handoff — after packet 15 (written 15 September 2026)
+
+**Next is packet 16, `meeting-customer-needs`** (Business Unit 1, WBS11, IAL topic **1.3.1** — the Business
+1.3.1, not the Economics one this packet did; 123 section opens; 32 ledger items; 27 spec leaves covered,
+5 thin, 3 missing). **On Opus, in a NEW session.** No remaining packet needs Fable.
+
+### Do this before anything else
+
+1. **Fix V001 (packet 3.1) first, or knowingly accept an incomplete oracle.** `audit/scripts/build-spec-items.mjs`
+   matches bullets with `/^\s*[•●▪‣]\s*(.*)$/`, anchored to line start. The extracted specification puts the
+   left-hand topic-title column on the same line as a list's first bullets, so **60 bullets are dropped — 31
+   Economics, 29 Business.** `spec-items.json` is what `spec.coverage` and `spec.uncovered` compute from, so a
+   section can report 100% while never teaching them. Business loses Ansoff's Matrix and Porter's Strategic
+   Matrix among others, which matters directly to a Business packet. Fixing it changes the leaf count for all 43
+   sections and will add `spec.uncovered` DEBT in many, so read the baseline diff before confirming, and do it
+   in its own commit, not inside a section packet.
+2. Read `PROGRESS.md`, `DECISIONS.md`, this file and `PROTOCOL.md`, then `ledger.mjs packet 16 --open`.
+3. **Check every scope claim against the spec text before acting on it.** Packet 14 found four wrong, packet 15
+   found four more. `audit/raw/bus_spec.txt` is the oracle; a number in a finding is a hypothesis.
+
+### The template, as it stands after two sections
+
+Copy `scripts/packet-15-*.mjs` (or packet 14's — they are the same shape) and rename. The runner is the first
+reader of the section: it prints every subsection's word count against the 350 budget, refuses on the section's
+own banned phrases, checks each practice command word and tariff against `audit/raw/tariff-census.json` for the
+subject, re-derives any property a diagram asserts, checks the worked figures agree across surfaces, validates
+the whole bundle against the baseline and stages through `stageBundle()`. `--dump` writes the bundle for the
+verifier. Lifecycle: read the spec span → check every ledger item against it → write the spec block here →
+snapshot → author → dry run to 0 BLOCK and 0 new DEBT → stage → preview the SVGs → Layer 6 on a canary copy →
+fix → re-stage → publish (**ask the founder in-session**) → census, validate, baseline diff read then confirmed,
+pin-check → claim → Verify A and Verify B → gate → commit → push → handoff.
+
+### What packet 15 learned that packet 16 needs
+
+1. **Only a CHECK-IN step carries a diagram, and it comes from the BLOCK** (`lib/learn-steps.js:44-55`).
+   A `diagramId` on a subsection is never read, so a diagram pinned there is reachable only from the Diagrams
+   tab. One diagram per chapter, with extra views as scenarios on it — packet 15's chapter 4 carries five.
+2. **The packet audits what it KEEPS, not just what it writes.** Layer 6's two worst findings were both in
+   retained March assets: two flashcards defining a term taught nowhere, and an SVG placing "UK" at the exact
+   midpoint of a spectrum for an international cohort. No automated check sees either.
+3. **A widget is only proven by content that stresses it.** Classify chips could not wrap at 390px because
+   `.lm-word-chip` carries `white-space: nowrap` for fill-ins. Packet 7's fixtures and packet 14's items were
+   all short enough to hide it. Before authoring long recall items, check they fit: a chip is about 7.2px per
+   character plus padding, so past ~45 characters it must be able to wrap.
+4. **Leave exactly three quiz items unpinned.** `PreTest.jsx` takes the first three unreserved items in array
+   order, so those three ARE the pre-test. A fourth reaches nothing.
+5. **Where a diagram asserts a mathematical property, generate it from the property and verify the output.**
+6. **`npm run validate` is a whole-database gate in a shared worktree.** Another packet's live content can block
+   yours. Record your baseline write by section (`+0 −78` here), not by total, so a concurrent write is
+   distinguishable. Stage files explicitly; never `git add -A`.
+7. **Write the Layer 6 brief's spec span from the last leaf**, checked against `spec-items.json` — packet 15's
+   was one line short and the reviewer correctly reported a whole subsection as out of scope.
+8. Count acceptance-script step numbers through `buildSteps()`, not from the block list.
+
+### Exit criteria for packet 16
+
+Section validator 0 BLOCK, DEBT ≤ 3, coverage ≥ 95%; every quiz item and diagram reachable; practice at IAL
+**Business** tariffs (Assess exists in Business, Examine does not); `npm test`, `npm run build`, `npm run validate`
+exit 0; census PASS; baseline smaller by this section's own keys; `ledger.mjs unverified 16` clear; Verify A and
+Verify B reports written up here.
+
+---
+
 
 ## Packet 15 spec — introductory-concepts, the section students meet first (Opus, 15 September 2026)
 
