@@ -63,8 +63,8 @@ nine 5-interaction mega-steps become eighteen small ones.
   positive vs normative classification, benefit vs risk sorting. Reorders **paraphrase** a flow in their own
   subsection in the same order, which satisfies `reorder.source` without measuring copying. The item's other
   half — "make fill-in matching stem-tolerant so 'signalling'/'ought' are accepted" — is **obsolete under
-  packet 7's recall contract**: a fill-in is a chip bank (`lib/recall-widgets.js:199-208`) graded by
-  `gradeFillin` on the chip's own text (`212-219`), so there is no free text to be intolerant of. Recorded, not built.
+  packet 7's recall contract**: a fill-in is a chip bank (`lib/recall-widgets.js:200-207`) graded by
+  `gradeFillin` on the chip's own text (`209-215`), so there is no free text to be intolerant of. Recorded, not built.
 - **topFix-02, structure-01, structure-06, quiz-01, quiz-02, quiz-03**: the quiz bank rebuilt to ≥28 items,
   every one reachable. Near-duplicates deleted (q13 of q3, q19 of q9, q11 of q2, q23 of q3, one of q0/q12/q17).
   q8 (free good) **kept and now taught** by 3d. q15 rewritten from "factor of production classified as capital"
@@ -112,14 +112,16 @@ nine 5-interaction mega-steps become eighteen small ones.
 - **specGap-06** (both sides of specialisation), **specGap-07** (the state's role in a mixed economy): built
   as above, without comparative advantage and without Marx or Hayek.
 - **specGap-08** (economic agents and their objectives): **reassigned, not built.** Consumers maximising
-  utility and firms maximising profits is 1.3.2·1 (`econ_spec.txt:565-568`), the `consumer-behaviour`
+  utility and firms maximising profits is 1.3.2·1 (`econ_spec.txt:580-582`), the `consumer-behaviour`
   section's own topic. Moved to that section's packet rather than taught twice.
 - **structure-04**: closed by the shape above — 18 subsections means one idea per step.
 - **structure-08**: block 4's takeaway name-checks the pin factory while its quiz q4 tests Smith's three
   reasons, which the body never lists. The three reasons (dexterity, time saved switching tasks, the
   introduction of machinery) go into 5.1's body so the question is answerable from the teaching.
 - **structure-09**: the "economics is not a real science because it cannot predict" misconception is filler
-  whose "Instead write" is just the keyIdea; it is replaced with a genuine first-topic error. The other six
+  whose "Instead write" is just the keyIdea; it is rewritten so the correction says something the keyIdea
+  does not. Verify A's caveat is fair and recorded: this is a sharper version of the same predictive-accuracy
+  misconception, not a swap to an unrelated one. The other six
   are genuine and are kept in substance.
 - **structure-10** ("difficulty ramp is sensible") and **structure-11**: claimed as no-change, with the
   ordering now the specification's own.
@@ -141,7 +143,7 @@ public Unit 1 landing copy, which belongs to packet 57 with D014.
 
 1. `node audit/scripts/validate-content.mjs --section introductory-concepts` → 0 BLOCK, DEBT ≤ 3, 0 new
    against the baseline; `spec.coverage` = 100% (was 64%); `section.counts` reports 6 blocks · 18 subsections
-   · 18 recalls using all four types · ≥28 quiz · 9 practice · 5 diagrams.
+   · 18 recalls using all four types · ≥28 quiz · 9 practice · 4 diagrams, every one pinned to a block.
 2. `node audit/scripts/pin-check.mjs --section introductory-concepts` → 0 broken pins; every quiz index,
    practice index and diagram pinned by exactly one block, and `pins.identity` clear.
 3. `node audit/scripts/packet-13-census.mjs` → exit 0.
@@ -210,19 +212,23 @@ still 0 BLOCK / 0 DEBT / 100%, `npm test` 132/132, census PASS, and the independ
 ### Verify B — 390×844, `/economics/unit-1/introductory-concepts`, signed out
 
 1. Overview shows 24 steps (18 teach + 6 check-ins); tap Learn.
-2. Step 1 "Economics as a Social Science": one heading, chapter eyebrow "Chapter 1 of 6 · The Nature of
+2. Step 1 "Economics as a Social Science": one heading, chapter eyebrow "CHAPTER 1 OF 6 · The Nature of
    Economics · part 1 of 2", key idea, teaching text, then ONE recall below the teaching. No UK institution
-   anywhere on the step. Next is visible without scrolling past the recall.
+   anywhere on the step. Next sits in the sticky footer, so it is visible at every scroll depth.
+   Step 4 is the positive/normative classify; its six items must each WRAP inside 390px, with the document's
+   scrollWidth equal to its clientWidth — the packet that wrote them was the first content able to overflow it.
 3. Scroll with real wheel input while the step is re-rendering: the page does not jump back up (`cb6b894`).
 4. Step 5 "Unlimited wants and finite resources": the four factors are named once; the recall is not a
    retyped copy of a flow on the same screen.
-5. Chapter 3 check-in: the scarcity → choice → opportunity cost diagram, "Tap to enlarge" readable; a quiz
-   item; a practice item whose command word is one of the eight; NO spaced recall on chapter 1's check-in,
-   a "Recall from chapter …" cue from chapter 2 onward.
+5. Chapter 3's check-in (step 11) shows the scarcity → choice → opportunity cost diagram, "Tap to enlarge"
+   readable; a quiz item; a practice item whose command word is one of the eight; NO spaced recall on
+   chapter 1's check-in (step 3), a "Recall from chapter …" cue from chapter 2 onward.
 6. Chapter 4, step "Opportunity cost through marginal analysis": the worked calculation's numbers match the
    PPF diagram's axis values on the same check-in.
-7. Chapter 4 check-in: the PPF diagram is visibly bowed outward from the origin with no bulge, and the
-   movements-vs-shifts diagram distinguishes the two.
+7. Chapter 4's check-in (step 16) shows the PPF diagram visibly bowed outward with no bulge, and its
+   scenario switcher offers five views of the same curve — reading the frontier, opportunity cost C to D,
+   movement along, outward shift, inward shift. Count steps through `buildSteps()`, not from the block
+   list: a chapter's subsection count decides its step numbers.
 8. Chapter 5 check-in: the money diagram; the financial-markets subsection names all five roles.
 9. Chapter 6 check-in: the Economic Systems Comparison diagram; a 20-mark Evaluate; "Mark my answer" opens a
    self-mark checklist carrying the levels note.
@@ -345,6 +351,49 @@ tree (13.5-13.7 own the labels; the tree carries three `draggable` labels so the
 10. Chapter 5 check-in: the contribution bar; the practice item is an Assess (12 marks); type an answer and tap
     "Mark my answer" → the self-mark checklist carries the note "questions above 6 marks are levels-marked".
 11. Completion screen reached; console shows no errors other than the signed-out 401.
+
+### Verify B — student walkthrough (Sonnet, 390×844, signed out, 15 September 2026)
+
+**The script passes end to end.** Overview reads 24 steps; step 1 shows one heading, the eyebrow "CHAPTER 1 OF 6 ·
+The Nature of Economics · part 1 of 2", then key idea → teaching → example → misconception → exam matters →
+exactly one recall, with Next in a sticky footer so it is never hidden behind the recall. The fill-in gave
+"2 of 3 right" with the wrong chip struck through beside the right one, and Skip is an outlined button next to
+the solid Check. Scroll position held at 669px through a re-render (the `cb6b894` regression has not returned).
+Chapter 1's check-in carries no spaced recall and chapters 2 and 3 carry a "Recall from chapter 1" cue, each a
+different recall type. The worked figures read 10, 8 and 0.8 on the teach step and again on the chapter-4
+diagram, and the verifier re-derived the frontier's monotonic slope from the raw 101-point polyline itself.
+All five financial-market roles appear verbatim. The completion screen names all six chapters. One console
+error across all 24 steps: the expected signed-out 401.
+
+**The UK/USA check came back clean**: the economic-systems markers are Hong Kong, Singapore, Sweden and North
+Korea, with Sweden at x=310 on a bar spanning 50–450 — visibly off centre — and in neutral white, not the blue
+of the "Mixed" label. No "UK", "USA", "United Kingdom" or "United States" anywhere in the SVG's text nodes.
+
+**Two real defects, both fixed:**
+
+1. **The movements-and-shifts diagram was unreachable in Learn Mode.** It had been pinned to a *subsection*
+   (`content[3].sections[2].diagramId`), and only a CHECK-IN step carries a diagram, taken from the BLOCK
+   (`lib/learn-steps.js:44-55`) — a subsection's `diagramId` is never read. So it appeared only on the Diagrams
+   tab, which is precisely `structure-02`'s complaint. Fixed in content rather than by changing verified code:
+   chapter 4's five views now live on the one pinned diagram (reading the frontier · opportunity cost C to D ·
+   movement along · outward shift · inward shift). **Four diagrams, every one pinned to a block and reachable.**
+2. **Classify chips could not wrap at phone width** — see the DECISIONS entry. Measured before and after on the
+   live page: the 59-character item rendered at **447px against a 375px viewport** with `white-space: nowrap`,
+   and at **311px** wrapped once the rule was scoped away from classify chips. `tab-content` scrollLeft was
+   47.5px drifted before, 0 after.
+
+**Two findings recorded as someone else's work** (`V002`, `V003`, packet 57): the Practice *tab* gives a 20-mark
+Evaluate only a "Show Guidance" reveal while InlinePractice gives the same tariff an answer box and a self-mark
+checklist — two surfaces, two affordances for one item; and jumping to an already-reached chapter paints the
+step number about a second before the body.
+
+**One correction to the script itself, not the product:** it said "step 3's recall is a classify". Step 3 is
+chapter 1's check-in; the positive/normative classify is on **step 4**. The script above is corrected. A step
+number written from the block structure rather than counted through `buildSteps()` will be wrong whenever a
+chapter has a different number of subsections than the author assumed.
+
+Not seen: crowding, overlapping SVG labels, an over-long step, or a recall whose answer is given away by the
+text above it.
 
 ### Verify A (packet-verifier on Sonnet, 14 September 2026)
 

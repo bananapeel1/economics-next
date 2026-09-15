@@ -532,7 +532,7 @@ Append only. Every entry needs a date and the packet that made it.
   numbering, but its recommendation stands for the right reason — rationing, incentive and signalling are
   **1.3.4** (`:707-709`), a section that already exists, so that material left this one.
 - **2026-09-15 (packet 15) — `C-introductory-concepts-specGap-08` moved to packet 17.** Economic agents and
-  their objectives — consumers maximising utility, firms maximising profits — is 1.3.2·1 (`econ_spec.txt:565-568`),
+  their objectives — consumers maximising utility, firms maximising profits — is 1.3.2·1 (`econ_spec.txt:580-582`),
   the `consumer-behaviour` section's own topic. Teaching it here would duplicate it. Reassigned rather than
   built, so the coverage it represents is still owed by someone.
 - **2026-09-15 (packet 15) — 5c has five bullets and the ledger held three.** `specGap-09/10/11` cover saving,
@@ -569,8 +569,8 @@ Append only. Every entry needs a date and the packet that made it.
   an overfished stock, a congestion charge). Nothing to overstate is a stronger guarantee than a citation.
 - **2026-09-15 (packet 15) — a word-bank fill-in cannot be "stem-tolerant", so half of `topFix-01` is
   obsolete.** The item asks for fill-in matching that accepts "signalling"/"ought". Under packet 7's recall
-  contract a fill-in is a chip bank (`lib/recall-widgets.js:199-208`) graded on the chip's own text by
-  `gradeFillin` (`:212-219`); the student never types, so there is no stem variant to be intolerant of. Closed
+  contract a fill-in is a chip bank (`lib/recall-widgets.js:200-207`) graded on the chip's own text by
+  `gradeFillin` (`:209-215`); the student never types, so there is no stem variant to be intolerant of. Closed
   with that evidence rather than built. The other half — replacing the four non-genuine reorders with
   sort/match exercises — is built.
 - **2026-09-15 (packet 15) — the coverage oracle itself is missing 60 specification bullets, and fixing it
@@ -656,6 +656,22 @@ Append only. Every entry needs a date and the packet that made it.
   origin/main:components/LearnModeTab.jsx` and this section's restored `content[]` (the two blocks with `flow`
   body items are the one structural thing distinguishing it from sections that load cleanly), and check
   Vercel's function logs for the actual thrown line, which is faster than re-deriving it from a diff.
+- **2026-09-15 (packet 15) — classify chips could not wrap at 390px, so one long item dragged the whole
+  document sideways.** The founder found it on live content: on the positive/normative classify, items like
+  "Two-thirds of the workforce is employed in services" were cut off at the right edge, and because the
+  document then had horizontal scroll, every later step rendered shifted until the page was scrolled back —
+  a heading reading "ue Judgements in Policy" and a key idea clipped down its left side. Cause:
+  `app/globals.css` phone block, `.lm-word-chip, .lm-fillin-blank { … white-space: nowrap; }`. That nowrap is
+  correct and deliberate for fill-ins, where it stops a blank breaking mid-word ("underproduces"), but
+  `.lm-word-chip` is also the class on classify items, which are whole statements. Fixed by tagging the
+  classify word-bank items `lm-classify-chip` in `ClassifyRecall.jsx` — the placed chips already carried it —
+  and adding `.lm-word-chip.lm-classify-chip { white-space: normal; text-align: left; max-width: 100%; }`
+  after the rule it must beat, per the packet-5 rule about phone CSS.
+  **Why no gate caught it:** the validator reads content, not layout; `npm run contrast` checks colour; and
+  packet 7's gallery fixtures and packet 14's classify items are all short. A census of live content found
+  exactly **one** section with a classify item over 45 characters — this one, with five — so packet 15 is the
+  first content able to trigger it, and every later section is now protected. **A widget is only proven by
+  content that stresses it; a fixture that fits is not evidence that a real item will.**
 
 ## 15 September 2026 — packet 5.1, the resume pointer (Opus 5)
 
@@ -702,3 +718,14 @@ guard exists to reject a MISSING number (`claim F004 F006` wrote `packet-NaN` an
 `audit/validator-baseline.json` and the top of `audit/NEXT.md` with in-flight claims. This packet's D015-D017
 were minted with the CLI (so the ledger on disk is correct) but **`audit/ledger.json` was deliberately not
 staged**, and NEXT.md was appended to rather than rewritten. Whoever commits the ledger next carries them.
+- **2026-09-15 (packet 15) — this packet's `validator-baseline.json` commit carries a second, unrelated
+  change, and that is stated here so nobody has to infer it.** Measured against `HEAD`, the file this packet
+  commits is **−78 `introductory-concepts` keys** (packet 15's own cleared debt) **and +33
+  `decision-making-techniques` keys**. The 33 are not packet 15's: the packet-14 session restored that
+  section to its pre-packet-14 state on the founder's instruction and re-baselined its March findings, which
+  is the right thing to do — without it `npm run validate` would fail for everyone, permanently, over content
+  that is deliberately where it is. Verify A flagged the absorption independently and was right to: committed
+  without this note, the diff would read as packet 15 quietly baselining someone else's regression to make its
+  own gate pass. **A packet that writes a shared file should record its diff by section, not by total**, so a
+  concurrent write can be told from its own. If the packet-14 content is later restored forward again, those
+  33 keys come back out.

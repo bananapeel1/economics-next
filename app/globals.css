@@ -7440,6 +7440,11 @@ a.auth-dropdown-item:visited {
   .lm-gallery { padding: 12px; }
   .lm-more-btn { width: 44px; height: 44px; }
   .lm-word-chip, .lm-fillin-blank { min-height: 40px; display: inline-flex; align-items: center; white-space: nowrap; }
+  /* A classify item is a whole statement, not a fill-in's single word. The nowrap above is there so a
+     fill-in blank never breaks mid-word; inherited by classify chips it made a long item — "Two-thirds of
+     the workforce is employed in services" — overflow 390px and drag the whole document sideways, so every
+     later step rendered shifted until the page was scrolled back. Found by the founder on live content. */
+  .lm-word-chip.lm-classify-chip { white-space: normal; text-align: left; max-width: 100%; }
   /* A blank was shrinking inside its flex row and breaking "underproduces" mid-word; the row wraps instead. */
   .lm-fillin-step { flex-wrap: wrap; row-gap: 6px; }
   .lm-fillin-blank { flex-shrink: 0; max-width: 100%; }

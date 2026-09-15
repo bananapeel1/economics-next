@@ -118,7 +118,7 @@ export default function ClassifyRecall({ recall, onComplete, onSkip, showing = '
         <div className="lm-word-bank" role="group" aria-label="Items to sort. Choose one, then a group.">
           {bank.map((it) => (
             <span key={it.id} role="button" tabIndex={0} aria-pressed={selectedItem === it.id} aria-label={`Sort ${it.text}`}
-              className={`lm-word-chip ${selectedItem === it.id ? 'selected' : ''}`}
+              className={`lm-word-chip lm-classify-chip ${selectedItem === it.id ? 'selected' : ''}`}
               onClick={() => handleTapBankItem(it.id)}
               onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); handleTapBankItem(it.id); } }}>
               {it.text}
