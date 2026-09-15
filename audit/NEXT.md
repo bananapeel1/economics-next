@@ -1,5 +1,99 @@
 # Next session brief
 
+## Handoff — after packet 16 (written 15 September 2026)
+
+**Next is packet 17, `consumer-behaviour-demand`** (Economics Unit 1, WEC11, IAL topic **1.3.2**,
+`audit/raw/econ_spec.txt:580-649`, **39 countable leaves**; 52 section opens; **32 ledger items**, one of
+which — `C-introductory-concepts-specGap-08`, economic agents and their objectives — was reassigned here by
+packet 15 because 1.3.2·1 is where it actually lives). State today: 6 blocks · 18 subsections · 25 quiz ·
+5 practice · 4 diagrams; validator **17 BLOCK, 63 DEBT, 87% coverage**. **On Opus, in a NEW session.**
+
+### Do this before anything else
+
+1. Read `PROGRESS.md`, `DECISIONS.md`, this file and `PROTOCOL.md`, then `ledger.mjs packet 17 --open`.
+2. **Check every scope claim against the spec text before acting on it.** Packet 14 found four wrong,
+   packet 15 four more, packet 16 six. `audit/raw/econ_spec.txt` is the oracle; a number in a finding is a
+   hypothesis. This one is Economics, so the UK GCE trap is Theme 1 numbering (1.2.x) rather than 1.1.x.
+3. **V001 does not reach this span either, and that is measured**: 29 bullet characters in
+   `econ_spec.txt:580-649`, every one at line start, so no leaf of 1.3.2 is invisible to the oracle. Count
+   it yourself with a UTF-8-aware tool before trusting it — an `awk '/[•]/'` bracket expression matches
+   individual bytes and gives false positives. The global figures, reproduced independently: 31 Economics
+   bullets and 29 Business bullets are dropped, none of them here. V001 is still packet 3.1's.
+
+### The template, as it stands after three sections
+
+Copy `scripts/packet-16-*.mjs` and rename. The runner is the first reader of the section: word counts
+against the 350 budget, the section's own banned phrases, every practice command and tariff against
+`audit/raw/tariff-census.json` **for the right subject**, every diagram property re-derived from the figures
+it asserts, and the whole bundle validated against the baseline before `stageBundle()`. `--dump` writes the
+bundle for the verifier. Lifecycle: read the spec span → check every ledger item against it → write the spec
+block here → snapshot → author → dry run to 0 BLOCK and 0 new DEBT → stage → **walk it at 390×844 with
+`?draft=1`** → Layer 6 on a canary copy → fix → re-stage → claim → Verify A → gate → commit → push →
+handoff. **No publish**, until packets 5 and 7 are on main.
+
+### What packet 16 learned that packet 17 needs
+
+1. **Put the pre-test's three unpinned quiz items FIRST in the array, not last.** A signed-out student is
+   sent only `PREVIEW_LIMITS.quiz` (2) items, so the pre-test is drawn from the first two of the array, not
+   from the whole bank. With the unpinned items at the end, the pre-test asks questions the chapter
+   check-ins ask again — F079's own defect, alive for everyone outside the paywall. Packet 15's rule was
+   right for a Pro student only.
+2. **`?draft=1` is how you walk a held section** (dev only; the server refuses it in any production build).
+   The SEO block at the top of the page still renders live `data`, so `get_page_text` shows the OLD content
+   — read the app region with screenshots or `read_page`, not with page text, or you will verify the
+   section you replaced.
+3. **The validator's `claim.uncited` only fires on the word "examiners".** "An unlabelled axis costs
+   marks", "earns half the marks", "scores poorly" all pass it and are the same claim. Say what the
+   **command word requires** — Appendix 6 states that, so it is citable — never what a marker does. Packet
+   16's runner carries the regex; copy it.
+4. **Where the specification supplies no vocabulary for a leaf, name the standard term as an aside and do
+   not assess it.** "Barriers to entry" is in the Economics spec (`:1386`, `:1425`) and nowhere in the
+   Business one; the first draft made it load-bearing in eleven places and tested it. For an ECONOMICS
+   packet this cuts the other way — check which subject's spec a term belongs to before deciding.
+5. **A `match` recall needs unique `right` values.** "Quantitative / Qualitative / Quantitative /
+   Qualitative" is a `classify`, and `match.unique` is a BLOCK.
+6. **A `reorder` needs a flow or an extras chain in the section that teaches the same sequence**
+   (`reorder.source`). A worked example written as `subheading` + `bullets` does not count; the same content
+   as a `flow` does, and renders better.
+7. **`keyIdea` is capped at 180 characters and each takeaway at 100** (`schema.lengths`). Ten of the first
+   draft's fired.
+8. **The verifier needs an agent type that can WRITE `audit/ledger.json`.** PROTOCOL names a
+   `packet-verifier` subagent; this session did not have one, and the read-only search agent that looks
+   like the right substitute judged all 32 ids correctly and then refused to run
+   `ledger.mjs confirm` at all, because the CLI writes a file. Its whole report had to be re-run by a
+   second agent that could. Give the verifier a type with Bash write access and the explicit instruction
+   that `ledger.mjs` is the ONE file it may change.
+9. **Split every multi-part ledger item into its clauses before building, and check them off one by
+   one.** All five of packet 16's Verify A rejections were the same shape: an item naming three or four
+   things, of which the packet did two or three and then read the item as done. `topFix-01` wanted a
+   4-mark *and* an 8/10-mark item for each of three topics and had none of the three pairs; `topFix-05`
+   named four jobs and took three rounds because each pass fixed the absolutes it had noticed rather than
+   scanning every option of all 37 items. Say in your spec block which artefact satisfies which clause.
+10. **Revert the baseline in the same commit as the content.** Packet 15's revert left 78 keys out of
+   `validator-baseline.json`, and `npm run validate` has been failing for every session since on a
+   regression none of them caused. Restored here in its own commit.
+
+### Exit criteria for packet 17
+
+Section validator 0 BLOCK, DEBT ≤ 3, coverage ≥ 95%; every recall of the right type with its `why`; every
+block pinned to a quiz item, a practice item and (where one earns its keep) a diagram; exactly three quiz
+items unpinned and first in the array; practice at IAL **Economics** tariffs (Examine exists, Assess does
+not, Discuss is 14); `npm test`, `npm run build`, `npm run validate` exit 0; `ledger.mjs unverified 17`
+clear; Layer 6, Verify A and Verify B reports written up here.
+
+### For the founder
+
+- **Nothing in packets 14, 15 and 16 is live.** Three finished sections are staged and waiting on the
+  packet 5/7 checkpoint (~26 September). Each publishes with one command; they are listed in their
+  PROGRESS rows.
+- **The free quiz slice is why the pre-test misfires**, and widening it is a freemium-boundary decision,
+  which is yours. `PREVIEW_LIMITS.quiz` is 2; the pre-test wants 3. Packet 16 worked around it in content.
+- **`POST /api/learn-mode/state` returns 401 for every signed-out student**, twice per section, logging a
+  console error on the busiest path in the product. Pre-existing, not investigated, probably packet 4 or 6.
+
+---
+
+
 ## Packet 16 spec — meeting-customer-needs, the Business section students meet first (Opus, 15 September 2026)
 
 Business Unit 1 (WBS11), IAL topic **1.3.1 Meeting customer needs**, `audit/raw/bus_spec.txt:504-544`,
@@ -81,8 +175,10 @@ fifteen March subsections survive by id; twelve are new.
 `quizIndices` and `practiceIndices` on every block, the check-in item first. **27 steps** through
 `buildSteps()` (21 teach + 6 check-ins), against fifteen crowded ones today.
 
-**One fictional firm carries every worked figure.** Zuri Juice, a chilled-juice maker in Nairobi, with
-fictional rivals Tamu, Mkali, Safi and Halo. Dollars throughout, one currency in the section. Market
+**One fictional firm carries every worked figure.** Zuri Juice, a chilled-juice maker, with fictional
+rivals Tamu, Mkali, Safi and Halo. The firm is given **no country**: an international cohort needs no
+place-claim to follow a market-share calculation, and a fictional firm in a named city is still a claim
+about that city's market. Dollars throughout, one currency in the section. Market
 $32m last year → $40m this year (growth 25%); Zuri's sales $6m (share 15%); inputs $0.45 a bottle against a
 $1.20 price (value added $0.75); a 600-shopper survey with 18% weekly buyers over a 500,000-shopper
 population (90,000 buyers, $108,000 a week). Nothing about Zuri is real, so there is nothing to overstate;
@@ -105,9 +201,13 @@ real examples in the Real Example cards carry no figure or year unless they carr
 
 1. `node scripts/packet-16-meeting-customer-needs.mjs --dump` prints no PROBLEMS and no new BLOCK, and
    writes the bundle to `audit/snapshots/packet-16-bundle__business__meeting-customer-needs.json`.
-2. Against that bundle: 6 blocks, 21 subsections, 21 recalls across all four contract types, every recall
-   with a `why`, every fill-in with distractors; 30 quiz with exactly three unpinned; 8 practice; 5 diagrams,
-   every one pinned to a block by `diagramId`.
+2. Against that bundle: 6 blocks, 21 subsections, 21 recalls across all four contract types (6 fill-in,
+   5 classify, 5 reorder, 5 match), every recall with a `why`, every fill-in with 2-3 distractors; **37 quiz**
+   with exactly three unpinned and those three **first** in the array; 8 practice; 5 diagrams, every one
+   pinned to a block by `diagramId`. "Reachable" means what the engine actually does: one pinned quiz item
+   opens each chapter check-in (`resolvePinnedItem` returns one), the three unpinned items are the pre-test,
+   and the whole bank is the Quiz tab and the post-test. Every item belongs to a block, which is what
+   `structure-05` was about; no item belongs to none.
 3. Every practice `command` is in `audit/raw/tariff-census.json` for **business**, its `marks` match, and no
    guidance above 6 marks contains `(n marks)`. No "Outline" anywhere in the bundle. No "Examine" (that is
    Economics). Assess is **10**, this being Unit 1.
@@ -139,6 +239,150 @@ the section preview, and the script is about what the student ends up with:
 6. Finish the section. The completion screen names the recall score and any skips, and "Complete topic ✓" is
    offered on step 27.
 
+
+### Layer 6 — adversarial review (Sonnet, read-only, canary copy, 15 September 2026)
+
+Two defects were planted in a copy of the staged bundle before the reviewer saw it: a quiz explanation
+whose arithmetic (20%) contradicted its own marked option (25%), and a notes takeaway reading
+`$1.20 − $0.45 = $0.85`. **The reviewer caught both**, so the report stands. Census: 40 calculations
+recomputed, ~45 contradiction pairs, 21 of 21 recalls, 37 of 37 quiz, 8 of 8 practice, 21 real examples.
+
+Five real findings. Three fixed:
+
+1. **~13 sentences asserting what a marker awards or withholds** — "an unlabelled axis costs marks no
+   commentary recovers", "earns half the marks", "a plotted point without its brand name earns nothing".
+   This is `claim.uncited`'s own class one step out: that rule fires only on the word *examiners*, so the
+   identical claim passes the validator whenever it is phrased without them. Every one now says what the
+   **command word requires** (Appendix 6 states that, so it can be cited) instead of what a marker does,
+   and the runner refuses the class by regex so it cannot come back.
+2. **"Barriers to entry" appears nowhere in the Business specification** (`grep -i barrier
+   audit/raw/bus_spec.txt`: four hits, all other topics — "Barriers to entrepreneurship" at :768, trade
+   barriers, an access phrase). It is in the *Economics* spec at :1386 and :1425. It was load-bearing in
+   11 places here, including a quiz item whose answer turned on the label. Reduced to two asides that name
+   it as the term the Economics papers use, and the quiz item now tests the mechanism ("a patent prevents
+   rivals copying, so new firms cannot enter") rather than the vocabulary.
+3. **The sampling diagram's stratified and quota panels** drew their dashed subgroup lines across the rows
+   of dots rather than between them, so the selections read as 2, 2, 1, 1 from four equal subgroups —
+   understating "in proportion to its size", which is the diagram's own checklist item. One line between
+   each row now, one pick per subgroup in both panels, and the difference a student sees is the only
+   difference there is: scattered inside the row for stratified, always the nearest person for quota.
+
+Two not acted on, with reasons: the reviewer read the canary copy, which was dumped before the quiz array
+was reordered, so its "quiz 34/35/36 reach nothing" is answered by design — those three are the pre-test
+and are now first in the array (see Verify B below). And it flagged the market-growth formula as taught
+under spec 1a when "market growth" is a 1b phrase; the calculation is QS2 (Appendix 7) and share is
+meaningless without it, so it stays beside size and share, and chapter 2 teaches what *drives* growth.
+
+
+### Verify A (read-only verifier on Sonnet, 15 September 2026 — three rounds)
+
+**Round 1 judged all 32 correctly and recorded none of them.** The agent type available for the verifier
+was a read-only search agent, and `ledger.mjs confirm` writes a file, so it declined to run a single one.
+Its reading was sound; the pass had to be re-run by an agent that could write. PROTOCOL now says the
+verifier's type must be able to write `audit/ledger.json` and nothing else (own commit, `bcde0b8`).
+
+**Round 2 rejected four**, and all four rejections were correct — checked against the artefact, not
+accepted on the verifier's word:
+
+- `topFix-01` — the item asks for a 4-mark AND an 8/10-mark item for each of market research, market
+  mapping/positioning and adding value. The 8-item set covered none of the three pairs: research had
+  Discuss 8 and Assess 10 and no 4, mapping had Construct 4 and no 8/10, adding value had only the
+  20-mark Evaluate. Four items added; the set is 12 and every named topic has its pair.
+- `topFix-02` — the item names a word-bank fill-in on the risk-and-uncertainty **definitions**, "with
+  non-interchangeable terms". It was built as a `classify`, which tests membership: a different skill, and
+  one the uncertainty quiz item already covers. Built as asked.
+- `topFix-05` — five absolute-word distractors survived the rewrite ("guarantees … never", "always has
+  negative outcomes", "always carried out on the wrong people", "the cheapest producer always wins",
+  "definitely want"), each eliminable without reading the stem. Replaced with wrong answers students
+  actually hold. Three options containing *only* / *all* / *impossible* are kept deliberately, because
+  each is the misconception under test rather than a give-away, and round 3 was asked to judge that
+  argument on the merits rather than take it.
+- `structure-10` — one two-step `flow` survived, drawing the product-against-market-orientation contrast
+  as if it were a causal chain. It is bullets now. A flow is for a sequence.
+
+Round 2's own note is worth carrying: it checked the three UK-GCE-numbered items (`structure-06`,
+`structure-07`, `topFix-04`) against `bus_spec.txt:534-541` itself and confirmed the packet's reading
+rather than penalising it for not following a remedy the specification refutes. That is the rule working
+in both directions.
+
+**Round 3** re-verified the four, confirmed three and rejected `topFix-05` again, naming two absolute-word
+distractors — one the previous pass had never touched ("it spends nothing on advertising its products",
+whose own explanation had to *rebut* it, which is the tell) and one this packet had deliberately kept and
+argued for ("entry becomes impossible without an established brand"). The second rejection is the
+interesting one: the argument for keeping it was that its explanation exists to answer it, and round 3's
+counter — that it inflates a true directional claim into an absolute, exactly like the options already
+replaced, and is crossed out without reading the stem either way — is better. Both replaced. The
+distinction worth teaching survives in the explanation: a brand makes a market harder to WIN in, not more
+expensive to ENTER, which is what that question asks.
+
+**Round 4** confirmed `topFix-05` after scanning every option of all 37 items independently rather than
+taking the commit's word for "zero left", and found two further "only" options the commit had not
+mentioned, testing both on the merits and accepting them. **Round 5** re-checked it at HEAD, because the
+artefact moved after round 4's confirmation: the item's last clause asks for the adding-value question's
+correct option to read as a *difference* rather than a price rise, and it still read as a rise. Rewriting
+it failed the gate twice in one run — `quiz.long-correct` at 76 chars against a 46-char distractor, then
+`quiz.near-dup` against "why is the value added not the same as the profit" — which is the gate doing its
+job on the builder rather than on the March content.
+
+Changed surfaces were re-walked at 390×844 before each hand-back: step 9's recall renders as FILL IN THE
+BLANKS with four blanks and `certainty` / `forecast` as the distractors, step 20 carries no flow element
+at all, and the Practice tab reports 12 questions.
+
+**Five rejections across the rounds, all five correct.** The pattern worth carrying: every one was a clause
+of a multi-part item that the builder had partly satisfied and read as satisfied. Verify the clauses
+separately, and count them.
+
+### Verify B — 390×844, signed out, storage cleared, against the staged draft (15 September 2026)
+
+The section is not published, so the walkthrough ran against `?draft=1` — a dev-only flag added by this
+packet, since nothing on the student path reads `draft` and three finished sections are now held back.
+
+What the student ends up with, step by step:
+
+1. **Overview**: "Learn Mode · 27 steps", Notes 6 topics, Practice 8 questions, section 1.3.1.
+2. **The offer**: "Want a quick check first? **Two** questions…" — and two is what arrives. It said
+   *Three* before this packet; see the defect below.
+3. **Pre-test**: two questions, neither of them one a chapter later asks again. Answered both with real
+   taps: **2 / 2 correct**, and the answers are withheld (F008) rather than revealed.
+4. **Step 1 of 27**, chapter 1 of 6, part 1 of 4, one heading ("Mass Markets"), Next reachable in the
+   sticky bar without scrolling. Scrolled to the recall: a three-blank fill-in, five chips (three answers
+   and two distractors), Show hints, Check answers, a visible Skip. Tapped blank → chip three times:
+   **"✓ All correct!"**
+5. **Step 2**: the classify. Six statement chips, the longest 47 characters, **all of them wrap** onto two
+   lines and `document.scrollWidth` stays 390 against a 390 viewport — the packet-15 regression does not
+   recur on longer items.
+6. **Step 5, chapter 1 check-in**: the market-share diagram renders at card width with $32m and $40m bars,
+   "growth 25%" on the arrow between them and Zuri's $6m block inside the second; one quiz question; the
+   Define (2 marks) practice with its guidance, an answer box and a Pro lock on the model answer; Explain
+   it back; the chapter takeaway. No spaced recall, correctly — there is no earlier chapter.
+7. **Step 10, chapter 2 check-in**: "**RECALL FROM CHAPTER 1 · Mass Markets**", the chapter-1 fill-in
+   returning with its cue and a **different chip order** (volume, margin, premium, cost, standardised
+   against standardised, cost, premium, volume, margin the first time).
+8. **Step 22, chapter 5 check-in**: the market map at card width, all five brands plotted and named with
+   Zuri picked out, both axes labelled with the variable and its direction, and the three scenarios
+   stepping through plotting → the gap → the demand test. "Tap to enlarge" present.
+9. **Step 27**: "Complete topic ✓" offered, and the completion screen names the six chapters in
+   specification order with a score breakdown.
+
+No horizontal scroll at any step. Console: two `401` from `POST /api/learn-mode/state`, which is a
+signed-out student hitting the server-side learn state — pre-existing, not this packet's, and noted below.
+
+**Three defects found here, all fixed:**
+
+- **The pre-test served a signed-out student two PINNED questions.** `GET /api/sections/[id]` caps a free
+  student's quiz at `PREVIEW_LIMITS.quiz` (2) since F086, and `PreTest.jsx` takes the first three
+  *unreserved* items of whatever it is given. With the three unpinned items at the END of a 37-item array,
+  the two a free student received were both pinned — so the pre-test asked a question the chapter-1
+  check-in asked again minutes later, which is exactly the defect F079 removed. It has been true for every
+  signed-out student since F086, and packet 15's rule ("the three unpinned items ARE the pre-test") is
+  therefore only true for a Pro one. Fixed in content: the three sit first, so the free slice is drawn
+  from the pre-test's own pool.
+- **"Three questions" when two are shown.** `LearnModeTab.jsx` hardcoded the word. It is computed now,
+  and the offer does not appear at all when there are no questions to offer.
+- **"What examiners look for"** heads the checklist beside every diagram in the product
+  (`DiagramsTab.jsx`, `learn-mode/InlineDiagram.jsx`) — the uncited claim about marking, printed by the
+  app itself over content the gate cleans. Now "What a correct diagram shows".
+
 ### The publish hold
 
 **Nothing in this packet is published.** DECISIONS 2026-09-15: content authored to the packet-7 recall
@@ -158,7 +402,7 @@ this section's own keys at the checkpoint, in the same session that publishes.
 
 ---
 
-## Handoff — after packet 15 (written 15 September 2026)
+## Previous handoff — after packet 15 (written 15 September 2026, superseded)
 
 **Next is packet 16, `meeting-customer-needs`** (Business Unit 1, WBS11, IAL topic **1.3.1** — the Business
 1.3.1, not the Economics one this packet did; 123 section opens; 32 ledger items; 27 spec leaves covered,

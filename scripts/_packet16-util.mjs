@@ -3,7 +3,9 @@
  * the same shape (`<section>:<kind>:<hash8(key)>`), the validator's own word counter, and Zuri Juice —
  * the one set of worked figures this section carries across its body, diagrams, notes and assessment.
  *
- * Zuri is fictional and so is every rival on its market map. Packet 14's Layer 6 found an overstated
+ * Zuri is fictional, so is every rival on its market map, and it is deliberately given no country:
+ * the section's only two place references are 'East Africa' and 'South Asia', in one example about
+ * online marketplaces. A market-share calculation needs no place-claim to be followed. Packet 14's Layer 6 found an overstated
  * figure inside a *cited* real example; packet 15's answer was to carry no figures at all. A Business
  * section cannot do that — market share and market growth are calculations the specification asks for
  * (Appendix 7, QS2) — so the figures are all invented, which leaves nothing to overstate, and the real

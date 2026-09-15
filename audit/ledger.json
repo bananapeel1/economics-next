@@ -2052,10 +2052,10 @@
    "rank": 0,
    "text": "Rewrite the practice set to IAL shape and re-map it: 'What is meant by a niche market? (2)', 'Explain one benefit of operating in a niche market (4)', keep Assess (10) and Evaluate (20) but replace point-based guidance with the levels grid (K/App/An/Ev) and a short stimulus; add one 4-mark and one 8/10-mark item each for market research, market mapping/positioning and adding value; set practiceIndices so block 0 gets the niche/dynamic items, block 2 the research item, block 5 the adding-value item.",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16-r3 2026-09-15",
+   "evidence": "audit/snapshots/packet-16-bundle__business__meeting-customer-needs.json: practice bank now 12 items (L2282-2364), practiceIndices confirm each named topic has both a 4-mark and an 8/10-mark item - market research (block 37823308+18faaa0b): Explain-4 L2324-2330 + Discuss-8 L2310-2316 + Assess-10 L2317-2323; market mapping/positioning (block c403b127): Construct-4 L2331-2337 + Discuss-8 L2338-2344; adding value (block 16bf08b5): Explain-4 L2345-2351 + Assess-10 L2352-2358 (+ Evaluate-20 L2359-2364). All three named topics satisfied.",
    "note": null
   },
   {
@@ -2065,10 +2065,10 @@
    "rank": 1,
    "text": "Add recall widgets that are genuinely orderable/unambiguous: fillin for the adding-value and risk-vs-uncertainty definitions (word banks with non-interchangeable terms), a reorder for the market-mapping procedure (choose variables → plot competitors → identify gap → test demand in the gap) and for the primary-research process; do NOT add reorders for the four sampling methods or segmentation bases (parallel lists).",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16-r3 2026-09-15",
+   "evidence": "audit/snapshots/packet-16-bundle__business__meeting-customer-needs.json L508-532: risk-vs-uncertainty recall is now type fillin (word bank probability/insure/listed/flexibility, distractors forecast/certainty, each blank has one grammatically-fitting answer - non-interchangeable), replacing the classify it was rejected for. Confirmed still intact: adding-value fillin L1395+, market-mapping reorder L1116+, primary-research reorder L860+, sampling match (not reorder) L971, segmentation match (not reorder) L1189. All parts of the ask now met.",
    "note": null
   },
   {
@@ -2078,10 +2078,10 @@
    "rank": 2,
    "text": "Add a market-map diagram (ideally interactive: drag a brand onto price/quality axes) and an adding-value bar (input cost vs selling price); attach quiz[6]/[7] and a practice item to block 5 so the section does not end unchecked.",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "bundle L2593 diagram bb700edd The Chilled-Juice Market Map (5-scenario walkthrough on price/juice-content axes) and L2619 diagram 46092036 Where the Money Goes on One Bottle (input-cost-vs-selling-price bar) both added; block 16bf08b5 (final block, was unchecked) now has diagram L1430, quizIndices [34,31,32,33,35,36] L1431-1437 and practiceIndices [7] L1438-1440 attached - section no longer ends unchecked",
    "note": null
   },
   {
@@ -2091,10 +2091,10 @@
    "rank": 3,
    "text": "Fill spec gaps inside Learn Mode: market size/share/growth with a worked calculation, brands and brand loyalty, ICT in market research (websites, social media analytics, databases), online retailing as a driver of dynamic markets; shrink the sampling block to a single 'sample size and bias' subsection.",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "market size/share/growth worked calc L129-183; brands and brand loyalty L184-266; ICT-adjacent secondary sources (websites/social media, databases per bus_spec.txt:530,533) L875-935; online retailing as dynamic-markets driver L287-337 - all now in Learn Mode. Sampling shrunk from 2 subsections to 1 (L936-1016) but not to a single item, because bus_spec.txt:535-537 requires random/quota/stratified as three leaves; deleting them would have violated the spec, so the packets partial deviation from this clause is the correct reading (also documented in commit bf2ab44)",
    "note": null
   },
   {
@@ -2104,10 +2104,10 @@
    "rank": 4,
    "text": "Clean the quiz bank: delete duplicates (10, 12, 15, one of 4/18), fix ambiguous items 3 (add 'random selection within each group'), 16 (add a numeric cue), 17 (reclassify or teach ICT-sourced data first), 7 (reword correct option as a difference, not a price rise), and remove absolute-word distractors in 20/22/24.",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16-r5 2026-09-15",
+   "evidence": "Clause re-verified at HEAD (a4c831a, bundle unchanged since). audit/snapshots/packet-16-bundle__business__meeting-customer-needs.json:1860-1869 id f73b8424: stem now 'A business sells a product for more than its bought-in materials cost. The gap between those two figures is:', correctIndex 1 = 'The value added' (15 chars) vs distractors 'The profit'/'The revenue'/'The mark-up on cost' (longest 19 chars, ratio 0.79, well under 1.5x, lib/content-validator.mjs:76 quiz.long-correct). Correct option is now a noun naming the gap, not a price-rise phrasing (old 'Increasing what the customer will pay above the input cost' is gone); ambiguity with 'Raising the selling price' is eliminated by construction. 'Mark-up on cost' is a coherent, non-ambiguous distractor: taught elsewhere in the course as a percentage added to cost (seed/business-unit1.mjs:1011 'cost £10 + 50% mark-up = £15'), not the absolute gap the stem asks for; 'profit' is independently ruled out by the section's own item 36 (5f93e802, L2200ish) 'value added must still cover wages, rent, energy and marketing'. Ran the real gate (lib/content-validator.mjs validateSection) over the current bundle: 0 quiz.* findings (block or debt) across all 37 items -- no near-dup, no long-correct, no histogram, no hedged/absolute issue. Manual corroboration: near-dup scan of new stem vs other 36 stems, max Jaccard 0.12 (vs item 35, the value-added calculation) -- far under the 0.5 quiz.near-dup threshold. Absolute-word scan (only/all/never/always/every/impossible/guaranteed/must etc.) on the four new options: none present; commit a4c831a touched only this one item in the bundle, so no other item's distractors were touched. Correct-answer position histogram across all 37: idx0 27.0%, idx1 27.0%, idx2 18.9%, idx3 27.0%, idx4/5 0% -- every used bucket between 10% and 40%, matching lib/content-validator.mjs:513-516 quiz.histogram thresholds.",
    "note": null
   },
   {
@@ -2116,10 +2116,10 @@
    "kind": "quiz",
    "text": "q3: Quota sampling ALSO divides the population into subgroups and fills proportionate targets from each; the only real discriminator (random vs non-random selection within groups) is absent from the stem. Options B (quota) and C (stratified) are both defensible. Explanation's 'without the same systematic approach' does not resolve it.",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "bundle L2126-2134 quiz item b2defef3 (index 24) stem now reads divides the population into subgroups and then selects at random within each one, uniquely identifying Stratified (correctIndex 2) over Quota; explanation states quota fills them with whoever is available, so the selection inside the group is not random - the ambiguity is resolved",
    "note": null
   },
   {
@@ -2128,10 +2128,10 @@
    "kind": "quiz",
    "text": "q16: Stem contains no numerical data; surveys can be qualitative (open questions). 'Primary qualitative research' (option B) is equally defensible. Needs a numeric cue (e.g. '68% of 2,000 respondents').",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "bundle L2030-2038 quiz item ac7d7840 (index 16) now cross-tests both dimensions at once (primary/secondary x quant/qual, 4 options), stem cues quantitative via estimate the size of its market, correctIndex 3, explanation resolves both discriminators explicitly - the old primary-qualitative ambiguity is gone",
    "note": null
   },
   {
@@ -2140,10 +2140,10 @@
    "kind": "practice",
    "text": "p0: 'Define the term niche market (4 marks)' — IAL Business definitions are 2-mark 'What is meant by...' items. The guidance pads to 4 by crediting an example and 'premium pricing', neither of which is part of a definition. Teaches the wrong exam shape.",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "bundle L2284-2289 practice item 98b42c70 is now Define the term niche market. (2 marks), command=Define marks=2, matching the IAL 2-mark What is meant by/Define shape the item asked for",
    "note": null
   },
   {
@@ -2152,10 +2152,10 @@
    "kind": "practice",
    "text": "p1: 'Explain two benefits ... (6 marks)' — IAL uses 'Explain one ...' for 4 marks (K1/A1/An2 chain). There is no 6-mark explain-two format on WBS11. Guidance also has no application requirement.",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "bundle L2291-2296 practice item b455326f is now Explain one benefit to a business of operating in a niche market. (4 marks), command=Explain marks=4, matching IALs Explain-one/4-mark shape, replacing the old Explain-two/6-mark item",
    "note": null
   },
   {
@@ -2164,10 +2164,10 @@
    "kind": "practice",
    "text": "p4: 'Outline two features of a dynamic market (4 marks)' — 'Outline' is not an IAL Business command word (it is GCSE/other boards). Should be 'Explain one feature...' (4) or 'What is meant by a dynamic market?' (2).",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "bundle L2282-2339 the 8-item practice bank contains no Outline command anywhere (Define/Explain/Calculate/Analyse/Discuss/Assess/Construct/Evaluate only); dynamic-markets content is now examined via Analyse item 0eb9b618 (L2305-2310, 6 marks) instead",
    "note": null
   },
   {
@@ -2176,10 +2176,10 @@
    "kind": "structure",
    "text": "Zero recall widgets (0 reorder, 0 fillin) across 15 subsections — the spaced/immediate retrieval mechanic that defines Learn Mode never fires; the section is read-only plus one MCQ per block.",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "audit/snapshots/packet-16-bundle__business__meeting-customer-needs.json: all 21 subsections now carry a recall widget (type fields at L46,104,167,232,321,389,449,509,591,650,710,782,858,909,969,1060,1122,1194,1256,1329,1400 = 6 fillin/5 classify/5 reorder/5 match), up from 0 reorder/0 fillin across 15 subsections; dry run confirms 21 recalls total",
    "note": null
   },
   {
@@ -2188,10 +2188,10 @@
    "kind": "structure",
    "text": "Zero diagrams. Market mapping is the canonical diagram of this topic and its own examMatters says 'questions often provide a diagram' — yet no market map is shown. Adding value (input cost vs price bar) and mass/niche positioning are also natural diagrams.",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "audit/snapshots/packet-16-bundle__business__meeting-customer-needs.json:2552-2631 diagrams table now has 5 entries: f0d091ed L2554 (size/share/growth), 09593a9b L2567 (research grid), 79945957 L2580 (sampling), bb700edd L2593 (the market map, named in the item), 46092036 L2619 (adding-value bar, named in the item) - up from zero",
    "note": null
   },
   {
@@ -2200,10 +2200,10 @@
    "kind": "structure",
    "text": "practiceIndices are attached to the wrong blocks: block 1 'Competition, Risk and Uncertainty' → practice[0] (define niche market); block 2 'Market Research Methods' → practice[1] (benefits of niche market); block 4 'Market Positioning and Orientation' → practice[2] (market research in a dynamic market). Block 0, where all the niche/mass/dynamic content lives, gets no practice. Correct mapping: practice 0,1,3,4 → block 0; practice 2 → block 2.",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "audit/snapshots/packet-16-bundle__business__meeting-customer-needs.json:8-282 block fd1b86b3 The Market: Mass and Niche now owns practiceIndices [0,1,2] (L276-279) = Define niche L2284, Explain niche-benefit L2291, Calculate market-share/growth L2298 - niche/mass/market-size practice is now co-located with the mass/niche block",
    "note": null
   },
   {
@@ -2212,10 +2212,10 @@
    "kind": "structure",
    "text": "Block 5 'Segmentation and Competitive Advantage' has no quizIndices and no practiceIndices even though quiz[6] (segmentation bases) and quiz[7] (adding value) exist. The section ends on three subsections with no check for understanding.",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "audit/snapshots/packet-16-bundle__business__meeting-customer-needs.json:1156-1442 block 16bf08b5 Segmentation, Advantage and Value (the final block) now has quizIndices [34,31,32,33,35,36] at L1431-1437 and practiceIndices [7] at L1438-1440 - no longer ends unchecked",
    "note": null
   },
   {
@@ -2224,10 +2224,10 @@
    "kind": "structure",
    "text": "Only 5 of 25 MCQs are used inline (one per block); 20 sit unused except via random PreTest/PostTest draws.",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "audit/snapshots/packet-16-bundle__business__meeting-customer-needs.json quizIndices per block: L268-275(6) L540-547(6) L807-814(6) L1000-1007(6) L1145-1150(4) L1431-1437(6) = 34 of 37 quiz items now used inline, up from 5 of 25",
    "note": null
   },
   {
@@ -2236,10 +2236,10 @@
    "kind": "structure",
    "text": "Spec ordering is scrambled: product vs market orientation (spec 1.1.2a, market research) is placed in the 'Positioning' block; segmentation (1.1.2e) is placed with competitive advantage/adding value (1.1.3). A student following the spec cannot map blocks to spec bullets.",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "audit/raw/bus_spec.txt:538 a) Product and market orientation. and :541 c) Market segmentation. both sit under subtopic 3 Market positioning (:538-539) - block c403b127 Orientation and Market Mapping (bundle L1013) and block 16bf08b5 Segmentation, Advantage and Value (bundle L1156) are correctly grouped there, not scrambled; the items own ledger note flags its 1.1.2/1.1.3 citation as UK GCE numbering, and the real IAL wording confirms the packets ordering is right",
    "note": "SPEC NUMBERING: this item cites 1.1.2, 1.1.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -2248,10 +2248,10 @@
    "kind": "structure",
    "text": "Weighting: a full block (2 subsections + 1 inline MCQ) on sampling methods that are not on the IAL spec, while spec bullets market size/share, brands, ICT in research and online retailing are absent from Learn Mode (they exist only in the Notes tab as 'Market Size, Share & Growth' and 'Branding').",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "bus_spec.txt:535-537 requires random/quota/stratified as three leaves, so sampling was rebalanced not deleted: one subsection types-of-sampling (bundle L936-1016) inside block 18faaa0b, down from a full block; previously Notes-only spec content is now in the Learn Mode content table: market size/share L129-183, branding L184-266, secondary-research incl. websites/social-media/databases L875-935, dynamic-markets/online-retailing L287-337",
    "note": null
   },
   {
@@ -2260,10 +2260,10 @@
    "kind": "structure",
    "text": "2-per-step pairing: block 0 pairs (mass, niche) then leaves 'dynamic-markets' alone; block 2 leaves 'qualitative-vs-quantitative' alone; block 5 leaves 'adding-value' alone as the final step with no quiz — a weak finale. Pairings themselves are coherent.",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "bundle L8-282 block fd1b86b3 now pairs mass+niche+size/share+branding (4 subsections, no orphan); L283-552 block 3e30d471 pairs dynamic-markets+innovation then competition+risk; L1156-1442 block 16bf08b5 still ends on adding-value (L1353) but now carries quizIndices [34,31,32,33,35,36] (L1431-1437) and practiceIndices [7] (L1438-1440) - no longer a weak unchecked finale",
    "note": null
   },
   {
@@ -2272,10 +2272,10 @@
    "kind": "structure",
    "text": "Takeaways match their blocks well (good). Block 4 has 4 takeaways vs 3 elsewhere; fine.",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "bundle takeaway arrays: block0=3 (L262-266), block1=4 (L534-539), block2=3, block3=3, block4=3, block5=4 (L1425-1429) - same mostly-3-with-one-block-at-4 pattern the item calls fine, preserved through the rewrite",
    "note": null
   },
   {
@@ -2284,10 +2284,10 @@
    "kind": "structure",
    "text": "Some FLOW chains are filler rather than causal: 'Research customer needs → Design product to match → Launch with confidence'; 'Identify existing data sources → Analyse data for your purpose' (2-step). The dynamic-markets flow is non-causal (see accuracy).",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16-r3 2026-09-15",
+   "evidence": "audit/snapshots/packet-16-bundle__business__meeting-customer-needs.json: the flagged 2-step non-causal flow at subsection product-vs-market-orientation (previously L1029-1034) is now a plain bullets contrast, L1035-1042. Remaining flow widgets (grep '\"type\": \"flow\"' -> L197, L358, L749, L1290) are exactly the 4 subsections already confirmed causal in round 2 (branding-and-brand-loyalty, innovation-market-growth-adapting, quantifying-likely-demand, product-differentiation); each still has 4 steps (verified programmatically). The dynamic-markets subsection (L287-333) referenced by 'see accuracy' carries no flow widget at all (reorder recall only, L320-333), so the non-causal instance the item names is gone. No filler/2-step/non-causal flow chains remain.",
    "note": null
   },
   {
@@ -2296,10 +2296,10 @@
    "kind": "structure",
    "text": "Misconceptions are genuine student errors (risk=uncertainty, segmentation=targeting, adding value=raising price, gap=opportunity, bigger sample=better) — this is a strength, not filler.",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "all 5 named misconceptions present and specific: risk=uncertainty L505, segmentation=targeting L1190, adding-value=raising-price L1396, gap=opportunity L1118, bigger-sample=better L965, in audit/snapshots/packet-16-bundle__business__meeting-customer-needs.json; all 21 subsections now carry a genuine misconception field",
    "note": null
   },
   {
@@ -2308,10 +2308,10 @@
    "kind": "structure",
    "text": "Difficulty ramp is flat: every subsection follows the identical template; there is no build from definition → application → evaluation within the section, so the 20-mark evaluate question at the end has no scaffolding step before it.",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "bundle L2282-2339 practice tariffs ramp 2,4,4,6,8,10,4,20 (Define,Explain,Calculate,Analyse,Discuss,Assess,Construct,Evaluate); Assess (10, L2319-2323) already uses the same Knowledge/Application, Reasoning, Competing factors, Judgement levels structure as Evaluate (20, L2333-2338), scaffolding the judgement-writing skill ahead of the final question, unlike the prior point-based guidance",
    "note": null
   },
   {
@@ -2320,10 +2320,10 @@
    "kind": "specGap",
    "text": "1.1.1a Market size and market share — definitions and the share/growth calculations are not in Learn Mode content (only in the Notes tab).",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "bus_spec.txt:510 market size and market share; bundle L129-183 subsection market-size-share-and-growth is now in the Learn Mode content table (not just Notes), with a worked example (growth=(40-32)/32x100=25%, share=6/40x100=15%)",
    "note": "SPEC NUMBERING: this item cites 1.1.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -2332,10 +2332,10 @@
    "kind": "specGap",
    "text": "1.1.1a Brands — branding as a characteristic of mass markets is mentioned in one clause; no teaching of brand, brand loyalty, or brands as barriers to entry (Notes tab has it, Learn Mode does not).",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "bus_spec.txt:511 brands.; bundle L184-266 subsection branding-and-brand-loyalty is now in Learn Mode content, covering brand definition, brand loyalty and branding as a barrier to entry, plus a 4-step flow and a match recall (L231-266)",
    "note": "SPEC NUMBERING: this item cites 1.1.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -2344,10 +2344,10 @@
    "kind": "specGap",
    "text": "1.1.1b Dynamic markets: online retailing; innovation and market growth; adapting to change — only one passing sentence ('Online retailing, streaming services and electric vehicles are all examples'); no treatment of how online retailing changes markets or of innovation driving market growth.",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "bus_spec.txt:513-516 online retailing/how markets change/innovation and growth/adapting to change; bundle L287-337 dynamic-markets and L338-415 innovation-market-growth-adapting are full Learn Mode subsections now, not a single sentence",
    "note": "SPEC NUMBERING: this item cites 1.1.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -2356,10 +2356,10 @@
    "kind": "specGap",
    "text": "1.1.2b Market research used to quantify likely demand — not covered; research is framed only as identifying needs and gaining insight.",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "bus_spec.txt:522 quantify likely demand; bundle L734-805 subsection quantifying-likely-demand walks the scaling calculation (600 shoppers, 18%, 500,000 market, dollar figure) with its own flow and reorder recall",
    "note": "SPEC NUMBERING: this item cites 1.1.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -2368,10 +2368,10 @@
    "kind": "specGap",
    "text": "1.1.2c Limitations of market research (as a topic) — only implied via sampling bias; no explicit treatment of cost, time, consumers not doing what they say, research becoming outdated (the practice[2] guidance expects these).",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "the word limitation does not occur in bus_spec.txt:504-544 (checked directly), so packet bf2ab44 correctly declined to add it as its own topic; the evaluative content the item wanted (cost, time, stated-intention-vs-behaviour) is taught via practice guidance: Discuss L2312-2317 (margin of error, price-specific result) and Assess L2319-2323 (budget rules out interviews, month rules out anything sequential), plus the quantifying-likely-demand misconception L778",
    "note": "SPEC NUMBERING: this item cites 1.1.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -2380,10 +2380,10 @@
    "kind": "specGap",
    "text": "1.1.2d Use of ICT to support market research: websites, social networking, databases — not taught at all, yet quiz[17] tests it.",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "the word ICT does not occur in bus_spec.txt; bus_spec.txt:530 websites/social media and :533 databases. are the actual leaves, and bundle L875-935 subsection secondary-research teaches both as named bullet items with strengths/limits, matching how packet bf2ab44 says it built them",
    "note": "SPEC NUMBERING: this item cites 1.1.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -2392,10 +2392,10 @@
    "kind": "specGap",
    "text": "1.1.3a Market mapping — taught in text but the spec skill (interpreting/drawing a map) is untested because there is no diagram.",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "bus_spec.txt:540 Market mapping.; bundle L1085-1159 subsection market-mapping now pairs with diagram bb700edd (L2593, 5-scenario Chilled-Juice Market Map) and a reorder recall (L1121-1159), and practice item 11062b94 (Construct, 4 marks, L2326-2331) requires the student to actually plot and label a map - the mapping skill is tested, not just described",
    "note": "SPEC NUMBERING: this item cites 1.1.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -16570,10 +16570,10 @@
    "kind": "specThin",
    "text": "1.3.1 Primary method: product trials / test marketing — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "bundle L824-873 subsection primary-research now defines and explains product trials/test marketing in its own paragraph (a product trial is the only method recording behaviour rather than intention...) plus a reorder recall walking the stages of a trial (L857-873) - a student can now answer an exam question from it",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16582,10 +16582,10 @@
    "kind": "specThin",
    "text": "1.3.1 Secondary source: websites — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "bundle L875-935 subsection secondary-research defines Websites and social media with a worked example and its limit (a rivals site is promotional, and a following is not the market) - no longer just named",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16594,10 +16594,10 @@
    "kind": "specThin",
    "text": "1.3.1 Secondary sources: newspapers / magazines / TV / radio — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 16,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-16",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "verify-a-packet-16 2026-09-15",
+   "evidence": "bundle L875-935 subsection secondary-research defines Newspapers, magazines, television and radio with its use and limit (broad and current, written to interest a general audience rather than to measure) - no longer just named",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {

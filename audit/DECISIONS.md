@@ -687,6 +687,119 @@ Append only. Every entry needs a date and the packet that made it.
   first content able to trigger it, and every later section is now protected. **A widget is only proven by
   content that stresses it; a fixture that fits is not evidence that a real item will.**
 
+- **2026-09-15 (packet 16) — five more ledger claims the specification refutes, and one it redirects.**
+  Every `1.1.x` number in this section's ledger is UK GCE Theme 1; the IAL topic is 1.3.1
+  (`bus_spec.txt:504`). `structure-07` calls sampling "not on the IAL spec" and `topFix-04` acts on that by
+  asking for the sampling block to shrink to a single "sample size and bias" subsection — but `:534-537`
+  reads `d) Sampling methods: • random • quota • stratified`, three required leaves, so acting on the claim
+  would have deleted required content. The weighting complaint is valid and the remedy is not: sampling now
+  has one subsection teaching all three named methods, with size and bias as a paragraph inside it.
+  `structure-06` calls the block order scrambled; in IAL, product and market orientation is **3a** (`:538`)
+  and segmentation is **3c** (`:541`), both inside *Market positioning*, which is where the March section
+  already had them — closed as no-change. `specGap-05` asks for "limitations of market research" as a
+  topic: the string "limitation" appears eight times in the Business specification and never inside 1.3.1
+  (`:906, :908, :1154, :1161, :1165, :1174, :1236, :1242`), so limitations are taught as the **evaluation**
+  attached to the research subsections, where the AO3/AO4 marks for them sit, and the practice item whose
+  guidance demanded untaught material is rewritten — the same shape as packet 15 deleting quiz q24 rather
+  than building a rewards subsection. `specGap-06` asks for "use of ICT to support market research": "ICT"
+  appears **nowhere** in the Business specification and neither does "social networking", but `2c` names
+  `• websites/social media` (`:530`) and `• databases.` (`:533`) as secondary research **methods**, so that
+  is how they are built — which also closes `specThin-02`, `specThin-03` and three `spec.uncovered` leaves.
+  `structure-09` and `structure-11` are observations ("takeaways match their blocks well", "misconceptions
+  are genuine student errors — this is a strength"), closed as no-change, and the misconceptions are kept
+  and read against the spec span rather than rewritten.
+
+- **2026-09-15 (packet 16) — V001 does not reach every section, and the only way to know is to count.**
+  The packet-15 handoff asks packet 16 either to fix the dropped-bullet bug in
+  `audit/scripts/build-spec-items.mjs` or to accept an incomplete oracle. Counting bullet characters in
+  `bus_spec.txt:504-545` independently of the generated asset: **21 bullets, every one at line start, and
+  all 29 leaves present in `spec-items.json`**. The line-anchored regex drops nothing in this span, so this
+  section's coverage number is trustworthy and V001 stays packet 3.1's. It does **not** follow that the
+  next Business packet inherits that result — Ansoff and Porter's Strategic Matrix are among the 29
+  Business bullets dropped elsewhere. Count the span; do not assume it.
+
+- **2026-09-15 (packet 16) — "barriers to entry" is not Business vocabulary, and the test is the spec, not
+  familiarity.** `grep -i barrier audit/raw/bus_spec.txt` returns four hits and none of them is this idea:
+  "Barriers to entrepreneurship" (`:768`), trade barriers (`:1343`, `:1359`) and an access phrase
+  (`:1817`). The term IS in the IAL **Economics** specification (`:1386`, `:1425`). The first draft made it
+  load-bearing in eleven places across branding, competition and competitive advantage, and **assessed** it:
+  a quiz item whose correct answer was correct only if you knew the label. Spec 1c ("How competition affects
+  the market") carries no sub-bullets, so the concept is legitimate elaboration and the vocabulary is not:
+  it is named twice, explicitly as the term the Economics papers use, and tested nowhere. The general rule,
+  after packet 13's eight frameworks: where the specification supplies no vocabulary for a leaf, teach the
+  mechanism in plain words and name the standard term as an aside rather than as the thing being learned.
+
+- **2026-09-15 (packet 16) — the validator's `claim.uncited` rule has a word-shaped hole, and Layer 6 is
+  what finds it.** The rule fires on `\bexaminers?\s+(reward|penalise|expect|…)`. A sentence that asserts
+  exactly the same thing without the word — "an unlabelled axis costs marks no commentary recovers", "that
+  earns half the marks", "a plotted point without its brand name earns nothing" — passes untouched. Layer 6
+  found thirteen in this bundle's first draft, in `examMatters`, in notes takeaways and in practice
+  guidance. All thirteen now say what the **command word requires**, which Appendix 6 states and which can
+  therefore be cited, rather than what a marker does with an answer, which cannot. The packet's runner
+  refuses the class by regex. Widening `claim.uncited` itself is packet 3's call, not a section packet's:
+  the phrasing is unbounded and a lexical rule will keep losing to it, which is the case for Layer 6
+  existing rather than for a longer regex.
+
+- **2026-09-15 (packet 16) — the pre-test is the first three UNRESERVED items of what the STUDENT is sent,
+  which for most students is two items.** Packet 15 settled that the deliberately unpinned items are the
+  pre-test, and that is true for a Pro student. `GET /api/sections/[id]` caps a free or signed-out
+  student's quiz at `PREVIEW_LIMITS.quiz` (2) since F086, and `PreTest.jsx` slices whatever it is given. So
+  with the unpinned items at the END of a 37-item array, the two a free student received were both PINNED
+  ones — and the pre-test asked a question the chapter-1 check-in asked again minutes later, which is
+  precisely the defect F079 removed. It has been live for every signed-out student since F086. Fixed in
+  content, not in code: **the unpinned items go FIRST in the array**, so the free slice is drawn from the
+  pre-test's own pool. Every section packet from here puts its pre-test items first, and the widening of
+  the free quiz slice — which would be the code fix — is a freemium-boundary decision and so the founder's.
+
+- **2026-09-15 (packet 16) — a dev-only `?draft=1`, because a held section still has to be walked.**
+  Three finished sections (14, 15, 16) are now staged and unpublishable until packets 5 and 7 reach main,
+  and the PROTOCOL gate requires a 390×844 walkthrough of each. Nothing on the student path reads `draft`,
+  so there was no route to one; packets 14 and 15 walked live content and were reverted afterwards, which
+  is how production went down twice. `GET /api/sections/[id]` now serves `draft` (falling back to `data`
+  per table) when `?draft=1` is set **and** `NODE_ENV !== 'production'`, with `Cache-Control: no-store` so
+  a re-stage is visible immediately; `StudyApp` forwards the flag and refetches the server-rendered first
+  section when it is set. Vercel previews build with `NODE_ENV=production`, so the flag cannot reach a
+  student. One guard, on the server, is the whole of it.
+
+- **2026-09-15 (packet 16) — PROTOCOL changed: the verifier's agent type must be able to write the ledger.**
+  Verify A is defined as an agent that confirms or rejects each id *through* `ledger.mjs`, and the CLI writes
+  `audit/ledger.json`. This session had no `packet-verifier` type available and substituted a read-only
+  search agent, which read the diff, the bundle and the specification, reached a correct verdict on all 32
+  ids — and then refused to run a single `confirm`, because writing a file is outside what its type permits.
+  The pass had to be re-run by an agent that could write. "Read-only" in PROTOCOL means *it may change
+  nothing but the ledger*, not *it may change nothing*; the file now says so, in its own commit as PROTOCOL
+  requires.
+
+- **2026-09-15 (packet 16) — a multi-part ledger item is satisfied clause by clause, and the builder is
+  the worst judge of that.** Five of Verify A's rejections across this packet were the same shape: an item
+  that names three or four things, of which the packet did two or three and then read the item as done.
+  `topFix-01` asks for a 4-mark AND an 8/10-mark item for each of three topics — twelve marks' worth of
+  pairs, of which the eight-item set had none complete. `topFix-05` names four jobs (delete duplicates, fix
+  three ambiguous items, remove absolute-word distractors) and took three rounds, because each pass fixed
+  the absolutes it had noticed rather than scanning every option of all 37 items. `topFix-02` names a recall
+  TYPE for a named subsection and got a different, defensible type. The rule for every content packet from
+  here: **split a multi-part item into its clauses before building, check them off individually, and say in
+  the spec block which clause each artefact satisfies.** A verifier that counts clauses will find what a
+  builder reading for overall sense will not.
+
+- **2026-09-15 (packet 16) — the builder's defence of a distractor lost to the verifier's, and should
+  have.** "Entry becomes impossible without an established brand" was kept on the argument that the item's
+  explanation exists to answer it. Round 3's counter: it inflates a true directional claim into an absolute,
+  which is the same shape as the options already replaced, and a student eliminates it without reading the
+  stem either way. That is the better test, and it is the one to apply: **a distractor is a defect when the
+  word alone kills it, and legitimate when it states a coherent alternative concept ("a market in which only
+  one firm is permitted to sell" is a monopoly) or wrong reasoning that needs the stem to evaluate ("the
+  data is all quantitative").** Not because of what its explanation happens to say.
+
+- **2026-09-15 (packet 16) — a revert has two halves, and packet 15 shipped one of them.** `npm run
+  validate` was exiting 1 with 25 new BLOCK and 53 new DEBT, all in `introductory-concepts`: packet 15
+  removed 78 keys from the baseline when it published, its content was reverted the same day, and the
+  baseline was not. Packet 14 did this correctly after its own revert (2,415 → 2,448, matching
+  `origin/main`); this is the same repair, 2,370 → 2,448, +78 −0, every key that section's. The 78 go away
+  again when packet 15 republishes at the checkpoint. **Revert the baseline in the same commit as the
+  content, or the next packet's gate inherits a failure that is not its own** — and because the file is
+  shared state, record what your own write changed, by section, not by total.
+
 ## 15 September 2026 — packet 5.1, the resume pointer (Opus 5)
 
 **Found from a live bug, not from the audit corpus.** Ronald hit "You left off at step 20 of 9", a 222%
