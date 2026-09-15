@@ -506,27 +506,29 @@
       "examMatters": "When a case study lists things that might go wrong, sort them before writing. Say which are quantifiable risks and which are genuine uncertainties, and why, rather than treating the whole list as one category.",
       "recall": {
        "id": "meeting-customer-needs:sub:risk-vs-uncertainty:recall",
-       "type": "classify",
-       "prompt": "Sort each situation facing a juice maker into risk or uncertainty:",
-       "groups": [
-        {
-         "name": "Risk",
-         "items": [
-          "Fruit prices vary with the harvest each year",
-          "A new flavour may or may not sell",
-          "A delivery van breaks down during the year"
-         ],
-         "why": "The possible outcomes are known and past data lets a probability be attached, so the firm can plan, price or insure against them"
-        },
-        {
-         "name": "Uncertainty",
-         "items": [
-          "A law banning plastic bottles is passed",
-          "A new drink technology makes chilling unnecessary",
-          "A border closure halts imported packaging"
-         ],
-         "why": "Nobody could list these outcomes in advance or put odds on them, so only flexibility — reserves, alternatives, slack — helps"
-        }
+       "type": "fillin",
+       "prompt": "Complete the two definitions. The terms are not interchangeable:",
+       "template": [
+        "Risk: the possible outcomes are known and a ___ can be attached to each",
+        "→ So the firm can plan for it, price it, or ___ against it",
+        "→ Uncertainty: the outcomes cannot be ___ at all, so no odds exist",
+        "→ So the only defence is ___ — reserves, alternatives, a shorter supply chain"
+       ],
+       "answers": [
+        "probability",
+        "insure",
+        "listed",
+        "flexibility"
+       ],
+       "hints": [
+        "the number between 0 and 1 that says how likely an outcome is",
+        "what a firm pays a premium to do with a quantifiable danger",
+        "what you cannot do to outcomes nobody has thought of",
+        "what a firm keeps when it cannot plan for something specific"
+       ],
+       "distractors": [
+        "forecast",
+        "certainty"
        ]
       }
      }
@@ -813,7 +815,8 @@
      20
     ],
     "practiceIndices": [
-     4
+     4,
+     6
     ]
    },
    {
@@ -1023,19 +1026,11 @@
         "text": "A **product-oriented** business begins with its own capability — an engineering strength, a recipe, a design — makes the best version it can, and then finds customers for it. A **market-oriented** business begins with research, establishes what customers want, and designs to that."
        },
        {
-        "type": "flow",
-        "steps": [
-         {
-          "title": "Product orientation",
-          "subtitle": "build what we are best at → find buyers for it"
-         },
-         {
-          "title": "Market orientation",
-          "subtitle": "research what is wanted → build that"
-         }
-        ],
-        "result": "Two different starting points, and two different risks",
-        "resultType": "neutral"
+        "type": "bullets",
+        "items": [
+         "**Product orientation** starts with capability: build what we are best at, then find the buyers.",
+         "**Market orientation** starts with evidence: research what is wanted, then build that."
+        ]
        },
        {
         "type": "bullets",
@@ -1149,7 +1144,8 @@
      30
     ],
     "practiceIndices": [
-     6
+     7,
+     8
     ]
    },
    {
@@ -1437,7 +1433,9 @@
      36
     ],
     "practiceIndices": [
-     7
+     9,
+     10,
+     11
     ]
    }
   ],
@@ -1935,12 +1933,12 @@
     "question": "How does strong brand loyalty most directly help a firm's pricing?",
     "options": [
      "It reduces the cost of the materials the firm buys in",
-     "It guarantees that the firm will never lose customers",
+     "It lowers the price the firm has to charge to keep customers",
      "It forces competitors to raise their prices too",
      "It makes demand less sensitive to price, so a rise loses fewer customers"
     ],
     "correctIndex": 3,
-    "explanation": "Loyal customers stop comparing alternatives, so demand becomes less price-sensitive and a price rise costs the firm less volume than it would an unbranded rival. Branding affects demand, not the cost of inputs."
+    "explanation": "Loyal customers stop comparing alternatives, so demand becomes less price-sensitive and a price rise costs the firm less volume than it would an unbranded rival. Loyalty lets a firm charge more, not less, and it does nothing to the cost of inputs."
    },
    {
     "id": "meeting-customer-needs:quiz:650cb1d8",
@@ -1983,12 +1981,12 @@
     "question": "What is the key difference between risk and uncertainty?",
     "options": [
      "Risk affects small firms and uncertainty affects large ones",
-     "Risk always has negative outcomes and uncertainty does not",
+     "Risk is short-term and uncertainty is long-term",
      "Risk has outcomes that can be listed and given probabilities",
      "Risk applies to costs and uncertainty applies to revenues"
     ],
     "correctIndex": 2,
-    "explanation": "Risk describes a situation where the possible outcomes are known and odds can be attached, so it can be planned for or insured. With uncertainty the outcomes cannot be listed at all. Both affect firms of any size."
+    "explanation": "Risk describes a situation where the possible outcomes are known and odds can be attached, so it can be planned for or insured. With uncertainty the outcomes cannot be listed at all. Both affect firms of any size, over any period, on costs and on revenues alike."
    },
    {
     "id": "meeting-customer-needs:quiz:b3bd0ddb",
@@ -2066,13 +2064,13 @@
     "id": "meeting-customer-needs:quiz:0645c367",
     "question": "Why should a demand figure scaled up from a survey be treated as an upper estimate?",
     "options": [
-     "Because surveys are always carried out on the wrong people",
+     "Because the sample is smaller than the target market",
      "Because percentages cannot be applied to a population",
      "Because people buy more than they say they will",
      "Because stated intention overstates what people actually buy"
     ],
     "correctIndex": 3,
-    "explanation": "People overstate willingness to buy when nothing is at stake, so scaled intention exceeds realised sales. Scaling a proportion to a population is the correct method; the caution is about the proportion, not the arithmetic."
+    "explanation": "People overstate willingness to buy when nothing is at stake, so scaled intention exceeds realised sales. Scaling a small sample up to a large population is the correct method, and the size gap is not the problem; the caution is about the proportion, not the arithmetic."
    },
    {
     "id": "meeting-customer-needs:quiz:da1853ae",
@@ -2177,10 +2175,10 @@
      "A market where customers can describe exactly what they want",
      "A market where the product changes very little over time",
      "A market driven by technology customers do not yet know about",
-     "A market where the cheapest producer always wins"
+     "A market where customers buy mainly on price"
     ],
     "correctIndex": 2,
-    "explanation": "Where the product does not exist yet, customers cannot specify it, so research reports only on what they already know. Markets where customers can articulate their wants reward market orientation instead."
+    "explanation": "Where the product does not exist yet, customers cannot specify it, so research reports only on what they already know. A market where buyers choose mainly on price rewards cost control, not product orientation."
    },
    {
     "id": "meeting-customer-needs:quiz:07dc69f1",
@@ -2198,7 +2196,7 @@
     "id": "meeting-customer-needs:quiz:551e7d79",
     "question": "On Zuri's map, Halo sells 85% juice at $1.90 and Zuri sells 45% at $1.20. Nobody sells 80% at $1.20. What does that empty position tell Zuri?",
     "options": [
-     "That customers definitely want a high-juice drink at that price",
+     "That customers want a high-juice drink at that price",
      "That no competitor currently occupies that position",
      "That a high-juice drink cannot be made at that price",
      "That the market is too small to be worth entering"
@@ -2323,11 +2321,39 @@
     "guidance": "Levels-marked, with a supported judgement at the end; a balanced answer that never decides cannot reach the top level. Knowledge and application: set out the realistic options against the two constraints in the stem — a survey, a focus group, interviews, a product trial — and say what each would produce for Zuri specifically. Reasoning: develop at least two. A survey is the only option that yields a percentage Zuri can scale to its market, it is cheap per response, and it measures intention rather than purchase. A product trial measures what customers actually did, including repeat purchase, and a month is too short for a meaningful trial and the trial itself costs stock. Competing factors: the budget rules out interviews at scale; a focus group would explain preferences richly but cannot size the opportunity; the month rules out anything sequential. Judgement: name one method, justify it against both constraints and the decision being taken, and say what its weakness means for how the result should be treated — for example, a survey chosen for speed and cost, with the answer discounted because it measures what people say."
    },
    {
+    "id": "meeting-customer-needs:practice:1be1c7a6",
+    "command": "Explain",
+    "marks": 4,
+    "question": "Explain one reason why a business might use secondary research before commissioning primary research. (4 marks)",
+    "guidance": "One reason, developed. Knowledge: secondary data was collected by somebody else for their own purpose, so it already exists and costs little or nothing. Application: name the reason — cost, speed, or sizing the market before committing — and attach it to a business with a decision to take. Analysis: two linked steps. Published reports give market size and share for nothing, so the firm learns whether the market is large enough to be worth entering before it spends anything; only then does it pay for primary research, and it can aim that research at the one question the secondary data could not answer. A candidate who lists three reasons and develops none has written a list, and Explain asks for a brief explanation supported by detail (WBS11 Appendix 6)."
+   },
+   {
     "id": "meeting-customer-needs:practice:11062b94",
     "command": "Construct",
     "marks": 4,
     "question": "Construct a market map for the chilled-juice market using price and juice content as the two axes, plotting Tamu ($0.70, 15%), Mkali ($0.85, 35%), Zuri ($1.20, 45%), Safi ($1.60, 40%) and Halo ($1.90, 85%), and mark one gap. (4 marks)",
     "guidance": "Label the horizontal axis \"Price\" and the vertical axis \"Juice content\", each with its direction — low to high — and a scale that covers the five points. Plot and name all five brands in the positions given; an unnamed point does not identify a competitor. Mark one empty position clearly and label it as a gap: the obvious one is high juice content at a middle price, around 80% at $1.20, where no brand sits. Construct is 4 marks and asks for an accurately labelled diagram (WBS11 Appendix 6): the labelling and the accuracy of the plotting are the answer, not commentary written beside it."
+   },
+   {
+    "id": "meeting-customer-needs:practice:b22c3c53",
+    "command": "Discuss",
+    "marks": 8,
+    "question": "Zuri Juice has mapped the chilled-juice market on price against juice content and found an empty position at about 80% juice for $1.20. Discuss the usefulness of that market map in deciding whether to launch there. (8 marks)",
+    "guidance": "Levels-marked: the assessment is brief but it has to be there. Knowledge and application: a market map plots rivals on two variables customers choose by, and Zuri's shows the five brands and one position nobody occupies. Reasoning in context: the map tells Zuri who it actually competes with rather than who it thinks it does, it makes the empty position visible at all, and it does so in a form the firm can act on. Brief assessment, showing awareness of competing factors: a gap shows only that no rival is there, and the position may be empty because nobody wants it or because a high-juice drink cannot be produced at that price; the map shows two variables when customers choose on more; and it plots perceptions, which move. Judgement: the map is useful for locating the question and useless for answering it — the launch decision belongs to research into demand at that position and to the cost of making the product, which is the next thing Zuri should do."
+   },
+   {
+    "id": "meeting-customer-needs:practice:45fddeb9",
+    "command": "Explain",
+    "marks": 4,
+    "question": "Explain one way in which a business could add value to a product. (4 marks)",
+    "guidance": "One way, developed, not five listed. Knowledge: value added is the selling price minus the cost of bought-in materials and components — for Zuri, $1.20 − $0.45 = $0.75 a bottle. Application: name one method and attach it to a product: branding, design and packaging, convenience, customer service or customisation. Analysis: follow it two steps. A resealable bottle makes the drink easier to carry and finish later, so the customer values it more highly than an identical drink in a plain bottle, so they will pay more for it, and the gap between the input cost and the price widens. The chain has to end at willingness to pay: a method named without saying why a customer would pay more for it has described a change rather than explained one."
+   },
+   {
+    "id": "meeting-customer-needs:practice:f39deec6",
+    "command": "Assess",
+    "marks": 10,
+    "question": "Assess whether branding is the most effective way for a small food or drink business to add value. (10 marks)",
+    "guidance": "Levels-marked, with a supported judgement; a balanced answer that never decides cannot reach the top level. Knowledge and application: define value added as selling price minus bought-in materials, and set branding beside the alternatives the business actually has — design and packaging, convenience, customer service, customisation. Reasoning: develop branding properly. A brand is the expectation a name carries, so a consistently kept promise makes demand less price-sensitive, which lets the firm hold its price when a rival undercuts, and the wider margin funds the next improvement; it also makes the market harder for a new name to enter. Competing factors: branding is slow and expensive and a small business may not survive the years it takes; packaging and convenience change what the customer receives immediately and at a known cost; service is hard for a large rival to copy at all; and a brand built on a promise the product does not keep destroys value rather than adding it. Judgement: decide, and make the decision conditional — on how long the business can fund the wait, on whether its product is genuinely distinguishable, and on whether its customers buy on reputation or on the shelf."
    },
    {
     "id": "meeting-customer-needs:practice:0a8c6acf",

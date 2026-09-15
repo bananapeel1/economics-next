@@ -303,12 +303,17 @@ const riskAndUncertainty = (() => {
     misconception: 'Students use risk and uncertainty as synonyms, or say uncertainty just means more risk. The difference is whether a probability exists at all. Write instead: risk can be estimated and insured; uncertainty cannot be estimated, so it is met with flexibility rather than a plan.',
     examMatters: 'When a case study lists things that might go wrong, sort them before writing. Say which are quantifiable risks and which are genuine uncertainties, and why, rather than treating the whole list as one category.',
     recall: recall(sid, {
-      type: 'classify',
-      prompt: 'Sort each situation facing a juice maker into risk or uncertainty:',
-      groups: [
-        { name: 'Risk', items: ['Fruit prices vary with the harvest each year', 'A new flavour may or may not sell', 'A delivery van breaks down during the year'], why: 'The possible outcomes are known and past data lets a probability be attached, so the firm can plan, price or insure against them' },
-        { name: 'Uncertainty', items: ['A law banning plastic bottles is passed', 'A new drink technology makes chilling unnecessary', 'A border closure halts imported packaging'], why: 'Nobody could list these outcomes in advance or put odds on them, so only flexibility — reserves, alternatives, slack — helps' },
+      type: 'fillin',
+      prompt: 'Complete the two definitions. The terms are not interchangeable:',
+      template: [
+        'Risk: the possible outcomes are known and a ___ can be attached to each',
+        '→ So the firm can plan for it, price it, or ___ against it',
+        '→ Uncertainty: the outcomes cannot be ___ at all, so no odds exist',
+        '→ So the only defence is ___ — reserves, alternatives, a shorter supply chain',
       ],
+      answers: ['probability', 'insure', 'listed', 'flexibility'],
+      hints: ['the number between 0 and 1 that says how likely an outcome is', 'what a firm pays a premium to do with a quantifiable danger', 'what you cannot do to outcomes nobody has thought of', 'what a firm keeps when it cannot plan for something specific'],
+      distractors: ['forecast', 'certainty'],
     }),
   };
 })();
@@ -574,10 +579,10 @@ const orientation = (() => {
     keyIdea: 'Orientation is about where a business starts: a product-oriented firm starts from what it can make, a market-oriented firm starts from what customers have told it they want.',
     body: [
       { type: 'paragraph', text: 'A **product-oriented** business begins with its own capability — an engineering strength, a recipe, a design — makes the best version it can, and then finds customers for it. A **market-oriented** business begins with research, establishes what customers want, and designs to that.' },
-      { type: 'flow', steps: [
-        { title: 'Product orientation', subtitle: 'build what we are best at → find buyers for it' },
-        { title: 'Market orientation', subtitle: 'research what is wanted → build that' },
-      ], result: 'Two different starting points, and two different risks', resultType: 'neutral' },
+      { type: 'bullets', items: [
+        '**Product orientation** starts with capability: build what we are best at, then find the buyers.',
+        '**Market orientation** starts with evidence: research what is wanted, then build that.',
+      ] },
       { type: 'bullets', items: [
         '**Product orientation suits** markets driven by technology, where customers cannot describe a product that does not exist yet. The risk is a superb product nobody wants.',
         '**Market orientation suits** consumer markets that change quickly, where the customer knows what is missing. The risk is incremental improvement only, because research reports on what exists.',
