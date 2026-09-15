@@ -48,9 +48,12 @@ const Q = [
     ['Secondary research', 'Desk research', 'Primary research', 'Published research'], 2,
     'Primary research gathers original data directly, through surveys, interviews, focus groups or product trials. Secondary, desk and published research all reuse data somebody else has already collected.',
     'meeting-customer-needs:quiz:402eedd2'],
-  [null, 'Adding value to a product means:',
-    ['Raising the selling price of the product', 'Reducing the cost of producing the product', 'Increasing what the customer will pay above the input cost', 'Expanding the product into a new market'], 2,
-    'Adding value raises what the customer is willing to pay above the cost of bought-in inputs, through branding, design, convenience or service. Raising the price on its own changes nothing the customer values.',
+  // topFix-05 asks for this one's correct option to be worded as a DIFFERENCE rather than as a price
+  // rise, which is the distinction the whole concept turns on: raising the price changes one number,
+  // adding value changes the gap between two.
+  [null, 'A business sells a product for more than its bought-in materials cost. The gap between those two figures is:',
+    ['The profit', 'The value added', 'The revenue', 'The mark-up on cost'], 1,
+    'Value added is the gap itself — selling price minus the cost of bought-in materials and components. It is not profit, because wages, rent, energy and marketing all come out of the gap first; revenue is the price times the units sold, not a difference at all.',
     'meeting-customer-needs:quiz:f73b8424'],
   /* ══ Block 1 ══ */
   [B1, 'Which of these is a characteristic of a mass market?',
