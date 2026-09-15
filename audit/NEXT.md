@@ -1257,6 +1257,8 @@ exit 0. It ships WITH packets 5 and 7 at the checkpoint (~26 Sep), not before.
    `node scripts/repair-progress-pointers.mjs --model pair --confirm` unbreaks the 24 rows / 17 students
    against what main serves today; `--model steps --confirm` (the default) is the right one to run after
    packets 5, 7 and 5.1 merge. Re-run the dry run first — it prints every row it would touch.
+   `--confirm` writes `audit/snapshots/progress-repair-<stamp>.json` before it changes anything and
+   refuses to write at all if it cannot; undo is `--restore <that file> --confirm`.
 3. **D015-D017 are in `audit/ledger.json` on disk but NOT in this commit** — the packet-15 session has that
    file dirty with its own claims. Whoever commits the ledger next carries them; check they survived.
 
