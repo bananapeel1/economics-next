@@ -1912,11 +1912,11 @@
     "options": [
      "6%",
      "40%",
-     "24%",
+     "85%",
      "15%"
     ],
     "correctIndex": 3,
-    "explanation": "Market share = firm's sales ÷ total market sales × 100 = 6 ÷ 40 × 100 = 15%. The sales figure and the market figure are dollar amounts, not percentages, so neither is the answer on its own."
+    "explanation": "Market share = firm's sales ÷ total market sales × 100 = 6 ÷ 40 × 100 = 15%. 85% is the share Zuri does NOT hold, and the two dollar figures are amounts rather than percentages, so neither is an answer on its own."
    },
    {
     "id": "meeting-customer-needs:quiz:9b3090e2",
@@ -2054,13 +2054,13 @@
     "id": "meeting-customer-needs:quiz:223b9183",
     "question": "A survey of 600 shoppers finds 18% would buy a bottle weekly at $1.20. The target market holds 500,000 shoppers. How many weekly buyers does this suggest?",
     "options": [
-     "108",
+     "108,000",
      "9,000",
      "90,000",
      "500,000"
     ],
     "correctIndex": 2,
-    "explanation": "Apply the proportion to the population: 500,000 × 0.18 = 90,000 weekly buyers. $108,000 is the weekly revenue that follows once buyers are multiplied by price, and 500,000 is the whole population, not the buyers in it."
+    "explanation": "Apply the proportion to the population: 500,000 × 0.18 = 90,000 weekly buyers. 108,000 is the weekly revenue in dollars once the buyers are multiplied by price, not a count of buyers, and 500,000 is the whole population rather than the buyers in it."
    },
    {
     "id": "meeting-customer-needs:quiz:0645c367",
