@@ -17,6 +17,12 @@ between packets; if it needs to, change it in its own commit and say why in `DEC
 - **Content writes are snapshot first.** `audit/scripts/snapshot-touched-sections.mjs` before any DB write;
   `audit/content-sections/` is the t=0 restore point. Until packet 2 lands, in-place edits only (see DECISIONS).
 
+## Starting a session
+
+Paste the prompt in `audit/SESSION-PROMPT.md`, replacing the packet number. It does not restate this file; it
+forces the session to read it, and it front-loads the six rules whose absence has each cost a day. The table at
+the bottom of that file says which day.
+
 ## The lifecycle
 
 ### 1. Brief (main session, ~5 minutes)
