@@ -12,6 +12,20 @@ Append only. Every entry needs a date and the packet that made it.
 
 ## Settled
 
+- **2026-09-15 — content may not depend on unshipped code, and the test is field-level.** Packet 14 was reverted
+  for using `match`/`classify`; the rule that came out of it said `reorder`/`fillin` were safe, and packet 15
+  published three `reorder` recalls authored to the packet-7 contract, which drops `shuffled`. Main's
+  `ReorderRecall` reads `recall.shuffled` in a `useState` initialiser, so every one of them was an uncaught
+  TypeError that Next.js turns into "This page couldn't load" — on the most-opened section in the product.
+  Ironically `match`/`classify`, the types the first rule banned, are harmless on main: the dispatch falls
+  through to `null`. **Until packets 5 and 7 ship, no section authored to the recall contract is publishable,
+  and the pre-publish check reads the shipped components' fields rather than comparing type names.**
+- **2026-09-15 — the database state is not proof that a live fix landed.** A section reverted the previous
+  evening still crashed on production the next morning, then recovered with no further content change; the
+  section API is not CDN-cached, so the carrier is unexplained. Every content revert is verified by walking the
+  section on production in a fresh tab, not by reading the row back.
+
+
 - **2026-09-11 — the audit corpus is canonical.** `audit/raw/` and `audit/content-sections/` are the t=0
   baseline and the source of every finding. No session re-audits; no session re-derives a finding.
 - **2026-09-11 — Learn Mode findings survive the September commits.** Audit was at `7bd6d20`, HEAD is

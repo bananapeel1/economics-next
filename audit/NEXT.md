@@ -491,6 +491,37 @@ and about fifty `POST /api/events` showed `net::ERR_ABORTED` in the network log,
 for this section from the walkthrough (learn_open, 20 step_view, 19 step_next, section_complete), so the
 aborted posts were cancelled duplicates, not lost events. Packet 58 should know both.
 
+## Incident, 15 September 2026 — packet 15 took introductory-concepts down on production
+
+**What happened.** Packet 15 published `introductory-concepts` to live content. Its 18 recalls are authored to
+the packet-7 contract; three are `reorder` recalls with `correctOrder` and no `shuffled`, and ten are
+`match`/`classify`. On production, pressing Next once in Learn Mode threw
+`TypeError: Cannot read properties of undefined (reading 'map')` from `ReorderRecall`'s `useState` initialiser
+and Next.js replaced the page with "This page couldn't load". That is the most-opened section on the site:
+192 opens, and the one with the worst step-0 abandonment.
+
+**Scope, measured rather than assumed.** A sweep of all 43 live sections found exactly one carrying a shape the
+shipped code cannot render: this one. `supply` and `business-growth` were walked on production through their
+recall steps with no error, so the crash was never site-wide.
+
+**Fixed** by restoring `audit/snapshots/auto-prepublish-2026-09-15T13-01-51-600Z__economics__introductory-concepts.json`
+(the founder ran it; the session's own attempts were refused by the permission layer). Verified on production
+afterwards: `/api/sections/introductory-concepts` serves 5 blocks and 9 recalls with no bad shape, and Learn
+Mode walks to the end of the section without an error. Packet 15's built content is intact at
+`audit/snapshots/packet-15-bundle__economics__introductory-concepts.json` (6 blocks, 18 recalls) and republishes
+at the checkpoint exactly like packet 14's.
+
+**Two traps worth knowing, both of which cost time here.**
+- *The restorable snapshot is not the one with the obvious name.* `2026-09-15-pre-packet-15__*.json` is a bundle
+  dump — no `section_id`, no `tables` — and `restore-section.mjs` rejects it. The `auto-prepublish-*` files are
+  the restorable ones, and the right one is the snapshot taken before the FIRST publish of the day, not the
+  last: a second publish snapshots content that is already broken.
+- *A crash can outlive the database fix.* `decision-making-techniques` was reverted the previous evening and
+  still crashed identically when tested this morning; it came right later the same day with no further content
+  change. The section API sends `max-age=0, must-revalidate`, so the carrier was not that route. The mechanism
+  is not yet explained. **After any content revert, re-walk the section on production in a fresh tab before
+  calling it fixed**, and do not treat the database state as proof.
+
 ## Correction, written after packet 14 was reverted (14 September 2026, late)
 
 **Packet 14 is NOT live.** It was published, then reverted the same evening: its content uses two recall types
@@ -507,11 +538,24 @@ node scripts/publish-section.mjs decision-making-techniques --confirm
 ```
 Then rerun `npm run validate` and `--baseline --confirm` to drop back to the 2,415-key baseline.
 
-**New rule for every content packet before publish:** grep the new content's recall types and body-item types
-against what `origin/main` actually has, e.g. `git show origin/main:components/LearnModeTab.jsx | grep Recall`.
-A packet using only `reorder`/`fillin` recalls can publish standalone (main has both); a packet using
-`match`/`classify` cannot, until the checkpoint. This applies to packet 15 and every section after it — check
-before staging, not after a live crash.
+**New rule for every content packet before publish — CORRECTED 15 September, after it failed on packet 15.**
+The rule below was written as "a packet using only `reorder`/`fillin` recalls can publish standalone (main has
+both); a packet using `match`/`classify` cannot". **That is wrong, and it took the most-opened section on the
+site down.** The recall TYPE is not the test; the FIELDS are. Main's `ReorderRecall` opens with
+`useState(() => recall.shuffled.map(i => recall.correctOrder[i]))` — it needs `shuffled`, and the packet-7
+contract deliberately drops `shuffled` in favour of a seeded start order (see "The recall contract" above). So a
+new-contract `reorder` renders on `main` as an uncaught TypeError and Next.js replaces the whole page with
+"This page couldn't load". By contrast `match` and `classify` are harmless there: main's dispatch falls through
+to `null` and simply shows nothing.
+
+**Until packets 5 and 7 are merged and deployed, no section authored to the recall contract may be published,
+whatever types it uses.** The check before staging is field-level, against the shipped component, not
+type-level:
+```
+git show origin/main:components/learn-mode/ReorderRecall.jsx | head -12   # needs recall.shuffled
+git show origin/main:components/learn-mode/FillInRecall.jsx  | head -12   # needs recall.answers
+```
+and then confirm every recall the packet publishes carries the fields those two read.
 
 **A separate, pre-existing bug was found on this section while checking.** `decision-making-techniques`'s Learn
 Mode throws an uncaught error on `main` as deployed, independent of packet 14 — see DECISIONS.md, "a
