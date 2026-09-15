@@ -656,3 +656,49 @@ Append only. Every entry needs a date and the packet that made it.
   origin/main:components/LearnModeTab.jsx` and this section's restored `content[]` (the two blocks with `flow`
   body items are the one structural thing distinguishing it from sections that load cleanly), and check
   Vercel's function logs for the actual thrown line, which is faster than re-deriving it from a diff.
+
+## 15 September 2026 — packet 5.1, the resume pointer (Opus 5)
+
+**Found from a live bug, not from the audit corpus.** Ronald hit "You left off at step 20 of 9", a 222%
+bar, an empty step body and a Back/Next pair with nothing between them. Packet 5 closed F026 with a clamp
+on READ (`clampStep` in `LearnModeTab`), and that clamp is correct; what it did not cover is that the
+pointer is also *written* unclamped and *displayed* unclamped somewhere else. Three things followed.
+
+**A high-water mark needs the same clamp on the way in as on the way out.** `persistLearnStep` did
+`Math.max(prev, step)`, so a pointer written against a longer step list — a section rewritten smaller
+(packets 13, 14), or the packet-5 model counting the same blocks differently from the pairing model it
+replaced — was carried forward for ever and could never come back down. Combined with `isLastStep`
+(`currentStep === totalSteps - 1`, only ever true AT the last index, never past it) the student got an
+endless "Next", each click writing a bigger number, and could never reach "Complete topic". The rule now
+lives in `lib/learn-steps.js` as `furthestStep()` next to the model it depends on, not in the component,
+and it clamps the carried-forward value too — so a poisoned row **heals itself** on the next step taken.
+Live measurement before the fix: 120 rows across 43 students already past their own `total_steps`.
+
+**A percentage must not be computed from two numbers that were written at different times.**
+`SectionOverview` divided the saved `furthest_step` by the saved `total_steps`; both come from the row, so
+the bar was internally consistent and still wrong — 120 bars over 100%, worst 233%. It now measures
+against `countSteps()` of the content that exists now (the count already in scope for F030) with the
+pointer clamped into it, falling back to the row's total only while the content is still loading. A/B over
+all 1,134 live rows: 120 bars over 100% before, 0 after, none negative.
+
+**Consequence to expect at the checkpoint merge:** with the denominator switching from the pairing count to
+the packet-5 count, almost every student's Learn Mode bar roughly halves (e.g. 100% → 46%). That is honest —
+the sections really did get about twice as many steps — but it will look like lost progress the day packet 5
+ships, and it is worth a line in the release note or a re-engagement email rather than a surprise.
+
+**A repair script names the model it repairs against.** A pointer is only "out of range" relative to the
+build that reads it, so `scripts/repair-progress-pointers.mjs` takes `--model pair` (what main serves now)
+or `--model steps` (packet 5's `countSteps`, the default) instead of guessing; the pairing model is
+reproduced inside the script, not imported, because it does not exist in this branch, and the flag can be
+deleted once main no longer serves it. The script only ever LOWERS a pointer and only touches rows that are
+genuinely out of range, so it is idempotent and safe to re-run. It writes nothing without `--confirm`.
+
+**`ledger.mjs claim` was locked out of the sub-packet convention.** It validated the packet number with
+`Number.isInteger`, but 3.1, 13.1 and 5.1 all exist and D001-D008 carry `closed_by: "packet-13.1"`. The
+guard exists to reject a MISSING number (`claim F004 F006` wrote `packet-NaN` and reported success), which
+`Number.isFinite` still does. Changed to `Number.isFinite`, with the original failure re-tested.
+
+**Session note: two sessions shared the worktree.** A packet-15 session holds `audit/ledger.json`,
+`audit/validator-baseline.json` and the top of `audit/NEXT.md` with in-flight claims. This packet's D015-D017
+were minted with the CLI (so the ledger on disk is correct) but **`audit/ledger.json` was deliberately not
+staged**, and NEXT.md was appended to rather than rewritten. Whoever commits the ledger next carries them.

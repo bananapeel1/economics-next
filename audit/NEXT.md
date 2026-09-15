@@ -1123,3 +1123,42 @@ students on content the notes never teach (HR half of Business
 3.3.5, contingency planning in 3.3.6, PESTLE/Porter's five forces in 3.3.1, stakeholder distinction in
 3.3.4, profit satisficing and cost efficiency in 1.3.5, specific vs ad valorem in Economics 1.3.3, FDI in
 Economics 2.3.5). Wording already exists in the flashcards/quizzes; it just isn't taught.
+
+---
+
+## Packet 5.1 — the resume pointer (built 15 September 2026, Opus 5)
+
+Appended, not rewritten: a packet-15 session owns the brief at the top of this file.
+
+**What shipped in the branch** (`components/StudyApp.jsx`, `lib/learn-steps.js`,
+`lib/learn-steps.test.mjs`, `scripts/repair-progress-pointers.mjs`, `audit/scripts/ledger.mjs`):
+`furthestStep()` clamps the stored high-water mark on write (D015); the overview bar is measured against
+`countSteps()` of the live content, clamped (D016); `scripts/repair-progress-pointers.mjs` repairs rows that
+already point past the end (D017). Gate: `npm run build` exit 0, `npm test` 133/133, `npm run validate`
+exit 0. It ships WITH packets 5 and 7 at the checkpoint (~26 Sep), not before.
+
+**Exit criteria still open:**
+
+1. **Verify A has not been run.** Spawn `packet-verifier` on D015 D016 D017 with the diff for this commit.
+   `node audit/scripts/ledger.mjs unverified 5.1` currently lists all three.
+2. **The repair has not been run against live data.** It needs Ronald's go-ahead, and the model matters:
+   `node scripts/repair-progress-pointers.mjs --model pair --confirm` unbreaks the 24 rows / 17 students
+   against what main serves today; `--model steps --confirm` (the default) is the right one to run after
+   packets 5, 7 and 5.1 merge. Re-run the dry run first — it prints every row it would touch.
+3. **D015-D017 are in `audit/ledger.json` on disk but NOT in this commit** — the packet-15 session has that
+   file dirty with its own claims. Whoever commits the ledger next carries them; check they survived.
+
+**Two things this packet learned that outlive it:**
+
+- The bug lived on production for months (the oldest broken row is May 2026) and three rounds of packet-5
+  verification never saw it, because every check read the pointer back through the same clamp that had
+  just been added. The evidence that found it was the database, not the UI: 1,134 progress rows and 757
+  `learn_open` events, read directly. See `[[revvylearn-verify-independently]]`.
+- **`app_events.total_steps` is not trustworthy as a record of what content was live.** Switching sections
+  mounts `LearnModeTab` once with the PREVIOUS section's content (`key={activeSection}` flips before the
+  `[activeSection]` fetch effect nulls `sectionData`), firing a phantom `learn_open` that carries the wrong
+  section's step count: 80 of 757 events since 1 Sep are the same section firing twice under 5s apart with
+  two different totals, and 397 of 756 carry a total the section's live content cannot produce. That also
+  means **`sectionStarts` is inflated by roughly 10-16%** — deflate it before filling in the baseline in
+  PROGRESS.md. The phantom mount is NOT fixed by this packet; it needs its own packet (the fetch effect
+  wants a stale-response guard and `sectionData` wants to be nulled in the same commit as `activeSection`).

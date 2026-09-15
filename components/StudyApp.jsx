@@ -23,7 +23,7 @@ import HomeScreen from './HomeScreen';
 import { SpacedReview, MixedReview, countDueReviews, getDueReviews } from './ReviewMode';
 import { BookAlt, Notes as NotesIcon, ChartHistogram, DrawerAlt, CardsBlank, Quiz as QuizIcon, Mistakes as MistakesIcon, Tutor as TutorIcon, Star, Padlock, LearnMode as LearnModeIcon } from './Icons';
 import { trackFunnel } from '@/lib/funnel';
-import { countSteps } from '@/lib/learn-steps';
+import { countSteps, clampStep, furthestStep } from '@/lib/learn-steps';
 
 const HomeIcon = () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>;
 
@@ -66,8 +66,15 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
   const hasDiagrams = tabs.some(t => t.id === 'diagrams');
 
   const progress = user && savedProgress ? savedProgress[section?.id] : null;
-  const progressPct = progress
-    ? Math.round(((progress.furthest_step + 1) / progress.total_steps) * 100)
+  /* F026's other half. Both numbers here used to come from the saved row, and the row is a
+     high-water mark written against whatever step count was live when the student last moved: on
+     15 Sep 2026, 120 rows across 43 students held a furthest_step past their own total_steps, and
+     this bar drew them at up to 233% full. Measure against the steps that exist NOW — the same
+     count the engine uses, already computed above — and clamp the pointer into that range. The
+     row's own total is the fallback for the moment before the content has loaded. */
+  const progressSteps = contentSteps || progress?.total_steps || 0;
+  const progressPct = progress && progressSteps
+    ? Math.round(((clampStep(progress.furthest_step, progressSteps) + 1) / progressSteps) * 100)
     : 0;
   const hasProgress = !!progress;
 
@@ -791,11 +798,12 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   // from an effect. The effect version wrote a furthest_step=0 row the moment any section loaded on any
   // tab, with the BLOCK count as total_steps; that is why 825 of 1,093 "starts" in the audit sat at
   // step 0 and why the overview showed the wrong step count on 21 sections. `totalSteps` here is the
-  // real flat step count from LearnModeTab, and furthest never goes backwards.
+  // real flat step count from LearnModeTab, and furthest never goes backwards — except when the
+  // section itself gets shorter, which is the one case where it must (packet 5.1).
   const persistLearnStep = useCallback((step, totalSteps, { complete = false } = {}) => {
     if (!user || !activeSection || !totalSteps) return;
-    const prev = savedProgress?.[activeSection]?.furthest_step ?? -1;
-    const furthest = complete ? Math.max(prev, totalSteps - 1) : Math.max(prev, step);
+    // Clamped on write as well as on read: see furthestStep in lib/learn-steps.js for why.
+    const furthest = furthestStep(savedProgress?.[activeSection]?.furthest_step, step, totalSteps, complete);
     saveProgress(activeSection, furthest, totalSteps);
   }, [user, activeSection, savedProgress, saveProgress]);
 

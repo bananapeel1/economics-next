@@ -76,7 +76,10 @@ switch (cmd) {
     // success. The gate matches on `closed_by === packet-<n>`, so those items became invisible to
     // their own packet and it reported clear with unverified work sitting in it — the precise
     // failure this gate exists to prevent, produced by a typo. It is now an error.
-    if (!Number.isInteger(n) || n < 0) {
+    // Sub-packets are real: 3.1, 13.1 and 5.1 all exist, and D001-D008 are closed_by "packet-13.1".
+    // The guard below only has to reject a MISSING number (Number("F004") is NaN), so it tests for a
+    // finite number, not an integer — isInteger locked the CLI out of the convention the ledger uses.
+    if (!Number.isFinite(n) || n < 0) {
       console.error(`claim needs a packet number first: ledger.mjs claim <n> <id>...  (got "${ids[0]}")`);
       process.exit(1);
     }
