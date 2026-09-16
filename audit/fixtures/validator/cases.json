@@ -531,14 +531,14 @@
     "command": "Define",
     "marks": 2,
     "question": "Define the term 'utility'. (2 marks)",
-    "guidance": "Satisfaction from consuming a good (1). Measured per unit at the margin (1)."
+    "guidance": "Two marks means two separate things to say, so plan both before writing.\nSatisfaction from consuming a good (1). Measured per unit at the margin (1)."
    },
    {
     "id": "p2",
     "command": "Explain",
     "marks": 4,
     "question": "Explain one reason consumers may not maximise utility. (4 marks)",
-    "guidance": "Identify a reason (1), explain the mechanism (2), apply to a context (1)."
+    "guidance": "Pick one reason and develop it rather than listing several; the marks are in the chain, not the count.\nIdentify a reason (1), explain the mechanism (2), apply to a context (1)."
    }
   ],
   "flashcards": [],
@@ -943,6 +943,24 @@
     "practice.1.command": "Examine",
     "practice.1.marks": 8,
     "practice.1.guidance": "Point one (1 mark). Point two (1 mark). Point three (2 marks)."
+   }
+  },
+  {
+   "rule": "practice.opening",
+   "fail": {
+    "practice.0.guidance": "Satisfaction from consuming a good (1). Measured per unit at the margin (1)."
+   }
+  },
+  {
+   "rule": "practice.opening",
+   "fail": {
+    "practice.1.guidance": "Identify a reason (1), explain the mechanism (2).\nThen apply it to a context (1)."
+   }
+  },
+  {
+   "rule": "practice.opening",
+   "pass": {
+    "practice.0.guidance": "Say what the term means, then say what follows from it.\nSatisfaction from consuming a good (1). Measured per unit at the margin (1)."
    }
   },
   {

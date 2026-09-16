@@ -256,7 +256,14 @@ are theatre.
    like "Float = LFT - EST - duration" is safe.
 5. **Every examiner claim points at a source.** `claim.uncited` refuses a sentence about what examiners
    reward without one; the person checks that the cited paper and question actually say it.
-6. **The section's baseline shrank.** `node audit/scripts/validate-content.mjs --section <id>` before and
+6. **Every practice item opens with a scaffold, not its mark scheme.** Guidance is at least two
+   paragraphs. The FIRST is what a student sees above the answer box before writing — how to start, what
+   to separate, what to watch for — and it carries no figure, no mark allocation and no answer. The mark
+   scheme is paragraph two onward. `InlinePractice.jsx` prints `guidance.split('\n')[0]` in guided mode,
+   which `getPracticeMode` gives to every item except the first and last of a section, so a one-paragraph
+   guidance is the whole scheme shown over an empty box asking the student to write it. `practice.opening`
+   catches the shape; only a person can judge whether the opening actually gives nothing away.
+7. **The section's baseline shrank.** `node audit/scripts/validate-content.mjs --section <id>` before and
    after; the packet is not done while the section carries more baselined findings than it started with.
 
 ## Layer 1a — the reorder rule the audit was not strict enough about

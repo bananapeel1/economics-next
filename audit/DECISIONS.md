@@ -1394,3 +1394,77 @@ Two things decide whether that check works, both learned the hard way by other p
   every section. The check compares `notes`/`diagrams`/`practice` in full (untouched), `content` minus the one
   rewritten field, the served items by id, and the true lengths from `counts`. What it cannot see is an edit
   to an item the anonymous slice does not serve — that needs an entitled fetch, and the script says so.
+
+## The mark scheme was being shown before the student wrote — 16 September 2026 (packet 24)
+
+**`practice.opening` is a new validator rule, DEBT, and it fires on 160 live practice items.**
+
+Ronald opened a section and read a card back to us:
+
+> Guided practice — *The opening is given; write the rest*
+> A specific tax of $3 per unit raises the price buyers pay from $10 to $12 and reduces the quantity
+> traded from 600 to 500 units. Calculate the consumer incidence and the revenue the government collects.
+> **Consumer incidence: $12 − $10 = $2 per unit (1 mark) … Revenue: $3 × 500 = $1,500 (1 mark) …**
+> *Your answer — write your answer here, as you would in the exam…*
+
+The answer is printed above the box that asks for it.
+
+**The mechanism is a contract nobody wrote down.** `InlinePractice.jsx` in GUIDED mode prints
+`guidance.split('\n')[0]` above the answer box as "the opening" and hides the remaining paragraphs behind
+"See full guidance" (`components/learn-mode/InlinePractice.jsx:142-158`). `getPracticeMode` puts every
+practice item except the first and last of a section into that mode
+(`components/LearnModeTab.jsx:249-256`). The component therefore assumes guidance is multi-paragraph, with
+paragraph one a scaffold and the rest the scheme. **Nothing states that assumption and nothing checked it**,
+and every packet has been authoring guidance as a single paragraph — the whole mark scheme in one string.
+
+**The scale is the point.** 97 of the 100 practice items written by packets 14-23 are one paragraph, and
+`practice.opening` counts **160 across the repository** once the March content is included. This was never a
+packet-24 defect; packet 24 is only where someone looked at the screen instead of the payload.
+
+**Why a validator rule and not a runner check.** Packet 24's runner refuses it, but a runner protects one
+packet. The validator is the whole-repository gate every packet must pass, and the per-packet gate is
+"0 new DEBT on my own section" — so from packet 25 onward a section cannot pass its own gate while any of its
+practice items leaks. `audit/fixtures/validator/cases.json` gains two failing fixtures and one passing one,
+and the base fixture's own two practice items had to be given openings, because they had the defect too.
+
+**DEBT, not BLOCK, and that is a decision rather than a default.** BLOCK outside the baseline fails
+`npm run validate` for the whole repository, and four sessions are working in this tree; 160 findings would
+stop all of them tonight over content none of them wrote. As DEBT it is visible everywhere immediately,
+`npm run validate` still exits 0, and every new section is forced clean. **Raise it to BLOCK once the back
+catalogue is cleared.** It is deliberately NOT baselined: `--baseline --confirm` would adopt the other
+sessions' in-flight findings as accepted debt (the packet 3.1 trap, NEXT.md).
+
+**The regex is broader than `practice.levels`'s on purpose.** This corpus allocates marks as both
+"(1 mark)" and a bare "(1)" — the validator's own base fixture used the bare form — so the opening test
+accepts either. `practice.levels` asks whether an item is point-marked at all, where a false positive is a
+wrong verdict about a tariff; this one asks whether the scheme is visible too early, where the cost of a
+false positive is a sentence reworded.
+
+**What is still open for the founder:** the 160 existing items. Either the back catalogue gets an opening
+paragraph per item — mechanical, ten packets, and every one of those sections is a staged draft that would
+need re-staging — or `InlinePractice.jsx` stops using guided mode for an item whose guidance has no separate
+opening, which is one component change and fixes all 160 at once without touching content. The second is
+cheaper and is a code packet; the first is better teaching. **Not a content packet's call.**
+
+## `ledger.mjs assign 13.10` silently files into packet 13.1 — 16 September 2026 (packet 24)
+
+`audit/scripts/ledger.mjs` stores `packet` as a **Number** (`const n = Number(ids[0])`, line 68), so
+`assign 13.10 <id>` writes `13.1`, and `packet 13.10` and `packet 13.1` are the same query. Packet 24 hit
+this reassigning `C-price-determination-specGap-06` to the exam-practice programme: the item landed in
+packet **13.1**, a drill packet finished on 14 September, where nobody would ever have looked at it again.
+Caught by reading the value back; the CLI reported success both times.
+
+**The exposure is the whole exam-practice programme.** `audit/EXAM-PRACTICE.md:8` says "`ledger.mjs packet
+13.9` works as-is", which is true of 13.9 and false of **13.10**, the packet that builds the page. 13.11 and
+13.12 are safe because no 13.11/13.12 exists elsewhere. The drill programme 13.1-13.8 collides with any
+future 13.10 and nothing warns.
+
+**What packet 24 did:** reassigned the item to **13.11** ("Transfer, and finish the set"), which is both
+representable and the accurate home — the clause is per-section, and 13.11 is the packet that rolls the page
+out to every section. Not a workaround dressed as a decision: 13.10 cannot be stored, so it was not an option.
+
+**What is NOT done, and is a code packet's job:** either store `packet` as a string throughout, which means
+migrating every existing numeric value in `audit/ledger.json` and every `Number(...)` comparison in the CLI,
+or have `assign` refuse a value whose string form does not round-trip (`String(Number(x)) !== x`), which is
+three lines and catches 13.10, 13.20 and any future trailing zero. The second is the cheap guard and the one
+to do first. A content packet should not be migrating the ledger's key type while four sessions write to it.
