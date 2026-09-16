@@ -3,7 +3,7 @@ import { createClient } from '@/lib/supabase/server';
 import { createServerClient } from '@/lib/supabase-server';
 import { hasPremiumAccess } from '@/lib/entitlements';
 import { getSubscriptionRow } from '@/lib/subscription-lookup';
-import { PREVIEW_LIMITS } from '@/lib/preview-limits';
+import { PREVIEW_LIMITS, freeQuizPayload } from '@/lib/preview-limits';
 
 /**
  * GET /api/sections/[id] — everything the section view renders, subject to entitlement.
@@ -53,15 +53,20 @@ export async function GET(request, { params }) {
 
   const cap = (list, n) => (isPremium ? list : list.slice(0, n));
 
+  /* The quiz is not a flat slice: a block pins its question by array position, so slicing the array
+     repoints the pins. freeQuizPayload picks the questions the section needs and rewrites that
+     section's pins to match what is sent. Premium gets the bank and the pins as authored. */
+  const free = isPremium ? null : freeQuizPayload(allQuiz, arr(content));
+
   return NextResponse.json({
     // Free, unchanged, no account needed.
-    content: arr(content),
+    content: isPremium ? arr(content) : free.content,
     notes: arr(notes),
     diagrams: arr(diagrams),
     practice: arr(practice),
 
     // Preview then paywall. Sliced here, not in the browser.
-    quiz: cap(allQuiz, PREVIEW_LIMITS.quiz),
+    quiz: isPremium ? arr(allQuiz) : free.quiz,
     flashcards: cap(allCards, PREVIEW_LIMITS.flashcards),
     extras: {
       chains: cap(chains, PREVIEW_LIMITS.extrasChains),

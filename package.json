@@ -9,7 +9,8 @@
     "contrast": "node audit/scripts/contrast-check.mjs",
     "quant-check": "node audit/scripts/quant-check.mjs",
     "pin-check": "node audit/scripts/pin-check.mjs --max-broken 15",
-    "diagram-check": "node audit/scripts/diagram-check.mjs"
+    "diagram-check": "node audit/scripts/diagram-check.mjs",
+    "test": "node --test lib/preview-limits.test.mjs lib/read-path.test.mjs"
   },
   "dependencies": {
     "@ai-sdk/google": "^3.0.43",
