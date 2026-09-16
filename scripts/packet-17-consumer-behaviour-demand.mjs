@@ -32,7 +32,7 @@ import { validateSection } from '../lib/content-validator.mjs';
 import { SECTION, teachingWords, money, qAt, trAt, ped, pctQ, pctP, MU, totalUtility, MID_P, MID_Q, MAX_TR, CHOKE_P, D_INTERCEPT, D_SLOPE, FARES, PED_INELASTIC, PED_ELASTIC, INCOME_RISE, COACH_YQ, AIR_YQ, RICE_YQ, yed, AIR_FARE_RISE, COACH_XQ, COACH_FARE_FALL, HOTEL_XQ, XED_SUBSTITUTE, XED_COMPLEMENT } from './_packet17-util.mjs';
 import { buildContent, SUBSECTIONS, NOTES, B1, B2, B3, B4, B5, B6 } from './_packet17-content.mjs';
 import { QUIZ, PRACTICE, FLASHCARDS, MISTAKES, EXTRAS } from './_packet17-assessment.mjs';
-import { DIAGRAMS, DX, DY, TX, TY, muH, tuH, UBAR, NX, r2 } from './_packet17-diagrams.mjs';
+import { DIAGRAMS, DX, DY, TX, TY, muH, tuH, UBAR, NX, TBL, r2 } from './_packet17-diagrams.mjs';
 
 const args = process.argv.slice(2);
 const STAGE = args.includes('--stage');
@@ -175,12 +175,36 @@ const has = (svg, needle, why) => { if (!svg.includes(needle)) problems.push(why
   if (DY(30) >= DY(0)) problems.push('the price axis is inverted: a higher fare must be drawn higher');
 }
 { // 3 · the midpoint of the straight line, where PED is 1
-  const alongTheLine = svgOf(DIAGRAMS[2])[2];
+  const alongTheLine = svgOf(DIAGRAMS[2])[3];   // [0] is the demand schedule, [1] and [2] the value panels
   has(alongTheLine, `cx="${DX(MID_Q)}" cy="${DY(MID_P)}"`, `the midpoint is not marked at ${MID_Q} tickets and a fare of ${money(MID_P)}`);
   if (MID_P !== D_INTERCEPT / (2 * D_SLOPE) || MID_Q !== qAt(MID_P)) problems.push('the midpoint constants disagree with the demand function');
 }
+{ // 3a · the demand schedule table, every cell generated from the demand function
+  /*
+   * specGap-05: the calculations must be done FROM a table, because that is how a paper presents
+   * the data. Verify A rejected the first build for having no table anywhere, correctly — a body
+   * cannot hold one (`schema.body-type` allows paragraph, subheading, flow and bullets) and a
+   * practice stem is a plain string in a <p>, so a diagram is the only surface that can. It fronts
+   * both the PED diagram and the revenue diagram, so it is present at the check-in of each chapter
+   * whose practice item reads rows off it.
+   */
+  const schedule = svgOf(DIAGRAMS[2])[0];
+  if (svgOf(DIAGRAMS[3])[0] !== schedule) problems.push('the two copies of the demand schedule are not the same table');
+  FARES.forEach((p, i) => {
+    const y = r2(TBL.y0 + (i + 1) * TBL.rowH);
+    has(schedule, `>${money(p)}</text>`, `the schedule has no ${money(p)} fare row`);
+    has(schedule, `x="${TBL.colQty}" y="${y}"`, `the ${money(p)} row's quantity cell is not on its own row`);
+    has(schedule, `x="${TBL.colTr}" y="${y}"`, `the ${money(p)} row's revenue cell is not on its own row`);
+  });
+  for (const p of FARES) {
+    if (!schedule.includes(`>${qAt(p)}</text>`)) problems.push(`the schedule does not print ${qAt(p)} tickets for a fare of ${money(p)}`);
+    if (!schedule.includes(`>${money(trAt(p))}</text>`)) problems.push(`the schedule does not print ${money(trAt(p))} of revenue for a fare of ${money(p)}`);
+  }
+  // and the two rows each Calculate practice item names are actually in it
+  for (const p of [...PED_INELASTIC, ...PED_ELASTIC]) if (!FARES.includes(p)) problems.push(`a practice item reads a ${money(p)} row the schedule does not have`);
+}
 { // 4 · the revenue curve, sampled from P × Q rather than drawn as a guess at a parabola
-  const [curve, rectangle] = svgOf(DIAGRAMS[3]);
+  const [, curve, rectangle] = svgOf(DIAGRAMS[3]);   // [0] is the shared demand schedule
   has(curve, `cx="${TX(MID_P)}" cy="${TY(MAX_TR)}"`, `the revenue peak is not marked at ${money(MID_P)} / ${money(MAX_TR)}`);
   // the marker arrowheads in <defs> also carry a points="" attribute, so take the polyline's own
   const pts = (curve.match(/<polyline points="([^"]+)"/) || [])[1].split(' ').map((pair) => pair.split(',').map(Number));

@@ -744,11 +744,21 @@
       "body": [
        {
         "type": "paragraph",
-        "text": "Here is how to **use the formula to calculate price elasticity of demand**. Percentages first, then the division: never raw tickets and dollars, which give a different answer for the same change measured in different units."
+        "text": "Here is how to **use the formula to calculate price elasticity of demand**. Percentages first, then the division: raw tickets and dollars give a different answer for the same change measured in different units."
        },
        {
         "type": "subheading",
-        "text": "Worked example: Tafari raises the fare from $10 to $12"
+        "text": "Reading the two rows off the demand schedule"
+       },
+       {
+        "type": "paragraph",
+        "text": "A paper gives the data as a **table**, and this chapter's diagram carries Tafari's schedule as one. The calculation starts by finding the two rows it needs. The fare rises from $10 to $12:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "The $10 row shows **800** tickets a day and the $12 row shows **720**. The $10 row is the **original**, so both percentages are measured against it."
+        ]
        },
        {
         "type": "flow",
@@ -775,19 +785,19 @@
        },
        {
         "type": "paragraph",
-        "text": "Two rules follow. **Always divide by the original value**, not the new one: dividing by the new quantity is the commonest way this goes wrong. And **always divide by the price change**, never the other way up — quantity goes on top because quantity is what responds."
+        "text": "**Always divide by the original value**: dividing by the new quantity is the commonest way this goes wrong. Quantity goes on top because quantity is what responds."
        },
        {
         "type": "paragraph",
-        "text": "The sign is negative here and in nearly every case, because a price rise cuts quantity demanded. In words the sign is usually dropped and the **absolute value** is compared with 1, which is the next subsection."
+        "text": "The sign is negative here and almost always, because a price rise cuts quantity demanded. In words it is dropped and the **absolute value** compared with 1 — the next subsection."
        }
       ],
       "realExample": {
        "emoji": "🎫",
-       "text": "Airlines re-price the same seat many times before departure and record what bookings do each time. What they are building is the demand curve itself, one percentage change at a time."
+       "text": "Airlines re-price the same seat many times before departure and record what bookings do. What they are building is the schedule itself, one row at a time."
       },
-      "misconception": "Students put the changes in the formula as raw numbers. A fall of 80 tickets means nothing without the base it fell from. Write instead: convert both changes to percentages of their original values before dividing, or the answer depends on the units used.",
-      "examMatters": "A Calculate (4 marks, WEC11 Appendix 6) is worked on the extract's figures, not remembered ones. Show the formula, substitute, and give the answer with its sign: an unsigned PED leaves the direction unstated.",
+      "misconception": "Students put the changes into the formula as raw numbers. A fall of 80 tickets means nothing without the base it fell from. Write instead: convert both changes to percentages of their original values first.",
+      "examMatters": "A Calculate (4 marks, WEC11 Appendix 6) is worked on the table's own figures. Show the formula, substitute, and sign the answer: an unsigned PED leaves the direction unstated.",
       "recall": {
        "id": "consumer-behaviour-demand:sub:ped-definition-and-formula:recall",
        "type": "reorder",
@@ -2418,11 +2428,11 @@
     "guidance": "The responsiveness of quantity demanded to a change in the price of the good itself, measured as the percentage change in quantity demanded divided by the percentage change in price. That is the whole definition. Explaining what elastic and inelastic mean is interpretation, and it belongs in the 4-mark question that follows rather than here; the phrase \"greater than 1\" also needs the words \"in size\", because PED is normally negative. Define is 2 marks in IAL Economics (WEC11 Appendix 6), not 4."
    },
    {
-    "id": "consumer-behaviour-demand:practice:a3c735ab",
+    "id": "consumer-behaviour-demand:practice:1ec25ef0",
     "command": "Calculate",
     "marks": 4,
-    "question": "A coach operator raises its fare from $20 to $22. Daily ticket sales fall from 400 to 320. Calculate the price elasticity of demand and state what it shows. (4 marks)",
-    "guidance": "Show the formula, both percentages and the signed answer. Percentage change in quantity demanded = (320 − 400) ÷ 400 × 100 = -20%. Percentage change in price = (22 − 20) ÷ 20 × 100 = 10%. PED = -2, so demand is price elastic at this fare and the operator has lost revenue by raising it. Dividing by the NEW quantity is the commonest error; workings should be given for a Calculate (WEC11 Appendix 6)."
+    "question": "The demand schedule in this chapter's diagram gives Tafari's daily ticket sales at each fare. Using the $20 and $22 rows — 400 tickets and 320 tickets — calculate the price elasticity of demand and state what it shows. (4 marks)",
+    "guidance": "Show the formula, both percentages and the signed answer. Percentage change in quantity demanded = (320 − 400) ÷ 400 × 100 = -20%. Percentage change in price = (22 − 20) ÷ 20 × 100 = 10%. PED = -2, so demand is price elastic at this fare and the operator has lost revenue by raising it. Take both figures from the same table and measure each percentage against the row you started from; dividing by the NEW quantity is the commonest error. Workings should be given for a Calculate (WEC11 Appendix 6)."
    },
    {
     "id": "consumer-behaviour-demand:practice:3f666102",
@@ -2432,11 +2442,11 @@
     "guidance": "Two of the five named factors, each taken to a consequence for the firm. Availability of substitutes: many near-identical drinks sit on the same shelf, so a price rise sends buyers to one of them and demand is elastic. Branding: the firm has attached an expectation to its name, so some buyers stop treating those drinks as substitutes at all, which pulls the other way and makes demand less elastic. A good answer says which force is stronger for this product and why, rather than naming both and leaving them side by side. Percentage of total expenditure, addictiveness and durability are the remaining three."
    },
    {
-    "id": "consumer-behaviour-demand:practice:0d1b771b",
+    "id": "consumer-behaviour-demand:practice:78c55b92",
     "command": "Calculate",
     "marks": 4,
-    "question": "A coach operator sells 800 tickets a day at $10 and 720 a day at $12. Calculate total revenue at each fare and state which fare a revenue-maximising operator should choose. (4 marks)",
-    "guidance": "Total revenue = price × quantity sold. At $10: 10 × 800 = $8,000 a day. At $12: 12 × 720 = $8,640 a day. The higher fare brings in more, which tells you demand is price inelastic over this range. Give the units and the period — revenue a day and revenue a year are different figures from the same multiplication — and remember that revenue is not profit, so a revenue-maximising fare is not automatically the one to recommend."
+    "question": "Read the $10 and $12 rows off the demand schedule in this chapter's diagram — 800 tickets a day and 720 a day. Calculate total revenue at each fare and state which fare a revenue-maximising operator should choose. (4 marks)",
+    "guidance": "Total revenue = price × quantity sold. At $10: 10 × 800 = $8,000 a day. At $12: 12 × 720 = $8,640 a day. The higher fare brings in more, which tells you demand is price inelastic over this range. The schedule's third column is the same arithmetic, so it is a check on your own rather than a substitute for it. Give the units and the period — revenue a day and revenue a year are different figures from the same multiplication — and remember that revenue is not profit, so a revenue-maximising fare is not automatically the one to recommend."
    },
    {
     "id": "consumer-behaviour-demand:practice:0cdc49a5",
@@ -2657,9 +2667,10 @@
    },
    {
     "id": "consumer-behaviour-demand:diagram:315b5ee5",
-    "title": "The Five PED Values, and PED Along One Line",
-    "description": "The five values of price elasticity of demand named in the specification, and how PED varies along a single straight-line demand curve: elastic above the midpoint, unitary at it, inelastic below.",
+    "title": "The Demand Schedule and the Five PED Values",
+    "description": "The schedule a PED calculation is read off, the five values of price elasticity of demand named in the specification, and how PED varies along a single straight-line demand curve: elastic above the midpoint, unitary at it, inelastic below.",
     "checklist": [
+     "Both values of a percentage change taken from the same row of the schedule",
      "Both axes labelled, with price on the vertical axis",
      "A steeper curve means demand is less responsive to price",
      "The two extremes drawn correctly: vertical is PED = 0, horizontal is PED infinite",
@@ -2667,6 +2678,10 @@
      "The elastic range labelled above the midpoint and the inelastic range below it"
     ],
     "scenarios": [
+     {
+      "label": "The demand schedule",
+      "svg": "<svg width=\"500\" height=\"300\" viewBox=\"0 0 500 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrAmber\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#f59e0b\"/></marker></defs><text x=\"60\" y=\"40\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">Tafari Coaches — daily demand schedule</text><text x=\"120\" y=\"74\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"600\" text-anchor=\"end\">Fare</text><text x=\"270\" y=\"74\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"600\" text-anchor=\"end\">Tickets a day</text><text x=\"430\" y=\"74\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"600\" text-anchor=\"end\">Total revenue</text><line x1=\"60\" y1=\"84\" x2=\"460\" y2=\"84\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"120\" y=\"108\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"end\">$10</text><text x=\"270\" y=\"108\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"400\" text-anchor=\"end\">800</text><text x=\"430\" y=\"108\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"400\" text-anchor=\"end\">$8,000</text><line x1=\"60\" y1=\"118\" x2=\"460\" y2=\"118\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"120\" y=\"142\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"end\">$12</text><text x=\"270\" y=\"142\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"400\" text-anchor=\"end\">720</text><text x=\"430\" y=\"142\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"400\" text-anchor=\"end\">$8,640</text><line x1=\"60\" y1=\"152\" x2=\"460\" y2=\"152\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"120\" y=\"176\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"end\">$15</text><text x=\"270\" y=\"176\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"400\" text-anchor=\"end\">600</text><text x=\"430\" y=\"176\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"400\" text-anchor=\"end\">$9,000</text><line x1=\"60\" y1=\"186\" x2=\"460\" y2=\"186\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"120\" y=\"210\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"end\">$20</text><text x=\"270\" y=\"210\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"400\" text-anchor=\"end\">400</text><text x=\"430\" y=\"210\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"400\" text-anchor=\"end\">$8,000</text><line x1=\"60\" y1=\"220\" x2=\"460\" y2=\"220\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"120\" y=\"244\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"end\">$22</text><text x=\"270\" y=\"244\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"400\" text-anchor=\"end\">320</text><text x=\"430\" y=\"244\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"400\" text-anchor=\"end\">$7,040</text><line x1=\"60\" y1=\"254\" x2=\"460\" y2=\"254\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"60\" y=\"268\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Take both values from the SAME row, and both rows from the same table</text><text x=\"60\" y=\"286\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">A percentage change is always measured against the ORIGINAL row's value</text></svg>"
+     },
      {
       "label": "The three middle values",
       "svg": "<svg width=\"500\" height=\"300\" viewBox=\"0 0 500 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrAmber\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#f59e0b\"/></marker></defs><text x=\"30\" y=\"46\" fill=\"#7a8299\" font-size=\"11\" font-weight=\"400\" text-anchor=\"start\">Compare the SIZE of PED with 1. The steeper the curve, the less quantity responds.</text><line x1=\"46\" y1=\"232\" x2=\"154\" y2=\"232\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"46\" y1=\"232\" x2=\"46\" y2=\"68\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"80\" y1=\"76\" x2=\"108\" y2=\"232\" stroke=\"#ef4444\" stroke-width=\"3\"/><text x=\"100\" y=\"252\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Price inelastic</text><text x=\"100\" y=\"268\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">size below 1</text><line x1=\"194\" y1=\"232\" x2=\"302\" y2=\"232\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"194\" y1=\"232\" x2=\"194\" y2=\"68\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"208\" y1=\"76\" x2=\"284\" y2=\"232\" stroke=\"#f59e0b\" stroke-width=\"3\"/><text x=\"248\" y=\"252\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Unitary elastic</text><text x=\"248\" y=\"268\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">size exactly 1</text><line x1=\"342\" y1=\"232\" x2=\"450\" y2=\"232\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"342\" y1=\"232\" x2=\"342\" y2=\"68\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"346\" y1=\"120\" x2=\"446\" y2=\"218\" stroke=\"#059669\" stroke-width=\"3\"/><text x=\"396\" y=\"252\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Price elastic</text><text x=\"396\" y=\"268\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">size above 1</text></svg>"
@@ -2686,6 +2701,7 @@
     "title": "Total Revenue and PED",
     "description": "Total revenue for Tafari Coaches at every fare, computed as price times the quantity the demand curve gives. Revenue rises while demand is inelastic, peaks where PED is 1, and falls where demand is elastic.",
     "checklist": [
+     "Total revenue read off the schedule as price × quantity, row by row",
      "Axes labelled: fare on the horizontal, total revenue on the vertical, with units",
      "The revenue curve rises, peaks and falls",
      "The peak marked, and named as the point where PED equals 1",
@@ -2693,6 +2709,10 @@
      "The conclusion stated: raise the price if inelastic, cut it if elastic"
     ],
     "scenarios": [
+     {
+      "label": "The demand schedule",
+      "svg": "<svg width=\"500\" height=\"300\" viewBox=\"0 0 500 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrAmber\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#f59e0b\"/></marker></defs><text x=\"60\" y=\"40\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">Tafari Coaches — daily demand schedule</text><text x=\"120\" y=\"74\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"600\" text-anchor=\"end\">Fare</text><text x=\"270\" y=\"74\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"600\" text-anchor=\"end\">Tickets a day</text><text x=\"430\" y=\"74\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"600\" text-anchor=\"end\">Total revenue</text><line x1=\"60\" y1=\"84\" x2=\"460\" y2=\"84\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"120\" y=\"108\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"end\">$10</text><text x=\"270\" y=\"108\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"400\" text-anchor=\"end\">800</text><text x=\"430\" y=\"108\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"400\" text-anchor=\"end\">$8,000</text><line x1=\"60\" y1=\"118\" x2=\"460\" y2=\"118\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"120\" y=\"142\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"end\">$12</text><text x=\"270\" y=\"142\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"400\" text-anchor=\"end\">720</text><text x=\"430\" y=\"142\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"400\" text-anchor=\"end\">$8,640</text><line x1=\"60\" y1=\"152\" x2=\"460\" y2=\"152\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"120\" y=\"176\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"end\">$15</text><text x=\"270\" y=\"176\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"400\" text-anchor=\"end\">600</text><text x=\"430\" y=\"176\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"400\" text-anchor=\"end\">$9,000</text><line x1=\"60\" y1=\"186\" x2=\"460\" y2=\"186\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"120\" y=\"210\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"end\">$20</text><text x=\"270\" y=\"210\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"400\" text-anchor=\"end\">400</text><text x=\"430\" y=\"210\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"400\" text-anchor=\"end\">$8,000</text><line x1=\"60\" y1=\"220\" x2=\"460\" y2=\"220\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"120\" y=\"244\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"end\">$22</text><text x=\"270\" y=\"244\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"400\" text-anchor=\"end\">320</text><text x=\"430\" y=\"244\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"400\" text-anchor=\"end\">$7,040</text><line x1=\"60\" y1=\"254\" x2=\"460\" y2=\"254\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"60\" y=\"268\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Take both values from the SAME row, and both rows from the same table</text><text x=\"60\" y=\"286\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">A percentage change is always measured against the ORIGINAL row's value</text></svg>"
+     },
      {
       "label": "Revenue at every fare",
       "svg": "<svg width=\"500\" height=\"330\" viewBox=\"0 0 500 330\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrAmber\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#f59e0b\"/></marker></defs><line x1=\"78\" y1=\"262\" x2=\"460\" y2=\"262\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><line x1=\"78\" y1=\"262\" x2=\"78\" y2=\"42\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><text x=\"263\" y=\"288\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">Fare ($)</text><text x=\"56\" y=\"158\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\" transform=\"rotate(-90,56,158)\">Total revenue a day ($)</text><polyline points=\"78,262 84.17,249.73 90.33,237.87 96.5,226.43 102.67,215.41 108.83,204.8 115,194.61 121.17,184.83 127.33,175.47 133.5,166.53 139.67,158 145.83,149.89 152,142.19 158.17,134.91 164.33,128.05 170.5,121.6 176.67,115.57 182.83,109.95 189,104.75 195.17,99.97 201.33,95.6 207.5,91.65 213.67,88.11 219.83,84.99 226,82.29 232.17,80 238.33,78.13 244.5,76.67 250.67,75.63 256.83,75.01 263,74.8 269.17,75.01 275.33,75.63 281.5,76.67 287.67,78.13 293.83,80 300,82.29 306.17,84.99 312.33,88.11 318.5,91.65 324.67,95.6 330.83,99.97 337,104.75 343.17,109.95 349.33,115.57 355.5,121.6 361.67,128.05 367.83,134.91 374,142.19 380.17,149.89 386.33,158 392.5,166.53 398.67,175.47 404.83,184.83 411,194.61 417.17,204.8 423.33,215.41 429.5,226.43 435.67,237.87 441.83,249.73 448,262\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><circle cx=\"263\" cy=\"74.8\" r=\"6\" fill=\"#f59e0b\"/><line x1=\"78\" y1=\"74.8\" x2=\"263\" y2=\"74.8\" stroke=\"#f59e0b\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/><line x1=\"263\" y1=\"74.8\" x2=\"263\" y2=\"262\" stroke=\"#f59e0b\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/><text x=\"72\" y=\"78.8\" fill=\"#f59e0b\" font-size=\"10\" font-weight=\"600\" text-anchor=\"end\">$9,000</text><text x=\"263\" y=\"276\" fill=\"#f59e0b\" font-size=\"10\" font-weight=\"600\" text-anchor=\"middle\">$15</text><text x=\"273\" y=\"66.8\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"600\" text-anchor=\"start\">Revenue peaks where PED = 1</text><circle cx=\"201.33\" cy=\"95.6\" r=\"5\" fill=\"#059669\"/><text x=\"197.33\" y=\"85.6\" fill=\"#059669\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">$10: $8,000</text><circle cx=\"349.33\" cy=\"115.57\" r=\"5\" fill=\"#ef4444\"/><text x=\"353.33\" y=\"105.57\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">$22: $7,040</text><text x=\"78\" y=\"300\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Inelastic below the peak: raise the fare. Elastic above it: cut the fare.</text></svg>"

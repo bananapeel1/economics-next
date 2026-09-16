@@ -16,7 +16,7 @@
  * the marginal-utility schedule, and the number-line markers from the elasticity values themselves.
  * The runner re-derives all of them from the emitted SVG and refuses to stage on a disagreement.
  */
-import { id, money, qAt, trAt, MU, totalUtility, MID_P, MID_Q, MAX_TR, CHOKE_P, INCOME_RISE, yed, COACH_YQ, AIR_YQ, RICE_YQ, XED_SUBSTITUTE, XED_COMPLEMENT } from './_packet17-util.mjs';
+import { id, money, qAt, trAt, FARES, MU, totalUtility, MID_P, MID_Q, MAX_TR, CHOKE_P, INCOME_RISE, yed, COACH_YQ, AIR_YQ, RICE_YQ, XED_SUBSTITUTE, XED_COMPLEMENT } from './_packet17-util.mjs';
 
 const INK = '#e8ecf5', AXIS = '#94a3b8', GRID = '#475569', MUTED = '#7a8299';
 const BLUE = '#3b82f6', GREEN = '#059669', RED = '#ef4444', AMBER = '#f59e0b', PURPLE = '#8b5cf6';
@@ -145,6 +145,39 @@ const demandDiagram = {
   ],
 };
 
+/* ── 3a · the demand schedule, as a table a student reads values off ───────── */
+/*
+ * specGap-05, and Verify A was right to reject the first attempt at it: the finding asks for
+ * elasticities calculated "from a data table/diagram (IAL routinely gives P/Q tables)" and the first
+ * build gave the figures in prose and in a `flow`, which is the format the finding complained about.
+ * A body cannot hold a table — `schema.body-type` allows paragraph, subheading, flow and bullets and
+ * nothing else — and a practice stem is a plain string rendered into a <p>, so newlines collapse.
+ * A diagram can hold anything, so the schedule is drawn as a real grid here, the worked example in
+ * the body reads its two values off it by row, and both Calculate practice items send the student to
+ * it for their figures. Every cell is generated from qAt() and trAt() and re-derived by the runner.
+ */
+export const TBL = { x0: 60, y0: 74, rowH: 34, colFare: 120, colQty: 270, colTr: 430 };
+const tableRowY = (i) => r2(TBL.y0 + (i + 1) * TBL.rowH);
+
+const scheduleSvg = () => {
+  const rows = FARES.map((p, i) => [
+    t(TBL.colFare, tableRowY(i), money(p), { size: 13, anchor: 'end', weight: 600 }),
+    t(TBL.colQty, tableRowY(i), `${qAt(p)}`, { size: 13, anchor: 'end' }),
+    t(TBL.colTr, tableRowY(i), money(trAt(p)), { size: 13, anchor: 'end' }),
+    line(TBL.x0, r2(tableRowY(i) + 10), 460, r2(tableRowY(i) + 10), GRID, 1),
+  ].join('')).join('');
+  return [open(300),
+    t(TBL.x0, 40, 'Tafari Coaches — daily demand schedule', { size: 13, weight: 600 }),
+    t(TBL.colFare, TBL.y0, 'Fare', { size: 11, fill: AXIS, anchor: 'end', weight: 600 }),
+    t(TBL.colQty, TBL.y0, 'Tickets a day', { size: 11, fill: AXIS, anchor: 'end', weight: 600 }),
+    t(TBL.colTr, TBL.y0, 'Total revenue', { size: 11, fill: AXIS, anchor: 'end', weight: 600 }),
+    line(TBL.x0, r2(TBL.y0 + 10), 460, r2(TBL.y0 + 10), AXIS, 2),
+    rows,
+    t(TBL.x0, 268, 'Take both values from the SAME row, and both rows from the same table', { size: 10, fill: MUTED }),
+    t(TBL.x0, 286, `A percentage change is always measured against the ORIGINAL row's value`, { size: 10, fill: AXIS }),
+    close].join('');
+};
+
 /* ── 3 · The five PED values, and PED along one line (block 3) ─────────────── */
 const PANEL = { y0: 232, top: 76, w: 108 };
 const panel = (x, draw, title, sub) => [
@@ -185,9 +218,10 @@ const alongTheLineSvg = () => [
 
 const pedDiagram = {
   id: id('diagram', 'ped values and along a straight line'),
-  title: 'The Five PED Values, and PED Along One Line',
-  description: 'The five values of price elasticity of demand named in the specification, and how PED varies along a single straight-line demand curve: elastic above the midpoint, unitary at it, inelastic below.',
+  title: 'The Demand Schedule and the Five PED Values',
+  description: 'The schedule a PED calculation is read off, the five values of price elasticity of demand named in the specification, and how PED varies along a single straight-line demand curve: elastic above the midpoint, unitary at it, inelastic below.',
   checklist: [
+    'Both values of a percentage change taken from the same row of the schedule',
     'Both axes labelled, with price on the vertical axis',
     'A steeper curve means demand is less responsive to price',
     'The two extremes drawn correctly: vertical is PED = 0, horizontal is PED infinite',
@@ -195,6 +229,7 @@ const pedDiagram = {
     'The elastic range labelled above the midpoint and the inelastic range below it',
   ],
   scenarios: [
+    { label: 'The demand schedule', svg: scheduleSvg() },
     { label: 'The three middle values', svg: middleValuesSvg() },
     { label: 'The two extremes', svg: extremesSvg() },
     { label: 'PED along one straight line', svg: alongTheLineSvg() },
@@ -245,6 +280,7 @@ const revenueDiagram = {
   title: 'Total Revenue and PED',
   description: 'Total revenue for Tafari Coaches at every fare, computed as price times the quantity the demand curve gives. Revenue rises while demand is inelastic, peaks where PED is 1, and falls where demand is elastic.',
   checklist: [
+    'Total revenue read off the schedule as price × quantity, row by row',
     'Axes labelled: fare on the horizontal, total revenue on the vertical, with units',
     'The revenue curve rises, peaks and falls',
     'The peak marked, and named as the point where PED equals 1',
@@ -252,6 +288,7 @@ const revenueDiagram = {
     'The conclusion stated: raise the price if inelastic, cut it if elastic',
   ],
   scenarios: [
+    { label: 'The demand schedule', svg: scheduleSvg() },
     { label: 'Revenue at every fare', svg: revenueCurveSvg() },
     { label: 'Revenue as a rectangle', svg: revenueRectSvg() },
   ],
