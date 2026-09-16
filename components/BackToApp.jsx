@@ -11,8 +11,9 @@ import Link from 'next/link';
  * copy names the next study action instead of the product ("Mark it against the
  * model answers", not "Start your free trial").
  *
- * `href` should keep the `?section=` form: it is what AnalyticsEvents matches
- * on to fire `open_app`, and it 301s to the canonical topic URL.
+ * `href` should be the canonical topic URL. It used to need the `?section=`
+ * form because that is what AnalyticsEvents matched on; the matcher now reads
+ * canonical paths too, so the redirect hop is no longer the price of tracking.
  */
 export default function BackToApp({
   icon: Icon,

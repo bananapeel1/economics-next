@@ -1,6 +1,7 @@
 import { createAnonClient } from '@/lib/supabase-anon';
 import Link from 'next/link';
 import SiteHeader from '@/components/SiteHeader';
+import TopicCta from '@/components/TopicCta';
 import BackToApp from '@/components/BackToApp';
 import { BoltIcon, BookAlt, ChartHistogram, Clipboard, DrawerAlt, LearnMode, Mistakes, NetworkGraph, PenIcon, ProgressChart, Star, Tutor } from '@/components/Icons';
 import UnitScrollBar from '../UnitScrollBar';
@@ -243,7 +244,7 @@ export default async function MacroObjectivesPillarPage() {
             <h1 className="elp-hero-title">Macroeconomic Objectives &mdash;<br /><em style={{ color: 'var(--eup-accent)' }}>every target, every trade-off</em></h1>
             <p className="elp-hero-desc">The complete Edexcel IAL Economics guide to macroeconomic objectives. Growth, inflation, unemployment, balance of payments, equality and environment &mdash; with measurement, policy tools and trade-offs for WEC12.</p>
             <div className="elp-hero-actions">
-              <Link href="/economics/unit-2/macroeconomic-objectives-policies" className="elp-btn-primary">Open in app &rarr;</Link>
+              <TopicCta slot="hero" href="/economics/unit-2/macroeconomic-objectives-policies" topic="macroeconomic objectives" />
               <a href="#objectives" className="elp-btn-secondary">Jump to objectives</a>
             </div>
             <div className="elp-hero-proof">
@@ -415,7 +416,7 @@ export default async function MacroObjectivesPillarPage() {
                 </div>
               ))}
             </div>
-            <Link href="/economics/unit-2/macroeconomic-objectives-policies" className="eup-topic-open-link" style={{ marginTop: 16, display: 'inline-block' }}>Open all notes interactively &rarr;</Link>
+            <TopicCta slot="afterNotes" href="/economics/unit-2/macroeconomic-objectives-policies" topic="macroeconomic objectives" />
           </div>
         </div>
       )}
@@ -544,7 +545,7 @@ export default async function MacroObjectivesPillarPage() {
           <h2 className="elp-cta-title">Ready to master macroeconomic objectives?</h2>
           <p className="elp-cta-sub">Free notes across all four units. Flashcards, quizzes and AI tutor unlock with Pro — £1 for your first month.</p>
           <div className="elp-cta-actions">
-            <Link href="/economics/unit-2/macroeconomic-objectives-policies" className="elp-btn-primary" style={{ fontSize: 15, padding: '14px 30px' }}>Open in app &mdash; it&apos;s free &rarr;</Link>
+            <TopicCta slot="closing" href="/economics/unit-2/macroeconomic-objectives-policies" topic="macroeconomic objectives" />
             <Link href="/economics/unit-2" className="elp-btn-secondary">&larr; Back to Unit 2</Link>
           </div>
           <p className="elp-cta-note">No signup required for notes &middot; Cancel anytime &middot; &pound;1 first month, then &pound;1.99 &middot; charged in your local currency</p>
@@ -557,7 +558,7 @@ export default async function MacroObjectivesPillarPage() {
 
         heading={"Revise macro objectives in the app"}
 
-        sub={"Diagrams, flashcards and exam-style practice on this exact topic"}
+        sub={"Diagrams and exam-style practice on this exact topic — free"}
 
         href="/economics/unit-2/macroeconomic-objectives-policies"
 

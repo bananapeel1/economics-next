@@ -1,6 +1,7 @@
 import { createAnonClient } from '@/lib/supabase-anon';
 import Link from 'next/link';
 import SiteHeader from '@/components/SiteHeader';
+import TopicCta from '@/components/TopicCta';
 import BackToApp from '@/components/BackToApp';
 import { BoltIcon, BookAlt, ChartHistogram, Clipboard, Document, DrawerAlt, LearnMode, NetworkGraph, PenIcon, ProgressChart, Settings, Star, Tutor } from '@/components/Icons';
 import UnitScrollBar from '../UnitScrollBar';
@@ -242,7 +243,7 @@ export default async function MarketFailurePillarPage() {
             <h1 className="elp-hero-title">Market Failure &mdash;<br /><em style={{ color: 'var(--eup-accent)' }}>every type, every diagram</em></h1>
             <p className="elp-hero-desc">The complete Edexcel IAL Economics guide to market failure. Externalities, public goods, merit and demerit goods, information failure and monopoly power &mdash; with diagrams, real examples and exam technique for WEC11.</p>
             <div className="elp-hero-actions">
-              <Link href="/economics/unit-1/market-failure" className="elp-btn-primary">Open in app &rarr;</Link>
+              <TopicCta slot="hero" href="/economics/unit-1/market-failure" topic="market failure" />
               <a href="#types" className="elp-btn-secondary">Jump to types</a>
             </div>
             <div className="elp-hero-proof">
@@ -425,7 +426,7 @@ export default async function MarketFailurePillarPage() {
                 </div>
               ))}
             </div>
-            <Link href="/economics/unit-1/market-failure" className="eup-topic-open-link" style={{ marginTop: 16, display: 'inline-block' }}>Open all notes interactively &rarr;</Link>
+            <TopicCta slot="afterNotes" href="/economics/unit-1/market-failure" topic="market failure" />
           </div>
         </div>
       )}
@@ -560,7 +561,7 @@ export default async function MarketFailurePillarPage() {
           <h2 className="elp-cta-title">Ready to master market failure?</h2>
           <p className="elp-cta-sub">Free notes across all four units. Flashcards, quizzes and AI tutor unlock with Pro — £1 for your first month.</p>
           <div className="elp-cta-actions">
-            <Link href="/economics/unit-1/market-failure" className="elp-btn-primary" style={{ fontSize: 15, padding: '14px 30px' }}>Open in app &mdash; it&apos;s free &rarr;</Link>
+            <TopicCta slot="closing" href="/economics/unit-1/market-failure" topic="market failure" />
             <Link href="/economics/unit-1" className="elp-btn-secondary">&larr; Back to Unit 1</Link>
           </div>
           <p className="elp-cta-note">No signup required for notes &middot; Cancel anytime &middot; &pound;1 first month, then &pound;1.99 &middot; charged in your local currency</p>
@@ -571,9 +572,9 @@ export default async function MarketFailurePillarPage() {
       <BackToApp
         icon={LearnMode}
         heading={"Revise market failure in the app"}
-        sub={"Diagrams, flashcards and exam-style practice on this exact topic"}
+        sub={"Diagrams and exam-style practice on this exact topic — free"}
         href="/economics/unit-1/market-failure"
-        cta={"Open 1.3.5"}
+        cta={"Open market failure"}
       />
 
       <footer className="elp-footer">
