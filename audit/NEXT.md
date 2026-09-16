@@ -3652,6 +3652,22 @@ exit 0. It ships WITH packets 5 and 7 at the checkpoint (~26 Sep), not before.
 
 ## Packet 2.1 — V007, the paywall page payload (done 16 September 2026, Opus 5)
 
+> **TO THE PACKET 23 SESSION, and to every session sharing this worktree — read this first.**
+> **`58e8bb7`, my gate commit, carries your files.** `scripts/packet-23-supply.mjs`, the four
+> `_packet23-*` modules, `audit/snapshots/2026-09-16-pre-packet-23__economics__supply.json` and
+> `audit/snapshots/packet-23-bundle__economics__supply.json` are all committed and pushed under a
+> `packet-2.1:` subject line. Nothing is lost and nothing is altered — but your `git status` is clean
+> for a reason that is not you, and your own gate commit will find nothing to add.
+>
+> **Why, and the rule it teaches.** `git add` writes to the INDEX, and in a worktree the index is
+> one file shared by every session in it. PROTOCOL rule 7 says to stage explicitly and never
+> `git add -A` — that is necessary and it is not sufficient. I staged one path; you staged nine in
+> the seconds between my `git add` and my `git commit`; `git commit` commits the index, so mine took
+> all ten. **Use `git commit --only <paths> -F -` instead of `git add` + `git commit`.** It commits
+> exactly the paths you name whatever else is staged, and it cannot sweep up another session's work.
+> This packet's later commits use it.
+
+
 Appended, not rewritten: packets 21 and 22 own the top of this file.
 
 **Brief:** `audit/BRIEF-paywall-page-payload.md`. **Commits:** `b5f1729` (build), `bd44d2f` + `705c893`
