@@ -9212,10 +9212,10 @@
    "kind": "specGap",
    "text": "Economic agents and their objectives (consumers, producers, government) as the parties facing opportunity cost — taught implicitly, never defined.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "bundle tables.content[0].sections[0] (sub:rational-decision-making) body paras 1-2: names consumer/firm/government as economic agents and states each objective (utility, profit, act for society); matches DECISIONS.md 2026-09-15 packet-15 scoping to 1.3.2.1 econ_spec.txt:580-582",
    "note": null
   },
   {
@@ -9518,10 +9518,10 @@
    "rank": 0,
    "text": "Unbreak the two uncompletable fill-ins (utility-and-utility-maximisation: [utility, utility, diminishes]; interpreting-ped-values: [elastic, inelastic, inelastic]) — make answers distinct, and add 2-3 distractor words to every fill-in bank (FillInRecall.jsx:12 currently uses answers only).",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "bundle: utility-and-utility-maximisation fillin answers=[Total,Marginal,benefit] distractors=[Average,cost] no dupes; interpreting-ped-values converted to type match (no longer a fillin, duplicate-answer defect gone); all 6 fillin recalls in bundle carry 2 distractors each (demand-and-the-demand-curve, what-elasticity-measures, ped-along-a-straight-line, yed-definition-and-formula, significance-for-consumers, utility-and-utility-maximisation)",
    "note": null
   },
   {
@@ -9531,10 +9531,10 @@
    "rank": 1,
    "text": "Fix practice placement: either stop sorting practice by marks before applying practiceIndices (LearnModeTab.jsx sortedPractice) or re-author indices; then retariff to IAL command words (Define 2, Explain 4/6, Assess 10/12, Evaluate 20 level-marked with a diagram) and drop 'Outline'/'Analyse (10)'.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "practice[0..9] commands are Define(2) Explain(4) Explain(4) Draw(4) Define(2) Calculate(4) Analyse(6) Calculate(4) Examine(8) Evaluate(20) -- all within IAL Economics tariff set per econ_spec.txt:2704-2747/tariff-census.json, no Outline, no Analyse(10); components/LearnModeTab.jsx:193-194 resolvePinnedItem uses raw practiceData not sortedPractice (comment: 'practiceIndices are authored against the RAW practiceData order'), sortedPractice only used in legacy fallback branch; 'Assess 10/12' clause REFUSED correctly -- econ_spec.txt:2704-2747 Appendix 6 lists exactly 8 command words (Define/Calculate/Draw/Explain/Analyse/Examine/Discuss/Evaluate) with no Assess and no 10-mark tariff in Economics",
    "note": null
   },
   {
@@ -9544,10 +9544,10 @@
    "rank": 2,
    "text": "Replace the four non-sequence reorders (behavioural biases, PED-factor 'importance', XED strong-positive vs strong-negative, PED/YED/XED 'order') with sort/classify/match exercises as suggested in recallAudit.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "only 4 reorders remain (diminishing-marginal-utility-and-demand, shifts-of-the-demand-curve, ped-definition-and-formula, xed-definition-and-formula), each a genuine causal chain or calculation procedure; none match the four flagged (behavioural biases, PED-factor importance, XED strong-positive/negative, PED/YED/XED order) which are gone; replacements are match/fillin/classify types across the other 20 subsections",
    "note": null
   },
   {
@@ -9557,10 +9557,10 @@
    "rank": 3,
    "text": "Surface the two hidden diagrams (add diagramRef 'YED and XED' to Block 3 or 4, and either split 'PED Values' out or merge it) and add one sentence linking DMU to the downward-sloping demand curve.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "block3.diagramId=315b5ee5 (The Five PED Values, and PED Along One Line) and block5.diagramId=6b9fca26 (Interpreting YED and XED Values), both previously-hidden diagrams now diagramId-pinned; components/learn-mode/utils.js:114-117 resolvePinnedDiagram checks pin.id first (exact match) before falling back to legacy substring pin.ref, so the old first-match bug cannot recur; subsection 2.2 diminishing-marginal-utility-and-demand body+flow explicitly derives 'Quantity demanded rises as price falls, so the curve slopes downward' from DMU",
    "note": null
   },
   {
@@ -9570,10 +9570,10 @@
    "rank": 4,
    "text": "Replace fabricated or wrong examples (Waitrose 2008 dip, McDonald's 2010s, Starbucks health scare, PS5 price cut, Samsung 20%) with verifiable, preferably non-UK cases, and remove invented exam-frequency claims in examMatters.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "grep of full bundle JSON: 0 occurrences of Waitrose, McDonald, Starbucks, PS5, Samsung, GCSE, AQA, or any named UK retailer; all 24 realExample fields replaced with generic non-attributed scenarios carrying no year or figure; all 24 examMatters fields cite 'WEC11 Appendix 6' with the correct command/marks and contain no frequency claims ('almost every paper' etc: 0 occurrences)",
    "note": null
   },
   {
@@ -9582,10 +9582,10 @@
    "kind": "accuracy",
    "text": "Income Elasticity of Demand (YED) > interpreting-yed-values > realExample: Claims Waitrose 'saw sales dip' in the 2008 recession 'confirming' high positive YED. Waitrose sales and market share actually grew through 2008-09 (it launched 'essential Waitrose' in 2009 and gained share). Presented as evidence for a theory it does not support.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "grep bundle JSON: 'Waitrose' 0 occurrences; interpreting-yed-values realExample replaced with generic hotel-groups budget/premium-brand scenario, no company named, no year, no figure",
    "note": null
   },
   {
@@ -9594,10 +9594,10 @@
    "kind": "practice",
    "text": "p0: 'Define the term PED (4 marks)' — IAL 'Define' items are 2 marks; the guidance awards 2 of the 4 marks for explaining elastic vs inelastic, which is not part of a definition. Guidance also says 'PED greater than 1' without absolute value. Additionally, because LearnModeTab.jsx sorts practice by marks before applying practiceIndices, this question is served on Block 1 (The Demand Curve) before PED has been taught.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "practice[4]: 'Define PED (2 marks)', guidance states the definition only and explicitly separates it from interpretation ('Explaining what elastic and inelastic mean is interpretation... belongs in the 4-mark question'), and states absolute value requirement ('the phrase greater than 1 also needs the words in size'); pinned to block3 Price Elasticity of Demand (practiceIndices [4,5,6]), taught after PED is introduced",
    "note": null
   },
   {
@@ -9606,10 +9606,10 @@
    "kind": "practice",
    "text": "p2: 'Analyse … (10 marks)' — 10 marks in IAL Economics is 'Assess' (level-marked, KAA + evaluation). 'Analyse' is not a 10-mark IAL command word. Guidance gives evaluation 1 mark, which does not match a 10-mark level scheme; and via the sort bug this question lands on Block 5 rather than the YED block.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "no 10-mark or Analyse-10 item exists anywhere in practice[0..9]; practice[6] is Analyse (6 marks) and practice[8] is Examine (8 marks), both correct IAL Economics tariffs (econ_spec.txt:2704-2747); practice[8] guidance is levels-shaped (Knowledge/Application/Analysis structure stated explicitly)",
    "note": null
   },
   {
@@ -9618,10 +9618,10 @@
    "kind": "structure",
    "text": "Practice-to-block mapping is broken: LearnModeTab.jsx builds sortedPractice (sorted by marks) and indexes practiceIndices into it, but the JSON's practiceIndices were authored against the unsorted array. Result: Block 1 (Demand Curve) gets 'Define PED', Block 2 (PED) gets 'Outline EV demand shift', Block 3 (YED) gets 'Explain PED factors', Block 5 gets 'Analyse YED'; the 20-mark Evaluate never shows.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "every block's practiceIndices maps to items matching its own subsections' content (verified all 6 blocks against practice[0..9] text); block6 (Significance of Elasticities) practiceIndices=[9] = the 20-mark Evaluate item, now reachable; LearnModeTab.jsx:193-194 confirms practiceIndices resolve against raw practiceData, not sortedPractice",
    "note": null
   },
   {
@@ -9630,10 +9630,10 @@
    "kind": "structure",
    "text": "Diagrams 'PED Values: Visual Comparison' and 'YED and XED Interpretation' never render in Learn Mode: Block 2 diagramRef 'PED' first-matches 'PED and Total Revenue' (LearnModeTab.jsx:97-104), and Blocks 3/4 have diagramRef null. Half the diagram set is invisible in the primary flow.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "block3.diagramId=315b5ee5 and block5.diagramId=6b9fca26 are the two previously-invisible diagrams (PED values / YED-XED interpretation), both now diagramId-pinned; components/learn-mode/utils.js:114-117 resolves by exact id before ref, eliminating the first-match substring bug; all 5 diagrams have a diagramId consumer except block6 which by design carries no diagram",
    "note": null
   },
   {
@@ -9642,10 +9642,10 @@
    "kind": "structure",
    "text": "Every block has exactly 3 sections, so 2-per-step pairing yields a 2-section step then a 1-section step in every block; the 1-section step then carries diagram + quiz + practice + Explain-It-Back + takeaway + spaced recall + immediate recall — the heaviest step is always the shortest reading, and the rhythm is identical six times.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "block subsection counts are now 4,6,5,2,4,3 (verified by counting b.tables.content[i].sections.length), not a uniform 3-per-block rhythm",
    "note": null
   },
   {
@@ -9654,10 +9654,10 @@
    "kind": "structure",
    "text": "Inline quiz only ever uses quiz indices 0-7 (quizIndices per block); indices 8-24 are reachable only via pre/post-test and the paywalled Quiz tab.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "computed pinned set from all 6 blocks' quizIndices over 32 quiz items: 29 pinned, exactly 3 unpinned at indices [0,1,2] (first in array, available to pre-test); no quiz index in the old dead 8-24 range is now unreachable since 29 of 32 are pinned to check-ins",
    "note": null
   },
   {
@@ -9666,10 +9666,10 @@
    "kind": "structure",
    "text": "Block 5 'Significance of Elasticities' largely repeats 'Significance of YED' and 'Significance of XED' subsections already in Blocks 3-4; its reorder recall is a recap of the block's own paragraph order.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "block6 (dffc0809) now has exactly 3 subsections -- Significance for Firms, Significance for Consumers, Significance for Government -- one paragraph set each, no duplicated 'Significance of YED'/'Significance of XED' subsections remain in blocks 3-4 (block3 subsections are what-elasticity-measures/ped-definition-and-formula/interpreting-ped-values/factors-influencing-ped/ped-along-a-straight-line; block4 is calculating-total-revenue/ped-and-total-revenue -- neither contains a 'significance' subsection)",
    "note": null
   },
   {
@@ -9678,10 +9678,10 @@
    "kind": "structure",
    "text": "Diminishing marginal utility (Block 0) is never connected to the downward-sloping demand curve (Block 1), so the two halves of the section do not link — the spec's reason for teaching DMU here is missing.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "bundle sub:diminishing-marginal-utility-and-demand body+flow: 'Each extra unit adds less satisfaction' -> 'the most she will pay for it falls' -> 'she buys the extra unit only at a lower price' -> 'Quantity demanded rises as price falls, so the curve slopes downward' -- an explicit, full causal chain from DMU to the curve's shape, in its own subsection (2.2)",
    "note": null
   },
   {
@@ -9690,10 +9690,10 @@
    "kind": "structure",
    "text": "Fill-in word banks contain only the answers (FillInRecall.jsx:12), so every fill-in is an n-item matching puzzle with no distractors; two are uncompletable because of duplicate answers.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "all 6 fillin recalls in the bundle carry a distractors[] array of 2 words each in addition to answers[] (e.g. utility-and-utility-maximisation distractors=[Average,cost]); FillInRecall.jsx word bank is no longer answers-only",
    "note": null
   },
   {
@@ -9702,10 +9702,10 @@
    "kind": "structure",
    "text": "Filler misconceptions: 'students treat elasticities as purely theoretical' (using-elasticities-for-business-decisions), 'firms should only sell necessities' (significance-of-yed), 'XED only matters for substitutes' (significance-of-xed) are invented rather than observed marking errors; the genuine ones (demand vs Qd, total vs marginal utility, inferior ≠ low quality, price as a shifter, sign of YED) are good.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "grep of all 24 misconception fields: none of the three flagged filler misconceptions ('purely theoretical', 'firms should only sell necessities', 'XED only matters for substitutes') appear anywhere; every remaining misconception names a specific student-written error and a 'Write instead' correction (e.g. using-elasticities-for-business-decisions: 'Students treat an elasticity as a decision rather than an input... Write instead: use the elasticity to predict the revenue change, then weigh it against costs and rivals')",
    "note": null
   },
   {
@@ -9714,10 +9714,10 @@
    "kind": "structure",
    "text": "Several 'flow' blocks present parallel effects as sequences (demand-and-the-demand-curve: 'Income effect → Substitution effect'), reinforcing the same false-sequence habit the reorders have.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "grep of full bundle: 'income effect' and 'substitution effect' 0 occurrences anywhere (that content, and its off-spec flow, was removed entirely rather than reformatted -- econ_spec.txt has 0 occurrences of 'income effect'/'substitution effect' in 1.3.2, confirming it was not spec content in the first place); the 5 remaining flow-type body items (diminishing-marginal-utility-and-demand, shifts-of-the-demand-curve, ped-definition-and-formula, xed-definition-and-formula, using-elasticities-for-government-policy) are all genuinely sequential causal chains or calculation procedures, not parallel effects presented as a sequence",
    "note": null
   },
   {
@@ -9726,10 +9726,10 @@
    "kind": "structure",
    "text": "examMatters repeatedly asserts paper frequency ('almost every paper', 'often open a paper', 'a common 8-mark question') that does not match WEC11's structure; students in international schools will take these as fact.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "grep of full bundle JSON for 'almost every paper', 'often open a paper', 'common 8-mark', 'common exam': 0 occurrences; all 24 examMatters fields cite specific command words and marks tied to WEC11 Appendix 6 rather than paper-frequency or marker claims",
    "note": null
   },
   {
@@ -9738,10 +9738,10 @@
    "kind": "specGap",
    "text": "Diminishing marginal utility as the explanation for the downward slope of the demand curve (spec links DMU to the shape of the demand curve) — DMU is taught but never applied to the curve.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "same evidence as structure-06: sub:diminishing-marginal-utility-and-demand body+flow explicitly derives the downward-sloping demand curve from diminishing marginal utility, its own subsection 2.2",
    "note": null
   },
   {
@@ -9750,10 +9750,10 @@
    "kind": "specGap",
    "text": "'Conditions of demand' as the spec term for shift factors — not used; students should recognise the phrase in questions.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "grep audit/raw/econ_spec.txt for 'conditions of demand': 0 occurrences (checked lines 576-655 and whole file); spec's own phrase at :595-596 is 'Factors that may cause a shift in the demand curve'; refused correctly as no-change; bundle grep for 'conditions of demand': 0 occurrences; mistake card consumer-behaviour-demand:mistake:d6510341 (same id as before) is rewritten to 'Reading a Constant Slope as a Constant Elasticity', no longer carries the AQA phrase",
    "note": null
   },
   {
@@ -9762,10 +9762,10 @@
    "kind": "specGap",
    "text": "PED varying along a straight-line demand curve (elastic above midpoint, inelastic below) — only in a diagram and quiz[7], not in content body.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "sub:ped-along-a-straight-line body: explicit bullets 'Above the midpoint -- fares over 15. Demand is price elastic... At the midpoint -- a fare of 15... unitary... Below the midpoint -- fares under 15. Demand is price inelastic', now in content body not just diagram/quiz; diagram 315b5ee5 third scenario 'PED along one straight line' shows the same at the midpoint 15/600",
    "note": null
   },
   {
@@ -9774,10 +9774,10 @@
    "kind": "specGap",
    "text": "Significance of elasticities for CONSUMERS (spec: firms, consumers and government) — diagram 3 checklist promises it, content covers only firms and government.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "block6 sub:significance-for-consumers is its own dedicated subsection (6.2) covering PED/YED significance specifically for consumers ('Inelastic demand is expensive to have... Elastic demand is protection... Income elasticity explains a household's own budget'), alongside separate Significance for Firms (6.1) and Significance for Government (6.3)",
    "note": null
   },
   {
@@ -9786,10 +9786,10 @@
    "kind": "specGap",
    "text": "Calculating elasticities from a data table/diagram (IAL routinely gives P/Q tables) — worked example only in prose flows; no table-based practice.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 round2 2026-09-16",
+   "evidence": "HEAD 24a3811. Verified lib/content-validator.mjs:334 schema.body-type restricts body items to paragraph/subheading/flow/bullets (BLOCK tier) and components/learn-mode/InlinePractice.jsx:125 renders question.question into a plain <p>, so a diagram is the only schema surface that can hold a grid. (a) calculating elasticities FROM a data table/diagram: scripts/_packet17-diagrams.mjs scheduleSvg() draws a real grid -- header row 'Fare | Tickets a day | Total revenue', 5 data rows with per-row separator lines, columns right-aligned at fixed x=120/270/430 -- every cell generated from qAt()/trAt() (values /800/,000 ... /320/,040, matching Q=1200-40P). It is scenarios[0] (the diagram's default/active view, components/learn-mode/InlineDiagram.jsx:98-102) on BOTH diagram 315b5ee5 (pinned diagramId on block 3, Price Elasticity of Demand) and diagram f29852b9 (pinned diagramId on block 4, Total Revenue and Pricing Decisions) -- confirmed unchanged pins in the regenerated bundle. sub:ped-definition-and-formula body now has a subheading 'Reading the two rows off the demand schedule' plus a bullets item naming the  and  rows explicitly as read off the table before the calculation proceeds. scripts/packet-17-consumer-behaviour-demand.mjs adds a runner check that both diagram copies of the schedule are identical and every FARES row appears in it. (b) table-based practice: practice[5] ('The demand schedule in this chapter's diagram gives Tafari's daily ticket sales... calculate the price elasticity of demand') and practice[7] ('Read the  and  rows off the demand schedule in this chapter's diagram... Calculate total revenue') both explicitly instruct reading figures from the table rather than restating them as free prose; the runner (packet-17-consumer-behaviour-demand.mjs) checks every P value a Calculate item names is actually a FARES row in the schedule. Given the InlinePractice <p>-only rendering constraint, referencing and depending on the diagram table is the maximum the schema allows, and it is reachable from the same check-in step as the diagram (both resolved to the same block index in LearnModeTab.jsx's per-step map). Re-checked the other 31 confirmed ids against this diff (git diff 7b83ed9..24a3811): only subsection 3.2 body/realExample/misconception/examMatters and block 1's takeaway (commit 6c9c1bd) changed content-wise, neither cited as evidence for any other id; sub:ped-definition-and-formula's recall is unchanged (still reorder, genuine sequence) so topFix-03 holds; diagram IDs, titles' id-seed strings, and block pins for 315b5ee5/f29852b9/6b9fca26 are unchanged so structure-02/topFix-04a/specGap-03 hold; full-bundle grep for all previously-banned terms (Waitrose, Outline, Assess, £, anchoring, conditions of demand, paper-frequency phrases) is still 0 occurrences; no other id's evidence file:line was touched by this diff.",
    "note": null
   },
   {
@@ -9798,10 +9798,10 @@
    "kind": "specGap",
    "text": "Unsure: exact WEC11 1.3.2 bullet list — if elasticities are a separate spec point the section may be over-packed; if behavioural economics is absent from WEC11 (likely), Block 0 subsection 3 is off-spec.",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "(a) econ_spec.txt:583-589 names 1b's six reasons (herding, habitual behaviour, inertia, poor computational skills, need to feel valued, framing and bias) as required content -- confirmed required, not off-spec; bundle subsections 1.3/1.4 teach exactly these six reasons and grep confirms 0 occurrences of 'anchoring','loss aversion','bounded rational' anywhere in the bundle, so the AQA/UK-GCE vocabulary is gone while the (required) content stays. (b) econ_spec.txt:601-649 confirms price/income/cross elasticity (3a-3j) are sub-topic 3 of 1.3.2 itself, not a separate spec point, so the section's scope (6 blocks covering 1a-1b and 2a-3j) is correctly sized, not over-packed; correctly refused/redirected rather than cut",
    "note": null
   },
   {
@@ -16726,10 +16726,10 @@
    "kind": "specGap",
    "text": "1.3.2 1b) Inertia — not in the teaching content. (spec-coverage audit, 12 Sep 2026)",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "sub:why-consumers-may-not-act-rationally (1.3) bullet: 'Inertia -- the buyer knows a better option exists and does not move to it. Switching costs time and attention, the gain is spread over months, and the default continues.' plus its own classify-recall group with two worked examples",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16738,10 +16738,10 @@
    "kind": "specGap",
    "text": "1.3.2 1b) The need to feel valued — not in the teaching content. (spec-coverage audit, 12 Sep 2026)",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "sub:computation-status-and-framing (1.4) bullet: 'The need to feel valued -- the purchase carries a signal. A branded bag, a seat in a better section: part of what is bought is how the buyer is seen, so the cheaper identical good is not identical to them.'",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16750,10 +16750,10 @@
    "kind": "specGap",
    "text": "1.3.2 1b) Framing — not in the teaching content. (spec-coverage audit, 12 Sep 2026)",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "sub:computation-status-and-framing (1.4) bullet: 'Framing and bias -- the same offer described differently is judged differently. 90% fat free outsells 10% fat, and a charge feels like a loss where a discount of the same size feels like a gain.'",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16762,10 +16762,10 @@
    "kind": "specThin",
    "text": "1.3.2 1b) The influence of other people's behaviour (herding) — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "sub:why-consumers-may-not-act-rationally (1.3) bullet: 'The influence of other people's behaviour (herding) -- a buyer treats what everyone else is doing as information about what is worth doing. A queue outside a restaurant attracts a longer queue.' plus classify-recall examples (headphones, queue)",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16774,10 +16774,10 @@
    "kind": "specThin",
    "text": "1.3.2 1b) Poor computational skills — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "sub:computation-status-and-framing (1.4) bullet: 'Poor computational skills -- the comparison is arithmetic the buyer cannot do quickly. A price per pack against a price per hundred grams, or an interest rate on a loan, hides the better deal behind a calculation made at the shelf in seconds.'",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16786,10 +16786,10 @@
    "kind": "specThin",
    "text": "1.3.2 2d) Changes in the age distribution of the population as a demand shifter — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "sub:tastes-population-and-advertising (2.6) subheading+paragraph: 'Changes in size and age distribution of the population... Age distribution: the same total population with a different shape demands different things. An ageing population raises demand for healthcare; a young one raises demand for schooling and first homes, with no change in numbers.'",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16798,10 +16798,10 @@
    "kind": "specThin",
    "text": "1.3.2 3d) Branding as a factor influencing PED — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 17,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-17",
+   "verified_by": "verify-a packet 17 2026-09-16",
+   "evidence": "sub:factors-influencing-ped (3.4) bullet: 'Branding -- a brand attaches an expectation to a name, so buyers stop treating rivals as substitutes even when the products are alike. It makes demand less elastic, which is what the spending buys.'",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {

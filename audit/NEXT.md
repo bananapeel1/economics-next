@@ -415,6 +415,40 @@ Five real findings, all correct, all fixed in `7b83ed9`:
    inside the validator's 1.5× threshold and still the obvious answer without reading the economics. All four
    options are now the same shape. (Packet 14's Layer 6 found five of these; the threshold is not the test.)
 
+### Verify A (read-only verifier on Sonnet, 16 September 2026 — two rounds)
+
+Round 1 over `bd527e7..7b83ed9`, judging all 32 claimed ids from the bundle, the commit range and
+`audit/raw/econ_spec.txt`, with no sight of the build conversation: **31 confirmed, 1 rejected.**
+
+It checked the four refusals against the specification itself rather than taking them on trust, which is
+what they are for — `specGap-02` (0 occurrences of "conditions of demand"), `specGap-06` (both halves,
+against `:583-589` and `:601-649`), `topFix-02`'s "Assess 10/12" (against Appendix 6 at `:2704-2747`), and
+`structure-09`'s income and substitution effects (0 occurrences) — and confirmed each.
+
+**The rejection, `specGap-05`, was correct and the packet was wrong.** The finding asks for elasticities
+calculated "from a data table/diagram (IAL routinely gives P/Q tables)" *because* "worked example only in
+prose flows" was the defect. The first build answered it with a prose `flow` and two practice stems that
+recited the figures in a sentence — the exact format the finding names. The verifier scanned every body
+item of all 24 subsections, found no table of any kind, and said so with the paths.
+
+What made the fix non-obvious is the schema, and it rules out the obvious answer. `schema.body-type` allows
+`paragraph`, `subheading`, `flow` and `bullets` and nothing else, so a body cannot hold a table; and a
+practice item is four plain strings, with `question` rendered into a `<p>`, so newlines collapse and an
+aligned stem is not expressible either. **A diagram is the only surface in the schema that can carry a
+grid.** So the demand schedule is now drawn as a real three-column table — Fare · Tickets a day · Total
+revenue, five rows, every cell generated from `qAt()` and `trAt()` — and it fronts **both** the PED diagram
+and the revenue diagram, so it is present at the check-in of each chapter whose practice item reads rows off
+it. Subsection 3.2 finds its two rows in the table before doing any arithmetic, both Calculate items send
+the student to named rows, and the runner re-derives every cell and fails if the two copies differ.
+Checked at 390×844: three columns, five rows, legible, no horizontal scroll (`24a3811`).
+
+Round 2 re-checked that id, and every id whose round-1 evidence the diff had moved, at the new HEAD.
+
+**Two things the verifier said it could not check**, recorded rather than glossed: it did not run `npm test`
+(it ran the build, which passed), and it did not re-implement the validator — it read the 0 BLOCK / 0 DEBT /
+100% result from the packet's own dry run, which imports the same `lib/content-validator.mjs` that
+`npm run validate` does, and spot-checked the individual rules behind each id against the raw bundle instead.
+
 ### Verify B — 390×844, signed out, storage cleared, against the staged draft (16 September 2026)
 
 Walked at `http://localhost:3001/economics/unit-1/consumer-behaviour-demand?draft=1`, viewport emulated at
