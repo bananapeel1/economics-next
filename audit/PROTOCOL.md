@@ -5,6 +5,12 @@ between packets; if it needs to, change it in its own commit and say why in `DEC
 
 ## Invariants
 
+- **Commit atomically: `git commit -m "…" -- <paths>`, never `git add` followed by a separate commit.**
+  A worktree has ONE index shared with every other session in it, so anything you stage can be committed by
+  somebody else's `git commit` before you get there — which is how packet 23's ten files ended up inside a
+  commit labelled "packet-2.1: gate" on 16 September, despite being staged explicitly by name. Explicit
+  staging protects you from sweeping in THEIR files; it does not protect your files from THEIR commit.
+  Check `git log -1` immediately before committing, and if HEAD has moved, re-check `git status` first.
 - **Work happens in the remediation worktree**: `/Users/arongijsel/Claude APP/economics-next-remediation`, branch
   `remediation/2026-09`. The sibling folder `economics-next` is the SEO/marketing tree on another branch. Never
   do packet work there, and never run `git checkout` of another branch inside either tree.

@@ -1324,3 +1324,28 @@ for, confirm it fires, remove it, confirm it clears.** Packet 3.1's census test 
 a parser missing 43 leaves for a month because it shared the parser's own regex; this is the same
 failure at one tenth the scale, and the same remedy. A check that has never been seen to fail is not
 evidence of anything. Both of packet 21's new checks, and packet 23's adopted one, are A/B'd both ways.
+
+## 2026-09-16 — packet 23: the git INDEX is shared too, and explicit staging does not protect you
+
+PROTOCOL rule 7 says "stage files explicitly, never `git add -A`". Packet 23 did exactly that — ten files
+named one by one — and its work was still committed by somebody else, twice over. Between the `git add`
+and the `git commit`, two other sessions ran their own `git commit`, and a commit takes whatever is in the
+index. The packet-23 files are in `58e8bb7`, whose subject line is "packet-2.1: gate — the PROGRESS row and
+the Verify A result", and that commit is already pushed.
+
+**Nothing was lost** — all ten files are in `HEAD` byte-identical to the working tree, including the three
+corrections Verify A asked for — and the commit was NOT rewritten, because it is pushed and shared with
+sessions that may already have built on it. What was lost is the history: packet 23's 5,000 lines carry
+another packet's subject, and `git log -- scripts/packet-23-supply.mjs` names the wrong packet.
+
+**The rule rule 7 was missing.** A worktree has ONE index, so staging is a shared, global mutation and the
+window between `git add` and `git commit` belongs to everybody. From now on, in a shared worktree:
+
+- **Never leave files staged.** `git add` and `git commit` go in ONE command, or use
+  `git commit -m "…" -- <paths>`, which stages and commits atomically and ignores whatever else is in the
+  index. That form is now the only correct way to commit while another session is running.
+- **Check `git log -1` immediately before committing.** If HEAD moved since you started staging, assume the
+  index was consumed and re-check `git status` before doing anything else.
+- **If your work is swept into another session's commit, leave it there.** Say so in your own follow-up
+  commit and in PROGRESS. Rewriting a pushed commit to fix a subject line costs more than the wrong subject
+  line does, and it will break the session that wrote it.
