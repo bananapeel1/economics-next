@@ -419,6 +419,16 @@ export default function LearnModeTab({
   const chapterLabel = step ? `Chapter ${step.blockIndex + 1} of ${blockCount}` : '';
   const spaced = step?.type === 'checkin' ? spacedFor(safeStep) : null;
 
+  // What this check-in actually carries, in the order the page shows it. A chapter with no diagram
+  // must not promise one (see the comment beside the sentence below).
+  const checkinIntro = (() => {
+    if (step?.type !== 'checkin') return '';
+    const parts = [currentDiagram && 'the diagram', currentQuiz && 'a quick question', spaced && 'one thing from earlier'].filter(Boolean);
+    if (!parts.length) return '';
+    const list = parts.length === 1 ? parts[0] : `${parts.slice(0, -1).join(', ')} and ${parts[parts.length - 1]}`;
+    return `Before the next chapter: ${list}.`;
+  })();
+
   const practiceCard = (key) => (
     isPracticeVisible(currentPractice, currentUnit?.code)
       ? <InlinePractice key={key} question={currentPractice} onAskTutor={onAskTutor} mode={getPracticeMode(safeStep)}
@@ -562,7 +572,13 @@ export default function LearnModeTab({
                   <span className="lm-eyebrow-title">{step.blockTitle}</span>
                 </div>
                 <h2 className="lm-section-title">Chapter check-in</h2>
-                <p className="lm-checkin-intro">Before the next chapter: the diagram, a quick question, and one thing from earlier.</p>
+                {/*
+                  * The sentence names only what this check-in actually carries. A chapter whose
+                  * material earns no diagram — 1.3.2's "significance of elasticities" is an argument,
+                  * not a drawing — promised one here and then did not show it, which is the same
+                  * class of defect as "Three questions" over a two-question pre-test (packet 16).
+                  */}
+                {checkinIntro && <p className="lm-checkin-intro">{checkinIntro}</p>}
                 <div className="lm-content">
                   {currentDiagram && <InlineDiagram diagram={currentDiagram} />}
                   {currentQuiz && (
