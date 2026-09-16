@@ -1,5 +1,313 @@
 # Next session brief
 
+## Packet 20 spec — `types-sizes-businesses`, Economics 3.3.1 (Opus, 16 September 2026)
+
+**Section:** `types-sizes-businesses`, Economics Unit 3 (WEC13), IAL topic **3.3.1 Types and sizes of
+businesses**, `audit/raw/econ_spec.txt:1245-1287`. **37 rows off the span — 6 types of business (1a) +
+21 size of businesses (2a-2g) + 10 business objectives (3a-3c) — of which 30 are LEAVES**, the other 7
+being the parent rows that head a bullet list (`1a`, `2a`, `2b`, `2d`, `2g`, `3a`, `3c`). 30 is the number
+`spec.coverage` measures against. 34 section opens. **21 open ledger items** (23 in the section, 2 closed
+by packet 0).
+
+Despite the *business* vocabulary this is an **Economics** section and the Economics ladder applies:
+Define 2 · Calculate 2/4 · Draw 4 · Explain 4 · Analyse 6 · Examine 8 · Discuss 14 · Evaluate 20.
+**There is no Assess and no 10-mark tariff in this subject.**
+
+### What the specification settled before a word was written
+
+**1. The entire "Types of Business Organisation" block is off-spec vocabulary — the fourth instance of
+the packet 13/16/17 rule.** Word-boundary counts over the whole Economics specification:
+
+| term | occurrences in `econ_spec.txt` |
+|---|---|
+| `sole trader` | **0** |
+| `limited liability` | **0** |
+| `shareholder` / `shareholders` | **0** |
+| `partnership` | 1 — "John Lewis Partnership", acknowledgements page (:2419) |
+| `plc` | 1 — "Pearson plc", acknowledgements page (:2407) |
+
+The spec's list at 1a is `private sector organisations · state-owned enterprises (public sector) ·
+for-profit and not-for-profit organisations · co-operatives · joint ventures` (:1250-1254). So the March
+block that spent two subsections, one misconception, three flashcards and the section's only Define
+practice on UK company law was teaching the UK GCE Business syllabus, while **four of the five bullets
+the specification actually lists were absent**. The block goes; the five bullets become Block 1.
+*Ownership* and *control* are still taught as ordinary English in 3b, because the divorce of ownership
+from control cannot be stated without them — but they are not presented as examinable terms.
+
+**2. `specGap-03`'s parenthetical is refuted in part.** `charit*` and `social enterprise` return **0**
+occurrences. The spec's words are "for-profit and not-for-profit organisations" and "co-operatives",
+and those are what is taught; a charity appears once as a plain-English illustration, never as a
+taxonomy to learn.
+
+**3. `topFix-05`'s marking clause is refused, in two halves.** "Describe levels-based marking for the
+10- and 20-mark items": Economics has **no 10-mark tariff** (`audit/raw/tariff-census.json`), so the live
+`Assess 10` is the Business ladder and is not re-tariffed but removed. And *describing what a marker does*
+is exactly what `MARK_CLAIM` bans (packet 16, thirteen instances) — `examMatters` says what the **command
+word requires**, which Appendix 6 states and which is therefore citable. The clause's other halves —
+Define = 2 marks, drop "Outline" — are built.
+
+**4. `topFix-01`/`structure-01`'s "add `diagramRef`" is obsolete.** Since packet 5 a diagram reaches a
+student only from a **block's `diagramId`, at that chapter's check-in** (`lib/learn-steps.js:44-55`);
+`diagramRef` is the legacy string pin and a subsection `diagramId` is never read. The finding's real
+complaint — 2 of 3 diagrams never rendered, the integration diagram landed on the wrong block, quiz[4..9]
+and the 20-mark Evaluate never reached a student — is answered by `diagramId`/`quizIndices`/`practiceIndices`
+on every block. `practiceIndices` resolve against the RAW array (`LearnModeTab.jsx:193-194`, packet 2).
+
+**5. `structure-05`'s premise is dead.** "2-per-step pairing is coherent, so the section is only 4 steps
+long" describes main's pairing model, which packet 5 removed. One subsection is one step. Its real
+complaint — the block-4 takeaway names MES, which the body never defines — disappears with block 4.
+
+### Four leaves the audit never mentions
+
+Rule 1 in the other direction: these are in the specification and in **no** ledger item.
+
+- **`ECON-3.3.1-1a-5` joint ventures** (:1254) — absent from the audit entirely.
+- **`ECON-3.3.1-2a` SMEs and large corporations** (:1255-1257) — the audit never asks how size is measured.
+- **`ECON-3.3.1-2f` impact of growth of firms on businesses, workers and consumers** (:1272-1273) — the
+  audit names the *demerger* impacts (`specGap-05`) and not the *growth* impacts.
+- **`ECON-3.3.1-3c` formulae for the three objectives** (:1284-1287) — `structure-02` suggests a fill-in
+  on them; no item requires them to be taught.
+
+### Scope boundary: economies of scale is 3.3.2
+
+`topFix-03` and `structure-04` are correct and the evidence is `econ_spec.txt:1320-1345` — the relationship
+between long-run cost curves and economies/diseconomies of scale, minimum efficient scale, internal vs
+external, and the sources of each are **3.3.2 sub-topic 3**, which belongs to packet 28
+(`revenue-costs-profits`). Only the demerger half of the March block 4 is on-spec for 3.3.1. The section's
+cost curves are therefore deliberately simple — constant marginal cost, no U-shaped AC, no MES — and the
+body says so, rather than teaching the shape of a cost curve a topic early.
+
+### Shape
+
+Six blocks in the specification's own order, 24 subsections, one subsection per skill. Block sizes
+**4 · 3 · 6 · 4 · 2 · 5** — uneven on purpose (`structure-03`'s real complaint was identical chapters).
+Business objectives move to the END, which is where the specification puts them and which fixes
+`structure-03` at the root: the divorce of ownership from control is now taught after the reader knows
+what a company and an owner are, instead of being invoked two blocks early.
+
+| # | Block | Subsections | Leaves |
+|---|---|---|---|
+| 1 | Types of Business | Private and Public Sector · For-Profit and Not-for-Profit · Co-operatives · Joint Ventures | 1a (6) |
+| 2 | The Size of Businesses | SMEs and Large Corporations · Why Some Firms Stay Small · Why Other Firms Grow | 2a, 2e (4) |
+| 3 | How Businesses Grow | Organic Growth · Mergers and Takeovers · Horizontal Integration · Vertical Integration · Conglomerate Integration · Advantages and Disadvantages of Each | 2b, 2c (8) |
+| 4 | Constraints on Growth and Its Impact | Size of Market and Access to Finance · Owner Objectives, Regulation and Bureaucracy · Impact of Growth on Businesses · Impact of Growth on Workers and Consumers | 2d, 2f (6) |
+| 5 | Demergers | Reasons for Demergers · The Impact of Demergers | 2g (3) |
+| 6 | Business Objectives | Profit Maximisation · Revenue Maximisation · Sales Volume Maximisation · Satisficing · The Divorce of Ownership from Control | 3a, 3b, 3c (10) |
+
+### One spine of arithmetic
+
+Packet 17's rule: where a section's arithmetic recurs, define it once and generate every surface from it.
+3a and 3c ask for three objectives and the **formula** for each, and all three are points on one firm's
+revenue and cost functions. The section carries one firm:
+
+    P = 60 − 2Q        MR = 60 − 4Q        MC = 20        TC = 20Q + 72
+
+Q in thousands of units a month, P in dollars, money in thousands of dollars.
+
+| objective | formula | Q | P | TR | profit |
+|---|---|---|---|---|---|
+| Profit maximisation | MC = MR | 10 | $40 | $400k | **$128k** |
+| Revenue maximisation | MR = 0 | 15 | $30 | **$450k** | $78k |
+| Sales volume maximisation | AR = AC | **18** | $24 | $432k | $0 |
+
+Every figure is exact, and the three teaching points fall out of it rather than being asserted: revenue
+peaks at a *larger* output than profit, sales volume maximisation is larger again and takes profit to
+zero, and revenue at the volume objective ($432k) is **lower** than at the revenue objective ($450k) —
+which is the misconception "revenue maximisation and sales maximisation are the same" answered with
+arithmetic instead of a warning. The objectives diagram is sampled from the same four functions and the
+runner re-derives every plotted point from the emitted SVG.
+
+### Diagrams
+
+Five, each pinned by `diagramId` to its block's check-in. Block 4 has none on purpose — constraints and
+impacts are an argument, and a drawing of them would be decoration (packet 17's B6 rule).
+
+1. **Types of business** (B1) — a grid: ownership (private / state-owned) against purpose (for-profit /
+   not-for-profit), with co-operatives and joint ventures placed on it. A diagram is the only surface in
+   the schema that can carry a grid (`schema.body-type`).
+2. **How size is measured** (B2) — the measures themselves (employees, turnover, capital employed, market
+   share), not a threshold table: the SME threshold is set per jurisdiction and the specification states
+   none, so stating one would be a locale claim.
+3. **The integration map** (B3) — one supply chain with the four directions drawn on it: backward and
+   forward vertical, horizontal at the same stage, conglomerate outside it.
+4. **Demerger against divestment** (B5) — before-and-after ownership, teaching the distinction the March
+   section got wrong (`accuracy-01`, closed by packet 0 in prose only).
+5. **The three objectives** (B6) — AR, MR, MC and AC with Q = 10, 15 and 18 marked, generated from the
+   functions above.
+
+### Ledger ids this packet closes (21)
+
+`topFix-01` `topFix-03` `topFix-04` `topFix-05` · `accuracy-02` · `quiz-01` · `structure-01` `structure-02`
+`structure-03` `structure-04` `structure-05` `structure-06` `structure-07` `structure-08` · `specGap-01`
+`specGap-02` `specGap-03` `specGap-04` `specGap-05` `specGap-06` `specGap-07`
+
+Three carry a refusal that must be stated in the claim rather than silently dropped, each split into
+clauses (packet 16's rule 5):
+
+- **`topFix-05`** — Define re-tariffed to 2 ✓ · "Outline" absent ✓ · Amazon example corrected ✓ ·
+  regulator references internationalised ✓ · **levels-based marking described ✗ refused** (`MARK_CLAIM`) ·
+  **10-mark item ✗ refused** (no such tariff in Economics).
+- **`topFix-01`** — `quizIndices` ✓ · `practiceIndices` ✓ · diagram pinned to the right block ✓ ·
+  20-mark Evaluate reachable ✓ · **`diagramRef` ✗ refused as obsolete**, satisfied by `diagramId`.
+- **`specGap-03`** — for-profit vs not-for-profit ✓ · co-operatives ✓ · **"charities, social enterprises"
+  ✗ refused as 0-occurrence vocabulary**, used as illustration only.
+
+### Acceptance checks a verifier can run without this conversation
+
+1. `node scripts/packet-20-types-sizes-businesses.mjs` exits 0: no pounds sterling, no "Outline", no
+   "Assess", no `sole trader`/`limited liability`/`plc`/`shareholder` **as taught terms**, no UK-only
+   institution, no uncited examiner claim, no `MARK_CLAIM`, no `FREQUENCY_CLAIM`, no `PAPER_PATTERN_CLAIM`,
+   every practice command and tariff in the **Economics** census, every block pinned to a quiz and a
+   practice item, every objectives figure re-derived from the four functions, ids unique.
+2. Coverage: `spec.coverage` reports **30 of 30** leaves of ECON-3.3.1 evidenced (100%), `spec.uncovered` 0 new.
+3. `npm run validate` exits 0 · `npm test` passes · `npm run build` exit 0 · `npm run contrast` clean.
+4. Every subsection at or under the 350-word teaching budget.
+5. **Verify B, 390×844, signed out, storage cleared, `?draft=1`:** open `types-sizes-businesses` → the
+   pre-test offers 3 questions → step through all 24 subsections → at each of the six check-ins confirm
+   the diagram that renders belongs to that chapter (B1 grid, B2 measures, B3 integration map, B4 **none**,
+   B5 demerger, B6 objectives), the quiz item is on that chapter's material, and the practice item is the
+   chapter's; confirm the 20-mark Evaluate is reachable; confirm no step shows an empty body and the step
+   counter never exceeds the total.
+
+### Hold
+
+**NOT PUBLISHABLE** until packets 5 and 7 are on `main` (DECISIONS 2026-09-15). Its recalls are written
+to the packet-7 contract and main's `ReorderRecall` reads `recall.shuffled`, which is how packet 15 took
+production down. Stage only; publish at the packet 5/7 checkpoint with
+`node scripts/packet-20-types-sizes-businesses.mjs --stage && node scripts/publish-section.mjs types-sizes-businesses --confirm`.
+
+## Packet 19 result — `planning-raising-finance`, Business 2.3.1 (Opus 5, 16 September 2026)
+
+**BUILT, STAGED, NOT PUBLISHED.** Section `planning-raising-finance`, Business Unit 2 (WBS12), IAL topic
+**2.3.1 Planning a business and raising finance**, `audit/raw/bus_spec.txt:844-877`, **23 leaves**
+(25 rows less the two parent rows 3a and 3b). 35 section opens. 28 open ledger items.
+
+**Before:** 5 blocks · 12 subsections · 6 reorder + 6 fill-in · 25 quiz · 5 practice · **0 diagrams** ·
+24 flashcards (of which **3 were exact duplicates**) · validator **33 BLOCK / 51 DEBT / 83% coverage**.
+**After:** 5 blocks · **24 subsections** · 24 recalls across all four types (5 reorder, 7 fill-in, 5 match,
+7 classify) · 33 quiz · 6 practice · **5 diagrams (8 views)** · 35 cards · 8 mistakes · 5 chains ·
+validator **0 BLOCK / 0 DEBT / 100% coverage (23 of 23)**, 84 baselined findings cleared, **0 new debt**.
+Publish with `node scripts/packet-19-planning-raising-finance.mjs --stage && node scripts/publish-section.mjs planning-raising-finance --confirm`.
+
+### Scope check against the spec text — eight claims are wrong
+
+Rule 1, run before building. The rate holds: 4 wrong in packet 14, 4 in 15, 6 in 16, 5 in 17, 6 in 18, **8 here.**
+
+1. **`specGap-05` IS NOT THIS SECTION'S LEAF, and it is the largest thing the audit got wrong.** It asks for
+   "interpretation of a simple cash-flow forecast" and "use and limitations of a cash-flow forecast". In IAL
+   those are **2.3.2 · 4** (`bus_spec.txt:907-908`), which the **`financial-planning`** section owns. `2.3.1`
+   spans `:844-877` and has no cash-flow leaf at all. Building it here would take another section's leaf —
+   the same trap packet 18's brief caught with price skimming. **Reassigned to packet 31**, with the full
+   reasoning in its ledger note. What the finding actually saw is closed instead: the untaught
+   "Define the term 'cash flow' (4 marks)" practice item is **deleted**.
+2. **`topFix-02` clause (a) goes with it.** Its other two clauses — the remaining external sources and
+   methods, and rewriting `choosing-appropriate-finance` to cover finance by liability type — are both built.
+   Claimed on that basis; clause (a) is refused on the spec, not left undone.
+3. **`quiz-01` is refuted: franchising IS in scope.** It calls q5 untaught Unit 1 content and asks for it to
+   be dropped. Franchising is IAL **2.3.1 · 4b** (`:872-873`) and was one of the four leaves with **no
+   coverage at all**. The topic stays and is now taught; what was actually wrong with q5 was its fourth
+   option, "Unlimited liability protection", which is not a thing.
+4. **`quiz-02` is refuted the same way:** social enterprise is 4b, not Unit 1. Taught, and the item kept.
+5. **`specGap-07` is refuted:** "Forms of Business" is not an out-of-spec Unit 1 recap to be labelled as one.
+   4a, 4b and 4c are three leaves of this topic. The block stays and grows from 2 subsections to 5.
+6. **`specGap-01` resolves to no change.** It calls the numbering "unsure" and cites UK GCE 2.1.1-2.1.4. The
+   app already carries `2.3.1`, which IS the IAL number and title. Nothing renumbered — the same shape as
+   packet 15's `structure-11`.
+7. **`structure-03` is refused in its prescribed form.** It asks for Forms of Business and Liability to come
+   BEFORE External Finance. The spec's order is Planning · Internal · External · Forms · Liability, and
+   "blocks in specification order" is the template rule. The dependency it names is real — March taught share
+   capital before Ltd and plc existed — and is fixed along the spec's own seam instead: **3b-2 teaches share
+   capital as a METHOD** (selling part of the ownership for permanent capital) and **5b answers which
+   businesses may use it**, which is where the spec puts that question.
+8. **`specGap-02`'s list is incomplete.** It names family and friends, peer-to-peer, business angels and
+   other businesses, and omits **banks** (3a-2) and **crowd funding** (3a-5). All six sources are built.
+
+**Confirmed correct, having read the lines:** `accuracy-01` (the Tesla narrative is invented — the DOE loan
+funded Fremont, not the Gigafactory, and Tesla had no retained profits until 2020; the example is removed
+rather than corrected), `practice-01` (Define is 2, and the term was untaught), `topFix-05` (Define 2, and
+**"Outline" is not an IAL Business command word at all**), `specGap-03` (leasing and grants genuinely
+uncovered — the oracle agrees), `specGap-04` (5b uncovered), `specGap-08` ("other businesses" IS listed, so
+it is built), `structure-01` (quizIndices were literally 0,1,2,3,4 in block order — the `pins.identity`
+tell), `structure-02` (practice 2, 3 and 4 reached no student), `structure-04`, `-05`, `-06`, `-07`, `-08`,
+`-09` (10 of 12 examples were UK firms), `-10`, `-11`, `topFix-01`, `topFix-03`, `topFix-04`.
+
+**Found while building, in no ledger item: three of the 24 flashcards were exact duplicates** — `82a0dfc2`,
+`426a5a7a` and `adcaa1ea` each appeared a second time with a `-2` suffix and identical text, so a student
+revising this section met the same three cards twice. The duplicates are dropped and the originals rewritten.
+
+### The design — one firm, one funding history
+
+Every leaf is a moment in one fictional firm's life (`scripts/_packet19-util.mjs`), and the runner re-derives
+every figure:
+
+    start-up $240,000 = owner's capital $60,000 + family and friends $30,000 + bank loan $90,000 + angel $60,000
+
+- **Ownership, exact at every stage.** The founder holds 120,000 shares throughout. The angel's $60,000 buys
+  30,000 new shares at $2.00 → 150,000 in issue → founder **80%**, angel **20%**. Flotation issues 150,000 at
+  $6.00, raising **$900,000** → 300,000 in issue → founder **40%**, angel **10%**, public **50%**.
+- **Retained profit is priced, not asserted.** $48,000 after tax − $12,000 dividends = **$36,000** retained,
+  whose opportunity cost at 5% is **$1,800** — which is how `topFix-04`'s "retained profit has no cost"
+  contradiction is resolved rather than argued away.
+- **Methods priced against each other:** loan $1,800 × 60 = **$108,000** ($18,000 interest); lease $900 × 48 =
+  **$43,200**, a **$3,200** premium over the $40,000 purchase; trade credit 60 days on $15,000 = **$30,000**.
+- **Five diagrams, pinned by `diagramId` on the BLOCK**, one per chapter, where the section had none. **Three
+  are grids** — debt against equity, the four forms, and finance by liability type — because a diagram is the
+  only surface in the schema that can carry a table (packet 17's finding, used three times here).
+- **Practice at IAL Business Unit 2 tariffs:** Define 2 · Calculate 4 · Explain 4 · Analyse 6 · Assess 10 ·
+  Evaluate 20. Every block carries at least one; all six reach a student.
+
+### Verify B — 390×844, signed out, `?draft=1`
+
+Walked on `remediation-dev`. **29 steps** (24 teach + 5 check-in), built from the staged draft through
+`lib/learn-steps.js`: every teach step carries its own recall, **every check-in resolves its diagram, at
+least one quiz item and at least one practice item**, no step renders empty. `document.scrollWidth` is 375 at
+375px on every step checked, including a classify step (5 of this section's classify items exceed 45
+characters, the length that triggered packet 15's `white-space: nowrap` overflow — that fix holds). The
+pre-test opt-in card offers "Three questions", matching the three unpinned items. The resume card reads
+"You left off at step 9 of 29" correctly. Section number renders as `2.3.1`.
+
+Two things worth carrying forward:
+
+- **The grid diagrams collided, and only the browser could see it.** Measured with
+  `getComputedTextLength()`: three cells overlapped their neighbours at the original 500-unit frame —
+  "Overdraft, leasing, trade credit" ran 23 units under its own "Yes". Nothing in the validator or the schema
+  knows how wide a string is. The grid frame is now 560 with columns at 26/260/440, and the runner carries a
+  pessimistic width estimator (0.65em, above the 0.642em the browser actually measured) that fails the build
+  on any overlap or frame overrun. **Any future packet drawing a table needs this check.**
+- **The `?draft=1` overview card is not draft-aware.** The section overview shows the LIVE step and practice
+  counts ("17 steps", "5 questions") while Learn Mode correctly shows 29. Dev-only preview surface, no student
+  impact, but it misleads a walkthrough. Also: `StudyApp`'s section fetch effect has deps
+  `[activeSection, user?.id, isPremium]` and no stale-response guard, so a draft preview races a non-draft
+  fetch — the same missing guard `revvylearn-resume-pointer-bug` describes for section switching.
+
+### Layer 6 — two planted canaries, six findings, all six real or planted
+
+Sonnet, adversarial, on a canary copy. **Both canaries caught** (a lease total of $42,300 against the
+arithmetic's $43,200; a social-enterprise definition overstated from "most of its surplus" to "none under any
+circumstances"). **Four real findings, all four fixed:**
+
+1. **The cap table did not reconcile.** A regional distributor was said to put $50,000 in "in exchange for
+   shares", but no share count anywhere carried that holding — founder 120,000 + angel 30,000 = 150,000, and
+   the post-flotation split came to exactly 100% with no room for a third shareholder. Fixed: the distributor
+   **lends** on long terms against a supply agreement, which "other businesses" (3a-6) covers equally and
+   which leaves the register exact.
+2. **"Matching Finance to the Circumstances" implied the angel closed a $90,000 gap** when the angel put in
+   $60,000, and never named the family's $30,000 although the paragraph concluded "the package has four
+   parts". Fixed by naming all four.
+3. **An internal ledger id leaked into text a student reads**: "...each was absent from this section before
+   **(specGap-03)**". The runner now bans every ledger-id shape from the content — the class, not the
+   instance, since nothing else in the pipeline looks for one.
+4. A chain flashcard said "a lender reads it for repayment and **a lender** or investor decides".
+
+### Gate
+
+`npm test` **141/141** · `npm run build` exit 0 · `npm run validate` exit 0 · `npm run contrast` clean ·
+`npm run quant-check` clean · section **0 BLOCK / 0 DEBT / 100%** · **27 ids claimed** (`specGap-05`
+reassigned to packet 31, not claimed). **Baseline NOT rewritten** — nothing was published, so the live row's
+84 baselined findings are still true of what students see; the baseline shrinks in the session that publishes.
+
+---
+
 ## Handoff — after packet 18 (written 16 September 2026)
 
 > **READ THIS FIRST — packets 19 AND 20 are already in flight in other sessions.** At the moment packet
