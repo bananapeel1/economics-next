@@ -131,7 +131,7 @@ const herdingHabitInertia = (() => {
       groups: [
         { name: 'Herding', items: ['Buying the brand of headphones everyone in class has', 'Joining a long queue because it is long'], why: 'The buyer is treating other people\'s behaviour as evidence about what is worth buying' },
         { name: 'Habitual behaviour', items: ['Picking up the same cereal every week without looking', 'Ordering the usual coffee without reading the board'], why: 'The choice is repeated rather than made; no comparison happens at all' },
-        { name: 'Inertia', items: ['Staying on an old phone tariff after seeing a cheaper one', 'Keeping an account whose fees have risen'], why: 'The better option is known and the buyer still does not move to it' },
+        { name: 'Inertia', items: ['Staying on an old phone tariff after seeing a cheaper one', 'Keeping an account after reading that a rival charges less'], why: 'The better option is known and the buyer still does not move to it' },
       ],
     }),
   };
@@ -147,14 +147,14 @@ const computationStatusFraming = (() => {
       { type: 'bullets', items: [
         '**Poor computational skills** — the comparison is arithmetic the buyer cannot do quickly. A price per pack against a price per hundred grams, or an interest rate on a loan, hides the better deal behind a calculation made at the shelf in seconds.',
         '**The need to feel valued** — the purchase carries a signal. A branded bag, a seat in a better section: part of what is bought is how the buyer is seen, so the cheaper identical good is not identical to them.',
-        '**Framing and bias** — the same offer described differently is judged differently. "90% fat free" outsells "10% fat", and a charge for a bag feels like a loss where a discount of the same size feels like a gain.',
+        '**Framing and bias** — the same offer described differently is judged differently. "90% fat free" outsells "10% fat", and a charge feels like a loss where a discount of the same size feels like a gain.',
       ] },
-      { type: 'paragraph', text: 'All three are systematic, which is what makes them economics rather than anecdote. They do not cancel out across a market: they push one way, so a seller can design around them.' },
-      { type: 'paragraph', text: 'The policy response follows from the mechanism. Where the problem is computation, making prices comparable helps: unit pricing on a shelf edge, one standard cost figure on a loan. Where it is framing, the wording of the offer has to change instead.' },
+      { type: 'paragraph', text: 'All three are systematic, which is what makes them economics rather than anecdote. They do not cancel out: they push one way, so a seller can design around them, and the policy response follows from the mechanism.' },
+      { type: 'paragraph', text: 'Where the problem is computation, making prices comparable helps: unit pricing on a shelf edge, one standard cost figure on a loan. Where it is framing, only the wording of the offer will do.' },
     ],
     realExample: { emoji: '🏷️', text: 'Shelf labels showing a price per unit of weight exist because the pack prices beside them cannot be compared in the seconds a shopper gives them. The information was always there; the arithmetic was the barrier.' },
     misconception: 'Students write that framing works because consumers are careless. It works on people paying attention: it changes which comparison comes to mind first. Write instead: framing changes the reference point a buyer judges an offer against, not how hard they think.',
-    examMatters: 'Six reasons are named and a question rarely wants all six. Two, each followed through to what the buyer does and what it lets a firm do, beats a list: a list with no mechanism is description rather than analysis.',
+    examMatters: 'Six reasons are named in the specification, and Examine (8 marks, WEC11 Appendix 6) asks for the influence of something, not an inventory of it. Two, each followed through to what the buyer does and what it lets a firm do, beats a list: a list with no mechanism is description rather than analysis.',
     recall: recall(sid, {
       type: 'match',
       prompt: 'Match each shopper situation to the reason it illustrates:',
@@ -253,7 +253,7 @@ const movementsAlong = (() => {
         '**Contraction** — the price rises and quantity demanded falls. The movement is up the curve to the left.',
       ] },
       { type: 'paragraph', text: `On the Tafari schedule, a fare cut from ${money(20)} to ${money(15)} takes quantity demanded from ${qAt(20)} tickets a day to ${qAt(15)}: an extension. A rise from ${money(10)} to ${money(12)} takes it from ${qAt(10)} to ${qAt(12)}: a contraction. In both cases the curve is the same curve.` },
-      { type: 'paragraph', text: 'Two effects drive the movement, and they run in parallel rather than one after the other. The **substitution effect**: the good is now cheaper relative to its alternatives, so buyers switch towards it. The **income effect**: at the lower price the same money buys more, so real purchasing power rises. Both point the same way, which is why the movement is reliable.' },
+      { type: 'paragraph', text: 'Why the movement is reliable is the previous subsection\'s answer. Marginal utility diminishes, so at a lower fare the next trip is worth taking to a buyer for whom it was not, and buyers who were priced out altogether can now afford a first one. Nothing about the curve has changed: the price has moved along it.' },
     ],
     realExample: { emoji: '⛽', text: 'When a fuel price falls at the pump, drivers make journeys they had been putting off. No new drivers appeared and nobody\'s tastes changed; the same buyers moved to a different point on the same curve.' },
     misconception: 'Students say demand rose when a price cut raised sales. A price cut cannot change demand, only quantity demanded. Write instead: a fall in the good\'s own price causes an extension in quantity demanded, a movement along the curve, not a shift of it.',
@@ -361,7 +361,7 @@ const tastesPopulationAdvertising = (() => {
     ],
     realExample: { emoji: '👶', text: 'Firms selling nappies and firms selling hearing aids read the same national statistics for opposite reasons: not the number of people, but how many are at each age.' },
     misconception: 'Students treat a growing population as the explanation for every rise in demand. Size and age distribution are different mechanisms and often point different ways. Write instead: say whether it is the number of people or the shape of the population that changed, and for which good.',
-    examMatters: 'A data question that supplies population figures usually supplies an age breakdown too, and the breakdown is the part most answers leave unused. Reading the shift from the age structure, and not just from the total, is what separates an answer using the source from one describing it.',
+    examMatters: 'Where an extract gives an age breakdown beside a population total, the breakdown is the half that decides the direction of the shift for a particular good. Reading the shift from the age structure, and not just from the total, is what separates an answer using the source from one describing it.',
     recall: recall(sid, {
       type: 'classify',
       prompt: 'Sort each change into the shift factor it is an example of:',
@@ -422,9 +422,9 @@ const pedFormula = (() => {
       { type: 'subheading', text: `Worked example: Tafari raises the fare from ${money(p1)} to ${money(p2)}` },
       { type: 'flow', steps: [
         { title: 'Read both quantities off the demand schedule', subtitle: `${qAt(p1)} tickets a day at ${money(p1)}, ${qAt(p2)} at ${money(p2)}` },
-        { title: 'Turn the change in quantity into a percentage', subtitle: `(${qAt(p2)} − ${qAt(p1)}) ÷ ${qAt(p1)} × 100 = ${pctQ(p1, p2)}%` },
-        { title: 'Turn the change in price into a percentage', subtitle: `(${p2} − ${p1}) ÷ ${p1} × 100 = ${pctP(p1, p2)}%` },
-        { title: 'Divide the first percentage by the second', subtitle: `${pctQ(p1, p2)} ÷ ${pctP(p1, p2)} = ${ped(p1, p2)}` },
+        { title: 'Convert both changes into percentages of their original values', subtitle: `quantity ${pctQ(p1, p2)}%, price ${pctP(p1, p2)}%` },
+        { title: 'Divide the quantity percentage by the price percentage', subtitle: `${pctQ(p1, p2)} ÷ ${pctP(p1, p2)} = ${ped(p1, p2)}` },
+        { title: 'Compare the size of the answer with 1', subtitle: `${Math.abs(ped(p1, p2))} is below 1, so demand is price inelastic here` },
       ], result: `PED = ${ped(p1, p2)} at this point on the curve`, resultType: 'neutral' },
       { type: 'paragraph', text: 'Two rules follow. **Always divide by the original value**, not the new one: dividing by the new quantity is the commonest way this goes wrong. And **always divide by the price change**, never the other way up — quantity goes on top because quantity is what responds.' },
       { type: 'paragraph', text: 'The sign is negative here and in nearly every case, because a price rise cuts quantity demanded. In words the sign is usually dropped and the **absolute value** is compared with 1, which is the next subsection.' },
@@ -437,15 +437,15 @@ const pedFormula = (() => {
       prompt: 'Put these steps in the order you would work through the PED calculation, from reading the data to stating the answer:',
       correctOrder: [
         'Read the original and new quantity demanded from the data',
-        'Express the change in quantity as a percentage of the original quantity',
-        'Do the same for the price, as a percentage of the original price',
-        'Divide the quantity percentage by the price percentage and keep the sign',
+        'Convert both the quantity change and the price change into percentages of their original values',
+        'Divide the quantity percentage by the price percentage, keeping the sign',
+        'Compare the size of the answer with 1 to say whether demand is elastic or inelastic',
       ],
       why: [
         'Nothing can be turned into a percentage until both raw values are known',
-        'The base has to be the original value, or the same change gives two answers',
-        'Both halves of the fraction must be percentages before they can be divided',
+        'Both halves of the fraction must be percentages, each measured against its own original value',
         'Quantity goes on top because quantity is what is responding to the price',
+        'The value is not an answer until it has been read against 1, which is the whole scale',
       ],
     }),
   };
@@ -707,7 +707,7 @@ const xedFormula = (() => {
     ],
     realExample: { emoji: '🖨️', text: 'Printer makers price the machine low and the cartridges high. The pricing only works because the two are strong complements: nobody buys the cartridge without the printer, so the cheap machine is what sells the expensive refill.' },
     misconception: 'Students put the two goods the wrong way up, or drop the sign of the price change. Write instead: quantity of the good you are studying on top, price of the other good underneath, and carry both signs through the division.',
-    examMatters: 'A Calculate (4 marks, WEC11 Appendix 6) on XED is marked on the signed answer and the statement that follows it. Say which good is A and which is B before substituting, because an extract naming two firms rarely says which of them the question is about.',
+    examMatters: 'A Calculate (4 marks, WEC11 Appendix 6) on XED is marked on the signed answer and the statement that follows it. Say which good is A and which is B before substituting: the question names the good whose demand is being measured, and the extract names both of them.',
     recall: recall(sid, {
       type: 'reorder',
       prompt: 'Put these stages in the order in which they happen, from the change in the other good\'s price to the conclusion about the two goods:',
@@ -1001,7 +1001,7 @@ export const NOTES = [
       ] },
       { title: 'MECHANISMS', items: [
         mech('The concept of diminishing marginal utility and its significance for the shape of the individual demand curve: each extra unit adds less satisfaction, so willingness to pay falls, so the extra unit is bought only at a lower price.'),
-        mech('<strong>Substitution effect</strong> and <strong>income effect</strong> run alongside each other, not in sequence: the good is cheaper relative to alternatives, and the same money now buys more.'),
+        mech('Name the movement, not just the direction: a price fall gives an <strong>extension</strong> in quantity demanded and a price rise gives a <strong>contraction</strong>. Both are one curve and two points on it.'),
         mech('Factors that may cause a shift in the demand curve: changes in the price of substitutes or complementary goods; changes in real income; changes in tastes; changes in size and age distribution of the population; advertising.'),
         link('A shift factor says why the curve moved and never how far. How far is elasticity, which is the rest of this section.'),
       ] },

@@ -128,7 +128,16 @@ for (const s of texts) for (const sent of s.split(/(?<=[.!?])\s+/)) if (MARK_CLA
  * WEC11 structure, and all of which a student in an international centre reads as fact.
  */
 const FREQUENCY_CLAIM = /\b(almost every paper|every paper|often open|commonly opens?|a common \d+-mark|appear frequently|come up (?:a lot|often)|tested relentlessly|always tested|love this topic|questions love)\b/i;
+/*
+ * Layer 6 found the same class one step further out, and the regex above did not reach it: a
+ * sentence can assert how papers are BUILT rather than how often they ask — "a question rarely
+ * wants all six", "a data question usually supplies an age breakdown too", "an extract naming two
+ * firms rarely says which the question is about". Each is a claim about a body of papers nobody
+ * cited. State what the command word requires, or state the technique unconditionally.
+ */
+const PAPER_PATTERN_CLAIM = /\b(a |the |an )?(question|questions|paper|papers|extract|extracts|stem|stems|source|sources)\b[^.!?]{0,40}\b(rarely|usually|typically|normally|often|generally|most of the time|nearly always|hardly ever|seldom)\b/i;
 for (const s of texts) for (const sent of s.split(/(?<=[.!?])\s+/)) if (FREQUENCY_CLAIM.test(sent)) problems.push(`claim about how often a paper asks something: "${sent.trim().slice(0, 90)}"`);
+for (const s of texts) for (const sent of s.split(/(?<=[.!?])\s+/)) if (PAPER_PATTERN_CLAIM.test(sent) && !/\bWEC1[1-4]\b|appendix\s*\d|mark scheme/i.test(sent)) problems.push(`uncited claim about how papers are built: "${sent.trim().slice(0, 90)}"`);
 
 // Practice command words and tariffs against the specification's own Appendix 6, for ECONOMICS.
 const census = JSON.parse(readFileSync('audit/raw/tariff-census.json', 'utf8')).rows.filter((r) => r.subject === 'economics');

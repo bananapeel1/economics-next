@@ -108,8 +108,8 @@ const Q = [
     'More close substitutes make switching easier, so quantity responds more strongly to a price change. Branding, addictiveness and a tiny share of spending all work the other way, by removing the alternative or the reason to look for one.',
     'consumer-behaviour-demand:quiz:752e3762'],
   [B3, 'Which of the following best explains why demand for salt is price inelastic?',
-    ['Salt is a durable product', 'Salt is heavily branded by its producers', 'Salt takes a very small share of a household\'s spending', 'Salt has many close substitutes'], 2,
-    'A good taking a tiny share of spending is barely noticed when its price rises, so quantity demanded hardly moves. Close substitutes would make demand elastic instead, and salt is neither branded in the way that matters here nor bought as a durable.',
+    ['Salt is a durable product that can be stored', 'Salt is heavily branded by its producers', 'Salt is a tiny share of a food budget', 'Salt has many close substitutes on the shelf'], 2,
+    'A good taking a tiny share of a budget is barely noticed when its price rises, so quantity demanded hardly moves. Close substitutes would make demand elastic instead, and salt is neither branded in the way that matters here nor stored against a price rise.',
     'consumer-behaviour-demand:quiz:d1f094f1'],
 
   /* ══ Block 4 — Total Revenue and Pricing Decisions ══ */
