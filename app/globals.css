@@ -7392,16 +7392,6 @@ a.auth-dropdown-item:visited {
 .lm-diagram-modal-pane svg, .lm-diagram-modal-pane img { width: min(80vw, 900px); max-width: none; height: auto; display: block; }
 .lm-diagram-modal-hint { display: none; font-size: 12px; color: var(--text-muted); text-align: center; padding: 8px; border-top: 1px solid var(--border-primary); }
 
-/* Depth signal (F083) */
-.sidebar-section-depth {
-  flex-shrink: 0; font-size: 12px; font-weight: 700; color: var(--accent-amber-light, #f59e0b);
-  background: rgba(245,158,11,0.12); padding: 1px 6px; border-radius: 8px; letter-spacing: 0.02em;
-}
-.content-header-depth {
-  font-size: 12px; font-weight: 600; color: var(--accent-amber-light, #f59e0b);
-  background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.28);
-  padding: 2px 8px; border-radius: 10px; white-space: nowrap;
-}
 
 /* ── Phones ─────────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {

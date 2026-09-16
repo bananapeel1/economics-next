@@ -415,15 +415,6 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   const [learnModeSection, setLearnModeSection] = useState(0);
   const [learnModeResuming, setLearnModeResuming] = useState(false);
 
-  // F083: which sections are below the Unit 1 template, so the sidebar and header can say so.
-  const [depth, setDepth] = useState(null);
-  useEffect(() => {
-    fetch('/api/sections/depth')
-      .then((res) => (res.ok ? res.json() : null))
-      .then((json) => { if (json?.depth) setDepth(json.depth); })
-      .catch(() => {});
-  }, []);
-
   // Learn Mode completions. F118: same reason — the sidebar ticks cannot be in the server markup.
   const [learnModeCompletions, setLearnModeCompletions] = useClientValue(
     () => {
@@ -976,7 +967,6 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
           learnModeCompletions={learnModeCompletions}
           onTabSelect={handleTabSelect}
           onHomeClick={() => setActiveTab('home')}
-          depth={depth}
         />
 
         <div className="main-content">
@@ -998,14 +988,6 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
                 )}
                 <span className="content-header-section-num">Section {currentSection?.number}</span>
                 <span className="content-header-unit-badge">Unit {currentUnit?.number}: {currentUnit?.title}</span>
-                {/* F083: an honest depth signal on the thin sections, until their content packets land. */}
-                {depth?.[activeSection]?.thin && (
-                  <span className="content-header-depth" title={`${depth[activeSection].chapters} chapter${depth[activeSection].chapters === 1 ? '' : 's'}, ${depth[activeSection].quiz} questions so far`}>
-                    More content coming &middot; {depth[activeSection].quiz < 20
-                      ? `${depth[activeSection].quiz} questions so far`
-                      : `${depth[activeSection].chapters} chapter${depth[activeSection].chapters === 1 ? '' : 's'} so far`}
-                  </span>
-                )}
                 <AuthButton />
               </div>
               <AnimatedTabBar
