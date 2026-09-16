@@ -5243,6 +5243,119 @@ a.auth-dropdown-item:visited {
   color: var(--accent-green);
 }
 
+/* Desktop layout.
+ *
+ * The shell was 640px on every screen, which reads well and used 42% of a
+ * 1512px display, leaving 433px of empty ground either side. The contents list
+ * becomes a sticky rail there instead of a block the reader scrolls past once,
+ * and tables and charts extend to the right — the left edge stays put, so the
+ * eye still tracks a single margin. Below 1100px nothing changes.
+ */
+.guide-layout { display: block; }
+.guide-main { min-width: 0; }
+
+@media (min-width: 1100px) {
+  .guide-shell { max-width: 1000px; }
+  .guide-layout {
+    display: grid;
+    grid-template-columns: 216px minmax(0, 640px);
+    gap: 64px;
+    align-items: start;
+  }
+  .guide-shell .resource-page-header,
+  .guide-shell .seo-hero-cta { max-width: 640px; margin-left: 280px; }
+  .guide-toc {
+    position: sticky;
+    top: 84px;
+    margin-bottom: 0;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+  }
+  .guide-toc ol { gap: 10px; }
+  .guide-toc li { font-size: 13.5px; line-height: 1.4; }
+  /* Wide things reach into the space the rail does not use. */
+  .guide-main .guide-table-wrap,
+  .guide-main .guide-marks { width: calc(100% + 150px); }
+}
+
+/* Headline numbers, pulled out of the prose that states them. */
+.guide-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+  gap: 1px;
+  background: var(--border-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 18px 0 0;
+}
+.guide-stat { background: var(--bg-card); padding: 14px 16px; }
+.guide-stat b {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--accent-green);
+  font-variant-numeric: tabular-nums;
+}
+.guide-stat span {
+  display: block;
+  font-size: 12.5px;
+  line-height: 1.35;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+}
+
+/* Mark distribution. */
+.guide-marks { margin: 20px 0 0; }
+.guide-marks-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-bottom: 14px;
+  font-size: 12.5px;
+  color: var(--text-tertiary);
+}
+.guide-marks-key { display: inline-flex; align-items: center; gap: 7px; }
+.guide-marks-swatch { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.guide-marks-row { display: grid; grid-template-columns: 1fr; gap: 5px; margin-bottom: 14px; }
+.guide-marks-name { font-size: 13px; color: var(--text-secondary); }
+.guide-marks-bar {
+  display: flex;
+  height: 30px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg-card);
+}
+.guide-marks-seg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  font-size: 12px;
+  font-weight: 600;
+  /* Dark ink on a bright bar fill — the same role --ns-on-brand plays on buttons. */
+  color: var(--ns-on-brand);
+  font-variant-numeric: tabular-nums;
+}
+.guide-marks-seg span { overflow: hidden; }
+.guide-marks .s1 { background: #34d399; }
+.guide-marks .s2 { background: #60a5fa; }
+.guide-marks .s3 { background: #c4b5fd; }
+.guide-marks .s4 { background: #fbbf24; }
+.guide-marks figcaption {
+  font-size: 12.5px;
+  color: var(--text-tertiary);
+  line-height: 1.5;
+  margin-top: 4px;
+}
+
+@media (max-width: 640px) {
+  .guide-marks-name { font-size: 12.5px; }
+  .guide-marks-bar { height: 26px; }
+  .guide-stat b { font-size: 21px; }
+}
+
 /* Lists and tables inside a guide section. The stepper already had `ul`/`li`
  * rules that nothing ever used; these scope them to the guide and add the
  * table, which has to scroll in its own box so the page never does. */
