@@ -1468,3 +1468,98 @@ migrating every existing numeric value in `audit/ledger.json` and every `Number(
 or have `assign` refuse a value whose string form does not round-trip (`String(Number(x)) !== x`), which is
 three lines and catches 13.10, 13.20 and any future trailing zero. The second is the cheap guard and the one
 to do first. A content packet should not be migrating the ledger's key type while four sessions write to it.
+
+## 2026-09-16 — packet 25: a bounds check that reads an anchor cannot see a string that runs off the frame
+
+**Rule: a diagram check must measure a text element's EXTENT against its frame, not its anchor.**
+Added to `scripts/packet-25-market-failure.mjs`; copy it forward with the canvas-bounds check it sits beside.
+
+Packet 23 added a canvas-bounds check after a marker was drawn at y = −42.86, off the top of a frame.
+It reads the coordinate attributes of every `<line>`, `<circle>`, `<text>` and `<rect>` and compares them
+with the viewBox. Packet 25 copied it, and it earned its place immediately: four drawn scenarios had
+captions running below a frame whose height was a constant rather than computed from the caption.
+
+**And then Verify B found what it could not see.** On the one diagram IAL 1.3.5 · 2d asks for by name,
+the label `welfare loss $50 a day` rendered on the phone as **"welfare loss $50 a d"**. Measured with
+`getComputedTextLength()` in the Browser pane: it runs to **x = 514.2 in a 500-unit frame**. Its anchor
+is at 396.7, comfortably inside — so the bounds check passed it, and so did the validator, and Verify A
+read the source. **SVG text neither wraps nor clips; an anchor inside the frame says nothing about where
+the string ends.**
+
+The instance is one label. The class is every string in every diagram this programme has drawn.
+
+**Three things came out of fixing the class rather than the instance:**
+- The new extent check, run against the section as it already stood, found **two more**: the Amara
+  welfare-gain label, and a table TITLE at font-size 13 — titles had never been measured by anything,
+  in any packet.
+- It also exposed a disagreement between two pieces of this packet's own code. `wrapLines` packed
+  captions at **0.65 em a character** while `estWidth` — the bound the guard and the computed table
+  columns use — measures at **0.7**, so 56 caption lines were laid out at a width the guard then
+  refused. The wrapper now calls `estWidth` itself. Two pieces of code that both decide what fits must
+  not be allowed to disagree; that is the same defect as a hand-picked table column, found the same way.
+- **The em bound is measured again and it moved.** Across 326 strings in 8 diagrams, the widest string
+  of four characters or more is **0.654 em a character** — against packet 24's measured 0.601 and packet
+  19's suggested bound of **0.65, which would have been optimistic here**. 0.7 stays, and it is now
+  known to be conservative rather than assumed to be.
+
+The check carries an A/B that plants the old label and requires it to fire, because a guard that has
+never been seen to fail is a claim about itself (packet 21).
+
+## 2026-09-16 — packet 25: a `?draft=1` page shows two versions of the same section at once
+
+**Verify B cannot walk a content packet's NOTES, and this is structural rather than a bug.**
+
+Walking `market-failure?draft=1` at 390×844, Learn Mode served this packet's eight new chapters while
+the same page's Notes still read "Types of Market Failure", "Allocative Inefficiency and Welfare Loss",
+"Information Failures" and "The Free Rider Problem" — the March content, on the same screen.
+
+The cause is packet 2.1's read path, working exactly as designed. `StudyApp` forwards `?draft=` to
+`GET /api/sections/[id]` (`components/StudyApp.jsx:682`), so the client-fetched half is the draft. The
+server-rendered half comes from `publicSectionPayload()`, which reads `data`. Notes are a FREE surface,
+so they ship in the page HTML — from live content.
+
+**What follows for every content packet from here on:**
+- A draft walk verifies Learn Mode, the diagrams, the practice and the quiz. It does **not** verify the
+  Notes tab, and anyone previewing a draft will see two versions of the section side by side.
+- A packet's notes must therefore be verified against the `draft` column instead. Packet 25 did this by
+  reading all eight tables back from `draft` directly and comparing them in full with `sameJson` —
+  which is also the check that covers the 36 quiz items and 5 mistakes the anonymous API slice does not
+  serve, and which `audit/scripts/check-staged-drafts.mjs` says in its own output it cannot see.
+- Nobody should read the discrepancy as a staging failure. It is the reason to look at what
+  `?draft=1` actually returns before concluding a stage did not land.
+
+## 2026-09-16 — packet 25: eight chapters is where the free quiz budget runs out
+
+**A section's block count decides how much of `freeQuizPayload()` is left for the pre-test, and at NINE
+blocks a chapter is served no check-in quiz at all.** Measured, by running the real function at each
+block count against this section's 36-item bank:
+
+| blocks | 4 | 5 | 6 | 7 | **8** | 9 | 10 |
+|---|---|---|---|---|---|---|---|
+| pre-test questions, signed out | 3 | 3 | 3 | 3 | **2** | 2 | 2 |
+| chapters with NO check-in quiz | 0 | 0 | 0 | 0 | **0** | **1** | **2** |
+
+`freeQuizPayload()` takes `PREVIEW_LIMITS.quiz` (2) for the Quiz tab, then one pin per block, then tops
+the pre-test up to `PRETEST_HEADROOM` (3) — all bounded by `FREE_QUIZ_MAX` (10). At eight blocks
+`2 + 8 = 10` exactly and the top-up gets nothing.
+
+**Packet 25 is the first section to reach it**, because it is the first with eight chapters — and it has
+eight because IAL 1.3.5 has six sub-topics and one of them (externalities) is fourteen leaves. Found by
+Verify B seeing "Two questions on what you might already know" on the phone where the packet's own
+walkthrough script asked for three, and by Verify A deriving why.
+
+**Nothing was changed.** `lib/pretest-pool.js` is explicit that a short pre-test is the intended
+degradation — *"two honest questions beat three where the third is spoiled"* — and all eight chapters
+still get their check-in question, so nothing is broken. `FREE_QUIZ_MAX` is a freemium boundary the
+founder set on 16 September and is his to move.
+
+**What IS in force:** the packet runner now prints the note at 8 blocks and **refuses to build at 9**,
+where a chapter would lose its check-in quiz silently. A section that needs nine chapters must either
+split or have the cap raised first. Carry that check forward — `government-intervention` (1.3.6, packet
+26) has six sub-topics too.
+
+**And a rule about our own acceptance checks.** The packet's spec block named `$240` in acceptance check
+8 and the runner's figure list did not contain it, so the check was written and never run — Verify A
+found the figure appearing exactly once in the bundle, as a wrong-answer distractor, while its cost-side
+twin appeared on eight surfaces. **An acceptance check that no code runs is a wish.** When a spec block
+names a figure or a property, the runner asserts it in the same commit.

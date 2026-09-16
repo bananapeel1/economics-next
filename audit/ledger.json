@@ -9811,10 +9811,10 @@
    "rank": 0,
    "text": "Fix quiz Q18 (key it to 'MSC and MSB/D from Qopt to Qm') and extras.chains[0]; delete duplicates Q11/Q12/Q19/Q9; then remap quizIndices and practiceIndices so each block's inline MCQ/practice is on-topic (currently blocks 4-7 get the wrong questions and the monopolist Q7 is unused).",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "audit/snapshots/packet-25-bundle__economics__market-failure.json tables.quiz: 36 unique questions (no dup of old Q9/11/12/19), each block's quizIndices point to a 4-item on-topic cluster (e.g. block3=[11-15] all Kumbe/Amara marginal-analysis items); extras.chains[0] now reads 'A welfare loss of 1/2 x $10 x 10 = $50/day -- which is NOT the $500 total external cost'",
    "note": null
   },
   {
@@ -9824,10 +9824,10 @@
    "rank": 1,
    "text": "Fix the Learn Mode diagram wiring: change block 7 diagramRef from 'Deadweight Loss' to something that matches (or retitle a diagram), add a diagramRef for the Positive Externality of Consumption diagram (spec-required, currently never shown), add 'Merit' ref for block 4; relabel SVG axes 'Costs, Benefits' and Qe->Qm.",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "curl draft=1: all 8 blocks have a diagramId that resolves 1:1 to diagrams[0..7]; diagram a163932d SVG text includes 'Costs, Benefits ($ a tonne)' axis label and 'Qm 50'/'Qopt 40' labels, replacing the old bare 'Price' axis and Qe/Qm mismatch",
    "note": null
   },
   {
@@ -9837,10 +9837,10 @@
    "rank": 2,
    "text": "Correct the four teaching errors: public goods 'zero quantity / complete failure' (contradicts own common_mistakes and spec 'may not be provided'); the lighthouse example (privately funded via light dues — the classic counterexample); measuring-welfare-loss para 1 (competitive equilibrium is not the optimum under an externality); 'examiners penalise MSC>MPC for a consumption externality'; plus practice[1] attributing free riding to non-rivalry and 'mandatory insurance' filed under moral hazard.",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "scripts/_packet25-content.mjs:859 subId('may-not-not-cannot') body: 'May not is not cannot... under-provision... not that it provides none'; lighthouse/Trinity House example removed entirely (0 hits in bundle, was scripts/_packet25-content.mjs:44 comment 'removed rather than corrected'); no 'penalise' language left in any of the 34 examMatters fields (grep 0 hits); practice[7] (draft view) correctly attributes free-riding to non-excludability, not non-rivalry",
    "note": null
   },
   {
@@ -9850,10 +9850,10 @@
    "rank": 3,
    "text": "Re-scope to WEC11: add short subsections on symmetric vs asymmetric information, private vs public vs quasi-public goods, and the social = private + external identity; move Market Power (Unit 3) and Moral Hazard/Adverse Selection (Unit 4) into an 'extension' block or out of the section; merge the three deadweight-loss subsections into one.",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "Verified independently against audit/raw/econ_spec.txt: 'moral hazard' is 5 occurrences (grep -oin) and is topic 1.3.5 item 5 at lines 781-785, so it correctly stays as its own block (block 7) rather than being cut; 'monopoly'/'monopolist' (4 hits) and 'allocative' (4 hits) are only in 3.3.3 at lines 1364-1431 (Unit 3) and are 0 in the built bundle; 'quasi-public'/'common resource' are 0 in econ_spec.txt so quasi-public goods was correctly refused, not added; deadweight-loss subsections replaced by 'welfare-loss-is-not-total-external-cost' matching spec 2d 'identification of welfare loss or gain areas' (deadweight=0 hits in bundle)",
    "note": null
   },
   {
@@ -9863,10 +9863,10 @@
    "rank": 4,
    "text": "Rebuild the recalls: stop copying the flow box verbatim (or show reorders only as 'spaced' on the next step); remove first-letter hints or accept synonyms (overconsumes/overproduces, more/better/superior, optimal/competitive); fix the five wrong-length hints; replace the two non-sequential reorders (what-is-market-failure, merit-goods) and the pseudo-procedure (measuring-welfare-loss) with classify tasks or a numeric welfare-loss calculation.",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "curl localhost:3001/api/sections/market-failure?draft=1 (re-checked twice, 21:2x and after re-stage at 21:5x): all 8 reorder recalls' correctOrder arrays are now genuine paraphrases of their subsection's flow box, not verbatim copies (e.g. sub:the-free-rider-problem flow 'The good is non-excludable' vs reorder 'Being non-excludable, the good cannot keep anybody out'); guarded by a canary at scripts/packet-25-market-failure.mjs:345-367 that fails the runner if any correctOrder item matches a flow title verbatim. NOTE: an earlier read in this same verification session (pre re-stage) caught this defect still live for all 8 subsections -- the fix was staged mid-verification; confirming against the current, re-fetched live draft only",
    "note": null
   },
   {
@@ -9875,10 +9875,10 @@
    "kind": "accuracy",
    "text": "Public Goods > characteristics-public-goods (body para 4) and block takeaway 'Private markets produce zero public goods — complete failure': Absolutist claim that the free market provides 'zero quantity' of public goods. The IAL spec wording is 'why public goods MAY NOT be provided by the private sector'. The section's own common_mistakes[2] ('Saying public goods cannot be provided by the market') says this exact claim is a mistake and that the issue is under-provision. Internal contradiction that a student will be marked down for repeating.",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "draft content sub:may-not-not-cannot body para 2: 'May not is not cannot... under-provision... not that it provides none' and closing para 'the private sector provides less than the socially optimal quantity, and may provide none -- not that it provides none'; block 5 takeaway 'The spec says MAY NOT be provided -- under-provision, not zero'; no 'zero public goods'/'complete failure' language anywhere in the bundle",
    "note": null
   },
   {
@@ -9887,10 +9887,10 @@
    "kind": "accuracy",
    "text": "Public Goods > characteristics-public-goods > realExample (UK lighthouse system): States lighthouses were 'historically funded by the government' and that Trinity House 'collects dues from ports rather than individual vessels'. Historically English lighthouses were largely privately built and financed by light dues levied on ships (Coase 1974 uses this as the canonical counterexample of private provision of a public good); today light dues are charged per ship tonnage on vessels calling at UK/Irish ports into the General Lighthouse Fund, not general taxation. The example undermines the point it is meant to make and is factually wrong.",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "grep -io 'lighthouse|trinity house|light dues' over the full draft bundle returns 0 hits -- the false realExample was deleted, not corrected in place (scripts/_packet25-content.mjs:43-44, 749 document the removal), so the factually-wrong claim cannot recur",
    "note": null
   },
   {
@@ -9899,10 +9899,10 @@
    "kind": "accuracy",
    "text": "Welfare Loss & Deadweight Loss > measuring-welfare-loss (body para 1): 'In a perfectly competitive market, total surplus is maximised at the equilibrium where supply meets demand. Any deviation from this point — whether through externalities, monopoly power, or government intervention — reduces total surplus.' With an externality the market equilibrium is NOT the surplus-maximising point; the externality is a property of that equilibrium, not a deviation from it, and moving away from it (a Pigouvian tax) raises welfare. This contradicts the whole Externalities block and the practice[3] model answer.",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "grep 'surplus is maximised' / 'any deviation from this point' over full bundle: 0 hits -- the 'measuring-welfare-loss' subsection no longer exists; its replacement (sub:welfare-loss-is-not-total-external-cost, scripts/_packet25-content.mjs:453) correctly states the market equilibrium is where MPB=MPC (both private curves) and the externality means that point is NOT the social optimum, never claiming the competitive equilibrium maximises total surplus under an externality",
    "note": null
   },
   {
@@ -9911,10 +9911,10 @@
    "kind": "accuracy",
    "text": "Externalities > negative-externalities-consumption > examMatters: 'Examiners penalise students who draw MSC above MPC for a consumption externality.' Edexcel/IAL mark schemes for demerit-good/cigarette questions routinely accept an external-cost (MSC > MPC) diagram; the IAL spec only requires diagrams for external costs of production and external benefits of consumption. Telling students they will be penalised for the diagram most mark schemes list is misleading about marking.",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "scanned all 34 examMatters fields in the draft bundle: none contain 'penalise' or any claim that MSC-above-MPC for a consumption externality is wrong; the old negative-externalities-consumption subsection and its examMatters field no longer exist in the rebuilt 8-block structure",
    "note": null
   },
   {
@@ -9935,10 +9935,10 @@
    "kind": "practice",
    "text": "p1: 'Explain two reasons why public goods would not be provided by the free market (6 marks)' is realistic in size, but the model answer is wrong on mechanism: it attributes the free-rider problem to non-RIVALRY ('Reason 2: Non-rivalry ... This leads to the free-rider problem'). Free riding is caused by non-excludability, as the content itself says (free-rider-problem body para 1). A student copying this scores less than the guidance claims. Also 'would not be provided' hard-codes the absolutist claim.",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "draft practice[7] (id market-failure:practice:053116dd), 'Explain why public goods may not be provided by the private sector': guidance explicitly keys free-riding to non-excludability and states 'Attributing free-riding to non-rivalry is wrong: non-rivalry means one person's use costs nobody else anything'; conclusion is 'provides less than the socially optimal quantity and may provide none at all', matching 'may not', not 'cannot'",
    "note": null
   },
   {
@@ -9947,10 +9947,10 @@
    "kind": "structure",
    "text": "quizIndices are sequential (block n -> quiz n) rather than topical, so Learn Mode's inline MCQ is off-topic for four blocks: 'Merit Goods & Demerit Goods' gets Q3 (free rider), 'Information Failures' gets Q4 (merit goods), 'Market Power' gets Q5 (negative production externality welfare-loss area), 'Welfare Loss & Deadweight Loss' gets Q6 (moral hazard). Q7 (monopolist) is never used. Suggested: Public Goods [2,3], Merit [4,8,14], Info Failures [6,15], Market Power [7], Welfare Loss [5,18-fixed,21].",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "audit/snapshots/packet-25-bundle...json tables.content[i].quizIndices per block are on-topic clusters, e.g. block1 'Why Markets Fail'->[3,4,5,6] all about sources/misallocation, block5 'Public Goods'->[21,20,22,23] all free-rider/private-vs-public, block7 'Moral Hazard'->[28-31] all moral-hazard items; verified each of the 8 clusters' question text matches its block's topic, none off-topic",
    "note": null
   },
   {
@@ -9959,10 +9959,10 @@
    "kind": "structure",
    "text": "practiceIndices are similarly misaligned for the last two blocks: 'Market Power' -> practice[3] (Evaluate taxation for negative production externalities), 'Welfare Loss' -> practice[4] (Outline information failure examples). No monopoly or welfare-loss practice question exists.",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "draft content practiceIndices per block: block3 (Marginal Analysis)->[2,3,4] are the two Kumbe Cement Calculates + the Draw, block4 (Externalities)->[5,6] are the transport Analyse + congestion, block5 (Public Goods)->[7] is the free-rider Explain, block7 (Moral Hazard)->[9] is the banking Discuss, block8 (Speculation)->[10] is the housing/shares Evaluate -- every pin matches its block's topic, no monopoly or stray welfare-loss practice item exists (monopoly content removed entirely)",
    "note": null
   },
   {
@@ -9971,10 +9971,10 @@
    "kind": "structure",
    "text": "Block 7 diagramRef 'Deadweight Loss' matches no diagram title (titles: 'Negative Externality of Production', 'Positive Externality of Consumption', 'Public Goods & the Free-Rider Problem', 'Merit & Demerit Goods'), so the InlineDiagram for the diagram-heaviest block renders nothing. Block 2 diagramRef 'Negative Externality' only matches diagrams[0], so the 'Positive Externality of Consumption' diagram (a spec-required diagram) is never shown in Learn Mode; block 4 (Merit/Demerit) has no diagramRef although a matching diagram exists.",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "draft bundle: exactly 8 diagrams, one per block, each block.diagramId resolves 1:1 to a diagrams[].id with a matching title ('Moral Hazard'->diagram 'Moral Hazard', etc); no orphan diagramRef and no diagram left unreachable",
    "note": null
   },
   {
@@ -9983,10 +9983,10 @@
    "kind": "structure",
    "text": "Every one of the 8 reorder recalls is the subsection's own flow box (steps + result) verbatim, and the 'immediate' recall renders at the bottom of the same step where that flow box is visible. It is a copy-from-screen task, not retrieval. All 8 fillins carry first-letters+underscore hints that make the blank one-option; 5 hints have the wrong length (allocative-inefficiency 'un____________', free-rider 'ex_________' and 'ta_______', demerit 'ex____________', diagrams-welfare-loss 'un____________' and 'co__________').",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "components/LearnModeTab.jsx:596-601 renders a subsection's own recall immediately below its body (showing='first') on the same 'teach' step, so a reorder must not repeat its own flow box verbatim; live re-fetch of localhost:3001/api/sections/market-failure?draft=1 shows all 8 reorder correctOrder arrays are paraphrases of their flow's titles, not verbatim (e.g. sub:external-cost-of-production flow 'Draw MPB, MPC and MSC...' vs reorder 'Making the cement imposes a cost on the households nearby...'); fillin hints are now descriptive clues, not first-letter+underscore (6 fillins checked, none truncate to wrong length since the format changed entirely)",
    "note": null
   },
   {
@@ -9995,10 +9995,10 @@
    "kind": "structure",
    "text": "Redundant coverage: 'allocative-inefficiency-deadweight-loss' (block 1) and 'measuring-welfare-loss' + 'diagrams-welfare-loss' (block 7) teach the same deadweight-loss idea three times, with block 1 introducing DWL before the student has seen a single externality diagram. Merge block 7 into block 2 (externality welfare loss) and cut block 1 to a definition + the three spec types.",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "block 1 ('Why Markets Fail') body paragraphs (sub:what-market-failure-means, the-five-sources, misallocation-not-collapse, which-source-is-it) contain no deadweight/welfare-loss teaching at all (grep 'deadweight' bundle-wide = 0); all welfare-loss/DWL teaching is consolidated into block 3 ('Marginal Analysis and the Welfare Areas') only, no duplication across blocks",
    "note": null
   },
   {
@@ -10007,10 +10007,10 @@
    "kind": "structure",
    "text": "Difficulty ramp/spec fit: blocks 4 (merit/demerit), 5b (moral hazard/adverse selection) and 6 (monopoly) are Unit 3/4 or non-Edexcel material yet sit in the middle of the Unit 1 section; a WEC11 student is told 'examiners expect you to draw a monopoly diagram', which is not examined in Unit 1. Meanwhile the spec's 1.3.4 'symmetric vs asymmetric information' and 1.3.3 'public vs private goods' get no subsection.",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "'merit good'/'demerit good'/'monopoly'/'monopolist'/'market power' all 0 hits in the built bundle (verified against econ_spec.txt: those terms only occur in Unit 3, lines 1364-1431); moral hazard correctly retained as block 7 (spec 1.3.5 item 5, econ_spec.txt:781-785); block 5 (sub:private-goods, sub:public-goods) now teaches private-vs-public goods and block 6 (sub:symmetric-and-asymmetric-information) teaches symmetric vs asymmetric information, closing both spec gaps the finding named",
    "note": null
   },
   {
@@ -10019,10 +10019,10 @@
    "kind": "structure",
    "text": "2-per-step pairing is coherent (neg prod + neg cons; pos prod + pos cons; merit + demerit; then info failure alone; asymmetric + moral hazard; monopoly alone; measuring + diagrams). No pairing breaks a concept.",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "The March section's 2-per-step subsection pairing this finding describes no longer exists -- the section was rebuilt into 8 spec-ordered blocks each with 3-5 of its own subsections. Nothing in the finding's observation (which flagged no defect) survives as a claim to check; moot per NEXT.md's framing, independently verified by inspecting the current block/subsection list",
    "note": null
   },
   {
@@ -10031,10 +10031,10 @@
    "kind": "structure",
    "text": "Takeaways mostly match their blocks; exceptions: Public Goods takeaway 'Private markets produce zero public goods — complete failure' contradicts common_mistakes[2]; Externalities takeaway 'Government uses taxes and subsidies to close the gap' is the only mention of intervention in a block that otherwise never teaches it.",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "block 5 (Public Goods) takeaway now reads 'The spec says MAY NOT be provided -- under-provision, not zero' (no absolutist claim); block 4 (Externalities) takeaway is 'Cost or benefit, making or using, then read the direction' with no stray government-intervention claim -- checked all 8 block takeaways against their block's own body content, no mismatches found",
    "note": null
   },
   {
@@ -10043,10 +10043,10 @@
    "kind": "structure",
    "text": "Misconceptions: most are genuine (public goods = government-provided; education is a public good; merit vs public; moral hazard vs adverse selection; DWL vs fall in consumer surplus; allocative vs productive inefficiency). Filler-ish: 'negative externalities only come from pollution', 'information failure only affects uneducated consumers', 'free riding = laziness', 'monopolies are always bad' (the last is Unit 3 evaluation, not a Unit 1 misconception).",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "section_common_mistakes (paid 'mistakes' table, 5 items) are all genuine and targeted: total-external-cost-vs-welfare-loss, positive-externality-triangle-mislabelled-as-loss, free-riding-attributed-to-non-rivalry, zero-public-goods claim, moral-hazard-as-dishonesty; grep for the filler-ish originals ('only come from pollution', 'only affects uneducated', 'monopolies are always bad') = 0 hits; 'laziness' appears once, in body text explicitly refuting it ('Free-riding is not laziness and not dishonesty'), not as a misconception entry",
    "note": null
   },
   {
@@ -10055,10 +10055,10 @@
    "kind": "structure",
    "text": "Pre-test gate draws 3 random MCQs from a 25-item bank that contains a wrongly keyed item (Q18), four near-duplicate pairs and two untaught topics (Q20, Q22); a student can be told they were wrong for a correct answer before the lesson even starts.",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "Confirmed on the finding's own specific claims only: lib/pretest-pool.js:pickPretestQuestions is deterministic (stable array-order slice, not random), and the wrongly-keyed Q18 defect is C-market-failure-quiz-01, already status=confirmed by packet 0 -- so neither claim this finding makes can recur. SEPARATE, NOT covered by this id: simulating pickPretestQuestions against the live served quiz array shows the pre-test now returns only 2 of the promised 3 questions for a signed-out student, because FREE_QUIZ_MAX=10 (lib/preview-limits.js) is exactly consumed by 2 preview + 8 one-per-block pins, leaving 0 headroom slots -- flagged separately as unclaimed-but-relevant, not asserted by this finding's text",
    "note": null
   },
   {
@@ -10067,10 +10067,10 @@
    "kind": "specGap",
    "text": "1.3.4(a) 'distinction between symmetric and asymmetric information' — symmetric information is never defined or contrasted; only asymmetric is taught.",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "draft sub:symmetric-and-asymmetric-information body: 'Symmetric information means both sides know the same things... Neither can take advantage of the other' -- both halves of the 1.3.4(a) distinction are now explicitly taught, not just asymmetric",
    "note": null
   },
   {
@@ -10079,10 +10079,10 @@
    "kind": "specGap",
    "text": "1.3.3(a) 'distinction between public goods and private goods' — private goods (rival, excludable) are never defined; quasi-public goods / common resources are not taught although quiz Q20 tests them.",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "draft sub:private-goods body explicitly defines private goods as rival+excludable, closing the spec gap; 'quasi-public'/'common resource' verified 0 hits in econ_spec.txt so teaching them would be out of scope -- correctly refused, and no quiz item among the 36 in the bundle tests quasi-public goods (grep 'quasi' = 0), so the quiz-Q20 half of the finding is also moot since Q20 no longer exists in this rebuilt bank",
    "note": null
   },
   {
@@ -10091,10 +10091,10 @@
    "kind": "specGap",
    "text": "1.3.2(a)/(b) explicit 'private cost + external cost = social cost' and 'private benefit + external benefit = social benefit' relationships are only in common_mistakes[0] and quiz Q16, never stated as a taught formula in a subsection body.",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "draft sub:private-external-and-social-costs body: 'Social cost is the two added together... the private cost of the 50th tonne is $35, the external cost is $10, and the social cost is therefore $45'; sub:private-external-and-social-benefits mirrors this for benefits ('the external benefit is $12, so the social benefit... is $72') -- both identities are now taught as worked formulas in the subsection body, not just in common_mistakes/quiz",
    "note": null
   },
   {
@@ -10103,10 +10103,10 @@
    "kind": "specGap",
    "text": "1.3.2(d) welfare GAIN from correcting a positive consumption externality (spec wording covers welfare loss and gain areas); content only ever calls the positive-externality triangle a 'welfare loss'.",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "draft sub:external-benefit-of-consumption body: 'It is not something being destroyed. It is $18 a week of net benefit that is there to be had and is not being taken... That is why 2d says welfare loss OR gain areas'; diagram a163932d scenario 3 SVG text includes 'An external benefit of consumption: the welfare gain' and 'welfare gain $18 a week' -- the positive-externality triangle is now explicitly taught and drawn as a GAIN, not a loss",
    "note": null
   },
   {
@@ -10115,11 +10115,11 @@
    "kind": "specGap",
    "text": "Unit 1 numbering: the app labels this '1.3.5 Market Failure'; in the 2018 IAL spec market failure is 1.3.1-1.3.4 (types, externalities, public goods, information gaps) — unsure of the app's mapping convention; worth checking that 1.3.1-1.3.4 are not double-covered elsewhere.",
    "packet": 25,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "The finding is wrong and the app is right. econ_spec.txt:727 reads '1.3.5 Market failure'; contextFor('market-failure') resolves the section to topic 1.3.5 with 35 leaves. '1.3.1-1.3.4' is UK GCE numbering, which does not exist in the IAL specification. The double-coverage check the item asks for was RUN rather than assumed: across all 23 economics sections no topic number is carried by more than one section, and 1.3.1-1.3.6 map one-to-one to introductory-concepts, consumer-behaviour-demand, supply, price-determination, market-failure and government-intervention. Nothing to fix."
   },
   {
    "id": "C-market-failure-specGap-06",
@@ -10127,10 +10127,10 @@
    "kind": "specGap",
    "text": "Not spec gaps but over-coverage worth flagging: merit/demerit goods (not Edexcel terminology in IAL Unit 1), monopoly as market failure (WEC13 Unit 3), moral hazard/adverse selection (WEC14 Unit 4 financial market failure).",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "Verified against econ_spec.txt independently: merit good/demerit good/market power = 0 hits anywhere in the spec, monopoly/allocative = 4 hits each but only in Unit 3 (3.3.3, lines 1364-1431) -- all four correctly removed from the built bundle (0 hits). moral hazard is the one item in this finding that is WRONG: it is 5 hits in econ_spec.txt and is topic 1.3.5 item 5 (lines 781-785), a genuine WEC11 sub-topic of this section, not WEC14 Unit 4 -- correctly kept and built out as block 7 rather than removed",
    "note": null
   },
   {
@@ -17002,10 +17002,10 @@
    "kind": "specThin",
    "text": "1.3.5 4c) How imperfect market information leads to misallocation in healthcare — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 25,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-25",
+   "verified_by": "packet-verifier (Verify A, packet 25) 2026-09-16",
+   "evidence": "draft sub:information-in-healthcare-and-insurance body: 'In healthcare the advantage is with the seller... Treatment may be taken that full knowledge would not have chosen, and treatment may be avoided that should have been taken' -- explicitly explains how imperfect information leads to misallocation in healthcare, with a mechanism a student could reproduce in an exam answer, closing the 1.3.5 4c) thin-coverage gap",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {

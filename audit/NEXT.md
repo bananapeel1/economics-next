@@ -1,80 +1,325 @@
 # Next session brief
 
-## Take packet 25 — `market-failure`, Economics 1.3.5 (Opus, NEW session)
+## Take packet 26 — `government-intervention`, Economics 1.3.6 (Opus, NEW session)
 
 **Check `audit/PROGRESS.md` for the live row before starting anything** — several sessions run in this
-worktree and "next" is whichever row still says `not started`. As of the end of packet 24, packets 14-24 are
-built and held; 25 (`market-failure`) is the next free content packet.
+worktree and "next" is whichever row still says `not started`. As of the end of packet 25, packets 14-25
+are built and held.
 
-**Section:** `market-failure`, Economics Unit 1 (WEC11), IAL topic **1.3.5 Market failure**,
-`audit/raw/econ_spec.txt:727-791`. **35 leaves** — three times packet 24's, and the largest content section
-since packet 21. **27 of 28 ledger items open.**
+**Section:** `government-intervention`, Economics Unit 1 (WEC11), IAL topic **1.3.6**,
+`audit/raw/econ_spec.txt:793-` (read the span; 1.3.5 ends at :791). **26 ledger items.**
 
-**Read first:** `PROGRESS.md`, `DECISIONS.md` (the last three entries are packet 24's and two of them change
-how you author), this file's packet 24 spec below, then `PROTOCOL.md`. Then
-`node audit/scripts/ledger.mjs packet 25 --open`.
+**Read first:** `PROGRESS.md`, `DECISIONS.md` (the last four entries are packet 25's and three of them
+change how you author), this file's packet 25 spec block below, then `PROTOCOL.md`. Then
+`node audit/scripts/ledger.mjs packet 26 --open`.
 
-**Start from `scripts/packet-24-*.mjs`**, not 23's — it is the most recent and carries four checks the
-earlier runners do not: the pin-ownership check, the canvas-bounds check, the length-aware table width
-guard, and the guided-opening check. Copy all four.
+**Start from `scripts/packet-25-*.mjs`**, not 24's — it carries five checks the earlier runners do not,
+and three of them exist because something got through:
 
-### The rule-2 pre-flight, already done for you — and 1.3.5 is a trap-rich span
+1. **The text-EXTENT check.** Packet 23's canvas-bounds check reads a `<text>` element's ANCHOR. Verify B
+   found a label running off the frame with its anchor comfortably inside. Copy the extent check AND its
+   A/B; run against packet 25 as it stood it found three, including a table TITLE.
+2. **The copy-from-screen check.** A reorder item may not be string-identical to a flow step in its own
+   subsection. `learn-steps.js:10` puts the recall below the teaching on the same step, so a verbatim
+   reorder is `structure-04` reproduced. Packet 25 did it 8 times out of 8 before this check existed.
+3. **The block-count guard.** Refuses at 9 blocks, where `freeQuizPayload()` runs out of `FREE_QUIZ_MAX`
+   and a chapter is served no check-in quiz. **1.3.6 has six sub-topics — check your block count early.**
+4. The widened ledger-id and previous-content bans (the bare `accuracy-01` form, and "**The** section
+   used to say", both of which the packet-24 versions missed).
+5. The computed table columns: `gridColumns()` derives each column from its widest cell and **throws**
+   when the table does not fit, rather than laying out a collision for a guard to find afterwards.
 
-Counts in `econ_spec.txt`: `market failure` **9** · `externalit` **3** · `public good` **4** · `moral hazard`
-**5** · `speculation` **3** · `asymmetric information` **2** · `imperfect market information` **2** ·
-`marginal analysis` **2** · `welfare loss` **1** · `socially optimal` **1** · `social benefit` **1** ·
-`private cost` **1**. All of that is this section's own vocabulary and 1.3.5 · 2d explicitly wants
-"the use of diagrams, using marginal analysis" and "identification of the welfare loss or gain areas" — so
-the welfare areas packet 24 refused DO belong here, drawn.
+### The rule-1 pre-flight you must do yourself
 
-**Ban list, each with its count:** `merit good` and `demerit good` (**0** each, and both are named
-`terms.off-spec` phrases) · `deadweight` (**0**) · `free rider` (**0** as two words — the spec says
-"the free-rider problem", hyphenated, at :733, so match the spec's own spelling) · `social cost` (**0** —
-the spec says "private costs, external costs and social costs" at 2b, so the PLURAL is the spec's form;
-check before you ban this one, it is a near miss rather than an absence) · `tragedy of the commons` (**0**).
-**Grep every central term before writing a word.** Seven packets have now been caught by this rule.
+Packet 25 found **8 of 28** claims wrong. Grep every central term of 1.3.6 before writing a word, and
+note that 1.3.6 is the section that legitimately owns several things packet 25 had to ban:
+`government failure` (`:824`), `property rights` (`:811`), and **maximum and minimum (guaranteed) prices**
+— the spec's own phrase, where `price floor` and `price ceiling` are **0** (packet 24's finding).
 
-### What packet 24 learned that packet 25 needs
+### What packet 25 learned that packet 26 needs
 
-1. **A finding that says "it depends" may be the finding being wrong.** Packet 24 taught that producer
-   surplus after a supply increase "depends on the curves" — the cautious-sounding answer, and false for the
-   parallel shift the section drew. A quiz item built on it had NO correct answer. Layer 6 found it by
-   recomputing; nothing in the runner could see it. **If your section says an outcome is ambiguous, derive it
-   across a range of parameters and prove the ambiguity is real.** Packet 24's runner now does this for the
-   claim it got wrong — copy the shape.
-2. **Read the staged draft back from the API, field by field, and read the PINS too.** Gate rule 5 already
-   says to diff the fields. Packet 24 found something the field diff alone would have missed: block 3 had
-   pinned one of the three PRE-TEST questions as its check-in item, because the helper that picks a block's
-   lead question searched the whole bank instead of the block's own pool. `pins.reuse` cannot see it (it only
-   checks across blocks) and the unpinned-position check cannot either. The runner now has a pin-ownership
-   check; copy it.
-3. **`practice.opening` is a new validator rule and it applies to you.** Guidance must be at least two
-   paragraphs and the first must give nothing away — it is printed above the answer box before the student
-   writes. See DECISIONS and `CONTENT-GATE.md` item 6. Your own gate is "0 new DEBT on my section", so this
-   is not optional.
-4. **Measure a table's text in the browser, not with a constant.** Packet 24 measured all 92 strings in its
-   two table diagrams with `getComputedTextLength()`: strings of four characters or more reach 0.601em, but a
-   ONE-character cell reaches 0.874em and a lone digit 0.685em. A flat 0.65em guard is optimistic for exactly
-   the cells most likely to be a lone figure. The runner's guard is now 0.9em below four characters and 0.7em
-   at or above.
-5. **`ledger.mjs assign 13.10` writes `13.1`.** Packet numbers are stored as Numbers. If you reassign
-   anything to a decimal packet, read the value back. See DECISIONS.
+- **An acceptance check that no code runs is a wish.** Packet 25's spec block named a figure in its
+  acceptance list and the runner never asserted it; Verify A found that figure taught nowhere and used
+  only as a distractor. When the spec block names a figure or a property, assert it in the same commit.
+- **Look at the screen.** Three of packet 25's four best findings were invisible to every code check:
+  a cut-off label, a copy-from-screen recall, and authoring commentary in a misconception card. Two came
+  from Layer 6 and one from walking the phone.
+- **Tell Layer 6 about the pre-test.** Its brief describes the eight tables and never says a quiz bank
+  has two consumers, so it reported the three unpinned items as unreachable. They are the pre-test pool
+  (`lib/pretest-pool.js:29`). Add a line to the brief.
+- **Verify A should read the staged draft, not the repository.** Packet 25's did, and twice caught itself
+  reading a draft mid-re-stage. Say so in the prompt.
 
-### Two things that are NOT packet 25's to fix
+**Exit criteria:** staged bundle at 0 BLOCK / 0 new DEBT / 100% of its leaves · every block pinned to a
+diagram, a quiz item and a practice item it owns · practice on the ECONOMICS ladder only (**no Assess,
+no 10-mark**) · every practice guidance two paragraphs with a scaffold first · Verify A clean · a 390×844
+walk · Layer 6 with two planted canaries · PROGRESS row · commit · push. **Do not publish**: the packet
+5/7 checkpoint still holds, and twelve sections now wait on it.
 
-- **The 160 practice items that print their mark scheme early.** `practice.opening` fires on them repo-wide.
-  Clearing the back catalogue is a founder decision with two options — a one-line change to `getPracticeMode`
-  that fixes all 160 at once, or an opening paragraph per item across ten packets, each needing a re-stage.
-  Both are in DECISIONS. **Fix your own section; leave the rest.**
-- **The `packet` key's type in `audit/ledger.json`.** The cheap guard — `assign` refusing a value whose
-  string form does not round-trip — is three lines and belongs to a code packet, not to you.
+## Packet 25 spec — `market-failure`, Economics 1.3.5 (Opus 5, 16 September 2026)
 
-**Exit criteria:** staged bundle at 0 BLOCK / 0 new DEBT / 100% of 35 leaves · every block pinned to a
-diagram, a quiz item and a practice item it owns · practice on the ECONOMICS ladder only (Define 2 ·
-Calculate 2/4 · Draw 4 · Explain 4 · Analyse 6 · Examine 8 · Discuss 14 · Evaluate 20, **no Assess, no
-10-mark**) · every practice guidance two paragraphs with a scaffold first · Verify A clean · a 390×844 walk ·
-Layer 6 with two planted canaries · PROGRESS row · commit · push. **Do not publish**: the packet 5/7
-checkpoint still holds, and eleven sections now wait on it.
+**Section** `market-failure` · economics · **WEC11** · `sections.number` = **1.3.5** · **35 leaves**, read from
+`contextFor('market-failure')` rather than from the brief. Spec span `audit/raw/econ_spec.txt:727-791`.
+Snapshot: `audit/snapshots/2026-09-16-pre-packet-25__economics__market-failure.json`.
+
+### The rule-1 pass: 8 of 28 claims are wrong, and three of them are the dangerous kind
+
+Every claim checked against `econ_spec.txt` before anything was built. The rate continues to rise:
+4 wrong in packet 14, 4 in 15, 6 in 16, 5 in 17, 6 in 18, 8 in 19, 5 in 24, **8 here**.
+
+| id | the claim | what the spec says |
+|---|---|---|
+| `specGap-05` | "in the 2018 IAL spec market failure is 1.3.1-1.3.4"; asks whether the app's `1.3.5` label is wrong | **The app is right and the finding is wrong.** Market failure is `1.3.5` at `econ_spec.txt:727`, and `contextFor` resolves the section to `1.3.5` with 35 leaves. 1.3.1-1.3.4 is UK GCE numbering — the trap the IAL-numbering note names. Nothing to fix; the "double-coverage" check it asks for is answered by the resolver. |
+| `specGap-06` | merit/demerit goods, monopoly AND **moral hazard** are over-coverage; moral hazard is "WEC14 Unit 4" | **Two right, one dangerous.** `merit good` **0**, `demerit good` **0**, `market power` **0**, `monopoly` 4 — all four Unit 3 (`:1424-1431`). But **`moral hazard` is 5 hits and is `1.3.5 · 5`, a sub-topic of THIS section with three leaves** (`:781-785`). Obeying would have deleted a requirement. `adverse selection` **is** 0, so that half stands. |
+| `topFix-04` | "move Market Power (Unit 3) and Moral Hazard/Adverse Selection (Unit 4) … out of the section" | Same error, same half-right. Market power out; **moral hazard stays and grows from one shared subsection to a block of its own.** |
+| `topFix-04` | "add … quasi-public goods" | `quasi-public` **0**, `common resource` **0**. 3a is exactly two lines: *private goods: rival and excludable* · *public goods: non-rival and non-excludable*. Refused. Quiz Q20, which tested quasi-public goods, is deleted rather than taught to. |
+| `specGap-02` | "quasi-public goods / common resources are not taught **although quiz Q20 tests them**" | The gap it names is real (private goods are never defined) but its remedy is out of scope. The finding reads a defect in the quiz as a gap in the teaching. |
+| `topFix-04` | "merge the three deadweight-loss subsections into one" | `deadweight` **0** in `econ_spec.txt` and a named `terms.off-spec` phrase. Not merged — **removed**, and replaced by what 2d actually asks for: *"identification of the welfare loss or gain areas"*. |
+| `structure-07` | "2-per-step pairing is coherent … No pairing breaks a concept." | An observation with nothing to fix, against a structure this packet replaces entirely. Same shape as packet 24's `structure-10`. |
+| `structure-10` | "Pre-test gate draws **3 random** MCQs" | Not random since F079: `PreTest.jsx` takes the first three items no block has reserved, in array order. The defect it names (a wrongly keyed Q18) is `quiz-01`, **already confirmed closed by packet 0**. |
+
+Two near misses that had to be checked rather than assumed, both the opposite way round:
+- **`social cost` greps 0 and is still the spec's own phrase.** `:739-740` reads "private costs, external costs and social / costs" — the phrase wraps the line. So does "social benefits" at `:736-737`. The plural is the spec's form and is *not* banned; the brief flagged this correctly.
+- **`information failure` greps 0**, and the March section has a block and a subsection of that name. The spec's words are **"imperfect market information"** (2) and **"information gaps"** (3). Banned; retaught in the spec's words.
+
+### Rule 2 — the vocabulary grep, before a word was written
+
+In scope, with counts: `market failure` 9 · `externalit` 3 · `public good` 4 · `private good` 2 · `moral hazard` 5 ·
+`speculation` 3 · `market bubble` 4 · `asymmetric information` 2 · `symmetric information` 2 ·
+`imperfect market information` 2 · `information gap` 3 · `marginal analysis` 2 · `welfare loss` 1 ·
+`socially optimal` 1 · `external cost` 4 · `external benefit` 4 · `free-rider` 2 (hyphenated) ·
+`non-rival` 1 · `non-excludable` 1 · `rival` 2 · `excludable` 2 · `social optimum` 1.
+
+Banned in the runner, each with its count: `merit good` 0 · `demerit good` 0 · `deadweight` 0 ·
+`free rider` 0 as two words · `tragedy of the commons` 0 · `quasi-public` 0 · `common resource` 0 ·
+`adverse selection` 0 · `market power` 0 · `monopoly`/`monopolist` (Unit 3, `:1424`) ·
+`allocativ*` (Unit 3, `:1364`) · `information failure` 0 · `spillover` 0 · `Pigouvian` 0 ·
+`internalise` 0 · `government failure` (1.3.6, `:824` — packet 26's) · `property rights` (1.3.6, `:811`) ·
+`herding` (1.3.2 · 1b, `:584` — packet 17's, already taught there) · `missing market` 0 · `boom and bust` 0.
+
+### What gets built
+
+**8 blocks in spec order, one per spec sub-topic** — the first section in the programme whose block
+list is the specification's own sub-topic list:
+
+| block | spec | leaves |
+|---|---|---|
+| 1 · Why Markets Fail | 1.3.5 · 1 | 1a, 1b-1…1b-5 (6) |
+| 2 · Private, External and Social | 1.3.5 · 2a-2c | 2a, 2b, 2c-1…2c-4 (6) |
+| 3 · Marginal Analysis and the Welfare Areas | 1.3.5 · 2d | 2d-1, 2d-2, 2d-3 (3) |
+| 4 · Externalities in Five Contexts | 1.3.5 · 2e | 2e-1…2e-5 (5) |
+| 5 · Public Goods and the Free-Rider Problem | 1.3.5 · 3 | 3a-1, 3a-2, 3b (3) |
+| 6 · Imperfect Market Information | 1.3.5 · 4 | 4a, 4b, 4c-1…4c-4 (6) |
+| 7 · Moral Hazard | 1.3.5 · 5 | 5a, 5b-1, 5b-2 (3) |
+| 8 · Speculation and Market Bubbles | 1.3.5 · 6 | 6a, 6b-1, 6b-2 (3) |
+
+**Sub-topic 6 does not exist in the March section at all** — `speculation` and `market bubble` are zero
+hits across every one of its surfaces, and it is a whole spec sub-topic. It is the largest single gap
+here and no ledger item names it.
+
+**One arithmetic spine, two markets, every figure generated from it** (packet 17's rule):
+
+- **Kumbe Cement**, an external cost of *production* (2d-2). MPB `P = 60 − 0.5Q` · MPC `P = 10 + 0.5Q` ·
+  external cost **$10 a tonne** → MSC `P = 20 + 0.5Q`. Market **Q = 50 at $35**; social optimum
+  **Q = 40 at $40**. **Welfare loss = ½ × $10 × 10 = $50 a day**, against a *total external cost* of
+  **$500 a day** — the two figures `quiz-01` and packet 0 turn on, ten times apart, in one market.
+- **Amara Skills**, an external benefit of *consumption* (2d-1). MPB `P = 100 − 2Q` · MSC = MPC
+  `P = 20 + 2Q` · external benefit **$12 a course** → MSB `P = 112 − 2Q`. Market **Q = 20 at $60**;
+  social optimum **Q = 23 at $66**. **Welfare gain = ½ × $12 × 3 = $18 a week**, against a total
+  external benefit of **$240** — `specGap-04`'s gain area, which the March section only ever called a loss.
+
+Both markets are fictional and given no country, as Zuri, Tafari, Yusra, Kavira and Sabaya were; the
+real examples carry the internationalisation. One currency: dollars.
+
+**8 diagrams, one per block, pinned by `diagramId`** — the March section had 4, one of which
+(`Positive Externality of Consumption`, a spec-required diagram) was never reachable and one of whose
+refs (`Deadweight Loss`) matched no title at all. Diagram 3 carries the two marginal-analysis views the
+specification names by name, with the loss and the gain shaded and measured.
+
+**~10 practice items, all eight Economics command words**, two Calculates and two Draws, on the
+Economics ladder only — Define 2 · Calculate 2/4 · Draw 4 · Explain 4 · Analyse 6 · Examine 8 ·
+Discuss 14 · Evaluate 20. No Assess, no Outline, no 10-mark: the March bank had an `Outline` item
+(`practice[4]`) and `practice.command` refuses it.
+
+**Every practice guidance is at least two paragraphs, scaffold first** (`practice.opening`,
+CONTENT-GATE item 6). The runner refuses a one-paragraph guidance, an opening that allocates marks and
+an opening containing `=`.
+
+### Ledger
+
+**Closing (26):** `topFix-01` `topFix-02` `topFix-03` `topFix-05` · `accuracy-01` `accuracy-02`
+`accuracy-03` `accuracy-04` · `practice-01` · `structure-01` `structure-02` `structure-03` `structure-04`
+`structure-05` `structure-06` `structure-08` `structure-09` `structure-10` · `specGap-01` `specGap-02`
+`specGap-03` `specGap-04` `specGap-06` · `specThin-01` · `topFix-04` · `structure-07`.
+
+`topFix-04`, `specGap-02`, `specGap-06`, `structure-07` and `structure-10` are claimed as **corrected
+rather than obeyed** and each carries its note above. `specGap-05` is claimed **wont-fix**: the app's
+numbering is correct and the finding is UK-GCE numbering.
+
+`quiz-01` is already `confirmed` (packet 0) and is not re-claimed.
+
+### Acceptance checks a verifier can run without this conversation
+
+1. `node scripts/packet-25-market-failure.mjs` exits 0 — no packet problems, no new BLOCK.
+2. `npm run build`, `npm test`, `npm run validate` all exit 0.
+3. `node audit/scripts/ledger.mjs unverified 25` exits 0.
+4. `grep -ricE 'merit good|demerit good|deadweight|monopol|allocativ|market power|adverse selection|quasi.public|free rider|information failure|spillover|tragedy of the commons'` over the staged bundle returns **0** (`free rider` unhyphenated only; `free-rider` is the spec's form and is expected).
+5. `curl -s "localhost:3001/api/sections/market-failure?draft=1"` carries **8 blocks**, every one with a
+   `diagramId` that resolves, `quizIndices` that are not consecutive in block order, and
+   `practiceIndices` non-empty — **checked field by field against the dumped bundle, not against the
+   module** (PROTOCOL gate step 5).
+6. Coverage: `spec.coverage` = **100%** of 35 leaves; `spec.uncovered` = 0 for this section.
+7. Every practice `guidance` splits to ≥2 paragraphs on `\n`, and paragraph one contains no
+   `(n marks)` and no `=`.
+8. Spine: welfare **loss** `$50` and welfare **gain** `$18` each appear in the body **and** in a
+   diagram SVG, and `$500` / `$240` (the totals) appear distinctly from them.
+
+### Verify A — finding check (Sonnet, fresh context, 155 tool calls)
+
+**26 of 26 claimed ids CONFIRMED on round 1, zero rejections**, and `unverified 25` reports
+*"gate clear: every claimed item is confirmed and no scope is left unclaimed"*. `specGap-05`'s
+**wont-fix** was independently re-verified against `econ_spec.txt:727` rather than taken on the note's
+word, and so were the spec greps behind every "corrected rather than obeyed" claim — moral hazard at
+1.3.5 · 5 (5 hits, :781-785, correctly kept), monopoly and allocative efficiency at :1364-1431 (Unit 3,
+correctly removed), quasi-public goods at 0 hits (correctly refused).
+
+Two things about how it verified are worth keeping:
+- **It checked the live staged draft, not the repository.** Twice it caught itself reading a draft the
+  builder was mid-way through re-staging, re-fetched, and refused to judge against stale data. That is
+  PROTOCOL gate step 5 being applied by the verifier rather than only by the builder.
+- **It confirmed `topFix-05`/`structure-04` only on the second look.** Its first pass found the
+  copy-from-screen defect still live across all 8 reorders and cited
+  `components/LearnModeTab.jsx:596-601` for why it matters; it confirmed only after the rewrite was
+  staged. A confirmation that would have been wrong an hour earlier is worth more than one that was
+  never at risk.
+
+**TWO DEFECTS IT FOUND THAT NO CLAIMED ID COVERS. Both real, both acted on.**
+
+**1. `$240` was never taught — it existed only as a wrong answer.** The total external benefit is the
+gain-side mirror of the `$500` total external cost, and the cost side teaches that distinction hard: a
+whole subsection, a mistake card, a chain, a diagram scenario, two quiz items — `$500` appears on
+**eight** surfaces. `$240` appeared **once in the entire bundle, as a distractor in one quiz item**. A
+distractor built from a figure the student has never been shown is not a distractor, it is a trick.
+Worse, **this packet's own acceptance check 8 named `$240` explicitly** and the runner's Layer 5 figure
+list did not contain it — *a check written into the spec block and never implemented*. The figure is now
+taught in the subsection and the notes, and the runner enforces it.
+
+**2. The pre-test serves 2 questions, not 3 — and this section is exactly where that starts.** Verify B
+saw it on screen ("Two questions on what you might already know") and Verify A found the mechanism.
+Measured against this bank by running `freeQuizPayload()` at each block count:
+
+| blocks | 4 | 5 | 6 | 7 | **8** | 9 | 10 |
+|---|---|---|---|---|---|---|---|
+| pre-test questions for a signed-out student | 3 | 3 | 3 | 3 | **2** | 2 | 2 |
+| chapters served NO check-in quiz | 0 | 0 | 0 | 0 | **0** | **1** | **2** |
+
+`freeQuizPayload()` spends `PREVIEW_LIMITS.quiz` (2) on the Quiz tab, then one pin per block, all
+bounded by `FREE_QUIZ_MAX` (10). At eight blocks `2 + 8 = 10` exactly, so `PRETEST_HEADROOM` has nothing
+left to spend. **This is not a defect in the packet** — `lib/pretest-pool.js` is explicit that a short
+pre-test is the intended degradation, and every one of the eight chapters still gets its check-in
+question. It is a ceiling nobody had reached before, and **the packet's own Verify B script asked for
+three, which the code cannot deliver at this size**. The script is corrected below. The runner now
+prints the note at 8 blocks and **refuses at 9**, where a chapter would silently lose its quiz.
+
+**For the founder, and it is a freemium call rather than a content one:** the free quiz budget is now
+fully spent by a section of this size. `FREE_QUIZ_MAX` was raised to 10 on 16 September with the
+reordering fix; eight-chapter sections consume all of it. Nothing was changed here — the cap is yours.
+
+### Layer 6 — adversarial review (Sonnet, on a copy, two canaries planted)
+
+**Both canaries caught, and ranked 1 and 2 of 7.** The planted defects were a quiz explanation whose
+arithmetic contradicted its own marked option (`½ × $10 × 10 = $100` over a key of `$50`) and a notes
+mechanism stating the welfare gain as `$24` where the body, both diagrams and the chain say `$18`. The
+report is therefore valid rather than voided, and its census is checkable: 34 subsections, 36 quiz, 11
+practice, 29 cards, 8 diagrams / 17 scenarios, 5 chains, 5 mistakes, 9 core derivations recomputed
+against 61 dollar-figures and 21 quantity-figures found by a full-corpus grep.
+
+**Five real findings. Four acted on, one rejected with evidence.**
+
+| # | severity | finding | what happened |
+|---|---|---|---|
+| 4 | HIGH | the `may-not-not-cannot` misconception opened *"**The section used to say** private markets produce a quantity of ZERO…"* — authoring commentary shipped as teaching | **Correct, and it is the fourth instance of a class this packet thought it had closed.** The runner already banned `the March section` and `this section used to`; the regex required the determiner "this", so "**The** section used to say" walked past it. Rewritten as a student-facing misconception, and the ban widened to the shape rather than the determiner. |
+| 5 | MEDIUM | the `external-cost-of-production` reorder had **two defensible orders**: "mark the market quantity" and "find the social optimum" are read independently off the same three curves, so a student who found the optimum first would be marked wrong | **Correct, and it is Layer 1a's second rule** — a second defensible reading means the item changes type or changes content. It is now the causal chain, where each stage really is caused by the one before. **And it exposed a bigger one — see below.** |
+| 6 | MEDIUM | the `may-not-not-cannot` classify separated its two groups by a modal verb alone ("may provide none at all" against "produce a quantity of zero"), testing wording nuance rather than economics | Correct. The groups are now separated by content: what the free-rider argument establishes, against what it does not reach. |
+| 7 | LOW | the Amara flow said "where MPB meets MSC" before the section establishes that MSC = MPC in that market | Correct. Now "MPB meets MPC", with "MPC is also MSC here" as the subtitle. |
+| 3 | HIGH | "three quiz items are in no block's `quizIndices` — **no student will ever see them**" | **Rejected, with evidence.** Those three ARE the pre-test. `lib/pretest-pool.js:29` filters out every question a block reserved and takes the first `PRETEST_MAX = 3`, so the unreserved pool IS the pre-test pool, and the runner leaves exactly three unpinned at the front of the array for that reason. **The fault is in the brief, not the reviewer**: the Layer 6 brief describes the eight tables and never mentions that a section's quiz bank has two consumers. Add the pre-test to the brief for packet 26. |
+
+**THE FINDING BEHIND FINDING 5, WHICH LAYER 6 SAW ONE INSTANCE OF AND THE PACKET THEN MEASURED.**
+`lib/learn-steps.js:10` puts a subsection's own recall **below its teaching on the same step**. So a
+reorder whose items are its flow box's step titles is a copy-from-screen task, not retrieval — which is
+`structure-04` word for word: *"the 'immediate' recall renders at the bottom of the same step where that
+flow box is visible."*
+
+Measured: **8 of this packet's 8 reorders were their own flow box, verbatim** — in the section claiming
+to close that finding. The mechanism is that `reorder.source` requires the items to come from a taught
+sequence, and the cheapest way to satisfy it is to copy one. It asks for PARAPHRASE and matches on
+shared distinctive words, so repetition was never necessary.
+
+All eight rewritten as paraphrase, and **the runner now refuses any reorder item that is string-identical
+to a flow step in its own subsection**, with an A/B that requires it to fire on a copy and stay quiet on
+a paraphrase. `reorder.source` still passes for all eight, which is the evidence that paraphrase
+satisfies the validator and the copy was never needed.
+
+### Verify B — the 390×844 walk (main session, 16 September 2026)
+
+Storage cleared, signed out, `?draft=1`, 390×844, walked all 42 steps.
+
+| # | what the script asked | what the screen did |
+|---|---|---|
+| 1 | pre-test shows 3 | **shows 2** — `PREVIEW_LIMITS.quiz` for a signed-out student. Known freemium boundary, not this packet: the offer reads "Two questions on what you might already know". A signed-in walk is still owed (see below). |
+| 2 | walk every step; the count never exceeds the total | **42 of 42, clean.** Header ran 1/42 → 42/42, chapters 1-8 in order, no "step n of fewer". |
+| 3 | chapter 3's check-in renders the marginal diagram, labelled welfare loss `$50` | **renders**, and the label read **"welfare loss $50 a d"** — cut off at the frame. Fixed; see the finding below. Axis reads "Costs, Benefits ($ a tonne)", MPB = MSB / MPC / MSC all labelled, `$40`, `$35`, `Qopt 40`, `Qm 50`, the triangle shaded, caption `½ × $10 × 10 = $50 a day`. |
+| 4 | chapter 8 exists and is about speculation and market bubbles | **CHAPTER 8 OF 8 · Speculation and Market Bubbles**, check-in renders its diagram. The March section ended at chapter 7 and never mentioned either. |
+| 5 | a guided practice opening is a scaffold with no figures, marks or answer | **clean.** Step 16 prints "The opening is given; write the rest" above: *"Three figures are wanted and each one depends on the one before… ask yourself what shape it is before reaching for any arithmetic."* No figure, no allocation, no answer; the mark scheme sits behind "See full guidance ▼". |
+| 6 | no table cell touching the cell beside it at 390px | **none.** Measured rather than eyeballed — see below. |
+| 7 | console clean | `POST /api/learn-mode/state → 401` (signed out, expected) and packet 1's `/api/events` beacons, one of which returned 500 out of ~250 fired by the script clicking Next 42 times. Nothing from the content. |
+
+**THE FINDING, AND IT IS THE ONE NO CODE CHECK COULD SEE.** The welfare-loss label on the one diagram
+the specification asks for by name ran off the right of its frame: `getComputedTextLength()` in the
+Browser pane put it at **x = 514.2 in a 500-unit frame**, and on the phone it read "welfare loss $50 a d".
+Packet 23's canvas-bounds check passed it, because **that check reads a text element's ANCHOR** — and an
+anchor inside the frame says nothing about where the string ends. SVG text neither wraps nor clips.
+
+Fixed three ways rather than one:
+1. The label is anchored at the right edge and drops "a day", which the caption already says.
+2. **The runner now measures a text element's EXTENT**, not its anchor, against the viewBox — with an
+   A/B that plants the old label and requires it to fire. Run against the section as it stood, the new
+   check found **two more of the same class the browser had not flagged**: the Amara welfare-gain label,
+   and a table TITLE at size 13 that nothing in the programme had ever measured.
+3. It also found that `wrapLines` packed captions at **0.65 em a character while the guard measures at
+   0.7**, so 56 caption lines were laid out at a width the guard refused. The wrapper now calls
+   `estWidth` itself, so a line cannot be laid out wider than the check will accept — the same fix as
+   the computed table columns, and found the same way.
+
+**Re-measured after the fix: 326 text elements across 8 diagrams and 17 scenarios, 0 overflowing.** The
+widest string measures **0.654 em a character** — which is above packet 24's measured 0.601 and above
+packet 19's 0.65 bound, so a 0.65 guard would have been optimistic here. 0.7 is conservative and stays.
+
+**What Verify B could NOT verify, stated plainly.**
+- **A `?draft=1` page shows two versions of the section at once.** Learn Mode reads the draft, but the
+  same page's server-rendered Notes come from `publicSectionPayload()`, which reads `data` — so the
+  Notes tab still showed the March content ("Allocative Inefficiency and Welfare Loss", "Information
+  Failures", "The Free Rider Problem") while Learn Mode showed this packet's. That is packet 2.1's read
+  path working as designed and it resolves at publish, but it means **no content packet's Notes can be
+  walked from a draft preview**. This section's notes were verified against the `draft` column instead.
+- **The signed-in and Pro walk.** Everything above is a signed-out student. The pre-test served 2 rather
+  than 3, and the Pro-only "Full model answer, marked to the IAL grid" panel was locked, so the practice
+  mark scheme was never rendered on screen — only read back from the API.
+
+### Verify B — the 390×844 walkthrough script
+
+Storage cleared, `?draft=1`, 390×844, Learn Mode on `market-failure`:
+
+1. Pre-test shows **2** questions for a signed-out student — not 3. At eight blocks `2 + 8 pins = FREE_QUIZ_MAX`, so `PRETEST_HEADROOM` has nothing to spend (Verify A's table above). Three is what a signed-in student gets. Neither may be a question a later chapter check-in asks again.
+2. Walk every step to the end. Record the step count the header shows and that it never exceeds the true total.
+3. **Chapter 3's check-in must render the marginal-analysis diagram** — the one the March section pinned to
+   nothing. Read the shaded area's label off the screen: it must say welfare loss and `$50`.
+4. **Chapter 8 must exist and must be about speculation and market bubbles.** The March section ends at
+   chapter 7 and never mentions either.
+5. On any guided practice step, the text above the answer box must be a **scaffold with no figures, no
+   mark allocations and no answer** — read it back verbatim.
+6. No table diagram may have a cell touching or overlapping the cell beside it at 390px.
+7. Console clean.
 
 ## Packet 24 spec — `price-determination`, Economics 1.3.4 (Opus 5, 16 September 2026) — DONE
 
