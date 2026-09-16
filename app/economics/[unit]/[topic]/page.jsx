@@ -1,4 +1,5 @@
 import { createAnonClient } from '@/lib/supabase-anon';
+import { publicSectionPayload } from '@/lib/preview-limits';
 import StudyApp from '@/components/StudyApp';
 
 export const revalidate = 3600;
@@ -84,28 +85,29 @@ export default async function EconomicsTopicPage({ params }) {
     supabase.from('sections').select('*').order('sort_order'),
   ]);
 
-  // Fetch section data for this topic
-  const [content, notes, diagrams, flashcards, quiz, mistakes, practice, extras] = await Promise.all([
+  /*
+   * V007. This page used to read all eight tables and hand the lot to StudyApp, so every quiz
+   * question with its `correctIndex`, every flashcard, every extras chain and the paid-only common
+   * mistakes sat in the HTML of a page that needs no account — behind a Quiz tab that sliced to two
+   * in the browser and a Quick Fire drill that did not. It reads the four FREE tables now; the paid
+   * half arrives from `GET /api/sections/[id]`, which is the only path that knows who is asking.
+   *
+   * The page carries `revalidate` and `generateStaticParams`, so one document is built and served
+   * to everyone: it may not hold anything that depends on entitlement, in either direction.
+   */
+  const [content, notes, diagrams, practice] = await Promise.all([
     supabase.from('section_content').select('data').eq('section_id', topic).single(),
     supabase.from('section_notes').select('data').eq('section_id', topic).single(),
     supabase.from('section_diagrams').select('data').eq('section_id', topic).single(),
-    supabase.from('section_flashcards').select('data').eq('section_id', topic).single(),
-    supabase.from('section_quiz').select('data').eq('section_id', topic).single(),
-    supabase.from('section_common_mistakes').select('data').eq('section_id', topic).single(),
     supabase.from('section_practice').select('data').eq('section_id', topic).single(),
-    supabase.from('section_extras').select('data').eq('section_id', topic).single(),
   ]);
 
-  const initialData = {
-    content: content.data?.data || [],
-    notes: notes.data?.data || [],
-    diagrams: diagrams.data?.data || [],
-    flashcards: flashcards.data?.data || [],
-    quiz: quiz.data?.data || [],
-    mistakes: mistakes.data?.data || [],
-    practice: practice.data?.data || [],
-    extras: extras.data?.data || { chains: [], evaluation: [] },
-  };
+  const initialData = publicSectionPayload({
+    content: content.data?.data,
+    notes: notes.data?.data,
+    diagrams: diagrams.data?.data,
+    practice: practice.data?.data,
+  });
 
   // Get section and unit info for SEO
   const section = (sections || []).find(s => s.id === topic);

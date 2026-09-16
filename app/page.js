@@ -1,4 +1,5 @@
 import { createAnonClient } from '@/lib/supabase-anon';
+import { publicSectionPayload } from '@/lib/preview-limits';
 import StudyApp from '@/components/StudyApp';
 
 export const metadata = {
@@ -53,29 +54,25 @@ export default async function HomePage({ searchParams }) {
     || (sections || []).find(s => defaultSectionIds.has(s.id))?.id
     || null;
 
-  // Fetch initial section data
+  // Fetch initial section data.
+  //
+  // V007: the free surfaces only. This page read the same four paid tables the topic pages did, with
+  // the same anon client, so the complete quiz bank of whichever section happened to open first was
+  // in the homepage's HTML. `StudyApp` fetches the paid half from the entitled API.
   let initialData = null;
   if (firstSectionId) {
-    const [content, notes, diagrams, flashcards, quiz, mistakes, practice, extras] = await Promise.all([
+    const [content, notes, diagrams, practice] = await Promise.all([
       supabase.from('section_content').select('data').eq('section_id', firstSectionId).single(),
       supabase.from('section_notes').select('data').eq('section_id', firstSectionId).single(),
       supabase.from('section_diagrams').select('data').eq('section_id', firstSectionId).single(),
-      supabase.from('section_flashcards').select('data').eq('section_id', firstSectionId).single(),
-      supabase.from('section_quiz').select('data').eq('section_id', firstSectionId).single(),
-      supabase.from('section_common_mistakes').select('data').eq('section_id', firstSectionId).single(),
       supabase.from('section_practice').select('data').eq('section_id', firstSectionId).single(),
-      supabase.from('section_extras').select('data').eq('section_id', firstSectionId).single(),
     ]);
-    initialData = {
-      content: content.data?.data || [],
-      notes: notes.data?.data || [],
-      diagrams: diagrams.data?.data || [],
-      flashcards: flashcards.data?.data || [],
-      quiz: quiz.data?.data || [],
-      mistakes: mistakes.data?.data || [],
-      practice: practice.data?.data || [],
-      extras: extras.data?.data || { chains: [], evaluation: [] },
-    };
+    initialData = publicSectionPayload({
+      content: content.data?.data,
+      notes: notes.data?.data,
+      diagrams: diagrams.data?.data,
+      practice: practice.data?.data,
+    });
   }
 
   return (

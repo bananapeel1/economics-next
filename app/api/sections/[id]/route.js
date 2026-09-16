@@ -3,7 +3,7 @@ import { createClient } from '@/lib/supabase/server';
 import { createServerClient } from '@/lib/supabase-server';
 import { hasPremiumAccess } from '@/lib/entitlements';
 import { getSubscriptionRow } from '@/lib/subscription-lookup';
-import { PREVIEW_LIMITS, freeQuizPayload } from '@/lib/preview-limits';
+import { sectionPayload } from '@/lib/preview-limits';
 
 /**
  * GET /api/sections/[id] — everything the section view renders, subject to entitlement.
@@ -69,47 +69,24 @@ export async function GET(request, { params }) {
 
   const payload = (r) => (wantDraft && r.data?.draft != null ? r.data.draft : r.data?.data);
   const arr = (r) => (Array.isArray(payload(r)) ? payload(r) : []);
-  const allQuiz = arr(quiz);
-  const allCards = arr(flashcards);
-  const rawExtras = payload(extras) || { chains: [], evaluation: [] };
-  const chains = Array.isArray(rawExtras.chains) ? rawExtras.chains : [];
-  const evaluation = Array.isArray(rawExtras.evaluation) ? rawExtras.evaluation : [];
 
-  const cap = (list, n) => (isPremium ? list : list.slice(0, n));
-
-  /* The quiz is not a flat slice: a block pins its question by array position, so slicing the array
-     repoints the pins. freeQuizPayload picks the questions the section needs and rewrites that
-     section's pins to match what is sent. Premium gets the bank and the pins as authored. */
-  const free = isPremium ? null : freeQuizPayload(allQuiz, arr(content));
-
-  return NextResponse.json({
-    // Free, unchanged, no account needed.
-    content: isPremium ? arr(content) : free.content,
+  /* V007. The slicing used to live here, which made this route the only door that could be trusted
+     — and the topic pages walked straight past it with the anon client. `sectionPayload` is that
+     same logic, lifted to `lib/preview-limits.js` so the pages and the homepage call it too. This
+     route is still the only caller that may pass `isPremium: true`, because it is the only one that
+     knows who is asking. */
+  const body = sectionPayload({
+    content: arr(content),
     notes: arr(notes),
     diagrams: arr(diagrams),
     practice: arr(practice),
+    quiz: arr(quiz),
+    flashcards: arr(flashcards),
+    mistakes: arr(mistakes),
+    extras: payload(extras) || { chains: [], evaluation: [] },
+  }, { isPremium });
 
-    // Preview then paywall. Sliced here, not in the browser.
-    quiz: isPremium ? arr(allQuiz) : free.quiz,
-    flashcards: cap(allCards, PREVIEW_LIMITS.flashcards),
-    extras: {
-      chains: cap(chains, PREVIEW_LIMITS.extrasChains),
-      evaluation: cap(evaluation, PREVIEW_LIMITS.extrasEvaluation),
-    },
-
-    // Paid, no preview.
-    mistakes: isPremium ? arr(mistakes) : [],
-
-    // True sizes, so paywall copy stays honest once the arrays are capped.
-    counts: {
-      quiz: allQuiz.length,
-      flashcards: allCards.length,
-      extrasChains: chains.length,
-      extrasEvaluation: evaluation.length,
-      mistakes: arr(mistakes).length,
-    },
-    isPremium,
-  }, {
+  return NextResponse.json(body, {
     headers: {
       // A draft preview must never be cached: it is re-staged repeatedly while a packet is built.
       'Cache-Control': wantDraft ? 'no-store' : 'private, max-age=300, stale-while-revalidate=3600',

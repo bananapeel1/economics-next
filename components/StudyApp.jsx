@@ -52,6 +52,22 @@ const allTabs = [
 ];
 
 /* ── Section Overview (Dashboard Launchpad) ── */
+/* F098: this screen was shown both while the fetch was in flight and when a section genuinely had
+   nothing, with the same words either way. "Content for this section is being prepared" told a
+   student on a slow school connection that the topic does not exist yet, when it was about to
+   arrive. Loading says it is loading, and the "being prepared" wording is reserved for a response
+   that really came back empty. V007 gave it a second caller — a paid tab whose data is still in
+   flight — so it is a component rather than a block inside one branch of renderTab. */
+function SectionLoading() {
+  return (
+    <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--text-muted)' }}>
+      <div style={{ fontSize: 48, marginBottom: 16 }}>&#128218;</div>
+      <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 8, color: 'var(--text-primary)' }}>Loading this section</div>
+      <div style={{ fontSize: 14 }}>One moment.</div>
+    </div>
+  );
+}
+
 function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPremium, user, savedProgress }) {
   // F031: the price on this bar must be the price checkout will charge.
   const { trialEligible } = useAuth();
@@ -61,8 +77,13 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
   const notesSections = sectionData?.notes?.length || 0;
   const diagramCount = sectionData?.diagrams?.length || 0;
   const practiceCount = sectionData?.practice?.length || 0;
-  const flashcardCount = sectionData?.flashcards?.length || 0;
-  const quizCount = sectionData?.quiz?.length || 0;
+  /* The two paid counts. `counts` carries the true size of each bank, which is the number this card
+     has always meant to show; `length` is whatever the student was entitled to be sent, so a free
+     student's Quiz card read "3 questions" the moment the API started capping (F086) and "25" on
+     the server-rendered first section, for the same section. Undefined means the paid half has not
+     arrived yet (V007), and an em dash says that without asserting a number. */
+  const flashcardCount = sectionData?.counts?.flashcards ?? (sectionData?.paidPending ? null : (sectionData?.flashcards?.length || 0));
+  const quizCount = sectionData?.counts?.quiz ?? (sectionData?.paidPending ? null : (sectionData?.quiz?.length || 0));
   const hasDiagrams = tabs.some(t => t.id === 'diagrams');
 
   const progress = user && savedProgress ? savedProgress[section?.id] : null;
@@ -197,13 +218,13 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
             {!isPremium && <span className="overview-card-lock"><Padlock size={12} /></span>}
             <span className="overview-card-icon"><CardsBlank size={24} /></span>
             <span className="overview-card-label">Flashcards</span>
-            <span className="overview-card-count">{flashcardCount} cards</span>
+            <span className="overview-card-count">{flashcardCount == null ? '\u2014' : `${flashcardCount} cards`}</span>
           </button>
           <button className={`overview-card ${!isPremium ? 'overview-card-premium' : ''}`} onClick={() => onTabSelect('quiz')}>
             {!isPremium && <span className="overview-card-lock"><Padlock size={12} /></span>}
             <span className="overview-card-icon"><QuizIcon size={24} /></span>
             <span className="overview-card-label">Quiz</span>
-            <span className="overview-card-count">{quizCount} questions</span>
+            <span className="overview-card-count">{quizCount == null ? '\u2014' : `${quizCount} questions`}</span>
           </button>
           <button className={`overview-card ${!isPremium ? 'overview-card-premium' : ''}`} onClick={() => onTabSelect('tutor')}>
             {!isPremium && <span className="overview-card-lock"><Padlock size={12} /></span>}
@@ -398,9 +419,14 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     if (!rawSectionData?.quiz?.length) return rawSectionData;
     return { ...rawSectionData, quiz: shuffleAllOptions(rawSectionData.quiz) };
   }, [rawSectionData]);
+  /* V007: the paid surfaces are withheld from the server-rendered page and arrive from the entitled
+     API. True means "not here yet", which is a different fact from "this section has none". */
+  const paidPending = !!sectionData?.paidPending;
   // Sections already fetched this visit (F092). Per-visit only: it is not a correctness cache,
   // and a reload gets fresh data, which is what we want while content is still being rewritten.
   const sectionCacheRef = useRef(new Map());
+  // In-flight requests, keyed the same way, so two overlapping effect runs share one round trip.
+  const inflightRef = useRef(new Map());
   const [isInitial, setIsInitial] = useState(dataMatchesSection);
   const [glossaryTerms, setGlossaryTerms] = useState([]);
   const [contentStepInfo, setContentStepInfo] = useState(null);
@@ -659,10 +685,24 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   useEffect(() => {
     // The first section arrives server-rendered as initialSectionData, read from the live `data`
     // column — so a draft preview has to refetch it rather than trust what the page shipped.
+    //
+    // V007: and since the page may not read a paid table, what it shipped is the free surfaces
+    // alone (`paidPending`). The quiz, the flashcards, the extras and the mistakes come from this
+    // route for everyone, free or Pro, because it is the only reader that knows who is asking.
+    // The shortcut survives for a caller that ships a complete payload; today none does.
     if (isInitial) {
       setIsInitial(false);
-      if (!draftFlag()) return;
+      if (!draftFlag() && !initialSectionData?.paidPending) return;
     }
+    /* V007 put this fetch on the first paint of every visit, where it used to run only on a section
+       change, so the two races it always had now happen to everyone.
+       - Two effect runs can overlap (entitlement settling, React's development double-invoke), and
+         the cache is only written when a response lands, so both would go to the network for the
+         same URL. One promise per key, shared.
+       - A response that arrives after the student has moved on must not be rendered. `cancelled`
+         is the guard the section fetch has never had; without it a slow payload for the section
+         they left overwrites the one they are reading. */
+    let cancelled = false;
     async function loadSection() {
       // F092: a student moving between sections and back refetched 152 KB every time. Keep what
       // has already been loaded this visit, and keep the previous section on screen while the new
@@ -675,17 +715,23 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       const cached = sectionCacheRef.current.get(cacheKey);
       if (cached) { setSectionData(cached); return; }
       try {
-        const res = await fetch(sectionUrl(activeSection));
-        if (res.ok) {
-          const data = await res.json();
-          sectionCacheRef.current.set(cacheKey, data);
-          setSectionData(data);
+        let pending = inflightRef.current.get(cacheKey);
+        if (!pending) {
+          pending = fetch(sectionUrl(activeSection))
+            .then((res) => (res.ok ? res.json() : null))
+            .finally(() => { inflightRef.current.delete(cacheKey); });
+          inflightRef.current.set(cacheKey, pending);
         }
+        const data = await pending;
+        if (!data) return;
+        sectionCacheRef.current.set(cacheKey, data);
+        if (!cancelled) setSectionData(data);
       } catch (e) {
         console.warn('Failed to load section data', e);
       }
     }
     loadSection();
+    return () => { cancelled = true; };
   }, [activeSection, user?.id, isPremium]);  // refetch when entitlement changes, not just the section
 
   // Reset scroll state when section or tab changes
@@ -857,6 +903,20 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   }
 
   function renderTab() {
+    /*
+     * V007. Order matters here, and it is the whole of the no-flash guarantee.
+     *
+     * The server-rendered page ships the free surfaces only, so on first paint every paid tab is
+     * withheld rather than empty. Answering that state with a paywall would show "Unlock Quiz" to a
+     * paying student for the length of one fetch — F035's bug, in a new place — and answering it
+     * with the arrays would draw "2 of 0" at everyone else. Neither is true yet. So the withheld
+     * state is answered first, with the loading card, and entitlement is only consulted once the
+     * data it governs has actually arrived.
+     */
+    if (paidPending && (PREMIUM_TABS.has(activeTab) || PREVIEW_TABS.has(activeTab))) {
+      return <SectionLoading />;
+    }
+
     // Show full paywall for premium-only tabs if not subscribed
     if (PREMIUM_TABS.has(activeTab) && !isPremium) {
       const tabLabel = tabs.find(t => t.id === activeTab)?.label || activeTab;
@@ -864,22 +924,14 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     }
 
     if (!sectionData) {
-      return (
-        <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--text-muted)' }}>
-          {/* F098: this screen was shown both while the fetch was in flight and when a section
-              genuinely had nothing, with the same words either way. "Content for this section is
-              being prepared" told a student on a slow school connection that the topic does not
-              exist yet, when it was about to arrive. Loading now says it is loading, and the
-              "being prepared" wording is reserved for a response that really came back empty. */}
-          <div style={{ fontSize: 48, marginBottom: 16 }}>&#128218;</div>
-          <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 8, color: 'var(--text-primary)' }}>Loading this section</div>
-          <div style={{ fontSize: 14 }}>One moment.</div>
-        </div>
-      );
+      return <SectionLoading />;
     }
 
-    // Preview tabs: everyone gets preview if not premium
-    const isPreview = PREVIEW_TABS.has(activeTab) && !isPremium;
+    /* Preview tabs: everyone gets the preview UI unless the payload they were SENT is the full one.
+       Read from the response rather than from the client's own belief about entitlement — the two
+       can disagree (an admin is entitled by `app_metadata.role`, which `useAuth` does not model),
+       and when they do it is the payload that decides what is on the screen. */
+    const isPreview = PREVIEW_TABS.has(activeTab) && !sectionData.isPremium;
 
     switch (activeTab) {
       case 'home': return <HomeScreen subjects={subjects} units={subjectUnits} sections={subjectSections} user={user} isPremium={isPremium} onNavigateToSection={(id) => navigateToSection(id, { tab: 'overview' })} onNavigateToTab={(tab) => setActiveTab(tab)} />;
