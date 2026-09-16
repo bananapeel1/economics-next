@@ -3666,6 +3666,15 @@ exit 0. It ships WITH packets 5 and 7 at the checkpoint (~26 Sep), not before.
 > all ten. **Use `git commit --only <paths> -F -` instead of `git add` + `git commit`.** It commits
 > exactly the paths you name whatever else is staged, and it cannot sweep up another session's work.
 > This packet's later commits use it.
+>
+> **`--only` refuses a path git has never seen, which is most of a content packet.** Reported by the
+> packet 21 session: `git commit --only scripts/_packet21-util.mjs` fails with *"pathspec … did not
+> match any file(s) known to git"* on every new file. `git add -N <paths>` (intent-to-add) first, then
+> `git commit --only <paths>`. **And `-N` is safe in a shared index, measured rather than assumed:**
+> with an intent-to-add entry of mine sitting in the index, another session's plain `git commit` took
+> only its own staged file and left mine staged and uncommitted. A full `git add` in that position is
+> what gets swept; `-N` is not.
+
 
 
 Appended, not rewritten: packets 21 and 22 own the top of this file.
