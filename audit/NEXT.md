@@ -1,109 +1,188 @@
 # Next session brief
 
-## Take packet 24 — `price-determination`, Economics 1.3.4 (Opus, NEW session)
+## Take packet 25 — `market-failure`, Economics 1.3.5 (Opus, NEW session)
 
-Packets 19, 20 and 21 are built and held. **22 (`marketing-mix-strategy`) and 23 (`supply`) are already
-claimed by other sessions** — check the ledger before assuming otherwise. The next free content packet is
-**24, `price-determination`**: Economics Unit 1 (WEC11), IAL topic **1.3.4**, `econ_spec.txt:692-722`,
-**11 leaves** (small — the smallest section in a while), 29 of 30 ledger items open, live at
-**13 BLOCK / 42 DEBT / 91%**.
+**Check `audit/PROGRESS.md` for the live row before starting anything** — several sessions run in this
+worktree and "next" is whichever row still says `not started`. As of the end of packet 24, packets 14-24 are
+built and held; 25 (`market-failure`) is the next free content packet.
 
-**Read first:** `PROGRESS.md`, `DECISIONS.md` (the last two entries are packet 21's and both apply to
-every content packet from here), this file's packet 21 spec below, then `PROTOCOL.md`.
-Then `node audit/scripts/ledger.mjs packet 24 --open`.
+**Section:** `market-failure`, Economics Unit 1 (WEC11), IAL topic **1.3.5 Market failure**,
+`audit/raw/econ_spec.txt:727-791`. **35 leaves** — three times packet 24's, and the largest content section
+since packet 21. **27 of 28 ledger items open.**
 
-**The rule-2 pre-flight is already done for you, and it comes out the opposite way to packet 18's.**
-Counts in `econ_spec.txt`: `equilibrium` **13** · `excess demand` **1** · `excess supply` **1** ·
-`consumer surplus` **1** · `producer surplus` **3** · `price mechanism` **3** · `rationing` **1** ·
-`signalling` **1** · `incidence` **2** · `indirect tax` **6**. Every one of those is this section's
-own vocabulary and it must be taught in those words. **Packet 18 banned `equilibrium` outright** because
-it is zero in `bus_spec.txt` — that ban was about the Business specification, not about the word.
-**A term banned in one subject can be required in the other; check the file for the subject you are in.**
-The ones to ban here are `deadweight loss` (**0**) and `market clearing` (**0**).
+**Read first:** `PROGRESS.md`, `DECISIONS.md` (the last three entries are packet 24's and two of them change
+how you author), this file's packet 24 spec below, then `PROTOCOL.md`. Then
+`node audit/scripts/ledger.mjs packet 25 --open`.
 
-**Start from `scripts/packet-21-*.mjs`**, not 18's — it is the most recent and carries two checks the
-earlier runners do not (see DECISIONS): the Appendix 6 gloss check, and a derived rather than typed
-arithmetic spine. Copy both.
+**Start from `scripts/packet-24-*.mjs`**, not 23's — it is the most recent and carries four checks the
+earlier runners do not: the pin-ownership check, the canvas-bounds check, the length-aware table width
+guard, and the guided-opening check. Copy all four.
 
-**Exit criteria:** staged bundle at 0 BLOCK / 0 new DEBT / 100% of 11 leaves · every block pinned to a
-diagram, a quiz item and a practice item · practice on the ECONOMICS ladder only (Define 2 · Calculate
-2/4 · Draw 4 · Explain 4 · Analyse 6 · Examine 8 · Discuss 14 · Evaluate 20, **no Assess, no 10-mark**) ·
-Verify A clean · a 390×844 walk · Layer 6 with two planted canaries · PROGRESS row · commit · push.
-**Do not publish**: the packet 5/7 checkpoint still holds, and six sections now wait on it.
+### The rule-2 pre-flight, already done for you — and 1.3.5 is a trap-rich span
 
-### What packet 21 learned that packet 24 needs
+Counts in `econ_spec.txt`: `market failure` **9** · `externalit` **3** · `public good` **4** · `moral hazard`
+**5** · `speculation` **3** · `asymmetric information` **2** · `imperfect market information` **2** ·
+`marginal analysis` **2** · `welfare loss` **1** · `socially optimal` **1** · `social benefit` **1** ·
+`private cost` **1**. All of that is this section's own vocabulary and 1.3.5 · 2d explicitly wants
+"the use of diagrams, using marginal analysis" and "identification of the welfare loss or gain areas" — so
+the welfare areas packet 24 refused DO belong here, drawn.
 
-1. **Derive, do not type, any figure a student could compute.** Packet 21 carried two price indices for
-   the same three years, both called "the price index", and a student deflating GDP with the wrong one
-   got a different answer from the section's own. Nominal GDP is now derived as real × index ÷ 100. See
-   DECISIONS, 16 Sep. 1.3.4 has the same exposure: a tax incidence split, a surplus area and an
-   equilibrium all fall out of one pair of schedules, and typing any of them twice will eventually type
-   them differently.
-2. **A gloss that cites Appendix 6 must say what Appendix 6 says.** Five `examMatters` and one practice
-   guidance described Examine as setting out a relationship; the appendix says it requires *evaluation*
-   and a brief assessment. **Packet 20 shipped the same error in the same command word on the same day.**
-   `claim.uncited` cannot see it — the sentence has a citation. The runner check is in
-   `packet-21-…mjs`; copy it. It caught four further glosses that cited the appendix and then said
-   nothing it says. **Packet 23 found the same class again in two shapes that check cannot see** — an
-   accurate citation with an extra requirement bolted on — and its `APPENDIX_CLAIMS` check is now in
-   packet 21's runner too, A/B'd. **Carry both.** Three packets shipped this error independently on one
-   day; the cause is reasoning about what a command word sounds like instead of reading its row.
-3. **`reorder.source` reads a flow step's `title` and nothing else** (`lib/content-validator.mjs:347`).
-   A flow whose words are in the `subtitle` is invisible to it, and the recall beside it counts as a
-   sequence the section never taught.
-4. **A diagram that declares `kind: "table"` must drop its checklist**, and a DRAWN diagram with a dense
-   table bolted beside it trips `diagram.table-kind` whatever you do. Decide per diagram: reference
-   table → declare it and drop the checklist; drawn diagram → move the table to the Notes.
-5. **Check the whole `audit/raw/tariff-census.json` row, not the command word you expect.** 1.3.4's
-   `Draw` (4 marks) is "construct an accurately labelled diagram" and this topic is the one that most
-   needs it — tax incidence, surplus areas and shifts are all drawn answers.
+**Ban list, each with its count:** `merit good` and `demerit good` (**0** each, and both are named
+`terms.off-spec` phrases) · `deadweight` (**0**) · `free rider` (**0** as two words — the spec says
+"the free-rider problem", hyphenated, at :733, so match the spec's own spelling) · `social cost` (**0** —
+the spec says "private costs, external costs and social costs" at 2b, so the PLURAL is the spec's form;
+check before you ban this one, it is a near miss rather than an absence) · `tragedy of the commons` (**0**).
+**Grep every central term before writing a word.** Seven packets have now been caught by this rule.
 
-### Two things that are NOT packet 24's to fix
+### What packet 24 learned that packet 25 needs
 
-- **`FREE_QUIZ_MAX = 10` now binds — and the number is not the fix.** Packet 21's section has ten
-  chapters, and `freeQuizPayload()` spends 2 on the Quiz tab *before* taking one pin per chapter
-  (`lib/preview-limits.js:65-66`), so **chapters 9 and 10 show a signed-out student no quiz**. A Pro
-  student gets all 43 and every pin resolves. Packet 20 escalated the adjacent problem (the pre-test
-  padding its pool from reserved items). Measured, not argued: run `sectionPayload()` over a staged
-  bundle with `isPremium` both ways.
+1. **A finding that says "it depends" may be the finding being wrong.** Packet 24 taught that producer
+   surplus after a supply increase "depends on the curves" — the cautious-sounding answer, and false for the
+   parallel shift the section drew. A quiz item built on it had NO correct answer. Layer 6 found it by
+   recomputing; nothing in the runner could see it. **If your section says an outcome is ambiguous, derive it
+   across a range of parameters and prove the ambiguity is real.** Packet 24's runner now does this for the
+   claim it got wrong — copy the shape.
+2. **Read the staged draft back from the API, field by field, and read the PINS too.** Gate rule 5 already
+   says to diff the fields. Packet 24 found something the field diff alone would have missed: block 3 had
+   pinned one of the three PRE-TEST questions as its check-in item, because the helper that picks a block's
+   lead question searched the whole bank instead of the block's own pool. `pins.reuse` cannot see it (it only
+   checks across blocks) and the unpinned-position check cannot either. The runner now has a pin-ownership
+   check; copy it.
+3. **`practice.opening` is a new validator rule and it applies to you.** Guidance must be at least two
+   paragraphs and the first must give nothing away — it is printed above the answer box before the student
+   writes. See DECISIONS and `CONTENT-GATE.md` item 6. Your own gate is "0 new DEBT on my section", so this
+   is not optional.
+4. **Measure a table's text in the browser, not with a constant.** Packet 24 measured all 92 strings in its
+   two table diagrams with `getComputedTextLength()`: strings of four characters or more reach 0.601em, but a
+   ONE-character cell reaches 0.874em and a lone digit 0.685em. A flat 0.65em guard is optimistic for exactly
+   the cells most likely to be a lone figure. The runner's guard is now 0.9em below four characters and 0.7em
+   at or above.
+5. **`ledger.mjs assign 13.10` writes `13.1`.** Packet numbers are stored as Numbers. If you reassign
+   anything to a decimal packet, read the value back. See DECISIONS.
 
-  **The obvious answer — raise the cap to 12 — is not the best one, and this is measured too.** The two
-  items spent on the tab before any pin are a design choice, not a constraint (the point is packet 2.1's
-  session's). Take one pin per chapter FIRST and let the tab render the first two of whatever is already
-  in the payload, and on packet 21's own bundle:
+### Two things that are NOT packet 25's to fix
 
-  | | items sent | chapters with a quiz | tab shows | pins resolve |
-  |---|---|---|---|---|
-  | shipping: tab first | 10 | **8 of 10** | 2 | yes |
-  | pins first, tab reuses | 10 | **10 of 10** | 2 | yes |
+- **The 160 practice items that print their mark scheme early.** `practice.opening` fires on them repo-wide.
+  Clearing the back catalogue is a founder decision with two options — a one-line change to `getPracticeMode`
+  that fixes all 160 at once, or an opening paragraph per item across ten packets, each needing a re-stage.
+  Both are in DECISIONS. **Fix your own section; leave the rest.**
+- **The `packet` key's type in `audit/ledger.json`.** The cheap guard — `assign` refusing a value whose
+  string form does not round-trip — is three lines and belongs to a code packet, not to you.
 
-  Same cap, same number of items exposed, two chapters bought back for nothing. The one trade is which
-  overlap the tab's preview has: today it duplicates the pre-test, afterwards it would duplicate a
-  check-in. Packet 20 has already escalated that the pre-test overlaps chapter 1's check-in, so this
-  changes which duplication exists rather than whether one does.
+**Exit criteria:** staged bundle at 0 BLOCK / 0 new DEBT / 100% of 35 leaves · every block pinned to a
+diagram, a quiz item and a practice item it owns · practice on the ECONOMICS ladder only (Define 2 ·
+Calculate 2/4 · Draw 4 · Explain 4 · Analyse 6 · Examine 8 · Discuss 14 · Evaluate 20, **no Assess, no
+10-mark**) · every practice guidance two paragraphs with a scaffold first · Verify A clean · a 390×844 walk ·
+Layer 6 with two planted canaries · PROGRESS row · commit · push. **Do not publish**: the packet 5/7
+checkpoint still holds, and eleven sections now wait on it.
 
-  **The two are independent, which changes what kind of question this is.** The reorder is a strictly
-  better default at any cap; the cap is a boundary decision. Ronald can take the reorder now and leave
-  the number alone. It is also cheap and contained: since packet 2.1, `freeQuizPayload` has exactly ONE
-  production caller — `sectionPayload` at `lib/preview-limits.js:142` — and `publicSectionPayload` never
-  touches it, so the change is one function, one caller and `lib/preview-limits.test.mjs`, which is the
-  only place the ordering can be pinned because nothing downstream can see it. **Put both options to the
-  founder, not just the number.** Still his call; still nothing a content packet may change.
+## Packet 24 spec — `price-determination`, Economics 1.3.4 (Opus 5, 16 September 2026) — DONE
 
-  **And the lesson generalises past the quiz, where nobody has looked yet.** Twice now a slicing question
-  has looked like a number and was not: V005 (a prefix slice cannot serve index-based pins, so the pins
-  had to be remapped) and this one. `flashcards`, `extras.chains` and `extras.evaluation` are all still
-  **flat prefix slices** in `sectionPayload` (`cap(items, n)`, lines 27-30) and none has been measured the
-  way the quiz now has. The question to ask of each is not "is n big enough" but "does a prefix of this
-  list give a free student a coherent sample of the section" — for chains, which are ordered by chapter,
-  a prefix almost certainly does not.
-- **`diagram.table-kind` is absent from `audit/validator-baseline.json` entirely** (0 of its 2,432 keys),
-  because the baseline was written 2026-09-15 and the rule landed after it in `77eb765`. All 15 of its
-  live findings repo-wide therefore read as "new", including one on `measures-economic-performance`'s
-  untouched live content. It is not a regression and `npm run validate` still exits 0. **Do not
-  re-baseline to silence it** — with three sessions staging concurrently, `--baseline --confirm` would
-  adopt everyone else's in-flight findings as accepted debt (the packet 3.1 trap).
+**Section:** `price-determination`, Economics Unit 1 (WEC11), IAL topic **1.3.4 Price determination**,
+`audit/raw/econ_spec.txt:692-716`. **11 leaves**, all verified against `audit/raw/spec-items.json`
+(`ECON-1.3.4-1a … 4d`). Live state: 5 blocks, 13 subsections, 2 diagrams, 24 quiz, 5 practice,
+18 flashcards, 3 mistakes. Snapshot: `audit/snapshots/2026-09-16-pre-packet-24__economics__price-determination.json`.
 
+**31 open ledger items**: 29 `C-price-determination-*` plus `C-supply-structure-09` (clause (a) only)
+and `C-supply-specGap-04`, both reassigned here by packet 23 because a supply shift's effect on
+equilibrium is 1.3.4 · 1b.
+
+### Rule 1 pre-flight — every scope claim checked against the spec before building
+
+Five findings are wrong or need re-aiming. Each was checked against `econ_spec.txt` / `spec-items.json`,
+not against the audit's own wording.
+
+1. **`structure-07` names the wrong topic for `allocative efficiency`.** It says the term is used
+   "without the 1.3.5 framing". `allocative efficiency` is **3.3.3 · 1a** (`econ_spec.txt:1364`) — Unit 3,
+   a different qualification unit, and it is nowhere in 1.3.5. The fix is therefore to REMOVE it from a
+   Unit 1 section, not to reframe it. Its other clause is correct: `positive externality` and
+   `socially optimal level` are 1.3.5 (`:731`, `:729`) and stay out.
+2. **`structure-05` / `specGap-05` / `topFix-04` ask to move Block 6 to 1.3.2 — it is already gone, and
+   moving it would duplicate packet 17.** Block 6 ("Alternative Views") is absent from live content
+   (5 blocks, not the audit's 6). Its proper home, 1.3.2 · 1b, has all six leaves taught in the spec's
+   own words by packet 17 (`_packet17-content.mjs`: herding, habitual, inertia, computational, feel
+   valued, framing — 7/4/13/3/3/10 hits). So the correct action is **do not reintroduce it**, and
+   `specGap-05`'s condition ("if Block 6 is kept here") is void.
+3. **`practice-03` is right that price floors are out of scope, and the spec does not call them that.**
+   `price floor` / `price ceiling` are **0** in `econ_spec.txt`; 1.3.6 says "maximum and minimum
+   (guaranteed) prices" (`:809`). Both the item and the vocabulary go.
+4. **`structure-06`'s deletion claim is safe, checked the dangerous way round.** Deadweight-loss welfare
+   analysis is not a 1.3.4 leaf, and `deadweight` is **0** in `econ_spec.txt`. The nearest real
+   requirement — "identification of the welfare loss or gain areas" (`:750`) — is **1.3.5 · 2d**, which
+   packet 25 owns and the spec requires there. Removing it here loses no requirement.
+5. **`structure-10` is an observation, not a defect** ("takeaways match their blocks… ramp is sensible").
+   It is satisfied by preserving the property, and claimed with that evidence rather than a change.
+
+### Rule 2 pre-flight — what this section owns, and what it may not say
+
+Counted in `econ_spec.txt` / `bus_spec.txt` for THIS subject: `equilibrium` **13/0** · `excess demand`
+**1** · `excess supply` **1** · `consumer surplus` **1** · `producer surplus` **3** · `price mechanism`
+**3** · `rationing` **1** · `signalling` **1** · `incidence` **2** · `indirect tax` **6** ·
+`ad valorem` **2** (`:666`, `:807`) · `subsidies` **9**. All of it is this section's own vocabulary and
+packet 23 banned the first five in `supply` precisely to reserve them here.
+
+**Banned, each with its count:** `deadweight`/`dead-weight` (0) · `market clearing` (0) ·
+`invisible hand` (0) · `price floor`/`price ceiling`/`minimum price`/`maximum price` (0 here; 1.3.6
+says "maximum and minimum (guaranteed) prices") · `allocative efficiency` (3.3.3, Unit 3) ·
+`positive externality` / `socially optimal` (1.3.5) · `Outline` / `Assess` / any 10-mark item (not IAL
+Economics) · `anchoring`, `loss aversion`, `availability heuristic`, `nudge`, `bounded rationality`,
+`satisficing` (all 0; 1.3.2 · 1b's own list belongs to packet 17's section).
+
+### The arithmetic spine — one pair of schedules carries all 11 leaves
+
+Derived in `_packet24-util.mjs`, never typed twice (DECISIONS, 16 Sep):
+
+```
+Qd = 1100 − 50P      choke price $22        Qs = 100P − 400      price intercept $4
+equilibrium  P* = $10   Q* = 600            CS = $3,600   PS = $1,800
+```
+
+| case | new equilibrium | CS | PS |
+|---|---|---|---|
+| demand +300 | $12 · 800 | 6,400 | 3,200 |
+| demand −300 | $8 · 400 | 1,600 | 800 |
+| supply +$3 (down) | $8 · 700 | 4,900 | 2,450 |
+| supply −$3 (up) | $12 · 500 | 2,500 | 1,250 |
+
+Excess demand at $7 = 450; excess supply at $13 = 450. A **specific tax of $3**: buyer $12, seller $9,
+Q 500, revenue $1,500 — consumers bear $2, producers $1 (the 2:1 split the slopes predict). A
+**subsidy of $3**: buyer $8, seller $11, Q 700, cost $2,100 — consumers capture $2, producers $1. An
+**ad valorem tax of 30%** equals the specific tax at exactly the original price ($3 on $10) and differs
+everywhere else, which is what makes the pivot visible.
+
+**This settles `quiz-01`.** Q14's keyed answer "ambiguous" is wrong: a rightward demand shift raises
+consumer surplus from $3,600 to $6,400, derived, not asserted.
+
+### Verify B — student walkthrough, 390×844, signed out, `?draft=1` (16 September)
+
+Walked all **35 steps** (29 teach + 6 check-in) on `remediation-dev`. No dead end, no console error, no step
+that failed to render.
+
+- **Step 1 of 35**, "Chapter 1 of 6 · Finding the Equilibrium · part 1 of 4", pre-test offered ("Test
+  yourself first" / "Just teach me"), six chapter dots in the strip. The step counter matches
+  `buildSteps()` exactly — 29 + 6.
+- **Check-ins land at 5, 12, 18, 24, 30, 35**, matching 4·6·5·5·5·4 subsections plus one each. Every one
+  carries its diagram, a quiz, a practice card, a spaced recall and the chapter takeaway.
+- **Every chapter check-in resolves a quiz for a SIGNED-OUT student** — 8 of 33 items served, all six pins
+  resolving on-topic after `freeQuizPayload()`'s remap. The pre-test pool is exactly indices 0, 1, 2.
+- **The spaced recall is genuinely spaced**: chapter 6's check-in showed "Recall from chapter 2 · Excess
+  Demand", with its word bank carrying 3 answers and 3 distractors.
+- **The subsidy diagram renders at the final check-in** with both prices, the wedge and the cost rectangle,
+  above its "What a correct diagram shows" checklist. Ends on "Complete topic ✓" at 35/35.
+- **Both table diagrams measured in the browser with `getComputedTextLength()`**: no cell collisions in any
+  of the four scenarios, smallest cell 14.3px against the 12px floor, widest row 522 of the 534-unit frame.
+
+One thing the walk could NOT check signed out: with only one practice card reaching an anonymous student per
+section in some states, guided mode was verified from the served payload rather than on screen — the four
+guided slots (Analyse, Draw, Discuss, Calculate) were confirmed to open with a scaffold by reproducing
+`getPracticeMode` over the draft payload.
+
+### Exit criteria
+
+Staged bundle at 0 BLOCK / 0 new DEBT / 100% of 11 leaves · every block pinned to a diagram, a quiz
+item and a practice item · practice on the ECONOMICS ladder only · Verify A clean · a 390×844 walk ·
+Layer 6 with two planted canaries · PROGRESS row · commit · push. **Do not publish** — the packet 5/7
+checkpoint holds.
 
 ## Packet 23 spec — `supply`, Economics 1.3.3 (Opus 5, 16 September 2026) — IN PROGRESS, CLAIMED
 
