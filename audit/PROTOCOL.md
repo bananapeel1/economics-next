@@ -79,8 +79,13 @@ All of these, in order, or the packet is not done:
 2. `node audit/scripts/ledger.mjs unverified <n>` exits 0 (every claimed id confirmed or marked wont-fix with a note).
 3. Verify B report attached to `NEXT.md` under the packet spec (a few lines is enough), when it applied.
 4. `npm run validate` exits 0 — no BLOCK or DEBT finding outside `audit/validator-baseline.json` — and `npm test` passes (from packet 3 onward). A section packet that clears its debt reruns `node audit/scripts/validate-content.mjs --baseline --confirm` and commits the smaller baseline; the file only ever shrinks.
-5. `PROGRESS.md` row updated: status, commit, snapshot path, validator result.
-6. Commit with `packet-<n>:` at the start of the subject. Then `git push -u origin remediation/2026-09`.
+5. **A content packet re-runs `--stage` if ANY of its modules changed since the last one, and verifies the
+   result against `curl "localhost:3001/api/sections/<id>?draft=1"` FIELD BY FIELD — not against the file.**
+   The runner is the only writer to `draft`, so a fix applied to a module and re-dumped leaves a repository
+   that agrees with itself while the database still holds the defect, and nothing else in this gate can see
+   it: `validate` and `npm test` read files, Verify A reads the diff. See DECISIONS, 16 September.
+6. `PROGRESS.md` row updated: status, commit, snapshot path, validator result.
+7. Commit with `packet-<n>:` at the start of the subject. Then `git push -u origin remediation/2026-09`.
 
 ### 6. Handoff
 

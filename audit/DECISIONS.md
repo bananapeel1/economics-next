@@ -1349,3 +1349,31 @@ window between `git add` and `git commit` belongs to everybody. From now on, in 
 - **If your work is swept into another session's commit, leave it there.** Say so in your own follow-up
   commit and in PROGRESS. Rewriting a pushed commit to fix a subject line costs more than the wrong subject
   line does, and it will break the session that wrote it.
+
+## 2026-09-16 — a content fix verified against the file is not verified at all
+
+**Rule: verify a content fix against `?draft=1`, field by field, never against the module that produced it.**
+Added to the gate as PROTOCOL step 5.
+
+The programme's shape invites this. The runner is the only writer to `draft`; `--dump` writes the snapshot;
+`--stage` writes the database. A fix applied to a packet's module and re-dumped therefore produces a
+**repository that agrees with itself** — source, snapshot and validator all consistent — while Supabase
+still holds the version the fix removed. Nothing in the gate can see it: `npm run validate` and `npm test`
+read files, Verify A reads the diff, and Verify B only catches it if the walk happens to cross that field.
+
+**Measured instance, 16 September.** `77eb765` set `kind: 'table'` on packet 20's types diagram and dropped
+its checklist, in `scripts/_packet20-diagrams.mjs` and in the dumped bundle. The staged draft still returned
+`kind: undefined` with the six-item checklist — that is, **the draft still carried exactly the defect the
+commit had fixed**, and would have been what published at the checkpoint. Found by comparing the `?draft=1`
+payload against the source field by field; fixed by re-running the runner with `--stage`. The re-dump then
+reproduced the committed snapshot byte for byte, which is the evidence that nothing else moved.
+
+**Who is exposed.** Any section whose bundle was corrected after its last `--stage` — the correction does not
+have to be the owning session's. Concretely today: `npm run validate` reports `diagram.table-kind` on **15**
+diagrams, and each packet that answers it for its own section must re-stage afterwards and check the API, not
+the file. The general case is wider and has no marker, which is why this is a gate step rather than a note on
+one packet's row.
+
+**Why it is worth a rule of its own.** It will outlive the 270px fix that exposed it. Cross-cutting fixes to
+content modules are going to keep happening — three sessions are working in this tree — and every one of them
+leaves a staged draft stale unless someone re-runs the packet's runner.
