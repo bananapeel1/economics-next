@@ -94,6 +94,192 @@ clear; Layer 6, Verify A and Verify B reports written up here.
 ---
 
 
+## Packet 17 spec — consumer-behaviour-demand, the biggest topic in Unit 1 (Opus, 16 September 2026)
+
+Economics Unit 1 (WEC11), IAL topic **1.3.2 Consumer behaviour and demand**, `audit/raw/econ_spec.txt:576-655`
+(the "What students need to learn" table runs `:580-649`), **39 countable leaves** — the largest leaf count of
+any section built so far. 52 section opens. **32 ledger items**, one of them reassigned here by packet 15.
+
+State before: 6 blocks · 18 subsections · 18 recalls (9 reorder, 9 fill-in, no match, no classify) · 25 quiz
+(8 reachable) · 5 practice · 4 diagrams (2 of them unreachable) · 18 cards · 4 mistakes · 4 chains; validator
+**17 BLOCK · 63 DEBT · 87% coverage**.
+
+### V001, measured rather than assumed
+
+Counting bullet characters in `econ_spec.txt:576-655` with a UTF-8-aware pass, independently of the generated
+asset: **29 bullets, every one at line start, 0 dropped**, and `spec-items.json` holds all 39 leaves of 1.3.2.
+The line-anchored regex in `build-spec-items.mjs` loses nothing in this span, so this section's coverage number
+is trustworthy. V001 stays packet 3.1's. (Packet 16 recorded the same result for its own span; neither result
+transfers — count the span.)
+
+### Five ledger claims the specification refutes or redirects — read before building
+
+1. **`specGap-02` — "'conditions of demand' as the spec term for shift factors" is REFUTED.** The phrase appears
+   **0 times** in `audit/raw/econ_spec.txt`. It is AQA vocabulary, not Edexcel's: the IAL spec says
+   "Factors that may cause a shift in the demand curve" (`:596`). Teaching students to "recognise the phrase in
+   questions" would teach them to expect wording an IAL paper never uses. Closed as no-change, and the March
+   common-mistake card that carries the phrase in its title (`consumer-behaviour-demand:mistake:d6510341`) is
+   rewritten to the spec's own words. Same shape as packet 15's `structure-11` and packet 16's `structure-06`.
+2. **`specGap-06` — half refuted, half redirected.** It asks two things. (a) "if behavioural economics is absent
+   from WEC11 (likely), Block 0 subsection 3 is off-spec": the subsection is **required** — `1b` names six
+   reasons why consumers may not maximise utility (`:583-589`), so the content stays. What IS off-spec is its
+   **vocabulary**: "anchoring", "loss aversion" and "bounded rationality" appear **0 times** in the Economics
+   specification, and the single occurrence of "behavioural" anywhere in it is `:1281`, "behavioural theories:
+   satisficing", inside a firms'-objectives topic that is not this one. So the subsections are rebuilt around
+   the specification's own six reasons — herding, habitual behaviour, inertia, poor computational skills, the
+   need to feel valued, framing and bias — and the UK GCE labels go. This is packet 16's "barriers to entry"
+   rule applied to Economics: where the spec supplies no vocabulary, teach the mechanism in the spec's words.
+   (b) "if elasticities are a separate spec point the section may be over-packed": they are **not** separate —
+   price, income and cross elasticities are sub-topic **3 of 1.3.2 itself** (`:598-649`), 24 of the topic's 39
+   leaves. The section is correctly scoped and the answer to a packed section is more steps, not less content.
+3. **`topFix-02` — its prescribed tariffs are the wrong subject's.** It asks for "Define 2, Explain 4/6,
+   Assess 10/12, Evaluate 20". In IAL **Economics** there is **no Assess and no 10-mark tariff**, and Explain is
+   4 only: Define 2 · Calculate 2/4 · Draw 4 · Explain 4 · Analyse 6 · Examine 8 · Discuss 14 · Evaluate 20
+   (`econ_spec.txt:2704-2747`, `audit/raw/tariff-census.json`). Assess 10/12 is the Business ladder. The item's
+   valid clauses — drop "Outline", drop "Analyse (10)", retariff, re-author the indices — are all built; its
+   "Assess 10/12" clause is refused with that evidence.
+4. **`structure-01` and the sort-bug halves of `topFix-02`, `practice-01`, `practice-02` are already fixed in
+   code.** `practiceIndices` have resolved against the RAW `practiceData` array since packet 2
+   (`components/LearnModeTab.jsx:193-194`, F013/F040/F111); `sortedPractice` survives only as the fallback
+   distribution for sections with no pins at all. What remains is the content half: pin every block, against the
+   raw order, and give the 20-mark Evaluate a block so it is reachable at all.
+5. **`topFix-04`'s mechanism is obsolete; its problem is real.** It asks for `diagramRef 'YED and XED'` on a
+   block. Since packet 5 only a **check-in** step carries a diagram and it comes from the block's **`diagramId`**
+   (`lib/learn-steps.js:44-55`); `diagramRef` is the legacy string pin that first-matched the wrong diagram in
+   the first place. Every block that earns a diagram gets `diagramId`, and both currently-invisible diagrams are
+   rebuilt and pinned.
+
+Two more items are observations about code that packet 5 or packet 7 has already changed, and are closed on the
+content side only: **`structure-03`** (the 2-per-step pairing that made every block a 2-section step then a
+1-section step no longer exists — one subsection is one step; what survives is its real complaint, six blocks
+with an identical rhythm, answered by blocks of 4 · 6 · 5 · 2 · 4 · 3 subsections) and **`structure-07`**
+(word banks of answers only: packet 7's contract gives every fill-in 2-3 authored distractors and semantic
+hints, and this packet writes them).
+
+### The shape — six blocks in specification order, 24 subsections
+
+| # | Block | Spec | Subsections |
+|---|---|---|---|
+| 1 | Rational Decision Making | 1a, 1b | 4 |
+| 2 | The Demand Curve | 2a-2d | 6 |
+| 3 | Price Elasticity of Demand | 3a, 3b, 3c, 3d, 3f | 5 |
+| 4 | Total Revenue and Pricing Decisions | 3e, 3g | 2 |
+| 5 | Income and Cross Elasticity of Demand | 3b, 3h, 3i | 4 |
+| 6 | The Significance of Elasticities | 3j | 3 |
+
+1. Rational Decision Making and Economic Agents (1a) · Utility and Utility Maximisation (1a) · Herding, Habit
+   and Inertia (1b·1-3) · Computation, Status and Framing (1b·4-6)
+2. The Concept of Demand (2a) · Diminishing Marginal Utility and the Shape of the Demand Curve (2c) ·
+   Movements Along a Demand Curve (2b) · Shifts of a Demand Curve (2b) · Shift Factors: Related Goods and Real
+   Income (2d·1-2) · Shift Factors: Tastes, Population and Advertising (2d·3-5)
+3. What Elasticity Measures (3a) · Calculating Price Elasticity of Demand (3b) · Interpreting PED Values
+   (3c·1-5) · The Factors Influencing PED (3d·1-5) · PED Along a Straight-Line Demand Curve (3f)
+4. Calculating Total Revenue (3e) · PED and Total Revenue (3g)
+5. Calculating Income Elasticity of Demand (3b) · Interpreting YED Values: Normal and Inferior Goods (3h·1-5) ·
+   Calculating Cross Elasticity of Demand (3b) · Interpreting XED Values (3i·1-3)
+6. Significance for Firms (3j) · Significance for Consumers (3j) · Significance for Government (3j)
+
+Twenty-four small steps plus six check-ins, against eighteen crowded ones: 30 steps. Block 6 exists because
+3j names **firms, consumers and the government** and the March section taught only firms and government
+(`specGap-04`); giving each its own subsection is what closes it, and it also removes `structure-05`'s
+duplication, because the per-elasticity "Significance of YED / XED" subsections are gone.
+
+### One spine of arithmetic — Tafari Coaches, and a linear demand schedule
+
+Every number in the section comes from one fictional intercity coach operator with **no country**, and from one
+straight-line market demand curve `Q = 1200 − 40P` (tickets a day, dollars). The section carries no real example
+with a year or a figure (packet 15's rule after packet 14's Layer 6), so there is nothing to overstate; real
+firms are named without numbers. Dollars only.
+
+- Individual demand from diminishing marginal utility: one traveller values successive monthly trips at
+  $26, $18, $11, $5, so the number of trips bought rises only as the fare falls — that IS the individual
+  demand curve, and 2c is closed with arithmetic rather than a sentence (`specGap-01`, `structure-06`).
+- PED, inelastic segment: $10 → $12, Q 800 → 720. −10% ÷ +20% = **−0.5**.
+- PED, elastic segment: $20 → $22, Q 400 → 320. −20% ÷ +10% = **−2.0**.
+- Unit elastic at the midpoint of the line: P = $15, Q = 600 (`3f`, `specGap-03`).
+- Total revenue: $8,000 at $10 · $8,640 at $12 · **$9,000 at $15** · $8,000 at $20 · $7,040 at $22. Revenue
+  peaks where PED = 1, which is 3e and 3g in one table.
+- YED: coach travel is inferior (income +10%, Q −5% → **−0.5**); air travel on the same route is a luxury
+  (+20% ÷ +10% → **+2.0**); rice is a necessity (+4% ÷ +10% → **+0.4**).
+- XED: air fare +10% → coach demand +6% → **+0.6**, substitutes. Coach fare −10% → hotel nights at the
+  destination +4% → **−0.4**, complements. Rice ≈ 0, unrelated.
+
+The runner re-derives every one of those from `Q = 1200 − 40P` and refuses to stage if a printed figure
+disagrees with its own arithmetic, and the diagrams are generated from the same function (packet 15's
+`accuracy-01` rule), not drawn and asserted.
+
+### Scope — the 32 ledger ids, split into clauses
+
+Packet 16's lesson: a multi-part item is satisfied clause by clause, and the builder is the worst judge of
+that. Each clause below names the artefact that satisfies it.
+
+| id | clause | artefact |
+|---|---|---|
+| `C-introductory-concepts-specGap-08` | economic agents and their objectives, defined | 1.1 names consumer, firm and government as the three agents and gives each its objective; 1a's own two (utility, profit) are the assessed ones |
+| `topFix-01` a | the two uncompletable fill-ins made completable | every fill-in re-authored; `fillin.dup-answers` 0 |
+| `topFix-01` b | 2-3 distractors on every fill-in bank | authored `distractors[]` on all of them; `fillin.distractors` 0 |
+| `topFix-02` a | stop the practice sort / re-author indices | `practiceIndices` authored against the raw array; every block pinned |
+| `topFix-02` b | retariff to IAL command words | Economics tariffs only, checked against the census in the runner |
+| `topFix-02` c | drop "Outline" and "Analyse (10)" | both gone; 9 practice items, none with a tariff the subject lacks |
+| `topFix-02` d | "Assess 10/12" | **refused** — no Assess in IAL Economics (see above) |
+| `topFix-03` | four non-sequence reorders replaced | the four become `classify` / `match`; the reorders that remain are genuine calculations or causal chains with the principle named |
+| `topFix-04` a | surface the two hidden diagrams | rebuilt as the block-3 PED-values diagram and the block-5 YED/XED diagram, both `diagramId`-pinned |
+| `topFix-04` b | one sentence linking DMU to the downward slope | a whole subsection (2.2) with the utility schedule |
+| `topFix-05` a | replace fabricated or wrong examples | every March example replaced; no example carries a year or a figure |
+| `topFix-05` b | remove invented exam-frequency claims | `examMatters` says what the command word requires (Appendix 6), never what a paper does or a marker does |
+| `accuracy-01` | the Waitrose 2008 claim | gone with the subsection that carried it |
+| `practice-01` | Define retariffed to 2, guidance to a definition, absolute value stated | p1 |
+| `practice-02` | the 10-mark Analyse | re-commanded to Analyse (6) and Examine (8), levels-shaped guidance |
+| `structure-01` | practice reaches the right block, Evaluate reachable | block 6 pins the 20-mark Evaluate |
+| `structure-02` | both diagrams render in Learn Mode | five diagrams, every one `diagramId`-pinned to a check-in |
+| `structure-03` | the identical six-block rhythm | blocks of 4 · 6 · 5 · 2 · 4 · 3 |
+| `structure-04` | quiz 8-24 unreachable | 32 items, 29 pinned, 3 unpinned and FIRST in the array |
+| `structure-05` | block 5 repeats blocks 3-4 | the per-elasticity significance subsections are gone; one block 6 covers 3j |
+| `structure-06` | DMU never connected to the curve | 2.2 |
+| `structure-07` | word banks of answers only | authored distractors (code half already packet 7's) |
+| `structure-08` | three filler misconceptions | every misconception is an error a student actually writes, and each names what to write instead |
+| `structure-09` | parallel effects written as a sequence | the income and substitution effects are a `bullets` pair, not a `flow`; every remaining `flow` is genuinely sequential |
+| `structure-10` | invented paper-frequency claims | none; the runner refuses "almost every paper", "often open a paper" and the marker-claim class |
+| `specGap-01` | DMU → downward slope | 2.2 |
+| `specGap-02` | "conditions of demand" | **refused** — 0 occurrences in the spec |
+| `specGap-03` | PED along a straight line | 3.5 and the PED-values diagram's second view |
+| `specGap-04` | significance for consumers | 6.2, its own subsection |
+| `specGap-05` | calculating elasticities from a table | the demand schedule table in 3.2, and a Calculate (4) practice item off it |
+| `specGap-06` | scope | **refused / redirected** (see above) |
+| `specGap-07`/`-08`/`-09` | inertia · the need to feel valued · framing | 1.3 and 1.4, one paragraph each, in the spec's own words |
+| `specThin-01`-`-04` | herding · poor computational skills · age distribution · branding | 1.3, 1.4, 2.6, 3.4 — defined and explained, not named |
+
+### Acceptance checks a verifier can run without this conversation
+
+1. `node scripts/packet-17-consumer-behaviour-demand.mjs --dump` exits 0 and prints no PROBLEMS: no pounds, no
+   "Assess"/"Outline"/"Analyse (10)", no UK-only institution, no anchoring/loss-aversion/bounded-rationality,
+   no "conditions of demand", no uncited examiner claim and no marker claim, every practice tariff in the
+   ECONOMICS census, every diagram figure re-derived from `Q = 1200 − 40P`, ids unique, every Tafari figure in
+   the body and in at least one other surface.
+2. The staged bundle validates at **0 BLOCK, ≤ 3 DEBT, ≥ 95% coverage** (`--section consumer-behaviour-demand`).
+3. `grep -c` on the bundle dump: 0 occurrences of `anchoring`, `loss aversion`, `bounded rational`,
+   `conditions of demand`, `Waitrose`, `Outline`, `Assess`, `£`.
+4. Exactly three quiz items carry no block, and they are indices 0, 1, 2.
+5. Every block has `quizIndices`, `practiceIndices`, and `diagramId` except block 6.
+6. `npm test`, `npm run build`, `npm run validate` exit 0; `node audit/scripts/ledger.mjs unverified 17` clear.
+
+### Verify B — 390×844, `/economics/unit-1/consumer-behaviour-demand?draft=1`, signed out
+
+`?draft=1` is dev-only and the SEO block at the top of the page still renders live `data`, so read the app
+region with `read_page` or screenshots, never `get_page_text` (packet 16). The script:
+
+1. Pre-test shows and its questions are not repeated by a chapter check-in later in the walk.
+2. Step 1 of 30 is "Rational Decision Making and Economic Agents", one heading, its recall below the teaching,
+   and "Next" is reachable without a long scroll.
+3. Walk to the first check-in: a diagram renders, a quiz item, a practice item, explain-it-back, a takeaway.
+4. Chapter 3's check-in diagram shows the five PED values and its second view shows PED along the straight line.
+5. A `classify` recall wraps its chips at 390px and the document has no horizontal scroll.
+6. Chapter 4's check-in carries the total-revenue table diagram, and the figures on it match the body.
+7. Scroll with real input while the app re-renders; the page must not jump back up.
+8. Console: no errors from the section's own content.
+
+---
+
 ## Packet 16 spec — meeting-customer-needs, the Business section students meet first (Opus, 15 September 2026)
 
 Business Unit 1 (WBS11), IAL topic **1.3.1 Meeting customer needs**, `audit/raw/bus_spec.txt:504-544`,
