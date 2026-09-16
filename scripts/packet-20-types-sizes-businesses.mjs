@@ -124,6 +124,8 @@ ban(/\bplc\b|\bLtd\b|\bprivate limited company\b|\bpublic limited company\b/gi, 
  */
 ban(/\b(?:dis)?economies of scale\b/gi, 'economies of scale (3.3.2 sub-topic 3, packet 28 — not a leaf of 3.3.1)');
 ban(/\bminimum efficient scale\b|\bMES\b/g, 'minimum efficient scale (3.3.2 · 3b, packet 28)');
+ban(/levels[- ]marked|levels[- ]based marking|banded mark|mark bands?/gi, 'a claim about how a response is MARKED — Appendix 6 states what the command word REQUIRES and nothing about marking (Layer 6 found eight; MARK_CLAIM reached none of them)');
+ban(/\bthe commonest error\b|\bthe most common error\b/gi, 'a claim about what is commonest in scripts, which nobody cited');
 ban(/\b(NHS|Bank of England|HMRC|Ofgem|Ofcom|council tax|HS2|the Chancellor|Competition and Markets Authority)\b/g, 'a UK-only institution (locale.institution)');
 ban(/\b(CMA|RPI|ONS|OBR)\b/g, 'a UK-only acronym (locale.institution) — topFix-05 asks for the regulator references to be internationalised');
 
@@ -151,6 +153,21 @@ const FREQUENCY_CLAIM = /\b(almost every paper|every paper|often open|commonly o
 const PAPER_PATTERN_CLAIM = /\b(a |the |an )?(question|questions|paper|papers|extract|extracts|stem|stems|source|sources)\b[^.!?]{0,40}\b(rarely|usually|typically|normally|often|generally|most of the time|nearly always|hardly ever|seldom)\b/i;
 for (const s of texts) for (const sent of s.split(/(?<=[.!?])\s+/)) if (FREQUENCY_CLAIM.test(sent)) problems.push(`claim about how often a paper asks something: "${sent.trim().slice(0, 90)}"`);
 for (const s of texts) for (const sent of s.split(/(?<=[.!?])\s+/)) if (PAPER_PATTERN_CLAIM.test(sent) && !/\bWEC1[1-4]\b|appendix\s*\d|mark scheme/i.test(sent)) problems.push(`uncited claim about how papers are built: "${sent.trim().slice(0, 90)}"`);
+
+/*
+ * Command words described in PROSE. The census check below reads PRACTICE items only, so an
+ * examMatters that cites a tariff Appendix 6 does not give that command, or that enumerates the
+ * assessment objectives and leaves one out, passes every other check in this file. Layer 6 found both:
+ * an "Explain (6 marks)" and six Examines described as analysis when :2726-2731 requires evaluation
+ * and a brief assessment, which is the whole difference between Examine (8) and Analyse (6).
+ */
+const LADDER = { Define: [2], Calculate: [2, 4], Draw: [4], Explain: [4], Analyse: [6], Examine: [8], Discuss: [14], Evaluate: [20] };
+for (const s of texts) for (const m of s.matchAll(/\b(Define|Calculate|Draw|Explain|Analyse|Examine|Discuss|Evaluate)\s*\((\d+)\s*marks?/g)) {
+  if (!LADDER[m[1]].includes(Number(m[2]))) problems.push(`prose cites ${m[1]} (${m[2]} marks); the Economics ladder gives ${m[1]} ${LADDER[m[1]].join(' or ')}`);
+}
+for (const s of texts) for (const sent of s.split(/(?<=[.!?])\s+/)) {
+  if (/\bExamine \(8 marks/.test(sent) && !/evaluat|assessment|weigh/i.test(sent)) problems.push(`an Examine described without evaluation or assessment: "${sent.trim().slice(0, 90)}"`);
+}
 
 // Practice command words and tariffs against the specification's own Appendix 6, for ECONOMICS.
 const census = JSON.parse(readFileSync('audit/raw/tariff-census.json', 'utf8')).rows.filter((r) => r.subject === 'economics');
@@ -186,13 +203,14 @@ const has = (svg, needle, why) => { if (!svg.includes(needle)) problems.push(why
     for (const cell of row) if (!onRow.includes(cell)) problems.push(`the types table does not carry "${cell}" on the row for "${row[0]}" (y=${y})`);
     if (onRow.length !== row.length) problems.push(`the row for "${row[0]}" holds ${onRow.length} cells, not ${row.length}`);
   });
-  if (TYPE_ROWS.length !== 5) problems.push(`the types table has ${TYPE_ROWS.length} rows; 1a lists five organisation types`);
+  if (TYPE_ROWS.length !== 6) problems.push(`the types table has ${TYPE_ROWS.length} rows; 1a's five bullets need six, because "for-profit and not-for-profit" is one bullet and two rows`);
+  for (const w of ['For-profit', 'Not-for-profit']) if (!TYPE_ROWS.some((r) => r[0].startsWith(w))) problems.push(`the types table has no "${w}" row, and :1252 names both halves`);
 }
 { // 2 · the size bars, from SIZE_FIRMS rather than drawn
   const svg = DIAGRAMS[1].svg;
   [['employees', 0], ['capital', 1]].forEach(([k, gi]) => SIZE_FIRMS.forEach((f, fi) => {
     has(svg, `y="${sizeBarY(gi, fi)}" width="${sizeBarW(k, f[k])}"`, `${f.name}'s ${k} bar is not drawn at the width its figure gives`);
-    has(svg, `>${f[k]}</text>`, `${f.name}'s ${k} figure is not printed beside its bar`);
+    has(svg, `>${f[k]}${k === 'capital' ? ' $m' : ''}</text>`, `${f.name}'s ${k} figure is not printed beside its bar with its unit`);
   }));
   if (!measuresDisagree()) problems.push('the two size measures rank the firms the same way, so the diagram makes no point');
 }

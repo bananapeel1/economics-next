@@ -347,7 +347,7 @@
        "text": "Barbers, plumbers and independent restaurants remain small in economies of every size. The service is delivered in person, the customer base is local, and a second branch does not make the first one cheaper to run."
       },
       "misconception": "Students treat small size as evidence of failure. Growth is one strategy among several. Write instead: many firms remain small because the market is small, the product resists standardisation, or the owner has chosen not to grow.",
-      "examMatters": "An Examine (8 marks, WEC13 Appendix 6) requires knowledge, application and analysis. Two reasons developed into consequences for the firm go further than five reasons named.",
+      "examMatters": "An Examine (8 marks, WEC13 Appendix 6) requires analysis AND evaluation, with a brief assessment of the factors. Two reasons developed and then weighed against each other go further than five reasons named.",
       "recall": {
        "id": "types-sizes-businesses:sub:why-some-firms-stay-small:recall",
        "type": "classify",
@@ -409,7 +409,7 @@
        "text": "Delivery networks grow because a depot, a sorting system and a fleet cost much the same whether they handle a thousand parcels a day or ten thousand. The second thousand is far cheaper to carry than the first."
       },
       "misconception": "Students write that growth always reduces average cost. It reduces the fixed cost per unit, which is not the whole of average cost. Write instead: growth spreads fixed costs over more units, and whether average cost falls depends on what happens to the other costs.",
-      "examMatters": "A Discuss (14 marks, WEC13 Appendix 6) is levels-marked and wants both sides weighed and a judgement reached. Setting a reason for growing directly against a reason for staying small is the comparison the question is asking for.",
+      "examMatters": "A Discuss (14 marks, WEC13 Appendix 6) requires analysis and evaluation, and wants both sides weighed and a judgement reached. Setting a reason for growing directly against a reason for staying small is the comparison the question is asking for.",
       "recall": {
        "id": "types-sizes-businesses:sub:why-other-firms-grow:recall",
        "type": "fillin",
@@ -559,7 +559,7 @@
        "prompt": "Complete the distinction between the two forms of external growth:",
        "template": [
         "In a ___, both sets of owners agree to combine into one new business",
-        "In a ___, one firm buys control of another and decides for itself",
+        "In a ___ or acquisition, one firm buys control of another and decides for itself",
         "Either way the growth is ___, because the capacity already exists"
        ],
        "answers": [
@@ -734,7 +734,7 @@
        "text": "Large groups have combined businesses as unlike as hotels, engineering and food processing. What holds such a group together is the flow of capital between the parts, not anything about what the parts make."
       },
       "misconception": "Students treat conglomerate integration as the safest kind because risk is spread. Risk to the firm falls; the risk of managing an unfamiliar business badly rises. Write instead: diversification steadies profits but removes the expertise the other directions rely on.",
-      "examMatters": "A Discuss (14 marks, WEC13 Appendix 6) is levels-marked and wants a judgement. The strongest line on a conglomerate merger weighs the steadier profit against the loss of expertise, rather than listing both and stopping.",
+      "examMatters": "A Discuss (14 marks, WEC13 Appendix 6) requires analysis and evaluation, and wants a judgement. The strongest line on a conglomerate merger weighs the steadier profit against the loss of expertise, rather than listing both and stopping.",
       "recall": {
        "id": "types-sizes-businesses:sub:conglomerate-integration:recall",
        "type": "match",
@@ -778,7 +778,7 @@
        },
        {
         "type": "paragraph",
-        "text": "**For:** market share and influence over price rise at once; duplicated head offices, systems and networks can be removed; the rival's brands and skilled staff arrive ready-made. **Against:** competition authorities may block it or force parts to be sold; consumers face less choice; the removal of duplication is the removal of jobs."
+        "text": "**For:** market share and influence over price rise at once; duplicated head offices and networks can be removed; the rival's brands and staff arrive ready-made. **Against:** competition authorities may block it or force parts to be sold; consumers face less choice; removing duplication removes jobs."
        },
        {
         "type": "subheading",
@@ -798,7 +798,7 @@
        },
        {
         "type": "paragraph",
-        "text": "One caution applies to all three. The gains are **expected** at the time of the deal and the costs are certain, which is why so many mergers do not deliver what was claimed for them."
+        "text": "One caution applies to all three. The gains are **expected** at the time of the deal and the costs are certain, so a merger can fail to deliver what was claimed for it without anything going unusually wrong."
        }
       ],
       "realExample": {
@@ -806,7 +806,7 @@
        "text": "Competition authorities in many economies have approved large horizontal mergers only on condition that specific outlets or routes are sold to a rival, so that the market keeps a competitor it would otherwise have lost."
       },
       "misconception": "Students write one list of merger advantages and apply it everywhere. Write instead: name the direction first, because securing supply is an argument for vertical integration and says nothing about a conglomerate.",
-      "examMatters": "An Evaluate (20 marks, WEC13 Appendix 6) is levels-marked and requires a supported judgement. Arguing the case for the specific direction in the extract, and against it, goes further than a general case about mergers.",
+      "examMatters": "An Evaluate (20 marks, WEC13 Appendix 6) requires multi-stage chains of reasoning and a supported judgement. Arguing the case for the specific direction the question names, and against it, goes further than a general case about mergers.",
       "recall": {
        "id": "types-sizes-businesses:sub:advantages-and-disadvantages-of-integration:recall",
        "type": "classify",
@@ -947,13 +947,13 @@
        },
        {
         "type": "paragraph",
-        "text": "Rules on employment, safety, reporting, tax and the environment apply to firms of every size, but the burden does not fall evenly. Much of the cost of complying is **fixed** — someone must read the rules and file the returns whether the firm has ten employees or ten thousand."
+        "text": "Rules on employment, safety, reporting and tax apply to firms of every size, but the burden does not fall evenly. Much of the cost of complying is **fixed** — someone must read the rules and file the returns whether the firm has ten employees or ten thousand."
        },
        {
         "type": "bullets",
         "items": [
-         "**Thresholds.** Many obligations begin at a given number of employees or level of turnover, so growing past one adds a cost in a single step.",
-         "**Time as well as money.** Approvals, licences and planning decisions delay an expansion even where the firm can afford them.",
+         "**Thresholds.** Many obligations begin at a given number of employees or turnover, so crossing one adds a cost in a single step.",
+         "**Time as well as money.** Approvals, licences and planning decisions delay an expansion the firm can well afford.",
          "**Competition rules.** A firm large enough to affect a market faces scrutiny a small firm never encounters."
         ]
        },
@@ -967,7 +967,7 @@
        "text": "In many economies a firm crossing an employee threshold acquires reporting and consultation duties overnight. The extra staff member is cheap; the obligations that arrive with them are not."
       },
       "misconception": "Students say regulation stops firms growing. It raises the cost of growing, and falls hardest at the thresholds. Write instead: compliance costs are largely fixed, so they weigh more heavily on a smaller firm and jump when a threshold is crossed.",
-      "examMatters": "An Examine (8 marks, WEC13 Appendix 6) requires the mechanism and its consequence. For regulation the mechanism is that compliance cost is largely fixed; the consequence is that it bears on the smaller firm.",
+      "examMatters": "An Examine (8 marks, WEC13 Appendix 6) requires the mechanism, its consequence and a brief assessment. For regulation: compliance cost is largely fixed, so it bears on the smaller firm — then weigh that against the size of the market.",
       "recall": {
        "id": "types-sizes-businesses:sub:owner-objectives-and-regulation:recall",
        "type": "fillin",
@@ -1041,7 +1041,7 @@
        "text": "A construction firm that doubles in size gets better prices on materials and needs a layer of managers it did not need before. Both arrive together."
       },
       "misconception": "Students write that growth makes a firm more efficient. It changes which costs matter: fixed costs per unit fall while coordination costs rise. Write instead: growth spreads fixed costs and complicates coordination, and the net effect depends on the firm.",
-      "examMatters": "A Discuss (14 marks, WEC13 Appendix 6) is levels-marked and wants both sides and a judgement. Two effects developed on each side, weighed against each other, is the shape the command word asks for.",
+      "examMatters": "A Discuss (14 marks, WEC13 Appendix 6) requires analysis and evaluation, and wants both sides and a judgement. Two effects developed on each side, weighed against each other, is the shape the command word asks for.",
       "recall": {
        "id": "types-sizes-businesses:sub:impact-of-growth-on-businesses:recall",
        "type": "classify",
@@ -1107,7 +1107,7 @@
        "text": "Large retail chains reach prices a single shop cannot match, and where one chain ends up alone in a small town the prices on its shelves need not stay there."
       },
       "misconception": "Students write that growth benefits consumers through lower prices. Lower costs make lower prices possible; competition is what makes them happen. Write instead: the saving reaches consumers only where the firm still faces rivals who would otherwise take the business.",
-      "examMatters": "An Evaluate (20 marks, WEC13 Appendix 6) is levels-marked and requires a supported judgement. The condition — whether competition survives the growth — is a stronger basis for judgement than asserting that consumers gain or lose.",
+      "examMatters": "An Evaluate (20 marks, WEC13 Appendix 6) requires multi-stage chains of reasoning and a supported judgement. The condition — whether competition survives the growth — is a stronger basis for judgement than asserting that consumers gain or lose.",
       "recall": {
        "id": "types-sizes-businesses:sub:impact-of-growth-on-workers-and-consumers:recall",
        "type": "reorder",
@@ -1152,7 +1152,7 @@
      {
       "id": "types-sizes-businesses:sub:diseconomies-demergers",
       "title": "Reasons for Demergers",
-      "keyIdea": "A demerger splits part of a firm off into a separate company owned by the same shareholders — which is not the same as selling it to somebody else.",
+      "keyIdea": "A demerger splits part of a firm off into a separate company owned by the same owners — which is not the same as selling it to somebody else.",
       "body": [
        {
         "type": "paragraph",
@@ -1182,9 +1182,9 @@
       ],
       "realExample": {
        "emoji": "💊",
-       "text": "GSK separated its consumer healthcare business into Haleon, a company listed in its own right whose shares went to GSK's existing shareholders. Nobody bought it: the group was divided, and its owners held two companies afterwards."
+       "text": "GSK separated its consumer healthcare business into Haleon, a company listed in its own right whose shares went to GSK's existing owners. Nobody bought it: the group was divided, and its owners held two companies afterwards."
       },
-      "misconception": "Students describe selling a division to another company as a demerger. Write instead: a demerger splits a business into a separate company owned by the same shareholders; a sale to another firm is a divestment.",
+      "misconception": "Students describe selling a division to another company as a demerger. Write instead: a demerger splits a business into a separate company owned by the same owners; a sale to another firm is a divestment.",
       "examMatters": "A Define (2 marks, WEC13 Appendix 6) on a demerger must say what happens to ownership. Saying only that a firm splits up does not separate a demerger from a divestment.",
       "recall": {
        "id": "types-sizes-businesses:sub:diseconomies-demergers:recall",
@@ -1194,7 +1194,7 @@
         {
          "name": "Demerger",
          "items": [
-          "A division becomes a separate listed company owned by the same shareholders",
+          "A division becomes a separate listed company owned by the same owners",
           "A group splits in two and its owners hold shares in both"
          ],
          "why": "No buyer appears and no payment is received: the business is divided, not sold"
@@ -1254,7 +1254,7 @@
        },
        {
         "type": "paragraph",
-        "text": "The pattern across all three is the same trade: **focus against shared cost**. Whether it is worth making depends on how little the two businesses had in common."
+        "text": "The pattern across all three is one trade: **focus against shared cost**, worth making when the two businesses had little in common."
        }
       ],
       "realExample": {
@@ -1262,7 +1262,7 @@
        "text": "When a group separates a fast-growing division from a slow, stable one, each ends up able to raise money on the terms that suit it — the grower for expansion, the steady business for income — which the combined group could not do at once."
       },
       "misconception": "Students treat a demerger as damage control after a failed merger. Write instead: a demerger trades shared costs for focus, and it is worth doing when the two businesses gain little from being run together.",
-      "examMatters": "An Examine (8 marks, WEC13 Appendix 6) wants the mechanism and a consequence for a named group. Taking businesses, workers or consumers in turn keeps the answer on the group the question asked about.",
+      "examMatters": "An Examine (8 marks, WEC13 Appendix 6) wants the mechanism, a consequence for the named group and a brief assessment of the factors. Taking businesses, workers or consumers in turn keeps the answer on the group the question asked about.",
       "recall": {
        "id": "types-sizes-businesses:sub:impact-of-demergers:recall",
        "type": "match",
@@ -1288,7 +1288,7 @@
      }
     ],
     "takeaway": [
-     "A demerger splits a business into a separate company owned by the same shareholders.",
+     "A demerger splits a business into a separate company owned by the same owners.",
      "Selling a division to another firm is a divestment, not a demerger.",
      "Firms demerge for focus, simpler coordination, a clearer valuation, or because a regulator says so.",
      "The trade for businesses, workers and consumers is the same one: focus against shared cost."
@@ -1326,16 +1326,16 @@
         "items": [
          "**Setting MC = MR:** 60 − 4Q = 20, so Q = **10,000 units** a month.",
          "**The price that sells it:** P = 60 − 2 × 10 = **$40**.",
-         "**Revenue:** $40 × 10,000 units = $400,000. **Costs:** $272,000. **Profit: $128,000.**"
+         "**Revenue** $400,000, **costs** $272,000, **profit $128,000**."
         ]
        },
        {
         "type": "paragraph",
-        "text": "Why stop there? At 10,000 units the next unit would add $16 to revenue and $20 to cost, so making it would reduce profit. Below 10,000 units the opposite holds and the unit is worth making. The equality marks the turning point, which is why it is the formula."
+        "text": "Why stop there? At 10,000 units marginal revenue is exactly $20, the same as marginal cost. Past that output marginal revenue keeps falling — by 11,000 units it is down to $16 while each unit still costs $20 — so those units subtract from profit. Below 10,000 units marginal revenue is above $20 and the units are worth making. The equality is the turning point, which is why it is the formula."
        },
        {
         "type": "paragraph",
-        "text": "No other output in this section beats $128,000, and the next two chapters show what the firm gives up by choosing one."
+        "text": "No other output beats $128,000, and the next two chapters show what a firm gives up by choosing a different objective."
        }
       ],
       "realExample": {
@@ -1494,7 +1494,7 @@
       "body": [
        {
         "type": "paragraph",
-        "text": "The specification lists **behavioural theories: satisficing** alongside the three maximising objectives. **Satisficing** means settling for an outcome that is satisfactory rather than pursuing the maximum — and it is the objective that best describes what large firms actually do."
+        "text": "The specification lists **behavioural theories: satisficing** alongside the three maximising objectives. **Satisficing** means settling for an outcome that is satisfactory rather than pursuing the maximum."
        },
        {
         "type": "paragraph",
@@ -1531,17 +1531,17 @@
        "template": [
         "Satisficing aims at an outcome that is ___ rather than at a maximum",
         "It arises because the firm's ___ want different things from it",
-        "It is also a response to ___ information, since nobody can locate the true maximum"
+        "It is also a response to information nobody has in ___, since the true maximum cannot be located"
        ],
        "answers": [
         "satisfactory",
         "stakeholders",
-        "incomplete"
+        "full"
        ],
        "hints": [
         "good enough, in one word",
         "owners, managers, employees, customers, suppliers",
-        "what nobody has all of"
+        "the opposite of partial"
        ],
        "distractors": [
         "maximum",
@@ -1584,7 +1584,7 @@
        "text": "Firms commonly pay senior managers partly in shares of the company they run, so that a decision good for the manager is more likely to be good for the owners too."
       },
       "misconception": "Students write that the principal-agent problem means managers are dishonest. It needs only different objectives and unequal information. Write instead: the agent is pursuing their own objectives, which the principal cannot fully observe.",
-      "examMatters": "An Evaluate (20 marks, WEC13 Appendix 6) is levels-marked and requires a supported judgement. Linking the divorce of ownership from control to the objective the firm actually chose is what turns theory into an argument about that firm.",
+      "examMatters": "An Evaluate (20 marks, WEC13 Appendix 6) requires multi-stage chains of reasoning and a supported judgement. Linking the divorce of ownership from control to the objective the firm actually chose is what turns theory into an argument about that firm.",
       "recall": {
        "id": "types-sizes-businesses:sub:divorce-of-ownership-from-control:recall",
        "type": "reorder",
@@ -1732,7 +1732,7 @@
      "Staying small is usually a limit or a choice, never simply failure.",
      "Spreading fixed costs is the growth argument that needs no theory of cost curves."
     ],
-    "examMatters": "An Examine (8 marks, WEC13 Appendix 6) requires the mechanism and its consequence. Two reasons developed beat five named."
+    "examMatters": "An Examine (8 marks, WEC13 Appendix 6) requires the mechanism, its consequence and a brief assessment of the factors. Two reasons developed and weighed beat five named."
    },
    {
     "title": "How Businesses Grow",
@@ -1782,7 +1782,7 @@
        },
        {
         "type": "mech",
-        "text": "The gains are expected at the time of the deal and the costs are certain, which is why so many mergers do not deliver what was claimed for them."
+        "text": "The gains are expected at the time of the deal and the costs are certain, so a merger can fail to deliver what was claimed for it without anything going unusually wrong."
        }
       ]
      }
@@ -1847,7 +1847,7 @@
      "Organic growth adds jobs; a horizontal merger removes duplicated ones.",
      "Lower cost makes a lower price possible; competition is what makes it happen."
     ],
-    "examMatters": "A Discuss (14 marks, WEC13 Appendix 6) is levels-marked and wants both sides weighed and a judgement reached."
+    "examMatters": "A Discuss (14 marks, WEC13 Appendix 6) requires analysis and evaluation, and wants both sides weighed and a judgement reached."
    },
    {
     "title": "Demergers",
@@ -1963,7 +1963,7 @@
      "Revenue maximisation and sales volume maximisation are different objectives with different outputs.",
      "Satisficing is the compromise the principal-agent problem produces."
     ],
-    "examMatters": "A Calculate (4 marks, WEC13 Appendix 6) involves several stages and expects working. An Evaluate (20 marks) is levels-marked and requires a supported judgement."
+    "examMatters": "A Calculate (4 marks, WEC13 Appendix 6) involves several stages and expects working. An Evaluate (20 marks) requires multi-stage chains of reasoning and a supported judgement."
    }
   ],
   "quiz": [
@@ -2118,10 +2118,10 @@
      "At the same stage of production in the same industry",
      "At different stages of the same supply chain",
      "In completely unrelated markets",
-     "In the same industry but different countries"
+     "Of very different sizes within the same industry"
     ],
     "correctIndex": 0,
-    "explanation": "Same STAGE is what makes it horizontal; same industry is not enough, because a roastery and a coffee farm are both in coffee and are at different stages. Different stages of one chain is vertical, and unrelated markets is conglomerate."
+    "explanation": "Same STAGE is what makes it horizontal; same industry is not enough, because a roastery and a coffee farm are both in coffee and are at different stages. Different stages of one chain is vertical, unrelated markets is conglomerate, and the relative size of the two firms has nothing to do with the classification."
    },
    {
     "id": "types-sizes-businesses:quiz:501af66f",
@@ -2163,7 +2163,7 @@
     "id": "types-sizes-businesses:quiz:de530ed7",
     "question": "A ceramics manufacturer acquires an insurance business. The principal gain available from this deal is:",
     "options": [
-     "Economies from combining the two operations",
+     "Savings from combining the two operations",
      "Securing the supply of an input",
      "Diversification of the group's profits",
      "Removal of a competitor"
@@ -2175,13 +2175,13 @@
     "id": "types-sizes-businesses:quiz:6233f049",
     "question": "Which of the following is a disadvantage specific to vertical integration?",
     "options": [
-     "Managers must run a business they may not understand",
+     "The firm loses the discipline of buying from whoever is cheapest",
      "The market contains one fewer competitor",
-     "Profits become more volatile",
-     "The firm gains no expertise from the deal"
+     "Profits become more volatile because the markets are unrelated",
+     "The firm gains no operational expertise from the deal"
     ],
     "correctIndex": 0,
-    "explanation": "Owning a different stage of the chain means running a business the firm was previously only buying from or selling to, and it loses the discipline of dealing with whoever is cheapest. Removing a competitor is horizontal, and vertical integration does bring the other stage's expertise with it."
+    "explanation": "Owning the stage it used to buy from means the firm now supplies itself, so it no longer tests its input cost against what an outside supplier would charge. Removing a competitor is horizontal; unrelated markets and the absence of operational gains are both conglomerate."
    },
    {
     "id": "types-sizes-businesses:quiz:07cc22fd",
@@ -2260,7 +2260,7 @@
     "question": "A demerger is best defined as:",
     "options": [
      "The sale of a division to another firm in exchange for a cash payment",
-     "The separation of part of a business into a company owned by the same shareholders",
+     "The separation of part of a business into a company owned by the same owners",
      "The closure of a division that has stopped being profitable",
      "A merger that a competition authority has ordered to be reversed"
     ],
@@ -2289,7 +2289,7 @@
      "Workers become owners of the company they work for"
     ],
     "correctIndex": 2,
-    "explanation": "The split needs only one of each shared department in each company, so central functions are where the cuts fall. Promotion paths usually get shorter in a smaller organisation rather than disappearing."
+    "explanation": "The split needs only one of each shared department in each company, so central functions are where the cuts fall. Promotion paths get shorter in a smaller organisation, not longer."
    },
    {
     "id": "types-sizes-businesses:quiz:e7732a08",
@@ -2403,7 +2403,7 @@
     "command": "Explain",
     "marks": 4,
     "question": "Explain the difference between forward and backward vertical integration. (4 marks)",
-    "guidance": "Name the direction from the acquirer's own position in the supply chain, and say what each secures. Backward: the firm acquires its supplier, moving towards the source of its inputs, which secures supply, controls quality at source and removes the supplier's margin. Forward: the firm acquires its customer, moving towards the final buyer, which guarantees an outlet and captures the retailer's margin. Deciding the direction from which firm is larger is the commonest error — size has nothing to do with it."
+    "guidance": "Name the direction from the acquirer's own position in the supply chain, and say what each secures. Backward: the firm acquires its supplier, moving towards the source of its inputs, which secures supply, controls quality at source and removes the supplier's margin. Forward: the firm acquires its customer, moving towards the final buyer, which guarantees an outlet and captures the retailer's margin. Students often decide the direction from which firm is larger; size has nothing to do with it."
    },
    {
     "id": "types-sizes-businesses:practice:6660d5bb",
@@ -2445,14 +2445,14 @@
     "command": "Calculate",
     "marks": 4,
     "question": "Imani Ceramics faces the demand curve P = 60 − 2Q, where Q is output in thousands of units a month, and a constant marginal cost of $20. Calculate her profit-maximising output and the price she would charge. (4 marks)",
-    "guidance": "Show the working, because a Calculate involves several stages (WEC13 Appendix 6). Marginal revenue has twice the slope of a linear demand curve, so MR = 60 − 4Q. Profit is maximised where MC = MR: 60 − 4Q = 20, so 4Q = 40 and Q = 10, which is 10,000 units a month. Substitute back into the DEMAND curve, not into MR, for the price: P = 60 − 2 × 10 = $40. Reading the price off the MR line instead of the demand curve is the commonest error and gives $20."
+    "guidance": "Show the working, because a Calculate involves several stages (WEC13 Appendix 6). Marginal revenue has twice the slope of a linear demand curve, so MR = 60 − 4Q. Profit is maximised where MC = MR: 60 − 4Q = 20, so 4Q = 40 and Q = 10, which is 10,000 units a month. Substitute back into the DEMAND curve, not into MR, for the price: P = 60 − 2 × 10 = $40. Reading the price off the MR line instead of the demand curve gives $20."
    },
    {
     "id": "types-sizes-businesses:practice:3cb79ed0",
     "command": "Draw",
     "marks": 4,
     "question": "Draw a diagram showing a firm's average revenue, marginal revenue and marginal cost curves, and label the profit-maximising output and price. (4 marks)",
-    "guidance": "An accurately labelled diagram (WEC13 Appendix 6). It needs: output on the horizontal axis and price and cost in dollars a unit on the vertical, both labelled; a downward-sloping AR curve; an MR curve drawn twice as steep, starting from the same point on the vertical axis; a marginal cost curve; the output labelled where MC cuts MR; and the price read UP from that output to the AR curve, not to the MR curve. Reading the price off MR is the commonest error in an otherwise correct diagram."
+    "guidance": "An accurately labelled diagram (WEC13 Appendix 6). It needs: output on the horizontal axis and price and cost in dollars a unit on the vertical, both labelled; a downward-sloping AR curve; an MR curve drawn twice as steep, starting from the same point on the vertical axis; a marginal cost curve; the output labelled where MC cuts MR; and the price read UP from that output to the AR curve, not to the MR curve. Reading the price off MR instead of AR is what turns an otherwise correct diagram into the wrong price."
    },
    {
     "id": "types-sizes-businesses:practice:a5f0810d",
@@ -2566,9 +2566,9 @@
     "back": "The <strong>public sector</strong> is defined by <strong>state ownership</strong>, not by who the customers are. A supermarket serves the public and is entirely private."
    },
    {
-    "id": "types-sizes-businesses:card:670396da",
+    "id": "types-sizes-businesses:card:22354a58",
     "front": "What is the difference between a demerger and a divestment?",
-    "back": "A <strong>demerger</strong> splits a business into a separate company owned by the <strong>same shareholders</strong> — no buyer, no payment. A <strong>divestment</strong> sells a division to <strong>another firm</strong> for cash. The test is whether anyone bought it."
+    "back": "A <strong>demerger</strong> splits a business into a separate company owned by the <strong>same owners</strong> — no buyer, no payment. A <strong>divestment</strong> sells a division to <strong>another firm</strong> for cash. The test is whether anyone bought it."
    },
    {
     "id": "types-sizes-businesses:card:282d3799",
@@ -2581,9 +2581,9 @@
     "back": "Because a roastery and a coffee farm are both in coffee and are at <strong>different stages</strong> of the chain, which makes that deal vertical. Horizontal needs the same STAGE of production."
    },
    {
-    "id": "types-sizes-businesses:card:311b76ba",
+    "id": "types-sizes-businesses:card:8c6c6047",
     "front": "Give one advantage and one disadvantage specific to vertical integration.",
-    "back": "<strong>For:</strong> it secures supply and quality (backward) or a guaranteed outlet (forward). <strong>Against:</strong> the firm must run a business it may not understand, and loses the discipline of buying from whoever is cheapest."
+    "back": "<strong>For:</strong> it secures supply and quality (backward) or a guaranteed outlet (forward). <strong>Against:</strong> it loses the discipline of buying from whoever is cheapest, and by refusing to deal with rivals it can attract a regulator without ever having removed a competitor."
    },
    {
     "id": "types-sizes-businesses:card:e18236af",
@@ -2627,26 +2627,27 @@
     "title": "The Five Types of Business",
     "description": "The five types of business organisation the specification lists at 1a, set against who owns each one, where any surplus may go, and who controls it. The three columns are what separate them from one another.",
     "checklist": [
-     "All five types named: private sector, state-owned, not-for-profit, co-operative, joint venture",
+     "All five bullets covered: private sector, state-owned, for-profit and not-for-profit, co-operative, joint venture",
      "Each row states who owns the organisation",
      "Each row states where the surplus may go",
      "The co-operative row shows one member, one vote",
-     "The joint venture row shows ownership shared between parent firms that remain separate"
+     "The joint venture row shows ownership shared between parent firms that remain separate",
+     "It is stated that ownership and purpose are different questions, so the categories overlap"
     ],
-    "svg": "<svg width=\"500\" height=\"300\" viewBox=\"0 0 500 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrBlue\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#3b82f6\"/></marker><marker id=\"arrAmber\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#f59e0b\"/></marker><marker id=\"arrGreen\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#059669\"/></marker></defs><text x=\"18\" y=\"30\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">Who owns it, where the surplus goes, and who controls it</text><text x=\"18\" y=\"50\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"600\" text-anchor=\"start\">Type</text><text x=\"168\" y=\"50\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"600\" text-anchor=\"start\">Owner</text><text x=\"292\" y=\"50\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"600\" text-anchor=\"start\">Surplus</text><text x=\"408\" y=\"50\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"600\" text-anchor=\"start\">Control</text><line x1=\"18\" y1=\"56\" x2=\"484\" y2=\"56\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"22\" y=\"102\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">Private sector organisation</text><text x=\"168\" y=\"102\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Private individuals or firms</text><text x=\"292\" y=\"102\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">To the owners</text><text x=\"408\" y=\"102\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">The owners</text><rect x=\"18\" y=\"116\" width=\"466\" height=\"34\" fill=\"#475569\" opacity=\"0.18\"/><text x=\"22\" y=\"142\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">State-owned enterprise (public sector)</text><text x=\"168\" y=\"142\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">The government</text><text x=\"292\" y=\"142\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">To the state, or reinvested</text><text x=\"408\" y=\"142\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Set politically</text><text x=\"22\" y=\"182\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">Not-for-profit organisation</text><text x=\"168\" y=\"182\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Trustees or members</text><text x=\"292\" y=\"182\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Retained for its purpose</text><text x=\"408\" y=\"182\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Trustees or members</text><rect x=\"18\" y=\"196\" width=\"466\" height=\"34\" fill=\"#475569\" opacity=\"0.18\"/><text x=\"22\" y=\"222\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">Co-operative</text><text x=\"168\" y=\"222\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Its members, who use it</text><text x=\"292\" y=\"222\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Shared among members by use</text><text x=\"408\" y=\"222\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">One member, one vote</text><text x=\"22\" y=\"262\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">Joint venture</text><text x=\"168\" y=\"262\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Two or more parent firms</text><text x=\"292\" y=\"262\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Shared between the parents</text><text x=\"408\" y=\"262\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">The parents jointly</text><text x=\"18\" y=\"284\" fill=\"#7a8299\" font-size=\"9.5\" font-weight=\"400\" text-anchor=\"start\">A co-operative is the only row where control does not follow capital.</text></svg>"
+    "svg": "<svg width=\"500\" height=\"344\" viewBox=\"0 0 500 344\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrBlue\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#3b82f6\"/></marker><marker id=\"arrAmber\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#f59e0b\"/></marker><marker id=\"arrGreen\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#059669\"/></marker></defs><text x=\"18\" y=\"30\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">Who owns it, where the surplus goes, and who controls it</text><text x=\"18\" y=\"50\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"600\" text-anchor=\"start\">Type</text><text x=\"168\" y=\"50\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"600\" text-anchor=\"start\">Owner</text><text x=\"292\" y=\"50\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"600\" text-anchor=\"start\">Surplus</text><text x=\"408\" y=\"50\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"600\" text-anchor=\"start\">Control</text><line x1=\"18\" y1=\"56\" x2=\"484\" y2=\"56\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"22\" y=\"92\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">Private sector organisation</text><text x=\"168\" y=\"92\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Private individuals or firms</text><text x=\"292\" y=\"92\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">To the owners</text><text x=\"408\" y=\"92\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">The owners</text><rect x=\"18\" y=\"102\" width=\"466\" height=\"30\" fill=\"#475569\" opacity=\"0.18\"/><text x=\"22\" y=\"128\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">State-owned enterprise (public sector)</text><text x=\"168\" y=\"128\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">The government</text><text x=\"292\" y=\"128\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">To the state, or reinvested</text><text x=\"408\" y=\"128\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Set politically</text><text x=\"22\" y=\"164\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">For-profit organisation</text><text x=\"168\" y=\"164\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Whoever supplied the capital</text><text x=\"292\" y=\"164\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Distributed to the owners</text><text x=\"408\" y=\"164\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">The owners</text><rect x=\"18\" y=\"174\" width=\"466\" height=\"30\" fill=\"#475569\" opacity=\"0.18\"/><text x=\"22\" y=\"200\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">Not-for-profit organisation</text><text x=\"168\" y=\"200\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">No private owners</text><text x=\"292\" y=\"200\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Retained for its purpose</text><text x=\"408\" y=\"200\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Trustees or members</text><text x=\"22\" y=\"236\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">Co-operative</text><text x=\"168\" y=\"236\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Its members, who use it</text><text x=\"292\" y=\"236\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Shared among members by use</text><text x=\"408\" y=\"236\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">One member, one vote</text><rect x=\"18\" y=\"246\" width=\"466\" height=\"30\" fill=\"#475569\" opacity=\"0.18\"/><text x=\"22\" y=\"272\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">Joint venture</text><text x=\"168\" y=\"272\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Two or more parent firms</text><text x=\"292\" y=\"272\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Shared between the parents</text><text x=\"408\" y=\"272\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">The parents jointly</text><text x=\"18\" y=\"296\" fill=\"#7a8299\" font-size=\"9.5\" font-weight=\"400\" text-anchor=\"start\">The first two rows divide by OWNERSHIP, the next two by PURPOSE — so they overlap:</text><text x=\"18\" y=\"310\" fill=\"#7a8299\" font-size=\"9.5\" font-weight=\"400\" text-anchor=\"start\">most not-for-profits are private sector. A co-operative is the only row where control</text><text x=\"18\" y=\"324\" fill=\"#7a8299\" font-size=\"9.5\" font-weight=\"400\" text-anchor=\"start\">does not follow capital.</text></svg>"
    },
    {
     "id": "types-sizes-businesses:diagram:32abe8ef",
     "title": "How Size Is Measured",
     "description": "Two firms measured by number of employees and by capital employed. The two measures rank them in opposite orders, which is why an answer has to name the measure it is using rather than call a firm large.",
     "checklist": [
-     "Both measures named: number of employees, capital employed",
+     "Both measures named, each with its unit: number of employees, capital employed in $m",
      "The same two firms appear on both measures",
      "The two measures put the firms in opposite orders",
      "Each bar is labelled with its own figure",
      "The point stated: name the measure before calling a firm large"
     ],
-    "svg": "<svg width=\"500\" height=\"300\" viewBox=\"0 0 500 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrBlue\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#3b82f6\"/></marker><marker id=\"arrAmber\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#f59e0b\"/></marker><marker id=\"arrGreen\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#059669\"/></marker></defs><text x=\"18\" y=\"30\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">The same two firms, measured two ways</text><text x=\"18\" y=\"48\" fill=\"#7a8299\" font-size=\"9.5\" font-weight=\"400\" text-anchor=\"start\">Each measure is scaled against the larger firm on that measure.</text><text x=\"18\" y=\"66\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Number of employees</text><text x=\"142\" y=\"95\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">Refinery</text><rect x=\"150\" y=\"78\" width=\"30\" height=\"26\" fill=\"#3b82f6\"/><text x=\"186\" y=\"95\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">400</text><text x=\"142\" y=\"137\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">Cleaning contractor</text><rect x=\"150\" y=\"120\" width=\"300\" height=\"26\" fill=\"#3b82f6\"/><text x=\"456\" y=\"137\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">4000</text><text x=\"18\" y=\"162\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Capital employed</text><text x=\"142\" y=\"191\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">Refinery</text><rect x=\"150\" y=\"174\" width=\"300\" height=\"26\" fill=\"#f59e0b\"/><text x=\"456\" y=\"191\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">900</text><text x=\"142\" y=\"233\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">Cleaning contractor</text><rect x=\"150\" y=\"216\" width=\"10\" height=\"26\" fill=\"#f59e0b\"/><text x=\"166\" y=\"233\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">30</text><text x=\"18\" y=\"276\" fill=\"#7a8299\" font-size=\"9.5\" font-weight=\"400\" text-anchor=\"start\">Ranked by employees the contractor is larger; by capital employed the refinery is.</text></svg>"
+    "svg": "<svg width=\"500\" height=\"300\" viewBox=\"0 0 500 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrBlue\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#3b82f6\"/></marker><marker id=\"arrAmber\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#f59e0b\"/></marker><marker id=\"arrGreen\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#059669\"/></marker></defs><text x=\"18\" y=\"30\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">The same two firms, measured two ways</text><text x=\"18\" y=\"48\" fill=\"#7a8299\" font-size=\"9.5\" font-weight=\"400\" text-anchor=\"start\">Each measure is scaled against the larger firm on that measure.</text><text x=\"18\" y=\"66\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Number of employees</text><text x=\"142\" y=\"95\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">Refinery</text><rect x=\"150\" y=\"78\" width=\"30\" height=\"26\" fill=\"#3b82f6\"/><text x=\"186\" y=\"95\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">400</text><text x=\"142\" y=\"137\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">Cleaning contractor</text><rect x=\"150\" y=\"120\" width=\"300\" height=\"26\" fill=\"#3b82f6\"/><text x=\"456\" y=\"137\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">4000</text><text x=\"18\" y=\"162\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Capital employed ($m)</text><text x=\"142\" y=\"191\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">Refinery</text><rect x=\"150\" y=\"174\" width=\"300\" height=\"26\" fill=\"#f59e0b\"/><text x=\"456\" y=\"191\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">900 $m</text><text x=\"142\" y=\"233\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">Cleaning contractor</text><rect x=\"150\" y=\"216\" width=\"10\" height=\"26\" fill=\"#f59e0b\"/><text x=\"166\" y=\"233\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">30 $m</text><text x=\"18\" y=\"276\" fill=\"#7a8299\" font-size=\"9.5\" font-weight=\"400\" text-anchor=\"start\">Ranked by employees the contractor is larger; by capital employed the refinery is.</text></svg>"
    },
    {
     "id": "types-sizes-businesses:diagram:cb26fb4e",
@@ -2708,7 +2709,7 @@
       "A viable expansion goes unfunded, because the finance costs more than it would return.",
       "The firm stays small, so the next loan is priced exactly the same way."
      ],
-     "result": "Access to finance is a constraint that reproduces itself, which is why the size distribution of firms is so stable"
+     "result": "Access to finance is a constraint that reproduces itself: nothing in the chain moves the firm out of the position that caused it"
     },
     {
      "title": "Why Imani Ceramics's objective changes her price",
@@ -2738,7 +2739,7 @@
     },
     {
      "title": "The gains from a merger are expected; the costs are certain",
-     "content": "Every argument for a merger is a forecast: the synergies, the savings, the market that will open. The costs of combining two workforces, two sets of systems and two managements are incurred whatever happens. That asymmetry is worth stating in any evaluation of a growth strategy, and it is the reason so many mergers are followed some years later by a demerger of the same businesses."
+     "content": "Every argument for a merger is a forecast: the synergies, the savings, the market that will open. The costs of combining two workforces, two sets of systems and two managements are incurred whatever happens. That asymmetry is worth stating in any evaluation of a growth strategy, and it is what a later demerger of the same businesses is an admission of."
     },
     {
      "title": "Whether growth helps workers depends on how the firm grew",

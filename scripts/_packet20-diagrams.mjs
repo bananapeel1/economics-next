@@ -40,17 +40,18 @@ const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
  * table — `schema.body-type` allows paragraph, subheading, flow and bullets only — so a diagram is
  * the only surface in the schema that can carry a grid (packet 17's specGap-05).
  */
-export const TYPES_TBL = { x0: 18, y0: 62, rowH: 40, colOwner: 168, colSurplus: 292, colControl: 408, w: 466 };
+export const TYPES_TBL = { x0: 18, y0: 56, rowH: 36, colOwner: 168, colSurplus: 292, colControl: 408, w: 466 };
 export const TYPE_ROWS = [
   ['Private sector organisation', 'Private individuals or firms', 'To the owners', 'The owners'],
   ['State-owned enterprise (public sector)', 'The government', 'To the state, or reinvested', 'Set politically'],
-  ['Not-for-profit organisation', 'Trustees or members', 'Retained for its purpose', 'Trustees or members'],
+  ['For-profit organisation', 'Whoever supplied the capital', 'Distributed to the owners', 'The owners'],
+  ['Not-for-profit organisation', 'No private owners', 'Retained for its purpose', 'Trustees or members'],
   ['Co-operative', 'Its members, who use it', 'Shared among members by use', 'One member, one vote'],
   ['Joint venture', 'Two or more parent firms', 'Shared between the parents', 'The parents jointly'],
 ];
 
 const typesTable = [
-  open(300),
+  open(344),
   t(TYPES_TBL.x0, 30, 'Who owns it, where the surplus goes, and who controls it', { size: 12, weight: 600 }),
   t(TYPES_TBL.x0, 50, 'Type', { size: 9, fill: AXIS, weight: 600 }),
   t(TYPES_TBL.colOwner, 50, 'Owner', { size: 9, fill: AXIS, weight: 600 }),
@@ -67,7 +68,9 @@ const typesTable = [
       t(TYPES_TBL.colControl, y, esc(control), { size: 9 }),
     ].join('');
   }),
-  t(TYPES_TBL.x0, 284, 'A co-operative is the only row where control does not follow capital.', { size: 9.5, fill: MUTED }),
+  t(TYPES_TBL.x0, 296, 'The first two rows divide by OWNERSHIP, the next two by PURPOSE — so they overlap:', { size: 9.5, fill: MUTED }),
+  t(TYPES_TBL.x0, 310, 'most not-for-profits are private sector. A co-operative is the only row where control', { size: 9.5, fill: MUTED }),
+  t(TYPES_TBL.x0, 324, 'does not follow capital.', { size: 9.5, fill: MUTED }),
   close,
 ].join('');
 
@@ -76,11 +79,12 @@ const typesDiagram = {
   title: 'The Five Types of Business',
   description: 'The five types of business organisation the specification lists at 1a, set against who owns each one, where any surplus may go, and who controls it. The three columns are what separate them from one another.',
   checklist: [
-    'All five types named: private sector, state-owned, not-for-profit, co-operative, joint venture',
+    'All five bullets covered: private sector, state-owned, for-profit and not-for-profit, co-operative, joint venture',
     'Each row states who owns the organisation',
     'Each row states where the surplus may go',
     'The co-operative row shows one member, one vote',
     'The joint venture row shows ownership shared between parent firms that remain separate',
+    'It is stated that ownership and purpose are different questions, so the categories overlap',
   ],
   svg: typesTable,
 };
@@ -100,12 +104,12 @@ const sizeChart = [
   open(300),
   t(18, 30, 'The same two firms, measured two ways', { size: 12, weight: 600 }),
   t(18, 48, 'Each measure is scaled against the larger firm on that measure.', { size: 9.5, fill: MUTED }),
-  ...[['employees', 'Number of employees', BLUE], ['capital', 'Capital employed', AMBER]].flatMap(([k, label, colour], gi) => [
+  ...[['employees', 'Number of employees', BLUE, ''], ['capital', 'Capital employed ($m)', AMBER, 'm']].flatMap(([k, label, colour, unit], gi) => [
     t(18, r2(sizeBarY(gi, 0) - 12), label, { size: 10, fill: AXIS, weight: 600 }),
     ...SIZE_FIRMS.map((f, fi) => [
       t(SBAR.x0 - 8, r2(sizeBarY(gi, fi) + 17), esc(f.name), { size: 9, anchor: 'end' }),
       rect(SBAR.x0, sizeBarY(gi, fi), sizeBarW(k, f[k]), SBAR.barH, colour),
-      t(r2(SBAR.x0 + sizeBarW(k, f[k]) + 6), r2(sizeBarY(gi, fi) + 17), String(f[k]), { size: 9.5, weight: 600 }),
+      t(r2(SBAR.x0 + sizeBarW(k, f[k]) + 6), r2(sizeBarY(gi, fi) + 17), `${f[k]}${unit ? ` $${unit}` : ''}`, { size: 9.5, weight: 600 }),
     ].join('')),
   ]),
   t(18, 276, 'Ranked by employees the contractor is larger; by capital employed the refinery is.', { size: 9.5, fill: MUTED }),
@@ -117,7 +121,7 @@ const sizeDiagram = {
   title: 'How Size Is Measured',
   description: 'Two firms measured by number of employees and by capital employed. The two measures rank them in opposite orders, which is why an answer has to name the measure it is using rather than call a firm large.',
   checklist: [
-    'Both measures named: number of employees, capital employed',
+    'Both measures named, each with its unit: number of employees, capital employed in $m',
     'The same two firms appear on both measures',
     'The two measures put the firms in opposite orders',
     'Each bar is labelled with its own figure',

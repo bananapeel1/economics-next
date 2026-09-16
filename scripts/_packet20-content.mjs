@@ -225,7 +225,7 @@ const whySomeFirmsStaySmall = (() => {
     ],
     realExample: { emoji: '✂️', text: 'Barbers, plumbers and independent restaurants remain small in economies of every size. The service is delivered in person, the customer base is local, and a second branch does not make the first one cheaper to run.' },
     misconception: 'Students treat small size as evidence of failure. Growth is one strategy among several. Write instead: many firms remain small because the market is small, the product resists standardisation, or the owner has chosen not to grow.',
-    examMatters: 'An Examine (8 marks, WEC13 Appendix 6) requires knowledge, application and analysis. Two reasons developed into consequences for the firm go further than five reasons named.',
+    examMatters: 'An Examine (8 marks, WEC13 Appendix 6) requires analysis AND evaluation, with a brief assessment of the factors. Two reasons developed and then weighed against each other go further than five reasons named.',
     recall: recall(sid, {
       type: 'classify',
       prompt: 'Sort each firm by the reason it stays small:',
@@ -257,7 +257,7 @@ const whyOtherFirmsGrow = (() => {
     ],
     realExample: { emoji: '📦', text: 'Delivery networks grow because a depot, a sorting system and a fleet cost much the same whether they handle a thousand parcels a day or ten thousand. The second thousand is far cheaper to carry than the first.' },
     misconception: 'Students write that growth always reduces average cost. It reduces the fixed cost per unit, which is not the whole of average cost. Write instead: growth spreads fixed costs over more units, and whether average cost falls depends on what happens to the other costs.',
-    examMatters: 'A Discuss (14 marks, WEC13 Appendix 6) is levels-marked and wants both sides weighed and a judgement reached. Setting a reason for growing directly against a reason for staying small is the comparison the question is asking for.',
+    examMatters: 'A Discuss (14 marks, WEC13 Appendix 6) requires analysis and evaluation, and wants both sides weighed and a judgement reached. Setting a reason for growing directly against a reason for staying small is the comparison the question is asking for.',
     recall: recall(sid, {
       type: 'fillin',
       prompt: `Complete the arithmetic that explains why a larger output can cost less per unit, using Imani's fixed costs of ${total(FIXED)} a month:`,
@@ -330,7 +330,7 @@ const mergersAndTakeovers = (() => {
       prompt: 'Complete the distinction between the two forms of external growth:',
       template: [
         'In a ___, both sets of owners agree to combine into one new business',
-        'In a ___, one firm buys control of another and decides for itself',
+        'In a ___ or acquisition, one firm buys control of another and decides for itself',
         'Either way the growth is ___, because the capacity already exists',
       ],
       answers: ['merger', 'takeover', 'immediate'],
@@ -429,7 +429,7 @@ const conglomerateIntegration = (() => {
     ],
     realExample: { emoji: '🧳', text: 'Large groups have combined businesses as unlike as hotels, engineering and food processing. What holds such a group together is the flow of capital between the parts, not anything about what the parts make.' },
     misconception: 'Students treat conglomerate integration as the safest kind because risk is spread. Risk to the firm falls; the risk of managing an unfamiliar business badly rises. Write instead: diversification steadies profits but removes the expertise the other directions rely on.',
-    examMatters: 'A Discuss (14 marks, WEC13 Appendix 6) is levels-marked and wants a judgement. The strongest line on a conglomerate merger weighs the steadier profit against the loss of expertise, rather than listing both and stopping.',
+    examMatters: 'A Discuss (14 marks, WEC13 Appendix 6) requires analysis and evaluation, and wants a judgement. The strongest line on a conglomerate merger weighs the steadier profit against the loss of expertise, rather than listing both and stopping.',
     recall: recall(sid, {
       type: 'match',
       prompt: 'Match each type of integration to the gain that is specific to it:',
@@ -452,16 +452,16 @@ const advantagesAndDisadvantages = (() => {
     body: [
       { type: 'paragraph', text: 'The specification asks for the advantages and disadvantages of **each type** of merger or takeover. They are not the same, because what each direction buys is not the same.' },
       { type: 'subheading', text: 'Horizontal' },
-      { type: 'paragraph', text: '**For:** market share and influence over price rise at once; duplicated head offices, systems and networks can be removed; the rival\'s brands and skilled staff arrive ready-made. **Against:** competition authorities may block it or force parts to be sold; consumers face less choice; the removal of duplication is the removal of jobs.' },
+      { type: 'paragraph', text: '**For:** market share and influence over price rise at once; duplicated head offices and networks can be removed; the rival\'s brands and staff arrive ready-made. **Against:** competition authorities may block it or force parts to be sold; consumers face less choice; removing duplication removes jobs.' },
       { type: 'subheading', text: 'Vertical' },
       { type: 'paragraph', text: '**For (backward):** supply, quality and input cost are secured at the source. **For (forward):** an outlet is guaranteed and the retailer\'s margin is captured. **Against:** the firm now runs a business it may not understand; it loses the discipline of buying from whoever is cheapest; and by refusing to deal with rivals it can attract a regulator even though it never removed a competitor.' },
       { type: 'subheading', text: 'Conglomerate' },
       { type: 'paragraph', text: '**For:** profits are steadier because unrelated markets rarely fall together, and capital can be moved to where the returns are better. **Against:** no operational gains exist at all, and managers run an industry they do not know.' },
-      { type: 'paragraph', text: 'One caution applies to all three. The gains are **expected** at the time of the deal and the costs are certain, which is why so many mergers do not deliver what was claimed for them.' },
+      { type: 'paragraph', text: 'One caution applies to all three. The gains are **expected** at the time of the deal and the costs are certain, so a merger can fail to deliver what was claimed for it without anything going unusually wrong.' },
     ],
     realExample: { emoji: '⚖️', text: 'Competition authorities in many economies have approved large horizontal mergers only on condition that specific outlets or routes are sold to a rival, so that the market keeps a competitor it would otherwise have lost.' },
     misconception: 'Students write one list of merger advantages and apply it everywhere. Write instead: name the direction first, because securing supply is an argument for vertical integration and says nothing about a conglomerate.',
-    examMatters: 'An Evaluate (20 marks, WEC13 Appendix 6) is levels-marked and requires a supported judgement. Arguing the case for the specific direction in the extract, and against it, goes further than a general case about mergers.',
+    examMatters: 'An Evaluate (20 marks, WEC13 Appendix 6) requires multi-stage chains of reasoning and a supported judgement. Arguing the case for the specific direction the question names, and against it, goes further than a general case about mergers.',
     recall: recall(sid, {
       type: 'classify',
       prompt: 'Sort each argument by the type of integration it actually belongs to:',
@@ -524,17 +524,17 @@ const ownerObjectivesAndRegulation = (() => {
       { type: 'paragraph', text: 'Not every owner wants a larger business. Growth means borrowing, delegating, hiring managers and answering to lenders or new owners, and an owner who values independence or predictable hours may decline all of it.' },
       { type: 'paragraph', text: 'This constraint is different in kind: nothing is stopping the firm. The market may be large and the finance available, and the firm still does not grow, because the person who decides does not want it to.' },
       { type: 'subheading', text: 'Government regulation and bureaucracy' },
-      { type: 'paragraph', text: 'Rules on employment, safety, reporting, tax and the environment apply to firms of every size, but the burden does not fall evenly. Much of the cost of complying is **fixed** — someone must read the rules and file the returns whether the firm has ten employees or ten thousand.' },
+      { type: 'paragraph', text: 'Rules on employment, safety, reporting and tax apply to firms of every size, but the burden does not fall evenly. Much of the cost of complying is **fixed** — someone must read the rules and file the returns whether the firm has ten employees or ten thousand.' },
       { type: 'bullets', items: [
-        '**Thresholds.** Many obligations begin at a given number of employees or level of turnover, so growing past one adds a cost in a single step.',
-        '**Time as well as money.** Approvals, licences and planning decisions delay an expansion even where the firm can afford them.',
+        '**Thresholds.** Many obligations begin at a given number of employees or turnover, so crossing one adds a cost in a single step.',
+        '**Time as well as money.** Approvals, licences and planning decisions delay an expansion the firm can well afford.',
         '**Competition rules.** A firm large enough to affect a market faces scrutiny a small firm never encounters.',
       ] },
       { type: 'paragraph', text: 'The effect is to make the step up in size more expensive than the size itself, which is why firms sometimes stop just below a threshold rather than cross it.' },
     ],
     realExample: { emoji: '📋', text: 'In many economies a firm crossing an employee threshold acquires reporting and consultation duties overnight. The extra staff member is cheap; the obligations that arrive with them are not.' },
     misconception: 'Students say regulation stops firms growing. It raises the cost of growing, and falls hardest at the thresholds. Write instead: compliance costs are largely fixed, so they weigh more heavily on a smaller firm and jump when a threshold is crossed.',
-    examMatters: 'An Examine (8 marks, WEC13 Appendix 6) requires the mechanism and its consequence. For regulation the mechanism is that compliance cost is largely fixed; the consequence is that it bears on the smaller firm.',
+    examMatters: 'An Examine (8 marks, WEC13 Appendix 6) requires the mechanism, its consequence and a brief assessment. For regulation: compliance cost is largely fixed, so it bears on the smaller firm — then weigh that against the size of the market.',
     recall: recall(sid, {
       type: 'fillin',
       prompt: 'Complete the four constraints on business growth the specification lists:',
@@ -576,7 +576,7 @@ const impactOfGrowthOnBusinesses = (() => {
     ],
     realExample: { emoji: '🏗️', text: 'A construction firm that doubles in size gets better prices on materials and needs a layer of managers it did not need before. Both arrive together.' },
     misconception: 'Students write that growth makes a firm more efficient. It changes which costs matter: fixed costs per unit fall while coordination costs rise. Write instead: growth spreads fixed costs and complicates coordination, and the net effect depends on the firm.',
-    examMatters: 'A Discuss (14 marks, WEC13 Appendix 6) is levels-marked and wants both sides and a judgement. Two effects developed on each side, weighed against each other, is the shape the command word asks for.',
+    examMatters: 'A Discuss (14 marks, WEC13 Appendix 6) requires analysis and evaluation, and wants both sides and a judgement. Two effects developed on each side, weighed against each other, is the shape the command word asks for.',
     recall: recall(sid, {
       type: 'classify',
       prompt: 'Sort each consequence of growth by whether it helps the firm or hinders it:',
@@ -610,7 +610,7 @@ const impactOfGrowthOnWorkersAndConsumers = (() => {
     ],
     realExample: { emoji: '🛒', text: 'Large retail chains reach prices a single shop cannot match, and where one chain ends up alone in a small town the prices on its shelves need not stay there.' },
     misconception: 'Students write that growth benefits consumers through lower prices. Lower costs make lower prices possible; competition is what makes them happen. Write instead: the saving reaches consumers only where the firm still faces rivals who would otherwise take the business.',
-    examMatters: 'An Evaluate (20 marks, WEC13 Appendix 6) is levels-marked and requires a supported judgement. The condition — whether competition survives the growth — is a stronger basis for judgement than asserting that consumers gain or lose.',
+    examMatters: 'An Evaluate (20 marks, WEC13 Appendix 6) requires multi-stage chains of reasoning and a supported judgement. The condition — whether competition survives the growth — is a stronger basis for judgement than asserting that consumers gain or lose.',
     recall: recall(sid, {
       type: 'reorder',
       prompt: 'Put these stages in order to show when a cost saving from growth actually reaches consumers:',
@@ -637,7 +637,7 @@ const reasonsForDemergers = (() => {
   return {
     id: sid,
     title: 'Reasons for Demergers',
-    keyIdea: 'A demerger splits part of a firm off into a separate company owned by the same shareholders — which is not the same as selling it to somebody else.',
+    keyIdea: 'A demerger splits part of a firm off into a separate company owned by the same owners — which is not the same as selling it to somebody else.',
     body: [
       { type: 'paragraph', text: 'A **demerger** is the separation of part of a business into an independent company. The parent firm does not receive a payment: the new company\'s shares go to the parent\'s existing owners, who end up holding two companies where they held one.' },
       { type: 'paragraph', text: 'That is the distinction the specification is asking for, and it is the one most often lost. Selling a division **to another firm** is a **divestment** or sell-off: the division changes owner and cash comes in. In a demerger nothing is sold and no new owner appears — the business is simply split in two.' },
@@ -650,14 +650,14 @@ const reasonsForDemergers = (() => {
       ] },
       { type: 'paragraph', text: 'A demerger is therefore not a reversal of a failed merger so much as an admission that two businesses are worth more apart than together.' },
     ],
-    realExample: { emoji: '💊', text: 'GSK separated its consumer healthcare business into Haleon, a company listed in its own right whose shares went to GSK\'s existing shareholders. Nobody bought it: the group was divided, and its owners held two companies afterwards.' },
-    misconception: 'Students describe selling a division to another company as a demerger. Write instead: a demerger splits a business into a separate company owned by the same shareholders; a sale to another firm is a divestment.',
+    realExample: { emoji: '💊', text: 'GSK separated its consumer healthcare business into Haleon, a company listed in its own right whose shares went to GSK\'s existing owners. Nobody bought it: the group was divided, and its owners held two companies afterwards.' },
+    misconception: 'Students describe selling a division to another company as a demerger. Write instead: a demerger splits a business into a separate company owned by the same owners; a sale to another firm is a divestment.',
     examMatters: 'A Define (2 marks, WEC13 Appendix 6) on a demerger must say what happens to ownership. Saying only that a firm splits up does not separate a demerger from a divestment.',
     recall: recall(sid, {
       type: 'classify',
       prompt: 'Sort each event by whether it is a demerger or a divestment:',
       groups: [
-        { name: 'Demerger', items: ['A division becomes a separate listed company owned by the same shareholders', 'A group splits in two and its owners hold shares in both'], why: 'No buyer appears and no payment is received: the business is divided, not sold' },
+        { name: 'Demerger', items: ['A division becomes a separate listed company owned by the same owners', 'A group splits in two and its owners hold shares in both'], why: 'No buyer appears and no payment is received: the business is divided, not sold' },
         { name: 'Divestment', items: ['A division is sold to a competitor for cash', 'A group sells a subsidiary to an investment firm'], why: 'The division changes owner and the seller receives a payment for it' },
       ],
     }),
@@ -687,11 +687,11 @@ const impactOfDemergers = (() => {
         '**For:** two focused firms may serve their markets better than one distracted group, and where the demerger restores a competitor, prices face pressure again.',
         '**Against:** the duplicated overheads have to be paid for, and any saving the combined group had been passing on is gone.',
       ] },
-      { type: 'paragraph', text: 'The pattern across all three is the same trade: **focus against shared cost**. Whether it is worth making depends on how little the two businesses had in common.' },
+      { type: 'paragraph', text: 'The pattern across all three is one trade: **focus against shared cost**, worth making when the two businesses had little in common.' },
     ],
     realExample: { emoji: '🔀', text: 'When a group separates a fast-growing division from a slow, stable one, each ends up able to raise money on the terms that suit it — the grower for expansion, the steady business for income — which the combined group could not do at once.' },
     misconception: 'Students treat a demerger as damage control after a failed merger. Write instead: a demerger trades shared costs for focus, and it is worth doing when the two businesses gain little from being run together.',
-    examMatters: 'An Examine (8 marks, WEC13 Appendix 6) wants the mechanism and a consequence for a named group. Taking businesses, workers or consumers in turn keeps the answer on the group the question asked about.',
+    examMatters: 'An Examine (8 marks, WEC13 Appendix 6) wants the mechanism, a consequence for the named group and a brief assessment of the factors. Taking businesses, workers or consumers in turn keeps the answer on the group the question asked about.',
     recall: recall(sid, {
       type: 'match',
       prompt: 'Match each group to the trade a demerger makes for them:',
@@ -723,10 +723,10 @@ const profitMaximisation = (() => {
       { type: 'bullets', items: [
         `**Setting MC = MR:** ${A} − ${2 * B}Q = ${MC}, so Q = **${units(Q_PROFIT)}** a month.`,
         `**The price that sells it:** P = ${A} − ${B} × ${Q_PROFIT} = **${price(arAt(Q_PROFIT))}**.`,
-        `**Revenue:** ${price(arAt(Q_PROFIT))} × ${units(Q_PROFIT)} = ${total(trAt(Q_PROFIT))}. **Costs:** ${total(tcAt(Q_PROFIT))}. **Profit: ${total(profitAt(Q_PROFIT))}.**`,
+        `**Revenue** ${total(trAt(Q_PROFIT))}, **costs** ${total(tcAt(Q_PROFIT))}, **profit ${total(profitAt(Q_PROFIT))}**.`,
       ] },
-      { type: 'paragraph', text: `Why stop there? At ${units(Q_PROFIT)} the next unit would add ${price(mrAt(Q_PROFIT + 1))} to revenue and ${price(MC)} to cost, so making it would reduce profit. Below ${units(Q_PROFIT)} the opposite holds and the unit is worth making. The equality marks the turning point, which is why it is the formula.` },
-      { type: 'paragraph', text: `No other output in this section beats ${total(profitAt(Q_PROFIT))}, and the next two chapters show what the firm gives up by choosing one.` },
+      { type: 'paragraph', text: `Why stop there? At ${units(Q_PROFIT)} marginal revenue is exactly ${price(mrAt(Q_PROFIT))}, the same as marginal cost. Past that output marginal revenue keeps falling — by ${units(Q_PROFIT + 1)} it is down to ${price(mrAt(Q_PROFIT + 1))} while each unit still costs ${price(MC)} — so those units subtract from profit. Below ${units(Q_PROFIT)} marginal revenue is above ${price(MC)} and the units are worth making. The equality is the turning point, which is why it is the formula.` },
+      { type: 'paragraph', text: `No other output beats ${total(profitAt(Q_PROFIT))}, and the next two chapters show what a firm gives up by choosing a different objective.` },
     ],
     realExample: { emoji: '🏭', text: 'A manufacturer deciding whether to run an extra shift compares what the shift\'s output will sell for against what the shift costs to run. That comparison is MC against MR, made in the language of the factory floor.' },
     misconception: 'Students write that profit is maximised where revenue is highest or where cost is lowest. Neither is true: the largest gap between them is what matters. Write instead: profit is maximised where MC = MR, which is not where revenue peaks.',
@@ -826,7 +826,7 @@ const satisficing = (() => {
     title: 'Satisficing',
     keyIdea: 'Satisficing is aiming for an outcome good enough to keep every interested party content, rather than the maximum of any one thing.',
     body: [
-      { type: 'paragraph', text: 'The specification lists **behavioural theories: satisficing** alongside the three maximising objectives. **Satisficing** means settling for an outcome that is satisfactory rather than pursuing the maximum — and it is the objective that best describes what large firms actually do.' },
+      { type: 'paragraph', text: 'The specification lists **behavioural theories: satisficing** alongside the three maximising objectives. **Satisficing** means settling for an outcome that is satisfactory rather than pursuing the maximum.' },
       { type: 'paragraph', text: 'The reason is that a firm has more than one group to keep content, and their wants conflict.' },
       { type: 'bullets', items: [
         '**Owners** want a return on the capital they risked.',
@@ -846,10 +846,10 @@ const satisficing = (() => {
       template: [
         'Satisficing aims at an outcome that is ___ rather than at a maximum',
         'It arises because the firm\'s ___ want different things from it',
-        'It is also a response to ___ information, since nobody can locate the true maximum',
+        'It is also a response to information nobody has in ___, since the true maximum cannot be located',
       ],
-      answers: ['satisfactory', 'stakeholders', 'incomplete'],
-      hints: ['good enough, in one word', 'owners, managers, employees, customers, suppliers', 'what nobody has all of'],
+      answers: ['satisfactory', 'stakeholders', 'full'],
+      hints: ['good enough, in one word', 'owners, managers, employees, customers, suppliers', 'the opposite of partial'],
       distractors: ['maximum', 'perfect'],
     }),
   };
@@ -874,7 +874,7 @@ const divorceOfOwnershipFromControl = (() => {
     ],
     realExample: { emoji: '📊', text: 'Firms commonly pay senior managers partly in shares of the company they run, so that a decision good for the manager is more likely to be good for the owners too.' },
     misconception: 'Students write that the principal-agent problem means managers are dishonest. It needs only different objectives and unequal information. Write instead: the agent is pursuing their own objectives, which the principal cannot fully observe.',
-    examMatters: 'An Evaluate (20 marks, WEC13 Appendix 6) is levels-marked and requires a supported judgement. Linking the divorce of ownership from control to the objective the firm actually chose is what turns theory into an argument about that firm.',
+    examMatters: 'An Evaluate (20 marks, WEC13 Appendix 6) requires multi-stage chains of reasoning and a supported judgement. Linking the divorce of ownership from control to the objective the firm actually chose is what turns theory into an argument about that firm.',
     recall: recall(sid, {
       type: 'reorder',
       prompt: 'Put these stages in order to explain how the divorce of ownership from control changes a firm\'s objective:',
@@ -947,7 +947,7 @@ const BLOCKS = [
     title: B5,
     sections: [reasonsForDemergers, impactOfDemergers],
     takeaway: [
-      'A demerger splits a business into a separate company owned by the same shareholders.',
+      'A demerger splits a business into a separate company owned by the same owners.',
       'Selling a division to another firm is a divestment, not a demerger.',
       'Firms demerge for focus, simpler coordination, a clearer valuation, or because a regulator says so.',
       'The trade for businesses, workers and consumers is the same one: focus against shared cost.',
@@ -1043,7 +1043,7 @@ export const NOTES = [
       'Staying small is usually a limit or a choice, never simply failure.',
       'Spreading fixed costs is the growth argument that needs no theory of cost curves.',
     ],
-    examMatters: 'An Examine (8 marks, WEC13 Appendix 6) requires the mechanism and its consequence. Two reasons developed beat five named.',
+    examMatters: 'An Examine (8 marks, WEC13 Appendix 6) requires the mechanism, its consequence and a brief assessment of the factors. Two reasons developed and weighed beat five named.',
   },
   {
     title: B3,
@@ -1062,7 +1062,7 @@ export const NOTES = [
       ] },
       { title: 'ADVANTAGES AND DISADVANTAGES OF EACH TYPE OF MERGER/TAKEOVER', items: [
         mech('Horizontal: share and removed duplication, against regulators, less choice and lost jobs. Vertical: security of supply or of access, against running a business the firm does not know and losing the discipline of buying from whoever is cheapest. Conglomerate: steadier profit, against no operational gain and unfamiliar management.'),
-        mech('The gains are expected at the time of the deal and the costs are certain, which is why so many mergers do not deliver what was claimed for them.'),
+        mech('The gains are expected at the time of the deal and the costs are certain, so a merger can fail to deliver what was claimed for it without anything going unusually wrong.'),
       ] },
     ],
     takeaway: [
@@ -1095,7 +1095,7 @@ export const NOTES = [
       'Organic growth adds jobs; a horizontal merger removes duplicated ones.',
       'Lower cost makes a lower price possible; competition is what makes it happen.',
     ],
-    examMatters: 'A Discuss (14 marks, WEC13 Appendix 6) is levels-marked and wants both sides weighed and a judgement reached.',
+    examMatters: 'A Discuss (14 marks, WEC13 Appendix 6) requires analysis and evaluation, and wants both sides weighed and a judgement reached.',
   },
   {
     title: B5,
@@ -1148,6 +1148,6 @@ export const NOTES = [
       'Revenue maximisation and sales volume maximisation are different objectives with different outputs.',
       'Satisficing is the compromise the principal-agent problem produces.',
     ],
-    examMatters: 'A Calculate (4 marks, WEC13 Appendix 6) involves several stages and expects working. An Evaluate (20 marks) is levels-marked and requires a supported judgement.',
+    examMatters: 'A Calculate (4 marks, WEC13 Appendix 6) involves several stages and expects working. An Evaluate (20 marks) requires multi-stage chains of reasoning and a supported judgement.',
   },
 ];
