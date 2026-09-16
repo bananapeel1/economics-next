@@ -60,12 +60,28 @@ Verify A clean · a 390×844 walk · Layer 6 with two planted canaries · PROGRE
 
 ### Two things that are NOT packet 24's to fix
 
-- **`FREE_QUIZ_MAX = 10` now binds.** Packet 21's section has ten chapters, and `freeQuizPayload()`
-  spends 2 on the Quiz tab before taking one pin per chapter, so **chapters 9 and 10 show a signed-out
-  student no quiz**. A Pro student gets all 43 and every pin resolves. Packet 20 escalated the adjacent
-  problem (the pre-test padding its pool from reserved items). Both are freemium-boundary calls for the
-  founder and no content packet can fix either. Measured, not argued: run
-  `sectionPayload()` over a staged bundle with `isPremium` both ways.
+- **`FREE_QUIZ_MAX = 10` now binds — and the number is not the fix.** Packet 21's section has ten
+  chapters, and `freeQuizPayload()` spends 2 on the Quiz tab *before* taking one pin per chapter
+  (`lib/preview-limits.js:65-66`), so **chapters 9 and 10 show a signed-out student no quiz**. A Pro
+  student gets all 43 and every pin resolves. Packet 20 escalated the adjacent problem (the pre-test
+  padding its pool from reserved items). Measured, not argued: run `sectionPayload()` over a staged
+  bundle with `isPremium` both ways.
+
+  **The obvious answer — raise the cap to 12 — is not the best one, and this is measured too.** The two
+  items spent on the tab before any pin are a design choice, not a constraint (the point is packet 2.1's
+  session's). Take one pin per chapter FIRST and let the tab render the first two of whatever is already
+  in the payload, and on packet 21's own bundle:
+
+  | | items sent | chapters with a quiz | tab shows | pins resolve |
+  |---|---|---|---|---|
+  | shipping: tab first | 10 | **8 of 10** | 2 | yes |
+  | pins first, tab reuses | 10 | **10 of 10** | 2 | yes |
+
+  Same cap, same number of items exposed, two chapters bought back for nothing. The one trade is which
+  overlap the tab's preview has: today it duplicates the pre-test, afterwards it would duplicate a
+  check-in. Packet 20 has already escalated that the pre-test overlaps chapter 1's check-in, so this
+  changes which duplication exists rather than whether one does. **Put both options to the founder, not
+  just the number.** Still his call; still nothing a content packet may change.
 - **`diagram.table-kind` is absent from `audit/validator-baseline.json` entirely** (0 of its 2,432 keys),
   because the baseline was written 2026-09-15 and the rule landed after it in `77eb765`. All 15 of its
   live findings repo-wide therefore read as "new", including one on `measures-economic-performance`'s
