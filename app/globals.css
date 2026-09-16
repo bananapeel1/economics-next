@@ -2406,22 +2406,26 @@ button.sidebar-resource-link {
   color: var(--accent-blue, #3b82f6);
 }
 .lm-complete-posttest-btn:hover { background: var(--accent-blue, #3b82f6); color: #fff; }
+/* The drill is the primary action on this screen (see CompletionScreen): filled, like the quiz
+   button used to be. Its size comes from the shared rule above; the fill and weight are here. */
 .lm-complete-drill-btn {
-  background: none; border: 1.5px solid var(--accent-amber, #f59e0b);
-  color: var(--accent-amber, #f59e0b);
+  background: var(--accent-green); border: 1.5px solid var(--accent-green);
+  color: #fff; padding: 14px; font-size: 15px; font-weight: 700;
 }
+.lm-complete-drill-btn:hover { background: var(--accent-green-dark); border-color: var(--accent-green-dark); transform: translateY(-1px); }
 .lm-complete-drill-btn:hover { background: var(--accent-amber, #f59e0b); color: #fff; }
+/* Secondary now: the quiz is a paid surface and the drill above it is the better free ending. */
 .lm-complete-quiz-btn {
   width: 100%; max-width: 320px;
-  padding: 14px; background: var(--accent-green); color: #fff;
-  border: none; border-radius: 30px;
-  font-size: 15px; font-weight: 700;
+  padding: 12px; background: none; color: var(--text-secondary);
+  border: 1.5px solid var(--border-primary); border-radius: 30px;
+  font-size: 14px; font-weight: 600;
   cursor: pointer; font-family: inherit;
   margin-bottom: 10px; transition: all 0.2s;
   animation: lmCelebrateSlideIn 0.35s ease both;
   animation-delay: 0.79s;
 }
-.lm-complete-quiz-btn:hover { background: var(--accent-green-dark); transform: translateY(-1px); }
+.lm-complete-quiz-btn:hover { border-color: var(--text-secondary); color: var(--text-primary); }
 .lm-complete-practice-row {
   display: flex; gap: 10px; max-width: 320px; width: 100%; margin-bottom: 10px;
   animation: lmCelebrateSlideIn 0.35s ease both; animation-delay: 0.85s;

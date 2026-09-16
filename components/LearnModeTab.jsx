@@ -364,6 +364,14 @@ export default function LearnModeTab({
     if (contentData?.length && !showPretest && !isComplete) trackFunnel('step_view', { sectionId, step: safeStep, totalSteps });
   }, [safeStep, showPretest, isComplete]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  /* The last step's Next finishes the section rather than navigating, so nothing scrolled: the
+     student landed on "Topic complete" already scrolled to where the last step's footer had been,
+     with the heading and their score off-screen above. Reported by the founder, 16 September. This
+     also covers arriving already complete, from a reload or the server's copy of the state. */
+  useEffect(() => {
+    if (isComplete) scrollToTop(true);
+  }, [isComplete, scrollToTop]);
+
   // Empty state
   if (!contentData?.length) {
     return (
@@ -394,6 +402,7 @@ export default function LearnModeTab({
         contentData={contentData} quizData={quizData} scores={scores}
         onNavigateToQuiz={onNavigateToQuiz} onNavigateToTab={onNavigateToTab}
         onStartMixedReview={onStartMixedReview}
+        onScrollTop={scrollToTop}
         onRetry={() => {
           // F006: clear the scores so the second attempt's number means something, on the server too.
           const fresh = EMPTY_SCORES();

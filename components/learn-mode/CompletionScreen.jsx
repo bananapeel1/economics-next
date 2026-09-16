@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useClientValue } from '@/lib/use-client-storage';
 import { readAnswerLog } from '@/lib/answer-log';
 import StrengthMeter from '../StrengthMeter';
@@ -35,9 +35,18 @@ export default function CompletionScreen({
   subjectId, sectionId, currentSection,
   contentData, quizData, scores,
   onNavigateToQuiz, onNavigateToTab,
-  onStartMixedReview, onRetry,
+  onStartMixedReview, onRetry, onScrollTop,
 }) {
   const [completeView, setCompleteView] = useState('main'); // 'main' | 'posttest' | 'drill'
+
+  /* The drill and the post-test replace this screen in place. Opening one from a button near the
+     bottom left the student looking at whatever was below it, so each sub-view starts at its top.
+     The first render is skipped: LearnModeTab already scrolls when the screen appears. */
+  const viewMounted = useRef(false);
+  useEffect(() => {
+    if (viewMounted.current) onScrollTop?.(true);
+    viewMounted.current = true;
+  }, [completeView, onScrollTop]);
 
   /**
    * F005. The post-test and the Quick Fire drill both discarded their result. They are the last
@@ -199,7 +208,10 @@ export default function CompletionScreen({
         </button>
       )}
 
-      {/* Quick fire drill */}
+      {/* The drill is the primary action here, and the Quiz tab is the quiet one below it. The drill
+          is free, it is this section's own questions, and it feeds the strength model (F005); the
+          quiz is a paid surface a free student meets a paywall on after two questions. Swapped on
+          the founder's call, 16 September. */}
       {quizData?.length > 0 && (
         <button className="lm-complete-drill-btn" onClick={() => setCompleteView('drill')}>
           &#9889; Quick fire drill ({quizData.length} questions)
@@ -216,7 +228,7 @@ export default function CompletionScreen({
             rest are only reachable through Smart Practice, so this arrives with the topic already
             chosen and says how many are waiting, rather than dropping them on a list of 43. */}
         <a href={`/practice?section=${encodeURIComponent(sectionId)}`} className="lm-complete-practice-btn">
-          &#9889; {quizData?.length ? `Practise all ${quizData.length} questions on this topic` : 'Practice questions'}
+          &#127919; {quizData?.length ? `Smart Practice: all ${quizData.length} questions on this topic` : 'Smart Practice'}
         </a>
         <a href="/flashcards-practice" className="lm-complete-practice-btn lm-complete-flashcard-btn">
           &#127183; Review flashcards
