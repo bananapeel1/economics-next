@@ -9445,10 +9445,10 @@
    "kind": "structure",
    "text": "Section's own examMatters repeatedly insists on showing equilibrium effects on a diagram, but the shift diagrams have no demand curve, and no worked PES calculation from raw prices/quantities appears anywhere in content, recall, quiz or practice.",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "audit/snapshots/packet-24-bundle__economics__price-determination.json diagrams[1].scenarios[4] ('Supply shifts') — the supply-shift panel now carries D₁ as well as S₁/S₂ and reads the equilibrium off both times ($10·600 → $8·700), which is the demand curve the finding said was missing. Clause (b), the worked PES calculation, was closed by packet 23 per the item's own note.",
    "note": "PACKET 24 — ONLY THE FIRST HALF IS STILL OPEN. This item has two clauses. (a) 'the section's examMatters insists on showing equilibrium effects on a diagram, but the shift diagrams have no demand curve' — that is IAL 1.3.4 - 1b (econ_spec.txt:697-698) and price-determination owns it; packet 23 removed the examMatters sentences that demanded it, so what remains for packet 24 is the DIAGRAM in its own section. (b) 'no worked PES calculation from raw prices/quantities appears anywhere in content, recall, quiz or practice' — BUILT AND CONFIRMED BY PACKET 23 (Verify A, 16 Sep): the calculating-pes subsection, quiz items 13 and 14, and practice P4 Calculate (4). Clause (b) is closed; do not re-do it."
   },
   {
@@ -9493,10 +9493,10 @@
    "kind": "specGap",
    "text": "Diagrammatic effect of a supply shift on equilibrium price and quantity (strictly 1.3.4 price determination, but required by this section's own examMatters and recall) — the shift diagrams contain no demand curve.",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "Same diagram: bundle diagrams[1].scenarios[4], labels D₁/S₁/S₂ plus $10, 600, $8, 700. The diagrammatic effect of a supply shift on equilibrium price and quantity is IAL 1.3.4·1b (econ_spec.txt:698-700), so building it in price-determination rather than supply is the correct side of the boundary.",
    "note": "Reassigned from packet 23 to packet 24 (price-determination), 16 Sep. A supply shift's effect on equilibrium price and quantity is IAL 1.3.4 - 1b (econ_spec.txt:697-698); 1.3.3 has no equilibrium leaf and 'equilibrium' has 0 hits in the 1.3.3 span. Both findings say 'strictly 1.3.4' themselves and then ask supply to build it because supply's OWN examMatters demanded an equilibrium diagram. Packet 23 removed those examMatters sentences, which was the actual defect on this side of the boundary."
   },
   {
@@ -10457,10 +10457,10 @@
    "rank": 0,
    "text": "Add tax and subsidy diagrams (specific parallel shift, ad valorem pivot, consumer/producer incidence shares, tax revenue rectangle, subsidy cost rectangle) and give them titles that the diagramRef substring match will find ('Indirect Tax', 'Subsidy'), so Blocks 4 and 5 stop rendering with no diagram.",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "bundle diagrams[4] 'Indirect Taxes: the Wedge, the Split and the Revenue' (4 panels: 'S + tax' parallel shift; revenue <rect> labelled '$3 × 500 = $1,500'; 'S + 30%' pivot measured $1.80 vs $3; two-panel incidence 'buyer bears $2.40 of $3' vs 'buyer bears $1 of $3') and diagrams[5] 'Subsidies: the Wedge in Reverse' (wedge $11/$8/700; cost <rect> '$3 × 700 = $2,100'). Blocks 5 and 6 pin them by diagramId, which resolvePinnedDiagram (components/learn-mode/utils.js:111-118) takes before any diagramRef, so both blocks render.",
    "note": null
   },
   {
@@ -10470,10 +10470,10 @@
    "rank": 1,
    "text": "Rebuild practice[] to the IAL Appendix 6 tariffs (Define 2 / Explain 4 / Draw 4 / Calculate 2-4 / Analyse 6 / Examine 8 / Discuss 14 / Evaluate 20): delete the UK oil-price macro essay and the 'Outline' price-floor item, add a Calculate on incidence/revenue, a Draw on a subsidy, and an Examine/Discuss on the price mechanism across local/national/global markets; make practiceIndices index practice[] (not the marks-sorted copy) so each block gets an on-topic question.",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "Round 2. The missing clause is built: scripts/_packet24-assessment.mjs:201 pr(B6,'Draw',4,'Draw a demand and supply diagram to show the effect of a specific subsidy of $3 per unit on the price paid by consumers and the price received by producers. (4 marks)'). Verified in the STAGED DRAFT, not just the source — GET /api/sections/price-determination?draft=1 serves 9 practice items with 2 Draws, the subsidy one at index 5, and the Subsidies block pins practiceIndices [5,6]; since blocks 1-5 consume 0,1,2,3,4,7,8, resolvePinnedItem (components/learn-mode/utils.js:92-95) hands B6 index 5, so the subsidy Draw is what a student actually meets at that check-in. Tariff is right (Draw [4] in tariff-census.json, econ_spec.txt:2712-2714) and the stem carries '(4 marks)'. Guidance is two paragraphs, so guided mode's opening does not print the mark scheme, and that opening contains no mark allocation and no worked equation. Economics checks out against the section's own figures: supply DOWN and right by the subsidy, two prices marked, vertical gap = the subsidy, higher quantity read off — consistent with diagrams[5] ($8/$11/700). The other six clauses still hold: 9 items covering all eight Economics command words at census tariffs with 0 of 29 tariff mentions mismatched; 0 hits for Assess, Outline, '(10 marks)' and UK framing; Calculate (4) on incidence AND revenue; Discuss (14) on the mechanism across local/national/global; practiceIndices resolved against raw order at components/LearnModeTab.jsx:217-218; every block on-topic. The false header claim is corrected at scripts/_packet24-assessment.mjs:26-31, which now says two Draws and records why it was wrong. Runner exits 0; validator 0 BLOCK / 0 DEBT.",
    "note": null
   },
   {
@@ -10483,10 +10483,10 @@
    "rank": 2,
    "text": "Fix the recall layer: give every fillin a word bank with distractors (elastic/inelastic, up/down, left/right, demand/supply, original/new) and remove first-letter hints; replace the five non-sequence reorders (equilibrium slopes, producer surplus $150/$200, three price-mechanism functions, tax welfare areas, subsidy evaluation) with classification or diagram-area drills.",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "All 10 fillin recalls in the bundle carry an authored distractors[] array plus prose hints (e.g. sub:excess-demand distractors ['300','above','vertically']); the March first-letter hints ('Q_','sh______','ma____' in the pre-packet snapshot) are gone — 0 strings match a first-letter pattern. All five non-sequence reorders named in the finding (how-markets-reach-equilibrium, producer-surplus $150/$200, signalling-incentive-rationing, welfare-effects-of-taxation, effects-and-evaluation-of-subsidies) are gone; the 5 surviving reorders are genuine procedures/causal chains and the replaced content is now match/classify.",
    "note": null
   },
   {
@@ -10496,10 +10496,10 @@
    "rank": 3,
    "text": "Teach the missing spec bullets - 3b price mechanism in local, national and global markets (with Asian/Middle-East examples) and 2b effect of demand/supply shifts on CS and PS - then re-key Q14 to the standard answer; move Block 6 to 1.3.2 and re-key it to the spec's own list (herding, habit, inertia, poor computation, need to feel valued, framing/bias).",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "3b: bundle content[3].sections[4] 'Local, National and Global Markets' (body[0] quotes the leaf; bullets for local/national/global; realExample bottled water; recall match; quiz 21/22; Discuss 14). 2b: content[2].sections[3]/[4] 'What a Demand Shift/Supply Shift Does to Them' with the areas recomputed ($3,600→$6,400, $1,800→$3,200). Q14 re-keyed: quiz[16] keyed 'increases, because it is measured against the new demand curve'. Block 6 move REFUSED and the refusal is correct — econ_spec.txt:581-588 puts the six-item list in 1.3.2·1b, and GET /api/sections/consumer-behaviour-demand?draft=1 already teaches herding/habitual/inertia/computational/feel valued/framing+bias in the spec's own words (packet 17), so moving it here would duplicate that section.",
    "note": null
   },
   {
@@ -10509,10 +10509,10 @@
    "rank": 4,
    "text": "Correct or replace the wrong/dated examples (London 'rent controls', CBO sugar-tax score, Glastonbury resale, 59p fuel duty, pre-2003 CAP) and de-UK the examples for the HK/SG/MY/PK audience; fix quizIndices so the CS/PS block shows Q6 and the Subsidies block shows a subsidy MCQ.",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "0 hits across the bundle for /rent control/i, /Congressional Budget Office|CBO/, /Glastonbury/, /\\bCAP\\b/, /the UK|United Kingdom|Britain|British|London/ and /(19|20)[0-9]{2}/ outside SVG attributes. All 29 realExamples are non-UK/non-US and undated (fish auction, lithium, solar panels, container freight, city parking, delivery apps, spice, bottled water, fertiliser, bus fares). quizIndices fixed: content[2] (Consumer and Producer Surplus) opens its check-in on quiz[13] 'Consumer surplus on a diagram is the area:', content[5] (Subsidies) on quiz[29] 'With a $3 subsidy, buyers pay $8 and sellers receive $11. Buyers have captured:'.",
    "note": null
   },
   {
@@ -10521,10 +10521,10 @@
    "kind": "accuracy",
    "text": "Equilibrium Price & Quantity > excess-demand-and-excess-supply > realExample: Claims London has 'rent controls' that keep supply below equilibrium. Private-sector rent control in England was abolished by the Housing Act 1988; London rents are market-set. Also 'many are outbid' describes price adjusting upward, which contradicts the claim of below-equilibrium pricing.",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "The March excess-demand realExample is replaced. bundle content[1].sections[0].realExample is a generic held-below-market fuel price with queues at filling stations; 0 hits for /rent control/i and 0 for /London/ anywhere in the bundle. The contradictory 'many are outbid' framing is gone too — the new text says the queue IS the excess demand.",
    "note": null
   },
   {
@@ -10533,10 +10533,10 @@
    "kind": "accuracy",
    "text": "Consumer Surplus & Producer Surplus > total-welfare-and-efficiency > realExample: 'The US Congressional Budget Office estimates deadweight loss when scoring tax proposals. A proposed sugar tax...' - CBO scores federal legislation and does not publish deadweight-loss triangles in scores; there is no federal sugar-tax score of this kind. Worse, the example contradicts the paragraph's own misconception text: a sugar tax targets a negative externality, so it can raise, not reduce, total welfare.",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "The whole total-welfare-and-efficiency subsection is gone: 0 hits for /Congressional Budget Office|CBO/, 0 for /dead[- ]?weight/i and 0 for /sugar tax/i in the bundle. Block 3 now teaches 2a (the distinction) and 2b (what a shift does) instead, so there is no welfare-triangle claim left to contradict.",
    "note": null
   },
   {
@@ -10545,10 +10545,10 @@
    "kind": "quiz",
    "text": "q14: Keyed answer 'ambiguous' conflicts with (a) the section's own teaching ('When the price rises, consumer surplus shrinks' in consumer-surplus body[1], which points students to 'decreases') and (b) the standard IAL answer for spec bullet 2b: with a rightward demand shift and upward-sloping supply, the CS triangle under the new demand curve is larger, so CS rises. Three contradictory signals on a spec-listed point.",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "bundle quiz[16] 'Demand increases and the equilibrium moves from $10·600 to $12·800. Consumer surplus:' keyed (correctIndex 3) 'increases, because it is measured against the new demand curve'. Independently re-derived: Qd2 = 1400 − 50P crosses Qs = 100P − 400 at $12·800, choke $28, CS = ½·16·800 = $6,400 > $3,600. The contradicting teaching is gone: content[2].sections[3] body[2] now says 'Consumer surplus looks as though it should fall… It rises, from $3,600 to $6,400', and no string in the bundle claims CS shrinks when demand shifts.",
    "note": null
   },
   {
@@ -10569,10 +10569,10 @@
    "kind": "practice",
    "text": "p2: 'Assess the effectiveness of the price mechanism... (10 marks)': 'Assess' is not an IAL Economics command word (spec Appendix 6 lists Define 2, Calculate 2/4, Draw 4, Explain 4, Analyse 6, Examine 8, Discuss 14, Evaluate 20) and there is no 10-mark tariff in WEC11. The guidance is point-marked, not levels-marked. Should be 'Examine... (8)' or 'Discuss... (14)', ideally with reference to an extract, and should mention local/national/global markets (spec 3b).",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "0 hits for /\\bAssess\\b/ and /\\(10 marks\\)/ in the bundle. The replacement is practice[6] 'Discuss how effectively the price mechanism allocates resources in local, national and global markets. (14 marks)' — Discuss 14 is the census row (audit/raw/tariff-census.json, econ_spec.txt:2733-2739), it names spec 3b, and its guidance is levels-style with no per-point mark allocations. Only the soft 'ideally with reference to an extract' half is not done; the bank carries no extracts by design.",
    "note": null
   },
   {
@@ -10581,10 +10581,10 @@
    "kind": "practice",
    "text": "p4: 'Outline two effects of a price floor set above the equilibrium price (4 marks)': 'Outline' is not an IAL command word, and price floors/minimum wage are 1.3.6 Government intervention, not taught in this section's content (only flashcards mention them). Model answer's 'government may need to purchase surplus output' is fine but off-topic here.",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "0 hits for /\\bOutline\\b/ in the bundle, and 0 for /price (floor|ceiling)/i — the item is deleted rather than re-tariffed, and the vocabulary went with it. Verified the refusal to re-tariff: 'price floor' and 'price ceiling' are both 0 in audit/raw/econ_spec.txt, which says 'maximum and minimum (guaranteed) prices' at :809 under 1.3.6 (packet 26's section).",
    "note": null
   },
   {
@@ -10593,10 +10593,10 @@
    "kind": "practice",
    "text": "p2: Bank-level gap: none of the five questions covers indirect taxes, subsidies, incidence, or CS/PS (half the spec bullets), and there is no Calculate or Draw question despite the QS requirement (>=20% of marks) and the topic being the most diagram-heavy in Unit 1. Additionally LearnModeTab.jsx:80/113 indexes practiceIndices into the marks-sorted list, so Block 3 (Price Mechanism) shows the price-floor question and Block 4 (Indirect Taxes) shows the excess-supply question; the Assess and Evaluate items never appear inline.",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "bundle practice[] is 8 items covering every Economics command word, including practice[4] Calculate 4 on tax incidence AND revenue and practice[3] Draw 4 on the two surpluses; taxes, subsidies, incidence and surplus all appear in question stems. The index bug is fixed in code: components/LearnModeTab.jsx:217-218 resolves practiceIndices against the RAW practiceData order (the comment cites F013/F040/F111), and every block's pin is on-topic (B1 [0,1] Define+Explain equilibrium, B2 [2,7] Analyse+Evaluate shifts, B3 [3] Draw surplus, B4 [6] Discuss mechanism, B5 [4] Calculate tax, B6 [5] Examine subsidy).",
    "note": null
   },
   {
@@ -10605,10 +10605,10 @@
    "kind": "structure",
    "text": "No diagram renders for the Indirect Taxes or Subsidies blocks: diagramRef 'Indirect Tax' and 'Subsidy' are matched by substring against diagram titles ('Supply & Demand Equilibrium', 'Consumer & Producer Surplus') in LearnModeTab.jsx:97-104, so neither matches; and no tax/subsidy/incidence/DWL SVG exists anywhere in diagrams[]. Meanwhile examMatters in three subsections tells students tax/subsidy diagrams are compulsory.",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "Pre-packet snapshot had 2 diagrams ('Supply & Demand Equilibrium', 'Consumer & Producer Surplus') against diagramRef 'Indirect Tax'/'Subsidy'. The bundle has 6 diagrams, one per block, each pinned by diagramId — including tax and subsidy SVGs that did not exist before (diagrams[4], diagrams[5]). resolvePinnedDiagram (components/learn-mode/utils.js:111-118) resolves pin.id before ever reaching the substring path, so no block can silently render nothing.",
    "note": null
   },
   {
@@ -10617,10 +10617,10 @@
    "kind": "structure",
    "text": "Inline quiz mismatch: quizIndices [1] puts Q1 (increase in demand) on the Consumer/Producer Surplus block instead of Q6; quizIndices [4] puts Q4 (cigarette tax incidence) on the Subsidies block instead of Q5/Q13/Q20; the Alternative Views block has no quizIndices although Q7 (bounded rationality) exists.",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "bundle block quizIndices: B1 [3,4,5,6], B2 [11,7,8,9,10,12], B3 [13,14,15,16,17], B4 [18,19,20,21,22], B5 [26,23,24,25,27], B6 [29,28,30,31,32]. Every block's leading item is on its own topic — B3 opens on quiz[13] 'Consumer surplus on a diagram is the area:' (not a demand-increase item) and B6 opens on quiz[29], a subsidy split item (not a cigarette-tax item). The Alternative Views clause is void: that block is already absent from the pre-packet snapshot (5 blocks) and the bounded-rationality item is gone (0 hits for /bounded rationality/i).",
    "note": null
   },
   {
@@ -10629,10 +10629,10 @@
    "kind": "structure",
    "text": "Inline practice mismatch (practiceIndices index the marks-sorted array): Price Mechanism block gets 'Outline two effects of a price floor'; Indirect Taxes block gets 'Explain excess supply -> equilibrium'; the Assess and Evaluate questions are never surfaced.",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "components/LearnModeTab.jsx:217-218 — practiceIndices are resolved against the raw practiceData array, not the marks-sorted copy (sortedPractice at :197 is used only for the unpinned distribution at :238). With the bundle's pins each block now surfaces its own question, and both the 14-mark Discuss (B4) and the 20-mark Evaluate (B2, practiceIndices [2,7]) are pinned rather than stranded.",
    "note": null
   },
   {
@@ -10641,10 +10641,10 @@
    "kind": "structure",
    "text": "2-per-step pairing leaves singleton steps that carry all block widgets: Block 1 = [how-markets, excess-demand] + [changes-in-equilibrium alone + diagram + quiz + practice + explain + takeaway]; Block 2 = [CS, PS] + [total-welfare alone + widgets]; Block 4 = [specific/ad-valorem, incidence] + [welfare-effects alone + widgets]. The heaviest steps are the ones with the least content, and the 'spaced' recall shown at the top of those steps is the previous step's weak reorder (e.g. the producer-surplus $150/$200 ordering).",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "Ran lib/learn-steps.js buildSteps() over the bundle content: 35 steps = 29 teach + 6 checkin, one subsection per teach step and one check-in per block (4/6/5/5/5/4 subsections). No singleton step carries the block widgets, and the spaced recall comes from an EARLIER CHAPTER via pickSpacedRecall (lib/learn-steps.js:95), not from the previous step — and the weak reorders it used to surface (producer-surplus $150/$200 etc.) no longer exist.",
    "note": null
   },
   {
@@ -10653,10 +10653,10 @@
    "kind": "structure",
    "text": "Block 6 'Alternative Views of Consumer & Producer Behaviour' is misplaced: in the IAL spec it is 1.3.2(1b) 'Reasons why consumers may not aim to maximise utility' with a fixed list (herding, habitual behaviour, inertia, poor computational skills, need to feel valued, framing and bias). The block instead teaches anchoring, loss aversion, availability heuristic, nudges and Simon's bounded rationality, has no diagram, quiz or practice, and reads as an appendix.",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "REFUSED, correctly. The block is already absent from the pre-packet snapshot (5 blocks, no 'Alternative Views'), and the bundle reintroduces none of it: 0 hits for /anchoring|loss aversion|availability heuristic|nudge|bounded rationality|satisfic/i. Moving it here would be wrong twice over — econ_spec.txt:581-588 assigns the list to 1.3.2·1b, not 1.3.4, and consumer-behaviour-demand (packet 17, verified live via the draft API) already teaches all six items in the spec's own words. Rationale recorded at scripts/_packet24-content.mjs:18-23.",
    "note": null
   },
   {
@@ -10665,10 +10665,10 @@
    "kind": "structure",
    "text": "Content weighting vs spec: two subsections on deadweight-loss welfare analysis (total-welfare-and-efficiency, welfare-effects-of-taxation) and one on the invisible hand are not IAL 1.3.4 bullets, while spec 3b (price mechanism in local, national and global markets) and 2b (how changes in demand/supply affect CS and PS) have no subsection at all.",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "Off-spec weight removed: 0 hits for /dead[- ]?weight/i and /invisible hand/i in the bundle (all three subsections gone). Missing weight added: content[3].sections[4] 'Local, National and Global Markets' for 3b and content[2].sections[3]/[4] for 2b. The repo validator reports spec.coverage 11 of 11 leaves evidenced (100%) against 1.3.4's eleven leaves at econ_spec.txt:696-716.",
    "note": null
   },
   {
@@ -10677,10 +10677,10 @@
    "kind": "structure",
    "text": "Forward references: effects-and-evaluation-of-subsidies (body[0], recall) depends on 'positive externality' and 'socially optimal level', which are 1.3.5 concepts; total-welfare-and-efficiency introduces 'allocative efficiency' without the 1.3.5 framing.",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "Clause 1 obeyed: 0 hits for /(positive|negative) externalit(y|ies)/i and /socially optimal/i in the bundle; the successor subsection content[5].sections[3] 'Weighing a Subsidy' weighs the cost against what reaches buyers, with no 1.3.5 vocabulary. Clause 2 CORRECTED rather than obeyed, and the correction checks out: the finding calls 'allocative efficiency' a 1.3.5 concept, but econ_spec.txt:1359-1363 puts it in 3.3.3·1a (Unit 3) and it is absent from the 1.3.5 span at :723-776. A Unit 1 section drops it rather than reframing it — 0 hits for /allocativ/i.",
    "note": null
   },
   {
@@ -10689,10 +10689,10 @@
    "kind": "structure",
    "text": "Misconceptions: most are genuine (movement vs shift, CS is not 'saving', PS is not profit, ad valorem drawn parallel, subsidy shifts supply up, tax revenue is not a welfare loss, bounded rationality is not irrationality). Two are exam-technique tips dressed as misconceptions: signalling-incentive-rationing ('Students list the three functions but fail to explain') and behavioural-economics ('proves people are irrational').",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "Both flagged items are gone. The behavioural-economics one went with its block (absent from the pre-packet snapshot). The signalling one — March: 'Students list the three functions but fail to explain… Simply naming them earns very few marks' — is replaced: content[3].sections[2] 'The Signalling Function' now carries a genuine conceptual misconception ('Students treat signalling and incentive as the same thing because both follow a price change'), and the uncited mark claim is gone (0 strings match /earns?[^.]{0,60}marks/i). CAVEAT: content[3].sections[3] 'The Three at Once' still opens on answer behaviour ('Students answer a question… by defining each function in turn and stopping'), though it corrects a real belief (that the three functions are three events, not one) rather than asserting what a marker does.",
    "note": null
   },
   {
@@ -10701,10 +10701,10 @@
    "kind": "structure",
    "text": "Meta says mistakes: 0 but common_mistakes[] has 3 good entries (adjustment process, CS/PS labelling, marking the new equilibrium) - these are not surfaced in Learn Mode. Flashcards include price ceilings/floors/black markets (1.3.6 content).",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "GET /api/sections/price-determination?draft=1 returns counts.mistakes = 5 (was 0): the bundle carries 5 rewritten common_mistakes, including all three of the March keepers (adjustment process, surplus-area labelling, reading the new equilibrium/quantity off the diagram). The Learn Mode surface is the per-subsection misconception field, present on all 29 subsections and joined into the step at components/LearnModeTab.jsx:37. Flashcards cleaned: 0 hits for /price (floor|ceiling)/i and /black market/i across the 20 new cards (the March bank had three).",
    "note": null
   },
   {
@@ -10713,10 +10713,10 @@
    "kind": "structure",
    "text": "Takeaways match their blocks and are accurate; difficulty ramp (equilibrium -> surplus -> mechanism -> tax -> subsidy) is sensible, with welfare tools introduced in Block 2 before being reused in Block 4.",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "The property the finding records is preserved through the rebuild. Each block's takeaway[] is on its own block's topic and accurate against the recomputed figures (e.g. Indirect Taxes: 'Buyers pay $12, sellers keep $9: the gap is the tax', 'Revenue = tax per unit × the quantity traded AFTER the tax' — independently checked: 1100−50P = 100P−700 gives $12·500 and 3×500 = $1,500). The ramp now runs equilibrium → disequilibrium and shifts → surplus → mechanism → tax → subsidy, which is spec order 1→2→3→4, with the surplus tools introduced in block 3 before incidence reuses the two-price reading in blocks 5 and 6.",
    "note": null
   },
   {
@@ -10725,10 +10725,10 @@
    "kind": "specGap",
    "text": "1.3.4 3(b) The price mechanism in the context of different types of markets, including local, national and global markets - not taught anywhere (no subsection, no example, no recall, no MCQ).",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "bundle content[3].sections[4] 'Local, National and Global Markets' — body[0] quotes the leaf (econ_spec.txt:709-710), body[1] is a three-way bullet list, body[3] gives the cooking-gas example, realExample is bottled water at three scales, recall is a match on how far a signal reaches, diagrams[3].scenarios[1] is a Local/National/Global table, quiz[21] and quiz[22] test it, and practice[6] is the Discuss (14) on it. Every surface the finding said was empty now has it.",
    "note": null
   },
   {
@@ -10737,10 +10737,10 @@
    "kind": "specGap",
    "text": "1.3.4 2(b) How changes in demand or supply might affect consumer and producer surplus - only a one-line 'when price falls the triangle gets bigger'; no diagram of a shift's effect on CS/PS, and the one MCQ on it (Q14) is keyed 'ambiguous'.",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "Two dedicated subsections (content[2].sections[3] and [4]) plus diagrams[2].scenarios[1] 'After a demand rise' (CS $6,400 / PS $3,200) and scenarios[2] 'After a supply rise' (CS $4,900 / PS $2,450) against scenarios[0] (CS $3,600 / PS $1,800). All four figures independently re-derived from Qd = 1100 − 50P and Qs = 100P − 400. The 'ambiguous' key is gone: quiz[16] is keyed 'increases' and quiz[17] isolates what genuinely does depend on the slopes.",
    "note": null
   },
   {
@@ -10749,10 +10749,10 @@
    "kind": "specGap",
    "text": "1.3.4 4(d) The incidence of subsidies on consumers and producers - one sentence ('split depends on relative elasticities'); no rule stated (inelastic demand -> consumers capture more of the subsidy), no diagram, no recall; only Q20 tests it numerically.",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "bundle content[5].sections[1] 'Who Gains From a Subsidy' states the rule explicitly ('the side that responds less to price captures more'; body[3]: 'If demand were highly responsive instead, most of the subsidy would end up with producers'). Diagram: diagrams[5].scenarios[0] draws the $3 wedge with $8 buyer / $11 seller / 700. Recall: a classify drill on the split. Quiz: quiz[29] (numeric) and quiz[32] (the rule applied to policy). All three gaps the finding names are closed.",
    "note": null
   },
   {
@@ -10761,10 +10761,10 @@
    "kind": "specGap",
    "text": "1.3.4 4(a)/4(c) 'impact on... the government' - tax revenue rectangle and subsidy cost are stated in text/takeaways but never drawn; no Calculate practice on revenue or subsidy cost (IAL QS requirement).",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "Both rectangles are now DRAWN: diagrams[4].scenarios[1] has a <rect> labelled '$3 × 500 = $1,500' and diagrams[5].scenarios[1] has a <rect> labelled '$3 × 700 = $2,100' (verified by counting <rect> elements in the emitted SVG). Calculate practice exists: practice[4] Calculate (4) asks for consumer incidence AND government revenue, which is the IAL QS requirement the finding cites. Subsections content[4].sections[4] 'The Impact on the Government' and content[5].sections[2] 'The Cost to the Government' teach the government's line.",
    "note": null
   },
   {
@@ -10773,10 +10773,10 @@
    "kind": "specGap",
    "text": "1.3.2 1(b) (if Block 6 is kept here) - the spec list is herding, habitual behaviour, inertia, poor computational skills, the need to feel valued, framing and bias; the block teaches anchoring, loss aversion, availability heuristic, nudges and satisficing instead. Only 'poor computational skills' (via bounded rationality) and 'framing and bias' (via anchoring) are loosely covered.",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "REFUSED, and the refusal is correct. The finding's own condition is 'if Block 6 is kept here' — it is not: the block is absent from the pre-packet snapshot and the bundle reintroduces none of its vocabulary (0 hits for anchoring/loss aversion/availability heuristic/nudge/bounded rationality/satisficing). The six-item list at econ_spec.txt:581-588 is 1.3.2·1b, and the draft API shows consumer-behaviour-demand (packet 17) already teaching herding, habitual behaviour, inertia, poor computational skills, the need to feel valued and framing/bias in the spec's own words. Re-keying it here would duplicate that section.",
    "note": null
   },
   {
@@ -10784,12 +10784,12 @@
    "section": "price-determination",
    "kind": "specGap",
    "text": "Assessment format: nothing in the section is shaped like the WEC11 paper (Section A six 1-mark MCQs; Section B five short-answer questions totalling 20; Section C five-part data response of 34; Section D one 20-mark essay from a choice of two) or its command-word tariffs (Define 2, Calculate 2/4, Draw 4, Explain 4, Analyse 6, Examine 8, Discuss 14, Evaluate 20).",
-   "packet": 24,
+   "packet": 13.11,
    "status": "open",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "SPLIT BY PACKET 24, 16 Sep, after Verify A rejected it as half-built. This item has two clauses. (a) 'nothing in the section is shaped like the WEC11 paper (Section A six 1-mark MCQs; Section B five short-answers totalling 20; Section C five-part data response of 34; Section D one 20-mark essay from a choice of two)' — REASSIGNED TO PACKET 13.11, which is the packet this record now carries. That clause asks for an exam-paper SURFACE, and audit/EXAM-PRACTICE.md gives the question-first exam practice page per section to packets 13.9-13.12; 13.11 step 4 is 'Complete the set', which is where a per-section clause belongs. NOTE 13.11 and not 13.10: ledger.mjs stores packet as a Number, so 'assign 13.10' silently writes 13.1, a finished drill packet (see DECISIONS, 16 Sep). Learn Mode is a teaching surface and a 34-mark data response does not belong inside it. (b) 'or its command-word tariffs (Define 2, Calculate 2/4, Draw 4, Explain 4, Analyse 6, Examine 8, Discuss 14, Evaluate 20)' — BUILT AND CONFIRMED BY PACKET 24: nine practice items covering all eight Economics command words at census tariffs, no Assess, no Outline, no 10-mark item, and 29 examMatters each citing WEC11 and Appendix 6, checked against tariff-census.json. Do not re-do clause (b)."
   },
   {
    "id": "C-national-income-topFix-01",
@@ -17530,10 +17530,10 @@
    "kind": "diagram",
    "text": "A block pins the diagram \"Indirect Tax\" and no such diagram exists, so the block renders nothing. EXISTS in economics__government-intervention as 'Tax to Correct Negative Externality'.",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "bundle diagrams[4] id price-determination:diagram:80643068, title 'Indirect Taxes: the Wedge, the Split and the Revenue', four panels, authored originally rather than borrowed from government-intervention. content[4] ('Indirect Taxes') pins it via diagramId, and resolvePinnedDiagram (components/learn-mode/utils.js:111-118) resolves an id pin before the substring path, so the block renders.",
    "note": "Added 13 Sep 2026 from audit/raw/diagram-pins-2026-09-13.json (F052/F109 measurement). Check npm run diagrams after authoring."
   },
   {
@@ -17542,10 +17542,10 @@
    "kind": "diagram",
    "text": "A block pins the diagram \"Subsidy\" and no such diagram exists, so the block renders nothing. EXISTS in economics__government-intervention as 'Subsidy to Correct Positive Externality'.",
    "packet": 24,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-24",
+   "verified_by": "verify-a-packet-24 2026-09-16",
+   "evidence": "bundle diagrams[5] id price-determination:diagram:f8984b1f, title 'Subsidies: the Wedge in Reverse', two panels (the $3 wedge and the cost rectangle). content[5] ('Subsidies') pins it via diagramId. Note: the title would NOT be found by a legacy diagramRef substring match on 'Subsidy' (norm('Subsidies…') has no 'subsidy' substring) — but the block carries no diagramRef, and the id path is taken first, so the render defect the finding names is gone.",
    "note": "Added 13 Sep 2026 from audit/raw/diagram-pins-2026-09-13.json (F052/F109 measurement). Check npm run diagrams after authoring."
   }
  ],
