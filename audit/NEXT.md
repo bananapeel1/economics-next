@@ -182,6 +182,102 @@ to the packet-7 contract and main's `ReorderRecall` reads `recall.shuffled`, whi
 production down. Stage only; publish at the packet 5/7 checkpoint with
 `node scripts/packet-20-types-sizes-businesses.mjs --stage && node scripts/publish-section.mjs types-sizes-businesses --confirm`.
 
+## Packet 20 result — `types-sizes-businesses` (16 September 2026, Opus)
+
+**BUILT and VERIFIED; STAGED, NOT PUBLISHED.** Publishes at the packet 5/7 checkpoint with
+`node scripts/packet-20-types-sizes-businesses.mjs --stage && node scripts/publish-section.mjs types-sizes-businesses --confirm`
+
+### The scope finding, and it is the fourth of its kind
+
+The March section taught **UK company law the IAL Economics specification never mentions.** Word-boundary
+counts over the whole of `econ_spec.txt`: `sole trader` **0**, `limited liability` **0**, `shareholder`
+**0**; `partnership` and `plc` occur once each, on the acknowledgements pages (:2419, :2407). Two of its
+eight subsections, one misconception, six flashcards and its only Define practice were built on that
+vocabulary — while **four of the five organisation types the specification actually lists at 1a**
+(state-owned enterprises, for-profit and not-for-profit, co-operatives, joint ventures) were absent
+entirely. It also spent two more subsections on economies of scale, which is 3.3.2 sub-topic 3
+(:1320-1345) and belongs to packet 28.
+
+This is the fourth instance of the rule — packet 13's off-spec frameworks, packet 16's "barriers to
+entry", packet 17's income and substitution effects, packet 18's "equilibrium". **The audit named only
+half of it**: `specGap-02` and `specGap-03` asked for public sector and co-operatives, but nothing in the
+ledger says the legal-forms block should not exist.
+
+### Four leaves no ledger item mentions
+
+`1a-5` joint ventures · `2a` SMEs and large corporations · `2f` impact of growth on businesses, workers
+and consumers (the audit names only the *demerger* impacts at `specGap-05`) · `3c` the formulae for the
+three objectives.
+
+### Claims the specification refutes
+
+- **`topFix-05`'s "describe levels-based marking for the 10- and 20-mark items"** — Economics has **no
+  10-mark tariff**, so the live `Assess 10` is the Business ladder and was re-commanded as an Examine (8)
+  rather than re-tariffed. And describing marking is what `MARK_CLAIM` exists to stop. Its other clauses
+  (Define = 2, no "Outline", the Amazon correction, internationalised regulators) are built.
+- **`topFix-01`/`structure-01`'s "add `diagramRef`"** — obsolete since packet 5; answered with `diagramId`.
+- **`structure-05`'s premise** — "2-per-step pairing is coherent" describes main's pairing model, which
+  packet 5 removed.
+- **`specGap-03`'s "charities, social enterprises"** — both 0 occurrences; the spec's words are
+  "for-profit and not-for-profit organisations".
+
+### Shape
+
+6 blocks / **24 subsections** (was 8) / 24 recalls across all four contract types (5 reorder, 6 fill-in,
+5 match, 8 classify) / 34 quiz, 31 pinned and exactly three unpinned and FIRST / 13 practice at IAL
+**Economics** tariffs / 5 diagrams, each pinned by `diagramId` / 30 cards / 7 mistakes / 4 chains.
+Block sizes 4 · 3 · 6 · 4 · 2 · 5. **Business Objectives moved to LAST**, where the specification puts
+them, which fixes `structure-03` at the root rather than by adding a definition.
+
+**One firm carries 3a, 3b and 3c**: `P = 60 − 2Q`, `MR = 60 − 4Q`, `MC = 20`, `TC = 20Q + 72`.
+MC = MR at 10,000 units ($40, profit $128,000); MR = 0 at 15,000 ($30, revenue $450,000); AR = AC at
+18,000 ($24, profit $0). All exact. Selling the most units earns **less** revenue than maximising it
+($432,000 against $450,000), which answers the revenue/sales-volume misconception with arithmetic.
+
+### What the layers caught
+
+**Layer 6 found both planted canaries and thirteen real defects.** The three that mattered:
+1. **Examine (8) was described as analysis in six places.** `econ_spec.txt:2726-2731` requires
+   "knowledge, understanding, application, analysis **and evaluation** ... a brief assessment of the
+   arguments/factors/evidence" — and evaluation is the whole difference between Examine (8) and Analyse (6).
+2. **"is levels-marked" shipped eight times** — a claim about how a response is MARKED, which Appendix 6
+   never states, and which the packet spec had already recorded as refused. `MARK_CLAIM` reached none of them.
+3. **"At 10,000 units the next unit would add $16"** — Q is in thousands, so MR(10) is exactly $20, which
+   is the equality the sentence existed to justify.
+Also: a quiz keyed the CONGLOMERATE disadvantage as vertical-specific, contradicting the classify item
+three chapters earlier; a horizontal distractor ("same industry, different countries") was true of many
+horizontal mergers; two fill-in blanks accepted a word the body itself supplies.
+
+**Verify B found what no automated check could**: at 390px the four-column types table ran its Type cells
+into its Owner cells and cut "Trustees or members" off at the frame. Every structural check passed it —
+six rows, every cell present, unique, on its own row — because none of them knows how wide a cell is.
+Rebuilt as three columns; the runner now measures each cell against its column and, run against the old
+layout, **fires on twelve cells, the same twelve that were visibly colliding**.
+
+Three new runner checks, each closing a class: prose tariffs against the Economics ladder (the census
+check reads practice items only), an Examine described without evaluation, and table-cell overflow.
+
+### Escalation for the founder — the pre-test asks a question the check-in asks again
+
+Measured, not argued. `freeQuizPayload()` sends a signed-out student `PREVIEW_LIMITS.quiz` (2) free items
+plus one pin per chapter. `PreTest.jsx:23-27` builds its pool as `[...free, ...reserved]` and slices 3 —
+so when only 2 free items survive the slice, **the third pre-test question is chapter 1's check-in
+question**, and the student meets it again minutes later. Confirmed on this section: served array has 8
+items, indices 0-1 free, 2-7 pinned, and the pre-test rendered items 0, 1 and 2.
+
+**No content packet can fix this.** Authoring a fourth unpinned item does not help, because the slice
+takes only the first `PREVIEW_LIMITS.quiz` of them. It needs either `freeQuizPayload()` to carry
+`max(PREVIEW_LIMITS.quiz, 3)` of the unpinned prefix, or `PreTest.jsx` to stop padding from reserved
+items. **This affects every rewritten section, not just this one**, and V005 (packet 17.1) is still
+unverified. Half a packet.
+
+### Checked and not acted on
+
+Layer 6 flagged fill-in answers failing exact match ("$4" against "$4.00"). `FillInRecall.jsx:16` is
+tap-a-chip with no free text, so there is nothing to mistype. It also flagged the kept id
+`types-sizes-businesses:sub:diseconomies-demergers` on "Reasons for Demergers" as stale vocabulary; the id
+is never shown to a student and a progress row points at it, so it is kept under the packet-13 rule.
+
 ## Packet 19 result — `planning-raising-finance`, Business 2.3.1 (Opus 5, 16 September 2026)
 
 **BUILT, STAGED, NOT PUBLISHED.** Section `planning-raising-finance`, Business Unit 2 (WBS12), IAL topic

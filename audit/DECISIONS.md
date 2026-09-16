@@ -1089,3 +1089,52 @@ suffix and identical text, so a student revising the section met the same three 
 Packet 57 is scoped to cross-surface duplication and would eventually have found it; a `wc -l` against
 `new Set(ids)` at the start of a content packet finds it in a second. **Worth adding to the per-section
 opening measurement.**
+
+## 2026-09-16 — packet 20: a section's central vocabulary can be another syllabus's entirely
+
+`types-sizes-businesses` taught sole traders, partnerships, limited liability, Ltd and plc. Measured
+against `audit/raw/econ_spec.txt`, word-boundary: `sole trader` **0**, `limited liability` **0**,
+`shareholder` **0**; `partnership` and `plc` once each, on the acknowledgements pages (:2419, :2407).
+Meanwhile four of the five organisation types the specification lists at 1a — state-owned enterprises,
+for-profit and not-for-profit, co-operatives, joint ventures — were absent from the section entirely.
+
+**Decision: the legal-forms block goes, and the spec's own list becomes block 1.** Ownership and control
+survive as ordinary English in 3b, because the divorce of ownership from control cannot be stated without
+them, but they are not offered as examinable terms and "shareholder" appears nowhere.
+
+This is the fourth instance after packets 13, 16, 17 and 18, and the first where **the audit named only
+half of the problem**: two specGap items ask for the missing content, and nothing in the ledger says the
+block that displaced it should not exist. The general lesson for the remaining sections: an audit item
+tells you what is missing, never what is present and should not be.
+
+## 2026-09-16 — packet 20: three checks that close a class the existing ones could not see
+
+Each was written after Layer 6 or Verify B found the instance:
+
+1. **Prose tariffs.** The census check reads `PRACTICE` items only, so a command word cited at the wrong
+   tariff inside an `examMatters` string passes everything. Now every `<Command> (N marks)` in any string
+   is checked against the Economics ladder.
+2. **Examine without evaluation.** `econ_spec.txt:2726-2731` requires "knowledge, understanding,
+   application, analysis **and evaluation** ... a brief assessment of the arguments/factors/evidence" —
+   and evaluation is the entire difference between Examine (8) and Analyse (6). Six examMatters
+   enumerated the objectives and left it out. An Examine described without evaluation now fails.
+3. **Marking claims of the "levels-marked" shape.** `MARK_CLAIM` keys on marks being earned or lost and
+   reached none of the eight instances of "is levels-marked", which is a claim about how a response is
+   marked — something Appendix 6 never states. Now banned, along with "the commonest error".
+4. **Table-cell overflow.** A diagram table can be structurally perfect and illegible: at 390px the
+   four-column types table overlapped its own columns. Cell width is now measured against column width
+   and refuses to stage. Run against the layout Verify B saw on screen, it fires on twelve cells — the
+   same twelve that were colliding.
+
+## 2026-09-16 — packet 20: the pre-test asks a question the check-in asks again (FOR THE FOUNDER)
+
+Measured on `types-sizes-businesses`, signed out. `freeQuizPayload()` sends `PREVIEW_LIMITS.quiz` (2)
+free items plus one pin per chapter. `PreTest.jsx:23-27` builds its pool as `[...free, ...reserved]` and
+slices 3 — so with only 2 free items surviving the slice, **the third pre-test question is chapter 1's
+check-in question**, and the student meets it again minutes later. Served array: 8 items, indices 0-1
+free, 2-7 pinned; the pre-test rendered 0, 1 and 2.
+
+**No content packet can fix this.** A fourth unpinned item does not help, because the slice takes only
+the first `PREVIEW_LIMITS.quiz` of the unpinned prefix. It needs `freeQuizPayload()` to carry
+`max(PREVIEW_LIMITS.quiz, 3)` of that prefix, or `PreTest.jsx` to stop padding from reserved items.
+**It affects every rewritten section**, and V005 (packet 17.1) is still unverified. Half a packet.

@@ -12796,10 +12796,10 @@
    "rank": 0,
    "text": "Add diagramRef/quizIndices/practiceIndices to all 4 blocks so the objectives and principal-agent diagrams actually render, the integration diagram moves to 'Growth of Firms', each inline MCQ/practice matches its block, and the 20-mark Evaluate is reachable (currently everything is mis-placed by the legacy fallback in components/learn-mode/utils.js).",
    "packet": 20,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-20",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "bundle: all 6 blocks carry diagramId/quizIndices/practiceIndices matching lib/learn-steps.js:65-68 field names; verified index-by-index against tables.quiz/practice that each pin matches its block's topic (e.g. block0 quizIndices [3-7] = sector/for-profit/joint-venture/co-op items); diagramRef clause refused correctly per components/learn-mode/utils.js:114 (id checked before ref)",
    "note": null
   },
   {
@@ -12822,10 +12822,10 @@
    "rank": 2,
    "text": "Replace block 4 (economies of scale, which duplicates 3.3.2) with the missing 3.3.1 spec content: public vs private sector, profit vs not-for-profit (incl. co-operatives), why firms stay small, constraints on growth, and impacts of demergers on businesses/workers/consumers — so quiz[4] and quiz[6] test taught material.",
    "packet": 20,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-20",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "bundle block index 4 title 'Demergers' replaces economies-of-scale content; grep for economies of scale|diseconom|minimum efficient scale|MES in packet-20-bundle...json returns 0 teaching-text hits; blocks 0/1/3/4 now carry public/private sector, for-profit/not-for-profit incl. co-operatives, why firms stay/grow, constraints, demerger impacts",
    "note": null
   },
   {
@@ -12835,10 +12835,10 @@
    "rank": 3,
    "text": "Add recall exercises to every subsection (fillin for the three objective conditions and liability types; reorder for the principal-agent → satisficing chain and the horizontal-merger → concentration → regulator chain).",
    "packet": 20,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-20",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "bundle: 24/24 subsections carry a recall (8 classify,6 fillin,5 match,5 reorder); content[2].sections[2].recall (Horizontal Integration) is the merger->concentration->regulator reorder chain; content[5].sections[4].recall (Divorce of Ownership from Control) is the principal-agent->satisficing reorder chain",
    "note": null
   },
   {
@@ -12848,10 +12848,10 @@
    "rank": 4,
    "text": "Correct the Amazon example (revenue/growth maximisation, reinvested profits, dollars), internationalise the regulator references (not just CMA), and align practice command words/tariffs with IAL (Define = 2 marks, drop 'Outline', describe levels-based marking for the 10- and 20-mark items).",
    "packet": 20,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-20",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "bundle: no 'Amazon' string remains, content[5].sections[1].realExample generalises to 'online retailers' with correct revenue/growth framing and no currency error; practice[0]/[7] Define=2 marks; grep finds 0 'Outline' and 0 'Assess'; regulator refs are generic 'competition authorities/authority' (8x), no CMA; refused clauses upheld independently: tariff-census.json subject=economics has no Assess/10-mark row, and examMatters text ('requires analysis AND evaluation... brief assessment') mirrors econ_spec.txt:2726-2731 without describing marker behaviour (MARK_CLAIM correctly not triggered)",
    "note": null
   },
   {
@@ -12872,10 +12872,10 @@
    "kind": "accuracy",
    "text": "content[0] 'Business Objectives' > alternative-objectives > realExample: Amazon example muddles the terminology just taught: it says Amazon 'prioritised revenue and market share' then calls this 'sales maximisation' (AR = AC breakeven). Amazon's strategy was long-run growth/revenue maximisation and it was profitable most years after 2003. Also 'reinvesting every pound of revenue' — Amazon is a US firm and you reinvest profit/cash flow, not revenue.",
    "packet": 20,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-20",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "packet-20-bundle...json content[5].sections[1] (Revenue Maximisation) realExample now reads 'reinvesting the cash they generated' (not revenue), correctly framed as revenue/growth maximisation, no Amazon/pound-sterling error; old muddled example is gone entirely",
    "note": null
   },
   {
@@ -12884,10 +12884,10 @@
    "kind": "quiz",
    "text": "q6: Co-operatives are never mentioned in content[], notes[] or flashcards[]; this MCQ (which can appear in the pre-test gate) tests untaught material. The question itself is sound.",
    "packet": 20,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-20",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "packet-20-bundle...json tables.quiz[0] keeps the sound co-operative-ownership MCQ, and content[0].sections[2] 'Co-operatives' now teaches the material directly, so the item is no longer untaught",
    "note": null
   },
   {
@@ -12896,10 +12896,10 @@
    "kind": "structure",
    "text": "No content block has diagramRef, quizIndices or practiceIndices, so LearnModeTab.jsx:86 takes the legacy fallback (components/learn-mode/utils.js). Consequences for this section: (a) matchDiagramsToBlocks finds no title-word overlap for 'Profit Maximisation, Revenue Maximisation and Sales Volume Maximisation' or 'Principal-Agent Problem (Divorce of Ownership from Control)' with any block title, so 2 of 3 diagrams are never shown in Learn Mode; (b) 'Types of Business Growth (Integration)' scores 2 against 'Types of Business Organisation' vs 1 against 'Growth of Firms', so the integration diagram is shown on the sole-trader/Ltd block; (c) distributeItems puts quiz[0..3] on steps 0..3 (horizontal integration on Business Objectives, profit max on Types of Organisation, sales max on Growth of Firms, principal-agent on Economies of Scale) and never shows quiz[4..9]; (d) practice sorted by marks gives step0=Define limited liability, step1=Outline demerger, step2=Explain horizontal, step3=Assess principal-agent, and the 20-mark Evaluate is never shown. Fix: add diagramRef/quizIndices/practiceIndices to each block.",
    "packet": 20,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-20",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "verified mechanism in lib/learn-steps.js:65-68 and components/LearnModeTab.jsx:186-193 (hasRefs branch, practiceIndices resolved against RAW practiceData); packet-20-bundle...json blocks 0-2,4-5 have diagramId, block3 intentionally none; quizIndices/practiceIndices per block checked against tables.quiz/practice content and each pin's topic matches its block",
    "note": null
   },
   {
@@ -12908,10 +12908,10 @@
    "kind": "structure",
    "text": "Zero recall exercises across 8 subsections (meta.reorder=0, meta.fillin=0), so the spaced/immediate recall mechanic of Learn Mode is inert for this section and the CompletionScreen recall score is always 0/0. Good candidates: fillin on 'profit max where MC = __, revenue max where MR = __, sales max where AR = __'; reorder on the principal-agent chain (ownership separated from control → managers pursue own goals → imperfect information → satisficing).",
    "packet": 20,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-20",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "packet-20-bundle...json: all 24 subsections carry recall.type in {classify,fillin,match,reorder}, 0 missing; counted directly from content[].sections[].recall",
    "note": null
   },
   {
@@ -12920,10 +12920,10 @@
    "kind": "structure",
    "text": "Block ordering front-loads 'Business Objectives' and invokes 'principal-agent problem' and 'ownership separated from control' (alternative-objectives) before 'divorce of ownership and control' is actually explained in block 2 (limited-companies). Either swap blocks 1 and 2 (types of organisation → objectives) or add a one-line definition in alternative-objectives.",
    "packet": 20,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-20",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "packet-20-bundle...json content[] order is Types of Business, Size, Growth, Constraints, Demergers, Business Objectives (index 5, last); ownership/company vocabulary is established in block 0 before content[5].sections[4] 'Divorce of Ownership from Control' uses it",
    "note": null
   },
   {
@@ -12932,10 +12932,10 @@
    "kind": "structure",
    "text": "Block 4 'Economies and Diseconomies of Scale' belongs to IAL 3.3.2 (Revenue, costs and profits) and the notes[] for this section already contain a full Economies of Scale note; the content spends 2 of 8 subsections on it while genuine 3.3.1 material (public/private sector, not-for-profit, why firms stay small, constraints on growth, demerger impacts) is absent. Only the demerger half of block 4 is on-spec for 3.3.1.",
    "packet": 20,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-20",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "packet-20-bundle...json content[4] title is 'Demergers' not economies of scale; grep for economies of scale|diseconom|MES over the bundle returns 0 teaching-text hits (1 stray internal id string 'diseconomies-demergers', not shown to students); on-spec material (public/private, why firms stay small, constraints, demerger impact) present in blocks 0,1,3,4",
    "note": null
   },
   {
@@ -12944,10 +12944,10 @@
    "kind": "structure",
    "text": "2-per-step pairing is coherent (each block is exactly 2 sections = 1 step), so the section is only 4 steps long; with 4 steps the takeaways align with their blocks. Takeaway block 4 references MES, which the body never defines.",
    "packet": 20,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-20",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "lib/learn-steps.js buildSteps() emits one 'teach' step per subsection (24 total) not per block-pair, per packet 5's model; no block takeaway references MES/minimum efficient scale (grep 0 hits) since block 4 (Demergers) replaced economies of scale entirely",
    "note": null
   },
   {
@@ -12956,10 +12956,10 @@
    "kind": "structure",
    "text": "The pre-test draws 3 random MCQs from a bank where 2 of 10 items (co-operatives, constraints on growth) test content the section never teaches, so a student can be told they 'don't know' material the lesson will not cover.",
    "packet": 20,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-20",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "the two previously-untaught pretest topics (co-operatives, constraints on growth) are now taught in content[0].sections[2] and content[3]; verified the 3 quiz items excluded from check-in pinning (indices 0,1,2) are all on now-taught topics (co-op definition, backward vertical integration, principal-agent)",
    "note": null
   },
   {
@@ -12968,10 +12968,10 @@
    "kind": "structure",
    "text": "Misconceptions are mostly genuine (revenue max vs profit max; limited liability vs limited risk; economies = average not total cost; sole traders always small). 'Students assume mergers always create synergies' and 'diseconomies inevitable for all large firms' are weaker/filler-ish but not wrong.",
    "packet": 20,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-20",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "packet-20-bundle...json tables.mistakes fully regenerated (7 items, all genuine: demerger-vs-divestment, integration direction, principal-agent-as-dishonesty, size vs growth, revenue-vs-volume-max, size measure, growth-vs-consumer-benefit); the two weak filler misconceptions ('mergers always create synergies', 'diseconomies inevitable') do not appear; the sole 'synergies' hit is a caution that gains are forecasts, not an assertion",
    "note": null
   },
   {
@@ -12980,10 +12980,10 @@
    "kind": "structure",
    "text": "Difficulty ramp is fine within blocks 1-3; block 4 is a restatement of easier material. No ExplainItBack prompts or diagram-drawing tasks tied to the objectives diagram, which examMatters calls 'the single most important diagram skill in Unit 3'.",
    "packet": 20,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-20",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "packet-20-bundle...json tables.practice[10] is a Draw(4) item tied to the objectives diagram (diagram id d5e500fa, pinned to content[5] Business Objectives checkin) and ExplainItBackUpgraded renders generically at every checkin (components/LearnModeTab.jsx:614/644), so it now runs against block 5's content where before that diagram/block link did not resolve",
    "note": null
   },
   {
@@ -12992,10 +12992,10 @@
    "kind": "specGap",
    "text": "Reasons why some firms tend to remain small and why others grow (niche/market size, owner objectives, access to finance, diseconomies) — not taught in content[]; only common_mistakes[3] mentions it.",
    "packet": 20,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-20",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "packet-20-bundle...json content[1].sections[1] 'Why Some Firms Stay Small' and content[1].sections[2] 'Why Other Firms Grow' teach niche/market size, owner objectives, finance, economies as a direct subsection each",
    "note": null
   },
   {
@@ -13004,10 +13004,10 @@
    "kind": "specGap",
    "text": "Public sector vs private sector organisations — absent entirely.",
    "packet": 20,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-20",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "packet-20-bundle...json content[0].sections[0] 'Private Sector and Public Sector Organisations' teaches the distinction directly (spec 1a bullets 1-2, econ_spec.txt:1250-1251)",
    "note": null
   },
   {
@@ -13016,10 +13016,10 @@
    "kind": "specGap",
    "text": "Profit vs not-for-profit organisations (charities, co-operatives, social enterprises) — absent from content, yet quiz[6] tests co-operatives.",
    "packet": 20,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-20",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "packet-20-bundle...json content[0].sections[1] 'For-Profit and Not-for-Profit' and sections[2] 'Co-operatives' teach the spec's actual bullets; charities/social-enterprise clause independently checked against audit/raw/econ_spec.txt (grep -ic 'charit' = 0, grep -ic 'social enterprise' = 0), refusal upheld",
    "note": null
   },
   {
@@ -13028,10 +13028,10 @@
    "kind": "specGap",
    "text": "Constraints on business growth (size of market, access to finance, owner objectives, regulation) — not in content[]; quiz[4] tests it.",
    "packet": 20,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-20",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "packet-20-bundle...json content[3].sections[0]/[1] 'Size of Market and Access to Finance' / 'Owner Objectives, Regulation and Bureaucracy' cover all four spec constraints (econ_spec.txt:1268-1271), recall fillin lists all four",
    "note": null
   },
   {
@@ -13040,10 +13040,10 @@
    "kind": "specGap",
    "text": "Reasons for and impact of demergers on businesses, workers and consumers — only 'reasons' touched in one paragraph; impacts on workers/consumers not covered.",
    "packet": 20,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-20",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "packet-20-bundle...json content[4].sections[0] 'Reasons for Demergers' and sections[1] 'The Impact of Demergers' cover businesses/workers/consumers each with for/against, matching econ_spec.txt:1281-1283",
    "note": null
   },
   {
@@ -13052,10 +13052,10 @@
    "kind": "specGap",
    "text": "Advantages and disadvantages of each type of integration (esp. vertical: securing supply/quality/foreclosure; conglomerate: lack of expertise, no synergies) — compressed into a single paragraph with no evaluation per type.",
    "packet": 20,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-20",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "packet-20-bundle...json content[2].sections[5] 'Advantages and Disadvantages of Each Type' gives horizontal/vertical/conglomerate each their own for/against, incl. supply/quality security and no-synergies/no-expertise for conglomerate, matching econ_spec.txt:1263",
    "note": null
   },
   {
@@ -13064,10 +13064,10 @@
    "kind": "specGap",
    "text": "Divorce of ownership from control as an explicit spec term with its diagrammatic/objective consequences — present, but the objectives diagram is not surfaced in Learn Mode (unsure whether IAL 3.3.1 lists the diagram explicitly; the objectives bullets themselves are covered).",
    "packet": 20,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-20",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "packet-20-bundle...json content[5].sections[4] 'Divorce of Ownership from Control' plus diagram d5e500fa now pinned via diagramId to content[5]'s checkin (confirmed via lib/learn-steps.js:65 and components/learn-mode/utils.js:114 id-first resolution), so the objectives diagram is surfaced in Learn Mode",
    "note": null
   },
   {
