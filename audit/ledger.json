@@ -1408,11 +1408,11 @@
    "fix": "Prioritise the content pipeline on Units 3-4 to Unit-1 depth (aim 25 questions, >=4 blocks, recalls). Until then, show honest depth signals: on the topic chips and section header display 'N questions' and a 'Coming soon: more content' badge instead of silently shipping 10.",
    "impact": "A Year 13 student (the cohort revising WEC13/WEC14/WBS13/WBS14 for the summer exams) opens a section and finishes it in two steps with 2 quizzes, sees no reorder/fill-in activities they saw in Unit 1, and concludes the app 'doesn't cover' their year. This is the second concrete source of the 'doesn't cover all topics' complaint, and Smart Practice for a whole Unit 3 selection is at most ~60 questions.",
    "packet": 5,
-   "status": "confirmed",
+   "status": "wont-fix",
    "closed_by": "packet-5",
    "verified_by": "packet-verifier 2026-09-14 2026-09-14",
    "evidence": "app/api/sections/depth/route.js:19-45 (thin = chapters < 4 or quiz < 20, the validator's thresholds); curl: 43 entries, 22 thin, and the 22 ids equal exactly the 22 sections carrying depth.blocks/depth.quiz keys in audit/validator-baseline.json. StudyApp.jsx:414-421 fetches it, :979-986 renders the header note, Sidebar.jsx:148-153 the chip. Observed at 390x844 on /business/unit-3/assessing-competitiveness: header 'More content coming · 10 questions so far' (title '1 chapter, 10 questions so far'); sidebar chips on all six Unit 3 rows (10 q x5, 9 q on Influences); supply shows '3 ch' and '... 3 chapters so far'. Note: chip 10.5px and header 11px are below the 12px label floor (see F101).",
-   "note": "14 Sep 2026, packet 3: the validator half is built — depth.blocks / depth.recalls / depth.quiz fire as DEBT on all 25 sections below the Unit 1 template and are baselined per section. The other half of this fix is student-facing: an honest 'N questions' count and a 'more content coming' signal on the topic chips and section header. That is navigation/Step 0 work and moves to packet 5. Do not record F083 done until the signal ships."
+   "note": "Implemented in packet 5 (sidebar chip + header note, thresholds from the validator) and confirmed by its verifier; REMOVED on 2026-09-16 at the founder's request — he does not want the product telling students a section is thin. The finding it answered is real and stands: Units 3-4 are a fraction of Units 1-2, and a Year 13 student who opens one can still conclude the app skips their year. The answer is now the content packets filling those sections, not a label admitting it. Do not reinstate the chips without asking. Removed cleanly: the /api/sections/depth route, the fetch in StudyApp, the Sidebar prop and both CSS rules all went with them."
   },
   {
    "id": "F084",
@@ -3159,10 +3159,10 @@
    "rank": 0,
    "text": "Re-map quizIndices/practiceIndices so each block's inline MCQ and practice question is on-topic (Planning->Q12/Q19 + practice 3; Internal->Q0/Q16 + practice 2; External->Q2/Q14 + practice 1/4; Forms->Q4; Liability->Q1/Q23) and drop 'Define cash flow' until cash flow is taught.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "bundle tables.content[*].quizIndices/practiceIndices: Planning->quiz[7]('most important limitation...') practice[5](Evaluate plan); Internal->quiz[10]('cost of retained profit') practice[0](Define retained profit); External->quiz[22]('equity vs bank loan') practice[1,2]; Forms->quiz[24]('sole trader...shares') practice[3]; Liability->quiz[32]('partnership...incorporate') practice[4]. Every block's first pinned quiz item and practice item is on-topic; confirmed by reading packet-19-bundle__business__planning-raising-finance.json",
    "note": null
   },
   {
@@ -3172,10 +3172,10 @@
    "rank": 1,
    "text": "Add the missing spec content: a subsection on cash-flow forecasts (simple table, interpretation, uses and limitations) and a subsection on the remaining external sources/methods (family and friends, business angels, peer-to-peer, leasing, trade credit, grants), and rewrite 'choosing-appropriate-finance' to actually cover finance appropriate to limited vs unlimited liability businesses.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "Clause (a) cash-flow forecast correctly refused (bus_spec.txt:844-877 is 2.3.1, no cash-flow leaf; 2.3.2 sub-topic 4 'Cash flow' is at bus_spec.txt:907-908). Remaining sources/methods built: subsections family-friends-other-businesses, banks-and-business-angels, peer-to-peer-and-crowd-funding, leasing-trade-credit-grants in bundle cover all 6 sources/7 methods. choosing-appropriate-finance subsection fully rewritten to teach finance-by-liability-type (5b).",
    "note": null
   },
   {
@@ -3185,10 +3185,10 @@
    "rank": 2,
    "text": "Remove first-three-letter hints from all six fill-ins (or replace them with scenario/numeric fill-ins), and replace the 'Match the finance source' reorder with a real matching widget or fill-in; strip bracketed durations from the shortest-to-longest reorder.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "bundle: all 7 fillin recalls carry descriptive scenario hints (e.g. owner-capital hints=['money already set aside before the business existed',...]), none is a first-three-letter hint. 5 'match' type recalls (real left/right/why pairing) replace the fake reorder-as-matching widget (pre-packet section_quiz-style item at 2026-09-16-pre-packet-19...json:693 'Match the finance source to the most appropriate use'). All 5 reorder items' correctOrder arrays carry no bracketed durations (pre-packet had 'Bank overdraft (days to weeks)' etc at line 346-349, now absent).",
    "note": null
   },
   {
@@ -3198,10 +3198,10 @@
    "rank": 3,
    "text": "Fix factual/UK-centric content: replace the Tesla and JCB examples, correct the Raspberry Pi dilution claim, resolve the 'retained profit has no cost' vs opportunity-cost contradiction, and swap HMRC/Companies House/'per pound' for international wording; add at least two Asia/Middle East examples.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "grep for Tesla/JCB/Raspberry Pi/HMRC/'Companies House'/'per pound' in packet-19-bundle__business__planning-raising-finance.json returns 0 matches (all removed rather than corrected, per commit 4597a1d). Retained-profit no-cost/opportunity-cost contradiction resolved consistently: misconception + keyIdea + body text of opportunity-cost-of-retained-profit subsection all state 'no interest is not no cost'. Asia/Middle-East real examples added extensively: Grab, Careem, Jollibee, Zhang Yin/Nine Dragons Paper, Huawei, Alibaba/SoftBank, Sea Limited, Saudi Aramco, Grameen Bank (far more than the required 2).",
    "note": null
   },
   {
@@ -3211,10 +3211,10 @@
    "rank": 4,
    "text": "Normalise practice to IAL formats (Define 2 marks, Explain 4 marks, drop 'Outline', add a short case context to the Assess/Evaluate questions and levels-based guidance) and cut the out-of-scope/joke MCQs (Q5, Q8, Q6, Q9, duplicate Q10) in favour of items on cash-flow forecasts and finance-by-liability-type.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "practice table: Define 2, Calculate 4, Explain 4, Analyse 6, Assess 10, Evaluate 20 -- matches audit/raw/tariff-census.json business rows exactly (Define[2], Calculate[4], Explain[4], Analyse[6], Assess[10,12]); no 'Outline' command present (0 matches). Assess/Evaluate items (practice[4],practice[5]) carry case-context stems and levels-marked guidance text ('Levels-marked, so the judgement is what is assessed...'). Old joke/out-of-scope MCQs (pre-packet Q5 franchising w/ nonsense distractor, Q6 'NOT a typical section', Q8 social enterprise, Q9 'LEAST important') replaced by a rebuilt 33-item quiz; runner's dry run (node scripts/packet-19-planning-raising-finance.mjs) reports 0 problems for tariff/command-word checks.",
    "note": null
   },
   {
@@ -3223,10 +3223,10 @@
    "kind": "accuracy",
    "text": "Liability and Appropriate Finance > choosing-appropriate-finance > realExample (Tesla): States Tesla funded gigafactory construction with 'government loans' and 'retained profits' and that Musk 'matched each source to its purpose'. Tesla's US DOE loan ($465m, 2010, repaid 2013) funded the Fremont plant, not the Gigafactory; Gigafactory Nevada (2014-16) was funded by equity/convertible notes, Panasonic and state tax abatements; Tesla had no retained profits (cumulative losses until 2020). The narrative is invented.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "grep -c Tesla packet-19-bundle__business__planning-raising-finance.json = 0; the invented Tesla/DOE-loan/Gigafactory narrative is removed entirely (not corrected in place), consistent with commit 4597a1d's stated approach. Its former slot ('choosing-appropriate-finance' realExample) now reads: 'A partnership wanting outside equity has to incorporate first...' with no Tesla reference.",
    "note": null
   },
   {
@@ -3235,10 +3235,10 @@
    "kind": "quiz",
    "text": "q5: Franchising is not taught anywhere in this section (it is a Unit 1 'forms of business' point). Option 'Unlimited liability protection' is a nonsense phrase, not a plausible distractor.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "Refuted correctly: bus_spec.txt:872-873 lists '4b) Franchising, social enterprise, lifestyle businesses, online businesses' under 2.3.1 Forms of business, so franchising is this section's own leaf, not Unit 1 content. New 'franchising' subsection teaches it (block: Forms of Business). The nonsense distractor 'Unlimited liability protection' present pre-packet (2026-09-16-pre-packet-19...json:1093) is confirmed ABSENT from the new bundle (0 matches); franchising quiz items (609ae99f, 3d8b6f04) now use plausible distractors.",
    "note": null
   },
   {
@@ -3247,10 +3247,10 @@
    "kind": "quiz",
    "text": "q8: Social enterprise is not taught in this section (Unit 1 content). Explanation is fine but the item is out of scope for a section quiz/pre-test.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "Refuted correctly: bus_spec.txt:872-873, 4b names 'social enterprise' as part of 2.3.1's own Forms-of-business leaf. New subsection 'social-enterprise-lifestyle-online' teaches it; quiz item be51a7d9 tests it with a corrected explanation ('reinvests most of its surplus', not 'none under any circumstances' -- the Layer 6 canary was caught per NEXT.md and is not present in the staged bundle).",
    "note": null
   },
   {
@@ -3259,10 +3259,10 @@
    "kind": "practice",
    "text": "p0: 'Define the term cash flow (4 marks)' — IAL Business 'Define' questions are 2 marks; and cash flow / cash-flow forecasts are not taught anywhere in this section's content, yet this is the inline practice for block 3 'External Sources of Finance'. Guidance awards marks for inflow/outflow examples and positive/negative cash flow, which is not a definition mark scheme.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "packet-19-bundle...json tables.practice[0] is now \"Define the term 'retained profit'. (2 marks)\" pinned to Internal Finance block (practiceIndices:[0]), replacing pre-packet p0 \"Define the term 'cash flow'. (4 marks)\" which was pinned to External Finance (pre-packet section_content block 3 practiceIndices:[0]). No 'cash flow' Define item remains anywhere in tables.practice.",
    "note": null
   },
   {
@@ -3271,10 +3271,10 @@
    "kind": "structure",
    "text": "quizIndices are simply 0,1,2,3,4 in block order, not topic-matched: block 1 (Planning) shows Q0 internal finance; block 2 (Internal) shows Q1 unlimited liability; block 4 (Forms of business) shows Q3 overdraft. Only blocks 3 and 5 get an on-topic inline MCQ. Fix by mapping e.g. Planning->Q12/Q19, Internal->Q0/Q16, External->Q2/Q14, Forms->Q4, Liability->Q1/Q23.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "Pre-packet snapshot confirms the exact defect: section_content blocks 1-5 have quizIndices [0],[1],[2],[3],[4] respectively (literal block-order identity), and pre-packet quiz[0]='Which of the following is an internal source of finance?' pinned to block1 Planning, quiz[1]='key disadvantage of unlimited liability' pinned to block2 Internal, quiz[3]='short-term finance...cash shortage'(overdraft) pinned to block4 Forms -- all off-topic as claimed. New bundle quizIndices are no longer identity-mapped and the runner's own pins.identity check (packet-19-planning-raising-finance.mjs:157-159) verifies firstPins != [0,1,2,3,4]; dry run confirms 0 problems.",
    "note": null
   },
   {
@@ -3283,10 +3283,10 @@
    "kind": "structure",
    "text": "practiceIndices are likewise misaligned: block 3 (External) gets practice 0 'Define cash flow' (untaught term); block 4 (Forms of Business) gets practice 1 on venture capital. Practice 2, 3, 4 (the three best questions) are never surfaced in Learn Mode.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "Pre-packet section_content practiceIndices: Planning=None, Internal=None, External=[0], Forms=[1], Liability=None -- confirms practice[2,3,4] (Assess/Evaluate/Outline) never reached a student. New bundle: every block has a non-empty practiceIndices (verified all 5 blocks), practice items 0-5 all appear in some block's practiceIndices (checked unpinned_p=[] i.e. all 6 practice items are pinned).",
    "note": null
   },
   {
@@ -3295,10 +3295,10 @@
    "kind": "structure",
    "text": "Block order teaches share capital / Ltd vs PLC (block 3, share-capital) before Ltd, PLC and limited liability are defined (blocks 4-5). Forms of business and liability should precede external finance, or at minimum precede the share-capital subsection.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "Refused in its prescribed form correctly: block order in bundle is Planning, Internal Finance, External Finance, Forms of Business, Liability, matching bus_spec.txt:844-877's own order (1 Planning, 2 Internal, 3 External, 4 Forms, 5 Liability); PROTOCOL.md's template rule is spec order. The named dependency is fixed at the seam instead: 'share-capital' subsection (External Finance block) teaches share capital generically as 'issuing shares: an investor pays money and receives part of the ownership' with no reference to Ltd/plc, and 'choosing-appropriate-finance' (Liability block, 5b) is where which business forms may issue shares is answered.",
    "note": null
   },
   {
@@ -3307,10 +3307,10 @@
    "kind": "structure",
    "text": "Block 5 'Liability and Appropriate Finance' is largely a restatement: unlimited-vs-limited-liability repeats what sole-traders-partnerships and private-public-limited-companies already said, while the spec's actual bullet (which finance sources are available to unlimited- vs limited-liability businesses, e.g. only companies can issue shares; sole traders rely on owner's capital, loans, overdrafts, personal guarantees) is never made.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "Liability block subsections now add content beyond forms-of-business restatement: 'unlimited-vs-limited-liability' adds behavioural consequence ('An owner facing unlimited liability takes fewer risks, borrows less...'), 'limited-liability-advantages-disadvantages' adds the personal-guarantee nuance ('not absolute...a bank...will usually require a personal guarantee'), and 'choosing-appropriate-finance' (new 3rd subsection) directly teaches 5b 'finance appropriate for limited and unlimited liability businesses' with the sole-trader-vs-company breakdown the ledger item said was missing.",
    "note": null
   },
   {
@@ -3319,10 +3319,10 @@
    "kind": "structure",
    "text": "Within block 2 the 2-per-step pairing yields (retained profit + sale of assets) then owner's capital alone; the spec and start-up logic put owner's capital first, so the lone third step is the one that should open the block.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "Internal Finance block subsection order in bundle: owner-capital, retained-profit, opportunity-cost-of-retained-profit, sale-of-assets -- owner's capital now opens the block as the item requested.",
    "note": null
   },
   {
@@ -3331,10 +3331,10 @@
    "kind": "structure",
    "text": "Several 'flow' widgets are not flows: sole-traders-partnerships 'Simple to set up -> Owner keeps all profit -> Unlimited personal liability' is a feature list; unlimited-vs-limited-liability 'Business fails -> Unlimited: assets seized -> Limited: only share value lost' presents a branch as a linear chain.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "All 4 'flow' body items in the new bundle are genuine causal sequences, not feature lists or branches-as-chains: e.g. unlimited-vs-limited-liability flow = 'The business cannot pay -> Creditors pursue the owner -> Personal assets are at risk' (a true linear chain about ONE case, no branch); purpose-of-business-plans, retained-profit and matching-finance-to-circumstances flows are similarly single true sequences. The old sole-traders-partnerships feature-list flow and the old branch-as-chain in unlimited-vs-limited-liability no longer exist in that form.",
    "note": null
   },
   {
@@ -3343,10 +3343,10 @@
    "kind": "structure",
    "text": "Misconceptions are mostly genuine student errors (good), except contents-of-business-plans ('students list every section without explaining') which is an exam-technique tip, not a misconception; examMatters already covers it.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "contents-of-business-plans misconception rewritten to a genuine content misconception ('Students list every section of a plan and stop there, as though the list were the answer... Write instead: the market research section matters because it shows the demand is real') which is distinct from its examMatters ('A Define (2 marks)... needs the document AND its purpose'). No exam-technique/duplicate-of-examMatters framing remains.",
    "note": null
   },
   {
@@ -3355,10 +3355,10 @@
    "kind": "structure",
    "text": "Takeaways match their blocks. Block 1 takeaway 'Financial forecasts are the most scrutinised section by lenders' is presented as fact from a hedged body claim ('often').",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "Planning block takeaway array no longer contains the hedged claim; new takeaways are ['A plan states the idea, the evidence, the operation and the numbers.', 'It has two readers: the owner running it and the provider funding it.', 'Its figures are assumptions, so it must be revised, not filed.'] -- no unsupported factual assertion about lender behaviour.",
    "note": null
   },
   {
@@ -3367,10 +3367,10 @@
    "kind": "structure",
    "text": "Real examples are 10/12 UK companies (Deliveroo, Grind, Aldi UK, BA, JCB, Raspberry Pi, BrewDog, Pimlico Plumbers, ASOS, BHS) for an international audience; only Spanx and Tesla are non-UK and Tesla is wrong. No Asian/Middle Eastern examples.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "grep for Deliveroo/Grind/Aldi/BrewDog/Pimlico Plumbers/ASOS/BHS/JCB/Raspberry Pi/Tesla in bundle = 0 matches each. realExample text across all 24 subsections replaced with internationally distributed examples incl. many Asia/Middle-East ones (Grab, Careem, Jollibee, Zhang Yin/Nine Dragons Paper, Huawei, Alibaba/SoftBank, Sea Limited, Saudi Aramco, Grameen Bank) plus generic/unnamed international scenarios; no UK-only company names remain.",
    "note": null
   },
   {
@@ -3379,10 +3379,10 @@
    "kind": "structure",
    "text": "Zero diagrams; a debt-vs-equity comparison table and a simple cash-flow forecast table (a spec requirement) would be the obvious visual anchors for this section.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "'Zero diagrams' clause fixed: 5 diagrams/8 views added (scripts/_packet19-diagrams.mjs), including a debt-vs-equity comparison grid (debtEquitySvg) as the item suggested. The 'simple cash-flow forecast table' half of this item's example is the same out-of-scope request as specGap-05 (cash-flow forecasts are IAL 2.3.2:907-908, not this section's leaf) and was correctly not built for the same spec reason; the core defect the item describes (zero diagrams) can no longer occur.",
    "note": null
   },
   {
@@ -3391,10 +3391,10 @@
    "kind": "structure",
    "text": "No difficulty ramp: every subsection follows the identical template (paragraph, flow, paragraph, paragraph) with recall difficulty flat across the section; the 20-mark evaluation skills (weighing factors against a context) are only exercised in practice questions the flow never shows.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "examMatters command-word ladder per subsection now ramps within each block, e.g. Planning: Define(2)->Explain(4)->Analyse(6)->Evaluate(20); Liability: Define(2)->Assess(10)->Evaluate(20) (verified all 5 blocks by reading tables.content[*].sections[*].examMatters). The 20-mark Evaluate skill is now exercised inline via examMatters guidance in 2 subsections (limits-of-a-business-plan, choosing-appropriate-finance), not only in the standalone practice item.",
    "note": null
   },
   {
@@ -3403,10 +3403,10 @@
    "kind": "specGap",
    "text": "Note: the app labels this '2.3.1' but in the IAL Business spec 'Raising finance' is Unit 2 topic 2.1 (2.1.1 Internal finance, 2.1.2 External finance, 2.1.3 Liability, 2.1.4 Planning); numbering mapping unsure, but the spec bullets below are what Edexcel lists for this content.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "Verified app/business/unit-2/page.js:16 already carries { id: 'planning-raising-finance', ref: '2.3.1', ... } -- the IAL topic number the app shows students. No renumbering needed or done; correctly resolves to no change, matching the item's own ledger note that 2.1.x is UK GCE numbering not present in the IAL spec.",
    "note": "SPEC NUMBERING: this item cites 2.1.1, 2.1.2, 2.1.3, 2.1.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -3415,10 +3415,10 @@
    "kind": "specGap",
    "text": "2.1.2 External finance — sources: family and friends, peer-to-peer funding, business angels, other businesses. None taught (business angels appear only as a quiz option).",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "bus_spec.txt:857-863 (3a) lists 6 sources: family and friends, banks, peer-to-peer funding, business angels, crowd funding, other businesses. All 6 are now taught as body content (not just quiz options) across subsections family-friends-other-businesses, banks-and-business-angels, peer-to-peer-and-crowd-funding -- confirmed the item's own list omitted banks and crowd funding, both of which are built.",
    "note": "SPEC NUMBERING: this item cites 2.1.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -3427,10 +3427,10 @@
    "kind": "specGap",
    "text": "2.1.2 External finance — methods: leasing, trade credit, grants. Not taught in content (leasing/trade credit appear only in a recall label, a bullet, and practice guidance).",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "bus_spec.txt:864-870 (3b) methods leasing/trade credit/grants now taught in full in the 'leasing-trade-credit-grants' subsection body (was previously only in a recall label/bullet/practice guidance per the item's own description).",
    "note": "SPEC NUMBERING: this item cites 2.1.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -3439,10 +3439,10 @@
    "kind": "specGap",
    "text": "2.1.3 Liability — 'finance appropriate for limited and unlimited liability businesses' (e.g. companies can issue shares; sole traders/partners cannot, rely on owner's capital, loans with personal guarantees, overdrafts). Not taught despite the block being titled 'Liability and Appropriate Finance'.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "bus_spec.txt:876-877 (5b) 'Finance appropriate for limited and unlimited liability businesses' now fully taught in the rewritten 'choosing-appropriate-finance' subsection: explicit bulleted breakdown of what an unlimited-liability business can/cannot access vs a limited-liability business, matching the item's own example content (cannot issue shares; sole traders rely on owner's capital/loans/personal guarantees).",
    "note": "SPEC NUMBERING: this item cites 2.1.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -3450,12 +3450,12 @@
    "section": "planning-raising-finance",
    "kind": "specGap",
    "text": "2.1.4 Planning — 'interpretation of a simple cash-flow forecast and calculations based on changes in the cash-flow variables' and 'use and limitations of a cash-flow forecast'. Entirely absent from content, yet practice Q0 asks students to define cash flow.",
-   "packet": 19,
+   "packet": 31,
    "status": "open",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "SPEC NUMBERING: this item cites 2.1.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+   "note": "NOT THIS SECTION'S LEAF (packet 19, 16 Sep 2026). The item asks for 'interpretation of a simple cash-flow forecast' and 'use and limitations of a cash-flow forecast' to be taught in planning-raising-finance. In IAL those are 2.3.2 Financial planning, sub-topic 4 (bus_spec.txt:907-908, 'Construction and interpretation of simple cash-flow forecasts' / 'Use and limitations of cash-flow forecasts'), which the financial-planning section owns; 2.3.1 spans bus_spec.txt:844-877 and contains no cash-flow leaf. Teaching it here would take another section's leaf. Packet 19 instead DELETED the untaught 'Define the term cash flow (4 marks)' practice item, which is the defect this finding and practice-01 actually saw. Re-assign to whichever packet owns financial-planning; do not build it in 2.3.1. (Original annotation: cites UK GCE 2.1.4, which does not exist in the IAL spec; the IAL topic for this section is 2.3.1.)"
   },
   {
    "id": "C-planning-raising-finance-specGap-06",
@@ -3463,10 +3463,10 @@
    "kind": "specGap",
    "text": "2.1.4 Planning — 'relevance of a business plan in obtaining finance': taught, but the link between the plan's cash-flow forecast and the bank's lending decision (the specific spec angle) is only implicit.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "'using-a-plan-to-obtain-finance' subsection now makes the lender-link explicit: 'A lender is asking whether it will be repaid. It reads the forecasts for the money available to meet the repayments...' -- this states the link between the plan's financial forecasts and a bank's lending decision at the level 2.3.1 supports (1b, bus_spec.txt:848-849), without teaching the cash-flow-forecast CONSTRUCTION method itself, which correctly stays out of scope per specGap-05's reasoning (2.3.2:907-908).",
    "note": "SPEC NUMBERING: this item cites 2.1.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -3475,10 +3475,10 @@
    "kind": "specGap",
    "text": "Out-of-spec inclusions: 'Forms of Business' (sole trader, partnership, Ltd, PLC) belongs to Unit 1 (1.5.4 in the parallel structure); franchising and social enterprise appear in the quiz only. Keeping it as a recap is fine but it should be labelled as recap, and the quiz should not test untaught Unit 1 items.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "bus_spec.txt:869-873, 2.3.1 topic 4 'Forms of business' (a: sole trader/partnership/Ltd; b: franchising/social enterprise/lifestyle/online businesses; c: growth to plc and flotation) is this section's OWN leaf, not a Unit 1 recap or 1.5.4 (which does not exist in the IAL spec, per the item's own superseding note). Correctly refuted: the 'Forms of Business' block is kept and grown from 2 to 5 subsections (sole-traders-partnerships, private-public-limited-companies, franchising, social-enterprise-lifestyle-online, growth-to-plc-and-flotation), and franchising/social-enterprise quiz items are now taught content, not untested Unit 1 items.",
    "note": "SPEC NUMBERING: this item cites 1.5.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -3487,10 +3487,10 @@
    "kind": "specGap",
    "text": "Unsure: whether IAL 2.1.2 lists 'other businesses' exactly as UK does; treat as likely.",
    "packet": 19,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-19",
+   "verified_by": "verify-a-packet-19 2026-09-16",
+   "evidence": "'Other businesses' (bus_spec.txt:863, 3a bullet 6) is confirmed IAL content and is now taught explicitly in the 'family-friends-other-businesses' subsection ('a regional distributor lent Yusra Foods ,000 on long terms, tied to a supply agreement') rather than appearing only as a quiz option.",
    "note": "SPEC NUMBERING: this item cites 2.1.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -9225,10 +9225,10 @@
    "rank": 0,
    "text": "Rewire block metadata to match content: content[1] quizIndices -> PES items (e.g. Q3, Q7, Q8), practiceIndices -> [0, 2], diagramRef -> 'PES: Visual Comparison'; content[2] diagramRef -> 'PES Over Time'; give content[0] a practice (P1) and keep Q0/Q1.",
    "packet": 23,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-23",
+   "verified_by": "verify-a-packet-23 2026-09-16",
+   "evidence": "audit/snapshots/packet-23-bundle__economics__supply.json: all 5 blocks now carry diagramId + quizIndices + practiceIndices and each pin matches its block's content (block 0 quiz 6,3,4,5 / practice 0,1 = supply curve+movement+shift; block 2 quiz 16,13,14,15,17,18 / practice 4 = PES; block 4 quiz 25,23,24 / practice 6,7 = SR/LR). Pins resolve at components/LearnModeTab.jsx:213-218. All 8 practice items pinned exactly once; no block without a practice.",
    "note": null
   },
   {
@@ -9238,10 +9238,10 @@
    "rank": 1,
    "text": "Replace block 3 with an on-spec 'Time and PES' block (momentary / short run / long run and what each implies for elasticity, using the existing PES Over Time diagram); move diminishing returns and returns to scale to WEC13 costs. Delete or correct Q21 (P >= AVC / P = MC), which is Unit 3 and currently marks a wrong answer.",
    "packet": 23,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-23",
+   "verified_by": "verify-a-packet-23 2026-09-16",
+   "evidence": "Refusal of the prescribed 'momentary' frame is spec-supported: grep -ciE '\\\\bmomentary' audit/raw/econ_spec.txt = 0. The spec's own frame is 2d (econ_spec.txt:684-685) and 2c-1 (:679), and both are built: block 3 'The Time Period' and block 4 'The Short Run and the Long Run' (4 subsections ending in the PES link). Unit 3 vocabulary is gone: 'returns to scale'/'marginal product'/'diminishing returns'/'marginal cost' all 0 in the bundle. Q21 (profit-maximising firm / P=MC) is deleted: 26-item bank has no such item.",
    "note": null
   },
   {
@@ -9251,10 +9251,10 @@
    "rank": 2,
    "text": "Correct the factual errors: swap the Saudi Arabia example for US shale rig-count behaviour; fix or drop the Airbus $25bn / 'doubling inputs' claim; remove Help to Buy from the supply-factor mark scheme; soften 'arrows earn additional marks'.",
    "packet": 23,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-23",
+   "verified_by": "verify-a-packet-23 2026-09-16",
+   "evidence": "All four factual clauses cleared in audit/snapshots/packet-23-bundle__economics__supply.json (counts pre -> post): Saudi 2->0 (replaced by Vietnamese robusta + copper-mine examples), Airbus/'doubling inputs' 1->0, 'Help to Buy' 1->0, and the 'arrows ... earns additional marks' marker claim 1->0. Independent gateSection run over the bundle returns 0 claim.uncited and 0 claim.marker findings (pre-packet snapshot had 6 claim.uncited BLOCKs).",
    "note": null
   },
   {
@@ -9264,10 +9264,10 @@
    "rank": 3,
    "text": "Redesign fill-in recalls: remove first-letters-plus-length hints, use word banks with distractors, and add at least one numerical PES calculation from raw prices/quantities (also as a 4-mark practice item, converting 'Define PES (4)' to 2 marks).",
    "packet": 23,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-23",
+   "verified_by": "verify-a-packet-23 2026-09-16",
+   "evidence": "Independent run of gateSection(bundle, contextFor('supply')) over audit/snapshots/packet-23-bundle__economics__supply.json: 0 fillin.hint and 0 fillin.distractors findings (pre-packet snapshot: 12 fillin.hint + 4 'no distractors'). All 9 fillins carry semantic hints ('the half of the phrase about capability rather than intention') plus 3 distractors. Raw-figure PES calculation now exists in quiz 13 and 14 and as practice P4 'Calculate ... $8 to $10, 400 to 460' (4 marks); the 4-mark Define is gone (P0 Define = 2 marks).",
    "note": null
   },
   {
@@ -9277,10 +9277,10 @@
    "rank": 4,
    "text": "Dedupe the quiz bank (Q1/Q10, Q4/Q16, Q6/Q12), replace with items on joint/competitive supply (after teaching it in factors-that-shift-supply), PES calculation, and SR/LR elasticity; rewrite the 10- and 20-mark practice guidance as IAL levels descriptors (KAA + evaluation) and localise the 20-marker beyond the UK.",
    "packet": 23,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-23",
+   "verified_by": "verify-a-packet-23 2026-09-16",
+   "evidence": "Duplicate-pair arithmetic independently re-checked against audit/snapshots/2026-09-16-pre-packet-23__economics__supply.json and REFUTED: Q1 (drought shifts wheat supply left) vs Q10 (price rise = movement, no shift); Q4 (recognise perfectly inelastic supply) vs Q16 (numerical PES 0.75); Q6 (PES determinants) vs Q12 (subsidy shift). Different stems, different correct concepts. The real near-duplicates are Q9/Q12 (both: subsidy shifts supply right/down) and Q13/Q19 (both: technology or productivity gain increases supply) and both pairs are collapsed in the new 26-item bank. Joint/competitive supply refusal is spec-supported (0 hits in econ_spec.txt; 'joint' hits only at :1254 and :1957, both joint VENTURES) and Q20 is deleted instead. The '10- and 20-mark guidance' clause cannot be met as written: audit/raw/tariff-census.json lists Economics as Define 2, Calculate 2/4, Draw 4, Explain 4, Analyse 6, Examine 8, Discuss 14, Evaluate 20 - no Assess, no 10-mark tariff; KAA is 0 in econ_spec.txt. The 10-mark Assess item is re-tariffed to Examine (8) and guidance rewritten to the Appendix 6 wording; practice.levels DEBT cleared. 20-marker localised: P7 is rice in a developing economy, no UK.",
    "note": null
   },
   {
@@ -9289,10 +9289,10 @@
    "kind": "accuracy",
    "text": "content[0] 'The Supply Curve' > supply-and-the-supply-curve > realExample: Saudi Arabia is presented as raising output above $80 'because expensive extraction methods become profitable' and cutting drilling when prices fell below $30 in early 2016. Saudi Arabia has the lowest lifting costs in the world (roughly $3-10/bbl) and its output is set by OPEC/political strategy; in 2014-16 it famously INCREASED production to record levels (~10.5m bpd) to defend market share while prices collapsed. The example describes US shale/oil-sands behaviour and attributes it to the wrong producer; a student who repeats it in an exam is writing something a well-informed examiner knows is false.",
    "packet": 23,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-23",
+   "verified_by": "verify-a-packet-23 2026-09-16",
+   "evidence": "grep -ci Saudi over audit/snapshots/packet-23-bundle__economics__supply.json = 0 (pre-packet snapshot = 2). supply:sub:supply-and-the-supply-curve realExample is now Vietnamese robusta coffee and supply:sub:why-the-supply-curve-slopes-upward uses a copper mine working richest ore first - both describe the rising-marginal-cost-of-extraction behaviour correctly and attribute it to producers that actually show it.",
    "note": null
   },
   {
@@ -9301,10 +9301,10 @@
    "kind": "accuracy",
    "text": "content[2] 'Short Run vs Long Run' (whole block: short-run-production, long-run-production-and-returns-to-scale, takeaway): Diminishing marginal returns, marginal product, and increasing/constant/decreasing returns to scale are WEC13 (Unit 3, business behaviour: costs and economies of scale) content. The WEC11 supply/PES bullet only requires 'the distinction between short run and long run and its significance for elasticity of supply'. The block never mentions PES or elasticity at all, so it teaches the wrong exam use of the SR/LR distinction and tells Unit 1 students that examiners 'set trap questions' on returns-to-scale terminology in this topic.",
    "packet": 23,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-23",
+   "verified_by": "verify-a-packet-23 2026-09-16",
+   "evidence": "The whole Unit 3 block is gone. Over audit/snapshots/packet-23-bundle__economics__supply.json: 'returns to scale' 0, 'marginal product' 0, 'diminishing returns' 0, 'marginal cost' 0, 'trap question' 0 (pre had all of them). Block 4 'The Short Run and the Long Run' now teaches 2d and ends in supply:sub:why-supply-is-more-elastic-in-the-long-run, which walks all five PES determinants loosening, plus supply:sub:one-price-rise-two-time-horizons (PES 0.6 short run, 2.4 long run). Independent gateSection run: spec.coverage 19 of 19 leaves (pre: 18 of 19, ECON-1.3.3-2d uncovered).",
    "note": null
   },
   {
@@ -9325,10 +9325,10 @@
    "kind": "practice",
    "text": "p0: 'Define the term price elasticity of supply (4 marks)'. IAL Economics definitions are 2-mark items; the guidance then awards marks 3-4 for 'PES > 1 elastic' and 'PES < 1 inelastic', which is interpretation, not definition. Either make it 2 marks or reframe as 'Calculate and interpret' with data (the spec's calculation bullet is otherwise untested anywhere in the section).",
    "packet": 23,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-23",
+   "verified_by": "verify-a-packet-23 2026-09-16",
+   "evidence": "No 4-mark Define survives. audit/snapshots/packet-23-bundle__economics__supply.json practice: Define 2 ('Define the term supply'), Draw 4, Explain 4, Analyse 6, Calculate 4, Examine 8, Discuss 14, Evaluate 20 - every pair checked against audit/raw/tariff-census.json. Both of the finding's alternatives are taken: the Define is at 2 marks and the spec's calculation bullet is tested by P4 'price rises from $8 to $10, quantity 400 to 460 ... calculate the PES and interpret the value' (4 marks). Independent gateSection run: the two practice.tariff BLOCKs in the pre-packet snapshot are cleared.",
    "note": null
   },
   {
@@ -9337,10 +9337,10 @@
    "kind": "practice",
    "text": "p3: 'Evaluate ... UK housing market (20 marks)'. (a) Mark scheme is points-based ('3 marks', '2 marks') whereas IAL 20-markers are levels-marked (KAA and Evaluation levels); students will learn to hunt points rather than build chains and judgements. (b) Guidance lists Help to Buy (demand-side) as a supply factor. (c) Entirely UK-specific (green belt, London, Help to Buy) for an international-school cohort who will get contexts like Malaysian palm oil or Vietnamese rice; no data extract is provided though such a question in WEC11 would be data-response.",
    "packet": 23,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-23",
+   "verified_by": "verify-a-packet-23 2026-09-16",
+   "evidence": "All three clauses. (a) Independent gateSection run over the bundle returns 0 practice.levels findings; the pre-packet snapshot carried 'supply|practice.levels ... 20-mark Evaluate guidance allocates points (n marks)'. P7's guidance is chain-and-judgement prose keyed to the Appendix 6 description, with no point allocations. (b) 'Help to Buy' 1 -> 0 over the bundle. (c) P7 is 'the price of rice ... in a developing economy'; 'the UK'/'Britain'/'green belt'/'London' are all 0, and the runner bans them at scripts/packet-23-supply.mjs:144-145.",
    "note": null
   },
   {
@@ -9349,10 +9349,10 @@
    "kind": "structure",
    "text": "Inline quiz/practice wiring is sequential, not content-matched: content[0].quizIndices=[0], content[1].quizIndices=[1], content[2].quizIndices=[2]. So the PES block's one inline MCQ is Q1 (wheat drought supply shift) and the SR/LR block's is Q2 (specific tax), while the six genuine PES MCQs (Q3,Q4,Q6,Q7,Q8,Q11) are never seen in Learn Mode. Likewise practiceIndices: block 2 -> P0 (Define PES, OK) but block 3 -> P1 (housing shift factors); block 1 has no practice.",
    "packet": 23,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-23",
+   "verified_by": "verify-a-packet-23 2026-09-16",
+   "evidence": "audit/snapshots/packet-23-bundle__economics__supply.json: pins are content-matched, not sequential. Block 'Price Elasticity of Supply' now pins quiz 16,13,14,15,17,18 (line through origin, two PES calculations, percentage base, the two extremes) and practice 4 (Calculate PES). Block 'The Supply Curve' pins practice 0,1 - the finding's 'block 1 has no practice' is gone. All 8 practice and 23 of 26 quiz items are pinned exactly once; the 3 unpinned (0,1,2) are reserved for the pre-test by design.",
    "note": null
   },
   {
@@ -9361,10 +9361,10 @@
    "kind": "structure",
    "text": "Only content[0] has a diagramRef ('Supply Curve'). Diagrams[1] 'PES: Visual Comparison' and diagrams[2] 'PES Over Time: Short Run vs Long Run' — the two diagrams that carry the spec's PES content and are well drawn — are never rendered in Learn Mode. Block 2 should reference 'PES: Visual Comparison' and the SR/LR block should reference 'PES Over Time'.",
    "packet": 23,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-23",
+   "verified_by": "verify-a-packet-23 2026-09-16",
+   "evidence": "Every one of the 5 blocks now carries a diagramId that resolves to a diagram in the bundle (93d2f4e6, 2d4c0b2e, b638bde0, 01dec386, b041a18f), and a block's diagramId is what renders a diagram at its check-in (lib/learn-steps.js:63-66, components/LearnModeTab.jsx:213). The PES content the finding said was never rendered is now pinned twice: 'Price Elasticity of Supply: The Five Values' on the PES block and 'One Price Rise, Two Time Horizons' on the SR/LR block. NOTE: the two March PES diagrams were REBUILT, not kept - 0 of the 9 new scenario SVGs matches a pre-packet SVG, contrary to the NEXT.md spec block's 'are kept and pinned'. The defect is closed either way.",
    "note": null
   },
   {
@@ -9373,10 +9373,10 @@
    "kind": "structure",
    "text": "Block 3 breaks the difficulty ramp and the spec: after supply and PES it jumps to marginal product, diminishing returns and returns to scale (Unit 3 material) without ever mentioning elasticity, while the spec's actual SR/LR bullet is squeezed into one paragraph at the end of factors-influencing-pes. Takeaways for block 3 match the block but not the section's purpose.",
    "packet": 23,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-23",
+   "verified_by": "verify-a-packet-23 2026-09-16",
+   "evidence": "Block order now follows the specification's own order: 1 The Supply Curve (1a,1b), 2 What Shifts Supply (1c-1..1c-5), 3 Price Elasticity of Supply (2a,2b), 4 What Determines PES (2c), 5 The Short Run and the Long Run (2d). No Unit 3 jump: 'marginal product', 'diminishing returns', 'returns to scale', 'marginal cost' are 0 in the bundle. 2d is a full 4-subsection block rather than one paragraph in factors-influencing-pes, and its takeaways are about elasticity ('Every PES determinant loosens once the fixed factor becomes variable', 'Same firm, same 25% price rise: PES 0.6 then 2.4').",
    "note": null
   },
   {
@@ -9385,10 +9385,10 @@
    "kind": "structure",
    "text": "Step pairing (2 sections per step within a block; 3-section blocks leave a lone third section) means steps 2 and 4 are single-section steps. Under the described recall placement, a lone section is both 'first' (recall at bottom of its step) and 'last' (recall at top of the next step), so the factors-that-shift-supply reorder and the factors-influencing-pes fillin are probably shown twice back-to-back, while the final section's fillin (long-run) is probably never shown. Worth verifying in LearnModeTab.jsx.",
    "packet": 23,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-23",
+   "verified_by": "verify-a-packet-23 2026-09-16",
+   "evidence": "The step model makes the described failure impossible: buildSteps emits ONE teach step per subsection with the section's own recall below its teaching (lib/learn-steps.js:44-57, components/LearnModeTab.jsx:588-593), and pickSpacedRecall only re-shows a recall on a check-in of a LATER chapter, once, tracked in a used set (lib/learn-steps.js:95-110). No lone-section pairing, so nothing is shown twice back-to-back and nothing is lost. Packet 23's content fits it: 24 subsections, 24 recalls, one each. NOTE: the mechanism was landed by packet 5, not by this packet; packet 23 supplies the content that satisfies it.",
    "note": null
   },
   {
@@ -9397,10 +9397,10 @@
    "kind": "structure",
    "text": "Every fillin recall uses 'first two letters + underscore count' hints, which turns recall into pattern-completion. The same word appears verbatim in the body a few lines above in every case. No word bank/distractors are used anywhere in the section.",
    "packet": 23,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-23",
+   "verified_by": "verify-a-packet-23 2026-09-16",
+   "evidence": "Independent gateSection run over audit/snapshots/packet-23-bundle__economics__supply.json: 0 fillin.hint, 0 fillin.distractors and 0 fillin.leak findings, against 12 / 4 / 2 on the pre-packet snapshot. All 9 fillins carry semantic hints only (e.g. 'the word for capacity sitting unused' for 'spare') and 3 authored distractors each, which lib/recall-widgets.js:187 prefers over the drawn-from-the-section pool, so the bank is no longer a closed set.",
    "note": null
   },
   {
@@ -9409,10 +9409,10 @@
    "kind": "structure",
    "text": "Three near-duplicate MCQ pairs (Q1/Q10, Q4/Q16, Q6/Q12) plus three off-section items (Q14 producer surplus, Q20 joint supply, Q21 ATC) in a 25-item bank; the PreTest samples 3 at random, so a student can be pre-tested on untaught Unit 3 content or on two copies of the same question.",
    "packet": 23,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-23",
+   "verified_by": "verify-a-packet-23 2026-09-16",
+   "evidence": "Both halves. Off-section items: Q14 producer surplus (IAL 1.3.4, econ_spec.txt:703-706), Q20 joint supply (0 in econ_spec.txt) and Q21 profit-maximising firm / P=MC (Unit 3) are all absent from the 26-item bank. Near-duplicate pairs: re-checked independently against the pre-packet snapshot and refuted - Q1/Q10 are shift-factor vs movement-along, Q4/Q16 are recognition vs numerical calculation, Q6/Q12 are PES determinants vs a subsidy shift; the genuine pairs Q9/Q12 and Q13/Q19 are collapsed. The pre-test failure mode is closed twice over: it is no longer random, it takes the first three items NOT pinned to a block in stable order (components/learn-mode/PreTest.jsx:19-28), which here are quiz 0, 1 and 2 - supply definition, movement vs shift, and interpreting PES 0.4, all taught in the section.",
    "note": null
   },
   {
@@ -9421,10 +9421,10 @@
    "kind": "structure",
    "text": "Misconceptions are mostly genuine (stock vs supply; price shifts the curve; PES vs PED; inelastic = no change; diminishing returns = total output falls; diminishing returns vs decreasing returns to scale). factors-that-shift-supply's misconception ('students forget to explain the direction') is an exam-technique note rather than a conceptual misconception — mild filler.",
    "packet": 23,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-23",
+   "verified_by": "verify-a-packet-23 2026-09-16",
+   "evidence": "The exam-technique entry is gone. supply:sub:factors-that-shift-supply's misconception is now conceptual with no mark-scheme framing: 'Students state the factor and stop: costs shift supply. That names a cause without saying which way anything moves. Instead write: higher costs of production make each unit less profitable at the existing price, so less is offered at every price and the curve shifts left' - the March version was 'Stating technology shifts supply earns no marks without specifying which direction'. All 24 subsection misconceptions in the bundle follow the 'students write X / instead write Y' conceptual form. NOTE: this is the weakest of the 24 - it still starts from an answering habit - but the marks framing and the filler are gone and the correction supplies the causal chain.",
    "note": null
   },
   {
@@ -9433,10 +9433,10 @@
    "kind": "structure",
    "text": "Block 1 takeaway 3 ('Costs, technology, taxes, subsidies and firm numbers all shift supply') drops 'external shocks' from the bullet list and the whole section omits related goods in production (joint/competitive supply) and producer expectations, which the quiz then tests.",
    "packet": 23,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-23",
+   "verified_by": "verify-a-packet-23 2026-09-16",
+   "evidence": "First half built, second half refuted on the spec. Built: the 'What Shifts Supply' block's takeaway 1 is now 'Costs of production, new technology, indirect taxes, subsidies and natural disasters' - the full 1c list from econ_spec.txt:664-668, with natural disasters restored, and 1c-5 also has its own subsection supply:sub:natural-disasters. Refuted: 'joint supply', 'competitive supply' and 'producer expectations' are each 0 in econ_spec.txt (grep -ciE over the whole file; 'joint' hits only at :1254 and :1957, both joint ventures), so they are not Unit 1 content. The finding's own reason for adding them - 'which the quiz then tests' - is resolved from the other side: Q20, the joint-supply item, is deleted.",
    "note": null
   },
   {
@@ -9444,12 +9444,12 @@
    "section": "supply",
    "kind": "structure",
    "text": "Section's own examMatters repeatedly insists on showing equilibrium effects on a diagram, but the shift diagrams have no demand curve, and no worked PES calculation from raw prices/quantities appears anywhere in content, recall, quiz or practice.",
-   "packet": 23,
+   "packet": 24,
    "status": "open",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "PACKET 24 — ONLY THE FIRST HALF IS STILL OPEN. This item has two clauses. (a) 'the section's examMatters insists on showing equilibrium effects on a diagram, but the shift diagrams have no demand curve' — that is IAL 1.3.4 - 1b (econ_spec.txt:697-698) and price-determination owns it; packet 23 removed the examMatters sentences that demanded it, so what remains for packet 24 is the DIAGRAM in its own section. (b) 'no worked PES calculation from raw prices/quantities appears anywhere in content, recall, quiz or practice' — BUILT AND CONFIRMED BY PACKET 23 (Verify A, 16 Sep): the calculating-pes subsection, quiz items 13 and 14, and practice P4 Calculate (4). Clause (b) is closed; do not re-do it."
   },
   {
    "id": "C-supply-specGap-01",
@@ -9457,10 +9457,10 @@
    "kind": "specGap",
    "text": "'Use the formula to calculate PES' from raw price and quantity data — only a %-given example (10% -> 20%) exists; no worked percentage-change calculation, no quiz or practice item with raw figures.",
    "packet": 23,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-23",
+   "verified_by": "verify-a-packet-23 2026-09-16",
+   "evidence": "The genuine half is built and the half the finding got wrong is accounted for. Worked percentage-change calculation now exists in the body: supply:sub:calculating-pes shows $8 to $10 = 25%, 400 to 460 = 15%, 15/25 = 0.6, plus interpretation. Raw-figure assessment: quiz 13 ($10 to $12, 200 to 230, PES 0.75 - the March Q16, which was already correct, so the finding's 'no quiz item with raw figures' was wrong; the defect was that the sequential pins meant no student ever reached it), quiz 14 (the section's own Kavira figures), and practice P4 Calculate (4 marks). All three are pinned - quiz 13 and 14 to the PES block, P4 to the same block.",
    "note": null
   },
   {
@@ -9469,10 +9469,10 @@
    "kind": "specGap",
    "text": "'Distinction between short run and long run and its significance for elasticity of supply' — the SR/LR block never links to PES; the linkage is one paragraph in factors-influencing-pes. The dedicated 'PES Over Time' diagram is not surfaced in Learn Mode.",
    "packet": 23,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-23",
+   "verified_by": "verify-a-packet-23 2026-09-16",
+   "evidence": "Independent gateSection run over audit/snapshots/packet-23-bundle__economics__supply.json reports spec.coverage 19 of 19 leaves; the pre-packet snapshot reports 18 of 19 with 'spec.uncovered spec:ECON-1.3.3-2d' outstanding. The linkage is no longer one paragraph: block 4 is four subsections, of which supply:sub:why-supply-is-more-elastic-in-the-long-run walks each PES determinant loosening and supply:sub:one-price-rise-two-time-horizons does the same calculation twice (PES 0.6 then 2.4). The SR/LR diagram is surfaced: block 4 diagramId supply:diagram:b041a18f 'One Price Rise, Two Time Horizons'.",
    "note": null
   },
   {
@@ -9481,10 +9481,10 @@
    "kind": "specGap",
    "text": "Factors that shift supply: the spec list (costs of production, new technology, indirect taxes, subsidies) is covered, but common Edexcel extensions the bank tests — prices of related goods in production (joint and competitive supply), producer expectations, weather/climate for agriculture — are absent from the text.",
    "packet": 23,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-23",
+   "verified_by": "verify-a-packet-23 2026-09-16",
+   "evidence": "Refusal checked against the spec and upheld. The finding concedes the spec list is already covered, and it now has a subsection each: costs of production, new technology, specific tax, ad valorem tax, subsidies, natural disasters (econ_spec.txt:664-668). Its four prescribed ADDITIONS are all 0 in econ_spec.txt, checked by word-boundary grep over the whole file: 'joint supply' 0, 'competitive supply' 0, 'producer expectations' 0, 'weather' 0, 'climate' 0 ('joint' hits twice, :1254 and :1957, both joint ventures). Teaching them would be off-spec content in a WEC11 section. The finding's stated evidence - that the quiz tests them - is resolved by deleting Q20, the joint-supply item, instead. Runner enforces the ban at scripts/packet-23-supply.mjs:129-130.",
    "note": null
   },
   {
@@ -9492,12 +9492,12 @@
    "section": "supply",
    "kind": "specGap",
    "text": "Diagrammatic effect of a supply shift on equilibrium price and quantity (strictly 1.3.4 price determination, but required by this section's own examMatters and recall) — the shift diagrams contain no demand curve.",
-   "packet": 23,
+   "packet": 24,
    "status": "open",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "Reassigned from packet 23 to packet 24 (price-determination), 16 Sep. A supply shift's effect on equilibrium price and quantity is IAL 1.3.4 - 1b (econ_spec.txt:697-698); 1.3.3 has no equilibrium leaf and 'equilibrium' has 0 hits in the 1.3.3 span. Both findings say 'strictly 1.3.4' themselves and then ask supply to build it because supply's OWN examMatters demanded an equilibrium diagram. Packet 23 removed those examMatters sentences, which was the actual defect on this side of the boundary."
   },
   {
    "id": "C-supply-specGap-05",
@@ -9505,10 +9505,10 @@
    "kind": "specGap",
    "text": "Vertical shift of supply by a specific tax / pivot for ad valorem (strictly the indirect taxes and subsidies spec point) is tested in Q2 and in flashcards but not taught in content[]. Exact IAL bullet numbering for supply vs PES within 1.3 — unsure; the substantive bullets above are the standard Edexcel ones.",
    "packet": 23,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-23",
+   "verified_by": "verify-a-packet-23 2026-09-16",
+   "evidence": "Confirmed against the spec despite the finding's own hedging on numbering: econ_spec.txt:666 is 'indirect taxes (specific and ad valorem)' and :667 is 'government subsidies', both inside 1.3.3 1c, so both belong here. Built as three subsections: supply:sub:indirect-taxes-specific (fixed sum per unit, so a parallel vertical shift of $3 at every quantity), supply:sub:indirect-taxes-ad-valorem (20% of price, so the gap widens - $1.60 at 400 tiles, $3.20 at 640 - and the curve pivots), supply:sub:government-subsidies ($2 per unit, mirror image, shifts down/right). Arithmetic re-derived independently from scripts/_packet23-util.mjs (SR line Qs = 30P + 160: P at Q=400 is $8, x1.2 = $9.60 so gap $1.60; P at Q=640 is $16, x1.2 = $19.20 so gap $3.20). Incidence is correctly excluded - 'equilibrium' is 0 in the bundle and banned at scripts/packet-23-supply.mjs:139.",
    "note": null
   },
   {
@@ -11139,10 +11139,10 @@
    "rank": 0,
    "text": "Repair the block-level wiring: set quizIndices by topic (e.g. block2 → [12,18,21,23], block4 → [5,13,17,9], block5 → [2,22], block6 → [4,7,14,16,19,20], block7 → [6,8,15,24]), point practiceIndices so the 6/10/14-mark questions appear on the matching blocks, add diagramRef 'CPI Basket' to block 3 and 'Types of Unemployment' to block 6, and build an AD/AS diagram (axes: price level / real output) for block 4 so its diagramRef resolves.",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "bundle content[0..9]: all ten blocks now carry diagramId (10 distinct, each resolving in diagrams[]), topic-matched quizIndices ([3,4,5,6] … [40,41,42], 40 distinct pins, not 0..n) and practiceIndices [0]..[9], which resolve against the RAW practice array per components/LearnModeTab.jsx:216-218. The AD/AS diagram exists with the axes the finding names: diagrams[4].scenarios[0-3] label 'Real output' and 'Price level'. The literal index lists are obsolete (8-block structure replaced). Independent gateSection run over the bundle: pins.diagram 1->0, pins.identity 1->0.",
    "note": null
   },
   {
@@ -11152,10 +11152,10 @@
    "rank": 1,
    "text": "Replace the four non-orderable/arbitrary reorders (factor incomes, CPI-vs-RPI differences, ILO criteria, HDI components) with matching/classification exercises, and give fill-ins distractor words plus numeric calculation blanks (real GDP, per-capita, weighted CPI, value added) instead of three-word banks with letter hints.",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "All four named reorders are gone: factor incomes, CPI-vs-RPI and HDI content deleted outright (0 hits for RPI/CPIH/HDI in the bundle), and the ILO criteria are now a classify at content[6].sections[0].recall.groups. All 13 fill-ins carry 2 authored distractors beyond their answers, and an independent prefix/underscore/first-letter test over recall.hints finds 0 leaks; 4 carry numeric blanks (0%, +3%, 5%, -$6bn/$12bn). Validator fillin.hint 36->0, fillin.distractors 12->0, fillin.leak 4->0. Caveat: of the four numeric blanks the finding names, per-capita is built literally and weighted CPI is carried by practice[3] Calculate 4 plus diagrams[3].scenarios[0] rather than a blank; 'value added' is off-spec (0 in econ_spec.txt) and correctly absent.",
    "note": null
   },
   {
@@ -11165,10 +11165,10 @@
    "rank": 2,
    "text": "Close the spec gaps most likely to be examined in WEC12: add an 'Effects of unemployment' subsection, money-supply growth as an inflation cause, 'Limitations of the CPI' (replacing most of RPI-vs-CPI), real-wage unemployment, and a short capital/financial account explainer; swap several UK examples for Asian/Middle-East ones.",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "Every named gap is built: content[8] 'Effects of Unemployment' (5 subsections, econ_spec.txt:952-962); content[4].sections[2] money-supply growth (:919); content[3].sections[3] 'Limitations of the CPI' (:913); content[7].sections[4] 'Real-Wage Inflexibility' (:924-931 3b-5); content[9].sections[0] naming the capital and financial accounts (:964). The UK-example clause is met by removal rather than substitution: locale.institution 33 BLOCK -> 0 and locale.uk 1 -> 0, and an independent scan of every non-SVG string finds 0 real-country names; the value/volume case is an unnamed oil exporter.",
    "note": null
   },
   {
@@ -11178,10 +11178,10 @@
    "rank": 3,
    "text": "Fix the practice set to WEC12 tariffs and marking: Define = 2 marks, drop 'Outline' for 'Explain', convert the 20-mark Evaluate into a 14-mark Discuss (or label it Unit 4 style), and rewrite the 10/14-mark schemes as levels (KAA + Evaluation) rather than point tallies.",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "practice[0..9] = Define 2, Calculate 2, Explain 4, Calculate 4, Draw 4, Analyse 6, Examine 8, Explain 4, Discuss 14, Evaluate 20. Every (command, marks) pair appears in audit/raw/tariff-census.json for subject 'economics'; 0 'Assess' and 0 'Outline' anywhere in the bundle. No guidance above 6 marks allocates '(n marks)'. The two refused clauses are correct and I checked them: econ_spec.txt:398 and :1996-2000 give Unit 2 Section D as one 20-mark essay from a choice of two, and there is no Assess command and no 12-mark tariff in the Economics census.",
    "note": null
   },
   {
@@ -11191,10 +11191,10 @@
    "rank": 4,
    "text": "Correct the factual slips: Q3 explanation (CPIH does not include mortgage interest; RPI does), 'CPI excludes housing costs', GNI 'citizens' → residents, US CA 'every year since 1982', 2023 RPI–CPI gap and rail-fare claim, the unverified ONS 2024 basket example, and reframe 2021-22 US inflation and the 1930s New Deal claim as mixed/contested.",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "Independent scan of all 2,849 non-SVG strings in the bundle: RPI 0, 'Retail Price' 0, CPIH 0, 'mortgage interest' 0, HDI 0, 'New Deal' 0, 'substitution bias' 0, year-like tokens (18|19|20)dd 0, real-country names 0, examiner/marker/frequency/paper-pattern sentence shapes 0. GNI is defined on residents, not citizens, at content[0].sections[1]: 'the income received by a country's residents, wherever in the world it was earned'. Each dated claim the finding lists is removed rather than corrected.",
    "note": null
   },
   {
@@ -11203,10 +11203,10 @@
    "kind": "quiz",
    "text": "q3: Explanation states 'CPI does NOT include mortgage interest payments (that's CPIH)'. Wrong: CPIH adds owner-occupiers' housing costs via rental equivalence, not mortgage interest; it is the RPI that includes mortgage interest payments. Also 'substitution bias' (the key) is never taught anywhere in the content, so the pre-test/inline draw can present an untaught concept.",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "quiz[] holds 43 items and none mentions CPIH, RPI or substitution bias (0 hits each). The old q3 is gone; quiz[3] is now GNI vs GDP. The pre-test draws quiz[0..2] — the three items no block pins — because components/learn-mode/PreTest.jsx:24-28 orders unreserved items first and slices at 3; all three test taught content (rate of change of real GDP, disinflation, ILO underemployment), so the untaught-key defect is closed at both ends.",
    "note": null
   },
   {
@@ -11215,10 +11215,10 @@
    "kind": "practice",
    "text": "p0: 'Define the term GDP (4 marks)' — in IAL Economics 'Define' items carry 2 marks; the scheme awards marks for the three measurement methods, real vs nominal, and 'most widely used indicator', none of which a define mark scheme credits. Teaches students to pad definitions. This is also the item that surfaces inside the Inflation block in Learn Mode (practiceIndices [0] → sortedPractice[0]).",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "practice[0] = Define the term 'gross domestic product' (GDP). (2 marks); tariff-census.json gives economics Define = 2 only. Its guidance asks for the boundary and the period and explicitly rules out the padding the finding describes. It is pinned to block 0 'Measuring National Output' via content[0].practiceIndices [0], resolving against the raw array (LearnModeTab.jsx:216-218), so it no longer surfaces inside the inflation block.",
    "note": null
   },
   {
@@ -11227,11 +11227,11 @@
    "kind": "practice",
    "text": "p3: 'Evaluate... (20 marks)' — WEC12 (Unit 2) papers have no 20-mark essay; the top tariff is 14 ('Discuss') with 12 'Assess'. 20-mark 'Evaluate' is a WEC13/WEC14 format. The scheme is also point-tallied (2+3+2+2+3+2+2+2+2) whereas IAL marks 10+ questions on KAA/Evaluation levels, so the 'model answer' misrepresents how marks are earned.",
    "packet": 21,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "REFUSED, premise refuted three ways. The item asserts 'WEC12 (Unit 2) papers have no 20-mark essay; the top tariff is 14 (Discuss) with 12 Assess'. econ_spec.txt:379-399 and :1989-2001 both state Unit 2 Section D is ONE 20-mark essay question from a choice of two; there is no Assess command in IAL Economics at any tariff (tariff-census.json); and there is no 12-mark tariff in the subject. p3 was the only correctly-tariffed item in the March set and is kept. Its one sound observation - the point-tallied scheme - is fixed via practice.levels: no guidance above 6 marks allocates points. topFix-04 repeats the same instruction and its two clauses are refused with it."
   },
   {
    "id": "C-measures-economic-performance-structure-01",
@@ -11239,10 +11239,10 @@
    "kind": "structure",
    "text": "Inline quiz mapping is broken: block.quizIndices are simply [0],[1],...,[7] and LearnModeTab.jsx:106-108 uses them literally, so block 2 'Uses and Limitations of GDP' shows Q2 (malign deflation), block 4 'Inflation: Causes and Effects' shows Q4 (structural unemployment coal miner), block 5 'Deflation' shows Q5 (cost-push oil), block 6 'Employment and Unemployment' shows Q6 (UK current account), block 7 'Current Account' shows Q7 (LFS vs claimant count). Only blocks 0, 1 and 3 get a topically relevant MCQ.",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "content[0..9].quizIndices = [3,4,5,6] [7,8,9,10] [11,12,13] [14,15,16,17] [18,19,20,21,22] [24,23,25,26] [27,28,29,30] [31,32,33,34,35] [36,37,38,39] [40,41,42]: 40 distinct pins, every one topically matched to its block (checked item by item against the block titles), and no longer the identity list. Validator pins.identity 1 -> 0.",
    "note": null
   },
   {
@@ -11251,10 +11251,10 @@
    "kind": "structure",
    "text": "No diagram ever renders in Learn Mode: block 4 diagramRef 'Demand-Pull and Cost-Push Inflation' matches neither stored diagram title ('CPI Basket of Goods', 'Types of Unemployment') under the substring test at LearnModeTab.jsx:97-104, and blocks 3 and 6 (which those diagrams fit) have diagramRef null. The section has no AD/AS diagram at all, yet demand-pull and cost-push examMatters both instruct students to shift AD/SRAS on a diagram (and never state the axes: price level / real output).",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "10 diagrams for 10 blocks, each block.diagramId resolving to a distinct diagrams[] id (pins.diagram 1 -> 0). diagrams[4] 'Causes of Inflation and Deflation' carries demand-pull and cost-push as separate AD/AS scenarios, and its SVG text nodes label both axes — 'Real output' and 'Price level' — which the finding said the content never stated.",
    "note": null
   },
   {
@@ -11263,10 +11263,10 @@
    "kind": "structure",
    "text": "Inline practice mapping: block 4 (Inflation) practiceIndices [0] resolves to sortedPractice[0] = 'Define GDP (4 marks)'; block 6 → 'Outline two types of unemployment' (correct). P1, P2, P3 (the 6/10/20-mark items) never surface in Learn Mode, so students never meet an Assess/Evaluate question in the guided flow.",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "content[n].practiceIndices [0]..[9] resolve against the raw practice array (components/LearnModeTab.jsx:216-218, 'practiceIndices are authored against the RAW practiceData order'), putting tariffs 2·2·4·4·4·6·8·4·14·20 on the ten check-ins in that order. The 6-, 8-, 14- and 20-mark items all surface in Learn Mode; previously none did.",
    "note": null
   },
   {
@@ -11275,10 +11275,10 @@
    "kind": "structure",
    "text": "Every block has exactly 3 sections, so 2-per-step pairing yields [s1,s2] then a lone [s3] step that also carries diagram+quiz+practice+ExplainItBack+takeaway — 16 steps with an uneven 'light, heavy' rhythm. Recall scheduling side-effect (LearnModeTab.jsx:345-359, 397-402): the lone section's recall is shown as 'immediate' at the bottom of its step and again as 'spaced' at the top of the very next step, i.e. 8 recalls (gdp-per-capita, expenditure-method, HDI, measuring-inflation, effects-of-inflation, consequences-of-deflation, causes-and-policies, current-account-surplus) appear twice back-to-back while the middle section's recall appears once and nothing is actually spaced.",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "Block sizes are 5·5·3·5·6·4·4·5·5·3, not 3 across. Running buildSteps() from lib/learn-steps.js over the bundle gives 55 steps with check-ins at 6,12,16,22,29,34,39,45,51,55, and simulating pickSpacedRecall (lib/learn-steps.js:95-111, which only draws from an EARLIER block) over the whole walk gives 0 back-to-back recall repeats and 9 genuine second showings. The 2-per-step pairing the finding describes no longer exists.",
    "note": null
   },
   {
@@ -11287,10 +11287,10 @@
    "kind": "structure",
    "text": "recall.shuffled uses only two permutations across all 12 reorders ([2,0,3,1] ×7 and [3,1,0,2] ×5); ReorderRecall.jsx:9 applies them verbatim, so the displayed order is predictable and a student can learn 'swap positions' patterns.",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "An independent key scan of all 45 recalls finds 0 carrying a stored 'shuffled' field. The start order is seeded from the recall id and the showing at render (components/learn-mode/ReorderRecall.jsx:8-16, lib/recall-widgets.js), and the validator's shuffled rules are retired (lib/content-validator.mjs:83-84). The two-permutation pattern cannot recur.",
    "note": null
   },
   {
@@ -11299,10 +11299,10 @@
    "kind": "structure",
    "text": "Fill-in word banks are exactly the three answers (FillInRecall.jsx:12), so all 12 fill-ins are 3-item drag-drops with grammatically forced slots; combined with letter-count hints they cannot discriminate understanding.",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "13 fill-ins, each with 3 answers plus 2 authored distractors, so the bank is never the closed answer set; components/learn-mode/FillInRecall.jsx:12-14 additionally mixes in words from the section-wide pool. Hints are semantic ('the boundary that decides what counts'), and an independent prefix/underscore/first-letter test finds 0 leaks across all 39 hints. Validator fillin.distractors 12 -> 0, fillin.hint 36 -> 0.",
    "note": null
   },
   {
@@ -11311,10 +11311,10 @@
    "kind": "structure",
    "text": "Terminology drift between layers: content teaches 'demand-side / supply-side deflation', quiz Q2 tests 'malign / benign'; content teaches real GDP via base-year prices, quiz Q1/Q10 test the GDP deflator formula; content never mentions substitution bias but Q3 keys on it. The pre-test draws randomly from all 25, so the gate can be failed on untaught material (consistent with the founder's 'pre-test demotivates' hypothesis).",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "Independent term scan across content, quiz, flashcards, practice and diagrams: 'malign' 0, 'deflator' 0, 'substitution bias' 0, 'demand-side deflation' 0, 'supply-side deflation' 0. 'benign' occurs once, in the teaching text at content[7].sections[0] (frictional unemployment), not as a quiz key. The pre-test no longer draws at random from the whole pool: PreTest.jsx:24-28 takes the three unpinned items quiz[0..2], all of which test taught content.",
    "note": null
   },
   {
@@ -11323,10 +11323,10 @@
    "kind": "structure",
    "text": "Sequencing/scope: HDI (Unit 4 development in IAL) sits inside the GDP-limitations block; the Deflation block spends a full subsection on liquidity trap and QE (policy, later units) while the Unemployment block omits the effects/costs of unemployment entirely, so block depth is inverted relative to the spec.",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "HDI 0, 'Human Development' 0, 'liquidity trap' 0, 'quantitative easing' 0 in the bundle — both intrusions removed. The inversion is corrected: effects of unemployment is now a full block, content[8], with 5 subsections covering all six bullets of econ_spec.txt:952-962, and the blocks follow the specification's own order 1a→4c.",
    "note": null
   },
   {
@@ -11335,10 +11335,10 @@
    "kind": "structure",
    "text": "Takeaways match their blocks well and misconceptions are largely genuine student errors (GDP=wealth; disinflation=deflation; deficit always bad; cutting rates always fixes deflation). Two are filler: 'cost-push inflation only comes from oil prices' and 'GDP is useless'.",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "mistakes[] holds 10 items and both named fillers are absent: no 'cost-push only comes from oil prices', no 'GDP is useless'. Every replacement is an error the section's own arithmetic produces — reading a nominal rise as growth, dividing the unemployed by the working-age population, subtracting 100 from a non-base index, shifting the PPF inward to show unemployment, treating the current account as the balance of payments.",
    "note": null
   },
   {
@@ -11347,10 +11347,10 @@
    "kind": "structure",
    "text": "Difficulty ramp is flat rather than rising: every subsection follows the same template (definition, flow, example, misconception) with no calculation practice until the quiz, so the numeracy the spec demands (index numbers, real growth, per-capita, weighted CPI) is never scaffolded in the notes.",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "Numeracy now sits in the notes, not only in the quiz: 25 of 45 subsections carry worked figures — real growth at content[0].sections[2], per capita at [0].sections[3], value/volume at [0].sections[4], the weighted basket at [3].sections[1], inflation from an index at [3].sections[2], the three labour-market rates at [6].sections[2], the current account at [9].sections[2] — plus practice[1] Calculate 2 and practice[3] Calculate 4. The template is no longer uniform: 23 distinct body-shape arrangements across 45 subsections, and the practice ladder rises 2·2·4·4·4·6·8·4·14·20.",
    "note": null
   },
   {
@@ -11359,10 +11359,10 @@
    "kind": "specGap",
    "text": "Effects/costs of unemployment on consumers, firms, workers, government and society — entirely absent (block 6 covers measurement, types and policies only).",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "content[8] 'Effects of Unemployment', 5 subsections mapping one-to-one onto econ_spec.txt:952-962 (3c): consumers and workers, firms, public finances, resource utilisation and the PPF, society. diagrams[8] draws the inside-the-frontier case and practice[8] is a Discuss 14 on the costs of unemployment.",
    "note": null
   },
   {
@@ -11371,10 +11371,10 @@
    "kind": "specGap",
    "text": "Growth of the money supply as a cause of inflation — not mentioned (IAL 2.3.1 lists demand-pull, cost-push and money supply growth).",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "content[4].sections[2] 'Excessive Growth of the Money Supply' — econ_spec.txt:919 (2e-3) — with quiz[20] and a fill-in recall on the mechanism. It was entirely absent before.",
    "note": null
   },
   {
@@ -11383,10 +11383,10 @@
    "kind": "specGap",
    "text": "Limitations of the CPI as a measure of inflation (substitution bias, quality change, representative household, basket lag, sampling) — not taught, though tested in Q3 and practice P2.",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "content[3].sections[3] 'Limitations of the CPI' — econ_spec.txt:913 (2c). It is derived arithmetically rather than listed: the same four price changes re-weighted 45/25/20/10 give 4,860+2,600+2,240+1,000 = 10,700 ÷ 100 = 107.0 against the national 105.8, which I recomputed from the stated inputs. The refused parenthetical is right — 'substitution bias' returns 0 over the whole of audit/raw/econ_spec.txt.",
    "note": null
   },
   {
@@ -11395,10 +11395,10 @@
    "kind": "specGap",
    "text": "Effects of inflation on the government and on firms' competitiveness/investment in depth — only savers/borrowers/workers covered; government (fiscal drag, debt erosion, tax revenue) missing.",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "content[5].sections[1] 'Effects on Firms, Investment and Competitiveness' and content[5].sections[2] 'Effects on the Government and Income Distribution' — econ_spec.txt:929-937 (2g), whose eight bullets are tabulated in both directions at diagrams[5].scenarios[0]. 'fiscal drag' is correctly absent (0 in econ_spec.txt).",
    "note": null
   },
   {
@@ -11407,10 +11407,10 @@
    "kind": "specGap",
    "text": "Real-wage inflexibility (classical) unemployment and the significance of migration and skills for employment — not taught; the 'cutting wages' misconception dismisses the real-wage view rather than explaining it.",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "content[7].sections[4] 'Real-Wage Inflexibility' teaches the mechanism (a wage floor leaves 11.8m willing and 11.2m wanted, a 0.6m gap — recomputed from diagrams[7].scenarios[0]) and its misconception now argues the case instead of dismissing it: 'That is an argument about removing the floor, not a reason the mechanism does not operate.' Skills sit at content[7].sections[2] as occupational immobility; net migration is content[6].sections[3], econ_spec.txt:961-962 (3f).",
    "note": null
   },
   {
@@ -11419,10 +11419,10 @@
    "kind": "specGap",
    "text": "Employment rate, economic inactivity rate and the significance of changes in them; underemployment gets a single bullet.",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "content[6].sections[2] 'Employment, Unemployment and Inactivity Rates' — econ_spec.txt:959-960 (3e) — gives 5% / 71.25% / 25%, each against its own denominator; I recomputed all three from 11.4m employed, 0.6m unemployed, 4m inactive, 16m working-age. Underemployment is a full subsection at content[6].sections[1], with the point that 0.9m part-time workers wanting full-time work move no rate at all.",
    "note": null
   },
   {
@@ -11431,10 +11431,10 @@
    "kind": "specGap",
    "text": "Capital and financial accounts as the counterpart to the current account — mentioned only in passing as the financing source; no structure of the BoP.",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "content[9].sections[0] 'Components of the Balance of Payments' — econ_spec.txt:964-965 (4a) — names the current, capital and financial accounts and the four current-account lines, and diagrams[9].scenarios[0] tabulates what each records. Depth on the capital and financial accounts is correctly deferred to Unit 4 (econ_spec.txt:1713-1742), which is the 'half' the packet spec declares.",
    "note": null
   },
   {
@@ -11443,11 +11443,11 @@
    "kind": "specGap",
    "text": "Relationship between current account imbalances and other macro objectives, and interconnectedness of economies through trade — not taught.",
    "packet": 21,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "REFUSED, out of scope for 2.3.1. 'Relationship between current account imbalances and other macro objectives' is not among 4a-4c, which ask only for the components of the balance of payments, the trade in goods and services distinction and the current account distinction. 'Interconnectedness' returns ZERO occurrences in the whole of econ_spec.txt. The interconnectedness of economies through trade belongs to 4.3.1 Causes and effects of globalisation (econ_spec.txt:1586)."
   },
   {
    "id": "C-measures-economic-performance-specGap-09",
@@ -11455,10 +11455,10 @@
    "kind": "specGap",
    "text": "Value vs volume, index numbers and calculating rates of change/growth from data (a core WEC12 data-response skill) — no worked calculations in the notes; the deflator formula appears only in the quiz.",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "Value against volume at content[0].sections[4] — 100m barrels at $60 = $6.0bn against 110m at $50 = $5.5bn, volume +10% and value -8.3%, which I recomputed. Index numbers and rates of change at content[3].sections[1-2] and content[1].sections[1]. Practice now carries Calculate 2 (practice[1], real growth) and Calculate 4 (practice[3], the weighted index), so the arithmetic is no longer quiz-only.",
    "note": null
   },
   {
@@ -11467,10 +11467,10 @@
    "kind": "specGap",
    "text": "Weighted-average construction of the CPI with a numerical example — process described in words only.",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "content[3].sections[1] 'Building a Consumer Price Index' plus the grid at diagrams[3].scenarios[0]: 30x108=3,240; 25x104=2,600; 20x112=2,240; 25x100=2,500; total 10,580 ÷ 100 = 105.8, +5.8% on a base of 100. I recomputed every row and the total from the stated weights and indices.",
    "note": null
   },
   {
@@ -11479,10 +11479,10 @@
    "kind": "specGap",
    "text": "Unsure: whether IAL 2.3.1 names RPI/CPIH or HDI at all; both are covered here in depth and may be over-coverage of UK-GCE material rather than gaps.",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "Answered rather than hedged, and I checked the counts myself over audit/raw/econ_spec.txt: 'RPI' 0, 'Retail Price' 0, 'CPIH' 0 in the entire document; 'HDI' only at :1904-1907, which is 4.3.6, a Unit 4 topic. All three return 0 in the staged bundle — the over-coverage is removed, which is the disposal the finding asked for a decision on.",
    "note": null
   },
   {
@@ -17050,10 +17050,10 @@
    "kind": "specGap",
    "text": "2.3.1 2d) The producer (wholesale) price index as an indicator of future trends in the rate of inflation — not in the teaching content. (spec-coverage audit, 12 Sep 2026)",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "content[3].sections[4] 'The Producer Price Index' — econ_spec.txt:914-915 (2d) — with diagrams[3].scenarios[3] showing PPI 100->111 (+11%) against CPI 100->105.8 (+5.8%), and quiz[17] testing why it leads ('costs reach firms before they reach shops'). It was absent from the teaching content.",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -17062,10 +17062,10 @@
    "kind": "specThin",
    "text": "2.3.1 1c) Distinction between value and volume measures of GDP/GNI — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "content[0].sections[4] 'Value and Volume' — econ_spec.txt:895 (1c-3) — now defines both and works the case rather than naming it: 100m barrels at $60 against 110m at $50, volume +10% and value -8.3%. Tested at quiz[6] and carried in diagrams[0].scenarios[2] and a flashcard.",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -17074,10 +17074,10 @@
    "kind": "specThin",
    "text": "2.3.1 1f) The distinction between positive economic growth rates and negative economic growth rates — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "content[1].sections[3] 'Positive and Negative Growth Rates' — econ_spec.txt:900-901 (1f) — with diagrams[1].scenarios[0] contrasting +4% and -2.5%, and quiz[8] separating a falling growth rate from a negative one. Named-only no longer applies.",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -17086,10 +17086,10 @@
    "kind": "specThin",
    "text": "2.3.1 1i) Indicators of national happiness and wellbeing — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "content[2].sections[1] 'Indicators of National Happiness and Wellbeing' — econ_spec.txt:907 (1i-1) — plus diagrams[2].scenarios[1], which tabulates four indicators and what each one asks. The material is now answerable, and it is taught without HDI (0 hits), which is Unit 4.",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -17098,10 +17098,10 @@
    "kind": "specThin",
    "text": "2.3.1 1i) The relationship between real incomes and subjective happiness — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "content[2].sections[2] 'Real Incomes and Subjective Happiness' — econ_spec.txt:908-909 (1i-2) — with diagrams[2].scenarios[2] drawing the rising-and-flattening relationship between real income and reported life satisfaction, and quiz[13] testing its shape against three wrong shapes.",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -17230,10 +17230,10 @@
    "kind": "specThin",
    "text": "1.3.3 2c) Factor influencing PES: perishability (whether the good can be stored) — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 23,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-23",
+   "verified_by": "verify-a-packet-23 2026-09-16",
+   "evidence": "supply:sub:availability-of-stock-and-perishability in audit/snapshots/packet-23-bundle__economics__supply.json is a full subsection on 2c-2 (econ_spec.txt:680): stock as a reserve that answers a price rise without producing, perishability as the absence of that option, the cost of storage, and an explicit direction statement ('stock that can be held makes supply MORE elastic, and perishability makes it LESS'), with a fresh-vs-frozen-fish example, its own misconception, a fillin recall and quiz 20. 347 teaching words.",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -17242,10 +17242,10 @@
    "kind": "specThin",
    "text": "1.3.3 2c) Factor influencing PES: legal constraints — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 23,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-23",
+   "verified_by": "verify-a-packet-23 2026-09-16",
+   "evidence": "supply:sub:legal-constraints in audit/snapshots/packet-23-bundle__economics__supply.json is a full subsection on 2c-4 (econ_spec.txt:682): definition (a rule that limits output directly rather than raising its cost), four named forms a question would describe (quota, licence, planning permission, input ban), why money cannot solve them, and the long-run link. Taxi-licence example, its own misconception, a match recall and quiz 21. 342 teaching words.",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -17494,10 +17494,10 @@
    "kind": "diagram",
    "text": "A block pins the diagram \"Demand-Pull and Cost-Push Inflation\" and no such diagram exists, so the block renders nothing. not drawn.",
    "packet": 21,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-21",
+   "verified_by": "packet-verifier (Verify A, packet 21) 2026-09-16",
+   "evidence": "No diagramRef survives anywhere in the bundle. content[4].diagramId resolves to diagrams[4] 'Causes of Inflation and Deflation', whose four scenarios draw demand-pull, cost-push and both spec-named deflation causes on labelled price-level / real-output axes. All ten blocks resolve a distinct diagram, and an independent gateSection run gives pins.diagram 1 -> 0.",
    "note": "Added 13 Sep 2026 from audit/raw/diagram-pins-2026-09-13.json (F052/F109 measurement). Check npm run diagrams after authoring."
   },
   {
@@ -17941,6 +17941,71 @@
    "added": "2026-09-16"
   },
   {
+   "id": "V007",
+   "kind": "feature",
+   "title": "The topic pages and the homepage ship the paid bank to everyone. app/economics/[unit]/[topic]/page.jsx and app/business/[unit]/[topic]/page.jsx read all eight section tables with createAnonClient() and pass them to StudyApp as initialSectionData (page:88-108, StudyApp.jsx:381); app/page.js reads the same four paid ones. section_quiz arrives with every correctIndex, plus section_flashcards, section_extras and section_common_mistakes, which is paid-only with no preview. The Quiz tab still slices to 2 client-side so the paywall looks intact, but the data sits in the HTML of a page that needs no account, and Learn Mode's Quick Fire drill uses all of it: measured signed out on supply, the API returned 3 of 25 while the drill offered 25. Same class as F086, which closed the API door and left this one open. Both pages are prerendered (revalidate 3600 + generateStaticParams) so they CANNOT be gated per user — a shared cached document may hold only the free preview, and the client upgrades through the entitled API. Present on origin/main, so it is live. Brief with the plan and acceptance checks: audit/BRIEF-paywall-page-payload.md. Second layer: the anon key reads those four tables directly, so only RLS closes it properly (founder-run SQL, after the code lands).",
+   "file": "app/economics/[unit]/[topic]/page.jsx",
+   "packet": 2.1,
+   "status": "confirmed",
+   "closed_by": "packet-2.1",
+   "verified_by": "packet-2.1 verifier 2026-09-16",
+   "evidence": "Measured, not read. curl localhost:3001/economics/unit-1/supply: 0 correctIndex, 0 flashcard backs, payload ends \"quiz\":[],\"flashcards\":[],\"extras\":{\"chains\":[],\"evaluation\":[]},\"mistakes\":[],\"paidPending\":true — control curl revvylearn.com/economics/unit-1/supply (old code) has 25 correctIndex and 18 backs. Same clean result on /business/unit-1/marketing-mix-strategy, / and /economics/unit-1/the-market. grep: no paid table (section_quiz|section_flashcards|section_common_mistakes|section_extras) appears in any file that also calls createAnonClient(); the only paid-table readers are the service-role routes. Guard proven by planting app/leak-probe/page.js in a scratch copy of app+components+lib: lib/read-path.test.mjs failed with 'paid tables read with the anon key: app/leak-probe/page.js'. API unchanged for a free student: differential of the f4b8db6 inline route body vs sectionPayload() on the real tables for supply, the-market, market-failure, aggregate-demand, labour-markets, revenue-costs-profits, marketing-mix-strategy — deepEqual IDENTICAL at isPremium=false in all 7. Gate reproduced: npm test 151/151, npm run validate exit 0, npm run build exit 0. NOTE: layer two is still open — scripts/check-paid-table-rls.mjs exits 1, all four paid tables answer the anon key; the founder SQL has not run.",
+   "note": null,
+   "added": "2026-09-16"
+  },
+  {
+   "id": "V008",
+   "kind": "feature",
+   "title": "Inline diagrams were capped at 270px on every desktop, and reference tables were rendered as diagrams (fixed in 77eb765; 15 live sections still need kind:'table')",
+   "file": null,
+   "packet": 2.2,
+   "status": "open",
+   "closed_by": null,
+   "verified_by": null,
+   "evidence": null,
+   "note": null,
+   "added": "2026-09-16"
+  },
+  {
+   "id": "V009",
+   "kind": "feature",
+   "title": "Every route went dynamic when the root layout started reading cookies (packet 12, F035): the branch prerenders nothing, main serves the topic pages as x-vercel-cache: PRERENDER. Measured 16 Sep: on remediation/2026-09 'next build' marks /economics/[unit]/[topic] and /business/[unit]/[topic] as f (Dynamic) and the only static route in the whole app is /sitemap.xml; the same tree with the two cookie-reading lines in app/layout.js replaced by a constant makes Next prerender 158 pages (it then fails on an unrelated /login Suspense bailout, which is the proof it switched). Live main returns x-nextjs-prerender: 1 and x-vercel-cache: PRERENDER for /economics/unit-1/supply. So merging this branch undoes PR #17's caching for every public page. Either accept the cost, or move the entitlement seed off the layout (a client fetch of /api/subscription, or a dynamic segment that is not the root) and keep the F035 first-paint fix. Not caused by packet 2.1 and not fixed by it: V007's code is correct either way, because a cached document may hold only the free preview.",
+   "file": "app/layout.js",
+   "packet": 2.3,
+   "status": "open",
+   "closed_by": null,
+   "verified_by": null,
+   "evidence": null,
+   "note": null,
+   "added": "2026-09-16"
+  },
+  {
+   "id": "V010",
+   "kind": "feature",
+   "title": "GET /api/sections/[id] returned an EMPTY quiz array to every premium student on this branch. 665ae87 (the free-quiz slice) wrote 'quiz: isPremium ? arr(allQuiz) : free.quiz', but allQuiz was already the unwrapped array and arr() expects a query RESULT — it reads r.data?.data, which an array does not have, so the premium branch evaluated to []. A paying student got 0 questions in the Quiz tab, 0 at every chapter check-in and no Quick Fire drill, while a free student got the correct 3 of 25. Branch-only: 665ae87 is not on origin/main, so it never reached a student, but it would have shipped at the packet 5/7 checkpoint. Fixed incidentally by packet 2.1's sectionPayload() refactor, which takes arrays and never re-unwraps. Found by the packet 2.1 verifier, differentially: the old inline route body against the new builder over seven real sections is deepEqual-identical at isPremium false and differs at isPremium true in all seven, entirely on this line.",
+   "file": "app/api/sections/[id]/route.js",
+   "packet": 2.1,
+   "status": "confirmed",
+   "closed_by": "packet-2.1",
+   "verified_by": "packet-2.1 verifier 2026-09-16",
+   "evidence": "Scope checked, not taken on trust. (1) Never shipped: 'git merge-base --is-ancestor 665ae87 origin/main' fails; 'git branch -r --contains 665ae87' lists only origin/remediation/2026-09, and origin/main's route (head 0ea16fd) contains no freeQuizPayload/PREVIEW_LIMITS/arr(allQuiz) at all — which is why the live site returns quiz 25 signed out. (2) Nothing subtler than []: isolated in node with the route's own helpers — payload(r)=r.data?.data, so with allQuiz=arr(quizRow) of length 2, arr(allQuiz).length===0, because an Array has no .data (the wantDraft branch reads r.data?.draft, equally undefined). Not a slice, not a shuffle: the premium branch returned the empty array. (3) The new builder serves the whole bank: sectionPayload(realTables,{isPremium:true}) over supply/the-market/market-failure/aggregate-demand/marketing-mix-strategy gives quiz 25/25, 25/25, 24/24, 23/23, 25/25 — every item carrying its correctIndex — with flashcards, mistakes and extras.chains each equal to counts. Differential vs the f4b8db6 inline body is deepEqual-identical at isPremium=false in all seven sections and differs at isPremium=true in all seven, entirely on this line.",
+   "note": null,
+   "added": "2026-09-16"
+  },
+  {
+   "id": "V011",
+   "kind": "feature",
+   "title": "The Learn Mode pre-test offer latched off when the quiz arrived late. components/LearnModeTab.jsx:94-96 computes pretestOffered in a useState INITIALISER from quizData.length, which was safe only while the server-rendered page shipped the whole quiz bank. Packet 2.1 withholds it, so a student who opened Learn Mode before the API responded had the opt-in pre-test suppressed for the rest of the visit — on the free surface packet 5 exists to fix. Re-derived in an effect when the questions arrive, with every reason not to offer (stored pretestState, resume, completed, pre-test already open) still winning.",
+   "file": "components/LearnModeTab.jsx",
+   "packet": 2.1,
+   "status": "confirmed",
+   "closed_by": "packet-2.1",
+   "verified_by": "packet-2.1 verifier 2026-09-16",
+   "evidence": "Round 2 measured, both paths, with revvy_section_state_1_supply={\"completed\":false\\} present (what the reconcile leaves any signed-in student) — the exact scenario I rejected on. TAKEN: submit writes {\"completed\":false,\"pretestState\":\"taken\"} within 300ms, and after 'Start learning' the offer is absent WHILE at step 0 (atStep0 true, so the absence is real and not an artefact of being past safeStep 0). SKIPPED from inside: key becomes {...\"pretestState\":\"skipped\"}, offer absent at step 0. Both were back on screen before 705c893. No async window: I read localStorage in the SAME synchronous tick immediately after .click() returned, before any React flush, and pretestState was already 'skipped' — writeLocalState is saveSectionState's first statement (lib/section-state.js:78), ahead of the await, ahead of onDone and ahead of the effect. PreTest's 'if (!questions.length) { onDone(); return null; }' is unreachable from the offer path: free and rest partition quizData, so pool.length===quizData.length and questions is empty ONLY when quizData is, while the offer renders only when Math.min(3,quizData.length)>0; ran the exact memo body, including the all-reserved case that looks dangerous — it returns 3, not 0. Late-arrival half still works on 705c893: via the delay proxy (:3002 -> :3001, /api/sections delayed 25s, websocket upgrade proxied) the offer is absent at t=10.4/14.4/18.5/22.5s and present from t=26.5s when the payload lands. declinePretest still holds; resume cannot reach it (every setLearnModeResuming(true) requires step>0 and the offer renders only at safeStep 0); completed guarded. npm test 152/152.",
+   "note": null,
+   "added": "2026-09-16"
+  },
+  {
    "id": "V012",
    "kind": "feature",
    "title": "terms.later-unit flags a term the specification teaches in Units 1-2. laterUnitTerms() builds its late set from Units 3-4 sub-topic LABELS and excludes only labels built entirely from Unit 1-2 LABEL words — it never reads Unit 1-2 requirement WORDING. A phrase Units 1-2 teach in their own text, but do not use as a heading, is therefore classed as later-unit vocabulary. Measured against audit/raw/spec-items.json: 2 of 40 late terms are wrong this way — 'niche markets' (Business: taught at bus_spec.txt:508 as 1.3.1 sub-topic 1a and :609 as 1.3.3 1e-2, and also a Unit 4 heading at :1437) and 'exchange rates' (Economics). Packet 16 carried the niche markets finding as explained DEBT and baselined it; packet 22 hits the same false positive on the leaf that literally reads 'niche markets'. The rule's own wording is 'a term the spec introduces ONLY in Units 3-4'. Acceptance: laterUnitTerms() drops exactly those 2 terms and no others, a test asserts both directions, and the baseline shrinks by the meeting-customer-needs key.",
@@ -17950,6 +18015,32 @@
    "closed_by": "packet-22",
    "verified_by": "packet-verifier 2026-09-16",
    "evidence": "lib/content-validator.mjs:780-788 earlyText now searches Unit1-2 requirement wording, not just labels, dropping 'niche markets'(bus_spec.txt:508,609)/'exchange rates'; lib/content-validator.test.mjs:182-209 asserts both directions; node --test lib/content-validator.test.mjs: 105/105 pass",
+   "note": null,
+   "added": "2026-09-16"
+  },
+  {
+   "id": "V013",
+   "kind": "feature",
+   "title": "TAKING the Learn Mode pre-test has never reached the server, so the cross-device promise held for skipping and not for taking. components/learn-mode/PreTest.jsx wrote only the legacy localStorage key 'revvy_pretest_<subject>_<section>'; only declinePretest ever called saveSectionState with a pretestState, although POST /api/learn-mode/state accepts it (app/api/learn-mode/state/route.js:121). A signed-in student who took the pre-test on their laptop was offered it again on their phone. Pre-existing since F001/F027 and invisible because readLocalState migrates the legacy key ONLY when no modern key exists (lib/section-state.js:27-28) — and a signed-in student always has one, written by LearnModeTab's server reconcile. Exposed by V011, whose re-derived offer read the modern key and so put the same three questions back on screen. PreTest now calls saveSectionState({pretestState: 'taken'|'skipped'}) on both paths, which writes the modern key and the server row in one call.",
+   "file": "components/learn-mode/PreTest.jsx",
+   "packet": 2.1,
+   "status": "confirmed",
+   "closed_by": "packet-2.1",
+   "verified_by": "packet-2.1 verifier 2026-09-16",
+   "evidence": "The write leaves the client and the route accepts it. Instrumented window.fetch (observation only) and measured the request on both paths: POST /api/learn-mode/state with body {\"sectionId\":\"supply\",\"subjectId\":1,\"pretestState\":\"taken\"} on submit and the same with \"skipped\" on skip — previously only declinePretest ever sent one. Route side: WRITABLE includes pretestState (route.js:23-25); the patch is built read-first from the existing row so a partial write cannot blank other fields (route.js:80-99); route.js:121 accepts exactly 'taken'|'skipped' into pretest_state; rowToState (route.js:37) maps it back to pretestState, which is what LearnModeTab's reconcile reads at :139. The column is real and the path is proven against it: a service-role listing of user_section_state shows pretest_state among the columns, and of the live rows one already holds 'skipped' — written by declinePretest through the identical branch and column that 'taken' now uses, so the only thing that was ever missing was the caller. Signed-out unaffected, measured: the POST returns 401, saveSectionState swallows it (section-state.js:85), the local key still records pretestState 'taken', the offer stays suppressed and Learn Mode keeps working. NOT measured: a signed-in round trip — I do not sign in — so the signed-in persistence rests on the route contract plus that live 'skipped' row rather than on my own authenticated request.",
+   "note": null,
+   "added": "2026-09-16"
+  },
+  {
+   "id": "V014",
+   "kind": "feature",
+   "title": "writeLocalState captures the legacy keys into the modern one, and nothing tests it. lib/section-state.js:50 merges its patch onto readLocalState() || {}, i.e. it reads THROUGH the migrating reader, so the first modern write for a section folds the legacy revvy_complete_* and revvy_pretest_* facts into the modern key — after which the migration at :27-41 never fires again for that section, because a modern key now exists. Packet 2.1 (V013) made that first write happen earlier and more often: taking the pre-test now creates a modern key. The capture is an ordering inside one expression, it is the only thing standing between a legacy-complete student and a lost completion, and a later tidy-up that computes the patch before reading would break it silently. The packet 2.1 verifier reasoned it from the source and could not measure it (a legacy-complete student cannot reach the pre-test). Acceptance: a test that seeds only revvy_complete_<s>_<id>=true, calls saveSectionState with an unrelated patch, and asserts completed is still true in the modern key.",
+   "file": "lib/section-state.js",
+   "packet": 57,
+   "status": "open",
+   "closed_by": null,
+   "verified_by": null,
+   "evidence": null,
    "note": null,
    "added": "2026-09-16"
   }
