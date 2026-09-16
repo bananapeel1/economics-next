@@ -1,4 +1,5 @@
 import { createAnonClient } from '@/lib/supabase-anon';
+import { cachedPagePayload } from '@/lib/preview-limits';
 import StudyApp from '@/components/StudyApp';
 
 export const metadata = {
@@ -56,26 +57,20 @@ export default async function HomePage({ searchParams }) {
   // Fetch initial section data
   let initialData = null;
   if (firstSectionId) {
-    const [content, notes, diagrams, flashcards, quiz, mistakes, practice, extras] = await Promise.all([
+    /* V007, same rule as the topic pages: this document is cached and served to everyone, so it
+       carries the free preview only. The four paid tables are not read here. */
+    const [content, notes, diagrams, practice] = await Promise.all([
       supabase.from('section_content').select('data').eq('section_id', firstSectionId).single(),
       supabase.from('section_notes').select('data').eq('section_id', firstSectionId).single(),
       supabase.from('section_diagrams').select('data').eq('section_id', firstSectionId).single(),
-      supabase.from('section_flashcards').select('data').eq('section_id', firstSectionId).single(),
-      supabase.from('section_quiz').select('data').eq('section_id', firstSectionId).single(),
-      supabase.from('section_common_mistakes').select('data').eq('section_id', firstSectionId).single(),
       supabase.from('section_practice').select('data').eq('section_id', firstSectionId).single(),
-      supabase.from('section_extras').select('data').eq('section_id', firstSectionId).single(),
     ]);
-    initialData = {
+    initialData = cachedPagePayload({
       content: content.data?.data || [],
       notes: notes.data?.data || [],
       diagrams: diagrams.data?.data || [],
-      flashcards: flashcards.data?.data || [],
-      quiz: quiz.data?.data || [],
-      mistakes: mistakes.data?.data || [],
       practice: practice.data?.data || [],
-      extras: extras.data?.data || { chains: [], evaluation: [] },
-    };
+    });
   }
 
   return (

@@ -3,7 +3,7 @@ import { createClient } from '@/lib/supabase/server';
 import { createServerClient } from '@/lib/supabase-server';
 import { hasPremiumAccess } from '@/lib/entitlements';
 import { getSubscriptionRow } from '@/lib/subscription-lookup';
-import { PREVIEW_LIMITS, freeQuizPayload } from '@/lib/preview-limits';
+import { sectionPayload } from '@/lib/preview-limits';
 
 /**
  * GET /api/sections/[id] — everything the section view renders, subject to entitlement.
@@ -45,45 +45,19 @@ export async function GET(request, { params }) {
   ]);
 
   const arr = (r) => (Array.isArray(r.data?.data) ? r.data.data : []);
-  const allQuiz = arr(quiz);
-  const allCards = arr(flashcards);
-  const rawExtras = extras.data?.data || { chains: [], evaluation: [] };
-  const chains = Array.isArray(rawExtras.chains) ? rawExtras.chains : [];
-  const evaluation = Array.isArray(rawExtras.evaluation) ? rawExtras.evaluation : [];
 
-  const cap = (list, n) => (isPremium ? list : list.slice(0, n));
-
-  /* The quiz is not a flat slice: a block pins its question by array position, so slicing the array
-     repoints the pins. freeQuizPayload picks the questions the section needs and rewrites that
-     section's pins to match what is sent. Premium gets the bank and the pins as authored. */
-  const free = isPremium ? null : freeQuizPayload(allQuiz, arr(content));
-
-  return NextResponse.json({
-    // Free, unchanged, no account needed.
-    content: isPremium ? arr(content) : free.content,
+  /* One description of the preview, shared with the topic pages — see lib/preview-limits.js. They
+     cannot check entitlement (a cached document is served to everyone), so they send what a free
+     reader may see and the client upgrades here. Two copies of these caps is how the page and this
+     route drifted apart in the first place. */
+  return NextResponse.json(sectionPayload({
+    content: arr(content),
     notes: arr(notes),
     diagrams: arr(diagrams),
+    flashcards: arr(flashcards),
+    quiz: arr(quiz),
+    mistakes: arr(mistakes),
     practice: arr(practice),
-
-    // Preview then paywall. Sliced here, not in the browser.
-    quiz: isPremium ? arr(allQuiz) : free.quiz,
-    flashcards: cap(allCards, PREVIEW_LIMITS.flashcards),
-    extras: {
-      chains: cap(chains, PREVIEW_LIMITS.extrasChains),
-      evaluation: cap(evaluation, PREVIEW_LIMITS.extrasEvaluation),
-    },
-
-    // Paid, no preview.
-    mistakes: isPremium ? arr(mistakes) : [],
-
-    // True sizes, so paywall copy stays honest once the arrays are capped.
-    counts: {
-      quiz: allQuiz.length,
-      flashcards: allCards.length,
-      extrasChains: chains.length,
-      extrasEvaluation: evaluation.length,
-      mistakes: arr(mistakes).length,
-    },
-    isPremium,
-  });
+    extras: extras.data?.data || { chains: [], evaluation: [] },
+  }, { isPremium }));
 }

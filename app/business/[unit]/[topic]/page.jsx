@@ -1,4 +1,5 @@
 import { createAnonClient } from '@/lib/supabase-anon';
+import { cachedPagePayload } from '@/lib/preview-limits';
 import StudyApp from '@/components/StudyApp';
 
 export const revalidate = 3600;
@@ -65,28 +66,29 @@ export default async function BusinessTopicPage({ params }) {
     supabase.from('sections').select('*').order('sort_order'),
   ]);
 
-  // Fetch section data for this topic
-  const [content, notes, diagrams, flashcards, quiz, mistakes, practice, extras] = await Promise.all([
+  /* V007. This page is built once and served to everyone — `revalidate` and `generateStaticParams`
+     above — so it may only ever hold what a reader with no account may see. It used to read all
+     eight tables here and hand the lot to the client: every quiz question with its `correctIndex`,
+     the flashcards, the extras and the paid-only common mistakes, in the HTML of a page that needs
+     no account.
+
+     Four of the eight are not read at all now. `cachedPagePayload` builds the same preview
+     `GET /api/sections/[id]` builds, from one function, and flags the rest as pending; StudyApp
+     fetches that route on mount and a paying student gets their content there, where entitlement
+     can actually be checked. */
+  const [content, notes, diagrams, practice] = await Promise.all([
     supabase.from('section_content').select('data').eq('section_id', topic).single(),
     supabase.from('section_notes').select('data').eq('section_id', topic).single(),
     supabase.from('section_diagrams').select('data').eq('section_id', topic).single(),
-    supabase.from('section_flashcards').select('data').eq('section_id', topic).single(),
-    supabase.from('section_quiz').select('data').eq('section_id', topic).single(),
-    supabase.from('section_common_mistakes').select('data').eq('section_id', topic).single(),
     supabase.from('section_practice').select('data').eq('section_id', topic).single(),
-    supabase.from('section_extras').select('data').eq('section_id', topic).single(),
   ]);
 
-  const initialData = {
+  const initialData = cachedPagePayload({
     content: content.data?.data || [],
     notes: notes.data?.data || [],
     diagrams: diagrams.data?.data || [],
-    flashcards: flashcards.data?.data || [],
-    quiz: quiz.data?.data || [],
-    mistakes: mistakes.data?.data || [],
     practice: practice.data?.data || [],
-    extras: extras.data?.data || { chains: [], evaluation: [] },
-  };
+  });
 
   // Get section and unit info for SEO
   const section = (sections || []).find(s => s.id === topic);

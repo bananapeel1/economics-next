@@ -464,7 +464,22 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   useEffect(() => {
     if (isInitial) {
       setIsInitial(false);
-      return;
+      /*
+       * V007. The page that rendered this is cached and served to everyone, so it could only ship
+       * the free preview and it said so with `paidPending`. The quiz, the flashcards, the extras
+       * and the mistakes come from `/api/sections/[id]` — for EVERY reader, not just a paying one,
+       * because that route is the only place that knows who is asking.
+       *
+       * Deliberately no `setSectionData(null)` here: the free surfaces are already on screen and
+       * blanking them would flash the whole page for the sake of the paid ones.
+       */
+      if (!initialSectionData?.paidPending) return;
+      let cancelled = false;
+      fetch(`/api/sections/${activeSection}`)
+        .then((res) => (res.ok ? res.json() : null))
+        .then((data) => { if (data && !cancelled) setSectionData(data); })
+        .catch((e) => console.warn('Failed to load the full section', e));
+      return () => { cancelled = true; };
     }
     async function loadSection() {
       setSectionData(null);
@@ -673,7 +688,13 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       return <PaywallOverlay feature={tabLabel} />;
     }
 
-    if (!sectionData) {
+    /* A paying reader must not be shown the free preview on the way to their own content. The page
+       ships capped arrays; until the upgrade above lands they are not this reader's data, so the
+       paid and preview tabs wait rather than render three questions and then twenty-five. */
+    const awaitingPaid = sectionData?.paidPending && isPremium
+      && (PREMIUM_TABS.has(activeTab) || PREVIEW_TABS.has(activeTab));
+
+    if (!sectionData || awaitingPaid) {
       return (
         <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--text-muted)' }}>
           <div style={{ fontSize: 48, marginBottom: 16 }}>&#128218;</div>
