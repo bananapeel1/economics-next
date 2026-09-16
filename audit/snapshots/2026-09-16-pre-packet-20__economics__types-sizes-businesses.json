@@ -1,0 +1,1149 @@
+{
+ "section_id": "types-sizes-businesses",
+ "subject": "economics",
+ "label": "2026-09-16-pre-packet-20",
+ "tables": {
+  "section_content": [
+   {
+    "id": "types-sizes-businesses:block:f7c3430a",
+    "title": "Business Objectives",
+    "sections": [
+     {
+      "id": "types-sizes-businesses:sub:profit-maximisation",
+      "body": [
+       {
+        "text": "The traditional economic assumption is that firms aim to **maximise profit** — making the gap between total revenue and total cost as large as possible. This occurs at the output level where marginal cost equals marginal revenue (MC = MR).",
+        "type": "paragraph"
+       },
+       {
+        "text": "If MR > MC, producing one more unit adds more to revenue than to cost, so profit rises. If MC > MR, the last unit costs more to make than it earns, so the firm should cut back. The sweet spot is where the two are equal.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "MR > MC",
+         "Firm expands output",
+         "MC rises, MR falls",
+         "MC = MR reached"
+        ],
+        "result": "Profit maximised — no reallocation improves outcome",
+        "resultType": "good"
+       }
+      ],
+      "title": "Profit Maximisation",
+      "keyIdea": "A firm maximises profit at the output where MC = MR — any unit before this leaves money on the table, any unit after costs more than it earns.",
+      "examMatters": "Examiners test whether you can locate MC = MR on a diagram and read the price from the AR curve above. This is the single most important diagram skill in Unit 3 — practise it until it's automatic.",
+      "realExample": {
+       "text": "Apple prices iPhones where the gap between revenue and production cost is maximised. They produce fewer units at a higher margin rather than flooding the market — a classic profit-maximising strategy.",
+       "emoji": "🍎"
+      },
+      "misconception": "Students say profit is maximised where revenue is highest. Wrong — revenue maximisation (MR = 0) gives a different, higher output than profit maximisation (MC = MR). Instead write: profit max considers both revenue AND costs; it occurs where the marginal unit adds equally to both."
+     },
+     {
+      "id": "types-sizes-businesses:sub:alternative-objectives",
+      "body": [
+       {
+        "text": "**Revenue maximisation** occurs where MR = 0 — the firm pushes output until total revenue peaks, even though profit is lower. Baumol argued managers prefer this because their salary and status often correlate with firm size, not profitability.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Sales maximisation** means selling the most output possible without making a loss — producing where AR = ATC. The firm breaks even, sacrificing all supernormal profit for maximum market share.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Satisficing** is the most realistic description of many firms. Managers aim for a 'good enough' profit that keeps shareholders quiet, while pursuing their own goals — perks, prestige, or an easy life. This arises from the **principal-agent problem**: shareholders (principals) want maximum profit, but managers (agents) have their own interests.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Ownership separated from control",
+         "Managers have own goals",
+         "Information is imperfect"
+        ],
+        "result": "Satisficing — a compromise between competing objectives",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Revenue Maximisation, Sales Maximisation & Satisficing",
+      "keyIdea": "Not all firms chase maximum profit — managers may pursue revenue, market share, or a quiet life, depending on who controls the firm and what information they have.",
+      "examMatters": "A common 8-mark question asks you to compare objectives on a single diagram. Show MC = MR (profit max), MR = 0 (revenue max), and AR = ATC (sales max). Output increases and price decreases as you move through them — label all three clearly.",
+      "realExample": {
+       "text": "Amazon famously prioritised revenue and market share over profit for nearly two decades. Jeff Bezos pursued sales maximisation to build scale, reinvesting every pound of revenue into growth rather than distributing it as dividends.",
+       "emoji": "📦"
+      },
+      "misconception": "Students assume all firms profit-maximise. Wrong — the principal-agent problem and imperfect information mean many firms satisfice. Instead write: profit maximisation is a simplifying assumption; in reality, objectives depend on ownership structure, market power, and managerial incentives."
+     }
+    ],
+    "takeaway": [
+     "Profit max at MC = MR; revenue max at MR = 0; sales max at AR = ATC.",
+     "The principal-agent problem explains why managers may not profit-maximise.",
+     "Satisficing is the most realistic model — 'good enough' profit while pursuing other goals."
+    ]
+   },
+   {
+    "id": "types-sizes-businesses:block:d5197c02",
+    "title": "Types of Business Organisation",
+    "sections": [
+     {
+      "id": "types-sizes-businesses:sub:sole-traders-partnerships",
+      "body": [
+       {
+        "text": "A **sole trader** is one person who owns and runs a business. They keep all profits but face **unlimited liability** — if the business fails, creditors can seize personal assets like their house and savings.",
+        "type": "paragraph"
+       },
+       {
+        "text": "A **partnership** shares ownership between two or more people. Partners share profits, responsibilities, and — critically — unlimited liability. Partnerships are common in professional services like law and accounting where personal reputation matters.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Both structures are simple to set up with minimal regulation. The trade-off is clear: maximum control and privacy, but maximum personal risk and limited ability to raise external finance.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Sole Traders and Partnerships",
+      "keyIdea": "The simplest business forms give the owner total control but expose their personal assets to unlimited liability — every penny of business debt is personally theirs.",
+      "examMatters": "Examiners test whether you understand unlimited liability as a concept, not just a definition. Link it to risk: unlimited liability discourages investment because potential losses are uncapped, which limits the firm's ability to grow.",
+      "realExample": {
+       "text": "Most high-street barber shops and local restaurants are sole traders. They benefit from quick decision-making and keep all profits, but if the business accumulates debt, the owner's personal savings are at risk.",
+       "emoji": "💈"
+      },
+      "misconception": "Students say sole traders are always small. Wrong — some sole traders have significant turnover. The defining feature is unlimited liability and single ownership, not size. Instead write: the key distinction is the legal structure (unlimited liability), not the scale of operations."
+     },
+     {
+      "id": "types-sizes-businesses:sub:limited-companies",
+      "body": [
+       {
+        "text": "A **private limited company (Ltd)** is a separate legal entity. Shareholders enjoy **limited liability** — they can lose their investment but not their personal assets. Shares cannot be sold to the general public, keeping ownership private.",
+        "type": "paragraph"
+       },
+       {
+        "text": "A **public limited company (plc)** trades shares on the stock exchange. This gives access to enormous capital from millions of investors, but dilutes control and exposes the firm to takeover risk.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Becoming a plc creates the **divorce of ownership and control** — shareholders own the firm but managers run it day-to-day. This separation is the root of the principal-agent problem.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Firm becomes plc",
+         "Shares traded publicly",
+         "Ownership spread across millions"
+        ],
+        "result": "Divorce of ownership and control → principal-agent problem",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Private Limited Companies (Ltd) and Public Limited Companies (plc)",
+      "keyIdea": "Limited liability separates the owner's personal wealth from the business — shareholders can only lose what they invested, which is the single most important innovation in business law.",
+      "examMatters": "A frequent question asks you to evaluate whether a firm should convert from Ltd to plc. Structure your answer: benefits (access to capital, growth) vs costs (loss of control, takeover risk, short-termism pressure, disclosure requirements).",
+      "realExample": {
+       "text": "Marks & Spencer started as a market stall (sole trader), became a private company, then floated as a plc on the London Stock Exchange. Each transition gave access to more capital but reduced the founding family's control.",
+       "emoji": "🏪"
+      },
+      "misconception": "Students confuse limited liability with limited risk. Wrong — limited liability protects personal assets, but the investment itself can still be lost entirely. Instead write: limited liability means shareholders' maximum loss is their investment; it does not mean the business cannot fail."
+     }
+    ],
+    "takeaway": [
+     "Sole traders and partnerships: unlimited liability, total control, limited finance.",
+     "Ltd and plc: limited liability, easier to raise capital, but ownership may separate from control.",
+     "The divorce of ownership and control creates the principal-agent problem in plcs."
+    ]
+   },
+   {
+    "id": "types-sizes-businesses:block:4eb0e74b",
+    "title": "Growth of Firms",
+    "sections": [
+     {
+      "id": "types-sizes-businesses:sub:organic-growth",
+      "body": [
+       {
+        "text": "**Organic growth** means expansion through the firm's own activities: increasing sales, opening new outlets, developing new products, or entering new geographical markets. It is funded primarily by **retained profits**.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The key advantage is control — the firm maintains its culture, avoids integration headaches, and grows at a pace it can manage. The key disadvantage is speed — competitors who grow externally may seize opportunities first.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Organic (Internal) Growth",
+      "keyIdea": "Growing from within — using retained profits to open branches, develop products, or enter new markets — is the safest path but the slowest, making it best when time is on your side.",
+      "examMatters": "When evaluating growth strategies, always consider the market context. Is the market growing (organic works — there's time) or mature and consolidating (external growth may be necessary to survive)?",
+      "realExample": {
+       "text": "Starbucks grew organically for decades, opening one store at a time and replicating its format globally. This preserved brand consistency but meant slower expansion than if it had acquired existing coffee chains.",
+       "emoji": "☕"
+      },
+      "misconception": "Students say organic growth is always better because it's less risky. Wrong — in fast-consolidating markets, organic growth may be too slow and the firm gets acquired itself. Instead write: organic growth is lower risk but may be too slow when competitors are merging and market share is being locked up."
+     },
+     {
+      "id": "types-sizes-businesses:sub:external-growth-mergers",
+      "body": [
+       {
+        "text": "**External growth** means expansion through mergers (two firms agree to join) or takeovers (one firm buys a controlling stake, sometimes hostile). It is faster than organic growth and immediately increases market share.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Types of Integration",
+        "type": "subheading"
+       },
+       {
+        "text": "**Horizontal integration** merges firms at the same stage in the same industry — increasing market share and enabling economies of scale. **Vertical integration** (backward or forward) secures supply chains or distribution. **Conglomerate integration** diversifies into unrelated industries to spread risk.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Firms merge horizontally",
+         "Market concentration rises",
+         "Economies of scale possible"
+        ],
+        "result": "Lower costs but competition regulators may intervene",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "External Growth: Mergers, Takeovers & Integration",
+      "keyIdea": "Buying another firm gives instant scale and market share, but over half of mergers destroy value because integrating two different cultures and systems is far harder than it looks on paper.",
+      "examMatters": "Examiners expect you to classify the type of integration (horizontal, vertical backward/forward, conglomerate) and evaluate its impact on competition, efficiency, and consumers. Always consider the regulator's perspective — would the CMA allow it?",
+      "realExample": {
+       "text": "Facebook's acquisition of Instagram (2012) and WhatsApp (2014) were horizontal integrations that eliminated potential competitors and gave Facebook dominance across social media — a textbook case of external growth for market power.",
+       "emoji": "📱"
+      },
+      "misconception": "Students assume mergers always create synergies. Wrong — culture clash, redundancy costs, and management distraction mean over 50% of mergers fail to create shareholder value. Instead write: synergies look attractive on paper, but integration difficulties are the number one reason mergers destroy value."
+     }
+    ],
+    "takeaway": [
+     "Organic growth is safer but slower; external growth is faster but riskier.",
+     "Horizontal (same stage), vertical (supply chain), conglomerate (unrelated) — know all three.",
+     "Over half of mergers fail due to culture clash and integration difficulties."
+    ]
+   },
+   {
+    "id": "types-sizes-businesses:block:6cf6b5d4",
+    "title": "Economies and Diseconomies of Scale",
+    "sections": [
+     {
+      "id": "types-sizes-businesses:sub:economies-of-scale",
+      "body": [
+       {
+        "text": "**Economies of scale** are reductions in long-run average cost as a firm increases its scale of production. They explain the downward-sloping section of the LRAC curve.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Internal Economies",
+        "type": "subheading"
+       },
+       {
+        "text": "**Technical** — larger machines are more efficient (cube-square rule). **Purchasing** — bulk buying gives bargaining power. **Financial** — banks charge lower rates to larger, lower-risk firms. **Managerial** — specialist managers increase productivity. **Risk-bearing** — diversified firms spread risk across products and markets.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**External economies** benefit the whole industry: a cluster of tech firms in one area creates a shared pool of skilled workers, specialist suppliers, and knowledge spillovers.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Firm increases scale",
+         "Internal economies kick in",
+         "LRAC falls"
+        ],
+        "result": "Lower average costs → competitive pricing or higher margins",
+        "resultType": "good"
+       }
+      ],
+      "title": "Economies of Scale",
+      "keyIdea": "As a firm expands, average costs fall for specific, identifiable reasons — and naming those reasons with examples is what separates a strong exam answer from a vague one.",
+      "examMatters": "Examiners reward specific types with named examples. Don't just write 'economies of scale lower costs' — say 'purchasing economies allow Tesco to negotiate lower prices from suppliers due to the volume of its orders, reducing average cost per unit'.",
+      "realExample": {
+       "text": "Toyota's global production of over 10 million vehicles per year gives it massive technical and purchasing economies of scale. A single factory produces enough volume to justify billion-pound robotic assembly lines that would be uneconomic for smaller manufacturers.",
+       "emoji": "🚗"
+      },
+      "misconception": "Students say economies of scale mean 'costs fall'. Imprecise — total costs still rise as output increases; it is average cost that falls. Instead write: economies of scale occur when long-run average cost falls as the firm increases its scale of production — always specify average cost."
+     },
+     {
+      "id": "types-sizes-businesses:sub:diseconomies-demergers",
+      "body": [
+       {
+        "text": "**Diseconomies of scale** are increases in long-run average cost as a firm grows beyond its optimal size. Three main causes: **communication problems** (messages distorted through layers of hierarchy), **coordination difficulties** (departments pull in different directions), and **loss of motivation** (workers feel like a small cog in a machine).",
+        "type": "paragraph"
+       },
+       {
+        "text": "When diseconomies outweigh the benefits of size, a **demerger** may follow — splitting the firm into smaller, independent companies that can focus on their main activities. The stock market may value the separate pieces more than the whole (eliminating the 'conglomerate discount').",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Firm grows beyond MES",
+         "Communication and coordination fail",
+         "LRAC rises"
+        ],
+        "result": "Diseconomies — the firm is too big to manage efficiently",
+        "resultType": "bad"
+       }
+      ],
+      "title": "Diseconomies of Scale and Demergers",
+      "keyIdea": "Beyond a certain size, firms become harder to manage — communication breaks down, workers lose motivation, and average costs rise, sometimes prompting the firm to break itself apart.",
+      "examMatters": "A strong evaluation point: explain that diseconomies of scale provide the economic rationale for demergers. If a firm's LRAC is rising due to coordination problems, splitting up may be the best way to restore efficiency and shareholder value.",
+      "realExample": {
+       "text": "**GSK** demerged its consumer healthcare arm as **Haleon** in 2022: GSK shareholders received shares in the new, separately listed company. Running prescription medicines and toothpaste under one roof had produced coordination costs and a diluted focus, classic diseconomies of scale. Note the difference from a sell-off: when eBay disposed of a majority stake in Skype to outside investors in 2009, that was a divestment, not a demerger.",
+       "emoji": "📦"
+      },
+      "misconception": "Students think diseconomies are inevitable for all large firms. Wrong — many firms use technology, flat structures, and decentralisation to stay efficient at huge scale. Instead write: diseconomies are a risk, not a certainty; well-managed firms can delay or avoid them through organisational innovation."
+     }
+    ],
+    "takeaway": [
+     "Economies of scale: technical, purchasing, financial, managerial, risk-bearing — name them with examples.",
+     "Diseconomies: communication, coordination, motivation — these explain why some firms shrink.",
+     "MES is where LRAC is minimised; beyond it, costs may rise, prompting demergers."
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "flow": {
+     "steps": [
+      "Shareholders want max profit",
+      "Managers have their own goals",
+      "Information is imperfect"
+     ],
+     "result": "Satisficing — a compromise between competing objectives",
+     "resultType": "neutral"
+    },
+    "meta": "5 concepts",
+    "title": "Business Objectives",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Profit maximisation</strong> — producing where MC = MR so that the gap between total revenue and total cost is as large as possible; the traditional assumption in microeconomics.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Revenue maximisation</strong> — producing where MR = 0 so that total revenue is at its peak, even if this means lower profit; associated with Baumol's managerial theory.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Sales maximisation</strong> — producing the highest output possible without making a loss (where AR = ATC), so the firm grows as large as it can while covering costs.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Satisficing</strong> — managers aim for a 'good enough' level of profit that keeps shareholders quiet while pursuing their own goals such as perks, prestige, or an easy life.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "The <strong>divorce of ownership and control</strong> means shareholders (principals) want maximum profit, but managers (agents) may prioritise salary, status, or empire-building instead.",
+        "type": "mech"
+       },
+       {
+        "text": "In the short run firms may pursue <strong>predatory pricing</strong> (setting P below AVC to force rivals out) and sacrifice profit now to gain monopoly power later.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Examiners expect you to evaluate whether firms really profit-maximise: in practice, imperfect information means firms cannot precisely identify where MC = MR.",
+        "type": "imp"
+       },
+       {
+        "text": "The principal-agent problem links to government failure in Unit 1 — in both cases, the people making decisions do not bear the full consequences of their choices.",
+        "type": "link"
+       }
+      ],
+      "title": "WHY OBJECTIVES DIVERGE"
+     }
+    ],
+    "keyIdea": "Firms do not always maximise profit — different stakeholders push for different goals, and in practice managers often settle for a satisfactory level of performance rather than an absolute optimum.",
+    "takeaway": [
+     "Profit max at MC = MR, revenue max at MR = 0, sales max at AR = ATC.",
+     "The divorce of ownership and control creates a principal-agent problem.",
+     "Satisficing is the most realistic description of how many firms actually behave."
+    ],
+    "examMatters": "Examiners often ask you to assess which objective a firm is most likely pursuing. Use evidence from the scenario (e.g. low prices suggest sales maximisation; high dividends suggest profit maximisation) and always evaluate with the principal-agent problem.",
+    "misconception": "Students assume all firms profit-maximise. Wrong because the principal-agent problem and imperfect information mean many firms satisfice. Instead write: profit maximisation is a simplifying assumption — in reality, objectives depend on ownership structure, market conditions, and managerial incentives."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Sole trader (simple, unlimited liability)",
+      "Partnership (shared risk, unlimited liability)",
+      "Ltd (limited liability, private shares)",
+      "plc (stock exchange, massive capital)"
+     ],
+     "result": "Greater access to finance but greater separation of ownership and control",
+     "resultType": "neutral"
+    },
+    "meta": "5 concepts",
+    "title": "Types of Business Organisation",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Sole trader</strong> — one owner with unlimited liability who keeps all profit but risks personal assets if the business fails; simplest form with minimal regulation.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Partnership</strong> — two or more individuals sharing ownership, profit, and unlimited liability; common in professional services like law and accounting.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Private limited company (Ltd)</strong> — a separate legal entity whose shareholders enjoy limited liability; shares cannot be sold to the general public.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Public limited company (plc)</strong> — a company whose shares are traded on a stock exchange, allowing access to large amounts of capital but exposing it to takeover risk.",
+        "type": "def"
+       }
+      ],
+      "title": "KEY STRUCTURES"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Limited liability</strong> means shareholders can only lose the amount they invested, not their personal assets; this encourages investment and risk-taking.",
+        "type": "mech"
+       },
+       {
+        "text": "Becoming a plc gives access to equity finance from millions of investors, but dilutes control and creates pressure for short-term profit to keep the share price up.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "The choice of structure affects a firm's ability to grow: sole traders struggle to raise external finance, while plcs can issue new shares on the stock market.",
+        "type": "imp"
+       }
+      ],
+      "title": "TRADE-OFFS"
+     }
+    ],
+    "keyIdea": "Legal structure determines who bears the risk, who controls decisions, and how easily the firm can raise finance — these trade-offs explain why different businesses choose different forms.",
+    "takeaway": [
+     "Sole traders and partnerships face unlimited liability; Ltd and plc have limited liability.",
+     "plcs raise the most capital but face takeover risk and short-termism.",
+     "Legal structure shapes the principal-agent problem and the firm's growth potential."
+    ],
+    "examMatters": "Examiners test whether you can link legal structure to concepts like limited liability, access to finance, and the divorce of ownership and control. A common question asks you to evaluate whether a firm should convert from Ltd to plc.",
+    "misconception": "Students say limited companies always make more profit. Wrong because limited liability is about risk protection, not profitability. Instead write: limited liability encourages investment by protecting personal assets, which makes it easier to raise finance and grow — but growth itself does not guarantee higher profit."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Firm wants to grow",
+      "Organic: slow but low risk",
+      "External: fast but integration risk"
+     ],
+     "result": "Bigger firm with potential for economies of scale and market power",
+     "resultType": "neutral"
+    },
+    "meta": "5 concepts",
+    "title": "Growth of Firms",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Organic (internal) growth</strong> — expansion from within, such as opening new branches, developing new products, or entering new markets using retained profit.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>External growth</strong> — expansion through mergers (two firms agree to join) or takeovers (one firm buys a controlling stake in another, sometimes against its will).",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Growth enables firms to exploit <strong>economies of scale</strong>, driving down long-run average cost and making them more competitive on price.",
+        "type": "mech"
+       },
+       {
+        "text": "Larger firms gain <strong>market power</strong> — the ability to influence price, negotiate better deals with suppliers, and deter new entrants.",
+        "type": "mech"
+       },
+       {
+        "text": "Managers may pursue growth for <strong>empire-building</strong> reasons rather than shareholder value — a form of the principal-agent problem.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Examiners want you to evaluate whether growth always benefits consumers. Economies of scale can mean lower prices, but increased market power can lead to higher prices and reduced choice.",
+        "type": "imp"
+       }
+      ],
+      "title": "WHY FIRMS GROW"
+     },
+     {
+      "items": [
+       {
+        "text": "Organic growth is <strong>lower risk</strong> but slower — the firm retains culture and control but may miss market opportunities that faster-moving rivals seize.",
+        "type": "mech"
+       },
+       {
+        "text": "External growth is <strong>faster</strong> and immediately increases market share, but integration is difficult: culture clashes, redundancies, and regulatory scrutiny can erode the expected gains.",
+        "type": "mech"
+       },
+       {
+        "text": "Growth links to contestability (3.3.3): if large firms create barriers to entry, markets become less contestable and allocative efficiency may fall.",
+        "type": "link"
+       }
+      ],
+      "title": "ORGANIC vs EXTERNAL GROWTH"
+     }
+    ],
+    "keyIdea": "Firms grow to exploit economies of scale and increase market power, but the method they choose — organic expansion or buying other firms — carries different risks and rewards.",
+    "takeaway": [
+     "Organic growth is safer but slower; external growth is faster but riskier.",
+     "Firms grow to exploit economies of scale and gain market power.",
+     "Growth can harm consumers if it increases monopoly power without passing on cost savings."
+    ],
+    "examMatters": "Examiners frequently ask you to evaluate whether a merger or takeover is in the public interest. Structure your answer around: economies of scale vs market power, short-run job losses vs long-run efficiency, and the risk of diseconomies of scale.",
+    "misconception": "Students assume bigger is always better. Wrong because growth beyond the minimum efficient scale leads to diseconomies of scale. Instead write: growth can lower costs up to a point, but beyond MES the firm may suffer from coordination problems, communication failures, and loss of motivation."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Identify strategic goal (cost, supply, market share, diversification)",
+      "Choose integration type",
+      "Regulatory approval needed"
+     ],
+     "result": "Merged firm gains scale advantages but faces scrutiny from competition authorities",
+     "resultType": "neutral"
+    },
+    "meta": "5 concepts",
+    "title": "Mergers and Integration",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Horizontal integration</strong> — merging with a firm at the same stage of production in the same industry (e.g. two car manufacturers), which increases market share and enables economies of scale.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Vertical integration (backward)</strong> — acquiring a supplier to secure raw materials, reduce costs, and gain control over quality and supply reliability.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Vertical integration (forward)</strong> — acquiring a distributor or retailer to control how the product reaches the consumer and capture retail margins.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Conglomerate integration</strong> — merging with a firm in an entirely different industry to diversify risk and spread revenue streams across unrelated markets.",
+        "type": "def"
+       }
+      ],
+      "title": "TYPES OF INTEGRATION"
+     },
+     {
+      "items": [
+       {
+        "text": "Horizontal mergers raise competition concerns because they <strong>increase market concentration</strong>, potentially enabling the merged firm to raise prices.",
+        "type": "mech"
+       },
+       {
+        "text": "Vertical integration can be <strong>anti-competitive</strong> if it forecloses rivals' access to key suppliers or distribution channels.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Competition regulators (e.g. CMA in the UK) assess whether a merger creates a 'substantial lessening of competition'; they may block it, approve it, or require divestments.",
+        "type": "imp"
+       },
+       {
+        "text": "Integration types link to market structures in 3.3.3: horizontal mergers move an industry closer to monopoly, while contestability theory asks whether new firms can still enter despite the merger.",
+        "type": "link"
+       }
+      ],
+      "title": "EVALUATION"
+     }
+    ],
+    "keyIdea": "The type of integration a firm pursues reveals its strategic goal — cutting costs, securing supply, gaining market share, or diversifying risk — and each type creates different effects on competition and efficiency.",
+    "takeaway": [
+     "Horizontal = same stage (market power); vertical = different stages (supply control).",
+     "Conglomerate mergers diversify risk but may lack synergy benefits.",
+     "Regulators block mergers that substantially lessen competition."
+    ],
+    "examMatters": "Examiners expect you to classify the type of integration and evaluate its impact on competition, efficiency, and consumers. Always consider both the potential for economies of scale (lower prices) and the risk of increased market power (higher prices).",
+    "misconception": "Students confuse horizontal and vertical integration. Horizontal is same stage, same industry (think of a horizontal line at one level of production). Vertical is different stages in the supply chain (think of a vertical column from raw materials to retail). Instead write: state the definition clearly and give a specific example to prove you know the difference."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Firm increases scale of production",
+      "Internal economies lower unit costs",
+      "LRAC falls until MES is reached"
+     ],
+     "result": "Lower average costs enable lower prices or higher profit margins",
+     "resultType": "good"
+    },
+    "meta": "6 concepts",
+    "title": "Economies of Scale",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Economies of scale</strong> — reductions in long-run average cost as a firm increases its scale of production, moving along the downward-sloping section of the LRAC curve.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Minimum efficient scale (MES)</strong> — the smallest level of output at which LRAC is minimised; beyond this point, further expansion does not reduce costs.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Technical</strong> — large firms use bigger, more efficient machinery and benefit from the cube-square rule (doubling a container's dimensions more than doubles its volume).",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Purchasing (bulk buying)</strong> — large orders give bargaining power with suppliers, reducing the unit cost of raw materials.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Financial</strong> — banks see large firms as lower risk, so they can borrow at lower interest rates and access capital markets directly.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Managerial</strong> — large firms can afford specialist managers for marketing, finance, and operations, increasing productivity through division of labour.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Risk-bearing</strong> — diversified firms spread risk across products, markets, or geographies so that a downturn in one area does not threaten the whole business.",
+        "type": "mech"
+       }
+      ],
+      "title": "INTERNAL ECONOMIES"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>External economies of scale</strong> arise from the growth of the whole industry, not just one firm — for example, a cluster of tech firms in Silicon Valley sharing a skilled labour pool and specialist suppliers.",
+        "type": "mech"
+       },
+       {
+        "text": "Economies of scale link to natural monopoly: if MES is very large relative to market demand, only one firm can produce efficiently, creating a case for regulation (3.3.5).",
+        "type": "link"
+       }
+      ],
+      "title": "EXTERNAL ECONOMIES"
+     }
+    ],
+    "keyIdea": "As firms expand output in the long run, average costs fall for specific, identifiable reasons — and understanding these reasons is what separates a strong exam answer from a vague one.",
+    "takeaway": [
+     "Economies of scale lower LRAC — always say average cost, not just 'costs'.",
+     "Name specific types: technical, purchasing, financial, managerial, risk-bearing.",
+     "MES is where LRAC is minimised; beyond it, costs stop falling."
+    ],
+    "examMatters": "Examiners reward you for naming specific types of economy of scale with real-world examples, not just saying 'costs fall as output rises'. Explain the mechanism: why does bulk buying lower unit costs? Because the firm's bargaining power allows it to negotiate discounts.",
+    "misconception": "Students say economies of scale mean 'costs fall'. Imprecise — total costs still rise as output increases; it is average cost that falls. Instead write: economies of scale occur when long-run average cost falls as the firm increases its scale of production."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Firm grows beyond MES",
+      "Communication and coordination deteriorate",
+      "Motivation falls"
+     ],
+     "result": "LRAC rises — the firm is too big to manage efficiently",
+     "resultType": "bad"
+    },
+    "meta": "4 concepts",
+    "title": "Diseconomies of Scale",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Diseconomies of scale</strong> — increases in long-run average cost as a firm grows beyond its optimal size, shown by the upward-sloping section of the LRAC curve.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITION"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Communication problems</strong> — in very large firms, messages pass through many layers of hierarchy, leading to delays, distortions, and mistakes.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Coordination difficulties</strong> — managing thousands of employees across multiple sites or countries becomes complex, with different departments pulling in different directions.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Loss of motivation</strong> — individual workers feel like a small cog in a huge machine, reducing effort and innovation; the firm loses the entrepreneurial energy of its smaller days.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Diseconomies of scale explain why some large firms <strong>demerge</strong> or <strong>outsource</strong> functions — they conclude that being smaller and more focused is actually more efficient.",
+        "type": "imp"
+       }
+      ],
+      "title": "CAUSES"
+     }
+    ],
+    "keyIdea": "Beyond a certain size, firms become harder to manage — communication breaks down, workers lose motivation, and coordination failures push average costs back up.",
+    "takeaway": [
+     "Diseconomies of scale cause LRAC to rise beyond the optimal scale of production.",
+     "Three main causes: communication breakdowns, coordination failures, loss of motivation.",
+     "Not inevitable — good management and technology can offset them."
+    ],
+    "examMatters": "Examiners expect you to explain specific causes, not just say 'the firm gets too big'. Use the three causes (communication, coordination, motivation) and link to real-world examples of large firms that have struggled with size.",
+    "misconception": "Students think diseconomies of scale are inevitable for all large firms. Wrong because many firms use technology, flat structures, and decentralisation to stay efficient at huge scale. Instead write: diseconomies of scale are a risk, not a certainty — well-managed firms can delay or avoid them through organisational innovation."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Large firm faces diseconomies or conglomerate discount",
+      "Board decides to demerge",
+      "Separate firms focus on their main activities"
+     ],
+     "result": "Each firm becomes more efficient and the combined market value may increase",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "Demergers",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Demerger</strong> — the splitting of a large firm into two or more separate, independent companies, each with its own management and shareholders.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITION"
+     },
+     {
+      "items": [
+       {
+        "text": "The merged firm may be suffering <strong>diseconomies of scale</strong> — average costs have risen because the organisation is too complex to manage efficiently.",
+        "type": "mech"
+       },
+       {
+        "text": "The conglomerate may face a <strong>conglomerate discount</strong> on its share price: investors prefer to diversify their own portfolios rather than pay for a firm that does everything poorly.",
+        "type": "mech"
+       },
+       {
+        "text": "Regulatory pressure from <strong>competition authorities</strong> may force a demerger if the combined firm has too much market power.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Demergers allow each new firm to focus on its <strong>main activity</strong>, potentially increasing efficiency, innovation, and shareholder value.",
+        "type": "imp"
+       }
+      ],
+      "title": "WHY FIRMS DEMERGE"
+     }
+    ],
+    "keyIdea": "Sometimes the best way to create value is to break a large firm apart — each part can focus on what it does best, and the stock market may value the separate pieces more than the whole.",
+    "takeaway": [
+     "Demergers reverse failed mergers by splitting a firm into focused, independent units.",
+     "Common reasons: diseconomies of scale, conglomerate discount, regulatory pressure.",
+     "Evaluate by weighing lost synergies against gained focus and efficiency."
+    ],
+    "examMatters": "Examiners may ask you to evaluate whether a demerger benefits stakeholders. Consider: shareholders (higher share price), workers (possible redundancies), consumers (more focused firms may innovate more), and competition (may increase rivalry).",
+    "misconception": "Students assume demergers always create value. Wrong because the synergy benefits of the original merger (shared R&D, brand recognition) are lost. Instead write: a demerger creates value only if the costs of diseconomies and loss of focus outweigh the synergy benefits of being combined."
+   }
+  ],
+  "section_quiz": [
+   {
+    "id": "types-sizes-businesses:quiz:d9389500",
+    "options": [
+     "A manufacturer merging with one of its raw material suppliers.",
+     "A car manufacturer merging with another car manufacturer.",
+     "A food company acquiring a technology firm.",
+     "A manufacturer purchasing a chain of retail stores."
+    ],
+    "question": "Which of the following best describes horizontal integration?",
+    "explanation": "Horizontal integration is a merger between firms at the same stage of production in the same industry. Two car manufacturers are at the same stage (manufacturing) in the same industry (automotive). The other options describe backward vertical, conglomerate and forward vertical integration respectively.",
+    "correctIndex": 1
+   },
+   {
+    "id": "types-sizes-businesses:quiz:e7732a08",
+    "options": [
+     "Average revenue equals average cost (AR = AC).",
+     "Marginal revenue equals zero (MR = 0).",
+     "Marginal cost equals marginal revenue (MC = MR).",
+     "Total revenue is at its maximum."
+    ],
+    "question": "Profit maximisation occurs where:",
+    "explanation": "The profit-maximising condition is MC = MR. At this output, the gap between total revenue and total cost is greatest. AR = AC is sales volume maximisation, and MR = 0 (maximum total revenue) is revenue maximisation.",
+    "correctIndex": 2
+   },
+   {
+    "id": "types-sizes-businesses:quiz:8b3606f9",
+    "options": [
+     "Profit maximisation.",
+     "Revenue maximisation.",
+     "Sales volume maximisation.",
+     "Satisficing."
+    ],
+    "question": "A firm that aims to sell the maximum number of units while still covering all its costs is pursuing:",
+    "explanation": "Sales volume maximisation occurs at AR = AC, where the firm earns exactly normal profit and produces the maximum output while covering all costs. This gives the highest quantity sold of the three maximisation objectives.",
+    "correctIndex": 2
+   },
+   {
+    "id": "types-sizes-businesses:quiz:6581f923",
+    "options": [
+     "Firms cannot accurately calculate their marginal costs.",
+     "Shareholders and managers may have different objectives, and shareholders cannot easily monitor managers.",
+     "The government regulates the behaviour of private sector firms.",
+     "Small firms lack the resources to hire professional managers."
+    ],
+    "question": "The principal-agent problem arises because:",
+    "explanation": "The principal-agent problem stems from the divorce of ownership (shareholders/principals) from control (managers/agents). Shareholders want profit maximisation, but managers may pursue other goals (revenue, growth, perks). Information asymmetry means shareholders cannot easily observe whether managers are acting in their interests.",
+    "correctIndex": 1
+   },
+   {
+    "id": "types-sizes-businesses:quiz:9aecaf69",
+    "options": [
+     "Falling average costs as output increases.",
+     "Increasing demand in the market.",
+     "Access to retained profits for reinvestment.",
+     "Government regulation by competition authorities."
+    ],
+    "question": "Which of the following is a constraint on business growth?",
+    "explanation": "Competition authorities (e.g. the CMA in the UK) can block mergers that would reduce competition and harm consumers. This directly constrains external growth. Falling average costs, increasing demand and retained profits all facilitate rather than constrain growth.",
+    "correctIndex": 3
+   },
+   {
+    "id": "types-sizes-businesses:quiz:fb81a6c7",
+    "options": [
+     "MC = MR.",
+     "MR = 0.",
+     "AR = AC.",
+     "MC = AC."
+    ],
+    "question": "Revenue maximisation occurs where:",
+    "explanation": "Revenue maximisation occurs at MR = 0. At this point, total revenue is at its peak because producing one more unit would add nothing (or reduce) total revenue. This was proposed by William Baumol as a managerial objective.",
+    "correctIndex": 1
+   },
+   {
+    "id": "types-sizes-businesses:quiz:33b5aa78",
+    "options": [
+     "A co-operative cannot generate any revenue surpluses.",
+     "A co-operative is owned and democratically controlled by its members, each with one vote.",
+     "A co-operative's shares are traded on the stock exchange.",
+     "A co-operative always has unlimited liability."
+    ],
+    "question": "A co-operative differs from a public limited company (plc) mainly because:",
+    "explanation": "Co-operatives are owned by their members (consumers, workers or producers) and operate on a one-member-one-vote democratic basis, regardless of investment size. Unlike plcs, they do not have shares traded on a stock exchange and they can generate surpluses which are shared among members.",
+    "correctIndex": 1
+   },
+   {
+    "id": "types-sizes-businesses:quiz:501af66f",
+    "options": [
+     "Forward vertical integration.",
+     "Backward vertical integration.",
+     "Horizontal integration.",
+     "Conglomerate integration."
+    ],
+    "question": "A firm that acquires one of its suppliers is an example of:",
+    "explanation": "Backward vertical integration involves a firm merging with or acquiring a business at an earlier stage of production (closer to raw materials). Acquiring a supplier moves the firm backward along the supply chain, securing control over its inputs.",
+    "correctIndex": 1
+   },
+   {
+    "id": "types-sizes-businesses:quiz:810f53a2",
+    "options": [
+     "The firm wants to exploit additional economies of scale.",
+     "The firm believes the separate parts are worth more than the combined whole.",
+     "The firm aims to increase its market dominance.",
+     "The firm wants to enter a completely new industry."
+    ],
+    "question": "Which of the following is most likely to be a reason for a demerger?",
+    "explanation": "A key reason for demergers is the 'sum of the parts' argument: the individual businesses may be worth more to investors when valued separately than as a single combined entity. Other reasons include addressing diseconomies of scale, improving management focus, and regulatory pressure.",
+    "correctIndex": 1
+   },
+   {
+    "id": "types-sizes-businesses:quiz:bf7e5868",
+    "options": [
+     "Firms having perfect information about their costs and revenues.",
+     "Managers deliberately minimising profits to harm shareholders.",
+     "Firms aiming for satisfactory performance across multiple objectives rather than maximising any single one.",
+     "Shareholders exercising complete control over managerial decisions."
+    ],
+    "question": "Satisficing behaviour by firms is best explained by:",
+    "explanation": "Satisficing (Herbert Simon) means achieving 'good enough' outcomes across multiple objectives (e.g. sufficient profit for shareholders, fair wages for workers, ethical standards) rather than maximising any single one. It reflects bounded rationality and the complexity of real-world decision-making.",
+    "correctIndex": 2
+   }
+  ],
+  "section_practice": [
+   {
+    "id": "types-sizes-businesses:practice:4e3aff14",
+    "marks": 4,
+    "command": "Define",
+    "guidance": "Limited liability means that the financial responsibility of shareholders is restricted to the amount they have invested in the company (1 mark). If the business fails, shareholders can lose only the value of their shares, not their personal assets such as homes or savings (1 mark). This contrasts with unlimited liability, where sole traders and partners are personally responsible for all business debts (1 mark). Limited liability encourages investment because it reduces the financial risk for shareholders, making it easier for firms to raise capital (1 mark).",
+    "question": "Define the term 'limited liability'. (4 marks)"
+   },
+   {
+    "id": "types-sizes-businesses:practice:6660d5bb",
+    "marks": 6,
+    "command": "Explain",
+    "guidance": "Reason 1: Increased market power (1 mark) — by merging with or acquiring a competitor at the same stage of production, the firm increases its market share and can exert greater influence over price (1 mark). This may allow the firm to earn supernormal profits by behaving more like a monopolist (1 mark).\n\nReason 2: Economies of scale (1 mark) — combining two firms at the same stage of production creates a larger entity that can benefit from technical, purchasing and marketing economies of scale, reducing long-run average costs (1 mark). For example, the merged firm may rationalise duplicate operations such as head offices or distribution networks (1 mark).",
+    "question": "Explain two reasons why a firm might pursue horizontal integration. (6 marks)"
+   },
+   {
+    "id": "types-sizes-businesses:practice:a5f0810d",
+    "marks": 10,
+    "command": "Assess",
+    "guidance": "Define the principal-agent problem as a conflict of interest that arises when the owners (principals/shareholders) of a firm have different objectives from the managers (agents) who run it on their behalf (2 marks). Significance: managers may pursue objectives such as revenue maximisation, empire-building or personal prestige rather than profit maximisation, leading to allocative inefficiency and lower returns for shareholders (2 marks); information asymmetry makes it difficult for shareholders to monitor managerial behaviour, especially in large firms with dispersed ownership (2 marks). Counter-arguments: performance-related pay, share options and bonuses can align managerial incentives with shareholder interests (2 marks); the threat of takeover disciplines managers — if the firm underperforms, it becomes a target for acquisition by a more efficient management team (1 mark). Judgement: the principal-agent problem is significant in large public limited companies with dispersed ownership but can be mitigated through well-designed incentive structures and effective corporate governance (1 mark).",
+    "question": "Assess the significance of the principal-agent problem for the performance of large firms. (10 marks)"
+   },
+   {
+    "id": "types-sizes-businesses:practice:aced507f",
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Define organic growth as expansion through a firm's own internal resources — reinvesting profits, developing new products or entering new markets — and external growth as expansion through mergers, acquisitions or takeovers (2 marks).\n\nFor organic growth: Growth is more controlled and manageable, reducing the risk of overexpansion or culture clashes (3 marks); the firm retains full control over its brand identity, quality standards and corporate culture (2 marks); avoids the high costs associated with takeovers, such as premium share prices and legal fees (2 marks).\n\nAgainst — external growth has advantages: Allows rapid expansion and immediate access to new markets, technologies or customer bases that would take years to develop organically (3 marks); can eliminate a competitor through acquisition, increasing market power and reducing competitive pressure (2 marks); may be the only viable strategy in mature or saturated markets where organic growth opportunities are limited (2 marks).\n\nEvaluation: The most effective strategy depends on the firm's circumstances, industry and objectives (2 marks). Organic growth suits firms in growing markets with strong brand loyalty, while external growth is more appropriate when speed is critical or the market is highly competitive. Many successful firms combine both strategies — growing organically in core areas while acquiring complementary businesses to diversify (2 marks).",
+    "question": "Evaluate the view that organic growth is a more effective strategy for business expansion than external growth. (20 marks)"
+   },
+   {
+    "id": "types-sizes-businesses:practice:713cf058",
+    "marks": 4,
+    "command": "Explain",
+    "guidance": "Reason 1: Diseconomies of scale — the firm may have grown too large, leading to communication breakdowns, coordination problems and rising average costs (1 mark). Splitting into smaller units can restore managerial efficiency and reduce bureaucracy (1 mark).\n\nReason 2: Focusing on main activities — a conglomerate may demerge to allow each business unit to concentrate on its primary market (1 mark). This enables specialist management and a clearer strategic direction, potentially increasing shareholder value (1 mark).",
+    "question": "Explain two possible reasons why a firm might choose to demerge. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "id": "types-sizes-businesses:card:bd72e711",
+    "back": "A business owned and run by <strong>one person</strong> with unlimited liability. Easy to set up but the owner bears all risk and may struggle to raise finance.",
+    "front": "What is a sole trader?"
+   },
+   {
+    "id": "types-sizes-businesses:card:85b1210e",
+    "back": "A business owned by <strong>2–20 partners</strong> who share responsibility and profits. Each partner has unlimited liability unless it is a limited liability partnership (LLP).",
+    "front": "What is a partnership?"
+   },
+   {
+    "id": "types-sizes-businesses:card:2c6cd9d7",
+    "back": "A company with <strong>limited liability</strong> — shareholders can only lose what they invested. Shares cannot be sold to the public. Common for small and medium businesses.",
+    "front": "What is a private limited company (Ltd)?"
+   },
+   {
+    "id": "types-sizes-businesses:card:21d65d80",
+    "back": "A company whose shares are traded on the <strong>stock exchange</strong>. Can raise large amounts of capital but faces pressure from shareholders and greater public scrutiny.",
+    "front": "What is a public limited company (PLC)?"
+   },
+   {
+    "id": "types-sizes-businesses:card:16d1fae3",
+    "back": "Shareholders' personal assets are <strong>protected</strong> — they can only lose the amount they invested in the company. The business is a separate legal entity from its owners.",
+    "front": "What is limited liability?"
+   },
+   {
+    "id": "types-sizes-businesses:card:c92e4de5",
+    "back": "The owner is <strong>personally responsible for all business debts</strong>. If the business fails, personal assets (house, savings) can be used to pay creditors.",
+    "front": "What is unlimited liability?"
+   },
+   {
+    "id": "types-sizes-businesses:card:218c3234",
+    "back": "Producing where <strong>MC = MR</strong> (marginal cost equals marginal revenue). The output level that maximises the difference between total revenue and total cost.",
+    "front": "What is profit maximisation?"
+   },
+   {
+    "id": "types-sizes-businesses:card:3d668220",
+    "back": "Producing where <strong>MR = 0</strong> (marginal revenue is zero). The firm maximises total revenue by selling up to the point where the last unit adds nothing to revenue.",
+    "front": "What is revenue maximisation?"
+   },
+   {
+    "id": "types-sizes-businesses:card:512aec09",
+    "back": "Producing the <strong>maximum output</strong> while still covering costs — where <strong>AC = AR</strong> (average cost equals average revenue). The firm makes normal profit.",
+    "front": "What is sales maximisation?"
+   },
+   {
+    "id": "types-sizes-businesses:card:995c9f7f",
+    "back": "Making <strong>enough profit to keep stakeholders satisfied</strong> rather than maximising profit. Common when ownership and management are separated (principal-agent problem).",
+    "front": "What is satisficing?"
+   },
+   {
+    "id": "types-sizes-businesses:card:6f34dcdb",
+    "back": "When <strong>owners (principals) and managers (agents)</strong> have different objectives. Owners want profit maximisation; managers may pursue growth, salary, or status instead.",
+    "front": "What is the principal-agent problem?"
+   },
+   {
+    "id": "types-sizes-businesses:card:9b09d285",
+    "back": "A merger between firms at the <strong>same stage of production</strong> in the same industry — e.g., two car manufacturers merging. Increases market share and economies of scale.",
+    "front": "What is horizontal integration?"
+   },
+   {
+    "id": "types-sizes-businesses:card:594b9175",
+    "back": "A merger between firms at <strong>different stages of production</strong>. <strong>Backward</strong>: toward suppliers. <strong>Forward</strong>: toward customers. Secures supply chain or distribution.",
+    "front": "What is vertical integration?"
+   },
+   {
+    "id": "types-sizes-businesses:card:d00467a8",
+    "back": "A merger between firms in <strong>unrelated industries</strong> — e.g., a food company merging with a tech firm. Aims to diversify risk and exploit financial synergies.",
+    "front": "What is a conglomerate merger?"
+   },
+   {
+    "id": "types-sizes-businesses:card:b80e4d64",
+    "back": "<strong>Cost advantages</strong> from increased output — average costs fall as the firm grows. Types: technical, managerial, purchasing, financial, marketing, and risk-bearing.",
+    "front": "What are economies of scale?"
+   },
+   {
+    "id": "types-sizes-businesses:card:c9d44ea8",
+    "back": "When average costs <strong>rise as output increases</strong> beyond a certain point — caused by communication problems, coordination difficulties, and worker alienation in very large firms.",
+    "front": "What are diseconomies of scale?"
+   },
+   {
+    "id": "types-sizes-businesses:card:db721933",
+    "back": "Growth from the firm's <strong>own resources</strong> — increasing sales, opening new branches, developing new products. Slower but lower risk than external growth.",
+    "front": "What is organic growth?"
+   },
+   {
+    "id": "types-sizes-businesses:card:2cf34254",
+    "back": "Growth through <strong>mergers and acquisitions</strong> — taking over or merging with other firms. Faster but riskier — integration problems, culture clashes, and high cost.",
+    "front": "What is external growth?"
+   }
+  ],
+  "section_diagrams": [
+   {
+    "id": "types-sizes-businesses:diagram:a47fef5c",
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <defs>\n    <marker id=\"bmArrow\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0,8 3,0 6\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"60\" y1=\"290\" x2=\"470\" y2=\"290\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#bmArrow)\"/>\n  <line x1=\"60\" y1=\"290\" x2=\"60\" y2=\"25\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#bmArrow)\"/>\n  <text x=\"270\" y=\"330\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"middle\">Quantity (Q)</text>\n  <text x=\"18\" y=\"160\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"middle\" transform=\"rotate(-90,18,160)\">Cost / Revenue (£)</text>\n  <!-- MC curve (U-shaped, rising through) -->\n  <path d=\"M 100 220 Q 130 270, 160 250 Q 200 200, 260 150 Q 320 100, 380 50\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"385\" y=\"48\" fill=\"#ef4444\" font-size=\"12\" font-weight=\"600\">MC</text>\n  <!-- AC curve (U-shaped) -->\n  <path d=\"M 100 190 Q 170 150, 240 140 Q 300 135, 340 140 Q 380 150, 420 175\" stroke=\"#f59e0b\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"6,3\"/>\n  <text x=\"425\" y=\"172\" fill=\"#f59e0b\" font-size=\"12\" font-weight=\"600\">AC</text>\n  <!-- AR (Demand) curve - downward sloping -->\n  <path d=\"M 80 60 Q 200 120, 310 180 Q 380 220, 440 260\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"445\" y=\"258\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\">AR=D</text>\n  <!-- MR curve - downward sloping, steeper (twice the slope) -->\n  <path d=\"M 80 60 Q 160 140, 230 210 Q 280 260, 320 290\" stroke=\"#059669\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"325\" y=\"288\" fill=\"#059669\" font-size=\"12\" font-weight=\"600\">MR</text>\n  <!-- Profit Max: MC = MR (approximately Q=195) -->\n  <line x1=\"195\" y1=\"290\" x2=\"195\" y2=\"170\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/>\n  <circle cx=\"195\" cy=\"170\" r=\"4\" fill=\"#e8ecf5\"/>\n  <text x=\"195\" y=\"308\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\">Q₁</text>\n  <text x=\"195\" y=\"320\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"middle\">π max</text>\n  <!-- Revenue Max: MR = 0 (where MR hits x-axis, approximately Q=280) -->\n  <line x1=\"280\" y1=\"290\" x2=\"280\" y2=\"143\" stroke=\"#059669\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/>\n  <circle cx=\"280\" cy=\"260\" r=\"4\" fill=\"#059669\"/>\n  <text x=\"280\" y=\"308\" fill=\"#059669\" font-size=\"10\" text-anchor=\"middle\">Q₂</text>\n  <text x=\"280\" y=\"320\" fill=\"#059669\" font-size=\"9\" text-anchor=\"middle\">Rev max</text>\n  <!-- Sales Volume Max: AR = AC (approximately Q=350) -->\n  <line x1=\"350\" y1=\"290\" x2=\"350\" y2=\"143\" stroke=\"#3b82f6\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/>\n  <circle cx=\"350\" cy=\"145\" r=\"4\" fill=\"#3b82f6\"/>\n  <text x=\"350\" y=\"308\" fill=\"#3b82f6\" font-size=\"10\" text-anchor=\"middle\">Q₃</text>\n  <text x=\"350\" y=\"320\" fill=\"#3b82f6\" font-size=\"9\" text-anchor=\"middle\">Sales max</text>\n  <!-- Labels for conditions -->\n  <rect x=\"75\" y=\"4\" width=\"370\" height=\"18\" rx=\"3\" fill=\"none\" stroke=\"#e8ecf5\" stroke-width=\"0.5\" opacity=\"0.3\"/>\n  <text x=\"80\" y=\"17\" fill=\"#e8ecf5\" font-size=\"10\">Q₁: MC=MR (π max)</text>\n  <text x=\"210\" y=\"17\" fill=\"#059669\" font-size=\"10\">Q₂: MR=0 (Rev max)</text>\n  <text x=\"340\" y=\"17\" fill=\"#3b82f6\" font-size=\"10\">Q₃: AR=AC (Sales max)</text>\n</svg>",
+    "title": "Profit Maximisation, Revenue Maximisation and Sales Volume Maximisation",
+    "checklist": [
+     "Axes labelled: Quantity (Q) on x-axis, Cost/Revenue on y-axis",
+     "MC, AC, AR (Demand) and MR curves all drawn and labelled",
+     "Profit maximisation at MC = MR clearly marked (Q1)",
+     "Revenue maximisation at MR = 0 clearly marked (Q2)",
+     "Sales volume maximisation at AR = AC clearly marked (Q3)",
+     "Q1 < Q2 < Q3 showing the output ranking across objectives"
+    ],
+    "description": "Shows the three key business objectives on a single cost and revenue diagram. Profit maximisation occurs at MC = MR, revenue maximisation at MR = 0, and sales volume maximisation at AR = AC. Each successive objective results in higher output and lower price."
+   },
+   {
+    "id": "types-sizes-businesses:diagram:86a31662",
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <defs>\n    <marker id=\"igArrow\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0,8 3,0 6\" fill=\"#e8ecf5\"/></marker>\n    <marker id=\"igGreen\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0,8 3,0 6\" fill=\"#059669\"/></marker>\n    <marker id=\"igBlue\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0,8 3,0 6\" fill=\"#3b82f6\"/></marker>\n    <marker id=\"igRed\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0,8 3,0 6\" fill=\"#ef4444\"/></marker>\n  </defs>\n  <!-- Title -->\n  <text x=\"250\" y=\"22\" fill=\"#e8ecf5\" font-size=\"14\" text-anchor=\"middle\" font-weight=\"600\">Supply Chain Stages</text>\n  <!-- Supply chain boxes - vertical flow -->\n  <!-- Raw Materials / Supplier -->\n  <rect x=\"170\" y=\"38\" width=\"160\" height=\"40\" rx=\"6\" fill=\"none\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <text x=\"250\" y=\"63\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"middle\">Raw Material Supplier</text>\n  <!-- Arrow down -->\n  <line x1=\"250\" y1=\"78\" x2=\"250\" y2=\"98\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" marker-end=\"url(#igArrow)\"/>\n  <!-- Manufacturer -->\n  <rect x=\"170\" y=\"100\" width=\"160\" height=\"40\" rx=\"6\" fill=\"none\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"250\" y=\"125\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"600\">Manufacturer (FIRM)</text>\n  <!-- Arrow down -->\n  <line x1=\"250\" y1=\"140\" x2=\"250\" y2=\"160\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" marker-end=\"url(#igArrow)\"/>\n  <!-- Retailer -->\n  <rect x=\"170\" y=\"162\" width=\"160\" height=\"40\" rx=\"6\" fill=\"none\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <text x=\"250\" y=\"187\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"middle\">Retailer / Distributor</text>\n  <!-- BACKWARD VERTICAL - arrow from firm up to supplier -->\n  <path d=\"M 168 108 Q 110 85, 168 58\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\" marker-end=\"url(#igBlue)\"/>\n  <text x=\"68\" y=\"70\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">Backward</text>\n  <text x=\"68\" y=\"84\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">Vertical</text>\n  <text x=\"68\" y=\"98\" fill=\"#3b82f6\" font-size=\"10\">(towards</text>\n  <text x=\"68\" y=\"110\" fill=\"#3b82f6\" font-size=\"10\">suppliers)</text>\n  <!-- FORWARD VERTICAL - arrow from firm down to retailer -->\n  <path d=\"M 168 137 Q 110 158, 168 175\" stroke=\"#059669\" stroke-width=\"2.5\" fill=\"none\" marker-end=\"url(#igGreen)\"/>\n  <text x=\"62\" y=\"148\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">Forward</text>\n  <text x=\"62\" y=\"162\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">Vertical</text>\n  <text x=\"62\" y=\"176\" fill=\"#059669\" font-size=\"10\">(towards</text>\n  <text x=\"62\" y=\"188\" fill=\"#059669\" font-size=\"10\">consumers)</text>\n  <!-- HORIZONTAL - rival firm at same stage -->\n  <rect x=\"370\" y=\"100\" width=\"110\" height=\"40\" rx=\"6\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n  <text x=\"425\" y=\"119\" fill=\"#f59e0b\" font-size=\"11\" text-anchor=\"middle\">Rival</text>\n  <text x=\"425\" y=\"133\" fill=\"#f59e0b\" font-size=\"11\" text-anchor=\"middle\">Manufacturer</text>\n  <line x1=\"330\" y1=\"120\" x2=\"368\" y2=\"120\" stroke=\"#f59e0b\" stroke-width=\"2.5\" marker-end=\"url(#igArrow)\"/>\n  <text x=\"395\" y=\"155\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"600\">Horizontal</text>\n  <text x=\"395\" y=\"169\" fill=\"#f59e0b\" font-size=\"10\">(same stage,</text>\n  <text x=\"395\" y=\"181\" fill=\"#f59e0b\" font-size=\"10\">same industry)</text>\n  <!-- CONGLOMERATE - different industry entirely -->\n  <rect x=\"170\" y=\"230\" width=\"160\" height=\"40\" rx=\"6\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"5,3\"/>\n  <text x=\"250\" y=\"249\" fill=\"#ef4444\" font-size=\"11\" text-anchor=\"middle\">Firm in a Completely</text>\n  <text x=\"250\" y=\"263\" fill=\"#ef4444\" font-size=\"11\" text-anchor=\"middle\">Different Industry</text>\n  <line x1=\"250\" y1=\"202\" x2=\"250\" y2=\"228\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"5,3\" marker-end=\"url(#igRed)\"/>\n  <text x=\"365\" y=\"243\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"600\">Conglomerate</text>\n  <text x=\"365\" y=\"257\" fill=\"#ef4444\" font-size=\"10\">(different industry;</text>\n  <text x=\"365\" y=\"269\" fill=\"#ef4444\" font-size=\"10\">diversification)</text>\n  <!-- Summary footer -->\n  <rect x=\"30\" y=\"290\" width=\"440\" height=\"48\" rx=\"6\" fill=\"none\" stroke=\"#e8ecf5\" stroke-width=\"0.5\" opacity=\"0.3\"/>\n  <text x=\"250\" y=\"308\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\">Horizontal = economies of scale &amp; market power | Vertical = supply chain control</text>\n  <text x=\"250\" y=\"324\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\">Conglomerate = risk diversification | Organic growth = internal expansion (no merger)</text>\n</svg>",
+    "title": "Types of Business Growth (Integration)",
+    "checklist": [
+     "Supply chain stages clearly shown: supplier, manufacturer, retailer",
+     "Horizontal integration shown as merger between firms at the same stage",
+     "Forward vertical integration shown as movement towards the consumer/retailer",
+     "Backward vertical integration shown as movement towards the supplier",
+     "Conglomerate integration shown as linking to a completely different industry",
+     "Key advantage of each type briefly noted"
+    ],
+    "description": "A visual overview of the four types of merger/integration: horizontal (same stage), forward vertical (towards consumer), backward vertical (towards raw materials), and conglomerate (different industry). Shows how each type relates to the supply chain."
+   },
+   {
+    "id": "types-sizes-businesses:diagram:0936c608",
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <!-- Shareholders (Principals) box -->\n  <rect x=\"30\" y=\"30\" width=\"180\" height=\"80\" rx=\"8\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"55\" fill=\"#3b82f6\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"700\">SHAREHOLDERS</text>\n  <text x=\"120\" y=\"72\" fill=\"#3b82f6\" font-size=\"11\" text-anchor=\"middle\">(Principals / Owners)</text>\n  <text x=\"120\" y=\"98\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\">Objective: Profit maximisation</text>\n  <!-- Managers (Agents) box -->\n  <rect x=\"290\" y=\"30\" width=\"180\" height=\"80\" rx=\"8\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2\"/>\n  <text x=\"380\" y=\"55\" fill=\"#059669\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"700\">MANAGERS</text>\n  <text x=\"380\" y=\"72\" fill=\"#059669\" font-size=\"11\" text-anchor=\"middle\">(Agents / Controllers)</text>\n  <text x=\"380\" y=\"98\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\">Objective: Own interests</text>\n  <!-- Conflict arrow -->\n  <line x1=\"210\" y1=\"70\" x2=\"288\" y2=\"70\" stroke=\"#ef4444\" stroke-width=\"2.5\"/>\n  <text x=\"250\" y=\"60\" fill=\"#ef4444\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"700\">CONFLICT</text>\n  <!-- Shareholders want -->\n  <rect x=\"15\" y=\"130\" width=\"195\" height=\"90\" rx=\"6\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"1\" opacity=\"0.6\"/>\n  <text x=\"112\" y=\"148\" fill=\"#3b82f6\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"600\">Shareholders want:</text>\n  <text x=\"25\" y=\"166\" fill=\"#e8ecf5\" font-size=\"10\">• Maximum dividends</text>\n  <text x=\"25\" y=\"182\" fill=\"#e8ecf5\" font-size=\"10\">• Rising share price</text>\n  <text x=\"25\" y=\"198\" fill=\"#e8ecf5\" font-size=\"10\">• MC = MR (profit max)</text>\n  <!-- Managers want -->\n  <rect x=\"290\" y=\"130\" width=\"195\" height=\"90\" rx=\"6\" fill=\"none\" stroke=\"#059669\" stroke-width=\"1\" opacity=\"0.6\"/>\n  <text x=\"387\" y=\"148\" fill=\"#059669\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"600\">Managers may pursue:</text>\n  <text x=\"300\" y=\"166\" fill=\"#e8ecf5\" font-size=\"10\">• Revenue max (MR = 0)</text>\n  <text x=\"300\" y=\"182\" fill=\"#e8ecf5\" font-size=\"10\">• Sales max (AR = AC)</text>\n  <text x=\"300\" y=\"198\" fill=\"#e8ecf5\" font-size=\"10\">• Satisficing / empire building</text>\n  <!-- Information asymmetry box -->\n  <rect x=\"130\" y=\"240\" width=\"240\" height=\"40\" rx=\"6\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"1.5\"/>\n  <text x=\"250\" y=\"258\" fill=\"#ef4444\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"600\">INFORMATION ASYMMETRY</text>\n  <text x=\"250\" y=\"273\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\">Shareholders lack detailed knowledge of firm operations</text>\n  <!-- Solutions box -->\n  <rect x=\"60\" y=\"295\" width=\"380\" height=\"48\" rx=\"6\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n  <text x=\"250\" y=\"312\" fill=\"#f59e0b\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"600\">Solutions to align interests:</text>\n  <text x=\"250\" y=\"332\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\">Performance-related pay | Share options | Corporate governance | Takeover threat</text>\n</svg>",
+    "title": "Principal-Agent Problem (Divorce of Ownership from Control)",
+    "checklist": [
+     "Shareholders (principals) and managers (agents) clearly identified",
+     "Conflicting objectives of each group stated",
+     "Information asymmetry explained as the root cause",
+     "Solutions to align interests listed (performance pay, share options, governance, takeover threat)",
+     "Link to business objectives: profit max vs revenue max, sales max, satisficing"
+    ],
+    "description": "Illustrates the conflict of interest between shareholders (principals) who want profit maximisation and managers (agents) who may pursue their own objectives such as revenue maximisation, growth or satisficing."
+   }
+  ],
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "Private sector firms are owned by shareholders who seek maximum returns on their investment, creating a strong profit motive.",
+      "The profit motive incentivises firms to minimise costs and innovate, as higher efficiency leads to greater profits and shareholder value.",
+      "Cost minimisation drives productive efficiency — firms produce at the lowest point on their average cost curve to maximise profit margins.",
+      "Competition between profit-seeking firms pushes prices down towards costs, benefiting consumers through lower prices and improved product quality."
+     ],
+     "title": "Profit motive drives efficiency in private sector",
+     "result": "The profit motive in the private sector acts as a powerful incentive for efficiency, innovation and consumer benefit through competitive pressure."
+    },
+    {
+     "steps": [
+      "Horizontal mergers combine firms at the same stage of production, increasing market concentration and the merged firm's market share.",
+      "Greater market share gives the merged firm increased pricing power, allowing it to raise prices above competitive levels.",
+      "Higher prices transfer surplus from consumers to producers, reducing consumer welfare and creating allocative inefficiency.",
+      "Reduced competitive pressure may also lead to X-inefficiency, as the dominant firm has less incentive to minimise costs or innovate."
+     ],
+     "title": "Mergers can create monopoly power harming consumers",
+     "result": "Mergers that significantly increase market concentration can harm consumers through higher prices, reduced choice and lower efficiency."
+    },
+    {
+     "steps": [
+      "In large firms, ownership (shareholders) is separated from control (managers), creating the principal-agent problem.",
+      "Managers (agents) may pursue their own objectives — such as revenue maximisation, empire building or leisure — rather than profit maximisation for shareholders (principals).",
+      "Information asymmetry means shareholders cannot perfectly monitor managers' decisions, giving managers discretion to satisfice rather than maximise profits.",
+      "Satisficing behaviour means managers aim for 'good enough' profits to keep shareholders content while pursuing their own goals, leading to outcomes that deviate from allocative efficiency."
+     ],
+     "title": "Principal-agent problem leads to satisficing",
+     "result": "The divorce of ownership from control in large firms means managers may satisfice rather than profit maximise, reducing shareholder returns and economic efficiency."
+    },
+    {
+     "steps": [
+      "Small and medium enterprises face higher average costs than large firms because they cannot exploit internal economies of scale in purchasing, marketing or finance.",
+      "SMEs also face greater difficulty accessing finance — banks view them as higher risk, and they cannot issue shares on stock markets as easily as PLCs.",
+      "Despite these constraints, SMEs survive by serving niche markets with specialised products, offering personalised service and maintaining flexibility to adapt quickly to changing demand.",
+      "SMEs are vital for the economy as they promote entrepreneurship, increase competition, create employment and drive innovation in areas large firms overlook."
+     ],
+     "title": "SMEs face constraints but fill market niches",
+     "result": "SMEs overcome cost and finance disadvantages by exploiting niche markets and flexibility, playing an essential role in promoting competition and innovation."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "Profit motive does not always lead to socially optimal outcomes",
+     "content": "While the profit motive drives efficiency, it can also incentivise negative externalities — firms may cut costs by polluting or exploiting workers. Firms may engage in rent-seeking behaviour rather than productive activity. The profit motive only leads to socially optimal outcomes when markets are competitive and externalities are internalised through regulation or taxation."
+    },
+    {
+     "title": "Mergers can generate genuine efficiency gains",
+     "content": "Not all mergers harm consumers. Horizontal mergers may deliver economies of scale that lower average costs, with savings passed on to consumers. Vertical mergers can reduce transaction costs and improve supply chain coordination. The net effect depends on whether efficiency gains outweigh the market power created — this is the core assessment for competition authorities."
+    },
+    {
+     "title": "Corporate governance can mitigate the principal-agent problem",
+     "content": "Share option schemes, performance-related pay and non-executive directors can align managers' incentives with shareholders' interests. Hostile takeover threats also discipline management, as poorly performing firms become takeover targets. However, these mechanisms are imperfect — excessive risk-taking to boost short-term share prices can result, as seen in the 2008 financial crisis."
+    },
+    {
+     "title": "SME survival depends on the nature of the market",
+     "content": "In markets with significant economies of scale (utilities, car manufacturing), SMEs cannot compete and large firms dominate. However, in fragmented markets with diverse consumer tastes (restaurants, consulting), SMEs thrive. The growth of digital platforms has also enabled SMEs to access global markets at low cost, changing the traditional relationship between firm size and competitiveness."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "id": "types-sizes-businesses:mistake:663cc5e9",
+    "title": "Confusing limited and unlimited liability",
+    "examTip": "Link liability to the type of business: sole trader/partnership = unlimited; Ltd/plc = limited. This affects willingness to invest and take risks.",
+    "mistake": "Students say sole traders have limited liability, or that shareholders in a plc can lose their personal assets.",
+    "correction": "Sole traders and most partnerships have unlimited liability — personal assets are at risk. Shareholders in Ltd and plc companies have limited liability — they can only lose the amount they invested."
+   },
+   {
+    "id": "types-sizes-businesses:mistake:52e3a00d",
+    "title": "Not distinguishing between types of merger",
+    "examTip": "In an essay about mergers, identify the type first, then analyse the specific advantages and disadvantages relevant to that type. Generic answers score poorly.",
+    "mistake": "Students describe a merger generically without identifying whether it is horizontal, vertical (forward or backward), or conglomerate.",
+    "correction": "Always identify the type: horizontal = same stage; forward vertical = towards consumer; backward vertical = towards supplier; conglomerate = different industries. Each has different advantages and disadvantages."
+   },
+   {
+    "id": "types-sizes-businesses:mistake:69e537e9",
+    "title": "Ignoring the principal-agent problem",
+    "mistake": "Students assume all firms maximise profit without considering that managers may pursue other objectives.",
+    "correction": "In large companies, ownership is divorced from control. Managers (agents) may satisfice, maximise revenue, or pursue personal objectives rather than the profit-maximising output preferred by shareholders (principals)."
+   },
+   {
+    "id": "types-sizes-businesses:mistake:fdf8912e",
+    "title": "Forgetting constraints on business growth",
+    "mistake": "Students assume all firms want to and can grow indefinitely.",
+    "correction": "Growth is constrained by: market size, access to finance, owner objectives (lifestyle businesses), government regulation, and diseconomies of scale. Some firms deliberately remain small."
+   }
+  ]
+ }
+}
