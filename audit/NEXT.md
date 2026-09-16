@@ -1,5 +1,36 @@
 # Next session brief
 
+## Next up — packet 24, `price-determination` (28 opens)
+
+Packet 23 (`supply`) is claimed by a concurrent session; **24 is the first row in `PROGRESS.md` that
+still says `not started`** — check it before starting anything, because with three or four sessions
+running the "next" packet is whichever row is still free, and say in NEXT.md that you have taken it
+before you write a line of it.
+
+**Four things packet 22 learned that the next Business section needs:**
+
+1. **Check the topic NUMBER before anything else.** Three of packet 22's findings, and one that asked
+   for the section to be reordered into another syllabus's sequence, all rested on the ledger citing
+   UK GCE Theme 1 numbers. Every IAL topic number has 3 as its middle digit. If a finding cites
+   `1.3.1`-`1.3.5` as five separate topics of one section, it is reading the UK GCE spec.
+2. **Grep the section's own central vocabulary before writing a word** — fifth instance, and the first
+   with a new shape. Where the specification sets an **open requirement** (a leaf with no bullets under
+   it, like "Types of promotion."), the textbook taxonomy for it is usually absent from the spec
+   entirely: teach the mechanism in the specification's words and name the labels once, unassessed.
+   Where the specification names a **TOOL** (the product life cycle, the Boston Matrix), teach the
+   tool's own parts in full even though they are also absent. Those are opposite calls and the
+   difference is whether the spec named the thing or named a category.
+3. **A diagram can pass every check and still print two labels on top of each other.** The runner's
+   text-collision guard (`scripts/packet-22-marketing-mix-strategy.mjs`) is worth copying: it found
+   one overlap the 390px walk had already caught and thirteen the walk had not reached. Three-column
+   grids want packet 19's column positions, `[26, 260, 440]` on a 560-unit frame.
+4. **`terms.later-unit` is fixed (V012)** — it no longer flags a phrase Units 1-2 teach in their own
+   requirement wording. Four baselined keys across the repo are now stale and will disappear at the
+   next re-baseline.
+
+**Do NOT re-baseline while other sessions are mid-packet.** At packet 22's gate, three sections had
+new debt in flight from concurrent work; `--baseline --confirm` would have banked it.
+
 ## Packet 22 spec — `marketing-mix-strategy`, Business 1.3.3 (Opus, 16 September 2026) — IN PROGRESS
 
 **Section:** `marketing-mix-strategy`, Business Unit 1 (WBS11), IAL topic **1.3.3 Marketing mix and
