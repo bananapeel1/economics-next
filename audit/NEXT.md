@@ -80,8 +80,23 @@ Verify A clean · a 390×844 walk · Layer 6 with two planted canaries · PROGRE
   Same cap, same number of items exposed, two chapters bought back for nothing. The one trade is which
   overlap the tab's preview has: today it duplicates the pre-test, afterwards it would duplicate a
   check-in. Packet 20 has already escalated that the pre-test overlaps chapter 1's check-in, so this
-  changes which duplication exists rather than whether one does. **Put both options to the founder, not
-  just the number.** Still his call; still nothing a content packet may change.
+  changes which duplication exists rather than whether one does.
+
+  **The two are independent, which changes what kind of question this is.** The reorder is a strictly
+  better default at any cap; the cap is a boundary decision. Ronald can take the reorder now and leave
+  the number alone. It is also cheap and contained: since packet 2.1, `freeQuizPayload` has exactly ONE
+  production caller — `sectionPayload` at `lib/preview-limits.js:142` — and `publicSectionPayload` never
+  touches it, so the change is one function, one caller and `lib/preview-limits.test.mjs`, which is the
+  only place the ordering can be pinned because nothing downstream can see it. **Put both options to the
+  founder, not just the number.** Still his call; still nothing a content packet may change.
+
+  **And the lesson generalises past the quiz, where nobody has looked yet.** Twice now a slicing question
+  has looked like a number and was not: V005 (a prefix slice cannot serve index-based pins, so the pins
+  had to be remapped) and this one. `flashcards`, `extras.chains` and `extras.evaluation` are all still
+  **flat prefix slices** in `sectionPayload` (`cap(items, n)`, lines 27-30) and none has been measured the
+  way the quiz now has. The question to ask of each is not "is n big enough" but "does a prefix of this
+  list give a free student a coherent sample of the section" — for chains, which are ordered by chapter,
+  a prefix almost certainly does not.
 - **`diagram.table-kind` is absent from `audit/validator-baseline.json` entirely** (0 of its 2,432 keys),
   because the baseline was written 2026-09-15 and the rule landed after it in `77eb765`. All 15 of its
   live findings repo-wide therefore read as "new", including one on `measures-economic-performance`'s
