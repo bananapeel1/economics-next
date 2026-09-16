@@ -17829,10 +17829,10 @@
    "title": "build-spec-items.mjs drops 60 specification bullets (31 Economics, 29 Business) because its BULLET regex is anchored to line start, and the PDF extraction puts left-column topic-title continuation text on the same line as a list's first bullets. spec-items.json is the oracle for spec.coverage and spec.uncovered, so those leaves are invisible to every content packet: a section can report 100% coverage while never teaching them. Example: ECON-1.3.1-4a keeps only 3 of its 5 bullets ('the maximum productive potential of an economy' and 'efficient or inefficient allocation of resources' are missing); Business loses 'Ansoff's Matrix' and 'Porter's Strategic Matrix' among others. Fix the regex to /[bullet-chars]\\\\s*(.*)$/ anywhere in the line, regenerate, read the baseline diff, and expect new spec.uncovered DEBT across many sections. Found in packet 15 by counting bullets in the raw spec independently of the generated asset.",
    "file": "audit/scripts/build-spec-items.mjs",
    "packet": 3.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-3.1",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "audit/scripts/build-spec-items.mjs:120-152 recovers mid-line bullets after the column split; independently counted 43 in-span mid-line bullets (23 econ+20 bus) match the 43 new leaves exactly; ECON-1.3.1-4a now has 5 bullets (spec-items.json) matching econ_spec.txt:529-533; BUS-3.3.1-2a-1/-2 = Ansoff's Matrix/Porter's Strategic Matrix (bus_spec.txt:1098-1099); validator-baseline.json has 0 added/16 removed keys, and 0 stale renumbered keys remain across 90 shifted positions",
    "note": null,
    "added": "2026-09-15"
   },
@@ -17900,6 +17900,19 @@
    "evidence": null,
    "note": null,
    "added": "2026-09-15"
+  },
+  {
+   "id": "V004",
+   "kind": "feature",
+   "title": "build-spec-items.mjs leaves subtopicLabel incomplete: the continuation-prose branch discards the left column, so a sub-topic whose label wraps over three lines keeps only the first fragment. ECON 4.3.2 sub-topic 2 is 'Patterns and' where the specification prints 'Patterns and volume of world trade' (econ_spec.txt:1637-1639). laterUnitTerms() compensates by taking the longest label per sub-topic, so the terms.later-unit lint is built from truncated vocabulary and 17 Economics terms are all it can find. Packet 3.1 tried folding the fragment in from the new bullet branch alone and REVERTED it: that yields 'Patterns and trade', a phrase in neither specification, and puts it into the lint. A real fix folds the left column in both branches and is measured by diffing laterUnitTerms before and after. No leaf is invisible because of this, so it is not urgent.",
+   "file": "audit/scripts/build-spec-items.mjs",
+   "packet": 3.2,
+   "status": "open",
+   "closed_by": null,
+   "verified_by": null,
+   "evidence": null,
+   "note": null,
+   "added": "2026-09-16"
   }
  ],
  "marketing": [

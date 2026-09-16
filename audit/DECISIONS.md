@@ -930,3 +930,56 @@ staged**, and NEXT.md was appended to rather than rewritten. Whoever commits the
   own gate pass. **A packet that writes a shared file should record its diff by section, not by total**, so a
   concurrent write can be told from its own. If the packet-14 content is later restored forward again, those
   33 keys come back out.
+
+**A generated asset's completeness test must not find its evidence the way the generator does.**
+`build-spec-items.mjs` looked for bullets with `/^\s*[•●▪‣]/`, and the census in `npm test` that was
+supposed to prove the asset complete looked for them with `/^\s*•/`. Same assumption, so the census
+reported 0 missed for a parser that was missing 43 leaves, and it reported it for a month. The detector
+is now the bullet CHARACTER at any position — the one property of the source the parser does not get to
+define — and it requires a row to START at each such line rather than merely be swept into some other
+row's wrap range, because a swallowed bullet sits inside the previous row's `lines[]` and counted as
+covered. Two invariants were added with it: no row's `wording` may contain a bullet character (32 did),
+and `ECON-1.3.1-4a` has the five bullets `econ_spec.txt:529-533` prints. This is
+[[revvylearn-verify-independently]] again, and it is the third time on this programme.
+
+**The ledger item's number was a hypothesis, and it was wrong.** V001 asserted 60 dropped bullets
+(31 Economics, 29 Business). The measured figure is **43 (23 and 20)**. 60 is the count of mid-line
+bullet characters across the whole extracted file; the difference is bullets in the transferable-skills
+appendix and the calculator rules, which sit outside every topic span and are correctly ignored. The
+packet measured it before building and the verifier re-derived 43 independently. Rule 1 of the programme
+applies to a finding's arithmetic, not only to its scope claims.
+
+**A renumbered id silently forgives the leaf it used to name, so the baseline had to lose those keys.**
+Bullets are numbered within their parent (`ECON-1.3.1-4a-1`), so inserting a bullet at the front shifts
+every sibling. 16 of the 213 baselined `spec.uncovered` keys then named a different leaf than the one
+that had been accepted as debt — `ECON-1.3.1-4a-2` meant "opportunity cost (using marginal analysis)"
+when it was baselined and means "efficient or inefficient allocation of resources" now. Rewriting the
+baseline with `--baseline --confirm` would have ADDED the newly visible leaves, which is the one thing
+that file exists to make visible. Instead the 16 stale keys were removed by hand and nothing was added:
+2,448 → 2,432. The file still only ever shrinks, and the 24 leaves it stops forgiving print as new DEBT.
+
+**Fixing the oracle did not cost the four authored sections anything.** Packets 14-17's bundles
+(`audit/snapshots/packet-1[4-7]-bundle__*.json`) were re-validated against the corrected oracle and all
+four still measure 100% coverage, 0 new BLOCK, 0 new DEBT. The 24 newly visible gaps are all in sections
+no content packet has reached yet. Worth knowing for the ones still to come: the four sections were
+authored from the spec text, not from the oracle, which is why the oracle's blind spot did not reach them.
+
+**The `subtopicLabel` fold was tried and reverted, and that is V004 at packet 3.2.** Folding the
+left-column fragment in from the new bullet branch alone completes some labels and mangles others: ECON
+4.3.2 sub-topic 2 came out as "Patterns and trade", a phrase in neither specification, because the middle
+line of "Patterns and volume of world trade" is discarded by a different branch. That put a fabricated
+term into the `terms.later-unit` lint and 4 new DEBT findings with it. The packet now changes zero labels
+(measured: 0 of 1,362 rows), and completing them properly is its own small packet with a
+before/after diff of `laterUnitTerms()` as its acceptance check.
+
+**Session note: two sessions shared the worktree again, and this one owns five paths.**
+`audit/scripts/build-spec-items.mjs`, `audit/raw/spec-items.json`, `lib/content-validator.test.mjs`,
+`audit/validator-baseline.json` and the handoff files. A concurrent session holds `lib/preview-limits.js`,
+`lib/preview-limits.test.mjs`, `app/api/sections/[id]/route.js` and `package.json` — the freemium quiz
+slice. It had added `lib/preview-limits.test.mjs` to the `npm test` script, and that test was failing
+mid-edit for part of this packet, so `npm test` as a whole was red for a while for reasons that were not
+packet 3.1's; the six files that were in the script when this packet started were 134 of 134 throughout.
+That session committed as `665ae87` before this one's gate, and the full suite is green at the gate:
+**141 of 141**. The lesson is not about their change, which was fine. It is that in a shared worktree
+`npm test` and `npm run validate` are both whole-repository gates, so **a packet must be able to say which
+files are its own** — this one could, and judged itself on them while the tree was in flux.

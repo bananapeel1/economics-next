@@ -1,5 +1,51 @@
 # Next session brief
 
+## Packet 3.1 result — V001 closed, the oracle is complete (16 September 2026)
+
+**Done and verified; Verify A 1 of 1 on round 1, gate clear.** `audit/raw/spec-items.json` now carries
+**1,165 leaves, up from 1,125**. The parser anchored its bullet test to line start and the extraction puts
+a wrapped left-column topic title on the same row as a list's FIRST bullets, so those bullets were
+appended to the row before them instead of becoming rows of their own.
+
+**The number was 43, not 60.** V001's title asserts 60 dropped bullets (31 Economics, 29 Business); the
+measured figure is **43 (23 Economics, 20 Business)**, and the verifier re-derived it independently. 60 is
+the mid-line bullet count across the whole extracted file, including the transferable-skills appendix and
+the calculator rules, which sit outside every topic span and are correctly ignored. The item's arithmetic
+was a hypothesis exactly as its scope claims are.
+
+**What this means for every content packet from here.** The oracle is now complete: for both subjects,
+every bullet character inside every topic span starts exactly one row, measured by scanning the raw text
+for the character rather than by any regex the parser uses. `npm run validate` gained **24 new DEBT and
+0 new BLOCK** — 24 specification leaves in 12 sections that were invisible before and are now reported
+missing. They cluster: `global-markets-expansion` 6, `trade-global-economy` 4, `growth-development` 3,
+`aggregate-demand` 2, `managing-change` 2. **A section's coverage percentage from before 16 September was
+measured against an incomplete oracle; re-read it, do not carry it forward.**
+
+**Packets 14-17 are unaffected, and that is measured.** All four authored bundles were re-validated
+against the corrected oracle and all four are still at 100% (20/20, 27/27, 29/29, 39/39), 0 new BLOCK,
+0 new DEBT. They were authored from the spec text rather than from the oracle, which is why its blind spot
+never reached them. Keep authoring that way.
+
+**Also true, and useful to know:** only `meeting-customer-needs` and `consumer-behaviour-demand` actually
+hold staged drafts in the database right now. `decision-making-techniques` and `introductory-concepts`
+hold live, pre-packet content — their drafts went when those sections were reverted and restored. Their
+authored bundles are intact in `audit/snapshots/packet-1[4-7]-bundle__*.json` and their runners re-stage
+on demand, which is what their one-command publish lines already do. Nothing is lost; the PROGRESS wording
+"staged" means "the runner stages it", not "a draft is sitting in the table".
+
+**`audit/validator-baseline.json` went 2,448 → 2,432 keys: 16 removed, 0 added.** Bullets are numbered
+within their parent, so a bullet inserted at the front renumbers its siblings and a baselined key such as
+`spec:ECON-1.3.1-4a-2` came to name a different leaf than the one that had been accepted as debt. Those 16
+keys were removed by hand rather than rewriting the baseline, because `--baseline --confirm` would have
+ADDED the newly visible leaves. **If you clear debt and re-baseline, check that no `spec:` key you are
+keeping has been renumbered under you.**
+
+**V004 is open at packet 3.2**, half a session and not urgent: `subtopicLabel` is still truncated wherever
+a sub-topic's label wraps over three lines. No leaf is invisible because of it; it only weakens the
+`terms.later-unit` lint.
+
+---
+
 ## Handoff — after packet 17 (written 16 September 2026)
 
 **Next is packet 18, `the-market`** — and the first thing to know about it is that **it is a BUSINESS
@@ -19,11 +65,11 @@ exist, so they render nothing); validator **20 BLOCK, 51 DEBT, 88% coverage**. *
    (5a-5e), and none of them is PES, so the claim looks right and you should still read the lines; and
    `practice-03` prescribes **Assess at 10/12**, which unlike packet 17's Economics items IS the correct
    Business ladder (Assess is 10 in Units 1-2).
-3. **V001 does not reach this span, and that is measured**: 12 bullet characters in `bus_spec.txt:551-595`,
-   every one at line start, and all 24 leaves present in `spec-items.json`. Count it yourself with a
-   UTF-8-aware tool before trusting it. The global figures are unchanged: 31 Economics and 29 Business
-   bullets dropped elsewhere. **V001 is still packet 3.1's, and it should be done before many more sections
-   measure themselves against an incomplete oracle.**
+3. **V001 is fixed (packet 3.1, 16 Sep) and it never reached this span**: 12 bullet characters in
+   `bus_spec.txt:551-595`, every one at line start. The span still holds **24 leaves** and the count is
+   unchanged by the fix — verify that yourself with a UTF-8-aware tool rather than trusting this line, and
+   note that `spec-items.json` is now 1,165 leaves, so any coverage number you read from before 16 Sep was
+   measured against an incomplete oracle.
 4. This section teaches demand, PED and YED, and so does packet 17's `consumer-behaviour-demand`. They are
    **different subjects**, so that is not a duplication to resolve — but the Business tariffs, the Business
    command words and the Business spec wording are all different, and copying a sentence across would import
@@ -98,8 +144,9 @@ in Units 1-2; there is no Outline and no Examine); `npm test`, `npm run build`, 
   signed-out student gets an honest pre-test and **no quiz at any of the six chapter check-ins**. Raising the
   cap to 3 would fix the pre-test; raising it further would put a question back on the check-ins. It is a
   freemium-boundary call, so it is yours.
-- **V001 is still open and every content packet from here measures itself against an incomplete oracle.** It
-  is packet 3.1's, it is small, and it is the one piece of scaffolding the remaining 39 sections all rest on.
+- **V001 is closed (packet 3.1, 16 Sep).** The coverage oracle is complete: 43 specification leaves that no
+  section could be reported as missing are now visible, and the gate gained 24 new DEBT findings and no new
+  BLOCK. The four finished sections were re-checked against it and are still at 100%.
 
 ---
 

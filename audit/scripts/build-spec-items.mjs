@@ -35,6 +35,7 @@ const HEADER = /^\s*([1-4]\.3\.\d+)\s+(\S.*)$/;
 const FOOTER = /(Pearson Edexcel International|Specification – Issue|^\s*\d{1,3}\s*$|^\s*What students need to learn:\s*$|^\s*\(continued\)\s*$)/;
 const LETTER = /^(.*?)\b([a-z])\)\s+(.+)$/;      // "...  d) Factors that may cause..."
 const SUBTOPIC = /^\s*(\d{1,2})\s+(\S.*)$/;       // "2 The demand curve   a) ..."  or  "3 Price, income and"
+const BULLET_CHAR = /[•●▪‣]/;
 const BULLET = /^\s*[•●▪‣]\s*(.*)$/;
 
 function parse({ subject, prefix, file }) {
@@ -116,14 +117,47 @@ function parse({ subject, prefix, file }) {
       // scale", "he distinction") in 20 of 1,319 rows until the token census in npm test caught it.
       const indent = raw.search(/\S/);
       let text;
-      const left = letterColumn.at != null ? raw.slice(0, letterColumn.at - 1) : '';
+      let split = false;
+      // The letter column is learned once from the topic's first lettered line, but a "(continued)"
+      // page can set its columns a character or two differently, and slicing at the stale column cut
+      // PAST the bullet on the six rows that open a list on such a page (econ 936, 1179, 1180, 1417,
+      // 1684, 1760). A bullet with a run of spaces before it IS the start of the right column, so it
+      // bounds the cut. Rows whose bullet already sits right of the column are untouched.
+      const bulletAt = raw.search(BULLET_CHAR);
+      let cut = letterColumn.at != null ? letterColumn.at - 1 : null;
+      if (cut != null && bulletAt > 0 && bulletAt < cut && /\s\s$/.test(raw.slice(0, bulletAt))) cut = bulletAt;
+      const left = cut != null ? raw.slice(0, cut) : '';
       const gap = (left.match(/\s+$/) || [''])[0].length;
-      if (letterColumn.at != null && indent < letterColumn.at - 2 && gap >= 2) {
-        text = raw.slice(letterColumn.at - 1).trim();
+      if (cut != null && indent < cut - 1 && gap >= 2) {
+        text = raw.slice(cut).trim();
         if (!text) continue;
+        split = true;
       } else {
         text = raw.trim();
       }
+
+      // V001. The extraction puts a wrapped left-column topic title on the same row as a list's FIRST
+      // bullets ("   possibility        •   the maximum productive potential of an economy"), so those
+      // bullets are only visible after the column split above. Until 16 Sep 2026 they fell through to
+      // the append below and the row before them swallowed them: ECON-1.3.1-4a carried two of its own
+      // five bullets inside its wording and reported three, and 60 leaves (31 Economics, 29 Business)
+      // were invisible to the coverage oracle that every content packet measures itself against.
+      // The test is re-applied to the split text rather than to the raw line, because a bullet matched
+      // anywhere in a line would join the two-column calculator pages into one row.
+      const rb = split ? BULLET.exec(text) : null;
+      if (rb && req) {
+        // The left-hand fragment is this sub-topic's label wrapping, and it is DISCARDED here, as the
+        // continuation-prose branch below discards it. Folding it in was tried and reverted: it gives
+        // "Patterns and volume of world trade" only if the middle line is folded too, and that branch
+        // does not fold, so 4.3.2·2 came out as "Patterns and trade" and put a mangled term into the
+        // terms.later-unit lint. Completing subtopicLabel is a separate defect (logged as V004); this
+        // packet is about no leaf being invisible, and changes no label.
+        bullet = { id: `${req.id}-${req.bullets.length + 1}`, subject, topic, title, subtopic: req.subtopic, subtopicLabel: req.subtopicLabel, letter: req.letter, kind: 'leaf', parent: req.id, wording: rb[1].trim(), lines: [i + 1, i + 1] };
+        req.bullets.push(bullet);
+        items.push(bullet);
+        continue;
+      }
+
       if (bullet) { bullet.wording = `${bullet.wording} ${text}`.replace(/\s+/g, ' '); bullet.lines[1] = i + 1; }
       else if (req) { req.wording = `${req.wording} ${text}`.replace(/\s+/g, ' '); req.lines[1] = i + 1; }
     }
@@ -157,7 +191,8 @@ const out = {
   reconciliationNote: [
     'This file does NOT reconcile to the 1,073 requirements counted by audit/raw/spec-coverage.json, and it should not be edited until it does. The two counts were checked against the source text where they disagree most, and the disagreement is the earlier audit\'s granularity, not this parser\'s.',
     'Verified in both directions on 14 Sep 2026: Economics 1.3.4 Price determination has eleven lettered requirements and no bullets in the spec (econ_spec.txt L692-722); this file has 11, the earlier audit counted 17. Economics 2.3.1 requirement 3c lists six bullets (L953-958, ending "society."); this file has all six, the earlier audit counted fewer.',
-    'Mechanical completeness: every line inside every topic span that begins with a bullet or a lettered marker is covered by exactly one row, and no row points at any other kind of line (0 leaks, 0 missed, both subjects). A deterministic 30-row sample (--sample 30) was read against its cited lines by hand: 30 of 30 verbatim.',
+    'Mechanical completeness: every line inside every topic span that CONTAINS a bullet character at any position, or a lettered marker, STARTS exactly one row, and no row points at any other kind of line (0 leaks, 0 missed, both subjects). A deterministic 30-row sample (--sample 30) was read against its cited lines by hand: 30 of 30 verbatim, and every one of the 1,362 rows has the words of its wording, in order, inside the lines it cites.',
+    'V001, fixed 16 Sep 2026 (packet 3.1): until this date the bullet test was anchored to line start, and the extraction puts a wrapped left-column topic title on the same row as a list\'s FIRST bullets. Those bullets did not become rows — they were appended to the row before them, so 32 rows carried a bullet character inside their own wording and 43 leaves (23 Economics, 20 Business) were invisible to the coverage oracle. The ledger item V001 estimated 60 (31/29); 43 is the measured figure, counted by scanning the raw text for the bullet character independently of the parser. Six of the 43 also needed the column cut to be bounded by the bullet, because a \'(continued)\' page sets its columns a character or two differently from the page that taught the parser where the letter column is.',
     'Consequence for Layer 3: coverage is measured against THESE rows. A section\'s coverage percentage here will differ from spec-coverage.json\'s, and this one is the auditable figure because every row cites its line.',
   ],
   topics,
