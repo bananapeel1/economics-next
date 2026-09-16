@@ -2,7 +2,7 @@
 import PaywallOverlay from './PaywallOverlay';
 import { Star } from './Icons';
 
-export default function ExtrasTab({ data, previewMode = false }) {
+export default function ExtrasTab({ data, previewMode = false, totalCount }) {
   const chains = data?.chains || [];
   const evaluation = data?.evaluation || [];
 
@@ -29,7 +29,7 @@ export default function ExtrasTab({ data, previewMode = false }) {
     <div className="extras-tab">
       {previewMode && (
         <div className="flashcard-preview-badge">
-          Preview — {PREVIEW_LIMIT} of {chains.length + evaluation.length} extras
+          Preview — {PREVIEW_LIMIT} of {totalCount ?? (chains.length + evaluation.length)} extras
         </div>
       )}
 
@@ -112,7 +112,7 @@ export default function ExtrasTab({ data, previewMode = false }) {
       )}
 
       {previewMode && (
-        <PaywallOverlay feature="Extras" previewText={`${chains.length + evaluation.length - (displayChains.length + displayEvaluation.length)} more extras available`} />
+        <PaywallOverlay feature="Extras" previewText={`${Math.max(0, (totalCount ?? (chains.length + evaluation.length)) - (displayChains.length + displayEvaluation.length))} more extras available`} />
       )}
     </div>
   );

@@ -1451,7 +1451,7 @@
   {
    "id": "F086",
    "lens": "smart-practice-quiz-bank",
-   "sev": "low",
+   "sev": "high",
    "cat": "trust",
    "title": "Smart Practice serves all 25 questions free while the section Quiz tab paywalls the same bank after 2",
    "file": "components/QuizTab.jsx",
@@ -1459,11 +1459,11 @@
    "fix": "Decide one policy: either make Quiz tab preview larger and point its paywall at premium-only value (explanations + Ask Tutor + attempt history), or gate /practice consistently. Whichever is chosen, link the two surfaces so students know where the full bank lives.",
    "impact": "A free student who hits the Quiz-tab paywall and then finds /practice sees the identical questions for free and infers the paywall is arbitrary; a student who does not find /practice believes they have access to 2 questions per section. Either way the gating story is incoherent.",
    "packet": 12,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
-   "note": null
+   "status": "confirmed",
+   "closed_by": "packet-12",
+   "verified_by": "packet-verifier 2026-09-12",
+   "evidence": "app/api/sections/[id]/route.js:23-83 now auths via createClient/getSubscriptionRow, curl signed-out on introductory-concepts returns quiz/flashcards/extras capped to 2/2/1+1 (counts:25/18/4/3) and mistakes:[]; free surfaces content/notes/diagrams/practice returned unsliced (5/5/3/5); lib/preview-limits.js (quiz:2,flashcards:2,extrasChains:1,extrasEvaluation:1) matches hardcoded PREVIEW_LIMIT in QuizTab.jsx:15, FlashcardsTab.jsx:13, ExtrasTab.jsx:9; StudyApp.jsx:735-739 passes totalCount from sectionData.counts (not array length) into all three tabs; /api/practice/questions still 401s signed-out (curl verified), not regressed. F119 (fun/questions) confirmed already logged status:open, correctly excluded.",
+   "note": "severity low -> high: 2026-09-12 measured: GET /api/practice/questions needs no auth and no premium check (uses the anon client), and returns the full section_quiz array including correctIndex for every section id passed. An unauthenticated curl returned 75 questions with answer keys across 3 sections; nothing limits the section list, so the whole 769-question bank is fetchable in one request. This is not an inconsistency between two tabs: the quiz paywall is decorative, and the answer keys leak with it. Raised from low after the founder chose to KEEP the current paywall boundary, which makes a non-functioning paywall the thing to fix."
   },
   {
    "id": "F087",
@@ -1956,7 +1956,7 @@
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "2026-09-12: the draft/published infrastructure now EXISTS — the founder ran scripts/packet-2-draft-state.sql, all eight content tables carry draft + published_at, and scripts/publish-section.mjs runs. What remains for this finding is adoption, not plumbing: no content script writes to draft yet, so a push is still a blind overwrite in practice. Close it when the first content packet writes to draft and publishes in one statement."
   },
   {
    "id": "F116",
@@ -2008,6 +2008,40 @@
    "verified_by": null,
    "evidence": null,
    "note": "Found 2026-09-12 during packet 9 browser verification, not by the September audit. Reproduce: load a section page and read the console."
+  },
+  {
+   "id": "F119",
+   "lens": "smart-practice-quiz-bank",
+   "sev": "medium",
+   "cat": "monetisation",
+   "title": "The Blackjack question pool requires sign-in but never checks premium, so a free account gets the unbounded bank",
+   "file": "app/api/fun/questions/route.js",
+   "line": 1,
+   "fix": "Apply the same entitlement the rest of the quiz bank now uses: getSubscriptionRow plus hasPremiumAccess, and cap a free account to the preview slice from lib/preview-limits.js, or decide deliberately that the fun surface is free and record that in DECISIONS.md. Do not leave it as the one unguarded door into the same content.",
+   "impact": "F086 closed the two routes that serve the quiz bank to the section view and to Smart Practice. This third route still serves the same questions to any signed-in account, free or paid, with no cap. Anyone can create a free account, so the paywall on the quiz bank is one signup away from bypassed. Found by the packet verifier while checking F086, not by the September audit.",
+   "packet": 12,
+   "status": "open",
+   "closed_by": null,
+   "verified_by": null,
+   "evidence": null,
+   "note": "Found 2026-09-12 during F086 verification. Reproduce: sign in with a free account and call GET /api/fun/questions."
+  },
+  {
+   "id": "F120",
+   "lens": "smart-practice-quiz-bank",
+   "sev": "high",
+   "cat": "monetisation",
+   "title": "The flashcard bank is served unauthenticated by /api/flashcards-practice/cards, so the flashcard paywall is decorative",
+   "file": "app/api/flashcards-practice/cards/route.js",
+   "line": 1,
+   "fix": "Same gate as its two siblings: require auth, resolve entitlement with getSubscriptionRow plus hasPremiumAccess, cap a free account to PREVIEW_LIMITS.flashcards, bound the section list, and return true counts so any N-of-M copy stays honest. The client must render the 401 rather than an empty state.",
+   "impact": "Third route of the same shape. F086 closed /api/practice/questions and /api/sections/[id]; this one used the anon client with no auth, no premium check and no bound on the section list, and returned every flashcard for every section requested. Flashcards are a preview-then-paywall surface, so the paywall was decorative for as long as this existed. Found by the packet verifier while re-checking F086, not by the September audit.",
+   "packet": 12,
+   "status": "claimed",
+   "closed_by": "packet-12",
+   "verified_by": null,
+   "evidence": null,
+   "note": "Found 2026-09-12 during the second F086 verification."
   }
  ],
  "content": [

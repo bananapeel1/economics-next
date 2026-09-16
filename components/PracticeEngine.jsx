@@ -1,7 +1,19 @@
 'use client';
 
-import { useState, useCallback, useMemo } from 'react';
-import { buildQueue, computeNextReview, createDefaultProgress } from '@/lib/spaced-repetition';
+/** "Next due in 6 hours" / "Next due tomorrow", from a timestamp. Empty string if nothing is scheduled. */
+function formatNextDue(nextReview) {
+  if (!nextReview) return '';
+  const ms = nextReview - Date.now();
+  if (ms <= 0) return 'The next one is due now.';
+  const hours = Math.round(ms / 3600000);
+  if (hours < 1) return 'The next one is due within the hour.';
+  if (hours < 24) return `The next one is due in ${hours} hour${hours === 1 ? '' : 's'}.`;
+  const days = Math.round(hours / 24);
+  return `The next one is due in ${days} day${days === 1 ? '' : 's'}.`;
+}
+
+import { useState, useCallback, useMemo, useRef } from 'react';
+import { buildQueue, queueStats, computeNextReview, createDefaultProgress } from '@/lib/spaced-repetition';
 import QuestionCard from '@/components/practice/QuestionCard';
 import SessionSummary from '@/components/practice/SessionSummary';
 
@@ -120,9 +132,15 @@ function TopicStep({
   onBack,
   onStart,
   loading,
-  progressSummary,
-}) {
-  const [expandedUnits, setExpandedUnits] = useState(new Set());
+  progressSummary, accessNote, sessionSize, onSessionSize }) {
+  // F085: every unit used to start collapsed, so the picker opened showing nothing to pick.
+  // Open the first unit so the student can see what a topic chip is without hunting.
+  const [expandedUnits, setExpandedUnits] = useState(() => {
+    const first = (allUnits || [])
+      .filter((u) => u.subject_id === subject?.id)
+      .sort((a, b) => a.number - b.number)[0];
+    return new Set(first ? [first.id] : []);
+  });
 
   const filteredUnits = useMemo(
     () => (subject ? allUnits.filter(u => u.subject_id === subject.id) : []),
@@ -163,7 +181,7 @@ function TopicStep({
       <div className="spe-topic-header">
         <div>
           <h1 className="spe-topic-heading">{subject.name}</h1>
-          <p className="spe-topic-subtitle">Select the topics you want to be assessed on</p>
+          <p className="spe-topic-subtitle">Pick the topics you want to practise</p>
         </div>
         <div className="spe-topic-header-actions">
           <button className="spe-pill-btn" onClick={onSelectAll}>Select all</button>
@@ -189,11 +207,20 @@ function TopicStep({
             <div key={unit.id} className="spe-unit-card">
               {/* Unit header row */}
               <div className="spe-unit-header">
-                <button className={`spe-unit-badge${selectedCount > 0 ? ' spe-unit-badge--active' : ''}`} onClick={(e) => { e.stopPropagation(); onToggleUnit(unit.id); }} title={selectedCount === totalCount ? 'Deselect all' : 'Select all'}>
-                  {selectedCount === totalCount ? '\u2713' : unit.number}
-                </button>
+                {/* F085: this used to be the unit number, and clicking it silently selected or
+                    cleared every topic in the unit. Nothing said so. It is now a labelled
+                    checkbox, and the unit number moved into the title where it reads as a number. */}
+                <label className="spe-unit-selectall" onClick={(e) => e.stopPropagation()}>
+                  <input
+                    type="checkbox"
+                    checked={totalCount > 0 && selectedCount === totalCount}
+                    ref={(el) => { if (el) el.indeterminate = selectedCount > 0 && selectedCount < totalCount; }}
+                    onChange={() => onToggleUnit(unit.id)}
+                  />
+                  <span className="spe-unit-selectall-text">All</span>
+                </label>
                 <div className="spe-unit-header-mid" onClick={() => toggleExpand(unit.id)}>
-                  <span className="spe-unit-title">{unit.title}</span>
+                  <span className="spe-unit-title">Unit {unit.number} &middot; {unit.title}</span>
                 </div>
                 <div className="spe-unit-header-right" onClick={() => toggleExpand(unit.id)}>
                   <span className="spe-unit-counter-pill">
@@ -226,6 +253,12 @@ function TopicStep({
                       >
                         <span className="spe-chip-text">{sec.short_title || sec.title}</span>
                         {prog && prog.total > 0 && (
+                          <span className="spe-chip-count">
+                            {prog.total} question{prog.total === 1 ? '' : 's'}
+                            {prog.attempted > 0 ? ` \u00b7 ${prog.mastered} mastered` : ''}
+                          </span>
+                        )}
+                        {prog && prog.total > 0 && (
                           <span className="spe-chip-progress">
                             <span className="spe-chip-progress-fill" style={{ width: `${masteryPct}%` }} />
                           </span>
@@ -240,9 +273,31 @@ function TopicStep({
         })}
       </div>
 
+      {accessNote && accessNote.kind !== 'preview' && (
+        <div className="spe-access-note" role="alert">
+          <span>{accessNote.message}</span>
+          {accessNote.kind === 'signed-out' && (
+            <a className="spe-access-note-btn" href="/login">Sign in</a>
+          )}
+        </div>
+      )}
+
       {/* Sticky start bar */}
       <div className="spe-action-bar">
         <div className="spe-action-bar-inner">
+          {/* F084: session length is the student's choice, not a fixed 20. */}
+          <div className="spe-session-size" role="group" aria-label="Session length">
+            {[10, 20, 40].map((n) => (
+              <button
+                key={n}
+                className={`spe-session-size-btn${sessionSize === n ? ' active' : ''}`}
+                aria-pressed={sessionSize === n}
+                onClick={() => onSessionSize?.(n)}
+              >
+                {n}
+              </button>
+            ))}
+          </div>
           <span className="spe-action-count">
             <span className="spe-action-count-num">{selectionCount}</span>
             {' '}topic{selectionCount !== 1 ? 's' : ''} selected
@@ -280,6 +335,16 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
   const [currentIndex, setCurrentIndex] = useState(0);
   const [sessionResults, setSessionResults] = useState([]);
   const [loading, setLoading] = useState(false);
+  // Why a session could not start, or started short. Set from the questions endpoint so the empty
+  // state can say what happened instead of reading as missing content (F086, and F084's complaint
+  // that "no questions available" looks like the section is empty).
+  const [accessNote, setAccessNote] = useState(null);
+  // Keys already re-queued this session, so a wrong answer comes back exactly once (F077).
+  const requeuedRef = useRef(new Set());
+  // F084: the student chooses how long a session is instead of always getting 20.
+  const [sessionSize, setSessionSize] = useState(20);
+  // F078: what the selected topics actually hold, so an empty queue can explain itself.
+  const [emptyReason, setEmptyReason] = useState(null);
   const [questionKey, setQuestionKey] = useState(0);
   const [progressSummary, setProgressSummary] = useState({});
 
@@ -385,7 +450,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
 
   /* ─── Start session ─── */
 
-  const handleStart = useCallback(async () => {
+  const handleStart = useCallback(async (practiseEarly = false) => {
     if (selectedSectionIds.size === 0) return;
     setLoading(true);
 
@@ -393,10 +458,29 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
       const sectionArr = Array.from(selectedSectionIds);
 
       // 1. Fetch quiz data
+      setAccessNote(null);
+      requeuedRef.current = new Set();
       const qRes = await fetch(
         `/api/practice/questions?sections=${sectionArr.join(',')}`
       );
-      const qJson = await qRes.json();
+      const qJson = await qRes.json().catch(() => ({}));
+
+      if (!qRes.ok) {
+        setAccessNote(
+          qRes.status === 401
+            ? { kind: 'signed-out', message: qJson.error || 'Please sign in to use Smart Practice.' }
+            : { kind: 'error', message: qJson.error || 'Could not load questions. Please try again.' }
+        );
+        setLoading(false);
+        return;
+      }
+      if (qJson.limited) {
+        setAccessNote({
+          kind: 'preview',
+          message: `Showing the first ${qJson.previewLimit} questions per topic, ${qJson.totalReturned} of ${qJson.totalAvailable}. The full bank is part of Pro.`,
+        });
+      }
+
       const fetchedQuizData = qJson.questions || {};
       setQuizData(fetchedQuizData);
 
@@ -434,8 +518,18 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
         fetchedProgressMap,
         sectionArr,
         fetchedQuizData,
-        20
+        sessionSize,
+        { includeNotDue: practiseEarly }
       );
+
+      // F078: an empty queue used to render "No questions available", which reads as missing
+      // content. Distinguish having nothing scheduled yet from having everything scheduled.
+      if (sessionQueue.length === 0) {
+        const stats = queueStats(fetchedProgressMap, sectionArr, fetchedQuizData);
+        setEmptyReason(stats.total === 0 ? { kind: 'no-content', stats } : { kind: 'nothing-due', stats });
+      } else {
+        setEmptyReason(null);
+      }
 
       setQueue(sessionQueue);
       setCurrentIndex(0);
@@ -447,12 +541,12 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
     } finally {
       setLoading(false);
     }
-  }, [selectedSectionIds, isLoggedIn]);
+  }, [selectedSectionIds, isLoggedIn, sessionSize]);
 
   /* ─── Answer handler ─── */
 
   const handleAnswer = useCallback(
-    async ({ correct }) => {
+    async ({ correct, confidence = null }) => {
       const item = queue[currentIndex];
       if (!item) return;
 
@@ -463,8 +557,9 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
         progressMap[key] ||
         createDefaultProgress(item.sectionId, item.questionIndex);
 
-      // Compute next review (no confidence parameter)
-      const updated = computeNextReview(current, correct);
+      // F076: confidence reaches the scheduler. computeNextReview already understood
+      // 'guessed' and 'certain'; nothing had ever passed them.
+      const updated = computeNextReview(current, correct, confidence);
 
       // Save progress
       if (isLoggedIn) {
@@ -501,8 +596,17 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
           sectionId: item.sectionId,
           questionIndex: item.questionIndex,
           correct,
+          confidence,
         },
       ]);
+
+      // F077: the card told the student "this question will come back" and nothing ever brought
+      // it back within the session. Re-append a wrong item once, so the sentence is true. Once,
+      // not repeatedly: a student who keeps missing it would never reach the end otherwise.
+      if (!correct && !requeuedRef.current.has(key)) {
+        requeuedRef.current.add(key);
+        setQueue(prev => [...prev, { ...item, requeued: true }]);
+      }
     },
     [queue, currentIndex, progressMap, isLoggedIn]
   );
@@ -603,6 +707,9 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
         onStart={handleStart}
         loading={loading}
         progressSummary={progressSummary}
+        accessNote={accessNote}
+        sessionSize={sessionSize}
+        onSessionSize={setSessionSize}
       />
     );
   }
@@ -614,8 +721,24 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
     if (!item) {
       return (
         <div className="spe-empty">
-          <p>No questions available for the selected topics.</p>
-          <button className="spe-btn spe-btn-primary" onClick={handleRestart}>
+          <p>
+            {accessNote?.kind === 'signed-out' || accessNote?.kind === 'error'
+              ? accessNote.message
+              : emptyReason?.kind === 'no-content'
+                ? 'These topics have no questions yet.'
+                : emptyReason?.kind === 'nothing-due'
+                  ? `All ${emptyReason.stats.total} questions in these topics are scheduled. ${formatNextDue(emptyReason.stats.nextReview)}`
+                  : 'Nothing to practise in these topics right now.'}
+          </p>
+          {accessNote?.kind === 'signed-out' && (
+            <a className="spe-btn spe-btn-primary" href="/login">Sign in</a>
+          )}
+          {emptyReason?.kind === 'nothing-due' && (
+            <button className="spe-btn spe-btn-primary" onClick={() => handleStart(true)}>
+              Practise anyway
+            </button>
+          )}
+          <button className="spe-btn spe-btn-secondary" onClick={handleRestart}>
             Back to Setup
           </button>
         </div>
@@ -627,6 +750,11 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
 
     return (
       <div className="spe-session">
+        {accessNote?.kind === 'preview' && (
+          <div className="spe-preview-note" role="note">
+            {accessNote.message}
+          </div>
+        )}
         {/* Top bar with progress */}
         <div className="spe-session-top">
           <div className="spe-session-top-left">
