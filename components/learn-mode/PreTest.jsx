@@ -2,6 +2,7 @@
 import { useState, useMemo } from 'react';
 import { recordPretest } from '@/lib/strength';
 import { trackFunnel } from '@/lib/funnel';
+import { saveSectionState } from '@/lib/section-state';
 
 /* ── Pre-test Before Learning ── */
 export default function PreTest({ quizData, subjectId, sectionId, onDone, reservedQuestions }) {
@@ -80,6 +81,21 @@ export default function PreTest({ quizData, subjectId, sectionId, onDone, reserv
       }));
     }
 
+    /*
+     * Record that the pre-test was TAKEN, in the modern section-state key and on the server.
+     *
+     * The legacy `revvy_pretest_*` key above holds the answers, and it was the only record of the
+     * choice. `readLocalState` migrates that key only when there is no modern key yet
+     * (`lib/section-state.js:27-28`), and a signed-in student always has one, written by
+     * LearnModeTab's server reconcile — so to everything that asks the modern way, a student who
+     * had taken the pre-test looked like one who had never been offered it. Two consequences, one
+     * of them old: V011's re-derived offer put the same three questions back on screen the moment
+     * the student returned to step 0, and, since F001/F027, TAKING the pre-test never reached the
+     * server at all, so the cross-device promise held for skipping and not for taking. Only
+     * `declinePretest` ever sent `pretestState`.
+     */
+    saveSectionState(subjectId, sectionId, { pretestState: 'taken' });
+
     // Record to strength meter
     recordPretest(subjectId, sectionId, score);
     trackFunnel('pretest_submitted', { sectionId, score: correct, total: questions.length });
@@ -142,6 +158,9 @@ export default function PreTest({ quizData, subjectId, sectionId, onDone, reserv
                   JSON.stringify({ completed: false, skipped: true, timestamp: Date.now() }));
               } catch {}
             }
+            // Same reason as the submit path: the legacy key alone is invisible to anything that
+            // reads the modern one, and this is also how the skip follows the student to another device.
+            saveSectionState(subjectId, sectionId, { pretestState: 'skipped' });
             trackFunnel('pretest_skipped', { sectionId });
             onDone?.();
           }}>
