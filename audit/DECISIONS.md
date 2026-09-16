@@ -697,6 +697,70 @@ Append only. Every entry needs a date and the packet that made it.
   first content able to trigger it, and every later section is now protected. **A widget is only proven by
   content that stresses it; a fixture that fits is not evidence that a real item will.**
 
+- **2026-09-16 (packet 17) — five more ledger claims the specification refutes or redirects.**
+  `specGap-02` asks for "conditions of demand" as the specification's term for the shift factors. The phrase
+  appears **zero times** in `audit/raw/econ_spec.txt`: it is AQA vocabulary, and the IAL spec writes "Factors
+  that may cause a shift in the demand curve" (`:596`). Teaching a student to expect wording an IAL paper never
+  uses is worse than teaching nothing, so it is closed as no-change and the March common-mistake card that
+  carried the phrase in its title was rewritten in place. `specGap-06` asks two things and both are answered by
+  the text: its guess that the behavioural subsection is off-spec is **wrong** — `1b` names six reasons
+  consumers may not aim to maximise utility (`:583-589`) — but its instinct was right about the *vocabulary*,
+  because "anchoring", "loss aversion" and "bounded rationality" appear zero times in the document and the only
+  occurrence of "behavioural" anywhere in it is `:1281`, "behavioural theories: satisficing", in a
+  firms'-objectives topic that is not this one; its second half, that elasticities may be a separate spec point
+  leaving the section over-packed, is refuted by the numbering — price, income and cross elasticities are
+  sub-topic **3 of 1.3.2 itself**, 24 of the topic's 39 leaves. `topFix-02` prescribes "Assess 10/12": IAL
+  **Economics** has no Assess and no 10-mark tariff (`:2704-2747`), so that clause is the Business ladder and is
+  refused while its four other clauses are built. `structure-01` and the sort-bug halves of `topFix-02`,
+  `practice-01` and `practice-02` describe a code defect **packet 2 already fixed** —
+  `components/LearnModeTab.jsx:193-194` resolves `practiceIndices` against the raw array — so only the content
+  half remained. `topFix-04` asks for a `diagramRef`, which since packet 5 is not how a diagram reaches a
+  student; both invisible diagrams are rebuilt and pinned by `diagramId`. Five sections in, the rate is steady:
+  four wrong claims in packet 14, four in 15, six in 16, five here. **A number or a scope claim in a finding is
+  a hypothesis until the spec line is read.**
+
+- **2026-09-16 (packet 17) — the income and substitution effects are not IAL Economics vocabulary, and this is
+  the third time the same rule has been needed.** `grep -i "substitution effect\|income effect"` on
+  `audit/raw/econ_spec.txt` returns nothing, and so does the bare word "substitution": the specification's
+  answer to why the demand curve slopes downward is `2c`, diminishing marginal utility and its significance for
+  the shape of the individual demand curve. The March section taught the two effects as the explanation and
+  never made the DMU link at all, which is what `specGap-01` and `structure-06` were about. Layer 6 found the
+  first draft still carrying them. Removed from the body and from the Notes. The general rule, now settled by
+  packet 13's eight frameworks, packet 16's "barriers to entry" and this: **where the specification supplies no
+  vocabulary for a leaf, teach the mechanism in the specification's own words, and name the standard term as an
+  aside only if a student would otherwise be lost without it.** The goods called "substitutes" stay — they are
+  `2d`, `3d` and `3i`. It is the *effects* that are not in the document.
+
+- **2026-09-16 (packet 17) — one linear demand schedule carries six of the topic's leaves.** 1.3.2 asks for the
+  demand curve, a PED calculation, the five PED values, how PED varies along a straight line, total revenue and
+  the PED-revenue relationship. All six are properties of one line, so the section uses one: `Q = 1200 − 40P`
+  (tickets a day, fare in dollars), whose midpoint is `P = $15, Q = 600`, where PED is exactly −1 and total
+  revenue peaks at $9,000. Every figure in the body, the diagrams, the notes, the quiz and the practice is
+  derived from it in `scripts/_packet17-util.mjs`, and the runner re-derives each result from its own inputs and
+  re-reads the emitted SVG coordinates back out. A student who learns the schedule has learned six leaves rather
+  than six facts, and a change to the function cannot leave a stale number anywhere. This is packet 15's
+  `accuracy-01` rule generalised from one diagram to a whole section: **where a section's arithmetic recurs,
+  define it once as a function and generate every surface from it.**
+
+- **2026-09-16 (packet 17) — a chapter check-in names only what it carries.** The check-in's opening sentence
+  was a fixed string promising "the diagram, a quick question, and one thing from earlier". Chapter 6 of this
+  section has no diagram on purpose — the significance of the three elasticities for firms, consumers and
+  government is an argument, not a drawing — and chapter 1 can have no spaced recall, because there is no
+  earlier chapter. The sentence is now built from what the step renders and disappears if it renders none of the
+  three (`components/LearnModeTab.jsx`). Found by walking the section at 390×844, and it is the same class as
+  packet 16's "Three questions" over a two-question pre-test: **copy that enumerates what follows has to be
+  generated from what follows.**
+
+- **2026-09-16 (packet 17) — a free student cannot have both an honest pre-test and a check-in quiz, and that
+  is the founder's call, not a packet's.** Packet 16 put the unpinned quiz items first so the pre-test would
+  stop asking questions a check-in asks again. The consequence, measured here by A/B rather than reasoned about:
+  `GET /api/sections/[id]` caps a signed-out student's quiz at `PREVIEW_LIMITS.quiz` (2), those two are now the
+  pre-test's own, and **all six chapter check-ins therefore show no quiz item at all**. Raising the cap to 40 in
+  `lib/preview-limits.js`, reloading and walking again put a quiz on every check-in, which proves the pins are
+  right and the cap is the cause; the file was restored immediately and `git diff` on it is empty. Widening the
+  slice is a freemium-boundary decision. Recorded rather than worked around, because a content packet working
+  around it would have to un-do packet 16's fix.
+
 - **2026-09-15 (packet 16) — five more ledger claims the specification refutes, and one it redirects.**
   Every `1.1.x` number in this section's ledger is UK GCE Theme 1; the IAL topic is 1.3.1
   (`bus_spec.txt:504`). `structure-07` calls sampling "not on the IAL spec" and `topFix-04` acts on that by

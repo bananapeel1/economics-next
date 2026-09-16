@@ -1,6 +1,110 @@
 # Next session brief
 
-## Handoff — after packet 16 (written 15 September 2026)
+## Handoff — after packet 17 (written 16 September 2026)
+
+**Next is packet 18, `the-market`** — and the first thing to know about it is that **it is a BUSINESS
+section**, not the Economics one its ledger numbering suggests. Business Unit 1 (WBS11), IAL topic **1.3.2
+The market**, `audit/raw/bus_spec.txt:551-595`, **24 leaves**; 44 section opens; **33 ledger items**. Every
+`1.2.x` number in those items is UK GCE Theme 1 numbering, exactly the trap packet 16 met. State today:
+5 blocks · 11 subsections · 25 quiz · 5 practice · **0 diagrams** (three blocks pin diagrams that do not
+exist, so they render nothing); validator **20 BLOCK, 51 DEBT, 88% coverage**. **On Opus, in a NEW session.**
+
+### Do this before anything else
+
+1. Read `PROGRESS.md`, `DECISIONS.md`, this file and `PROTOCOL.md`, then `ledger.mjs packet 18 --open`.
+2. **Check every scope claim against the spec text before acting on it.** Packet 14 found four wrong, 15 four,
+   16 six, 17 five. `audit/raw/bus_spec.txt` is the oracle. Two in this packet's scope are worth checking
+   first: `quiz-02` says price elasticity of **supply** is not in the IAL Business specification — the 24
+   leaves of 1.3.2 are demand factors, supply factors, the interaction of the two, PED (4a-4e) and YED
+   (5a-5e), and none of them is PES, so the claim looks right and you should still read the lines; and
+   `practice-03` prescribes **Assess at 10/12**, which unlike packet 17's Economics items IS the correct
+   Business ladder (Assess is 10 in Units 1-2).
+3. **V001 does not reach this span, and that is measured**: 12 bullet characters in `bus_spec.txt:551-595`,
+   every one at line start, and all 24 leaves present in `spec-items.json`. Count it yourself with a
+   UTF-8-aware tool before trusting it. The global figures are unchanged: 31 Economics and 29 Business
+   bullets dropped elsewhere. **V001 is still packet 3.1's, and it should be done before many more sections
+   measure themselves against an incomplete oracle.**
+4. This section teaches demand, PED and YED, and so does packet 17's `consumer-behaviour-demand`. They are
+   **different subjects**, so that is not a duplication to resolve — but the Business tariffs, the Business
+   command words and the Business spec wording are all different, and copying a sentence across would import
+   the wrong ones. `audit/SPEC-OWNERSHIP.md` maps ownership within a subject, not between them.
+
+### The template, as it stands after four sections
+
+Copy `scripts/packet-17-*.mjs` and rename. The runner is the first reader of the section: word counts against
+the 350 budget, the section's own banned phrases, every practice command and tariff against
+`audit/raw/tariff-census.json` **for the right subject**, every diagram property re-derived from the figures
+it asserts, and the whole bundle validated against the baseline before `stageBundle()`. `--dump` writes the
+bundle for the verifier. Lifecycle: read the spec span → check every ledger item against it → write the spec
+block here → snapshot → author → dry run to 0 BLOCK and 0 new DEBT → stage → **walk it at 390×844 with
+`?draft=1`** → Layer 6 on a canary copy → fix → re-stage → claim → Verify A → gate → commit → push →
+handoff. **No publish**, until packets 5 and 7 are on main.
+
+### What packet 17 learned that packet 18 needs
+
+1. **Where a section's arithmetic recurs, define it once as a function and generate every surface from it.**
+   1.3.2 Economics asks for the demand curve, a PED calculation, the five values, PED along a straight line,
+   total revenue and the PED-revenue relationship — six leaves that are all properties of one line. One
+   schedule (`Q = 1200 − 40P`) carried all six, the diagrams were sampled from it, and the runner re-read the
+   emitted SVG coordinates back out. Business 1.3.2 has the same shape: demand, supply, their interaction,
+   PED and YED are one market, and 3b explicitly wants **supply and demand diagrams**, of which this section
+   currently has none.
+2. **A packet's own runner should ban the class, not the instance.** Layer 6 found three sentences asserting
+   how papers are *built* — "a question rarely wants all six", "an extract naming two firms rarely says which
+   of them the question is about" — which the frequency regex written for *how often a paper asks* did not
+   reach. `PAPER_PATTERN_CLAIM` in packet 17's runner catches both; copy it.
+3. **Where the specification supplies no vocabulary for a leaf, teach the mechanism in the specification's own
+   words.** Third time: packet 13's eight frameworks, packet 16's "barriers to entry", and here the income and
+   substitution effects, which return **zero** hits in the Economics specification. Business 1.3.2's likely
+   candidates are price elasticity of supply, consumer surplus and the cobweb — grep before you teach.
+4. **Only a CHECK-IN step carries a diagram, and it comes from the BLOCK's `diagramId`** (`lib/learn-steps.js:44-55`).
+   `diagramRef` is the legacy string pin, and it is why this section's three pins resolve to nothing
+   (`structure-01`, `diagram-01`-`03`). Pin by id.
+5. **Copy that enumerates what follows must be generated from what follows.** The chapter check-in used to
+   promise "the diagram, a quick question, and one thing from earlier" whatever it actually carried; it now
+   names only what it renders. If your section gives a chapter no diagram, that is now honest.
+6. **Put the three unpinned quiz items FIRST in the array** (packet 16), and leave exactly three
+   (packet 15) — but know the consequence packet 17 measured: a signed-out student is sent two quiz items in
+   total, so those two are the pre-test's and **no chapter check-in shows a quiz to a free student**. That is
+   a freemium-boundary decision and it is the founder's; do not work around it in content.
+7. **A fill-in's template must not print its own answers.** `fillin.leak` compares the answers against every
+   word printed in the template, so a line that says "demand is price ___" and another that says "make demand
+   ___ elastic" leaks "elastic" from the second into the first. Two of packet 17's first-draft fill-ins did it.
+8. **A `classify` item must be defensible in exactly one group**, and the test is the group's own `why`. "Keeping
+   an account whose fees have risen" fitted *inertia*'s why only if you assumed the buyer knew of a cheaper
+   option, which the item never said, so it read as habit just as well.
+9. **A `reorder`'s steps must be genuinely sequential, not merely listed in a sensible order.** Converting the
+   quantity change and the price change to percentages are independent, so a student who did the price first
+   had a defensible order and was marked wrong. Merge independent steps into one.
+10. **`npm run validate` is a whole-database gate in a shared worktree** and reads LIVE content, so a staged
+    section still reports its old numbers there. Judge your own section from the runner's dry run, and record
+    the baseline write by section rather than by total.
+
+### Exit criteria for packet 18
+
+Section validator 0 BLOCK, DEBT ≤ 3, coverage ≥ 95%; every recall of the right type with its `why`; every
+block pinned to a quiz item, a practice item and (where one earns its keep) a diagram, pinned by `diagramId`;
+exactly three quiz items unpinned and first in the array; practice at IAL **Business** tariffs (Assess is 10
+in Units 1-2; there is no Outline and no Examine); `npm test`, `npm run build`, `npm run validate` exit 0;
+`ledger.mjs unverified 18` clear; Layer 6, Verify A and Verify B reports written up here.
+
+### For the founder
+
+- **Nothing in packets 14, 15, 16 and 17 is live.** Four finished sections are staged and waiting on the
+  packet 5/7 checkpoint (~26 September). Each publishes with one command; they are listed in their PROGRESS
+  rows. Packet 17's is:
+  `node scripts/packet-17-consumer-behaviour-demand.mjs --stage && node scripts/publish-section.mjs consumer-behaviour-demand --confirm`
+- **The free quiz slice now has a measured cost.** `PREVIEW_LIMITS.quiz` is 2 and the pre-test wants 3, so a
+  signed-out student gets an honest pre-test and **no quiz at any of the six chapter check-ins**. Raising the
+  cap to 3 would fix the pre-test; raising it further would put a question back on the check-ins. It is a
+  freemium-boundary call, so it is yours.
+- **V001 is still open and every content packet from here measures itself against an incomplete oracle.** It
+  is packet 3.1's, it is small, and it is the one piece of scaffolding the remaining 39 sections all rest on.
+
+---
+
+## Previous handoff — after packet 16 (written 15 September 2026, superseded)
+
 
 **Next is packet 17, `consumer-behaviour-demand`** (Economics Unit 1, WEC11, IAL topic **1.3.2**,
 `audit/raw/econ_spec.txt:580-649`, **39 countable leaves**; 52 section opens; **32 ledger items**, one of
@@ -277,6 +381,82 @@ region with `read_page` or screenshots, never `get_page_text` (packet 16). The s
 6. Chapter 4's check-in carries the total-revenue table diagram, and the figures on it match the body.
 7. Scroll with real input while the app re-renders; the page must not jump back up.
 8. Console: no errors from the section's own content.
+
+### Layer 6 — adversarial review (Sonnet, read-only, canary copy, 16 September 2026)
+
+Two defects were planted in a copy of the bundle before the reviewer saw it: a quiz explanation whose
+arithmetic contradicted its own marked option (`−5 ÷ 10 = −2.0` beside a key of `−0.5`), and a `$9,600` in the
+total-revenue body where the recall, the next subsection, the diagram and an extras chain all said `$9,000`.
+**Both were caught**, so the report stands. Census returned: 41 calculations recomputed, 54 cross-surface pairs,
+all 24 named leaves checked, 24 recalls, 32 quiz items, 10 practice items, 28 real examples.
+
+Five real findings, all correct, all fixed in `7b83ed9`:
+
+1. **The income and substitution effects are not in the IAL Economics specification.** `grep -i` on
+   `audit/raw/econ_spec.txt` returns **zero** hits for "substitution effect", "income effect" and even the bare
+   word "substitution"; 2c names diminishing marginal utility as the explanation the specification wants for the
+   shape of the demand curve. The paragraph was in the movements subsection and repeated in the Notes. Both are
+   gone and the space goes to the DMU link 2c asks for. This is packet 16's "barriers to entry" rule and packet
+   13's eight frameworks, a third time: **where the specification supplies no vocabulary for a leaf, teach the
+   mechanism in the specification's own words.** Verified independently before acting, not taken on trust.
+2. **A classify item had two defensible groups.** "Keeping an account whose fees have risen" never established
+   that the buyer knew of a cheaper option, so it read as *habitual behaviour* as easily as *inertia*, which is
+   what the group's own `why` says it must not. Now "after reading that a rival charges less".
+3. **The PED reorder had two defensible orders.** Converting the quantity change and the price change into
+   percentages are independent steps, so a student who did the price first produced a defensible order and was
+   marked wrong — Layer 1a's exact complaint. The two are one step now, and a fourth step reads the value against
+   1, which genuinely comes last. The `flow` the reorder is sourced from was merged the same way.
+4. **Three sentences asserted how papers and extracts are usually built.** "A question rarely wants all six", "a
+   data question usually supplies an age breakdown too", "an extract naming two firms rarely says which of them
+   the question is about." The runner's frequency regex was written for *how often a paper asks* and did not
+   reach *how a paper is built*; it does now (`PAPER_PATTERN_CLAIM`), and all three say what the command word
+   requires instead.
+5. **A length tell.** On the salt item the correct option ran 54 characters against a longest distractor of 39 —
+   inside the validator's 1.5× threshold and still the obvious answer without reading the economics. All four
+   options are now the same shape. (Packet 14's Layer 6 found five of these; the threshold is not the test.)
+
+### Verify B — 390×844, signed out, storage cleared, against the staged draft (16 September 2026)
+
+Walked at `http://localhost:3001/economics/unit-1/consumer-behaviour-demand?draft=1`, viewport emulated at
+390×844, `localStorage` and `sessionStorage` cleared, no account. `get_page_text` was not used to judge the
+app: the SEO block at the top of the page still renders live `data`, so it shows the March content whatever
+the draft holds (packet 16's trap, confirmed again here).
+
+| # | Check | Result |
+|---|---|---|
+| 1 | Section card reads the draft | PASS — "30 steps", "6 topics", "10 questions" |
+| 2 | Pre-test serves the unpinned pool | PASS — a signed-out student is sent 2 quiz items and both are the pre-test's own (the demand-curve item and the PED-revenue item); neither is asked again by a check-in |
+| 3 | Step 1 of 30, one heading, recall below the teaching | PASS — "CHAPTER 1 OF 6 · Rational Decision Making · part 1 of 4", one `h1`, key idea, body, the three lenses in their filled boxes, then QUICK RECALL — MATCH |
+| 4 | Step height at 390px | PASS — 2,398px (the March pairing produced 5,300-5,900px steps) |
+| 5 | No horizontal scroll | PASS — `documentElement.scrollWidth` 390 against `innerWidth` 390 at every step checked; the only elements past the fold are inside the tab strip, which scrolls by design |
+| 6 | Classify chips wrap | PASS — the 57-character item "Which product line will grow fastest as the economy grows" wraps to two lines inside its card (packet 15's `white-space: nowrap` bug does not recur) |
+| 7 | Chapter 1 check-in renders its diagram | PASS — Marginal and Total Utility, bars at $26 / $18 / $11 / $5, falling left to right, "WHAT A CORRECT DIAGRAM SHOWS" heading |
+| 8 | Chapter 3 check-in, third view | PASS — "PED along one straight line": the line, the midpoint dot at $15 / 600, "PED = 1 at the midpoint", elastic labelled above and inelastic below |
+| 9 | Chapter 4 check-in | PASS — the revenue curve rises, peaks at $15 / $9,000 and falls, with $10 / $8,000 and $22 / $7,040 marked |
+| 10 | The 20-mark Evaluate reaches a student | PASS — chapter 6's check-in carries it (`structure-01`: it never showed at all in March) |
+| 11 | Spaced recalls come from an earlier chapter, in order | PASS on a clean forward pass — nothing at step 5, then chapter 1's recalls at steps 12, 18, 21 and 26, and chapter 2's at step 30 |
+| 12 | Scrolling with real input during a re-render | PASS — clicked Next, then four real wheel scrolls: 0 → 400 → 1,200 on `.tab-content`, monotonic, no jump back to the top (packet 5's `cb6b894`) |
+| 13 | Console | PASS — no errors at all across the whole walk; only the HMR and React DevTools notices. Re-run in a **brand-new tab** after the component edit, because the pane keeps console history across navigations: the dev server had logged one `checkinIntro is not defined` from Fast Refresh catching the moment between the two halves of that edit, and it is not in the built code |
+| 14 | Step 30 offers completion | PASS — "STEP 30 OF 30", "Complete topic ✓" |
+| 15 | Notes and Diagrams tabs | PASS — six Notes topics against the six chapters, all five diagrams in the Diagrams tab, no horizontal scroll on either |
+| 16 | Light mode | PASS — the theme toggle remaps the diagram palette through `processSvg`; the revenue curve, its labels and the checklist are all legible. `npm run contrast` clean |
+
+**One defect found and fixed** (`bf62d19`). Every chapter check-in printed the same fixed sentence — "Before
+the next chapter: the diagram, a quick question, and one thing from earlier." Chapter 6 has no diagram on
+purpose and chapter 1 has no spaced recall, so the page promised things it then did not show. The sentence is
+now built from what the step actually renders and disappears when a check-in carries none of the three.
+Re-checked at all six check-ins: "the diagram and a quick question" at 5, the full three at 12-26, and "a quick
+question and one thing from earlier" at 30.
+
+**One finding this packet cannot fix, measured by A/B rather than reasoned about.** With the section as built,
+a signed-out student's check-ins carry **no quiz item at all** — `GET /api/sections/[id]` caps the quiz at
+`PREVIEW_LIMITS.quiz` (2) and the pre-test's own two items are now first in the array, so there is nothing left
+for the six check-ins. Raising the cap to 40 in `lib/preview-limits.js`, reloading and walking again put a quiz
+on all six (the cap was restored immediately; `git diff` on that file is empty). So the pins are right and the
+cap is the cause. This is the same freemium-boundary decision packet 16 escalated — the pre-test wants three
+items and the free slice is two — and it is the founder's, not a packet's. It is now sharper than packet 16
+stated it: the choice is between an honest pre-test and a quiz at the chapter check-ins, and a free student
+cannot have both while the cap is 2.
 
 ---
 
