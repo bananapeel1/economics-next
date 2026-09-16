@@ -3417,16 +3417,28 @@ button.sidebar-resource-link {
   animation: lmStreakPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Inline diagram (InteractiveDiagram, hover-only and never mounted, was deleted in packet 7, F061) */
+/* Inline diagram. The header used to say this block was "never mounted, deleted in packet 7" — it is
+   the wrapper InlineDiagram renders, on every Learn Mode diagram in the product.
+
+   It used to cap the drawing at 270px here. The responsive caps live further up the file — 442px at
+   768, 497px at 1280, 552px at 1600 — and carry the SAME specificity as this rule, so this one, being
+   later, won all three. Every inline diagram has been drawn at 270px on every desktop since those
+   breakpoints were written: on a 500-unit viewBox that is a scale of 0.54, so a 9-unit label renders
+   at 4.9px. F088 read that as a phone problem and answered it with a 100% override under
+   (max-width: 768px), which is why the phone looked right and nothing pointed at the desktop.
+   Reported from the product on 3.3.1, 16 September 2026.
+
+   No cap here now. Below 768 the phone rule gives 100%; above it the three breakpoints apply, in
+   order, as they were meant to. */
 .lm-interactive-svg-wrapper {
   display: flex; justify-content: center; align-items: center;
 }
 .lm-interactive-svg-wrapper svg {
-  width: 100%; height: auto; max-width: 270px;
+  width: 100%; height: auto;
   display: block; margin: 0 auto;
 }
 .lm-interactive-svg-wrapper img {
-  max-width: 270px; width: 100%; height: auto;
+  width: 100%; height: auto;
   display: block; margin: 0 auto; border-radius: 8px;
 }
 /* Ensure all SVG text is crisp and readable */
@@ -3443,6 +3455,17 @@ button.sidebar-resource-link {
 .lm-interactive-svg-wrapper svg circle {
   shape-rendering: geometricPrecision;
 }
+
+/* A reference table drawn as a diagram (`kind: 'table'`).
+   The 442-552px caps above were set for a cost-curve graph, where a bigger drawing of two lines buys
+   nothing. A grid of words is the opposite case: at 552px a 500-unit viewBox renders its 9-unit cells
+   at about 10px, which is what was reported from the product on 3.3.1. The card already bounds this
+   to 92% of a 960-1060px column, so letting the table fill it puts the same cells near 16px. The two
+   selectors carry a class each, so they outrank the breakpoint rules wherever those apply. */
+.lm-diagram-table .lm-interactive-svg-wrapper svg,
+.lm-diagram-table .lm-interactive-svg-wrapper img,
+.lm-diagram-table .diagram-svg-wrapper svg,
+.lm-diagram-table .diagram-svg-wrapper img { max-width: 100%; }
 /* Diagram label drill */
 .lm-label-drill {
   position: relative; padding: 16px 0;

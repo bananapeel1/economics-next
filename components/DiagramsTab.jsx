@@ -23,6 +23,9 @@ function DiagramCard({ diagram }) {
   const hasImage = !!diagram.imageUrl;
   const scenarios = diagram.scenarios || [{ label: 'Default', svg: diagram.svg }];
   const currentSvg = scenarios[activeScenario]?.svg || diagram.svg;
+  // See the note in learn-mode/InlineDiagram.jsx: a reference table borrows this component because
+  // the schema has no other surface for a grid, and must not inherit a diagram's furniture.
+  const isTable = diagram.kind === 'table';
 
   // Post-process SVG after render for quality fixes
   useEffect(() => {
@@ -33,7 +36,7 @@ function DiagramCard({ diagram }) {
   }, [currentSvg, hasImage]);
 
   return (
-    <div className="diagram-container">
+    <div className={`diagram-container${isTable ? ' lm-diagram-table' : ''}`}>
       <h3 className="diagram-title">{diagram.title}</h3>
       {diagram.description && <p className="diagram-description">{diagram.description}</p>}
 
@@ -59,7 +62,7 @@ function DiagramCard({ diagram }) {
         <div className="diagram-svg-wrapper" ref={svgRef} />
       )}
 
-      {diagram.checklist && (
+      {diagram.checklist && !isTable && (
         <div className="diagram-checklist">
           {/* Not "what examiners look for": that is the uncited claim about marking the content gate
               blocks in prose (claim.uncited), printed by the app itself over every diagram in the

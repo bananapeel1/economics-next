@@ -83,14 +83,11 @@ const typesDiagram = {
   id: id('diagram', 'five types of business ownership surplus control'),
   title: 'The Five Types of Business',
   description: 'The five types of business organisation the specification lists at 1a — with for-profit and not-for-profit given a row each — set against who owns each one and where any surplus may go. Those two questions are what separate them from one another, and they cut across each other rather than lining up.',
-  checklist: [
-    'All five bullets covered: private sector, state-owned, for-profit and not-for-profit, co-operative, joint venture',
-    'Each row states who owns the organisation',
-    'Each row states where any surplus may go',
-    'The co-operative row shows one member, one vote',
-    'The joint venture row shows ownership shared between parent firms that remain separate',
-    'It is stated that ownership and purpose are different questions, so the categories overlap',
-  ],
+  /* A reference table, not a diagram. No student draws this in an exam, so it carries no checklist:
+     the component printed "What a correct diagram shows" over it, which read as an instruction to
+     reproduce a lookup table. `kind: 'table'` also releases it from the width cap set for graphs —
+     at 552px its 9-unit cells rendered at about 10px. Reported from the product on 3.3.1. */
+  kind: 'table',
   svg: typesTable,
 };
 

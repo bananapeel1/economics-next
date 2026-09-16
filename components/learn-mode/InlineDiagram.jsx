@@ -102,6 +102,14 @@ export default function InlineDiagram({ diagram }) {
   const currentSvg = scenarios[activeScenario]?.svg || diagram.svg;
   const hasImage = !!diagram.imageUrl;
 
+  /* A reference table is not a diagram, and the schema has no surface for one — `schema.body-type`
+     allows paragraph, subheading, flow and bullets, so an author with a grid to show has only this
+     component. Everything below then treats the grid as a diagram: it prints "what a correct diagram
+     shows" over a table nobody draws in an exam, caps it at the width a cost-curve graph wants, and
+     offers to drill its labels. `kind: 'table'` turns those three off. Reported from the product on
+     3.3.1, where the table rendered at about 10px on a 1440px screen. */
+  const isTable = diagram.kind === 'table';
+
   // F061 (packet 7): the label drill, behind a button that exists only when the SVG has labels
   // to drill — three or more <text class="draggable">. Counted here, on the injected copy.
   const [drillLabels, setDrillLabels] = useState(0);
@@ -135,7 +143,7 @@ export default function InlineDiagram({ diagram }) {
   }, []);
 
   return (
-    <div className="lm-diagram-card">
+    <div className={`lm-diagram-card${isTable ? ' lm-diagram-table' : ''}`}>
       <div className="lm-card-label">&#128202; Diagram</div>
       <div className="lm-diagram-inner">
         <h3 className="diagram-title">{diagram.title}</h3>
@@ -159,14 +167,14 @@ export default function InlineDiagram({ diagram }) {
           <div className="lm-interactive-svg-wrapper lm-diagram-clickable" ref={svgRef} onClick={handleDiagramClick} hidden={drilling} />
         )}
         {canEnlarge && !drilling && <div className="lm-diagram-enlarge-hint">Tap to enlarge</div>}
-        {!hasImage && drillLabels >= 3 && !drilling && (
+        {!hasImage && !isTable && drillLabels >= 3 && !drilling && (
           <button type="button" className="lm-label-drill-toggle" onClick={() => setDrilling(true)}>
             &#127919; Label this diagram
           </button>
         )}
         {drilling && <DiagramLabelDrill svgString={currentSvg} onClose={() => setDrilling(false)} />}
 
-        {diagram.checklist && (
+        {diagram.checklist && !isTable && (
           <div className="diagram-checklist">
             {/* Not "what examiners look for": that is the uncited claim about marking the content gate
               blocks in prose (claim.uncited), printed by the app itself over every diagram in the
