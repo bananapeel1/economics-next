@@ -1,5 +1,221 @@
 # Next session brief
 
+## Packet 22 spec — `marketing-mix-strategy`, Business 1.3.3 (Opus, 16 September 2026) — IN PROGRESS
+
+**Section:** `marketing-mix-strategy`, Business Unit 1 (WBS11), IAL topic **1.3.3 Marketing mix and
+strategy**, `audit/raw/bus_spec.txt:596-670`. **57 rows off the span, of which 46 are LEAVES** — the
+largest section in the programme so far (packet 17's 1.3.2 had 39). 32 section opens. **33 open ledger
+items.** Live state: **24 BLOCK / 64 DEBT / 89% coverage**.
+
+IAL **Business Unit 1** ladder, from `audit/raw/tariff-census.json` (Appendix 6, `bus_spec.txt:2220-2251`):
+Define 2 · Calculate 4 · Construct 4 · Explain 4 · Analyse 6 · Discuss 8 · **Assess 10** · Evaluate 20.
+**There is no Outline and no Examine in Business.**
+
+### The numbering trap, which three findings are built on
+
+**`1.3.3` IS the IAL topic number and title** (`bus_spec.txt:596`, "1.3.3 Marketing mix and strategy"),
+and the app already carries both. The ledger's sub-numbers — "1.3.1 Product/service design", "1.3.2
+Types of branding", "1.3.3 Pricing strategies", "1.3.4 Distribution", "1.3.5 Marketing strategy" — are
+**UK GCE Theme 1**. In IAL they are sub-topics **2, 3, 4, 5 and 1 of topic 1.3.3 itself**. Consequences:
+
+- **`structure-04` is REFUTED.** Both of its remedies — rename to "1.3 Marketing mix and strategy", or
+  split into five sections — would replace a correct IAL label with a UK GCE one. Third instance of
+  this shape (packet 15 `structure-11`, packet 19 `specGap-01`). No change.
+- **`structure-05` is REFUTED in its prescribed form.** Its proposed order (design → promotion →
+  pricing → distribution → strategy) is the UK GCE order. The IAL order is **1 objectives and strategy
+  → 2 design → 3 promotion and branding → 4 pricing → 5 distribution**, which is the order the March
+  section already had. Obeying this finding would have reordered a correct section into another
+  syllabus's sequence. Its real complaint — an untethered "4Ps" intro that names the mix and then
+  teaches its four elements three blocks later with no link — is built instead.
+- **`topFix-05`'s last clause** ("Rename the section '1.3 …' or split to match 1.3.1-1.3.5") is the same
+  claim and is refused. Its four spec-gap clauses are built.
+- **`structure-06` is half wrong.** "Marketing Objectives is not an IAL 1.3 spec item" — **1a IS
+  "Marketing objectives"**, with three named bullets. What is off-spec is **SMART**: 0 occurrences in
+  `bus_spec.txt`. The block stays and SMART goes. Its real point — that this is step 0, the most
+  expensive real estate in the section — is answered by making step 0 short and concrete.
+
+### Rule 2 pre-flight: what this section may not say
+
+Word-boundary counts over the whole Business specification, run before a word was written:
+
+| term | in `bus_spec.txt` | verdict |
+|---|---|---|
+| `above the line` / `below the line` / `ATL` / `BTL` | **0 / 0 / 0 / 0** | the March promotion block's organising frame |
+| `public relations` · `sales promotion` · `personal selling` · `direct marketing` | **0 each** | `specGap-04`'s prescribed additions |
+| `individual brand` · `family brand` · `corporate brand` · `own brand` · `manufacturer brand` | **0 each** | `specGap-01`/`structure-09`'s prescribed taxonomy |
+| `intensive` / `selective` / `exclusive` distribution | **1 (of *production*, :983) / 0 / 0** | `quiz-01` is right; the taxonomy is off-spec |
+| `SMART` | **0** | `structure-06` |
+| `rational` | **0** (Economics 1.3.2·1, `econ_spec.txt:580`) | `specGap-10`'s parenthetical |
+| `disintermediation` · `e-commerce` · `multi-channel` · `direct distribution` | **0 each** | March block 5 takeaways |
+| `state of the economy` as a pricing factor | **0** | `accuracy-02` |
+| `Ansoff` | 2, both **Units 3 and 4** (:1098, :1435) | `terms.later-unit` — must not appear |
+
+**Fifth instance of the packet 13/16/17/18 rule.** `topFix-02` asks for an **"ATL/BTL sort"** classify
+exercise; that clause is **refused** and the same exercise is built on the spec's own promotion
+vocabulary. `specGap-04` asks to add **public relations** to the ATL/BTL list: public relations is not
+in the specification, and **sponsorship is — but as 3d-3, a way to *build a brand*, not a type of
+promotion**. The finding is built where the spec puts it.
+
+### Where the spec names a tool but not its parts — a different call, made deliberately
+
+3a "Types of promotion" and 3b "Types of branding" are leaves with **no bullets at all**, so the spec
+supplies no taxonomy. ATL/BTL and individual/family/corporate are one textbook's answers to an open
+requirement, and they are taught here as **mechanisms in plain English**, with the common labels named
+once as an aside and **never assessed** — packet 16's "barriers to entry" treatment exactly.
+
+**The product life cycle (1b) and the Boston Matrix (1c) are the opposite case and are treated
+differently.** `maturity`, `decline`, `saturation`, `star`, `cash cow`, `question mark` and `dog` are
+all **0** in `bus_spec.txt` — but 1b and 1c name *the tools themselves* as requirements, and a named
+tool cannot be examined without its own parts. Their stage and quadrant names are taught in full. The
+distinction is: **the spec names the tool (teach its labels) versus the spec names an open category
+(teach the mechanism in the spec's words).**
+
+### The other claims checked against the spec
+
+- **`accuracy-02` is correct and important.** The spec's 4b list is exactly six (`:653-660`): number of
+  USPs/amount of differentiation · price elasticity of demand · **level** of competition in the business
+  environment · strength of brand · **stage in the product life cycle** · costs and the need to make a
+  profit. The March list omitted USPs and PLC stage and invented "state of the economy".
+- **`specGap-11` resolves in the spec's favour.** Its "unsure" is settled at `:665-668`: the words are
+  **four stage · three stage · two stage**. The March "zero-level/one-level/two-level" is off-spec.
+- **`specGap-10` is half refuted.** 1f is "Consumer behaviour – how businesses develop customer
+  loyalty"; the em-dash makes loyalty the content of the requirement. Its parenthetical asks for
+  "rational vs emotional decision-making", which is **Economics 1.3.2·1** and packet 17's material.
+- **`specGap-08` is half refuted.** 5b is "Changes in distribution methods." with no list; "changing
+  from product to service" is UK GCE wording. The leaf is built in plain English, with subscription and
+  streaming as illustration rather than as named requirements.
+- **`topFix-03`'s "wire them via `diagramRef`" is obsolete.** Since packet 5 a diagram reaches a student
+  only from a **block's `diagramId`, at that chapter's check-in** (`lib/learn-steps.js:44-55`).
+- **`structure-02`'s premise is stale.** "practice sorted by marks ascending" was fixed by packet 2;
+  `practiceIndices` resolve against the RAW array (`LearnModeTab.jsx:193-194`). Its real complaint —
+  three of five practice items never surfaced — stands and is fixed by correct pins.
+- **`structure-07`'s premise is dead.** The 2-per-step pairing it describes was removed by packet 5. Its
+  real complaint — a recall that copies a flow visible on the same step — stands and is fixed.
+- **`topFix-04`'s "KAA levels" is refused**: `KAA` is 0 occurrences. Guidance above 6 marks is written
+  from Appendix 6's own description of the command word, which is citable.
+- **`structure-10` is a no-change observation** ("Misconceptions are genuinely good … Not filler"). The
+  substance of the fifteen is carried into the rewrite rather than discarded.
+
+**Eleven of thirty-three scope claims wrong, plus two stale premises and one obsolete mechanic** — the
+highest rate in the programme (4 in packet 14, 4 in 15, 6 in 16, 5 in 17, 6 in 18, 8 in 19).
+
+### One spine of arithmetic
+
+Packet 17's rule. **Zola**, a maker of a reusable steel bottle, unit cost **$8**, in a market of
+**500,000 bottles a year**. Two demand lines that cross at today's price, so branding is a *pivot*:
+
+    unbranded   Q = 160,000 − 5,000P            branded   Q = 120,000 − 3,000P
+
+Both pass through **($20, 60,000)**. On a linear line the percentage-method PED depends only on the
+price you start from, so no worked value can be contradicted by a reader who picks a different second
+price (packet 18's property, re-used deliberately).
+
+| P | Q (unbranded) | share | revenue | profit | PED |
+|---|---|---|---|---|---|
+| $12 | 100,000 | 20% | $1,200,000 | $400,000 | −0.6 |
+| $16 | 80,000 | 16% | **$1,280,000** | $640,000 | −1.0 |
+| $20 | 60,000 | 12% | $1,200,000 | **$720,000** | −1.67 |
+| $24 | 40,000 | 8% | $960,000 | $640,000 | −3.0 |
+
+This carries the section:
+
+- **1a-1 market share, 1a-2 revenue, 1a-3 building a brand are three different prices.** Share is
+  largest at the lowest price, revenue peaks at **$16**, profit peaks at **$20** — so the three
+  objectives pull apart, with exact figures. That is `specThin-01`'s fix: "increase revenue" stops
+  being a phrase and becomes a number that behaves differently from market share.
+- **3c's three benefits are one pivot seen three times.** On the branded line PED at $20 is **−1.00**
+  against **−1.67** (3c-3, reduced PED), and the profit-maximising price moves from **$20 to $24**
+  (3c-2, premium prices) where profit is **$768,000** against $640,000 on the unbranded line at the
+  same price. Added value at $20 is **$12** a bottle (3c-1).
+- **4a-1 cost plus** on the same $8: a 50% mark-up gives **$12**, 100% gives **$16**, 150% gives
+  **$20** — the three prices the objectives block already used. **4a-2 skimming** launches at $24 and
+  falls to $20; **4a-3 penetration** launches at $12 and rises. **4a-6 psychological** is $19.99.
+- **5a's three channels**, every figure exact: two stage $20 direct, Zola keeps **$12**; three stage
+  Zola → retailer at $12, retailer +60% → **$19.20**, Zola keeps **$4**; four stage Zola → wholesaler
+  at $10, +20% → $12, retailer +60% → **$19.20**, Zola keeps **$2**. The same shelf price down two
+  channels, and the difference is the producer's share of it.
+
+Zola is fictional and given no country (packet 16's Zuri, 17's Tafari, 18's Maji). One currency: dollars.
+
+### Shape — seven blocks, the specification's own order, 33 subsections
+
+| # | Block | Subsections | Leaves |
+|---|---|---|---|
+| 1 | Marketing Objectives and the Marketing Mix | What a Marketing Objective Is · Increasing Market Share · Increasing Revenue · Building a Brand · The Marketing Mix | 1a (3), 1d |
+| 2 | The Product Life Cycle and the Portfolio | The Stages · Extension Strategies · The Boston Matrix · Managing the Portfolio | 1b, 1c |
+| 3 | Marketing Strategy and the Customer | Mass Markets · Niche Markets · B2B and B2C · Developing Customer Loyalty | 1e (4), 1f |
+| 4 | Product and Service Design | The Design Mix · Designing for Resource Depletion · Ethical Sourcing | 2a (3), 2b (2) |
+| 5 | Promotion and Branding | Types of Promotion · Types of Branding · The Benefits of Strong Branding · USPs and Differentiation · Advertising, Sponsorship and Social Media · Changes to Reflect Social Trends | 3a, 3b, 3c (3), 3d (4), 3e (3) |
+| 6 | Pricing Strategies | Cost Plus · Skimming and Penetration · Predatory and Competitive · Psychological · Choosing a Strategy I · Choosing a Strategy II · Online Sales and Price Comparison Sites | 4a (6), 4b (6), 4c (2) |
+| 7 | Distribution | What a Channel Is, and Four Stage · Three Stage and Two Stage · Matching the Channel to the Product · Changes in Distribution Methods | 5a (3), 5b |
+
+Block sizes **5 · 4 · 4 · 3 · 6 · 7 · 4**, deliberately uneven (`structure-03`/`structure-11`). Seven
+diagrams, one per check-in, every one pinned by `diagramId`: the mix as a grid · the PLC curve with its
+extension bump · a market-types grid · the design-mix triangle · the branding pivot (two demand lines) ·
+the pricing-strategy grid with the cost-plus arithmetic · the channel ladder.
+
+### Layer 6 — adversarial review on a canary copy (Sonnet, 16 September)
+
+**Both planted canaries caught**, plus **three real findings, all fixed**:
+
+1. **A Note said the unbranded line "sells 40,000 bottles for $640,000".** $640,000 is the PROFIT;
+   the revenue is $960,000, which the same packet's own objectives table prints. Conflating the two
+   in a section that teaches students to separate them is the worst place for it. Both figures are
+   now named, and labelled.
+2. **A common mistake read "costs −8,000 fewer bottles".** `units(qU(24) - qB(24))` subtracted the
+   two the wrong way round, and JavaScript prints a negative with an ASCII hyphen, so it arrived as a
+   double negative saying the opposite of what was meant. **Fixed as a class, not an instance:** the
+   runner now refuses an ASCII hyphen before a digit anywhere in prose, because every negative a
+   student reads is supposed to go through `minus()`/`el()` and come out as U+2212 (packet 18's rule,
+   now a check). SVG source is excluded — `rotate(-90,…)` is a coordinate, not a figure.
+3. **The customer-loyalty reorder had a defensible second order.** It ran "product works → a problem
+   is put right → the buyer is recognised → leaving costs something", and a student can fairly argue
+   that recognition precedes recovery, since not every buyer ever has a problem. Re-framed as one
+   customer's journey, where each step is impossible before the one above it: until the buyer
+   returns there is no history to recognise, and a switching cost accumulates only after several
+   returns. Packet 17's rule — a reorder with two defensible orders is not a reorder.
+
+The review independently re-derived every figure in the section from the two demand functions, the
+unit cost and the mark-up chains, and found no other arithmetic error; and it grepped
+`bus_spec.txt` itself for every off-spec term rather than taking the runner's word for it.
+
+### Verify B — student walkthrough, 390x844, signed out, `?draft=1` (16 September)
+
+Walked on the dev server another session had on port 3001 (Next refuses a second `next dev` from one
+directory; it serves the same database, so the draft flag works from it). Storage cleared first.
+
+- **40 steps, all reachable**: 33 teaching steps and 7 chapter check-ins, at steps 6, 11, 16, 20, 27,
+  35 and 40. Chapter and part counters correct throughout ("CHAPTER 1 OF 7", "part 1 of 5").
+- **Every one of the 7 check-ins resolved its diagram AND its quiz item.** Read in full at step 6: the
+  diagram with both views and its labels, "Tap to enlarge", the pinned quiz with four options, the
+  pinned practice item as a WORKED EXAMPLE at the right tariff ("Define the term 'marketing
+  objective'. · 2 marks"), and the four chapter takeaways. Practice, quiz and diagram pins therefore
+  all resolve at the step they were pinned to — `topFix-01`, `structure-01` and `structure-02`.
+- **The pre-test offered "Three questions"** and served the three unpinned items, not a chapter's.
+- **No horizontal scroll on any of the 40 steps** at a 375px viewport (`scrollWidth === clientWidth`
+  on every step). This is the check packet 15's `nowrap` overflow needs: 9 classify recalls here carry
+  items well over the 45 characters that triggered it.
+- **Topic complete at step 40**, 100% strength, and the completion screen lists all seven chapters.
+- **No JavaScript errors.** The only network failures were `POST /api/learn-mode/state` 401, which is
+  the signed-out state endpoint behaving correctly, and aborted `/api/events` beacons, which are an
+  artefact of the automated walk clicking faster than the beacons could flush.
+- The overview card reads "Learn 40 steps · Notes 7 topics · Practice 8 questions · Flashcards 42
+  cards" — the draft's own counts.
+
+**Noted, not fixed, and not this packet's:** the check-in header says "Before the next chapter" on
+chapter 7 as well, which is `V006` (`components/LearnModeTab.jsx:429`, every section, packet 57).
+
+### Exit criteria
+
+0 BLOCK, 0 new DEBT, 100% coverage of 46 leaves · every block pinned to a diagram, a quiz item and a
+practice item · exactly three quiz items unpinned and FIRST in the array · all eight Business command
+words used at their census tariffs · `npm test`, `npm run build`, `npm run validate` green · Verify A
+on all 33 ids · Verify B at 390×844 with `?draft=1` · Layer 6 with two planted canaries.
+
+**STAGED, NOT PUBLISHED** — the recalls are written to the packet-7 contract and main's `ReorderRecall`
+reads `recall.shuffled` (DECISIONS 2026-09-15).
+
+
 ## Packet 21 spec — `measures-economic-performance`, Economics 2.3.1 (Opus, 16 September 2026) — IN PROGRESS
 
 **CLAIMED 16 Sep by a third concurrent session.** Packets 19 and 20 are being built by the other two.

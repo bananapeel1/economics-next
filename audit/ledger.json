@@ -2770,10 +2770,10 @@
    "rank": 0,
    "text": "Fix content[].quizIndices and practiceIndices so each block's inline quiz/practice tests what that block taught (currently 5 of 6 blocks show a mismatched MCQ, two of them on untaught material; the Promotion block's practice is an untaught USP question). Suggested mapping is in structureIssues[0]/[1].",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:308-338 block0 quizIndices[3,4,5,6,7]/practiceIndices[0,1] and all 7 blocks' pins verified thematically coherent against 34 quiz + 8 practice prompts, no mismatches",
    "note": null
   },
   {
@@ -2783,10 +2783,10 @@
    "rank": 1,
    "text": "Rewrite all 9 fill-in recalls: remove letter-pattern hints ('SM___', 'lo_', 'ty__'), stop putting the answer in an adjacent template line, and replace at least the Boston Matrix, design mix, promotion and distribution fillins with classification/placement exercises (quadrant drag, ATL/BTL sort, build-the-channel). Fix the two weak reorders (B2B stages, e-commerce transformation) per recallAudit.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:41 fillins use full-word answers (no letter-pattern hints); recall types now 10 fillin/9 match/9 classify/5 reorder, Boston Matrix(match)/Design Mix(classify)/Types of Promotion(classify)/distribution(reorder) all converted",
    "note": null
   },
   {
@@ -2796,10 +2796,10 @@
    "rank": 2,
    "text": "Add diagrams: PLC sales+profit curve with extension-strategy bump, Boston Matrix 2x2 with cash-flow arrows, and a distribution-channel ladder; wire them via diagramRef on blocks 0 and 5.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:307,590,831.. diagramId set on all 7 blocks; components/learn-mode/utils.js:114-118 resolvePinnedDiagram uses pin.id first, diagramRef is legacy-only fallback so 'wire via diagramRef' is correctly superseded by diagramId",
    "note": null
   },
   {
@@ -2809,10 +2809,10 @@
    "rank": 3,
    "text": "Correct practice command words to IAL Business conventions (Define = 2, Explain = 4, Analyse = 6, Assess = 10/12, Evaluate = 20) and rewrite P2/P3 guidance as levels descriptors (KAA + evaluation with contextual judgement) instead of point-per-mark; add a short stimulus to the 10/20-markers.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:2962-3018 Define2/Calculate4/Construct4/Explain4/Analyse6/Discuss8/Assess10/Evaluate20 all match audit/raw/tariff-census.json business rows; guidance on 8/10/20-markers is levels-marked (KAA+evaluation) with a shared Zola stimulus, not point-per-mark",
    "note": null
   },
   {
@@ -2822,10 +2822,10 @@
    "rank": 4,
    "text": "Close the spec gaps with four short subsections: types of branding + ways to build a brand (incl. USP, sponsorship, emotional branding); design-mix social trends (resource depletion, waste minimisation, re-use/recycling); pricing social trends (online sales, price-comparison sites) and the spec's six pricing factors; mass vs niche marketing strategy and product-to-service distribution shift. Rename the section '1.3 Marketing mix and strategy' or split to match 1.3.1-1.3.5.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:912(resource depletion),1118(Types of Branding),1783(pricing trends),608/656(mass/niche) built; rename/split clause correctly refused per bus_spec.txt:504-760 headers, which show 1.3.3 already is the sole correct topic, not five",
    "note": null
   },
   {
@@ -2834,10 +2834,10 @@
    "kind": "accuracy",
    "text": "Distribution (Place) > changes-in-distribution > realExample (Warby Parker): Claims Warby Parker grew 'to a $3 billion valuation through direct distribution alone'. Warby Parker opened its first physical store in 2013 and now operates 200+ stores; its IPO valuation (2021) was ~$6bn and it is a multi-channel retailer. 'Direct distribution alone' is false and the number is unmoored from a date.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "0 hits for 'Warby Parker' anywhere in audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json; distribution realExample replaced at audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:2066 with a verifiable mattress-maker example",
    "note": null
   },
   {
@@ -2846,10 +2846,10 @@
    "kind": "accuracy",
    "text": "Pricing Strategies > factors-determining-pricing > body + recall: The factor list (costs, objectives, brand positioning, competition, PED, economy, legal) does not match the IAL spec list for 'factors that determine the most appropriate pricing strategy': number of USPs/amount of differentiation, PED, amount of competition, strength of brand, stage in the PLC, costs and need for profit. USPs/differentiation and PLC stage are missing; 'state of the economy' is not on the spec. A student revising to this list would miss two mark-scheme-listed factors.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:2920 lists all six spec factors (USPs/differentiation, PED, competition, brand, PLC stage, costs/profit) verbatim matching bus_spec.txt:646-651; 0 hits for 'state of the economy'",
    "note": null
   },
   {
@@ -2858,10 +2858,10 @@
    "kind": "quiz",
    "text": "q17: Same untaught intensive/selective/exclusive taxonomy as Q14. Additionally, 'own stores + website' is arguably 'direct distribution' (taught) rather than 'exclusive distribution' (untaught); a student who learned the section would pick the taught concept and be marked wrong. Distractor 3 does not offer 'direct'.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "0 hits for intensive/selective-distribution/exclusive-distribution anywhere in audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json; bus_spec.txt has 0 occurrences of that taxonomy under 1.3.3, confirming it was rightly untaught vocabulary and is now fully absent",
    "note": null
   },
   {
@@ -2870,10 +2870,10 @@
    "kind": "practice",
    "text": "p0: 'Define the term USP (4 marks)'. In IAL Business (WBS11) 'Define' is a 2-mark command; the 4-mark command is 'Explain'. The model answer pads a definition with an example and a benefit to reach 4 points, which is not how a define question is marked. USP is also never taught in content[] yet this is the inline practice for block 3.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:2962-2969 P0 is command Define, marks 2, on 'marketing objective' (not USP at 4 marks); USP is now taught at audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:1239 'USPs and Differentiation'",
    "note": null
   },
   {
@@ -2882,10 +2882,10 @@
    "kind": "practice",
    "text": "p1: 'Explain how a business might use extension strategies... (6 marks)'. IAL Business 'Explain' is 4 marks; 6 marks is 'Analyse'. Model answer gives 6 point-marks including a definition mark, which mismatches IAL's KAA levels for 6-markers. Also via practiceIndices=[1] on block 4 this PLC question is served at the end of the Pricing block, three blocks after PLC was taught.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:2976 P2 is command Construct, marks 4 (not Explain/6), on a PLC diagram marking the extension strategy; practiceIndices[2] pins it to block1 (the PLC block) at audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:598",
    "note": null
   },
   {
@@ -2894,10 +2894,10 @@
    "kind": "structure",
    "text": "Inline quiz mapping is off by one relative to teaching (content[].quizIndices = [0],[1],[2],[3],[4],[5] look auto-assigned sequentially, and LearnModeTab.jsx:106-108 indexes them straight into quiz[]): block 1 (Marketing Mix/Loyalty) shows the Boston Matrix Q1; block 2 (Design) shows the penetration-pricing Q2 BEFORE pricing is taught in block 4; block 3 (Promotion) shows the design-mix Q3; block 4 (Pricing) shows the distribution-channel Q4 BEFORE distribution is taught in block 5; block 5 (Distribution) shows the BTL Q5. Only block 0 is correct. Fix: block0 [0,1,11,10,6,16,18,20], block1 [9,19], block2 [3], block3 [5,13,22,24], block4 [2,8,12,15,21], block5 [4,7,14,17,23].",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:308,591,832.. all 7 blocks' quizIndices manually cross-checked against their 34 quiz prompts, each thematically matching its own block's subsections; the off-by-one defect cannot recur under the rebuilt 7-block/34-item model",
    "note": null
   },
   {
@@ -2906,10 +2906,10 @@
    "kind": "structure",
    "text": "Inline practice mapping is wrong: practiceIndices [0] on block 3 and [1] on block 4 index into practice sorted by marks ascending (LearnModeTab.jsx:82,110-113), giving the Promotion block a USP 'Define' (untaught) and the Pricing block an extension-strategies question. P2 (pricing, 10 marks) is the obvious fit for block 4 and P4 (Boston) for block 0; P3 (integrated mix, 20 marks) for block 1. Three of five practice questions are never surfaced inline.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "premise stale: components/LearnModeTab.jsx:217-218 shows practiceIndices already resolve against the RAW practiceData array (fixed packet 2, ledger F013/F040/F111 confirmed); real complaint fixed — all 8 practice items now pinned across 7 blocks, 0 unused",
    "note": null
   },
   {
@@ -2918,10 +2918,10 @@
    "kind": "structure",
    "text": "diagrams[] is empty (meta.diagrams = 0). The PLC sales/profit curve and the Boston Matrix 2x2 are the two models in this section that IAL papers expect students to sketch or read; teaching them as bullet lists only is the single biggest pedagogical gap. A distribution-channel ladder diagram would also help block 5.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json tables.diagrams now has 7 entries (was 0), one per block, each wired via diagramId, e.g. line 307/590/831",
    "note": null
   },
   {
@@ -2930,10 +2930,10 @@
    "kind": "structure",
    "text": "Section is numbered '1.3.3' but its scope is the whole IAL topic 1.3 (1.3.1 Product/service design, 1.3.2 Branding and promotion, 1.3.3 Pricing strategies, 1.3.4 Distribution, 1.3.5 Marketing strategy). In the spec, 1.3.3 is 'Pricing strategies' alone. Students cross-referencing the spec or past-paper labels will be confused. Either rename to '1.3 Marketing mix and strategy' or split into five sections matching the spec.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "refusal justified: bus_spec.txt:504,551,596,676,760 show the five real IAL sub-topics are 1.3.1 Meeting customer needs, 1.3.2 The market, 1.3.3 Marketing mix and strategy, 1.3.4 Managing people, 1.3.5 Entrepreneurs and leaders — none matches the finding's invented 'Product/service design'/'Types of branding' etc; section's existing '1.3.3' label is already correct",
    "note": null
   },
   {
@@ -2942,10 +2942,10 @@
    "kind": "structure",
    "text": "Block order does not follow the spec: block 0 is 1.3.5 (strategy: PLC, Boston) and block 1 mixes an untethered '4Ps' intro with 1.3.5 items (B2B/B2C, loyalty), then 1.3.1-1.3.4 follow. Better: 4Ps overview first, then design → promotion/branding → pricing → distribution → strategy (PLC/Boston/B2B/loyalty/mass-vs-niche), so that pricing and promotion can reference the PLC as prior knowledge and the strategy block can synthesise.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "prescribed reorder refuted correctly: bus_spec.txt:596-671 item order is 1 objectives&strategy,2 design,3 promotion&branding,4 pricing,5 distribution, matching audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json block order exactly; real complaint fixed — block0 ($BUNDLE:1-315) ends with 'The Marketing Mix' subsection tying objectives to its 4 elements immediately",
    "note": null
   },
   {
@@ -2954,10 +2954,10 @@
    "kind": "structure",
    "text": "'Marketing Objectives' (SMART etc.) is not an IAL 1.3 spec item; it is a reasonable primer but occupies the first step of the section, which given the 75% step-0 abandonment rate is the most expensive real estate in the section. Consider moving it into the 4Ps step or cutting it.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "half-wrong claim correctly rejected: bus_spec.txt:597 confirms '1a Marketing objectives' is a real spec item; the actually off-spec part, SMART, has 0 hits in audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json now; block0 title merged to 'Marketing Objectives and the Marketing Mix'",
    "note": null
   },
   {
@@ -2966,10 +2966,10 @@
    "kind": "structure",
    "text": "2-per-step pairing produces two orphan single-section steps with heavy widget stacks: 'Boston Matrix' alone (with quiz + takeaway + spaced recall from PLC + its own immediate fillin) and 'Customer Loyalty' alone, 'Viral Marketing' alone. The branding reorder recall duplicates the branding flow block visible on the same step, so 'immediate' recall is copying.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "premise dead: lib/learn-steps.js:38-46 buildSteps() pushes one teach step per subsection individually (secs.forEach), not paired 2-per-step, so the described duplicate-recall pattern is structurally impossible under the current step model",
    "note": null
   },
   {
@@ -2978,10 +2978,10 @@
    "kind": "structure",
    "text": "Block 2 title 'Product/Service Design' covers only the design mix and ethical sourcing; the block's takeaway ('Social trends toward sustainability are reshaping product design') is not supported by content on waste minimisation / re-use / recycling / resource depletion, which the spec lists explicitly.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:912-964 'Designing for Resource Depletion' subsection (waste minimisation/re-use/recycling) now supports block3's sustainability takeaway",
    "note": null
   },
   {
@@ -2990,10 +2990,10 @@
    "kind": "structure",
    "text": "Block 3 takeaway 'ATL reaches mass audiences; BTL is targeted and measurable' is fine, but block 3 never teaches types of branding (individual/family/corporate) or ways to build a brand beyond 'consistent identity', so a student cannot answer the 'types of branding' knowledge questions IAL papers set. Takeaways otherwise match their blocks accurately.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:1118-1139 'Types of Branding' subsection now teaches maker's-name vs seller's-name brand decisions",
    "note": null
   },
   {
@@ -3002,10 +3002,10 @@
    "kind": "structure",
    "text": "Misconceptions are genuinely good: all 15 describe real student errors (vague objectives, rigid PLC, always-divest Dogs, 4Ps in isolation, points = loyalty, design-mix as separate decisions, ethical = less profit, advertising is best, brand = logo, virality on demand, penetration for everything, cost-only pricing, direct is best, e-commerce kills retail). Not filler.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "no-change observation honored: 33 misconception fields present in audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json (one per subsection), carried through and expanded from 15",
    "note": null
   },
   {
@@ -3014,10 +3014,10 @@
    "kind": "structure",
    "text": "Difficulty ramp is flat: every section follows the identical template (definition paragraph → flow → paragraph → example), analysis/evaluation lives only in examMatters text, and the only evaluation exercises are the three 'pick the hedged option' MCQs. No section escalates to an applied mini-case.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "12 distinct body-type sequences across 33 subsections, not one template; P3/P5/P6 (Discuss8/Assess10/Evaluate20 at audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:2983-3018) form one escalating applied case on 'a business entering the reusable bottle market'",
    "note": null
   },
   {
@@ -3026,10 +3026,10 @@
    "kind": "specGap",
    "text": "1.3.2 Types of branding: individual brand, brand family (family branding), corporate/own brand — not taught anywhere in content[].",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:1118-1139 'Types of Branding' subsection now teaches the concept (named taxonomy correctly avoided as off-spec vocabulary, 0 hits for individual/family/corporate brand)",
    "note": null
   },
   {
@@ -3038,10 +3038,10 @@
    "kind": "specGap",
    "text": "1.3.2 Ways to build a brand: USPs/differentiation, advertising, sponsorship, use of social media — USP and sponsorship absent from content (USP appears only in quiz Q13 and practice P0).",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:1239(USPs and Differentiation),1296(Advertising, Sponsorship and Social Media) — USP, advertising, sponsorship, social media all now taught as ways to build a brand",
    "note": null
   },
   {
@@ -3050,10 +3050,10 @@
    "kind": "specGap",
    "text": "1.3.2 Changes in branding and promotion to reflect social trends: 'emotional branding' is named in the spec and only appears in the B2B section as a contrast; not taught as a concept.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:1357-1373 'Changes to Reflect Social Trends' subsection teaches emotional branding as its own concept, not only as a B2B aside",
    "note": null
   },
   {
@@ -3062,10 +3062,10 @@
    "kind": "specGap",
    "text": "1.3.2 Types of promotion: public relations and sponsorship omitted from the ATL/BTL list.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "sponsorship taught at audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:1296 under ways-to-build-a-brand (bus_spec.txt:626, correct placement); public-relations clause correctly refused — 0 hits for 'public relations' in bus_spec.txt, it is not a spec term",
    "note": null
   },
   {
@@ -3074,10 +3074,10 @@
    "kind": "specGap",
    "text": "1.3.1 Changes in the elements of the design mix to reflect social trends: concern over resource depletion, designing for waste minimisation, re-use and recycling — only 'ethical sourcing' is covered; the circular-design bullets are missing.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:912-964 resource depletion/waste minimisation/re-use/recycling all now taught, matching bus_spec.txt:615-619",
    "note": null
   },
   {
@@ -3086,10 +3086,10 @@
    "kind": "specGap",
    "text": "1.3.3 Factors that determine the most appropriate pricing strategy: 'number of USPs / amount of differentiation' and 'stage in the product life cycle' are not in the factors section (PLC is mentioned once in passing in the methods intro).",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:2920 six pricing factors list complete and exact, matching bus_spec.txt:646-651 (same evidence as accuracy-02)",
    "note": null
   },
   {
@@ -3098,10 +3098,10 @@
    "kind": "specGap",
    "text": "1.3.3 Changes in pricing to reflect social trends: online sales and price comparison sites — not taught (EasyJet dynamic pricing example gestures at online pricing but price-comparison sites are absent).",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:1783-1847 'Online Sales and Price Comparison Sites' subsection built, matching bus_spec.txt:661-663",
    "note": null
   },
   {
@@ -3110,10 +3110,10 @@
    "kind": "specGap",
    "text": "1.3.4 Changes to distribution to reflect social trends: 'changing from product to service' (e.g. streaming replacing physical media, subscription models) — not taught.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "bus_spec.txt:672 '5b Changes in distribution methods.' has no elaborating bullets, so no specific wording was overclaimed; audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:2051 teaches the gap in plain English ('Selling access rather than the object...a subscription, a stream')",
    "note": null
   },
   {
@@ -3122,10 +3122,10 @@
    "kind": "specGap",
    "text": "1.3.5 Marketing strategies appropriate for different types of market: mass markets vs niche markets — not taught as a topic ('niche' appears only inside two misconceptions).",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:608-658 'Mass Markets'/'Niche Markets' subsections built, matching bus_spec.txt:606-609",
    "note": null
   },
   {
@@ -3134,10 +3134,10 @@
    "kind": "specGap",
    "text": "1.3.5 Consumer behaviour: how businesses develop customer loyalty — covered; but the spec framing 'consumer behaviour' (e.g. rational vs emotional decision-making) is only touched via B2B/B2C.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:764-808 'Developing Customer Loyalty' taught in depth; 'rational vs emotional' parenthetical correctly refused — 0 hits for 'rational' in bus_spec.txt, that framing belongs to econ_spec.txt Economics 1.3.2",
    "note": null
   },
   {
@@ -3146,10 +3146,10 @@
    "kind": "specGap",
    "text": "Unsure: whether the current IAL spec wording for distribution channels uses the '4-stage / 2-stage / direct' terminology; content uses 'zero-level / one-level / two-level', which is fine conceptually but may not match mark-scheme vocabulary.",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "resolved in spec's favour: bus_spec.txt:665-671 names 'four stage/three stage/two stage'; audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:1929-1958 uses exactly that terminology, 0 hits for the old 'zero-level/one-level/two-level'",
    "note": null
   },
   {
@@ -16558,10 +16558,10 @@
    "kind": "specThin",
    "text": "1.3.3 Marketing objective: increase revenue — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 22,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "audit/snapshots/packet-22-bundle__business__marketing-mix-strategy.json:22 'increase revenue' now taught with a worked numeric contrast (revenue peaks at $16 vs market-share/profit at other prices) distinguishing it from the other objectives",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -17937,6 +17937,19 @@
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
+   "note": null,
+   "added": "2026-09-16"
+  },
+  {
+   "id": "V012",
+   "kind": "feature",
+   "title": "terms.later-unit flags a term the specification teaches in Units 1-2. laterUnitTerms() builds its late set from Units 3-4 sub-topic LABELS and excludes only labels built entirely from Unit 1-2 LABEL words — it never reads Unit 1-2 requirement WORDING. A phrase Units 1-2 teach in their own text, but do not use as a heading, is therefore classed as later-unit vocabulary. Measured against audit/raw/spec-items.json: 2 of 40 late terms are wrong this way — 'niche markets' (Business: taught at bus_spec.txt:508 as 1.3.1 sub-topic 1a and :609 as 1.3.3 1e-2, and also a Unit 4 heading at :1437) and 'exchange rates' (Economics). Packet 16 carried the niche markets finding as explained DEBT and baselined it; packet 22 hits the same false positive on the leaf that literally reads 'niche markets'. The rule's own wording is 'a term the spec introduces ONLY in Units 3-4'. Acceptance: laterUnitTerms() drops exactly those 2 terms and no others, a test asserts both directions, and the baseline shrinks by the meeting-customer-needs key.",
+   "file": "lib/content-validator.mjs",
+   "packet": 22,
+   "status": "confirmed",
+   "closed_by": "packet-22",
+   "verified_by": "packet-verifier 2026-09-16",
+   "evidence": "lib/content-validator.mjs:780-788 earlyText now searches Unit1-2 requirement wording, not just labels, dropping 'niche markets'(bus_spec.txt:508,609)/'exchange rates'; lib/content-validator.test.mjs:182-209 asserts both directions; node --test lib/content-validator.test.mjs: 105/105 pass",
    "note": null,
    "added": "2026-09-16"
   }
