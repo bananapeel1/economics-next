@@ -1377,3 +1377,20 @@ one packet's row.
 **Why it is worth a rule of its own.** It will outlive the 270px fix that exposed it. Cross-cutting fixes to
 content modules are going to keep happening — three sessions are working in this tree — and every one of them
 leaves a staged draft stale unless someone re-runs the packet's runner.
+
+**Measured across all ten built sections, and the answer is clean.**
+`node audit/scripts/check-staged-drafts.mjs` compares each `packet-*-bundle__*.json` against that section's
+`?draft=1` payload. **0 sections carry drift.** Two — `decision-making-techniques` and
+`introductory-concepts` — hold **no draft at all**: their payload is identical to their own pre-packet
+snapshot, because their drafts went with the packet 14/15 reverts, and their publish lines re-stage before
+publishing, so nothing is lost. The gate step only protects packets from here on; this answers the eight
+sections built before it, ahead of the packet 5/7 checkpoint where they ship from their staged drafts.
+
+Two things decide whether that check works, both learned the hard way by other packets:
+- **`sameJson` from `lib/content-gate.mjs`, never `JSON.stringify`** — jsonb does not preserve key order,
+  and a byte comparison reported 8 of 8 tables mismatched on packet 18 when all eight were deep-equal.
+- **The anonymous `?draft=1` payload is not the tables.** `sectionPayload()` rewrites `content.quizIndices`,
+  subsets `quiz`, caps `flashcards` and `extras`, and empties `mistakes`. A naive comparison reports drift on
+  every section. The check compares `notes`/`diagrams`/`practice` in full (untouched), `content` minus the one
+  rewritten field, the served items by id, and the true lengths from `counts`. What it cannot see is an edit
+  to an item the anonymous slice does not serve — that needs an entitled fetch, and the script says so.
