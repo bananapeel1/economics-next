@@ -3,30 +3,20 @@ import { useState, useMemo } from 'react';
 import { recordPretest } from '@/lib/strength';
 import { trackFunnel } from '@/lib/funnel';
 import { saveSectionState } from '@/lib/section-state';
+import { pickPretestQuestions } from '@/lib/pretest-pool';
 
 /* ── Pre-test Before Learning ── */
 export default function PreTest({ quizData, subjectId, sectionId, onDone, reservedQuestions }) {
   /*
-   * F079. The pre-test drew from the whole bank, so in about half of sections a student met one of
-   * these three again a few minutes later as the block's "Quick quiz" — with the answer already
-   * revealed. Answering a question you were shown the answer to is not a check on anything.
-   *
-   * The blocks' own questions are excluded here. If a section has too few left over, the excluded
-   * ones come back rather than showing a shorter pre-test, because two questions still beat none;
-   * they are appended last so they are only reached when there is nothing else.
+   * F079, and V015 which brought it back. The selection lives in lib/pretest-pool.js because
+   * LearnModeTab's offer has to promise the same number this renders — it used to say "Three
+   * questions" and show two. The rule it encodes: never a question a chapter check-in will ask,
+   * and a short pre-test rather than a padded one.
    */
-  const questions = useMemo(() => {
-    if (!quizData?.length) return [];
-    const reserved = new Set(
-      (reservedQuestions || []).map((q) => String(q?.question || '').replace(/\s+/g, ' ').trim()),
-    );
-    const key = (q) => String(q?.question || '').replace(/\s+/g, ' ').trim();
-    const free = quizData.filter((q) => !reserved.has(key(q)));
-    const rest = quizData.filter((q) => reserved.has(key(q)));
-    // Stable order, so a reload does not silently swap the questions under a half-finished test.
-    const pool = [...free, ...rest];
-    return pool.slice(0, Math.min(3, pool.length));
-  }, [quizData, reservedQuestions]);
+  const questions = useMemo(
+    () => pickPretestQuestions(quizData, reservedQuestions),
+    [quizData, reservedQuestions],
+  );
 
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);

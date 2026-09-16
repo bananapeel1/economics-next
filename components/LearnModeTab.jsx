@@ -9,6 +9,7 @@ import InlinePractice from './learn-mode/InlinePractice';
 import InlineQuiz from './learn-mode/InlineQuiz';
 import { readAnswerLog, orderByPriority } from '@/lib/answer-log';
 import PreTest from './learn-mode/PreTest';
+import { pickPretestQuestions } from '@/lib/pretest-pool';
 import CompletionScreen from './learn-mode/CompletionScreen';
 import ReorderRecall from './learn-mode/ReorderRecall';
 import FillInRecall from './learn-mode/FillInRecall';
@@ -191,7 +192,6 @@ export default function LearnModeTab({
     if (totalSteps && currentStep !== safeStep) onStepChange(safeStep);
   }, [currentStep, safeStep, totalSteps]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const pretestCount = Math.min(3, (quizData || []).length);
 
   // ── Distribute diagrams/quiz/practice to check-in steps ──
   const sortedPractice = useMemo(() => [...(practiceData || [])].sort((a, b) => a.marks - b.marks), [practiceData]);
@@ -246,6 +246,14 @@ export default function LearnModeTab({
   // F079: every question the check-ins will ask, so the pre-test can avoid them. Declared beside
   // the other memos, above every early return (the TDZ lesson from packet 8).
   const blockQuizQuestions = useMemo(() => Object.values(quizMap).filter(Boolean), [quizMap]);
+
+  /* The offer must promise exactly what PreTest will render, so both ask the same function. This
+     was `Math.min(3, quizData.length)` — blind to the reserved set, so it said "Three questions"
+     and delivered two, and after V015 it would have said three and delivered two honest ones. */
+  const pretestCount = useMemo(
+    () => pickPretestQuestions(quizData, blockQuizQuestions).length,
+    [quizData, blockQuizQuestions],
+  );
   function getPracticeMode(stepIndex) {
     const ordinal = practiceStepIndices.indexOf(stepIndex);
     const total = practiceStepIndices.length;
@@ -495,10 +503,10 @@ export default function LearnModeTab({
       {/*
         * Optional pre-test offer (step 0 only, first visit only).
         *
-        * The count is computed, not written. PreTest slices its pool at three, and a signed-out or
-        * free student is served only PREVIEW_LIMITS.quiz items by the API (F086), so on the busiest
-        * path in the product the offer promised three questions and delivered two. Packet 16's
-        * walkthrough.
+        * The count is computed by the same function that picks the questions, so the offer cannot
+        * promise a number the test does not deliver. It used to say three and show two on the
+        * busiest path in the product (packet 16's walkthrough), and V015 would have widened the
+        * gap. A section with no unreserved question hides the offer entirely.
         */}
       {pretestOffered && safeStep === 0 && pretestCount > 0 && (
         <div className="lm-pretest-offer" role="region" aria-label="Optional pre-test">
