@@ -1,5 +1,11 @@
 # Next session brief
 
+## Packet 21 spec — `measures-economic-performance`, Economics 2.3.1 (Opus, 16 September 2026) — IN PROGRESS
+
+**CLAIMED 16 Sep by a third concurrent session.** Packets 19 and 20 are being built by the other two.
+Brief is being written; do not start this section in another session.
+
+
 ## Packet 20 spec — `types-sizes-businesses`, Economics 3.3.1 (Opus, 16 September 2026)
 
 **Section:** `types-sizes-businesses`, Economics Unit 3 (WEC13), IAL topic **3.3.1 Types and sizes of
@@ -250,9 +256,10 @@ every figure:
   contradiction is resolved rather than argued away.
 - **Methods priced against each other:** loan $1,800 × 60 = **$108,000** ($18,000 interest); lease $900 × 48 =
   **$43,200**, a **$3,200** premium over the $40,000 purchase; trade credit 60 days on $15,000 = **$30,000**.
-- **Five diagrams, pinned by `diagramId` on the BLOCK**, one per chapter, where the section had none. **Three
-  are grids** — debt against equity, the four forms, and finance by liability type — because a diagram is the
-  only surface in the schema that can carry a table (packet 17's finding, used three times here).
+- **Five diagrams, pinned by `diagramId` on the BLOCK**, one per chapter, where the section had none. **Four
+  of the eight views are grids** — debt against equity, the three methods priced, the four forms, and finance
+  by liability type — spread across three of the five diagrams, because a diagram is the only surface in the
+  schema that can carry a table (packet 17's finding, used four times here).
 - **Practice at IAL Business Unit 2 tariffs:** Define 2 · Calculate 4 · Explain 4 · Analyse 6 · Assess 10 ·
   Evaluate 20. Every block carries at least one; all six reach a student.
 

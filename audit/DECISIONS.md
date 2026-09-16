@@ -1036,3 +1036,56 @@ directions: the slug is not content, and the content is not free to use the word
 `jsonb` normalises key order, so a byte comparison reports all 8 tables as mismatched when all 8 are
 deep-equal. `lib/content-gate.mjs` exports `sameJson` for exactly this and the codebase documents why;
 a check written without it produced a false alarm during this packet's own verification.
+
+## Packet 19 — planning-raising-finance (16 September 2026)
+
+**A finding can name the wrong section, and that is now the third kind of scope error this programme
+has seen.** Packet 16's was vocabulary the specification does not use; packet 18's was a clause from a
+neighbouring topic; this one is a whole sub-topic. `specGap-05` and `topFix-02` clause (a) ask
+`planning-raising-finance` to teach the construction and interpretation of a cash-flow forecast. That is
+IAL **2.3.2 · 4** (`bus_spec.txt:907-908`), owned by the `financial-planning` section; 2.3.1 spans
+`:844-877` and has no cash-flow leaf. The item is **reassigned to packet 31**, with the reasoning in its
+ledger note, and the defect it actually saw — a "Define the term cash flow (4 marks)" practice item on a
+term the section never taught — is closed by deleting the item. **Before building what a finding asks
+for, check that this section owns the leaf; a finding written from the UK GCE structure will sometimes
+point at another section's content.**
+
+**The opposite error is commoner and costs more: three findings asked for in-scope content to be
+DELETED.** `quiz-01`, `quiz-02` and `specGap-07` all assert that franchising and social enterprise are
+Unit 1 material that this section should not test. They are IAL **2.3.1 · 4b** (`:872-873`) — and 4b was
+one of the four leaves with no coverage at all, so the audit recommended deleting the only trace of a
+requirement the section was already failing. Both topics are now taught. **A "this is out of scope"
+finding needs the same spec check as a "this is missing" one, and it is the more dangerous of the two,
+because acting on it removes coverage rather than adding it.**
+
+**Block order follows the specification even when a finding asks otherwise.** `structure-03` wants Forms
+of Business and Liability moved ahead of External Finance, because March taught share capital before Ltd
+and plc were defined. The dependency is real; the remedy is not, because the spec's order is Planning ·
+Internal · External · Forms · Liability. It is fixed along the spec's own seam instead: **3b-2 teaches
+share capital as a method** — selling part of the ownership for permanent capital — and **5b answers
+which businesses may use it**, which is exactly the question 5b exists for. **Where a dependency crosses
+chapters, look for the leaf that already owns the dependent half before reordering the chapters.**
+
+**A diagram that is a table can collide with itself, and only a browser can see it.** Four of this
+section's eight diagram views are grids, spread across three of its five diagrams, and at the 500-unit
+frame every other diagram uses, three cells
+overlapped their neighbours — "Overdraft, leasing, trade credit" ran 23 units under its own "Yes".
+Nothing in the schema or the validator knows how wide a string is. Measured with
+`getComputedTextLength()` in the Browser pane, fixed by widening the grid frame to 560 with columns at
+26/260/440, and guarded from here on by a deliberately pessimistic width estimator in the runner
+(0.65em against the 0.642em the browser actually measured) that fails the build on any overlap or frame
+overrun. **Any packet drawing a grid needs that guard; copy it from
+`scripts/packet-19-planning-raising-finance.mjs`.**
+
+**An internal ledger id can leak into text a student reads, and nothing was looking for it.** Layer 6
+found "…each was absent from this section before **(specGap-03)**" inside a teaching paragraph. It reads
+as plausible prose, the validator has no rule for it, and no other check in the pipeline would ever have
+caught it. The runner now bans every ledger-id shape — `specGap`, `topFix`, `structure`, `accuracy`,
+`quiz`, `practice`, `specThin` — from the content itself. **The class, not the instance.**
+
+**A section can ship exact duplicate flashcards and no ledger item will say so.** Three of this
+section's 24 cards — `82a0dfc2`, `426a5a7a`, `adcaa1ea` — each appeared a second time with a `-2`
+suffix and identical text, so a student revising the section met the same three cards twice in a row.
+Packet 57 is scoped to cross-surface duplication and would eventually have found it; a `wc -l` against
+`new Set(ids)` at the start of a content packet finds it in a second. **Worth adding to the per-section
+opening measurement.**
