@@ -1,5 +1,243 @@
 # Next session brief
 
+## Take packet 24 — `price-determination`, Economics 1.3.4 (Opus, NEW session)
+
+Packets 19, 20 and 21 are built and held. **22 (`marketing-mix-strategy`) and 23 (`supply`) are already
+claimed by other sessions** — check the ledger before assuming otherwise. The next free content packet is
+**24, `price-determination`**: Economics Unit 1 (WEC11), IAL topic **1.3.4**, `econ_spec.txt:692-722`,
+**11 leaves** (small — the smallest section in a while), 29 of 30 ledger items open, live at
+**13 BLOCK / 42 DEBT / 91%**.
+
+**Read first:** `PROGRESS.md`, `DECISIONS.md` (the last two entries are packet 21's and both apply to
+every content packet from here), this file's packet 21 spec below, then `PROTOCOL.md`.
+Then `node audit/scripts/ledger.mjs packet 24 --open`.
+
+**The rule-2 pre-flight is already done for you, and it comes out the opposite way to packet 18's.**
+Counts in `econ_spec.txt`: `equilibrium` **13** · `excess demand` **1** · `excess supply` **1** ·
+`consumer surplus` **1** · `producer surplus` **3** · `price mechanism` **3** · `rationing` **1** ·
+`signalling` **1** · `incidence` **2** · `indirect tax` **6**. Every one of those is this section's
+own vocabulary and it must be taught in those words. **Packet 18 banned `equilibrium` outright** because
+it is zero in `bus_spec.txt` — that ban was about the Business specification, not about the word.
+**A term banned in one subject can be required in the other; check the file for the subject you are in.**
+The ones to ban here are `deadweight loss` (**0**) and `market clearing` (**0**).
+
+**Start from `scripts/packet-21-*.mjs`**, not 18's — it is the most recent and carries two checks the
+earlier runners do not (see DECISIONS): the Appendix 6 gloss check, and a derived rather than typed
+arithmetic spine. Copy both.
+
+**Exit criteria:** staged bundle at 0 BLOCK / 0 new DEBT / 100% of 11 leaves · every block pinned to a
+diagram, a quiz item and a practice item · practice on the ECONOMICS ladder only (Define 2 · Calculate
+2/4 · Draw 4 · Explain 4 · Analyse 6 · Examine 8 · Discuss 14 · Evaluate 20, **no Assess, no 10-mark**) ·
+Verify A clean · a 390×844 walk · Layer 6 with two planted canaries · PROGRESS row · commit · push.
+**Do not publish**: the packet 5/7 checkpoint still holds, and six sections now wait on it.
+
+### What packet 21 learned that packet 24 needs
+
+1. **Derive, do not type, any figure a student could compute.** Packet 21 carried two price indices for
+   the same three years, both called "the price index", and a student deflating GDP with the wrong one
+   got a different answer from the section's own. Nominal GDP is now derived as real × index ÷ 100. See
+   DECISIONS, 16 Sep. 1.3.4 has the same exposure: a tax incidence split, a surplus area and an
+   equilibrium all fall out of one pair of schedules, and typing any of them twice will eventually type
+   them differently.
+2. **A gloss that cites Appendix 6 must say what Appendix 6 says.** Five `examMatters` and one practice
+   guidance described Examine as setting out a relationship; the appendix says it requires *evaluation*
+   and a brief assessment. **Packet 20 shipped the same error in the same command word on the same day.**
+   `claim.uncited` cannot see it — the sentence has a citation. The runner check is in
+   `packet-21-…mjs`; copy it. It caught four further glosses that cited the appendix and then said
+   nothing it says. **Packet 23 found the same class again in two shapes that check cannot see** — an
+   accurate citation with an extra requirement bolted on — and its `APPENDIX_CLAIMS` check is now in
+   packet 21's runner too, A/B'd. **Carry both.** Three packets shipped this error independently on one
+   day; the cause is reasoning about what a command word sounds like instead of reading its row.
+3. **`reorder.source` reads a flow step's `title` and nothing else** (`lib/content-validator.mjs:347`).
+   A flow whose words are in the `subtitle` is invisible to it, and the recall beside it counts as a
+   sequence the section never taught.
+4. **A diagram that declares `kind: "table"` must drop its checklist**, and a DRAWN diagram with a dense
+   table bolted beside it trips `diagram.table-kind` whatever you do. Decide per diagram: reference
+   table → declare it and drop the checklist; drawn diagram → move the table to the Notes.
+5. **Check the whole `audit/raw/tariff-census.json` row, not the command word you expect.** 1.3.4's
+   `Draw` (4 marks) is "construct an accurately labelled diagram" and this topic is the one that most
+   needs it — tax incidence, surplus areas and shifts are all drawn answers.
+
+### Two things that are NOT packet 24's to fix
+
+- **`FREE_QUIZ_MAX = 10` now binds.** Packet 21's section has ten chapters, and `freeQuizPayload()`
+  spends 2 on the Quiz tab before taking one pin per chapter, so **chapters 9 and 10 show a signed-out
+  student no quiz**. A Pro student gets all 43 and every pin resolves. Packet 20 escalated the adjacent
+  problem (the pre-test padding its pool from reserved items). Both are freemium-boundary calls for the
+  founder and no content packet can fix either. Measured, not argued: run
+  `sectionPayload()` over a staged bundle with `isPremium` both ways.
+- **`diagram.table-kind` is absent from `audit/validator-baseline.json` entirely** (0 of its 2,432 keys),
+  because the baseline was written 2026-09-15 and the rule landed after it in `77eb765`. All 15 of its
+  live findings repo-wide therefore read as "new", including one on `measures-economic-performance`'s
+  untouched live content. It is not a regression and `npm run validate` still exits 0. **Do not
+  re-baseline to silence it** — with three sessions staging concurrently, `--baseline --confirm` would
+  adopt everyone else's in-flight findings as accepted debt (the packet 3.1 trap).
+
+
+## Packet 23 spec — `supply`, Economics 1.3.3 (Opus 5, 16 September 2026) — IN PROGRESS, CLAIMED
+
+**Section:** `supply`, Economics Unit 1 (WEC11), IAL topic **1.3.3 Supply**, `audit/raw/econ_spec.txt:656-687`.
+**22 rows off the span, 19 of them LEAVES.** 30 section opens. **25 open ledger items.**
+Live state: **12 BLOCK / 35 DEBT / 95% coverage**, 8 subsections in 3 blocks, 25 quiz, 5 practice,
+18 flashcards, 3 diagrams.
+
+IAL **Economics** ladder, from `audit/raw/tariff-census.json` (Appendix 6): Define 2 · Calculate 2/4 ·
+**Draw 4** · Explain 4 · Analyse 6 · Examine 8 · Discuss 14 · Evaluate 20. **There is no Assess, no
+Outline and no 10-mark item in Economics.**
+
+### Rule 2 pre-flight: what this section may not say
+
+Word-boundary counts over the whole Economics specification, run before a word was written:
+
+| term | in `econ_spec.txt` | verdict |
+|---|---|---|
+| `momentary` | **0** | `topFix-02`'s prescribed frame for the new block |
+| `joint supply` · `competitive supply` | **0 / 0** | `specGap-03`, `topFix-05`, `structure-08`'s prescribed additions; `joint` hits twice, both *joint ventures* (:1254, :1957) |
+| `producer expectations` · `weather` · `climate` | **0 / 0 / 0** | the rest of `specGap-03`'s "common Edexcel extensions" |
+| `KAA` · `levels descriptor` | **0 / 0** | `topFix-05` and `practice-02`'s prescribed guidance format |
+| `returns to scale` | **0** | block 2's organising frame — absent from IAL *entirely*, not merely from Unit 1 |
+| `marginal product` · `diminishing returns` · `marginal cost` | 2 (:1305, :1316) · 1 (:1306) · 2 (:1316) | all inside the **Unit 3** costs span, `terms.later-unit` for a WEC11 section |
+| `economies of scale` | 6, first at :1321 | Unit 3 (3.3.2) |
+| `producer surplus` | 3, all at **:703-706** | IAL **1.3.4 · 2a** — `price-determination` owns it |
+| `natural disaster` | 1, at **:668** | IS the spec's own shock term (1c-5) — this is what gets taught |
+| `capacity` · `legal constraint` · `perishab` · `mobility of factors` | **1 each**, :680-683 | the 2c bullets and nowhere else: the spec NAMES them and never explains them |
+| `equilibrium` | 13, none in 1.3.3 | 1.3.4's subject, not this section's |
+
+**Sixth instance of the packet 13/16/17/18/22 rule.** The March section explains the upward slope by
+"increasing **marginal costs** of production" — Unit 3 vocabulary (`:1316`) in a Unit 1 section. IAL
+1.3.3 · 1a gives no mechanism for the slope at all, so the mechanism is taught in the spec's own
+**"costs of production"** (1c-1): producing more draws in resources that cost more per unit, so a
+higher price is needed to make the extra output worth supplying.
+
+### Eight of twenty-five scope claims are wrong (the rate holds: 4·4·6·5·6·8)
+
+1. **`topFix-02` is REFUTED in its prescribed form.** It asks for a "momentary / short run / long run"
+   block. `momentary` is 0 in the specification — and the phrase is already live, in this section's
+   own second common-mistake. The spec's frame is **2d** ("the distinction between the short run and
+   long run in economics and its significance for price elasticity of supply") and **2c-1** ("the time
+   period"). Its *delete* clause is right and is built: block 2 goes.
+2. **`specGap-03` is REFUTED.** It concedes the spec list is already covered and asks to add joint and
+   competitive supply, producer expectations and weather. All four are 0 in the specification. The
+   section does not learn them; **Q20, which tests joint supply, is deleted instead** — the finding
+   read a quiz item testing off-spec content as evidence that the content was missing.
+3. **`structure-08`'s second half goes with it.** Its first half is right: block 1's takeaway 3 drops
+   the spec's own `natural disasters` (1c-5), which is restored.
+4. **`topFix-05`'s duplicate pairs are wrong — all three of them.** Q1/Q10, Q4/Q16 and Q6/Q12 were
+   checked by token overlap over question *and* options: they test shift-vs-movement, perfectly
+   inelastic supply and PES determinants respectively, and share nothing but the word "supply". The
+   genuine near-duplicates are **Q9/Q12** (both: a subsidy shifts supply right) and **Q13/Q19** (both:
+   a productivity or technology gain shifts supply right). The real ones are fixed. Third instance of
+   packet 3.1's lesson that rule 1 applies to a finding's *arithmetic*, not only to its scope.
+5. **`topFix-05`'s "10- and 20-mark practice guidance" cannot exist.** Economics has **no 10-mark
+   tariff and no Assess**; P2 is "Assess … (10 marks)" and is invalid twice over. It is re-tariffed to
+   **Examine (8)**, not rewritten. `KAA` is a UK GCE mark-scheme abbreviation, 0 in the specification;
+   guidance above 6 marks is written to the command word's own Appendix 6 description instead.
+6. **`specGap-01` is half wrong.** "No quiz or practice item with raw figures" — **Q16 is exactly
+   that** ($10→$12, 200→230, PES 0.75, correct). A student never sees it because of the wiring
+   (`structure-01`), so the defect is the pin, not the absence. The worked calculation in the body,
+   which the finding also asks for, is genuinely missing and is built.
+7. **`specGap-04` belongs to packet 24 and is REASSIGNED.** A supply shift's effect on equilibrium
+   price and quantity is **1.3.4 · 1b** (`:697-698`); 1.3.3 has no equilibrium leaf. The finding says
+   so itself ("strictly 1.3.4") and then asks this section to build it because *this section's own
+   examMatters* demands it. The circularity is the bug: the examMatters sentences are removed, and
+   `price-determination` keeps the leaf. Fourth instance of packet 19's wrong-SECTION sub-class.
+8. **`structure-09`'s first half is the same claim** and is reassigned with it; its second half (no
+   worked PES calculation anywhere) is true and is built.
+
+**`specGap-05` is CONFIRMED and stays here**, against its own hedging ("Exact IAL bullet numbering …
+unsure"). **1c-3 is "indirect taxes (specific and ad valorem)"** and 1c-4 is "government subsidies" —
+both are shift factors of *this* topic, so the vertical shift by a specific tax and the pivot for an
+ad valorem tax are taught here. **The incidence** — who actually bears the tax — is 1.3.4 · 4b and
+stays out.
+
+### What gets built
+
+Five blocks in the specification's own order, one subsection per idea:
+
+| # | Block | Spec leaves |
+|---|---|---|
+| 1 | The Supply Curve | 1a, 1b |
+| 2 | What Shifts Supply | 1c-1 … 1c-5 |
+| 3 | Price Elasticity of Supply | 2a, 2b-1 … 2b-5 |
+| 4 | What Determines PES | 2c-1 … 2c-5 |
+| 5 | The Short Run and the Long Run | 2d |
+
+- **8 subsections → 24**, plus five check-ins. Block 2 (Unit 3 costs) is deleted outright; its two
+  subsections are replaced by the spec's five shift factors and the SR/LR block the spec actually asks
+  for, which is about **elasticity** and never mentions returns to scale.
+- **3 diagrams → 5**, one per block, each pinned from the BLOCK's `diagramId`. All five are NEW: none of the nine
+  scenario SVGs matches a pre-packet one, and the two old PES diagrams were top-level `svg` fields
+  rather than scenario sets. *(This line first said the two PES diagrams were "kept and pinned".
+  They were rebuilt from the supply functions. Verify A caught it.)* The grid gets the 560-unit frame and the 0.65em width guard.
+- **One arithmetic spine, and it is TWO functions, not one.** Kavira Ceramics' own two points fix a
+  short-run curve `Qs = 30P + 160` and a long-run curve `Qs = 120P − 560`, both through (400 tiles,
+  $8), derived in `_packet23-util.mjs` from the figures rather than asserted. Every PES value, every
+  plotted curve and the worked calculation are generated from them, and the runner re-derives each
+  from the emitted SVG. *(This line first said `Qs = 30P − 60` — a placeholder written before the
+  section was built, which survived into the brief. Verify A caught it.)*
+- **Practice 5 → 8**, every command word and tariff checked against the Economics census. **`Draw` (4)
+  — "construct an accurately labelled diagram" — has never been used in this programme** and is what
+  1b and 1c are asking for; this is the Economics counterpart of packet 18's `Construct` finding.
+- **12 `fillin.hint` violations → 0**: word banks with distractors, no first-letter hints.
+- Quiz stays at 25: Q14 (producer surplus, 1.3.4), Q20 (joint supply, off-spec) and Q21 (P = MC, Unit
+  3, and its explanation marks a wrong answer) are deleted, Q9/Q12 and Q13/Q19 are de-duplicated, and
+  the replacements are PES calculation from raw figures, the five PES values, perishability, legal
+  constraints and SR/LR elasticity.
+
+### Ledger
+
+**Closes 23:** topFix-01, topFix-02, topFix-03, topFix-04, topFix-05, accuracy-01, accuracy-02,
+practice-01, practice-02, structure-01 … structure-08, specGap-01, specGap-02, specGap-03, specGap-05,
+specThin-01, specThin-02. (`specGap-03`, `structure-08` and the three topFix items close on the
+refutation plus the part of each that survives it — each clause is named in the runner.)
+
+**Reassigned to packet 24 (`price-determination`):** `C-supply-specGap-04`, `C-supply-structure-09`.
+
+### Verify B — 390×844, signed out, storage cleared, `?draft=1`
+
+Walked on the dev server on 3001 (borrowed from another session; it serves the same database, so the
+draft resolves). **29 steps** (24 teach + 5 check-in), exactly the number the spec block predicted.
+
+- **Every one of the 24 teach steps carries exactly one recall, and all 24 prompts are distinct.**
+  That closes `structure-04` by observation rather than by reasoning: its complaint was that under the
+  old pairing model a lone third subsection made its recall appear twice back to back while the last
+  one never appeared at all. One subsection is one step, so neither can happen.
+- **All five check-ins render a diagram** (steps 5, 12, 18, 24, 29) — `structure-02` and `topFix-01`.
+  The March section pinned one diagram and left the two carrying the whole PES half unreachable.
+- **The two `kind: 'table'` diagrams behave as declared.** Step 18 (a drawn diagram) shows the "WHAT A
+  CORRECT DIAGRAM SHOWS" checklist header; steps 24 and 29 (the determinants grid and the two-horizon
+  grid) do not, which is what `kind: 'table'` is for — nobody reproduces a lookup table in an exam.
+- `document.documentElement.scrollWidth` is **390 at every step**: no horizontal overflow.
+- Chapter boundaries land where the blocks do — `part 1 of 4`, `1 of 6`, `1 of 5`, `1 of 5`, `1 of 4`.
+- **The last step is the last step.** At step 29 there is no Next control and the counter does not
+  advance; a second walk that resumed from a saved pointer came back to 29 rather than past it.
+- No console error, no empty body, no step that failed to render.
+
+Two things seen in passing, neither owned by a ledger id and neither a defect in this packet:
+
+- **`?draft=1` is less of a preview than it looks.** On the topic route the DEFAULT tab is Notes, and
+  Notes is shipped server-side from LIVE content, so a draft preview opens showing the OLD section and
+  only switches to the draft when the Learn tab is clicked and `StudyApp`'s fetch effect re-runs. This
+  is the same shape as packet 19's note that the overview card is not draft-aware, one step further
+  out, and it is dev-only — but it will mislead the next walkthrough exactly as it misled this one.
+- **V005's free quiz slice verified itself again.** Signed out, `/api/sections/supply?draft=1` returns
+  **7 quiz items** out of the 26 authored — the Quiz tab's 2 plus the first pinned item of each of the
+  five chapters, with the pins remapped. More evidence for the verifier pass V005 is still waiting on.
+
+### Acceptance checks a verifier can run without this conversation
+
+1. `node scripts/packet-23-supply.mjs` — dry run exits 0: no Unit 3 vocabulary, no off-spec term from
+   the table above, no uncited examiner claim, no marker claim, no paper-frequency claim, every
+   practice tariff in the **Economics** census, every block pinned to a quiz item, a practice item and
+   a diagram, every diagram figure re-derived from the emitted SVG, ids unique.
+2. `node audit/scripts/validate-content.mjs --section supply` — **0 BLOCK, 0 new DEBT, 100% coverage
+   (19 of 19 leaves)**.
+3. `grep -c` over the staged bundle for `momentary`, `returns to scale`, `marginal cost`, `joint
+   supply`, `producer surplus`, `KAA` — **0 each**.
+4. **Verify B at 390×844 with `?draft=1`:** open `supply`, walk all 29 steps. Every check-in shows a
+   diagram; the PES grid's cells do not collide; the worked PES calculation is legible; no step is
+   blank; no recall shows a first-letter hint.
+
 ## Next up — packet 24, `price-determination` (28 opens)
 
 Packet 23 (`supply`) is claimed by a concurrent session; **24 is the first row in `PROGRESS.md` that
@@ -246,12 +484,288 @@ on all 33 ids · Verify B at 390×844 with `?draft=1` · Layer 6 with two plante
 **STAGED, NOT PUBLISHED** — the recalls are written to the packet-7 contract and main's `ReorderRecall`
 reads `recall.shuffled` (DECISIONS 2026-09-15).
 
+## Packet 21 spec — `measures-economic-performance`, Economics 2.3.1 (Opus, 16 September 2026)
 
-## Packet 21 spec — `measures-economic-performance`, Economics 2.3.1 (Opus, 16 September 2026) — IN PROGRESS
+**Section:** `measures-economic-performance`, Economics Unit 2 (WEC12), IAL topic **2.3.1 Measures of
+economic performance**, `audit/raw/econ_spec.txt:884-974`. **55 rows off the span, of which 48 are LEAVES**
+(the other 7 are the requirement rows that head a bullet list: `1c`, `1i`, `2e`, `2f`, `2g`, `3b`, `3c`).
+48 is the number `spec.coverage` measures against and it is **twice the size of any section built so far**
+(packets 17 and 18 were 24 leaves each). **35 open ledger items.**
 
-**CLAIMED 16 Sep by a third concurrent session.** Packets 19 and 20 are being built by the other two.
-Brief is being written; do not start this section in another session.
+**The worst validator numbers in the repository: 56 BLOCK / 89 DEBT / 88% coverage.** All 145 are
+baselined, so the gate passes today while the section is in this state.
 
+Economics ladder, from `audit/raw/tariff-census.json` (`econ_spec.txt:2704-2747`):
+Define 2 · Calculate 2/4 · Draw 4 · Explain 4 · Analyse 6 · Examine 8 · Discuss 14 · Evaluate 20.
+**There is no `Assess` and no 10-mark tariff in this subject.** The live section uses both.
+
+### What the specification settled before a word was written
+
+**1. The headline finding is not in the audit: a quarter of the section teaches material that is not in
+topic 2.3.1, and one whole block is not in the Economics specification at all.** Word-boundary counts
+over `econ_spec.txt`:
+
+| term | occurrences | where |
+|---|---|---|
+| `expenditure method` / `income method` / `output method` | **0 · 0 · 0** | — |
+| `value added` / `gross value added` | **0 · 0** | — |
+| `RPI` / `Retail Price` | **0 · 0** | — |
+| `CPIH` | **0** | — |
+| `substitution bias` | **0** | — |
+| `liquidity trap` | **0** | — |
+| `interconnectedness` | **0** | — |
+| `fiscal drag` | **0** | — |
+| `HDI` | 2 | **4.3.6**, Unit 4 development (`:1904-1907`) |
+| `quantitative easing` | 1 | **4.3.3**, Unit 4 (`:1725`) |
+| `capital account` / `financial account` | 0 / 2 | **4.3.3**, Unit 4 (`:1715`, `:1742`) |
+| `Phillips` | 1 | **2.3.6**, another Unit 2 section (`:1143`) |
+| `output gap` | 4 | **2.3.5**, another Unit 2 section (`:1121-1125`) |
+
+`GDP` occurs in the whole specification at exactly seven lines — `:888`, `:892`, `:896`, `:899`, `:904`
+(all inside 2.3.1 sub-topic 1) and two Unit 4 lines. **Nothing anywhere requires a student to know how
+GDP is measured.** 2.3.4 National income (`:1056-1085`) asks for the circular flow, injections and
+withdrawals, equilibrium and the multiplier — not the three approaches either. `C + I + G + (X−M)` is
+2.3.2's *components of aggregate demand* (`:983`), which belongs to the `aggregate-demand` section.
+
+So live **block 1, "Three Methods of Measuring GDP" — three of the section's 24 subsections — is UK GCE
+Economics A material end to end**, and so are the HDI subsection (block 2), the "RPI vs CPI" subsection
+(block 3) and the liquidity-trap/QE subsection (block 5). **Six of 24 live subsections, 25% of the
+section, are outside topic 2.3.1.** This is the fifth instance of the packet 13/16/17/18 rule and the
+validator cannot see any of it: `terms.off-spec` carries six named phrases and none of these is one of
+them, `terms.later-unit` fires on `exchange rates` alone, and lexical coverage scores the section 88%
+while a quarter of it teaches another syllabus.
+
+**2. `specGap-11`'s "unsure" is answered: the specification names none of the three.** RPI 0, CPIH 0 in
+the entire document; HDI only at 4.3.6, a Unit 4 topic. All three come out rather than being corrected,
+which moots most of `topFix-05` and all of `quiz-01`'s factual half.
+
+**3. `practice-02` is refuted on all three of its claims, and its remedy would delete the only
+correctly-tariffed item in the section.** It asserts "WEC12 (Unit 2) papers have no 20-mark essay; the
+top tariff is 14 ('Discuss') with 12 'Assess'". Two independent citations say otherwise —
+`econ_spec.txt:379-399` and `:1989-2001`, the Unit 2 assessment overview: **Section D is one 20-mark
+essay question from a choice of two.** There is no `Assess` command in IAL Economics and no 12-mark
+tariff. `p3` (`Evaluate … (20 marks)`) is the one practice item whose command and tariff are already
+right; `topFix-04` repeats the same instruction to convert it to a 14-mark `Discuss`. **Both clauses are
+refused.** The live errors are the other four items: `p0` Define **(4)** → 2, `p1` Explain **(6)** → 4,
+`p2` **Assess (10)** → not a command in this subject at any tariff, `p4` **Outline (4)** → not a command
+in this subject.
+
+**4. `topFix-04`'s marking clause is refused, as packet 20's was.** "Rewrite the 10/14-mark schemes as
+levels (KAA + Evaluation)" describes what a marker does, which `MARK_CLAIM` bans in anything a student
+reads. The validator's `practice.levels` rule (`lib/content-validator.mjs:553`) only forbids a guidance
+field above 6 marks from allocating points `(n marks)` — it does not ask for marking to be described.
+Guidance says what the **command word requires**, citing Appendix 6; the assessment objectives at
+`:2037-2046` are citable if a chain of reasoning needs naming.
+
+**5. Sixteen `claim.uncited` BLOCK findings are all one sentence shape** — "Examiners expect…",
+"Examiners reward…", "Examiners want you to…". Every one goes.
+
+**6. `topFix-01`'s index lists and `diagramRef` instruction are obsolete.** The lists
+(`block2 → [12,18,21,23]` …) are keyed to the 8-block structure being replaced, and since packet 5 a
+diagram reaches a student only from a **block's `diagramId`, at that chapter's check-in**
+(`lib/learn-steps.js:44-55`). Its real complaint — nothing resolves — is answered by
+`diagramId`/`quizIndices`/`practiceIndices` on every block. `practiceIndices` resolve against the RAW
+array (`LearnModeTab.jsx:193-194`).
+
+**7. `structure-04`'s premise is dead.** 2-per-step pairing was removed by packet 5; one subsection is
+one step. Its real complaint — every block exactly 3 subsections, 8 recalls shown twice back to back —
+is answered by uneven block sizes.
+
+### Scope claims checked, one by one
+
+Seven of 35 are substantively wrong — the rate holds (4 · 4 · 6 · 5 · 6 across packets 14-18):
+
+| id | verdict |
+|---|---|
+| `practice-02` | **REFUSED whole.** WEC12 §D is a 20-mark essay; no `Assess`; no 12-mark. Only its point-tally observation survives, via `practice.levels` |
+| `topFix-04` | **two clauses refused** (convert the 20-mark Evaluate; describe levels marking); tariff clauses built |
+| `specGap-08` | **REFUSED.** Current-account imbalances against other macro objectives is not in 2.3.1; `interconnectedness` is 0 in the whole specification |
+| `specGap-07` | **half.** 4a requires the *components* of the balance of payments to be named; capital and financial accounts in depth are 4.3.3, Unit 4 |
+| `specGap-03` | built, **parenthetical refused** — `substitution bias` is 0 hits. 2c is taught in the specification's own words |
+| `specGap-04` | built, **parenthetical refused** — `fiscal drag` is 0 hits |
+| `topFix-02` | **three of its four named reorders are off-spec material that disappears** (factor incomes, CPI-vs-RPI, HDI components). Only the ILO criteria survive, and they are a set, not a sequence |
+| `topFix-01`, `structure-04` | reinterpreted, above |
+| the other 26 | **built as written** |
+
+`specGap-05` asks for "migration **and skills**"; 3f is net migration only, and skills is not a leaf.
+
+### Four things the audit never asks for
+
+- the whole off-spec block 1 (above) — the audit asks to *improve the exercises* on it (`topFix-02`'s
+  factor-incomes reorder, a `value added` fill-in) and never asks whether it is on the specification;
+- **`1c-2` total and per capita** — no ledger item requires it;
+- **`1d` comparison of growth between countries and over time** and **`1e` PPPs** — named nowhere;
+- **`1g` recession as two consecutive quarters of negative growth** — named nowhere.
+
+### Shape
+
+Ten blocks in the specification's own order, **45 subsections**, one subsection per skill, sizes
+**5 · 5 · 3 · 5 · 6 · 4 · 4 · 5 · 5 · 3** — uneven on purpose. Twice the size of any previous section
+because the topic is twice the size.
+
+| # | Block | Subsections | Leaves |
+|---|---|---|---|
+| 1 | Measuring National Output | What Real GDP Measures · GNI: Income Rather Than Output · Real and Nominal · Total and Per Capita · Value and Volume | 1a, 1b, 1c-1..3 (5) |
+| 2 | Comparing Growth | Comparing Growth Between Countries · Comparing Growth Over Time · Purchasing Power Parities · Positive and Negative Growth Rates · Recession | 1d, 1e, 1f, 1g (4) |
+| 3 | What GDP Leaves Out | Limitations of GDP and GNI · Indicators of National Happiness and Wellbeing · Real Incomes and Subjective Happiness | 1h, 1i-1, 1i-2 (3) |
+| 4 | Measuring Inflation | Inflation, Deflation and Disinflation · Building a Consumer Price Index · Calculating Inflation from the Index · Limitations of the CPI · The Producer Price Index | 2a, 2b, 2c, 2d (4) |
+| 5 | Causes of Inflation and Deflation | Demand-Pull · Cost-Push · Excessive Growth of the Money Supply · Falling Aggregate Demand · An Increase in Aggregate Supply · A Fall in the Money Supply | 2e-1..3, 2f-1..3 (6) |
+| 6 | Effects of Inflation and Deflation | On Consumers and Workers · On Firms, Investment and Competitiveness · On the Government and Income Distribution · On the Current Account | 2g-1..8 (8) |
+| 7 | Measuring Employment and Unemployment | The ILO Definition · Unemployment and Underemployment · Employment, Unemployment and Inactivity Rates · Net Migration | 3a, 3d, 3e, 3f (4) |
+| 8 | Causes of Unemployment | Frictional · Seasonal · Structural · Demand-Deficiency · Real-Wage Inflexibility | 3b-1..5 (5) |
+| 9 | Effects of Unemployment | On Consumers and Workers · On Firms · On Public Finances · On Resource Utilisation and the PPF · On Society | 3c-1..6 (6) |
+| 10 | The Balance of Payments | Components of the Balance of Payments · Trade in Goods and Services · Current Account Deficits and Surpluses | 4a, 4b, 4c (3) |
+
+### One spine of arithmetic
+
+Packet 17's rule. 2.3.1 is a *quantitative* topic — Appendix 7 lists **QS2 percentages and percentage
+changes** and **QS5 calculate and interpret index numbers** in the **IAS** column (`:2766-2777`), so both
+are Unit 2 skills and citable; **QS7, converting money to real terms, is IA2 only**, so a deflation
+calculation is not an IAS requirement and the section does not drill one. `structure-10`'s complaint —
+no numeracy is ever scaffolded — is answered by one economy that every surface is generated from.
+
+One country, one currency (`locale.currency` fires on a second one). All figures exact unless marked:
+
+**CORRECTED AFTER LAYER 6 — the table below is what was built.** The first draft carried a separate GDP
+price index (100/105/108) alongside the CPI (100/105.8/108.4), both called "the price index"; a student
+deflating nominal GDP with the consumer index got $516bn where the section said $520bn. There is now ONE
+index, the one the student builds from the basket in block 4, and nominal GDP is derived from it rather
+than typed. See DECISIONS, 16 September.
+
+| Year | Nominal GDP ($bn) | Price index | Real GDP ($bn, year 1 prices) | Population (m) | Real GDP per capita |
+|---|---|---|---|---|---|
+| 1 | 500.00 | 100 | 500 | 25.0 | $20,000 |
+| 2 | 550.16 | 105.8 | 520 | 26.0 | $20,000 |
+| 3 | 552.63 | 109.0 | 507 | 26.0 | $19,500 |
+
+Real growth **+4.0%** then **−2.5%**; nominal growth **+10.0%** then **+0.4%** (1 dp). Three teaching
+points fall out of it instead of being asserted:
+
+- **year 3 is a fall in real output while the nominal figure still rises** — `1c-1` and `1f` in one row;
+- **real GDP rose 4% in year 2 and real GDP per capita did not move at all**, because population rose
+  4% too — `1c-2`, which no ledger item asks for;
+- two consecutive quarters of that year-3 contraction is the `1g` definition of recession, in figures.
+
+**Value against volume (`1c-3`, `specThin-01`)**: an oil exporter ships 100m barrels at $60 = **$6.0bn**,
+then 110m barrels at $50 = **$5.5bn**. **Volume +10%, value −8.3%.** Exact, and it carries the
+Middle-East framing `topFix-03` asks for without a dated claim about a real country.
+
+**The CPI basket (`2b`, `specGap-10`)**, a grid — a diagram is the only surface in the schema that can
+carry one:
+
+| group | weight | price index, year 2 | weight × index |
+|---|---|---|---|
+| Food | 30 | 108 | 3,240 |
+| Housing | 25 | 104 | 2,600 |
+| Transport | 20 | 112 | 2,240 |
+| Everything else | 25 | 100 | 2,500 |
+| | **100** | | **10,580** → CPI **105.8**, inflation **5.8%** |
+
+**The limitation is then arithmetic, not jargon (`2c`, `specGap-03`)**: re-weight the same four price
+changes to a household that spends **45 of every hundred dollars on food and 10 on everything else**
+(housing and transport unchanged at 25 and 20) and the index is **107.0 — 7.0% against the national
+5.8%**. Re-weighting *transport* to 10 instead, as an earlier draft of this spec said, cannot reach 107.0
+at all: that basket maxes out at 106.6. That is "limitations of the CPI as a measure of the rate of inflation" in
+the specification's own words, with `substitution bias` — a phrase the specification does not contain —
+never used.
+
+**The labour force (`3a`, `3d`, `3e`, `3f`)**, tied to the same population of 26.0m:
+
+working-age 16.0m · employed 11.4m · unemployed 0.6m · labour force 12.0m · inactive 4.0m
+→ **unemployment 5.0% · employment 71.25% · inactivity 25.0%**, all exact.
+0.9m of the employed work part-time and want full-time: **underemployment moves no rate at all** (`3d`).
+
+**The balance of payments (`4a`-`4c`)**: goods **+$18bn**, services **−$6bn** → trade in goods and
+services **+$12bn** (`4b`); primary income **−$9bn**, secondary **−$5bn** → current account **−$2bn**
+(`4c`). A surplus on goods and services sitting inside a current-account deficit is exactly the
+distinction the two requirements draw.
+
+### Banned in this section — the runner enforces every one
+
+Off-spec vocabulary: `expenditure/income/output method`, `value added`, `RPI`, `Retail Price`, `CPIH`,
+`substitution bias`, `liquidity trap`, `fiscal drag`, `interconnectedness`, `hyperinflation`,
+`stagflation`, `misery index`, `claimant count`, `GDP deflator`, `natural rate`.
+Other units: `HDI`, `Human Development`, `quantitative easing`, `exchange rate` (the live section's one
+`terms.later-unit` hit), `Phillips`, `output gap`.
+Command words: `Assess`, `Outline`. UK institutions: `ONS`, `Bank of England`, `council tax`,
+`Universal Credit`, `furlough`. Plus `EXAMINER_CLAIM`, `MARK_CLAIM`, `FREQUENCY_CLAIM` and
+`PAPER_PATTERN_CLAIM` from `scripts/packet-18-the-market.mjs:158`.
+
+**No dated claim about a real economy.** `topFix-05` lists six (US current account "every year since
+1982", the 2023 RPI–CPI gap, a rail-fare claim, an unverified 2024 basket, 2021-22 US inflation, the
+1930s New Deal). None is corrected; all are removed. The section's figures come from its own spine.
+
+**One formatter per kind of figure** (packet 18): a negative is U+2212 everywhere, never an ASCII hyphen.
+
+### Assessment
+
+**Quiz 43 items** (the spec first said 30; the topic needed more) — three unpinned and FIRST in the array
+(`PreTest.jsx` slices the unreserved pool at three), then ten chapters' worth of pins. **Practice 10 items**, one per block, the full Economics
+ladder and nothing off it: Define 2 · Calculate 2 · Calculate 4 · Draw 4 · Explain 4 · Explain 4 ·
+Analyse 6 · Examine 8 · Discuss 14 · **Evaluate 20 — kept, against `practice-02`**.
+
+**Diagrams: 10, from 2**, one per block, each pinned by the block's `diagramId` and rendered at its
+check-in. Every plotted point re-derived from the emitted SVG by the runner.
+
+### Acceptance checks a verifier can run without this conversation
+
+1. The staged bundle validates at **0 BLOCK, 0 DEBT**, coverage **100% (48 of 48)**. Note that
+   `validate-content.mjs --section measures-economic-performance` reads the LIVE row, which this packet
+   deliberately does not touch; judge the bundle, via the runner or `gateSection()`.
+2. Every banned term above returns **0** over the staged bundle's text fields.
+3. `practice` holds 10 items; every `(command, marks)` pair appears in `tariff-census.json` for
+   **economics**; the 20-mark `Evaluate` is present; no `Assess`, no `Outline`, no 10-mark item.
+4. Every block carries `diagramId`, `quizIndices` and `practiceIndices` that resolve; `quizIndices` are
+   not `0..n` in block order (`pins.identity`); `pins.diagram` is clean.
+5. Quiz items 0-2 are unpinned by every block.
+6. Arithmetic: real GDP 500/520/507 on one index of 100/105.8/109, nominal 500/550.16/552.63 derived
+   from it, growth +4.0%/−2.5%, per capita $20,000/$20,000/$19,500, CPI 105.8 against the re-weighted
+   107.0, unemployment 5.0%, employment 71.25%, inactivity 25.0%, current account −$2bn on a
+   goods-and-services surplus of +$12bn — each recomputed from the stated inputs, and each figure in the
+   bundle matching its correctly-rounded value.
+7. 390×844 walkthrough with `?draft=1`: all ten chapter check-ins render a diagram, a quiz question and
+   a practice item; no console error; no step shows a recall twice.
+
+### Verify B — 390×844 walkthrough, 16 September, clean
+
+Signed out, `?draft=1`, viewport 390×844, dev server on 3001.
+
+- **55 steps** — 45 subsections and 10 chapter check-ins, at steps **6, 12, 16, 22, 29, 34, 39, 45,
+  51, 55**. Every non-check-in step carries a recall, and **no step repeats the previous step's
+  recall prompt**: `structure-04`'s real complaint (eight recalls shown twice back to back under
+  main's 2-per-step pairing) does not occur.
+- **All ten check-ins render their diagram**, each the right one, with the figures matching the
+  bundle — chapter 1's accounts table reads $500bn/100/$500bn/$20,000 · $546bn/105/$520bn/$20,000 ·
+  $547.56bn/108/$507bn/$19,500.
+- **All ten check-ins render their practice item**, and the tariffs appear in block order
+  **2 · 2 · 4 · 4 · 4 · 6 · 8 · 4 · 14 · 20**, which is the authored ladder: every
+  `practiceIndices` resolves to the item intended for that chapter. The March section surfaced two
+  of five, both on the wrong chapter (`structure-03`).
+- **Console: no content error.** The only entries are analytics beacons to `/api/events` (204,
+  aborted on rapid navigation) and 401s from auth checks for a signed-out visitor.
+- Section landing page reads "Learn Mode · Free · 55 steps", "Notes 10 topics", "Practice 10
+  questions", "Diagrams All annotated".
+
+**One finding, and it is not in the content: this section is the first to exceed the free quiz cap.**
+Measured by running the real `sectionPayload()` from `lib/preview-limits.js` over the staged bundle
+with `isPremium` both ways:
+
+| | quiz items sent | chapters with a quiz pin | every pin resolves |
+|---|---|---|---|
+| Signed in / Pro | **43** | **10 of 10** | 10 of 10 |
+| Signed out / free | **10** | **8 of 10** | 10 of 10 |
+
+`FREE_QUIZ_MAX = 10` and `freeQuizPayload()` spends 2 on the Quiz tab's preview before taking one pin
+per chapter, so a ten-chapter section runs out after chapter 8 and **chapters 9 and 10 show a
+signed-out student no quiz at all**. Nothing is broken and no pin is dangling — a Pro student sees
+every one. V005 was measured on sections of five and six chapters and its arithmetic simply does not
+reach ten. Raising the cap is a freemium-boundary call and belongs to the founder; this packet
+records the boundary rather than moving it. **This also closes the signed-in/Pro walk V005 has been
+waiting for since packet 17** — done as an A/B on the payload function rather than by signing in,
+which exercises the shipping code rather than a reimplementation of it.
+
+**V006 confirmed again:** chapter 10 of 10 says "Before the next chapter: the diagram and one thing
+from earlier." (`components/LearnModeTab.jsx:429`). Every section, packet 57.
 
 ## Packet 20 spec — `types-sizes-businesses`, Economics 3.3.1 (Opus, 16 September 2026)
 
@@ -3133,3 +3647,136 @@ exit 0. It ships WITH packets 5 and 7 at the checkpoint (~26 Sep), not before.
   defect's own mechanism. **Every content packet that changes a section's step count poisons the pointers of
   everyone mid-way through it**, and will keep doing so until 5.1 is merged. Re-run the dry run immediately
   before any `--confirm`, and expect the repair to be needed once more at the checkpoint.
+
+---
+
+## Packet 2.1 — V007, the paywall page payload (done 16 September 2026, Opus 5)
+
+Appended, not rewritten: packets 21 and 22 own the top of this file.
+
+**Brief:** `audit/BRIEF-paywall-page-payload.md`. **Commits:** `b5f1729` (build), `bd44d2f` + `705c893`
+(V011, two rounds), and this gate commit. **Verify A: 4 of 4 confirmed — V007 and V010 on round 1,
+V011 on round 2 after a reject, V013 on round 1.**
+
+### The spec, as built
+
+Close **V007**: both `[unit]/[topic]` pages and `app/page.js` read all eight section tables with
+`createAnonClient()` and handed the result to `StudyApp` as `initialSectionData`. Measured on `supply`
+before the change: **25 `correctIndex` values, 18 flashcard fronts, 18 backs, 25 option sets and the
+paid-only common mistakes, in the HTML of a page that needs no account.** The Quiz tab sliced to two in
+the browser, which is why it looked gated; the Quick Fire drill did not, and offered a signed-out
+student **25 questions while the API sent 3**. That number is how it was found. Same class as F086,
+which closed the API door and left this one open. It is on `main`, so it is live now.
+
+### Rule 1 again: the brief asked for two things that cannot both be true
+
+Part 1 said the pages should ship the same capped preview the API sends. Part 2 said to revoke anonymous
+`select` on the four paid tables. **A page that can still build a quiz preview is a page RLS has not
+closed**, because those pages read Supabase with the anon key. Capping would have shut the casual door
+and left the deliberate one open: the anon key ships in the browser bundle.
+
+Built the other way: the pages ship the **free surfaces only** and the client fetches the paid half from
+the entitled API, free students included. See DECISIONS for the five things later packets must respect.
+
+### What changed
+
+| | |
+|---|---|
+| `lib/preview-limits.js` | `sectionPayload(tables, {isPremium})` — the whole response body for one student, in one place. `publicSectionPayload(tables)` — what a page may put in its HTML, with `paidPending: true` so the client can tell withheld from empty |
+| `app/api/sections/[id]/route.js` | calls `sectionPayload`; the only caller that may pass `isPremium: true` |
+| both topic pages, `app/page.js` | read four tables, not eight; build through `publicSectionPayload` |
+| `components/StudyApp.jsx` | fetches on first paint when the payload is pending; answers `paidPending` with the loading card **before** entitlement, so no paywall flash and no "2 of 0"; preview mode follows `sectionData.isPremium`; the overview's Quiz and Flashcards cards read the true `counts`; the section fetch de-duplicates by key and drops a stale response |
+| `components/LearnModeTab.jsx` | V011: the pre-test offer is re-derived when the questions arrive instead of latching at mount |
+| `components/learn-mode/PreTest.jsx` | V013: records `pretestState: 'taken' \| 'skipped'` through `saveSectionState` on both paths |
+| `lib/read-path.test.mjs` | the mirror of `write-path.test.mjs`: fails the build if anything but the entitled API reads a paid table with the anon client, and pins the `paidPending`-before-paywall ordering |
+| `scripts/packet-2-1-paid-table-rls.sql` | layer two, for Ronald |
+| `scripts/check-paid-table-rls.mjs` | measures layer two over raw PostgREST, sharing no code with the app |
+
+### Verify B — 390×844, signed out, `supply`, dev server on 3001
+
+- Overview: Learn 11 steps · Notes 3 topics · Diagrams all annotated · Practice 5 questions.
+  **Flashcards "18 cards", Quiz "25 questions"** — the true totals, from `counts`, to a signed-out
+  student. Before this packet the same cards read the length of whatever array the student had been
+  sent, so they said 25 on the first section and 3 after a section switch.
+- Quiz tab: two questions and the submit button, preview intact, no flash of a paywall and no flash of
+  an empty tab.
+- Learn Mode resumed at **step 4 of 11, a chapter check-in**: the diagram rendered, the label drill
+  rendered, and **"💡 QUICK QUIZ — The supply curve for a good slopes upward because:"** rendered — so
+  the pin remap in `freeQuizPayload` still resolves through the new page → API path.
+- Completion screen: **"⚡ Quick fire drill (3 questions)"**. It offered 25 before. That is V007's own
+  evidence, closed.
+- Pre-test offer ("Want a quick check first?") renders on a cleared local state.
+- HTML, signed out: `"quiz":[],"flashcards":[],"extras":{"chains":[],"evaluation":[]},"mistakes":[],`
+  `"paidPending":true,"isPremium":false`. Zero `correctIndex`, zero `front`, zero `back`, zero `options`
+  — against 25/18/18/25 on live production. Same on `/business/unit-1/the-market` and `/`.
+- One `GET /api/sections/supply` per load. No console errors. One pre-existing 401 on
+  `POST /api/learn-mode/state` for a signed-out student, unrelated and not new.
+
+**Not walked: the signed-in Pro path.** No Pro credentials in this session, the same limit packet 17
+hit. The Pro payload is proven differentially instead (see V010) and the no-flash ordering is pinned by
+a test rather than by a screenshot.
+
+### For Ronald — one command, and it is not urgent
+
+After this deploys, run `scripts/packet-2-1-paid-table-rls.sql` in the SQL editor
+(https://supabase.com/dashboard/project/trweeckuswgkenckeqfb/sql/new). **Order matters**: the code lands
+first or the pages break. `node scripts/check-paid-table-rls.mjs` before and after — it exits 1 today
+because all four paid tables answer the anon key.
+
+### What Verify A found that the packet had not claimed — the useful half of this session
+
+**V010, confirmed: on this branch the API has been serving every premium student an EMPTY quiz.**
+`665ae87` wrote `quiz: isPremium ? arr(allQuiz) : free.quiz`, but `allQuiz` was already the unwrapped
+array and `arr()` expects a query RESULT — it reads `r.data?.data`, which an Array does not have. So
+the premium branch returned `[]`: 0 questions in the Quiz tab, 0 at every chapter check-in, no drill.
+**Branch-only** (`git branch -r --contains 665ae87` lists only `origin/remediation/2026-09`, and live
+production returns 25 signed out), so no student was served it — but it would have shipped at the
+checkpoint. Fixed incidentally by `sectionPayload()`, which takes arrays and never re-unwraps. Found
+differentially: the old inline route body against the new builder over seven real sections is
+deepEqual-identical at `isPremium: false` and differs at `isPremium: true` in all seven, on that line
+alone. **The lesson is the differential, not the bug**: a refactor that claims "behaviour unchanged"
+can be checked against its own predecessor over real data, cheaply, and this one was wrong about the
+half nobody was looking at.
+
+**V011, rejected on round 1, and the reject was right.** The verifier built the race I could not: a
+proxy on `:3002` forwarding to `:3001` with `/api/sections/*` delayed 25 seconds — **and the websocket
+upgrade proxied too, which is what defeated my attempts** (without it Turbopack never finishes
+hydrating and the app is inert). Measured: offer absent at t=10-22s, present from t=26.5s. The
+re-derivation worked. What it then found is that the fix re-offered where the old latch correctly
+stayed silent, which is V013.
+
+**V013, confirmed.** `PreTest` writes only the legacy `revvy_pretest_<subject>_<section>` key, and
+`readLocalState` migrates that key **only when there is no modern key** (`lib/section-state.js:27-28`)
+— and a signed-in student always has one, written by LearnModeTab's server reconcile. So to anything
+reading the modern way, a student who had just taken the pre-test looked like one who had never been
+offered it. Two consequences, one of them years old: V011's effect put the same three questions back
+on screen, and **taking the pre-test had never reached the server at all**, so the cross-device promise
+in the reconcile's own comment held for skipping and not for taking. Only `declinePretest` ever sent a
+`pretestState`, although `POST /api/learn-mode/state` has always accepted one. One `saveSectionState`
+call on each path fixes both.
+
+*Not measured, and worth someone doing once with a real account:* a signed-in round trip. The
+verifier does not sign in, so V013's server half rests on the route contract plus a live
+`user_section_state` row that already holds `'skipped'` — written by `declinePretest` through the
+identical branch and column — rather than on an authenticated request.
+
+### What the next packet must know
+
+1. **`npm test` now runs `lib/read-path.test.mjs`** (added to the `test` script in `package.json`).
+   151 tests.
+2. **Every visitor costs one `/api/sections/[id]` request on first paint.** It used to be zero for the
+   first section. Anything that mounts with section data must tolerate the paid arrays being empty for
+   a moment — V011 is what that cost looked like when something did not.
+3. **V009, packet 2.3, is a merge-blocker for the caching work**: the root layout's `cookies()` read
+   makes every route dynamic, so this branch prerenders nothing while `main` serves the topic pages as
+   `x-vercel-cache: PRERENDER`. Any brief written against `main` that asserts a prerender or a cache HIT
+   cannot pass here. See DECISIONS.
+4. **V014, packet 57, filed by this packet, half an hour's work.** `writeLocalState` captures the
+   legacy `revvy_complete_*` / `revvy_pretest_*` facts into the modern key by merging onto
+   `readLocalState() || {}` — it reads THROUGH the migrating reader — and nothing tests that ordering.
+   V013 made that first modern write happen earlier and more often. A tidy-up that computes the patch
+   before reading would silently lose a legacy-complete student's completion.
+5. **`audit/ledger.json` was left uncommitted by this packet**: another session had an uncommitted F083
+   change in it. V007, V010, V011 and V013 are all confirmed in the file, for the next gate commit to carry, with
+   V009 at packet 2.3 and V014 at packet 57. By the end of this session that file held three other
+   sessions' work: F083, packet 22's V012, and ~85 content items for packets 19, 21 and 23.

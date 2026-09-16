@@ -1138,3 +1138,189 @@ free, 2-7 pinned; the pre-test rendered 0, 1 and 2.
 the first `PREVIEW_LIMITS.quiz` of the unpinned prefix. It needs `freeQuizPayload()` to carry
 `max(PREVIEW_LIMITS.quiz, 3)` of that prefix, or `PreTest.jsx` to stop padding from reserved items.
 **It affects every rewritten section**, and V005 (packet 17.1) is still unverified. Half a packet.
+
+## 2026-09-16 — packet 2.1 (V007): a cached page may hold only the free preview, so it holds no paid data at all
+
+`audit/BRIEF-paywall-page-payload.md` asked for two things that cannot both be true, and the packet had
+to choose. Part 1: the topic pages and the homepage ship the same capped preview the API sends. Part 2:
+revoke anonymous `select` on `section_quiz`, `section_flashcards`, `section_common_mistakes` and
+`section_extras`. **A page that can still build a quiz preview is a page RLS has not closed** — those
+pages read Supabase with the anon key, which is exactly the key part 2 revokes.
+
+Capping the payload would have shut the casual door (view source; the Quick Fire drill, which is how the
+finding was found) and left the deliberate one open, because the anon key ships in the browser bundle and
+anyone can query PostgREST with it directly. So **the pages ship the free surfaces only** — content,
+notes, diagrams, practice — and `StudyApp` fetches the paid half from `GET /api/sections/[id]` for
+everyone, free or Pro. That is the version the SQL survives.
+
+What later packets must respect:
+
+1. **`publicSectionPayload()` is the only thing a server-rendered page may put in its HTML.** It carries
+   `paidPending: true` so the client can tell *withheld* from *empty*. A page that needs a quiz count
+   does not get one: counts are the length of a paid table.
+2. **Every visitor now costs one `/api/sections/[id]` request on first paint.** It used to be zero for
+   the first section. That is the price of the RLS step and it is not recoverable without reopening the
+   hole. Two consequences already paid for: the fetch de-duplicates by key and drops a stale response,
+   and Learn Mode re-derives its pre-test offer when the questions arrive (V011) rather than latching it
+   at mount.
+3. **`renderTab` answers `paidPending` before it consults entitlement.** Reversing that order shows a
+   paying student a paywall on first paint — F035's bug, on the busiest path. `lib/read-path.test.mjs`
+   fails the build if the order changes.
+4. **Preview mode follows the payload (`sectionData.isPremium`), not a client opinion about entitlement.**
+   The two can disagree: an admin is entitled by `app_metadata.role`, which `useAuth` does not model. The
+   `mistakes`/`tutor` paywall still uses the client's opinion; that is pre-existing, not fixed here.
+5. **`scripts/packet-2-1-paid-table-rls.sql` is Ronald's to run, AFTER this deploys.** Running it first
+   breaks the pages, which read those tables until the code lands. `node scripts/check-paid-table-rls.mjs`
+   is the before-and-after, over raw PostgREST with the real anon key, sharing no code with the app.
+   Measured 16 Sep, before the SQL: all four paid tables answer the anon key with rows.
+
+## 2026-09-16 — packet 2.1: the branch prerenders nothing, and main prerenders the topic pages (V009, packet 2.3)
+
+Found while checking this packet's own acceptance criterion ("the topic pages still prerendered"). It is
+already false, and not because of anything packet 2.1 did.
+
+`app/layout.js` reads cookies (`supabase.auth.getUser()`, lines 58-59) since packet 12's F035 fix, and a
+root layout that reads cookies makes **every route in the app dynamic**. Measured: on this branch
+`npm run build` marks `/economics/[unit]/[topic]` and `/business/[unit]/[topic]` as `ƒ (Dynamic)` and the
+only static route in the whole app is `/sitemap.xml`. Control: the same tree with those two lines replaced
+by a constant makes Next prerender 158 pages (it then fails on an unrelated `/login` Suspense bailout,
+which is itself the proof that it switched). Live `main` answers `/economics/unit-1/supply` with
+`x-nextjs-prerender: 1` and `x-vercel-cache: PRERENDER`.
+
+So **merging this branch undoes PR #17's caching for every public page**, and the Vercel cache check in
+any brief written against `main` cannot pass here. Either accept the cost or move the entitlement seed off
+the root layout and keep F035's first-paint fix. Filed as V009, packet 2.3. It does not change V007's
+design: a document that MIGHT be cached may hold only the free preview, and this one is cacheable again
+the moment V009 is fixed.
+
+## 2026-09-16 — packet 21: one price index for a section, and why two is a defect
+
+`measures-economic-performance` needs an index twice: to separate real GDP from nominal (1c-1) and to
+calculate inflation from a weighted basket (2b). The first draft used two — 100/105/108 in the national
+accounts and 100/105.8/108.4 in the inflation chapter — both called "the price index" and both based at
+100 in year 1. Layer 6 found it by doing what a student would do: deflating the nominal GDP figure with
+the consumer index. That gives $516bn where the section says $520bn, and the $520bn is what the whole
+per-capita argument rests on.
+
+**The decision: one index per section, and the index the student builds in block 4 is the index that
+deflates GDP in block 1.** The specification names exactly one index a student must construct — the
+consumer price index, 2b — asks nowhere for a second, and never asks for the distinction between them
+(`GDP deflator` is zero occurrences in `econ_spec.txt`). Two unlabelled indices is not a simplification,
+it is an inconsistency a student can find with arithmetic the section taught them.
+
+It cost a rebuild of the spine: nominal GDP is now derived as real × index ÷ 100 rather than typed in
+(`$500bn / $550.16bn / $552.63bn` against real `$500bn / $520bn / $507bn`), so the two columns cannot
+drift apart again. The headline contrast survives — year 3 still rises in money (+0.4%) and falls in
+output (−2.5%).
+
+**General rule for the remaining content packets:** where a section carries two quantities that a student
+could compute one from the other, derive one from the other in the util module. A figure that is typed
+twice will eventually be typed differently.
+
+## 2026-09-16 — packet 21: a citation to Appendix 6 that Appendix 6 does not support
+
+Five `examMatters` fields and one practice guidance said "An Examine (8 marks, WEC12 Appendix 6) requires
+the relationship between two things to be set out and considered". Appendix 6 says no such thing. It says
+Examine "Requires knowledge, understanding, application, analysis **and evaluation** ... There should be a
+brief assessment of the arguments/factors/evidence" (`econ_spec.txt:2727-2731`). Examine is the lowest
+tariff in IAL Economics that asks for evaluation at all, and a student told only to set out a relationship
+writes an Analyse and stops.
+
+**Packet 20's Layer 6 found the same error in the same command word on the same day**, independently, in a
+different section ("Examine (8) described as analysis in six places"). Two packets shipped the same wrong
+gloss because both authors reasoned about what Examine sounds like instead of reading the row.
+
+`claim.uncited` cannot see this class: the sentence carries a citation, which is exactly what that rule
+looks for. **A citation to a document that does not support the claim is worse than no citation**, because
+it transfers the specification's authority to an invention.
+
+`scripts/packet-21-measures-economic-performance.mjs` now checks it: every gloss field that cites
+Appendix 6 is matched against the census description for the command word it names, and must share at
+least one distinctive word with it. Run against the first draft it fires on all six Examine glosses; it
+also caught four more — a Calculate and three Defines that cited Appendix 6 and then said nothing the
+appendix says. **Copy this check into every content packet from 22 onward.**
+
+**Update, same day:** packet 23's Layer 6 found the class a THIRD time while this was being written, in
+two shapes this check cannot see — an accurate citation with an EXTRA requirement bolted on (`Calculate`
+credited with requiring interpretation; `Discuss` with "diagrams where appropriate", which is in the
+Analyse and Examine rows only). The two checks catch different halves: **mine asks whether a gloss says
+anything its row says; packet 23's asks whether it asserts something its row does not.** Packet 21's
+runner now carries both — packet 23's `APPENDIX_CLAIMS` is adopted verbatim and A/B'd here (planting
+"diagrams where appropriate" under Discuss makes it fire; removing it clears). **Packet 24 onward: carry
+both, and note that three packets shipped this error independently on one day, which says the failure is
+reasoning about what a command word sounds like instead of reading the row.**
+
+## 2026-09-16 — packet 23: the false Appendix 6 citation, caught a THIRD time, and a check that catches what packet 21's cannot
+
+Packet 20 found "Examine (8) described as analysis in six places". Packet 21 found the same wrong gloss in
+a different section on the same day and wrote a check for it, with the instruction to copy it into every
+content packet from 22 onward. **Packet 23's Layer 6 found the class again, in two more shapes**, before
+that instruction had been read:
+
+- `Calculate` was credited with requiring **interpretation**. Appendix 6's Calculate row says a calculation
+  in several stages from given data, possibly with a prescribed diagram or formula, and advises showing
+  workings (`econ_spec.txt:2707-2710`). It says nothing about interpretation. The interpretation
+  requirement is real but comes from the specification CONTENT — 1.3.3 · 2b, "Calculation **and
+  interpretation** of numerical values" — not from the command word.
+- The `Discuss` (14) practice guidance claimed Appendix 6 requires "diagrams where appropriate". That
+  phrase is in the **Analyse and Examine** rows only; Discuss asks for logical and coherent chains of
+  reasoning with reference to context, and a recognition of different viewpoints or a critical assessment
+  of the evidence (`econ_spec.txt:2733-2738`).
+
+**Both would have passed packet 21's check**, which requires a sentence citing Appendix 6 to share at least
+one distinctive word with the census description for the command it names. Both sentences do share such a
+word; the defect is an EXTRA claim bolted onto an otherwise accurate citation. So the two checks catch
+different halves of the class and packet 24 onward should carry both:
+
+- packet 21's: does the sentence say anything the row says?
+- packet 23's (`APPENDIX_CLAIMS` in `scripts/packet-23-supply.mjs`): does the sentence assert something the
+  row does NOT say? Seven claims the Appendix 6 rows actually distinguish between — diagrams,
+  interpretation, workings, chains of reasoning, a brief assessment, depth over breadth, a judgement — are
+  each required to appear in that command's own description. A/B'd: re-planting the Calculate sentence
+  makes it fire, removing it clears.
+
+## 2026-09-16 — packet 23: two findings moved to packet 24, because 1.3.3 has no equilibrium leaf
+
+`C-supply-specGap-04` and `C-supply-structure-09` ask the `supply` section to show a supply shift's effect
+on equilibrium price and quantity. That is IAL **1.3.4 · 1b** (`econ_spec.txt:697-698`) and
+`price-determination` owns it; `equilibrium` has 0 occurrences in the 1.3.3 span. Both findings say
+"strictly 1.3.4" themselves and then ask this section to build it anyway — because *this section's own
+examMatters* told students a 1.3.3 answer needs an equilibrium diagram. **The circularity was the bug.**
+The examMatters sentences are gone and the leaf stays with packet 24. Fourth instance of packet 19's
+wrong-SECTION sub-class of rule 1.
+
+## 2026-09-16 — packet 23: the width guard was never a bound, and the collision guard had no second axis
+
+Packet 19 set a 0.65em per-character width estimator over the grid diagrams, described as "above the
+0.642em the browser actually measured". Packet 23 measured all 139 strings across its nine views with
+`getComputedTextLength()` in the browser: the widest per-character advance is **0.781em**. Every string at
+that ratio is the one-character axis label `Q`, where the whole error is 1.6 units — but the description
+was wrong, and a wrong description of a guard is how a guard stops being trusted. Averaged over a string
+long enough to collide the ratio falls to **0.55em at 8 characters and 0.525em at 15**. The estimator is
+now **0.8em below four characters and 0.65em at or above it**, above the measured maximum in both ranges.
+
+More seriously: **the guard only ever measured x.** Layer 6 found that SEVEN of the nine views drew content
+outside their own canvas — worst, the ad valorem panel's `$3.20` gap marker at **y = −42.86** on a 360-unit
+box, which is the second of the two measurements that panel exists to make. An SVG with content outside its
+viewBox is valid, renders without error and simply does not show that content, so nothing in the schema,
+the validator or a reading of the source can see it. The runner now bounds every `x`, `y`, `cx` and `cy`
+against the view's own canvas. A/B'd: restoring the old price ceiling makes it fire on exactly that marker.
+
+## 2026-09-16 — packet 21: a guard that did not catch the thing it was written for
+
+The runner's new index-figure guard was written to catch one specific defect — a `realExample` still
+reading "105.8 to 108.4" after the section's series had moved to 109.0. It was added, the tree came up
+clean, and it was believed.
+
+It was not catching it. The figure sits at the end of a sentence, and the regex excluded a following
+`.` in order to keep decimals out; `108.4.` therefore matched nothing. The guard was green because it
+was blind, and the defect had already been fixed by hand a few minutes earlier, so nothing disagreed
+with it.
+
+It surfaced only on an A/B: re-planting the original defect and confirming the guard fires. It did not.
+
+**Every new check in this programme gets an A/B before it is trusted — plant the defect it was written
+for, confirm it fires, remove it, confirm it clears.** Packet 3.1's census test certified "0 missed" for
+a parser missing 43 leaves for a month because it shared the parser's own regex; this is the same
+failure at one tenth the scale, and the same remedy. A check that has never been seen to fail is not
+evidence of anything. Both of packet 21's new checks, and packet 23's adopted one, are A/B'd both ways.
