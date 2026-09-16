@@ -95,6 +95,30 @@ export default function LearnModeTab({
     const st = readLocalState(subjectId, sectionId);
     return !st?.pretestState && !isResuming && (quizData?.length > 0);
   });
+  /*
+   * V007, and the one place its cost lands on a FREE surface.
+   *
+   * `pretestOffered` is a useState INITIALISER, so it is computed once, at mount, from
+   * `quizData.length`. That was safe while the server-rendered page shipped the whole quiz bank:
+   * the array was never empty when this component mounted. It is now — the page may not read a paid
+   * table, so the quiz arrives a moment later from `/api/sections/[id]` — and a student who opened
+   * Learn Mode inside that window had the pre-test latched off for the rest of the visit. Learn Mode
+   * is free, it is the busiest path in the product, and packet 5 exists because three quarters of
+   * section opens ended on step 0; silently dropping its opt-in offer is the worst place to pay for
+   * a paywall fix.
+   *
+   * So the offer is re-derived when the questions arrive. Every reason NOT to offer still wins:
+   * a stored `pretestState` (which `declinePretest` writes before it clears this flag, and which the
+   * server reconcile above writes through `writeLocalState` before it does the same), a resume, a
+   * completed section, or a pre-test already on screen. Local state is re-read rather than captured,
+   * so a decision taken since mount is seen.
+   */
+  useEffect(() => {
+    if (!(quizData?.length > 0) || pretestOffered || showPretest || isComplete || isResuming) return;
+    if (readLocalState(subjectId, sectionId)?.pretestState) return;
+    setPretestOffered(true);
+  }, [quizData?.length, pretestOffered, showPretest, isComplete, isResuming, subjectId, sectionId]);
+
   function declinePretest() {
     // Skipping has to be remembered on the server too, or the gate returns on the next device.
     saveSectionState(subjectId, sectionId, { pretestState: 'skipped' });
