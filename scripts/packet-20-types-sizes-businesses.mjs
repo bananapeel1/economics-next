@@ -204,7 +204,18 @@ const has = (svg, needle, why) => { if (!svg.includes(needle)) problems.push(why
     if (onRow.length !== row.length) problems.push(`the row for "${row[0]}" holds ${onRow.length} cells, not ${row.length}`);
   });
   if (TYPE_ROWS.length !== 6) problems.push(`the types table has ${TYPE_ROWS.length} rows; 1a's five bullets need six, because "for-profit and not-for-profit" is one bullet and two rows`);
-  for (const w of ['For-profit', 'Not-for-profit']) if (!TYPE_ROWS.some((r) => r[0].startsWith(w))) problems.push(`the types table has no "${w}" row, and :1252 names both halves`);
+  for (const w of ['For-profit', 'Not-for-profit']) if (!TYPE_ROWS.some((r) => r[0] === w)) problems.push(`the types table has no "${w}" row, and :1252 names both halves`);
+  /*
+   * At 390px a cell wider than its column runs into the next one, which every structural check passes
+   * (Verify B found it on the four-column build). 9px DM Sans averages ~4.9 units a character, so a
+   * cell is refused if it would cross into the column beside it.
+   */
+  const COLS = [[TYPES_TBL.x0 + 4, TYPES_TBL.colOwner], [TYPES_TBL.colOwner, TYPES_TBL.colSurplus], [TYPES_TBL.colSurplus, TYPES_TBL.x0 + TYPES_TBL.w]];
+  for (const row of TYPE_ROWS) row.forEach((cell, ci) => {
+    const room = COLS[ci][1] - COLS[ci][0] - 4;
+    const wide = cell.length * 4.9;
+    if (wide > room) problems.push(`"${cell}" needs ~${Math.round(wide)} units and its column gives ${room} — it will overlap the cell beside it at 390px`);
+  });
 }
 { // 2 · the size bars, from SIZE_FIRMS rather than drawn
   const svg = DIAGRAMS[1].svg;

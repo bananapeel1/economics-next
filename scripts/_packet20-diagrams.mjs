@@ -40,48 +40,53 @@ const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
  * table — `schema.body-type` allows paragraph, subheading, flow and bullets only — so a diagram is
  * the only surface in the schema that can carry a grid (packet 17's specGap-05).
  */
-export const TYPES_TBL = { x0: 18, y0: 56, rowH: 36, colOwner: 168, colSurplus: 292, colControl: 408, w: 466 };
+export const TYPES_TBL = { x0: 18, y0: 56, rowH: 36, colOwner: 175, colSurplus: 330, w: 466 };
+/*
+ * THREE columns, not four. The first build had Type / Owner / Surplus / Control, and at 390px — the
+ * viewport this is drawn for — the Type cell ran into the Owner cell and the Control cell was cut off
+ * at the frame (Verify B). Nothing automated could see it: every cell was present, unique and on its
+ * own row. Control now lives inside the Owner cell for the one row where it differs from ownership,
+ * which is the co-operative, and that is the only row where the distinction was ever load-bearing.
+ */
 export const TYPE_ROWS = [
-  ['Private sector organisation', 'Private individuals or firms', 'To the owners', 'The owners'],
-  ['State-owned enterprise (public sector)', 'The government', 'To the state, or reinvested', 'Set politically'],
-  ['For-profit organisation', 'Whoever supplied the capital', 'Distributed to the owners', 'The owners'],
-  ['Not-for-profit organisation', 'No private owners', 'Retained for its purpose', 'Trustees or members'],
-  ['Co-operative', 'Its members, who use it', 'Shared among members by use', 'One member, one vote'],
-  ['Joint venture', 'Two or more parent firms', 'Shared between the parents', 'The parents jointly'],
+  ['Private sector', 'Private individuals or firms', 'To the owners'],
+  ['State-owned (public sector)', 'The government', 'To the state, or reinvested'],
+  ['For-profit', 'Whoever supplied the capital', 'Distributed to the owners'],
+  ['Not-for-profit', 'Trustees; no private owners', 'Retained for its purpose'],
+  ['Co-operative', 'Its members — one vote each', 'Shared by how much each traded'],
+  ['Joint venture', 'Two or more parent firms', 'Shared between the parents'],
 ];
 
 const typesTable = [
   open(344),
-  t(TYPES_TBL.x0, 30, 'Who owns it, where the surplus goes, and who controls it', { size: 12, weight: 600 }),
+  t(TYPES_TBL.x0, 30, 'Who owns it, and where the surplus goes', { size: 12, weight: 600 }),
   t(TYPES_TBL.x0, 50, 'Type', { size: 9, fill: AXIS, weight: 600 }),
-  t(TYPES_TBL.colOwner, 50, 'Owner', { size: 9, fill: AXIS, weight: 600 }),
-  t(TYPES_TBL.colSurplus, 50, 'Surplus', { size: 9, fill: AXIS, weight: 600 }),
-  t(TYPES_TBL.colControl, 50, 'Control', { size: 9, fill: AXIS, weight: 600 }),
+  t(TYPES_TBL.colOwner, 50, 'Who owns it', { size: 9, fill: AXIS, weight: 600 }),
+  t(TYPES_TBL.colSurplus, 50, 'Where the surplus goes', { size: 9, fill: AXIS, weight: 600 }),
   line(TYPES_TBL.x0, 56, TYPES_TBL.x0 + TYPES_TBL.w, 56, AXIS, 2),
-  ...TYPE_ROWS.map(([type, owner, surplus, control], i) => {
+  ...TYPE_ROWS.map(([type, owner, surplus], i) => {
     const y = r2(TYPES_TBL.y0 + (i + 1) * TYPES_TBL.rowH);
     return [
-      i % 2 ? rect(TYPES_TBL.x0, r2(y - 26), TYPES_TBL.w, TYPES_TBL.rowH - 6, GRID, ' opacity="0.18"') : '',
+      i % 2 ? rect(TYPES_TBL.x0, r2(y - 24), TYPES_TBL.w, TYPES_TBL.rowH - 8, GRID, ' opacity="0.18"') : '',
       t(TYPES_TBL.x0 + 4, y, esc(type), { size: 9.5, weight: 600 }),
       t(TYPES_TBL.colOwner, y, esc(owner), { size: 9 }),
       t(TYPES_TBL.colSurplus, y, esc(surplus), { size: 9 }),
-      t(TYPES_TBL.colControl, y, esc(control), { size: 9 }),
     ].join('');
   }),
-  t(TYPES_TBL.x0, 296, 'The first two rows divide by OWNERSHIP, the next two by PURPOSE — so they overlap:', { size: 9.5, fill: MUTED }),
-  t(TYPES_TBL.x0, 310, 'most not-for-profits are private sector. A co-operative is the only row where control', { size: 9.5, fill: MUTED }),
-  t(TYPES_TBL.x0, 324, 'does not follow capital.', { size: 9.5, fill: MUTED }),
+  t(TYPES_TBL.x0, 296, 'The first two rows divide by OWNERSHIP, the next two by PURPOSE — so they', { size: 9.5, fill: MUTED }),
+  t(TYPES_TBL.x0, 310, 'overlap: most not-for-profits are private sector. A co-operative is the only row', { size: 9.5, fill: MUTED }),
+  t(TYPES_TBL.x0, 324, 'where control does not follow capital.', { size: 9.5, fill: MUTED }),
   close,
 ].join('');
 
 const typesDiagram = {
   id: id('diagram', 'five types of business ownership surplus control'),
   title: 'The Five Types of Business',
-  description: 'The five types of business organisation the specification lists at 1a, set against who owns each one, where any surplus may go, and who controls it. The three columns are what separate them from one another.',
+  description: 'The five types of business organisation the specification lists at 1a — with for-profit and not-for-profit given a row each — set against who owns each one and where any surplus may go. Those two questions are what separate them from one another, and they cut across each other rather than lining up.',
   checklist: [
     'All five bullets covered: private sector, state-owned, for-profit and not-for-profit, co-operative, joint venture',
     'Each row states who owns the organisation',
-    'Each row states where the surplus may go',
+    'Each row states where any surplus may go',
     'The co-operative row shows one member, one vote',
     'The joint venture row shows ownership shared between parent firms that remain separate',
     'It is stated that ownership and purpose are different questions, so the categories overlap',
