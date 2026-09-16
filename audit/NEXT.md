@@ -1,5 +1,293 @@
 # Next session brief
 
+## Handoff — after packet 18 (written 16 September 2026)
+
+> **READ THIS FIRST — packets 19 AND 20 are already in flight in other sessions.** At the moment packet
+> 18 committed, this worktree held uncommitted `scripts/_packet19-*`, `scripts/packet-19-*` and
+> `scripts/_packet20-*` files written minutes earlier, plus pre-packet snapshots for both, by sessions
+> that are not this one. **Neither has claimed anything in the ledger yet** (`unverified 19` and
+> `unverified 20` both report unclaimed scope), so nothing is finished. **Do not start 19 or 20 without
+> checking `git log` and `ledger.mjs packet <n>` first** — and if you are one of those sessions, the
+> brief below is yours. Whoever is third should take **packet 21, `measures-economic-performance`**
+> (Economics Unit 2, 33 items), and should say so in this file before starting.
+>
+> The operating model is one packet per session for a reason, and three concurrent content packets in
+> one worktree is how `validator-baseline.json` and `ledger.json` get clobbered. **Stage files
+> explicitly, never `git add -A`.**
+
+**The brief for packet 19, `planning-raising-finance`** — Business Unit 2 (WBS12), IAL topic **2.3.1
+Planning a business and raising finance**, `audit/raw/bus_spec.txt:848-878`, **23 leaves**; **28 ledger
+items**. State today: 5 blocks · 12 subsections · 25 quiz · 5 practice · **0 diagrams** · **0 common
+mistakes** · 4 extras chains. **On Opus, in a NEW session.**
+
+### Do this before anything else
+
+1. Read `PROGRESS.md`, `DECISIONS.md`, this file and `PROTOCOL.md`, then `ledger.mjs packet 19 --open`.
+2. **Check every scope claim against the spec text before acting on it.** The rate is not falling: 4
+   wrong in packet 14, 4 in 15, 6 in 16, 5 in 17, **6 in 18**. `audit/raw/bus_spec.txt` is the oracle,
+   and a number in a finding is a hypothesis. One item already says so about itself —
+   `specGap-08` opens "Unsure: whether IAL 2.1.2 lists 'other businesses' exactly as UK does; treat as
+   likely" — and `2.1.2` is UK GCE numbering that does not exist in the IAL spec at all. Find the
+   requirement by its wording, never by its number.
+3. **GREP THE SPECIFICATION FOR THE SECTION'S OWN VOCABULARY BEFORE YOU TEACH IT.** This is packet 18's
+   largest finding and the audit never mentioned it: the section's whole third chapter was built on
+   "equilibrium", which appears **zero** times in `bus_spec.txt` and twelve times in `econ_spec.txt`.
+   So do "excess demand", "excess supply", "market clearing", "movement along" and "contraction".
+   Nothing in the validator can see this — `terms.off-spec` carries six named phrases and coverage is
+   lexical — so a section can score 88% while teaching the material in a vocabulary the specification
+   never uses. For 2.3.1 the words worth checking first are the ones a UK GCE textbook would supply
+   for business planning and sources of finance.
+4. **V001 is fixed (packet 3.1, 16 Sep), so the oracle is complete**: `spec-items.json` is now 1,165
+   leaves, up from 1,125, and 43 leaves that no section could be reported as missing are visible.
+   Count this span yourself with a UTF-8-aware tool. **Any coverage figure written before 16 Sep was
+   measured against an incomplete oracle** — re-read it rather than carrying it forward.
+
+### The template, as it stands after five sections
+
+Copy `scripts/packet-18-*.mjs` and rename: a runner plus `_content`, `_assessment`, `_diagrams`,
+`_util`. The runner is the first reader of the section — word counts against the 350 budget, the
+section's own banned phrases, every practice command and tariff against `audit/raw/tariff-census.json`
+**for the right subject**, every diagram property re-derived from the emitted SVG, then the validator,
+then `stageBundle()`. `--dump` writes the bundle for the verifier.
+
+Lifecycle: read the spec span → check every ledger item against it → write the spec block here →
+snapshot → author → dry run to 0 BLOCK and 0 new DEBT → stage → **walk at 390×844 with `?draft=1`** →
+Layer 6 on a canary copy → fix → re-stage → claim → Verify A → gate → commit → push → handoff.
+**No publish**, until packets 5 and 7 are on main.
+
+### What packet 18 learned that packet 19 needs
+
+1. **Check the command-word census for a word the TOPIC is asking for, not just for the ones you would
+   have reached for.** `Construct` (4 marks) — "requires students to draw an accurately labelled
+   diagram" — is requirement 3b almost verbatim, and this programme had never used it in a section that
+   shipped with no diagram at all. 2.3.1 is a finance topic; check whether **Calculate (4)** and
+   **Construct (4)** are being under-used there too. The full IAL Business ladder: Define 2, Calculate
+   4, Construct 4, Explain 4, Analyse 6, Discuss 8, **Assess 10** (Units 1-2) or 12 (Units 3-4),
+   Evaluate 20. No Outline and no Examine in Business.
+2. **A section that computes its own figures needs one formatter per kind of figure.** JavaScript
+   prints a negative with an ASCII hyphen and a typed sentence carries U+2212, so packet 18's first
+   draft had 55 of one and 13 of the other on the same page, in a section about negative numbers.
+   `sig()`, `pc()`, `pedS()` and `money()` in `_packet18-util.mjs` are where the typography lives.
+3. **Never put a note about this programme's own previous content into text a student reads.** Two
+   practice items explained their tariff with "the March version of this item asked for 4", and Layer 6
+   read it as a claim about a past paper — which is how a student would read it. The runner bans the
+   class now; copy that ban.
+4. **A classify item is tested against the group's stated `why`, not the author's intent.** "Spend on
+   branding to keep buyers when prices rise" sat under price-inelastic demand whose `why` was "few
+   buyers leave, so the extra per unit outweighs the units lost" — a reason that does not explain it.
+   Third packet running that this has been the shape of a Layer 6 finding.
+5. **Give Layer 6 the rules it cannot infer from the bundle.** It reported the three unpinned quiz
+   items as "orphaned", because nothing in the JSON says they are the pre-test pool. Put the
+   three-unpinned-first rule in its brief next time, and it will spend that attention elsewhere.
+6. **Ids are not content.** Eight March subsection ids were kept because progress rows point at them,
+   and one is `the-market:sub:equilibrium-price-and-quantity`. Renaming would orphan progress; the
+   runner excludes ids from every text check instead.
+7. **`JSON.stringify` cannot tell you whether a staged draft matches what you built.** Postgres `jsonb`
+   normalises key order. Use `sameJson` from `lib/content-gate.mjs`; a byte comparison reported all 8
+   tables as mismatched when all 8 were deep-equal.
+8. **`npm run validate` reads LIVE content in a shared worktree**, so a staged section still reports its
+   old numbers there. Judge your own section from the runner's dry run.
+
+### Exit criteria for packet 19
+
+Section validator 0 BLOCK, DEBT ≤ 3, coverage ≥ 95%; every recall of the right type with its `why`;
+every block pinned to a quiz item, a practice item and (where one earns its keep) a diagram, **pinned by
+`diagramId`**; exactly three quiz items unpinned and first in the array; practice at IAL **Business**
+tariffs; no off-specification vocabulary taught or assessed; one currency; no UK skew; `npm test`,
+`npm run build`, `npm run validate` exit 0; `ledger.mjs unverified 19` clear; Layer 6, Verify A and
+Verify B written up here.
+
+### For the founder
+
+- **Nothing in packets 14-18 is live.** Five finished sections are staged and waiting on the packet 5/7
+  checkpoint (~26 September). Packet 18's publishes with:
+  `node scripts/packet-18-the-market.mjs --stage && node scripts/publish-section.mjs the-market --confirm`
+- **`the-market` was teaching the wrong subject's vocabulary**, and that is the kind of thing only a
+  reader who checks the specification can find. It is worth knowing that the March content was not
+  merely thin here; its third chapter was named after a word the Business specification does not
+  contain. The other Business sections have not been checked for this.
+- **V006**: the chapter check-in tells every student "Before the next chapter…" even on the last
+  chapter, where there is no next chapter. One line in `LearnModeTab.jsx`; it affects every section.
+
+---
+
+## Packet 18 spec — `the-market`, Business 1.3.2 (Opus, 16 September 2026)
+
+**Section:** `the-market`, Business Unit 1 (WBS11), IAL topic **1.3.2 The market**, `audit/raw/bus_spec.txt:551-595`.
+**24 leaves**, counted off the span: 7 demand bullets (1a) + 5 supply bullets (2a) + 2 markets (3a, 3b) +
+5 PED (4a-4e) + 5 YED (5a-5e). 44 section opens. **30 open ledger items.**
+**State today:** 5 blocks · 11 subsections · 25 quiz · 5 practice · **0 diagrams**; validator **20 BLOCK,
+51 DEBT, 88% coverage** (21 of 24). The three uncovered leaves are `BUS-1.3.2-1a-7` seasonality,
+`BUS-1.3.2-3b` the diagrams, and `BUS-1.3.2-4d` PED's significance for pricing.
+
+### Scope check against the spec text — six claims are wrong
+
+Rule 1, run before building. The rate holds: 4 wrong in packet 14, 4 in 15, 6 in 16, 5 in 17, **6 here.**
+
+1. **`specGap-03` clause (c) is NOT IAL SCOPE.** It asks for "operation of market forces to eliminate excess
+   demand and excess supply". IAL 1.3.2·3 has **only (a) and (b)** — the interaction of demand and supply,
+   and the drawing and interpretation of demand and supply diagrams. There is no (c). `excess demand`,
+   `excess supply` and `market clearing` return **0 hits** in `bus_spec.txt`. That clause is UK GCE 1.2.3.
+   Its clause (b) — no diagrams exist — is correct and is the largest single job in this packet.
+2. **`specGap-06` is a mark-scheme claim and its terminology is off-spec.** "Edexcel mark schemes accept
+   'extension/contraction'" says what a marker does, which `claim.uncited` exists to stop and which
+   Appendix 6 cannot cite. `contraction` and `movement along` are **0 hits** in `bus_spec.txt`; `extension`
+   appears twice, once as "extension strategies" (the product life cycle, **1.3.3**, a different section)
+   and once in a generic assessment sentence. The item is closed by **removing** the terminology from
+   `common_mistakes` and the flashcards, not by teaching it.
+3. **`specGap-05`'s letters are UK GCE, and it is silent about a leaf.** "Factors influencing YED" is IAL
+   **5d**, not 5c; what the item calls "(b) interpretation" is IAL **5c**. IAL **5b is "Normal and inferior
+   goods"**, which the item never mentions at all. Five YED leaves, not the four it implies.
+4. **`specGap-04` clause (d) prescribes another section's content.** It wants "an explicit link to price
+   skimming/penetration". Those are `bus_spec.txt:649-650`, inside **1.3.3 Marketing mix and strategy**.
+   IAL 1.3.2·4d is "the significance of price elasticity of demand to businesses **in terms of implications
+   for pricing**" — teach the implication in 1.3.2's own words; importing 1.3.3's named strategies would
+   take a leaf that section owns.
+5. **`practice-02` understates its own defect.** It calls p4 "OFF-TOPIC". It is, but **"Outline" is not an
+   IAL Business command word at all** — the ladder is Define 2 · Calculate 4 · Construct 4 · Explain 4 ·
+   Analyse 6 · Discuss 8 · Assess 10 (Units 1-2) · Evaluate 20, verified in `tariff-census.json`. The item
+   is unmarkable, not merely misplaced.
+6. **The audit never says the biggest thing: `equilibrium` is absent from the entire Business
+   specification.** 0 hits in `bus_spec.txt`, against 12 in `econ_spec.txt`. The section's third block, its
+   `equilibrium-diagram` pin and seven of its exam tips are built on a word the specification does not use.
+   Rule 2 applies, for the fourth time (packet 13's frameworks, 16's barriers to entry, 17's income and
+   substitution effects): **teach the mechanism in the spec's own words — "the interaction of demand and
+   supply", "the causes and consequences of changes in demand and supply" — name the standard term once as
+   an aside, and never assess it.** This is also the cross-subject trap `NEXT.md` warned about: Economics
+   1.3.4 owns equilibrium and price determination, and a sentence copied across would import it.
+
+**Confirmed correct, having read the lines:** `quiz-02` (price elasticity of *supply* is absent — 0 hits,
+and the 24 leaves are demand factors, supply factors, their interaction, PED and YED); `practice-03`
+(Analyse is 6, and 10 is Assess in Units 1-2); `practice-04` (Define is 2); `specGap-02` (supply is covered
+fully — to be re-measured, not assumed); `specGap-01` (seasonality is genuinely uncovered; the oracle
+agrees). **V001 does not reach this span** and the corrected oracle still counts 24 leaves here.
+
+### The design
+
+**One market, defined once, generating every surface** (packet 17's rule). A bottled-drinks maker selling
+across South-East Asia, priced in **$ only** (`locale.currency` is a DEBT finding today):
+
+    Qd = 900 − 30P        Qs = 100 + 20P        they meet at P = $16, Q = 420
+
+Every number in the section is read off those two lines, and the runner re-derives each one:
+- **4a calculation** — $10→$12 is +20% price, 600→540 is −10% quantity, **PED = −0.5**; $20→$25 is +25%,
+  300→150 is −50%, **PED = −2.0**. Both exact, no rounding to explain away.
+- **4b interpretation** — the two values above, plus **unit elasticity at P = $15** where Q = 450.
+- **4e PED and total revenue** — TR is $6,000 at $10, **$6,750 at $15**, $6,000 at $20, $3,750 at $25. The
+  maximum sits exactly where PED = −1, so 4b and 4e are the same fact seen twice, not two things to learn.
+- **3a/3b** — the same two lines drawn, then shifted, which is what 3b asks for in its own words.
+- **5a-5e** — one income rise of **+8%** across three of the firm's products: **YED +2.0** (normal, income
+  elastic), **+0.5** (normal, income inelastic), **−0.5** (inferior). 5b, 5c and 5d fall out of one table.
+
+**Five blocks, one per sub-topic of the spec, one subsection per step**, targeting **22-24 subsections**
+from today's 11 (the step-0 rule: more steps, not denser ones).
+
+**Five diagrams, pinned by `diagramId` on the BLOCK** (`lib/learn-steps.js:44-55`), which is what the three
+dead `diagramRef` pins should always have been: demand with a D1→D2 shift; supply with S1→S2; the two lines
+together and then shifted, for 3b; the demand schedule **drawn as a grid** carrying P, Q, TR and PED (a
+diagram is the only surface in the schema that can hold a table); and the three YED products.
+
+**Practice at Business tariffs**, and this section finally earns the command word it has been missing:
+**Construct (4)** — "requires students to draw an accurately labelled diagram" — is exactly 3b. Planned:
+Define (2), Calculate (4), Construct (4), Explain (4), Analyse (6), Assess (10).
+
+### Every leaf, and the subsection that teaches it
+
+Coverage is lexical, so 100% from the validator is necessary and not sufficient. This is the map by
+hand, 24 leaves against 27 subsections — the three that carry no leaf are scaffolding the March section
+never had (what demand is, what supply is, and the distinction between a price change and a change in
+demand, which is the section's commonest misconception).
+
+| Leaf | Subsection |
+|---|---|
+| 1a·1 substitutes and complementary goods | Prices of Substitutes and Complementary Goods |
+| 1a·2 consumer incomes | Changes in Consumer Incomes |
+| 1a·3 fashions, tastes and preferences | Fashions, Tastes and Preferences |
+| 1a·4 marketing, advertising and branding | Marketing, Advertising and Branding |
+| 1a·5 demographics | Demographics |
+| 1a·6 external shocks · 1a·7 seasonality | External Shocks and Seasonality |
+| 2a·1 costs of production | Changes in the Costs of Production |
+| 2a·2 new technology | The Introduction of New Technology |
+| 2a·3 indirect taxes · 2a·4 government subsidies | Indirect Taxes and Government Subsidies |
+| 2a·5 external shocks | External Shocks to Supply |
+| 3a the interaction of demand and supply | The Interaction of Demand and Supply |
+| 3b drawing and interpretation of the diagrams | Drawing a Demand and Supply Diagram · Showing a Change in Demand · Showing a Change in Supply |
+| 4a calculation of PED | Calculating Price Elasticity of Demand |
+| 4b interpretation of the numerical values | Interpreting the Numerical Values of PED |
+| 4c the factors influencing PED | The Factors Influencing PED |
+| 4d significance for pricing | What PED Means for Pricing |
+| 4e PED and total revenue | PED and Total Revenue |
+| 5a calculation of YED | Calculating Income Elasticity of Demand |
+| 5b normal and inferior goods | Normal and Inferior Goods |
+| 5c interpretation of the numerical values | Interpreting the Numerical Values of YED |
+| 5d the factors influencing YED | The Factors Influencing YED |
+| 5e significance to businesses | What YED Means for a Business |
+
+### What the three verification layers found
+
+**Layer 6 (adversarial read of the built bundle, two planted canaries).** Both canaries caught — a
+`−0.8` substituted for `−0.5` in a quiz explanation, and an invented "Examiners always award a mark
+for the arrow". Six real findings beyond them, five accepted:
+
+1. **Two practice items explained their own tariff by naming this programme's previous content** —
+   "the March version of this item was commanded Analyse at 10", "the March version asked for 4". The
+   reviewer read them as claims about a past paper, which is exactly how a student would read them.
+   Provenance belongs in the packet's files, not in guidance. Both removed, and **the runner now bans
+   the class**: `/\bthe March (version|section|copy|item|content)\b/` anywhere a student reads.
+2. **A fill-in keyed "one" while the body two paragraphs above said "PED is exactly −1"**, and a
+   mistake card teaches "write PED with its minus sign". A student answering −1 was right and marked
+   wrong. The line now reads "exactly ___ in size", which is how the rest of the section phrases it.
+3. **A classify item was defensible in either group.** "Spend on branding to keep buyers when prices
+   rise" sat under price-inelastic demand, whose `why` is "few buyers leave, so the extra per unit
+   outweighs the units lost" — which does not explain it. Branding to *reduce* elasticity is worth most
+   to a firm whose demand is currently **elastic**. Replaced with "Resist discounting, because a price
+   cut would not win back enough volume", which the group's own `why` does explain. This is packet 17's
+   rule 8 again: the test of a classify item is the group's stated reason, not the author's intent.
+4. **"Unitary" sat beside a falling revenue** in the PED-and-revenue table, which reads as "unitary
+   demand means revenue falls" rather than "$15 is the maximum and any move leaves it". The cell now
+   says `$6,750 is the peak → $6,480`, and the runner asserts both that the cell says so and that the
+   unitary example starts at the revenue-maximising price.
+5. **Rejected: "quiz items 0, 1 and 2 are orphaned"** — they are the three deliberately unpinned
+   pre-test items, first in the array by design (packets 15 and 16). They reach a student through the
+   pre-test, which the walkthrough saw offered at step 0. The reviewer had the bundle and not that
+   rule; worth giving the next Layer 6 the rule in its brief.
+
+**Verify A (fresh context, adversarial, ledger CLI): 30 of 30 confirmed on round 1, gate clear.** It
+re-derived the two judgement calls independently rather than taking them from the spec block: it read
+`bus_spec.txt:569-572` and confirmed requirement 3 has only (a) and (b), and it independently grepped
+all six banned words and found 0 hits. It also spot-checked the three ids packet 0 had already closed
+on this section for regressions and found none.
+
+**Verify B (390×844, `?draft=1`, the section's own dev server): clean, no console errors.**
+- Overview: "Learn Mode · 32 steps", Notes 5 topics, Practice 8 questions — 27 subsections + 5 check-ins.
+- Step 1 of 32, "Chapter 1 of 5 · Demand · part 1 of 8", pre-test offered ("Three questions… Optional").
+- Step 9, chapter 1's check-in: the demand diagram renders with both axes labelled, the curve labelled
+  D, dashed guides reading off $20→300 and $10→600, and both scenario tabs switching. The check-in copy
+  named only what it carries.
+- Step 20, chapter 3's check-in: the 3b diagram (demand and supply meeting at $16 / 420) renders and
+  enlarges; the quiz marked a correct answer and printed its explanation; the **Construct** item
+  followed as guided practice.
+- Step 21: the `reorder` recall renders with its ordering principle named, four items, working arrows.
+- Step 32 of 32: 100%, "Complete topic ✓", chapter 5 of 5, the YED diagram and its two tabs.
+- **One defect found, and it is code, not content: `V006`.** The check-in always says "Before the next
+  chapter…", including on the last chapter's check-in where there is no next chapter
+  (`components/LearnModeTab.jsx:429`). The list itself is correctly generated from what the check-in
+  carries; only the lead-in is unconditional. It affects every section, so it is logged at packet 57.
+
+### Exit criteria
+
+Section validator **0 BLOCK, DEBT ≤ 3, coverage ≥ 95%** (23 of 24); every recall of the right type with its
+`why`; every block pinned to a quiz item, a practice item and a diagram, **pinned by `diagramId`**; exactly
+three quiz items unpinned and **first** in the array; practice at IAL **Business** tariffs (Assess is 10,
+there is no Outline and no Examine); no `equilibrium`, `excess demand`, `excess supply`, `movement along`,
+`extension` or `contraction` as taught or assessed vocabulary; one currency; no UK skew in the examples
+(7 of 11 are UK-based today); `npm test`, `npm run build`, `npm run validate` exit 0; `ledger.mjs
+unverified 18` clear; Layer 6, Verify A and Verify B written up here. **No publish** — packets 5 and 7 are
+not on main.
+
+
+---
+
 ## Packet 3.1 result — V001 closed, the oracle is complete (16 September 2026)
 
 **Done and verified; Verify A 1 of 1 on round 1, gate clear.** `audit/raw/spec-items.json` now carries
@@ -46,7 +334,7 @@ a sub-topic's label wraps over three lines. No leaf is invisible because of it; 
 
 ---
 
-## Handoff — after packet 17 (written 16 September 2026)
+## Previous handoff — after packet 17 (written 16 September 2026, superseded)
 
 **Next is packet 18, `the-market`** — and the first thing to know about it is that **it is a BUSINESS
 section**, not the Economics one its ledger numbering suggests. Business Unit 1 (WBS11), IAL topic **1.3.2

@@ -983,3 +983,56 @@ That session committed as `665ae87` before this one's gate, and the full suite i
 **141 of 141**. The lesson is not about their change, which was fine. It is that in a shared worktree
 `npm test` and `npm run validate` are both whole-repository gates, so **a packet must be able to say which
 files are its own** — this one could, and judged itself on them while the tree was in flux.
+
+## Packet 18 — the-market (16 September 2026)
+
+**A section can be in the wrong subject's language, and no rule in the validator can see it.**
+`equilibrium` appears **zero** times in `audit/raw/bus_spec.txt` and twelve times in `econ_spec.txt`.
+So do `excess demand`, `excess supply`, `market clearing`, `movement along` and `contraction`. The
+March section was built on all of them — a whole chapter titled Market Equilibrium, a dead diagram pin
+called `equilibrium-diagram`, seven exam tips and a flashcard. Nothing caught it: `terms.off-spec`
+carries six named phrases and none of these is among them, and coverage is lexical, so a section can
+score 88% while teaching the material in vocabulary the specification never uses. What the spec does
+say is "The interaction of demand and supply" (3a) and "the causes and consequences of changes in
+demand and supply" (3b), and that is what this section now says. **The rule, now the fourth instance:
+where the specification supplies no vocabulary for a leaf, teach the mechanism in the specification's
+own words, name the standard term once as an aside, and never assess it.** Packet 18's runner enforces
+the location, not just the count: banned outright on every assessed surface, permitted in the teaching
+text only in a sentence that says the word belongs to another course.
+
+**Two IAL Business command words this programme had never used, and one of them was the answer.**
+`Construct` (4 marks) — "requires students to draw an accurately labelled diagram" — is requirement 3b
+almost word for word, in a section that shipped with **no diagram at all** and three `diagramRef` pins
+that resolved to nothing. The March practice set instead carried `Outline`, which is not an IAL command
+word in either subject. All eight Business commands now appear in this section's eight practice items.
+**Check the census for a command word the topic is asking for before writing the items**, rather than
+reaching for the ladder's familiar rungs.
+
+**The audit's arithmetic is a claim too, and six of thirty items were wrong.** `specGap-03` asked for
+the "operation of market forces to eliminate excess demand and excess supply", quoting a UK GCE
+requirement 1.2.3(c) that has no IAL counterpart — IAL 1.3.2·3 has only (a) and (b). `specGap-06` rested
+on what a GCE mark scheme credits, which is not a claim any section may make. `specGap-05` numbered YED
+from the UK GCE and never mentioned 5b, Normal and inferior goods, so it implied four leaves where the
+specification prints five. `specGap-04` asked for a link to price skimming and penetration pricing,
+which are `bus_spec.txt:649-650`, inside **1.3.3**, a section this one does not own. `practice-02`
+called an item off-topic when it was unmarkable. And the largest thing in the section — the vocabulary —
+no item mentions at all. The running rate: 4 wrong in packet 14, 4 in 15, 6 in 16, 5 in 17, **6 here.**
+
+**One minus sign.** JavaScript prints a negative number with an ASCII hyphen and a hand-typed sentence
+carries U+2212, so the first draft had 55 of one and 13 of the other on the same page — in a section
+whose subject is negative numbers. Every displayed number now goes through `sig()`, `pc()` or `pedS()`
+in `_packet18-util.mjs`, and the only ASCII hyphens left in the bundle are inside SVG
+`transform="rotate(-90,…)"` attributes, which are machine syntax. **A section that computes its own
+figures needs one formatter per kind of figure, and the formatter is where the typography lives.**
+
+**A kept id can carry the wrong subject's word, and that is not a reason to rename it.** Eight March
+subsection ids are kept because progress rows point at them, and one is
+`the-market:sub:equilibrium-price-and-quantity`. Renaming it would orphan a student's progress; the
+first version of the runner's vocabulary check read it as prose and reported a word no reader ever
+sees. **The runner now excludes ids from every text check**, which is the right answer in both
+directions: the slug is not content, and the content is not free to use the word.
+
+**`JSON.stringify` is the wrong way to ask whether a staged draft matches what was built.** Postgres
+`jsonb` normalises key order, so a byte comparison reports all 8 tables as mismatched when all 8 are
+deep-equal. `lib/content-gate.mjs` exports `sameJson` for exactly this and the codebase documents why;
+a check written without it produced a false alarm during this packet's own verification.
