@@ -877,8 +877,8 @@ const BLOCKS = [
     takeaway: [
       'Consumers are assumed to maximise utility; firms are assumed to maximise profit.',
       'Total utility rises while marginal utility is positive; marginal utility falls.',
-      'Six named reasons a consumer may not maximise: herding, habit, inertia,',
-      'poor computational skills, the need to feel valued, and framing and bias.',
+      'The six reasons: herding, habit, inertia, computation, status, framing and bias.',
+      'Habit repeats a choice without comparing; inertia declines to act on one made.',
     ],
   },
   {

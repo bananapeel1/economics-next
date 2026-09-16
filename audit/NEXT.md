@@ -348,7 +348,7 @@ that. Each clause below names the artefact that satisfies it.
 | `specGap-02` | "conditions of demand" | **refused** — 0 occurrences in the spec |
 | `specGap-03` | PED along a straight line | 3.5 and the PED-values diagram's second view |
 | `specGap-04` | significance for consumers | 6.2, its own subsection |
-| `specGap-05` | calculating elasticities from a table | the demand schedule table in 3.2, and a Calculate (4) practice item off it |
+| `specGap-05` | calculating elasticities from a table | the demand schedule is a table in 2.1 and 4.1, and two Calculate (4) practice items supply their P/Q pairs in the stem. Note the limit: a practice item is `{command, marks, question, guidance}`, all plain strings rendered as text, so a *rendered* table in a practice stem is not expressible in the schema — the figures are given in the stem instead, which is what the calculation needs |
 | `specGap-06` | scope | **refused / redirected** (see above) |
 | `specGap-07`/`-08`/`-09` | inertia · the need to feel valued · framing | 1.3 and 1.4, one paragraph each, in the spec's own words |
 | `specThin-01`-`-04` | herding · poor computational skills · age distribution · branding | 1.3, 1.4, 2.6, 3.4 — defined and explained, not named |
