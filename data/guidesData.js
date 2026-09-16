@@ -21,7 +21,7 @@ const guidesData = [
     heroCta: {
       blurb: 'Notes, diagrams and practice questions across all 20 Business sections — free, no subscription.',
       label: 'Start revising Unit 1',
-      href: '/business/unit-1',
+      href: '/business/unit-1/meeting-customer-needs',
     },
     closingCta: {
       heading: 'Put this into practice',
@@ -111,7 +111,7 @@ const guidesData = [
           '[Assessing competitiveness](/business/unit-3/assessing-competitiveness)',
           '[Managing change](/business/unit-3/managing-change)',
         ],
-        cta: { label: 'Start revising Unit 3', href: '/business/unit-3' },
+        cta: { label: 'Start revising Unit 3', href: '/business/unit-3/business-objectives-strategy' },
       },
       {
         heading: 'Unit 4: Global Business (WBS14)',
@@ -122,12 +122,12 @@ const guidesData = [
           '[Global marketing](/business/unit-4/global-marketing)',
           '[Global industries and companies — multinational corporations](/business/unit-4/global-industries-mncs)',
         ],
-        cta: { label: 'Start revising Unit 4', href: '/business/unit-4' },
+        cta: { label: 'Start revising Unit 4', href: '/business/unit-4/globalisation' },
       },
       {
         heading: 'How to Revise Edexcel IAL Business Effectively',
         content: 'Because every question is source-based, revision that stops at recall will not get you far. You need the terms and models in memory, but the marks are in applying them to an unseen business and then judging between them. Work in that order: learn the definitions until they are automatic, then practise applying them to case studies you have never seen, then write timed plans for 20-mark essays against [past papers](/past-papers). Reading notes through is the weakest use of the time you have.',
-        cta: { label: 'Start with Unit 1: Marketing and People', href: '/business/unit-1' },
+        cta: { label: 'Start with Unit 1: Marketing and People', href: '/business/unit-1/meeting-customer-needs' },
       },
       {
         heading: 'Common Mistakes to Avoid',
@@ -166,7 +166,7 @@ const guidesData = [
     heroCta: {
       blurb: 'Notes, diagrams and practice questions across all 23 Economics sections — free, no subscription.',
       label: 'Start revising Unit 1',
-      href: '/economics/unit-1',
+      href: '/economics/unit-1/introductory-concepts',
     },
     closingCta: {
       heading: 'Put this into practice',
@@ -254,7 +254,7 @@ const guidesData = [
           '[Labour markets](/economics/unit-3/labour-markets)',
           '[Government intervention](/economics/unit-3/government-intervention-firms)',
         ],
-        cta: { label: 'Start revising Unit 3', href: '/economics/unit-3' },
+        cta: { label: 'Start revising Unit 3', href: '/economics/unit-3/types-sizes-businesses' },
       },
       {
         heading: 'Unit 4: Developments in the Global Economy (WEC14)',
@@ -267,12 +267,12 @@ const guidesData = [
           '[The role of the state in the macroeconomy](/economics/unit-4/role-state-macroeconomy)',
           '[Growth and development in developing, emerging and developed economies](/economics/unit-4/growth-development)',
         ],
-        cta: { label: 'Start revising Unit 4', href: '/economics/unit-4' },
+        cta: { label: 'Start revising Unit 4', href: '/economics/unit-4/causes-effects-globalisation' },
       },
       {
         heading: 'How to Revise Edexcel IAL Economics Effectively',
         content: 'The paper structure tells you how to split your time. Multiple choice and short answers reward recall, so definitions and diagrams need to be automatic. The source booklet and the essays reward judgement, which only improves by writing. Practise diagrams until you can draw and label them from memory in under a minute, then spend the bulk of your time on data questions and timed essay plans against [past papers](/past-papers). Because the essays come from a choice, it pays to know which topics you answer well — but not to gamble on a narrow few.',
-        cta: { label: 'Start with Unit 1: Markets in Action', href: '/economics/unit-1' },
+        cta: { label: 'Start with Unit 1: Markets in Action', href: '/economics/unit-1/introductory-concepts' },
       },
       {
         heading: 'Common Mistakes to Avoid',
