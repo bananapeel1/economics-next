@@ -149,6 +149,215 @@ paragraphs with a scaffold first · Verify A clean · a 390×844 walk with the b
 every diagram string · Layer 6 with two planted canaries · PROGRESS row · commit · push.
 **Do not publish**: the packet 5/7 checkpoint holds, and fourteen sections now wait on it.
 
+## Packet 28 spec — `revenue-costs-profits`, Economics 3.3.2 (Opus 5, 17 September 2026)
+
+**Section** `revenue-costs-profits` · economics · **WEC13** (Unit 3) · `sections.number` = **3.3.2** · **34
+leaves**, read from `contextFor('revenue-costs-profits')` and not from the brief. Spec span
+`audit/raw/econ_spec.txt:1294-1358` — note the topic runs across a page break and resumes at `:1346`
+as "3.3.2 Revenue, costs and profits (continued)", where sub-topic 4 lives. A reader who stops at the
+page footer loses `4a` and `4b`, which is half of what the audit says is missing.
+Snapshot: `audit/snapshots/2026-09-17-pre-packet-28__economics__revenue-costs-profits.json`.
+**28 ledger items** (`PROGRESS.md` says 25; the ledger is authoritative).
+
+### The rule-1 pass: 9 of 28 claims are wrong — the highest rate yet
+
+4 wrong in packet 14, 4 in 15, 6 in 16, 5 in 17, 6 in 18, 8 in 19, 5 in 24, 8 in 25, **9 here**. Three
+are the dangerous kind (a finding asking to DELETE content the section owns), and two ask this packet
+to BUILD another section's topic — a shape no earlier packet has met.
+
+| id | the claim | what the spec says |
+|---|---|---|
+| `structure-04` | "Block 4 'Efficiency' (allocative, productive, dynamic, **X-inefficiency**) is IAL 3.3.3 … not 3.3.2" | **Three of four right, the fourth dangerous.** `allocative efficiency`, `productive efficiency` and `dynamic efficiency` are `econ_spec.txt:1364-1366`, topic **3.3.3 · 1a** — packet 29's section, which `contextFor` resolves to 3.3.3 with 54 leaves. But **`X-inefficiency` is `:1339`, which is 3.3.2 · 3f-3**: one of the three sources of diseconomies of scale, a leaf of THIS section. Obeying as written deletes a requirement. It stays and grows. |
+| `specGap-07` | "Efficiency content (allocative, productive, dynamic, X-inefficiency) is IAL 3.3.3 — a misplacement" | Same half-right, same answer. Three move out; X-inefficiency is 3.3.2 · 3f-3. |
+| `topFix-04` | add reorder recalls for "the **profit-max four-step method**" and "the **supernormal-profit-entry chain**" | **Both are another section's topic.** `profit maximisation` is `:1278` and `:1285`, topic **3.3.1 · 3a and 3c** — `types-sizes-businesses`, packet 20, already built. "Profit-maximising equilibrium" is `:1374`, `:1383`, `:1426`, all **3.3.3**. 3.3.2 · 4 asks only for the *distinction* between normal profit, supernormal profit and losses, and for the shutdown points. Both refused; the MC = MR rule is not taught here. The item's third sequence (MC below AC → average falls → MC crosses at the minimum) and all three fill-ins ARE in scope and are built. |
+| `topFix-03` | "…also qualify 'competitive pressure forces firms to be productively efficient' to perfect competition only" | **Do not qualify it — remove it.** `productive efficiency` is 3.3.3 · 1a and `perfect competition` is 3.3.3 · 3. The clause asks this packet to write a sentence about two things that are both packet 29's. The first two clauses (British Airways, OpenAI) are right. |
+| `topFix-05` | "present the **10-mark Assess** … guidance as levels-based KAA + Evaluation" | **There is no 10-mark Assess in IAL Economics.** `Assess` is a BUSINESS command word (10 at U1-2, 12 at U3-4); Economics has Define 2 · Calculate 2/4 · Draw 4 · Explain 4 · Analyse 6 · Examine 8 · Discuss 14 · Evaluate 20. The item is not re-tariffed, it is replaced. Define 2 (not 4) and Outline → Explain are right. |
+| `structure-06` | teach "the simpler **price-taker vs price-maker** distinction" first | **The ORDER is right and the VOCABULARY is not.** `price taker` **0** and `price maker` **0** in `econ_spec.txt`; `perfect competition` is 1 hit, at 3.3.3. Rule 2: the easier case goes first, taught in the spec's own terms — a price that does not change with output, against a price that must fall to sell more. The labels are banned in the runner. |
+| `specGap-01` | sources of internal economies include "purchasing/**bulk-buying**"; causes of diseconomies are "communication, coordination, **motivation**" | **Right that it is missing, wrong on two names.** 3d-5 is **purchasing** (`bulk` **0** in `econ_spec.txt`). 3f's three are communication problems, coordination problems and **X-inefficiency**; `motivation` is one hit, at `:294`, in prose about the specification itself. |
+| `specGap-06` | "accounting profit vs economic profit … unsure whether explicitly on the IAL 3.3.2 spec" | **It is not.** `accounting profit` **0**, `economic profit` **0**. 4a names normal profit, supernormal profit and losses. Refused, and the flashcard carrying it goes. |
+| `structure-07` | "Takeaways match their blocks and are accurate. Misconceptions are real ones … Flow chains are genuine causal sequences" | An observation with nothing to fix, against a structure this packet replaces entirely. Same shape as packet 24's `structure-10` and packet 25's `structure-07`. |
+
+Also settled before writing (rule 2 — grep the central vocabulary first): `economies of scope` **0**
+(a flashcard taught it), `returns to scale` **0**, `diminishing marginal returns` **0** where the spec
+says **law of diminishing returns** (2b) and **diminishing marginal productivity** (2a), `sunk cost`
+`:1391`/`:1440` and `barriers to entry` `:1386`/`:1425` both 3.3.3, `revenue maximisation` and
+`satisficing` both 3.3.1 · 3. **And the one that is NOT banned, recorded so nobody bans it later:
+`X-inefficiency` is 3.3.2's own, at `:1339`.**
+
+`specGap-03` (calculations from a table) is citable rather than asserted: **QS6 in the IAL A-level
+column is "Calculate cost, revenue and profit (marginal, average, totals)"**, `econ_spec.txt:2779`,
+and QS8 is elasticity calculations.
+
+### Structure: 7 blocks, 20 subsections, in the specification's own order
+
+Seven and not eight, deliberately: at eight blocks `freeQuizPayload()` spends `2 + 8 = FREE_QUIZ_MAX`
+and a signed-out student's pre-test drops from three questions to two (DECISIONS, 16 Sep).
+
+| # | block | leaves | subsections |
+|---|---|---|---|
+| 1 | Total, Average and Marginal Revenue | 1a-1..3 (3) | 3 |
+| 2 | Revenue and Price Elasticity of Demand | 1b (1) | 2 |
+| 3 | Diminishing Returns and the Product Curves | 2a, 2b, 2d-1..3 (5) | 3 |
+| 4 | The Seven Cost Measures | 2c-1..7 (7) | 3 |
+| 5 | The Long Run, LRAC and Minimum Efficient Scale | 2d-4, 3a, 3b (3) | 2 |
+| 6 | Economies and Diseconomies of Scale | 3c, 3d-1..6, 3e-1..3, 3f-1..3 (13) | 4 |
+| 7 | Profits, Losses and the Shutdown Points | 4a, 4b (2) | 3 |
+
+**Two firms, both fictional and given no country**, each defined once in `_packet28-util.mjs` and every
+surface generated from it (packet 17's rule):
+
+- **Nadira Textiles** carries sub-topic 1. Demand `P = 40 − 2Q` in rolls a day, so `AR = 40 − 2Q`,
+  `MR = 40 − 4Q` — the twice-the-gradient property is arithmetic the student can check, not a claim.
+  `TR` peaks at **$200** at **Q = 10**, which is exactly where `MR = 0` and where `PED = −1`. The two
+  PED calculations sit either side of it on the same line: $30 → $28 gives `PED = −3` and TR rising
+  $150 → $168; $10 → $8 gives `PED = −0.33` and TR falling $150 → $128. Same starting revenue,
+  opposite result.
+- **Bahri Bottling** carries sub-topics 2, 3 and 4. `TFC = $120` a day, wage `$60` a worker a day,
+  total product `0, 4, 10, 15, 18, 20` crates for `L = 0…5`. Every cost measure is derived from those
+  three inputs, and the four properties the spec asks for at 2d fall out of them exactly:
+  `MC = w / MP`, `AVC = w / AP`, MC is least where MP is greatest, and **MC over the 15 → 18 step is
+  $20, which is AC at both ends** — so MC cuts AC at AC's minimum without a curve being drawn by hand.
+  `AC = AFC + AVC` to the penny at every row (the table stops at `L = 5` for that reason: at `L = 6`
+  the three round to 5.71 + 17.14 ≠ 22.86 and a student would see it).
+- The profit chapter reads **one output, Q = 15** (`AC $20`, `AVC $12`, `TC $300`, `TFC $120`) against
+  **four given prices**: $26 supernormal (+$90), $20 normal (0), $16 a loss of $60 that is better than
+  the $120 of shutting down because `P > AVC`, and $10 a loss of $150 that is worse, so shut down.
+  The long-run rule is the same comparison with AC. No MC = MR anywhere.
+- LRAC is a function, not nine hand-picked points: `$13 + (50 − q) × 0.2` below 50, flat to 70, then
+  rising. **Minimum efficient scale is 50 crates a day** — the lowest output at which LRAC is least,
+  which is 3b's own wording. The runner asserts the envelope: `LRAC(q) ≤ SRAC(q)` at every row of the
+  short-run table, because an LRAC above a short-run curve is impossible and no validator rule can see
+  it — **and a TANGENCY, which Layer 6 had to find.** The first version satisfied the inequality and sat
+  strictly below every short-run point, which says the plant the student spends two chapters on is the
+  best plant for no output at all. `$13` and a gradient of `0.2` put `LRAC(15) = $20` exactly, which is
+  Bahri's own lowest average cost, so the taught plant IS the long-run plant for 15 crates a day.
+
+### Acceptance checks — every one of them asserted by the runner in this same commit
+
+Packet 25's lesson: an acceptance check that no code runs is a wish.
+
+1. 7 blocks, each pinned to a `diagramId`, a `quizIndices` list and a `practiceIndices` list it owns;
+   exactly 3 quiz items unpinned and FIRST in the array.
+2. Every one of the 34 leaves covered — `spec.uncovered` clear, 0 BLOCK / 0 new DEBT.
+3. Practice on the **Economics** ladder only: no `Assess`, no `Outline`, no 10-mark item, every tariff
+   in `audit/raw/tariff-census.json` for economics, all eight command words used, every guidance two
+   paragraphs with an opening that allocates no marks and works no calculation.
+4. Banned everywhere a student reads: `price taker`, `price maker`, `profit maximis*`, `MR = MC`,
+   `perfect competition`, `monopol*`, `allocative`, `productive efficiency`, `dynamic efficiency`,
+   `economies of scope`, `returns to scale`, `diminishing marginal returns`, `accounting profit`,
+   `economic profit`, `barriers to entry`, `sunk cost`, `bulk buying`, `revenue maximis*`,
+   `satisficing` — and **NOT** `X-inefficiency`, which is this section's own leaf.
+5. The figures, each re-derived and each required in the body AND in notes/diagrams/assessment:
+   `$200` (TR at its maximum), `$20` and `$12` (min AC, min AVC), `$120` (TFC), `$13` (LRAC minimum),
+   **`50`** (minimum efficient scale), `$90`, `$60`, `$150` (the three profit and loss figures),
+   `−3.00` and `−0.33` (the two PED results).
+6. `MC = w/MP` and `AVC = w/AP` at every row; MC least where MP greatest; AVC least where AP greatest;
+   `AC = AFC + AVC` exactly at every row; `LRAC(q) ≤ SRAC(q)` at every row.
+7. The three sources tables are the spec's own lists, in its order and its words: six internal, three
+   external, three diseconomies with **X-inefficiency** as the third — asserted against the emitted SVG.
+8. No reorder item is a flow step on the same screen, word for word (packet 25's copy-from-screen
+   check, with its A/B); no diagram text runs off its frame (the extent check, with its A/B); no table
+   cell collides; nothing drawn outside its canvas.
+9. No dated claim about a real market, no named real company (accuracy-01 and accuracy-02 were both),
+   no UK framing, one currency, one minus sign, no internal ledger id in text a student reads.
+
+**Verify B walkthrough script (390×844, `?draft=1`):** open `revenue-costs-profits`, take the pre-test
+(**three** questions must be offered — seven blocks leaves headroom), then walk all 27 steps. Chapter 1
+step 1 must show the revenue schedule reaching **$200** at 10 rolls; chapter 4's check-in must show the
+cost table with `AC = AFC + AVC` and MC $20 against AC $20 at 18 crates; chapter 5's must mark
+**minimum efficient scale at 50 crates** at `$13`; chapter 6's must list six internal sources, three external
+and three diseconomies ending in **X-inefficiency**; chapter 7's must show all four prices and the
+$120 shutdown comparison. Report console errors and any label running off a diagram.
+
+**Exit criteria:** staged at 0 BLOCK / 0 new DEBT / 100% of its 34 leaves · Verify A clean · a 390×844
+walk · Layer 6 with two planted canaries · PROGRESS row · commit · push. **Do not publish** — the
+packet 5/7 checkpoint holds, and thirteen sections now wait on it.
+
+### Layer 6 — two planted canaries, both caught, and SIX real findings (17 September)
+
+Canary A inverted the two marginal-cost crossings in "Marginal Cost and Where It Cuts" — MC cutting AC
+first and AVC second, with average fixed cost "holding AVC down". Canary B put "The March version of
+this card said the opposite" into a mistake card a student reads. Both were found and named as the
+plants, and the first was caught by reading it against **eight other surfaces in the same bundle** that
+say it correctly, including the misconception card two inches below it. Six real findings followed:
+
+1. **"Average product and average cost move opposite ways" is false, and this section's own table
+   disproves it.** The wage links AP to average VARIABLE cost. On Bahri's figures AP is flat at 5 across
+   10 and 15 crates while AC falls from $24 to $20, and AP falls from 5 to 4.5 between 15 and 18 crates
+   while AC does not move at all. The bullet was labelled with 2d's own wording — "average products and
+   average cost" — and the claim attached to it was about the wrong cost. **This is the same error the
+   canary planted, arriving by a different road, and it was mine.** The runner's relationship checks
+   could not see it: they verify `AVC = wage/AP` at every row, which is true, and the prose said
+   something else.
+2. **A bare specification identifier opening a subsection**: "Here 2a is answered", on the first screen
+   of a chapter, with nothing on the page to key it against. The ledger-id ban does not cover a spec
+   sub-topic number, and three more were sitting inline in the notes as "(2d-1)", "(2d-2)", "(2d-3)".
+3. **The internal-economies recall drilled five of six, and the missing one was risk bearing** — the one
+   an answer most often omits. `recall.count` caps a match at five pairs, so a six-item list cannot be
+   drilled whole; the prompt now says "five of the six" and the one left out is *financial*, the most
+   self-evident.
+4. **The Define opening handed over both mark points.** "Decide first whether this term is about a
+   total, an average or a change … make sure the size of the change is stated" signposts *change* and
+   *one unit*, which is the entire mark scheme, printed above the empty answer box. `practice.opening`
+   cannot see this: two paragraphs, no mark allocation, no equals sign — it passes the gate. The same
+   shape in reverse on the Discuss and the Evaluate, the two highest tariffs in the bundle, whose
+   openings announced the verdict the command word asks the student to reach.
+5. **The long-run curve never touched the short-run one.** The runner asserts `LRAC(q) ≤ SRAC(q)` at
+   every row and that held everywhere — while LRAC sat strictly BELOW every short-run point, which says
+   the plant taught in chapters 3 and 4 is the best plant for no output at all. An inequality is not an
+   envelope. Fixed by putting the floor at `$13` with a gradient of `0.2`, so `LRAC(15) = $20` exactly,
+   and the runner now asserts the tangency as well as the inequality. **A guard that states half a
+   property reads green on the half it states.**
+6. Nits, all real: a stray space inside `%Δ P` in a formula students copy; one flashcard writing
+   `x-inefficiency` where the specification writes `X-inefficiency`, because the card lower-cased a list
+   the spec capitalises; and a distractor — "the output where average cost equals average variable
+   cost" — describing something that can never happen at any output, since the gap between them is
+   average fixed cost and AFC never reaches zero. Not a mistake a student could make, so not a distractor.
+
+All eight were fixed and the runner re-run to 0 problems, 0 BLOCK, 0 new DEBT before re-staging.
+
+### Verify B — the 390×844 walk, `?draft=1`, signed out (17 September)
+
+Route is `/economics/unit-3/revenue-costs-profits` — not `/study/…` and not `/economics/<section>`; the
+section page is `app/economics/[unit]/[topic]`, and two wrong guesses cost two 404s that then showed up
+in the console log as the walk's only errors.
+
+**The pre-test offered THREE questions** — "Three questions on what you might already know" — and served
+exactly the three unpinned items, in array order: *Average revenue is always equal to*, *The law of
+diminishing returns applies*, *A firm earns normal profit when*. Seven blocks was the right count; at
+eight it would have been two (DECISIONS, 16 September).
+
+**All 27 steps walked.** 3 · 2 · 3 · 3 · 2 · 4 · 3 subsections with a check-in after each, exactly as
+built. Every check-in rendered its own chapter's diagram and its own pinned quiz item — chapter 4's
+check-in showed the eight-column cost table and asked "Marginal cost passes through average cost at:";
+chapter 6's showed the internal-sources table with all three scenario buttons (*Internal, six sources* ·
+*External, three sources* · *Diseconomies, three sources*) and asked the TECHNICAL economy question.
+Every acceptance figure was on screen: `$200` at 10 rolls with MR `$0` on the same row · MP rising to 6
+then falling with MP = AP = 5 at the third worker · `AFC + AVC = AC` at every row with MC `$20` against
+AC `$20` at 18 crates · **minimum efficient scale 50 crates** · the four prices with `$120` named.
+**X-inefficiency is on screen** in chapter 6, which is the point of refusing `structure-04`.
+
+**The independent measurement.** `getComputedTextLength()` over **252 text elements** in the rendered
+SVGs: the runner's `estWidth` estimate is **conservative on every one of them** (worst case 0.8735 em a
+character, on a lone em-dash, against the 0.9 bound for strings under four characters), and **nothing
+overflows its frame**. This is the measurement the runner cannot make — its guard shares `estWidth` with
+the layout, so the two can only ever agree with each other.
+
+**Guided practice openings are clean on screen**: the mark scheme sits behind "See full guidance", and
+the paragraph printed above the empty answer box allocates no marks and works no calculation.
+
+**Console:** three 404s, both from my own wrong URLs before finding the route. The `POST /api/events`
+entries all returned 204 and show as aborted only because the scripted walk clicked Next faster than the
+beacon could flush.
+
+**One thing to know, and it is not a defect in this packet.** The March content is still on the
+`?draft=1` page, in the server-rendered `div.sr-only` SEO block — British Airways, perfect competition,
+allocative efficiency, the lot — because that block comes from `publicSectionPayload()` reading `data`.
+Packet 25 found the same thing in the Notes tab and DECISIONS records it; this is a second surface with
+the same cause. It is invisible to a sighted reader and **a screen-reader user previewing a draft hears
+the old section**. It resolves on publication. Verify the notes against the `draft` column instead —
+done here, all eight tables byte-identical to the dumped bundle under `sameJson`.
+
 ## Packet 27 spec — `business-objectives-strategy`, Business 3.3.1 (Opus 5, 17 September 2026)
 
 **Section:** `business-objectives-strategy`, IAL **Business Unit 3 (WBS13)**, topic **3.3.1 Business
@@ -332,6 +541,264 @@ has **6 reorder recalls and none carries `shuffled`**, because packet 7 seeds th
 recall id and ignores that field (F113). `git show main:components/learn-mode/ReorderRecall.jsx` line 9
 is `recall.shuffled.map(...)`, unguarded. Publishing before packets 5 and 7 reach main throws on all
 six and takes the section down — packet 15's incident exactly.
+
+## Packet 26 spec — `government-intervention`, Economics 1.3.6 (Opus 5, 17 September 2026)
+
+**Section** `government-intervention` · economics · **WEC11** · `sections.number` = **1.3.6** · **23 leaves**,
+read from `contextFor('government-intervention')` rather than from the brief. Spec span
+`audit/raw/econ_spec.txt:798-831`. Snapshot:
+`audit/snapshots/2026-09-17-pre-packet-26__economics__government-intervention.json`.
+
+The section as it stands: 8 blocks / 17 subsections / 9 reorder + 8 fillin / 25 quiz / 5 practice /
+4 diagrams / 18 flashcards / 3 mistakes / 7 notes.
+
+### The rule-1 pass: 9 of 29 claims are wrong, and four are the dangerous kind
+
+Every claim checked against `econ_spec.txt` before anything was built. The rate continues to rise:
+4 wrong in packet 14, 4 in 15, 6 in 16, 5 in 17, 6 in 18, 8 in 19, 5 in 24, 8 in 25, **9 here**.
+
+| id | the claim | what the spec says |
+|---|---|---|
+| `specGap-01` | asks for **"distortion of price signals"** as a spec-named cause of government failure | **`price signal` is 0 in `econ_spec.txt` and `distortion of price signals` is 0.** 2b is a closed list of five: information gaps · lack of incentives · unintended consequences · excessive administrative costs · moral hazard (`:827-831`). "Distortion of price signals" is UK GCE 9EC0 1.4.2. **Refused.** The other half — excessive administrative costs (`:830`) taught only in passing — is real and is built. |
+| `topFix-05` | same clause: "add the spec-named government-failure causes (distortion of price signals, excessive administrative costs)" | Same split, same refusal. |
+| `practice-01` | "20-mark essays are WEC13/WEC14 format. WEC11 Section B tops out at 14 marks" | **Wrong, and it would have removed the section's hardest item.** `tariff-census.json` gives Economics **Evaluate = 20 with no unit note** (`econ_spec.txt:2741-2747`), and `PROTOCOL.md`'s paper table has WEC11 **Section D: one 20-mark essay from a choice of two**. The 20-mark Evaluate stays. The rest of the finding is right: the guidance allocates points (2+3+2+2+2+2+2+1+2+2) where a tariff above 6 is levels-marked, and the item is unreachable. |
+| `topFix-04` | "20-mark Evaluate → 14-mark Discuss/Evaluate" | Same error. Refused. Its other three clauses — `Define 4` → `Define 2`, `Outline` → `Explain`, guidance as levels — are right and are done. |
+| `structure-02` | "practiceIndices are applied to a marks-sorted copy (LearnModeTab.jsx:82) … remove the sort before indexing" | **The cause is fixed and the remedy would break every other section.** `LearnModeTab.jsx:217-218` reads *"practiceIndices are authored against the RAW practiceData order (F013, F040, F111)"*; `sortedPractice` (`:197`) is used only by the `distributeItems` fallback at `:238` when no block carries a pin. The **instance** — every inline practice in the wrong block — is real and is closed by pinning. |
+| `specGap-06` | "unsure whether IAL 2018 places government failure under 1.3.6 or a separate point" | **1.3.6 · 2, `econ_spec.txt:824-831`.** The app's `1.3.6` is right and `contextFor` resolves it with 23 leaves. Nothing to fix. |
+| `specGap-07` | buffer stock schemes are in quiz Q21; "unsure" whether they are in the WEC11 spec | **`buffer stock` is one hit, at `:1958` — 4.3.6, Unit 4 (WEC14).** Not WEC11 at any point. Q21 is deleted rather than taught to, and `buffer stock` is banned in the runner. The 1.3.6 route into a commodity market is **1b-3 guaranteed prices** applied to **1c-7/1c-8**, which is what gets built. |
+| `accuracy-02` | nudge theory is off-spec; "1.2.10 covers habitual behaviour, influence of others, computational weakness" | **Right about nudge, wrong about the number.** `nudge` 0 · `libertarian` 0 · `choice architecture` 0 · `anchoring` 0. But **1.2.10 does not exist in IAL** — the middle digit is always 3. That content is **1.3.2 · 1b** (`:580-587`), which packet 17 already teaches in `consumer-behaviour-demand`, so this section does not reteach it either. What IS this section's is **1b-8 provision of information** (`:814`). |
+| `specGap-02` | tax incidence "needs at least a cross-reference to 1.2.9" | **1.2.9 does not exist.** Incidence is **1.3.4 · 4b and 4d** (`:713`, `:716`) — packet 24's `price-determination`, which teaches it in a subsection of its own (`_packet24-content.mjs:816`, `incidence-who-bears-the-tax`) with its own Calculate. So incidence is **cross-referenced, not retaught**: this section labels Pc and Pp on the tax diagram and names 1.3.4 as where the rule is proved. |
+
+Two near misses that had to be checked rather than assumed:
+- **`maximum price` and `minimum price` both grep 0, and both ARE the specification's phrase.** `:809`
+  reads "maximum and minimum (guaranteed) prices" — the words are there, the two-word phrases are not.
+  Same shape as packet 25's `social cost`. `price ceiling` and `price floor` are genuinely 0 (packet
+  24's finding) and are banned; the March section used both as **block titles**.
+- **`specGap-04` is a real gap phrased in banned vocabulary.** "Minimum price on **demerit goods** vs
+  indirect tax" — `demerit good` is 0 and is a named `terms.off-spec` phrase. The comparison itself
+  (who receives the extra per-unit amount: sellers or the government) is squarely 1b-1 against 1b-3
+  and is built, in the spec's own frame of a good with external costs.
+
+### Rule 2 — the vocabulary grep, before a word was written
+
+**In scope, with counts:** `government failure` 2 (`:824`, `:826`) · `market failure` 9 ·
+`indirect tax` 6 · `ad valorem` 2 (`:666`, `:807`) · `subsidies` 9 · `regulation` 12 ·
+`state provision` 1 (`:812`) · `provision of information` 1 (`:814`) · `property rights` 1 (`:811`) ·
+`tradeable` 1 (`:810`) · `pollution permit` 1 · `guaranteed` 1 (`:809`) · `commodities` (`:823`) ·
+`energy` (`:821`) · `agriculture` (`:822`) · `information gaps` 3 · `lack of incentives` 1 (`:829`) ·
+`unintended consequences` 1 (`:830`) · `administrative costs` 1 (`:830`) · `moral hazard` 5 ·
+`net welfare` 1 (`:824`) · `excess demand` 1 · `excess supply` 1 · `incidence` 2 · `price mechanism` 3.
+
+**Banned in the runner, each with its count and its home:** `price ceiling` 0 · `price floor` 0 ·
+`deadweight` 0 · `merit good` 0 · `demerit good` 0 · `nudge` 0 · `libertarian` 0 ·
+`choice architecture` 0 · `anchoring` 0 · `distortion of price signals` 0 · `price signal` 0 ·
+`shortage` 0 (the spec's word is **excess demand**) · `black market` 0 · `excise` 0 · `Pigouvian` 0 ·
+`internalise` 0 · `spillover` 0 · `polluter pays` 0 · `cap and trade` 0 · `means-tested` 0 ·
+`short-termism` 0 · `buffer stock` (4.3.6, `:1958` — **Unit 4**) · `regulatory capture` (3.3.5,
+`:1520` — **Unit 3**, and packet 48's section) · `minimum wage` (3.3.4, `:1530`) ·
+`privatisation`/`deregulation`/`nationalisation` (3.3.5, `:1502-1512`) · `quota` (4.3.2, `:1693`) ·
+`allocative` (3.3.3, `:1364`) · `monopoly` (3.3.6, `:1424`).
+
+**Third instance of the rule-2 shape where the audit named only half of it.** `specGap-01` asks for two
+causes to be ADDED and nothing says the two that are PRESENT should not be: the March section teaches
+**regulatory capture** (`:1520`, Unit 3 — packet 48's section, where it is a spec bullet) and
+**political short-termism** (`short-termism` 0) as causes of government failure at 1.3.6, where the
+list is closed at five. Both go. So do the two block titles built on `price ceiling`/`price floor`
+and the subsection titled "Information Provision and **Nudge Theory**".
+
+### What gets built
+
+**8 blocks.** 1b is eight methods, so a block per method would be ten chapters with 1a and government
+failure; the split is by what the tool does to the market, and every one of 1b's eight bullets keeps a
+named home. **At 8 blocks a signed-out student's pre-test is two questions, not three** — `2 + 8 pins
+= FREE_QUIZ_MAX`, measured in DECISIONS 16 Sep. Every chapter still gets its check-in quiz. Nine would
+not, and the runner refuses at nine.
+
+**Eight and not seven, and the arithmetic of that choice, because packet 27 proved the same
+afternoon that SEVEN is the largest block count leaving a signed-out student a three-question
+pre-test.** Seven was reachable here by merging chapters 5 and 6 into one "tools that do not set a
+price" chapter of five leaves. It was not taken, and the trade is one-directional: merging buys ONE
+pre-test question and costs a whole check-in — a diagram, a quiz item and a practice item — and
+leaves a seven-subsection chapter with no check-in anywhere in the middle of it. A check-in is worth
+more than a pre-test question, so eight stands. **The next Economics section should do this
+subtraction explicitly rather than inheriting either number.**
+
+| block | spec | leaves |
+|---|---|---|
+| 1 · Why Governments Intervene | 1a | 1a (1) |
+| 2 · Indirect Taxation | 1b-1 | 1b-1 (1) |
+| 3 · Subsidies | 1b-2 | 1b-2 (1) |
+| 4 · Maximum and Minimum Prices | 1b-3 | 1b-3 (1) |
+| 5 · Permits, Property Rights and Regulation | 1b-4, 1b-5, 1b-7 | (3) |
+| 6 · State Provision and Provision of Information | 1b-6, 1b-8 | (2) |
+| 7 · Where Governments Intervene | 1c-1…1c-8 | (8) |
+| 8 · Government Failure | 2a, 2b-1…2b-5 | (6) |
+
+**One arithmetic spine, three markets, every figure generated from it** (packet 17's rule). All three
+are fictional and given no country, as Kumbe and Amara were; the real examples carry the
+internationalisation. One currency: dollars.
+
+- **COAL** — a good with an external cost, `$` a tonne against tonnes a day.
+  Demand `P = 120 − Q` · MPC `P = 30 + 0.5Q` · external cost **$15 a tonne** → MSC `P = 45 + 0.5Q`.
+  Market **60 at $60**; social optimum **50 at $70**; **welfare loss ½ × $15 × 10 = $75 a day**.
+  It carries **four** of 1b's tools on one pair of axes:
+  - **a $15 tax** → quantity 50, buyers pay **$70**, sellers keep **$55**, consumer incidence **$10**
+    and producer incidence **$5** (the 2:1 split packet 24 proves at 1.3.4 · 4b), revenue **$750 a day**;
+  - **a permit cap at 50** → the same quantity and the same **$70** buyer price, and the permit
+    itself trades at **$15**, the gap between what buyers pay and what the last tonne costs to make.
+    Tax and cap reaching the same point from opposite directions is the section's best single idea
+    and it is arithmetic, not assertion;
+  - **a minimum price at $70** → quantity demanded 50, quantity supplied 80, **excess supply 30**,
+    and the **$15 goes to sellers with no $750 of revenue behind it**. That is `specGap-04`,
+    generated from the spine rather than asserted;
+  - **regulation** — a cap of 50 enforced as a limit rather than priced.
+- **CLINICS** — a good with an external benefit, `$` a consultation against consultations a week.
+  Demand (MPB) `P = 90 − Q` · MPC = MSC `P = 15 + 0.5Q` · external benefit **$12** → MSB `P = 102 − Q`.
+  Market **50 at $40**; social optimum **58 at $44**; **welfare gain forgone ½ × $12 × 8 = $48 a week**. A **$12 subsidy** takes the quantity to 58, buyers pay **$32**, providers receive **$44**,
+  consumers gain **$8** and producers **$4**, and it costs **$696 a week**.
+- **RENTED FLATS** — affordability, `$` a month against flats.
+  Demand `P = 900 − 2Q` · supply `P = 100 + 2Q`. Market **200 at $500**. A **maximum price of $400**
+  leaves quantity demanded 250 and quantity supplied 150: **excess demand 100 flats**, with 150 renters
+  $100 a month better off and 50 who rented before now unable to.
+
+**8 diagrams, one per block, pinned by `diagramId`** — the March section had four, one of which
+(`Tax to Correct Negative Externality`) was unreachable because block 0's `diagramRef` read
+`"Indirect Tax"`, a string it shares no word with (`structure-03`).
+
+**~11 practice items, all eight Economics command words**, two Calculates and two Draws, on the
+Economics ladder only — Define 2 · Calculate 2/4 · Draw 4 · Explain 4 · Analyse 6 · Examine 8 ·
+Discuss 14 · Evaluate 20. **No Assess, no Outline, no 10-mark.**
+
+**Every real example is international and carries no year and no figure** (`structure-08`; the March
+section's examples were tobacco duty, the sugar levy, the plug-in grant, the NHS, the National Minimum
+Wage, Scotland's minimum unit pricing, auto-enrolment, buses, airlines and London taxis — nine of nine
+UK, and the last of them a false fact, `accuracy-01`).
+
+### Acceptance checks — every one of these is asserted by the runner in the same commit
+
+An acceptance check that no code runs is a wish (packet 25). Each line below has a corresponding
+assertion in `scripts/packet-26-government-intervention.mjs`, and the runner exits non-zero on any of
+them.
+
+1. `contextFor` resolves **23 leaves** and every one is claimed by exactly one block.
+2. **8 blocks**, each pinned to its own diagram (`diagramId`), its own lead quiz item, and its own
+   practice item; no pin reused; the three unpinned quiz items are the **first three** of the array.
+3. Each block's **lead check-in question is about that block** (`structure-01`, named per block).
+4. Every figure above — `$60` · `$70` · `$55` · `$15` · `$10` · `$5` · `$750` · `$75` ·
+   `50` · `60` · `80` · `30` · `$40` · `$44` · `$32` · `$12` · `$8` · `$4` · `$696` · `$48` ·
+   `58` · `$500` · `$400` · `250` · `150` · `100` — appears **both** in the body and in
+   notes/diagrams/assessment, and is re-derived from the three markets' own lines.
+5. **Tax and cap agree**: the runner recomputes the permit price as `demand(50) − MPC(50)` and
+   requires it to equal the tax, and requires both to give quantity 50 and buyer price $70.
+6. **The minimum-price comparison holds**: buyers pay the same $70 under the tax and the minimum
+   price, and the per-unit $15 reaches a different recipient in each.
+7. Every practice tariff is in the **economics** rows of `tariff-census.json`, all eight command words
+   appear, every guidance is two paragraphs with a scaffold-only opening, and no tariff above 6
+   allocates points.
+8. Ban list above, each as a regex over every string a student reads; plus no UK framing, no
+   four-digit year, no ledger id, no uncited examiner/marker/frequency/paper claim.
+9. **No reorder item is string-identical to a flow step in its own subsection** (`structure-04` —
+   nine of nine in the March section), carried from packet 25 with its A/B.
+10. Canvas bounds **and text extent** on every `<text>` in every diagram, with packet 25's A/B; table
+    columns computed from the widest cell.
+11. `npm run validate` 0 BLOCK / 0 new DEBT, `npm test` green, `npm run build` green.
+
+### The 390×844 walkthrough script (Verify B)
+
+`http://localhost:3001/study/government-intervention?draft=1` → Learn Mode. **Signed out, so this
+walks the free surfaces only**; the Pro surfaces are the founder's pass.
+
+1. Step 0 is a **pre-test of two questions** (not three — see block count above). Note which two.
+2. Walk all 39 steps. Every step must have a visible heading, a key idea and a body; no step body
+   may be blank and no step may read "step N of M" with N > M (the resume-pointer bug).
+3. At each of the **8 check-ins**: a diagram renders (not an empty frame), a quiz question appears,
+   and a practice question appears. Record the diagram title and confirm it belongs to that chapter.
+4. On the chapter 2 check-in, the tax diagram must show **Pc $70** and **Pp $55** and label the
+   revenue rectangle **$750**.
+5. On the chapter 4 check-in, the maximum-price panel must show **excess demand of 100** and the
+   minimum-price panel **excess supply of 30**.
+6. On the chapter 7 check-in, the tool-choice table must not have any cell running into the cell
+   beside it, and no label may be cut off at the frame — measure the widest with
+   `getComputedTextLength()`.
+7. Console errors: none.
+
+**The Notes tab cannot be verified from `?draft=1`** — notes are a free surface rendered server-side
+from `data` (DECISIONS, 16 Sep), so the page shows this packet's Learn Mode beside the March notes.
+Notes are verified by reading the `draft` column back field by field instead.
+
+### Verify B — 390×844, `/economics/unit-1/government-intervention?draft=1`, signed out
+
+Walked 17 September. Route is `/economics/unit-1/government-intervention` — not `/study/…`, which 404s.
+
+- **All 39 steps walked** (31 teach + 8 check-in). Every step has a heading, a key idea and a body;
+  none blank, none thin, and the step counter never exceeded its total.
+- **The pre-test offers TWO questions**, and the screen says so: *"Two questions on what you might
+  already know."* That is the 8-block boundary DECISIONS measured on 16 September, confirmed on the
+  phone rather than derived. `curl` of the anonymous payload shows `freeQuizPayload()` sending 10
+  items and REMAPPING `quizIndices` so all eight chapters still resolve a check-in question.
+- **All 8 check-ins render their own diagram**, pinned by `diagramId`; the chapter rail lists all
+  eight chapters by their correct titles.
+- **Chapter 2's tax panel carries every figure the spec block names**: `Pc $70`, `Pp $55`,
+  `revenue $750`, `Q 50`, `was 60 at $60`. Chapter 4's two panels carry `max $400` with
+  `excess demand 100` and `min $70` with `excess supply 30` (`50` wanted, `80` offered).
+- **Every diagram measured with `getComputedTextLength()` in the browser** — the independent
+  measurement, not the runner's estimate. **12 views, 265 text labels, ZERO running off a frame and
+  ZERO cell collisions.** The widest string of four characters or more measures **0.6558 em**,
+  against the 0.7 the runner and the column layout both use: the bound stays conservative, and it is
+  now measured for a third time (packet 24: 0.601, packet 25: 0.654).
+- **Console: clean.** One React hook warning appeared mid-walk and is NOT this packet's: it arrived
+  with a `[Fast Refresh] rebuilding`, and `components/learn-mode/InlineDiagram.jsx` and
+  `lib/content-validator.mjs` are both modified in the shared worktree by another session right now.
+  A clean reload cleared it and the section rendered correctly. **Two consequences for whoever gates
+  next: this packet's validator numbers were computed against an in-flight `content-validator.mjs`,
+  and `InlineDiagram.jsx` is the component that renders every diagram in this section.** Re-run both
+  once that session lands.
+- **Re-run after two commits landed mid-packet.** `packet-2.2` and `packet-2.4` were committed by
+  another session while this walk was in progress, changing `lib/content-validator.mjs`,
+  `components/learn-mode/InlineDiagram.jsx`, `lib/preview-limits.js` and `lib/pretest-pool.js`. The
+  dry run, the stage, the field-by-field `draft` check and the diagram measurement were all re-run
+  against the new HEAD. `freeQuizPayload()` is unchanged in effect for this section: 10 items, all 8
+  chapters served, a 2-question pre-test. The validator was not unchanged — see the next line.
+- **`diagram.table-legible` was recalibrated to the real 530px column and fired on this packet's one
+  table diagram at 10.4px.** It is now DEBT rather than BLOCK and the commit that changed it says a
+  dense reference table "cannot be read in place at 530px" and "will not fit at 15" — true of the
+  tables it measured, not true of these two, which were authored short. Raising the cells from 11
+  units to 13 clears it with the columns still fitting, and the browser confirms it independently:
+  **12.3px smallest rendered text on both tables, 0.945 px per unit, zero overflow and zero
+  collisions across 37 and 38 labels.** The constraint is cell LENGTH, which is worth knowing for
+  the design question that commit leaves open.
+
+- **Re-walked after Verify A rejected two ids.** Seven reorder recalls became match, classify and
+  fill-in items (see DECISIONS, 17 Sep). All 39 steps walk again, all seven changed steps render their
+  new recall type, console clean. The section now has 1 reorder / 10 fill-in / 10 match / 10 classify.
+
+- **Notes could not be walked from `?draft=1`**, as DECISIONS 16 Sep says: the page served this
+  packet's Learn Mode beside the March notes, because notes are server-rendered from `data`. The
+  notes were verified against the `draft` column instead — see the gate note below.
+
+### Ledger — 29 open items
+
+**`structure-04` and `topFix-03` are MULTI-CLAUSE and the clause split belongs here, not in a
+post-mortem (rule 5).** The spec block as first written did not split them, and Verify A rejected
+both on the clause that went unassigned:
+
+| clause | artefact that satisfies it |
+|---|---|
+| (a) the reorders are verbatim copies of the flow widget | the identity check, then the token-overlap check with its A/B, in the runner |
+| (b) they render below the teaching on the same step, with the flow visible above | **no subsection carries both a `flow` body and a `reorder` recall** — seven recalls rewritten as match, classify and fill-in |
+| (c) replace the three weak reorders with a classification and a scenario judgement | done — the replacements ARE classify and match items; the free-rider chain the finding also names is 1.3.5 content and belongs to packet 25 |
+| remedy #1: render it only as a spaced recall on a LATER step | **not available to an author.** `lib/learn-steps.js` decides recall placement; a packet-7 change, recorded in DECISIONS |
+
+**Claimed:** `topFix-01` `topFix-02` `topFix-03` `topFix-05` `accuracy-01` `accuracy-02`
+`structure-01` `structure-03` `structure-04` `structure-05` `structure-06` `structure-07`
+`structure-08` `structure-09` `structure-10` `structure-11` `specGap-01` `specGap-02` `specGap-03`
+`specGap-04` `specGap-05` `specGap-06` `specGap-07` `specGap-08` `specGap-09` `specThin-01`
+`practice-01` `topFix-04` `structure-02` — all 29, each with the clause split recorded above for the
+nine that are wrong in whole or in part. **Nothing is left for a later packet.**
+
+**Exit:** staged, 0 BLOCK / 0 new DEBT, Verify A clean, a 390×844 walk, Layer 6 with two planted
+canaries, PROGRESS row, commit, push. **Do not publish** — the packet 5/7 checkpoint holds and
+thirteen sections now wait on it.
 
 ## Packet 25 spec — `market-failure`, Economics 1.3.5 (Opus 5, 16 September 2026)
 

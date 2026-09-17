@@ -1639,3 +1639,113 @@ diagrams it lists are packet 28's and packet 22's. Packet 27's four declared tab
 chain, a portfolio data table, two comparison tables and two reference lists — none is a diagram a
 student is asked to draw, and all three that ARE drawable (Ansoff, Porter, SWOT, each named by a
 `Construct` practice item) are undeclared and carry their five-line checklists.
+
+## 2026-09-17 — packet 26: a quiz explanation may not point at an option by POSITION
+
+**Rule: an explanation names an option by its CONTENT, never by "the second option" or "option C".**
+Added to `scripts/packet-26-government-intervention.mjs` with an A/B; carry it forward.
+
+Seven of this bank's thirty-five explanations did it, and six of those named the CORRECT answer as if
+it were a distractor — so a student who got the item right was then told why their answer was wrong.
+
+It is wrong twice over. Items are authored with the key FIRST and `placeKeys` then deals the key into
+a slot, so a pointer written against the authored order is stale the moment the deal runs. And
+options are shuffled AGAIN at render (F074), where the shuffle only declines to run for an
+explanation that names an option by LETTER — an ordinal like "the third" does not stop it. The
+pointer is therefore unstable even for a reader who never reloads the page.
+
+**Nothing in the repository could see this.** `quiz.dup-options`, `quiz.long-correct`, `quiz.hedged`
+and the answer histogram all read the OPTIONS array; the explanation is prose, and no rule reads it
+as a reference to anything. The packet's own runner checked option uniqueness, the length tell and
+the position spread — three checks about options, none about what the prose says about them. Fifth
+instance of the class in [[revvylearn-verify-independently]]: **a check that measures the wrong
+property passes everything.**
+
+Found by Layer 6, on the bank, in one pass. Not by the runner, not by the validator, not by Verify B —
+a student only sees it after answering, and the walk never answers an item wrongly on purpose.
+
+## 2026-09-17 — packet 26: the copy-from-screen check has to measure MEANING, not characters
+
+Packet 25's `structure-04` check compares a reorder item with the flow steps on the same subsection by
+**string identity**. This packet passed it on the first build and then failed a token-overlap measure
+of the same property: three items sat at 0.67, 0.67 and 0.73 Jaccard against the flow step directly
+above them — "Buyers now value the good more highly than they did before" under a flow step reading
+"Buyers value the good more highly than before".
+
+**Identity was never the property that makes a reorder copyable.** A student pairs items with the
+lines above by matching words, and near-identical words match as well as identical ones. The runner
+now measures overlap at a 0.6 bound with an A/B at both ends — a near-paraphrase must fire and a
+genuine restatement must not — because `reorder.source` *wants* the item to come from the taught
+sequence, so forbidding all overlap would forbid the rule's own intent.
+
+Packet 27 reached the same check independently on the same day. Two packets finding one gap in one
+day is the argument for moving it into the validator rather than copying it forward a third time.
+
+## 2026-09-17 — packet 26: a table authored SHORT clears the recalibrated legibility rule
+
+`diagram.table-legible` was recalibrated the same afternoon (packet 2.2) from an 800px column to the
+530px a 1024-wide laptop actually gives, and it fired on this packet's one table diagram at 10.4px.
+That commit says a dense reference table "genuinely cannot be read in place at 530px" and that the
+content "will not fit at 15", and leaves the fix as an open design question.
+
+**True of the tables it measured; not true of these two.** Raising the cells from 11 units to 13
+clears the rule with the computed columns still fitting, and the browser confirms it independently at
+**12.3px rendered, 0.945px per unit, zero overflow and zero collisions across 37 and 38 labels**. One
+cell had to shrink — "Provision of information" became "Information" in the comparison column, where
+the specification's full phrase is already in the teaching text, the notes and the flashcards.
+
+**The constraint is cell LENGTH, and it is a soft one.** A table written to be read rather than to be
+exhaustive clears the rule today at 13 units. That is worth knowing before the design question is
+answered with a wider column, because a wider column would also let the dense tables stay dense.
+
+## 2026-09-17 — packet 26: Layer 6's brief still did not name the pre-test, and it cost a false positive
+
+Packet 25's handoff says, in as many words: *"Tell Layer 6 about the pre-test. Its brief describes the
+tables and never says a quiz bank has two consumers, so it reported the three unpinned items as
+unreachable."* This packet's brief did not say it either, and Layer 6 reported exactly that: the three
+unpinned items "can never reach a student working through the linked chapters."
+
+They are the pre-test pool (`lib/pretest-pool.js:29`), first in the array on purpose.
+
+**A lesson recorded in a handoff is not a lesson applied.** The Layer 6 brief is written fresh each
+packet from the section in front of it, so a line that lives only in NEXT.md gets rewritten away.
+Either the brief becomes a file — `.claude/agents/` already holds the other two — or every packet
+pays this again. Recommended: `.claude/agents/content-adversary.md`, carrying the pre-test line, the
+IAL numbering trap, and the instruction to report defects only.
+
+**Canary accounting for this packet, honestly:** two planted, **one caught**. Layer 6 found the
+reversed incidence in a quiz explanation and did NOT find an Appendix 6 gloss that bolted "an informed
+judgement supported by a diagram" onto Examine, whose own description says "a brief assessment". The
+runner's Appendix-6 gloss check would have caught the second one on the real bundle; it was planted in
+a copy, where no runner sees it. So the miss is a real miss, and one canary in two is a weaker result
+than packets 14-25 have been reporting.
+
+## 2026-09-17 — packet 26: a reorder may not sit under a flow box, and a two-clause finding needs two checks
+
+**Rule: a subsection with a `flow` body does not carry a `reorder` recall.** Added to
+`scripts/packet-26-government-intervention.mjs`; it needs no judgement to check and no A/B, because
+it is structural rather than a measurement.
+
+`structure-04` is a two-clause finding. Clause (a): the reorders "are verbatim copies of the flow
+widget". Clause (b): "because each is the first section of its step they render as 'immediate'
+recalls at the bottom of the same step with the flow visible above."
+
+This packet closed (a) twice over — first by string identity, carried from packet 25, then by token
+overlap after that check passed three items sitting at 0.67, 0.67 and 0.73 against the flow step
+above them. **Verify A rejected the packet anyway, and was right to.** Seven of eight reorders still
+sat directly beneath a numbered list of their own answer. Rewording makes a reorder *easier* to copy,
+not harder: the words differ and the ORDER, which is the only thing a reorder tests, is still printed
+above it. Two checks of clause (a) do not add up to clause (b).
+
+**Rule 5 is the lesson and it was available before a word was written**: split a multi-part ledger
+item into clauses BEFORE building and say in the spec block which artefact satisfies which. The spec
+block for this packet did not split this item, so the second clause was never assigned an artefact
+and nothing noticed until an adversarial reader read the finding rather than the code.
+
+**What it cost.** Seven recalls were rewritten as match, classify and fill-in items that test what the
+flow box does not hand over — which curve moved, what the cap decides against what trading decides,
+whose information gap it is. The section now carries **one reorder in thirty-one recalls**, and that
+imbalance is the honest price of the rule. It is not the price of the right fix: the finding's own
+first remedy is to render the recall only as a spaced recall on a LATER step, which an author cannot
+do because `lib/learn-steps.js` decides placement. **That is a packet-7 change and it would give
+every section its reorders back.** Recommended before the next content packet.
