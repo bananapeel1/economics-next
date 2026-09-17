@@ -135,12 +135,15 @@ export default function InlineDiagram({ diagram }) {
   useEffect(() => {
     if (typeof window === 'undefined' || !window.matchMedia) return;
     const narrow = window.matchMedia('(max-width: 767px)');
-    const update = () => setCanEnlarge(narrow.matches || (svgRef.current?.clientWidth || 0) < 500);
+    /* A table always offers it. The width cap is off for tables, but a grid of words still lands
+       around 9px on a 1024-wide laptop and ~5px on a phone, and the old rule hid the hint whenever
+       the wrapper was 500px or wider — so at 1024 a table was small AND had no way out. */
+    const update = () => setCanEnlarge(isTable || narrow.matches || (svgRef.current?.clientWidth || 0) < 500);
     update();
     narrow.addEventListener('change', update);
     window.addEventListener('resize', update);
     return () => { narrow.removeEventListener('change', update); window.removeEventListener('resize', update); };
-  }, []);
+  }, [isTable]);
 
   return (
     <div className={`lm-diagram-card${isTable ? ' lm-diagram-table' : ''}`}>

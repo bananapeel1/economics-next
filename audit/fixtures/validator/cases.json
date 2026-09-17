@@ -880,7 +880,29 @@
    "rule": "diagram.table-legible",
    "pass": {
     "diagrams.0.kind": "table",
-    "diagrams.0.svg": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"10\" y=\"20\" fill=\"#e8ecf5\" font-size=\"9\">Row 0</text><text x=\"260\" y=\"20\" fill=\"#e8ecf5\" font-size=\"9\">Value 0</text><text x=\"10\" y=\"60\" fill=\"#e8ecf5\" font-size=\"9\">Row 1</text><text x=\"260\" y=\"60\" fill=\"#e8ecf5\" font-size=\"9\">Value 1</text><text x=\"10\" y=\"100\" fill=\"#e8ecf5\" font-size=\"9\">Row 2</text><text x=\"260\" y=\"100\" fill=\"#e8ecf5\" font-size=\"9\">Value 2</text><text x=\"10\" y=\"140\" fill=\"#e8ecf5\" font-size=\"9\">Row 3</text><text x=\"260\" y=\"140\" fill=\"#e8ecf5\" font-size=\"9\">Value 3</text></svg>"
+    "diagrams.0.svg": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"10\" y=\"20\" fill=\"#e8ecf5\" font-size=\"12\">Row 0</text><text x=\"260\" y=\"20\" fill=\"#e8ecf5\" font-size=\"12\">Value 0</text><text x=\"10\" y=\"60\" fill=\"#e8ecf5\" font-size=\"12\">Row 1</text><text x=\"260\" y=\"60\" fill=\"#e8ecf5\" font-size=\"12\">Value 1</text><text x=\"10\" y=\"100\" fill=\"#e8ecf5\" font-size=\"12\">Row 2</text><text x=\"260\" y=\"100\" fill=\"#e8ecf5\" font-size=\"12\">Value 2</text><text x=\"10\" y=\"140\" fill=\"#e8ecf5\" font-size=\"12\">Row 3</text><text x=\"260\" y=\"140\" fill=\"#e8ecf5\" font-size=\"12\">Value 3</text></svg>"
+   }
+  },
+  {
+   "rule": "diagram.table-kind",
+   "pass": {
+    "diagrams.0.svg": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"10\" y=\"20\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Row 0</text><text x=\"260\" y=\"20\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Value 0</text><text x=\"10\" y=\"60\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Row 1</text><text x=\"260\" y=\"60\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Value 1</text><text x=\"10\" y=\"100\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Row 2</text><text x=\"260\" y=\"100\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Value 2</text></svg>"
+   }
+  },
+  {
+   "rule": "diagram.table-checklist",
+   "pass": {
+    "diagrams.0.svg": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"10\" y=\"20\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Row 0</text><text x=\"260\" y=\"20\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Value 0</text><text x=\"10\" y=\"60\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Row 1</text><text x=\"260\" y=\"60\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Value 1</text><text x=\"10\" y=\"100\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Row 2</text><text x=\"260\" y=\"100\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Value 2</text><text x=\"10\" y=\"140\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Row 3</text><text x=\"260\" y=\"140\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Value 3</text></svg>",
+    "diagrams.0.checklist": [
+     "Axes labelled"
+    ]
+   }
+  },
+  {
+   "rule": "diagram.table-legible",
+   "pass": {
+    "diagrams.0.kind": "table",
+    "diagrams.0.svg": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"10\" y=\"20\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"start\">Row 0</text><text x=\"260\" y=\"20\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"start\">Value 0</text><text x=\"10\" y=\"60\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"start\">Row 1</text><text x=\"260\" y=\"60\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"start\">Value 1</text><text x=\"10\" y=\"100\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"start\">Row 2</text><text x=\"260\" y=\"100\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"start\">Value 2</text><text x=\"10\" y=\"140\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"start\">Row 3</text><text x=\"260\" y=\"140\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"start\">Value 3</text></svg>"
    }
   },
   {
