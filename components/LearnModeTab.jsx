@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { highlightGlossaryTerms } from '@/lib/glossary-highlight';
 import { recordReview } from '@/lib/strength';
-import { distributeItems, matchDiagramsToBlocks, resolvePinnedItem, resolvePinnedDiagram } from './learn-mode/utils';
+import { distributeItems, matchDiagramsToBlocks, resolvePinnedItem, resolvePinnedDiagram, fallbackItemForBlock } from './learn-mode/utils';
 import { buildSteps, pickSpacedRecall, clampStep, firstStepOfBlock } from '@/lib/learn-steps';
 import InlineDiagram from './learn-mode/InlineDiagram';
 import InlinePractice from './learn-mode/InlinePractice';
@@ -230,6 +230,15 @@ export default function LearnModeTab({
           if (slot && !dMap[slot.i]) dMap[slot.i] = diagram;
         }
       }
+
+      // The same fallback for the quiz (V026). A chapter that pins nothing, in a section where the
+      // others do, resolved to nothing at all above — for a paying student as well as a free one.
+      // It runs after the pins, out of what no pin claimed, so it can never displace one that worked.
+      slots.forEach(({ s: step, i: idx }) => {
+        if (step.type !== 'checkin' || qMap[idx]) return;
+        const spare = fallbackItemForBlock(quizData, step.blockTitle, usedQuiz);
+        if (spare) qMap[idx] = spare;
+      });
     } else {
       // Legacy fallback: spread items across the chapter slots.
       const byBlock = matchDiagramsToBlocks(diagramsData, contentData);

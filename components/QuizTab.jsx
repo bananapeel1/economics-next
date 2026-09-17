@@ -4,6 +4,7 @@ import { useAuth } from './AuthProvider';
 import PaywallOverlay from './PaywallOverlay';
 import { Quiz as QuizIcon, CardClub } from './Icons';
 import Link from 'next/link';
+import { PREVIEW_LIMITS } from '@/lib/preview-limits';
 
 export default function QuizTab({ questions, sectionId, onAskTutor, previewMode = false, totalCount }) {
   const { user } = useAuth();
@@ -12,8 +13,14 @@ export default function QuizTab({ questions, sectionId, onAskTutor, previewMode 
   const [bestScore, setBestScore] = useState(null);
   const [saving, setSaving] = useState(false);
 
-  const PREVIEW_LIMIT = 2;
-  const displayQuestions = previewMode ? (questions || []).slice(0, PREVIEW_LIMIT) : (questions || []);
+  /* V018. This was a local `PREVIEW_LIMIT = 2`, a second copy of PREVIEW_LIMITS.quiz in a file that
+     never mentioned it. Harmless while the server sent exactly two questions, load-bearing the
+     moment V005 and V016 made it send up to FREE_QUIZ_MAX: this slice is the only thing between a
+     signed-out reader and eight more questions with their `correctIndex` on them. Nothing renders
+     this component in a test, so deleting the slice would fail nothing — `lib/preview-limits.test.mjs`
+     therefore reads this file and asserts the cap is here and comes from the shared constant, the
+     way lib/write-path.test.mjs guards the write path. */
+  const displayQuestions = previewMode ? (questions || []).slice(0, PREVIEW_LIMITS.quiz) : (questions || []);
   // How many questions this student is actually being asked, which is what a score is out of.
   const quizLength = displayQuestions.length;
 
@@ -97,9 +104,12 @@ export default function QuizTab({ questions, sectionId, onAskTutor, previewMode 
     : 'var(--accent-red)'
     : 'var(--accent-green)';
 
-  // The server now sends only the preview slice, so the array length is the preview size, not the
-  // bank size. The true total comes from the API's counts (F086).
-  const totalQuizQuestions = totalCount ?? questions?.length ?? 0;
+  /* The server sends only the preview slice, so `questions.length` is the PREVIEW size, not the bank
+     size, and this fell back to it — the "2 of 2" trap lib/preview-limits.js warns about. The only
+     caller passes `counts.quiz` (components/StudyApp.jsx), so nothing was printing "2 of 2" in
+     practice; what was wrong was the fallback standing ready to. `counts.quiz` is the only honest
+     source, so when it is absent the copy below says how many were shown and claims no total. */
+  const totalQuizQuestions = Number.isFinite(totalCount) ? totalCount : null;
 
   return (
     <div>
@@ -119,7 +129,7 @@ export default function QuizTab({ questions, sectionId, onAskTutor, previewMode 
                 bank of 25, so "2/2" looked like mastery and "0/2" like failure. Say which it is,
                 and name the real size so the number cannot be mistaken for a section score. */}
             {previewMode
-              ? `${score} of ${displayQuestions.length} in the preview. The full quiz for this section has ${totalQuizQuestions} questions.`
+              ? `${score} of ${displayQuestions.length} in the preview.${totalQuizQuestions ? ` The full quiz for this section has ${totalQuizQuestions} questions.` : ''}`
               : score === displayQuestions.length ? 'Perfect score!' :
                 score >= displayQuestions.length * 0.8 ? 'Great work!' :
                 score >= displayQuestions.length * 0.5 ? 'Good effort — review the explanations below.' :
@@ -184,9 +194,17 @@ export default function QuizTab({ questions, sectionId, onAskTutor, previewMode 
         </button>
       )}
 
-      {/* Upgrade CTA after preview questions */}
+      {/* Upgrade CTA after preview questions. This read the local literal too (V018) and it is the
+          copy a student actually sees; it is now the number of questions rendered, so a section
+          whose bank is smaller than the preview limit says "1 of 1" rather than claiming two. The
+          total is printed only when `counts` supplied one. */}
       {previewMode && submitted && (
-        <PaywallOverlay feature="Quiz" previewText={`You've previewed ${PREVIEW_LIMIT} of ${totalQuizQuestions} questions`} />
+        <PaywallOverlay
+          feature="Quiz"
+          previewText={totalQuizQuestions
+            ? `You've previewed ${displayQuestions.length} of ${totalQuizQuestions} questions`
+            : `You've previewed ${displayQuestions.length} questions`}
+        />
       )}
 
       {/* Post-quiz break prompt */}

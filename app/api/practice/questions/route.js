@@ -3,6 +3,7 @@ import { createClient } from '@/lib/supabase/server';
 import { createServerClient } from '@/lib/supabase-server';
 import { hasPremiumAccess } from '@/lib/entitlements';
 import { getSubscriptionRow } from '@/lib/subscription-lookup';
+import { PREVIEW_LIMITS } from '@/lib/preview-limits';
 
 /**
  * GET /api/practice/questions?sections=section1,section2,...
@@ -19,9 +20,12 @@ import { getSubscriptionRow } from '@/lib/subscription-lookup';
  * so the client can explain itself instead of rendering an empty state.
  */
 
-// Same number the Quiz tab previews (components/QuizTab.jsx PREVIEW_LIMIT), so the two surfaces
-// cannot disagree about what "free" means for the same bank.
-const PREVIEW_LIMIT = 2;
+/* The same number the Quiz tab previews, so the two surfaces cannot disagree about what "free"
+   means for the same bank — taken from the constant rather than typed again, which is what the
+   comment here used to promise and did not do. It named `components/QuizTab.jsx PREVIEW_LIMIT`, a
+   symbol that no longer exists; V018 removed it, and this copy survived because it is a route
+   rather than a component. */
+const PREVIEW_LIMIT = PREVIEW_LIMITS.quiz;
 
 // A bound on the request itself. 43 sections exist; anything beyond that is someone enumerating.
 const MAX_SECTIONS = 50;

@@ -1,5 +1,155 @@
 # Next session brief
 
+## Packet 29 spec — `market-structures-contestability`, Economics 3.3.3 (in progress, Opus 5, 17 Sep)
+
+`audit/raw/econ_spec.txt:1359-1440`. **61 oracle rows / 54 substantive leaves — the largest section in
+the programme** (packet 22's 46 was the previous high). Live state: **4 blocks · 8 subsections · 12 quiz ·
+5 practice · 18 flashcards · 5 diagrams · 0 extras · 0 recalls**, and the validator reads
+**7 BLOCK / 42 DEBT / 3 INFO, 44 baselined, coverage 44 of 54 (81%)**. The 81% is not to be trusted: the
+oracle matches by SUBSTRING (V025) and this section has many one-word leaves (`patents`, `branding`,
+`quality`, `endorsement`), so the leaf→subsection map below is done BY HAND and is the real measure.
+
+### Block plan — EIGHT blocks, in specification order
+
+| # | block | leaves | spec |
+|---|---|---|---|
+| 1 | Efficiency and concentration | 7 | `1a-1`…`1a-5`, `2a`, `2b` |
+| 2 | Perfect competition | 4 | `3a`–`3d` |
+| 3 | Monopolistic competition | 6 | `4a`, `4b-1`…`4b-3`, `4c`, `4d` |
+| 4 | Oligopoly: barriers to entry and exit | 7 | `5a`, `5b-1`…`5b-6` |
+| 5 | Oligopoly: interdependence and collusion | 6 | `5c-1`…`5c-5`, `5d` |
+| 6 | Oligopoly: price and non-price competition | 9 | `5e-1`…`5e-3`, `5f-1`…`5f-5`, `5g` |
+| 7 | Monopoly | 8 | `6a`–`6h` |
+| 8 | Monopsony and contestability | 7 | `7a`, `7b`, `8a`, `8b-1`, `8b-2`, `8c`, `8d` |
+
+**Eight, not seven, and the cost is named.** Per the measured table above, eight blocks give all eight
+chapters a check-in question and drop a signed-out student's pre-test from three questions to two; nine
+would drop it to one. Seven blocks would put 54 leaves in seven chapters — 7.7 a chapter against the
+6.6 packet 22 proved at 46/7 — and would mean folding two of the three oligopoly chapters together, when
+Oligopoly alone is **25 of the 54 leaves**. Density stays at the proven 6.75. Spec order also puts
+Oligopoly before Monopoly, which `structure-07` explicitly says works, and fixes `structure-03`/`-04` at
+the root the way packet 20 did rather than patching the fallback.
+
+### Rule-1 pre-flight: 11 of 37 claims are wrong, and one is the dangerous kind
+
+Rate across packets 14-27 was 4, 4, 6, 5, 6, 8, 5, 8, 8; this is the highest yet, on the largest section.
+
+1. **`specGap-13` is WRONG — wont-fix.** It says the app's `3.3.3` "does not correspond to IAL spec
+   numbering". `econ_spec.txt:1359` is literally `3.3.3 Market structures and contestability`, and
+   `:1245`/`:1294` are `3.3.1 Types and sizes of businesses` and `3.3.2 Revenue, costs and profits` —
+   exactly what the app has. It also counts "~7 sub-bullets"; there are eight (it omits Concentration
+   ratio). Nothing to fix. See [[revvylearn-ial-spec-numbering]] for the trap it fell into backwards.
+2. **`specGap-12` is RIGHT, and it is the rule-2 case.** `kinked` = **0 hits** in `econ_spec.txt`. The
+   live section gives the kinked demand curve a full subsection, one of its five diagrams, quiz items and
+   the model answer of its 20-mark essay. It is not IAL. The spec's own apparatus for interdependence is
+   `5c` (`:1393-1399`): simple game theory two-firm/two-outcome, reasons for collusive and non-collusive
+   behaviour, cartels, price leadership, price wars. The kinked demand curve is **removed**, not reweighted.
+3. **`topFix-04`'s prescribed remedy IS the defect packet 26 proved.** It asks for "reorder recalls from
+   the existing flows". `lib/learn-steps.js:10` renders the recall below the teaching on the same step, so
+   a reorder whose sequence is the flow box above it is a copy-from-screen task, and rewording makes it
+   easier to copy, not harder. Clause satisfied a different way: **every reorder sourced from an extras
+   chain, and no subsection with a `flow` body carries a `reorder`** (packet 26's structural rule, which
+   packet 28's runner had softened back to a verbatim-only check — ported forward here with 26's Jaccard
+   check and 27's paraphrase-tolerant matcher, all three A/B'd).
+4. **`specGap-10` names the wrong sub-topic.** It asks for the barriers taxonomy under Contestability.
+   The taxonomy is Oligopoly `5b` (`:1386-1391`): economies of scale, limit pricing, patents, branding,
+   sunk costs, legal. Contestability's own leaves are `8a`-`8d`, of which `8d` is the significance of sunk
+   costs. Its "predatory behaviour" is not a `5b` bullet — it is `5e-2`. Built in block 4, referenced from 8.
+5. **`specGap-04` names the wrong sub-topic** and misses a leaf. Concentration ratios are sub-topic **2**
+   in their own right (`:1369-1371`), not an oligopoly bullet, and `2b` "the significance of concentration
+   ratios" goes unmentioned by the finding.
+6. **`specGap-08` over-claims the stakeholders.** It asks for costs and benefits of monopoly "to firms,
+   employees and suppliers (spec asks for all stakeholder groups)". `6d` (`:1426`) says **firms and
+   consumers**. Employees and suppliers are `5g`'s list and workers are `5d`'s; the finding has imported
+   another leaf's stakeholders.
+7. **`specGap-01` over-claims by one.** Monopsony costs and benefits "to firms, consumers, employees and
+   suppliers"; `7b` (`:1433-1434`) says firms, consumers and employees.
+8. **`specGap-06` names vocabulary the spec does not have and omits three bullets it does.** "loyalty
+   schemes" = 0 hits; `5f` (`:1417-1421`) is advertising and branding, quality, **endorsement, product
+   placement, after-sales service**. All five taught.
+9. **`accuracy-05`'s core claim is right and its arithmetic is wrong.** 25-mark essays are UK GCE and
+   WEC13 Section C is 20 marks (PROTOCOL's paper table; census `Evaluate [20]`) — but "Section B
+   sub-questions top out at 12" is false: the Economics census has **no 12-mark command at all** and
+   `Discuss` is **14** (`:2733-2739`). The 25 is corrected; the 12 is not restated.
+10. **`practice-01`'s second clause cannot be built as written.** "IAL 20-markers are levels-marked (KAA
+    + evaluation levels)" is true of the real mark scheme and is **banned from student-facing prose** by
+    this programme's own `MARK_CLAIM` check, which keys on `levels-marked` and `KAA` (packet 20 found "is
+    levels-marked" shipped eight times). Satisfied instead by stating what `Evaluate` requires per
+    Appendix 6, which is citable. Clause (a) — the kinked demand curve is not a game-theory model — is
+    right and moot once (2) removes it.
+11. **`topFix-01` names the legacy field.** It asks for `diagramRef`; `lib/learn-steps.js:44-55` reads the
+    BLOCK's **`diagramId`** and `diagramRef` is the legacy string pin. Its prescribed indices describe
+    the four-block section being replaced. **`topFix-05`'s OPEC swap is also refused**: Kazakhstan is
+    OPEC+, not OPEC, and quota compliance is a dated claim the runner's own checks ban — the named-country
+    example is dropped rather than swapped.
+
+**`specGap-11` resolves in favour of teaching it here, and the reason matters for how.** The item is
+unsure whether the short-run shutdown point belongs to this section. It is BOTH: `3.3.3 · 3c` (`:1372`)
+under Perfect competition, and `3.3.2 · 4b` (`:1353`) as "short-run and long-run shutdown points" — which
+is packet 28's section, whose last diagram is "Profits, Losses and the Shutdown Points". So it is applied
+here to the perfectly-competitive firm, not re-taught from the cost curves up. **The same split governs
+X-inefficiency**: `3.3.2 · 3f` owns it as a source of diseconomies of scale, `3.3.3 · 1a-4` owns it as a
+concept of efficiency. And packet 28's runner bans from itself, as 3.3.3 material, exactly what this
+section owns: profit maximisation, MR = MC, perfect competition, monopoly, allocative/productive/dynamic
+efficiency, barriers to entry, sunk costs. That is the reverse-direction check the brief asked for, done.
+
+### Clause splits (rule 5) — which artefact satisfies which clause
+
+- **`topFix-01`** (a) every block carries `diagramId` → `diagramIds` map, one diagram a block; (b)
+  `quizIndices` → one pinned quiz item a block, none of them the pre-test's three; (c) `practiceIndices`
+  → one pinned practice item a block. Runner refuses on any block missing any of the three.
+- **`topFix-02`** (a) PC long-run AR tangent to a clean U-shaped AC at min AC; (b) monopolistic-competition
+  long-run tangency to the right of min AC with excess capacity measured to the AC minimum; (c) monopoly
+  MR=MC, Pm, Qc and the DWL polygon re-derived from curve intersections; (d) a third-degree PD two-market
+  diagram. Every figure in all four re-derived from the emitted SVG by the runner, not typed.
+- **`topFix-03`** (a) Monopsony subsections; (b) natural monopoly; (c) X-inefficiency in an Efficiency
+  opener BEFORE perfect competition; (d) barrier-to-entry types; (e) n-firm concentration ratios; (f) the
+  shutdown item is taught, not removed.
+- **`topFix-04`** (a) reorder recalls exist; (b) fill-in recalls for the PD conditions and the PC /
+  monopolistic-competition long-run conditions. Sourced from extras chains, never from a flow on the step.
+- **`topFix-05`** (a) the Ryanair/easyJet leasing claim; (b) 25-mark → 20-mark; (c) the OPEC example
+  (dropped, see 11); (d) the big-four example (dropped with the UK sweep); (e) "zero dynamic efficiency"
+  softened; (f) kinked-demand-as-game-theory removed from the 20-mark model answer; (g) at least half the
+  examples non-UK.
+- **`structure-07`** the actionable clause is block 3's takeaway previewing the next block; every block's
+  takeaways summarise their own block. Its "monopoly before oligopoly" remark is explicitly optional.
+- **`structure-08`** the actionable clause is differentiating the two overlapping misconceptions; its own
+  suggestion ("students read the monopoly price off the MR curve") is used.
+- **`accuracy-05`** / **`practice-01`** see 9 and 10 above; the false half of each is not built.
+
+### Claims
+
+Claiming **36**: all `topFix-01`…`-05`, `accuracy-01`…`-05`, `quiz-01`, `practice-01`,
+`structure-01`…`-09`, `specGap-01`…`-12`, `specThin-01`…`-03`.
+**`specGap-13` → wont-fix** with the note in 1 above. Nothing is deferred to a later packet.
+Not mine and not touched: **V022** (`diagram.table-legible` is a design decision), **V024**
+(`PracticeQuestionsTab`'s UK GCE tariff ladder), **V006** ("Before the next chapter" on the last chapter).
+
+### Acceptance checks a verifier can run without this conversation
+
+1. `node scripts/packet-29-market-structures-contestability.mjs` exits 0 — it is the section's first
+   reader and carries every check below plus the A/Bs.
+2. `grep -ci kinked` over the emitted bundle is **0**, and `grep -c "game theory\|cartel\|price
+   leadership\|price wars"` is non-zero: the off-spec model is gone and the spec's own apparatus replaces it.
+3. Every one of the **54 leaves** maps to a named subsection in the runner's hand-written
+   `LEAF_MAP`, and the runner fails if any leaf is unmapped or any mapped subsection does not exist.
+   Coverage from the oracle is reported but is NOT the gate (V025).
+4. `blocks === 8`; every block has a `diagramId`, ≥1 `quizIndices` and ≥1 `practiceIndices`; exactly
+   three quiz items unpinned and first in the array; no pinned item is a pre-test item.
+5. Every practice `command`/`marks` pair is in the **economics** census — no `Assess`, no `Outline`, no
+   10- or 12-mark item anywhere in the bundle, and `Draw`/`Construct` used only as the census allows.
+6. No reorder recall in a subsection with a `flow` body; every reorder's items token-overlap < 0.6 with
+   every flow step on the same subsection; all three copy-from-screen A/Bs fire and clear.
+7. No quiz explanation names an option by position (packet 26's ban), no ledger-id shape in any student
+   string, no `MARK_CLAIM`/`FREQUENCY_CLAIM`/`PAPER_PATTERN_CLAIM` hit, one minus sign, ids unique.
+8. Every figure in every diagram re-derived from the emitted SVG; nothing drawn outside its canvas; no
+   table cell collisions; `matrixSvg` throws on a cell that does not fit one line.
+9. `npm run validate` → 0 BLOCK and 0 new DEBT for this section; `npm test` green; `npm run build` green.
+10. **Verify B at 390×844 with `?draft=1`**: walk all steps of `market-structures-contestability`; the
+    pre-test must offer **two** questions (the measured cost of eight blocks, not a defect); every chapter
+    check-in must show a diagram and a question; the game-theory payoff matrix must be legible at 390px;
+    no step may show a recall whose answer is printed above it.
+
 ## Take packet 29 — `market-structures-contestability`, Economics 3.3.3 (Opus 5, NEW session)
 
 **Check `audit/PROGRESS.md` for the live row before starting anything.** Four sessions ran in this
@@ -14,21 +164,25 @@ perfect competition · monopolistic competition · oligopoly · monopoly · mono
 
 ### Read this before you choose a block count — it is the one decision you cannot walk back
 
-Eight sub-topics and 54 leaves means eight chapters is the floor, not the ceiling, and **eight is
-where the free-quiz ceiling bites**. `freeQuizPayload()` spends `PREVIEW_LIMITS.quiz` (2) on the Quiz
-tab, one pin per block, then the pre-test's headroom, all bounded by `FREE_QUIZ_MAX` (10):
+**This section was rewritten by packet 2.5 on 17 September. The table it replaces said eight was the
+ceiling and that raising `FREE_QUIZ_MAX` was a founder decision; neither is true now.** V016 and V019
+changed what `freeQuizPayload()` sends: every chapter takes a question first, then the pre-test's
+headroom, all still bounded by `FREE_QUIZ_MAX` (10), which did NOT move and does not need to.
+Measured against the shipping functions, for a section pinned the way the template pins:
 
-| blocks | 6 | 7 | 8 | 9 | 10 |
-|---|---|---|---|---|---|
-| pre-test questions a signed-out student gets | 3 | 3 | **2** | 2 | 2 |
-| chapters served NO check-in quiz | 0 | 0 | 0 | **1** | **2** |
+| blocks | 5 | 6 | 7 | 8 | 9 | 10 | 11+ |
+|---|---|---|---|---|---|---|---|
+| chapters served a check-in quiz | 5 | 6 | 7 | 8 | 9 | 10 | **10** |
+| pre-test questions a signed-out student gets | 3 | 3 | 3 | **2** | **1** | **0** | **0** |
 
-Packet 27 chose **seven** for exactly this reason and confirmed three pre-test questions on the phone.
-Packet 25 ran at eight and measured the drop to two. **The runner refuses at nine**, so a section this
-size cannot simply take the chapters it needs. Your options are to fit 54 leaves into eight chapters,
-to split the section, or to get `FREE_QUIZ_MAX` raised — which is **V016, already open on packet 2.5,
-and a founder decision**. Raise it with him at the START of the session, not after you have authored
-eight chapters, because the block plan is what everything else hangs off.
+**The ceiling is ten chapters, and what a ninth and tenth cost is the pre-test, not a chapter.** So
+54 leaves across eight chapters is no longer the constraint it was: eight costs one pre-test question
+and nine costs two, and neither leaves a check-in empty. Above ten a chapter gets nothing, which is
+the line not to cross. Packet 27 chose seven under the old ceiling and packet 25 ran at eight; both
+remain fine.
+
+The founder decision the old text pointed at is closed. Do not open the session by asking for the cap
+to be raised — decide the block count on the pedagogy and this table.
 
 ### Start from `scripts/packet-27-*.mjs`, not 25's or 26's
 
@@ -130,10 +284,12 @@ it is not falling. Two warnings specific to 3.3.3:
 
 ### Two hazards live in this worktree right now
 
-- **`audit/ledger.json` has 39 uncommitted claims that are not packet 26's** (packet 28's, plus V015-V023).
-  Packet 26's 29 confirmations are in the working file and were deliberately left OUT of its commit, to
-  land with packet 28's gate commit — packet 19's precedent. **Diff the ledger by id before committing it
-  and confirm every change is yours.**
+- **The ledger hazard is resolved as of packet 2.5's commit, and the cause is now `V027`.** HEAD had
+  LOST V015-V023 entirely — nine feature items that existed only in the working tree, because a session
+  with a stale copy wrote the file back and a commit captured that. Packet 2.5's commit restores them
+  and carries packets 26 and 28's confirmations, which those sessions left uncommitted. **Keep diffing
+  the ledger by id before committing it**: `git show HEAD:audit/ledger.json` against the working file,
+  and confirm every change is either yours or a confirmation you can account for.
 - **Packet 27's five source files were staged for deletion in the shared index while present on disk.**
   A bare `git commit` from any session would have deleted them. Packet 26 committed with
   `git commit --only <paths>` and did not carry them, and they are intact in HEAD — but **check
@@ -146,6 +302,197 @@ item it owns · practice on the ECONOMICS ladder only (**no Assess, no 10-mark**
 paragraphs with a scaffold first · Verify A clean · a 390×844 walk with the browser measurement of
 every diagram string · Layer 6 with two planted canaries · PROGRESS row · commit · push.
 **Do not publish**: the packet 5/7 checkpoint holds, and fourteen sections now wait on it.
+
+## Packet 2.5 spec — the guards that cannot see their own regressions (Opus 5, 17 September 2026)
+
+**Ledger:** closes `V016` (built 17 Sep in `d2f233a`, never verified), `V017`, `V018`, `V019`, `V020`,
+`V021`, and `V026`, which this packet minted. **Leaves `V022` and `V023` to packet 2.6**: V022 is a
+founder design decision (a wider column for `kind:'table'` cards, or accept that a table is tapped
+open) and not a call a packet may make on its own; V023 is CONTENT in packets 22, 27 and 28's staged
+bundles — now committed but still staged — so it is a re-declare and re-stage by a content session,
+not an edit from here. Both carry the reason on the ledger item.
+
+### Every claim in this packet was reproduced against a control before anything was changed
+
+The findings assert that tests pass while the thing they are named after is broken. That is checkable,
+and unchecked it is just an assertion, so each was run in an isolated copy of the four modules with
+the defect reintroduced. Nothing below is taken on the finding's word.
+
+| control | what should fail | what actually failed |
+|---|---|---|
+| `FREE_QUIZ_MAX = Infinity` | the exposure invariants | **11 of 11 pass** |
+| `PRETEST_HEADROOM = 0` | the headroom invariants | **11 of 11 pass** |
+| both at once | both | 15 of 16 pass; the one failure is in `pretest-pool.test.mjs`, a different file |
+| `pickPretestQuestions` reverted to the pre-V015 padding algorithm | the end-to-end guard named after V015 | **it passes.** Three narrower unit tests fail; the guard does not |
+
+V017's title says "all 15 tests" — `preview-limits.test.mjs` holds **11**, and 15 is the count that
+survives across both files. The substance is exact: both constants are invisible to their own file.
+
+### The census, and the live defect it found
+
+`audit/scripts/exposure-census.mjs` (new, committed with this packet) walks every section in both
+corpora as a signed-out reader AND as a Pro one, composing the shipping functions — `sectionPayload`,
+`buildSteps`, `resolvePinnedItem`, `distributeItems`, `pickPretestQuestions` — rather than restating
+them. It restates exactly one thing, `LearnModeTab.jsx:205`'s branch between the pinned and legacy
+paths, and says so at the top. This is the V015 lesson: that packet's "5.6 average" came from a
+harness that resolved pinned blocks only and could not see the 21 sections served by the legacy
+fallback, which was half the corpus and the half that was broken.
+
+Run before any fix, it reports two sections where a chapter's check-in has **no question at all**:
+
+```
+chapters with NO question: 2 section(s) — introductory-concepts (4/5), meeting-customer-needs (5/6)
+  SIGNED IN, whole bank:   2 section(s) — introductory-concepts (4/5), meeting-customer-needs (5/6)
+```
+
+The second line is the point. **With the whole bank and no cap, the same two chapters are empty**, so
+this is not a paywall defect: `Economic Systems` and `Segmentation and Competitive Advantage` are the
+last chapter of their section, they carry no `quizIndices`, and because every OTHER chapter does,
+`hasRefs` puts the section on the pinned path where an unpinned block resolves to nothing. The diagram
+path was given a per-block fallback for precisely this in F041. The quiz path never was. That is
+**V026**, minted by this packet, live today, and named by no audit finding.
+
+### V019 is already degrading the live corpus, not merely exposed to it
+
+An unpinned section is served `PREVIEW_LIMITS.quiz + PRETEST_HEADROOM = 5` items whatever its size,
+and `distributeItems` reserves `min(5, chapters)` of them. The pre-test gets what is left:
+
+| chapters (unpinned) | 1 | 2 | 3 | 4 | 5 | 6+ |
+|---|---|---|---|---|---|---|
+| pre-test questions | 3 | 3 | 2 | 1 | **0** | **0** |
+
+The finding says a fifth chapter would empty it. The census says nine live sections are already short
+— three at one question (`market-structures-contestability`, `revenue-costs-profits`,
+`types-sizes-businesses`, all at four chapters) and six at two. Two of those three are the sections
+packets 28 and 29 are rebuilding.
+
+### What gets built
+
+1. **V017** — the exposure invariants compare against the literals 10 and 3, and one test pins the
+   constants to them. Sabotaging either constant must now fail this file.
+2. **V018** — `QuizTab.jsx` imports `PREVIEW_LIMITS.quiz` instead of its own `PREVIEW_LIMIT = 2`, and
+   a test ties the tab's slice to the shared constant.
+3. **V021** — `PRETEST_MAX` is derived from `PRETEST_HEADROOM` rather than typed a second time, and a
+   test asserts the payload keeps back exactly what the pre-test will ask for.
+4. **V019 + V026 together, because they are one rule** — `freeQuizPayload` reserves one question per
+   chapter *however that chapter points at it*. Then `PRETEST_HEADROOM` spares on top, still bounded
+   by `FREE_QUIZ_MAX`. And `LearnModeTab` gains the per-block quiz fallback the diagram path has had
+   since F041, so an unpinned chapter in a pinned section draws from what nobody claimed instead of
+   showing nothing.
+5. **V020** — an end-to-end fixture where the headroom cannot rescue the padding algorithm: a bank
+   with one spare question and a check-in for every other one.
+6. **V016** — already built; this packet verifies it rather than rebuilding it.
+
+**Exposure moves up, and by how much is the thing to read before approving this.** V016 could say
+exposure went down; this one cannot. Serving every chapter on a legacy section means sending it
+`chapters + 3` rather than a flat 5. The before figures are avg 6.53 items live (40.0% of the bank)
+and 7.02 staged; the after figures are in the packet's PROGRESS row. `FREE_QUIZ_MAX` does not move,
+so the ceiling a paying account sits behind is unchanged — pinned sections already reach it. Nothing
+ships before the packet 5/7 checkpoint, so this is still the founder's call to make.
+
+### What changed during the build, and why — read this before judging the spec above
+
+Two decisions above were wrong and were changed with the evidence in hand. Both are recorded here
+rather than edited out.
+
+**"Otherwise the first unclaimed question in order" was wrong.** The spec assumed V016's premise:
+that a check-in announces a quick question and then has none. It does not. `checkinIntro`
+(`LearnModeTab.jsx:474`) is built from what the check-in actually carries — `currentQuiz && 'a quick
+question'` — so a chapter with no question has never promised one; the sentence simply omits it.
+That removes the argument for placing *any* question, and leaves the choice between a relevant
+question and one about a different chapter. F041 settled the same choice for diagrams — "only place
+if there's a genuine word match — never dump on random blocks" — so this follows it: the best match
+by shared vocabulary, or nothing. Verify B caught the first version placing a PPF question on the
+Economic Systems chapter, which is exactly what F041 exists to prevent.
+
+**The match belongs on the server, not only on the client.** A client-side matcher picks out of the
+payload; the server picks out of the whole bank, which is a wider and better choice, and it can
+write the pin so that the question it reserved is the question the client resolves. That removes the
+class of server/client disagreement V015 was. The pin is written **only where the section already
+has pins** — writing one on a section with none would move it onto the pinned path and change what
+it serves, so a legacy section still reserves one item per chapter in payload order and writes
+nothing (`lib/preview-limits.js`, and the reason is in the code beside it).
+
+**A consequence worth stating:** a chapter can now be left with no question for a reason that is not
+a code defect — nothing in its section shares a word with it. The census separates the two
+(`STARVED` versus `UNWRITTEN`) and `--check` fails only on the first, because the second is content
+debt for that section's packet and no amount of code fixes it. Both corpora currently report zero of
+each; the point is that the guard will say which kind when one appears.
+
+### Verify B — 390×844, signed out, storage cleared (17 September 2026)
+
+`http://localhost:3001/economics/unit-1/introductory-concepts`, the section whose last chapter has
+carried no check-in question since it was written. 14 steps, 5 chapters.
+
+- **Step 0** offers the pre-test as "Three questions you might already know. Optional, and nothing is
+  marked." Three, on a 5-chapter pinned section — the headroom survives the extra reservation V019
+  and V026 add. Declined with "Just teach me"; the offer went away and did not return.
+- **Steps 1-13** walked without a console error. Content errors: none. The three 401s in the console
+  are `POST /api/learn-mode/state` from a signed-out reader, which is the pre-existing behaviour and
+  not this packet's.
+- **Step 14, chapter 5 of 5, "Economic Systems" — the finding itself.** The check-in renders
+  `💡 QUICK QUIZ` with **"The basic economic problem exists because:"** and its four options. Before
+  this packet that chapter rendered no question at all, for a signed-out reader and for a paying one.
+- The check-in's own sentence reads "Before the next chapter: the diagram, a quick question and one
+  thing from earlier", and it is built from what the check-in actually carries
+  (`LearnModeTab.jsx:474`) — so it now names the question because there is one to name.
+- **The Quiz tab, same section, signed out: exactly 2 questions rendered** ("Question 1",
+  "Question 2") out of the 8 the API sent and the 25 in the bank. V018 moved that slice onto the
+  shared constant and it still holds.
+
+**What the walk shows about the matcher, and it is worth reading before packet 29 authors pins.**
+The fallback places a question only when it shares vocabulary with the chapter title, which is
+F041's rule for diagrams. "Economic Systems" shares `economic` with "The basic economic problem
+exists because:" and nothing at all with the bank's free-market and command-economy questions,
+because those name the systems rather than the category. So the question it placed is relevant but
+not the best one in the bank, and no scoring change fixes that — the chapter title and the questions
+about it share no words. **The authored fix is a pin**; this is a floor under an unpinned chapter,
+not a substitute for pinning one. `meeting-customer-needs` shows the good case: "Segmentation and
+Competitive Advantage" drew "Which of the following is NOT a common base for market segmentation?"
+
+**Not this packet's, seen on the way**: V006 is still live and visible here — chapter 5 of 5's
+check-in says "Before the **next** chapter", where there is no next chapter.
+
+### What packet 2.5 leaves for the next content packet — two sentences that change what you author
+
+**Pin a quiz question to every chapter, including the last one.** A chapter that pins nothing in a
+section where the others do no longer renders an empty check-in — it now draws the best-matching
+unclaimed question instead (V026) — but the bar for "matching" is ONE shared non-stop word, and it is
+loose enough to be wrong. Measured on the live corpus: "Economic Systems" draws "The basic economic
+problem exists because:", a scarcity question, matched on `economic` alone. The fallback is a floor,
+not a pin.
+
+**Do not cite `d2f233a`'s numbers.** Verify A could not reproduce "58 sections, chapters served
+210/212 → 212/212, average 7.48 → 7.26" in any construction, and re-measuring confirmed it: the
+`sections` table holds **43** rows, with 165 live chapters and 184 staged, and at that commit two
+chapters still resolved to nothing. Anything that needs a figure for what a signed-out reader gets
+comes from `node audit/scripts/exposure-census.mjs --both`, which walks both resolution paths and
+both entitlements. The same applies to V017's "10 → 15" and "6.60 → 3.65", both of which were
+carried forward from V015 unmeasured and are corrected in the code that held them.
+
+**A green `npm run exposure` does not prove the component still does this.** The census restates
+LearnModeTab's resolution rather than importing it — nothing outside React can import a `.jsx`
+component — so `lib/preview-limits.test.mjs` reads `LearnModeTab.jsx` as text and fails if the
+fallback call is deleted or moved before the pins. If you change that component's resolution, expect
+that test to fail and read it before you change it.
+
+### Acceptance checks a verifier can run without this conversation
+
+1. `npm test` and `npm run build` and `npm run validate` exit 0.
+2. Copy `lib/preview-limits.js`, `lib/pretest-pool.js` and their two test files to a scratch
+   directory. Set `FREE_QUIZ_MAX = Infinity`; `node --test preview-limits.test.mjs` **must fail**.
+   Restore, set `PRETEST_HEADROOM = 0`; it **must fail**. Both passed 11 of 11 before this packet.
+3. In the same copy, replace `pickPretestQuestions` with the padding algorithm (take the unreserved,
+   then pad to `PRETEST_MAX` out of the reserved set). `node --test pretest-pool.test.mjs` must fail
+   on **'a signed-out student is never asked a question their check-in will ask'** — the test named
+   after the regression. Before this packet that test passed under the padding algorithm.
+4. `grep -n "PREVIEW_LIMIT" components/QuizTab.jsx` returns no local literal; the file imports
+   `PREVIEW_LIMITS` from `lib/preview-limits.js`.
+5. `grep -n "PRETEST_MAX = " lib/pretest-pool.js` shows it derived from `PRETEST_HEADROOM`, not `= 3`.
+6. `node audit/scripts/exposure-census.mjs --both --check` exits 0 (`npm run exposure`), and both
+   corpora report `chapters with no question: 0`, with `STARVED` zero on both the signed-out and the
+   signed-in line.
+7. `node audit/scripts/ledger.mjs unverified 2.5` exits 0.
 
 ## Packet 28 spec — `revenue-costs-profits`, Economics 3.3.2 (Opus 5, 17 September 2026)
 

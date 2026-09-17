@@ -1,12 +1,16 @@
 "use client";
 import PaywallOverlay from './PaywallOverlay';
+import { PREVIEW_LIMITS } from '@/lib/preview-limits';
 import { Star } from './Icons';
 
 export default function ExtrasTab({ data, previewMode = false, totalCount }) {
   const chains = data?.chains || [];
   const evaluation = data?.evaluation || [];
 
-  const PREVIEW_LIMIT = 1; // Show 1 chain and 1 evaluation point in preview
+  /* V018's class again. One literal stood for two separate caps that happen to both be 1, so
+     changing either in lib/preview-limits.js would silently have moved neither here. */
+  const CHAIN_LIMIT = PREVIEW_LIMITS.extrasChains;
+  const EVALUATION_LIMIT = PREVIEW_LIMITS.extrasEvaluation;
 
   if (chains.length === 0 && evaluation.length === 0) {
     return (
@@ -22,14 +26,16 @@ export default function ExtrasTab({ data, previewMode = false, totalCount }) {
     );
   }
 
-  const displayChains = previewMode ? chains.slice(0, PREVIEW_LIMIT) : chains;
-  const displayEvaluation = previewMode ? evaluation.slice(0, PREVIEW_LIMIT) : evaluation;
+  const displayChains = previewMode ? chains.slice(0, CHAIN_LIMIT) : chains;
+  const displayEvaluation = previewMode ? evaluation.slice(0, EVALUATION_LIMIT) : evaluation;
 
   return (
     <div className="extras-tab">
       {previewMode && (
         <div className="flashcard-preview-badge">
-          Preview — {PREVIEW_LIMIT} of {totalCount ?? (chains.length + evaluation.length)} extras
+          {/* The total comes from `counts`, never from the arrays this component just sliced. */}
+          Preview — {displayChains.length + displayEvaluation.length}
+          {totalCount > 0 ? ` of ${totalCount}` : ''} extras
         </div>
       )}
 
@@ -111,8 +117,16 @@ export default function ExtrasTab({ data, previewMode = false, totalCount }) {
         </div>
       )}
 
+      {/* `> 0`, not `Number.isFinite`, here and in the badge above: StudyApp builds this prop as a
+          SUM of two counts, so it is a number even when `counts` is missing — and a finiteness
+          guard would then have printed "of 0" instead of omitting the total. */}
       {previewMode && (
-        <PaywallOverlay feature="Extras" previewText={`${Math.max(0, (totalCount ?? (chains.length + evaluation.length)) - (displayChains.length + displayEvaluation.length))} more extras available`} />
+        <PaywallOverlay
+          feature="Extras"
+          previewText={totalCount > 0
+            ? `${Math.max(0, totalCount - (displayChains.length + displayEvaluation.length))} more extras available`
+            : 'More extras available'}
+        />
       )}
     </div>
   );

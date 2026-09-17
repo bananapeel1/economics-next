@@ -1787,3 +1787,61 @@ formulae and four relationships, the sentences are where the teaching is.
 
 Carry this into every quantitative packet: the numbers agreeing with each other is necessary and is not
 enough. Something has to read the prose against the numbers, and only a reader can do it.
+
+---
+
+## 17 September 2026 — packet 2.5: a check-in question is matched, not merely supplied
+
+Four choices here are hard to walk back, because content is now authored against them.
+
+**1. An unpinned chapter gets the best-matching question or none at all — never just the next one.**
+The case for placing any question rested on V016's premise, that a check-in announces "and a quick
+question" and then has none. It does not. `checkinIntro` (`LearnModeTab.jsx:474`) is built from what
+the check-in actually carries, so a chapter with no question has never promised one; the sentence
+omits it. The real choice is between a relevant question and one about a different chapter, and
+F041 settled that for diagrams: "only place if there's a genuine word match — never dump on random
+blocks". The quiz path now follows it. Verify B is why this is written down: the first version put a
+PPF question on the Economic Systems chapter, which is precisely what F041 exists to prevent.
+
+**2. The server writes the pin, but only where the section already has one.** Matching on the server
+picks out of the whole bank rather than out of the payload, and writing the pin makes the question
+the server reserved the exact question the client resolves — closing the server/client disagreement
+that V015 was. It is written ONLY where the section already carries pins, because a pin on a section
+with none would move it onto LearnModeTab's pinned path and change what it serves. A legacy section
+reserves one item per chapter in payload order and writes nothing.
+
+**3. A chapter left with no question is now two different things, and the guard says which.**
+`audit/scripts/exposure-census.mjs` reports STARVED (a question was there unclaimed and the chapter
+did not get it — a code defect, and `--check` exits 1) apart from UNWRITTEN (nothing in the section
+shares a word with that chapter — content debt for that section's packet, which no code change
+fixes). Both are zero in both corpora today. The distinction is what makes `npm run exposure`
+runnable in CI without failing on content nobody has written yet.
+
+**4. `PRETEST_MAX` is `PRETEST_HEADROOM`, imported, not a second `3`.** They are one number seen from
+two sides — how many unclaimed questions the payload keeps back, and how many the pre-test may ask
+out of them. Raising one alone silently serves a pre-test shorter than the offer promises, because
+the offer counts with the same function that picks the questions.
+
+**And the thing this packet is really about.** Three findings said a test passes while what it is
+named after is broken, and all three were true: `FREE_QUIZ_MAX = Infinity` and `PRETEST_HEADROOM = 0`
+each passed 11 of 11, and the pre-V015 padding algorithm passed the end-to-end test named after the
+V015 regression. An invariant that compares against the constant it is protecting asserts the module
+against itself; a fixture generous enough that the defect cannot occur in it proves nothing. **Both
+classes are invisible to review and to a passing suite — the only way to find them is to break the
+thing and check that something fails.** Do that for any guard a packet leans on.
+
+**A postscript that belongs with it, because it cost three verification rounds.** V018 was rejected
+three times, and not once for the behaviour — the cap was correct after round 1. Every rejection was
+a CLAIM the code did not support: a comment asserting a test existed when it did not; a guard whose
+name promised more reach than it scanned; a header quoted in the present tense after the same commit
+had rewritten it; and a rule declared in that header ("paywall copy never counts the sliced array")
+that two other components were breaking as it was written. The third round finally found what all of
+them were circling: a live third copy of the constant in `app/api/practice/questions/route.js`,
+slicing what a signed-in free student is served, under a comment naming a symbol that had just been
+deleted. It had survived every sweep because a route is not a component.
+
+The lesson is the packet's own, turned on its author. **A comment is an assertion with no test behind
+it, and it rots in exactly the way the tests here rotted.** If a comment says a test exists, run it.
+If it says a number, measure it. If it states a rule about the codebase, grep the codebase. And when
+a fix deletes a symbol, grep for the symbol's NAME across `app/` as well as `components/` — the
+duplicate that matters is rarely in the file the finding names.

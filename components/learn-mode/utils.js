@@ -1,3 +1,5 @@
+import { bestUnclaimedIndex } from '../../lib/checkin-fallback.js';
+
 export const MARK_COLORS = {
   4: { bg: 'var(--practice-4-bg)', border: 'var(--practice-4-border)', badge: 'var(--practice-4-badge)' },
   6: { bg: 'var(--practice-6-bg)', border: 'var(--practice-6-border)', badge: 'var(--practice-6-badge)' },
@@ -59,6 +61,22 @@ export function matchDiagramsToBlocks(diagrams, blocks) {
     // No match → diagram stays in Diagrams tab only, not in Learn Mode
   }
   return map;
+}
+
+/**
+ * The question a check-in falls back to when its chapter pins none. V026.
+ *
+ * The rule, the reason and the F041 precedent it follows are in lib/checkin-fallback.js. This is
+ * the client half: the server can only rewrite the payload a SIGNED-OUT reader gets, and a paying
+ * one is handed the bank with the pins as authored, so the same chapter resolves to nothing for
+ * them unless the resolution itself falls back. Runs after the pins, out of what no pin claimed,
+ * so it can never displace one that worked.
+ */
+export function fallbackItemForBlock(items, text, used) {
+  const idx = bestUnclaimedIndex(items, text, used);
+  if (idx < 0) return null;
+  used.add(idx);
+  return items[idx];
 }
 
 /* ── Pin resolution ──────────────────────────────────────────────────────────
