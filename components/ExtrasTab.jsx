@@ -46,7 +46,14 @@ export default function ExtrasTab({ data, previewMode = false, totalCount }) {
             <div>
               <h2 className="extras-section-title">Chains of Analysis</h2>
               <p className="extras-section-subtitle">
-                Step-by-step logical reasoning chains for extended response questions (10–14 marks)
+                {/*
+                  * NO TARIFF HERE. "(10–14 marks)" is wrong for both subjects: the Economics census
+                  * has Discuss 14 and no 10-mark item, and Business has Assess 10 and no 14-mark
+                  * one, so on an Economics section it named a tariff that does not exist on the
+                  * paper and on a Business one it named the other subject's. This component does
+                  * not know the subject, so the honest line names none.
+                  */}
+                Step-by-step logical reasoning chains for extended response questions
               </p>
             </div>
           </div>
@@ -59,8 +66,18 @@ export default function ExtrasTab({ data, previewMode = false, totalCount }) {
                   <h3 className="extras-card-title">{chain.title}</h3>
                 </div>
 
+                {/*
+                  * V028: `chain.steps` WAS READ UNGUARDED AND A MALFORMED CHAIN TOOK THE WHOLE TAB
+                  * DOWN. A chain authored with `points` instead of `steps` — packet 28's third one
+                  * was, and it is staged for the ship checkpoint — threw a TypeError here and
+                  * removed the Extras tab for a Pro student. `previewMode` slices the list to one
+                  * chain, so a FREE student never reached the third and no signed-out walkthrough
+                  * could see it: Verify B can only ever walk a signed-out student. The content is
+                  * now refused by `extras.shape` in the validator, and this guard is the second
+                  * line, so a chain that gets through anyway costs its own card and not the tab.
+                  */}
                 <div className="chain-steps">
-                  {chain.steps.map((step, si) => (
+                  {(Array.isArray(chain.steps) ? chain.steps : []).map((step, si) => (
                     <div key={si} className="chain-step">
                       <div className="chain-step-connector">
                         <div className="chain-step-dot" />

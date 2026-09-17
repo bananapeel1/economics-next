@@ -551,6 +551,7 @@
   "extras": {
    "chains": [
     {
+     "title": "From a rise in incomes to falling demand for an inferior good",
      "steps": [
       "Incomes rise",
       "Consumers switch away from inferior goods",
@@ -1496,6 +1497,40 @@
         "Materials"
        ],
        "why": "w"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "rule": "extras.shape",
+   "fail": {
+    "extras": {
+     "chains": [
+      {
+       "title": "Is growing larger worth it?",
+       "points": [
+        "a consideration",
+        "another consideration"
+       ]
+      }
+     ],
+     "evaluation": []
+    }
+   }
+  },
+  {
+   "rule": "extras.shape",
+   "fail": {
+    "extras": {
+     "chains": [],
+     "evaluation": [
+      {
+       "title": "How serious is a market failure?",
+       "points": [
+        "a point",
+        "another point"
+       ]
       }
      ]
     }

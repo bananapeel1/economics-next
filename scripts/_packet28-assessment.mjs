@@ -305,14 +305,26 @@ export const EXTRAS = {
       ],
       result: `Short run: produce while price is at or above ${money(B.ref.avc)}. Long run: stay in the industry while price is at or above ${money(B.ref.ac)}, because there are no fixed costs left to contribute towards.`,
     },
+  ],
+  /*
+   * V028, FIXED BY PACKET 30 — AND IT WAS A FRAME IN THE WRONG ARRAY, NOT A MISNAMED FIELD.
+   * "Is growing larger worth it?" sat in `chains` carrying `points` instead of `steps`, and
+   * `ExtrasTab.jsx` maps `chain.steps` with no guard, so it threw a TypeError and took the whole
+   * Extras tab down for a Pro student. `previewMode` slices the list to one chain, which is why a
+   * free student never reached the third and no signed-out walkthrough could see it.
+   *
+   * Renaming `points` to `steps` would have cleared the crash and been wrong: these four are
+   * judgement CONSIDERATIONS, not a sequence, and a chain presents its entries as ordered steps
+   * with a result at the end. So the entry moves to `evaluation`, which renders `{title, content}`
+   * as one paragraph — the array this section did not previously have. Nothing was cut.
+   *
+   * `extras.shape` in the validator is now BLOCK for both halves of the shape, and it was A/B'd
+   * against THIS bundle as a real control rather than a planted one.
+   */
+  evaluation: [
     {
       title: 'Is growing larger worth it?',
-      points: [
-        'How far the firm is from minimum efficient scale: below it, growth lowers cost per unit and the case is straightforward.',
-        'How wide the flat stretch is in this industry: where it is wide, growth beyond minimum efficient scale costs nothing per unit and may buy security of supply and a broader spread of risk.',
-        'Whether the diseconomies are organisational or technical. Communication and coordination problems can be postponed by restructuring; they are not a law of nature.',
-        'Whether the firm is relying on external economies it does not control — trained labour, transport, a shared research base — all of which can be lost without the firm doing anything.',
-      ],
+      content: 'Four questions, and the cost curves only answer the first two. How far is the firm from minimum efficient scale? Below it, growth lowers cost per unit and the case is straightforward. How wide is the flat stretch in this industry? Where it is wide, growth beyond minimum efficient scale costs nothing per unit and may buy security of supply and a broader spread of risk. Are the diseconomies organisational or technical? Communication and coordination problems can be postponed by restructuring; they are not a law of nature. And is the firm relying on external economies it does not control — trained labour, transport, a shared research base — all of which can be lost without the firm doing anything?',
     },
   ],
 };

@@ -2415,15 +2415,12 @@
       "Below $12, each crate adds to the loss, so producing loses more than stopping."
      ],
      "result": "Short run: produce while price is at or above $12. Long run: stay in the industry while price is at or above $20, because there are no fixed costs left to contribute towards."
-    },
+    }
+   ],
+   "evaluation": [
     {
      "title": "Is growing larger worth it?",
-     "points": [
-      "How far the firm is from minimum efficient scale: below it, growth lowers cost per unit and the case is straightforward.",
-      "How wide the flat stretch is in this industry: where it is wide, growth beyond minimum efficient scale costs nothing per unit and may buy security of supply and a broader spread of risk.",
-      "Whether the diseconomies are organisational or technical. Communication and coordination problems can be postponed by restructuring; they are not a law of nature.",
-      "Whether the firm is relying on external economies it does not control — trained labour, transport, a shared research base — all of which can be lost without the firm doing anything."
-     ]
+     "content": "Four questions, and the cost curves only answer the first two. How far is the firm from minimum efficient scale? Below it, growth lowers cost per unit and the case is straightforward. How wide is the flat stretch in this industry? Where it is wide, growth beyond minimum efficient scale costs nothing per unit and may buy security of supply and a broader spread of risk. Are the diseconomies organisational or technical? Communication and coordination problems can be postponed by restructuring; they are not a law of nature. And is the firm relying on external economies it does not control — trained labour, transport, a shared research base — all of which can be lost without the firm doing anything?"
     }
    ]
   },
