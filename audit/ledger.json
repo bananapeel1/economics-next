@@ -3500,10 +3500,10 @@
    "rank": 0,
    "text": "Fix or rewrite the four fill-ins that the renderer cannot display: hierarchy-and-span-of-control (5 answers/3 lines, wrong blank mapping), matrix-structures (4 answers/3 lines, wrong mapping, order-ambiguous), mayos-human-relations (duplicate 'Hawthorne' makes Check unreachable), and the two-blank lines in employer-employee-relationships, selection-methods, leadership-styles (sentence text truncated). Rule: exactly one '___' per template line, answers.length == blank lines, no duplicate words. Optionally harden FillInRecall.jsx to render multiple blanks per line.",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet30-content.mjs:1159,1189 matrix-structures recall is now type classify (no blank-mapping issue) and mayo-human-relations is a 3-line/3-answer fillin with no duplicate Hawthorne answer",
    "note": null
   },
   {
@@ -3513,10 +3513,10 @@
    "rank": 1,
    "text": "Re-map quizIndices/practiceIndices by topic: block 1 -> Q4 (redundancy); block 2 -> Q8 or Q23 (recruitment) + practice[0]; block 3 -> Q2/Q7/Q12/Q14/Q21 + practice[2] and [4]; block 4 -> Q3/Q11/Q10/Q18/Q19 + practice[1]; block 5 -> Q0/Q9/Q16 + practice[3]; block 6 -> Q24 (after adding paternalistic content, Q5). Deduplicate Q1/Q13, Q3/Q11, Q0/Q16, Q8/Q23, Q6/Q10 and replace with questions on spec gaps (centralisation, paternalistic, individual vs collective bargaining, costs of recruitment).",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/packet-30-managing-people.mjs:73-78,520 quizIndices/practiceIndices are derived from each items own block tag, not raw index; the identity-mapping self-check does not fire",
    "note": null
   },
   {
@@ -3526,10 +3526,10 @@
    "rank": 2,
    "text": "Replace the 'Match the focus to the correct role' reorder (not orderable) and the 'financial incentive evaluation chain' (arbitrary) with scenario-to-term fill-ins; add self-actualisation to the Maslow reorder.",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet30-content.mjs:641-654 the Maslow recall is now type classify, not reorder; only 2 reorders exist section-wide (taylor-scientific-management, entrepreneur-to-leader), both extras-sourced",
    "note": null
   },
   {
@@ -3539,10 +3539,10 @@
    "rank": 3,
    "text": "Add missing spec content: paternalistic leadership; centralised vs decentralised; delegation, consultation and flexible/home working as non-financial methods; bonus; individual vs collective approach to employee relations; costs of recruitment/selection/training. Move 'From Entrepreneur to Leader' to the entrepreneurs-leaders section and correct the spec number to 1.4.",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet30-content.mjs:932,440,724,772,790,826,262,312 paternalistic, centralised-decentralised, bonus-profit-share, delegation, empowerment, flexible-working, individual-collective and recruitment-costs are all now taught subsections; move/renumber sub-clause separately refused as structure-05 wont-fix",
    "note": null
   },
   {
@@ -3552,10 +3552,10 @@
    "rank": 4,
    "text": "Rewrite practice questions to IAL format: Define 2 marks, Explain 4 (with a short stimulus and an application mark), Analyse 6, Assess 10/12 and Evaluate 20 with levels-based (L1-L4) guidance and a mini case extract so application can be credited. Add at least one org-chart diagram (tall vs flat, span/chain labelled) and a Maslow/Herzberg visual to the Organisational Design and Motivation in Theory blocks.",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet30-assessment.mjs:204-240 8 practice items, one per Business command word, Unit-1 tariffs only (Assess 10, no L1-L4 language); scripts/_packet30-diagrams.mjs:461-508 org chart, matrix and Maslow/Herzberg diagrams added",
    "note": null
   },
   {
@@ -3564,10 +3564,10 @@
    "kind": "accuracy",
    "text": "Organisational Design > hierarchy-and-span-of-control > realExample: 'Marks & Spencer restructured its hierarchy in 2022, reducing management layers from seven to five' — could not be corroborated; M&S's 2022-23 store-management restructure did not publish a 7-to-5 layer count. Reads as a fabricated specific.",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-30-bundle__business__managing-people.json independently grepped: 0 M&S or named-company mentions and 0 real-year tokens in prose; scripts/_packet30-content.mjs:483 realExample now generic with no company or year",
    "note": null
   },
   {
@@ -3576,10 +3576,10 @@
    "kind": "accuracy",
    "text": "Leadership Styles > leadership-styles (whole subsection): Paternalistic leadership is a named style in IAL 1.4.5 but is absent from the body, keyIdea, flow and recall — yet quiz Q5 (the block's inline quiz) asks for it.",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet30-content.mjs:932-964 paternalistic-leadership fully taught before scripts/_packet30-assessment.mjs:183-185 quizzes it; stem describes behaviour with no giveaway simile",
    "note": "SPEC NUMBERING: this item cites 1.4.5, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -3588,10 +3588,10 @@
    "kind": "quiz",
    "text": "q1: Exact duplicate of Q13 (same stem, same four options, same correct answer). The pre-test draws 3 random MCQs from this bank, so a student can be asked the same question twice.",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "independent node check against the served bundles quiz array: max pairwise stem Jaccard similarity 0.286, 0 exact duplicate stems across all 35 items",
    "note": null
   },
   {
@@ -3600,10 +3600,10 @@
    "kind": "quiz",
    "text": "q6: Ambiguous: Safety (option 2) must also be satisfied before esteem needs motivate, so two options are defensible. Q10 asks the same thing unambiguously ('immediately after safety'). Keep Q10, reword or drop Q6.",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet30-assessment.mjs:152-154 the Maslow item now asks generically whether lower-level needs are already met, rather than naming one specific level as the immediate precursor to esteem",
    "note": null
   },
   {
@@ -3612,10 +3612,10 @@
    "kind": "quiz",
    "text": "q5: Tests paternalistic leadership, which is never taught in the section content, and it is the inline quiz for the Leadership Styles block. Stem also gives the answer away ('like a parent' -> paternalistic).",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet30-assessment.mjs:183-185 paternalistic leadership is taught at content.mjs:932-964 before this item, and the stem names no style and uses no giveaway simile",
    "note": null
   },
   {
@@ -3624,10 +3624,10 @@
    "kind": "structure",
    "text": "Block-to-quiz mapping is by raw index (quizIndices [0],[1],[2],[3],[4],[5]) not topic: block 1 'Approaches to Staffing' shows Q0 (piece-rate), block 2 'Recruitment' shows Q1 (Herzberg hygiene), block 5 'Motivation in Practice' shows Q4 (redundancy), block 6 'Leadership' shows Q5 (paternalistic, untaught). Only blocks 3 and 4 get a topical quiz. Practice mapping likewise: block 5 gets practice[2] (flat structures); block 3 gets none; practice[3] and [4] are orphaned.",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/packet-30-managing-people.mjs:73-78,520 pins derived from each items own block tag; identity-mapping self-check does not fire",
    "note": null
   },
   {
@@ -3636,10 +3636,10 @@
    "kind": "structure",
    "text": "Single-section steps (training = step 4, matrix = step 6, entrepreneur-to-leader = step 11) cause the same recall to render as 'immediate' at the bottom of that step and 'spaced' at the top of the next step, back-to-back, because LearnModeTab.jsx:346-349 takes prev step's last section which is also the current step's first section. Matrix fillin (already broken) therefore appears twice in a row.",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "lib/learn-steps.js:41-56 buildSteps makes every teach step exactly one subsection with its own recall directly beneath it; :95-111 pickSpacedRecall only draws from a strictly earlier blockIndex and dedupes via a used set, so the old back-to-back immediate-then-spaced repeat cannot occur",
    "note": null
   },
   {
@@ -3648,10 +3648,10 @@
    "kind": "structure",
    "text": "2-per-step pairing is mostly coherent (asset/cost + flexible; recruitment + selection; hierarchy + tall/flat; Taylor + Mayo; Maslow + Herzberg; financial + non-financial; mgmt-vs-leadership + styles) but dismissal/redundancy is paired with employer-employee relations, which is fine, while training is orphaned from selection with which it shares the 'costs of recruitment, selection and training' spec bullet.",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet30-content.mjs:1029 Block 2 now groups internal-external, recruitment-costs, induction and on/off-the-job training together; the old 2-per-step pairing model is superseded by lib/learn-steps.js one-subsection-per-step",
    "note": null
   },
   {
@@ -3660,10 +3660,10 @@
    "kind": "structure",
    "text": "Zero diagrams for a section whose canonical visuals are an org chart (tall vs flat, chain of command, span of control), a matrix grid, and Maslow's pyramid/Herzberg's two-scale diagram. The 'Organisational Design' block is taught entirely in prose.",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet30-diagrams.mjs:461-490 org chart tall/flat plus matrix, :271-301 Maslow pyramid, :311-353 Herzberg two scales, :410-418 recruitment cost table - 6 diagrams from 0",
    "note": null
   },
   {
@@ -3672,11 +3672,11 @@
    "kind": "structure",
    "text": "'From Entrepreneur to Leader' is IAL 1.5.6 and the app has a separate 'entrepreneurs-leaders' section (index 1.3.5); its presence here duplicates content and pushes the Leadership block to three sections.",
    "packet": 30,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "SPEC NUMBERING: this item cites 1.5.6, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+   "note": "REFUSED after a spec check, and it is the dangerous class of finding. BUS-1.3.4-5c is 'The difficulty of moving from entrepreneur to leader' at audit/raw/bus_spec.txt:753 — a leaf of THIS topic. IAL 1.3.5's twenty rows are entrepreneurship, intrapreneurship, barriers, risk, characteristics, motives, objectives, opportunity cost and trade-offs; not one mentions it. The '1.5.6' the item cites is UK GCE numbering and does not exist in the IAL spec. Obeying would have deleted an in-scope requirement, as packet 26's two delete-findings would have. Packet 30 keeps it as the subsection 'From Entrepreneur to Leader' and the runner asserts the leaf is mapped."
   },
   {
    "id": "C-managing-people-structure-06",
@@ -3684,10 +3684,10 @@
    "kind": "structure",
    "text": "Takeaways match their blocks and are good one-line summaries; block 4's four-theorist takeaway is a genuinely useful revision card. Block 5's takeaway 'combines financial hygiene with non-financial motivators' is a clean synthesis.",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet30-content.mjs:1042-1055 Block 4 and Block 5 takeaways remain distinct, on-topic, one-line-per-idea summaries",
    "note": null
   },
   {
@@ -3696,10 +3696,10 @@
    "kind": "structure",
    "text": "Misconceptions are mostly real ones an IAL teacher sees (dismissal vs redundancy, pay as a Herzberg motivator, enrichment vs enlargement, 'Mayo proved money doesn't motivate'). Two are filler: 'flat structures are always better because they are modern' and 'matrix structures cause confusion so they should be avoided' are not things students actually write.",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet30-content.mjs:521 matrix-structures misconception rewritten to project REPLACES functional structure, a real error; verified 0 hits for both filler phrases (cause confusion/should avoid, because modern) across all 37 misconception fields in script and bundle; bundle field matches script verbatim; all four praised real misconceptions (dismissal-redundancy L241, Mayo-money L628, enrichment-enlargement L864, Herzberg-pay L678) confirmed intact; independently reran runner (exit 0, 0 new BLOCK/DEBT) and check-staged-drafts.mjs (matches, 0 drift)",
    "note": null
   },
   {
@@ -3708,11 +3708,11 @@
    "kind": "structure",
    "text": "Difficulty ramp is sensible (staffing concepts -> processes -> structure -> theory -> application -> leadership), but the section is very long (11 steps, 19 subsections) with no mid-point checkpoint; given 75% of users never pass step 0 elsewhere, splitting into two Learn Mode units (Staffing/Recruitment/Structure and Motivation/Leadership) would help.",
    "packet": 30,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "NOT REPRESENTABLE as asked, and answered another way. The item proposes splitting the section into two Learn Mode units; one section is one Learn Mode unit in this schema, so that is a product change and not a content one. What the finding is actually about — 11 steps and 19 subsections with no mid-point checkpoint — is answered by the rebuild: SIX chapters in specification order, each with its own check-in step and its own pinned quiz question, across 43 steps. Priced against V016's table first: at six blocks a signed-out student still gets three pre-test questions and no chapter loses its check-in quiz."
   },
   {
    "id": "C-managing-people-structure-09",
@@ -3720,10 +3720,10 @@
    "kind": "structure",
    "text": "Extras chain 3 teaches centralised vs decentralised structures, which the main content only name-drops in hierarchy-and-span-of-control body[3]; the spec bullet lives in the content gap, not in extras.",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet30-content.mjs:440-468 centralised-and-decentralised is now a Block 3 subsection; scripts/_packet30-assessment.mjs:347-405 the five rebuilt extras chains no longer include a centralised-vs-decentralised chain",
    "note": null
   },
   {
@@ -3732,10 +3732,10 @@
    "kind": "specGap",
    "text": "1.4.1: employer/employee relationships — 'individual approach' vs 'collective bargaining' contrast; only collective bargaining is taught.",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet30-content.mjs:262-278 employerEmployee teaches the individual approach and collective bargaining as a genuine contrast",
    "note": "SPEC NUMBERING: this item cites 1.4.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -3744,10 +3744,10 @@
    "kind": "specGap",
    "text": "1.4.1: flexible workforce — 'flexible hours and home working' not taught (only flexi-time named in passing; home/remote working absent).",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet30-content.mjs:180-196 flexibleHours subsection teaches flexible hours and home working by name with full body content",
    "note": "SPEC NUMBERING: this item cites 1.4.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -3756,10 +3756,10 @@
    "kind": "specGap",
    "text": "1.4.2: 'costs of recruitment, selection and training' — no explicit treatment of cost categories (advertising, agency fees, management time, induction, lost productivity) beyond passing mentions.",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet30-content.mjs:312-340 and scripts/_packet30-util.mjs:158-192 itemise every recruitment/selection/training cost category summing to 10800 dollars, 30 percent of salary",
    "note": "SPEC NUMBERING: this item cites 1.4.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -3768,10 +3768,10 @@
    "kind": "specGap",
    "text": "1.4.2: induction training defined in one clause only; no purpose/content of induction.",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet30-content.mjs:342-358 inductionTraining separates what it covers from what it is for, with three stated purposes, not one clause",
    "note": "SPEC NUMBERING: this item cites 1.4.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -3780,10 +3780,10 @@
    "kind": "specGap",
    "text": "1.4.3: centralised vs decentralised structures — mentioned in one sentence; no definition, pros/cons, or link to efficiency and motivation (spec: 'impact of different organisational structures on business efficiency and employee motivation').",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet30-content.mjs:440-468 centralisedDecentralised gives full definitions and contrast, linked to structureEffects at :519-533 for the efficiency and motivation leaf",
    "note": "SPEC NUMBERING: this item cites 1.4.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -3792,10 +3792,10 @@
    "kind": "specGap",
    "text": "1.4.4: 'importance of employee motivation' (productivity, retention, quality, absenteeism) not stated as a standalone idea — only implied.",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet30-content.mjs:555-588 importanceOfMotivation states all four routes productivity, retention, quality and absenteeism explicitly as a standalone idea",
    "note": "SPEC NUMBERING: this item cites 1.4.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -3804,10 +3804,10 @@
    "kind": "specGap",
    "text": "1.4.4: non-financial techniques 'delegation', 'consultation' and 'flexible working' are in the spec list but not in the non-financial methods subsection (delegation appears only in the leadership/entrepreneur context).",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet30-content.mjs:772-842 delegationConsultation, empowerment and flexibleWorkingMethod are each a dedicated non-financial-method subsection",
    "note": "SPEC NUMBERING: this item cites 1.4.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -3816,10 +3816,10 @@
    "kind": "specGap",
    "text": "1.4.4: 'bonus' as a named financial incentive not taught.",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet30-content.mjs:724-752 bonusProfitShare teaches bonus as a named worked financial incentive distinct from profit share",
    "note": "SPEC NUMBERING: this item cites 1.4.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -3828,10 +3828,10 @@
    "kind": "specGap",
    "text": "1.4.5: paternalistic leadership style absent from content (but quizzed in Q5).",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet30-content.mjs:932-964 paternalistic-leadership is fully taught as its own dedicated subsection",
    "note": "SPEC NUMBERING: this item cites 1.4.5, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -3840,11 +3840,11 @@
    "kind": "specGap",
    "text": "Unsure: whether the current WBS11 spec still lists 'work-life balance' under flexible working — check the live spec PDF.",
    "packet": 30,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "ANSWERED, and the answer is that the phrase is not in the specification. The item asks a question rather than making a claim ('unsure whether the current WBS11 spec still lists work-life balance under flexible working'); packet 29's rule is that a hedge gets the same spec check as an assertion. 'work-life' and 'work life' are 0 hits in audit/raw/bus_spec.txt. The bullet is BUS-1.3.4-1b-4, 'flexible hours and home working', which packet 30 teaches under that name. The phrase now appears exactly once in the section, in a misconception that tells the student it is not in the specification, and the runner enforces 0 undeclared mentions."
   },
   {
    "id": "C-resource-management-topFix-01",
@@ -18219,10 +18219,10 @@
    "title": "ExtrasTab crashes on a chain carrying `points` instead of `steps` — packet 28's third chain does, and it is staged for the next ship checkpoint",
    "file": "components/ExtrasTab.jsx",
    "packet": 30,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-30",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "components/ExtrasTab.jsx:80 chain.steps.map guarded by Array.isArray ternary; traced the :84 length-connector read and confirmed it is dead code for a malformed chain since mapping an empty fallback array invokes the callback zero times, so no throw path remains anywhere in the component (git diff HEAD confirms the unguarded map was the sole pre-fix defect). lib/content-validator.mjs:667-682 extras.shape independently re-derived: my own reconstruction of the pre-fix {title,points} shape fires BLOCK with the exact has-no-steps-array detail, a well-formed control fires nothing, and the real current packet-28 EXTRAS export validates clean. scripts/_packet28-assessment.mjs git diff shows the frame moved (not renamed) into a new evaluation array; all four original considerations survive verbatim as questions in the joined content paragraph, nothing cut, and evaluation is the structurally honest shape since the four are independent judgement points, not a sequence with a converging result. Independently ran check-staged-drafts.mjs revenue-costs-profits against the live dev server: matches, 0 drift. Also independently re-ran the extras.shape rule over all 18 packet-*-bundle__*.json on disk: confirms V035 exactly - 13 bad evaluation frames, 4 sections (23,24,25,27), shapes {point,detail} and {title,points}, no other section affected",
    "note": null,
    "added": "2026-09-17"
   },
@@ -18238,6 +18238,20 @@
    "evidence": null,
    "note": null,
    "added": "2026-09-17"
+  },
+  {
+   "id": "V035",
+   "kind": "feature",
+   "title": "Extras evaluation frames render an empty card: 13 frames across four staged sections use {title, points} or {point, detail}, and ExtrasTab reads only {title, content}",
+   "file": "components/ExtrasTab.jsx",
+   "packet": 31,
+   "status": "open",
+   "closed_by": null,
+   "verified_by": null,
+   "evidence": null,
+   "note": "severity feature -> high: Found by the extras.shape rule packet 30 built for V028, run over every staged bundle on disk rather than over this packet's. ExtrasTab.jsx:150-160 renders {point.title} and {point.content} and nothing else. Packets 24, 25 and 27 author {title, points}: the heading renders and the body is EMPTY, so nine numbered cards show a question and no answer and the points arrays holding the actual evaluation are never served. Packet 23 authors {point, detail}: four cards with no heading AND no body. Thirteen frames, four sections, all staged-not-published, all Pro-only — and SILENT, because an empty <p> throws nothing, which is why V028's crash was found and this was not. previewMode slices evaluation to EVALUATION_LIMIT, so a free student meets the first one blank. NOT fixed in packet 30: it is content in four other packets' modules and rewriting thirteen frames plus four re-stages is a packet's work, not a tail (the programme's V023 rule). extras.shape is BLOCK, so each of those four runners now refuses to stage until its frames are fixed. Measured: 4 sections fire, packets 28, 29 and 30 clean. | severity high -> high: Citation corrected by Verify A: the two reads are ExtrasTab.jsx:126 and :129, not the 150-160 first filed. The file is 150 lines long.",
+   "added": "2026-09-17",
+   "sev": "high"
   }
  ],
  "marketing": [

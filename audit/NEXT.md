@@ -339,6 +339,114 @@ Every figure is re-derived from those functions in the runner, and a second time
     topic, the paternalistic style taught before it is quizzed (`quiz-03`, `accuracy-02`,
     `specGap-09`), and no two diagram labels colliding.
 
+### Verify B — 390×844, signed out, `?draft=1` (main session, 17 Sep)
+
+Walked all 43 steps. **Clean, and it found one defect every mechanical check had passed.**
+
+- **37 teaching steps + 6 chapter check-ins, in specification order**, ending "From Entrepreneur to
+  Leader" at step 41. The hub card reads "Learn Mode · 43 steps · Notes 6 topics · Practice 8
+  questions" — draft-aware on this section, unlike the card packet 19 filed.
+- **The pre-test offer reads "Three questions on what you might already know."** Confirmed a second
+  way by `audit/scripts/exposure-census.mjs --draft`, which composes the shipping functions and
+  reports `managing-people  pin  6 chapters  6 served  9 sent  35 bank  pre-test 3`. Six blocks cost
+  a signed-out student nothing, as the spec block priced them.
+- **All six check-ins show a question on their OWN topic** — chapter 1 outsourcing and fixed against
+  variable cost, 2 the $10,800 bill as a percentage of salary, 3 the chain of command in links, 4 the
+  retention saving, 5 piecework at 280 garments, 6 the paternalistic style — each beside its own
+  diagram and its own guided practice item. `structure-01` and `topFix-02` fixed on screen, and
+  **Paternalistic Leadership is step 38, before the check-in that quizzes it** (`quiz-03`).
+- **The org charts are right when counted on the phone.** 31 `<rect>` in both, level counts
+  1+2+4+8+16 and 1+5+25, the chain of command highlighted down the left and labelled in LINKS (4 and
+  2), the span of control marked on the Managing Director, and the captions' arithmetic exact
+  including the wage bills.
+- **THE MEASUREMENT THAT MATTERED: a Learn Mode diagram renders 313 CSS px wide at 390×844**, not the
+  530 the validator's rule assumes. On the 560-unit frame every packet since 20 has used, the org
+  chart's row labels came out at **5.59px** — a third of body text, on the labels saying how many
+  people are on each level, and `diagram.table-legible` cannot see it because an org chart is not a
+  declared table. The drawn diagrams moved to a 440-unit frame with a 12-unit floor (**8.54px**, up
+  53%) and the tables to 440 with a 10-unit floor (7.11px on the phone, 12.05px at 530, which is what
+  clears the rule). `MIN_FACE` is now imported by the runner from the module that lays out, so the
+  drawing and the check share one number. **This is V022's number met on a surface V022 does not
+  cover.**
+- **And the defect no check could see: four strings said "the live section".** Three diagram captions
+  and one teaching paragraph read "the live section teaches only the second", "the live section
+  teaches five" and "Paternalistic is the one the live section leaves out while quizzing it". A
+  student has no idea what "the live section" is; it reads as a claim about the specification.
+  Packet 18's rule is written down — never a note about our own previous content in text a student
+  reads — and nothing looked for it: `LEDGER_ID` could not (no id), `MARK_CLAIM` could not (not about
+  marking), and three of the four were inside SVG captions. Fixed, and the runner now carries
+  `SELF_REFERENCE` over prose AND diagram text with its A/B.
+- Text extent and collisions re-measured in the browser with `getComputedTextLength()` across all
+  25 strings of a check-in diagram: **0 overruns, 0 collisions**.
+- Console: three errors, all pre-existing signed-out noise (one 404, two 401 on authenticated
+  endpoints). `GET /api/sections/managing-people?draft=1` → 200. Nothing attributable to this packet.
+- **V006 still fires**, now on a sixth chapter: the last chapter's check-in says "Before the next
+  chapter". Every section; packet 57.
+- **The `.sr-only` shell still ships the OLD LIVE notes** (NEXT.md's open item, unchanged): a screen
+  reader and a crawler get Costco and Amazon while Learn Mode shows the rebuild. It is why
+  `get_page_text` reads the old content on this page and a walkthrough has to exclude that block.
+
+### Layer 6 — both canaries caught, EIGHT real findings, two of them a class nothing looked for
+
+Sonnet, read-only, on a copy of the bundle with two defects planted: a Notes wage bill restated as
+`$1,232,000` against the section's `$1,332,000`, and a quiz explanation reading `$10,800 ÷ $36,000 ×
+100 = 25%` beside a key of 30%. **It found both, as findings 1 and 2, so the report stands.** Its
+census is the checkable part: 6/6 blocks, 37/37 subsections, 37/37 recalls, 6/6 notes, 35/35 quiz,
+8/8 practice, 33/33 cards, 8/8 mistakes, 16/16 SVG scenarios with every `<text>` extracted, 5+2
+extras — **368 dollar occurrences over 76 distinct values and 53 percentages recomputed, ~70
+same-fact pairs compared across surfaces.**
+
+**Two findings are a CLASS this programme had no check for, and both are now checks.**
+
+- **A RECALL THAT NEEDS A LATER SUBSECTION (finding 5, seven instances).** The mirror image of
+  copy-from-screen, and every inherited check faces the wrong way: they ask whether an answer is
+  available ABOVE the widget, never whether it is available only BELOW. Step 2's match asked about
+  temporary contracts, outsourcing and flexible hours, taught on steps 3 to 5. A four-style
+  leadership match sat on the PATERNALISTIC step, where two of its four answers named styles the
+  section had not reached. A Maslow classify quoted a `$9 → $9.45` rate that appears a whole chapter
+  later. **A student meeting those cannot answer them, and a builder reading the section top to
+  bottom cannot see it, because by then they know it all.** Fixed both ways Layer 6 proposed —
+  rewrite the widget to test only its own subsection, or move a widget that spans a group onto the
+  group's LAST member, which is where the four-style match and the three-way "job" sort now live —
+  and the runner now measures every recall's vocabulary against where each term is first taught.
+  Its A/B caught two more on the first run.
+- **A PRACTICE ITEM PINNED TO A CHAPTER IT DOES NOT TEST (finding 7).** The pins DERIVE from each
+  item's own `block` tag, which makes a pin to a chapter that does not exist unrepresentable — and
+  cannot see a tag that is simply WRONG. The 20-mark Evaluate, "the most important factor in
+  motivating a workforce is pay", was tagged Leadership; its guidance is Taylor, Maslow, Herzberg,
+  Mayo, piecework and the profit share, with no leadership in it. A student practising Leadership
+  was handed it. Retagged to Motivation in Practice, and the runner now checks the tag against the
+  CONTENT: a practice item must share more distinctive vocabulary with its own block than with any
+  other.
+
+**And one finding was a false claim the section made about itself (finding 4, HIGH).** "All five
+financial methods pay $360 in a standard week, on purpose" — in a block takeaway, a Notes takeaway, a
+Notes mechanism, a flashcard and a diagram TITLE. It is not true: only piecework and commission total
+$360. The bonus is $36 a week on top of the basic, the profit share $180 once a year on top of it,
+and performance pay raises the basic to $378 — and **the diagram's own Standard-week column read
+$360, $360, $36, $180, $18 underneath the title claiming all five paid $360.** Every figure was
+right and the sentence over them was wrong, which is why no arithmetic check could reach it. The
+column now reads "$360 instead" twice and "on top" three times, and the teaching says which methods
+REPLACE the basic wage and which ADD to it.
+
+The rest, all fixed: **finding 6** — chapter 1 quoted the FLAT firm's 25 machinists and span of 5
+three chapters before tall-versus-flat exists, while chapter 3 introduces Sabari as tall and only
+reaches flat by reorganising it, so a first-time reader met a number with nothing to hang it on;
+chapter 1 now uses the tall figures. **Finding 8** — a practice opening said two of seven figures
+need working out when five do. **Finding 9** — six diagram captions cited "1.3.4 · 2a-1" and "5a-1",
+which is the ORACLE's leaf-id form and not the specification's. **Finding 10** — a fill-in answer
+"money" that did not parse in its own sentence; it is "wasted".
+
+**Finding 3 was already fixed before the review ran** — the canary copy was made before Verify B's
+"the live section" pass, so the caption it names had gone. Worth recording because it is the one
+place a Layer 6 report can disagree with the bundle for a reason that is not a defect.
+
+Clean on: all 46 spec leaves taught with nothing off-spec, 35/35 quiz items with no second
+defensible option and no position-naming, 8/8 practice tariffs against Appendix 6 for Unit 1, 37/37
+`realExample` fields with no company, year or corroborable figure, 0 UK-only institutions, one
+currency, and no named framework beyond the four theorists and four styles the specification itself
+names.
+
 
 ### Verify A — 29 of 29 confirmed on round 1, zero rejections (17 September 2026)
 
@@ -649,6 +757,50 @@ against 51, and a hidden `.sr-only` block ships the OLD notes including "kinked 
 the diagram modal rendering at 858px in a 390px viewport, and `ExtrasTab`'s hardcoded "(10–14 marks)".
 
 ## Take packet 32 — `aggregate-demand`, Economics 2.3.2 (Opus 5, NEW session)
+
+### Added by packet 30 (18 Sep): four changes to the template this brief predates
+
+The packet-31 session wrote the brief below before packet 30 finished. Everything in it still holds;
+these four are things packet 30 changed in the shared template, and a packet 32 that copies packet 29
+or 31 will not have them. **Copy `scripts/packet-30-*.mjs` for the diagram and recall machinery.**
+
+1. **THE DIAGRAM FRAME IS 440 UNITS, NOT 560, AND THERE IS A `MIN_FACE` FLOOR.** Verify B measured a
+   Learn Mode diagram at **313 CSS px wide** on a phone with `getBoundingClientRect` — not the 800 of
+   a wide desktop and not the 530 `diagram.table-legible` assumes. At 560 units a 10-unit face renders
+   at **5.59px**, and on packet 30's org chart those were the labels saying how many people are on
+   each level. Drawn diagrams are now 440 with a 12-unit floor (8.54px); declared tables 440 with a
+   10-unit floor (7.11px on the phone, 12.05px at 530, which is what clears the rule). `MIN_FACE` is
+   exported by the diagram module and imported by the runner, so the layout and the check share one
+   number, and `gridColumns` throws when a table misses the smaller budget — it will, and each throw
+   names the cell to shorten. **Declare `kind: 'table'` on reference tables**: packet 29 left its
+   grids undeclared to dodge the DEBT, which costs the student the full-screen sheet that
+   `kind: 'table'` always offers and is the only thing that makes a table readable at 390px.
+2. **THE ANSWER-RECOVERABLE THRESHOLDS ARE V029'S NOW, AND THE NUMBER WENT FROM 0 TO 9.** V029 (open
+   on packet 2.7) shows packet 29's `recoverable()` measures ABOVE the defect. Packet 30 applied the
+   two corrections a content packet can: split sentences on `.!?` only, because a give-away across a
+   colon was invisible, and drop the thresholds to 0.70 fill-in / 0.75 reorder / 0.70
+   classify-and-match. Corrected, **nine** of packet 30's 37 recalls were answerable by scrolling up
+   where the inherited check reported **zero**; all nine were reworked. The negative control is now a
+   REAL shipped subsection, body and all, not the invented one-sentence stand-in V029's fourth reason
+   names. **Read V029 before quoting your own runner's green result** — the two reasons it names that
+   a content packet cannot fix mean this check is a floor, against a house baseline of 61% staged.
+3. **`SELF_REFERENCE`, because Verify B found four strings reading "the live section"** — three in
+   diagram captions, one in a teaching paragraph, on the screen of the chapter a student reaches last.
+   Nothing looked for it: `LEDGER_ID` could not (no id), `MARK_CLAIM` could not (not about marking),
+   and three of the four were inside SVGs, which only the vocabulary bans read at all. Packet 18's
+   rule, third instance of the same lesson in three packets.
+4. **`extras.shape` IS BLOCK NOW.** Every `EXTRAS.chains` entry needs a non-empty `steps` array, a
+   title and a result; every `evaluation` entry needs a `content` STRING. A chain with `points` used
+   to crash the whole Extras tab (V028, closed) and an evaluation frame without `content` renders an
+   empty card — **V035, open: 13 frames across packets 23, 24, 25 and 27**, which is why those four
+   runners now refuse to stage.
+
+Two more, smaller: **`fillin.token` fires on any comma, including a thousands separator**, so
+`money(10800)` is an illegal fill-in answer — keep big totals in the PROMPT and make the answers words
+or figures under a thousand (eleven of packet 30's seventeen fill-ins were rebuilt around this). And
+**`audit/scripts/check-staged-drafts.mjs` crashes for the whole repo** on
+`audit/snapshots/packet-31-bundle__business__financial-planning.json`, which has no `section_id` key;
+it works scoped to one section. That script is what the ship checkpoint depends on.
 ### WARNING for the next session in this worktree: the SHARED INDEX is stale and DANGEROUS
 
 Read this before running any git command that writes. **`git status` in this worktree shows `D` for
@@ -792,7 +944,7 @@ from memory, so changing `SUBJECT` changes the gate; check that it does.
   160 back-catalogue practice items, and the packet 5/7 ship checkpoint that packets 5, 5.1, 7 and
   **14-31** are all held for.
 
-## Take packet 30 — `managing-people`, Business 2.4 (Opus 5, NEW session)
+## ~~Take packet 30~~ — CONSUMED 18 Sep. `managing-people` is built and verified; see the packet 30 spec above. Its title said "Business 2.4", which is UK GCE numbering: the section is IAL **1.3.4**, Unit 1.
 
 **Check `audit/PROGRESS.md` for the live row before starting anything.** Several sessions share this
 worktree; "next" is whichever row still says `not started`. Packet 29 finished 17 September.

@@ -2100,3 +2100,72 @@ three of them failed that A/B:
    a collision the runner itself had found. It now reads the two shaded polygons and the two measured
    gaps. **A requirement's check should read the requirement**, or a legitimate change of
    implementation reads as a regression.
+
+## 2026-09-18 — packet 30: a diagram renders 313 px on a phone, and three checks measured above their defect
+
+Four decisions, and three of them are corrections to instruments this programme has been trusting.
+
+**1. A DIAGRAM'S FRAME IS 440 UNITS, NOT 560, AND `MIN_FACE` IS 12.** Verify B measured a Learn Mode
+diagram at **313 CSS px wide** at 390×844, with `getBoundingClientRect`. Not the 800 of a wide
+desktop, and not the 530 the validator's `diagram.table-legible` assumes. On the 560-unit frame every
+packet since 20 has used, a 10-unit face renders at **5.59px** — a third of body text — and the
+strings at that size on packet 30's org chart were the row labels saying how many people are on each
+level. `diagram.table-legible` cannot see it, because it only reads a diagram that DECLARES
+`kind: 'table'`, and an org chart is not one.
+
+So packet 30's diagrams are on a 440-unit frame: drawn diagrams with a 12-unit floor (**8.54px** on
+the phone, up 53%) and declared tables with a 10-unit floor (7.11px on the phone, **12.05px** at the
+530 column, which is what clears the rule). Less content fits per row and `gridColumns` throws when
+it does not, which is the trade the rule is asking for. `MIN_FACE` is exported by the module that
+lays out and imported by the runner that checks, so the two cannot drift.
+
+**This is why packet 29 left its grids UNDECLARED**: declaring `kind: 'table'` on a 560 frame fires
+`diagram.table-legible` as new DEBT, which fails the per-packet gate, so the cheap escape is to not
+declare — at the cost of the full-screen sheet that `kind: 'table'` always offers, which is the one
+thing that makes a table readable at 390px. Packets 20-29 authored 32 tables into that rule and every
+one of them fires. **The next section packet should copy packet 30's frames rather than packet 29's**,
+and V022 — the founder's open decision on table width — now has a phone number as well as a laptop
+one: 313px, not 530.
+
+**2. `extras.shape` IS NOW A BLOCK RULE, AND IT FOUND MORE THAN IT WAS WRITTEN FOR (V028, V035).**
+`ExtrasTab.jsx` renders `chain.steps.map(...)` and `{point.title}` / `{point.content}`, and nothing
+else. V028 was a chain carrying `points`: it threw a TypeError and took the whole Extras tab down for
+a Pro student, while `previewMode` sliced the list to one chain so no signed-out walkthrough could
+ever reach it. Fixed in four parts — a guard in the component, the rule, packet 28's content, and a
+re-stage of packet 28's draft — and the entry was MOVED into `evaluation` rather than renamed, because
+its four entries are judgement considerations and not a sequence.
+
+Then the rule was run over every `packet-*-bundle__*.json` on disk rather than over packet 30's alone,
+and found the other half: **13 evaluation frames in four sections** (packets 23, 24, 25, 27) authored
+as `{point, detail}` or `{title, points}`, which render a heading with an empty body, or nothing at
+all. Silent, because an empty `<p>` throws nothing — which is exactly why the crash was found and this
+was not. Filed as **V035** and deliberately not fixed: it is content in four other packets' modules.
+`extras.shape` being BLOCK is the enforcement — those four runners now refuse to stage until it is.
+
+**3. THE ANSWER-RECOVERABLE CHECK MEASURED ABOVE ITS DEFECT, AND V029 IS RIGHT.** V029 (another
+session's finding, against packet 29's runner — the one packet 30 inherited this check from) shows
+`recoverable()` fails for four compounding reasons. Two are fixable in a content packet and both are
+applied: the sentence split included `;` and `:`, so a give-away across a colon was invisible; and the
+thresholds sat at 0.85 for a fill-in and 0.95 for a reorder where real give-aways score 0.70 and 0.75.
+
+Corrected, the check found **nine** of packet 30's 37 recalls answerable by scrolling up where the
+inherited version reported **zero** — a fill-in whose answer was "cannot" beside a sentence saying a
+machinist cannot work a sewing line from home, a classify item printed verbatim in a `realExample`, a
+reorder's first item restating the paragraph above it. All nine were reworked; the section is 0 of 37
+against the corrected test. **Its negative control is now a real shipped subsection**, body and all,
+rather than the invented one-sentence stand-in V029's fourth reason names.
+
+The other two reasons are not fixable here and are why this check is a FLOOR: the three
+reorder-specific rules are vacuous in a section with no flow bodies, and a lexical overlap test cannot
+see a paraphrased give-away. **A green answer-recoverable result is evidence about a lexical property,
+not about a student**, and any packet quoting it should say which.
+
+**4. AND A RULE FOR OUR OWN PROSE, FROM A DEFECT VERIFY B FOUND ON THE LAST CHAPTER'S SCREEN.** Four
+strings said "the live section" — three diagram captions and one teaching paragraph, e.g.
+"Paternalistic is the one the live section leaves out while quizzing it". A student has no idea what
+"the live section" is; it reads as a claim about the specification. Packet 18 shipped the same class
+twice ("the March version of this item asked for 4") and its rule is written down. Nothing looked for
+it: `LEDGER_ID` could not (no id), `MARK_CLAIM` could not (not about marking), and three of the four
+were inside SVG captions, which only the vocabulary bans read at all. `SELF_REFERENCE` is now a runner
+check over prose AND diagram text, with its A/B. **Third instance of the same lesson in three
+packets: what a check LOOKS AT decides what it can find.**
