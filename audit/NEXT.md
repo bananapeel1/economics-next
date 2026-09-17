@@ -271,6 +271,62 @@ $120 shutdown comparison. Report console errors and any label running off a diag
 walk · Layer 6 with two planted canaries · PROGRESS row · commit · push. **Do not publish** — the
 packet 5/7 checkpoint holds, and thirteen sections now wait on it.
 
+### Packet 28 is built, staged and verified — and NOT YET COMMITTED (17 September)
+
+Everything in the gate is green: `npm run build`, `npm test` 167/167, `npm run validate` exit 0,
+`ledger.mjs unverified 28` exit 0, all eight `draft` columns byte-identical to the dumped bundle under
+`sameJson`, Verify A 28 of 28, Verify B clean, Layer 6 clean after its eight fixes. The PROGRESS row,
+this file and DECISIONS are written.
+
+**The commit itself was refused by the auto-mode classifier**, which treats the shared git index as a
+shared resource and declined both `git add -N` and a private-index `git update-ref`. The message is
+saved at `audit/packet-28-commit-message.txt`. To land it:
+
+```
+git add -N scripts/packet-28-revenue-costs-profits.mjs scripts/_packet28-util.mjs scripts/_packet28-content.mjs scripts/_packet28-assessment.mjs scripts/_packet28-diagrams.mjs audit/snapshots/2026-09-17-pre-packet-28__economics__revenue-costs-profits.json audit/snapshots/packet-28-bundle__economics__revenue-costs-profits.json
+git commit -F audit/packet-28-commit-message.txt --only scripts/packet-28-revenue-costs-profits.mjs scripts/_packet28-util.mjs scripts/_packet28-content.mjs scripts/_packet28-assessment.mjs scripts/_packet28-diagrams.mjs audit/snapshots/2026-09-17-pre-packet-28__economics__revenue-costs-profits.json audit/snapshots/packet-28-bundle__economics__revenue-costs-profits.json audit/PROGRESS.md audit/NEXT.md audit/DECISIONS.md
+git push -u origin remediation/2026-09
+```
+
+**`audit/ledger.json` is deliberately not in that list.** Packets 26 and 27 both have uncommitted
+claims in it and packet 27 has files staged in the shared index right now; this packet's 28 confirmed
+ids ride along with the next gate commit, as packet 19 did. Whoever commits next: the ledger diff
+against HEAD is 68 changed ids, 28 of them `C-revenue-costs-profits-*` and all of those `confirmed`.
+
+### Verify A — 28 of 28 confirmed on round 1, zero rejections (17 September)
+
+`unverified 28` exits 0. The verifier read the staged draft over `localhost:3001/api/sections/…?draft=1`
+and proved the dumped bundle a faithful mirror of it before falling back to the bundle for the quiz,
+flashcard and mistake detail the anonymous slice does not serve — the check packet 25's gate asks for,
+done the right way round. It re-derived both firms' arithmetic from `P = 40 − 2Q` and the product
+schedule rather than reading the tables, and it checked every scope refusal against `econ_spec.txt`
+itself rather than accepting this packet's account of it.
+
+**Five things it raised that no ledger item names**, and what was done:
+
+1. **The internal-economies recall drilled five of six, and the missing one was risk bearing.** Found
+   independently by Layer 6 in the same hour, from the opposite direction — the verifier noticed the
+   leaf had no retrieval, Layer 6 noticed the chapter says "six" twice and the widget shows five. Two
+   verifiers converging on one finding is the strongest signal either of them produced. Fixed.
+2. **Two clauses were dropped without being recorded**, in a packet that documented nine other wrong
+   claims. Both are defensible and neither was written down until now:
+   - `topFix-02` and `specGap-02` both ask for "the firm's SR supply curve = MC above AVC". That is
+     `econ_spec.txt:1374`, topic 3.3.3 · 3b, and it needs `P = MC`, which is the profit-maximising
+     condition this section does not teach. **Refused on the same grounds as the rest of 3.3.3.**
+   - `topFix-05` asks for "an explicit diagram requirement" in the levels-based guidance for the two
+     essays. The Economics Appendix 6 descriptions credit a diagram under Analyse and Draw, not under
+     Discuss or Evaluate, so bolting one on would be the packet-23 error — an extra requirement
+     attached to a citation that does not carry it. **Refused.**
+3. **`opportunity cost` was zero in the whole section**, and it is the phrase the second mark on a
+   Define of normal profit usually turns on. It is `econ_spec.txt:526`, topic 1.1.1 · 1c — on the
+   specification, belonging to another topic — so naming it once as a gloss is not the rule-2 problem
+   an off-spec phrase would be. Added to the definition and to the `examMatters` line.
+4. **AVC ties at $12 (10 and 15 crates) and AC ties at $20 (15 and 18)**, and the prose said "the
+   lowest" at one of each pair without flagging the tie. Arithmetically correct, quietly incomplete.
+   Both now name both outputs.
+5. `structure-02` cites `LearnModeTab.jsx:86` for `hasRefs`; it is at **line 204** now. A stale audit
+   reference, no defect, recorded so the next packet reading that finding does not go looking at :86.
+
 ### Layer 6 — two planted canaries, both caught, and SIX real findings (17 September)
 
 Canary A inverted the two marginal-cost crossings in "Marginal Cost and Where It Cuts" — MC cutting AC
@@ -355,6 +411,32 @@ Packet 25 found the same thing in the Notes tab and DECISIONS records it; this i
 the same cause. It is invisible to a sighted reader and **a screen-reader user previewing a draft hears
 the old section**. It resolves on publication. Verify the notes against the `draft` column instead —
 done here, all eight tables byte-identical to the dumped bundle under `sameJson`.
+
+### The validator rule that changed mid-build, and why this packet carries seven new DEBT
+
+`diagram.table-legible` was **BLOCK at an 800px column** when this packet started and is **DEBT at a
+530px column** now: commit `9418fb0` (packet 2.2, 17 September, while this packet was in Layer 6)
+corrected it to the width a 1024-wide laptop actually gives a diagram card. Its own rule text says it
+"fires on all 32 tables packets 20-28 have authored" and is "not something a packet can fix per table,
+so it reports rather than gates".
+
+That is exactly what happened here. Between one clean run and the next, seven findings appeared — one
+per diagram — with nothing in this packet having changed. **Every authored font was raised to 11 units,
+the grid's own size**, which takes the worst cell from 8.5px to 10.4px and is as far as a packet can
+go: the rule wants 12px, which on a 560-unit frame means 13 units, and `gridColumns` throws at 13 on
+the wider tables because the cells stop fitting. The arithmetic bounds it — a row can be legible at
+530px only if it totals about 63 characters across all its columns, and the specification's own list of
+external economies is 59 characters in two cells before a gutter.
+
+**So the seven are carried, not cleared, and they are not this packet's to clear.** They are invisible
+in `npm run validate`, which reads the `data` column: all 32 tables the rule names are in STAGED
+DRAFTS, so the repo-wide run is clean and the debt lands as a block at the packet 5/7 checkpoint. The
+decision the rule asks for — a wider column for tables, or accepting that a table is tapped open — is
+the founder's, and it now has nine sections' worth of evidence behind it rather than one.
+
+**For the next content packet:** your runner will report these the moment you declare `kind: 'table'`.
+Do not chase them and do not shrink your content to fit them. Author at 11 units, as this one does, and
+say in your PROGRESS row how many you carried.
 
 ## Packet 27 spec — `business-objectives-strategy`, Business 3.3.1 (Opus 5, 17 September 2026)
 

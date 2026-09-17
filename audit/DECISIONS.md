@@ -1749,3 +1749,41 @@ imbalance is the honest price of the rule. It is not the price of the right fix:
 first remedy is to render the recall only as a spaced recall on a LATER step, which an author cannot
 do because `lib/learn-steps.js` decides placement. **That is a packet-7 change and it would give
 every section its reorders back.** Recommended before the next content packet.
+
+## 2026-09-17 — packet 28: an inequality is not an envelope, and a guard that states half a property reads green
+
+**The runner asserted `LRAC(q) ≤ SRAC(q)` at every row of the short-run cost table, it held everywhere,
+and the long-run curve was still wrong.** It sat STRICTLY below every short-run point — which says the
+plant the student has just spent two chapters on is the best plant for no output at all. An envelope is
+not an inequality; it is an inequality WITH A TANGENCY, and the check stated only the half that was
+easy to write.
+
+Layer 6 found it by reading the two tables against each other, which is the one thing a per-row check
+cannot do. Fixed by moving the long-run floor to `$13` with a falling gradient of `0.2`, so
+`LRAC(15) = $20` exactly, which is Bahri Bottling's own lowest average cost — the taught plant is now
+the long-run plant for 15 crates a day. The runner asserts both halves.
+
+**The general rule, which is new and which the programme has now paid for twice:** when a property has
+a necessary condition and a sufficient one, a guard that encodes only the necessary condition will read
+green forever, because nothing ever violates it. Packet 21 recorded that a guard nothing has disagreed
+with is a claim about itself; this is the sharper case — a guard that something DID satisfy, while the
+thing it was guarding was still broken. Ask of every new check: what would still be wrong if this
+passed?
+
+## 2026-09-17 — packet 28: the same error arrived twice, once planted and once real
+
+Layer 6's canary A inverted the two marginal-cost crossings in one subsection. It was caught. In the
+same pass Layer 6 found **the same economics wrong in a different subsection, in prose I had written** —
+a bullet claiming "average product and average cost move opposite ways", where the wage links average
+product to average VARIABLE cost and average total cost also carries falling fixed cost. This section's
+own table disproves it: average product is flat at 5 across 10 and 15 crates while average cost falls
+from $24 to $20.
+
+**The runner's relationship checks could not see it.** They verify `AVC = wage / AP` at every row, and
+that is true; the prose asserted something else, about a different measure, using the specification's
+own label for the pair ("average products and average cost", 2d-2). **A check that verifies the
+arithmetic does not verify the sentence next to the arithmetic**, and in a section that is fourteen
+formulae and four relationships, the sentences are where the teaching is.
+
+Carry this into every quantitative packet: the numbers agreeing with each other is necessary and is not
+enough. Something has to read the prose against the numbers, and only a reader can do it.
