@@ -5217,10 +5217,10 @@
    "rank": 0,
    "text": "Add Learn-content blocks for the untaught spec bullets (strategy vs tactics + resource impact; PESTLE + Five Forces; portfolio analysis/BCG + distinctive capabilities), OR remove/quarantine quiz items 3,5,6,7,9 so the pre-test only samples taught material.",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet27-content.mjs:596,738,1066 blocks 4/5/7 now teach portfolio analysis, strategic-vs-tactical+resources, PESTLE+5-forces; BCG/distinctive-capabilities correctly left out as Unit 1/UK-GCE (specGap-05)",
    "note": null
   },
   {
@@ -5230,10 +5230,10 @@
    "rank": 1,
    "text": "Add diagrams for Ansoff's matrix, Porter's strategic matrix (2x2) and the SWOT grid, ideally interactive 'drag this example into the right cell' rather than static images.",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet27-diagrams.mjs:214 matrixSvg draws genuine 2-axis 4-cell grids for Ansoff/Porter/SWOT; content.mjs:164 'classify' recall (drag-to-cell) on every matrix chapter, renderer confirmed at components/learn-mode/ClassifyRecall.jsx",
    "note": null
   },
   {
@@ -5243,10 +5243,10 @@
    "rank": 2,
    "text": "Rename 'Porter's Generic Strategies' to 'Porter's Strategic Matrix' and present four cells; fix the Ansoff takeaway to stop ranking product development below market development (and match notes[] which say both are medium risk).",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet27-content.mjs:70,432 renames to Porter's Strategic Matrix with 4 cells; :330 Ansoff takeaway states middle cells 'not ranked against each other', matching notes' medium-risk pairing",
    "note": null
   },
   {
@@ -5256,10 +5256,10 @@
    "rank": 3,
    "text": "Fix the Netflix SWOT example (password-sharing crackdown is an internal decision, not an external threat; debt weakness is dated) and the Amazon Ansoff example (AWS is diversification, not product development).",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet27-content.mjs:1004 Netflix debt/password-sharing SWOT claim replaced by generic 'subscription business' example; :370 Amazon/AWS Ansoff example replaced by Jollibee (structural, undated); 0 hits for Amazon/AWS/Whole Foods in staged bundle",
    "note": null
   },
   {
@@ -5269,10 +5269,10 @@
    "rank": 4,
    "text": "Replace the two untaught-topic practice questions with case-applied Ansoff and Porter questions (e.g. 8/10-mark 'Assess whether X should pursue market development or product development'), and attach level-descriptor mark schemes to the 10- and 20-markers.",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet27-assessment.mjs:180 Define=2 marks, :192 Assess=12 marks, :188/:192/:196 Ansoff+Porter case-applied practice added; 0 'Outline' hits in staged bundle",
    "note": null
   },
   {
@@ -5281,10 +5281,10 @@
    "kind": "accuracy",
    "text": "Strategic Direction > porters-generic-strategies (title, keyIdea, body para 3, block takeaway 'Porter's three strategies'): IAL spec bullet and Edexcel mark schemes use 'Porter's Strategic Matrix' (a 2x2: cost leadership, differentiation, cost focus, differentiation focus). Content presents it as 'Porter's Generic Strategies' with 'three strategies'. Students may not recognise the exam wording, and 'choose one of three' misrepresents the four-cell matrix the spec names.",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet27-content.mjs:70,432; staged bundle has 'Porter's Strategic Matrix' x16, 'three strategies' 0, four cells cost leadership/differentiation/cost focus/differentiation focus",
    "note": null
   },
   {
@@ -5293,10 +5293,10 @@
    "kind": "accuracy",
    "text": "Corporate Objectives & Strategy > swot-analysis > realExample (Netflix): 'password-sharing crackdowns alienating users' is listed as an external THREAT, but the crackdown is Netflix's own 2023 policy decision (internal), and it in fact drove subscriber growth. Using it as a threat models the exact S/W vs O/T categorisation error the section is trying to teach. 'high debt from original content spend' as a weakness is also dated: Netflix has been strongly free-cash-flow positive since 2022.",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet27-content.mjs:1004 Netflix password-sharing/debt claim removed from SWOT chapter; anonymised subscription-business example now teaches the same internal-vs-external test without a dated real-firm assertion",
    "note": null
   },
   {
@@ -5305,10 +5305,10 @@
    "kind": "quiz",
    "text": "q3: BCG/portfolio analysis is never taught in content[] (only in flashcards and notes). Pre-test and inline/post quiz draw from this bank, so students are tested on untaught material.",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet27-assessment.mjs:119 new item 'The aim of portfolio analysis is to:' replaces the old BCG cash-cow item; staged bundle has 0 hits for 'BCG'/'cash cow' across all 31 quiz items",
    "note": null
   },
   {
@@ -5317,10 +5317,10 @@
    "kind": "quiz",
    "text": "q5: Genuinely ambiguous: minimum wage is routinely classified as Political (government policy), Economic (labour cost) or Legal in Edexcel resources; the explanation itself concedes 'it could also have economic implications'. Two options are defensible. PESTLE is also not taught in content[].",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet27-assessment.mjs:161 forced single-answer minimum-wage item removed; content.mjs block 7 sub 'one-factor-two-letters' teaches minimum wage as legitimately political+economic+legal, so the ambiguity is taught rather than tested as one right answer",
    "note": null
   },
   {
@@ -5329,10 +5329,10 @@
    "kind": "structure",
    "text": "Only 2 blocks x 2 sections = 2 Learn steps for a spec area (3.1.1-3.1.3) with ~10 bullets; each step is two long reading cards followed by one MCQ, one practice question and ExplainItBack. Very thin for the pre-test/post-test comparison to mean anything.",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "staged bundle content array length 7 (was 2), 35 subsections total; scripts/packet-27-business-objectives-strategy.mjs:355 guards BLOCKS.length>8",
    "note": "SPEC NUMBERING: this item cites 3.1.1, 3.1.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -5341,10 +5341,10 @@
    "kind": "structure",
    "text": "Zero recall objects (no reorder, no fillin), so Learn Mode has no active-recall widgets at all in this section. The content is grid-based and lends itself to 'classify this example into the correct Ansoff/Porter/SWOT cell' recall rather than reorder.",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "staged bundle: 35 recall objects (10 fillin/6 reorder/11 classify/8 match) across all 7 blocks, up from 0; renderers verified at components/learn-mode/{Classify,Match,Reorder,FillIn}Recall.jsx",
    "note": null
   },
   {
@@ -5353,10 +5353,10 @@
    "kind": "structure",
    "text": "Zero diagrams for a section whose three core tools are 2x2 matrices (SWOT grid, Ansoff's matrix, Porter's strategic matrix). Students are expected to sketch Ansoff and Porter in the exam; the section never shows them.",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet27-diagrams.mjs:214,259,376 matrixSvg produces 7 diagrams incl. 3 genuine two-axis four-cell grids (Ansoff/Porter/SWOT) with correctly placed cell labels, verified in staged SVG output",
    "note": null
   },
   {
@@ -5365,10 +5365,10 @@
    "kind": "structure",
    "text": "Quiz bank mismatch: 5 of 10 MCQs (indices 3,5,6,7,9) test BCG, PESTLE, Five Forces and strategic/tactical decisions, none of which appear in content[]. With PreTest sampling 3 random questions, most pre-tests will include at least one untaught item, which directly feeds the 'pre-test demotivates' complaint.",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet27-assessment.mjs full 31-item bank content-matched to the 7 taught blocks; staged bundle quiz dump shows no item testing untaught material",
    "note": null
   },
   {
@@ -5377,10 +5377,10 @@
    "kind": "structure",
    "text": "Block 1 is titled 'Corporate Objectives & Strategy' but never defines 'strategy' or 'tactics' (those definitions exist only in notes[]); the strategy-vs-tactics distinction is a named spec bullet and appears in quiz Q8.",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet27-content.mjs:738 block 'Strategic and Tactical Decisions', sub 0 explicitly defines both terms and the reversibility test that separates them",
    "note": null
   },
   {
@@ -5389,10 +5389,10 @@
    "kind": "structure",
    "text": "Step 1 pairing (mission/SMART + SWOT) is acceptable but SWOT arguably belongs with Ansoff/Porter (spec groups SWOT under corporate strategy); a more coherent sequence is: objectives hierarchy + strategy vs tactics | SWOT + PESTLE/Five Forces | Ansoff + Porter | portfolio analysis + distinctive capabilities.",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "staged bundle content order: SWOT is now its own block (index 5), decoupled from the mission block (index 0), positioned per bus_spec.txt:1090-1110's own topic order 1/2/3/4; the finding's specific alternative resequencing (ending in out-of-scope 'distinctive capabilities') is not adopted, per NEXT.md packet 27 spec decision 5",
    "note": null
   },
   {
@@ -5401,11 +5401,11 @@
    "kind": "structure",
    "text": "Takeaways do match their blocks; misconceptions are genuine (not filler). The four misconceptions and examMatters are the strongest part of the section.",
    "packet": 27,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "An OBSERVATION with nothing to fix: 'Takeaways do match their blocks; misconceptions are genuine (not filler). The four misconceptions and examMatters are the strongest part of the section.' Same shape as packet 24's structure-10. The rebuild keeps both surfaces and extends them — 7 block takeaways and 35 misconceptions, one per subsection. Nothing was wrong and nothing was removed. Packet 27."
   },
   {
    "id": "C-business-objectives-strategy-structure-08",
@@ -5413,10 +5413,10 @@
    "kind": "structure",
    "text": "Practice questions and Learn content are disjoint on Ansoff/Porter: the two most examinable frameworks in the block have no applied practice question, while two practice questions (objective conflict, changing objectives) cover untaught ideas.",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet27-assessment.mjs:188 Construct Ansoff, :192 Assess Ansoff-vs-Ansoff scenario, :196 Analyse Porter scenario now exist; old objective-conflict/changing-objectives items removed",
    "note": null
   },
   {
@@ -5425,10 +5425,10 @@
    "kind": "structure",
    "text": "Notes[] hierarchy (mission → aims → corporate objectives → functional objectives) and flashcards disagree with content[] hierarchy (no 'aims'); cross-tab inconsistency will confuse students who move between Learn and Notes.",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet27-content.mjs:117 (content flow) and :1392 (notes definitions) both use the same 3-tier mission/corporate-aims/corporate-objectives hierarchy; staged bundle has 0 hits for 'functional objective' across content, notes and flashcards",
    "note": null
   },
   {
@@ -5437,10 +5437,10 @@
    "kind": "specGap",
    "text": "3.1.1 Distinction between strategy and tactics (defined in notes only, not in Learn content)",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet27-content.mjs:738-762 sub 'strategic-and-tactical-decisions' teaches the distinction in Learn content (was notes-only); bus_spec.txt:1101 'tactic' bullet is 3.3.1 2c, not 3.1.1 as the finding's number states",
    "note": "SPEC NUMBERING: this item cites 3.1.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -5449,10 +5449,10 @@
    "kind": "specGap",
    "text": "3.1.1 / 3.1.2 Impact of strategic and tactical decisions on human, physical and financial resources (not covered anywhere)",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet27-content.mjs:799,830,859 dedicated subsections on human/physical/financial resource impact, matching bus_spec.txt:1101-1102's 2c bullet",
    "note": "SPEC NUMBERING: this item cites 3.1.1, 3.1.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -5461,10 +5461,10 @@
    "kind": "specGap",
    "text": "3.1.1 Critical appraisal of mission statements/corporate aims (touched in examMatters only; no structured pros/cons)",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet27-content.mjs:179,214 'Critical Appraisal: The Case For'/'The Case Against' subsections give structured pros/cons, matching bus_spec.txt:1096 1b",
    "note": "SPEC NUMBERING: this item cites 3.1.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -5473,10 +5473,10 @@
    "kind": "specGap",
    "text": "3.1.2 Aim of portfolio analysis (BCG matrix appears only in flashcards and one quiz item)",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet27-content.mjs:596,632 block 'The Aim of Portfolio Analysis' teaches the aim (bus_spec.txt:1100 2b); Boston Matrix correctly named only as the Unit 1/1.3.3 tool (bus_spec.txt:605), not rebuilt here",
    "note": "SPEC NUMBERING: this item cites 3.1.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -5485,11 +5485,11 @@
    "kind": "specGap",
    "text": "3.1.2 Achieving competitive advantage through distinctive capabilities (Kay: architecture, reputation, innovation) — not covered",
    "packet": 27,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "SPEC NUMBERING: this item cites 3.1.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+   "note": "OUT OF SCOPE. Asks for 'competitive advantage through distinctive capabilities (Kay: architecture, reputation, innovation)'. `distinctive capabilit` is 0 in audit/raw/bus_spec.txt; `Kay` appears once, at :1948, in the acknowledgements, as a person's name; and all five hits of `competitive advantage` belong to other topics (:471 and :542 Unit 1 marketing, :984/:995/:1002 Unit 2 operations). None is in 3.3.1 (:1090-1110). It is UK GCE A-level 3.1.2 material — the numbering trap 154 ledger items in this programme fall into. Building it would teach a Unit 3 cohort a framework their paper cannot ask about. Packet 27."
   },
   {
    "id": "C-business-objectives-strategy-specGap-06",
@@ -5497,10 +5497,10 @@
    "kind": "specGap",
    "text": "3.1.3 Impact of external influences: PESTLE — not in Learn content (quiz item 5, common_mistakes only)",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet27-content.mjs:1066,1072 block 7 teaches PESTLE in full (all six categories), matching bus_spec.txt:1107-1108 4a",
    "note": "SPEC NUMBERING: this item cites 3.1.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -5509,10 +5509,10 @@
    "kind": "specGap",
    "text": "3.1.3 The changing competitive environment and Porter's Five Forces — not in Learn content (flashcards and quiz only)",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet27-content.mjs:1175 'The Changing Competitive Environment' and :1221 'Porter's Five Forces' subsections, matching bus_spec.txt:1109-1110 4b/4c",
    "note": "SPEC NUMBERING: this item cites 3.1.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -5521,10 +5521,10 @@
    "kind": "specGap",
    "text": "Unsure: whether the IAL spec expects Porter's matrix as four cells (cost focus / differentiation focus split) in mark schemes; content presents three strategies",
    "packet": 27,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-27",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "scripts/_packet27-content.mjs:70,432 plus diagrams.mjs:259 build the matrix as four cells (cost leadership/differentiation/cost focus/differentiation focus), settling the question the finding raised; staged bundle 'three strategies' 0 hits",
    "note": null
   },
   {
@@ -18043,6 +18043,32 @@
    "evidence": null,
    "note": null,
    "added": "2026-09-16"
+  },
+  {
+   "id": "V024",
+   "kind": "feature",
+   "title": "PracticeQuestionsTab carries the UK GCE tariff ladder, not the IAL one. MARK_FILTERS (:15-21) and MARK_COLORS (:8-13) are both keyed 4/6/10/20, so a 2-mark Define, an 8-mark Discuss, a 12-mark Assess and a 14-mark Discuss can never be filtered, and MARK_COLORS[q.marks] || MARK_COLORS[4] (:114) paints every one of them in the 4-mark green. Measured: 3 of 215 live practice items, but 37 of 114 STAGED ones (32%) across 12 held sections, so it lands the day the packet 5/7 checkpoint ships. Found by Verify B on packet 27, where the 12-mark Assess is the same colour as the 2-mark Define. components/PracticeQuestionsTab.jsx",
+   "file": "components/PracticeQuestionsTab.jsx",
+   "packet": 2.6,
+   "status": "open",
+   "closed_by": null,
+   "verified_by": null,
+   "evidence": null,
+   "note": null,
+   "added": "2026-09-17"
+  },
+  {
+   "id": "V025",
+   "kind": "feature",
+   "title": "The coverage oracle matches a leaf's terms by SUBSTRING, so a short leaf can be satisfied by an unrelated word. BUS-3.3.1-4c is 'Porter's five forces': its distinctive terms are porter and forces, it needs one of them, and 'nothing enforces them' in a subsection about mission statements satisfies it. Any leaf carrying one or two distinctive terms is exposed the same way. V001 completed the parser; this is the matcher. Found by an independent leaf-to-subsection mapping on packet 27. lib/content-validator.mjs:672-688",
+   "file": "lib/content-validator.mjs",
+   "packet": 2.6,
+   "status": "open",
+   "closed_by": null,
+   "verified_by": null,
+   "evidence": null,
+   "note": null,
+   "added": "2026-09-17"
   }
  ],
  "marketing": [

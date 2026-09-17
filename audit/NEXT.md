@@ -56,6 +56,190 @@ no 10-mark**) · every practice guidance two paragraphs with a scaffold first ·
 walk · Layer 6 with two planted canaries · PROGRESS row · commit · push. **Do not publish**: the packet
 5/7 checkpoint still holds, and twelve sections now wait on it.
 
+## Packet 27 spec — `business-objectives-strategy`, Business 3.3.1 (Opus 5, 17 September 2026)
+
+**Section:** `business-objectives-strategy`, IAL **Business Unit 3 (WBS13)**, topic **3.3.1 Business
+objectives and strategy**, `audit/raw/bus_spec.txt:1090-1110`. **11 leaves**, 26 ledger items.
+Snapshot `audit/snapshots/2026-09-17-pre-packet-27__business__business-objectives-strategy.json`.
+
+The March section is the thinnest in the programme: **2 blocks × 2 subsections = 4 Learn steps**, zero
+recalls, zero diagrams, 10 quiz items of which five test material the content never teaches.
+
+### The rule-1 pre-flight: 8 of 26 claims wrong or mis-aimed
+
+Every claim checked against `bus_spec.txt` before a word was written.
+
+1. **`specGap-05` is out of scope and is WONT-FIX.** It asks for "competitive advantage through
+   distinctive capabilities (Kay: architecture, reputation, innovation)". `distinctive capabilit` is
+   **0** in `bus_spec.txt`; `Kay` appears once, in the acknowledgements, as a person's name; and all
+   five hits of `competitive advantage` belong to other topics (:471, :542, :984, :995, :1002 — Unit 1
+   marketing and Unit 2 operations). It is UK GCE A-level 3.1.2 material. Building it would teach a
+   Unit 3 cohort a framework their paper cannot ask about.
+2. **`specGap-04` and `quiz-01` name the wrong section for half of what they ask.** "Aim of portfolio
+   analysis" IS this section's leaf (3.3.1 · 2b, :1100). **The Boston Matrix is not** — it is IAL
+   **1.3.3 · 1c** (`bus_spec.txt:605`, "The Boston Matrix and the product portfolio"), Unit 1
+   marketing, the section packet 22 rebuilt. `BCG` is **0** spec-wide. So this section teaches the
+   AIM and names the Boston Matrix as the Unit 1 tool it is; it does not rebuild its four cells, and
+   the March quiz item asking a student to place a cash cow goes.
+3. **`specGap-01` names a leaf the IAL spec does not have.** "Distinction between strategy and
+   tactics" is UK GCE 3.1.1. `tactic` is **one** hit in the whole IAL spec, at :1101, inside 2c:
+   "Effect of strategic and tactical decisions on human, physical, and financial resources". The
+   distinction is a prerequisite for 2c and is built inside that chapter — not as a leaf of its own,
+   and not as the chapter's spine.
+4. **`structure-07` is an observation with nothing to fix** ("takeaways do match their blocks;
+   misconceptions are genuine"). Recorded, wont-fix. Same shape as packet 24's `structure-10`.
+5. **`structure-06` proposes a sequence that is not the spec's and ends in out-of-scope material**
+   (its last pairing is "portfolio analysis + distinctive capabilities"). Its live half — that SWOT
+   belongs with the strategy tools rather than bolted to the mission chapter — is acted on. The
+   ordering itself is refused: the chapters follow the spec's own four sub-topics.
+6. **`topFix-04` is right about both examples and its fix is the wrong one.** The Netflix SWOT does
+   miscategorise the firm's own policy decision as an external threat, and AWS is diversification
+   rather than product development. But both are **dated claims about real firms** that this
+   repository cannot check — packet 15's `accuracy-01` rule and packet 25's precedent (the
+   lighthouse). They are replaced, not corrected: real firms, structural and undated.
+7. **`topFix-05` understates the practice bank.** It names the two untaught-topic questions. The bank
+   also carries **three tariff defects** against Business Appendix 6: `Define … (4 marks)` when Define
+   is **2**; `Assess … (10 marks)` when this is **Unit 3**, where Assess is **12** (:2238-2245,
+   "10 [Units 1/2] / 12 [Units 3/4]"); and an **`Outline`** item, which is not an IAL command word in
+   either subject.
+8. **`specGap-08`'s "unsure" is settled by the spec, and by what it does not say.** `Porter's
+   Strategic Matrix` is the spec's own phrase (:1099); `generic strateg` is **0**. The spec gives no
+   cell list, so the matrix is presented as the grid it is named as — two dimensions, four cells —
+   and no claim is made anywhere about what a mark scheme accepts.
+
+### The vocabulary check that no finding names (rule 2)
+
+`SMART` is **0** in `bus_spec.txt`, and it is half of block 1's title, the section's first takeaway
+and its opening subsection. This is the packet-20 shape — an audit item says what is MISSING, never
+what is PRESENT and should not be. The spec's own chain is `mission statement/corporate aims →
+corporate objectives` (1a) and `critical appraisal of mission statements` (1b). SMART is demoted to a
+single named mention of how objectives are commonly written, and it is not a spine. `functional
+objectives` is **0** too, so the four-tier hierarchy the notes carry (`structure-09`) goes; the two
+tiers the spec names stay, and the notes are right that **corporate aims** belong in it (:1095).
+
+**And the case this packet had to decide, which is new: naming a tool imports the tool's own
+vocabulary.** `cost leadership`, `diversification`, `market development` and `product development` are
+all **0** in `bus_spec.txt`, exactly like packet 20's `sole trader`. They are not the same case. The
+spec names **Ansoff's Matrix** and **Porter's Strategic Matrix** by name at :1098-1099, and a named
+framework cannot be taught without its own cells. What does NOT come with them is a neighbouring
+framework: `differentiation`'s four spec hits are Unit 1 product differentiation and USPs (:543, :629,
+:656), `penetration`'s one hit is penetration PRICING (:650), and `focus` never means Porter's focus
+strategy anywhere in the document. The rule this packet adds: a named tool brings its own cells and
+nothing else.
+
+### What is built
+
+**Seven blocks**, spec order, one per sub-topic except the four-leaf sub-topic 2, which is split leaf
+by leaf. **Seven and not eight**: `freeQuizPayload()` spends 2 on the Quiz tab, one pin per block and
+then the pre-test's headroom, all bounded by `FREE_QUIZ_MAX` (10), so at eight blocks a signed-out
+student's pre-test drops to two questions and at nine a chapter loses its check-in quiz outright
+(packet 25's measured table).
+
+| # | Chapter | Leaves |
+|---|---------|--------|
+| 1 | Mission, Corporate Aims and Corporate Objectives | 1a, 1b |
+| 2 | Ansoff's Matrix | 2a-1 |
+| 3 | Porter's Strategic Matrix | 2a-2 |
+| 4 | The Aim of Portfolio Analysis | 2b |
+| 5 | Strategic and Tactical Decisions, and the Resources They Move | 2c |
+| 6 | SWOT Analysis | 3a-1, 3a-2 |
+| 7 | External Influences: PESTLE, a Changing Environment, Five Forces | 4a, 4b, 4c |
+
+**One firm carries the section.** Every tool is applied to the same fictional business, so the
+chapters connect rather than float: a student sees one firm's portfolio in chapter 4, the same firm's
+Ansoff choice in 2, its Porter position in 3, the resources that choice moves in 5, its SWOT in 6 and
+its external environment in 7. Packet 17's rule, applied to a section with no arithmetic: where a
+section's worked case recurs, define it once and generate every surface from it.
+
+**Three of the diagrams are 2×2 matrices** (`topFix-02`, `structure-03`) — Ansoff, Porter and the SWOT
+grid — which needs a renderer this programme does not have: `gridSvg` draws a lookup table, not a
+labelled grid with two axes. The new `matrixSvg` computes its cell box from the widest cell with the
+same `estWidth` bound and **throws** when a matrix does not fit, the way packet 25's `gridColumns`
+does. `topFix-02` also asks for "drag this example into the right cell"; the platform's `classify`
+recall is exactly that, and every matrix chapter carries one.
+
+### Acceptance checks — each one asserted by the runner, not described here
+
+Packet 25's lesson: an acceptance check that no code runs is a wish.
+
+1. 7 blocks; `BLOCKS.length > 8` refuses, `=== 8` warns.
+2. Exactly 3 unpinned quiz items, and they are array indices 0, 1, 2.
+3. Every block pins a diagram, a quiz item and a practice item it owns; no block's lead quiz item is
+   one of the pre-test's three; `quizIndices` are not consecutive in block order.
+4. Every practice command word and tariff in the **Business** census, **Assess at 12 and not 10**, no
+   `Outline`, no `Examine`, and every one of the eight Business command words used at least once.
+5. Every practice guidance ≥ 2 paragraphs, opening allocates no marks and contains no worked answer.
+6. Banned in text a student reads: `distinctive capabilit`, `Kay`, `VRIO`, `core competenc`,
+   `balanced scorecard`, `triple bottom line`, `BCG`, `Boston Matrix` as a thing this section teaches,
+   `functional objective`, `generic strateg`, `SMART` more than once, any ledger id, any note about
+   this programme's own previous content, any four-digit year, any UK framing or institution, any
+   currency but dollars.
+7. No uncited examiner, marker, frequency or paper-shape claim; every Appendix 6 gloss names a
+   Business command word and shares vocabulary with the census description.
+8. Ansoff: the matrix's own four cells present and **product development and market development not
+   ranked against each other** (`topFix-03`) — asserted by grep over every surface.
+9. Porter: `Porter's Strategic Matrix` is the name used on every surface, **four** cells, and the
+   string "three strategies" appears nowhere (`accuracy-01`).
+10. Every matrix diagram re-derived from the emitted SVG: both axis labels, all four cell titles.
+11. Nothing drawn outside its canvas; every `<text>` measured by EXTENT, not anchor; no table or
+    matrix cell collisions; the text-extent A/B fires on a known-bad label and clears a good one.
+12. No reorder item is string-identical to a flow step in its own subsection (packet 25's
+    copy-from-screen class), with its A/B.
+13. Every leaf of 3.3.1 evidenced in one teaching field — `spec.coverage` 11 of 11.
+14. 0 BLOCK / 0 new DEBT against the baseline.
+
+**Exit criteria:** staged bundle at 0 BLOCK / 0 new DEBT / 100% of 11 leaves · Verify A clean · a
+390×844 walk · Layer 6 with two planted canaries · PROGRESS row · commit · push. **Do not publish**:
+the packet 5/7 checkpoint holds and thirteen sections now wait on it.
+
+### Verify B — the 390×844 walk (main session, 17 September 2026)
+
+Walked signed out against the staged draft on port 3001 (`?draft=1`; `StudyApp.jsx:679-695` refetches
+the draft client-side — the page's own server render is always the live copy, so a `curl` of the PAGE
+shows the old section and proves nothing).
+
+**What the screen showed.** 42 steps — 35 subsections plus 7 chapter check-ins — across 7 chapters.
+**The pre-test offered THREE questions**, which is what seven blocks was chosen for: the payload is
+`2 + 7 pins + 1 spare = 10 = FREE_QUIZ_MAX`, every chapter's check-in question resolved, and none of
+the three pre-test items is one a check-in then asks. Chapter 3's check-in opened on Porter's two
+dimensions; guided practice showed the Analyse (6) with only its scaffold paragraph above the answer
+box and the mark scheme behind "See full guidance" (`practice.opening`, on screen). The match recall,
+the fill-in and the three matrices all render inside 375px with nothing clipped.
+
+**The independent measurement.** `getComputedTextLength()` on all **270 strings across all 14 diagram
+views**: zero running off a frame, zero cell collisions. It also re-measures the bound the runner
+guesses with — the widest string of four characters or more is **0.687 em/char against the 0.7 the
+runner assumes**, and the widest short string 0.699 against 0.9. The estimate is conservative
+everywhere, but the long bucket now has **0.013 em/char of headroom**, which is thinner than it has
+been; a future section with a wider glyph set could breach it and the runner would not know.
+
+**Three findings the code checks cannot see.** None is packet 27's to fix and all three are measured:
+
+1. **`components/PracticeQuestionsTab.jsx` carries the UK GCE tariff ladder, not the IAL one.**
+   `MARK_FILTERS` (:15-21) and `MARK_COLORS` (:8-13) are both keyed `4, 6, 10, 20`. So a **2-mark
+   Define, an 8-mark Discuss, a 12-mark Assess and a 14-mark Discuss can never be filtered**, and
+   `MARK_COLORS[q.marks] || MARK_COLORS[4]` (:114) paints all of them in the **4-mark green** — on
+   screen, this section's 12-mark Assess, the hardest non-essay question in Business Units 3 and 4,
+   is the same colour as its 2-mark Define. Measured across the database: **3 of 215 live practice
+   items, but 37 of 114 STAGED ones (32%), across 12 of the held sections.** It becomes visible the
+   day the packet 5/7 checkpoint ships. Filed as **V022, packet 2.6**.
+2. **Every diagram's explanatory note renders at 5.3px on a 375px phone**, because a 560-unit frame
+   scales to a 298px card and the note is authored at 10 units. A/B'd against two controls —
+   `market-failure` (packet 25) and the published `marketing-mix-strategy` (packet 22) — and all
+   three measure **exactly 5.3px**, so this is the diagram card at phone width, not this section.
+   "Tap to enlarge" is the only mitigation. A design question for the founder, not a bug.
+3. **The coverage oracle matches by SUBSTRING.** Leaf `BUS-3.3.1-4c` is "Porter's five forces", whose
+   distinctive terms are `porter` and `forces`, and it needs one of them — so the sentence *"nothing
+   **enforces** them"*, in a subsection about mission statements, satisfies it. The leaf is genuinely
+   taught (the `porters-five-forces` keyIdea is the only field carrying both terms), but a one- or
+   two-term leaf can be "covered" by an unrelated word. Filed as **V023, packet 2.6**.
+
+**And the reason the publish hold is not a formality, measured rather than recalled.** This section
+has **6 reorder recalls and none carries `shuffled`**, because packet 7 seeds the start order from the
+recall id and ignores that field (F113). `git show main:components/learn-mode/ReorderRecall.jsx` line 9
+is `recall.shuffled.map(...)`, unguarded. Publishing before packets 5 and 7 reach main throws on all
+six and takes the section down — packet 15's incident exactly.
+
 ## Packet 25 spec — `market-failure`, Economics 1.3.5 (Opus 5, 16 September 2026)
 
 **Section** `market-failure` · economics · **WEC11** · `sections.number` = **1.3.5** · **35 leaves**, read from

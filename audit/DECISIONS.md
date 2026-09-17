@@ -1563,3 +1563,79 @@ split or have the cap raised first. Carry that check forward — `government-int
 found the figure appearing exactly once in the bundle, as a wrong-answer distractor, while its cost-side
 twin appeared on eight surfaces. **An acceptance check that no code runs is a wish.** When a spec block
 names a figure or a property, the runner asserts it in the same commit.
+
+## A named tool imports its own cells, and nothing else (packet 27, 17 September 2026)
+
+`cost leadership`, `diversification`, `market development` and `product development` all grep **0** in
+`audit/raw/bus_spec.txt`. That is packet 20's signature exactly — the case where a section's entire
+central vocabulary turned out to belong to another syllabus — and the first instinct was to treat it
+the same way.
+
+It is not the same case, and the difference is worth writing down because it will recur. The
+specification **names two frameworks by name**: `bus_spec.txt:1098-1099` reads "Ansoff's Matrix" and
+"Porter's Strategic Matrix". A named framework cannot be taught without its own cells, so naming the
+tool imports the tool's internal vocabulary. **What it does not import is a neighbouring framework's.**
+The discipline that keeps that honest is the same grep, applied to each candidate word:
+`differentiation` has four hits and all four are Unit 1 product differentiation and USPs (:543, :629,
+:656); `penetration` has one and it is penetration PRICING (:650); `focus` never means Porter's focus
+strategy anywhere in the document. So the four Ansoff cells and the four Porter cells are in; nothing
+else arrives with them.
+
+**The test, for the next packet that meets this:** does the specification name the tool, or only the
+idea? If it names the tool, its cells are the tool. If it names only the idea — as it does for
+"portfolio analysis" at :1100, where the **aim** is the requirement and the Boston Matrix belongs to
+1.3.3 · 1c in Unit 1 — then the tool is somebody else's and the section teaches the idea.
+
+**`SMART` failed the same test and went.** Zero hits, and it was the March block's title, the section's
+first takeaway and its opening subsection. It survives as one named mention per surface — once in the
+Learn body where objectives are written, once in the Notes that mirror it — and the runner refuses a
+third. `functional objectives` is zero too, so the four-tier hierarchy the Notes carried is gone and
+the two tiers the specification names (:1094-1095) are what both tabs now show.
+
+## Satisfying `reorder.source` is how you reproduce `structure-04` (packet 27, 17 September 2026)
+
+`reorder.source` is DEBT and it asks for a reorder's sequence to be taught by a flow in the same
+subsection **or by an extras chain**. The cheapest way to clear it is to add the flow — and
+`lib/learn-steps.js:10` then renders that flow directly above the recall on the same step, so the
+answer is on the screen. That is `structure-04` word for word, in a packet claiming to close it, and
+it is the second time this programme has built it: packet 25 met the verbatim form and banned
+string-identical items.
+
+**The ban was the wrong shape.** Five flows added here to satisfy `reorder.source` reproduced the
+defect in PARAPHRASE, which a string comparison cannot see, and Layer 6 found three of them. The fix
+is in two parts and both matter:
+
+1. **Source reorders from an extras chain, not from a flow on their own step.** Five flows removed,
+   five chains added; all six reorders still clear `reorder.source`, and none of them now has its
+   answer on the screen above it.
+2. **The check is the validator's own matcher, not a string comparison.** The runner now asks whether
+   the subsection's own flow would SOURCE the reorder, using the same paraphrase-tolerant rule
+   `content-validator.mjs:396-410` uses — a shared five-letter word or a fifth of the vocabulary,
+   in order, over half the items — and carries an A/B that fires on the paraphrase Layer 6 found and
+   clears a flow that teaches something else.
+
+**The general lesson, which is the reason this is in DECISIONS and not just in a runner comment: a
+DEBT rule tells you what must be TRUE, and the cheapest way to make it true can be the defect.** Two
+rules pointing at the same screen need to be read together before either is satisfied.
+
+## `diagram.table-legible` changed at 15:49 and packet 27 is reporting it, not fixing it
+
+Commit `9418fb0` corrected the rule to the column a laptop actually gives a table — 530px at 1024
+wide, not the 800px of a 1920 screen — while this packet was in its verification pass. Four of its
+tables now carry the finding.
+
+**Measured on this section's own content before accepting that:** the floor demands about 13 units on
+a 560-unit frame, and at 13 units the four tables need 583, 575, 565 and 592 units against the 508 the
+frame gives — **11 to 17 per cent over**, when they already sit at 95-99 per cent of the frame at the
+authored 11. They cannot be shrunk into legibility, which is exactly what V022 concludes for all 32
+tables packets 20-28 authored. It fires on the staged drafts of packets 22 (5), 24 (2) and 25 (6) as
+well. The rule is DEBT so that it reports without gating in-flight packets, and packet 27 takes it at
+its word: **reported, not fixed, and not baselined either** — the baseline only shrinks, and only for
+content that is live.
+
+**One correction for the packet 2.5 session, which this packet may not make to their item:** V023
+names packets 27 and 28 as having declared `kind: 'table'` on genuinely drawable diagrams. The
+diagrams it lists are packet 28's and packet 22's. Packet 27's four declared tables are an objectives
+chain, a portfolio data table, two comparison tables and two reference lists — none is a diagram a
+student is asked to draw, and all three that ARE drawable (Ansoff, Porter, SWOT, each named by a
+`Construct` practice item) are undeclared and carry their five-line checklists.
