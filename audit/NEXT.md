@@ -1,5 +1,439 @@
 # Next session brief
 
+## Packet 31 spec — `financial-planning`, Business 2.3.2 (Opus 5, 17 September 2026)
+
+`audit/raw/bus_spec.txt:885-914`. The oracle holds **24 rows for `BUS-2.3.2`, of which 21 are leaves**
+and three are requirement headers (`2b`, `3b`, `5b`). Live state: **5 blocks · 13 subsections · 25 quiz ·
+5 practice · 0 diagrams · 24 flashcards · 6 mistakes · 5 reorder + 8 fillin recalls · 4 extras chains +
+3 evaluation**, and the validator reads **20 BLOCK / 61 DEBT / 4 new DEBT, coverage 95%**. The 95% is
+not the measure (V025 matches by substring and this topic has leaves as short as `zero based` and
+`Variance analysis`); the hand-written `LEAF_MAP` below is.
+
+### Block plan — FIVE blocks, the specification's own five sub-topics
+
+| # | block | leaves | spec |
+|---|---|---|---|
+| 1 | Sales, Revenue and Costs | 3 | `1a`, `1b`, `1c` |
+| 2 | Sales Forecasting | 5 | `2a`, `2b-1`…`2b-3`, `2c` |
+| 3 | Break-Even | 6 | `3a`, `3b-1`, `3c`, `3d`, `3e`, `3f` |
+| 4 | Cash Flow | 2 | `4a`, `4b` |
+| 5 | Budgets | 5 | `5a`, `5b-1`, `5b-2`, `5c`, `5d` |
+
+21 leaves, **25 subsections, 30 steps** (25 teach + 5 check-in). `1b` is one oracle row carrying four
+calculations — fixed, variable, total and average costs — so the leaf map splits it across two
+subsections and the runner refuses if any of the four terms is unbuilt.
+
+**And for the first time since packet 2.5 the block count costs nothing, which is worth stating so the
+next packet does not re-derive the eight-block ceiling from packet 29's note.** `freeQuizPayload()`
+now takes the chapter pins FIRST and only then tops the Quiz tab up to `PREVIEW_LIMITS.quiz`
+(`lib/preview-limits.js`), so five chapters spend 5 of `FREE_QUIZ_MAX` (10), the tab's two are served
+out of those five, and `PRETEST_HEADROOM` (3) is paid in full: **payload 8 of 10, all five check-ins
+carry a question, and a signed-out student's pre-test is three questions, none of which a check-in
+asks again**. The ceiling is ten chapters, not eight. Nothing here is priced.
+
+### Rule-1 pre-flight: 13 of 30 claims are wrong, mis-aimed or already closed
+
+Rate across packets 14-29 was 4, 4, 6, 5, 6, 8, 5, 8, 8, 9, 8, 9, 11. It is still not falling.
+
+1. **`C-planning-raising-finance-specGap-05` cites a topic that does not exist, and the reassignment
+   is still right.** It quotes "2.1.4 Planning" and UK GCE wording ("calculations based on changes in
+   the cash-flow variables", "use and limitations of **a** cash-flow forecast"). `bus_spec.txt:801` is
+   `2.1 Unit description`; there is no 2.1.4 content topic. Cash flow is **2.3.2 · 4** (`:907-908`),
+   worded "Construction and interpretation of simple cash-flow forecasts" and "Use and limitations of
+   cash-flow forecasts". Packet 19 was right to move it here; its citation is UK GCE. Built as block 4.
+2. **`structure-06`'s first premise is wrong and its second is right.** "cash-flow forecasting is spec
+   2.3.1 'Planning' content" — 2.3.1 (`:844-878`) is Planning, Internal finance, External finance,
+   Forms of business, Liability, and carries no cash-flow bullet at all. But "improving cash flow is
+   2.3.3 'Liquidity' content" is correct: `4b` is *use and limitations*, and ways to improve liquidity
+   are **2.3.3 · 2b** (`:935-937`), `managing-finance`. So the live **`Improving Cash Flow` subsection
+   is another section's leaf and is REMOVED**, not cross-linked and kept. Tenth instance of rule 2.
+3. **`specGap-03` asks for vocabulary the specification does not have, on a leaf it does not own.**
+   "Total contribution (contribution per unit × units sold) and using it to calculate profit (total
+   contribution − fixed costs)". **`total contribution` = 0 hits** in `bus_spec.txt`. This section's
+   contribution leaves are `3a` "Contribution: selling price − variable cost per unit" and `3c` "Using
+   contribution to calculate the break-even point" — and nothing else. "Nature and purpose of
+   contribution", "Calculation and interpretation of contribution" and "Use of contribution as a
+   decision-making technique" are **3.3.3 · 5** (`:1175-1177`), Unit 3, which packet 14 already built;
+   profit calculation is 2.3.3 · 1a. **REFUSED as written.** Its in-scope half is satisfied the
+   spec-native way: profit is the vertical gap between TR and TC at a given output, read off the
+   break-even chart (`3e`) and computed from `1a` revenue and `1b` total costs. **The runner bans
+   "total contribution" and every `contribution × units` route to profit from this section's prose,
+   because the cheapest way to answer this finding is to build a Unit 3 leaf.**
+4. **`specGap-07`'s hedge resolves against it.** "unsure whether the IAL spec names semi-variable costs
+   explicitly (Edexcel GCE does)". `semi-variable` = **0**, `semi variable` = **0**, `stepped` = **0**.
+   `1b` names fixed, variable, total and average costs and stops. They sit in `extras.evaluation`
+   today; they are **removed, not promoted**. Rule 1 applies to a finding's hedges as much as to its
+   assertions — packet 29's lesson, second instance.
+5. **`specGap-04` names the wrong leaf letter.** Sales volume and sales revenue are **`1a`**; `1b` is
+   the four cost calculations. Substance right, letter wrong; both built.
+6. **`specThin-01` quotes its leaf short.** `1c` is "Ways of improving sales volumes **and** sales
+   revenues" (`:893`), not "sales revenues". The pair is the point: the price cut that raises revenue
+   and lowers profit is subsection 1.5's whole job.
+7. **`practice-01` is right twice over.** `Define` is **2 marks** (`:2220`); and **`break-even output`
+   = 0 hits** — the specification's term is "Break-even point" (`:901`, `:903`).
+8. **`topFix-03` asks for a command word IAL Business does not have.** "a 2-mark 'What is meant by'" —
+   the census has no such command; the 2-mark command is `Define` (`:2220`). Its other four tariffs are
+   all valid for Unit 2: `Calculate [4]`, `Explain [4]`, `Assess [10]` (Units 1/2; 12 is Units 3/4),
+   `Evaluate [20]`. `Construct [4]` is added, which the finding does not ask for and `4a` does — see 12.
+9. **`topFix-03`, `practice-02` and `practice-03` all prescribe the one remedy this programme bans from
+   student-facing prose.** "levels descriptors (K/A/An/E)", "levels-marked (Level 1-4 …)". That is what
+   a marker does; `MARK_CLAIM` keys on it and packet 20 found "is levels-marked" shipped eight times.
+   The true half of all three — additive points-marking is wrong, and a 10- or 20-mark question needs a
+   stimulus — is satisfied by stating what the command word **requires**, which Appendix 6 states and is
+   therefore citable: `Assess` (`:2238-2245`), `Evaluate` (`:2246-2251`).
+10. **`topFix-01` and `topFix-02` prescribe against indices and a field that the rebuild removes.**
+    "change `content[1].quizIndices` from `[1]` to `[8]`" describes the five-block section being
+    replaced, and `topFix-02`/`structure-01` ask for **`diagramRef`**, which is the legacy string pin —
+    `lib/learn-steps.js:44-55` reads the block's **`diagramId`**. Every pin here is DERIVED from the
+    item's own `block` tag, so a question cannot be pinned to a chapter that does not teach it.
+11. **`quiz-01` is already closed** by packet 0 (`confirmed`, the duplicate `£500` fixed on 11 Sep).
+    Not re-claimed. Its twin `quiz-02` and `structure-02` are the same index-level defect as 10.
+12. **`structure-01`'s "examMatters demanding precise drawing" is off-spec, and the asymmetry is
+    citable.** `3e` is "**Interpretation** of break-even charts" — interpretation only. `4a` is
+    "**Construction** and interpretation of simple cash-flow forecasts". So the drawing command
+    (`Construct [4]`, "draw an accurately labelled diagram", `:2224-2226`) goes on the **cash-flow
+    forecast** and never on the break-even chart. The live section has it exactly backwards.
+13. **`structure-04` and `structure-05` were closed by packets 5 and 7 and cannot be rebuilt.**
+    `structure-04` describes the pre-packet-5 engine — immediate slot always `currentRecalls[0]`,
+    spaced slot the previous step's last recall. Packet 5 replaced it: one subsection is one step, the
+    recall sits below its own teaching, and `pickSpacedRecall` (`lib/learn-steps.js:95-110`) takes the
+    earliest unspaced recall from an EARLIER chapter, so none doubles and none is lost. `structure-05`'s
+    "only two shuffle patterns" cannot recur: `reorderStartOrder` (`lib/recall-widgets.js:80-84`) seeds
+    the start order on the recall id and refuses the identity, any order with the first item in place,
+    and the first showing's order. `shuffled` is no longer in the recall contract. Both are claimed on
+    their **authoring** half only: vary the recall type across subsections, and author no recall whose
+    answer is on its own screen.
+
+**Two findings that are mostly compliments, and their actionable residue.** `structure-07` records
+accurate takeaways and real misconceptions as a strength; what it asks for is that forecasting stop
+being "entirely descriptive with no calculation or data" and that the section stop ending "on a
+definition-level note with no calculation practice for variances". Both are built — block 2 gets a
+quantified forecast adjustment and block 5 a reconciling variance calculation. `structure-08`'s two
+identical shopping-cart emoji are real; every `realExample.emoji` in this section is distinct and the
+runner refuses a duplicate.
+
+### Rule 2 — the vocabulary grep, before a word was written
+
+A sales-forecasting chapter reaches for moving averages by reflex, and in IAL Unit 2 they are another
+section's leaves:
+
+- **`moving average` = 1 hit and `extrapolation` = 1 hit, both at `:1150-1152` — 3.3.3 · 1, Unit 3,
+  packet 14's `decision-making-techniques`.** `time series` = 0, `correlation` = 0; `line of best fit`
+  is `:1152`. All banned by the runner. 2.3.2 · 2b's own apparatus is three factors — consumer trends,
+  economic variables, actions of competitors — and that is what block 2 teaches. `terms.later-unit`
+  exists for exactly this and would have caught it; the ban makes it unrepresentable instead.
+- **`seasonality` = 1 hit, at `:562` — 1.3.2 · 1a, `the-market` (packet 18).** Available as an example
+  of a consumer trend; never taught here as a demand factor.
+- `total contribution` = 0, `semi-variable` = 0, `stepped` = 0 (items 3 and 4 above).
+- `break-even output` = 0. The term is **break-even point**.
+- **`zero based` is the specification's own spelling** (`:911`); `zero-based` = 0 hits. The hyphenated
+  form is used in prose for readability and the leaf is quoted in the spec's spelling where it is named.
+- Confirmed present and in scope: `margin of safety` (`:904`), `variance` (`:912`), `average cost`
+  (`:891-892`), `sales volume` (`:889`, `:893`), `cash-flow` (`:907-908`), `break-even chart` (`:905`).
+
+### One spine of arithmetic — a bottling plant, and every figure derived from it
+
+`_packet31-util.mjs` defines one firm and every surface samples it, so no two screens can disagree.
+Price $6.00 a case, variable cost $3.60, contribution $2.40, fixed costs $36,000 a month:
+
+- **BEP = 36,000 / 2.40 = 15,000 cases**; actual output 20,000, so **margin of safety = 5,000 cases**.
+- Average cost is **$6.00 at 15,000** — equal to the price, which is what break-even *means* and ties
+  `1b` to `3b` on one line — $5.40 at 20,000, $7.20 at 10,000, $5.04 at 25,000.
+- `specGap-05`'s change cases: price +$0.60 → BEP 12,000; fixed costs +$6,000 → 17,500; variable cost
+  +$0.40 → 18,000.
+- `1c`'s trade-off: a cut to $5.40 lifts volume to 24,000 and revenue to $129,600 — **up** — while
+  profit falls from $12,000 to $7,200, computed TR − TC and never from contribution × units (item 3).
+- Block 4's three-month forecast runs off the same sales on 30-day credit; the change case is 60-day
+  credit, which turns a $18,000 closing balance into **−$30,000**.
+- Block 5's variances reconcile: revenue +9,600 F, variable costs 14,400 A, fixed costs 2,400 A, and
+  9,600 − 14,400 − 2,400 = **7,200 A on profit** — revenue favourable, profit adverse, which is the
+  section's own "favourable = always good" misconception answered with its own numbers.
+
+Dollars throughout (`locale.currency`); the live section is in pounds. Real examples name a KIND of
+firm in a kind of market with no year, no named company and no figure — packet 29's method, which is
+what clears `locale.uk`, `locale.institution` and `claim.uncited` together. The live Ocado and Tesco
+examples go with it.
+
+### Diagrams — one a block, pinned by `diagramId`
+
+Only a check-in step carries a diagram, from the block's `diagramId` (`lib/learn-steps.js:44-55`).
+
+1. Block 1 — cost table: output against fixed, variable, total and average costs. `kind: 'table'`.
+2. Block 2 — forecast adjustment table: base forecast, the three `2b` factors, revised. `kind: 'table'`.
+3. Block 3 — **the break-even chart**: fixed cost line, TC, TR, BEP at (15,000, $90,000), profit and
+   loss zones, margin of safety bracket to 20,000. Plotted, every figure re-derived from the emitted
+   SVG. This is `topFix-02`, `structure-01` and `specGap-05`, and the section has never had one.
+4. Block 4 — cash-flow forecast table: opening balance, receipts, payments, net cash flow, closing
+   balance across three months. `kind: 'table'`. The surface `4a` asks a student to construct.
+5. Block 5 — variance table: budget, actual, variance, with the reconciliation above. `kind: 'table'`.
+
+Four of the five are tables, so **`diagram.table-legible` (V022) will fire on them and is reported,
+not fixed** — packet 27's precedent, and the design question the founder still owns.
+
+### Claims
+
+Claiming **29**: `topFix-01`…`-05`, `quiz-02`, `quiz-03`, `quiz-04`, `practice-01`…`-04`,
+`structure-01`…`-08`, `specGap-01`…`-07`, `specThin-01`, and
+**`C-planning-raising-finance-specGap-05`** (packet 19's reassignment).
+`specGap-03` is claimed **with the refusal in item 3 above**: its in-scope half is built, its
+out-of-scope half is refused with the grep and the leaf citation, and the note says so.
+`C-financial-planning-quiz-01` is already `confirmed` (packet 0) and is not re-claimed.
+Not mine and not touched: **V022** (`diagram.table-legible` is a design decision), **V024**
+(`PracticeQuestionsTab`'s UK GCE tariff ladder), **V028** (`ExtrasTab.jsx:62` crashes on a chain with
+no `steps`; every chain here carries `steps`, and the component is packet 30's), **V006**.
+
+### Acceptance checks a verifier can run without this conversation
+
+1. `node scripts/packet-31-financial-planning.mjs` exits 0 — it is the section's first reader and
+   carries every check below plus an A/B for each one this packet adds.
+2. All **21 leaves** map to a named subsection in the runner's hand-written `LEAF_MAP`; the runner
+   fails if a leaf is unmapped or names a subsection that does not exist, and separately if any of
+   `1b`'s four cost terms is unbuilt. The oracle percentage is reported and is NOT the gate (V025).
+3. **`grep -ci "total contribution\|moving average\|extrapolation\|semi-variable\|stepped fixed\|
+   break-even output"` over the emitted bundle is 0**, SVG `<text>` included, and `grep -c "improving
+   cash flow"` is 0 as a taught heading. Each is a leaf this section does not own; item 3 and rule 2
+   say which section does.
+4. `blocks === 5`; every block carries a `diagramId`, ≥1 `quizIndices` and ≥1 `practiceIndices`;
+   exactly three quiz items unpinned and FIRST in the authored array; no pinned item is a pre-test
+   item; `quizIndices` across blocks are not `0,1,2,…` (`pins.identity`).
+5. Measured against the shipping `freeQuizPayload()` on the emitted bundle: **payload 8 of 10, five
+   of five chapters resolve a question, pre-test 3**, and no pre-test question is a check-in's.
+6. Every practice `command`/`marks` pair is in the **business** census — no `Examine`, no `Outline`,
+   no `Draw`, `Assess` at 10 and not 12 (Unit 2), `Define` at 2. `Construct` appears on the cash-flow
+   forecast and **not** on the break-even chart (item 12).
+7. No recall's answer is recoverable from its own screen (packet 29's sharp test, not word overlap);
+   no reorder in a subsection with a `flow` body; every reorder sourced from an extras chain; every
+   `realExample.emoji` distinct; no quiz explanation names an option by position; no ledger-id shape
+   in any student string; no `MARK_CLAIM`/`FREQUENCY_CLAIM`/`PAPER_PATTERN_CLAIM` hit; ids unique.
+8. Every figure in every diagram re-derived from the emitted SVG; no failed template substitution
+   anywhere, SVG included (`/undefined|NaN/` with no trailing word boundary); nothing drawn outside
+   its canvas; no glyph-box collisions with the vertical budget; no label struck by its own guide line.
+9. `npm run validate` → 0 BLOCK and 0 new DEBT for this section beyond the declared-table V022
+   reports; `npm test` green; `npm run build` green.
+10. **Verify B at 390×844 with `?draft=1`**, signed out, on `/business/unit-2/financial-planning`:
+    walk all **30 steps** (25 teach + 5 check-in, confirmed against `buildSteps`). Every check-in must
+    show a diagram and a question on its own chapter's topic; the break-even chart must be legible at
+    390px with its BEP, both zones and the margin of safety readable; the pre-test must offer three
+    questions and none of them may reappear at a check-in; no step may show a recall whose answer is
+    printed above it; the Extras tab must render both its sections.
+
+## Packet 30 spec — `managing-people`, Business Unit 1 (WBS11), IAL **1.3.4** (Opus 5, 17 Sep)
+
+`audit/raw/bus_spec.txt:676-753`. **57 oracle rows / 46 substantive leaves** across five sub-topics —
+second only to packet 29's 54 and packet 22's 46. Live state: **6 blocks · 19 subsections · 25 quiz ·
+5 practice · 26 flashcards · 0 diagrams · 0 mistakes · 4 extras chains**, validator
+**35 BLOCK / 71 DEBT, 4 baselined, coverage 96%**. **The 96% is not to be trusted** (V025): this
+section's leaves are single words — `bonus`, `hierarchy`, `induction`, `commission`, `delegation`,
+`consultation`, `empowerment`, `flat`, `matrix` — and the oracle matches by SUBSTRING, so `specGap-08`
+("bonus not taught") and a 96% are both true at once. The hand `LEAF_MAP` in the runner is the measure;
+the oracle figure is printed beside it and is not the gate.
+
+### Nine scope claims checked against the spec span, and what the check changed
+
+**The brief at the head of this file says "Business 2.4". It is wrong** — `managing-people` is IAL
+**1.3.4**, Unit 1. Rule 1 now applies to our own handoff notes as well as to the ledger.
+
+1. **`structure-05` and the last clause of `topFix-04` ask to MOVE "From Entrepreneur to Leader" out of
+   this section, into `entrepreneurs-leaders`, on the ground that it is "IAL 1.5.6". REFUSED, and this
+   is the dangerous class.** `BUS-1.3.4-5c` is *"The difficulty of moving from entrepreneur to leader"*
+   (`bus_spec.txt:753`) — a leaf of THIS topic. IAL 1.3.5's twenty rows are entrepreneurship,
+   intrapreneurship, barriers, risk, characteristics, motives, objectives, opportunity cost and
+   trade-offs; **not one mentions it**. Obeying the finding would have deleted an in-scope requirement,
+   exactly as packet 26's two delete-findings would have. Both items are closed as wont-fix with the
+   line cited, and 5c keeps a subsection of its own.
+2. **`topFix-04`'s "correct the spec number to 1.4"** — 1.4 is UK GCE numbering and does not exist here.
+   The number is 1.3.4 and the section index already carries it.
+3. **`specGap-10` asks a question rather than making a claim** ("unsure whether the current WBS11 spec
+   still lists 'work-life balance' under flexible working — check the live spec PDF"). **Answered:
+   `work-life` and `work life` are 0 hits in `bus_spec.txt`.** The leaf is `flexible hours and home
+   working` (`1b`, :685). Closed as checked-and-absent; the phrase is not taught, and **`flexible
+   working` as a non-financial method (`4d`) is a different leaf and IS taught.** Packet 29's rule —
+   a hedge gets the same spec check as an assertion — earns its keep a second time.
+4. **`topFix-05` asks for "Assess 10/12".** This is Unit 1: the census says Assess is **10** in Units
+   1/2 and 12 in Units 3/4, so 10 and only 10. It also asks for "levels-based (L1-L4) guidance", which
+   `MARK_CLAIM` refuses and rightly: `examMatters` says what the command word REQUIRES per Appendix 6,
+   never what a marker credits. The eight Business command words are Define 2 · Calculate 4 ·
+   Construct 4 · Explain 4 · Analyse 6 · Discuss 8 · Assess 10 · Evaluate 20 — and **`Construct (4)`,
+   "draw an accurately labelled diagram", is what an org chart is for** (packet 18's lesson: check the
+   census for the command word the TOPIC asks for).
+5. **`structure-08` asks to split the section into two Learn Mode units.** Not representable — one
+   section is one Learn Mode unit. What the finding is actually about (11 steps with no mid-point
+   checkpoint) is answered by six chapters each with its own check-in, which is what the rebuild does.
+   Closed as answered-by-structure with the reason on the item.
+6. **`topFix-01`'s optional clause, "harden `FillInRecall.jsx` to render multiple blanks per line",** is
+   a component change and not a content packet's to make. The rule it states — one `___` a template
+   line, `answers.length` equal to the blank count, no duplicate answers — is already
+   `fillin.blanks`/`fillin.dup-answers`/`fillin.token`, which is where the section's **16 of its 35
+   BLOCK findings** come from. Satisfied by authoring, and the runner asserts it before the validator does.
+7. **`structure-03`, `structure-06` and `structure-07` are observations, not defects** — two of them
+   praise. They are recorded and closed on the rebuild, except `structure-07`'s live half (two filler
+   misconceptions), which the rebuild does not reproduce.
+8. **`structure-09` is right and its fix is a move, not an addition.** Extras chain 3 teaches
+   centralised vs decentralised, which is `3a`'s fourth bullet and belongs in the main content. It
+   moves into block 3 as a subsection of its own; the extras chains are rebuilt around evaluation.
+9. **`accuracy-01` is a fabricated specific** — "M&S reduced management layers from seven to five in
+   2022" cannot be corroborated. Packet 15's rule: keep the SHAPE, drop the claim. What the example has
+   to carry is that removing a layer widens every remaining span, and no company, year or layer count
+   is needed to carry it. Every example in this section is a KIND of firm with no year and no name.
+
+### Block plan — SIX blocks in specification order, and the price is zero
+
+| # | Block | Spec | Leaves |
+|---|---|---|---|
+| 1 | Approaches to Staffing | 1a-1d | 9 |
+| 2 | Recruitment, Selection and Training | 2a-2c | 5 |
+| 3 | Organisational Design | 3a-3c | 8 |
+| 4 | Motivation in Theory | 4a-4b | 5 |
+| 5 | Motivation in Practice | 4c-4d | 13 |
+| 6 | Leadership | 5a-5c | 6 |
+
+Sub-topic 4 carries 18 of the 46 leaves — four theorists, five financial methods and eight
+non-financial ones — so it becomes two consecutive chapters. **That is a split within a sub-topic, not
+a reordering**: specification order is preserved end to end, which is what fixed `structure-01` at the
+root in packet 20 rather than patching the pins. **Six blocks costs a signed-out student nothing**:
+V016's table (DECISIONS, 16 Sep) gives 3 pre-test questions and 0 chapters without a check-in quiz at
+every count up to seven, and this is six — `2 + 6 = 8` against `FREE_QUIZ_MAX` 10, with the top-up to
+`PRETEST_HEADROOM` still fitting. Priced before the plan, as packet 29's rule asks.
+
+### The arithmetic spine — one firm, 31 people, and the two structures are the same firm
+
+A qualitative topic still has to be exact, and Business Unit 1 carries `Calculate (4)`. One fictional
+firm, **Sabari Textiles**, carries every figure in the section and every figure is generated from it:
+
+- **31 employees, two shapes.** A span of control of 2 over 5 levels is `1+2+4+8+16 = 31`; a span of 5
+  over 3 levels is `1+5+25 = 31`. **The same 31 people**, chain of command 4 links against 2. That pair
+  is the reason `3a` and `3b` are one calculation and not two drawings that have to agree — tall and
+  flat are not two firms, they are one firm reorganised, and the org charts are both generated from
+  `(s**L - 1) / (s - 1)`.
+- **Recruiting one supervisor costs `$10,800`, exactly 30% of the `$36,000` salary**: advertising
+  `$1,200` + agency fee 15% of salary `$5,400` + management time 20 h at `$45` `$900` + five induction
+  days at `$180` `$900` + the off-the-job course `$1,200` + lost output in the first six weeks `$1,200`.
+  That total is `2b` ("costs of recruitment, selection and training"), which `specGap-03` says is
+  taught nowhere, and it is also what block 5 spends: three fewer leavers is `$32,400`.
+- **One worker's pay, five financial methods, all equal at standard output** so the comparison is about
+  RISK and not about generosity: basic `$360` a week (40 h at `$9`) = piecework 240 units at `$1.50` =
+  commission 4% of `$9,000`. Then output moves and they stop being equal.
+
+Every figure is re-derived from those functions in the runner, and a second time out of the emitted SVG.
+
+### Acceptance checks a verifier can run without this conversation
+
+1. `node scripts/packet-30-managing-people.mjs` exits 0: every check below, then the validator.
+2. **Coverage 46 of 46 by the hand `LEAF_MAP`**, every entry naming a subsection that exists.
+3. **0 BLOCK and 0 new DEBT** for `managing-people` in `npm run validate`.
+4. **Six blocks, in specification order**, each with `diagramId`, `quizIndices` and `practiceIndices`
+   DERIVED from each item's own `block` tag — so no question can be pinned to a chapter that does not
+   teach it (`structure-01`, `topFix-02`).
+5. **Every fill-in: one `___` a template line, `answers.length` equal to the blank count, no duplicate
+   answer** (`topFix-01`, and the section's 16 live fill-in BLOCKs).
+6. **No recall's answer is recoverable from its own screen** — packet 29's answer-recoverable check,
+   over every recall type, not only reorders.
+7. **`31 = 1+2+4+8+16 = 1+5+25`, chain of command 4 and 2, and `$10,800 = 30%` of `$36,000`** appear
+   on the surfaces that teach them, asserted by name in the runner (packet 25's rule: an acceptance
+   check that no code runs is a wish).
+8. **Practice: eight items, eight command words, Business Unit 1 tariffs**, guidance two paragraphs
+   with a clean opening, no `(n marks)` above 6.
+9. **Diagrams ≥ 5, from zero** (`structure-04`): tall and flat org charts from the shared formula, a
+   matrix grid, Maslow's five levels, Herzberg's two scales, and the recruitment cost table.
+10. **390×844 walkthrough with `?draft=1`**: six chapter check-ins each showing a question on ITS OWN
+    topic, the paternalistic style taught before it is quizzed (`quiz-03`, `accuracy-02`,
+    `specGap-09`), and no two diagram labels colliding.
+
+
+### Verify A — 29 of 29 confirmed on round 1, zero rejections (17 September 2026)
+
+Read-only verifier on Sonnet, fresh context, 65 tool calls. It did not re-read the runner's own
+assertions: it wrote a separate script importing only the pure content, assessment and diagram
+modules, recomputed the figures from primitives, and grepped `bus_spec.txt` directly. Selected
+evidence, in its words where it adds something this packet had not recorded:
+
+- **`topFix-02`** — and the verifier settled the field question from a file this packet had not
+  read: `learn-mode/utils.js:129-134` resolves a diagram by `pin.id` FIRST, so `diagramId` is what
+  actually renders and the `diagramRef` the finding asked for is indeed the legacy pin.
+- **`topFix-01` / `quiz-02` / `structure-02`** — it recomputed the Sales Forecasting check-in's pin
+  independently and got quiz index 8, "A sales forecast is best described as:", not a break-even
+  question. Also 0 duplicate-option items and **0 `£` signs across the 28-item bank** (the section
+  was in pounds).
+- **`quiz-03`** — recomputed length-tell ratio: **0 of 28** items exceed 1.5×, histogram flat at
+  7/7/7/7.
+- **`specGap-03`** — confirmed as claimed-with-refusal: `total contribution` independently grepped to
+  **0 hits**, and it noted that the ARITHMETIC is banned and not only the phrase.
+- **`specGap-05`** — re-derived all three change cases to 12,000 / 17,500 / 18,000 cases.
+- **`structure-06`** — "deleted outright (stronger than the finding's suggested cross-link); 0 grep
+  hits for it or 'improve liquidity' in the shipped bundle".
+- **`structure-07`** — re-derived the variance reconciliation to 7,200 adverse on profit.
+- **`structure-04` / `-05`** — confirmed against the CURRENT engine
+  (`lib/learn-steps.js:87-103`, `lib/recall-widgets.js:69-84`) rather than against the finding's
+  description of the old one.
+- **`topFix-05`** — independently confirmed both reorders sourced from extras chains and **none of
+  the section's 15 recalls answerable from its own screen**.
+
+**Unclaimed but relevant: none.** All 29 ledger items whose section is `financial-planning` are
+claimed by this packet and none was left open. No other section's files are touched.
+
+**One caveat it raised, and it is answered.** It was told not to query the database, so gate step 5 —
+the staged draft diffed field by field against `curl localhost:3001/api/sections/financial-planning?draft=1`
+— was UNVERIFIABLE by it and left to the main session. Done, twice, and the second time recursively:
+**content, notes, practice and diagrams all match the bundle field for field**, with `quizIndices`
+compared apart because `freeQuizPayload` rewrites it for a signed-out reader (authored
+`[3-7], [8-12], [13-17], [18-22], [23-27]` → served `[[0],[1],[2],[3],[4]]`). See DECISIONS for why
+the naive form of that check reported five differences on an identical draft.
+
+### Verify B — 390×844, signed out, storage cleared, `?draft=1` (17 September 2026)
+
+All **30 steps** walked (25 teach + 5 check-in, matching `buildSteps`), ending on "Complete topic ✓".
+
+**What the section does on a phone.** The pre-test offer reads "Want a quick check first? Three
+questions on what you might already know" and serves **exactly three** — `Sales revenue is calculated
+as:`, `For one month at a bottling plant, which of these is a fixed cost?`, `Average cost falls as
+output rises mainly because:` — all three answerable from chapter 1, and **none of them reappears at
+any check-in**. That is the first full three-question pre-test a content packet has shipped since
+packet 2.5 changed the payload order, and it is the measured consequence of five chapters rather than
+eight. **5 of 5 check-ins** carry a diagram, a quiz on their own chapter's topic (revenue arithmetic ·
+what a forecast is · contribution · credit terms and receipts · the purpose of a budget), a practice
+item at 4 · 4 · 2 · 4 · 10 marks, a spaced recall, explain-it-back and a takeaway. Nineteen recall
+showings in all — fifteen authored plus four spaced — across FILL IN THE BLANKS, SORT, MATCH and
+REORDER. **Zero `undefined`, `NaN` or `[object Object]` on any of the thirty steps.** Step heights run
+1,280 to 2,851px against the audit's 5,300-5,900 (F065). The Extras tab renders both its sections with
+no crash, and every count on screen is honest: 28 quiz, 27 flashcards, 8 mistakes, 5 chains + 3
+evaluation, with the Quiz tab showing two and Extras "Preview — 2 of 8".
+
+**The diagrams, measured in the browser rather than estimated.** `getComputedTextLength()` over all 27
+strings of the variance table: **nothing exceeds the 560-unit frame**, and the widest is the title at
+316. That is an independent check of `estWidth`, which over-estimates by about 36% on the same strings
+(118 units against 87 measured) and is therefore still safely pessimistic. Inline, the SVG renders at
+**307 CSS px** on a 390px viewport — scale 0.548, so the 13 authored units land at **7.1px**. The modal
+renders the same table at **789px (18.3px)** and scrolls to its right edge, so the table IS readable
+once opened. **That distinction matters and corrects the note packet 29 left:** 492px of 882 hidden is
+fatal for a 2×2 payoff matrix, where the four cells have to be compared at once, and merely
+inconvenient for a table read row by row. V022's phone half is unfixed and unfixable by column width;
+the full-screen sheet is what answers it for a table.
+
+**Six findings, none of them this packet's.**
+
+1. **NEW — the spaced recall comes from chapter 1 on all four check-ins.** `pickSpacedRecall`
+   (`lib/learn-steps.js:95-110`) takes the earliest recall from an EARLIER chapter that has not been
+   spaced yet. Chapter 1 carries four recalls and a five-chapter section has exactly four spaced
+   slots, so chapter 1 fills all of them and **nothing from chapters 2, 3 or 4 is ever spaced**.
+   Observed on screen: "RECALL FROM CHAPTER 1" at steps 11, 18, 23 and 29. This is a property of the
+   code, not of the content — and it was invisible at packet 29's eight chapters, where seven slots
+   drained the early chapters and reached the later ones. A content packet cannot fix it: thinning
+   chapter 1 would only shift which early chapter monopolises the slots.
+2. The hidden `.sr-only` block ships the **OLD LIVE notes** — 21,387 characters, `clip: rect(0,0,0,0)`,
+   width 1px, containing "Revenue Calculations" and the Spotify example this packet replaced.
+   Confirmed on a Business section; packet 29 found it on an Economics one.
+3. **The unit hub card describes the section by its OLD sub-topics** ("Cash Flow Forecasting",
+   "Budgets & Variance") rather than this packet's five. The server shell ignores `?draft=1` entirely,
+   so the card will stay stale until the section is published.
+4. **"Tap to enlarge" is still not a click target** — only the diagram body opens the modal.
+5. **`ExtrasTab`'s subtitle hardcodes "(10-14 marks)"**, and on a Business section 14 is not a valid
+   tariff at all: the census has Discuss 8, Assess 10 or 12, Evaluate 20. Student-visible on every
+   Business section as well as every Economics one.
+6. 429s appeared in the console during the walk. They are the rate limiter answering thirty step
+   clicks in ten seconds from an automated walk, not a student-visible defect: `GET
+   /api/sections/financial-planning?draft=1` returns 200 with honest counts throughout, and the 401 is
+   an auth probe answered correctly for a signed-out reader.
+
 ## Packet 29 spec — `market-structures-contestability`, Economics 3.3.3 (DONE, Opus 5, 17 Sep)
 
 `audit/raw/econ_spec.txt:1359-1440`. **61 oracle rows / 54 substantive leaves — the largest section in
@@ -213,6 +647,113 @@ Known and out of scope, all confirmed still visible: **V006** (now firing on an 
 recalibration used), **V024**, the server-rendered shell ignoring `?draft=1` (the hub reads "12 steps"
 against 51, and a hidden `.sr-only` block ships the OLD notes including "kinked demand curve" ×26),
 the diagram modal rendering at 858px in a 390px viewport, and `ExtrasTab`'s hardcoded "(10–14 marks)".
+
+## Take packet 32 — `aggregate-demand`, Economics 2.3.2 (Opus 5, NEW session)
+
+**Check `audit/PROGRESS.md` for the live row before starting anything.** Several sessions share this
+worktree; "next" is whichever row still says `not started`. Packet 31 finished 17 September, and
+packet 30 (`managing-people`, Business 2.4, 22 items) was still `not started` when it did — so read
+the table, not this sentence.
+
+**Section:** `aggregate-demand`, Economics 2.3.2, **34 open ledger items** (one already confirmed).
+Read the spec span before you read the findings, and run `node audit/scripts/ledger.mjs packet 32
+--open` yourself rather than trusting this brief. Note the numbering: **the oracle holds 36 rows for
+`ECON-2.3.2`** — the same topic number as packet 31's Business section, which is how IAL numbering
+works, so be sure you are reading the ECON rows.
+
+### Start from `scripts/packet-31-*.mjs`, and take these five checks with you
+
+Packet 31 is Business and packet 32 is Economics, so **swap the census subject** — and with it the
+tariff ladder: Economics has `Draw [4]`, `Examine [8]` and `Discuss [14]`, and **no `Assess`, no
+`Construct`, no 10- or 12-mark item at all**. The runner reads the census from the file rather than
+from memory, so changing `SUBJECT` changes the gate; check that it does.
+
+1. **THE OFF-TOPIC LEAF BAN, and it is the check that earns its keep.** A section's worst content is
+   the content a competent author would write. Three of packet 31's were: `total contribution`
+   (0 hits, and 3.3.3 · 5's leaf), `moving average` and `extrapolation` (3.3.3 · 1, Unit 3). Grep the
+   section's central vocabulary against the spec BEFORE writing, then encode the misses as a ban with
+   the owning leaf named in the message, reading SVG `<text>` as well as prose. For an AD section the
+   obvious candidates to check are the multiplier, accelerator, crowding out and anything from 2.3.4.
+2. **A ban on a PHRASE is not a ban on the ARITHMETIC.** Refusing "total contribution" would not have
+   stopped `$2.40 × 20,000` reaching a screen, which is the same off-spec leaf with the words removed.
+   Where a finding asks for a calculation you are refusing, ban the calculation shape too.
+3. **THE LINE-CROSSING CHECK — new here, and it found a defect seven times on its first run.** No
+   `<text>` glyph box may be crossed by any `<line>`. A horizontal read-off drawn at a label's own y
+   runs along the whole string; a SLOPING curve is worse, because it passes under a long label at one
+   end and over it at the other whatever vertical offset you give it, so nudging cannot fix it — the
+   label has to be short, or somewhere no line goes. The extent check and the collision check both
+   pass it, because a line is not text. **An AD/AS section is nothing but sloping lines; port this
+   check first and expect it to fire.**
+4. **The collision tolerance is 1.2 of a face, not 0.75.** At 0.75 the bound is 9 units for an
+   11-unit label, so a pair 15 units apart is "not colliding" and renders as one cluster. A reader
+   needs a line's worth of gap between two lines of text, so the bound has to exceed one face rather
+   than fall short of it.
+5. **The answer-recoverable recall check, and its two false positives.** It compares TOKEN SETS, not
+   substrings — an earlier version reported the answer `6` as recoverable from any screen printing
+   `$6.00` — and it removes commas between digits before tokenising, because `$6,000 a month` was
+   otherwise splitting into the tokens `6` and `000`. Both versions would have REFUSED safe content
+   and been believed, which is the failure mode a guard has no natural defence against.
+
+### What packet 31 learned that packet 32 needs
+
+- **RENDER THE DIAGRAM AND LOOK AT IT.** Three defects in packet 31's break-even chart survived every
+  measurement: two label pairs that read as one cluster, and a curve passing through its own label.
+  The runner reported no problems each time. They were found by writing the SVG to a file, opening it
+  and looking — which took two minutes and produced two new permanent checks. **Do this before Verify
+  B, not instead of it**, and do it for every plotted diagram.
+- **A requirement's check must read the requirement, not one implementation of it.** The chart's
+  zone check looked for the strings "PROFIT" and "LOSS" — one way of satisfying "show the profit and
+  loss zones" — and it failed the moment those labels had to move for a collision the runner itself
+  had found. It now reads the two shaded polygons. A check written against your first draft will
+  fight your second.
+- **The block count has to be re-measured, not inherited.** Packet 29 priced eight blocks at one
+  pre-test question and left a note that reads like a standing ceiling. Since packet 2.5 it is not
+  one: five chapters cost nothing at all, because `freeQuizPayload()` takes the pins first and the
+  Quiz tab's two come out of them. Measured on the emitted bundle and confirmed on screen — payload 8
+  of 10, 5 of 5 chapters served, pre-test three. **Measure yours against the shipping function.**
+- **13 of 30 scope claims were wrong, mis-aimed or already closed** (4/4/6/5/6/8/5/8/8/9/8/9/11/13
+  across packets 14-31). It is still rising, and the two most expensive kinds are both here: a
+  finding asking you to ADD another section's leaf (`specGap-03`), and a finding whose HEDGE is
+  wrong (`specGap-07`, "unsure whether the spec names semi-variable costs" — it does not).
+- **Two of packet 31's claims had been closed by earlier packets.** `structure-04` describes the
+  pre-packet-5 recall engine and `structure-05` the pre-packet-7 shuffle; both are unrepresentable
+  now. Check a `structure-*` finding against the CURRENT code before building anything for it —
+  several of them were written against March's engine.
+- **`JSON.stringify` equality is not field equality across a jsonb round trip.** PROTOCOL gate step 5
+  says verify the staged draft field by field against the API. Done by stringifying field groups it
+  reported five differences on a draft that was identical, because Postgres does not preserve key
+  order. Compare recursively and report the first differing PATH. And remember `freeQuizPayload`
+  REWRITES `quizIndices` for a signed-out reader, so compare that field apart from the rest.
+
+### Open for the founder, and what changed
+
+- **V034 is new (packet 31).** `pickSpacedRecall` exhausts chapter 1 and never reaches the middle
+  chapters: a five-chapter section has four spaced slots, chapter 1's four recalls fill all of them,
+  and nothing from chapters 2-4 is ever spaced. Observed on screen — "RECALL FROM CHAPTER 1" at all
+  four check-ins. Filed to packet 2.7 with V029 and V030, which touch the same engine. Invisible at
+  packet 29's eight chapters; a content packet cannot fix it.
+- **V022 has a first exception.** All four of packet 31's declared tables CLEAR
+  `diagram.table-legible`, authored at 13 units rather than 11 (12.3px in the 530px column against
+  the back catalogue's 10.4), with 124, 34, 75 and 93 units of margin left of 508. Packet 27's
+  conclusion that a table cannot be shrunk into legibility holds for a DENSE reference table and is
+  why the finding stays open; it does not hold for four or five short columns. **Author at 13 from
+  the start.** The phone is untouched and cannot be fixed by column width: measured at 307 CSS px,
+  13 units is 7.1px.
+- **The diagram modal is adequate for a table and fatal for a matrix**, which is a correction to
+  packet 29's note. Measured: the modal renders the 560-unit table at 789px (18.3px) and scrolls to
+  its right edge, so a table read row by row is readable once opened. 492px of 882 hidden is fatal
+  only when the cells have to be compared at once, as in a 2×2 payoff matrix.
+- **`ExtrasTab`'s subtitle hardcodes "(10-14 marks)"** and 14 is not a Business tariff at all —
+  Discuss 8, Assess 10 or 12, Evaluate 20. Student-visible on every Business section as well as
+  every Economics one. **V028 is still open** (`ExtrasTab.jsx:62` throws on a chain with no `steps`);
+  packet 31's five chains all carry `steps`, and packet 28's staged draft still has the one that
+  throws.
+- Unchanged: the server shell ignores `?draft=1` entirely (the unit hub card still describes
+  `financial-planning` by its OLD sub-topics, and the hidden `.sr-only` block ships 21,387 characters
+  of the OLD LIVE notes with `clip: rect(0,0,0,0)`); "Tap to enlarge" is not a click target;
+  **V006**, **V024**, **V025**, **V027**, **V033**, packet 6, `scripts/packet-2-draft-state.sql`, the
+  160 back-catalogue practice items, and the packet 5/7 ship checkpoint that packets 5, 5.1, 7 and
+  **14-31** are all held for.
 
 ## Take packet 30 — `managing-people`, Business 2.4 (Opus 5, NEW session)
 

@@ -1989,3 +1989,114 @@ duplicate that matters is rarely in the file the finding names.
   and allocative efficiency depending on the price. It now draws the $72 market price from chapter 2
   and marks the two tests at DIFFERENT outputs. **No mechanical check can find this class**, which is
   the whole argument for Layer 6, and it is the fifth section in a row where it has earned its place.
+
+## 2026-09-17 — packet 31: three leaves this section does not own, and two of them were REMOVED
+
+`financial-planning` is IAL Business 2.3.2 (`bus_spec.txt:885-914`), and three of the things a
+competent author would write into it belong to other sections. Two were already in the live section
+and no audit item names either of them.
+
+- **`total contribution` is 0 hits in `bus_spec.txt`, and `specGap-03` asks for it.** The finding
+  wants "total contribution (contribution per unit × units sold) and using it to calculate profit
+  (total contribution − fixed costs)". This section's contribution leaves are `3a` "Contribution:
+  selling price − variable cost per unit" and `3c` "Using contribution to calculate the break-even
+  point", and nothing else. "Nature and purpose of contribution", "Calculation and interpretation of
+  contribution" and "Use of contribution as a decision-making technique" are **3.3.3 · 5** at
+  `:1175-1177` — Unit 3, which packet 14 already built — and profit calculation is 2.3.3 · 1a.
+  REFUSED as written; the in-scope half is profit as the vertical gap between TR and TC on the
+  break-even chart, from `1a` and `1b`. **And the runner bans the arithmetic as well as the phrase**,
+  because `$2.40 × 20,000` is the Unit 3 leaf with the words taken out.
+- **`semi-variable` and `stepped` are 0 hits each, and `specGap-07` only ASKS.** It says "unsure
+  whether the IAL spec names semi-variable costs explicitly (Edexcel GCE does)". It does not: `1b`
+  names fixed, variable, total and average costs and stops. They were in `extras.evaluation` and are
+  **removed rather than promoted**. Second instance of packet 29's lesson that rule 1 applies to a
+  finding's hedges as much as to its assertions.
+- **`Improving Cash Flow` was a whole live subsection teaching 2.3.3 · 2b.** `structure-06` gets
+  there but by the wrong route: it says cash-flow forecasting is "2.3.1 Planning content", which is
+  wrong — 2.3.1 has no cash-flow bullet and cash flow is 2.3.2 · 4 — and then says improving cash
+  flow is Liquidity content, which is right. `4b` is "Use and limitations of cash-flow forecasts";
+  ways to improve liquidity are `:935-937`, `managing-finance`. The finding proposes cross-linking. A
+  subsection teaching another section's leaf is not cross-linked, it is deleted.
+- **`Profit and Loss` was another, and NO finding mentions it.** Profit calculation is 2.3.3 · 1a and
+  the profit/cash distinction is 2.3.3 · 2a. Tenth and eleventh instances of rule 2, and the second
+  time the rule has had to be applied to a subsection the audit was silent about.
+
+## 2026-09-17 — packet 31: five blocks cost nothing, and packet 29's eight-block price is superseded
+
+Packet 29 priced eight blocks at one pre-test question and left a note the next packet would
+reasonably have read as a standing ceiling. It is not one. Since packet 2.5, `freeQuizPayload()`
+takes the chapter pins FIRST and tops the Quiz tab up to `PREVIEW_LIMITS.quiz` only if the pins did
+not already fill it, so **five chapters spend 5 of `FREE_QUIZ_MAX` (10), the tab's two are served out
+of those five, and `PRETEST_HEADROOM` (3) is paid in full**. Measured against the shipping function
+on the emitted bundle and then confirmed on screen: payload 8 of 10, 5 of 5 chapters served,
+pre-test three questions, none of them a check-in's. The ceiling is ten chapters. **The lesson for
+the next packet is not the number but its shape: a cost recorded against one section's block count
+is a measurement of that section, and it has to be re-measured rather than inherited.**
+
+## 2026-09-17 — packet 31: V022 is cleared for the first time, and packet 27's conclusion still holds
+
+All 32 tables packets 20-28 authored fire `diagram.table-legible`, and packet 27 measured its four at
+11-17 per cent OVER the frame at the 13 units the rule's floor demands and concluded a table cannot be
+shrunk into legibility. **That is true of a dense reference table and it is why V022 stays open.** It
+is not true of a table with four or five short columns, and the distinction is worth having because
+three of this topic's five leaves are calculations and a diagram is the only surface in the schema
+that can carry a grid.
+
+The rule reads the SMALLEST `font-size` in the whole SVG — the note and the title included, not only
+the cells — and scales it by 530/viewBoxWidth. At a 560-unit box that is 0.946, so every text element
+has to be at least 12.68 units. These four are authored at **13 from the start** rather than at 11 and
+reported: 12.3px in the 530px column against the back catalogue's 10.4, with 124, 34, 75 and 93 units
+of margin left of 508. **The phone is untouched and cannot be fixed by column width** — Verify B
+measured the inline SVG at 307 CSS px, where 13 units is 7.1px — and the full-screen sheet is what
+answers it: the same table renders at 789px (18.3px) in the modal and scrolls to its right edge.
+**That last measurement corrects packet 29's note**, which recorded 492px of 882 hidden as a defect.
+It is fatal for a 2×2 payoff matrix, whose four cells have to be compared at once, and merely
+inconvenient for a table read row by row.
+
+## 2026-09-17 — packet 31: `Construct` goes on the cash-flow forecast and never on the break-even chart
+
+`3e` is "**Interpretation** of break-even charts" (`:905`). `4a` is "**Construction** and
+interpretation of simple cash-flow forecasts" (`:907`). The asymmetry is deliberate and citable, and
+the live section has it exactly backwards: it has no break-even chart at all and an `examMatters`
+demanding "precise drawing" of one. `Construct` in IAL Business is 4 marks and is defined as
+"requires students to draw an accurately labelled diagram" (`:2224-2226`), so the one `Construct` item
+in this section asks for a cash-flow forecast and the runner refuses any `Construct` pinned elsewhere
+or any guidance asking a student to draw a break-even chart. `structure-01` reports the "precise
+drawing" text; reading it against the specification rather than against the live text is what turns
+one finding into two.
+
+## 2026-09-17 — packet 31: a jsonb round-trip does not preserve key order, so `JSON.stringify` equality is not field equality
+
+PROTOCOL gate step 5 requires a content packet to verify the staged draft against
+`curl "localhost:3001/api/sections/<id>?draft=1"` **field by field, not against the file**. Done
+naively — stringify each field group on both sides and compare — it reported **five differences** on
+a draft that was in fact identical: subsection bodies, recalls, practice, diagrams and notes. A
+recursive compare found none of them. Postgres `jsonb` does not preserve key order, so the round trip
+returns the same objects with their keys rearranged and `JSON.stringify` disagrees while every field
+agrees. **The check is worth running and the naive form of it cries wolf**; compare recursively, and
+report the first differing PATH rather than the fact that two strings differ. A future packet that
+sees five phantom diffs and starts re-staging is chasing nothing.
+
+## 2026-09-17 — packet 31: two of this packet's own new checks were wrong, and one was checking the wrong thing
+
+Packet 21's rule earned its place three more times. Every new guard here plants its defect first, and
+three of them failed that A/B:
+
+1. **The answer-recoverable check matched SUBSTRINGS.** It reported the answer `6` as recoverable from
+   any screen printing `$6.00`, and `14` from any screen printing `$14,400`. A token set built the
+   same way for both sides fixed it.
+2. **Then the tokeniser split on the thousands separator**, turning `$6,000 a month` into the tokens
+   `6` and `000`, so a single-digit answer matched a screen that never printed it. Commas between
+   digits are now removed before the split. Note what these two have in common: both would have
+   REFUSED safe content and been believed, which is the failure mode a guard has no natural defence
+   against — a false positive on a check nobody doubts costs an author a rewrite and teaches them the
+   rule is noise.
+3. **And every `examMatters` in this section cites "Appendix 6"**, so a bare single-digit answer will
+   always look recoverable. That is not fixable in the guard and it is a real authoring constraint: no
+   recall in this section answers with one digit.
+4. **The break-even chart's zone check was written against the implementation, not the requirement.**
+   `topFix-02` asks for profit and loss ZONES; the check looked for the strings "PROFIT" and "LOSS",
+   which is one way of satisfying it — and it started failing the moment those labels had to move for
+   a collision the runner itself had found. It now reads the two shaded polygons and the two measured
+   gaps. **A requirement's check should read the requirement**, or a legitimate change of
+   implementation reads as a regression.
