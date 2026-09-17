@@ -1,61 +1,5 @@
 # Next session brief
 
-## Take packet 26 — `government-intervention`, Economics 1.3.6 (Opus, NEW session)
-
-**Check `audit/PROGRESS.md` for the live row before starting anything** — several sessions run in this
-worktree and "next" is whichever row still says `not started`. As of the end of packet 25, packets 14-25
-are built and held.
-
-**Section:** `government-intervention`, Economics Unit 1 (WEC11), IAL topic **1.3.6**,
-`audit/raw/econ_spec.txt:793-` (read the span; 1.3.5 ends at :791). **26 ledger items.**
-
-**Read first:** `PROGRESS.md`, `DECISIONS.md` (the last four entries are packet 25's and three of them
-change how you author), this file's packet 25 spec block below, then `PROTOCOL.md`. Then
-`node audit/scripts/ledger.mjs packet 26 --open`.
-
-**Start from `scripts/packet-25-*.mjs`**, not 24's — it carries five checks the earlier runners do not,
-and three of them exist because something got through:
-
-1. **The text-EXTENT check.** Packet 23's canvas-bounds check reads a `<text>` element's ANCHOR. Verify B
-   found a label running off the frame with its anchor comfortably inside. Copy the extent check AND its
-   A/B; run against packet 25 as it stood it found three, including a table TITLE.
-2. **The copy-from-screen check.** A reorder item may not be string-identical to a flow step in its own
-   subsection. `learn-steps.js:10` puts the recall below the teaching on the same step, so a verbatim
-   reorder is `structure-04` reproduced. Packet 25 did it 8 times out of 8 before this check existed.
-3. **The block-count guard.** Refuses at 9 blocks, where `freeQuizPayload()` runs out of `FREE_QUIZ_MAX`
-   and a chapter is served no check-in quiz. **1.3.6 has six sub-topics — check your block count early.**
-4. The widened ledger-id and previous-content bans (the bare `accuracy-01` form, and "**The** section
-   used to say", both of which the packet-24 versions missed).
-5. The computed table columns: `gridColumns()` derives each column from its widest cell and **throws**
-   when the table does not fit, rather than laying out a collision for a guard to find afterwards.
-
-### The rule-1 pre-flight you must do yourself
-
-Packet 25 found **8 of 28** claims wrong. Grep every central term of 1.3.6 before writing a word, and
-note that 1.3.6 is the section that legitimately owns several things packet 25 had to ban:
-`government failure` (`:824`), `property rights` (`:811`), and **maximum and minimum (guaranteed) prices**
-— the spec's own phrase, where `price floor` and `price ceiling` are **0** (packet 24's finding).
-
-### What packet 25 learned that packet 26 needs
-
-- **An acceptance check that no code runs is a wish.** Packet 25's spec block named a figure in its
-  acceptance list and the runner never asserted it; Verify A found that figure taught nowhere and used
-  only as a distractor. When the spec block names a figure or a property, assert it in the same commit.
-- **Look at the screen.** Three of packet 25's four best findings were invisible to every code check:
-  a cut-off label, a copy-from-screen recall, and authoring commentary in a misconception card. Two came
-  from Layer 6 and one from walking the phone.
-- **Tell Layer 6 about the pre-test.** Its brief describes the eight tables and never says a quiz bank
-  has two consumers, so it reported the three unpinned items as unreachable. They are the pre-test pool
-  (`lib/pretest-pool.js:29`). Add a line to the brief.
-- **Verify A should read the staged draft, not the repository.** Packet 25's did, and twice caught itself
-  reading a draft mid-re-stage. Say so in the prompt.
-
-**Exit criteria:** staged bundle at 0 BLOCK / 0 new DEBT / 100% of its leaves · every block pinned to a
-diagram, a quiz item and a practice item it owns · practice on the ECONOMICS ladder only (**no Assess,
-no 10-mark**) · every practice guidance two paragraphs with a scaffold first · Verify A clean · a 390×844
-walk · Layer 6 with two planted canaries · PROGRESS row · commit · push. **Do not publish**: the packet
-5/7 checkpoint still holds, and twelve sections now wait on it.
-
 ## Take packet 29 — `market-structures-contestability`, Economics 3.3.3 (Opus 5, NEW session)
 
 **Check `audit/PROGRESS.md` for the live row before starting anything.** Four sessions ran in this
@@ -141,6 +85,60 @@ it is not falling. Two warnings specific to 3.3.3:
 - **V024**: `PracticeQuestionsTab` carries the UK GCE tariff ladder, so 2, 8, 12 and 14-mark questions
   cannot be filtered and all paint in the 4-mark green. Economics uses 2, 8 and 14. Your practice bank
   will be affected; it is not yours to fix.
+
+
+### What packet 26 learned that the next content packet needs
+
+- **A quiz explanation may not name an option by POSITION.** Seven of packet 26's thirty-five did, and
+  six of those described the CORRECT answer as if it were a distractor: items are authored key-first,
+  `placeKeys` deals the key into a slot, and `F074` shuffles again at render. Nothing in the repository
+  reads an explanation as a reference to anything — every quiz rule reads the OPTIONS. Name the option
+  by its CONTENT (`"$900 uses the 60 tonnes traded BEFORE the tax"`), never by its place. The runner's
+  ban and its A/B are in `scripts/packet-26-government-intervention.mjs`; copy them.
+- **Split a multi-part finding into clauses BEFORE building, in the spec block (rule 5).** Packet 26 did
+  not, and Verify A rejected it on the clause that went unassigned. `structure-04` says the reorders are
+  verbatim copies of the flow box AND that they render below that flow box on the same step. Closing the
+  first clause twice — by string identity, then by token overlap — does not touch the second.
+- **A reorder may not sit under a flow box at all.** Rewording makes it easier to copy, not harder: the
+  words change and the ORDER, which is the only thing a reorder tests, is still printed above it. The
+  rule packet 26 now enforces is structural and needs no judgement: a subsection with a `flow` body does
+  not carry a `reorder` recall. It cost that section its reorder variety (1 of 31). **The real fix is a
+  packet-7 change** — `lib/learn-steps.js` decides recall placement, so "render it only as a spaced
+  recall on a later step", which is the finding's own first remedy, is not available to an author. Doing
+  it would give every section its reorders back and is worth doing before the next content packet.
+- **The copy-from-screen check must measure MEANING, not characters.** Packet 26 passed packet 25's
+  string-identity version with three items at 0.67, 0.67 and 0.73 token overlap against the flow step
+  above them. Packet 27 reached the same conclusion independently the same day. **Two packets finding
+  one gap in one day is the argument for moving it into the validator** rather than copying it forward
+  a third time.
+- **`diagram.table-legible` was recalibrated on 17 Sep to the real 530px column and now fires on every
+  table packets 20-28 have authored.** Packet 26's two cleared it by raising cells from 11 units to 13,
+  because they were authored short — measured in the browser at 12.3px. **The constraint is cell LENGTH.**
+  A table written to be read rather than to be exhaustive passes today.
+- **One diagram, one kind.** A diagram that pairs a drawing with a lookup table gets a "what a correct
+  diagram shows" checklist printed over the table. Packet 26 moved four such lists into the teaching
+  text, where they already were, and the two diagrams that lost a table gained a better second panel —
+  the benefit side of 1a, and the specific-versus-ad-valorem comparison `specGap-03` asks to be DRAWN.
+- **Layer 6's brief still does not name the pre-test, and it cost a false positive for the second packet
+  running.** Packet 25's handoff said to add the line; packet 26's brief did not have it either, and
+  Layer 6 duly reported the three unpinned items as unreachable. **Make the brief a file** —
+  `.claude/agents/content-adversary.md`, beside the other two — carrying the pre-test line, the IAL
+  numbering trap and the instruction to report defects only. A lesson that lives in NEXT.md gets
+  rewritten away every packet.
+- **Canary honesty.** Packet 26 planted two and Layer 6 caught one. Report the number caught, not the
+  number planted.
+
+### Two hazards live in this worktree right now
+
+- **`audit/ledger.json` has 39 uncommitted claims that are not packet 26's** (packet 28's, plus V015-V023).
+  Packet 26's 29 confirmations are in the working file and were deliberately left OUT of its commit, to
+  land with packet 28's gate commit — packet 19's precedent. **Diff the ledger by id before committing it
+  and confirm every change is yours.**
+- **Packet 27's five source files were staged for deletion in the shared index while present on disk.**
+  A bare `git commit` from any session would have deleted them. Packet 26 committed with
+  `git commit --only <paths>` and did not carry them, and they are intact in HEAD — but **check
+  `git diff --cached --stat` before any commit in this worktree**, because the index is shared and a
+  deletion somebody else staged is indistinguishable from one you meant.
 
 **Exit criteria:** staged bundle at 0 BLOCK / 0 new DEBT (`diagram.table-legible` excepted, with the
 measurement) / 100% of its 54 leaves · every block pinned to a diagram, a quiz item and a practice
