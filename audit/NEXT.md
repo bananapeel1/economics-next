@@ -649,6 +649,43 @@ against 51, and a hidden `.sr-only` block ships the OLD notes including "kinked 
 the diagram modal rendering at 858px in a 390px viewport, and `ExtrasTab`'s hardcoded "(10–14 marks)".
 
 ## Take packet 32 — `aggregate-demand`, Economics 2.3.2 (Opus 5, NEW session)
+### WARNING for the next session in this worktree: the SHARED INDEX is stale and DANGEROUS
+
+Read this before running any git command that writes. **`git status` in this worktree shows `D` for
+packet 29's and packet 31's files. They are not deleted** — they are on disk and in HEAD. The shared
+index predates `ef4f819` and has never been refreshed, because packets 27, 29 and 31 all committed
+through an isolated index (`GIT_INDEX_FILE=<tmp> git read-tree HEAD`, `hash-object -w`,
+`update-index --cacheinfo`, `write-tree`, `commit-tree`, `update-ref <new> <old>`), which is the only
+method that is safe when several sessions share one index — and which by design never touches it.
+
+**A plain `git commit` here would commit that stale index**, and `git diff --cached HEAD --stat` says
+what that means: it would DELETE all five `_packet31*`/`packet-31*` scripts and both packet-31
+snapshots, and revert `NEXT.md` by 869 lines and `DECISIONS.md` by 255 — taking packet 29's records
+with them. That is V027 with the gun still loaded.
+
+**And the index cannot simply be reset**, which packet 31 checked before deciding not to: four files
+hold INDEX-ONLY content, versions that exist neither in HEAD nor in the working tree, i.e. another
+session's staged work. `git read-tree HEAD` on the shared index would destroy it. The blobs are in
+the object store and recoverable with `git cat-file -p <sha>`:
+
+| file | blob | size |
+|---|---|---|
+| `audit/DECISIONS.md` | `a953e452fed31047d85a90ff37e2ad5bb235240b` | 162,294 |
+| `audit/NEXT.md` | `6acee19b8d9cde2d1279bd591ddc3f3bbde8a33a` | 432,838 |
+| `audit/PROGRESS.md` | `1567ec77d63693016ab851d829ace9664839cfda` | 104,395 |
+| `audit/ledger.json` | `13a5d8837f3962947ce828a57a85f44220cd1c1e` | 1,461,017 |
+
+So: **use the isolated-index method, never `git add`, never a bare `git commit`,** and if you need
+the index clean, first check `git ls-files -s` against HEAD and the working tree for index-only
+content and rescue it by SHA.
+
+**The working tree also still holds another session's uncommitted ledger work** that packet 31
+deliberately did NOT commit: 29 changed `C-managing-people-*` items and the additions `V029`-`V033`.
+Packet 31 committed HEAD's ledger plus its own 29 ids and `V034` only — a 245-line diff rather than
+the 42,674 its first attempt produced, because `audit/scripts/ledger.mjs:29` writes the file at
+`JSON.stringify(_, null, 1)` and re-serialising at 2 rewrites every line. **Match that indent**, and
+diff the ledger by id before committing it.
+
 
 **Check `audit/PROGRESS.md` for the live row before starting anything.** Several sessions share this
 worktree; "next" is whichever row still says `not started`. Packet 31 finished 17 September, and
