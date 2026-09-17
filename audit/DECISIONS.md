@@ -1845,3 +1845,147 @@ it, and it rots in exactly the way the tests here rotted.** If a comment says a 
 If it says a number, measure it. If it states a rule about the codebase, grep the codebase. And when
 a fix deletes a symbol, grep for the symbol's NAME across `app/` as well as `components/` — the
 duplicate that matters is rarely in the file the finding names.
+
+- **2026-09-17 (packet 29) — EIGHT blocks for 54 leaves, and the cost is a pre-test question, priced before
+  the block plan rather than discovered after it.** `freeQuizPayload()` gives every chapter a question first
+  and then tops up the pre-test's headroom, bounded by `FREE_QUIZ_MAX` (10), so eight chapters cost a
+  signed-out student one pre-test question — two rather than three — and nine cost two. Seven chapters would
+  have put 54 leaves at 7.7 a chapter against the 6.6 packet 22 proved at 46 in seven, and would have meant
+  folding two of the three oligopoly chapters together when Oligopoly alone is **25 of the 54 leaves**. So
+  the density stays at the proven 6.75 and the pre-test is short by one question, deliberately. Verify B was
+  told to expect two and to report only whether it looked BROKEN. The runner refuses above ten, prints the
+  cost at eight, and the number is in the packet spec so nobody has to rediscover it. V016's table made this
+  a decision with a price rather than a ceiling to ask the founder about.
+
+- **2026-09-17 (packet 29) — the kinked demand curve is removed from `market-structures-contestability`, and
+  the finding that named it only asked whether it was worth checking.** `kinked` is **0 hits** in
+  `audit/raw/econ_spec.txt`. The live section gave the model a full subsection, one of its five diagrams,
+  quiz items and the model answer of its 20-mark essay; `specGap-12` said only "I do not recall it as an
+  explicit IAL oligopoly bullet … worth verifying before keeping it at this weight". Verified: 3.3.3 · 5c
+  (`:1393-1399`) asks for simple game theory in a two-firm/two-outcome model, reasons for collusive and
+  non-collusive behaviour, cartels, price leadership and price wars. Those five are now chapter 5 and the
+  kinked demand curve is banned by the runner. **The tell was in the section's own common mistakes**, which
+  already warned students not to confuse the kinked demand curve with game theory — a section warning against
+  conflating its own content with the specification's is a section teaching the wrong model. Ninth instance
+  of rule 2, and the first where the audit item asked a question rather than making a claim.
+
+- **2026-09-17 (packet 29) — `ExtrasTab` throws on a chain that carries `points` instead of `steps`, and
+  packet 28's staged draft has one. V028, filed for packet 30.** `components/ExtrasTab.jsx:29` renders every
+  entry of `data.chains` with no filter and `:62` calls `chain.steps.map(...)` with no guard, so a chain
+  shaped as a judgement frame takes the whole Extras tab down for an entitled student. `scripts/_packet28-
+  assessment.mjs`'s third chain, "Is growing larger worth it?", is exactly that. Found by reading the
+  component rather than the schema, and confirmed by running the component's own expression over both
+  bundles: packet 28's chain 2 throws, all six of packet 29's render. **A free student never reaches it**,
+  because `previewMode` slices the list to `PREVIEW_LIMITS.extrasChains` (1) — which is why no walkthrough
+  has caught it, and the general lesson: a preview cap can hide a crash from every check that runs
+  signed-out, and Verify B can only ever run signed-out. Not fixed here: editing another packet's module
+  leaves its staged draft stale (DECISIONS, 16 September), so packet 30 fixes the component, adds an
+  `extras.shape` validator rule and re-stages packet 28. Packet 29's runner carries the check meanwhile,
+  A/B'd **against packet 28's real bundle** rather than a planted defect — a control you do not have to
+  construct is worth more than one you do.
+
+- **2026-09-17 (packet 29) — every leaf mapped BY HAND, because the oracle's 100% is not evidence for a
+  section of one-word leaves (V025).** The coverage oracle matches by substring and 3.3.3 has leaves reading
+  `patents`, `branding`, `quality`, `endorsement` and `legal`. So `LEAF_MAP` in the runner names the
+  subsection that teaches each of the 54, the runner refuses if a leaf is unmapped or a mapping names a
+  subsection that does not exist, and it also refuses if `LEAF_MAP` names a leaf the oracle no longer has —
+  which is packet 3.1's renumbering trap in the other direction. The oracle agreed at 54 of 54 independently,
+  and that agreement is the point: two methods, one answer.
+
+- **2026-09-17 (packet 29) — "deadweight" is not specification vocabulary, and `terms.off-spec` is what
+  found it.** Ten occurrences across body, notes, diagrams and quiz explanations. The specification says
+  "welfare loss or gain areas" (1.3.5 · 2d) and never "deadweight"; every surface now says welfare loss.
+  Worth recording because it is rule 2 caught by a rule rather than by a grep somebody remembered to run —
+  the first time in this programme that the validator, and not the author, found the off-spec vocabulary.
+
+- **2026-09-17 (packet 29) — `practice.levels`: guidance for a tariff above 6 marks may not allocate points,
+  and that is what `practice-01` was reaching for.** The finding asks for IAL 20-markers to show a
+  "KAA + evaluation levels" split. That is true of the real mark scheme and is banned from student-facing
+  prose by this programme's own `MARK_CLAIM` check, which keys on `levels-marked` and `KAA` (packet 20 shipped
+  "is levels-marked" eight times). The validator's own `practice.levels` rule settles it from the other side:
+  the Examine (8), Discuss (14) and Evaluate (20) guidance carries no allocations at all, and says what the
+  command word requires per Appendix 6, which is citable. **Two rules pointing at the same screen, read
+  together** — packet 27's lesson, applied to a finding rather than to a DEBT rule.
+
+- **2026-09-17 (packet 29) — the layout must place a label where it fits, not be measured after it does not.**
+  The runner's extent check found ELEVEN strings outside their canvas on the first run: a curve label at a
+  demand curve's own x-intercept (P = 80 − 6.5Q has its intercept at Q = 12.3 on a frame whose xMax is 9),
+  five band labels to the right of a plot that has room for six characters there, three titles at size 13,
+  and two market labels. Measuring afterwards was never the fix. `place()` now asks the same `estWidth` the
+  check asks and flips a label to the other side of its point rather than off the frame, and `straight()`
+  clamps a line's far end to the plot — so a demand curve's intercept being a property of the curve and its
+  fitting the picture being a property of the picture are reconciled in one place. Sixth instance of the
+  packet 23/25 rule, and the first fixed in the layout rather than in the guard.
+
+- **2026-09-17 (packet 29) — a check that finds the wrong element is worse than no check, because it fires.**
+  The welfare-triangle vertex check matched the first `<polygon>` in the SVG, which is the arrowhead in
+  `<defs>` that `open()` emits, and reported the arrowhead's three points as the triangle's. It now matches
+  `id="dwl"`. The same run also caught my own tariff check reporting forty-one "1-mark questions" for the
+  `(1 mark)` allocations inside model answers; it now shares `withoutAllocations` with `MARK_CLAIM`, so what
+  is left after stripping is a tariff a sentence is ASSERTING. Both were found by the checks disagreeing with
+  content that was correct — which is the only way a false positive ever surfaces.
+
+- **2026-09-17 (packet 29) — a derived property caught a check that was wrong about a matrix that was right.**
+  `GAME.dominant` is computed rather than asserted, and the first version read `holdCut[1]` — the RIVAL's
+  payoff — where it needed `holdCut[0]`, so it reported that cutting is not a dominant strategy for a payoff
+  matrix in which it plainly is. Nothing else in the pipeline would have seen it: the matrix renders either
+  way and the prose says "dominant" regardless. **Derive the property you are going to assert in prose**, and
+  a disagreement becomes visible instead of a claim becoming decorative.
+
+- **2026-09-17 (packet 29) — a section built out of template literals must check that every
+  substitution substituted, and the check must read the SVGs.** Eight student-facing strings shipped
+  "P = 80 − undefinedQ" and "MR = 80 − NaNQ", including a scored quiz stem, its own explanation and
+  two diagram titles, because the demand gradient lived on `NILE.short.b` and `NILE.long.b` and the
+  templates asked for `NILE.b`. **Nothing in the pipeline could see it.** The arithmetic was right, so
+  every figure re-derivation passed; the validator has no rule for it; Verify A's diff read and the
+  runner's own SVG figure checks both look at numbers rather than at labels; and `ban()` filters SVG
+  strings out of `prose`, so two of the eight were invisible twice over. Both verifiers found it
+  independently, by reading the rendered text. `FAILED_SUBSTITUTION` now runs over every string in the
+  bundle including the SVGs, and the vocabulary bans read SVG `<text>` joined per diagram — which
+  immediately found a banned phrase ("loyalty schemes") that had been sitting in a diagram caption.
+  **The general lesson is about where a check LOOKS, not about what it looks for.** A blind spot in the
+  corpus a check reads is invisible in a way a missing rule is not, because the check reports green.
+
+- **2026-09-17 (packet 29) — the A/B caught two bugs in the checks written that same hour, and one of
+  them was in the check written FOR the defect.** `FAILED_SUBSTITUTION` was first
+  `/\bundefined\b|\bNaN\b/`, which does not match `undefinedQ` — the trailing word boundary needs a
+  non-word character and `Q` is a word character. The guard written to catch this packet's worst
+  defect would have passed it. Separately, the kinked-demand check used a `/g` regex with `.test()`
+  inside a filter, and `lastIndex` advancing between calls made it report the one deliberate mention
+  as undeclared and the declared count as zero — a stateful regex is a bug that looks like a finding.
+  Both surfaced on the first run because the A/B plants the defect. Packet 21's rule, earning its
+  place twice in one packet: **a guard that has never been seen to fail is not known to work.**
+
+- **2026-09-17 (packet 29) — rule 6 generalises to every recall type, and Verify B had to walk the
+  section to find it.** The three copy-from-screen checks this programme carries all read a REORDER
+  against a flow box. Verify B found 24 of 43 steps carrying a recall answerable by scrolling up, and
+  **not one of them was a reorder**: they were fill-ins whose template was the key-idea sentence with
+  one word removed, classifies whose items were the bullets above them verbatim, and a match whose
+  pair sat in one sentence. `structure-01`'s complaint is that this section has no retrieval layer;
+  forty-three widgets answerable from the screen above them would not have been one. The runner's new
+  check measures whether the ANSWER is recoverable rather than word overlap — overlap flags 29 of 43,
+  because any recall on a topic shares vocabulary with the teaching of it, and the sharp test flags
+  twelve. All twelve were reworked to apply the idea to figures or to a new case, which is better
+  retrieval as well as a fix. **The rule was written for the type where the defect was first seen, and
+  it was a property of the SCREEN all along.**
+
+- **2026-09-17 (packet 29) — a collision check must compare BOXES, not identical `y` values.** The
+  runner grouped `<text>` by exact rounded y, which compares table cells and nothing else, and
+  reported zero collisions while twelve of nineteen scenarios were colliding. Verify B measured them
+  in the browser: a title at y=30 with a 13-unit face against an axis label at y=26, and an axis label
+  at y=346 against a caption's first line at y=344. **Two strings one unit apart vertically overlap on
+  screen exactly as much as two on the same line.** The fix is in two places: the check now compares
+  glyph boxes with a vertical tolerance, and the layout now has a written-down vertical budget under
+  the plot (+15 a read-off, +32 the axis label, no caption above +48) so the collision is not merely
+  detected. Third time this programme has had to move a diagram fix from the guard into the layout.
+
+- **2026-09-17 (packet 29) — Layer 6 found a diagram that was arithmetically perfect and
+  conceptually circular.** The efficiency diagram marked a bare point on the marginal cost curve
+  "allocative: P = MC = $8" and drew no price or demand curve at all. Every check passed it: the
+  figure was correct, it was on the curve, it was inside the canvas. The adversarial reviewer's
+  objection is that marginal cost trivially equals itself, and that the picture therefore teaches
+  allocative efficiency as a FIXED point on a firm's cost curves — which is the one thing the pair of
+  static tests exists to distinguish, productive efficiency being a property of the cost curves alone
+  and allocative efficiency depending on the price. It now draws the $72 market price from chapter 2
+  and marks the two tests at DIFFERENT outputs. **No mechanical check can find this class**, which is
+  the whole argument for Layer 6, and it is the fifth section in a row where it has earned its place.

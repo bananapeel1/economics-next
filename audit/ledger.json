@@ -13370,10 +13370,10 @@
    "rank": 0,
    "text": "Add diagramRef/quizIndices/practiceIndices to all four blocks so Learn Mode stops using the legacy fallback: block0 → diagrams 'Perfect Competition — Long-Run' (and/or short-run) + quiz [1,3] + practice [0]; block1 → 'Kinked Demand' + quiz [4,7] + practice [3]; block2 → 'Monopoly' + quiz [5] + practice [1,2]; block3 → quiz [8] + practice [4]. This fixes the mismatched inline MCQs/practice and surfaces the two long-run diagrams and the 20-mark essay.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json content[0..7] each carry diagramId + quizIndices + practiceIndices; lib/learn-steps.js:64-68 is the reader and reads diagramId (not the legacy diagramRef); pinned quiz = 3..38, unpinned = 0,1,2, so no pinned item is a pre-test item; composing sectionPayload+pickPretestQuestions over the bundle gives 0 chapters with no question (free and pro) and 2 pre-test questions",
    "note": null
   },
   {
@@ -13383,10 +13383,10 @@
    "rank": 1,
    "text": "Fix the three broken diagram SVGs: redraw PC long-run and monopolistic-competition long-run so AR is genuinely tangent to a clean U-shaped AC (currently AR sits above AC and Qeff is not at min AC), and recompute the monopoly diagram's MR=MC, Pm, Qc and DWL polygon from actual curve intersections. Add a third-degree PD two-market diagram that examMatters already promises.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "Round 2, rebuilt bundle (19:48). Root cause fixed at scripts/_packet29-util.mjs:203 — 'b,' is now on NILE's returned object, so all eight former sites print 6.5/13 (checked each: content[2].sections[2].body[0] 'P = 80 - 6.5Q' and 'MR = 80 - 13Q', body[2] '80 - 6.5 x 5 = $47.50', content[2].sections[3].body[1] 'P = 60 - 6.5Q', quiz[14] stem and explanation, extras.chains[1].steps[4], diagrams[2].scenarios[0] and [1] titles). My own scan for /undefined|NaN|[object|Infinity|null|${/ over all 2,196 bundle strings including SVGs: 0 hits. All four clauses re-measured out of the REBUILT SVGs, not round 1's: (a) D1.S2 AR=MR=P at y=216 is nowhere above AC over 401 samples and touches it at x=308.4 where MC interpolates to exactly 216.0; (b) D2.S1 AR never exceeds AC in price over 1,001 samples, closest approach -0.005px at x=245.18, AC interpolates to 209.34 at the tangency x=245.56 where the AR line is also 209.34 and MC to 278.66 against the MR=MC dot at 278.67, tangency at q=4 on AC's falling part with min AC at (335.33,225.33)=q6/$28; (c) D6.S0 all three markers lie exactly on their curves and the DWL polygon (227.6,167.08)-(227.6,255.69)-(389.2,255.69) = (12,$72),(12,$24),(24,$24), area 1/2*12*$48 = $288 as labelled; (d) D6.S2 two-market PD, MR=MC at Q=12/$72 |PED|1.50 and Q=16/$48 |PED|2.00 on one MC of $24. Guard verified by A/B rather than by description: I copied the five modules to a scratchpad, re-planted the original defect (removed util:203) and ran the copied runner — it refused with all eight strings named, both SVG titles among them. The shipped regex scripts/packet-29-market-structures-contestability.mjs:144 has no trailing \\b and matches 'undefinedQ' and 'NaNQ'; the old /\\bundefined\\b/ form matches neither. It runs over 'texts' (:145), which includes SVGs (:103-105), and problems exit 1 (:825-829).",
    "note": null
   },
   {
@@ -13396,10 +13396,10 @@
    "rank": 2,
    "text": "Close the spec gaps that the quiz already tests: add subsections (or a fifth block) for Monopsony (characteristics, stakeholder costs/benefits), Natural monopoly, X-inefficiency (moved to a short 'Efficiency' opener before perfect competition), barrier-to-entry types, and n-firm concentration ratios; then either remove quiz[2] (shutdown) or teach it. This alone removes the ~75% chance the pre-test contains untaught items.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json content[7].sections[0-1] Monopsony + its costs/benefits (7a,7b); content[6].sections[3] Natural Monopoly (LRAC 2+9000/Q, one firm $11 vs two at $20); content[0].sections[3] X-Inefficiency inside an Efficiency opener that is block 0, before perfect competition in block 1; content[3].sections[1-3] all six 5b barriers; content[0].sections[5-6] n-firm CR calculation and significance; content[1].sections[3] teaches the shutdown point (P>=AVC, min AVC $15 at 5 crates, contribution $0) rather than removing quiz[2]",
    "note": null
   },
   {
@@ -13409,10 +13409,10 @@
    "rank": 3,
    "text": "Add recall exercises (currently zero): reorder recalls from the existing flows (perfect-competition entry chain; game-theory cartel-collapse chain; monopoly MC=MR→AR→DWL chain; contestability hit-and-run chain) and fillin recalls for the three PD conditions and the PC/mon-comp long-run conditions.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json 43 recalls on 43 subsections (18 fillin, 11 classify, 8 match, 6 reorder) against 0 before; the six reorders at b1s2/b2s2/b4s3/b5s0/b7s0/b7s4 each map 1:1 to an extras chain (extras.chains[0..5]), and no subsection anywhere has a flow body (body types are paragraph and bullets only), so packet 26's structural rule holds by construction; fillins for the three PD conditions (b6s4), the PC long-run conditions (b1s4) and the monopolistic-competition long-run conditions (b2s3)",
    "note": null
   },
   {
@@ -13422,10 +13422,10 @@
    "rank": 4,
    "text": "Correct the factual/exam-format errors: Ryanair/easyJet 'lease rather than buy' (wrong — use IndiGo/AirAsia or drop), '25-mark essays' → 20-mark IAL Section C, Nigeria as OPEC over-producer → Iraq/Kazakhstan, Morrisons in the 'big four' → Aldi (2022), soften 'zero dynamic efficiency' in PC; remove the kinked-demand-as-game-theory point from practice[3]'s model answer; and swap at least half the UK examples for HK/SE-Asia/Middle-East equivalents.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json Ryanair/easyJet/OPEC/Nigeria/Kazakhstan/Iraq/Morrisons/Tesco/Sainsbury/Asda/Aldi/Thames Water/Ofwat/Avanti/CMA and the strings '25-mark', 'zero dynamic efficiency', GBP sign, 'UK' are all 0 hits; content[1].takeaway and quiz[11] soften PC dynamic efficiency to 'the weakest of the four'; the 20-marker is practice[6] on monopoly with no kinked-demand claim; every realExample is generic or invented-firm (Mwangi/Nile/Zahra/Delta/Orion), so 0 of 43 are UK",
    "note": null
   },
   {
@@ -13434,10 +13434,10 @@
    "kind": "accuracy",
    "text": "diagrams[3] 'Monopolistic Competition — Long-Run Equilibrium' (svg + checklist): The SVG does not draw a tangency. AC path (M110,100 Q200,195 280,165 Q340,152 440,185) has its minimum at roughly x=240,y=172 and then rises to a hump near x=320 before falling again at high output (an AC curve that falls at high output is malformed). At the marked 'tangency' E (225,148) the AR line is at y≈158 and AC at y≈171, so AR sits ~13px above AC — the picture shows supernormal profit, exactly what the section's own examMatters says 'examiners penalise'. 'Qeff' is drawn at x=295 but the AC minimum is at x≈240, so the 'Excess Capacity' bracket is measured to the wrong point.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "Round 2, rebuilt bundle (19:48). The heading of diagrams[2].scenarios[1].svg now reads 'Nile Crafts: long run, AR = 60 - 6.5Q'; scripts/_packet29-diagrams.mjs:436-437 resolve NI.b because scripts/_packet29-util.mjs:203 exports it on the firm. Both defects the finding names are unreachable, re-measured from the rebuilt SVG: the AR line (66,140)-(470,296) never rises above AC in price at any of 1,001 samples across AC's whole drawn range (closest approach -0.005px), so the picture cannot show supernormal profit; the tangency dot (245.56,209.33) is q=4 at $34 and lies on BOTH curves (AC interpolates to 209.34 there, the AR line to 209.34) with MR=MC confirmed separately (MC interpolates to 278.66, dot at 278.67); and the AC minimum is marked at (335.33,225.33) = q=6 at $28 with the excess-capacity bracket drawn 245.56 -> 335.33, i.e. measured to the AC minimum and labelled 'excess capacity 2', against the finding's bracket ending at the wrong point. Independently re-derived from the cost functions: b = -AC'(4) = 6.5, a = AC(4)+6.5*4 = 60, price = AC = $34, MR = MC = $8, 6-4 = 2. Whole-bundle failed-substitution scan: 0 hits in 2,196 strings. A/B: re-planting the original defect in a scratchpad copy makes the runner refuse and name this SVG by title.",
    "note": null
   },
   {
@@ -13446,10 +13446,10 @@
    "kind": "accuracy",
    "text": "diagrams[1] 'Perfect Competition — Long-Run Equilibrium' (svg + checklist): Same defect: AC path (M110,120 Q200,220 270,170 Q320,155 430,200) has its minimum near x≈226,y≈186, then rises to y≈166 near x≈305 and falls again. The AR = MR = P line at y=160 lies above AC everywhere (AR > AC), so the diagram depicts supernormal profit, not the 'tangent at minimum AC, normal profit only' the checklist claims; E at (270,160) is not on the AC curve (AC at x=270 is y=170).",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json diagrams[1].scenarios[2].svg ('Long run: normal profit'): the AC polyline's lowest price is y=216 at x=308.74 and the AR=MR=P line is drawn at exactly y=216 from x=66 to 461.92, so AR is tangent at min AC and nowhere above it; the equilibrium dot is at (308.4,216), the exact root of MC(q)=$28, and MC crosses y=216 at the same x. Re-derived from TVC=q^3-10q^2+40q, TFC=72: min AC = $28 at q=6 with MC(6)=$28.",
    "note": null
   },
   {
@@ -13458,10 +13458,10 @@
    "kind": "accuracy",
    "text": "diagrams[2] 'Monopoly — Profit-Maximising Equilibrium' (svg): Markers are not on the curves. MR line (90,40)->(270,280) and the MC segment through (200,200)-(280,100) intersect at ≈(205,193), but the MR=MC dot is at (210,170) — ~23px above the intersection. Pm on AR at x=210 should be y≈122 but is drawn at 108. AR=MC (competitive output) is at ≈(244,145) but Qc/the DWL apex is placed at (290,153), where AR is at y≈177 and MC at y≈88 — so the shaded DWL triangle (210,108)-(290,153)-(210,170) is not the area between AR and MC. This is the diagram examMatters calls 'the most important in the entire unit' and it IS the one shown in Learn Mode (block 2 via title-match fallback).",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json diagrams[6].scenarios[0].svg: with the plot transform recovered from the labelled values (y=300-1.846*$, x=66+13.467*Q), the MR=MC dot (227.6,255.69) is Q=12 at $24 and lies on both the MR line (66,78.46)->(268,300) and the MC line y=255.69; Pm (227.6,167.08) is $72 and lies exactly on AR (66,78.46)->(465.96,297.78); Qc (389.2,255.69) is the AR=MC intersection at Q=24; and the DWL polygon's three vertices are (12,$72),(12,$24),(24,$24), area 1/2*12*$48 = $288, matching its label. Independent check: a=120,b=4,mc=24 gives qm=12, pm=72, qc=24, dwl=288.",
    "note": null
   },
   {
@@ -13470,10 +13470,10 @@
    "kind": "accuracy",
    "text": "Contestable Markets > contestable-markets-theory > realExample: 'Airlines like Ryanair and easyJet lease aircraft rather than buying them' — Ryanair overwhelmingly owns its fleet (bulk Boeing 737 purchases; leasing is a small minority), and easyJet owns roughly two-thirds. The factual hook used to illustrate low sunk costs is wrong for the named firms.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json 'Ryanair' and 'easyJet' are 0 hits in the whole bundle; the sunk-cost hook is now content[7].sections[3].realExample, which makes the recoverability claim about the asset class rather than about a named airline's ownership ('An aircraft is among the least sunk of large assets: it can be flown to another route, leased out or sold into a world market'), and content[7].sections[3] teaches 8d from the resale test.",
    "note": null
   },
   {
@@ -13482,10 +13482,10 @@
    "kind": "accuracy",
    "text": "Contestable Markets > evaluating-market-structures > examMatters: 'Top-band 25-mark essays' — 25-mark essays are UK GCE A-level (Papers 1/2/3). IAL WEC13 Section C essays are 20 marks; Section B data-response sub-questions top out at 12. Presents UK-GCE exam format as IAL.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json '25-mark' and '25 mark' are 0 hits; 'Section A/B/C' and 'Paper N' are 0 hits, so the false half of the finding (Section B tops out at 12) is not restated either. practice[] is Calculate 4, Draw 4, Explain 4, Define 2, Analyse 6, Examine 8, Evaluate 20, Discuss 14 — every command/marks pair matches audit/raw/tariff-census.json economics rows (Discuss 14, Evaluate 20), each of the eight command words used exactly once, and every guidance opens on an Appendix 6 gloss.",
    "note": null
   },
   {
@@ -13494,10 +13494,10 @@
    "kind": "quiz",
    "text": "q9: Monopsony is entirely absent from content[], notes[] and flashcards for this section, yet is an IAL spec bullet and a pre-test candidate. Explanation also mislabels: it says 'MCL' (marginal cost of labour) and 'marginal benefit' although the question is about a generic input buyer — should be 'marginal cost of the input (MC of purchasing) = MRP'.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json monopsony is now taught: content[7].sections[0] (assumptions and the AC/MC-of-labour step) and sections[1] (costs and benefits to firms, consumers and employees, which is what 7b at econ_spec.txt:1433-1434 asks for), notes[7], flashcards[31] and [33], and diagrams[7].scenarios[0]. The mislabel is gone because the three items (quiz[34-36]) are explicitly about LABOUR and the explanations say 'marginal cost of labour' equals 'the marginal revenue product' — no 'marginal benefit' anywhere. Re-derived: supply w=20+2.5L, MCL=20+5L, MRP=200-5L, MCL=MRP at L=18, wage off supply $65, competitive 24 at $80, all as drawn.",
    "note": null
   },
   {
@@ -13506,10 +13506,10 @@
    "kind": "practice",
    "text": "p3: 20-mark 'Evaluate the usefulness of game theory' guidance awards marks for 'game theory explains real-world phenomena such as price rigidity — the kinked demand curve model' — the kinked demand curve is NOT a game-theory model, and common_mistakes[2] in this very section warns students not to conflate them. The model answer commits the section's own listed mistake. Also point-based (2+3+2+2+3+2+2+2+2) whereas IAL 20-markers are levels-marked (KAA + evaluation levels); no indication of the KAA/evaluation split.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json the old p3 is gone: the 20-marker is practice[6] 'Evaluate the view that a monopoly always acts against the interests of consumers' and 'kinked' is 0 hits in all prose, so the section's own common mistake is no longer committed by its model answer. The second clause is met the citable way rather than the banned way: 'levels-marked' and 'KAA' are 0 hits (the MARK_CLAIM check keys on both) and practice[6].guidance instead states what Evaluate requires per Appendix 6 — multi-stage chains with reference to context and a critical assessment so informed judgements may be made.",
    "note": null
   },
   {
@@ -13518,10 +13518,10 @@
    "kind": "structure",
    "text": "Zero recall widgets (meta.reorder = 0, meta.fillin = 0; no section has a 'recall' key). Learn Mode's spaced/immediate retrieval layer renders nothing for this section — the flow is read → one MCQ → one practice per block. The flows (e.g. perfect-competition 'supernormal profit → entry → supply up → price falls → normal profit', game-theory 'cartel → temptation → cheat → collapse') are genuine causal sequences that would make good reorder exercises.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json every one of the 43 subsections carries a recall (43 of 43, against 0 before): 18 fillin, 11 classify, 8 match, 6 reorder. lib/learn-steps.js:44-56 renders the recall on its own teach step, so the retrieval layer now renders on every step of the section.",
    "note": null
   },
   {
@@ -13530,10 +13530,10 @@
    "kind": "structure",
    "text": "No block has diagramRef/quizIndices/practiceIndices, so LearnModeTab.jsx:114-118 uses the legacy fallback. matchDiagramsToBlocks (components/learn-mode/utils.js:31) title-matches: diagrams[0] PC short-run → block 0, diagrams[2] Monopoly → block 2, diagrams[4] Kinked → block 1; diagrams[1] 'Perfect Competition — Long-Run Equilibrium' and diagrams[3] 'Monopolistic Competition — Long-Run Equilibrium' find no unused block and are NEVER shown in Learn Mode — even though perfect-competition.examMatters ('practise showing the shift from short-run supernormal profit to long-run normal profit') and monopolistic-competition.examMatters ('the key diagram skill is drawing the long-run tangency') name those exact diagrams. Block 3 (Contestable Markets) gets no diagram.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json all eight blocks carry diagramId, quizIndices and practiceIndices, so LearnModeTab never reaches the legacy title-match path for this section. Verified by composing the shipping functions over the bundle: buildSteps gives 51 steps / 8 check-ins and every check-in resolves a diagram, a quiz item and a practice item; sectionPayload reports 0 chapters with no question for both a free and a Pro reader. The long-run views are now reachable as diagrams[1].scenarios[2] (PC) and diagrams[2].scenarios[1] (monopolistic competition), both inside blocks that pin them — see accuracy-01 for the broken label on the second.",
    "note": null
   },
   {
@@ -13542,10 +13542,10 @@
    "kind": "structure",
    "text": "Quiz fallback (distributeItems, utils.js:12-13): 12 items ≥ 4 steps so quiz[0..3] land on steps 0..3: step 1 (Oligopoly) shows 'In the long run in perfect competition...', step 2 (Monopoly) shows 'shutdown point', step 3 (Contestable) shows the monopolistic-competition excess-capacity item. The kinked-demand (4), price-discrimination (5), Nash (7) and contestability (8) MCQs — the ones that match blocks 1–3 — never appear inline.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json fixed at the root, not in the fallback: distributeItems is never called because every block pins. Each block's quizIndices are its own topic's items — block0 [3,4,5,6] efficiency/CR, block1 [7-11] perfect competition, block2 [12-16] monopolistic competition, block3 [17-20] barriers, block4 [21-24] game theory and collusion, block5 [25-28] price and non-price, block6 [29-33] monopoly, block7 [34-38] monopsony and contestability. No chapter can be served another chapter's question.",
    "note": null
   },
   {
@@ -13554,10 +13554,10 @@
    "kind": "structure",
    "text": "Practice fallback: sortedPractice by marks = [Define PC 4, Outline contestable 4, Explain PD 6, Assess monopoly 10, Evaluate game theory 20]; steps 0–3 get items 0–3, so the Oligopoly step gets the contestable-markets question, the Contestable step gets the monopoly Assess, and the 20-mark game-theory essay (the only one matching block 1) is never surfaced. getPracticeMode then makes the mismatched Oligopoly item the 'guided' one.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json every block pins exactly one practice item of its own topic: block0->practice[0] Calculate CR, block1->[1] Draw PC long run, block2->[2] Explain excess capacity, block3->[3] Define sunk cost, block4->[4] Analyse cartel, block5->[5] Examine non-price competition, block6->[6] Evaluate monopoly (the 20-marker, now surfaced), block7->[7] Discuss sunk costs and contestability. sortedPractice/getPracticeMode is never consulted because practiceIndices resolve first.",
    "note": null
   },
   {
@@ -13566,10 +13566,10 @@
    "kind": "structure",
    "text": "Sequencing: allocative/productive/dynamic efficiency are used from perfect-competition (step 0) onward but only defined in evaluating-market-structures (step 3, last subsection). IAL orders Efficiency (3.3.1) before the structures. The 'Spectrum of Market Structures' overview exists in notes[0] but not in content[], so Learn Mode opens cold on perfect competition with no map of the four structures.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json block 0 'Efficiency and Concentration' is now the first chapter and defines allocative (sections[0]), productive (sections[1]) and dynamic (sections[2]) efficiency and X-inefficiency (sections[3]) BEFORE perfect competition, which is block 1 — spec order per econ_spec.txt:1361-1371. The missing map is in content[] as content[0].sections[4] 'Efficiency in Different Market Structures', which sets out the three dials (number of firms, entry/exit, product identity) and tells the reader which chapter is each extreme, so Learn Mode no longer opens cold.",
    "note": null
   },
   {
@@ -13578,10 +13578,10 @@
    "kind": "structure",
    "text": "Pre-test gate: 3 random MCQs from a 12-item bank in which 4 items (shutdown point, natural monopoly, monopsony, barrier types) test material absent from content[]; P(at least one untaught item) = 1 − C(8,3)/C(12,3) ≈ 75%. This directly feeds the founder's 'pre-test demotivates' hypothesis for this section.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json the pre-test can no longer reach an untaught item. The three unpinned questions are quiz[0] allocative efficiency, quiz[1] X-inefficiency and quiz[2] the CR3 calculation, all taught in content[0].sections[0], [3] and [5]; every other item is pinned to the chapter that teaches it. Running sectionPayload + pickPretestQuestions over the bundle offers a signed-out reader 2 questions (the measured cost of eight blocks), both from that taught set, so P(untaught item) = 0 against the finding's 75%.",
    "note": null
   },
   {
@@ -13590,10 +13590,10 @@
    "kind": "structure",
    "text": "Pairing coherence is otherwise fine: (PC, mon comp), (kinked, game theory), (monopoly, PD), (contestability, efficiency evaluation). Block 3 takeaway[2] ('statically inefficient but dynamically efficient') previews block 4's content rather than summarising block 3 — minor. Difficulty ramp is sensible; monopoly-before-oligopoly would be the more conventional order but the current one works.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json the actionable clause is closed: reading all 43 takeaway bullets across content[0..7], every bullet summarises material taught inside its own block and none previews a later one. The only cross-chapter references point BACKWARDS (content[2].takeaway[0] 'One assumption changed from chapter 2', content[5].takeaway[3] 'a different list from collusion's'). The finding's optional monopoly-before-oligopoly remark is not taken up; spec order at econ_spec.txt:1383-1424 puts Oligopoly first and the finding says the current order works.",
    "note": null
   },
   {
@@ -13602,10 +13602,10 @@
    "kind": "structure",
    "text": "Misconceptions are genuine student errors (normal ≠ zero profit; monopolistic competition ≠ monopoly; oligopoly ≠ always high prices; collusion ≠ always succeeds; PD ≠ always harmful; contestable ≠ merely low entry barriers). 'monopolies always bad' (monopoly-equilibrium-welfare) and 'PC always ideal' (evaluating-market-structures) overlap and could be differentiated (e.g. replace the latter with 'students draw monopoly price from the MR curve').",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json the overlap is gone and the finding's own suggestion is used. mistakes[] carries 'Reading the monopoly price off the marginal revenue curve' (the replacement the finding proposes) and 'Concluding that monopoly is always against the consumer interest'; there is no 'perfect competition is always ideal' item, so the two no longer restate each other. All eight mistakes name distinct errors.",
    "note": null
   },
   {
@@ -13614,10 +13614,10 @@
    "kind": "structure",
    "text": "Real examples are 100% UK (wheat aside): Tesco/Sainsbury's/Asda/Morrisons, Thames Water/Ofwat, Avanti West Coast, CMA, Ryanair/easyJet. For the stated audience (HK, Korea, Singapore, Malaysia, Pakistan, Sri Lanka, Middle East) none of these are recognisable; IAL examiners accept any country's examples.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json Tesco, Sainsbury, Asda, Morrisons, Aldi, Thames Water, Ofwat, Avanti, CMA, Ryanair and easyJet are each 0 hits, as are 'UK', 'Britain', 'British' and the pound sign; all 532 currency figures are in dollars. All 43 realExample entries are either generic ('a city's metro system', 'the only cannery in a fishing town', 'a group of oil-exporting states') or use invented non-UK firms (Mwangi Orchards, Nile Crafts, Zahra Water, Delta/Orion Freight), so 0 of 43 are UK-specific against the finding's 100%.",
    "note": null
   },
   {
@@ -13626,10 +13626,10 @@
    "kind": "specGap",
    "text": "Monopsony (IAL 3.3 'Monopsony'): characteristics; costs and benefits to firms, consumers, employees and suppliers — entirely absent from content[], notes[] and flashcards, though quiz[9] tests it.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json content[7].sections[0] 'Monopsony: a Single Buyer' gives 7a's assumptions as four bullets and the AC-of-the-input mechanism; content[7].sections[1] gives 7b's costs and benefits to firms, employees/other sellers and consumers, which is exactly the list at econ_spec.txt:1433-1434 (the finding's fourth group, suppliers, is not a 7b bullet). Also notes[7], flashcards[31] and [33], quiz[34-36] and diagrams[7].scenarios[0].",
    "note": null
   },
   {
@@ -13638,10 +13638,10 @@
    "kind": "specGap",
    "text": "Natural monopoly (under Monopoly): continuously falling LRAC, MES vs market size, why competition is wasteful — absent from content[] (only in quiz[6] and practice[2] guidance).",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json content[6].sections[3] 'Natural Monopoly' teaches continuously falling LRAC, scale against market size, why competition is wasteful and the policy implication 6e asks for; the arithmetic is AC = $2 + $9,000/Q, one firm at $11 against two at $20 for 500 each. diagrams[6].scenarios[1] draws it and I re-derived both points from the emitted SVG transform: the $11 dot at Q=1,000 and the $20 dot at Q=500 both sit on 2+9000/Q.",
    "note": null
   },
   {
@@ -13650,10 +13650,10 @@
    "kind": "specGap",
    "text": "Efficiency (IAL 3.3 'Efficiency'): X-inefficiency is never defined or taught; efficiency definitions only appear in the last subsection rather than framing the section.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json X-inefficiency is defined and taught in content[0].sections[3] with a worked figure (AC should be $28 at 6 crates, actual $32, so $4 a crate), 'X-inefficiency' is 32 hits across the bundle, and it appears in flashcards[3], quiz[1] and diagrams[0].scenarios[0]. The framing clause is met too: the three efficiency definitions are content[0].sections[0-2], in block 0, ahead of every market structure instead of in the last subsection.",
    "note": null
   },
   {
@@ -13662,10 +13662,10 @@
    "kind": "specGap",
    "text": "Oligopoly: calculation and interpretation of n-firm concentration ratios — absent from content[] (defined once in notes[3]).",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json both leaves of sub-topic 2 (econ_spec.txt:1369-1371) are in content[]: content[0].sections[5] is the CR calculation (CR3 = 28+22+14 = 64%, CR5 = 80%, with the 'always quote n' rule and the sales/volume/capacity caveat) and content[0].sections[6] is 2b's significance — what the ratio does and does not tell you, with a 17/16/16/16/15 counter-example at the same CR5 of 80% but a CR3 of 49%. Also practice[0] Calculate 4 and quiz[2], [5].",
    "note": null
   },
   {
@@ -13674,10 +13674,10 @@
    "kind": "specGap",
    "text": "Oligopoly: types of price competition — price wars, predatory pricing, limit pricing — absent (limit pricing appears only as quiz[10]'s answer).",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json all three of 5e (econ_spec.txt:1400-1404) are taught: content[5].sections[0] 'Price Wars' and content[5].sections[1] 'Predatory Pricing and Limit Pricing', which separates them on the test that matters (predatory is below the SELLER's own AVC, limit pricing is below an ENTRANT's AC) with figures. 'price war' 21 hits, 'predatory' 27, 'limit pricing' 25, against the finding's 'limit pricing only as quiz[10]'s answer'. Also diagrams[5].scenarios[0] and mistakes[3].",
    "note": null
   },
   {
@@ -13686,10 +13686,10 @@
    "kind": "specGap",
    "text": "Oligopoly: non-price competition (advertising, branding, loyalty schemes, quality) and reasons firms prefer it — absent (one 'link' line in notes[2]).",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json content[5].sections[2] 'Non-Price Competition: Five Forms' names and explains all five of 5f at econ_spec.txt:1417-1421 — advertising and branding, quality, endorsement, product placement, after-sales service ('endorsement' 8 hits, 'product placement' 7, 'after-sales' 10) — and its last two paragraphs give the reasons firms prefer it (a cut is matched by the afternoon; quality and service take years to copy; it makes demand less elastic). 'loyalty scheme', which the finding names and the specification does not, is 0 hits. Also practice[5] Examine 8 and quiz[26], [27].",
    "note": null
   },
   {
@@ -13698,10 +13698,10 @@
    "kind": "specGap",
    "text": "Oligopoly: overt vs tacit collusion and the factors making collusion more/less likely (number of firms, similar costs, stable demand, detection/enforcement) — only lightly touched.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json content[4].sections[2] 'Reasons for Collusive and Non-Collusive Behaviour' gives the five factors as bullets (few firms, similar costs, stable demand, detectable cheating, standardised product) and the reverse for non-collusion; content[4].sections[3] 'Cartels and Price Leadership' draws the overt/tacit distinction explicitly and says why it matters for policy. Also notes[4], quiz[23], [24], flashcards, practice[4] Analyse 6 and extras.chains[2].",
    "note": null
   },
   {
@@ -13710,10 +13710,10 @@
    "kind": "specGap",
    "text": "Monopoly: costs and benefits of monopoly to firms, employees and suppliers (spec asks for all stakeholder groups) — only consumers/society covered.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json content[6].sections[2] is titled 'Costs and Benefits to Firms and Consumers' and covers both sides with the arithmetic (consumer surplus $1,152 to $288, $576 transferred, $288 welfare loss, plus scale and dynamic-efficiency arguments the other way) — which is the list 6d actually asks for at econ_spec.txt:1426. The finding's extra stakeholders belong to other leaves and are covered where the specification puts them: workers and governments in content[4].sections[4] (5d) and employees and suppliers in content[5].sections[3] (5g).",
    "note": null
   },
   {
@@ -13722,10 +13722,10 @@
    "kind": "specGap",
    "text": "Monopoly: third-degree price discrimination diagram and explicit costs/benefits to producers AND consumers — evaluation is present, diagram is absent.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json the diagram exists and is correct: diagrams[6].scenarios[2] 'Third-degree price discrimination' draws two demand curves against one MC. Re-derived from the emitted SVG transform: Market A P=120-4Q gives MR=MC at Q=12, $72, |PED| 1.50; Market B P=72-1.5Q gives Q=16, $48, |PED| 2.00; total profit $960 — so the less-elastic-pays-more rule falls out of the picture. 6f's conditions are content[6].sections[4] and 6g's costs and benefits to firms AND consumers are content[6].sections[5].",
    "note": null
   },
   {
@@ -13734,10 +13734,10 @@
    "kind": "specGap",
    "text": "Contestability: types of barriers to entry and exit (legal, sunk costs, economies of scale, brand loyalty, predatory behaviour) — no taxonomy of barriers taught anywhere in content[].",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json the taxonomy is taught in content[]: content[3].sections[1] economies of scale and limit pricing, sections[2] patents, branding and legal, sections[3] sunk costs — all six bullets of 5b at econ_spec.txt:1386-1391 — plus diagrams[3].scenarios[0] 'The six barriers'. Built under Oligopoly rather than Contestability because that is where the specification puts it; contestability's own leaf 8d is content[7].sections[3], which cross-references it ('having already appeared among chapter 4's barriers'). The finding's 'predatory behaviour' is 5e-2 and is content[5].sections[1].",
    "note": null
   },
   {
@@ -13746,10 +13746,10 @@
    "kind": "specGap",
    "text": "Perfect competition: short-run loss-making equilibrium and shutdown decision (P ≥ AVC) — not in content[] (may belong to the revenue-costs-profits section; unsure of IAL placement, but quiz[2] tests it here).",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json taught here rather than removed. content[1].sections[3] 'The Short-Run Shutdown Point' gives 3c (econ_spec.txt:1372) applied to the perfectly competitive firm: produce while P >= AVC, shutdown at min AVC $15 at 5 crates, checked (revenue $75, total cost $147, loss -$72 = the fixed cost, contribution $0), with the stricter long-run P >= AC $28. diagrams[1].scenarios[3] draws it and I verified the loss rectangle spans $15 to $29.40 over 5 crates = $72. Also quiz[10], flashcards[10], mistakes[4].",
    "note": null
   },
   {
@@ -13758,10 +13758,10 @@
    "kind": "specGap",
    "text": "Unsure: the kinked demand curve is given a full subsection and diagram, but I do not recall it as an explicit IAL oligopoly bullet (the explicit bullets are concentration ratios, collusive/non-collusive behaviour, game theory, price and non-price competition). Worth verifying against the WEC13 spec before keeping it at this weight.",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json verified against the specification — 'kinked' is 0 hits in audit/raw/econ_spec.txt — and the model is removed at every weight it had: no subsection, no diagram, no quiz item, and the 20-mark model answer is now practice[6] on monopoly. The one surviving occurrence in the bundle is deliberate and points the other way: the caption of diagrams[4].scenarios[1] tells the student '3.3.3 * 5c names these five, and the kinked demand curve is not among them - it is not in the specification at all' (scripts/_packet29-diagrams.mjs:521). 5c's own apparatus replaces it: 'game theory', 'cartel' 23 hits, 'price leadership' 12, 'price war' 21. NOTE the packet's acceptance check 2 (grep -ci kinked = 0) is therefore 1, not 0, because the runner's ban() only scans non-SVG strings.",
    "note": null
   },
   {
@@ -13770,11 +13770,11 @@
    "kind": "specGap",
    "text": "Unsure: app numbering '3.3.3' does not correspond to IAL spec numbering, where Market structures and contestability is its own topic heading with ~7 sub-bullets (Efficiency, Perfect competition, Monopolistic competition, Oligopoly, Monopoly, Monopsony, Contestability); the app's 3.3.1/3.3.2 are Business growth and Revenues/costs.",
    "packet": 29,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "WRONG CLAIM, verified against the specification. It says the app's '3.3.3' does not correspond to IAL numbering; econ_spec.txt:1359 is literally '3.3.3 Market structures and contestability', and :1245 and :1294 are '3.3.1 Types and sizes of businesses' and '3.3.2 Revenue, costs and profits' — exactly what the app has. It also counts '~7 sub-bullets' where there are eight, omitting sub-topic 2, Concentration ratio. Nothing to fix. Packet 29, 17 Sep."
   },
   {
    "id": "C-labour-markets-topFix-01",
@@ -17014,10 +17014,10 @@
    "kind": "specThin",
    "text": "3.3.3 Monopolistic competition 4b: physical product differentiation — product features — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json content[2].sections[1] 'Three Types of Product Differentiation' defines physical differentiation rather than naming it: 'the product itself differs - what it is made of, what it does, how long it lasts, how it looks', and the subsection then explains what differentiation buys (a downward-sloping rather than horizontal demand curve) and that success can be copied under free entry. Backed by recall b2s1 (a match widget over the three types), flashcards[12] and quiz[13]. The body is clean of the NI.b defect that hits sections[2] and [3].",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -17026,10 +17026,10 @@
    "kind": "specThin",
    "text": "3.3.3 Monopolistic competition 4b: marketing differentiation — advertising, packaging — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json content[2].sections[1] defines marketing differentiation with the specification's own two examples and the distinction that makes it examinable: 'the product may be near-identical and the way it is presented is not: the name, the advertising, the packaging', followed by the worked contrast that the second and third types work on physically identical goods ('Two shops may sell an identical bag of rice; one is trusted, or one delivers. The rice is undifferentiated and the OFFER is not'). Also recall b2s1, flashcards[12], quiz[13].",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -17038,10 +17038,10 @@
    "kind": "specThin",
    "text": "3.3.3 Monopolistic competition 4b: distribution differentiation — shop, online, telephone — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 29,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-29",
+   "verified_by": "packet-verifier 2026-09-17",
+   "evidence": "audit/snapshots/packet-29-bundle__economics__market-structures-contestability.json content[2].sections[1] defines distribution differentiation with the specification's three channels and why it counts: 'where and how the product can be bought - in a shop, online, by telephone - which is part of what the buyer is choosing'. The same subsection distinguishes it from chapter 6's non-price competition, so a student can tell 4b from 5f. Also recall b2s1, flashcards[12], quiz[13].",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -18206,6 +18206,19 @@
    "title": "audit/ledger.json is losing committed work to concurrent sessions. HEAD (fcd942e, packet 27) holds V001-V014 and V024-V025 but NOT V015-V023 — nine feature items, including the two packet 2.5 was built on — which exist only in the working tree. The index, staged at 16:55 on 17 Sep and never committed, holds a third version that reverts packet 27's OWN 25 confirmations back to open. So the definition of coverage has three disagreeing copies and the committed one is not the most complete. Packet 2.5's commit restores the nine. Needs a write path that cannot lose an item: re-read and merge, or refuse to write a file that changed since it was read. audit/scripts/ledger.mjs",
    "file": "audit/scripts/ledger.mjs",
    "packet": 2.6,
+   "status": "open",
+   "closed_by": null,
+   "verified_by": null,
+   "evidence": null,
+   "note": null,
+   "added": "2026-09-17"
+  },
+  {
+   "id": "V028",
+   "kind": "feature",
+   "title": "ExtrasTab crashes on a chain carrying `points` instead of `steps` — packet 28's third chain does, and it is staged for the next ship checkpoint",
+   "file": "components/ExtrasTab.jsx",
+   "packet": 30,
    "status": "open",
    "closed_by": null,
    "verified_by": null,

@@ -1,6 +1,6 @@
 # Next session brief
 
-## Packet 29 spec — `market-structures-contestability`, Economics 3.3.3 (in progress, Opus 5, 17 Sep)
+## Packet 29 spec — `market-structures-contestability`, Economics 3.3.3 (DONE, Opus 5, 17 Sep)
 
 `audit/raw/econ_spec.txt:1359-1440`. **61 oracle rows / 54 substantive leaves — the largest section in
 the programme** (packet 22's 46 was the previous high). Live state: **4 blocks · 8 subsections · 12 quiz ·
@@ -129,13 +129,23 @@ Not mine and not touched: **V022** (`diagram.table-legible` is a design decision
 
 1. `node scripts/packet-29-market-structures-contestability.mjs` exits 0 — it is the section's first
    reader and carries every check below plus the A/Bs.
-2. `grep -ci kinked` over the emitted bundle is **0**, and `grep -c "game theory\|cartel\|price
-   leadership\|price wars"` is non-zero: the off-spec model is gone and the spec's own apparatus replaces it.
+2. `grep -ci kinked` over the emitted bundle is **1**, not 0, and the one hit is the interdependence
+   diagram's caption telling the student the kinked demand curve is NOT in the specification — worth
+   saying, because a student arrives expecting it. The runner enforces exactly that: the ban now reads
+   SVG `<text>` as well as prose (it could not see the caption at all before, which is how two
+   `undefined` diagram titles also got through), and it refuses on any mention that does not exclude
+   the model, while requiring exactly one that does. `grep -c "game theory\|cartel\|price
+   leadership\|price wars"` is non-zero: the spec's own apparatus replaces it.
 3. Every one of the **54 leaves** maps to a named subsection in the runner's hand-written
    `LEAF_MAP`, and the runner fails if any leaf is unmapped or any mapped subsection does not exist.
    Coverage from the oracle is reported but is NOT the gate (V025).
 4. `blocks === 8`; every block has a `diagramId`, ≥1 `quizIndices` and ≥1 `practiceIndices`; exactly
-   three quiz items unpinned and first in the array; no pinned item is a pre-test item.
+   three quiz items unpinned and first in the AUTHORED array; no pinned item is a pre-test item.
+   **The authored array is not the served payload**, and the two must not be confused when reading
+   this: `freeQuizPayload()` sends a signed-out student ten of the thirty-nine items and REWRITES
+   `quizIndices`, so in what the student receives the eight chapter pins are at 0-7 and the unpinned
+   pair is at 8-9. Verify B measured the pre-test at two questions on that basis, neither repeated at
+   any check-in — so the third authored pre-test item never reaches a signed-out student at all.
 5. Every practice `command`/`marks` pair is in the **economics** census — no `Assess`, no `Outline`, no
    10- or 12-mark item anywhere in the bundle, and `Draw`/`Construct` used only as the census allows.
 6. No reorder recall in a subsection with a `flow` body; every reorder's items token-overlap < 0.6 with
@@ -145,163 +155,159 @@ Not mine and not touched: **V022** (`diagram.table-legible` is a design decision
 8. Every figure in every diagram re-derived from the emitted SVG; nothing drawn outside its canvas; no
    table cell collisions; `matrixSvg` throws on a cell that does not fit one line.
 9. `npm run validate` → 0 BLOCK and 0 new DEBT for this section; `npm test` green; `npm run build` green.
-10. **Verify B at 390×844 with `?draft=1`**: walk all steps of `market-structures-contestability`; the
-    pre-test must offer **two** questions (the measured cost of eight blocks, not a defect); every chapter
-    check-in must show a diagram and a question; the game-theory payoff matrix must be legible at 390px;
-    no step may show a recall whose answer is printed above it.
+10. **Verify B at 390×844 with `?draft=1`**: walk all 51 steps of `market-structures-contestability`
+    (43 teach + 8 check-in, confirmed against `buildSteps`); every chapter check-in must show a diagram and
+    a question on its own chapter's topic; the game-theory payoff matrix must be legible at 390px; no step
+    may show a recall whose answer is printed above it; and the Extras tab must render both its
+    "Chains of Analysis" and its "Evaluation Points".
 
-## Take packet 29 — `market-structures-contestability`, Economics 3.3.3 (Opus 5, NEW session)
+    **What the pre-test will show, measured rather than predicted.** `freeQuizPayload()` sends a signed-out
+    student **10 of the 39 items** and **all eight chapters resolve a check-in question** (measured against
+    the shipping function on the emitted bundle). The UNPINNED prefix it sends is **two**, which is the
+    priced cost of the eighth block. But `PreTest.jsx:23-27` builds its pool as `[...free, ...reserved]`
+    and slices three, so the student is offered **three questions, the third of which is a pinned one** and
+    will be asked again at a chapter check-in. That is packet 20's open founder item, not this packet's
+    defect and not fixable by any content packet: a fourth unpinned item never reaches the student, because
+    the slice takes only the first `PREVIEW_LIMITS.quiz` of the unpinned prefix. So a three-question
+    pre-test with one repeat is the EXPECTED observation here; an earlier draft of this spec block said
+    two, which was the size of the prefix rather than the size of what the student sees.
 
-**Check `audit/PROGRESS.md` for the live row before starting anything.** Four sessions ran in this
-worktree on 17 September; "next" is whichever row still says `not started`. Packets 26 and 28 were
-in flight when this was written.
+### Verify B report — three rounds, and what it found that nothing else could
 
-**Section:** `market-structures-contestability`, Economics **Unit 3 (WEC13)**, IAL topic **3.3.3**,
-`audit/raw/econ_spec.txt:1363-1440`. **54 leaves — the largest section in the programme**, half as
-large again as packet 25's 35, across **eight sub-topics** (efficiency · concentration ratios ·
-perfect competition · monopolistic competition · oligopoly · monopoly · monopsony · contestability).
-24 ledger items.
+Signed-out walk at 390×844 with `?draft=1`, all 51 steps (43 teach + 8 check-in) each round. It found
+**four real defects on round 1, one I had INTRODUCED while fixing them on round 2, and a whole class
+nothing in this repository could see on round 3.**
 
-### Read this before you choose a block count — it is the one decision you cannot walk back
+- **Round 1.** Four `undefined`/`NaN` substitutions on screen in chapter 3. **24 of 43 steps carrying a
+  recall answerable by scrolling up, and not one of them a reorder.** **12 of 19 diagram scenarios with
+  colliding labels**, measured with `getBoundingClientRect` — a title against the y-axis unit and an
+  axis label against the caption's first line on eleven of them. Pre-test: **two questions**, both from
+  taught material, neither repeated at any check-in; all eight check-ins carrying a diagram and a
+  question on their own topic; Extras rendering both its sections.
+- **Round 2.** Substitutions gone (0 across a per-step sweep of all 51). Recalls 24 → 15: eight of the
+  twelve reworked ones clear, four still registering, and **step 47's replacement contradicted itself**
+  — incumbent profitability on BOTH sides of one dimension with two incompatible rationales shown to
+  the student on checking, an exercise with no consistent answer. 18 of 19 scenarios clean.
+- **Round 3.** Step 47 consistent. Recalls 15 → 10. **Step 6 at 218px was the worst instance of any
+  round and had registered in all three** — its EXAM MATTERS box printed both fill-in answers, and my
+  own check had never read `examMatters`. **Step 7's recall contradicted the paragraph above it**, the
+  same class as round 2's. 19 of 19 scenarios clean. And a new class: **a label struck through by its
+  own guide line** — a horizontal read-off passes through any label sitting on its value, which the
+  extent and collision checks both pass. Three cases, the worst crossed along its whole length.
 
-**This section was rewritten by packet 2.5 on 17 September. The table it replaces said eight was the
-ceiling and that raising `FREE_QUIZ_MAX` was a founder decision; neither is true now.** V016 and V019
-changed what `freeQuizPayload()` sends: every chapter takes a question first, then the pre-test's
-headroom, all still bounded by `FREE_QUIZ_MAX` (10), which did NOT move and does not need to.
-Measured against the shipping functions, for a section pinned the way the template pins:
+Everything above is fixed. The runner now carries a check for each class, and two of those checks were
+themselves wrong on their first run — see DECISIONS.
 
-| blocks | 5 | 6 | 7 | 8 | 9 | 10 | 11+ |
-|---|---|---|---|---|---|---|---|
-| chapters served a check-in quiz | 5 | 6 | 7 | 8 | 9 | 10 | **10** |
-| pre-test questions a signed-out student gets | 3 | 3 | 3 | **2** | **1** | **0** | **0** |
+**What is NOT clean, recorded rather than claimed.** The two recall measurements disagree and the
+disagreement is about threshold, not about fact. The runner's check asks whether the ANSWER is
+recoverable and reads **0 of 43**. Verify B's asks whether 0.6 of the item's words appear anywhere
+above it and read **10 of 43** before the step 6 and 7 fixes, four of them inside a single 844px
+viewport (steps 9, 18, 22 and 42, at 793, 745, 440 and 797px — each needing a deliberate scroll of
+half a screen to a screen). Verify B's own note is that its 10 is "a floor, not a ceiling", because a
+token measure misses an item phrased as a question against a body phrased as a statement. **A future
+packet should reconcile the two thresholds and re-walk those four**; this packet fixed the two that
+were inside a viewport AND gave a wrong answer, and left four that are merely findable by scrolling.
 
-**The ceiling is ten chapters, and what a ninth and tenth cost is the pre-test, not a chapter.** So
-54 leaves across eight chapters is no longer the constraint it was: eight costs one pre-test question
-and nine costs two, and neither leaves a check-in empty. Above ten a chapter gets nothing, which is
-the line not to cross. Packet 27 chose seven under the old ceiling and packet 25 ran at eight; both
-remain fine.
+Known and out of scope, all confirmed still visible: **V006** (now firing on an 8th chapter),
+**V022** (the matrix note at 5.5px — and the phone column is **307px**, not the 530px the 17 September
+recalibration used), **V024**, the server-rendered shell ignoring `?draft=1` (the hub reads "12 steps"
+against 51, and a hidden `.sr-only` block ships the OLD notes including "kinked demand curve" ×26),
+the diagram modal rendering at 858px in a 390px viewport, and `ExtrasTab`'s hardcoded "(10–14 marks)".
 
-The founder decision the old text pointed at is closed. Do not open the session by asking for the cap
-to be raised — decide the block count on the pedagogy and this table.
+## Take packet 30 — `managing-people`, Business 2.4 (Opus 5, NEW session)
 
-### Start from `scripts/packet-27-*.mjs`, not 25's or 26's
+**Check `audit/PROGRESS.md` for the live row before starting anything.** Several sessions share this
+worktree; "next" is whichever row still says `not started`. Packet 29 finished 17 September.
 
-It carries three things the earlier runners do not:
+**Section:** `managing-people`, **22 ledger items**. Read the spec span before you read the findings,
+and run `node audit/scripts/ledger.mjs packet 30 --open` yourself rather than trusting this brief.
 
-1. **The copy-from-screen check is now the validator's own paraphrase-tolerant matcher**, not a string
-   comparison — and you need it, because the way you will meet it is by satisfying `reorder.source`.
-   That DEBT rule wants a reorder's sequence taught by a flow **in the same subsection** or by an
-   extras chain, and adding the flow is the cheap way to clear it — which puts the answer on the
-   screen directly above the recall (`learn-steps.js:10`). Packet 25 banned the verbatim form; packet
-   27 reproduced it five times in PARAPHRASE and Layer 6 caught three. **Source every reorder from an
-   extras chain.** The check and its A/B are in the runner; carry both.
-2. **`matrixSvg`** — a 2×2 renderer with both axes named, one text per cell, and a throw when a cell
-   does not fit one line. 3.3.3 has a natural use: a two-firm/two-outcome game theory payoff grid
-   (`5c-1`). One text per cell is a constraint, not a limitation: two lines per cell puts four labels
-   on two x positions, which is `diagram.table-kind`'s definition of a grid and costs the diagram its
-   "what a correct diagram shows" checklist (packet 22 found this first).
-3. **A unit-aware tariff check.** Packet 27 is Business, so swap the census back to `economics` — but
-   keep the shape: the census row alone is not enough where a command word carries two tariffs.
+### Start from `scripts/packet-29-*.mjs`, and take these five checks with you
 
-### The rule-1 pre-flight you must do yourself
+Packet 29 is Economics and packet 30 is Business, so swap the census subject — but the runner carries
+five things no earlier one does, and three of them exist because a verifier found a defect that every
+mechanical check in this repository had passed.
 
-Packet 27 found **8 of 26** claims wrong. The rate across packets 14-27 is 4, 4, 6, 5, 6, 8, 5, 8, 8 —
-it is not falling. Two warnings specific to 3.3.3:
+1. **`FAILED_SUBSTITUTION`, over every string INCLUDING the SVGs.** Packet 29 shipped eight
+   student-facing strings reading `P = 80 − undefinedQ` and `MR = 80 − NaNQ`, one of them a scored
+   quiz stem and one its own explanation, because a gradient lived on `NILE.short.b` and the template
+   asked for `NILE.b`. Nothing saw it: the arithmetic was right so every figure re-derivation passed,
+   and `ban()` filters SVG strings out of `prose` so two were invisible twice over. **A section built
+   out of template literals must check that every substitution substituted.** Note the regex has no
+   TRAILING word boundary — `/\bundefined\b/` does not match `undefinedQ`, which the A/B caught on the
+   first run, and the guard written for the defect would otherwise have passed the defect.
+2. **The vocabulary bans read SVG `<text>`, joined per diagram.** Closing that blind spot immediately
+   found a banned phrase sitting in a diagram caption. Joined per diagram because a caption is wrapped
+   one `<text>` a line, so a phrase spanning two lines is in neither of them.
+3. **The answer-recoverable recall check — rule 6, generalised to every recall type.** Verify B walked
+   packet 29 and found **24 of 43 steps carrying a recall answerable by scrolling up, and not one was
+   a reorder**. All three copy-from-screen rules this programme carries read a reorder against a flow
+   box; the defect was a property of the SCREEN all along. The check measures whether the ANSWER is
+   recoverable, not word overlap — overlap flags 29 of 43 because any recall shares vocabulary with
+   the teaching of its topic, and the sharp test flags twelve. **Author recalls that apply the idea to
+   figures or to a new case**, not ones that restate the sentence above them.
+4. **The collision check compares glyph BOXES, with a vertical tolerance.** Grouping `<text>` by exact
+   rounded y compares table cells and nothing else: it reported zero collisions while twelve of
+   nineteen scenarios were colliding, including a title at y=30 against an axis label at y=26. The
+   layout now also has a written-down vertical budget under the plot (+15 a read-off, +32 the axis
+   label, no caption above +48), because a diagram fix belongs in the layout and not in the guard.
+5. **`place()` and `clamp()`.** A label cannot be placed off-frame, because the placement asks the
+   same `estWidth` the check asks; and a line's far end is clamped to the plot, because a demand
+   curve's x-intercept is a property of the curve while fitting the picture is a property of the
+   picture. Packet 29's extent check found eleven strings outside their canvas on the first run.
 
-- **This section legitimately owns several things earlier packets had to BAN.** `allocative efficiency`
-  is `:1364` and packets 24 and 25 both removed it from Unit 1 sections as "3.3.3, Unit 3" — it is
-  **yours**. So are `monopoly` (`:1424`), `barriers to entry` (`:1386`), `sunk costs` (`:1391`),
-  `market power` in its Unit 3 sense, and `product differentiation` (`:1379-1382`), which packet 27
-  confirmed is Unit 1 marketing vocabulary in the BUSINESS spec and is a named leaf here in the
-  ECONOMICS one. **Grep before you assume a ban carries over; the ban lists in packets 24-27 are
-  about sections that did not own these.**
-- **The reverse trap is `X-inefficiency` (`:1367`) and `monopsony` (`:1432-1434`)**, which are named
-  leaves here and appear nowhere else in the programme. A section this large is where a whole
-  sub-topic goes missing unnoticed — packet 25's `speculation` gap, which no ledger item named and
-  only the coverage oracle could see. Walk inward from the spec, not outward from the findings.
+### What packet 29 learned that packet 30 needs
 
-### What packet 27 learned that packet 29 needs
+- **A check's BLIND SPOT is worse than a missing rule, because it reports green.** Three separate
+  defects in packet 29 were invisible not because no rule existed but because the corpus the rules
+  read excluded the surface the defect was on. Ask what your checks LOOK AT, not only what they
+  look for.
+- **A/B every new check, and expect the A/B to fail.** Two of packet 29's new checks were wrong on the
+  first run — the missing-substitution regex, and a `/g` regex whose `lastIndex` advanced between
+  `.test()` calls inside a filter and so reported the one deliberate mention as undeclared. Both
+  surfaced because the A/B plants the defect first. Packet 21's rule earned its place twice in one packet.
+- **Layer 6 finds the class no measurement can.** Packet 29's first diagram marked a bare point on the
+  marginal cost curve "allocative: P = MC = $8" and drew no price curve at all. Every check passed it:
+  correct figure, on the curve, inside the canvas. It was circular, and it taught allocative
+  efficiency as a fixed point on a firm's cost curves — the one thing the pair of static tests exists
+  to distinguish. Plant two canaries, void the report if it misses one.
+- **A finding can ask a QUESTION rather than make a claim, and the answer can move a chapter.**
+  `specGap-12` said only "I do not recall the kinked demand curve as an explicit IAL bullet … worth
+  verifying before keeping it at this weight." `kinked` is 0 hits in `econ_spec.txt`, and the section
+  had given the model a subsection, a diagram, quiz items and its 20-mark model answer. Rule 1 applies
+  to a finding's hedges as much as to its assertions.
+- **11 of 37 scope claims were wrong, the highest rate in the programme** (4/4/6/5/6/8/5/8/8 across
+  packets 14-27). It is not falling. Check every claim against the spec span before building.
+- **The block count is a decision with a measured price, not a founder question.** V016's table settles
+  it: eight blocks cost a signed-out student one pre-test question, nine cost two, and above ten a
+  chapter is served none. Packet 29 chose eight for 54 leaves and Verify B confirmed the two-question
+  pre-test on screen. Decide it on the pedagogy and the table, and say the price in the spec block.
 
-- **A named tool imports its own cells and nothing else** (DECISIONS, 17 Sep). `game theory`,
-  `cartel`, `price leadership` and `predatory pricing` are all named at `:1394-1404`, so their
-  apparatus is in scope; a framework the spec does not name is not, however standard it is.
-- **An acceptance check that no code runs is a wish** (packet 25) and **the cheapest way to satisfy a
-  DEBT rule can be the defect** (packet 27). Read two rules that point at the same screen together.
-- **`diagram.table-legible` reports, it does not gate.** Commit `9418fb0` corrected it to the 530px
-  column a laptop actually gives, and it now fires on 13 of the 14 held sections. Packet 27 measured
-  its own four tables at **11-17% over the frame** at the size the rule demands. Do not spend the
-  session on it; it is V022 and a design decision.
-- **The coverage oracle matches by SUBSTRING** (V025, filed by packet 27): a leaf of one or two
-  distinctive terms can be "covered" by an unrelated word — `nothing enforces them` satisfied
-  "Porter's five forces". 3.3.3 has many short leaves (`patents`, `branding`, `quality`,
-  `endorsement`, `cartels`). **Map each leaf to the subsection that teaches it by hand** and do not
-  trust 100% from the oracle alone; packet 27's mapping script is in its Verify B report.
-- **V024**: `PracticeQuestionsTab` carries the UK GCE tariff ladder, so 2, 8, 12 and 14-mark questions
-  cannot be filtered and all paint in the 4-mark green. Economics uses 2, 8 and 14. Your practice bank
-  will be affected; it is not yours to fix.
+### Open for the founder, unchanged by this packet
 
-
-### What packet 26 learned that the next content packet needs
-
-- **A quiz explanation may not name an option by POSITION.** Seven of packet 26's thirty-five did, and
-  six of those described the CORRECT answer as if it were a distractor: items are authored key-first,
-  `placeKeys` deals the key into a slot, and `F074` shuffles again at render. Nothing in the repository
-  reads an explanation as a reference to anything — every quiz rule reads the OPTIONS. Name the option
-  by its CONTENT (`"$900 uses the 60 tonnes traded BEFORE the tax"`), never by its place. The runner's
-  ban and its A/B are in `scripts/packet-26-government-intervention.mjs`; copy them.
-- **Split a multi-part finding into clauses BEFORE building, in the spec block (rule 5).** Packet 26 did
-  not, and Verify A rejected it on the clause that went unassigned. `structure-04` says the reorders are
-  verbatim copies of the flow box AND that they render below that flow box on the same step. Closing the
-  first clause twice — by string identity, then by token overlap — does not touch the second.
-- **A reorder may not sit under a flow box at all.** Rewording makes it easier to copy, not harder: the
-  words change and the ORDER, which is the only thing a reorder tests, is still printed above it. The
-  rule packet 26 now enforces is structural and needs no judgement: a subsection with a `flow` body does
-  not carry a `reorder` recall. It cost that section its reorder variety (1 of 31). **The real fix is a
-  packet-7 change** — `lib/learn-steps.js` decides recall placement, so "render it only as a spaced
-  recall on a later step", which is the finding's own first remedy, is not available to an author. Doing
-  it would give every section its reorders back and is worth doing before the next content packet.
-- **The copy-from-screen check must measure MEANING, not characters.** Packet 26 passed packet 25's
-  string-identity version with three items at 0.67, 0.67 and 0.73 token overlap against the flow step
-  above them. Packet 27 reached the same conclusion independently the same day. **Two packets finding
-  one gap in one day is the argument for moving it into the validator** rather than copying it forward
-  a third time.
-- **`diagram.table-legible` was recalibrated on 17 Sep to the real 530px column and now fires on every
-  table packets 20-28 have authored.** Packet 26's two cleared it by raising cells from 11 units to 13,
-  because they were authored short — measured in the browser at 12.3px. **The constraint is cell LENGTH.**
-  A table written to be read rather than to be exhaustive passes today.
-- **One diagram, one kind.** A diagram that pairs a drawing with a lookup table gets a "what a correct
-  diagram shows" checklist printed over the table. Packet 26 moved four such lists into the teaching
-  text, where they already were, and the two diagrams that lost a table gained a better second panel —
-  the benefit side of 1a, and the specific-versus-ad-valorem comparison `specGap-03` asks to be DRAWN.
-- **Layer 6's brief still does not name the pre-test, and it cost a false positive for the second packet
-  running.** Packet 25's handoff said to add the line; packet 26's brief did not have it either, and
-  Layer 6 duly reported the three unpinned items as unreachable. **Make the brief a file** —
-  `.claude/agents/content-adversary.md`, beside the other two — carrying the pre-test line, the IAL
-  numbering trap and the instruction to report defects only. A lesson that lives in NEXT.md gets
-  rewritten away every packet.
-- **Canary honesty.** Packet 26 planted two and Layer 6 caught one. Report the number caught, not the
-  number planted.
-
-### Two hazards live in this worktree right now
-
-- **The ledger hazard is resolved as of packet 2.5's commit, and the cause is now `V027`.** HEAD had
-  LOST V015-V023 entirely — nine feature items that existed only in the working tree, because a session
-  with a stale copy wrote the file back and a commit captured that. Packet 2.5's commit restores them
-  and carries packets 26 and 28's confirmations, which those sessions left uncommitted. **Keep diffing
-  the ledger by id before committing it**: `git show HEAD:audit/ledger.json` against the working file,
-  and confirm every change is either yours or a confirmation you can account for.
-- **Packet 27's five source files were staged for deletion in the shared index while present on disk.**
-  A bare `git commit` from any session would have deleted them. Packet 26 committed with
-  `git commit --only <paths>` and did not carry them, and they are intact in HEAD — but **check
-  `git diff --cached --stat` before any commit in this worktree**, because the index is shared and a
-  deletion somebody else staged is indistinguishable from one you meant.
-
-**Exit criteria:** staged bundle at 0 BLOCK / 0 new DEBT (`diagram.table-legible` excepted, with the
-measurement) / 100% of its 54 leaves · every block pinned to a diagram, a quiz item and a practice
-item it owns · practice on the ECONOMICS ladder only (**no Assess, no 10-mark**) · every guidance two
-paragraphs with a scaffold first · Verify A clean · a 390×844 walk with the browser measurement of
-every diagram string · Layer 6 with two planted canaries · PROGRESS row · commit · push.
-**Do not publish**: the packet 5/7 checkpoint holds, and fourteen sections now wait on it.
+- **V028 is new and it matters before the ship checkpoint.** `ExtrasTab.jsx:62` calls
+  `chain.steps.map()` with no guard, so an extras chain carrying `points` throws and takes the tab
+  down. Packet 28's third chain does exactly that, and it is staged for the next checkpoint. A FREE
+  student never reaches it, because `previewMode` slices the list to one chain — which is why no
+  walkthrough has caught it, and why **Verify B can only ever run signed-out** is a limit worth
+  remembering. Filed for packet 30, with a chip. Fixing it means the component, an `extras.shape`
+  validator rule, correcting packet 28's chain AND **re-staging packet 28's draft**.
+- **The server-rendered shell ignores `?draft=1` entirely, and it is wider than the overview card.**
+  Packet 19 filed the card; Verify B measured the whole page. The hub reads "Learn Mode · 12 steps"
+  against Learn Mode's actual 51, and a hidden `.sr-only` block ships the OLD LIVE notes — including
+  "kinked demand curve" ×26 and the Tesco/Sainsbury's/Asda/Morrisons example this packet removed.
+  `clip: rect(0,0,0,0)`, so a sighted student never sees it; a screen reader and a crawler do.
+- **The diagram modal is unusable at 390px.** It renders the SVG at 858 CSS px in a 390px viewport,
+  and no scroll position shows all four cells of the game-theory matrix — 492px of 882 is hidden.
+  The "Tap to enlarge" label is also not a click target; only the diagram body opens it.
+- **`ExtrasTab`'s own subtitle hardcodes "(10–14 marks)"**, a tariff the Economics census does not
+  carry. Student-visible on every Economics section.
+- **V022 has a real number now.** The runner reports 406 strings under 12px against a 530px column,
+  but Verify B measured the rendered width at **307px**, where the matrix note falls to **5.5px** —
+  about a third of body text. The recalibration on 17 September used 530; the phone gives 307.
+- Unchanged: **V006** (now firing on an 8th chapter), **V024**, **V025** (worked around by packet 29's
+  hand-written `LEAF_MAP`), packet 6, `scripts/packet-2-draft-state.sql`, the 160 back-catalogue
+  practice items, and the packet 5/7 ship checkpoint that packets 5, 5.1, 7 and 14-29 are all held for.
 
 ## Packet 2.5 spec — the guards that cannot see their own regressions (Opus 5, 17 September 2026)
 
