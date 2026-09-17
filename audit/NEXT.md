@@ -56,6 +56,99 @@ no 10-mark**) · every practice guidance two paragraphs with a scaffold first ·
 walk · Layer 6 with two planted canaries · PROGRESS row · commit · push. **Do not publish**: the packet
 5/7 checkpoint still holds, and twelve sections now wait on it.
 
+## Take packet 29 — `market-structures-contestability`, Economics 3.3.3 (Opus 5, NEW session)
+
+**Check `audit/PROGRESS.md` for the live row before starting anything.** Four sessions ran in this
+worktree on 17 September; "next" is whichever row still says `not started`. Packets 26 and 28 were
+in flight when this was written.
+
+**Section:** `market-structures-contestability`, Economics **Unit 3 (WEC13)**, IAL topic **3.3.3**,
+`audit/raw/econ_spec.txt:1363-1440`. **54 leaves — the largest section in the programme**, half as
+large again as packet 25's 35, across **eight sub-topics** (efficiency · concentration ratios ·
+perfect competition · monopolistic competition · oligopoly · monopoly · monopsony · contestability).
+24 ledger items.
+
+### Read this before you choose a block count — it is the one decision you cannot walk back
+
+Eight sub-topics and 54 leaves means eight chapters is the floor, not the ceiling, and **eight is
+where the free-quiz ceiling bites**. `freeQuizPayload()` spends `PREVIEW_LIMITS.quiz` (2) on the Quiz
+tab, one pin per block, then the pre-test's headroom, all bounded by `FREE_QUIZ_MAX` (10):
+
+| blocks | 6 | 7 | 8 | 9 | 10 |
+|---|---|---|---|---|---|
+| pre-test questions a signed-out student gets | 3 | 3 | **2** | 2 | 2 |
+| chapters served NO check-in quiz | 0 | 0 | 0 | **1** | **2** |
+
+Packet 27 chose **seven** for exactly this reason and confirmed three pre-test questions on the phone.
+Packet 25 ran at eight and measured the drop to two. **The runner refuses at nine**, so a section this
+size cannot simply take the chapters it needs. Your options are to fit 54 leaves into eight chapters,
+to split the section, or to get `FREE_QUIZ_MAX` raised — which is **V016, already open on packet 2.5,
+and a founder decision**. Raise it with him at the START of the session, not after you have authored
+eight chapters, because the block plan is what everything else hangs off.
+
+### Start from `scripts/packet-27-*.mjs`, not 25's or 26's
+
+It carries three things the earlier runners do not:
+
+1. **The copy-from-screen check is now the validator's own paraphrase-tolerant matcher**, not a string
+   comparison — and you need it, because the way you will meet it is by satisfying `reorder.source`.
+   That DEBT rule wants a reorder's sequence taught by a flow **in the same subsection** or by an
+   extras chain, and adding the flow is the cheap way to clear it — which puts the answer on the
+   screen directly above the recall (`learn-steps.js:10`). Packet 25 banned the verbatim form; packet
+   27 reproduced it five times in PARAPHRASE and Layer 6 caught three. **Source every reorder from an
+   extras chain.** The check and its A/B are in the runner; carry both.
+2. **`matrixSvg`** — a 2×2 renderer with both axes named, one text per cell, and a throw when a cell
+   does not fit one line. 3.3.3 has a natural use: a two-firm/two-outcome game theory payoff grid
+   (`5c-1`). One text per cell is a constraint, not a limitation: two lines per cell puts four labels
+   on two x positions, which is `diagram.table-kind`'s definition of a grid and costs the diagram its
+   "what a correct diagram shows" checklist (packet 22 found this first).
+3. **A unit-aware tariff check.** Packet 27 is Business, so swap the census back to `economics` — but
+   keep the shape: the census row alone is not enough where a command word carries two tariffs.
+
+### The rule-1 pre-flight you must do yourself
+
+Packet 27 found **8 of 26** claims wrong. The rate across packets 14-27 is 4, 4, 6, 5, 6, 8, 5, 8, 8 —
+it is not falling. Two warnings specific to 3.3.3:
+
+- **This section legitimately owns several things earlier packets had to BAN.** `allocative efficiency`
+  is `:1364` and packets 24 and 25 both removed it from Unit 1 sections as "3.3.3, Unit 3" — it is
+  **yours**. So are `monopoly` (`:1424`), `barriers to entry` (`:1386`), `sunk costs` (`:1391`),
+  `market power` in its Unit 3 sense, and `product differentiation` (`:1379-1382`), which packet 27
+  confirmed is Unit 1 marketing vocabulary in the BUSINESS spec and is a named leaf here in the
+  ECONOMICS one. **Grep before you assume a ban carries over; the ban lists in packets 24-27 are
+  about sections that did not own these.**
+- **The reverse trap is `X-inefficiency` (`:1367`) and `monopsony` (`:1432-1434`)**, which are named
+  leaves here and appear nowhere else in the programme. A section this large is where a whole
+  sub-topic goes missing unnoticed — packet 25's `speculation` gap, which no ledger item named and
+  only the coverage oracle could see. Walk inward from the spec, not outward from the findings.
+
+### What packet 27 learned that packet 29 needs
+
+- **A named tool imports its own cells and nothing else** (DECISIONS, 17 Sep). `game theory`,
+  `cartel`, `price leadership` and `predatory pricing` are all named at `:1394-1404`, so their
+  apparatus is in scope; a framework the spec does not name is not, however standard it is.
+- **An acceptance check that no code runs is a wish** (packet 25) and **the cheapest way to satisfy a
+  DEBT rule can be the defect** (packet 27). Read two rules that point at the same screen together.
+- **`diagram.table-legible` reports, it does not gate.** Commit `9418fb0` corrected it to the 530px
+  column a laptop actually gives, and it now fires on 13 of the 14 held sections. Packet 27 measured
+  its own four tables at **11-17% over the frame** at the size the rule demands. Do not spend the
+  session on it; it is V022 and a design decision.
+- **The coverage oracle matches by SUBSTRING** (V025, filed by packet 27): a leaf of one or two
+  distinctive terms can be "covered" by an unrelated word — `nothing enforces them` satisfied
+  "Porter's five forces". 3.3.3 has many short leaves (`patents`, `branding`, `quality`,
+  `endorsement`, `cartels`). **Map each leaf to the subsection that teaches it by hand** and do not
+  trust 100% from the oracle alone; packet 27's mapping script is in its Verify B report.
+- **V024**: `PracticeQuestionsTab` carries the UK GCE tariff ladder, so 2, 8, 12 and 14-mark questions
+  cannot be filtered and all paint in the 4-mark green. Economics uses 2, 8 and 14. Your practice bank
+  will be affected; it is not yours to fix.
+
+**Exit criteria:** staged bundle at 0 BLOCK / 0 new DEBT (`diagram.table-legible` excepted, with the
+measurement) / 100% of its 54 leaves · every block pinned to a diagram, a quiz item and a practice
+item it owns · practice on the ECONOMICS ladder only (**no Assess, no 10-mark**) · every guidance two
+paragraphs with a scaffold first · Verify A clean · a 390×844 walk with the browser measurement of
+every diagram string · Layer 6 with two planted canaries · PROGRESS row · commit · push.
+**Do not publish**: the packet 5/7 checkpoint holds, and fourteen sections now wait on it.
+
 ## Packet 27 spec — `business-objectives-strategy`, Business 3.3.1 (Opus 5, 17 September 2026)
 
 **Section:** `business-objectives-strategy`, IAL **Business Unit 3 (WBS13)**, topic **3.3.1 Business
