@@ -302,9 +302,16 @@ packet 19's 0.65 bound, so a 0.65 guard would have been optimistic here. 0.7 is 
   Failures", "The Free Rider Problem") while Learn Mode showed this packet's. That is packet 2.1's read
   path working as designed and it resolves at publish, but it means **no content packet's Notes can be
   walked from a draft preview**. This section's notes were verified against the `draft` column instead.
-- **The signed-in and Pro walk.** Everything above is a signed-out student. The pre-test served 2 rather
-  than 3, and the Pro-only "Full model answer, marked to the IAL grid" panel was locked, so the practice
-  mark scheme was never rendered on screen — only read back from the API.
+- ~~**The signed-in and Pro walk.**~~ **CLOSED by the founder, 17 September 2026.** Everything else above
+  is a signed-out student, where the pre-test served 2 rather than 3 and the Pro-only "Full model answer,
+  marked to the IAL grid" panel stayed locked, so the practice mark scheme was never rendered on screen —
+  only read back from the API. Ronald signed in and walked it: **pre-test 3 questions, the five common
+  mistakes present, 29 flashcards, and the mark scheme rendering behind "See full guidance ▼" with the
+  scaffold above the answer box still carrying no figures and no mark allocations.** That matches what
+  `sectionPayload({ isPremium: true })` returns for this bundle, and it confirms the two-question pre-test
+  is the free tier rather than a defect. **The Pro surfaces of a content packet need the founder**, because
+  signing in is not something a session can do; budget one pass per packet and hand over the three things
+  to look at.
 
 ### Verify B — the 390×844 walkthrough script
 
