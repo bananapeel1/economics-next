@@ -11492,10 +11492,10 @@
    "rank": 0,
    "text": "Fix Learn Mode wiring: set diagramRef strings that substring-match the diagram titles ('The AD Curve' for block 2, reuse its shift scenarios for block 3, 'The Multiplier Effect' for block 4) and reassign quizIndices by topic (block 3 -> Q4/Q12/Q16, block 4 -> Q3/Q21/Q24, block 5 -> Q7/Q15) so students stop seeing a multiplier calculation before the multiplier is taught. Also route the 10- and 20-mark practice items into Learn Mode.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "Re-derived with my own harness importing lib/learn-steps.js and components/learn-mode/utils.js and replaying LearnModeTab.jsx:211-221 order with shared used sets - not by reading the runner's new block. All three clauses now hold: 5 of 5 check-ins resolve a distinct diagram by diagramId; each resolves a quiz on its own chapter; and practice resolves Draw 4, Evaluate 20, Analyse 6, Examine 8, Discuss 14, so the 20-mark item IS in Learn Mode (B2's pins are now [7,2,3] after the lead sort at packet-32-aggregate-demand.mjs:72). Define 2, Calculate 4 and Explain 4 are the three reachable only from the Practice tab. CAVEAT recorded, not blocking: strip at packet-32-aggregate-demand.mjs:81 removes only 'block', so the new 'lead' boolean survives onto all 25 quiz and 8 practice rows in the staged bundle and would be served by app/api/sections/[id]/route.js:60-67; packets 29-31 stage neither key. One-line fix before publish: strip ({ block, lead, ...rest }).",
    "note": null
   },
   {
@@ -11505,10 +11505,10 @@
    "rank": 1,
    "text": "Correct the content errors: consumption is NOT the most volatile component (determinants-of-consumption keyIdea); rewrite the 2022-inflation example so BoE rate rises are a shift, not the 'interest rate effect'; fix the car-industry accelerator example (sales fell); replace 'narrowly avoided a recession'; use one currency per example and fix '80p of every extra $1'; align the multiplier formula teaching with Q21.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "Re-checked including the investment arithmetic this item covers. Every worked figure in blocks 2-3 recomputes and the decision rule is consistent: $40/$500 = 8% clears 6% and fails 10%; kept $32 = 6.4% clears, kept $24 = 4.8% fails; subsidy $50 gives $32/$450 = 7.1%; relief $100 gives $32/$400 = 8%; 15% tax keeps $34 = 6.8%. No tie is called a clearance anywhere - quiz 16's explanation states the rule outright, 'clears an interest rate below that figure and fails at or above it', and '6.0%' is 0 hits. Every recall recomputes too ($800/$56 = 7% fails 8%; $1,000/$90 at 30% = $63 = 6.3% fails 7%; $600/$48 with $150 off = 10.7%; $40 halved = 4% fails 6%). Bundle-wide: 'narrowly avoided' 0, UK or GBP 0, named country 0, one currency, 'accelerat' 0, 'multiplier' 1",
    "note": null
   },
   {
@@ -11518,10 +11518,10 @@
    "rank": 2,
    "text": "Replace the 10 non-genuine recalls with application exercises: movement-vs-shift classifier (movements-along-ad), C/I/G/X-M classifier (ad-formula), MPW->k calculation comparison (multiplier-size-determinants), numeric accelerator table (accelerator-definition), scenario-based limitation matcher (limitations); drop leading-letter hints everywhere.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "All 30 subsections carry a recall (18 fillin, 10 classify, 2 match), each a scenario application: movement-vs-shift classifier at _packet32-content.mjs:104, C/I/G classifier on the-four-components, numeric fill-ins that require working. 54 fillin answer/hint pairs checked from the bundle: 0 leading-letter hints, 0 hints that prefix or contain their answer, all carry distractors",
    "note": null
   },
   {
@@ -11531,10 +11531,10 @@
    "rank": 3,
    "text": "Remove or shrink the duplicated multiplier block (it lives in 2.3.4 national-income with overlapping ids) and use the space for missing 2.3.2 spec bullets: saving vs consumption and MPC/MPS, gross vs net investment, animal spirits and access to credit in the investment body, G over the trade cycle, protectionism and non-price factors for net trade. Cut the accelerator to one subsection.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "Re-checked after the investment rewrite. The multiplier block is still gone ('multiplier' 1 hit, the 2.3.4 pointer; 'MPC' 0) and the freed space still carries every named bullet, now with the investment side corrected: saving-and-consumption, the-savings-ratio, gross-and-net-investment, availability-of-credit-for-firms, the-level-of-economic-activity, degree-of-protectionism, non-price-factors. LEAF_MAP re-checked against audit/raw/spec-items.json: 31 leaves, 31 mapped, 0 unmapped, 0 stale, 0 subsections teaching no leaf. 'accelerat' still 0 in the bundle and 0 in econ_spec.txt",
    "note": null
   },
   {
@@ -11544,10 +11544,10 @@
    "rank": 4,
    "text": "Rebuild practice to IAL format: Define (2), Explain (4/6), Analyse (8) with a diagram, Assess (10/12), Evaluate (20) with levels-based guidance that sums correctly; add a short data extract and a 'Calculate the multiplier / change in national income' item; strip Marshall-Lerner and J-curve from the WEC12 mark scheme. While there, swap most UK-only examples (and Q8's NHS/JSA) for country-neutral or Asian/Middle-East cases to match the audience.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "_packet32-assessment.mjs:160-174: eight practice items, one per ECONOMICS command word, every tariff matching audit/raw/tariff-census.json (Define 2, Draw 4, Calculate 4, Explain 4, Analyse 6, Examine 8, Discuss 14, Evaluate 20). Marshall-Lerner and J-curve 0 hits in the bundle. Calculate 4 carries an inline data extract. Per-point marks appear only on the 2-6 mark items and each set sums to its tariff; the 8/14/20-mark guidance is levels-style with no point allocation, which is practice-01's ask. 'Assess' is refused correctly - it is not an Economics command word in the census or in econ_spec.txt:2694-2747. UK-only examples and the JSA/NHS item are gone (0 hits bundle-wide)",
    "note": null
   },
   {
@@ -11568,10 +11568,10 @@
    "kind": "accuracy",
    "text": "The AD Curve > movements-along-ad > realExample: Claims 2022 UK inflation caused a movement along AD via three effects and lists 'pushed the Bank of England to raise interest rates (interest rate effect)'. The interest-rate effect behind AD's slope is the money-demand mechanism; a central bank raising the policy rate is a discretionary monetary tightening that SHIFTS AD left. The example therefore confuses the exact distinction the subsection exists to teach, and 2022 inflation was a cost-push (SRAS) episode, which the example never mentions.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "_packet32-content.mjs:87 the-ad-curve misconception now states the interest-rate effect is the market rate moving with money demand and that a central bank CHOOSING to raise its policy rate shifts AD left; the 2022 UK inflation realExample is gone ('2022' and every UK institution are 0 hits in the bundle) and the flow block keeps all three slope effects running from the price level",
    "note": null
   },
   {
@@ -11580,10 +11580,10 @@
    "kind": "accuracy",
    "text": "The Accelerator Effect > accelerator-definition > realExample: Says UK car investment fell in 2017-18 'even though car sales were still at historically high levels' and that a 'slowdown in growth, not an actual decline' triggered it. UK new-car registrations peaked in 2016 (~2.69m) and fell in both 2017 (-5.7%) and 2018 (-6.8%), so demand actually declined. The example contradicts the mechanism it is meant to illustrate.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "'accelerat' is 0 hits in packet-32-bundle (and already 0 in 2026-09-18-pre-packet-32, so the example had gone before this packet); the packet keeps it out - 'accelerator' is also 0 hits in audit/raw/econ_spec.txt, and packet-32-aggregate-demand.mjs:1018 fails the run if 2.3.2 ever gains such a row",
    "note": null
   },
   {
@@ -11592,10 +11592,10 @@
    "kind": "accuracy",
    "text": "The Multiplier > multiplier-formula > body para 1 vs quiz Q21: Body defines MPC as 'the proportion of each extra pound ... spent on domestic goods and services' and says k = 1/(1-MPC) is 'equivalent' to 1/MPW. Under that definition it is; but quiz Q21 marks '1/(1-MPC)' WRONG for an open economy with government. The section teaches one thing and tests the opposite.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "Both sides of the contradiction are gone: no multiplier-formula subsection exists (30 subsections listed in _packet32-content.mjs, none about the multiplier) and no quiz item mentions MPC - 'MPC' and 'marginal propensity' are 0 hits across all 1,342 bundle strings. econ_spec.txt:1080-1086 places 1/(1-MPC) and 1/MPW in 2.3.4, and _packet32-content.mjs block-4 misconception is the single declared pointer there",
    "note": null
   },
   {
@@ -11604,10 +11604,10 @@
    "kind": "quiz",
    "text": "q21: Distractor [2] '1/(1-MPC)' is presented as wrong, but the section body defines MPC as spending 'on domestic goods and services' and states k = 1/(1-MPC) is 'equivalent' to 1/MPW. Under the section's own teaching two options are correct.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "q21 is gone: the 25-item bank in _packet32-assessment.mjs contains no multiplier or MPC item ('MPC' 0 hits bundle-wide, down from 46 in the pre-packet snapshot), so no distractor can contradict the body. packet-32-aggregate-demand.mjs:540-542 also fails the run on anything quizzed but not taught",
    "note": null
   },
   {
@@ -11616,10 +11616,10 @@
    "kind": "quiz",
    "text": "q8: Answer depends on knowing that 'Jobseeker's Allowance' is a UK unemployment benefit and that 'NHS' is a health service. International IAL students (HK, Korea, Pakistan) may not know either; the item then tests UK civics not economics.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "'Jobseeker' 2 hits to 0 and 'NHS' 0 against audit/snapshots/2026-09-18-pre-packet-32; the whole 25-item bank in _packet32-assessment.mjs is rebuilt with no UK institution and no named country anywhere (regex over every bundle string returns 0), so no item turns on national civics",
    "note": null
   },
   {
@@ -11628,10 +11628,10 @@
    "kind": "practice",
    "text": "p2: 'Analyse ... (10 marks)': in IAL WEC12 'Analyse' is an 8-mark question; 10 and 12 marks are 'Assess'/'Discuss' with evaluation. The scheme awards 4 of 10 marks for Marshall-Lerner and the J-curve, which are Unit 4 (WEC14) content, and lists point-by-point marks where IAL uses levels-based marking for 8+ mark items. No AD diagram is required, which an examiner would expect in KAA.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "_packet32-assessment.mjs:168 Analyse is now 6 marks, matching audit/raw/tariff-census.json (econ_spec.txt:2722-2725); no 10- or 12-mark item exists. Marshall-Lerner and J-curve are 0 hits in the bundle. Point-by-point marks appear only on the 2-6 mark items (each summing to its tariff) - the Examine 8, Discuss 14 and Evaluate 20 guidance carries no mark allocation at all. An AD diagram is now required by a dedicated Draw 4 item at :162, and the Examine 8 guidance calls for a labelled diagram",
    "note": null
   },
   {
@@ -11640,10 +11640,10 @@
    "kind": "structure",
    "text": "Inline diagrams never render: block 2 diagramRef 'Aggregate Demand Curve' and block 3 diagramRef 'Shifts in Aggregate Demand' do not substring-match any diagram title ('The AD Curve', 'The Multiplier Effect', 'Circular Flow of Income with AD Components') under the match in components/LearnModeTab.jsx:97-104 (t.includes(ref) || ref.includes(t)). Blocks 4 and 5 have no diagramRef even though 'The Multiplier Effect' exists. Net: 0 of 3 diagrams appear in Learn Mode for this section.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "packet-32-aggregate-demand.mjs:69 gives every block a diagramId taken from DIAGRAMS[i].id, and learn-mode/utils.js:133-137 resolves a diagramId by exact match ahead of the legacy ref, so a dangling pin is unrepresentable. Running buildSteps + resolvePinnedDiagram over the bundle: all 5 of 5 check-ins resolve a distinct diagram (was 0 of 3), no fallback needed",
    "note": null
   },
   {
@@ -11652,10 +11652,10 @@
    "kind": "structure",
    "text": "quizIndices are assigned sequentially [0],[1],[2],[3],[4] rather than by topic: block 'Shifts in AD' shows Q2 (multiplier calc, untaught yet), block 'The Accelerator Effect' shows Q4 (AD leftward shift). Only 5 of 25 MCQs are used inline; the two accelerator MCQs (Q7, Q15) are never used.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "packet-32-aggregate-demand.mjs:64-66 derives quizIndices from each quiz item's own block tag rather than by position, and :558 fails the run if they come out 0,1,2 in block order. Resolving the pins over the bundle gives each check-in a question on its own chapter: AD components, disposable income, gross vs net investment, what counts as G, real income and imports. Nothing untaught is asked - the bank has no circular-flow, paradox-of-thrift or multiplier item",
    "note": null
   },
   {
@@ -11664,10 +11664,10 @@
    "kind": "structure",
    "text": "The 3-subsection 'The Multiplier' block duplicates national-income's 'The Multiplier and National Income' block (national-income uses ids multiplier-concept / multiplier-formula / multiplier-evaluation; this section uses multiplier-definition / multiplier-formula / multiplier-size-determinants -- 'multiplier-formula' is the same id in both files). IAL puts the multiplier under 2.3.4 National income. A student following the unit does the multiplier twice, and if any client-side state is keyed by subsection id it may collide.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "No multiplier block remains (_packet32-content.mjs builds 5 blocks: characteristics, C, I, G, X-M). Set-intersecting the 30 bundle subsection ids against the 10 in audit/snapshots/2026-09-14-pre-packet-13__economics__national-income.json gives zero collisions - national-income keeps multiplier-concept/-formula/-evaluation and aggregate-demand names none of them, so no client state can collide and no student meets the topic twice",
    "note": null
   },
   {
@@ -11676,10 +11676,10 @@
    "kind": "structure",
    "text": "Pre-test gate draws 3 random MCQs from a 25-item bank that includes circular-flow (Q9, Q18) and paradox-of-thrift (Q23) items not taught in this section, plus UK-institution items (Q8). A first-time learner can be gated on material the section never teaches -- consistent with the founder's 'pre-test demotivates' hypothesis.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "Running freeQuizPayload + pickPretestQuestions over the bundle: the pre-test serves exactly quiz[0..2] - what AD is, why imports are subtracted, movement vs shift - all three taught in block 1, with 0 overlap against the five check-in questions, signed out and signed in alike. packet-32-aggregate-demand.mjs:551-552 pins nothing to those three and fails the run if they are not first. The bank carries no circular-flow, paradox-of-thrift or UK-institution item at all",
    "note": null
   },
   {
@@ -11688,10 +11688,10 @@
    "kind": "structure",
    "text": "Recall placement side-effect: single-section steps (multiplier-size-determinants, step 6) get their recall shown as 'immediate' at the bottom of that step AND as 'spaced' at the top of the next step, so the not-orderable 'order of logic' reorder is the one widget students meet twice in a row.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "Ran lib/learn-steps.js buildSteps + pickSpacedRecall over the bundle content rather than reading the comment: 35 steps, 4 spaced recalls, every one drawn from block 0 into a later chapter's check-in (steps 14, 23, 28, 34), and 0 cases where a check-in's spaced recall is the recall of the teach step immediately before it. lib/learn-steps.js:96-99 is the guard (s.blockIndex >= here.blockIndex is skipped)",
    "note": null
   },
   {
@@ -11700,10 +11700,10 @@
    "kind": "structure",
    "text": "Misconception duplication: ad-formula-and-components and determinants-of-gov-spending-net-exports carry the same transfer-payments misconception almost verbatim. Otherwise misconceptions are genuine (MPC<1, 'AD falls' vs 'shifts left', micro substitution reasoning, multiplier != government revenue, accelerator vs multiplier).",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "Re-ran the pairwise SequenceMatcher over the rewritten set: still 30 distinct misconceptions, one per subsection, and the most similar pair now scores 0.115 (saving-and-consumption vs the-rate-of-economic-growth), down from 0.123 - the rewrite moved the previous top pair out of the ranking. Nothing near-verbatim; the transfer-payments point still lives once, on welfare-payments",
    "note": null
   },
   {
@@ -11712,10 +11712,10 @@
    "kind": "structure",
    "text": "Audience fit: 11 of 14 realExamples are UK-centric (house prices, Brexit, furlough, Bank of England, London 2012, OBR, UK car makers, UK 2008, UK 2020) for a HK/Korea/Singapore/Malaysia/Pakistan/Sri Lanka/Middle East cohort; only Apple and Singapore are non-UK. Not wrong for IAL marking, but a mismatch with the product's audience and its own 'international' positioning.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "Re-ran the locale measures over the rewritten bundle: all 30 realExamples still country-neutral, 0 hits for UK/Britain/Bank of England/Brexit/furlough/NHS/JSA/OBR/London/sterling/GBP and 0 for any named country across all 1,339 student-facing strings, one currency (dollar) throughout. The rewritten example keeps the role-typed style - a textile firm, a component supplier, a trading partner",
    "note": null
   },
   {
@@ -11724,10 +11724,10 @@
    "kind": "structure",
    "text": "2-per-step pairing is coherent (formula+C; I+G/NX; shape+movements; right+left; concept+formula; size; accel def+cycle; limitations). Block takeaways match their blocks. Difficulty ramp (components -> curve -> shifts -> multiplier -> accelerator) is sensible, but the accelerator gets 3 of 14 subsections -- disproportionate for a topic that is at most an evaluation point, while spec bullets are missing (see ialSpecGaps).",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "The disproportion is gone and the gaps with it: 0 accelerator subsections (0 hits bundle-wide) and all 31 spec leaves mapped in LEAF_MAP (packet-32-aggregate-demand.mjs:980-1003) onto the 30 subsections that exist - checked independently against audit/raw/spec-items.json: 0 unmapped leaves, 0 stale keys, 0 subsections teaching no leaf. Each block's three takeaways match its own block, and the step model is now one subsection per step (lib/learn-steps.js:43-56), so the 2-per-step pairing the finding described no longer applies",
    "note": null
   },
   {
@@ -11736,10 +11736,10 @@
    "kind": "structure",
    "text": "Diagram SVGs hard-code light text (#e8ecf5) with a transparent background: legible only on a dark theme. If the app supports a light theme the axes and labels vanish.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "Parsed every fill/stroke/stop-color out of the 6 emitted SVGs: 8 distinct colours (#e8ecf5 #7a8299 #94a3b8 #3b82f6 #f59e0b #059669 #475569 #ef4444), every one a key of PALETTE in components/learn-mode/processSvg.js:28-46, so remapPalette (:60-71) rewrites each to a var(--dg-*) that flips with the theme. 0 colours hidden in style= attributes, where the remapper would not reach them",
    "note": null
   },
   {
@@ -11748,11 +11748,11 @@
    "kind": "specGap",
    "text": "2.3.2(a) relative importance of the components of AD -- only a UK % breakdown; no discussion of why C dominates, why I matters despite its size, or how composition differs (e.g. export-led Singapore/Korea vs consumption-led economies).",
    "packet": 32,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "Rule 1: the leaf does not exist. 'relative importance of the components of AD' is UK GCE wording (Theme 2); 'relative importance' is 0 hits in audit/raw/econ_spec.txt. IAL 2.3.2 1b is 'Components of aggregate demand: C + I + G + (X-M) =, the AD curve' (econ_spec.txt:979-982) and says nothing about their relative sizes. The SUBSTANCE ships anyway inside 1b-1: packet 32's the-four-components teaches C 64%, I 18%, G 22%, (X-M) -4% of a $1,000bn total, with the shares asserted to sum to 100 in the runner, and teaches that largest and most volatile are different properties. What is refused is spending a subsection on a leaf this specification does not contain (packet 20's class)."
   },
   {
    "id": "C-aggregate-demand-specGap-02",
@@ -11760,10 +11760,10 @@
    "kind": "specGap",
    "text": "2.3.2(b) the distinction between saving and consumption (saving as the residual of disposable income; APC/APS/MPC/MPS) -- not taught in the consumption subsection; MPC only appears later inside the multiplier block.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "_packet32-content.mjs:197 saving-and-consumption teaches saving as the residual of disposable income (Yd 800 = C 640 + S 160) and :210 the-savings-ratio defines S/Yd = 20% with the denominator trap called out; both sit inside the Consumption block rather than a later one. APC/APS/MPC/MPS are correctly absent - econ_spec.txt:1080-1083 puts the marginal propensities in 2.3.4 4b, and 2.3.2 2b/2c (econ_spec.txt:989-990) ask only for the relationship and the definition",
    "note": null
   },
   {
@@ -11772,10 +11772,10 @@
    "kind": "specGap",
    "text": "2.3.2(c) gross vs net investment (depreciation/replacement investment) -- not taught, yet the accelerator block relies on 'net investment' undefined.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "_packet32-content.mjs:238 gross-and-net-investment is now the first subsection of the Investment block and teaches the subtraction with both signs: gross 180 minus depreciation 120 = net 60, then gross 110 minus 120 = net -10, and which of the two enters AD. Backed by quiz item 14 (gross 140, depreciation 160) and diagram 'Gross and Net Investment'. It no longer supports an accelerator block, which does not exist",
    "note": null
   },
   {
@@ -11784,11 +11784,11 @@
    "kind": "specGap",
    "text": "2.3.2(c) distinction between investment and saving -- only a one-clause aside ('does not include financial investments like buying shares').",
    "packet": 32,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "Rule 1: the leaf does not exist. 2.3.2 3a is 'The distinction between gross investment and net investment' (econ_spec.txt:995) and 2.3.2 carries no investment-versus-saving leaf anywhere in lines 976-1018; 2b is the relationship between SAVINGS and CONSUMPTION, which packet 32 builds as its own subsection. The teaching point the finding actually wants - investment means capital goods, not buying shares - is real and ships as the misconception on gross-and-net-investment, as quiz item 'In economics, investment means:' and as a flashcard. Refused as a SPEC GAP, delivered as content."
   },
   {
    "id": "C-aggregate-demand-specGap-05",
@@ -11796,10 +11796,10 @@
    "kind": "specGap",
    "text": "2.3.2(c) influences on investment: 'Keynes and animal spirits' (examMatters only, never in body; tested by Q5), 'demand for exports', 'access to credit' (only as an accelerator limitation), 'influence of government and regulations' -- missing from the investment subsection.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "Re-checked after the investment rewrite. The two valid items still have their own subsections: availability of credit for firms (3b-4) and government influence across tax-relief-and-subsidies and lower-corporation-tax (3c). Both 3c tools are now priced on the SAME kept $32 - subsidy $50 leaves $450 and 7.1%, relief worth 20% of $500 = $100 leaves $400 and 8% - so consecutive steps no longer teach two tax worlds. 3b-5 tax-on-company-profits recomputes: 20% keeps $32 = 6.4% clears 6%, 40% keeps $24 = 4.8% fails. 'animal spirit' remains 0 hits in both econ_spec.txt and the bundle, and 'demand for exports' is still not one of 3b's five bullets, so those two stay correctly refused",
    "note": null
   },
   {
@@ -11808,10 +11808,10 @@
    "kind": "specGap",
    "text": "2.3.2(d) government expenditure: G over the trade cycle (automatic stabilisers, counter-cyclical spending) -- one sentence only; fiscal policy link is thin.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "_packet32-content.mjs:357 the-level-of-economic-activity is a full subsection on the counter-cyclical mechanism: a downturn raises payments and lowers receipts with nobody deciding, G 220 to 245, and the boom read the other way, plus a misconception separating it from fiscal policy (which has its own subsection). The Unit 4 vocabulary is correctly withheld - 'automatic stabilisers' has exactly one hit in audit/raw/econ_spec.txt, at line 1854 under public sector borrowing, and 0 hits in the bundle",
    "note": null
   },
   {
@@ -11820,10 +11820,10 @@
    "kind": "specGap",
    "text": "2.3.2(e) net trade: effect of domestic real income on imports (income -> M), degree of protectionism, non-price factors (quality, design, reliability) -- missing; only exchange rate, relative inflation and foreign income are covered.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "All three missing 5a bullets now have their own subsections: _packet32-content.mjs:398 real-income-and-imports (income to M, with X held still and the asymmetry stated), :437 degree-of-protectionism (tariff and quota at home, retaliation abroad), :450 non-price-factors (quality, design, reliability, delivery). LEAF_MAP maps 5a-1 to 5a-5 one-to-one and audit/raw/spec-items.json confirms those are the five leaves",
    "note": null
   },
   {
@@ -11832,10 +11832,10 @@
    "kind": "specGap",
    "text": "Multiplier ratio/process/MPC-MPS-MPT-MPM/calculation belong to 2.3.4 National income in the IAL spec; present here as a duplicate rather than a gap.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "The duplicate is removed rather than re-taught: 'multiplier' falls from 112 hits to 1 and 'MPC' from 46 to 0 against audit/snapshots/2026-09-18-pre-packet-32, the single survivor being the block-4 misconception that names the effect and hands it to 2.3.4. Verified against the spec myself: 'multiplier' has 4 hits in econ_spec.txt, all at 1078-1086 under 2.3.4 item 4, with MPC/MPS/MPT/MPM and both formulae. packet-32-aggregate-demand.mjs:1017-1018 fails the run if 2.3.2 ever gains such a row or 2.3.4 loses one",
    "note": null
   },
   {
@@ -11844,10 +11844,10 @@
    "kind": "specGap",
    "text": "Accelerator: unsure whether the 2018 IAL WEC12 spec requires it explicitly under 2.3.2; treat as extension, not core, and reduce its weight.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "The hedge is answerable and I checked it: 'accelerat' is 0 hits in the whole of audit/raw/econ_spec.txt, so the accelerator is not required anywhere in IAL Economics, let alone under 2.3.2. Its weight is therefore zero rather than reduced - 0 hits in the bundle - and packet-32-aggregate-demand.mjs:1018 fails the run if a 2.3.2 row for it ever appears. Note the closure is stronger than the item asked for (removed, not kept as extension); the spec grep is what justifies it",
    "note": null
   },
   {
@@ -16630,10 +16630,10 @@
    "kind": "specThin",
    "text": "2.3.2 2a. Influence on consumption: level of welfare payments — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "_packet32-content.mjs:158 welfare-payments is a full subsection: defines them as transfers to households with little or no earned income, explains why a dollar of them raises C more than a dollar to high earners, gives the standard evaluation against, carries the 'not in G' misconception and a compare-the-two recall, and is backed by quiz item 13. LEAF_MAP sends 2a-4 here",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16642,10 +16642,10 @@
    "kind": "specThin",
    "text": "2.3.2 2d. Causes and effects of changes in the savings ratio — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "_packet32-content.mjs:223 changes-in-the-savings-ratio gives both halves the leaf asks for: causes (expectations, interest rates, confidence, credit) and effects worked arithmetically (ratio 20 to 25 per cent takes C from 640 to 600 and AD from 1,000 to 960, a 4 per cent fall), with the two-sided evaluation that higher saving funds investment. Backed by the Evaluate 20 practice item at _packet32-assessment.mjs:174. LEAF_MAP sends 2d here",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16654,10 +16654,10 @@
    "kind": "specThin",
    "text": "2.3.2 3c. Government policy to promote investment: reductions in the rate of corporation tax — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "Re-checked after the rewrite. _packet32-content.mjs lower-corporation-tax now works in the section's single 20% tax world and divides the KEPT return by what the firm PAYS: $40 before tax, at 20% keeps $32 on a $500 machine = 6.4%, cut to 15% keeps $34 = 6.8% - both recompute exactly, and the realExample's 'five percentage points' matches 20 to 15. The old 25% baseline is gone (0 hits for a 25% profit tax; every remaining '25%' is the savings ratio, an exchange-rate quote or a tariff) and so is the 6.0%-versus-6% tie. Its classify recall cuts 30% to 20%, landing on the section's own rate. Still LEAF_MAP 3c-3, still backed by quiz item 18",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16666,10 +16666,10 @@
    "kind": "specThin",
    "text": "2.3.2 4a. Influence on government expenditure: the level of economic activity — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "_packet32-content.mjs:357 the-level-of-economic-activity is a full subsection: the mechanism (payments rise, receipts fall, G 220 to 245 with nothing decided), the effect on AD in both directions of the cycle, a decided-versus-not-decided classify recall and a misconception separating it from fiscal policy. Backed by quiz item 20. LEAF_MAP sends 4a-2 here",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -17422,10 +17422,10 @@
    "kind": "diagram",
    "text": "A block pins the diagram \"Shifts in Aggregate Demand\" and no such diagram exists, so the block renders nothing. the AD curve exists; a shift version does not.",
    "packet": 32,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-32",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "No block pins a title string any more: packet-32-aggregate-demand.mjs:69 sets diagramId from DIAGRAMS[i].id, and learn-mode/utils.js:133-137 matches a diagramId by exact id, so a pin naming a diagram that does not exist is unrepresentable. Five diagrams for five blocks, and the shift case that was missing is now drawn - diagram 1 'The AD Curve, and What Moves It' carries two scenarios, 'Movement along AD' and the shift view. Running the resolver over the bundle: 5 of 5 check-ins render a distinct diagram",
    "note": "Added 13 Sep 2026 from audit/raw/diagram-pins-2026-09-13.json (F052/F109 measurement). Check npm run diagrams after authoring."
   },
   {

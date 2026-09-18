@@ -2240,3 +2240,42 @@ would still be wrong if this passed.** Line-oriented replacement, keyed to the s
 payload is 9 of 30 with `quizIndices` remapped to `[[0],[1],[2],[3],[4],[5]]` — all six check-ins
 resolve, three unpinned remain for the pre-test, inside `FREE_QUIZ_MAX`. Consistent with packet 31's
 five chapters and packet 2.5's pins-first order; the ceiling is still ten.
+
+## Packet 32 — four decisions, 18 September 2026 (Opus 5)
+
+**1. Two findings are refused as spec gaps and recorded `wontfix`, not built.**
+`C-aggregate-demand-specGap-01` asks for "the relative importance of the components of AD" and
+`-specGap-04` for "the distinction between investment and saving". Neither is in IAL 2.3.2:
+`relative importance` is **0 hits** in `audit/raw/econ_spec.txt`, and `3a` is "the distinction
+between gross investment and net investment" with no investment-versus-saving leaf anywhere in
+lines 976-1018. Both are UK GCE wording. The SUBSTANCE of each ships anyway — the component shares
+inside `1b-1`, and "investment means capital goods, not shares" as a misconception, a quiz item and
+a flashcard — so nothing is lost to the student; what is refused is spending a subsection on a leaf
+this specification does not contain. That is packet 20's class, and the ledger notes carry the
+evidence so a later packet cannot rebuild it.
+
+**2. The multiplier leaves this section with one declared pointer, and the accelerator leaves
+without one.** `multiplier` is four hits in `econ_spec.txt`, all at 1078-1086 = **2.3.4 · 4**, so
+the live three-subsection block goes; `accuracy-04` and `quiz-01` are the 1/(1−MPC) contradiction
+inside it and close with it. One sentence names the multiplier and says whose topic it is, the way
+packet 30 kept one pointer to labour turnover, because a student meeting "G rises by $40bn" will
+have heard that the effect is larger and deserves to be told where that belongs. `accelerator` is
+**0 hits in the whole Economics specification** and is banned outright — `specGap-09` hedged about
+it ("unsure whether the 2018 IAL WEC12 spec requires it"), and packet 29's rule is that a hedge
+gets the same spec check as an assertion.
+
+**3. A bound owned by ANOTHER file is parsed, not copied.** Packet 2.6 landed mid-packet on 18
+September and moved `diagram.table-legible` from a 530px column to **620px**. A runner carrying its
+own copy of 530 would have gone on reporting green against a column that no longer exists. The
+laptop-column check now reads the number out of `lib/content-validator.mjs` with a regex and
+refuses if the parse breaks — packet 25's "make the thing that lays out and the thing that checks
+share ONE bound", applied across a file boundary. Same pattern as the palette check, which parses
+`PALETTE` out of `components/learn-mode/processSvg.js`. All four of this section's declared tables
+are 14.09px in the 620 column against a 12px floor.
+
+**4. No reorders in this section, said out loud rather than left implicit.** This topic's content is
+five lists of influences, not sequences, so all 30 recalls are fill-in, classify or match. That makes
+packet 26's structural rule, packet 26's overlap rule and packet 27's paraphrase rule **vacuous by
+construction** — and the runner says so, A/Bs all three anyway, and fires a problem if a reorder ever
+appears here, so the next builder reads them rather than inheriting three green checks that cannot
+fail.

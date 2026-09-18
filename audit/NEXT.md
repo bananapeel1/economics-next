@@ -1,5 +1,168 @@
 # Next session brief
 
+## Packet 32 spec — `aggregate-demand`, Economics 2.3.2 (Opus 5, 18 September 2026)
+
+`audit/raw/econ_spec.txt:976-1018`. The oracle holds **37 rows for `ECON-2.3.2`, of which 31 are leaves**
+and six are requirement headers (`1b`, `2a`, `3b`, `3c`, `4a`, `5a`). Live state: **4 blocks · 11
+subsections · 23 quiz · 5 practice · 3 diagrams · 17 flashcards · 3 mistakes**, and 34 ledger items open.
+
+### Block plan — FIVE blocks, the specification's own five sub-topics
+
+| # | block | leaves | spec |
+|---|---|---|---|
+| 1 | The Characteristics of Aggregate Demand | 4 | `1a`, `1b-1`, `1b-2`, `1c` |
+| 2 | Consumption (C) | 9 | `2a-1`…`2a-6`, `2b`, `2c`, `2d` |
+| 3 | Investment (I) | 9 | `3a`, `3b-1`…`3b-5`, `3c-1`…`3c-3` |
+| 4 | Government Expenditure (G) | 4 | `4a-1`…`4a-4` |
+| 5 | The Net Trade Balance (X − M) | 5 | `5a-1`…`5a-5` |
+
+31 leaves, **30 subsections, 35 steps** (30 teach + 5 check-in). Five blocks costs nothing against
+`FREE_QUIZ_MAX`: the chapter pins are taken first (packet 2.5), so `5` of `10` with `PRETEST_HEADROOM`
+paid in full and a signed-out pre-test of three. **Re-measured here, not inherited.**
+
+### Rule-1 pre-flight: 13 of 34 claims are wrong, mis-aimed or already closed
+
+Rate across packets 14-31 was 4, 4, 6, 5, 6, 8, 5, 8, 8, 9, 8, 9, 11, 13. It is still not falling.
+
+1. **`specGap-01` cites a leaf that does not exist.** "2.3.2(a) relative importance of the components
+   of AD" is UK GCE wording. **`relative importance` is 0 hits in `econ_spec.txt`.** IAL `1b` is
+   "Components of aggregate demand: C + I + G + (X−M) =, the AD curve" and says nothing about their
+   relative sizes. One economy's shares are built as the arithmetic that makes the identity concrete;
+   they are not a leaf and no subsection is spent on them.
+2. **`specGap-04` cites a leaf that does not exist.** "2.3.2(c) distinction between investment and
+   saving". `3a` is "the distinction between gross investment and net investment" and 2.3.2 carries no
+   investment-versus-saving leaf. The teaching point — investment is capital goods, not buying shares —
+   is real and ships as a misconception rather than a subsection.
+3. **`specGap-05` is right on two of its four items and wrong on two.** `3b` names five influences:
+   rate of economic growth, interest rates, business confidence and expectations, availability of
+   credit, tax on company profits. "Access to credit" is `3b-4` and "influence of government" is `3c`,
+   both valid. But **"Keynes and animal spirits" is 0 hits in `econ_spec.txt`** — rule 2, and the
+   spec's own words are "business confidence and expectations" — and "demand for exports" is not a
+   `3b` bullet at all. The live section carries "animal spirits" three times; it goes.
+4. **`specGap-06` asks for Unit 4 vocabulary.** "automatic stabilisers" has **one** hit in
+   `econ_spec.txt`, at line 1855, under public sector borrowing in Unit 4, beside "discretionary
+   fiscal policy". `4a-2` is "the level of economic activity". The mechanism the finding wants is
+   right and the words belong to another topic; taught in the specification's.
+5. **`specGap-09` can be answered, and the answer is stronger than the hedge.** It is "unsure whether
+   the 2018 IAL WEC12 spec requires the accelerator". **`accelerator` is 0 hits in the whole Economics
+   specification.** It is also 0 hits in the live section — so `accuracy-03` (a false claim about car
+   sales) and the accelerator clauses of `topFix-03`, `topFix-04` and `structure-08` are all written
+   against content that is already gone. Packet 29's rule: a hedge gets the same spec check as an
+   assertion. Banned outright rather than "reduced in weight".
+6. **`practice-01` reaches the right verdict by the wrong route.** It says "in IAL WEC12 'Analyse' is
+   an 8-mark question". `audit/raw/tariff-census.json`, built from `econ_spec.txt:2704-2747`, says
+   **Analyse is 6** and **Examine is 8**. Its verdict on p2 stands — Economics has no 10-mark tariff
+   at all — and so does Marshall-Lerner and the J-curve being Unit 4 (`econ_spec.txt:1740`, 4.3.x).
+7. **`topFix-05` names two tariffs Economics does not have.** "Explain (4/6)", "Analyse (8)" and
+   "Assess (10/12)". **Assess is not an Economics command word.** The census is Define 2, Calculate
+   2/4, Draw 4, Explain 4, Analyse 6, Examine 8, Discuss 14, Evaluate 20 — eight, one practice item
+   each. The live section's five items carry Define (4), Explain (6), Analyse (10) and **Outline (4)**,
+   which is in neither specification: four of five tariffs do not exist, where the finding names one.
+8. **`topFix-05`'s "levels-based guidance that sums correctly" is refused.** It is a claim about what
+   a marker does. `examMatters` may say what the COMMAND WORD requires, because Appendix 6 states it.
+   Same refusal as packets 20 and 30.
+9. **`topFix-01`, `structure-01` and `diagram-01` name the wrong mechanism.** They ask for `diagramRef`
+   strings that substring-match diagram titles. `lib/learn-steps.js:44-55` carries both and
+   `diagramId` is what a check-in resolves; `diagramRef` is the legacy string pin. The intent is
+   right and measured — 0 of 3 diagrams reach a student today — and the fix is `diagramId`, derived
+   per block by the runner so a dangling pin is unrepresentable.
+10. **`topFix-01` and `topFix-04` contradict each other, and the specification settles it.**
+    `topFix-01` asks to pin "The Multiplier Effect" to block 4 and route Q21/Q24 into it; `topFix-04`
+    asks to remove the multiplier because it is 2.3.4's. **`multiplier` appears in `econ_spec.txt`
+    four times, all at 1078-1086, which is 2.3.4 · 4** — with MPC, MPS, MPT, MPM and both formulae.
+    The block goes. `accuracy-04` and `quiz-01` are the 1/(1−MPC) contradiction inside it and close
+    with it. One declared pointer is kept, as packet 30 kept one for labour turnover.
+11. **`structure-05` is closed by packet 5's code, not by content.** `buildSteps` spaces a recall only
+    onto a check-in in a LATER chapter. Verified by RUNNING `buildSteps` and `pickSpacedRecall` over
+    this packet's own content, not by reading the comment above them.
+12. **`structure-09` is closed by the renderer, not by the content.**
+    `components/learn-mode/processSvg.js` remaps the baked dark palette onto `--dg-*` tokens at render
+    time (shipped 12 Sep). What that transfers to a content packet is an obligation: every colour a
+    diagram emits must be IN that map, because a literal the remapper does not know stays light text
+    on a light page. Asserted by parsing `PALETTE` out of `processSvg.js` rather than re-typing it.
+13. **`accuracy-01` is already closed** — packet 0, verified 11 Sep, evidence in the ledger. Not
+    re-claimed here.
+
+### The arithmetic spine
+
+One open economy, and every surface generated from it (`AD` in `_packet32-util.mjs`):
+
+    C 640 + I 180 + G 220 + (X 260 − M 300) = 1,000        shares 64%, 18%, 22%, −4%
+    Yd 800 − C 640 = S 160                                  savings ratio 20%
+    gross I 180 − depreciation 120 = net I 60               capital stock grows
+    gross I 110 − depreciation 120 = net I −10              capital stock shrinks
+
+Every shift in the section is that identity recomputed: a savings ratio of 25% takes C to 600 and AD
+to 960; +40 of G takes AD to 1,040; a tariff and a depreciation each move X and M and the runner
+re-derives the new (X − M) from the same function. No figure is typed twice.
+
+### Acceptance checks a verifier can run without this conversation
+
+- `node scripts/packet-32-aggregate-demand.mjs` exits 0: 0 new BLOCK, 0 new DEBT.
+- `accelerator`, `animal spirits`, `automatic stabiliser`, `Assess`, `Outline`, `marginal propensity`,
+  `MPC/MPS/MPT/MPM` are each **0** in every student-facing string including the SVGs; `multiplier`
+  appears exactly once, in a string that says it is 2.3.4's topic.
+- Every practice tariff is in the ECONOMICS census, all eight command words exactly once.
+- All 31 leaves mapped by hand in `LEAF_MAP` to a subsection that exists.
+- Every emitted SVG colour is a key of `PALETTE` in `components/learn-mode/processSvg.js`.
+- 390×844 walk of the staged draft with `?draft=1`: all 35 steps, five check-ins each showing a
+  diagram, no recall repeated within a chapter.
+
+## Packet 32 result — `aggregate-demand`, Economics 2.3.2 (18 September 2026, Opus 5)
+
+Built, verified, **staged and NOT published** — it holds for the packet 5/7 checkpoint like packets
+14-31. `node scripts/packet-32-aggregate-demand.mjs --stage && node scripts/publish-section.mjs
+aggregate-demand --confirm` when that checkpoint comes.
+
+**The numbers.** 27 BLOCK / 52 DEBT / 77% → **0 BLOCK / 0 DEBT / 31 of 31 leaves**, and 73 baselined
+findings would clear on publish. 5 blocks · 30 subsections · 35 steps · 25 quiz · 8 practice ·
+5 diagrams · 30 flashcards · 6 mistakes · 3 chains + 2 evaluation. 187 tests, `validate` and
+`contrast` clean, `build` exits 0.
+
+### What the three layers each found, and what only one of them could
+
+**Verify A rejected one id and was right.** `resolvePinnedItem` (`components/learn-mode/utils.js:112`)
+returns ONE item per check-in and takes the first unused index, so a block pinning `[2, 3, 7]` renders
+the first and silently drops two — and one of the two was the 20-mark Evaluate that `topFix-01` names
+by tariff. My guard asserted every practice item was pinned to SOME block and that no index was
+pinned twice; it validated the PIN LIST and never asked what the page RESOLVES. The fix is a `lead`
+flag naming the one item per block a check-in shows, and a check that imports the app's own
+`resolvePinnedItem` and `resolvePinnedDiagram` and runs them over the built content with the same
+shared `used` sets. **With eight command words over five chapters, three items can only ever be
+reached from the Practice tab; which three is now a decision** (Define, Calculate, Explain — the three
+lowest tariffs) rather than a consequence of authoring order.
+
+**Verify B found a class the runner could not see, twice.** At 390×844 the point label `964 at 106`
+had the price-level axis drawn through it, and `AD₁` had its own guide line through it. Neither check
+faces a line: the extent check measures a label against the FRAME, and the collision check compares a
+text box with another TEXT box. **And the guard written for it was wrong twice before it was right** —
+the first draft excluded dashed lines, which is the exact case its own precedent names (packet 29's
+"a label struck through by its own guide line"), and the second compared the line's BOUNDING BOX with
+the glyph box, which flags every label under a diagonal and reported six findings that were all false.
+With Liang-Barsky clipping it found one more real defect I had missed by eye.
+
+**Layer 6 caught both canaries and two conceptual errors no arithmetic check could reach**, because
+every individual figure was correct. (a) Sub-topic 3c divided a PRE-tax $40 by a POST-tax outlay, so
+tax relief and the subsidy were priced in two different tax worlds on consecutive steps and relief
+looked better than it is. (b) A worked example called a 6.0% kept return against a 6% interest rate a
+"clearance" when the section's own rule is that a return must BEAT the rate — which also gave the
+8%-return quiz item a second defensible answer. Both are fixed at the spine: the profit tax is 20%,
+every return in 3c is the KEPT return over what the firm PAYS, and the runner asserts the base case
+STRICTLY beats the low rate and is not a tie.
+
+### Three things for the next packet
+
+1. **A green result from an inherited check is a claim.** `MARK_CLAIM` walked past three marker claims
+   Layer 6 found in one pass — "An examiner reading…", "the marks are in…", "earns you nothing" — because
+   the inherited regex wanted an earn/cost verb within 60 characters of "marks". It is widened and
+   A/B'd against all three. **A rule written for one phrasing is a rule for one phrasing.**
+2. **A bound owned by another file must be parsed, not copied.** Packet 2.6 landed mid-build and moved
+   `diagram.table-legible` from a 530px column to 620px. The runner now reads that number out of
+   `lib/content-validator.mjs`, as the palette check reads `PALETTE` out of `processSvg.js`.
+3. **Check what the page RESOLVES, not what the content PINS.** That is Verify A's rejection in one
+   line, and it generalises past practice items to anything a component resolves out of a list.
+
+
 ## Packet 33 spec — `globalisation`, Business Unit 4 (WBS14), IAL **4.3.1** (Opus 5, 18 September 2026)
 
 `audit/raw/bus_spec.txt:1323-1367`. The oracle holds **32 rows for `BUS-4.3.1`**, of which four (`1c`,
