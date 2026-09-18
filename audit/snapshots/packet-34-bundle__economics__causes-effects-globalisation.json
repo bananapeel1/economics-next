@@ -1,0 +1,2456 @@
+{
+ "section_id": "causes-effects-globalisation",
+ "subject": "economics",
+ "label": "packet-34-bundle",
+ "tables": {
+  "content": [
+   {
+    "id": "causes-effects-globalisation:block:925e01d7",
+    "title": "What Globalisation Looks Like",
+    "sections": [
+     {
+      "id": "causes-effects-globalisation:sub:what-globalisation-is",
+      "title": "What Globalisation Is",
+      "keyIdea": "Globalisation is the growing integration of national economies into one world economy. The specification asks you to measure it, name its causes and weigh its effects.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Economies become integrated when what happens in one starts to depend on what happens in the others — through the goods they trade, the firms that produce in both, and the people who move between them. That is a **process**, not an event: it has been going on for centuries and it has run faster in the last fifty years than before."
+       },
+       {
+        "type": "paragraph",
+        "text": "The specification is precise about what it wants. Topic 4.3.1 has three parts and they are three different questions: what globalisation **looks like**, what **caused** it, and what its **effects** are. An answer that describes the first when the question asked the second has not been unlucky; it has answered a different question."
+       },
+       {
+        "type": "paragraph",
+        "text": "This chapter is the first of the three. It is also the shortest, because a characteristic is something you can point at and count — and counting is what separates an economic answer about globalisation from a conversational one."
+       },
+       {
+        "type": "paragraph",
+        "text": "Throughout this section the same small open economy carries the figures: **Tamira**, whose output is $284.3bn and whose trade is $221.0bn. It is not a real country, so nothing about it has to be remembered — everything about it can be worked out."
+       }
+      ],
+      "realExample": {
+       "emoji": "🌍",
+       "text": "A device sold in one country, assembled in a second from components made in a third, by a firm registered in a fourth. Four economies are involved in one purchase, and each of them records part of it."
+      },
+      "misconception": "Students write that globalisation means \"the world becoming more connected\". That is true, and it is not yet economics: it can be written without knowing any. The specification's three characteristics are countable — trade against output, firms and their investment, and people.",
+      "examMatters": "Appendix 6 defines Define as requiring knowledge and understanding only — the meaning of a term, concept or phrase — for 2 marks. A definition of globalisation needs the integration AND what is being integrated; \"countries trading more\" is only half of it.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:what-globalisation-is:recall",
+       "type": "classify",
+       "prompt": "Sort each observation by whether it is evidence of globalisation as this topic measures it, or something else:",
+       "groups": [
+        {
+         "name": "Evidence",
+         "items": [
+          "A country's imports and exports grow faster than its output for a decade",
+          "A firm opens a factory in a country it used to export to",
+          "A quarter of the workers in one industry were born abroad"
+         ],
+         "why": "Each one is a characteristic the specification names: trade rising against output, firms and their investment crossing borders, and people moving between countries."
+        },
+        {
+         "name": "Not evidence",
+         "items": [
+          "A country's output grows and its trade grows at the same rate",
+          "A firm sells more at home than it did last year"
+         ],
+         "why": "Both describe an economy getting bigger without becoming more integrated with anywhere else — the proportions are unchanged, and it is the proportions that this topic measures."
+        }
+       ]
+      }
+     },
+     {
+      "id": "causes-effects-globalisation:sub:trade-as-a-proportion-of-gdp",
+      "title": "Trade as a Proportion of GDP",
+      "keyIdea": "The first characteristic is a ratio, not a total. Tamira's trade has risen from 30% of its output to 77.8%, because trade compounds at 6% a year and output at 4%.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Almost every country trades more than it did fifty years ago, and almost every country also produces more. So the total is the wrong number: it would rise even if nothing about the economy had become more integrated. The characteristic the specification names is trade **as a proportion of GDP**."
+       },
+       {
+        "type": "paragraph",
+        "text": "Work it out for Tamira. Fifty years ago its output was $40.0bn and its trade $12.0bn, so trade was $12.0bn ÷ $40.0bn × 100 = 30% of output. Today output is $284.3bn and trade is $221.0bn: 77.8%."
+       },
+       {
+        "type": "paragraph",
+        "text": "Nothing in that calculation is a judgement. Output is 7.10 times what it was and trade is 18.40 times, and the ratio rises for that reason alone. Two compound growth rates two percentage points apart do the whole of it."
+       },
+       {
+        "type": "paragraph",
+        "text": "The ratio can also fall, and it does — in a year when world demand collapses, trade falls faster than output. A characteristic is a **trend**, and a trend is not a promise about next year."
+       }
+      ],
+      "realExample": {
+       "emoji": "📈",
+       "text": "A small coastal economy that imports its fuel and exports its electronics can easily trade more than its whole annual output, because both halves of the trade are counted and neither is subtracted."
+      },
+      "misconception": "Students say a ratio above 100% is impossible because a country cannot trade more than it produces. It can: exports and imports are added together, and imports are not part of output at all. The ratio measures openness, not a share of anything.",
+      "examMatters": "Appendix 6 defines Calculate as assessing quantitative skills through a calculation involving several stages based on given data, and advises showing workings. Two stages here — the sum of exports and imports, then the division — so both belong on the page.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:trade-as-a-proportion-of-gdp:recall",
+       "type": "fillin",
+       "prompt": "Another economy exports $30.0bn and imports $26.0bn in a year when its GDP is $80.0bn:",
+       "template": [
+        "Its openness this year is ___",
+        "Next year trade grows a tenth and output a twentieth, so the ratio ___",
+        "Had both grown a tenth, the ratio would have ___"
+       ],
+       "answers": [
+        "70%",
+        "rises",
+        "held"
+       ],
+       "hints": [
+        "both flows over output, as a percentage",
+        "compare the two growth rates",
+        "what happens when the two rates are equal"
+       ],
+       "distractors": [
+        "37.5%",
+        "falls",
+        "doubled"
+       ]
+      }
+     },
+     {
+      "id": "causes-effects-globalisation:sub:transnational-companies",
+      "title": "Transnational Companies",
+      "keyIdea": "A transnational company produces in more than one country. Exporting from one country to another does not make a firm transnational; owning the production in both does.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The specification's second characteristic is the \"increase in importance of transnational companies (TNCs) and foreign direct investment (FDI)\". Those are two things and this subsection is the first of them."
+       },
+       {
+        "type": "paragraph",
+        "text": "A **transnational company** owns and runs production in several countries. The test is where the production is, not where the customers are: a firm that makes everything in one country and sells worldwide is an exporter, however large. A firm with a plant in three countries is transnational even if each plant sells only locally."
+       },
+       {
+        "type": "paragraph",
+        "text": "Why it matters for this topic is that a TNC's internal decisions become international trade. When **Norvell Electronics** ships components from its Tamira plant to its assembly plant elsewhere, both countries record trade — and no customer has bought anything yet. A large share of world trade is firms trading with themselves."
+       },
+       {
+        "type": "paragraph",
+        "text": "That is also what makes them significant enough for the specification to name them twice: once as a characteristic here, and again as a cause, because a firm that splits its production across borders creates trade that would not otherwise exist."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏭",
+       "text": "An electronics firm making components in one country, assembling them in a second and running its design office in a third is transnational three times over, and every movement between the three is recorded as trade."
+      },
+      "misconception": "Students call any big firm with foreign customers a TNC. Size and exports are not the test. Production in more than one country is, and a small firm with two small plants in two countries passes it while a huge exporter with one plant does not.",
+      "examMatters": "Appendix 6 defines Explain as requiring knowledge, understanding and application when explaining a term or characteristic, and a two-stage chain of reasoning when explaining a reason or impact. \"TNCs have grown\" is neither until it reaches what that growth did.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:transnational-companies:recall",
+       "type": "classify",
+       "prompt": "Decide for each firm whether it is transnational or not, by asking where the production is:",
+       "groups": [
+        {
+         "name": "Transnational",
+         "items": [
+          "Runs a bakery in one country and a second bakery over the border",
+          "Weaves cloth in one economy and sews it into shirts in another"
+         ],
+         "why": "Production is owned and run in more than one country, which is the whole of the test, and the size of the firm does not enter it."
+        },
+        {
+         "name": "Not transnational",
+         "items": [
+          "One factory at home and buyers in forty countries",
+          "Imports its cotton and weaves all of it at home",
+          "Owned by shareholders in a dozen countries"
+         ],
+         "why": "Each of these crosses a border with something — goods out, goods in, or ownership — while all the production stays in one place."
+        }
+       ]
+      }
+     },
+     {
+      "id": "causes-effects-globalisation:sub:foreign-direct-investment",
+      "title": "Foreign Direct Investment",
+      "keyIdea": "FDI is investment that buys productive assets in another country and the control of them. Money crossing a border is not enough: the word doing the work is direct.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Foreign direct investment** is spending by a firm on productive assets in another country — a plant, machinery, land, or enough of an existing company to run it. Norvell Electronics's $120m plant in Tamira is FDI."
+       },
+       {
+        "type": "paragraph",
+        "text": "The distinction that carries marks is **control**. A saver in one country who buys a few shares in a firm in another has sent money abroad and bought no say in what the firm does; the firm's managers decide, as they did before. That is why the specification's word is *direct*: the investor directs the asset."
+       },
+       {
+        "type": "paragraph",
+        "text": "Control is also what makes FDI hard to reverse. Shares can be sold in an afternoon; a plant cannot. So a country receiving FDI receives something that is expected to stay — and a firm making it is making a bet on that country for years, which is why the reasons for FDI are worth a sub-topic of their own."
+       },
+       {
+        "type": "paragraph",
+        "text": "Two forms are common: building something new, or buying a firm that already exists. Both are FDI, because both end with the investor running productive assets abroad. What differs is whether the country gains new capacity or a new owner for old capacity."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏗️",
+       "text": "A firm that builds a plant abroad and a firm that buys the local competitor have both made foreign direct investment. Only the first has added a factory to the country; the second has changed who owns one."
+      },
+      "misconception": "Students treat any foreign money as FDI, including loans and small shareholdings. Neither buys control, so neither is direct investment. Ask who decides what the asset does next: if the answer is still somebody local, no direct investment has taken place.",
+      "examMatters": "Appendix 6 defines Define as giving the meaning of a term for 2 marks, and this term has two parts to give: investment in productive assets in another economy, and a controlling interest in them.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:foreign-direct-investment:recall",
+       "type": "match",
+       "prompt": "Match each transaction to whether it is foreign direct investment, and to the reason:",
+       "pairs": [
+        {
+         "left": "A firm spends $120m building a plant abroad",
+         "right": "FDI — productive assets abroad, and it runs them",
+         "why": "New productive capacity abroad, owned and directed by the investor: the clearest case of the term."
+        },
+        {
+         "left": "A firm buys the whole of a company in another country",
+         "right": "FDI — it has bought control of assets already there",
+         "why": "The capacity already existed, but the investor now decides what it does, and control is the test rather than novelty."
+        },
+        {
+         "left": "A saver buys a small parcel of shares in a foreign firm",
+         "right": "Not FDI — money crossed a border, control did not",
+         "why": "The shareholding is too small to direct anything, so the managers who decided before still decide."
+        },
+        {
+         "left": "A bank lends to a firm in another country",
+         "right": "Not FDI — a loan is repaid, not directed",
+         "why": "A lender is owed money and has no say in what the borrower produces, so nothing has been directed."
+        }
+       ]
+      }
+     },
+     {
+      "id": "causes-effects-globalisation:sub:migration",
+      "title": "Migration",
+      "keyIdea": "The third characteristic is people. More of them cross borders to work than did fifty years ago, and the movement follows the same forces as the goods and the money.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The specification's third characteristic is the \"increase in migration\". Goods move to where they are wanted, capital moves to where it earns most, and so does labour — the three are the same phenomenon in three markets."
+       },
+       {
+        "type": "paragraph",
+        "text": "What drives it is a gap. Where wages for the same work differ between two countries by more than the cost and difficulty of moving, some people move; where the gap closes or the barriers rise, fewer do. That is why migration rose alongside cheaper transport and open borders, which are two of this topic's causes."
+       },
+       {
+        "type": "paragraph",
+        "text": "Migration also feeds the other two characteristics. A Tamira plant that cannot fill 1,500 skilled posts locally can fill some of them from abroad, and a firm choosing where to invest counts the workers it can reach, not the ones inside one border."
+       },
+       {
+        "type": "paragraph",
+        "text": "Keep the scope tight. Here migration is a **characteristic** — a sign that economies are more integrated. What migration does to inequality within and between countries, and to a developing economy's growth, are questions for the topics that own them."
+       }
+      ],
+      "realExample": {
+       "emoji": "✈️",
+       "text": "A construction boom in one economy draws workers from several others, and the flow reverses within a year of the boom ending. The movement followed the wage gap, in both directions."
+      },
+      "misconception": "Students write that migration is a cause of globalisation. The specification lists it under characteristics, not causes, and the causes it does list — liberalisation, blocs, political change, transport and communications, TNCs — are what made all three characteristics possible, migration included.",
+      "examMatters": "Appendix 6 defines Analyse as requiring a chain of reasoning, focused on depth rather than breadth, and says it does not include evaluation. A chain on migration must reach an economic effect; whether that effect is good is a different command word.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:migration:recall",
+       "type": "classify",
+       "prompt": "Sort each statement by whether it belongs to this topic's characteristics or to a different topic:",
+       "groups": [
+        {
+         "name": "A characteristic here",
+         "items": [
+          "More people work outside the country they were born in than fifty years ago",
+          "Workers move towards the largest wage gaps, and stop when they close"
+         ],
+         "why": "Both describe the movement itself, which is what the specification lists as the third characteristic of globalisation."
+        },
+        {
+         "name": "Another topic",
+         "items": [
+          "Migration widens the gap between the richest and poorest tenth of a country",
+          "Losing trained workers slows a developing economy's growth"
+         ],
+         "why": "Both are about what migration DOES to inequality or to development, and those are the questions the inequality and development topics ask."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Globalisation is integration, and the specification measures it three ways.",
+     "Trade as a PROPORTION of GDP: 30% to 77.8% in fifty years.",
+     "A TNC produces in more than one country. Exporting from one does not count.",
+     "FDI buys productive assets abroad AND the control of them. A small shareholding does not.",
+     "Migration is listed as a characteristic here; its effects belong to other topics."
+    ],
+    "diagramId": "causes-effects-globalisation:diagram:825cc985",
+    "quizIndices": [
+     3,
+     4,
+     5,
+     6
+    ],
+    "practiceIndices": [
+     0,
+     1
+    ]
+   },
+   {
+    "id": "causes-effects-globalisation:block:27019cde",
+    "title": "What Caused It",
+    "sections": [
+     {
+      "id": "causes-effects-globalisation:sub:trade-liberalisation",
+      "title": "Trade Liberalisation",
+      "keyIdea": "Trade liberalisation is the reduction or removal of barriers to trade between countries. Remove the barrier on Tamira's device and its price falls from $150 to $70.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The specification's first cause is **trade liberalisation**: barriers between countries coming down. A barrier is anything that makes a foreign good dearer or harder to sell than a domestic one — a tax on imports is the commonest, and the detail of how such barriers work belongs to the topic on trade and the global economy."
+       },
+       {
+        "type": "paragraph",
+        "text": "What matters here is the size of the effect. Tamira's own maker sells the device at $150. The same device can be bought from abroad for $70, but a tax on imports had made the imported one dearer than the home-made one, so none arrived and the price stayed at $150."
+       },
+       {
+        "type": "paragraph",
+        "text": "Remove the tax and the price falls to $70. At $150, 100,000 devices were bought; at $70, 260,000 are. Liberalisation did not merely redirect the 100,000 — it added 160,000 buyers who could not afford one at the old price."
+       },
+       {
+        "type": "paragraph",
+        "text": "This is the cause that does most of the work in this topic, because every later effect runs through it: the lower price, the wider market, the firm that closes, the workers displaced. The chapters on benefits and costs are largely a ledger of what this one paragraph set off."
+       }
+      ],
+      "realExample": {
+       "emoji": "📉",
+       "text": "An economy that had taxed imported machinery removes the tax. Within a year its own manufacturers have re-equipped with cheaper machines and the workshop that had assembled the old ones has closed. Both happened for the same reason."
+      },
+      "misconception": "Students treat liberalisation as a decision one country makes about its own imports. Most of it is agreed between countries, each lowering barriers in exchange for the other doing the same — which is why the next cause, trading blocs, is a cause at all.",
+      "examMatters": "Appendix 6 defines Explain as requiring a two-stage chain of reasoning when explaining a reason or impact. Here the two stages are the barrier coming off and the price falling; stopping at \"trade increases\" has skipped the mechanism that makes it increase.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:trade-liberalisation:recall",
+       "type": "fillin",
+       "prompt": "A country taxes imported bicycles so heavily that none are imported, and its own makers charge $240. The tax is removed and bicycles arrive at $160. Demand is 20,000 at the old price and 44,000 at the new one:",
+       "template": [
+        "The price paid by buyers falls by ___",
+        "The number of bicycles bought rises by ___ thousand",
+        "The buyers who appear only after the fall could not afford one at ___"
+       ],
+       "answers": [
+        "$80",
+        "24",
+        "$240"
+       ],
+       "hints": [
+        "subtract the new price from the old",
+        "the difference between the two quantities, in thousands",
+        "the price that had been keeping them out"
+       ],
+       "distractors": [
+        "$400",
+        "44",
+        "$160"
+       ]
+      }
+     },
+     {
+      "id": "causes-effects-globalisation:sub:trading-blocs",
+      "title": "The Growth of Trading Blocs",
+      "keyIdea": "The second cause: more trading blocs, and larger ones. A bloc is a group of countries that agree to lower the barriers between themselves, so more trade happens under one.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "A **trading bloc** is a group of countries that has agreed to reduce barriers to trade between its members. The specification lists the \"increased number and size of trading blocs\" as the second factor contributing to globalisation in the last fifty years."
+       },
+       {
+        "type": "paragraph",
+        "text": "As a cause, the mechanism is the one from the previous subsection, applied to many countries at once and by agreement rather than unilaterally. Each new bloc, and each enlargement of an existing one, moves another slice of world trade inside an arrangement where barriers are lower than outside it."
+       },
+       {
+        "type": "paragraph",
+        "text": "Size compounds the effect. A bloc of three small economies lowers barriers on a little trade; the same agreement across a dozen economies including large ones covers a great deal more. That is why the specification names the number **and** the size."
+       },
+       {
+        "type": "paragraph",
+        "text": "How blocs differ from one another, what membership costs and what it gains, and how blocs sit alongside the World Trade Organization, are the subject of the topic on trade and the global economy. Here the bloc is a cause, and one sentence of mechanism is what the leaf asks for."
+       }
+      ],
+      "realExample": {
+       "emoji": "🤝",
+       "text": "A group of neighbouring economies agrees to charge each other nothing on manufactured goods. Within a decade the share of each member's trade that goes to the others has roughly doubled, without any of them changing what they charge the rest of the world."
+      },
+      "misconception": "Students use a bloc's existence as an explanation by itself — \"trade grew because of trading blocs\". The bloc is a container; what raises trade is the lower barrier inside it. An answer that names the mechanism can be marked; one that names the bloc cannot.",
+      "examMatters": "Appendix 6 defines Analyse as requiring an explanation which includes a chain of reasoning, focusing on depth rather than breadth. Listing five causes is breadth; taking one of them from the agreement to the extra trade is the depth that is being asked for.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:trading-blocs:recall",
+       "type": "fillin",
+       "prompt": "Two economies each trade $40.0bn with the world, of which $6.0bn is with each other. They form a bloc and remove the barriers between them; trade with each other reaches $15.0bn while trade with everyone else is unchanged:",
+       "template": [
+        "Each economy's total trade is now ___",
+        "If neither economy's GDP changed, trade as a proportion of GDP has ___",
+        "The mechanism that raised it was a lower ___ between the members"
+       ],
+       "answers": [
+        "$49.0bn",
+        "risen",
+        "barrier"
+       ],
+       "hints": [
+        "the unchanged part plus the new figure for trade with the partner",
+        "compare the new total with the old one",
+        "what a bloc agreement actually changes"
+       ],
+       "distractors": [
+        "$55.0bn",
+        "fallen",
+        "price"
+       ]
+      }
+     },
+     {
+      "id": "causes-effects-globalisation:sub:political-change",
+      "title": "Political Change",
+      "keyIdea": "The specification names two: the breakdown of the Soviet system and the opening up of China. Each brought a closed economy into the world market as producer and as buyer.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The third cause is **political change**, and the specification is specific about which: the breakdown of the Soviet system and the opening up of China. Both were political decisions with economic consequences that dwarf most economic policies."
+       },
+       {
+        "type": "paragraph",
+        "text": "An economy that is closed trades little by design: its prices, its output and its investment are decided internally. When it opens, three things arrive at once. Its producers can sell abroad; its consumers can buy from abroad; and firms elsewhere can invest in it, which is where much of the world's FDI went next."
+       },
+       {
+        "type": "paragraph",
+        "text": "The scale is what makes this a cause of **globalisation** rather than a change in two countries. Hundreds of millions of workers and consumers entered the same world market that everyone else was already trading in, and the volume of world trade rose because of it."
+       },
+       {
+        "type": "paragraph",
+        "text": "Notice what the cause actually is. The politics changed first; the economics followed. That is the opposite of the usual direction in this course, and it is worth saying in an answer, because it explains why the change was so fast."
+       }
+      ],
+      "realExample": {
+       "emoji": "🚪",
+       "text": "An economy that had produced almost entirely for itself permits foreign firms to build plants and its own firms to export. Within a generation it is among the largest traders in the world, and the goods it makes are in every other country's imports."
+      },
+      "misconception": "Students describe this cause as \"countries becoming more democratic\". The specification's claim is narrower and economic: economies that had been closed to trade and investment opened to both. The form of government is not what the leaf names.",
+      "examMatters": "Appendix 6 defines Examine as requiring a chain of reasoning and a brief assessment of the arguments, for 8 marks. On this cause, the assessment is about relative importance: political change opened economies that liberalisation alone would never have reached.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:political-change:recall",
+       "type": "match",
+       "prompt": "Match each thing that happened when a closed economy opened to what it added to the world economy:",
+       "pairs": [
+        {
+         "left": "Its factories were allowed to sell abroad",
+         "right": "A large new source of exports",
+         "why": "Production that had served only the home market became supply to everyone else, which is why world trade volumes jumped rather than drifted."
+        },
+        {
+         "left": "Its households could buy imported goods",
+         "right": "A large new market for other countries",
+         "why": "The same opening works in both directions: exporters elsewhere gained customers they had never been able to reach."
+        },
+        {
+         "left": "Foreign firms could build plants inside it",
+         "right": "A new destination for FDI",
+         "why": "Capital goes where the return is highest, and an economy that had been closed to it was, by definition, short of it."
+        },
+        {
+         "left": "Its workers could be employed by foreign firms",
+         "right": "A large addition to the labour available",
+         "why": "The world market for labour grew by the size of the opening economy, which is the part that shows up later in wages and in inequality."
+        }
+       ]
+      }
+     },
+     {
+      "id": "causes-effects-globalisation:sub:transport-and-communications",
+      "title": "Cheaper Transport and Communications",
+      "keyIdea": "The fourth cause changes what CAN be traded rather than what is allowed to be. At $12 a unit, freight on a $8 good is 150% of its price; at $3 it is 37.5%.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The fourth cause the specification names is the **reduced cost of transport and communications**. It is the only one of the five that is not a decision by a government: standard steel boxes, larger ships and instant communication made distance cheaper, and nobody had to agree to it."
+       },
+       {
+        "type": "paragraph",
+        "text": "Its effect is different in kind from liberalisation's. A lower barrier makes a traded good cheaper; cheaper freight decides **which goods are traded at all**. A good costing $8 to make arrives at $20 when freight is $12 — 150% of its price in shipping — and at $11 when freight is $3."
+       },
+       {
+        "type": "paragraph",
+        "text": "The same fall matters far less to a valuable good. On a device selling at $70, the difference between $12 and $3 of freight is a rounding error. So falling transport costs bring **low-value, bulky** goods into world trade first, and that is most of what changed."
+       },
+       {
+        "type": "paragraph",
+        "text": "Communications did the same to coordination. A firm can run a plant it cannot visit, which is the condition for the fifth cause and for splitting production across countries."
+       }
+      ],
+      "realExample": {
+       "emoji": "🚢",
+       "text": "Fresh produce, furniture and bottled drinks are traded across oceans today and were not two generations ago. None of them became more valuable; the cost of moving them fell until it stopped being most of the price."
+      },
+      "misconception": "Students write that cheaper transport \"made trade cheaper\", which is true and thin. The point that carries an answer is the composition: the goods that started being traded are the ones where freight had been a large share of the price, and they are a different set of goods from the ones traded before.",
+      "examMatters": "Appendix 6 defines Analyse as requiring an explanation which includes a chain of reasoning and says any relevant data provided needs to be interpreted. A chain here should use the freight figures rather than assert that costs fell.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:transport-and-communications:recall",
+       "type": "fillin",
+       "prompt": "Freight falls from $12 to $3 a unit. Two goods are considered: one costing $8 to make, one costing $70:",
+       "template": [
+        "For the cheap good, freight falls from 150% of its factory price to ___",
+        "For the expensive good, the same $9 fall is worth ___ of the $70 it sells for",
+        "So the fall in freight matters most to goods that are ___ in value"
+       ],
+       "answers": [
+        "37.5%",
+        "12.9%",
+        "low"
+       ],
+       "hints": [
+        "the new freight over the same factory price",
+        "divide the fall by the selling price of the device",
+        "which of the two changed its tradability"
+       ],
+       "distractors": [
+        "150%",
+        "4.3%",
+        "high"
+       ]
+      }
+     },
+     {
+      "id": "causes-effects-globalisation:sub:the-rise-of-tncs",
+      "title": "The Rise of TNCs",
+      "keyIdea": "The fifth cause is the increased significance of TNCs. A firm that splits one product's production across countries creates trade that would not exist otherwise.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The specification's fifth factor is the **increased significance of TNCs**. They appeared in chapter 1 as a characteristic; here they are a cause, and the two are not the same claim. As a characteristic, there are more of them. As a cause, what they DO raises trade."
+       },
+       {
+        "type": "paragraph",
+        "text": "A TNC decides where each stage of production happens. Once components are made in one country and assembled in another, the components cross a border as trade, and so does the finished good. One product, two border crossings, and no consumer has bought anything extra."
+       },
+       {
+        "type": "paragraph",
+        "text": "That has a consequence for the measurement in chapter 1. If a $70 device has $25 of components made abroad, the trade recorded is $25 + $70 = $95 — more than the device is worth. Splitting production raises measured trade faster than it raises output, which is part of why the ratio in chapter 1 rose so steeply."
+       },
+       {
+        "type": "paragraph",
+        "text": "The other half of a TNC's significance is that it moves capital as well as goods, which is the subject of the next chapter. A firm choosing where to put a plant is making the investment the second characteristic counts."
+       }
+      ],
+      "realExample": {
+       "emoji": "🔩",
+       "text": "A single appliance whose motor, casing and electronics are made in three different economies and assembled in a fourth is recorded four times in world trade statistics before anybody buys it once."
+      },
+      "misconception": "Students say TNCs cause globalisation \"by selling all over the world\". Selling abroad is exporting, which firms have done for centuries. What is new is production split across borders, so that a firm's internal shipments become international trade.",
+      "examMatters": "Appendix 6 defines Examine as requiring knowledge, analysis and evaluation with a brief assessment of the arguments, for 8 marks. The assessment on this cause is whether TNCs caused the trade or merely responded to barriers that were already falling.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:the-rise-of-tncs:recall",
+       "type": "fillin",
+       "prompt": "A machine sells for $400. Its parts are made abroad and are worth $200; the rest of the value is added where it is assembled, and the finished machine is then exported:",
+       "template": [
+        "The trade recorded across the two crossings is ___",
+        "That is ___ times the value of the machine",
+        "The number of machines anybody ended up owning is ___"
+       ],
+       "answers": [
+        "$600",
+        "1.50",
+        "one"
+       ],
+       "hints": [
+        "the parts coming in, and the whole machine going out",
+        "divide the recorded trade by the selling price",
+        "count the machines, not the crossings"
+       ],
+       "distractors": [
+        "$400",
+        "2.67",
+        "two"
+       ]
+      }
+     },
+     {
+      "id": "causes-effects-globalisation:sub:why-trade-grew-faster-than-output",
+      "title": "Why Trade Grew Faster Than Output",
+      "keyIdea": "The five causes are not five separate stories. Together they explain the one number chapter 1 measured: why Tamira's trade went from 30% of output to 77.8%.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "A good answer on this topic connects the causes to the characteristics rather than listing both. Chapter 1 measured a ratio rising; this chapter has named five things that raised it, and they do not all work the same way."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Two of them lower a barrier**: liberalisation, and the blocs that liberalise between members. Goods that were already worth trading start being traded.",
+         "**One opens a new economy**: political change. Producers, buyers and investment destinations that were outside the world market come into it.",
+         "**One changes what is worth trading**: cheaper transport and communications. Goods too cheap to be worth moving become worth moving.",
+         "**One changes how goods are made**: TNCs splitting production, so the same output crosses more borders."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Only the last of those raises trade **without** raising the amount produced or consumed anywhere. That is the one to reach for when a question asks why trade grew *faster* than output rather than simply why it grew."
+       },
+       {
+        "type": "paragraph",
+        "text": "And the causes reinforce each other. Cheap freight is worth little behind a high barrier; an open economy attracts TNCs; and a TNC with production in three countries wants the barriers between them low."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧩",
+       "text": "An economy lowers its import taxes, joins a bloc with its neighbours, and within a decade hosts the component plants of three foreign firms. Each of the three causes made the next one more likely, and its trade-to-output ratio doubled."
+      },
+      "misconception": "Students answer \"why has trade grown faster than output?\" by listing the causes of trade growth. Most of those raise output as well, so they cannot explain a rising ratio on their own. The answer has to include something that raises the numerator without the denominator.",
+      "examMatters": "Appendix 6 defines Discuss as requiring logical and coherent chains of reasoning with reference to context, the validity and significance of arguments considered, and a recognition of different viewpoints. Ranking these five causes is exactly that kind of question.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:why-trade-grew-faster-than-output:recall",
+       "type": "reorder",
+       "prompt": "Put the stages in causal order, from the political decision to the number chapter 1 measured:",
+       "correctOrder": [
+        "An economy that had been closed to trade and investment opens",
+        "Its neighbours agree with it to lower the barriers between them",
+        "Foreign firms build component plants inside it, because the barriers are now low and freight is cheap",
+        "Components leave for assembly elsewhere, and the finished goods come back past the same border",
+        "Trade rises faster than output, so trade as a proportion of GDP climbs"
+       ],
+       "why": [
+        "Nothing else on the list can happen while the economy is closed, so this is the step everything after it depends on.",
+        "Lowering a barrier is an agreement between economies that are already trading, so it follows the opening rather than causing it.",
+        "A firm invests once the barriers are low and the shipping is cheap: the investment is a response to the first two steps, not a cause of them.",
+        "The split production is what turns one firm's internal logistics into recorded trade across two crossings.",
+        "The ratio is the consequence of everything above it, which is why it is the measurement rather than the cause."
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Five causes, and they do not all work the same way.",
+     "Liberalisation and blocs lower a barrier: the device falls from $150 to $70.",
+     "Political change opened economies that no amount of liberalisation could have reached.",
+     "Cheaper freight changes WHICH goods are worth trading, starting with the cheap ones.",
+     "Only split production raises trade without raising output — which is why the ratio climbed."
+    ],
+    "diagramId": "causes-effects-globalisation:diagram:976b53df",
+    "quizIndices": [
+     7,
+     8,
+     9,
+     10
+    ],
+    "practiceIndices": [
+     2
+    ]
+   },
+   {
+    "id": "causes-effects-globalisation:block:3699c650",
+    "title": "FDI by TNCs",
+    "sections": [
+     {
+      "id": "causes-effects-globalisation:sub:reasons-for-fdi",
+      "title": "Reasons for FDI",
+      "keyIdea": "A firm invests abroad to reach a market, lower a cost, secure a supply or get inside a barrier. Every reason is something it cannot do as cheaply from home.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The specification's leaf 2b is \"FDI by TNCs\", and its first half is the **reasons**. Exporting is the alternative, so every reason has to explain why owning production abroad beats shipping to it."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**To reach a market.** Producing inside a country avoids the cost of shipping to it, and avoids any barrier at its border.",
+         "**To lower a cost.** Wages, land, energy or materials may be cheaper where the production goes, and the saving is permanent rather than one-off.",
+         "**To secure a supply.** A firm that depends on one input buys the source rather than bargaining for it every year.",
+         "**To use what the other country has.** Skills, suppliers already in place, or a location close to other markets."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Norvell Electronics builds in Tamira for the first two: the plant serves a market it had been shipping to, and it makes components that go on to be assembled elsewhere. $120m is a large commitment, and the firm makes it because both advantages are expected to last."
+       },
+       {
+        "type": "paragraph",
+        "text": "What none of the reasons is, is generosity. FDI is an investment, chosen against the alternative of exporting or of investing somewhere else — which is exactly why a recipient country has to look hard at what it is getting."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧭",
+       "text": "A firm that had exported to a fast-growing region builds a plant there once the shipping cost and the delay have grown larger than the cost of running a second factory."
+      },
+      "misconception": "Students give \"cheap labour\" as the reason for all FDI. A great deal of the world's FDI goes to high-wage economies, where the attraction is the market, the skills or the suppliers. Say which reason applies to the case in front of you.",
+      "examMatters": "Appendix 6 defines Explain as requiring a two-stage chain of reasoning when explaining a reason. The two stages are the advantage the firm gains and the decision it changes: an advantage nobody acts on explains nothing.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:reasons-for-fdi:recall",
+       "type": "match",
+       "prompt": "Match each situation to the reason for FDI it points to, by asking what the firm could not do from home:",
+       "pairs": [
+        {
+         "left": "Shipping to the region now costs more than running a second plant",
+         "right": "To reach the market",
+         "why": "The comparison is between shipping and producing locally, and the shipping bill has crossed the cost of the factory."
+        },
+        {
+         "left": "The one mine supplying a key input raises its price every year",
+         "right": "To secure the supply",
+         "why": "Ownership replaces bargaining: the firm stops being a customer of the input and becomes its owner."
+        },
+        {
+         "left": "A tax on imports makes the exported version uncompetitive",
+         "right": "To get inside the barrier",
+         "why": "The barrier applies at the border, so production on the other side of it is not caught by the barrier at all."
+        },
+        {
+         "left": "Skilled assembly workers are plentiful there and scarce at home",
+         "right": "To use what the other country has",
+         "why": "The advantage is in the other country and cannot be moved, so the firm has to go to it."
+        }
+       ]
+      }
+     },
+     {
+      "id": "causes-effects-globalisation:sub:the-impact-on-the-recipient-country",
+      "title": "The Impact on the Recipient Country",
+      "keyIdea": "The second half of leaf 2b. Norvell Electronics's plant pays $9m in wages, $18m to local suppliers and $8.4m in tax — and each of the three can be smaller than it first appears.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "A country that receives FDI receives capital it did not have to save for. What it does with the economy is best counted rather than asserted, so count Norvell Electronics's plant in Tamira."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Employment.** 1,500 jobs at $6,000 a year, so $9m of wages that are then spent locally.",
+         "**Orders for local firms.** $18m a year buying materials and services from suppliers in Tamira.",
+         "**Tax.** $7.5m on profit at 25%, plus $0.9m of income tax on the wages: $8.4m in all.",
+         "**Skills and technology.** Workers trained on equipment the country did not have, and suppliers made to meet a standard they had not met before."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Those are the gross figures and they are real. The next subsection is about why the net figure is smaller — because every one of the four has a leak, and an answer that stops at $8.4m of tax has not finished."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧾",
+       "text": "A new plant's first year is counted by the country as jobs and tax, and by the local suppliers as the first orders they have had that required documented quality standards. The second of those outlasts the plant."
+      },
+      "misconception": "Students count the jobs and stop. A plant's effect on a country runs through the wages spent locally, the orders placed with local firms and the tax paid — and each of those is a different size from the headline. The employment figure is the easiest to find and the least informative.",
+      "examMatters": "Appendix 6 defines Analyse as requiring a chain of reasoning, focused on depth rather than breadth, with any data interpreted. A chain on employment should reach what the wages do next, rather than listing four impacts one line each.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:the-impact-on-the-recipient-country:recall",
+       "type": "fillin",
+       "prompt": "A second plant elsewhere employs 900 at $5,000, buys $11m from local suppliers, and makes $20m of profit taxed at 20%:",
+       "template": [
+        "Its wage bill is ___",
+        "Its profit tax is ___",
+        "Adding the supplier orders, the money reaching the local economy each year before any tax is ___"
+       ],
+       "answers": [
+        "$4.5m",
+        "$4m",
+        "$15.5m"
+       ],
+       "hints": [
+        "multiply the headcount by the wage",
+        "a fifth of the profit",
+        "wages and supplier orders together"
+       ],
+       "distractors": [
+        "$45m",
+        "$5m",
+        "$35.5m"
+       ]
+      }
+     },
+     {
+      "id": "causes-effects-globalisation:sub:what-the-recipient-does-not-get",
+      "title": "What the Recipient Does Not Get",
+      "keyIdea": "Profits leave, imported inputs shrink the local orders, the best posts may come with the firm and a local competitor may close. The impact is the gross minus all four.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The specification asks for **the impact** of FDI on recipient countries, and an impact has two signs. Each of the gains in the last subsection has a matching leak."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**The profit belongs to the investor.** $30m of profit is earned in Tamira and owned abroad. What stays is the tax on it, and the next chapter shows how even that can be reduced.",
+         "**Imported inputs.** If the plant buys its components abroad, the local orders are a fraction of the output, and the country is hosting an assembly line rather than an industry.",
+         "**The best posts.** Where the senior and technical roles come with the firm, the training effect is smaller than the headcount suggests.",
+         "**Displaced local firms.** A plant that outsells local producers can close them, and those jobs come off the 1,500."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "None of that makes FDI bad. It makes the honest question a **net** one, and the specification's word for what a country receives — impact — is neutral on purpose."
+       }
+      ],
+      "realExample": {
+       "emoji": "🕳️",
+       "text": "A plant employing two thousand people imports almost every component and assembles them for export. The country's trade figures rise on both sides, and the value that stays behind is the wages and little else."
+      },
+      "misconception": "Students treat repatriated profit as something improper. It is the return on the investment and the reason the investment was made; a country that forbade it would receive no FDI. The economic question is whether what stays — wages, orders, tax, skills — is worth what leaves.",
+      "examMatters": "Appendix 6 defines Examine as requiring a chain of reasoning and a brief assessment of the arguments, for 8 marks. Here the assessment is the netting: an examined answer weighs the gains against the leaks rather than listing both.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:what-the-recipient-does-not-get:recall",
+       "type": "classify",
+       "prompt": "Sort each consequence of a foreign plant by whether the value stays in the host economy or leaves it:",
+       "groups": [
+        {
+         "name": "Stays",
+         "items": [
+          "Wages paid to local workers",
+          "Orders placed with local suppliers",
+          "Tax paid on the profit",
+          "Workers trained on the new equipment"
+         ],
+         "why": "Each of these is income or capability received by people and firms inside the country, and it is spent or used there."
+        },
+        {
+         "name": "Leaves",
+         "items": [
+          "Profit paid to the owners abroad",
+          "Components bought from the firm's other plants"
+         ],
+         "why": "Both are payments out of the country: one to the owners, one to suppliers who are somewhere else, and neither adds to local income."
+        }
+       ]
+      }
+     },
+     {
+      "id": "causes-effects-globalisation:sub:judging-an-fdi-project",
+      "title": "Judging an FDI Project",
+      "keyIdea": "The test is not whether a project has benefits. It is whether what stays exceeds what the country gave up, including the next best use of the same land, workers and concessions.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Leaf 2b ends with the impact on recipient countries, and the judgement needs a comparison rather than a list. Three questions settle most cases."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Against what?** The alternative is rarely nothing: the land, the workers and any tax concession had another use, and the project's gain is the difference.",
+         "**For how long?** A plant that stays twenty years and one that leaves when a concession expires are different projects with the same opening figures.",
+         "**How deep?** A plant buying $18m locally builds an industry around it; one importing every part does not, and the difference shows up only after the first year."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Apply that to Norvell Electronics: $8.4m of tax and $9m of wages a year is a real gain, and a tax concession worth more than $8.4m a year would have wiped it out before a single worker was hired."
+       },
+       {
+        "type": "paragraph",
+        "text": "This is the shape of every evaluation in this section, and it is worth practising here where the numbers are small: state what is gained, state what it cost or displaced, and say which is larger and why."
+       }
+      ],
+      "realExample": {
+       "emoji": "⚖️",
+       "text": "Two economies compete for the same plant by offering tax holidays. The one that wins collects no profit tax for a decade, and the gain is reduced to the wages and the supplier orders — which may still be worth it, and may not."
+      },
+      "misconception": "Students conclude that FDI is \"good for developing countries\" or \"bad for them\" as a general rule. The specification asks about the impact on recipient countries, which differs by project. A judgement without the comparison behind it is an opinion.",
+      "examMatters": "Appendix 6 defines Evaluate as requiring multi-stage chains of reasoning with reference to context, a recognition of different viewpoints, and informed judgements. The context is the project's own figures; the judgement is which side of them is larger.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:judging-an-fdi-project:recall",
+       "type": "reorder",
+       "prompt": "Put the steps of judging a project in the order you would work through them, from what arrives to what it was worth:",
+       "correctOrder": [
+        "Count what the project brings in a year: wages, supplier orders and tax",
+        "Subtract what leaves: the profit paid abroad and the inputs bought abroad",
+        "Take off what the country gave up to get it, including any tax concession",
+        "Ask how long the plant is expected to stay, and what happens when the concession ends",
+        "Compare the remainder with the next best use of the same land, workers and money"
+       ],
+       "why": [
+        "The gross figures are the only ones published, so they are where any judgement has to start — and where a weak answer stops.",
+        "What leaves is subtracted before anything else, because it is part of the same year's flows and is usually the largest single deduction.",
+        "A concession is a cost the country chose to pay, so it belongs in the same calculation rather than in a separate argument about fairness.",
+        "The duration converts one year's net figure into the total, and a project that leaves early can turn a positive year into a negative decade.",
+        "An alternative is what makes the judgement economic: a positive net gain still fails if the same resources would have produced more elsewhere."
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Firms invest abroad to reach a market, cut a cost, secure a supply or get inside a barrier.",
+     "The gross impact: $9m of wages, $18m of orders, $8.4m of tax.",
+     "Every one of those has a leak: profit leaves, inputs may be imported, local firms may close.",
+     "The judgement is net, and against the next best use of the same resources."
+    ],
+    "diagramId": "causes-effects-globalisation:diagram:36906265",
+    "quizIndices": [
+     11,
+     12,
+     13,
+     14
+    ],
+    "practiceIndices": [
+     3
+    ]
+   },
+   {
+    "id": "causes-effects-globalisation:block:a2dee22b",
+    "title": "The Possible Benefits",
+    "sections": [
+     {
+      "id": "causes-effects-globalisation:sub:growth-and-tax-revenue",
+      "title": "Economic Growth and Tax Revenue",
+      "keyIdea": "The first two benefits, and they are connected: output rises, and a government taxing that output collects more. One plant adds $8.4m a year to Tamira's revenue.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The specification lists six possible benefits. The first is **increased economic growth**: trade lets a country produce what it is relatively good at and buy the rest, and investment from abroad adds capital that domestic saving did not have to supply."
+       },
+       {
+        "type": "paragraph",
+        "text": "The second, **increased tax revenue**, follows from the first but is not the same claim. A larger economy has more to tax: profits, incomes and spending all rise. Tamira collects $7.5m from Norvell Electronics's profit and $0.9m from its workers' pay — $8.4m from one plant."
+       },
+       {
+        "type": "paragraph",
+        "text": "Revenue matters because of what it buys. A government with $8.4m more can fund the schooling and infrastructure that raise output later, which is how the benefit compounds rather than arriving once."
+       },
+       {
+        "type": "paragraph",
+        "text": "Both benefits are written as **possible**, and the specification means it. Growth can be concentrated in one region or one industry, and revenue can be given away in concessions or moved offshore — which is the fourth cost, two chapters from now."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏫",
+       "text": "An economy whose tax take rises with its exports builds secondary schools with the proceeds, and the workers those schools produce are the reason the next round of investment arrives."
+      },
+      "misconception": "Students write that globalisation \"creates growth\" as though the mechanism were automatic. Name it: specialisation and trade raise output, and investment raises capacity. A claim with no mechanism is the same claim in every essay and adds nothing to any of them.",
+      "examMatters": "Appendix 6 defines Analyse as requiring a chain of reasoning and says any relevant data provided needs to be interpreted. Interpreting here means using the revenue figures rather than restating that revenue rose.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:growth-and-tax-revenue:recall",
+       "type": "fillin",
+       "prompt": "Tamira taxes profit at 25% and wages at 10%. A second investor arrives with 600 jobs at $6,000 and profit of $12m:",
+       "template": [
+        "The income tax on its wages is ___",
+        "The tax on its profit is ___",
+        "Its total contribution to revenue is ___"
+       ],
+       "answers": [
+        "$0.4m",
+        "$3m",
+        "$3.4m"
+       ],
+       "hints": [
+        "a tenth of six hundred wages",
+        "a quarter of the profit",
+        "the two added"
+       ],
+       "distractors": [
+        "$3.6m",
+        "$2.4m",
+        "$4.2m"
+       ]
+      }
+     },
+     {
+      "id": "causes-effects-globalisation:sub:economies-of-scale",
+      "title": "Economies of Scale",
+      "keyIdea": "The third benefit. A world market spreads the same fixed cost over more units: $150 a device at 100,000 becomes $70 at 600,000, on the same $30 variable cost.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Economies of scale** mean a lower average cost as output rises. Globalisation supplies them by supplying customers: a firm selling into one country is limited by that country's demand, and a firm selling into fifty is not."
+       },
+       {
+        "type": "paragraph",
+        "text": "The arithmetic is the whole of the idea. Tamira's own maker spends $12m on the plant however many devices it makes, and $30 on materials and labour for each one. At 100,000 devices the fixed cost works out at $120 a device, so the average cost is $120 + $30 = $150."
+       },
+       {
+        "type": "paragraph",
+        "text": "A producer selling worldwide spends $24m — twice as much — but sells 600,000 devices. Its fixed cost per device is $40, so its average cost is $70. The materials and labour cost $30 in both cases."
+       },
+       {
+        "type": "paragraph",
+        "text": "That last sentence is the one to remember. The imported device is not cheaper because the people who made it were paid less; it is cheaper because $24m divided by 600,000 is a smaller number than $12m divided by 100,000."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏗️",
+       "text": "A firm designing a new engine spends the same on the design whether it sells a hundred thousand or two million. Only the second market makes the design worth doing at a price ordinary buyers will pay."
+      },
+      "misconception": "Students explain cheaper imports by cheaper foreign labour every time. Here the labour and materials cost $30 on both sides and the whole difference is the fixed cost per unit. Check which cost actually differs before reaching for wages.",
+      "examMatters": "Appendix 6 defines Calculate as a calculation involving several stages based on given data, and advises showing workings. Average cost from a fixed cost and an output is two stages: the division, then the addition of the variable cost.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:economies-of-scale:recall",
+       "type": "fillin",
+       "prompt": "A third producer spends $18m on its plant, $30 a unit on materials and labour, and sells 300,000 units:",
+       "template": [
+        "Its fixed cost per unit is ___",
+        "Its average cost is ___",
+        "Against the $70 producer it is ___ competitive"
+       ],
+       "answers": [
+        "$60",
+        "$90",
+        "less"
+       ],
+       "hints": [
+        "divide the plant cost by the units",
+        "add the materials and labour to that",
+        "compare the two average costs"
+       ],
+       "distractors": [
+        "$6",
+        "$120",
+        "more"
+       ]
+      }
+     },
+     {
+      "id": "causes-effects-globalisation:sub:lower-prices-and-consumer-surplus",
+      "title": "Lower Prices and Higher Consumer Surplus",
+      "keyIdea": "Consumer surplus is what buyers would have paid minus what they do pay. When the device falls from $150 to $70, surplus rises from $2.5m to $16.9m.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The fourth benefit has two halves and the second is the one students skip. Lower prices are easy: the device costs $70 instead of $150. **Consumer surplus** is what that is worth."
+       },
+       {
+        "type": "paragraph",
+        "text": "Some buyers would have paid far more than $150; others only just managed it. Surplus is the total of every buyer's willingness to pay, minus what they all actually handed over. At $150, with 100,000 devices sold, it comes to $2.5m."
+       },
+       {
+        "type": "paragraph",
+        "text": "At $70 it is $16.9m, and the gain of $14.4m arrives two ways. The 100,000 people already buying save $80 each: $8m. And 160,000 people who were priced out now buy, gaining $6.4m between them — less each, because the device is worth only a little more to them than the $70 they pay."
+       },
+       {
+        "type": "paragraph",
+        "text": "This is the one benefit in the list that can be drawn, and drawing it is the fastest way to be sure of it: the surplus is the area under the demand curve and above the price."
+       }
+      ],
+      "realExample": {
+       "emoji": "🛒",
+       "text": "A household that had saved for a year to buy one appliance can afford two once the price halves, and a household that could never afford one buys its first. Both gains are surplus; only the second shows up as a new sale."
+      },
+      "misconception": "Students say consumer surplus is the money consumers save. That is only the first part — the $8m going to people who were already buying. The buyers who appear because the price fell gain too, and leaving them out understates the benefit by $6.4m.",
+      "examMatters": "Appendix 6 defines Draw as assessing quantitative skills through an accurately labelled diagram, for 4 marks, and says students may have to decide the type of diagram. Here that decision is a demand curve with both prices marked.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:lower-prices-and-consumer-surplus:recall",
+       "type": "fillin",
+       "prompt": "A market's demand is 40,000 at $90 and 70,000 at $60. The price falls from $90 to $60:",
+       "template": [
+        "The 40,000 buyers who were already buying gain ___ between them",
+        "The 30,000 new buyers gain ___ between them",
+        "So the total gain in consumer surplus is ___"
+       ],
+       "answers": [
+        "$1.2m",
+        "$0.5m",
+        "$1.7m"
+       ],
+       "hints": [
+        "the fall in price times the old quantity",
+        "half the fall times the extra quantity",
+        "the two parts added"
+       ],
+       "distractors": [
+        "$2.4m",
+        "$0.9m",
+        "$3.3m"
+       ]
+      }
+     },
+     {
+      "id": "causes-effects-globalisation:sub:more-choice",
+      "title": "More Choice",
+      "keyIdea": "The fifth benefit. One country supports the few varieties its own demand can pay for; a world market supports varieties no single country could have sustained.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**More choice** is the specification's fifth benefit, and it follows from the same arithmetic as the third. Every variety of a good carries its own fixed cost — its own design, its own tooling, its own marketing."
+       },
+       {
+        "type": "paragraph",
+        "text": "In a market of 100,000 buyers, a variety wanted by one buyer in twenty has 5,000 customers to cover that fixed cost, and probably does not exist. Open the market to the world and the same one-in-twenty taste has enough buyers behind it to be worth producing."
+       },
+       {
+        "type": "paragraph",
+        "text": "So the gain is not only more of the same thing. It is goods that no closed economy would ever have made, available to people whose demand was too small to be served on its own — which is why the benefit is largest for small economies and for unusual tastes."
+       },
+       {
+        "type": "paragraph",
+        "text": "The cost of it sits in the next chapter: the producers who used to serve the local taste now compete with everybody, and some of them do not survive it."
+       }
+      ],
+      "realExample": {
+       "emoji": "🎛️",
+       "text": "A small economy's electronics shops stock a dozen models where there had been two, and the two that were made locally are no longer among them."
+      },
+      "misconception": "Students treat choice as a pleasant extra rather than an economic gain. It is a gain because it lets people buy what actually suits them instead of the nearest available substitute, and the difference between the two is worth money — which is the same surplus the previous subsection measured.",
+      "examMatters": "Appendix 6 defines Explain as requiring a two-stage chain of reasoning when explaining an impact. The two stages here are the larger market covering a variety's fixed cost, and the variety therefore existing.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:more-choice:recall",
+       "type": "fillin",
+       "prompt": "Designing one extra variety costs $2m, and the firm covers that from a margin of $20 a unit. One buyer in twenty wants this variety:",
+       "template": [
+        "The variety has to sell ___ thousand units before the design is paid for",
+        "Where the whole market is 400,000 buyers, one in twenty is ___ thousand",
+        "So the firm makes this variety only if the market it can reach is ___"
+       ],
+       "answers": [
+        "100",
+        "20",
+        "bigger"
+       ],
+       "hints": [
+        "divide the design cost by the margin, in thousands",
+        "a twentieth of the market, in thousands",
+        "compare the buyers it can reach with the units it must sell"
+       ],
+       "distractors": [
+        "40",
+        "80",
+        "smaller"
+       ]
+      }
+     },
+     {
+      "id": "causes-effects-globalisation:sub:higher-living-standards",
+      "title": "Higher Living Standards",
+      "keyIdea": "The sixth benefit is what the others add up to: more goods, cheaper, with more choice. It is also the one that says nothing about who receives them.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Higher living standards** is the last of the six possible benefits, and it is a summary rather than a separate mechanism. Growth raises income; lower prices raise what a given income buys; more choice raises how well what is bought fits what was wanted."
+       },
+       {
+        "type": "paragraph",
+        "text": "The usual measure is output per head. Tamira's output has risen 7.10 times in fifty years, and if its population had not changed, that is 7.10 times as much produced for each person."
+       },
+       {
+        "type": "paragraph",
+        "text": "The gap between that and a living standard is where the evaluation lives. Output per head is an **average**, and an average rises when the top rises alone. The device falling from $150 to $70 is evidence for the benefit; the worker whose job went with the local maker is evidence for the cost."
+       },
+       {
+        "type": "paragraph",
+        "text": "So the honest form of this benefit is conditional: living standards rise **on average**, and whether they rise for a particular group is the question the next chapter opens."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏘️",
+       "text": "An economy where average output per person has doubled in twenty years may contain a region whose main employer closed in year three and never reopened. Both statements are true of the same country."
+      },
+      "misconception": "Students use rising GDP per head as proof that everyone is better off. It is an average: it cannot distinguish an economy where every income doubled from one where half doubled twice over. Say what it measures before using it as evidence.",
+      "examMatters": "Appendix 6 defines Evaluate as requiring multi-stage chains of reasoning and a critical assessment of the evidence, leading to informed judgements. Treating an average as evidence about individuals is exactly the assessment of evidence that is being asked for.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:higher-living-standards:recall",
+       "type": "classify",
+       "prompt": "Sort each piece of evidence by whether it supports the claim that living standards rose for most people, or only that the average rose:",
+       "groups": [
+        {
+         "name": "Supports most people",
+         "items": [
+          "The price of goods bought by nearly every household fell by a third",
+          "Wages rose in every region and every industry"
+         ],
+         "why": "Each one is about a change that reaches households across the distribution, so it says something the average cannot."
+        },
+        {
+         "name": "Only the average",
+         "items": [
+          "National output divided by population is twice what it was",
+          "Total exports tripled in a decade",
+          "The number of very high incomes rose sharply"
+         ],
+         "why": "Each of these is a total or a mean, and any of them can rise while most households see nothing at all."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Six possible benefits, and the specification means possible.",
+     "Scale, not cheap labour: $30 of materials and labour on both sides of the price gap.",
+     "Consumer surplus rises $14.4m — $8m to existing buyers, $6.4m to new ones.",
+     "Choice is an economic gain because the nearest substitute is worth less than the right good.",
+     "Living standards rise on AVERAGE, which is not a claim about anybody in particular."
+    ],
+    "diagramId": "causes-effects-globalisation:diagram:e8026e2a",
+    "quizIndices": [
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "practiceIndices": [
+     4,
+     5
+    ]
+   },
+   {
+    "id": "causes-effects-globalisation:block:c9ba9227",
+    "title": "The Possible Costs",
+    "sections": [
+     {
+      "id": "causes-effects-globalisation:sub:displaced-workers",
+      "title": "Displaced Workers",
+      "keyIdea": "The first cost. When Tamira's device maker cannot sell at $150 against an imported $70, it closes, and its 500 workers lose jobs that paid $5,000.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The same price fall that gave buyers $14.4m of surplus took the domestic producer's market. It had been selling 100,000 devices at $150; at $70 it cannot cover its $150 average cost, so it stops."
+       },
+       {
+        "type": "paragraph",
+        "text": "The specification's term is **displaced workers**, and displaced is precise. The jobs are not destroyed in total — the economy is buying more devices than before, and Norvell Electronics's plant is hiring 1,500 people. They are destroyed **here**, in this industry, for these workers."
+       },
+       {
+        "type": "paragraph",
+        "text": "Three things decide how costly that is. Whether the new jobs are where the old ones were; whether the skills transfer; and how long the gap lasts. A machine operator of twenty years' standing does not become an electronics assembler in a fortnight, and may never do it at the same wage."
+       },
+       {
+        "type": "paragraph",
+        "text": "So the cost is real even when the totals look fine. 500 people bear a loss that the 260,000 buyers of cheaper devices do not see, and the fact that the country gained overall is no answer to any of the 500."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏚️",
+       "text": "A town built around one factory loses it to cheaper imports. The country's shoppers gain a little each; the town loses its wages, its suppliers and, within a decade, its younger workers."
+      },
+      "misconception": "Students write that trade \"creates as many jobs as it destroys\". Even where the totals match, the jobs created are usually in different industries, different places and at different skill levels. The totals are not the cost; the mismatch is.",
+      "examMatters": "Appendix 6 defines Examine as requiring a chain of reasoning and a brief assessment of the arguments, for 8 marks. On displacement, the assessment is the mismatch: how many of the displaced can reach the new jobs, and how quickly.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:displaced-workers:recall",
+       "type": "fillin",
+       "prompt": "The closing maker employed 500 people at $5,000. Two years later 300 of them are working at $3,000 and the rest have not found work:",
+       "template": [
+        "The wages lost by the 500 were ___ a year",
+        "The wages the 300 now earn come to ___ a year",
+        "So the annual income lost to this group is still ___"
+       ],
+       "answers": [
+        "$2.5m",
+        "$0.9m",
+        "$1.6m"
+       ],
+       "hints": [
+        "headcount times the old wage",
+        "the re-employed, at their new wage",
+        "the difference between the two"
+       ],
+       "distractors": [
+        "$1.5m",
+        "$1.5m",
+        "$0.6m"
+       ]
+      }
+     },
+     {
+      "id": "causes-effects-globalisation:sub:exploitation-of-workers",
+      "title": "Exploitation of Workers",
+      "keyIdea": "The second cost. Where a firm can choose between countries and a worker cannot choose between employers, the terms of that bargain favour the firm.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The specification lists the **exploitation of workers** among the possible costs. The economics of it is about bargaining power rather than about intent."
+       },
+       {
+        "type": "paragraph",
+        "text": "A TNC deciding where to build compares several countries. Each of those countries is competing for the same plant, and one of the things they can compete on is how little they require of the employer — hours, safety, the right to organise. A government that insists may lose the investment to one that does not."
+       },
+       {
+        "type": "paragraph",
+        "text": "On the other side, a worker with one employer within reach has no comparable choice. Where the alternative is no work at all, a wage and a set of conditions that would be rejected elsewhere are accepted here, and the gap between what the work produces and what the worker receives is wide."
+       },
+       {
+        "type": "paragraph",
+        "text": "The counter-argument belongs in the same answer, because it is strong: the jobs are usually better than the local alternative, which is why people take them, and wages in fast-growing export industries have risen over time. The cost is real and it is not the whole story, which is what \"possible\" in the specification's heading is doing."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧷",
+       "text": "Two economies bid for the same assembly plant. The one that wins has the lower minimum standards, and the jobs it gains still pay more than the farm work they replaced."
+      },
+      "misconception": "Students argue this cost by asserting that firms are greedy, which explains nothing that is not also true of firms at home. The mechanism is competition between governments for investment and the absence of alternatives for workers. Name both, and the argument survives a counter-argument.",
+      "examMatters": "Appendix 6 defines Discuss as requiring chains of reasoning, the validity of arguments considered, and a recognition of different viewpoints. This cost cannot be discussed properly without the viewpoint that the jobs beat the alternative.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:exploitation-of-workers:recall",
+       "type": "match",
+       "prompt": "Match each feature of the bargain to the side it strengthens, and to the reason:",
+       "pairs": [
+        {
+         "left": "The firm can build in any of six countries",
+         "right": "The firm: it has alternatives",
+         "why": "Bargaining power is the ability to walk away, and a firm choosing between countries can walk away from any one of them."
+        },
+        {
+         "left": "The worker has one large employer within travelling distance",
+         "right": "The firm: the worker has none",
+         "why": "The same test applied to the worker: with one employer reachable, refusing the terms means not working."
+        },
+        {
+         "left": "Several firms are already competing for workers in the area",
+         "right": "The worker: leaving is now possible",
+         "why": "Competition for labour gives the worker the alternative the first two rows removed, which is what actually raises wages."
+        },
+        {
+         "left": "The plant needs a skill that takes two years to learn",
+         "right": "The worker: replacing them is expensive",
+         "why": "A skill the employer cannot quickly replace is the worker's own version of having an alternative, and it works the same way."
+        }
+       ]
+      }
+     },
+     {
+      "id": "causes-effects-globalisation:sub:the-environmental-impact-of-trade",
+      "title": "The Environmental Impact of Increased Trade",
+      "keyIdea": "The third cost. Tamira's trade is 18.40 times what it was fifty years ago, and every unit of it has to be moved — so the cost falls on people who are not party to the transaction.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The specification's third cost is the **environmental impact of increased trade**, and the word to hold on to is *increased*. The point is not that ships pollute; it is that fifty years of trade growing faster than output means far more moving than there would otherwise have been."
+       },
+       {
+        "type": "paragraph",
+        "text": "Tamira's trade has gone from $12.0bn to $221.0bn: 18.40 times as much, against output 7.10 times as much. The extra movement is the difference between those two multiples, and the fourth cause — cheap freight — is what made it worth doing."
+       },
+       {
+        "type": "paragraph",
+        "text": "Two other channels belong here. Production moving to where it is cheapest can move it to where the rules are loosest, so the same output creates more damage than before. And higher output everywhere uses more of everything, which is the growth benefit read from the other side."
+       },
+       {
+        "type": "paragraph",
+        "text": "Economically, the cost falls on people outside the transaction: the buyer of the $70 device and the firm that sold it settle a price between them, and neither pays for what the shipping did. That is the whole reason this is a cost of globalisation rather than a cost to the shipper."
+       }
+      ],
+      "realExample": {
+       "emoji": "🚛",
+       "text": "A component that crosses two oceans before it is fitted has been moved because moving it was cheaper than making it nearby. Nothing in that decision counted what the movement did."
+      },
+      "misconception": "Students write that \"globalisation causes pollution\", which is too broad to mark. The specification's claim is about increased trade: more goods moving further, plus production relocating to where rules are looser. Either mechanism can be argued; the general claim cannot.",
+      "examMatters": "Appendix 6 defines Analyse as requiring a chain of reasoning with any relevant data interpreted, and says it does not include evaluation. A chain here runs from cheaper freight to more movement to the damage; whether the trade is still worth it is a different command word.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:the-environmental-impact-of-trade:recall",
+       "type": "fillin",
+       "prompt": "Over the same fifty years, Tamira's trade rose 18.40 times and its output 7.10 times:",
+       "template": [
+        "Trade has grown ___ than output",
+        "The reason the extra movement was worth doing is that ___ became cheaper",
+        "The cost of that movement is borne by people who are ___ to the transaction"
+       ],
+       "answers": [
+        "faster",
+        "freight",
+        "outside"
+       ],
+       "hints": [
+        "compare the two multiples",
+        "the fourth cause in chapter 2",
+        "neither the buyer nor the seller"
+       ],
+       "distractors": [
+        "more slowly",
+        "labour",
+        "party"
+       ]
+      }
+     },
+     {
+      "id": "causes-effects-globalisation:sub:transfer-pricing",
+      "title": "Loss of Tax Revenue from Transfer Pricing",
+      "keyIdea": "The fourth cost. A transfer price is what one part of a firm charges another. Set it high enough and $30m of profit is taxed at 5% rather than 25%.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "A TNC's parts trade with each other constantly, and somebody has to put a price on it. That price is the **transfer price**, and unlike a market price it is chosen inside the firm."
+       },
+       {
+        "type": "paragraph",
+        "text": "Watch what it does to Tamira. The plant makes $30m of profit, which at 25% would be $7.5m of tax. Now another part of the same group, in a country taxing profit at 5%, charges the plant $20m a year for the right to use the group's designs."
+       },
+       {
+        "type": "paragraph",
+        "text": "The plant's profit is now $10m, taxed at 25%: $2.5m. The $20m is taxed at 5%: $1m. The group pays $3.5m instead of $7.5m, and Tamira is $5m short."
+       },
+       {
+        "type": "paragraph",
+        "text": "Nothing moved. The same plant made the same devices with the same workers; only where the profit was declared changed. That is why this cost sits beside \"increased tax revenue\" in the benefits — the second benefit and the fourth cost are the same flow, and this is the part of it that leaves."
+       }
+      ],
+      "realExample": {
+       "emoji": "📄",
+       "text": "A group charges its own factories a fee for the use of a brand, set by the group and paid to the group. The factories' profits fall by the fee in every country that taxes profit heavily."
+      },
+      "misconception": "Students describe transfer pricing as smuggling or as an accounting error. It is neither: the transaction is real and declared. The economic problem is that the price is set by one side of the trade, so the profit can be declared wherever the firm prefers.",
+      "examMatters": "Appendix 6 defines Calculate as a calculation involving several stages based on given data, and advises showing workings. Two rates and two profits here, so a full answer shows the split before the total.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:transfer-pricing:recall",
+       "type": "fillin",
+       "prompt": "A plant makes $50m of profit in a country taxing at 20%. It is charged $30m by a part of the same group in a country taxing at 5%:",
+       "template": [
+        "Tax paid where the plant is: ___",
+        "Tax paid on the fee: ___",
+        "Compared with taxing all $50m at 20%, the host country loses ___"
+       ],
+       "answers": [
+        "$4m",
+        "$1.5m",
+        "$6m"
+       ],
+       "hints": [
+        "a fifth of what is left after the fee",
+        "five per cent of the fee",
+        "the difference between ten million and what the host still collects"
+       ],
+       "distractors": [
+        "$10m",
+        "$2.5m",
+        "$4.5m"
+       ]
+      }
+     },
+     {
+      "id": "causes-effects-globalisation:sub:income-inequality-within-countries",
+      "title": "Increased Income Inequality Within Countries",
+      "keyIdea": "The fifth cost, and the specification says within. The 1,500 workers in the new plant earn $6,000 while the displaced earn $3,000 — a gap of two to one where there had been none.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Globalisation does not raise or lower every income in a country together. It raises the incomes of people whose skills the world market wants and lowers those whose work competes with imports, so the spread inside one country widens."
+       },
+       {
+        "type": "paragraph",
+        "text": "Count it in Tamira. Before, the device maker's 500 workers earned $5,000, about the same as everyone else. After, Norvell Electronics's 1,500 workers earn $6,000, and those of the displaced who found work earn $3,000. The ratio between the two groups has gone from one to one to 2 to one."
+       },
+       {
+        "type": "paragraph",
+        "text": "Two other channels push the same way. Owners of capital can invest wherever returns are highest and workers usually cannot follow, so the return to capital rises against the return to labour. And a government whose revenue is under pressure from transfer pricing has less to redistribute with."
+       },
+       {
+        "type": "paragraph",
+        "text": "Note what the leaf does **not** say. It is about inequality **within** countries; whether globalisation widened or narrowed the gap **between** countries is a different question, and this topic does not ask it."
+       }
+      ],
+      "realExample": {
+       "emoji": "📊",
+       "text": "In one economy, wages in the exporting industries rise for a decade while wages in the industries competing with imports do not move at all. Average wages rise, and the distance between the two groups doubles."
+      },
+      "misconception": "Students use inequality and poverty as the same word. An economy where every income rises but the top rises faster has more inequality and less poverty. The specification's cost is the widening gap; say which of the two you are arguing about.",
+      "examMatters": "Appendix 6 defines Evaluate as requiring multi-stage chains of reasoning and informed judgements. Evaluating this cost means weighing a widening gap against rising incomes at both ends, which is a judgement rather than a fact.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:income-inequality-within-countries:recall",
+       "type": "classify",
+       "prompt": "Sort each change by whether it widens the gap inside a country or narrows it:",
+       "groups": [
+        {
+         "name": "Widens",
+         "items": [
+          "Wages rise fast in an exporting industry and not at all elsewhere",
+          "The return to capital rises while wages stay flat",
+          "Tax revenue falls, so less is redistributed"
+         ],
+         "why": "Each moves one group up or another group down without moving the other, which is what widening a distribution means."
+        },
+        {
+         "name": "Narrows",
+         "items": [
+          "Displaced workers are retrained into the new industries",
+          "Cheaper imports make up a larger share of poorer households' spending"
+         ],
+         "why": "Both reach the people at the bottom: one by moving them into the better-paid work, the other by raising what their income buys."
+        }
+       ]
+      }
+     },
+     {
+      "id": "causes-effects-globalisation:sub:tnc-influence-on-domestic-policy",
+      "title": "The Influence of TNCs on Domestic Economic Policy",
+      "keyIdea": "The sixth cost. A firm that can move its plant does not have to argue against a policy: raising Tamira's profit tax by 5% gains $1.5m and risks the $8.4m the plant already pays.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The specification's last cost is the **influence of TNCs on domestic economic policy**. The mechanism is not bribery; it is the credible possibility of leaving."
+       },
+       {
+        "type": "paragraph",
+        "text": "Tamira's government considers raising profit tax from 25% to 30%. On Norvell Electronics's $30m of profit that is $1.5m more a year. But the plant currently pays $7.5m of profit tax and $0.9m of income tax through its workers: $8.4m that stops if it goes."
+       },
+       {
+        "type": "paragraph",
+        "text": "Set the two against each other: $1.5m gained if the plant stays, $8.4m lost if it goes. The rise breaks even when the chance of losing the plant is $1.5m ÷ ($1.5m + $8.4m) = 15.2%, so anything above that and the policy costs money. The firm does not need to threaten anything: the arithmetic makes the argument, and the government can see it as clearly as the firm can."
+       },
+       {
+        "type": "paragraph",
+        "text": "The same logic reaches environmental rules, employment law and public spending, and it is stronger where one employer is large relative to the economy. A country with fifty such plants can afford to lose one; a country with one cannot."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏛️",
+       "text": "A government reviewing its industrial policy finds that the largest employer in the region could relocate within two years. No meeting is needed for that fact to shape what is proposed."
+      },
+      "misconception": "Students describe this cost as corruption. Corruption is a payment; this is a calculation. A firm with a credible alternative location changes a government's arithmetic without doing anything improper, and that is what makes the cost hard to legislate against.",
+      "examMatters": "Appendix 6 defines Evaluate as requiring reference to context and a critical assessment of the evidence, leading to informed judgements. The context is the two figures: what the policy gains and what it risks.",
+      "recall": {
+       "id": "causes-effects-globalisation:sub:tnc-influence-on-domestic-policy:recall",
+       "type": "fillin",
+       "prompt": "A plant pays $6m of tax a year. The government considers a rule that would raise $1m more from it but might make it relocate:",
+       "template": [
+        "The gain if the plant stays is ___",
+        "The loss if it goes is ___",
+        "So the rule breaks even when the chance of it leaving is ___"
+       ],
+       "answers": [
+        "$1m",
+        "$6m",
+        "14.3%"
+       ],
+       "hints": [
+        "the extra revenue named in the question",
+        "everything the plant pays today, all of which stops",
+        "the gain over the gain plus the loss"
+       ],
+       "distractors": [
+        "$7m",
+        "$5m",
+        "85.7%"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Displacement is local: 500 jobs here, against jobs elsewhere in another industry.",
+     "Exploitation is about bargaining power: the firm has alternatives and the worker may not.",
+     "Trade is 18.40 times what it was, and every unit of it moves.",
+     "Transfer pricing moves $20m of profit and costs Tamira $5m of tax.",
+     "Inequality WITHIN countries; and a firm that can leave changes policy without saying anything."
+    ],
+    "diagramId": "causes-effects-globalisation:diagram:15f767fa",
+    "quizIndices": [
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "practiceIndices": [
+     6,
+     7
+    ]
+   }
+  ],
+  "notes": [
+   {
+    "title": "What Globalisation Looks Like",
+    "meta": "3 leaves",
+    "keyIdea": "What globalisation is, and the three things the specification counts to measure it.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Globalisation</strong> — the growing integration of national economies into one world economy, through trade, firms, capital and people."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Trade as a proportion of GDP</strong> — exports plus imports, divided by output. A ratio, so it can exceed 100%."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Transnational company (TNC)</strong> — a firm that owns and runs production in more than one country. Exporting is not enough."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Foreign direct investment (FDI)</strong> — investment in productive assets in another country, together with control of them."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Trade rises against output because it compounds faster: 6% a year against 4% takes Tamira from 30% to 77.8%."
+       },
+       {
+        "type": "mechanism",
+        "text": "A TNC's internal shipments are recorded as international trade, so the firm's own logistics show up in the first characteristic."
+       },
+       {
+        "type": "mechanism",
+        "text": "Control is what separates FDI from any other money crossing a border: a lender and a small shareholder direct nothing."
+       },
+       {
+        "type": "link",
+        "text": "Migration is listed here as a characteristic. What it does to inequality and to development are questions for the topics that own them."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Integration, measured three ways: trade against output, firms and their investment, people.",
+     "The ratio, not the total — and a ratio above 100% is normal for a small open economy.",
+     "FDI = productive assets abroad + control."
+    ]
+   },
+   {
+    "title": "What Caused It",
+    "meta": "5 leaves",
+    "keyIdea": "The five factors the specification names, and which part of the ratio each one moves.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Trade liberalisation</strong> — the reduction or removal of barriers to trade between countries."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Trading bloc</strong> — a group of countries that has agreed to lower the barriers to trade between its members."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Political change</strong> — in this topic, the breakdown of the Soviet system and the opening up of China."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Liberalisation: the barrier comes off, the price falls from $150 to $70, and quantity rises from 100,000 to 260,000."
+       },
+       {
+        "type": "mechanism",
+        "text": "Blocs apply the same mechanism by agreement and to many countries at once; the number AND the size both matter."
+       },
+       {
+        "type": "mechanism",
+        "text": "Political change brings producers, consumers and investment destinations into a market they had been outside."
+       },
+       {
+        "type": "mechanism",
+        "text": "Freight decides what is worth moving: 150% of a $8 good's price, against 37.5% after."
+       },
+       {
+        "type": "link",
+        "text": "TNCs split production, so a $70 device generates $95 of recorded trade. That is the only cause that raises trade without raising output."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Two lower a barrier, one opens an economy, one changes what is worth moving, one changes how goods are made.",
+     "Only split production raises the ratio directly.",
+     "The causes reinforce each other: cheap freight is worth little behind a high barrier."
+    ]
+   },
+   {
+    "title": "FDI by TNCs",
+    "meta": "2 leaves",
+    "keyIdea": "Why firms invest abroad, and what a recipient country actually receives once the leaks are subtracted.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Reasons for FDI</strong> — to reach a market, to lower a cost, to secure a supply, to use what the other country has, or to get inside a barrier."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Impact on the recipient</strong> — wages, orders for local suppliers, tax, and skills, minus profit paid abroad and inputs bought abroad."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Norvell Electronics: $120m of capital, 1,500 jobs at $6,000, $18m to local suppliers, $8.4m of tax."
+       },
+       {
+        "type": "mechanism",
+        "text": "The leaks: $30m of profit is owned abroad, imported inputs shrink the local orders, and a displaced local producer comes off the job total."
+       },
+       {
+        "type": "link",
+        "text": "The judgement is net and comparative: against the alternative use of the same land, workers and concessions, and over the years the plant is expected to stay."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Every reason for FDI is something the firm could not do as well by exporting.",
+     "Count the gross, subtract what leaves, subtract what was given up, then compare.",
+     "The employment figure is the easiest to find and the least informative."
+    ]
+   },
+   {
+    "title": "The Possible Benefits",
+    "meta": "6 leaves",
+    "keyIdea": "The six possible benefits, and the arithmetic behind the two that can be calculated.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>The six benefits</strong> — increased economic growth; increased tax revenue; economies of scale; lower prices and higher consumer surplus; more choice; higher living standards."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Economies of scale</strong> — a lower average cost as output rises, because the fixed cost is spread over more units."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Consumer surplus</strong> — the difference between what buyers would have been willing to pay and what they actually pay."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Scale: $12m ÷ 100,000 + $30 = $150, against $24m ÷ 600,000 + $30 = $70. The variable cost is the same on both sides."
+       },
+       {
+        "type": "mechanism",
+        "text": "Surplus: $2.5m at $150 becomes $16.9m at $70 — $8m to the 100,000 already buying, $6.4m to the 160,000 who were priced out."
+       },
+       {
+        "type": "mechanism",
+        "text": "Tax revenue: $7.5m on profit plus $0.9m on wages from one plant."
+       },
+       {
+        "type": "link",
+        "text": "Living standards is the summary of the other five, and it is an average — which is where the evaluation starts."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Cheaper imports are a scale effect here, not a wage effect.",
+     "Surplus rises twice: existing buyers save, and priced-out buyers arrive.",
+     "An average rising is not evidence about any particular household."
+    ]
+   },
+   {
+    "title": "The Possible Costs",
+    "meta": "6 leaves",
+    "keyIdea": "The six possible costs, and why four of them are about who receives the gains rather than whether there are any.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>The six costs</strong> — displaced workers; exploitation of workers; environmental impact of increased trade; loss of tax revenue from transfer pricing; increased income inequality within countries; the influence of tncs on domestic economic policy."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Transfer price</strong> — the price one part of a firm charges another part of the same firm."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Displacement: the $150 producer closes, 500 jobs go, and the new jobs are in another industry and may be somewhere else."
+       },
+       {
+        "type": "mechanism",
+        "text": "Exploitation: governments compete for the plant and workers may have one employer within reach, so the bargain is one-sided in both directions."
+       },
+       {
+        "type": "mechanism",
+        "text": "Transfer pricing: a $20m fee turns $7.5m of tax into $2.5m at home plus $1m abroad. Nothing moved but the paperwork."
+       },
+       {
+        "type": "mechanism",
+        "text": "Inequality WITHIN a country: $6,000 in the new plant against $3,000 for a re-employed displaced worker."
+       },
+       {
+        "type": "link",
+        "text": "Policy influence: a rise worth $1.5m against $8.4m at risk breaks even at 15.2%. No threat is needed."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "The costs are concentrated where the benefits are spread, which is why they are felt more.",
+     "Transfer pricing is legal, declared, and takes the second benefit back.",
+     "A firm that can move changes policy by arithmetic rather than by argument."
+    ]
+   }
+  ],
+  "quiz": [
+   {
+    "id": "causes-effects-globalisation:quiz:6c0845f0",
+    "question": "Trade as a proportion of GDP is a better measure of globalisation than the total value of trade because:",
+    "options": [
+     "it is easier to calculate from published figures",
+     "it can rise only if trade grows faster than output",
+     "it excludes imports, which are not part of output",
+     "it is unaffected by changes in prices"
+    ],
+    "explanation": "The total rises whenever an economy grows, whether or not it has become more integrated with anywhere else. The ratio isolates the integration: it moves only when trade and output grow at different rates. Imports are included in the measure, and both figures are measured in money, so prices affect them.",
+    "correctIndex": 1
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:b61a12d2",
+    "question": "A firm makes everything in one country and sells to customers in forty. This firm is:",
+    "options": [
+     "an exporter, but not transnational",
+     "transnational, because it sells in forty countries",
+     "transnational, because its customers are foreign",
+     "a foreign direct investor in forty countries"
+    ],
+    "explanation": "The test for a transnational company is where the production is owned and run, not where the customers are. All of this firm's production is in one country, so it is an exporter however large it is. Selling abroad is not investing abroad either, so nothing here is FDI.",
+    "correctIndex": 0
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:d96c2e63",
+    "question": "Which of the following counts as foreign direct investment?",
+    "options": [
+     "A bank lending to a firm in another country",
+     "A saver buying a few shares in a foreign firm",
+     "A firm exporting machinery to a foreign customer",
+     "A firm buying a controlling stake in a company abroad"
+    ],
+    "explanation": "Direct investment means productive assets abroad together with control of them, and a controlling stake buys exactly that. A loan is repaid and directs nothing; a small shareholding leaves the existing managers deciding; an export sells a good rather than acquiring an asset.",
+    "correctIndex": 3
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:fe03dcde",
+    "question": "An economy exports $24.0bn, imports $20.0bn and produces $80.0bn. Trade as a proportion of GDP is:",
+    "options": [
+     "30%",
+     "55%",
+     "5%",
+     "44%"
+    ],
+    "explanation": "Exports and imports are added, not netted off: $24.0bn + $20.0bn = $44.0bn. Dividing by output and multiplying by one hundred gives $44.0bn ÷ $80.0bn = 55%. Using exports alone gives thirty per cent, and taking the difference between the two flows gives five — neither is what the measure asks for.",
+    "correctIndex": 1
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:e8882882",
+    "question": "Which of these is NOT one of the three characteristics of globalisation the specification names?",
+    "options": [
+     "Trade rising as a proportion of GDP",
+     "Growing importance of TNCs and FDI",
+     "An increase in migration",
+     "A rising rate of inflation"
+    ],
+    "explanation": "The specification names three characteristics: trade as a proportion of GDP, the importance of transnational companies and foreign direct investment, and migration. Prices can rise for many domestic reasons and say nothing by themselves about how integrated an economy has become.",
+    "correctIndex": 3
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:5b0f8450",
+    "question": "A small economy reports trade worth 120% of its GDP. This tells you that:",
+    "options": [
+     "it trades heavily and both flows are counted",
+     "its figures contain an error",
+     "it exports more than it produces",
+     "its imports are larger than its output"
+    ],
+    "explanation": "Exports and imports are added together, and imports are not part of output at all, so the ratio has no reason to stop at one hundred per cent. A figure above 100% is normal for a small open economy and is not evidence of an error or of either flow separately exceeding output.",
+    "correctIndex": 0
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:8a0185ce",
+    "question": "In this topic, migration is listed as:",
+    "options": [
+     "a characteristic of globalisation",
+     "a cause of globalisation",
+     "a benefit of globalisation",
+     "a cost of globalisation"
+    ],
+    "explanation": "The specification puts the increase in migration under characteristics, alongside trade as a proportion of GDP and the growth of TNCs and FDI. The causes it lists are liberalisation, trading blocs, political change, transport and communications, and TNCs — migration is not among them.",
+    "correctIndex": 0
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:d085a0f0",
+    "question": "A country removes a tax on imported devices. The price falls from $150 to $70 and sales rise from 100,000 to 260,000. The extra 160,000 devices are bought by people who:",
+    "options": [
+     "switched from a rival product",
+     "were already buying one each year",
+     "could not afford one at $150",
+     "are buying for resale abroad"
+    ],
+    "explanation": "A demand curve says how many buyers there are at each price. Lowering the price to $70 brings in everyone whose willingness to pay lies between the two prices — they were not buying before because the device cost more than it was worth to them. The 100,000 who were already buying simply pay less.",
+    "correctIndex": 2
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:c3bcc1cd",
+    "question": "Which cause of globalisation changes which goods are worth trading at all, rather than how much of an already-traded good is traded?",
+    "options": [
+     "Trade liberalisation",
+     "The falling cost of transport",
+     "The growth of trading blocs",
+     "Political change in formerly closed economies"
+    ],
+    "explanation": "Freight is a share of a good's price, and a large share for a cheap good. When it falls, goods that were too cheap to be worth moving become worth moving — a different set of goods enters trade. Lower barriers and open economies raise the volume of trade in goods that were already worth shipping.",
+    "correctIndex": 1
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:f749456d",
+    "question": "The political change the specification names as a cause of globalisation is:",
+    "options": [
+     "the breakdown of the Soviet system and the opening up of China",
+     "the spread of elected government across Asia, Africa and Latin America",
+     "the founding of the World Trade Organization",
+     "the ending of colonial rule in the twentieth century"
+    ],
+    "explanation": "The specification is specific: the breakdown of the Soviet system and the opening up of China. Both brought economies that had been largely closed into the world market as producers, as buyers and as destinations for investment. The other changes listed are real events that this leaf does not name.",
+    "correctIndex": 0
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:5741cb61",
+    "question": "A TNC makes $25 of components in one country and ships them to a second, where the finished $70 device is made and exported. The trade recorded is:",
+    "options": [
+     "$70",
+     "$25",
+     "$45",
+     "$95"
+    ],
+    "explanation": "Both crossings are recorded: $25 of components out, then $70 of finished device out. That is $95 of trade generated by one $70 product, which is how splitting production across borders raises measured trade faster than output.",
+    "correctIndex": 3
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:083b40c4",
+    "question": "A firm that has exported to a region for years builds a factory there once shipping costs exceed the cost of running a second plant. Its reason for the FDI is:",
+    "options": [
+     "to secure a supply of a scarce raw material",
+     "to serve the market more cheaply than by exporting",
+     "to acquire a competitor and reduce competition",
+     "to take advantage of lower wage rates"
+    ],
+    "explanation": "The firm compared two ways of reaching the same customers and found that producing locally now costs less than shipping to them. Nothing in the case is about inputs, about buying a rival, or about wages — each of those is a different reason for FDI and would show up as a different comparison.",
+    "correctIndex": 1
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:1d27ccd7",
+    "question": "Norvell Electronics's plant employs 1,500 at $6,000 and pays income tax at 10% on the wages. The income tax collected is:",
+    "options": [
+     "$9m",
+     "$7.5m",
+     "$8.4m",
+     "$0.9m"
+    ],
+    "explanation": "The wage bill is 1,500 × $6,000 = $9m, and a tenth of that is $0.9m. The wage bill itself is not tax; the tax on profit is a separate $7.5m, and the two together are what the government collects from the plant.",
+    "correctIndex": 3
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:5281bede",
+    "question": "Which of these is a value that LEAVES the recipient economy?",
+    "options": [
+     "Wages paid to local workers",
+     "Orders placed with local suppliers",
+     "Profit paid to the owners abroad",
+     "Tax paid on the profit earned locally"
+    ],
+    "explanation": "The return on the investment belongs to the investor and is paid out of the country. Wages, supplier orders and tax are all received by people, firms and government inside the country, and are spent or used there. Netting the outflow against the inflows is what turns a gross impact into an honest one.",
+    "correctIndex": 2
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:82779ad6",
+    "question": "The best test of whether an FDI project benefits a recipient country is:",
+    "options": [
+     "the number of jobs it creates in its first year",
+     "the size of the investment the firm announces",
+     "whether the firm is larger than the country's own producers",
+     "what it leaves behind, net of the next best alternative"
+    ],
+    "explanation": "A project with a positive effect can still be the wrong project if the land, workers and tax concessions it used would have produced more elsewhere. Headline jobs, announced capital and the size of the investor are all figures available before anything has happened, and none of them nets anything off.",
+    "correctIndex": 3
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:9b4b8206",
+    "question": "Two producers each pay $30 a unit for materials and labour. One spends $12m on its plant and makes 100,000 units; the other spends $24m and makes 600,000. The second is cheaper per unit because:",
+    "options": [
+     "it pays its workers less",
+     "its fixed cost is spread over more units",
+     "its materials are of lower quality",
+     "it spends less on its plant in total"
+    ],
+    "explanation": "The materials and labour cost $30 for both, so wages and materials cannot be the difference. What differs is $12m ÷ 100,000 = $120 against $24m ÷ 600,000 = $40. The larger producer spends more on its plant in total, not less.",
+    "correctIndex": 1
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:ddd3d680",
+    "question": "Consumer surplus is:",
+    "options": [
+     "the money consumers save when a price falls",
+     "what buyers would have paid, minus what they do pay",
+     "the profit a producer makes on each unit sold",
+     "the difference between the highest and lowest price"
+    ],
+    "explanation": "Surplus is the gap between willingness to pay and the price actually paid, summed over every buyer. The saving made when a price falls is only part of the change in surplus, because buyers who were priced out and now buy gain as well. Producer profit is a different quantity altogether.",
+    "correctIndex": 1
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:dbb86249",
+    "question": "A price falls from $90 to $60. 40,000 buyers were already buying and 30,000 more now do. The gain in consumer surplus is:",
+    "options": [
+     "$1.7m",
+     "$1.2m",
+     "$2.1m",
+     "$0.5m"
+    ],
+    "explanation": "The buyers already in the market gain the full $30 fall: 40,000 × $30 = $1.2m. The new buyers gain less each, because the good is worth only a little more to them than the new price, and their gain is half the fall times their number: $0.5m. Together that is $1.7m.",
+    "correctIndex": 0
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:7ffe994d",
+    "question": "Globalisation increases choice mainly because:",
+    "options": [
+     "firms are required to offer more models",
+     "consumers in rich countries demand variety",
+     "a larger market can cover the fixed cost of more varieties",
+     "transport costs no longer affect which goods are sold"
+    ],
+    "explanation": "Every variety carries its own design and tooling costs, and a variety wanted by a small share of buyers needs a large market before those costs are covered. Opening the market supplies the buyers. Nothing requires firms to offer variety, and transport costs still matter — falling ones are one of the causes.",
+    "correctIndex": 2
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:e5d48d36",
+    "question": "A country's output per head doubles over twenty years. This shows that:",
+    "options": [
+     "every household is twice as well off",
+     "income inequality has fallen",
+     "the average rose, and averages hide who received it",
+     "the poorest households gained as much as the richest"
+    ],
+    "explanation": "Output per head is a mean, so it rises when the top rises alone just as surely as when everybody rises together. It is evidence about the average and about nothing else; the distribution behind it needs a separate measurement, and this topic's fifth cost is precisely that the distribution can widen.",
+    "correctIndex": 2
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:0423ff5e",
+    "question": "Tamira's device maker closes when imports arrive at $70. The specification calls its 500 workers displaced rather than simply unemployed because:",
+    "options": [
+     "the jobs went from one industry, not from the economy",
+     "they will all be re-employed within a year",
+     "they chose to leave when the price fell",
+     "the firm was making a loss before the imports arrived"
+    ],
+    "explanation": "Displacement is about where the work went: the economy is buying more devices than before and other industries are hiring, but the jobs in this industry and for these workers are gone. Whether they are re-employed, and how quickly, depends on skills and location — which is the cost the term is pointing at.",
+    "correctIndex": 0
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:b4397323",
+    "question": "A government is reluctant to raise minimum workplace standards because a large employer could build its next plant elsewhere. This is an example of:",
+    "options": [
+     "the exploitation of workers by a TNC",
+     "trade liberalisation reducing barriers to imports",
+     "the displacement of workers by imports",
+     "the influence of a TNC on domestic policy"
+    ],
+    "explanation": "The firm has changed what the government is willing to propose, which is the sixth cost the specification lists. No worker has yet been employed on worse terms, no barrier has moved and no import has displaced anybody: the effect is on the policy, before anything else happens.",
+    "correctIndex": 3
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:a1743204",
+    "question": "The environmental cost the specification attaches to globalisation is the impact of:",
+    "options": [
+     "increased population",
+     "increased taxation",
+     "increased trade",
+     "increased migration"
+    ],
+    "explanation": "The leaf is the environmental impact of increased trade: more goods moving further, because moving them became cheap. Tamira's trade is 18.40 times what it was fifty years ago against output 7.10 times, and the gap between those two multiples is the extra movement.",
+    "correctIndex": 2
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:2944e73b",
+    "question": "A plant earning $50m of profit where tax is 20% is charged $30m by a part of the same group where tax is 5%. The host country now collects:",
+    "options": [
+     "$4m",
+     "$10m",
+     "$1.5m",
+     "$5.5m"
+    ],
+    "explanation": "The fee is a cost to the plant, so the profit taxed at home falls to $20m and the tax to $4m. Taxing the whole $50m would have raised $10m; the $1.5m collected on the fee is paid to the other country, not to this one.",
+    "correctIndex": 0
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:4b89acd3",
+    "question": "Globalisation is said to increase income inequality within a country because:",
+    "options": [
+     "it lowers every wage in the economy",
+     "incomes rise where exports grow and fall where imports compete",
+     "it raises the incomes of poorer countries faster than richer ones",
+     "it reduces the total income available to be shared"
+    ],
+    "explanation": "The effect works through which industry a person works in: demand for what the world wants rises, and work competing with cheaper imports loses. Total income rises rather than falls, and how incomes compare BETWEEN countries is a separate question this leaf does not ask.",
+    "correctIndex": 1
+   },
+   {
+    "id": "causes-effects-globalisation:quiz:1b3298e9",
+    "question": "Transfer pricing reduces a host country's tax revenue because:",
+    "options": [
+     "the goods are smuggled across the border undeclared",
+     "the firm refuses to pay the tax it is charged",
+     "the price is set inside the firm, not by a market",
+     "the host country has agreed to exempt the firm"
+    ],
+    "explanation": "A transfer price is a real, declared payment between two parts of the same firm, and the firm sets it. Set high enough, it moves the profit to wherever the rate is lowest without moving any production. Nothing is concealed, refused or exempted, which is what makes the cost hard to legislate against.",
+    "correctIndex": 2
+   }
+  ],
+  "practice": [
+   {
+    "id": "causes-effects-globalisation:practice:2e647efe",
+    "command": "Define",
+    "marks": 2,
+    "question": "Define the term 'foreign direct investment'. (2 marks)",
+    "guidance": "Two marks means two separate things to say, and the second is not a rewording of the first. Before writing, ask what separates this from any other money crossing a border — plenty of money does, and only some of it is direct investment. An example will not substitute for either half.\nForeign direct investment is spending by a firm on productive assets in another country (1 mark) — a plant, machinery, land, or a holding in an existing company — together with control of those assets (1 mark), which is what the word direct is doing. An answer that says \"investing money abroad\" has neither half: it does not say what is bought, and it does not say who then decides what the asset does."
+   },
+   {
+    "id": "causes-effects-globalisation:practice:c5137f75",
+    "command": "Calculate",
+    "marks": 4,
+    "question": "An economy exports $66.0bn and imports $54.0bn in a year when its GDP is $150.0bn. Ten years earlier the same figures were $20.0bn, $16.0bn and $72.0bn. Calculate trade as a proportion of GDP in each year, and the change between them. (4 marks)",
+    "guidance": "Four figures to combine and two to compare, so set the work out as two calculations of the same kind rather than one long one. Appendix 6 advises showing workings for a Calculate, and here the workings are where the credit is. Decide first what goes on the top of the fraction — the two trade flows are added, not netted off — and keep both years in the same units.\nTrade today is $66.0bn + $54.0bn = $120.0bn (1 mark), which against GDP is $120.0bn ÷ $150.0bn × 100 = 80% (1 mark). Ten years earlier trade was $20.0bn + $16.0bn = $36.0bn, which against $72.0bn is 50% (1 mark). The change is 80% − 50% = 30 percentage points (1 mark). Two slips are common: netting exports against imports, which measures the trade balance and not openness; and reporting the change as \"60% higher\", which is a ratio of two ratios and answers a different question."
+   },
+   {
+    "id": "causes-effects-globalisation:practice:c770c668",
+    "command": "Explain",
+    "marks": 4,
+    "question": "Explain one factor that has contributed to increased globalisation in the last fifty years. (4 marks)",
+    "guidance": "One factor, taken properly, beats four listed. Appendix 6 says that explaining a reason or impact requires a two-stage chain of reasoning, so decide before you write what your two stages are: what the factor changed, and what that change did to trade. Choose the factor you can be most concrete about rather than the one that sounds largest.\nA full answer names the factor from the specification's list — trade liberalisation, the growth of trading blocs, political change, cheaper transport and communications, or the increased significance of TNCs (1 mark) — and then takes it in two stages. For cheaper transport: freight is a share of a good's delivered price (1 mark), and when it falls, goods whose value is low relative to their bulk become worth moving for the first time (1 mark), so the range of goods traded widens as well as the volume (1 mark). An answer that stops at \"transport got cheaper so trade rose\" has one stage and an assertion where the second should be."
+   },
+   {
+    "id": "causes-effects-globalisation:practice:d705e71a",
+    "command": "Analyse",
+    "marks": 6,
+    "question": "Analyse the impact of foreign direct investment by a transnational company on a developing economy that receives it. (6 marks)",
+    "guidance": "Appendix 6 says an Analyse focuses on depth rather than breadth and does not include evaluation, so this is one chain followed all the way rather than a list of effects with a verdict at the end. Pick the channel you can trace furthest — employment, supplier orders, tax or skills — and ask at each step what the money or the capability does next. Resist the urge to conclude.\nA strong chain on employment runs: the plant hires local workers (1 mark), which raises household incomes in the area (1 mark), which is spent locally, so demand for other local goods and services rises (1 mark), and those firms hire in turn (1 mark). The chain can then reach the tax take on both the wages and the additional activity (1 mark), and the skills the workers acquire, which stay in the economy even if the plant does not (1 mark). A chain that reaches \"so the economy benefits\" without any of the intermediate steps has asserted the conclusion; one that lists employment, tax, skills and technology in a line each has chosen breadth, which this command word specifically does not ask for."
+   },
+   {
+    "id": "causes-effects-globalisation:practice:afd6b3c7",
+    "command": "Draw",
+    "marks": 4,
+    "question": "A country's demand for a device is 100,000 units at $150 and 260,000 units at $70, and demand is linear. Draw a diagram showing the consumer surplus at each price and label the gain. (4 marks)",
+    "guidance": "Appendix 6 defines Draw as constructing an accurately labelled diagram using quantitative skills, and says students may have to decide the type of diagram. Decide that first, then plot the two points you are given before drawing anything through them. The labels are the command word rather than decoration on top of it, so leave room for them.\nAxes with price on the vertical and quantity on the horizontal, and a straight demand curve through the two given points (1 mark). Both prices marked with horizontal lines to the curve and down to their quantities: $150 at 100,000 and $70 at 260,000 (1 mark). Consumer surplus at the higher price shaded as the triangle between the demand curve and the $150 line, which extended to the vertical axis gives a choke price of $200 (1 mark). The gain shaded as the area between the two price lines and under the curve, labelled as the trapezium made of $80 × 100,000 to existing buyers plus half of $80 × 160,000 to new ones (1 mark). The commonest error is to shade only the rectangle, which leaves out the new buyers entirely."
+   },
+   {
+    "id": "causes-effects-globalisation:practice:59513d1d",
+    "command": "Examine",
+    "marks": 8,
+    "question": "Examine the benefits of globalisation for consumers in a small open economy. (8 marks)",
+    "guidance": "Appendix 6 says an Examine requires a chain of reasoning and a brief assessment of the arguments, so plan one developed chain and a short weighing rather than a survey. Consumers are the group named, so effects that reach them through their incomes need to be traced to them rather than assumed. Decide in advance which benefit you think is largest for a small economy, because the assessment at the end is what separates this command word from the one below it.\nA developed chain: opening the market exposes domestic producers to suppliers selling at a lower average cost, because a world market spreads a fixed cost over far more units than a small domestic one can. Prices fall to the level the outside supplier can sustain. Consumers already buying gain the full fall on every unit; consumers who were priced out at the old price now buy, gaining the difference between what the good is worth to them and the new price. Choice widens for the same reason prices fall — a variety wanted by a small share of buyers finds enough buyers once the market is the world rather than one country — and for a small economy that effect is larger than for a large one, because its own market could support very few varieties.\nThe brief assessment, which is what the command word adds: the gains are real but they are gains to consumers as consumers, and the same people are also workers. Where a household's income came from the industry the imports displaced, the price fall is set against a lost wage and may not compensate it. The honest answer is that consumers in aggregate gain, that the gain is largest for the goods a small economy could never have produced efficiently, and that the distribution of the gain within the country is a separate question from its size."
+   },
+   {
+    "id": "causes-effects-globalisation:practice:5ad189fe",
+    "command": "Discuss",
+    "marks": 14,
+    "question": "Discuss the costs of globalisation for an economy that has recently opened to trade and foreign investment. (14 marks)",
+    "guidance": "Appendix 6 says a Discuss needs logical and coherent chains of reasoning with reference to context, the validity and significance of the arguments considered, and a recognition of different viewpoints. That means two or three costs developed properly and weighed against each other, not all six named. Choose costs that fit an economy that has recently opened, and say which of them bites first and which bites longest.\nDisplacement is the one that arrives first. Producers who had been protected face suppliers selling below their average cost and close, and the workers are concentrated in one industry and often one region, while the jobs that appear are in other industries and may need other skills. The significance of this cost depends almost entirely on mobility: where retraining is available and the new industries are nearby, it is a transition, and where they are not, it is permanent.\nTwo costs work on the government rather than on households. Transfer pricing lets a firm declare its profit wherever the rate is lowest, so the tax take from foreign investment is smaller than the profit earned would suggest, and the revenue lost is revenue that would have funded the retraining the first cost requires. A firm that can relocate also shapes what policy is proposed at all, because a government weighing a tax rise or a stricter rule compares what it would raise against everything the firm currently pays. Neither of those is illegal and neither is announced, which is what makes them hard to answer.\nAgainst all of it: the costs are concentrated and the benefits are diffuse, which makes the costs more visible rather than larger. The same opening delivers lower prices to every household, larger markets for exporters and capital the economy did not have to save for. A judgement that weighs the two has to say which is bigger for THIS economy — and the answer turns on whether displaced workers can move to the new industries and whether the state can still collect enough tax to help them if they cannot."
+   },
+   {
+    "id": "causes-effects-globalisation:practice:ee33979b",
+    "command": "Evaluate",
+    "marks": 20,
+    "question": "Evaluate the view that the benefits of globalisation for a developing economy outweigh the costs. (20 marks)",
+    "guidance": "Appendix 6 says an Evaluate requires multi-stage chains of reasoning with reference to context and a critical assessment of the evidence leading to informed judgements, so this needs a position and a reason for holding it. Plan two benefits and two costs you can develop rather than the full list of twelve, and decide in advance what your answer depends on — the strongest answers name the condition that would change the verdict. Use one consistent example economy throughout.\nThe case for: opening raises output because the economy specialises where it is relatively efficient and buys the rest, and foreign investment adds capital that domestic saving did not have to supply. Prices fall where an outside producer sells at a lower average cost, and the gain to consumers runs both to those already buying and to those who were priced out. Tax revenue rises with output and with the profits and wages of new plants, and revenue is what funds the schooling and infrastructure that raise output again later. For a developing economy in particular the scale effect is large, because its own market is too small to support efficient production of most manufactured goods.\nThe case against: the losses are concentrated. Producers that had been protected close, and their workers are in one industry and often one region while the new jobs are elsewhere and need other skills. Inequality within the country widens, because the return to skills the world wants rises while work competing with imports does not. The tax gain is smaller than it looks once profit is declared elsewhere through transfer pricing, and a government that depends on one large investor finds its policy shaped by the possibility of that investor leaving. Each of these bites hardest in exactly the economy the question names, because a developing economy has fewer alternative employers, thinner retraining provision and less administrative capacity to police a transfer price.\nThe judgement: on the evidence, the benefits are larger in aggregate and the costs are larger for particular groups, so the view is defensible but incomplete as stated. What decides it in practice is whether the state can do two things — move displaced workers into the growing industries, and collect enough of the tax the growth generates to pay for that. Where it can, the aggregate gain and the individual gains point the same way. Where it cannot, an economy can have rising output per head, a doubled trade ratio and a region that never recovered, all at once, and pointing at the average is no answer to the region. The condition, not the sign, is what an examined judgement here should turn on."
+   }
+  ],
+  "flashcards": [
+   {
+    "id": "causes-effects-globalisation:flashcard:493b6331",
+    "front": "Define globalisation.",
+    "back": "The growing integration of national economies into one world economy — through trade in goods and services, firms producing in several countries, capital moving between them, and people migrating."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:6ef507b5",
+    "front": "Name the three characteristics of globalisation.",
+    "back": "trade as a proportion of gdp; tncs and fdi; migration. All three are countable, which is what separates an economic answer from a conversational one."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:e7f9ced1",
+    "front": "How is trade as a proportion of GDP calculated?",
+    "back": "(exports + imports) ÷ GDP × 100. The two flows are ADDED, not netted off, and the result can exceed 100% because imports are not part of output. Tamira: $221.0bn ÷ $284.3bn = 77.8%."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:7e684ac8",
+    "front": "Why does trade as a proportion of GDP rise?",
+    "back": "Because trade compounds faster than output. In Tamira, 6% a year against 4% takes the ratio from 30% to 77.8% in fifty years, with neither series ever falling."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:e65b9139",
+    "front": "What is a transnational company?",
+    "back": "A firm that owns and runs production in more than one country. The test is where production is, not where the customers are: a firm exporting to forty countries from one plant is an exporter, not a TNC."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:233c5312",
+    "front": "What is foreign direct investment?",
+    "back": "Investment in productive assets in another country together with control of them. A loan directs nothing and a small shareholding leaves the existing managers deciding, so neither is FDI."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:277294ad",
+    "front": "Name the five causes of increased globalisation.",
+    "back": "trade liberalisation; trading blocs; political change; transport and communications; tncs — the specification's list for the last fifty years."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:d0adb4ac",
+    "front": "What does trade liberalisation do to price and quantity?",
+    "back": "It removes a barrier, so the price falls to what outside suppliers can sustain and quantity rises. Tamira's device: $150 to $70, and 100,000 to 260,000 units."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:76531ca9",
+    "front": "Why are trading blocs a CAUSE of globalisation?",
+    "back": "Because each new or enlarged bloc moves more world trade inside an agreement where barriers between members are lower. The number and the size both matter. How blocs differ from one another belongs to the topic on trade and the global economy."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:470db673",
+    "front": "Which political changes does the specification name?",
+    "back": "The breakdown of the Soviet system and the opening up of China. Both brought economies that had been largely closed into the world market as producers, as buyers, and as destinations for investment."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:e3418a64",
+    "front": "Why does cheaper transport change WHICH goods are traded?",
+    "back": "Because freight is a share of a good's price and a large share for a cheap one. At $12 a unit, freight on a $8 good is 150% of its factory price; at $3 it is 37.5%."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:b1d39bfe",
+    "front": "How do TNCs raise measured trade without raising output?",
+    "back": "By splitting production across borders. A $70 device with $25 of imported components generates $95 of recorded trade across two crossings, and nobody has consumed anything extra."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:f2d69c62",
+    "front": "Name four reasons for FDI.",
+    "back": "To reach a market more cheaply than by exporting; to lower a cost; to secure a supply; and to use what the other country has — skills, suppliers or location. Getting inside a trade barrier is the fifth."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:8f4849ef",
+    "front": "What is the impact of FDI on a recipient country?",
+    "back": "Gross: wages, orders for local suppliers, tax and skills. Norvell Electronics in Tamira pays $9m of wages, $18m to suppliers and $8.4m of tax. Net: subtract the profit paid abroad, any imported inputs and any local producer displaced."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:56202447",
+    "front": "Name the six possible benefits of globalisation.",
+    "back": "increased economic growth; increased tax revenue; economies of scale; lower prices and higher consumer surplus; more choice; higher living standards."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:89a5a4ed",
+    "front": "How do economies of scale make an imported good cheaper?",
+    "back": "The fixed cost is spread over more units. $12m ÷ 100,000 + $30 = $150, against $24m ÷ 600,000 + $30 = $70. The variable cost is identical, so this is not a wage effect."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:3d5775a0",
+    "front": "Define consumer surplus.",
+    "back": "The difference between what buyers would have been willing to pay and what they actually pay, summed over all buyers. It is the area under the demand curve and above the price."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:9a57e718",
+    "front": "How does a price fall raise consumer surplus twice over?",
+    "back": "Existing buyers save the full fall on every unit — $80 × 100,000 = $8m — and buyers who were priced out start buying, gaining half the fall times their number: $6.4m. Total $14.4m."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:b7c207d9",
+    "front": "Why does a larger market give more choice?",
+    "back": "Every variety carries its own fixed design and tooling cost. A taste held by one buyer in twenty has too few buyers to cover it in one country and enough in a world market, so varieties appear that no closed economy would have produced."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:961d03e3",
+    "front": "Name the six possible costs of globalisation.",
+    "back": "displaced workers; exploitation of workers; environmental impact of increased trade; loss of tax revenue from transfer pricing; increased income inequality within countries; the influence of tncs on domestic economic policy."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:d0f35209",
+    "front": "Why are workers called DISPLACED rather than unemployed?",
+    "back": "Because the jobs have gone from one industry and one place, not from the economy. Tamira's 500 device workers lose $5,000 jobs while 1,500 jobs appear in another industry that may need other skills and be somewhere else."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:3e475187",
+    "front": "What is a transfer price, and how does it cost a country tax?",
+    "back": "The price one part of a firm charges another. A $20m fee from a 5% jurisdiction turns $7.5m of tax at 25% into $2.5m at home plus $1m abroad — $5m short, with no production moved."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:8ab43cf2",
+    "front": "Why does globalisation widen inequality WITHIN a country?",
+    "back": "Incomes rise where the world wants the skills and fall where work competes with imports. $6,000 in the new plant against $3,000 for a re-employed displaced worker is a gap of 2 to one where there had been none."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:ac0e1cb4",
+    "front": "How does a TNC influence domestic economic policy without threatening anything?",
+    "back": "By being able to leave. A tax rise worth $1.5m against $8.4m already being paid breaks even at a 15.2% chance of departure, and the government can do that arithmetic itself."
+   },
+   {
+    "id": "causes-effects-globalisation:flashcard:5ffaa7db",
+    "front": "What does \"possible\" mean in the specification's benefits and costs?",
+    "back": "That each one is contingent. Growth can be concentrated in one region, revenue can be given away or moved offshore, and living standards are an average. Which of the twelve applies is the question a data-response extract is asking."
+   }
+  ],
+  "mistakes": [
+   {
+    "id": "causes-effects-globalisation:mistake:24b8ff26",
+    "title": "Measuring globalisation by the total value of trade",
+    "looks_like": "\"Trade has grown enormously, so the economy has globalised.\"",
+    "why": "A growing economy trades more without becoming any more integrated. The characteristic the specification names is trade as a PROPORTION of GDP, and it moves only when the two grow at different rates: Tamira's ratio rose from 30% to 77.8% because trade compounds at 6% and output at 4%.",
+    "instead": "Divide before concluding. If the ratio is flat, the economy has grown and not integrated, however large the trade figure is."
+   },
+   {
+    "id": "causes-effects-globalisation:mistake:309f84cb",
+    "title": "Calling any large firm with foreign customers a TNC",
+    "looks_like": "\"It sells in sixty countries, so it is a transnational company.\"",
+    "why": "The test is where production is owned and run. A firm with one plant and customers everywhere is an exporter; a firm with two small plants in two countries is transnational. Size is not part of the definition and neither is the customer list.",
+    "instead": "Ask where the factories are. If they are all in one country, the firm is an exporter whatever its sales map looks like."
+   },
+   {
+    "id": "causes-effects-globalisation:mistake:c4ade0e6",
+    "title": "Explaining cheaper imports by cheaper foreign labour",
+    "looks_like": "\"The imported device costs $70 instead of $150 because wages abroad are lower.\"",
+    "why": "It may be, and here it is not: both producers pay $30 a unit for materials and labour. The whole difference is the fixed cost per unit — $120 at 100,000 units against $40 at 600,000. Reaching for wages skips the economies of scale the specification actually lists.",
+    "instead": "Check which cost differs before naming one. If the variable cost is the same on both sides, the answer is scale."
+   },
+   {
+    "id": "causes-effects-globalisation:mistake:9206ae39",
+    "title": "Treating consumer surplus as the money consumers save",
+    "looks_like": "\"The price fell by $80 and 100,000 people were buying, so consumers gained $8m.\"",
+    "why": "That is the gain to buyers who were already in the market and it leaves out the 160,000 who start buying because the price fell. They gain the difference between what the device is worth to them and the $70 they pay: $6.4m more, and the true gain is $14.4m.",
+    "instead": "Draw it. The saving is the rectangle and the new buyers are the triangle beside it, and the question asks for both."
+   },
+   {
+    "id": "causes-effects-globalisation:mistake:f0c8af8c",
+    "title": "Using rising output per head as evidence about households",
+    "looks_like": "\"Output per head doubled, so people are twice as well off.\"",
+    "why": "Output per head is a mean and rises when the top rises alone. This topic's fifth cost is precisely that the distribution can widen at the same time, so the average is consistent with a region whose main employer closed and never reopened.",
+    "instead": "Say what the measure measures: average output rose. Any claim about particular households needs evidence about the distribution."
+   },
+   {
+    "id": "causes-effects-globalisation:mistake:3ebe8055",
+    "title": "Calling transfer pricing illegal",
+    "looks_like": "\"The firm avoided tax illegally by moving its profits offshore.\"",
+    "why": "The transaction is real and declared: one part of a firm charges another for designs, brands or components, and the price is set inside the firm. That is why a $20m fee can turn $7.5m of tax into $3.5m without anything being concealed — and why the cost is hard to answer with enforcement alone.",
+    "instead": "Describe the mechanism, not a crime: the price is set by one side of the trade, so the profit can be declared wherever the rate is lowest."
+   },
+   {
+    "id": "causes-effects-globalisation:mistake:6fa392ee",
+    "title": "Answering \"why did trade grow FASTER than output?\" with the causes of trade growth",
+    "looks_like": "\"Trade grew faster than output because barriers fell and transport got cheaper.\"",
+    "why": "Most of those causes raise output as well as trade, so on their own they cannot explain a rising ratio. The cause that raises the numerator without the denominator is production split across borders: the same device crossing two borders is recorded twice and consumed once.",
+    "instead": "Name something that raises trade without raising what is produced or consumed. Split production is the one on the specification's list."
+   }
+  ],
+  "diagrams": [
+   {
+    "id": "causes-effects-globalisation:diagram:825cc985",
+    "title": "Trade as a Proportion of GDP",
+    "checklist": [
+     "Time on the horizontal axis and the ratio, as a percentage, on the vertical.",
+     "A single series: (exports + imports) ÷ GDP × 100, not the level of trade.",
+     "A line that rises throughout, because trade compounds faster than output.",
+     "The first and last values marked, so the size of the change can be read off."
+    ],
+    "caption": "Trade compounding faster than output is what \"increase in trade as a proportion of GDP\" means, and it is the first characteristic the specification names.",
+    "svg": "<svg width=\"440\" height=\"418\" viewBox=\"0 0 440 418\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"20\" y=\"28\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">Tamira: trade as a proportion of GDP, over</text><text x=\"20.6\" y=\"44\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">fifty years</text><line x1=\"56\" y1=\"300\" x2=\"416\" y2=\"300\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2 4\"/><text x=\"48\" y=\"304\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"end\">0%</text><line x1=\"56\" y1=\"253\" x2=\"416\" y2=\"253\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2 4\"/><text x=\"48\" y=\"257\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"end\">20%</text><line x1=\"56\" y1=\"206\" x2=\"416\" y2=\"206\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2 4\"/><text x=\"48\" y=\"210\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"end\">40%</text><line x1=\"56\" y1=\"159\" x2=\"416\" y2=\"159\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2 4\"/><text x=\"48\" y=\"163\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"end\">60%</text><line x1=\"56\" y1=\"112\" x2=\"416\" y2=\"112\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2 4\"/><text x=\"48\" y=\"116\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"end\">80%</text><line x1=\"56\" y1=\"112\" x2=\"56\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"56\" y1=\"300\" x2=\"416\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><polyline points=\"56,229.5 128,214.7 200,196.84 272,175.21 344,148.9 416,117.17\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/><circle cx=\"56\" cy=\"229.5\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"128\" cy=\"214.7\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"200\" cy=\"196.84\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"272\" cy=\"175.21\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"344\" cy=\"148.9\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"416\" cy=\"117.17\" r=\"3.5\" fill=\"#3b82f6\"/><text x=\"56\" y=\"318\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">50y</text><text x=\"128\" y=\"318\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">40y</text><text x=\"200\" y=\"318\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">30y</text><text x=\"272\" y=\"318\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">20y</text><text x=\"344\" y=\"318\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">10y</text><text x=\"416\" y=\"318\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">now</text><text x=\"64\" y=\"219.5\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">30%</text><text x=\"416\" y=\"105.17\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\" text-anchor=\"end\">77.8%</text><text x=\"20\" y=\"346\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">Output compounds at 4% a year and trade at 6%,</text><text x=\"20.01\" y=\"362\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">so trade rises from 30% of GDP to 77.8% without</text><text x=\"20.02\" y=\"378\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">either series ever falling. The horizontal axis</text><text x=\"20.03\" y=\"394\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">counts years before today.</text></svg>"
+   },
+   {
+    "id": "causes-effects-globalisation:diagram:976b53df",
+    "kind": "table",
+    "title": "The Five Causes, and What Each One Changed",
+    "caption": "The specification names five factors contributing to increased globalisation in the last fifty years. Each one lowers a different obstacle.",
+    "svg": "<svg width=\"440\" height=\"288\" viewBox=\"0 0 440 288\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"20\" y=\"28\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">Five causes, and the obstacle each one lowers</text><line x1=\"20\" y1=\"82\" x2=\"420\" y2=\"82\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"20\" y=\"74\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Cause</text><text x=\"259\" y=\"74\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">What it changed</text><text x=\"20\" y=\"102\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Trade liberalisation</text><text x=\"259\" y=\"102\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Barriers come down</text><line x1=\"20\" y1=\"110\" x2=\"420\" y2=\"110\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"20\" y=\"130\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Trading blocs</text><text x=\"259\" y=\"130\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">More of them, larger</text><line x1=\"20\" y1=\"138\" x2=\"420\" y2=\"138\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"20\" y=\"158\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Political change</text><text x=\"259\" y=\"158\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Closed economies opened</text><line x1=\"20\" y1=\"166\" x2=\"420\" y2=\"166\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"20\" y=\"186\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Transport and comms</text><text x=\"259\" y=\"186\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Both got cheaper</text><line x1=\"20\" y1=\"194\" x2=\"420\" y2=\"194\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"20\" y=\"214\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">TNCs</text><text x=\"259\" y=\"214\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Production split up</text><line x1=\"20\" y1=\"222\" x2=\"420\" y2=\"222\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"20\" y=\"246\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Only the fourth changes what CAN be traded rather than</text><text x=\"20.01\" y=\"261\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">what is allowed to be: at $12 a unit, freight on a $8</text><text x=\"20.02\" y=\"276\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">good was 150% of its factory price; at $3 it is 37.5%.</text></svg>"
+   },
+   {
+    "id": "causes-effects-globalisation:diagram:36906265",
+    "title": "FDI by a TNC: What Goes In and What Comes Out",
+    "checklist": [
+     "Three stages in order: why the firm comes, what it puts in, what the host receives.",
+     "The capital figure labelled as the investment, not as the benefit.",
+     "The host's receipts separated into wages, supplier orders and tax.",
+     "Ownership and control marked on the investment, which is what makes it direct."
+    ],
+    "caption": "Foreign direct investment buys productive assets and the control of them. The impact on the recipient country is the wages, the orders and the tax — and each of the three can be smaller than it looks.",
+    "svg": "<svg width=\"440\" height=\"461\" viewBox=\"0 0 440 461\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"20\" y=\"28\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">Norvell Electronics builds a plant in</text><text x=\"20.6\" y=\"44\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">Tamira</text><rect x=\"20\" y=\"90\" width=\"400\" height=\"104\" rx=\"3\" fill=\"rgba(59,130,246,0.10)\"/><rect x=\"20\" y=\"90\" width=\"400\" height=\"104\" rx=\"3\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/><text x=\"32\" y=\"112\" fill=\"#3b82f6\" font-size=\"12.5\" font-weight=\"600\" text-anchor=\"start\">Why the firm comes</text><text x=\"32\" y=\"130\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">A market it can sell into, and one it can</text><text x=\"32.01\" y=\"147\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">export from</text><text x=\"32.02\" y=\"164\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">Costs it cannot get at home, and a plant</text><text x=\"32.03\" y=\"181\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">sized for 1,500 workers</text><line x1=\"220\" y1=\"198\" x2=\"220\" y2=\"214\" stroke=\"#94a3b8\" stroke-width=\"2\"/><polygon points=\"215 212,225 212,220 220\" fill=\"#94a3b8\"/><rect x=\"20\" y=\"224\" width=\"400\" height=\"104\" rx=\"3\" fill=\"rgba(245,158,11,0.10)\"/><rect x=\"20\" y=\"224\" width=\"400\" height=\"104\" rx=\"3\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"32\" y=\"246\" fill=\"#f59e0b\" font-size=\"12.5\" font-weight=\"600\" text-anchor=\"start\">What it puts in</text><text x=\"32\" y=\"264\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">$120m of capital: the plant, the machines,</text><text x=\"32.01\" y=\"281\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">the land</text><text x=\"32.02\" y=\"298\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">Ownership and control — which is what makes</text><text x=\"32.03\" y=\"315\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">it DIRECT investment</text><line x1=\"220\" y1=\"332\" x2=\"220\" y2=\"348\" stroke=\"#94a3b8\" stroke-width=\"2\"/><polygon points=\"215 346,225 346,220 354\" fill=\"#94a3b8\"/><rect x=\"20\" y=\"358\" width=\"400\" height=\"87\" rx=\"3\" fill=\"rgba(5,150,105,0.10)\"/><rect x=\"20\" y=\"358\" width=\"400\" height=\"87\" rx=\"3\" fill=\"none\" stroke=\"#059669\" stroke-width=\"1.5\"/><text x=\"32\" y=\"380\" fill=\"#059669\" font-size=\"12.5\" font-weight=\"600\" text-anchor=\"start\">What Tamira gets, and what it does not</text><text x=\"32\" y=\"398\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">1,500 jobs at $6,000, so $9m of wages</text><text x=\"32.01\" y=\"415\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">$18m a year to local suppliers</text><text x=\"32.02\" y=\"432\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">$8.4m of tax — before any of it is moved</text></svg>"
+   },
+   {
+    "id": "causes-effects-globalisation:diagram:e8026e2a",
+    "title": "Lower Prices and Higher Consumer Surplus",
+    "checklist": [
+     "Price on the vertical axis, quantity on the horizontal, and a downward-sloping demand curve.",
+     "Both prices drawn as horizontal lines, each dropped to its own quantity.",
+     "The original surplus shaded between the curve and the higher price.",
+     "The gain shaded as the rectangle to existing buyers PLUS the triangle to new ones."
+    ],
+    "caption": "Consumer surplus is the difference between what buyers would have paid and what they do pay. A price fall raises it twice over: everybody already buying pays less, and people who were priced out start buying.",
+    "svg": "<svg width=\"440\" height=\"440\" viewBox=\"0 0 440 440\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"20\" y=\"28\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">Consumer surplus when the price falls</text><polygon points=\"62 144,174.67 144,354.93 227.2,62 227.2\" fill=\"rgba(5,150,105,0.18)\"/><polygon points=\"62 92,62 144,174.67 144\" fill=\"rgba(59,130,246,0.18)\"/><line x1=\"62\" y1=\"92\" x2=\"62\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"62\" y1=\"300\" x2=\"400\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"62\" y1=\"92\" x2=\"400\" y2=\"248\" stroke=\"#ef4444\" stroke-width=\"2.5\"/><line x1=\"62\" y1=\"144\" x2=\"174.67\" y2=\"144\" stroke=\"#94a3b8\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/><line x1=\"174.67\" y1=\"144\" x2=\"174.67\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/><line x1=\"62\" y1=\"227.2\" x2=\"354.93\" y2=\"227.2\" stroke=\"#94a3b8\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/><line x1=\"354.93\" y1=\"227.2\" x2=\"354.93\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"1.2\" stroke-dasharray=\"3 3\"/><text x=\"54\" y=\"148\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"end\">$150</text><text x=\"54\" y=\"231.2\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"end\">$70</text><text x=\"174.67\" y=\"318\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">100k</text><text x=\"354.93\" y=\"318\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">260k</text><text x=\"408\" y=\"246\" fill=\"#ef4444\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">D</text><text x=\"54\" y=\"96\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"end\">$</text><text x=\"400\" y=\"334\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"end\">devices</text><text x=\"20\" y=\"352\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">Blue: the surplus buyers already had at $150,</text><text x=\"20.01\" y=\"368\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">$2.5m. Green: the gain when the price falls to</text><text x=\"20.02\" y=\"384\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">$70 — $8m to the 100k already buying, plus</text><text x=\"20.03\" y=\"400\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">$6.4m to the 160k who could not afford one</text><text x=\"20.04\" y=\"416\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">before. Total surplus $16.9m.</text></svg>"
+   },
+   {
+    "id": "causes-effects-globalisation:diagram:15f767fa",
+    "title": "Loss of Tax Revenue from Transfer Pricing",
+    "checklist": [
+     "Two bars, one tax bill each, drawn to the same scale so the shortfall is a length.",
+     "The rate and the profit it applies to written beside each bar.",
+     "The fee shown as a payment between two parts of one firm, not to a third party.",
+     "The difference between the two bills named as the revenue the host loses."
+    ],
+    "caption": "Transfer pricing is the price one part of a firm charges another for goods or services. Set high enough, it moves the profit to wherever the tax is lowest without moving the production.",
+    "svg": "<svg width=\"440\" height=\"288\" viewBox=\"0 0 440 288\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"20\" y=\"28\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">The same profit, taxed in two places</text><text x=\"20\" y=\"101\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">All in Tamira</text><rect x=\"150\" y=\"86\" width=\"200\" height=\"22\" rx=\"3\" fill=\"#059669\"/><text x=\"358\" y=\"102\" fill=\"#059669\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">$7.5m</text><text x=\"20\" y=\"119\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">25% of $30m</text><text x=\"20\" y=\"153\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">After the fee</text><rect x=\"150\" y=\"138\" width=\"93.33\" height=\"22\" rx=\"3\" fill=\"#ef4444\"/><text x=\"251.33\" y=\"154\" fill=\"#ef4444\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">$3.5m</text><text x=\"20\" y=\"171\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">$2.5m + $1m</text><line x1=\"243.33\" y1=\"138\" x2=\"243.33\" y2=\"160\" stroke=\"#7a8299\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><text x=\"20\" y=\"204\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">A licence fee of $20m is charged to the Tamiran</text><text x=\"20.01\" y=\"220\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">plant by another part of the same group, in a</text><text x=\"20.02\" y=\"236\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">country taxing profit at 5%. Tamira now taxes</text><text x=\"20.03\" y=\"252\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">$10m instead of $30m. Nothing was made anywhere</text><text x=\"20.04\" y=\"268\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">else and nothing moved except the paperwork;</text><text x=\"20.05\" y=\"284\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">Tamira is $5m short.</text></svg>"
+   }
+  ],
+  "extras": {
+   "chains": [
+    {
+     "title": "How one economy opening turns into a rising trade ratio",
+     "steps": [
+      "An economy that had been closed to trade and to foreign investment opens to both.",
+      "Its neighbours agree with it to lower the barriers between them, so the goods each already made become cheaper to sell to the others.",
+      "Foreign firms build component plants inside it, because the barriers are now low and freight has fallen to $3 a unit.",
+      "Components leave for assembly elsewhere — $25 a device — and the finished $70 device crosses a border again.",
+      "Trade rises faster than output, so trade as a proportion of GDP climbs: 30% to 77.8% over fifty years."
+     ],
+     "result": "Four of the specification's five causes appear in that sequence, and the order is not interchangeable: nothing else on the list can happen while the economy is closed, and the ratio at the end is the consequence of everything above it. Only the fourth step raises recorded trade without raising what anybody produces or consumes, which is why it is the step to reach for when the question is about the RATIO rather than the volume."
+    },
+    {
+     "title": "Judging an FDI project, in the order the figures arrive",
+     "steps": [
+      "Count what the project brings in a year: $9m of wages, $18m of orders for local suppliers and $8.4m of tax.",
+      "Subtract what leaves: the $30m of profit owned abroad, and any components the plant buys from the group rather than locally.",
+      "Subtract what the country gave up to get it — the land, the site preparation and any tax concession offered to win the plant.",
+      "Ask how long the plant is expected to stay, and what happens when the concession ends, because one year net times twenty is a different number from one year net times three.",
+      "Compare the remainder with the next best use of the same land, workers and money, which is the comparison that makes the judgement economic rather than rhetorical."
+     ],
+     "result": "A project can pass every step and still be the wrong project, and the step most answers skip is the last. Norvell Electronics's $8.4m of tax is a real gain against no plant at all; against a concession worth more than $8.4m a year it is a loss, and the announcement of $120m of capital tells you nothing about which case you are in."
+    },
+    {
+     "title": "Where Tamira's $7.5m of tax went",
+     "steps": [
+      "Norvell Electronics's plant earns $30m of profit in Tamira, where profit is taxed at 25%: $7.5m.",
+      "Another part of the same group, in a country taxing profit at 5%, owns the designs the plant uses.",
+      "It charges the plant $20m a year for the right to use them. The fee is a real, declared payment between two parts of one firm.",
+      "Tamira now taxes $10m at 25%: $2.5m. The fee is taxed where it lands, at 5%: $1m.",
+      "The group pays $3.5m instead of $7.5m, and Tamira is $5m short of what it expected."
+     ],
+     "result": "The same plant made the same devices with the same workers, and the only thing that moved was where the profit was declared. That is why the second benefit and the fourth cost are the same flow read in opposite directions — and why a country's answer to it has to be a rule about the PRICE rather than about the tax rate."
+    },
+    {
+     "title": "The same price fall, from two chairs",
+     "steps": [
+      "A tax on imported devices is removed, and the price falls from $150 to $70.",
+      "The 100,000 households already buying save $80 each: $8m between them.",
+      "160,000 households that could not afford a device at $150 now buy one, gaining $6.4m between them.",
+      "Tamira's own device maker cannot cover a $150 average cost at a $70 price, and closes.",
+      "Its 500 workers lose $5,000 jobs; those who find work in the growing industries do so at a different wage, and those who do not find any lose all of it."
+     ],
+     "result": "$14.4m of gain spread across a whole country against 500 concentrated losses is the shape of almost every argument in this topic. The aggregate is positive and the distribution is not, and an answer that reports only one of those two has reported half the effect. It is also why the same event appears in the benefits chapter and the costs chapter without contradiction."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "Deciding which cost or benefit matters most in a particular economy",
+     "content": "The specification gives twelve possible effects and an essay has room for four, so the question that actually decides a grade is which four. Four tests, in this order. First, what does this economy SELL? An economy exporting manufactures into a world market gets the scale and consumer-surplus benefits at full strength — $150 to $70 on a device is $14.4m of surplus in one market — while an economy exporting one commodity gets very little of either, because its price is set elsewhere and its scale was never the constraint. Second, what does it have that the world wants and cannot move? Where that is minerals or location, FDI arrives on the investor's terms and the influence cost is large; where it is a skilled workforce, the firm is the one with less choice, and wages rather than concessions do the competing. Third, can displaced workers reach the new jobs? This is the test that decides whether displacement is a transition or a permanent regional loss, and it turns on retraining, on distance and on how different the skills are — a $5,000 machine operator does not become an electronics assembler by being told that the economy has gained. Fourth, can the state collect? Every benefit that runs through the government — the second, and most of what answers the first, third and fifth costs — depends on revenue that transfer pricing can move offshore, and a country that cannot police a $20m licence fee has fewer tools than the argument assumes. An answer that names which of those four applies to the economy in the extract, and says what would have to be true for the verdict to reverse, has done what the command word asks."
+    },
+    {
+     "title": "Why the same event appears as a benefit and as a cost",
+     "content": "Nothing in this topic is a benefit or a cost in itself, and the twelve items on the specification's two lists are not twelve events: several are one event seen from two chairs. The clearest is the price fall. A device falling from $150 to $70 is the fourth benefit — $14.4m of consumer surplus, $8m to households already buying and $6.4m to households that could not afford one — and it is also the first cost, because the producer that had been charging $150 cannot cover its average cost at the new price and its 500 workers lose $5,000 jobs. Both are true, both are consequences of the same tariff removal, and neither cancels the other. The same doubling appears in tax: the second benefit is the $8.4m a foreign plant pays, and the fourth cost is the $5m of it that a licence fee can move to a 5% jurisdiction — one flow, counted twice, in opposite directions. What this means for an answer is practical rather than philosophical. First, do not argue that a cost is not really a cost because the economy gained overall: the gain is aggregate and the loss is particular, and the 500 are not consoled by the arithmetic. Second, when a question asks whether globalisation has benefited an economy, the honest structure is not benefits-then-costs but effect-by-effect, saying for each who gained, who lost and by how much. Third, the specification's own word is \"possible\" in both headings, and it is doing real work: whether the price fall is mostly benefit or mostly cost in a particular country depends on how many people worked in the industry that closed and how quickly they can work somewhere else."
+    }
+   ]
+  }
+ }
+}
