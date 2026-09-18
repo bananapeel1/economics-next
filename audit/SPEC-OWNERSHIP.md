@@ -25,6 +25,28 @@ carries the source line for every requirement, so the question is always answera
 | Behavioural influences on consumer choice | economics 1.3.2.1b | `consumer-behaviour-demand` | `price-determination` (1.3.4), a two-subsection block | **Done.** Removed from 1.3.4 on 14 Sep. 1.3.4 has eleven lettered requirements and none is behavioural. |
 | External benefits and costs of consumption | economics 1.3.5.2c-d | `market-failure`, the Externalities block | `market-failure` again, as "Merit Goods & Demerit Goods" | **Done.** The second copy was the UK GCE label for the same economics and was removed 14 Sep. |
 
+## Two topics a finding asked to duplicate, and the lines that settled it (packet 35, 18 Sep)
+
+The rows above record duplications that HAPPENED. These two did not, and they are recorded because
+four audit items asked for them and the next packet to read those items will need the same answer.
+
+| Topic | Specification | Owner | A finding asked it to ALSO be taught in | Resolved |
+|---|---|---|---|---|
+| Leadership: management against leadership, the four styles, **and the difficulty of moving from entrepreneur to leader** | business 1.3.4 · 5, `bus_spec.txt:746-753` | `managing-people` (packet 30) | `entrepreneurs-leaders` (1.3.5), by `specGap-01` and `topFix-01` | **Refused, 18 Sep.** 1.3.5's four sub-topics (:760-788) contain no leadership leaf; the heading says "and leaders" and the requirements do not. Packet 30 had already refused the MIRROR of this — two findings asking to move `5c` out of 1.3.4 and into 1.3.5 — on 17 Sep. Obeying both would have taught `5c` twice; obeying neither in the other direction would have taught it nowhere. |
+| Forms of business and liability: sole trader, partnership, private limited company, franchising, social enterprise, lifestyle and online businesses, plc flotation, limited and unlimited liability | business 2.3.1 · 4 and · 5, `bus_spec.txt:870-878` | `planning-raising-finance` (packet 19) | `entrepreneurs-leaders` (1.3.5), by `specGap-02` and `topFix-01` | **Refused, 18 Sep.** None of those phrases occurs between :760 and :788. |
+
+**The near-miss worth knowing before you read those findings.** `social entrepreneurship` IS a 1.3.5
+leaf — a non-financial motive at :775 — and `entrepreneurs-leaders` teaches it. `social enterprise`,
+the FORM of business, is 2.3.1 · 4b and belongs to `planning-raising-finance`. The two are one word
+apart, they sit in different units, and a finding that names the second while meaning the first will
+read as correct.
+
+**How the refusals are held.** `BANNED_ELSEWHERE` in `scripts/_packet35-util.mjs` refuses each phrase
+with the line that settles it, and the runner's coverage block re-reads `spec-items.json` for both
+spans: if 1.3.5 ever acquires a leadership or forms-of-business row, or 1.3.4 ever loses `5c`, the
+build fails rather than the refusal being inherited unchecked. A boundary that is only written down
+decays; this one is a build failure.
+
 ## The multiplier: why it is not resolved here, and what resolving it needs
 
 The specification puts the multiplier at 2.3.4.4, so `national-income` owns it. `aggregate-demand`
