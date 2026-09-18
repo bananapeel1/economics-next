@@ -1,5 +1,383 @@
 # Next session brief
 
+## Packet 34 result — `causes-effects-globalisation`, Economics 4.3.1 (Opus 5, 18 September 2026)
+
+**BUILT, VERIFIED, STAGED NOT PUBLISHED**, held for the packet 5/7 checkpoint with packets 5, 5.1, 7
+and 14-33. Commits `175bb5d` (build) · `31dd23e` (Layer 6 fixes) · the gate commit.
+
+**VERIFY_A_LINE**
+
+Section went **15 BLOCK / 25 DEBT / 86% → 0 BLOCK / 1 DEBT / 100% (22 of 22 leaves)**; the one
+remaining DEBT is `quant.unit`, "no quantitative drill template is registered for WEC14", which is
+programme-wide and baselined. 36 baselined findings clear when it publishes. 3 blocks → **5**,
+6 subsections → **26**, 31 steps, 10 quiz → **26**, 5 practice → **8**, 3 broken diagrams → **5**,
+0 recalls → **26**, 18 flashcards → 25, 3 mistakes → 7, 4 extras chains + 2 evaluation entries.
+
+### What the packet actually decided
+
+- **The third block was another topic's, and five findings asked for more of it.** Types of bloc,
+  trade creation, trade diversion and the common external tariff are `econ_spec.txt:1657-1673` —
+  4.3.2 · 4, owned by `trade-global-economy`. `topFix-02`, `topFix-03`, `specGap-05` and `specGap-06`
+  are **reassigned to packet 39**; `topFix-01` and `structure-01` lost a clause each to it.
+- **Rule-1 rate: 6 of 25** — `topFix-05`'s Assess clause, `structure-07`'s and `specGap-02`'s UK-GCE
+  stakeholder sentence, `specGap-01`'s fifth characteristic, `specGap-04`'s deindustrialisation and
+  `specGap-07`'s brain drain. Three are wont-fix with the spec evidence in the ledger.
+- **Rule 2, measured first:** `MNC` 0 / `multinational` 0 in `econ_spec.txt` against `TNC` 7, so
+  `topFix-03`'s "introduce TNC = MNC" is refused; `race to the bottom`, `tax competition`,
+  `deindustrialisation`, `brain drain`, `greenfield`, `stakeholder`, `world price`, `supply chain`
+  and `value added` are 0 in both specifications.
+- **One spine, six numbers.** Two growth rates take trade from 30.0% of GDP to 77.7%; two fixed costs
+  make the whole $150-to-$70 price gap a scale effect on an identical $30 variable cost; one demand
+  line splits the $14.4m surplus gain into $8.0m to existing buyers and $6.4m to new ones; a $20m
+  licence fee turns $7.5m of tax into $3.5m; and a $1.5m tax rise against $8.4m at risk breaks even
+  at a 15.2% chance of departure.
+
+### Verify B — 390×844, signed out, `?draft=1` (main session, the agent cannot reach the Browser pane)
+
+All **31 steps** walked with the real flow. Three-question pre-test on screen, all three answerable
+from chapter 1, and the payload measured `8 of FREE_QUIZ_MAX 10` with **5 of 5 chapters** resolving a
+check-in question. Every teaching step carried its recall; one fill-in was completed with real input
+and graded "All correct". Zero failed substitutions on any surface including the SVGs, no string
+naming our own previous content. All five diagrams measured in the browser with
+`getComputedTextLength()`: 440-unit frames rendering at **292-298 CSS px**, smallest drawn face
+**7.96px**, **zero** strings overrunning their canvas. The declared table's 10-unit cells come out at
+**6.64px** at 390px, which is why `kind: 'table'` matters — it offers the full-screen sheet.
+Console: three errors, all third-party or resource-level (an analytics gateway and a favicon), none
+from the app.
+
+### Two things found in passing, neither owned by a ledger id
+
+- **`POST /api/events` reports `net::ERR_ABORTED` on every step change and the rows land anyway.**
+  98 aborted posts on one walk, and 93 `app_events` rows written, including `step_next` at steps 0-30.
+  The funnel is intact; the abort is the browser discarding a 204 after the page has moved on. See
+  DECISIONS. Do not chase it, and do not "fix" it by removing the event.
+- **`check-staged-drafts.mjs` crashes over the whole corpus** because
+  `audit/snapshots/packet-31-bundle__business__financial-planning.json` has no `section_id` key.
+  Scoped to one section it works. Whoever runs the ship checkpoint needs this fixed first.
+
+### Layer 6
+
+Both canaries caught, plus one real defect nothing in the pipeline could see: a printed ratio that did
+not divide the printed figures. Full report at `audit/runs/packet-34/layer-6.md`; the refused HIGH
+finding is in DECISIONS, because the wiring rule in `CONTENT-GATE.md` is what produced it.
+
+### Publish line, for the checkpoint
+
+```
+node scripts/packet-34-causes-effects-globalisation.mjs --stage   # re-stage if any module changed
+node scripts/publish-section.mjs causes-effects-globalisation --confirm
+```
+
+Nothing a student sees has changed. The publish needs Ronald's go-ahead in session (rule 8), and the
+recall contract means it cannot go live before packets 5 and 7 are deployed.
+
+## Handoff — after packet 34 (written 18 September 2026)
+
+**Take packet 39, `trade-global-economy`** (Economics 4.3.2, 15 open items) — not because it is next
+by item count, but because packet 34 has already done half its brief. Four of its findings arrived
+from this packet (`C-causes-effects-globalisation-topFix-02`, `-topFix-03`, `-specGap-05`,
+`-specGap-06`), the span is `econ_spec.txt:1626-1678` with sub-topic 4 at 1657-1673, and the oracle
+holds six ladder rows under `ECON-4.3.2-4*`. That section is the owner of the integration ladder,
+trade creation and diversion, the WTO and the reasons for restricting free trade, and it currently
+has no bloc block at all. Packet 35 (`entrepreneurs-leaders`, Business, 17 items) is the next one by
+count if a second session is free.
+
+**Read first**, in this order: `audit/PROTOCOL.md`; the packet 34 result block above and the packet 33
+spec block, because between them they settle what 4.3.2 owns and what it does not; your packet's row
+in `audit/PROGRESS.md`; the Settled list in `audit/DECISIONS.md`, whose last six entries are all from
+today; and `audit/CONTENT-GATE.md` including the recall contract — with the caveat in DECISIONS that
+its wiring sentence is stale.
+
+**Start from `scripts/packet-34-*.mjs` if your section is ECONOMICS.** It is packet 30's runner with
+the census switched to `economics`, and it carries three things packet 30's does not: the ladder and
+off-spec vocabulary bans built from a list in the util module and A/B'd against their own terms, the
+printed-ratio guard below, and diagram read-backs that recompute a chart's plotted geometry rather
+than checking that a string is present. Swap the census back to `business` for a Business section.
+
+**The guard worth carrying into every packet from here on.** A printed ratio must divide the printed
+quantities. Layer 6 found this section saying output $284.3bn, trade $221.0bn, ratio 77.8% — the
+unrounded division — where a student dividing the two numbers gets 77.7%. Every figure check in the
+runner recomputed values from the same unrounded source the content used, so all of them agreed with
+each other and every one of them was blind to it. If your section prints a ratio, a percentage or a
+per-unit figure beside the quantities it comes from, derive it FROM THE ROUNDED ones and assert that.
+
+**Concurrency, and it is worse than it was.** Four sessions were in this worktree today: packet 12.1
+(exam-practice contract, code-only), 32 (`aggregate-demand`), 33 (`globalisation`, committed as
+`f788cfd`) and this one. **The shared index holds another session's staged work right now** — 41
+entries, mostly packet 12.1's `audit/scripts/spec-coverage-*` and `app/business/*-model-answers`
+pages — so a plain `git commit` would sweep all of it into your commit. Packet 34's three commits
+used the isolated-index method and it is worth copying exactly:
+
+```sh
+G=/usr/bin/git; IDX=/tmp/myidx; GIT_INDEX_FILE=$IDX; export GIT_INDEX_FILE
+$G read-tree HEAD
+sha=$($G hash-object -w <file>); $G update-index --add --cacheinfo 100644,$sha,<path>   # per file
+TREE=$($G write-tree); NEW=$($G commit-tree $TREE -p $OLD -F msg.txt)
+$G update-ref refs/heads/remediation/2026-09 $NEW $OLD   # two-argument form: compare-and-swap
+```
+
+Two traps inside that, both met today: **run the script with absolute paths** (`/usr/bin/git`,
+`/bin/rm`) because it runs with no PATH and fails halfway, AFTER the `update-ref`; and **check
+`git log -1` before and after**, because a re-run of a script that failed on its cleanup line makes a
+second, empty commit with the same message. Packet 34 made one and removed it with
+`git update-ref refs/heads/remediation/2026-09 <first> <duplicate>`.
+
+**`audit/ledger.json` is shared and the working tree is NOT yours.** Today it held packet 32's and 33's
+claims plus `V029`-`V033` and `E001`-`E008` from packet 12.1. Commit HEAD's ledger overlaid with your
+own ids only, serialised at `JSON.stringify(_, null, 1)` — the indent `audit/scripts/ledger.mjs:29`
+writes — and leave theirs in the working tree for their gate commit. Diff by id before you commit and
+confirm every change is yours.
+
+**The index is stale and cannot simply be reset** (packet 31's warning, still true): `git status`
+shows `D` for files that are on disk and in HEAD, because the index has not been refreshed since
+before those commits, and four paths have held INDEX-ONLY content. Leave it alone.
+
+**Exit criteria for a content packet**, unchanged: 0 BLOCK and 0 new DEBT on your own section, every
+claimed id confirmed by a verifier that has not seen your conversation, a 390×844 walk of the real
+flow with real input, Layer 6 with two planted canaries on a COPY of the bundle, the draft compared
+to `?draft=1` field by field with `sameJson`, your PROGRESS row updated, and staged not published.
+
+
+## Packet 34 spec — `causes-effects-globalisation`, Economics Unit 4 (WEC14), IAL **4.3.1** (Opus 5, 18 September 2026)
+
+`audit/raw/econ_spec.txt:1586-1625`. The oracle holds **26 rows for `ECON-4.3.1`**, of which four (`2a`,
+`2b`, `3a`, `3b`) are requirement headers carrying bullets, so **22 substantive leaves**. Live state:
+**3 blocks · 6 subsections · 10 quiz · 5 practice · 3 diagrams · 0 recalls · 18 flashcards · 4 notes ·
+3 common mistakes · 4 extras chains**, and `validate-content.mjs --section causes-effects-globalisation`
+reads **15 BLOCK / 25 DEBT / 3 new DEBT / coverage 86%**.
+
+The whole topic is three sub-topics and no more: **1 Characteristics** (1a trade as a proportion of GDP ·
+1b TNCs and FDI · 1c migration), **2 Causes** (2a five factors · 2b FDI by TNCs), **3 Effects** (3a six
+benefits · 3b six costs). It contains no trading-bloc ladder, no WTO sub-topic and no stakeholder grid.
+
+### Rule 2 and rule 1 fire on the same block, and the audit asks to BUILD MORE of it
+
+**Block 2 "Trade Blocs" is Economics 4.3.2 material.** The types of bloc, trade creation, trade diversion
+and the WTO are `econ_spec.txt:1657-1673` — **4.3.2 · 4 "Trade liberalisation and trading blocs"**, which
+is the section `trade-global-economy` (**packet 39**, whose own ledger has 15 open items and no bloc block).
+4.3.1 names trading blocs exactly once, as **cause 2a-2, "increased number and size of trading blocs"** —
+one line about why trade grew, not a ladder of integration.
+
+`structure-03` says this correctly and offers "either move the block or cross-reference it". It is moved:
+this section keeps 2a-2 as one subsection about the cause, and the ladder, creation/diversion and the CET
+go to packet 39 with the ids below. **Five findings ask this packet to deepen the off-spec block instead**
+(`topFix-01` ladder clause, `topFix-02`, `topFix-03` clauses 2-3, `specGap-05`, `specGap-06`) — the same
+shape as packet 33, where the audit's remedy would have deepened a block that should not exist.
+
+Measured before a word was written (`grep -ociF`, both specifications):
+
+| term | `econ_spec.txt` | `bus_spec.txt` | consequence |
+|---|---|---|---|
+| `TNC` | **7** | 0 | the spec's word for the actor; use it everywhere |
+| `MNC` / `multinational` | **0 / 0** | 6 / 3 | `topFix-03`'s "introduce TNC = MNC" imports the Business word — refused |
+| `race to the bottom` | **0** | 0 | `structure-05` is right that the quiz tests it; the fix is to remove it, not teach it |
+| `tax competition` | **0** | 0 | `specGap-02`'s framing |
+| `deindustrialis*` | **0** | 0 | `specGap-04`; the spec's term is `displaced workers` (3b-1) |
+| `brain drain` | **0** | 0 | `specGap-07` |
+| `greenfield` / `acquisition` | **0 / 0** | 0 / 0 | `structure-04`'s and `structure-05`'s FDI-type distinction |
+| `stakeholder` | **0** | 10 | `structure-07`'s framing is the Business word and the UK GCE structure |
+| `financial market` | 1 (line 546, Unit 2) | 0 | `specGap-01`'s fifth characteristic is not in 4.3.1 |
+| `transfer pricing` | **2** (1617, 1883) | 0 | in scope, and 3b-4 by name |
+| `consumer surplus` | **1** (1611) | 0 | in scope here and defined nowhere else in the spec — so this section defines it |
+| `producers` | 9 | 0 | none of the nine is in 4.3.1 |
+
+### Rule 1 — every claim checked against the spec span before building
+
+Wrong or mis-aimed, with what the specification actually says:
+
+- `topFix-01` clause 1 asks for "fillins for **the four** causes of globalisation". 2a lists **five**
+  (trade liberalisation · trading blocs · political change · transport and communication costs · TNCs).
+  Build the spec's five. Its ladder-reorder clause is 4.3.2 and is reassigned.
+- `topFix-05` asks for "**6/4 for 10-mark Assess**". Economics has **no Assess and no 10-mark item**
+  (DECISIONS, 11 Sep; `tariff-census.json`). The live `Assess 10` is replaced, not re-guided. The rest of
+  the item — Outline → a real command, `Define (4)` → 2 marks, add an `Examine 8` — is right and is built.
+- `structure-07` asserts "IAL question stems ask for impact on governments, producers, workers, consumers
+  and the environment". That sentence is **UK GCE 4.1.9**, not IAL: `stakeholder` is 0 in `econ_spec.txt`
+  and none of the nine `producers` hits is in 4.3.1. IAL 4.3.1 · 3 is organised as **benefits vs costs**,
+  which is how this section is built. The groups the finding names are taught where the spec puts them —
+  workers in 3b-1/3b-2, the environment in 3b-3, government revenue in 3a-2 and 3b-4, consumers in
+  3a-4/3a-5 — so the leaves are covered without the grid. **wont-fix with that note.**
+- `specGap-02` rests on the same sentence and adds `race to the bottom` and `tax competition`, 0 hits
+  both. Its kernel is real and is three spec leaves: **3a-2 increased tax revenue**, **3b-4 loss of tax
+  revenue from transfer pricing**, **3b-6 the influence of TNCs on domestic economic policy**. Built in
+  the specification's own words; the two phrases are banned by the runner.
+- `specGap-01` lists "integration of financial markets" as a characteristic. Sub-topic 1 has exactly
+  three leaves and that is not one of them. The other four clauses are real and are built.
+- `specGap-04` asks for deindustrialisation; 0 hits. **3b-1 is `displaced workers`** and that is what is
+  taught.
+- `specGap-07` asks for brain drain and migration effects on source and host countries; `brain drain` is
+  0 hits and migration's *effects* are **4.3.3 · 2d** (`econ_spec.txt:1813`) and **4.3.4 · 1a/1b**
+  (1923, 1932) — two other sections. 4.3.1 · 1c is `Increase in migration` as a **characteristic**, and
+  that is its whole scope here. **wont-fix, owner named.**
+- `structure-04`'s second suggestion is a greenfield-vs-M&A subsection; 0 hits, and `common_mistakes[1]`
+  relies on it, so the misconception goes rather than the body growing to meet it. The first suggestion —
+  a characteristics subsection that `quiz[0]` and diagram 0 already assume — is right and is built.
+- `structure-05` is right on all four counts; three of the four are fixed by **removing** the off-spec
+  vocabulary (`race to the bottom`, greenfield vs M&A) and one by **teaching** what the quiz assumes
+  (the characteristics, and TNC as the spec's own term).
+- `structure-08` asserts no defect ("takeaways match their blocks well … this is the section's structural
+  strength"). Handled at claim time, not built. **wont-fix**, same shape as packet 27's `structure-07`.
+- `accuracy-01` is a real factual error and its correction is correct: the UK-EU TCA (in force 1 Jan 2021)
+  is zero-tariff, zero-quota on originating goods, so "lost tariff-free access" is false. The sentence
+  lives in the 4.3.2 block and goes with it; **no Brexit tariff claim survives anywhere in the section**,
+  and the runner asserts that rather than trusting the removal.
+
+Real and built as written: `topFix-01` (clause 1), `topFix-04`, `topFix-05` (bar the Assess clause),
+`accuracy-03`, `structure-01` (bar the ladder), `structure-02`, `structure-03`, `structure-04` (clause 1),
+`structure-05`, `structure-06`, `specGap-01` (bar financial markets), `specGap-02` (its three spec leaves),
+`specGap-03`, `specThin-01`, `specThin-02`, and `accuracy-01` / `accuracy-02` by removal.
+
+### Reassigned to packet 39 (`trade-global-economy`, Economics 4.3.2 · 4)
+
+Split by clause (rule 5), so each half is judged on its own:
+
+| id | clause closed here | clause reassigned |
+|---|---|---|
+| `topFix-01` | recalls in every subsection; `diagramId` / `quizIndices` / `practiceIndices` on every block | the integration-ladder reorder and the creation/diversion fillin |
+| `topFix-02` | — | the whole item: the bloc block's MCQs, its practice item and its diagram |
+| `topFix-03` | the Brexit error goes with the block; the section speaks the spec's `TNC` throughout | `common market` as the third level, and trade diversion defined by preferential tariff removal |
+| `specGap-05` | — | `common market` and `economic and monetary union` as levels (4.3.2 · 4b) |
+| `specGap-06` | the section no longer tells a student to draw a diagram it does not teach | a trade creation / diversion diagram, if 39 wants one |
+
+### Build plan — five blocks in the specification's own order
+
+1. **What Globalisation Looks Like** (1a trade as a proportion of GDP · 1b TNCs and FDI · 1c migration)
+2. **What Caused It** (2a-1 trade liberalisation · 2a-2 the growth of trading blocs, as a cause only ·
+   2a-3 political change: the breakdown of the Soviet system and the opening up of China ·
+   2a-4 reduced cost of transport and communications · 2a-5 the increased significance of TNCs)
+3. **FDI by TNCs** (2b-1 reasons for FDI · 2b-2 the impact of FDI on recipient countries)
+4. **The Possible Benefits** (3a-1 growth · 3a-2 tax revenue · 3a-3 economies of scale ·
+   3a-4 lower prices and higher consumer surplus · 3a-5 more choice · 3a-6 higher living standards)
+5. **The Possible Costs** (3b-1 displaced workers · 3b-2 exploitation of workers · 3b-3 the environment ·
+   3b-4 transfer pricing · 3b-5 income inequality within countries · 3b-6 TNC influence on policy)
+
+Five blocks is packet 31's shape and it measured a full three-question pre-test; **the price is per
+section and is re-measured against the shipping `freeQuizPayload()`**, never inherited.
+
+One arithmetic spine, derived not typed: a single small open economy and one TNC investing in it carries
+1a, 2b-2, 3a-2, 3a-3, 3a-4 and 3b-4 — the trade-to-GDP ratio from its own trade and output series, the
+project's employment and tax, the unit cost fall from scale, the consumer-surplus gain from the lower
+price, and the same profit declared in two jurisdictions. Every diagram and every calculation samples
+that one function.
+
+### Acceptance checks a verifier can run without this conversation
+
+1. `node scripts/packet-34-causes-effects-globalisation.mjs --dump` then grep the bundle: **0 occurrences**
+   of `trade creation`, `trade diversion`, `customs union`, `free-trade area`, `free trade area`,
+   `common market`, `common external tariff`, `CET`, `single market`, `MNC`, `multinational`,
+   `race to the bottom`, `tax competition`, `deindustrialis`, `brain drain`, `greenfield`, `stakeholder`,
+   `Brexit`, `tariff-free`, in prose, takeaways, flashcards, quiz, practice, notes AND inside every SVG
+   `<text>`.
+2. `TNC` present and expanded once as the spec expands it (`transnational companies (TNCs)`); `FDI`
+   expanded once as `foreign direct investment (FDI)`.
+3. Coverage **22 of 22 substantive `ECON-4.3.1` leaves**, hand-mapped by `LEAF_MAP`, every leaf naming the
+   subsection that carries it.
+4. `npm run validate` → **0 BLOCK, 0 new DEBT** for this section; `npm test` green; `npm run build` exit 0.
+5. Every practice tariff is in `audit/raw/tariff-census.json` for `economics`: **no Assess, no 10-mark, no
+   Outline**, `Define` is 2 and `Explain` is 4.
+6. Every block carries `quizIndices` and `practiceIndices`; exactly three quiz items unpinned and first in
+   the array; each check-in resolves a question for a signed-out student.
+7. Recalls > 0 in every block, every type from the recall contract used where it fits, and **no recall is
+   answerable from the step above it** (packet 31's corrected token-set check, V029 thresholds).
+8. Diagrams on **440-unit frames** with `MIN_FACE` 12 drawn / 10 for tables, every reference table declared
+   `kind: 'table'`, and the line-crossing, extent and collision guards clean — `accuracy-03`'s overlap is
+   the defect the collision guard exists for.
+9. Verify B at 390×844 signed out: every step renders, three-question pre-test, zero failed substitutions,
+   no string reading "the live section".
+10. `curl "localhost:3001/api/sections/causes-effects-globalisation?draft=1"` compared to the bundle
+    **field by field** with `sameJson`, `quizIndices` compared apart.
+
+Exit criteria: staged not published, held for the packet 5/7 checkpoint like packets 14-31.
+
+### Which artefact satisfies which clause (rule 5), for the ones a verifier will ask about
+
+- **`topFix-01`'s wiring clause names `diagramRef`. The field the code reads is `diagramId`.**
+  `lib/learn-steps.js:44-55` takes a CHECK-IN step's diagram from the block's `diagramId`;
+  `diagramRef` is the legacy string pin and a subsection-level `diagramId` is never read. All five
+  blocks carry `diagramId`, `quizIndices` and `practiceIndices`, derived in the runner from each
+  item's own `block` tag so the identity mapping cannot be expressed. Satisfying the finding's
+  literal wording would pin nothing.
+- **`topFix-01`'s ladder clause and `structure-01`'s two named widgets** are the integration-ladder
+  reorder and the trade-creation fillin, both 4.3.2, both reassigned to packet 39. The clause that
+  closes here is "a recall on every subsection": 26 of 26, in all four contract types.
+- **`accuracy-02` closes by removal AND by a guard.** The instruction that had no diagram went with
+  the 4.3.2 block, and the runner now refuses any student-facing instruction to draw whose subject
+  is not covered by a drawn diagram this section carries — A/B'd against the live section's own
+  string, "Show trade creation and diversion on a diagram", which fires.
+- **`specGap-04` asks for deindustrialisation and closes as the surface mismatch it describes.**
+  The defect is that the flashcards taught a term the body did not: `deindustrialis*` is 0 hits in
+  both specifications, so the flashcard is gone and **3b-1, `displaced workers`**, is taught in the
+  body, in the specification's own words, with its own subsection, quiz item and recall.
+- **`specGap-02` closes on its three real leaves** — 3a-2 increased tax revenue, 3b-4 loss of tax
+  revenue from transfer pricing, 3b-6 the influence of TNCs on domestic economic policy — and NOT on
+  its framing, which is the UK GCE stakeholder sentence. `race to the bottom` and `tax competition`
+  are banned by the runner.
+- **`specGap-01` closes on 1a, 1b and 1c** and not on "integration of financial markets", which is
+  not one of sub-topic 1's three leaves (`financial market` is one hit in `econ_spec.txt`, line 546,
+  in Unit 2).
+
+### Result — DONE 18 September 2026, Verify A 31 of 31 on round 1
+
+**Built, verified, STAGED NOT PUBLISHED.** 2 blocks → 6 · 4 subsections → 29 · 35 steps · 0 recalls → 15 ·
+0 diagrams → 6 (14 views) · 10 quiz → 30 · 5 practice → 8 · 20 cards → 31 · 6 mistakes → 8 · 4 chains → 6
+plus 2 evaluation frames. Validator **12 BLOCK / 24 DEBT / 82% → 0 BLOCK / 1 DEBT / 100% (28 of 28
+leaves)**, 0 new BLOCK / 0 new DEBT, 31 baselined findings clear on publish. `npm test` 187/187,
+`npm run build` exit 0, `npm run validate` exit 0 with 0 new BLOCK.
+
+**Verify A: 31 of 31 CONFIRMED, zero rejections**, gate clear. It re-ran the runner itself and matched
+every count against the static bundle, and it re-derived the grep counts in both specifications rather
+than taking them from this brief — which is how it found the one real error below.
+
+**Verify B, signed out at 390×844.** Three-question pre-test, all three answerable from chapter 1.
+**Six of six chapters resolve a check-in quiz**: the anonymous payload is 9 of 30 items with
+`quizIndices` remapped to `[[0],[1],[2],[3],[4],[5]]`, inside `FREE_QUIZ_MAX` — six chapters cost this
+section nothing, measured on the shipping `freeQuizPayload()` rather than inherited. Every one of the
+14 diagram views was rendered at the measured **313px phone column and looked at**: no collisions, no
+overflow, `Tap to enlarge` on every declared table, and the four-barriers chart shows the teaching
+point on screen — **the subsidy bar is exactly as long as the no-barrier bar**. Zero failed
+substitutions. `audit/scripts/check-staged-drafts.mjs globalisation` reports `matches`.
+
+**THE CORRECTION VERIFY A FOUND, AND IT WAS IN THIS PACKET'S OWN BRIEF.** The first draft of this spec
+said the integration ladder and trade creation/diversion belong to "Economics 4.3.1 · 4, packet 34".
+They do not. `econ_spec.txt:1659-1670` sits under **4.3.2 Trade and the global economy** (heading at
+`econ_spec.txt:1626`), sub-topic 4, which is the section `trade-global-economy` — **packet 39**. Packet
+34's own brief already said this was 4.3.2 material for another section, so a session following this
+one would have gone looking in the wrong place. Corrected in all five files. **Rule 1 applies to our
+own handoff notes**, second instance after packet 30's "Business 2.4", and the second time Verify A has
+caught a false statement in a builder's brief (packet 23 had two).
+
+**Rule 1: 11 of 32 claims wrong or mis-aimed.** The full table is in the spec above. The two worth
+carrying: an audit list can be WRONG ABOUT ITS OWN ARITHMETIC in a new way — `topFix-03` and
+`accuracy-03` each give seven factors where the specification lists nine, and each *adds* one that
+belongs to a different sub-topic, so obeying either would have produced a section that both
+under-answers and mis-assigns; and **a finding can assert a tariff**, which `practice-01` does, naming
+10 marks for an Assess in a Unit 4 section where the census gives 12.
+
+**One number for the next content packet.** The first draft of this quiz bank had the key as the
+strictly longest option in **83% of items** against a 25% baseline — a student could have beaten it
+without reading a stem. `quiz.long-correct` passed it clean, because that rule fires only above 1.5×.
+Packet 21 added the bank-level guard at 35% and this is the first packet it has caught: now 20%.
+**Copy the guard, and A/B it against a rigged bank as the runner here does.**
+
+**Two things for whoever takes packet 39, `trade-global-economy`.** The ladder and trade
+creation/diversion are its content, and this packet removed the Business section's version of them
+rather than repairing it — `topFix-01`'s "correct a diversion example" clause is open there if it wants
+it. And 4.3.2 · 4a is the WTO again, which this section now teaches from the Business side; the two
+should agree.
+
+**Confirmed again in passing, neither this packet's:** the server-rendered shell ignores `?draft=1`
+entirely (the `.sr-only` block still ships the OLD notes — "Three forces drive it", Zara, transfer
+pricing — so `get_page_text` on a draft preview reads the live section and misleads a walkthrough),
+and the chapter check-in says "Before the next chapter" on the LAST chapter (V006).
+
+**Start packet 34+ from `scripts/packet-33-*.mjs`** if the section is Business, or packet 30's if it
+needs a drawn org chart: this one carries the bank-level length guard, the Appendix 6 citation check
+that finds the command word in the SENTENCE rather than after the verb, the per-collection id check
+(a diagram id legitimately appears twice — on the diagram and on its block — so an id check over
+every string reports six duplicates on a clean section), and a bar renderer whose three fixed columns
+make a label/value collision unrepresentable rather than detected.
+
+
 ## Packet 32 spec — `aggregate-demand`, Economics 2.3.2 (Opus 5, 18 September 2026)
 
 `audit/raw/econ_spec.txt:976-1018`. The oracle holds **37 rows for `ECON-2.3.2`, of which 31 are leaves**

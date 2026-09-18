@@ -915,6 +915,58 @@ const frameOf = (svg) => { const vb = (svg.match(/viewBox="([^"]+)"/) || [])[1].
   }
 }
 
+/* ── AN INSTRUCTION TO DRAW MUST BE SATISFIABLE FROM A DIAGRAM THIS SECTION CARRIES ────── */
+/*
+ * `accuracy-02` IS THIS DEFECT AND NOTHING IN THE PIPELINE COULD SEE IT. The live section's
+ * `examMatters` tells students to "Show trade creation and diversion on a diagram" and the section's
+ * three diagrams are an indicators chart, an FDI flow and a costs/benefits balance — so a student is
+ * told to do something the section never teaches, and the instruction is the only evidence that the
+ * diagram is missing. Removing the block removes the string, but a claim resting on "we took it out"
+ * is a claim about intention. This makes the class unrepresentable instead.
+ *
+ * The rule: every student-facing instruction to draw or show something on a diagram must share a
+ * distinctive word with a DRAWN diagram this section carries — its title, caption or checklist. A
+ * declared table does not count, because a table is a reference sheet and not something a student
+ * reproduces under a `Draw (4)`.
+ */
+{
+  const DRAW_INSTRUCTION = /\b(show|sketch|draw|plot)\b[^.!?]{0,70}\b(diagram|curve|chart|axes)\b|\b(diagram|curve|chart)\b[^.!?]{0,40}\b(draw|sketch|plot)\b/i;
+  const drawn = DIAGRAMS.filter((d) => d.kind !== 'table');
+  const vocab = new Set(drawn.flatMap((d) => [d.title, d.caption || '', ...(d.checklist || [])].join(' ').toLowerCase().match(/[a-z]{6,}/g) || []));
+  /*
+   * ONE SHARED WORD IS NOT COVERAGE, AND THE FIRST VERSION OF THIS CHECK PROVED IT. "Show trade
+   * creation and diversion on a diagram" shares `trade` with the openness chart's title, so a
+   * single-word test said this section covers trade creation — the very claim the check exists to
+   * refuse. The subject of an instruction is carried by its LONG words, so the measure is two of
+   * them, and the generic drawing vocabulary is excluded because every diagram has it.
+   */
+  const GENERIC = new Set(['diagram', 'diagrams', 'labelled', 'accurately', 'quantitative', 'students', 'showing', 'marked', 'between', 'because', 'something', 'straight', 'horizontal']);
+  const distinctive = (sent) => [...new Set((sent.toLowerCase().match(/[a-z]{6,}/g) || []).filter((w) => !GENERIC.has(w)))];
+  const covered = (sent) => {
+    const words = distinctive(sent);
+    const hits = words.filter((w) => vocab.has(w)).length;
+    return hits >= Math.min(2, words.length || 1);
+  };
+  const offenders = [];
+  for (const str of readable) {
+    for (const sent of String(str).split(/(?<=[.!?])\s+/)) {
+      if (!DRAW_INSTRUCTION.test(sent)) continue;
+      /* An Appendix 6 gloss describes a command word; it is not an instruction to draw a particular thing. */
+      if (/Appendix 6/.test(sent)) continue;
+      if (!covered(sent)) offenders.push(sent.trim().slice(0, 110));
+    }
+  }
+  if (offenders.length) problems.push(`${offenders.length} instruction(s) to draw name nothing this section's drawn diagrams carry (accuracy-02): "${offenders[0]}"`);
+  {
+    /* A/B against the LIVE section's own string, which is the defect in its original words. */
+    const live = 'Show trade creation and diversion on a diagram.';
+    if (!DRAW_INSTRUCTION.test(live)) problems.push('the draw-instruction check no longer recognises an instruction to draw');
+    if (covered(live)) problems.push('the draw-instruction check says this section covers trade creation and diversion, which is 4.3.2 and is not drawn here');
+    const mine = `Draw it. The surplus is the area under the demand curve and above the price.`;
+    if (DRAW_INSTRUCTION.test(mine) && !covered(mine)) problems.push('the draw-instruction check fires on an instruction the consumer-surplus diagram does satisfy');
+  }
+}
+
 /* ── nothing drawn outside its canvas: EXTENT, not anchor (packet 25) ──────── */
 for (const d of DIAGRAMS) for (const { label, svg } of svgOf(d)) {
   const frame = frameOf(svg);

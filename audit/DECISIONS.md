@@ -2279,3 +2279,84 @@ packet 26's structural rule, packet 26's overlap rule and packet 27's paraphrase
 construction** — and the runner says so, A/Bs all three anyway, and fires a problem if a reorder ever
 appears here, so the next builder reads them rather than inheriting three green checks that cannot
 fail.
+
+## 2026-09-18 — packet 34: half the section was 4.3.2, and five findings asked for more of it
+
+`causes-effects-globalisation` is IAL Economics **4.3.1** (`econ_spec.txt:1586-1625`): three sub-topics,
+22 substantive leaves, and no trading blocs beyond cause **2a-2**, "increased number and size of
+trading blocs". The live section's third block taught the types of bloc, trade creation and trade
+diversion — which are `econ_spec.txt:1657-1673`, **4.3.2 · 4 "Trade liberalisation and trading
+blocs"**, owned by `trade-global-economy` (packet 39).
+
+`structure-03` says this correctly and offers "either move the block or cross-reference it". The block
+is **moved**: this section keeps 2a-2 as one subsection about the cause, and `topFix-02`,
+`topFix-03`, `specGap-05` and `specGap-06` are reassigned to packet 39 rather than built. Two clauses
+of `topFix-01` and one of `structure-01` went with them.
+
+Two things worth carrying forward:
+
+- **The oracle is asked in BOTH directions before a ban is trusted.** The runner checks that no row
+  of `ECON-4.3.1-*` mentions the ladder AND that `ECON-4.3.2-*` does (it is 6 rows). If the first
+  check ever fires, the ban is removing required content — packet 26's dangerous class — and the
+  build fails instead of quietly shipping a hole.
+- **Packet 33's brief cites this material as "Economics 4.3.1 · 4".** There is no sub-topic 4 in
+  4.3.1; the line number it gives (1659) is inside 4.3.2. Rule 1 applies to our own handoff notes,
+  which is the second time in three packets (packet 30's brief said "Business 2.4", which is UK GCE
+  numbering). **Check the topic number in the spec file, not in the brief that sends you.**
+
+## 2026-09-18 — packet 34: a break-even probability is `gain ÷ (gain + loss)`, not `gain ÷ loss`
+
+Leaf 3b-6 is the influence of TNCs on domestic economic policy, and the way to teach it without
+asserting motives is arithmetic: a tax rise worth `$1.5m` if the plant stays, against the `$8.4m` the
+plant already pays if it goes. The first draft printed the break-even chance of departure as
+`1.5 ÷ 8.4 = 17.9%`. Relative to today the government gains `riseGain` if the plant stays and loses
+`departureCost` if it goes, so expected value is `riseGain − (riseGain + departureCost)·p`, zero at
+**`1.5 ÷ 9.9 = 15.2%`**. The recall in the same subsection would have been marked against a number
+its own body did not support. `_packet34-util.mjs` now derives it one way only and the runner asserts
+the formula, because the two numbers are close enough to look like a rounding difference.
+
+## 2026-09-18 — packet 34: `POST /api/events` reports `net::ERR_ABORTED` on every step, and the rows land
+
+Verify B's console carries an aborted `POST /api/events` for every step change — 98 of them on one
+walk — which reads like the funnel dropping its events. It is not: the server answered each one
+`204`, and the table has the rows. Measured for this walk: **93 `app_events` rows — `learn_open` 1,
+`pretest_offered` 1, `pretest_started` 1, `pretest_skipped` 1, `step_view` 58, `step_next` 31 at
+steps 0-30**, which includes the `step_next(step=0)` that is the numerator of the step-0 pass rate.
+The abort is the browser discarding a response after the page has moved on. **Do not chase it as a
+defect, and do not "fix" it by removing the event.** Recorded because two sessions could each lose an
+hour to it.
+
+## 2026-09-18 — packet 34: `check-staged-drafts.mjs` cannot run over the whole corpus
+
+The gate before a ship checkpoint says to run it for every section. It crashes on
+`audit/snapshots/packet-31-bundle__business__financial-planning.json`, which has **no `section_id`
+key**, at the `.sort()` on line 62 — every other bundle snapshot has one. Scoped to a single section
+it works (`node audit/scripts/check-staged-drafts.mjs causes-effects-globalisation` → `matches`).
+Packet 34 did not edit another packet's snapshot; whoever runs the checkpoint should add the key, or
+the script should skip a snapshot that lacks it.
+
+## 2026-09-18 — packet 34: five blocks, re-measured against the shipping `freeQuizPayload()`
+
+Packet 31's finding holds for a second five-chapter section and the price is still zero. Measured on
+this bundle, not inherited: payload **8 of `FREE_QUIZ_MAX` 10**, **5 of 5 chapters** resolve a
+check-in question for a signed-out student, and the unreserved pool is **3**, which is exactly
+`PRETEST_HEADROOM` — so the pre-test offers three questions and no chapter loses its quiz. Verified on
+screen as well: all five check-ins served four options, and the pre-test showed three questions.
+
+## 2026-09-18 — packet 34: CONTENT-GATE's wiring rule is wrong as written, and a reviewer followed it
+
+Layer 6 returned a HIGH finding that quiz items 0-2 are "referenced by zero blocks" and proposed
+pinning them to chapter 1. That would have emptied the pre-test: `PreTest.jsx` draws its three
+questions from the items NO block reserves, which is why the section template puts the pre-test pool
+first and unpinned, and why the runner refuses if `unpinned.size !== 3`.
+
+The reviewer was not careless. `audit/CONTENT-GATE.md`, Layer 1, still states the rule as "every quiz
+and practice index referenced by exactly one block; no identity `quizIndices` sequence", which was
+true before packet 16 and is false now. The VALIDATOR was corrected — it reports nothing on this
+bundle — so the discrepancy lives only in the prose that briefs every adversarial reviewer.
+
+**Anybody editing `CONTENT-GATE.md` should reword it**: every PINNED index is referenced by exactly
+one block, and exactly `PRETEST_HEADROOM` items are left unreserved at the front of the array.
+Packet 34 did not edit the file, because a gate document changing under three concurrent sessions is
+worse than a stale sentence — but the next reviewer will hit it again, and a brief that contradicts
+the design costs a round of verification every time.

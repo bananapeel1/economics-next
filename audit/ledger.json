@@ -14112,10 +14112,10 @@
    "rank": 0,
    "text": "Add recall exercises to every subsection (currently zero): a reorder for the integration ladder (FTA > customs union > common market > monetary union), fillins for trade creation vs diversion and for the four causes of globalisation, and a fillin for TNC motives; and set diagramRef/quizIndices/practiceIndices on each block so inline widgets match the block.",
    "packet": 34,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-34",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "bundle tables.content: all 26 subsections carry a recall (fillin/classify/match/reorder, e.g. sub:trade-liberalisation:recall) and every block has quizIndices+practiceIndices+diagramId set (block 'What Globalisation Looks Like' quizIndices=[3,4,5,6] practiceIndices=[0,1] diagramId=diagram:825cc985); the ladder-reorder/trade-creation-diversion clause was correctly refused as 4.3.2 material (0 hits for 'customs union'/'monetary union'/'trade creation'/'trade diversion'), and the causes fillins cover the spec's five factors, not four",
    "note": null
   },
   {
@@ -14124,7 +14124,7 @@
    "kind": "topFix",
    "rank": 1,
    "text": "Give the Trade Blocs block its own assessment: at least 3 MCQs (FTA vs CU, trade creation vs diversion scenario, effect of a lower CET), one 'Explain'/'Examine' practice question, and either a real trade creation/diversion diagram or delete the 'show it on a diagram' instruction in examMatters.",
-   "packet": 34,
+   "packet": 39,
    "status": "open",
    "closed_by": null,
    "verified_by": null,
@@ -14137,7 +14137,7 @@
    "kind": "topFix",
    "rank": 2,
    "text": "Fix the content errors: Brexit realExample ('lost tariff-free access' is false; TCA is zero-tariff), define trade diversion by preferential tariff removal rather than 'the CET forces', add the spec term 'common market', and introduce TNC = MNC in block 2 so the quiz/practice vocabulary matches the notes.",
-   "packet": 34,
+   "packet": 39,
    "status": "open",
    "closed_by": null,
    "verified_by": null,
@@ -14151,10 +14151,10 @@
    "rank": 3,
    "text": "Repair diagram 1 (FDI reasons/impacts): the Reasons column and the Positive-impacts column overlap (x 60-140, y 153-257) and render on top of each other; and either source real indexed data for diagram 0 or remove its numeric gridlines.",
    "packet": 34,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-34",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "diagrams[2] 'FDI by a TNC' (id diagram:36906265) is now three vertically stacked rects (y 90-194, 224-328, 358-445) joined by arrows, not side-by-side columns, so the reasons/impacts overlap cannot recur; diagrams[0] 'Trade as a Proportion of GDP' plots the Tamira-derived series (30%->77.7%) against real gridlines, not arbitrary numbers",
    "note": null
   },
   {
@@ -14164,10 +14164,10 @@
    "rank": 4,
    "text": "Rewrite practice guidance in IAL levels form (KAA/Evaluation split, e.g. 6/4 for 10-mark Assess, 12/8 for 20-mark Evaluate), replace 'Outline' with 'Explain', cut 'Define... (4 marks)' to 2 marks, and add an 8-mark 'Examine' item so the set mirrors a Section B ladder.",
    "packet": 34,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-34",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "tables.practice: Define=2 marks, Calculate=4, Draw=4, Explain=4, Analyse=6, Examine=8, Discuss=14, Evaluate=20 -- exact match to audit/raw/tariff-census.json economics rows; 'Outline' and 'Assess' are 0 hits in the bundle, matching DECISIONS that Economics has no Assess/10-mark item",
    "note": null
   },
   {
@@ -14176,10 +14176,10 @@
    "kind": "accuracy",
    "text": "Trade Blocs > trade-creation-diversion > realExample: States 'After Brexit, the UK lost tariff-free access to EU markets'. Wrong: the UK-EU Trade and Cooperation Agreement (in force 1 Jan 2021) keeps zero tariffs and zero quotas on goods meeting rules of origin. What the UK lost was frictionless access (customs declarations, rules-of-origin checks, SPS and regulatory non-tariff barriers). The 'trade diversion in reverse' framing is also muddled and not a term a marker will recognise.",
    "packet": 34,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-34",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "the trade-creation-diversion subsection and its Brexit realExample no longer exist in tables.content (0 hits for 'Brexit', 'tariff-free', 'trade creation', 'trade diversion'); the Trade Blocs block was removed from this section entirely, so the false claim cannot be reached by a student",
    "note": null
   },
   {
@@ -14188,10 +14188,10 @@
    "kind": "accuracy",
    "text": "Trade Blocs > trade-creation-diversion > examMatters: Tells students to 'Show trade creation and diversion on a diagram', but the section contains no such diagram (the 3 diagrams are an indicators line chart, an FDI flow chart and a costs/benefits balance). Students are told to do something the section never teaches.",
    "packet": 34,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-34",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "same removed subsection; no examMatters pointing to a trade-creation/diversion diagram remains anywhere in tables.content (grep for 'trade creation'/'trade diversion' = 0 hits)",
    "note": null
   },
   {
@@ -14200,10 +14200,10 @@
    "kind": "accuracy",
    "text": "diagrams[1] 'FDI Flows: Reasons and Impacts' (svg): Layout bug: the 'Reasons for FDI' column occupies x=10-140, y=100-257, while the 'Positive (+)' impact boxes occupy x=60-230, y=153-273. They overlap in the region x=60-140, y=153-257, so four reason labels and four positive-impact labels render on top of each other and the diagram is unreadable.",
    "packet": 34,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-34",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "diagrams[2] id diagram:36906265 uses three stacked non-overlapping rects (y-ranges 90-194/224-328/358-445, all x=20-420) with connecting arrows instead of the old overlapping Reasons/Positive-impacts columns",
    "note": null
   },
   {
@@ -14212,10 +14212,10 @@
    "kind": "structure",
    "text": "Zero recall exercises (meta.reorder=0, meta.fillin=0): Learn Mode's 'spaced' top-of-step and 'immediate' bottom-of-step retrieval widgets never appear in this section. Obvious candidates exist: reorder = the integration ladder FTA > customs union > common market > monetary union (genuine sequence); fillin = trade creation/diversion definitions; fillin = the four causes of globalisation.",
    "packet": 34,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-34",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "tables.content: every one of the 26 subsections has a non-null recall object (fillin: 15, classify: 4, match: 4, reorder: 2, plus tally to 26), where the pre-packet snapshot had meta.reorder=0/meta.fillin=0",
    "note": null
   },
   {
@@ -14224,10 +14224,10 @@
    "kind": "structure",
    "text": "No block carries diagramRef, quizIndices or practiceIndices, so InlineDiagram/InlineQuiz/InlinePractice cannot be matched to the block being studied; whatever fallback the code uses, block 3 (Trade Blocs) has no quiz MCQ, practice question or diagram anywhere in the section, so its end-of-block widgets are necessarily off-topic.",
    "packet": 34,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-34",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "all 5 blocks in tables.content carry diagramId+quizIndices+practiceIndices (e.g. 'FDI by TNCs' block: diagramId=diagram:36906265, quizIndices=[11,12,13,14], practiceIndices=[3]); the old off-topic 'Trade Blocs' block no longer exists in this section so it cannot have orphaned widgets",
    "note": null
   },
   {
@@ -14236,10 +14236,10 @@
    "kind": "structure",
    "text": "Trade Blocs block is placed under 'Causes and Effects of Globalisation' (spec 4.1) although the IAL spec puts trading blocs and the WTO under 'Trade and the global economy' (app section 4.3.2, which currently has no trade-bloc block). A student revising by spec point will not find trade blocs where the spec puts them; either move the block or cross-reference it in both places.",
    "packet": 34,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-34",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "the Trade Blocs block (ladder/creation/diversion/WTO) was moved out of this section to packet 39/trade-global-economy (topFix-02, topFix-03, specGap-05, specGap-06 reassigned, packet=39 in ledger.json); the remaining sub:trading-blocs subsection keeps only cause 2a-2 and adds a one-sentence cross-reference: 'How blocs differ...are the subject of the topic on trade and the global economy'",
    "note": null
   },
   {
@@ -14248,10 +14248,10 @@
    "kind": "structure",
    "text": "Each block has exactly two subsections, so the whole section is 3 steps; a 6-subsection, 3-step section with no recalls is very thin for a topic that carries a 20-mark essay. Blocks 1 and 2 could each gain a third subsection (block 1: characteristics/indicators of globalisation, which quiz[0] and diagram 0 assume; block 2: the type-of-FDI distinction greenfield vs M&A that common_mistakes[1] relies on).",
    "packet": 34,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-34",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "section now has 5 blocks / 26 subsections (was 3 blocks / 6); block 1 gained the characteristics subsections quiz[0]/diagram 0 needed (sub:what-globalisation-is, sub:transnational-companies, sub:foreign-direct-investment, sub:migration). The greenfield-vs-M&A clause was rightly not built (0 hits for 'greenfield'/'acquisition'; common_mistakes no longer depends on it), consistent with NEXT.md's 0-hit finding for that term in both specs",
    "note": null
   },
   {
@@ -14260,10 +14260,10 @@
    "kind": "structure",
    "text": "Quiz and extras test vocabulary the content body never introduces: 'race to the bottom' (quiz 4, 8; practice 3 guidance; extras), 'characteristics of globalisation' (quiz 0), 'greenfield vs M&A FDI' (common_mistakes[1]), 'TNC' (all quiz/practice). Learn Mode students hit these cold.",
    "packet": 34,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-34",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "'race to the bottom', 'greenfield', 'stakeholder' are 0 hits in the bundle; tables.content builds 'characteristics of globalisation' (block 1) and defines TNC (sub:transnational-companies) before quiz/practice use the term",
    "note": null
   },
   {
@@ -14272,10 +14272,10 @@
    "kind": "structure",
    "text": "Misconception quality is mixed: types-of-trade-bloc (FTA vs customs union = CET) is the classic real error and is well handled; benefits-costs ('entirely good or entirely bad') and costs-of-mncs ('MNCs are always bad') are the same generic 'be balanced' filler stated twice. The notes[] misconception for the same subsection ('students treat globalisation as entirely new') is a different, better one and is not surfaced in Learn Mode.",
    "packet": 34,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-34",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "all 26 subsection misconceptions are distinct and specific (spot-checked: sub:higher-living-standards, sub:more-choice, sub:exploitation-of-workers all have different claims, none is the generic 'entirely good or entirely bad'/'MNCs are always bad' filler); tables.mistakes[] top-level list (7 items) also has no duplicate filler entries",
    "note": null
   },
   {
@@ -14284,11 +14284,11 @@
    "kind": "structure",
    "text": "Stakeholder framing absent: IAL question stems ask for impact on 'governments', 'producers', 'workers', 'consumers', 'the environment'; the content is organised as benefits vs costs with governments and producers never addressed as stakeholders (diagram 2's 'TNC influence on policy' is the only mention of governments).",
    "packet": 34,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "REFUSED after a spec check, and the basis of the claim is UK GCE rather than IAL. The item asserts that 'IAL question stems ask for impact on governments, producers, workers, consumers and the environment' and asks for the section to be reorganised as a stakeholder grid. `stakeholder` is 0 hits in audit/raw/econ_spec.txt and 10 in bus_spec.txt; none of the nine `producers` hits (711, 713, 714, 716, 782, 788, 1399, 1695, 1698) is inside 4.3.1's span at 1586-1625. IAL 4.3.1 sub-topic 3 is organised as 3a possible benefits and 3b possible costs, which is how packet 34 builds it. The groups the finding names are taught where the specification puts them: workers in 3b-1 displaced and 3b-2 exploitation, the environment in 3b-3, government revenue in 3a-2 and 3b-4, consumers in 3a-4 and 3a-5. Coverage is 22 of 22 leaves without the grid."
   },
   {
    "id": "C-causes-effects-globalisation-structure-08",
@@ -14296,11 +14296,11 @@
    "kind": "structure",
    "text": "Takeaways match their blocks well and the ramp (causes > effects > MNC benefits > MNC costs > bloc types > creation/diversion) is sensible; the 2-per-step pairs are coherent (each pair is a benefit/cost or definition/application couple). This is the section's structural strength.",
    "packet": 34,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "An OBSERVATION with nothing to fix: 'Takeaways match their blocks well and the ramp is sensible; the 2-per-step pairs are coherent. This is the section structural strength.' Same shape as C-business-objectives-strategy-structure-07 (packet 27) and C-managing-people-structure-09. Packet 34 rebuilt the section to five blocks in specification order with 2-5 takeaways per block, so the praised property is preserved rather than repaired."
   },
   {
    "id": "C-causes-effects-globalisation-specGap-01",
@@ -14308,10 +14308,10 @@
    "kind": "specGap",
    "text": "Characteristics of globalisation (rising trade/GDP, FDI and capital flows, TNC growth, migration, integration of financial markets): not taught in content body; only implied by quiz[0] and diagram 0.",
    "packet": 34,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-34",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "block 1 'What Globalisation Looks Like' teaches trade/GDP (sub:trade-as-a-proportion-of-gdp), TNC growth (sub:transnational-companies), FDI (sub:foreign-direct-investment) and migration (sub:migration) in body prose, not just implied by quiz/diagram; 'integration of financial markets' correctly omitted (0 hits, and ECON-4.3.1-1 has only 3 leaves a/b/c per econ_spec.txt:1590-1594 and spec-items.json)",
    "note": null
   },
   {
@@ -14320,10 +14320,10 @@
    "kind": "specGap",
    "text": "Impact of globalisation on governments (tax competition/'race to the bottom', reduced policy autonomy, tax base erosion) and on producers (access to larger markets, cheaper inputs, global supply chains, competition): spec lists impacts on 'individual countries, governments, producers and consumers, workers and the environment'; governments and producers are not covered as stakeholders.",
    "packet": 34,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-34",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "sub:growth-and-tax-revenue teaches government tax revenue (3a-2, Tamira .5m+/bin/zsh.9m), sub:transfer-pricing teaches tax-revenue loss (3b-4), sub:tnc-influence-on-domestic-policy teaches policy autonomy (3b-6) -- the spec's actual government-impact leaves (econ_spec.txt:1611,1621,1624); 'race to the bottom'/'tax competition' rightly 0 hits since those phrases are 0 in econ_spec.txt",
    "note": null
   },
   {
@@ -14332,10 +14332,10 @@
    "kind": "specGap",
    "text": "Growth of TNCs as a factor contributing to globalisation (spec lists TNCs among the causes): TNCs appear only as an effect/actor in block 2; practice[1] asks it but the body never teaches it.",
    "packet": 34,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-34",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "sub:the-rise-of-tncs (block 'What Caused It') now teaches TNCs as the fifth cause (2a-5) in body prose: 'A TNC decides where each stage of production happens...raises measured trade faster than it raises output'",
    "note": null
   },
   {
@@ -14344,10 +14344,10 @@
    "kind": "specGap",
    "text": "Deindustrialisation in developed economies as an effect (flashcards teach it; content body does not).",
    "packet": 34,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-34",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "sub:displaced-workers teaches the spec's own term (3b-1, econ_spec.txt:1618 'displaced workers') in full body prose; 'deindustrialis' is 0 hits, matching the spec's actual wording rather than the audit's invented term",
    "note": null
   },
   {
@@ -14355,7 +14355,7 @@
    "section": "causes-effects-globalisation",
    "kind": "specGap",
    "text": "'Common market' as the spec term for the third level of integration, and 'economic union' as a level: absent (unsure whether IAL requires economic union explicitly).",
-   "packet": 34,
+   "packet": 39,
    "status": "open",
    "closed_by": null,
    "verified_by": null,
@@ -14367,7 +14367,7 @@
    "section": "causes-effects-globalisation",
    "kind": "specGap",
    "text": "Trade creation and trade diversion diagram: examMatters demands it, none provided. Unsure whether the IAL spec requires the diagram, but the concepts sit under spec 4.2 trading blocs, not 4.1.",
-   "packet": 34,
+   "packet": 39,
    "status": "open",
    "closed_by": null,
    "verified_by": null,
@@ -14380,11 +14380,11 @@
    "kind": "specGap",
    "text": "Brain drain / migration effects on source and host countries: flashcards mention brain drain; content body only mentions migration in a misconception (unsure whether IAL 4.1 or 4.5 expects this).",
    "packet": 34,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "OUT OF SCOPE, and the item says so itself ('unsure whether IAL 4.1 or 4.5 expects this'). `brain drain` is 0 hits in both specifications. Migration appears in 4.3.1 only as leaf 1c, 'Increase in migration', a CHARACTERISTIC — econ_spec.txt:1594. Its EFFECTS are other topics: 4.3.3 - 2d lists migration among the impacts of inequality (econ_spec.txt:1813) and 4.3.4 - 1a/1b list it under demographic and non-economic factors in development (1923, 1932). Packet 34 teaches 1c as the characteristic and says in the subsection that the effects belong to the topics that own them; the off-spec flashcard mention is removed."
   },
   {
    "id": "C-balance-payments-exchange-rates-topFix-01",
@@ -16702,10 +16702,10 @@
    "kind": "specThin",
    "text": "4.3.1 Benefit of globalisation: higher consumer surplus — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 34,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-34",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "sub:lower-prices-and-consumer-surplus body fully defines and works consumer surplus: 'Surplus is the total of every buyer's willingness to pay, minus what they all actually handed over...At ...it comes to $2.5m. At $70 it is $16.9m, and the gain of $14.4m arrives two ways'",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16714,10 +16714,10 @@
    "kind": "specThin",
    "text": "4.3.1 Cost of globalisation: the influence of TNCs on domestic economic policy — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 34,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-34",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "sub:tnc-influence-on-domestic-policy body fully explains the mechanism with a worked break-even calc: 'the rise breaks even when the chance of losing the plant is $1.5m / ($1.5m + $8.4m) = 15.2%'",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
