@@ -1,5 +1,271 @@
 # Next session brief
 
+## Handoff — what comes next (written 19 September 2026, after packet 37)
+
+**Take packet 39, `trade-global-economy`, Economics 4.3.2 — 43 open items, the largest of the four
+candidates, and it is owed two debts by packets that have already run.**
+
+Packet 33 (`globalisation`, Business 4.3.1) and packet 34 (`causes-effects-globalisation`, Economics 4.3.1)
+each found that a block of the section they were rebuilding taught **this** section's leaves: the types of
+trading bloc, trade creation and trade diversion, at `econ_spec.txt:1657-1673`, which is **4.3.2 · 4**.
+Between them they reassigned four ledger items here — `topFix-02`, `topFix-03`, `specGap-05` and
+`specGap-06` from packet 34's set — and packet 33 refused four more of its own that asked it to build the
+same material. **Read both of those packet specs in this file before starting**, because they already
+contain the scope decision and the spec lines; you are inheriting the answer, not re-deriving it.
+
+The alternatives, if the founder wants a different shape: packet 41 `external-influences` (32 open, Business
+2.3.5, and `SPEC-OWNERSHIP.md` notes it still refers to Porter's five forces inside a subsection — that
+section's packet decides whether to keep the reference); packet 38 `macroeconomic-objectives-policies` (27
+open, Economics 2.3.6, the last Unit 2 Economics section and the one this packet's notes point at twice);
+packet 40 `balance-payments-exchange-rates` (29 open).
+
+### What packet 37 leaves behind that the next packet needs
+
+1. **`packet-13-census.mjs` reads the PUBLISHED `data` column**, so it cannot see any staged rebuild. D013
+   is confirmed against the content and the census still names `aggregate-demand`. Do not treat a census
+   answer as evidence about a staged section, and do not "fix" D013 again — `SPEC-OWNERSHIP.md` now says
+   exactly what is left, and it is a re-run after both sections publish.
+2. **Assert the shape of what you read.** This runner read `loadBundle()` without `await` and reported the
+   live section as 0 BLOCK / 19 DEBT when it is 18 / 43; nothing else in the gate could see it. Any runner
+   copied from an earlier packet should be checked for that line, and should assert that `live.content` is
+   an array before validating against it. DECISIONS, 19 September.
+3. **The 400-unit diagram frame.** Packet 37 authored on 400 units rather than 440, with 15 for anything a
+   student must read and 12 for secondary text, and measured 11.7 and 9.4 CSS px on a 390px phone against
+   packet 36's 7-9. It is an improvement inside the convention, not a fix: **V037 on packet 11 is still the
+   item**. Use 400 unless there is a reason not to.
+4. **A banned word may be sayable exactly once, in the string that refutes it.** Third time this has come up
+   (packet 29's kinked demand curve, packet 36's Appendix 8, packet 37's "leakage"). The pattern that works:
+   an `exemptIf` regex on the ban, a `needsOne` flag so the refutation must EXIST, and an A/B that tests the
+   exemption against a sentence it must exempt and one it must not.
+5. **`audit/runs/packet-37/verify-draft.mjs` is the template for gate item 5** if the one you inherit is
+   thinner: 1,744 checks against the SERVED `draft`, with Appendix 6's tariffs parsed out of the
+   specification and every figure re-parsed out of the served characters rather than imported. Its own first
+   draft had three parser bugs that all read GREEN — it matched another economy's multiplier, it read the
+   axis labels as bar values, and it applied the bank's ordering rule to the remapped free payload. **Print
+   what your verifier parsed before trusting that it parsed anything.**
+
+### Still open across the programme
+
+- Packets **21, 31, 32, 33, 34, 35, 36 and 37 are all BUILT and STAGED, NOT PUBLISHED**, held for the
+  packet 5/7 ship checkpoint. That is eight sections of work a student cannot see. The checkpoint is the
+  bottleneck, not the authoring.
+- Packet 5 and packet 7 must ship before any of them publishes: `main` cannot render a recall authored to
+  the packet-7 contract, and these eight sections carry over a hundred of them (DECISIONS, 15 September).
+
+---
+
+## Packet 37 spec — `national-income`, Economics Unit 2 (WEC12), IAL **2.3.4** (Opus 5, 18 September 2026)
+
+Spec span: `audit/raw/econ_spec.txt:1056-1082`. **22 oracle rows, 19 leaves.** Live section before:
+4 blocks / 10 subsections / 24 quiz / 5 practice / 2 diagrams / 18 flashcards / 3 mistakes / 5 reorder +
+5 fillin. Validator **18 BLOCK / 43 DEBT / 84% coverage**.
+Snapshot: `audit/snapshots/2026-09-18-pre-packet-37__economics__national-income.json`
+(6 tables drifted from the audit corpus, which is packet 0's transfer-payments hotfix plus packet 2's ids).
+
+**This packet also carries `D013`**, the last unresolved row of `audit/SPEC-OWNERSHIP.md`: the multiplier is
+2.3.4's and was taught twice. **Step 2 of that manifest is already done** — packet 32 removed
+`aggregate-demand`'s three multiplier subsections and its eight multiplier quiz items when it rebuilt that
+section, keeping exactly one declared pointer (`_packet32-content.mjs:353`, a misconception that says the
+multiplier "belongs to topic 2.3.4, national income"). Steps 1 and 3 land here: this section becomes the one
+place the multiplier is taught, **including what determines its size**, which is the part only
+`aggregate-demand` used to carry. Step 4 is the census, and it is this packet's job because this packet runs
+second.
+
+### Rule-1 pre-flight: 8 of 33 claims are wrong or mis-aimed, and one is a clean refusal
+
+1. **`specGap-05` is REFUSED and it is the packet's cleanest refusal.** It doubts the app's own numbering:
+   "the app numbers this 2.3.4 and the notes cross-reference 2.3.2 (AD), 2.3.5 (output gap), 2.3.6 (fiscal
+   policy); I am unsure this matches the official WEC12 numbering (UK GCE uses 2.4)". **Every one of those
+   is right.** `:1056` is "2.3.4 National income"; `:976` is "2.3.2 Aggregate demand (AD)"; output gaps are
+   2.3.5 · 4 at `:1121-1125`; fiscal policy instruments are 2.3.6 (continued) · 1b at `:1181`. Wont-fix,
+   with the four line numbers in the ledger. The item is the mirror image of the 154-item class MEMORY
+   records: here the ledger doubted a number that was already correct.
+2. **`topFix-01`, `topFix-05`, `practice-01` and `structure-05` all cite "2.1.1", and `specGap-01` cites
+   "2.4.1". Neither number exists in this specification.** The owner of GDP measurement, real against
+   nominal, total against per capita, GNI, PPPs and the limitations of GDP for comparing living standards is
+   **2.3.1** (`:884-910`), `measures-economic-performance`, **packet 21, already built and staged**. The ten
+   MCQs are therefore REMOVED rather than moved: packet 21 rebuilt that section's bank from scratch, so there
+   is nothing to move them into.
+3. **`specGap-01` is right on substance despite the wrong number.** It hedges "unsure whether IAL keeps the
+   UK wording"; it does — `:1061`, 2.3.4 · 1b, "The distinction between income and wealth." Built.
+4. **`topFix-05`'s "convert the Assess/Evaluate guidance to levels-based descriptors" is REFUSED on the
+   Assess half.** Appendix 6 (`:2696-2745`) is the whole command-word taxonomy for this subject: Define 2 ·
+   Calculate 2 or 4 · Draw 4 · Explain 4 · Analyse 6 · Examine 8 · Discuss 14 · Evaluate/To what extent 20.
+   **There is no Assess, no Outline, no 6-mark Explain and no 10-mark anything.** The live "Assess … (10
+   marks)" and "Outline … (4 marks)" items are removed, not rewritten; "Define … (4 marks)" and "Explain two
+   reasons … (6 marks)" are wrong on tariff as well as topic. Five of five live practice items are defective.
+5. **`topFix-03`'s second clause is refused.** Its first is right — blocks 3 and 4 render no diagram, which
+   is also `structure-03`, `diagram-01` and `diagram-02` — but it asks the multiplier block to borrow the
+   injections/withdrawals diagram. Sharing one pin across two blocks is how `structure-03` happened. Each of
+   the six blocks gets its own diagram and the runner derives `diagramId` per block, so a dangling pin is
+   unrepresentable (packet 32's fix, `lib/learn-steps.js:44-55`).
+6. **`accuracy-02` is right about the diagram and wrong about the words.** The live circular flow really does
+   draw only the factor-services and factor-income arrows, so the section's own examMatters ("label both the
+   real flow and the money flow") cannot be satisfied from it. But its checklist clause asks for "factor
+   markets and product markets": **`factor market` is 0 hits in `econ_spec.txt`** and `product market`'s
+   single hit (`:1492`) is a 3.3.x labour-market bullet. The diagram gains both flows in both directions; the
+   checklist is written in the specification's own words (`factors of production`, `:681` and `:1671`).
+7. **`specThin-01` and `specThin-02` split one oracle leaf.** `ECON-2.3.4-3b` is a single row —
+   "Causes of changes in equilibrium real national output, as a result of shifts in AD and/or AS curves"
+   (`:1076-1077`). The findings split it into an AD half and an AS half; both get their own subsection, and
+   the oracle row is satisfied by both.
+8. **`topFix-02`, `accuracy-01` and `quiz-02` are already confirmed by packet 0 and are NOT re-claimed.**
+   They are the transfer-payments error. The rebuild must not regress it, and there is a rule-2 trap in
+   doing so: **`transfer payments` occurs once in the whole specification, at `:1829`, which is 4.3.5 · 1a**,
+   `role-state-macroeconomy`, packet 52. So the phrase appears here only inside the misconception that
+   corrects it, with the pointer — never as teaching.
+
+### Rule 2 — the vocabulary this section may not use, each with the line that settles it
+
+`leakage` **0 hits**; the specification's word is `withdrawal` (4 hits, `:1062`, `:1068`, `:1072`). `unplanned`, `inventories`,
+`Keynesian cross`, `45-degree`, `paradox of thrift`, `full employment`, `spare capacity`, `accelerator`,
+`factor market` and `GDP per capita` are **each 0 hits** — which means the live section's entire
+"planned versus actual / adjustment through inventories" apparatus is off-spec vocabulary, and that is the
+real content of `structure-02`. The mechanism survives as two sentences explaining *why* J = W is an
+equilibrium; the apparatus the specification names for 3a and 3b is **AD/AS** (`:1077`), and that carries the
+block. Banned by owner: the GDP-measurement family → 2.3.1 (`:884-910`); `output gap` → 2.3.5 · 4 (`:1121`);
+`crowding out` → 4.3.5 (`:1838`); `Phillips curve` → 2.3.6 · 2a (`:1143`); the determinants of C, I, G and
+(X−M) → 2.3.2 (`:980-1020`), packet 32; the shifters of SRAS and LRAS → 2.3.3 (`:1026-1052`), packet 44.
+`Assess` and `Outline` are banned outright — Appendix 6 does not have them. **AD and AS themselves are not
+banned**: they are this section's own leaf words at `:1077`.
+
+### The arithmetic spine — one open economy, every figure derived
+
+Out of each extra $1 of national income: **$0.60 spent on domestic output (MPC), $0.10 saved (MPS), $0.20
+taxed (MPT), $0.10 imported (MPM)**. They sum to 1.00, so `MPW = MPS + MPT + MPM = 0.40 = 1 − MPC`, and the
+specification's two formulae — `1/(1−MPC)` and `1/MPW`, both at `:1084-1085` — give **the same 2.5**. That
+identity is the section's spine and the answer to `structure-08`'s "MPC must exclude tax/imports"
+misconception: the two formulae agree exactly when MPC is the fraction of extra income spent on *domestic*
+output, and disagree the moment it is not.
+
+    Y = 5,000       C(domestic) 3,000 + S 500 + T 1,000 + M 500        (income disposed of)
+                    C(domestic) 3,000 + I 600 + G 900 + X 500          (expenditure on output)
+    J = I + G + X = 2,000   =   W = S + T + M = 2,000                  (equilibrium, 3a)
+
+    ΔG +400  →  rounds 400, 240, 144, 86.4, 51.84 …  →  ΔY = 400 / 0.40 = 1,000,  k = 2.5
+    new Y 6,000; withdrawals rise by 0.40 × 1,000 = 400, so J = W = 2,400 again
+
+The last line is the check that closes the model: **the multiplier stops exactly where withdrawals have
+grown by the size of the injection.** The AD identity of 2.3.2 reconciles to the same figures, because total
+consumption 3,500 (domestic 3,000 + imports 500) gives C + I + G + (X − M) = 3,500 + 600 + 900 + 0 = 5,000.
+
+### What gets built
+
+**Six blocks in the specification's own sub-topic order**, sub-topics 2 and 4 split so no chapter is twice
+another's length: National Income (1a-1b) · Injections into the Flow (2a-2b) · Withdrawals and the Net
+Position (2c-2d) · Equilibrium Real National Output (3a-3b) · The Multiplier (4a-4c) · The Multiplier, AD and
+Economic Activity (4d). **23 subsections from 10**, one subsection to a step.
+
+**Six diagrams from two**, one per block, every `diagramId` derived: the circular flow with **both** flows in
+both directions (`accuracy-02`); injections and withdrawals with the figures on it; **equilibrium on
+price-level/real-output axes** (`specGap-02`, `topFix-03`, `diagram-01`); the **multiplied** horizontal shift
+of AD against three AS shapes (`specGap-03`, 4d); a shift in AS (`specThin-02`); and the multiplier process
+as its decaying rounds (`diagram-02`).
+
+**~28 quiz, three unpinned and FIRST for the pre-test**, none of them from 2.3.1. **9 practice**, one per
+Appendix 6 command word plus both Calculate tariffs, including the **Draw 4** and the **Calculate 4 from
+given MPS/MPT/MPM** that `practice-02` says the section has never had. 23 recalls, all four contract types.
+
+### Acceptance checks a verifier can run without this conversation
+
+1. `node scripts/packet-37-national-income.mjs` exits 0 — every check, including the vocabulary bans with
+   their A/Bs, `FAILED_SUBSTITUTION` over the SVGs too, the fill-in and answer-recoverable contracts, and the
+   arithmetic assertions (MPW = 1 − MPC; both formulae give 2.5; the rounds sum to 1,000; J = W again at the
+   new equilibrium).
+2. `node audit/runs/packet-37/verify-draft.mjs` exits 0 — every check re-run against the served `draft`
+   column with the figures re-derived from the served text, and `data` asserted untouched.
+3. `npm run validate` exits 0 with 0 new BLOCK and 0 new DEBT; the section goes 18/43/84% → 0 BLOCK.
+   `npm test` and `npm run build` exit 0.
+4. 19 of 19 leaves mapped by the runner's hand `LEAF_MAP`, and the oracle re-read.
+5. `node audit/scripts/packet-13-census.mjs` reports the multiplier taught under its own heading in
+   `national-income` and **nowhere else** — D013 step 4.
+6. `node audit/scripts/ledger.mjs unverified 37` clear.
+
+### The Verify B acceptance script (written before the walk)
+
+1. Walk all **29 steps** (23 teach + 6 chapter check-ins) plus the pre-test. Three pre-test questions, none
+   repeated at a check-in.
+2. Every chapter's check-in carries its own on-topic diagram, quiz item and practice item.
+3. All fill-ins: no letter-prefix hints, semantic hints only, 2-3 distractors each.
+4. The AD/AS diagrams are legible at 390px and their labels do not collide.
+5. **What a student must NOT see**: a GDP-measurement question anywhere; "Assess", "Outline", a 6-mark
+   Explain or a 10-mark anything; the word "leakage"; a multiplier calculation before the multiplier is
+   taught; a block that renders no diagram.
+6. Zero console content errors, zero failed substitutions.
+
+### Verify A — 30 of 30 CONFIRMED on round 1, zero rejections (Sonnet, 19 September 2026)
+
+`node audit/scripts/ledger.mjs unverified 37` reports **gate clear**. The verifier was given the packet
+number, the list of files, and the instruction to run the ledger itself; it was told nothing about what the
+builder believed it had done. It also checked the two refusals against the specification lines itself before
+accepting them.
+
+**It found one thing the packet had not said, and it is right.** `packet-13-census.mjs` still names
+`aggregate-demand` as teaching the multiplier, because the census reads the **published `data`** column
+(`lib/content-gate.mjs:75`) and both sections are staged, not shipped. So D013 is closed in the content and
+is **not yet true for a student**. The runner prints the census's live answer rather than claiming the
+manifest is satisfied, and step 4 of `audit/SPEC-OWNERSHIP.md` has to be re-run after both sections publish.
+That is a publish-timing artefact shared by every staged-not-shipped packet, not a defect in this one.
+
+`specGap-05` is recorded **wont-fix** with the four line numbers, and is not counted in the 30.
+
+### Verify B — 390×844, signed out, storage cleared, `?draft=1` (19 September 2026)
+
+Walked at `http://localhost:3001/economics/unit-2/national-income?draft=1`, viewport emulated at 390×844,
+`localStorage` and `sessionStorage` cleared first.
+
+1. **Pre-test: three questions, answered with real taps, graded 3/3** — the money-flow question, income
+   against wealth, and the three-measures identity. All three are chapter-one material. Keys rendered at D,
+   B and C, so the dealing is visibly spread. The panel says answers are held back so the same questions can
+   test you later.
+2. **29 steps: 23 teaching + 6 chapter check-ins**, chapters in the specification's sub-topic order. Every
+   teaching step carried a recall; **every one of the six check-ins carried a diagram, a quiz item and a
+   practice item**, including chapters 1 and 6, which the live section leaves empty.
+3. **No horizontal scroll on any of the 29 steps**: `document.scrollWidth` is 390 against a `clientWidth` of
+   390 at every step.
+4. **A fill-in completed with real taps and graded.** Step 23, the multiplier calculation: three blanks, six
+   chips (0.5, 2, 160 against distractors 4, 40, 0.75), filled by tapping, and "✓ All correct!".
+5. **The AD/AS diagram measured, not eyeballed.** Rendered 313 CSS px wide from a 400-unit frame, scale
+   0.782. `getComputedTextLength()` on all nine labels: **zero overruns outside the frame**. All three
+   scenarios render — Equilibrium, A shift in AD, A shift in AS — and the AS one shows output rising to $520bn
+   while the price level FALLS to 95, which is the section's central claim, drawn.
+6. **Forbidden strings: one hit, and it is the intended one.** A scripted sweep of all 29 steps for
+   `leakage`, `Assess`, `Outline`, `real GDP`, `GDP per capita`, `standard of living`, `unplanned`,
+   `inventories`, `spare capacity`, `factor market`, `output gap`, `crowding out`, failed substitutions and
+   the invalid tariffs found exactly one: step 5's examMatters, which is the sentence that refutes "leakage"
+   and names the specification's own word. Checked against the served payload: **one occurrence in the whole
+   section**.
+7. **All nine practice openings give nothing away** — no figure, no allocation, no level band, no answer.
+8. **Console: no application error.** The single 401 is `gateway.umami.is/api/send`, the third-party
+   analytics script rejecting localhost. The `net::ERR_ABORTED` entries on `/api/events` are the funnel
+   instrumentation being cancelled by the walk advancing every 230 ms; each returned 204.
+
+**What Verify B could not do, stated rather than glossed.** The bulk traversal of the 29 steps advanced by
+calling `.click()` on the real Next button rather than by synthesising a mouse event; the pre-test, the
+fill-in, the diagram scenario tabs and the chapter-4 check-in were driven with real clicks and real scrolling.
+And a session cannot sign in, so **the paid surfaces are the founder's one pass**: the full 32-item bank, the
+seven common mistakes, the four extras chains with the two evaluation frames, and the practice mark schemes
+behind "See full guidance". Open `?draft=1` and look at three things: the Examine and the Evaluate mark
+schemes, the "tax rise that shrinks its own stimulus" chain, and whether the AD/AS labels at 9.4 CSS px are
+legible enough on your own phone.
+
+**One measurement worth recording.** The diagram labels render at **9.4 CSS px** (secondary) and **11.7**
+(primary) against packet 36's measured 7-9. That is the 400-unit frame rather than 440, and it is an
+improvement inside the convention rather than a fix: **ledger V037, on packet 11, is still the item that
+fixes it.**
+
+### NOT PUBLISHED — the command a human runs
+
+Rule 6, and DECISIONS 15 September: `main` cannot render a recall authored to the packet-7 contract, and this
+section will have 23 of them. After Verify A, Verify B and the packet 5/7 ship checkpoint:
+
+```
+node scripts/packet-37-national-income.mjs --stage && node scripts/publish-section.mjs national-income --confirm
+```
+
+---
+
+
 ## Packet 36 spec — `managing-finance`, Business Unit 2 (WBS12), IAL **2.3.3** (Opus 5, 18 September 2026)
 
 Spec span: `audit/raw/bus_spec.txt:921-958`. **24 substantive leaves.** Live section before: 4 blocks /

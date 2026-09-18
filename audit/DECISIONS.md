@@ -2420,3 +2420,77 @@ would have passed anything. The A/B that plants "e.g." failed on the first run a
 
 The generalisation for the next packet: a check's A/B must assert the carve-outs as well as the
 catch, because a carve-out that never fires is invisible in the direction everyone tests.
+
+## 2026-09-19 — packet 37: a finding that DOUBTED a correct number, and the class it belongs to
+
+MEMORY records a 154-item class: ledger items that cite UK GCE spec numbers which do not exist in the IAL
+document, so a requirement looked up by its number is looked up wrongly. Packet 37 carries five of those —
+`topFix-01`, `topFix-05`, `practice-01` and `structure-05` cite "2.1.1", `specGap-01` cites "2.4.1" — and it
+also carries **the mirror image, which had not been seen before**.
+
+`C-national-income-specGap-05` says: "the app numbers this 2.3.4 and the notes cross-reference 2.3.2 (AD),
+2.3.5 (output gap), 2.3.6 (fiscal policy); I am unsure this matches the official WEC12 numbering (UK GCE
+uses 2.4 for national income) — worth verifying the spec mapping across the whole unit."
+
+**Every one of those references is correct.** `econ_spec.txt:1056` is "2.3.4 National income"; `:976` is
+"2.3.2 Aggregate demand (AD)"; output gaps are 2.3.5 · 4 at `:1121-1125`; fiscal policy instruments are
+2.3.6 (continued) · 1b at `:1181`. "2.4" does not occur anywhere in the document. The item is recorded
+**wont-fix** with those four line numbers in the ledger.
+
+The decision is what to do with items of this shape, because a doubt costs a packet real time and resolves
+to nothing:
+
+1. **A finding that says "I am unsure" about a fact in `audit/raw/` is answered by reading `audit/raw/`, and
+   the answer is then made unrepresentable.** The packet 37 runner asserts six spec lines BY LINE NUMBER and
+   asserts that the strings "2.1.1" and "2.4.1" are absent from the document. A future renumber fails the
+   build instead of being inherited as a comment nobody re-checks.
+2. **Both directions of the class have the same remedy: look the requirement up by its WORDING.** A number
+   in a ledger item is a hint about where to look, never evidence about what is there.
+3. The refusal is worth as much as a fix and is recorded the same way. Thirty ids were closed by building;
+   this one was closed by reading.
+
+## 2026-09-19 — packet 37: the vocabulary a section is BUILT on can be the word the specification never uses
+
+`structure-02` reported that `planned-vs-actual` and `adjustment-to-equilibrium` were the same mechanism told
+twice, and asked for them to be merged. True, and much too small. Measured against `econ_spec.txt`:
+**`leakage` 0 hits, `unplanned` 0, `inventories` 0, `Keynesian cross` 0, `45-degree` 0, `paradox of thrift`
+0, `full employment` 0, `spare capacity` 0, `accelerator` 0, `factor market` 0.** The specification's word
+throughout sub-topic 2 is `withdrawal` (`:1062`, `:1068`, `:1072`), and the apparatus it names for 3a and 3b
+is AD/AS (`:1077`).
+
+So the live section's entire adjustment apparatus was UK GCE vocabulary, and the redundancy the finding
+reported was a symptom. What replaced it: the mechanism survives as the two sentences that explain WHY J = W
+settles, because 3a asks for "the concept of equilibrium" and a concept with no mechanism is a definition;
+and the price-level/real-output diagram the section has never had carries 3a and 3b, which is `specGap-02`,
+`structure-09`, `specThin-01` and `specThin-02` closed by one apparatus.
+
+**One carve-out, A/B'd in both directions, and the rule generalises.** `leakage` is the word many textbooks
+use, so a flat ban deletes the sentence that tells a student which word the paper contains — packet 36's
+Appendix 8 problem and packet 29's kinked-demand-curve problem for the third time. The rule: a banned word
+may appear ONLY in a string that also carries its refutation, the runner requires **exactly one** such
+string, and the exemption pattern is tested against a sentence it must exempt and one it must not.
+
+## 2026-09-19 — packet 37: the two multiplier formulae are one formula, and the specification does not say so
+
+`econ_spec.txt:1084-1085` asks for "Calculations of the multiplier using the formula 1/(1-MPC) and 1/MPW,
+where MPW = MPS + MPT + MPM". It hands over two formulae and never states the condition under which they
+agree. They agree exactly when the four propensities exhaust a dollar of NATIONAL income — when MPC is the
+fraction spent on DOMESTIC output — because then MPW = 1 − MPC.
+
+This is not a presentational choice. A student who takes MPC out of disposable income, after tax, and puts
+it into 1/(1−MPC) gets a multiplier that can be double the right one, and `structure-08` already records
+that misconception as genuine. Every future section touching the multiplier states the condition, and any
+runner that prints both formulae asserts they agree rather than trusting that they do.
+
+## 2026-09-19 — packet 37: a runner that does not await its own input reads green
+
+The packet 37 runner's first draft read `const live = loadBundle(SECTION)` without `await`. `validateSection`
+was handed a Promise, saw an object with no content arrays, and reported the live section as **0 BLOCK / 19
+DEBT** when it is **18 / 43** — so the "would clear N baselined findings" line was wrong by 55.
+
+**Nothing else in the gate could see it.** Every other number in the report is computed from the BUNDLE,
+which was correct; `npm run validate`, `npm test` and Verify A all read other things. It is MEMORY's rule —
+a check that reuses the implementation cannot see its blind spot — in its smallest possible form, and the
+remedy is the general one: **assert the shape of what you read, not just the value you computed from it.**
+The runner now refuses to continue unless `live.content` and `live.quiz` are arrays. Any packet runner
+copied from an earlier one should be checked for the same line.

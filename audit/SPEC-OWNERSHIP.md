@@ -19,7 +19,7 @@ carries the source line for every requirement, so the question is always answera
 |---|---|---|---|---|
 | The price mechanism: rationing, incentive, signalling | economics 1.3.4.3a-b | `price-determination` | `introductory-concepts` (1.3.1), one subsection | **Done.** The duplicate subsection was removed 14 Sep. |
 | Demergers: reasons and impact | economics 3.3.1.2g | `types-sizes-businesses` | `business-growth` (3.3.2), one subsection | **Done.** The duplicate subsection was removed 14 Sep. |
-| The multiplier and the multiplier process | economics 2.3.4.4a-d | `national-income` | `aggregate-demand` (2.3.2), a three-subsection block | **Not done — ledger D013, packet 37.** See below. The census reports it under its own heading in aggregate-demand until it is. |
+| The multiplier and the multiplier process | economics 2.3.4.4a-d | `national-income` | `aggregate-demand` (2.3.2), a three-subsection block | **Done in the content, 19 Sep, and NOT YET TRUE FOR A STUDENT.** Packet 32 removed the block and its assessment on 18 Sep; packet 37 built the concept, the four propensities, both formulae, the ratio direction and the AD significance in `national-income`, including the SIZE determinants only `aggregate-demand` carried. Both sections are **staged, not published**, and `packet-13-census.mjs` reads the published `data` (`lib/content-gate.mjs:75`), so it still names `aggregate-demand`. **Re-run it after both publish** and check the D011 block says "nowhere"; D013 is confirmed in the ledger against the content, and that last step is the one a student can see. |
 | Porter's five forces | business 3.3.1.4c, 4.3.2.2b | `business-objectives-strategy`, `global-markets-expansion` | `assessing-competitiveness` (3.3.5) taught and assessed it | **Done.** Removed from 3.3.5 on 14 Sep. `external-influences` (2.3.5) still refers to it inside a subsection on competitive pressure, which is a reference rather than a second treatment; its content packet decides whether to keep the reference. |
 | Monopoly and welfare loss | economics 3.3.3.6 | `market-structures-contestability` | `market-failure` (1.3.5), a block — and, below heading level, a paragraph, an exam tip, two real examples, a list item and a recall line | **Done, body text included: the block went on 14 Sep and the paragraph, exam tip, two real examples, list item and recall line went with pass 3, published the same day.** The round-2 verifier read the body text the title-only census cannot see. The Unit 1 cases now stand where monopoly stood: an intervention that overshoots (1.3.6.2a) and the uncorrected externality. "Done" in this table means body text too. |
 | Behavioural influences on consumer choice | economics 1.3.2.1b | `consumer-behaviour-demand` | `price-determination` (1.3.4), a two-subsection block | **Done.** Removed from 1.3.4 on 14 Sep. 1.3.4 has eleven lettered requirements and none is behavioural. |
@@ -59,7 +59,20 @@ the assessment is a cross-section migration — item ids are stable and progress
 questions can move, but packet 8's own decision records that cross-section moves need a written
 manifest and a solo migration. Doing half of it inside a strip packet would be worse than doing none.
 
-So it is left whole, and this is the manifest for whoever does it:
+**Status, 19 September 2026.** Steps 1, 2 and 3 are done and step 4 is blocked on a publish, not on work:
+
+- **Step 1 — done** (packet 37). `national-income` gained `Why the Multiplier Is Not a Fixed Number`, which
+  is what determines the size, plus the process, MPC/MPS/MPT/MPM, both formulae and the ratio direction.
+- **Step 2 — done** (packet 32, 18 Sep). `aggregate-demand`'s three multiplier subsections were removed in
+  its rebuild, with one declared pointer kept (`scripts/_packet32-content.mjs:353`).
+- **Step 3 — done, by rewrite rather than by migration.** The eight multiplier quiz items and four
+  flashcards did not have to be moved: packet 32 rebuilt `aggregate-demand`'s whole bank from scratch, so
+  there was nothing to migrate and no progress row to re-point. The manifest's "keep their ids so review
+  history follows them" is moot for a section that was rebuilt, and that is worth knowing for the next
+  duplication: **a rebuild dissolves a cross-section migration.**
+- **Step 4 — pending a publish.** The census reads `data`. Both sections are in `draft`.
+
+The original manifest, kept for the record:
 
 1. `national-income` (packet 37) gains what only `aggregate-demand` currently teaches: what determines
    the **size** of the multiplier. Its own three subsections already cover the concept, the formula

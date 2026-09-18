@@ -1,0 +1,1398 @@
+{
+ "content": [
+  {
+   "id": "national-income:block:2275c04b",
+   "title": "The Circular Flow of Income",
+   "sections": [
+    {
+     "id": "national-income:sub:two-sector-circular-flow",
+     "body": [
+      {
+       "text": "The **circular flow of income** is a model that shows how money flows between the main sectors of the economy. In the simplest **two-sector model**, there are only **households** and **firms**. Households supply factors of production (labour, land, capital, enterprise) to firms and receive factor incomes (wages, rent, interest, profit) in return.",
+       "type": "paragraph"
+      },
+      {
+       "text": "Firms use these factors to produce goods and services, which households then buy with their income. This creates a continuous loop: income flows from firms to households as factor payments, and back from households to firms as consumer spending. In this closed model, total income always equals total expenditure and total output.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Households supply labour to firms",
+        "Firms pay wages (factor income)",
+        "Households spend income on goods",
+        "Revenue returns to firms"
+       ],
+       "result": "Income = Expenditure = Output (the circular flow)",
+       "resultType": "good"
+      }
+     ],
+     "title": "The Two-Sector Model",
+     "recall": {
+      "id": "national-income:sub:two-sector-circular-flow:recall",
+      "type": "reorder",
+      "prompt": "Order the two-sector circular flow:",
+      "shuffled": [
+       2,
+       0,
+       3,
+       1
+      ],
+      "correctOrder": [
+       "Households supply factors of production to firms",
+       "Firms pay factor incomes to households",
+       "Households spend income on goods and services",
+       "Spending becomes revenue for firms"
+      ]
+     },
+     "keyIdea": "In the simplest economy, households supply factors to firms and receive income in return, which they spend on goods — creating a continuous circular flow.",
+     "examMatters": "When drawing the circular flow, always label both the real flow (factors of production and goods) and the money flow (income and spending) going in opposite directions. Examiners want to see that you understand there are two flows, not just one.",
+     "realExample": {
+      "text": "**Tesco** employs over 300,000 workers in the UK, paying them wages that those workers then spend on groceries, rent, and other goods. A significant portion of that spending flows straight back to Tesco and other firms, illustrating the circular flow in action across the real economy.",
+      "emoji": "🏪"
+     },
+     "misconception": "Students treat the circular flow as a description of reality rather than a simplified model. No real economy has only two sectors with no savings or government. Instead write: the two-sector model is a simplification that establishes the key insight — income equals expenditure equals output — before adding realistic complications like savings, taxes, and trade."
+    },
+    {
+     "id": "national-income:sub:three-sector-model",
+     "body": [
+      {
+       "text": "The **three-sector model** adds the government to the circular flow. The government **withdraws** income through taxation (T) and **injects** spending back through government expenditure (G). If G exceeds T, the government adds more to the flow than it takes out, boosting national income.",
+       "type": "paragraph"
+      },
+      {
+       "text": "The **open-economy (four-sector) model** further adds the foreign sector. Exports (X) are an **injection** because overseas buyers add spending to the domestic economy. Imports (M) are a **withdrawal** because domestic income leaks abroad to pay for foreign goods. The complete model now has three injections (I, G, X) and three withdrawals (S, T, M).",
+       "type": "paragraph"
+      },
+      {
+       "text": "You should remember that the circular flow only remains stable when total injections equal total withdrawals. If injections exceed withdrawals, national income rises. If withdrawals exceed injections, national income falls. This is the foundation of macroeconomic equilibrium analysis.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "The Three-Sector and Open-Economy Models",
+     "recall": {
+      "id": "national-income:sub:three-sector-model:recall",
+      "type": "fillin",
+      "hints": [
+       "go________",
+       "sa_____",
+       "ri___"
+      ],
+      "prompt": "Complete the injections and withdrawals:",
+      "answers": [
+       "government",
+       "savings",
+       "rises"
+      ],
+      "template": [
+       "The three injections are investment, ___ spending, and exports",
+       "→ The three withdrawals are ___, taxation, and imports",
+       "→ If total injections > total withdrawals, national income ___"
+      ]
+     },
+     "keyIdea": "Adding the government and the foreign sector introduces injections that add to the flow and withdrawals that leak out, making the model more realistic.",
+     "examMatters": "Examiners frequently test whether you can correctly classify injections and withdrawals. A common trap is transfer payments (pensions, benefits): they are NOT counted in G, because they are not payment for output. The money only enters the circular flow when recipients spend it. Always classify each flow before analysing its impact.",
+     "realExample": {
+      "text": "**Singapore** has an extremely open economy where trade (exports plus imports) exceeds 300% of GDP. The injection from exports is massive, but so is the withdrawal from imports. Singapore's sustained growth depends on exports consistently exceeding imports, keeping net injections positive in the trade sector.",
+      "emoji": "🇸🇬"
+     },
+     "misconception": "Students list savings as an injection and investment as a withdrawal, getting them backwards. Savings leak out of the circular flow (withdrawal) because income is not spent on domestic goods. Instead write: savings, taxes, and imports are withdrawals that leak out; investment, government spending, and exports are injections that add back in."
+    }
+   ],
+   "takeaway": [
+    "Two-sector flow: income = expenditure = output.",
+    "Injections (I, G, X) add to the flow; withdrawals (S, T, M) leak out.",
+    "National income rises when injections exceed withdrawals.",
+    "The circular flow is a model, not a literal description."
+   ],
+   "diagramRef": "Circular Flow",
+   "quizIndices": [
+    0
+   ],
+   "practiceIndices": [
+    0
+   ]
+  },
+  {
+   "id": "national-income:block:0d9339f2",
+   "title": "Injections and Withdrawals",
+   "sections": [
+    {
+     "id": "national-income:sub:injections-explained",
+     "body": [
+      {
+       "text": "An **injection** is any addition of spending into the circular flow that does not originate from household consumption. There are three injections. **Investment (I)** is spending by firms on capital goods — machinery, factories, technology. **Government spending (G)** is expenditure on public services and infrastructure. Transfer payments such as pensions and benefits are excluded, because no output is being bought.",
+       "type": "paragraph"
+      },
+      {
+       "text": "**Exports (X)** represent spending by overseas buyers on domestically produced goods and services. Each injection adds new demand to the economy, increasing the total flow of income. When injections rise, firms produce more, hire more workers, and pay more income — the circular flow expands.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Firms invest in new machinery (I rises)",
+        "Demand for capital goods increases",
+        "Workers in capital-goods industries earn more income"
+       ],
+       "result": "National income rises beyond the initial injection",
+       "resultType": "good"
+      }
+     ],
+     "title": "Injections: I, G, and X",
+     "recall": {
+      "id": "national-income:sub:injections-explained:recall",
+      "type": "reorder",
+      "prompt": "Order the injection types from private to public to foreign:",
+      "shuffled": [
+       1,
+       2,
+       0
+      ],
+      "correctOrder": [
+       "Investment (I) — firms spend on capital goods",
+       "Government spending (G) — public services and infrastructure",
+       "Exports (X) — overseas buyers purchase domestic output"
+      ]
+     },
+     "keyIdea": "Investment, government spending, and exports each add new spending to the circular flow from outside the household-firm loop, boosting national income.",
+     "examMatters": "When discussing injections, always specify which component (I, G, or X) is changing and explain why. Saying \"injections increased\" is too vague. Examiners reward precise identification: \"government spending on infrastructure (G) increased by 5 billion, injecting new demand into the construction sector.\"",
+     "realExample": {
+      "text": "**HS2**, the UK high-speed rail project, represents a government spending injection of over 100 billion pounds. This spending flows to construction firms, who pay workers, who then spend their wages in local shops — each round of spending adding to national income through the multiplier effect.",
+      "emoji": "🚄"
+     },
+     "misconception": "Students confuse investment with saving or buying shares. In economics, investment means spending on new capital goods that increase productive capacity, not financial investment. Instead write: investment (I) in the circular flow refers specifically to firms' spending on physical capital — factories, machinery, and equipment — not the purchase of financial assets."
+    },
+    {
+     "id": "national-income:sub:withdrawals-explained",
+     "body": [
+      {
+       "text": "A **withdrawal** (or leakage) is any income that is not passed on as spending within the domestic circular flow. There are three withdrawals. **Savings (S)** occur when households choose not to spend part of their income. **Taxation (T)** removes income from households and firms before they can spend it.",
+       "type": "paragraph"
+      },
+      {
+       "text": "**Imports (M)** represent spending that leaks abroad to pay for foreign goods rather than circulating domestically. Each withdrawal reduces the income available for the next round of spending. When withdrawals rise relative to injections, the circular flow contracts and national income falls.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Households save more of their income (S rises)",
+        "Less income is spent on domestic goods",
+        "Firms receive less revenue and cut production"
+       ],
+       "result": "National income contracts — the paradox of thrift",
+       "resultType": "bad"
+      }
+     ],
+     "title": "Withdrawals: S, T, and M",
+     "recall": {
+      "id": "national-income:sub:withdrawals-explained:recall",
+      "type": "fillin",
+      "hints": [
+       "Sa_____",
+       "Ta______",
+       "Im_____"
+      ],
+      "prompt": "Complete the withdrawals:",
+      "answers": [
+       "Savings",
+       "Taxation",
+       "Imports"
+      ],
+      "template": [
+       "___ removes income that households choose not to spend",
+       "→ ___ removes income through compulsory government levies",
+       "→ ___ sends domestic income abroad to pay for foreign goods"
+      ]
+     },
+     "keyIdea": "Savings, taxation, and imports each remove spending from the circular flow, reducing the income available for domestic consumption.",
+     "examMatters": "A common exam question asks you to explain what happens when one withdrawal increases. Always trace the full impact: the immediate reduction in spending, the consequent fall in firms' revenue, the reduction in factor incomes, and the further rounds of reduced spending (the negative multiplier effect).",
+     "realExample": {
+      "text": "**China's** household savings rate exceeds 30% of disposable income, far higher than most Western economies. This massive withdrawal through savings would contract the circular flow if not offset by equally large injections through investment and exports, which China has historically maintained through state-directed industrial policy.",
+      "emoji": "🇨🇳"
+     },
+     "misconception": "Students think withdrawals are bad for the economy. Savings fund investment, taxes fund public services, and imports provide goods consumers want. Instead write: withdrawals are not inherently harmful — they only reduce national income when they are not matched by equivalent injections back into the circular flow."
+    },
+    {
+     "id": "national-income:sub:injections-withdrawals-balance",
+     "body": [
+      {
+       "text": "The circular flow is in **equilibrium** when total injections (I + G + X) equal total withdrawals (S + T + M). At this point, the additions to the flow exactly offset the leakages, and national income remains stable from one period to the next.",
+       "type": "paragraph"
+      },
+      {
+       "text": "If injections exceed withdrawals, there is more spending entering the economy than leaving it. Firms experience rising demand, increase output, and hire more workers — national income rises. This expansion continues until the resulting rise in income generates enough extra saving, tax revenue, and import spending to restore equality.",
+       "type": "paragraph"
+      },
+      {
+       "text": "Conversely, if withdrawals exceed injections, demand falls short of output, inventories pile up, and firms cut production and employment. National income contracts until the fall in income reduces savings, tax payments, and imports enough to restore balance.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "The Injections-Withdrawals Balance",
+     "recall": {
+      "id": "national-income:sub:injections-withdrawals-balance:recall",
+      "type": "reorder",
+      "prompt": "Order the equilibrium adjustment process:",
+      "shuffled": [
+       3,
+       1,
+       0,
+       2
+      ],
+      "correctOrder": [
+       "Injections exceed withdrawals",
+       "Firms experience rising demand",
+       "National income increases",
+       "Higher income raises S, T, and M until injections equal withdrawals"
+      ]
+     },
+     "keyIdea": "National income is in equilibrium when total injections equal total withdrawals — any imbalance triggers an expansion or contraction of the economy.",
+     "examMatters": "This is a key analytical framework. When the question gives you data on injections and withdrawals, calculate whether total injections exceed or fall short of total withdrawals, then predict the direction of change in national income. Always show the calculation explicitly.",
+     "realExample": {
+      "text": "**Australia** enjoyed 28 consecutive years of economic growth (1991-2019) partly because its mining export boom kept injections consistently above withdrawals. Rising export revenues (X) from iron ore and coal to China continuously added to the circular flow, outpacing the leakages from imports and savings.",
+      "emoji": "🇦🇺"
+     },
+     "misconception": "Students write \"I = S, G = T, and X = M must each hold separately for equilibrium.\" That is incorrect. Only the totals must balance: I + G + X = S + T + M. Instead write: equilibrium requires total injections to equal total withdrawals, but the individual pairs do not need to match — a budget deficit (G > T) can coexist with equilibrium if other withdrawals compensate."
+    }
+   ],
+   "takeaway": [
+    "Injections (I + G + X) add spending; withdrawals (S + T + M) leak it out.",
+    "Equilibrium: total injections = total withdrawals.",
+    "Imbalance triggers expansion or contraction until balance restores.",
+    "Individual pairs (I/S, G/T, X/M) need not balance separately."
+   ],
+   "diagramRef": "Injections and Withdrawals",
+   "quizIndices": [
+    1,
+    2
+   ],
+   "practiceIndices": [
+    1
+   ]
+  },
+  {
+   "id": "national-income:block:42a12642",
+   "title": "Equilibrium National Income",
+   "sections": [
+    {
+     "id": "national-income:sub:planned-vs-actual",
+     "body": [
+      {
+       "text": "**Planned (or desired) expenditure** is the total amount that households, firms, the government, and overseas buyers intend to spend at a given level of national income. **Actual expenditure** is what is really spent, and in national accounting it always equals actual output because unsold goods count as inventory investment.",
+       "type": "paragraph"
+      },
+      {
+       "text": "Equilibrium occurs when planned expenditure equals actual output. If planned spending exceeds output, inventories run down faster than expected — firms respond by increasing production. If planned spending falls short, inventories pile up unexpectedly — firms cut back production.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Planned expenditure > actual output",
+        "Inventories fall below desired levels",
+        "Firms increase production to rebuild stocks"
+       ],
+       "result": "National income rises toward equilibrium",
+       "resultType": "good"
+      }
+     ],
+     "title": "Planned vs Actual Expenditure",
+     "recall": {
+      "id": "national-income:sub:planned-vs-actual:recall",
+      "type": "fillin",
+      "hints": [
+       "pl_____",
+       "fa__",
+       "in________"
+      ],
+      "prompt": "Complete the equilibrium adjustment:",
+      "answers": [
+       "planned",
+       "fall",
+       "increasing"
+      ],
+      "template": [
+       "Equilibrium: ___ expenditure equals actual output",
+       "→ If planned spending > output, inventories ___ unexpectedly",
+       "→ Firms respond by ___ production until equilibrium is restored"
+      ]
+     },
+     "keyIdea": "The economy is in equilibrium only when planned spending by all sectors matches actual output — any gap triggers unplanned inventory changes that push income toward equilibrium.",
+     "examMatters": "The distinction between planned and actual expenditure is a common source of exam errors. If you are asked to explain the adjustment to equilibrium, always start with the gap between planned spending and output, then explain how unplanned inventory changes signal firms to adjust production.",
+     "realExample": {
+      "text": "**Toyota** uses a just-in-time inventory system that makes unplanned inventory changes immediately visible. If dealer orders exceed production (planned expenditure > output), Toyota ramps up factory shifts within weeks. This micro-level adjustment is exactly the mechanism that drives the macro economy toward equilibrium.",
+      "emoji": "🚗"
+     },
+     "misconception": "Students say \"the economy is always in equilibrium because actual spending equals actual output.\" This is an accounting identity, not economic equilibrium. Instead write: equilibrium requires planned expenditure to equal output — actual expenditure equals output by definition through unplanned inventory changes, but that does not mean the economy is in equilibrium."
+    },
+    {
+     "id": "national-income:sub:adjustment-to-equilibrium",
+     "body": [
+      {
+       "text": "Suppose firms are currently producing more output than consumers and other sectors plan to buy. Unsold goods pile up as **unplanned inventory accumulation**. Firms interpret this as a signal to cut production. As they produce less, they need fewer workers, so incomes fall, which reduces spending further.",
+       "type": "paragraph"
+      },
+      {
+       "text": "This contraction continues through multiple rounds until national income has fallen to the level where planned expenditure matches output. At that point, inventories stabilise, firms stop cutting production, and the economy reaches a new equilibrium.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Output exceeds planned spending",
+        "Inventories accumulate unexpectedly",
+        "Firms cut production and employment"
+       ],
+       "result": "National income contracts to equilibrium",
+       "resultType": "neutral"
+      }
+     ],
+     "title": "The Adjustment Process",
+     "recall": {
+      "id": "national-income:sub:adjustment-to-equilibrium:recall",
+      "type": "reorder",
+      "prompt": "Order the adjustment to equilibrium when output exceeds planned spending:",
+      "shuffled": [
+       2,
+       0,
+       3,
+       1
+      ],
+      "correctOrder": [
+       "Output exceeds planned expenditure",
+       "Unplanned inventory accumulation occurs",
+       "Firms cut production and lay off workers",
+       "Falling income reduces spending until equilibrium is restored"
+      ]
+     },
+     "keyIdea": "When the economy is out of equilibrium, the inventory signal mechanism creates a chain reaction of output and income changes that converge toward the equilibrium level.",
+     "examMatters": "When explaining the adjustment process, use a step-by-step chain of reasoning. Examiners give marks for each link: excess output leads to unplanned inventories, which leads to production cuts, which leads to falling incomes, which leads to falling spending, until equilibrium is restored.",
+     "realExample": {
+      "text": "**US homebuilders** in 2007-2008 found themselves with massive unsold housing inventory as planned purchases collapsed. They slashed construction by over 70%, laying off millions of workers whose lost income further reduced spending — a dramatic real-world example of the inventory-driven contraction mechanism.",
+      "emoji": "🏠"
+     },
+     "misconception": "Students describe the adjustment as instantaneous. In reality, it takes time for firms to observe inventory changes, decide to adjust production, and for the income effects to ripple through the economy. Instead write: the adjustment to equilibrium operates through multiple rounds of output and income changes, and the process can take several quarters or even years in a severe downturn."
+    }
+   ],
+   "takeaway": [
+    "Equilibrium: planned expenditure = actual output.",
+    "Unplanned inventory changes signal firms to adjust production.",
+    "Excess output leads to contraction; excess demand leads to expansion.",
+    "Adjustment happens over multiple rounds, not instantly."
+   ],
+   "diagramRef": "National Income Equilibrium",
+   "quizIndices": [
+    3
+   ],
+   "practiceIndices": [
+    2
+   ]
+  },
+  {
+   "id": "national-income:block:cc93790d",
+   "title": "The Multiplier and National Income",
+   "sections": [
+    {
+     "id": "national-income:sub:multiplier-concept",
+     "body": [
+      {
+       "text": "The **multiplier effect** describes how an initial change in spending leads to a larger final change in national income. When the government spends an extra one billion pounds on infrastructure, construction workers earn new income. They spend a proportion of it, which becomes income for shopkeepers, who spend a proportion of that, and so on.",
+       "type": "paragraph"
+      },
+      {
+       "text": "Each successive round of spending is smaller than the last because some income leaks out as savings, taxes, and imports at every stage. The total increase in national income is the sum of all these rounds — always larger than the initial injection but not infinite, because the leakages ensure the rounds diminish toward zero.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Government injects 1bn into the economy",
+        "Workers spend 0.8bn (save 0.2bn)",
+        "Recipients of that 0.8bn spend 0.64bn"
+       ],
+       "result": "Final rise in national income = 5bn (multiplier = 5)",
+       "resultType": "good"
+      }
+     ],
+     "title": "The Multiplier Concept",
+     "recall": {
+      "id": "national-income:sub:multiplier-concept:recall",
+      "type": "fillin",
+      "hints": [
+       "in________",
+       "sp___",
+       "le______"
+      ],
+      "prompt": "Complete the multiplier process:",
+      "answers": [
+       "injection",
+       "spend",
+       "leakages"
+      ],
+      "template": [
+       "An initial ___ creates new income for recipients",
+       "→ Recipients ___ a proportion and save the rest",
+       "→ Each round is smaller due to ___ at every stage"
+      ]
+     },
+     "keyIdea": "An initial injection creates a chain of re-spending that raises national income by more than the original amount — the multiplier tells you by how much more.",
+     "examMatters": "Multiplier questions appear in both calculation and essay form. For calculations, always show the formula and your working. For essays, explain the process round by round and evaluate by discussing factors that might reduce the multiplier in practice, such as a high marginal propensity to save or import.",
+     "realExample": {
+      "text": "**The 2009 American Recovery and Reinvestment Act** injected $787 billion into the US economy through tax cuts and government spending. The Congressional Budget Office estimated a multiplier of 1.5 to 2.5, meaning the total impact on GDP was between $1.2 trillion and $2.0 trillion — significantly more than the initial injection.",
+      "emoji": "🏗️"
+     },
+     "misconception": "Students think the multiplier means money is created out of thin air. It does not. Instead write: the multiplier works because each person's spending becomes another person's income — the same money circulates through multiple hands, and each round adds to total income until leakages absorb the entire initial injection."
+    },
+    {
+     "id": "national-income:sub:multiplier-formula",
+     "body": [
+      {
+       "text": "The simplest multiplier formula is **k = 1 / (1 - MPC)**, where MPC is the **marginal propensity to consume** — the fraction of each extra pound of income that is spent on domestic goods. If MPC = 0.8, then k = 1 / (1 - 0.8) = 1 / 0.2 = 5. A one-pound injection raises national income by five pounds.",
+       "type": "paragraph"
+      },
+      {
+       "text": "An equivalent formula uses the **marginal propensity to withdraw (MPW)**: **k = 1 / MPW**, where MPW = MPS + MPT + MPM (the marginal propensities to save, tax, and import). The larger the total leakage rate, the smaller the multiplier. An economy with high savings, high taxes, and high imports has a small multiplier.",
+       "type": "paragraph"
+      },
+      {
+       "text": "You should understand that the multiplier works in both directions. A withdrawal of spending (for example, a cut in government expenditure) has a negative multiplier effect, reducing national income by a multiple of the initial cut. This symmetry is why austerity during a recession can be self-defeating.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "The Multiplier Formula",
+     "recall": {
+      "id": "national-income:sub:multiplier-formula:recall",
+      "type": "reorder",
+      "prompt": "Order the multiplier calculation steps:",
+      "shuffled": [
+       2,
+       0,
+       3,
+       1
+      ],
+      "correctOrder": [
+       "Identify MPC or the individual MPW components (MPS, MPT, MPM)",
+       "Calculate MPW = MPS + MPT + MPM (or 1 - MPC)",
+       "Compute multiplier: k = 1 / MPW",
+       "Final change in income = k x initial injection"
+      ]
+     },
+     "keyIdea": "The multiplier equals 1 divided by the marginal propensity to withdraw — the higher the leakage rate, the smaller the multiplier effect.",
+     "examMatters": "In calculation questions, examiners often give you the MPC or the individual marginal propensities and ask you to calculate the multiplier and the final change in income. Show every step: state the formula, calculate MPW or (1 - MPC), compute k, then multiply k by the initial injection.",
+     "realExample": {
+      "text": "**The UK** has an estimated MPW of around 0.65 (MPS 0.10 + MPT 0.30 + MPM 0.25), giving a multiplier of roughly 1.5. This relatively small multiplier explains why UK fiscal stimulus has a more modest impact on GDP than in more closed economies with lower tax rates and import propensities.",
+      "emoji": "🇬🇧"
+     },
+     "misconception": "Students use 1/(1-MPC) and forget that MPC must exclude the portions lost to tax and imports. If someone earns a pound and pays 30p in tax, saves 10p, and spends 25p on imports, MPC for the domestic multiplier is only 0.35. Instead write: when calculating the multiplier, account for all three leakages — savings, taxation, and imports — not just savings alone."
+    },
+    {
+     "id": "national-income:sub:multiplier-evaluation",
+     "body": [
+      {
+       "text": "The simple multiplier formula assumes that the economy has spare capacity, that MPC is constant, and that there are no offsetting effects. In practice, several factors reduce the real-world multiplier. **Time lags** mean the full effect takes months or years to materialise. **Crowding out** occurs if government borrowing raises interest rates, reducing private investment.",
+       "type": "paragraph"
+      },
+      {
+       "text": "The **position of the economy** matters enormously. When the economy has significant spare capacity (on the flat part of the Keynesian AS curve), the multiplier is larger because extra demand translates into real output. Near full capacity, extra demand mainly pushes up prices rather than output, reducing the real multiplier.",
+       "type": "paragraph"
+      },
+      {
+       "text": "You should also consider **consumer and business confidence**. If people expect a recession, they may save their extra income rather than spend it, reducing MPC and shrinking the multiplier. This is why fiscal stimulus sometimes fails to generate the expected boost — the multiplier depends on psychology as well as arithmetic.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "Evaluating the Multiplier",
+     "recall": {
+      "id": "national-income:sub:multiplier-evaluation:recall",
+      "type": "fillin",
+      "hints": [
+       "Ti__",
+       "Cr______",
+       "pr____"
+      ],
+      "prompt": "Complete the multiplier evaluation:",
+      "answers": [
+       "Time",
+       "Crowding",
+       "prices"
+      ],
+      "template": [
+       "___ lags mean the multiplier effect takes time to materialise",
+       "→ ___ out occurs when government borrowing raises interest rates",
+       "→ Near full capacity, extra demand raises ___ rather than output"
+      ]
+     },
+     "keyIdea": "In reality, the multiplier is smaller and slower than the simple formula suggests because of time lags, crowding out, and the economy's position relative to capacity.",
+     "examMatters": "Top-band answers always evaluate the multiplier by discussing the factors that might make it larger or smaller in the specific context of the question. Simply calculating k = 5 and stating income rises by 5 billion is not enough — you must discuss whether the real-world multiplier is likely to be that large and why.",
+     "realExample": {
+      "text": "**Greece's** austerity programme after 2010 demonstrated the multiplier in reverse. The IMF initially estimated a fiscal multiplier of 0.5, but the actual contraction was far worse because the negative multiplier was closer to 1.5. Spending cuts reduced income, which reduced tax revenues, which required further cuts — a vicious deflationary spiral.",
+      "emoji": "🇬🇷"
+     },
+     "misconception": "Students present the multiplier as a fixed number for a country. The multiplier varies depending on the state of the economy, consumer confidence, and the type of spending. Instead write: the multiplier is not a fixed value — it is larger during recessions with spare capacity and smaller near full employment, and it varies with the type of injection and the prevailing level of confidence."
+    }
+   ],
+   "takeaway": [
+    "Multiplier: k = 1/(1-MPC) or k = 1/MPW.",
+    "Higher leakages (S, T, M) mean a smaller multiplier.",
+    "The multiplier works in reverse for spending cuts.",
+    "Real-world multipliers are smaller due to lags and crowding out."
+   ],
+   "diagramRef": "The Multiplier",
+   "quizIndices": [
+    4,
+    5
+   ],
+   "practiceIndices": [
+    3
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "id": "national-income:quiz:d04e71b8",
+   "options": [
+    "Government spending on education",
+    "Household spending on imported goods",
+    "Business investment in new machinery",
+    "Foreign spending on domestic exports"
+   ],
+   "question": "In the circular flow of income model, which of the following is classified as a withdrawal?",
+   "explanation": "Imports (M) are a withdrawal because money leaves the domestic circular flow to pay for foreign goods. Government spending (A) is an injection. Investment (C) is an injection. Exports (D) are an injection. Remember: withdrawals are S, T, and M.",
+   "correctIndex": 1
+  },
+  {
+   "id": "national-income:quiz:e0c06c71",
+   "options": [
+    "1.5",
+    "2.0",
+    "2.5",
+    "5.0"
+   ],
+   "question": "If the marginal propensity to save is 0.1, the marginal rate of tax is 0.2, and the marginal propensity to import is 0.2, what is the value of the multiplier?",
+   "explanation": "Multiplier = 1 / MPW = 1 / (MPS + MPT + MPM) = 1 / (0.1 + 0.2 + 0.2) = 1 / 0.5 = 2.0. Option A (1.5) would require MPW of 0.67. Option C (2.5) would require MPW of 0.4. Option D (5.0) would require MPW of 0.2.",
+   "correctIndex": 1
+  },
+  {
+   "id": "national-income:quiz:cb62290f",
+   "options": [
+    "The economy is at full employment",
+    "Aggregate demand equals aggregate supply",
+    "Planned injections equal planned withdrawals",
+    "Actual injections exceed actual withdrawals"
+   ],
+   "question": "Equilibrium national income in the circular flow model occurs when:",
+   "explanation": "Equilibrium in the circular flow occurs where planned (intended) injections equal planned withdrawals (I+G+X = S+T+M). Option A is wrong because equilibrium can occur below full employment. Option B describes AD/AS equilibrium (related but different framework). Option D is impossible as an accounting identity: actual J always equals actual W.",
+   "correctIndex": 2
+  },
+  {
+   "id": "national-income:quiz:1738f78e",
+   "options": [
+    "£2 billion",
+    "£5 billion",
+    "£7.5 billion",
+    "£12.5 billion"
+   ],
+   "question": "A government increases its spending by £5 billion. If the multiplier is 2.5, the final increase in national income will be:",
+   "explanation": "Change in national income = multiplier x change in injection = 2.5 x £5bn = £12.5 billion. Option A divides rather than multiplies. Option B ignores the multiplier effect. Option C adds rather than multiplies. The multiplier amplifies the initial change in spending.",
+   "correctIndex": 3
+  },
+  {
+   "id": "national-income:quiz:24f7f38a",
+   "options": [
+    "Injections: S, T, M; Withdrawals: I, G, X",
+    "Injections: I, G, X; Withdrawals: S, T, M",
+    "Injections: I, G, M; Withdrawals: S, T, X",
+    "Injections: C, I, G; Withdrawals: S, T, M"
+   ],
+   "question": "In a four-sector open economy model, which combination correctly identifies injections and withdrawals?",
+   "explanation": "Injections are Investment (I), Government Spending (G), and Exports (X). Withdrawals are Savings (S), Taxation (T), and Imports (M). Option A reverses them. Option C incorrectly places imports as an injection and exports as a withdrawal. Option D incorrectly includes consumption (C) as an injection - it is part of the main circular flow, not an injection.",
+   "correctIndex": 1
+  },
+  {
+   "id": "national-income:quiz:485a0773",
+   "options": [
+    "A reduction in the marginal rate of income tax",
+    "An increase in the marginal propensity to consume",
+    "A rise in the marginal propensity to import",
+    "A decrease in the marginal propensity to save"
+   ],
+   "question": "Which of the following would cause the multiplier to decrease in size?",
+   "explanation": "A rise in MPM increases the MPW (marginal propensity to withdraw), which reduces the multiplier (k = 1/MPW). Option A would decrease MPT, lowering MPW and increasing the multiplier. Option B would increase MPC and decrease MPW, increasing the multiplier. Option D would decrease MPS, lowering MPW and increasing the multiplier.",
+   "correctIndex": 2
+  },
+  {
+   "id": "national-income:quiz:8063f2fd",
+   "options": [
+    "Firms will experience unplanned falls in inventories and increase output",
+    "Firms will experience unplanned rises in inventories and reduce output",
+    "The price level will rise due to excess demand",
+    "Exports will increase to restore equilibrium"
+   ],
+   "question": "If planned withdrawals exceed planned injections in the circular flow model, what is the most likely short-run effect?",
+   "explanation": "When planned W > planned J, there is insufficient demand. Firms find they are producing more than is being bought, leading to unplanned inventory accumulation. They respond by cutting production, reducing employment and national income. Option A describes what happens when J > W. Option C would occur if J > W near full capacity. Option D is not an automatic adjustment mechanism.",
+   "correctIndex": 1
+  },
+  {
+   "id": "national-income:quiz:97496a9d",
+   "options": [
+    "The government ensures they remain equal through fiscal policy",
+    "Spending by one economic agent creates income for another, which is generated by production",
+    "Central banks adjust the money supply to maintain equality",
+    "International trade balances automatically adjust to maintain equilibrium"
+   ],
+   "question": "The circular flow of income model shows that national income, national output, and national expenditure are equal. This is because:",
+   "explanation": "The three measures are equal by definition: firms produce output (national output), sell it generating expenditure (national expenditure), and the revenue becomes income for factors of production (national income). One person's spending is another's income, generated through production. Options A, C, and D describe policy mechanisms that do not explain the fundamental accounting identity.",
+   "correctIndex": 1
+  },
+  {
+   "id": "national-income:quiz:88243cab",
+   "options": [
+    "A leftward shift of the aggregate demand curve",
+    "A rightward shift of the aggregate demand curve",
+    "A leftward shift of the short-run aggregate supply curve",
+    "A rightward shift of the long-run aggregate supply curve"
+   ],
+   "question": "An increase in injections into the circular flow has a similar effect on the macroeconomy as:",
+   "explanation": "An increase in injections (I, G, or X) adds spending to the economy, which is equivalent to a rightward shift in AD. Both result in higher national income. Option A would represent a fall in injections or rise in withdrawals. Options C and D relate to supply-side changes, not changes in the circular flow of income.",
+   "correctIndex": 1
+  },
+  {
+   "id": "national-income:quiz:c041e933",
+   "options": [
+    "Saving",
+    "Taxation",
+    "Investment",
+    "Imports"
+   ],
+   "question": "In the circular flow model, which of the following represents an injection into the economy?",
+   "explanation": "Injections add spending to the circular flow: Investment (I), Government spending (G), and Exports (X). Saving, taxation, and imports are withdrawals (leakages) that remove spending from the flow.",
+   "correctIndex": 2
+  },
+  {
+   "id": "national-income:quiz:a8d61885",
+   "options": [
+    "Aggregate demand equals aggregate supply, or equivalently injections equal withdrawals",
+    "Government spending equals taxation",
+    "Exports equal imports",
+    "Consumption equals investment"
+   ],
+   "question": "National income is in equilibrium when:",
+   "explanation": "Equilibrium national income occurs where AD = AS, which in the circular flow corresponds to total injections (I + G + X) equalling total withdrawals (S + T + M). There is no tendency for income to change.",
+   "correctIndex": 0
+  },
+  {
+   "id": "national-income:quiz:be12daa9",
+   "options": [
+    "Increase",
+    "Decrease",
+    "Remain unchanged",
+    "Become negative"
+   ],
+   "question": "If withdrawals exceed injections in the circular flow, the level of national income will:",
+   "explanation": "When withdrawals (S + T + M) exceed injections (I + G + X), more is leaking from the circular flow than is being added. Total spending falls, causing national income to contract until a new equilibrium is reached.",
+   "correctIndex": 1
+  },
+  {
+   "id": "national-income:quiz:224802ed",
+   "options": [
+    "Wages + Profits + Rent + Interest",
+    "C + I + G + (X - M)",
+    "Total output of all industries",
+    "Total tax revenue minus government spending"
+   ],
+   "question": "GDP measured using the expenditure method is calculated as:",
+   "explanation": "The expenditure method sums all spending on final goods and services: Consumer spending (C) + Investment (I) + Government spending (G) + Net exports (X - M). All three methods (expenditure, income, output) should give the same GDP.",
+   "correctIndex": 1
+  },
+  {
+   "id": "national-income:quiz:dca0b858",
+   "options": [
+    "Included in the government spending component of GDP",
+    "Excluded from GDP because they do not represent payment for current production",
+    "Included in the investment component of GDP",
+    "Counted as exports in the GDP calculation"
+   ],
+   "question": "Transfer payments (such as state pensions and unemployment benefits) are:",
+   "explanation": "Transfer payments are redistribution of income, not payments for goods or services produced. They are excluded from GDP to avoid double counting, since the income will be counted when recipients spend it.",
+   "correctIndex": 1
+  },
+  {
+   "id": "national-income:quiz:513be42e",
+   "options": [
+    "GDP includes depreciation of capital; GNI does not",
+    "GNI includes net income from abroad (earnings of citizens overseas minus foreign earnings repatriated)",
+    "GDP measures output per capita; GNI measures total output",
+    "There is no meaningful difference between the two"
+   ],
+   "question": "The difference between GDP and GNI (Gross National Income) is that:",
+   "explanation": "GNI = GDP + net income from abroad. GNI includes income earned by domestic residents overseas and subtracts income earned by foreign residents domestically, measuring the total income of a country's citizens.",
+   "correctIndex": 1
+  },
+  {
+   "id": "national-income:quiz:f7c7a1af",
+   "options": [
+    "Transfer payments to households",
+    "Wages, salaries, profits, rent, and interest earned in production",
+    "The value of second-hand goods sold",
+    "Financial transactions on the stock market"
+   ],
+   "question": "In the income method of calculating GDP, which of the following is included?",
+   "explanation": "The income method sums all factor incomes earned in production: wages and salaries (labour), profits (enterprise), rent (land), and interest (capital). Transfer payments and financial transactions are excluded.",
+   "correctIndex": 1
+  },
+  {
+   "id": "national-income:quiz:6158b690",
+   "options": [
+    "GDP plus net income from abroad",
+    "GNI minus depreciation (capital consumption)",
+    "GDP minus government spending",
+    "GNI plus depreciation"
+   ],
+   "question": "Net national income is calculated as:",
+   "explanation": "Net national income = GNI minus depreciation (also called capital consumption). Depreciation represents the wear and tear of capital goods, so deducting it gives a better measure of sustainable income.",
+   "correctIndex": 1
+  },
+  {
+   "id": "national-income:quiz:37b45be6",
+   "options": [
+    "An increase in saving by households",
+    "An increase in imports of foreign goods",
+    "An increase in government infrastructure spending",
+    "An increase in income tax rates"
+   ],
+   "question": "Which of the following would increase the level of national income through the multiplier process?",
+   "explanation": "Government infrastructure spending is an injection into the circular flow. Through the multiplier, the initial spending generates successive rounds of income and consumption, increasing national income by a multiple of the original injection.",
+   "correctIndex": 2
+  },
+  {
+   "id": "national-income:quiz:8105eda6",
+   "options": [
+    "They reflect current market exchange rates",
+    "They adjust for differences in price levels between countries, giving a more accurate comparison of living standards",
+    "They are easier to calculate than market exchange rates",
+    "They always favour developing countries"
+   ],
+   "question": "Purchasing Power Parity (PPP) exchange rates are used when comparing GDP between countries because:",
+   "explanation": "PPP rates adjust for the fact that the same goods cost different amounts in different countries. A dollar buys more in India than in Switzerland, so PPP adjustments give a more realistic comparison of purchasing power and living standards.",
+   "correctIndex": 1
+  },
+  {
+   "id": "national-income:quiz:fafb6848",
+   "options": [
+    "Consumption equals investment",
+    "Saving equals investment",
+    "Income equals expenditure plus saving",
+    "Saving equals government spending"
+   ],
+   "question": "In a simple two-sector (households and firms) circular flow model, the equilibrium condition is:",
+   "explanation": "In a two-sector model, saving is the only withdrawal and investment is the only injection. Equilibrium requires S = I, meaning the amount households save equals the amount firms invest.",
+   "correctIndex": 1
+  },
+  {
+   "id": "national-income:quiz:f66a10a5",
+   "options": [
+    "National income per year",
+    "Consumer spending per quarter",
+    "The national debt at a point in time",
+    "Government tax revenue per year"
+   ],
+   "question": "Which of the following is an example of a stock variable rather than a flow variable?",
+   "explanation": "Stock variables are measured at a point in time (e.g., national debt, wealth, capital stock). Flow variables are measured over a period of time (e.g., income, spending, investment per year).",
+   "correctIndex": 2
+  },
+  {
+   "id": "national-income:quiz:af4508d4",
+   "options": [
+    "Includes the value of imports and exports",
+    "Has been adjusted for inflation using a base year price level",
+    "Is always larger than nominal GDP",
+    "Measures output in current market prices"
+   ],
+   "question": "Real GDP differs from nominal GDP because real GDP:",
+   "explanation": "Real GDP adjusts nominal GDP for changes in the price level, using a base year's prices. This removes the effect of inflation and shows whether the actual volume of output has increased or decreased.",
+   "correctIndex": 1
+  },
+  {
+   "id": "national-income:quiz:d185109d",
+   "options": [
+    "Sums all consumer spending in the economy",
+    "Sums the value added at each stage of production across all industries",
+    "Sums all income earned by factors of production",
+    "Sums all government spending and transfer payments"
+   ],
+   "question": "The output (production) method of measuring GDP:",
+   "explanation": "The output method calculates GDP by summing the value added (output minus intermediate inputs) at each stage of production across all sectors. Using value added avoids double counting of intermediate goods.",
+   "correctIndex": 1
+  },
+  {
+   "id": "national-income:quiz:0bb9d096",
+   "options": [
+    "Increased",
+    "Decreased",
+    "Remained the same",
+    "Cannot be determined from this information"
+   ],
+   "question": "If a country's GDP grows by 3% but its population grows by 4%, then GDP per capita has:",
+   "explanation": "GDP per capita = GDP / population. If population grows faster than GDP, GDP per capita falls, meaning average output and likely average living standards have declined despite total output growth.",
+   "correctIndex": 1
+  }
+ ],
+ "practice": [
+  {
+   "id": "national-income:practice:aeddb4f0",
+   "marks": 4,
+   "command": "Define",
+   "guidance": "The circular flow of income is a model showing how money flows between households and firms in an economy (1 mark). Households provide factors of production and receive income in return; firms produce goods and services and receive spending from households (1 mark). Injections (investment, government spending, exports) add money into the flow (1 mark), while withdrawals (saving, taxation, imports) remove money from the flow (1 mark).",
+   "question": "Define the term 'circular flow of income'. (4 marks)"
+  },
+  {
+   "id": "national-income:practice:70b1fb6d",
+   "marks": 6,
+   "command": "Explain",
+   "guidance": "Reason 1: The shadow economy (1 mark) — economic activities that are not declared for tax purposes, such as cash-in-hand work, are not included in national income statistics (1 mark). In countries with large informal sectors, GDP significantly understates true economic activity (1 mark).\n\nReason 2: Externalities are not accounted for (1 mark) — GDP measures the value of output but does not subtract the costs of pollution, environmental degradation or resource depletion (1 mark). A country with high GDP but severe air pollution may actually have a lower quality of life than the figure suggests (1 mark).",
+   "question": "Explain two reasons why national income figures may not accurately reflect the standard of living in a country. (6 marks)"
+  },
+  {
+   "id": "national-income:practice:4a0d8be8",
+   "marks": 10,
+   "command": "Assess",
+   "guidance": "Define the multiplier as the ratio of the final change in national income to the initial change in an injection (2 marks). Significance in recession: an initial increase in government spending creates jobs and income, which is then spent, creating further rounds of income and output (2 marks); a large multiplier means fiscal stimulus has a magnified effect, helping to close the output gap more effectively (2 marks). Limitations: the multiplier may be small if there are high withdrawals — a high marginal propensity to save, import or tax reduces the respending effect (2 marks); time lags mean the multiplier effect is not instant and fiscal policy may be poorly timed (1 mark). Judgement: the multiplier is significant but its size is uncertain and depends on the structure of the economy, making it a useful but imprecise guide for policy (1 mark).",
+   "question": "Assess the significance of the multiplier effect for an economy experiencing a recession. (10 marks)"
+  },
+  {
+   "id": "national-income:practice:91126be4",
+   "marks": 20,
+   "command": "Evaluate",
+   "guidance": "Introduction: Define GDP and its role as the standard measure of economic output (2 marks).\n\nStrengths of GDP: Widely measured and comparable across countries and time periods (2 marks); strongly correlated with many aspects of living standards including health outcomes, life expectancy and access to services (2 marks); available frequently and promptly, making it useful for policy-making (1 mark).\n\nWeaknesses of GDP: Ignores income distribution — high GDP may coexist with extreme inequality (2 marks); excludes non-market activity, leisure time and environmental quality (2 marks); does not capture subjective well-being or happiness (1 mark).\n\nAlternative indicators: Human Development Index (HDI) — combines GDP per capita, education and life expectancy, giving a broader view (2 marks); Genuine Progress Indicator (GPI) — adjusts GDP for inequality, environmental damage and social factors (2 marks); however, alternatives also have limitations — HDI is still heavily influenced by GDP, and subjective measures are hard to compare (1 mark).\n\nEvaluation: GDP remains the most practical and widely used measure, but should be supplemented with alternative indicators for a complete picture of well-being (1 mark).",
+   "question": "Evaluate the usefulness of GDP as a measure of economic well-being compared with alternative indicators. (20 marks)"
+  },
+  {
+   "id": "national-income:practice:86b6c464",
+   "marks": 4,
+   "command": "Outline",
+   "guidance": "Injections are flows of money into the circular flow that increase national income (1 mark) — they include investment (I), government spending (G) and export revenue (X) (1 mark).\n\nWithdrawals are flows of money out of the circular flow that reduce national income (1 mark) — they include savings (S), taxation (T) and import spending (M) (1 mark).",
+   "question": "Outline the difference between injections and withdrawals in the circular flow model. (4 marks)"
+  }
+ ],
+ "diagrams": [
+  {
+   "id": "national-income:diagram:91a55351",
+   "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <rect x=\"40\" y=\"60\" width=\"120\" height=\"50\" rx=\"8\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n  <text x=\"100\" y=\"90\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\">Households</text>\n  <rect x=\"340\" y=\"60\" width=\"120\" height=\"50\" rx=\"8\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n  <text x=\"400\" y=\"90\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\">Firms</text>\n  <path d=\"M160 72 Q250 30 340 72\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2\" marker-end=\"url(#ah1)\"/>\n  <text x=\"250\" y=\"38\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">Factor services (land, labour, capital)</text>\n  <path d=\"M340 98 Q250 140 160 98\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\" marker-end=\"url(#ah2)\"/>\n  <text x=\"250\" y=\"132\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">Factor incomes (rent, wages, interest, profit)</text>\n  <rect x=\"190\" y=\"170\" width=\"120\" height=\"40\" rx=\"8\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"1.5\"/>\n  <text x=\"250\" y=\"186\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">Withdrawals</text>\n  <text x=\"250\" y=\"200\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">S + T + M</text>\n  <path d=\"M250 140 L250 170\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"1.5\" marker-end=\"url(#ah3)\"/>\n  <rect x=\"190\" y=\"240\" width=\"120\" height=\"40\" rx=\"8\" fill=\"none\" stroke=\"#059669\" stroke-width=\"1.5\"/>\n  <text x=\"250\" y=\"256\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\">Injections</text>\n  <text x=\"250\" y=\"270\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">I + G + X</text>\n  <path d=\"M250 280 L250 310\" fill=\"none\" stroke=\"#059669\" stroke-width=\"1.5\" marker-end=\"url(#ah4)\"/>\n  <text x=\"250\" y=\"325\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">National Income (Y)</text>\n  <text x=\"60\" y=\"195\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">S: Savings</text>\n  <text x=\"60\" y=\"210\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">T: Taxation</text>\n  <text x=\"60\" y=\"225\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">M: Imports</text>\n  <text x=\"440\" y=\"195\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">I: Investment</text>\n  <text x=\"440\" y=\"210\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">G: Gov. spending</text>\n  <text x=\"440\" y=\"225\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">X: Exports</text>\n  <defs>\n    <marker id=\"ah1\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#059669\"/></marker>\n    <marker id=\"ah2\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#f59e0b\"/></marker>\n    <marker id=\"ah3\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#ef4444\"/></marker>\n    <marker id=\"ah4\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#059669\"/></marker>\n  </defs>\n</svg>",
+   "title": "Circular Flow of Income",
+   "checklist": [
+    "Clearly label households and firms with correct flows between them",
+    "Show all three withdrawals (S, T, M) leaving the circular flow",
+    "Show all three injections (I, G, X) entering the circular flow",
+    "Indicate the direction of flows with arrows",
+    "State the equilibrium condition: I + G + X = S + T + M",
+    "Identify factor markets and product markets correctly"
+   ],
+   "scenarios": [
+    {
+     "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <rect x=\"60\" y=\"100\" width=\"140\" height=\"60\" rx=\"10\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"130\" y=\"135\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">Households</text>\n  <rect x=\"300\" y=\"100\" width=\"140\" height=\"60\" rx=\"10\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"370\" y=\"135\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">Firms</text>\n  <path d=\"M200 108 Q250 55 300 108\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2.5\" marker-end=\"url(#a2s1)\"/>\n  <text x=\"250\" y=\"65\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"11\" font-weight=\"500\">Factors of production</text>\n  <text x=\"250\" y=\"80\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">(land, labour, capital, enterprise)</text>\n  <path d=\"M300 152 Q250 205 200 152\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2.5\" marker-end=\"url(#a2s2)\"/>\n  <text x=\"250\" y=\"195\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"500\">Factor incomes</text>\n  <text x=\"250\" y=\"210\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">(rent, wages, interest, profit)</text>\n  <path d=\"M200 120 L300 120\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"1.5\" stroke-dasharray=\"5,3\" marker-end=\"url(#a2s3)\"/>\n  <text x=\"250\" y=\"115\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"9\">Consumer spending on goods &amp; services</text>\n  <text x=\"250\" y=\"260\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\">No withdrawals or injections</text>\n  <text x=\"250\" y=\"278\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\">Income = Output = Expenditure</text>\n  <text x=\"250\" y=\"310\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\" font-style=\"italic\">Closed economy, no government, no saving</text>\n  <defs>\n    <marker id=\"a2s1\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#059669\"/></marker>\n    <marker id=\"a2s2\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#f59e0b\"/></marker>\n    <marker id=\"a2s3\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#3b82f6\"/></marker>\n  </defs>\n</svg>",
+     "label": "Two-Sector Model"
+    },
+    {
+     "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <rect x=\"30\" y=\"40\" width=\"110\" height=\"45\" rx=\"8\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n  <text x=\"85\" y=\"67\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\">Households</text>\n  <rect x=\"360\" y=\"40\" width=\"110\" height=\"45\" rx=\"8\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n  <text x=\"415\" y=\"67\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\">Firms</text>\n  <path d=\"M140 50 Q250 15 360 50\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2\" marker-end=\"url(#ao1)\"/>\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Factors of production</text>\n  <path d=\"M360 75 Q250 110 140 75\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\" marker-end=\"url(#ao2)\"/>\n  <text x=\"250\" y=\"105\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Factor incomes / Consumer spending</text>\n  <rect x=\"175\" y=\"130\" width=\"80\" height=\"35\" rx=\"6\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"1.5\"/>\n  <text x=\"215\" y=\"143\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\" font-weight=\"600\">Savings (S)</text>\n  <text x=\"215\" y=\"156\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Financial sector</text>\n  <rect x=\"50\" y=\"180\" width=\"80\" height=\"35\" rx=\"6\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"1.5\"/>\n  <text x=\"90\" y=\"193\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\" font-weight=\"600\">Taxes (T)</text>\n  <text x=\"90\" y=\"206\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Government</text>\n  <rect x=\"175\" y=\"230\" width=\"80\" height=\"35\" rx=\"6\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"1.5\"/>\n  <text x=\"215\" y=\"243\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\" font-weight=\"600\">Imports (M)</text>\n  <text x=\"215\" y=\"256\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Foreign sector</text>\n  <rect x=\"310\" y=\"130\" width=\"80\" height=\"35\" rx=\"6\" fill=\"none\" stroke=\"#059669\" stroke-width=\"1.5\"/>\n  <text x=\"350\" y=\"143\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\" font-weight=\"600\">Investment (I)</text>\n  <text x=\"350\" y=\"156\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Financial sector</text>\n  <rect x=\"370\" y=\"180\" width=\"100\" height=\"35\" rx=\"6\" fill=\"none\" stroke=\"#059669\" stroke-width=\"1.5\"/>\n  <text x=\"420\" y=\"193\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\" font-weight=\"600\">Gov. Spending (G)</text>\n  <text x=\"420\" y=\"206\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Government</text>\n  <rect x=\"310\" y=\"230\" width=\"80\" height=\"35\" rx=\"6\" fill=\"none\" stroke=\"#059669\" stroke-width=\"1.5\"/>\n  <text x=\"350\" y=\"243\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\" font-weight=\"600\">Exports (X)</text>\n  <text x=\"350\" y=\"256\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Foreign sector</text>\n  <line x1=\"215\" y1=\"110\" x2=\"215\" y2=\"130\" stroke=\"#ef4444\" stroke-width=\"1.5\" marker-end=\"url(#ao3)\"/>\n  <line x1=\"90\" y1=\"110\" x2=\"90\" y2=\"180\" stroke=\"#ef4444\" stroke-width=\"1.5\" marker-end=\"url(#ao3)\"/>\n  <line x1=\"215\" y1=\"215\" x2=\"215\" y2=\"230\" stroke=\"#ef4444\" stroke-width=\"1.5\" marker-end=\"url(#ao3)\"/>\n  <line x1=\"350\" y1=\"130\" x2=\"350\" y2=\"110\" stroke=\"#059669\" stroke-width=\"1.5\" marker-end=\"url(#ao4)\"/>\n  <line x1=\"420\" y1=\"180\" x2=\"420\" y2=\"110\" stroke=\"#059669\" stroke-width=\"1.5\" marker-end=\"url(#ao4)\"/>\n  <line x1=\"350\" y1=\"230\" x2=\"350\" y2=\"215\" stroke=\"#059669\" stroke-width=\"1.5\" marker-end=\"url(#ao4)\" transform=\"translate(0,-70)\"/>\n  <text x=\"250\" y=\"295\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\">Equilibrium: I + G + X = S + T + M</text>\n  <text x=\"250\" y=\"315\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">If injections &gt; withdrawals: national income rises</text>\n  <text x=\"250\" y=\"330\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">If withdrawals &gt; injections: national income falls</text>\n  <defs>\n    <marker id=\"ao1\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#059669\"/></marker>\n    <marker id=\"ao2\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#f59e0b\"/></marker>\n    <marker id=\"ao3\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#ef4444\"/></marker>\n    <marker id=\"ao4\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#059669\"/></marker>\n  </defs>\n</svg>",
+     "label": "Full Open Economy"
+    }
+   ],
+   "description": "The circular flow showing households, firms, and the flows of income, spending, factors, and goods/services, with injections and withdrawals in the full open economy model."
+  },
+  {
+   "id": "national-income:diagram:bbc11709",
+   "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <line x1=\"60\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"60\" y1=\"300\" x2=\"60\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"265\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">National Income (Y)</text>\n  <text x=\"25\" y=\"165\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90,25,165)\">Injections / Withdrawals (£)</text>\n  <line x1=\"80\" y1=\"270\" x2=\"440\" y2=\"120\" stroke=\"#ef4444\" stroke-width=\"2.5\"/>\n  <text x=\"445\" y=\"115\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"600\">W (S+T+M)</text>\n  <line x1=\"80\" y1=\"180\" x2=\"440\" y2=\"180\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"445\" y=\"175\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">J (I+G+X)</text>\n  <line x1=\"80\" y1=\"150\" x2=\"440\" y2=\"150\" stroke=\"#3b82f6\" stroke-width=\"2.5\" stroke-dasharray=\"8,4\"/>\n  <text x=\"445\" y=\"145\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">J₁ (I₁+G+X)</text>\n  <circle cx=\"260\" cy=\"180\" r=\"4\" fill=\"#f59e0b\"/>\n  <line x1=\"260\" y1=\"180\" x2=\"260\" y2=\"300\" stroke=\"#f59e0b\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/>\n  <text x=\"260\" y=\"315\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"11\">Y₀</text>\n  <circle cx=\"320\" cy=\"150\" r=\"4\" fill=\"#f59e0b\"/>\n  <line x1=\"320\" y1=\"150\" x2=\"320\" y2=\"300\" stroke=\"#3b82f6\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/>\n  <text x=\"320\" y=\"315\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"11\">Y₁</text>\n  <path d=\"M265 290 L315 290\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\" marker-end=\"url(#ajw1)\"/>\n  <text x=\"290\" y=\"285\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"9\">ΔY</text>\n  <line x1=\"60\" y1=\"180\" x2=\"80\" y2=\"180\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"3,2\"/>\n  <text x=\"55\" y=\"183\" text-anchor=\"end\" fill=\"#059669\" font-size=\"9\">J₀</text>\n  <line x1=\"60\" y1=\"150\" x2=\"80\" y2=\"150\" stroke=\"#3b82f6\" stroke-width=\"1\" stroke-dasharray=\"3,2\"/>\n  <text x=\"55\" y=\"153\" text-anchor=\"end\" fill=\"#3b82f6\" font-size=\"9\">J₁</text>\n  <text x=\"140\" y=\"55\" fill=\"#e8ecf5\" font-size=\"10\">Rise in injections (J₀ → J₁)</text>\n  <text x=\"140\" y=\"70\" fill=\"#e8ecf5\" font-size=\"10\">causes national income to rise</text>\n  <text x=\"140\" y=\"85\" fill=\"#e8ecf5\" font-size=\"10\">from Y₀ to Y₁ (multiplied effect)</text>\n  <defs>\n    <marker id=\"ajw1\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#f59e0b\"/></marker>\n  </defs>\n</svg>",
+   "title": "Injections and Withdrawals Equilibrium",
+   "checklist": [
+    "Label axes correctly: National Income on x-axis, Injections/Withdrawals on y-axis",
+    "Draw withdrawals line as upward sloping (as Y rises, S, T, and M rise)",
+    "Draw injections line as horizontal (autonomous/independent of Y)",
+    "Mark equilibrium clearly where the two lines intersect",
+    "Show the shift in J or W and the resulting change in equilibrium Y",
+    "Indicate the multiplier effect: change in Y > initial change in J or W"
+   ],
+   "scenarios": [
+    {
+     "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <line x1=\"60\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"60\" y1=\"300\" x2=\"60\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"265\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">National Income (Y)</text>\n  <text x=\"25\" y=\"165\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90,25,165)\">J / W (£)</text>\n  <line x1=\"80\" y1=\"270\" x2=\"440\" y2=\"120\" stroke=\"#ef4444\" stroke-width=\"2.5\"/>\n  <text x=\"445\" y=\"115\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"600\">W</text>\n  <line x1=\"80\" y1=\"200\" x2=\"440\" y2=\"200\" stroke=\"#059669\" stroke-width=\"2\"/>\n  <text x=\"445\" y=\"195\" fill=\"#059669\" font-size=\"10\">J₀</text>\n  <line x1=\"80\" y1=\"160\" x2=\"440\" y2=\"160\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"445\" y=\"155\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">J₁</text>\n  <circle cx=\"235\" cy=\"200\" r=\"4\" fill=\"#059669\"/>\n  <line x1=\"235\" y1=\"200\" x2=\"235\" y2=\"300\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/>\n  <text x=\"235\" y=\"315\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"11\">Y₀</text>\n  <circle cx=\"300\" cy=\"160\" r=\"4\" fill=\"#3b82f6\"/>\n  <line x1=\"300\" y1=\"160\" x2=\"300\" y2=\"300\" stroke=\"#3b82f6\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/>\n  <text x=\"300\" y=\"315\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"11\">Y₁</text>\n  <path d=\"M70 200 L70 160\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\" marker-end=\"url(#aji1)\"/>\n  <text x=\"62\" y=\"182\" text-anchor=\"end\" fill=\"#f59e0b\" font-size=\"9\">ΔJ</text>\n  <path d=\"M240 290 L295 290\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\" marker-end=\"url(#aji2)\"/>\n  <text x=\"267\" y=\"285\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"9\">ΔY &gt; ΔJ</text>\n  <text x=\"250\" y=\"55\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\">Increase in injections → multiplied rise in Y</text>\n  <text x=\"250\" y=\"75\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">The change in Y is greater than the initial</text>\n  <text x=\"250\" y=\"90\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">change in J due to the multiplier effect</text>\n  <defs>\n    <marker id=\"aji1\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#f59e0b\"/></marker>\n    <marker id=\"aji2\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#f59e0b\"/></marker>\n  </defs>\n</svg>",
+     "label": "Increase in Injections"
+    },
+    {
+     "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <line x1=\"60\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"60\" y1=\"300\" x2=\"60\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"265\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">National Income (Y)</text>\n  <text x=\"25\" y=\"165\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90,25,165)\">J / W (£)</text>\n  <line x1=\"80\" y1=\"260\" x2=\"440\" y2=\"110\" stroke=\"#059669\" stroke-width=\"2\"/>\n  <text x=\"445\" y=\"105\" fill=\"#059669\" font-size=\"10\">W₀</text>\n  <line x1=\"80\" y1=\"230\" x2=\"440\" y2=\"80\" stroke=\"#ef4444\" stroke-width=\"2.5\"/>\n  <text x=\"445\" y=\"75\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"600\">W₁</text>\n  <line x1=\"80\" y1=\"180\" x2=\"440\" y2=\"180\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"445\" y=\"175\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">J</text>\n  <circle cx=\"280\" cy=\"180\" r=\"4\" fill=\"#059669\"/>\n  <line x1=\"280\" y1=\"180\" x2=\"280\" y2=\"300\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/>\n  <text x=\"280\" y=\"315\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"11\">Y₀</text>\n  <circle cx=\"220\" cy=\"180\" r=\"4\" fill=\"#ef4444\"/>\n  <line x1=\"220\" y1=\"180\" x2=\"220\" y2=\"300\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/>\n  <text x=\"220\" y=\"315\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"11\">Y₁</text>\n  <path d=\"M275 290 L225 290\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\" marker-end=\"url(#ajw2)\"/>\n  <text x=\"250\" y=\"285\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"9\">ΔY</text>\n  <text x=\"250\" y=\"55\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\">Increase in withdrawals → multiplied fall in Y</text>\n  <text x=\"250\" y=\"75\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">Higher withdrawals (W₀ → W₁) reduce</text>\n  <text x=\"250\" y=\"90\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">equilibrium national income via the multiplier</text>\n  <defs>\n    <marker id=\"ajw2\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#f59e0b\"/></marker>\n  </defs>\n</svg>",
+     "label": "Increase in Withdrawals"
+    }
+   ],
+   "description": "Diagram showing the injections and withdrawals schedules intersecting to determine equilibrium national income, and the effect of a change in injections."
+  }
+ ],
+ "notes": [
+  {
+   "flow": {
+    "steps": [
+     "Households supply factors to firms",
+     "Firms pay wages/rent/interest/profit",
+     "Households spend income on output"
+    ],
+    "result": "National income circulates continuously",
+    "resultType": "good"
+   },
+   "meta": "5 concepts",
+   "title": "The Circular Flow of Income",
+   "blocks": [
+    {
+     "items": [
+      {
+       "text": "<strong>Circular flow of income</strong> — a model showing how money flows between households and firms through factor markets and goods markets, illustrating how national income is generated.",
+       "type": "def"
+      },
+      {
+       "tag": "exam",
+       "text": "<strong>National income</strong> — the total value of all goods and services produced in an economy over a given period, also equal to total expenditure and total factor incomes.",
+       "type": "def"
+      },
+      {
+       "text": "<strong>Two-sector model</strong> — a simplified circular flow with only households and firms; all income earned is spent, so there are no leakages and the flow is constant.",
+       "type": "def"
+      },
+      {
+       "text": "<strong>Open-economy model</strong> — extends the circular flow to include the government sector (taxation and spending) and the foreign sector (exports and imports), creating multiple injection and withdrawal points.",
+       "type": "def"
+      }
+     ],
+     "title": "DEFINITIONS"
+    },
+    {
+     "items": [
+      {
+       "text": "Households supply <strong>factors of production</strong> (land, labour, capital, enterprise) to firms and receive factor incomes (rent, wages, interest, profit) in return.",
+       "type": "mech"
+      },
+      {
+       "text": "Households spend their income on goods and services produced by firms, completing the loop; the value of output equals the value of income equals the value of expenditure.",
+       "type": "mech"
+      },
+      {
+       "tag": "exam",
+       "text": "The three methods of measuring GDP — <strong>output, income, and expenditure</strong> — all give the same figure because they measure different points of the same circular flow.",
+       "type": "imp"
+      },
+      {
+       "text": "The circular flow underpins AD = C + I + G + (X − M); each component maps to a flow or injection in the model, linking directly to aggregate demand analysis in 2.3.2.",
+       "type": "link"
+      }
+     ],
+     "title": "HOW THE MODEL WORKS"
+    }
+   ],
+   "keyIdea": "National income is not a fixed stock but a continuous flow: households supply factors to firms, firms pay incomes back, and spending completes the loop — the faster the flow, the greater the national income.",
+   "takeaway": [
+    "The circular flow shows money flowing between households and firms through factor and goods markets.",
+    "Output, income, and expenditure are three equal measures of the same flow.",
+    "Adding government and trade sectors introduces injections and withdrawals that change the flow's size."
+   ],
+   "examMatters": "Examiners expect you to draw the circular flow diagram with clearly labelled injections and withdrawals. Always show the inner flow (factor services and goods) and the outer flow (money), and indicate where S, T, M leak out and where I, G, X enter.",
+   "misconception": "Students say the circular flow only works when injections equal withdrawals. Wrong because the circular flow always operates; the economy simply contracts or expands if injections and withdrawals are unequal. Instead write: the circular flow shows how income moves — equilibrium is a special case where the flow is stable."
+  },
+  {
+   "meta": "4 concepts",
+   "title": "Injections and Withdrawals",
+   "blocks": [
+    {
+     "items": [
+      {
+       "tag": "exam",
+       "text": "<strong>Injections (J)</strong> — additions to the circular flow that do not originate from household spending: <strong>investment (I)</strong> by firms, <strong>government spending (G)</strong>, and <strong>export revenue (X)</strong>.",
+       "type": "def"
+      },
+      {
+       "text": "<strong>Withdrawals (W)</strong> — income earned by households that is not spent on domestic goods: <strong>saving (S)</strong>, <strong>taxation (T)</strong>, and <strong>import spending (M)</strong>.",
+       "type": "def"
+      }
+     ],
+     "title": "DEFINITIONS"
+    },
+    {
+     "items": [
+      {
+       "text": "When <strong>J > W</strong>, more money enters the circular flow than leaves it, so total spending rises and national income expands.",
+       "type": "mech"
+      },
+      {
+       "text": "When <strong>J < W</strong>, more money leaks out than enters, so total spending falls and national income contracts.",
+       "type": "mech"
+      },
+      {
+       "tag": "exam",
+       "text": "Individual injections do not need to equal their corresponding withdrawals (e.g., I does not need to equal S); only <strong>total injections must equal total withdrawals</strong> for equilibrium.",
+       "type": "imp"
+      },
+      {
+       "text": "Changes in injections and withdrawals are the mechanism behind shifts in AD; a rise in G or X shifts AD right, while a rise in T or M shifts AD left, connecting to 2.3.2 AD analysis.",
+       "type": "link"
+      }
+     ],
+     "title": "HOW INJECTIONS AND WITHDRAWALS INTERACT"
+    },
+    {
+     "items": [
+      {
+       "text": "A rise in injections only boosts national income if it does not cause an <strong>equal rise in withdrawals</strong>; for example, higher G funded by higher T may be neutral.",
+       "type": "imp"
+      },
+      {
+       "text": "Withdrawals are partly <strong>endogenous</strong>: as income rises, saving, tax revenue, and import spending all tend to increase automatically, creating a self-correcting mechanism.",
+       "type": "mech"
+      },
+      {
+       "text": "The marginal propensity to withdraw (MPW = MPS + MPT + MPM) determines how quickly leakages rise as income grows, directly feeding into the multiplier formula in the next chapter.",
+       "type": "link"
+      }
+     ],
+     "title": "EVALUATION"
+    }
+   ],
+   "formula": {
+    "text": "I + G + X = S + T + M  (total injections = total withdrawals)",
+    "label": "EQUILIBRIUM CONDITION"
+   },
+   "keyIdea": "The size of national income depends on the balance between money entering the flow (injections) and money leaving it (withdrawals) — when injections exceed withdrawals the economy grows, and vice versa.",
+   "takeaway": [
+    "Injections are I + G + X; withdrawals are S + T + M.",
+    "National income rises when total injections exceed total withdrawals.",
+    "Only total J = total W is needed for equilibrium, not each pair individually.",
+    "Withdrawals rise automatically with income, creating self-correction."
+   ]
+  },
+  {
+   "flow": {
+    "steps": [
+     "Output exceeds planned spending",
+     "Unplanned inventory build-up",
+     "Firms cut production and employment"
+    ],
+    "result": "National income falls back toward equilibrium",
+    "resultType": "bad"
+   },
+   "meta": "4 concepts",
+   "title": "Equilibrium National Income",
+   "blocks": [
+    {
+     "items": [
+      {
+       "tag": "exam",
+       "text": "<strong>Equilibrium national income</strong> — the level of real GDP at which planned aggregate expenditure (C + I + G + X − M) equals actual national output, so there is no tendency for income to change.",
+       "type": "def"
+      },
+      {
+       "text": "<strong>Planned expenditure</strong> — the total amount households, firms, the government, and foreigners intend to spend at each income level.",
+       "type": "def"
+      },
+      {
+       "text": "<strong>Unplanned inventory changes</strong> — the difference between actual output and planned expenditure; positive means unsold stocks are accumulating, negative means stocks are running down.",
+       "type": "def"
+      }
+     ],
+     "title": "DEFINITIONS"
+    },
+    {
+     "items": [
+      {
+       "text": "If actual output <strong>exceeds</strong> planned expenditure, firms accumulate unplanned inventories and respond by cutting production, reducing employment, and lowering income.",
+       "type": "mech"
+      },
+      {
+       "text": "If actual output is <strong>below</strong> planned expenditure, firms run down inventories and respond by expanding production, hiring more workers, and raising income.",
+       "type": "mech"
+      },
+      {
+       "tag": "exam",
+       "text": "The Keynesian 45-degree line diagram shows equilibrium where the aggregate expenditure line crosses the 45-degree line (where AE = Y); any other point triggers inventory adjustment.",
+       "type": "imp"
+      },
+      {
+       "text": "This equilibrium concept links to the AD/AS model: a Keynesian cross shows income-expenditure equilibrium at a given price level, while AD/AS allows the price level to vary as well.",
+       "type": "link"
+      }
+     ],
+     "title": "ADJUSTMENT PROCESS"
+    }
+   ],
+   "keyIdea": "The economy settles where planned total expenditure equals actual output — if firms produce more than people want to buy, unsold stock piles up and they cut back; if they produce less, stocks run down and they expand.",
+   "takeaway": [
+    "Equilibrium is where planned aggregate expenditure equals actual output.",
+    "Unplanned inventory changes are the signal that triggers output adjustment.",
+    "The economy can be in equilibrium below full employment — a deflationary gap."
+   ],
+   "examMatters": "Examiners expect you to explain the adjustment mechanism clearly. State whether there is unplanned inventory accumulation or decumulation, then explain how firms respond by changing output. Simply saying 'the economy moves to equilibrium' without explaining the inventory mechanism loses marks.",
+   "misconception": "Students confuse equilibrium national income with full-employment income. Wrong because the economy can be in equilibrium with significant unemployment if planned expenditure is too low. Instead write: equilibrium means no tendency for output to change, but the equilibrium level may be below the full-employment level, creating a deflationary gap."
+  },
+  {
+   "flow": {
+    "steps": [
+     "Initial injection of spending",
+     "Recipients spend a fraction (MPC) and withdraw the rest",
+     "Successive rounds of diminishing spending"
+    ],
+    "result": "Final rise in national income = k x initial injection",
+    "resultType": "good"
+   },
+   "meta": "5 concepts",
+   "title": "The Multiplier and National Income",
+   "blocks": [
+    {
+     "items": [
+      {
+       "tag": "exam",
+       "text": "<strong>The multiplier (k)</strong> — the ratio of the final change in national income to the initial change in an injection; it shows how much GDP changes for each unit of new spending.",
+       "type": "def"
+      },
+      {
+       "text": "<strong>Marginal propensity to consume (MPC)</strong> — the fraction of each additional pound of income that households spend on domestic consumption.",
+       "type": "def"
+      },
+      {
+       "text": "<strong>Marginal propensity to withdraw (MPW)</strong> — the fraction of each additional pound of income that leaks out as saving, taxation, or import spending; MPW = MPS + MPT + MPM.",
+       "type": "def"
+      }
+     ],
+     "title": "DEFINITIONS"
+    },
+    {
+     "items": [
+      {
+       "text": "An initial injection (e.g., government spending of $100m) becomes income for workers and suppliers, who spend a fraction (MPC) and withdraw the rest; each spending round is smaller but adds to total income.",
+       "type": "mech"
+      },
+      {
+       "text": "The process continues through <strong>successive rounds</strong> of spending until the leakages from each round reduce the additional spending to near zero.",
+       "type": "mech"
+      },
+      {
+       "tag": "exam",
+       "text": "The multiplier works in <strong>both directions</strong>: a withdrawal of spending (e.g., a cut in G) causes a multiplied fall in national income, making fiscal austerity potentially contractionary.",
+       "type": "imp"
+      },
+      {
+       "text": "The size of the multiplier determines how effective fiscal policy is: a large multiplier means government spending changes have a powerful effect on AD, linking to 2.3.6 fiscal policy analysis.",
+       "type": "link"
+      }
+     ],
+     "title": "HOW THE MULTIPLIER WORKS"
+    },
+    {
+     "items": [
+      {
+       "text": "The multiplier is <strong>smaller in open economies</strong> with high import propensities because a large fraction of each spending round leaks abroad rather than recirculating domestically.",
+       "type": "imp"
+      },
+      {
+       "text": "Time lags mean the full multiplier effect takes <strong>months or years</strong> to work through; the initial boost is felt quickly but later rounds diminish gradually.",
+       "type": "mech"
+      },
+      {
+       "tag": "exam",
+       "text": "If the economy is at full capacity, the multiplier effect may cause <strong>inflation</strong> rather than real output growth, because extra spending bids up prices rather than increasing production.",
+       "type": "imp"
+      },
+      {
+       "text": "The multiplier connects to the output gap concept in 2.3.5: a multiplied rise in AD closes a negative output gap, but overshooting creates a positive output gap and inflationary pressure.",
+       "type": "link"
+      }
+     ],
+     "title": "EVALUATION"
+    }
+   ],
+   "keyIdea": "A pound of new spending does not just add a pound to national income — it circulates through the economy, creating further rounds of income and spending, so the final rise in GDP is a multiple of the initial injection.",
+   "formulas": [
+    {
+     "text": "k = 1 / MPW  =  1 / (MPS + MPT + MPM)",
+     "label": "MULTIPLIER FORMULA (MPW)"
+    },
+    {
+     "text": "k = 1 / (1 − MPC)",
+     "label": "MULTIPLIER FORMULA (MPC)"
+    }
+   ],
+   "takeaway": [
+    "The multiplier shows how an initial injection creates a larger final change in national income.",
+    "k = 1/MPW: a lower marginal propensity to withdraw means a larger multiplier.",
+    "The multiplier works in reverse too — spending cuts cause multiplied falls in GDP.",
+    "Near full capacity the multiplier effect is mostly inflationary, not growth-enhancing."
+   ],
+   "examMatters": "Examiners expect you to state the multiplier formula, calculate a numerical value when given MPC or MPW, and then explain the process of successive spending rounds. Marks are also awarded for evaluating the multiplier — state whether the economy has spare capacity, the size of MPW, and the time lag involved.",
+   "misconception": "Students say the multiplier means the economy always grows by more than the injection. Wrong because the multiplier assumes spare capacity; at full employment the extra spending becomes inflationary. Instead write: the multiplier amplifies changes in spending, but the effect is split between real output growth and inflation depending on the output gap."
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "national-income:card:34e7563c",
+   "back": "A model showing how <strong>income flows between households and firms</strong>. Households provide factors of production → firms pay factor incomes → households spend on goods → cycle repeats.",
+   "front": "What is the circular flow of income?"
+  },
+  {
+   "id": "national-income:card:f8c32a77",
+   "back": "When <strong>total injections equal total withdrawals</strong> (I + G + X = S + T + M). The economy is in equilibrium — national income is stable, with no tendency to change.",
+   "front": "What is national income equilibrium?"
+  },
+  {
+   "id": "national-income:card:47e8f803",
+   "back": "National income <strong>rises</strong>. More money enters the circular flow than leaves, so spending and output increase. The economy expands.",
+   "front": "What happens when injections exceed withdrawals?"
+  },
+  {
+   "id": "national-income:card:2883e00d",
+   "back": "National income <strong>falls</strong>. More money leaks out of the circular flow than enters, so spending and output decrease. The economy contracts.",
+   "front": "What happens when withdrawals exceed injections?"
+  },
+  {
+   "id": "national-income:card:157aab1e",
+   "back": "GDP = <strong>C + I + G + (X – M)</strong>. Totals all spending on final goods and services. The most commonly used method.",
+   "front": "What is the expenditure method of measuring GDP?"
+  },
+  {
+   "id": "national-income:card:c2f4718c",
+   "back": "Totals all <strong>factor incomes</strong> earned in production: wages, rent, interest, and profits. Should equal GDP by the expenditure method.",
+   "front": "What is the income method of measuring GDP?"
+  },
+  {
+   "id": "national-income:card:519c6763",
+   "back": "Totals the <strong>value added</strong> at each stage of production across all industries. Avoids double-counting by only counting the value added, not the total value.",
+   "front": "What is the output method of measuring GDP?"
+  },
+  {
+   "id": "national-income:card:4113aef4",
+   "back": "GDP plus <strong>net income from abroad</strong> (income earned by residents overseas minus income earned by foreigners domestically). Measures total income of a country's residents.",
+   "front": "What is GNI (Gross National Income)?"
+  },
+  {
+   "id": "national-income:card:aca00dee",
+   "back": "If all households try to save more, total <strong>spending falls</strong>, reducing incomes and output via the multiplier. The economy shrinks, and paradoxically, total savings may not increase.",
+   "front": "What is the paradox of thrift?"
+  },
+  {
+   "id": "national-income:card:1cc5e359",
+   "back": "Government payments that are <strong>not in exchange for goods or services</strong> — e.g., pensions, welfare benefits, student grants. Excluded from GDP but affect disposable income.",
+   "front": "What is a transfer payment?"
+  },
+  {
+   "id": "national-income:card:468e1a9f",
+   "back": "Imports represent spending on <strong>foreign-produced goods</strong>. They are included in C, I, and G but do not represent domestic output, so they must be subtracted to avoid overstating GDP.",
+   "front": "Why must we subtract imports when calculating GDP?"
+  },
+  {
+   "id": "national-income:card:9902e19c",
+   "back": "<strong>GDP</strong> measures output produced <strong>within a country's borders</strong> (territorial). <strong>GNP/GNI</strong> measures output produced by a country's <strong>residents</strong> (regardless of location).",
+   "front": "What is the difference between GDP and GNP?"
+  },
+  {
+   "id": "national-income:card:469b33a6",
+   "back": "GNI minus <strong>depreciation</strong> (capital consumption). Accounts for the wearing out of capital goods, giving a more accurate picture of sustainable income.",
+   "front": "What is net national income?"
+  },
+  {
+   "id": "national-income:card:4d5bfcef",
+   "back": "<strong>Expenditure</strong> (total spending), <strong>income</strong> (total factor incomes), and <strong>output</strong> (total value added). All three should give the same GDP figure in theory.",
+   "front": "What are the three approaches to measuring national income?"
+  },
+  {
+   "id": "national-income:card:a2a03576",
+   "back": "Economic activity that is <strong>not recorded in official statistics</strong> — e.g., cash-in-hand work, undeclared earnings. Causes GDP to understate true output, especially in developing countries.",
+   "front": "What is the informal economy?"
+  },
+  {
+   "id": "national-income:card:e67fc623",
+   "back": "The ratio of the <strong>final change in national income</strong> to the <strong>initial change in spending</strong>. An injection of £1bn with a multiplier of 4 increases GDP by £4bn.",
+   "front": "What is the multiplier in the context of national income?"
+  },
+  {
+   "id": "national-income:card:784c7a57",
+   "back": "A fiscal mechanism that <strong>dampens economic fluctuations without policy changes</strong>. E.g., in a recession, tax revenue falls and benefits rise automatically, supporting demand.",
+   "front": "What is an automatic stabiliser?"
+  },
+  {
+   "id": "national-income:card:50e84550",
+   "back": "Defined as <strong>two consecutive quarters of negative GDP growth</strong>. Characterised by falling output, rising unemployment, and declining consumer and business confidence.",
+   "front": "What is a recession?"
+  }
+ ],
+ "common_mistakes": [
+  {
+   "id": "national-income:mistake:6f00c785",
+   "title": "Getting the multiplier formula wrong or applying it incorrectly",
+   "examTip": "Remember: a HIGHER MPC means a LARGER multiplier (more respending). A higher MPW (saving, tax, imports) means a SMALLER multiplier (more leakages).",
+   "mistake": "Students confuse the multiplier formula or forget that it works in both directions (a withdrawal also has a multiplied negative effect).",
+   "correction": "The multiplier = 1 ÷ (1 - MPC) = 1 ÷ MPW. If MPC = 0.8, the multiplier = 1 ÷ 0.2 = 5. An initial injection of £10m leads to a final increase of £50m in national income."
+  },
+  {
+   "id": "national-income:mistake:66f3f1a0",
+   "title": "Confusing injections and withdrawals",
+   "mistake": "Students list savings, taxation, and imports as injections, or investment, government spending, and exports as withdrawals.",
+   "correction": "Injections ADD to the circular flow: Investment (I), Government spending (G), Exports (X). Withdrawals LEAK from the circular flow: Savings (S), Taxation (T), Imports (M)."
+  },
+  {
+   "id": "national-income:mistake:5c63fb0b",
+   "title": "Not understanding why the multiplier might be smaller in practice",
+   "mistake": "Students calculate the theoretical multiplier but do not explain why the actual multiplier is typically smaller.",
+   "correction": "In reality the multiplier is reduced by: high marginal rates of taxation, high import spending (open economy), savings increasing at higher incomes, and time lags in the transmission mechanism."
+  }
+ ],
+ "extras": {
+  "chains": [
+   {
+    "steps": [
+     "In a simple economy, households provide factors of production to firms and receive factor incomes (wages, rent, interest, profit).",
+     "Households spend their income on goods and services, creating revenue for firms, which funds further production.",
+     "In a more realistic model, income leaks out through savings (S), taxation (T) and imports (M) — these are withdrawals.",
+     "Income is injected back in through investment (I), government spending (G) and exports (X) — these are injections."
+    ],
+    "title": "The circular flow shows how income moves through the economy",
+    "result": "The circular flow model shows how income, spending and output are interconnected, with withdrawals and injections determining equilibrium."
+   },
+   {
+    "steps": [
+     "National income is in equilibrium when total injections (I + G + X) equal total withdrawals (S + T + M).",
+     "If injections exceed withdrawals, total spending rises and national income expands through the multiplier process.",
+     "If withdrawals exceed injections, spending falls and national income contracts, leading to lower output and employment.",
+     "The economy adjusts towards equilibrium through changes in income levels — higher income increases withdrawals until they match injections."
+    ],
+    "title": "Equilibrium occurs when injections equal withdrawals",
+    "result": "Equilibrium national income is determined by the balance between injections into and withdrawals from the circular flow."
+   },
+   {
+    "steps": [
+     "An increase in investment (an injection) directly raises demand for capital goods, creating income for suppliers and their workers.",
+     "Workers spend a proportion of their new income (MPC), creating demand for consumer goods and further income for others.",
+     "This process repeats through successive rounds, with each round smaller than the last as income leaks out through S, T and M.",
+     "The total increase in national income = initial injection × multiplier, where the multiplier = 1 / (1 − MPC) = 1 / MPW."
+    ],
+    "title": "An increase in investment raises national income via the multiplier",
+    "result": "The multiplier process means that changes in injections have an amplified effect on national income."
+   },
+   {
+    "steps": [
+     "If consumers increase their savings rate, the marginal propensity to consume (MPC) falls and withdrawals from the circular flow increase.",
+     "Lower consumption reduces demand for goods, leading firms to cut output and employment.",
+     "Lower employment reduces incomes further, causing a further fall in consumption — the multiplier works in reverse.",
+     "Paradoxically, the attempt by individuals to save more results in lower national income and potentially lower total savings — the paradox of thrift."
+    ],
+    "title": "A rise in savings can paradoxically reduce national income",
+    "result": "The paradox of thrift shows that individually rational behaviour (saving more) can be collectively harmful when it reduces aggregate demand."
+   }
+  ],
+  "evaluation": [
+   {
+    "title": "The multiplier is a simplification of reality",
+    "content": "The multiplier model assumes a constant MPC, stable withdrawals and no supply-side constraints. In reality, the MPC changes with income levels and confidence, taxes are progressive (changing the withdrawal rate) and supply constraints can turn spending increases into inflation rather than output growth. The actual multiplier is usually smaller than the theoretical value."
+   },
+   {
+    "title": "The paradox of thrift depends on context",
+    "content": "The paradox of thrift holds when the economy has spare capacity and increased savings are not channelled into productive investment. If savings are intermediated by banks into business investment, the negative effect is reduced. In a fully employed economy, higher savings can fund investment and increase long-run growth. Context determines whether saving is beneficial or harmful."
+   },
+   {
+    "title": "National income equilibrium may not mean full employment",
+    "content": "Keynesian economics emphasises that the economy can reach equilibrium at a level of output below full employment. This deflationary gap means resources are wasted and living standards are lower than they could be. Government intervention through fiscal policy may be needed to close the gap, but this carries risks of crowding out private investment."
+   }
+  ]
+ }
+}
