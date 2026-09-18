@@ -1978,6 +1978,27 @@ ledger, overlay YOUR OWN ids onto it, serialise at `JSON.stringify(_, null, 1)` 
 change is yours** — packet 35's overlay moved 28 ids and its check confirmed 0 of them were anybody
 else's before the commit was made. Those 14 are still in the working tree, waiting for their owner.
 
+**Packet 36 put eight more files on that list on 18 September, and the count is now 37.** Every one of them is on disk AND in HEAD; the index simply predates the commit that added them. Checked rather than assumed, and the check is one line — run it before you believe any `D` here:
+
+```
+for f in $(git status --short | awk '$1=="D"{print $2}'); do
+  [ -f "$f" ] && git cat-file -e HEAD:"$f" || echo "REALLY GONE: $f"
+done
+```
+
+Packet 36's eight:
+
+- `audit/runs/packet-36/BLOCKING-DEFECT.txt`
+- `audit/runs/packet-36/OUTCOME-SUMMARY.txt`
+- `audit/runs/packet-36/diagram-phone-legibility-draft.txt`
+- `audit/runs/packet-36/diagram-phone-legibility-live.txt`
+- `audit/runs/packet-36/gate.log`
+- `audit/runs/packet-36/verify-b-round2.md`
+- `audit/runs/packet-36/verify-b.md`
+- `audit/scripts/diagram-phone-legibility.mjs`
+
+Packet 36's other files (`scripts/_packet36-*.mjs`, `packet-36-managing-finance.mjs`, the bundle snapshot, `audit/runs/packet-36/verify-draft.mjs`) show as `MM` instead, which is the same stale index seen from the other side: the index holds a pre-commit version, the working tree holds the committed one. Neither is a reason to `git add` anything.
+
 **A plain `git commit` here would commit that stale index**, and `git diff --cached HEAD --stat` says
 what that means: it would DELETE all five `_packet31*`/`packet-31*` scripts and both packet-31
 snapshots, and revert `NEXT.md` by 869 lines and `DECISIONS.md` by 255 — taking packet 29's records
