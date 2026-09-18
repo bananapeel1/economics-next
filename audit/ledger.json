@@ -7239,10 +7239,10 @@
    "rank": 0,
    "text": "Replace the Scottish salmon realExample (factually wrong: UK salmon is tariff-free under the TCA; Norway's EEA deal excludes fish; this is not trade diversion) with a correct diversion example, and change 'UK buyers' to an EU-member buyer in the orange juice CET example.",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json:1325-1461 Trading Blocs block rebuilt; grep of whole bundle shows 0 hits for salmon/orange/UK buyers/CET wording. Ladder/diversion-example clause correctly left out: customs union and trade diversion are 0 hits in audit/raw/bus_spec.txt (verified), so a corrected diversion example is Economics content, not this section's.",
    "note": null
   },
   {
@@ -7252,10 +7252,10 @@
    "rank": 1,
    "text": "Close the spec gaps or move the assessment: add a block on 4.1.4 protectionism (tariffs, quotas, subsidies, legislation, retaliation) and a block on 4.1.1/4.1.2 (emerging economies, GDP per capita/HDI, specialisation, FDI) — or relocate MCQs 0-3, 7, 9 and practice Q1/Q3/Q5 to sections that teach them so the pre-test and inline quiz only test taught content.",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json:1026-1311 Protectionism block built (reasons-for-protectionism:1030, tariffs:1068, import-quotas:1132, other-trade-barriers:1190, impact-on-businesses-of-protectionism:1250), pinned via quizIndices at line 1015. retaliation/infant industry/dumping confirmed 0 hits in audit/raw/bus_spec.txt and econ_spec.txt, correctly excluded from the reasons taught at line 1030.",
    "note": "SPEC NUMBERING: this item cites 4.1.4, 4.1.1, 4.1.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -7265,10 +7265,10 @@
    "rank": 2,
    "text": "Expand 'Three forces drive it' to the spec's full factor list (trade barriers, political change, transport/communication costs, MNCs, FDI flows, migration, trading blocs) with an ASEAN/RCEP/GCC example for the target audience.",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json:584-1024 all nine factors (bus_spec.txt:1343-1355 a-i) taught as distinct subsections across two blocks; quiz item at bundle line 2000 explicitly tests that trading blocs is NOT one of the nine factors, matching bus_spec.txt where factors is topic 3 (1343-1355) and trading blocs is topic 5 (1363-1367).",
    "note": null
   },
   {
@@ -7278,10 +7278,10 @@
    "rank": 3,
    "text": "Rewrite practice Q3 and Q5 (and Q4) as case-based IAL Business questions with a named firm and levels-based mark scheme (Knowledge/Application/Analysis/Evaluation), and trim Q2's guidance to two developed chains.",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json:2215-2280 practice array rebuilt: 8 case-based items with named firms (Meridian Components, Harbour Foods, Astra Appliances, Kesari Rubber, Solavi Foods) and Appendix 6 guidance; Construct item at line 2233 carries 4 concise marking points for 4 marks.",
    "note": null
   },
   {
@@ -7291,10 +7291,10 @@
    "rank": 4,
    "text": "Add recall widgets (reorder: FTA -> customs union -> single market; fillin: trade creation vs diversion) and a simple integration-ladder diagram; set quizIndices/practiceIndices on each block so inline assessment matches the block.",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json has 15 recall objects at lines 83,216,274,332,443,538,653,742,800,951,1106,1164,1222,1282,1470 (4 classify/7 fillin/3 match/1 reorder, cross-checked by independently running node scripts/packet-33-globalisation.mjs which reports the identical breakdown); quizIndices/practiceIndices set on all 6 blocks at lines 362/369,568/574,837/844,1015/1021,1313/1320,1503/1509. Ladder-reorder and creation/diversion fillin correctly excluded: 0 hits for customs union/trade creation/trade diversion in bus_spec.txt.",
    "note": null
   },
   {
@@ -7315,10 +7315,10 @@
    "kind": "accuracy",
    "text": "Trade Blocs > trade-creation-vs-diversion > body[1]: 'If the EU's CET makes Brazilian orange juice costlier than Spanish juice, UK buyers switch to Spain' — the UK left the EU customs union in 2020, so a UK buyer is not subject to the EU CET. Students in 2026 will be confused or repeat a wrong example.",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json:1325-1461 Trading Blocs block rebuilt from scratch; grep of the whole bundle file shows 0 hits for CET and for UK-buyers wording. Defect removed with the block, per NEXT.md Packet 33 spec reassignment table.",
    "note": null
   },
   {
@@ -7327,10 +7327,10 @@
    "kind": "accuracy",
    "text": "Globalisation & Business > drivers-of-globalisation > body[1] and keyIdea: 'Three forces drive it' (technology, trade liberalisation, deregulation). The IAL Business spec lists ~7 factors contributing to increased globalisation: reduction of trade barriers, political change, reduced transport/communication costs, increased significance of global companies (MNCs), increased investment flows (FDI), migration, growth of trading blocs. A student who learns 'three' will under-answer a 'factors' question.",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json:584-1024 'Three forces drive it' replaced; trade-liberalisation-and-the-reduction-of-barriers (line 584) opens with 'The specification lists nine factors...This chapter takes the first five and the next takes the rest,' and all nine a-i are taught, matching bus_spec.txt:1343-1355.",
    "note": null
   },
   {
@@ -7339,10 +7339,10 @@
    "kind": "quiz",
    "text": "q0: Tests 4.1.1 growing/emerging economies, which the section content never teaches. If drawn in the 3-question pre-test it is unanswerable from this section.",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json:1856,1868 unpinned quiz items 0-1 (plus item 2) test only block-0 content (developed/developing/emerging economies line 47, GDP per capita line 242); block 0's own quizIndices [3,4,5,6,7] at line 362 confirm the pinned set. Nothing in the three unpinned items is untaught.",
    "note": "SPEC NUMBERING: this item cites 4.1.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -7351,10 +7351,10 @@
    "kind": "quiz",
    "text": "q1: HDI is not mentioned anywhere in content[]; untaught. Correct answer and explanation are fine.",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json:300-373 human-development-index subsection built and pinned into block-0 quizIndices (line 362); quiz item on what HDI combines (income/schooling/life expectancy) is now answerable from taught content.",
    "note": null
   },
   {
@@ -7363,10 +7363,10 @@
    "kind": "quiz",
    "text": "q3: Protectionism (4.1.4) is entirely absent from the content, yet this and two other MCQs test it. Question itself is sound.",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json:1026-1311 Protectionism block built and pinned via quizIndices [21,22,23,24,25] at line 1015; items 21-25 (tariff arithmetic, quota vs tariff, subsidy effect, reasons, impact) are all answerable from reasons-for-protectionism (1030), tariffs (1068), import-quotas (1132), other-trade-barriers (1190), impact-on-businesses-of-protectionism (1250).",
    "note": "SPEC NUMBERING: this item cites 4.1.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -7375,10 +7375,10 @@
    "kind": "practice",
    "text": "p2: 'Assess the extent to which free trade benefits developing countries' (10 marks) is an Economics macro question; IAL Business Assess questions are anchored to a business in the case ('Assess whether joining the FTA benefits [named firm]'). The context describes a country, not a business. Guidance is a macro list (comparative advantage, profit repatriation) and has no mark scheme.",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json:2265-2272 Assess item now 12 marks, matching audit/raw/tariff-census.json business row Assess=[10,12] for Units 1/2 vs Units 3/4 and bus_spec.txt:2238-2245; anchored to a named firm (Astra Appliances) with full Appendix 6 guidance and a supported judgement, replacing the old Economics-macro 10-mark item.",
    "note": null
   },
   {
@@ -7387,10 +7387,10 @@
    "kind": "practice",
    "text": "p4: 20-mark 'Evaluate the view that globalisation creates more winners than losers' has context: null. Every IAL Business 20-marker is case-based; the guidance is Economics-flavoured (income inequality, cultural homogenisation, government redistribution) rather than business decision-making. No model answer or level descriptors.",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json:2273-2280 Evaluate item (20 marks) now carries a populated context field (two named firms, Kesari Rubber and Solavi Foods) and business-decision guidance (own-something vs supply-something distinction), replacing context: null.",
    "note": null
   },
   {
@@ -7399,10 +7399,10 @@
    "kind": "structure",
    "text": "Zero recall objects (0 reorder, 0 fillin) so the Learn Mode's spaced/immediate recall mechanism never fires here; the FTA -> customs union -> single market ladder is a genuine orderable sequence that would make a good reorder, and trade creation vs diversion a good fillin.",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json: 15 recall objects across 15 of 29 subsections (lines 83,216,274,332,443,538,653,742,800,951,1106,1164,1222,1282,1470), types classify/fillin/match/reorder; independently cross-checked by running node scripts/packet-33-globalisation.mjs, which reports the identical 4/7/3/1 breakdown. The FTA-ladder reorder and creation/diversion fillin the finding names are correctly absent (0 hits, bus_spec.txt).",
    "note": null
   },
   {
@@ -7411,10 +7411,10 @@
    "kind": "structure",
    "text": "Zero diagrams: the integration ladder (FTA/CU/single market) and the inside-vs-outside-the-bloc effect are natural simple visuals; InlineDiagram slot renders nothing.",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json:2495 diagrams array has 6 entries, one per block; e.g. id f5432a45 'Trading Blocs and What Membership Is Worth' explicitly cites 5a-5b in its description and SVG text. Every block carries a diagramId, so InlineDiagram now renders on all 6. Integration-ladder diagram correctly absent as off-spec (0 hits, bus_spec.txt).",
    "note": null
   },
   {
@@ -7423,10 +7423,10 @@
    "kind": "structure",
    "text": "Blocks carry no quizIndices/practiceIndices, so the inline MCQ and inline practice shown after the 'Globalisation & Business' block can be about protectionism or HDI (untaught), and the 20-mark macro essay can appear as the block's written question.",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json quizIndices at lines 362,568,837,1015,1313,1503 and practiceIndices at 369,574,844,1021,1320,1509 are non-empty on all 6 blocks, so the inline MCQ/practice shown after each block is drawn only from that block's own taught content.",
    "note": null
   },
   {
@@ -7435,10 +7435,10 @@
    "kind": "structure",
    "text": "Content[] vs quiz[]/practice[]/common_mistakes[] mismatch: 6 of 10 MCQs, 2-3 of 5 practice questions and 3 of 6 common_mistakes (developing vs emerging, protectionism, FDI limitations) cover material absent from the taught content — the pre-test/post-test comparison is therefore not measuring what the section teaches.",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json quiz array (30 items, line 1853) is fully partitioned by quizIndices across the 6 blocks with 3 unpinned; mistakes array (8 items, line 2437) are all grounded in taught content (developed vs emerging, specialisation trade-off, subsidy effect, bloc competitiveness). No content/assessment mismatch remains.",
    "note": null
   },
   {
@@ -7447,10 +7447,10 @@
    "kind": "structure",
    "text": "Section 2 'Impact of Globalisation on Business Strategy' drifts into 4.2/4.4 material (offshoring, outsourcing, transfer pricing, hedging) while the 4.1 spec items that belong here (growing economies, indicators, trade/FDI, protectionism) are missing; the block would be better titled and scoped to the spec.",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json content array (line 8) no longer has an 'Impact of Globalisation on Business Strategy' block; the 6 blocks are now Growing Economies, International Trade and Business Growth, two Drivers-of-Globalisation blocks, Protectionism, Trading Blocs. Grep of the whole file: 0 hits for offshor, outsourc, transfer pricing, hedging, deregulation.",
    "note": null
   },
   {
@@ -7459,10 +7459,10 @@
    "kind": "structure",
    "text": "Notes[] (3 notes) define MNC and FDI and list 'capital market deregulation'; content[] never defines MNC or FDI though it uses 'FDI' in body text — Learn Mode and Notes tab are inconsistent.",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json notes array (line 1515) has exactly 6 notes, one per content block (e.g. line 1517 Growing Economies, line 1799 Trading Blocs), mirroring content[] 1:1. No remaining notes/content drift.",
    "note": null
   },
   {
@@ -7471,10 +7471,10 @@
    "kind": "structure",
    "text": "Both blocks are exactly one 2-section step each, so every step ends with the full stack (quiz + practice + ExplainItBack + takeaway); with only two steps the section is very short for a topic with five spec sub-bullets.",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json content array (line 8) now has 6 blocks and 29 subsections total (7+4+5+4+5+4, subsection ids at lines 8-1470), replacing the old 2 blocks of one 2-section step each; the runner's own floor check requires 24+ subsections and this ships 29.",
    "note": null
   },
   {
@@ -7483,10 +7483,10 @@
    "kind": "structure",
    "text": "UK/Brexit-centric examples (pound, UK fisheries, BMW UK pre-Brexit, UK buyers) in three of four subsections; no ASEAN, RCEP, CPTPP, GCC or SAFTA despite the target audience (SG/MY/HK/KR/PK/Middle East) and ASEAN being named in the spec.",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json: grep of the whole file shows 0 hits for Brexit, Scottish, salmon, BMW, pound sterling; ASEAN appears 13 times and NAFTA 15 times (asean subsection line 1362, nafta line 1395), using fictional firms (Lumina Electronics, Meridian Components, Astra Appliances, Harbour Foods, Kesari Rubber, Solavi Foods) in place of UK-specific examples.",
    "note": null
   },
   {
@@ -7495,11 +7495,11 @@
    "kind": "structure",
    "text": "Takeaways do match their blocks and the misconceptions are real student errors (customs union vs single market; 'always produce in the cheapest country'; 'only big firms benefit') — no filler here.",
    "packet": 33,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "Asserts no defect: it reports that the takeaways match their blocks and the misconceptions are real student errors. Nothing to fix. Recorded rather than closed because one of the two misconceptions it praises — customs union against single market — is Economics 4.3.1 4b (econ_spec.txt:1662, 0 hits in bus_spec.txt) and packet 33 removed it with the rest of the ladder, so the finding's own evidence is half retired. The property it describes still holds in the rebuild: six blocks, six takeaway sets derived from their own chapters, eight misconceptions each about something this section teaches."
   },
   {
    "id": "C-globalisation-specGap-01",
@@ -7507,10 +7507,10 @@
    "kind": "specGap",
    "text": "4.1.1 Growing economies: growth of emerging economies (China, India, Brazil etc.) vs developed economies; implications of economic growth for individuals and businesses — not taught (but quizzed in MCQ 0).",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "Judged by wording (this item cites invalid UK GCE numbering; IAL topic is 4.3.1). audit/snapshots/packet-33-bundle__business__globalisation.json:47 developed-developing-and-emerging-economies, :147 trade-opportunities-for-businesses, :184 employment-patterns all built, matching bus_spec.txt:1320-1332 (1a and 1c).",
    "note": "SPEC NUMBERING: this item cites 4.1.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -7519,10 +7519,10 @@
    "kind": "specGap",
    "text": "4.1.1 Indicators of growth: GDP per capita, literacy, health, Human Development Index — not taught (but quizzed in MCQ 1).",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "Judged by wording (invalid UK GCE numbering cited; IAL topic is 4.3.1). audit/snapshots/packet-33-bundle__business__globalisation.json:242 gdp-and-gdp-per-capita, :300 human-development-index built, matching bus_spec.txt 1d exactly. literacy correctly excluded: 0 hits in both audit/raw/bus_spec.txt and econ_spec.txt (verified); health correctly excluded: bus_spec.txt's only hit (line 1025) is health and safety, an unrelated operations topic.",
    "note": "SPEC NUMBERING: this item cites 4.1.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -7531,10 +7531,10 @@
    "kind": "specGap",
    "text": "4.1.2 International trade and business growth: exports and imports; link between business specialisation and competitive advantage; FDI flows — not taught (MCQ 2 tests specialisation).",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "Judged by wording (invalid UK GCE numbering cited; IAL topic is 4.3.1). audit/snapshots/packet-33-bundle__business__globalisation.json:378 exports-and-imports, :411/:469 what-specialisation-saves/costs, :506 fdi-and-business-growth built, matching bus_spec.txt 2a/2b/2c. competitive advantage correctly excluded: 0 hits in the bundle (verified by grep); its 5 hits in bus_spec.txt, lines 471/542/984/995/1002, are all outside 4.3.1.",
    "note": "SPEC NUMBERING: this item cites 4.1.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -7543,10 +7543,10 @@
    "kind": "specGap",
    "text": "4.1.3 Factors contributing to increased globalisation: political change, increased significance of global (transnational) companies, increased investment flows (FDI), migration, growth of trading blocs — only technology, trade liberalisation and deregulation are taught.",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "Judged by wording (invalid UK GCE numbering cited; IAL topic is 4.3.1). audit/snapshots/packet-33-bundle__business__globalisation.json:677 political-change, :768 mncs-and-increased-investment-flows, :853 migration-within-and-between-economies built. deregulation and transnational both 0 hits in the bundle (verified by grep; MNC used instead, 14 hits); growth of trading blocs correctly kept out of the factors list since it is bus_spec.txt topic 5, not one of topic 3's nine factors (1343-1367).",
    "note": "SPEC NUMBERING: this item cites 4.1.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -7555,10 +7555,10 @@
    "kind": "specGap",
    "text": "4.1.4 Protectionism: tariffs, import quotas, other trade barriers (government legislation, domestic subsidies) — entirely absent from content[] though covered by MCQs 3, 7, 9, practice Q1 and extras.",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "Judged by wording (invalid UK GCE numbering cited; IAL topic is 4.3.1). audit/snapshots/packet-33-bundle__business__globalisation.json:1026-1311 full Protectionism block (reasons/tariffs/quotas/other-trade-barriers/impact), matching bus_spec.txt:1356-1362 (4a-4e) exactly, now in content[] rather than only referenced by quiz/practice.",
    "note": "SPEC NUMBERING: this item cites 4.1.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -7567,10 +7567,10 @@
    "kind": "specGap",
    "text": "4.1.5 Trading blocs: expansion of trading blocs — EU, ASEAN, NAFTA/USMCA named in spec; ASEAN never mentioned. Impact on businesses of trading blocs is only partially covered (insider view one-sided).",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "Judged by wording (invalid UK GCE numbering cited; IAL topic is 4.3.1). audit/snapshots/packet-33-bundle__business__globalisation.json:1362 asean, :1395 nafta subsections built; ASEAN 13 hits / NAFTA 15 hits in the bundle (was unmentioned before). USMCA correctly not used as the assessable label (0 hits, verified); impact on businesses now two-sided via inside-the-bloc-and-outside-it (line 1428), not the one-sided view flagged.",
    "note": "SPEC NUMBERING: this item cites 4.1.5, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -7579,10 +7579,10 @@
    "kind": "specGap",
    "text": "(unsure of exact lettering) 4.1.3 'reduced cost of transport and communication' is only implied via 'containerised shipping'; not developed as a named factor.",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "Judged by wording (invalid UK GCE numbering cited; IAL topic is 4.3.1). audit/snapshots/packet-33-bundle__business__globalisation.json:710-767 reduced-cost-of-transport-and-communication built as its own subsection with a worked example and recall (line 742), matching bus_spec.txt 3c, not just implied via containerised shipping.",
    "note": "SPEC NUMBERING: this item cites 4.1.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.1. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -16474,10 +16474,10 @@
    "kind": "specGap",
    "text": "4.3.1 1b Growing economic power of countries within Asia, Africa and other parts of the world — not in the teaching content. (spec-coverage audit, 12 Sep 2026)",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json:114-146 growing-economic-power-of-asia-and-africa built, matching bus_spec.txt 1b (Growing economic power of countries within Asia, Africa and other parts of the world) directly in the subsection's keyIdea and body.",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16486,10 +16486,10 @@
    "kind": "specThin",
    "text": "4.3.1 2b Implications of increasing specialisation by countries and businesses — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json:411,469 what-specialisation-saves/what-specialisation-costs now define and explain 2b's implications in full (both the saving and the exposure), answerable in an exam, not merely named.",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16498,10 +16498,10 @@
    "kind": "specThin",
    "text": "4.3.1 3a Role of the WTO — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json:617-676 the-role-of-the-wto now defines the WTO (rules/negotiation/disputes) and states what it does not do, matching bus_spec.txt 3a, answerable in an exam.",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16510,10 +16510,10 @@
    "kind": "specThin",
    "text": "4.3.1 3f Migration within and between economies — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 33,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-33",
+   "verified_by": "Verify A (Sonnet) 2026-09-18",
+   "evidence": "audit/snapshots/packet-33-bundle__business__globalisation.json:853-885 migration-within-and-between-economies now defines and explains both within- and between-economy migration for a business, matching bus_spec.txt 3f, answerable in an exam.",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {

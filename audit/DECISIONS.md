@@ -2169,3 +2169,74 @@ it: `LEDGER_ID` could not (no id), `MARK_CLAIM` could not (not about marking), a
 were inside SVG captions, which only the vocabulary bans read at all. `SELF_REFERENCE` is now a runner
 check over prose AND diagram text, with its A/B. **Third instance of the same lesson in three
 packets: what a check LOOKS AT decides what it can find.**
+
+## Packet 33 — `globalisation`, Business 4.3.1 (18 September 2026, Opus 5)
+
+**The Business globalisation section was half Economics, and no ledger item said so.** The live block
+"Trade Blocs" taught the integration ladder (free-trade area → customs union → single market) and
+trade creation against trade diversion. Measured before a word was written, in both specifications:
+`free-trade area`, `customs union`, `common market`, `economic and monetary union`, `trade creation`
+and `trade diversion` are each **0 in `bus_spec.txt` and 1 in `econ_spec.txt`**, all in one place —
+`econ_spec.txt:1659-1670`, **4.3.2 Trade and the global economy · 4**, the section
+`trade-global-economy`, packet 39. `common external tariff` is 0 in both. IAL Business 4.3.1 · 5 asks
+for two things only: the expansion of trading blocs (EU and the single market, ASEAN, NAFTA) and their
+impact on businesses.
+
+**The decision: remove rather than repair, and refuse the clauses that asked for more of it.**
+`topFix-05`, `structure-01` and `structure-02` asked for a ladder reorder, a creation/diversion
+fill-in and an integration-ladder diagram; `topFix-01` asked for the trade-diversion example to be
+corrected. Each was split: the *shape* (recalls exist, diagrams exist, pins exist) is built, and the
+*content* comes from the Business specification instead. Precedent: packet 29 removed the kinked
+demand curve where the finding only asked a question. Generalises as: **rule 2 has a third form — an
+audit can ask you to DEEPEN the off-spec content, not merely leave it.** The first two forms were "a
+finding names the wrong section" and "a finding asks you to delete in-scope content".
+
+**Where the removed content goes, and the correction.** The first draft of this packet's brief sent it
+to "Economics 4.3.1 · 4, packet 34". Verify A checked and it is **4.3.2 · 4, packet 39** — 4.3.1 is
+*Causes and effects of globalisation* and carries no trading-bloc content, and packet 34's own brief
+already said so. **Rule 1 now applies to our own handoff notes for the second time** (packet 30's
+"Business 2.4" was the first), and this is the second time Verify A has caught a false statement in a
+builder's brief. Worth the line: a verifier that re-derives a measurement instead of reading it back
+is the only thing that can catch this, which is [[revvylearn-verify-independently]] applied to prose.
+
+**`USMCA`: named once in prose, never on an assessed surface.** `specGap-06` asserts it is "named in
+spec" and it is 0 hits in both documents; 5a-3 is `NAFTA.`. But teaching NAFTA in 2026 with no mention
+of the successor agreement is the stale-example defect `topFix-01` exists for. So the rule is a split
+rather than a ban: one mention in prose as a date fact, zero in quiz, practice, flashcards and
+recalls, and the runner checks both halves. **Any term that is a FACT about the world but not a
+SYLLABUS term can take this shape**; the test is whether a student would be marked on it.
+
+**A quiz bank can carry a length tell that `quiz.long-correct` cannot see, and this one did at 83%.**
+The rule fires only above 1.5× the longest distractor, so a bank whose key is simply the longest
+option most of the time passes clean. The first draft of this bank had the key as the strictly longest
+option in 25 of 30 items against a 25% chance baseline. Packet 21 added a bank-level guard at 35% and
+this is the first packet it has caught. Fixed by lengthening distractors, which is the right fix: a
+plausible wrong answer in an exam paper is a full sentence. Now 20%, and the runner A/Bs the guard
+against a deliberately rigged bank so it cannot read green while blind.
+
+**An id-uniqueness check over every string is wrong, and reported six duplicates on a clean section.**
+A diagram's id legitimately appears twice — once on the diagram and once as its block's `diagramId`.
+The defect packet 19 found was three flashcards with the same content and a `-2` suffix, which is a
+COLLECTION-level collision. The check is now per collection, plus a flashcard-front check for the
+content a duplicate id would be hiding.
+
+**An Appendix 6 citation check must find the command word in the SENTENCE, not after the verb.**
+"Appendix 6 says workings should be given for a Calculate" and "Appendix 6 says a Discuss needs…" both
+cite a real row, and a regex capturing the token after `says` reads them as citations for "workings"
+and "a". Two false positives on a clean section. The check now requires every Appendix 6 sentence to
+name at least one Business command word and to share vocabulary with that row.
+
+**An edit script that rewrites a field by searching backwards for its opener can eat the field above
+it.** Tightening 26 subsections' `misconception` and `examMatters` with a script that found each
+string's opening delimiter by scanning back 400 characters collapsed the two fields in 24 of them —
+the scan found `misconception:` first and replaced from there to the end of `examMatters`. The word
+count then read 0 over budget, because the words had been DELETED rather than tightened. Caught by a
+field-presence check, repaired by slug, and the honest count was 12 over. **A budget that improves
+because content vanished is the same class as packet 28's inequality that is not an envelope: ask what
+would still be wrong if this passed.** Line-oriented replacement, keyed to the subsection's own
+`subId`, is the method that works here.
+
+**Six chapters cost this section nothing on the free quiz, measured not inherited.** The anonymous
+payload is 9 of 30 with `quizIndices` remapped to `[[0],[1],[2],[3],[4],[5]]` — all six check-ins
+resolve, three unpinned remain for the pre-test, inside `FREE_QUIZ_MAX`. Consistent with packet 31's
+five chapters and packet 2.5's pins-first order; the ceiling is still ten.

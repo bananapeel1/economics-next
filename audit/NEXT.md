@@ -1,5 +1,147 @@
 # Next session brief
 
+## Packet 33 spec — `globalisation`, Business Unit 4 (WBS14), IAL **4.3.1** (Opus 5, 18 September 2026)
+
+`audit/raw/bus_spec.txt:1323-1367`. The oracle holds **32 rows for `BUS-4.3.1`**, of which four (`1c`,
+`1d`, `4d`, `5a`) are requirement headers carrying bullets, so **28 substantive leaves**. Live state:
+**2 blocks · 4 subsections · 10 quiz · 5 practice · 0 diagrams · 0 recalls · 20 flashcards · 3 notes ·
+6 common mistakes · 4 extras chains + evaluation**, and `validate-content.mjs --section globalisation`
+reads **12 BLOCK / 24 DEBT / 4 new DEBT / coverage 82%**.
+
+### Rule 2 fires on HALF the section, and no ledger item names it
+
+Block 1 "Trade Blocs" teaches the integration ladder (FTA → customs union → single market) and trade
+creation vs trade diversion. Measured, both specs, before a word was written:
+
+| term | `bus_spec.txt` | `econ_spec.txt` |
+|---|---|---|
+| `free-trade area` | **0** | 1 |
+| `customs union` | **0** | 1 |
+| `common market` | **0** | 1 |
+| `economic and monetary union` | **0** | 1 |
+| `trade creation` | **0** | 1 |
+| `trade diversion` | **0** | 1 |
+| `common external tariff` | **0** | **0** |
+
+Every Economics hit is one place: `econ_spec.txt:1659-1670`, **Economics 4.3.2 · 4 "Trade
+liberalisation and trading blocs"** (heading at `econ_spec.txt:1626`) — which is the section `trade-global-economy`,
+**packet 39**. IAL
+Business 4.3.1 · 5 asks only for *"Expansion of trading blocs: EU and the single market, ASEAN,
+NAFTA"* (5a) and *"The impact on businesses of trading blocs"* (5b). It never asks a Business student
+to rank levels of integration or to distinguish creation from diversion.
+
+**Four findings ask this packet to build MORE of it** — `topFix-05` (reorder: FTA → customs union →
+single market; fillin: trade creation vs diversion), `structure-01` (the same two widgets),
+`structure-02` (an integration-ladder diagram), `topFix-01` (repair the trade-diversion example).
+Nothing in the audit says the block should not exist. Eighth-plus instance of rule 2 and the first
+where the audit's remedy would have DEEPENED the off-spec content rather than merely left it.
+
+Subsection 0.1 "Impact of Globalisation on Business Strategy" is the same defect in a second form, and
+`structure-05` names it with the wrong owner: off-shoring and outsourcing are IAL **4.3.2 · 1c**
+(`bus_spec.txt:1382`), not "4.2/4.4"; `transfer pricing` and `hedging` are **0 hits in the whole
+Business specification**.
+
+### Rule 1 — claims checked against the spec before building
+
+Wrong or mis-aimed, with what the spec actually says:
+
+- `topFix-03` and `accuracy-03` both say the spec lists **~7** factors and both include **"trading
+  blocs"** among them. 4.3.1 · 3 lists **NINE** (a-i) and trading blocs is **sub-topic 5**, not a
+  factor. Both findings omit **`growth of the global labour force`** (3g) and **`structural change`**
+  (3h), each 1 hit in `bus_spec.txt`. Build the spec's nine, not the finding's seven.
+- `topFix-02` asks for a protectionism block including **`retaliation`** — **0 hits in both specs**.
+  4.3.1 · 4 is reasons · tariffs · import quotas · other trade barriers (government legislation,
+  domestic subsidies) · impact on businesses. `infant industry` (0/0) and `dumping` (0 BUS) are the
+  same trap. Teach the reasons in the specification's own words.
+- `specGap-02` asks for "GDP per capita, **literacy**, **health**, HDI". `literacy` is **0 in both
+  specs**; `health` in `bus_spec.txt` is one hit and it is "health and safety" (line 1025, an
+  operations topic). 1d is exactly `GDP and GDP per capita` and `human development index (HDI)`. HDI
+  is a NAMED INDEX, so under packet 22's rule-2 refinement its own dimensions may be stated once as
+  what the index measures — never assessed, and never presented as separate spec indicators.
+- `specGap-03` frames 2b as "the link between business specialisation and **competitive advantage**".
+  `competitive advantage` is 5 hits in `bus_spec.txt` and **none is in 4.3.1** — lines 471, 542, 984,
+  995, 1002, all Unit 1 marketing and Unit 2/3 operations. 2b is *"Implications of increasing
+  specialisation by countries and businesses."* Banned by the runner for this section.
+- `specGap-04` writes "global (**transnational**) companies"; `transnational` is **0 in
+  `bus_spec.txt`**. 3d is *"Increased significance of global (multinational) corporations (MNCs)"* —
+  `MNC` is 6 hits. Use the spec's word.
+- `specGap-06` writes "**NAFTA/USMCA** named in spec". `USMCA` is **0 in both specs**; 5a-3 is
+  `NAFTA.` Teach it as the specification names it and note the successor agreement exactly once as a
+  date fact, never as the assessable label.
+- `practice-01` calls p2 an Economics macro question — correct — but its tariff is wrong twice over:
+  `tariff-census.json` gives Business **Assess = 10 marks for Units 1/2 and 12 for Units 3/4**
+  (`bus_spec.txt:2238-2245`). This section is **Unit 4**, so an Assess item here is **12**, and the
+  live p2 is 10.
+- `structure-09` asserts **no defect at all** ("Takeaways do match their blocks … no filler here").
+  One of the two misconceptions it praises is "customs union vs single market", which this packet
+  removes as Economics content. Handled at claim time, not built.
+
+Real and built as written: `topFix-02` (its block structure), `topFix-04`, `quiz-01`, `quiz-02`,
+`quiz-03`, `practice-02`, `structure-03`, `structure-04`, `structure-06`, `structure-07`,
+`structure-08`, `specGap-01`, `specGap-05`, `specGap-07`, `specGap-08`, `specThin-01`, `specThin-02`,
+`specThin-03`.
+
+### Reassigned to packet 39 (`trade-global-economy`, Economics 4.3.2 · 4)
+
+Split by clause (rule 5), so each half is judged on its own:
+
+| id | clause built here | clause reassigned |
+|---|---|---|
+| `topFix-05` | recalls exist; `quizIndices`/`practiceIndices` on every block | the ladder reorder and the creation/diversion fillin |
+| `structure-01` | recalls exist and fire | the two widgets it names |
+| `structure-02` | diagrams exist | the integration ladder and inside-vs-outside-the-bloc |
+| `topFix-01` | the defect is removed with the block | a correct diversion example, if 39 wants one |
+| `accuracy-02` | the defect is removed with the block | — |
+
+### Build plan — six blocks in the specification's own order
+
+1. **Growing Economies** (1a developed/developing/emerging · 1b Asia, Africa and other parts of the
+   world · 1c trade opportunities and employment patterns · 1d GDP, GDP per capita, HDI)
+2. **International Trade and Business Growth** (2a exports and imports · 2b implications of increasing
+   specialisation · 2c FDI and the link to business growth)
+3. **What Drives Globalisation, 1** (3a trade liberalisation, reduction of trade barriers, the WTO ·
+   3b political change · 3c reduced cost of transport and communication · 3d MNCs · 3e FDI flows)
+4. **What Drives Globalisation, 2** (3f migration · 3g growth of the global labour force ·
+   3h structural change · 3i impact on businesses of increased globalisation)
+5. **Protectionism** (4a reasons · 4b tariffs · 4c import quotas · 4d government legislation and
+   domestic subsidies · 4e impact on businesses)
+6. **Trading Blocs** (5a EU and the single market, ASEAN, NAFTA · 5b impact on businesses)
+
+Six chapters is below the free-quiz ceiling of ten, but **the price is per section and must be
+re-measured against the shipping `freeQuizPayload()`**, never inherited.
+
+One arithmetic spine, derived not typed: a single ASEAN exporter's unit economics carries 2a, 2b, 4b,
+4c and 5b — landed cost with and without a tariff, a quota's volume cap, and the same firm's cost
+inside and outside a bloc. Every diagram and every calculation samples that one function.
+
+### Acceptance checks a verifier can run without this conversation
+
+1. `node scripts/packet-33-globalisation.mjs --dump` then grep the bundle: **0 occurrences** of
+   `trade creation`, `trade diversion`, `customs union`, `free trade area`, `free-trade area`,
+   `common market`, `common external tariff`, `CET`, `transfer pricing`, `hedging`, `offshor`,
+   `outsourc`, `deregulation`, `transnational`, `retaliation`, `infant industry`, `dumping`, `USMCA`,
+   `literacy`, `comparative advantage`, in prose, takeaways, flashcards, quiz, practice, notes AND
+   inside every SVG `<text>`.
+2. `ASEAN` present; `NAFTA` present and spelled as 5a-3 spells it.
+3. Coverage **28 of 28 substantive `BUS-4.3.1` leaves**, hand-mapped by `LEAF_MAP`, every leaf naming
+   the subsection that carries it.
+4. `npm run validate` → **0 BLOCK, 0 new DEBT** for this section; `npm test` green; `npm run build`
+   exit 0.
+5. Every practice tariff is in `audit/raw/tariff-census.json` for `business`, and **every `Assess`
+   item is 12 marks, not 10** (Unit 4).
+6. Every block carries `quizIndices` and `practiceIndices`; exactly three quiz items unpinned and
+   first in the array; each check-in resolves a question for a signed-out student.
+7. Recalls > 0 and **no recall is answerable from the step above it** (packet 31's corrected
+   token-set check, V029 thresholds).
+8. Diagrams on **440-unit frames** with `MIN_FACE` 12 drawn / 10 for tables, every reference table
+   declared `kind: 'table'`, and the line-crossing, extent and collision guards clean.
+9. Verify B at 390×844 signed out: every step renders, three-question pre-test, zero failed
+   substitutions, no string reading "the live section".
+10. `curl "localhost:3001/api/sections/globalisation?draft=1"` compared to the bundle **field by
+    field** with `sameJson`, `quizIndices` compared apart.
+
+Exit criteria: staged not published, held for the packet 5/7 checkpoint like packets 14-31.
+
 ## Packet 31 spec — `financial-planning`, Business 2.3.2 (Opus 5, 17 September 2026)
 
 `audit/raw/bus_spec.txt:885-914`. The oracle holds **24 rows for `BUS-2.3.2`, of which 21 are leaves**
