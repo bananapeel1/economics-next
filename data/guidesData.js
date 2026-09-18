@@ -32,6 +32,27 @@ const guidesData = [
     sections: [
       {
         heading: 'How Each IAL Business Paper Is Assessed',
+        stats: [
+          { value: '80', label: 'marks in every unit' },
+          { value: '2hr', label: 'every paper, all four units' },
+          { value: '0', label: 'multiple-choice questions' },
+          { value: '3', label: 'series a year: Jan, June, Oct' },
+        ],
+        marksChart: {
+          total: 80,
+          caption: 'Every bar is one 80-mark paper. The shift at A2 is the essay half growing from 20 marks to 40.',
+          legend: [
+            { key: 2, name: 'Section A' },
+            { key: 3, name: 'Section B' },
+            { key: 4, name: 'Essays' },
+          ],
+          units: [
+            { label: 'Unit 1 — Marketing and people (WBS11)', segments: [ { key: 2, marks: 30 }, { key: 3, marks: 30 }, { key: 4, marks: 20 } ] },
+            { label: 'Unit 2 — Managing business activities (WBS12)', segments: [ { key: 2, marks: 30 }, { key: 3, marks: 30 }, { key: 4, marks: 20 } ] },
+            { label: 'Unit 3 — Business decisions and strategy (WBS13)', segments: [ { key: 2, marks: 40 }, { key: 4, marks: 40 } ] },
+            { label: 'Unit 4 — Global business (WBS14)', segments: [ { key: 2, marks: 40 }, { key: 4, marks: 40 } ] },
+          ],
+        },
         content: 'Every unit is a two-hour written exam worth 80 marks, sat in the January, June or October series. Units 1 and 2 each count for 50% of the IAS and 25% of the full IAL; Units 3 and 4 each count for 50% of the IA2 and 25% of the IAL. Every question in every paper is based on sources, so there is no section where you can write from memory alone — but the balance between short answers and essays changes at A2, and that is what most students get caught out by.',
         table: {
           caption: 'Paper structure, from the Edexcel IAL Business specification.',
@@ -178,6 +199,28 @@ const guidesData = [
       {
         heading: 'How Each IAL Economics Paper Is Built',
         content: 'IAL Economics papers are not built like Business papers, and the difference matters for how you revise. Every unit is worth 80 marks, sat in the January, June or October series. Units 1 and 2 run for 1 hour 45 minutes and each count for 50% of the IAS and 25% of the full IAL; Units 3 and 4 run for 2 hours and each count for 50% of the IA2 and 25% of the IAL. Every paper opens with multiple choice — Business has none — and every paper is built around a source booklet.',
+        stats: [
+          { value: '80', label: 'marks in every unit' },
+          { value: '34', label: 'of them on the source booklet' },
+          { value: '6', label: 'multiple-choice questions' },
+          { value: '3', label: 'series a year: Jan, June, Oct' },
+        ],
+        marksChart: {
+          total: 80,
+          caption: 'Every bar is one 80-mark paper, drawn to the same scale. The source booklet outweighs the essays in all four.',
+          legend: [
+            { key: 1, name: 'Multiple choice' },
+            { key: 2, name: 'Short answers' },
+            { key: 3, name: 'Source booklet' },
+            { key: 4, name: 'Essays' },
+          ],
+          units: [
+            { label: 'Unit 1 — Markets in action (WEC11)', segments: [ { key: 1, marks: 6 }, { key: 2, marks: 20 }, { key: 3, marks: 34 }, { key: 4, marks: 20 } ] },
+            { label: 'Unit 2 — Macroeconomic performance and policy (WEC12)', segments: [ { key: 1, marks: 6 }, { key: 2, marks: 20 }, { key: 3, marks: 34 }, { key: 4, marks: 20 } ] },
+            { label: 'Unit 3 — Business behaviour (WEC13)', segments: [ { key: 1, marks: 6 }, { key: 3, marks: 34 }, { key: 4, marks: 40 } ] },
+            { label: 'Unit 4 — Developments in the global economy (WEC14)', segments: [ { key: 1, marks: 6 }, { key: 3, marks: 34 }, { key: 4, marks: 40 } ] },
+          ],
+        },
         table: {
           caption: 'Paper structure, from the Edexcel IAL Economics specification.',
           head: ['Unit', 'Multiple choice', 'Short answers', 'Source booklet', 'Essays'],
@@ -203,6 +246,11 @@ const guidesData = [
       },
       {
         heading: 'A Fifth of Every Paper Is Quantitative',
+        stats: [
+          { value: '20%', label: 'of marks are quantitative, minimum' },
+          { value: '10%', label: 'the equivalent floor in IAL Business' },
+          { value: '9', label: 'named skills, QS1 to QS9' },
+        ],
         content: 'The specification sets quantitative skills at a minimum of 20% of the marks across the qualification — twice the 10% required in IAL Business. That is roughly sixteen marks a paper that depend on arithmetic rather than argument, and they are the most reliably winnable marks available to you. Nine skills are named and assessed:',
         table: {
           caption: 'Quantitative skills QS1-QS9, which carry the 20%.',

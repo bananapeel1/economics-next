@@ -46,6 +46,59 @@ function renderProse(text) {
   return out;
 }
 
+function StatRow({ stats }) {
+  return (
+    <div className="guide-stats">
+      {stats.map((stat, i) => (
+        <div key={i} className="guide-stat">
+          <b>{stat.value}</b>
+          <span>{stat.label}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/**
+ * How a paper's 80 marks divide, drawn to scale.
+ *
+ * The most useful fact on the Economics guide is that the source booklet
+ * outweighs the essays, and it was buried in a table cell. One scale across all
+ * four bars, so the comparison is the thing you see rather than something you
+ * work out.
+ */
+function MarksChart({ chart }) {
+  return (
+    <figure className="guide-marks">
+      <div className="guide-marks-legend">
+        {chart.legend.map((item, i) => (
+          <span key={i} className="guide-marks-key">
+            <i className={`guide-marks-swatch s${item.key}`} aria-hidden="true" />
+            {item.name}
+          </span>
+        ))}
+      </div>
+      {chart.units.map((unit, i) => (
+        <div key={i} className="guide-marks-row">
+          <div className="guide-marks-name">{unit.label}</div>
+          <div className="guide-marks-bar">
+            {unit.segments.map((seg, j) => (
+              <div
+                key={j}
+                className={`guide-marks-seg s${seg.key}`}
+                style={{ width: `${(seg.marks / chart.total) * 100}%` }}
+              >
+                <span>{seg.marks}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+      {chart.caption && <figcaption>{chart.caption}</figcaption>}
+    </figure>
+  );
+}
+
 function formatDate(iso) {
   return new Date(`${iso}T00:00:00Z`).toLocaleDateString('en-GB', {
     day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
@@ -120,6 +173,7 @@ export default async function GuidePage({ params }) {
       )}
 
       {/* Table of contents */}
+      <div className="guide-layout">
       <nav className="guide-toc" aria-label="In this guide">
         <div className="guide-toc-title">In this guide:</div>
         <ol>
@@ -131,6 +185,7 @@ export default async function GuidePage({ params }) {
         </ol>
       </nav>
 
+      <div className="guide-main">
       {/* Guide content */}
       <div className="seo-stepper">
         {guide.sections.map((section, i) => (
@@ -142,6 +197,8 @@ export default async function GuidePage({ params }) {
             <div className="seo-stepper-body">
               <h2>{section.heading}</h2>
               <p>{renderProse(section.content)}</p>
+              {section.stats && <StatRow stats={section.stats} />}
+              {section.marksChart && <MarksChart chart={section.marksChart} />}
               {section.list && (
                 <ul className="guide-list">
                   {section.list.map((item, j) => (
@@ -207,6 +264,8 @@ export default async function GuidePage({ params }) {
           </Link>
         </div>
       )}
+      </div>
+      </div>
       </div>
     </div>
   );
