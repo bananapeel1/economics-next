@@ -1730,6 +1730,22 @@ through an isolated index (`GIT_INDEX_FILE=<tmp> git read-tree HEAD`, `hash-obje
 `update-index --cacheinfo`, `write-tree`, `commit-tree`, `update-ref <new> <old>`), which is the only
 method that is safe when several sessions share one index — and which by design never touches it.
 
+**PACKET 35 ADDS SEVEN MORE FILES TO THAT LIST (18 September).** `git status` now also shows `D` for
+`scripts/packet-35-entrepreneurs-leaders.mjs`, `scripts/_packet35-util.mjs`, `_packet35-content.mjs`,
+`_packet35-assessment.mjs`, `_packet35-diagrams.mjs` and both packet-35 snapshots. All seven are in
+HEAD (`f5ec5b9`) and on disk; checked one by one before this note was written. Packet 35 committed
+through the same isolated index and did not touch the shared one, so the danger below is unchanged
+and now costs seven files more.
+
+**The ledger needs the same care and for a second reason.** When packet 35 came to commit, the
+working-tree `audit/ledger.json` held **14 ids belonging to another session** — `V022`, `V029`-`V033`
+and `E001`-`E008`. Committing the working-tree file would have published another session's
+unverified claims under packet 35's name. The method is the one packet 31 arrived at: take HEAD's
+ledger, overlay YOUR OWN ids onto it, serialise at `JSON.stringify(_, null, 1)` (the indent
+`audit/scripts/ledger.mjs:29` writes), and commit that blob. **Diff by id first and confirm every
+change is yours** — packet 35's overlay moved 28 ids and its check confirmed 0 of them were anybody
+else's before the commit was made. Those 14 are still in the working tree, waiting for their owner.
+
 **A plain `git commit` here would commit that stale index**, and `git diff --cached HEAD --stat` says
 what that means: it would DELETE all five `_packet31*`/`packet-31*` scripts and both packet-31
 snapshots, and revert `NEXT.md` by 869 lines and `DECISIONS.md` by 255 — taking packet 29's records
