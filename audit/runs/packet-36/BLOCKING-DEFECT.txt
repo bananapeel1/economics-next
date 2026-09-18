@@ -1,0 +1,95 @@
+PACKET 36 BLOCKING DEFECT — diagram legibility on 390px phones
+
+STATUS: Verify B found a gate-blocking defect that prevents this packet from passing.
+
+THE DEFECT
+===========
+Every diagram in the staged section renders with text at 7.1–9.3 CSS px on a 390px viewport,
+against body copy of 14–17px. The diagrams are roughly half the readable size of surrounding prose.
+
+WORST CASE: Step 17 (What the Business Holds and Owes)
+- Statement of financial position table: figures like "Inventory $240,000", "Trade payables $180,000"
+- Ratio workings: "Current ratio = $400,000 ÷ $250,000 = 1.60:1"
+- All rendered at 8.54px — the smallest text on the page, and the one a student must read numbers from
+
+MEASUREMENT
+============
+Diagram component: 440-unit viewBox width
+Learn column at 390px: 313 CSS px available
+Scale factor: 0.711
+Authored font sizes: 10–13px
+Rendered on screen: 10–13px × 0.711 = 7.1–9.3px
+
+Six diagrams, all affected:
+| step | diagram | rendered range | affected |
+|---|---|---|---|
+| 6 | Profit Ladder | 8.54–9.25px | 26 of 26 labels |
+| 12 | Measuring Profitability | 7.11–8.54px | 21 of 21 labels |
+| 17 | Statement & working capital cycle | 8.54–10.67px | 60 of 60 labels |
+| 22 | Measuring & Improving Liquidity | 7.11–8.54px | 20 of 20 labels |
+| 29 | How Businesses Fail | 8.54–9.25px | 21 of 21 labels |
+
+WHY CHECKS MISSED IT
+=====================
+1. No validator rule checks rendered font size (only authored fontSize)
+2. No table check exists for text nodes inside SVG (only HTML <table>)
+3. No layout check catches content that fits the viewport because it has been scaled down
+4. The measurement that catches it is: authored-fontSize × (rendered-width ÷ viewBox-width)
+
+THE ESCAPE HATCH FAILS
+=======================
+Tapping a diagram opens an enlarge modal redrawn at 789–858px with text at 21.5–23.3px — readable,
+but wider than 390px. Result: the student gets one of two things:
+- Complete and unreadable (original scale)
+- Readable and requiring two-axis panning (in modal)
+
+There is no fit-to-width that is both readable and complete on the 390px phone this packet was built for.
+
+ADDITIONAL DEFECTS FOUND BY VERIFY A ROUND 1
+==============================================
+All three need fixing before round 2:
+
+1. `topFix-04` — explanation names option position, not value
+   Scripts/_packet36-assessment.mjs:104-106
+   "Dividing the interest by revenue instead gives the last figure" (points to option 3)
+   but 40,000 ÷ 2,000,000 = 2% which is option 3, while the correct answer is option 4
+   Fix: name the value "2%", not the position
+
+2. `structure-02` — duplicate fill-in on consecutive steps
+   Scripts/_packet36-content.mjs:248 and :278
+   Step 7 & 8 both have "Its gross profit margin is ___" with answer "30%"
+   Step 7's word bank is {30%, 8%, 22%, 35%, 12%}
+   A student who has just typed 30% gets the first blank free
+   Fix: give step 8 a different gross margin (e.g., 32% or 35%)
+
+3. `practice[9]` — malformed question (unclaimed by verifier but blocking)
+   Scripts/_packet36-assessment.mjs:242
+   Opens mid-sentence in lowercase after a period
+   "…failing to pay a supplier. weak cash flow, overestimation of sales,…"
+   This is the 10-mark Assess added for `structure-05`
+   Fix: capitalize first letter, move replacement to begin the template properly
+
+4. Working capital cycle math (unclaimed but blocking)
+   Scripts/_packet36-content.mjs:491-492
+   Renders 67 · 27 · 95 but hint says "the two stages added together"
+   67 + 27 = 94, not 95 (due to separate rounding per term)
+   Fix: ensure hint matches the calculation shown
+
+NEXT STEPS
+===========
+1. The diagram defect requires architectural work, not content fixes
+2. Options:
+   a) Reduce viewBox width to match 390px rendering (may affect larger screens)
+   b) Author SVG diagrams at smaller font sizes (tradeoff with readability at desktop)
+   c) Implement a responsive diagram component that detects viewport width
+   d) Defer diagram resolution and continue with content-only sections
+
+3. The four content defects (topFix-04, structure-02, practice[9], working-capital-math)
+   can be fixed immediately if a path forward on diagrams is chosen
+
+VERDICT
+========
+This packet is STAGED but CANNOT PASS until the diagram legibility blocking defect is resolved.
+The defect was found by Verify B and is not addressable through content changes alone.
+
+Reference: audit/runs/packet-36/verify-b.md, "Blocking defect" section

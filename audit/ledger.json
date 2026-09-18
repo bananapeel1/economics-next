@@ -4523,10 +4523,10 @@
    "rank": 0,
    "text": "Rebuild the practice set for WBS12 scope and IAL tariffs: delete the gearing (idx 1) and ROCE/asset-turnover/dividend-yield (idx 3) questions; add a 4-mark 'Calculate the current ratio and acid test ratio' from a mini statement of financial position, a 4-mark 'Explain one way...', a 10/12-mark 'Assess the internal causes of X's failure', and a 20-mark 'Evaluate whether improving liquidity or profitability should be the priority'; write levels-based guidance that explicitly requires a judgement (remove 'No explicit judgement mark').",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "draft?draft=1 practice[0..10]: 11 items, all 8 Appendix 6 command words at Unit 2 tariffs (bus_spec.txt:2216-2245, Assess=10); gearing/ROCE/asset-turnover/dividend-yield 0 hits in the whole staged bundle; practice[6] Calculate ratios from a labelled SoFP, practice[5] Explain 4, practice[9] Assess 10 internal causes, practice[10] Evaluate 20; 'No explicit judgement mark' 0 occurrences, Level 1-4 bands on practice[8],[9],[10]",
    "note": null
   },
   {
@@ -4536,10 +4536,10 @@
    "rank": 1,
    "text": "Fix the recall layer: remove 3-letter prefix hints on all 7 fill-ins (use word banks with distractors or numeric blanks); delete the duplicate income-statement reorder in net-profit and replace with a numeric profit-ladder fill-in; replace the external-causes 'gradual to sudden' reorder with a causal chain (recession -> income falls -> demand falls -> revenue below fixed costs -> cash exhausted -> closure) or an internal/external sort.",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "13 fill-ins; my own prefix-hint detector A/B'd fires 20x on audit/snapshots/2026-09-18-pre-packet-36 and 0x on the draft (one false positive: 'the same'/'the money held back'); all have 2-3 distractors; exactly one reorder remains in the section (content[4].sections[5], the failure causal chain), so the two income-statement reorders cannot recur",
    "note": null
   },
   {
@@ -4549,10 +4549,10 @@
    "rank": 2,
    "text": "Add the missing spec content as sections: statement of financial position (with a labelled mini example students can extract current assets/liabilities from), working capital and its management, operating profit margin, and a short profit-vs-cash section; introduce the IAL terms 'statement of comprehensive income' and 'profit for the year'; fix the 'Net profit (also called operating profit...)' sentence.",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "content[2].sections[1] statement of financial position + diagrams[2] scenario 0 labelled with both totals; content[2].sections[2] working capital; content[1].sections[1] operating profit margin; content[2].sections[0] profit-vs-cash; content[0].sections[4] statement of comprehensive income; every 'net profit' now equated to profit for the year",
    "note": null
   },
   {
@@ -4562,10 +4562,10 @@
    "rank": 3,
    "text": "Repair the quiz: reword Q15 to ask for operating profit (or supply interest and tax), rewrite Q19's explanation so it does not claim raising current liabilities improves working capital, dedupe Q5/Q17 and Q9/Q13, replace the three 'Evaluate...' length-giveaway MCQs with content questions on the balance sheet and improving profitability, and remap block 4 quizIndices from [3] to a business-failure item (Q6) and block 3 practiceIndices away from the gearing question.",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "Read from the served draft row, not the bundle file: curl localhost:3001/api/sections/managing-finance?draft=1 returns the ordinal-free explanations for quiz:cb90628b and quiz:e75f5a9d, which the stale bundle still carries as 'the second of them' and 'about the first ... about the second'; _content-write.mjs:120,130 writes section_quiz.draft as one whole array, so all 28 are the post-fix build. scripts/_packet36-assessment.mjs:106 names 8%/2%/35% by value (arithmetic recomputed by hand). My own wider ordinal scan over all 28 explanations finds only statement lines, 'the other three' and 'last year'. Q3 kills the Q15/Q0 profit confusion, Q20 has supplier credit leaving working capital unchanged (1.60:1 -> 1.42:1 recomputed), no stem opens with a command word, key strictly longest in 8/28 (29% vs 25% chance), difflib over all 378 stem pairs finds no duplicate. Pins read out of the draft via freeQuizPayload's serve order: blocks pin module indices 3/8/13/18/23, so block 4 is no longer [3] and no practice item mentions gearing. ORDINAL regex at packet-36-managing-finance.mjs:696 A/B'd in isolation: fires on the rejected string and on 'the second option', silent on the replacement and on 'last year'.",
    "note": null
   },
   {
@@ -4575,10 +4575,10 @@
    "rank": 4,
    "text": "Correct the Carillion example (it was loss-making, not 'profitable on paper', at collapse), reconcile the 'selling assets' contradiction in the Liquidity block, and add two diagrams (profit waterfall; working capital cycle) since the section currently has none.",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "'Carillion' 0 hits in the staged bundle and in the ?draft=1 payload; diagrams[0] is the revenue->gross->operating->profit-for-the-year waterfall and diagrams[2] scenario 1 is the working capital cycle; content[3].sections[2] teaches the underused-asset sale with its cost while content[3].takeaway and all 7 mistakes are silent on forbidding it",
    "note": null
   },
   {
@@ -4587,10 +4587,10 @@
    "kind": "accuracy",
    "text": "Understanding Profit > net-profit > body[0]: 'Net profit (also called operating profit or profit for the year, depending on the level of deduction)' conflates operating profit with net profit. IAL distinguishes operating profit (before interest and tax) from profit for the year (net profit). The section's own flow then says net = after interest and tax, quiz Q0 correctly calls revenue - COS - opex 'operating profit', and Q15 calls the same computation 'net profit'. Three inconsistent messages.",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "content[0].sections[3] body/keyIdea/misconception/examMatters all state profit for the year = net profit = operating profit less interest; the conflating sentence survives only as mistakes[0].looks_like, labelled as the error a student makes; quiz[1] and quiz[5] agree",
    "note": null
   },
   {
@@ -4599,10 +4599,10 @@
    "kind": "quiz",
    "text": "q15: No interest or tax given, so $80,000 is OPERATING profit, not net profit / profit for the year. Q0 labels the identical computation 'operating profit', and the section itself defines net profit as after interest and tax. Directly contradicts the content it tests.",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "quiz[3] asks the same computation (revenue 2,000,000, COS 1,300,000, opex 500,000, no interest) and keys 'an operating profit of $200,000'; no item in the 28-item bank calls revenue-COS-opex a net profit",
    "note": null
   },
   {
@@ -4635,10 +4635,10 @@
    "kind": "practice",
    "text": "p2: 'Assess the importance of liquidity management for a rapidly growing small business. (10 marks)' — tariff correct. But guidance is point-based and states 'No explicit judgement mark' — wrong for IAL: Assess is levels-marked and Level 4 requires a supported judgement/conclusion. Guidance actively steers students away from the thing that earns top level.",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "practice[8] is the same 10-mark Assess with Level 1-4 guidance, Level 4 'reaches a supported judgement, which is what Appendix 6 states the command word requires'; 'No explicit judgement mark' 0 occurrences anywhere in the staged section; tariff 10 matches bus_spec.txt:2238-2245 for Units 1/2",
    "note": null
   },
   {
@@ -4647,11 +4647,11 @@
    "kind": "structure",
    "text": "Meta number '2.3.3' with title 'Managing Finance' does not match the IAL spec structure: 2.3 is 'Managing finance' with 2.3.1 Profit, 2.3.2 Liquidity, 2.3.3 Business failure. This section bundles all of 2.3 (unsure of exact sub-numbering, confident of the structure).",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
-   "note": null
+   "status": "wont-fix",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "Premise refuted, nothing changed, so not confirmable. bus_spec.txt:921 IS the heading '2.3.3 Managing finance' and Profit/Liquidity/Business failure are sub-topics 1/2/3 inside it at :925, :935, :943 - there is no 2.3 with 2.3.1-2.3.3 under it. app/business/unit-2/page.js:32 ref '2.3.3' title 'Managing Finance' is correct and untouched by the diff. Correct disposition is wontfix with that citation, as with C-entrepreneurs-leaders-structure-01 and C-market-failure-specGap-05; the gate accepts wont-fix.",
+   "note": "Premise refuted against the specification, so there is nothing to fix. bus_spec.txt:921 IS the heading '2.3.3 Managing finance'; :844 is 2.3.1 Planning a business and raising finance (packet 19) and :885 is 2.3.2 Financial planning (packet 31); Profit, Liquidity and Business failure are sub-topics 1, 2 and 3 INSIDE 2.3.3, at :925, :935 and :943. There is no 2.3 holding 2.3.1-2.3.3, so the renumber the item asks for would invent a structure the IAL specification does not have. app/business/unit-2/page.js:32 (ref '2.3.3', title 'Managing Finance') is already correct and is untouched by this packet. This is the 154-item UK GCE numbering class in MEMORY. The real defect underneath the item - block titles that did not follow the spec's own sub-topics - was fixed and is claimed under structure-03. Same disposition as C-entrepreneurs-leaders-structure-01 and C-market-failure-specGap-05."
   },
   {
    "id": "C-managing-finance-structure-02",
@@ -4659,10 +4659,10 @@
    "kind": "structure",
    "text": "Duplicate recall on consecutive steps: net-profit's reorder (shown 'spaced' at top of step B) and structure-of-income-statement's reorder (shown 'immediate' at bottom of step C) are the same four income-statement lines.",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "Read all 24 steps out of the served draft row (content is a free surface, unsliced): scripts/_packet36-content.mjs:285-292 replaces step 7's recall with a three-way split of the revenue dollar (60/32/8, sums to the whole dollar), so the identical blank 'Its gross profit margin is ___' -> '30%' on consecutive steps 6 and 7 is gone and the two word banks are disjoint. My own all-pairs scan over the live recalls, comparing (blank, answer) for fill-ins and item text for reorder/classify/match across every pair of the 24 steps, finds no shared unit anywhere and no two identical recalls; exactly one reorder remains (step 24), so the named instance is gone too. pairsOf at packet-36-managing-finance.mjs:416, extracted and A/B'd in isolation, still catches two identical reorders (this finding's original shape) as well as identical classify items and match pairs, so the (blank, answer) unit did not replace the old blind spot with a new one. Residual, not a reopen: step 16's bank contains 'inventory', an answer given on step 14 - two steps apart, different template, different reasoning.",
    "note": null
   },
   {
@@ -4671,10 +4671,10 @@
    "kind": "structure",
    "text": "Blocks 1 ('Understanding Profit') and 2 ('Income Statement') overlap heavily: net-profit already walks the statement top-to-bottom, so block 2 section 1 re-teaches it. Better split: Block 1 = profit calculations + statement of comprehensive income; Block 2 = profitability ratios + improving profitability.",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "content[] blocks are Profit / Profitability / Cash and the Statement of Financial Position / Liquidity / Business Failure - the exact split the item asks for (block 1 = calculations + statement of comprehensive income at content[0].sections[0..4]; block 2 = margins + improving profitability at content[1].sections[0..4]); no subsection re-teaches another",
    "note": null
   },
   {
@@ -4683,10 +4683,10 @@
    "kind": "structure",
    "text": "Inline quiz mapping is wrong for block 4: quizIndices [3] shows the acid-test MCQ at the end of 'Causes of Business Failure'. Inline practice mapping is wrong for block 3: practiceIndices [1] shows the gearing question (untaught) at the end of 'Liquidity'. Blocks 1 and 4 have no practice at all, so practice 2 (liquidity Assess) and 4 (improve NPM) are never surfaced in Learn Mode.",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "Authored pins read from the DB draft (served pins [3,8,13,18,23] reverse-resolve through lib/preview-limits.js to the bundle's [3-7][8-12][13-17][18-22][23-27]): quiz for block 4 is all business-failure (quiz[23..27]); practice [0,1][2,3][4,5][6,7,8][9,10] gives every block practice, block 3's carries no gearing, and blocks 0 and 4 now have practice where they had none",
    "note": null
   },
   {
@@ -4695,10 +4695,10 @@
    "kind": "structure",
    "text": "No practice question on business failure, the block with the most evaluative potential (typical IAL: 'Assess the likely causes of X's failure' 10/12 marks), and no 'Calculate' question even though IAL Unit 2 routinely asks 4-mark calculate current ratio / acid test / margin from a table.",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "practice[9] 'Assess the likely internal causes of its failure. (10 marks)' pinned to block 4, plus practice[10] Evaluate 20 framed on avoiding failure; three Calculate items at practice[1],[2],[6], the last extracting current ratio and acid test from a supplied statement of financial position",
    "note": null
   },
   {
@@ -4707,10 +4707,10 @@
    "kind": "structure",
    "text": "Zero diagrams for a section that is naturally visual: a revenue -> gross profit -> operating profit -> profit for the year waterfall, and a working capital cycle. Flashcards already contain a working-capital-cycle 'Trace' chain that has no counterpart in content[].",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "diagrams[] is 8 from 0; diagrams[0] 'The Profit Ladder' is the revenue->gross->operating->profit-for-the-year waterfall and diagrams[2] scenario 1 'The working capital cycle' is the loop the Trace flashcard chain had no counterpart for; every block carries a diagramId",
    "note": null
   },
   {
@@ -4719,10 +4719,10 @@
    "kind": "structure",
    "text": "Flashcards and quiz test content not in content[]: statement of financial position, current assets/liabilities definitions, working capital. Learners hit these in free Notes/Flashcards or quiz without ever having been taught them in Learn Mode.",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "content[2].sections[1] teaches the statement of financial position and the current/non-current test, content[2].sections[2] teaches working capital; both precede every flashcard and quiz item that uses them, so nothing is tested before it is taught",
    "note": null
   },
   {
@@ -4731,10 +4731,10 @@
    "kind": "structure",
    "text": "Flashcards 19-21 are exact duplicates of 22-24 (three 'Trace...' cards repeated).",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "34 flashcards in the staged draft (counts.flashcards=34 from the DB row matches the bundle): zero duplicate fronts and zero duplicate whole cards under canonicalised comparison; the three repeated 'Trace...' cards no longer exist",
    "note": null
   },
   {
@@ -4743,10 +4743,10 @@
    "kind": "structure",
    "text": "Takeaway for Liquidity block contradicts its own body (sale of underused assets listed as an option in body, forbidden in takeaway/misconception).",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "content[3].takeaway (Liquidity) says nothing about forbidding an asset sale; content[3].sections[2] teaches it as improving everything (cash 130,000, working capital 270,000, 2.08:1, 1.12:1) and names its real cost as lost capacity; flashcards[23] and the 7 common mistakes agree - no takeaway or misconception contradicts the body",
    "note": null
   },
   {
@@ -4755,11 +4755,11 @@
    "kind": "structure",
    "text": "Step pairing (gross+net, improve alone; structure+interpreting; understanding+ratios, improving alone; internal+external, why-new alone) is coherent. Difficulty ramp (calculations -> statement -> liquidity -> failure) is sensible.",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
-   "note": null
+   "status": "wont-fix",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "CORRECTION of an accidental confirm issued seconds earlier with placeholder text; this is the real verdict. The item asserts NO defect - it records that the old step pairing (gross+net, improve alone; structure+interpreting; ...) and difficulty ramp are coherent. There is nothing to make un-occurrable, and the packet deleted the pairing it praises: one subsection is now one step, 24 of them. Correct disposition is wontfix with a note, as with C-business-objectives-strategy-structure-07 and C-globalisation-structure-09.",
+   "note": "The item asserts no defect: it records that the OLD step pairing (gross+net, improve alone; structure+interpreting; understanding+ratios, improving alone; internal+external, why-new alone) and the difficulty ramp are coherent. There is nothing to make un-occurrable. The rebuild also deleted the pairing it praises - one subsection is now one step, 24 of them - so the observation no longer describes the section either way. Same disposition as C-business-objectives-strategy-structure-07 and C-globalisation-structure-09."
   },
   {
    "id": "C-managing-finance-structure-11",
@@ -4767,10 +4767,10 @@
    "kind": "structure",
    "text": "Misconceptions are mostly real student errors (gross vs net; higher revenue = higher profit; income statement as snapshot; profit = cash; 2:1 rule; bottom-line only). 'Students assume having a good idea is enough' (why-new-businesses) is filler, not an exam misconception.",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "All 24 subsection misconceptions and all 7 common mistakes read as nameable exam errors (gross-vs-net, margin denominator, profit-vs-profitability, 2:1 rule, supplier credit and working capital, blaming an external cause); the 'why-new-businesses' subsection carrying the 'good idea is enough' filler no longer exists in content[]",
    "note": null
   },
   {
@@ -4779,10 +4779,10 @@
    "kind": "structure",
    "text": "All seven fill-ins share one design flaw: hints are the first three letters of the answer, so the recall widget tests spelling completion rather than understanding. Systemic, not per-item.",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "Systemic fix verified systemically: my own prefix-hint detector, A/B'd against the pre-packet snapshot, fires 20x there and 0x on the draft's 13 fill-ins (the single hit is a false positive on 'the same'); every fill-in now carries semantic hints and 2-3 distractors, against 0 distractors on all seven live ones",
    "note": null
   },
   {
@@ -4791,10 +4791,10 @@
    "kind": "specGap",
    "text": "2.3.1 Profit: operating profit margin — not taught as a section (only named in an extras chain); only GPM and NPM are taught.",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "content[1].sections[1] 'Operating Profit Margin' is a taught subsection with body, keyIdea, misconception, examMatters and its own recall, not an extras chain mention; bus_spec.txt:931-933 names all three margins and all three are taught at content[1].sections[0..2]",
    "note": null
   },
   {
@@ -4803,10 +4803,10 @@
    "kind": "specGap",
    "text": "2.3.1 Profit: 'statement of comprehensive income' and 'profit for the year' — the IAL labels students will see on data tables are never introduced.",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "content[0].sections[4] 'The Statement of Comprehensive Income' teaches the label and cites bus_spec.txt's own '(profit and loss account)'; 'profit for the year (net profit)' is used throughout content, notes, quiz[1], practice[0] and flashcards[3]",
    "note": null
   },
   {
@@ -4815,10 +4815,10 @@
    "kind": "specGap",
    "text": "2.3.1 Profit: distinction between profit and cash — only covered obliquely inside the Liquidity block; no dedicated treatment (e.g. credit sales, depreciation, capital purchases, loan repayments).",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "content[2].sections[0] 'Profit Is Not Cash' is a dedicated subsection for bus_spec.txt:935 (2a), teaching credit sales, unsold inventory, outright asset purchase, loan repayment and supplier credit, and reconciling 160,000 profit to -100,000 cash. Depreciation correctly refused: it occurs ONCE in bus_spec.txt, at :1016, inside 'exchange rates (appreciation, depreciation)'",
    "note": null
   },
   {
@@ -4827,10 +4827,10 @@
    "kind": "specGap",
    "text": "2.3.2 Liquidity: statement of financial position (balance sheet) — not taught at all in content[]; only appears in flashcards and one misconception aside.",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "content[2].sections[1] teaches the statement of financial position for bus_spec.txt:937; diagrams[2] scenario 0 is the labelled statement with both totals ringed and the non-current lines greyed; practice[6] makes extraction from it a 4-mark Calculate",
    "note": null
   },
   {
@@ -4839,10 +4839,10 @@
    "kind": "specGap",
    "text": "2.3.2 Liquidity: working capital and its management / the importance of cash — not taught in content[] despite being quizzed (Q9, Q13, Q19) and flashcarded.",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "content[2].sections[2] 'Working Capital' and content[2].sections[3] 'The Importance of Cash' teach bus_spec.txt:941-942 (2c) in content[], including the cycle as a flow block; quiz[16],[17] and flashcards[16],[17],[18] now sit on taught material",
    "note": null
   },
   {
@@ -4851,10 +4851,10 @@
    "kind": "specGap",
    "text": "2.3.3 Business failure: internal causes list is reasonable; spec examples such as marketing failure and poor quality are only in flashcards, not content (minor).",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "content[4].sections[2] 'Poor Marketing and Poor Quality' teaches both bus_spec.txt:948-949 examples in content[] with worked figures (15% volume loss -> operating profit 95,000; 3% breakage -> 161,000), not only in flashcards",
    "note": null
   },
   {
@@ -4863,10 +4863,10 @@
    "kind": "specGap",
    "text": "Unsure: whether the IAL spec expects calculation of the current/acid test ratios from a supplied statement of financial position — content teaches the formulas but never shows a statement to extract figures from.",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "Answered rather than hedged, and I checked the line myself: bus_spec.txt:816-821 says Unit 2 students must apply the Appendix 9 ratios and that 'These ratios will not be supplied in the examination', so extraction from a supplied statement is expected. diagrams[2] scenario 0 supplies one, content[2].sections[1] teaches the extraction, practice[6] examines it at 4 marks",
    "note": null
   },
   {
@@ -16522,10 +16522,10 @@
    "kind": "specThin",
    "text": "2.3.3 3a) Internal cause: overestimation of sales — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "content[4].sections[1] defines overestimation of sales (bus_spec.txt:945) and quantifies it: buying in for 25% more trade leaves 325,000 of excess tiles, a quarter written off is 81,250, 40.6% of the year's operating profit - re-derived from the served text and correct",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16534,10 +16534,10 @@
    "kind": "specThin",
    "text": "2.3.3 3a) Internal cause: poor inventory control — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "content[4].sections[1] defines poor inventory control (bus_spec.txt:947) as both too much and too little, quantified at 67 days of cover against 30 releasing 133,151, and links it to inventory JIT in content[3].sections[3]",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16546,10 +16546,10 @@
    "kind": "specThin",
    "text": "2.3.3 3b) External cause: interest rates — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 36,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-36",
+   "verified_by": "packet-verifier 2026-09-18",
+   "evidence": "content[4].sections[4] defines interest rates as an external cause (bus_spec.txt:955) and works it: 500,000 at 8% rising 4 points takes interest to 60,000 and profit for the year from 160,000 to 140,000 while operating profit does not move - the point the whole ladder exists to make; quiz[26] and flashcards[31] test it",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {

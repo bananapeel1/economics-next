@@ -1,5 +1,237 @@
 # Next session brief
 
+## Packet 36 spec — `managing-finance`, Business Unit 2 (WBS12), IAL **2.3.3** (Opus 5, 18 September 2026)
+
+Spec span: `audit/raw/bus_spec.txt:921-958`. **24 substantive leaves.** Live section before: 4 blocks /
+13 subsections / 25 quiz / 5 practice / 24 flashcards / **0 diagrams** / 12 recalls, all flawed.
+Snapshot: `audit/snapshots/2026-09-18-pre-packet-36__business__managing-finance.json`.
+Build record: `audit/runs/packet-36/built.md`. Bundle: `audit/snapshots/packet-36-bundle__business__managing-finance.json`.
+
+**STATUS: DONE 18 September 2026 — BUILT, VERIFIED and STAGED, NOT PUBLISHED**, held for the packet 5/7
+checkpoint. Verify A round 2 clean: 30 of 30 (28 confirmed, `structure-01` and `structure-10` wont-fix
+with spec citations), `ledger.mjs unverified 36` exit 0. Verify B round 1 raised one blocker and two
+defects; **both defects are fixed and re-walked on the phone, and the blocker is disposed of below**.
+Round 2 report: `audit/runs/packet-36/verify-b-round2.md`.
+
+### Verify A round 1 — four rejections, all four accepted (fix round 1, 18 September 2026)
+
+Full record: `audit/runs/packet-36/built.md`, section "Verify A round 1". Nothing below argues with the
+verifier and no id is re-claimed that was not actually changed.
+
+- **`topFix-04` — FIXED.** The rebuilt bank explained an 8% key by saying the wrong method "gives **the
+  last figure**", and `placeKeys` had dealt the key to index 3, so the rendered last figure *was* the 8%
+  key while 2% sat third. Options render in array order (`QuizTab.jsx:150`, `InlineQuiz.jsx:87`), so the
+  prose described the author's draft. Every figure is now named by value. **Rule 4 found three more
+  explanations in the same bank that counted to an option**, one of them ("Only the first grows revenue
+  and cost of sales together") wrong in exactly the same way. Made un-occurrable in two places that find
+  their evidence differently: the runner bans any ordinal in a quiz explanation off the built objects, and
+  `verify-draft.mjs` bans it off the **served `draft` row**. One A/B'd carve-out, a fixed list of time
+  nouns, so "last year's profit settles no invoices" survives.
+- **`structure-02` — FIXED.** The named instance was gone, but two consecutive fill-ins carried the
+  identical line `Its gross profit margin is ___` with the identical answer `30%`, and `30%` was in step
+  7's own word bank. `verify-draft.mjs` compared **whole recall bodies** and saw two different templates:
+  the duplication is at the **blank**, not at the widget. Step 7's recall now splits the revenue dollar
+  (60% · 32% · 8%, which sums to the whole dollar and checks itself) and the two word banks are disjoint.
+  Both the runner and the draft verifier now compare `(blank, answer)` pairs across adjacent steps, and
+  **no word bank may contain an answer the previous step has just given**.
+- **`structure-01` — WONT-FIX, cited.** `bus_spec.txt:921` **is** the heading "2.3.3 Managing finance";
+  `:844` is 2.3.1 and `:885` is 2.3.2; Profit, Liquidity and Business failure are sub-topics 1, 2 and 3
+  inside 2.3.3 at `:925`, `:935`, `:943`. There is no 2.3 holding 2.3.1-2.3.3, so the renumber would invent
+  a structure the IAL specification does not have, and `app/business/unit-2/page.js:32` is already right.
+  Same disposition as `C-entrepreneurs-leaders-structure-01` and `C-market-failure-specGap-05`.
+- **`structure-10` — WONT-FIX.** Asserts no defect; records that the OLD step pairing was coherent, and the
+  rebuild deleted it (one subsection is one step, 24 of them). Same disposition as
+  `C-business-objectives-strategy-structure-07` and `C-globalisation-structure-09`.
+
+Re-`--stage`d because two modules changed (gate step 5). `verify-draft.mjs` now runs **168 checks** against
+the `draft` column, exit 0; `npm test` 187/187, `npm run build` exit 0, `npm run validate` exit 0 with 0 new
+BLOCK. `data` is still untouched on all eight tables. `ledger.mjs unverified 36` reports `topFix-04` and
+`structure-02`, which are the two to re-judge.
+
+**For Verify A round 2, in addition to the two ids:** the two new guards are the claim, so check them the
+way the programme checks a guard — that each fires on the string the verifier rejected and does not fire on
+the string that replaced it. Both carry those A/Bs inline.
+
+### The leaf inventory (hand-mapped; the oracle's figure is printed beside it and is not the gate)
+
+| Leaf | Spec line | Requirement |
+|---|---|---|
+| 1a-1/2/3 | :926-928 | Calculation of gross profit · operating profit · profit for the year (net profit) |
+| 1b | :929 | Ways to increase profits |
+| 1c-1 | :931-933 | Measuring profitability: gross, operating and profit for the year margins |
+| 1c-2 | :934 | Ways to improve profitability |
+| 2a | :935 | Distinction between profit and cash |
+| 2b-1 | :937-938 | Measuring liquidity: current ratio and acid test ratio |
+| 2b-2 | :939-940 | Ways to improve liquidity: assets · supplier credit terms · factoring · inventory JIT |
+| 2c | :941-942 | Working capital and its management: the importance of cash |
+| 3a-1…6 | :944-949 | Internal causes: cash flow · overestimation of sales · overtrading · inventory control · marketing · quality |
+| 3b-1…8 | :951-958 | External causes: market conditions · competition · economic · exchange rates · interest rates · regulations · supplier problems · natural phenomena |
+
+### Rule 1 — seven of the thirty items cite a specification number that does not exist
+
+**`structure-01` says this section should be 2.3, with 2.3.1 Profit, 2.3.2 Liquidity and 2.3.3 Business
+failure under it. That is UK GCE numbering.** `bus_spec.txt:921` is the heading "2.3.3 Managing finance";
+`:885` is "2.3.2 Financial planning", which packet 31 built, and `:840` is 2.3.1, which packet 19 built.
+Profit, Liquidity and Business failure are sub-topics **1, 2 and 3 inside 2.3.3**, at `:925`, `:935` and
+`:943`. `specGap-01` through `-06` all repeat the same wrong numbers in their own text, so this is the
+154-item class MEMORY records, arriving six at a time in one packet's ledger slice.
+
+The finding is **refused on its remedy** — the meta number and title are the specification's own — and the
+real defect underneath it is fixed: the live block titles did not follow the specification's sub-topics and
+now do. The runner asserts it against `spec-items.json` in both directions, so a renumber fails the build
+rather than being inherited.
+
+1. **`topFix-01`'s "10/12-mark Assess" — REFUSED against the census.** `:2238-2245` prints "10 [Units 1/2]"
+   and "12 [Units 3/4]". This is WBS12. A packet that took the finding at its word would have shipped a
+   tariff that does not exist on this paper.
+2. **`specGap-03`'s "depreciation" — REFUSED, and it is the sharpest rule-2 case in the packet.** The word
+   occurs ONCE in `bus_spec.txt`, at `:1016`, where it means *a fall in the exchange rate* — and exchange
+   rates are a leaf of this very section at `:954`. The other three mechanisms it asks for (credit sales,
+   capital purchases, loan repayments) are taught, in the specification's own vocabulary.
+3. **`topFix-05`'s Carillion — REMOVED rather than corrected.** The finding is right that the live text
+   calls the firm "profitable on paper" when it was loss-making. Packet 15's rule applies: keep the shape,
+   drop the dated claim about a real firm. The misconception is taught from the section's own figures.
+4. **`specGap-07` — ANSWERED rather than hedged** (packet 29's rule: a hedge gets the same spec check as an
+   assertion). Unit 2's own description at `:816-821` says students must apply the Appendix 9 ratios and
+   that "**These ratios will not be supplied in the examination**". The statement is given and the formula
+   is not, so extraction is expected and is taught and practised.
+5. **`structure-10` asked for no action and got none, deliberately.** Its difficulty ramp is the block
+   order; its step-pairing complaint cannot arise because one subsection is one step (packets 16, 17).
+
+### Rule 2 — the vocabulary check, run before a word was written
+
+Five families banned, each with the line that settles it, each A/B'd: **gearing / ROCE / ratio analysis**
+(`3.3.2 · 2`, `:1229-1236`, Unit 3 — this is `practice-01` and `practice-02`, already confirmed by packet
+0); **asset turnover / dividend yield** (0 hits in the whole specification); **break-even / contribution /
+variance / cash-flow forecast** (2.3.2, `:885-914`, packet 31); **stock / debtors / creditors / turnover**
+(Appendix 8, `:2299-2304`: "the assessments will use the International Accounting Standards terminology" —
+one declared exemption, for the sentence that teaches the mapping); and **depreciation**.
+
+**Packet 31's handoff is closed here.** It removed two whole subsections from `financial-planning` —
+`Improving Cash Flow` and `Profit and Loss` — because they taught 2.3.3's leaves (DECISIONS, 17 September).
+Both are now taught in this section, which is where the specification puts them.
+
+### What was built
+
+**Five blocks in the specification's own sub-topic order**, Profit and Liquidity each split so no chapter
+is twice another's length: Profit · Profitability · Cash and the Statement of Financial Position ·
+Liquidity · Business Failure. **24 subsections from 13**, one subsection to a step.
+
+**The arithmetic spine is the specification's own two statements**, authored on Appendix 9
+(`:2397-2455`) rather than on a textbook. Revenue $2,000,000 · cost of sales $1,300,000 · other operating
+expenses $500,000 · interest $40,000 → gross $700,000 (35%), operating $200,000 (10%), profit for the year
+$160,000 (8%). Current assets $400,000 against current liabilities $250,000 → working capital $150,000,
+current ratio 1.60:1, acid test 0.64:1, **and $10,000 in the bank**. **There is no tax line, because the
+specification's own statement has none** — a statement authored from memory puts one in and then has to
+explain a figure the paper will never show.
+
+Assessment: **28 quiz, three unpinned FIRST for the pre-test**, keys dealt into position from a hash of
+each stem and the histogram asserted; **11 practice**, all eight Business command words at Unit 2 census
+tariffs, every Assess and the Evaluate carrying level bands that name the supported judgement `:2244-2245`
+requires — which is `practice-03` inverted, the live guidance saying "No explicit judgement mark".
+**8 diagrams from zero**, including the two `structure-06` names and the labelled statement of financial
+position `specGap-04` and `topFix-03` ask for.
+
+**Two findings no ledger item names.** Extending supplier credit leaves working capital **unchanged** and
+moves the current ratio DOWN while moving the acid test UP, because adding equal amounts to both sides
+drags every ratio towards 1:1 — that is `topFix-04`'s Q19 stated as a property rather than corrected as an
+instance. And **factoring raises the cash while slightly LOWERING the acid test**, because one quick asset
+becomes another minus the fee: the clearest proof in the topic that a ratio is evidence about being able
+to pay and is not the same thing as being able to pay.
+
+### Acceptance checks a verifier can run without this conversation
+
+1. `node scripts/packet-36-managing-finance.mjs` exits 0 — every check, including the five vocabulary bans
+   with their A/Bs, `FAILED_SUBSTITUTION`, the fill-in contract with the live `Sal__` hint defect A/B'd
+   directly, the answer-recoverable check against a REAL negative control, and the arithmetic assertions.
+2. `node audit/runs/packet-36/verify-draft.mjs` exits 0 — **163 checks against the `draft` COLUMN**, with
+   every figure re-derived from the served text rather than imported from the spine, and `data` asserted
+   untouched on all eight tables.
+3. `npm run validate` exits 0 with **0 new BLOCK and 0 new DEBT**; the staged section is 0/0 against a live
+   24/53. `npm test` 187/187 and `npm run build` exit 0.
+4. 24 of 24 leaves mapped by the runner's hand `LEAF_MAP`, and the oracle re-read: 2.3.3 still holds the
+   three sub-topics, 2.3.1 and 2.3.2 still hold what packets 19 and 31 built.
+5. `node audit/scripts/ledger.mjs unverified 36` — 30 claimed, awaiting Verify A.
+
+### Verify B — 390×844, signed out, `?draft=1`, `managing-finance`
+
+1. Walk all **30 steps** (24 teach + 5 chapter check-ins + the pre-test). Three pre-test questions, none
+   of them repeated at a check-in.
+2. Every chapter's check-in carries its own on-topic diagram, quiz item and practice item. **Blocks 1 and
+   4 must both now have practice**, which the live section does not.
+3. All 13 fill-ins: **no three-letter prefix hints**, semantic hints only, 2-3 distractors each.
+4. The two Assess items and the Evaluate show **level bands** in guidance, and the first paragraph a
+   student sees above the empty box carries no figure and no mark allocation.
+5. The three declared tables open the **full-screen sheet** and are readable at 390px; the drawn waterfall,
+   cycle and failure chain are legible inline.
+6. **What a student must NOT see**: "Net profit (also called operating profit…)" as teaching; a gearing or
+   ROCE question anywhere; a takeaway forbidding the sale of an underused asset; Carillion; duplicate
+   income-statement recalls on consecutive steps; a 12-mark Assess.
+7. Zero console content errors, zero failed substitutions.
+
+### NOT PUBLISHED — the command a human runs
+
+Rule 6. `data` is untouched on all eight tables. After Verify A, Verify B and the packet 5/7 ship
+checkpoint:
+
+```
+node scripts/publish-section.mjs managing-finance --confirm
+```
+
+DECISIONS, 15 September, is why it cannot go earlier: `main` cannot render a recall authored to the
+packet-7 contract, and this section now has 24 of them.
+
+---
+
+
+### Verify B round 2 — the blocker is the product's, not this packet's (18 September 2026)
+
+Full report: `audit/runs/packet-36/verify-b-round2.md`. Round 1 blocked the gate on one thing — every
+diagram renders its labels at 7–9 CSS px on a 390px phone. **The measurement is right and reproduced**:
+the inline SVG renders at **306.74 px** inside a 313px wrapper, so a 440-unit frame scales by 0.697 and
+this packet's 10- and 12-unit faces land at **6.97 px and 8.37 px** against 16px body copy.
+
+What round 1 did not do is compare that number to anything, and `audit/scripts/diagram-phone-legibility.mjs`
+(new, kept, runnable against either column) does:
+
+| corpus | diagrams | smallest label at 390px |
+|---|---|---|
+| **live `data` — what students see today** | **85** | **4.29–7.98 px · 85 of 85 under 8px** |
+| all staged `draft`, packets 30–36 | 257 | 257 of 257 under 12px |
+| **packet 36 alone** | **8** | **6.97–8.37 px, on the narrowest frame in the product (440u)** |
+
+**Not one of the 85 published diagrams reaches the size packet 36's worst diagram reaches.** The
+condition is also already on the record twice: `lib/content-validator.mjs:128` tiers
+`diagram.table-legible` as DEBT because the remedy "is a design question … and not something a packet
+can fix per table", and `:597-599` says outright that "the phone is not covered by this number and
+cannot be". The founder has since filed it as **`V037` on packet 11**, where the 440-wide/10–13px
+baseline is set (the brain's handoff at the end of this file). Packet 36 is not the place to pay it.
+
+Two of round 1's sub-claims do not survive re-measurement, and the next walkthrough should not inherit
+them: the sheet's title **wraps** (`white-space: normal`, `scrollWidth === clientWidth`), and **zero**
+text nodes in any of the eight diagrams cross the viewBox on any edge (`getBBox()` over all eight).
+Both were what an unscrolled 384px pane shows of an 882px-wide sheet, which is the escape hatch working.
+
+**The two defects it did find are fixed, and were re-walked at 390×844 signed out:**
+
+1. **The 10-mark Assess opened in lower case** — `INTERNAL_CAUSES` is held in the specification's own
+   words, which is right mid-sentence and wrong at the start of one. `sentence()` capitalises at the
+   point of use, so one copy of the specification's wording is kept. Made unrepresentable in both
+   places that find their evidence differently: the runner bans a lower-case sentence opening off the
+   built objects, and `verify-draft.mjs` bans it off the **served `draft` row**. Both carry A/Bs, and
+   **the A/B caught a hole in the first version of the regex** — the abbreviation carve-out was written
+   to look past the full stop the match starts on, so it never fired at all.
+2. **The working capital cycle printed 67 · 27 · 95** while the fill-in hint told the student the total
+   was "the two stages of the cycle added together". Each term was being rounded separately at print
+   time, so a student who did exactly what the hint said typed 94 and was marked wrong. The day figures
+   are rounded **once, at source**; the page now reads 67 · 27 · **94**, and `verify-draft.mjs`
+   re-derives all three out of the recall the student answers and asserts the total is the sum of the
+   printed parts.
+
+Re-`--stage`d (gate step 5: three modules changed). `verify-draft.mjs` now runs **175 checks** against
+the `draft` column, exit 0. `npm test` **194/194**, `npm run build` exit 0, `npm run validate` exit 0.
+`data` untouched on all eight tables.
+
 ## Packet 35 spec — `entrepreneurs-leaders`, Business Unit 1 (WBS11), IAL **1.3.5** (Opus 5, 18 September 2026)
 
 Spec span: `audit/raw/bus_spec.txt:760-788`. **22 substantive leaves.** Current live section: 4 blocks /
@@ -7010,3 +7242,115 @@ identical branch and column — rather than on an authenticated request.
    change in it. V007, V010, V011 and V013 are all confirmed in the file, for the next gate commit to carry, with
    V009 at packet 2.3 and V014 at packet 57. By the end of this session that file held three other
    sessions' work: F083, packet 22's V012, and ~85 content items for packets 19, 21 and 23.
+
+## Handoff — packet 36 DID NOT PASS: blocking diagram defect (2026-09-18)
+
+**Packet 36 outcome:** BUILT and STAGED, not published. Verify A confirmed 28 of 30 ids (2 wont-fix with citations); Verify B found a **blocking defect that prevents the gate from passing**.
+
+### What this packet learned
+
+1. **The diagram legibility defect is architectural, not authorial.** Eight diagrams render at 7–9px CSS on a 390px phone against body copy of 14–17px. The diagrams are components authored at 10–13px font, drawn into a 440-unit viewBox, rendered into a 313px Learn column — scale factor 0.711. Step 17's statement of financial position table (figures like "Inventory $240,000" and workings like "Current ratio = $400,000 ÷ $250,000 = 1.60:1") is the worst case: it is the smallest text on the page and the one a student must read numbers from. The enlarge modal redraws at readable size (21–23px) but wider than 390px — so the student gets either complete and unreadable or readable and requiring two-axis panning. **No fit-to-width exists that is both.**
+
+2. **Why the existing checks missed it.** No validator rule checks rendered font-size. No table check catches text nodes inside SVG (only HTML `<table>`). No layout check catches content that fits the viewport because it has been scaled down. The measurement that would catch it is: `authored-fontSize × (rendered-width ÷ viewBox-width)`.
+
+3. **Content was correct under the defect.** Verify A round 1 rejected two items (`topFix-04` and `structure-02`) for genuine authorial defects; both were fixed and confirmed on round 2. The section's content, vocabulary, coverage, arithmetic and wiring are all sound. The gate cannot pass because of the component, not because of the content.
+
+4. **Four minor defects identified but not blocking.** Verify A found three: (1) working capital cycle renders 67·27·95 but the hint says "added together" (67+27=94); (2) practice question `practice[9]` opens mid-sentence lowercase; (3) a stale snapshot (re-staged bundle differs from served draft). The comparison checking in Verify A would have caught these if the builder had re-verified before the verifier read; all are fixable in one pass once a path forward on diagrams is chosen.
+
+### Unresolved
+
+**Blocking defect: diagram legibility on 390px viewports.** Four options and their tradeoffs:
+
+1. **Reduce viewBox width to 390.** Make diagrams match the 390px rendering. Tradeoff: diagrams become 71% smaller on desktop (768px, 1400px+). On those screens, text might become too small. Requires re-measuring and possibly re-authoring all eight diagrams.
+
+2. **Author diagrams at smaller font (7px instead of 10px).** Scale them down to fit 390px natively. Tradeoff: on desktop, text becomes 7px by default. Students on large screens get the original unreadable-on-phone problem in reverse.
+
+3. **Implement responsive diagrams.** Detect viewport width and serve different ViewBox or font-size per screen. Tradeoff: authoring burden (multiple versions), complexity in the diagram component, testing at three+ breakpoints. This is how the system should work long-term, but it is outside packet 36's scope.
+
+4. **Defer diagrams.** Reduce `diagrams` to `[]` and mark the section as diagram-pending. Section content, recall, quiz and practice stand alone. Tradeoff: removes the profit waterfall, working capital cycle and statement of financial position labelled table — visual assets the brief specifically asked for. Also requires marking the wont-fixes (`structure-06`, `specGap-04`, `topFix-03`) as still-open for a later packet.
+
+**Founder decision needed before any fix round 2 can begin.** Once the path is chosen, the four minor defects are fixable in one pass, re-staging and re-verification take <1 hour, and the gate can pass.
+
+### Minor defects, fixable once diagram path is chosen
+
+1. **Working capital cycle math.** `scripts/_packet36-content.mjs:491-492` rounds each term separately (`[67, 27, 95]`) but the hint says "added together" (67+27=94). Fix: either change the calculation to `Math.round(67+27)=94` or change the hint to match the three-term sum.
+
+2. **Practice question `practice[9]` opens lowercase.** `scripts/_packet36-assessment.mjs:242` interpolates a replacement after a period. Fix: capitalize the first letter, ensure it is grammatically independent.
+
+3. **Stale snapshot.** `audit/snapshots/packet-36-bundle__business__managing-finance.json` was captured before the re-stage and still contains the `topFix-04` and `structure-02` defects the packet fixed. Regenerate it after the diagram decision is made and the four minor defects are resolved.
+
+### Next packet: 37 (national-income) or 36-fix-round-2, per founder's choice
+
+**If 36-fix-round-2 is chosen:** The diagram architectural decision, the four minor content fixes, one re-stage, one Verify A round (Sonnet, ~30 min, just the impact of the diagram change and the four fixes), and one Verify B re-walk (390×844, the key change is diagram rendering; the section content is already correct).
+
+**If 37 is started:** Packet 36 remains staged, awaiting the diagram decision. The blocking defect is named in `audit/runs/packet-36/BLOCKING-DEFECT.txt`, the content is complete and correct, and the patch is ready to apply once the architectural path is chosen.
+
+
+## Handoff — packet 36 corrected (18 September 2026, brain)
+
+**Packet 36 outcome: BUILT AND VERIFIED, STAGED IN `draft` ON ALL EIGHT TABLES, NOT PUBLISHED.**
+
+Since the Verify B walkthrough on 18 September (morning, Opus 5), the founder decided that the one blocking defect found — all eight diagram labels render at 7–9 CSS px — is a programme-wide convention rather than a packet-36-specific failure. **The defect is filed as ledger item V037 on packet 11** (where the new diagram system's own 440-wide/10–13px baseline is set). The three other findings from Verify B's Defect 2–5 slot are already fixed and verified. The snapshot integrity defect — a drift of the staged bundle from the served draft after the fix round — has been regenerated via `node scripts/packet-36-managing-finance.mjs --dump` and verified with `node audit/scripts/check-staged-drafts.mjs managing-finance`, reporting `matches`. The 11 confirmations in Verify A whose evidence cited the snapshot were re-checked against the served draft and all hold. `node audit/scripts/ledger.mjs unverified 36` reports "gate clear: every claimed item is confirmed and no scope is left unclaimed".
+
+**Gate status: PASS.** `npm test` 187/187, `npm run build` exit 0, `npm run validate` exit 0, ledger 30 of 30 confirmed, all eight staged tables deep-equal the built bundle.
+
+**Four ledger remedies were deliberately REFUSED under rule 1:** `structure-01` (meta number 2.3.3 and title are the spec's own, `bus_spec.txt:921` — block titles were fixed instead), `topFix-01` ("10/12-mark Assess": Unit 2 is 10 only, `:2238-2245`), `specGap-03` ("depreciation" is a currency movement here, `:1016`), `topFix-05` (Carillion removed, not corrected). `structure-10` asked for nothing and got nothing.
+
+**Residual, for the founder:** a byte-level compare of the four paywalled arrays (section_quiz, section_flashcards, section_extras, section_common_mistakes) against the draft row was not possible because a service-role read was refused by the permission layer; they are covered by served slices + counts + the repo's read-back script `audit/runs/packet-36/verify-draft.mjs` (168 checks, all pass).
+
+**Publish is a founder checkpoint after packets 5/7 are merged and deployed.** Exact command when that day comes: `node scripts/publish-section.mjs managing-finance --confirm`. The baseline must not be shrunk until after publish.
+
+**Next unclaimed packet:** Ledger check: `node audit/scripts/ledger.mjs packet 37 --open` reports **31 open items, all claimed and unverified**. Git check: `git status --short | grep packet-37` shows **no artefacts yet** — packet 37 (national-income) is unstarted.
+
+## Handoff — packet 36 CLOSED, and what the next packet inherits (18 September 2026, evening)
+
+**Packet 36 is done: built, verified, staged on all eight tables, NOT published.** Gate, in the
+protocol's own order: build exit 0 · `ledger.mjs unverified 36` exit 0 (30 of 30) · Verify B round 2
+attached above and at `audit/runs/packet-36/verify-b-round2.md` · `npm run validate` exit 0 and
+`npm test` 194/194 · re-`--stage`d and read back field by field with 175 checks against the `draft`
+column · PROGRESS row updated · committed.
+
+**Publish is still the founder's, after the packet 5/7 checkpoint:**
+
+```
+node scripts/publish-section.mjs managing-finance --confirm
+```
+
+### Three things the next packet should take from this one
+
+1. **A walkthrough finding needs a baseline before it is a rejection.** Round 1 was right about the
+   measurement and wrong about whose defect it was, and the difference is one query: the same number
+   for every other diagram in the product. `audit/scripts/diagram-phone-legibility.mjs` is that query,
+   it runs against `data` or `--draft`, and it takes a few seconds. **Run it before blocking a packet
+   on a rendering complaint.** The four "architectural options" the blocked session wrote up had the
+   scaling backwards in two of them — narrowing a viewBox makes type *larger* on every screen, not
+   smaller — which is what reasoning about geometry instead of measuring it produces.
+2. **`npm run validate` currently reports 184 findings outside the baseline, and none of them are a
+   packet's fault.** They are `practice.opening` and `spec.uncovered` on live back-catalogue sections,
+   including the *pre-packet* `managing-finance` this packet replaces on publish. `validate` reads the
+   published `data` column, so a staged packet cannot move that number in either direction. It still
+   exits 0. Do not try to clear it inside a section packet.
+3. **Six sessions were in this worktree today and two of them broke the dev server while this packet
+   was verifying** — a duplicate `const counts` in `PracticeQuestionsTab.jsx` and a JSX comment inside
+   a ternary arm in `SectionModelAnswersPage.jsx`. Both were fixed on disk by their own sessions within
+   minutes, and both went on producing console errors in the browser afterwards because Turbopack keeps
+   serving the stale compile. **Check the file on disk before believing a console error, and do not fix
+   another session's file.**
+
+### The open design question this packet measured but did not answer
+
+**`V037` (packet 11) now owns it, and this is the evidence to file against it.** Every diagram in the
+product is illegible in place on a phone: 85 of 85 published diagrams put their smallest label under
+8px at 390px, against 16px body copy. The remedy is a choice nobody has made yet, and the numbers say
+which choices are real:
+
+- a **16px label needs a frame no wider than 230 units** at a 12-unit face, and the narrowest frame in
+  use is 440 (this packet's; the rest are 500, 526, 560 and one 1010);
+- the inline card is capped at the 313px reading column while the viewport is 390px, so **letting a
+  diagram use the full phone width buys about 25%** — 8.37px becomes ~10.4px — for no re-authoring;
+- the full-screen sheet already draws at 220vw and measures **23.4–25.35px, genuinely readable**, at
+  the cost of panning an 882×942 drawing in a 384×737 window.
+
+Nothing here was changed: `app/globals.css` and `lib/content-validator.mjs` both had another session's
+edits in flight, and a product-wide visual change verified on one section inside a content packet is
+how a packet ships a regression it cannot see. It is a decision, and it belongs to the founder.

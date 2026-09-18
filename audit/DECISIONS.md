@@ -2360,3 +2360,63 @@ one block, and exactly `PRETEST_HEADROOM` items are left unreserved at the front
 Packet 34 did not edit the file, because a gate document changing under three concurrent sessions is
 worse than a stale sentence — but the next reviewer will hit it again, and a brief that contradicts
 the design costs a round of verification every time.
+
+## 2026-09-18 — packet 36: a diagram is illegible on a phone in EVERY section, and that is not a packet's to pay
+
+Verify B round 1 blocked packet 36 because its eight diagrams render their labels at 7–9 CSS px at
+390px against 16px body copy. The measurement is right — reproduced in the browser: the inline SVG
+renders at 306.74px inside a 313px wrapper, so a 440-unit frame scales by 0.697.
+
+It is also true of every other diagram in the product, and worse. `audit/scripts/diagram-phone-legibility.mjs`
+(added by this packet, runnable against `data` or `--draft`) puts the numbers on it: **85 of 85
+PUBLISHED diagrams put their smallest label under 8px at 390px** — 4.29 to 7.98 — where packet 36's
+eight are 6.97 to 8.37 on the **narrowest authoring frame in the product**, 440 units against the
+500, 526, 560 and 1010 in use elsewhere. Packet 36 is the first packet to narrow the frame at all,
+and `_packet36-diagrams.mjs:28-31` says it did so *because* a Verify B had measured the phone.
+
+The condition was already recorded twice before this packet met it. `lib/content-validator.mjs:128`
+tiers `diagram.table-legible` as DEBT rather than BLOCK because the remedy "is a design question (a
+wider column for tables, or accept that a table is tapped open) and not something a packet can fix
+per table", and `:597-599` states outright that "the phone is not covered by this number and cannot
+be: at 390px even a generous table is under 8px, which is why `kind: 'table'` now always offers the
+full-screen sheet". The founder has since filed it as **`V037` on packet 11**, where the
+440-wide/10–13px baseline is set.
+
+**The decision: it does not block a content packet, and no content packet re-authors diagrams for it.**
+Holding packet 36 to a bar that nothing in the product meets ships nothing and fixes nothing. What was
+genuinely missing was measurement — `diagram.table-legible` returns early on `if (!declared)`, so a
+*drawn* diagram is measured by nothing at any width — and that is now a script rather than a discovery.
+
+**It is deliberately NOT a validator rule.** It fires on 100% of the corpus, and a DEBT that fires on
+everything would have to GROW `audit/validator-baseline.json`, which the protocol says only ever
+shrinks. A number that gates nothing belongs in a script that prints it.
+
+**Nothing in `app/globals.css` or `lib/content-validator.mjs` was touched**, though the cheap half of
+the remedy lives there: the inline card is capped at the 313px reading column while the viewport is
+390px, so letting a diagram use the full phone width buys about 25% (8.37px → ~10.4px) with no
+re-authoring. Both files had another session's edits in flight at the time, and a product-wide visual
+change verified against one section, inside a content packet, is how a packet ships a regression it
+cannot see. The options and their measured numbers are in `NEXT.md` under the packet 36 handoff.
+
+## 2026-09-18 — packet 36: every printed total is the sum of its own printed parts
+
+The working capital cycle printed 67 days, 27 days and a total of 95, because `days()` rounded each
+term at the point it was printed (67.385 + 27.375 = 94.76 → 95, while the parts round to 67 and 27).
+A fill-in on the same step told the student the third blank was "the two stages of the cycle added
+together" — so a student who did exactly what the hint said typed 94 and was marked wrong by the
+product's own arithmetic.
+
+The rule that follows is general and cheap: **round a derived figure once, at source, never at each
+print**. `_packet36-util.mjs` now rounds the three day figures where they are derived, the runner
+asserts that the printed total equals the sum of the printed stages, and `verify-draft.mjs` re-derives
+all three out of the recall the student actually answers on the served `draft` row.
+
+## 2026-09-18 — packet 36: an A/B is not decoration, and this one caught a check that never fired
+
+Packet 21's rule — A/B every new check, in both directions — paid for itself twice in one packet. The
+sentence-case ban written for the lower-case practice stem carved out "e.g." with a lookbehind that
+was positioned past the full stop the match starts on, so the carve-out matched nothing and the check
+would have passed anything. The A/B that plants "e.g." failed on the first run and said so.
+
+The generalisation for the next packet: a check's A/B must assert the carve-outs as well as the
+catch, because a carve-out that never fires is invisible in the direction everyone tests.
