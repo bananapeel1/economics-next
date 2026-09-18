@@ -4194,11 +4194,11 @@
    "rank": 0,
    "text": "Add the missing half of the topic: a block on 1.5.6 Moving from entrepreneur to leader (difficulties + how to overcome) and a block on 1.5.4 Forms of business (sole trader/partnership/Ltd/franchise/social enterprise/lifestyle/online/PLC + liability); then the leadership practice question and flashcards actually have content behind them.",
    "packet": 35,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "SPEC NUMBERING: this item cites 1.5.6, 1.5.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+   "note": "REFUSED, both clauses, as out of this section's scope. (a) 'Moving from entrepreneur to leader' is BUS-1.3.4-5c, bus_spec.txt:753, a leaf of 1.3.4 Managing People — packet 30 built it there on 17 Sep after refusing two findings (structure-05, topFix-04) that asked to move it HERE. Building it here too would teach one leaf in two sections, which SPEC-OWNERSHIP.md exists to prevent. (b) Forms of business — sole trader, partnership, private limited company, franchising, social enterprise, lifestyle and online businesses, plc flotation and liability — is 2.3.1 sections 4 and 5, bus_spec.txt:870-878, owned by planning-raising-finance and built by packet 19. Zero of those phrases occur between :760 and :788. The item's last clause ('then the leadership practice question and flashcards have content behind them') is answered the other way: packet 35 REMOVES the leadership practice item and the two leadership flashcard chains, because a section must not assess what it must not teach. Both bans are enforced by BANNED_ELSEWHERE in scripts/_packet35-util.mjs and the oracle is re-read for these rows in the runner's coverage block, so the refusal fails the build if 1.3.5 ever acquires one."
   },
   {
    "id": "C-entrepreneurs-leaders-topFix-02",
@@ -4207,10 +4207,10 @@
    "rank": 1,
    "text": "Replace the 12 recall widgets: drop letter-leaking hints; convert the five fillins to scenario->concept matches or a numeric opportunity-cost calc; convert the non-financial 'rank by popularity' and the objectives/conflicts/trade-offs reorders to classify/match tasks; keep only the intrapreneurship reorder.",
    "packet": 35,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-35",
+   "verified_by": "Verify A (packet 35) 2026-09-18",
+   "evidence": "Measured over the emitted bundle: 25 recalls = 7 classify / 13 fillin / 4 match / 1 reorder (reorder is the opportunity-cost procedure, where order is genuine). 39 fill-in blanks, 0 letter-leaking hints (no underscores, no hint that is a prefix of its answer). Guard is live: replacing one hint with 'init___________' in a /tmp copy of _packet35-content.mjs produces 'NEW DEBT fillin.hint ... is a prefix of the answer \"initiative\"' and exit 1. Fill-ins are numeric/scenario transfer tasks (e.g. creating-and-setting-up recall derives $25 contribution and 16 chairs a day), not body paraphrases.",
    "note": null
   },
   {
@@ -4220,10 +4220,10 @@
    "rank": 2,
    "text": "Re-map quizIndices/practiceIndices by topic (Block0: Q0 + Define intrapreneurship; Block1: a motives MCQ; Block2: Q4/Q7 + a conflicts practice; Block3: Q18 + an opportunity-cost practice) and fix the quiz bank's positional bias (20/25 keyed to index 1, correct = longest in 15/25) or confirm the UI shuffles options.",
    "packet": 35,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-35",
+   "verified_by": "Verify A (packet 35) 2026-09-18",
+   "evidence": "Pins: all 5 blocks carry quiz+practice+diagram; 32 of 35 quiz pinned, 3 unpinned are indices 0-2 (pre-test pool); 0 orphaned practice. I re-ran the runner's own distinctive-vocabulary measure over the QUIZ bank myself: 0 of 32 pinned items score higher against another block. Positional bias re-measured on the bundle: correctIndex histogram {0:9,1:9,2:9,3:8} and the key is the strict longest option in 8 of 35 (23%, below 25% chance). Both guards fire when sabotaged (slot=1 -> 'answer histogram [0,35,0,0] is lumpy'; padding the key -> '100%, baseline 25%'). UI also shuffles: lib/shuffle-options.js via components/StudyApp.jsx:5.",
    "note": null
   },
   {
@@ -4233,10 +4233,10 @@
    "rank": 3,
    "text": "Correct the definitional errors a marker would penalise: franchisee-is-not-an-entrepreneur and 'someone who starts a business loses marks' (what-entrepreneurs-do), 'revenue maximisation' -> 'sales maximisation' plus add cost efficiency/employee welfare (common-objectives), 'barriers to entry' -> 'barriers to entrepreneurship' (takeaway), Amazon 'reinvesting revenue / minimal dividends', Bezos 'world's largest retailer'.",
    "packet": 35,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-35",
+   "verified_by": "Verify A (packet 35) 2026-09-18",
+   "evidence": "All six errors gone from the bundle: 'franchis*' 0 hits, 'lose/loses marks' 0 hits, 'barriers to entry' 0 hits, 'Amazon'/'Bezos' 0 hits. 'revenue maximisation' survives only where refuted (3 strings that also say 'sales maximisation') plus 2 declared exhibits (mistake card quotation + one bare distractor). Sales maximisation, cost efficiency and employee welfare are all taught subsections in the Business Objectives block. Guards fire: injecting 'loses marks' -> 'claim about what a marker does'; injecting a sole-trader sentence -> forms-of-business ban; renaming OTHER_OBJECTIVES -> 'not in bus_spec.txt:781-786'.",
    "note": null
   },
   {
@@ -4246,10 +4246,10 @@
    "rank": 4,
    "text": "Rewrite practice to WBS11 format: every question anchored in a short case extract, tariffs 4/8/10/12/20 only, guidance expressed as level descriptors (Knowledge/Application/Analysis/Evaluation) with a model 'however... it depends on...' judgement rather than 1-mark ladders; retire the 'Evaluate...' MCQs (Q20-Q24) or rewrite them as scenario questions with a single defensible key.",
    "packet": 35,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-35",
+   "verified_by": "Verify A (packet 35, round 2) 2026-09-18",
+   "evidence": "Re-checked after the Discuss glosses changed. bus_spec.txt:2234-2237 reads 'A brief assessment is required showing an awareness of competing arguments/factors' and contains no 'conclusion' - I read the lines. All three Discuss glosses now say 'assessment' and none says 'conclusion': the two examMatters (Expanding and Developing, Social Entrepreneurship) and the Discuss practice guidance. Evaluate is correctly left alone - all three Evaluate glosses and the 20-mark guidance keep 'conclusion', which bus_spec.txt:2246-2251 does require ('a perceptive conclusion that proposes a solution'). All three Assess glosses keep 'judgement' (:2242). Tariffs unchanged and still Appendix 6 exactly (2/4/6/4/4/10/8/20). The practice-side guard is live: making the Discuss advice promise a conclusion yields 'the Discuss practice ADVICE promises a \"conclusion\"; bus_spec.txt:2234-2237 asks for a brief ASSESSMENT and never uses the word'. Round-1 confirmation stands. CAVEAT logged separately: the examMatters-side gloss guards (lines 360 and 371) require /Appendix 6[^.]*\\bCommand\\b/, so after the structure-06 rewrite moved 'Appendix 6' out of the leading position they reach 0 of 3 Assess tips and 1 of 2 Discuss tips - the text is right, the guard is nearly blind.",
    "note": null
   },
   {
@@ -4258,10 +4258,10 @@
    "kind": "accuracy",
    "text": "The Role of an Entrepreneur > what-entrepreneurs-do > body[3] + misconception + examMatters: Teaches that a franchise owner is 'not an entrepreneur in the traditional sense' and that examiners will 'lose marks' for defining an entrepreneur as 'someone who starts a business'. Edexcel IAL treats franchisees as entrepreneurs (franchising is listed under 1.5.4 forms of business for entrepreneurs; the franchisee invests capital and bears financial risk), and the standard mark-scheme definition is 'an individual who takes the initiative to set up and run a business, taking the financial risk' — innovation is not a required element. The misconception also conflates a franchise 'manager' with a franchise owner.",
    "packet": 35,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-35",
+   "verified_by": "Verify A (packet 35) 2026-09-18",
+   "evidence": "content[0].sections[0] now defines an entrepreneur as 'takes the initiative to set up and run a business, organising the resources it needs and bearing the financial risk' and states 'Nothing in it requires the idea to be new'; the misconception is now the inverse error ('Students add a requirement the definition does not contain'). No franchise claim survives (0 hits of 'franchis' anywhere in the bundle) and no 'lose marks' claim (MARK_CLAIM guard at packet-35-entrepreneurs-leaders.mjs:269 fires on injection). No named real firm or year.",
    "note": "SPEC NUMBERING: this item cites 1.5.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -4270,10 +4270,10 @@
    "kind": "quiz",
    "text": "q-1: 20 of 25 MCQs have correctIndex 1; the correct option is also the longest in 15 of 25 (and in all of Q19-Q24). Unless the UI shuffles options at render time, a student can score ~80% by always picking option B. Verify whether InlineQuiz/PreTest shuffle; if not, re-balance.",
    "packet": 35,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-35",
+   "verified_by": "Verify A (packet 35, round 2) 2026-09-18",
+   "evidence": "Re-measured on the current 35-item bank after the customer-satisfaction/social-objectives item was added: correctIndex histogram [9,9,9,8], spread 1; the key is the strict longest option in 8 of 35 (22.9%, below the 25% chance baseline); longest-including-ties 10 of 35. The added item ('Customer satisfaction and social objectives are alike, and unlike cost efficiency, in that each:') has its key at index 2 and its key is NOT the longest (48 chars against a 51-char distractor). Max pairwise stem Jaccard across the bank is 0.357, under the 0.5 near-duplicate threshold. Both guards still fire when sabotaged (forced slot=1 -> '[0,35,0,0] is lumpy'; padded key -> '35 of 35 (100%, baseline 25%)'). Round-1 confirmation stands.",
    "note": null
   },
   {
@@ -4282,10 +4282,10 @@
    "kind": "quiz",
    "text": "q1: Correct (profit satisficing) but the concept is never taught in content[] (only in flashcards). This MCQ is Block 1's inline quiz (quizIndices [1]) and can appear in the pre-test, so students are tested on untaught material.",
    "packet": 35,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-35",
+   "verified_by": "Verify A (packet 35) 2026-09-18",
+   "evidence": "Profit satisficing is now a taught subsection (entrepreneurs-leaders:sub:financial-motives-profit-satisficing) in the Motives block, with worked figures (4,000 chairs at $40 = $40,000 against the $45,000 peak): 3 occurrences in content[], not flashcard-only. The three pre-test items are indices 0-2 and all three are answerable from chapter 1 (definition, entrepreneur vs intrapreneur, growing vs developing). The runner's 'quizzed but never taught' guard fires when sabotaged: renaming 'cost efficiency' in OTHER_OBJECTIVES gives 'the specification names these and the section does not teach them: cost effectiveness'.",
    "note": null
   },
   {
@@ -4294,10 +4294,10 @@
    "kind": "quiz",
    "text": "q2: Fine as a question, but it is assigned as Block 2's (Business Objectives) inline quiz — it belongs to Block 0 (Barriers). quizIndices are sequential 0,1,2,3 rather than topic-matched.",
    "packet": 35,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-35",
+   "verified_by": "Verify A (packet 35) 2026-09-18",
+   "evidence": "quizIndices are no longer sequential: [3-7], [8-13], [14-19], [20-29], [30-34] with 0-2 held back for the pre-test, derived from each item's own block tag. I re-ran the distinctive-vocabulary measure over all 32 pinned items myself: 0 score higher against a block other than the one they are pinned to. The equivalent guard on PRACTICE is live - repinning the Discuss item from Business Choices to Risk/Barriers gives 'practice 6 (Discuss) is pinned to \"Risk, Uncertainty and Barriers\" but shares 37% of its vocabulary with \"Business Choices\" against 25%'.",
    "note": null
   },
   {
@@ -4306,10 +4306,10 @@
    "kind": "practice",
    "text": "p2: 'Assess the importance of leadership style... (10 marks)': leadership styles (autocratic, democratic, paternalistic, laissez-faire) are not taught anywhere in this section's content — they are 1.4.5 Managing People content — and 1.5.6 'moving from entrepreneur to leader', which would justify it, is absent. The guidance uses invented point marks ('2 marks' per paragraph) whereas IAL 10-mark Assess is level-marked (Knowledge 2 / Application 2 / Analysis 3 / Evaluation 3). No case-study context, which every IAL Business question has.",
    "packet": 35,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-35",
+   "verified_by": "Verify A (packet 35, round 2) 2026-09-18",
+   "evidence": "Re-checked after the Discuss gloss change. The 8-mark Discuss guidance now opens 'Appendix 6 says a Discuss needs logical chains of reasoning in context, showing causes and effects, with a brief assessment showing an awareness of competing arguments - a brief assessment rather than a full evaluation', which matches bus_spec.txt:2234-2237 word for word and drops the 'conclusion' the spec never uses. The 10-mark Assess guidance still names the supported judgement and still carries no mark allocations. The leadership item is still absent; the only student-facing 'leader' string in the bundle is the one-sentence pointer to Managing People. Guard verified by sabotage. Round-1 confirmation stands.",
    "note": "SPEC NUMBERING: this item cites 1.4.5, 1.5.6, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -4318,11 +4318,11 @@
    "kind": "structure",
    "text": "Title/coverage mismatch: section is 'Entrepreneurs and Leaders' (IAL 1.5) but has zero content on 1.5.6 Moving from entrepreneur to leader and zero on 1.5.4 Forms of business; no other business Unit 1 section in index.json covers either. Meanwhile practice Q3 and two flashcard chains test leadership styles — assessment was generated for the spec topic, content was not.",
    "packet": 35,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "SPEC NUMBERING: this item cites 1.5.6, 1.5.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+   "note": "REFUSED as stated; the real defect underneath it is fixed and claimed elsewhere. The title 'Entrepreneurs and Leaders' is the specification's own heading at bus_spec.txt:760, and the four sub-topics under it — role of an entrepreneur, motives and characteristics, business objectives, business choices — contain no leadership leaf at all. So the 'title/coverage mismatch' is a property of the specification, not of the section. Its premise that 'no other business Unit 1 section covers either' was true of the audited corpus and is false now: packet 30 covers leadership including 1.3.4-5c, and packet 19 covers forms of business at 2.3.1-4. What IS a real defect is the second half of the item — practice Q3 and two flashcard chains ASSESS leadership styles this section does not teach — and packet 35 removes all three. That half is claimed under practice-01 and structure-07."
   },
   {
    "id": "C-entrepreneurs-leaders-structure-02",
@@ -4330,10 +4330,10 @@
    "kind": "structure",
    "text": "quizIndices/practiceIndices are assigned sequentially (Block0 q[0], Block1 q[1]+p[0], Block2 q[2]+p[1], Block3 q[3]) not by topic: Block 1 (motives) gets a profit-satisficing MCQ (untaught) and a Define-intrapreneurship practice (Block 0 content); Block 2 (objectives) gets a barriers MCQ and a barriers-to-entry practice (both Block 0 content). Only 4 of 25 MCQs and 2 of 5 practice questions are reachable inline; Blocks 0 and 3 have no practice.",
    "packet": 35,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-35",
+   "verified_by": "Verify A (packet 35) 2026-09-18",
+   "evidence": "Measured on the bundle: 5 blocks with quizIndices [3-7]/[8-13]/[14-19]/[20-29]/[30-34] and practiceIndices [0]/[1]/[2]/[3,4,5,7]/[6]. 32 of 35 MCQs reachable inline (3 held for the pre-test), 8 of 8 practice items pinned, 0 orphans, every block has quiz + practice + diagram. Both defects the finding names are gone: no block is handed an untaught MCQ (profit satisficing is now taught) and no block is handed another block's practice (0 of 8 score higher against another block on the distinctive-vocabulary measure I ran myself).",
    "note": null
   },
   {
@@ -4342,10 +4342,10 @@
    "kind": "structure",
    "text": "Step pairing: Block 1 = (skills, financial) + (non-financial alone); Block 2 = (common objectives, customer/social) + (conflicts alone). The single-section steps mean their recall is shown at the bottom of the step ('immediate') and again at the top of the next step ('spaced') back-to-back — and the two exercises this happens to are the worst ones (the non-orderable motive ranking and the abstract conflict reorder).",
    "packet": 35,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-35",
+   "verified_by": "Verify A (packet 35) 2026-09-18",
+   "evidence": "Ran lib/learn-steps.js buildSteps() over the emitted content: 30 steps = 25 teach + 5 check-in, i.e. ONE subsection per teach step, so the (a,b)+(c) pairing the finding describes no longer exists. Then ran pickSpacedRecall() across all five check-ins: spaced recalls come from steps 0,1,2,3 of block 0 into check-ins of blocks 1-4, and 0 are drawn from the immediately preceding teach step - no back-to-back repeat is possible. The two exercises the finding singled out (motive ranking, abstract conflict reorder) are both gone (1 reorder in the whole section, on the opportunity-cost procedure).",
    "note": null
   },
   {
@@ -4354,10 +4354,10 @@
    "kind": "structure",
    "text": "Recall design: 5/5 fillins have letter-leaking hints plus templates that paraphrase the body; 6/7 reorders impose order on parallel concepts; all 12 exercises are copies of body flows/bullets rather than transfer tasks; only two shuffle permutations are used across 7 reorders ([2,0,3,1] x3, [3,1,0,2] x3), making the pattern learnable. Three hints have length mismatches vs the answer ('in___________' 13 vs 'independence' 12; 'sa___________' 13 vs 'satisfaction' 12; 'fi________' 10 vs 'financial' 9).",
    "packet": 35,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-35",
+   "verified_by": "Verify A (packet 35) 2026-09-18",
+   "evidence": "Measured over the 25 recalls: 13 fill-ins / 39 blanks, 0 with a letter-leaking hint (no underscores in any hint; no hint that is a prefix of its answer) - so the three length-mismatch cases cannot recur. 1 reorder in the whole section (down from 7), so 'only two shuffle permutations across 7 reorders' is moot, and its items are a genuine procedure (list alternatives -> check exclusivity -> take the best -> compare -> state the difference) rather than parallel concepts. Recalls are transfer tasks, not body copies: the runner's answer-recoverable check covers every recall type and the fill-in contract guard is live (planting 'init___________' as a hint produces NEW DEBT fillin.hint and exit 1).",
    "note": null
   },
   {
@@ -4366,10 +4366,10 @@
    "kind": "structure",
    "text": "Filler misconceptions: 'the biggest barrier is lack of a good idea' (barriers), 'the best decision is one with no trade-offs' (trade-offs), 'a good manager can achieve all objectives at once' (conflicts) are not things IAL students actually write. The genuine ones are: 'anyone who runs a business is an entrepreneur', 'born not made', 'opportunity cost = money spent', 'all businesses aim to maximise profit', 'social enterprises are charities'.",
    "packet": 35,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-35",
+   "verified_by": "Verify A (packet 35) 2026-09-18",
+   "evidence": "All three filler misconceptions are gone from the bundle ('lack of a good idea', 'no trade-offs', 'all objectives at once' - 0 hits). All five the finding names as genuine are present across the 25 unique misconceptions: 'anybody running an ordinary business' (what-an-entrepreneur-is), 'born and not made' (characteristics-and-skills), 'the money spent on the option chosen' (opportunity-cost), 'profit maximisation wearing a different coat' (employee-welfare/...), 'charities that happen to sell things' (social-entrepreneurship). 25 misconceptions, 25 distinct.",
    "note": null
   },
   {
@@ -4378,10 +4378,10 @@
    "kind": "structure",
    "text": "examMatters is repetitive: 7 of 12 end with a variant of 'always link to the case study context'; none explains the IAL level-mark structure (K/A/An/E) or the 'however/depends on' evaluation moves that WBS11 mark schemes reward.",
    "packet": 35,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-35",
+   "verified_by": "Verify A (packet 35, round 2) 2026-09-18",
+   "evidence": "Re-ran both round-1 measures over the 25 rewritten tips in the emitted bundle. Distinct opening sentences: 25 of 25 (was 18). Distinct second sentences: 25. Distinct closing sentences: 25. Sentences shared verbatim by more than one tip: 0 (was 11 tips sharing an opener). Pairwise token-Jaccard over whole tips: 0 pairs at or above 0.5, max 0.435, mean 0.109 (was 5 pairs, max 0.63, mean 0.164). Checked for the repetition having moved again: worst within-command pair is Evaluate at 0.435 and that is the shared Appendix 6 citation, not a frame - measuring the ADVICE half alone (everything after the first sentence) the max pairwise is 0.194. The 0.63 slot-filled Assess frame is gone: those three tips now score 0.224 worst-pair and argue different things (cost-against-cost / did it predate the customers / what would have to be true). Only 12 of 25 now open with 'Appendix 6'. The new guard at scripts/packet-35-entrepreneurs-leaders.mjs:655-691 is real, both halves sabotage-tested in a /tmp copy: giving two tips the same opening sentence yields '\"Barriers to Entrepreneurship\" opens its exam tip with the same sentence as \"Running the Business\"'; replanting the exact pair I rejected yields 'exam tips on \"What Anticipating Costs\" and \"Market Share\" share 63% of their words - a slot-filled frame, which is structure-06 in its second costume'. Both exit 1.",
    "note": null
   },
   {
@@ -4390,10 +4390,10 @@
    "kind": "structure",
    "text": "Duplicate flashcards: the two 'chain' cards ('Trace the chain from an entrepreneur identifying an opportunity...' and 'Trace the impact of different leadership styles...') each appear twice (22 cards, 20 unique fronts).",
    "packet": 35,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-35",
+   "verified_by": "Verify A (packet 35) 2026-09-18",
+   "evidence": "30 flashcards in the emitted bundle: 30 distinct fronts, 30 distinct backs, 30 distinct ids - no duplicate pair. Both 'chain' cards the finding names are gone with the rest of the leadership material: 0 occurrences of 'leader'/'leadership' in any student-facing string (only in section-id slugs), and the ban is live (injecting 'autocratic leadership style' fails the build).",
    "note": null
   },
   {
@@ -4402,10 +4402,10 @@
    "kind": "structure",
    "text": "Notes[] and extras[] cover things content[] does not (profit satisficing, limited liability, sole trader/partnership/Ltd/PLC chain, government support, hard vs soft skills) — students in Learn Mode never see them, while the quiz bank assumes them.",
    "packet": 35,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-35",
+   "verified_by": "Verify A (packet 35) 2026-09-18",
+   "evidence": "Counted each item the finding names across content[]/notes[]/extras[]/quiz[]/flashcards[] of the emitted bundle. 'profit satisficing': content 3, notes 2, quiz 1, flashcards 2 - now taught as its own subsection, so no longer notes-only. 'limited liability', 'sole trader', 'partnership', 'plc', 'government support', 'hard skill', 'soft skill': 0 everywhere, removed rather than stranded (forms of business belongs to 2.3.1, bus_spec.txt:870-878, and planning-raising-finance does teach it - confirmed live via its draft API). notes[] is now the same 5 blocks as content[]. Vocabulary sweep: no 7+ letter word in notes[] or extras[] names a concept absent from content[].",
    "note": null
   },
   {
@@ -4414,10 +4414,10 @@
    "kind": "structure",
    "text": "Difficulty ramp and block order are sensible (role -> motives -> objectives -> choices, matching 1.5.1 -> 1.5.2 -> 1.5.3 -> 1.5.5); takeaways match their blocks apart from the 'barriers to entry' wording in Block 0. Zero diagrams is acceptable for this topic but a one-glance 'objective vs life-cycle stage' or 'opportunity cost = next best, not sum' visual would replace the passive fillins.",
    "packet": 35,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-35",
+   "verified_by": "Verify A (packet 35, round 2) 2026-09-18",
+   "evidence": "Re-read the emitted profit-hill polyline myself (69 points, viewBox 0 0 440 496). Using the diagram's own CURVE constants (x0 56, x1 414, pad 2 -> $18-$52, yZero 224, yTop 74): the curve sits at y=224 EXACTLY at x=77.06 and x=392.94, which map to $20 and $50 - it crosses zero at both break-even prices rather than at the frame edges. Peak at x=235 -> $35, y=74 = $45,000. Both ends are at y=266.67, BELOW the zero line, which is profit -$12,800 at $18 and $52 - I recomputed both from Q=12,000-200P. The tails are no longer clamped: 7 distinct y values on each side. Markers at $20/$30/$35/$40 with $40,000 symmetric about the peak (y=90.67 both sides). This now matches the Construct (4) model answer printed beside it. Guard is live: restoring the clamp (Math.min(CURVE.yZero, ...)) in a /tmp copy yields 'the profit curve does not fall BELOW zero outside the survival range - a clamped tail runs flat along the axis'.",
    "note": "SPEC NUMBERING: this item cites 1.5.1, 1.5.2, 1.5.3, 1.5.5, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -4426,11 +4426,11 @@
    "kind": "specGap",
    "text": "1.5.6 Moving from entrepreneur to leader: the difficulties in developing from entrepreneur to leader (delegation, trust, loss of control, skill gaps, Greiner-style growth crises) and how to overcome them (training, hiring professional managers, delegation, mentoring) — entirely absent despite the section title.",
    "packet": 35,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "SPEC NUMBERING: this item cites 1.5.6, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+   "note": "REFUSED. 'The difficulty of moving from entrepreneur to leader' is BUS-1.3.4-5c at bus_spec.txt:753 — a leaf of 1.3.4, taught by managing-people since packet 30 (17 Sep), which kept it after refusing the mirror-image findings that asked for it to be moved here. IAL 1.3.5's eighteen oracle rows never mention it. The item's suggested content also names Greiner's growth crises, which is 0 hits in bus_spec.txt. Cross-referenced from this section rather than taught."
   },
   {
    "id": "C-entrepreneurs-leaders-specGap-02",
@@ -4438,11 +4438,11 @@
    "kind": "specGap",
    "text": "1.5.4 Forms of business: sole trader, partnership, private limited company; franchising, social enterprise, lifestyle businesses, online businesses; growth to PLC and stock market flotation; limited vs unlimited liability — absent from content (only in extras chains); no other business Unit 1 section covers it.",
    "packet": 35,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "SPEC NUMBERING: this item cites 1.5.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+   "note": "REFUSED. Every requirement the item lists belongs to 2.3.1 Planning a business and raising finance: sole trader, partnership and private limited company is 2.3.1-4a (bus_spec.txt:870); franchising, social enterprise, lifestyle and online businesses is 4b (:872); growth to plc and stock market flotation is 4c (:874); limited and unlimited liability is 2.3.1-5 (:876-878). planning-raising-finance owns all of it and packet 19 built it. None of those phrases occurs between :760 and :788. NOTE the near-miss that makes this worth reading carefully: 'social entrepreneurship' IS a 1.3.5 leaf — it is a non-financial MOTIVE at :775 — and packet 35 teaches it. 'Social enterprise', the FORM of business, is not. The two are one word apart and belong to different sections."
   },
   {
    "id": "C-entrepreneurs-leaders-specGap-03",
@@ -4450,10 +4450,10 @@
    "kind": "specGap",
    "text": "1.5.1 Anticipating risk and uncertainty in the business environment (risk = quantifiable, uncertainty = not) — not taught.",
    "packet": 35,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-35",
+   "verified_by": "Verify A (packet 35) 2026-09-18",
+   "evidence": "New subsection 'Anticipating Risk and Uncertainty' (block 1, first subsection) opens the distinction explicitly: 'a risk is something whose chance can be estimated ... an uncertainty is something that cannot be given a figure at all', then teaches the leaf the spec actually asks for at bus_spec.txt:770 (1e, ANTICIPATING them): a risk is priced into the $10 variable cost, an uncertainty is held against with reserves. Followed by 'What Anticipating Costs', which prices both precautions ($20,000 idle reserve; $0.20 a chair).",
    "note": "SPEC NUMBERING: this item cites 1.5.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -4462,10 +4462,10 @@
    "kind": "specGap",
    "text": "1.5.2 Financial motives: profit satisficing — not taught in content (only quiz Q1 and a flashcard).",
    "packet": 35,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-35",
+   "verified_by": "Verify A (packet 35) 2026-09-18",
+   "evidence": "'Financial Motives: Profit Satisficing' is now its own subsection in the Motives block (bus_spec.txt:774 names profit maximisation AND profit satisficing under 2b). Taught with figures: the founder chooses the working year first - 20 chairs x 200 days = 4,000, which the schedule prices at $40 for $40,000, $5,000 below the $45,000 peak. 3 occurrences in content[] against 1 in the quiz bank, so the quiz no longer tests untaught material.",
    "note": "SPEC NUMBERING: this item cites 1.5.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -4474,10 +4474,10 @@
    "kind": "specGap",
    "text": "1.5.2 Non-financial motives: ethical stance, home working, independence as spec-named bullets — home working absent; ethical stance only implied via social enterprise.",
    "packet": 35,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-35",
+   "verified_by": "Verify A (packet 35) 2026-09-18",
+   "evidence": "bus_spec.txt:775-776 names four non-financial motives: ethical stance, social entrepreneurship, independence and home working. All four are now taught, as three dedicated subsections - 'Non-Financial Motives: Ethical Stance' (9 hits in content), '...Social Entrepreneurship' (5), '...Independence and Home Working' (6, home working no longer absent). The runner also asserts NON_FINANCIAL_MOTIVES.length === 4 so a bullet cannot be dropped silently. Note the near-miss is handled correctly: social ENTREPRENEURSHIP (the motive, :775) is taught; social ENTERPRISE (the form of business, 2.3.1, :872) is banned - 0 hits.",
    "note": "SPEC NUMBERING: this item cites 1.5.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -4486,10 +4486,10 @@
    "kind": "specGap",
    "text": "1.5.3 Business objectives: sales maximisation (taught as 'revenue maximisation'), cost efficiency, employee welfare — cost efficiency and employee welfare absent (employee welfare appears only as a conflict example).",
    "packet": 35,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-35",
+   "verified_by": "Verify A (packet 35) 2026-09-18",
+   "evidence": "All six bullets at bus_spec.txt:781-786 are taught: sales maximisation, market share, cost efficiency (own subsection) and employee welfare/customer satisfaction/social objectives (own subsection), plus survival and profit maximisation. 'revenue maximisation' is corrected wherever a student meets it - 3 strings name it only to refute it against the spec's 'sales maximisation', plus 2 declared exhibits. The runner reads :781-786 back out of bus_spec.txt and compares, and the check fires when sabotaged: renaming one bullet gives '\"cost effectiveness\" is not in bus_spec.txt:781-786'.",
    "note": "SPEC NUMBERING: this item cites 1.5.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -4498,10 +4498,10 @@
    "kind": "specGap",
    "text": "1.5.1 Barriers to entrepreneurship: lack of skills/experience and fear of failure are spec-typical barriers; content lists only finance, competition, red tape, personal risk (the notes[] and flashcards do list them).",
    "packet": 35,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-35",
+   "verified_by": "Verify A (packet 35) 2026-09-18",
+   "evidence": "The barrier list is rebuilt and 'lack of skills/experience' is now one of the four taught in content[]: Capital / Skills and experience / Risk and uncertainty / Opportunity cost, each tied to the leaf it obstructs, plus a second subsection 'Overcoming the Barriers'. The old four (finance, competition, red tape, personal risk) are gone. Caveat recorded: the phrase 'fear of failure' is used nowhere, but bus_spec.txt:770 names NO barriers at all ('d) Barriers to entrepreneurship.'), the section says so explicitly and derives them from the role, and the deterrent effect is carried by the 'Risk and uncertainty' barrier ('that part is what stops people'). Demanding the textbook phrase would be importing off-spec vocabulary.",
    "note": "SPEC NUMBERING: this item cites 1.5.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 1.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -4510,10 +4510,10 @@
    "kind": "specGap",
    "text": "Unsure: whether the current WBS11 papers use 'Define' (4 marks) or only 'Explain one' (4 marks) — practice Q0 tariff should be checked against a recent past paper.",
    "packet": 35,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-35",
+   "verified_by": "Verify A (packet 35) 2026-09-18",
+   "evidence": "Answered from the specification rather than left unsure: Appendix 6 sets Define at 2 marks (bus_spec.txt:2220) and Explain at 4 (bus_spec.txt:2227). The section's practice bank uses exactly those - practice[0] 'Define the term intrapreneurship. (2 marks)' and practice[1] 'Explain one barrier to entrepreneurship... (4 marks)' - and every tariff is checked against audit/raw/tariff-census.json for Unit 1. Guard live: forcing Assess to 12 gives 'practice Assess (12) - in Business Unit 1 that command carries 10'.",
    "note": null
   },
   {
@@ -18252,6 +18252,19 @@
    "note": "severity feature -> high: Found by the extras.shape rule packet 30 built for V028, run over every staged bundle on disk rather than over this packet's. ExtrasTab.jsx:150-160 renders {point.title} and {point.content} and nothing else. Packets 24, 25 and 27 author {title, points}: the heading renders and the body is EMPTY, so nine numbered cards show a question and no answer and the points arrays holding the actual evaluation are never served. Packet 23 authors {point, detail}: four cards with no heading AND no body. Thirteen frames, four sections, all staged-not-published, all Pro-only — and SILENT, because an empty <p> throws nothing, which is why V028's crash was found and this was not. previewMode slices evaluation to EVALUATION_LIMIT, so a free student meets the first one blank. NOT fixed in packet 30: it is content in four other packets' modules and rewriting thirteen frames plus four re-stages is a packet's work, not a tail (the programme's V023 rule). extras.shape is BLOCK, so each of those four runners now refuses to stage until its frames are fixed. Measured: 4 sections fire, packets 28, 29 and 30 clean. | severity high -> high: Citation corrected by Verify A: the two reads are ExtrasTab.jsx:126 and :129, not the 150-160 first filed. The file is 150 lines long.",
    "added": "2026-09-17",
    "sev": "high"
+  },
+  {
+   "id": "V036",
+   "kind": "feature",
+   "title": "A Discuss gloss check enforces a conclusion Appendix 6 does not ask for",
+   "file": "scripts/packet-30-managing-people.mjs",
+   "packet": 2.7,
+   "status": "open",
+   "closed_by": null,
+   "verified_by": null,
+   "evidence": null,
+   "note": null,
+   "added": "2026-09-18"
   }
  ],
  "marketing": [

@@ -1,5 +1,235 @@
 # Next session brief
 
+## Packet 35 spec — `entrepreneurs-leaders`, Business Unit 1 (WBS11), IAL **1.3.5** (Opus 5, 18 September 2026)
+
+Spec span: `audit/raw/bus_spec.txt:760-788`. **22 substantive leaves.** Current live section: 4 blocks /
+12 subsections / 25 quiz / 5 practice / 22 flashcards / 4 notes / **0 diagrams / 0 common mistakes**.
+Snapshot: `audit/snapshots/2026-09-18-pre-packet-35__business__entrepreneurs-leaders.json`.
+
+### The leaf inventory (hand-mapped; the oracle's figure is printed beside it and is not the gate)
+
+| Leaf | Spec line | Requirement |
+|---|---|---|
+| 1a | :764 | Creating and setting up a business |
+| 1b | :766 | Running and expanding/developing a business |
+| 1c | :767 | Innovation within a business (intrapreneurship) |
+| 1d | :768 | Barriers to entrepreneurship |
+| 1e | :769 | Anticipating risk and uncertainty in the business environment |
+| 2a | :770 | Characteristics and skills required |
+| 2b-fin | :774 | Financial motives: profit maximisation · profit satisficing (2 leaves) |
+| 2b-non | :775-776 | Non-financial motives: ethical stance · social entrepreneurship · independence · home working (4 leaves) |
+| 3a | :777 | Survival |
+| 3b | :779 | Profit maximisation (as an objective) |
+| 3c | :781-786 | Other objectives: sales maximisation · market share · cost efficiency · employee welfare · customer satisfaction · social objectives (6 leaves) |
+| 4a | :787 | Opportunity cost |
+| 4b | :788 | Trade-offs |
+
+### Rule 1 — eight of twenty-seven claims checked against the spec span and found wrong
+
+**The heading of 1.3.5 is "Entrepreneurs and leaders" and its four sub-topics contain NO leadership
+leaf.** Leadership is `1.3.4 · 5` (`bus_spec.txt:746-753`), which `managing-people` owns and **packet 30
+built on 17 Sep, keeping `5c` — "The difficulty of moving from entrepreneur to leader" (:753) — as a
+subsection of its own, after refusing two findings that asked to move it HERE.** Four of this packet's
+items ask this section to build the other half of that same refusal. They are the dangerous class in
+reverse — not "delete what the spec requires" but "build what another section already owns" — and
+obeying them would put the programme's third duplicate topic into `SPEC-OWNERSHIP.md`.
+
+1. **`specGap-01` and the first clause of `topFix-01` — "Moving from entrepreneur to leader" — REFUSED.**
+   `bus_spec.txt:753` puts it in 1.3.4, not 1.3.5. Packet 30 owns it and has taught it. Cross-reference
+   only. This is the exact inverse of packet 30's `structure-05`, and the two findings between them
+   would have moved the leaf twice and taught it nowhere.
+2. **`specGap-02` and the second clause of `topFix-01` — "Forms of business" — REFUSED.** Sole trader,
+   partnership, private limited company is `2.3.1 · 4a` (:870); franchising, social enterprise,
+   lifestyle and online businesses is `4b` (:872); growth to plc and flotation is `4c` (:874); limited
+   and unlimited liability is `2.3.1 · 5` (:876-878). All four belong to `planning-raising-finance`,
+   Business 2.3.1, built by **packet 19**. Zero hits for any of them inside :760-788.
+3. **`structure-01` — "title/coverage mismatch" — REFUSED as stated, and the premise is answered.** The
+   title is the specification's own heading. Its claim that "no other business Unit 1 section in
+   index.json covers either" was true of the audited corpus and is false now: packet 30 covers the
+   leadership half and packet 19 covers forms of business. **The real defect underneath it is the one
+   worth fixing** — practice Q3 and two flashcard chains ASSESS leadership styles that this section
+   must not teach. Those are removed here, which is what `practice-01` asks for.
+4. **`practice-01` — CONFIRMED on its first clause, REFUSED on its last.** Leadership styles are indeed
+   untaught here and p2 goes. But "IAL 10-mark Assess is level-marked (Knowledge 2 / Application 2 /
+   Analysis 3 / Evaluation 3)" is a claim about what a marker credits, which `MARK_CLAIM` refuses
+   (packet 17, re-affirmed packet 30). `examMatters` says what the command word REQUIRES, per Appendix 6.
+5. **`topFix-05`'s "tariffs 4/8/10/12/20 only" — REFUSED against the census.** This is Unit 1:
+   `Assess` is **10** here and 12 only in Units 3/4 (`bus_spec.txt:2238-2245`). And the list omits
+   `Define` (2) and `Analyse` (6), which are Unit 1 command words. The eight Business tariffs are
+   Define 2 · Calculate 4 · Construct 4 · Explain 4 · Analyse 6 · Discuss 8 · Assess 10 · Evaluate 20.
+   Its "level descriptors" clause is refused with `practice-01`'s, same reason.
+6. **`specGap-08` is a hedge, and gets the same spec check as an assertion (packet 29's rule).**
+   ANSWERED from the census: Business **`Define` is 2 marks** (:2220) and **`Explain` is 4** (:2227-2229).
+   The live practice Q0 is "Define … (4 marks)", which is neither. It becomes Define 2.
+7. **`specGap-07`'s premise is wrong.** `lack of skills` and `fear of failure` are **0 hits** in
+   `bus_spec.txt`; they are not "spec-named barriers". The leaf `1d` is the bare phrase "Barriers to
+   entrepreneurship" (:768) and the spec supplies no bullets for it — **rule 2 applies**: teach the
+   barrier in the spec's own words and derive the list from leaves the spec DOES name (finance from
+   2.3.1·3, risk and uncertainty from 1e, skills from 2a). The finding's underlying complaint — that
+   content lists four barriers while notes and flashcards list more — is real and is fixed.
+8. **`specGap-03`'s parenthetical is another section's leaf.** "risk = quantifiable, uncertainty = not"
+   is **`1.3.1 · 1d`, "The difference between risk and uncertainty" (:518)**, owned by
+   `meeting-customer-needs` (packet 16). This section owns `1e`, *anticipating* risk and uncertainty in
+   the business environment. The distinction is referred to in one sentence; the subsection teaches the
+   anticipating, which is what :769 asks for.
+
+### Rule 2 — the vocabulary check, run before a word was written
+
+`revenue maximisation` is **0 hits** in `bus_spec.txt`; `sales maximisation` is 1 (:781). The live
+section teaches the objective under the wrong name, which is `specGap-06` and `topFix-04`, and the
+runner bans the off-spec phrase. Every other central term is present and is used in the spec's form:
+`intrapreneurship` (:767), `profit satisficing` (:774), `ethical stance` · `social entrepreneurship` ·
+`independence` · `home working` (:775-776), `cost efficiency` (:783), `employee welfare` (:784),
+`customer satisfaction` (:785), `social objectives` (:786), `opportunity cost` (:787), `trade-offs` (:788).
+
+### What gets built
+
+**Five blocks in specification order**, sub-topic 1's five leaves split so the block is not twice the
+size of the others: Role of an Entrepreneur · Risk, Uncertainty and Barriers · Motives and
+Characteristics · Business Objectives · Business Choices. **~25 subsections** from 12 (one subsection is
+one step). **The arithmetic spine** is one worked firm carried through every surface, so `Calculate (4)`
+and the opportunity-cost leaf are re-derived rather than typed. **Diagrams where there were none** —
+`structure-09` asks for "objective vs life-cycle stage" and "opportunity cost = next best, not sum", and
+both are built; a diagram is the only surface in the schema that can carry a grid.
+
+Assessment: **3 unpinned quiz items FIRST** for the pre-test, then one pin per block **derived from each
+item's own `block` tag** (packet 30's method — `topFix-03` and `structure-02` are that `quizIndices` is
+the identity mapping, and deriving it makes that unrepresentable rather than corrected). **The
+positional bias in `quiz-01` is measured and asserted, not eyeballed**: the runner fails the build if
+`correctIndex` is unbalanced or if the longest option is the key more often than chance. Practice: one
+per Business Unit 1 command word at census tariffs, every question anchored in a short case extract
+(`topFix-05`'s one good clause). Recalls rebuilt to `topFix-02` / `structure-04`: no letter-leaking
+hints, no hint/answer length mismatch, no repeated shuffle permutation, and every one checked against
+V029's corrected answer-recoverable test.
+
+### Acceptance checks a verifier can run without this conversation
+
+1. `node scripts/packet-35-entrepreneurs-leaders.mjs` exits 0 — every check, including the spec-phrase
+   ban (`revenue maximisation`, `barriers to entry`, leadership-style vocabulary, forms-of-business
+   vocabulary), `FAILED_SUBSTITUTION`, the answer-recoverable recall test and the quiz-bias assertion.
+2. `npm run validate` exits 0 with **0 new BLOCK and 0 new DEBT**; the section's own findings clear.
+3. `npm test` and `npm run build` green.
+4. 22 of 22 leaves mapped by the runner's hand `LEAF_MAP`.
+5. `node audit/scripts/ledger.mjs unverified 35` exits 0.
+6. **Verify B at 390×844, signed out, `?draft=1`**: a three-question pre-test with no check-in repeat;
+   every block's check-in carries its own on-topic quiz; **no step anywhere mentions a leadership style,
+   a sole trader, a partnership, a private limited company, a franchise or flotation as taught content**;
+   zero failed substitutions; zero console content errors.
+
+
+### Layer 6 — adversarial read on a canary copy (Opus, fresh context, 27 tool calls)
+
+**Both planted canaries found** — a revenue figure changed from $5,000 to $8,000 in one teaching
+paragraph, and a quiz explanation changed to contradict its own key — so the pass is calibrated.
+**Eighteen further findings, of which fifteen were real and three were wrong.** It re-derived the
+whole spine independently and reconciled every other figure.
+
+**The three that matter most, because no mechanical check in this repository could see any of them:**
+
+1. **The profit curve was drawn clamped at zero**, so the loss-making tails ran FLAT along the axis
+   and the picture implied the workshop breaks even at the frame edges rather than at $20 and $50.
+   **The Construct (4) question printed beside it asks a student to draw a curve that crosses zero at
+   both.** The diagram contradicted the mark scheme next to it. Every existing check passed it: the
+   curve still peaked at $35 and still "fell away on both sides". Now profit = 0 sits three-quarters
+   down the frame, the tails are drawn below it, and the runner reads the emitted polyline and
+   refuses unless the drawn point at each break-even price sits ON the zero line and both ends sit
+   below it.
+2. **`MARK_CLAIM` let one through**: *"which says nothing a marker can credit as reasoning"*, in a
+   misconception a student reads. Every clause of the inherited pattern missed it — no tariff nearby,
+   no "mark scheme", and "credit" was only matched after "mark schemes?". The guard now catches a
+   marker or an examiner as the subject of credit/reward/expect/look for, A/B'd in both directions.
+3. **An inherited check was enforcing a false claim.** Packet 30's runner requires every `Discuss`
+   gloss to mention a "conclusion". `bus_spec.txt:2234-2237` does not contain the word: it asks for
+   *"a brief ASSESSMENT ... showing an awareness of competing arguments/factors"*. The guard had
+   made three glosses in this section assert something Appendix 6 does not say — a check
+   manufacturing the defect it exists to prevent. Corrected here; **filed as `V036` against packets
+   30 and 31**, whose staged Discuss glosses carry the inherited claim and which are also held.
+
+**Twelve more, all fixed:** the Assess model answer said cost efficiency "would add $10,000 at any
+price" when the saving is $2 × quantity and is $16,000 at the very price that question is about; a
+three-way contradiction over whether a salaried manager meets half the definition of an entrepreneur
+or none of it (the notes takeaway had him bearing the financial risk — he bears neither); a diagram
+caption claiming "the last three motives all predict satisficing" when the third-from-last predicts
+the opposite end of the schedule; the set-up sequence left at five steps in a flashcard and the notes
+after the flow was cut to four, so a student counting steps found no step five; a caption calling
+differences in PROFIT differences in price; another calling four barriers "the two barriers"; another
+calling anticipating risk an objective when it is part of the role; `notes[0]` claiming five leaves
+for a chapter that teaches three, so the five notes claimed 24 leaves against a topic with 22; a
+flashcard calling a barrier a "requirement of the role"; a fill-in line whose logic ran backwards;
+an appeal to a "specification's definition" the specification does not contain; and the one place the
+section crossed into 2.3.1 — four named sources of finance inside the capital-barrier subsection.
+Three of these now have guards: the notes' own leaf labels are summed against the topic's 22, the
+sources of finance are in `BANNED_ELSEWHERE`, and the curve check above.
+
+**Three findings rejected, with the evidence:**
+
+- **"All 12 diagram scenarios are unreadable in light mode"** — the most serious-sounding and it is
+  wrong. It read the baked `fill="#e8ecf5"` out of the JSON and never checked the renderer.
+  `components/learn-mode/processSvg.js:28-31` maps those literals onto the `--dg-*` tokens at render
+  time, and `npm run contrast` carries a rule asserting the mapping. **Measured in the browser in
+  light mode: `#e8ecf5` computes to `rgb(31, 41, 55)` and `#94a3b8` to `rgb(71, 85, 105)` on a
+  `rgb(244, 246, 250)` page.** This is [[revvylearn-verify-independently]] inverted — it verified the
+  data against itself and never ran the system.
+- **"Quiz items 0, 1 and 2 are orphaned — attached to no block and never served"** — they are the
+  deliberately UNPINNED pre-test pool, which `PreTest.jsx` slices at three and which must be first in
+  the array. Verify B watched all three appear on screen in the pre-test.
+- **"Captions render at ~10px on a 375px phone"** — true and answered rather than a defect: the
+  declared tables offer V022's full-screen sheet, measured at 858 CSS px, where a 10-unit cell is
+  19.5px.
+
+**The lesson worth carrying:** the two findings this pass ranked highest were its two weakest, and
+the one that would have shipped a diagram arguing against its own mark scheme was ranked seventh.
+Rank is a hypothesis; the spec file and the running page are the evidence.
+
+### Verify B — signed-out student walk, 390×844, `?draft=1`, storage cleared
+
+**30 steps walked, all 30 clean.** 25 subsections + 5 chapter check-ins, "STEP n OF 30" and
+"CHAPTER n OF 5" correct throughout, `part n of m` correct in every chapter.
+
+- **Pre-test: three questions**, all three from the unpinned pool, all answerable from chapter 1,
+  options shuffled at render (the key landed at C, D and C on screen against slots 3, 2, 2 in the
+  array). No check-in repeats a pre-test question.
+- **5 of 5 check-ins carry a diagram, an on-topic quiz and a practice item.** The quiz on each is its
+  own chapter's: entrepreneur-definition · risk-in-fifty · characteristics-and-skills · the survival
+  range · opportunity cost. That is `quiz-03` and `structure-02` visible on screen rather than in a
+  data structure.
+- **Zero failed substitutions** over all 30 steps (`undefined`, `NaN`, `[object Object]`, `${`).
+- **One console error**, a 401 from `POST /api/learn-mode/state` for a signed-out reader. Pre-existing
+  and unrelated; packet 2.1's Verify B recorded the same.
+- **Free payload measured: 8 of `FREE_QUIZ_MAX` 10.** 5 chapter pins + the 3 pre-test items; all five
+  blocks resolve their `quizIndices` against the served array. `counts` gives the overview the TRUE
+  totals (34 quiz, 30 cards, 8 mistakes), so nothing reads "2 of 2".
+- **Diagram legibility, measured rather than assumed (V022).** A Learn Mode diagram renders **313 CSS
+  px** on a 390px phone, confirming packet 30's figure and not the 530 the validator's rule assumes.
+  The declared tables draw at 10 units — 7.11px inline — and this is the exemption the runner makes
+  for `kind: "table"`, so it was checked rather than taken on trust: the card carries
+  `lm-diagram-table`, the wrapper is `lm-diagram-clickable`, and **opening the sheet draws the table
+  at 858 CSS px, where a 10-unit cell is 19.5px.** V022's promise holds on this section.
+- **`estWidth`'s 0.7 em bound re-measured with `getComputedTextLength()`**: max **0.605** em/char,
+  median 0.514, across 27 labels. Nothing runs outside its frame (widest right edge 405.1 of 440).
+  The guard is pessimistic in the right direction, as packet 24 found.
+- **An independent scan of what the ROUTE serves** — 1,046 student-readable strings from
+  `?draft=1`, and 1,375 from the staged bundle including the paid-only surfaces — found **zero** hits
+  for leadership-style vocabulary, "entrepreneur to leader", any form of business or liability,
+  "revenue maximisation" outside its two declared exhibits, "barriers to entry", an off-spec
+  framework, a failed substitution, a year, a named real company, a marker claim, an internal ledger
+  id, or a note about our own previous content. This scan reads the HTTP response rather than the
+  modules, so it does not reuse the runner's own logic.
+
+**One finding, and it is not this packet's: V034 reproduced exactly, on a second section.**
+All four spaced recalls — check-ins 2, 3, 4 and 5 — say **"RECALL FROM CHAPTER 1"**. Chapters 2, 3
+and 4 are never revisited. Packet 31 filed V034 against packet 2.7 from `financial-planning`, which
+is also five chapters; this is the independent second sighting the finding needed, and it confirms
+the diagnosis is structural rather than a property of one section's recall bank. **No content packet
+can fix it** — `pickSpacedRecall` has four spaced slots and chapter 1's recalls fill all four.
+
+**Not checked, and it is the founder's one pass:** the signed-in Pro surfaces — the other 26 quiz
+items, the 8 common mistakes, the full mark scheme behind "Reveal mark scheme ▼", and the 28
+withheld flashcards. A session cannot sign in. Hand him the URL with `?draft=1` and these three:
+the profit-hill diagram on chapter 4's check-in, the Assess (10) on the retailer's offer, and
+whether the common mistakes read like things his students actually write.
+
+
 ## Packet 34 result — `causes-effects-globalisation`, Economics 4.3.1 (Opus 5, 18 September 2026)
 
 **BUILT, VERIFIED, STAGED NOT PUBLISHED**, held for the packet 5/7 checkpoint with packets 5, 5.1, 7
