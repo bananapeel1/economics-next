@@ -64,7 +64,7 @@
      {
       "id": "causes-effects-globalisation:sub:trade-as-a-proportion-of-gdp",
       "title": "Trade as a Proportion of GDP",
-      "keyIdea": "The first characteristic is a ratio, not a total. Tamira's trade has risen from 30% of its output to 77.8%, because trade compounds at 6% a year and output at 4%.",
+      "keyIdea": "The first characteristic is a ratio, not a total. Tamira's trade has risen from 30% of its output to 77.7%, because trade compounds at 6% a year and output at 4%.",
       "body": [
        {
         "type": "paragraph",
@@ -72,7 +72,7 @@
        },
        {
         "type": "paragraph",
-        "text": "Work it out for Tamira. Fifty years ago its output was $40.0bn and its trade $12.0bn, so trade was $12.0bn ÷ $40.0bn × 100 = 30% of output. Today output is $284.3bn and trade is $221.0bn: 77.8%."
+        "text": "Work it out for Tamira. Fifty years ago its output was $40.0bn and its trade $12.0bn, so trade was $12.0bn ÷ $40.0bn × 100 = 30% of output. Today output is $284.3bn and trade is $221.0bn: 77.7%."
        },
        {
         "type": "paragraph",
@@ -279,7 +279,7 @@
     ],
     "takeaway": [
      "Globalisation is integration, and the specification measures it three ways.",
-     "Trade as a PROPORTION of GDP: 30% to 77.8% in fifty years.",
+     "Trade as a PROPORTION of GDP: 30% to 77.7% in fifty years.",
      "A TNC produces in more than one country. Exporting from one does not count.",
      "FDI buys productive assets abroad AND the control of them. A small shareholding does not.",
      "Migration is listed as a characteristic here; its effects belong to other topics."
@@ -575,7 +575,7 @@
      {
       "id": "causes-effects-globalisation:sub:why-trade-grew-faster-than-output",
       "title": "Why Trade Grew Faster Than Output",
-      "keyIdea": "The five causes are not five separate stories. Together they explain the one number chapter 1 measured: why Tamira's trade went from 30% of output to 77.8%.",
+      "keyIdea": "The five causes are not five separate stories. Together they explain the one number chapter 1 measured: why Tamira's trade went from 30% of output to 77.7%.",
       "body": [
        {
         "type": "paragraph",
@@ -1032,16 +1032,16 @@
       "recall": {
        "id": "causes-effects-globalisation:sub:lower-prices-and-consumer-surplus:recall",
        "type": "fillin",
-       "prompt": "A market's demand is 40,000 at $90 and 70,000 at $60. The price falls from $90 to $60:",
+       "prompt": "A market's demand is 40,000 at $90 and 80,000 at $60. The price falls from $90 to $60:",
        "template": [
         "The 40,000 buyers who were already buying gain ___ between them",
-        "The 30,000 new buyers gain ___ between them",
+        "The 40,000 new buyers gain ___ between them",
         "So the total gain in consumer surplus is ___"
        ],
        "answers": [
         "$1.2m",
-        "$0.5m",
-        "$1.7m"
+        "$0.6m",
+        "$1.8m"
        ],
        "hints": [
         "the fall in price times the old quantity",
@@ -1051,7 +1051,7 @@
        "distractors": [
         "$2.4m",
         "$0.9m",
-        "$3.3m"
+        "$3.6m"
        ]
       }
      },
@@ -1567,7 +1567,7 @@
       "items": [
        {
         "type": "mechanism",
-        "text": "Trade rises against output because it compounds faster: 6% a year against 4% takes Tamira from 30% to 77.8%."
+        "text": "Trade rises against output because it compounds faster: 6% a year against 4% takes Tamira from 30% to 77.7%."
        },
        {
         "type": "mechanism",
@@ -1804,25 +1804,25 @@
     "id": "causes-effects-globalisation:quiz:b61a12d2",
     "question": "A firm makes everything in one country and sells to customers in forty. This firm is:",
     "options": [
-     "an exporter, but not transnational",
      "transnational, because it sells in forty countries",
+     "an exporter, but not transnational",
      "transnational, because its customers are foreign",
      "a foreign direct investor in forty countries"
     ],
     "explanation": "The test for a transnational company is where the production is owned and run, not where the customers are. All of this firm's production is in one country, so it is an exporter however large it is. Selling abroad is not investing abroad either, so nothing here is FDI.",
-    "correctIndex": 0
+    "correctIndex": 1
    },
    {
     "id": "causes-effects-globalisation:quiz:d96c2e63",
     "question": "Which of the following counts as foreign direct investment?",
     "options": [
+     "A firm buying a controlling stake in a company abroad",
      "A bank lending to a firm in another country",
      "A saver buying a few shares in a foreign firm",
-     "A firm exporting machinery to a foreign customer",
-     "A firm buying a controlling stake in a company abroad"
+     "A firm exporting machinery to a foreign customer"
     ],
     "explanation": "Direct investment means productive assets abroad together with control of them, and a controlling stake buys exactly that. A loan is repaid and directs nothing; a small shareholding leaves the existing managers deciding; an export sells a good rather than acquiring an asset.",
-    "correctIndex": 3
+    "correctIndex": 0
    },
    {
     "id": "causes-effects-globalisation:quiz:fe03dcde",
@@ -1864,13 +1864,13 @@
     "id": "causes-effects-globalisation:quiz:8a0185ce",
     "question": "In this topic, migration is listed as:",
     "options": [
-     "a characteristic of globalisation",
      "a cause of globalisation",
+     "a characteristic of globalisation",
      "a benefit of globalisation",
      "a cost of globalisation"
     ],
     "explanation": "The specification puts the increase in migration under characteristics, alongside trade as a proportion of GDP and the growth of TNCs and FDI. The causes it lists are liberalisation, trading blocs, political change, transport and communications, and TNCs — migration is not among them.",
-    "correctIndex": 0
+    "correctIndex": 1
    },
    {
     "id": "causes-effects-globalisation:quiz:d085a0f0",
@@ -1878,23 +1878,23 @@
     "options": [
      "switched from a rival product",
      "were already buying one each year",
-     "could not afford one at $150",
-     "are buying for resale abroad"
+     "are buying for resale abroad",
+     "could not afford one at $150"
     ],
     "explanation": "A demand curve says how many buyers there are at each price. Lowering the price to $70 brings in everyone whose willingness to pay lies between the two prices — they were not buying before because the device cost more than it was worth to them. The 100,000 who were already buying simply pay less.",
-    "correctIndex": 2
+    "correctIndex": 3
    },
    {
     "id": "causes-effects-globalisation:quiz:c3bcc1cd",
     "question": "Which cause of globalisation changes which goods are worth trading at all, rather than how much of an already-traded good is traded?",
     "options": [
      "Trade liberalisation",
-     "The falling cost of transport",
      "The growth of trading blocs",
+     "The falling cost of transport",
      "Political change in formerly closed economies"
     ],
     "explanation": "Freight is a share of a good's price, and a large share for a cheap good. When it falls, goods that were too cheap to be worth moving become worth moving — a different set of goods enters trade. Lower barriers and open economies raise the volume of trade in goods that were already worth shipping.",
-    "correctIndex": 1
+    "correctIndex": 2
    },
    {
     "id": "causes-effects-globalisation:quiz:f749456d",
@@ -1960,25 +1960,25 @@
     "id": "causes-effects-globalisation:quiz:82779ad6",
     "question": "The best test of whether an FDI project benefits a recipient country is:",
     "options": [
+     "what it leaves behind, net of the next best alternative",
      "the number of jobs it creates in its first year",
      "the size of the investment the firm announces",
-     "whether the firm is larger than the country's own producers",
-     "what it leaves behind, net of the next best alternative"
+     "whether the firm is larger than the country's own producers"
     ],
     "explanation": "A project with a positive effect can still be the wrong project if the land, workers and tax concessions it used would have produced more elsewhere. Headline jobs, announced capital and the size of the investor are all figures available before anything has happened, and none of them nets anything off.",
-    "correctIndex": 3
+    "correctIndex": 0
    },
    {
     "id": "causes-effects-globalisation:quiz:9b4b8206",
     "question": "Two producers each pay $30 a unit for materials and labour. One spends $12m on its plant and makes 100,000 units; the other spends $24m and makes 600,000. The second is cheaper per unit because:",
     "options": [
      "it pays its workers less",
-     "its fixed cost is spread over more units",
      "its materials are of lower quality",
+     "its fixed cost is spread over more units",
      "it spends less on its plant in total"
     ],
     "explanation": "The materials and labour cost $30 for both, so wages and materials cannot be the difference. What differs is $12m ÷ 100,000 = $120 against $24m ÷ 600,000 = $40. The larger producer spends more on its plant in total, not less.",
-    "correctIndex": 1
+    "correctIndex": 2
    },
    {
     "id": "causes-effects-globalisation:quiz:ddd3d680",
@@ -1993,16 +1993,16 @@
     "correctIndex": 1
    },
    {
-    "id": "causes-effects-globalisation:quiz:dbb86249",
-    "question": "A price falls from $90 to $60. 40,000 buyers were already buying and 30,000 more now do. The gain in consumer surplus is:",
+    "id": "causes-effects-globalisation:quiz:7d6fc8f2",
+    "question": "A price falls from $90 to $60. 40,000 buyers were already buying and 40,000 more now do. The gain in consumer surplus is:",
     "options": [
-     "$1.7m",
      "$1.2m",
-     "$2.1m",
-     "$0.5m"
+     "$2.4m",
+     "$1.8m",
+     "$0.6m"
     ],
-    "explanation": "The buyers already in the market gain the full $30 fall: 40,000 × $30 = $1.2m. The new buyers gain less each, because the good is worth only a little more to them than the new price, and their gain is half the fall times their number: $0.5m. Together that is $1.7m.",
-    "correctIndex": 0
+    "explanation": "The buyers already in the market gain the full $30 fall: 40,000 × $30 = $1.2m. The new buyers gain less each, because the good is worth only a little more to them than the new price, and their gain is half the fall times their number: $0.6m. Together that is $1.8m.",
+    "correctIndex": 2
    },
    {
     "id": "causes-effects-globalisation:quiz:7ffe994d",
@@ -2010,11 +2010,11 @@
     "options": [
      "firms are required to offer more models",
      "consumers in rich countries demand variety",
-     "a larger market can cover the fixed cost of more varieties",
-     "transport costs no longer affect which goods are sold"
+     "transport costs no longer affect which goods are sold",
+     "a larger market can cover the fixed cost of more varieties"
     ],
     "explanation": "Every variety carries its own design and tooling costs, and a variety wanted by a small share of buyers needs a large market before those costs are covered. Opening the market supplies the buyers. Nothing requires firms to offer variety, and transport costs still matter — falling ones are one of the causes.",
-    "correctIndex": 2
+    "correctIndex": 3
    },
    {
     "id": "causes-effects-globalisation:quiz:e5d48d36",
@@ -2044,13 +2044,13 @@
     "id": "causes-effects-globalisation:quiz:b4397323",
     "question": "A government is reluctant to raise minimum workplace standards because a large employer could build its next plant elsewhere. This is an example of:",
     "options": [
+     "the influence of a TNC on domestic policy",
      "the exploitation of workers by a TNC",
      "trade liberalisation reducing barriers to imports",
-     "the displacement of workers by imports",
-     "the influence of a TNC on domestic policy"
+     "the displacement of workers by imports"
     ],
     "explanation": "The firm has changed what the government is willing to propose, which is the sixth cost the specification lists. No worker has yet been employed on worse terms, no barrier has moved and no import has displaced anybody: the effect is on the policy, before anything else happens.",
-    "correctIndex": 3
+    "correctIndex": 0
    },
    {
     "id": "causes-effects-globalisation:quiz:a1743204",
@@ -2058,11 +2058,11 @@
     "options": [
      "increased population",
      "increased taxation",
-     "increased trade",
-     "increased migration"
+     "increased migration",
+     "increased trade"
     ],
     "explanation": "The leaf is the environmental impact of increased trade: more goods moving further, because moving them became cheap. Tamira's trade is 18.40 times what it was fifty years ago against output 7.10 times, and the gap between those two multiples is the extra movement.",
-    "correctIndex": 2
+    "correctIndex": 3
    },
    {
     "id": "causes-effects-globalisation:quiz:2944e73b",
@@ -2173,12 +2173,12 @@
    {
     "id": "causes-effects-globalisation:flashcard:e7f9ced1",
     "front": "How is trade as a proportion of GDP calculated?",
-    "back": "(exports + imports) ÷ GDP × 100. The two flows are ADDED, not netted off, and the result can exceed 100% because imports are not part of output. Tamira: $221.0bn ÷ $284.3bn = 77.8%."
+    "back": "(exports + imports) ÷ GDP × 100. The two flows are ADDED, not netted off, and the result can exceed 100% because imports are not part of output. Tamira: $221.0bn ÷ $284.3bn = 77.7%."
    },
    {
     "id": "causes-effects-globalisation:flashcard:7e684ac8",
     "front": "Why does trade as a proportion of GDP rise?",
-    "back": "Because trade compounds faster than output. In Tamira, 6% a year against 4% takes the ratio from 30% to 77.8% in fifty years, with neither series ever falling."
+    "back": "Because trade compounds faster than output. In Tamira, 6% a year against 4% takes the ratio from 30% to 77.7% in fifty years, with neither series ever falling."
    },
    {
     "id": "causes-effects-globalisation:flashcard:e65b9139",
@@ -2291,7 +2291,7 @@
     "id": "causes-effects-globalisation:mistake:24b8ff26",
     "title": "Measuring globalisation by the total value of trade",
     "looks_like": "\"Trade has grown enormously, so the economy has globalised.\"",
-    "why": "A growing economy trades more without becoming any more integrated. The characteristic the specification names is trade as a PROPORTION of GDP, and it moves only when the two grow at different rates: Tamira's ratio rose from 30% to 77.8% because trade compounds at 6% and output at 4%.",
+    "why": "A growing economy trades more without becoming any more integrated. The characteristic the specification names is trade as a PROPORTION of GDP, and it moves only when the two grow at different rates: Tamira's ratio rose from 30% to 77.7% because trade compounds at 6% and output at 4%.",
     "instead": "Divide before concluding. If the ratio is flat, the economy has grown and not integrated, however large the trade figure is."
    },
    {
@@ -2348,7 +2348,7 @@
      "The first and last values marked, so the size of the change can be read off."
     ],
     "caption": "Trade compounding faster than output is what \"increase in trade as a proportion of GDP\" means, and it is the first characteristic the specification names.",
-    "svg": "<svg width=\"440\" height=\"418\" viewBox=\"0 0 440 418\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"20\" y=\"28\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">Tamira: trade as a proportion of GDP, over</text><text x=\"20.6\" y=\"44\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">fifty years</text><line x1=\"56\" y1=\"300\" x2=\"416\" y2=\"300\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2 4\"/><text x=\"48\" y=\"304\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"end\">0%</text><line x1=\"56\" y1=\"253\" x2=\"416\" y2=\"253\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2 4\"/><text x=\"48\" y=\"257\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"end\">20%</text><line x1=\"56\" y1=\"206\" x2=\"416\" y2=\"206\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2 4\"/><text x=\"48\" y=\"210\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"end\">40%</text><line x1=\"56\" y1=\"159\" x2=\"416\" y2=\"159\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2 4\"/><text x=\"48\" y=\"163\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"end\">60%</text><line x1=\"56\" y1=\"112\" x2=\"416\" y2=\"112\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2 4\"/><text x=\"48\" y=\"116\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"end\">80%</text><line x1=\"56\" y1=\"112\" x2=\"56\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"56\" y1=\"300\" x2=\"416\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><polyline points=\"56,229.5 128,214.7 200,196.84 272,175.21 344,148.9 416,117.17\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/><circle cx=\"56\" cy=\"229.5\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"128\" cy=\"214.7\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"200\" cy=\"196.84\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"272\" cy=\"175.21\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"344\" cy=\"148.9\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"416\" cy=\"117.17\" r=\"3.5\" fill=\"#3b82f6\"/><text x=\"56\" y=\"318\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">50y</text><text x=\"128\" y=\"318\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">40y</text><text x=\"200\" y=\"318\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">30y</text><text x=\"272\" y=\"318\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">20y</text><text x=\"344\" y=\"318\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">10y</text><text x=\"416\" y=\"318\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">now</text><text x=\"64\" y=\"219.5\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">30%</text><text x=\"416\" y=\"105.17\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\" text-anchor=\"end\">77.8%</text><text x=\"20\" y=\"346\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">Output compounds at 4% a year and trade at 6%,</text><text x=\"20.01\" y=\"362\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">so trade rises from 30% of GDP to 77.8% without</text><text x=\"20.02\" y=\"378\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">either series ever falling. The horizontal axis</text><text x=\"20.03\" y=\"394\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">counts years before today.</text></svg>"
+    "svg": "<svg width=\"440\" height=\"418\" viewBox=\"0 0 440 418\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"20\" y=\"28\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">Tamira: trade as a proportion of GDP, over</text><text x=\"20.6\" y=\"44\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">fifty years</text><line x1=\"56\" y1=\"300\" x2=\"416\" y2=\"300\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2 4\"/><text x=\"48\" y=\"304\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"end\">0%</text><line x1=\"56\" y1=\"253\" x2=\"416\" y2=\"253\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2 4\"/><text x=\"48\" y=\"257\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"end\">20%</text><line x1=\"56\" y1=\"206\" x2=\"416\" y2=\"206\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2 4\"/><text x=\"48\" y=\"210\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"end\">40%</text><line x1=\"56\" y1=\"159\" x2=\"416\" y2=\"159\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2 4\"/><text x=\"48\" y=\"163\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"end\">60%</text><line x1=\"56\" y1=\"112\" x2=\"416\" y2=\"112\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2 4\"/><text x=\"48\" y=\"116\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"end\">80%</text><line x1=\"56\" y1=\"112\" x2=\"56\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"56\" y1=\"300\" x2=\"416\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><polyline points=\"56,229.5 128,214.7 200,196.84 272,175.21 344,148.9 416,117.41\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/><circle cx=\"56\" cy=\"229.5\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"128\" cy=\"214.7\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"200\" cy=\"196.84\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"272\" cy=\"175.21\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"344\" cy=\"148.9\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"416\" cy=\"117.41\" r=\"3.5\" fill=\"#3b82f6\"/><text x=\"56\" y=\"318\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">50y</text><text x=\"128\" y=\"318\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">40y</text><text x=\"200\" y=\"318\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">30y</text><text x=\"272\" y=\"318\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">20y</text><text x=\"344\" y=\"318\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">10y</text><text x=\"416\" y=\"318\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">now</text><text x=\"64\" y=\"219.5\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">30%</text><text x=\"416\" y=\"105.41\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\" text-anchor=\"end\">77.7%</text><text x=\"20\" y=\"346\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">Output compounds at 4% a year and trade at 6%,</text><text x=\"20.01\" y=\"362\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">so trade rises from 30% of GDP to 77.7% without</text><text x=\"20.02\" y=\"378\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">either series ever falling. The horizontal axis</text><text x=\"20.03\" y=\"394\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">counts years before today.</text></svg>"
    },
    {
     "id": "causes-effects-globalisation:diagram:976b53df",
@@ -2403,7 +2403,7 @@
       "Its neighbours agree with it to lower the barriers between them, so the goods each already made become cheaper to sell to the others.",
       "Foreign firms build component plants inside it, because the barriers are now low and freight has fallen to $3 a unit.",
       "Components leave for assembly elsewhere — $25 a device — and the finished $70 device crosses a border again.",
-      "Trade rises faster than output, so trade as a proportion of GDP climbs: 30% to 77.8% over fifty years."
+      "Trade rises faster than output, so trade as a proportion of GDP climbs: 30% to 77.7% over fifty years."
      ],
      "result": "Four of the specification's five causes appear in that sequence, and the order is not interchangeable: nothing else on the list can happen while the economy is closed, and the ratio at the end is the consequence of everything above it. Only the fourth step raises recorded trade without raising what anybody produces or consumes, which is why it is the step to reach for when the question is about the RATIO rather than the volume."
     },

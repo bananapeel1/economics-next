@@ -648,15 +648,15 @@ const lowerPricesConsumerSurplus = (() => {
     examMatters: `Appendix 6 defines Draw as assessing quantitative skills through an accurately labelled diagram, for 4 marks, and says students may have to decide the type of diagram. Here that decision is a demand curve with both prices marked.`,
     recall: recall(sid, {
       type: 'fillin',
-      prompt: `A market's demand is ${qty(40000)} at ${money(90)} and ${qty(70000)} at ${money(60)}. The price falls from ${money(90)} to ${money(60)}:`,
+      prompt: `A market's demand is ${qty(40000)} at ${money(90)} and ${qty(80000)} at ${money(60)}. The price falls from ${money(90)} to ${money(60)}:`,
       template: [
         `The ${qty(40000)} buyers who were already buying gain ___ between them`,
-        `The ${qty(30000)} new buyers gain ___ between them`,
+        `The ${qty(40000)} new buyers gain ___ between them`,
         `So the total gain in consumer surplus is ___`,
       ],
-      answers: [mn(1.2), mn(0.45), mn(1.65)],
+      answers: [mn(1.2), mn(0.6), mn(1.8)],
       hints: ['the fall in price times the old quantity', 'half the fall times the extra quantity', 'the two parts added'],
-      distractors: [mn(2.4), mn(0.9), mn(3.3)],
+      distractors: [mn(2.4), mn(0.9), mn(3.6)],
     }),
   };
 })();

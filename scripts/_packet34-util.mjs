@@ -112,10 +112,19 @@ export const TAMIRA = (() => {
   const openness = (t) => (100 * trade(t)) / gdp(t);
   const decades = [0, 10, 20, 30, 40, 50];
   const label = (t) => (t === 50 ? 'today' : `${50 - t} years ago`);
-  const series = decades.map((t) => ({
-    t, label: label(t),
-    gdp: round1(gdp(t)), trade: round1(trade(t)), openness: round1(openness(t)),
-  }));
+  /*
+   * THE RATIO IS COMPUTED FROM THE FIGURES THE PAGE PRINTS, NOT FROM THE UNROUNDED ONES. Layer 6
+   * found this: the text gave output as $284.3bn and trade as $221.0bn and then called the ratio
+   * 77.8%, which is the unrounded division (77.76%). A student dividing the two numbers in front of
+   * them gets 77.7%, and is right. A derived figure has to be derivable from the figures actually on
+   * the page, so `openness` divides the ROUNDED series — and the runner asserts it, because nothing
+   * else in the pipeline compares a printed ratio with the printed quantities behind it.
+   */
+  const series = decades.map((t) => {
+    const g = round1(gdp(t));
+    const tr = round1(trade(t));
+    return { t, label: label(t), gdp: g, trade: tr, openness: round1((100 * tr) / g) };
+  });
   const first = series[0], last = series[series.length - 1];
   return {
     name: 'Tamira',

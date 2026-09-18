@@ -138,9 +138,9 @@ export const QUIZ = placeKeys([
     ['what buyers would have paid, minus what they do pay', 'the money consumers save when a price falls', 'the profit a producer makes on each unit sold', 'the difference between the highest and lowest price'],
     'Surplus is the gap between willingness to pay and the price actually paid, summed over every buyer. The saving made when a price falls is only part of the change in surplus, because buyers who were priced out and now buy gain as well. Producer profit is a different quantity altogether.'),
 
-  qi(B4, `A price falls from ${money(90)} to ${money(60)}. ${qty(40000)} buyers were already buying and ${qty(30000)} more now do. The gain in consumer surplus is:`,
-    [mn(1.65), mn(1.2), mn(2.1), mn(0.45)],
-    `The buyers already in the market gain the full ${money(30)} fall: ${qty(40000)} × ${money(30)} = ${mn(1.2)}. The new buyers gain less each, because the good is worth only a little more to them than the new price, and their gain is half the fall times their number: ${mn(0.45)}. Together that is ${mn(1.65)}.`),
+  qi(B4, `A price falls from ${money(90)} to ${money(60)}. ${qty(40000)} buyers were already buying and ${qty(40000)} more now do. The gain in consumer surplus is:`,
+    [mn(1.8), mn(1.2), mn(2.4), mn(0.6)],
+    `The buyers already in the market gain the full ${money(30)} fall: ${qty(40000)} × ${money(30)} = ${mn(1.2)}. The new buyers gain less each, because the good is worth only a little more to them than the new price, and their gain is half the fall times their number: ${mn(0.6)}. Together that is ${mn(1.8)}.`),
 
   qi(B4, 'Globalisation increases choice mainly because:',
     ['a larger market can cover the fixed cost of more varieties', 'firms are required to offer more models', 'consumers in rich countries demand variety', 'transport costs no longer affect which goods are sold'],

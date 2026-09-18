@@ -731,10 +731,25 @@ eq('the first point is fifty years ago', T.series[0].t, 0);
 eq('the last point is today', T.series[T.series.length - 1].t, 50);
 near('GDP fifty years ago', T.first.gdp, T.gdp0);
 near('trade fifty years ago', T.first.trade, T.trade0);
+/*
+ * A PRINTED RATIO MUST DIVIDE THE PRINTED QUANTITIES, AND NOTHING ELSE LOOKED FOR THAT. Layer 6
+ * found the section giving output as $284.3bn and trade as $221.0bn and then calling the ratio
+ * 77.8% — the unrounded division. A student dividing the two figures in front of them gets 77.7%.
+ * Every other check in this file recomputes a figure from the same unrounded source the content
+ * used, so all of them agreed with each other and all of them were blind to it. This check uses
+ * ONLY the two numbers the page shows, which is the student's own arithmetic.
+ */
 for (const pt of T.series) {
   near(`GDP at t=${pt.t} compounds at ${T.gdpPct}%`, pt.gdp, Math.round(10 * T.gdp0 * (1 + T.gGdp) ** pt.t) / 10);
   near(`trade at t=${pt.t} compounds at ${T.tradePct}%`, pt.trade, Math.round(10 * T.trade0 * (1 + T.gTrade) ** pt.t) / 10);
-  near(`openness at t=${pt.t} is trade over output`, pt.openness, Math.round(1000 * pt.trade / pt.gdp) / 10, 0.11);
+  eq(`openness at t=${pt.t} is the PRINTED trade over the PRINTED output`, pt.openness, round2(Math.round((1000 * pt.trade) / pt.gdp) / 10));
+}
+{
+  /* A/B: the defect Layer 6 found must fire, and the corrected series must not. */
+  const unrounded = round2(Math.round((1000 * 221.0426) / 284.2504) / 10);
+  const printed = round2(Math.round((1000 * 221.0) / 284.3) / 10);
+  if (unrounded === printed) problems.push('the printed-ratio check can no longer tell the two derivations apart, so it would not have caught the 77.8% that Layer 6 did');
+  if (T.last.openness !== printed) problems.push(`the last openness figure is ${T.last.openness} and the printed division gives ${printed}`);
 }
 if (!(T.gTrade > T.gGdp)) problems.push('trade does not compound faster than output, so the first characteristic has no mechanism');
 for (let i = 1; i < T.series.length; i += 1) {
