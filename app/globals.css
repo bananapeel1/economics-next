@@ -3466,6 +3466,29 @@ button.sidebar-resource-link {
 .lm-diagram-table .lm-interactive-svg-wrapper img,
 .lm-diagram-table .diagram-svg-wrapper svg,
 .lm-diagram-table .diagram-svg-wrapper img { max-width: 100%; }
+
+/* A table gets the whole reading column; a diagram keeps the narrower frame.
+ *
+ * Releasing the graph cap was not enough on its own. The card is also held to 92% of
+ * `.lm-container`, which is a READING measure — 860 to 1060px, chosen so prose stays near 65
+ * characters. Measured in the browser that left a table 530px on a 1024-wide laptop, where its
+ * 9-unit cells render at 9.5px. Prose wants a narrow column; a grid of words wants room.
+ *
+ * The first attempt at this broke the table out to `min(100vw - 4rem, 1280px)`. That is the usual
+ * full-bleed trick and it is wrong here: the card is centred on the reading column, and the reading
+ * column is offset by the sidebar, so at 1024 the table ran from 169 to 1129 — 105px off the right
+ * edge of a 1024 viewport. Anything anchored to the viewport has to know about the sidebar.
+ *
+ * So: 100% of the container instead of 92%, which is bounded by construction and cannot overflow
+ * whatever the sidebar does. 530px -> about 820 at 1024 and 960 at 1280, and the cells go from
+ * 9.5px to roughly 15 and 17. Tap-to-enlarge stays on for tables at every width regardless
+ * (components/learn-mode/InlineDiagram.jsx), which is the founder's decision of 18 September: both,
+ * not one or the other.
+ */
+@media (min-width: 768px) {
+  .lm-diagram-card.lm-diagram-table,
+  .diagram-container.lm-diagram-table { max-width: 100%; }
+}
 /* Diagram label drill */
 .lm-label-drill {
   position: relative; padding: 16px 0;
