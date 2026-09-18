@@ -128,9 +128,16 @@ own ids only, serialised at `JSON.stringify(_, null, 1)` — the indent `audit/s
 writes — and leave theirs in the working tree for their gate commit. Diff by id before you commit and
 confirm every change is yours.
 
-**The index is stale and cannot simply be reset** (packet 31's warning, still true): `git status`
-shows `D` for files that are on disk and in HEAD, because the index has not been refreshed since
-before those commits, and four paths have held INDEX-ONLY content. Leave it alone.
+**The index is stale and cannot simply be reset** (packet 31's warning, still true), and here is
+what it looks like RIGHT NOW: `git status` reports `D` for all eight of packet 34's files —
+`scripts/_packet34-{util,content,assessment,diagrams}.mjs`,
+`scripts/packet-34-causes-effects-globalisation.mjs`, the two snapshots and
+`audit/runs/packet-34/layer-6.md` — and `??` for the same paths on the line below. Nothing is lost:
+every one of them is in HEAD (`git ls-tree HEAD`) and on disk. `git ls-files -s` returns NOTHING for
+them, which is the measurement that matters: **a plain `git commit` from this index would delete all
+eight**, exactly as packet 31 measured for its own five scripts. Packet 12.1's and packet 35's staged
+work is in there too, so do not `read-tree HEAD` over it either — four paths have held INDEX-ONLY
+content before now. Use the isolated index above and leave this one alone.
 
 **Exit criteria for a content packet**, unchanged: 0 BLOCK and 0 new DEBT on your own section, every
 claimed id confirmed by a verifier that has not seen your conversation, a 390×844 walk of the real
