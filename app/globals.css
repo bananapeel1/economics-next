@@ -77,15 +77,30 @@
   --shadow-dropdown: rgba(0,0,0,0.1);
   --white-subtle: rgba(0,0,0,0.04);
   --card-shadow: 0 1px 2px rgba(16,24,40,0.05), 0 2px 6px -2px rgba(16,24,40,0.08);
+  /* One triple per IAL tariff, both subjects. Economics runs 2/4/6/8/14/20 and Business
+     2/4/6/8/10/12/20; the ladder is derived in lib/practice-tariffs.js from lib/ial-marking.js.
+     Before packet 12.1 only 4/6/10/20 existed, which is neither subject's ladder. */
+  --practice-2-bg: #ecfeff;
+  --practice-2-border: #67e8f9;
+  --practice-2-badge: #0e7490;
   --practice-4-bg: #f0fdf4;
   --practice-4-border: #86efac;
   --practice-4-badge: #15803d;
   --practice-6-bg: #eff6ff;
   --practice-6-border: #93c5fd;
   --practice-6-badge: #1d4ed8;
+  --practice-8-bg: #f5f3ff;
+  --practice-8-border: #c4b5fd;
+  --practice-8-badge: #6d28d9;
   --practice-10-bg: #fefce8;
   --practice-10-border: #fde047;
   --practice-10-badge: #a16207;
+  --practice-12-bg: #fff7ed;
+  --practice-12-border: #fdba74;
+  --practice-12-badge: #c2410c;
+  --practice-14-bg: #fef2f2;
+  --practice-14-border: #fca5a5;
+  --practice-14-badge: #b91c1c;
   --practice-20-bg: #fdf2f8;
   --practice-20-border: #f9a8d4;
   --practice-20-badge: #be185d;
@@ -219,15 +234,27 @@
   --shadow-dropdown: rgba(0,0,0,0.4);
   --white-subtle: rgba(255,255,255,0.04);
   --card-shadow: none;
+  --practice-2-bg: rgba(8,145,178,0.08);
+  --practice-2-border: rgba(8,145,178,0.25);
+  --practice-2-badge: #22d3ee;
   --practice-4-bg: rgba(22,163,74,0.08);
   --practice-4-border: rgba(22,163,74,0.25);
   --practice-4-badge: #22c55e;
   --practice-6-bg: rgba(37,99,235,0.08);
   --practice-6-border: rgba(37,99,235,0.25);
   --practice-6-badge: #60a5fa;
+  --practice-8-bg: rgba(124,58,237,0.08);
+  --practice-8-border: rgba(124,58,237,0.25);
+  --practice-8-badge: #a78bfa;
   --practice-10-bg: rgba(202,138,4,0.08);
   --practice-10-border: rgba(202,138,4,0.25);
   --practice-10-badge: #facc15;
+  --practice-12-bg: rgba(234,88,12,0.08);
+  --practice-12-border: rgba(234,88,12,0.25);
+  --practice-12-badge: #fb923c;
+  --practice-14-bg: rgba(220,38,38,0.08);
+  --practice-14-border: rgba(220,38,38,0.25);
+  --practice-14-badge: #f87171;
   --practice-20-bg: rgba(219,39,119,0.08);
   --practice-20-border: rgba(219,39,119,0.25);
   --practice-20-badge: #f472b6;
@@ -4232,6 +4259,23 @@ button.sidebar-resource-link {
 .practice-filter-btn.active .practice-filter-count {
   background: var(--green-25);
 }
+/* A tariff the subject's paper carries but this section has no question at yet. Shown, so the
+   ladder reads as the paper's ladder, but not clickable into an empty list. Packet 12.1, E006. */
+.practice-filter-btn.empty {
+  opacity: 0.45;
+  cursor: default;
+}
+.practice-filter-btn.empty:hover {
+  border-color: var(--border-primary);
+  color: var(--text-secondary);
+}
+/* A tariff that appears on no IAL paper for this subject, but at which this section has a live
+   question. The chip exists so the row still accounts for every question the student can see; the
+   dashed border and the "· not IAL" label say it is not part of the paper's ladder. No new colour
+   token, so `npm run contrast` is unaffected. Founder decision 2026-09-18; packet 12.1 fix round B1. */
+.practice-filter-btn.off-ladder {
+  border-style: dashed;
+}
 .practice-questions-list {
   display: flex;
   flex-direction: column;
@@ -5685,6 +5729,17 @@ a.auth-dropdown-item:visited {
   line-height: 1.65;
 }
 .ma-seo-intro strong { color: var(--text-primary); }
+/* A section page with no model answer in the bank yet. Packet 12.1, E005. */
+.ma-empty-note {
+  background: var(--bg-section);
+  border: 1px solid var(--border-primary);
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 14px;
+  color: var(--text-tertiary);
+  line-height: 1.65;
+  margin: 0 0 28px;
+}
 
 /* ── Browse-by-topic hierarchical filter ── */
 .ma-browse-section {

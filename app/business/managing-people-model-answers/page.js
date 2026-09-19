@@ -14,7 +14,7 @@ export const metadata = {
 export default function ManagingPeopleModelAnswersPage() {
   return (
     <SectionModelAnswersPage
-      sectionNumber="1.4"
+      sectionNumber="1.3.4"
         sectionId="managing-people"
       subject="business"
       backLink={{ href: '/business/unit-1', label: 'Unit 1: Marketing & People' }}

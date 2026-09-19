@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useMemo } from 'react';
-import { MARK_COLORS } from './utils';
+import { markColor } from './utils';
 
 /* Split the guidance into its marked fragments. "Define X (2 marks). Explain Y (2 marks)." becomes
    two checklist items; a paragraph with no marks is one item. */
@@ -34,7 +34,7 @@ export default function InlinePractice({ question, onAskTutor, mode = 'independe
   const [marking, setMarking] = useState(false);
   const [ticks, setTicks] = useState({});
   const [counted, setCounted] = useState(false);
-  const colors = MARK_COLORS[question.marks] || MARK_COLORS[4];
+  const colors = markColor(question.marks);
 
   useEffect(() => { if (typeof onShown === 'function') onShown(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
 

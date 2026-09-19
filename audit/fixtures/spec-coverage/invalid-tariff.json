@@ -1,0 +1,16 @@
+{
+  "note": "Failure mode `tariff`. Packet 12.1, E003. Identical to clean.json except that the third item is Analyse 8. Analyse is a SIX-mark command in both IAL subjects; eight marks is Examine in Economics and Discuss in Business. Thirty model answers carried exactly this pair until E004, which is why it is the fixture.",
+  "sections": [
+    {
+      "slug": "fixture-invalid-tariff",
+      "subject": "economics",
+      "topic": "1.3.5",
+      "title": "Market Failure (fixture)",
+      "items": [
+        { "command": "Define", "marks": 2, "question": "Define the term 'public good'.", "kind": "written", "ao": ["AO1"], "stimulusRef": null, "specItems": ["ECON-1.3.5-3a-2"] },
+        { "command": "Analyse", "marks": 8, "question": "Analyse how an external cost of production leads to market failure.", "kind": "written", "ao": ["AO1", "AO2", "AO3"], "stimulusRef": null, "specItems": ["ECON-1.3.5-2c-3"] },
+        { "command": "Evaluate", "marks": 20, "question": "Evaluate the view that indirect taxation is the best way to correct a negative externality of production.", "kind": "written", "ao": ["AO1", "AO2", "AO3", "AO4"], "stimulusRef": null, "specItems": ["ECON-1.3.5-2d-2"] }
+      ]
+    }
+  ]
+}

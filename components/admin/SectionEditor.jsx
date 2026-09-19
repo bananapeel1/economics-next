@@ -1,5 +1,14 @@
 "use client";
 import { useState } from 'react';
+import { tariffsFor, commandsFor } from '@/lib/practice-tariffs';
+
+/* The practice editor's two dropdowns used to be typed out: a four-value mark list and a command
+   list containing two words that are not IAL command words in either subject. An admin could author
+   an off-spec item from a menu the product itself offered. Both are derived now, as the union of
+   the two subjects' ladders — the editor is not told which subject it is editing, so the union is
+   the widest defensible list. Packet 12.1, E006. */
+const EDITOR_MARKS = [...new Set([...tariffsFor('economics'), ...tariffsFor('business')])].sort((a, b) => a - b);
+const EDITOR_COMMANDS = [...new Set([...commandsFor('economics'), ...commandsFor('business')])];
 
 const editorTabs = [
   { id: 'content', label: 'Content' },
@@ -549,10 +558,13 @@ function PracticeEditor({ data, onChange }) {
                     background: '#151825', color: '#e8ecf5', fontSize: 13, fontFamily: 'inherit', outline: 'none'
                   }}
                 >
-                  <option value={4}>4</option>
-                  <option value={6}>6</option>
-                  <option value={10}>10</option>
-                  <option value={20}>20</option>
+                  {/* An existing item may sit at a tariff no IAL paper carries. Keep it selectable
+                      and labelled, so editing another field cannot silently re-tariff the item to
+                      the first option in the list. */}
+                  {!EDITOR_MARKS.includes(Number(item.marks)) && item.marks != null && (
+                    <option value={item.marks}>{item.marks} (off-spec)</option>
+                  )}
+                  {EDITOR_MARKS.map(m => <option key={m} value={m}>{m}</option>)}
                 </select>
               </div>
               <div>
@@ -565,14 +577,10 @@ function PracticeEditor({ data, onChange }) {
                     background: '#151825', color: '#e8ecf5', fontSize: 13, fontFamily: 'inherit', outline: 'none'
                   }}
                 >
-                  <option value="Define">Define</option>
-                  <option value="Explain">Explain</option>
-                  <option value="Analyse">Analyse</option>
-                  <option value="Assess">Assess</option>
-                  <option value="Evaluate">Evaluate</option>
-                  <option value="Outline">Outline</option>
-                  <option value="Discuss">Discuss</option>
-                  <option value="Compare">Compare</option>
+                  {item.command && !EDITOR_COMMANDS.includes(item.command) && (
+                    <option value={item.command}>{item.command} (off-spec)</option>
+                  )}
+                  {EDITOR_COMMANDS.map(c => <option key={c} value={c}>{c}</option>)}
                 </select>
               </div>
             </div>

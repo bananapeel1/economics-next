@@ -14,7 +14,7 @@ export const metadata = {
 export default function ExternalInfluencesModelAnswersPage() {
   return (
     <SectionModelAnswersPage
-      sectionNumber="2.5"
+      sectionNumber="2.3.5"
         sectionId="external-influences"
       subject="business"
       backLink={{ href: '/business/unit-2', label: 'Unit 2: Managing Business Activities' }}
