@@ -316,13 +316,21 @@ for (const sec of SUBSECTIONS) {
 /*
  * ASSESS REQUIRES A SUPPORTED JUDGEMENT, AND SAYING SO IS THE WHOLE OF `practice-03`. The live
  * guidance says the opposite. The census wording at :2244-2245 is "leading to a supported
- * judgement"; Discuss at :2236-2237 is "a brief assessment ... showing" a conclusion; Evaluate at
- * :2249-2251 is "a perceptive conclusion that proposes a solution and/or recommendations".
+ * judgement"; Discuss at :2235-2237 is "A brief assessment is required showing an awareness of
+ * competing arguments/factors"; Evaluate at :2249-2251 is "a perceptive conclusion that proposes a
+ * solution and/or recommendations".
+ *
+ * V036, 19 September 2026: the sentence above used to read `Discuss at :2236-2237 is "a brief
+ * assessment ... showing" a conclusion`, which elided the census's own words and put the Evaluate
+ * property back on Discuss — and the clause below accepted `assessment|conclusion`, so a gloss
+ * promising a conclusion passed. Appendix 6 never uses the word for a Discuss, in either
+ * specification. The clause now rejects it, as packet 35's does.
  */
 for (const sec of SUBSECTIONS) {
   const em = sec.examMatters || '';
   if (/Appendix 6[^.]*\bAssess\b/.test(em) && !/judgement/i.test(em)) problems.push(`"${sec.title}": an Assess gloss that does not mention a judgement — the census names it, and it is what separates Assess (10) from Analyse (6)`);
-  if (/Appendix 6[^.]*\bDiscuss\b/.test(em) && !/assessment|conclusion/i.test(em)) problems.push(`"${sec.title}": a Discuss gloss that does not mention the brief assessment the census requires`);
+  if (/Appendix 6[^.]*\bDiscuss\b/.test(em) && !/assessment/i.test(em)) problems.push(`"${sec.title}": a Discuss gloss that does not mention the brief ASSESSMENT the census requires (bus_spec.txt:2234-2237)`);
+  if (/Appendix 6[^.]*\bDiscuss\b/.test(em) && /\bconclusion\b/i.test(em)) problems.push(`"${sec.title}": a Discuss gloss promising a "conclusion"; that is Evaluate at bus_spec.txt:2246-2250 (V036)`);
 }
 for (const p of PRACTICE) {
   if (p.command === 'Assess' && !/judgement/i.test(p.guidance)) problems.push(`the Assess practice "${p.question.slice(0, 40)}" does not name the supported judgement the command word requires (practice-03)`);

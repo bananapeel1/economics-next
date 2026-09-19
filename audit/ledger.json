@@ -10800,8 +10800,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "audit/snapshots/packet-37-bundle...json tables.quiz has 32 items, 0 GDP-measurement/PPP/NNI hits (old bank had 10 at indices 12-16,18,20-23); content[*].quizIndices repoint multiplier calcs to blocks 4-5 only",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "Word-boundary scan of all 1324 prose strings in packet-37-bundle: GDP/GNI/NNI/PPP/per-capita/living-standards all 0 (my first substring scan falsely hit 7 GNI + 10 NNI via recogNIse/plaNNIng - reparsed). Bank rebuilt to 32 items; quizIndices contiguous and non-overlapping 0:[3-6] 1:[7-11] 2:[12-16] 3:[17-21] 4:[22-26] 5:[27-31]; every multiplier item sits in blocks 4-5 (q21 in block 3 names the multiplier only in a distractor).",
    "note": "SPEC NUMBERING: this item cites 2.1.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.4. Find the requirement by its wording in audit/raw/econ_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -10826,8 +10826,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "bundle content[3].diagramId matches diagrams[3] \"Equilibrium Real National Output\" (price-level/real-output axes checklist); blocks 4 and 5 each get their own distinct diagram, none shared with block 2 J/W diagram",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "Ran the shipping resolver, not the checklist: resolvePinnedDiagram (components/learn-mode/utils.js:130) over buildSteps output with a shared used-set resolves all 6 check-in pins, 6 of 6 diagrams consumed, 0 nulls. Block 3 -> 'Equilibrium Real National Output' (SVG text nodes give axes 'Price level' / 'Real output'), block 4 -> 'The Multiplier Process'.",
    "note": null
   },
   {
@@ -10839,8 +10839,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "bundle content[*].sections[*].recall: 23 widgets, 6 classify + 3 reorder + 10 fillin + 4 match; all fillin .hints are descriptive clauses (no letter-prefixes); 2-3 distractors each",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "23 recall widgets = 6 classify + 3 reorder + 10 fillin + 4 match. All 10 fillin hints are semantic/derivational, zero first-letter hints. All 3 reorders are genuine causal sequences with a stated ordering principle; the two non-sequence reorders named in the item are gone and circular-flow / injections-withdrawals now carry classify tasks.",
    "note": null
   },
   {
@@ -10852,8 +10852,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "content[3].sections has no planned-vs-actual/adjustment-to-equilibrium duplicate ids (merged); practice[3]/[4] are Calculate-from-MPS-MPT-MPM and Draw-AD-AS; practice[].command values are Define/Explain/Calculate/Calculate/Draw/Analyse/Examine/Discuss/Evaluate, no Assess or Outline, matching econ_spec.txt:2702-2747 Appendix 6",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "Merges done: no three-sector-model / injections-explained / withdrawals-explained / planned-vs-actual / adjustment-to-equilibrium ids survive. Freed slot used for equilibrium-on-ad-as. practice[3] is a multiplier calc from MPS .15/MPT .25/MPM .10 and practice[4] is Draw an AD/AS diagram. practice[7] and [8] carry explicit Level 1-4 descriptors. Assess half moot, not skipped: tariffs are now Appendix 6 exactly (2/4/2/4/6/8/14/20), which has no Assess and no 10-mark.",
    "note": "SPEC NUMBERING: this item cites 2.1.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.4. Find the requirement by its wording in audit/raw/econ_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -10876,8 +10876,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "bundle diagrams[0].checklist: four arrows, both real and money flow drawn in both directions, wording \"factors of production\" matches econ_spec.txt:681 and :1671",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "Verified from SVG geometry, not the diagram checklist: diagrams[0] scenario 0 has exactly 4 marker-end arrows, 2x cf-green (real flow) + 2x cf-blue (money flow), with text nodes 'factors of production', 'goods and services', 'factor incomes: wages, rent, interest and profit', 'consumer spending'. The old 'Identify factor markets and product markets' checklist line is gone and 'factor market'/'product market' are 0 hits bundle-wide, so the checklist no longer claims what the drawing does not show.",
    "note": null
   },
   {
@@ -10888,8 +10888,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "content block3 sub equilibrium-on-ad-as body states J = W and AD = AS are two ways of saying one thing; grep of bundle for \"AD = AS\" shows only teaching-prose occurrences, none used as a quiz distractor",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "Scanned all 32 items for the double-correct pattern: no item offers an 'aggregate demand equals aggregate supply' option and an 'injections equal withdrawals' option together. Only q17 offers J=W and it is correctIndex 1; its distractors are capacity / unemployment / balanced budget. content[3].sections[1] equilibrium-on-ad-as keyIdea states 'J = W and AD = AS are two ways of saying one thing', so the equivalence is taught rather than left to rescue a distractor.",
    "note": null
   },
   {
@@ -10912,8 +10912,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "bundle tables.quiz 0 to 31: no item tests GDP measurement, PPP, NNI or income/output method; all 32 map to LEAF_MAP ids in scripts/_packet37-content.mjs:891-911",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "Word-boundary scan over 1324 prose strings: GDP 0, GNI 0, NNI 0, PPP 0, 'per capita' 0, living-standards 0. Pre-test reachability checked through the shipping selector: pickPretestQuestions (lib/pretest-pool.js:41) filters reserved items and slices PRETEST_MAX, so the pool is exactly the 3 unpinned items quiz[0,1,2] - circular flow, income vs wealth, the three-way identity - all on-topic, and all 29 pinned items are on-topic too.",
    "note": null
   },
   {
@@ -10924,8 +10924,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "content[2].quizIndices = [12,13,14,15,16], all withdrawals items, none a multiplier calculation; quiz[14].explanation explicitly defers: \"the size of the eventual rise is the multiplier question\"",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "Block 2 quizIndices = [12,13,14,15,16], all withdrawals/net-position items; none is a multiplier calculation. I read each stem: q14 ('injections 240 vs withdrawals 200') explicitly defers - 'the size of the eventual rise is the multiplier's question'. Multiplier calculations are q24/q26/q27, all in blocks 4-5.",
    "note": null
   },
   {
@@ -10936,8 +10936,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "content[3].quizIndices = [17,18,19,20,21], all equilibrium/AD-AS items; quiz[21] tests AD-shift direction recognition only, no multiplier value required",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "Block 3 quizIndices = [17,18,19,20,21], all equilibrium/AD-AS. q21 is the only block-3 item mentioning the multiplier and only as a distractor ('the multiplier must be less than one'); it tests AD-shift direction recognition, correctIndex 1. Every index 3-31 is pinned exactly once - no dup, no gap - so the 'never surfaced' half of the finding is discharged too.",
    "note": null
   },
   {
@@ -10948,8 +10948,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "bundle tables.practice 0 to 8: none about living standards or GDP; content[3].practiceIndices = [4,7] resolve to practice[4] Draw AD/AS and practice[7] Discuss equilibrium, both on-topic",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "Practice set re-read in full: 0 questions about living standards or GDP (word-boundary scan gives 0 for both). The 9 questions are Define 2 / Explain 4 / Calculate 2 / Draw 4 / Analyse 6 / Examine 8 / Discuss 14 / Evaluate 20 plus one, all on 2.3.4 leaves. Block 3 practiceIndices = [4,7] resolve to the Draw AD/AS and Discuss equilibrium questions, both on-topic.",
    "note": "SPEC NUMBERING: this item cites 2.1.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.4. Find the requirement by its wording in audit/raw/econ_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -10960,8 +10960,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "practice[3].question is Calculate the multiplier from MPS 0.15 / MPT 0.25 / MPM 0.10; practice[4].question is Draw an AD/AS diagram showing the effect on equilibrium real national output",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "practice[3] requires a multiplier calculation from given MPS 0.15 / MPT 0.25 / MPM 0.10 (I re-derived: MPW 0.50, k 2). practice[4] is 'Draw an AD/AS diagram to show the effect on equilibrium real national output of a rise in government expenditure'. Both of the item's two named gaps are filled.",
    "note": null
   },
   {
@@ -10972,8 +10972,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "content[0].sections = circular-flow, income-output-expenditure, income-and-wealth; none lists I/G/X or S/T/M, which appear only in content[1]/content[2].sections",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "content[0] is circular-flow / income-output-expenditure / income-and-wealth. Counted mentions inside block 0: investment 0, government expenditure 0, savings 0, taxation 0, exports 1, imports 1 (both incidental prose, not a taught enumeration). The injections are taught once in block 1 and the withdrawals once in block 2, so the repeated takeaway the item describes has no source.",
    "note": null
   },
   {
@@ -10984,8 +10984,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "content[3].sections has no planned-vs-actual or adjustment-to-equilibrium id; single equilibrium-concept subsection covers the mechanism once, freed slot used for equilibrium-on-ad-as",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "No planned-vs-actual or adjustment-to-equilibrium id survives; block 3 carries one equilibrium-concept subsection whose reorder recall walks the adjustment chain in a single direction-general sequence. The freed slot is equilibrium-on-ad-as, which is the AD/AS diagram the item asked for - exactly the disposal the finding proposed.",
    "note": null
   },
   {
@@ -10996,8 +10996,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "content[0..5].diagramId values each equal exactly one diagrams[].id, one distinct diagram per block, no dangling ref",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "Executed the shipping path rather than reading pins: resolvePinnedDiagram over buildSteps' 6 check-in steps resolves 6 of 6 with a shared used-set and 0 nulls, one distinct diagram per block. Blocks carry diagramId and no diagramRef; utils.js:133-137 takes the id branch first and learn-steps.js:73-74 forwards both, so the absent legacy field is not a regression.",
    "note": null
   },
   {
@@ -11008,8 +11008,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "content[*].quizIndices are contiguous, non-overlapping and topic-matched per block: 0:[3-6] 1:[7-11] 2:[12-16] 3:[17-21] 4:[22-26] 5:[27-31]",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "quizIndices are contiguous, non-overlapping and topic-matched: 0:[3-6] 1:[7-11] 2:[12-16] 3:[17-21] 4:[22-26] 5:[27-31]. Every index 3-31 pinned exactly once, so nothing is 'never surfaced'. All 5 block-4 items and 4 of 5 block-5 items are multiplier items; no calculation appears before block 4.",
    "note": null
   },
   {
@@ -11020,8 +11020,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "quiz bank has 0 off-topic items (32 of 32 on the 2.3.4 leaves), unlike the old 24-item bank; the 3 unpinned indices used for the pre-test (0,1,2) are all on-topic circular-flow/income-wealth items",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "Checked through the real selector: pickPretestQuestions (lib/pretest-pool.js:41) filters reserved and slices PRETEST_MAX, giving exactly the 3 unpinned items quiz[0,1,2]. All three are 2.3.4 content (circular flow, income vs wealth, the identity), and the whole 32-item bank scores 0 on GDP/GNI/NNI/PPP/per-capita/living-standards under a word-boundary scan, so no off-topic item is reachable by any draw.",
    "note": "SPEC NUMBERING: this item cites 2.1.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.4. Find the requirement by its wording in audit/raw/econ_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -11032,8 +11032,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "lib/learn-steps.js:35-68 buildSteps() pushes exactly one checkin step per block regardless of size, no pairing; content[*].sections.length = [3,4,4,4,5,3], none is a single-section block",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "Ran buildSteps(content) for real: 29 steps = 23 teach + 6 checkin + 0 legacy, countSteps agrees. One teach step per subsection and a DEDICATED checkin step per block, so the block-end widget dump is never anchored to a teach step - the paired model the finding describes is not a shape the engine can emit. Mechanism is packet 5's step model (lib/learn-steps.js:46-81), not packet 37 content; block sizes [3,4,4,4,5,3] are irrelevant to it.",
    "note": null
   },
   {
@@ -11044,8 +11044,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "programmatic pairwise word-overlap scan across all 22 takeaway bullets in content[0..5] found 0 cross-block pairs above 60 percent shared words",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "My own pairwise Jaccard scan over all 22 takeaway bullets, cross-block pairs only: max overlap 0.182, and the top pair is not a duplication ('Income, output and expenditure are one number counted at three points.' vs 'Investment, government expenditure and exports are the three injections.'). No near-verbatim repeat between block 0 and block 1 survives.",
    "note": null
   },
   {
@@ -11056,8 +11056,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "grep of bundle for \"description of reality\" and \"instantaneous\" = 0 hits (filler misconceptions dropped); mistakes[1]/[2], content block5 sub size-of-the-multiplier (\"Why the Multiplier Is Not a Fixed Number\"), and mpc-mps misconception retain the genuine ones",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "7 misconceptions, all exam-behaviour errors with looks_like/why/instead. The two the finding called filler are gone: 'description of reality' 0 hits, 'instantaneous'/'instantly' 0 hits. The genuine ones the finding wanted kept are present as mistakes[1] (saving as injection / investment as withdrawal), [2] (share purchase as investment) and [4] (MPC measured after tax).",
    "note": null
   },
   {
@@ -11068,8 +11068,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "content block5 sub multiplied-shift-of-ad keyIdea: it shifts AD by the injection times the multiplier; diagrams[3].checklist has price-level vertical / real-output horizontal axes",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "Both named gaps closed. Multiplier-to-AD-shift: content[5].sections[0] multiplied-shift-of-ad plus diagrams[5] 'The Multiplied Shift of AD'; I re-derived its fill-in (MPW .25 -> k 4, cut of 30 -> 120 left). Price-level/real-output axes: diagrams[3] SVG text nodes read 'Price level' and 'Real output', with three scenarios 500/100, 560/110, 520/95. The 500->600 (block 4) vs 500->560 (block 3) figures are reconciled, not contradictory: how-much-becomes-output gives all three AS cases and mistakes[6] names the confusion.",
    "note": null
   },
   {
@@ -11080,8 +11080,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "content[0].sections[2] income-and-wealth keyIdea: income is a flow measured over a period, wealth is a stock measured on a date",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "Requirement read from the specification by wording, not by the item's wrong '2.4.1': econ_spec.txt:1061 is 2.3.4 1b 'The distinction between income and wealth.' content[0].sections[2] income-and-wealth teaches it as flow vs stock in a 205-word 4-paragraph body, with a fill-in whose hints are 'the dimension a figure has when it needs per year after it' / 'as at a date' -> flow, stock, accumulates. q1 and q4 assess it.",
    "note": "SPEC NUMBERING: this item cites 2.4.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.4. Find the requirement by its wording in audit/raw/econ_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -11092,8 +11092,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "content[3].sections[1] equilibrium-on-ad-as plus diagrams[3].checklist: price level on the vertical axis, real national output on the horizontal",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "Verified from emitted SVG rather than the checklist: diagrams[3] scenario text nodes give 'Price level' (vertical) and 'Real output (bn)' (horizontal) with AD and AS curves and the crossing marked at 500/100. Scenarios 1 and 2 draw the movement toward the new equilibrium - AD right 'both up' 560/110, AS right 'opposite' 520/95. content[3].sections[1] equilibrium-on-ad-as teaches it and flags the axes as the thing most often drawn wrong.",
    "note": null
   },
   {
@@ -11104,8 +11104,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "content[5].sections[0] multiplied-shift-of-ad plus diagrams[5] \"The Multiplied Shift of AD\"",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "econ_spec.txt:1085-1086 is 4d, significance of the multiplier for shifts in AD and the level of economic activity. content[5].sections[0] multiplied-shift-of-ad teaches the horizontal shift as injection x multiplier (Marisel 40 x 2.5 = 100, re-derived), diagrams[5] draws it, q27 assesses it (40 x 2.5 = 100bn, correct) and mistakes[5] catches shifting AD by the injection alone. It is taught, not implied.",
    "note": null
   },
   {
@@ -11116,8 +11116,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "content[4].sections[4] multiplier-ratio body works 800bn / 200bn = 4, MPW = 1/k = 0.25; quiz[26] drills the identical scenario, correctIndex 1 = 0.25",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "The ratio direction is now taught and drilled, not just glossed. content[4].sections[4] multiplier-ratio works k = change in income / change in injection; its fill-in gives dG 50 -> dY 150 and asks for k, MPW, MPC (I re-derived 150/50 = 3, 1/3 = 0.33, 1-0.33 = 0.67 - all three printed answers divide the printed figures). q26 drills the same direction: exports +200, income +800 -> k 4 -> MPW 0.25.",
    "note": null
   },
   {
@@ -17112,8 +17112,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "content[3].sections[2] shifts-in-ad: 4-paragraph body, worked 40bn to 560bn/110 example, misconception and examMatters populated",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "econ_spec.txt:1076-1077, 3b, causes of changes in equilibrium real national output from shifts in AD. content[3].sections[2] shifts-in-ad is a 213-word 4-paragraph body that names the causes (a rise in I, G or X shifts AD right; a rise in S, T or M shifts it left), works Marisel +40bn to 560/110, and states the sign property (AD moves output and the price level the SAME direction). Explained and examinable, not named.",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -17124,8 +17124,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "content[3].sections[3] shifts-in-as: 4-paragraph body, worked cheaper-imports to 520bn/95 example, misconception and examMatters populated",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "Same spec leaf, AS half. content[3].sections[3] shifts-in-as is a 227-word 4-paragraph body giving the causes (input costs, exchange and tax rates short-run; technology, skills, productivity long-run), a worked cheaper-imports case to 520/95, and the diagnostic that an AS shift moves output and prices in OPPOSITE directions. q20 assesses exactly that discrimination.",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -17136,8 +17136,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "content[4].sections[2] mpt-mpm body: raising the rate of income tax raises MPT, which shrinks the multiplier on every future injection",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "econ_spec.txt:1082 names MPT under 4b. content[4].sections[2] mpt-mpm defines MPT as the fraction of extra income taken in taxation (0.20 in Marisel) and gives its multiplier effect explicitly: MPW = MPS + MPT + MPM = 0.10 + 0.20 + 0.10 = 0.40, k = 2.5, 'halve MPW and it would be five' (1/0.20 = 5, checked). q30 assesses the tax-rate-raises-MPT-shrinks-k chain.",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -17508,8 +17508,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "diagrams[3].id equals content[3].diagramId exactly, title \"Equilibrium Real National Output\"",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "Dangling pin cannot recur: resolvePinnedDiagram run for real over all 6 check-ins returns a diagram for every block, 0 nulls, 6 of 6 consumed. content[3].diagramId 'national-income:diagram:fa2836cd' matches diagrams[3] by exact id, so the resolver never reaches the legacy title-substring branch that failed before.",
    "note": "Added 13 Sep 2026 from audit/raw/diagram-pins-2026-09-13.json (F052/F109 measurement). Check npm run diagrams after authoring."
   },
   {
@@ -17520,8 +17520,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "diagrams[4] \"The Multiplier Process\" is a freshly authored decaying-rounds diagram (own id, own description), not reused from aggregate-demand \"Multiplier Effect\"; content[4].diagramId points to it",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "diagrams[4] 'The Multiplier Process' is authored in this section with its own id 'national-income:diagram:6650ba36', so the cross-section reuse the item said was impossible is not attempted. content[4].diagramId matches it exactly and the live resolver returns it; block 4 renders a diagram.",
    "note": "Added 13 Sep 2026 from audit/raw/diagram-pins-2026-09-13.json (F052/F109 measurement). Check npm run diagrams after authoring."
   },
   {
@@ -17714,8 +17714,8 @@
    "packet": 37,
    "status": "confirmed",
    "closed_by": "packet-37",
-   "verified_by": "packet-verifier 2026-09-18",
-   "evidence": "national-income draft (curl :3001/api/sections/national-income?draft=1, field-matches the bundle) teaches multiplier concept, propensities, both formulae, the ratio direction and AD significance across 5 subsections in blocks 4-5; aggregate-demand draft (curl :3001/api/sections/aggregate-demand?draft=1) has 0 multiplier headings and exactly 1 pointer misconception, 0 multiplier quiz/flashcard/practice items. Caveat: packet-13-census.mjs still reports it elsewhere because it reads the published data column (lib/content-gate.mjs:75), confirmed stale via curl :3001/api/sections/aggregate-demand (no draft param) which still serves the old live block \"The Multiplier\" -- a publish-timing artifact since neither section has shipped yet (NEXT.md \"NOT PUBLISHED\"), not a draft-level regression",
+   "verified_by": "packet-verifier (verify-a round 2, independent) 2026-09-19",
+   "evidence": "Verified WITHOUT a dev server, from audit/snapshots/packet-32-bundle__economics__aggregate-demand.json: blocks are Characteristics/C/I/G/(X-M); 'multiplier' appears EXACTLY ONCE, in the declared pointer misconception ('it belongs to topic 2.3.4, national income ... this section deliberately does not teach it'); 0 multiplier subsection headings, 0 of 25 quiz, 0 of 8 practice, 0 of 30 flashcards. national-income now teaches 4a-4d across blocks 4-5 including the SIZE determinants (content[5].sections[2] size-of-the-multiplier). CAVEAT carried, not waived: both sections are staged and NOT published, so a student still sees it twice today and packet-13-census.mjs still names aggregate-demand because it reads the published data column (lib/content-gate.mjs:75). Confirmed against the staged draft on the same basis as every other item in this packet; SPEC-OWNERSHIP.md:22 defers the census re-run to after both publish and that step remains outstanding.",
    "note": null,
    "added": "2026-09-14"
   },
@@ -18232,10 +18232,10 @@
    "title": "Recalls are answerable by scrolling up, across every section written since packet 14 — and the check that says otherwise does not work. Manual adjudication of packet 29: 32 of 43, not the 0 its runner reports. The runner's recoverable() fails for four compounding reasons: it splits sentences on .!?;: so a give-away across a colon is invisible; its thresholds (0.85 fillin, 0.95 reorder) sit above the defect (real items score 0.70 and 0.75); reorder is only tested against a flow body and this section authors none, so all three copy-from-screen rules are vacuous; and its negative control is byte-for-byte the real shipped step 1 L1 item paired with an INVENTED one-sentence teaching text that omits the body paragraph the real step carries — the A/B was run against a stripped-down fake of the step it was clearing. The claim 'none of them was a reorder' is false: 4 of 6 reorders qualify and step 32 is the clearest instance in the section. Conservative proxy (precision 21/23, recall 21/32, so a FLOOR): 271 of 447 staged recalls (61%) across 16 sections, and 234 of 272 live (86%), five live sections at 100%. The rebuild does improve it, 61 against 86, but nowhere near what 0 of 43 implies. Not a packet-29 defect: it is the house style and no packet's runner could see it.",
    "file": null,
    "packet": 2.7,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-2.7",
+   "verified_by": "Verify A round 2 (packet 2.7) 2026-09-19",
+   "evidence": "All three of round 1's grounds are closed and I re-measured each rather than reading the record. (a) REASON FOUR: lib/content-validator.test.mjs:140-191 A/Bs the measure against ten named WHOLE subsections out of audit/content-sections/, the t=0 corpus (43 files, every one tracked in HEAD and unmodified in the working tree) - four positives in business__entrepreneurs-leaders and six negatives across it and business__managing-finance, bundle and teach text and all, no patched fields. The negatives are not cherry-picked: I ran the rule over both sections and it fires on 9 of 12 and 8 of 11, so the six named negatives are the COMPLETE set of unflagged recalls in them, and each one's body shape matches a positive's (paragraph+flow+para+para, para+para+flow+para, para+subheading+bullets+para). Non-vacuous in BOTH directions, proved with an in-memory ESM load hook that wrote nothing to disk: gates forced to 0.00 fails the negative assertion naming 'intrapreneurship' (so the sub ids are real and the negatives bite, not silently-true string misses); packet 29's 0.85/0.95 fails the floor at 222 of 272. The floor is exact and not slack - I measured 249 of 272 independently, the number the test asserts at :190. (b) THE SENTENCE: the false one is gone; lib/content-validator.mjs:407-412 now states the fixtures are NOT that control and records that it claimed otherwise. (c) THE TABLE: audit/runs/packet-2.7/ab-table.sh re-runs it; I ran it (12m46s) and all eight rows reproduce BYTE-FOR-BYTE against both ab-table.txt and calibration.md:73-81, including the two rows round 1 could not reproduce (packet-29 gates 214/287, colon split 240/346), and it restored lib/content-validator.mjs byte-identical, sha 5d0c82c9 before and after. Its fixture column stops at node --test's 'failing tests:' line, so the double count is gone (2/2/2/3/2/2 tests for 1/1/1/2/1/1 fixture cases plus the corpus control, and only the new corpus test and the per-case fixture tests are named 'recall.recoverable', which is what the grep counts). npm test 207/207, npm run build, validate, exposure and recalls all exit 0. ONE INACCURACY REMAINS, flagged rather than blocking, because it understates the packet's own flaw instead of claiming work not done: lib/content-validator.mjs:408 and audit/runs/packet-2.7/calibration.md:104 say 'four of the recall.recoverable cases there patch the teach text as well as the recall' - SIX of the ten do. Four patch content.3.sections.0.keyIdea + body.0.text; cases 5 and 9 replace content.1.sections.1.body wholesale with a paragraph and a flow. It should read six. Also loose: calibration.md:112 says the six negatives are 'in the same two sections' as the positives, but all four positives are in entrepreneurs-leaders and three negatives sit in managing-finance, which supplies no positive; and ab-table.sh's printed header still reads 'fixtures failing' where calibration.md:83 insists the column counts TESTS.",
    "added": "2026-09-17"
   },
   {
@@ -18244,10 +18244,10 @@
    "title": "Packet 29's recall guard reports '0 of 43' as a fact when it is '0 at a 0.85 threshold'. An independent Verify A found 7 of 18 fill-ins answerable by scrolling up on the same step — including step 5, the instance the packet names as its WORST and claims to have fixed: the examMatters leak was removed and the body still prints 'the combined market SHARE of the largest N firms' and 'the answer is MEANINGLESS without its n', all three answers on one screen. Step 17 hands all four answers in nearly the recall's own phrasing. Neither is among the four the packet recorded as knowingly left. The giving sentence scores 0.67 against a 0.85 gate. See V029 for the corpus-wide picture.",
    "file": null,
    "packet": 2.7,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-2.7",
+   "verified_by": "Verify A (packet 2.7) 2026-09-19",
+   "evidence": "The bare count is gone and every line now carries its gate. audit/scripts/recall-census.mjs:40 builds GATES from the exported RECOVERABLE_AT constant (lib/content-validator.mjs:266) rather than from prose, and :77 prints it on the headline; lib/content-validator.mjs:459,487,492,497 print the score each finding fired at. Re-measured myself: packet 29's section reads 20 of 43 (47%) AT fillin 0.70 / classify 0.75 / reorder 0.75 / match 0.75, not 0 of 43 — and the instance V030 names is in the list (concentration-ratios, 'line 1 filled reads \"market share\", which is printed above it verbatim'). Corpus: 241 of 264 live (91%), 358 of 667 staged (54%), reproduced independently. The rule's own per-packet counts reproduce exactly: 20 packet 29, 9 packet 30, 9 packet 33, 4 packet 36, 8 packet 37. npm run recalls exits 0 and its regression guard is real: pointed at a doctored baseline (the-market 11 to 0, managing-people 9 to 0) it exits 1 and names both sections and both numbers, and it exits 1 on a missing baseline. Hand-adjudicated three hits myself off the corpus rather than the packet's sample, all three genuine (allocative-efficiency 'too ___' against a body reading 'too little is produced'; pc-long-run-equilibrium two reorder items against body[1] and body[2]; price-wars two against body[1] and body[4]).",
    "note": null,
    "added": "2026-09-17"
   },
@@ -18257,10 +18257,10 @@
    "title": "Packet 29 diagrams[6].scenarios[2] (third-degree price discrimination): the caption says 'Setting MR = MC in each gives 12 megalitres at $72 and 16 at $48' but NO MR curve is drawn in either market, and the two sloping lines carry no AR or D label at all — their only labels are the PED values placed beside the marked points. Arithmetic exact, every point on its curve, and the picture does not show what it says determines the answer. Same class as the 'allocative P=MC with no price curve' defect the packet fixed at its named instance; no mechanical check can see it.",
    "file": null,
    "packet": 2.7,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-2.7",
+   "verified_by": "Verify A (packet 2.7) 2026-09-19",
+   "evidence": "Checked in the DATABASE, not the file: section_diagrams.draft[6].scenarios[2] for market-structures-contestability now carries 11 lines, and the two dashed ones are MR. Re-derived the geometry out of the served SVG rather than from the script. Market A: AR from (66,78.46) to (470,255.69) is P = 120 - 4Q; its dashed twin runs to x=318.5, an x-intercept of q=15 = a/2b, so MR = 120 - 8Q, and MR = MC = 24 at q=12 — the dashed line passes through (268, 255.69), which is the read-off's own x and the MC line's own y, to the pixel. Market B: AR (66,167.08)-(470,233.54) is P = 72 - 1.5Q, MR x-intercept at x=470 (q=24 = 72/3), crossing MC at (335.33, 255.69), q=16. Read-off guides land at /12 and /16, PED recomputes to -1.50 and -2.00, gap , total profit (72-24)*12 + (48-24)*16 = 960, all as the caption states. The curves are now identified, but by a KEY at the top right ('solid: AR = D', 'dashed: MR', worktree-generated SVG is byte-identical to the staged draft), not by a label on each line — the packet's own acceptance check 5 in audit/NEXT.md:127 still asks for 'an AR = D on each sloping line' and would fail against the served payload. _packet29-diagrams.mjs:713-725 records the measured reason (per-curve labels collided at 390px). Runner clean: scripts/packet-29-market-structures-contestability.mjs exits 0 with its extent and glyph-box checks.",
    "note": null,
    "added": "2026-09-17"
   },
@@ -18270,10 +18270,10 @@
    "title": "Three statements in packet 29's records are wrong and will mislead the next reader. (1) audit/NEXT.md acceptance check 4 says a three-question pre-test with one repeat is EXPECTED, citing PreTest.jsx:23-27 — that line is handleSelect, and pickPretestQuestions filters reserved out. Measured on the shipping functions: signed out 2 questions 0 repeats, Pro 3 and 0. The packet's own runner note and Verify B round 1 both said two with no repeat; the spec block corrected a correct statement into a wrong one and would send a future verifier hunting a repeat that cannot occur. (2) 'Oligopoly alone is 25 of the 54' — it is 22, per the spec bullets and the packet's own LEAF_MAP. (3) The commit says 8 mistakes; the bundle has 9.",
    "file": null,
    "packet": 2.7,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-2.7",
+   "verified_by": "Verify A (packet 2.7) 2026-09-19",
+   "evidence": "All three re-measured independently, none read off the packet. (1) Pre-test: components/learn-mode/PreTest.jsx:23 is 'const letters' and :25 opens handleSelect, exactly as claimed; lib/pretest-pool.js:41 filters the reserved set out. I composed freeQuizPayload + buildSteps + resolvePinnedItem + fallbackItemForBlock + pickPretestQuestions myself over the staged bundle and got signed out 10 items, 8 reserved, pre-test 2, repeats 0; Pro 39 items, pre-test 3, repeats 0. The false paragraph is corrected in place and left visible at audit/NEXT.md:2221-2235, and the two surviving citations (audit/NEXT.md:4847, audit/DECISIONS.md:1132) each sit inside the 'CLOSED 16 September ... annotated by V032' block. (2) Oligopoly: parsed LEAF_MAP out of scripts/packet-29-market-structures-contestability.mjs myself — 54 keys, by sub-topic 5.2.4.6.22.8.2.5, so sub-topic 5 is 22. Corrected at :501 and in the PROGRESS row; grep '25 of the 54' now returns only the ledger title and the two acceptance-check lines that ask for it. (3) Mistakes: commit ef4f819's message says '8 mistakes'; section_common_mistakes.draft for market-structures-contestability holds 9 (live data holds 4). The PROGRESS row now records the disagreement and says which is right.",
    "note": null,
    "added": "2026-09-17"
   },
@@ -18296,10 +18296,10 @@
    "title": "pickSpacedRecall exhausts chapter 1 and never reaches the middle chapters: a five-chapter section has four spaced slots and chapter 1's four recalls fill all of them, so nothing from chapters 2-4 is ever spaced (measured on financial-planning, all four check-ins read 'RECALL FROM CHAPTER 1')",
    "file": "lib/learn-steps.js",
    "packet": 2.7,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-2.7",
+   "verified_by": "Verify A (packet 2.7) 2026-09-19",
+   "evidence": "lib/learn-steps.js:130-137: the pick is now the candidate whose block has contributed the fewest spaced showings, ties going to the earliest, with the F055 skip preference kept ahead of it at :124-126. Measured with my own probe over both corpora, walking every check-in in order exactly as LearnModeTab.jsx:278-284 does. Before (pickSpacedRecall reverted to candidates[0] through a load hook): live 52 of 81 slots from chapter 1 (64%), 6 sections drawing every slot from it; staged 92 of 115 (80%), 10 sections; chapters holding a recall and never spaced 44/81 live and 80/115 staged. After: live 20 of 81 (25%), staged 22 of 115 (19%), chapters never spaced 0/81 and 0/115. financial-planning staged goes from [1,1,1,1] to [1,2,3,4], which is the item's own named measurement. The single remaining all-chapter-1 section is business-growth, which has two chapters and one slot, so chapter 1 is its only eligible source — not the defect. The guard is real: with candidates[0] restored, node --test lib/learn-steps.test.mjs fails 3 of 12 including both new V034 cases; unsabotaged it is 12/12 and npm test is 206/206.",
    "note": null,
    "added": "2026-09-17"
   },
@@ -18427,10 +18427,10 @@
    "title": "A Discuss gloss check enforces a conclusion Appendix 6 does not ask for",
    "file": "scripts/packet-30-managing-people.mjs",
    "packet": 2.7,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-2.7",
+   "verified_by": "Verify A (packet 2.7) 2026-09-19",
+   "evidence": "Read Appendix 6 myself rather than the packet's quotation. audit/raw/bus_spec.txt:2234-2237 gives Discuss (8) as 'a logical chains of reasoning, in context, showing cause(s) and/or effect(s). A brief assessment is required showing an awareness of competing arguments/factors' — the word conclusion is absent; it belongs to Evaluate (20) at :2246-2251, 'a perceptive conclusion that proposes a solution and/or recommendations' (:2250). econ_spec.txt:2733-2740 asks a Discuss for 'a recognition of different viewpoints and/or a critical assessment of the evidence' and never uses it either. Every line number the packet cites is right. The check is inverted at scripts/packet-30-managing-people.mjs:313-315 and mirrored at scripts/packet-36-managing-finance.mjs:330-332, plus a sentence-scoped version over practice guidance at :320-338 that deliberately does not ban the word outside an Appendix 6 sentence. A/B'd in both directions by planting through a load hook, not by reading the runner's own inline A/B: a 'with a brief conclusion' examMatters makes packet 30 exit 1 with both clauses firing, and the same planted into the Discuss PRACTICE guidance makes it exit 1 with both sentence-scoped clauses firing; unplanted, packets 30 and 36 exit 0. The six certified strings are corrected and staged: walking every string of every content table in the DB, managing-people draft has 5 Appendix-6 Discuss sentences and 0 faults, globalisation 4 and 0, managing-finance 1 and 0, and live data carries none of them, so nothing student-facing was wrong. scripts/_packet33-assessment.mjs on disk carries the globalisation correction (it shows as a deletion only because another session staged its removal).",
    "note": null,
    "added": "2026-09-18"
   },
@@ -18446,6 +18446,58 @@
    "evidence": null,
    "note": null,
    "added": "2026-09-18"
+  },
+  {
+   "id": "V038",
+   "kind": "feature",
+   "title": "Version the Learn Mode step pointer. localStorage.revvy_learnmode_<subject>_<section>_section is a bare step integer with no deck identity, so publishing a rebuilt section strands every student who finished the old deck: measured on national-income, a completed 14-step live pointer opens the 29-step draft at 'step 14 of 29, 48%' in a chapter they never saw, completion gone; the reverse direction destructively rewrites 18 to 13. Founder decision 19 Sep: key the saved position to the section's content version; a pointer from another version shows 'this topic has been rebuilt' with start-again / jump-to-end, never a silent mid-deck drop. Must ship BEFORE the packet 5/7 checkpoint publishes any rebuilt section. Evidence: audit/runs/packet-37/verify-b.md.",
+   "file": "components/LearnModeTab.jsx",
+   "packet": 5,
+   "status": "open",
+   "closed_by": null,
+   "verified_by": null,
+   "evidence": null,
+   "note": null,
+   "added": "2026-09-19"
+  },
+  {
+   "id": "V039",
+   "kind": "feature",
+   "title": "audit/scripts/exposure-census.mjs:107 reads section_mistakes, a table that does not exist (the real one is section_common_mistakes). The Supabase client returns an error rather than throwing, table() swallows it and returns [], so packet 2.5's flagship instrument has walked every section with zero mistakes since it was written. It does not move the census's headline figures — chapters served, items sent, pre-test length never touch mistakes — but counts.mistakes is 0 on every row it builds, and a census that silently reads nothing is the exact class the census exists to close",
+   "file": "audit/scripts/exposure-census.mjs",
+   "packet": 2.7,
+   "status": "confirmed",
+   "closed_by": "packet-2.7",
+   "verified_by": "Verify A (packet 2.7) 2026-09-19",
+   "evidence": "Probed the live schema myself: supabase.from('section_mistakes') returns 'Could not find the table public.section_mistakes in the schema cache'; section_common_mistakes returns 6 rows for the-market. audit/scripts/exposure-census.mjs:114 now reads the real table and :96 throws instead of swallowing. A/B'd three ways through a load hook. (a) Wrong name with the throw kept: exit 1, 'market-structures-contestability section_mistakes: Could not find the table'. (b) Correct name with the throw removed: exit 0. (c) Both reverted, which is the HEAD behaviour: exit 0 with the census reporting a full clean run while reading nothing — the silent-read defect reproduced exactly. The fix matters beyond the name because mistakes is passed into sectionPayload at :118, so the census was walking a payload the app never serves. npm run exposure exits 0.",
+   "note": null,
+   "added": "2026-09-19"
+  },
+  {
+   "id": "V040",
+   "kind": "feature",
+   "title": "packet-29's extras-shape A/B required packet 28 to STAY BROKEN. It imported _packet28-assessment.mjs and failed if that module's chains were well-formed ('if it does not fire there, it is decorative'). 00662a3 then closed V028 and removed the malformed chain, so from that commit the A/B failed the runner on every run — and the first thing it blocked was re-staging the section for V031. A control that expires when the corpus is repaired is not a control; it is pinned by value now, and packet 28 is asserted CLEAN instead",
+   "file": "scripts/packet-29-market-structures-contestability.mjs",
+   "packet": 2.7,
+   "status": "confirmed",
+   "closed_by": "packet-2.7",
+   "verified_by": "Verify A (packet 2.7) 2026-09-19",
+   "evidence": "Reproduced the expiry and the repair. scripts/_packet28-assessment.mjs is byte-identical to HEAD and its two chains both carry steps (5 and 5), the malformed 'Is growing larger worth it?' frame having moved to evaluation in 00662a3 — so HEAD's assertion 'if (shapeOk(p28.EXTRAS.chains)) problems.push(...)' necessarily fires. Ran it: with only that one line reverted through a load hook, scripts/packet-29-market-structures-contestability.mjs exits 1 on 'the extras-shape check passes packet 28 ... the check is not measuring what it claims'. That is V040's claim, live at HEAD. As it stands the runner exits 0, the shape is pinned by value at :818, and the import now asserts packet 28 CLEAN at :823. That direction A/B's too: pushing a { title, points } chain back onto p28.EXTRAS.chains through the hook makes the runner exit 1 on 'packet 28 has a malformed extras chain again — V028 has regressed'. Note the pinned V028_SHAPE reproduces the title and the points-where-steps-belongs shape but not the four real point strings, and functionally it asserts nothing the planted control one line above at :806 did not already assert; the load-bearing half of the fix is the inverted import.",
+   "note": null,
+   "added": "2026-09-19"
+  },
+  {
+   "id": "V041",
+   "kind": "feature",
+   "title": "The recall census gate guarded only the back catalogue. recall-census.mjs --check compared each section against audit/recall-census-baseline.json with 'was !== undefined', so a section with NO baseline entry was skipped silently — and 15 of the 43 have no draft row, including trade-global-economy, external-influences, balance-payments-exchange-rates and macroeconomic-objectives-policies, which is every section the remaining content packets will write. With recall.recoverable at INFO the per-packet runners' '0 new DEBT on my own section' gate does not see it either, so a section written entirely out of scroll-up-answerable recalls cleared every gate in the repository. Found by Verify A on packet 2.7's own instrument",
+   "file": "audit/scripts/recall-census.mjs",
+   "packet": 2.7,
+   "status": "confirmed",
+   "closed_by": "packet-2.7",
+   "verified_by": "Verify A round 2 (packet 2.7) 2026-09-19",
+   "evidence": "audit/scripts/recall-census.mjs:109 is now `const was = before[corpus]?.[r.id] ?? 0`, so a missing entry defaults to zero instead of being skipped. A/B'd without editing the repository: ran the real script from a scratch cwd holding a doctored copy of the baseline. Baseline with `the-market` deleted from BOTH corpora -> exit 1, 'data the-market: 0 (no baseline entry - a new section is held to zero) -> 11' and 'draft the-market: 0 (no baseline entry ...) -> 13'. Planted regression (data the-market 11 -> 0) -> exit 1 naming the section and both numbers. Unmodified baseline -> exit 0 (241 of 264 live, 358 of 667 staged). Nothing else in the repository would have caught it, checked rather than assumed: recall.recoverable is INFO, lib/content-gate.mjs:90 counts only tier === 'DEBT' toward newDebt, and audit/scripts/validate-content.mjs filters `f.tier !== 'INFO'` at :48, :58, :96 and :106 and exits 1 only on a new BLOCK - so `recall-census.mjs --check` is the only gate in the tree that can see this rule at all. UNCLAIMED RISK, not grounds against this id: `npm run recalls` appears in no gate LIST - not audit/PROTOCOL.md section 5 (:78-84) and not .claude/workflows/packet-run.js's gate step (:176-180, which runs test/build/validate plus contrast, spec-items, tariff-census, pin-check) - and there is no CI workflow or git hook, so the repaired gate fires only if a human types it.",
+   "note": null,
+   "added": "2026-09-19"
   }
  ],
  "marketing": [

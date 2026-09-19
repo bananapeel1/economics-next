@@ -308,10 +308,58 @@ for (const sec of SUBSECTIONS) {
  * EVALUATION, which is the whole difference between Examine (8) and Analyse (6). Here the pair is
  * Assess (10) against Analyse (6), and the word the census uses is "judgement".
  */
+/*
+ * V036, 19 September 2026. THE DISCUSS CLAUSE BELOW USED TO REQUIRE THE WORD "conclusion" AND THAT
+ * IS NOT WHAT APPENDIX 6 SAYS. `bus_spec.txt:2234-2237` reads: "Requires a logical chains of
+ * reasoning, in context, showing cause(s) and/or effect(s). A brief ASSESSMENT is required showing
+ * an awareness of competing arguments/factors." The word `conclusion` belongs to Evaluate, at
+ * :2246-2250 — "a perceptive conclusion that proposes a solution and/or recommendations" — and the
+ * Economics twin says the same: `econ_spec.txt:2733-2740` asks a Discuss for "recognition of
+ * different viewpoints and/or a critical assessment of the evidence" and never uses the word
+ * either. So this guard was not failing to catch a defect; it was REQUIRING one, and four
+ * examMatters and one practice guidance in this packet's staged bundle assert it because the guard
+ * would not pass without it. Packet 35 caught the same inherited check and inverted it; this is the
+ * same pair of clauses. Fourth false Appendix 6 citation in the programme (packets 21, 23, 35).
+ */
 for (const sec of SUBSECTIONS) {
   const em = sec.examMatters || '';
   if (/Appendix 6[^.]*\bAssess\b/.test(em) && !/judgement/i.test(em)) problems.push(`"${sec.title}": an Assess gloss that does not mention a judgement — bus_spec.txt names it, and it is what separates Assess (10) from Analyse (6)`);
-  if (/Appendix 6[^.]*\bDiscuss\b/.test(em) && !/conclusion/i.test(em)) problems.push(`"${sec.title}": a Discuss gloss that does not mention the brief conclusion the census requires`);
+  if (/Appendix 6[^.]*\bDiscuss\b/.test(em) && !/assessment/i.test(em)) problems.push(`"${sec.title}": a Discuss gloss that does not mention the brief ASSESSMENT the census requires (bus_spec.txt:2234-2237 — it does not say "conclusion")`);
+  if (/Appendix 6[^.]*\bDiscuss\b/.test(em) && /\bconclusion\b/i.test(em)) problems.push(`"${sec.title}": a Discuss gloss promising a "conclusion"; bus_spec.txt:2234-2237 asks for a brief assessment and never uses the word — that is Evaluate at :2246-2250`);
+}
+/*
+ * The same rule over practice guidance, but SENTENCE-SCOPED and not a ban on the word. A model
+ * answer may reach a conclusion — "the conclusion the figures support is …" is ordinary English and
+ * is not a claim about the paper. What may not happen is a sentence that cites Appendix 6 for a
+ * Discuss and then tells the student a conclusion is what it asks for. Scoping it to the citing
+ * sentence is the difference between correcting a falsehood and banning a word.
+ */
+const discussGlossFaults = (text) => {
+  const out = [];
+  for (const sent of String(text || '').split(/(?<=[.!?])\s+/)) {
+    if (!/Appendix 6/.test(sent) || !/\bDiscuss\b/.test(sent)) continue;
+    if (!/assessment/i.test(sent)) out.push('does not name the brief ASSESSMENT the census requires (bus_spec.txt:2234-2237)');
+    if (/\bconclusion\b/i.test(sent)) out.push('promises a "conclusion"; that is Evaluate at bus_spec.txt:2246-2250');
+  }
+  return out;
+};
+for (const p of PRACTICE) {
+  if (p.command !== 'Discuss') continue;
+  for (const why of discussGlossFaults(p.guidance)) problems.push(`the Discuss practice "${p.question.slice(0, 40)}": its Appendix 6 sentence ${why} (V036)`);
+}
+{
+  /* A/B in both directions, on strings this packet could plausibly hold. */
+  const asserts = 'Appendix 6 defines Discuss as requiring logical chains of reasoning in context, with a brief conclusion.';
+  const correct = 'Appendix 6 defines Discuss as requiring logical chains of reasoning in context, closing with a brief assessment of the competing arguments.';
+  const modelAnswer = 'The conclusion the figures support is that piecework suits this firm if its orders are steady.';
+  const glossHits = (em) => [
+    /Appendix 6[^.]*\bDiscuss\b/.test(em) && !/assessment/i.test(em),
+    /Appendix 6[^.]*\bDiscuss\b/.test(em) && /\bconclusion\b/i.test(em),
+  ].filter(Boolean).length;
+  if (glossHits(asserts) !== 2) problems.push('the Discuss gloss check no longer fires on a gloss that promises a conclusion and never names the assessment');
+  if (glossHits(correct) !== 0) problems.push('the Discuss gloss check fires on a gloss that says what Appendix 6 actually says');
+  if (discussGlossFaults(`${correct} ${modelAnswer}`).length) problems.push('the sentence-scoped practice check has become a ban on the word "conclusion" — a model answer may reach one');
+  if (discussGlossFaults(`${asserts} ${modelAnswer}`).length !== 2) problems.push('the sentence-scoped practice check cannot see a false Appendix 6 sentence standing beside a legitimate one');
 }
 for (const p of PRACTICE) {
   if (p.command === 'Assess' && !/judgement/i.test(p.guidance)) problems.push('the Assess practice guidance does not name the supported judgement the command word requires');
@@ -1055,7 +1103,7 @@ if (problems.length) {
 if (newBlocks.length) { console.error('\nnew BLOCK findings; refusing.'); process.exit(1); }
 if (newDebt.length) { console.error('\nnew DEBT findings; refusing (the per-packet gate is 0 new DEBT on my own section).'); process.exit(1); }
 
-console.log('\npacket checks: no "work-life balance" (specGap-10, answered — 0 hits in bus_spec.txt) · no motivation or leadership framework the specification does not name · no Examine, no Outline, no 12-mark Assess · no internal ledger id in prose or in a diagram · no uncited marker, frequency or paper claim, and no levels-marked/L1-L4 (topFix-05’s second clause, refused) · every practice tariff in the BUSINESS census for Unit 1, all eight command words exactly once · Appendix 6 glosses share vocabulary with the census, Assess names a judgement, Discuss names a conclusion · every subsection inside the 350-word budget · a recall on all 37 subsections, the fill-in contract enforced before the validator sees it (topFix-01), both reorders sourced from extras chains, three copy-from-screen checks A/B’d, the answer-recoverable check over every type · no quiz stem near-duplicates another (quiz-01), no explanation names an option by position, nothing quizzed that is not taught (quiz-03) · every block pinned to a quiz, a practice item and a diagram, pins DERIVED from each item’s block tag, no orphaned practice item, six blocks priced against FREE_QUIZ_MAX · the whole arithmetic spine re-derived: a searched-for headcount of 31 reached exactly by span 2 over 5 levels and span 5 over 3, chains in LINKS, nine posts moved at constant headcount, a wage saving equal to the posts times the pay gap, a recruitment bill of exactly 30% of salary, and five financial methods equal at standard output · every org chart counted BACK out of the emitted SVG against perLevel, Maslow’s five tiers read bottom-first, every cost figure and the total found in the table · text EXTENT inside every canvas · glyph-BOX collisions with a vertical tolerance · every extras chain carries `steps`, A/B’d against packet 28 as a real control · ids unique · one currency, one minus sign, no year and no named real company');
+console.log('\npacket checks: no "work-life balance" (specGap-10, answered — 0 hits in bus_spec.txt) · no motivation or leadership framework the specification does not name · no Examine, no Outline, no 12-mark Assess · no internal ledger id in prose or in a diagram · no uncited marker, frequency or paper claim, and no levels-marked/L1-L4 (topFix-05’s second clause, refused) · every practice tariff in the BUSINESS census for Unit 1, all eight command words exactly once · Appendix 6 glosses share vocabulary with the census, Assess names a judgement, Discuss names the brief ASSESSMENT and never a conclusion (V036) · every subsection inside the 350-word budget · a recall on all 37 subsections, the fill-in contract enforced before the validator sees it (topFix-01), both reorders sourced from extras chains, three copy-from-screen checks A/B’d, the answer-recoverable check over every type · no quiz stem near-duplicates another (quiz-01), no explanation names an option by position, nothing quizzed that is not taught (quiz-03) · every block pinned to a quiz, a practice item and a diagram, pins DERIVED from each item’s block tag, no orphaned practice item, six blocks priced against FREE_QUIZ_MAX · the whole arithmetic spine re-derived: a searched-for headcount of 31 reached exactly by span 2 over 5 levels and span 5 over 3, chains in LINKS, nine posts moved at constant headcount, a wage saving equal to the posts times the pay gap, a recruitment bill of exactly 30% of salary, and five financial methods equal at standard output · every org chart counted BACK out of the emitted SVG against perLevel, Maslow’s five tiers read bottom-first, every cost figure and the total found in the table · text EXTENT inside every canvas · glyph-BOX collisions with a vertical tolerance · every extras chain carries `steps`, A/B’d against packet 28 as a real control · ids unique · one currency, one minus sign, no year and no named real company');
 
 if (DUMP) {
   const path = `audit/snapshots/packet-30-bundle__business__${SECTION}.json`;

@@ -53,13 +53,13 @@
        "prompt": "Put the rational decision-making process in order, from first step to last:",
        "correctOrder": [
         "Identify all available options",
-        "Compare marginal benefit against marginal cost",
-        "Choose the option with the greatest net benefit"
+        "Compare marginal benefit against marginal cost for the next unit",
+        "Choose whichever option leaves the largest surplus"
        ],
        "why": [
         "You cannot compare what you have not listed",
         "Marginal benefit against marginal cost is the comparison a rational agent makes",
-        "The option with the greatest net benefit is the rational choice"
+        "The largest surplus is what maximising net gain means"
        ]
       }
      },
@@ -171,20 +171,20 @@
        "type": "fillin",
        "prompt": "Complete:",
        "template": [
-        "PED = percentage change in ___ demanded",
-        "→ divided by percentage change in ___"
+        "A price rise of 10% cuts quantity demanded by 25%, so demand here is price ___",
+        "→ and total revenue will therefore ___"
        ],
        "answers": [
-        "quantity",
-        "price"
+        "elastic",
+        "fall"
        ],
        "hints": [
-        "how much is bought",
-        "what it costs"
+        "the response is more than proportionate",
+        "which way does revenue move"
        ],
        "distractors": [
-        "income",
-        "supply"
+        "inelastic",
+        "rise"
        ]
       }
      }
@@ -265,16 +265,16 @@
        "type": "fillin",
        "prompt": "Complete:",
        "template": [
-        "If demand is price ___, a price rise raises total revenue"
+        "A cinema raises ticket prices and its total revenue falls, so demand for its tickets must be price ___"
        ],
        "answers": [
-        "inelastic"
+        "elastic"
        ],
        "hints": [
-        "responds less than proportionately"
+        "revenue moved the opposite way to price"
        ],
        "distractors": [
-        "elastic",
+        "inelastic",
         "unitary"
        ]
       }
@@ -1532,6 +1532,260 @@
         "another point"
        ]
       }
+     ]
+    }
+   }
+  },
+  {
+   "rule": "recall.recoverable",
+   "fail": {
+    "content.0.sections.0.recall": {
+     "type": "reorder",
+     "prompt": "Put the rational decision-making process in order, from first step to last:",
+     "correctOrder": [
+      "Identify all available options",
+      "Compare marginal benefit against marginal cost",
+      "Choose the option with the greatest net benefit"
+     ],
+     "why": [
+      "You cannot compare what you have not listed",
+      "Marginal benefit against marginal cost is the comparison a rational agent makes",
+      "The option with the greatest net benefit is the rational choice"
+     ]
+    }
+   }
+  },
+  {
+   "rule": "recall.recoverable",
+   "fail": {
+    "content.1.sections.1.recall": {
+     "type": "fillin",
+     "prompt": "Complete:",
+     "template": [
+      "PED = percentage change in ___ demanded",
+      "→ divided by percentage change in ___"
+     ],
+     "answers": [
+      "quantity",
+      "price"
+     ],
+     "hints": [
+      "how much is bought",
+      "what it costs"
+     ],
+     "distractors": [
+      "income",
+      "supply"
+     ]
+    }
+   }
+  },
+  {
+   "rule": "recall.recoverable",
+   "fail": {
+    "content.3.sections.0.recall": {
+     "type": "fillin",
+     "prompt": "Complete:",
+     "template": [
+      "If demand is price ___, a price rise raises total revenue"
+     ],
+     "answers": [
+      "inelastic"
+     ],
+     "hints": [
+      "responds less than proportionately"
+     ],
+     "distractors": [
+      "elastic",
+      "unitary"
+     ]
+    }
+   }
+  },
+  {
+   "rule": "recall.recoverable",
+   "fail": {
+    "content.3.sections.0.keyIdea": "Whether a price rise helps or hurts turns on how strongly buyers respond.",
+    "content.3.sections.0.body.0.text": "The direction total revenue moves after a price rise depends on one thing only; it is not the size of the rise; it is whether demand is inelastic.",
+    "content.3.sections.0.recall": {
+     "type": "fillin",
+     "prompt": "Complete:",
+     "template": [
+      "The direction total revenue moves after a price rise depends on whether demand is ___"
+     ],
+     "answers": [
+      "inelastic"
+     ],
+     "hints": [
+      "buyers respond less than proportionately"
+     ],
+     "distractors": [
+      "elastic",
+      "unitary"
+     ]
+    }
+   }
+  },
+  {
+   "rule": "recall.recoverable",
+   "fail": {
+    "content.1.sections.1.body": [
+     {
+      "type": "paragraph",
+      "text": "Elasticity is the responsiveness of one variable to another."
+     },
+     {
+      "type": "flow",
+      "steps": [
+       "Price rises by a tenth",
+       "Quantity demanded falls by a quarter",
+       "Demand is price elastic"
+      ],
+      "result": "Total revenue falls",
+      "resultType": "bad"
+     }
+    ],
+    "content.1.sections.1.recall": {
+     "type": "reorder",
+     "prompt": "Order these from the price change to its effect on revenue:",
+     "correctOrder": [
+      "Price rises by a tenth",
+      "Quantity demanded falls by a quarter",
+      "Demand is price elastic"
+     ],
+     "why": [
+      "The price change comes first",
+      "The quantity response follows it",
+      "The two together define the elasticity"
+     ]
+    }
+   }
+  },
+  {
+   "rule": "recall.recoverable",
+   "pass": {
+    "content.3.sections.0.recall": {
+     "type": "fillin",
+     "prompt": "Complete:",
+     "template": [
+      "A cinema raises ticket prices and its total revenue falls, so demand for its tickets must be price ___"
+     ],
+     "answers": [
+      "elastic"
+     ],
+     "hints": [
+      "revenue moved the opposite way to price"
+     ],
+     "distractors": [
+      "inelastic",
+      "unitary"
+     ]
+    }
+   }
+  },
+  {
+   "rule": "recall.recoverable",
+   "fail": {
+    "content.3.sections.0.keyIdea": "A price change moves total revenue, and which way it moves is the question.",
+    "content.3.sections.0.body.0.text": "Total revenue is price times quantity, and a rise in price raises it whenever buyers barely respond.",
+    "content.3.sections.0.recall": {
+     "type": "fillin",
+     "prompt": "Complete:",
+     "template": [
+      "In a market of loyal shoppers a rise in price raises total revenue whenever buyers barely ___"
+     ],
+     "answers": [
+      "respond"
+     ],
+     "hints": [
+      "what buyers do about the price"
+     ],
+     "distractors": [
+      "switch",
+      "leave"
+     ]
+    }
+   }
+  },
+  {
+   "rule": "recall.recoverable",
+   "fail": {
+    "content.3.sections.0.keyIdea": "Two forces decide the outcome and only one of them is the price.",
+    "content.3.sections.0.body.0.text": "Sellers watch one figure above all others, and the figure is total revenue.",
+    "content.3.sections.0.recall": {
+     "type": "fillin",
+     "prompt": "Complete:",
+     "template": [
+      "Price multiplied by quantity sold is a firm’s total ___"
+     ],
+     "answers": [
+      "revenue"
+     ],
+     "hints": [
+      "what the sales bring in"
+     ],
+     "distractors": [
+      "profit",
+      "cost"
+     ]
+    }
+   }
+  },
+  {
+   "rule": "recall.recoverable",
+   "fail": {
+    "content.1.sections.1.body": [
+     {
+      "type": "paragraph",
+      "text": "Elasticity is the responsiveness of one variable to another."
+     },
+     {
+      "type": "flow",
+      "steps": [
+       "Price rises",
+       "Quantity demanded falls",
+       "Revenue moves"
+      ],
+      "result": "The direction depends on PED",
+      "resultType": "neutral"
+     }
+    ],
+    "content.1.sections.1.recall": {
+     "type": "reorder",
+     "prompt": "Order these from the price change to its effect on revenue:",
+     "correctOrder": [
+      "Price rises steeply",
+      "Quantity demanded falls sharply",
+      "Revenue moves downward"
+     ],
+     "why": [
+      "The price change is first",
+      "The quantity response follows",
+      "Revenue is the product of the two"
+     ]
+    }
+   }
+  },
+  {
+   "rule": "recall.recoverable",
+   "fail": {
+    "content.3.sections.0.keyIdea": "Two things decide what a price change does to the money coming in.",
+    "content.3.sections.0.body.0.text": "Total revenue is price times quantity. It rises with the price whenever demand is inelastic.",
+    "content.3.sections.0.recall": {
+     "type": "fillin",
+     "prompt": "Complete:",
+     "template": [
+      "Total revenue is price times quantity and it rises with a price rise whenever demand is ___"
+     ],
+     "answers": [
+      "inelastic"
+     ],
+     "hints": [
+      "buyers barely move"
+     ],
+     "distractors": [
+      "elastic",
+      "unitary"
      ]
     }
    }

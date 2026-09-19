@@ -1,58 +1,231 @@
 # Next session brief
 
-## Handoff — what comes next (written 19 September 2026, after packet 37)
+## Handoff — after packet 2.7 (written 19 September 2026)
 
-**Take packet 39, `trade-global-economy`, Economics 4.3.2 — 43 open items, the largest of the four
-candidates, and it is owed two debts by packets that have already run.**
+**Packet 37's blocker is still the first thing to decide, and the handoff below this one is still the
+live one for it.** Packet 2.7 rebuilt guards and records; it rebuilt no section and it did not touch the
+diagram modal, so nothing here changes that call.
 
-Packet 33 (`globalisation`, Business 4.3.1) and packet 34 (`causes-effects-globalisation`, Economics 4.3.1)
-each found that a block of the section they were rebuilding taught **this** section's leaves: the types of
-trading bloc, trade creation and trade diversion, at `econ_spec.txt:1657-1673`, which is **4.3.2 · 4**.
-Between them they reassigned four ledger items here — `topFix-02`, `topFix-03`, `specGap-05` and
-`specGap-06` from packet 34's set — and packet 33 refused four more of its own that asked it to build the
-same material. **Read both of those packet specs in this file before starting**, because they already
-contain the scope decision and the spec lines; you are inheriting the answer, not re-deriving it.
+What packet 2.7 leaves behind that the next packet needs:
 
-The alternatives, if the founder wants a different shape: packet 41 `external-influences` (32 open, Business
-2.3.5, and `SPEC-OWNERSHIP.md` notes it still refers to Porter's five forces inside a subsection — that
-section's packet decides whether to keep the reference); packet 38 `macroeconomic-objectives-policies` (27
-open, Economics 2.3.6, the last Unit 2 Economics section and the one this packet's notes point at twice);
-packet 40 `balance-payments-exchange-rates` (29 open).
+1. **`npm run recalls` is a gate now, and it will fire on you.** `recall.recoverable` measures whether a
+   recall's answer is printed on the step it is asked on — **241 of 264 live recalls (91%) and 358 of 667
+   staged (54%)** are, at 0.70 for a fill-in stem and 0.75 for the other three types. It is INFO in the
+   validator, so it will not block your runner, but `npm run recalls --check` holds every section to its
+   row in `audit/recall-census-baseline.json` **and holds a section with NO row to zero** — which is every
+   section still to be written. Write recalls that ask the student to APPLY the idea to figures or a new
+   case, the way packet 29 reworked its twelve. If you genuinely mean to add debt, raise the baseline with
+   `--baseline --confirm` and say why in DECISIONS; it prints what it is adding.
+2. **The biggest single contributor is a reorder sitting under its own flow chain**, and it is a tension
+   between two rules that are both right: `reorder.source` (DEBT) asks that the sequence be taught by a
+   flow or extras chain in the same SECTION, and `recall.recoverable` fires when that flow is in the same
+   SUBSECTION. Put the flow in one subsection and the reorder in another, or have the reorder extend the
+   flow rather than restate it. The scoping is deliberate so that both can be satisfied.
+3. **`pickSpacedRecall` changed.** A check-in now takes its spaced recall from the earlier chapter that has
+   supplied the fewest, oldest first. Any harness that asserts "the earliest unspaced recall" is asserting
+   the pre-V034 rule. `lib/learn-steps.test.mjs` has the two cases.
+4. **Appendix 6 never asks a Discuss for a conclusion, in either specification** — `bus_spec.txt:2234-2237`
+   and `econ_spec.txt:2733-2740` both say a brief ASSESSMENT; "conclusion" is Evaluate. Fourth time a false
+   Appendix 6 citation has been caught (21, 23, 35, 36/30). If you inherit a gloss check, read the census
+   line before you trust the clause.
+5. **A check whose control is another packet's broken content expires when that packet is repaired** (V040),
+   and **a regression gate keyed on a baseline skips everything the baseline has never seen** (V041). Both
+   were found in this packet's own instruments, one by the runner and one by Verify A.
+6. **Packet 29, 30 and 33 were re-staged** for the diagram and the Discuss glosses. Nothing was published.
+
+---
+
+## Handoff — what comes next (written 19 September 2026, after packet 37 — Verify B blocked on diagram enlarge)
+
+**PACKET 37 GATE DID NOT PASS** — Verify B found a blocking defect: the AD/AS equilibrium diagram (step 19)
+opens in enlarge mode at 858 CSS px wide inside a 390 px phone, requiring horizontal scroll to see the right
+edge and labels. This is the escape hatch for 9.4 px labels and it is the worst view on a phone. Secondary
+defects: circular-flow diagram label collision at step 4, progress pointer unversioned between 14-step and
+29-step decks (will drop returned students to 48% of 29 at publish), step 29 copy bug ("Before the next chapter"
+when there is no next chapter). Content is staged. `audit/runs/packet-37/verify-b.md` has the full report.
+
+**Next session should either (a) fix packet 37's blocking defect or (b) work on packet 38** while the founder
+decides whether packet 37 needs fixing before the 5/7 checkpoint, or (c) defer it to post-checkpoint. Read
+`audit/runs/packet-37/verify-b.md` first to understand the scope of the fix.
+
+The alternatives if the founder wants to defer packet 37 to post-checkpoint: packet 38 `macroeconomic-objectives-policies` (27 open, Economics 2.3.6, the last Unit 2 Economics section); packet 39 `trade-global-economy` (43 open, Economics 4.3.2, owed two debts by packets 33 and 34); packet 40 `balance-payments-exchange-rates` (29 open); packet 41 `external-influences` (32 open, Business 2.3.5).
 
 ### What packet 37 leaves behind that the next packet needs
 
-1. **`packet-13-census.mjs` reads the PUBLISHED `data` column**, so it cannot see any staged rebuild. D013
+1. **Packet 37's blocking defect.** The AD/AS equilibrium diagram opens 858 px wide at 390 px phone width in
+   enlarge mode; see `audit/runs/packet-37/verify-b.md` lines 50-71 for the technical detail. The defect is in
+   the inline render step that opens the modal, not in the builder's runner. Fix route: `app/api/sections/[id]/route.js` gate at line 56, the component that renders the modal at `components/LM-DiagramModal.jsx`, or the diagram frame itself.
+2. **`packet-13-census.mjs` reads the PUBLISHED `data` column**, so it cannot see any staged rebuild. D013
    is confirmed against the content and the census still names `aggregate-demand`. Do not treat a census
    answer as evidence about a staged section, and do not "fix" D013 again — `SPEC-OWNERSHIP.md` now says
    exactly what is left, and it is a re-run after both sections publish.
-2. **Assert the shape of what you read.** This runner read `loadBundle()` without `await` and reported the
+3. **Assert the shape of what you read.** This runner read `loadBundle()` without `await` and reported the
    live section as 0 BLOCK / 19 DEBT when it is 18 / 43; nothing else in the gate could see it. Any runner
    copied from an earlier packet should be checked for that line, and should assert that `live.content` is
    an array before validating against it. DECISIONS, 19 September.
-3. **The 400-unit diagram frame.** Packet 37 authored on 400 units rather than 440, with 15 for anything a
+4. **The 400-unit diagram frame.** Packet 37 authored on 400 units rather than 440, with 15 for anything a
    student must read and 12 for secondary text, and measured 11.7 and 9.4 CSS px on a 390px phone against
    packet 36's 7-9. It is an improvement inside the convention, not a fix: **V037 on packet 11 is still the
    item**. Use 400 unless there is a reason not to.
-4. **A banned word may be sayable exactly once, in the string that refutes it.** Third time this has come up
+5. **A banned word may be sayable exactly once, in the string that refutes it.** Third time this has come up
    (packet 29's kinked demand curve, packet 36's Appendix 8, packet 37's "leakage"). The pattern that works:
    an `exemptIf` regex on the ban, a `needsOne` flag so the refutation must EXIST, and an A/B that tests the
    exemption against a sentence it must exempt and one it must not.
-5. **`audit/runs/packet-37/verify-draft.mjs` is the template for gate item 5** if the one you inherit is
+6. **`audit/runs/packet-37/verify-draft.mjs` is the template for gate item 5** if the one you inherit is
    thinner: 1,744 checks against the SERVED `draft`, with Appendix 6's tariffs parsed out of the
-   specification and every figure re-parsed out of the served characters rather than imported. Its own first
-   draft had three parser bugs that all read GREEN — it matched another economy's multiplier, it read the
-   axis labels as bar values, and it applied the bank's ordering rule to the remapped free payload. **Print
-   what your verifier parsed before trusting that it parsed anything.**
+   specification and every figure re-parsed out of the served characters rather than imported.
 
 ### Still open across the programme
 
-- Packets **21, 31, 32, 33, 34, 35, 36 and 37 are all BUILT and STAGED, NOT PUBLISHED**, held for the
-  packet 5/7 ship checkpoint. That is eight sections of work a student cannot see. The checkpoint is the
-  bottleneck, not the authoring.
+- Packets **21, 31, 32, 33, 34, 35, 36 are BUILT and STAGED, NOT PUBLISHED**, held for the packet 5/7 ship
+  checkpoint. That is seven sections of work a student cannot see.
+- **Packet 37 is BUILT and STAGED, NOT PUBLISHED, but gate did NOT pass** — Verify B blocking defect. Remediation deferred to founder's decision.
 - Packet 5 and packet 7 must ship before any of them publishes: `main` cannot render a recall authored to
   the packet-7 contract, and these eight sections carry over a hundred of them (DECISIONS, 15 September).
 
 ---
+
+## Packet 2.7 spec — the recall guard, the spacing engine, and four records that are wrong (Opus 5, 19 September 2026)
+
+Six ids: `V029` `V030` (the answer-recoverable check), `V031` (a diagram that names a curve it does not
+draw), `V032` (three false statements in packet 29's records), `V034` (`pickSpacedRecall`), `V036` (a check
+that enforces a conclusion Appendix 6 does not ask for). This is packet 2.5's sibling: **no section is
+rebuilt here.** Every item is an instrument, an engine or a record, and the one content change is the five
+staged strings a broken check certified.
+
+### Rule 1 — every item checked before anything was changed, and all six stand
+
+| id | claim | verdict, measured today |
+|---|---|---|
+| V029 | `recoverable()` misses give-aways for four compounding reasons | **confirmed**, `packet-29-…mjs:396-425`. `sentencesOf` splits on `(?<=[.!?;:])\s+`, so a give-away across a colon is two fragments; the fill-in gate is 0.85 and the reorder gate 0.95; the A/B's negative control is `{ keyIdea: '…', body: [] }` — an invented one-sentence teach, not the real subsection |
+| V030 | the guard reports "0 of 43" as a fact when it is "0 at a 0.85 threshold" | **confirmed** — the runner prints a count and never its threshold, and PROGRESS.md carries the bare `0 of 43` beside Verify B's `10 of 43` with no way to tell they measure the same thing |
+| V031 | the caption says MR = MC and no MR curve is drawn | **confirmed**, `_packet29-diagrams.mjs:689-712`. `mk()` passes `label` as `''` to `straight()`, so neither sloping line carries AR or D either. The arithmetic IS MR = MC — `q = (a − mc) / 2b` at `_packet29-util.mjs:273` — so the fix is the picture, not the numbers |
+| V032 | three statements are wrong | **all three confirmed** — see the table below |
+| V034 | `pickSpacedRecall` exhausts chapter 1 | **confirmed and larger than stated**: 80% of staged spaced slots and 64% of live ones come from chapter 1; 10 staged sections draw EVERY slot from it. On `financial-planning` staged, all four check-ins read "Recall from chapter 1" exactly as the item says; on LIVE `financial-planning` it is three of four, because chapter 1 holds only three recalls there and the fourth spills to chapter 2. The item's measurement is the staged one |
+| V036 | a Discuss gloss check enforces a conclusion Appendix 6 does not ask for | **confirmed in BOTH specifications.** `bus_spec.txt:2234-2237` — Discuss (8) asks for "a brief **assessment** … showing an awareness of competing arguments/factors"; `econ_spec.txt:2733-2740` — Discuss (14) asks for "recognition of different viewpoints and/or a critical **assessment** of the evidence". Neither uses the word. `conclusion` belongs to **Evaluate** at `bus_spec.txt:2246-2250` |
+
+V032's three, each re-measured rather than read:
+
+1. **The pre-test.** `NEXT.md` acceptance check 4 says a three-question pre-test with one repeat is EXPECTED
+   and cites `PreTest.jsx:23-27` for a pool built as `[...free, ...reserved]`. Those lines are `const letters`
+   and the opening of `handleSelect`, and no such expression exists anywhere: `pickPretestQuestions`
+   (`lib/pretest-pool.js:41`) FILTERS the reserved set out. Composed on the shipping functions over the staged
+   bundle: **signed out 2 questions and 0 repeats, Pro 3 and 0.** A verifier sent after that repeat would hunt
+   something that cannot occur.
+2. **Oligopoly.** Counted out of the packet's own `LEAF_MAP`, sub-topic 5 holds **22** of the 54, not 25
+   (5 · 2 · 4 · 6 · **22** · 8 · 2 · 5 = 54). The wrong figure is in four places.
+3. **The mistakes count.** `section_common_mistakes.draft` holds **9**; commit `ef4f819`'s message says 8.
+   PROGRESS.md already says 9, so the two records disagree with each other.
+
+### What gets built
+
+1. **One answer-recoverability measure, in the validator, not in a fifth runner.** `V029`'s finding is that
+   *no packet's runner could see it*, and the reason is that the check is copy-pasted per packet — five
+   variants exist today (29, 31, 32, 33, 34) and they disagree on thresholds, on which fields are read and on
+   which types are tested. It moves to `lib/content-validator.mjs` as `recall.recoverable`, so every section
+   that is staged or validated from now on is measured by the same instrument. **CORRECTED 19 September:
+   this said "DEBT tier" and said the back catalogue would land in `audit/validator-baseline.json`. Neither
+   is what shipped.** At DEBT the rule reported 20 new findings on packet 29's staged section, 9 on packet
+   30's, 9 on 33's, 4 on 36's and 8 on 37's, and a content runner's own gate is 0 new DEBT on its own
+   section — so it stopped every content packet in the programme from staging, starting with this packet's
+   own re-stage for V031. Baselining the back catalogue does not fix that and was tried: 546 keys from both
+   corpora, every runner unchanged, because a key fingerprints the object and a runner validates the bundle
+   it BUILDS rather than the row in the database. `validator-baseline.json` is restored, unchanged, at 2,432
+   keys. **The rule is INFO in the validator and gated in the census**, per section, by `npm run recalls
+   --check` against `audit/recall-census-baseline.json` — where a section with no entry is held to zero, so
+   a section written from scratch cannot ship the debt silently. DECISIONS, 19 September. The four defects
+   are fixed at
+   the move: the sentence split keeps `:` and `;` inside the unit and also tests adjacent pairs, because what
+   the student sees is a screen and not a sentence; the gates are calibrated DOWN to real instances rather
+   than set above them; every type is tested against every field that renders; and the A/B controls are REAL
+   subsections pulled out of the corpus, never an invented teach.
+2. **The honest number.** `audit/scripts/recall-census.mjs` (`npm run recalls`) walks both corpora and prints
+   the count **with its threshold beside it**, per section and in total. No surface in this repository may
+   print "0 of 43" again without saying at what gate.
+3. **`pickSpacedRecall` reaches the middle chapters.** One rule: a check-in takes its spaced recall from the
+   eligible earlier chapter that has contributed the FEWEST so far, oldest chapter first, and the earliest
+   unused recall within it. Spacing still prefers old material, and a five-chapter section now draws from
+   four chapters instead of one. `lib/learn-steps.test.mjs` gets the case that fails today.
+4. **The price-discrimination diagram shows what its caption claims.** An MR line per market
+   (`MR = a − 2bQ`, x-intercept `a/2b`), each sloping line labelled `AR = D`, and the read-off kept. Re-staged
+   and verified against the served payload, not against the file.
+5. **The Discuss check, inverted, and the five staged strings it certified.** The check becomes packet 35's:
+   a Discuss gloss must name the brief ASSESSMENT and may not promise a conclusion. `managing-people` carries
+   four `examMatters` and one practice guidance saying Appendix 6 requires one — "the conclusion is
+   compulsory" — and `globalisation` carries one that cites Appendix 6 correctly and then adds "so a short
+   conclusion is required". **Nothing is live**: all six are in `draft`. They are corrected, re-staged, and
+   read back out of `?draft=1`.
+6. **The four wrong records**, each corrected where it is written and left visible rather than edited out.
+
+### Acceptance checks a verifier can run without this conversation
+
+1. `node audit/scripts/recall-census.mjs` prints a count and a threshold on every line it reports, and its
+   totals match the per-section rows.
+2. Deleting the `:`/`;` handling from the sentence splitter makes the census count FALL, and the A/B in
+   `lib/content-validator.test.mjs` fails — the give-away across a colon is a real corpus instance, named.
+3. `node --test lib/learn-steps.test.mjs`: a five-chapter section whose chapter 1 holds four recalls draws
+   its four spaced slots from four DIFFERENT chapters, and reverting `pickSpacedRecall` to `candidates[0]`
+   fails that test.
+4. `node audit/runs/packet-2.7/v034-probe.mjs` reports 0 sections drawing every slot from chapter 1, against
+   10 staged and 6 live at HEAD.
+5. The served `draft` payload for `market-structures-contestability` carries, in
+   `diagrams[6].scenarios[2]`, two dashed lines whose gradients are twice their own AR's and which meet
+   `MC = $24` at 12 and 16, and a key reading `solid: AR = D` and `dashed: MR`. **CORRECTED 19 September:
+   this asked for "an `AR = D` on each sloping line", which is the version Verify B rejected — four labels
+   on five crossing curves landed 3.3 units apart with a read-off running above one of them. A verifier
+   running the original wording would have failed the correct diagram.**
+6. `grep -c 'Discuss' | grep conclusion` over the served `draft` payloads of `managing-people` and
+   `globalisation` returns 0, and `scripts/packet-30-managing-people.mjs` fails if a Discuss gloss promising a
+   conclusion is planted in it.
+7. `grep -rn '25 of the 54'` returns nothing, and every surviving `PreTest.jsx:23-27` is inside a sentence
+   that says the citation was wrong — the four records that asserted it now annotate it instead, and the
+   commit-message/bundle disagreement over 8 versus 9 mistakes is recorded in the PROGRESS row.
+8. `npm test`, `npm run build`, `npm run validate` and `npm run exposure` all exit 0.
+
+### The Verify B acceptance script (written before the walk)
+
+390×844, signed out, storage cleared, `?draft=1`.
+
+- `financial-planning`: walk to the check-in after each chapter. The cue above the spaced recall must read
+  **four different chapter numbers** across the four check-ins, not "Recall from chapter 1" four times.
+- `market-structures-contestability`: open the price-discrimination diagram. Both sloping lines carry a
+  visible `AR = D`, an `MR` line runs below each, and each `MR` crosses the `MC = $24` line under the marked
+  read-off. Nothing overlaps the caption.
+- `managing-people`: the Discuss subsection in chapter 1 must not tell the student a conclusion is required.
+
+---
+
+
+### Verify B — 390×844, signed out, storage cleared, `?draft=1` (19 September 2026)
+
+All three acceptance walks pass, and the diagram walk **rejected the first version of the V031 fix**.
+
+1. **`financial-planning`, all 30 steps.** The four check-ins that carry a spaced recall read **"Recall
+   from chapter 1" (step 12), "chapter 2" (19), "chapter 3" (24) and "chapter 4" (30)** — four different
+   chapters where every one of them read "chapter 1" at HEAD. Step 30's cue is screenshotted in the run
+   folder. Console: three 401s from `POST /api/learn-mode/state` for a signed-out reader, pre-existing and
+   the same three packet 2.5 recorded; no content error.
+2. **`market-structures-contestability`, step 44 of 51, the price-discrimination view.** **Round 1 was a
+   rejection and it was mine to make.** The first fix labelled all four curves on the curves themselves,
+   and at 390px `AR = D (Market B)` and `MR (Market A)` landed 3.3 units apart with the $72 read-off
+   running 1.4 units above the first — the "label struck through by its own guide line" class this packet's
+   own section found in round 3, and *inside* the 25-unit threshold that check is calibrated to, so the
+   runner passed it. Round 2 replaces them with a two-line key in the one region of the frame no curve
+   enters. After: the two demand lines, the two dashed MR lines each from their own AR's intercept and
+   twice as steep, both crossing `MC = $24` under the 12 and 16 read-offs, `solid: AR = D` and
+   `dashed: MR` in the top right, and the two PED labels at their own points. Nothing overlaps.
+3. **`managing-people`, step 7 of 43, "Individual and Collective Approaches".** The EXAM MATTERS card
+   reads "Appendix 6 defines Discuss as requiring logical chains of reasoning in context showing causes
+   and effects, closing with a brief assessment that shows an awareness of competing arguments." Zero of
+   the five served Appendix-6 Discuss sentences promises a conclusion, measured against the served
+   `?draft=1` payload field by field as well as on screen.
+
+**Not covered by this walk, and stated rather than implied.** Nothing signed in: the Pro payload is
+proven differentially (the pre-test measurement composes `sectionPayload({ isPremium: true })`) and never
+on screen, which is packet 17's limit and still the founder's one pass. And the enlarge view is untouched
+here: the packet-37 session's blocking defect — a diagram opening 858 CSS px wide inside a 390 px phone —
+applies to this diagram too, because it is the product's modal and not this packet's frame. **V037 on
+packet 11 is still the item.**
 
 ## Packet 37 spec — `national-income`, Economics Unit 2 (WEC12), IAL **2.3.4** (Opus 5, 18 September 2026)
 
@@ -1986,7 +2159,7 @@ oracle matches by SUBSTRING (V025) and this section has many one-word leaves (`p
 chapters a check-in question and drop a signed-out student's pre-test from three questions to two; nine
 would drop it to one. Seven blocks would put 54 leaves in seven chapters — 7.7 a chapter against the
 6.6 packet 22 proved at 46/7 — and would mean folding two of the three oligopoly chapters together, when
-Oligopoly alone is **25 of the 54 leaves**. Density stays at the proven 6.75. Spec order also puts
+Oligopoly alone is **22 of the 54 leaves** (this block said 25; V032 counted it out of LEAF_MAP on 19 September). Density stays at the proven 6.75. Spec order also puts
 Oligopoly before Monopoly, which `structure-07` explicitly says works, and fixes `structure-03`/`-04` at
 the root the way packet 20 did rather than patching the fallback.
 
@@ -2123,14 +2296,21 @@ Not mine and not touched: **V022** (`diagram.table-legible` is a design decision
 
     **What the pre-test will show, measured rather than predicted.** `freeQuizPayload()` sends a signed-out
     student **10 of the 39 items** and **all eight chapters resolve a check-in question** (measured against
-    the shipping function on the emitted bundle). The UNPINNED prefix it sends is **two**, which is the
-    priced cost of the eighth block. But `PreTest.jsx:23-27` builds its pool as `[...free, ...reserved]`
-    and slices three, so the student is offered **three questions, the third of which is a pinned one** and
-    will be asked again at a chapter check-in. That is packet 20's open founder item, not this packet's
-    defect and not fixable by any content packet: a fourth unpinned item never reaches the student, because
-    the slice takes only the first `PREVIEW_LIMITS.quiz` of the unpinned prefix. So a three-question
-    pre-test with one repeat is the EXPECTED observation here; an earlier draft of this spec block said
-    two, which was the size of the prefix rather than the size of what the student sees.
+    the shipping function on the emitted bundle). The UNPINNED prefix it sends is **two**, and **two is what
+    the student is offered, with nothing repeated.** Pro is offered three, also with nothing repeated.
+
+    **CORRECTED 19 September 2026 by V032 (packet 2.7), and the correction is left visible because the
+    error was made in the same direction twice.** This paragraph used to say that `PreTest.jsx:23-27`
+    builds its pool as `[...free, ...reserved]` and slices three, so a three-question pre-test with one
+    repeat was "the EXPECTED observation" — and it closed by overruling an earlier draft of itself that had
+    said two. Both halves are wrong. Lines 23-27 of that file are `const letters` and the opening of
+    `handleSelect`; no `[...free, ...reserved]` expression exists anywhere; and `pickPretestQuestions`
+    (`lib/pretest-pool.js:41`) FILTERS the reserved set out, which is the whole of what packet 2.5's V021
+    built. Measured by composing the shipping functions over the staged bundle:
+    **signed out 2 questions and 0 repeats, Pro 3 and 0** (`audit/runs/packet-2.7/v032-pretest.mjs`). The
+    runner's own console NOTE said two all along, and so did Verify B round 1; this block corrected a
+    correct statement into a wrong one and would have sent a future verifier hunting a repeat that cannot
+    occur.
 
 ### Verify B report — three rounds, and what it found that nothing else could
 
@@ -4749,6 +4929,16 @@ plus one pin per chapter. `PreTest.jsx:23-27` builds its pool as `[...free, ...r
 so when only 2 free items survive the slice, **the third pre-test question is chapter 1's check-in
 question**, and the student meets it again minutes later. Confirmed on this section: served array has 8
 items, indices 0-1 free, 2-7 pinned, and the pre-test rendered items 0, 1 and 2.
+
+**CLOSED 16 September at 20:15, four hours after this was written — annotated by V032 (packet 2.7,
+19 September) because three later records still cite it as live.** `492a9a6` (packet 2.4, V015) took
+the padding out, and `4e3ab45` (packet 2.5, V021) moved the selection into `lib/pretest-pool.js`,
+where `pickPretestQuestions` filters the reserved set out and returns a SHORT pre-test rather than a
+padded one. Two details of the citation were wrong even on the day: the expression was
+`[...free, ...rest]`, never `[...free, ...reserved]` — `git log -S` finds that string nowhere in the
+repository's history — and it sat at lines 18-29, not 23-27, which today are `const letters` and the
+opening of `handleSelect`. Measured on the shipping functions on 19 September: signed out 2 questions
+and 0 repeats, Pro 3 and 0. The escalation itself was answered, not dropped.
 
 **No content packet can fix this.** Authoring a fourth unpinned item does not help, because the slice
 takes only the first `PREVIEW_LIMITS.quiz` of them. It needs either `freeQuizPayload()` to carry
@@ -7641,3 +7831,102 @@ which choices are real:
 Nothing here was changed: `app/globals.css` and `lib/content-validator.mjs` both had another session's
 edits in flight, and a product-wide visual change verified on one section inside a content packet is
 how a packet ships a regression it cannot see. It is a decision, and it belongs to the founder.
+
+---
+
+## Handoff — packet 37 closed (brain)
+
+**Bookkeeping pass only, 2026-09-19: no content authored, nothing fixed, nothing committed.** Verified
+the true state independently before writing anything — `node audit/scripts/ledger.mjs unverified 37`
+(gate clear) and `node audit/scripts/check-staged-drafts.mjs national-income` (matches, 0 drift) rerun
+myself, plus a full read of `audit/runs/packet-37/verify-a.md`, `verify-b.md`, `built.md` and
+`verify-b-fix.md`. The row this session wrote is **not** the "built and verified, closed" framing this
+session's own task text proposed — that framing does not match the evidence, and the task text's own
+"Outcome" line already said so ("fix FAILED; re-walk FOUND A DEFECT"). The heading says "closed"
+because packet 37 is closed **as a work item for this checkpoint cycle** (ledger gate clear, nothing
+left to claim, no further action available until another session's conflicting edit clears) — it is
+**not** closed as built-and-verified, and the PROGRESS row says that explicitly. Do not read this
+heading as "ready to publish."
+
+**Ledger: clean.** `ledger.mjs packet 37` → 34 items, 33 confirmed / 1 wont-fix / 0 open.
+`unverified 37` → "gate clear: every claimed item is confirmed and no scope is left unclaimed."
+Verify A: 30 of 30 confirmed on round 1, zero rejections (`audit/runs/packet-37/verify-a.md`).
+
+**Walkthrough (Verify B, 390×844 signed out): one defect filed out, one defect the founder authorised
+a fix for, and that fix did not land.**
+
+- **Filed out, not this packet's scope.** The AD/AS diagram's "Tap to enlarge" opens at 858 CSS px
+  inside a 390 px pane — this is the enlarge-modal defect **V037** already names, filed programme-wide
+  on packet 11. Not touched here, per the founder's explicit scoping.
+- **The circular-flow label collision (step 4) — the one thing this fix round covered.** `verify-b.md`
+  measured `← goods and services` overlapping HOUSEHOLDS (19.5×7.9 CSS px), FIRMS (19.5×7.9 CSS px) and
+  the real-flow caption (91.4×3.1 CSS px). The reposition is written correctly at the source —
+  `scripts/_packet37-diagrams.mjs`, staged in the git index (frame 300→330, label baseline 128→144,
+  money band shifted 26 units down) — and a rendered-DOM measurement with a reproducing control
+  confirms the geometry: the control run against the pre-fix SVG reproduced all three overlaps to
+  0.1 px, and the fixed source measures 0 of 13×2 label/label and label/rect pairs colliding.
+  **But `node scripts/packet-37-national-income.mjs --stage --dump` exits 1** — 0 new BLOCK / 8 new
+  DEBT (`recall.recoverable`, a new programme-wide rule) — and that refusal is unrelated to this fix:
+  it is caused by another session's 137 uncommitted lines in `lib/content-validator.mjs`
+  (`recall.recoverable`, not yet baselined for any section). Two controls isolate the cause: the
+  pre-fix diagram against the live validator gives the identical 8 new DEBT and refusal; this fix
+  against the *committed* validator gives exit 0, 0 new BLOCK, 0 new DEBT. **Nothing was dumped or
+  staged**, so the served `?draft=1` still returns the pre-fix 300-unit SVG. An independent re-walk
+  (different method: live rendered DOM of the running app, not the source module) confirms it —
+  `audit/runs/packet-37/verify-b-fix.md`: **FAIL, the three collisions reproduce to 0.1 px**, all 29
+  steps and counters otherwise unchanged, no other diagram touched, `Tap to enlarge`/V037 untouched.
+  `check-staged-drafts.mjs` reporting "matches" right now is old-vs-old (neither the served draft nor
+  the dumped bundle was regenerated) and does not attest this fix.
+- **Step-pointer hazard, filed on packet 5.** `localStorage.revvy_learnmode_1_national-income_section`
+  is a bare integer shared by the live 14-step deck and the staged 29-step deck. A student who
+  completes the live 14-step section at 100% returns after publish to "48%, step 14 of 29," dropped
+  into a chapter they already passed, completion gone. `node audit/scripts/ledger.mjs packet 5` names
+  it: **`V038`, "Version the Learn Mode step pointer,"** category `feature`, status `open` — filed as a
+  publish prerequisite, not this packet's to fix.
+
+**What this means for the founder's "one fix round" decision.** The round was spent — the fix was
+authored and independently verified correct at the source — but it never reached the artefact a
+student sees, because the shared validator gate is being rebuilt underneath it by an unrelated
+session. Nothing about this is a packet-37 authoring problem; it is a two-way choice for whoever owns
+the shared gate, unchanged from what `built.md` already recorded:
+
+1. Wait for the `recall.recoverable` session to land and `audit/validator-baseline.json` to be
+   regenerated, then re-run `node scripts/packet-37-national-income.mjs --stage --dump` unmodified —
+   nothing else about this packet changes.
+2. Rule the 8 `recall.recoverable` findings on this section in or out of scope. If in, that is a
+   second, content-wide fix round on eight subsections, and the founder's "one fix round" is spent
+   differently than this session's was.
+
+**Publish command (for after both the label-collision fix lands in a dump AND the packet 5/7
+checkpoint clears — not before):**
+
+```
+node scripts/packet-37-national-income.mjs --stage --dump && node scripts/publish-section.mjs national-income --confirm
+```
+
+**D013 post-publish census step:** `verify-b.md` does not name a census step (it is `verify-a.md` and
+`built.md` that do), so nothing is added here under that instruction. For the record, unchanged from
+`built.md`: `packet-13-census.mjs` reads the *published* `data` column, so it will keep naming
+`aggregate-demand` until both `aggregate-demand` and `national-income` publish; re-run the census after
+both and confirm the D011 block reads "nowhere" (`audit/SPEC-OWNERSHIP.md:22`).
+
+**Next unclaimed packet.** `git status --short | grep packet-3[89]` and `packet-4[0-5]` show no working
+files for packets 38 through 45 in this worktree right now (only 0, 2, 28, 29, 30, 32–37 appear).
+`audit/PROGRESS.md` lists 38–45 as "not started." Ledger open counts, checked this session:
+
+| packet | section | open items |
+|---|---|---|
+| 38 | macroeconomic-objectives-policies | 27 |
+| 39 | trade-global-economy | 43 |
+| 40 | balance-payments-exchange-rates | 29 |
+| 41 | external-influences | 32 |
+| 42 | resource-management | 30 |
+
+**Packet 38 (`macroeconomic-objectives-policies`, Economics 2.3.6, 27 open) is free** — lowest number,
+not started, no trace of another session's work on it in `git status`, matching this file's own
+existing suggestion at the top handoff. Confirm again before claiming it: another session may have
+started it after this bookkeeping pass ran.
+
+Staged by this session: `audit/PROGRESS.md`, `audit/NEXT.md` (this section) only, each with an explicit
+`git add <path>`. No commit. `audit/EXAM-PRACTICE.md` not opened. Nothing else in the shared index was
+touched.

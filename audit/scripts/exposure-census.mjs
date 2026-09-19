@@ -82,8 +82,18 @@ function checkinQuestions(quizData, content) {
   return { reserved, slots: slots.length, starved: slots.length - reserved.length };
 }
 
+/*
+ * V039, 19 September 2026 (packet 2.7). THIS FUNCTION USED TO SWALLOW ITS ERROR, and it was reading
+ * `section_mistakes` — a table that does not exist; the real one is `section_common_mistakes`. The
+ * Supabase client returns `{ data: null, error }` rather than throwing, `if (!data) return []` then
+ * turned that into an empty array, and this census has walked all 43 sections with zero mistakes
+ * since it was written. It moves none of the figures below — chapters served, items sent and
+ * pre-test length never touch `mistakes` — but `counts.mistakes` was 0 on every row, and a census
+ * that reads NOTHING and reports a number is the class this file exists to close. Now it throws.
+ */
 async function table(name, id, column) {
-  const { data } = await supabase.from(name).select('data, draft').eq('section_id', id).maybeSingle();
+  const { data, error: e } = await supabase.from(name).select('data, draft').eq('section_id', id).maybeSingle();
+  if (e) throw new Error(`${id} ${name}: ${e.message}`);
   if (!data) return [];
   // route.js:71 — `?draft=1` falls back to `data` per table when a table holds no draft.
   return (column === 'draft' ? (data.draft ?? data.data) : data.data) || [];
@@ -101,7 +111,7 @@ for (const corpus of CORPORA) {
       table('section_content', id, corpus), table('section_quiz', id, corpus),
       table('section_notes', id, corpus), table('section_diagrams', id, corpus),
       table('section_practice', id, corpus), table('section_flashcards', id, corpus),
-      table('section_mistakes', id, corpus), table('section_extras', id, corpus),
+      table('section_common_mistakes', id, corpus), table('section_extras', id, corpus),
     ]);
     if (!content.length || !quiz.length) continue;
 

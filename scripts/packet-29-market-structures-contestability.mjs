@@ -498,7 +498,8 @@ if (![...unpinned].every((i) => i < 3)) problems.push('the three unpinned quiz i
  * FREE_QUIZ_MAX (10). Eight blocks costs a signed-out student one pre-test question — two rather
  * than three — and nine costs two. Above ten a chapter is served no check-in question at all, which
  * is the line. Eight is deliberate here: 54 leaves in seven chapters would be 7.7 a chapter against
- * the 6.6 packet 22 proved, and Oligopoly alone is 25 of the 54.
+ * the 6.6 packet 22 proved, and Oligopoly alone is 22 of the 54 — 5·2·4·6·22·8·2·5, counted out of LEAF_MAP
+ * below. This read 25 until V032 counted it (packet 2.7, 19 September).
  */
 if (BLOCKS.length > 10) problems.push(`${BLOCKS.length} blocks: past ten, freeQuizPayload() runs out of FREE_QUIZ_MAX and a chapter is served NO check-in quiz for a signed-out student (lib/preview-limits.js)`);
 if (BLOCKS.length === 8) console.log('NOTE: at 8 blocks a signed-out student’s pre-test is 2 questions, not 3. Measured, deliberate, and in the packet spec.');
@@ -804,11 +805,24 @@ for (const [i, e] of (EXTRAS.evaluation || []).entries()) {
   const shapeOk = (chains) => chains.every((c) => Array.isArray(c.steps) && c.steps.length);
   if (!shapeOk([{ title: 'planted', points: ['a', 'b'] }]) === false) problems.push('the extras-shape check does not fire on a chain carrying `points`');
   if (!shapeOk([{ title: 'ok', steps: ['a', 'b'] }])) problems.push('the extras-shape check fires on a well-formed chain');
+  /*
+   * THE REAL CONTROL EXPIRED, 19 September 2026 (packet 2.7). This block used to import packet 28's
+   * module and FAIL if its chains were well-formed — "if it does not fire there, it is decorative".
+   * `00662a3` then closed V028 and removed the malformed chain, so from that commit onward the A/B
+   * failed this runner on every run: it was demanding that another packet stay broken, and the
+   * first thing it blocked was re-staging this section. A control that requires the corpus not to
+   * be repaired is not a control.
+   *
+   * So the real instance is pinned BY VALUE — the shape `"Is growing larger worth it?"` actually
+   * had, `points` where `steps` belongs, recovered from that commit — and packet 28's module is
+   * now asserted CLEAN, which is the regression the programme wants guarded from here on.
+   */
+  const V028_SHAPE = { title: 'Is growing larger worth it?', points: ['a judgement consideration', 'and another'] };
+  if (shapeOk([V028_SHAPE])) problems.push('the extras-shape check passes the real V028 chain shape — it is not measuring what it claims');
   try {
     const p28 = await import('./_packet28-assessment.mjs');
-    if (shapeOk(p28.EXTRAS.chains)) problems.push('the extras-shape check passes packet 28, whose third chain is known to throw in ExtrasTab — the check is not measuring what it claims');
-    else console.log('NOTE: the extras-shape check fires on packet 28’s staged bundle, as it should. That section is STAGED NOT PUBLISHED; filed for the founder, not fixed here.');
-  } catch { problems.push('could not load packet 28’s assessment module to A/B the extras-shape check against a real control'); }
+    if (!shapeOk(p28.EXTRAS.chains)) problems.push('packet 28 has a malformed extras chain again — V028 has regressed, and ExtrasTab throws for a Pro student');
+  } catch { problems.push('could not load packet 28’s assessment module to check V028 has not regressed'); }
 }
 
 /* ── ids, signs, and duplicates ────────────────────────────────────────────── */
@@ -902,7 +916,7 @@ if (problems.length) {
 if (newBlocks.length) { console.error('\nnew BLOCK findings; refusing.'); process.exit(1); }
 if (newDebt.length) { console.error('\nnew DEBT findings; refusing (the per-packet gate is 0 new DEBT on my own section).'); process.exit(1); }
 
-console.log('\npacket checks: no kinked demand curve · no minimum efficient scale, economies of scope, price taker/maker or other section’s vocabulary · no internal ledger id in student text · no uncited marker, frequency or paper claim · every practice tariff in the ECONOMICS census, all eight command words exactly once, no Assess/Outline/10-/12-mark anywhere · both Appendix 6 gloss checks · every subsection inside the 350-word budget · a recall on all 43 subsections, no reorder beside a flow, all six sourced from extras chains, three copy-from-screen checks A/B’d · no quiz explanation names an option by position · every block pinned to a quiz, a practice item and a diagram, none of them the pre-test’s three · the whole arithmetic spine re-derived from the functions: MC cutting AVC and AC at their own minima, three exact roots of MC(q) = P, a shutdown contribution of exactly zero, a tangency equal in VALUE and GRADIENT, a welfare triangle equal to ½ × base × height, MCL twice the gradient of supply · every diagram figure re-derived out of the emitted SVG, the welfare polygon’s three vertices recomputed from the plot transform · text EXTENT inside every canvas · no table cell collisions · every extras chain carries `steps`, A/B’d against packet 28 as a real control · ids unique · one minus sign');
+console.log('\npacket checks: no kinked demand curve · no minimum efficient scale, economies of scope, price taker/maker or other section’s vocabulary · no internal ledger id in student text · no uncited marker, frequency or paper claim · every practice tariff in the ECONOMICS census, all eight command words exactly once, no Assess/Outline/10-/12-mark anywhere · both Appendix 6 gloss checks · every subsection inside the 350-word budget · a recall on all 43 subsections, no reorder beside a flow, all six sourced from extras chains, three copy-from-screen checks A/B’d · no quiz explanation names an option by position · every block pinned to a quiz, a practice item and a diagram, none of them the pre-test’s three · the whole arithmetic spine re-derived from the functions: MC cutting AVC and AC at their own minima, three exact roots of MC(q) = P, a shutdown contribution of exactly zero, a tangency equal in VALUE and GRADIENT, a welfare triangle equal to ½ × base × height, MCL twice the gradient of supply · every diagram figure re-derived out of the emitted SVG, the welfare polygon’s three vertices recomputed from the plot transform · text EXTENT inside every canvas · no table cell collisions · every extras chain carries `steps`, A/B’d against the V028 chain shape pinned by value, with packet 28 asserted CLEAN (V040 — the old control required packet 28 to stay broken) · ids unique · one minus sign');
 
 if (DUMP) {
   const path = `audit/snapshots/packet-29-bundle__economics__${SECTION}.json`;

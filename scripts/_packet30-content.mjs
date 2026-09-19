@@ -273,7 +273,7 @@ const employerEmployee = (() => {
     ],
     realExample: { emoji: '🤝', text: `A manufacturer can run collective bargaining for its production floor and individual contracts for its designers in the same year, because the two groups differ in how alike their jobs are.` },
     misconception: `Students treat collective bargaining as automatically better for workers and worse for firms. It is cheaper for the FIRM to negotiate once, and it costs a worker whose own skills are worth more than the collective rate. Say which group is being talked about.`,
-    examMatters: `Appendix 6 defines Discuss as requiring logical chains of reasoning in context showing causes and effects, with a brief conclusion. In Business a Discuss carries 8 marks, and the conclusion is required — not an evaluation of both sides at length.`,
+    examMatters: `Appendix 6 defines Discuss as requiring logical chains of reasoning in context showing causes and effects, closing with a brief assessment that shows an awareness of competing arguments. In Business a Discuss carries 8 marks, and that brief assessment is required — not an evaluation of both sides at length.`,
   };
 })();
 
@@ -451,7 +451,7 @@ const centralisedDecentralised = (() => {
     ],
     realExample: { emoji: '🎚️', text: `Two clothing firms with identical org charts can differ entirely in who may authorise a discount: in one it is the Managing Director, in the other any supervisor.` },
     misconception: `Students equate decentralised with flat and centralised with tall. They are independent: the number of LEVELS is one decision and where the AUTHORITY sits is another, and mixing them up produces answers that describe a chart when the question asked who decides.`,
-    examMatters: `Appendix 6 defines Discuss as requiring logical chains of reasoning in context showing causes and effects, with a brief conclusion, for 8 marks. Context is the word doing the work: a discussion of centralisation has to be about the firm in the extract.`,
+    examMatters: `Appendix 6 defines Discuss as requiring logical chains of reasoning in context showing causes and effects, closing with a brief assessment that shows an awareness of competing arguments, for 8 marks. Context is the word doing the work: a discussion of centralisation has to be about the firm in the extract.`,
     recall: recall(sid, {
       type: 'classify',
       prompt: 'Sort each fact about a firm by which of the two choices it tells you about:',
@@ -808,7 +808,7 @@ const empowerment = (() => {
     ],
     realExample: { emoji: '🛑', text: `A production line where any operator may halt it to fix a fault catches the fault at ten units; a line where only the supervisor may halt it catches the same fault at the end of the shift.` },
     misconception: `Students treat empowerment as a synonym for delegation. Delegation is task by task and the manager keeps the job; empowerment is a standing change to what the job includes, which is why it needs limits written down and delegation does not.`,
-    examMatters: `Appendix 6 defines Discuss as requiring logical chains of reasoning in context showing causes and effects, with a brief conclusion, for 8 marks. The conclusion is compulsory and short: not an evaluation, one sentence that follows from the chains.`,
+    examMatters: `Appendix 6 defines Discuss as requiring logical chains of reasoning in context showing causes and effects, closing with a brief assessment that shows an awareness of competing arguments, for 8 marks. That assessment is compulsory and short: not an evaluation, a sentence or two weighing the arguments the chains have set up.`,
   };
 })();
 
@@ -978,7 +978,7 @@ const democratic = (() => {
     ],
     realExample: { emoji: '🗳️', text: `A cutting room asked how to sequence a difficult order produces a sequence the supervisor would not have thought of, and then holds to it, because it was theirs.` },
     misconception: `Students write that democratic leadership is the best style. It needs staff who know the work and time to reach a decision, and it is the wrong style for an emergency or a new team. The specification asks for four styles because four situations need them.`,
-    examMatters: `Appendix 6 defines Discuss as requiring logical chains of reasoning in context showing causes and effects, with a brief conclusion, for 8 marks. Context decides which style is right, so a Discuss that never mentions the firm in the extract cannot reach a conclusion.`,
+    examMatters: `Appendix 6 defines Discuss as requiring logical chains of reasoning in context showing causes and effects, closing with a brief assessment that shows an awareness of competing arguments, for 8 marks. Context decides which style is right, so a Discuss that never mentions the firm in the extract has nothing to assess.`,
   };
 })();
 

@@ -686,10 +686,35 @@ const naturalView = () => {
   });
 };
 
+/*
+ * V031. THE CAPTION SAID "SETTING MR = MC IN EACH" AND NO MR CURVE WAS DRAWN. Worse, neither
+ * sloping line carried AR or D either — `mk()` passed `label` as the empty string — so the picture
+ * showed two anonymous lines and a horizontal one, and the sentence under it named a third curve
+ * the student could not find. It is the same defect Layer 6 caught on this packet's FIRST diagram,
+ * where "allocative: P = MC" was marked with no price curve drawn: a caption that asserts the
+ * mechanism over a picture that does not show it. The arithmetic was never in question —
+ * `_packet29-util.mjs:273` is `q = (a - mc) / 2b`, which IS MR = MC for a linear AR — so the fix is
+ * to draw what the arithmetic already does.
+ *
+ * For a linear AR of `P = a - bQ`, MR is `a - 2bQ`: the same vertical intercept and twice the
+ * gradient, so it reaches zero at HALF the quantity. Drawing both from the shared intercept is what
+ * makes "twice as steep" visible rather than asserted, and each MR crosses the one MC line exactly
+ * under its market's marked read-off — 12 and 16 — which is the claim the note makes.
+ *
+ * Labels go on the curves at a chosen quantity rather than at a line END, which is what the old
+ * comment here was working around: on this frame AR for Market A clamps to (24, 24), landing its
+ * end label exactly on the MC line. The runner's extent and glyph-box checks measure every one of
+ * these, so a label moved here without re-running them is not placed, only hoped for.
+ */
 const pdView = () => {
   const f = plotFor(24, 130);
-  const mk = (m, colour, label) => [
-    straight(f, [0, m.a], [m.a / m.b, 0], colour, label, { dx: 6, dy: -4 }),
+  /* The value of each curve at a quantity, so a label's anchor is ON its own line and not beside a
+     number typed in by hand: AR is a - bQ and MR is a - 2bQ, from the same two coefficients. */
+  const arAt = (m, q) => m.a - m.b * q;
+  const mrAt = (m, q) => m.a - 2 * m.b * q;
+  const mk = (m, colour) => [
+    straight(f, [0, m.a], [m.a / m.b, 0], colour, '', { dx: 6, dy: -4 }),
+    straight(f, [0, m.a], [m.a / (2 * m.b), 0], colour, '', { dash: true }),
     readOff(f, m.q, m.price, colour, { xText: qty(m.q), yText: money(m.price) }),
   ].join('');
   return plotSvg({
@@ -701,12 +726,28 @@ const pdView = () => {
        * with its elasticity on the line below it, and MC is labelled at the left margin. */
       line(f.X(0), f.Y(PD.mc), f.X(f.xMax * 0.98), f.Y(PD.mc), PURPLE, 2.5),
       t(r2(f.x0 + 8), r2(f.Y(PD.mc) - 8), `MC = ${money(PD.mc)}`, { size: 12, fill: PURPLE, weight: 600 }),
-      mk(PD.less, RED, ''),
-      mk(PD.more, BLUE, ''),
-      t(r2(f.X(PD.less.q) + 12), r2(f.Y(PD.less.price) - 12), `${PD.less.label}: \u007cPED\u007c ${PD.less.ped.toFixed(2)}`, { size: 11, fill: RED, weight: 600 }),
-      t(r2(f.X(PD.more.q) + 12), r2(f.Y(PD.more.price) - 12), `${PD.more.label}: \u007cPED\u007c ${PD.more.ped.toFixed(2)}`, { size: 11, fill: BLUE, weight: 600 }),
+      mk(PD.less, RED),
+      mk(PD.more, BLUE),
+      /*
+       * A KEY, NOT LABELS ON THE CURVES, and Verify B is why. The first version of this fix put
+       * `AR = D (Market A)` and the other three on their own lines at chosen quantities, and at
+       * 390px two of them landed a pixel apart with the $72 read-off running along the top of one
+       * — the "label struck through by its own guide line" class from this packet's round 3, inside
+       * the 25-unit threshold that check uses and so invisible to it. Five lines cross this frame
+       * and there is no room on them. The top right is the one region nothing enters: the highest
+       * curve at that x is AR for Market A at 66 on the value axis, which is 100 units below.
+       * The markets are already named in the two PED labels, in their own colours, at their own
+       * read-offs, so the key only has to say which of a pair is which.
+       */
+      t(r2(f.X(13.5)), r2(f.yTop + 8), 'solid: AR = D', { size: 11, fill: INK, weight: 600 }),
+      t(r2(f.X(13.5)), r2(f.yTop + 26), 'dashed: MR', { size: 11, fill: INK, weight: 600 }),
+      /* -17, not -12: at -12 the Market B demand line grazes its own PED label by 0.3 units, which
+       * the runner's 25-unit strike test cannot see. Pre-existing, measured by
+       * audit/runs/packet-2.7/v031-readback.mjs, nudged here because it costs nothing. */
+      t(r2(f.X(PD.less.q) + 12), r2(f.Y(PD.less.price) - 17), `${PD.less.label}: \u007cPED\u007c ${PD.less.ped.toFixed(2)}`, { size: 11, fill: RED, weight: 600 }),
+      t(r2(f.X(PD.more.q) + 12), r2(f.Y(PD.more.price) - 17), `${PD.more.label}: \u007cPED\u007c ${PD.more.ped.toFixed(2)}`, { size: 11, fill: BLUE, weight: 600 }),
     ].join(''),
-    note: `The same ${Z.good} at the same marginal cost of ${money(PD.mc)}, sold into two markets the firm can tell apart and between which nothing can be resold. Setting MR = MC in each gives ${qty(PD.less.q)} ${Z.units} at ${money(PD.less.price)} in ${PD.less.label} and ${qty(PD.more.q)} at ${money(PD.more.price)} in ${PD.more.label}. The elasticities at those points are ${elasticity(-PD.less.ped)} and ${elasticity(-PD.more.ped)}, so the rule is visible rather than asserted: the LESS elastic market pays the higher price, ${money(PD.gap)} more. Total profit is ${money(PD.totalProfit)}. Which consumers gain depends on which market they are in — and the elastic market may be served only because discrimination is possible at all.`,
+    note: `The same ${Z.good} at the same marginal cost of ${money(PD.mc)}, sold into two markets the firm can tell apart and between which nothing can be resold. Each MR is drawn dashed from the same intercept as its own AR and twice as steep, and it crosses MC at ${qty(PD.less.q)} ${Z.units} in ${PD.less.label} and ${qty(PD.more.q)} in ${PD.more.label}; the price is then read UP to the AR curve, at ${money(PD.less.price)} and ${money(PD.more.price)}. The elasticities at those points are ${elasticity(-PD.less.ped)} and ${elasticity(-PD.more.ped)}, so the rule is visible rather than asserted: the LESS elastic market pays the higher price, ${money(PD.gap)} more. Total profit is ${money(PD.totalProfit)}. Which consumers gain depends on which market they are in — and the elastic market may be served only because discrimination is possible at all.`,
   });
 };
 

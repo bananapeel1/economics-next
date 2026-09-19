@@ -1134,6 +1134,16 @@ slices 3 — so with only 2 free items surviving the slice, **the third pre-test
 check-in question**, and the student meets it again minutes later. Served array: 8 items, indices 0-1
 free, 2-7 pinned; the pre-test rendered 0, 1 and 2.
 
+**CLOSED 16 September at 20:15, four hours after this was written — annotated by V032 (packet 2.7,
+19 September) because three later records still cite it as live.** `492a9a6` (packet 2.4, V015) took
+the padding out, and `4e3ab45` (packet 2.5, V021) moved the selection into `lib/pretest-pool.js`,
+where `pickPretestQuestions` filters the reserved set out and returns a SHORT pre-test rather than a
+padded one. Two details of the citation were wrong even on the day: the expression was
+`[...free, ...rest]`, never `[...free, ...reserved]` — `git log -S` finds that string nowhere in the
+repository's history — and it sat at lines 18-29, not 23-27, which today are `const letters` and the
+opening of `handleSelect`. Measured on the shipping functions on 19 September: signed out 2 questions
+and 0 repeats, Pro 3 and 0. The escalation itself was answered, not dropped.
+
 **No content packet can fix this.** A fourth unpinned item does not help, because the slice takes only
 the first `PREVIEW_LIMITS.quiz` of the unpinned prefix. It needs `freeQuizPayload()` to carry
 `max(PREVIEW_LIMITS.quiz, 3)` of that prefix, or `PreTest.jsx` to stop padding from reserved items.
@@ -1851,7 +1861,7 @@ duplicate that matters is rarely in the file the finding names.
   and then tops up the pre-test's headroom, bounded by `FREE_QUIZ_MAX` (10), so eight chapters cost a
   signed-out student one pre-test question — two rather than three — and nine cost two. Seven chapters would
   have put 54 leaves at 7.7 a chapter against the 6.6 packet 22 proved at 46 in seven, and would have meant
-  folding two of the three oligopoly chapters together when Oligopoly alone is **25 of the 54 leaves**. So
+  folding two of the three oligopoly chapters together when Oligopoly alone is **22 of the 54 leaves** (written as 25 here until V032 counted it out of LEAF_MAP, packet 2.7, 19 September; the decision is unchanged — 22 of 54 is still the largest sub-topic by a factor of nearly three). So
   the density stays at the proven 6.75 and the pre-test is short by one question, deliberately. Verify B was
   told to expect two and to report only whether it looked BROKEN. The runner refuses above ten, prints the
   cost at eight, and the number is in the packet spec so nobody has to rediscover it. V016's table made this
@@ -2494,3 +2504,72 @@ a check that reuses the implementation cannot see its blind spot — in its smal
 remedy is the general one: **assert the shape of what you read, not just the value you computed from it.**
 The runner now refuses to continue unless `live.content` and `live.quiz` are arrays. Any packet runner
 copied from an earlier one should be checked for the same line.
+
+## 2026-09-19 — packet 2.7: the answer-recoverable rule is INFO, and the tier is the finding
+
+`recall.recoverable` measures whether a recall's answer is printed on the step it is asked on. Built as
+DEBT, because that is what a content rule is here. Measured before shipping it, and DEBT was the wrong
+tier for a reason that is itself the point of V029.
+
+A content runner's own gate is **0 new DEBT on its own section**. At DEBT the new rule reported 20 new
+findings on packet 29's staged section, 9 on packet 30's, 9 on packet 33's, 4 on packet 36's and 8 on
+packet 37's — so **no content packet in the programme could have staged anything** until it had rewritten
+its recalls. Packet 29's re-stage for V031 was the first thing it blocked, in this session.
+
+Seeding the back catalogue into `audit/validator-baseline.json` does not fix it and was tried: 546 keys
+from both corpora, and every runner still reported the same new DEBT, because a finding key fingerprints
+the object and the runner validates the bundle it BUILDS, not the row in the database. The baseline was
+restored to its 2,432 keys unchanged.
+
+So: **INFO in the validator, gated in the census.** `npm run recalls` counts the debt per section against
+`audit/recall-census-baseline.json` and exits 1 if any section gets worse — which is the gate that was
+actually wanted, section by section, and which blocks nothing that does not regress. The rule still
+prints on every `stageSection()` and every `npm run validate`, so no packet can add to it unseen.
+
+The general form, and it is worth keeping: **a rule whose findings are house style across the corpus
+cannot gate the packets that would have to clear it.** `diagram.table-legible` is the same shape and took
+the same decision on 18 September. The tier says who owns the debt.
+
+## 2026-09-19 — packet 2.7: Appendix 6 never asks a Discuss for a conclusion, in either specification
+
+`bus_spec.txt:2234-2237` — Discuss (8): "Requires a logical chains of reasoning, in context, showing
+cause(s) and/or effect(s). A brief ASSESSMENT is required showing an awareness of competing
+arguments/factors." `econ_spec.txt:2733-2740` — Discuss (14): "...recognition of different viewpoints
+and/or a critical ASSESSMENT of the evidence." **Neither uses the word "conclusion".** It belongs to
+Evaluate: `bus_spec.txt:2246-2250`, "a perceptive conclusion that proposes a solution and/or
+recommendations".
+
+Packet 30's runner REQUIRED the word, so four `examMatters` and one practice guidance were authored to
+assert it; packet 36's version accepted `assessment|conclusion`, so a gloss promising one passed, and its
+comment restated the falsehood as a quotation. Packet 35 caught the class on 18 September and inverted its
+own copy. All of it is corrected here and all six staged strings are re-staged. **Fourth false Appendix 6
+citation in the programme** (packets 21, 23, 35, and this).
+
+The rule that comes out of it: the check is **sentence-scoped**, not a ban on the word. A model answer may
+reach a conclusion — "the conclusion the figures support is…" is ordinary English. What may not happen is
+a sentence that cites Appendix 6 for a Discuss and then tells the student a conclusion is required.
+
+## 2026-09-19 — packet 2.7: an A/B control that requires the corpus to stay broken expires
+
+Packet 29's extras-shape check imported packet 28's module and FAILED if its chains were well-formed —
+"if it does not fire there, it is decorative". `00662a3` then closed V028 and removed the malformed chain,
+so from that commit the A/B failed packet 29's runner on **every** run, and the first thing it blocked was
+re-staging that section. Pinned by value now (the shape `"Is growing larger worth it?"` actually had), and
+packet 28 is asserted CLEAN instead, which is the regression worth guarding. **A real control is better
+than a planted one right up until somebody repairs it; pin the shape, not the file.** V040.
+
+## 2026-09-19 — packet 2.7: a gate keyed on a baseline skips everything the baseline has never seen
+
+`recall-census.mjs --check` compared each section against `audit/recall-census-baseline.json` with
+`was !== undefined`, so a section with no entry was skipped. **15 of the 43 have no `draft` row** —
+`trade-global-economy`, `external-influences`, `balance-payments-exchange-rates` and
+`macroeconomic-objectives-policies` among them, which is to say every section the remaining content
+packets are going to write. With the rule at INFO the per-packet runners' "0 new DEBT on my own section"
+gate does not see it either, so **a section written from scratch entirely out of scroll-up-answerable
+recalls cleared every gate in the repository.** Found by Verify A, on this packet's own instrument, in the
+packet whose subject is guards that cannot see their own blind spots.
+
+A missing entry now means **zero**, and the failure says so and says what to do: rewrite the recalls, or
+raise the baseline with `--baseline --confirm`, which prints what it is adding. The general form: **a
+regression gate protects what it has already measured and nothing else, so its default for the unmeasured
+case is the whole of its reach.** V041.
