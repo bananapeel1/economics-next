@@ -6,11 +6,32 @@ by packets 37, 38 and 40. Every modal reading below was taken only after a poll 
 backdrop carries `lm-diagram-modal-visible`, the sheet's transform is `matrix(1, 0, 0, 1, 0, 0)`, and
 `getComputedStyle(svg).width` agrees with `getBoundingClientRect().width` to within 0.5px.
 
-**That guard fired twice during this run and both times it was right.** An early pass read 618px for
-a 672px sheet and 614 for 667 — exactly 0.92x, the modal's resting `transform: scale(0.92)`, read
-before the open transition had settled on a cold dev server. Published untested, those numbers would
-have shown the 12px floor being missed by 1px on every diagram. This is the same artefact packet 38
-published as a real 69px discrepancy. **Never read this sheet on a timer; poll for the guard.**
+**That guard fired three times during this run and every time it was right.** Readings of 618 for a
+672px sheet, 614 for 667 and 460 for 500 — all exactly 0.92x, the modal's resting
+`transform: scale(0.92)`. Published untested they would have shown the 12px floor missed by ~1px on
+every diagram. This is the same artefact packet 38 published as a real 69px discrepancy.
+
+**AND THE MECHANISM IS NOT "READ TOO EARLY". IT IS A HIDDEN TAB.** `DiagramEnlarge` applies
+`lm-diagram-modal-visible` from inside `requestAnimationFrame`, and **rAF does not fire in a
+backgrounded tab** — measured here: `document.visibilityState: "hidden"`, and a probe rAF still had
+not fired after a full second. So the class is never added, the sheet sits at 0.92 indefinitely, and
+**waiting longer never fixes it**: a 10-second poll failed exactly as a 400ms one did. Every previous
+write-up of this artefact, including the first draft of this one, blamed settle time and prescribed a
+longer wait. That prescription does not work, which is presumably why the artefact keeps coming back.
+
+Two consequences for anyone measuring this sheet:
+- **Front the Browser pane before reading, and assert `document.visibilityState === 'visible'`
+  alongside the other guards.** If you cannot front it, do not use `getBoundingClientRect`.
+- **Layout metrics are transform-free and always usable**: `getComputedStyle(svg).width`,
+  `pane.scrollWidth`, `pane.clientWidth` and the `--lm-enlarge-w` custom property all read correctly
+  in a hidden tab. The post-commit check below was taken that way.
+
+It is not a product defect — a student looking at the sheet has a visible tab, and on returning to a
+backgrounded one the rAF fires and the sheet appears normally. It is purely a measurement trap.
+
+**Post-commit check, from the committed tree, layout-only:** `--lm-enlarge-w: 500px`, computed width
+500px, `vbW` 500, smallest face 12u → **smallest label exactly 12.000px**, pane 375/524. The `rect`
+said 460 at the same moment. The two disagreeing by exactly 0.92 is the whole point of recording both.
 
 ## Before (HEAD, same machine, same viewport)
 
