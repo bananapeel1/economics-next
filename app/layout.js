@@ -1,9 +1,6 @@
 import Script from 'next/script';
 import "./globals.css";
 import "@/styles/theme-night.css";
-import { createClient } from '@/lib/supabase/server';
-import { createServerClient } from '@/lib/supabase-server';
-import { getSubscriptionRow } from '@/lib/subscription-lookup';
 import { AuthProvider } from '@/components/AuthProvider';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import MotionProvider from '@/components/MotionProvider';
@@ -54,28 +51,28 @@ export const viewport = {
   viewportFit: 'cover',
 };
 
-export default async function RootLayout({ children }) {
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
-
-  // F035: AuthProvider started with subscription=null, so `isPremium` was false until
-  // /api/subscription resolved — and that route reconciles against Stripe, twice. A paying student
-  // who reloaded on the Tutor tab watched the "Unlock Tutor" paywall for the length of two Stripe
-  // round-trips before it vanished. It reads as "my subscription broke", which is the single worst
-  // thing to show someone who just paid. The row is read here, server-side, and seeded into the
-  // provider so the first paint is already correct.
-  //
-  // This does not touch the reconciliation itself, which still runs on every GET of that route and
-  // belongs on a webhook. That half of F035 is not done.
-  let initialSubscription = null;
-  if (user) {
-    try {
-      initialSubscription = await getSubscriptionRow(createServerClient(), user.id);
-    } catch {
-      initialSubscription = null; // the client fetch will settle it
-    }
-  }
-
+/*
+ * V009. This layout used to read cookies — `createClient()` then `supabase.auth.getUser()`, plus a
+ * subscription row — to seed AuthProvider, so that a paying student's first paint was already
+ * premium (packet 12, F035). A cookie read in the ROOT layout opts EVERY route in the app out of
+ * prerendering: measured 21 September, the branch built 1 static route (`/sitemap.xml`) and 113
+ * dynamic ones, while `main` still served `/economics/unit-1/supply` as `x-vercel-cache: PRERENDER`.
+ * Merging would have undone PR #17's caching for every public page.
+ *
+ * The seed cannot come back here, and not only for the cache. A prerendered document is ONE
+ * document served to everybody, so it may not hold anything that depends on entitlement — which is
+ * already this branch's rule for the topic pages (V007). "Keep the F035 fix" therefore cannot mean
+ * "the server answers the question"; it means no student is ever shown a false statement about what
+ * they have paid for. F035's defect was a false NEGATIVE held for seconds: "Unlock Tutor" in front
+ * of somebody who pays. The replacement is a third state — while entitlement is unknown, gated UI
+ * says nothing rather than saying "locked" — which is the idiom packet 2.1 already shipped for the
+ * withheld section payload. `AuthProvider.entitlementKnown` carries it; see that file.
+ *
+ * `AuthProvider` still accepts `initialUser` / `initialSubscription`. Nothing passes them today.
+ * They are the seam for a segment that is dynamic ANYWAY — the seed may return under any layout
+ * except this one.
+ */
+export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="dark" suppressHydrationWarning>
       <head>
@@ -152,7 +149,7 @@ export default async function RootLayout({ children }) {
           {/* F099: one switch so every motion component honours the preference, rather than
               gating them one at a time and missing the next one added. */}
           <MotionProvider>
-            <AuthProvider initialUser={user} initialSubscription={initialSubscription}>
+            <AuthProvider>
               {children}
               <AnalyticsEvents />
             </AuthProvider>

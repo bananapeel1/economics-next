@@ -139,17 +139,20 @@ export default function ExplainItBackUpgraded({ title, onAskTutor, isPremium, on
           )}
 
           {/* AI Grade button — premium only */}
-          {isPremium && !feedback && ready && (
+          {/* V009: `isPremium` is three-valued here — true, false, or null for "not known yet".
+              Both branches below are statements about what this student has paid for, so neither
+              may draw on null; the panel simply shows the draft box until the answer arrives. */}
+          {isPremium === true && !feedback && ready && (
             <button className="lm-explain-grade-btn" onClick={handleGrade} disabled={grading}>
               {grading ? 'Grading...' : '✨ Grade my explanation'}
             </button>
           )}
-          {isPremium && onAskTutor && ready && (
+          {isPremium === true && onAskTutor && ready && (
             <button className="lm-explain-tutor-btn" onClick={handleTutorCheck}>
               &#129302; Check my explanation with AI Tutor
             </button>
           )}
-          {!isPremium && ready && (
+          {isPremium === false && ready && (
             <div className="lm-explain-locked">
               <div className="lm-explain-locked-text">
                 <strong>Pro marks this against what the chapter teaches</strong> and names what is missing. Your draft stays here either way.

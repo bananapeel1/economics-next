@@ -6,7 +6,7 @@ import { isLifetime } from '@/lib/entitlements';
 import CancelOfferModal from './CancelOfferModal';
 
 export default function SettingsPage() {
-  const { user, subscription, isPremium, supabase, trialEligible } = useAuth();
+  const { user, subscription, isPremium, entitlementKnown, supabase, trialEligible } = useAuth();
   // F031: this is where a lapsed subscriber actually lands, and it was the surface most certain to
   // be shown a £1 offer they are not eligible for.
   const offer = introOffer(trialEligible);
@@ -139,7 +139,16 @@ export default function SettingsPage() {
       {/* Subscription */}
       <div className="settings-section">
         <h2 className="settings-section-title">Subscription</h2>
-        {hasLifetime ? (
+        {/* V009: "Free plan, upgrade for £1" is a statement about this account, and until the
+            lookup lands we do not have one to make. `/settings` is still a dynamic route, but the
+            provider above it no longer carries a server seed, so the unknown window is real here
+            too — it is one /api/subscription long. */}
+        {!entitlementKnown ? (
+          <div className="settings-info-row">
+            <span className="settings-info-label">Plan</span>
+            <span className="settings-info-value" aria-busy="true">Checking…</span>
+          </div>
+        ) : hasLifetime ? (
           <>
             <div className="settings-info-row">
               <span className="settings-info-label">Plan</span>

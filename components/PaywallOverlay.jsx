@@ -19,7 +19,7 @@ function CheckIcon() {
 }
 
 export default function PaywallOverlay({ feature = 'this feature', inline = false, previewText = '' }) {
-  const { user, isPremium, trialEligible } = useAuth();
+  const { user, isPremium, entitlementKnown, trialEligible } = useAuth();
   /*
    * F031, the surfaces the first fix missed. /upgrade was corrected to show the price checkout
    * will actually charge, and this component went on hardcoding "£1 first month" in six places.
@@ -45,8 +45,11 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
 
-  // Don't show paywall to premium users
-  if (isPremium) return null;
+  // Don't show the paywall to premium users — nor to anyone we cannot yet place. V009: this
+  // component renders on prerendered pages now, where `isPremium` is false for the first moment of
+  // every visit simply because nothing has answered. Drawing on that is F035 exactly: "Unlock
+  // Tutor" in front of somebody who pays. Absent is the honest state until we know.
+  if (isPremium || !entitlementKnown) return null;
 
   async function handleUpgrade() {
     setLoading(true);

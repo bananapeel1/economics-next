@@ -2982,3 +2982,89 @@ finding, in a section whose own packet is already verified and staged, for a car
 correctly either way — the V023 rule that thin content and unrenderable content are different
 problems. If the founder wants them at median depth, that is a content packet against `supply`, not a
 tail of this one.
+
+## 2026-09-21 — packet 2.3: a prerendered page cannot answer "have you paid?", so it stops asking (V009)
+
+`app/layout.js` read cookies — `createClient()`, `supabase.auth.getUser()`, and a subscription row — to
+seed `AuthProvider` so that a paying student's first paint was already premium. Packet 12 added it for
+F035. A cookie read in the ROOT layout opts every route in the app out of prerendering, and the measured
+cost was the whole branch: **1 static route (`/sitemap.xml`) against 113 dynamic**, while
+`origin/main`'s `RootLayout` is not even `async` and serves `/economics/unit-1/supply` as
+`x-vercel-cache: PRERENDER`. Merging would have undone PR #17's caching for every public page.
+
+**The seed is not coming back, and the cache is the smaller half of the reason.** A prerendered document
+is ONE document served to everybody, so it may not hold anything that depends on entitlement — which is
+already this branch's rule for the topic pages, written into `app/economics/[unit]/[topic]/page.jsx`
+by V007. "Keep the F035 fix" therefore cannot mean "the server answers the question". Read what F035
+actually complained about: a false NEGATIVE held for seconds — "Unlock Tutor" in front of somebody who
+pays. The fix for that is not a faster answer, it is **refusing to answer until you know**.
+
+So `isPremium` gets a second bit. `AuthProvider.entitlementKnown` is false until auth has settled AND,
+for a signed-in student, `/api/subscription` has come back; every surface that makes a CLAIM about what
+has been paid for — a padlock, a paywall, a plan badge, an upgrade CTA — now tests the three-valued form
+and draws nothing on "not known yet". This is not a new idea in the codebase: packet 2.1 shipped exactly
+it for the withheld section payload ("Neither is true yet. So the withheld state is answered first").
+Packet 2.3 only extends the rule from the payload to the person.
+
+Three things this pinned that are worth keeping:
+
+- **`entitlementKnown` compares against the user ID, not a boolean.** `setUser` and `setLoading(false)`
+  land in the same commit when auth settles, while the effect that refetches the subscription runs after
+  it — so a boolean "settled" flag gives a signed-in student exactly one render carrying `loading:false`
+  beside the mount run's "settled: nobody is signed in", and every padlock in the app draws on it. The
+  state is `settledFor`: a user id, `null` for a settled signed-out answer, `undefined` for nothing yet.
+- **The section paywall reads the payload, not the client.** `renderTab` asked `useAuth().isPremium`;
+  it now asks `sectionData.isPremium`, the server's verdict about this student, which has already
+  arrived by the time that line runs. That is the same rule the preview line beside it has followed
+  since packet 2.1, and it means the paywall on a topic page no longer depends on `/api/subscription` at
+  all.
+- **The section fetch waits for `entitlementKnown`.** Its cache key is `section : user : pro|free`, so
+  firing before auth settles asks for the anonymous payload, refetches when the user arrives and
+  refetches again when entitlement does — three requests where packet 2.1 measured and pinned ONE per
+  load. Every paid tab is showing the loading card for that window anyway.
+
+Two things the change surfaced rather than caused:
+
+- **`/login` could not be prerendered**: `useSearchParams()` outside a Suspense boundary fails the build
+  with the CSR-bailout error. It never fired before because the route was never prerendered at all. The
+  boundary is the documented fix and is now in place. V009's own note predicted this ("it then fails on
+  an unrelated `/login` Suspense bailout, which is the proof it switched").
+- **`/` is still dynamic, and always was.** `app/page.js:22` awaits `searchParams` to honour `?section=`
+  during the server render — a dynamic API of its own, nothing to do with the root layout, and present
+  verbatim on `origin/main`. Filed as **V044**, packet 57. Packet 2.3's spec claimed the home page would
+  prerender before anything had measured it; that sentence was corrected in the spec rather than left to
+  read as a result.
+
+**Verify A confirmed V009 on round 1**, on its own measurements rather than this packet's artefacts:
+its own `npm run build` (both `[unit]/[topic]` routes `●`), its own `curl` of the served document, its
+own browser load (one `/api/sections/supply`, zero `/api/subscription`, zero console errors), and a hand
+trace of the sign-in and sign-out races. It also read `audit/scripts/prerender-census.mjs` adversarially
+rather than trusting its JSON.
+
+**It returned one finding this packet had not claimed, and the packet is what made it reachable.**
+`fetchSubscription` resolves in `.finally`, so `entitlementKnown` goes true even when the lookup did not
+answer: `subscription` stays null, and every padlock, the upgrade bar, the plan badge and
+`UpgradeButton`'s offer draw as if the student were on the free plan. The verifier called the path
+unchanged by this packet. **That is true of one of its two branches.** On a network throw, `.catch`
+clears `subscription` — lossy before and after. But on a NON-OK response (`res.ok` false, a 500), the
+chain sets `lookupFailed` and leaves `subscription` alone, so before packet 2.3 the root layout's server
+seed survived it and a paying student stayed premium. With the seed gone there is nothing to fall back
+on. Filed as **V045**, packet 57, not fixed here.
+
+Bounded, and the bound is the useful part: the topic-page **paywall is not affected**, because
+`renderTab` reads `sectionData.isPremium` from `GET /api/sections/[id]` — a separate request with its own
+cookies. So a failed subscription lookup costs cosmetic locks, not withheld content. And the ruling is a
+values call rather than a bug fix: F031 already decided in this same component that "we could not find
+out" is not "there is no subscription", and priced it conservatively for trial eligibility. The
+consistent move is to keep `entitlementKnown` false while `lookupFailed` — which tells no lie, and also
+shows a free student on a flaky network no upsell, possibly for the whole visit. That is the founder's
+to rule on, which is why it is a ledger item and not a quiet extra commit.
+
+**Residual, accepted:** `ModelAnswersPage.isLocked` keeps drawing its lock while entitlement is unknown.
+Unlocking optimistically would expose paid answers that are already in the prop, and a lock that clears
+in one fetch is the smaller harm than a leak. `HomeScreen` and `Sidebar` both destructure `isPremium`
+and never use it; left alone rather than widen the diff.
+
+**Still open, unchanged:** the second half of F035 — `/api/subscription` reconciles against Stripe on
+every GET and belongs on a webhook. The comment that said so lived in the code this packet deleted, so
+it is restated here.

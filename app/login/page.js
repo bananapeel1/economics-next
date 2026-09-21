@@ -1,10 +1,26 @@
 "use client";
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import { useAuth } from '@/components/AuthProvider';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 
+/*
+ * V009. `useSearchParams()` reads something only a request knows, so a component that calls it
+ * outside a Suspense boundary cannot be prerendered — Next fails the build with the CSR-bailout
+ * error rather than shipping a broken page. It never fired before because the root layout's cookie
+ * read made every route dynamic and this one was never prerendered at all; removing that read is
+ * what surfaces it. The boundary is the documented fix: the shell around the form is static, and
+ * the part that depends on `?redirect=` resolves on the client.
+ */
 export default function LoginPage() {
+  return (
+    <Suspense fallback={<div className="auth-page" />}>
+      <LoginForm />
+    </Suspense>
+  );
+}
+
+function LoginForm() {
   const { supabase } = useAuth();
   const router = useRouter();
   const searchParams = useSearchParams();

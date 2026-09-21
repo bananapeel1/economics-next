@@ -11,6 +11,7 @@ const AuthContext = createContext({
   subscription: null,
   trialEligible: true,
   isPremium: false,
+  entitlementKnown: false,
   activating: false,
   activationFailed: false,
   refreshSubscription: () => {},
@@ -22,11 +23,35 @@ const AuthContext = createContext({
 const POLL_INTERVAL_MS = 2000;
 const POLL_MAX_ATTEMPTS = 30;
 
+/*
+ * V009. `initialUser` / `initialSubscription` used to be seeded by the ROOT layout, which made every
+ * route in the app dynamic and cost the whole branch its prerendering. They are still accepted — a
+ * segment that is dynamic anyway may seed them — but nothing passes them today, so on a prerendered
+ * page this provider starts knowing NOTHING, and the difference between "free" and "not known yet"
+ * becomes load-bearing.
+ *
+ * `isPremium` alone cannot carry it: `false` is both answers. `entitlementKnown` is the second bit.
+ * Until it is true, no surface may draw a padlock, a paywall, an upgrade CTA or a plan badge —
+ * F035's defect was exactly a false "locked" shown to somebody who pays, and a prerendered document
+ * cannot answer the question in its HTML. Say nothing until you know.
+ */
 export function AuthProvider({ children, initialUser, initialSubscription = null }) {
   const [user, setUser] = useState(initialUser || null);
   const [loading, setLoading] = useState(!initialUser);
-  // Seeded from the server so a paying student's first paint is already premium (F035).
   const [subscription, setSubscription] = useState(initialSubscription);
+  /*
+   * WHICH student the current subscription answer belongs to: a user id, `null` for "nobody is
+   * signed in, and that is a settled answer", `undefined` for "nothing has come back yet".
+   *
+   * A bare boolean is not enough, and the frame it loses is the one that matters. `setUser` and
+   * `setLoading(false)` land in the SAME commit when auth settles, while the effect that refetches
+   * the subscription runs after it — so for one render a signed-in student would carry
+   * `loading:false` beside the mount run's "settled: nobody is signed in", and every padlock in
+   * the app would draw. Comparing against the user id cannot produce that frame.
+   */
+  const [settledFor, setSettledFor] = useState(
+    initialSubscription !== null ? (initialUser?.id ?? null) : undefined
+  );
   // F031: "we could not find out" is not the same fact as "there is no subscription", and only one
   // of them means the student is entitled to the intro price.
   const [lookupFailed, setLookupFailed] = useState(false);
@@ -48,15 +73,23 @@ export function AuthProvider({ children, initialUser, initialSubscription = null
   const fetchSubscription = useCallback(() => {
     if (!user) {
       setSubscription(null);
+      // Nobody is signed in, so there is nothing to look up and the answer is already known.
+      setSettledFor(null);
       return;
     }
+    const forUser = user.id;
+    setSettledFor(undefined);
     fetch('/api/subscription')
       .then(res => res.ok ? res.json() : null)
       .then(data => {
         if (data) { setSubscription(data); setLookupFailed(false); }
         else setLookupFailed(true);
       })
-      .catch(() => { setSubscription(null); setLookupFailed(true); });
+      .catch(() => { setSubscription(null); setLookupFailed(true); })
+      // Settled means ANSWERED, not "answered yes". A failed lookup is a known state too — it is
+      // the one `lookupFailed` already prices below — and leaving it unsettled would hang every
+      // gated surface on screen for the rest of the visit.
+      .finally(() => { setSettledFor(forUser); });
   }, [user]);
 
   // Fetch subscription status when user changes
@@ -107,6 +140,13 @@ export function AuthProvider({ children, initialUser, initialSubscription = null
   }, [user]);
 
   const isPremium = hasPremiumAccess(subscription);
+  /*
+   * V009. True once this visit can make a TRUE statement about entitlement: auth has settled, and
+   * either nobody is signed in or their subscription lookup has come back. Consumers that draw a
+   * lock test `entitlementKnown && !isPremium`, never `!isPremium` on its own — see the call sites
+   * in StudyApp, AnimatedTabBar, PaywallOverlay, SettingsPage and UpgradeButton.
+   */
+  const entitlementKnown = !loading && settledFor === (user?.id ?? null);
   // F031: whether the "£1 first month" offer applies to this account.
   //
   // Read from the payload, not recomputed here. `/api/subscription` decides it against the
@@ -130,6 +170,7 @@ export function AuthProvider({ children, initialUser, initialSubscription = null
         subscription,
         trialEligible,
         isPremium,
+        entitlementKnown,
         activating,
         activationFailed,
         refreshSubscription: fetchSubscription,

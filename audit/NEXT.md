@@ -1,5 +1,262 @@
 # Next session brief
 
+## Handoff — what comes next (written 21 September 2026, after packet 2.3)
+
+**PACKET 2.3 IS BUILT, VERIFIED AND GATE-GREEN, BUT NOT COMMITTED.** Verify A confirmed V009 on round 1. V009 is closed in the working tree:
+`app/layout.js` no longer reads cookies, the build goes from **1 static route to 59** with both
+`[unit]/[topic]` routes prerendered with ISR, and F035 is kept by a mechanism that survives a cached
+document. `npm run build`, `npm test` (240/240), `npm run validate`, `npm run exposure` and
+`npm run recalls` all exit 0.
+
+**Why it is not committed, and this is the whole of the reason.** `components/StudyApp.jsx` is `MM`:
+the index holds another live session's **V038 / packet 5 resume-pointer work** (`contentVersion`,
+`encodePointer`, `parsePointer`, `progressOtherVersion`, `readSavedPointer`), and packet 2.3's changes
+sit on top of it on disk. `git commit -- components/StudyApp.jsx` commits the WORKING TREE, so it would
+carry that session's V038 work into a commit labelled `packet-2.3` — the exact accident PROTOCOL's first
+invariant names. Splitting the file was rejected for a reason worth keeping: **a StudyApp.jsx containing
+only packet 2.3's hunks has never been built and never been tested, so committing it would be committing
+something no gate has seen.** Hand the tree to the founder instead.
+
+### What the next packet needs to know
+
+1. **`isPremium` is three-valued now, and `!isPremium` is a bug.** `AuthProvider` exposes
+   `entitlementKnown` beside it. `false` means "this student is on the free plan"; "not known yet" is
+   `entitlementKnown === false`, and on a prerendered page that is the state every visit starts in.
+   Anything that draws a padlock, a paywall, a plan badge or an upgrade CTA must test the three-valued
+   form — `isPremium === false`, or `entitlementKnown && !isPremium`. `lib/read-path.test.mjs` pins the
+   six call sites that were converted; a seventh added without the guard will not be caught.
+
+2. **The guard that would have caught V009 in the first place now exists, and it is one grep.**
+   `lib/read-path.test.mjs`, "the root layout does not read cookies, so the app still prerenders". V009
+   was invisible for four days because `next build` reports prerendering in a table nobody diffs and
+   exits 0 either way. If another whole-app property ever depends on a single file staying clean, that
+   is the shape of the cheapest possible guard.
+
+3. **`.next` is shared, and a dev server on 3001 clobbers a production build.** Packet 2.3 counted 105
+   prerendered documents on disk, then re-measured minutes later and found 2 — not a regression, the
+   dev server another session was running had rewritten `.next` underneath. **A file-level measurement
+   of build output must build and grep in ONE command**, or it is measuring whatever ran last. The first
+   pass of that grep reported "0 occurrences of `correctIndex`" against a path that did not exist, and
+   `grep` is happy to answer 0 for a missing file.
+
+4. **`/` is dynamic for its own reason and it is not V009's.** `app/page.js:22` awaits `searchParams`.
+   `origin/main` carries the identical line. Filed as **V044**, packet 57, with the note that middleware
+   already 301s `?section=` to a canonical topic URL, so the server-render branch may be dead — proving
+   that is a behaviour change, not a caching fix.
+
+5. **A failed subscription lookup now draws locks at a paying student — V045, packet 57.**
+   `fetchSubscription` resolves in `.finally`, so `entitlementKnown` goes true even when the lookup did
+   not answer. Returned by Verify A, not claimed by this packet. Worth reading the ledger entry before
+   touching `AuthProvider`: the non-ok branch (a 500) used to be masked by the server seed and is not
+   masked any more, while the network-throw branch was always lossy — and the fix is a values call
+   (honesty against showing a free student an upsell) that belongs to the founder, not a bug fix.
+
+6. **`origin/main` is 32 commits ahead of the local `main` ref**, and the two disagree about the thing
+   this packet is about: local `main`'s `RootLayout` is `async` and reads cookies, `origin/main`'s is
+   neither. Any claim about "what main does" that reads the local ref is wrong. Fetch, or read
+   `origin/main`.
+
+### The exact commit, for the founder
+
+Check `git log -1` and `git status` first; if HEAD has moved, re-check before running this.
+`components/StudyApp.jsx` carries another session's staged V038 work — decide with that session whether
+it ships in this commit or theirs.
+
+```
+git commit -m "packet-2.3: a prerendered page cannot answer 'have you paid?', so it stops asking (V009)" -- \
+  app/layout.js app/login/page.js components/AuthProvider.jsx components/StudyApp.jsx \
+  components/AnimatedTabBar.jsx components/PaywallOverlay.jsx components/SettingsPage.jsx \
+  components/UpgradeButton.jsx components/learn-mode/ExplainItBackUpgraded.jsx \
+  lib/read-path.test.mjs audit/scripts/prerender-census.mjs \
+  audit/ledger.json audit/PROGRESS.md audit/NEXT.md audit/DECISIONS.md
+```
+
+**None of those paths is in the staged-deletion set**, checked with
+`git diff --cached --name-only --diff-filter=D` before this was written. That set has grown since packet
+38 flagged it: **91 tracked files are now staged for deletion while still on disk**, not the 36 recorded
+on 21 September, and the number rose from 61 to 91 during this packet alone, so other sessions are
+adding to it as you read this. Re-measure it yourself rather than trusting this sentence. A commit that names any of them removes it from the
+repo. `components/ExtrasTab.jsx` — staged as a copy that reverts two confirmed fixes — is not touched by
+this packet.
+
+## Packet 2.3 spec — V009, the root layout's cookie read (Opus 5, 21 September 2026)
+
+One ledger id: **V009**, `app/layout.js`. No content is written. No section is touched.
+
+## The finding, re-measured before anything changed
+
+`npm run build` on `remediation/2026-09` at HEAD: **1 static route in the whole app** (`/sitemap.xml`),
+**113 dynamic**. `/`, `/economics/[unit]/[topic]` and `/business/[unit]/[topic]` are all `ƒ (Dynamic)`.
+Baseline log: `audit/runs/packet-2.3/build-baseline.log`.
+
+The two topic pages already carry `export const revalidate = 3600` and `generateStaticParams()`, and read
+only `createAnonClient()`. Nothing in them is dynamic. The single cause is `app/layout.js:58-59` —
+`createClient()` + `supabase.auth.getUser()` — a cookie read in the ROOT layout, which opts every route in
+the app out of prerendering. Added by packet 12 for F035.
+
+## What this packet must make true
+
+V009 offers two remedies: accept the cost, or "move the entitlement seed off the layout … and keep the
+F035 first-paint fix". This packet takes the second.
+
+**The constraint that decides the design:** a statically prerendered document is one document served to
+everybody, so it cannot contain a per-student entitlement, in either direction. That is already this
+branch's stated rule — `app/economics/[unit]/[topic]/page.jsx:95-96`, "one document is built and served to
+everyone: it may not hold anything that depends on entitlement". So "keep F035" cannot mean "the server
+seeds the answer". It means **no student is ever shown a false statement about what they have paid for.**
+F035's defect was a *false negative held for seconds* — "Unlock Tutor" to someone who pays. The replacement
+is a third state: while entitlement is unknown, gated UI says nothing rather than saying "locked".
+
+That is the idiom packet 2.1 already shipped for the section payload (`StudyApp.jsx:955-964`: the withheld
+state is answered with the loading card BEFORE entitlement is consulted). Packet 2.3 extends the same rule
+to the surfaces that read `isPremium` directly.
+
+## Acceptance checks a verifier can run without this conversation
+
+1. **`app/layout.js` contains no `cookies()`, `createClient()`, `createServerClient()` or
+   `getSubscriptionRow()` call**, and `RootLayout` is no longer `async`-dependent on a request.
+2. **`npm run build` reports the two topic pages as prerendered** — `●`, not `ƒ` — and the static route
+   count rises from 1 to ≥ 50. Build log: `audit/runs/packet-2.3/build-after.log`.
+
+   **CORRECTED after measuring.** This check first read "the topic pages AND THE HOME PAGE", and the
+   number in it was 158, taken from the control run recorded in V009 rather than from anything this
+   packet had run. Both were wrong. `/` awaits `searchParams` (`app/page.js:22`), which is a dynamic API
+   of its own and has nothing to do with the root layout: `origin/main` carries the identical line, so `/`
+   is `ƒ` there too and merging this branch does not regress it. Filed as **V044**, not fixed here. And
+   158 was a count of prerendered PATHS (`generateStaticParams` expands the two topic routes into ~150
+   documents); the route TABLE, which is what the check reads, holds one row per route. The measured
+   result is 59 static rows, two of them `●` with ISR.
+3. **`renderTab`'s paywall branch does not consult the client's `isPremium`.** `PREMIUM_TABS` +
+   `<PaywallOverlay>` is reached only when the entitled payload has arrived and says so
+   (`sectionData.isPremium`), matching the rule already stated at `StudyApp.jsx:976-980`.
+4. **Every surface that draws a lock, a padlock, an upgrade CTA or a plan badge renders a neutral state
+   while entitlement is unknown**, i.e. it tests `=== false` / `entitlementKnown`, never bare `!isPremium`:
+   `SectionOverview`, `AnimatedTabBar`, `PaywallOverlay`, `SettingsPage`, `UpgradeButton`.
+5. **`AuthProvider` exposes `entitlementKnown`** and it is false until auth has settled AND, for a signed-in
+   student, `/api/subscription` has settled. A signed-out visitor resolves to "known, free" without a fetch.
+6. **`npm test` passes, including a new guard in `lib/read-path.test.mjs`** that fails the build if
+   `app/layout.js` reads cookies again (V009 cannot regress silently) and if the paywall stops reading the
+   payload.
+7. **`npm run build`, `npm run validate`, `npm run exposure`, `npm run recalls` all exit 0.**
+
+## Verify B — 390x844 walkthrough script (signed out; a session cannot sign in)
+
+`remediation-dev` on port 3001, viewport 390x844, `/economics/unit-1/supply`.
+
+1. Load the page. Record every frame state of the overview: the four premium cards must NOT show a padlock,
+   the "PREMIUM — £1 FIRST MONTH" label or the upgrade CTA bar *before* entitlement resolves; they must show
+   them after. Nothing may flash from unlocked to locked in the other direction.
+2. Tab bar: no padlock on Flashcards/Quiz/Tutor/Mistakes until entitlement is known.
+3. Open the Tutor tab. It must show the loading card, then the paywall — never the paywall first.
+4. Console: zero errors, and zero React hydration warnings (the layout no longer renders per-user markup, so
+   a mismatch here would be new).
+5. Exactly one `GET /api/sections/supply` per load (packet 2.1's measured property; the removed seed must not
+   have added a second fetch through the `user?.id`/`isPremium` cache key).
+
+## Deliberately left for a later packet
+
+- `ModelAnswersPage.isLocked` (`components/ModelAnswersPage.jsx:289-294`) keeps its lock while entitlement is
+  unknown. Unlocking optimistically would expose paid answers that are already in the prop; a lock that
+  resolves in one fetch is the smaller harm. Residual, recorded in DECISIONS.
+- `lib/supabase/middleware.js` still calls `auth.getUser()` on every matched request. That is middleware, not
+  rendering; it does not affect prerendering.
+- The second half of F035 (Stripe reconciliation on every GET of `/api/subscription`, which belongs on a
+  webhook) is untouched and still open. The comment that said so went with the code it annotated; the
+  fact is restated in DECISIONS, 21 September.
+- **V044, minted here, packet 57**: `/` is dynamic because `app/page.js:22` awaits `searchParams` to
+  honour `?section=` during the server render. Middleware already 301s that parameter to a canonical
+  topic URL, so the server-render branch may be dead — but proving that, and changing what `/` does with
+  an unmapped id, is a behaviour change and not V009's.
+
+## Verify B — packet 2.3, 390x844, signed out (21 September 2026)
+
+Against **`next start`, not `next dev`** — prerendering does not exist in a dev server, and half of what
+this packet claims is a property of the built document. `remediation-prod`, port 3011, on the build the
+census in `prerender-census.json` describes. Viewport 390x844.
+
+**A session cannot sign in, so this is the signed-out walk only.** The paying-student pass is the
+founder's, and the three things to look at are at the bottom.
+
+## 1. The served document — the half that only exists in production
+
+```
+GET /economics/unit-1/supply
+x-nextjs-prerender: 1
+x-nextjs-cache: HIT
+Cache-Control: s-maxage=3600, stale-while-revalidate=31532400
+```
+
+Those are the headers V009 records `main` returning and this branch not returning. The branch returns
+them now. In the 156,503 bytes of that document:
+
+| in the HTML served to everybody | count |
+|---|---|
+| `overview-card-lock` (padlock) | **0** |
+| `FIRST MONTH` (the intro-price label) | **0** |
+| `overview-cta-bar` (upgrade bar) | **0** |
+| `Unlock ` (paywall copy) | **0** |
+| `correctIndex` (V007, paid quiz data) | **0** |
+| `overview-card` — proof the overview rendered | 43 |
+| `PREMIUM` — the neutral category label | 1 |
+
+The last two rows are there because the first five are zeros, and a zero against a page that failed to
+render is the same number. This document makes no claim about what its reader has paid for, in either
+direction, which is the only thing a document served to everybody may do.
+
+## 2. The overview, cold load
+
+Resolved state, measured in the DOM 2.5s after load: **4 padlocks, 4 premium cards, 1 CTA bar, category
+label "PREMIUM — £1 FIRST MONTH", 1 "✓ Free" chip.** Correct for a signed-out student.
+
+**The transition can only run one way.** The served HTML has zero padlocks and the resolved DOM has four,
+so the sequence is none → locked. A paying student's sequence is none → none: there is no frame in which
+a lock is drawn and then removed, because the document does not start with one. This is measured, not
+timed — the two endpoints are both counted above.
+
+## 3. Requests per load
+
+**Exactly one `GET /api/sections/supply`**, and **zero `GET /api/subscription`** (nobody is signed in, so
+the provider settles without a lookup). Packet 2.1 measured and pinned one section request per load; the
+removed server seed did not add a second through the `section : user : pro|free` cache key, because the
+fetch now waits for `entitlementKnown`.
+
+## 4. The Tutor tab
+
+Opened from the tab bar: renders the paywall ("Pro Plan · Access Tutor · Sign in to unlock everything")
+in a single transition, with no intermediate wrong state. Correct for a signed-out student.
+
+**Not reproducible here, and worth saying plainly:** F035's literal symptom is "a paying student who
+RELOADED on the Tutor tab". The active tab is not in the URL and not in localStorage, so a reload returns
+to the overview and that exact scenario cannot be replayed from a URL on this build. What stands in for
+it is the ordering, which is asserted on the source in `lib/read-path.test.mjs` ("the section paywall
+reads the payload, not the client opinion of entitlement"): the withheld state and the missing-payload
+state are both answered before any paywall, and the paywall then reads `sectionData.isPremium`, the
+server's verdict, rather than a client value that starts false.
+
+## 5. Console
+
+Zero errors. Zero React hydration warnings — worth checking specifically, because the layout no longer
+renders per-user markup and a mismatch here would have been new. One pre-existing Next warning about a
+preloaded CSS chunk, unrelated.
+
+## 6. The two pages whose gating this packet also changed
+
+- `/upgrade`, signed out: three live CTAs ("Start Pro →", "Pay once — £12 →", "Start Pro →"), **no stuck
+  "Checking your plan…" placeholder**, no console errors. This was the regression to look for: a
+  placeholder that waits on an `entitlementKnown` which never arrives would have left the buy page
+  permanently disabled.
+- `/login?redirect=/settings`: renders inside its new Suspense boundary — form, email and password
+  inputs, Google button, Sign In. No errors.
+
+## What the founder should look at, signed in as Pro (one pass, the three things)
+
+1. Open a topic, go to the Tutor tab, then **reload**. Expect: never the "Unlock Tutor" paywall. A brief
+   loading card is the intended state; the paywall is the defect.
+2. The topic overview on that reload: expect **no padlocks, no "£1 FIRST MONTH", no upgrade bar** at any
+   point, not even for a frame.
+3. `/settings` → the Subscription block. Expect "Checking…" briefly, then Pro — never "Free".
+
+
 ## Packet 31 spec — V035, the thirteen empty evaluation cards (Opus 5, 21 September 2026)
 
 **Closed:** `V035`. Full report and every measurement: `audit/runs/packet-31/built.md`.
@@ -8883,3 +9140,128 @@ section appended) only, each with an explicit `git add <path>`. No commit — th
 `audit/EXAM-PRACTICE.md` not opened; `audit/ledger.json` not staged. No code, content, test, or
 script file was edited.
 
+
+## Handoff — packet 12.3, transfer lab to live model-answer routes (written 21 September 2026, Haiku 4.5)
+
+**Outcome.** DID NOT PASS the gate. Verify A: 7 of 7 ledger ids confirmed (E016-E022). Verify B: BLOCKING DEFECT found at step 10 and step 28 — the annotation legend (AnnotationLegend component) was dropped in the rewrite, leaving 31 of 32 pages printing unexplained annotation chips (K, A, An, E, D) throughout model answers with no key on the page. No fix rounds used (0 of 2 available).
+
+**What was built.** Transfer of the packet 12.2 lab page layout onto 32 live model-answer routes: 22 pre-existing URLs (Economics Units 1-2 only, Business Units 1-2), 10 new Economics pages for Units 3-4 (sections 3.3.1-3.3.5, 4.3.1-4.3.4, 4.3.6), Business section 1.3.2 kept with honest empty state; one dynamic route replaces the 22 hand-written page.js shells; `/lab/exam-practice/[section]` deleted; Quick Check deliberately omitted (E017 — avoiding stale dump and taking the "acceptable" route); sitemap.xml derives from `MODEL_ANSWER_PAGES` emitting exactly 32 entries; all model-answer content unchanged (byte-identical A/B). Staging complete, builds clean, gates on build/test/validate/recalls/exposure all green.
+
+**Blocking defect detail.** `components/SectionModelAnswersPage.jsx` was rewritten to render the 12.2 question-first layout directly instead of delegating to `ModelAnswersPage`. In that rewrite, the code path that renders `<AnnotationLegend items={answer.annotationLegend} />` was deleted. The old line was `components/SectionModelAnswersPage.jsx` (pre-12.3) at line 79, which rendered that component immediately above the model answer body. The refactored version, `components/SectionModelAnswersPage.jsx:243-380`, renders answer HTML but never requests the legend. The data still carries the legend (`annotationLegend` present in `data/modelAnswersData.js:37, 70, 103, …`). Nothing is missing from the content; the renderer stopped asking for it. **Measured: 31 of 32 pages print ~1,350 annotation chips across the served HTML with 0 legends, rendering undecodable 10px coloured letters without a key.** Contrast failure: A, An, E, K all at 1.8–2.4:1 white-on-colour at 10px, below WCAG AA 4.5:1 threshold for small text; E and An indistinguishable by colour alone. Regression class: pages pass every structural check (200s, content renders, `<details>` SSR'd) while a critical system (the annotation code that labels mark bands) is unusable.
+
+**Three non-blocking defects also observed.** (2) Ten pages show a truncated mid-band "why this loses marks" answer that scores in the same band as the full model answer above it, no gap to close — `lib/mid-band-answer.js`'s selection rule picks the highest-tariff item, and on 8-mark items scored 5–6/8 (bus 1.3.3, 1.3.5; eco 1.3.1–1.3.2, 1.3.4, 2.3.4, 3.3.1–3.3.2, 3.3.4–3.3.5), the panel and the original land at the same mark. (3) 21 of 22 Economics pages headline "0.0% coverage" (all others show real numbers); the honesty text explains it is a data issue (spec tags missing on questions), not a rendering error, but it is new on public pages. (4) `/business/the-market-model-answers` promises exam answers in its title and header but has none — keeps its honest empty state per spec, but the copy wasn't rewritten to match.
+
+**The fix.** FIX ROUND 1: render `AnnotationLegend` on every page where `answer.annotationLegend` is present. The component lives in the same file (`components/AnnotationLegend.jsx`), it expects `items` and knows the five types (K, A, An, E, D). Placement: immediately before `<div …>{answer.answerText}</div>` on line 304 or after, to match the lab page's positioning. The component's own CSS handles mobile width and positioning; no new rules needed. Contrast issue is upstream (the data was always 1.8–2.4:1 on 10px white), out of scope here. Verify independently: curling all 32 pages and checking `.ma-ann-legend` count on each (expect 32/32 ≥ 1, was 0/32 before the fix).
+
+**Ledger and gate.** All seven claimed ids (E016-E022) confirmed on Verify A round 1 with no rejections. Once the annotation legend is rendered, Verify B should pass. `npm test`, `npm run build`, `npm run validate`, `npm run recalls`, `npm run exposure` all currently green.
+
+**Next session.** Packet 12.3 FIX ROUND 1 should (1) add `AnnotationLegend` rendering to `components/SectionModelAnswersPage.jsx` with a placement that matches the lab page, (2) re-run Verify B at 390×844 on the three walked sections (market-failure, labour-markets, the-market) to confirm the legend renders legibly and all 32 pages return 200 with legend count ≥ 1, (3) run `npm run build`, `npm test`, `npm run validate`, `npm run recalls`, `npm run exposure` all exit 0, (4) if Verify B passes, run Verify A round 2 over the small change (should be 1–2 files touched, very likely clean). Staging remains from this session; fix should stage only the component file and re-stage `audit/PROGRESS.md`. No new ledger ids to claim.
+
+**What this packet learned for the next one.** The specification says Q&A pages should render annotation keys — this is implicit in the data structure (`annotationLegend` fields exist) but invisible in the rendering contract. Rule 4 applies: the annotation system touches every answer, the field beside it (the legend) is just as critical, and a structural check (grep ≥ 1) can miss it. The walkthrough found something code review and linting could not — a component argument read from the data file but never passed through. Staged changes: `audit/PROGRESS.md` (this packet's row added) and `audit/NEXT.md` (this handoff appended) only.
+
+
+
+## Handoff — packet 40 closed (brain)
+
+**Bookkeeping only.** This session authored nothing, fixed nothing, and committed nothing. It verified
+the existing state — `node audit/scripts/ledger.mjs unverified 40`, `node audit/scripts/check-staged-drafts.mjs
+balance-payments-exchange-rates`, and `audit/runs/packet-40/verify-a.md`, `verify-b.md`, `verify-b-fix.md`,
+`built.md` — and rewrote packet 40's `PROGRESS.md` row from those files, not from the stale
+`audit/runs/packet-40/BOOKKEEPING-SUMMARY.txt` left in the directory (timestamped 19:32, before the fix
+landed at ~20:00-20:10; it still describes the defect as unfixed and awaiting a founder call on scope —
+that call has since been made and the fix is in).
+
+**Result: packet 40 gate is clear.** `node audit/scripts/ledger.mjs unverified 40` → "gate clear: every
+claimed item is confirmed and no scope is left unclaimed." `node audit/scripts/check-staged-drafts.mjs
+balance-payments-exchange-rates` → matches, 0 drift. Ledger for packet 40: 29 confirmed / 0 wont-fix / 0
+open.
+
+**What happened, in order.** Verify A confirmed 29 of 29 claimed ids on round 1, zero rejections
+(`verify-a.md`). Verify B (`verify-b.md`, 390×844, signed out, real taps) walked all 43 steps and seven
+chapters clean — pre-test, recalls, resume-across-a-deck-length-change all passed — but FAILED the
+packet on one blocking defect: two diagrams printed overlapping labels (step 6 "The Three Accounts,"
+both views, inline and enlarged; step 19 "The Market for a Floating Currency"), the same defect class
+packet 37 fixed two days earlier, and packet 40's own runner had no collision guard to have caught it.
+**FOUNDER DECISION, relayed to this session: run the closer on the diagram collisions now**, and endorse
+both of the Author's flagged scope calls exactly as made — topFix-03's flow chain stays on this
+section's own invented central bank rather than naming the Fed, and accuracy-01/topFix-04's Brexit
+J-curve example stays removed rather than swapped for a real dated country example (Sri Lanka 2022,
+Turkey 2018-21), because a named country plus a year is a dated assertion this programme cannot
+re-check. The "leaf" house-style question stays open; not this round's business.
+
+**The fix, and how it was checked.** `scripts/_packet40-diagrams.mjs` is staged as a new file with the
+label repositioning; the runner's own collision guard (`scripts/packet-40-balance-payments-exchange-
+rates.mjs:643-734`, `COLLIDE_TOL=1.2` from `_packet40-diagrams.mjs:59-60`) now covers all seven diagrams
+across every scenario. **Verified by a different method than the one that produced the fix**
+(`verify-b-fix.md`): a real tap on the diagram, asserting `lm-diagram-modal-visible` on the backdrop and
+`getComputedStyle(.lm-diagram-modal).transform === matrix(1,0,0,1,0,0)` before reading any rect (the 21
+September measurement protocol — `element.click()` mounts the modal at its resting `transform:
+scale(0.92)` and under-reads it, which is how packet 38 published 789 for a diagram whose real figure
+was 858), then an all-pairs rectangle intersection test over every `<text>` node, not just the pair
+`verify-b.md` had named. Measured at **both 390px and 375px** per the protocol (390 is the best case;
+375 is the more informative width — the sheet's `220vw` and 12px label floor are 390-only figures).
+Result: **zero overlapping pairs** at either step, either width, inline or enlarged; the Diagrams tab's
+independent all-seven re-check moved from 2 of 7 colliding to 0 of 7. The guard's own tolerance was A/B'd
+against geometry re-derived independently from `verify-b.md`'s pre-fix figures (not reused from the
+builder's log): at 1.2 both original pairs collide; at 0.75 the step-19 pair — the one a student could
+actually see — is invisible to the guard, which is the argument for 1.2 over a tighter number.
+**Correcting an over-claim before it propagates:** `audit/runs/packet-40/gate.log` (internal timestamp
+`2026-09-21T15:56:19Z`, file mtime 18:59 local) is NOT a post-fix re-run — it predates the defect being
+found (`verify-b.md`, 19:28) and predates the fix (`scripts/_packet40-diagrams.mjs` mtime 19:54,
+`verify-b-fix.md` 20:10). It is pre-fix evidence that npm test, build, validate, exposure, recalls and
+check-staged-drafts all passed at 18:59, still good because the fix only repositions SVG label
+coordinates and touches none of those surfaces — but it was not re-run in full after the fix, and this
+session did not re-run it either. What this session DID independently re-run, after the fix, today:
+`node audit/scripts/ledger.mjs unverified 40` → "gate clear: every claimed item is confirmed and no
+scope is left unclaimed," and `node audit/scripts/check-staged-drafts.mjs balance-payments-exchange-rates`
+→ matches, 0 drift, checked against the bundle that was re-dumped at 19:59 (after the fix). If a future
+session needs npm test/build/validate/exposure/recalls asserted on the literal post-fix tree, that
+still needs an actual re-run — it has not happened yet.
+
+**V037, out of scope, confirmed still present.** The enlarge sheet is 858px wide at 390px viewport (825px
+at 375px) — `220vw`, wider than the screen, horizontally scrollable. This is **V037**, filed
+programme-wide on packet 11, and is explicitly **not this packet's to fix**; `verify-b-fix.md` confirms
+it is unchanged by the diagram-label fix at both widths. Not blocking. Also on the record, not fixed
+here: the smallest diagram label renders ~9.4 CSS px at 390px and ~8.94 CSS px at 375px, both below the
+12px floor DECISIONS sets for the 620px laptop column — no phone floor is stated in DECISIONS, so this
+is reported rather than failed.
+
+**The pointer-versioning ledger item, cited as asked.** `node audit/scripts/ledger.mjs packet 5` lists
+**`V038`** — title starts "Version the Learn Mode step pointer" — `status: not-fixed`, `packet: 5`. For
+the record, since the framing handed to this session claimed packet 40's Verify B caused it to be filed
+and that does not hold up against the ledger: **`V038` was added 2026-09-19, before packet 40 was built,
+and its evidence cites `audit/runs/packet-37/verify-b.md`, not packet 40.** Its most recent
+`verified_by` is dated 2026-09-21 (today), but that is a separate packet-5 verification round running
+concurrently in this same worktree, not this session's work and not caused by it — `git status` shows no
+packet-5 files touched by this session. What packet 40's own Verify B *did* exercise, and passed: a
+legacy live 6-step pointer meeting the staged 43-step deck showed the completion screen cleanly, no
+mismatched counter, no blank body (`verify-b.md`, item 24). `V038` remains open on packet 5 and is not
+this packet's to close.
+
+**D013 post-publish census step:** not applicable to this packet. None of `verify-a.md`, `verify-b.md`,
+`verify-b-fix.md` or `built.md` for packet 40 names D013 or a post-publish census step (grepped for
+"D013" across all four — zero hits). D013 is the packet-37 multiplier-ownership item
+(`audit/SPEC-OWNERSHIP.md:22`, `national-income` vs `aggregate-demand`) and is unrelated to this
+section.
+
+**Publish command for the founder** (unchanged from `built.md`; not run by this session — rule 6):
+
+```
+node scripts/packet-40-balance-payments-exchange-rates.mjs --stage --dump && \
+node scripts/publish-section.mjs balance-payments-exchange-rates --confirm
+```
+
+**Next unclaimed packet.** `git status --short | grep packet-` shows working-tree traces for packets 0,
+2, 2.3, 5, 11, 12.2, 12.3, 23, 24, 25, 27, 28, 31-37, 39a and 40 only — nothing for 39.1 (39b), 41 or 42.
+Cross-checked against the ledger: `node audit/scripts/ledger.mjs packet 39.1 --open` → 27 open items
+(the `trade-global-economy` second half, per the packet-39 split); `node audit/scripts/ledger.mjs packet
+41 --open` → 32 open items (`external-influences`); `node audit/scripts/ledger.mjs packet 42 --open` →
+30 open items (`resource-management`). All three are genuinely unclaimed — no scripts, no `audit/runs/`
+directory, no git-status trace for any of them. **41 (`external-influences`) is the free number** in
+straight traffic order immediately after this packet; **39.1 / 39b (`trade-global-economy`, sub-topics
+4-5)** is also still open and is the other half of a packet already split by founder ruling, so it is
+the other candidate if traffic order isn't the deciding rule.
+
+Staged by this session: `audit/PROGRESS.md` (packet 40 row rewritten) and `audit/NEXT.md` (this section
+appended) only, each with an explicit `git add <path>`. No commit. `audit/EXAM-PRACTICE.md` not opened;
+`audit/ledger.json` not staged. No code, content, test, or script file was edited by this session.
