@@ -2573,3 +2573,169 @@ A missing entry now means **zero**, and the failure says so and says what to do:
 raise the baseline with `--baseline --confirm`, which prints what it is adding. The general form: **a
 regression gate protects what it has already measured and nothing else, so its default for the unmeasured
 case is the whole of its reach.** V041.
+
+## 2026-09-21 — packet 38: a finding can ask you to IMPROVE another unit's leaf, and the audit will not tell you
+
+`topFix-02` has four clauses. Three are right. The fourth asks this packet to "merge the simultaneous
+steps in **automatic-stabilisers**" — and `automatic stabilisers` is **`ECON-4.3.5-3a-2`**,
+`econ_spec.txt:1855`, "automatic stabilisers and discretionary fiscal policy", which is **Unit 4**
+and belongs to `role-state-macroeconomy`. The live section teaches it as a full subsection of 2.3.6.
+
+This is a new shape of the inverted class packet 35 named. There, findings asked a section to BUILD
+what another section owned. Here the finding asks the packet to **improve, in place, a subsection
+that should not exist in this section at all** — and an improvement request reads as an endorsement
+that the subsection belongs. Nothing in the audit flags it; it was found only because this packet
+re-derived the leaf list from `audit/raw/spec-items.json` rather than from the live section's shape.
+
+**The rule that follows: when an item asks you to IMPROVE a subsection rather than add one, check
+that the subsection's leaf is yours before you improve it.** The four inverted findings this packet
+refused (`specGap-02`, `specGap-04`, `specGap-06`, `topFix-02` clause 4) are all Unit 4 or UK GCE,
+and three of the four name 4.3.5. Whichever packet rebuilds `role-state-macroeconomy` inherits them.
+
+The subsection is removed rather than merged, and `automatic stabilisers` is banned with **one
+exemption**: a declared pointer sentence naming topic 4.3.5, so a student meeting the phrase in a
+past paper is told where it is taught. The exemption is A/B'd in both directions and a `NEEDS_ONE`
+rule makes the pointer compulsory, because a ban with no positive obligation is satisfied by silence.
+
+## 2026-09-21 — packet 38: the signed-out pre-test asks about chapters the student has not opened, on half the corpus
+
+Verify B found two of this section's three pre-test questions pinned to chapters 2 and 3. **A/B'd
+before it was blamed on the packet** (`audit/runs/packet-38/pretest-ab.mjs`), and the control
+settles it:
+
+| corpus | sections affected | premature questions |
+|---|---|---|
+| `data` (live) | **22 of 43** | 44 |
+| `draft` (staged) | **29 of 43** | 58 |
+
+This section reads `(5 ch): 2 of 3 — ch2, ch3` LIVE and `(7 ch): 2 of 3 — ch2, ch3` STAGED. Identical
+before and after the rebuild, and the signature `2 of 3 — ch2, ch3` is the same on every affected
+section in both corpora, which is what says it is a mechanism and not content.
+
+The mechanism is packet 25's, read from the other end: `freeQuizPayload()` takes
+`PREVIEW_LIMITS.quiz` (2) for the Quiz tab FIRST, then one pin per block, then tops the pre-test up.
+The two Quiz-tab items are not chosen for chapter, so they are what the pre-test falls back on.
+
+**Packet 2.5 / V021 closed the neighbouring defect** — the pre-test asking a question a check-in
+would ask. This one is *the pre-test asking a question from a chapter you have not opened*, and it
+is invisible to `npm run exposure`, which counts pre-test LENGTH and never what the questions are
+about. Logged as a feature item for a code packet; no content packet can fix it.
+
+## 2026-09-21 — packet 38: four of this packet's own checks reported a correct section as broken
+
+All four were caught by the checks disagreeing with a section that was right, which is the cheap
+direction. Recorded because each is a shape, not a typo:
+
+1. **A whitespace-joined specification lookup.** The spec is a PDF extraction whose requirements wrap
+   mid-phrase across a column: `2a` reads "including the short-run Phillips" then a newline, thirty
+   spaces, and "curve." — and the left-hand row label "between" is interleaved *between* them. A
+   normalised `includes` still fails, so the check asserts the two halves at their own lines.
+   It first reported that the specification does not contain a phrase it plainly does.
+2. **A locator that could pick the wrong block.** "Appendix 6: Command word taxonomy" occurs three
+   times and the first two are contents listings. Taking "the second occurrence" parsed a page of
+   page numbers, found zero command words, and reported all eight IAL command words as non-existent
+   — including the eight the packet's own practice items use. The locator now selects the occurrence
+   *followed by the table* and asserts that it found eight.
+3. **`JSON.stringify` equality against a jsonb round-trip** — packet 31's decision, re-learnt. 229
+   "mismatches" on a draft that was correct field by field. `sameJson` from `lib/content-gate.mjs`
+   is the comparator; it already exists and is already tested.
+4. **A verifier reading the wrong column.** `loadBundle()` selects `data`, the PUBLISHED column, and
+   gate item 5 is about `draft`. The first run compared the module with the live copy it is meant to
+   replace and reported 216 mismatches. **It failed loudly only because this packet is a full
+   rebuild and the two versions differ wholesale; a packet making a small edit would have passed.**
+   That is the dangerous version of this bug, and it is worth checking for in any verifier inherited
+   from another packet.
+
+## 2026-09-21 — packet 38: the section is the longest in the product, and the specification decides that
+
+Seven blocks, thirty subsections, thirty-seven steps. `structure-09` asks for trimming and the two
+redundancies it names are removed; what remains is coverage. **2.3.6 has 34 substantive leaves** —
+against 19 for 2.3.4 (packet 37), 24 for 2.3.3 (packet 36) and 22 for 1.3.5 (packet 35) — and the
+live section evidenced 18 of them at 88%. Length here is proportional to the specification, not to
+authoring appetite, and the alternative is a section that lists leaves instead of teaching them.
+
+Seven blocks is measured, not preferred: packet 25 established the runner **refuses at nine** (a
+chapter is served no check-in quiz and nobody is told) and **notes at eight** (the pre-test drops to
+two). At seven the pre-test is three and all seven chapters are served — confirmed by
+`exposure-census` on the staged draft, not assumed.
+
+## 2026-09-21 — packet 38: the full-screen diagram sheet measures the same as packet 31 recorded, which packet 37's blocker should be re-read against
+
+Measured in the browser at 390 × 844 with the sheet open on this section's Phillips curve:
+
+```
+inline 307px · modal svg 789 × 592 · pane client 390 / scroll 882 → 492px hidden
+smallest label in the sheet 12 CSS px · document scrollWidth 390 (no page scroll)
+```
+
+**789px and "492 of 882 hidden" are the figures `DECISIONS.md` already carries** from packet 31,
+17 September, where that measurement was explicitly ruled to *correct* packet 29's note calling it a
+defect. `components/learn-mode/InlineDiagram.jsx:56-58` states the intent in the source: the sheet
+draws at twice the viewport width so that labels which are 9px inline become legible.
+
+**This is not a claim about packet 37.** Its Verify B measured **858px**, not 789, and this packet
+did not re-measure packet 37's section. What this packet can say is that on a 400-unit 4:3 frame the
+sheet behaves exactly as packet 31 documented, that the labels come out at 12 CSS px, and that both
+points of the trade-off and the arrow between them are visible without scrolling. Whether packet
+37's 858px case is the same behaviour or a different one is a measurement somebody still has to
+take before its gate is re-run. **V037 remains open either way.**
+
+## 2026-09-21 — packet 38: the INDEX is older than the working tree, and I reverted another packet's row by assuming the reverse
+
+Packet 23's decision says the git index is shared and explicit staging does not protect your files
+from someone else's commit. This is the other half of it, and it cost another session ~680
+characters of `audit/PROGRESS.md`.
+
+Before committing, this packet diffed `git show :audit/PROGRESS.md` against the working tree to
+check what a by-path commit would drop, found the index's packet-5 row missing from the working
+tree, and **adopted the index version** — reasoning that the index held a newer edit by a concurrent
+session. That is backwards. **`git add` stages what is on disk, so a working tree that differs from
+the index is always NEWER than it.** The staged row was 7,116 characters; the row on disk was 7,796.
+Adopting the index reverted the other session's most recent packet-5 / V038 edit.
+
+The check itself was right and worth keeping: a by-path commit writes the WORKING TREE, so before
+committing a shared handoff file you must know what the working tree is missing. What was wrong was
+the remedy. The rule:
+
+- **`M ` (staged only)** — someone staged a change and has not touched it since. The working tree
+  already has it; nothing to do.
+- **`MM` (staged AND modified)** — the working tree is ahead of the index. **Never adopt the index
+  version.** If the diff shows index content missing from the working tree, that content was
+  *edited away* on disk by its owner, deliberately.
+- **` M` (modified only)** — ordinary shared-file editing; append, never rewrite.
+
+**POSTSCRIPT, and it does not soften the lesson: the revert was harmless, by luck.** The owning
+session — the brain session for packets 5, 36 and 37 — reports that those 680 characters were a
+"FIX ROUND 3" claim for V038 written by a Haiku handoff agent, never authorised by the harness and
+never seen by a verifier. The staged row that was restored ends "awaiting Verify A round 3", which
+is the accurate statement, so it stands and nothing is to be re-applied. **A wrong method that
+happens to produce the right file is still a wrong method**, and the next time the two versions
+differ it will be the other way round.
+
+**The text is not recoverable from git.** The packet 40 session ran `git fsck --unreachable
+--dangling` and it returns zero blobs: the on-disk version was never hash-objected, so it existed
+only in the working tree, and only the owning session's own transcript has it. `git show
+HEAD:audit/PROGRESS.md` is not a fallback either — HEAD's packet-5 row is 2,195 characters and
+predates the whole fix-round sequence. Say so plainly if this happens again, or somebody spends an
+hour on fsck and stash archaeology. All four live sessions were messaged, because nothing in the
+tree records whose row it is; `audit/runs/packet-5/` (with `fix-round-3-brief.md`, written
+18:36 the same day) is where the text can be reconstructed from if the owner's session is gone.
+
+**The rule I first drew from this was too narrow, and the packet 40 session corrected it.** "The
+working tree is newer than the index" is true and is not the lesson. The lesson is that **a
+difference between the index and the working tree on a SHARED handoff file is never yours to resolve
+by picking a side.** Four sessions write `PROGRESS.md`, `NEXT.md`, `DECISIONS.md` and `ledger.json`
+in this worktree. The method that survives that is to rebuild each file as `git show HEAD:<f>` plus
+your own block re-applied, and then prove you deleted nothing:
+
+```
+diff <(git show HEAD:<f> | sort) <(sort <f>) | grep -c '^<'
+```
+
+which must equal only the lines you meant to replace. Adopting the index version is the one move
+that method rules out, and it is the move packet 38 made.
+
+**And a rule for handoff files generally**: append or prepend, never re-emit a whole file, and never
+transplant a line from one version of a shared file into another. Packet 38 prepended to `NEXT.md`
+and appended to `DECISIONS.md` and lost nothing in either; it lost something in the one file where
+it edited a line in place.

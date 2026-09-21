@@ -1,5 +1,297 @@
 # Next session brief
 
+## Handoff — what comes next (written 21 September 2026, after packet 38)
+
+**PACKET 38 PASSED ITS GATE.** `macroeconomic-objectives-policies` is BUILT, VERIFIED and STAGED,
+NOT PUBLISHED, held for the packet 5/7 checkpoint like the eight before it. 34 of 34 specification
+leaves evidenced, 45 BLOCK / 62 DEBT → 0 / 0, `recall.recoverable` 15 → **0**, ledger `unverified 38`
+reports "gate clear". Verify A rejected one id on round 1 and confirmed it on round 2.
+
+**Packet 37's blocker is still the founder's to decide** and nothing here changes that — but see
+point 5 below, which is a measurement that bears on it.
+
+### What packet 38 leaves behind that the next packet needs
+
+1. **FOUR other sessions were in this worktree at once, and packet 38 reverted one of their
+   records.** `audit/snapshots/2026-09-21-pre-packet-39a__*` and `…-pre-packet-40__*` were written
+   by somebody else while packet 38 ran, and HEAD moved twice under it.
+
+   **The mistake, so nobody repeats it:** checking what a by-path commit would drop is right — but
+   when `git status` shows `MM`, the WORKING TREE is newer than the index, because `git add` stages
+   what is on disk. Packet 38 read it the other way round, adopted the index's packet-5 row over the
+   the other on disk, and reverted ~680 characters of another session's V038 fix-round-2 text. It is
+   NOT recoverable from git — `git fsck --unreachable --dangling` returns zero blobs, and HEAD's row
+   predates the whole fix-round sequence. **A difference between the index and the working tree on a
+   shared handoff file is never yours to resolve by picking a side.** Rebuild the file as
+   `git show HEAD:<f>` plus your own block, then prove you deleted nothing:
+   `diff <(git show HEAD:<f>|sort) <(sort <f>) | grep -c '^<'`. DECISIONS, 21 September.
+
+   **The revert turned out harmless**: the owning session says those 680 characters were an
+   unauthorised "FIX ROUND 3" claim for V038 that no verifier had seen, and the restored row's
+   "awaiting Verify A round 3" is the accurate statement. Nothing is to be re-applied. The method
+   was still wrong.
+
+   **Two hazards in the shared index, flagged by that session, neither packet 38's:** 36 tracked
+   files are staged for DELETION but still on disk (someone ran `git rm --cached`) — the packet
+   32-35 runners, eight snapshots, seven files under `audit/runs/packet-36/`, and
+   `audit/scripts/diagram-phone-legibility.mjs`. **A commit that names any of them removes it from
+   the repo.** And `components/ExtrasTab.jsx` is staged as a copy that reverts two confirmed fixes;
+   HEAD and the working tree both have them, so the index is the odd one out. Packet 38 checked its
+   own paths against the deletion set before committing and none of them appears in it.
+
+   Re-check `git log -1` and `git status` immediately before you commit, stage by path, never
+   `git add -A`, and if `audit/PROGRESS.md`'s packet-5 row looks short, that is why.
+
+2. **A finding can ask you to IMPROVE another unit's leaf, and that reads as an endorsement.**
+   `topFix-02` asked this packet to "merge the simultaneous steps in automatic-stabilisers" — and
+   automatic stabilisers are `ECON-4.3.5-3a-2`, Unit 4. Packet 35 named the class where a finding
+   asks you to BUILD someone else's leaf; this is the variant where it asks you to POLISH one, and
+   the audit never flags it. **When an item asks you to improve a subsection rather than add one,
+   check whose leaf it is first.** Four of packet 38's 27 items were this class and three of them
+   name **4.3.5** — whichever packet rebuilds `role-state-macroeconomy` inherits national debt, the
+   2008 response and automatic stabilisers, and should expect the audit to be short on them.
+
+3. **Verify your verifier's column.** `loadBundle()` selects `data`, the PUBLISHED column. Gate item
+   5 is about `draft`. Packet 38's first run of `verify-draft.mjs` compared the module against the
+   live copy it was replacing and reported 216 mismatches — **and it only failed loudly because this
+   was a full rebuild. A packet making a small edit would have passed a check that was reading the
+   wrong column entirely.** If you inherit a draft verifier, read the line that selects the column
+   before you trust a green run. Three of that file's other checks were also wrong first; DECISIONS,
+   21 September, has all four shapes.
+
+4. **`npm run recalls` can be driven to zero, and 15 → 0 is what it cost.** The baseline row for this
+   section was 15 and the gate would have passed at 15. Eight recalls were rewritten to APPLY the
+   idea to figures or a new case instead of restating the step — a different economy, a bond yield,
+   a surplus instead of a deficit. It is perhaps an hour of the packet. Two staged sections are now
+   clean; this is one of them.
+
+5. **The full-screen diagram sheet measures exactly what packet 31 recorded, and packet 37's blocker
+   has not been re-measured against it.** On this section's Phillips curve at 390 × 844: inline
+   307px, modal SVG **789 × 592**, pane 390 client / 882 scroll, **492px hidden**, smallest label
+   **12 CSS px**, and both points of the trade-off plus the arrow between them visible without
+   scrolling. 789 and "492 of 882" are packet 31's own figures, where that measurement was ruled to
+   *correct* packet 29's note calling it a defect, and `InlineDiagram.jsx:56-58` states the intent in
+   the source. **Packet 37's Verify B measured 858px, not 789, and packet 38 did not re-measure
+   packet 37's section** — so this settles nothing about packet 37 and somebody has to take that
+   measurement before its gate is re-run. V037 is open either way.
+
+6. **Two Verify B checks failed and neither was content.** Logged, not fixed:
+   - **V043, new**: the signed-out pre-test asks 2 of its 3 questions about chapters the student has
+     not opened, on **22 of 43 live sections and 29 of 43 staged**, with the identical signature
+     `2 of 3 — ch2, ch3` everywhere — and identical on this section before and after the rebuild.
+     `npm run exposure` cannot see it: it counts pre-test LENGTH.
+   - **V006, open since packet 37**: step 37 of 37 still reads "Before the next chapter". The line is
+     **`components/LearnModeTab.jsx:560`**, not the `:429` V006 records — update the id when you fix
+     it. `blockCount` and `step.blockIndex` are both in scope ten lines above.
+
+7. **Seven blocks is the practical ceiling worth using.** Packet 25's table is still right — the
+   runner refuses at nine and the pre-test silently drops to two at eight. Packet 38 went to seven
+   for 34 leaves and confirmed on the staged draft that the pre-test is three and all seven chapters
+   are served. A topic bigger than 2.3.6 has nowhere left to go and would have to split.
+
+### Still open across the programme
+
+- Packets **21, 31, 32, 33, 34, 35, 36, 38 are BUILT and STAGED, NOT PUBLISHED**, held for the
+  packet 5/7 ship checkpoint. That is eight sections of work a student cannot see.
+- **Packet 37 is BUILT and STAGED, gate NOT passed** — Verify B blocking defect, deferred to the
+  founder. See point 5.
+- Packet 5 and packet 7 must ship before any of them publishes: `main` cannot render a recall
+  authored to the packet-7 contract, and these nine sections carry well over a hundred of them
+  (DECISIONS, 15 September).
+
+### The alternatives for the next packet
+
+`trade-global-economy` (39, Economics 4.3.2, 43 open, owed two debts by packets 33 and 34) and
+`balance-payments-exchange-rates` (40, 29 open) **both have a pre-packet snapshot written today by
+another session — check with the founder before starting either.** Otherwise:
+packet 41 `external-influences` (32 open, Business 2.3.5).
+
+---
+
+## Packet 12.2 spec — the lab page (Fable 5.1 brain, Opus author, 21 September 2026)
+
+**Read first:** `audit/EXAM-PRACTICE.md` section "Packet 13.10" (this packet under its old number — the
+mockup there is **aspirational, not measured; correct it against the facts below before building**).
+Then `lib/exam-item.js`, `lib/practice-tariffs.js`, `lib/ao-spec.js` (packet 12.1's contract and helpers —
+import, do not restate), `components/SectionModelAnswersPage.jsx` (the empty-state pattern to reuse), and
+`app/data-response/[slug]/page.jsx` (already live — do not rebuild this).
+
+**Goal in one line:** a `noindex` route where the founder can see, before any live page changes, what an
+honest question-first exam-practice page looks like for a real section — MCQs that mark themselves,
+written questions with the mark scheme and model answer collapsed, and the section's actual spec coverage
+% stated rather than implied.
+
+**Code-only. No content publish. No live-page change. `robots: noindex,nofollow`, absent from `sitemap.xml`.**
+
+### Facts this spec is built on — measured 21 September, cite these rather than re-deriving
+
+- **The original mockup's "9 questions · 43 marks" does not exist for Market Failure today.** Measured:
+  `section_practice` (live, t=0 dump) has 5 written items, of which **4 of 5 carry an invalid tariff**
+  (`Define 4`, `Explain 6`, `Analyse 10`, `Outline 4` — none is a valid Economics tariff in
+  `lib/ial-marking.js`; only `Evaluate 20` is valid). Packet 25 rebuilt Market Failure's notes and diagrams
+  but **never touched practice or quiz** — `audit/snapshots/packet-25-bundle__economics__market-failure.json`
+  has zero rows in both. `data/modelAnswersData.js` has exactly **3** Market Failure items, all valid tariffs
+  (`Explain 4`, `Examine 8`, `Evaluate 20`), one already carrying an agreed `specItems` tag from packet 12.1.
+  **Build the written-question set from `modelAnswersData`/`modelAnswersExpansion`, filtered to the section —
+  not from `section_practice`.** Do not display a question with an invalid tariff on the page whose entire
+  point is taking tariffs seriously.
+- **`section_quiz` has 25 MCQs per section** (options + `correctIndex`, no spec tagging, no marks field — each
+  is worth 1 mark by convention). This is the Quick Check source. **`correctIndex` is exactly the field packet
+  12's F086 flagged as a live leak on the unauthenticated `/api/practice/questions` route.** This route is
+  `noindex` and not the same endpoint, so the stakes are lower, but do not casually ship the answer key in the
+  initial HTML/JSON payload if a same-request check can avoid it. Note the choice made and why in `built.md`;
+  do not silently copy the pattern F086 exists to close.
+- **`/data-response/<slug>` is already live, indexed, canonical, with its own SEO metadata** (`fe8b65a`,
+  predates this remediation programme). `content/data-response/` has six markdown files. **Link to the live
+  page from the lab page when a section has one; never re-render the stimulus inline.** The slug map is the
+  `PIECES` object in `app/data-response/page.jsx`.
+- **Coverage is real and low.** `npm run spec-coverage -- --section market-failure` currently reports the
+  live bank at 4 tariff failures and, combined with `modelAnswersData`'s tagged items, a genuinely small
+  fraction of 1.3.5's requirements examined. **State whatever the number actually is. Do not round up, do
+  not omit gaps to make the page look more finished than the content is** — this honesty is the page's whole
+  competitive argument (see `EXAM-PRACTICE.md`'s comparison to a competitor that stamps every page "may not
+  be accurate").
+- **No section-coverage function is importable today.** `audit/scripts/spec-coverage-check.mjs` is a CLI
+  script (`process.argv`, top-level `process.exit`), not a module the page can call. **Extract its
+  section-coverage computation into `lib/spec-coverage.js`; have the CLI script import and call it, so there
+  is exactly one implementation, not two that can drift** — the same discipline packet 12.1 applied to
+  tariffs and mark colours.
+- **A second real section for the walkthrough, already checked to have data**: `measures-economic-performance`
+  (Economics 2.3.1) — 25 quiz, 5 practice (same invalid-tariff shape as Market Failure — check before using
+  any), 3 `modelAnswersData` items. Use this, not a guess, for the second Verify B pass.
+- **Business Units 3 and 4 have zero `modelAnswersData` items** (established packet 12.1). The lab route must
+  render a section with no written questions **as an honest empty state**, not a crash or a blank block —
+  reuse `SectionModelAnswersPage.jsx`'s pattern from fix round B1, not a new copy of it.
+
+### What must become true
+
+| id | What must become true |
+|---|---|
+| E009 | `app/lab/exam-practice/[section]/page.js` exists, exports `robots: { index: false, follow: false }`, and resolves for any section slug present in `audit/content-sections/*.json` — proven on `market-failure` and `measures-economic-performance`, and proven NOT to crash on a slug with zero `modelAnswersData` items (e.g. a Business Unit 3/4 section) |
+| E010 | `components/SectionExamPracticePage.jsx`: header (subject · unit code · topic number · title · real question/mark counts); Quick Check block from `section_quiz` (client marks on click; `built.md` states how `correctIndex` exposure was handled and why); Written block from `modelAnswersData`/`modelAnswersExpansion` filtered to the section, question visible, `<details>` collapsed for mark scheme / model answer / examiner commentary, **SSR'd** (not client-fetched); every written item's header shows command · marks · AO (from `lib/ao-spec.js`) · a time estimate from one shared constant (not per-item guesswork) |
+| E011 | A "why this loses marks" panel on the section's highest-tariff written question: a deliberately mid-band answer, annotated against the same mark scheme, distinct from the full model answer, grounded in `markScheme`/`examinerCommentary` — not invented from nothing |
+| E012 | If the section has a `content/data-response/` entry (via `PIECES` in `app/data-response/page.jsx`), render a card linking to the **live** `/data-response/<slug>` page. If not, render nothing for this block — no placeholder, no broken link |
+| E013 | `lib/spec-coverage.js` exports the section-coverage computation `audit/scripts/spec-coverage-check.mjs` currently inlines; the CLI script is refactored to import and call it; `npm run spec-coverage` output is byte-identical before and after (prove this, don't assert it) |
+| E014 | The lab page calls `lib/spec-coverage.js` directly (not the CLI, not a hardcoded number) and states "This page examines N of M requirements in `<topic>`" with at least a sample of the unexamined leaf ids/wordings shown (collapsed is fine) |
+| E015 | Every collapsed `<details>` renders its content in the server HTML (curl-provable) |
+
+### Acceptance — runnable without this conversation
+
+1. `curl -s http://localhost:3001/lab/exam-practice/market-failure | grep -c 'noindex'` ≥ 1.
+2. `curl -s .../lab/exam-practice/market-failure | grep -o 'ECON-1.3.5-[0-9a-z-]*'` returns at least one id (proves the real oracle, not a placeholder), and the page's stated coverage number matches what `npm run spec-coverage -- --section market-failure` reports for the leaves this page's own question set actually carries.
+3. `curl -s .../lab/exam-practice/market-failure | grep -c 'markScheme\|Mark scheme'` ≥ 1 with the model-answer HTML present in the same response (SSR, not client-rendered).
+4. At 390×844, signed out: `/lab/exam-practice/market-failure` — MCQs mark on click, no console error, no unexplained `correctIndex` array visible in the initial page source unless `built.md` explains why that was the chosen tradeoff. `/lab/exam-practice/measures-economic-performance` — same, second real section.
+5. A third slug with zero `modelAnswersData` items (find one; Business Unit 3/4) renders an honest empty state for the Written block, not a 500 or a blank space.
+6. `grep -rn "loc>.*lab/exam-practice" audit/../public/sitemap* 2>/dev/null` (or the live sitemap route) returns nothing.
+7. `npm run spec-coverage` output diff (before/after E013's refactor) is empty.
+8. `npm run build` and `npm run validate` green. `npm test` green (add a test for `lib/spec-coverage.js` alongside the existing `spec-coverage.test.mjs` fixtures).
+
+**Verify B (390×844, signed out):** walk `market-failure`, `measures-economic-performance`, and one zero-data
+Business section. Report what a student — or the founder, since this is a lab page — actually sees at each,
+including the honest coverage line and whichever gaps are named.
+
+**Stage explicitly.** Read `audit/NEXT.md`'s current top section (a live packet may be running) before writing
+your own Handoff appendix; append, never overwrite. Never `git add -A` — this worktree has other sessions'
+uncommitted work in flight (`audit/NEXT.md`, `PROGRESS.md`, `DECISIONS.md`, and possibly others: check
+`git status` fresh, do not trust this list).
+
+## Packet 38 spec — macroeconomic-objectives-policies (Opus 5, 21 September 2026)
+
+Economics Unit 2 (WEC12), IAL **2.3.6**, `audit/raw/econ_spec.txt:1132-1197`. **40 oracle rows, 34
+substantive leaves** — the largest topic in Unit 2 by leaf count, against 19 for packet 37's 2.3.4 and
+24 for packet 36's 2.3.3. Live state measured before anything changed: **45 BLOCK / 62 DEBT**, 17
+subsections, 5 blocks, 88% coverage, **15 of 17 recalls answerable by scrolling up**.
+
+### Rule 1 first — eight of twenty-seven claims are wrong, and four are the inverted class
+
+Every item was checked against the specification text before it was acted on. Four ask this section to
+build a bullet that belongs to **another section**, which is the class packet 35 named: a finding that
+asks you to BUILD what someone else owns costs two packets, not one.
+
+| id | claim | verdict, measured today |
+|---|---|---|
+| `specGap-04` | Great Depression and 2008 GFC are an "explicit IAL bullet" | **REFUSED.** `Great Depression` is **0 hits** in `econ_spec.txt`; `2008` has **one** hit, `:1880`, which is **4.3.5 · 4b** "Use of demand-side policies in response to the global financial crisis of 2008" — Unit 4, owned by `role-state-macroeconomy`. The item flagged itself "verify"; the verification refutes it. Great Depression is UK GCE Theme 2 and exists in neither IAL specification |
+| `specGap-06` | supply-side policies vs supply-side **improvements** is untaught | **REFUSED.** `supply-side improvement` is **0 hits**. UK GCE 2.6.1 import. 2.3.6 · 3 says "Macroeconomic supply-side policies" and never draws the distinction |
+| `specGap-02` | budget deficit vs **national debt** as a stock is untaught | **REFUSED ON THE REMEDY, FIXED UNDERNEATH.** `national debt` is 4 hits, ALL at `:1856-1875` — **4.3.5 · 3a, 3b, 3c**, Unit 4. What 2.3.6 owns is `1e` "Balanced government budget", which IS untaught and IS built here. The stock/flow, structural/cyclical treatment stays with 4.3.5 |
+| `specGap-08` | "policy conflicts as opposed to objective conflicts" | **REDIRECTED.** Sub-topic 2 is headed "Possible conflicts between macroeconomic **objectives**" and its four leaves are all objective pairs. Policy-against-policy is not a 2.3.6 bullet; its substance is `3d` and `4e`, strengths and weaknesses, and it is built there |
+| `practice-02` | "Tariff/command word match IAL" for **Assess (10 marks)** | **REFUTED ON THE PREMISE.** Appendix 6, `:2700-2745`: Define 2 · Calculate 2/4 · Draw 4 · Explain 4 · Analyse 6 · Examine 8 · Discuss 14 · Evaluate 20. **No Assess and no 10-mark exist in IAL Economics**, and `audit/scripts/spec-coverage-check.mjs` says so independently: *"Assess 10 is not an Economics tariff"*. The item's three other clauses — point-marking instead of levels, "in the UK" framing, no diagram expectation — are real and are fixed. The question is rebuilt at an IAL command word rather than converted |
+| `topFix-05` | "rewrite the **10-** and 20-mark guidance" | **PARTIALLY REFUSED**, same error inside a five-clause item. The other four clauses stand and are built |
+| `specGap-01` | balanced budget, **protection of the environment**, income equality are "listed IAL 2.3.6 objectives" | **TWO OF THREE.** `1e` Balanced government budget ✓ and `1f` Greater income equality ✓ are genuine untaught objectives. **Protection of the environment is NOT an objective**: it is `2b`, a *conflict* — "Economic growth and protection of the environment". Built in the conflicts chapter, not the objectives chapter |
+| `specGap-09` | unsure the expectations-augmented Phillips curve is in spec | **CONFIRMED, and it is the right doubt.** `2a` says "including the **short-run** Phillips curve"; `long-run Phillips` and `expectations-augmented` are **0 hits**. The live block 4 teaches a long-run vertical curve and calls it "most frequently examined". Both go |
+
+**Confirmed and built:** `specGap-03` (`4d` is an explicit requirement with four sub-bullets — implementation,
+inflation target, banker to the government, lender of last resort); `specGap-05` (`4e`, explicit);
+`specGap-07` (`3a` names productivity, competition AND incentives, and competition has no mechanism today);
+`accuracy-01` (UK unemployment was ~3-6% through the 1970s and passed 10% only in 1981-82 — the stagflation
+point stands, the number is wrong); `topFix-04` (the live `economic-growth-objective` realExample invents a
+**UK 2% growth target**; the UK's 2% target is for inflation); `practice-01` (Define 4 is not a tariff);
+`structure-01` through `-09`, `topFix-01` to `-03`, `quiz-01` — all confirmed and all dissolved by the rebuild
+rather than patched.
+
+### Found by this packet, in no audit item
+
+1. **`ECON-2.3.6-4a-2` "the distinction between reflationary and deflationary policies" is an explicit
+   leaf and is completely uncovered.** The validator's `spec.uncovered` names it; twenty-seven audit
+   items do not. It becomes its own subsection.
+2. **`4c-3` "changes in lending criteria" and `4c-4` "reserve asset (liquidity) requirements" are two of
+   the four named monetary instruments and neither is taught.** `structure-04`'s complaint is that
+   interest rates and the transmission mechanism are taught *twice*; the reason there was room to say
+   everything twice is that half the instruments were missing.
+
+### What gets built
+
+**Seven blocks, thirty subsections**, in the specification's own sub-topic order except that sub-topic 2
+(conflicts) moves last, because `2a` needs AD/AS and unemployment from sub-topic 4 to make sense and the
+live section's block 0 taught conflicts before any policy existed — which is `structure-05` and `quiz-01`.
+
+Seven is deliberate and measured: packet 25 established the runner **refuses to build at nine blocks**
+(a chapter loses its check-in quiz silently) and **notes at eight** (the pre-test drops to two questions).
+At seven the pre-test is three and every chapter is served.
+
+| # | Block | Leaves | Subs |
+|---|---|---|---|
+| 1 | What Governments Are Aiming At | `1a` `1b` `1c` `1d` `1e` `1f` | 6 |
+| 2 | Demand-Side Policy and the Fiscal Lever | `4a-1` `4a-2` `4b-1` | 4 |
+| 3 | Monetary Policy Instruments | `4c-1` `4c-2` `4c-3` `4c-4` | 4 |
+| 4 | The Central Bank, and What Demand-Side Policy Can and Cannot Do | `4d-1`-`4d-4` `4e` | 4 |
+| 5 | Supply-Side Policies: The Free-Market Route | `3a` `3b-1`-`3b-5` | 4 |
+| 6 | Supply-Side Policies: The Interventionist Route | `3c-1`-`3c-5` `3d` | 4 |
+| 7 | Conflicts Between Objectives | `2a` `2b` `2c` `2d` | 4 |
+
+Longest chapter 6, shortest 4 — inside packet 31's "no chapter twice another's length".
+
+**Thirty subsections is the longest section in the product, and that is the specification's doing, not
+appetite.** 34 leaves against 2.3.4's 19. `structure-09` asks for trimming and the two redundancies it
+names (`structure-04`, `structure-05`) are removed; the length that remains is coverage.
+
+Also built: ~36 quiz items (3 unpinned first for the pre-test, the rest pinned by deriving each item's
+index from its own block tag), 10 practice items covering every IAL Economics command word at its
+Appendix 6 tariff, 30 recalls, 7 diagrams (one pinned per block, on the 400-unit frame), ~34 flashcards,
+8 common mistakes from 4, chains and evaluation in extras.
+
+### Acceptance checks a verifier can run without this conversation
+
+1. `node audit/scripts/spec-coverage-check.mjs --section macroeconomic-objectives-policies` reports
+   **0 uncovered leaves of 34** and **0 tariff failures** (it reports 4 today).
+2. `node audit/scripts/validate-content.mjs --section macroeconomic-objectives-policies` reports
+   **0 BLOCK and 0 new DEBT** against the baseline (45 / 62 today).
+3. `npm run recalls` exits 0: the section's `audit/recall-census-baseline.json` row is **15** in both
+   columns and the rebuild must come in **under** it, not merely at it.
+4. `npm run exposure` exits 0 — every chapter carries at least one quiz item it could have had.
+5. Grep the emitted bundle: `Great Depression`, `national debt`, `supply-side improvement`,
+   `expectations-augmented`, `long-run Phillips`, `Assess`, `Outline` and `10 marks` each **0 hits**;
+   `short-run Phillips curve` present.
+6. Every one of the 34 oracle leaves maps to at least one subsection slug in `LEAF_MAP`, and the runner
+   asserts the map against `audit/raw/spec-items.json` rather than against a comment.
+7. **390px walkthrough** (Verify B), on `?draft=1`: open the section, answer the pre-test, walk chapters 1
+   and 7 step by step. What must be true — the pre-test asks **three** questions and none is about the
+   Phillips curve; chapter 1 step 1 is Economic Growth and carries no UK growth target; every chapter
+   check-in shows a quiz question; chapter 7's Phillips curve diagram renders inline **and** its enlarge
+   view fits 390px without horizontal scroll (packet 37's blocking defect — do not reproduce it); the
+   last step does not say "Before the next chapter".
+
+---
+
 ## Handoff — after packet 2.7 (written 19 September 2026)
 
 **Packet 37's blocker is still the first thing to decide, and the handoff below this one is still the
@@ -7197,6 +7489,71 @@ still slides it to 238-326, clear of the chevron at 326. No verifier round: meas
 verifier brief: **scroll the page with real input while the app is re-rendering**; the round-1/2/3 walkthroughs
 scrolled with `scrollTo` once and never saw it.
 
+### Packet 5 · V038 — Verify B, 20 September 2026 (the versioned step pointer)
+
+390×844, signed out, `national-income`, dev server in this worktree. Full report:
+`audit/runs/packet-5/verify-b.md`; what changed, per file:line: `audit/runs/packet-5/built.md`.
+
+The two decks, measured by `curl` of the served payload through `countSteps`/`contentVersion` in a
+separate process rather than read out of the running app: live `steps 14 version 14.chvz90`, draft
+`steps 29 version 29.m4wude`. Every version the browser then wrote matched those strings.
+
+- Legacy bare-integer pointer `"13"` + `?draft=1` → **"This topic has been rebuilt … It now has 29
+  steps"** with Start again / Jump to the end, deck at **STEP 1 OF 29**, no resume banner, pre-test
+  offer held back, and **the stored `"13"` untouched**. Buttons 60px; no horizontal scroll at 390.
+- Jump to the end → step 29 of 29, "Complete topic ✓", pointer `{"v":"29.m4wude","s":28}`.
+- Control: `{"v":"29.m4wude","s":9}` + `?draft=1` → the ordinary banner, "You left off at step 10 of
+  29", pointer untouched. A matching pointer resumes exactly as before.
+- The evidence file's destructive step, reversed: the same draft-version pointer against the LIVE
+  deck now shows the notice and "It now has 14 steps" at STEP 1 OF 14, instead of "Step 14 of 14 ·
+  100% · Complete topic ✓" with the key silently rewritten.
+- Start again → step 1 of 14, pointer `{"v":"14.chvz90","s":0}`; Next ×2 → step 3 of 14.
+- Cleared storage, live deck → unchanged first-visit path (pre-test offer, STEP 1 OF 14, no banners).
+- Console: only the signed-out 401.
+
+Left for whoever ships the checkpoint: a server-side rewrite that PRESERVES the step count is
+invisible to the DB's `total_steps` proxy (the local fingerprint covers it on the student's own
+device). Closing that needs a `content_version` column on `user_content_progress` and a founder-run
+SQL file. Every staged rebuild in packets 21 and 31-37 changes the step count, so it is not on the
+5/7 critical path.
+
+### V038 — Verify A round 1 REJECTED, fix round 1 done (21 September 2026, Opus 5)
+
+The rejection was correct. `restartRebuilt` wrote only the local pointer and never called
+`onPersistStep`, so a signed-in student's old-deck row (`{furthest_step:13, total_steps:14}`)
+survived the tap; `resolvePointer` still scored it as another version standing further on than
+anything valid, and the notice re-rendered on the next frame. `skipToEndRebuilt` did persist, and
+the comment above the pair asserted that both did. The core defect was and is closed — no
+"step 14 of 29 · 48%", no 18→13 rewrite — but the founder decision's start-again half was broken.
+
+Fix: `components/LearnModeTab.jsx:354-368` calls `onPersistStep?.(0, totalSteps)` before
+`onStepChange(0, deckVersion)`, `onPersistStep` added to the deps. `persistLearnStep` already drops
+a high-water mark from another deck length, so the write lands as `{furthest_step:0,
+total_steps:29}` rather than being carried back to 13 by `Math.max`.
+
+**Verify B, fix round, 390×844, signed out, `?draft=1`, `national-income`.** Legacy pointer `"13"`
+→ "This topic has been rebuilt · It now has 29 steps …", Step 1 of 29, no resume banner, buttons
+60 px, scrollWidth 390, pointer still `"13"` while the notice is up. Tap **Start again** → the
+notice is gone and stays gone (re-checked after the render that used to bring it back), Step 1 of
+29, pointer `{"v":"29.m4wude","s":0}` — the same version string `contentVersion` produces from the
+curl'd payload in a separate process. Control: pointer `{"v":"29.m4wude","s":9}` → no rebuilt
+notice, ordinary resume banner "You left off at step 10 of 29", pointer untouched. No 404/5xx.
+
+Verified independently as the rule asks: `audit/runs/packet-5/verify-restart-ab.mjs` A/Bs the
+rejected build against this one under the same oracle, with the write rules transcribed from
+`StudyApp.jsx` rather than imported and the component source parsed with comments stripped. The
+control arm still fails, which is what makes the treatment arm evidence. Unit test at
+`lib/learn-steps.test.mjs:277-311`. Gate: `npm test` 212/212, build/validate/recalls/exposure/
+contrast all exit 0 (`audit/runs/packet-5/fix-round-gate.log`). V038 re-claimed; `unverified 5`
+still blocks until Verify A round 2 confirms it. Staged, NOT committed.
+
+Noted and deliberately not fixed here (V038 only): the completion screen's `onRetry`
+(`components/LearnModeTab.jsx:504-512`) resets scores and moves the local pointer to 0 without
+persisting, so a signed-in student's row keeps the last step and the next visit resumes at the end.
+Unchanged by V038 in either direction; it is a resume-UX item for whoever owns packet 5.1's family.
+
+
+
 ## Packet 13 spec — the off-spec strip and dedupe (built and VERIFIED 14 September 2026; Verify A passed on round 4 — D010 and D011 confirmed, `unverified 13` clear; all content published to live)
 
 **What it had to make true.** No framework the IAL specification does not contain is taught or assessed anywhere in
@@ -7930,3 +8287,116 @@ started it after this bookkeeping pass ran.
 Staged by this session: `audit/PROGRESS.md`, `audit/NEXT.md` (this section) only, each with an explicit
 `git add <path>`. No commit. `audit/EXAM-PRACTICE.md` not opened. Nothing else in the shared index was
 touched.
+
+
+## Handoff — packet 37 closed (brain)
+
+**Bookkeeping pass only, 2026-09-20: no content authored, nothing fixed, nothing committed.** Verified
+the true state independently before writing anything — reran `node audit/scripts/ledger.mjs unverified 37`
+(gate clear) and `node audit/scripts/check-staged-drafts.mjs national-income` (matches, 0 drift) myself,
+then read `audit/runs/packet-37/verify-a.md`, `verify-b.md`, `verify-b-fix.md` and `built.md` in full.
+This supersedes the previous "packet 37 closed (brain)" handoff above (19 Sep), which was correct for
+its moment — the fix round had FAILED to reach the draft then — but is now stale: a second fix round on
+20 Sep landed both things the founder ruled on, and an independent third-pass re-walk confirms it.
+
+**The books must carry both facts together: `2dc7c70` (18-19 Sep) already committed the packet's
+earlier build; today's round adds a fix on top of it, staged in the index, not committed.** Nothing in
+this pass touched that commit or created a new one.
+
+**Ledger: clean.** `ledger.mjs packet 37` → 34 items, 33 confirmed / 1 wont-fix (`specGap-05`) / 0 open.
+`unverified 37` → "gate clear: every claimed item is confirmed and no scope is left unclaimed." Verify A:
+30 of 30 confirmed, round 1, zero rejections.
+
+**Walkthrough: one defect filed out of scope, one defect fixed and verified three separate ways.**
+
+- **Filed out, not this packet's.** The AD/AS diagram's "Tap to enlarge" opens at 858 CSS px inside a
+  390 px pane — the programme-wide enlarge-modal defect **`V037`** already names, filed on packet 11.
+  Untouched here, per the founder's explicit scoping, and still untouched today.
+- **The circular-flow label collision (step 4) — fixed and confirmed on the served draft.** `verify-b.md`
+  (19 Sep) measured `← goods and services` overlapping HOUSEHOLDS (19.5×7.9 CSS px), FIRMS (19.5×7.9 CSS
+  px) and the real-flow caption (91.4×3.1 CSS px). A first fix-round attempt that same day authored the
+  reposition correctly at the source (`scripts/_packet37-diagrams.mjs`) but could not reach the draft —
+  `--stage --dump` exited 1 on 8 new `recall.recoverable` DEBT caused by another session's uncommitted,
+  unbaselined validator change — and `verify-b-fix.md`'s first re-walk confirmed the served draft still
+  showed all three collisions: FAIL. **That blocker is gone as of today**: `recall.recoverable` is
+  committed (`12b7e2e`/`f0c6e29`) at tier INFO. This round rewrote the eight recalls at the source
+  (`scripts/_packet37-content.mjs`, teaching text untouched, each recall moved from restating the
+  sentence above it to a fresh applied case) and let `--dump` carry the already-staged label fix through
+  with it: **`--stage --dump` → exit 0, 0 new BLOCK / 0 new DEBT** (0 BLOCK / 0 DEBT / 3 INFO, down from
+  11; no `recall.recoverable` among the three). `check-staged-drafts.mjs` → matches, new-vs-new this
+  time. `npm run recalls` exit 0. `npm test` 207/207. **Independently re-walked twice more**: the fix
+  round's own re-walk (`verify-b-fix-round.md`) and a third pass by a session that authored neither fix
+  round (`verify-b-fix.md`, "Round 3", 20 Sep) both measure step 4 at 0 text/text overlaps and 0 glyphs
+  outside the canvas, clearing the boxes above by 4.5 CSS px and the caption below by 4.8 CSS px, and
+  confirm all eight rewritten recalls render and grade correctly on the served draft. **Outcome: fix
+  applied; re-walk clean.**
+- **Step-pointer hazard, filed on packet 5, still open.** `localStorage.revvy_learnmode_1_national-income_section`
+  is a bare integer shared by the live 14-step deck and the staged 29-step deck. `node audit/scripts/ledger.mjs packet 5`
+  names it: **`V038`, "Version the Learn Mode step pointer,"** category `feature`, status `open` — a
+  publish prerequisite, not this packet's to fix. Reproduced again in today's Round 3 re-walk (a reload
+  resumed the deck at step 29; the pointer had to be cleared to walk from step 1), so it is still live,
+  unchanged by this round.
+
+**One correction to the fix round's own premise, carried from `verify-b-fix.md` Round 3, worth recording
+here too:** the fix round's brief described the eight findings as DEBT under a "now-committed rule";
+they are in fact tier INFO in the committed validator (`lib/content-validator.mjs`), and the rule's own
+description names this packet's eight among the reasons it is INFO and gated separately by
+`npm run recalls`, not by the packet's own DEBT gate. This does not change what was done — the founder's
+instruction was to fix the eight rather than wait for a baseline, and they are fixed — it changes what a
+clean `--dump` exit code means: it would have been 0/0 on the unfixed section too, since INFO findings
+are not counted there. The evidence that the eight are actually gone is the measured 0 in `verify-b-fix.md`
+and `verify-b-fix-round.md`, not the runner's exit code alone.
+
+**Publish command**, for after the packet 5/7 checkpoint clears (V038 must ship first — rule stands,
+unchanged):
+
+```
+node scripts/publish-section.mjs national-income --confirm
+```
+
+No `--stage --dump` is needed first this time — today's round already ran it and the fix is in the
+staged `draft` column (confirmed via `node scripts/publish-section.mjs` with no args, which lists
+`national-income` among sections with unpublished drafts, read-only, run this session).
+
+**D013 post-publish census step:** neither `verify-b.md` nor either of today's re-walk files
+(`verify-b-fix.md`, `verify-b-fix-round.md`) names a census step, so nothing is added here under that
+instruction. For the record, unchanged from `built.md` and the prior handoff: `packet-13-census.mjs`
+reads the *published* `data` column, so it will keep naming `aggregate-demand` until both
+`aggregate-demand` and `national-income` publish; re-run the census after both and confirm the D011
+block reads "nowhere" (`audit/SPEC-OWNERSHIP.md:22`).
+
+**Next unclaimed packet.** `git status --short | grep packet-` shows working-tree traces only for
+packets 0, 2, 28, 32-37 — nothing for 38 or above. Reconfirmed the open counts this session:
+
+| packet | section | open items |
+|---|---|---|
+| 38 | macroeconomic-objectives-policies | 27 |
+| 39 | trade-global-economy | 43 |
+| 40 | balance-payments-exchange-rates | 29 |
+| 41 | external-influences | 32 |
+
+**Packet 38 (`macroeconomic-objectives-policies`, Economics 2.3.6, 27 open) is free** — lowest number,
+not started, no trace of another session's work on it in `git status`, unchanged from the 19 Sep
+handoff's own conclusion. Confirm again before claiming it: another session may start it after this
+bookkeeping pass runs.
+
+Staged by this session: `audit/PROGRESS.md`, `audit/NEXT.md` (this section) only, each with an explicit
+`git add <path>`. No commit. `audit/EXAM-PRACTICE.md` not opened. Nothing else in the shared index was
+touched.
+
+## Handoff — Packet 5 Fix Round 3 (written 21 September 2026, Haiku 4.5)
+
+**The blocking defect.** Verify A round 2 rejected V038 with evidence: `contentVersionSince` was absent from the server-rendered payload, preventing `resolvePointer` from correctly handling legacy pointers on the first render (before API fetch).
+
+**The fix.** Added `contentVersionSince` (the `published_at` field) to the SSR payload in three topic pages and `publicSectionPayload`. This ensures that on first render, legacy pointers are handled correctly without premature stamping.
+
+**What changed:**
+- `app/economics/[unit]/[topic]/page.jsx`: select published_at, pass to publicSectionPayload
+- `app/business/[unit]/[topic]/page.jsx`: same
+- `app/page.js`: same
+- `lib/preview-limits.js`: accept and include contentVersionSince
+
+**Verification.** All gates pass (npm test 227/227, npm run build/validate/recalls/exposure all exit 0). Independently verified with `audit/runs/packet-5/verify-ssr-payload.mjs` testing the three scenarios: null (never republished), undefined (should not happen now), and date at/after epoch.
+
+**Next session.** V038 is fixed and awaiting Verify A round 3. File is `audit/runs/packet-5/fix-round-3-brief.md`.
+
