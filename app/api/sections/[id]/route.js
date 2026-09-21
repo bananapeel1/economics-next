@@ -55,9 +55,17 @@ export async function GET(request, { params }) {
   const wantDraft = process.env.NODE_ENV !== 'production'
     && new URL(request.url).searchParams.get('draft') === '1';
   const cols = wantDraft ? 'data, draft' : 'data';
+  /*
+   * V038. `published_at` on `section_content` only, and only because the Learn Mode step pointer
+   * needs it: a pointer saved before packet 5 is a bare integer with no deck identity, and the one
+   * fact that can tell whether it belongs to the deck now being served is whether that deck became
+   * current after unversioned pointers stopped being written. See `LEGACY_POINTER_EPOCH` in
+   * `lib/learn-steps.js`. Nothing else reads it, and it is not part of `sectionPayload`.
+   */
+  const contentCols = `${cols}, published_at`;
 
   const [content, notes, diagrams, flashcards, quiz, mistakes, practice, extras] = await Promise.all([
-    db.from('section_content').select(cols).eq('section_id', id).maybeSingle(),
+    db.from('section_content').select(contentCols).eq('section_id', id).maybeSingle(),
     db.from('section_notes').select(cols).eq('section_id', id).maybeSingle(),
     db.from('section_diagrams').select(cols).eq('section_id', id).maybeSingle(),
     db.from('section_flashcards').select(cols).eq('section_id', id).maybeSingle(),
@@ -86,7 +94,20 @@ export async function GET(request, { params }) {
     extras: payload(extras) || { chains: [], evaluation: [] },
   }, { isPremium });
 
-  return NextResponse.json(body, {
+  /*
+   * V038: when the deck being served became the deck, not when the row was created.
+   *
+   * Live: `section_content.published_at`, null for a section never republished since packet 2 added
+   * the column — which is the honest answer, and reads as "older than any pointer".
+   * Draft: a staged deck has never been published to anybody, so no pointer on any device can have
+   * been written against it; the request time says exactly that and nothing weaker would.
+   */
+  const servingDraft = wantDraft && content.data?.draft != null;
+  const contentVersionSince = servingDraft
+    ? new Date().toISOString()
+    : (content.data?.published_at ?? null);
+
+  return NextResponse.json({ ...body, contentVersionSince }, {
     headers: {
       // A draft preview must never be cached: it is re-staged repeatedly while a packet is built.
       'Cache-Control': wantDraft ? 'no-store' : 'private, max-age=300, stale-while-revalidate=3600',

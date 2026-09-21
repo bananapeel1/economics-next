@@ -96,7 +96,7 @@ export default async function EconomicsTopicPage({ params }) {
    * to everyone: it may not hold anything that depends on entitlement, in either direction.
    */
   const [content, notes, diagrams, practice] = await Promise.all([
-    supabase.from('section_content').select('data').eq('section_id', topic).single(),
+    supabase.from('section_content').select('data, published_at').eq('section_id', topic).single(),
     supabase.from('section_notes').select('data').eq('section_id', topic).single(),
     supabase.from('section_diagrams').select('data').eq('section_id', topic).single(),
     supabase.from('section_practice').select('data').eq('section_id', topic).single(),
@@ -107,6 +107,7 @@ export default async function EconomicsTopicPage({ params }) {
     notes: notes.data?.data,
     diagrams: diagrams.data?.data,
     practice: practice.data?.data,
+    contentVersionSince: content.data?.published_at ?? null,
   });
 
   // Get section and unit info for SEO

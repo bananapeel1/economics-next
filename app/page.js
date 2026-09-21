@@ -62,7 +62,7 @@ export default async function HomePage({ searchParams }) {
   let initialData = null;
   if (firstSectionId) {
     const [content, notes, diagrams, practice] = await Promise.all([
-      supabase.from('section_content').select('data').eq('section_id', firstSectionId).single(),
+      supabase.from('section_content').select('data, published_at').eq('section_id', firstSectionId).single(),
       supabase.from('section_notes').select('data').eq('section_id', firstSectionId).single(),
       supabase.from('section_diagrams').select('data').eq('section_id', firstSectionId).single(),
       supabase.from('section_practice').select('data').eq('section_id', firstSectionId).single(),
@@ -72,6 +72,7 @@ export default async function HomePage({ searchParams }) {
       notes: notes.data?.data,
       diagrams: diagrams.data?.data,
       practice: practice.data?.data,
+      contentVersionSince: content.data?.published_at ?? null,
     });
   }
 
