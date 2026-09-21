@@ -14125,10 +14125,10 @@
    "rank": 1,
    "text": "Give the Trade Blocs block its own assessment: at least 3 MCQs (FTA vs CU, trade creation vs diversion scenario, effect of a lower CET), one 'Explain'/'Examine' practice question, and either a real trade creation/diversion diagram or delete the 'show it on a diagram' instruction in examMatters.",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "The premise is dead and the work is done in the section the material moved to. I read the causes-effects-globalisation DRAFT (packet 34's rebuild, 5 blocks, 26 quiz) straight out of the DB: Brexit 0, tariff-free 0, trade creation 0, trade diversion 0, common market 0 - there is no Trade Blocs block left there to give an assessment to, and no 'show it on a diagram' instruction left unfulfilled. In trade-global-economy the bloc material now has its own assessment: 9 MCQs across blocks 5 and 6 including free-trade area against customs union, a creation-or-diversion scenario worked at two external tariff rates (50% -> creation, 20% -> diversion), and the instrument a member gives up to the common external tariff; practice 'Explain the difference between a free-trade area and a customs union (4)', 'Analyse two costs of joining a trading bloc (6)', 'Evaluate whether a country should join a customs union (20)'; and a real 'Trade Diversion' diagram plotting price paid against resources given up.",
    "note": null
   },
   {
@@ -14138,10 +14138,10 @@
    "rank": 2,
    "text": "Fix the content errors: Brexit realExample ('lost tariff-free access' is false; TCA is zero-tariff), define trade diversion by preferential tariff removal rather than 'the CET forces', add the spec term 'common market', and introduce TNC = MNC in block 2 so the quiz/practice vocabulary matches the notes.",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b, round 2 2026-09-21",
+   "evidence": "RE-JUDGED after the fix round; my round-1 rejection is answered and this overwrites the builder's self-confirmation. Measured on the re-staged bundle (snapshot byte-equal to the DB draft on all 8 tables, checked again). Clause 2, the one I rejected on: the six superseded live extras entries are gone - I read section_extras.data and section_extras.draft side by side and NONE of the live chain titles (Comparative advantage shows gains from trade / Tariffs create welfare loss and reduce welfare / Trading blocs create trade creation and diversion) or live evaluation titles (Comparative advantage has limitations as a guide to policy / Infant industry protection may be justified in some cases / Trading blocs may undermine global free trade) survives in the staged bundle. extras is 6 chains and 6 frames, all authored. The literal string 'common external tariff shifts imports' is 0 hits, and I hunted the framing four more ways rather than trusting that one string: 'the CET forces' 0; 'diversion ... common external tariff' within a sentence resolves to exactly two sentences, both in the 20-mark Evaluate guidance and both using the CET correctly as an evaluation CRITERION (how far it differs from the country's own rate), not as the cause; the only 'external tariff + forces' hit in the bundle is the takeaway 'No common external tariff is what forces a free-trade area to police rules of origin', which is about rules of origin and is right. So the section now defines trade diversion one way only, by preferential tariff removal, in content[6] > trade-diversion. Nothing was lost to the sweep: I re-ran lib/content-validator.mjs validateSection over both snapshots with the live contextFor and got 39a 3 BLOCK / 14 DEBT against 39b 0 BLOCK / 1 baselined DEBT, spec.uncovered 0, 0 new findings against baseline+39a, 16 cleared; recall-census.mjs still reports 0 of 37 recoverable; all 14 practice items still pass the census. And 39a's work is still intact after the re-stage - 4 blocks, 21 quiz, 6 practice, 4 diagrams, 5 mistakes, 22 flashcards and 23 recalls all byte-identical under key-order normalisation, with every 39a quizIndex and practiceIndex still resolving to the same id. The other three clauses were already closed in round 1 (Brexit 0 hits, 'common market' built as the spec term, TNC/MNC resolved by packet 34's one-term rebuild).",
    "note": null
   },
   {
@@ -14356,10 +14356,10 @@
    "kind": "specGap",
    "text": "'Common market' as the spec term for the third level of integration, and 'economic union' as a level: absent (unsure whether IAL requires economic union explicitly).",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "Both halves, and the brief is right about the specification - I checked audit/raw/econ_spec.txt:1660-1665 myself and 4b lists FOUR types: free-trade areas, customs unions, common markets, economic and monetary unions. audit/raw/spec-items.json has 46 leaves under ECON-4.3.2 with 4b-1..4b-4 and no fifth, so 'economic union' as a separate level does not exist in this specification. 'Common market' is built as the spec term: content[5] > common-markets, the LADDER constant, the ladder diagram, a flashcard, a note and an MCQ. Economic and monetary union is taught as one rung and the packet says so in the body, in the takeaway, in the diagram checklist and in an MCQ keyed to 'One level of integration'. The only occurrence of the bare phrase 'economic union' in the staged bundle is in that item's explanation, saying it is not a rung.",
    "note": null
   },
   {
@@ -14368,10 +14368,10 @@
    "kind": "specGap",
    "text": "Trade creation and trade diversion diagram: examMatters demands it, none provided. Unsure whether the IAL spec requires the diagram, but the concepts sit under spec 4.2 trading blocs, not 4.1.",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "The diagram exists and the mis-citation is corrected. 'Trade Diversion' is diagram 10 of 11 in the staged bundle, pinned to the 'Joining a Bloc' check-in: paired bars for the price the buyer pays (84 -> 80) against the resources the country gives up (70 -> 80), a two-colour legend and the caption 'Price falls 4, real cost rises 10'. I measured it in a real browser at the app's own DM Sans - no text overlap, nothing outside the 400x360 frame, no face under 12, and every label clears 4.5:1 against the shape behind it. On the numbering: the finding says the concepts sit under 'spec 4.2', and audit/raw/econ_spec.txt:1565 shows 4.2 is 'Assessment information' - the only content areas in Unit 4 are 4.3.1, 4.3.2 and 4.3.3, and trading blocs are 4.3.2 4b and 4c. The brief is right and this is the 154-item UK-GCE-numbering class again. The globalisation draft has 0 hits for trade creation or diversion, so nothing there still demands the diagram.",
    "note": null
   },
   {
@@ -15051,10 +15051,10 @@
    "rank": 0,
    "text": "Add two content blocks (or split into separate sections): 'Terms of Trade' (formula, causes, impact, harmful vs beneficial improvement) and 'Trading Blocs' (FTA→CU→common market→monetary union, trade creation vs diversion, conflict with WTO) so that quiz 1,2,3,6,9,11, practice[2] and [4], diagrams[3] and [4] are taught before they are tested; move quiz[8] (Marshall-Lerner) to the exchange-rate section.",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "All three clauses. 'Terms of Trade' is 39a's blocks 3 and 4 (7 and 4 subsections), which I confirmed survive byte-identical. 'Trading Blocs' is 39b's blocks 5-7: the WTO and the bloc/WTO conflict, the four rungs FTA -> customs union -> common market -> economic and monetary union, and creation vs diversion. So quiz 1,2,3,6,9,11, practice 2 and 4 and diagrams 3 and 4 are all taught before they are tested - I resolved every block's check-in through the app's own resolvers and each is on its own block. Marshall-Lerner is moved, not merely deleted: 0 hits in this section, 15 in the balance-payments-exchange-rates draft, which has a 'The Marshall-Lerner Condition' subsection and quiz[22] on it.",
    "note": null
   },
   {
@@ -15077,10 +15077,10 @@
    "rank": 2,
    "text": "Fix diagrams[0] so specialisation shows an unambiguous output gain (partial specialisation by Country A: 30W+35C, B: 40W → 70W+35C) and rewrite the tariff flow result in methods-of-protectionism to 'consumer surplus lost exceeds producer surplus gained plus tariff revenue'.",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "Both clauses. Clause 2 (tariff flow result): the wrong comparison is 0 hits in the staged bundle and the right one is in content[9] the-four-areas body[2] plus the block takeaway. Clause 1: diagram 'The Gain From Specialising' (carried from 39a, byte-identical under key-order normalisation) shows PARTIAL specialisation with an unambiguous gain and no trade-off - SVG text nodes 'Without trade | With trade | 80 | 100 | Grain | 50 | 50 | Cloth', caption 'Cloth is unchanged at 50 and grain rises from 80 to 100, so the gain needs no trade-off to justify it', checklist 'Partial specialisation, not complete: the cloth bars are deliberately identical'. The finding's own numbers (30W+35C / 40W) are not used; the defect it describes is not reachable.",
    "note": null
   },
   {
@@ -15090,10 +15090,10 @@
    "rank": 3,
    "text": "Add recall widgets: a reorder on the tariff causal chain (tariff → Pw+t → domestic supply expands/demand contracts → imports fall → DWL b+d), a fillin on tariff welfare areas (CS loss = a+b+c+d / PS gain = a / revenue = c / DWL = b+d), and a fillin on the opportunity-cost calculation from the CA table.",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "All three widgets exist in the staged bundle, which now carries 37 recalls (23 from 39a byte-identical, 14 new). Tariff causal chain: content[8] non-tariff-barriers recall, type reorder - tax added to the price / domestic producers expand along supply / buyers cut back / imports squeezed from both sides and fall. Tariff welfare areas: content[9] the-four-areas recall, type fillin, on figures the step does not print (1,200 / 450 / 500 -> 950, 250, 125), with the a/b/c/d identities carried by the prose and by the quiz item 'which areas represent the welfare loss' keyed to 'b and d'. Opportunity cost from the CA table: 39a's 'Absolute and Comparative Advantage' and 'Working Out the Gain' fill-ins, byte-identical. Noted: the reorder stops at 'imports fall' and does not carry the finding's final 'DWL b+d' link, which is taught and tested one block later; and the welfare fill-in asks the arithmetic rather than the labels, which is what the zero-recoverable rule forces. 0 of 37 recalls are answerable by scrolling up - I ran audit/scripts/recall-census.mjs --section trade-global-economy against the draft corpus myself.",
    "note": null
   },
   {
@@ -15102,12 +15102,12 @@
    "kind": "topFix",
    "rank": 4,
    "text": "Realign practice with IAL conventions: 'Define' 2 marks; 'Explain' 4 marks with the tariff diagram required; replace 'Outline' with 'Explain'; present 10- and 20-mark guidance as levels (KAA + Evaluation) with an explicit diagram and application requirement, and add the Appellate Body paralysis to the WTO section as the key contemporary limitation.",
-   "packet": 39.1,
+   "packet": 12.4,
    "status": "open",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "PARTIAL and reassigned. 39b built the clauses that are true of this specification: Define is 2 marks, Explain is 4 with the tariff item rebuilt from 6, Outline is gone, and the Appellate Body limitation is in the WTO subsection. NOT built, because the finding is wrong about IAL Economics: it asks for '10- and 20-mark guidance as levels' and there is NO 10-mark item in this subject (Appendix 6 and tariff-census.json give 2, 2/4, 4, 4, 6, 8, 14, 20); and it requires a diagram inside an Explain, where Appendix 6 makes Draw the command word that requires one. The levels-marking clause for the 14- and 20-mark items is real work and belongs with the model-answers packets, not here."
   },
   {
    "id": "C-trade-global-economy-accuracy-01",
@@ -15115,10 +15115,10 @@
    "kind": "accuracy",
    "text": "content[1] 'Protectionism and the WTO' > methods-of-protectionism > body[3] flow.result: Result reads 'Net welfare loss — producer gains are smaller than consumer losses plus government revenue'. That inequality is trivially true and is not the welfare argument. The net loss exists because consumer surplus lost (a+b+c+d) exceeds producer surplus gained (a) PLUS government revenue (c). As written it teaches the wrong comparison.",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "Gone and replaced. Grepped the staged bundle (audit/snapshots/packet-39b-bundle__economics__trade-global-economy.json, which I verified byte-equal to the DB draft on all 8 tables): 'producer gains are smaller than consumer losses plus government revenue' = 0 hits, and the 'Protectionism and the WTO' block that carried it is absent from content[]. The right comparison is now stated four ways over one market: content[9] 'Who Gains and Who Loses' > the-four-areas body[2] ('300 plus 100 plus 400 plus 100 is 900, so the net loss is 200: what consumers lose exceeds what producers gain PLUS what the government raises'), the block takeaway, mistakes 'Saying the welfare loss is because producers gain less than consumers lose', and a quiz item keyed to '900 exceeds 300 plus 400'. Re-derived from the printed quantities: at 20 D=100 S=20, at 30 D=80 S=40, so a=(20+40)/2x10=300, b=0.5x20x10=100, c=10x40=400, d=0.5x20x10=100, CS loss=(100+80)/2x10=900, and 300+100+400+100=900 exactly.",
    "note": null
   },
   {
@@ -15151,10 +15151,10 @@
    "kind": "quiz",
    "text": "q2: Correct, but trading-bloc types are not in content[] (only diagrams[4] and flashcards). Can appear in the pre-test before anything is taught.",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "Bloc types are taught in content[] before they are tested: content[5] 'The Four Types of Trading Bloc', 5 subsections (the-four-rungs, free-trade-areas, customs-unions, common-markets, economic-and-monetary-unions), 4 pinned quiz items. Simulated the deck with the app's own resolvers (lib/learn-steps.js buildSteps + components/learn-mode/utils.js resolvePinnedItem/fallbackItemForBlock): 10 blocks, 61 steps, 10 check-ins, every check-in resolves a diagram, a quiz item and a practice item; the bloc check-in asks 'A free-trade area needs rules of origin because:'. The pre-test can no longer serve an untaught item: lib/pretest-pool.js is deterministic since F079/V015 and returns quiz[0..2], all on 39a's material.",
    "note": null
   },
   {
@@ -15163,10 +15163,10 @@
    "kind": "quiz",
    "text": "q3: Correct, but trade creation/diversion is not in content[] (only extras.chains[2], flashcards and common_mistakes[2]).",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "Trade creation and diversion are in content[]: content[6] 'Joining a Bloc' > trade-creation and > trade-diversion, worked from one cost table (home 100, partner 80, outside 70) at two tariff rates. Re-derived both: at 50% partner lands 120 and outsider 105 so home supplies at 100, joining takes the real cost to 80 (saving 20); at 20% partner 96 and outsider 84 so the outsider supplies at a real cost of 70, joining takes the price to 80 while the real cost rises to 80 - price falls 4, real cost rises 10. The block pins 5 quiz items and its check-in asks the 50% creation scenario. The subsection recall uses different figures (90/75/60 at 30% -> 78, outsider, 75, +15), which I checked.",
    "note": null
   },
   {
@@ -15187,10 +15187,10 @@
    "kind": "structure",
    "text": "Coverage vs assessment mismatch: content[] teaches only comparative advantage, benefits of free trade, protectionism tools/arguments, and the WTO. Terms of trade (quiz 1,6,11; practice 4; diagrams[3]; flashcards[14]; extras.chains[3]), trading blocs / trade creation-diversion (quiz 2,3,9; practice 2; diagrams[4]; flashcards[10-13]; extras.chains[2]; common_mistakes[2]) and Marshall-Lerner (quiz 8) are assessed but never taught. 7/14 MCQs and 2/5 practice questions are untaught.",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "Coverage matches assessment. Staged bundle: 10 blocks / 51 subsections / 46 quiz / 14 practice / 11 diagrams / 44 cards / 37 recalls. Terms of trade is 39a's blocks 3-4; trading blocs and creation/diversion are 39b's blocks 6-7; protection is blocks 8-10. Marshall-Lerner is 0 hits here and has a home in the section the finding names: balance-payments-exchange-rates draft has 15 hits, a subsection 'The Marshall-Lerner Condition' and quiz[22] on the condition. Every quiz and practice item now sits under a block that teaches it, bar two block-less quiz items whose material is taught in blocks 5 and 6.",
    "note": null
   },
   {
@@ -15199,10 +15199,10 @@
    "kind": "structure",
    "text": "Only 2 Learn Mode steps (block 0: comparative-advantage + benefits-free-trade; block 1: methods-of-protectionism + the-wto). Each pair is coherent, but the whole spec area is compressed into two screens; the protectionism section crams four tools, four arguments for, four against and a tariff flow into three paragraphs with no explanation of the tariff diagram in the body.",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": "verify-a packet 39 2026-09-21",
-   "evidence": "REJECTED as partial. Clause 1 is built: the section goes from 2 blocks / 4 subsections to 5 blocks / 25 subsections (content-validator section.counts run by me over the staged bundle: '5 blocks, 25 subsections, 23 recalls, 26 quiz, 8 practice, 7 diagrams'), so sub-topics 1-3 are no longer two screens. Clause 2 is untouched and demonstrably still reachable: the finding's second half is 'the protectionism section crams four tools, four arguments for, four against and a tariff flow into three paragraphs with no explanation of the tariff diagram in the body', and block 4 in audit/snapshots/packet-39a-bundle__economics__trade-global-economy.json:1349-1430 is BYTE-IDENTICAL to the live block after stripping the three pin keys (I diffed it against the live row via loadBundle). Still 2 subsections, and the gate still fires step.words 373 on sub:methods-of-protectionism and 365 on sub:the-wto over the 350-word budget. No other open id for this section carries that clause (checked topFix-01, topFix-03, structure-07, structure-09), so confirming would delete it from the coverage ledger. Re-claim it from packet 39b when the protectionism block is rewritten.",
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "The clause Verify A left open on 39a is closed. The 2-subsection 'Protectionism and the WTO' block is absent from the staged content[] and is replaced by three blocks and thirteen subsections: 'Why Governments Restrict Trade' (5), 'The Tools of Protection' (4 - tariffs, quotas, non-tariff barriers, subsidies), 'Who Gains and Who Loses' (4). The two step.words findings the rejection cited (373 on methods-of-protectionism, 365 on the-wto) are CLEARED: I ran lib/content-validator.mjs validateSection over both snapshots with the live contextFor and got 39a 3 BLOCK / 14 DEBT against 39b 0 BLOCK / 1 DEBT, with step.words appearing 0 times on 39b. The tariff diagram is now explained in the body (content[8] tariffs, content[9] the-four-areas).",
    "note": "Verify A rejected this as partial and the rejection is accepted. 39a built clause 1 (2 blocks / 4 subsections -> 5 blocks / 25 subsections, 2 steps -> 30). Clause 2 is untouched: the protectionism block is carried byte-identical, still 2 subsections, still over the 350-word budget on both. Reassigned to packet 39.1, which rewrites that block."
   },
   {
@@ -15235,10 +15235,10 @@
    "kind": "structure",
    "text": "distributeItems (utils.js:9-23) with 14 quiz items and 2 steps gives step 0 → quiz[0] (fine) and step 1 → quiz[1] (ToT calculation, untaught). Practice sorted by marks gives step 0 → practice[0] Define CA (4), step 1 → practice[4] Outline ToT (4). So the protectionism/WTO step's assessment never touches protectionism or the WTO.",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "distributeItems is bypassed: every block carries explicit quizIndices and practiceIndices, and I resolved all ten check-ins through the app's own resolvers. Each block's check-in is on its own topic - the WTO block gets 'Under most-favoured nation...' and 'Explain two ways in which the WTO supports trade liberalisation (4 marks)'; The Tools of Protection gets the tariff quantity item and 'Explain two effects of imposing a tariff'; Who Gains and Who Loses gets the welfare-comparison item and 'Examine the impact of a tariff on consumers, producers and the government'. No check-in resolves to nothing.",
    "note": null
   },
   {
@@ -15247,10 +15247,10 @@
    "kind": "structure",
    "text": "PreTest draws 3 random from the 14-item bank (PreTest.jsx:9); with half the bank untaught, the expected pre-test contains ~1.5 questions the student cannot have learned, which reinforces the founder's 'pre-test demotivates' hypothesis for this section specifically.",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "The mechanism the finding describes no longer exists. lib/pretest-pool.js:36-41 removes every question a check-in will ask and takes the first PRETEST_MAX in stable order, not 3 at random. Simulated with the reserved set built as components/LearnModeTab.jsx:317 builds it, the pre-test is quiz[0] (absolute vs comparative advantage), quiz[1] (terms-of-trade indices), quiz[2] (pattern vs volume). All three are taught by 39a's blocks 1-3, so the expected count of untaught pre-test questions is 0 against the finding's ~1.5.",
    "note": null
   },
   {
@@ -15259,10 +15259,10 @@
    "kind": "structure",
    "text": "Takeaways do match their blocks (block 0: CA / static vs dynamic gains / frictions; block 1: protectionism DWL / WTO principles / regionalism). Block 1 takeaway 1 'arguments for it are often abused' is a value judgement stated as a takeaway; better to state the evaluation criterion (temporary, targeted, credible exit).",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "The value judgement is gone with its block: 'often abused' = 0 hits in the staged bundle (the live takeaway read 'Protectionism ... creates welfare loss - arguments for it are often abused'). Its replacement states the criterion the finding asked for: content[7] takeaway 0 'Infant and geriatric industries both ask for time; both fail without a credible end point', takeaway 2 giving the national-security test as a cheaper way to buy the same cover, and the subsection examMatters naming a credible end point, a target and who judges it.",
    "note": null
   },
   {
@@ -15283,10 +15283,10 @@
    "kind": "structure",
    "text": "Difficulty ramp is sensible (concept → gains → intervention → institutions) but ends at the WTO without returning to the numerical/diagrammatic skills the examMatters fields promise ('practise until this is automatic') — there is no worked tariff-diagram walk-through or numerical CA exercise in the flow.",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "The ramp no longer ends at the WTO. Block order is Specialisation -> Patterns -> Terms of Trade -> When the Terms Change -> Trade Liberalisation and the WTO -> Four Types of Trading Bloc -> Joining a Bloc -> Why Governments Restrict Trade -> The Tools of Protection -> Who Gains and Who Loses, so the last chapter is the quantitative one. The worked tariff walk-through is content[8] tariffs (20->30, supply 20->40, demand 100->80, imports 80->40, revenue 400) and content[9] the-four-areas (900 = 300+100+400+100), with 'A Tariff: Who Gets What' pinned to that check-in and a four-point drawing checklist. The numerical CA exercise is 39a's and survives byte-identical: the 'Absolute and Comparative Advantage' and 'Working Out the Gain' fill-ins are opportunity-cost calculations from a CA table.",
    "note": null
   },
   {
@@ -15307,10 +15307,10 @@
    "kind": "specGap",
    "text": "Trading blocs: types (free trade area, customs union, common market, monetary union) with examples, and costs and benefits of regional trade agreements including trade creation and trade diversion — absent from content[].",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "Types and costs/benefits are both in content[] now. Types: content[5] with a subsection per rung, each defined by the single freedom it adds, plus the 'The Four Types of Trading Bloc' diagram and 4 pinned MCQs. Costs and benefits: content[6] with all six of 4c in the specification's order - trade creation, trade diversion, costs and prices, economies of scale, transaction costs, movement of factors of production. Examples are anonymised worked ones (no named bloc), consistent with the programme's convention and with 39a. lib/content-validator.mjs spec.uncovered fired on ECON-4.3.2-4b-4 and 4c-6 for 39a's bundle and fires on neither for 39b's - I ran validateSection over both snapshots.",
    "note": null
   },
   {
@@ -15319,10 +15319,10 @@
    "kind": "specGap",
    "text": "Possible conflicts between regional trade agreements and the WTO — one sentence in the-wto body[2] plus extras.evaluation[2]; not developed (rules of origin, MFN exception under GATT Article XXIV, 'spaghetti bowl').",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "Developed into its own subsection: content[4] 'Trade Liberalisation and the WTO' > where-blocs-and-the-wto-conflict, three paragraphs - a bloc charges members less than non-members so it breaches most-favoured nation by construction and survives only as a carved-out exception; the exception's conditions (substantially all the trade, no higher barriers against outsiders); then rules of origin and overlapping blocs. 'rules of origin' is 19 hits and 'most-favoured nation' 21 in the staged bundle, against one sentence before. The block's check-in pins 'A Bloc Breaks the First Rule' and the quiz item 'Why is a trading bloc a problem for the WTO's first principle?'. GATT Article XXIV is not named; I checked the spec myself and audit/raw/econ_spec.txt:1675 words 4d as 'Possible conflicts between trading blocs and the WTO', so the mechanism rather than the jargon is the leaf and the brief is right about this.",
    "note": null
   },
   {
@@ -15355,10 +15355,10 @@
    "kind": "specGap",
    "text": "Impact of protectionist policies on consumers, producers, governments, living standards and equality — the tariff welfare analysis is only in the diagram; distributional effects (living standards, equality, effect on developing-country exporters) are not covered.",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "All five 5c leaves have teaching text, not just a diagram. content[9] 'Who Gains and Who Loses': the-four-areas (5c-1, consumers carry the 900 and it splits four ways), producers-and-governments (5c-2 and 5c-3, the 300 split between existing and new output, the 400 self-limiting, the quota raising nothing and the subsidy costing 400), protection-and-living-standards (5c-4, prices/choice/quality plus the dynamic effect and the concentrated local case), equality (5c-5, regressive on necessities, the protected-wage counter-channel, and rich-country protection falling on the agricultural and textile exports poorer countries sell). spec.uncovered on ECON-4.3.2-5c-5 fired for 39a and does not fire for 39b.",
    "note": null
   },
   {
@@ -15367,10 +15367,10 @@
    "kind": "specGap",
    "text": "Subsidies to domestic producers: listed as a tool but never analysed (no subsidy diagram, no welfare analysis).",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b, round 2 2026-09-21",
+   "evidence": "Re-confirmed; the caveat in my round-1 evidence is now spent and this replaces it. The analysis is unchanged and still re-derives: content[8] > subsidies-to-domestic-producers - a 10 per unit subsidy leaves consumers at the world 20 so demand stays 100, domestic supply moves 20->40, government pays 10x40=400, producers gain (20+40)/2x10=300, waste 100, half the tariff's 200 because there is no consumption distortion. Plus the pinned 'A Subsidy: the Price Does Not Move' diagram, a quiz item, a flashcard, a mistake and a fill-in on a different market (world 40, subsidy 8, supply 30->55, demand 120 -> 440, 90, 65). The label defect is fixed: S-prime now sits to the left of the dashed curve's foot and S and D at their curves' far ends. Re-measured in a real browser at the app's DM Sans over all 11 diagrams, with my own checks rather than the runner's - 0 text/text overlaps, 0 line-through-text (no length or axis exclusions), 0 out of frame, 0 faces under 12, and 0 labels under 4.5:1 against the shape behind them. The seven new diagrams are clean; the only crowding flags left are wrapped two-line labels on 39a's carried diagrams ('Emerging'/'economies' stacked 17 units apart), which are text wrap, not collision.",
    "note": null
   },
   {
@@ -17314,10 +17314,10 @@
    "kind": "specThin",
    "text": "4.3.2 4b Type of trading bloc: customs unions — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "content[5] > customs-unions is a full subsection: a customs union is a free-trade area plus a common external tariff, so an import pays the same duty whichever border it crosses and rules of origin between members become unnecessary; the price is that no member sets its own external tariff or signs its own trade deal. Carries a flow, a realExample, a misconception ('students say a customs union means free trade'), examMatters, and a match recall pairing each rung to the thing true only of it. Assessed by 'A free-trade area needs rules of origin because:' and 'Which policy instrument does a member give up on joining a customs union?', and by practice 'Explain the difference between a free-trade area and a customs union (4 marks)' and 'Evaluate whether a country should join a customs union (20 marks)'. A student could answer an exam question from it.",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -17326,10 +17326,10 @@
    "kind": "specThin",
    "text": "4.3.2 4b Type of trading bloc: common markets — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "content[5] > common-markets is a full subsection: a common market is a customs union plus free movement of the factors of production, with the efficiency gain (capital to where it is cheapest to run, labour to where the shortage is) and the uneven member-level effect (the sending member loses the output and often the training cost, the receiving member gains the output and the pressure on housing and services). Carries a misconception distinguishing factor movement from goods movement, examMatters naming both spec phrases, and a classify recall sorting changes by the rung they first become possible on. Assessed by 'Which freedom first appears at the common market rung?'. spec.uncovered no longer fires on ECON-4.3.2-4b-3.",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -17338,10 +17338,10 @@
    "kind": "specThin",
    "text": "4.3.2 4b Type of trading bloc: economic and monetary unions — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "content[5] > economic-and-monetary-unions is a full subsection: a shared currency, a single monetary policy and common rules on members' public finances, with the transaction-cost gain quantified (2% of a 25m flow is 0.50m a year, which I checked) and the cost stated as the lost instrument (one interest rate for members needing different ones, no depreciation, so adjustment falls on wages and prices). It also states explicitly that the specification names this as ONE rung. Assessed by 'The specification lists economic and monetary union as:' keyed to 'One level of integration', and by a reorder recall on the four rungs. spec.uncovered fired on ECON-4.3.2-4b-4 for 39a and does not fire for 39b.",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -17350,10 +17350,10 @@
    "kind": "specThin",
    "text": "4.3.2 4c Cost/benefit of bloc membership: costs and prices — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "content[6] > costs-and-prices is a full subsection on 4c-3: removing a tariff that is inside the price means dividing by 1.12, not taking 12% off the shelf price, so a 50 import falls to 44.64 and not to 44. I re-derived it: 50/1.12 = 44.642857 -> 44.64, and the stated fall of 5.36 against a naive 6 is right. It carries the pass-through to producers buying components, a misconception on exactly the arithmetic students get wrong, and examMatters citing Calculate at 2 or 4 marks with workings shown - which matches audit/raw/tariff-census.json (Calculate = 2 or 4 in economics).",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -17362,10 +17362,10 @@
    "kind": "specThin",
    "text": "4.3.2 4c Cost/benefit of bloc membership: transaction costs — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "content[6] > transaction-costs is a full subsection on 4c-5: what a trade costs on top of the thing traded (conversion spread, customs clearance, proving origin, exchange-rate risk premium), the aggregate (2% of a 25m flow is 0.50m a year, checked), and which rung removes which - with the point that a free-trade area ADDS one (rules of origin) while removing tariffs. Assessed by 'Which transaction cost does a free-trade area ADD rather than remove?' keyed to proving where a good was made, and carried by a flashcard. spec.uncovered no longer fires on ECON-4.3.2-4c-5.",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -17374,10 +17374,10 @@
    "kind": "specThin",
    "text": "4.3.2 4c Cost/benefit of bloc membership: movement of factors of production — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 39.1,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-39.1",
+   "verified_by": "verify-a packet 39b 2026-09-21",
+   "evidence": "content[6] > movement-of-factors is a full subsection on 4c-6, and it is taught twice from two angles (also content[5] > common-markets as the rung's defining freedom). It gives the bloc-level efficiency gain and the member-level distribution, which is what an evaluation needs, and examMatters ties it to Discuss at 14 marks - which matches the census. This is the leaf 39a recorded as accepted debt on the strength of the ladder diagram alone: lib/content-validator.mjs spec.uncovered fired on ECON-4.3.2-4c-6 for the 39a snapshot and does not fire for the 39b snapshot, which I measured by running validateSection over both.",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
