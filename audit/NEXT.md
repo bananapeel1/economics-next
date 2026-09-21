@@ -9159,7 +9159,19 @@ script file was edited.
 
 **What this packet learned for the next one.** The specification says Q&A pages should render annotation keys — this is implicit in the data structure (`annotationLegend` fields exist) but invisible in the rendering contract. Rule 4 applies: the annotation system touches every answer, the field beside it (the legend) is just as critical, and a structural check (grep ≥ 1) can miss it. The walkthrough found something code review and linting could not — a component argument read from the data file but never passed through. Staged changes: `audit/PROGRESS.md` (this packet's row added) and `audit/NEXT.md` (this handoff appended) only.
 
+## Handoff — packet 12.3 fix round 1 passed the gate (brain, 21 September 2026)
 
+**Bookkeeping only.** This session authored nothing, fixed nothing, committed nothing. It verified the gate state against `audit/runs/packet-12.3/{built.md, verify-a.md, verify-b.md}` and updated `audit/PROGRESS.md` row 12.3 and this handoff section to reflect that the fix is verified and gate-complete.
+
+**Outcome.** FIX ROUND 1 PASSED. Verify A round 1: 7 of 7 ids confirmed (E016-E022), zero rejections. Verify B round 1 FAILED due to missing annotation legend (31 of 32 pages printing ~1,350 unexplained chips with no key). Verify B fix round 1 PASSED: legend rendered on all 31 pages, every distinct code appearing in its block's key, all 32 URLs return 200, prerendered build output verified. All gate checks green: `npm run build`, `npm test` 237/237, `npm run validate`, `npm run recalls`, `npm run exposure`, `npm run contrast` all exit 0.
+
+**What the fix round did.** Added `AnnotationLegend` component back to `components/SectionModelAnswersPage.jsx` with three style rules in `.lab-page` context to correct the contrast failure that the initial defect left in place. The 10px white-on-color chips were rendering at 1.8–2.4:1 (below WCAG AA 4.5:1 floor); the fix brought them to 4.5–11.1:1 by remapping the chip backgrounds to darker values in dark mode and keeping light mode's original brighter fills. Literals used deliberately (not tokens) because these are fixed ink-on-fill pairs that must hold their ratio in both themes, as the existing `globals.css:ACCEPTED_LITERALS` exemption documents for the original `.ma-ann-*` classes. `codesIn()` filter ensures the legend on the mid-band panel shows only the codes that appear in that panel's text (a subset of the full model answer).
+
+**Files changed in fix round.** `components/SectionModelAnswersPage.jsx` (added legend render at the correct position), `components/model-answers-layout.css` (three contrast-corrected rules for chips). Both staged, not committed. No new ledger ids claimed.
+
+**Non-blocking defects left open.** (2) Eight pages' mid-band "why this loses marks" panel scores in the same band as the full model answer above it (data-driven selection rule picks highest-tariff item, which can land at the same mark as the 8-mark items' 5–6/8 band). (3) Twenty-one Economics pages headline "0.0% coverage" because spec tags are missing on the question bank (not a rendering error). (4) `/business/the-market-model-answers` promises exam answers in its title but keeps the honest empty state per specification (no model answers exist for this section). All three are data or pre-existing, not regressions. The contrast guard `npm run contrast` remained blind to this class of defect throughout (reads `globals.css` only; cannot join `color:` and `background:` in adjacent selector rules) — filed for future guard improvement but out of scope.
+
+**What comes next.** Packet 12.3 gate is clear and fix round staged. Next scheduled session is the 5/7 checkpoint publish window. Packets 13–21 are scheduled content work staged since 14 September.
 
 ## Handoff — packet 40 closed (brain)
 

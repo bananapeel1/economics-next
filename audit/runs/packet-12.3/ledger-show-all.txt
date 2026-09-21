@@ -1,0 +1,105 @@
+=== E016 ===
+{
+  "id": "E016",
+  "kind": "feature",
+  "title": "SectionModelAnswersPage renders the 12.2 question-first layout; model-answer content unchanged",
+  "file": "components/SectionModelAnswersPage.jsx",
+  "packet": 12.3,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-21"
+}
+
+=== E017 ===
+{
+  "id": "E017",
+  "kind": "feature",
+  "title": "Quick Check serves published DB content or is absent; no public route reads audit/content-sections",
+  "file": "components/SectionModelAnswersPage.jsx",
+  "packet": 12.3,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-21"
+}
+
+=== E018 ===
+{
+  "id": "E018",
+  "kind": "feature",
+  "title": "One dynamic route replaces the 22 hand-written shells; all 22 URLs resolve with canonicals unchanged",
+  "file": "app/economics",
+  "packet": 12.3,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-21"
+}
+
+=== E019 ===
+{
+  "id": "E019",
+  "kind": "feature",
+  "title": "Ten Economics sections with data but no page get one; Business the-market keeps its empty state",
+  "file": "data/modelAnswersData.js",
+  "packet": 12.3,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-21"
+}
+
+=== E020 ===
+{
+  "id": "E020",
+  "kind": "feature",
+  "title": "sitemap.js derives model-answer URLs from the map and emits exactly 32",
+  "file": "app/sitemap.js",
+  "packet": 12.3,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-21"
+}
+
+=== E021 ===
+{
+  "id": "E021",
+  "kind": "feature",
+  "title": "Titles retitled to 'Exam Questions & Model Answers'; valid Quiz/QAPage structured data",
+  "file": "components/SectionModelAnswersPage.jsx",
+  "packet": 12.3,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-21"
+}
+
+=== E022 ===
+{
+  "id": "E022",
+  "kind": "feature",
+  "title": "next.config.mjs tracing covers the new route; Practice tab links extended, not duplicated",
+  "file": "next.config.mjs",
+  "packet": 12.3,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-21"
+}
+

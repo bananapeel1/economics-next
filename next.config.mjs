@@ -1,14 +1,25 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Packet 12.2. `/lab/exam-practice/[section]` is the one route that reads `audit/` at request
-  // time: the t=0 section dumps for its MCQs and counts, and the spec oracle for its coverage line.
-  // Next's file tracing follows imports, and `fs.readFileSync(path.join(process.cwd(), 'audit', …))`
-  // is not an import, so without this the route deploys without its data and 404s on every slug.
-  // Local `next dev` and `next build` do not need it — which is exactly why it has to be written
-  // down rather than discovered on Vercel.
+  // Packet 12.2 wrote this for its noindex lab route; packet 12.3 deleted that route and moved its
+  // layout onto the two model-answer routes, so the entry moves with it (E022).
+  //
+  // These are the routes that read files under `audit/` and `content/` rather than importing them:
+  // the spec oracle for the coverage line (`lib/spec-coverage.js`) and the data-response markdown
+  // that decides whether a link-out renders (`lib/lab-data-response.js`). Next's file tracing
+  // follows imports, and `fs.readFileSync(path.join(process.cwd(), …))` is not an import, so
+  // without this the routes deploy without their data. Local `next dev` and `next build` do not
+  // need it — which is exactly why it has to be written down rather than discovered on Vercel.
+  //
+  // The t=0 section dump the lab route also traced is NOT here and must not come back: it is
+  // frozen since 12 September and no public canonical URL may serve it. That is E017, and the
+  // Quick Check block was dropped rather than shipped stale.
   outputFileTracingIncludes: {
-    '/lab/exam-practice/[section]': [
-      './audit/content-sections/**',
+    '/economics/[unit]': [
+      './audit/raw/spec-items.json',
+      './audit/raw/spec-coverage.json',
+      './content/data-response/**',
+    ],
+    '/business/[unit]': [
       './audit/raw/spec-items.json',
       './audit/raw/spec-coverage.json',
       './content/data-response/**',
