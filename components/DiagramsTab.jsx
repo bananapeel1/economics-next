@@ -1,6 +1,7 @@
 "use client";
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import processSvg from './learn-mode/processSvg';
+import DiagramEnlarge from './learn-mode/DiagramEnlarge';
 
 export default function DiagramsTab({ data }) {
   if (!data || !data.length) {
@@ -19,6 +20,13 @@ export default function DiagramsTab({ data }) {
 function DiagramCard({ diagram }) {
   const [activeScenario, setActiveScenario] = useState(0);
   const svgRef = useRef(null);
+  /* V037. This tab had no enlarge at all — no click handler, no sheet, no hint, `cursor: auto` —
+     while Learn Mode, which shows the same SVGs through the same processSvg, has had one since
+     packet 5. Measured at 375x812 on 21 September, a card here renders at 291px with labels of
+     6.98-8.73px against 16px body copy. The tab is advertised on the section hub as "Diagrams ·
+     All annotated"; the annotations were unreadable and there was nothing to tap. */
+  const [enlarged, setEnlarged] = useState(false);
+  const handleEnlarge = useCallback(() => setEnlarged(true), []);
 
   const hasImage = !!diagram.imageUrl;
   const scenarios = diagram.scenarios || [{ label: 'Default', svg: diagram.svg }];
@@ -55,12 +63,15 @@ function DiagramCard({ diagram }) {
       )}
 
       {hasImage ? (
-        <div className="diagram-svg-wrapper">
+        <div className="diagram-svg-wrapper lm-diagram-clickable" onClick={handleEnlarge}>
           <img src={diagram.imageUrl} alt={diagram.title} />
         </div>
       ) : (
-        <div className="diagram-svg-wrapper" ref={svgRef} />
+        <div className="diagram-svg-wrapper lm-diagram-clickable" ref={svgRef} onClick={handleEnlarge} />
       )}
+      <button type="button" className="lm-diagram-enlarge-btn" onClick={handleEnlarge}>
+        Enlarge diagram
+      </button>
 
       {diagram.checklist && !isTable && (
         <div className="diagram-checklist">
@@ -74,6 +85,15 @@ function DiagramCard({ diagram }) {
             ))}
           </ul>
         </div>
+      )}
+
+      {enlarged && (
+        <DiagramEnlarge
+          svgRef={svgRef}
+          imageUrl={hasImage ? diagram.imageUrl : null}
+          title={diagram.title}
+          onClose={() => setEnlarged(false)}
+        />
       )}
     </div>
   );

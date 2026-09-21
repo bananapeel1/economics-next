@@ -133,7 +133,16 @@ export default function processSvg(svgEl) {
   //    sizes are 7-13 units) and put 18 overlapping pairs on a diagram that had none, because a
   //    label's size and its neighbours' positions were authored together. And it bought nothing:
   //    14 units at the 313px inline width is 8.7px, unreadable either way. Labels keep their authored
-  //    size; the full-screen sheet draws the diagram at 220vw, where the smallest authored label
-  //    (7 units on a 500 box) is 12px at 390px and page pinch-zoom goes further. The sheet, not a
-  //    floor, is the phone answer.
+  //    size; the full-screen sheet enlarges the whole drawing instead. The sheet, not a floor, is
+  //    the phone answer.
+  //
+  //    This used to add "the sheet draws at 220vw, where the smallest authored label (7 units on a
+  //    500 box) is 12px at 390px". Both halves are now wrong and the second was always a best case
+  //    quoted as a property: 7 units on a 500 box is 12px at 390 but 11.55px at 375 and 11.09px at
+  //    360, so the floor it claimed was not met on most phones. And 220vw was tuned over a census
+  //    taken on 14 September across `data` only, when every live viewBox was 500 wide; authoring
+  //    moved to 440u on 18 September and 400u after that, and at the 1010u frame now in `draft` a
+  //    fixed 220vw left the smallest label at 7.35px — illegible after tapping "enlarge".
+  //    V037/V048: the sheet now sizes each diagram from its own `face / viewBoxWidth` so the floor
+  //    is a guarantee rather than a coincidence of one frame. See `lib/diagram-enlarge.js`.
 }

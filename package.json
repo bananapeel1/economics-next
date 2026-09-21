@@ -14,7 +14,7 @@
     "diagrams": "node audit/scripts/diagram-pins.mjs",
     "validate": "node audit/scripts/validate-content.mjs",
     "validate:baseline": "node audit/scripts/validate-content.mjs --baseline",
-    "test": "node --test lib/content-validator.test.mjs lib/write-path.test.mjs lib/read-path.test.mjs lib/parse-inline-markdown.test.mjs lib/flow-step.test.mjs lib/learn-steps.test.mjs lib/preview-limits.test.mjs lib/pretest-pool.test.mjs lib/recall-widgets.test.mjs lib/practice-tariffs.test.mjs lib/spec-coverage.test.mjs lib/mid-band-answer.test.mjs audit/scripts/spec-coverage.test.mjs",
+    "test": "node --test lib/content-validator.test.mjs lib/write-path.test.mjs lib/read-path.test.mjs lib/parse-inline-markdown.test.mjs lib/flow-step.test.mjs lib/learn-steps.test.mjs lib/preview-limits.test.mjs lib/pretest-pool.test.mjs lib/recall-widgets.test.mjs lib/practice-tariffs.test.mjs lib/spec-coverage.test.mjs lib/mid-band-answer.test.mjs lib/diagram-enlarge.test.mjs audit/scripts/spec-coverage.test.mjs",
     "spec-items": "node audit/scripts/build-spec-items.mjs --check",
     "tariff-census": "node audit/scripts/build-tariff-census.mjs --check",
     "spec-coverage": "node audit/scripts/spec-coverage-check.mjs",

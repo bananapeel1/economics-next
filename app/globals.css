@@ -6003,21 +6003,31 @@ a.auth-dropdown-item:visited {
   transform: scale(1.08);
 }
 
-/* SVG inside modal */
+/* SVG inside modal.
+   `width: max-content` + auto margins, not flex centring: at the Read stop the drawing is meant to
+   be WIDER than the pane and scroll, and a flex item shrinks to fit its container by default, which
+   would quietly undo the width --lm-enlarge-w just asked for. Auto margins centre it when it is
+   narrower (Fit, or a diagram whose labels are already big enough) and collapse when it is not. */
 .lm-diagram-modal .lm-diagram-modal-svg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  width: max-content;
+  /* `margin: auto` inside the flex pane below, not `align-items: center`: a centred flex container
+     clips the START of an item bigger than itself and makes it unreachable by scrolling, which is
+     exactly the case at the Read stop. Auto margins centre while it is smaller and collapse to 0
+     when it is not. `flex: 0 0 auto` keeps a flex item from shrinking to fit and quietly undoing
+     the width --lm-enlarge-w just asked for. */
+  margin: auto;
+  flex: 0 0 auto;
 }
 .lm-diagram-modal .lm-diagram-modal-svg svg {
   /* A definite width, not 100%: the sheet, its pane and the wrapper all shrink to fit their content,
      so "100%" resolved to the SVG's 300px intrinsic default once the clone lost its width attribute
      (round-3 note): the desktop sheet was 1.1x the inline diagram. Same figure as the pane rule at
      the sheet block, which this three-part selector used to outrank. */
-  width: min(80vw, 900px);
+  width: var(--lm-enlarge-w, min(80vw, 900px));
   height: auto;
   max-width: none;
-  max-height: 85vh;
+  max-height: none;
   display: block;
 }
 /* F062/F088: on a phone the sheet's job is to be BIGGER than the inline diagram. The rule above
@@ -6029,9 +6039,12 @@ a.auth-dropdown-item:visited {
      is the viewport's width and scrolls; the diagram inside it is the wide thing. */
   .lm-diagram-modal .lm-diagram-modal-pane { width: 100%; max-width: 100%; align-self: stretch; overflow: auto; }
   .lm-diagram-modal .lm-diagram-modal-svg { display: block; width: max-content; }
-  /* 220vw, not 200: with no font floor (processSvg step 7) the smallest authored label, 7 units on a
-     500 box, is 12px here at 390px. */
-  .lm-diagram-modal .lm-diagram-modal-svg svg { width: 220vw; max-width: none; max-height: none; }
+  /* V048: the width is now the diagram's OWN — `12px x viewBoxWidth / smallestFace`, set as
+     --lm-enlarge-w by DiagramEnlarge.jsx and floored at the pane. The 220vw fallback below is what
+     a diagram gets when it has no viewBox or no sized text and cannot be measured; it was tuned for
+     a 500-unit frame with a 7-unit face and is wrong for the 400u-1010u range the corpus actually
+     spans. */
+  .lm-diagram-modal .lm-diagram-modal-svg svg { width: var(--lm-enlarge-w, 220vw); max-width: none; max-height: none; }
 }
 
 /* Image inside modal */
@@ -7485,13 +7498,48 @@ a.auth-dropdown-item:visited {
 }
 
 /* Diagram modal as a sheet (F088, F062) */
-.lm-diagram-modal { flex-direction: column; background: var(--bg-card); border-radius: 12px; padding: 0; overflow: hidden; }
+.lm-diagram-modal { flex-direction: column; background: var(--bg-card); border-radius: 12px; padding: 0; overflow: hidden; width: min(90vw, 1000px); }
 .lm-diagram-modal-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 12px 10px 16px; border-bottom: 1px solid var(--border-primary); }
 .lm-diagram-modal-title { font-size: 14px; font-weight: 600; color: var(--text-primary); }
 .lm-diagram-modal-close { position: static; box-shadow: none; background: var(--bg-input); width: 44px; height: 44px; }
-.lm-diagram-modal-pane { overflow: auto; padding: 16px; max-height: calc(85vh - 90px); }
-.lm-diagram-modal-pane svg, .lm-diagram-modal-pane img { width: min(80vw, 900px); max-width: none; height: auto; display: block; }
+.lm-diagram-modal-pane { overflow: auto; padding: 16px; flex: 1 1 auto; min-height: 0; width: 100%; align-self: stretch; display: flex; }
+.lm-diagram-modal-pane svg { width: var(--lm-enlarge-w, min(80vw, 900px)); max-width: none; height: auto; display: block; }
+.lm-diagram-modal-pane img { width: min(80vw, 900px); max-width: none; height: auto; display: block; }
 .lm-diagram-modal-hint { display: none; font-size: 12px; color: var(--text-muted); text-align: center; padding: 8px; border-top: 1px solid var(--border-primary); }
+
+/* Zoom stops (V047). The sheet used to have one control, Close, and opened at a fixed width that
+   showed 43.5% of the drawing at 375px with no way to zoom out — the page's visual viewport is
+   pinned at scale 1, so pinching cannot go below 1. Fit is the state that was unreachable.
+   The row is shown on every width: the same three stops mean the same three things on a laptop. */
+.lm-diagram-zoom {
+  display: flex; gap: 6px; padding: 8px 12px; justify-content: center;
+  border-bottom: 1px solid var(--border-primary); flex: 0 0 auto;
+}
+.lm-diagram-zoom-btn {
+  flex: 0 1 auto; min-height: 40px; min-width: 76px; padding: 0 14px;
+  border-radius: 20px; border: 1px solid var(--border-primary);
+  background: var(--bg-input); color: var(--text-tertiary);
+  font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;
+  transition: all 0.15s;
+}
+.lm-diagram-zoom-btn:hover { border-color: var(--accent-green); color: var(--text-secondary); }
+/* Same active idiom as .scenario-btn.active, the control directly above this one in the card. */
+.lm-diagram-zoom-btn.active { background: var(--green-15); border-color: var(--accent-green); color: var(--accent-green); }
+.lm-diagram-zoom-btn:focus-visible { outline: 2px solid var(--accent-green); outline-offset: 2px; }
+
+/* The Diagrams tab's way in (V037). Learn Mode enlarges by tapping the drawing, which is a bare
+   <div> with an onClick — no role, no tab stop, nothing a keyboard or a screen reader can reach.
+   This tab gets a real button as well as the tap, so the one surface that is only diagrams is also
+   the one where enlarging does not require a mouse. */
+.lm-diagram-enlarge-btn {
+  display: block; margin: 10px auto 0; min-height: 44px; padding: 0 18px;
+  border-radius: 20px; border: 1.5px dashed var(--accent-green);
+  background: none; color: var(--accent-green);
+  font-size: 13px; font-weight: 600; font-family: inherit; cursor: zoom-in;
+  transition: all 0.15s;
+}
+.lm-diagram-enlarge-btn:hover { background: var(--green-light-6); border-style: solid; }
+.lm-diagram-enlarge-btn:focus-visible { outline: 2px solid var(--accent-green); outline-offset: 2px; }
 
 
 /* ── Phones ─────────────────────────────────────────────────────────────── */
@@ -7519,7 +7567,8 @@ a.auth-dropdown-item:visited {
      container for a diagram wider than the screen — the round-2 catch. `manipulation` allows pan and
      pinch and only drops the double-tap delay. */
   .lm-diagram-modal-pane { flex: 1; max-height: none; touch-action: manipulation; -webkit-overflow-scrolling: touch; padding: 12px; }
-  .lm-diagram-modal-pane svg, .lm-diagram-modal-pane img { width: 220vw; }
+  .lm-diagram-modal-pane svg { width: var(--lm-enlarge-w, 220vw); }
+  .lm-diagram-modal-pane img { width: 220vw; }
   .lm-diagram-modal-hint { display: block; }
 
   /* Touch targets (F091, F059): nothing a thumb has to hit is under 40px. */

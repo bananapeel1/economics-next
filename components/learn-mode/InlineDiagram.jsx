@@ -1,97 +1,11 @@
 "use client";
 import { useState, useRef, useEffect, useCallback } from 'react';
-import { createPortal } from 'react-dom';
 import processSvg from './processSvg';
 import DiagramLabelDrill from './DiagramLabelDrill';
+import DiagramEnlarge from './DiagramEnlarge';
 
-/* ── Enlarged modal overlay ── */
-function DiagramModal({ svgRef, imageUrl, title, onClose }) {
-  const modalContentRef = useRef(null);
-  const [visible, setVisible] = useState(false);
-
-  // Fade in on mount
-  useEffect(() => {
-    // Force a reflow before adding the visible class for the transition
-    requestAnimationFrame(() => {
-      setVisible(true);
-    });
-  }, []);
-
-  // Clone SVG content into the modal
-  useEffect(() => {
-    if (!modalContentRef.current || imageUrl) return;
-    if (svgRef?.current) {
-      const svgEl = svgRef.current.querySelector('svg');
-      if (svgEl) {
-        const clone = svgEl.cloneNode(true);
-        // processSvg gave the inline copy `style="width:100%"`, and an inline style beats the sheet's
-        // `width: 200vw`, so the "enlarged" diagram measured 0.9x the viewport. The clone is sized by
-        // the stylesheet alone. Caught by the packet 5 verifier.
-        clone.style.removeProperty('width');
-        clone.style.removeProperty('height');
-        clone.style.removeProperty('max-width');
-        clone.removeAttribute('width');
-        clone.removeAttribute('height');
-        modalContentRef.current.innerHTML = '';
-        modalContentRef.current.appendChild(clone);
-      }
-    }
-  }, [svgRef, imageUrl]);
-
-  const handleClose = useCallback(() => {
-    setVisible(false);
-    // Wait for fade-out animation to finish
-    setTimeout(onClose, 200);
-  }, [onClose]);
-
-  // Close on Escape key
-  useEffect(() => {
-    const handleKey = (e) => {
-      if (e.key === 'Escape') handleClose();
-    };
-    document.addEventListener('keydown', handleKey);
-    return () => document.removeEventListener('keydown', handleKey);
-  }, [handleClose]);
-
-  /* F088/F062: on a phone the modal used to be the same 270px diagram, darker, with a close
-     button — it read as broken. It is a full-screen sheet now: the diagram is drawn at twice the
-     viewport width inside a scrolling, pinch-zoomable pane, so labels that were 5px inline are
-     readable, and the sheet says so. */
-  return createPortal(
-    <div
-      className={`lm-diagram-modal-backdrop ${visible ? 'lm-diagram-modal-visible' : ''}`}
-      onClick={handleClose}
-      role="dialog"
-      aria-modal="true"
-      aria-label={title ? `${title}, enlarged` : 'Enlarged diagram'}
-    >
-      <div
-        className="lm-diagram-modal"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="lm-diagram-modal-bar">
-          <span className="lm-diagram-modal-title">{title || 'Diagram'}</span>
-          <button
-            className="lm-diagram-modal-close"
-            onClick={handleClose}
-            aria-label="Close enlarged diagram"
-          >
-            &times;
-          </button>
-        </div>
-        <div className="lm-diagram-modal-pane">
-          {imageUrl ? (
-            <img src={imageUrl} alt={title || 'Diagram'} />
-          ) : (
-            <div ref={modalContentRef} className="lm-diagram-modal-svg" />
-          )}
-        </div>
-        <div className="lm-diagram-modal-hint">Pinch or scroll to zoom</div>
-      </div>
-    </div>,
-    document.body
-  );
-}
+/* The enlarge sheet moved to DiagramEnlarge.jsx (V037), so the Diagrams tab can use the same one.
+   It had lived here, which is the whole reason only Learn Mode ever had a way to enlarge. */
 
 /* ── Inline Diagram Card (static — no hover tooltips) ── */
 export default function InlineDiagram({ diagram }) {
@@ -189,7 +103,7 @@ export default function InlineDiagram({ diagram }) {
       </div>
 
       {enlarged && (
-        <DiagramModal
+        <DiagramEnlarge
           svgRef={svgRef}
           imageUrl={hasImage ? diagram.imageUrl : null}
           title={diagram.title}

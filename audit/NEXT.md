@@ -1,5 +1,49 @@
 # Next session brief
 
+## Packet 11 spec — V037, diagram labels are 7–9px on a phone (COMPLETE, 21 September 2026)
+
+Full brief, build notes and the 375×812 walkthrough: **`audit/runs/packet-11/`** (`brief.md`,
+`built.md`, `verify-b.md`). Closed **V037 V046 V047 V048**, all confirmed by Verify A. **V042 was
+reassigned to packet 12** — a match-recall chip overflow with no code, CSS or acceptance check in
+common with the diagram work.
+
+**Four things the next packet should not have to rediscover:**
+
+1. **`components/learn-mode/DiagramEnlarge.jsx` is now the only enlarge sheet, and both diagram
+   surfaces mount it.** It used to live inside `InlineDiagram`, which is the whole reason the
+   **Diagrams tab had no enlarge at all** — 291px at 375px, labels 6.98–8.73px, no click handler,
+   `cursor: auto`. If you add a third surface that renders a diagram, mount this, do not re-implement.
+
+2. **Never read the enlarge sheet on a timer.** Poll until the backdrop carries
+   `lm-diagram-modal-visible`, the sheet's transform is `matrix(1, 0, 0, 1, 0, 0)`, and computed
+   width agrees with rect width. The sheet rests at `scale(0.92)` and a premature read returns 0.92×
+   the truth. This guard fired twice during packet 11's own Verify B — 618 for 672, 614 for 667 —
+   and without it this packet would have published the 12px floor as missed by 1px everywhere.
+   Packet 38 published 789 for 858 the same way and passed a defect as qualified on it.
+
+3. **The "12px floor" was a 390px figure and is dead.** At 375 the frame it was tuned for (500u/7u)
+   is 11.55px; at 360, 11.09px. The floor is now a guarantee computed per diagram from
+   `face / viewBoxWidth` (`lib/diagram-enlarge.js`), and `lib/diagram-enlarge.test.mjs` asserts the
+   two frames the old constant missed, so restoring a constant fails `npm test`. **Measure at 375.**
+
+4. **Still true, still do not propose it: no font floor.** F088 tried two and both were a relayout.
+   Every change in packet 11 is a uniform scale of the whole drawing. `processSvg.js` step 7 has been
+   corrected — it had been asserting the false 220vw/12px claim in the file the CSS and the ledger
+   both cite as the authority for this rule.
+
+**What packet 11 deliberately left open, with the reason:** the **inline** diagram is unchanged at
+298px with 7–9px labels. No inline width a phone can offer makes a 500-unit drawing with 10-unit
+labels legible; reclaiming the 20% of the screen that is card padding takes the best case from 7.15px
+to 8.4px. It would look like progress and not be any. The inline diagram's job is the shape and a
+route to the sheet, and both surfaces now have that route.
+
+**Pre-existing and not packet 11's:** `audit/scripts/check-staged-drafts.mjs` exits 1 on a crash —
+`TypeError: … (reading 'localeCompare')` at `:62` — because a bundle snapshot in `audit/snapshots/`
+has no `section_id`. It is in nobody's diff and it means the staged-draft drift check is currently
+not running for anyone.
+
+---
+
 ## Handoff — what comes next (written 21 September 2026, after packet 2.3)
 
 **PACKET 2.3 IS BUILT, VERIFIED AND GATE-GREEN, BUT NOT COMMITTED.** Verify A confirmed V009 on round 1. V009 is closed in the working tree:
@@ -9141,6 +9185,79 @@ section appended) only, each with an explicit `git add <path>`. No commit — th
 script file was edited.
 
 
+## Handoff — packet 5 verification round 4 (brain)
+
+**Bookkeeping only.** This session did not author, fix, walk, or commit anything. It verified the
+existing state — `node audit/scripts/ledger.mjs unverified 5`, `ledger.mjs show V038`, `ledger.mjs
+packet 5`, the last sections of `audit/runs/packet-5/verify-a.md` and `verify-b.md`, and `git
+log`/`git status` on the eight files the task brief named — and rewrote packet 5's `PROGRESS.md` row.
+Full check log: `audit/runs/packet-5/verify-round4-bookkeeping.md` (an artefact, not staged).
+
+**Result: packet 5 still DOES NOT PASS — but not for a reason the ledger shows.**
+`node audit/scripts/ledger.mjs unverified 5` now exits **0** ("gate clear"), and `ledger.mjs show
+V038` reads `status: "confirmed"`, `verified_by: "packet-verifier 2026-09-21"`. Ledger for packet 5:
+32 confirmed (the 31 plus V038, newly confirmed this round), 1 wont-fix (F083), 0 rejected.
+
+**This section supersedes the previous section, "## Handoff — packet 5 verification round 3
+(brain)"**, only on the single point of the ledger's own state: that section's "Next session. V038
+needs a fix round 4…" has been acted on and the ledger no longer rejects V038. It does **not**
+supersede that section's record of rounds 1–3, which stands.
+
+**Why the gate still does not clear, found by `packet-verifier`'s round-4 re-verification
+(`audit/runs/packet-5/verify-a.md`).** Round 3's rejected path — an in-app section switch
+(`navigateToSection`, `components/StudyApp.jsx`) handing `resolvePointer` the new section's pointer
+together with the OLD section's deck and `contentVersionSince` — is independently closed: measured
+against the client chunk the dev server actually serves
+(`components_StudyApp_jsx_01d_8tl._.js:2158`), not the fix's own tests, with a 20ms DOM+localStorage
+sampler across four click paths (in-app switch, reverse+race, cross-subject, direct load), all
+clean, and the blast radius bounded a different way (`/api/sections/<id>` for all 43 sections: 31
+null, 12 dated 14–15 Sep, none at or after `LEGACY_POINTER_EPOCH`). Not claimed by that pass:
+anything needing a signed-in session — no sign-in is available, and a direct
+`user_content_progress` read was refused by the permission layer, reason "Production Reads".
+
+**Why the gate still does not clear, found by the student walkthrough's targeted re-walk
+(`audit/runs/packet-5/verify-b.md`, "Targeted re-walk after round 4", appended after the 20
+September and 21 September round-3 walkthroughs — neither replaced).** 14 scripted cases at
+390×844, signed out, real taps: **all PASS**, including the two cases that failed in earlier rounds
+(the in-app-switch fingerprint contamination; the `?draft=1` first-render race). Then a **BLOCKING
+DEFECT with no ledger id**: the rebuilt notice a legacy-pointer student must act on ("Start again" /
+"Jump to the end") renders with no amber card and **19.5px buttons** at 390px — the packet's own
+touch floor is 44px, and this same banner measured 60px on 20 September. Cause, found by a different
+route than the rendering: `app/globals.css`'s twelve `.lm-rebuilt-*` rules are present in the git
+**index** (`git show :app/globals.css | grep -c lm-rebuilt` → 12) and **absent from the worktree
+file the dev server compiles** (`grep -c lm-rebuilt app/globals.css` → 0). This is a concurrent,
+un-scoped edit to a shared file, not part of the V038 diff, which does not touch `app/globals.css`
+at all — confirmed because the same edit also drops V037's deliberate `220vw` diagram-modal rule.
+Not fixed by this pass: no authority to touch code, content, tests, or styles. Filed to escalate by
+the walkthrough, not resolved here.
+
+**The eight files the task brief pointed at are now committed, not merely staged.** `git diff HEAD`
+against all eight is empty. `git log` shows `a9bba5f` ("packet-5: V038 fix round 4, the eight files
+that belong with the one already committed", 2026-09-21 20:44:05, author Aron Gijsel) carrying
+`app/api/sections/[id]/route.js`, both `[unit]/[topic]/page.jsx` routes, `app/page.js`,
+`components/LearnModeTab.jsx`, `lib/learn-steps.js`, `lib/learn-steps.test.mjs` and
+`lib/preview-limits.js` — its message states `components/StudyApp.jsx`'s share of the same change
+landed one commit earlier, in `3b40aa1` ("packet-2.3"), same day. `app/globals.css` is in neither
+commit and is still `MM`. This session did not commit anything; both commits already existed when
+this pass started.
+
+**Scope of every sentence above:** signed out, 390px, this session's own reads of the ledger, the
+two verify files, and `git`. Nothing above is a claim about a signed-in session, about any width
+other than 390, or about `app/globals.css` beyond what `git status`/`git show :app/globals.css`/
+`grep` on the worktree file showed as of this check.
+
+**Next session.** The CSS regression in `app/globals.css` needs a fix — restoring the twelve
+`.lm-rebuilt-*` rules (and the `.lm-diagram-modal` rules it also dropped) to the worktree file — and
+a re-walk at 390px to confirm the buttons clear 44px before packet 5 can close. This is not a V038
+code change; it is a separate, currently-shared-worktree hazard that happens to sit on V038's own
+feature.
+
+Staged by this session: `audit/PROGRESS.md` (packet 5 row rewritten) and `audit/NEXT.md` (this
+section appended) only, each with an explicit `git add <path>`. No commit — the founder commits.
+`audit/EXAM-PRACTICE.md` not opened; `audit/ledger.json` not staged. No code, content, test, or
+script file was edited.
+
+
 ## Handoff — packet 12.3, transfer lab to live model-answer routes (written 21 September 2026, Haiku 4.5)
 
 **Outcome.** DID NOT PASS the gate. Verify A: 7 of 7 ledger ids confirmed (E016-E022). Verify B: BLOCKING DEFECT found at step 10 and step 28 — the annotation legend (AnnotationLegend component) was dropped in the rewrite, leaving 31 of 32 pages printing unexplained annotation chips (K, A, An, E, D) throughout model answers with no key on the page. No fix rounds used (0 of 2 available).
@@ -9277,3 +9394,28 @@ the other candidate if traffic order isn't the deciding rule.
 Staged by this session: `audit/PROGRESS.md` (packet 40 row rewritten) and `audit/NEXT.md` (this section
 appended) only, each with an explicit `git add <path>`. No commit. `audit/EXAM-PRACTICE.md` not opened;
 `audit/ledger.json` not staged. No code, content, test, or script file was edited by this session.
+
+## Handoff — packet 5 V038 closed after the stylesheet restore (brain, 21 September 2026, 20:55)
+
+Supersedes the round-4 bookkeeping section above on one point only: the blocking defect it recorded is closed.
+
+- **V038 CONFIRMED** by Verify A round 4 (`audit/runs/packet-5/verify-a.md`); `ledger.mjs unverified 5` exit 0. The fix
+  closed the class: the payload carries its section id, Learn Mode neither resumes nor stamps until the payload is this
+  section's and `contentVersionSince` is present (undefined = not arrived), and the automatic stamp is gone. All four earlier
+  failure paths re-measured A/B in `built.md`; Verify B walked 14 cases at 390 signed out, all pointer cases pass.
+- **The only Verify B blocker was `app/globals.css`**: the 37 staged `.lm-rebuilt-*` lines were missing from the worktree copy,
+  dropped by a concurrent V047/V037 edit. Restored by three-way merge, clean, other edit untouched, not staged (index already
+  held them). Compiled chunk on 3001 re-checked: 12 rules served. Not re-walked at 390 after the restore; the same lines
+  measured 60px buttons on 20 September.
+- **Minted on packet 57**: V049 (SectionOverview's rebuilt line reads the new section's progress against the old payload for
+  ~50ms on an in-app switch, signed-in only, self-corrects), V050 (the loading guard parks for ever if a producer ever omits
+  the field; every producer supplies it today).
+- **Founder, before committing packet 5 by path**: `components/StudyApp.jsx components/LearnModeTab.jsx lib/learn-steps.js
+  lib/learn-steps.test.mjs lib/preview-limits.js "app/economics/[unit]/[topic]/page.jsx" "app/business/[unit]/[topic]/page.jsx"
+  app/page.js audit/runs/packet-5 audit/PROGRESS.md audit/NEXT.md`. `app/globals.css` is shared with live V047 work: a
+  commit by path takes the WORKING TREE (V038 + V047 WIP); the index holds V038 only. Ask the diagram session to stage when
+  ready, or commit the CSS with V047. The index still carries the 36 `git rm --cached` deletions and the ExtrasTab revert.
+- **Release note / DECISIONS**: the legacy-pointer rule; signed-out students see the rebuilt notice once at the checkpoint;
+  rows the pointer repair left with an old `total_steps` will count as `rebuilt_shown` at first visit; the permission layer
+  refused Verify A's read-only production read (`[Production Reads]`), so every signed-in claim in round 4 is reasoned from
+  source, not measured.
