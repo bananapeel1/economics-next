@@ -75,6 +75,27 @@ point 5 below, which is a measurement that bears on it.
    packet 37's section** — so this settles nothing about packet 37 and somebody has to take that
    measurement before its gate is re-run. V037 is open either way.
 
+   **Read packet 37's number before you re-measure, because it sharpens the question.**
+   `audit/runs/packet-37/verify-b.md:52-60` is a real measurement, not a pre-written claim, and it
+   records the pane as well as the drawing:
+
+   | | pane clientWidth | pane scrollWidth | svg rendered | viewBox |
+   |---|---|---|---|---|
+   | packet 37, AD/AS | 390 | **882** | **858** | `0 0 400 300` |
+   | packet 38, Phillips | 390 | **882** | **789** | `0 0 400 300` |
+
+   Same pane, same viewBox, same aspect — and the drawing renders 69px wider in one section than in
+   the other. So the open question is NOT "is the sheet too wide", which packet 31 settled; it is
+   **why an identical viewBox renders at two widths inside an identically sized pane.**
+   `InlineDiagram` strips `width`/`height` off the clone and lets CSS size it, so the difference is
+   in what the sheet gives it — a height constraint, the title bar, or the hint. Measure that.
+
+   And packet 37's report carries its own instance of the class the brain session is writing into
+   `BRAIN.md`: its Brief pre-wrote a "Measurement from Verify B" section concluding **"Mobile
+   legibility confirmed at 390×844"** having measured only the inline render. Verify B caught it.
+   The 858 is the verifier's own number and is trustworthy; the "confirmed" was the invented
+   sentence.
+
 6. **Two Verify B checks failed and neither was content.** Logged, not fixed:
    - **V043, new**: the signed-out pre-test asks 2 of its 3 questions about chapters the student has
      not opened, on **22 of 43 live sections and 29 of 43 staged**, with the identical signature
