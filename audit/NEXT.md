@@ -70,6 +70,18 @@ the **inherited-findings split** (below). Its `CARRIED` map inverts cleanly: wha
   `Explain 6 is not an Economics tariff` for `trade-global-economy`, which is the carried
   `practice:e3345b30` in item 4 above, now corroborated by a third tool. It is the ONLY tariff
   complaint for this section, so 39a's six authored items are clean.
+  **The 0.0% is owned and scheduled**: packet 12.4 tags the rebuilt sections' exam items, so a
+  section you rebuild will read 0.0% until it runs. Expected, not a defect in your rebuild — but
+  see the warning about the public pages below before assuming it is harmless.
+
+- **THREE CHECKS THAT SHARE NO CODE AGREED ON ONE DEFECT, AND THAT IS THE PROPERTY TO ENGINEER FOR.**
+  The carried `practice:e3345b30` (`Explain … 6 marks` where the census gives 4) was found
+  independently by Verify A reading the diff, by `lib/content-validator.mjs` as a baselined BLOCK,
+  and by `npm run spec-coverage -- --staged` via `lib/ial-marking.js`. None of the three reads the
+  others' output. That is the opposite of the failure this programme keeps hitting — a check written
+  beside a fix, inheriting its blind spot, certifying it green (V040, V041, and packet 16's verifier
+  that judged 32 ids without writing one). **When you add a guard, ask what it would have to NOT
+  share with the thing it guards**, and A/B it against a rigged input rather than a clean one.
 
 - **`recall.recoverable` can be held at zero and it is not expensive.** 23 recalls, 0 recoverable,
   in a section with no row in `audit/recall-census-baseline.json` and therefore held to zero. The
