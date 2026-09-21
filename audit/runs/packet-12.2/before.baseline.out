@@ -1,0 +1,68 @@
+
+spec-coverage — leaves examined, against 1,165 `kind: 'leaf'` rows in audit/raw/spec-items.json
+  bank 1  data/modelAnswersData.js + modelAnswersExpansion.js
+  bank 2  section_practice, read from audit/content-sections/ (the t=0 dump of the published tables — a lower bound, not live; --staged for the rebuilds)
+  note    section_practice has no `spec_items` column: scripts/packet-12-1-spec-items.sql is written and NOT run.
+          Tags for bank 2 come from audit/runs/packet-12.1/section_practice-tags.json.
+
+section                               subj   qs  untag  examined  leaves       %
+--------------------------------------------------------------------------------
+assessing-competitiveness             busi    5      5         0      18    0.0%
+business-growth                       busi    5      5         0      16    0.0%
+business-objectives-strategy          busi    5      5         0      11    0.0%
+decision-making-techniques            busi    5      5         0      20    0.0%
+entrepreneurs-leaders                 busi    7      5         3      18   16.7%
+external-influences                   busi    6      5         1      15    6.7%
+financial-planning                    busi    7      5         4      21   19.0%
+global-industries-mncs                busi    5      5         0      24    0.0%
+global-marketing                      busi    5      5         0      13    0.0%
+global-markets-expansion              busi    5      5         0      33    0.0%
+globalisation                         busi    5      5         0      28    0.0%
+influences-business-decisions         busi    5      5         0      15    0.0%
+managing-change                       busi    5      5         0      10    0.0%
+managing-finance                      busi    8      5         5      24   20.8%
+managing-people                       busi    8      5        10      46   21.7%
+marketing-mix-strategy                busi    7      5         2      46    4.3%
+meeting-customer-needs                busi    8      5        10      29   34.5%
+planning-raising-finance              busi    7      5         8      23   34.8%
+resource-management                   busi    7      5         5      28   17.9%
+the-market                            busi    5      5         0      24    0.0%
+aggregate-demand                      econ    8      8         0      31    0.0%
+aggregate-supply                      econ    7      7         0      14    0.0%
+balance-payments-exchange-rates       econ    7      7         0      42    0.0%
+causes-effects-globalisation          econ    7      7         0      22    0.0%
+consumer-behaviour-demand             econ    7      7         0      39    0.0%
+economic-growth                       econ    8      8         0      23    0.0%
+government-intervention               econ    7      7         0      23    0.0%
+government-intervention-firms         econ    7      7         0      33    0.0%
+growth-development                    econ    7      7         0      43    0.0%
+introductory-concepts                 econ    7      7         0      27    0.0%
+labour-markets                        econ    7      7         0      17    0.0%
+macroeconomic-objectives-policies     econ    7      7         0      34    0.0%
+market-failure                        econ    8      3         7      35   20.0%
+market-structures-contestability      econ    6      6         0      54    0.0%
+measures-economic-performance         econ    8      8         0      48    0.0%
+national-income                       econ    7      7         0      19    0.0%
+poverty-inequality                    econ    6      6         0      21    0.0%
+price-determination                   econ    7      7         0      11    0.0%
+revenue-costs-profits                 econ    7      7         0      34    0.0%
+role-state-macroeconomy               econ    5      5         0      38    0.0%
+supply                                econ    7      7         0      19    0.0%
+trade-global-economy                  econ    7      7         0      46    0.0%
+types-sizes-businesses                econ    7      7         0      30    0.0%
+
+per unit
+  business unit 1           25 /   163 leaves    15.3%  (35 questions)
+  business unit 2           23 /   111 leaves    20.7%  (35 questions)
+  business unit 3            0 /    90 leaves     0.0%  (30 questions)
+  business unit 4            0 /    98 leaves     0.0%  (20 questions)
+  economics unit 1           7 /   154 leaves     4.5%  (43 questions)
+  economics unit 2           0 /   169 leaves     0.0%  (45 questions)
+  economics unit 3           0 /   168 leaves     0.0%  (34 questions)
+  economics unit 4           0 /   212 leaves     0.0%  (39 questions)
+
+281 questions across 43 sections; 256 carry no specItems yet.
+55 of 1,165 spec leaves are examined by at least one question — 4.7%.
+
+baseline: 123 failure key(s)
+Not written. Add --confirm to write audit/spec-coverage-baseline.json.
