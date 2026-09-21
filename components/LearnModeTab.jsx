@@ -15,6 +15,9 @@ import ReorderRecall from './learn-mode/ReorderRecall';
 import FillInRecall from './learn-mode/FillInRecall';
 import MatchRecall from './learn-mode/MatchRecall';
 import ClassifyRecall from './learn-mode/ClassifyRecall';
+import DiagramRecall from './learn-mode/DiagramRecall';
+import CalculationItem from '@/components/quant/CalculationItem';
+import { buildItem } from '@/lib/quant/index.mjs';
 import { recallId } from '@/lib/learn-steps';
 import ExplainItBackUpgraded from './learn-mode/ExplainItBackUpgraded';
 import { NoteSection, TakeawayCard } from './notes';
@@ -50,7 +53,8 @@ function PracticeWithheld() {
 }
 
 /**
- * One recall widget, by type (packet 7: four types, lib/recall-widgets.js). `showing` is 'first' on
+ * One recall widget, by type (packet 7: four types, plus the drawing drill from packet 13.2;
+ * lib/recall-widgets.js). `showing` is 'first' on
  * the recall's own step and 'spaced' on a later check-in; every widget derives its own seeded order
  * from it. `pool` is the section's other fill-in answers, the distractor source for a fill-in that
  * carries none of its own.
@@ -62,6 +66,7 @@ function Recall({ recall, keyPrefix, showing = 'first', pool, onComplete, onSkip
   if (recall.type === 'fillin') return <FillInRecall key={keyPrefix} {...props} pool={pool} />;
   if (recall.type === 'match') return <MatchRecall key={keyPrefix} {...props} />;
   if (recall.type === 'classify') return <ClassifyRecall key={keyPrefix} {...props} />;
+  if (recall.type === 'diagram') return <DiagramRecall key={keyPrefix} {...props} />;
   return null;
 }
 
@@ -196,9 +201,25 @@ export default function LearnModeTab({
   // ── Distribute diagrams/quiz/practice to check-in steps ──
   const sortedPractice = useMemo(() => [...(practiceData || [])].sort((a, b) => a.marks - b.marks), [practiceData]);
 
-  const { diagramMap, quizMap, practiceMap } = useMemo(() => {
-    const dMap = {}, qMap = {}, pMap = {};
-    if (!flatSteps.length) return { diagramMap: dMap, quizMap: qMap, practiceMap: pMap };
+  const { diagramMap, quizMap, practiceMap, quantMap } = useMemo(() => {
+    const dMap = {}, qMap = {}, pMap = {}, nMap = {};
+    if (!flatSteps.length) return { diagramMap: dMap, quizMap: qMap, practiceMap: pMap, quantMap: nMap };
+
+    /* Quantitative drills (packet 13.2). A block names templates; the figures are generated here.
+       The seed is derived from the section and the step, never from Math.random: this content is
+       server-rendered on first load, so a random draw at mount would differ between the server and
+       the client — the same hydration trap F118 found in the recall shuffles. The cost is that a
+       student revisiting a step sees the figures they saw before; Smart Practice (13.3) is where a
+       fresh draw per review actually matters, and it seeds per attempt. */
+    flatSteps.forEach((step, idx) => {
+      for (const templateId of step.quantIds || []) {
+        try {
+          nMap[idx] = [...(nMap[idx] || []), buildItem(templateId, `${sectionId}:${step.key}:${templateId}`)];
+        } catch {
+          // An unknown template is a content error the validator blocks; never break the step over it.
+        }
+      }
+    });
 
     const slots = flatSteps.map((s, i) => ({ s, i })).filter(({ s }) => s.type === 'checkin' || s.type === 'legacy');
     const hasRefs = slots.some(({ s }) => s.diagramRef || s.quizIndices || s.practiceIndices || s.diagramId || s.quizIds || s.practiceIds);
@@ -247,8 +268,8 @@ export default function LearnModeTab({
       const p = distributeItems(sortedPractice, slots.length);
       slots.forEach(({ i }, k) => { if (q[k]) qMap[i] = q[k]; if (p[k]) pMap[i] = p[k]; });
     }
-    return { diagramMap: dMap, quizMap: qMap, practiceMap: pMap };
-  }, [flatSteps, contentData, diagramsData, quizData, practiceData, sortedPractice]);
+    return { diagramMap: dMap, quizMap: qMap, practiceMap: pMap, quantMap: nMap };
+  }, [flatSteps, contentData, diagramsData, quizData, practiceData, sortedPractice, sectionId]);
 
   const practiceStepIndices = useMemo(() => Object.keys(practiceMap).map(Number).sort((a, b) => a - b), [practiceMap]);
 
@@ -463,6 +484,7 @@ export default function LearnModeTab({
   const currentDiagram = diagramMap[safeStep];
   const currentPractice = practiceMap[safeStep];
   const currentQuiz = quizMap[safeStep];
+  const currentQuant = quantMap[safeStep];
   const isLastStep = safeStep === totalSteps - 1;
   const progressPct = ((safeStep + 1) / totalSteps) * 100;
   const blockCount = step?.blockCount || contentData.length;
@@ -636,6 +658,13 @@ export default function LearnModeTab({
                       subjectId={subjectId} sectionId={sectionId} stepIndex={safeStep}
                       onResult={onQuizResult} />
                   )}
+
+                  {/* Quantitative drills sit after the MCQ: a calculation is the harder check,
+                      and it reads better last (packet 13.2). */}
+                  {currentQuant?.map((item) => (
+                    <CalculationItem key={item.id} item={item}
+                      onResult={(r) => onQuizResult(r.awarded === r.total)} />
+                  ))}
                   {currentPractice && practiceCard(`practice-${safeStep}`)}
 
                   {/* Spaced recall: from an earlier chapter, with the cue that says so (F038, F053). */}
@@ -681,6 +710,10 @@ export default function LearnModeTab({
                   {step.block.examTip && <div className="exam-tip"><div className="exam-tip-label">Exam Tip</div>{step.block.examTip}</div>}
                   {currentDiagram && <InlineDiagram diagram={currentDiagram} />}
                   {currentQuiz && <InlineQuiz key={`quiz-${safeStep}`} question={currentQuiz} subjectId={subjectId} sectionId={sectionId} stepIndex={safeStep} onResult={onQuizResult} />}
+                  {currentQuant?.map((item) => (
+                    <CalculationItem key={item.id} item={item}
+                      onResult={(r) => onQuizResult(r.awarded === r.total)} />
+                  ))}
                   {currentPractice && practiceCard(`practice-${safeStep}`)}
                   {step.block.title && <ExplainItBackUpgraded key={`explain-${safeStep}`} title={step.block.title} sectionId={sectionId} blockIndex={step.blockIndex} onAskTutor={onAskTutor} isPremium={isPremium} onAttempt={onExplainAttempt} rubric={chapterRubric(contentData, step.blockIndex, currentUnit?.code)} />}
                 </div>

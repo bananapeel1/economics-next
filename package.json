@@ -18,7 +18,8 @@
     "spec-items": "node audit/scripts/build-spec-items.mjs --check",
     "tariff-census": "node audit/scripts/build-tariff-census.mjs --check",
     "spec-coverage": "node audit/scripts/spec-coverage-check.mjs",
-    "spec-overlap": "node audit/scripts/spec-overlap.mjs"
+    "spec-overlap": "node audit/scripts/spec-overlap.mjs",
+    "diagram-check": "node audit/scripts/diagram-check.mjs"
   },
   "dependencies": {
     "@ai-sdk/google": "^3.0.43",
