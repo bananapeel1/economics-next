@@ -2793,3 +2793,72 @@ that method rules out, and it is the move packet 38 made.
 transplant a line from one version of a shared file into another. Packet 38 prepended to `NEXT.md`
 and appended to `DECISIONS.md` and lost nothing in either; it lost something in the one file where
 it edited a line in place.
+
+## 2026-09-21 — packet 38: an audit item's FIX field is a claim too, and F088's contradicts its own evidence
+
+Rule 1 says an audit item's SCOPE is a claim. This is the same rule pointed at its REMEDY, and
+`F088` is the case that shows it.
+
+`node audit/scripts/ledger.mjs show F088` returns `status: confirmed`, `closed_by: packet-5`, and a
+`fix` field that reads, in part: *"enforce a minimum SVG font-size in processSvg (e.g. scale text to
+>=14 viewBox units, or set font-size via CSS `svg text { font-size: max(12px, ...)}`)"*.
+
+**That is the one remedy the code rejected**, and `components/learn-mode/processSvg.js:131-138`
+records why: a floor was tried twice and both versions were a relayout — 1/28 of the viewBox raised
+1,419 of 1,420 labels; 1/36 raised 1,281 of 1,377 and put 18 overlapping pairs on a diagram that had
+none, "because a label's size and its neighbours' positions were authored together" — and it bought
+nothing, since 14 units at the 313px inline width is 8.7px either way. *"The sheet, not a floor, is
+the phone answer."*
+
+**The correction to the version of this the packet 40 session sent, because it matters for the
+remedy:** the rejection does NOT live only in a source comment. `F088`'s own `evidence` field
+records it in detail — "processSvg.js:131-138 no longer sets any font-size (step 7 removed), so
+labels render at authored size with no relayout… 7 × 858 / 500 = 12.01px" — along with the census of
+all 108 live diagrams it was measured over. So the record is complete. **What is wrong is that one
+record contradicts itself**: `fix` prescribes what `evidence` reports as rejected, and nothing syncs
+the two when a packet closes an item by doing something other than what the audit proposed.
+
+Anyone who does what this programme trains them to do — read the item, act on `fix` — re-proposes a
+closed remedy. That happened today. **The habit that prevents it: on a `confirmed` item, read
+`evidence` before `fix`. `fix` is what the auditor proposed; `evidence` is what was actually done,
+and on any item closed by a packet the two can differ.** Amending `F088`'s `fix` text is packet 5's
+call, not this packet's, and its owner has been told.
+
+Two things in that evidence field that are live and useful:
+
+- **It already contains the 858 and the 12px.** "7 × 858 / 500 = 12.01px", measured on a real label.
+  Packet 38 re-derived both the hard way. A verifier's evidence field is a measurement archive and
+  is worth grepping before measuring.
+- **Its caveat bounds the claim this programme has been repeating.** *"the 12px claim holds at 390
+  only; at 375/360px those 11 labels are 11.55/11.09px (pinch-zoom covers it)."* Every "smallest
+  label 12px" in packets 37 and 38, including packet 38's own re-measurement, is a 390px figure. On
+  a 375px phone it is under 12.
+
+And the line references in that evidence have drifted: it cites the sheet at `globals.css:5982` and
+`:7475`; they are now `:6071` and `:7559`. Same drift as `V006`'s `:429`, now `:560`. **A line number
+in a ledger record is a claim with a shelf life.**
+
+## 2026-09-21 — packet 38: edit a shared handoff file by ANCHOR LINE, never by region
+
+Twice in one session this packet damaged a shared file by addressing a REGION instead of a line, and
+the second time it took out the entry recording the first.
+
+1. `audit/PROGRESS.md` — adopted the index's packet-5 row over the working tree's.
+2. `audit/DECISIONS.md` — a retraction written as `s[:start] + new` truncated from the entry being
+   replaced to the end of the file, deleting the entry that had just been appended after it.
+
+Both were caught by the deletion check, and the check is worth keeping:
+
+```
+diff <(git show HEAD:<f> | sort) <(sort <f>) | grep -c '^<'
+```
+
+must equal only the lines you meant to replace, and **it must be read, not just run** — it returned
+65 on the second failure and the first reading of it stopped at "all inside the block I replaced",
+which was true and beside the point, because the block was bigger than intended.
+
+**But the check is downstream of the habit.** The upstream fix, owed to the packet 40 session, is to
+key every edit to a UNIQUE ANCHOR LINE and replace exactly that line — never a span between two
+offsets, and never "from here to the end". It is the same shape as the packet 33 lesson about
+editing content by `subId` rather than scanning back for a delimiter: address the thing, not the
+region around it. Appending is always safe; replacing a span never is, in a file four sessions write.

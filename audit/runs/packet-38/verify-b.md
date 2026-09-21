@@ -83,6 +83,11 @@ smallest label in the sheet 12 CSS px · document scrollWidth 390 (no page scrol
 hidden: the title, "Unemployment (%)", "SRPC", the "6%" tick, the caption
 ```
 
+**And the 12px is a 390px figure only.** `F088`'s own evidence field bounds it: *"the 12px claim
+holds at 390 only; at 375/360px those 11 labels are 11.55/11.09px (pinch-zoom covers it)."* Every
+"smallest label 12px" in this report and in packet 37's is measured at 390. On a 375px phone the
+smallest authored labels fall below 12. This report did not measure 375.
+
 **858 is `220vw` at a 390px viewport** — `app/globals.css:6071` and `:7559`. It is a viewport unit,
 so it is the same number for every diagram in every section, whatever the viewBox. And **44% is
 packet 37's own figure verbatim**: "At 390 px the student sees the left 44% of the drawing."
