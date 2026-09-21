@@ -56,6 +56,21 @@ the **inherited-findings split** (below). Its `CARRIED` map inverts cleanly: wha
 
 ### What 39a leaves behind for any content packet
 
+- **`npm run spec-coverage` UNDER-REPORTS ANY SECTION REBUILT SINCE 12 SEPTEMBER, and says so in
+  its own output.** It defaults to the t=0 dump in `audit/content-sections/`, which is the last
+  file-level snapshot of the PUBLISHED tables and therefore a lower bound for anything staged and
+  not published — which is most of the programme. `npm run spec-coverage -- --staged` reads
+  `audit/snapshots/` instead: what publishing would actually serve. Measured on
+  `trade-global-economy` at the end of 39a: **7 practice-bank items by default, 10 with
+  `--staged`**. Verified rather than taken on trust, and the flag is documented at
+  `audit/scripts/spec-coverage-check.mjs:9` (thanks to the packet 12.3 session for the pointer).
+  Two things not to misread while you are in there: the **0.0%** beside almost every section is
+  programme-wide — 22 sections read 0.0% and only `market-failure` is non-zero at 51.4%, because
+  exam-item spec tagging has been done for one section — and `--staged` independently reports
+  `Explain 6 is not an Economics tariff` for `trade-global-economy`, which is the carried
+  `practice:e3345b30` in item 4 above, now corroborated by a third tool. It is the ONLY tariff
+  complaint for this section, so 39a's six authored items are clean.
+
 - **`recall.recoverable` can be held at zero and it is not expensive.** 23 recalls, 0 recoverable,
   in a section with no row in `audit/recall-census-baseline.json` and therefore held to zero. The
   method is the only thing that matters: every fill-in hands the student **figures the step has not
