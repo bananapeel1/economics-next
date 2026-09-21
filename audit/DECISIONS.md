@@ -2838,6 +2838,31 @@ And the line references in that evidence have drifted: it cites the sheet at `gl
 `:7475`; they are now `:6071` and `:7559`. Same drift as `V006`'s `:429`, now `:560`. **A line number
 in a ledger record is a claim with a shelf life.**
 
+**And the drift does worse than go stale — it makes a true record look fabricated.** Checked at
+source today, F088's three citations resolve to:
+
+| cited | today |
+|---|---|
+| `globals.css:5982` — the sheet | `position: fixed;` |
+| `globals.css:7468` — the inline width | a bare `}` |
+| `globals.css:7475` — the sheet again | a blank line |
+
+The rules themselves are alive and unchanged at `:6069-6071` and `:7559`, about 89 lines down,
+because the file has grown since 14 September; `220vw` landed in `d032302`, *"packet-5: round 2 — no
+font floor, the sheet at 220vw, and a pane a finger can pan"*, which dates the evidence exactly
+right. So a reader doing what this programme trains them to do — follow the citation — finds
+`position: fixed;` and has grounds to doubt a field that is **entirely true**.
+
+That is packet 37's `specGap-05` shape — a finding that doubted an app number that was right —
+except here the programme would be doubting its own record. **The rule: re-grep the STRING before
+doubting the record.** A citation that misses is evidence about the citation, not about the claim.
+
+A footnote that earns its place: the packet 40 session, reporting this, transposed two of the three
+line numbers (it had `:7475` as the `}` and `:7468` as blank; it is the other way round). The
+substance was right and both still resolve to nothing. It is a fair illustration that a report about
+citation accuracy can itself miscite, which is why the remedy is to re-grep rather than to re-cite
+more carefully.
+
 ## 2026-09-21 — packet 38: edit a shared handoff file by ANCHOR LINE, never by region
 
 Twice in one session this packet damaged a shared file by addressing a REGION instead of a line, and
