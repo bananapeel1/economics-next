@@ -2646,6 +2646,12 @@ direction. Recorded because each is a shape, not a typo:
    That is the dangerous version of this bug, and it is worth checking for in any verifier inherited
    from another packet.
 
+5. **And a fifth, found after this entry was written: a Verify B that measured a modal opened by a
+   scripted click**, and so read a `getBoundingClientRect()` that was silently scaled by the entry
+   animation's resting transform. It has its own entry below. Four of the five were caught by the
+   check disagreeing with a section that was right; **the fifth was caught only because the ratio
+   789/858 was too round a number to be a coincidence, and it had already been published.**
+
 ## 2026-09-21 — packet 38: the section is the longest in the product, and the specification decides that
 
 Seven blocks, thirty subsections, thirty-seven steps. `structure-09` asks for trimming and the two
@@ -2659,26 +2665,74 @@ chapter is served no check-in quiz and nobody is told) and **notes at eight** (t
 two). At seven the pre-test is three and all seven chapters are served — confirmed by
 `exposure-census` on the staged draft, not assumed.
 
-## 2026-09-21 — packet 38: the full-screen diagram sheet measures the same as packet 31 recorded, which packet 37's blocker should be re-read against
+## 2026-09-21 — packet 38: a scripted click opens a modal un-animated, and the rect you then read is silently scaled
 
-Measured in the browser at 390 × 844 with the sheet open on this section's Phillips curve:
+**This entry replaces one that was wrong.** The earlier version said packet 38's enlarge sheet
+measured 789px against packet 37's 858 and reproduced packet 31's settled figures. It did not.
+**Both are 858.** The 789 was an artefact of how the measurement was taken, and packet 37's
+blocking defect reproduces exactly in this section.
+
+`components/learn-mode/InlineDiagram.jsx` renders the sheet through a portal and applies
+`lm-diagram-modal-visible` to animate it in from a resting
+`transform: matrix(0.92, 0, 0, 0.92, 0, 0)`. Opening the sheet with a scripted `element.click()`
+mounts the modal but that class is never applied, so it stays scaled. `getBoundingClientRect()`
+returns the TRANSFORMED box — 789 = 858 × 0.92 — while `getComputedStyle().width` returns the
+untransformed 858. **The two disagreed for an hour and nothing in the check looked at both.**
+
+Re-measured with a real tap, visible class asserted and transform asserted as the identity matrix:
 
 ```
-inline 307px · modal svg 789 × 592 · pane client 390 / scroll 882 → 492px hidden
-smallest label in the sheet 12 CSS px · document scrollWidth 390 (no page scroll)
+svg 858 × 644 · pane client 390 / scroll 882 · 492px hidden · smallest label 12 CSS px
+44% of the drawing visible · 5 of 9 labels off-screen: the title, "Unemployment (%)",
+"SRPC", the "6%" tick and the caption
 ```
 
-**789px and "492 of 882 hidden" are the figures `DECISIONS.md` already carries** from packet 31,
-17 September, where that measurement was explicitly ruled to *correct* packet 29's note calling it a
-defect. `components/learn-mode/InlineDiagram.jsx:56-58` states the intent in the source: the sheet
-draws at twice the viewport width so that labels which are 9px inline become legible.
+**858 is `220vw` at a 390px viewport** (`app/globals.css:6071`, `:7559`). It is a viewport unit, so
+it is the same number for every diagram in every section whatever the viewBox — packet 37's figure
+was never anomalous, and there was never a discrepancy to explain. **44% is packet 37's own figure
+verbatim.**
 
-**This is not a claim about packet 37.** Its Verify B measured **858px**, not 789, and this packet
-did not re-measure packet 37's section. What this packet can say is that on a 400-unit 4:3 frame the
-sheet behaves exactly as packet 31 documented, that the labels come out at 12 CSS px, and that both
-points of the trade-off and the arrow between them are visible without scrolling. Whether packet
-37's 858px case is the same behaviour or a different one is a measurement somebody still has to
-take before its gate is re-run. **V037 remains open either way.**
+**The guard, for any check that measures rendering:** a scripted click opens a modal without its
+entry animation. Tap as a student does; assert the visible class AND an identity transform before
+reading a rect; and record `getComputedStyle().width` beside `getBoundingClientRect().width` so a
+mismatch is visible rather than silent.
+
+**And the honest part.** On the artefact this packet's Verify B recorded a qualified pass, claimed
+its number differed from packet 37's, and claimed "both marked points and the arrow between them
+are visible without scrolling" — when the 6% tick is one of the five hidden labels. That sentence
+stated a scope it had not measured, which is the rule the brain session adopted into `BRAIN.md`
+the same afternoon, on evidence this session supplied. It was caught only because 789/858 = 0.9196
+was too round a number to be a coincidence. **V037 stands where packet 31 left it; packet 38
+neither narrows it nor excuses it, and packet 37's gate gets nothing from this packet.**
+
+### What 858 actually is, and why that makes V037 a decision rather than a bug
+
+Found by the packet 40 session from the stylesheet and verified here against the source rather than
+taken on trust. **858 is deliberate and tuned.** `app/globals.css:6069-6070`, immediately above the
+rule: *"220vw, not 200: with no font floor (processSvg step 7) the smallest authored label, 7 units
+on a 500 box, is 12px here at 390px."* The "smallest label 12 CSS px" measured above is not a
+coincidence — it is the number the width was chosen to hit.
+
+And the obvious alternative is already closed. `components/learn-mode/processSvg.js:131-138` records
+that a font floor was tried **twice** and rejected on measurement: 1/28 of the viewBox raised 1,419
+of 1,420 labels, 1/36 still raised 1,281 of 1,377 and put 18 overlapping pairs on a diagram that had
+none, "because a label's size and its neighbours' positions were authored together" — and it bought
+nothing, since 14 units at the 313px inline width is 8.7px either way. *"The sheet, not a floor, is
+the phone answer."*
+
+So V037 is not a rendering defect and not a missing font floor. It is **a priced trade that nobody
+has re-priced: 12px labels bought with 492px of horizontal scroll.** And the programme already rules
+on that trade by diagram KIND — packets 28/29 settled that the sheet is adequate for a TABLE, whose
+cells mean something read one at a time, and fatal for a MATRIX, whose cells only mean anything
+compared at once.
+
+**Packet 38's hidden list is the case that decides the third kind.** On a curve diagram the five
+labels the sheet hides at 390px are the title, the axis label "Unemployment (%)", the curve's own
+"SRPC", the "6%" tick and the caption. An axis label and a tick are not readable in sequence: they
+have to be read *against* the drawing. That puts a plotted curve closer to the matrix case than the
+table case — which is a question the founder can rule on, where "the modal is too wide" is not.
+Framing owed to the packet 40 session; the font-floor half of its suggestion is withdrawn here,
+because F088 already tried it.
 
 ## 2026-09-21 — packet 38: the INDEX is older than the working tree, and I reverted another packet's row by assuming the reverse
 

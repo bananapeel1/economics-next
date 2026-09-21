@@ -3,8 +3,9 @@
 390 × 844, storage cleared, signed out, `?draft=1`, walked step by step on the dev server at
 `localhost:3001`. The acceptance script is the one in this packet's spec block in `NEXT.md`.
 
-Two of the eight checks are recorded as FAILED or QUALIFIED, and neither is this packet's to fix.
-Both are written up with the measurement that settles whose they are.
+**Three of the eight checks FAILED, and none is this packet's to fix.** Check 5 was originally
+recorded as a qualified pass on a measurement that was wrong; it is corrected below, and the
+correction is the most useful thing in this report.
 
 ## 1 · The pre-test asks three questions — PASS, with a finding underneath it
 
@@ -66,29 +67,56 @@ It renders **inline at 307 CSS px** on step 37 (`viewBox="0 0 400 300"`, 9 text 
 11.5px and a 12-unit one at 9.2px. Four diagrams rendered nothing at all on the live section
 (`structure-01`); seven render here, one per chapter.
 
-## 5 · The enlarge view at 390px — QUALIFIED PASS, and it is NOT packet 37's defect
+## 5 · The enlarge view at 390px — **FAIL. Packet 37's blocking defect reproduces exactly.**
 
-Measured in the browser with the sheet open:
+**This section originally recorded a qualified PASS at 789px and it was wrong.** The correction is
+below the measurement, because the measurement is the point.
+
+Measured with a REAL tap, `lm-diagram-modal-visible` present on the backdrop and the modal's
+transform asserted as the identity matrix before any rect was read:
 
 ```
-inline 307px · modal svg 789 × 592 · pane client 390 / scroll 882 → 492px hidden
-smallest label in the sheet: 12 CSS px · document scrollWidth 390 = viewport (no page scroll)
+svg computed width 858px · rect 858 × 644
+pane clientWidth 390 · scrollWidth 882 · 492px hidden
+smallest label in the sheet 12 CSS px · document scrollWidth 390 (no page scroll)
+44% of the drawing visible · 5 of 9 labels off-screen
+hidden: the title, "Unemployment (%)", "SRPC", the "6%" tick, the caption
 ```
 
-**789px and "492 of 882 hidden" are the exact numbers `DECISIONS.md` already records** for the
-full-screen sheet (packet 31, 17 September), where that measurement was explicitly ruled to
-*correct* packet 29's note that had called it a defect. `InlineDiagram.jsx:56-58` says so in the
-source: the sheet draws at twice the viewport width on purpose, so labels that are 9px inline
-become 12px and legible, and it prints its own hint — "Pinch or scroll to zoom".
+**858 is `220vw` at a 390px viewport** — `app/globals.css:6071` and `:7559`. It is a viewport unit,
+so it is the same number for every diagram in every section, whatever the viewBox. And **44% is
+packet 37's own figure verbatim**: "At 390 px the student sees the left 44% of the drawing."
 
-So the horizontal scroll is the design, not a regression. What matters pedagogically is whether the
-comparison the diagram exists to make survives the initial view, and here it does: **both marked
-points — 6% unemployment at 3% inflation, and 4% at 5.5% — and the arrow between them are visible
-without scrolling.** The curve's tail, the `SRPC` label and the x-axis caption are to the right.
-That is a real cost and it is the open item **V037**, not this packet's.
+### The error, because it is the more useful half
 
-Packet 37's blocker measured **858px** on the same 390px phone; this is 789. The difference is
-aspect ratio, not a fix, and this packet does not claim to have fixed V037.
+The first run of this check opened the sheet with a scripted `element.click()`. That mounts the
+modal but never applies `lm-diagram-modal-visible`, so it sits at its resting
+`transform: matrix(0.92, 0, 0, 0.92, 0, 0)`. `getBoundingClientRect()` returns the **transformed**
+box — 789 = 858 × 0.92 — while `getComputedStyle().width` said 858 the whole time. The two
+disagreed and nothing looked at both.
+
+On that reading this report claimed a qualified pass, claimed the figure differed from packet 37's
+858, and claimed **"both marked points and the arrow between them are visible without scrolling"**.
+The 6% tick is one of the five hidden labels. That sentence stated a scope it had not measured,
+which is the exact failure class this programme is currently writing into `BRAIN.md`, produced by
+the session that helped phrase it.
+
+**The guard, for any Verify B that measures rendering:** a scripted click opens a modal without its
+entry animation, so any `getBoundingClientRect()` taken afterwards is silently scaled. Tap as a
+student does; assert the visible class and an identity transform before reading a rect; and record
+`getComputedStyle().width` beside `getBoundingClientRect().width` so a mismatch is visible rather
+than silent.
+
+### What this does and does not mean for the packet
+
+It is **V037**, filed on packet 11, programme-wide, and reproduces on every section with a diagram —
+it is not caused by this packet and no content packet can fix it. Packet 36's precedent holds: a
+walkthrough complaint about rendering is not a rejection until it has a baseline. The packet's gate
+stands.
+
+What changes is the claim. Packet 38 does **not** show the sheet behaving better than packet 37's,
+does **not** narrow V037, and offers packet 37's gate nothing. The open question is the original
+one: whether a sheet showing 44% of a drawing at 12px labels is acceptable.
 
 ## 6 · The last step does not say "Before the next chapter" — **FAIL**
 
@@ -128,4 +156,8 @@ No errors from the section during the walk.
 - **The Notes tab.** It is server-rendered from the `data` column, so it still shows the OLD
   section and will until publication (DECISIONS, 16 September). The rebuilt notes were verified
   against the `draft` column instead, in `audit/runs/packet-38/verify-draft.mjs`.
-- **The diagram at other viewport widths.** Only 390px was measured.
+- **The diagram at other viewport widths.** Only 390px was measured. Since the sheet is sized in
+  `vw`, a different viewport gives a different number by construction.
+- **Whether the other six diagrams' sheets differ.** Only the chapter-7 Phillips curve was
+  re-measured after the artefact was found. They are sized by the same `220vw` rule, so they should
+  all be 858 at 390px, but that is an inference and not a measurement.

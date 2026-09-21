@@ -65,36 +65,57 @@ point 5 below, which is a measurement that bears on it.
    a surplus instead of a deficit. It is perhaps an hour of the packet. Two staged sections are now
    clean; this is one of them.
 
-5. **The full-screen diagram sheet measures exactly what packet 31 recorded, and packet 37's blocker
-   has not been re-measured against it.** On this section's Phillips curve at 390 × 844: inline
-   307px, modal SVG **789 × 592**, pane 390 client / 882 scroll, **492px hidden**, smallest label
-   **12 CSS px**, and both points of the trade-off plus the arrow between them visible without
-   scrolling. 789 and "492 of 882" are packet 31's own figures, where that measurement was ruled to
-   *correct* packet 29's note calling it a defect, and `InlineDiagram.jsx:56-58` states the intent in
-   the source. **Packet 37's Verify B measured 858px, not 789, and packet 38 did not re-measure
-   packet 37's section** — so this settles nothing about packet 37 and somebody has to take that
-   measurement before its gate is re-run. V037 is open either way.
+5. **RETRACTED AND CORRECTED: packet 37's blocking defect reproduces exactly, and packet 38 has
+   nothing to offer its gate.** An earlier version of this handoff carried a table showing packet
+   37's diagram at 858px and packet 38's at 789px in an identically sized pane, and asked why one
+   viewBox rendered at two widths. **That question does not exist. Both are 858.**
 
-   **Read packet 37's number before you re-measure, because it sharpens the question.**
-   `audit/runs/packet-37/verify-b.md:52-60` is a real measurement, not a pre-written claim, and it
-   records the pane as well as the drawing:
+   The 789 was a measurement artefact. The sheet was opened with a scripted `element.click()`,
+   which mounts the modal but never applies `lm-diagram-modal-visible`, so it sits at its resting
+   `transform: matrix(0.92, 0, 0, 0.92, 0, 0)`; `getBoundingClientRect()` returns the transformed
+   box, 789 = 858 × 0.92, while `getComputedStyle().width` said 858 throughout. Re-measured with a
+   real tap:
 
-   | | pane clientWidth | pane scrollWidth | svg rendered | viewBox |
-   |---|---|---|---|---|
-   | packet 37, AD/AS | 390 | **882** | **858** | `0 0 400 300` |
-   | packet 38, Phillips | 390 | **882** | **789** | `0 0 400 300` |
+   ```
+   svg 858 × 644 · pane client 390 / scroll 882 · 492px hidden · smallest label 12 CSS px
+   44% of the drawing visible · 5 of 9 labels off-screen (title, axis label, SRPC, the 6% tick, caption)
+   ```
 
-   Same pane, same viewBox, same aspect — and the drawing renders 69px wider in one section than in
-   the other. So the open question is NOT "is the sheet too wide", which packet 31 settled; it is
-   **why an identical viewBox renders at two widths inside an identically sized pane.**
-   `InlineDiagram` strips `width`/`height` off the clone and lets CSS size it, so the difference is
-   in what the sheet gives it — a height constraint, the title bar, or the hint. Measure that.
+   **858 is `220vw` at 390px** (`app/globals.css:6071`, `:7559`) — a viewport unit, so it is the
+   same for every diagram in every section whatever the viewBox, and packet 37's number was never
+   anomalous. **44% is packet 37's own figure verbatim.** V037 stands exactly where packet 31 left
+   it, on packet 11, and packet 38 neither narrows it nor excuses it.
 
-   And packet 37's report carries its own instance of the class the brain session is writing into
-   `BRAIN.md`: its Brief pre-wrote a "Measurement from Verify B" section concluding **"Mobile
-   legibility confirmed at 390×844"** having measured only the inline render. Verify B caught it.
-   The 858 is the verifier's own number and is trustworthy; the "confirmed" was the invented
-   sentence.
+   **The guard, for any Verify B that measures rendering:** a scripted click opens a modal without
+   its entry animation, so every rect read afterwards is silently scaled. Tap as a student does,
+   assert the visible class AND an identity transform before reading a rect, and record
+   `getComputedStyle().width` beside `getBoundingClientRect().width` so a mismatch cannot hide. The
+   two disagreed here for an hour and nothing looked at both.
+
+   **One observation from the retracted block survives, because it was independent of the error.**
+   Packet 37's Brief pre-wrote a "Measurement from Verify B" section concluding **"Mobile legibility
+   confirmed at 390×844"** having measured only the inline render — the enlarge view, where its
+   blocking defect was, had never been measured (`audit/runs/packet-37/verify-b.md:68-71`). Its
+   Verify B caught it. That is the shape the brain session has now written into `BRAIN.md` as "no
+   sentence may state a scope it did not measure", and packet 38's own retracted claim above is the
+   second example of it in the same week.
+
+   **And what V037 actually is, which is the useful part.** 858 is deliberate:
+   `app/globals.css:6069-6070` says *"220vw, not 200: with no font floor (processSvg step 7) the
+   smallest authored label, 7 units on a 500 box, is 12px here at 390px"* — the 12px measured above
+   is the number the width was tuned to hit. And the obvious alternative is closed:
+   `processSvg.js:131-138` records a font floor tried TWICE and rejected on measurement (1/36 raised
+   1,281 of 1,377 labels and created 18 overlapping pairs), concluding *"the sheet, not a floor, is
+   the phone answer"*.
+
+   So V037 is **a priced trade nobody has re-priced: 12px labels bought with 492px of horizontal
+   scroll** — and the programme already rules on that trade by diagram KIND. Packets 28/29 settled
+   that the sheet is adequate for a TABLE (cells read one at a time) and fatal for a MATRIX (cells
+   compared at once). **Packet 38's hidden list decides the third kind**: on a curve, the hidden
+   items are the title, the axis label, the curve's own label, a tick and the caption — things that
+   must be read AGAINST the drawing, not after it. A plotted curve is closer to the matrix case.
+   That is a question the founder can rule on; "the modal is too wide" is not. Framing owed to the
+   packet 40 session.
 
 6. **Two Verify B checks failed and neither was content.** Logged, not fixed:
    - **V043, new**: the signed-out pre-test asks 2 of its 3 questions about chapters the student has
