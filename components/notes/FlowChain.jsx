@@ -1,44 +1,59 @@
 'use client';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
+import { parseInlineMarkdown } from '@/lib/parse-inline-markdown';
+import { stepParts } from '@/lib/flow-step';
 
-const stepVariants = {
-  hidden: { opacity: 0, y: 12, scale: 0.97 },
+/**
+ * F099. The CSS reduced-motion rule collapses CSS animations and transitions, but these reveals
+ * are driven by framer-motion in JavaScript — a staggered delay per step plus a spring on the
+ * result — so the CSS never touched them. A student who asked their device for less motion still
+ * got the whole chain animating in, which is the exact thing the audit named in the finding's own
+ * title. `useReducedMotion` reads the same media query, so the two now agree.
+ */
+
+const makeStepVariants = (calm) => ({
+  hidden: calm ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 12, scale: 0.97 },
   visible: (i) => ({
     opacity: 1, y: 0, scale: 1,
-    transition: {
-      delay: i * 0.1,
-      duration: 0.35,
-      ease: [0.25, 0.46, 0.45, 0.94],
-    },
+    transition: calm
+      ? { duration: 0 }
+      : { delay: i * 0.1, duration: 0.35, ease: [0.25, 0.46, 0.45, 0.94] },
   }),
-};
+});
 
-const arrowVariants = {
-  hidden: { opacity: 0, y: -4 },
+const makeArrowVariants = (calm) => ({
+  hidden: calm ? { opacity: 0.5, y: 0 } : { opacity: 0, y: -4 },
   visible: (i) => ({
     opacity: 0.5, y: 0,
-    transition: {
-      delay: i * 0.1 + 0.15,
-      duration: 0.25,
-      ease: 'easeOut',
-    },
+    transition: calm ? { duration: 0 } : { delay: i * 0.1 + 0.15, duration: 0.25, ease: 'easeOut' },
   }),
-};
+});
 
-const resultVariants = {
-  hidden: { opacity: 0, y: 14, scale: 0.95 },
+const makeResultVariants = (calm) => ({
+  hidden: calm ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 14, scale: 0.95 },
   visible: (count) => ({
     opacity: 1, y: 0, scale: 1,
-    transition: {
-      delay: count * 0.1 + 0.12,
-      type: 'spring',
-      stiffness: 260,
-      damping: 22,
-    },
+    transition: calm
+      ? { duration: 0 }
+      : { delay: count * 0.1 + 0.12, type: 'spring', stiffness: 260, damping: 22 },
   }),
-};
+});
 
-export default function FlowChain({ steps, result, resultType }) {
+/**
+ * F073. A step is either a string, split on ' — ' (space, em dash, space) for a subtitle, or an
+ * explicit `{ title, subtitle }` object; lib/flow-step.js is the one place that decides, and the
+ * upgrade template and CONTENT-GATE.md document the object form. The split is em dash only: a
+ * wider split took "Float = LFT - EST - duration" apart. Titles and subtitles go through the
+ * inline markdown parser so a flow step can carry **bold** and glossary terms like every other
+ * text field on the page; the parser leaves P* and Q* notation alone (see parse-inline-markdown).
+ */
+export default function FlowChain({ steps, result, resultType, glossaryTerms }) {
+  // Reads the same media query the CSS rule does, so JS-driven motion and CSS motion agree.
+  const calm = useReducedMotion();
+  const stepVariants = makeStepVariants(calm);
+  const arrowVariants = makeArrowVariants(calm);
+  const resultVariants = makeResultVariants(calm);
+
   if (!steps?.length) return null;
 
   const resultClass = resultType === 'good'
@@ -53,9 +68,7 @@ export default function FlowChain({ steps, result, resultType }) {
     <div className="rl-flow-chain">
       <div className="rl-flow-timeline">
         {steps.map((step, i) => {
-          const parts = typeof step === 'string' ? step.split(' — ') : [step];
-          const title = parts[0];
-          const subtitle = parts[1] || null;
+          const { title, subtitle } = stepParts(step);
 
           return (
             <div key={i}>
@@ -71,8 +84,10 @@ export default function FlowChain({ steps, result, resultType }) {
                   <span>{String(i + 1).padStart(2, '0')}</span>
                 </div>
                 <div className="rl-flow-tl-card">
-                  <div className="rl-flow-tl-title">{title}</div>
-                  {subtitle && <div className="rl-flow-tl-subtitle">{subtitle}</div>}
+                  <div className="rl-flow-tl-title" dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(title, glossaryTerms) }} />
+                  {subtitle && (
+                    <div className="rl-flow-tl-subtitle" dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(subtitle, glossaryTerms) }} />
+                  )}
                 </div>
               </motion.div>
               {(i < steps.length - 1 || result) && (

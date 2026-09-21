@@ -1,4 +1,5 @@
 import { getStripe, getSubscriptionPeriodEnd } from '@/lib/stripe';
+import { isTrialEligible } from '@/lib/trial-eligibility';
 import { createClient } from '@/lib/supabase/server';
 import { createServerClient } from '@/lib/supabase-server';
 import { isLifetime, PLAN_LIFETIME } from '@/lib/entitlements';
@@ -43,7 +44,7 @@ export async function GET() {
     const { data: { user } } = await supabase.auth.getUser();
 
     if (!user) {
-      return NextResponse.json({ plan: 'free', status: 'inactive' });
+      return NextResponse.json({ plan: 'free', status: 'inactive', trialEligible: true });
     }
 
     const serviceSupabase = createServerClient();
@@ -54,7 +55,7 @@ export async function GET() {
       .maybeSingle();
 
     if (!sub) {
-      return NextResponse.json({ plan: 'free', status: 'inactive' });
+      return NextResponse.json({ plan: 'free', status: 'inactive', trialEligible: true });
     }
 
     // Lifetime access is permanent and backed by a one-time payment, so there
@@ -66,6 +67,9 @@ export async function GET() {
         status: 'active',
         currentPeriodEnd: null,
         trialEnd: null,
+        // A lifetime buyer has paid more than anyone and their stripe_subscription_id is nulled
+        // by the one-time-payment webhook, so an absence test would call them a new customer.
+        trialEligible: false,
       });
     }
 
@@ -122,6 +126,7 @@ export async function GET() {
             status: 'active',
             currentPeriodEnd: periodEnd,
             trialEnd,
+            trialEligible: false,
           });
         }
 
@@ -146,7 +151,8 @@ export async function GET() {
             });
           }
 
-          return NextResponse.json({ plan: 'free', status: 'cancelled' });
+          // Free again, but NOT a new customer: this is the 43-account case the finding is about.
+          return NextResponse.json({ plan: 'free', status: 'cancelled', trialEligible: false });
         }
       } catch (e) {
         // If Stripe check fails, fall through to DB-based response.
@@ -160,7 +166,7 @@ export async function GET() {
     if (sub.status === 'active' && sub.current_period_end) {
       const endDate = new Date(sub.current_period_end);
       if (endDate < new Date()) {
-        return NextResponse.json({ plan: 'free', status: 'expired' });
+        return NextResponse.json({ plan: 'free', status: 'expired', trialEligible: isTrialEligible(sub) });
       }
     }
 
@@ -169,9 +175,15 @@ export async function GET() {
       status: sub.status,
       currentPeriodEnd: sub.current_period_end,
       trialEnd: sub.trial_end || null,
+      // F031: the interface advertised "£1 first month" to everyone while checkout withheld the
+      // coupon from anyone who had subscribed before. 43 accounts carry a cancelled row.
+      trialEligible: isTrialEligible(sub),
     });
   } catch (err) {
     console.error('Subscription check error:', err);
-    return NextResponse.json({ plan: 'free', status: 'inactive' });
+    // F031: this returned `trialEligible: true`, which fails OPEN against the rule's own doctrine
+    // — when we cannot tell, we quote the price we know we will honour. An unknown error is
+    // exactly the case where we cannot tell.
+    return NextResponse.json({ plan: 'free', status: 'inactive', trialEligible: false });
   }
 }

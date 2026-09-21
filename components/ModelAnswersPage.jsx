@@ -159,10 +159,14 @@ function BrowseFilter({ sectionsMeta, answers, subjectFilter, setSubjectFilter, 
   }, [sectionsMeta, subjectFilter, unitFilter]);
 
   /* Count answers per section */
+  /* Keyed by subject AND number. Business 1.3.1 and Economics 1.3.1 are different topics with the
+     same number, so a bare-number count showed the Economics total on the Business pill. The pills
+     only render once a subject is chosen, so the lookup below always has one. Packet 12.1, E005. */
   const countMap = useMemo(() => {
     const map = {};
     answers.forEach(a => {
-      map[a.sectionNumber] = (map[a.sectionNumber] || 0) + 1;
+      const key = `${a.subject}:${a.sectionNumber}`;
+      map[key] = (map[key] || 0) + 1;
     });
     return map;
   }, [answers]);
@@ -227,7 +231,7 @@ function BrowseFilter({ sectionsMeta, answers, subjectFilter, setSubjectFilter, 
           <p className="ma-browse-step-label">Choose a topic:</p>
           <div className="ma-section-pills">
             {visibleSections.map(sec => {
-              const count = countMap[sec.number] || 0;
+              const count = countMap[`${subjectFilter}:${sec.number}`] || 0;
               const isActive = sectionFilter === sec.number;
               return (
                 <button

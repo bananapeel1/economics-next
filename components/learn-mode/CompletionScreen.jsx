@@ -1,17 +1,27 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { useClientValue } from '@/lib/use-client-storage';
+import { readAnswerLog } from '@/lib/answer-log';
 import StrengthMeter from '../StrengthMeter';
 import PostTest from './PostTest';
 import QuickFireDrill from './QuickFireDrill';
+import { recordReview } from '@/lib/strength';
+import { saveSectionState } from '@/lib/section-state';
 
 function ScoreRow({ label, emoji, score }) {
   const pct = score.total > 0 ? Math.round((score.correct / score.total) * 100) : 0;
+  // F055: a skipped check counts against the score (it is in `total`) and is named as skipped, so
+  // the path of least resistance is visible on the screen it used to hide from.
+  const skipped = score.skipped || 0;
   return (
     <div className="lm-score-row">
       <div className="lm-score-row-header">
         <span className="lm-score-row-emoji">{emoji}</span>
         <span className="lm-score-row-label">{label}</span>
-        <span className="lm-score-row-value">{score.correct}/{score.total}</span>
+        <span className="lm-score-row-value">
+          {score.correct}/{score.total}
+          {skipped > 0 && <span className="lm-score-row-skipped"> · {skipped} skipped</span>}
+        </span>
       </div>
       <div className="lm-score-bar-track">
         <div className="lm-score-bar-fill" style={{ width: `${pct}%` }} />
@@ -25,30 +35,72 @@ export default function CompletionScreen({
   subjectId, sectionId, currentSection,
   contentData, quizData, scores,
   onNavigateToQuiz, onNavigateToTab,
-  onStartMixedReview, onRetry,
+  onStartMixedReview, onRetry, onScrollTop,
 }) {
   const [completeView, setCompleteView] = useState('main'); // 'main' | 'posttest' | 'drill'
 
-  // Count completed sections for mixed review eligibility
-  let completedCount = 0;
-  if (typeof window !== 'undefined') {
-    try {
-      const schedule = JSON.parse(localStorage.getItem('revvy_review_schedule') || '[]');
-      completedCount = schedule.length;
-    } catch {}
+  /* The drill and the post-test replace this screen in place. Opening one from a button near the
+     bottom left the student looking at whatever was below it, so each sub-view starts at its top.
+     The first render is skipped: LearnModeTab already scrolls when the screen appears. */
+  const viewMounted = useRef(false);
+  useEffect(() => {
+    if (viewMounted.current) onScrollTop?.(true);
+    viewMounted.current = true;
+  }, [completeView, onScrollTop]);
+
+  /**
+   * F005. The post-test and the Quick Fire drill both discarded their result. They are the last
+   * two things a student does in a section and the strongest evidence available that the topic
+   * stuck, and neither touched the strength meter or the review schedule. A student who aced the
+   * drill was scheduled identically to one who skipped it.
+   *
+   * Score arrives as 0..1. It feeds the strength model's accuracy input, and a strong result
+   * counts as a review, which is what pushes the next due date out.
+   */
+  function handleDrillScore(score) {
+    if (typeof score !== 'number' || Number.isNaN(score)) return;
+    recordReview(subjectId, sectionId, score);
+    saveSectionState(subjectId, sectionId, { quizAccuracy: score, reviewed: score >= 0.6 });
   }
 
-  // Check if pre-test data exists for post-test
-  const hasPretestData = typeof window !== 'undefined' &&
-    (() => { try { const d = JSON.parse(localStorage.getItem(`revvy_pretest_${subjectId}_${sectionId}`) || '{}'); return d.questions?.length > 0; } catch { return false; } })();
+  // Count completed sections for mixed review eligibility
+  // F118: both of these read localStorage in the render body, so they are read after hydration now.
+  const [completedCount] = useClientValue(
+    () => JSON.parse(localStorage.getItem('revvy_review_schedule') || '[]').length,
+    0,
+    [],
+  );
+
+  /*
+   * Whether there is a post-test to offer.
+   *
+   * F017: this used to require pre-test data, so the post-test button was hidden from every
+   * student who skipped the pre-test — which is most of them, and exactly the students whose
+   * wrong answers had nowhere to reappear. The fallback post-test asks what they got wrong, so
+   * having logged a wrong answer also earns the button.
+   */
+  const [hasPostTest] = useClientValue(
+    () => {
+      const pre = JSON.parse(localStorage.getItem(`revvy_pretest_${subjectId}_${sectionId}`) || '{}');
+      if (pre.questions?.length > 0) return true;
+      return quizData?.length > 0 && readAnswerLog(subjectId, sectionId).some((e) => e.correct === false);
+    },
+    false,
+    [subjectId, sectionId, quizData],
+  );
 
   // Post-test sub-view
   if (completeView === 'posttest') {
     return (
       <div className="lm-complete-screen">
+        {/* F005: both of these threw their score away. A strong post-test is the best evidence
+            in the whole session that the topic stuck, and it fed neither the strength meter nor
+            the review schedule. */}
         <PostTest
           subjectId={subjectId}
           sectionId={sectionId}
+          quizData={quizData}
+          onScore={handleDrillScore}
           onClose={() => setCompleteView('main')}
         />
       </div>
@@ -60,7 +112,10 @@ export default function CompletionScreen({
     return (
       <div className="lm-complete-screen">
         <QuickFireDrill
+          subjectId={subjectId}
+          sectionId={sectionId}
           quizData={quizData}
+          onScore={handleDrillScore}
           onClose={() => setCompleteView('main')}
         />
       </div>
@@ -82,7 +137,7 @@ export default function CompletionScreen({
       <StrengthMeter subjectId={subjectId} sectionId={sectionId} size="medium" />
 
       {/* Score breakdown */}
-      {scores && (scores.quiz.total > 0 || scores.recall.total > 0 || scores.explain.total > 0) && (
+      {scores && (scores.quiz.total > 0 || scores.recall.total > 0 || scores.explain.total > 0 || scores.practice?.total > 0) && (
         <div className="lm-score-breakdown">
           <h3 className="lm-score-breakdown-title">Score Breakdown</h3>
           {/* No weight labels. The 50/30/20 percentages named a composite score that was never
@@ -100,14 +155,39 @@ export default function CompletionScreen({
             <ScoreRow label="Explain It Back" emoji="&#128172;"
               score={{ correct: scores.explain.attempts, total: scores.explain.total }} />
           )}
-
-          {/* Weakest area callout */}
-          {scores.quiz.total > 0 && scores.quiz.correct < scores.quiz.total && (
-            <div className="lm-weakest-area">
-              <span className="lm-weakest-icon">&#9888;</span>
-              <span>Quiz questions need attention — try the quiz tab for more practice</span>
-            </div>
+          {/* F016: written practice answers count now. `correct` here is "attempted": the student
+              marks these against a checklist themselves, so the row reads answered / shown. */}
+          {scores.practice?.total > 0 && (
+            <ScoreRow label="Written practice" emoji="&#9997;&#65039;" score={scores.practice} />
           )}
+
+          {/* F006: the weakest area, only when there is enough evidence to name one.
+              This fired whenever `quiz.correct < quiz.total`, so one wrong answer out of one
+              produced "Quiz questions need attention" on a completion screen — a verdict on a
+              single data point, delivered at the moment the student had just finished. It also
+              only ever accused the quiz, even when recall was the worse of the two.
+              Three answers minimum, below 70%, and it names whichever measured area is actually
+              weakest. */}
+          {(() => {
+            const MIN_ANSWERS = 3;
+            const WEAK_BELOW = 0.7;
+            const areas = [
+              { key: 'quiz', label: 'Quiz questions', advice: 'try the Quiz tab for more practice', s: scores.quiz },
+              { key: 'recall', label: 'The recall exercises', advice: 'work back through the topic and try them again', s: scores.recall },
+            ]
+              .filter((a) => a.s && a.s.total >= MIN_ANSWERS && a.s.correct / a.s.total < WEAK_BELOW)
+              .sort((a, b) => a.s.correct / a.s.total - b.s.correct / b.s.total);
+            if (!areas.length) return null;
+            const worst = areas[0];
+            return (
+              <div className="lm-weakest-area">
+                <span className="lm-weakest-icon" aria-hidden="true">&#9888;</span>
+                <span>
+                  {worst.label} need attention — you got {worst.s.correct} of {worst.s.total}. {worst.advice}.
+                </span>
+              </div>
+            );
+          })()}
         </div>
       )}
 
@@ -122,13 +202,16 @@ export default function CompletionScreen({
       </div>
 
       {/* Post-test: re-test pre-test questions */}
-      {hasPretestData && (
+      {hasPostTest && (
         <button className="lm-complete-posttest-btn" onClick={() => setCompleteView('posttest')}>
           &#128200; Test your improvement
         </button>
       )}
 
-      {/* Quick fire drill */}
+      {/* The drill is the primary action here, and the Quiz tab is the quiet one below it. The drill
+          is free, it is this section's own questions, and it feeds the strength model (F005); the
+          quiz is a paid surface a free student meets a paywall on after two questions. Swapped on
+          the founder's call, 16 September. */}
       {quizData?.length > 0 && (
         <button className="lm-complete-drill-btn" onClick={() => setCompleteView('drill')}>
           &#9889; Quick fire drill ({quizData.length} questions)
@@ -141,8 +224,11 @@ export default function CompletionScreen({
 
       {/* Practice what you learned — links to Smart Practice / Flashcards */}
       <div className="lm-complete-practice-row">
-        <a href="/practice" className="lm-complete-practice-btn">
-          &#9889; Practice questions
+        {/* F080: a student who finishes here has met about five of this topic's questions. The
+            rest are only reachable through Smart Practice, so this arrives with the topic already
+            chosen and says how many are waiting, rather than dropping them on a list of 43. */}
+        <a href={`/practice?section=${encodeURIComponent(sectionId)}`} className="lm-complete-practice-btn">
+          &#127919; {quizData?.length ? `Smart Practice: all ${quizData.length} questions on this topic` : 'Smart Practice'}
         </a>
         <a href="/flashcards-practice" className="lm-complete-practice-btn lm-complete-flashcard-btn">
           &#127183; Review flashcards

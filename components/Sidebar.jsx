@@ -3,13 +3,42 @@ import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { useAuth } from './AuthProvider';
 import { Clipboard, Glossary, Document, CardClub, PdfFile, NetworkGraph, ModelAnswer, BookAlt, BoltIcon, CardsIcon, ProgressChart, PenIcon } from './Icons';
-import StrengthMeter from './StrengthMeter';
+import { getStrengthData, nextReviewAt } from '@/lib/strength';
 
 const SidebarHomeIcon = () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>;
 
 export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, sections, units, activeSection, onSectionChange, isOpen, isCollapsed, onToggleCollapse, contentStepInfo, savedProgress, visitedFeatures = {}, onResourceVisit, learnModeCompletions = {}, onTabSelect, onHomeClick }) {
   const { user, isPremium } = useAuth();
   const [moreOpen, setMoreOpen] = useState(false);
+
+  /*
+   * F004. A completed topic used to carry a small strength bar right beside the green tick that
+   * said it was finished. The bar only ever shrank, it had no label in the small size, and it
+   * disagreed with the tick: done, and visibly draining. That is the "punished for finishing"
+   * complaint this finding is named for, and fixing the decay maths in lib/strength.js did not
+   * remove it, because a bar that falls slower is still a bar that only falls.
+   *
+   * The sidebar now says one thing, and only when it is actionable: this topic is ready for a
+   * review. Read in an effect rather than during render, because the source is localStorage and
+   * the server has no access to it.
+   */
+  const [dueSections, setDueSections] = useState(() => new Set());
+  const completedKey = useMemo(
+    () => Object.keys(learnModeCompletions).filter((k) => learnModeCompletions[k]).sort().join(','),
+    [learnModeCompletions],
+  );
+  useEffect(() => {
+    const ids = completedKey ? completedKey.split(',') : [];
+    if (!ids.length) { setDueSections(new Set()); return; }
+    const now = Date.now();
+    const due = new Set();
+    for (const id of ids) {
+      const data = getStrengthData(activeSubjectId, id);
+      const at = data ? nextReviewAt(data) : null;
+      if (at && at <= now) due.add(id);
+    }
+    setDueSections(due);
+  }, [activeSubjectId, completedKey]);
 
   // Determine which unit the active section belongs to
   const activeUnitNumber = useMemo(() => {
@@ -116,27 +145,37 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
                     >
                       <span className="sidebar-section-number">{section.number}</span>
                       <span className="sidebar-section-name">{section.short_title}</span>
-                      {learnModeCompletions[section.id] && (
-                        <>
-                          <StrengthMeter subjectId={activeSubjectId} sectionId={section.id} size="small" />
-                          <span className="sidebar-learn-complete-dot" title="Learn Mode complete" />
-                        </>
-                      )}
-                      {status && (
-                        <span className={`sidebar-section-status ${status}`} title={status === 'complete' ? 'Completed' : 'In progress'}>
-                          {status === 'complete' ? (
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                              <circle cx="12" cy="12" r="10" />
-                              <polyline points="16 8 10 16 7 13" />
-                            </svg>
-                          ) : (
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                              <circle cx="12" cy="12" r="10" />
-                              <path d="M12 6v6l4 2" />
-                            </svg>
-                          )}
-                        </span>
-                      )}
+                      {/* F033: two indicators used to sit here and disagree — a Learn Mode dot from
+                          localStorage and a progress tick from the resume pointer, which counted
+                          steps against the wrong total. A student saw a section marked complete
+                          and in progress at once. One status now, completion from either source
+                          winning, because finishing is finishing however it was recorded. */}
+                      {(learnModeCompletions[section.id] || status) && (() => {
+                        const isDone = learnModeCompletions[section.id] || status === 'complete';
+                        const isDue = isDone && dueSections.has(section.id);
+                        const state = isDue ? 'due' : isDone ? 'complete' : status;
+                        const label = isDue ? 'Ready for review' : isDone ? 'Completed' : 'In progress';
+                        return (
+                          <span className={`sidebar-section-status ${state}`} title={label} aria-label={label}>
+                            {isDue ? (
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                                <path d="M21 12a9 9 0 1 1-2.64-6.36" />
+                                <polyline points="21 3 21 9 15 9" />
+                              </svg>
+                            ) : isDone ? (
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="16 8 10 16 7 13" />
+                              </svg>
+                            ) : (
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 6v6l4 2" />
+                              </svg>
+                            )}
+                          </span>
+                        );
+                      })()}
                     </li>
                   );
                 })}
@@ -164,10 +203,11 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
           Written Practice
           <span className="new-badge">New</span>
         </Link>
+        {/* F032: this opened a 'content' tab with no entry in the tab bar. The notes are the readable whole. */}
         {onTabSelect && (
-          <button className="sidebar-resource-link sidebar-content-link" onClick={() => onTabSelect('content')}>
+          <button className="sidebar-resource-link sidebar-content-link" onClick={() => onTabSelect('notes')}>
             <span className="sidebar-resource-icon"><BookAlt size={16} /></span>
-            Content Explorer
+            Full notes
           </button>
         )}
         <Link href="/model-answers" className="sidebar-resource-link">

@@ -1,0 +1,160 @@
+PACKET 36 OUTCOME SUMMARY
+========================
+
+Session type: Post-verification audit and status update
+Date: 2026-09-18
+Branch: remediation/2026-09
+
+GATE STATUS: DID NOT PASS
+
+THE SITUATION
+==============
+Packet 36 (managing-finance, Business Unit 2, WBS12, IAL 2.3.3) was built and staged on 2026-09-18
+by Opus 5. Verify A round 1 rejected 4 ids; 2 were real defects (topFix-04, structure-02), 2 were
+wont-fixes (structure-01, structure-10). After fix round 1, re-staging, and Verify A round 2, the
+content was verified correct: 28 of 30 ids confirmed, 2 wont-fixed with spec citations.
+
+However, Verify B (student walkthrough at 390×844) found a BLOCKING DEFECT that prevents the gate
+from passing.
+
+VERIFY B BLOCKING DEFECT
+=========================
+Every diagram in the section renders with text at 7.1–9.3 CSS px on a 390px viewport, against body
+copy of 14–17px. The diagrams are roughly half the readable size of surrounding prose.
+
+MEASUREMENT:
+- Diagram components drawn into 440-unit viewBox
+- Learn column at 390px: 313 CSS px available
+- Scale factor: 0.711 (313 ÷ 440)
+- Authored font sizes: 10–13px
+- Rendered on screen: 7.1–9.3px
+
+WORST CASE (Step 17):
+- Statement of financial position table with figures like "Inventory $240,000", "Trade payables $180,000"
+- Ratio workings like "Current ratio = $400,000 ÷ $250,000 = 1.60:1"
+- All rendered at 8.54px — the smallest text on the page, the one a student must read numbers from
+
+WHY CHECKS MISSED IT:
+- No validator rule checks rendered font-size (only authored fontSize)
+- No table check catches text nodes inside SVG (only HTML <table>)
+- No layout check catches content scaled to fit a viewport
+- The catch-all measurement (fontSize × rendered-width ÷ viewBox-width) is not in any existing gate
+
+ESCAPE HATCH FAILED:
+- Tapping a diagram opens enlarge modal redrawn at 789–858px with 21.5–23.3px text — readable
+- But wider than 390px: title cut mid-word, lines cut by horizontal scroll
+- Student gets: complete and unreadable OR readable and requiring two-axis panning
+- No fit-to-width is both readable and complete
+
+CONTENT STATUS
+===============
+All content is correct and verified:
+- 30 ledger ids: 2 confirmed (topFix-04, structure-02), 28 confirmed by verifier
+- 24 substantive leaves from spec: 100% evidenced, hand-mapped
+- 24 subsections (1 per step)
+- 24 recalls (13 fill-in, 7 classify, 3 match, 1 reorder) with semantic hints and 2-3 distractors each
+- 28 quiz items with keys derived from block order
+- 11 practice items with all eight Business unit-2 command words at spec tariffs
+- 8 diagrams (the blocking defect is in rendering, not content)
+- 34 flashcards, every front and back distinct
+- 7 mistakes and 4 chains representing real exam errors
+- 2 evaluation items with level bands
+
+Vocabulary check: 0 hits on gearing, ROCE, asset turnover, dividend yield, break-even, contribution,
+variance, cash flow forecast, depreciation, Carillion. Spec coverage: 100% (24 of 24 leaves).
+
+FOUR MINOR DEFECTS (not blocking, fixable in one pass)
+========================================================
+All identified by Verify A or Verify B but not gate-blocking:
+
+1. Working capital cycle math mismatch (scripts/_packet36-content.mjs:491-492)
+   - Renders 67 · 27 · 95 but hint says "added together"
+   - 67 + 27 = 94, not 95 (rounding each term separately)
+   - Fix: align calculation with hint
+
+2. Practice question opens lowercase (scripts/_packet36-assessment.mjs:242)
+   - "…failing to pay a supplier. weak cash flow, overestimation of sales…"
+   - Interpolates replacement after period without capitalization
+   - Fix: capitalize first letter
+
+3. Stale snapshot (audit/snapshots/packet-36-bundle__*.json)
+   - Captured before re-stage, still contains topFix-04 and structure-02 defects
+   - Server serves correct version; bundle file is out of sync
+   - Fix: regenerate after final content pass
+
+ARCHITECTURAL OPTIONS
+======================
+The diagram legibility defect requires choosing one of four architectural paths:
+
+Option A: Reduce ViewBox width to 390px
+- Tradeoff: diagrams become 71% smaller on desktop (768px+)
+- Requires re-measuring and possibly re-authoring all eight
+
+Option B: Author at smaller font (7px instead of 10px)
+- Tradeoff: desktop rendering too small by default
+- Requires font-size rework on all diagrams
+
+Option C: Responsive diagram component
+- Detect viewport width, serve different ViewBox or font-size per screen
+- Tradeoff: component complexity, multiple authoring versions, multi-breakpoint testing
+- This is the long-term solution but outside packet 36's scope
+
+Option D: Defer diagrams
+- Reduce `diagrams` to [] and mark section diagram-pending
+- Tradeoff: loses profit waterfall, working capital cycle, labelled statement
+- Requires marking structure-06, specGap-04, topFix-03 as still-open for later packet
+
+LEDGER STATUS
+=============
+30 ids claimed:
+- 2 real defects fixed and confirmed (topFix-04, structure-02)
+- 28 verified and confirmed by Sonnet verifier round 2
+- 2 marked wont-fix with spec citations (structure-01, structure-10)
+
+Unverified: 0 ids remain unverified after Verify A round 2
+Rejected: 0 ids remain rejected (all rejections accepted and fixed or documented as wont-fix)
+
+FILES AFFECTED
+===============
+Staged (in draft column, data untouched):
+- section_content (24 subsections, one per step)
+- section_recalls (24 recalls across all contract types)
+- section_quizzes (28 items, 3 pre-test, 25 banked)
+- section_practice (11 items)
+- section_diagrams (8 diagrams)
+- section_mistakes (7 items)
+- section_chains (4 items, 2 evaluation)
+
+Not modified:
+- data (live content still serves pre-packet version)
+- All other sections
+
+TEST SUITE
+===========
+✓ npm test: 187/187 pass
+✓ npm run build: exit 0
+✓ npm run validate: exit 0 with 0 new BLOCK
+✓ audit/runs/packet-36/verify-draft.mjs: 168 checks against draft column, all pass
+
+WHAT TASK NEEDED
+=================
+This session was a bookkeeping task to:
+1. Read the post-verification files (verify-a.md, verify-b.md)
+2. Understand the blocking defect (diagram legibility)
+3. Update PROGRESS.md with the final status
+4. Append a Handoff section to NEXT.md
+5. Document the blocking defect and options
+6. NOT commit (per rule 6)
+
+NEXT STEPS REQUIRE FOUNDER DECISION
+====================================
+Before packet 36 can pass or move forward:
+1. Choose one of the four architectural paths (A, B, C, or D)
+2. Implement the diagram fix according to the chosen path
+3. Apply the four minor content fixes in one pass
+4. Re-stage the section
+5. Run Verify A round 3 (Sonnet, impact of diagram + content fixes)
+6. Run Verify B round 2 (390×844 walkthrough, focus on diagram rendering)
+7. Once both verify steps pass, the gate will pass
+
+The content is ready. The diagrams are not. The blocking defect is architectural, not authorial.

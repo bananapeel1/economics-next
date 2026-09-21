@@ -1,5 +1,11 @@
 'use client';
 
+import { useState, useCallback, useMemo, useRef, useEffect } from 'react';
+import { shuffleAllOptions } from '@/lib/shuffle-options';
+import { buildQueue, queueStats, computeNextReview, createDefaultProgress } from '@/lib/spaced-repetition';
+import QuestionCard from '@/components/practice/QuestionCard';
+import SessionSummary from '@/components/practice/SessionSummary';
+
 /** "Next due in 6 hours" / "Next due tomorrow", from a timestamp. Empty string if nothing is scheduled. */
 function formatNextDue(nextReview) {
   if (!nextReview) return '';
@@ -11,11 +17,6 @@ function formatNextDue(nextReview) {
   const days = Math.round(hours / 24);
   return `The next one is due in ${days} day${days === 1 ? '' : 's'}.`;
 }
-
-import { useState, useCallback, useMemo, useRef } from 'react';
-import { buildQueue, queueStats, computeNextReview, createDefaultProgress } from '@/lib/spaced-repetition';
-import QuestionCard from '@/components/practice/QuestionCard';
-import SessionSummary from '@/components/practice/SessionSummary';
 
 /* ─── localStorage helpers (for non-auth users) ─── */
 
@@ -255,7 +256,7 @@ function TopicStep({
                         {prog && prog.total > 0 && (
                           <span className="spe-chip-count">
                             {prog.total} question{prog.total === 1 ? '' : 's'}
-                            {prog.attempted > 0 ? ` \u00b7 ${prog.mastered} mastered` : ''}
+                            {typeof prog.due === 'number' ? ` \u00b7 ${prog.due} due` : ''}
                           </span>
                         )}
                         {prog && prog.total > 0 && (
@@ -302,10 +303,14 @@ function TopicStep({
             <span className="spe-action-count-num">{selectionCount}</span>
             {' '}topic{selectionCount !== 1 ? 's' : ''} selected
           </span>
+          {/* Not `onClick={onStart}`: React passes the click event as the first argument, and
+              handleStart's first parameter is `practiseEarly`. An event object is truthy, so every
+              ordinary Start was pulling in not-yet-due cards and quietly defeating the spaced
+              schedule. Caught by the packet verifier, not by the build. */}
           <button
             className="spe-start-btn"
             disabled={selectionCount === 0 || loading}
-            onClick={onStart}
+            onClick={() => onStart()}
           >
             {loading ? (
               <span className="spe-start-btn-loading">
@@ -329,6 +334,36 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
   const [setupStep, setSetupStep] = useState(1);      // 1 = subject-select, 2 = topic-select
   const [selectedSubjectSlug, setSelectedSubjectSlug] = useState('');
   const [selectedSectionIds, setSelectedSectionIds] = useState(new Set());
+
+  /*
+   * F080. A student who finishes a topic in Learn Mode has met about five of its twenty-five
+   * questions; the other twenty are only reachable here, and only after finding this page and
+   * picking the topic out of a list of forty-three. The completion screen now links straight in
+   * with the topic chosen.
+   *
+   * Read in an effect, never during render: the address bar does not exist on the server, and
+   * reading it in the render body is what caused F118.
+   */
+  useEffect(() => {
+    let wanted = null;
+    try { wanted = new URLSearchParams(window.location.search).get('section'); } catch { return; }
+    if (!wanted) return;
+    const sec = sections.find((x) => String(x.id) === String(wanted));
+    if (!sec) return;
+    const unit = units.find((u) => u.id === sec.unit_id);
+    const subject = unit ? subjects.find((sub) => sub.id === unit.subject_id) : null;
+    if (subject?.slug) {
+      setSelectedSubjectSlug(subject.slug);
+      fetchProgressSummary(subject.slug);
+    }
+    setSelectedSectionIds(new Set([sec.id]));
+    // Straight to topic selection with the topic already ticked. Going through
+    // handleSelectSubject would clear the selection on its second line, which is why the link
+    // did nothing at all before.
+    setSetupStep(2);
+    // Once, on mount. Re-running would fight the student's own selections.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const [quizData, setQuizData] = useState({});
   const [progressMap, setProgressMap] = useState({});
   const [queue, setQueue] = useState([]);
@@ -360,11 +395,36 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
     try {
       const res = await fetch(`/api/practice/progress-summary?sections=${sectionIds.join(',')}`);
       const json = await res.json();
-      if (json.summary) setProgressSummary(json.summary);
+      if (!json.summary) return;
+
+      // F085: the endpoint only knows about a signed-in student's progress, so for everyone else
+      // it reports every question as due. That is not a neutral default: it tells an anonymous
+      // student who has already practised here that nothing has stuck. Their schedule lives in
+      // localStorage, so recompute due from that rather than showing a number we know is wrong.
+      if (!isLoggedIn) {
+        const local = loadLocalProgress(sectionIds);
+        const now = Date.now();
+        for (const id of sectionIds) {
+          const row = json.summary[id];
+          if (!row) continue;
+          let attempted = 0;
+          let due = 0;
+          for (const [key, val] of Object.entries(local)) {
+            if (!key.startsWith(id + ':')) continue;
+            attempted++;
+            if (!val?.nextReview || val.nextReview <= now) due++;
+          }
+          row.attempted = attempted;
+          row.mastered = 0;
+          row.due = due + Math.max(0, row.total - attempted);
+        }
+      }
+
+      setProgressSummary(json.summary);
     } catch {
       // silently ignore
     }
-  }, [subjects, units, sections]);
+  }, [subjects, units, sections, isLoggedIn]);
 
   /* ─── Derived data ─── */
 
@@ -481,7 +541,18 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
         });
       }
 
-      const fetchedQuizData = qJson.questions || {};
+      /*
+       * F074. Smart Practice draws the same bank as the Quiz tab, where the correct answer is
+       * option B in 64% of questions, and this surface was not shuffled — the finding names
+       * components/practice/QuestionCard.jsx by file and line. Shuffled here, at the point the
+       * bank enters the engine, with the same deterministic per-question order the section
+       * surfaces use, so a question looks the same wherever the student meets it.
+       */
+      const raw = qJson.questions || {};
+      const fetchedQuizData = {};
+      for (const [sectionId, list] of Object.entries(raw)) {
+        fetchedQuizData[sectionId] = Array.isArray(list) ? shuffleAllOptions(list) : list;
+      }
       setQuizData(fetchedQuizData);
 
       // 2. Fetch progress
@@ -658,6 +729,8 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
   const handleRestart = useCallback(() => {
     setPhase('setup');
     setSetupStep(1);
+    setAccessNote(null);
+    setEmptyReason(null);
     setQueue([]);
     setCurrentIndex(0);
     setSessionResults([]);

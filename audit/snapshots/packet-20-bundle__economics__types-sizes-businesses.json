@@ -1,0 +1,2799 @@
+{
+ "section_id": "types-sizes-businesses",
+ "subject": "economics",
+ "label": "packet-20-bundle",
+ "tables": {
+  "content": [
+   {
+    "id": "types-sizes-businesses:block:75567837",
+    "title": "Types of Business",
+    "sections": [
+     {
+      "id": "types-sizes-businesses:sub:private-and-public-sector",
+      "title": "Private Sector and Public Sector Organisations",
+      "keyIdea": "The first division the specification draws is by who owns the organisation: private individuals and companies, or the state.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Every organisation in an economy can be placed by **who owns it**. That single question separates the two sectors, and it matters because ownership is what settles whose objectives the organisation pursues."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Private sector organisations** are owned by private individuals or by other private firms. The owners put the capital in, carry the risk of losing it, and decide what the organisation is for.",
+         "**State-owned enterprises (public sector)** are owned by the government on behalf of citizens. They are funded from taxation, from borrowing, or from what they charge, and their objectives are set politically rather than by an owner seeking a return."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The difference shows up most clearly in what happens to a loss. A private sector firm that cannot cover its costs must borrow, shrink or close. A state-owned enterprise can be kept running on public money if the government judges the service worth more than it costs — which is a decision about society, not about the enterprise."
+       },
+       {
+        "type": "paragraph",
+        "text": "Neither sector is defined by what it produces. Railways, postal services, airlines and utilities are run privately in some economies and by the state in others, and the same industry can move between sectors as governments change."
+       }
+      ],
+      "realExample": {
+       "emoji": "🚆",
+       "text": "Rail networks are state-owned in some economies and operated by private companies in others, carrying the same passengers over the same track. What differs is who owns the operator and therefore whose objectives it serves."
+      },
+      "misconception": "Students write that the public sector means services the public uses. It does not: a supermarket serves the public and is private. Write instead: the public sector is defined by state ownership, not by who the customers are.",
+      "examMatters": "A Define (2 marks, WEC13 Appendix 6) requires the meaning of the term. For a state-owned enterprise that means naming the owner — the government — and not merely describing the service it provides.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:private-and-public-sector:recall",
+       "type": "classify",
+       "prompt": "Sort each organisation into the sector its OWNERSHIP puts it in:",
+       "groups": [
+        {
+         "name": "Private sector",
+         "items": [
+          "A family-owned bakery",
+          "A supermarket chain owned by investors"
+         ],
+         "why": "Ownership rests with private individuals or firms, who supplied the capital and carry the risk"
+        },
+        {
+         "name": "Public sector",
+         "items": [
+          "A national postal service owned by the government",
+          "A state-owned electricity generator"
+         ],
+         "why": "The state owns it on behalf of citizens, so its objectives are set politically rather than by an owner seeking a return"
+        }
+       ]
+      }
+     },
+     {
+      "id": "types-sizes-businesses:sub:for-profit-and-not-for-profit",
+      "title": "For-Profit and Not-for-Profit Organisations",
+      "keyIdea": "The second division is by purpose: whether any surplus is taken out by owners, or must stay inside the organisation.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Ownership says who holds an organisation. **Purpose** says what it is holding it for, and the specification draws that line between for-profit and not-for-profit organisations."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**For-profit organisations** exist to generate a surplus that can be distributed to their owners. Revenue above cost is a return on the capital the owners risked.",
+         "**Not-for-profit organisations** may also earn more than they spend — they must, to survive — but the surplus cannot be taken out. It is retained and spent on the purpose the organisation was set up to serve."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The distinction is about the **destination of the surplus**, not about its existence. A not-for-profit that consistently spends more than it earns closes exactly as a firm does, so it must watch costs and revenues with the same care."
+       },
+       {
+        "type": "paragraph",
+        "text": "For economics the consequence is a different objective function. A for-profit firm can be modelled as choosing the output that maximises profit. A not-for-profit chooses the output that does most for its purpose subject to covering its costs, which can mean serving customers a profit-maximising firm would refuse."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏥",
+       "text": "A hospital run as a charity and a hospital run for profit may treat the same conditions with the same equipment. The difference appears in what happens to money left over at the end of the year, and in which patients each can afford to accept."
+      },
+      "misconception": "Students write that not-for-profit organisations do not make a profit. They may run a surplus and often must. Write instead: a not-for-profit cannot distribute its surplus to owners, so it is retained for the organisation's purpose.",
+      "examMatters": "An Explain (4 marks, WEC13 Appendix 6) on a not-for-profit requires a two-stage chain: state where the surplus must go, then follow that to a decision the organisation makes differently from a for-profit firm.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:for-profit-and-not-for-profit:recall",
+       "type": "fillin",
+       "prompt": "Complete the distinction the specification draws at 1a:",
+       "template": [
+        "A ___ organisation may distribute its surplus to the owners who risked the capital",
+        "A ___ organisation must retain any surplus and spend it on its purpose",
+        "The line between them is drawn by the ___ of the surplus, not by whether one exists"
+       ],
+       "answers": [
+        "for-profit",
+        "not-for-profit",
+        "destination"
+       ],
+       "hints": [
+        "the surplus leaves the organisation",
+        "the surplus stays inside it",
+        "where the money goes"
+       ],
+       "distractors": [
+        "public sector",
+        "size"
+       ]
+      }
+     },
+     {
+      "id": "types-sizes-businesses:sub:co-operatives",
+      "title": "Co-operatives",
+      "keyIdea": "A co-operative is owned by the people who use it — its members — and each member has one vote however much they have put in.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "A **co-operative** is an organisation owned and controlled by its members, who are also the people it serves. The members may be the customers who buy from it, the workers who run it, or the producers who supply it."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Ownership follows use.** You become an owner by joining and trading with the organisation, rather than by buying a stake in it on a market.",
+         "**One member, one vote.** Control is shared equally among members, so it does not concentrate in whoever has contributed the most capital. This is the feature that most sharply separates a co-operative from a company.",
+         "**The surplus is distributed by use**, typically in proportion to how much each member traded with the co-operative, rather than in proportion to capital."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Because control and benefit both follow use, a co-operative tends to pursue what its members want from it — a reliable price for producers, lower prices for consumers, stable work for employees — rather than the largest possible return on capital."
+       },
+       {
+        "type": "paragraph",
+        "text": "The structure has a cost. Raising large amounts of capital is harder when new investors cannot buy control, so co-operatives are common where the capital required is modest and the shared interest is strong, such as farming, retail and financial services."
+       }
+      ],
+      "realExample": {
+       "emoji": "🌾",
+       "text": "Farming co-operatives let many small growers market and process their crop together. Each grower keeps their own farm and gets access to storage, bargaining power and processing that none of them could fund alone."
+      },
+      "misconception": "Students treat a co-operative as simply a small or friendly business. Size is not the point. Write instead: a co-operative is defined by member ownership and one member one vote, which is why control does not follow capital.",
+      "examMatters": "An Explain (4 marks, WEC13 Appendix 6) on a co-operative requires the ownership structure and a consequence of it. The voting rule is the mechanism that makes the consequence follow.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:co-operatives:recall",
+       "type": "match",
+       "prompt": "Match each feature of a co-operative to what it produces:",
+       "pairs": [
+        {
+         "left": "Members own it by using it",
+         "right": "The owners are the customers, workers or suppliers",
+         "why": "Ownership is acquired by trading with the organisation rather than by buying a stake on a market"
+        },
+        {
+         "left": "One member, one vote",
+         "right": "Control does not follow the size of the stake",
+         "why": "Voting power is equal, so whoever contributed most capital cannot take control"
+        },
+        {
+         "left": "Surplus shared by use",
+         "right": "The benefit goes to those who traded most",
+         "why": "Distribution is in proportion to trade rather than in proportion to capital"
+        }
+       ],
+       "distractors": [
+        "Shares are bought and sold on a stock exchange"
+       ]
+      }
+     },
+     {
+      "id": "types-sizes-businesses:sub:joint-ventures",
+      "title": "Joint Ventures",
+      "keyIdea": "A joint venture is a separate organisation two firms create together for one purpose, while each stays independent everywhere else.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "A **joint venture** is a new organisation set up and jointly owned by two or more existing firms, formed to pursue a specific project. The parent firms share the capital, the control and the returns from that project, and remain entirely separate businesses in everything else."
+       },
+       {
+        "type": "paragraph",
+        "text": "That last clause is what distinguishes it from the growth methods later in this section. A merger combines two firms into one; a joint venture leaves both standing and creates a third thing beside them."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Shared cost and shared risk.** A project too large or too uncertain for one firm becomes affordable when the outlay and the possible loss are split.",
+         "**Combined and complementary expertise.** Each parent contributes something the other lacks — a technology, a distribution network, knowledge of a market.",
+         "**Access to a market that is otherwise closed.** Partnering with a firm already established in a country can be the only practical route in, and some governments require it."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The costs are the mirror image. Two owners must agree, so decisions are slower; the returns are shared rather than kept; and each parent must hand over knowledge to a firm that may later compete with it."
+       }
+      ],
+      "realExample": {
+       "emoji": "🚗",
+       "text": "Carmakers routinely build assembly plants abroad as joint ventures with a local manufacturer. The visiting firm brings the design and the process; the local partner brings the site, the workforce and the knowledge of how to sell there."
+      },
+      "misconception": "Students describe a joint venture as a type of merger. Nothing is combined: both parents survive unchanged. Write instead: a joint venture creates a separate jointly-owned organisation for one purpose, leaving the parent firms independent.",
+      "examMatters": "An Analyse (6 marks, WEC13 Appendix 6) requires a chain of reasoning, so a joint venture answer should follow one motive through to an effect on the firm, rather than listing three motives without developing any of them.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:joint-ventures:recall",
+       "type": "classify",
+       "prompt": "Sort each statement by whether it describes a joint venture or a merger:",
+       "groups": [
+        {
+         "name": "Joint venture",
+         "items": [
+          "Both firms carry on as separate businesses",
+          "A third organisation is created for one project"
+         ],
+         "why": "The parents remain independent and jointly own something new beside them"
+        },
+        {
+         "name": "Merger",
+         "items": [
+          "Two firms become a single business",
+          "One set of owners controls everything afterwards"
+         ],
+         "why": "The firms are combined, so the separate businesses no longer exist"
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Private sector organisations are privately owned; state-owned enterprises belong to the government.",
+     "For-profit and not-for-profit differ by where the surplus may go, not by whether one exists.",
+     "A co-operative is owned by its members and gives each of them one vote.",
+     "A joint venture is a new jointly-owned organisation; both parent firms stay independent."
+    ],
+    "diagramId": "types-sizes-businesses:diagram:700a5f13",
+    "quizIndices": [
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    "practiceIndices": [
+     0,
+     1
+    ]
+   },
+   {
+    "id": "types-sizes-businesses:block:56977626",
+    "title": "The Size of Businesses",
+    "sections": [
+     {
+      "id": "types-sizes-businesses:sub:smes-and-large-corporations",
+      "title": "SMEs and Large Corporations",
+      "keyIdea": "Size is measured by more than one yardstick — employees, turnover, capital employed and market share — and the yardsticks can disagree.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The specification divides firms into **SMEs (small- and medium-size enterprises)** and **large corporations**. Before that division can be used, size has to be measured, and there is more than one way to measure it."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Number of employees** — the most commonly quoted measure, and the one that decides which regulations apply in most economies.",
+         "**Turnover** — annual sales revenue, which captures how much business the firm actually does.",
+         "**Capital employed** — the value of the assets the firm uses, which reflects how much had to be invested to operate at all.",
+         "**Market share** — the firm's sales as a proportion of the whole market, which measures size relative to rivals rather than in absolute terms."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The measures can point in opposite directions. An oil refinery employs few people and uses enormous capital; a cleaning contractor employs thousands and owns very little. Calling either one \"large\" depends entirely on the yardstick chosen."
+       },
+       {
+        "type": "paragraph",
+        "text": "Where the boundary between an SME and a large corporation falls is set by each government, usually for the purpose of deciding which firms qualify for support or lighter regulation. The specification names the categories and not a threshold, so an answer should name the measure it is using rather than quote a figure."
+       }
+      ],
+      "realExample": {
+       "emoji": "⛽",
+       "text": "A refinery and a supermarket chain can report similar turnover while one employs a few hundred people and the other employs tens of thousands. Both are large corporations; the measure that says so is different in each case."
+      },
+      "misconception": "Students assume employee numbers settle the question. A capital-intensive firm can be enormous with a small workforce. Write instead: state which measure of size is being used, because turnover, employees, capital employed and market share can rank the same firms differently.",
+      "examMatters": "A Define (2 marks, WEC13 Appendix 6) on an SME needs the category and the basis on which firms are put in it. Naming the measure is what turns a vague answer into the meaning of the term.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:smes-and-large-corporations:recall",
+       "type": "match",
+       "prompt": "Match each measure of business size to what it actually captures:",
+       "pairs": [
+        {
+         "left": "Number of employees",
+         "right": "How much labour the firm uses",
+         "why": "It counts people, so it understates a firm that runs on machinery rather than staff"
+        },
+        {
+         "left": "Turnover",
+         "right": "How much business the firm does in a year",
+         "why": "It measures sales revenue, regardless of how many people or how much capital produced them"
+        },
+        {
+         "left": "Capital employed",
+         "right": "How much had to be invested to operate",
+         "why": "It values the assets in use, which is what makes a capital-intensive firm look large"
+        },
+        {
+         "left": "Market share",
+         "right": "How large the firm is compared with its rivals",
+         "why": "It is relative rather than absolute, so a firm can be small in output and large in its market"
+        }
+       ]
+      }
+     },
+     {
+      "id": "types-sizes-businesses:sub:why-some-firms-stay-small",
+      "title": "Why Some Firms Stay Small",
+      "keyIdea": "Staying small is usually a choice or a limit, not a failure: the market may be tiny, the product may resist standardisation, or the owner may not want the firm to grow.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Most firms in most economies are small and stay small. The specification asks for the reasons, and none of them is that the firm tried to grow and could not."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**The size of the market.** Some markets are simply small — a specialist repair service, a local trade. A firm cannot grow past the number of customers that exist.",
+         "**Niche markets.** Where demand is for something specific and personal, the firm that serves it well cannot standardise what it does without losing the very thing customers pay for.",
+         "**Owner objectives.** An owner may prefer control, independence and predictable hours to a larger business. Growth means delegating, borrowing and answering to others.",
+         "**Access to finance.** Expansion has to be funded. A small firm with few assets to offer as security borrows on worse terms than a large one, and may not be able to borrow at all.",
+         "**Personal service and local knowledge.** Where customers buy the relationship as much as the product, size actively works against the firm."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "These reasons are why small firms survive alongside large ones in the same industry rather than being driven out. They are serving demand the large firm cannot serve profitably — which is also why the two sizes often do not compete directly at all."
+       }
+      ],
+      "realExample": {
+       "emoji": "✂️",
+       "text": "Barbers, plumbers and independent restaurants remain small in economies of every size. The service is delivered in person, the customer base is local, and a second branch does not make the first one cheaper to run."
+      },
+      "misconception": "Students treat small size as evidence of failure. Growth is one strategy among several. Write instead: many firms remain small because the market is small, the product resists standardisation, or the owner has chosen not to grow.",
+      "examMatters": "An Examine (8 marks, WEC13 Appendix 6) requires analysis AND evaluation, with a brief assessment of the factors. Two reasons developed and then weighed against each other go further than five reasons named.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:why-some-firms-stay-small:recall",
+       "type": "classify",
+       "prompt": "Sort each firm by the reason it stays small:",
+       "groups": [
+        {
+         "name": "The market itself is small",
+         "items": [
+          "A restorer of antique clocks",
+          "A supplier of parts for one type of vintage tractor"
+         ],
+         "why": "There is a limited number of customers in existence, so growth has nowhere to go"
+        },
+        {
+         "name": "The owner chooses not to grow",
+         "items": [
+          "A baker who turns down a second site to keep working mornings",
+          "A designer who refuses contracts that would mean hiring staff"
+         ],
+         "why": "The constraint is the owner's own objectives, not the market or the money"
+        },
+        {
+         "name": "Finance is not available",
+         "items": [
+          "A workshop refused a loan because it has no assets to offer as security",
+          "A new firm whose owners cannot raise the capital for a bigger site"
+         ],
+         "why": "The expansion is wanted and viable but cannot be funded"
+        }
+       ]
+      }
+     },
+     {
+      "id": "types-sizes-businesses:sub:why-other-firms-grow",
+      "title": "Why Other Firms Grow",
+      "keyIdea": "Firms grow to spread fixed costs over more output, to gain power over price, to spread risk, and because managers benefit from running something larger.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Against every reason for staying small there is a reason for growing, and the specification asks for both halves of the comparison."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Lower average cost.** Fixed costs do not rise with output, so spreading them over more units brings the cost per unit down.",
+         "**Market power.** A larger share of the market gives a firm more influence over its price and better terms from suppliers, who need its business more than it needs theirs.",
+         "**Spreading risk.** A firm selling several products in several markets is not ruined when one of them collapses.",
+         "**Access to finance.** Larger firms have more assets to offer as security, so they borrow more cheaply — which makes further growth easier still.",
+         "**Managerial motives.** Growth can serve the managers who run a firm even where it does little for its owners, which is the thread picked up in the final chapter."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Imani Ceramics illustrates the first reason without any theory of cost curves. Her fixed costs are $72,000 a month whatever she produces. Spread over 10,000 units that is $7.20 a unit; spread over 18,000 units it is $4. Nothing about the fixed cost changed — only the number of units sharing it."
+       }
+      ],
+      "realExample": {
+       "emoji": "📦",
+       "text": "Delivery networks grow because a depot, a sorting system and a fleet cost much the same whether they handle a thousand parcels a day or ten thousand. The second thousand is far cheaper to carry than the first."
+      },
+      "misconception": "Students write that growth always reduces average cost. It reduces the fixed cost per unit, which is not the whole of average cost. Write instead: growth spreads fixed costs over more units, and whether average cost falls depends on what happens to the other costs.",
+      "examMatters": "A Discuss (14 marks, WEC13 Appendix 6) requires analysis and evaluation, and wants both sides weighed and a judgement reached. Setting a reason for growing directly against a reason for staying small is the comparison the question is asking for.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:why-other-firms-grow:recall",
+       "type": "fillin",
+       "prompt": "Complete the arithmetic that explains why a larger output can cost less per unit, using Imani's fixed costs of $72,000 a month:",
+       "template": [
+        "Spread over 10,000 units, the fixed cost per unit is ___",
+        "Spread over 18,000 units, the fixed cost per unit is ___",
+        "The fixed cost itself has ___"
+       ],
+       "answers": [
+        "$7.20",
+        "$4",
+        "not changed"
+       ],
+       "hints": [
+        "$72,000 divided by 10,000 units",
+        "$72,000 divided by 18,000 units",
+        "only the number of units sharing it has changed"
+       ],
+       "distractors": [
+        "$20",
+        "$14.40",
+        "fallen"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "SMEs and large corporations: name the measure — employees, turnover, capital employed or share.",
+     "Firms stay small because the market is small, the owner chooses to, or finance is unavailable.",
+     "Firms grow to spread fixed costs, gain market power, spread risk and borrow more cheaply.",
+     "Growth is one strategy among several, not the default every firm is attempting."
+    ],
+    "diagramId": "types-sizes-businesses:diagram:32abe8ef",
+    "quizIndices": [
+     8,
+     9,
+     10,
+     11
+    ],
+    "practiceIndices": [
+     2
+    ]
+   },
+   {
+    "id": "types-sizes-businesses:block:bd96e183",
+    "title": "How Businesses Grow",
+    "sections": [
+     {
+      "id": "types-sizes-businesses:sub:organic-growth",
+      "title": "Organic Growth",
+      "keyIdea": "Organic growth is a firm getting bigger by selling more of what it already does — slower than buying a rival, and far easier to control.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Organic growth**, also called internal growth, is expansion generated by the firm's own activity: more customers, more outlets, more products, more markets. Nothing is bought; the firm builds it."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Opening new outlets or capacity** — the same format repeated in more places, funded out of retained profit or borrowing.",
+         "**Selling more to existing customers** — through advertising, a wider range, or better distribution.",
+         "**Entering new markets** — taking the existing product to buyers who could not previously reach it."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Organic growth is **slower** than buying another firm, because capacity has to be built and customers won one at a time. That slowness is also its defence: the firm grows only as fast as it can fund and manage, so the risk of overreaching is smaller."
+       },
+       {
+        "type": "paragraph",
+        "text": "It also keeps the firm whole. There is no second workforce to absorb and no second set of systems to reconcile, so the methods that made the firm work go into each new outlet intact."
+       },
+       {
+        "type": "paragraph",
+        "text": "The limit is time and the size of the market. A firm that needs to be large quickly, or that needs something it does not have — a technology, a brand, a position in another country — cannot get there organically at all."
+       }
+      ],
+      "realExample": {
+       "emoji": "☕",
+       "text": "Coffee chains have grown largely by opening more of their own shops rather than by buying competitors. Each new site is the same format, run by the same systems, funded from what the existing sites earn."
+      },
+      "misconception": "Students describe organic growth as growth without investment. It is funded expansion; what makes it organic is that the capacity is built rather than bought. Write instead: organic growth expands the firm's own operations, as opposed to acquiring another firm's.",
+      "examMatters": "An Explain (4 marks, WEC13 Appendix 6) on organic growth needs the method and a consequence of it. The consequence that does the most work is the pace, because pace is what the other growth methods are chosen to change.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:organic-growth:recall",
+       "type": "classify",
+       "prompt": "Sort each expansion by whether the firm built it or bought it:",
+       "groups": [
+        {
+         "name": "Organic growth",
+         "items": [
+          "Opening twelve new branches over three years",
+          "Launching a new product range developed in-house"
+         ],
+         "why": "The capacity is created by the firm's own activity, so it grows only as fast as it can build and fund"
+        },
+        {
+         "name": "External growth",
+         "items": [
+          "Acquiring a competitor and its outlets",
+          "Merging with a firm in a neighbouring country"
+         ],
+         "why": "The capacity already exists and changes hands, which is why it is immediate"
+        }
+       ]
+      }
+     },
+     {
+      "id": "types-sizes-businesses:sub:external-growth-mergers",
+      "title": "Mergers and Takeovers",
+      "keyIdea": "External growth combines two firms — by agreement in a merger, by purchase in a takeover — and the direction of that combination is what the next three chapters classify.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Where organic growth builds, **external growth** combines. Two firms that were separate become one, and the firm grows overnight by however much the other firm was worth."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**A merger** is an agreement between two firms to combine into a single new business. Both sets of owners consent and both usually keep a stake in what results.",
+         "**A takeover (acquisition)** is one firm buying control of another. The buyer decides; the firm bought becomes part of it. A takeover can be agreed by the target's owners or resisted by them."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The practical difference is **who chooses**. A merger needs both sides to want it; a takeover needs only the buyer and enough of the target's owners willing to sell. That is why an agreed merger tends to be announced jointly and a contested takeover is fought in public."
+       },
+       {
+        "type": "paragraph",
+        "text": "Both are immediate. Capacity, customers, staff, brands and technology transfer on completion rather than being built over years — which is the whole attraction, and the source of every problem in the chapter on advantages and disadvantages."
+       },
+       {
+        "type": "paragraph",
+        "text": "What matters for economics is not the legal form but the **direction**: whether the two firms were at the same stage of production, at different stages, or in unrelated markets. Those three directions are the next three chapters."
+       }
+      ],
+      "realExample": {
+       "emoji": "🤝",
+       "text": "Airlines have combined both ways: some through agreed mergers producing a single carrier under a new name, others through one airline buying another outright and absorbing its routes and fleet."
+      },
+      "misconception": "Students use merger and takeover interchangeably. Write instead: a merger is agreed between both firms and a takeover is a purchase of control, which may be agreed or resisted.",
+      "examMatters": "A Define (2 marks, WEC13 Appendix 6) that distinguishes a takeover from a merger must name who consents. Saying only that two firms combine describes both and defines neither.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:external-growth-mergers:recall",
+       "type": "fillin",
+       "prompt": "Complete the distinction between the two forms of external growth:",
+       "template": [
+        "In a ___, both sets of owners agree to combine into one new business",
+        "In a ___ or acquisition, one firm buys control of another and decides for itself",
+        "Either way the growth is ___, because the capacity already exists"
+       ],
+       "answers": [
+        "merger",
+        "takeover",
+        "immediate"
+       ],
+       "hints": [
+        "both sides choose it",
+        "only the buyer needs to choose it",
+        "contrast it with the pace of organic growth"
+       ],
+       "distractors": [
+        "joint venture",
+        "gradual"
+       ]
+      }
+     },
+     {
+      "id": "types-sizes-businesses:sub:horizontal-integration",
+      "title": "Horizontal Integration",
+      "keyIdea": "Horizontal integration combines two firms at the same stage of the same industry — the most direct way to buy market share.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Horizontal integration** is a merger or takeover between two firms **at the same stage of production in the same industry**. A coffee roastery buying another coffee roastery; one airline buying another airline."
+       },
+       {
+        "type": "paragraph",
+        "text": "The firms were competitors, so combining them removes a competitor and adds its customers. That is the point, and it is why this is the direction that most often attracts the attention of a competition regulator."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Market share rises immediately** by the whole of the other firm's share, and with it the combined firm's influence over price.",
+         "**Duplicated costs can be removed.** Two head offices, two delivery networks and two sets of systems become one, which spreads the remaining fixed costs over the combined output.",
+         "**Expertise is acquired ready-made** — the other firm's methods, brands and skilled staff arrive with it."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The cost is concentration. Fewer firms in a market means less choice for consumers and less pressure on the combined firm to keep prices down or quality up. Competition authorities in most economies can block a horizontal merger, or permit it only if parts of the business are sold to someone else."
+       },
+       {
+        "type": "paragraph",
+        "text": "Removing duplicated costs also means removing the people doing duplicated jobs, which is why this direction produces the sharpest effects on workers."
+       }
+      ],
+      "realExample": {
+       "emoji": "✈️",
+       "text": "When two airlines serving overlapping routes combine, the new carrier can run one booking system, one maintenance operation and one headquarters — and passengers on the overlapping routes have one airline to choose from where there were two."
+      },
+      "misconception": "Students say horizontal integration means firms in the same industry. Same industry is not enough — a roastery and a coffee farm are both in coffee. Write instead: horizontal integration combines firms at the same STAGE of production.",
+      "examMatters": "An Analyse (6 marks, WEC13 Appendix 6) requires a chain of reasoning. Identifying the direction is the first link, not the answer: follow it through to concentration, price or cost before stopping.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:horizontal-integration:recall",
+       "type": "reorder",
+       "prompt": "Put these stages in order, from the merger to the reason a regulator may intervene:",
+       "correctOrder": [
+        "Two firms at the same stage of the same industry combine",
+        "One fewer competitor remains in the market than before",
+        "The combined firm has more influence over the price it charges",
+        "A competition authority examines whether consumers are worse off"
+       ],
+       "why": [
+        "This is what makes the integration horizontal rather than vertical or conglomerate",
+        "The firms were rivals, so combining them removes one from the market",
+        "Less competition means less pressure to hold the price down",
+        "Consumer harm is the test a competition authority applies, so it comes last"
+       ]
+      }
+     },
+     {
+      "id": "types-sizes-businesses:sub:vertical-integration",
+      "title": "Forward and Backward Vertical Integration",
+      "keyIdea": "Vertical integration combines firms at different stages of the same supply chain: backward towards the supplier, forward towards the customer.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Vertical integration** is a merger or takeover between firms at **different stages of the same supply chain**. The direction is named from the point of view of the firm doing the acquiring, and the reference point is the customer."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Backward vertical integration** — the firm acquires its **supplier**, moving back towards the source of its inputs. A roastery buying a coffee farm.",
+         "**Forward vertical integration** — the firm acquires its **customer**, moving forward towards the final buyer. A roastery buying a chain of cafés."
+        ]
+       },
+       {
+        "type": "subheading",
+        "text": "What each direction secures"
+       },
+       {
+        "type": "paragraph",
+        "text": "**Backward** integration secures **supply**: the input arrives at cost rather than at a supplier's price, quantity is guaranteed when the market is tight, and quality is controlled at the source instead of inspected on arrival."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Forward** integration secures **access to the market**: the firm gets a guaranteed outlet, the retailer's margin becomes its own, and it controls how the product is presented and priced to the final customer."
+       },
+       {
+        "type": "paragraph",
+        "text": "Both directions can also shut rivals out. A firm that owns the only local supplier, or the only chain of outlets, can refuse to deal with competitors or charge them more than it charges itself — which is why vertical mergers are examined by regulators even though the firms were never competitors."
+       }
+      ],
+      "realExample": {
+       "emoji": "🎬",
+       "text": "Streaming services that began by licensing films from studios now produce their own. Buying or building the production stage is backward integration: the input is secured, and rivals can no longer bid for it."
+      },
+      "misconception": "Students decide the direction from which firm is larger. Size is irrelevant. Write instead: name the direction from the acquirer's position in the chain — backward towards its supplier, forward towards its customer.",
+      "examMatters": "An Explain (4 marks, WEC13 Appendix 6) asking for an impact requires a two-stage chain. Naming the direction and then what it secures — supply for backward, market access for forward — is the two stages.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:vertical-integration:recall",
+       "type": "classify",
+       "prompt": "Sort each acquisition by its direction along the supply chain:",
+       "groups": [
+        {
+         "name": "Backward vertical",
+         "items": [
+          "A roastery buys a coffee farm",
+          "A carmaker buys a battery manufacturer"
+         ],
+         "why": "The acquirer moves towards the source of its inputs, which secures supply, quality and cost"
+        },
+        {
+         "name": "Forward vertical",
+         "items": [
+          "A roastery buys a chain of cafés",
+          "A publisher buys a chain of bookshops"
+         ],
+         "why": "The acquirer moves towards the final buyer, which secures an outlet and the margin earned on it"
+        },
+        {
+         "name": "Horizontal",
+         "items": [
+          "A roastery buys another roastery",
+          "A carmaker buys a rival carmaker"
+         ],
+         "why": "The two firms are at the same stage, so nothing moves along the chain at all"
+        }
+       ]
+      }
+     },
+     {
+      "id": "types-sizes-businesses:sub:conglomerate-integration",
+      "title": "Conglomerate Integration",
+      "keyIdea": "Conglomerate integration combines firms in unrelated markets, so the gain is diversification rather than anything to do with the product.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Conglomerate integration** is a merger or takeover between firms in **unrelated markets**. There is no shared stage of production and no supply chain connecting them: a ceramics manufacturer buying an insurance business."
+       },
+       {
+        "type": "paragraph",
+        "text": "Since the firms have nothing in common operationally, none of the usual gains is available. There is no rival removed, no supply secured, no outlet acquired. What remains is **diversification**."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Spreading risk.** Profits from unrelated markets rarely fall at the same time, so a bad year in one is cushioned by the other. The combined firm is steadier than either part.",
+         "**Using a resource across markets.** Capital, management capacity or a distribution network built for one business can be put to work in another.",
+         "**Escaping a market in decline.** A firm whose own market is shrinking can move its capital somewhere with more future rather than fight for a larger share of less."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The weakness is the same feature read the other way. Managers who understand one industry are running another they do not, so the acquired business is often managed worse than it was before — and diversification is something the owners could have done for themselves, by holding stakes in both firms separately, without paying a premium for either."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧳",
+       "text": "Large groups have combined businesses as unlike as hotels, engineering and food processing. What holds such a group together is the flow of capital between the parts, not anything about what the parts make."
+      },
+      "misconception": "Students treat conglomerate integration as the safest kind because risk is spread. Risk to the firm falls; the risk of managing an unfamiliar business badly rises. Write instead: diversification steadies profits but removes the expertise the other directions rely on.",
+      "examMatters": "A Discuss (14 marks, WEC13 Appendix 6) requires analysis and evaluation, and wants a judgement. The strongest line on a conglomerate merger weighs the steadier profit against the loss of expertise, rather than listing both and stopping.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:conglomerate-integration:recall",
+       "type": "match",
+       "prompt": "Match each type of integration to the gain that is specific to it:",
+       "pairs": [
+        {
+         "left": "Horizontal",
+         "right": "A competitor is removed and market share rises",
+         "why": "The firms were at the same stage, so one of them was a rival until the merger"
+        },
+        {
+         "left": "Backward vertical",
+         "right": "The supply of an input is secured at cost",
+         "why": "The acquirer now owns the stage that used to sell to it"
+        },
+        {
+         "left": "Forward vertical",
+         "right": "A guaranteed outlet to the final customer",
+         "why": "The acquirer now owns the stage that used to buy from it"
+        },
+        {
+         "left": "Conglomerate",
+         "right": "Profits are steadier because the markets are unrelated",
+         "why": "Nothing operational is shared, so diversification is the only gain left"
+        }
+       ]
+      }
+     },
+     {
+      "id": "types-sizes-businesses:sub:advantages-and-disadvantages-of-integration",
+      "title": "Advantages and Disadvantages of Each Type",
+      "keyIdea": "Each direction has its own case for and against, and the specification asks for them type by type rather than as one list about mergers in general.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The specification asks for the advantages and disadvantages of **each type** of merger or takeover. They are not the same, because what each direction buys is not the same."
+       },
+       {
+        "type": "subheading",
+        "text": "Horizontal"
+       },
+       {
+        "type": "paragraph",
+        "text": "**For:** market share and influence over price rise at once; duplicated head offices and networks can be removed; the rival's brands and staff arrive ready-made. **Against:** competition authorities may block it or force parts to be sold; consumers face less choice; removing duplication removes jobs."
+       },
+       {
+        "type": "subheading",
+        "text": "Vertical"
+       },
+       {
+        "type": "paragraph",
+        "text": "**For (backward):** supply, quality and input cost are secured at the source. **For (forward):** an outlet is guaranteed and the retailer's margin is captured. **Against:** the firm now runs a business it may not understand; it loses the discipline of buying from whoever is cheapest; and by refusing to deal with rivals it can attract a regulator even though it never removed a competitor."
+       },
+       {
+        "type": "subheading",
+        "text": "Conglomerate"
+       },
+       {
+        "type": "paragraph",
+        "text": "**For:** profits are steadier because unrelated markets rarely fall together, and capital can be moved to where the returns are better. **Against:** no operational gains exist at all, and managers run an industry they do not know."
+       },
+       {
+        "type": "paragraph",
+        "text": "One caution applies to all three. The gains are **expected** at the time of the deal and the costs are certain, so a merger can fail to deliver what was claimed for it without anything going unusually wrong."
+       }
+      ],
+      "realExample": {
+       "emoji": "⚖️",
+       "text": "Competition authorities in many economies have approved large horizontal mergers only on condition that specific outlets or routes are sold to a rival, so that the market keeps a competitor it would otherwise have lost."
+      },
+      "misconception": "Students write one list of merger advantages and apply it everywhere. Write instead: name the direction first, because securing supply is an argument for vertical integration and says nothing about a conglomerate.",
+      "examMatters": "An Evaluate (20 marks, WEC13 Appendix 6) requires multi-stage chains of reasoning and a supported judgement. Arguing the case for the specific direction the question names, and against it, goes further than a general case about mergers.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:advantages-and-disadvantages-of-integration:recall",
+       "type": "classify",
+       "prompt": "Sort each argument by the type of integration it actually belongs to:",
+       "groups": [
+        {
+         "name": "Horizontal",
+         "items": [
+          "A competition authority may require outlets to be sold",
+          "Two head offices become one"
+         ],
+         "why": "Both follow from the firms having been rivals at the same stage"
+        },
+        {
+         "name": "Vertical",
+         "items": [
+          "The firm no longer buys from whoever is cheapest",
+          "Quality is controlled at the source of the input"
+         ],
+         "why": "Both follow from owning a different stage of the same chain"
+        },
+        {
+         "name": "Conglomerate",
+         "items": [
+          "Profits are steadier because the markets are unrelated",
+          "Managers run an industry they do not know"
+         ],
+         "why": "Both follow from there being no operational connection between the businesses"
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Organic growth builds capacity; a merger or takeover buys capacity that already exists.",
+     "Horizontal integration combines the same stage; vertical combines different stages of one chain.",
+     "Backward vertical goes towards the supplier, forward vertical towards the customer.",
+     "Conglomerate integration combines unrelated markets, so diversification is the only gain.",
+     "The advantages and disadvantages differ by type — name the direction before arguing."
+    ],
+    "diagramId": "types-sizes-businesses:diagram:cb26fb4e",
+    "quizIndices": [
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18
+    ],
+    "practiceIndices": [
+     3,
+     4
+    ]
+   },
+   {
+    "id": "types-sizes-businesses:block:cce519a6",
+    "title": "Constraints on Growth and Its Impact",
+    "sections": [
+     {
+      "id": "types-sizes-businesses:sub:size-of-market-and-access-to-finance",
+      "title": "Size of Market and Access to Finance",
+      "keyIdea": "The first two constraints are external: a firm cannot sell to customers who do not exist, and it cannot expand with money it cannot raise.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The specification lists four constraints on business growth. The first two are imposed on the firm from outside, and neither can be overcome by wanting to grow more."
+       },
+       {
+        "type": "subheading",
+        "text": "The size of the market"
+       },
+       {
+        "type": "paragraph",
+        "text": "A firm can only grow as large as the demand it serves. Where the market is small — a specialist product, a thinly populated region, a service delivered in person — the ceiling is reached quickly however well the firm is run."
+       },
+       {
+        "type": "paragraph",
+        "text": "A firm that has hit this ceiling has two ways past it, and both change what the firm is: sell something different, or sell somewhere different. Both are riskier than growing within a market it already understands."
+       },
+       {
+        "type": "subheading",
+        "text": "Access to finance"
+       },
+       {
+        "type": "paragraph",
+        "text": "Expansion has to be paid for before it earns anything. The firm can use **retained profit**, limited to what it has already made; it can **borrow**, which usually requires assets to offer as security; or it can **bring in new owners**, which means giving up a share of control."
+       },
+       {
+        "type": "paragraph",
+        "text": "Each route is harder for a small firm, so it borrows on worse terms than a large one — or is refused. The constraint compounds: being small is itself the reason finance is expensive, which is the reason the firm stays small."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏦",
+       "text": "Lenders routinely ask a small firm's owners to guarantee a loan personally, because the business itself has too few assets to stand behind it. A large firm borrows against its own balance sheet and pays less for the money."
+      },
+      "misconception": "Students treat access to finance as meaning the firm has no money. It means finance is unavailable on terms that make expansion worth doing. Write instead: the firm cannot raise the capital cheaply enough for the expansion to pay.",
+      "examMatters": "An Analyse (6 marks, WEC13 Appendix 6) wants depth rather than breadth. One constraint followed from cause to consequence for the firm goes further than all four named.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:size-of-market-and-access-to-finance:recall",
+       "type": "reorder",
+       "prompt": "Put these stages in order to show why being small makes staying small more likely:",
+       "correctOrder": [
+        "A small firm has few assets and a short trading record",
+        "Lenders judge it riskier and charge more, or refuse it",
+        "The expansion cannot be funded on terms that make it worthwhile",
+        "Nothing about its position has changed, so the next loan is priced the same way"
+       ],
+       "why": [
+        "This is the firm's starting position, not a consequence of anything in the chain",
+        "Security and record are what a lender prices, so both raise the cost of borrowing",
+        "A viable expansion still does not happen if the finance costs more than it returns",
+        "Nothing about the firm's position has changed, so the constraint repeats"
+       ]
+      }
+     },
+     {
+      "id": "types-sizes-businesses:sub:owner-objectives-and-regulation",
+      "title": "Owner Objectives, Regulation and Bureaucracy",
+      "keyIdea": "The other two constraints are the owner's own choice, and the cost of complying with rules that get heavier as a firm gets larger.",
+      "body": [
+       {
+        "type": "subheading",
+        "text": "Owner objectives"
+       },
+       {
+        "type": "paragraph",
+        "text": "Not every owner wants a larger business. Growth means borrowing, delegating, hiring managers and answering to lenders or new owners, and an owner who values independence or predictable hours may decline all of it."
+       },
+       {
+        "type": "paragraph",
+        "text": "This constraint is different in kind: nothing is stopping the firm. The market may be large and the finance available, and the firm still does not grow, because the person who decides does not want it to."
+       },
+       {
+        "type": "subheading",
+        "text": "Government regulation and bureaucracy"
+       },
+       {
+        "type": "paragraph",
+        "text": "Rules on employment, safety, reporting and tax apply to firms of every size, but the burden does not fall evenly. Much of the cost of complying is **fixed** — someone must read the rules and file the returns whether the firm has ten employees or ten thousand."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Thresholds.** Many obligations begin at a given number of employees or turnover, so crossing one adds a cost in a single step.",
+         "**Time as well as money.** Approvals, licences and planning decisions delay an expansion the firm can well afford.",
+         "**Competition rules.** A firm large enough to affect a market faces scrutiny a small firm never encounters."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The effect is to make the step up in size more expensive than the size itself, which is why firms sometimes stop just below a threshold rather than cross it."
+       }
+      ],
+      "realExample": {
+       "emoji": "📋",
+       "text": "In many economies a firm crossing an employee threshold acquires reporting and consultation duties overnight. The extra staff member is cheap; the obligations that arrive with them are not."
+      },
+      "misconception": "Students say regulation stops firms growing. It raises the cost of growing, and falls hardest at the thresholds. Write instead: compliance costs are largely fixed, so they weigh more heavily on a smaller firm and jump when a threshold is crossed.",
+      "examMatters": "An Examine (8 marks, WEC13 Appendix 6) requires the mechanism, its consequence and a brief assessment. For regulation: compliance cost is largely fixed, so it bears on the smaller firm — then weigh that against the size of the market.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:owner-objectives-and-regulation:recall",
+       "type": "fillin",
+       "prompt": "Complete the four constraints on business growth the specification lists:",
+       "template": [
+        "Size of ___ — the firm cannot sell to customers who do not exist",
+        "Access to ___ — the expansion cannot be paid for on terms that make it worthwhile",
+        "Owner ___ — the person who decides does not want a larger business",
+        "Government regulation and ___ — the cost of compliance is largely fixed"
+       ],
+       "answers": [
+        "market",
+        "finance",
+        "objectives",
+        "bureaucracy"
+       ],
+       "hints": [
+        "the number of customers in existence",
+        "the money to expand with",
+        "what the owner actually wants",
+        "the paperwork that comes with the rules"
+       ],
+       "distractors": [
+        "competition",
+        "demand",
+        "taxation"
+       ]
+      }
+     },
+     {
+      "id": "types-sizes-businesses:sub:impact-of-growth-on-businesses",
+      "title": "The Impact of Growth on Businesses",
+      "keyIdea": "Growth changes the firm itself: lower fixed costs per unit and more market power, against harder coordination and a longer distance between decision and consequence.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The specification asks for the **impact of growth of firms on businesses, workers and consumers**. This chapter takes the firm; the next takes the other two."
+       },
+       {
+        "type": "subheading",
+        "text": "What growth gives the firm"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Fixed costs spread further.** The same premises, systems and management serve more output, so each unit carries less of them.",
+         "**More power in its markets.** A larger buyer gets better terms from suppliers; a larger seller has more influence over its price.",
+         "**Cheaper finance.** More assets and a longer record mean better borrowing terms.",
+         "**More resilience.** A firm selling several products in several markets survives the loss of any one of them."
+        ]
+       },
+       {
+        "type": "subheading",
+        "text": "What growth costs the firm"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Coordination gets harder.** More people, sites and layers mean decisions take longer to make and longer to reach whoever must act on them.",
+         "**Control weakens.** The owner cannot see everything, so the firm runs on reported numbers rather than on what is actually happening.",
+         "**Motivation can fall.** An employee whose contribution is one part of a very large total may find it harder to see that it matters."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Both columns follow from the same change in size, so a firm does not choose one. The question is which column grows faster — which is why some industries are dominated by a few enormous firms and others by many small ones."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏗️",
+       "text": "A construction firm that doubles in size gets better prices on materials and needs a layer of managers it did not need before. Both arrive together."
+      },
+      "misconception": "Students write that growth makes a firm more efficient. It changes which costs matter: fixed costs per unit fall while coordination costs rise. Write instead: growth spreads fixed costs and complicates coordination, and the net effect depends on the firm.",
+      "examMatters": "A Discuss (14 marks, WEC13 Appendix 6) requires analysis and evaluation, and wants both sides and a judgement. Two effects developed on each side, weighed against each other, is the shape the command word asks for.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:impact-of-growth-on-businesses:recall",
+       "type": "classify",
+       "prompt": "Sort each consequence of growth by whether it helps the firm or hinders it:",
+       "groups": [
+        {
+         "name": "Helps the firm",
+         "items": [
+          "Fixed costs are spread over more units",
+          "Suppliers offer better terms to a larger buyer"
+         ],
+         "why": "Both come from size itself and reduce the cost of doing business"
+        },
+        {
+         "name": "Hinders the firm",
+         "items": [
+          "Decisions pass through more layers before anyone acts",
+          "The owner relies on reports rather than seeing the work"
+         ],
+         "why": "Both come from the same size and make the firm harder to run"
+        }
+       ]
+      }
+     },
+     {
+      "id": "types-sizes-businesses:sub:impact-of-growth-on-workers-and-consumers",
+      "title": "The Impact of Growth on Workers and Consumers",
+      "keyIdea": "Growth cuts both ways for workers and for consumers, and which way it falls depends on whether the growth added capacity or merely combined it.",
+      "body": [
+       {
+        "type": "subheading",
+        "text": "Workers"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**For:** a larger firm can pay more, offers a career path between roles and sites, trains more, and is more secure to work for than a firm depending on one product.",
+         "**Against:** growth by merger removes duplicated jobs; work in a large firm is more specialised and can be more repetitive; and the distance between an employee and the person deciding their future is greater."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Which side dominates depends on **how** the firm grew. Organic growth adds capacity, so it usually adds jobs. A horizontal merger combines capacity that already existed, so the duplication it removes is largely people."
+       },
+       {
+        "type": "subheading",
+        "text": "Consumers"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**For:** lower costs per unit can be passed on as lower prices; a larger firm can fund research and offer a wider range; and it can serve places a small firm could not reach.",
+         "**Against:** fewer competitors means less pressure to pass those savings on at all, less choice, and less reason to keep quality up."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The consumer case therefore turns on one question: does the firm still face competition? Lower costs reach the consumer as lower prices only if a rival would otherwise take the business. Where growth has removed the rivals, the saving stays with the firm — which is exactly what a competition authority exists to test."
+       }
+      ],
+      "realExample": {
+       "emoji": "🛒",
+       "text": "Large retail chains reach prices a single shop cannot match, and where one chain ends up alone in a small town the prices on its shelves need not stay there."
+      },
+      "misconception": "Students write that growth benefits consumers through lower prices. Lower costs make lower prices possible; competition is what makes them happen. Write instead: the saving reaches consumers only where the firm still faces rivals who would otherwise take the business.",
+      "examMatters": "An Evaluate (20 marks, WEC13 Appendix 6) requires multi-stage chains of reasoning and a supported judgement. The condition — whether competition survives the growth — is a stronger basis for judgement than asserting that consumers gain or lose.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:impact-of-growth-on-workers-and-consumers:recall",
+       "type": "reorder",
+       "prompt": "Put these stages in order to show when a cost saving from growth actually reaches consumers:",
+       "correctOrder": [
+        "Growth spreads the firm's fixed costs over more units",
+        "Each unit becomes cheaper to produce than it was",
+        "A rival stands ready to take the business if the price stays high",
+        "The firm cuts its price and the consumer gains"
+       ],
+       "why": [
+        "The saving has to exist before anything can be passed on",
+        "Lower cost per unit is what creates room for a lower price",
+        "Competitive pressure is the condition, and without it the chain stops here",
+        "The price cut is the consequence of the pressure, not of the saving alone"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Four constraints: size of market, access to finance, owner objectives, regulation and bureaucracy.",
+     "Compliance costs are largely fixed, so they weigh most on the smaller firm and jump at a threshold.",
+     "Growth spreads fixed costs and complicates coordination; both arrive together.",
+     "A cost saving reaches consumers only where competition survives the growth."
+    ],
+    "quizIndices": [
+     19,
+     20,
+     21,
+     22,
+     23
+    ],
+    "practiceIndices": [
+     5,
+     6
+    ]
+   },
+   {
+    "id": "types-sizes-businesses:block:b0296d09",
+    "title": "Demergers",
+    "sections": [
+     {
+      "id": "types-sizes-businesses:sub:diseconomies-demergers",
+      "title": "Reasons for Demergers",
+      "keyIdea": "A demerger splits part of a firm off into a separate company owned by the same owners — which is not the same as selling it to somebody else.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "A **demerger** is the separation of part of a business into an independent company. The parent firm does not receive a payment: the new company's shares go to the parent's existing owners, who end up holding two companies where they held one."
+       },
+       {
+        "type": "paragraph",
+        "text": "That is the distinction the specification is asking for, and it is the one most often lost. Selling a division **to another firm** is a **divestment** or sell-off: the division changes owner and cash comes in. In a demerger nothing is sold and no new owner appears — the business is simply split in two."
+       },
+       {
+        "type": "subheading",
+        "text": "Why a firm demerges"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Focus.** Two businesses with different customers, risks and time horizons compete for one management's attention. Split, each is run by people whose whole job it is.",
+         "**Coordination.** A group that has grown by acquisition can become too complex to run, and separating the parts removes the layers built to hold them together.",
+         "**Value.** Investors who want one of the businesses must buy both, so neither may be valued properly.",
+         "**Regulation.** A competition authority may require a firm to separate part of its business as the condition of approving something else."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "A demerger is therefore not a reversal of a failed merger so much as an admission that two businesses are worth more apart than together."
+       }
+      ],
+      "realExample": {
+       "emoji": "💊",
+       "text": "GSK separated its consumer healthcare business into Haleon, a company listed in its own right whose shares went to GSK's existing owners. Nobody bought it: the group was divided, and its owners held two companies afterwards."
+      },
+      "misconception": "Students describe selling a division to another company as a demerger. Write instead: a demerger splits a business into a separate company owned by the same owners; a sale to another firm is a divestment.",
+      "examMatters": "A Define (2 marks, WEC13 Appendix 6) on a demerger must say what happens to ownership. Saying only that a firm splits up does not separate a demerger from a divestment.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:diseconomies-demergers:recall",
+       "type": "classify",
+       "prompt": "Sort each event by whether it is a demerger or a divestment:",
+       "groups": [
+        {
+         "name": "Demerger",
+         "items": [
+          "A division becomes a separate listed company owned by the same owners",
+          "A group splits in two and its owners hold shares in both"
+         ],
+         "why": "No buyer appears and no payment is received: the business is divided, not sold"
+        },
+        {
+         "name": "Divestment",
+         "items": [
+          "A division is sold to a competitor for cash",
+          "A group sells a subsidiary to an investment firm"
+         ],
+         "why": "The division changes owner and the seller receives a payment for it"
+        }
+       ]
+      }
+     },
+     {
+      "id": "types-sizes-businesses:sub:impact-of-demergers",
+      "title": "The Impact of Demergers",
+      "keyIdea": "Splitting a firm sharpens focus and loses shared costs — and the same split can mean redundancy for one worker and more choice for a consumer.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The specification asks for the impact of demergers on **businesses, workers and consumers**, so each is taken in turn."
+       },
+       {
+        "type": "subheading",
+        "text": "Businesses"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**For:** each company is run by a management that understands it; capital is allocated to its own business rather than across an argument; and each can be valued and funded separately.",
+         "**Against:** costs that were shared must be duplicated — two head offices, two sets of systems, two boards — and neither company has the other to fall back on in a bad year."
+        ]
+       },
+       {
+        "type": "subheading",
+        "text": "Workers"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**For:** promotion prospects improve in a smaller organisation, and the connection between work done and results seen is shorter.",
+         "**Against:** central functions are often cut in the split, and employees in a business no longer supported by a larger group carry more risk if it struggles."
+        ]
+       },
+       {
+        "type": "subheading",
+        "text": "Consumers"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**For:** two focused firms may serve their markets better than one distracted group, and where the demerger restores a competitor, prices face pressure again.",
+         "**Against:** the duplicated overheads have to be paid for, and any saving the combined group had been passing on is gone."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The pattern across all three is one trade: **focus against shared cost**, worth making when the two businesses had little in common."
+       }
+      ],
+      "realExample": {
+       "emoji": "🔀",
+       "text": "When a group separates a fast-growing division from a slow, stable one, each ends up able to raise money on the terms that suit it — the grower for expansion, the steady business for income — which the combined group could not do at once."
+      },
+      "misconception": "Students treat a demerger as damage control after a failed merger. Write instead: a demerger trades shared costs for focus, and it is worth doing when the two businesses gain little from being run together.",
+      "examMatters": "An Examine (8 marks, WEC13 Appendix 6) wants the mechanism, a consequence for the named group and a brief assessment of the factors. Taking businesses, workers or consumers in turn keeps the answer on the group the question asked about.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:impact-of-demergers:recall",
+       "type": "match",
+       "prompt": "Match each group to the trade a demerger makes for them:",
+       "pairs": [
+        {
+         "left": "The businesses",
+         "right": "Focused management, against duplicated overheads",
+         "why": "Each company gains its own management and loses the costs it used to share"
+        },
+        {
+         "left": "Workers",
+         "right": "Shorter promotion paths, against cuts to central functions",
+         "why": "A smaller organisation opens routes upward and needs only one of each shared department"
+        },
+        {
+         "left": "Consumers",
+         "right": "A restored competitor, against the cost of the duplication",
+         "why": "Competition can return where the split creates two rivals, but the extra overheads are still paid for"
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "A demerger splits a business into a separate company owned by the same owners.",
+     "Selling a division to another firm is a divestment, not a demerger.",
+     "Firms demerge for focus, simpler coordination, a clearer valuation, or because a regulator says so.",
+     "The trade for businesses, workers and consumers is the same one: focus against shared cost."
+    ],
+    "diagramId": "types-sizes-businesses:diagram:17cf2e3e",
+    "quizIndices": [
+     24,
+     25,
+     26
+    ],
+    "practiceIndices": [
+     7,
+     8
+    ]
+   },
+   {
+    "id": "types-sizes-businesses:block:f7c3430a",
+    "title": "Business Objectives",
+    "sections": [
+     {
+      "id": "types-sizes-businesses:sub:profit-maximisation",
+      "title": "Profit Maximisation",
+      "keyIdea": "Profit is largest where MC = MR — the last unit worth making is the one that adds exactly what it costs.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Profit maximisation** is the objective economics assumes a firm pursues. Its formula is **MC = MR**: produce every unit whose addition to revenue is at least its addition to cost, and stop at the one where the two are equal."
+       },
+       {
+        "type": "paragraph",
+        "text": "Imani Ceramics sells tiles. Her demand curve is **P = 60 − 2Q**, so her marginal revenue is **MR = 60 − 4Q**, and each extra unit costs her **$20** to make."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Setting MC = MR:** 60 − 4Q = 20, so Q = **10,000 units** a month.",
+         "**The price that sells it:** P = 60 − 2 × 10 = **$40**.",
+         "**Revenue** $400,000, **costs** $272,000, **profit $128,000**."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Why stop there? At 10,000 units marginal revenue is exactly $20, the same as marginal cost. Past that output marginal revenue keeps falling — by 11,000 units it is down to $16 while each unit still costs $20 — so those units subtract from profit. Below 10,000 units marginal revenue is above $20 and the units are worth making. The equality is the turning point, which is why it is the formula."
+       },
+       {
+        "type": "paragraph",
+        "text": "No other output beats $128,000, and the next two chapters show what a firm gives up by choosing a different objective."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏭",
+       "text": "A manufacturer deciding whether to run an extra shift compares what the shift's output will sell for against what the shift costs to run. That comparison is MC against MR, made in the language of the factory floor."
+      },
+      "misconception": "Students write that profit is maximised where revenue is highest or where cost is lowest. Neither is true: the largest gap between them is what matters. Write instead: profit is maximised where MC = MR, which is not where revenue peaks.",
+      "examMatters": "A Calculate (4 marks, WEC13 Appendix 6) involves several stages from given data and expects the working to be shown. Setting MC = MR, solving for Q and then substituting back for the price is three stages, each of which is a line of that working.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:profit-maximisation:recall",
+       "type": "reorder",
+       "prompt": "Put these steps in the order you would work through to find Imani Ceramics's profit-maximising price:",
+       "correctOrder": [
+        "Write marginal revenue from the demand curve: MR = 60 − 4Q",
+        "Set MR equal to marginal cost: 60 − 4Q = 20",
+        "Solve for the output: Q = 10,000 units",
+        "Substitute that output into the demand curve to get the price: $40"
+       ],
+       "why": [
+        "MR has to exist before it can be set equal to anything, and it comes from the demand curve",
+        "The condition is the equality, so it is written before it is solved",
+        "Solving the equality gives the quantity, which is what the condition determines",
+        "The demand curve turns that quantity into the price the market will pay for it"
+       ]
+      }
+     },
+     {
+      "id": "types-sizes-businesses:sub:alternative-objectives",
+      "title": "Revenue Maximisation",
+      "keyIdea": "Revenue is largest where MR = 0 — past that point another unit takes more off the price than it brings in.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Revenue maximisation** is the objective of making total revenue as large as possible, without regard to cost. Its formula is **MR = 0**: keep selling while the next unit still adds something to revenue, and stop when it adds nothing."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Setting MR = 0:** 60 − 4Q = 0, so Q = **15,000 units** a month.",
+         "**The price:** P = 60 − 2 × 15 = **$30**.",
+         "**Revenue: $450,000** — more than the $400,000 the profit-maximising output brought in.",
+         "**Profit: $78,000**, against $128,000. The extra $50,000 of revenue cost $50,000 of profit."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The two objectives pull in the same direction up to a point and then separate. Between 10,000 units and 15,000 units every extra unit still adds revenue, so a revenue maximiser keeps going — but each of those units costs $20 and adds less than that to revenue, so profit falls the whole way."
+       },
+       {
+        "type": "subheading",
+        "text": "Why a firm would want this"
+       },
+       {
+        "type": "paragraph",
+        "text": "Revenue is visible, immediate and easy to measure, and managers are often rewarded on it. A firm may also be buying market share, betting that customers won now are worth more than the profit given up — which is a reason to accept lower profit, not a reason to ignore it."
+       }
+      ],
+      "realExample": {
+       "emoji": "📦",
+       "text": "Online retailers have expanded for long periods on thin profits, reinvesting the cash they generated into warehouses, delivery and new product lines. The objective was revenue and growth, not the largest profit available that year."
+      },
+      "misconception": "Students write that a firm maximising revenue is maximising profit \"in the long run\". It may be pursuing growth deliberately, which is a different objective. Write instead: revenue maximisation produces a larger output and a lower price than MC = MR, and less profit.",
+      "examMatters": "An Explain (4 marks, WEC13 Appendix 6) on revenue maximisation needs the formula and its consequence: MR = 0 gives a larger output than MC = MR, so the price is lower and profit is not the largest available.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:alternative-objectives:recall",
+       "type": "fillin",
+       "prompt": "Complete Imani Ceramics's comparison between the two objectives:",
+       "template": [
+        "Profit maximisation uses the formula ___, giving 10,000 units at $40",
+        "Revenue maximisation uses the formula ___, giving 15,000 units at $30",
+        "Revenue maximisation therefore produces a ___ output at a lower price"
+       ],
+       "answers": [
+        "MC = MR",
+        "MR = 0",
+        "larger"
+       ],
+       "hints": [
+        "the last unit adds exactly what it costs",
+        "the next unit would add nothing to revenue",
+        "compare the two quantities"
+       ],
+       "distractors": [
+        "AR = AC",
+        "smaller",
+        "MC = 0"
+       ]
+      }
+     },
+     {
+      "id": "types-sizes-businesses:sub:sales-volume-maximisation",
+      "title": "Sales Volume Maximisation",
+      "keyIdea": "Sales volume maximisation sells as many units as possible while still covering every cost, which is where AR = AC and profit is zero.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Sales volume maximisation** is the objective of selling the largest possible number of units, subject to the firm still covering its costs. Its formula is **AR = AC**: the price the firm receives per unit is exactly the cost per unit, so nothing is left over."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Setting AR = AC:** 60 − 2Q = 20 + 72/Q, which solves to Q = **18,000 units**.",
+         "**The price:** **$24** — and the average cost at that output is **$24**, the same figure, which is what the condition requires.",
+         "**Revenue: $432,000. Costs: $432,000. Profit: $0.**"
+        ]
+       },
+       {
+        "type": "subheading",
+        "text": "The difference students most often miss"
+       },
+       {
+        "type": "paragraph",
+        "text": "Selling the most units and earning the most revenue are **not the same objective**. Imani Ceramics's revenue at 18,000 units is $432,000 — which is $18,000 **less** than the $450,000 she earns selling the fewer 15,000 units. Past the revenue-maximising output the price falls faster than the extra units make up for."
+       },
+       {
+        "type": "paragraph",
+        "text": "So the three objectives give three different outputs — 10,000 units, 15,000 units and 18,000 units — three different prices, and three different profits: $128,000, $78,000 and $0. Which is right depends entirely on what the firm is trying to do."
+       }
+      ],
+      "realExample": {
+       "emoji": "🎟️",
+       "text": "A venue that would rather play to a full room than an empty one prices seats to fill it, accepting that the last seats sold contribute almost nothing beyond covering what they cost."
+      },
+      "misconception": "Students treat revenue maximisation and sales volume maximisation as the same objective. They are not: the volume objective sells more units for less revenue. Write instead: revenue maximisation sets MR = 0; sales volume maximisation sets AR = AC and takes profit to zero.",
+      "examMatters": "A Calculate (4 marks, WEC13 Appendix 6) may use a prescribed formula. For sales volume maximisation the formula is AR = AC, and showing that the price and the average cost come to the same figure is what demonstrates the condition holds.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:sales-volume-maximisation:recall",
+       "type": "match",
+       "prompt": "Match each business objective to its formula and what it produces:",
+       "pairs": [
+        {
+         "left": "Profit maximisation",
+         "right": "MC = MR — 10,000 units at $40",
+         "why": "The last unit adds exactly what it costs, which leaves the largest profit of $128,000"
+        },
+        {
+         "left": "Revenue maximisation",
+         "right": "MR = 0 — 15,000 units at $30",
+         "why": "The next unit would add nothing to revenue, so revenue peaks here at $450,000"
+        },
+        {
+         "left": "Sales volume maximisation",
+         "right": "AR = AC — 18,000 units at $24",
+         "why": "The price exactly covers the cost per unit, so this is the most she can sell without a loss"
+        }
+       ],
+       "distractors": [
+        "AC at its lowest point"
+       ]
+      }
+     },
+     {
+      "id": "types-sizes-businesses:sub:satisficing",
+      "title": "Satisficing",
+      "keyIdea": "Satisficing is aiming for an outcome good enough to keep every interested party content, rather than the maximum of any one thing.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The specification lists **behavioural theories: satisficing** alongside the three maximising objectives. **Satisficing** means settling for an outcome that is satisfactory rather than pursuing the maximum."
+       },
+       {
+        "type": "paragraph",
+        "text": "The reason is that a firm has more than one group to keep content, and their wants conflict."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Owners** want a return on the capital they risked.",
+         "**Managers** want security, resources and a manageable workload.",
+         "**Employees** want pay, conditions and stability.",
+         "**Customers** want a low price and high quality; **suppliers** want the opposite of what the firm wants from them."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Maximising profit means pushing every one of those groups to the limit of what it will accept. Satisficing means finding a position where each is content enough not to act — the owners get an acceptable return rather than the largest possible, and the firm buys stability with the profit it did not pursue."
+       },
+       {
+        "type": "paragraph",
+        "text": "Satisficing also reflects what managers can actually know. Finding the maximum requires information about demand and cost that nobody has in full, so a target that is clearly good enough is a decision a manager can make and defend, while the true maximum is not."
+       }
+      ],
+      "realExample": {
+       "emoji": "🎯",
+       "text": "Firms commonly set a target profit for the year and stop pressing once it is in sight, rather than squeezing suppliers and staff for the last available margin. The target is satisfactory; the maximum was never calculated."
+      },
+      "misconception": "Students describe satisficing as laziness or as failing to maximise. It is a deliberate response to conflicting groups and incomplete information. Write instead: satisficing aims at an outcome acceptable to all the firm's stakeholders rather than at the maximum of one of them.",
+      "examMatters": "An Explain (4 marks, WEC13 Appendix 6) on satisficing needs the definition and a reason a firm would choose it. Conflicting stakeholder objectives is the reason that leads directly into the divorce of ownership from control.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:satisficing:recall",
+       "type": "fillin",
+       "prompt": "Complete the account of satisficing the specification asks for:",
+       "template": [
+        "Satisficing aims at an outcome that is ___ rather than at a maximum",
+        "It arises because the firm's ___ want different things from it",
+        "It is also a response to information nobody has in ___, since the true maximum cannot be located"
+       ],
+       "answers": [
+        "satisfactory",
+        "stakeholders",
+        "full"
+       ],
+       "hints": [
+        "good enough, in one word",
+        "owners, managers, employees, customers, suppliers",
+        "the opposite of partial"
+       ],
+       "distractors": [
+        "maximum",
+        "perfect"
+       ]
+      }
+     },
+     {
+      "id": "types-sizes-businesses:sub:divorce-of-ownership-from-control",
+      "title": "The Divorce of Ownership from Control",
+      "keyIdea": "In a large firm the owners do not run it, and the managers who do have objectives of their own. That is the principal-agent problem, and why the objectives compete.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "In a small firm the owner is the manager, so there is one objective. In a large firm the owners are many and dispersed, and the firm is run by managers employed to act on their behalf. That separation is the **divorce of ownership from control**."
+       },
+       {
+        "type": "paragraph",
+        "text": "The relationship it creates is the **principal-agent problem**. The **principal** — the owner — wants one outcome. The **agent** — the manager — is appointed to deliver it but has objectives of their own."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**The objectives differ.** Owners want profit. Managers gain from size, growth and revenue, which bring higher pay and more security.",
+         "**The information is unequal.** The manager knows what the firm could achieve; the owner sees a report the manager prepared.",
+         "**The result is a compromise.** Neither objective is pursued to its limit, which is what satisficing describes."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "This is why the three objectives are a real choice rather than an arithmetic exercise. Imani Ceramics at 10,000 units makes $128,000 for her owners; at 15,000 units she makes $78,000 but is a visibly larger business. A manager paid for growth and an owner paid from profit will not choose the same output."
+       },
+       {
+        "type": "paragraph",
+        "text": "Owners narrow the gap with share-based pay and profit-linked bonuses. None of it closes it, because the information stays unequal."
+       }
+      ],
+      "realExample": {
+       "emoji": "📊",
+       "text": "Firms commonly pay senior managers partly in shares of the company they run, so that a decision good for the manager is more likely to be good for the owners too."
+      },
+      "misconception": "Students write that the principal-agent problem means managers are dishonest. It needs only different objectives and unequal information. Write instead: the agent is pursuing their own objectives, which the principal cannot fully observe.",
+      "examMatters": "An Evaluate (20 marks, WEC13 Appendix 6) requires multi-stage chains of reasoning and a supported judgement. Linking the divorce of ownership from control to the objective the firm actually chose is what turns theory into an argument about that firm.",
+      "recall": {
+       "id": "types-sizes-businesses:sub:divorce-of-ownership-from-control:recall",
+       "type": "reorder",
+       "prompt": "Put these stages in order to explain how the divorce of ownership from control changes a firm's objective:",
+       "correctOrder": [
+        "A firm grows large enough that its owners cannot run it themselves",
+        "Managers are appointed to run the firm on the owners' behalf",
+        "Those managers gain from size and growth, which the owners do not",
+        "The firm pursues an outcome acceptable to both rather than maximum profit"
+       ],
+       "why": [
+        "Separation only arises once the firm is too large for its owners to run",
+        "Appointing an agent to act for a principal is what creates the relationship",
+        "Different objectives plus unequal information is the principal-agent problem itself",
+        "A compromise between the two is what satisficing describes"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Profit maximisation: MC = MR. For Imani Ceramics, 10,000 units at $40, profit $128,000.",
+     "Revenue maximisation: MR = 0. 15,000 units at $30, revenue $450,000.",
+     "Sales volume maximisation: AR = AC. 18,000 units at $24, profit $0.",
+     "Satisficing settles for an outcome acceptable to all stakeholders rather than a maximum.",
+     "The divorce of ownership from control is why the three objectives compete at all."
+    ],
+    "diagramId": "types-sizes-businesses:diagram:d5e500fa",
+    "quizIndices": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33
+    ],
+    "practiceIndices": [
+     9,
+     10,
+     11,
+     12
+    ]
+   }
+  ],
+  "notes": [
+   {
+    "title": "Types of Business",
+    "meta": "5 organisation types",
+    "keyIdea": "The specification divides organisations twice: by who owns them, and by what may be done with any surplus.",
+    "blocks": [
+     {
+      "title": "BY OWNERSHIP",
+      "items": [
+       {
+        "type": "def",
+        "text": "<strong>Private sector organisations</strong> — owned by private individuals or firms, who supply the capital, carry the risk and set the objectives."
+       },
+       {
+        "type": "def",
+        "text": "<strong>State-owned enterprises (public sector)</strong> — owned by the government on behalf of citizens, with objectives set politically rather than by an owner seeking a return."
+       }
+      ]
+     },
+     {
+      "title": "BY PURPOSE",
+      "items": [
+       {
+        "type": "def",
+        "text": "<strong>For-profit and not-for-profit organisations</strong> — the line is the destination of the surplus: distributed to owners, or retained for the organisation's purpose."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Co-operatives</strong> — owned by their members, who are the customers, workers or producers that use them. One member, one vote, and the surplus is shared by use rather than by capital."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Joint ventures</strong> — a separate organisation jointly owned by two or more firms for one project. Both parents remain independent, which is what distinguishes it from a merger."
+       }
+      ]
+     },
+     {
+      "title": "WHY IT MATTERS",
+      "items": [
+       {
+        "type": "mech",
+        "text": "Ownership settles whose objectives the organisation pursues, which is why the same industry behaves differently in different sectors."
+       },
+       {
+        "type": "link",
+        "text": "The objectives themselves are the last chapter of this section."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Public sector means state-owned, not \"used by the public\".",
+     "A not-for-profit may run a surplus; it just cannot distribute it.",
+     "A co-operative separates control from capital: one member, one vote."
+    ],
+    "examMatters": "A Define (2 marks, WEC13 Appendix 6) requires the meaning of the term, so name the owner. For a joint venture, say that the parent firms stay separate."
+   },
+   {
+    "title": "The Size of Businesses",
+    "meta": "4 measures + both sides of 2e",
+    "keyIdea": "Size has four measures that can disagree, and the specification asks why some firms remain small and others grow.",
+    "blocks": [
+     {
+      "title": "MEASURING SIZE",
+      "items": [
+       {
+        "type": "def",
+        "text": "<strong>SMEs (small- and medium-size enterprises)</strong> and <strong>large corporations</strong> — the categories the specification names. Where the boundary falls is set by each government."
+       },
+       {
+        "type": "mech",
+        "text": "Four measures: number of employees, turnover, capital employed, market share. A capital-intensive firm is large on one and small on another, so state which is being used."
+       }
+      ]
+     },
+     {
+      "title": "REASONS SOME FIRMS TEND TO REMAIN SMALL",
+      "items": [
+       {
+        "type": "mech",
+        "text": "The size of the market, niche demand that resists standardisation, owner objectives, lack of access to finance, and personal service that size would destroy."
+       }
+      ]
+     },
+     {
+      "title": "AND OTHERS GROW",
+      "items": [
+       {
+        "type": "mech",
+        "text": "Fixed costs spread over more output — $72,000 a month is $7.20 a unit over 10,000 units and $4 over 18,000 units — plus market power over price and suppliers, risk spread across products and markets, cheaper finance, and managers who gain from size."
+       },
+       {
+        "type": "link",
+        "text": "Growth is constrained as well as motivated — the four constraints are in chapter 4."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Name the measure of size before calling a firm large.",
+     "Staying small is usually a limit or a choice, never simply failure.",
+     "Spreading fixed costs is the growth argument that needs no theory of cost curves."
+    ],
+    "examMatters": "An Examine (8 marks, WEC13 Appendix 6) requires the mechanism, its consequence and a brief assessment of the factors. Two reasons developed and weighed beat five named."
+   },
+   {
+    "title": "How Businesses Grow",
+    "meta": "2 methods + 4 directions",
+    "keyIdea": "A firm grows by building or by combining, and the four directions of combination are what the specification classifies.",
+    "blocks": [
+     {
+      "title": "HOW BUSINESSES GROW",
+      "items": [
+       {
+        "type": "def",
+        "text": "<strong>Organic growth</strong> — expansion generated by the firm's own activity. Slower, funded as it goes, and it keeps the firm whole."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Merger/takeover</strong> — a merger is agreed by both sets of owners; a takeover is one firm buying control, agreed or resisted. Either way the capacity already exists."
+       }
+      ]
+     },
+     {
+      "title": "THE FOUR DIRECTIONS",
+      "items": [
+       {
+        "type": "def",
+        "text": "<strong>Horizontal integration</strong> — same stage, same industry. Removes a competitor and raises market share."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Backward vertical integration</strong> — towards the supplier. Secures supply, quality and input cost."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Forward vertical integration</strong> — towards the customer. Secures an outlet and captures the retailer's margin."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Conglomerate integration</strong> — unrelated markets. Diversification is the only gain available."
+       }
+      ]
+     },
+     {
+      "title": "ADVANTAGES AND DISADVANTAGES OF EACH TYPE OF MERGER/TAKEOVER",
+      "items": [
+       {
+        "type": "mech",
+        "text": "Horizontal: share and removed duplication, against regulators, less choice and lost jobs. Vertical: security of supply or of access, against running a business the firm does not know and losing the discipline of buying from whoever is cheapest. Conglomerate: steadier profit, against no operational gain and unfamiliar management."
+       },
+       {
+        "type": "mech",
+        "text": "The gains are expected at the time of the deal and the costs are certain, so a merger can fail to deliver what was claimed for it without anything going unusually wrong."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Same STAGE is horizontal; same industry is not enough.",
+     "Name the direction from the acquirer: backward to the supplier, forward to the customer.",
+     "Argue the advantages of the specific direction, not of mergers in general."
+    ],
+    "examMatters": "An Analyse (6 marks, WEC13 Appendix 6) requires a chain of reasoning. Naming the direction is the first link, not the answer."
+   },
+   {
+    "title": "Constraints on Growth and Its Impact",
+    "meta": "4 constraints + 3 groups affected",
+    "keyIdea": "Four things constrain business growth, and growth itself lands on businesses, workers and consumers in both directions.",
+    "blocks": [
+     {
+      "title": "CONSTRAINTS ON BUSINESS GROWTH",
+      "items": [
+       {
+        "type": "def",
+        "text": "<strong>Size of market</strong> — the firm cannot sell to customers who do not exist."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Access to finance</strong> — a small firm has less retained profit, fewer assets as security and no record, so it borrows dearer or not at all."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Owner objectives</strong> — nothing is stopping the firm; the person who decides does not want it larger."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Government regulation and bureaucracy</strong> — compliance cost is largely fixed and jumps at thresholds, so the step up in size costs more than the size does."
+       }
+      ]
+     },
+     {
+      "title": "IMPACT OF GROWTH OF FIRMS ON BUSINESSES, WORKERS AND CONSUMERS",
+      "items": [
+       {
+        "type": "mech",
+        "text": "<strong>Businesses:</strong> fixed costs spread, market power, cheaper finance and resilience — against harder coordination, weaker control and lower motivation."
+       },
+       {
+        "type": "mech",
+        "text": "<strong>Workers:</strong> higher pay, career paths, training and security — against duplicated jobs removed in a merger, narrower work, and greater distance from the decision-maker."
+       },
+       {
+        "type": "mech",
+        "text": "<strong>Consumers:</strong> lower costs, wider range and greater reach — against less choice and less pressure to pass any saving on."
+       },
+       {
+        "type": "link",
+        "text": "The consumer case turns on one condition: does the firm still face competition?"
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Owner objectives is the constraint where nothing external is stopping the firm.",
+     "Organic growth adds jobs; a horizontal merger removes duplicated ones.",
+     "Lower cost makes a lower price possible; competition is what makes it happen."
+    ],
+    "examMatters": "A Discuss (14 marks, WEC13 Appendix 6) requires analysis and evaluation, and wants both sides weighed and a judgement reached."
+   },
+   {
+    "title": "Demergers",
+    "meta": "reasons + 3 groups affected",
+    "keyIdea": "A demerger splits a business in two without selling it, and the trade it makes is focus against shared cost.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "def",
+        "text": "<strong>Demerger</strong> — part of a business is separated into an independent company whose shares go to the parent's existing owners. No buyer, no payment."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Divestment</strong> — a division is sold to another firm for cash. The division changes owner, which a demerger does not."
+       }
+      ]
+     },
+     {
+      "title": "REASONS FOR DEMERGERS",
+      "items": [
+       {
+        "type": "mech",
+        "text": "Focus, because two businesses compete for one management's attention. Coordination, because a group assembled by acquisition becomes too complex to run. Valuation, because investors who want one part must buy both. Regulation, where an authority requires a separation."
+       }
+      ]
+     },
+     {
+      "title": "IMPACT OF DEMERGERS ON BUSINESSES, WORKERS AND CONSUMERS",
+      "items": [
+       {
+        "type": "mech",
+        "text": "<strong>Businesses:</strong> focused management and separate funding, against duplicated overheads and no other division to fall back on."
+       },
+       {
+        "type": "mech",
+        "text": "<strong>Workers:</strong> shorter promotion paths, against cuts to central functions and more exposure if the business struggles."
+       },
+       {
+        "type": "mech",
+        "text": "<strong>Consumers:</strong> better-served markets and possibly a restored competitor, against the cost of the duplication."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "A demerger divides; a divestment sells. The test is whether anyone bought it.",
+     "The same trade runs through all three groups: focus against shared cost.",
+     "It is worth doing when the two businesses gained little from being run together."
+    ],
+    "examMatters": "A Define (2 marks, WEC13 Appendix 6) on a demerger must say what happens to ownership, or it describes a divestment equally well."
+   },
+   {
+    "title": "Business Objectives",
+    "meta": "3 objectives + formulae + satisficing",
+    "keyIdea": "Three objectives, three formulae, three different outputs from the same firm — and the divorce of ownership from control is why the choice is contested.",
+    "blocks": [
+     {
+      "title": "DIFFERENT BUSINESS OBJECTIVES AND THEIR FORMULAE",
+      "items": [
+       {
+        "type": "def",
+        "text": "<strong>Profit maximisation</strong> — the formula is <strong>MC = MR</strong>. For Imani Ceramics: 10,000 units at $40, profit $128,000."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Revenue maximisation</strong> — the formula is <strong>MR = 0</strong>. 15,000 units at $30, revenue $450,000, profit $78,000."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Sales volume maximisation</strong> — the formula is <strong>AR = AC</strong>. 18,000 units at $24, profit $0."
+       },
+       {
+        "type": "mech",
+        "text": "Selling the most units is not earning the most revenue: $432,000 at 18,000 units against $450,000 at 15,000 units."
+       }
+      ]
+     },
+     {
+      "title": "BEHAVIOURAL THEORIES: SATISFICING",
+      "items": [
+       {
+        "type": "def",
+        "text": "<strong>Satisficing</strong> — aiming at an outcome that is satisfactory to every stakeholder rather than the maximum of any one thing."
+       },
+       {
+        "type": "mech",
+        "text": "It arises because owners, managers, employees, customers and suppliers want different things, and because nobody has the information to locate a true maximum."
+       }
+      ]
+     },
+     {
+      "title": "THE DIVORCE OF OWNERSHIP FROM CONTROL: THE PRINCIPAL-AGENT PROBLEM",
+      "items": [
+       {
+        "type": "mech",
+        "text": "The <strong>principal</strong> owns and wants profit; the <strong>agent</strong> runs the firm and gains from size, growth and revenue. The agent also knows more than the principal can observe."
+       },
+       {
+        "type": "mech",
+        "text": "Different objectives plus unequal information means neither is pursued to its limit — which is the significance of the divorce of ownership from control for business objectives."
+       },
+       {
+        "type": "link",
+        "text": "Owners narrow the gap with share-based pay, profit-linked bonuses and independent boards. None of it closes the gap, because the information stays unequal."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "MC = MR for profit, MR = 0 for revenue, AR = AC for sales volume.",
+     "Revenue maximisation and sales volume maximisation are different objectives with different outputs.",
+     "Satisficing is the compromise the principal-agent problem produces."
+    ],
+    "examMatters": "A Calculate (4 marks, WEC13 Appendix 6) involves several stages and expects working. An Evaluate (20 marks) requires multi-stage chains of reasoning and a supported judgement."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "types-sizes-businesses:quiz:9d71aaba",
+    "question": "A business owned by its members, in which each member has one vote regardless of how much capital they have contributed, is:",
+    "options": [
+     "A joint venture",
+     "A not-for-profit organisation",
+     "A state-owned enterprise",
+     "A co-operative"
+    ],
+    "correctIndex": 3,
+    "explanation": "One member, one vote is the defining feature of a co-operative, and it is what stops control following capital. A joint venture is jointly owned by parent firms in proportion to their stakes, and a not-for-profit is defined by what happens to its surplus rather than by how it votes."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:f09e3705",
+    "question": "A supermarket chain buys the farm that supplies its vegetables. This is an example of:",
+    "options": [
+     "Forward vertical integration",
+     "Horizontal integration",
+     "Backward vertical integration",
+     "Conglomerate integration"
+    ],
+    "correctIndex": 2,
+    "explanation": "The supermarket has moved back along its own supply chain towards the source of its inputs, which is backward vertical integration. Forward would mean moving towards the final customer, and horizontal would mean buying another supermarket at the same stage."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:4709173e",
+    "question": "The divorce of ownership from control matters for business objectives because:",
+    "options": [
+     "Owners and managers may pursue different objectives",
+     "Managers are legally prevented from owning shares",
+     "Owners always know more about the firm than managers do",
+     "It removes the need for the firm to make a profit"
+    ],
+    "correctIndex": 0,
+    "explanation": "The separation puts the firm in the hands of agents whose objectives — size, growth, security — are not the owners' objective of profit, and the owners cannot fully observe what the agents do. Managers commonly do hold shares, and the information advantage runs the other way."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:34aa4e5f",
+    "question": "A state-owned enterprise is best defined as an organisation that is:",
+    "options": [
+     "Used mainly by members of the public",
+     "Owned by the government on behalf of citizens",
+     "Not permitted to charge for its services",
+     "Required to make a loss"
+    ],
+    "correctIndex": 1,
+    "explanation": "The public sector is defined by state ownership, not by who its customers are or what it charges. A supermarket serves the public and is private; a state-owned enterprise may charge for what it provides and may cover its costs."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:a50683ca",
+    "question": "The distinction between a for-profit and a not-for-profit organisation rests on:",
+    "options": [
+     "Whether it earns more than it spends",
+     "Whether it employs paid staff",
+     "Where any surplus may go",
+     "Whether it is owned by the government"
+    ],
+    "correctIndex": 2,
+    "explanation": "A not-for-profit may run a surplus and generally must, or it would close. What it cannot do is distribute that surplus to owners: it is retained for the organisation's purpose. Both types employ paid staff and both may be privately owned."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:2320c45b",
+    "question": "Two firms create a separate company to develop a new aircraft engine, while continuing to trade independently in every other market. This is:",
+    "options": [
+     "A merger",
+     "A demerger",
+     "A takeover",
+     "A joint venture"
+    ],
+    "correctIndex": 3,
+    "explanation": "A joint venture creates a new jointly-owned organisation for one purpose and leaves both parents standing. A merger or takeover would combine the firms themselves, and a demerger splits one firm rather than bringing two together."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:075c8279",
+    "question": "Which of the following is NOT a reason firms form joint ventures?",
+    "options": [
+     "Sharing the cost of a project too large for one firm",
+     "Combining expertise neither firm has alone",
+     "Gaining access to a market that is otherwise closed",
+     "Removing a competitor from the market"
+    ],
+    "correctIndex": 3,
+    "explanation": "Removing a competitor is the gain from horizontal integration, where the two firms actually combine. In a joint venture both parents remain independent and may still compete with each other everywhere outside the venture."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:33b5aa78",
+    "question": "A co-operative distributes its surplus to members mainly in proportion to:",
+    "options": [
+     "The capital each member has contributed",
+     "How much each member has traded with it",
+     "How long each member has belonged",
+     "The number of votes each member holds"
+    ],
+    "correctIndex": 1,
+    "explanation": "Benefit follows use in a co-operative, just as ownership and control do. Distributing in proportion to capital is what a company does, and every member holds exactly one vote, so votes cannot vary at all."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:c7a359cf",
+    "question": "A refinery employs few people but uses a great deal of capital, while a cleaning contractor employs thousands and owns very little. This shows that:",
+    "options": [
+     "Measures of business size can rank the same firms differently",
+     "The refinery is the smaller business",
+     "Capital employed is the only valid measure of size",
+     "Neither firm is a large corporation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Employees and capital employed put these two firms in opposite orders, which is why an answer has to say which measure it is using. Neither measure is the correct one; they measure different things."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:bf984e14",
+    "question": "Which of the following is NOT one of the usual measures of the size of a business?",
+    "options": [
+     "Number of employees",
+     "Turnover",
+     "Capital employed",
+     "Age of the business"
+    ],
+    "correctIndex": 3,
+    "explanation": "The age of a business says nothing about how large that business is: a new firm can be very large and an old one very small. Number of employees, turnover, capital employed and market share are the measures in use."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:070cb818",
+    "question": "A firm restoring antique clocks remains small mainly because:",
+    "options": [
+     "Its owner lacks ambition",
+     "Regulation prevents it from expanding",
+     "It cannot obtain any finance at all",
+     "The size of its market is limited"
+    ],
+    "correctIndex": 3,
+    "explanation": "There is a limited number of antique clocks and of people wanting them restored, so growth has nowhere to go however the firm is run. The other options describe different constraints, none of which the example gives any evidence for."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:f6bfa416",
+    "question": "Which of the following is a reason firms grow rather than a reason they stay small?",
+    "options": [
+     "Demand is for a personal service delivered face to face",
+     "The owner prefers to keep control of the business",
+     "Fixed costs can be spread over a larger output",
+     "The market is a small and specialised niche"
+    ],
+    "correctIndex": 2,
+    "explanation": "Spreading fixed costs over more units lowers the cost each unit carries, which is the clearest argument for growing. The other three are reasons firms tend to remain small."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:d9389500",
+    "question": "Horizontal integration is best described as a merger or takeover between firms:",
+    "options": [
+     "At the same stage of production in the same industry",
+     "At different stages of the same supply chain",
+     "In completely unrelated markets",
+     "Of very different sizes within the same industry"
+    ],
+    "correctIndex": 0,
+    "explanation": "Same STAGE is what makes it horizontal; same industry is not enough, because a roastery and a coffee farm are both in coffee and are at different stages. Different stages of one chain is vertical, unrelated markets is conglomerate, and the relative size of the two firms has nothing to do with the classification."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:501af66f",
+    "question": "A firm that acquires one of its suppliers is an example of:",
+    "options": [
+     "Forward vertical integration",
+     "Backward vertical integration",
+     "Horizontal integration",
+     "Organic growth"
+    ],
+    "correctIndex": 1,
+    "explanation": "Moving towards the source of its inputs is backward vertical integration, and what it secures is supply, quality and input cost. Forward would take the firm towards its customers instead."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:a2c1e13e",
+    "question": "The main difference between a merger and a takeover is:",
+    "options": [
+     "Whether the firms are in the same industry",
+     "Whether any money changes hands",
+     "Whether the combined firm changes its name",
+     "Whether both sets of owners agree to it"
+    ],
+    "correctIndex": 3,
+    "explanation": "A merger is agreed by both sides; a takeover is one firm buying control, which the target's owners may resist. Industry, name and payment vary in both cases and settle nothing."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:3fd94b32",
+    "question": "A publisher buys a chain of bookshops. The gain most specific to this direction of integration is:",
+    "options": [
+     "Removing a competitor from the publishing market",
+     "Securing a guaranteed outlet to the final customer",
+     "Spreading risk across unrelated markets",
+     "Reducing the cost of paper"
+    ],
+    "correctIndex": 1,
+    "explanation": "Buying the stage that used to buy from it is forward vertical integration, and what that secures is access to the market plus the retailer's margin. Removing a competitor would need a horizontal deal, and paper is a backward concern."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:de530ed7",
+    "question": "A ceramics manufacturer acquires an insurance business. The principal gain available from this deal is:",
+    "options": [
+     "Savings from combining the two operations",
+     "Securing the supply of an input",
+     "Diversification of the group's profits",
+     "Removal of a competitor"
+    ],
+    "correctIndex": 2,
+    "explanation": "There is no operational connection between ceramics and insurance, so none of the usual gains exists. What remains is diversification: profits in unrelated markets rarely fall at the same time."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:6233f049",
+    "question": "Which of the following is a disadvantage specific to vertical integration?",
+    "options": [
+     "The firm loses the discipline of buying from whoever is cheapest",
+     "The market contains one fewer competitor",
+     "Profits become more volatile because the markets are unrelated",
+     "The firm gains no operational expertise from the deal"
+    ],
+    "correctIndex": 0,
+    "explanation": "Owning the stage it used to buy from means the firm now supplies itself, so it no longer tests its input cost against what an outside supplier would charge. Removing a competitor is horizontal; unrelated markets and the absence of operational gains are both conglomerate."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:07cc22fd",
+    "question": "Organic growth differs from external growth because organic growth:",
+    "options": [
+     "Requires no investment by the firm",
+     "Cannot take a firm into a new market",
+     "Is always more profitable",
+     "Builds new capacity rather than buying it"
+    ],
+    "correctIndex": 3,
+    "explanation": "Organic growth expands the firm's own operations, which is why it is slower and easier to control; it is funded expansion, not free. It can take a firm into a new market, just not quickly."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:9aecaf69",
+    "question": "Which of the following is a constraint on business growth?",
+    "options": [
+     "Access to finance",
+     "Horizontal integration",
+     "Spreading fixed costs over more output",
+     "Organic growth"
+    ],
+    "correctIndex": 0,
+    "explanation": "The specification names four constraints: size of market, access to finance, owner objectives, and government regulation and bureaucracy. The other three are ways a firm grows or reasons it wants to, which is the opposite of a constraint."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:5f57124f",
+    "question": "A profitable firm with a large potential market chooses not to expand because its owner does not want to delegate or borrow. The constraint here is:",
+    "options": [
+     "Size of market",
+     "Access to finance",
+     "Owner objectives",
+     "Government regulation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Nothing external is stopping this firm: the market is large and it is profitable. The constraint is what the person who decides actually wants, which is why an answer treating every firm as trying to grow cannot explain it."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:951bf0fe",
+    "question": "Compliance with government regulation tends to weigh more heavily on a small firm because:",
+    "options": [
+     "Small firms break more rules",
+     "Small firms pay higher rates of tax",
+     "Regulations apply only above a certain size",
+     "Much of the cost of compliance is fixed"
+    ],
+    "correctIndex": 3,
+    "explanation": "Somebody must read the rules and file the returns whether the firm has ten employees or ten thousand, so a largely fixed cost is spread over far less output in a small firm. Many obligations do begin at thresholds, but the rules themselves apply at every size."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:42c3a9f3",
+    "question": "Which of the following is a cost of growth for the firm itself?",
+    "options": [
+     "Fixed costs are spread over more units",
+     "Suppliers offer better terms",
+     "Decisions pass through more layers before anyone acts",
+     "Borrowing becomes cheaper"
+    ],
+    "correctIndex": 2,
+    "explanation": "Coordination is what gets harder as a firm grows: more people, sites and layers mean decisions take longer to make and longer to reach whoever must act on them. The other three are gains from size."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:b1cf04e9",
+    "question": "A cost saving from the growth of a firm is most likely to reach consumers as a lower price when:",
+    "options": [
+     "The firm has removed all its competitors",
+     "The firm still faces rivals who would take its business",
+     "The firm is a state-owned enterprise",
+     "The saving comes from lower wages"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lower costs make a lower price possible; competitive pressure is what makes it happen. Where growth has removed the rivals, there is nothing forcing the saving to be passed on and it stays with the firm."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:e86c0d80",
+    "question": "A demerger is best defined as:",
+    "options": [
+     "The sale of a division to another firm in exchange for a cash payment",
+     "The separation of part of a business into a company owned by the same owners",
+     "The closure of a division that has stopped being profitable",
+     "A merger that a competition authority has ordered to be reversed"
+    ],
+    "correctIndex": 1,
+    "explanation": "In a demerger nothing is sold and no buyer appears: the business divides and its existing owners end up holding two companies. Selling a division to another firm is a divestment, which is the distinction the question is testing."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:810f53a2",
+    "question": "Which of the following is most likely to be a reason for a demerger?",
+    "options": [
+     "Two very different businesses compete for one management's attention",
+     "The firm wishes to remove a competitor",
+     "The firm wants to secure the supply of an input",
+     "The firm wants to enter a new country"
+    ],
+    "correctIndex": 0,
+    "explanation": "Focus is the commonest reason to split: each business ends up run by people whose whole job it is. The other three are reasons to combine with another firm, not to divide."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:25a75838",
+    "question": "An impact of a demerger on workers is that:",
+    "options": [
+     "Workers receive a pay rise when the company splits",
+     "Promotion paths get longer in the smaller companies",
+     "Central functions duplicated by the split are cut",
+     "Workers become owners of the company they work for"
+    ],
+    "correctIndex": 2,
+    "explanation": "The split needs only one of each shared department in each company, so central functions are where the cuts fall. Promotion paths get shorter in a smaller organisation, not longer."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:e7732a08",
+    "question": "Profit maximisation occurs where:",
+    "options": [
+     "Total revenue is at its maximum",
+     "Marginal cost equals marginal revenue",
+     "Average revenue equals average cost",
+     "Marginal revenue is zero"
+    ],
+    "correctIndex": 1,
+    "explanation": "Profit is largest where the last unit adds exactly what it costs, which is MC = MR. Revenue at its maximum is MR = 0 and produces a larger output; AR = AC is sales volume maximisation and leaves no profit at all."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:fb81a6c7",
+    "question": "A firm wishing to make its total revenue as large as possible should produce the output at which:",
+    "options": [
+     "Marginal revenue is zero",
+     "Marginal cost equals marginal revenue",
+     "Average revenue equals average cost",
+     "Total cost is at its minimum"
+    ],
+    "correctIndex": 0,
+    "explanation": "Revenue stops rising when the next unit adds nothing to it, which is MR = 0. Past that point the price has to fall by more than the extra units bring in, so revenue falls."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:8b3606f9",
+    "question": "A firm that aims to sell the maximum number of units while still covering all its costs is pursuing:",
+    "options": [
+     "Profit maximisation",
+     "Revenue maximisation",
+     "Sales volume maximisation",
+     "Satisficing"
+    ],
+    "correctIndex": 2,
+    "explanation": "Selling as much as possible subject to covering costs is sales volume maximisation, and its formula is AR = AC — the price per unit exactly equals the cost per unit, so profit is zero."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:d79fdb8b",
+    "question": "Imani Ceramics faces P = 60 − 2Q and a constant marginal cost of $20. Her profit-maximising output is:",
+    "options": [
+     "10,000 units",
+     "15,000 units",
+     "18,000 units",
+     "5,000 units"
+    ],
+    "correctIndex": 0,
+    "explanation": "Marginal revenue is 60 − 4Q, so setting it equal to 20 gives Q = 10. That output sells at $40 and returns a profit of $128,000; 15,000 units is where revenue peaks and 18,000 units is where profit reaches zero."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:c3c2346f",
+    "question": "Compared with profit maximisation, sales volume maximisation always produces:",
+    "options": [
+     "A larger output at a lower price",
+     "A smaller output at a higher price",
+     "The same output at a lower price",
+     "A larger output at a higher price"
+    ],
+    "correctIndex": 0,
+    "explanation": "Selling more units requires a lower price along a downward-sloping demand curve, and the volume objective pushes output past both the profit-maximising and the revenue-maximising levels until profit reaches zero."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:bf7e5868",
+    "question": "Satisficing behaviour by firms is best explained by:",
+    "options": [
+     "Managers being unable to calculate the costs of the firm they run",
+     "The need to reach an outcome acceptable to groups with conflicting aims",
+     "A legal requirement limiting the profit a large firm may keep",
+     "The complete absence of competition in the firm's own market"
+    ],
+    "correctIndex": 1,
+    "explanation": "Owners, managers, employees, customers and suppliers want different things, and maximising any one objective pushes the others to the limit of what they will accept. Satisficing settles for an outcome each finds good enough."
+   },
+   {
+    "id": "types-sizes-businesses:quiz:6581f923",
+    "question": "The principal-agent problem arises because:",
+    "options": [
+     "Agents are dishonest and deliberately mislead the owners",
+     "Principals and agents have different objectives and unequal information",
+     "Agents own a larger share of the firm than the principals do",
+     "Principals have no legal right to give instructions to agents"
+    ],
+    "correctIndex": 1,
+    "explanation": "Nothing about the problem requires dishonesty. The owner wants profit, the manager gains from size and growth, and the owner cannot fully observe what the manager does — that combination is enough."
+   }
+  ],
+  "practice": [
+   {
+    "id": "types-sizes-businesses:practice:41e40770",
+    "command": "Define",
+    "marks": 2,
+    "question": "Define the term 'co-operative'. (2 marks)",
+    "guidance": "Two things, one sentence: a co-operative is owned by its members, who are the people that use it — its customers, workers or producers — and each member has one vote regardless of what they have contributed. \"A business owned by a group\" is not enough, because it misses the feature that separates a co-operative from a company. Examples are application and belong in a 4-mark Explain; Define is 2 marks in IAL Economics (WEC13 Appendix 6)."
+   },
+   {
+    "id": "types-sizes-businesses:practice:40c731df",
+    "command": "Explain",
+    "marks": 4,
+    "question": "Explain two reasons why two firms might form a joint venture rather than merge. (4 marks)",
+    "guidance": "Two reasons, each developed rather than listed, and each turning on the fact that both parents survive. Shared cost and risk: a project too large or too uncertain for one firm becomes affordable when the outlay is split, and neither firm has to commit its whole business to it. Access to a closed market: partnering with a firm already established somewhere can be the only practical route in, and the visiting firm keeps its independence everywhere else. An answer that describes the gains from merging has answered a different question."
+   },
+   {
+    "id": "types-sizes-businesses:practice:6b1dc648",
+    "command": "Explain",
+    "marks": 4,
+    "question": "Explain two reasons why some firms tend to remain small. (4 marks)",
+    "guidance": "Two of the reasons the specification points to, each followed through to why the firm does not grow. The size of the market: where demand is for something specialised or local, there are only so many customers in existence and growth has nowhere to go. Owner objectives: growth means borrowing, delegating and answering to others, and an owner who values independence may decline it, which is the reason where nothing external is stopping the firm at all. Saying only that small firms \"cannot compete\" gets the causation backwards."
+   },
+   {
+    "id": "types-sizes-businesses:practice:fe5c8be5",
+    "command": "Explain",
+    "marks": 4,
+    "question": "Explain the difference between forward and backward vertical integration. (4 marks)",
+    "guidance": "Name the direction from the acquirer's own position in the supply chain, and say what each secures. Backward: the firm acquires its supplier, moving towards the source of its inputs, which secures supply, controls quality at source and removes the supplier's margin. Forward: the firm acquires its customer, moving towards the final buyer, which guarantees an outlet and captures the retailer's margin. Students often decide the direction from which firm is larger; size has nothing to do with it."
+   },
+   {
+    "id": "types-sizes-businesses:practice:6660d5bb",
+    "command": "Analyse",
+    "marks": 6,
+    "question": "Analyse the likely impact on consumers of a horizontal merger between two firms in the same market. (6 marks)",
+    "guidance": "A chain of reasoning, not a list. One route: the two firms were competitors, so the merger removes one from the market; the combined firm therefore faces less pressure on its price; consumers pay more and have one fewer alternative to switch to. The other route runs the opposite way and is equally valid: duplicated head offices and networks are removed, average cost falls, and where rivals remain the saving can reach consumers as a lower price. Naming the direction is the first link, not the answer."
+   },
+   {
+    "id": "types-sizes-businesses:practice:15b1dd6c",
+    "command": "Examine",
+    "marks": 8,
+    "question": "Examine two constraints on the growth of a business. (8 marks)",
+    "guidance": "Two constraints from the four the specification names, each with its mechanism and a consequence for the firm. Access to finance: a small firm has less retained profit, fewer assets to offer as security and no record to show, so it borrows on worse terms or is refused — and the expansion does not happen even though it would have been viable. Government regulation and bureaucracy: much of the cost of compliance is fixed and some obligations begin at thresholds, so the step up in size costs more than the size itself. Develop two rather than naming four."
+   },
+   {
+    "id": "types-sizes-businesses:practice:0bc48d26",
+    "command": "Discuss",
+    "marks": 14,
+    "question": "Discuss the impact of the growth of firms on workers and consumers. (14 marks)",
+    "guidance": "Both groups, both directions, and a judgement that rests on something. For workers: higher pay, training and career paths in a larger firm, against the duplicated jobs a merger removes and the greater distance from whoever decides. For consumers: lower costs, a wider range and greater reach, against less choice and less pressure to pass any saving on. The judgement worth reaching is conditional — how the firm grew, since organic growth adds capacity while a horizontal merger combines capacity that already existed, and whether competition survived it, since that is what turns a lower cost into a lower price."
+   },
+   {
+    "id": "types-sizes-businesses:practice:4e3aff14",
+    "command": "Define",
+    "marks": 2,
+    "question": "Define the term 'demerger'. (2 marks)",
+    "guidance": "Say what happens to ownership, or the definition describes a divestment equally well. A demerger separates part of a business into an independent company whose shares go to the parent's existing owners: no buyer appears and no payment is received. \"When a firm splits up\" does not distinguish it from a sale. Define is 2 marks in IAL Economics (WEC13 Appendix 6), not 4."
+   },
+   {
+    "id": "types-sizes-businesses:practice:713cf058",
+    "command": "Explain",
+    "marks": 4,
+    "question": "Explain two possible reasons why a firm might choose to demerge. (4 marks)",
+    "guidance": "Two reasons, each developed. Focus: two businesses with different customers, risks and time horizons compete for one management's attention, and separated, each is run by people whose whole job it is. Valuation: investors who want one of the businesses have to buy both, so neither is valued on its own terms, and separating them lets each raise money on the terms that suit it. A third route is coordination — a group assembled by acquisition can become too complex to run — and any two developed properly will do."
+   },
+   {
+    "id": "types-sizes-businesses:practice:e2d3c8e3",
+    "command": "Calculate",
+    "marks": 4,
+    "question": "Imani Ceramics faces the demand curve P = 60 − 2Q, where Q is output in thousands of units a month, and a constant marginal cost of $20. Calculate her profit-maximising output and the price she would charge. (4 marks)",
+    "guidance": "Show the working, because a Calculate involves several stages (WEC13 Appendix 6). Marginal revenue has twice the slope of a linear demand curve, so MR = 60 − 4Q. Profit is maximised where MC = MR: 60 − 4Q = 20, so 4Q = 40 and Q = 10, which is 10,000 units a month. Substitute back into the DEMAND curve, not into MR, for the price: P = 60 − 2 × 10 = $40. Reading the price off the MR line instead of the demand curve gives $20."
+   },
+   {
+    "id": "types-sizes-businesses:practice:3cb79ed0",
+    "command": "Draw",
+    "marks": 4,
+    "question": "Draw a diagram showing a firm's average revenue, marginal revenue and marginal cost curves, and label the profit-maximising output and price. (4 marks)",
+    "guidance": "An accurately labelled diagram (WEC13 Appendix 6). It needs: output on the horizontal axis and price and cost in dollars a unit on the vertical, both labelled; a downward-sloping AR curve; an MR curve drawn twice as steep, starting from the same point on the vertical axis; a marginal cost curve; the output labelled where MC cuts MR; and the price read UP from that output to the AR curve, not to the MR curve. Reading the price off MR instead of AR is what turns an otherwise correct diagram into the wrong price."
+   },
+   {
+    "id": "types-sizes-businesses:practice:a5f0810d",
+    "command": "Examine",
+    "marks": 8,
+    "question": "Examine the significance of the divorce of ownership from control for the objectives a large firm pursues. (8 marks)",
+    "guidance": "The mechanism and its consequence. The mechanism: owners are many and dispersed, so the firm is run by managers appointed to act for them; those managers gain from size, growth and revenue while the owners want profit; and the owners see reports the managers prepared rather than the firm itself. The consequence: the firm pursues an outcome acceptable to both rather than maximum profit, which is satisficing, and it may sit closer to revenue maximisation than to MC = MR. Working the point on a firm's own figures — what an output chosen for size costs the owners in profit — turns the theory into an argument about that firm."
+   },
+   {
+    "id": "types-sizes-businesses:practice:aced507f",
+    "command": "Evaluate",
+    "marks": 20,
+    "question": "Evaluate the view that large firms pursue revenue maximisation rather than profit maximisation. (20 marks)",
+    "guidance": "A supported judgement, argued both ways. For: the divorce of ownership from control gives managers objectives of their own, and revenue is visible, immediate and what they are often rewarded on; a firm buying market share may accept lower profit deliberately. Against: owners narrow the gap with share-based pay and profit-linked bonuses; a firm that persistently earns less than it could becomes a target for whoever thinks they could run it better; and the choice is rarely either objective in its pure form, since satisficing describes a compromise between them. The strongest judgement is conditional — on how dispersed the ownership is, on how managers are paid, and on whether the firm is under competitive pressure — rather than a verdict that every large firm behaves one way."
+   }
+  ],
+  "flashcards": [
+   {
+    "id": "types-sizes-businesses:card:bd72e711",
+    "front": "What is a private sector organisation?",
+    "back": "An organisation owned by <strong>private individuals or firms</strong>, who supply the capital, carry the risk of losing it and set the objectives. A loss must be met by borrowing, shrinking or closing."
+   },
+   {
+    "id": "types-sizes-businesses:card:85b1210e",
+    "front": "What is a state-owned enterprise?",
+    "back": "An organisation owned by the <strong>government on behalf of citizens</strong> — the public sector. Its objectives are set politically, and it can be kept running on public money if the service is judged worth more than it costs."
+   },
+   {
+    "id": "types-sizes-businesses:card:2c6cd9d7",
+    "front": "What is a not-for-profit organisation?",
+    "back": "An organisation whose surplus <strong>cannot be distributed to owners</strong> and must be retained for its purpose. It may — and usually must — earn more than it spends, or it would close."
+   },
+   {
+    "id": "types-sizes-businesses:card:21d65d80",
+    "front": "What is a co-operative?",
+    "back": "An organisation owned and controlled by its <strong>members</strong>, who are the customers, workers or producers that use it. <strong>One member, one vote</strong>, and the surplus is shared in proportion to use rather than to capital."
+   },
+   {
+    "id": "types-sizes-businesses:card:16d1fae3",
+    "front": "What is a joint venture?",
+    "back": "A separate organisation set up and <strong>jointly owned by two or more firms</strong> for one project. Both parents keep their independence everywhere else, which is what distinguishes it from a merger."
+   },
+   {
+    "id": "types-sizes-businesses:card:c92e4de5",
+    "front": "How is the size of a business measured?",
+    "back": "By <strong>number of employees</strong>, <strong>turnover</strong>, <strong>capital employed</strong> or <strong>market share</strong>. They can rank the same firms differently, so an answer has to name the measure it is using."
+   },
+   {
+    "id": "types-sizes-businesses:card:b80e4d64",
+    "front": "Why do some firms tend to remain small?",
+    "back": "The <strong>size of the market</strong>, demand for a <strong>niche</strong> or personal service that resists standardisation, <strong>owner objectives</strong>, and lack of <strong>access to finance</strong>. Small size is a limit or a choice, not a failure."
+   },
+   {
+    "id": "types-sizes-businesses:card:c9d44ea8",
+    "front": "Name the four constraints on business growth.",
+    "back": "<strong>Size of market</strong>; <strong>access to finance</strong>; <strong>owner objectives</strong>; and <strong>government regulation and bureaucracy</strong>. Owner objectives is the one where nothing external is stopping the firm."
+   },
+   {
+    "id": "types-sizes-businesses:card:db721933",
+    "front": "What is organic growth?",
+    "back": "Expansion generated by the firm's <strong>own activity</strong> — more outlets, more products, more markets — rather than by acquiring another firm. Slower than buying capacity, and easier to fund and control."
+   },
+   {
+    "id": "types-sizes-businesses:card:2cf34254",
+    "front": "What is external growth?",
+    "back": "Growth by combining with another firm. A <strong>merger</strong> is agreed by both sets of owners; a <strong>takeover</strong> is one firm buying control, agreed or resisted. Either way the capacity already exists, so the growth is immediate."
+   },
+   {
+    "id": "types-sizes-businesses:card:9b09d285",
+    "front": "What is horizontal integration?",
+    "back": "A merger or takeover between firms at the <strong>same stage of production in the same industry</strong>. It removes a competitor and raises market share, which is why it draws the attention of competition authorities."
+   },
+   {
+    "id": "types-sizes-businesses:card:594b9175",
+    "front": "What is vertical integration?",
+    "back": "A merger or takeover between firms at <strong>different stages of the same supply chain</strong>. <strong>Backward</strong> is towards the supplier and secures supply; <strong>forward</strong> is towards the customer and secures an outlet."
+   },
+   {
+    "id": "types-sizes-businesses:card:d00467a8",
+    "front": "What is a conglomerate merger?",
+    "back": "A merger or takeover between firms in <strong>unrelated markets</strong>. Nothing operational is shared, so <strong>diversification</strong> is the only gain: profits in unrelated markets rarely fall at the same time."
+   },
+   {
+    "id": "types-sizes-businesses:card:218c3234",
+    "front": "What is profit maximisation, and what is its formula?",
+    "back": "Producing the output at which profit is largest. The formula is <strong>MC = MR</strong>: make every unit whose addition to revenue is at least its addition to cost, and stop where the two are equal."
+   },
+   {
+    "id": "types-sizes-businesses:card:3d668220",
+    "front": "What is revenue maximisation, and what is its formula?",
+    "back": "Making total revenue as large as possible, regardless of cost. The formula is <strong>MR = 0</strong>. It gives a <strong>larger</strong> output and a lower price than profit maximisation, and less profit."
+   },
+   {
+    "id": "types-sizes-businesses:card:512aec09",
+    "front": "What is sales volume maximisation, and what is its formula?",
+    "back": "Selling as many units as possible while still covering all costs. The formula is <strong>AR = AC</strong>, so profit is <strong>zero</strong>. It is not the same as revenue maximisation: it sells more units for less revenue."
+   },
+   {
+    "id": "types-sizes-businesses:card:995c9f7f",
+    "front": "What is satisficing?",
+    "back": "Aiming for an outcome that is <strong>satisfactory to every stakeholder</strong> rather than the maximum of any one thing. It arises from conflicting objectives and from information nobody has in full."
+   },
+   {
+    "id": "types-sizes-businesses:card:6f34dcdb",
+    "front": "What is the principal-agent problem?",
+    "back": "The <strong>principal</strong> (the owner) wants profit; the <strong>agent</strong> (the manager) is appointed to deliver it but gains from size and growth, and knows more than the principal can observe. Different objectives plus unequal information."
+   },
+   {
+    "id": "types-sizes-businesses:card:3387937b",
+    "front": "What is the difference between the public sector and services the public uses?",
+    "back": "The <strong>public sector</strong> is defined by <strong>state ownership</strong>, not by who the customers are. A supermarket serves the public and is entirely private."
+   },
+   {
+    "id": "types-sizes-businesses:card:22354a58",
+    "front": "What is the difference between a demerger and a divestment?",
+    "back": "A <strong>demerger</strong> splits a business into a separate company owned by the <strong>same owners</strong> — no buyer, no payment. A <strong>divestment</strong> sells a division to <strong>another firm</strong> for cash. The test is whether anyone bought it."
+   },
+   {
+    "id": "types-sizes-businesses:card:282d3799",
+    "front": "Name the four directions a firm can grow by merger or takeover.",
+    "back": "<strong>Horizontal</strong> (same stage), <strong>backward vertical</strong> (towards the supplier), <strong>forward vertical</strong> (towards the customer) and <strong>conglomerate</strong> (unrelated markets)."
+   },
+   {
+    "id": "types-sizes-businesses:card:053ac26b",
+    "front": "Why is \"same industry\" not enough to make an integration horizontal?",
+    "back": "Because a roastery and a coffee farm are both in coffee and are at <strong>different stages</strong> of the chain, which makes that deal vertical. Horizontal needs the same STAGE of production."
+   },
+   {
+    "id": "types-sizes-businesses:card:8c6c6047",
+    "front": "Give one advantage and one disadvantage specific to vertical integration.",
+    "back": "<strong>For:</strong> it secures supply and quality (backward) or a guaranteed outlet (forward). <strong>Against:</strong> it loses the discipline of buying from whoever is cheapest, and by refusing to deal with rivals it can attract a regulator without ever having removed a competitor."
+   },
+   {
+    "id": "types-sizes-businesses:card:e18236af",
+    "front": "Why do firms grow?",
+    "back": "To spread <strong>fixed costs</strong> over more output, to gain <strong>market power</strong> over price and suppliers, to <strong>spread risk</strong> across products and markets, and because <strong>managers</strong> gain from size even where owners do not."
+   },
+   {
+    "id": "types-sizes-businesses:card:8904eb73",
+    "front": "What is the impact of the growth of firms on workers?",
+    "back": "<strong>For:</strong> higher pay, career paths, training and more security. <strong>Against:</strong> a merger removes duplicated jobs, work is narrower, and the decision-maker is further away. Organic growth adds jobs; a horizontal merger combines jobs that existed."
+   },
+   {
+    "id": "types-sizes-businesses:card:f53adfb3",
+    "front": "When does a cost saving from growth actually reach consumers?",
+    "back": "Only where the firm <strong>still faces competition</strong>. Lower cost makes a lower price <strong>possible</strong>; a rival ready to take the business is what makes it <strong>happen</strong>."
+   },
+   {
+    "id": "types-sizes-businesses:card:2c469619",
+    "front": "Give three reasons for a demerger.",
+    "back": "<strong>Focus</strong> — two businesses compete for one management's attention. <strong>Coordination</strong> — a group assembled by acquisition becomes too complex. <strong>Valuation</strong> — investors who want one part must buy both. A regulator may also require it."
+   },
+   {
+    "id": "types-sizes-businesses:card:cf883271",
+    "front": "What is the impact of a demerger on businesses?",
+    "back": "<strong>For:</strong> focused management, and each company can be valued and funded on its own terms. <strong>Against:</strong> costs that were shared must be <strong>duplicated</strong>, and neither has the other to fall back on."
+   },
+   {
+    "id": "types-sizes-businesses:card:d9fecb11",
+    "front": "Why does the divorce of ownership from control matter for business objectives?",
+    "back": "Because the firm is run by managers whose objectives — size, growth, revenue — are not the owners' objective of profit, and the owners cannot fully observe them. The result is a <strong>compromise</strong> rather than maximum profit."
+   },
+   {
+    "id": "types-sizes-businesses:card:157daa71",
+    "front": "How do owners try to close the principal-agent gap?",
+    "back": "By making the agent an owner too: <strong>share-based pay</strong>, <strong>profit-linked bonuses</strong> and reporting to independent boards. Each narrows the gap; none closes it, because the information stays unequal."
+   }
+  ],
+  "diagrams": [
+   {
+    "id": "types-sizes-businesses:diagram:700a5f13",
+    "title": "The Five Types of Business",
+    "description": "The five types of business organisation the specification lists at 1a — with for-profit and not-for-profit given a row each — set against who owns each one and where any surplus may go. Those two questions are what separate them from one another, and they cut across each other rather than lining up.",
+    "kind": "table",
+    "svg": "<svg width=\"500\" height=\"344\" viewBox=\"0 0 500 344\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrBlue\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#3b82f6\"/></marker><marker id=\"arrAmber\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#f59e0b\"/></marker><marker id=\"arrGreen\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#059669\"/></marker></defs><text x=\"18\" y=\"30\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">Who owns it, and where the surplus goes</text><text x=\"18\" y=\"50\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"600\" text-anchor=\"start\">Type</text><text x=\"175\" y=\"50\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"600\" text-anchor=\"start\">Who owns it</text><text x=\"330\" y=\"50\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"600\" text-anchor=\"start\">Where the surplus goes</text><line x1=\"18\" y1=\"56\" x2=\"484\" y2=\"56\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"22\" y=\"92\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">Private sector</text><text x=\"175\" y=\"92\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Private individuals or firms</text><text x=\"330\" y=\"92\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">To the owners</text><rect x=\"18\" y=\"104\" width=\"466\" height=\"28\" fill=\"#475569\" opacity=\"0.18\"/><text x=\"22\" y=\"128\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">State-owned (public sector)</text><text x=\"175\" y=\"128\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">The government</text><text x=\"330\" y=\"128\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">To the state, or reinvested</text><text x=\"22\" y=\"164\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">For-profit</text><text x=\"175\" y=\"164\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Whoever supplied the capital</text><text x=\"330\" y=\"164\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Distributed to the owners</text><rect x=\"18\" y=\"176\" width=\"466\" height=\"28\" fill=\"#475569\" opacity=\"0.18\"/><text x=\"22\" y=\"200\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">Not-for-profit</text><text x=\"175\" y=\"200\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Trustees; no private owners</text><text x=\"330\" y=\"200\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Retained for its purpose</text><text x=\"22\" y=\"236\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">Co-operative</text><text x=\"175\" y=\"236\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Its members — one vote each</text><text x=\"330\" y=\"236\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Shared by how much each traded</text><rect x=\"18\" y=\"248\" width=\"466\" height=\"28\" fill=\"#475569\" opacity=\"0.18\"/><text x=\"22\" y=\"272\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">Joint venture</text><text x=\"175\" y=\"272\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Two or more parent firms</text><text x=\"330\" y=\"272\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Shared between the parents</text><text x=\"18\" y=\"296\" fill=\"#7a8299\" font-size=\"9.5\" font-weight=\"400\" text-anchor=\"start\">The first two rows divide by OWNERSHIP, the next two by PURPOSE — so they</text><text x=\"18\" y=\"310\" fill=\"#7a8299\" font-size=\"9.5\" font-weight=\"400\" text-anchor=\"start\">overlap: most not-for-profits are private sector. A co-operative is the only row</text><text x=\"18\" y=\"324\" fill=\"#7a8299\" font-size=\"9.5\" font-weight=\"400\" text-anchor=\"start\">where control does not follow capital.</text></svg>"
+   },
+   {
+    "id": "types-sizes-businesses:diagram:32abe8ef",
+    "title": "How Size Is Measured",
+    "description": "Two firms measured by number of employees and by capital employed. The two measures rank them in opposite orders, which is why an answer has to name the measure it is using rather than call a firm large.",
+    "checklist": [
+     "Both measures named, each with its unit: number of employees, capital employed in $m",
+     "The same two firms appear on both measures",
+     "The two measures put the firms in opposite orders",
+     "Each bar is labelled with its own figure",
+     "The point stated: name the measure before calling a firm large"
+    ],
+    "svg": "<svg width=\"500\" height=\"300\" viewBox=\"0 0 500 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrBlue\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#3b82f6\"/></marker><marker id=\"arrAmber\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#f59e0b\"/></marker><marker id=\"arrGreen\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#059669\"/></marker></defs><text x=\"18\" y=\"30\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">The same two firms, measured two ways</text><text x=\"18\" y=\"48\" fill=\"#7a8299\" font-size=\"9.5\" font-weight=\"400\" text-anchor=\"start\">Each measure is scaled against the larger firm on that measure.</text><text x=\"18\" y=\"66\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Number of employees</text><text x=\"142\" y=\"95\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">Refinery</text><rect x=\"150\" y=\"78\" width=\"30\" height=\"26\" fill=\"#3b82f6\"/><text x=\"186\" y=\"95\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">400</text><text x=\"142\" y=\"137\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">Cleaning contractor</text><rect x=\"150\" y=\"120\" width=\"300\" height=\"26\" fill=\"#3b82f6\"/><text x=\"456\" y=\"137\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">4000</text><text x=\"18\" y=\"162\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Capital employed ($m)</text><text x=\"142\" y=\"191\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">Refinery</text><rect x=\"150\" y=\"174\" width=\"300\" height=\"26\" fill=\"#f59e0b\"/><text x=\"456\" y=\"191\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">900 $m</text><text x=\"142\" y=\"233\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">Cleaning contractor</text><rect x=\"150\" y=\"216\" width=\"10\" height=\"26\" fill=\"#f59e0b\"/><text x=\"166\" y=\"233\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">30 $m</text><text x=\"18\" y=\"276\" fill=\"#7a8299\" font-size=\"9.5\" font-weight=\"400\" text-anchor=\"start\">Ranked by employees the contractor is larger; by capital employed the refinery is.</text></svg>"
+   },
+   {
+    "id": "types-sizes-businesses:diagram:cb26fb4e",
+    "title": "The Four Directions of Integration",
+    "description": "One supply chain — coffee farms, roastery, cafés — with the four directions of merger or takeover drawn on it from the roastery's position: backward towards the supplier, forward towards the customer, horizontal at the same stage, and conglomerate outside the chain altogether.",
+    "checklist": [
+     "A supply chain drawn from input to final customer",
+     "Backward vertical arrow pointing towards the supplier",
+     "Forward vertical arrow pointing towards the customer",
+     "Horizontal shown as a firm at the SAME stage",
+     "Conglomerate shown outside the supply chain, with nothing shared"
+    ],
+    "svg": "<svg width=\"500\" height=\"330\" viewBox=\"0 0 500 330\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrBlue\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#3b82f6\"/></marker><marker id=\"arrAmber\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#f59e0b\"/></marker><marker id=\"arrGreen\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#059669\"/></marker></defs><text x=\"18\" y=\"28\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">Four directions, from the roastery's point of view</text><text x=\"18\" y=\"46\" fill=\"#7a8299\" font-size=\"9.5\" font-weight=\"400\" text-anchor=\"start\">The supply chain runs left to right, from the input to the final customer.</text><rect x=\"24\" y=\"132\" width=\"118\" height=\"52\" fill=\"#059669\" rx=\"6\" opacity=\"0.28\"/><rect x=\"24\" y=\"132\" width=\"118\" height=\"52\" fill=\"none\" rx=\"6\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"83\" y=\"156\" fill=\"#e8ecf5\" font-size=\"10.5\" font-weight=\"600\" text-anchor=\"middle\">Coffee farms</text><text x=\"83\" y=\"172\" fill=\"#7a8299\" font-size=\"8.5\" font-weight=\"400\" text-anchor=\"middle\">the supplier</text><rect x=\"172\" y=\"132\" width=\"118\" height=\"52\" fill=\"#3b82f6\" rx=\"6\" opacity=\"0.28\"/><rect x=\"172\" y=\"132\" width=\"118\" height=\"52\" fill=\"none\" rx=\"6\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"231\" y=\"156\" fill=\"#e8ecf5\" font-size=\"10.5\" font-weight=\"600\" text-anchor=\"middle\">Roastery</text><text x=\"231\" y=\"172\" fill=\"#7a8299\" font-size=\"8.5\" font-weight=\"400\" text-anchor=\"middle\">this firm</text><rect x=\"320\" y=\"132\" width=\"118\" height=\"52\" fill=\"#f59e0b\" rx=\"6\" opacity=\"0.28\"/><rect x=\"320\" y=\"132\" width=\"118\" height=\"52\" fill=\"none\" rx=\"6\" stroke=\"#f59e0b\" stroke-width=\"2\"/><text x=\"379\" y=\"156\" fill=\"#e8ecf5\" font-size=\"10.5\" font-weight=\"600\" text-anchor=\"middle\">Cafés</text><text x=\"379\" y=\"172\" fill=\"#7a8299\" font-size=\"8.5\" font-weight=\"400\" text-anchor=\"middle\">the customer</text><line x1=\"142\" y1=\"158\" x2=\"166\" y2=\"158\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><line x1=\"290\" y1=\"158\" x2=\"314\" y2=\"158\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><line x1=\"192\" y1=\"122\" x2=\"122\" y2=\"122\" stroke=\"#059669\" stroke-width=\"2\" marker-end=\"url(#arrGreen)\"/><text x=\"142\" y=\"114\" fill=\"#059669\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"middle\">Backward vertical</text><line x1=\"300\" y1=\"122\" x2=\"340\" y2=\"122\" stroke=\"#f59e0b\" stroke-width=\"2\" marker-end=\"url(#arrAmber)\"/><text x=\"379\" y=\"114\" fill=\"#f59e0b\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"middle\">Forward vertical</text><rect x=\"172\" y=\"224\" width=\"118\" height=\"52\" fill=\"#3b82f6\" rx=\"6\" opacity=\"0.14\"/><rect x=\"172\" y=\"224\" width=\"118\" height=\"52\" fill=\"none\" rx=\"6\" stroke=\"#3b82f6\" stroke-width=\"2\" stroke-dasharray=\"6,4\"/><text x=\"231\" y=\"248\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\" text-anchor=\"middle\">Another roastery</text><text x=\"231\" y=\"263\" fill=\"#7a8299\" font-size=\"8.5\" font-weight=\"400\" text-anchor=\"middle\">the same stage</text><line x1=\"231\" y1=\"184\" x2=\"231\" y2=\"218\" stroke=\"#3b82f6\" stroke-width=\"2\" marker-end=\"url(#arrBlue)\"/><text x=\"239\" y=\"208\" fill=\"#3b82f6\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">Horizontal</text><rect x=\"320\" y=\"224\" width=\"118\" height=\"52\" fill=\"#8b5cf6\" rx=\"6\" opacity=\"0.14\"/><rect x=\"320\" y=\"224\" width=\"118\" height=\"52\" fill=\"none\" rx=\"6\" stroke=\"#8b5cf6\" stroke-width=\"2\" stroke-dasharray=\"6,4\"/><text x=\"379\" y=\"248\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\" text-anchor=\"middle\">An insurer</text><text x=\"379\" y=\"263\" fill=\"#7a8299\" font-size=\"8.5\" font-weight=\"400\" text-anchor=\"middle\">no shared chain</text><text x=\"379\" y=\"296\" fill=\"#8b5cf6\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"middle\">Conglomerate</text><text x=\"18\" y=\"322\" fill=\"#7a8299\" font-size=\"9.5\" font-weight=\"400\" text-anchor=\"start\">Backward goes towards the supplier, forward towards the customer.</text></svg>"
+   },
+   {
+    "id": "types-sizes-businesses:diagram:17cf2e3e",
+    "title": "A Demerger Against a Divestment",
+    "description": "The same business split two ways. In a demerger the group divides into two companies held by the same owners and no payment is made. In a divestment the division is sold to another firm and cash comes back to the group.",
+    "checklist": [
+     "Both routes start from the same combined group",
+     "Demerger: two companies, held by the same owners",
+     "Demerger: no buyer and no payment",
+     "Divestment: the division changes owner",
+     "Divestment: cash comes back to the seller"
+    ],
+    "svg": "<svg width=\"500\" height=\"340\" viewBox=\"0 0 500 340\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrBlue\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#3b82f6\"/></marker><marker id=\"arrAmber\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#f59e0b\"/></marker><marker id=\"arrGreen\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#059669\"/></marker></defs><text x=\"18\" y=\"28\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">Same split, different transaction</text><text x=\"18\" y=\"56\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">DEMERGER — nobody buys it</text><rect x=\"24\" y=\"68\" width=\"150\" height=\"42\" fill=\"#3b82f6\" rx=\"5\" opacity=\"0.28\"/><rect x=\"24\" y=\"68\" width=\"150\" height=\"42\" fill=\"none\" rx=\"5\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"99\" y=\"94\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"middle\">Group: A + B</text><line x1=\"180\" y1=\"89\" x2=\"236\" y2=\"89\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><rect x=\"208\" y=\"68\" width=\"96\" height=\"42\" fill=\"#059669\" rx=\"5\" opacity=\"0.28\"/><rect x=\"208\" y=\"68\" width=\"96\" height=\"42\" fill=\"none\" rx=\"5\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"256\" y=\"94\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"middle\">Company A</text><rect x=\"318\" y=\"68\" width=\"96\" height=\"42\" fill=\"#059669\" rx=\"5\" opacity=\"0.28\"/><rect x=\"318\" y=\"68\" width=\"96\" height=\"42\" fill=\"none\" rx=\"5\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"366\" y=\"94\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"middle\">Company B</text><text x=\"24\" y=\"130\" fill=\"#7a8299\" font-size=\"9.5\" font-weight=\"400\" text-anchor=\"start\">The same owners now hold shares in both companies.</text><text x=\"24\" y=\"146\" fill=\"#059669\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">No buyer appears and no payment is received.</text><line x1=\"18\" y1=\"166\" x2=\"482\" y2=\"166\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"18\" y=\"194\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">DIVESTMENT — somebody buys it</text><rect x=\"24\" y=\"206\" width=\"150\" height=\"42\" fill=\"#3b82f6\" rx=\"5\" opacity=\"0.28\"/><rect x=\"24\" y=\"206\" width=\"150\" height=\"42\" fill=\"none\" rx=\"5\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"99\" y=\"232\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"middle\">Group: A + B</text><line x1=\"180\" y1=\"227\" x2=\"236\" y2=\"227\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><rect x=\"208\" y=\"206\" width=\"96\" height=\"42\" fill=\"#059669\" rx=\"5\" opacity=\"0.28\"/><rect x=\"208\" y=\"206\" width=\"96\" height=\"42\" fill=\"none\" rx=\"5\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"256\" y=\"232\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"middle\">Company A</text><rect x=\"318\" y=\"206\" width=\"96\" height=\"42\" fill=\"#ef4444\" rx=\"5\" opacity=\"0.28\"/><rect x=\"318\" y=\"206\" width=\"96\" height=\"42\" fill=\"none\" rx=\"5\" stroke=\"#ef4444\" stroke-width=\"2\"/><text x=\"366\" y=\"232\" fill=\"#e8ecf5\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"middle\">B, sold</text><text x=\"24\" y=\"268\" fill=\"#7a8299\" font-size=\"9.5\" font-weight=\"400\" text-anchor=\"start\">B now belongs to another firm, and cash comes back to the group.</text><text x=\"24\" y=\"284\" fill=\"#ef4444\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"start\">The division changed owner, which is what a demerger does not do.</text><text x=\"18\" y=\"322\" fill=\"#7a8299\" font-size=\"9.5\" font-weight=\"400\" text-anchor=\"start\">The test is whether anyone bought it.</text></svg>"
+   },
+   {
+    "id": "types-sizes-businesses:diagram:d5e500fa",
+    "title": "The Three Business Objectives",
+    "description": "Imani Ceramics's average revenue, marginal revenue, marginal cost and average cost, with the output each objective chooses marked on the demand curve: MC = MR at 10,000 units, MR = 0 at 15,000 units and AR = AC at 18,000 units.",
+    "checklist": [
+     "Four curves labelled: AR, MR, MC and AC",
+     "MR drawn twice as steep as AR, and reaching zero at the revenue-maximising output",
+     "Profit maximisation marked where MC = MR, at 10,000 units and $40",
+     "Revenue maximisation marked where MR = 0, at 15,000 units and $30",
+     "Sales volume maximisation marked where AR = AC, at 18,000 units and $24"
+    ],
+    "svg": "<svg width=\"500\" height=\"340\" viewBox=\"0 0 500 340\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrBlue\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#3b82f6\"/></marker><marker id=\"arrAmber\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#f59e0b\"/></marker><marker id=\"arrGreen\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#059669\"/></marker></defs><text x=\"18\" y=\"26\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">Imani Ceramics: three objectives, three outputs</text><line x1=\"60\" y1=\"268\" x2=\"464\" y2=\"268\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><line x1=\"60\" y1=\"268\" x2=\"60\" y2=\"36\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><text x=\"256\" y=\"294\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">Output (thousands of units a month)</text><text x=\"34\" y=\"158\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\" transform=\"rotate(-90,34,158)\">Price and cost ($ a unit)</text><line x1=\"60\" y1=\"48\" x2=\"452\" y2=\"231.33\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/><text x=\"448\" y=\"247.33\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"600\" text-anchor=\"end\">AR (demand)</text><line x1=\"60\" y1=\"48\" x2=\"295.2\" y2=\"268\" stroke=\"#059669\" stroke-width=\"2.5\"/><text x=\"265.2\" y=\"252\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\" text-anchor=\"end\">MR</text><line x1=\"60\" y1=\"194.67\" x2=\"452\" y2=\"194.67\" stroke=\"#ef4444\" stroke-width=\"2.5\"/><text x=\"452\" y=\"210.67\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\" text-anchor=\"end\">MC</text><text x=\"54\" y=\"198.67\" fill=\"#ef4444\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"end\">$20</text><polyline points=\"91.36,62.67 107.04,106.67 122.72,128.67 138.4,141.87 154.08,150.67 169.76,156.95 185.44,161.67 201.12,165.33 216.8,168.27 232.48,170.67 248.16,172.67 263.84,174.36 279.52,175.81 295.2,177.07 310.88,178.17 326.56,179.14 342.24,180 357.92,180.77 373.6,181.47 389.28,182.1 404.96,182.67 420.64,183.19 436.32,183.67 452,184.11\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2.5\"/><text x=\"452\" y=\"174.11\" fill=\"#f59e0b\" font-size=\"10\" font-weight=\"600\" text-anchor=\"end\">AC</text><line x1=\"216.8\" y1=\"268\" x2=\"216.8\" y2=\"121.33\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"6,4\"/><line x1=\"60\" y1=\"121.33\" x2=\"216.8\" y2=\"121.33\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"6,4\"/><circle cx=\"216.8\" cy=\"121.33\" r=\"5\" fill=\"#ef4444\"/><text x=\"216.8\" y=\"282\" fill=\"#ef4444\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"middle\">10</text><text x=\"54\" y=\"125.33\" fill=\"#ef4444\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"end\">$40</text><text x=\"222.8\" y=\"113.33\" fill=\"#ef4444\" font-size=\"9\" font-weight=\"600\" text-anchor=\"start\">MC = MR</text><line x1=\"295.2\" y1=\"268\" x2=\"295.2\" y2=\"158\" stroke=\"#059669\" stroke-width=\"2\" stroke-dasharray=\"6,4\"/><line x1=\"60\" y1=\"158\" x2=\"295.2\" y2=\"158\" stroke=\"#059669\" stroke-width=\"2\" stroke-dasharray=\"6,4\"/><circle cx=\"295.2\" cy=\"158\" r=\"5\" fill=\"#059669\"/><text x=\"295.2\" y=\"282\" fill=\"#059669\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"middle\">15</text><text x=\"54\" y=\"162\" fill=\"#059669\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"end\">$30</text><text x=\"301.2\" y=\"150\" fill=\"#059669\" font-size=\"9\" font-weight=\"600\" text-anchor=\"start\">MR = 0</text><line x1=\"342.24\" y1=\"268\" x2=\"342.24\" y2=\"180\" stroke=\"#f59e0b\" stroke-width=\"2\" stroke-dasharray=\"6,4\"/><line x1=\"60\" y1=\"180\" x2=\"342.24\" y2=\"180\" stroke=\"#f59e0b\" stroke-width=\"2\" stroke-dasharray=\"6,4\"/><circle cx=\"342.24\" cy=\"180\" r=\"5\" fill=\"#f59e0b\"/><text x=\"342.24\" y=\"282\" fill=\"#f59e0b\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"middle\">18</text><text x=\"54\" y=\"184\" fill=\"#f59e0b\" font-size=\"9.5\" font-weight=\"600\" text-anchor=\"end\">$24</text><text x=\"348.24\" y=\"172\" fill=\"#f59e0b\" font-size=\"9\" font-weight=\"600\" text-anchor=\"start\">AR = AC</text><text x=\"18\" y=\"314\" fill=\"#7a8299\" font-size=\"9.5\" font-weight=\"400\" text-anchor=\"start\">Profit $128,000 · $78,000 · $0 — the price falls as the objective moves down the list.</text></svg>"
+   }
+  ],
+  "extras": {
+   "chains": [
+    {
+     "title": "Why a horizontal merger may raise the price consumers pay",
+     "steps": [
+      "Two firms at the same stage of the same industry combine into one.",
+      "The market now contains one fewer competitor than it did before.",
+      "The combined firm faces less pressure to hold its price down.",
+      "Consumers pay more and have one fewer alternative to switch to."
+     ],
+     "result": "This is why a competition authority tests a horizontal merger against the harm to consumers rather than against the gain to the firm"
+    },
+    {
+     "title": "Why being small keeps a firm small",
+     "steps": [
+      "A small firm has few assets to offer as security and a short trading record.",
+      "A lender judges it riskier, so it charges more or refuses the loan.",
+      "A viable expansion goes unfunded, because the finance costs more than it would return.",
+      "The firm stays small, so the next loan is priced exactly the same way."
+     ],
+     "result": "Access to finance is a constraint that reproduces itself: nothing in the chain moves the firm out of the position that caused it"
+    },
+    {
+     "title": "Why Imani Ceramics's objective changes her price",
+     "steps": [
+      "Maximising profit means MC = MR, which gives 10,000 units at $40 and $128,000 of profit.",
+      "Maximising revenue means MR = 0, which gives 15,000 units at $30 — more revenue, $78,000 of profit.",
+      "Maximising sales volume means AR = AC, which gives 18,000 units at $24 and no profit at all.",
+      "Each objective picks a different point on the same demand curve, so the price falls as the objective moves down the list."
+     ],
+     "result": "The objective is not a detail about a firm's character: it determines the output, the price and the profit"
+    },
+    {
+     "title": "How the divorce of ownership from control changes what a firm does",
+     "steps": [
+      "A firm grows too large for its owners to run it themselves.",
+      "Managers are appointed as agents to run it on the owners' behalf.",
+      "Those managers gain from size, growth and revenue, which the owners do not.",
+      "Neither objective is pursued to its limit, and the firm satisfices instead."
+     ],
+     "result": "Satisficing is not a separate theory bolted on to the others — it is what the principal-agent problem produces"
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "A horizontal merger is not automatically bad for consumers",
+     "content": "Removing a competitor reduces the pressure on price, but the same merger removes duplicated head offices, networks and systems, and spreads the remaining fixed costs over a larger output. Where enough rivals survive, that saving can reach consumers as a lower price. The judgement therefore turns on how much competition is left afterwards, which is the test a competition authority applies — and why approval is often conditional on selling parts of the business to someone else."
+    },
+    {
+     "title": "The gains from a merger are expected; the costs are certain",
+     "content": "Every argument for a merger is a forecast: the synergies, the savings, the market that will open. The costs of combining two workforces, two sets of systems and two managements are incurred whatever happens. That asymmetry is worth stating in any evaluation of a growth strategy, and it is what a later demerger of the same businesses is an admission of."
+    },
+    {
+     "title": "Whether growth helps workers depends on how the firm grew",
+     "content": "Organic growth adds capacity, so it generally adds jobs, and a larger firm can pay more and train more. A horizontal merger combines capacity that already existed, so the duplication it removes is largely people. An answer that treats \"growth\" as one thing cannot reach a judgement on workers at all; naming the method first is what makes the judgement possible."
+    },
+    {
+     "title": "Profit maximisation may still describe a firm that looks like a revenue maximiser",
+     "content": "A firm accepting low profits while it builds market share may be maximising profit over a longer horizon rather than pursuing revenue for its own sake. The two are hard to tell apart from outside, which is why the stronger evaluation rests on something observable — how dispersed the ownership is, how managers are paid, and whether the firm is under competitive pressure — rather than on the pattern of profits alone."
+    }
+   ]
+  },
+  "mistakes": [
+   {
+    "id": "types-sizes-businesses:mistake:663cc5e9",
+    "title": "Calling a Sale of a Division a Demerger",
+    "mistake": "Students describe a firm selling a division to another company as a demerger, which is the error the section itself used to make.",
+    "correction": "A demerger separates part of a business into an independent company whose shares go to the parent's EXISTING owners: nobody buys it and no payment is received. Selling a division to another firm is a divestment — the division changes owner and cash comes back.",
+    "examTip": "Say what happens to ownership. \"The firm split up\" describes both, so it defines neither; the test is whether anyone bought it."
+   },
+   {
+    "id": "types-sizes-businesses:mistake:52e3a00d",
+    "title": "Naming the Wrong Direction of Integration",
+    "mistake": "Students call any deal between two firms in the same industry horizontal, or decide the direction from which firm is larger.",
+    "correction": "Horizontal means the same STAGE of production — a roastery and a coffee farm are both in coffee and are at different stages, so that deal is vertical. The direction of a vertical deal is named from the acquirer's own position: backward towards its supplier, forward towards its customer. Size is irrelevant.",
+    "examTip": "Draw the supply chain before naming anything, put the acquirer on it, and then say which way along it the deal goes."
+   },
+   {
+    "id": "types-sizes-businesses:mistake:69e537e9",
+    "title": "Treating the Principal-Agent Problem as Dishonesty",
+    "mistake": "Students write that managers \"cheat\" the owners, or that the problem would disappear if managers were more honest.",
+    "correction": "The problem needs only two things: the agent has objectives of their own — size, growth, security — and the principal cannot fully observe what the agent does. An entirely honest manager who believes a larger firm is a better firm still produces the divergence.",
+    "examTip": "State the two ingredients — different objectives, unequal information — and then show what the firm does differently as a result."
+   },
+   {
+    "id": "types-sizes-businesses:mistake:fdf8912e",
+    "title": "Assuming Every Firm Is Trying to Grow",
+    "mistake": "Students explain small size as failure, and leave out the constraint where nothing external is stopping the firm at all.",
+    "correction": "The specification names four constraints: size of market, access to finance, owner objectives, and government regulation and bureaucracy. Owner objectives is the one that breaks the assumption — a profitable firm in a large market may simply have an owner who does not want to delegate, borrow or answer to anyone.",
+    "examTip": "When a question asks why a firm has not grown, check the owner's objectives before reaching for finance or the market."
+   },
+   {
+    "id": "types-sizes-businesses:mistake:25480e19",
+    "title": "Confusing Revenue Maximisation With Sales Volume Maximisation",
+    "mistake": "Students treat \"selling the most\" and \"earning the most revenue\" as the same objective, and give both the same formula.",
+    "correction": "They are different outputs. Revenue maximisation sets MR = 0; sales volume maximisation sets AR = AC and pushes output further, until profit reaches zero. Past the revenue-maximising output the price falls faster than the extra units make up for, so Imani Ceramics earns $432,000 selling 18,000 units against $450,000 selling only 15,000 units.",
+    "examTip": "Learn the three formulae as a set — MC = MR, MR = 0, AR = AC — and check which quantity each one gives before writing about any of them."
+   },
+   {
+    "id": "types-sizes-businesses:mistake:f09c9a1a",
+    "title": "Calling a Firm Large Without Naming the Measure",
+    "mistake": "Students describe a firm as large or small as though size were a single property, and default to the number of employees.",
+    "correction": "Size is measured by number of employees, turnover, capital employed or market share, and the measures can rank the same firms in opposite orders. A refinery employs few people and uses enormous capital; a cleaning contractor is the other way round. Both are large corporations on the measure that suits them.",
+    "examTip": "Name the measure in the sentence: \"large by capital employed\" says something, and \"large\" on its own does not."
+   },
+   {
+    "id": "types-sizes-businesses:mistake:86751b40",
+    "title": "Assuming Growth Automatically Benefits Consumers",
+    "mistake": "Students write that a larger firm has lower costs and therefore charges lower prices, treating the second half as following from the first.",
+    "correction": "Lower cost makes a lower price POSSIBLE; competition is what makes it happen. Where the growth removed the rivals, nothing forces the saving to be passed on and it stays with the firm — which is exactly why competition authorities examine horizontal mergers.",
+    "examTip": "Make the link conditional: say whether the firm still faces rivals, and let the answer about consumers follow from that."
+   }
+  ]
+ }
+}

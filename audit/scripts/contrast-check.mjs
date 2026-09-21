@@ -41,6 +41,19 @@ const ACCEPTED = new Map([
 // Literals that are correct as literals: they sit on a fixed fill that does not
 // change with the theme, so a token would be the wrong tool.
 const ACCEPTED_LITERALS = new Set([
+  // Semantic state colours. Green means correct, amber means partial, red means wrong, and those
+  // meanings do not change with the theme — a correct answer is not a different colour at night.
+  // They are deliberately literal, and the contrast check above still scores any TEXT on them.
+  '.lm-quiz-option.correct', '.lm-quiz-option.correct-reveal',
+  '.lm-strength-green', '.lm-strength-amber', '.lm-strength-red',
+  '.learn-mode-complete-dot', '.sidebar-learn-complete-dot',
+  '.lm-nav-complete:hover', '.auth-plan-badge.premium', '.lm-guided-expand-btn:hover',
+  '.lm-conf-guessed:hover', '.lm-conf-somewhat:hover', '.lm-conf-certain:hover',
+  '.lm-review-banner-btn:hover', '.settings-plan-badge.premium',
+  '.ma-ann-green', '.ma-ann-purple', '.ma-ann-blue', '.ma-ann-amber',
+  '.spe-qcard-option.incorrect .spe-qcard-letter', '.spe-qcard-option.correct .spe-qcard-letter',
+  '.wap-submit-btn:hover:not(:disabled)', '.wap-next-btn:hover',
+
   '.quiz-break-cta', // near-black on a fixed amber gradient, same in both themes
 ]);
 
@@ -245,9 +258,16 @@ function checkLiterals() {
   for (const rule of rules) {
     if (/^:root|^\[data-theme="(light|dark)"\]$/.test(rule.selector.trim())) continue;
     if (rule.selector.includes('[data-theme="dark"]')) continue; // dark half of a pair
-    for (const prop of ['color', 'fill', 'stroke']) {
+    // Packet 11: this scanned only color/fill/stroke, so a dark-tuned literal on a BORDER or a
+    // BACKGROUND passed silently — and those are exactly what the recall widgets use to signal
+    // state (a filled blank, a hovered arrow). The guard reported "clean" while three such
+    // literals were live. Borders and fills convey state, so they belong in the check.
+    for (const prop of ['color', 'fill', 'stroke', 'border-color', 'background', 'background-color']) {
       const v = decl(rule.body, prop);
       if (!v) continue;
+      // Hex only. A low-alpha rgba() tint of a brand colour composites acceptably on either
+      // ground and flooding the report with those would make it unreadable, which is how a guard
+      // stops being read at all. A flat hex is the dark-tuned-literal problem this exists to catch.
       const m = /#[0-9a-fA-F]{3,6}\b/.exec(stripVars(v));
       if (!m) continue;
       const hex = m[0].toLowerCase();

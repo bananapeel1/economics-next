@@ -1,9 +1,9 @@
-import { createClient } from '@supabase/supabase-js';
+// Packet 3 (F110): this script used to build its own Supabase client, which put it outside the
+// raw-write guard in scripts/_db.mjs. It now imports the shared client. Writing `data` on a content
+// table needs REVVY_ALLOW_RAW_WRITE=1 on the command line, deliberately: this is a bootstrap of an
+// empty database, not an authoring path, and the override says so in the shell history.
+import { supabase } from '../scripts/_db.mjs';
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY
-);
 
 // ═══════════════════════════════════════════════════════════════
 // COMMAND WORDS — Edexcel Economics

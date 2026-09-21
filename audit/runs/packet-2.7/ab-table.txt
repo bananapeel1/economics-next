@@ -1,0 +1,9 @@
+sabotage                                   live / staged          fixtures failing
+— none, the measure as built             241 of 264/358 of 667  0
+split sentences on [.!?;:] again           240 of 264/346 of 667  2
+drop the adjacent-pair window              233 of 264/314 of 667  2
+packet 29's gates, 0.85 / 0.95             214 of 264/287 of 667  2
+read no flow.steps, flow.result or title   230 of 264/338 of 667  3
+remove the filled-phrase clause            235 of 264/321 of 667  2
+units of 4+ words only, as packet 29 filtered 239 of 264/356 of 667  2
+— restored                               241 of 264/358 of 667  0

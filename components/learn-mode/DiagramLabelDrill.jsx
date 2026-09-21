@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef, useEffect, useCallback } from 'react';
 import processSvg from './processSvg';
+import { seededPermutation } from '@/lib/recall-widgets';
 
 const TOLERANCE = 35; // px radius for correct drop placement
 
@@ -9,6 +10,11 @@ const TOLERANCE = 35; // px radius for correct drop placement
  * Only extracts <text class="draggable"> elements — keeps axes, values,
  * and structural text in place. Shows pulsing drop indicators where
  * labels should be placed.
+ *
+ * Mounted by InlineDiagram behind a "Label this diagram" button (F061, packet 7), which appears only
+ * when the SVG carries three or more draggable labels. The gallery (/dev/widgets) shows it working;
+ * no live diagram carries the class yet — packets 13.5-13.7 author the labels. Pointer-drag only for
+ * now: the keyboard and tap-to-place paths belong to the drill component in packet 13.6.
  */
 export default function DiagramLabelDrill({ svgString, onClose }) {
   const svgContainerRef = useRef(null);
@@ -31,22 +37,10 @@ export default function DiagramLabelDrill({ svgString, onClose }) {
     // Apply quality fixes (min strokes, text on top, etc.)
     processSvg(svgEl);
 
-    // Find only text elements with class="draggable"
-    const draggableEls = Array.from(svgEl.querySelectorAll('text.draggable'));
-
-    // If no .draggable class found, fall back to extracting curve/point labels
-    // (for older SVGs without the class)
-    const textEls = draggableEls.length > 0
-      ? draggableEls
-      : Array.from(svgEl.querySelectorAll('text')).filter(t => {
-          const text = t.textContent.trim();
-          // Skip axis labels, values, and very short text
-          if (!text || text.length < 2) return false;
-          // Skip numerical values and axis titles
-          if (/^\d+$/.test(text)) return false;
-          if (/^(Price|Quantity|Cost|Output|Consumer|Capital|Q\)|P\))/i.test(text)) return false;
-          return true;
-        });
+    // Only text elements the author marked `class="draggable"` are labels. A fallback used to take
+    // every <text> that was not a bare number or an axis title; measured over the 74 live diagrams it
+    // would have made 6 to 40 "labels" per diagram out of titles, notes and axis values (packet 7).
+    const textEls = Array.from(svgEl.querySelectorAll('text.draggable'));
 
     const extracted = [];
     let idCounter = 0;
@@ -106,7 +100,9 @@ export default function DiagramLabelDrill({ svgString, onClose }) {
     const serializer = new XMLSerializer();
     setStrippedSvg(serializer.serializeToString(svgEl));
     setLabels(extracted);
-    setShuffledLabels([...extracted].sort(() => Math.random() - 0.5));
+    // Seeded by the labels themselves, so a reported drill can be reproduced.
+    const order = seededPermutation(extracted.length, extracted.map((l) => l.text).join('|'));
+    setShuffledLabels(order.map((i) => extracted[i]));
   }, [svgString]);
 
   // Convert page coords to SVG coords
@@ -209,7 +205,7 @@ export default function DiagramLabelDrill({ svgString, onClose }) {
         <div className="lm-label-drill-progress">
           {placedCount} / {totalCount}
         </div>
-        <button className="lm-label-drill-close" onClick={onClose}>&times;</button>
+        <button type="button" className="lm-label-drill-close" onClick={onClose} aria-label="Close the label drill">&times;</button>
       </div>
 
       {/* SVG with drop zone indicators */}
@@ -254,6 +250,8 @@ export default function DiagramLabelDrill({ svgString, onClose }) {
           <div
             key={label.id}
             className={`lm-label-chip ${label.shaking ? 'lm-label-shake' : ''}`}
+            role="img"
+            aria-label={`Label: ${label.text}. Drag it onto the diagram.`}
             onPointerDown={(e) => handlePointerDown(e, label)}
             style={{
               touchAction: 'none',

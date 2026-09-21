@@ -16,7 +16,8 @@ export default function SectionModelAnswersPage({
     a => a.sectionNumber === sectionNumber && a.subject === subject
   );
 
-  const faqs = SECTION_MODEL_ANSWERS_FAQ[sectionNumber] || [];
+  // Subject first: Business 1.3.1 and Economics 1.3.1 are different topics. Packet 12.1, E005.
+  const faqs = (SECTION_MODEL_ANSWERS_FAQ[subject] || {})[sectionNumber] || [];
 
   const topicName = title.replace(/\s*Model Answers\s*$/i, '').trim();
 
@@ -53,7 +54,20 @@ export default function SectionModelAnswersPage({
         <div className="ma-seo-intro" dangerouslySetInnerHTML={{ __html: seoIntro }} />
       )}
 
-      <ModelAnswersPage answers={sectionAnswers} freeMode={true} />
+      {sectionAnswers.length === 0 ? (
+        /* Honest rather than blank. After E005 renumbered the Business bank by wording, IAL Business
+           1.3.2 (demand, supply, elasticities) has no model answer yet; the page used to show an
+           empty card list with no explanation.
+
+           One sentence, one expression. Written across two JSX lines it rendered as
+           "The rest of Businessis covered": JSX drops the whitespace between an expression and a
+           following line break, so the space before "is" disappeared. Packet 12.1 fix round B1. */
+        <p className="ma-empty-note" role="note">
+          {`No model answers are published for this topic yet. The rest of ${subject === 'business' ? 'Business' : 'Economics'} is covered — use the link below to browse every topic.`}
+        </p>
+      ) : (
+        <ModelAnswersPage answers={sectionAnswers} freeMode={true} />
+      )}
 
       {/* The old CTA sent the reader to /model-answers — another SEO page, not
           the app. Someone who has just read worked answers wants to attempt one,

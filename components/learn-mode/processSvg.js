@@ -127,4 +127,13 @@ export default function processSvg(svgEl) {
   svgEl.style.width = '100%';
   svgEl.style.height = 'auto';
   svgEl.style.display = 'block';
+
+  // 7. F088, decided against a font floor. Two versions of one were tried and both were a relayout:
+  //    1/28 of the viewBox raised 1,419 of 1,420 labels; 1/36 still raised 1,281 of 1,377 (authored
+  //    sizes are 7-13 units) and put 18 overlapping pairs on a diagram that had none, because a
+  //    label's size and its neighbours' positions were authored together. And it bought nothing:
+  //    14 units at the 313px inline width is 8.7px, unreadable either way. Labels keep their authored
+  //    size; the full-screen sheet draws the diagram at 220vw, where the smallest authored label
+  //    (7 units on a 500 box) is 12px at 390px and page pinch-zoom goes further. The sheet, not a
+  //    floor, is the phone answer.
 }

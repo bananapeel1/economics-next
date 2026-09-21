@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import processSvg from './processSvg';
+import DiagramLabelDrill from './DiagramLabelDrill';
 
 /* ── Enlarged modal overlay ── */
 function DiagramModal({ svgRef, imageUrl, title, onClose }) {
@@ -23,6 +24,14 @@ function DiagramModal({ svgRef, imageUrl, title, onClose }) {
       const svgEl = svgRef.current.querySelector('svg');
       if (svgEl) {
         const clone = svgEl.cloneNode(true);
+        // processSvg gave the inline copy `style="width:100%"`, and an inline style beats the sheet's
+        // `width: 200vw`, so the "enlarged" diagram measured 0.9x the viewport. The clone is sized by
+        // the stylesheet alone. Caught by the packet 5 verifier.
+        clone.style.removeProperty('width');
+        clone.style.removeProperty('height');
+        clone.style.removeProperty('max-width');
+        clone.removeAttribute('width');
+        clone.removeAttribute('height');
         modalContentRef.current.innerHTML = '';
         modalContentRef.current.appendChild(clone);
       }
@@ -44,27 +53,40 @@ function DiagramModal({ svgRef, imageUrl, title, onClose }) {
     return () => document.removeEventListener('keydown', handleKey);
   }, [handleClose]);
 
+  /* F088/F062: on a phone the modal used to be the same 270px diagram, darker, with a close
+     button — it read as broken. It is a full-screen sheet now: the diagram is drawn at twice the
+     viewport width inside a scrolling, pinch-zoomable pane, so labels that were 5px inline are
+     readable, and the sheet says so. */
   return createPortal(
     <div
       className={`lm-diagram-modal-backdrop ${visible ? 'lm-diagram-modal-visible' : ''}`}
       onClick={handleClose}
+      role="dialog"
+      aria-modal="true"
+      aria-label={title ? `${title}, enlarged` : 'Enlarged diagram'}
     >
       <div
         className="lm-diagram-modal"
         onClick={(e) => e.stopPropagation()}
       >
-        <button
-          className="lm-diagram-modal-close"
-          onClick={handleClose}
-          aria-label="Close enlarged diagram"
-        >
-          &times;
-        </button>
-        {imageUrl ? (
-          <img src={imageUrl} alt={title || 'Diagram'} />
-        ) : (
-          <div ref={modalContentRef} className="lm-diagram-modal-svg" />
-        )}
+        <div className="lm-diagram-modal-bar">
+          <span className="lm-diagram-modal-title">{title || 'Diagram'}</span>
+          <button
+            className="lm-diagram-modal-close"
+            onClick={handleClose}
+            aria-label="Close enlarged diagram"
+          >
+            &times;
+          </button>
+        </div>
+        <div className="lm-diagram-modal-pane">
+          {imageUrl ? (
+            <img src={imageUrl} alt={title || 'Diagram'} />
+          ) : (
+            <div ref={modalContentRef} className="lm-diagram-modal-svg" />
+          )}
+        </div>
+        <div className="lm-diagram-modal-hint">Pinch or scroll to zoom</div>
       </div>
     </div>,
     document.body
@@ -80,20 +102,51 @@ export default function InlineDiagram({ diagram }) {
   const currentSvg = scenarios[activeScenario]?.svg || diagram.svg;
   const hasImage = !!diagram.imageUrl;
 
+  /* A reference table is not a diagram, and the schema has no surface for one — `schema.body-type`
+     allows paragraph, subheading, flow and bullets, so an author with a grid to show has only this
+     component. Everything below then treats the grid as a diagram: it prints "what a correct diagram
+     shows" over a table nobody draws in an exam, caps it at the width a cost-curve graph wants, and
+     offers to drill its labels. `kind: 'table'` turns those three off. Reported from the product on
+     3.3.1, where the table rendered at about 10px on a 1440px screen. */
+  const isTable = diagram.kind === 'table';
+
+  // F061 (packet 7): the label drill, behind a button that exists only when the SVG has labels
+  // to drill — three or more <text class="draggable">. Counted here, on the injected copy.
+  const [drillLabels, setDrillLabels] = useState(0);
+  const [drilling, setDrilling] = useState(false);
+
   // Inject and post-process SVG (static — no hover listeners)
   useEffect(() => {
     if (!svgRef.current || !currentSvg || hasImage) return;
     svgRef.current.innerHTML = currentSvg;
     const svgEl = svgRef.current.querySelector('svg');
     if (svgEl) processSvg(svgEl);
+    setDrillLabels(svgEl ? svgEl.querySelectorAll('text.draggable').length : 0);
+    setDrilling(false);
   }, [currentSvg, hasImage]);
 
   const handleDiagramClick = useCallback(() => {
     setEnlarged(true);
   }, []);
 
+  // F062: the hint only when enlarging would actually show more. The inline card is capped at
+  // 442-552px on wide screens; the sheet draws at 2× the viewport width on narrow ones.
+  const [canEnlarge, setCanEnlarge] = useState(true);
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) return;
+    const narrow = window.matchMedia('(max-width: 767px)');
+    /* A table always offers it. The width cap is off for tables, but a grid of words still lands
+       around 9px on a 1024-wide laptop and ~5px on a phone, and the old rule hid the hint whenever
+       the wrapper was 500px or wider — so at 1024 a table was small AND had no way out. */
+    const update = () => setCanEnlarge(isTable || narrow.matches || (svgRef.current?.clientWidth || 0) < 500);
+    update();
+    narrow.addEventListener('change', update);
+    window.addEventListener('resize', update);
+    return () => { narrow.removeEventListener('change', update); window.removeEventListener('resize', update); };
+  }, [isTable]);
+
   return (
-    <div className="lm-diagram-card">
+    <div className={`lm-diagram-card${isTable ? ' lm-diagram-table' : ''}`}>
       <div className="lm-card-label">&#128202; Diagram</div>
       <div className="lm-diagram-inner">
         <h3 className="diagram-title">{diagram.title}</h3>
@@ -113,13 +166,23 @@ export default function InlineDiagram({ diagram }) {
             <img src={diagram.imageUrl} alt={diagram.title} />
           </div>
         ) : (
-          <div className="lm-interactive-svg-wrapper lm-diagram-clickable" ref={svgRef} onClick={handleDiagramClick} />
+          /* Kept mounted (hidden) while the drill is open, so the injected SVG survives the round trip. */
+          <div className="lm-interactive-svg-wrapper lm-diagram-clickable" ref={svgRef} onClick={handleDiagramClick} hidden={drilling} />
         )}
-        <div className="lm-diagram-enlarge-hint">Tap to enlarge</div>
+        {canEnlarge && !drilling && <div className="lm-diagram-enlarge-hint">Tap to enlarge</div>}
+        {!hasImage && !isTable && drillLabels >= 3 && !drilling && (
+          <button type="button" className="lm-label-drill-toggle" onClick={() => setDrilling(true)}>
+            &#127919; Label this diagram
+          </button>
+        )}
+        {drilling && <DiagramLabelDrill svgString={currentSvg} onClose={() => setDrilling(false)} />}
 
-        {diagram.checklist && (
+        {diagram.checklist && !isTable && (
           <div className="diagram-checklist">
-            <div className="diagram-checklist-title">What examiners look for</div>
+            {/* Not "what examiners look for": that is the uncited claim about marking the content gate
+              blocks in prose (claim.uncited), printed by the app itself over every diagram in the
+              product. The checklist says what a correct diagram contains, which is checkable. */}
+            <div className="diagram-checklist-title">What a correct diagram shows</div>
             <ul>{diagram.checklist.map((item, i) => <li key={i}>{item}</li>)}</ul>
           </div>
         )}

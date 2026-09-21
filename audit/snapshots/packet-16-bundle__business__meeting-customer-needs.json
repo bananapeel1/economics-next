@@ -1,0 +1,2809 @@
+{
+ "section_id": "meeting-customer-needs",
+ "subject": "business",
+ "label": "packet-16-bundle",
+ "tables": {
+  "content": [
+   {
+    "id": "meeting-customer-needs:block:fd1b86b3",
+    "title": "The Market: Mass and Niche",
+    "sections": [
+     {
+      "id": "meeting-customer-needs:sub:mass-markets",
+      "title": "Mass Markets",
+      "keyIdea": "A mass market is the largest part of a market, served by a standardised product aimed at the widest possible range of customers — scale bought at the price of customisation.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "A **mass market** is the broadest segment of a market. The product is **standardised**: one recipe, one design, one specification sold to everyone, with the marketing varied rather than the product. Soft drinks, mobile handsets and washing powder are sold this way."
+       },
+       {
+        "type": "paragraph",
+        "text": "The **characteristic** that follows is volume. Selling millions of identical units lets a firm buy inputs in bulk, run machinery continuously and spread its design and advertising costs over a huge output, so the **average cost per unit falls**. That is what lets a mass-market firm compete on price."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Standardised product** — small differences between what any two customers receive.",
+         "**Wide distribution** — available in most retailers rather than a few specialists.",
+         "**High volume, low margin** — a small profit on each unit, multiplied by a very large number of units.",
+         "**Heavy competition** — the prize is large, so well-funded rivals are already there."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The trade-off is real. A mass-market firm cannot easily charge a premium, because a customer who dislikes the price can switch to a near-identical rival, and it must keep spending on advertising simply to hold the share it has."
+       }
+      ],
+      "realExample": {
+       "emoji": "🥤",
+       "text": "Coca-Cola sells a standardised drink across most countries in the world, varying the advertising rather than the recipe. The scale is what lets it negotiate hard with bottlers and spread one advertising campaign over an enormous output."
+      },
+      "misconception": "Students write that mass markets are always more profitable than niche markets. Volume is not margin: fierce price competition and heavy marketing costs can leave a thin profit on each unit. Write instead: mass markets offer high revenue through volume, but competition compresses the margin on every unit sold.",
+      "examMatters": "A Define (2 marks, WBS11 Appendix 6) on \"mass market\" needs both halves — the widest range of customers, and a standardised product. Naming a firm is application, and belongs in a 4-mark Explain rather than a definition.",
+      "recall": {
+       "id": "meeting-customer-needs:sub:mass-markets:recall",
+       "type": "fillin",
+       "prompt": "Complete the chain that makes a mass market worth serving:",
+       "template": [
+        "One ___ product is sold to the widest possible range of customers",
+        "→ The firm produces a very high ___ of identical units",
+        "→ Fixed spending is spread more thinly, so average ___ per unit falls"
+       ],
+       "answers": [
+        "standardised",
+        "volume",
+        "cost"
+       ],
+       "hints": [
+        "every customer receives essentially the same thing",
+        "how many units leave the factory, not how much each earns",
+        "what falls when output rises and fixed costs stay put"
+       ],
+       "distractors": [
+        "premium",
+        "margin"
+       ]
+      }
+     },
+     {
+      "id": "meeting-customer-needs:sub:niche-markets",
+      "title": "Niche Markets",
+      "keyIdea": "A niche market is a small, clearly defined part of a larger market whose particular needs the standardised mass-market product does not meet.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "A **niche market** is a small segment inside a larger one, defined by a need the mass-market product leaves unsatisfied. Left-handed tools, prayer-friendly travel, professional-grade cookware and cars built to order are all niches within much larger markets."
+       },
+       {
+        "type": "paragraph",
+        "text": "Its **characteristics** are the mirror image of the mass market. Output is low, the product is specialised, distribution is narrow, and because the customer values the specialisation and has few alternatives, the firm can charge a **premium price** and earn a wide margin on each unit."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Specialised product** — designed around one group's particular requirements.",
+         "**Low volume, high margin** — few units, but a large profit on each one.",
+         "**Less direct competition** — the segment is too small to attract the largest firms.",
+         "**Concentrated risk** — one small group of customers, so a change in their tastes hits the whole business."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Size is the constraint. A niche caps total revenue however well the firm serves it, and a business that has designed everything around one group has little to fall back on if that group shrinks or a larger rival decides the niche is worth entering after all."
+       }
+      ],
+      "realExample": {
+       "emoji": "⌚",
+       "text": "Rolex makes a small number of watches a year against the tens of millions a mass-market electronics firm ships, and sells them at prices no mass-market brand could ask. Scarcity and specialisation, not volume, are what the customer is paying for."
+      },
+      "misconception": "Students claim that niche markets are only for small businesses. Large firms run niches too — a luxury brand inside a volume carmaker is a niche served by a very large company. Write instead: niche marketing is a strategy about the segment served, not a statement about the size of the firm serving it.",
+      "examMatters": "Mass and niche are almost always examined as a comparison. Name the characteristic and its consequence in the same sentence — \"standardised, so unit costs fall\" against \"specialised, so a premium can be charged\" — rather than listing features of each in turn.",
+      "recall": {
+       "id": "meeting-customer-needs:sub:niche-markets:recall",
+       "type": "classify",
+       "prompt": "Sort each business into the type of market it is serving:",
+       "groups": [
+        {
+         "name": "Mass market",
+         "items": [
+          "A soft-drink maker selling one recipe worldwide",
+          "A supermarket own-brand washing powder",
+          "A phone maker shipping one model to 60 countries"
+         ],
+         "why": "One standardised product aimed at the widest possible range of customers, competing on volume and price"
+        },
+        {
+         "name": "Niche market",
+         "items": [
+          "A bakery making only gluten-free bread",
+          "A tailor making cricket bats to order",
+          "A travel agent booking only diving holidays"
+         ],
+         "why": "A small, clearly defined group whose particular need the standardised product does not meet, served at a premium"
+        }
+       ]
+      }
+     },
+     {
+      "id": "meeting-customer-needs:sub:market-size-share-and-growth",
+      "title": "Market Size, Share and Growth",
+      "keyIdea": "Market size says whether a market is worth entering, market share says whether a firm is winning inside it, and market growth says whether the whole market is expanding.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Market size** is the total sales in a market over a period, measured either by **volume** (units sold) or by **value** (sales revenue). It answers one question: is this market large enough to be worth serving?"
+       },
+       {
+        "type": "paragraph",
+        "text": "**Market share** is the proportion of that total held by one firm or product, as a percentage. **Market growth** is the percentage change in market size between two periods. Both are calculations the paper can ask for (QS2, WBS11 Appendix 7)."
+       },
+       {
+        "type": "subheading",
+        "text": "Worked example: Zuri Juice"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "The chilled-juice market was worth $32 million last year and $40 million this year.",
+         "Market growth = (40 − 32) ÷ 32 × 100 = **25%**.",
+         "Zuri Juice sold $6 million this year.",
+         "Market share = 6 ÷ 40 × 100 = **15%**."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Read the two together. A rising share in a growing market is the strongest position there is, because the firm is taking a bigger slice of a bigger cake. A rising share of a shrinking market may simply mean the firm is the last one left."
+       }
+      ],
+      "realExample": {
+       "emoji": "📈",
+       "text": "Streaming services report subscriber numbers every quarter for exactly this reason: investors want to know whether a company is growing faster than the market it sits in, which share alone cannot tell them."
+      },
+      "misconception": "Students treat rising sales as rising market share. They are different: if a firm's sales rise 10% while the market rises 25%, its share has fallen. Write instead: compare the firm's growth with the market's growth before claiming the firm is gaining ground.",
+      "examMatters": "A Calculate (4 marks, WBS11 Appendix 6) expects the formula, the substitution and the answer with its unit — a percentage sign, not a bare 15. Then use the number: Calculate is a quantitative skill (QS2, WBS11 Appendix 7), and the question after it always asks what the figure means.",
+      "recall": {
+       "id": "meeting-customer-needs:sub:market-size-share-and-growth:recall",
+       "type": "reorder",
+       "prompt": "Put these steps in the order you would carry them out to work out a firm's market share:",
+       "correctOrder": [
+        "Find the total sales of the whole market for the period",
+        "Take the firm's own sales for the same period",
+        "Divide the firm's sales by the total market sales",
+        "Multiply by 100 and write the answer as a percentage"
+       ],
+       "why": [
+        "Share is a share of something, so the total has to be known first",
+        "The two figures must cover the same period, or the ratio means nothing",
+        "Dividing gives the proportion the firm holds, as a decimal",
+        "Multiplying by 100 turns the proportion into the percentage the question asks for"
+       ]
+      }
+     },
+     {
+      "id": "meeting-customer-needs:sub:branding-and-brand-loyalty",
+      "title": "Branding and Brand Loyalty",
+      "keyIdea": "A brand is what a name promises in the customer's mind. Kept consistently it becomes loyalty, and loyalty is what lets a firm charge more than an identical rival.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Branding** is the process of building a distinctive name, design and reputation so that customers can tell one product from another and know what to expect from it. In a mass market, where the products themselves are close to identical, the brand is often the only thing separating them."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Brand loyalty** is the result: a customer who buys the same brand repeatedly without re-examining the alternatives each time. Three things follow from it, and each one is a chain an answer can develop."
+       },
+       {
+        "type": "flow",
+        "steps": [
+         {
+          "title": "Consistent quality and identity",
+          "subtitle": "the brand promise is kept, purchase after purchase"
+         },
+         {
+          "title": "Customers stop comparing",
+          "subtitle": "the brand becomes the default choice"
+         },
+         {
+          "title": "Demand becomes less price-sensitive",
+          "subtitle": "a price rise loses fewer customers"
+         },
+         {
+          "title": "The firm charges a premium",
+          "subtitle": "and spends less on winning the same buyers back"
+         }
+        ],
+        "result": "A margin a rival with the same product cannot match",
+        "resultType": "good"
+       },
+       {
+        "type": "paragraph",
+        "text": "A strong brand also makes a market **harder to enter**. A new firm with an equally good product must spend heavily, for years, to persuade customers to try something whose name means nothing to them — which is why branding is listed as a characteristic of mass markets rather than a piece of decoration."
+       }
+      ],
+      "realExample": {
+       "emoji": "👟",
+       "text": "Sportswear firms sponsor athletes and teams for decades rather than advertising the shoes themselves. What is being bought is the association; the shoe is close enough to a rival's that the association is the difference."
+      },
+      "misconception": "Students describe a brand as a logo. The logo is only the marker: the brand is the expectation the customer attaches to it, built by consistent quality. Write instead: a brand is the reputation a name carries, and the logo is what triggers it.",
+      "examMatters": "Branding connects to adding value and to competitive advantage later in this topic. An answer that says \"the brand is strong\" has asserted; an answer that says \"the brand makes demand less price-sensitive, so the firm can raise price without losing volume\" has analysed.",
+      "recall": {
+       "id": "meeting-customer-needs:sub:branding-and-brand-loyalty:recall",
+       "type": "match",
+       "prompt": "Match each effect of a strong brand to the reason it happens:",
+       "pairs": [
+        {
+         "left": "A premium price can be charged",
+         "right": "Loyal customers stop comparing alternatives",
+         "why": "Demand becomes less price-sensitive, so a higher price loses fewer buyers than it would for an unbranded rival"
+        },
+        {
+         "left": "Marketing costs fall over time",
+         "right": "Repeat buyers do not need winning back",
+         "why": "Persuasion is a one-off cost for a loyal customer and a recurring one for a switcher"
+        },
+        {
+         "left": "New entrants find it harder",
+         "right": "A new name means nothing to customers",
+         "why": "The entrant must fund years of advertising before its product is even considered at all"
+        },
+        {
+         "left": "New products launch more cheaply",
+         "right": "Trust in the name transfers to them",
+         "why": "Customers extend an existing expectation to the new item, so less has to be spent establishing it"
+        }
+       ],
+       "distractors": [
+        "Production costs fall because output is standardised"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "A mass market trades customisation for volume; a niche market trades volume for a premium.",
+     "Zuri holds 15% of a chilled-juice market that grew 25% this year.",
+     "A brand is an expectation, and loyalty to it is what makes demand less price-sensitive."
+    ],
+    "diagramId": "meeting-customer-needs:diagram:f0d091ed",
+    "quizIndices": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "practiceIndices": [
+     0,
+     1,
+     2
+    ]
+   },
+   {
+    "id": "meeting-customer-needs:block:3e30d471",
+    "title": "Dynamic Markets, Competition and Risk",
+    "sections": [
+     {
+      "id": "meeting-customer-needs:sub:dynamic-markets",
+      "title": "Online Retailing and How Markets Change",
+      "keyIdea": "A dynamic market changes rapidly and continuously, and online retailing is the clearest cause of it: the shop between producer and customer disappears.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "A **dynamic market** is one in which conditions change rapidly and continuously — consumer tastes, technology, the number of rivals, the rules firms operate under. Most markets are dynamic to some degree; the question in an exam answer is always *how* a named market is changing, not whether it is."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Online retailing** — selling directly to customers over the internet rather than through a shop — has changed markets in four ways that a chain of reasoning can follow."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Entry costs fall.** A seller needs a website rather than a lease, so new rivals appear quickly.",
+         "**Reach widens.** A small producer can sell nationally or across borders from one location.",
+         "**Prices become transparent.** Customers compare every seller in seconds, so a price premium must be justified by something they can see.",
+         "**Data arrives with the sale.** Every order records who bought what, when — market research as a by-product of trading."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "**How markets change** is therefore not random: technology alters costs and reach, that alters who can enter, and that forces the firms already there to respond on price, product or service."
+       }
+      ],
+      "realExample": {
+       "emoji": "📦",
+       "text": "Mobile money and online marketplaces let small producers in East Africa and South Asia sell beyond their own town for the first time, reaching customers who previously had no way to find them and no way to pay at a distance."
+      },
+      "misconception": "Students say a dynamic market is one where sales are growing. Growth is only one kind of change: a market can be dynamic while shrinking, fragmenting or being taken over by a new technology. Write instead: a dynamic market is one subject to rapid and continuous change, in any direction.",
+      "examMatters": "Name the change, then follow it to a decision. \"Online retailing grew\" is context; \"it cut entry costs, so three rivals appeared, so Zuri had to justify its price\" is the chain an Analyse (6 marks, WBS11 Appendix 6) wants.",
+      "recall": {
+       "id": "meeting-customer-needs:sub:dynamic-markets:recall",
+       "type": "reorder",
+       "prompt": "Put these in order from cause to effect, showing how online retailing changes a market:",
+       "correctOrder": [
+        "Selling online removes the need for a shop lease",
+        "The cost of entering the market falls",
+        "New sellers enter and customers compare prices easily",
+        "Established firms must cut price or differentiate"
+       ],
+       "why": [
+        "The technology comes first: it changes what a seller needs in order to trade at all",
+        "Lower fixed costs are what actually make the market easier to enter",
+        "More sellers and transparent prices are what the easier entry produces",
+        "The response of the incumbents is the last link, and it is the one the question usually asks about"
+       ]
+      }
+     },
+     {
+      "id": "meeting-customer-needs:sub:innovation-market-growth-adapting",
+      "title": "Innovation, Market Growth and Adapting to Change",
+      "keyIdea": "Innovation grows a market by bringing in customers it did not previously have; adapting to change is what decides which of the existing firms is still there afterwards.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Innovation** is a new or improved product, or a new way of producing or delivering one. It drives **market growth** in two distinct ways, and an answer is stronger for separating them."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**New customers.** A cheaper or simpler version reaches people the old product priced out, so the market gets bigger rather than the shares changing.",
+         "**New uses.** A product that does something the old one could not creates demand that did not exist at any price."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "**Adapting to change** is the other half. A firm can change its product, its market, its route to customers, or nothing. Doing nothing is a decision too, and it is the one that ends businesses: the pattern is rarely that a firm could not see the change, but that it saw it and defended the sales it already had."
+       },
+       {
+        "type": "flow",
+        "steps": [
+         {
+          "title": "An innovation reaches the market",
+          "subtitle": "a new product, or a new way of delivering one"
+         },
+         {
+          "title": "Customer expectations reset",
+          "subtitle": "the new option becomes the standard of comparison"
+         },
+         {
+          "title": "Firms choose: adapt or defend",
+          "subtitle": "change the offer, or protect existing sales"
+         },
+         {
+          "title": "Share moves to those that adapted",
+          "subtitle": "and the market itself may be larger than before"
+         }
+        ],
+        "result": "Growth for the market, and a redistribution of it between firms",
+        "resultType": "neutral"
+       }
+      ],
+      "realExample": {
+       "emoji": "🎬",
+       "text": "Video rental chains and film studios both saw streaming coming. Those that treated it as a new route to customers grew; those that treated it as a threat to existing revenue defended that revenue and lost the market."
+      },
+      "misconception": "Students treat innovation and invention as the same thing. An invention is a new idea; an innovation is an idea brought to market and adopted. Write instead: innovation is what reaches customers, which is why it, and not invention on its own, changes a market.",
+      "examMatters": "A question about a market that has grown usually wants the mechanism. Say whether growth came from new customers entering the market or from existing customers buying more, and use the market-growth percentage to anchor it.",
+      "recall": {
+       "id": "meeting-customer-needs:sub:innovation-market-growth-adapting:recall",
+       "type": "match",
+       "prompt": "Match each change in a market to the adaptation it forces on a firm already trading there:",
+       "pairs": [
+        {
+         "left": "Customers shift to buying online",
+         "right": "Build a direct sales channel of its own",
+         "why": "The route to the customer has moved, so the firm needs its own route rather than a better shop"
+        },
+        {
+         "left": "A rival launches a cheaper version",
+         "right": "Justify the price with a visible difference",
+         "why": "Once a cheaper option exists, a premium survives only if the customer can see what it buys"
+        },
+        {
+         "left": "The market grows and new firms enter",
+         "right": "Defend the position with a stronger brand",
+         "why": "Growth attracts entrants, and loyalty is what stops them taking existing customers"
+        },
+        {
+         "left": "Tastes move to healthier products",
+         "right": "Reformulate the product range",
+         "why": "The change is in what customers want from the product itself, so the product has to change"
+        }
+       ]
+      }
+     },
+     {
+      "id": "meeting-customer-needs:sub:competition",
+      "title": "How Competition Affects the Market",
+      "keyIdea": "The level of competition in a market decides how much freedom a firm has over its price, and therefore how much it must compete on everything else.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Competition** exists where two or more firms sell to the same customers. How intense it is depends on three things: **how many** rivals there are, **how similar** their products are, and **how easily** a new firm can enter."
+       },
+       {
+        "type": "paragraph",
+        "text": "Where competition is intense, a firm has little room on price: raise it and customers move to a near-identical substitute. So it competes on the things price cannot be competed on — **quality**, **service**, **design**, **brand** and **speed of delivery**. Where competition is weak, the firm has room on price, and less pressure to improve anything."
+       },
+       {
+        "type": "paragraph",
+        "text": "What keeps competition weak is how hard it is to **enter**: the capital needed to start, an established brand, an exclusive supply agreement, a patent, a licence. Today's level of competition is temporary; tomorrow's is decided by how easily the next firm can arrive. You will meet these called **barriers to entry**, the term the Economics papers use."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**For customers:** more choice, lower prices, faster improvement.",
+         "**For the firm:** thinner margins, higher marketing costs, constant pressure to differentiate.",
+         "**For the market:** weak firms exit, and the survivors are more efficient than they were."
+        ]
+       }
+      ],
+      "realExample": {
+       "emoji": "✈️",
+       "text": "When low-fare airlines entered European and South-East Asian routes, established carriers did not only cut fares; they unbundled meals and baggage so that the headline price could fall while the total charge did not. Competition changed the product, not just the price."
+      },
+      "misconception": "Students write that competition is simply bad for a business and should be avoided. It compresses margins and it also forces the efficiency and the differentiation that make a firm hard to displace later. Write instead: competition lowers short-term margins and strengthens the firms that respond to it.",
+      "examMatters": "Answer for both sides when a question asks about the effect of competition. A response covering only the firm, or only the customer, has answered half of it.",
+      "recall": {
+       "id": "meeting-customer-needs:sub:competition:recall",
+       "type": "fillin",
+       "prompt": "Complete the description of how competition shapes a market:",
+       "template": [
+        "Competition is intense when rivals are many and their products are ___",
+        "→ A firm then has little freedom over ___, because customers can switch easily",
+        "→ So it competes on quality, service and ___ instead",
+        "→ Competition stays weak only where a new firm finds it hard to ___"
+       ],
+       "answers": [
+        "similar",
+        "price",
+        "brand",
+        "enter"
+       ],
+       "hints": [
+        "close enough that a customer treats one as a substitute for another",
+        "the variable a firm can no longer raise without losing customers",
+        "the reputation a name carries, from the previous chapter",
+        "what a firm must do before it can sell in a market at all"
+       ],
+       "distractors": [
+        "cheap",
+        "expand"
+       ]
+      }
+     },
+     {
+      "id": "meeting-customer-needs:sub:risk-vs-uncertainty",
+      "title": "Risk and Uncertainty",
+      "keyIdea": "Risk is not knowing which outcome will happen out of a set you can list and put odds on; uncertainty is not being able to list the outcomes at all.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Risk** describes a situation where the possible outcomes are known and a probability can be attached to each. A firm launching a product knows it may succeed or fail, and market research, past launches and sales data let it estimate the chances. Because risk can be quantified, it can be **planned for**: insured against, hedged, or priced into the decision."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Uncertainty** describes a situation where the outcomes themselves cannot be listed, so no probability can be attached. A new technology that makes the product obsolete, a sudden change in the law, a disease outbreak: these are not unlikely events with known odds, they are events nobody had on the list."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Risk:** outcomes known, odds estimable, plans possible, insurance available.",
+         "**Uncertainty:** outcomes unknown, odds impossible, only flexibility helps.",
+         "**The practical difference:** you manage risk with a number and uncertainty with slack — cash reserves, a wider product range, a shorter supply chain."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Entrepreneurs accept both in exchange for **profit**, the reward for bearing them. An answer that calls everything a risk has claimed everything can be planned for, which is the assumption that makes a plan fragile."
+       }
+      ],
+      "realExample": {
+       "emoji": "☕",
+       "text": "A café chain can forecast the ordinary variation in daily footfall from its own sales history and staff to it. What it could not forecast was city centres emptying for months at a time: the same business faced both a quantifiable risk and an unlistable uncertainty."
+      },
+      "misconception": "Students use risk and uncertainty as synonyms, or say uncertainty just means more risk. The difference is whether a probability exists at all. Write instead: risk can be estimated and insured; uncertainty cannot be estimated, so it is met with flexibility rather than a plan.",
+      "examMatters": "When a case study lists things that might go wrong, sort them before writing. Say which are quantifiable risks and which are genuine uncertainties, and why, rather than treating the whole list as one category.",
+      "recall": {
+       "id": "meeting-customer-needs:sub:risk-vs-uncertainty:recall",
+       "type": "fillin",
+       "prompt": "Complete the two definitions. The terms are not interchangeable:",
+       "template": [
+        "Risk: the possible outcomes are known and a ___ can be attached to each",
+        "→ So the firm can plan for it, price it, or ___ against it",
+        "→ Uncertainty: the outcomes cannot be ___ at all, so no odds exist",
+        "→ So the only defence is ___ — reserves, alternatives, a shorter supply chain"
+       ],
+       "answers": [
+        "probability",
+        "insure",
+        "listed",
+        "flexibility"
+       ],
+       "hints": [
+        "the number between 0 and 1 that says how likely an outcome is",
+        "what a firm pays a premium to do with a quantifiable danger",
+        "what you cannot do to outcomes nobody has thought of",
+        "what a firm keeps when it cannot plan for something specific"
+       ],
+       "distractors": [
+        "forecast",
+        "certainty"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "A dynamic market changes rapidly and continuously — in any direction, not only upward.",
+     "Online retailing lowers entry costs, widens reach, exposes prices and generates data.",
+     "Competition decides a firm's freedom over price; how hard entry is decides how long it lasts.",
+     "Risk has outcomes you can list and put odds on. Uncertainty does not, so it needs slack."
+    ],
+    "quizIndices": [
+     9,
+     10,
+     11,
+     12,
+     13,
+     14
+    ],
+    "practiceIndices": [
+     3
+    ]
+   },
+   {
+    "id": "meeting-customer-needs:block:37823308",
+    "title": "What Market Research Is For",
+    "sections": [
+     {
+      "id": "meeting-customer-needs:sub:primary-and-secondary-data",
+      "title": "Primary and Secondary Data",
+      "keyIdea": "The split is about who collected the data and why: primary data is gathered by this firm for this question, secondary data was gathered by somebody else for a different one.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Primary data** is collected first-hand, by or for the business, to answer the question it actually has. **Secondary data** already exists: somebody else collected it, for their own purpose, and the business is reusing it. The methods themselves come later — the distinction is about origin, not about how the data was gathered."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Primary — fits exactly.** The firm writes the questions and owns the answers, so no rival holds them.",
+         "**Primary — costs more.** It must be designed, run and analysed before any decision can be made.",
+         "**Secondary — fast and cheap.** Much of it is free and available today.",
+         "**Secondary — not collected for you.** It may cover the wrong group, period or question, and rivals can read it too."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "In practice a business uses both, in that order: secondary data first, to size the market for almost nothing, then primary research on the question it cannot answer — whether these customers will buy this product at this price."
+       },
+       {
+        "type": "paragraph",
+        "text": "That sequence is also the answer to \"which is better\". Neither is, in general: the judgement is about which question the business is actually facing."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧾",
+       "text": "A firm entering a new country usually starts with published trade and population data, which costs nothing, and only commissions its own survey once it has narrowed the decision to one or two segments worth the expense."
+      },
+      "misconception": "Students say primary research is always better because it is original. Fit and cost are the test, not originality. Write instead: primary data answers the firm's exact question but costs more, so most firms use secondary data first.",
+      "examMatters": "A question naming a small firm with little money is asking you to weigh cost against fit. Say which data the decision needs before naming a method: an expensive method answering the wrong question is not a recommendation.",
+      "recall": {
+       "id": "meeting-customer-needs:sub:primary-and-secondary-data:recall",
+       "type": "classify",
+       "prompt": "Sort each source into primary or secondary data, by who collected it and why:",
+       "groups": [
+        {
+         "name": "Primary data",
+         "items": [
+          "A questionnaire the firm ran in its own stores",
+          "A focus group the firm commissioned",
+          "Sales recorded at the firm's own tills"
+         ],
+         "why": "Collected by or for this business to answer its own question, so it fits exactly and no rival holds it"
+        },
+        {
+         "name": "Secondary data",
+         "items": [
+          "A published industry report",
+          "National population statistics",
+          "A rival's annual accounts"
+         ],
+         "why": "Collected by somebody else for their own purpose, so it is cheap and immediate but may not fit the question being asked"
+        }
+       ]
+      }
+     },
+     {
+      "id": "meeting-customer-needs:sub:qualitative-vs-quantitative",
+      "title": "Quantitative and Qualitative Data",
+      "keyIdea": "Quantitative data tells a firm how many and how much; qualitative data tells it why. The two answer different questions, and either alone leaves a decision half-made.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Quantitative data** is numerical: it can be counted, averaged, compared and put on a chart. Sales figures, market share, the percentage of shoppers who say they would buy — all quantitative. Its strength is that it **measures**, so a firm can size an opportunity and track whether a decision worked."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Qualitative data** is non-numerical: opinions, motivations, reactions, the words customers use about a product. Its strength is that it **explains**, so a firm learns why a number is what it is."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Quantitative asks:** how many, how much, how often, what share.",
+         "**Qualitative asks:** why, what stopped you, what would change your mind.",
+         "**Quantitative risk:** a number with no explanation invites the wrong conclusion.",
+         "**Qualitative risk:** a handful of strong opinions is not a market, and cannot be generalised."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The two cut across primary and secondary. A firm's own till data is primary and quantitative; its own focus group is primary and qualitative; a published market report is secondary and quantitative; a magazine review is secondary and qualitative. Exam items often test exactly that pairing, so read both dimensions of the stem before answering."
+       }
+      ],
+      "realExample": {
+       "emoji": "🎧",
+       "text": "A streaming service can see exactly which songs listeners skip, which is quantitative and precise. It still runs listening sessions to learn why a track gets skipped, because the skip count cannot distinguish boredom from a bad recommendation."
+      },
+      "misconception": "Students say qualitative data is less useful because it cannot be graphed. What cannot be graphed can still explain, and explanation is what turns a number into a decision. Write instead: quantitative data measures the opportunity, qualitative data explains it, and a firm needs both.",
+      "examMatters": "A stem that gives a percentage or a count is describing quantitative data; a stem about attitudes, opinions or reasons is describing qualitative data. Check the origin separately: who collected it decides primary or secondary, independently of whether it is numbers or words.",
+      "recall": {
+       "id": "meeting-customer-needs:sub:qualitative-vs-quantitative:recall",
+       "type": "match",
+       "prompt": "Match each source to the cell of the grid it belongs in — who collected it, and what kind of data it is:",
+       "pairs": [
+        {
+         "left": "Sales recorded at the firm's own tills",
+         "right": "Primary and quantitative",
+         "why": "The firm collected it itself, and a count of sales is a number"
+        },
+        {
+         "left": "A focus group the firm commissioned",
+         "right": "Primary and qualitative",
+         "why": "Commissioned by the firm, and it produces reasons in the customers' own words"
+        },
+        {
+         "left": "A published report on market size",
+         "right": "Secondary and quantitative",
+         "why": "Somebody else measured it for their own purpose, and market size is a figure"
+        },
+        {
+         "left": "A review of the drink in a magazine",
+         "right": "Secondary and qualitative",
+         "why": "Somebody else wrote it for their own purpose, and an opinion is not a number"
+        }
+       ]
+      }
+     },
+     {
+      "id": "meeting-customer-needs:sub:identifying-anticipating-customer-needs",
+      "title": "Identifying and Anticipating Customer Needs",
+      "keyIdea": "Research identifies and anticipates customer needs and wants, and gains insight into consumer behaviour. Only the first of those is about today.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The specification lists what research is *for*, and the three uses are genuinely different jobs. The first is to **identify and anticipate customer needs and wants**: to find out what customers require now, and what they are likely to require next."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Identifying** is present tense — asking, observing and measuring what is wanted today. **Anticipating** is forward-looking: reading the direction of a trend, so the product is ready when the demand arrives rather than a year afterwards. A firm that only identifies is always launching into a market that has already moved."
+       },
+       {
+        "type": "paragraph",
+        "text": "The third use is to **gain insight into consumer behaviour** — understanding not what customers buy but how they decide: what they compare, what they will not compromise on, what makes them switch. This is where qualitative work earns its cost, and it is what turns a list of preferences into a reason."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Identify** — what do customers want now? Surveys, till data, complaints.",
+         "**Anticipate** — where is that going? Trends, growth figures, what is happening in a comparable market elsewhere.",
+         "**Insight into behaviour** — how do they choose? Focus groups, interviews, watching people shop."
+        ]
+       }
+      ],
+      "realExample": {
+       "emoji": "🛒",
+       "text": "Supermarkets reposition stock after watching how shoppers actually move through a store, rather than asking them what route they take. What people do and what they report doing are different, which is why observation exists as a method."
+      },
+      "misconception": "Students treat \"needs\" and \"wants\" as one word. A need is something the customer must have; a want is a preference about how it is met. Write instead: research identifies the need the product serves and the want that decides which version of it the customer buys.",
+      "examMatters": "A question asking how research helps a specific business is asking which of the three uses matters here. A start-up usually needs identification; an established firm in a dynamic market usually needs anticipation. Name the use, then say why this firm needs that one.",
+      "recall": {
+       "id": "meeting-customer-needs:sub:identifying-anticipating-customer-needs:recall",
+       "type": "fillin",
+       "prompt": "Complete the three uses the specification gives for market research data:",
+       "template": [
+        "To ___ and anticipate customer needs and wants",
+        "→ To ___ likely demand before committing to production",
+        "→ To gain ___ into consumer behaviour: how customers actually decide"
+       ],
+       "answers": [
+        "identify",
+        "quantify",
+        "insight"
+       ],
+       "hints": [
+        "to find out what is wanted now, before predicting what will be wanted next",
+        "to put a number on it rather than a judgement",
+        "understanding of the reasons behind a choice"
+       ],
+       "distractors": [
+        "forecast",
+        "segment"
+       ]
+      }
+     },
+     {
+      "id": "meeting-customer-needs:sub:quantifying-likely-demand",
+      "title": "Quantifying Likely Demand",
+      "keyIdea": "Quantifying likely demand turns an opinion about a market into a number the business can plan production and cash flow around — and into a figure that can be shown to be wrong.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The second use of research is to **quantify likely demand**: to estimate how many units will sell, at what price, in a given period. The firm needs the number to decide how much to make, how much stock to hold, and whether the revenue covers the cost."
+       },
+       {
+        "type": "paragraph",
+        "text": "The method is a proportion scaled up to a population. Worked for Zuri Juice:"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         {
+          "title": "Ask a sample at a stated price",
+          "subtitle": "600 shoppers, $1.20 a bottle: 18% would buy weekly"
+         },
+         {
+          "title": "Apply the percentage to the market",
+          "subtitle": "500,000 × 0.18 = 90,000 weekly buyers"
+         },
+         {
+          "title": "Multiply the buyers by the price",
+          "subtitle": "90,000 × $1.20 = $108,000 a week"
+         },
+         {
+          "title": "Discount for stated intention",
+          "subtitle": "what people say they will buy exceeds what they buy"
+         }
+        ],
+        "result": "An upper estimate of demand, to plan production and cash flow against",
+        "resultType": "neutral"
+       },
+       {
+        "type": "paragraph",
+        "text": "Then treat the answer as a **ceiling, not a forecast**. People overstate what they will buy when nothing is at stake; a sample of 600 carries a margin of error; the 18% was measured at one price only; and the market moves before production starts. It is the best estimate available, and still an estimate."
+       }
+      ],
+      "realExample": {
+       "emoji": "📉",
+       "text": "New food and drink products fail at a high rate despite testing well before launch. The gap between what people say in a survey and what they put in a basket is the commonest reason a demand figure turns out too high."
+      },
+      "misconception": "Students treat a survey percentage as the sales forecast. Intention is not purchase. Write instead: scaling a survey result gives an upper estimate of demand, which should be discounted for the gap between what people say and what they do.",
+      "examMatters": "Show the scaling in two steps — proportion to population, then units by price — with the unit on each. Then add one line on why the figure over-estimates: Discuss and Assess both require an assessment of competing factors (WBS11 Appendix 6), and that line is the assessment.",
+      "recall": {
+       "id": "meeting-customer-needs:sub:quantifying-likely-demand:recall",
+       "type": "reorder",
+       "prompt": "Put these steps in the order you would carry them out to quantify likely demand from a survey:",
+       "correctOrder": [
+        "Ask a sample whether they would buy, at a stated price",
+        "Work out the percentage of the sample who said yes",
+        "Apply that percentage to the size of the target market",
+        "Multiply the buyers by the price to get likely revenue",
+        "Discount the figure for the gap between intention and purchase"
+       ],
+       "why": [
+        "The price has to be stated, because willingness to buy is meaningless without one",
+        "The raw count is useless until it is expressed as a proportion of those asked",
+        "Scaling the proportion to the population is what turns a sample into a market estimate",
+        "Units become money only when multiplied by the price they were tested at",
+        "The discount comes last because it is applied to the finished estimate, and without it the figure is a ceiling presented as a forecast"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Primary or secondary is about who collected it; quantitative or qualitative is about what kind.",
+     "Research identifies needs, quantifies likely demand and gives insight into behaviour.",
+     "Scaling 18% of 600 shoppers gives 90,000 weekly buyers — a ceiling, not a forecast."
+    ],
+    "diagramId": "meeting-customer-needs:diagram:09593a9b",
+    "quizIndices": [
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "practiceIndices": [
+     4,
+     6
+    ]
+   },
+   {
+    "id": "meeting-customer-needs:block:18faaa0b",
+    "title": "Research Methods and Sampling",
+    "sections": [
+     {
+      "id": "meeting-customer-needs:sub:primary-research",
+      "title": "Methods of Primary Research",
+      "keyIdea": "Surveys count, focus groups explain, interviews go deep, and a product trial replaces all three with a record of what people actually did.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The specification names four methods of primary research, each answering a different kind of question."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Surveys and questionnaires** — fixed questions put to many people. Cheap per response and the only method producing a percentage worth scaling; the answers are only as good as the questions.",
+         "**Focus groups and consumer panels** — a small group discussing a product with a moderator; a panel is the same group revisited, so it shows how opinion moves. Rich, but a dominant voice can pull the group.",
+         "**Face-to-face and telephone interviews** — one respondent at a time, with follow-up questions: most detail per person, and most cost per person.",
+         "**Product trials and test marketing** — selling in a limited area before full launch and measuring real sales."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "A **product trial** (or **test marketing**) is the only method recording behaviour rather than intention. Customers pay real money, so the firm sees the repeat-purchase rate rather than the stated one, and can change price or packaging before a national launch. It is slow, and it warns rivals."
+       },
+       {
+        "type": "paragraph",
+        "text": "Choosing is a question of budget, time and what is being decided: a price needs a number, a reaction needs words, a launch decision needs a trial."
+       }
+      ],
+      "realExample": {
+       "emoji": "🍔",
+       "text": "Fast-food chains sell a new item in selected cities before deciding on a wider launch, and decide on measured repeat purchases there rather than on what testers said about the recipe."
+      },
+      "misconception": "Students describe a focus group as \"a big survey\". It is the opposite — a handful of people talking — which is why it explains well and measures badly. Write instead: a focus group gives depth from a few people, a survey gives breadth from many.",
+      "examMatters": "A recommendation names the method and the constraint it fits. \"Use a survey\" is a choice; \"use a survey, because the decision needs a percentage that can be scaled and the budget will not cover interviews\" is a recommendation.",
+      "recall": {
+       "id": "meeting-customer-needs:sub:primary-research:recall",
+       "type": "reorder",
+       "prompt": "Put the stages of a product trial in the order a business carries them out, from first to last:",
+       "correctOrder": [
+        "Choose a limited area or group to sell in",
+        "Put the product on sale there at a real price",
+        "Measure actual sales and repeat purchases",
+        "Adjust price, packaging or recipe, or abandon the launch"
+       ],
+       "why": [
+        "The area has to be chosen first, because it decides what the result will represent",
+        "Selling at a real price is what makes the result behaviour rather than intention",
+        "Repeat purchase is the measure that matters: trying once is curiosity, buying twice is demand",
+        "Acting on the measurement is the point of the trial, and it is what a full launch cannot undo"
+       ]
+      }
+     },
+     {
+      "id": "meeting-customer-needs:sub:secondary-research",
+      "title": "Methods of Secondary Research",
+      "keyIdea": "The four secondary sources trade currency, cost and credibility differently, so the question about each is the same: who collected this, when, and why?",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The specification names four sources of secondary data. All are cheap and immediate; they differ in how far they can be trusted and how current they are."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Websites and social media** — a rival's site shows its range and prices; a firm's own social analytics show who follows it. Free and current; a rival's site is promotional, and a following is not the market.",
+         "**Newspapers, magazines, television and radio** — reporting on an industry, new entrants and changes in the law. Broad and current, written to interest a general audience rather than to measure.",
+         "**Reports** — industry and government reports, trade-association figures, company accounts. The most rigorous source and usually the only one giving market size and share; all describe the past.",
+         "**Databases** — structured records that can be queried: national statistics, trade data, the firm's own transaction records. Only as good as what was entered."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Two questions settle the value of any of them. **Who collected it, and why?** A source with an interest in the answer needs corroborating. **When?** In a dynamic market a two-year-old figure describes a market that no longer exists."
+       },
+       {
+        "type": "paragraph",
+        "text": "A firm's own transaction records are **primary** data even though they sit in a database: the database is where data lives, and primary or secondary is about who put it there."
+       }
+      ],
+      "realExample": {
+       "emoji": "🗄️",
+       "text": "Trade statistics published by national statistics offices are free and cover whole economies, and firms use them to size an export market before spending anything on research of their own."
+      },
+      "misconception": "Students say secondary data is unreliable because somebody else collected it. Some of it is more reliable than anything a small firm could collect alone. Write instead: its reliability depends on who collected it and when.",
+      "examMatters": "When a stem names a source, say what it is good for and what it cannot show, in that order. A rival's website gives prices and range, not sales volumes; a report gives market size, not this week's reaction to a product.",
+      "recall": {
+       "id": "meeting-customer-needs:sub:secondary-research:recall",
+       "type": "fillin",
+       "prompt": "Complete the description of the four secondary sources:",
+       "template": [
+        "A rival's ___ shows its range and prices, but is written to sell",
+        "→ Newspapers, magazines, TV and ___ cover changes in an industry for a general audience",
+        "→ Industry and government ___ are the usual source of market size and share figures",
+        "→ A ___ holds structured records that can be queried, and is only as good as what was entered"
+       ],
+       "answers": [
+        "website",
+        "radio",
+        "reports",
+        "database"
+       ],
+       "hints": [
+        "the page a company publishes about itself",
+        "the fourth broadcast medium named in the specification",
+        "the published documents that carry market size and share",
+        "where structured records are stored so they can be searched"
+       ],
+       "distractors": [
+        "survey",
+        "interview"
+       ]
+      }
+     },
+     {
+      "id": "meeting-customer-needs:sub:types-of-sampling",
+      "title": "Sampling Methods",
+      "keyIdea": "A sample stands in for a population, so how it is chosen decides whether the result describes the market or only the people who were asked.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Sampling** is selecting a small group from a **population** — everyone the firm is interested in — because asking all of them is impossible. The specification names three methods, and the difference between two of them is easy to miss."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Random sampling** — every member of the population has an equal chance of selection. Removes the researcher's bias, and needs a full list of the population, which few firms have.",
+         "**Stratified sampling** — the population is divided into subgroups, then people are chosen **at random within each subgroup**, in proportion to its size. Most representative, most work.",
+         "**Quota sampling** — subgroups again, with a target number for each, filled with **whoever is available**. Fast and cheap, and the interviewer's choices shape who is in it."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Stratified and quota both divide the population into subgroups and both aim at proportionate numbers. The discriminator is what happens **inside** each subgroup: stratified selects at random, quota takes whoever is to hand. That one difference is what makes the first representative and the second quick."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Sample size and bias** decide what the result is worth. A larger sample narrows the margin of error and costs more. Bias is separate: a sample drawn from one area or age group misrepresents the population however large it is."
+       }
+      ],
+      "realExample": {
+       "emoji": "📋",
+       "text": "Opinion polls that recruit through one channel only — a phone list, a single social platform, shoppers in one district — have a long record of missing the result however many people they reach."
+      },
+      "misconception": "Students assume a bigger sample is automatically better. Size narrows random error and does nothing about bias. Write instead: a biased sample of 10,000 is less useful than an unbiased sample of 500, because size cannot correct a wrong selection.",
+      "examMatters": "Link the method to the constraint in the case. A firm with a customer database can sample randomly; a firm stopping people in a street is running a quota sample whatever it calls it.",
+      "recall": {
+       "id": "meeting-customer-needs:sub:types-of-sampling:recall",
+       "type": "match",
+       "prompt": "Match each sampling method to how it actually selects the people who are asked:",
+       "pairs": [
+        {
+         "left": "Random sampling",
+         "right": "Every member of the population has an equal chance",
+         "why": "Selection is by chance from the whole list, which is why it needs a complete list to work at all"
+        },
+        {
+         "left": "Stratified sampling",
+         "right": "Subgroups first, then chosen at random within each",
+         "why": "The randomness inside each subgroup is what makes it representative rather than merely proportionate"
+        },
+        {
+         "left": "Quota sampling",
+         "right": "Subgroups first, then whoever is available fills the target",
+         "why": "The proportions are controlled and the selection inside them is not, so the interviewer's choices shape the result"
+        }
+       ],
+       "distractors": [
+        "Every tenth customer entering the store is asked"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Surveys count, focus groups explain, and a product trial measures what customers did.",
+     "Secondary sources are cheap and immediate; ask who collected each one, and when.",
+     "Stratified and quota sampling both use subgroups; only stratified selects at random inside them."
+    ],
+    "diagramId": "meeting-customer-needs:diagram:79945957",
+    "quizIndices": [
+     24,
+     21,
+     22,
+     23,
+     25,
+     26
+    ],
+    "practiceIndices": [
+     5
+    ]
+   },
+   {
+    "id": "meeting-customer-needs:block:c403b127",
+    "title": "Orientation and Market Mapping",
+    "sections": [
+     {
+      "id": "meeting-customer-needs:sub:product-vs-market-orientation",
+      "title": "Product and Market Orientation",
+      "keyIdea": "Orientation is about where a business starts: a product-oriented firm starts from what it can make, a market-oriented firm starts from what customers have told it they want.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "A **product-oriented** business begins with its own capability — an engineering strength, a recipe, a design — makes the best version it can, and then finds customers for it. A **market-oriented** business begins with research, establishes what customers want, and designs to that."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Product orientation** starts with capability: build what we are best at, then find the buyers.",
+         "**Market orientation** starts with evidence: research what is wanted, then build that."
+        ]
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Product orientation suits** markets driven by technology, where customers cannot describe a product that does not exist yet. The risk is a superb product nobody wants.",
+         "**Market orientation suits** consumer markets that change quickly, where the customer knows what is missing. The risk is incremental improvement only, because research reports on what exists."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Most firms are somewhere between the two, and the judgement in an answer is about **degree** and **context**, not about which is correct. A firm with deep technical capability in a fast-moving consumer market needs both: the research to know which problem to solve, and the capability to solve it in a way rivals cannot copy."
+       }
+      ],
+      "realExample": {
+       "emoji": "🔧",
+       "text": "Firms that build industrial machinery are usually product-oriented — the buyer cannot specify a process that has not been invented. Firms that sell packaged food are usually market-oriented, because the customer knows exactly what they want and will say so."
+      },
+      "misconception": "Students write that product orientation is outdated and market orientation always better. Breakthrough products rarely come out of asking customers what they want, because customers describe what they already know. Write instead: the right orientation depends on the market — technology-led markets reward product orientation, fast-changing consumer markets reward market orientation.",
+      "examMatters": "When a case describes a firm that invents, do not label it \"wrong for not researching\". Say what its orientation costs it and what it buys, and make the judgement conditional on the market it sells into.",
+      "recall": {
+       "id": "meeting-customer-needs:sub:product-vs-market-orientation:recall",
+       "type": "classify",
+       "prompt": "Sort each decision by the orientation it shows:",
+       "groups": [
+        {
+         "name": "Product-oriented",
+         "items": [
+          "Launching a drink because the lab perfected the formula",
+          "Spending on research and development before any survey",
+          "Keeping a recipe unchanged because it is the best made"
+         ],
+         "why": "The starting point is the firm's own capability, and the customer is sought afterwards"
+        },
+        {
+         "name": "Market-oriented",
+         "items": [
+          "Adding a low-sugar version after customer requests",
+          "Changing the bottle size shoppers said was awkward",
+          "Choosing a flavour from survey results"
+         ],
+         "why": "The starting point is evidence about what customers want, and the product is designed to fit it"
+        }
+       ]
+      }
+     },
+     {
+      "id": "meeting-customer-needs:sub:market-mapping",
+      "title": "Market Mapping",
+      "keyIdea": "A market map plots rivals on two variables customers choose by. A gap is a position nobody occupies: a question about demand, not yet an answer.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Market mapping** (also called perceptual mapping) plots the products in a market on two axes, each a variable customers choose by: price against quality, traditional against modern. Each rival becomes a point, and the shape of the market becomes visible."
+       },
+       {
+        "type": "paragraph",
+        "text": "The map does two jobs: it shows **where a firm sits relative to its rivals**, and it shows **gaps** — positions no product occupies."
+       },
+       {
+        "type": "subheading",
+        "text": "Worked example: Zuri Juice"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "Five chilled-juice brands are plotted on price against juice content: Tamu, Mkali, Zuri, Safi, Halo.",
+         "Tamu and Mkali sit low on both; Halo is high on both; Safi charges $1.60 for 40% juice; Zuri sits in the middle at $1.20 for 45%.",
+         "The gap is **high juice content at a middle price** — around 80% juice at about $1.20. Nobody is there."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Now the limits, because this is where answers are won and lost. A gap means **no competitor**, not **customers waiting**: it may be empty because nobody wants it, or because it cannot be made at that price. Testing it is what quantifying likely demand is for. A map also shows two variables at a time, and plots **perceptions**, which change."
+       }
+      ],
+      "realExample": {
+       "emoji": "🚗",
+       "text": "Carmakers chart their own ranges against rivals precisely so that two of their own models are not sold into the same square. A map is as useful for avoiding an overlap inside a range as for finding a space outside it."
+      },
+      "misconception": "Students treat a gap as a guaranteed opportunity. It may be empty because nobody wants it, or because it cannot be made at that price. Write instead: a gap shows where no competitor is; only research into demand shows whether a business should be there.",
+      "examMatters": "A Construct (4 marks, WBS11 Appendix 6) asks for an accurately labelled diagram: both axes with the variable and its direction, every competitor plotted and named, the gap marked. Commentary written beside the diagram is not part of what Construct asks for.",
+      "recall": {
+       "id": "meeting-customer-needs:sub:market-mapping:recall",
+       "type": "reorder",
+       "prompt": "Put these steps in the order a business carries them out when it uses a market map to find an opportunity:",
+       "correctOrder": [
+        "Choose two variables customers actually use to choose",
+        "Plot every competitor's position on the two axes",
+        "Identify a position no competitor occupies",
+        "Research whether there is demand at that position"
+       ],
+       "why": [
+        "The axes decide what the map can show; the wrong two variables make every later step meaningless",
+        "The rivals have to be on the map before an empty space can be seen",
+        "A gap is what the completed map reveals, and it is a question rather than a conclusion",
+        "Demand is what turns an empty position into an opportunity, and only research can establish it"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Product orientation starts from what the firm can make, market orientation from research.",
+     "A market map plots rivals on two variables and reveals the positions nobody occupies.",
+     "A gap is a question about demand, not an answer: research is what turns it into an opportunity."
+    ],
+    "diagramId": "meeting-customer-needs:diagram:bb700edd",
+    "quizIndices": [
+     29,
+     27,
+     28,
+     30
+    ],
+    "practiceIndices": [
+     7,
+     8
+    ]
+   },
+   {
+    "id": "meeting-customer-needs:block:16bf08b5",
+    "title": "Segmentation, Advantage and Value",
+    "sections": [
+     {
+      "id": "meeting-customer-needs:sub:market-segmentation",
+      "title": "Market Segmentation",
+      "keyIdea": "Segmentation divides a market into groups whose members want the same thing, so that a product and a message can be aimed at one group instead of averaged across all of them.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Market segmentation** is dividing a broad market into smaller groups of customers who share needs, characteristics or behaviour. The purpose is aim: a product designed for the average of a whole market often suits nobody in it particularly well."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Demographic** — age, gender, income, occupation, family size, religion.",
+         "**Geographic** — country, region, city or rural, climate.",
+         "**Psychographic** — lifestyle, values, attitudes, personality.",
+         "**Behavioural** — how often they buy, what occasion they buy for, how loyal they are, which benefit they are buying."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Segmentation earns its cost when the segments are **measurable** (the firm can size them), **reachable** (there is a way to advertise to them), **different** from each other in what they want, and **large enough** to be served profitably. A segment failing any of those four is a description rather than a market."
+       },
+       {
+        "type": "paragraph",
+        "text": "It has limits. Over-segmenting produces groups too small to serve at a profit and a product range too complex to run. And segmentation is only as good as the research behind it: badly defined segments produce precisely aimed products aimed at the wrong people."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏨",
+       "text": "Large hotel groups run separate brands for business travellers, families and budget-conscious younger guests rather than one chain for everybody. The buildings, the prices and the advertising differ because the three groups want different things from the same night's sleep."
+      },
+      "misconception": "Students use segmentation and targeting as the same word. Segmentation divides the market into groups; targeting is the later decision about which of those groups to serve. Write instead: segmentation identifies the groups, targeting chooses between them, and positioning decides how the product is presented to the one chosen.",
+      "examMatters": "Pick one base and justify it against the case, rather than listing all four. The mark is for the reasoning that connects the base to this firm's product and this firm's customers.",
+      "recall": {
+       "id": "meeting-customer-needs:sub:market-segmentation:recall",
+       "type": "match",
+       "prompt": "Match each base for segmentation to the variable it divides customers by:",
+       "pairs": [
+        {
+         "left": "Demographic",
+         "right": "Age, income and family size",
+         "why": "These are measurable facts about who the customer is, which is what demographic data records"
+        },
+        {
+         "left": "Geographic",
+         "right": "Region, climate and city or rural",
+         "why": "Where the customer lives changes both what they need and how they can be reached"
+        },
+        {
+         "left": "Psychographic",
+         "right": "Lifestyle, values and attitudes",
+         "why": "These describe how a customer sees the world, which two people of the same age and income may not share"
+        },
+        {
+         "left": "Behavioural",
+         "right": "Purchase frequency, occasion and loyalty",
+         "why": "These describe what the customer actually does, observed rather than asked"
+        }
+       ],
+       "distractors": [
+        "Cost of raw materials per unit"
+       ]
+      }
+     },
+     {
+      "id": "meeting-customer-needs:sub:competitive-advantage",
+      "title": "Competitive Advantage",
+      "keyIdea": "A competitive advantage is a reason customers choose this firm over its rivals, and it is worth having only for as long as rivals cannot copy it.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Competitive advantage** is whatever makes a customer choose one firm over another. It comes from one of two places: **lower costs**, which allow a lower price at the same margin, or **differentiation**, which allows a higher price because the product offers something rivals do not."
+       },
+       {
+        "type": "paragraph",
+        "text": "The word that carries the marks is **sustainable**. An advantage a rival can copy next month is a head start, not an advantage. What makes one durable is that copying it is slow, expensive or impossible."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Hard to copy:** a brand built over decades, a patent, an exclusive supply agreement, a distribution network, scale a smaller rival cannot reach.",
+         "**Easy to copy:** a price cut, a packaging change, a promotion, a feature any competent rival can add to the next production run."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Advantages also decay. Markets change, patents expire, rivals invest, and the thing customers valued stops being scarce. A firm holding one has to keep spending on it — which is why competitive advantage appears in evaluation questions as a judgement about how long, rather than whether."
+       }
+      ],
+      "realExample": {
+       "emoji": "📦",
+       "text": "The largest online retailers combine scale, a delivery network built over many years and the convenience of stored payment details. Any one of the three could be matched by a determined rival; all three at once is what has proved hard."
+      },
+      "misconception": "Students say being cheapest is a competitive advantage. It is one only if the firm's costs are genuinely lower; otherwise it is the same product sold at a worse margin, which a rival can end at will. Write instead: cost leadership is an advantage only when it rests on genuinely lower costs, not on accepting a smaller profit.",
+      "examMatters": "Name the source of the advantage and say why a rival cannot copy it quickly. \"Good customer service\" is an assertion; \"service from staff trained over two years, which a new entrant cannot assemble quickly\" is the analysis.",
+      "recall": {
+       "id": "meeting-customer-needs:sub:competitive-advantage:recall",
+       "type": "classify",
+       "prompt": "Sort each advantage by how easily a rival could copy it:",
+       "groups": [
+        {
+         "name": "Hard to copy",
+         "items": [
+          "A brand customers have trusted for thirty years",
+          "A patent on the bottling process",
+          "An exclusive contract with the only local grower"
+         ],
+         "why": "Copying is slow, expensive or legally blocked, so the advantage survives a rival deciding to match it"
+        },
+        {
+         "name": "Easy to copy",
+         "items": [
+          "A 10% price cut",
+          "A redesigned label",
+          "A free gift with every purchase"
+         ],
+         "why": "A rival can match it within one production run, so it wins customers briefly and then stops working"
+        }
+       ]
+      }
+     },
+     {
+      "id": "meeting-customer-needs:sub:product-differentiation",
+      "title": "The Purpose of Product Differentiation",
+      "keyIdea": "Differentiation exists to break the comparison: a product customers cannot line up against a rival on price alone is a product whose price the firm partly controls.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Product differentiation** is making a product distinguishable from its rivals — in design, features, quality, service, packaging or brand. The specification asks for its **purpose**, and the purpose is precise: to make the product **less substitutable**."
+       },
+       {
+        "type": "paragraph",
+        "text": "Where two products are identical, the only question a customer asks is which is cheaper, and the firms are forced into a price war neither wins. Differentiation replaces that question with a different one — which of these do I prefer — and a customer who prefers one will pay more for it."
+       },
+       {
+        "type": "flow",
+        "steps": [
+         {
+          "title": "The product is made distinguishable",
+          "subtitle": "design, feature, service or brand"
+         },
+         {
+          "title": "It stops being a straight substitute",
+          "subtitle": "the comparison is no longer price alone"
+         },
+         {
+          "title": "Demand becomes less price-sensitive",
+          "subtitle": "some customers will not switch for a small saving"
+         },
+         {
+          "title": "The firm gains room on price",
+          "subtitle": "and a defence against a rival's price cut"
+         }
+        ],
+        "result": "A margin that survives the next price war",
+        "resultType": "good"
+       },
+       {
+        "type": "paragraph",
+        "text": "Two conditions decide whether it works: customers must **see** the difference, and must **value** it enough to pay for it. Differentiation meeting neither is cost added to the product and nothing added to the price."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧴",
+       "text": "Bottled-water brands sell a product that is chemically almost identical between them. What differs is the bottle, the source story and the brand, which is enough to sustain very different prices on a shelf where the products sit side by side."
+      },
+      "misconception": "Students treat differentiation as \"being different\". Being different is easy and mostly useless; the purpose is to be different in a way customers notice and pay for. Write instead: differentiation succeeds when the difference is visible to the customer and worth money to them.",
+      "examMatters": "Connect differentiation to price. An answer that stops at \"it makes the product stand out\" has described; an answer that continues \"so demand is less price-sensitive and the firm can hold its price when a rival cuts\" has analysed, which is what an Analyse (6 marks, WBS11 Appendix 6) requires.",
+      "recall": {
+       "id": "meeting-customer-needs:sub:product-differentiation:recall",
+       "type": "fillin",
+       "prompt": "Complete the purpose of product differentiation:",
+       "template": [
+        "Differentiation makes a product less ___ for a rival's",
+        "→ Customers stop comparing on ___ alone and start comparing on preference",
+        "→ So fewer of them ___ when a rival undercuts the firm"
+       ],
+       "answers": [
+        "substitutable",
+        "price",
+        "switch"
+       ],
+       "hints": [
+        "able to be swapped for something else without the customer minding",
+        "the one variable identical products can be compared on",
+        "what a customer does when they move to a rival"
+       ],
+       "distractors": [
+        "expensive",
+        "complain"
+       ]
+      }
+     },
+     {
+      "id": "meeting-customer-needs:sub:adding-value",
+      "title": "Adding Value",
+      "keyIdea": "Value added is the difference between what a business pays for its inputs and what the customer pays for the finished product — and it is where profit comes from.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Adding value** is raising the worth of a product to the customer above the cost of the bought-in materials and components used to make it. **Value added** is that difference, and it is measured, not asserted."
+       },
+       {
+        "type": "subheading",
+        "text": "Worked example: Zuri Juice"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "Bought-in inputs per bottle — fruit, bottle, label, cap — cost $0.45.",
+         "The bottle sells for $1.20.",
+         "Value added = $1.20 − $0.45 = **$0.75** per bottle."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "That $0.75 is not profit. It has to cover wages, rent, energy, distribution and marketing first; profit is what remains of it. But no business earns a profit without adding value, which is why the concept sits under positioning rather than accounting."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Branding** — the same drink in a trusted name sells for more.",
+         "**Design and packaging** — a bottle that is easier to carry or reseal.",
+         "**Convenience** — chilled and sold where the customer already is.",
+         "**Customer service** — reliable delivery a retailer can plan around.",
+         "**Customisation** — a size or a mix the buyer specifies."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Each method costs something, so adding value pays only when the rise in what the customer will pay exceeds the cost of causing it."
+       }
+      ],
+      "realExample": {
+       "emoji": "☕",
+       "text": "A coffee shop buys beans, water and a cup for a fraction of what it charges for the drink. The difference is bought by the roasting, the service, the seating and the location — and it pays for all of them before any of it becomes profit."
+      },
+      "misconception": "Students treat adding value as raising the price. Raising the price alone adds no value and loses customers. Write instead: adding value raises what the customer is willing to pay by changing the product or the experience, and the higher price follows from that rather than causing it.",
+      "examMatters": "A Calculate (4 marks, WBS11 Appendix 6) on value added is selling price minus the cost of bought-in materials, per unit — not price minus total costs, which is profit. State the unit: $0.75 per bottle.",
+      "recall": {
+       "id": "meeting-customer-needs:sub:adding-value:recall",
+       "type": "fillin",
+       "prompt": "Complete the value-added calculation for one bottle of Zuri Juice:",
+       "template": [
+        "Value added is the selling price minus the cost of bought-in ___",
+        "→ For one bottle of Zuri Juice that is $1.20 − $0.45 = ___",
+        "→ Value added is not ___: it must first cover wages, rent, energy and marketing"
+       ],
+       "answers": [
+        "materials",
+        "$0.75",
+        "profit"
+       ],
+       "hints": [
+        "what the firm buys in from suppliers and then transforms",
+        "the difference between the two figures on that line",
+        "what is left once every other cost has been paid"
+       ],
+       "distractors": [
+        "revenue",
+        "labour"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Segmentation divides, targeting chooses a segment, positioning decides how it is presented.",
+     "A competitive advantage is worth having only for as long as rivals cannot copy it.",
+     "Differentiation makes a product less substitutable, which gives the firm room on price.",
+     "Value added is $1.20 − $0.45 = $0.75, and it pays every other cost before profit."
+    ],
+    "diagramId": "meeting-customer-needs:diagram:46092036",
+    "quizIndices": [
+     34,
+     31,
+     32,
+     33,
+     35,
+     36
+    ],
+    "practiceIndices": [
+     9,
+     10,
+     11
+    ]
+   }
+  ],
+  "notes": [
+   {
+    "title": "The Market: Mass and Niche",
+    "meta": "4 concepts + formulas",
+    "keyIdea": "Markets are described by how broadly they are served, how big they are, how much of them one firm holds, and how fast the whole thing is growing.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "def",
+        "text": "<strong>Mass market</strong> — the largest segment of a market, served by a standardised product aimed at the widest possible range of customers. Characteristics: high volume, low margin, wide distribution, heavy competition."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Niche market</strong> — a small, clearly defined segment whose particular needs the mass-market product does not meet. Characteristics: low volume, high margin, specialised product, concentrated risk."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Market size</strong> — total sales in a market over a period, by volume (units) or by value (revenue)."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Market share</strong> — the proportion of total market sales held by one firm, as a percentage."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Market growth</strong> — the percentage change in market size between two periods."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Brand</strong> — the reputation and set of associations a name carries, which is what turns repeat purchase into brand loyalty."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mech",
+        "text": "Volume lets a mass-market firm spread fixed costs over a huge output, so <strong>average cost per unit falls</strong> and it can compete on price."
+       },
+       {
+        "type": "mech",
+        "text": "Specialisation lets a niche firm charge a <strong>premium</strong>, because the customer values the fit and has few alternatives."
+       },
+       {
+        "type": "mech",
+        "text": "Brand loyalty makes demand <strong>less price-sensitive</strong>, so a price rise loses fewer customers, and makes the market <strong>harder to enter</strong> for anyone whose name means nothing yet."
+       },
+       {
+        "type": "imp",
+        "text": "A rising share of a growing market is the strongest position there is; a rising share of a shrinking market may only mean the firm is the last one left.",
+        "tag": "exam"
+       }
+      ]
+     }
+    ],
+    "formulas": [
+     {
+      "label": "MARKET SHARE",
+      "text": "Market share (%) = (Firm's sales ÷ Total market sales) × 100"
+     },
+     {
+      "label": "MARKET GROWTH",
+      "text": "Market growth (%) = ((New market size − Old market size) ÷ Old market size) × 100"
+     }
+    ],
+    "takeaway": [
+     "Mass and niche are a trade-off between volume and margin, not a ranking.",
+     "Zuri Juice: $6m of a $40m market is a 15% share, in a market that grew 25%.",
+     "A brand is an expectation kept consistently; the logo only triggers it."
+    ],
+    "examMatters": "A Calculate (4 marks, WBS11 Appendix 6) needs the formula, the substitution and the answer with a percentage sign — and then the number has to be used, or only the calculation marks are available."
+   },
+   {
+    "title": "Dynamic Markets, Competition and Risk",
+    "meta": "4 concepts",
+    "keyIdea": "Dynamic markets change continuously; online retailing and innovation are the two changes the specification names, and competition and uncertainty are what they leave firms facing.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "def",
+        "text": "<strong>Dynamic market</strong> — a market subject to rapid and continuous change in tastes, technology, competition or regulation. Change in any direction counts, including contraction."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Online retailing</strong> — selling directly to customers over the internet rather than through a shop, which cuts entry costs, widens reach, makes prices transparent and produces data with every order."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Innovation</strong> — a new or improved product, or a new way of making or delivering one, brought to market and adopted. An invention that nobody adopts changes no market."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Risk</strong> — outcomes that can be listed and given probabilities, so they can be planned for, priced or insured."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Uncertainty</strong> — outcomes that cannot be listed or given probabilities, so only flexibility helps."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mech",
+        "text": "<strong>Innovation and market growth</strong>: a cheaper or simpler version brings in customers the old product priced out, so the market gets bigger rather than the shares changing."
+       },
+       {
+        "type": "mech",
+        "text": "<strong>Adapting to change</strong>: when expectations reset, share moves to the firms that changed the offer and away from those that defended existing sales."
+       },
+       {
+        "type": "mech",
+        "text": "Competition intensity depends on the <strong>number</strong> of rivals, how <strong>similar</strong> the products are, and how easily a new firm can <strong>enter</strong>."
+       },
+       {
+        "type": "link",
+        "text": "What makes entry hard — capital, brand, patents, exclusive supply, licences — decides tomorrow's level of competition, not today's. The Economics papers call these <strong>barriers to entry</strong>."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Name the change and follow it to a decision; \"the market is dynamic\" on its own is context, not analysis.",
+     "Growth from new customers and growth from new uses are different mechanisms and should be separated.",
+     "Sort a list of things that might go wrong into risks and uncertainties before evaluating it."
+    ],
+    "misconception": "A dynamic market is not the same as a growing one. Shrinking, fragmenting and being displaced by a new technology are all dynamic."
+   },
+   {
+    "title": "What Market Research Is For",
+    "meta": "3 concepts",
+    "keyIdea": "Primary or secondary is about who collected the data; quantitative or qualitative is about what kind it is. The specification then names three jobs research is for.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "def",
+        "text": "<strong>Primary data</strong> — collected first-hand by or for the business to answer its own question. Fits exactly, costs more, and no rival holds it."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Secondary data</strong> — already collected by somebody else for a different purpose. Cheap and immediate, and may cover the wrong group, period or question."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Quantitative data</strong> — numerical: counts, percentages, shares. It measures."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Qualitative data</strong> — opinions, motivations and reactions. It explains."
+       }
+      ]
+     },
+     {
+      "title": "WHAT RESEARCH IS FOR",
+      "items": [
+       {
+        "type": "mech",
+        "text": "To <strong>identify and anticipate customer needs and wants</strong>: what is wanted now, and what will be wanted next."
+       },
+       {
+        "type": "mech",
+        "text": "To <strong>quantify likely demand</strong>: scale the proportion who say they would buy up to the target population, multiply by price, then discount for the gap between intention and purchase."
+       },
+       {
+        "type": "mech",
+        "text": "To <strong>gain insight into consumer behaviour</strong>: how customers decide, what they compare, what makes them switch."
+       },
+       {
+        "type": "imp",
+        "text": "The two dimensions cross: till data is primary and quantitative, a focus group is primary and qualitative, a published report is secondary and quantitative, a magazine review is secondary and qualitative.",
+        "tag": "exam"
+       }
+      ]
+     }
+    ],
+    "formulas": [
+     {
+      "label": "LIKELY DEMAND",
+      "text": "Likely buyers = Target population × Proportion who say they would buy"
+     },
+     {
+      "label": "LIKELY REVENUE",
+      "text": "Likely revenue = Likely buyers × Price"
+     }
+    ],
+    "takeaway": [
+     "Zuri: 500,000 shoppers × 18% = 90,000 weekly buyers; × $1.20 = $108,000 a week.",
+     "Treat a scaled survey figure as a ceiling, and say so — that sentence is where the evaluation marks are.",
+     "Most firms use secondary data first and buy primary data only for the question it cannot answer."
+    ],
+    "examMatters": "Read both dimensions of a stem: who collected it decides primary or secondary, and whether it is numbers or words decides quantitative or qualitative. The two are independent of each other."
+   },
+   {
+    "title": "Research Methods and Sampling",
+    "meta": "3 concepts",
+    "keyIdea": "The specification names four primary methods, four secondary sources and three sampling methods. Each method answers a different question, and the sampling method decides whether the answer describes the market.",
+    "blocks": [
+     {
+      "title": "METHODS OF PRIMARY RESEARCH",
+      "items": [
+       {
+        "type": "def",
+        "text": "<strong>Surveys/questionnaires</strong> — fixed questions put to many people; the only method producing a percentage worth scaling."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Focus groups/consumer panels</strong> — a small group discussing a product; a panel is the same group revisited, so it shows how opinion moves."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Face-to-face/telephone interviews</strong> — one respondent at a time with follow-up questions: most detail, most cost per person."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Product trials/test marketing</strong> — selling in a limited area before full launch and measuring real sales and repeat purchases. The only method that records behaviour rather than intention."
+       }
+      ]
+     },
+     {
+      "title": "METHODS OF SECONDARY RESEARCH",
+      "items": [
+       {
+        "type": "def",
+        "text": "<strong>Websites/social media</strong> — a rival's range and prices, and a firm's own follower analytics. Free and current; promotional, and a following is not the market."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Newspapers/magazines/TV/radio</strong> — reporting on an industry, entrants and regulation. Broad and current, written to interest a general audience rather than to measure."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Reports</strong> — industry, government and company reports, the usual source of market size and share. Rigorous, sometimes expensive, and always about the past."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Databases</strong> — structured records that can be queried, including the firm's own transaction records, which are primary data held in a database."
+       }
+      ]
+     },
+     {
+      "title": "SAMPLING",
+      "items": [
+       {
+        "type": "mech",
+        "text": "<strong>Random</strong> — equal chance for every member of the population; needs a complete list."
+       },
+       {
+        "type": "mech",
+        "text": "<strong>Stratified</strong> — subgroups, then random selection <em>within</em> each, in proportion to size."
+       },
+       {
+        "type": "mech",
+        "text": "<strong>Quota</strong> — subgroups and targets, then whoever is available fills them; selection inside the group is not random."
+       },
+       {
+        "type": "imp",
+        "text": "Stratified and quota both divide into subgroups and both aim at proportionate numbers. The discriminator is random selection inside the subgroup.",
+        "tag": "exam"
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Recommend a method against the constraint: budget, time and what is being decided.",
+     "A product trial beats a survey when there is time for one, because it measures what people did.",
+     "Sample size narrows random error; it does nothing about bias."
+    ],
+    "examMatters": "Name what a source is good for and what it cannot show, in that order. A rival's website gives prices and range; it cannot give sales volumes."
+   },
+   {
+    "title": "Orientation and Market Mapping",
+    "meta": "2 concepts",
+    "keyIdea": "Orientation is where a business starts — its own capability or the customer's stated want — and a market map is the tool that shows where its product sits against everyone else's.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "def",
+        "text": "<strong>Product orientation</strong> — starting from what the firm can make well, then finding customers. Suits technology-led markets; risks a superb product nobody wants."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Market orientation</strong> — starting from research into what customers want, then designing to it. Suits fast-changing consumer markets; risks incremental improvement only."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Market mapping</strong> — plotting products on two axes that customers choose by, to show positioning and reveal gaps."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mech",
+        "text": "A map shows <strong>relative position</strong>: who a firm actually competes with, which is not always who it thinks."
+       },
+       {
+        "type": "mech",
+        "text": "A <strong>gap</strong> is a position no competitor occupies. It may be empty because nobody wants it, or because it cannot be produced at that price."
+       },
+       {
+        "type": "imp",
+        "text": "Zuri's market: Tamu and Mkali low on price and juice content, Halo high on both, Safi at $1.60 for 40%, Zuri at $1.20 for 45%. The gap is about 80% juice at $1.20.",
+        "tag": "exam"
+       },
+       {
+        "type": "link",
+        "text": "Testing a gap is what quantifying likely demand is for: the two topics are one decision."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Most firms sit between the two orientations; the judgement is about degree and market, not about which is correct.",
+     "Label both axes with the variable and its direction: Construct asks for an accurately labelled diagram.",
+     "A map plots perceptions, shows two variables at a time, and both of those are limitations worth stating."
+    ],
+    "misconception": "A gap in the market is not a guaranteed opportunity. It shows where no competitor is, not where customers are waiting."
+   },
+   {
+    "title": "Segmentation, Advantage and Value",
+    "meta": "4 concepts + formula",
+    "keyIdea": "Segmentation chooses who to serve, differentiation and competitive advantage decide why they choose you, and value added is what the whole thing is measured in.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "def",
+        "text": "<strong>Market segmentation</strong> — dividing a market into groups sharing needs, characteristics or behaviour. Bases: demographic, geographic, psychographic, behavioural."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Competitive advantage</strong> — a reason customers choose this firm over rivals, from lower costs or from differentiation. Worth having only while it cannot be copied."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Product differentiation</strong> — making a product distinguishable from rivals. Its purpose is to make it less substitutable."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Value added</strong> — selling price minus the cost of bought-in materials and components, per unit."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mech",
+        "text": "Segmentation pays when segments are <strong>measurable, reachable, different and large enough</strong>; failing any one of those makes a description rather than a market."
+       },
+       {
+        "type": "mech",
+        "text": "Differentiation makes demand <strong>less price-sensitive</strong>, so the firm keeps customers when a rival undercuts it."
+       },
+       {
+        "type": "mech",
+        "text": "An advantage is durable when copying it is slow, expensive or impossible — a brand of decades, a patent, an exclusive supply, a distribution network."
+       },
+       {
+        "type": "imp",
+        "text": "Value added is not profit: $0.75 a bottle must cover wages, rent, energy, distribution and marketing before any of it is profit.",
+        "tag": "exam"
+       }
+      ]
+     }
+    ],
+    "formulas": [
+     {
+      "label": "VALUE ADDED",
+      "text": "Value added per unit = Selling price − Cost of bought-in materials"
+     }
+    ],
+    "takeaway": [
+     "Segmentation divides, targeting chooses, positioning presents.",
+     "Name the source of a competitive advantage and say why a rival cannot copy it quickly.",
+     "Zuri: $1.20 − $0.45 = $0.75 of value added on every bottle."
+    ],
+    "examMatters": "A Calculate on value added is price minus bought-in materials per unit, not price minus total costs, which is profit. State the unit in the answer."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "meeting-customer-needs:quiz:1ece65fa",
+    "question": "Which of the following best describes a niche market?",
+    "options": [
+     "A market serving the widest possible range of customers",
+     "A small, clearly defined segment with particular needs",
+     "A market in which only one firm is permitted to sell",
+     "A market in which the government sets the price"
+    ],
+    "correctIndex": 1,
+    "explanation": "A niche is a small, clearly defined segment inside a larger market whose particular needs the standardised product does not meet. A single permitted seller is a monopoly, which is a different idea."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:402eedd2",
+    "question": "Which type of market research collects new, first-hand data?",
+    "options": [
+     "Secondary research",
+     "Desk research",
+     "Primary research",
+     "Published research"
+    ],
+    "correctIndex": 2,
+    "explanation": "Primary research gathers original data directly, through surveys, interviews, focus groups or product trials. Secondary, desk and published research all reuse data somebody else has already collected."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:f73b8424",
+    "question": "A business sells a product for more than its bought-in materials cost. The gap between those two figures is:",
+    "options": [
+     "The profit",
+     "The value added",
+     "The revenue",
+     "The mark-up on cost"
+    ],
+    "correctIndex": 1,
+    "explanation": "Value added is the gap itself — selling price minus the cost of bought-in materials and components. It is not profit, because wages, rent, energy and marketing all come out of the gap first; revenue is the price times the units sold, not a difference at all."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:70cb635f",
+    "question": "Which of these is a characteristic of a mass market?",
+    "options": [
+     "A standardised product sold to the widest possible range of customers",
+     "A specialised product designed for one group of customers",
+     "A product sold only through specialist retailers",
+     "A product with a very high profit margin on each unit"
+    ],
+    "correctIndex": 0,
+    "explanation": "A mass market is served by one standardised product aimed at everybody. The other three describe a niche: specialised, narrowly distributed and sold at a wide margin on low volume."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:88cf6b0d",
+    "question": "Why can a mass-market producer usually charge a lower price than a niche producer?",
+    "options": [
+     "Its customers are less interested in quality",
+     "Its fixed costs are spread over a much larger output",
+     "It pays its suppliers later than a niche producer does",
+     "It uses cheaper materials than a niche producer does"
+    ],
+    "correctIndex": 1,
+    "explanation": "High volume spreads design, machinery and advertising costs over far more units, so average cost per unit falls and a lower price still covers costs. The advantage is scale: paying suppliers later changes when cash leaves rather than how much, and cheaper materials are a choice open to a niche producer too."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:6fdc5d04",
+    "question": "The chilled-juice market was worth $32 million last year and $40 million this year. What was market growth?",
+    "options": [
+     "20%",
+     "8%",
+     "25%",
+     "80%"
+    ],
+    "correctIndex": 2,
+    "explanation": "Market growth = (new size − old size) ÷ old size × 100 = (40 − 32) ÷ 32 × 100 = 25%. Dividing by the new size instead gives 20%, and 40 − 32 = 8 is the change in dollars, not the percentage."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:dde3df52",
+    "question": "Zuri Juice sold $6 million in a chilled-juice market worth $40 million. What is Zuri's market share?",
+    "options": [
+     "6%",
+     "40%",
+     "85%",
+     "15%"
+    ],
+    "correctIndex": 3,
+    "explanation": "Market share = firm's sales ÷ total market sales × 100 = 6 ÷ 40 × 100 = 15%. 85% is the share Zuri does NOT hold, and the two dollar figures are amounts rather than percentages, so neither is an answer on its own."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:9b3090e2",
+    "question": "A firm's sales rise by 10% while its market grows by 25%. What has happened to its market share?",
+    "options": [
+     "It has fallen, because the market grew faster",
+     "It has risen, because sales are higher",
+     "It is unchanged, because both figures rose",
+     "It cannot be worked out from this information"
+    ],
+    "correctIndex": 0,
+    "explanation": "Share is the firm's sales as a proportion of the market. If the market grows faster than the firm, the firm holds a smaller slice of a bigger cake, so share falls even though sales rose."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:8fcb4fbd",
+    "question": "How does strong brand loyalty most directly help a firm's pricing?",
+    "options": [
+     "It reduces the cost of the materials the firm buys in",
+     "It lowers the price the firm has to charge to keep customers",
+     "It forces competitors to raise their prices too",
+     "It makes demand less sensitive to price, so a rise loses fewer customers"
+    ],
+    "correctIndex": 3,
+    "explanation": "Loyal customers stop comparing alternatives, so demand becomes less price-sensitive and a price rise costs the firm less volume than it would an unbranded rival. Loyalty lets a firm charge more, not less, and it does nothing to the cost of inputs."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:650cb1d8",
+    "question": "Which of these best describes a dynamic market?",
+    "options": [
+     "A market subject to rapid and continuous change",
+     "A market in which total sales are rising each year",
+     "A market with a large number of competing firms",
+     "A market in which prices are set by a regulator"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dynamic means changing rapidly and continuously, in any direction — a market can be dynamic while it shrinks or fragments. Growth is one kind of change, not the definition."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:794b6ce5",
+    "question": "A market shifts towards online selling. What is the most likely immediate effect on new firms?",
+    "options": [
+     "Entry becomes harder because websites are expensive to run",
+     "Entry becomes easier because a shop lease is no longer needed",
+     "Entry is unaffected because customers buy the same products",
+     "Entry becomes harder because established brands already hold the customers"
+    ],
+    "correctIndex": 1,
+    "explanation": "Online selling replaces a large fixed cost — premises — with a much smaller one, so entering becomes cheaper and new sellers appear. Established brands make a market harder to WIN in; they do not raise the cost of entering it, which is what the question asks about."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:bca88975",
+    "question": "A cheaper, simpler version of a product brings in customers who previously could not afford it. This is an example of:",
+    "options": [
+     "A firm gaining share from its direct competitors",
+     "A market becoming less dynamic over time",
+     "A firm differentiating its product from rivals",
+     "Innovation causing the market itself to grow"
+    ],
+    "correctIndex": 3,
+    "explanation": "The number of customers in the market has risen, so the market is larger than before. Gaining share is taking customers from rivals within a market of the same size, which is a different mechanism."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:43a4fd68",
+    "question": "What is the key difference between risk and uncertainty?",
+    "options": [
+     "Risk affects small firms and uncertainty affects large ones",
+     "Risk is short-term and uncertainty is long-term",
+     "Risk has outcomes that can be listed and given probabilities",
+     "Risk applies to costs and uncertainty applies to revenues"
+    ],
+    "correctIndex": 2,
+    "explanation": "Risk describes a situation where the possible outcomes are known and odds can be attached, so it can be planned for or insured. With uncertainty the outcomes cannot be listed at all. Both affect firms of any size, over any period, on costs and on revenues alike."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:b3bd0ddb",
+    "question": "Which of these is best described as uncertainty rather than risk for a juice maker?",
+    "options": [
+     "Fruit prices varying with each year's harvest",
+     "A new flavour selling less well than forecast",
+     "A delivery van needing repair during the year",
+     "A new law banning the type of bottle it uses"
+    ],
+    "correctIndex": 3,
+    "explanation": "A change in the law is not an unlikely event with known odds; it is an outcome nobody could list in advance. The other three recur, so past data supports a probability and the firm can plan or insure for them."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:e79d5d68",
+    "question": "Which of these is most likely to keep competition in a market weak over the long run?",
+    "options": [
+     "A patent held by one of the firms in the market",
+     "Products that customers regard as very similar",
+     "A large number of firms already selling there",
+     "Prices that customers can compare online easily"
+    ],
+    "correctIndex": 0,
+    "explanation": "A patent legally prevents rivals copying, so new firms cannot enter with the same product and the level of competition stays low. Similar products, many firms and transparent prices all intensify competition rather than restraining it."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:b64a1844",
+    "question": "What makes a piece of data primary rather than secondary?",
+    "options": [
+     "It contains numbers rather than opinions",
+     "It was collected by or for this business for its own question",
+     "It was collected more recently than one year ago",
+     "It came from customers rather than from competitors"
+    ],
+    "correctIndex": 1,
+    "explanation": "Primary and secondary is about origin: who collected it and why. Whether it is numbers or opinions is the separate quantitative-qualitative distinction, and age does not change which category data falls into."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:ac7d7840",
+    "question": "A business reads a published industry report to estimate the size of its market. This is:",
+    "options": [
+     "Primary quantitative research",
+     "Primary qualitative research",
+     "Secondary qualitative research",
+     "Secondary quantitative research"
+    ],
+    "correctIndex": 3,
+    "explanation": "The report was written by somebody else for their own purpose, so it is secondary, and market size is a number, so it is quantitative. Both dimensions have to be read separately from the stem."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:216aa499",
+    "question": "A firm runs a focus group to find out why shoppers choose a rival's bottle. The data collected is:",
+    "options": [
+     "Primary and qualitative",
+     "Primary and quantitative",
+     "Secondary and qualitative",
+     "Secondary and quantitative"
+    ],
+    "correctIndex": 0,
+    "explanation": "The firm commissioned the group itself, so the data is primary, and reasons expressed in customers' own words are qualitative. A focus group is a small discussion, so it cannot produce a reliable percentage."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:223b9183",
+    "question": "A survey of 600 shoppers finds 18% would buy a bottle weekly at $1.20. The target market holds 500,000 shoppers. How many weekly buyers does this suggest?",
+    "options": [
+     "108,000",
+     "9,000",
+     "90,000",
+     "500,000"
+    ],
+    "correctIndex": 2,
+    "explanation": "Apply the proportion to the population: 500,000 × 0.18 = 90,000 weekly buyers. 108,000 is the weekly revenue in dollars once the buyers are multiplied by price, not a count of buyers, and 500,000 is the whole population rather than the buyers in it."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:0645c367",
+    "question": "Why should a demand figure scaled up from a survey be treated as an upper estimate?",
+    "options": [
+     "Because the sample is smaller than the target market",
+     "Because percentages cannot be applied to a population",
+     "Because people buy more than they say they will",
+     "Because stated intention overstates what people actually buy"
+    ],
+    "correctIndex": 3,
+    "explanation": "People overstate willingness to buy when nothing is at stake, so scaled intention exceeds realised sales. Scaling a small sample up to a large population is the correct method, and the size gap is not the problem; the caution is about the proportion, not the arithmetic."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:da1853ae",
+    "question": "Which use of market research is a firm making when it studies how shoppers decide between two bottles on a shelf?",
+    "options": [
+     "Gaining insight into consumer behaviour",
+     "Quantifying likely demand for a product",
+     "Identifying the size of the total market",
+     "Anticipating a change in the law"
+    ],
+    "correctIndex": 0,
+    "explanation": "Studying how a choice is made is insight into consumer behaviour, the third use the specification names. Quantifying demand would require a number of likely buyers, which watching a shelf does not give."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:d1a5a467",
+    "question": "Which primary research method measures what customers actually did rather than what they say they would do?",
+    "options": [
+     "A product trial in a limited area",
+     "A questionnaire sent to a large sample",
+     "A focus group discussing the product",
+     "A telephone interview with regular buyers"
+    ],
+    "correctIndex": 0,
+    "explanation": "In a product trial customers pay real money, so the firm records actual and repeat purchases. The other three record stated intention or opinion, which is why scaled survey figures need discounting."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:7a335778",
+    "question": "A firm wants to know why customers stopped buying its drink. Which method suits it best?",
+    "options": [
+     "A questionnaire asking customers to rate the drink out of ten",
+     "A count of weekly sales taken from its own till data",
+     "A published report on the size of the drinks market",
+     "Focus groups exploring what changed for former customers"
+    ],
+    "correctIndex": 3,
+    "explanation": "The question is a \"why\", which needs qualitative depth in customers' own words. A rating and a sales count measure the fall without explaining it, and a market report describes the market rather than these customers."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:9f72813d",
+    "question": "A firm reads competitors' websites, trade-press articles and government trade data before entering a market. This is:",
+    "options": [
+     "Primary research, because the firm did the reading itself",
+     "Secondary research, because others collected the data",
+     "Primary research, because the data is about competitors",
+     "Secondary research, because the data is all quantitative"
+    ],
+    "correctIndex": 1,
+    "explanation": "All three sources were produced by somebody else for their own purposes, which makes the data secondary however the firm uses it. Who did the reading and whether the data is numerical are both irrelevant to the category."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:b2defef3",
+    "question": "Which sampling method divides the population into subgroups and then selects at random within each one?",
+    "options": [
+     "Random sampling",
+     "Quota sampling",
+     "Stratified sampling",
+     "Convenience sampling"
+    ],
+    "correctIndex": 2,
+    "explanation": "Stratified sampling divides into subgroups and then selects at random inside each. Quota sampling also uses subgroups and proportionate targets, but fills them with whoever is available, so the selection inside the group is not random."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:5662620e",
+    "question": "An interviewer is told to question 40 shoppers aged under 30 and 60 aged over 30, choosing whoever passes. This is:",
+    "options": [
+     "Stratified sampling, because targets are proportionate",
+     "Random sampling, because shoppers pass unpredictably",
+     "Convenience sampling, because the interviewer stands in one place",
+     "Quota sampling, because the targets are filled by availability"
+    ],
+    "correctIndex": 3,
+    "explanation": "Targets per subgroup filled with whoever is available is quota sampling. It is not random: which shoppers get asked depends on the interviewer's choices, which is exactly what distinguishes it from stratified sampling."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:9444434a",
+    "question": "A firm surveys 10,000 people but recruits all of them outside one shopping centre. The main weakness of this research is:",
+    "options": [
+     "The sample is too small to be reliable",
+     "The sample is biased towards one type of shopper",
+     "Quantitative data cannot answer questions about opinions",
+     "Secondary data would have been cheaper to collect"
+    ],
+    "correctIndex": 1,
+    "explanation": "Everyone excluded by the recruitment channel is excluded from the result, so the sample misrepresents the population however large it is. Size narrows random error; it does nothing about bias."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:645de10d",
+    "question": "A firm develops a new drink because its laboratory perfected the formula, then looks for customers. This is:",
+    "options": [
+     "Market orientation",
+     "Product orientation",
+     "Market segmentation",
+     "Product differentiation"
+    ],
+    "correctIndex": 1,
+    "explanation": "The starting point is the firm's own capability and the customer is sought afterwards, which is product orientation. A market-oriented firm would have researched what customers wanted before developing the formula."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:3632e8d7",
+    "question": "Which market is product orientation most likely to suit?",
+    "options": [
+     "A market where customers can describe exactly what they want",
+     "A market where the product changes very little over time",
+     "A market driven by technology customers do not yet know about",
+     "A market where customers buy mainly on price"
+    ],
+    "correctIndex": 2,
+    "explanation": "Where the product does not exist yet, customers cannot specify it, so research reports only on what they already know. A market where buyers choose mainly on price rewards cost control, not product orientation."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:07dc69f1",
+    "question": "What does a market map show a business?",
+    "options": [
+     "The positions of competing products on two variables",
+     "The total value of sales in the market",
+     "The profit margin each competitor earns",
+     "The future growth rate of the market"
+    ],
+    "correctIndex": 0,
+    "explanation": "A market map plots rivals against two variables customers choose by, showing positioning and revealing gaps. It says nothing about market value, margins or future growth, which need other sources."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:551e7d79",
+    "question": "On Zuri's map, Halo sells 85% juice at $1.90 and Zuri sells 45% at $1.20. Nobody sells 80% at $1.20. What does that empty position tell Zuri?",
+    "options": [
+     "That customers want a high-juice drink at that price",
+     "That no competitor currently occupies that position",
+     "That a high-juice drink cannot be made at that price",
+     "That the market is too small to be worth entering"
+    ],
+    "correctIndex": 1,
+    "explanation": "A gap shows only that no rival is there. Whether customers want it, and whether it can be produced at that price, are separate questions that research into demand and into costs has to answer."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:7234296b",
+    "question": "Which of these is a behavioural base for market segmentation?",
+    "options": [
+     "The age and income of the customer",
+     "The region the customer lives in",
+     "The customer's lifestyle and values",
+     "How often the customer buys the product"
+    ],
+    "correctIndex": 3,
+    "explanation": "Purchase frequency is something the customer does, which is what behavioural segmentation records. Age and income are demographic, region is geographic, and lifestyle and values are psychographic."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:a91d5f5d",
+    "question": "What is the difference between segmentation and targeting?",
+    "options": [
+     "Segmentation divides the market; targeting chooses which group to serve",
+     "Segmentation chooses a group; targeting advertises to it",
+     "Segmentation is for niche markets; targeting is for mass markets",
+     "Segmentation uses research; targeting uses judgement alone"
+    ],
+    "correctIndex": 0,
+    "explanation": "Segmentation is the analysis that identifies distinct groups. Targeting is the decision that follows about which of them to serve, and positioning then decides how the product is presented to the group chosen."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:637ae039",
+    "question": "Which competitive advantage would be hardest for a rival to copy?",
+    "options": [
+     "A 10% cut in the selling price",
+     "A redesigned label on the bottle",
+     "A free gift given away with each purchase",
+     "An exclusive contract with the only local grower"
+    ],
+    "correctIndex": 3,
+    "explanation": "An exclusive supply contract cannot be matched while it runs, so the advantage lasts. A price cut, a label and a promotion can all be copied within a single production run, which is why they win customers only briefly."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:50eda97f",
+    "question": "What is the purpose of product differentiation?",
+    "options": [
+     "To reduce the cost of producing each unit",
+     "To make the product less substitutable for a rival's",
+     "To increase the size of the total market",
+     "To divide customers into distinct groups"
+    ],
+    "correctIndex": 1,
+    "explanation": "Differentiation stops customers treating the product as interchangeable with a rival's, so demand becomes less price-sensitive and the firm gains room on price. Dividing customers into groups is segmentation."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:7c8d1804",
+    "question": "Zuri's bought-in inputs cost $0.45 a bottle and the bottle sells for $1.20. What is the value added per bottle?",
+    "options": [
+     "$1.20",
+     "$0.45",
+     "$0.75",
+     "$1.65"
+    ],
+    "correctIndex": 2,
+    "explanation": "Value added = selling price − cost of bought-in materials = $1.20 − $0.45 = $0.75 per bottle. Adding the two figures instead gives $1.65, and neither figure on its own is the difference between them."
+   },
+   {
+    "id": "meeting-customer-needs:quiz:5f93e802",
+    "question": "Why is the value added on a product not the same as the profit on it?",
+    "options": [
+     "Value added must still cover wages, rent, energy and marketing",
+     "Value added is measured before tax and profit after it",
+     "Value added counts only the branding, not the materials",
+     "Value added is calculated for the market, not for one firm"
+    ],
+    "correctIndex": 0,
+    "explanation": "Value added is price minus bought-in materials only. Every other cost the firm bears comes out of it, and profit is what remains afterwards, which is why the two figures are never equal."
+   }
+  ],
+  "practice": [
+   {
+    "id": "meeting-customer-needs:practice:98b42c70",
+    "command": "Define",
+    "marks": 2,
+    "question": "Define the term 'niche market'. (2 marks)",
+    "guidance": "Both halves are needed: a small, clearly defined segment of a larger market, serving customers whose particular needs the mass-market product does not meet. \"A small market\" is half a definition: it gives the size and not the unmet need. An example is application and belongs in a 4-mark Explain, not here — the command is Define, and Define is 2 marks in IAL Business (WBS11 Appendix 6)."
+   },
+   {
+    "id": "meeting-customer-needs:practice:b455326f",
+    "command": "Explain",
+    "marks": 4,
+    "question": "Explain one benefit to a business of operating in a niche market. (4 marks)",
+    "guidance": "One benefit, developed, not two asserted. Knowledge: a niche is a small segment with particular needs the mass-market product does not meet. Application: name the benefit — less direct competition, or a premium price, or strong customer loyalty — and attach it to a business. Analysis: take it two steps. Less direct competition means fewer close substitutes, so the customer has nowhere obvious to switch, so the firm can hold a higher price without losing volume, so the margin on each unit is wider. A candidate who names three benefits and develops none has written a list, and the command Explain asks for a chain (WBS11 Appendix 6)."
+   },
+   {
+    "id": "meeting-customer-needs:practice:6c32b8a5",
+    "command": "Calculate",
+    "marks": 4,
+    "question": "The chilled-juice market was worth $32 million last year and $40 million this year. Zuri Juice sold $6 million this year. Calculate Zuri's market share and the market's growth rate. (4 marks)",
+    "guidance": "Show both formulas, both substitutions and both answers with a percentage sign. Market share = firm's sales ÷ total market sales × 100 = 6 ÷ 40 × 100 = 15%. Market growth = (new size − old size) ÷ old size × 100 = (40 − 32) ÷ 32 × 100 = 25%. Two errors are common and both are avoidable: dividing the change by the NEW size instead of the old one, which gives 20%, and dividing Zuri's sales by last year's market, which mixes two periods. Show the workings: Appendix 6 says workings should be given for a Calculate."
+   },
+   {
+    "id": "meeting-customer-needs:practice:0eb9b618",
+    "command": "Analyse",
+    "marks": 6,
+    "question": "Analyse one way in which the growth of online retailing has affected competition in a market you have studied. (6 marks)",
+    "guidance": "One chain, followed through, with the market named. Knowledge: online retailing means selling directly to customers over the internet rather than through a shop. Application: name the market and the change in it. Analysis: build the links in order — selling online removes the need for premises, so the fixed cost of entering falls, so new sellers can enter with less capital, so the number of rivals rises and customers can compare every price in seconds, so established firms must either cut price or give customers a visible reason to pay more. Analyse is a chain of reasoning and explicitly does not include evaluation (WBS11 Appendix 6), so a judgement about whether this is good or bad is not what the question asked for; the links are."
+   },
+   {
+    "id": "meeting-customer-needs:practice:8ed4a524",
+    "command": "Discuss",
+    "marks": 8,
+    "question": "Zuri Juice surveyed 600 shoppers and 18% said they would buy a high-juice bottle weekly at $1.20. Its target market holds 500,000 shoppers. Discuss the usefulness of this research in estimating likely demand. (8 marks)",
+    "guidance": "Levels-marked: the assessment is brief but it must be there. Knowledge and application: show the scaling — 500,000 × 0.18 = 90,000 weekly buyers, and × $1.20 = $108,000 a week — and say what Zuri would use it for: how much to produce, how much stock to hold, whether the revenue covers the cost. Reasoning in context: the figure gives a scale that judgement alone cannot, and it was measured at one stated price, which is what makes it usable for this decision. Brief assessment, showing awareness of competing factors: stated intention overstates purchase, because nothing was at stake when the question was answered; 600 responses carry a margin of error; the 18% was measured at $1.20 and says nothing about another price; and the market may move before production starts. The judgement is the shape of the answer: the figure is a ceiling on demand rather than a forecast of it, and it is most useful as the upper end of a range Zuri plans against."
+   },
+   {
+    "id": "meeting-customer-needs:practice:b6acf450",
+    "command": "Assess",
+    "marks": 10,
+    "question": "Zuri Juice has one month and a small budget before it decides whether to launch a new bottle. Assess the most appropriate method of primary research for it to use. (10 marks)",
+    "guidance": "Levels-marked, with a supported judgement at the end; a balanced answer that never decides cannot reach the top level. Knowledge and application: set out the realistic options against the two constraints in the stem — a survey, a focus group, interviews, a product trial — and say what each would produce for Zuri specifically. Reasoning: develop at least two. A survey is the only option that yields a percentage Zuri can scale to its market, it is cheap per response, and it measures intention rather than purchase. A product trial measures what customers actually did, including repeat purchase, and a month is too short for a meaningful trial and the trial itself costs stock. Competing factors: the budget rules out interviews at scale; a focus group would explain preferences richly but cannot size the opportunity; the month rules out anything sequential. Judgement: name one method, justify it against both constraints and the decision being taken, and say what its weakness means for how the result should be treated — for example, a survey chosen for speed and cost, with the answer discounted because it measures what people say."
+   },
+   {
+    "id": "meeting-customer-needs:practice:1be1c7a6",
+    "command": "Explain",
+    "marks": 4,
+    "question": "Explain one reason why a business might use secondary research before commissioning primary research. (4 marks)",
+    "guidance": "One reason, developed. Knowledge: secondary data was collected by somebody else for their own purpose, so it already exists and costs little or nothing. Application: name the reason — cost, speed, or sizing the market before committing — and attach it to a business with a decision to take. Analysis: two linked steps. Published reports give market size and share for nothing, so the firm learns whether the market is large enough to be worth entering before it spends anything; only then does it pay for primary research, and it can aim that research at the one question the secondary data could not answer. A candidate who lists three reasons and develops none has written a list, and Explain asks for a brief explanation supported by detail (WBS11 Appendix 6)."
+   },
+   {
+    "id": "meeting-customer-needs:practice:11062b94",
+    "command": "Construct",
+    "marks": 4,
+    "question": "Construct a market map for the chilled-juice market using price and juice content as the two axes, plotting Tamu ($0.70, 15%), Mkali ($0.85, 35%), Zuri ($1.20, 45%), Safi ($1.60, 40%) and Halo ($1.90, 85%), and mark one gap. (4 marks)",
+    "guidance": "Label the horizontal axis \"Price\" and the vertical axis \"Juice content\", each with its direction — low to high — and a scale that covers the five points. Plot and name all five brands in the positions given; an unnamed point does not identify a competitor. Mark one empty position clearly and label it as a gap: the obvious one is high juice content at a middle price, around 80% at $1.20, where no brand sits. Construct is 4 marks and asks for an accurately labelled diagram (WBS11 Appendix 6): the labelling and the accuracy of the plotting are the answer, not commentary written beside it."
+   },
+   {
+    "id": "meeting-customer-needs:practice:b22c3c53",
+    "command": "Discuss",
+    "marks": 8,
+    "question": "Zuri Juice has mapped the chilled-juice market on price against juice content and found an empty position at about 80% juice for $1.20. Discuss the usefulness of that market map in deciding whether to launch there. (8 marks)",
+    "guidance": "Levels-marked: the assessment is brief but it has to be there. Knowledge and application: a market map plots rivals on two variables customers choose by, and Zuri's shows the five brands and one position nobody occupies. Reasoning in context: the map tells Zuri who it actually competes with rather than who it thinks it does, it makes the empty position visible at all, and it does so in a form the firm can act on. Brief assessment, showing awareness of competing factors: a gap shows only that no rival is there, and the position may be empty because nobody wants it or because a high-juice drink cannot be produced at that price; the map shows two variables when customers choose on more; and it plots perceptions, which move. Judgement: the map is useful for locating the question and useless for answering it — the launch decision belongs to research into demand at that position and to the cost of making the product, which is the next thing Zuri should do."
+   },
+   {
+    "id": "meeting-customer-needs:practice:45fddeb9",
+    "command": "Explain",
+    "marks": 4,
+    "question": "Explain one way in which a business could add value to a product. (4 marks)",
+    "guidance": "One way, developed, not five listed. Knowledge: value added is the selling price minus the cost of bought-in materials and components — for Zuri, $1.20 − $0.45 = $0.75 a bottle. Application: name one method and attach it to a product: branding, design and packaging, convenience, customer service or customisation. Analysis: follow it two steps. A resealable bottle makes the drink easier to carry and finish later, so the customer values it more highly than an identical drink in a plain bottle, so they will pay more for it, and the gap between the input cost and the price widens. The chain has to end at willingness to pay: a method named without saying why a customer would pay more for it has described a change rather than explained one."
+   },
+   {
+    "id": "meeting-customer-needs:practice:f39deec6",
+    "command": "Assess",
+    "marks": 10,
+    "question": "Assess whether branding is the most effective way for a small food or drink business to add value. (10 marks)",
+    "guidance": "Levels-marked, with a supported judgement; a balanced answer that never decides cannot reach the top level. Knowledge and application: define value added as selling price minus bought-in materials, and set branding beside the alternatives the business actually has — design and packaging, convenience, customer service, customisation. Reasoning: develop branding properly. A brand is the expectation a name carries, so a consistently kept promise makes demand less price-sensitive, which lets the firm hold its price when a rival undercuts, and the wider margin funds the next improvement; it also makes the market harder for a new name to enter. Competing factors: branding is slow and expensive and a small business may not survive the years it takes; packaging and convenience change what the customer receives immediately and at a known cost; service is hard for a large rival to copy at all; and a brand built on a promise the product does not keep destroys value rather than adding it. Judgement: decide, and make the decision conditional — on how long the business can fund the wait, on whether its product is genuinely distinguishable, and on whether its customers buy on reputation or on the shelf."
+   },
+   {
+    "id": "meeting-customer-needs:practice:0a8c6acf",
+    "command": "Evaluate",
+    "marks": 20,
+    "question": "Evaluate whether adding value or charging a lower price is the better way for a business to build a competitive advantage. (20 marks)",
+    "guidance": "Levels-marked, and the conclusion must choose and say under what conditions; an answer that lists both sides and stops cannot reach the top levels. Knowledge and application: define competitive advantage as a reason customers choose this firm over rivals, define value added as selling price minus the cost of bought-in materials — $1.20 − $0.45 = $0.75 on a bottle — and set out the two routes, differentiation and cost leadership. Reasoning, developed in chains: adding value through branding, design, convenience or service makes the product less substitutable, so demand becomes less price-sensitive, so the firm holds its price when a rival cuts, and the wider margin funds the next improvement. A lower price wins volume immediately, spreads fixed costs over more units and can deter entry. Competing factors: a price cut is the easiest thing in the market for a rival to copy, so it wins customers briefly and then stops working, and it is sustainable only where the firm's costs are genuinely lower rather than its margin merely thinner; adding value costs money before it earns any, needs the difference to be visible and valued by customers, and can be imitated in time as well. Judgement: decide, and make the decision conditional — on whether the firm has a genuine cost advantage, on whether its customers can see and will pay for the difference, and on how quickly rivals in this market copy. Say which condition matters most and why."
+   }
+  ],
+  "flashcards": [
+   {
+    "id": "meeting-customer-needs:card:3137d826",
+    "front": "What is a mass market?",
+    "back": "The <strong>largest segment</strong> of a market, served by a <strong>standardised product</strong> aimed at the widest possible range of customers. High volume, low margin, wide distribution, heavy competition."
+   },
+   {
+    "id": "meeting-customer-needs:card:d80ed71f",
+    "front": "What is a niche market?",
+    "back": "A <strong>small, clearly defined segment</strong> of a larger market whose particular needs the mass-market product does not meet. Low volume, high margin, specialised product, concentrated risk."
+   },
+   {
+    "id": "meeting-customer-needs:card:6aad6836",
+    "front": "How do you calculate market share?",
+    "back": "<strong>Market share (%) = firm's sales ÷ total market sales × 100.</strong> Zuri Juice: $6m ÷ $40m × 100 = <strong>15%</strong>. Both figures must cover the same period."
+   },
+   {
+    "id": "meeting-customer-needs:card:b946e0d3",
+    "front": "How do you calculate market growth?",
+    "back": "<strong>Market growth (%) = (new market size − old market size) ÷ OLD market size × 100.</strong> The chilled-juice market: (40 − 32) ÷ 32 × 100 = <strong>25%</strong>. Dividing by the new size is the common error and gives 20%."
+   },
+   {
+    "id": "meeting-customer-needs:card:3ed8aafc",
+    "front": "A firm's sales rise 10% while its market grows 25%. What has happened to its share?",
+    "back": "It has <strong>fallen</strong>. Share is the firm's sales as a proportion of the market, so a market growing faster than the firm leaves the firm with a smaller slice of a bigger cake."
+   },
+   {
+    "id": "meeting-customer-needs:card:5ba75b7c",
+    "front": "What is a brand, and what does brand loyalty do?",
+    "back": "A brand is the <strong>reputation and set of associations a name carries</strong> — the logo only triggers it. Loyalty makes demand <strong>less price-sensitive</strong>, cuts the cost of winning the same customers back, and makes the market <strong>harder to enter</strong> for a name that means nothing yet."
+   },
+   {
+    "id": "meeting-customer-needs:card:254570c2",
+    "front": "What is a dynamic market?",
+    "back": "A market subject to <strong>rapid and continuous change</strong> in tastes, technology, competition or regulation. Change in <em>any</em> direction counts: shrinking and fragmenting are dynamic too."
+   },
+   {
+    "id": "meeting-customer-needs:card:016861c0",
+    "front": "Name four ways online retailing changes a market.",
+    "back": "<strong>Entry costs fall</strong> (a website instead of a lease), <strong>reach widens</strong> (sell beyond one location), <strong>prices become transparent</strong> (customers compare in seconds), and <strong>data arrives with the sale</strong> (research as a by-product of trading)."
+   },
+   {
+    "id": "meeting-customer-needs:card:81977942",
+    "front": "How does innovation cause market growth?",
+    "back": "Two distinct mechanisms. <strong>New customers</strong>: a cheaper or simpler version reaches people the old product priced out. <strong>New uses</strong>: a product does something the old one could not, creating demand that did not exist at any price. Neither is share moving between existing firms."
+   },
+   {
+    "id": "meeting-customer-needs:card:94afb249",
+    "front": "What is the difference between an invention and an innovation?",
+    "back": "An <strong>invention</strong> is a new idea. An <strong>innovation</strong> is an idea brought to market and <strong>adopted</strong>. Only innovation changes a market, which is why the specification names it and not invention."
+   },
+   {
+    "id": "meeting-customer-needs:card:a0a34aa5",
+    "front": "What is the difference between risk and uncertainty?",
+    "back": "<strong>Risk</strong>: the outcomes can be listed and given probabilities, so it can be planned for, priced or insured. <strong>Uncertainty</strong>: the outcomes cannot be listed at all, so only flexibility — reserves, alternatives, slack — helps."
+   },
+   {
+    "id": "meeting-customer-needs:card:185e86ff",
+    "front": "What decides how intense competition in a market is?",
+    "back": "Three things: <strong>how many</strong> rivals there are, <strong>how similar</strong> their products are, and <strong>how easily</strong> a new firm can enter. Capital, an established brand, patents, exclusive supply and licences decide the last one, and so decide tomorrow's level of competition. The Economics papers call these <strong>barriers to entry</strong>."
+   },
+   {
+    "id": "meeting-customer-needs:card:4c6e65d6",
+    "front": "What is primary data?",
+    "back": "Data collected <strong>first-hand by or for the business</strong>, to answer its own question. It fits exactly and no rival holds it; it costs more and takes longer."
+   },
+   {
+    "id": "meeting-customer-needs:card:122a1a4c",
+    "front": "What is secondary data?",
+    "back": "Data <strong>already collected by somebody else</strong> for a different purpose. Cheap and immediate; it may cover the wrong group, period or question, and rivals can read it too."
+   },
+   {
+    "id": "meeting-customer-needs:card:1c26d0bd",
+    "front": "What is quantitative data?",
+    "back": "<strong>Numerical</strong> data — counts, percentages, shares — that can be measured, compared and charted. It measures the opportunity; it does not explain it."
+   },
+   {
+    "id": "meeting-customer-needs:card:e115a778",
+    "front": "What is qualitative data?",
+    "back": "<strong>Non-numerical</strong> data — opinions, motivations, reactions, the words customers use. It explains why a number is what it is, and a handful of strong opinions is not a market."
+   },
+   {
+    "id": "meeting-customer-needs:card:c95634a9",
+    "front": "What are the three uses of market research the specification names?",
+    "back": "To <strong>identify and anticipate customer needs and wants</strong>; to <strong>quantify likely demand</strong>; and to <strong>gain insight into consumer behaviour</strong>. Identifying is about now, anticipating is about next, and insight is about how customers decide."
+   },
+   {
+    "id": "meeting-customer-needs:card:3085ae0e",
+    "front": "How do you quantify likely demand from a survey?",
+    "back": "Apply the proportion who said they would buy to the target population, then multiply by price. Zuri: 500,000 × 0.18 = <strong>90,000</strong> weekly buyers; × $1.20 = <strong>$108,000</strong> a week. Then <strong>discount it</strong>: stated intention overstates purchase, so the figure is a ceiling, not a forecast."
+   },
+   {
+    "id": "meeting-customer-needs:card:4788a82b",
+    "front": "Name the four methods of primary market research.",
+    "back": "<strong>Surveys/questionnaires</strong> (breadth, and the only one producing a scalable percentage), <strong>focus groups/consumer panels</strong> (depth from a few), <strong>face-to-face/telephone interviews</strong> (most detail, most cost), and <strong>product trials/test marketing</strong>."
+   },
+   {
+    "id": "meeting-customer-needs:card:2cf89e3e",
+    "front": "What is test marketing, and why is it different from the other methods?",
+    "back": "Selling the product in a <strong>limited area or to a limited group</strong> before full launch and measuring real sales. It is the only primary method that records <strong>behaviour rather than intention</strong> — customers pay real money, so the firm sees the repeat-purchase rate, not the stated one. It is slow, and it warns rivals."
+   },
+   {
+    "id": "meeting-customer-needs:card:eed2cfed",
+    "front": "Name the four sources of secondary market research.",
+    "back": "<strong>Websites and social media</strong>, <strong>newspapers, magazines, TV and radio</strong>, <strong>reports</strong> (industry, government, company accounts — usually the only source of market size and share) and <strong>databases</strong>. Ask of each: who collected it, why, and when?"
+   },
+   {
+    "id": "meeting-customer-needs:card:8e42e372",
+    "front": "What is random sampling?",
+    "back": "Every member of the population has an <strong>equal chance</strong> of being selected. It removes the researcher's bias entirely, and it needs a complete list of the population, which few firms have."
+   },
+   {
+    "id": "meeting-customer-needs:card:812f1790",
+    "front": "What is stratified sampling?",
+    "back": "The population is divided into subgroups, then people are chosen <strong>at random within each subgroup</strong>, in proportion to its size. The most representative method, and the most work to organise."
+   },
+   {
+    "id": "meeting-customer-needs:card:fcfc2afd",
+    "front": "What is quota sampling?",
+    "back": "Subgroups with a <strong>target number</strong> for each, filled with <strong>whoever is available</strong>. Fast and cheap; the selection inside each group is not random, so the interviewer's choices shape the result."
+   },
+   {
+    "id": "meeting-customer-needs:card:696b859f",
+    "front": "Stratified and quota sampling both use subgroups. What is the discriminator?",
+    "back": "What happens <strong>inside</strong> each subgroup. Stratified selects <strong>at random</strong>; quota takes <strong>whoever is to hand</strong>. That one difference is what makes the first representative and the second quick, and it is what an exam item on sampling usually turns on."
+   },
+   {
+    "id": "meeting-customer-needs:card:c83b51a9",
+    "front": "Does a bigger sample make research better?",
+    "back": "Only against <strong>random error</strong>. Size does nothing about <strong>bias</strong>: a sample recruited through one channel excludes everyone that channel misses, however many people it reaches. A biased sample of 10,000 is worth less than an unbiased sample of 500."
+   },
+   {
+    "id": "meeting-customer-needs:card:b8aaeabe",
+    "front": "What is a product-oriented business?",
+    "back": "One that starts from <strong>what it can make well</strong> — an engineering strength, a recipe, a design — and finds customers afterwards. Suits technology-led markets; risks a superb product nobody wants."
+   },
+   {
+    "id": "meeting-customer-needs:card:1557f0c8",
+    "front": "What is a market-oriented business?",
+    "back": "One that starts from <strong>research into what customers want</strong> and designs to it. Suits fast-changing consumer markets; risks incremental improvement only, because research reports on what already exists."
+   },
+   {
+    "id": "meeting-customer-needs:card:b107d412",
+    "front": "What is a market map?",
+    "back": "A plot of the products in a market on <strong>two axes</strong>, each a variable customers choose by — price against quality, for example. It shows a firm's position relative to rivals and reveals <strong>gaps</strong>."
+   },
+   {
+    "id": "meeting-customer-needs:card:94975726",
+    "front": "Give three limitations of a market map.",
+    "back": "It shows <strong>two variables at a time</strong>; it plots <strong>perceptions</strong>, which change; and a <strong>gap is not an opportunity</strong> — it may be empty because nobody wants that position, or because it cannot be produced at that price. Only research into demand settles it."
+   },
+   {
+    "id": "meeting-customer-needs:card:080e37d5",
+    "front": "What is market segmentation?",
+    "back": "Dividing a broad market into <strong>smaller groups sharing needs, characteristics or behaviour</strong>, so a product and a message can be aimed at one group rather than averaged across all of them."
+   },
+   {
+    "id": "meeting-customer-needs:card:3472c964",
+    "front": "Name the four bases for market segmentation.",
+    "back": "<strong>Demographic</strong> (age, gender, income, occupation, family size), <strong>geographic</strong> (country, region, urban or rural, climate), <strong>psychographic</strong> (lifestyle, values, attitudes) and <strong>behavioural</strong> (purchase frequency, occasion, loyalty, benefit sought)."
+   },
+   {
+    "id": "meeting-customer-needs:card:5117c4d2",
+    "front": "What is the difference between segmentation, targeting and positioning?",
+    "back": "<strong>Segmentation</strong> divides the market into groups. <strong>Targeting</strong> chooses which group to serve. <strong>Positioning</strong> decides how the product is presented to the group chosen. Confusing the first two is the most common error on this topic."
+   },
+   {
+    "id": "meeting-customer-needs:card:6d565d2d",
+    "front": "What is competitive advantage?",
+    "back": "A reason customers choose <strong>this firm over its rivals</strong>, arising either from <strong>lower costs</strong> or from <strong>differentiation</strong>. It is worth having only for as long as rivals cannot copy it."
+   },
+   {
+    "id": "meeting-customer-needs:card:20c542ae",
+    "front": "What makes a competitive advantage sustainable?",
+    "back": "That copying it is <strong>slow, expensive or impossible</strong> — a brand built over decades, a patent, an exclusive supply agreement, a distribution network, scale a smaller rival cannot reach. A price cut, a new label or a promotion can be matched within one production run."
+   },
+   {
+    "id": "meeting-customer-needs:card:50eda97f",
+    "front": "What is the purpose of product differentiation?",
+    "back": "To make the product <strong>less substitutable</strong> for a rival's. Customers stop comparing on price alone, so demand becomes less price-sensitive and the firm keeps customers when a rival undercuts it. The difference must be <strong>visible</strong> and <strong>valued</strong>, or it is cost with no return."
+   },
+   {
+    "id": "meeting-customer-needs:card:45589007",
+    "front": "What is value added?",
+    "back": "<strong>Selling price − the cost of bought-in materials and components</strong>, per unit. Zuri: $1.20 − $0.45 = <strong>$0.75</strong> a bottle."
+   },
+   {
+    "id": "meeting-customer-needs:card:3c5ef17f",
+    "front": "Why is value added not the same as profit?",
+    "back": "Value added must still cover <strong>wages, rent, energy, distribution and marketing</strong>; profit is what remains of it afterwards. Price minus <em>total</em> costs is profit; price minus <em>bought-in materials</em> is value added."
+   },
+   {
+    "id": "meeting-customer-needs:card:15505b88",
+    "front": "Name five ways a business can add value.",
+    "back": "<strong>Branding</strong>, <strong>design and packaging</strong>, <strong>convenience</strong>, <strong>customer service</strong> and <strong>customisation</strong>. Each costs something, so adding value pays only when the rise in what the customer will pay exceeds the cost of causing it."
+   },
+   {
+    "id": "meeting-customer-needs:card:d4f3b3f5",
+    "front": "Trace the chain from a market map to a product a business can sell.",
+    "back": "Choose two variables customers actually use to choose → plot every competitor → identify a position nobody occupies → <strong>research whether there is demand there</strong> → quantify it and discount for stated intention → launch only if the revenue covers the cost. The research step is the one students skip, and it is the one that decides whether the gap is an opportunity."
+   },
+   {
+    "id": "meeting-customer-needs:card:c595009e",
+    "front": "Trace the effect of a business failing to adapt to a changing market.",
+    "back": "A change reaches the market → customer expectations reset around the new option → the firm defends its existing sales instead of changing the offer → customers who wanted the new option leave → share moves to the firms that adapted → the firm is left with a shrinking part of a market that may itself have grown."
+   },
+   {
+    "id": "meeting-customer-needs:card:5624639c",
+    "front": "Trace the chain from market research to competitive advantage.",
+    "back": "Research identifies a need the market does not meet → the product is designed to meet it → the difference is visible to customers and valued by them → the product becomes <strong>less substitutable</strong> → demand is less price-sensitive → the firm holds a wider margin → the margin funds the next improvement, which is what keeps the advantage from being copied."
+   }
+  ],
+  "diagrams": [
+   {
+    "id": "meeting-customer-needs:diagram:f0d091ed",
+    "title": "Market Size, Share and Growth",
+    "description": "The chilled-juice market grew from $32 million to $40 million, which is 25% growth, and Zuri Juice's $6 million of that is a 15% share. The two bars are drawn to one scale, so the growth and the share a student sees are the growth and the share the body calculates.",
+    "checklist": [
+     "Both bars drawn to the same scale, with the axis labelled in dollars",
+     "The change between the two years marked, with the growth percentage beside it",
+     "The firm's own sales shown as a block inside the bar for the SAME year",
+     "Market growth divided by the OLD market size, not the new one",
+     "Market share measured against the market of the same year as the sales"
+    ],
+    "svg": "<svg width=\"500\" height=\"330\" viewBox=\"0 0 500 330\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrAmber\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#f59e0b\"/></marker></defs><line x1=\"70\" y1=\"250\" x2=\"460\" y2=\"250\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"70\" y1=\"250\" x2=\"70\" y2=\"45\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><text x=\"64\" y=\"150\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\" transform=\"rotate(-90,64,150)\">Market value ($ million)</text><rect x=\"120\" y=\"123.33\" width=\"86\" height=\"126.67\" fill=\"#475569\"/><text x=\"163\" y=\"115.33\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">$32m</text><text x=\"163\" y=\"268\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">Last year</text><rect x=\"302\" y=\"91.67\" width=\"86\" height=\"158.33\" fill=\"#475569\"/><rect x=\"302\" y=\"226.25\" width=\"86\" height=\"23.75\" fill=\"#3b82f6\"/><text x=\"345\" y=\"83.67\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\">$40m</text><text x=\"345\" y=\"268\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">This year</text><text x=\"400\" y=\"242.13\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\" text-anchor=\"start\">Zuri $6m</text><line x1=\"214\" y1=\"123.33\" x2=\"294\" y2=\"123.33\" stroke=\"#f59e0b\" stroke-width=\"2\" stroke-dasharray=\"6,4\"/><line x1=\"262\" y1=\"123.33\" x2=\"262\" y2=\"91.67\" stroke=\"#f59e0b\" stroke-width=\"2\" marker-end=\"url(#arrAmber)\"/><text x=\"256\" y=\"107.5\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"600\" text-anchor=\"end\">growth 25%</text><text x=\"70\" y=\"286\" fill=\"#7a8299\" font-size=\"11\" font-weight=\"400\" text-anchor=\"start\">Market growth = (40 − 32) ÷ 32 × 100 = 25%</text><text x=\"70\" y=\"304\" fill=\"#7a8299\" font-size=\"11\" font-weight=\"400\" text-anchor=\"start\">Market share = 6 ÷ 40 × 100 = 15%</text><text x=\"70\" y=\"322\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Share is measured against the market of the SAME year</text></svg>"
+   },
+   {
+    "id": "meeting-customer-needs:diagram:09593a9b",
+    "title": "The Research Grid: Primary, Secondary, Quantitative, Qualitative",
+    "description": "Who collected the data decides primary or secondary; what kind of data it is decides quantitative or qualitative. The two questions are independent, which is why four combinations exist and why exam items on this topic usually offer all four as options.",
+    "checklist": [
+     "Two independent dimensions drawn as rows and columns, not as one list",
+     "Primary defined by who collected it and why, not by the method used",
+     "Quantitative and qualitative defined by the kind of data, not by its origin",
+     "A worked example in each of the four cells",
+     "A firm's own records shown as primary even though they sit in a database"
+    ],
+    "svg": "<svg width=\"500\" height=\"330\" viewBox=\"0 0 500 330\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrAmber\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#f59e0b\"/></marker></defs><text x=\"210\" y=\"52\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">QUANTITATIVE — it measures</text><text x=\"390\" y=\"52\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">QUALITATIVE — it explains</text><text x=\"120\" y=\"111\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"600\" text-anchor=\"end\">PRIMARY</text><text x=\"120\" y=\"125\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">we collected it</text><text x=\"120\" y=\"223\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"600\" text-anchor=\"end\">SECONDARY</text><text x=\"120\" y=\"237\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">someone else did</text><rect x=\"130\" y=\"70\" width=\"160\" height=\"82\" rx=\"10\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"140\" y=\"92\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"700\" text-anchor=\"start\">Primary + quantitative</text><text x=\"140\" y=\"110\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Our own till data</text><text x=\"140\" y=\"125\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">A survey we ran</text><rect x=\"310\" y=\"70\" width=\"160\" height=\"82\" rx=\"10\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"320\" y=\"92\" fill=\"#059669\" font-size=\"11\" font-weight=\"700\" text-anchor=\"start\">Primary + qualitative</text><text x=\"320\" y=\"110\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">A focus group we ran</text><text x=\"320\" y=\"125\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Our own interviews</text><rect x=\"130\" y=\"182\" width=\"160\" height=\"82\" rx=\"10\" fill=\"none\" stroke=\"#8b5cf6\" stroke-width=\"2\"/><text x=\"140\" y=\"204\" fill=\"#8b5cf6\" font-size=\"11\" font-weight=\"700\" text-anchor=\"start\">Secondary + quantitative</text><text x=\"140\" y=\"222\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">A published report</text><text x=\"140\" y=\"237\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">National statistics</text><rect x=\"310\" y=\"182\" width=\"160\" height=\"82\" rx=\"10\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\"/><text x=\"320\" y=\"204\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"700\" text-anchor=\"start\">Secondary + qualitative</text><text x=\"320\" y=\"222\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">A magazine review</text><text x=\"320\" y=\"237\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Comments on a rival's site</text><text x=\"130\" y=\"300\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Who collected it decides the row. What kind of data it is decides the column.</text><text x=\"130\" y=\"316\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">The two questions are independent: read both out of the stem.</text></svg>"
+   },
+   {
+    "id": "meeting-customer-needs:diagram:79945957",
+    "title": "Three Ways to Sample the Same Population",
+    "description": "Random selects from the whole population with an equal chance for everyone. Stratified divides into subgroups and then selects at random within each. Quota divides into subgroups and fills a target with whoever is available — and that last difference, inside the subgroup, is the only thing separating it from stratified.",
+    "checklist": [
+     "The same population shown in all three panels, so the methods are comparable",
+     "Random shown selecting from the whole population, with no subgroups",
+     "Stratified shown with subgroups AND random selection inside each",
+     "Quota shown with the same subgroups but selection by availability",
+     "The discriminator named explicitly: what happens inside the subgroup"
+    ],
+    "svg": "<svg width=\"500\" height=\"330\" viewBox=\"0 0 500 330\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrAmber\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#f59e0b\"/></marker></defs><text x=\"250\" y=\"34\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">The same population of 24, sampled three ways</text><rect x=\"40\" y=\"74\" width=\"128\" height=\"150\" rx=\"10\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"104\" y=\"54\" fill=\"#f59e0b\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">Random</text><text x=\"104\" y=\"67\" fill=\"#7a8299\" font-size=\"9.5\" font-weight=\"400\" text-anchor=\"middle\">no subgroups</text><circle cx=\"56\" cy=\"96\" r=\"4\" fill=\"#475569\"/><circle cx=\"75\" cy=\"96\" r=\"4\" fill=\"#475569\"/><circle cx=\"94\" cy=\"96\" r=\"5.5\" fill=\"#f59e0b\"/><circle cx=\"113\" cy=\"96\" r=\"4\" fill=\"#475569\"/><circle cx=\"132\" cy=\"96\" r=\"4\" fill=\"#475569\"/><circle cx=\"151\" cy=\"96\" r=\"4\" fill=\"#475569\"/><circle cx=\"56\" cy=\"118\" r=\"4\" fill=\"#475569\"/><circle cx=\"75\" cy=\"118\" r=\"5.5\" fill=\"#f59e0b\"/><circle cx=\"94\" cy=\"118\" r=\"4\" fill=\"#475569\"/><circle cx=\"113\" cy=\"118\" r=\"4\" fill=\"#475569\"/><circle cx=\"132\" cy=\"118\" r=\"4\" fill=\"#475569\"/><circle cx=\"151\" cy=\"118\" r=\"5.5\" fill=\"#f59e0b\"/><circle cx=\"56\" cy=\"140\" r=\"4\" fill=\"#475569\"/><circle cx=\"75\" cy=\"140\" r=\"4\" fill=\"#475569\"/><circle cx=\"94\" cy=\"140\" r=\"4\" fill=\"#475569\"/><circle cx=\"113\" cy=\"140\" r=\"4\" fill=\"#475569\"/><circle cx=\"132\" cy=\"140\" r=\"4\" fill=\"#475569\"/><circle cx=\"151\" cy=\"140\" r=\"4\" fill=\"#475569\"/><circle cx=\"56\" cy=\"162\" r=\"4\" fill=\"#475569\"/><circle cx=\"75\" cy=\"162\" r=\"5.5\" fill=\"#f59e0b\"/><circle cx=\"94\" cy=\"162\" r=\"4\" fill=\"#475569\"/><circle cx=\"113\" cy=\"162\" r=\"4\" fill=\"#475569\"/><circle cx=\"132\" cy=\"162\" r=\"4\" fill=\"#475569\"/><circle cx=\"151\" cy=\"162\" r=\"4\" fill=\"#475569\"/><text x=\"104\" y=\"242\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">Equal chance for</text><rect x=\"190\" y=\"74\" width=\"128\" height=\"150\" rx=\"10\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"254\" y=\"54\" fill=\"#f59e0b\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">Stratified</text><text x=\"254\" y=\"67\" fill=\"#7a8299\" font-size=\"9.5\" font-weight=\"400\" text-anchor=\"middle\">subgroups, random inside</text><circle cx=\"206\" cy=\"96\" r=\"4\" fill=\"#475569\"/><circle cx=\"225\" cy=\"96\" r=\"4\" fill=\"#475569\"/><circle cx=\"244\" cy=\"96\" r=\"5.5\" fill=\"#f59e0b\"/><circle cx=\"263\" cy=\"96\" r=\"4\" fill=\"#475569\"/><circle cx=\"282\" cy=\"96\" r=\"4\" fill=\"#475569\"/><circle cx=\"301\" cy=\"96\" r=\"4\" fill=\"#475569\"/><circle cx=\"206\" cy=\"118\" r=\"4\" fill=\"#475569\"/><circle cx=\"225\" cy=\"118\" r=\"4\" fill=\"#475569\"/><circle cx=\"244\" cy=\"118\" r=\"4\" fill=\"#475569\"/><circle cx=\"263\" cy=\"118\" r=\"5.5\" fill=\"#f59e0b\"/><circle cx=\"282\" cy=\"118\" r=\"4\" fill=\"#475569\"/><circle cx=\"301\" cy=\"118\" r=\"4\" fill=\"#475569\"/><circle cx=\"206\" cy=\"140\" r=\"4\" fill=\"#475569\"/><circle cx=\"225\" cy=\"140\" r=\"5.5\" fill=\"#f59e0b\"/><circle cx=\"244\" cy=\"140\" r=\"4\" fill=\"#475569\"/><circle cx=\"263\" cy=\"140\" r=\"4\" fill=\"#475569\"/><circle cx=\"282\" cy=\"140\" r=\"4\" fill=\"#475569\"/><circle cx=\"301\" cy=\"140\" r=\"4\" fill=\"#475569\"/><circle cx=\"206\" cy=\"162\" r=\"4\" fill=\"#475569\"/><circle cx=\"225\" cy=\"162\" r=\"4\" fill=\"#475569\"/><circle cx=\"244\" cy=\"162\" r=\"5.5\" fill=\"#f59e0b\"/><circle cx=\"263\" cy=\"162\" r=\"4\" fill=\"#475569\"/><circle cx=\"282\" cy=\"162\" r=\"4\" fill=\"#475569\"/><circle cx=\"301\" cy=\"162\" r=\"4\" fill=\"#475569\"/><text x=\"254\" y=\"242\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">Random selection</text><rect x=\"340\" y=\"74\" width=\"128\" height=\"150\" rx=\"10\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"404\" y=\"54\" fill=\"#f59e0b\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">Quota</text><text x=\"404\" y=\"67\" fill=\"#7a8299\" font-size=\"9.5\" font-weight=\"400\" text-anchor=\"middle\">subgroups, whoever is there</text><circle cx=\"356\" cy=\"96\" r=\"5.5\" fill=\"#f59e0b\"/><circle cx=\"375\" cy=\"96\" r=\"4\" fill=\"#475569\"/><circle cx=\"394\" cy=\"96\" r=\"4\" fill=\"#475569\"/><circle cx=\"413\" cy=\"96\" r=\"4\" fill=\"#475569\"/><circle cx=\"432\" cy=\"96\" r=\"4\" fill=\"#475569\"/><circle cx=\"451\" cy=\"96\" r=\"4\" fill=\"#475569\"/><circle cx=\"356\" cy=\"118\" r=\"5.5\" fill=\"#f59e0b\"/><circle cx=\"375\" cy=\"118\" r=\"4\" fill=\"#475569\"/><circle cx=\"394\" cy=\"118\" r=\"4\" fill=\"#475569\"/><circle cx=\"413\" cy=\"118\" r=\"4\" fill=\"#475569\"/><circle cx=\"432\" cy=\"118\" r=\"4\" fill=\"#475569\"/><circle cx=\"451\" cy=\"118\" r=\"4\" fill=\"#475569\"/><circle cx=\"356\" cy=\"140\" r=\"5.5\" fill=\"#f59e0b\"/><circle cx=\"375\" cy=\"140\" r=\"4\" fill=\"#475569\"/><circle cx=\"394\" cy=\"140\" r=\"4\" fill=\"#475569\"/><circle cx=\"413\" cy=\"140\" r=\"4\" fill=\"#475569\"/><circle cx=\"432\" cy=\"140\" r=\"4\" fill=\"#475569\"/><circle cx=\"451\" cy=\"140\" r=\"4\" fill=\"#475569\"/><circle cx=\"356\" cy=\"162\" r=\"5.5\" fill=\"#f59e0b\"/><circle cx=\"375\" cy=\"162\" r=\"4\" fill=\"#475569\"/><circle cx=\"394\" cy=\"162\" r=\"4\" fill=\"#475569\"/><circle cx=\"413\" cy=\"162\" r=\"4\" fill=\"#475569\"/><circle cx=\"432\" cy=\"162\" r=\"4\" fill=\"#475569\"/><circle cx=\"451\" cy=\"162\" r=\"4\" fill=\"#475569\"/><text x=\"404\" y=\"242\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">Targets filled by</text><line x1=\"194\" y1=\"107\" x2=\"314\" y2=\"107\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"6,4\"/><line x1=\"194\" y1=\"129\" x2=\"314\" y2=\"129\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"6,4\"/><line x1=\"194\" y1=\"151\" x2=\"314\" y2=\"151\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"6,4\"/><line x1=\"344\" y1=\"107\" x2=\"464\" y2=\"107\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"6,4\"/><line x1=\"344\" y1=\"129\" x2=\"464\" y2=\"129\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"6,4\"/><line x1=\"344\" y1=\"151\" x2=\"464\" y2=\"151\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"6,4\"/><text x=\"104\" y=\"256\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">every member</text><text x=\"254\" y=\"256\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\" text-anchor=\"middle\">WITHIN each subgroup</text><text x=\"404\" y=\"256\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\" text-anchor=\"middle\">WHOEVER is available</text><text x=\"40\" y=\"300\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Stratified and quota both use subgroups and both aim at proportionate numbers.</text><text x=\"40\" y=\"316\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">The discriminator is what happens inside the subgroup — and that is what an exam item turns on.</text></svg>"
+   },
+   {
+    "id": "meeting-customer-needs:diagram:bb700edd",
+    "title": "The Chilled-Juice Market Map",
+    "description": "Five brands plotted on price against juice content. Tamu and Mkali sit low on both, Halo high on both, Safi at $1.60 for 40% juice, and Zuri in the middle at $1.20 for 45%. The gap is high juice content at a middle price — and the third view is what turns that empty position into a number, or into a decision not to go there.",
+    "checklist": [
+     "Both axes labelled with the variable AND its direction",
+     "Every competitor plotted and named, in the position its own figures give",
+     "The gap marked as a position on the map, not as a brand",
+     "The gap presented as a question about demand rather than as an opportunity",
+     "The demand estimate shown as a ceiling, with the survey it came from"
+    ],
+    "scenarios": [
+     {
+      "label": "Plotting the competitors",
+      "svg": "<svg width=\"500\" height=\"330\" viewBox=\"0 0 500 330\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrAmber\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#f59e0b\"/></marker></defs><line x1=\"90\" y1=\"265\" x2=\"470\" y2=\"265\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><line x1=\"90\" y1=\"265\" x2=\"90\" y2=\"43\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><text x=\"272.5\" y=\"295\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">Price →  low to high</text><text x=\"72\" y=\"160\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\" transform=\"rotate(-90,72,160)\">Juice content →  low to high</text><text x=\"90\" y=\"281\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">$0.50</text><text x=\"455\" y=\"281\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">$2.10</text><text x=\"84\" y=\"269\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">0%</text><text x=\"84\" y=\"59\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">100%</text><circle cx=\"135.63\" cy=\"233.5\" r=\"5\" fill=\"#94a3b8\"/><text x=\"135.63\" y=\"221.5\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"500\" text-anchor=\"middle\">Tamu</text><circle cx=\"169.84\" cy=\"191.5\" r=\"5\" fill=\"#94a3b8\"/><text x=\"169.84\" y=\"179.5\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"500\" text-anchor=\"middle\">Mkali</text><circle cx=\"249.69\" cy=\"170.5\" r=\"5\" fill=\"#3b82f6\"/><text x=\"249.69\" y=\"158.5\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">Zuri</text><circle cx=\"340.94\" cy=\"181\" r=\"5\" fill=\"#94a3b8\"/><text x=\"340.94\" y=\"169\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"500\" text-anchor=\"middle\">Safi</text><circle cx=\"409.37\" cy=\"86.5\" r=\"5\" fill=\"#94a3b8\"/><text x=\"409.37\" y=\"74.5\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"500\" text-anchor=\"middle\">Halo</text><text x=\"90\" y=\"300\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Two variables customers actually choose by, and every competitor plotted on them.</text><text x=\"90\" y=\"316\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Zuri sits in the middle of both: a mid-price bottle at mid juice content.</text></svg>"
+     },
+     {
+      "label": "Finding the gap",
+      "svg": "<svg width=\"500\" height=\"330\" viewBox=\"0 0 500 330\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrAmber\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#f59e0b\"/></marker></defs><line x1=\"90\" y1=\"265\" x2=\"470\" y2=\"265\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><line x1=\"90\" y1=\"265\" x2=\"90\" y2=\"43\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><text x=\"272.5\" y=\"295\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">Price →  low to high</text><text x=\"72\" y=\"160\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\" transform=\"rotate(-90,72,160)\">Juice content →  low to high</text><text x=\"90\" y=\"281\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">$0.50</text><text x=\"455\" y=\"281\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">$2.10</text><text x=\"84\" y=\"269\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">0%</text><text x=\"84\" y=\"59\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">100%</text><circle cx=\"135.63\" cy=\"233.5\" r=\"5\" fill=\"#475569\"/><text x=\"135.63\" y=\"221.5\" fill=\"#475569\" font-size=\"11\" font-weight=\"500\" text-anchor=\"middle\">Tamu</text><circle cx=\"169.84\" cy=\"191.5\" r=\"5\" fill=\"#475569\"/><text x=\"169.84\" y=\"179.5\" fill=\"#475569\" font-size=\"11\" font-weight=\"500\" text-anchor=\"middle\">Mkali</text><circle cx=\"249.69\" cy=\"170.5\" r=\"5\" fill=\"#3b82f6\"/><text x=\"249.69\" y=\"158.5\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">Zuri</text><circle cx=\"340.94\" cy=\"181\" r=\"5\" fill=\"#475569\"/><text x=\"340.94\" y=\"169\" fill=\"#475569\" font-size=\"11\" font-weight=\"500\" text-anchor=\"middle\">Safi</text><circle cx=\"409.37\" cy=\"86.5\" r=\"5\" fill=\"#475569\"/><text x=\"409.37\" y=\"74.5\" fill=\"#475569\" font-size=\"11\" font-weight=\"500\" text-anchor=\"middle\">Halo</text><circle cx=\"249.69\" cy=\"97\" r=\"26\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\" stroke-dasharray=\"6,4\"/><text x=\"249.69\" y=\"101\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">GAP</text><text x=\"281.69\" y=\"91\" fill=\"#f59e0b\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">about 80% juice</text><text x=\"281.69\" y=\"105\" fill=\"#f59e0b\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">at about $1.20</text><text x=\"90\" y=\"300\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">A gap is a position no competitor occupies — high juice content at a middle price.</text><text x=\"90\" y=\"316\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">It shows where nobody is. It does not show that anybody wants to buy there.</text></svg>"
+     },
+     {
+      "label": "Testing the gap for demand",
+      "svg": "<svg width=\"500\" height=\"330\" viewBox=\"0 0 500 330\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrAmber\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#f59e0b\"/></marker></defs><line x1=\"90\" y1=\"265\" x2=\"470\" y2=\"265\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><line x1=\"90\" y1=\"265\" x2=\"90\" y2=\"43\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><text x=\"272.5\" y=\"295\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">Price →  low to high</text><text x=\"72\" y=\"160\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\" transform=\"rotate(-90,72,160)\">Juice content →  low to high</text><text x=\"90\" y=\"281\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">$0.50</text><text x=\"455\" y=\"281\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">$2.10</text><text x=\"84\" y=\"269\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">0%</text><text x=\"84\" y=\"59\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">100%</text><circle cx=\"135.63\" cy=\"233.5\" r=\"5\" fill=\"#475569\"/><text x=\"135.63\" y=\"221.5\" fill=\"#475569\" font-size=\"11\" font-weight=\"500\" text-anchor=\"middle\">Tamu</text><circle cx=\"169.84\" cy=\"191.5\" r=\"5\" fill=\"#475569\"/><text x=\"169.84\" y=\"179.5\" fill=\"#475569\" font-size=\"11\" font-weight=\"500\" text-anchor=\"middle\">Mkali</text><circle cx=\"249.69\" cy=\"170.5\" r=\"5\" fill=\"#3b82f6\"/><text x=\"249.69\" y=\"158.5\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">Zuri</text><circle cx=\"340.94\" cy=\"181\" r=\"5\" fill=\"#475569\"/><text x=\"340.94\" y=\"169\" fill=\"#475569\" font-size=\"11\" font-weight=\"500\" text-anchor=\"middle\">Safi</text><circle cx=\"409.37\" cy=\"86.5\" r=\"5\" fill=\"#475569\"/><text x=\"409.37\" y=\"74.5\" fill=\"#475569\" font-size=\"11\" font-weight=\"500\" text-anchor=\"middle\">Halo</text><circle cx=\"249.69\" cy=\"97\" r=\"26\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\" stroke-dasharray=\"6,4\"/><text x=\"249.69\" y=\"101\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">GAP</text><rect x=\"228\" y=\"78\" width=\"250\" height=\"76\" rx=\"10\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2\"/><text x=\"240\" y=\"98\" fill=\"#059669\" font-size=\"11\" font-weight=\"700\" text-anchor=\"start\">Does anyone want to buy here?</text><text x=\"240\" y=\"116\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">600 shoppers asked · 18% would buy weekly</text><text x=\"240\" y=\"132\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">500,000 × 0.18 = 90,000 buyers a week</text><text x=\"240\" y=\"148\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">90,000 × $1.20 = $108,000 a week — a ceiling</text><text x=\"90\" y=\"300\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Only research turns an empty position into an opportunity.</text><text x=\"90\" y=\"316\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">And the figure it produces is an upper estimate, because people overstate what they will buy.</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "meeting-customer-needs:diagram:46092036",
+    "title": "Where the Money Goes on One Bottle",
+    "description": "Bought-in materials cost $0.45 and the bottle sells for $1.20, so value added is $0.75. The bar is split in that ratio. Value added is not profit: wages, rent, energy, distribution and marketing all come out of it before anything remains.",
+    "checklist": [
+     "One bar of the selling price, split at the cost of bought-in materials",
+     "The two segments drawn in the ratio the figures give",
+     "Value added labelled as the difference, with its own figure",
+     "Value added distinguished from profit in words on the diagram",
+     "The ways of adding value named: branding, design, convenience, service, customisation"
+    ],
+    "svg": "<svg width=\"500\" height=\"300\" viewBox=\"0 0 500 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrAmber\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#f59e0b\"/></marker></defs><text x=\"80\" y=\"58\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"700\" text-anchor=\"start\">One bottle of Zuri Juice, by where the money goes</text><rect x=\"80\" y=\"110\" width=\"135\" height=\"54\" fill=\"#475569\" rx=\"4\"/><rect x=\"215\" y=\"110\" width=\"225\" height=\"54\" fill=\"#059669\" rx=\"4\"/><text x=\"147.5\" y=\"142\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">$0.45</text><text x=\"327.5\" y=\"142\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\">$0.75</text><text x=\"147.5\" y=\"100\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">Bought-in materials</text><text x=\"327.5\" y=\"100\" fill=\"#059669\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">VALUE ADDED</text><line x1=\"80\" y1=\"178\" x2=\"440\" y2=\"178\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"260\" y=\"194\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">Selling price $1.20</text><text x=\"80\" y=\"220\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"start\">Value added = $1.20 − $0.45 = $0.75 per bottle</text><text x=\"80\" y=\"244\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">That $0.75 is NOT profit: wages, rent, energy, distribution and marketing</text><text x=\"80\" y=\"260\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">all come out of it first. Profit is whatever is left afterwards.</text><text x=\"80\" y=\"282\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Added by branding, design, convenience, service and customisation.</text></svg>"
+   }
+  ],
+  "extras": {
+   "chains": [
+    {
+     "title": "Why a mass-market firm can undercut a niche firm",
+     "steps": [
+      "A standardised product is sold to the widest possible range of customers.",
+      "Output per design is very high, so machinery runs continuously and inputs are bought in bulk.",
+      "Design, machinery and advertising costs are spread over far more units, so average cost per unit falls.",
+      "The firm can set a price a low-volume rival cannot match and still cover its costs."
+     ],
+     "result": "Scale, not a better product, is what lets a mass-market firm compete on price — and the thin margin on each unit is what it pays for that."
+    },
+    {
+     "title": "How online retailing reshapes competition",
+     "steps": [
+      "Selling online removes the need for premises, so the fixed cost of entering falls.",
+      "New sellers enter the market with far less capital than a shop would have required.",
+      "Customers compare every seller's price in seconds, so a premium has to be visible to survive.",
+      "Established firms must cut price or give customers a reason to pay more."
+     ],
+     "result": "A technology that changed one cost ends by changing the number of rivals, the transparency of prices and the strategy of every firm already there."
+    },
+    {
+     "title": "How brand loyalty turns into a margin",
+     "steps": [
+      "The brand promise is kept consistently, purchase after purchase.",
+      "Customers stop comparing alternatives and the brand becomes the default choice.",
+      "Demand becomes less sensitive to price, so a rise loses fewer customers than it would a rival.",
+      "The firm charges a premium and spends less winning the same customers back."
+     ],
+     "result": "A wider margin on a product a rival could copy — and a market that is harder to enter for any name that means nothing to customers yet."
+    },
+    {
+     "title": "From a gap on the map to a decision",
+     "steps": [
+      "Two variables customers actually choose by are put on the axes and every rival is plotted.",
+      "A position no competitor occupies appears on the map.",
+      "Research tests whether customers want a product at that position, and at what price.",
+      "The proportion who say they would buy is scaled to the population and discounted for stated intention."
+     ],
+     "result": "A number the business can plan production and cash flow against — or the discovery that the gap was empty because nobody wanted it."
+    },
+    {
+     "title": "How to work out a market share",
+     "steps": [
+      "Find the total sales of the whole market for the period.",
+      "Take the firm's own sales for the same period, so the two figures are comparable.",
+      "Divide the firm's sales by the total market sales to get the proportion it holds.",
+      "Multiply by 100 and write the answer as a percentage."
+     ],
+     "result": "Zuri: $6m ÷ $40m × 100 = 15%. Compare that share with the market's own growth before claiming the firm is gaining ground."
+    },
+    {
+     "title": "What a product trial tells a business that a survey cannot",
+     "steps": [
+      "Choose a limited area or group to sell in, which decides what the result represents.",
+      "Put the product on sale there at a real price, so customers commit real money.",
+      "Measure actual sales and repeat purchases, not stated intention.",
+      "Adjust price, packaging or recipe on the evidence, or abandon the launch."
+     ],
+     "result": "Behaviour rather than intention — which is why a trial is the one primary method that does not need discounting for what people say."
+    },
+    {
+     "title": "Why differentiation protects a firm in a price war",
+     "steps": [
+      "The product is made distinguishable in a way customers can see and value.",
+      "It stops being a straight substitute for a rival's, so the comparison is no longer price alone.",
+      "Demand becomes less price-sensitive, so fewer customers switch when a rival undercuts.",
+      "The firm holds its price and its margin while the price-cutting rival loses its own."
+     ],
+     "result": "A defence that a price cut can never provide, because a price cut is the one move every competitor can copy the same week."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "Research reduces uncertainty; it does not remove it",
+     "content": "A scaled survey figure is a ceiling on demand rather than a forecast: stated intention overstates purchase, the sample carries a margin of error, the proportion was measured at one price, and the market moves before production starts. The judgement is about how much weight to put on the number, not whether to have one."
+    },
+    {
+     "title": "A niche strategy concentrates risk as well as margin",
+     "content": "Serving one small group caps total revenue however well it is served, and leaves the firm with little to fall back on if tastes shift or a larger rival decides the niche is worth entering. The premium and the exposure are the same fact seen from two sides."
+    },
+    {
+     "title": "An advantage built on price is the easiest one to copy",
+     "content": "A price cut wins customers within days and can be matched within days. Cost leadership is durable only where the firm's costs are genuinely lower, rather than its margin merely thinner — and where they are not, the cut is a transfer from profit to customers that a rival can end at will."
+    },
+    {
+     "title": "Adding value costs before it earns",
+     "content": "Branding, design, service and customisation all raise costs immediately and raise willingness to pay only if customers can see the difference and think it worth paying for. Value added that nobody notices is cost added to the product and nothing added to the price."
+    }
+   ]
+  },
+  "mistakes": [
+   {
+    "id": "meeting-customer-needs:mistake:d6707b64",
+    "title": "Confusing Risk and Uncertainty",
+    "mistake": "Students use \"risk\" and \"uncertainty\" as synonyms, or treat uncertainty as simply a larger amount of risk.",
+    "correction": "The difference is whether a probability exists at all. Risk means the possible outcomes can be listed and given odds, so the firm can plan, price or insure. Uncertainty means the outcomes cannot be listed, so only flexibility helps — cash reserves, a wider range, a shorter supply chain.",
+    "examTip": "When a case study lists things that might go wrong, sort them into the two categories before you evaluate. Say which are quantifiable and which are not, rather than treating the whole list as one thing."
+   },
+   {
+    "id": "meeting-customer-needs:mistake:ee0ff01a",
+    "title": "Assuming Niche Markets Are Always Better",
+    "mistake": "Students argue that a business should choose a niche because margins are higher, without weighing what the niche costs it.",
+    "correction": "A niche caps total revenue however well it is served, and a firm designed around one small group has little to fall back on if that group shrinks or a larger rival enters. A mass market offers volume and scale economies at a thinner margin. Neither is better in general.",
+    "examTip": "Make the recommendation conditional on the firm in the case: its resources, the level of competition it would face, and how specific the customer need is."
+   },
+   {
+    "id": "meeting-customer-needs:mistake:508d97cc",
+    "title": "Confusing Primary and Secondary With Quantitative and Qualitative",
+    "mistake": "Students treat \"primary\" as meaning numbers and \"secondary\" as meaning opinions, or decide the category from the method rather than from who collected the data.",
+    "correction": "The two dimensions are independent. Primary or secondary is about WHO collected it and why; quantitative or qualitative is about WHAT KIND of data it is. Till data is primary and quantitative, a focus group is primary and qualitative, a published report is secondary and quantitative, a magazine review is secondary and qualitative.",
+    "examTip": "Read both dimensions out of the stem separately before choosing an option. Most items on this topic are testing exactly the pairing, and the four options are usually the four combinations."
+   },
+   {
+    "id": "meeting-customer-needs:mistake:8e6af17b",
+    "title": "Treating a Gap in the Market as an Opportunity",
+    "mistake": "Students read an empty position on a market map as proof that customers are waiting there.",
+    "correction": "A gap shows only that no competitor occupies that position. It may be empty because nobody wants it, or because it cannot be produced profitably at that price. Research into demand is what turns a gap into an opportunity.",
+    "examTip": "In a mapping question, recommend the position AND say how the business would test demand at it. The recommendation without the test is only half an answer, and the assessment a Discuss or Assess asks for is the other half."
+   },
+   {
+    "id": "meeting-customer-needs:mistake:c494488a",
+    "title": "Confusing Adding Value With Raising the Price",
+    "mistake": "Students write that a business adds value by charging more for the same product.",
+    "correction": "Value added is selling price minus the cost of bought-in materials, and it rises only when the customer's willingness to pay rises. Raising the price without changing anything the customer values loses customers instead. Branding, design, convenience, service and customisation are what raise willingness to pay; the higher price follows from them.",
+    "examTip": "Say what the business changes and why the customer would pay more for it, then state the value added as a figure per unit if the data allows: $1.20 − $0.45 = $0.75."
+   },
+   {
+    "id": "meeting-customer-needs:mistake:75887a5e",
+    "title": "Reading Rising Sales as Rising Market Share",
+    "mistake": "Students conclude that a firm whose sales rose has gained market share.",
+    "correction": "Share is the firm's sales as a proportion of the whole market. If the market grew faster than the firm, share has fallen despite higher sales. A firm growing 10% in a market growing 25% is losing ground.",
+    "examTip": "Compare the two growth rates before making any claim about share, and calculate share at both dates if the figures are given."
+   },
+   {
+    "id": "meeting-customer-needs:mistake:30ea6077",
+    "title": "Missing the Difference Between Stratified and Quota Sampling",
+    "mistake": "Students say stratified sampling is the one that divides the population into subgroups, and choose it whenever a stem mentions subgroups.",
+    "correction": "Both methods divide the population into subgroups, and both aim at proportionate numbers. The discriminator is what happens inside each subgroup: stratified selects AT RANDOM within it, quota fills a target with whoever is available.",
+    "examTip": "Look for the words that describe the selection inside the group — \"at random\", or \"whoever passes\", \"whoever is available\". If the stem does not say, the item cannot distinguish the two and neither can you."
+   },
+   {
+    "id": "meeting-customer-needs:mistake:e033fd86",
+    "title": "Treating a Scaled Survey Result as a Sales Forecast",
+    "mistake": "Students scale a survey percentage up to the population and present the answer as the number of units the business will sell.",
+    "correction": "Stated intention overstates purchase, because nothing was at stake when the question was answered. The sample carries a margin of error, the proportion was measured at one price only, and the market moves before production starts. The scaled figure is a ceiling on demand, not a forecast of it.",
+    "examTip": "Show the scaling, state the figure with its unit, then add one sentence on why it is an over-estimate. That sentence is where the assessment marks in a Discuss or an Assess actually sit."
+   }
+  ]
+ }
+}

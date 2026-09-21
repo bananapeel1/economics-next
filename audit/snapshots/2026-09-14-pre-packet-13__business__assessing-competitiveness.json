@@ -1,0 +1,660 @@
+{
+ "section_id": "assessing-competitiveness",
+ "subject": "business",
+ "label": "2026-09-14-pre-packet-13",
+ "tables": {
+  "section_content": [
+   {
+    "id": "assessing-competitiveness:block:12bef43c",
+    "title": "Financial Ratios",
+    "sections": [
+     {
+      "id": "assessing-competitiveness:sub:profitability-ratios",
+      "body": [
+       {
+        "text": "**Gross profit margin** = (gross profit / revenue) x 100. It shows how much of every pound of revenue is left after direct production costs (cost of sales). A rising gross margin suggests the firm is managing production costs well or gaining pricing power.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Operating profit margin** = (operating profit / revenue) x 100. This deducts all operating expenses (rent, wages, marketing) from gross profit, showing the profit from core business operations before interest and tax. It is a better measure of management efficiency than gross margin because it includes overhead control.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**ROCE (Return on Capital Employed)** = (operating profit / capital employed) x 100. Capital employed = total equity + non-current liabilities. ROCE measures how effectively the firm uses its long-term finance to generate profit. It is the single most important ratio for investors comparing alternative investments.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Calculate profitability ratios",
+         "Compare year-on-year for trends",
+         "Benchmark against competitors and industry"
+        ],
+        "result": "Context reveals whether performance is genuinely strong or weak",
+        "resultType": "good"
+       }
+      ],
+      "title": "Profitability Ratios",
+      "keyIdea": "Profitability ratios measure how effectively a firm turns revenue into profit — but a number in isolation means nothing; it must be compared year-on-year, against competitors, or against the industry average.",
+      "examMatters": "Examiners penalise students who calculate correctly but fail to interpret. Always state what the ratio shows, compare it to a benchmark, and explain what might cause the figure. A ratio tells you what is happening — your job is to explain why.",
+      "realExample": {
+       "text": "Apple consistently achieves a gross profit margin of around 45%, compared to Samsung's roughly 35%. This reflects Apple's pricing power — its brand allows premium prices that Samsung's hardware-focused model cannot match, despite Samsung selling more units globally.",
+       "emoji": "🍎"
+      },
+      "misconception": "Students calculate a ratio and declare it 'good' or 'bad' with no comparison. Wrong — a 10% operating margin is excellent in grocery retail (Tesco) but poor in luxury goods (LVMH). Instead write: always compare ratios in context — against the firm's own history, its competitors, and the industry average."
+     },
+     {
+      "id": "assessing-competitiveness:sub:liquidity-gearing-ratios",
+      "body": [
+       {
+        "text": "**Current ratio** = current assets / current liabilities. It measures whether the firm can meet its short-term debts. A ratio of 1.5-2.0 is generally healthy — below 1.0 signals potential cash flow crisis, while much above 2.0 suggests idle resources that could be invested.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Gearing** = (non-current liabilities / capital employed) x 100. It shows what proportion of long-term finance comes from debt rather than equity. High gearing (above 50%) means the firm is heavily reliant on borrowing, which amplifies both profits and losses — a double-edged sword.",
+        "type": "paragraph"
+       },
+       {
+        "text": "High gearing increases **financial risk** because interest must be paid regardless of profit. In good times, debt magnifies returns to shareholders (because they keep all profit after fixed interest payments). In bad times, the fixed interest burden can push the firm towards insolvency. This is the fundamental trade-off of leverage.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Firm borrows heavily → gearing rises",
+         "Interest payments are fixed obligations",
+         "Profits fall in a downturn"
+        ],
+        "result": "High gearing amplifies losses — the firm may be unable to service its debt",
+        "resultType": "bad"
+       }
+      ],
+      "title": "Liquidity and Gearing Ratios",
+      "keyIdea": "A profitable firm can still collapse if it runs out of cash — liquidity ratios check short-term survival, while gearing measures how dependent the firm is on borrowed money and the financial risk that creates.",
+      "examMatters": "Examiners love to test the limitations of ratios. Always include: ratios show what, not why; they are backward-looking (based on past data); they can be manipulated through accounting choices; and they must be compared in context to have any meaning.",
+      "realExample": {
+       "text": "Tesla's ROCE improved dramatically from negative figures in 2019 to over 25% by 2023 as production scaled up and the firm turned consistently profitable. Investors tracked this ratio as proof that Tesla was transitioning from a cash-burning start-up to an efficient manufacturer.",
+       "emoji": "⚡"
+      },
+      "misconception": "Students say high gearing is always bad. Wrong — in stable industries with predictable cash flows (utilities, supermarkets), high gearing is manageable because revenue is reliable. Instead write: whether high gearing is risky depends on the stability of the firm's revenue — predictable cash flows can safely support more debt."
+     }
+    ],
+    "takeaway": [
+     "Gross margin, operating margin, and ROCE measure profitability — ROCE is the most important for investors.",
+     "Current ratio checks short-term survival; gearing measures financial risk from borrowing.",
+     "Ratios in isolation are meaningless — always compare year-on-year, vs competitors, and vs industry averages."
+    ]
+   },
+   {
+    "id": "assessing-competitiveness:block:a1dd1003",
+    "title": "Core Competencies",
+    "sections": [
+     {
+      "id": "assessing-competitiveness:sub:vrio-framework",
+      "body": [
+       {
+        "text": "The **VRIO framework** (Barney, 1991) evaluates whether a firm's resources and capabilities can deliver sustained competitive advantage. It asks four sequential questions about each resource.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Valuable** — does the resource enable the firm to exploit opportunities or neutralise threats? If not, it is irrelevant. **Rare** — do few competitors possess it? If many firms have it, it is merely a competitive necessity, not an advantage. **Inimitable** — is it difficult or costly to copy? This is the critical test. Resources are hard to imitate due to history (path dependence), complexity (many interlinked factors), or social embeddedness (culture, relationships). **Organisationally embedded** — is the firm structured to exploit the resource? Even a valuable, rare, inimitable resource is wasted if the organisation cannot deploy it effectively.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Identify key resource",
+         "Is it valuable? → Yes",
+         "Is it rare? → Yes",
+         "Is it hard to imitate? → Yes",
+         "Is the firm organised to exploit it? → Yes"
+        ],
+        "result": "Sustained competitive advantage — but only while all four conditions hold",
+        "resultType": "good"
+       }
+      ],
+      "title": "The VRIO Framework",
+      "keyIdea": "A resource only delivers sustained competitive advantage if it passes all four VRIO tests — valuable, rare, hard to imitate, and organisationally embedded — fail any one and the advantage erodes.",
+      "examMatters": "Examiners reward structured VRIO analysis. Take the case study firm's key resource, test it against each criterion in order, and conclude whether the advantage is temporary or sustained. This framework turns a vague discussion of 'strengths' into rigorous analysis.",
+      "realExample": {
+       "text": "Coca-Cola's brand is a textbook VRIO resource. Valuable (drives global sales), rare (no equivalent brand recognition), hard to imitate (built over 130+ years of marketing and cultural embedding — path dependence makes it nearly impossible to replicate), and organisationally embedded (Coca-Cola's global distribution and marketing machine exploits the brand fully).",
+       "emoji": "🥤"
+      },
+      "misconception": "Students list resources and assume they automatically create advantage. Wrong — a resource must pass all four VRIO tests sequentially. Being valuable alone just means competitive parity; being valuable and rare gives temporary advantage; only all four together create sustained advantage. Instead write: apply VRIO as a sequential filter — each test narrows the field."
+     },
+     {
+      "id": "assessing-competitiveness:sub:tangible-intangible-competencies",
+      "body": [
+       {
+        "text": "**Tangible competencies** are physical or financial resources: factories, equipment, technology, distribution networks, cash reserves. They are visible, measurable, and — critically — easier for competitors to replicate by spending money.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Intangible competencies** are non-physical: brand reputation, organisational culture, employee expertise, patents, customer relationships, and accumulated knowledge. They are harder to measure but typically more valuable because they are far more difficult to copy. A competitor can build a factory; they cannot buy a culture.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The most powerful competitive positions combine both. However, competitive advantage is **temporary** without continuous reinvestment and innovation. Even the strongest competencies erode if the firm becomes complacent — markets shift, technologies change, and competitors eventually find ways to catch up or leapfrog.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Firm builds tangible + intangible competencies",
+         "Competitors attempt to replicate",
+         "Tangible assets copied relatively quickly",
+         "Intangible assets resist imitation"
+        ],
+        "result": "Intangible competencies provide more durable advantage — but none last forever without reinvestment",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Tangible vs Intangible Competencies",
+      "keyIdea": "The most durable competitive advantages are usually intangible — brand, culture, knowledge, relationships — because they are hardest to see, measure, and copy, which is precisely what makes them defensible.",
+      "examMatters": "A top evaluation point: explain why intangible competencies are more sustainable than tangible ones using VRIO logic (they are harder to imitate due to path dependence, social complexity, and causal ambiguity). Then qualify — even intangible advantages erode without reinvestment, as Nokia and Kodak demonstrate.",
+      "realExample": {
+       "text": "Amazon's competitive advantage combines tangible logistics infrastructure (fulfilment centres, delivery fleet) with intangible competencies (data-driven culture, customer obsession, algorithmic expertise). The warehouses can be built by competitors; the culture and data ecosystem cannot be easily replicated.",
+       "emoji": "📦"
+      },
+      "misconception": "Students assume competitive advantage is permanent once established. Wrong — Nokia dominated mobile phones, Blockbuster dominated video rental, and Kodak dominated photography, yet all were overtaken. Instead write: competitive advantage is temporary unless the firm continuously reinvests in and refreshes its core competencies."
+     }
+    ],
+    "takeaway": [
+     "VRIO: valuable → rare → inimitable → organisationally embedded — all four needed for sustained advantage.",
+     "Intangible competencies (brand, culture, knowledge) are more defensible than tangible ones (factories, equipment).",
+     "Competitive advantage is always temporary — continuous reinvestment is the only way to maintain it."
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "flow": {
+     "steps": [
+      "Calculate ratios from financial statements",
+      "Compare over time and against competitors",
+      "Investigate causes of changes"
+     ],
+     "result": "Quantitative snapshot of competitiveness — must be combined with qualitative analysis",
+     "resultType": "neutral"
+    },
+    "meta": "5 concepts",
+    "title": "Financial Ratios for Competitiveness",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Gross profit margin</strong> — (gross profit / revenue) × 100; shows the percentage of revenue remaining after direct costs.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Operating profit margin</strong> — (operating profit / revenue) × 100; shows profitability after all operating costs, a better indicator of management efficiency.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Return on capital employed (ROCE)</strong> — (operating profit / capital employed) × 100; measures how efficiently the firm uses its total capital.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Current ratio</strong> — current assets / current liabilities; measures short-term liquidity; ideally 1.5–2.0.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Gearing ratio</strong> — (long-term debt / capital employed) × 100; measures the proportion of capital funded by debt; high gearing = high financial risk.",
+        "type": "def"
+       }
+      ],
+      "title": "KEY RATIOS"
+     },
+     {
+      "items": [
+       {
+        "text": "Ratios are most meaningful in <strong>context</strong> — compare year-on-year (trend), against competitors (benchmarking), or against industry averages.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Ratios tell you <strong>what</strong> is happening but not <strong>why</strong>. A falling ROCE could mean falling profits, rising capital employed, or both — you need qualitative analysis too.",
+        "type": "imp"
+       },
+       {
+        "text": "Financial ratios link to competitiveness: a firm with higher ROCE and profit margins than rivals has a competitive advantage in attracting investment.",
+        "type": "link"
+       }
+      ],
+      "title": "USING RATIOS"
+     }
+    ],
+    "keyIdea": "Financial ratios convert raw accounting data into comparable metrics that reveal a firm's profitability, liquidity, and efficiency — they are most useful when compared over time or against competitors.",
+    "formulas": [
+     {
+      "text": "(Gross Profit ÷ Revenue) × 100",
+      "label": "GROSS PROFIT MARGIN"
+     },
+     {
+      "text": "(Operating Profit ÷ Capital Employed) × 100",
+      "label": "ROCE"
+     },
+     {
+      "text": "Current Assets ÷ Current Liabilities",
+      "label": "CURRENT RATIO"
+     }
+    ],
+    "takeaway": [
+     "Key ratios: profit margins, ROCE, current ratio, gearing.",
+     "Always compare: year-on-year, vs competitors, vs industry.",
+     "Ratios show what's happening; qualitative analysis explains why."
+    ],
+    "examMatters": "Examiners expect accurate calculations, then evaluation. Don't just state the ratio — interpret it: 'ROCE has fallen from 18% to 12%, suggesting the firm's efficiency has deteriorated, possibly due to the £5m investment in new equipment that has not yet generated returns.'",
+    "misconception": "Students think a single ratio tells the full story. Wrong because ratios must be compared in context and combined with qualitative information. Instead write: financial ratios are diagnostic tools — they highlight symptoms, not causes. Always combine ratio analysis with qualitative context from the case study."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Identify what the firm does better than anyone else",
+      "Check: is it valuable, rare, and hard to imitate?",
+      "Build strategy around that competency"
+     ],
+     "result": "Sustainable competitive advantage from unique, hard-to-replicate capabilities",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "Core Competencies and Competitive Advantage",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Core competency</strong> — a unique capability that gives a firm a competitive advantage; it must be valuable, rare, difficult to imitate, and organisationally embedded (VRIO framework).",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Competitive advantage</strong> — an attribute that allows a firm to outperform its rivals, either through lower costs or differentiation.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Core competencies can be <strong>tangible</strong> (patented technology, location, equipment) or <strong>intangible</strong> (brand, culture, knowledge, relationships).",
+        "type": "mech"
+       },
+       {
+        "text": "Intangible competencies are often more sustainable because they are <strong>harder to copy</strong> — you can buy a factory, but you cannot easily replicate a corporate culture.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Competitive advantage is not permanent — it erodes as competitors imitate, technology changes, and customer needs evolve. Firms must continually invest in innovation.",
+        "type": "imp"
+       },
+       {
+        "text": "Core competencies link to Porter's generic strategies: a firm's competencies determine whether it should pursue cost leadership or differentiation.",
+        "type": "link"
+       }
+      ],
+      "title": "BUILDING AND SUSTAINING ADVANTAGE"
+     }
+    ],
+    "keyIdea": "A firm's competitive advantage stems from its core competencies — the unique combination of resources and capabilities that competitors cannot easily replicate.",
+    "takeaway": [
+     "Core competency: valuable + rare + hard to imitate + organisationally embedded.",
+     "Intangible competencies (brand, culture) are hardest to copy.",
+     "Advantage is temporary — continuous innovation is needed to sustain it."
+    ],
+    "examMatters": "Examiners expect you to identify a firm's core competency from the case study and evaluate whether it is sustainable. Use the VRIO framework: is it Valuable, Rare, hard to Imitate, and Organisationally supported?",
+    "misconception": "Students say competitive advantage lasts forever. Wrong because competitors innovate, technology disrupts, and customer needs change. Instead write: competitive advantage is temporary unless the firm continuously reinvests in its core competencies and adapts to changing market conditions."
+   }
+  ],
+  "section_quiz": [
+   {
+    "id": "assessing-competitiveness:quiz:736d0dbb",
+    "options": [
+     "20%",
+     "25%",
+     "40%",
+     "60%"
+    ],
+    "question": "A firm has revenue of £500,000 and gross profit of £200,000. Its gross profit margin is:",
+    "explanation": "Gross profit margin = (£200,000 ÷ £500,000) × 100 = 40%.",
+    "correctIndex": 2
+   },
+   {
+    "id": "assessing-competitiveness:quiz:1b2bdcbb",
+    "options": [
+     "6%",
+     "10%",
+     "15%",
+     "25%"
+    ],
+    "question": "A firm has operating profit of £60,000 and capital employed of £400,000. Its ROCE is:",
+    "explanation": "ROCE = (£60,000 ÷ £400,000) × 100 = 15%.",
+    "correctIndex": 2
+   },
+   {
+    "id": "assessing-competitiveness:quiz:ee18b428",
+    "options": [
+     "0.63:1",
+     "1.00:1",
+     "1.60:1",
+     "2.50:1"
+    ],
+    "question": "A firm has current assets of £80,000 and current liabilities of £50,000. Its current ratio is:",
+    "explanation": "Current ratio = £80,000 ÷ £50,000 = 1.60:1.",
+    "correctIndex": 2
+   },
+   {
+    "id": "assessing-competitiveness:quiz:6c8068cc",
+    "options": [
+     "30%",
+     "40%",
+     "50%",
+     "60%"
+    ],
+    "question": "A firm has non-current liabilities of £300,000 and capital employed of £500,000. Its gearing ratio is:",
+    "explanation": "Gearing = (£300,000 ÷ £500,000) × 100 = 60%. This is above 50%, so the firm is highly geared.",
+    "correctIndex": 3
+   },
+   {
+    "id": "assessing-competitiveness:quiz:b38c2eab",
+    "options": [
+     "Current ratio",
+     "Gross profit margin",
+     "Acid test ratio",
+     "Gearing ratio"
+    ],
+    "question": "Which ratio EXCLUDES inventory from the calculation?",
+    "explanation": "The acid test (quick ratio) = (Current assets − Inventory) ÷ Current liabilities. It excludes inventory because it may not be easily converted to cash.",
+    "correctIndex": 2
+   },
+   {
+    "id": "assessing-competitiveness:quiz:b3467220",
+    "options": [
+     "Low cost of sales",
+     "High overhead costs relative to gross profit",
+     "Efficient inventory management",
+     "Strong revenue growth"
+    ],
+    "question": "A firm's high gross profit margin but low net profit margin suggests:",
+    "explanation": "If gross profit margin is high but net profit margin is low, the gap must be caused by high overheads (rent, salaries, marketing, depreciation) eating into gross profit.",
+    "correctIndex": 1
+   },
+   {
+    "id": "assessing-competitiveness:quiz:815a4c46",
+    "options": [
+     "Output ÷ Number of employees",
+     "(Leavers ÷ Average staff) × 100%",
+     "(Days absent ÷ Total working days) × 100%",
+     "Revenue per employee"
+    ],
+    "question": "Labour turnover is calculated as:",
+    "explanation": "Labour turnover = (Number of staff leaving ÷ Average number of staff) × 100%. It measures the rate at which employees leave the organisation.",
+    "correctIndex": 1
+   },
+   {
+    "id": "assessing-competitiveness:quiz:088917a5",
+    "options": [
+     "Performance-related pay",
+     "Employee share ownership",
+     "Empowerment",
+     "Zero-hours contracts"
+    ],
+    "question": "Which HR strategy involves giving employees greater authority over their work?",
+    "explanation": "Empowerment involves delegating authority and responsibility to employees, giving them greater control over their work and decision-making.",
+    "correctIndex": 2
+   },
+   {
+    "id": "assessing-competitiveness:quiz:0c40ebd1",
+    "options": [
+     "Decorating the business premises",
+     "Manipulating financial figures to present a better picture",
+     "Using different accounting standards",
+     "Increasing window display spending"
+    ],
+    "question": "Window dressing in accounting refers to:",
+    "explanation": "Window dressing is the practice of manipulating financial data to make the firm's financial position appear more favourable than it actually is.",
+    "correctIndex": 1
+   },
+   {
+    "id": "assessing-competitiveness:quiz:37077ef7",
+    "options": [
+     "The firm is generating excellent returns",
+     "Debt finance is adding value to the firm",
+     "The firm is destroying value by using debt finance",
+     "The firm should increase its gearing"
+    ],
+    "question": "If a firm's ROCE is 8% and its cost of borrowing is 10%, this means:",
+    "explanation": "If ROCE (8%) is less than the cost of borrowing (10%), the firm earns less on its capital than it pays in interest — debt finance is destroying rather than creating value.",
+    "correctIndex": 2
+   }
+  ],
+  "section_practice": [
+   {
+    "id": "assessing-competitiveness:practice:88178688",
+    "marks": 4,
+    "command": "Define",
+    "guidance": "Competitive advantage is a condition that allows a business to outperform its rivals by generating superior value for customers or operating at lower costs (1 mark). It enables the business to earn above-average returns in its industry (1 mark). Example: Apple achieves competitive advantage through product design, innovation and its ecosystem of integrated devices and services (1 mark). This creates high switching costs and strong brand loyalty that competitors find very difficult to replicate (1 mark).",
+    "question": "Define the term 'competitive advantage' and give one example of how a business might achieve it. (4 marks)"
+   },
+   {
+    "id": "assessing-competitiveness:practice:53a6b7ba",
+    "marks": 6,
+    "command": "Analyse",
+    "guidance": "SwiftDeliver currently occupies the low price position (position 2) on Bowman's Strategic Clock (1 mark). Option 1 — move to hybrid (position 3): improve service reliability while keeping prices competitive, offering better value than rivals (1 mark). Option 2 — move to differentiation (position 4): invest heavily in speed and reliability to justify premium prices (1 mark).\n\nRisks: improving service while maintaining low prices may squeeze profit margins (1 mark); moving to higher prices without first proving improved quality could lose existing price-sensitive customers (1 mark). The hybrid strategy is likely more feasible as a first step, gradually building reputation before considering premium pricing (1 mark).",
+    "question": "SwiftDeliver is a parcel delivery company competing primarily on low prices, but losing customers to competitors offering faster, more reliable services at slightly higher prices. Analyse how Bowman's Strategic Clock could help SwiftDeliver reposition itself. (6 marks)"
+   },
+   {
+    "id": "assessing-competitiveness:practice:0b1f6e16",
+    "marks": 10,
+    "command": "Assess",
+    "guidance": "Apply the five forces: threat of new entrants is high — low barriers mean many new breweries are entering (1 mark). Bargaining power of buyers is high — supermarkets dominate distribution and can demand low prices (2 marks). Bargaining power of suppliers is moderate — ingredients are widely available but specialist hops may be limited (1 mark). Threat of substitutes is moderate — wine, spirits and non-alcoholic alternatives compete for consumer spending (1 mark). Competitive rivalry is high — a fragmented market with many small brewers (1 mark).\n\nValue: identifies that the key challenges are powerful buyers and intense rivalry, suggesting the business needs a strong USP and direct-to-consumer channels (2 marks). Limitations: the model is a static snapshot, does not explain how to respond, and may oversimplify by treating all five forces as equally important (1 mark). Judgement: provides useful initial insight but must be supplemented with internal analysis and detailed market research (1 mark).",
+    "question": "A new entrant to the UK craft beer market is developing its competitive strategy. The market has low barriers to entry, many competitors, powerful supermarket buyers, and consumers willing to try new brands. Assess the value of Porter's Five Forces model for this business. (10 marks)"
+   },
+   {
+    "id": "assessing-competitiveness:practice:ad075e4e",
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Define sustainable competitive advantage and its importance in the technology industry (2 marks).\n\nFactor 1 — Innovation and R&D: continuous investment drives differentiation through new features (2 marks), but innovation provides only temporary advantage as competitors quickly imitate (1 mark).\n\nFactor 2 — Brand loyalty and ecosystem: switching costs from an integrated ecosystem of devices, services and software create lasting differentiation (3 marks); this is arguably the strongest source of sustainable advantage in smartphones (1 mark).\n\nFactor 3 — Supply chain efficiency and economies of scale: cost advantages help compete on price, but can be replicated by well-funded competitors (2 marks).\n\nFactor 4 — Intellectual property: patents provide legal protection but expire and can be designed around (2 marks).\n\nFactor 5 — Services revenue and data: recurring revenue from apps, subscriptions and services provides stability beyond hardware sales (2 marks).\n\nEvaluation: The manufacturer's declining share suggests that hardware features alone are insufficient against low-cost competitors. The most sustainable advantage lies in ecosystem lock-in, brand premium and services revenue rather than hardware specifications. Porter would warn against being 'stuck in the middle' — the company must choose between cost leadership and differentiation rather than attempting both. However, no competitive advantage is truly permanent in technology — the key is building multiple reinforcing advantages that are collectively very difficult to replicate (3 marks).",
+    "question": "A leading smartphone manufacturer has seen its global market share decline from 25% to 15% over four years as Chinese competitors offer comparable technology at significantly lower prices. Evaluate the most important factors in maintaining a sustainable competitive advantage in a rapidly changing industry. (20 marks)"
+   },
+   {
+    "id": "assessing-competitiveness:practice:48b12cde",
+    "marks": 4,
+    "command": "Outline",
+    "guidance": "Force 1: Threat of new entrants — if it is easy for new firms to enter the market, existing firms face more competition, putting downward pressure on prices and profitability (1 mark). High barriers to entry (e.g., capital requirements, patents) protect industry profits (1 mark).\n\nForce 2: Bargaining power of buyers — if buyers are powerful (e.g., large retailers buying in bulk), they can demand lower prices from suppliers (1 mark), squeezing profit margins and reducing overall industry profitability (1 mark).",
+    "question": "Outline two of Porter's Five Forces and explain how each affects industry profitability. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "id": "assessing-competitiveness:card:5afb26cb",
+    "back": "<strong>Gross profit margin = (Gross profit ÷ Revenue) × 100%</strong>. Measures the percentage of revenue retained after deducting the cost of sales.",
+    "front": "State the formula for gross profit margin."
+   },
+   {
+    "id": "assessing-competitiveness:card:3546baa0",
+    "back": "<strong>Net profit margin = (Operating profit ÷ Revenue) × 100%</strong>. Measures the percentage of revenue retained after deducting all operating costs.",
+    "front": "State the formula for net profit margin."
+   },
+   {
+    "id": "assessing-competitiveness:card:17da6ad8",
+    "back": "<strong>ROCE = (Operating profit ÷ Capital employed) × 100%</strong>. Capital employed = Equity + Non-current liabilities.",
+    "front": "State the formula for ROCE."
+   },
+   {
+    "id": "assessing-competitiveness:card:532d0b48",
+    "back": "Because it measures how efficiently a firm uses <strong>all its capital</strong> (equity + debt) to generate profit — it shows the return on every pound invested in the business.",
+    "front": "Why is ROCE considered the most important profitability ratio?"
+   },
+   {
+    "id": "assessing-competitiveness:card:da3d88ff",
+    "back": "<strong>Current ratio = Current assets ÷ Current liabilities</strong>. Measures whether the firm can cover short-term debts. Ideal: 1.5:1 to 2:1.",
+    "front": "State the formula for the current ratio."
+   },
+   {
+    "id": "assessing-competitiveness:card:361d240f",
+    "back": "<strong>Acid test = (Current assets − Inventory) ÷ Current liabilities</strong>. A stricter liquidity measure excluding inventory. Ideal: around 1:1.",
+    "front": "State the formula for the acid test ratio."
+   },
+   {
+    "id": "assessing-competitiveness:card:38f91046",
+    "back": "<strong>Gearing = (Non-current liabilities ÷ Capital employed) × 100%</strong>. Above 50% is considered highly geared.",
+    "front": "State the formula for the gearing ratio."
+   },
+   {
+    "id": "assessing-competitiveness:card:09e10b89",
+    "back": "A large proportion of long-term finance comes from <strong>debt</strong>. This increases financial risk (fixed interest payments) but debt is tax-deductible and avoids diluting ownership.",
+    "front": "What does a high gearing ratio indicate?"
+   },
+   {
+    "id": "assessing-competitiveness:card:a8f77849",
+    "back": "<strong>Gross profit = Revenue − Cost of sales</strong>. It measures the profit from core trading activity before overhead costs are deducted.",
+    "front": "What does gross profit tell you?"
+   },
+   {
+    "id": "assessing-competitiveness:card:8bfc36e8",
+    "back": "<strong>Current assets minus current liabilities</strong>. It represents the funds available for day-to-day operations. Insufficient working capital can cause cash flow crises.",
+    "front": "What is working capital?"
+   },
+   {
+    "id": "assessing-competitiveness:card:d0bb906f",
+    "back": "<strong>Labour productivity = Output per period ÷ Number of employees</strong>. Measures how efficiently the workforce produces goods or services.",
+    "front": "State the formula for labour productivity."
+   },
+   {
+    "id": "assessing-competitiveness:card:4cdbb85b",
+    "back": "<strong>Labour turnover = (Number of staff leaving ÷ Average number of staff) × 100%</strong>. High turnover increases recruitment and training costs.",
+    "front": "State the formula for labour turnover."
+   },
+   {
+    "id": "assessing-competitiveness:card:ccb397fd",
+    "back": "<strong>Absenteeism = (Number of days absent ÷ Total working days available) × 100%</strong>. High rates reduce productivity and may indicate low morale.",
+    "front": "State the formula for absenteeism."
+   },
+   {
+    "id": "assessing-competitiveness:card:0d6e8169",
+    "back": "Giving employees <strong>shares in the company</strong>, aligning their interests with shareholders. May improve loyalty, commitment, and long-term thinking.",
+    "front": "What is employee share ownership?"
+   },
+   {
+    "id": "assessing-competitiveness:card:141bb3c4",
+    "back": "Delegating <strong>authority and responsibility</strong> to employees, giving them greater control over their work. Links to Herzberg's motivators — increases intrinsic motivation.",
+    "front": "What is empowerment?"
+   },
+   {
+    "id": "assessing-competitiveness:card:ddbc840a",
+    "back": "Based on <strong>historical data</strong> (backward-looking); subject to <strong>window dressing</strong>; different accounting policies make comparison difficult; ignores <strong>qualitative factors</strong>.",
+    "front": "Give two limitations of ratio analysis."
+   },
+   {
+    "id": "assessing-competitiveness:card:c6827ca0",
+    "back": "Because supermarkets sell inventory <strong>quickly for cash</strong> (high stock turnover) and pay suppliers on extended credit, so they don't need high levels of current assets.",
+    "front": "Why might a supermarket have a current ratio below 1:1?"
+   },
+   {
+    "id": "assessing-competitiveness:card:07da2f1e",
+    "back": "When firms <strong>manipulate financial figures</strong> to present a more favourable picture — e.g. delaying payments to boost cash position, timing asset sales, or classifying expenses differently.",
+    "front": "What does window dressing mean in accounting?"
+   }
+  ],
+  "section_diagrams": null,
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "The framework analyses five forces: buyer power, supplier power, competitive rivalry, threat of new entrants and threat of substitutes.",
+      "Strong forces (e.g. powerful buyers, intense rivalry) compress profit margins — weak forces allow higher profitability.",
+      "Barriers to entry (brand loyalty, economies of scale, patents) protect existing firms from new competition.",
+      "The analysis informs strategic decisions: pricing, investment, differentiation and market positioning."
+     ],
+     "title": "Porter's Five Forces reveals industry profit potential",
+     "result": "Five Forces helps firms understand the structural drivers of industry profitability — it identifies where competitive pressure is greatest and where strategic action is needed."
+    },
+    {
+     "steps": [
+      "Kaplan and Norton's scorecard measures four perspectives: financial, customer, internal processes and learning/growth.",
+      "Financial metrics alone can mask underlying problems — strong profits may disguise declining customer satisfaction or underinvestment in staff.",
+      "The scorecard reveals whether the firm is achieving short-term financial targets at the expense of long-term capability.",
+      "Strategic initiatives are launched to address weaknesses in non-financial areas before they become financial problems."
+     ],
+     "title": "The balanced scorecard ensures holistic performance measurement",
+     "result": "The balanced scorecard prevents over-reliance on financial metrics — it ensures managers maintain the capabilities that drive future performance."
+    },
+    {
+     "steps": [
+      "A business compares its key metrics (customer retention, defect rates, productivity) against industry leaders.",
+      "Gaps reveal areas where the firm underperforms — providing specific, measurable targets for improvement.",
+      "Best practices from leading firms are adapted to the business's own context and capabilities.",
+      "Performance improves as the firm closes gaps, reducing costs, improving quality or enhancing customer experience."
+     ],
+     "title": "Benchmarking identifies performance gaps and best practices",
+     "result": "Benchmarking provides concrete improvement targets — but firms must innovate beyond best practice to build genuine competitive advantage."
+    },
+    {
+     "steps": [
+      "Core competencies are unique capabilities that competitors cannot easily replicate — proprietary technology, specialist expertise or deep customer relationships.",
+      "Strategy focused on core competencies ensures the firm competes where it has a genuine advantage.",
+      "Continuous investment deepens these capabilities over time, raising barriers to entry for competitors.",
+      "Resources are not wasted on areas where the firm has no distinctive edge."
+     ],
+     "title": "Core competencies create durable competitive advantage",
+     "result": "Core competencies that are valuable, rare and hard to imitate create sustainable competitive advantage — they are the foundation of long-term profitability."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "Porter's Five Forces has limitations in dynamic markets",
+     "content": "The model was developed for stable industries and provides a static snapshot. In digital markets, industry boundaries blur and competitive forces change rapidly. A low threat of substitutes can become high overnight through technological disruption. Five Forces is a starting point, not a complete analysis."
+    },
+    {
+     "title": "The triple bottom line is hard to measure",
+     "content": "Elkington's framework (profit, people, planet) encourages broader value creation. But social and environmental impacts are inherently harder to measure and compare than financial profit. Without standardised metrics, the TBL risks becoming a marketing tool rather than a genuine accountability framework."
+    },
+    {
+     "title": "Benchmarking encourages imitation, not innovation",
+     "content": "Matching competitor performance achieves operational parity but not distinctive advantage. What works for an industry leader may not suit a different firm with different resources and culture. The most effective approach combines benchmarking to eliminate weaknesses with innovation to create unique strengths."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "id": "assessing-competitiveness:mistake:904e41b4",
+    "title": "Interpreting Ratios in Isolation",
+    "examTip": "Examiners penalise answers that present ratio values without comparison. Always state what you are comparing against and why the ratio is significant.",
+    "mistake": "Stating that a firm's current ratio of 1.8 is 'good' or 'bad' without any context.",
+    "correction": "Always compare ratios against previous years (trend), competitors (benchmarking), and industry averages. A ratio only has meaning in context — 1.8 may be excellent in manufacturing but excessive in retail."
+   },
+   {
+    "id": "assessing-competitiveness:mistake:bae893a9",
+    "title": "Confusing Gross Profit Margin and Net Profit Margin",
+    "examTip": "Label your calculations clearly. Write out the formula, substitute the values, and double-check you are using the correct profit figure.",
+    "mistake": "Using the wrong profit figure in margin calculations — using operating profit for gross margin or gross profit for net margin.",
+    "correction": "Gross profit margin uses GROSS profit (Revenue − Cost of sales). Net profit margin uses OPERATING profit (Gross profit − Overheads). Always check which profit figure you need."
+   },
+   {
+    "id": "assessing-competitiveness:mistake:8b268621",
+    "title": "Ignoring Industry Differences in Liquidity Ratios",
+    "examTip": "If the case study involves retail or a cash-based business, explain why low liquidity ratios may be perfectly normal.",
+    "mistake": "Concluding that a firm is in financial difficulty because its current ratio is below 1.5, without considering industry norms.",
+    "correction": "Industry context matters enormously. Supermarkets routinely operate with current ratios below 1:1 because they sell inventory for cash and pay suppliers on credit. Always consider the industry benchmark."
+   },
+   {
+    "id": "assessing-competitiveness:mistake:f7489575",
+    "title": "Treating High Gearing as Always Negative",
+    "examTip": "The key question is: does the firm earn enough on its capital to comfortably service its debt? If ROCE > interest rate, high gearing can be advantageous.",
+    "mistake": "Automatically concluding that high gearing is bad for the business.",
+    "correction": "High gearing increases financial risk, but if ROCE exceeds the cost of borrowing, using debt 'leverages' returns for shareholders. Debt interest is also tax-deductible. Evaluate whether the gearing level is appropriate given the firm's profitability and cash flow stability."
+   },
+   {
+    "id": "assessing-competitiveness:mistake:65b94908",
+    "title": "Ignoring Qualitative Factors in HR Metrics",
+    "examTip": "Quantitative HR data identifies symptoms; qualitative analysis identifies causes. The best answers link data to underlying factors and propose targeted HR strategies.",
+    "mistake": "Relying solely on HR ratios (turnover, absenteeism) without considering underlying causes.",
+    "correction": "Always consider WHY metrics are high or low. High turnover could reflect poor management, low pay, or industry norms (e.g. hospitality). Understanding causes is essential for recommending effective solutions."
+   }
+  ]
+ }
+}

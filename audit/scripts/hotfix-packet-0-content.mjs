@@ -11,13 +11,14 @@
  * Run:   node audit/scripts/hotfix-packet-0-content.mjs            (dry run, prints the diff)
  *        node audit/scripts/hotfix-packet-0-content.mjs --apply    (writes to Supabase)
  */
-import { createClient } from '@supabase/supabase-js';
+// Packet 3 (F110): routed through the guarded shared client. Packet 0 shipped on 11 September; this
+// script predates draft state and writes `data` in place, so re-running it needs REVVY_ALLOW_RAW_WRITE=1.
+import { supabase as sb } from '../../scripts/_db.mjs';
 import { readFileSync } from 'fs';
 
 const APPLY = process.argv.includes('--apply');
 const env = {};
 readFileSync('.env.local', 'utf8').split('\n').forEach(l => { const [k, ...r] = l.split('='); if (k && r.length) env[k.trim()] = r.join('=').trim(); });
-const sb = createClient(env.NEXT_PUBLIC_SUPABASE_URL, env.SUPABASE_SERVICE_ROLE_KEY);
 
 /* ── Helpers ─────────────────────────────────────────────────────────────── */
 function findSub(content, subId) {

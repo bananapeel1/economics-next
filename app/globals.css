@@ -45,6 +45,11 @@
   --accent-blue-light: #1d4ed8;
   --accent-green-bright: #036a4d;
   --accent-purple-text: #4c1d95;
+  /* F058/F069/F090: recall widgets used a dark-tuned lavender literal for the borders and fills
+     that signal state (a filled blank, a hovered arrow). On white those read as barely-there, so
+     "filled" and "empty" looked the same. Light gets a border that is actually visible. */
+  --recall-accent: #6d28d9;
+  --recall-accent-fill: rgba(109, 40, 217, 0.10);
   --accent-green-muted: #065f46;
   --green-5: rgba(5,150,105,0.05);
   --green-10: rgba(5,150,105,0.08);
@@ -72,15 +77,30 @@
   --shadow-dropdown: rgba(0,0,0,0.1);
   --white-subtle: rgba(0,0,0,0.04);
   --card-shadow: 0 1px 2px rgba(16,24,40,0.05), 0 2px 6px -2px rgba(16,24,40,0.08);
+  /* One triple per IAL tariff, both subjects. Economics runs 2/4/6/8/14/20 and Business
+     2/4/6/8/10/12/20; the ladder is derived in lib/practice-tariffs.js from lib/ial-marking.js.
+     Before packet 12.1 only 4/6/10/20 existed, which is neither subject's ladder. */
+  --practice-2-bg: #ecfeff;
+  --practice-2-border: #67e8f9;
+  --practice-2-badge: #0e7490;
   --practice-4-bg: #f0fdf4;
   --practice-4-border: #86efac;
   --practice-4-badge: #15803d;
   --practice-6-bg: #eff6ff;
   --practice-6-border: #93c5fd;
   --practice-6-badge: #1d4ed8;
+  --practice-8-bg: #f5f3ff;
+  --practice-8-border: #c4b5fd;
+  --practice-8-badge: #6d28d9;
   --practice-10-bg: #fefce8;
   --practice-10-border: #fde047;
   --practice-10-badge: #a16207;
+  --practice-12-bg: #fff7ed;
+  --practice-12-border: #fdba74;
+  --practice-12-badge: #c2410c;
+  --practice-14-bg: #fef2f2;
+  --practice-14-border: #fca5a5;
+  --practice-14-badge: #b91c1c;
   --practice-20-bg: #fdf2f8;
   --practice-20-border: #f9a8d4;
   --practice-20-badge: #be185d;
@@ -185,6 +205,8 @@
   --accent-blue-light: #60a5fa;
   --accent-green-bright: #22c55e;
   --accent-purple-text: #d4bfff;
+  --recall-accent: #a78bfa;
+  --recall-accent-fill: rgba(167, 139, 250, 0.10);
   --accent-green-muted: #d1fae5;
   --green-5: rgba(5,150,105,0.05);
   --green-10: rgba(5,150,105,0.1);
@@ -212,15 +234,27 @@
   --shadow-dropdown: rgba(0,0,0,0.4);
   --white-subtle: rgba(255,255,255,0.04);
   --card-shadow: none;
+  --practice-2-bg: rgba(8,145,178,0.08);
+  --practice-2-border: rgba(8,145,178,0.25);
+  --practice-2-badge: #22d3ee;
   --practice-4-bg: rgba(22,163,74,0.08);
   --practice-4-border: rgba(22,163,74,0.25);
   --practice-4-badge: #22c55e;
   --practice-6-bg: rgba(37,99,235,0.08);
   --practice-6-border: rgba(37,99,235,0.25);
   --practice-6-badge: #60a5fa;
+  --practice-8-bg: rgba(124,58,237,0.08);
+  --practice-8-border: rgba(124,58,237,0.25);
+  --practice-8-badge: #a78bfa;
   --practice-10-bg: rgba(202,138,4,0.08);
   --practice-10-border: rgba(202,138,4,0.25);
   --practice-10-badge: #facc15;
+  --practice-12-bg: rgba(234,88,12,0.08);
+  --practice-12-border: rgba(234,88,12,0.25);
+  --practice-12-badge: #fb923c;
+  --practice-14-bg: rgba(220,38,38,0.08);
+  --practice-14-border: rgba(220,38,38,0.25);
+  --practice-14-badge: #f87171;
   --practice-20-bg: rgba(219,39,119,0.08);
   --practice-20-border: rgba(219,39,119,0.25);
   --practice-20-badge: #f472b6;
@@ -405,6 +439,9 @@ body {
 }
 .sidebar-section-status.complete { color: var(--accent-green-light); }
 .sidebar-section-status.in-progress { color: var(--text-dim); }
+/* F004: a finished topic that has come round again. Amber, not red — it is a prompt, not a
+   failure, and the student earned the tick it replaces. */
+.sidebar-section-status.due { color: var(--accent-amber); }
 
 /* Sidebar collapse/expand buttons */
 .sidebar-collapse-btn {
@@ -912,7 +949,7 @@ body {
   width: 32px; height: 32px; border-radius: 8px;
   background: var(--bg-card); border: 1px solid var(--border-primary);
   display: flex; align-items: center; justify-content: center;
-  font-size: 11px; font-weight: 700; color: var(--rl-green);
+  font-size: 12px; font-weight: 700; color: var(--rl-green);
   flex-shrink: 0;
 }
 .rl-flow-tl-arrow-row {
@@ -949,7 +986,7 @@ body {
   flex: 1; padding: 8px 14px; border-radius: 8px;
 }
 .rl-flow-result-label {
-  font-size: 8px; font-weight: 700; text-transform: uppercase;
+  font-size: 12px; font-weight: 700; text-transform: uppercase;
   letter-spacing: 0.07em; margin-bottom: 1px;
 }
 .rl-flow-result-text {
@@ -1045,13 +1082,14 @@ body {
   .rl-key-idea, .rl-real-example, .rl-misconception, .rl-exam-matters { padding: 10px 12px; }
   .rl-note-section-title { font-size: 15px; }
   .rl-flow-chain { padding: 14px 10px; }
-  .rl-flow-tl-node { width: 28px; height: 28px; font-size: 10px; border-radius: 6px; }
+  .rl-flow-tl-node { width: 28px; height: 28px; font-size: 12px; border-radius: 6px; }
   .rl-flow-tl-card { padding: 8px 12px; }
   .rl-flow-tl-title { font-size: 12.5px; }
   .rl-flow-tl-arrow-row { padding-left: 9px; }
   .rl-flow-result { padding: 8px 12px; }
-  .rl-body-p { font-size: 13px; }
-  .rl-takeaway-item { font-size: 13px; }
+  /* F101: 13px at a ~230px column was the audit's reading complaint; 15px on phones. */
+  .rl-body-p { font-size: 15px; }
+  .rl-takeaway-item { font-size: 15px; }
   .lm-reveal-btn { padding: 12px; font-size: 13px; }
 }
 
@@ -1430,9 +1468,14 @@ body {
   .tab-bar {
     padding: 4px 0 8px;
     margin: 0 -14px;
-    padding-left: 14px; padding-right: 14px;
-    mask-image: linear-gradient(to right, transparent 0px, black 14px, black calc(100% - 28px), transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0px, black 14px, black calc(100% - 28px), transparent 100%);
+    padding-left: 14px; padding-right: 58px;
+    /* A tapped tab that is only partly visible must slide clear of the chevron too: scrollIntoView
+       ('nearest') otherwise counts it as visible. Round-3 note, F096's area. */
+    scroll-padding-inline-end: 58px;
+    /* The 44px chevron sits over the right edge; the strip fades under it and scrolls 44px past its last tab
+       so every tab label can be brought fully clear of it. */
+    mask-image: linear-gradient(to right, transparent 0px, black 14px, black calc(100% - 52px), transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0px, black 14px, black calc(100% - 52px), transparent 100%);
   }
   .tab-face { padding: 8px 10px; font-size: 12px; }
   .tab-glow { display: none; }
@@ -2282,7 +2325,7 @@ button.sidebar-resource-link {
   display: inline-flex; align-items: center; justify-content: center;
   min-width: 24px; padding: 2px 6px;
   background: var(--bg-input); border: 1px solid var(--border-primary);
-  border-radius: 4px; font-size: 11px;
+  border-radius: 4px; font-size: 12px;
   font-family: 'DM Mono', monospace; color: var(--text-secondary);
 }
 @keyframes lmHintFade { 0%, 80% { opacity: 1; } 100% { opacity: 0; } }
@@ -2390,22 +2433,26 @@ button.sidebar-resource-link {
   color: var(--accent-blue, #3b82f6);
 }
 .lm-complete-posttest-btn:hover { background: var(--accent-blue, #3b82f6); color: #fff; }
+/* The drill is the primary action on this screen (see CompletionScreen): filled, like the quiz
+   button used to be. Its size comes from the shared rule above; the fill and weight are here. */
 .lm-complete-drill-btn {
-  background: none; border: 1.5px solid var(--accent-amber, #f59e0b);
-  color: var(--accent-amber, #f59e0b);
+  background: var(--accent-green); border: 1.5px solid var(--accent-green);
+  color: #fff; padding: 14px; font-size: 15px; font-weight: 700;
 }
+.lm-complete-drill-btn:hover { background: var(--accent-green-dark); border-color: var(--accent-green-dark); transform: translateY(-1px); }
 .lm-complete-drill-btn:hover { background: var(--accent-amber, #f59e0b); color: #fff; }
+/* Secondary now: the quiz is a paid surface and the drill above it is the better free ending. */
 .lm-complete-quiz-btn {
   width: 100%; max-width: 320px;
-  padding: 14px; background: var(--accent-green); color: #fff;
-  border: none; border-radius: 30px;
-  font-size: 15px; font-weight: 700;
+  padding: 12px; background: none; color: var(--text-secondary);
+  border: 1.5px solid var(--border-primary); border-radius: 30px;
+  font-size: 14px; font-weight: 600;
   cursor: pointer; font-family: inherit;
   margin-bottom: 10px; transition: all 0.2s;
   animation: lmCelebrateSlideIn 0.35s ease both;
   animation-delay: 0.79s;
 }
-.lm-complete-quiz-btn:hover { background: var(--accent-green-dark); transform: translateY(-1px); }
+.lm-complete-quiz-btn:hover { border-color: var(--text-secondary); color: var(--text-primary); }
 .lm-complete-practice-row {
   display: flex; gap: 10px; max-width: 320px; width: 100%; margin-bottom: 10px;
   animation: lmCelebrateSlideIn 0.35s ease both; animation-delay: 0.85s;
@@ -2645,103 +2692,7 @@ button.sidebar-resource-link {
 [data-theme="dark"] .lm-guided-expand-btn:hover { border-color: #FBBF24; }
 
 /* ─── Explain It Back ─── */
-/* Recall Checkpoint */
-.lm-recall-checkpoint {
-  padding: 16px 18px; margin-bottom: 20px;
-  background: var(--bg-card);
-  border: 1.5px solid var(--border-primary);
-  border-radius: 14px;
-  border-left: 3px solid var(--accent-blue, #3b82f6);
-  transition: opacity 0.35s ease, transform 0.35s ease, max-height 0.35s ease,
-              padding 0.35s ease, margin 0.35s ease;
-  max-height: 500px;
-  overflow: visible;
-}
-.lm-recall-dismissing {
-  opacity: 0; transform: translateY(-12px);
-  max-height: 0 !important; margin-bottom: 0; padding-top: 0; padding-bottom: 0;
-  overflow: hidden;
-}
-.lm-recall-header {
-  display: flex; align-items: center; gap: 8px; margin-bottom: 10px;
-}
-.lm-recall-icon { font-size: 18px; }
-.lm-recall-title {
-  font-size: 13px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 0.06em; color: var(--accent-blue, #3b82f6);
-  font-family: 'DM Mono', monospace;
-}
-.lm-recall-dismiss {
-  margin-left: auto; background: none; border: none;
-  font-size: 18px; color: var(--text-muted); cursor: pointer;
-  padding: 0 4px; line-height: 1;
-}
-.lm-recall-dismiss:hover { color: var(--text-primary); }
-.lm-recall-prompt {
-  font-size: 15px; color: var(--text-secondary); margin: 0 0 12px; line-height: 1.5;
-}
-.lm-recall-prompt strong { color: var(--text-primary); }
-.lm-recall-textarea {
-  width: 100%; min-height: 70px; padding: 10px 14px;
-  font-size: 14px; font-family: inherit; line-height: 1.5;
-  border: 1.5px solid var(--border-primary);
-  border-radius: 10px; background: var(--bg-input, var(--bg-primary));
-  color: var(--text-primary); resize: vertical;
-}
-.lm-recall-textarea:focus { outline: none; border-color: var(--accent-blue, #3b82f6); }
-.lm-recall-actions { display: flex; gap: 8px; margin-top: 10px; }
-.lm-recall-reveal-btn {
-  padding: 8px 18px; background: var(--accent-blue, #3b82f6); color: #fff;
-  border: none; border-radius: 20px;
-  font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit;
-  transition: all 0.2s;
-}
-.lm-recall-reveal-btn:disabled { opacity: 0.4; cursor: not-allowed; }
-.lm-recall-reveal-btn:hover:not(:disabled) { filter: brightness(1.1); transform: translateY(-1px); }
-.lm-recall-skip-btn {
-  padding: 8px 18px; background: none;
-  border: 1.5px solid var(--border-primary); color: var(--text-secondary);
-  border-radius: 20px; font-size: 13px; font-weight: 600;
-  cursor: pointer; font-family: inherit; transition: all 0.2s;
-}
-.lm-recall-skip-btn:hover { border-color: var(--text-muted); color: var(--text-primary); }
-.lm-recall-model-answer {
-  padding: 14px 16px; margin-top: 12px;
-  background: var(--green-light-6); border: 1px solid var(--green-light-20);
-  border-radius: 10px;
-}
-.lm-recall-model-label {
-  font-size: 11px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 0.06em; color: var(--accent-green);
-  margin-bottom: 6px; font-family: 'DM Mono', monospace;
-}
-.lm-recall-model-answer p {
-  font-size: 14px; color: var(--text-primary); margin: 0; line-height: 1.5;
-}
-.lm-recall-rating { margin-top: 14px; }
-.lm-recall-rating-prompt {
-  font-size: 13px; font-weight: 600; color: var(--text-secondary);
-  display: block; margin-bottom: 8px;
-}
-.lm-recall-rating-buttons { display: flex; gap: 8px; }
-.lm-recall-rate-btn {
-  padding: 7px 16px; border-radius: 20px;
-  font-size: 13px; font-weight: 600; cursor: pointer;
-  font-family: inherit; transition: all 0.15s; border: 1.5px solid;
-  background: none;
-}
-.lm-rate-got-it { border-color: var(--accent-green); color: var(--accent-green); }
-.lm-rate-got-it:hover { background: var(--accent-green); color: #fff; }
-.lm-rate-partial { border-color: var(--accent-amber, #f59e0b); color: var(--accent-amber, #f59e0b); }
-.lm-rate-partial:hover { background: var(--accent-amber, #f59e0b); color: #fff; }
-.lm-rate-missed { border-color: var(--accent-red, #ef4444); color: var(--accent-red, #ef4444); }
-.lm-rate-missed:hover { background: var(--accent-red, #ef4444); color: #fff; }
-.lm-recall-feedback {
-  margin-top: 12px; padding: 10px 14px;
-  font-size: 14px; font-weight: 500; color: var(--text-secondary);
-  background: var(--green-light-6); border-radius: 10px;
-  text-align: center;
-}
+/* (RecallCheckpoint's CSS was here; the component was never mounted and is deleted, F061.) */
 
 /* ── Interactive Recall (Reorder + Fill-in) ── */
 .lm-recall-card {
@@ -2757,7 +2708,9 @@ button.sidebar-resource-link {
 }
 .lm-recall-dismiss:hover { color: var(--text-secondary); }
 .lm-recall-label {
-  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  /* F069: 10px uppercase at this weight is below the size the audit asked for, and small caps
+     lose legibility fastest. */
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
   letter-spacing: 0.07em; color: var(--accent-purple); margin-bottom: 0;
 }
 .lm-recall-prompt {
@@ -2785,7 +2738,7 @@ button.sidebar-resource-link {
   color: var(--text-tertiary); font-size: 10px; padding: 2px 6px;
   cursor: pointer; transition: all 0.15s;
 }
-.lm-recall-arrow:hover:not(:disabled) { border-color: #a78bfa; color: var(--accent-purple); }
+.lm-recall-arrow:hover:not(:disabled) { border-color: var(--recall-accent); color: var(--accent-purple); }
 .lm-recall-arrow:disabled { opacity: 0.3; cursor: not-allowed; }
 .lm-recall-item-icon { font-weight: 700; font-size: 14px; }
 .lm-recall-item.correct .lm-recall-item-icon { color: var(--rl-green); }
@@ -2827,7 +2780,7 @@ button.sidebar-resource-link {
   background: var(--bg-card); color: var(--text-dim);
   font-size: 13px; text-align: center; cursor: pointer; transition: all 0.15s;
 }
-.lm-fillin-blank.filled { border-style: solid; border-color: #a78bfa; color: var(--text-primary); background: rgba(167,139,250,0.08); }
+.lm-fillin-blank.filled { border-style: solid; border-color: var(--recall-accent); color: var(--text-primary); background: var(--recall-accent-fill); }
 .lm-fillin-blank.correct { border-color: var(--rl-green-bd); color: var(--rl-green); background: var(--rl-green-bg); }
 .lm-fillin-blank.wrong { border-color: var(--rl-red-bd); color: var(--rl-red); background: var(--rl-red-bg); }
 
@@ -2840,10 +2793,11 @@ button.sidebar-resource-link {
   padding: 6px 14px; border-radius: 20px;
   background: rgba(167,139,250,0.12); border: 1px solid rgba(167,139,250,0.25);
   color: var(--accent-purple-text); font-size: 13px; font-weight: 500;
-  cursor: grab; user-select: none; transition: all 0.15s;
+  cursor: pointer; user-select: none; transition: all 0.15s;
 }
 .lm-word-chip:hover { background: rgba(167,139,250,0.2); transform: translateY(-1px); }
-.lm-word-chip:active { cursor: grabbing; transform: scale(0.95); }
+.lm-word-chip:active { transform: scale(0.95); }
+.lm-word-chip.selected { background: var(--recall-accent-fill); border-color: var(--recall-accent); box-shadow: 0 0 0 2px rgba(167,139,250,0.25); color: var(--text-primary); }
 
 /* Correct answers display (fill-in + reorder) */
 .lm-recall-correct-answers, .lm-recall-correct-order {
@@ -2879,11 +2833,13 @@ button.sidebar-resource-link {
   100% { transform: translateY(var(--swap-dy, 0)) scale(1); box-shadow: none; }
 }
 .lm-recall-item.selected {
-  border-color: #a78bfa; background: rgba(167,139,250,0.1);
+  border-color: var(--recall-accent); background: var(--recall-accent-fill);
   box-shadow: 0 0 0 2px rgba(167,139,250,0.2);
   transform: scale(1.02);
 }
-.lm-recall-hint-text { font-size: 11px; color: var(--text-dim); margin-bottom: 10px; font-style: italic; }
+/* F069: --text-dim is the weakest step on the neutral ramp and the audit named it explicitly as
+   the one this must not use. A hint a student cannot read is not a hint. */
+.lm-recall-hint-text { font-size: 13px; color: var(--text-secondary); margin-bottom: 10px; }
 
 /* Arrow buttons for reorder */
 .lm-recall-arrows {
@@ -2896,8 +2852,77 @@ button.sidebar-resource-link {
   border-radius: 4px; cursor: pointer; transition: all 0.15s;
   line-height: 1;
 }
-.lm-recall-arrow-btn:hover:not(:disabled) { border-color: #a78bfa; color: var(--accent-purple); }
+.lm-recall-arrow-btn:hover:not(:disabled) { border-color: var(--recall-accent); color: var(--accent-purple); }
 .lm-recall-arrow-btn:disabled { opacity: 0.25; cursor: not-allowed; }
+
+/* ── Packet 7: the recall contract's shared mechanics ── */
+.lm-recall-actions { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+/* F055: a visible Skip in place of the unlabelled ×. */
+.lm-recall-skip {
+  background: none; border: 1px solid var(--border-primary); border-radius: 8px;
+  color: var(--text-secondary); font-size: 12px; font-weight: 600; padding: 6px 12px;
+  cursor: pointer; font-family: inherit; transition: all 0.15s;
+}
+.lm-recall-skip:hover { border-color: var(--text-muted); color: var(--text-primary); }
+.lm-recall-card-skipped { opacity: 0.85; }
+.lm-recall-skipped-note { font-size: 13px; color: var(--text-secondary); margin: 8px 0 0; line-height: 1.5; }
+/* Retry: what was right stays put. */
+.lm-recall-item.locked { background: var(--rl-green-bg); border-color: var(--rl-green-bd); cursor: default; }
+.lm-fillin-blank.locked, .lm-match-slot.locked { border-style: solid; border-color: var(--rl-green-bd); color: var(--rl-green); background: var(--rl-green-bg); cursor: default; }
+.lm-word-chip.locked { cursor: default; }
+/* F060: the targeted blank. */
+.lm-fillin-blank.selected { border-style: solid; border-color: var(--recall-accent); box-shadow: 0 0 0 2px rgba(167,139,250,0.25); color: var(--text-primary); }
+.lm-fillin-blank-inert { cursor: help; color: var(--text-dim); letter-spacing: 0.05em; }
+.lm-fillin-note { font-size: 12px; color: var(--text-secondary); margin: -6px 0 12px; line-height: 1.45; }
+/* F063: the student's word, struck through, beside the answer. */
+.lm-fillin-was { color: var(--rl-red); text-decoration: line-through; margin-right: 6px; opacity: 0.85; }
+.lm-fillin-answer { color: var(--rl-green); font-weight: 600; }
+.lm-fillin-hints { margin: 0 0 12px; padding-left: 0; list-style: none; font-size: 13px; color: var(--accent-purple-text); line-height: 1.5; }
+.lm-fillin-hint-num { font-weight: 700; margin-right: 4px; }
+/* F056: the why line under each answer. */
+.lm-recall-correct-entry { display: flex; flex-direction: column; margin-bottom: 6px; }
+.lm-recall-why { font-size: 12px; color: var(--text-secondary); line-height: 1.45; padding-left: 14px; border-left: 2px solid var(--rl-green-bd); margin-top: 2px; }
+/* Match (W001) */
+.lm-match-rows { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+.lm-match-row {
+  display: flex; align-items: center; gap: 10px; padding: 8px 12px;
+  background: var(--bg-input); border: 1px solid var(--border-primary); border-radius: 8px;
+}
+.lm-match-row.correct { background: var(--rl-green-bg); border-color: var(--rl-green-bd); }
+.lm-match-row.wrong { background: var(--rl-red-bg); border-color: var(--rl-red-bd); }
+.lm-match-left { font-size: 13px; font-weight: 600; color: var(--text-primary); flex: 0 1 38%; }
+.lm-match-slot {
+  flex: 1 1 auto; min-height: 34px; display: inline-flex; align-items: center; padding: 4px 10px;
+  border: 1.5px dashed var(--border-hover); border-radius: 6px; background: var(--bg-card);
+  color: var(--text-dim); font-size: 13px; cursor: pointer; transition: all 0.15s;
+}
+.lm-match-slot.filled { border-style: solid; border-color: var(--recall-accent); color: var(--text-primary); background: var(--recall-accent-fill); }
+.lm-match-slot.selected { border-style: solid; border-color: var(--recall-accent); box-shadow: 0 0 0 2px rgba(167,139,250,0.25); color: var(--text-primary); }
+.lm-match-slot.correct { border-color: var(--rl-green-bd); color: var(--rl-green); background: var(--rl-green-bg); }
+.lm-match-slot.wrong { border-color: var(--rl-red-bd); background: var(--rl-red-bg); flex-wrap: wrap; }
+/* Classify (W002) */
+.lm-classify-groups { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+.lm-classify-group { border: 1px solid var(--border-primary); border-radius: 10px; background: var(--bg-input); padding: 8px; }
+.lm-classify-group.selected { border-color: var(--recall-accent); box-shadow: 0 0 0 2px rgba(167,139,250,0.25); }
+.lm-classify-group-name {
+  display: block; width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+  font-family: inherit; font-size: 13px; font-weight: 700; color: var(--accent-purple-text); padding: 6px 6px 8px;
+}
+.lm-classify-group-name:disabled { cursor: default; }
+.lm-classify-members { display: flex; flex-wrap: wrap; gap: 8px; min-height: 36px; padding: 0 4px 4px; }
+.lm-classify-empty { font-size: 12px; color: var(--text-dim); padding: 6px 4px; }
+.lm-classify-chip.correct { background: var(--rl-green-bg); border-color: var(--rl-green-bd); color: var(--rl-green); }
+.lm-classify-chip.wrong { background: var(--rl-red-bg); border-color: var(--rl-red-bd); color: var(--rl-red); }
+.lm-classify-home { font-weight: 400; color: var(--rl-red); }
+/* Gallery (W003) */
+.lm-gallery { max-width: 620px; margin: 0 auto; padding: 16px; }
+.lm-gallery-title { font-size: 22px; font-weight: 800; color: var(--text-primary); margin: 0 0 8px; }
+.lm-gallery-intro { font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin: 0 0 12px; }
+.lm-gallery-controls { display: flex; gap: 8px; margin-bottom: 8px; }
+.lm-gallery-controls .lm-recall-hint-btn.active { background: var(--recall-accent-fill); border-color: var(--recall-accent); }
+.lm-gallery-heading { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-muted); margin: 20px 0 0; }
+.lm-gallery-section .lm-recall-card { margin-top: 8px; }
+.lm-gallery-log { font-size: 12px; color: var(--text-secondary); background: var(--bg-input); border: 1px solid var(--border-primary); border-radius: 8px; padding: 10px 12px; white-space: pre-wrap; }
 
 .lm-explain-section { margin: 24px 0 0; }
 .lm-explain-toggle {
@@ -3165,7 +3190,7 @@ button.sidebar-resource-link {
   .lm-confidence-buttons { gap: 6px; }
   .lm-confidence-btn { padding: 6px 12px; font-size: 12px; }
   .lm-explain-toggle { font-size: 13px; padding: 10px 14px; }
-  .lm-explain-textarea { min-height: 70px; font-size: 13px; }
+  .lm-explain-textarea { min-height: 70px; }
   .lm-review-banner { font-size: 13px; }
   .lm-review-title { font-size: 20px; }
   .lm-strength-medium { max-width: 160px; }
@@ -3367,10 +3392,6 @@ button.sidebar-resource-link {
   from { transform: scale(0.8); opacity: 0; }
   to   { transform: scale(1); opacity: 1; }
 }
-@keyframes lmTooltipIn {
-  from { opacity: 0; transform: translate(-50%, -90%); }
-  to   { opacity: 1; transform: translate(-50%, -100%); }
-}
 @keyframes lmShake {
   0%, 100% { transform: translateX(0); }
   25%      { transform: translateX(-4px); }
@@ -3423,23 +3444,28 @@ button.sidebar-resource-link {
   animation: lmStreakPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Interactive diagram */
-.lm-interactive-diagram {
-  position: relative;
-  padding: 20px 12px;
-  border-radius: 12px;
-  background: var(--bg-input);
-  margin: 16px 0;
-}
+/* Inline diagram. The header used to say this block was "never mounted, deleted in packet 7" — it is
+   the wrapper InlineDiagram renders, on every Learn Mode diagram in the product.
+
+   It used to cap the drawing at 270px here. The responsive caps live further up the file — 442px at
+   768, 497px at 1280, 552px at 1600 — and carry the SAME specificity as this rule, so this one, being
+   later, won all three. Every inline diagram has been drawn at 270px on every desktop since those
+   breakpoints were written: on a 500-unit viewBox that is a scale of 0.54, so a 9-unit label renders
+   at 4.9px. F088 read that as a phone problem and answered it with a 100% override under
+   (max-width: 768px), which is why the phone looked right and nothing pointed at the desktop.
+   Reported from the product on 3.3.1, 16 September 2026.
+
+   No cap here now. Below 768 the phone rule gives 100%; above it the three breakpoints apply, in
+   order, as they were meant to. */
 .lm-interactive-svg-wrapper {
   display: flex; justify-content: center; align-items: center;
 }
 .lm-interactive-svg-wrapper svg {
-  width: 100%; height: auto; max-width: 270px;
+  width: 100%; height: auto;
   display: block; margin: 0 auto;
 }
 .lm-interactive-svg-wrapper img {
-  max-width: 270px; width: 100%; height: auto;
+  width: 100%; height: auto;
   display: block; margin: 0 auto; border-radius: 8px;
 }
 /* Ensure all SVG text is crisp and readable */
@@ -3456,29 +3482,40 @@ button.sidebar-resource-link {
 .lm-interactive-svg-wrapper svg circle {
   shape-rendering: geometricPrecision;
 }
-.lm-diagram-tooltip {
-  position: absolute; transform: translate(-50%, -100%);
-  padding: 8px 14px; background: var(--bg-card);
-  border: 1.5px solid var(--border-primary); border-left: 3px solid;
-  border-radius: 8px;
-  font-size: 12px; font-weight: 600;
-  color: var(--text-primary);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
-  pointer-events: none; white-space: nowrap; z-index: 10;
-  animation: lmTooltipIn 0.15s ease;
-}
-.lm-diagram-tooltip-label {
-  font-size: 13px; font-weight: 700; color: var(--text-primary);
-}
-.lm-diagram-tooltip-role {
-  display: flex; align-items: center; gap: 6px;
-  font-size: 11px; color: var(--text-muted); margin-top: 3px;
-}
-.lm-diagram-tooltip-dot {
-  display: inline-block; width: 8px; height: 8px;
-  border-radius: 50%; flex-shrink: 0;
-}
 
+/* A reference table drawn as a diagram (`kind: 'table'`).
+   The 442-552px caps above were set for a cost-curve graph, where a bigger drawing of two lines buys
+   nothing. A grid of words is the opposite case: at 552px a 500-unit viewBox renders its 9-unit cells
+   at about 10px, which is what was reported from the product on 3.3.1. The card already bounds this
+   to 92% of a 960-1060px column, so letting the table fill it puts the same cells near 16px. The two
+   selectors carry a class each, so they outrank the breakpoint rules wherever those apply. */
+.lm-diagram-table .lm-interactive-svg-wrapper svg,
+.lm-diagram-table .lm-interactive-svg-wrapper img,
+.lm-diagram-table .diagram-svg-wrapper svg,
+.lm-diagram-table .diagram-svg-wrapper img { max-width: 100%; }
+
+/* A table gets the whole reading column; a diagram keeps the narrower frame.
+ *
+ * Releasing the graph cap was not enough on its own. The card is also held to 92% of
+ * `.lm-container`, which is a READING measure — 860 to 1060px, chosen so prose stays near 65
+ * characters. Measured in the browser that left a table 530px on a 1024-wide laptop, where its
+ * 9-unit cells render at 9.5px. Prose wants a narrow column; a grid of words wants room.
+ *
+ * The first attempt at this broke the table out to `min(100vw - 4rem, 1280px)`. That is the usual
+ * full-bleed trick and it is wrong here: the card is centred on the reading column, and the reading
+ * column is offset by the sidebar, so at 1024 the table ran from 169 to 1129 — 105px off the right
+ * edge of a 1024 viewport. Anything anchored to the viewport has to know about the sidebar.
+ *
+ * So: 100% of the container instead of 92%, which is bounded by construction and cannot overflow
+ * whatever the sidebar does. 530px -> about 820 at 1024 and 960 at 1280, and the cells go from
+ * 9.5px to roughly 15 and 17. Tap-to-enlarge stays on for tables at every width regardless
+ * (components/learn-mode/InlineDiagram.jsx), which is the founder's decision of 18 September: both,
+ * not one or the other.
+ */
+@media (min-width: 768px) {
+  .lm-diagram-card.lm-diagram-table,
+  .diagram-container.lm-diagram-table { max-width: 100%; }
+}
 /* Diagram label drill */
 .lm-label-drill {
   position: relative; padding: 16px 0;
@@ -4221,6 +4258,23 @@ button.sidebar-resource-link {
 }
 .practice-filter-btn.active .practice-filter-count {
   background: var(--green-25);
+}
+/* A tariff the subject's paper carries but this section has no question at yet. Shown, so the
+   ladder reads as the paper's ladder, but not clickable into an empty list. Packet 12.1, E006. */
+.practice-filter-btn.empty {
+  opacity: 0.45;
+  cursor: default;
+}
+.practice-filter-btn.empty:hover {
+  border-color: var(--border-primary);
+  color: var(--text-secondary);
+}
+/* A tariff that appears on no IAL paper for this subject, but at which this section has a live
+   question. The chip exists so the row still accounts for every question the student can see; the
+   dashed border and the "· not IAL" label say it is not part of the paper's ladder. No new colour
+   token, so `npm run contrast` is unaffected. Founder decision 2026-09-18; packet 12.1 fix round B1. */
+.practice-filter-btn.off-ladder {
+  border-style: dashed;
 }
 .practice-questions-list {
   display: flex;
@@ -5128,366 +5182,6 @@ a.auth-dropdown-item:visited {
   background: var(--accent-green);
 }
 
-/* ─── Guide pages ───
- *
- * Only `.resource-page-header` was ever capped (800px, centred); the contents
- * box, the stepper, the related links and the CTA ran to the full window. At a
- * 1512px viewport the headline started 281px further in than the paragraph
- * under it, and body text ran to 177 characters a line. One shell fixes both:
- * the header's own 800px cap resolves to the shell's width from the inside.
- *
- * The type scale is scoped to the shell so the other resource pages that share
- * `.resource-page` are untouched.
- */
-.guide-shell {
-  /* 640px of DM Sans at 18px is ~78 characters a line. */
-  max-width: 640px;
-  margin-inline: auto;
-}
-.guide-shell .resource-page-header {
-  margin-bottom: 28px;
-}
-.guide-shell .resource-page-title {
-  font-size: 40px;
-  line-height: 1.12;
-  letter-spacing: -0.021em;
-  margin: 14px 0 10px;
-  text-wrap: balance;
-}
-.guide-shell .resource-page-subtitle {
-  font-size: 18px;
-  line-height: 1.55;
-}
-.guide-updated {
-  font-size: 13px;
-  /* --text-muted is 3.58:1 on this ground, under the 4.5:1 AA floor for 13px. */
-  color: var(--text-tertiary);
-  margin: 14px 0 0;
-}
-.guide-shell .seo-stepper-body h2 {
-  font-size: 24px;
-  line-height: 1.25;
-  letter-spacing: -0.012em;
-  margin: 0 0 12px;
-  text-wrap: balance;
-}
-.guide-shell .seo-stepper-body p {
-  font-size: 18px;
-  line-height: 1.7;
-  color: var(--text-secondary);
-  margin: 0;
-}
-.guide-shell .seo-stepper-body {
-  padding-bottom: 36px;
-}
-
-/* Table of contents — was inline hex fallbacks in the JSX, which bypassed the
- * token set entirely (`--card-bg` is not a token, so #1a1a2e was what rendered). */
-.guide-toc {
-  margin-bottom: 36px;
-  padding: 20px 24px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-primary);
-  border-radius: 10px;
-}
-.guide-toc-title {
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: var(--text-tertiary);
-  margin-bottom: 12px;
-}
-.guide-toc ol {
-  margin: 0;
-  padding-left: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.guide-toc li {
-  font-size: 15px;
-  line-height: 1.45;
-  color: var(--text-tertiary);
-}
-.guide-toc a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  transition: color 0.15s;
-}
-.guide-toc a:hover,
-.guide-toc a:focus-visible {
-  color: var(--accent-green);
-}
-.guide-shell .seo-related-links,
-.guide-shell .seo-cta {
-  margin-top: 32px;
-}
-
-/* Two shapes the topic CTAs used to carry as inline styles in each page. */
-.topic-cta-inline { margin-top: 16px; display: inline-block; }
-.topic-cta-lg { font-size: 15px; padding: 14px 30px; }
-
-/* Links inside the prose. Underlined rather than colour-only, so they are
- * distinguishable without relying on hue. */
-.guide-inline-link {
-  color: var(--text-primary);
-  text-decoration: underline;
-  text-decoration-color: var(--accent-green);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-  transition: color 0.15s;
-}
-.guide-inline-link:hover,
-.guide-inline-link:focus-visible {
-  color: var(--accent-green);
-}
-
-/* Desktop layout.
- *
- * The shell was 640px on every screen, which reads well and used 42% of a
- * 1512px display, leaving 433px of empty ground either side. The contents list
- * becomes a sticky rail there instead of a block the reader scrolls past once,
- * and tables and charts extend to the right — the left edge stays put, so the
- * eye still tracks a single margin. Below 1100px nothing changes.
- */
-.guide-layout { display: block; }
-.guide-main { min-width: 0; }
-
-@media (min-width: 1100px) {
-  .guide-shell { max-width: 1000px; }
-  .guide-layout {
-    display: grid;
-    grid-template-columns: 216px minmax(0, 640px);
-    gap: 64px;
-    align-items: start;
-  }
-  .guide-shell .resource-page-header,
-  .guide-shell .seo-hero-cta { max-width: 640px; margin-left: 280px; }
-  .guide-toc {
-    position: sticky;
-    top: 84px;
-    margin-bottom: 0;
-    max-height: calc(100vh - 120px);
-    overflow-y: auto;
-  }
-  .guide-toc ol { gap: 10px; }
-  .guide-toc li { font-size: 13.5px; line-height: 1.4; }
-  /* Wide things reach into the space the rail does not use. */
-  .guide-main .guide-table-wrap,
-  .guide-main .guide-marks { width: calc(100% + 150px); }
-}
-
-/* Headline numbers, pulled out of the prose that states them. */
-.guide-stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
-  gap: 1px;
-  background: var(--border-primary);
-  border: 1px solid var(--border-primary);
-  border-radius: 10px;
-  overflow: hidden;
-  margin: 18px 0 0;
-}
-.guide-stat { background: var(--bg-card); padding: 14px 16px; }
-.guide-stat b {
-  display: block;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1.1;
-  color: var(--accent-green);
-  font-variant-numeric: tabular-nums;
-}
-.guide-stat span {
-  display: block;
-  font-size: 12.5px;
-  line-height: 1.35;
-  color: var(--text-tertiary);
-  margin-top: 4px;
-}
-
-/* Mark distribution. */
-.guide-marks { margin: 20px 0 0; }
-.guide-marks-legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 18px;
-  margin-bottom: 14px;
-  font-size: 12.5px;
-  color: var(--text-tertiary);
-}
-.guide-marks-key { display: inline-flex; align-items: center; gap: 7px; }
-.guide-marks-swatch { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
-.guide-marks-row { display: grid; grid-template-columns: 1fr; gap: 5px; margin-bottom: 14px; }
-.guide-marks-name { font-size: 13px; color: var(--text-secondary); }
-.guide-marks-bar {
-  display: flex;
-  height: 30px;
-  border-radius: 6px;
-  overflow: hidden;
-  background: var(--bg-card);
-}
-.guide-marks-seg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 0;
-  font-size: 12px;
-  font-weight: 600;
-  /* Dark ink on a bright bar fill — the same role --ns-on-brand plays on buttons. */
-  color: var(--ns-on-brand);
-  font-variant-numeric: tabular-nums;
-}
-.guide-marks-seg span { overflow: hidden; }
-.guide-marks .s1 { background: #34d399; }
-.guide-marks .s2 { background: #60a5fa; }
-.guide-marks .s3 { background: #c4b5fd; }
-.guide-marks .s4 { background: #fbbf24; }
-.guide-marks figcaption {
-  font-size: 12.5px;
-  color: var(--text-tertiary);
-  line-height: 1.5;
-  margin-top: 4px;
-}
-
-@media (max-width: 640px) {
-  .guide-marks-name { font-size: 12.5px; }
-  .guide-marks-bar { height: 26px; }
-  .guide-stat b { font-size: 21px; }
-}
-
-/* Lists and tables inside a guide section. The stepper already had `ul`/`li`
- * rules that nothing ever used; these scope them to the guide and add the
- * table, which has to scroll in its own box so the page never does. */
-.guide-list {
-  list-style: none;
-  padding: 0;
-  margin: 16px 0 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.guide-list li {
-  position: relative;
-  padding-left: 18px;
-  font-size: 17px;
-  line-height: 1.6;
-  color: var(--text-secondary);
-}
-.guide-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 10px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent-green);
-}
-
-.guide-table-wrap {
-  margin: 18px 0 0;
-  overflow-x: auto;
-  border: 1px solid var(--border-primary);
-  border-radius: 10px;
-  background: var(--bg-card);
-}
-.guide-table {
-  border-collapse: collapse;
-  width: 100%;
-  min-width: 460px;
-  font-size: 15px;
-  text-align: left;
-}
-.guide-table caption {
-  caption-side: top;
-  padding: 12px 16px 0;
-  font-size: 13px;
-  color: var(--text-tertiary);
-  text-align: left;
-}
-.guide-table th,
-.guide-table td {
-  padding: 10px 16px;
-  border-bottom: 1px solid var(--border-primary);
-  vertical-align: top;
-  line-height: 1.5;
-}
-.guide-table thead th {
-  font-size: 12px;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: var(--text-tertiary);
-  font-weight: 700;
-  white-space: nowrap;
-}
-.guide-table tbody th {
-  color: var(--text-primary);
-  font-weight: 600;
-}
-.guide-table td {
-  color: var(--text-secondary);
-}
-.guide-table tbody tr:last-child th,
-.guide-table tbody tr:last-child td {
-  border-bottom: none;
-}
-
-/* Contextual CTA, sitting directly under the section that earns it. */
-.guide-inline-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 18px;
-  padding: 10px 16px;
-  border-radius: 8px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-primary);
-  color: var(--accent-green);
-  font-size: 15px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: border-color 0.15s, background 0.15s;
-}
-.guide-inline-cta:hover,
-.guide-inline-cta:focus-visible {
-  border-color: var(--accent-green);
-  background: var(--bg-card-hover);
-}
-.guide-inline-cta span {
-  transition: transform 0.15s;
-}
-.guide-inline-cta:hover span {
-  transform: translateX(2px);
-}
-@media (prefers-reduced-motion: reduce) {
-  .guide-inline-cta span { transition: none; }
-  .guide-inline-cta:hover span { transform: none; }
-}
-
-/* The numbered rail sits in the left gutter where there is room for it, so the
- * headline, the section headings and the body text share one left edge. Below
- * that it goes back in flow and indents the text, which is fine on a phone. */
-@media (min-width: 900px) {
-  .guide-shell .seo-stepper-step { position: relative; }
-  .guide-shell .seo-stepper-rail {
-    position: absolute;
-    left: -52px;
-    top: 0;
-    bottom: 0;
-  }
-}
-
-@media (max-width: 640px) {
-  .guide-shell .resource-page-title { font-size: 30px; line-height: 1.16; }
-  .guide-shell .resource-page-subtitle { font-size: 16px; }
-  .guide-shell .seo-stepper-body h2 { font-size: 21px; }
-  .guide-shell .seo-stepper-body p { font-size: 17px; }
-  .guide-list li { font-size: 16px; }
-  .guide-table { font-size: 14px; }
-  .guide-toc { padding: 16px 18px; }
-}
-
 /* Hero CTA — prominent banner at top of unit pages */
 .seo-hero-cta {
   margin: 0 0 24px;
@@ -6035,6 +5729,17 @@ a.auth-dropdown-item:visited {
   line-height: 1.65;
 }
 .ma-seo-intro strong { color: var(--text-primary); }
+/* A section page with no model answer in the bank yet. Packet 12.1, E005. */
+.ma-empty-note {
+  background: var(--bg-section);
+  border: 1px solid var(--border-primary);
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 14px;
+  color: var(--text-tertiary);
+  line-height: 1.65;
+  margin: 0 0 28px;
+}
 
 /* ── Browse-by-topic hierarchical filter ── */
 .ma-browse-section {
@@ -6305,11 +6010,28 @@ a.auth-dropdown-item:visited {
   justify-content: center;
 }
 .lm-diagram-modal .lm-diagram-modal-svg svg {
-  width: 100%;
+  /* A definite width, not 100%: the sheet, its pane and the wrapper all shrink to fit their content,
+     so "100%" resolved to the SVG's 300px intrinsic default once the clone lost its width attribute
+     (round-3 note): the desktop sheet was 1.1x the inline diagram. Same figure as the pane rule at
+     the sheet block, which this three-part selector used to outrank. */
+  width: min(80vw, 900px);
   height: auto;
-  max-width: 90vw;
+  max-width: none;
   max-height: 85vh;
   display: block;
+}
+/* F062/F088: on a phone the sheet's job is to be BIGGER than the inline diagram. The rule above
+   (three-part selector) outranked the 200vw phone rule, so the sheet was 300px at 390px: the
+   verifier's second catch after the cloned inline style. Same selector, so it wins by order. */
+@media (max-width: 768px) {
+  /* The sheet is a centred flex column, so the pane shrink-wrapped to the 2x diagram and sat half
+     off-screen with the sheet's overflow hidden: the left of every diagram unreachable. The pane
+     is the viewport's width and scrolls; the diagram inside it is the wide thing. */
+  .lm-diagram-modal .lm-diagram-modal-pane { width: 100%; max-width: 100%; align-self: stretch; overflow: auto; }
+  .lm-diagram-modal .lm-diagram-modal-svg { display: block; width: max-content; }
+  /* 220vw, not 200: with no font floor (processSvg step 7) the smallest authored label, 7 units on a
+     500 box, is 12px here at 390px. */
+  .lm-diagram-modal .lm-diagram-modal-svg svg { width: 220vw; max-width: none; max-height: none; }
 }
 
 /* Image inside modal */
@@ -7542,3 +7264,305 @@ a.auth-dropdown-item:visited {
 }
 .spe-session-size-btn.active { color: #fff; background: var(--rl-green, #10b981); border-color: transparent; }
 .spe-session-size-btn:focus-visible { outline: 2px solid var(--rl-green, #10b981); outline-offset: 2px; }
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Reduced motion (F099). The app ships 20+ keyframes, staggered flow-chain
+   reveals and spring-driven tab transitions, and honoured none of the
+   operating-system preference. Vestibular disorders are not rare and the
+   setting is a direct request, not a hint. 0.01ms rather than 0 keeps
+   animationend/transitionend handlers firing, so nothing that waits on one
+   silently stalls.
+   ────────────────────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  /* Staggered reveals set their own delay inline; collapse those too. */
+  [style*="animation-delay"], [style*="transition-delay"] {
+    animation-delay: 0ms !important;
+    transition-delay: 0ms !important;
+  }
+}
+
+/* Glossary term is reachable by keyboard and tap, not hover alone (F068) */
+.glossary-highlight:focus-visible {
+  outline: 2px solid var(--accent-green, #10b981);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* Focus is visible on every interactive step widget (F070). These were click-only with no
+   focus styling at all, so a keyboard user could not see where they were. */
+.lm-quiz-option:focus-visible,
+.lm-recall-item:focus-visible,
+.lm-recall-arrow:focus-visible,
+.lm-fillin-blank:focus-visible,
+.lm-fillin-word:focus-visible,
+  .lm-match-slot:focus-visible,
+  .lm-word-chip:focus-visible,
+  .lm-classify-group-name:focus-visible,
+  .lm-recall-skip:focus-visible,
+.lm-nav-next:focus-visible,
+.lm-nav-back:focus-visible,
+.spe-section-chip:focus-visible {
+  outline: 2px solid var(--accent-green, #10b981);
+  outline-offset: 2px;
+}
+
+/* The free tier, stated on the page that sells the paid one (F031) */
+.upgrade-free-note {
+  margin: 14px auto 0; max-width: 52ch; padding: 10px 16px;
+  border-radius: 10px; font-size: 13.5px; line-height: 1.5;
+  color: var(--text-secondary);
+  background: var(--bg-secondary, rgba(127,127,127,.07));
+  border: 1px solid var(--border-color, rgba(127,127,127,.22));
+}
+.upgrade-free-note strong { color: var(--text-primary); }
+
+/* Explain It Back: what a free student sees instead of nothing (F029) */
+.lm-explain-locked {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 10px 16px; margin-top: 12px; padding: 12px 14px; border-radius: 10px;
+  background: var(--bg-secondary, rgba(127,127,127,.07));
+  border: 1px solid var(--border-color, rgba(127,127,127,.25));
+  border-left: 3px solid var(--rl-green, #10b981);
+}
+.lm-explain-locked-text { font-size: 13.5px; line-height: 1.45; color: var(--text-secondary); max-width: 46ch; }
+.lm-explain-locked-text strong { color: var(--text-primary); }
+.lm-explain-locked-cta {
+  min-height: 44px; display: inline-flex; align-items: center; padding: 0 18px; flex: none;
+  border-radius: 999px; font-size: 13.5px; font-weight: 600; text-decoration: none;
+  background: var(--rl-green, #10b981); color: #fff;
+}
+.lm-explain-locked-cta:focus-visible { outline: 2px solid var(--rl-green, #10b981); outline-offset: 2px; }
+
+
+/* F017: the student's own wrong answers, shown above the authored common mistakes. */
+.mistakes-own { margin-bottom: 28px; }
+.mistakes-own-title {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 16px; font-weight: 600; color: var(--text-primary); margin: 0 0 4px;
+}
+.mistakes-own-count {
+  font-size: 12px; font-weight: 600; color: var(--accent-amber);
+  background: var(--amber-10, rgba(217, 148, 32, 0.12));
+  border-radius: 999px; padding: 2px 9px;
+}
+.mistakes-own-sub { font-size: 13px; color: var(--text-muted); margin: 0 0 14px; }
+.mistake-card-own { border-left: 3px solid var(--accent-amber); }
+.mistake-own-q { font-weight: 600; color: var(--text-primary); margin-bottom: 8px; line-height: 1.45; }
+.mistake-own-answer { font-size: 14px; color: var(--text-secondary); margin-bottom: 6px; }
+.mistake-own-why { font-size: 14px; color: var(--text-secondary); line-height: 1.55; }
+.mistake-own-meta { font-size: 12.5px; color: var(--text-muted); margin-top: 8px; font-style: italic; }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Packet 5 — Step 0. One subsection per step, a check-in per chapter, readable
+   on a 390px phone, the exit always in view. See audit/NEXT.md "Packet 5 spec".
+   Later in the file than the rules it refines, so it wins at equal specificity.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* The step body remounts per step and carries the enter animation (F046, F097). */
+.lm-step-body.step-enter { animation: lmStepEnter 0.35s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+/* Chapter eyebrow above the one heading a step has (F039, F064, F067) */
+.lm-eyebrow {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--text-muted); margin-bottom: 6px;
+}
+.lm-eyebrow-chapter { color: var(--accent-green); }
+.lm-eyebrow-sep { color: var(--text-dim); }
+.lm-eyebrow-title { text-transform: none; letter-spacing: 0; font-size: 13px; font-weight: 600; color: var(--text-tertiary); }
+.lm-eyebrow-part { text-transform: none; letter-spacing: 0; font-size: 12px; font-weight: 500; color: var(--text-dim); }
+.lm-eyebrow-part::before { content: '·'; margin-right: 8px; color: var(--text-dim); }
+.lm-checkin-intro { font-size: 14px; color: var(--text-tertiary); margin: -8px 0 18px; }
+
+/* Chapter dots: one per chapter, clickable once reached (F046) */
+.lm-chapter-dots { display: flex; gap: 6px; margin: -10px 0 18px; }
+.lm-chapter-dot {
+  width: 26px; height: 6px; border-radius: 3px; border: 0; padding: 0;
+  background: var(--border-primary); cursor: pointer; transition: background 0.2s;
+}
+.lm-chapter-dot.reached { background: var(--green-light-30); }
+.lm-chapter-dot.active { background: var(--accent-green); }
+.lm-chapter-dot:disabled { cursor: default; }
+.lm-chapter-dot:focus-visible { outline: 2px solid var(--accent-green); outline-offset: 2px; }
+
+/* Visual hierarchy (F067): the Key Idea is the one dominant element and the takeaway is the strongest
+   element on a check-in. F067's own wording asked for the three lenses to lose their coloured fill as
+   well, and packet 5 shipped that; the founder asked for the boxes back on 15 September — easier on the
+   eyes, and friendlier — so they keep the filled cards they have on the Notes tab and in production.
+   The hierarchy is carried by the Key Idea being stronger than they are rather than by stripping them:
+   a 4px rule against their 1px border, 16px/500 text against their 14px, and more padding.
+   Do not re-flatten the lenses without asking; this is a deliberate departure from F067's fix text. */
+.rl-key-idea {
+  border-left-width: 4px; padding: 16px 18px; margin-bottom: 18px;
+}
+.rl-key-idea-label { font-size: 12px; }
+.rl-key-idea p { font-size: 16px; line-height: 1.55; font-weight: 500; color: var(--text-primary); }
+.rl-lenses { display: grid; gap: 10px; margin-top: 6px; }
+.rl-lenses .rl-real-example, .rl-lenses .rl-misconception, .rl-lenses .rl-exam-matters {
+  /* the filled card comes from the base rules; the grid gap owns the spacing */
+  margin: 0;
+}
+.rl-lenses .rl-real-example-label, .rl-lenses .rl-misconception-label, .rl-lenses .rl-exam-matters-label {
+  font-size: 12px; margin-bottom: 3px;
+}
+.rl-lenses p { font-size: 14px; line-height: 1.6; color: var(--text-secondary); }
+.lm-step-body .rl-takeaway {
+  border: 1.5px solid var(--accent-green); background: var(--green-light-6);
+  box-shadow: 0 0 0 4px var(--green-light-6);
+}
+.lm-step-body .rl-takeaway-label { color: var(--accent-green); font-size: 12px; }
+
+/* Recall slots: a subsection's own recall sits below its teaching; a spaced one carries its cue. */
+.lm-recall-own { margin-top: 8px; }
+.lm-recall-spaced .lm-recall-card { margin-top: 8px; }
+.lm-spaced-cue {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px;
+  margin: 26px 0 0; padding-left: 2px;
+}
+.lm-spaced-cue-label {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--accent-purple, #8b5cf6);
+}
+.lm-spaced-cue-title { font-size: 13px; color: var(--text-tertiary); }
+
+/* Navigation row: Back · counter · Next. Desktop keeps the counter in the header row above. */
+.lm-nav { justify-content: space-between; }
+.lm-nav-counter { display: none; font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 700; color: var(--text-muted); letter-spacing: 0.04em; }
+.lm-nav-placeholder { width: 0; }
+
+/* Explain it back: the path everyone has (F012) */
+.lm-explain-toggle-draft { margin-left: auto; font-size: 12px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.lm-explain-compare-btn {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; padding: 9px 16px;
+  background: var(--accent-green); color: #fff; border: none; border-radius: 20px;
+  font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit;
+}
+.lm-explain-compare { margin-top: 12px; padding: 12px 14px; background: var(--bg-input); border: 1px solid var(--border-primary); border-radius: 10px; }
+.lm-explain-compare-title { font-size: 13px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+.lm-explain-checklist, .lm-practice-checklist { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.lm-explain-check, .lm-practice-check { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 1.5; color: var(--text-secondary); cursor: pointer; }
+.lm-explain-check input, .lm-practice-check input { width: 18px; height: 18px; margin-top: 3px; flex-shrink: 0; accent-color: var(--accent-green); }
+.lm-explain-compare-result { margin-top: 10px; font-size: 13px; color: var(--text-tertiary); }
+
+/* Inline practice: the answer box and the self-mark checklist (F016, F117) */
+.lm-practice-write { margin-top: 12px; }
+.lm-practice-write-label { display: block; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; }
+.lm-practice-textarea {
+  width: 100%; min-height: 96px; padding: 12px 14px; font-size: 16px; font-family: inherit; line-height: 1.6;
+  color: var(--text-primary); background: var(--bg-input); border: 1.5px solid var(--border-primary);
+  border-radius: 10px; resize: vertical; transition: border-color 0.15s;
+}
+.lm-practice-textarea:focus { outline: none; border-color: var(--accent-green); box-shadow: 0 0 0 3px var(--green-light-10); }
+.lm-practice-mark-btn {
+  margin-top: 8px; padding: 9px 16px; background: var(--accent-green); color: #fff; border: none; border-radius: 20px;
+  font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit;
+}
+.lm-practice-mark-btn:disabled { opacity: 0.4; cursor: default; }
+.lm-practice-selfmark { margin-top: 12px; padding: 12px 14px; background: var(--bg-input); border: 1px solid var(--border-primary); border-radius: 10px; }
+.lm-practice-selfmark-title { font-size: 13px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+.lm-practice-check-marks { font-style: normal; color: var(--text-muted); font-size: 12px; }
+.lm-practice-selfmark-total { margin-top: 10px; font-size: 13px; font-weight: 600; color: var(--text-primary); }
+.lm-practice-selfmark-note { font-weight: 400; color: var(--text-muted); }
+.lm-practice-tutor-locked { text-decoration: none; opacity: 0.85; }
+
+/* Textareas never below 16px: iOS Safari zooms the page on focus below that (F094). */
+.lm-explain-textarea, .lm-recall-textarea, .lm-practice-textarea { font-size: 16px; }
+
+/* Tab strip overflow (F096) */
+.tab-bar-wrap { position: relative; }
+.tab-bar-more {
+  display: none; position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+  width: 44px; height: 44px; border-radius: 22px; border: 1px solid var(--border-primary);
+  background: var(--bg-card); color: var(--text-secondary); font-size: 24px; line-height: 1;
+  align-items: center; justify-content: center; cursor: pointer; z-index: 2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+/* Diagram modal as a sheet (F088, F062) */
+.lm-diagram-modal { flex-direction: column; background: var(--bg-card); border-radius: 12px; padding: 0; overflow: hidden; }
+.lm-diagram-modal-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 12px 10px 16px; border-bottom: 1px solid var(--border-primary); }
+.lm-diagram-modal-title { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+.lm-diagram-modal-close { position: static; box-shadow: none; background: var(--bg-input); width: 44px; height: 44px; }
+.lm-diagram-modal-pane { overflow: auto; padding: 16px; max-height: calc(85vh - 90px); }
+.lm-diagram-modal-pane svg, .lm-diagram-modal-pane img { width: min(80vw, 900px); max-width: none; height: auto; display: block; }
+.lm-diagram-modal-hint { display: none; font-size: 12px; color: var(--text-muted); text-align: center; padding: 8px; border-top: 1px solid var(--border-primary); }
+
+
+/* ── Phones ─────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* The rail spent 52px of a 390px screen on one number (F095, F072). */
+  .lm-stepper-rail { display: none; }
+  .lm-stepper-step { gap: 0; }
+  .rl-note-section { padding: 14px 12px; }
+  .lm-recall-card { padding: 12px 14px; }
+  .rl-key-idea, .rl-lenses .rl-real-example, .rl-lenses .rl-misconception, .rl-lenses .rl-exam-matters { padding-left: 12px; }
+  .rl-key-idea p { font-size: 16px; }
+  .rl-lenses p, .lm-recall-item-text, .lm-fillin-step, .lm-word-chip, .lm-fillin-blank, .lm-recall-prompt { font-size: 15px; }
+  .rl-key-idea-label, .rl-real-example-label, .rl-misconception-label, .rl-exam-matters-label,
+  .rl-lenses .rl-real-example-label, .rl-lenses .rl-misconception-label, .rl-lenses .rl-exam-matters-label,
+  .rl-takeaway-label, .lm-recall-label, .lm-card-label, .lm-eyebrow, .lm-eyebrow-part,
+  .lm-spaced-cue-label, .lm-practice-write-label, .lm-explain-toggle-draft, .lm-diagram-enlarge-hint,
+  .lm-recall-item-num, .lm-practice-check-marks, .lm-nav-counter { font-size: 12px; }
+  .lm-section-title { font-size: 22px; }
+
+  /* Diagrams fill the card; the 270px cap was the 5px-label complaint (F088). */
+  .lm-interactive-svg-wrapper svg, .lm-interactive-svg-wrapper img { max-width: 100%; }
+  .lm-diagram-modal-backdrop { align-items: stretch; justify-content: stretch; }
+  .lm-diagram-modal { width: 100vw; max-width: 100vw; height: 100vh; height: 100dvh; max-height: none; border-radius: 0; }
+  /* F062: `pinch-zoom` alone disallows one-finger panning of the pane, and the pane is the scroll
+     container for a diagram wider than the screen — the round-2 catch. `manipulation` allows pan and
+     pinch and only drops the double-tap delay. */
+  .lm-diagram-modal-pane { flex: 1; max-height: none; touch-action: manipulation; -webkit-overflow-scrolling: touch; padding: 12px; }
+  .lm-diagram-modal-pane svg, .lm-diagram-modal-pane img { width: 220vw; }
+  .lm-diagram-modal-hint { display: block; }
+
+  /* Touch targets (F091, F059): nothing a thumb has to hit is under 40px. */
+  .lm-recall-arrows { flex-direction: row; gap: 6px; }
+  .lm-recall-arrow-btn { min-width: 44px; min-height: 44px; font-size: 12px; padding: 0; }
+  .lm-recall-item { min-height: 44px; }
+  .lm-recall-dismiss { min-width: 44px; min-height: 44px; margin: -10px -10px -10px 0; display: inline-flex; align-items: center; justify-content: center; }
+  .lm-recall-skip { min-height: 44px; min-width: 64px; margin: -8px 0; }
+  .lm-match-slot, .lm-classify-chip, .lm-classify-group-name { min-height: 44px; }
+  .lm-match-row { flex-wrap: wrap; }
+  .lm-match-left { flex-basis: 100%; }
+  .lm-match-slot, .lm-fillin-was, .lm-fillin-answer, .lm-recall-why, .lm-fillin-hints, .lm-recall-skipped-note { font-size: 15px; }
+  .lm-recall-why { font-size: 13px; }
+  .lm-gallery { padding: 12px; }
+  .lm-more-btn { width: 44px; height: 44px; }
+  .lm-word-chip, .lm-fillin-blank { min-height: 40px; display: inline-flex; align-items: center; white-space: nowrap; }
+  /* A classify item is a whole statement, not a fill-in's single word. The nowrap above is there so a
+     fill-in blank never breaks mid-word; inherited by classify chips it made a long item — "Two-thirds of
+     the workforce is employed in services" — overflow 390px and drag the whole document sideways, so every
+     later step rendered shifted until the page was scrolled back. Found by the founder on live content. */
+  .lm-word-chip.lm-classify-chip { white-space: normal; text-align: left; max-width: 100%; }
+  /* A blank was shrinking inside its flex row and breaking "underproduces" mid-word; the row wraps instead. */
+  .lm-fillin-step { flex-wrap: wrap; row-gap: 6px; }
+  .lm-fillin-blank { flex-shrink: 0; max-width: 100%; }
+  .tab-face { min-height: 40px; }
+  .tab-bar-more { display: flex; }
+
+  /* The exit is always in view: a sticky bar with Back · step · Next (F093, F065). */
+  /* F101: the arrow-key hint is meaningless on a phone, and the rule that hid it at :1492 lost to the
+     base rule declared after it. Hidden here, where the phone block wins. */
+  .lm-keyboard-hint { display: none; }
+  .lm-container .lm-nav {
+    position: sticky; bottom: 0; z-index: 30;
+    flex-wrap: nowrap; align-items: center; gap: 10px;
+    margin: 24px -14px 0; padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
+    background: var(--bg-primary); border-top: 1px solid var(--border-primary);
+    box-shadow: 0 -8px 20px rgba(0,0,0,0.08);
+  }
+  .lm-container .lm-nav-back, .lm-container .lm-nav-next, .lm-container .lm-nav-complete { width: auto; }
+  .lm-container .lm-nav-back { min-width: 44px; min-height: 44px; padding: 0 14px; justify-content: center; }
+  .lm-nav-back-text { display: none; }
+  .lm-nav-placeholder { width: 44px; flex-shrink: 0; }
+  .lm-nav-counter { display: inline; flex: 1; text-align: center; }
+  .lm-container .lm-nav-next, .lm-container .lm-nav-complete { min-height: 44px; padding: 0 22px; justify-content: center; }
+  .lm-chapter-dots { margin-top: -6px; }
+}

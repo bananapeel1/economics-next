@@ -21,6 +21,12 @@ import { sectionPayload } from '@/lib/preview-limits';
  * and reports true totals separately so the paywall can still say "2 of 25" honestly.
  */
 export async function GET(request, { params }) {
+  // F092: 152 KB raw per section, refetched on every section switch with no cache header at all.
+  //
+  // It cannot be a shared public cache: since F086 this response depends on who is asking (a free
+  // student gets 2 quiz questions, a paying one gets 25), so `s-maxage` on a CDN would serve one
+  // student's entitlement to another. `private` keeps it in the student's own browser, which is
+  // where the repeat cost actually falls when they move between sections and back.
   const { id } = await params;
 
   const supabaseAuth = await createClient();
@@ -33,31 +39,58 @@ export async function GET(request, { params }) {
     isPremium = hasPremiumAccess(sub) || user.app_metadata?.role === 'admin';
   }
 
+  /*
+   * Draft preview, development only (packet 16).
+   *
+   * Since packet 2 a content packet stages to `draft` and a student reads `data`, and since the
+   * 15 September decision a section authored to the packet-7 recall contract may not be published
+   * until packets 5 and 7 are on main. Three finished sections are now held that way, and the
+   * PROTOCOL still requires a 390x844 walkthrough of each before its gate passes — which had no
+   * route, because nothing on the student path reads `draft`.
+   *
+   * `?draft=1` selects `draft` and falls back to `data` per table, so a staged section renders
+   * through the real components with the real engine. It is OFF in any production build, including
+   * Vercel previews, which build with NODE_ENV=production: the flag cannot reach a student.
+   */
+  const wantDraft = process.env.NODE_ENV !== 'production'
+    && new URL(request.url).searchParams.get('draft') === '1';
+  const cols = wantDraft ? 'data, draft' : 'data';
+
   const [content, notes, diagrams, flashcards, quiz, mistakes, practice, extras] = await Promise.all([
-    db.from('section_content').select('data').eq('section_id', id).maybeSingle(),
-    db.from('section_notes').select('data').eq('section_id', id).maybeSingle(),
-    db.from('section_diagrams').select('data').eq('section_id', id).maybeSingle(),
-    db.from('section_flashcards').select('data').eq('section_id', id).maybeSingle(),
-    db.from('section_quiz').select('data').eq('section_id', id).maybeSingle(),
-    db.from('section_common_mistakes').select('data').eq('section_id', id).maybeSingle(),
-    db.from('section_practice').select('data').eq('section_id', id).maybeSingle(),
-    db.from('section_extras').select('data').eq('section_id', id).maybeSingle(),
+    db.from('section_content').select(cols).eq('section_id', id).maybeSingle(),
+    db.from('section_notes').select(cols).eq('section_id', id).maybeSingle(),
+    db.from('section_diagrams').select(cols).eq('section_id', id).maybeSingle(),
+    db.from('section_flashcards').select(cols).eq('section_id', id).maybeSingle(),
+    db.from('section_quiz').select(cols).eq('section_id', id).maybeSingle(),
+    db.from('section_common_mistakes').select(cols).eq('section_id', id).maybeSingle(),
+    db.from('section_practice').select(cols).eq('section_id', id).maybeSingle(),
+    db.from('section_extras').select(cols).eq('section_id', id).maybeSingle(),
   ]);
 
-  const arr = (r) => (Array.isArray(r.data?.data) ? r.data.data : []);
+  const payload = (r) => (wantDraft && r.data?.draft != null ? r.data.draft : r.data?.data);
+  const arr = (r) => (Array.isArray(payload(r)) ? payload(r) : []);
 
-  /* One description of the preview, shared with the topic pages — see lib/preview-limits.js. They
-     cannot check entitlement (a cached document is served to everyone), so they send what a free
-     reader may see and the client upgrades here. Two copies of these caps is how the page and this
-     route drifted apart in the first place. */
-  return NextResponse.json(sectionPayload({
+  /* V007. The slicing used to live here, which made this route the only door that could be trusted
+     — and the topic pages walked straight past it with the anon client. `sectionPayload` is that
+     same logic, lifted to `lib/preview-limits.js` so the pages and the homepage call it too. This
+     route is still the only caller that may pass `isPremium: true`, because it is the only one that
+     knows who is asking. */
+  const body = sectionPayload({
     content: arr(content),
     notes: arr(notes),
     diagrams: arr(diagrams),
-    flashcards: arr(flashcards),
-    quiz: arr(quiz),
-    mistakes: arr(mistakes),
     practice: arr(practice),
-    extras: extras.data?.data || { chains: [], evaluation: [] },
-  }, { isPremium }));
+    quiz: arr(quiz),
+    flashcards: arr(flashcards),
+    mistakes: arr(mistakes),
+    extras: payload(extras) || { chains: [], evaluation: [] },
+  }, { isPremium });
+
+  return NextResponse.json(body, {
+    headers: {
+      // A draft preview must never be cached: it is re-staged repeatedly while a packet is built.
+      'Cache-Control': wantDraft ? 'no-store' : 'private, max-age=300, stale-while-revalidate=3600',
+      Vary: 'Cookie',
+    },
+  });
 }

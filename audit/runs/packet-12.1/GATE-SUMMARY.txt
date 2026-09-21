@@ -1,0 +1,11 @@
+=== Test Status ===
+npm test: EXIT 0
+=== Build Status ===
+npm run build: EXIT 0
+=== Validate Status ===
+npm run validate: EXIT 0
+=== Advisory Commands ===
+npm run contrast: EXIT 0
+npm run spec-items: EXIT 0
+npm run tariff-census: EXIT 0
+npm run pin-check: EXIT 0

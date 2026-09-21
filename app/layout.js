@@ -1,7 +1,12 @@
+import Script from 'next/script';
 import "./globals.css";
 import "@/styles/theme-night.css";
+import { createClient } from '@/lib/supabase/server';
+import { createServerClient } from '@/lib/supabase-server';
+import { getSubscriptionRow } from '@/lib/subscription-lookup';
 import { AuthProvider } from '@/components/AuthProvider';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import MotionProvider from '@/components/MotionProvider';
 import AnalyticsEvents from '@/components/AnalyticsEvents';
 
 export const metadata = {
@@ -49,10 +54,58 @@ export const viewport = {
   viewportFit: 'cover',
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+
+  // F035: AuthProvider started with subscription=null, so `isPremium` was false until
+  // /api/subscription resolved — and that route reconciles against Stripe, twice. A paying student
+  // who reloaded on the Tutor tab watched the "Unlock Tutor" paywall for the length of two Stripe
+  // round-trips before it vanished. It reads as "my subscription broke", which is the single worst
+  // thing to show someone who just paid. The row is read here, server-side, and seeded into the
+  // provider so the first paint is already correct.
+  //
+  // This does not touch the reconciliation itself, which still runs on every GET of that route and
+  // belongs on a webhook. That half of F035 is not done.
+  let initialSubscription = null;
+  if (user) {
+    try {
+      initialSubscription = await getSubscriptionRow(createServerClient(), user.id);
+    } catch {
+      initialSubscription = null; // the client fetch will settle it
+    }
+  }
+
   return (
     <html lang="en" data-theme="dark" suppressHydrationWarning>
       <head>
+        {/* F118: the theme must be set before first paint or the page flashes. As a bare
+            <script> in the component tree this tripped React's "script tag while rendering"
+            path and contributed to a hydration failure on every load. next/script with
+            beforeInteractive is the supported way to run something this early in the App
+            Router, and it is injected into the initial HTML rather than rendered as a child. */}
+        <Script id="revvy-theme-init" strategy="beforeInteractive">
+          {`(function(){try{var t=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',(t==='light'||t==='dark')?t:'dark');}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();`}
+        </Script>
+        {process.env.NEXT_PUBLIC_ANALYTICS_SRC ? (
+          <script
+            defer
+            src={process.env.NEXT_PUBLIC_ANALYTICS_SRC}
+            data-domain={process.env.NEXT_PUBLIC_ANALYTICS_DOMAIN}
+            data-website-id={process.env.NEXT_PUBLIC_ANALYTICS_SITE_ID}
+          />
+        ) : null}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&family=Archivo:wght@600;700;800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>
+        {/* F118: these JSON-LD blocks used to sit inside <head> in the component tree. In the App
+            Router that makes the server and client markup disagree, so React logged "Encountered a
+            script tag while rendering React component" and then failed hydration on every page
+            load, discarding the server markup and re-rendering on the client. Next's documented
+            placement for structured data is inside the body; search engines read it either way. */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -94,39 +147,16 @@ export default function RootLayout({ children }) {
             }
           })}}
         />
-        <script dangerouslySetInnerHTML={{ __html: `
-          (function(){
-            try {
-              var t = localStorage.getItem('theme');
-              if (t === 'light' || t === 'dark') {
-                document.documentElement.setAttribute('data-theme', t);
-              } else {
-                document.documentElement.setAttribute('data-theme', 'dark');
-              }
-            } catch(e) {
-              document.documentElement.setAttribute('data-theme', 'dark');
-            }
-          })();
-        `}} />
-        {process.env.NEXT_PUBLIC_ANALYTICS_SRC ? (
-          <script
-            defer
-            src={process.env.NEXT_PUBLIC_ANALYTICS_SRC}
-            data-domain={process.env.NEXT_PUBLIC_ANALYTICS_DOMAIN}
-            data-website-id={process.env.NEXT_PUBLIC_ANALYTICS_SITE_ID}
-          />
-        ) : null}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&family=Archivo:wght@600;700;800&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body>
+
         <ThemeProvider>
-          <AuthProvider>
-            {children}
-            <AnalyticsEvents />
-          </AuthProvider>
+          {/* F099: one switch so every motion component honours the preference, rather than
+              gating them one at a time and missing the next one added. */}
+          <MotionProvider>
+            <AuthProvider initialUser={user} initialSubscription={initialSubscription}>
+              {children}
+              <AnalyticsEvents />
+            </AuthProvider>
+          </MotionProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -1,9 +1,6 @@
-import { createClient } from '@supabase/supabase-js';
-
-const s = createClient(
-  process.env.SUPABASE_URL,
-  'process.env.SUPABASE_SERVICE_KEY'
-);
+// Packet 3 (F110): routed through the guarded shared client. This one-off already ran (PPF labels,
+// introductory-concepts); re-running it needs REVVY_ALLOW_RAW_WRITE=1 and a reason.
+import { supabase as s } from './_db.mjs';
 
 // Labels for each point on the PPF
 const pointLabels = {

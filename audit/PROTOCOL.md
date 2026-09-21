@@ -5,6 +5,12 @@ between packets; if it needs to, change it in its own commit and say why in `DEC
 
 ## Invariants
 
+- **Commit atomically: `git commit -m "…" -- <paths>`, never `git add` followed by a separate commit.**
+  A worktree has ONE index shared with every other session in it, so anything you stage can be committed by
+  somebody else's `git commit` before you get there — which is how packet 23's ten files ended up inside a
+  commit labelled "packet-2.1: gate" on 16 September, despite being staged explicitly by name. Explicit
+  staging protects you from sweeping in THEIR files; it does not protect your files from THEIR commit.
+  Check `git log -1` immediately before committing, and if HEAD has moved, re-check `git status` first.
 - **Work happens in the remediation worktree**: `/Users/arongijsel/Claude APP/economics-next-remediation`, branch
   `remediation/2026-09`. The sibling folder `economics-next` is the SEO/marketing tree on another branch. Never
   do packet work there, and never run `git checkout` of another branch inside either tree.
@@ -16,6 +22,12 @@ between packets; if it needs to, change it in its own commit and say why in `DEC
   confirms it, not when the builder says so. Use `node audit/scripts/ledger.mjs` to change it; never hand-edit.
 - **Content writes are snapshot first.** `audit/scripts/snapshot-touched-sections.mjs` before any DB write;
   `audit/content-sections/` is the t=0 restore point. Until packet 2 lands, in-place edits only (see DECISIONS).
+
+## Starting a session
+
+Paste the prompt in `audit/SESSION-PROMPT.md`, replacing the packet number. It does not restate this file; it
+forces the session to read it, and it front-loads the six rules whose absence has each cost a day. The table at
+the bottom of that file says which day.
 
 ## The lifecycle
 
@@ -32,7 +44,11 @@ between packets; if it needs to, change it in its own commit and say why in `DEC
 
 - Snapshot first if content is touched. Then implement. Prefer the main session for packets 2–5 (they need
   judgment across many files); a single implementer agent is fine for narrow packets (6, 9, 10, 11).
-- `npm run build` must pass before anything is claimed. There are no tests in this repo; the build is the floor.
+- `npm run build`, `npm test` and `npm run validate` must pass before anything is claimed (tests and the
+  content gate exist from packet 3; the build alone is no longer the floor).
+- Content packets write through `stageSection()` → `draft` → `scripts/publish-section.mjs --confirm`, never
+  `data` directly (the client refuses), and run the per-section checklist in `CONTENT-GATE.md` ("The
+  per-section edit pass") between staging and publishing.
 - Claim: `node audit/scripts/ledger.mjs claim <n> F0xx F0yy C-...`. Claim only what was actually changed.
 
 ### 3. Verify A — finding check (agent `packet-verifier`, read-only, fresh context)
@@ -41,6 +57,11 @@ Spawn with the Agent tool, `subagent_type: packet-verifier`. Give it three thing
 number, the commit range or `git diff` to inspect, and the instruction to run `ledger.mjs packet <n>` itself.
 It confirms or rejects each claimed id with `file:line` evidence, using the CLI. It must not see this
 conversation, and it must not be told what the builder believes it did.
+
+**The verifier's agent type must be able to WRITE `audit/ledger.json`.** Where `packet-verifier` is not
+available, substitute a type with Bash write access — not a read-only search agent. Packet 16 used one, and it
+judged all 32 ids and then declined to run a single `ledger.mjs confirm`, because the CLI writes a file; the
+whole pass had to be re-run. Read-only is about what it may change, and `ledger.mjs` is the one thing it may.
 
 ### 4. Verify B — student walkthrough (agent `student-walkthrough`, or the main session if the agent cannot
 reach the Browser pane)
@@ -57,9 +78,15 @@ All of these, in order, or the packet is not done:
 1. `npm run build` green.
 2. `node audit/scripts/ledger.mjs unverified <n>` exits 0 (every claimed id confirmed or marked wont-fix with a note).
 3. Verify B report attached to `NEXT.md` under the packet spec (a few lines is enough), when it applied.
-4. Validator green on all 43 sections (from packet 3 onward).
-5. `PROGRESS.md` row updated: status, commit, snapshot path, validator result.
-6. Commit with `packet-<n>:` at the start of the subject. Then `git push -u origin remediation/2026-09`.
+4. `npm run validate` exits 0 — no BLOCK or DEBT finding outside `audit/validator-baseline.json` — and `npm test` passes (from packet 3 onward). A section packet that clears its debt reruns `node audit/scripts/validate-content.mjs --baseline --confirm` and commits the smaller baseline; the file only ever shrinks.
+4a. `npm run exposure` and `npm run recalls` exit 0 (packet 2.7 onward). **These are the two gates no other command can stand in for**, and they were absent from this list until 19 September, which meant they fired only when somebody remembered them. `exposure` fails on a chapter starved of a question it could have had. `recalls` fails when a section hands the student more answers by scrolling up than `audit/recall-census-baseline.json` records for it — **and a section with no row there is held to zero**, so a section written from scratch cannot ship the debt silently. `recall.recoverable` is INFO, so neither `validate` nor your runner's own "0 new DEBT" gate can see it; `recalls` is the only thing in the tree that can. If you mean to add debt, raise the baseline with `--baseline --confirm` and say why in DECISIONS.
+5. **A content packet re-runs `--stage` if ANY of its modules changed since the last one, and verifies the
+   result against `curl "localhost:3001/api/sections/<id>?draft=1"` FIELD BY FIELD — not against the file.**
+   The runner is the only writer to `draft`, so a fix applied to a module and re-dumped leaves a repository
+   that agrees with itself while the database still holds the defect, and nothing else in this gate can see
+   it: `validate` and `npm test` read files, Verify A reads the diff. See DECISIONS, 16 September.
+6. `PROGRESS.md` row updated: status, commit, snapshot path, validator result.
+7. Commit with `packet-<n>:` at the start of the subject. Then `git push -u origin remediation/2026-09`.
 
 ### 6. Handoff
 
@@ -119,5 +146,5 @@ with the founder first.
 
 ## Definition of done, restated
 
-Build green · every claimed ledger id confirmed · walkthrough clean where applicable · validator green (packet 3+)
+Build green · every claimed ledger id confirmed · walkthrough clean where applicable · `npm run validate` and `npm test` green (packet 3+)
 · PROGRESS row updated · committed with the packet id · pushed. Shipped at the next checkpoint.

@@ -1,7 +1,9 @@
 "use client";
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { useClientValue } from '@/lib/use-client-storage';
 import { useAuth } from './AuthProvider';
 import PaywallOverlay from './PaywallOverlay';
+import { PREVIEW_LIMITS } from '@/lib/preview-limits';
 import { CardsBlank } from './Icons';
 
 export default function FlashcardsTab({ cards, sectionId, previewMode = false, totalCount }) {
@@ -10,7 +12,8 @@ export default function FlashcardsTab({ cards, sectionId, previewMode = false, t
   const containerRef = useRef(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
 
-  const PREVIEW_LIMIT = 2;
+  // V018's class, flashcards rather than quiz: a second copy of the number the server caps with.
+  const PREVIEW_LIMIT = PREVIEW_LIMITS.flashcards;
 
   // Listen for fullscreen changes (including Esc key exit)
   useEffect(() => {
@@ -29,13 +32,17 @@ export default function FlashcardsTab({ cards, sectionId, previewMode = false, t
     }
   }
 
-  const [statuses, setStatuses] = useState(() => {
-    if (typeof window === 'undefined' || previewMode) return {};
-    try {
+  // F118: a lazy initialiser reading localStorage still runs during the first client render, which
+  // is the render React compares against the server's. This reads after hydration instead.
+  const [statuses, setStatuses] = useClientValue(
+    () => {
+      if (previewMode) return {};
       const saved = localStorage.getItem(storageKey);
       return saved ? JSON.parse(saved) : {};
-    } catch { return {}; }
-  });
+    },
+    {},
+    [storageKey, previewMode],
+  );
   const syncTimer = useRef(null);
 
   // Deck = indices of cards to review this round
@@ -215,7 +222,16 @@ export default function FlashcardsTab({ cards, sectionId, previewMode = false, t
   if (previewEnded) {
     return (
       <div className="flashcard-container">
-        <PaywallOverlay feature="Flashcards" previewText={`You've previewed ${PREVIEW_LIMIT} of ${totalCount ?? cards.length} flashcards`} />
+        {/* What was actually shown, and a total only when `counts` gave one. This printed the CAP
+            over `totalCount ?? cards.length`, so a one-card section read "You've previewed 2 of 1"
+            — and the fallback is the sliced array, which is the "2 of 2" trap lib/preview-limits.js
+            describes. Same shape as the fix QuizTab took in V018. */}
+        <PaywallOverlay
+          feature="Flashcards"
+          previewText={Number.isFinite(totalCount)
+            ? `You've previewed ${totalCards} of ${totalCount} flashcards`
+            : `You've previewed ${totalCards} flashcards`}
+        />
       </div>
     );
   }

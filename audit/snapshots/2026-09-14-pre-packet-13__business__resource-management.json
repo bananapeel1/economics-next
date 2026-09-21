@@ -1,0 +1,1235 @@
+{
+ "section_id": "resource-management",
+ "subject": "business",
+ "label": "2026-09-14-pre-packet-13",
+ "tables": {
+  "section_content": [
+   {
+    "id": "resource-management:block:2b648a40",
+    "title": "Methods of Production",
+    "sections": [
+     {
+      "id": "resource-management:sub:job-batch-flow-production",
+      "body": [
+       {
+        "text": "**Job production** means making one unique product at a time to meet a specific customer order. Examples include a tailor-made wedding dress, a custom-built house or a bespoke piece of furniture. Each item is different, and the work is often highly skilled and labour-intensive.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Batch production** involves producing a set quantity of identical items at the same time before switching to a different product. A bakery making 200 white loaves, then switching to 200 wholemeal loaves, is using batch production. It offers more flexibility than flow production while still achieving some economies of scale.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Low volume, unique items",
+         "Medium volume, grouped runs",
+         "High volume, continuous output"
+        ],
+        "result": "Job → Batch → Flow as volume increases",
+        "resultType": "neutral"
+       },
+       {
+        "text": "**Flow production** (also called continuous production) involves items moving continuously along an assembly line, with each stage adding to the product. Car manufacturing, bottled-water plants and food processing all use flow production. It delivers the lowest unit cost but requires heavy capital investment and offers little flexibility.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Job, Batch and Flow Production",
+      "keyIdea": "Businesses choose between job, batch or flow production depending on the volume of output required and the degree of customisation customers demand.",
+      "examMatters": "When asked to recommend a production method, examiners expect you to link your choice to the nature of the product, the volume of demand and the resources available. Simply naming a method without explaining why it fits the context will not earn analysis marks.",
+      "realExample": {
+       "text": "**Toyota** uses flow production across its global assembly plants, producing roughly one car every 60 seconds on its most efficient lines. This continuous process allows Toyota to spread fixed costs over millions of units, keeping average costs among the lowest in the industry.",
+       "emoji": "🚗"
+      },
+      "misconception": "Students write \"flow production is always the best method because it is cheapest.\" That ignores the enormous start-up cost and total lack of customisation that flow requires. Instead write: flow production minimises unit costs at high volumes, but job or batch methods are more appropriate when customers need customisation or output volumes are low."
+     },
+     {
+      "id": "resource-management:sub:productivity",
+      "body": [
+       {
+        "text": "**Productivity** is a measure of efficiency — it calculates how much output is produced per unit of input over a given period. The most common measure is **labour productivity**: output per worker per time period. If a factory employs 50 workers and produces 10,000 units per week, labour productivity is 200 units per worker per week.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Invest in training or technology",
+         "Output per worker rises",
+         "Unit costs fall"
+        ],
+        "result": "Higher competitiveness and potential profit",
+        "resultType": "good"
+       },
+       {
+        "text": "Businesses can improve productivity through **better training**, **investment in technology**, **improved motivation** and **more efficient processes**. Higher productivity means a firm can produce the same output with fewer resources or more output with the same resources, directly reducing average costs.",
+        "type": "paragraph"
+       },
+       {
+        "text": "However, pushing for higher productivity can have downsides. Workers may feel pressured, leading to stress and higher staff turnover. Quality may slip if speed is prioritised over care. Sustainable productivity gains usually require investment in people as well as equipment.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Productivity",
+      "keyIdea": "Productivity measures output per unit of input, and raising it is the single most powerful way a business can reduce unit costs without cutting quality.",
+      "examMatters": "Examiners frequently test whether you can calculate labour productivity and explain its significance. Always link productivity improvements to unit costs and competitiveness, and evaluate whether gains are sustainable or come at the expense of worker wellbeing.",
+      "realExample": {
+       "text": "**Amazon** invested over $1 billion in warehouse robotics between 2012 and 2022, with Kiva robots reducing the time to process an order from over 60 minutes to under 15. This productivity leap allowed Amazon to offer same-day delivery while keeping fulfilment costs below those of most competitors.",
+       "emoji": "📦"
+      },
+      "misconception": "Students confuse productivity with production. Production is the total quantity of output, while productivity is output per unit of input. Instead write: a factory can increase production by hiring more workers, but productivity only rises if each worker produces more output than before."
+     },
+     {
+      "id": "resource-management:sub:labour-vs-capital-intensive",
+      "body": [
+       {
+        "text": "**Labour-intensive** production uses a high proportion of workers relative to machinery. It is common in service industries, craft manufacturing and agriculture in developing countries. The main advantage is flexibility — workers can adapt to changing customer requirements, provide personal service and handle non-standard tasks.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Capital-intensive** production uses a high proportion of machinery and technology relative to workers. It is typical in mass manufacturing, chemical processing and automated warehouses. The key advantage is consistency — machines produce identical output at high speed with low variable cost per unit.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Assess product type and volume",
+         "Compare labour vs capital costs",
+         "Choose appropriate mix"
+        ],
+        "result": "Optimal balance between flexibility and efficiency",
+        "resultType": "good"
+       },
+       {
+        "text": "Most businesses use a combination of both. The decision depends on the **nature of the product**, the **cost of labour vs capital**, the **volume of output** needed, and the **level of customisation** customers expect. A shift towards capital intensity often requires large upfront investment but reduces long-run unit costs.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Labour-Intensive vs Capital-Intensive Production",
+      "keyIdea": "Labour-intensive production relies mainly on human workers, while capital-intensive production relies mainly on machinery, and the right balance depends on the product.",
+      "examMatters": "When analysing whether a business should become more capital-intensive, examiners want you to weigh the upfront investment cost against the long-run savings. Consider the impact on the workforce, product quality and the firm's ability to respond to changing demand.",
+      "realExample": {
+       "text": "**Savile Row tailors** like Huntsman & Sons use labour-intensive production, with a single bespoke suit requiring over 80 hours of skilled hand-stitching. This justifies prices above £5,000, because the craftsmanship and personalisation cannot be replicated by machines.",
+       "emoji": "👔"
+      },
+      "misconception": "Students claim \"capital-intensive production is always more efficient than labour-intensive.\" That ignores industries where human judgement, creativity or personal service is the product itself. Instead write: capital-intensive methods reduce unit costs in high-volume standardised production, but labour-intensive methods are more efficient when customisation, creativity or personal service is essential."
+     }
+    ],
+    "takeaway": [
+     "Job, batch and flow suit different volumes and customisation levels.",
+     "Productivity is output per input — the key driver of lower unit costs.",
+     "Labour intensity offers flexibility; capital intensity offers low unit costs.",
+     "The best method depends on the product, market and resources available."
+    ],
+    "quizIndices": [
+     0
+    ]
+   },
+   {
+    "id": "resource-management:block:12eab0f4",
+    "title": "Capacity Utilisation",
+    "sections": [
+     {
+      "id": "resource-management:sub:capacity-utilisation",
+      "body": [
+       {
+        "text": "**Capacity utilisation** is the proportion of a firm's total possible output that is actually being produced. It is calculated as: (actual output / maximum possible output) x 100. If a factory can produce 10,000 units per month but is only making 7,000, its capacity utilisation is 70%.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Low demand hits the business",
+         "Capacity utilisation falls",
+         "Fixed costs spread over fewer units"
+        ],
+        "result": "Higher unit costs and squeezed profit margins",
+        "resultType": "bad"
+       },
+       {
+        "text": "High capacity utilisation is generally desirable because it means fixed costs are spread over more units of output, reducing the **average cost per unit**. However, operating at 100% capacity for extended periods can cause problems — machinery may break down more often, workers may become stressed, and there is no slack to handle unexpected surges in demand.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The ideal level is typically around 85-90%, which balances efficiency with the flexibility to respond to demand changes. Businesses with consistently low capacity utilisation may need to rationalise by closing production lines, reducing shifts or finding new markets.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Capacity Utilisation",
+      "keyIdea": "Capacity utilisation measures what percentage of a firm's maximum possible output is actually being used, and operating well below full capacity wastes resources.",
+      "examMatters": "Capacity utilisation questions often require calculation followed by analysis. Examiners reward you for explaining the consequences of low utilisation on unit costs and for suggesting realistic strategies to improve it — such as subcontracting, new markets or rationalisation.",
+      "realExample": {
+       "text": "**British Airways** closely monitors seat capacity utilisation (load factor) across its routes, targeting around 85%. During the pandemic, load factors fell below 30%, meaning BA was flying near-empty planes with the same fixed costs, which generated losses of over £3 billion in a single year.",
+       "emoji": "✈️"
+      },
+      "misconception": "Students write \"businesses should always aim for 100% capacity utilisation.\" Operating at full capacity leaves zero room for maintenance, emergencies or demand spikes. Instead write: businesses aim for high but not maximum capacity utilisation to balance cost efficiency with operational flexibility."
+     },
+     {
+      "id": "resource-management:sub:improving-capacity-utilisation",
+      "body": [
+       {
+        "text": "When capacity utilisation is too low, a business has two broad options: **increase demand** to make better use of existing capacity, or **reduce capacity** to match the lower level of demand. Both strategies have trade-offs that depend on whether the low utilisation is temporary or permanent.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Strategies to Increase Demand",
+        "type": "subheading"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Increase marketing spend** — promotions, advertising or price reductions to attract new customers.",
+         "**Develop new products** — use existing facilities to produce additional product lines.",
+         "**Enter new markets** — expand into new geographic regions or customer segments.",
+         "**Accept subcontract work** — produce goods for other firms using your spare capacity."
+        ]
+       },
+       {
+        "text": "If demand is unlikely to recover, the business may need to **rationalise** — closing production lines, selling off equipment, reducing shifts or even closing entire sites. This is painful in the short term but can restore efficiency by aligning capacity with realistic demand levels.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Improving Capacity Utilisation",
+      "keyIdea": "A firm can improve capacity utilisation by increasing demand to fill spare capacity or by reducing its maximum capacity to match current demand levels.",
+      "examMatters": "Examiners often present a scenario where a business has low capacity utilisation and ask you to evaluate strategies. Always consider whether the shortfall is temporary or structural, and weigh the costs of each option against the benefits of improved efficiency.",
+      "realExample": {
+       "text": "**BrewDog** improved capacity utilisation at its Ellon brewery by launching contract brewing services for smaller craft brands alongside its own products. This filled spare capacity without the marketing costs of growing its own sales, turning idle equipment into a new revenue stream.",
+       "emoji": "🍺"
+      },
+      "misconception": "Students suggest \"just cut prices to fill spare capacity\" without considering the impact on brand image and long-term profitability. Heavy discounting can train customers to wait for sales and erode perceived value. Instead write: price reductions can boost short-term demand but businesses must weigh the impact on brand positioning and profit margins."
+     }
+    ],
+    "takeaway": [
+     "Capacity utilisation = (actual output / max output) x 100.",
+     "Low utilisation raises unit costs; 100% leaves no room for flexibility.",
+     "Increase demand or reduce capacity to improve utilisation rates."
+    ],
+    "quizIndices": [
+     1
+    ],
+    "practiceIndices": [
+     0
+    ]
+   },
+   {
+    "id": "resource-management:block:e92f63ae",
+    "title": "Inventory Management",
+    "sections": [
+     {
+      "id": "resource-management:sub:just-in-time",
+      "body": [
+       {
+        "text": "**Just-in-time (JIT)** is an inventory management system where materials and components are delivered to the production line exactly when they are needed, and not before. The aim is to hold **zero or minimal stock**, eliminating storage costs, reducing waste and freeing up cash that would otherwise be tied up in inventory.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Order arrives just before needed",
+         "No stock sitting in warehouses",
+         "Cash freed up, waste eliminated"
+        ],
+        "result": "Lower costs and improved cash flow",
+        "resultType": "good"
+       },
+       {
+        "text": "JIT requires **extremely reliable suppliers** who can deliver the right quantity, at the right quality, at exactly the right time. It also demands excellent communication and trust between the business and its supply chain. If any link in the chain fails, production stops entirely because there is no buffer stock.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The system originated in Japanese manufacturing and was pioneered by Toyota. It works best in stable environments with predictable demand and reliable logistics, but it creates serious vulnerability to any disruption in the supply chain.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Just-in-Time (JIT)",
+      "keyIdea": "JIT systems order materials only when they are needed for production, eliminating warehouse costs but leaving zero margin for supply chain disruptions.",
+      "examMatters": "When evaluating JIT, examiners expect you to consider both the cost savings and the risks. Always link your answer to the reliability of the firm's supply chain and the predictability of its demand — JIT in a volatile market is far riskier than JIT in a stable one.",
+      "realExample": {
+       "text": "**Toyota** invented the JIT system in the 1970s and still operates it across its global plants, with parts arriving at assembly stations within hours of being needed. However, during the 2021 semiconductor shortage, Toyota had to halt production at 14 factories because its JIT system had no buffer stock of chips to fall back on.",
+       "emoji": "🚗"
+      },
+      "misconception": "Students say \"JIT means having no stock at all.\" JIT means minimising stock, not eliminating it entirely — most JIT firms hold a small buffer of critical components. Instead write: JIT aims to minimise stock levels to reduce costs, but most firms maintain a small safety stock of essential items to guard against minor disruptions."
+     },
+     {
+      "id": "resource-management:sub:lean-production",
+      "body": [
+       {
+        "text": "**Lean production** is a management approach that focuses on minimising waste while maximising value for the customer. Waste includes anything that does not add value — excess inventory, unnecessary movement, waiting time, overproduction, defects, over-processing and underused talent. The goal is to use fewer resources to deliver the same or better output.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Identify all forms of waste",
+         "Systematically eliminate them",
+         "Continuously improve processes"
+        ],
+        "result": "Lower costs, higher quality and faster delivery",
+        "resultType": "good"
+       },
+       {
+        "text": "Lean production encompasses several specific techniques including JIT, **kaizen** (continuous improvement), **cell production** (organising workers into small self-contained teams) and **time-based management** (reducing lead times at every stage). All of these share the common goal of eliminating waste.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Implementing lean production requires a cultural shift across the whole organisation. Workers must be empowered to identify and report waste, managers must be willing to change established processes, and the firm must invest in training. It is not a quick fix but a long-term commitment.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Lean Production",
+      "keyIdea": "Lean production is a philosophy that seeks to eliminate all forms of waste across the entire production process, using only the resources that add value for the customer.",
+      "examMatters": "Examiners want you to explain lean production as a holistic approach, not just a list of techniques. When evaluating its effectiveness, consider the costs of implementation, the time required for cultural change, and whether the firm's supply chain is reliable enough to support it.",
+      "realExample": {
+       "text": "**Rolls-Royce** adopted lean production across its aerospace engine manufacturing, reducing the time to assemble a Trent XWB engine from 18 days to 10. This was achieved by reorganising the factory floor, eliminating unnecessary movements and empowering workers to suggest process improvements.",
+       "emoji": "�icing"
+      },
+      "misconception": "Students treat lean production and JIT as the same thing. JIT is one tool within the broader lean philosophy, which also includes kaizen, cell production and waste elimination across all business functions. Instead write: JIT is a component of lean production, which is a wider philosophy that aims to eliminate all forms of waste throughout the organisation."
+     }
+    ],
+    "takeaway": [
+     "JIT eliminates stock-holding costs but requires perfectly reliable suppliers.",
+     "Lean production targets all waste — not just inventory but time and effort too.",
+     "Both methods demand cultural change and strong supplier relationships."
+    ],
+    "quizIndices": [
+     2
+    ],
+    "practiceIndices": [
+     1
+    ]
+   },
+   {
+    "id": "resource-management:block:354ba5da",
+    "title": "Quality Management",
+    "sections": [
+     {
+      "id": "resource-management:sub:quality-control-assurance",
+      "body": [
+       {
+        "text": "**Quality control (QC)** involves inspecting finished products at the end of the production process to identify and remove defective items before they reach the customer. It is a reactive approach — you wait until the product is made, then check whether it meets the required standard. Faulty items are either reworked or scrapped.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Product is manufactured",
+         "Inspector checks finished item",
+         "Defective items rejected or reworked"
+        ],
+        "result": "Catches faults but after resources have been used",
+        "resultType": "neutral"
+       },
+       {
+        "text": "**Quality assurance (QA)** takes a preventive approach — it builds quality checks into every stage of the production process so that defects are prevented rather than detected. Every worker is responsible for the quality of their own work, and systems are designed to catch problems before they become defects.",
+        "type": "paragraph"
+       },
+       {
+        "text": "QA is generally considered superior to QC because it reduces waste, lowers the cost of rework and creates a culture of responsibility. However, it requires greater investment in training, systems and employee empowerment, and it takes time to embed across the organisation.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Quality Control vs Quality Assurance",
+      "keyIdea": "Quality control checks finished products for defects at the end, while quality assurance builds quality into every stage of the production process from the start.",
+      "examMatters": "Examiners want you to compare QC and QA and explain why QA is generally preferred. Always acknowledge that QC still has a role, and evaluate whether the business has the resources and culture to implement QA effectively.",
+      "realExample": {
+       "text": "**Jaguar Land Rover** shifted from quality control to quality assurance at its Solihull plant, giving every worker an \"andon cord\" to stop the production line if they spotted a defect. This reduced end-of-line defect rates by over 40% because problems were caught and fixed at source rather than at final inspection.",
+       "emoji": "🏭"
+      },
+      "misconception": "Students write \"quality control is a bad method that businesses should never use.\" QC is still essential for many products — pharmaceuticals, food and safety-critical components require final inspection regardless of how good the process is. Instead write: quality control remains important for final verification, but quality assurance should be the primary approach because preventing defects is cheaper than finding them."
+     },
+     {
+      "id": "resource-management:sub:total-quality-management",
+      "body": [
+       {
+        "text": "**Total Quality Management (TQM)** is a management philosophy that embeds quality into every aspect of the organisation. Under TQM, quality is not just the responsibility of the production department — every employee, from the CEO to the shop-floor worker, is responsible for maintaining and improving quality in their area.",
+        "type": "paragraph"
+       },
+       {
+        "text": "TQM is built on the idea of **internal customers** — each department treats the next department in the chain as its customer, ensuring that work is passed on to the highest possible standard. If the marketing team produces a flawed brief, the design team receives poor input, and the final product suffers.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Every department owns quality",
+         "Internal customers demand high standards",
+         "Defects prevented at every stage"
+        ],
+        "result": "Company-wide culture of excellence and zero defects",
+        "resultType": "good"
+       },
+       {
+        "text": "Implementing TQM is expensive and time-consuming. It requires extensive training, changes to organisational culture and genuine commitment from senior management. The benefits — lower waste, fewer complaints, stronger reputation and higher customer loyalty — take months or years to materialise fully.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Total Quality Management (TQM)",
+      "keyIdea": "TQM is a company-wide philosophy where every employee in every department takes responsibility for quality, making continuous improvement part of the organisational culture.",
+      "examMatters": "When discussing TQM, examiners want to see that you understand it is a cultural shift, not just a set of procedures. Evaluate whether the business has the leadership commitment and resources to implement TQM successfully, and consider the short-term costs versus the long-term benefits.",
+      "realExample": {
+       "text": "**Samsung** implemented TQM across its electronics division after the Galaxy Note 7 battery fires in 2016 forced a global recall costing $5.3 billion. Samsung created an eight-point battery safety check involving every department, and subsequent Galaxy models have had significantly fewer quality incidents.",
+       "emoji": "📱"
+      },
+      "misconception": "Students claim \"TQM guarantees zero defects.\" TQM aims for zero defects as an aspiration, but no system can eliminate all errors entirely. Instead write: TQM strives for zero defects by embedding quality into every process, but achieving perfection is an ongoing journey rather than a guaranteed outcome."
+     },
+     {
+      "id": "resource-management:sub:kaizen",
+      "body": [
+       {
+        "text": "**Kaizen** is a Japanese term meaning \"change for the better\" or continuous improvement. It is a philosophy where all employees — not just managers — are encouraged to regularly suggest small improvements to their working processes. The idea is that many small changes, implemented consistently over time, produce dramatic cumulative improvements.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Worker identifies a small inefficiency",
+         "Team discusses and tests a solution",
+         "Improvement implemented permanently"
+        ],
+        "result": "Ongoing gains in quality, speed and cost efficiency",
+        "resultType": "good"
+       },
+       {
+        "text": "Kaizen works through regular team meetings (often called **kaizen circles** or quality circles) where shop-floor workers discuss problems and propose solutions. Management's role is to listen, support and implement good ideas. This bottom-up approach motivates workers because they feel valued and can see the impact of their contributions.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The challenge with kaizen is that it requires patience — individual improvements are small, and managers used to dramatic restructuring may undervalue incremental change. It also requires a culture of trust where workers feel safe to highlight problems without fear of blame.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Kaizen (Continuous Improvement)",
+      "keyIdea": "Kaizen empowers every worker to suggest small, incremental improvements to their daily work, and these accumulate over time into transformative gains.",
+      "examMatters": "Examiners reward you for understanding kaizen as a cultural approach rather than a technique. When evaluating it, consider whether the firm's management style supports bottom-up ideas and whether workers are sufficiently trained and motivated to participate meaningfully.",
+      "realExample": {
+       "text": "**Toyota** receives over 700,000 improvement suggestions from employees each year, and implements around 99% of them. These range from repositioning a tool rack to save five seconds per assembly to redesigning a component to reduce material waste, and together they have kept Toyota at the forefront of manufacturing efficiency for decades.",
+       "emoji": "🚗"
+      },
+      "misconception": "Students describe kaizen as \"a one-off improvement project.\" Kaizen is the opposite of a one-off event — it is a permanent culture of continuous, never-ending small improvements. Instead write: kaizen is an ongoing philosophy embedded in daily operations, not a project with a start and end date."
+     }
+    ],
+    "takeaway": [
+     "QC inspects at the end; QA prevents defects throughout the process.",
+     "TQM makes every employee responsible for quality across all departments.",
+     "Kaizen delivers big results through many small, continuous improvements."
+    ],
+    "quizIndices": [
+     3
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "flow": {
+     "steps": [
+      "Assess demand volume",
+      "Choose job/batch/flow",
+      "Match method to market needs"
+     ],
+     "result": "Efficient production aligned with demand",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "Production Methods",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Job production</strong> — making one unique product at a time to a customer's exact specification; it produces high-quality, bespoke output but is slow and expensive per unit.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Batch production</strong> — producing a group of identical items together before switching to the next batch; it offers flexibility and moderate efficiency but involves downtime between batches.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Flow (mass) production</strong> — continuous production on an assembly line where each item passes through the same sequence of stages; it achieves the lowest unit cost but requires high capital investment and produces standardised output.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Job production commands <strong>premium prices</strong> but cannot achieve economies of scale, so it suits luxury or specialist markets where customers value uniqueness.",
+        "type": "mech"
+       },
+       {
+        "text": "Flow production delivers <strong>low unit costs</strong> through economies of scale, but the high set-up investment creates risk if demand falls or product specifications change.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Many firms use a <strong>combination of methods</strong>; for example, a car manufacturer uses flow production for standard components and batch production for different models.",
+        "type": "imp"
+       },
+       {
+        "text": "Production methods link to capacity utilisation; flow production only achieves low unit costs when operating near full capacity.",
+        "type": "link"
+       }
+      ],
+      "title": "EVALUATION"
+     }
+    ],
+    "keyIdea": "The production method a firm chooses depends on the volume of demand, the degree of customisation required and the balance between labour and capital costs.",
+    "takeaway": [
+     "Job production suits bespoke, high-value output; flow production suits high-volume, standardised goods.",
+     "Batch production offers a middle ground with flexibility but introduces downtime between batches.",
+     "The best method depends on the market; there is no universally correct production approach."
+    ]
+   },
+   {
+    "flow": {
+     "steps": [
+      "Measure current vs maximum output",
+      "Identify under- or over-utilisation",
+      "Adjust demand or capacity"
+     ],
+     "result": "Optimal cost efficiency achieved",
+     "resultType": "good"
+    },
+    "meta": "3 concepts + formula",
+    "title": "Capacity Utilisation",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Capacity utilisation</strong> — the percentage of a firm's total possible output that is currently being achieved; 100% means the firm is producing at its absolute maximum.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Excess capacity (under-utilisation)</strong> — when a firm is producing significantly below its maximum output, meaning fixed costs are spread over fewer units, raising the cost per unit.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Low capacity utilisation means <strong>higher fixed costs per unit</strong>, reducing competitiveness because the firm's average costs are unnecessarily high.",
+        "type": "mech"
+       },
+       {
+        "text": "Operating at or near 100% leaves <strong>no room to accept rush orders</strong> or cope with unexpected demand spikes, and increases the risk of equipment breakdowns.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Firms can raise utilisation by <strong>increasing demand</strong> (marketing, price cuts) or <strong>reducing capacity</strong> (selling assets, outsourcing), each with different strategic implications.",
+        "type": "imp"
+       },
+       {
+        "text": "Capacity utilisation links to production methods; flow production requires consistently high utilisation to justify the heavy capital investment.",
+        "type": "link"
+       }
+      ],
+      "title": "IMPLICATIONS"
+     }
+    ],
+    "keyIdea": "Capacity utilisation measures how much of a firm's maximum possible output is actually being used; too low wastes resources, too high creates inflexibility and quality risks.",
+    "formulas": [
+     {
+      "text": "Capacity Utilisation (%) = (Current Output / Maximum Output) x 100",
+      "label": "CAPACITY UTILISATION"
+     }
+    ],
+    "takeaway": [
+     "Low utilisation wastes fixed costs; high utilisation risks inflexibility and quality problems.",
+     "The optimal rate is typically 80-90%, giving efficiency with room to respond to demand changes.",
+     "Firms can improve utilisation by boosting demand or by rationalising excess capacity."
+    ],
+    "misconception": "Students say 100% capacity utilisation is the ideal target. Wrong because operating at full capacity leaves no flexibility to handle unexpected orders, maintenance or quality issues. Instead write: most firms aim for around 80-90% utilisation, balancing cost efficiency with operational flexibility."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Assess demand predictability",
+      "Choose JIT or buffer stock",
+      "Balance cost savings vs risk"
+     ],
+     "result": "Efficient stock levels with minimal waste",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "Inventory Management",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Just-in-time (JIT)</strong> — a system where materials arrive exactly when needed in the production process, minimising stockholding costs but requiring highly reliable suppliers.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Buffer stock</strong> — the minimum level of inventory a firm keeps as a safety net to avoid running out if demand spikes or deliveries are delayed.",
+        "type": "def"
+       }
+      ],
+      "title": "APPROACHES"
+     },
+     {
+      "items": [
+       {
+        "text": "JIT <strong>frees up cash</strong> that would otherwise be locked in warehouses full of stock, and eliminates waste from expired, damaged or obsolete inventory.",
+        "type": "mech"
+       },
+       {
+        "text": "However, JIT is <strong>vulnerable to supply chain disruption</strong>; a single delayed delivery can halt the entire production line.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "The optimal approach depends on the <strong>reliability of suppliers and predictability of demand</strong>; JIT suits stable, well-coordinated supply chains, while buffer stock suits volatile markets.",
+        "type": "imp"
+       },
+       {
+        "text": "Inventory management links to cash flow; reducing stockholding improves liquidity by freeing cash that was tied up in unsold goods.",
+        "type": "link"
+       }
+      ],
+      "title": "EVALUATION"
+     }
+    ],
+    "keyIdea": "Holding too much stock ties up cash and risks waste; holding too little risks running out and losing sales; effective inventory management finds the balance.",
+    "takeaway": [
+     "JIT eliminates waste and frees cash but depends entirely on supply chain reliability.",
+     "Buffer stock provides insurance against disruption but ties up working capital and warehouse space.",
+     "The best approach depends on supplier reliability, demand predictability and the cost of a stockout."
+    ],
+    "examMatters": "Examiners expect you to evaluate JIT by discussing both the cost savings and the risks. Always link your answer to the firm's context: a manufacturer with reliable suppliers benefits from JIT, while a retailer facing unpredictable demand may need buffer stock."
+   },
+   {
+    "flow": {
+     "steps": [
+      "QC catches defects after production",
+      "QA prevents defects during production",
+      "TQM/Kaizen embed quality in culture"
+     ],
+     "result": "Zero-defect culture that reduces costs and builds loyalty",
+     "resultType": "good"
+    },
+    "meta": "5 concepts",
+    "title": "Quality",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Quality control (QC)</strong> — inspecting finished products at the end of the production process to identify and remove defective items before they reach the customer.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Quality assurance (QA)</strong> — a system of procedures and standards applied throughout production to prevent defects from occurring in the first place, rather than catching them afterwards.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Total quality management (TQM)</strong> — a whole-organisation philosophy where every employee takes responsibility for quality at every stage, aiming for zero defects.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Kaizen</strong> — a Japanese approach of continuous small improvements made by all employees, building a culture where quality gradually improves every day.",
+        "type": "def"
+       }
+      ],
+      "title": "APPROACHES"
+     },
+     {
+      "items": [
+       {
+        "text": "QC is the simplest approach but catches defects <strong>after resources have been wasted</strong> producing them; QA and TQM prevent waste by building quality into the process.",
+        "type": "mech"
+       },
+       {
+        "text": "TQM requires <strong>cultural change</strong> across the entire organisation, which takes time, training investment and genuine commitment from senior management.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "High quality <strong>reduces long-term costs</strong> by cutting returns, warranty claims and reputation damage, even though implementing quality systems increases short-term expenditure.",
+        "type": "imp"
+       },
+       {
+        "text": "Quality links to branding and customer loyalty; consistently high quality is the foundation of a strong brand and repeat purchases.",
+        "type": "link"
+       }
+      ],
+      "title": "EVALUATION"
+     }
+    ],
+    "keyIdea": "Quality is not just about the finished product; it is a philosophy embedded throughout the production process that reduces waste, builds loyalty and justifies premium pricing.",
+    "takeaway": [
+     "Quality control catches defects; quality assurance and TQM prevent them from happening in the first place.",
+     "TQM and Kaizen require cultural transformation, not just procedural change, to succeed.",
+     "Investing in quality raises short-term costs but lowers long-term costs through less waste and stronger loyalty."
+    ],
+    "misconception": "Students say improving quality always increases costs. Wrong because while initial investment rises, long-term costs fall due to fewer defects, less waste, fewer returns and stronger customer loyalty. Instead write: quality investment increases short-term costs but reduces long-term costs by eliminating waste and building a reputation that supports premium pricing."
+   }
+  ],
+  "section_quiz": [
+   {
+    "id": "resource-management:quiz:d4802375",
+    "options": [
+     "60%",
+     "80%",
+     "125%",
+     "20%"
+    ],
+    "question": "A factory can produce 20,000 units per month but is currently producing 16,000 units. What is its capacity utilisation?",
+    "explanation": "Capacity Utilisation = (16,000 / 20,000) x 100 = 80%. The factory is using 80% of its maximum capacity.",
+    "correctIndex": 1
+   },
+   {
+    "id": "resource-management:quiz:053d4776",
+    "options": [
+     "Flow production",
+     "Batch production",
+     "Job production",
+     "Cell production"
+    ],
+    "question": "Which production method is most suitable for making custom wedding cakes?",
+    "explanation": "Job production is used for unique, one-off items made to customer specification. Each wedding cake is unique, requiring individual attention and customisation.",
+    "correctIndex": 2
+   },
+   {
+    "id": "resource-management:quiz:d44d064d",
+    "options": [
+     "It eliminates the need for quality control",
+     "It reduces storage costs and waste",
+     "It guarantees suppliers will never be late",
+     "It increases buffer stock levels"
+    ],
+    "question": "Which of the following is a benefit of Just-in-Time (JIT) inventory management?",
+    "explanation": "JIT reduces storage costs because materials are delivered only when needed, eliminating the need to hold large stocks. It does not guarantee supplier reliability and actually aims to reduce buffer stock, not increase it.",
+    "correctIndex": 1
+   },
+   {
+    "id": "resource-management:quiz:9406f4ac",
+    "options": [
+     "Quality control is cheaper",
+     "Quality control inspects finished products while quality assurance prevents defects throughout production",
+     "Quality assurance only applies to service businesses",
+     "Quality control involves all employees"
+    ],
+    "question": "What is the main difference between quality control and quality assurance?",
+    "explanation": "Quality control is reactive — it inspects finished products to find defects. Quality assurance is proactive — it builds quality checks into every stage of the process to prevent defects from occurring.",
+    "correctIndex": 1
+   },
+   {
+    "id": "resource-management:quiz:050f80bf",
+    "options": [
+     "A large, one-off investment in new machinery",
+     "A continuous process of small, incremental improvements by all employees",
+     "Hiring quality inspectors to check finished products",
+     "Outsourcing production to reduce costs"
+    ],
+    "question": "Kaizen is best described as:",
+    "explanation": "Kaizen is the Japanese philosophy of continuous improvement — making small, regular improvements to processes, quality, and efficiency. It involves all employees suggesting changes, not just management.",
+    "correctIndex": 1
+   },
+   {
+    "id": "resource-management:quiz:4d7b5148",
+    "options": [
+     "Very low unit costs due to economies of scale",
+     "High unit costs because fixed costs are spread over fewer units",
+     "Staff burnout due to excessive workload",
+     "No impact on its costs or competitiveness"
+    ],
+    "question": "A business operating at only 50% capacity utilisation would likely experience:",
+    "explanation": "At 50% capacity, fixed costs (rent, salaries, depreciation) are spread over only half the possible output, significantly increasing average cost per unit and reducing competitiveness.",
+    "correctIndex": 1
+   },
+   {
+    "id": "resource-management:quiz:39e86410",
+    "options": [
+     "Overproduction",
+     "Waiting time",
+     "Advertising spend",
+     "Defective products"
+    ],
+    "question": "Which of the following is NOT a type of waste targeted by lean production?",
+    "explanation": "Lean production targets seven types of waste: overproduction, waiting, transport, over-processing, excess inventory, unnecessary motion, and defects. Advertising spend is a marketing cost, not a production waste category.",
+    "correctIndex": 2
+   },
+   {
+    "id": "resource-management:quiz:7448ba04",
+    "options": [
+     "Each product is unique",
+     "Low unit costs due to continuous high-volume production",
+     "No capital investment is needed",
+     "Workers can set their own pace"
+    ],
+    "question": "A business uses flow production. What is the main advantage?",
+    "explanation": "Flow production produces large volumes continuously on an assembly line, achieving very low unit costs through economies of scale. However, it requires significant capital investment and produces standardised products.",
+    "correctIndex": 1
+   },
+   {
+    "id": "resource-management:quiz:0c978764",
+    "options": [
+     "Having large warehouse space",
+     "Reliable suppliers who deliver on time",
+     "Holding high levels of buffer stock",
+     "Operating below 50% capacity"
+    ],
+    "question": "Which factor is MOST important for the success of a JIT system?",
+    "explanation": "JIT depends on materials arriving exactly when needed, so reliable suppliers are essential. If a supplier is late, production stops. JIT aims to eliminate the need for large warehouses and buffer stock.",
+    "correctIndex": 1
+   },
+   {
+    "id": "resource-management:quiz:6b66b6f8",
+    "options": [
+     "Only the quality department to focus on quality",
+     "Every employee in every department to take responsibility for quality",
+     "Inspection of every single finished product",
+     "Outsourcing quality checks to external consultants"
+    ],
+    "question": "Total Quality Management (TQM) requires:",
+    "explanation": "TQM is a whole-organisation philosophy where quality is everyone's responsibility — from the CEO to production workers to admin staff. It goes beyond the quality department to create a culture of continuous improvement.",
+    "correctIndex": 1
+   },
+   {
+    "id": "resource-management:quiz:62c276ea",
+    "options": [
+     "The total number of products a firm can produce",
+     "The proportion of a firm's maximum output capacity that is actually being used",
+     "The number of employees working at any given time",
+     "The amount of raw materials in stock"
+    ],
+    "question": "What is meant by 'capacity utilisation'?",
+    "explanation": "Capacity utilisation = (actual output / maximum possible output) x 100. It measures how much of a firm's productive potential is being used.",
+    "correctIndex": 1
+   },
+   {
+    "id": "resource-management:quiz:706e1f99",
+    "options": [
+     "Producing identical products on an assembly line",
+     "Making a unique, one-off product to meet a specific customer order",
+     "Producing goods in large batches",
+     "Continuously producing standardised goods 24 hours a day"
+    ],
+    "question": "Job production involves:",
+    "explanation": "Job production creates bespoke, individual items tailored to specific customer requirements, such as a custom-built house or a wedding cake.",
+    "correctIndex": 1
+   },
+   {
+    "id": "resource-management:quiz:8e66b9a3",
+    "options": [
+     "Holding large amounts of stock to prevent shortages",
+     "Ordering and receiving stock only when it is needed for production, minimising inventory levels",
+     "Producing goods before any orders are received",
+     "Buying all stock at the beginning of the year"
+    ],
+    "question": "What is the just-in-time (JIT) approach to stock control?",
+    "explanation": "JIT minimises stockholding costs by receiving materials only when needed for production, reducing storage costs and waste but requiring reliable suppliers.",
+    "correctIndex": 1
+   },
+   {
+    "id": "resource-management:quiz:b84252ba",
+    "options": [
+     "Total quality management (TQM)",
+     "Quality control (inspection)",
+     "Lean production",
+     "Kaizen"
+    ],
+    "question": "Which of the following is a method of quality management that involves checking finished products against a set standard?",
+    "explanation": "Quality control involves inspecting finished products to check they meet specifications. It is reactive, unlike TQM which builds quality into every process.",
+    "correctIndex": 1
+   },
+   {
+    "id": "resource-management:quiz:1951a343",
+    "options": [
+     "Making one unique product at a time",
+     "Producing a group of identical items together before switching to the next product",
+     "Continuous 24-hour production of a single product",
+     "Only producing when a customer places an order"
+    ],
+    "question": "What is batch production?",
+    "explanation": "Batch production manufactures a set quantity of identical items as a group. The production line is then reconfigured for the next batch, e.g. a bakery making bread then cakes.",
+    "correctIndex": 1
+   },
+   {
+    "id": "resource-management:quiz:df514843",
+    "options": [
+     "133%",
+     "75%",
+     "25%",
+     "50%"
+    ],
+    "question": "A factory has a maximum capacity of 10,000 units per week but is currently producing 7,500 units. What is the capacity utilisation?",
+    "explanation": "Capacity utilisation = (7,500 / 10,000) x 100 = 75%. The factory is using three-quarters of its productive capacity.",
+    "correctIndex": 1
+   },
+   {
+    "id": "resource-management:quiz:38df3985",
+    "options": [
+     "Having very large warehouses for buffer stock",
+     "Reliable suppliers who can deliver high-quality materials quickly and on time",
+     "Producing all components in-house",
+     "Having excess workforce capacity at all times"
+    ],
+    "question": "Toyota is famous for pioneering just-in-time production. Which condition is most essential for JIT to work effectively?",
+    "explanation": "JIT depends on reliable suppliers delivering quality materials precisely when needed. Supply disruptions under JIT immediately halt production since no buffer stock is held.",
+    "correctIndex": 1
+   },
+   {
+    "id": "resource-management:quiz:9ead3977",
+    "options": [
+     "Each car can be fully customised to individual orders",
+     "Lower unit costs through economies of scale and standardisation",
+     "Higher quality because each car receives individual attention",
+     "Greater flexibility to change the product design daily"
+    ],
+    "question": "A car manufacturer uses flow production to assemble 200 identical cars per day. Which advantage does this provide compared to job production?",
+    "explanation": "Flow production achieves low unit costs through division of labour, automation, and economies of scale, producing large quantities of standardised products efficiently.",
+    "correctIndex": 1
+   },
+   {
+    "id": "resource-management:quiz:18a3dbab",
+    "options": [
+     "The firm has too much spare capacity",
+     "The firm may struggle to fulfil the order without overtime, subcontracting, or turning it down",
+     "The firm's fixed costs will increase",
+     "The firm's quality will automatically improve"
+    ],
+    "question": "A firm operating at 95% capacity utilisation receives a large unexpected order. The most likely problem is:",
+    "explanation": "At 95% capacity, there is very little spare capacity. Fulfilling a large new order may require expensive overtime, outsourcing, or risk late delivery and quality issues.",
+    "correctIndex": 1
+   },
+   {
+    "id": "resource-management:quiz:7319b79a",
+    "options": [
+     "Only the quality control department is responsible for quality",
+     "Every employee takes responsibility for quality at every stage of production, with a culture of continuous improvement",
+     "The firm hires more quality inspectors to check finished products",
+     "Quality standards are lowered to increase speed of production"
+    ],
+    "question": "A business introduces total quality management (TQM). Which of the following best describes this change?",
+    "explanation": "TQM embeds quality responsibility across the entire organisation. Every employee, at every stage, is responsible for maintaining and improving quality.",
+    "correctIndex": 1
+   },
+   {
+    "id": "resource-management:quiz:cc42d23d",
+    "options": [
+     "True, because holding stock is always wasteful",
+     "JIT reduces costs and waste but is vulnerable to supply chain disruptions; buffer stock provides security against unexpected delays",
+     "False, because JIT is only used in Japan",
+     "True, because JIT eliminates all production costs"
+    ],
+    "question": "Evaluate the view that just-in-time stock management is always superior to holding buffer stock.",
+    "explanation": "JIT offers cost savings and waste reduction but exposes the firm to supply disruptions. Buffer stock is less efficient but provides insurance against supply chain failures.",
+    "correctIndex": 1
+   },
+   {
+    "id": "resource-management:quiz:51ade6cb",
+    "options": [
+     "Increase output by accepting any new orders regardless of profitability",
+     "Consider rationalisation (reducing capacity) or strategies to boost demand, depending on whether the low utilisation is temporary or structural",
+     "Immediately close the business",
+     "Raise prices to increase revenue per unit"
+    ],
+    "question": "A firm has capacity utilisation of 50%. Which response is most appropriate?",
+    "explanation": "Low utilisation increases unit costs. The firm should either boost demand through marketing/price cuts, or rationalise capacity if the decline is permanent.",
+    "correctIndex": 1
+   },
+   {
+    "id": "resource-management:quiz:5e06ead4",
+    "options": [
+     "It always does because flow production is cheaper",
+     "Flow production is more efficient for mass-market goods, but job production is more appropriate when customers require bespoke, customised products",
+     "Job production is always cheaper than flow production",
+     "Flow production is only suitable for the food industry"
+    ],
+    "question": "To what extent does flow production always lead to better outcomes than job production?",
+    "explanation": "Flow production excels at low-cost mass production but lacks flexibility. Job production suits bespoke products where customisation and craftsmanship are valued over scale.",
+    "correctIndex": 1
+   },
+   {
+    "id": "resource-management:quiz:0fc04ddc",
+    "options": [
+     "Yes, because TQM is free to implement",
+     "TQM can create a quality culture and reduce defects long-term, but it requires significant cultural change, training investment, and time; quality control may be more practical for some firms",
+     "No, because TQM does not involve any inspection",
+     "Yes, because TQM eliminates the need for any staff training"
+    ],
+    "question": "Evaluate whether TQM is always more effective than traditional quality control.",
+    "explanation": "TQM builds quality into processes and empowers workers, but requires substantial investment in training and cultural change. For small firms with limited resources, quality control may be more feasible.",
+    "correctIndex": 1
+   },
+   {
+    "id": "resource-management:quiz:12060300",
+    "options": [
+     "Flow production always has higher unit costs",
+     "Flow production requires significant capital investment and reduces product variety, which may not suit the firm's product range or market",
+     "Batch production is always more efficient",
+     "Flow production requires no workforce"
+    ],
+    "question": "A firm wants to improve efficiency. A consultant recommends switching from batch to flow production. Which counter-argument is most valid?",
+    "explanation": "Switching to flow production demands heavy capital investment in machinery and reduces flexibility to offer product variety, which may not suit firms with diverse product lines or small-scale demand.",
+    "correctIndex": 1
+   }
+  ],
+  "section_practice": [
+   {
+    "id": "resource-management:practice:ac14aacd",
+    "marks": 4,
+    "command": "Define",
+    "guidance": "Capacity utilisation measures the proportion of a business's maximum possible output that is actually being used (1 mark). It is calculated as: (actual output / maximum possible output) x 100 (1 mark). For example, a factory that can produce 10,000 units per month but produces 7,500 is operating at 75% capacity utilisation (1 mark). High capacity utilisation spreads fixed costs over more units, reducing unit costs (1 mark).",
+    "question": "Define the term 'capacity utilisation'. (4 marks)"
+   },
+   {
+    "id": "resource-management:practice:8a7671cf",
+    "marks": 6,
+    "command": "Explain",
+    "guidance": "Benefit 1: Reduced stockholding costs (1 mark) — JIT means components are delivered only when needed for production, eliminating the need for large warehouses, reducing insurance costs, and cutting waste from damaged or obsolete stock (1 mark). This frees up cash for other purposes such as investment in new technology (1 mark).\n\nBenefit 2: Improved quality and reduced waste (1 mark) — with JIT, defective components are identified immediately because there is no buffer stock to absorb errors (1 mark). This forces suppliers to maintain consistently high quality, leading to fewer defects in finished vehicles (1 mark).",
+    "question": "Explain two benefits of adopting just-in-time (JIT) stock management for a car manufacturer. (6 marks)"
+   },
+   {
+    "id": "resource-management:practice:68f0d0e8",
+    "marks": 10,
+    "command": "Assess",
+    "guidance": "Define TQM as an approach where every employee takes responsibility for quality, with a focus on continuous improvement (1 mark).\n\nBenefits: creates a culture of quality consciousness (1 mark); reduces defects, waste and the cost of rework or product recalls (1 mark); improves customer satisfaction and brand reputation, which is especially important in food manufacturing where quality failures can pose health risks (2 marks).\n\nChallenges: requires significant investment in training and cultural change (1 mark); takes time to embed — benefits are long-term while costs are immediate (1 mark); may face resistance from employees used to existing practices (1 mark).\n\nJudgement: TQM is highly appropriate for a food manufacturer facing quality complaints because quality is non-negotiable for food safety and consumer trust. However, short-term quality inspections may be needed as an immediate fix while TQM is implemented over the longer term (2 marks).",
+    "question": "Assess the value of implementing total quality management (TQM) for a food manufacturing business that has received customer complaints about inconsistent quality. (10 marks)"
+   },
+   {
+    "id": "resource-management:practice:00e9e0fa",
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Define quality management and its importance in a competitive market (2 marks).\n\nApproach 1 — Quality control (inspection): simple and straightforward (1 mark), but reactive — defects are caught after production, leading to waste and rework costs (2 marks).\n\nApproach 2 — Quality assurance (process-based): proactive, using standardised procedures to prevent defects (2 marks), but can be bureaucratic and may stifle flexibility (1 mark).\n\nApproach 3 — TQM (culture-based): comprehensive, involving all employees in continuous improvement (2 marks), but requires major cultural change and long-term commitment (2 marks).\n\nApproach 4 — Lean production: addresses quality and efficiency simultaneously by eliminating waste (2 marks), but requires reliable suppliers and is vulnerable to supply chain disruptions (1 mark).\n\nEvaluation: For a firm competing on both price and quality, lean production combined with elements of TQM is likely most effective. Lean reduces costs (supporting price competitiveness) while TQM ensures quality is maintained. Quality control alone is insufficient and quality assurance alone may increase costs without addressing efficiency. The optimal approach depends on the firm's current quality culture and competitive pressures (3 marks).",
+    "question": "Evaluate the most effective approach to managing quality for a mid-sized electronics manufacturer competing on both price and quality. (20 marks)"
+   },
+   {
+    "id": "resource-management:practice:27b2a355",
+    "marks": 4,
+    "command": "Outline",
+    "guidance": "Disadvantage 1: No spare capacity to meet unexpected increases in demand (1 mark), meaning the business may have to turn away orders or delay deliveries, potentially losing customers to competitors (1 mark).\n\nDisadvantage 2: Increased strain on machinery and employees (1 mark), which can lead to higher maintenance costs, more breakdowns, increased staff overtime and burnout, and a potential decline in product quality (1 mark).",
+    "question": "Outline two disadvantages of operating at very high capacity utilisation. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "id": "resource-management:card:c3f0c4e1",
+    "back": "Producing <strong>one unique item at a time</strong> to meet a specific customer order. E.g. a bespoke suit or custom-built furniture.",
+    "front": "What is job production?"
+   },
+   {
+    "id": "resource-management:card:b624522b",
+    "back": "Producing a <strong>set quantity of identical items</strong> before switching to a different product. E.g. a bakery making 200 white loaves then 100 wholemeal.",
+    "front": "What is batch production?"
+   },
+   {
+    "id": "resource-management:card:b72dc02d",
+    "back": "<strong>Continuous production</strong> on an assembly line, producing large quantities of identical products. Achieves low unit costs through economies of scale.",
+    "front": "What is flow production?"
+   },
+   {
+    "id": "resource-management:card:d52f4211",
+    "back": "Dividing the production process into <strong>self-contained cells (teams)</strong>, each responsible for a complete part of the product. Combines efficiency with teamwork.",
+    "front": "What is cell production?"
+   },
+   {
+    "id": "resource-management:card:4337e438",
+    "back": "<strong>Capacity Utilisation = (Actual Output / Maximum Possible Output) x 100</strong>",
+    "front": "How is capacity utilisation calculated?"
+   },
+   {
+    "id": "resource-management:card:9a0652d3",
+    "back": "Fixed costs are spread over <strong>fewer units</strong>, raising average costs. The business has spare capacity and is operating inefficiently.",
+    "front": "What happens when a business is under-utilising its capacity?"
+   },
+   {
+    "id": "resource-management:card:c3189425",
+    "back": "1. <strong>Increase demand</strong> (marketing, new markets, lower prices). 2. <strong>Reduce capacity</strong> (close a production line, sell equipment).",
+    "front": "Name two ways to improve capacity utilisation."
+   },
+   {
+    "id": "resource-management:card:45e150c5",
+    "back": "The <strong>minimum level of stock</strong> held to cope with unexpected demand increases or delivery delays.",
+    "front": "What is buffer inventory (safety stock)?"
+   },
+   {
+    "id": "resource-management:card:02ba427b",
+    "back": "An inventory system where materials are delivered <strong>only when needed</strong> in production, eliminating the need to hold large stocks.",
+    "front": "What is Just-in-Time (JIT)?"
+   },
+   {
+    "id": "resource-management:card:a0ea7868",
+    "back": "An approach aimed at <strong>minimising all forms of waste</strong> — time, materials, effort, and defects — throughout the production process.",
+    "front": "What is lean production?"
+   },
+   {
+    "id": "resource-management:card:5a6c33ff",
+    "back": "<strong>Quality control</strong> inspects finished products (reactive). <strong>Quality assurance</strong> builds quality checks into every stage of production (preventive).",
+    "front": "What is the difference between quality control and quality assurance?"
+   },
+   {
+    "id": "resource-management:card:f8b03eae",
+    "back": "A <strong>whole-organisation philosophy</strong> where every employee in every department is committed to continuous quality improvement and meeting customer needs.",
+    "front": "What is Total Quality Management (TQM)?"
+   },
+   {
+    "id": "resource-management:card:96101fc5",
+    "back": "A Japanese concept meaning <strong>continuous improvement</strong> — small, regular improvements suggested by all employees to reduce waste and improve processes.",
+    "front": "What is Kaizen?"
+   },
+   {
+    "id": "resource-management:card:466a467f",
+    "back": "<strong>Labour-intensive</strong> relies mainly on workers (e.g. hairdressing). <strong>Capital-intensive</strong> relies mainly on machinery and technology (e.g. car manufacturing).",
+    "front": "What is the difference between labour-intensive and capital-intensive production?"
+   },
+   {
+    "id": "resource-management:card:49db495a",
+    "back": "<strong>Labour Productivity = Total Output / Number of Workers</strong>",
+    "front": "How is labour productivity calculated?"
+   },
+   {
+    "id": "resource-management:card:c7df1cd8",
+    "back": "1. <strong>Machinery breakdowns</strong> from overuse. 2. <strong>Staff burnout and quality problems</strong> from overworked employees.",
+    "front": "Name two risks of operating at over 100% capacity."
+   },
+   {
+    "id": "resource-management:card:05c348d2",
+    "back": "If suppliers are <strong>unreliable</strong> or there is an <strong>unexpected surge in demand</strong>, the business may run out of materials and halt production.",
+    "front": "Why might JIT be risky?"
+   },
+   {
+    "id": "resource-management:card:b5f158e2",
+    "back": "Better quality leads to <strong>higher customer satisfaction</strong>, repeat purchases, stronger brand reputation, and <strong>lower costs</strong> from less waste and fewer returns.",
+    "front": "How does quality management create competitive advantage?"
+   },
+   {
+    "id": "resource-management:card:7b87de2a",
+    "back": "Business switches from job production (one-off, customised) to flow production (continuous, standardised) → Division of labour and specialisation increase → Economies of scale are achieved → Average unit cost falls → Output volume increases significantly → However, products become less customised → Workers may experience lower motivation due to repetitive tasks → Quality control systems become essential to maintain standards",
+    "type": "chain",
+    "front": "Trace the effect of switching from job production to flow production."
+   },
+   {
+    "id": "resource-management:card:6e2fb88f",
+    "back": "Business operates below full capacity → Fixed costs are spread over fewer units of output → Average fixed cost per unit is high → Unit costs rise → Profit margins are squeezed → Business becomes less price competitive compared to rivals operating at higher capacity → Options include: increasing demand through marketing, reducing capacity, or diversifying product range → Rationalisation (e.g. closing a production line) may be needed to improve efficiency",
+    "type": "chain",
+    "front": "Trace the effects of operating below full capacity utilisation."
+   },
+   {
+    "id": "resource-management:card:8770e536",
+    "back": "Business adopts TQM — quality becomes every employee's responsibility → Employees are trained and empowered to identify and resolve quality issues → Defects and waste are reduced at every stage of production → Rework and returns fall, reducing costs → Customer satisfaction and brand reputation improve → Customer loyalty increases, boosting repeat sales → Long-run costs fall and revenues rise → Competitive advantage is strengthened",
+    "type": "chain",
+    "front": "Trace the effect of implementing a total quality management (TQM) system."
+   },
+   {
+    "id": "resource-management:card:7b87de2a-2",
+    "back": "Business switches from job production (one-off, customised) to flow production (continuous, standardised) → Division of labour and specialisation increase → Economies of scale are achieved → Average unit cost falls → Output volume increases significantly → However, products become less customised → Workers may experience lower motivation due to repetitive tasks → Quality control systems become essential to maintain standards",
+    "type": "chain",
+    "front": "Trace the effect of switching from job production to flow production."
+   },
+   {
+    "id": "resource-management:card:6e2fb88f-2",
+    "back": "Business operates below full capacity → Fixed costs are spread over fewer units of output → Average fixed cost per unit is high → Unit costs rise → Profit margins are squeezed → Business becomes less price competitive compared to rivals operating at higher capacity → Options include: increasing demand through marketing, reducing capacity, or diversifying product range → Rationalisation (e.g. closing a production line) may be needed to improve efficiency",
+    "type": "chain",
+    "front": "Trace the effects of operating below full capacity utilisation."
+   },
+   {
+    "id": "resource-management:card:8770e536-2",
+    "back": "Business adopts TQM — quality becomes every employee's responsibility → Employees are trained and empowered to identify and resolve quality issues → Defects and waste are reduced at every stage of production → Rework and returns fall, reducing costs → Customer satisfaction and brand reputation improve → Customer loyalty increases, boosting repeat sales → Long-run costs fall and revenues rise → Competitive advantage is strengthened",
+    "type": "chain",
+    "front": "Trace the effect of implementing a total quality management (TQM) system."
+   }
+  ],
+  "section_diagrams": null,
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "Lean production identifies and eliminates all forms of waste — excess inventory, unnecessary movement, defective output and waiting time.",
+      "Streamlined processes reduce material waste, lower storage costs and minimise non-value-adding activities.",
+      "Average production costs fall as resources are used more efficiently, without requiring additional capital investment.",
+      "Lower unit costs enable more competitive pricing or wider profit margins, strengthening the firm's market position."
+     ],
+     "title": "Lean production eliminates waste and reduces costs",
+     "result": "Lean production creates a culture of continuous efficiency improvement — it reduces costs and strengthens competitiveness without compromising quality."
+    },
+    {
+     "steps": [
+      "JIT receives materials only when needed in production, eliminating buffer stock.",
+      "Stock holding levels fall dramatically — freeing warehouse space and reducing storage costs, insurance and obsolescence risk.",
+      "Cash previously tied up in stock is released, improving working capital for other productive uses.",
+      "Production becomes closely aligned with actual orders rather than forecasts, improving responsiveness to demand."
+     ],
+     "title": "Just-in-time stock management frees working capital",
+     "result": "JIT improves working capital efficiency by minimising stock levels — but success depends critically on reliable suppliers and accurate demand forecasting."
+    },
+    {
+     "steps": [
+      "Total Quality Management (TQM) makes quality every employee's responsibility — defects are caught and corrected at every stage, not just final inspection.",
+      "Defect rates fall, reducing waste, rework costs and customer returns.",
+      "Customers receive consistently high-quality products, increasing satisfaction, repeat purchases and positive word-of-mouth.",
+      "The business builds a reputation for reliability that supports premium pricing and differentiates it from competitors."
+     ],
+     "title": "Quality management builds reputation and reduces costs",
+     "result": "Quality management transforms quality from a cost of compliance into a source of competitive advantage — it drives customer loyalty and brand value."
+    },
+    {
+     "steps": [
+      "A business operating at 60% capacity spreads its fixed costs across fewer units, resulting in high average costs per unit.",
+      "Increasing utilisation through new contracts, extended hours or product diversification spreads fixed costs more widely.",
+      "As output rises, average cost per unit falls significantly — improving price competitiveness and profit margins.",
+      "However, operating consistently above 90% risks machine breakdowns, worker fatigue and inability to meet demand surges."
+     ],
+     "title": "Capacity utilisation determines unit cost efficiency",
+     "result": "Capacity utilisation is one of the most direct routes to reducing unit costs — but the optimal level balances cost efficiency with operational flexibility."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "JIT is vulnerable to supply chain disruption",
+     "content": "With no buffer stock, any supplier delay or disruption halts production entirely. Events like transport strikes or natural disasters can be catastrophic for JIT firms. Businesses must invest heavily in supplier relationships and may need contingency plans that offset cost savings."
+    },
+    {
+     "title": "Lean production requires cultural change",
+     "content": "Implementing lean is not just a technical process — it requires a fundamental shift in culture toward continuous improvement. Employee resistance (fear of job losses, increased workload) can undermine lean initiatives. Success depends as much on change management as on process redesign."
+    },
+    {
+     "title": "Quality systems involve significant upfront costs",
+     "content": "Implementing TQM requires substantial investment in training, monitoring and process re-engineering. Benefits may take considerable time to materialise in increased sales. For small businesses with limited resources, the short-term financial impact can be negative even if the long-term return is positive."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "id": "resource-management:mistake:a1c75c85",
+    "title": "Confusing capacity utilisation with efficiency",
+    "examTip": "Capacity utilisation measures how much of the capacity is being used; efficiency measures how well resources are being used. They are related but different concepts.",
+    "mistake": "Saying 'the business is efficient because it has high capacity utilisation'.",
+    "correction": "High capacity utilisation means the business is <strong>using a high proportion of its capacity</strong>, but it does not mean it is doing so efficiently. A factory could be running at 95% but producing lots of defective products."
+   },
+   {
+    "id": "resource-management:mistake:0d91641f",
+    "title": "Assuming JIT is always the best approach",
+    "examTip": "Always evaluate JIT in context — discuss the advantages AND the risks, especially supply chain reliability.",
+    "mistake": "Recommending JIT for all businesses without considering the context.",
+    "correction": "JIT only works well with <strong>reliable suppliers, predictable demand, and good supplier relationships</strong>. A business with unpredictable demand (e.g. seasonal products) or unreliable supply chains may need to hold buffer stock."
+   },
+   {
+    "id": "resource-management:mistake:380d30ec",
+    "title": "Mixing up quality control and quality assurance",
+    "examTip": "Remember: Control = Catching defects. Assurance = Preventing defects. QA is generally more effective because it stops waste before it occurs.",
+    "mistake": "Describing quality assurance as 'inspecting finished products'.",
+    "correction": "Quality <strong>control</strong> = inspecting finished products (reactive, catching defects). Quality <strong>assurance</strong> = building quality into every stage of production (proactive, preventing defects)."
+   },
+   {
+    "id": "resource-management:mistake:b1e05f62",
+    "title": "Forgetting to consider the costs of improving quality",
+    "examTip": "For balanced evaluation, always discuss both the benefits and the costs/difficulties of implementing quality management systems.",
+    "mistake": "Only discussing the benefits of TQM/Kaizen without acknowledging the costs and challenges.",
+    "correction": "TQM and Kaizen require significant <strong>training, time, and cultural change</strong>. Results are not immediate, and some employees may resist the additional responsibility. Implementation costs can be high."
+   },
+   {
+    "id": "resource-management:mistake:135fd029",
+    "title": "Not linking production methods to the business context",
+    "examTip": "Always apply your answer to the specific business in the case study — examiners give higher marks for application than generic descriptions.",
+    "mistake": "Describing job, batch, and flow production without explaining which is appropriate for the business in the question.",
+    "correction": "The best production method depends on the <strong>nature of the product, volume of demand, need for customisation, and available capital</strong>. A custom furniture maker uses job production; a crisp factory uses flow production."
+   }
+  ]
+ }
+}

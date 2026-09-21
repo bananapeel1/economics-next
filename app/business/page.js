@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { BOUNDARY_SENTENCE } from '@/lib/feature-matrix';
 import { BoltIcon, BookAlt, CardsIcon, ChartHistogram, Clipboard, Document, Glossary, LearnMode, NetworkGraph, ProgressChart, Star, Tutor } from '@/components/Icons';
 import SiteHeader from '@/components/SiteHeader';
 import BusinessScrollBar from './BusinessScrollBar';
@@ -284,7 +285,9 @@ export default function BusinessPage() {
               What&apos;s included
             </div>
             <h2 className="elp-s-title">Everything you need to revise Business</h2>
-            <p className="elp-s-sub">Notes are free. Flashcards, quizzes and the AI tutor unlock with Pro.</p>
+            {/* F031: was a third hardcoded copy of the boundary, which is how the three surfaces
+                came to disagree. One sentence, one module. */}
+            <p className="elp-s-sub">{BOUNDARY_SENTENCE}</p>
           </div>
           <div className="elp-wyg-grid">
             <div className="elp-wyg-card elp-fade-up">
@@ -400,7 +403,7 @@ export default function BusinessPage() {
         <div className="elp-cta-inner elp-fade-up">
           <h2 className="elp-cta-title">Ready to start revising?</h2>
           <p className="elp-cta-sub">
-            Free notes across all four units. Flashcards, quizzes and the AI tutor unlock with Pro — £1 for your first month.
+            Free notes across all four units. Flashcards, quizzes and the AI tutor unlock with Pro — £1 for your first month as a new subscriber.
           </p>
           <div className="elp-cta-actions">
             <Link
@@ -412,7 +415,7 @@ export default function BusinessPage() {
             </Link>
             <Link href="/economics" className="elp-btn-secondary">Economics notes instead</Link>
           </div>
-          <p className="elp-cta-note">No signup required for notes &middot; Cancel anytime &middot; &pound;1 first month, then &pound;1.99 &middot; charged in your local currency</p>
+          <p className="elp-cta-note">No signup required for notes &middot; Cancel anytime &middot; &pound;1 first month for new subscribers, then &pound;1.99 &middot; charged in your local currency</p>
         </div>
       </div>
 

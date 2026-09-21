@@ -1,0 +1,1985 @@
+{
+ "section_id": "macroeconomic-objectives-policies",
+ "subject": "economics",
+ "label": "2026-09-14-pre-packet-13",
+ "tables": {
+  "section_content": [
+   {
+    "id": "macroeconomic-objectives-policies:block:019f6dfe",
+    "title": "Macroeconomic Objectives",
+    "sections": [
+     {
+      "id": "macroeconomic-objectives-policies:sub:economic-growth-objective",
+      "body": [
+       {
+        "text": "**Economic growth** is the most prominent macroeconomic objective. Governments typically target a sustainable rate of real GDP growth, often around 2-3% per year for developed economies. Growth at this pace creates jobs, raises incomes and generates the tax revenue needed to fund public services without triggering runaway inflation.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Sustainable GDP growth",
+         "Rising incomes and employment",
+         "Higher tax revenues"
+        ],
+        "result": "Improved living standards and fiscal flexibility",
+        "resultType": "good"
+       },
+       {
+        "text": "You should understand that governments do not simply want the highest possible growth rate. Growth that is too rapid creates inflationary pressure, environmental damage and financial instability. The aim is growth that is sustainable over the long term, balancing speed with stability.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Economic Growth",
+      "recall": {
+       "id": "macroeconomic-objectives-policies:sub:economic-growth-objective:recall",
+       "type": "fillin",
+       "hints": [
+        "2-_",
+        "st________",
+        "un___________"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "2-3",
+        "stability",
+        "unemployment"
+       ],
+       "template": [
+        "Target growth rate for developed economies ≈ ___% per year",
+        "→ Balances expansion with economic ___",
+        "→ Too fast risks inflation, too slow risks ___"
+       ]
+      },
+      "keyIdea": "Governments aim for steady, sustainable GDP growth because it raises living standards, creates jobs and generates tax revenue to fund public services.",
+      "examMatters": "When discussing the growth objective, examiners want you to specify what sustainable growth means and why it matters. Link it to employment, tax revenue and living standards rather than just stating that GDP should rise.",
+      "realExample": {
+       "text": "**The UK government** has targeted around 2% annual growth as sustainable since the early 2000s. When growth fell below this during the 2010s productivity puzzle, it constrained public spending and contributed to political pressure over austerity and stagnant real wages.",
+       "emoji": "🇬🇧"
+      },
+      "misconception": "Students write that the growth objective is simply to maximise GDP. Governments aim for sustainable growth, not maximum growth, because excessively fast expansion creates inflation and instability. Instead write: the growth objective is to achieve a steady, sustainable rate of increase in real GDP that raises living standards without overheating the economy."
+     },
+     {
+      "id": "macroeconomic-objectives-policies:sub:low-stable-inflation",
+      "body": [
+       {
+        "text": "**Low and stable inflation** is a core macroeconomic objective because unpredictable price rises erode purchasing power, distort business planning and redistribute wealth unfairly. Most advanced economies set an inflation target of around 2% per year, measured by the Consumer Price Index (CPI).",
+        "type": "paragraph"
+       },
+       {
+        "text": "You might wonder why the target is 2% rather than zero. A small positive rate of inflation gives central banks room to cut real interest rates during downturns, prevents the economy from slipping into deflation, and accommodates relative price changes across the economy without forcing absolute price falls in some sectors.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Inflation held near 2%",
+         "Expectations anchored",
+         "Firms and households plan with confidence"
+        ],
+        "result": "Stable economic environment for investment and spending",
+        "resultType": "good"
+       }
+      ],
+      "title": "Low and Stable Inflation",
+      "recall": {
+       "id": "macroeconomic-objectives-policies:sub:low-stable-inflation:recall",
+       "type": "reorder",
+       "prompt": "Order the reasoning for a 2% inflation target:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Avoid deflation risks",
+        "Anchor inflation expectations",
+        "Give central bank room to cut real rates",
+        "Maintain stable planning environment"
+       ]
+      },
+      "keyIdea": "Most central banks target inflation of around 2% to keep prices predictable, protect purchasing power and give monetary policy room to act.",
+      "examMatters": "Examiners often ask why the target is 2% rather than zero. You must explain the dangers of deflation, the need for monetary policy flexibility and the role of anchored inflation expectations. Simply stating that low inflation is good is insufficient.",
+      "realExample": {
+       "text": "**Turkey** allowed inflation to surge past 80% in 2022 after the central bank cut interest rates despite rising prices. The collapse in the lira's purchasing power wiped out household savings and forced businesses to reprice daily, demonstrating how failing the inflation objective destroys economic stability.",
+       "emoji": "🇹🇷"
+      },
+      "misconception": "Students claim zero inflation would be ideal because prices would be completely stable. Zero inflation risks tipping into deflation, which discourages spending and increases the real burden of debt. Instead write: a small positive inflation target of around 2% is preferred because it avoids deflation risks and gives monetary policy room to manoeuvre."
+     },
+     {
+      "id": "macroeconomic-objectives-policies:sub:low-unemployment-objective",
+      "body": [
+       {
+        "text": "Governments aim to keep **unemployment** as low as possible because joblessness wastes human resources, reduces GDP below its potential and imposes heavy social costs. Unemployment leads to lost income, skills deterioration, mental health problems and increased government spending on welfare benefits.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Unemployment rises",
+         "Output falls below potential",
+         "Tax revenue drops, welfare spending rises"
+        ],
+        "result": "Higher fiscal deficit and lower living standards",
+        "resultType": "bad"
+       },
+       {
+        "text": "You should understand that some unemployment is unavoidable and even healthy. **Frictional unemployment** occurs as workers move between jobs, and **structural unemployment** results from mismatches between worker skills and employer needs. The goal is to minimise involuntary unemployment, not to reach literally zero.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Full employment does not mean zero unemployment. It means the economy has reached the **natural rate of unemployment** where only frictional and structural unemployment remain. Cyclical unemployment, caused by insufficient demand during recessions, is the type governments most actively try to eliminate.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Low Unemployment",
+      "recall": {
+       "id": "macroeconomic-objectives-policies:sub:low-unemployment-objective:recall",
+       "type": "fillin",
+       "hints": [
+        "na______",
+        "fr________",
+        "st________"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "natural",
+        "frictional",
+        "structural"
+       ],
+       "template": [
+        "Full employment = reaching the ___ rate of unemployment",
+        "→ Only ___ unemployment remains (job switching)",
+        "→ Plus ___ unemployment (skills mismatch)"
+       ]
+      },
+      "keyIdea": "Reducing unemployment minimises wasted human potential, raises national output and reduces the social costs of poverty and exclusion.",
+      "examMatters": "When discussing unemployment, examiners expect you to distinguish between types of unemployment and explain which type a given policy addresses. Always link the unemployment objective to its economic cost in terms of lost output and fiscal pressure.",
+      "realExample": {
+       "text": "**Spain's** unemployment rate exceeded 26% in 2013, with youth unemployment above 55%. The enormous cost in lost output, social deprivation and emigration of skilled young workers demonstrated why reducing unemployment is such a critical policy priority for any government.",
+       "emoji": "🇪🇸"
+      },
+      "misconception": "Students write that the unemployment objective is to reach 0% unemployment. Full employment means reducing cyclical unemployment to zero, not eliminating all unemployment, because frictional and structural unemployment always exist. Instead write: the unemployment objective is to reach the natural rate where only frictional and structural unemployment remain."
+     },
+     {
+      "id": "macroeconomic-objectives-policies:sub:balance-of-payments",
+      "body": [
+       {
+        "text": "The **balance of payments** records all economic transactions between a country and the rest of the world. The objective is to avoid a persistent and unsustainable **current account deficit**, which means the country is importing far more than it exports and must borrow from abroad to finance the gap.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Imports consistently exceed exports",
+         "Current account deficit persists",
+         "Country borrows from abroad"
+        ],
+        "result": "Rising external debt and vulnerability to capital flight",
+        "resultType": "bad"
+       },
+       {
+        "text": "A small current account deficit is not necessarily a problem if it is financed by productive foreign investment. However, large and persistent deficits can indicate that the economy is uncompetitive, and the borrowing needed to fund them can become unsustainable.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should note that this objective often conflicts with others. Policies that boost growth and reduce unemployment tend to suck in imports, worsening the current account. This is one of the key trade-offs in macroeconomic policy.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Balance of Payments Equilibrium",
+      "recall": {
+       "id": "macroeconomic-objectives-policies:sub:balance-of-payments:recall",
+       "type": "reorder",
+       "prompt": "Order the consequences of a persistent current account deficit:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Imports consistently exceed exports",
+        "Country borrows increasingly from abroad",
+        "External debt accumulates",
+        "Risk of capital flight and currency crisis"
+       ]
+      },
+      "keyIdea": "A sustainable balance of payments means the country is not building up unsustainable debts to the rest of the world from persistent trade deficits.",
+      "examMatters": "Examiners expect you to explain why the BoP matters and how it conflicts with other objectives. Strong answers discuss the difference between a deficit financed by investment and one financed by borrowing, and evaluate whether a given deficit is sustainable.",
+      "realExample": {
+       "text": "**Greece** ran persistent current account deficits exceeding 10% of GDP before the 2010 debt crisis. When foreign creditors lost confidence and stopped lending, Greece was forced into a severe austerity programme that slashed public spending and pushed unemployment above 27%.",
+       "emoji": "🇬🇷"
+      },
+      "misconception": "Students state that a current account deficit is always bad for an economy. A deficit financed by productive foreign investment that raises future export capacity can be beneficial. Instead write: current account deficits are problematic only when they are persistent, large and financed by unsustainable borrowing rather than productive investment."
+     },
+     {
+      "id": "macroeconomic-objectives-policies:sub:conflicts-between-objectives",
+      "body": [
+       {
+        "text": "The fundamental challenge of macroeconomic policy is that objectives frequently **conflict**. Policies designed to achieve one target can worsen performance on another. The most famous conflict is between **low unemployment and low inflation**: stimulating demand to reduce unemployment tends to push up prices.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Similarly, policies that boost economic growth often worsen the current account because higher incomes lead to more imports. Raising interest rates to control inflation can slow growth and increase unemployment. These trade-offs mean that governments cannot achieve all objectives simultaneously.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Government pursues one objective",
+         "Policy affects multiple variables",
+         "Other objectives worsen"
+        ],
+        "result": "Trade-offs force prioritisation and compromise",
+        "resultType": "neutral"
+       },
+       {
+        "text": "You should understand that the severity of these conflicts depends on the state of the economy. During a recession with low inflation, expansionary policy can reduce unemployment without much inflationary cost. Near full capacity, the trade-offs become much sharper.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Conflicts Between Objectives",
+      "recall": {
+       "id": "macroeconomic-objectives-policies:sub:conflicts-between-objectives:recall",
+       "type": "fillin",
+       "hints": [
+        "un___________",
+        "Ph______",
+        "in______"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "unemployment",
+        "Phillips",
+        "increase"
+       ],
+       "template": [
+        "Key policy conflict: low ___ vs low inflation",
+        "→ Illustrated by the ___ curve",
+        "→ Reducing one tends to ___ the other"
+       ]
+      },
+      "keyIdea": "Pursuing one macroeconomic objective often makes another harder to achieve, forcing governments into difficult policy trade-offs.",
+      "examMatters": "Evaluation questions almost always require you to discuss policy conflicts and trade-offs. Examiners reward answers that identify the specific conflict, explain the mechanism, and evaluate which objective should take priority given the economy's current circumstances.",
+      "realExample": {
+       "text": "**The Bank of England** faced a sharp conflict in 2022 when inflation exceeded 10% while growth stalled. Raising rates to fight inflation risked deepening the slowdown and increasing unemployment, but failing to act risked letting inflation become entrenched and eroding living standards further.",
+       "emoji": "🇬🇧"
+      },
+      "misconception": "Students list objectives without acknowledging conflicts, as if all can be achieved simultaneously. In reality, pursuing low unemployment often raises inflation, and pursuing growth often worsens the trade balance. Instead write: macroeconomic objectives inherently conflict, and governments must prioritise based on the economy's current conditions."
+     }
+    ],
+    "takeaway": [
+     "The four main objectives: growth, low inflation, low unemployment, BoP balance.",
+     "Full employment means the natural rate, not zero unemployment.",
+     "The 2% inflation target avoids deflation while anchoring expectations.",
+     "Objectives frequently conflict, forcing difficult trade-offs."
+    ],
+    "quizIndices": [
+     0
+    ]
+   },
+   {
+    "id": "macroeconomic-objectives-policies:block:df532ed5",
+    "title": "Fiscal Policy",
+    "sections": [
+     {
+      "id": "macroeconomic-objectives-policies:sub:fiscal-policy-tools",
+      "body": [
+       {
+        "text": "**Fiscal policy** is the use of **government spending** and **taxation** to influence the economy. It is set by the government, usually in an annual budget. Changes in tax rates affect disposable income and spending, while changes in government expenditure directly add to or reduce aggregate demand.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Government changes taxes or spending",
+         "Disposable income or AD shifts",
+         "Output and employment are affected"
+        ],
+        "result": "Fiscal policy influences the level of economic activity",
+        "resultType": "neutral"
+       },
+       {
+        "text": "Fiscal policy has two dimensions: **demand-side** and **supply-side**. On the demand side, increased government spending or tax cuts boost AD. On the supply side, targeted spending on education, infrastructure or R&D can shift LRAS right. The most effective fiscal strategies address both.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should know that fiscal policy involves a **budget deficit** when spending exceeds tax revenue, and a **budget surplus** when tax revenue exceeds spending. Persistent deficits add to the national debt, which can become a constraint on future policy choices.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Fiscal Policy Tools",
+      "recall": {
+       "id": "macroeconomic-objectives-policies:sub:fiscal-policy-tools:recall",
+       "type": "reorder",
+       "prompt": "Order the fiscal policy transmission mechanism:",
+       "shuffled": [
+        1,
+        3,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Government cuts income tax",
+        "Households have higher disposable income",
+        "Consumer spending rises",
+        "AD shifts right and real GDP increases"
+       ]
+      },
+      "keyIdea": "Fiscal policy uses government spending and taxation to influence aggregate demand, the distribution of income and the allocation of resources.",
+      "examMatters": "When discussing fiscal policy tools, examiners want you to specify whether the change is to taxation or spending, and whether it is expansionary or contractionary. Always connect the tool to its impact on AD using a clear chain of reasoning.",
+      "realExample": {
+       "text": "**The US government** passed a $1.9 trillion fiscal stimulus package in March 2021, combining direct payments to households with extended unemployment benefits. This massive injection of spending power shifted AD sharply rightward, accelerating the recovery but also contributing to the inflation surge that followed.",
+       "emoji": "🇺🇸"
+      },
+      "misconception": "Students describe fiscal policy as only about changing tax rates. Fiscal policy equally involves government spending decisions on public services, infrastructure and transfer payments. Instead write: fiscal policy encompasses both taxation and government spending, and changes to either side affect aggregate demand and the economy's productive capacity."
+     },
+     {
+      "id": "macroeconomic-objectives-policies:sub:expansionary-contractionary-fiscal",
+      "body": [
+       {
+        "text": "**Expansionary fiscal policy** involves increasing government spending, cutting taxes, or both. It injects more spending power into the economy, shifting AD to the right. Governments use it during recessions to boost demand, reduce unemployment and accelerate recovery.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Government increases spending or cuts taxes",
+         "Disposable incomes rise",
+         "AD shifts right"
+        ],
+        "result": "Output rises and unemployment falls",
+        "resultType": "good"
+       },
+       {
+        "text": "**Contractionary fiscal policy** involves cutting government spending, raising taxes, or both. It withdraws spending power from the economy, shifting AD to the left. Governments use it to cool an overheating economy, reduce inflation or bring a budget deficit under control.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should recognise that the **multiplier effect** amplifies fiscal policy. An initial increase in government spending creates income for workers and suppliers, who spend a proportion of that income, creating further rounds of spending. The total increase in GDP exceeds the initial injection, though the size of the multiplier is debated.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Expansionary and Contractionary Fiscal Policy",
+      "recall": {
+       "id": "macroeconomic-objectives-policies:sub:expansionary-contractionary-fiscal:recall",
+       "type": "fillin",
+       "hints": [
+        "ri___",
+        "le__",
+        "go________ ________"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "right",
+        "left",
+        "government spending"
+       ],
+       "template": [
+        "Expansionary fiscal policy shifts AD ___",
+        "→ Contractionary fiscal policy shifts AD ___",
+        "→ Fiscal policy uses ___ and taxation as tools"
+       ]
+      },
+      "keyIdea": "Expansionary fiscal policy boosts AD through tax cuts or spending increases; contractionary policy reduces AD through tax rises or spending cuts.",
+      "examMatters": "Examiners often ask you to evaluate whether expansionary or contractionary fiscal policy is appropriate for a given economy. Your answer must depend on context: the size of the output gap, the level of government debt and the current rate of inflation all matter.",
+      "realExample": {
+       "text": "**The UK's austerity programme** from 2010 was contractionary fiscal policy, cutting government spending to reduce the budget deficit. Critics argued this slowed the recovery and increased unemployment, while supporters claimed it restored fiscal credibility and prevented a debt crisis.",
+       "emoji": "🇬🇧"
+      },
+      "misconception": "Students treat expansionary fiscal policy as automatically effective at raising GDP. If the economy is near full capacity, the stimulus may cause inflation rather than growth, and government borrowing may crowd out private investment. Instead write: expansionary fiscal policy works best when there is spare capacity, but near full employment it risks inflation and crowding out."
+     },
+     {
+      "id": "macroeconomic-objectives-policies:sub:automatic-stabilisers",
+      "body": [
+       {
+        "text": "**Automatic stabilisers** are features of the tax and welfare system that automatically counteract fluctuations in economic activity without any deliberate government intervention. During a recession, tax revenues fall because incomes and profits decline, while welfare spending rises because more people claim unemployment benefits. This automatically injects spending power into the economy.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Economy enters recession",
+         "Tax revenues fall automatically",
+         "Welfare spending rises automatically"
+        ],
+        "result": "AD is partially cushioned without any new policy decision",
+        "resultType": "good"
+       },
+       {
+        "text": "During a boom, the reverse happens. Rising incomes push people into higher tax brackets, increasing the government's tax take. Fewer people claim welfare benefits. This automatically withdraws spending power from the economy, dampening inflationary pressure without the government needing to act.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should appreciate that automatic stabilisers reduce the severity of economic fluctuations but cannot eliminate them entirely. They work faster than discretionary fiscal policy because there is no legislative delay, but their effect is modest compared to deliberate policy interventions.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Automatic Stabilisers",
+      "recall": {
+       "id": "macroeconomic-objectives-policies:sub:automatic-stabilisers:recall",
+       "type": "reorder",
+       "prompt": "Order how automatic stabilisers work during a recession:",
+       "shuffled": [
+        3,
+        0,
+        2,
+        1
+       ],
+       "correctOrder": [
+        "GDP falls and unemployment rises",
+        "Tax revenues decline automatically",
+        "Welfare spending increases automatically",
+        "Fall in AD is partially cushioned"
+       ]
+      },
+      "keyIdea": "Tax revenues and welfare spending automatically adjust to smooth the business cycle without any deliberate government decision.",
+      "examMatters": "Examiners test whether you understand the difference between automatic stabilisers and discretionary policy. Explain that stabilisers work through existing systems without policy lags, and evaluate their effectiveness by considering the size of the welfare state and the progressiveness of the tax system.",
+      "realExample": {
+       "text": "**Denmark's** generous welfare system acts as a powerful automatic stabiliser. During the 2008 recession, unemployment benefits replaced up to 90% of previous earnings, maintaining consumer spending far better than in countries with weaker safety nets and cushioning the downturn significantly.",
+       "emoji": "🇩🇰"
+      },
+      "misconception": "Students confuse automatic stabilisers with discretionary fiscal policy. Automatic stabilisers operate without any government decision; they are built into the existing tax and welfare system. Instead write: automatic stabilisers work through the existing structure of progressive taxes and welfare payments, requiring no new legislation or deliberate policy action."
+     }
+    ],
+    "takeaway": [
+     "Fiscal policy uses government spending and taxation to manage AD.",
+     "Expansionary = more spending or tax cuts; contractionary = the reverse.",
+     "The multiplier amplifies fiscal policy but depends on spare capacity.",
+     "Automatic stabilisers smooth cycles without deliberate policy action."
+    ],
+    "diagramRef": "fiscal-policy-ad",
+    "quizIndices": [
+     1
+    ],
+    "practiceIndices": [
+     0
+    ]
+   },
+   {
+    "id": "macroeconomic-objectives-policies:block:f658eba0",
+    "title": "Monetary Policy",
+    "sections": [
+     {
+      "id": "macroeconomic-objectives-policies:sub:interest-rate-policy",
+      "body": [
+       {
+        "text": "**Monetary policy** is primarily conducted through changes in the **base interest rate** set by the central bank. In the UK, this is the Bank of England's Bank Rate. Changes in the base rate ripple through the economy because commercial banks adjust their own lending and saving rates in response.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Central bank cuts base rate",
+         "Borrowing becomes cheaper",
+         "Consumption and investment rise"
+        ],
+        "result": "AD shifts right and economic activity increases",
+        "resultType": "good"
+       },
+       {
+        "text": "When the central bank **raises** interest rates, borrowing becomes more expensive and saving becomes more rewarding. This reduces consumer spending on credit, discourages business investment and strengthens the exchange rate, all of which reduce AD. Higher rates are used to combat inflation.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should know that interest rate changes take time to work through the economy. The **transmission mechanism** involves multiple channels: the cost of borrowing, the incentive to save, the exchange rate effect on exports and imports, and the wealth effect through asset prices. The full impact may take 12-18 months.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Interest Rates",
+      "recall": {
+       "id": "macroeconomic-objectives-policies:sub:interest-rate-policy:recall",
+       "type": "fillin",
+       "hints": [
+        "12___",
+        "tr___________",
+        "as___"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "12-18",
+        "transmission",
+        "asset"
+       ],
+       "template": [
+        "Interest rate changes take approximately ___ months for full effect",
+        "→ Works through the ___ mechanism",
+        "→ Affects borrowing, saving, exchange rates and ___ prices"
+       ]
+      },
+      "keyIdea": "Central banks raise interest rates to cool inflation and cut them to stimulate spending, making borrowing cheaper or more expensive across the economy.",
+      "examMatters": "When explaining how interest rates affect the economy, examiners want you to trace the full transmission mechanism through at least two channels. Simply stating that lower rates boost spending is too vague. Explain the borrowing channel, the saving channel, the exchange rate channel or the asset price channel.",
+      "realExample": {
+       "text": "**The Bank of England** raised the base rate from 0.1% to 5.25% between December 2021 and August 2023 to combat inflation that had reached 11.1%. The sharp increases cooled demand but also raised mortgage costs for millions of households, illustrating the painful trade-offs of tight monetary policy.",
+       "emoji": "🇬🇧"
+      },
+      "misconception": "Students assume interest rate changes affect the economy immediately. In reality, the transmission mechanism has long and variable lags of 12-18 months, meaning the central bank must act based on forecasts of future inflation. Instead write: interest rate changes take 12-18 months to fully affect the economy, so central banks must anticipate future conditions rather than react to current data."
+     },
+     {
+      "id": "macroeconomic-objectives-policies:sub:quantitative-easing",
+      "body": [
+       {
+        "text": "**Quantitative easing** (QE) is an unconventional monetary policy tool used when interest rates are already at or near zero and cannot be cut further. The central bank creates new money electronically and uses it to buy government bonds (and sometimes corporate bonds) from financial institutions.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Central bank creates new money",
+         "Buys bonds from financial institutions",
+         "Bond prices rise, yields fall"
+        ],
+        "result": "Long-term borrowing costs fall and money supply increases",
+        "resultType": "good"
+       },
+       {
+        "text": "QE works through several channels. By buying bonds, the central bank pushes up bond prices and reduces yields, which lowers long-term interest rates across the economy. Financial institutions that sell their bonds receive cash, which they can lend to businesses and households. Rising asset prices also create a wealth effect that boosts spending.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should understand that QE is controversial. Critics argue it inflates asset prices disproportionately, benefiting wealthy asset owners and worsening inequality. There is also debate about whether the extra money reaches the real economy or simply circulates within the financial system.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Quantitative Easing",
+      "recall": {
+       "id": "macroeconomic-objectives-policies:sub:quantitative-easing:recall",
+       "type": "reorder",
+       "prompt": "Order the QE transmission mechanism:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Central bank creates electronic money",
+        "Purchases government bonds from banks",
+        "Bond prices rise and yields fall",
+        "Long-term borrowing costs decrease across the economy"
+       ]
+      },
+      "keyIdea": "When interest rates hit near-zero, central banks buy government bonds to inject money into the financial system and push down long-term borrowing costs.",
+      "examMatters": "Examiners expect you to explain the mechanism of QE clearly: bond purchases, rising bond prices, falling yields, lower long-term rates. Evaluation marks come from discussing whether QE reaches the real economy effectively and whether its distributional effects are desirable.",
+      "realExample": {
+       "text": "**The Bank of England** purchased over 875 billion pounds of government bonds through QE between 2009 and 2021. While this helped keep borrowing costs low and supported the recovery, critics pointed out that rising house and share prices widened the wealth gap between asset owners and those without property or investments.",
+       "emoji": "🇬🇧"
+      },
+      "misconception": "Students describe QE as the government printing money to spend directly. QE involves the central bank buying bonds from financial markets, not directly funding government spending. Instead write: QE is the central bank purchasing bonds from financial institutions with newly created money, which lowers yields and increases the money supply through the banking system."
+     },
+     {
+      "id": "macroeconomic-objectives-policies:sub:monetary-transmission-mechanism",
+      "body": [
+       {
+        "text": "The **monetary transmission mechanism** describes the chain of events through which a change in the base interest rate eventually affects real GDP and inflation. It operates through four main channels, each working at a different speed and with different effects on different sectors.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The **borrowing channel** is the most direct: higher rates make loans and mortgages more expensive, reducing consumption and investment. The **saving channel** works in reverse: higher rates reward saving, so households spend less. The **exchange rate channel** affects trade: higher rates attract foreign capital, strengthening the currency and making exports dearer.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Base rate changes",
+         "Borrowing, saving, exchange rate and asset prices adjust",
+         "AD shifts"
+        ],
+        "result": "Output and inflation respond with a 12-18 month lag",
+        "resultType": "neutral"
+       },
+       {
+        "text": "The **asset price channel** works through wealth effects. Higher rates tend to reduce house prices and share prices, making people feel less wealthy and reducing their willingness to spend. You should understand that the strength of each channel varies across economies depending on factors like homeownership rates and openness to trade.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "The Transmission Mechanism",
+      "recall": {
+       "id": "macroeconomic-objectives-policies:sub:monetary-transmission-mechanism:recall",
+       "type": "fillin",
+       "hints": [
+        "sa____",
+        "ex______",
+        "as___"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "saving",
+        "exchange",
+        "asset"
+       ],
+       "template": [
+        "Monetary transmission channel 1 & 2: borrowing costs and ___ incentives",
+        "→ Channel 3: the ___ rate (affects trade competitiveness)",
+        "→ Channel 4: ___ prices (wealth effect on spending)"
+       ]
+      },
+      "keyIdea": "Interest rate changes travel through borrowing costs, saving incentives, the exchange rate and asset prices before finally reaching output and inflation.",
+      "examMatters": "Examiners reward you for explaining at least two channels of the transmission mechanism in detail. For top marks, evaluate which channel is strongest in the given economy. For example, in a country with high homeownership, the asset price channel through house prices is particularly powerful.",
+      "realExample": {
+       "text": "**The Federal Reserve's** rate hikes in 2022-2023 worked heavily through the borrowing and asset price channels. Mortgage rates doubled from 3% to over 7%, freezing the housing market, while falling tech stock valuations reduced the wealth effect, both contributing to the gradual cooling of inflation.",
+       "emoji": "🇺🇸"
+      },
+      "misconception": "Students describe only one channel of monetary transmission and ignore the others. The transmission mechanism works through multiple simultaneous channels whose relative strength depends on the economy's structure. Instead write: the transmission mechanism operates through borrowing costs, saving incentives, the exchange rate and asset prices simultaneously, and the dominance of each channel varies by economy."
+     }
+    ],
+    "takeaway": [
+     "Central banks use interest rates as the primary monetary policy tool.",
+     "QE buys bonds to lower long-term rates when base rate hits near-zero.",
+     "Transmission works through borrowing, saving, exchange rate and asset channels.",
+     "Monetary policy operates with long lags of 12-18 months."
+    ],
+    "diagramRef": "monetary-policy-transmission",
+    "quizIndices": [
+     2
+    ],
+    "practiceIndices": [
+     1
+    ]
+   },
+   {
+    "id": "macroeconomic-objectives-policies:block:31efd8eb",
+    "title": "Supply-Side Policies",
+    "sections": [
+     {
+      "id": "macroeconomic-objectives-policies:sub:market-based-supply-side",
+      "body": [
+       {
+        "text": "**Market-based supply-side policies** aim to increase the economy's productive capacity by reducing government intervention and letting market forces work more freely. They are based on the belief that markets allocate resources more efficiently than governments, and that removing barriers to enterprise and competition will boost output.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Key market-based policies include **deregulation** (removing rules that restrict business activity), **privatisation** (selling state-owned enterprises to the private sector), **trade liberalisation** (reducing tariffs and quotas), **tax cuts** (improving incentives to work and invest), and **labour market reforms** (reducing trade union power and making hiring and firing easier).",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Government reduces regulation and taxes",
+         "Firms face fewer barriers and stronger incentives",
+         "Investment and productivity rise"
+        ],
+        "result": "LRAS shifts right as productive capacity expands",
+        "resultType": "good"
+       },
+       {
+        "text": "You should understand that market-based policies can have downsides. Deregulation may reduce consumer protection. Labour market flexibility can increase job insecurity. Privatisation does not always improve efficiency, especially for natural monopolies. These trade-offs must be considered in evaluation.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Market-Based Supply-Side Policies",
+      "recall": {
+       "id": "macroeconomic-objectives-policies:sub:market-based-supply-side:recall",
+       "type": "reorder",
+       "prompt": "Order these market-based supply-side policies from most to least direct:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Deregulation of a specific industry",
+        "Cuts to corporation tax",
+        "Labour market flexibility reforms",
+        "Trade liberalisation"
+       ]
+      },
+      "keyIdea": "Market-based policies remove government intervention to let free markets allocate resources more efficiently, boosting productivity and output.",
+      "examMatters": "When evaluating market-based policies, examiners want balanced analysis. Explain the efficiency gains but also discuss the distributional consequences, the time lag before benefits appear and whether the specific market in question is likely to function well without regulation.",
+      "realExample": {
+       "text": "**The UK under Thatcher** in the 1980s pursued aggressive market-based supply-side policies including privatisation of British Telecom and British Gas, deregulation of financial markets and trade union reforms. Productivity rose sharply in the long run, but the transition caused mass unemployment in traditional industries.",
+       "emoji": "🇬🇧"
+      },
+      "misconception": "Students present market-based policies as universally beneficial without acknowledging costs. Deregulation can harm consumers, labour market flexibility can increase inequality, and privatisation can fail for natural monopolies. Instead write: market-based supply-side policies can raise efficiency and productivity but may create losers, increase inequality and reduce protections that serve important social purposes."
+     },
+     {
+      "id": "macroeconomic-objectives-policies:sub:interventionist-supply-side",
+      "body": [
+       {
+        "text": "**Interventionist supply-side policies** involve the government actively spending or regulating to improve the economy's productive potential. They are based on the view that markets alone underinvest in certain areas due to market failures, particularly in education, infrastructure, healthcare and research.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Key interventionist policies include **investment in education and training** (raising human capital), **infrastructure spending** (transport, broadband, energy networks), **subsidies for R&D** (encouraging innovation), **regional development grants** (reducing geographic inequality), and **industrial strategy** (targeting specific sectors for support).",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Government invests in education, infrastructure or R&D",
+         "Human capital and productivity improve",
+         "LRAS shifts right over time"
+        ],
+        "result": "Higher potential output with positive externalities",
+        "resultType": "good"
+       },
+       {
+        "text": "You should recognise that interventionist policies are expensive and take years to deliver results. There is also a risk of **government failure**: politicians may back the wrong industries, waste money on inefficient projects or create dependency on subsidies. Evaluation requires weighing the market failure being corrected against the risk of government failure.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Interventionist Supply-Side Policies",
+      "recall": {
+       "id": "macroeconomic-objectives-policies:sub:interventionist-supply-side:recall",
+       "type": "fillin",
+       "hints": [
+        "ma____",
+        "op______",
+        "ga_"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "market",
+        "optimal",
+        "gap"
+       ],
+       "template": [
+        "Interventionist policies address ___ failures",
+        "→ Private investment is below the socially ___ level",
+        "→ Government steps in to correct the ___ in provision"
+       ]
+      },
+      "keyIdea": "Interventionist policies use government spending and regulation to fix market failures and build the productive capacity markets alone would not create.",
+      "examMatters": "Examiners expect you to compare market-based and interventionist approaches and evaluate which is more appropriate for a given context. Strong answers consider the type of market failure, the government's track record, the time horizon and the opportunity cost of public spending.",
+      "realExample": {
+       "text": "**Finland** invested heavily in education reform from the 1970s onward, creating one of the world's highest-performing school systems. This interventionist approach raised human capital across the population, underpinning Finland's transformation into a high-productivity, innovation-driven economy.",
+       "emoji": "🇫🇮"
+      },
+      "misconception": "Students dismiss interventionist policies as wasteful government interference. When markets underinvest in education, infrastructure or research due to positive externalities, government intervention can genuinely raise long-run productivity. Instead write: interventionist policies address market failures where private returns are lower than social returns, though they must be evaluated against the risk of government failure."
+     },
+     {
+      "id": "macroeconomic-objectives-policies:sub:evaluating-supply-side",
+      "body": [
+       {
+        "text": "All supply-side policies share a common strength: if successful, they shift LRAS right, increasing potential output without generating inflation. This makes them the only route to permanently higher living standards. However, they also share common weaknesses that you must discuss in evaluation.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The biggest weakness is the **time lag**. Education reforms take a generation to fully feed through. Infrastructure projects take years to build. Even deregulation takes time to change business behaviour. This makes supply-side policies politically difficult because voters want results before the next election.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Supply-side policy implemented",
+         "Long time lag before effects appear",
+         "Benefits and costs emerge gradually"
+        ],
+        "result": "Evaluation depends on time horizon and distribution of gains",
+        "resultType": "neutral"
+       },
+       {
+        "text": "You should also discuss the **distributional effects**. Market-based policies can widen inequality by benefiting capital owners and skilled workers while hurting low-skilled workers and communities dependent on protected industries. Interventionist policies can be more equitable but risk waste and government failure. The best approach depends on context.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Evaluating Supply-Side Policies",
+      "recall": {
+       "id": "macroeconomic-objectives-policies:sub:evaluating-supply-side:recall",
+       "type": "reorder",
+       "prompt": "Order these evaluation criteria for supply-side policies by importance:",
+       "shuffled": [
+        1,
+        3,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Is there a genuine market failure to correct?",
+        "How long before benefits materialise?",
+        "Who gains and who loses?",
+        "Can the government implement it effectively?"
+       ]
+      },
+      "keyIdea": "Supply-side policies raise long-run capacity but work slowly, create winners and losers, and their success depends heavily on implementation quality.",
+      "examMatters": "Top evaluation marks require you to reach a judgement about whether a supply-side policy is appropriate for the given economy. Consider: is there a genuine market failure? Does the government have the capacity to intervene effectively? Are the distributional consequences acceptable? Is the time lag manageable?",
+      "realExample": {
+       "text": "**New Zealand** underwent dramatic supply-side reforms in the 1980s and 1990s, combining deregulation, privatisation and trade liberalisation. Productivity eventually improved, but the transition was painful: unemployment rose sharply, inequality widened and rural communities suffered, sparking debate about whether the costs were justified.",
+       "emoji": "🇳🇿"
+      },
+      "misconception": "Students evaluate supply-side policies by simply listing advantages and disadvantages without reaching a judgement. Examiners want a conclusion that weighs the evidence and depends on context. Instead write: supply-side policies should be evaluated based on the specific market failure or inefficiency they address, the time horizon, the distributional consequences and the quality of implementation."
+     }
+    ],
+    "takeaway": [
+     "Market-based policies reduce intervention; interventionist policies fix market failures.",
+     "Both types shift LRAS right but work slowly and create winners and losers.",
+     "Evaluation must weigh efficiency gains against distributional costs.",
+     "The best approach depends on the specific market failure and government capacity."
+    ],
+    "diagramRef": "supply-side-lras",
+    "quizIndices": [
+     3
+    ],
+    "practiceIndices": [
+     2
+    ]
+   },
+   {
+    "id": "macroeconomic-objectives-policies:block:eae4e2bb",
+    "title": "Policy Conflicts and Trade-Offs",
+    "sections": [
+     {
+      "id": "macroeconomic-objectives-policies:sub:phillips-curve",
+      "body": [
+       {
+        "text": "The **Phillips curve** illustrates the short-run trade-off between unemployment and inflation. When unemployment is low, firms compete for scarce workers by raising wages, which pushes up costs and prices. When unemployment is high, there is less wage pressure and inflation tends to fall.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Government stimulates AD to reduce unemployment",
+         "Labour market tightens",
+         "Wages and prices rise"
+        ],
+        "result": "Lower unemployment achieved but at the cost of higher inflation",
+        "resultType": "neutral"
+       },
+       {
+        "text": "The original Phillips curve, based on UK data from 1861 to 1957, suggested a stable, predictable trade-off. Policymakers believed they could choose a preferred point on the curve: accepting slightly higher inflation in exchange for lower unemployment, or vice versa.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should know that this simple relationship broke down in the 1970s when many countries experienced **stagflation**: rising inflation and rising unemployment simultaneously. This led economists to develop the expectations-augmented Phillips curve and the concept of the long-run Phillips curve.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "The Phillips Curve",
+      "recall": {
+       "id": "macroeconomic-objectives-policies:sub:phillips-curve:recall",
+       "type": "fillin",
+       "hints": [
+        "un___________",
+        "sh___",
+        "ve______"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "unemployment",
+        "short",
+        "vertical"
+       ],
+       "template": [
+        "Phillips curve shows inverse link between ___ and inflation",
+        "→ This trade-off holds in the ___ run",
+        "→ In the long run, the curve becomes ___"
+       ]
+      },
+      "keyIdea": "The Phillips curve shows an inverse relationship between unemployment and inflation in the short run, presenting policymakers with a direct trade-off.",
+      "examMatters": "Phillips curve questions are among the most common in macroeconomics exams. You must be able to draw and explain both the short-run and long-run curves, and explain why the trade-off breaks down over time as expectations adjust to actual inflation.",
+      "realExample": {
+       "text": "**The UK in the 1970s** experienced stagflation with unemployment and inflation both exceeding 10%, contradicting the stable Phillips curve trade-off. The oil price shocks of 1973 and 1979 shifted the short-run Phillips curve outward, showing that supply shocks could worsen both variables simultaneously.",
+       "emoji": "🇬🇧"
+      },
+      "misconception": "Students present the Phillips curve as a permanent, stable trade-off between inflation and unemployment. The trade-off exists only in the short run; in the long run, expectations adjust and the curve shifts. Instead write: the Phillips curve trade-off holds in the short run, but adaptive expectations mean the curve shifts over time, and the long-run Phillips curve is vertical at the natural rate."
+     },
+     {
+      "id": "macroeconomic-objectives-policies:sub:short-run-vs-long-run",
+      "body": [
+       {
+        "text": "The distinction between **short-run** and **long-run** trade-offs is crucial for understanding macroeconomic policy. In the short run, expansionary policy can reduce unemployment below the natural rate, but only by accepting higher inflation. Workers initially do not notice that real wages have not risen as much as nominal wages suggest.",
+        "type": "paragraph"
+       },
+       {
+        "text": "In the **long run**, workers and firms adjust their expectations to the higher inflation rate. Workers demand higher nominal wages to maintain their real purchasing power. This pushes costs up further, and unemployment returns to the natural rate but at a higher level of inflation. The economy has moved to a higher short-run Phillips curve.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Government boosts AD to cut unemployment",
+         "Inflation rises, expectations adjust",
+         "Unemployment returns to natural rate at higher inflation"
+        ],
+        "result": "No long-run trade-off: only temporarily lower unemployment",
+        "resultType": "bad"
+       },
+       {
+        "text": "You should understand that this is why supply-side policies are essential for permanently reducing unemployment. Only by lowering the natural rate through education, training and labour market reforms can the government achieve lower unemployment without triggering an inflationary spiral.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Short-Run vs Long-Run Trade-Offs",
+      "recall": {
+       "id": "macroeconomic-objectives-policies:sub:short-run-vs-long-run:recall",
+       "type": "reorder",
+       "prompt": "Order the long-run adjustment process after expansionary policy:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "AD boosted, unemployment falls below natural rate",
+        "Inflation rises above expectations",
+        "Workers demand higher nominal wages",
+        "Unemployment returns to natural rate at higher inflation"
+       ]
+      },
+      "keyIdea": "In the short run, governments can trade inflation for unemployment, but in the long run, expectations adjust and the economy returns to the natural rate.",
+      "examMatters": "Examiners test whether you understand the difference between short-run and long-run outcomes. Draw both the short-run and long-run Phillips curves and show how the economy moves when expectations adjust. This is one of the most frequently examined topics in macroeconomics.",
+      "realExample": {
+       "text": "**The US Federal Reserve** under Paul Volcker raised interest rates to nearly 20% in the early 1980s to break entrenched inflation expectations. Unemployment rose sharply to 10.8%, but the painful strategy succeeded in reducing inflation from 13% to 3%, resetting expectations and allowing sustained growth through the 1990s.",
+       "emoji": "🇺🇸"
+      },
+      "misconception": "Students argue that governments can permanently reduce unemployment by accepting higher inflation. The expectations-augmented Phillips curve shows this only works temporarily because expectations adjust. Instead write: demand-side policy can temporarily reduce unemployment below the natural rate, but expectations adjustment returns it to the natural rate at a permanently higher inflation level."
+     },
+     {
+      "id": "macroeconomic-objectives-policies:sub:policy-trade-offs-evaluation",
+      "body": [
+       {
+        "text": "The key lesson of macroeconomic policy is that **there are no costless solutions**. Every policy choice involves trade-offs, and the art of good policymaking is choosing the trade-off that causes the least harm given the current circumstances. Stimulating growth risks inflation. Controlling inflation risks unemployment. Improving the current account may require contractionary demand policy.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The appropriate policy response depends on the economy's position. During a deep recession with low inflation, the unemployment-inflation trade-off is relatively painless: expansionary policy boosts output with little inflationary cost. Near full capacity with rising inflation, the trade-off is severe: reducing inflation requires accepting higher unemployment.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Diagnose the economy's position",
+         "Choose appropriate policy tools",
+         "Accept the inevitable trade-offs"
+        ],
+        "result": "Best achievable outcome given constraints",
+        "resultType": "neutral"
+       },
+       {
+        "text": "You should also consider the **credibility** of policymakers. If the central bank is trusted to keep inflation low, it can act more aggressively during recessions because inflation expectations remain anchored. If credibility is weak, even modest stimulus can trigger an inflationary spiral as expectations adjust rapidly.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Evaluating Policy Trade-Offs",
+      "recall": {
+       "id": "macroeconomic-objectives-policies:sub:policy-trade-offs-evaluation:recall",
+       "type": "fillin",
+       "hints": [
+        "cr__________",
+        "ex___________",
+        "mo______"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "credibility",
+        "expectations",
+        "monetary"
+       ],
+       "template": [
+        "Central bank with strong ___ can act more aggressively",
+        "→ Because inflation ___ remain anchored",
+        "→ Allows bolder ___ policy during recessions"
+       ]
+      },
+      "keyIdea": "Effective policy depends on correctly diagnosing the economy's position, choosing the right tools and accepting that every choice involves sacrificing something else.",
+      "examMatters": "The highest marks in macroeconomics require explicit discussion of trade-offs and a justified conclusion. Simply describing a policy is not enough. You must explain what is gained, what is sacrificed, and why the trade-off is acceptable given the economy's current position. This is the single most important skill for top-grade answers.",
+      "realExample": {
+       "text": "**The European Central Bank** faced an acute policy dilemma in 2022 as energy-driven inflation surged while growth weakened. Raising rates to fight inflation risked pushing fragile economies like Italy into recession, but failing to act risked losing credibility and de-anchoring inflation expectations across the entire eurozone.",
+       "emoji": "🇪🇺"
+      },
+      "misconception": "Students recommend policies without discussing trade-offs, as if the correct answer is obvious. Every macroeconomic policy involves sacrificing one objective to pursue another, and examiners expect you to acknowledge this. Instead write: good policy analysis identifies the trade-off involved, evaluates its severity given current economic conditions, and justifies why the chosen priority is appropriate."
+     }
+    ],
+    "takeaway": [
+     "The Phillips curve shows a short-run trade-off between inflation and unemployment.",
+     "In the long run, expectations adjust and the trade-off disappears.",
+     "Supply-side policies are needed to permanently lower the natural rate.",
+     "Every policy choice involves trade-offs; top answers always evaluate them."
+    ],
+    "diagramRef": "phillips-curve",
+    "quizIndices": [
+     4
+    ],
+    "practiceIndices": [
+     3
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "meta": "5 concepts",
+    "title": "Macroeconomic Objectives",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Economic growth</strong> — a sustained increase in real GDP, raising living standards; the UK targets trend growth of around 2–2.5% per year.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Low and stable inflation</strong> — keeping the general price level rising gently (e.g., the Bank of England targets CPI inflation of 2%) to maintain confidence and purchasing power.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Low unemployment</strong> — minimising involuntary joblessness to reduce wasted resources and improve social welfare; the goal is to keep unemployment near the natural rate.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Balance of payments equilibrium</strong> — avoiding a persistently large current account deficit or surplus, which can signal structural imbalances in trade or capital flows.",
+        "type": "def"
+       }
+      ],
+      "title": "THE FOUR OBJECTIVES"
+     },
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "Expansionary policy to boost growth and reduce unemployment often <strong>raises inflation</strong> and worsens the current account (higher imports), creating a direct conflict.",
+        "type": "imp"
+       },
+       {
+        "text": "Contractionary policy to reduce inflation typically <strong>slows growth</strong> and raises unemployment in the short run, forcing painful trade-offs.",
+        "type": "mech"
+       },
+       {
+        "text": "Rapid growth tends to <strong>suck in imports</strong>, worsening the current account deficit, so growth and external balance often conflict.",
+        "type": "imp"
+       },
+       {
+        "text": "These conflicts are explored in detail in Chapter 5 of this section (Phillips curve and policy trade-offs) and underpin evaluation of every policy recommendation in the exam.",
+        "type": "link"
+       }
+      ],
+      "title": "CONFLICTS BETWEEN OBJECTIVES"
+     }
+    ],
+    "keyIdea": "Governments juggle four main targets — growth, low inflation, low unemployment, and external balance — but achieving all simultaneously is the central challenge of macroeconomics, because progress on one often comes at the expense of another.",
+    "takeaway": [
+     "Four key objectives: growth, low inflation, low unemployment, BoP equilibrium.",
+     "Expanding AD for growth often raises inflation and worsens the current account.",
+     "Contracting AD to fight inflation raises unemployment in the short run.",
+     "Always evaluate policies by discussing which objectives conflict."
+    ],
+    "examMatters": "Examiners expect you to discuss conflicts between objectives whenever you recommend a policy. For full marks, state which objective the policy targets, then evaluate by explaining which other objective(s) may be harmed. This shows balance and avoids one-sided analysis.",
+    "misconception": "Students treat objectives as independent goals that can all be achieved simultaneously. Wrong because there are inherent short-run trade-offs, especially between inflation and unemployment. Instead write: policymakers must prioritise objectives and accept that improving one may temporarily worsen another."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Government raises G or cuts T",
+      "Disposable income rises, boosting C",
+      "AD shifts right, multiplier amplifies effect"
+     ],
+     "result": "Real GDP rises (if spare capacity exists)",
+     "resultType": "good"
+    },
+    "meta": "5 concepts",
+    "title": "Fiscal Policy",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Fiscal policy</strong> — the use of government spending (G) and taxation (T) to influence aggregate demand, output, and employment.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Budget deficit</strong> — when government spending exceeds tax revenue (G > T) in a given year; a budget surplus occurs when T > G.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Automatic stabilisers</strong> — tax and welfare systems that adjust automatically to dampen the business cycle: in a recession, tax revenue falls and welfare spending rises without any new legislation.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Expansionary fiscal policy</strong> (higher G or lower T) increases aggregate demand directly through government spending or indirectly by raising household disposable income and thus consumption.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Contractionary fiscal policy</strong> (lower G or higher T) reduces aggregate demand, cooling an overheating economy and reducing inflationary pressure.",
+        "type": "mech"
+       },
+       {
+        "text": "The <strong>multiplier effect</strong> amplifies the impact: a rise in G creates successive rounds of spending, so the final change in national income exceeds the initial policy change.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Automatic stabilisers work <strong>without time lags</strong>: during a downturn, falling incomes automatically reduce tax revenue and trigger higher benefit payments, partially offsetting the fall in AD.",
+        "type": "imp"
+       }
+      ],
+      "title": "HOW FISCAL POLICY WORKS"
+     },
+     {
+      "items": [
+       {
+        "text": "Fiscal policy involves <strong>long time lags</strong>: recognising the problem, deciding on policy, legislating, and implementing all take time, so the stimulus may arrive too late.",
+        "type": "imp"
+       },
+       {
+        "tag": "exam",
+        "text": "Persistent budget deficits increase the <strong>national debt</strong>, raising future interest payments and potentially crowding out private investment as government borrowing pushes up interest rates.",
+        "type": "imp"
+       },
+       {
+        "text": "<strong>Crowding out</strong>: higher government borrowing can raise interest rates, reducing private-sector investment and partially offsetting the expansionary effect of fiscal policy.",
+        "type": "mech"
+       },
+       {
+        "text": "Fiscal policy shifts AD, linking to the AD/AS model in 2.3.2; its effectiveness depends on the multiplier size from 2.3.4 and the output gap from 2.3.5.",
+        "type": "link"
+       }
+      ],
+      "title": "EVALUATION"
+     }
+    ],
+    "keyIdea": "The government's taxing and spending decisions directly inject or withdraw demand from the economy — fiscal policy is powerful but slow, politically constrained, and carries the risk of rising national debt.",
+    "takeaway": [
+     "Fiscal policy uses G and T to shift AD; the multiplier amplifies the effect.",
+     "Automatic stabilisers smooth the cycle without time lags or new legislation.",
+     "Key limitations: time lags, rising national debt, and crowding out.",
+     "Effectiveness depends on spare capacity and the size of the multiplier."
+    ],
+    "examMatters": "Examiners expect you to distinguish between discretionary fiscal policy (deliberate changes) and automatic stabilisers. Always evaluate by discussing time lags, the national debt, crowding out, and the size of the multiplier. Top answers also mention the output gap — expansionary fiscal policy is most effective when there is spare capacity."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Central bank cuts Bank Rate",
+      "Borrowing costs fall, saving less attractive",
+      "C and I rise, exchange rate falls",
+      "AD shifts right after 18–24 month lag"
+     ],
+     "result": "Real GDP rises and unemployment falls (with time lag)",
+     "resultType": "good"
+    },
+    "meta": "5 concepts",
+    "title": "Monetary Policy",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Monetary policy</strong> — decisions by the central bank to influence AD by changing interest rates, the money supply, or through quantitative easing.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Bank Rate</strong> — the interest rate set by the Bank of England's Monetary Policy Committee (MPC); it is the rate at which commercial banks can borrow from the central bank and influences all other rates.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Quantitative easing (QE)</strong> — the central bank creates new money to buy government bonds, increasing bank reserves and aiming to lower long-term interest rates and stimulate lending.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "A <strong>cut in interest rates</strong> reduces the cost of borrowing and the return on saving, encouraging households to consume more and firms to invest more, raising AD.",
+        "type": "mech"
+       },
+       {
+        "text": "Lower rates reduce <strong>mortgage payments</strong>, freeing disposable income for spending, and boost <strong>asset prices</strong> (houses, shares), creating a positive wealth effect on consumption.",
+        "type": "mech"
+       },
+       {
+        "text": "Lower rates tend to weaken the <strong>exchange rate</strong> (less demand for the currency from foreign investors), making exports cheaper and imports dearer, improving net trade.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "The transmission mechanism involves <strong>time lags of 18–24 months</strong>; the MPC must therefore act on forecasts of future inflation, not just current data.",
+        "type": "imp"
+       }
+      ],
+      "title": "THE TRANSMISSION MECHANISM"
+     },
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "Interest rate cuts become <strong>ineffective at the zero lower bound</strong>: when rates are near zero, they cannot be cut further, limiting conventional monetary policy (the liquidity trap).",
+        "type": "imp"
+       },
+       {
+        "text": "QE boosts <strong>asset prices</strong> more than real economic activity, potentially worsening wealth inequality as asset-rich households benefit most.",
+        "type": "mech"
+       },
+       {
+        "text": "Monetary policy affects the economy <strong>asymmetrically</strong>: rate rises reliably slow the economy, but rate cuts may not stimulate if confidence is low and banks are unwilling to lend.",
+        "type": "imp"
+       },
+       {
+        "text": "Monetary policy interacts with fiscal policy: if fiscal expansion raises the deficit, the central bank may raise rates to offset inflationary pressure, partially negating the fiscal stimulus — a key conflict in 2.3.6.",
+        "type": "link"
+       }
+      ],
+      "title": "EVALUATION"
+     }
+    ],
+    "keyIdea": "Central banks steer the economy primarily through interest rates, which ripple through borrowing costs, asset prices, the exchange rate, and expectations — but transmission is indirect, uncertain, and subject to lags.",
+    "takeaway": [
+     "Monetary policy works through interest rates, the exchange rate, and asset prices.",
+     "The transmission mechanism has 18–24 month lags, so the MPC acts on forecasts.",
+     "At the zero lower bound, conventional rate cuts become ineffective (liquidity trap).",
+     "QE is an unconventional tool but may worsen inequality through asset price inflation."
+    ],
+    "examMatters": "Examiners expect you to explain the transmission mechanism step by step, not just say 'lower rates boost AD'. Identify at least three channels: borrowing cost, wealth effect, and exchange rate. Always evaluate with time lags, the zero lower bound, and asymmetric effects.",
+    "misconception": "Students say lower interest rates always boost the economy. Wrong because if confidence is very low, firms and households may not borrow even at low rates (pushing on a string). Instead write: the effectiveness of rate cuts depends on consumer and business confidence, the willingness of banks to lend, and whether rates have already reached the zero lower bound."
+   },
+   {
+    "meta": "5 concepts",
+    "title": "Supply-Side Policies",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Supply-side policies</strong> — government measures designed to increase the productive potential of the economy by improving the efficiency and flexibility of markets, shifting LRAS to the right.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Market-based policies</strong> — policies that reduce government intervention to allow market forces to allocate resources more efficiently, e.g., deregulation, privatisation, tax cuts, trade union reform.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Interventionist policies</strong> — policies where the government actively invests to improve productive capacity, e.g., education and training, infrastructure spending, R&D subsidies.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Deregulation</strong> removes barriers to entry, increasing competition, lowering costs, and forcing firms to innovate and become more efficient.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Education and training</strong> improve human capital, raising labour productivity and enabling workers to adapt to new technologies and industries.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Infrastructure investment</strong> (roads, broadband, ports) reduces transport costs and improves connectivity, boosting productivity across all sectors.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Supply-side improvements increase potential output without raising the price level, delivering <strong>non-inflationary growth</strong> — the ideal outcome on an AD/AS diagram.",
+        "type": "imp"
+       }
+      ],
+      "title": "HOW THEY WORK"
+     },
+     {
+      "items": [
+       {
+        "text": "Supply-side policies have <strong>very long time lags</strong>: education reform takes a generation to raise productivity; infrastructure projects take years to plan and build.",
+        "type": "imp"
+       },
+       {
+        "tag": "exam",
+        "text": "Market-based policies may increase <strong>inequality</strong>: deregulation can worsen working conditions, and tax cuts primarily benefit higher earners.",
+        "type": "imp"
+       },
+       {
+        "text": "Interventionist policies require <strong>government spending</strong>, potentially worsening the budget deficit and raising the question of opportunity cost — money spent on education cannot be spent elsewhere.",
+        "type": "mech"
+       },
+       {
+        "text": "Supply-side policies complement fiscal and monetary policy: the latter manage AD in the short run, while supply-side policies build long-run capacity, connecting to the growth analysis in 2.3.5.",
+        "type": "link"
+       }
+      ],
+      "title": "EVALUATION"
+     }
+    ],
+    "keyIdea": "Supply-side policies aim to shift LRAS right by making markets work better or building productive capacity — they offer non-inflationary growth but take years to deliver results and often involve political trade-offs.",
+    "takeaway": [
+     "Market-based: deregulation, privatisation, tax cuts — reduce government intervention.",
+     "Interventionist: education, infrastructure, R&D — active government investment.",
+     "Both shift LRAS right for non-inflationary growth but with long time lags.",
+     "Evaluate by comparing costs, distributional effects, and speed of impact."
+    ],
+    "examMatters": "Examiners reward candidates who compare market-based and interventionist approaches. State one specific example of each, explain how it shifts LRAS, and evaluate by discussing time lags, costs, and distributional effects. Never write vaguely about 'supply-side policies' without specifying the type.",
+    "misconception": "Students say supply-side policies have no drawbacks because they are non-inflationary. Wrong because they involve significant time lags, budget costs (interventionist), distributional concerns (market-based), and uncertain effectiveness. Instead write: supply-side policies offer non-inflationary potential growth but their benefits are slow to materialise and may not be equally shared."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Expansionary policy reduces unemployment (short-run)",
+      "Wages and prices rise as labour market tightens",
+      "Expectations adjust upward, SRPC shifts up",
+      "Unemployment returns to NRU at higher inflation"
+     ],
+     "result": "No long-run trade-off — only supply-side policies reduce the NRU",
+     "resultType": "bad"
+    },
+    "meta": "5 concepts",
+    "title": "Policy Conflicts and Trade-Offs",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Phillips curve</strong> — an inverse relationship between the rate of unemployment and the rate of inflation; in the short run, lower unemployment tends to be associated with higher inflation.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Short-run Phillips curve (SRPC)</strong> — shows the trade-off between inflation and unemployment at a given level of inflation expectations; the curve shifts when expectations change.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Long-run Phillips curve (LRPC)</strong> — a vertical line at the natural rate of unemployment, implying no long-run trade-off: in the long run, inflation and unemployment are independent.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "In the short run, expansionary policy reduces unemployment by boosting AD, but the tighter labour market pushes up <strong>wages and prices</strong>, moving up along the SRPC.",
+        "type": "mech"
+       },
+       {
+        "text": "In the long run, workers adjust their <strong>inflation expectations</strong> upward; the SRPC shifts up, and unemployment returns to the natural rate at a higher inflation level.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "The <strong>natural rate of unemployment (NRU)</strong> can only be reduced by supply-side policies that improve labour market flexibility, not by demand management.",
+        "type": "imp"
+       },
+       {
+        "text": "The LRPC being vertical at the NRU links directly to the LRAS analysis in 2.3.3: both represent the economy's long-run productive capacity, which demand policy alone cannot shift.",
+        "type": "link"
+       }
+      ],
+      "title": "SHORT-RUN VS LONG-RUN TRADE-OFF"
+     },
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "Some economists argue the Phillips curve has <strong>broken down</strong> in recent decades: globalisation, technology, and anchored expectations have weakened the inflation–unemployment link.",
+        "type": "imp"
+       },
+       {
+        "text": "Policy credibility matters: if the central bank is <strong>trusted</strong> to keep inflation low, expectations remain anchored and the short-run trade-off improves (flatter SRPC).",
+        "type": "mech"
+       },
+       {
+        "text": "Supply-side policies can improve the trade-off by shifting the LRPC left (reducing the NRU), allowing both lower unemployment and lower inflation simultaneously.",
+        "type": "imp"
+       },
+       {
+        "text": "Policy trade-offs are the ultimate evaluation tool: whenever you recommend fiscal, monetary, or supply-side policy, discuss the trade-off with other objectives for balanced analysis.",
+        "type": "link"
+       }
+      ],
+      "title": "EVALUATING TRADE-OFFS"
+     }
+    ],
+    "keyIdea": "The Phillips curve captures the central macro dilemma: reducing unemployment may raise inflation and vice versa — policymakers cannot simply maximise all objectives, they must choose and manage trade-offs.",
+    "takeaway": [
+     "The SRPC shows a short-run trade-off: lower unemployment at the cost of higher inflation.",
+     "The LRPC is vertical at the NRU: no long-run trade-off between inflation and unemployment.",
+     "Supply-side policies can shift the LRPC left, permanently reducing the NRU.",
+     "Always use trade-offs as evaluation when recommending any macroeconomic policy."
+    ],
+    "examMatters": "Examiners expect you to draw and label both the SRPC and LRPC, then use the diagram to explain why demand-side policy cannot permanently reduce unemployment below the natural rate. For top marks, evaluate whether the Phillips curve still holds, and discuss how supply-side policies can shift the LRPC leftward.",
+    "misconception": "Students say the Phillips curve means we must choose between inflation and unemployment permanently. Wrong because the long-run Phillips curve is vertical: in the long run there is no trade-off, and demand policy only changes the inflation rate. Instead write: the short-run trade-off exists but fades as expectations adjust; only supply-side policies can permanently reduce the natural rate of unemployment."
+   }
+  ],
+  "section_quiz": [
+   {
+    "id": "macroeconomic-objectives-policies:quiz:ce0fb08a",
+    "options": [
+     "There is a positive relationship between inflation and unemployment",
+     "There is no relationship between inflation and unemployment",
+     "There is an inverse relationship between inflation and unemployment",
+     "Unemployment is always equal to the natural rate"
+    ],
+    "question": "The short-run Phillips Curve shows that:",
+    "explanation": "The SRPC shows an inverse (negative) relationship: as unemployment falls, inflation tends to rise, and vice versa. This creates a short-run policy trade-off. Option A describes a positive relationship (wrong direction). Option B describes the long-run situation. Option D describes only the long-run equilibrium on the LRPC.",
+    "correctIndex": 2
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:01e2542c",
+    "options": [
+     "A government decision to build a new motorway",
+     "The central bank cutting interest rates",
+     "Progressive income tax reducing spending power during a boom",
+     "The government announcing a temporary reduction in VAT"
+    ],
+    "question": "Which of the following is an example of an automatic stabiliser?",
+    "explanation": "Progressive income tax is an automatic stabiliser: as incomes rise in a boom, people move into higher tax bands automatically, reducing their disposable income and dampening AD without any deliberate policy action. Option A is discretionary fiscal policy. Option B is monetary policy. Option D is discretionary fiscal policy (a deliberate temporary change).",
+    "correctIndex": 2
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:3ff51d3f",
+    "options": [
+     "The central bank reduces interest rates to stimulate the economy",
+     "The government increases borrowing, pushing up interest rates and reducing private investment",
+     "Supply-side policies increase the productive capacity of the economy",
+     "Automatic stabilisers reduce the budget deficit during an economic boom"
+    ],
+    "question": "Crowding out is most likely to occur when:",
+    "explanation": "Crowding out occurs when higher government borrowing increases demand for loanable funds, raising interest rates. This discourages (crowds out) private sector investment and consumption, reducing the effectiveness of fiscal policy. Option A describes expansionary monetary policy. Option C describes supply-side improvements. Option D describes automatic stabilisers improving the fiscal position.",
+    "correctIndex": 1
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:12929ac7",
+    "options": [
+     "A leftward shift in aggregate demand due to lower saving",
+     "Higher borrowing costs, lower investment, and reduced aggregate demand",
+     "A rightward shift in LRAS through increased productive capacity",
+     "Lower borrowing costs, higher consumption and investment, and a rightward shift in AD"
+    ],
+    "question": "The monetary policy transmission mechanism shows that a cut in interest rates leads to:",
+    "explanation": "A rate cut reduces borrowing costs, encouraging consumption (C) and investment (I). It also pushes up asset prices (wealth effect) and may cause depreciation (boosting net exports). Combined, these shift AD to the right. Option A is contradictory. Option B describes a rate rise, not a cut. Option C confuses monetary policy with supply-side effects.",
+    "correctIndex": 3
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:a8557d3e",
+    "options": [
+     "Inflation is significantly above the target rate",
+     "Interest rates are at or near the zero lower bound and conventional monetary policy is exhausted",
+     "The government wishes to reduce the national debt",
+     "The economy is experiencing a positive output gap"
+    ],
+    "question": "Quantitative easing is typically used when:",
+    "explanation": "QE is an unconventional tool used when interest rates cannot be cut further (zero lower bound). The central bank buys bonds with newly created money to boost the money supply and stimulate spending. Option A would call for tightening, not QE. Option C misunderstands QE (it involves buying bonds, not reducing debt). Option D describes overheating, where restraint is needed.",
+    "correctIndex": 1
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:7e5b7439",
+    "options": [
+     "Reducing corporation tax rates",
+     "Deregulating the telecommunications industry",
+     "Government investment in education and vocational training",
+     "Privatising state-owned railway companies"
+    ],
+    "question": "Which supply-side policy is classified as interventionist rather than market-based?",
+    "explanation": "Government investment in education and training is interventionist because it involves active government spending to improve human capital. Options A (tax cuts), B (deregulation), and D (privatisation) are all market-based policies that aim to improve efficiency by reducing government involvement and increasing market forces.",
+    "correctIndex": 2
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:f8a9b865",
+    "options": [
+     "They always cause inflation",
+     "They have very long time lags before their effects are fully realised",
+     "They cannot increase the productive capacity of the economy",
+     "They are more likely to cause crowding out"
+    ],
+    "question": "A key weakness of supply-side policies compared to demand-side policies is that:",
+    "explanation": "Supply-side policies (especially education, training, infrastructure) take years or even decades to fully affect productivity and capacity. This is a major weakness compared to demand-side policies which can affect AD more quickly. Option A is wrong - supply-side policies reduce inflationary pressure. Option C is the opposite of what they do. Option D applies to fiscal, not supply-side, policy.",
+    "correctIndex": 1
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:5e095ff7",
+    "options": [
+     "Contractionary fiscal policy to reduce both inflation and unemployment",
+     "Expansionary monetary policy to boost demand and reduce inflation",
+     "Supply-side policies to shift LRAS right and the Phillips Curve left",
+     "Increasing government spending while raising interest rates"
+    ],
+    "question": "If the government simultaneously pursues low inflation and low unemployment, which policy approach is most appropriate?",
+    "explanation": "Supply-side policies shift LRAS right, allowing higher output without inflation. They also shift the Phillips Curve left, reducing the natural rate of unemployment, meaning lower unemployment is achievable without higher inflation. Option A is wrong - contractionary policy reduces inflation but increases unemployment. Option B would reduce unemployment but increase inflation. Option D creates conflicting demand-side signals.",
+    "correctIndex": 2
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:e743b380",
+    "options": [
+     "Economic growth vs balance of payments equilibrium",
+     "Low inflation vs low unemployment",
+     "Economic growth vs environmental sustainability",
+     "Budget balance vs income equality"
+    ],
+    "question": "Which conflict between macroeconomic objectives is illustrated by the Phillips Curve?",
+    "explanation": "The Phillips Curve specifically illustrates the short-run trade-off between inflation and unemployment: reducing one tends to worsen the other through demand-side policy. Option A is a real conflict but not shown by the Phillips Curve. Options C and D are real conflicts but relate to different economic issues entirely.",
+    "correctIndex": 1
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:2d0cae74",
+    "options": [
+     "A fall in the national debt and lower interest payments",
+     "Rising national debt and potentially higher future taxes or spending cuts to service it",
+     "An automatic reduction in inflation through lower aggregate demand",
+     "Increased confidence from international investors"
+    ],
+    "question": "A government running a persistent budget deficit is most likely to face which long-run consequence?",
+    "explanation": "Persistent budget deficits mean the government continually borrows more than it receives, causing national debt to accumulate. Servicing this debt requires interest payments, which may eventually require higher taxes or spending cuts. Option A is the opposite of what happens. Option C is unlikely - deficits are expansionary, not deflationary. Option D is unlikely - persistent deficits typically reduce investor confidence.",
+    "correctIndex": 1
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:5d9d9bfd",
+    "options": [
+     "Increasing interest rates and reducing the money supply",
+     "Increasing government spending and/or cutting taxes to boost aggregate demand",
+     "Reducing government spending to balance the budget",
+     "Increasing the exchange rate to reduce import prices"
+    ],
+    "question": "Expansionary fiscal policy involves:",
+    "explanation": "Expansionary fiscal policy aims to increase AD by raising government spending (G) and/or cutting taxes (increasing disposable income and thus C). It is used to stimulate growth and reduce unemployment.",
+    "correctIndex": 1
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:0be813df",
+    "options": [
+     "Changes in government spending",
+     "Changes in the Bank Rate (base interest rate) set by the Bank of England",
+     "Changes in income tax rates",
+     "Changes in the exchange rate"
+    ],
+    "question": "The main instrument of monetary policy in the UK is:",
+    "explanation": "The Bank of England's Monetary Policy Committee sets the Bank Rate to achieve the 2% inflation target. Changes in interest rates affect borrowing, saving, spending, and investment, influencing AD and inflation.",
+    "correctIndex": 1
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:00422207",
+    "options": [
+     "Increase aggregate demand in the short run",
+     "Increase the productive capacity of the economy and shift LRAS to the right",
+     "Reduce government spending to balance the budget",
+     "Increase the exchange rate to reduce import costs"
+    ],
+    "question": "Supply-side policies aim to:",
+    "explanation": "Supply-side policies aim to increase the quantity and quality of factors of production, improving productivity and shifting LRAS right. Examples include education investment, deregulation, and labour market reforms.",
+    "correctIndex": 1
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:0d1ebd4c",
+    "options": [
+     "Economic growth and the balance of payments",
+     "Inflation and unemployment",
+     "Interest rates and exchange rates",
+     "Government spending and tax revenue"
+    ],
+    "question": "The Phillips Curve suggests a trade-off between:",
+    "explanation": "The original Phillips Curve showed an inverse relationship between unemployment and wage inflation (and by extension, price inflation). Lower unemployment tends to be associated with higher inflation, and vice versa.",
+    "correctIndex": 1
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:e4527dce",
+    "options": [
+     "Raising interest rates to reduce inflation",
+     "The central bank creating money to buy financial assets (e.g., government bonds) to increase the money supply",
+     "The government printing money to finance public spending",
+     "Reducing the amount of money in circulation"
+    ],
+    "question": "Quantitative easing (QE) is a monetary policy tool that involves:",
+    "explanation": "QE involves the central bank electronically creating money to purchase assets (mainly government bonds). This increases bank reserves, lowers long-term interest rates, and aims to boost lending, spending, and AD when rates are already near zero.",
+    "correctIndex": 1
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:9ae8eb2a",
+    "options": [
+     "Also reduce inflation",
+     "Lead to higher inflation (demand-pull) if the economy is near full capacity",
+     "Always improve the current account balance",
+     "Have no effect on the price level"
+    ],
+    "question": "A potential conflict between macroeconomic objectives is that policies to reduce unemployment may:",
+    "explanation": "Expansionary policies to reduce unemployment increase AD, which may cause demand-pull inflation if the economy is already near capacity. This illustrates the inflation-unemployment trade-off shown by the Phillips Curve.",
+    "correctIndex": 1
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:56613ab7",
+    "options": [
+     "Increasing government spending on healthcare",
+     "Reducing corporation tax to incentivise business investment",
+     "Imposing a national minimum wage",
+     "Increasing welfare benefits"
+    ],
+    "question": "Which of the following is an example of a market-based supply-side policy?",
+    "explanation": "Market-based supply-side policies work through the market mechanism. Cutting corporation tax increases post-tax profits, incentivising firms to invest more, expand capacity, and improve productivity.",
+    "correctIndex": 1
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:5fcf3914",
+    "options": [
+     "Increasing aggregate supply",
+     "Reducing aggregate demand through lower consumption and investment spending",
+     "Increasing government spending",
+     "Encouraging a depreciation of the exchange rate"
+    ],
+    "question": "A contractionary monetary policy (higher interest rates) reduces inflation by:",
+    "explanation": "Higher interest rates increase borrowing costs (reducing C and I), increase the return on saving (reducing C), and may appreciate the exchange rate (reducing net exports). All these reduce AD, dampening inflationary pressure.",
+    "correctIndex": 1
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:cb429ba7",
+    "options": [
+     "Total government spending minus total tax revenue when spending exceeds revenue",
+     "Total tax revenue minus total government spending",
+     "The total accumulated national debt",
+     "Government spending on public services only"
+    ],
+    "question": "The government's budget deficit is defined as:",
+    "explanation": "A budget deficit occurs when government expenditure exceeds tax revenue in a given year. The deficit must be financed by borrowing, which adds to the national debt.",
+    "correctIndex": 0
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:0b8bbbfe",
+    "options": [
+     "Downward sloping, showing a permanent trade-off between inflation and unemployment",
+     "Vertical at the natural rate of unemployment, meaning there is no long-run trade-off",
+     "Horizontal, showing that inflation is constant regardless of unemployment",
+     "Upward sloping, showing inflation and unemployment rise together"
+    ],
+    "question": "The long-run Phillips Curve (LRPC) in the monetarist/Classical view is:",
+    "explanation": "Monetarists argue the LRPC is vertical at the natural rate of unemployment (NAIRU). In the long run, there is no trade-off: expansionary policy only causes higher inflation without permanently reducing unemployment below the natural rate.",
+    "correctIndex": 1
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:43700e72",
+    "options": [
+     "Cutting interest rates",
+     "Investment in education and retraining programmes",
+     "Increasing government spending on defence",
+     "Reducing VAT on luxury goods"
+    ],
+    "question": "Which supply-side policy is most likely to reduce structural unemployment?",
+    "explanation": "Structural unemployment results from skills mismatches. Education and retraining help workers acquire skills demanded by growing industries, reducing the mismatch and lowering structural unemployment.",
+    "correctIndex": 1
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:6511d87e",
+    "options": [
+     "Requires parliamentary approval before it can take effect",
+     "Automatically dampens fluctuations in the business cycle without deliberate policy changes",
+     "Is implemented by the central bank to control inflation",
+     "Only operates during periods of economic boom"
+    ],
+    "question": "An automatic stabiliser is a mechanism that:",
+    "explanation": "Automatic stabilisers (e.g., progressive taxation, unemployment benefits) automatically offset economic fluctuations. In recessions, tax receipts fall and benefit spending rises, boosting AD without new policy decisions.",
+    "correctIndex": 1
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:24c93fd9",
+    "options": [
+     "Increasing government regulation of industries",
+     "Removing or reducing regulations to lower business costs and encourage competition",
+     "Nationalising key industries",
+     "Increasing tariffs on imported goods"
+    ],
+    "question": "Deregulation as a supply-side policy involves:",
+    "explanation": "Deregulation reduces bureaucratic barriers and compliance costs for businesses, encouraging new entrants, increasing competition, and improving efficiency. This can shift LRAS to the right by boosting productivity.",
+    "correctIndex": 1
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:5af396e1",
+    "options": [
+     "Expansionary fiscal policy to boost domestic demand",
+     "Expenditure-switching policies such as currency depreciation to make exports cheaper",
+     "Cutting interest rates to encourage more consumer spending",
+     "Increasing government spending on imports"
+    ],
+    "question": "A country with a persistent current account deficit might use which policy to improve its trade balance?",
+    "explanation": "Expenditure-switching policies redirect spending from imports to domestically produced goods. Currency depreciation makes exports cheaper and imports more expensive, improving competitiveness and the trade balance.",
+    "correctIndex": 1
+   },
+   {
+    "id": "macroeconomic-objectives-policies:quiz:7f5b1f52",
+    "options": [
+     "It takes effect immediately with no time lags",
+     "Time lags in implementation and effect may mean the policy is poorly timed relative to the business cycle",
+     "It has no impact on aggregate demand",
+     "It cannot be used during a recession"
+    ],
+    "question": "A limitation of using fiscal policy to manage the economy is:",
+    "explanation": "Fiscal policy suffers from recognition, decision, and implementation lags. By the time a policy is enacted and takes effect, economic conditions may have changed, potentially making the intervention pro-cyclical rather than counter-cyclical.",
+    "correctIndex": 1
+   }
+  ],
+  "section_practice": [
+   {
+    "id": "macroeconomic-objectives-policies:practice:90c3f4d2",
+    "marks": 4,
+    "command": "Define",
+    "guidance": "Fiscal policy refers to the use of government spending and taxation to influence the level of aggregate demand and economic activity (1 mark). Expansionary fiscal policy involves increasing government spending or cutting taxes to boost AD (1 mark). Contractionary fiscal policy involves reducing spending or raising taxes to reduce AD (1 mark). It is set by the government, typically announced in the annual Budget (1 mark).",
+    "question": "Define the term 'fiscal policy'. (4 marks)"
+   },
+   {
+    "id": "macroeconomic-objectives-policies:practice:f874db0a",
+    "marks": 6,
+    "command": "Explain",
+    "guidance": "Conflict 1: Economic growth vs low inflation (1 mark) — policies that stimulate aggregate demand to promote growth, such as lower interest rates or higher government spending, can cause demand-pull inflation if the economy approaches full capacity (1 mark). The government must balance supporting growth without overheating the economy (1 mark).\n\nConflict 2: Low unemployment vs balance of payments stability (1 mark) — reducing unemployment through demand stimulus increases consumer incomes and spending (1 mark), which may suck in imports and worsen the current account deficit (1 mark).",
+    "question": "Explain two potential conflicts between macroeconomic policy objectives. (6 marks)"
+   },
+   {
+    "id": "macroeconomic-objectives-policies:practice:1d5a5728",
+    "marks": 10,
+    "command": "Assess",
+    "guidance": "Define supply-side policies as measures to increase the productive capacity and efficiency of the economy (2 marks). Effective: education and training programmes reduce structural unemployment by equipping workers with skills matched to employer needs (2 marks); labour market reforms — e.g. reducing trade union power or lowering benefits — incentivise job-seeking and flexibility (2 marks). Limitations: take a long time to have effect — retraining programmes may take years before reducing unemployment significantly (1 mark); do not address cyclical unemployment caused by insufficient aggregate demand (1 mark); may increase inequality — reducing benefits harms the poorest even if it reduces headline unemployment (1 mark). Judgement: effective for structural and frictional unemployment but must be complemented by demand-side measures during recessions (1 mark).",
+    "question": "Assess the effectiveness of supply-side policies in reducing unemployment in the UK. (10 marks)"
+   },
+   {
+    "id": "macroeconomic-objectives-policies:practice:3bb4753e",
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Define monetary policy as the use of interest rates, money supply and quantitative easing by the Bank of England to influence economic activity (2 marks).\n\nFor — monetary policy is effective: Independent central bank ensures credibility and avoids political interference (2 marks); interest rate changes have wide-reaching effects on consumption, investment, exchange rates and asset prices (3 marks); flexible — rates can be adjusted monthly in response to changing conditions (1 mark); inflation targeting has kept UK inflation relatively stable since 1997 (2 marks).\n\nLimitations: Liquidity trap — at very low rates, further cuts have minimal impact on spending (2 marks); time lags of 18-24 months reduce precision and responsiveness (1 mark); uneven impact — rate rises hit mortgage holders and small businesses harder than cash-rich corporations (2 marks).\n\nAlternative tools: Fiscal policy — can target specific sectors or regions and is more effective at reaching low-income households through spending programmes (2 marks); supply-side policies — address the root causes of inflation and unemployment through structural reform (1 mark).\n\nEvaluation: Monetary policy is the primary tool for demand management and inflation control, but it is not the most effective for all situations (1 mark). A combination of monetary, fiscal and supply-side policies is needed — the optimal mix depends on the nature of the economic challenge facing the UK at any given time (1 mark).",
+    "question": "Evaluate the extent to which monetary policy is the most effective tool for managing the UK economy. (20 marks)"
+   },
+   {
+    "id": "macroeconomic-objectives-policies:practice:67f32048",
+    "marks": 4,
+    "command": "Outline",
+    "guidance": "Policy 1: Investment in education and training — improves human capital by raising the skills and productivity of the workforce (1 mark), enabling the economy to produce more output with the same number of workers (1 mark).\n\nPolicy 2: Deregulation — reducing bureaucratic barriers to business such as planning restrictions or licensing requirements (1 mark), which encourages new firms to enter markets and existing firms to expand, increasing potential output (1 mark).",
+    "question": "Outline two supply-side policies a government could use to increase the productive capacity of the economy. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "id": "macroeconomic-objectives-policies:card:30fb2596",
+    "back": "<strong>Economic growth</strong>, <strong>low unemployment</strong>, <strong>low and stable inflation</strong> (typically 2%), <strong>balance of payments stability</strong>, and increasingly <strong>environmental sustainability</strong>.",
+    "front": "What are the main macroeconomic objectives?"
+   },
+   {
+    "id": "macroeconomic-objectives-policies:card:b7d3ef78",
+    "back": "The use of <strong>government spending and taxation</strong> to influence the economy. Expansionary fiscal policy = higher spending or lower taxes. Contractionary = lower spending or higher taxes.",
+    "front": "What is fiscal policy?"
+   },
+   {
+    "id": "macroeconomic-objectives-policies:card:aaefa604",
+    "back": "The use of <strong>interest rates and money supply</strong> by the central bank to influence the economy. Lower rates → more borrowing and spending → higher AD.",
+    "front": "What is monetary policy?"
+   },
+   {
+    "id": "macroeconomic-objectives-policies:card:7295f73a",
+    "back": "Policies aimed at increasing the economy's <strong>productive capacity</strong> (shifting LRAS right). E.g., education, training, deregulation, infrastructure investment, tax incentives for R&D.",
+    "front": "What is supply-side policy?"
+   },
+   {
+    "id": "macroeconomic-objectives-policies:card:8920a6bd",
+    "back": "<strong>Increasing government spending</strong> or <strong>cutting taxes</strong> to boost AD. Used during recessions to stimulate demand and reduce unemployment. Leads to a larger budget deficit.",
+    "front": "What is expansionary fiscal policy?"
+   },
+   {
+    "id": "macroeconomic-objectives-policies:card:77563c18",
+    "back": "<strong>Cutting government spending</strong> or <strong>raising taxes</strong> to reduce AD. Used to cool an overheating economy and reduce inflation. Leads to a smaller budget deficit or surplus.",
+    "front": "What is contractionary fiscal policy?"
+   },
+   {
+    "id": "macroeconomic-objectives-policies:card:7c8b53ca",
+    "back": "<strong>2% CPI inflation</strong>. The Monetary Policy Committee (MPC) sets the base interest rate to achieve this target. If inflation is above 2%, rates rise; if below, rates may fall.",
+    "front": "What is the Bank of England's inflation target?"
+   },
+   {
+    "id": "macroeconomic-objectives-policies:card:65ae12ac",
+    "back": "Lower cost of borrowing → more <strong>consumer spending and investment</strong>. Lower mortgage payments → more disposable income. Weaker exchange rate → more competitive exports. AD shifts right.",
+    "front": "How do lower interest rates affect the economy?"
+   },
+   {
+    "id": "macroeconomic-objectives-policies:card:60ad5f45",
+    "back": "The central bank <strong>creates new money electronically</strong> to buy government bonds. This lowers long-term interest rates, increases the money supply, and encourages lending and spending.",
+    "front": "What is quantitative easing (QE)?"
+   },
+   {
+    "id": "macroeconomic-objectives-policies:card:866a8e51",
+    "back": "<strong>Investment in education</strong> (improves human capital), <strong>deregulation</strong> (reduces business costs), and <strong>infrastructure spending</strong> (improves efficiency). All aim to shift LRAS right.",
+    "front": "Name three supply-side policies."
+   },
+   {
+    "id": "macroeconomic-objectives-policies:card:dbd83fa6",
+    "back": "Shown by the <strong>Phillips Curve</strong>. Reducing unemployment (via expansionary policy) may cause inflation. Reducing inflation (via contractionary policy) may cause unemployment. Short-run trade-off.",
+    "front": "What is the trade-off between inflation and unemployment?"
+   },
+   {
+    "id": "macroeconomic-objectives-policies:card:3105a5a6",
+    "back": "When government <strong>spending exceeds tax revenue</strong> in a financial year. Must be financed by borrowing (issuing government bonds), adding to the national debt.",
+    "front": "What is a budget deficit?"
+   },
+   {
+    "id": "macroeconomic-objectives-policies:card:6d5a4c78",
+    "back": "The <strong>total accumulated government borrowing</strong> over time. The sum of all past budget deficits minus surpluses. Measured as a percentage of GDP.",
+    "front": "What is the national debt?"
+   },
+   {
+    "id": "macroeconomic-objectives-policies:card:edaf6486",
+    "back": "<strong>Demand-side</strong> (fiscal, monetary) affect AD — quick impact but may cause inflation. <strong>Supply-side</strong> policies affect LRAS — slower but increase capacity without inflation.",
+    "front": "What is the difference between demand-side and supply-side policies?"
+   },
+   {
+    "id": "macroeconomic-objectives-policies:card:4837e962",
+    "back": "Fiscal policy has <strong>recognition, decision, and implementation lags</strong>. It takes time to identify the problem, agree on policy, and for spending/tax changes to affect the economy.",
+    "front": "What are the time lags of fiscal policy?"
+   },
+   {
+    "id": "macroeconomic-objectives-policies:card:07759e6e",
+    "back": "A policy of <strong>reducing government budget deficits</strong> through spending cuts and tax rises. Aims to reduce national debt but may slow growth and increase unemployment.",
+    "front": "What is austerity?"
+   },
+   {
+    "id": "macroeconomic-objectives-policies:card:836d9157",
+    "back": "Policies like <strong>deregulation</strong> or <strong>cutting corporation tax</strong> may benefit firms and high earners more than workers. Flexible labour markets may mean lower wages and less job security.",
+    "front": "Why might supply-side policies conflict with equity?"
+   },
+   {
+    "id": "macroeconomic-objectives-policies:card:a5f5a9b4",
+    "back": "The chain from <strong>interest rate change → borrowing costs → spending and investment → AD → output and prices</strong>. Takes 18–24 months for the full effect to be felt.",
+    "front": "What is the transmission mechanism of monetary policy?"
+   }
+  ],
+  "section_diagrams": [
+   {
+    "id": "macroeconomic-objectives-policies:diagram:7f1bb3e4",
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <line x1=\"60\" y1=\"300\" x2=\"460\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"60\" y1=\"300\" x2=\"60\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"260\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">Unemployment Rate (%)</text>\n  <text x=\"22\" y=\"165\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90,22,165)\">Inflation Rate (%)</text>\n  <line x1=\"250\" y1=\"40\" x2=\"250\" y2=\"300\" stroke=\"#f59e0b\" stroke-width=\"2.5\"/>\n  <text x=\"250\" y=\"35\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"600\">LRPC</text>\n  <text x=\"250\" y=\"315\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"10\">NRU</text>\n  <path d=\"M100 80 Q150 120 200 180 Q260 260 420 280\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"425\" y=\"275\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">SRPC</text>\n  <circle cx=\"160\" cy=\"135\" r=\"5\" fill=\"#ef4444\"/>\n  <text x=\"145\" y=\"125\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">A</text>\n  <text x=\"135\" y=\"112\" fill=\"#e8ecf5\" font-size=\"9\">Low unemployment</text>\n  <text x=\"135\" y=\"100\" fill=\"#e8ecf5\" font-size=\"9\">High inflation</text>\n  <circle cx=\"340\" cy=\"265\" r=\"5\" fill=\"#059669\"/>\n  <text x=\"355\" y=\"258\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\">B</text>\n  <text x=\"355\" y=\"248\" fill=\"#e8ecf5\" font-size=\"9\">High unemployment</text>\n  <text x=\"355\" y=\"236\" fill=\"#e8ecf5\" font-size=\"9\">Low inflation</text>\n  <path d=\"M165 140 Q250 220 335 260\" fill=\"none\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"4,3\" marker-end=\"url(#apc1)\"/>\n  <text x=\"280\" y=\"195\" fill=\"#e8ecf5\" font-size=\"9\">Trade-off</text>\n  <text x=\"100\" y=\"60\" fill=\"#e8ecf5\" font-size=\"10\">Short-run: inverse</text>\n  <text x=\"100\" y=\"75\" fill=\"#e8ecf5\" font-size=\"10\">relationship (trade-off)</text>\n  <text x=\"320\" y=\"60\" fill=\"#f59e0b\" font-size=\"10\">Long-run: vertical at</text>\n  <text x=\"320\" y=\"75\" fill=\"#f59e0b\" font-size=\"10\">natural rate (no trade-off)</text>\n  <defs>\n    <marker id=\"apc1\" markerWidth=\"7\" markerHeight=\"5\" refX=\"7\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L7,2.5 L0,5\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n</svg>",
+    "title": "The Phillips Curve",
+    "checklist": [
+     "Draw SRPC as a downward-sloping curve showing inverse relationship",
+     "Draw LRPC as a vertical line at the natural rate of unemployment",
+     "Label axes: inflation rate (%) on y-axis, unemployment rate (%) on x-axis",
+     "Explain the short-run trade-off between inflation and unemployment",
+     "Show that supply-side policies can shift SRPC and LRPC to the left",
+     "Note that in the long run there is no trade-off (LRPC is vertical)"
+    ],
+    "scenarios": [
+     {
+      "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <line x1=\"60\" y1=\"300\" x2=\"460\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"60\" y1=\"300\" x2=\"60\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"260\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">Unemployment Rate (%)</text>\n  <text x=\"22\" y=\"165\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90,22,165)\">Inflation Rate (%)</text>\n  <path d=\"M100 70 Q150 110 200 170 Q260 250 420 275\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"425\" y=\"270\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">SRPC</text>\n  <circle cx=\"150\" cy=\"110\" r=\"5\" fill=\"#ef4444\"/>\n  <text x=\"165\" y=\"105\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">A</text>\n  <line x1=\"150\" y1=\"115\" x2=\"150\" y2=\"300\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"60\" y1=\"110\" x2=\"150\" y2=\"110\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <text x=\"150\" y=\"315\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\">3%</text>\n  <text x=\"48\" y=\"114\" text-anchor=\"end\" fill=\"#ef4444\" font-size=\"9\">5%</text>\n  <circle cx=\"310\" cy=\"240\" r=\"5\" fill=\"#059669\"/>\n  <text x=\"325\" y=\"235\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\">B</text>\n  <line x1=\"310\" y1=\"245\" x2=\"310\" y2=\"300\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"60\" y1=\"240\" x2=\"310\" y2=\"240\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <text x=\"310\" y=\"315\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\">7%</text>\n  <text x=\"48\" y=\"244\" text-anchor=\"end\" fill=\"#059669\" font-size=\"9\">1%</text>\n  <text x=\"260\" y=\"55\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\">Short-run trade-off</text>\n  <text x=\"260\" y=\"75\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">Point A: expansionary policy reduces</text>\n  <text x=\"260\" y=\"90\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">unemployment to 3% but inflation rises to 5%</text>\n  <text x=\"260\" y=\"170\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">Point B: contractionary policy reduces</text>\n  <text x=\"260\" y=\"185\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">inflation to 1% but unemployment rises to 7%</text>\n</svg>",
+      "label": "Short-Run Trade-Off"
+     },
+     {
+      "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <line x1=\"60\" y1=\"300\" x2=\"460\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"60\" y1=\"300\" x2=\"60\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"260\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">Unemployment Rate (%)</text>\n  <text x=\"22\" y=\"165\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90,22,165)\">Inflation Rate (%)</text>\n  <line x1=\"280\" y1=\"40\" x2=\"280\" y2=\"300\" stroke=\"#ef4444\" stroke-width=\"2\"/>\n  <text x=\"280\" y=\"35\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"10\">LRPC₀</text>\n  <line x1=\"200\" y1=\"40\" x2=\"200\" y2=\"300\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"200\" y=\"35\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\">LRPC₁</text>\n  <path d=\"M130 75 Q180 120 230 180 Q290 255 420 278\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/>\n  <text x=\"425\" y=\"273\" fill=\"#ef4444\" font-size=\"10\">SRPC₀</text>\n  <path d=\"M80 85 Q120 130 160 190 Q215 265 350 286\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"355\" y=\"282\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\">SRPC₁</text>\n  <path d=\"M290 150 L210 150\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\" marker-end=\"url(#apss1)\"/>\n  <path d=\"M330 230 L260 240\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\" marker-end=\"url(#apss2)\"/>\n  <text x=\"330\" y=\"100\" fill=\"#f59e0b\" font-size=\"10\" font-weight=\"600\">Supply-side policies</text>\n  <text x=\"330\" y=\"115\" fill=\"#f59e0b\" font-size=\"10\">shift both curves left:</text>\n  <text x=\"330\" y=\"130\" fill=\"#e8ecf5\" font-size=\"10\">• Lower natural rate</text>\n  <text x=\"330\" y=\"145\" fill=\"#e8ecf5\" font-size=\"10\">• Lower inflation at each</text>\n  <text x=\"330\" y=\"160\" fill=\"#e8ecf5\" font-size=\"10\">  level of unemployment</text>\n  <text x=\"280\" y=\"315\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\">NRU₀</text>\n  <text x=\"200\" y=\"315\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\">NRU₁</text>\n  <defs>\n    <marker id=\"apss1\" markerWidth=\"7\" markerHeight=\"5\" refX=\"7\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L7,2.5 L0,5\" fill=\"#f59e0b\"/></marker>\n    <marker id=\"apss2\" markerWidth=\"7\" markerHeight=\"5\" refX=\"7\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L7,2.5 L0,5\" fill=\"#f59e0b\"/></marker>\n  </defs>\n</svg>",
+      "label": "Supply-Side Shift"
+     }
+    ],
+    "description": "The short-run and long-run Phillips Curves showing the trade-off between unemployment and inflation, and how supply-side improvements can shift the curve."
+   },
+   {
+    "id": "macroeconomic-objectives-policies:diagram:22734c6c",
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <line x1=\"50\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"50\" y1=\"300\" x2=\"50\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"260\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">Real GDP (Y)</text>\n  <text x=\"20\" y=\"165\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90,20,165)\">Price Level (PL)</text>\n  <line x1=\"350\" y1=\"40\" x2=\"350\" y2=\"300\" stroke=\"#f59e0b\" stroke-width=\"2.5\"/>\n  <text x=\"350\" y=\"35\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"600\">LRAS</text>\n  <path d=\"M80 265 Q220 235 320 160 Q370 120 400 55\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"405\" y=\"50\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">SRAS</text>\n  <path d=\"M100 70 Q200 190 370 275\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/>\n  <text x=\"375\" y=\"273\" fill=\"#ef4444\" font-size=\"10\">AD₀</text>\n  <path d=\"M160 60 Q260 175 430 265\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"435\" y=\"260\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">AD₁</text>\n  <circle cx=\"250\" cy=\"200\" r=\"4\" fill=\"#ef4444\"/>\n  <line x1=\"250\" y1=\"200\" x2=\"250\" y2=\"300\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/>\n  <line x1=\"50\" y1=\"200\" x2=\"250\" y2=\"200\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/>\n  <text x=\"250\" y=\"315\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"10\">Y₀</text>\n  <text x=\"43\" y=\"203\" text-anchor=\"end\" fill=\"#ef4444\" font-size=\"9\">PL₀</text>\n  <circle cx=\"310\" cy=\"162\" r=\"4\" fill=\"#3b82f6\"/>\n  <line x1=\"310\" y1=\"162\" x2=\"310\" y2=\"300\" stroke=\"#3b82f6\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/>\n  <line x1=\"50\" y1=\"162\" x2=\"310\" y2=\"162\" stroke=\"#3b82f6\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/>\n  <text x=\"310\" y=\"315\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"10\">Y₁</text>\n  <text x=\"43\" y=\"165\" text-anchor=\"end\" fill=\"#3b82f6\" font-size=\"9\">PL₁</text>\n  <text x=\"350\" y=\"315\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"10\">Yᶠ</text>\n  <text x=\"145\" y=\"55\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\">Expansionary fiscal policy</text>\n  <text x=\"145\" y=\"70\" fill=\"#e8ecf5\" font-size=\"10\">(rise in G or cut in T)</text>\n  <text x=\"145\" y=\"85\" fill=\"#e8ecf5\" font-size=\"10\">shifts AD right: AD₀ → AD₁</text>\n  <text x=\"145\" y=\"100\" fill=\"#e8ecf5\" font-size=\"10\">Y rises, PL rises</text>\n  <path d=\"M260 290 L305 290\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\" marker-end=\"url(#afp1)\"/>\n  <text x=\"283\" y=\"286\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"8\">ΔY</text>\n  <defs>\n    <marker id=\"afp1\" markerWidth=\"7\" markerHeight=\"5\" refX=\"7\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L7,2.5 L0,5\" fill=\"#f59e0b\"/></marker>\n  </defs>\n</svg>",
+    "title": "Fiscal Policy: AD/AS Impact",
+    "checklist": [
+     "Draw AD shifting right to show expansionary fiscal policy (rise in G or cut in T)",
+     "Show both the increase in real output (Y) and the rise in price level (PL)",
+     "Include LRAS to show the economy is still below full employment (negative output gap closing)",
+     "Label the initial and new equilibrium points clearly",
+     "Note that the multiplier amplifies the initial fiscal stimulus",
+     "Mention potential crowding out as a limitation"
+    ],
+    "description": "AD/AS diagram showing the impact of expansionary fiscal policy on the price level and real output, with analysis of the short-run and long-run effects."
+   },
+   {
+    "id": "macroeconomic-objectives-policies:diagram:86673a7c",
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <rect x=\"175\" y=\"10\" width=\"150\" height=\"35\" rx=\"6\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n  <text x=\"250\" y=\"32\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">Central Bank cuts</text>\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">interest rate</text>\n  <line x1=\"250\" y1=\"45\" x2=\"250\" y2=\"60\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" marker-end=\"url(#amt1)\"/>\n  <rect x=\"30\" y=\"62\" width=\"115\" height=\"42\" rx=\"5\" fill=\"none\" stroke=\"#059669\" stroke-width=\"1.5\"/>\n  <text x=\"87\" y=\"78\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\" font-weight=\"600\">Cost of borrowing</text>\n  <text x=\"87\" y=\"95\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Mortgages &amp; loans</text>\n  <text x=\"87\" y=\"95\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">cheaper</text>\n  <rect x=\"155\" y=\"62\" width=\"115\" height=\"42\" rx=\"5\" fill=\"none\" stroke=\"#059669\" stroke-width=\"1.5\"/>\n  <text x=\"212\" y=\"78\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\" font-weight=\"600\">Saving incentive</text>\n  <text x=\"212\" y=\"95\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Returns on savings</text>\n  <text x=\"212\" y=\"95\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">fall</text>\n  <rect x=\"280\" y=\"62\" width=\"115\" height=\"42\" rx=\"5\" fill=\"none\" stroke=\"#059669\" stroke-width=\"1.5\"/>\n  <text x=\"337\" y=\"78\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\" font-weight=\"600\">Asset prices</text>\n  <text x=\"337\" y=\"95\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">House &amp; share</text>\n  <text x=\"337\" y=\"95\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">prices rise</text>\n  <rect x=\"405\" y=\"62\" width=\"80\" height=\"42\" rx=\"5\" fill=\"none\" stroke=\"#059669\" stroke-width=\"1.5\"/>\n  <text x=\"445\" y=\"78\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\" font-weight=\"600\">Exchange rate</text>\n  <text x=\"445\" y=\"95\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Depreciation</text>\n  <line x1=\"130\" y1=\"55\" x2=\"87\" y2=\"62\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <line x1=\"212\" y1=\"55\" x2=\"212\" y2=\"62\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <line x1=\"337\" y1=\"55\" x2=\"337\" y2=\"62\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <line x1=\"370\" y1=\"55\" x2=\"445\" y2=\"62\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <line x1=\"87\" y1=\"104\" x2=\"87\" y2=\"130\" stroke=\"#e8ecf5\" stroke-width=\"1\" marker-end=\"url(#amt1)\"/>\n  <line x1=\"212\" y1=\"104\" x2=\"212\" y2=\"130\" stroke=\"#e8ecf5\" stroke-width=\"1\" marker-end=\"url(#amt1)\"/>\n  <line x1=\"337\" y1=\"104\" x2=\"337\" y2=\"130\" stroke=\"#e8ecf5\" stroke-width=\"1\" marker-end=\"url(#amt1)\"/>\n  <line x1=\"445\" y1=\"104\" x2=\"445\" y2=\"130\" stroke=\"#e8ecf5\" stroke-width=\"1\" marker-end=\"url(#amt1)\"/>\n  <rect x=\"15\" y=\"130\" width=\"135\" height=\"38\" rx=\"5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n  <text x=\"82\" y=\"145\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"9\" font-weight=\"600\">Consumer spending (C)</text>\n  <text x=\"82\" y=\"160\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">rises (more disposable income)</text>\n  <rect x=\"160\" y=\"130\" width=\"120\" height=\"38\" rx=\"5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n  <text x=\"220\" y=\"145\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"9\" font-weight=\"600\">Investment (I)</text>\n  <text x=\"220\" y=\"160\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">rises (cheaper to borrow)</text>\n  <rect x=\"290\" y=\"130\" width=\"110\" height=\"38\" rx=\"5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n  <text x=\"345\" y=\"145\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"9\" font-weight=\"600\">Wealth effect</text>\n  <text x=\"345\" y=\"160\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">C rises (feel wealthier)</text>\n  <rect x=\"410\" y=\"130\" width=\"80\" height=\"38\" rx=\"5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n  <text x=\"450\" y=\"145\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"9\" font-weight=\"600\">Net exports</text>\n  <text x=\"450\" y=\"160\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">(X-M) rises</text>\n  <line x1=\"82\" y1=\"168\" x2=\"250\" y2=\"200\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <line x1=\"220\" y1=\"168\" x2=\"250\" y2=\"200\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <line x1=\"345\" y1=\"168\" x2=\"250\" y2=\"200\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <line x1=\"450\" y1=\"168\" x2=\"250\" y2=\"200\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <rect x=\"175\" y=\"200\" width=\"150\" height=\"35\" rx=\"6\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/>\n  <text x=\"250\" y=\"215\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"600\">AD increases</text>\n  <text x=\"250\" y=\"228\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">(AD shifts right)</text>\n  <line x1=\"250\" y1=\"235\" x2=\"250\" y2=\"255\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" marker-end=\"url(#amt1)\"/>\n  <rect x=\"100\" y=\"258\" width=\"125\" height=\"35\" rx=\"6\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/>\n  <text x=\"162\" y=\"273\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"600\">Real output rises</text>\n  <text x=\"162\" y=\"286\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">(growth, lower unemployment)</text>\n  <rect x=\"240\" y=\"258\" width=\"125\" height=\"35\" rx=\"6\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"1.5\"/>\n  <text x=\"302\" y=\"273\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">Price level rises</text>\n  <text x=\"302\" y=\"286\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">(inflationary pressure)</text>\n  <line x1=\"210\" y1=\"255\" x2=\"162\" y2=\"258\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <line x1=\"290\" y1=\"255\" x2=\"302\" y2=\"258\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <text x=\"250\" y=\"325\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\" font-style=\"italic\">Full transmission takes 12-24 months</text>\n  <defs>\n    <marker id=\"amt1\" markerWidth=\"7\" markerHeight=\"5\" refX=\"7\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L7,2.5 L0,5\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n</svg>",
+    "title": "Monetary Policy Transmission Mechanism",
+    "checklist": [
+     "Start with the central bank's interest rate decision",
+     "Show how it affects: cost of borrowing, saving returns, asset prices, exchange rate",
+     "Link each channel to a component of AD: C, I, wealth effect, net exports (X-M)",
+     "Show the combined effect on AD (rightward shift)",
+     "Mention the time lag (12-24 months for full effect)",
+     "Note limitations: banks may not pass on rate changes; confidence matters"
+    ],
+    "description": "Flowchart showing how a change in the base interest rate transmits through the economy to affect aggregate demand and inflation."
+   },
+   {
+    "id": "macroeconomic-objectives-policies:diagram:b4494256",
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <line x1=\"50\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"50\" y1=\"300\" x2=\"50\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"260\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">Real GDP (Y)</text>\n  <text x=\"20\" y=\"165\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90,20,165)\">Price Level (PL)</text>\n  <line x1=\"270\" y1=\"40\" x2=\"270\" y2=\"300\" stroke=\"#ef4444\" stroke-width=\"2\"/>\n  <text x=\"270\" y=\"35\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"10\">LRAS₀</text>\n  <line x1=\"370\" y1=\"40\" x2=\"370\" y2=\"300\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"370\" y=\"35\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">LRAS₁</text>\n  <path d=\"M80 268 Q200 238 280 165 Q320 125 350 60\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\"/>\n  <text x=\"355\" y=\"55\" fill=\"#f59e0b\" font-size=\"10\">SRAS₀</text>\n  <path d=\"M130 275 Q270 240 370 155 Q410 115 440 55\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\" stroke-dasharray=\"6,3\"/>\n  <text x=\"445\" y=\"50\" fill=\"#f59e0b\" font-size=\"10\">SRAS₁</text>\n  <path d=\"M100 75 Q200 185 370 270\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"375\" y=\"268\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">AD</text>\n  <circle cx=\"270\" cy=\"170\" r=\"4\" fill=\"#ef4444\"/>\n  <line x1=\"270\" y1=\"170\" x2=\"270\" y2=\"300\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/>\n  <line x1=\"50\" y1=\"170\" x2=\"270\" y2=\"170\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/>\n  <text x=\"270\" y=\"315\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"10\">Y₀</text>\n  <text x=\"43\" y=\"173\" text-anchor=\"end\" fill=\"#ef4444\" font-size=\"9\">PL₀</text>\n  <circle cx=\"330\" cy=\"192\" r=\"4\" fill=\"#059669\"/>\n  <line x1=\"330\" y1=\"192\" x2=\"330\" y2=\"300\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/>\n  <line x1=\"50\" y1=\"192\" x2=\"330\" y2=\"192\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/>\n  <text x=\"330\" y=\"315\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"10\">Y₁</text>\n  <text x=\"43\" y=\"195\" text-anchor=\"end\" fill=\"#059669\" font-size=\"9\">PL₁</text>\n  <text x=\"370\" y=\"315\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"10\">Yᶠ₁</text>\n  <path d=\"M280 55 L360 55\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2\" marker-end=\"url(#ass1)\"/>\n  <text x=\"320\" y=\"50\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\">Supply-side</text>\n  <text x=\"320\" y=\"42\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\">improvement</text>\n  <text x=\"140\" y=\"60\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\">Result:</text>\n  <text x=\"140\" y=\"75\" fill=\"#e8ecf5\" font-size=\"10\">Higher output (Y₀ → Y₁)</text>\n  <text x=\"140\" y=\"90\" fill=\"#e8ecf5\" font-size=\"10\">Lower price level (PL₀ → PL₁)</text>\n  <text x=\"140\" y=\"105\" fill=\"#e8ecf5\" font-size=\"10\">Non-inflationary growth</text>\n  <defs>\n    <marker id=\"ass1\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#059669\"/></marker>\n  </defs>\n</svg>",
+    "title": "Supply-Side Policy: LRAS Shift",
+    "checklist": [
+     "Show LRAS shifting to the right (from LRAS0 to LRAS1)",
+     "Show SRAS also shifting right (increased capacity reduces costs)",
+     "AD curve stays in the same position (no demand-side change)",
+     "New equilibrium has higher output AND lower price level",
+     "Label this as non-inflationary growth",
+     "List examples of policies that could cause this shift"
+    ],
+    "description": "AD/AS diagram showing how successful supply-side policies shift LRAS to the right, enabling higher output without inflationary pressure."
+   }
+  ],
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "The four main macroeconomic objectives are: sustained economic growth, low and stable inflation, low unemployment and a sustainable balance of payments.",
+      "These objectives are pursued because they together indicate a healthy, stable economy with rising living standards.",
+      "Governments use demand-side policies (fiscal and monetary) and supply-side policies to achieve these goals.",
+      "However, pursuing one objective can conflict with another — creating policy trade-offs that require difficult choices."
+     ],
+     "title": "Governments pursue multiple macroeconomic objectives",
+     "result": "Macroeconomic policy involves balancing multiple objectives that may conflict, requiring careful prioritisation."
+    },
+    {
+     "steps": [
+      "Expansionary fiscal policy (increased G or lower T) raises aggregate demand, stimulating output and reducing unemployment.",
+      "Contractionary fiscal policy (reduced G or higher T) reduces aggregate demand, cooling inflation but risking higher unemployment.",
+      "Fiscal policy works through the multiplier — an initial change in G or T has an amplified effect on national income.",
+      "However, fiscal policy may be constrained by budget deficits, time lags and the risk of crowding out private investment."
+     ],
+     "title": "Fiscal policy uses government spending and taxation",
+     "result": "Fiscal policy directly affects AD through the government's budget, but is limited by debt levels, political pressures and implementation lags."
+    },
+    {
+     "steps": [
+      "The central bank sets the base interest rate to influence borrowing, saving and spending across the economy.",
+      "Lower interest rates stimulate AD by encouraging borrowing, reducing saving incentives and boosting asset prices.",
+      "Higher interest rates reduce AD by discouraging borrowing, encouraging saving and strengthening the exchange rate (reducing net exports).",
+      "Monetary policy has shorter implementation lags than fiscal policy but operates with transmission lags before effects are felt."
+     ],
+     "title": "Monetary policy uses interest rates to manage AD",
+     "result": "Monetary policy is the primary tool for short-run demand management, working through interest rate effects on consumption, investment and net exports."
+    },
+    {
+     "steps": [
+      "Expanding AD to reduce unemployment can cause demand-pull inflation — the classic inflation-unemployment trade-off (Phillips Curve).",
+      "Raising interest rates to control inflation can strengthen the exchange rate, worsening the current account deficit.",
+      "Fiscal expansion to boost growth increases the budget deficit, which may conflict with fiscal sustainability objectives.",
+      "Supply-side policies can reduce these conflicts in the long run by shifting LRAS, but they take time and have distributional consequences."
+     ],
+     "title": "Policy conflicts force trade-offs between objectives",
+     "result": "Policy conflicts mean no single policy can achieve all objectives simultaneously — policymakers must prioritise and accept trade-offs."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "The Phillips Curve trade-off may not hold in the long run",
+     "content": "The short-run Phillips Curve suggests a trade-off between inflation and unemployment, but monetarists argue this disappears in the long run as expectations adjust. If workers anticipate inflation, they demand higher wages, pushing unemployment back to the natural rate. This means demand management can only reduce unemployment temporarily, and sustained low unemployment requires supply-side reforms."
+    },
+    {
+     "title": "Fiscal policy effectiveness is debated",
+     "content": "Keynesians argue fiscal policy is essential during recessions when monetary policy is ineffective (liquidity trap). Classical economists argue that fiscal expansion crowds out private spending through higher interest rates and future tax expectations. The truth depends on economic conditions — fiscal policy is most effective when the economy has spare capacity and interest rates are low."
+    },
+    {
+     "title": "Policy coordination is essential but difficult",
+     "content": "Fiscal and monetary policy are often set by different institutions (government and central bank) with different priorities and time horizons. Conflicting signals — expansionary fiscal policy alongside contractionary monetary policy — can reduce overall effectiveness. Coordination is improved by clear mandates, transparent communication and agreement on the priority objectives for the current economic conditions."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "id": "macroeconomic-objectives-policies:mistake:24d9ba14",
+    "title": "Not discussing policy trade-offs and conflicts",
+    "examTip": "Top-mark answers always discuss at least one trade-off or conflict between objectives. E.g. the Phillips curve trade-off between inflation and unemployment.",
+    "mistake": "Students recommend a policy without considering its negative side effects on other macroeconomic objectives.",
+    "correction": "Always consider conflicts: expansionary fiscal policy may reduce unemployment but cause inflation and worsen the budget deficit. Supply-side policies improve long-run growth but take time and may increase inequality in the short run."
+   },
+   {
+    "id": "macroeconomic-objectives-policies:mistake:29f2d35d",
+    "title": "Confusing fiscal and monetary policy tools",
+    "mistake": "Students say \"the government should lower interest rates\" (monetary, done by the central bank) or \"the Bank of England should increase government spending\" (fiscal, done by the government).",
+    "correction": "Fiscal policy = government spending (G) and taxation (T) — controlled by the government/Treasury. Monetary policy = interest rates and money supply — controlled by the central bank (Bank of England/Fed)."
+   },
+   {
+    "id": "macroeconomic-objectives-policies:mistake:f856a478",
+    "title": "Ignoring time lags when evaluating policies",
+    "examTip": "Mentioning time lags in evaluation paragraphs shows sophisticated understanding and earns higher marks.",
+    "mistake": "Students assume policies take immediate effect, when in reality there are significant time lags.",
+    "correction": "Recognition lag (time to identify the problem), implementation lag (time to put policy in place), and transmission lag (time for policy to affect the economy). Monetary policy has shorter lags than fiscal policy for implementation, but fiscal policy may have a more direct impact."
+   },
+   {
+    "id": "macroeconomic-objectives-policies:mistake:34a78b64",
+    "title": "Treating supply-side policies as a homogeneous group",
+    "mistake": "Students say \"supply-side policies shift LRAS right\" without specifying which policy or how it works.",
+    "correction": "Be specific: market-based supply-side policies (deregulation, privatisation, tax cuts) vs interventionist supply-side policies (education spending, infrastructure investment, R&D subsidies). Each works through different mechanisms."
+   }
+  ]
+ }
+}

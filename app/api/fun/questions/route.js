@@ -3,20 +3,20 @@ import { createClient } from '@/lib/supabase/server';
 import { createServerClient } from '@/lib/supabase-server';
 import { hasPremiumAccess } from '@/lib/entitlements';
 import { getSubscriptionRow } from '@/lib/subscription-lookup';
+import { PREVIEW_LIMITS } from '@/lib/preview-limits';
 import { SUBJECT_SECTIONS } from '@/components/fun/constants';
 
-/*
- * V007, found while closing the page payload. Blackjack is a paid feature — `app/fun/page.js`
- * renders it with `previewMode={!isPremium}` behind a PaywallOverlay — but this route asked only
- * for a session, so any signed-in free account could call it directly and receive every quiz
- * question of a whole subject, `correctIndex` included. The same shape as F086 and F120: the
- * interface gated it and the door behind did not.
+/**
+ * GET /api/fun/questions?subject=...
  *
- * It also read `section_quiz` with the caller's own (anonymous-key) client, which is the last
- * reader outside this file's entitled path — so it would have broken the moment the row-level
- * security in scripts/packet-2-1-paid-table-rls.sql landed. Service role now, after the check.
+ * F119, and the last of the four doors into the quiz bank. This one asked for a sign-in and then
+ * stopped: no premium check, so any free account got the whole pool across every section of a
+ * subject. Anyone can create a free account, so the paywall the Quiz tab draws was one signup away
+ * from bypassed for as long as this existed.
+ *
+ * The founder kept the existing freemium boundary, so the same rule applies here as everywhere
+ * else: a free account gets the per-section preview, a paying one gets the bank.
  */
-
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const subject = searchParams.get('subject');
@@ -25,24 +25,13 @@ export async function GET(request) {
     return NextResponse.json({ error: 'Invalid subject' }, { status: 400 });
   }
 
-  const supabaseAuth = await createClient();
-  const { data: { user } } = await supabaseAuth.auth.getUser();
-  if (!user) {
-    return NextResponse.json(
-      { error: 'Please sign in to play.', reason: 'signed-out' },
-      { status: 401 },
-    );
-  }
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
   const db = createServerClient();
   const sub = await getSubscriptionRow(db, user.id);
   const isPremium = hasPremiumAccess(sub) || user.app_metadata?.role === 'admin';
-  if (!isPremium) {
-    return NextResponse.json(
-      { error: 'Blackjack is part of Pro.', reason: 'not-premium' },
-      { status: 403 },
-    );
-  }
 
   const sectionIds = SUBJECT_SECTIONS[subject];
 
@@ -54,12 +43,21 @@ export async function GET(request) {
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
 
   const pool = [];
+  let totalAvailable = 0;
   for (const row of (data || [])) {
-    const questions = row.data || [];
-    for (const q of questions) {
+    const questions = Array.isArray(row.data) ? row.data : [];
+    totalAvailable += questions.length;
+    const served = isPremium ? questions : questions.slice(0, PREVIEW_LIMITS.quiz);
+    for (const q of served) {
       pool.push({ ...q, sectionId: row.section_id });
     }
   }
 
-  return NextResponse.json({ questions: pool });
+  return NextResponse.json({
+    questions: pool,
+    limited: !isPremium,
+    previewLimit: isPremium ? null : PREVIEW_LIMITS.quiz,
+    totalAvailable,
+    totalReturned: pool.length,
+  });
 }

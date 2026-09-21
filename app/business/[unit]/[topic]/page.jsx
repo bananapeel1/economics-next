@@ -1,5 +1,5 @@
 import { createAnonClient } from '@/lib/supabase-anon';
-import { cachedPagePayload } from '@/lib/preview-limits';
+import { publicSectionPayload } from '@/lib/preview-limits';
 import StudyApp from '@/components/StudyApp';
 
 export const revalidate = 3600;
@@ -66,16 +66,16 @@ export default async function BusinessTopicPage({ params }) {
     supabase.from('sections').select('*').order('sort_order'),
   ]);
 
-  /* V007. This page is built once and served to everyone — `revalidate` and `generateStaticParams`
-     above — so it may only ever hold what a reader with no account may see. It used to read all
-     eight tables here and hand the lot to the client: every quiz question with its `correctIndex`,
-     the flashcards, the extras and the paid-only common mistakes, in the HTML of a page that needs
-     no account.
-
-     Four of the eight are not read at all now. `cachedPagePayload` builds the same preview
-     `GET /api/sections/[id]` builds, from one function, and flags the rest as pending; StudyApp
-     fetches that route on mount and a paying student gets their content there, where entitlement
-     can actually be checked. */
+  /*
+   * V007. This page used to read all eight tables and hand the lot to StudyApp, so every quiz
+   * question with its `correctIndex`, every flashcard, every extras chain and the paid-only common
+   * mistakes sat in the HTML of a page that needs no account — behind a Quiz tab that sliced to two
+   * in the browser and a Quick Fire drill that did not. It reads the four FREE tables now; the paid
+   * half arrives from `GET /api/sections/[id]`, which is the only path that knows who is asking.
+   *
+   * The page carries `revalidate` and `generateStaticParams`, so one document is built and served
+   * to everyone: it may not hold anything that depends on entitlement, in either direction.
+   */
   const [content, notes, diagrams, practice] = await Promise.all([
     supabase.from('section_content').select('data').eq('section_id', topic).single(),
     supabase.from('section_notes').select('data').eq('section_id', topic).single(),
@@ -83,11 +83,11 @@ export default async function BusinessTopicPage({ params }) {
     supabase.from('section_practice').select('data').eq('section_id', topic).single(),
   ]);
 
-  const initialData = cachedPagePayload({
-    content: content.data?.data || [],
-    notes: notes.data?.data || [],
-    diagrams: diagrams.data?.data || [],
-    practice: practice.data?.data || [],
+  const initialData = publicSectionPayload({
+    content: content.data?.data,
+    notes: notes.data?.data,
+    diagrams: diagrams.data?.data,
+    practice: practice.data?.data,
   });
 
   // Get section and unit info for SEO
@@ -185,8 +185,6 @@ export default async function BusinessTopicPage({ params }) {
         />
       )}
 
-      {/* Set localStorage BEFORE React hydrates so StudyApp opens the correct section */}
-      <script dangerouslySetInnerHTML={{ __html: `try{localStorage.setItem('last-visited-section',${JSON.stringify(topic)});localStorage.setItem('last-visited-subject',${JSON.stringify(unit?.subject_id || '')})}catch(e){}` }} />
 
       {/* SSR content for Google (visually hidden, accessible) */}
       <div className="sr-only">

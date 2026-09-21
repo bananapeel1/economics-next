@@ -2,18 +2,24 @@
 import { useState, useMemo } from 'react';
 import { recordPretest } from '@/lib/strength';
 import { trackFunnel } from '@/lib/funnel';
+import { saveSectionState } from '@/lib/section-state';
+import { pickPretestQuestions } from '@/lib/pretest-pool';
 
 /* ── Pre-test Before Learning ── */
-export default function PreTest({ quizData, subjectId, sectionId, onDone }) {
-  const questions = useMemo(() => {
-    if (!quizData?.length) return [];
-    const shuffled = [...quizData].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, Math.min(3, shuffled.length));
-  }, [quizData]);
+export default function PreTest({ quizData, subjectId, sectionId, onDone, reservedQuestions }) {
+  /*
+   * F079, and V015 which brought it back. The selection lives in lib/pretest-pool.js because
+   * LearnModeTab's offer has to promise the same number this renders — it used to say "Three
+   * questions" and show two. The rule it encodes: never a question a chapter check-in will ask,
+   * and a short pre-test rather than a padded one.
+   */
+  const questions = useMemo(
+    () => pickPretestQuestions(quizData, reservedQuestions),
+    [quizData, reservedQuestions],
+  );
 
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
-  const [revealIndex, setRevealIndex] = useState(-1);
   const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
 
   function handleSelect(qIdx, optIdx) {
@@ -31,10 +37,15 @@ export default function PreTest({ quizData, subjectId, sectionId, onDone }) {
   function handleSubmit() {
     if (Object.keys(answers).length < questions.length) return;
     setSubmitted(true);
-    // Stagger reveal each question's answer
-    questions.forEach((_, i) => {
-      setTimeout(() => setRevealIndex(i), (i + 1) * 150);
-    });
+    /*
+     * F008. This used to reveal the correct answer to all three. The same questions then reappear
+     * as the block's quick quiz, in the post-test and in the reviews, so revealing them here hands
+     * the student the answers to their own later assessments and makes every improvement score
+     * meaningless. The pre-test's job is to prime and to measure, and it can do both with a score.
+     *
+     * The answers are not withheld for good: the post-test shows them at the end of the section,
+     * which is the point at which knowing them is learning rather than leakage.
+     */
 
     // Calculate score
     let correct = 0;
@@ -59,6 +70,21 @@ export default function PreTest({ quizData, subjectId, sectionId, onDone }) {
         })),
       }));
     }
+
+    /*
+     * Record that the pre-test was TAKEN, in the modern section-state key and on the server.
+     *
+     * The legacy `revvy_pretest_*` key above holds the answers, and it was the only record of the
+     * choice. `readLocalState` migrates that key only when there is no modern key yet
+     * (`lib/section-state.js:27-28`), and a signed-in student always has one, written by
+     * LearnModeTab's server reconcile — so to everything that asks the modern way, a student who
+     * had taken the pre-test looked like one who had never been offered it. Two consequences, one
+     * of them old: V011's re-derived offer put the same three questions back on screen the moment
+     * the student returned to step 0, and, since F001/F027, TAKING the pre-test never reached the
+     * server at all, so the cross-device promise held for skipping and not for taking. Only
+     * `declinePretest` ever sent `pretestState`.
+     */
+    saveSectionState(subjectId, sectionId, { pretestState: 'taken' });
 
     // Record to strength meter
     recordPretest(subjectId, sectionId, score);
@@ -87,13 +113,9 @@ export default function PreTest({ quizData, subjectId, sectionId, onDone }) {
           <p className="lm-pretest-q-text">{qIdx + 1}. {q.question}</p>
           <div className="lm-quiz-options">
             {q.options?.map((option, i) => {
-              let cls = '';
-              if (submitted && revealIndex >= qIdx) {
-                if (i === q.correctIndex) cls = 'correct';
-                else if (i === answers[qIdx] && i !== q.correctIndex) cls = 'incorrect';
-              } else if (answers[qIdx] === i) {
-                cls = 'selected';
-              }
+              // Only ever the student's own choice. No correct/incorrect colouring here — see
+              // handleSubmit for why the answers are not revealed until the post-test.
+              const cls = answers[qIdx] === i ? 'selected' : '';
               return (
                 <button
                   key={i}
@@ -126,6 +148,9 @@ export default function PreTest({ quizData, subjectId, sectionId, onDone }) {
                   JSON.stringify({ completed: false, skipped: true, timestamp: Date.now() }));
               } catch {}
             }
+            // Same reason as the submit path: the legacy key alone is invisible to anything that
+            // reads the modern one, and this is also how the skip follows the student to another device.
+            saveSectionState(subjectId, sectionId, { pretestState: 'skipped' });
             trackFunnel('pretest_skipped', { sectionId });
             onDone?.();
           }}>
@@ -145,6 +170,10 @@ export default function PreTest({ quizData, subjectId, sectionId, onDone }) {
               : noneCorrect
                 ? 'Nothing wrong with 0 \u2014 this is exactly what the next steps teach.'
                 : 'Good start! Your brain is now primed for learning.'}
+          </p>
+          {/* F008: said plainly, so withholding the answers does not read as a bug. */}
+          <p className="lm-pretest-note">
+            Answers are held back until the end, so the same questions can still test you later.
           </p>
           <button className="lm-pretest-continue" onClick={onDone}>
             Start learning &#8594;

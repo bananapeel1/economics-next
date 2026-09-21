@@ -1,0 +1,2001 @@
+{
+ "section_id": "consumer-behaviour-demand",
+ "subject": "economics",
+ "label": "2026-09-14-pre-packet-13",
+ "tables": {
+  "section_content": [
+   {
+    "id": "consumer-behaviour-demand:block:4d1ff673",
+    "title": "Rational Decision Making and Consumer Behaviour",
+    "sections": [
+     {
+      "id": "consumer-behaviour-demand:sub:rational-decision-making",
+      "body": [
+       {
+        "text": "A **rational** economic agent is one who considers all available information and chooses the option that gives the greatest net benefit. For consumers this means maximising **utility** (satisfaction); for firms it means maximising profit. Every decision is made **at the margin** — you compare the extra benefit of one more unit against its extra cost.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Identify options",
+         "Compare marginal benefit vs marginal cost",
+         "Choose the option with greatest net benefit"
+        ],
+        "result": "Utility is maximised",
+        "resultType": "good"
+       },
+       {
+        "text": "Rational decision-making requires that you have complete information, can process it instantly, and are not swayed by emotion or habit. In reality, those conditions rarely hold — but the assumption is useful because it gives economists a benchmark to predict how people *tend* to behave in competitive markets.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Rational Decision Making",
+      "recall": {
+       "id": "consumer-behaviour-demand:sub:rational-decision-making:recall",
+       "type": "reorder",
+       "prompt": "Put the rational decision-making process in the right order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Identify all available options",
+        "Compare marginal benefit vs marginal cost",
+        "Choose the option with greatest net benefit",
+        "Utility is maximised"
+       ]
+      },
+      "keyIdea": "Traditional economics assumes consumers weigh up costs and benefits at the margin and choose the option that maximises their satisfaction.",
+      "examMatters": "Examiners often open a paper with a short question on rational decision-making. Define it as maximising utility by comparing marginal benefit to marginal cost, then note it is an assumption, not a description of how everyone actually behaves.",
+      "realExample": {
+       "text": "When **Aldi** entered the UK grocery market with rock-bottom prices, the rational-consumer model predicted shoppers would switch from Tesco and Sainsbury's to save money. That is broadly what happened — Aldi's UK market share rose from 2% in 2010 to over 10% by 2023.",
+       "emoji": "🛒"
+      },
+      "misconception": "Students write \"rational means people always make the best decision.\" That overstates the claim — rational means they *try* to maximise net benefit given the information available, not that they succeed perfectly. Instead write: rationality is an assumption that consumers aim to maximise utility by weighing marginal costs against marginal benefits."
+     },
+     {
+      "id": "consumer-behaviour-demand:sub:utility-and-utility-maximisation",
+      "body": [
+       {
+        "text": "**Utility** is the economist's word for satisfaction or benefit. **Total utility** is the overall satisfaction from all units consumed. **Marginal utility** is the extra satisfaction from consuming one more unit. As you keep consuming the same good, marginal utility typically falls — this is the **law of diminishing marginal utility**.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Consume more of Good A",
+         "Marginal utility of A falls",
+         "Switch spending to Good B where MU is higher"
+        ],
+        "result": "MU per pound equalised across goods",
+        "resultType": "good"
+       },
+       {
+        "text": "A consumer maximises total utility when the **marginal utility per pound** spent is equal across all goods: MU_A / P_A = MU_B / P_B. If a pound spent on coffee gives you more satisfaction than a pound spent on tea, you should buy more coffee and less tea until the two ratios equalise.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Utility and Utility Maximisation",
+      "recall": {
+       "id": "consumer-behaviour-demand:sub:utility-and-utility-maximisation:recall",
+       "type": "fillin",
+       "hints": [
+        "ut____",
+        "ut____",
+        "di________"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "utility",
+        "utility",
+        "diminishes"
+       ],
+       "template": [
+        "Total ___ is overall satisfaction from all units consumed",
+        "→ Marginal ___ is the extra satisfaction from one more unit",
+        "→ Marginal utility ___ as you consume more of the same good"
+       ]
+      },
+      "keyIdea": "Utility is the satisfaction a consumer gains from consuming a good — you maximise it when the last pound spent on every good gives equal marginal utility.",
+      "examMatters": "If a question says \"explain how a consumer maximises utility,\" the examiner wants the equi-marginal condition: MU_A/P_A = MU_B/P_B. Show that if the ratios are unequal, the consumer can increase total utility by reallocating spending.",
+      "realExample": {
+       "text": "**Domino's** \"Two for Tuesday\" deal exploits diminishing marginal utility. Your first pizza delivers high satisfaction, but a second is worth much less to you. Domino's prices the bundle cheaply enough that even the lower marginal utility of pizza two still exceeds the marginal cost you pay.",
+       "emoji": "🍕"
+      },
+      "misconception": "Students confuse total utility with marginal utility and write \"utility falls as you consume more.\" Total utility keeps rising as long as marginal utility is positive — it is marginal utility that falls. Instead write: total utility increases at a decreasing rate because marginal utility diminishes with each additional unit consumed."
+     },
+     {
+      "id": "consumer-behaviour-demand:sub:why-consumers-may-not-act-rationally",
+      "body": [
+       {
+        "text": "**Behavioural economics** shows that consumers systematically deviate from the rational model. People rely on **heuristics** (mental shortcuts), are influenced by **anchoring** (fixating on the first number they see), and exhibit **loss aversion** (losses hurt roughly twice as much as equivalent gains feel good).",
+        "type": "paragraph"
+       },
+       {
+        "text": "You also face **bounded rationality** — your brain cannot process all available information, so you settle for a \"good enough\" choice rather than the optimal one. Habits, peer pressure, advertising, and addiction all push behaviour away from the rational ideal.",
+        "type": "paragraph"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Habitual behaviour**: buying the same brand without comparing prices.",
+         "**Imperfect information**: not knowing a cheaper substitute exists.",
+         "**Influence of others**: following trends or social proof.",
+         "**Addiction and emotion**: continuing to smoke despite knowing the health costs."
+        ]
+       }
+      ],
+      "title": "Why Consumers May Not Act Rationally",
+      "recall": {
+       "id": "consumer-behaviour-demand:sub:why-consumers-may-not-act-rationally:recall",
+       "type": "reorder",
+       "prompt": "Put these behavioural economics concepts in order from cognitive shortcut to outcome:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Consumer relies on heuristics (mental shortcuts)",
+        "Anchoring biases their price perception",
+        "Loss aversion distorts their cost-benefit analysis",
+        "Decision deviates from the rational model"
+       ]
+      },
+      "keyIdea": "Real people use mental shortcuts, are swayed by emotions and habits, and lack perfect information — behavioural economics explains these systematic departures from rationality.",
+      "examMatters": "Evaluation questions love this topic. If you argue consumers are rational, counter-argue with behavioural biases and vice versa. Name specific biases (anchoring, loss aversion, bounded rationality) rather than vaguely saying \"people are irrational.\"",
+      "realExample": {
+       "text": "**Apple** exploits anchoring by showing the most expensive iPhone first on its website. When you then see the mid-range model, it feels like a bargain by comparison — even though it is still expensive in absolute terms. This is a systematic departure from rational price comparison.",
+       "emoji": "🧠"
+      },
+      "misconception": "Students write \"behavioural economics proves the rational model is wrong.\" That is too strong — the rational model is a useful simplification that predicts well in many competitive markets. Instead write: behavioural economics enriches the rational model by identifying systematic biases, but does not replace the assumption entirely."
+     }
+    ],
+    "takeaway": [
+     "Rational agents maximise utility by equating marginal benefit to marginal cost.",
+     "Diminishing marginal utility means each extra unit adds less satisfaction.",
+     "Behavioural economics identifies systematic biases like anchoring and loss aversion."
+    ],
+    "quizIndices": [
+     0
+    ]
+   },
+   {
+    "id": "consumer-behaviour-demand:block:3ff02be9",
+    "title": "The Demand Curve",
+    "sections": [
+     {
+      "id": "consumer-behaviour-demand:sub:demand-and-the-demand-curve",
+      "body": [
+       {
+        "text": "**Demand** is not just wanting something — it is the quantity of a good or service that consumers are **willing and able** to purchase at each given price in a given time period. If you want a Porsche but cannot afford one, that is desire, not demand. Demand requires both willingness *and* ability to pay.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The **demand curve** slopes downward from left to right, showing a **negative (inverse) relationship** between price and quantity demanded. There are two explanations. The **income effect**: when price falls, your real income rises so you can buy more. The **substitution effect**: when price falls, the good becomes cheaper relative to alternatives so you switch towards it.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Price of Good A falls",
+         "Income effect: you feel richer",
+         "Substitution effect: A is now cheaper than B"
+        ],
+        "result": "Quantity demanded of A rises",
+        "resultType": "good"
+       }
+      ],
+      "title": "Demand and the Demand Curve",
+      "recall": {
+       "id": "consumer-behaviour-demand:sub:demand-and-the-demand-curve:recall",
+       "type": "fillin",
+       "hints": [
+        "ab_____",
+        "in____",
+        "su___________"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "ability",
+        "income",
+        "substitution"
+       ],
+       "template": [
+        "Demand requires willingness and ___ to pay",
+        "→ The ___ effect: lower price makes you feel richer",
+        "→ The ___ effect: good becomes cheaper relative to alternatives"
+       ]
+      },
+      "keyIdea": "Demand is the quantity consumers are willing and able to buy at each price — the curve slopes downward because higher prices make you buy less.",
+      "examMatters": "The distinction between a movement along the demand curve and a shift of the curve is tested relentlessly. If the question mentions a price change of the good itself, it is a movement along. If it mentions any other factor, it is a shift. Always state which one clearly.",
+      "realExample": {
+       "text": "When **Samsung** cut the price of its Galaxy A-series phones by 20%, sales volumes jumped significantly in emerging markets. Consumers who previously bought cheaper brands substituted towards Samsung (substitution effect), while existing Samsung users upgraded sooner (income effect).",
+       "emoji": "📱"
+      },
+      "misconception": "Students write \"demand fell\" when they mean quantity demanded fell. A fall in demand means the whole curve shifts left; a fall in quantity demanded is a movement along the curve caused by a price rise. Instead write: a rise in price causes a contraction in quantity demanded (movement along), not a fall in demand (shift)."
+     },
+     {
+      "id": "consumer-behaviour-demand:sub:movements-along-vs-shifts",
+      "body": [
+       {
+        "text": "A **movement along** the demand curve is caused by a change in the good's own price — nothing else. A price rise causes a **contraction** (movement up and left). A price fall causes an **extension** (movement down and right). The curve itself does not move.",
+        "type": "paragraph"
+       },
+       {
+        "text": "A **shift of** the demand curve means that at *every* price, consumers want to buy a different quantity. The entire curve moves left (decrease in demand) or right (increase in demand). This is caused by changes in factors other than the good's own price.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Key Terminology",
+        "type": "subheading"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Extension**: movement down the curve (price falls, Qd rises).",
+         "**Contraction**: movement up the curve (price rises, Qd falls).",
+         "**Increase in demand**: whole curve shifts right.",
+         "**Decrease in demand**: whole curve shifts left."
+        ]
+       }
+      ],
+      "title": "Movements Along vs Shifts",
+      "recall": {
+       "id": "consumer-behaviour-demand:sub:movements-along-vs-shifts:recall",
+       "type": "reorder",
+       "prompt": "Put these demand curve concepts in the right order:",
+       "shuffled": [
+        1,
+        3,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Price of the good itself changes",
+        "Movement along the demand curve occurs",
+        "Non-price factor changes",
+        "Entire demand curve shifts left or right"
+       ]
+      },
+      "keyIdea": "A change in the good's own price causes a movement along the demand curve; a change in any other factor shifts the whole curve left or right.",
+      "examMatters": "Diagram questions almost always test this distinction. Label your diagram clearly: if you show a movement, mark the old and new points on the same curve. If you show a shift, draw two separate curves (D1 and D2) and label both.",
+      "realExample": {
+       "text": "When **Starbucks** raises the price of a latte from £3.50 to £4.00, fewer lattes are sold — a contraction along the demand curve. But when a viral social-media health scare about coffee emerged, demand for lattes fell at every price — the whole curve shifted left.",
+       "emoji": "☕"
+      },
+      "misconception": "Students draw a shift when the question describes a price change of the good itself. A price change only ever causes a movement along the existing curve. Instead write: only non-price factors (income, tastes, substitutes, complements, population) shift the demand curve; the good's own price causes a movement along it."
+     },
+     {
+      "id": "consumer-behaviour-demand:sub:factors-that-shift-demand",
+      "body": [
+       {
+        "text": "Several non-price factors shift the demand curve. **Income**: if incomes rise, demand for normal goods increases (shifts right) while demand for inferior goods decreases (shifts left). **Tastes and preferences**: advertising, trends and health awareness all change what consumers want.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Prices of related goods** matter too. If the price of a **substitute** rises, demand for your good shifts right (consumers switch). If the price of a **complement** rises, demand for your good shifts left (the pair is bought together). **Population** growth shifts demand right simply because there are more buyers.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Expectations** can also shift demand. If consumers expect prices to rise in the future, they buy more now (demand shifts right). If they expect a recession, they may cut spending today (demand shifts left). These factors together explain why demand curves are constantly moving in real markets.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Factors That Shift Demand",
+      "recall": {
+       "id": "consumer-behaviour-demand:sub:factors-that-shift-demand:recall",
+       "type": "fillin",
+       "hints": [
+        "In____",
+        "su_________",
+        "Po_________"
+       ],
+       "prompt": "Complete the demand shifters:",
+       "answers": [
+        "Income",
+        "substitute",
+        "Population"
+       ],
+       "template": [
+        "___ : higher income shifts demand for normal goods right",
+        "→ Price of a ___ rises: demand for your good shifts right",
+        "→ ___ growth: more buyers shifts demand right"
+       ]
+      },
+      "keyIdea": "Income, tastes, prices of related goods, population size and expectations about the future all shift the demand curve — use the mnemonic ITPSE.",
+      "examMatters": "When you explain a demand shift, always name the specific factor, state the direction of the shift, and show it on a diagram. Generic answers like \"demand increased because more people wanted it\" score poorly — say *why* more people wanted it.",
+      "realExample": {
+       "text": "When **Tesla** slashed the price of the Model 3 in 2023, demand for rival EVs from Volkswagen and Hyundai fell — their demand curves shifted left. Tesla is a close substitute, so its price cut diverted buyers away from competitors at every price point.",
+       "emoji": "🚗"
+      },
+      "misconception": "Students list \"price\" as a factor that shifts demand. Price of the good itself causes a movement along, not a shift. Instead write: demand shifters are non-price factors — income, tastes, prices of substitutes or complements, population, and expectations."
+     }
+    ],
+    "takeaway": [
+     "Demand = willingness and ability to pay at each price.",
+     "Own-price change = movement along; any other factor = shift.",
+     "Use income and substitution effects to explain the downward slope.",
+     "Always name the specific factor causing a demand shift."
+    ],
+    "diagramRef": "Demand Curve",
+    "quizIndices": [
+     1,
+     2
+    ],
+    "practiceIndices": [
+     0
+    ]
+   },
+   {
+    "id": "consumer-behaviour-demand:block:0b3e4b53",
+    "title": "Price Elasticity of Demand (PED)",
+    "sections": [
+     {
+      "id": "consumer-behaviour-demand:sub:ped-definition-and-formula",
+      "body": [
+       {
+        "text": "**Price elasticity of demand (PED)** measures the responsiveness of quantity demanded to a change in the good's own price. The formula is: PED = % change in quantity demanded / % change in price. Because the demand curve slopes downward, PED is almost always **negative** — a price rise leads to a fall in quantity demanded.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Price rises by 10%",
+         "Quantity demanded falls by 20%",
+         "PED = -20% / 10% = -2"
+        ],
+        "result": "Demand is price elastic (PED > 1 in absolute terms)",
+        "resultType": "neutral"
+       },
+       {
+        "text": "Some examiners ignore the negative sign and work with absolute values — check your exam board's convention. What matters is the **magnitude**: a PED of -0.5 tells you quantity demanded is relatively unresponsive to price, while a PED of -3 tells you it is highly responsive.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "PED Definition and Formula",
+      "recall": {
+       "id": "consumer-behaviour-demand:sub:ped-definition-and-formula:recall",
+       "type": "reorder",
+       "prompt": "Put the PED calculation steps in the right order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "State the formula: PED = % change in Qd / % change in P",
+        "Calculate the percentage changes",
+        "Divide to get the PED value (always negative)",
+        "Interpret: elastic if |PED| > 1, inelastic if |PED| < 1"
+       ]
+      },
+      "keyIdea": "PED measures how sensitive quantity demanded is to a price change — it is the percentage change in quantity demanded divided by the percentage change in price.",
+      "examMatters": "Calculation questions on PED appear frequently. Show your working clearly: state the formula, plug in the percentage changes, and interpret the result. Examiners give method marks even if the final number is wrong.",
+      "realExample": {
+       "text": "Studies of **UK petrol** demand consistently find a short-run PED of around -0.2. When prices spike, most drivers still need fuel to commute, so quantity demanded barely falls. This makes petrol a textbook example of price-inelastic demand.",
+       "emoji": "⛽"
+      },
+      "misconception": "Students forget that PED uses percentage changes and instead plug in absolute numbers. A rise from 100 to 120 units is a 20% change, not 20. Instead write: always convert to percentage changes before dividing — PED = (% change in Qd) / (% change in P)."
+     },
+     {
+      "id": "consumer-behaviour-demand:sub:interpreting-ped-values",
+      "body": [
+       {
+        "text": "**Elastic demand** (|PED| > 1) means quantity demanded is highly responsive to price. A small price rise causes a proportionally larger fall in sales. **Inelastic demand** (|PED| < 1) means quantity demanded is relatively unresponsive — even a big price change barely moves sales.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Special Cases",
+        "type": "subheading"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Perfectly inelastic** (PED = 0): quantity demanded does not change at all when price changes — a vertical demand curve.",
+         "**Unit elastic** (|PED| = 1): percentage change in Qd exactly equals percentage change in price — total revenue stays constant.",
+         "**Perfectly elastic** (PED = infinity): any price rise above the going price causes demand to drop to zero — a horizontal demand curve."
+        ]
+       },
+       {
+        "text": "Most real-world goods fall somewhere between perfectly elastic and perfectly inelastic. Necessities with few substitutes (insulin, water) tend to be inelastic. Luxuries with many substitutes (a specific brand of trainers) tend to be elastic.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Interpreting PED Values",
+      "recall": {
+       "id": "consumer-behaviour-demand:sub:interpreting-ped-values:recall",
+       "type": "fillin",
+       "hints": [
+        "el_____",
+        "in_______",
+        "in_______"
+       ],
+       "prompt": "Complete the PED interpretations:",
+       "answers": [
+        "elastic",
+        "inelastic",
+        "inelastic"
+       ],
+       "template": [
+        "|PED| > 1 means demand is ___",
+        "→ |PED| < 1 means demand is ___",
+        "→ PED = 0 means demand is perfectly ___"
+       ]
+      },
+      "keyIdea": "If the absolute value of PED exceeds 1, demand is elastic and a price rise cuts revenue; below 1, demand is inelastic and a price rise raises revenue.",
+      "examMatters": "When interpreting PED, always state three things: the value, whether demand is elastic or inelastic, and what that means for the firm or consumer. A bare number without interpretation will not earn full marks.",
+      "realExample": {
+       "text": "**Novo Nordisk** can raise the price of its diabetes drug Ozempic with relatively little drop in sales because patients have few alternatives — demand is highly inelastic. In contrast, if one brand of bottled water raises its price, consumers simply switch to another brand.",
+       "emoji": "💊"
+      },
+      "misconception": "Students write \"necessities are always inelastic.\" While broadly true, it depends on how narrowly you define the good — water as a category is very inelastic, but a specific brand of bottled water is elastic because substitutes abound. Instead write: the elasticity of a good depends on the availability of substitutes, not just whether it is a necessity."
+     },
+     {
+      "id": "consumer-behaviour-demand:sub:factors-influencing-ped",
+      "body": [
+       {
+        "text": "The **number and closeness of substitutes** is the most important determinant of PED. If many alternatives exist, consumers can easily switch when the price rises, making demand elastic. If there are few or no substitutes (insulin, petrol), consumers are trapped and demand is inelastic.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The **proportion of income** spent on the good also matters. A 10% rise in the price of a newspaper barely affects your budget, so demand is inelastic. A 10% rise in rent is a huge hit, so you are more likely to change behaviour — demand is more elastic.",
+        "type": "paragraph"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Time**: demand becomes more elastic over time as consumers find alternatives.",
+         "**Habit and addiction**: habitual or addictive goods (cigarettes, coffee) have inelastic demand.",
+         "**Breadth of definition**: \"food\" is inelastic; \"organic avocados\" is elastic.",
+         "**Brand loyalty**: strong brands (Apple, Nike) face less elastic demand."
+        ]
+       }
+      ],
+      "title": "Factors Influencing PED",
+      "recall": {
+       "id": "consumer-behaviour-demand:sub:factors-influencing-ped:recall",
+       "type": "reorder",
+       "prompt": "Put these PED factors from most to least important:",
+       "shuffled": [
+        3,
+        0,
+        2,
+        1
+       ],
+       "correctOrder": [
+        "Number and closeness of substitutes",
+        "Proportion of income spent on the good",
+        "Time period (short run vs long run)",
+        "Habit and brand loyalty"
+       ]
+      },
+      "keyIdea": "Substitutes are the single biggest driver of PED — the more alternatives a consumer has, the more elastic demand becomes.",
+      "examMatters": "A common 8-mark question asks you to explain the factors that determine PED. Structure your answer around substitutes as the core driver, then layer on time, proportion of income, and habit as supporting factors. Always use a specific product example.",
+      "realExample": {
+       "text": "**Philip Morris** can raise cigarette prices more than most firms because nicotine addiction makes demand highly inelastic in the short run. However, over the long run, PED rises as smokers gradually quit or switch to vapes — illustrating how time increases elasticity.",
+       "emoji": "🚬"
+      },
+      "misconception": "Students list factors without explaining *why* they affect PED. Saying \"time affects elasticity\" earns no marks — you must explain that over time consumers discover substitutes and adjust habits, which is why long-run PED is higher than short-run. Instead write: always link each factor to substitutability, which is the underlying mechanism."
+     },
+     {
+      "id": "consumer-behaviour-demand:sub:ped-and-total-revenue",
+      "body": [
+       {
+        "text": "**Total revenue** (TR) = price x quantity. When a firm raises its price, two things happen: each unit sold earns more (pushing TR up), but fewer units are sold (pushing TR down). Which effect wins depends entirely on PED.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Demand is inelastic (|PED| < 1)",
+         "Price rises 10%, Qd falls only 5%",
+         "Revenue gain from higher P > revenue loss from lower Q"
+        ],
+        "result": "Total revenue increases",
+        "resultType": "good"
+       },
+       {
+        "text": "If demand is **elastic**, a price rise causes a proportionally larger fall in quantity, so total revenue *falls*. The smart move is to cut the price — you lose a little per unit but gain many more sales. This explains why budget airlines like Ryanair keep fares low; their customers are highly price-sensitive.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "PED and Total Revenue",
+      "recall": {
+       "id": "consumer-behaviour-demand:sub:ped-and-total-revenue:recall",
+       "type": "fillin",
+       "hints": [
+        "in_______",
+        "de_______",
+        "pr___"
+       ],
+       "prompt": "Complete the PED-revenue rules:",
+       "answers": [
+        "increases",
+        "decreases",
+        "price"
+       ],
+       "template": [
+        "If demand is inelastic, a price rise ___ total revenue",
+        "→ If demand is elastic, a price rise ___ total revenue",
+        "→ Total revenue = ___ x quantity"
+       ]
+      },
+      "keyIdea": "If demand is inelastic, raise the price to increase revenue; if demand is elastic, cut the price to increase revenue — this is the key business application of PED.",
+      "examMatters": "PED-revenue questions appear on almost every paper. Draw a quick table showing elastic vs inelastic outcomes, then apply it to the specific product in the question. Examiners reward candidates who link PED to the firm's pricing strategy.",
+      "realExample": {
+       "text": "**Ryanair** deliberately prices flights as low as possible because leisure travellers have elastic demand — they will switch to another airline or cancel the trip if fares rise. By cutting prices, Ryanair fills more seats and earns higher total revenue than it would at a higher fare.",
+       "emoji": "✈️"
+      },
+      "misconception": "Students assume that raising prices always increases revenue. That is only true when demand is inelastic. If demand is elastic, a price rise causes such a large drop in quantity that total revenue actually falls. Instead write: the effect of a price change on revenue depends on PED — inelastic means price and revenue move together; elastic means they move in opposite directions."
+     }
+    ],
+    "takeaway": [
+     "PED = % change in Qd / % change in price (always negative).",
+     "Elastic (|PED| > 1): price up = revenue down. Inelastic (|PED| < 1): price up = revenue up.",
+     "Substitutes are the key driver; time, income share, and habit also matter.",
+     "Always link PED to a pricing decision in your analysis."
+    ],
+    "diagramRef": "PED",
+    "quizIndices": [
+     3,
+     4
+    ],
+    "practiceIndices": [
+     1
+    ]
+   },
+   {
+    "id": "consumer-behaviour-demand:block:6311252e",
+    "title": "Income Elasticity of Demand (YED)",
+    "sections": [
+     {
+      "id": "consumer-behaviour-demand:sub:yed-definition-and-formula",
+      "body": [
+       {
+        "text": "**Income elasticity of demand (YED)** measures the responsiveness of demand to a change in real income. The formula is: YED = % change in quantity demanded / % change in real income. Unlike PED, the sign of YED carries crucial information — it tells you whether the good is **normal** or **inferior**.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Income rises by 5%",
+         "Demand for organic food rises by 15%",
+         "YED = +15% / +5% = +3"
+        ],
+        "result": "Normal good with income-elastic demand",
+        "resultType": "neutral"
+       },
+       {
+        "text": "A **positive** YED means the good is a **normal good** — demand rises when income rises. A **negative** YED means the good is **inferior** — demand falls when income rises because consumers switch to something they perceive as better.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "YED Definition and Formula",
+      "recall": {
+       "id": "consumer-behaviour-demand:sub:yed-definition-and-formula:recall",
+       "type": "reorder",
+       "prompt": "Put the YED analysis steps in the right order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Calculate YED = % change in Qd / % change in income",
+        "Check the sign of the result",
+        "Positive YED = normal good; negative YED = inferior good",
+        "Explain what happens to demand as incomes change"
+       ]
+      },
+      "keyIdea": "YED measures how demand responds to a change in consumer income — the sign tells you whether the good is normal (positive) or inferior (negative).",
+      "examMatters": "YED calculation questions test whether you can interpret the sign. State the formula, calculate the value with its sign, then classify the good as normal or inferior. A final sentence explaining what this means for the firm as incomes change earns full marks.",
+      "realExample": {
+       "text": "As UK average incomes rose through the 2010s, demand for **McDonald's** value-menu items stagnated while spending in mid-range restaurants grew. Value-menu items behaved as inferior goods (negative YED) — when people could afford more, they traded up.",
+       "emoji": "🍔"
+      },
+      "misconception": "Students forget that the sign matters for YED and always report a positive number. The sign is the whole point: positive = normal good, negative = inferior good. Instead write: always state whether YED is positive or negative and classify the good accordingly — this is what distinguishes YED from PED."
+     },
+     {
+      "id": "consumer-behaviour-demand:sub:interpreting-yed-values",
+      "body": [
+       {
+        "text": "Within normal goods there is an important split. **Necessities** (food, basic clothing, utilities) have a YED between 0 and +1 — demand rises with income but less than proportionally. **Luxuries** (designer clothes, holidays abroad, fine dining) have a YED greater than +1 — demand rises more than proportionally as incomes grow.",
+        "type": "paragraph"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**YED > +1**: luxury / income-elastic normal good (demand grows faster than income).",
+         "**0 < YED < +1**: necessity / income-inelastic normal good (demand grows slower than income).",
+         "**YED < 0**: inferior good (demand falls as income rises)."
+        ]
+       },
+       {
+        "text": "Classifying goods this way helps you predict what happens during economic booms and recessions. In a boom, luxury firms thrive while inferior goods lose sales. In a recession, the reverse happens — budget supermarkets and own-brand products see demand rise.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Interpreting YED Values",
+      "recall": {
+       "id": "consumer-behaviour-demand:sub:interpreting-yed-values:recall",
+       "type": "fillin",
+       "hints": [
+        "lu____",
+        "ne_______",
+        "in______"
+       ],
+       "prompt": "Complete the YED classifications:",
+       "answers": [
+        "luxury",
+        "necessity",
+        "inferior"
+       ],
+       "template": [
+        "YED > +1 means the good is a ___",
+        "→ 0 < YED < +1 means the good is a ___",
+        "→ YED < 0 means the good is ___"
+       ]
+      },
+      "keyIdea": "Luxuries have a YED greater than +1 so their demand surges as incomes rise, while necessities have a YED between 0 and +1 so demand grows slowly.",
+      "examMatters": "Context questions often describe an economic boom or recession and ask you to analyse the impact on different firms. Use YED to explain why luxury retailers suffer in recessions and why budget brands thrive. Always state the YED classification.",
+      "realExample": {
+       "text": "During the 2008 recession, demand for **Aldi** and **Lidl** own-brand groceries surged as household incomes fell — a classic inferior-good response. Meanwhile, premium retailer Waitrose saw sales dip, confirming that its products had a high positive YED.",
+       "emoji": "🛍️"
+      },
+      "misconception": "Students assume inferior goods are low-quality goods. Inferiority is about income response, not quality — bus travel is inferior not because buses are bad, but because when people earn more they switch to cars. Instead write: an inferior good is one whose demand falls as income rises, regardless of its objective quality."
+     },
+     {
+      "id": "consumer-behaviour-demand:sub:significance-of-yed",
+      "body": [
+       {
+        "text": "For **businesses**, YED helps with long-term planning. A firm selling luxury goods (high positive YED) should expect rapid demand growth in an expanding economy but painful drops in a recession. Diversifying into necessities (low positive YED) provides a safety net when the economy turns.",
+        "type": "paragraph"
+       },
+       {
+        "text": "For **developing countries**, YED explains structural change. As national income rises, demand shifts from basic agricultural goods (low YED) towards manufactured goods and services (higher YED). Governments can use this knowledge to invest in sectors that will grow fastest as the economy develops.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Economy enters recession",
+         "Incomes fall",
+         "Demand for luxuries (YED > 1) drops sharply"
+        ],
+        "result": "Luxury firms face revenue decline",
+        "resultType": "bad"
+       }
+      ],
+      "title": "Significance of YED",
+      "recall": {
+       "id": "consumer-behaviour-demand:sub:significance-of-yed:recall",
+       "type": "reorder",
+       "prompt": "Put these YED business strategy steps in order:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Economy enters recession and incomes fall",
+        "Demand for luxuries (YED > 1) drops sharply",
+        "Demand for inferior goods (YED < 0) rises",
+        "Firms diversify across YED ranges to hedge risk"
+       ]
+      },
+      "keyIdea": "Firms use YED to plan product ranges and target growing markets — producing income-elastic goods is risky in recessions but highly rewarding in booms.",
+      "examMatters": "Application questions ask you to advise a firm on its product strategy using YED. Link the YED value to the economic context (boom or recession), recommend a specific action, and explain the trade-off between stability and growth potential.",
+      "realExample": {
+       "text": "**Marriott International** expanded aggressively into budget hotel brands (Fairfield Inn, Moxy) alongside its luxury Ritz-Carlton line. This diversification hedges against YED risk — budget brands hold up in recessions while luxury brands capture boom-time spending.",
+       "emoji": "🏨"
+      },
+      "misconception": "Students write \"firms should only sell necessities because demand is stable.\" That ignores the upside of luxuries — when incomes rise, high-YED goods see demand surge, offering far higher growth potential. Instead write: the optimal strategy depends on the economic cycle — diversifying across YED ranges reduces risk."
+     }
+    ],
+    "takeaway": [
+     "YED = % change in Qd / % change in income; the sign classifies the good.",
+     "Positive YED = normal good; negative YED = inferior good.",
+     "Luxuries (YED > 1) boom in growth but crash in recessions.",
+     "Firms diversify across YED ranges to hedge against the economic cycle."
+    ],
+    "quizIndices": [
+     5
+    ],
+    "practiceIndices": [
+     2
+    ]
+   },
+   {
+    "id": "consumer-behaviour-demand:block:45f7cc61",
+    "title": "Cross Elasticity of Demand (XED)",
+    "sections": [
+     {
+      "id": "consumer-behaviour-demand:sub:xed-definition-and-formula",
+      "body": [
+       {
+        "text": "**Cross elasticity of demand (XED)** measures the responsiveness of demand for Good A to a change in the price of Good B. The formula is: XED = % change in quantity demanded of A / % change in price of B. Just like YED, the **sign** is critical — it reveals the relationship between the two goods.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Price of Coca-Cola rises by 10%",
+         "Demand for Pepsi rises by 8%",
+         "XED = +8% / +10% = +0.8"
+        ],
+        "result": "Positive XED: Coke and Pepsi are substitutes",
+        "resultType": "neutral"
+       },
+       {
+        "text": "A **positive** XED means the goods are **substitutes** — when one becomes more expensive, demand for the other rises. A **negative** XED means the goods are **complements** — when one becomes more expensive, demand for the other falls because they are consumed together.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "XED Definition and Formula",
+      "recall": {
+       "id": "consumer-behaviour-demand:sub:xed-definition-and-formula:recall",
+       "type": "fillin",
+       "hints": [
+        "pr___",
+        "su__________",
+        "co__________"
+       ],
+       "prompt": "Complete the XED rules:",
+       "answers": [
+        "price",
+        "substitutes",
+        "complements"
+       ],
+       "template": [
+        "XED = % change in Qd of A / % change in ___ of B",
+        "→ Positive XED means the goods are ___",
+        "→ Negative XED means the goods are ___"
+       ]
+      },
+      "keyIdea": "XED measures how the demand for one good responds to a price change in another good — the sign tells you whether the goods are substitutes or complements.",
+      "examMatters": "Calculation questions on XED always test whether you can interpret the sign. After calculating, state whether the goods are substitutes (positive) or complements (negative), and explain what this means for the firms involved.",
+      "realExample": {
+       "text": "When **Sony** cut the price of the PlayStation 5, demand for PS5 game titles rose sharply — a negative XED confirming they are complements. At the same time, demand for Xbox consoles dipped — a positive XED confirming PlayStation and Xbox are substitutes.",
+       "emoji": "🎮"
+      },
+      "misconception": "Students mix up which good goes in the numerator and which in the denominator. The numerator is always the change in quantity demanded of Good A; the denominator is always the change in price of Good B. Instead write: XED = (% change Qd of A) / (% change P of B) — keep A on top and B on the bottom."
+     },
+     {
+      "id": "consumer-behaviour-demand:sub:interpreting-xed-values",
+      "body": [
+       {
+        "text": "The **magnitude** of XED matters as well as the sign. A XED of +0.1 between two goods means they are weak substitutes — a price change in one barely affects demand for the other. A XED of +2.5 means they are very close substitutes — consumers switch readily between them.",
+        "type": "paragraph"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**XED close to 0**: the goods are unrelated (bread and laptops).",
+         "**XED strongly positive**: close substitutes (Coke and Pepsi).",
+         "**XED strongly negative**: strong complements (printers and ink cartridges)."
+        ]
+       },
+       {
+        "text": "Understanding the magnitude helps firms assess their competitive landscape. If your product has a high positive XED with a rival, you are in direct competition and must differentiate or compete on price. If XED is close to zero, you operate in a separate market.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Interpreting XED Values",
+      "recall": {
+       "id": "consumer-behaviour-demand:sub:interpreting-xed-values:recall",
+       "type": "reorder",
+       "prompt": "Put these XED magnitude interpretations in order from weakest to strongest relationship:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "XED close to zero: goods are unrelated",
+        "XED weakly positive: distant substitutes",
+        "XED strongly positive: close substitutes",
+        "XED strongly negative: strong complements"
+       ]
+      },
+      "keyIdea": "The closer XED is to zero, the weaker the relationship between the two goods; high positive values mean close substitutes and high negative values mean strong complements.",
+      "examMatters": "Higher-mark questions ask you to discuss the significance of XED for business strategy. Go beyond the sign: explain whether the relationship is strong or weak and what that means for pricing, marketing and competitive positioning.",
+      "realExample": {
+       "text": "**HP** prices its printers cheaply but charges high prices for ink cartridges because the two are strong complements (XED is highly negative). A cheap printer locks you into buying expensive ink — a strategy only possible when XED confirms a strong complementary relationship.",
+       "emoji": "🖨️"
+      },
+      "misconception": "Students forget about the magnitude and only focus on the sign. A XED of +0.01 and +3.0 are both positive (substitutes), but the practical implications are completely different. Instead write: always comment on the size of XED — weak substitutes barely affect each other, while close substitutes are in direct competition."
+     },
+     {
+      "id": "consumer-behaviour-demand:sub:significance-of-xed",
+      "body": [
+       {
+        "text": "For **pricing strategy**, XED is invaluable. If your product has a high positive XED with a rival, you know that undercutting their price will attract many of their customers. If your product is a strong complement to another, you can price one cheaply to drive sales of the profitable partner (the razor-and-blades model).",
+        "type": "paragraph"
+       },
+       {
+        "text": "For **market analysis**, XED helps define market boundaries. Competition regulators like the **CMA** use XED to determine whether two firms are in the same market — a high positive XED between their products suggests they are, which matters for merger approvals and anti-trust decisions.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Firm finds high positive XED with rival",
+         "Launches price-match guarantee",
+         "Rival's customers switch"
+        ],
+        "result": "Market share increases",
+        "resultType": "good"
+       }
+      ],
+      "title": "Significance of XED",
+      "recall": {
+       "id": "consumer-behaviour-demand:sub:significance-of-xed:recall",
+       "type": "fillin",
+       "hints": [
+        "di____",
+        "lo__",
+        "ma____"
+       ],
+       "prompt": "Complete the XED business applications:",
+       "answers": [
+        "direct",
+        "loss",
+        "market"
+       ],
+       "template": [
+        "High positive XED with a rival means ___ competition",
+        "→ Strong complement relationship enables ___-leader pricing",
+        "→ Regulators use XED to define ___ boundaries"
+       ]
+      },
+      "keyIdea": "Firms use XED to identify competitors and complementary partners, set prices strategically, and decide which markets to enter or avoid.",
+      "examMatters": "Evaluate questions on XED want you to link the concept to real business or government decisions. For businesses, discuss pricing and product strategy. For governments, discuss how regulators use XED to define markets and assess competition.",
+      "realExample": {
+       "text": "When **Netflix** launched in the UK, it had a high positive XED with **Sky TV** subscriptions. Sky responded by cutting prices and launching its own streaming service, Now TV. The high XED forced both firms into a price war that ultimately benefited consumers.",
+       "emoji": "📺"
+      },
+      "misconception": "Students say \"XED only matters for substitutes.\" Complementary goods are equally important — printer makers, games console makers and razor companies all rely on the complementary relationship to generate profits. Instead write: XED matters for both substitutes (competitive strategy) and complements (bundling and cross-selling strategy)."
+     }
+    ],
+    "takeaway": [
+     "XED = % change Qd of A / % change P of B; sign reveals the relationship.",
+     "Positive XED = substitutes; negative XED = complements; near zero = unrelated.",
+     "Magnitude matters: close substitutes compete fiercely; strong complements enable bundling."
+    ],
+    "quizIndices": [
+     6
+    ]
+   },
+   {
+    "id": "consumer-behaviour-demand:block:21da6ddd",
+    "title": "Significance of Elasticities",
+    "sections": [
+     {
+      "id": "consumer-behaviour-demand:sub:using-elasticities-for-business-decisions",
+      "body": [
+       {
+        "text": "**PED** tells a firm whether to raise or lower its price. If demand is inelastic, a price increase raises total revenue. If demand is elastic, a price cut attracts enough extra sales to more than compensate for the lower price per unit. This is why supermarkets run frequent promotions on elastic goods like branded biscuits but rarely discount inelastic staples like milk.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**YED** helps firms plan for the economic cycle. A luxury car manufacturer with a high positive YED should build cash reserves to survive recessions, while investing in capacity for boom periods. A firm selling inferior goods should plan for *declining* demand as economies grow long-term.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**XED** guides competitive and complementary strategy. A firm facing close substitutes must differentiate or compete on price. A firm selling complements can use loss-leader pricing on one product to drive profitable sales of the other — the classic razor-and-blades approach.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Using Elasticities for Business Decisions",
+      "recall": {
+       "id": "consumer-behaviour-demand:sub:using-elasticities-for-business-decisions:recall",
+       "type": "reorder",
+       "prompt": "Put these elasticity-business applications in the right order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "PED tells the firm whether to raise or lower price",
+        "YED helps plan for booms and recessions",
+        "XED guides competitive and complementary strategy",
+        "Combine all three for a complete pricing strategy"
+       ]
+      },
+      "keyIdea": "Elasticities give firms the data they need to set prices, plan product ranges and forecast revenue — they turn economic theory into actionable business strategy.",
+      "examMatters": "Synoptic questions ask you to apply all three elasticities to a single business context. Structure your answer by covering PED (pricing), YED (product range), and XED (competitive positioning) in turn, then evaluate which is most useful for the specific scenario.",
+      "realExample": {
+       "text": "**Tesco** uses Clubcard data to estimate PED for thousands of products, then prices elastic goods aggressively low to attract shoppers and inelastic goods slightly higher to protect margins. This data-driven approach to elasticity is now standard across all major UK supermarkets.",
+       "emoji": "🏪"
+      },
+      "misconception": "Students treat elasticities as purely theoretical concepts with no practical use. In reality, firms spend millions estimating PED, YED and XED to set prices and plan strategy. Instead write: elasticities are among the most practically useful tools in economics — every major pricing decision implicitly or explicitly uses them."
+     },
+     {
+      "id": "consumer-behaviour-demand:sub:using-elasticities-for-government-policy",
+      "body": [
+       {
+        "text": "**PED and taxation**: governments place indirect taxes on goods with inelastic demand (cigarettes, alcohol, petrol) because consumers cannot easily reduce consumption, so the tax raises significant revenue. Taxing elastic goods raises less revenue because consumers simply stop buying.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Government taxes cigarettes (inelastic demand)",
+         "Consumers barely cut quantity",
+         "Tax revenue is high"
+        ],
+        "result": "Effective revenue collection + reduced consumption at the margin",
+        "resultType": "good"
+       },
+       {
+        "text": "**YED and public services**: as a country's income grows, demand for healthcare and education (high YED services) rises faster than demand for basic food. Governments must plan for this structural shift by expanding service-sector capacity. In developing nations, this insight shapes long-term infrastructure investment.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**XED and competition policy**: regulators use XED to define relevant markets. If two products have a high positive XED, they are in the same market, so a merger between their producers may reduce competition. The **CMA** in the UK and the **European Commission** both use XED evidence in merger investigations.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Using Elasticities for Government Policy",
+      "recall": {
+       "id": "consumer-behaviour-demand:sub:using-elasticities-for-government-policy:recall",
+       "type": "fillin",
+       "hints": [
+        "in_______",
+        "pu____",
+        "X__"
+       ],
+       "prompt": "Complete the government elasticity applications:",
+       "answers": [
+        "inelastic",
+        "public",
+        "XED"
+       ],
+       "template": [
+        "Governments tax goods with ___ demand to maximise revenue",
+        "→ YED helps plan ___ services as national income grows",
+        "→ Regulators use ___ to define markets for merger investigations"
+       ]
+      },
+      "keyIdea": "Governments use PED to design effective taxes, YED to plan public services as incomes grow, and XED to regulate competition — elasticity shapes policy.",
+      "examMatters": "Policy-evaluation questions ask whether a tax or subsidy will achieve its objective. Always start with PED: if demand is inelastic, the tax raises revenue but barely changes behaviour. If demand is elastic, the tax changes behaviour but raises little revenue. State this trade-off explicitly.",
+      "realExample": {
+       "text": "The **UK government** raises tobacco duty every year precisely because PED for cigarettes is around -0.4 — highly inelastic. Each price rise generates substantial tax revenue while only modestly reducing the quantity smoked, achieving both a fiscal and a public-health objective.",
+       "emoji": "🇬🇧"
+      },
+      "misconception": "Students write \"taxes on inelastic goods are unfair because consumers cannot avoid them.\" While this may be true from an equity standpoint, the question is usually about effectiveness, not fairness. Instead write: governments tax inelastic goods because it maximises revenue and reduces consumption at the margin, but acknowledge the regressive equity concern as an evaluation point."
+     }
+    ],
+    "takeaway": [
+     "PED guides pricing: raise price if inelastic, cut if elastic.",
+     "YED helps plan for booms and recessions across product ranges.",
+     "XED informs competitive strategy and helps regulators define markets.",
+     "Governments tax inelastic goods for revenue; elastic goods for behaviour change."
+    ],
+    "quizIndices": [
+     7
+    ],
+    "practiceIndices": [
+     3
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "flow": {
+     "steps": [
+      "Consumer faces choices",
+      "Weighs marginal utility vs price",
+      "Allocates income to maximise utility"
+     ],
+     "result": "Maximum total satisfaction from limited budget",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "Rational Decision Making",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Rational consumer</strong> — a consumer who aims to maximise utility (satisfaction) from the goods and services they purchase, given their limited income.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Utility</strong> — the satisfaction or benefit a consumer receives from consuming a good or service; economists assume consumers seek to maximise total utility.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Diminishing marginal utility</strong> — the principle that each additional unit of a good consumed provides less extra satisfaction than the previous unit.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "A rational consumer compares the <strong>marginal utility per pound</strong> spent across goods and reallocates spending until the last pound spent on each good gives equal satisfaction.",
+        "type": "mech"
+       },
+       {
+        "text": "Diminishing marginal utility explains the downward-sloping demand curve: as you consume more, each extra unit is <strong>worth less to you</strong>, so you will only buy more at a lower price.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "In reality, consumers are influenced by habit, emotion, advertising, and imperfect information, which means <strong>rational behaviour is an assumption</strong>, not always a fact.",
+        "type": "imp"
+       },
+       {
+        "text": "Behavioural economics challenges the rational consumer model by showing systematic biases like loss aversion and anchoring that lead to predictably irrational choices.",
+        "type": "link"
+       }
+      ],
+      "title": "HOW CONSUMERS CHOOSE"
+     }
+    ],
+    "keyIdea": "Economists assume consumers weigh up costs and benefits to maximise their satisfaction, but real humans are not always so calculating, and understanding both sides matters.",
+    "takeaway": [
+     "Rational consumers maximise utility by equating marginal utility per pound across all goods.",
+     "Diminishing marginal utility explains why demand curves slope downward.",
+     "Rationality is a useful simplifying assumption, not a perfect description of real human behaviour."
+    ],
+    "examMatters": "Examiners expect you to state the assumption of rationality and then evaluate it. Show you understand that the model is useful for prediction but does not perfectly describe real behaviour.",
+    "misconception": "Students say rational means consumers always make the correct decision. Wrong because rationality in economics means pursuing maximum utility given available information, not that every decision turns out perfectly. Instead write: a rational consumer aims to maximise utility, but imperfect information and cognitive biases mean real decisions often fall short of this ideal."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Non-price factor changes",
+      "Demand curve shifts",
+      "New equilibrium forms"
+     ],
+     "result": "Price and quantity both adjust to the new demand",
+     "resultType": "good"
+    },
+    "meta": "5 concepts",
+    "title": "The Demand Curve",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Effective demand</strong> — the quantity of a good that consumers are willing and able to buy at a given price in a given time period.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Movement along the demand curve</strong> — caused only by a change in the good's own price; a fall in price causes an extension (more demanded), a rise causes a contraction.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Shift of the demand curve</strong> — caused by a change in any non-price factor; the entire curve moves left (decrease) or right (increase) at every price level.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "A rise in <strong>consumer income</strong> shifts demand right for normal goods and left for inferior goods, because consumers can now afford better alternatives.",
+        "type": "mech"
+       },
+       {
+        "text": "Changes in the <strong>price of related goods</strong> shift demand: a rise in the price of a substitute increases demand for this good, while a rise in the price of a complement decreases it.",
+        "type": "mech"
+       },
+       {
+        "text": "Shifts in <strong>tastes and preferences</strong>, driven by advertising, trends, or health concerns, move the entire demand curve without any change in the good's own price.",
+        "type": "mech"
+       },
+       {
+        "text": "An increase in <strong>population size</strong> or a change in demographics shifts market demand to the right as more consumers enter the market.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Always state whether you are describing a movement or a shift; examiners penalise students who confuse the two because it shows a fundamental misunderstanding.",
+        "type": "imp"
+       }
+      ],
+      "title": "FACTORS SHIFTING DEMAND"
+     }
+    ],
+    "keyIdea": "The demand curve tells the story of how much consumers want at every price, and knowing what moves along it versus what shifts it is the single most important distinction in microeconomics.",
+    "takeaway": [
+     "Demand means willingness and ability to pay; it is not just desire.",
+     "Only a change in the good's own price causes a movement along the demand curve.",
+     "Non-price factors (income, related goods, tastes, population) shift the entire curve."
+    ],
+    "examMatters": "Examiners will almost always test whether you know the difference between a movement along and a shift of the demand curve. Use 'extension' and 'contraction' for movements, and 'increase' and 'decrease' for shifts. Never say demand 'goes up' without specifying which type.",
+    "misconception": "Students say a fall in price shifts the demand curve to the right. Wrong because a change in the good's own price causes a movement along the existing curve, not a shift. Instead write: a fall in price causes an extension of demand (movement along); only non-price factors shift the curve."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Price rises",
+      "Check PED value",
+      "Predict revenue change"
+     ],
+     "result": "Inelastic: revenue rises; Elastic: revenue falls",
+     "resultType": "good"
+    },
+    "meta": "5 concepts",
+    "title": "Price Elasticity of Demand",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Price elasticity of demand (PED)</strong> — a measure of the responsiveness of quantity demanded to a change in the good's own price; it is always negative because of the inverse relationship.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Elastic demand</strong> — when |PED| > 1, meaning quantity demanded changes by a greater percentage than the price change; consumers are highly responsive.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Inelastic demand</strong> — when |PED| < 1, meaning quantity demanded changes by a smaller percentage than the price change; consumers are relatively unresponsive.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Demand is more elastic when there are <strong>close substitutes available</strong>, because consumers can easily switch to an alternative if the price rises.",
+        "type": "mech"
+       },
+       {
+        "text": "Demand tends to be more inelastic for goods that take a <strong>small proportion of income</strong>, are habit-forming, or are necessities with no close alternatives.",
+        "type": "mech"
+       },
+       {
+        "text": "Demand becomes more elastic over <strong>longer time periods</strong> because consumers have more time to find substitutes and adjust their behaviour.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "If demand is inelastic, a price rise <strong>increases total revenue</strong> because the fall in quantity is proportionally smaller than the rise in price.",
+        "type": "imp"
+       },
+       {
+        "text": "If demand is elastic, a price rise <strong>decreases total revenue</strong> because the fall in quantity is proportionally larger than the rise in price.",
+        "type": "imp"
+       },
+       {
+        "text": "PED links to taxation policy; governments place indirect taxes on price-inelastic goods like cigarettes because demand falls little, so tax revenue is high and the tax burden falls mainly on consumers.",
+        "type": "link"
+       }
+      ],
+      "title": "DETERMINANTS & REVENUE"
+     }
+    ],
+    "keyIdea": "PED measures how dramatically consumers react to a price change, and it holds the key to whether raising prices will grow or shrink a firm's total revenue.",
+    "formulas": [
+     {
+      "text": "PED = % change in quantity demanded ÷ % change in price",
+      "label": "PED"
+     },
+     {
+      "text": "Total Revenue = Price × Quantity",
+      "label": "TOTAL REVENUE"
+     }
+    ],
+    "takeaway": [
+     "PED measures how sensitive consumers are to price changes; it is always negative.",
+     "Availability of substitutes is the most important determinant of PED.",
+     "Firms with inelastic demand can raise prices to boost revenue; firms with elastic demand should lower prices instead."
+    ],
+    "examMatters": "Examiners expect you to calculate PED, state whether demand is elastic or inelastic, and then link this to the effect on total revenue. Always show the formula, substitute the numbers, and interpret the result in context.",
+    "misconception": "Students forget that PED is always negative and write a positive value. Wrong because the law of demand means price and quantity move in opposite directions, so the coefficient is negative. Instead write: PED is always negative due to the inverse price-quantity relationship; use the absolute value when comparing elasticity but acknowledge the negative sign."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Income rises",
+      "Check YED sign and size",
+      "Predict demand change"
+     ],
+     "result": "Normal goods: demand rises; Inferior goods: demand falls",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "Income Elasticity of Demand",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Income elasticity of demand (YED)</strong> — a measure of the responsiveness of quantity demanded to a change in consumer income.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Normal good</strong> — a good with a positive YED; demand rises as income rises because consumers can afford more of it.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Inferior good</strong> — a good with a negative YED; demand falls as income rises because consumers switch to higher-quality alternatives.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Luxury good</strong> — a normal good with YED > 1; demand rises by a greater proportion than the income increase, making it highly income-sensitive.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "The <strong>sign</strong> of YED tells you the type of good: positive means normal, negative means inferior; the <strong>size</strong> tells you the degree of sensitivity.",
+        "type": "mech"
+       },
+       {
+        "text": "During economic growth, firms selling luxury goods (YED > 1) see demand <strong>rise more than proportionally</strong>, while firms selling inferior goods see demand fall.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "In a recession, demand for inferior goods like budget supermarkets actually <strong>increases</strong> as consumers trade down, making them counter-cyclical businesses.",
+        "type": "imp"
+       },
+       {
+        "text": "YED links to business strategy; firms use YED data to decide which product lines to expand during booms and which to protect during recessions.",
+        "type": "link"
+       }
+      ],
+      "title": "HOW TO USE YED"
+     }
+    ],
+    "keyIdea": "When incomes rise, demand for some goods soars while demand for others actually falls, and the sign and size of YED tells firms exactly which way to bet.",
+    "formulas": [
+     {
+      "text": "YED = % change in quantity demanded ÷ % change in income",
+      "label": "YED"
+     }
+    ],
+    "takeaway": [
+     "YED sign tells you normal (+) or inferior (-); YED size tells you how sensitive demand is to income.",
+     "Luxury goods (YED > 1) boom in growth and crash in recession; inferior goods do the opposite.",
+     "Firms use YED to plan product portfolios that perform across the economic cycle."
+    ],
+    "examMatters": "Examiners test whether you can interpret the sign and size of YED. A positive value means normal good; a negative value means inferior good. If the positive value exceeds 1, it is a luxury. Always link YED to the economic cycle in your analysis.",
+    "misconception": "Students say inferior goods are low-quality goods. Wrong because inferior is an economic term meaning demand falls as income rises, not a judgement on quality. Instead write: inferior goods are those consumers buy less of as income rises, because they switch to preferred alternatives; examples include budget brands and public transport."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Price of good B changes",
+      "Check XED sign",
+      "Predict demand for good A"
+     ],
+     "result": "Positive XED: substitutes; Negative XED: complements",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "Cross Elasticity of Demand",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Cross elasticity of demand (XED)</strong> — a measure of the responsiveness of quantity demanded of good A to a change in the price of good B.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Substitutes</strong> — goods with a positive XED; when the price of one rises, demand for the other increases as consumers switch.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Complements</strong> — goods with a negative XED; when the price of one rises, demand for the other falls because the goods are consumed together.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "A <strong>high positive XED</strong> means the goods are close substitutes; consumers easily switch between them, so a rival's price change has a big impact on your sales.",
+        "type": "mech"
+       },
+       {
+        "text": "A <strong>high negative XED</strong> means the goods are strong complements; they are consumed jointly, so a price rise in one significantly reduces demand for the other.",
+        "type": "mech"
+       },
+       {
+        "text": "An XED close to zero means the goods are <strong>unrelated</strong>; a change in one's price has virtually no effect on demand for the other.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Firms use XED to identify their closest competitors and to set <strong>competitive pricing strategies</strong>; a high positive XED means intense direct competition.",
+        "type": "imp"
+       },
+       {
+        "text": "XED links to market structure; goods with many close substitutes (high positive XED) tend to exist in competitive markets with elastic demand.",
+        "type": "link"
+       }
+      ],
+      "title": "INTERPRETING XED"
+     }
+    ],
+    "keyIdea": "Products do not exist in isolation; XED reveals the invisible threads connecting goods, telling firms how a rival's price cut or a complement's price rise will drag their own sales up or down.",
+    "formulas": [
+     {
+      "text": "XED = % change in quantity demanded of good A ÷ % change in price of good B",
+      "label": "XED"
+     }
+    ],
+    "takeaway": [
+     "XED sign reveals the relationship: positive means substitutes, negative means complements, zero means unrelated.",
+     "The larger the absolute XED value, the stronger the connection between the two goods.",
+     "Firms monitor XED to anticipate how competitors' pricing decisions will affect their own demand."
+    ],
+    "examMatters": "Examiners want you to interpret the sign and size of XED in context. State whether goods are substitutes or complements, explain the strength of the relationship, and link it to the firm's pricing or marketing strategy.",
+    "misconception": "Students confuse XED with PED. Wrong because PED measures responsiveness to a change in the good's own price, while XED measures responsiveness to a change in another good's price. Instead write: PED looks at how demand responds to its own price; XED looks at how demand responds to a related good's price."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Calculate elasticity",
+      "Identify elastic or inelastic",
+      "Choose optimal strategy"
+     ],
+     "result": "Better pricing, tax, and subsidy decisions",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "Significance of Elasticities",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "A firm with <strong>inelastic demand</strong> can raise prices to increase total revenue, because the percentage fall in quantity demanded is smaller than the percentage rise in price.",
+        "type": "mech"
+       },
+       {
+        "text": "A firm facing <strong>elastic demand</strong> should lower prices or add value to increase sales volume, because customers are highly sensitive to price changes.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "YED helps firms plan for the <strong>economic cycle</strong>; luxury brands should build cash reserves during booms to survive the demand collapse during recessions.",
+        "type": "imp"
+       },
+       {
+        "text": "XED helps firms predict the impact of <strong>competitor actions</strong>; if your product has a high positive XED with a rival, their price cut will significantly damage your sales.",
+        "type": "imp"
+       }
+      ],
+      "title": "FOR BUSINESSES"
+     },
+     {
+      "items": [
+       {
+        "text": "Governments tax goods with <strong>inelastic demand</strong> (alcohol, tobacco, petrol) because revenue is maximised and demand falls relatively little.",
+        "type": "mech"
+       },
+       {
+        "text": "Subsidies are most effective at boosting consumption when demand is <strong>elastic</strong>, because the price reduction leads to a proportionally larger increase in quantity.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "The <strong>incidence of a tax</strong> depends on PED; when demand is inelastic, consumers bear most of the tax burden because they cannot easily reduce consumption.",
+        "type": "imp"
+       },
+       {
+        "text": "Elasticity concepts link to government intervention policies in later units; understanding PED is essential for evaluating whether taxes, subsidies, or regulations will achieve their intended outcomes.",
+        "type": "link"
+       }
+      ],
+      "title": "FOR GOVERNMENT"
+     }
+    ],
+    "keyIdea": "Elasticity is not just a classroom calculation; it is the practical tool that businesses use to set prices, governments use to design taxes, and economists use to predict market outcomes.",
+    "takeaway": [
+     "PED determines whether a price rise boosts or reduces total revenue; it is the foundation of pricing strategy.",
+     "Governments use PED to design effective taxes and subsidies; inelastic goods generate the most tax revenue.",
+     "All elasticities change over time, so firms and governments must continuously update their estimates."
+    ],
+    "examMatters": "Examiners love evaluation questions that ask you to assess the usefulness of elasticity to firms or governments. Always acknowledge that elasticity values change over time and depend on the accuracy of data, so firms should treat them as guides, not guarantees.",
+    "misconception": "Students treat elasticity as a fixed number that never changes. Wrong because elasticity varies with time, the availability of substitutes, and market conditions. Instead write: elasticity is a snapshot that can change as new substitutes emerge, consumer habits shift, or time passes."
+   }
+  ],
+  "section_quiz": [
+   {
+    "id": "consumer-behaviour-demand:quiz:546b5731",
+    "options": [
+     "Total utility decreases with each additional slice.",
+     "Marginal utility from each additional slice decreases.",
+     "The consumer will always stop eating after the third slice.",
+     "The price the consumer is willing to pay increases."
+    ],
+    "question": "According to the law of diminishing marginal utility, as a consumer eats more slices of pizza:",
+    "explanation": "Diminishing marginal utility states that each additional unit provides less extra satisfaction. Total utility may still increase (just at a decreasing rate). The consumer's willingness to pay falls, not rises.",
+    "correctIndex": 1
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:a2efc186",
+    "options": [
+     "Rational utility maximisation.",
+     "The law of diminishing marginal utility.",
+     "Inertia and default bias.",
+     "Herding behaviour."
+    ],
+    "question": "A consumer continues to renew their expensive gym membership despite rarely attending. This is best explained by:",
+    "explanation": "Inertia (default bias) explains why consumers stick with existing arrangements even when they are not optimal. The consumer lacks motivation to cancel despite the poor value. This is a departure from rational utility maximisation.",
+    "correctIndex": 2
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:e572c5fb",
+    "options": [
+     "An increase in the price of butter.",
+     "A decrease in the price of margarine (a substitute for butter).",
+     "An increase in consumer incomes (butter is a normal good).",
+     "A successful advertising campaign for butter."
+    ],
+    "question": "Which of the following would cause a leftward shift of the demand curve for butter?",
+    "explanation": "A fall in the price of margarine (a substitute) makes margarine relatively cheaper, reducing demand for butter at every price level (leftward shift). A change in butter's own price causes a movement along, not a shift.",
+    "correctIndex": 1
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:28db500e",
+    "options": [
+     "-2.0 (elastic)",
+     "-0.5 (inelastic)",
+     "+0.5 (inelastic)",
+     "-5.0 (elastic)"
+    ],
+    "question": "A firm finds that when it raises the price of its product by 10%, quantity demanded falls by 5%. The PED is:",
+    "explanation": "PED = %ΔQd / %ΔP = -5% / +10% = -0.5. The absolute value is 0.5, which is less than 1, so demand is price inelastic. The negative sign reflects the inverse relationship between price and quantity demanded.",
+    "correctIndex": 1
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:0562be5e",
+    "options": [
+     "Decrease the price to sell significantly more units.",
+     "Increase the price, as the fall in quantity demanded will be proportionately smaller.",
+     "Keep the price unchanged and increase advertising instead.",
+     "Decrease the price, as consumers are highly responsive to price changes."
+    ],
+    "question": "If demand for a product is price inelastic, a firm wishing to increase total revenue should:",
+    "explanation": "When demand is inelastic (|PED| < 1), the percentage fall in quantity demanded is smaller than the percentage rise in price, so TR = P x Q increases when price rises.",
+    "correctIndex": 1
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:8b7c2740",
+    "options": [
+     "An inferior good with income-inelastic demand.",
+     "A necessity with income-inelastic demand.",
+     "A luxury (superior good) with income-elastic demand.",
+     "A Giffen good with upward-sloping demand."
+    ],
+    "question": "A product has a YED of +2.5. This means the good is:",
+    "explanation": "YED > 0 means it is a normal good (demand rises with income). YED > 1 means it is income elastic, classified as a luxury. Demand rises more than proportionately with income.",
+    "correctIndex": 2
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:0ebc96c5",
+    "options": [
+     "The goods are close substitutes.",
+     "The goods are strong complements.",
+     "Good A is an inferior good.",
+     "The goods are unrelated."
+    ],
+    "question": "The cross elasticity of demand between Good A and Good B is -1.8. This indicates that:",
+    "explanation": "A negative XED indicates complementary goods. The large absolute value (-1.8) shows a strong complementary relationship: a rise in the price of Good B causes a significant fall in demand for Good A.",
+    "correctIndex": 1
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:ada8a4f2",
+    "options": [
+     "Zero (perfectly inelastic).",
+     "Infinity (perfectly elastic).",
+     "-1 (unit elastic).",
+     "It cannot be determined without more information."
+    ],
+    "question": "At the midpoint of a straight-line demand curve, PED is equal to:",
+    "explanation": "At the midpoint of a linear demand curve, |PED| = 1 (unit elastic). Above the midpoint, demand is elastic; below it, demand is inelastic. At the midpoint, total revenue is maximised.",
+    "correctIndex": 2
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:1e018e71",
+    "options": [
+     "There are many close substitutes for cigarettes.",
+     "Cigarettes take a large proportion of consumers' income.",
+     "Cigarettes are addictive, creating habitual consumption patterns.",
+     "The market for cigarettes is narrowly defined."
+    ],
+    "question": "Which of the following is the most likely reason for cigarettes having inelastic demand?",
+    "explanation": "Addiction creates a strong habitual consumption pattern, making consumers unresponsive to price changes. Few close substitutes, necessity-like behaviour, and brand loyalty all contribute to inelastic demand for cigarettes.",
+    "correctIndex": 2
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:92b694c4",
+    "options": [
+     "More tax revenue because consumers continue buying the same quantity.",
+     "Less tax revenue because the quantity demanded falls significantly.",
+     "The same tax revenue regardless of elasticity.",
+     "More tax revenue because the price rises by more."
+    ],
+    "question": "A government imposes an indirect tax on a good with price elastic demand. Compared to taxing a good with inelastic demand, the elastic good tax will generate:",
+    "explanation": "With elastic demand, the tax-induced price increase causes a large fall in quantity demanded. Since tax revenue = tax per unit x quantity sold, the large reduction in quantity means less total tax revenue compared to taxing an inelastic good.",
+    "correctIndex": 1
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:c1327fec",
+    "options": [
+     "Price elastic demand",
+     "Price inelastic demand",
+     "Unitary elastic demand",
+     "Perfectly elastic demand"
+    ],
+    "question": "The price elasticity of demand for a good is calculated to be -0.4. This means the good has:",
+    "explanation": "A PED value between 0 and -1 (ignoring the sign, less than 1 in absolute value) indicates inelastic demand, meaning a change in price leads to a proportionally smaller change in quantity demanded.",
+    "correctIndex": 1
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:20ab46ce",
+    "options": [
+     "Complements with strong relationship",
+     "Substitutes with strong relationship",
+     "Unrelated goods",
+     "Complements with weak relationship"
+    ],
+    "question": "If the cross elasticity of demand (XED) between goods A and B is +2.5, the goods are:",
+    "explanation": "A positive XED indicates substitute goods. The magnitude of 2.5 (greater than 1) shows a strong relationship: a price rise in good A leads to a proportionally larger increase in demand for good B.",
+    "correctIndex": 1
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:bd27c703",
+    "options": [
+     "An increase in consumer incomes",
+     "A fall in the price of a complementary good",
+     "A decrease in consumer incomes",
+     "A rise in the price of the good itself"
+    ],
+    "question": "A leftward shift of the demand curve for a normal good could be caused by:",
+    "explanation": "For a normal good, demand has a positive relationship with income. A decrease in consumer incomes reduces demand at every price level, shifting the demand curve to the left. A price change causes a movement along the curve, not a shift.",
+    "correctIndex": 2
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:a81ced2c",
+    "options": [
+     "A normal good",
+     "A luxury good",
+     "An inferior good",
+     "A Giffen good"
+    ],
+    "question": "The income elasticity of demand (YED) for a good is -0.6. This good is classified as:",
+    "explanation": "A negative YED means that as income rises, demand for the good falls. This is the defining characteristic of an inferior good, such as budget supermarket brands.",
+    "correctIndex": 2
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:40eaae0b",
+    "options": [
+     "Price elastic",
+     "Price inelastic",
+     "Unitary elastic",
+     "Perfectly elastic"
+    ],
+    "question": "A business finds that when it raises the price of its product by 10%, total revenue increases. This suggests demand is:",
+    "explanation": "When demand is price inelastic, a price increase leads to a proportionally smaller fall in quantity demanded, so total revenue rises. With elastic demand, a price rise would reduce total revenue.",
+    "correctIndex": 1
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:752e3762",
+    "options": [
+     "The product becomes addictive to consumers",
+     "More close substitutes become available in the market",
+     "Consumers spend a smaller proportion of their income on it",
+     "The time period under consideration is shortened"
+    ],
+    "question": "Which of the following would make demand for a product more price elastic?",
+    "explanation": "The availability of close substitutes is the most important determinant of PED. More substitutes mean consumers can easily switch when price rises, making demand more elastic.",
+    "correctIndex": 1
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:cc4701c1",
+    "options": [
+     "-0.6",
+     "+0.6",
+     "+1.67",
+     "-1.67"
+    ],
+    "question": "If the price of coffee rises by 15% and the quantity demanded of tea increases by 9%, the XED of tea with respect to coffee is:",
+    "explanation": "XED = % change in Qd of tea / % change in price of coffee = +9% / +15% = +0.6. The positive value confirms coffee and tea are substitutes.",
+    "correctIndex": 1
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:ed2f2ddd",
+    "options": [
+     "The income effect and the substitution effect",
+     "A shift in the demand curve to the left",
+     "A decrease in consumer confidence",
+     "An increase in the cost of production"
+    ],
+    "question": "According to the law of demand, an increase in the price of a good leads to a fall in quantity demanded because of:",
+    "explanation": "The law of demand is explained by the income effect (higher price reduces real income, so less is bought) and the substitution effect (higher price makes alternatives relatively cheaper, so consumers switch).",
+    "correctIndex": 0
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:7fd21aa9",
+    "options": [
+     "-0.5",
+     "-1.0",
+     "-2.0",
+     "-1.5"
+    ],
+    "question": "A firm sells 200 units at a price of $10. After reducing the price to $8, it sells 280 units. The PED is approximately:",
+    "explanation": "% change in Qd = (280-200)/200 x 100 = +40%. % change in price = (8-10)/10 x 100 = -20%. PED = +40% / -20% = -2.0. Demand is price elastic.",
+    "correctIndex": 2
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:971f8590",
+    "options": [
+     "A fall in the price of electric vehicles",
+     "An increase in government subsidies for electric vehicle purchases",
+     "A decrease in the price of petrol",
+     "A rise in interest rates on car loans"
+    ],
+    "question": "Which factor is most likely to result in a rightward shift of the demand curve for electric vehicles?",
+    "explanation": "Government subsidies effectively reduce the cost to consumers, increasing demand at every price level and shifting the demand curve right. A fall in the vehicle's own price causes a movement along the curve, not a shift.",
+    "correctIndex": 1
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:8d3a6fae",
+    "options": [
+     "An inferior good",
+     "A necessity with income inelastic demand",
+     "A luxury good with income elastic demand",
+     "A Giffen good"
+    ],
+    "question": "The YED for organic food is estimated at +2.3. This suggests organic food is:",
+    "explanation": "A positive YED greater than 1 indicates a luxury (or superior) good with income elastic demand. As income rises, demand for organic food increases more than proportionally.",
+    "correctIndex": 2
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:a141a525",
+    "options": [
+     "The total amount consumers spend on a good",
+     "The difference between what consumers are willing to pay and what they actually pay",
+     "The profit that producers earn from selling a good",
+     "The excess supply of a good at a given price"
+    ],
+    "question": "Consumer surplus is defined as:",
+    "explanation": "Consumer surplus measures the extra satisfaction consumers receive by paying less than the maximum they would have been willing to pay. It is shown graphically as the area between the demand curve and the market price.",
+    "correctIndex": 1
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:64bd9d02",
+    "options": [
+     "Leave total revenue unchanged",
+     "Increase total revenue by 5%",
+     "Decrease total revenue by 5%",
+     "Increase total revenue by 10%"
+    ],
+    "question": "If the PED for a good is -1.0 (unitary elastic), a 5% increase in price will:",
+    "explanation": "With unitary elasticity (PED = -1), the percentage change in quantity demanded exactly offsets the percentage change in price, so total revenue remains unchanged.",
+    "correctIndex": 0
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:d1f094f1",
+    "options": [
+     "Salt is a luxury good with many substitutes",
+     "Salt takes up a very small proportion of consumer income and has few substitutes",
+     "Consumers are very sensitive to changes in the price of salt",
+     "Salt is an inferior good whose demand falls as income rises"
+    ],
+    "question": "Which of the following best explains why demand for salt is price inelastic?",
+    "explanation": "Salt has very inelastic demand because it accounts for a tiny proportion of income (so price changes have minimal impact on budgets) and there are few direct substitutes.",
+    "correctIndex": 1
+   },
+   {
+    "id": "consumer-behaviour-demand:quiz:3c414720",
+    "options": [
+     "A leftward shift in the demand for phone cases",
+     "A rightward shift in the demand for phone cases",
+     "A movement along the demand curve for phone cases",
+     "No change in the demand for phone cases"
+    ],
+    "question": "A decrease in the price of smartphones is most likely to cause:",
+    "explanation": "Smartphones and phone cases are complementary goods. A fall in the price of smartphones increases their quantity demanded, which increases demand for phone cases at every price, shifting the demand curve rightward.",
+    "correctIndex": 1
+   }
+  ],
+  "section_practice": [
+   {
+    "id": "consumer-behaviour-demand:practice:3b14f765",
+    "marks": 4,
+    "command": "Define",
+    "guidance": "PED measures the responsiveness of quantity demanded to a change in price (1 mark). It is calculated as the percentage change in quantity demanded divided by the percentage change in price (1 mark). A PED greater than 1 means demand is price elastic — quantity demanded changes proportionately more than price (1 mark). A PED less than 1 means demand is price inelastic (1 mark).",
+    "question": "Define the term 'price elasticity of demand' (PED). (4 marks)"
+   },
+   {
+    "id": "consumer-behaviour-demand:practice:3f666102",
+    "marks": 6,
+    "command": "Explain",
+    "guidance": "Factor 1: Availability of substitutes (1 mark) — if there are many close substitutes, consumers can easily switch when the price rises, making demand more elastic (1 mark). For example, a rise in the price of one brand of cereal leads consumers to buy competing brands (1 mark).\n\nFactor 2: Proportion of income spent (1 mark) — goods that take up a small share of income, such as salt, tend to have inelastic demand because price changes have little impact on the consumer's budget (1 mark). Conversely, expensive items like cars are more elastic because price changes significantly affect affordability (1 mark).",
+    "question": "Explain two factors that determine whether the demand for a good is price elastic or price inelastic. (6 marks)"
+   },
+   {
+    "id": "consumer-behaviour-demand:practice:0cdc49a5",
+    "marks": 10,
+    "command": "Analyse",
+    "guidance": "Define YED as the responsiveness of demand to a change in consumer income (2 marks). In a recession, real incomes fall (1 mark). Normal goods with positive YED will see falling demand — luxury goods with high positive YED will be hit hardest (2 marks). Inferior goods with negative YED will see rising demand — e.g. supermarket own-brand products (2 marks). The supermarket could stock more inferior goods and value ranges while reducing shelf space for premium lines (2 marks). Judgement: YED data is useful for planning but is based on averages and may not reflect local consumer behaviour (1 mark).",
+    "question": "Analyse how knowledge of income elasticity of demand (YED) could help a supermarket plan for an economic recession. (10 marks)"
+   },
+   {
+    "id": "consumer-behaviour-demand:practice:9a655728",
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Define PED and its relationship with total revenue (2 marks).\n\nSignificance — elastic demand: A price cut increases total revenue because the percentage rise in quantity demanded exceeds the percentage fall in price (3 marks); firms in competitive markets with many substitutes must be cautious about raising prices (2 marks).\n\nSignificance — inelastic demand: A price rise increases total revenue because quantity demanded falls proportionately less than the price increase (3 marks); firms with strong brands or unique products can exploit this (2 marks).\n\nLimitations: PED estimates may be inaccurate due to data limitations or changing market conditions (2 marks); firms must also consider competitor reactions — a price cut may trigger a price war (2 marks); non-price factors such as quality, branding and customer service also influence demand (2 marks).\n\nEvaluation: PED is a valuable tool but should not be used in isolation. It is most useful when combined with knowledge of market structure, YED, and competitor behaviour (2 marks).",
+    "question": "Evaluate the significance of price elasticity of demand for a firm's pricing and revenue decisions. (20 marks)"
+   },
+   {
+    "id": "consumer-behaviour-demand:practice:69c1e33b",
+    "marks": 4,
+    "command": "Outline",
+    "guidance": "Cause 1: Rising real incomes — as consumers become wealthier, they can afford electric vehicles, which are a normal good, increasing demand at every price (1 mark) and shifting the curve to the right (1 mark).\n\nCause 2: Government subsidies — grants that reduce the effective purchase price make electric vehicles more affordable (1 mark), increasing the quantity demanded at every price level (1 mark).",
+    "question": "Outline two causes of a rightward shift in the demand curve for electric vehicles. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "id": "consumer-behaviour-demand:card:fc64e9a3",
+    "back": "The quantity of a good consumers are <strong>willing and able to buy</strong> at a given price. Willingness alone is not enough — demand must be backed by purchasing power.",
+    "front": "What is effective demand?"
+   },
+   {
+    "id": "consumer-behaviour-demand:card:9137f2b4",
+    "back": "Ceteris paribus, as the <strong>price of a good rises</strong>, the <strong>quantity demanded falls</strong>, and vice versa. This creates a downward-sloping demand curve.",
+    "front": "State the law of demand."
+   },
+   {
+    "id": "consumer-behaviour-demand:card:f9ec13b7",
+    "back": "A change in the <strong>price of the good itself</strong>. A price rise causes a contraction in demand; a price fall causes an extension in demand.",
+    "front": "What causes a movement along the demand curve?"
+   },
+   {
+    "id": "consumer-behaviour-demand:card:1dbb10d6",
+    "back": "<strong>Income</strong>, <strong>prices of substitutes and complements</strong>, <strong>consumer tastes and preferences</strong>, and <strong>population size</strong>. These shift the entire curve left or right.",
+    "front": "Name four factors that shift the demand curve."
+   },
+   {
+    "id": "consumer-behaviour-demand:card:f7eed50d",
+    "back": "A measure of the <strong>responsiveness of quantity demanded</strong> to a change in price. Calculated as: <strong>% change in Qd ÷ % change in price</strong>. Always negative (inverse relationship).",
+    "front": "What is price elasticity of demand (PED)?"
+   },
+   {
+    "id": "consumer-behaviour-demand:card:c7263e10",
+    "back": "Demand is <strong>price elastic</strong> — a 1% change in price causes a greater than 1% change in quantity demanded. A price rise reduces total revenue.",
+    "front": "What does PED > 1 mean?"
+   },
+   {
+    "id": "consumer-behaviour-demand:card:ccca3da3",
+    "back": "Demand is <strong>price inelastic</strong> — a 1% change in price causes a less than 1% change in quantity demanded. A price rise increases total revenue.",
+    "front": "What does PED < 1 mean?"
+   },
+   {
+    "id": "consumer-behaviour-demand:card:4d2706c9",
+    "back": "Many <strong>close substitutes</strong> available, the good is a <strong>luxury</strong> rather than a necessity, and the good takes up a <strong>large proportion of income</strong>.",
+    "front": "Name three factors that make demand price elastic."
+   },
+   {
+    "id": "consumer-behaviour-demand:card:9bdbbfc0",
+    "back": "A measure of the <strong>responsiveness of demand to a change in income</strong>. Calculated as: <strong>% change in Qd ÷ % change in income</strong>. Positive for normal goods, negative for inferior goods.",
+    "front": "What is income elasticity of demand (YED)?"
+   },
+   {
+    "id": "consumer-behaviour-demand:card:f00dfbb5",
+    "back": "A good for which demand <strong>increases as income rises</strong> (positive YED). Most goods are normal goods — e.g., restaurant meals, holidays, branded clothing.",
+    "front": "What is a normal good?"
+   },
+   {
+    "id": "consumer-behaviour-demand:card:1b1d8431",
+    "back": "A good for which demand <strong>falls as income rises</strong> (negative YED). Consumers switch to better alternatives as they become richer — e.g., value-brand food, bus travel.",
+    "front": "What is an inferior good?"
+   },
+   {
+    "id": "consumer-behaviour-demand:card:22da96e9",
+    "back": "A measure of the <strong>responsiveness of demand for good A to a change in the price of good B</strong>. Positive XED = substitutes; negative XED = complements.",
+    "front": "What is cross elasticity of demand (XED)?"
+   },
+   {
+    "id": "consumer-behaviour-demand:card:2c8dafd9",
+    "back": "The difference between the price a consumer is <strong>willing to pay</strong> and the price they <strong>actually pay</strong>. Shown as the area below the demand curve and above the market price.",
+    "front": "What is consumer surplus?"
+   },
+   {
+    "id": "consumer-behaviour-demand:card:cd5ec54d",
+    "back": "<strong>Substitutes</strong> are goods that can replace each other (e.g., Coke and Pepsi). <strong>Complements</strong> are goods used together (e.g., cars and petrol). A rise in the price of one affects demand for the other.",
+    "front": "What is the difference between a substitute and a complement?"
+   },
+   {
+    "id": "consumer-behaviour-demand:card:d76fa7d9",
+    "back": "As a consumer consumes more units of a good, the <strong>additional satisfaction</strong> from each extra unit <strong>decreases</strong>. This helps explain the downward-sloping demand curve.",
+    "front": "What is diminishing marginal utility?"
+   },
+   {
+    "id": "consumer-behaviour-demand:card:4efad12c",
+    "back": "If demand is <strong>inelastic</strong>, a firm can raise prices to increase revenue. If demand is <strong>elastic</strong>, a firm should lower prices to increase revenue. PED determines the revenue impact of price changes.",
+    "front": "How does PED affect a firm's pricing strategy?"
+   },
+   {
+    "id": "consumer-behaviour-demand:card:446bab00",
+    "back": "Total revenue <strong>falls</strong>. The percentage drop in quantity demanded is greater than the percentage rise in price, so the loss in volume outweighs the gain from higher prices.",
+    "front": "What happens to total revenue when price rises and demand is elastic?"
+   },
+   {
+    "id": "consumer-behaviour-demand:card:95ed3f14",
+    "back": "A <strong>luxury good</strong> — demand rises more than proportionately to income. As incomes grow, spending on these goods grows faster than income itself.",
+    "front": "What does a YED greater than 1 indicate?"
+   }
+  ],
+  "section_diagrams": [
+   {
+    "id": "consumer-behaviour-demand:diagram:3651b386",
+    "title": "Demand Curve: Movements and Shifts",
+    "checklist": [
+     "Axes labelled: Price on y-axis, Quantity on x-axis",
+     "Demand curve slopes downward left to right",
+     "Clear distinction between movement along and shift of the curve",
+     "Correct terminology: extension/contraction vs increase/decrease in demand",
+     "Non-price factors listed for shifts"
+    ],
+    "scenarios": [
+     {
+      "svg": "<svg width=\"500\" height=\"420\" viewBox=\"0 0 500 420\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\">\n  <defs>\n  <marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker>\n</defs>\n  \n  <line x1=\"80\" y1=\"330\" x2=\"465\" y2=\"330\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <line x1=\"80\" y1=\"330\" x2=\"80\" y2=\"30\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <text x=\"265\" y=\"380\" fill=\"#94a3b8\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" letter-spacing=\"0.5\">QUANTITY (Q)</text>\n  <text x=\"35\" y=\"190\" fill=\"#94a3b8\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" letter-spacing=\"0.5\" transform=\"rotate(-90,35,190)\">PRICE (P)</text>\n\n  <!-- Demand curve -->\n  <line x1=\"80\" y1=\"78\" x2=\"431.5\" y2=\"290.8\" stroke=\"#e2e8f0\" stroke-width=\"3\"/>\n  <text x=\"405.6\" y=\"302\" fill=\"#e2e8f0\" font-size=\"15\" font-weight=\"700\" class=\"draggable\">D</text>\n\n  <!-- Point A (high price, low qty) -->\n  <line x1=\"172.5\" y1=\"134\" x2=\"80\" y2=\"134\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/>\n  <line x1=\"172.5\" y1=\"134\" x2=\"172.5\" y2=\"330\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/>\n  <circle cx=\"172.5\" cy=\"134\" r=\"14\" fill=\"#f472b6\" stroke=\"#f472b6\" stroke-width=\"2\"/>\n  <text x=\"172.5\" y=\"139\" fill=\"#fff\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">A</text>\n  <text x=\"66\" y=\"139\" fill=\"#94a3b8\" font-size=\"13\" font-weight=\"700\" text-anchor=\"end\" class=\"draggable\">P₁</text>\n  <text x=\"172.5\" y=\"352\" fill=\"#94a3b8\" font-size=\"13\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">Q₁</text>\n\n  <!-- Point B (low price, high qty) -->\n  <line x1=\"311.25\" y1=\"218\" x2=\"80\" y2=\"218\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/>\n  <line x1=\"311.25\" y1=\"218\" x2=\"311.25\" y2=\"330\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/>\n  <circle cx=\"311.25\" cy=\"218\" r=\"14\" fill=\"#fbbf24\" stroke=\"#fbbf24\" stroke-width=\"2\"/>\n  <text x=\"311.25\" y=\"223\" fill=\"#fff\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">B</text>\n  <text x=\"66\" y=\"223\" fill=\"#94a3b8\" font-size=\"13\" font-weight=\"700\" text-anchor=\"end\" class=\"draggable\">P₂</text>\n  <text x=\"311.25\" y=\"352\" fill=\"#94a3b8\" font-size=\"13\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">Q₂</text>\n\n  <!-- Movement arrow -->\n  <path d=\"M 183.60000000000002 139.6 L 302 212.4\" stroke=\"#fb923c\" stroke-width=\"2.5\" fill=\"none\" marker-end=\"url(#arr)\"/>\n  <text x=\"257.6\" y=\"162\" fill=\"#fb923c\" font-size=\"12\" font-weight=\"600\" class=\"draggable\">Movement along</text>\n</svg>",
+      "label": "Movement Along (Price Change)"
+     },
+     {
+      "svg": "<svg width=\"500\" height=\"420\" viewBox=\"0 0 500 420\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\">\n  <defs>\n  <marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker>\n</defs>\n  \n  <line x1=\"80\" y1=\"330\" x2=\"465\" y2=\"330\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <line x1=\"80\" y1=\"330\" x2=\"80\" y2=\"30\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <text x=\"265\" y=\"380\" fill=\"#94a3b8\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" letter-spacing=\"0.5\">QUANTITY (Q)</text>\n  <text x=\"35\" y=\"190\" fill=\"#94a3b8\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" letter-spacing=\"0.5\" transform=\"rotate(-90,35,190)\">PRICE (P)</text>\n\n  <!-- D1 (original, dashed) -->\n  <line x1=\"80\" y1=\"120\" x2=\"394.5\" y2=\"310.4\" stroke=\"#475569\" stroke-width=\"2\" stroke-dasharray=\"8,5\"/>\n  <text x=\"368.6\" y=\"316\" fill=\"#475569\" font-size=\"12\" class=\"draggable\">D₁</text>\n\n  <!-- D2 (shifted right) -->\n  <line x1=\"80\" y1=\"78\" x2=\"431.5\" y2=\"290.8\" stroke=\"#e2e8f0\" stroke-width=\"3\"/>\n  <text x=\"405.6\" y=\"302\" fill=\"#e2e8f0\" font-size=\"15\" font-weight=\"700\" class=\"draggable\">D₂</text>\n\n  <!-- Shift arrows -->\n  <line x1=\"191\" y1=\"190\" x2=\"235.4\" y2=\"190\" stroke=\"#34d399\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <line x1=\"265\" y1=\"232\" x2=\"309.4\" y2=\"232\" stroke=\"#34d399\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n\n  <text x=\"265\" y=\"400\" fill=\"#94a3b8\" font-size=\"11\" text-anchor=\"middle\" opacity=\"0.7\">Non-price factors shift the entire demand curve</text>\n</svg>",
+      "label": "Shift of Demand (Non-Price Factor)"
+     }
+    ],
+    "description": "Shows the downward-sloping demand curve with a movement along the curve (caused by a price change) and a shift of the curve (caused by a non-price factor)."
+   },
+   {
+    "id": "consumer-behaviour-demand:diagram:9c7c5cfc",
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <defs>\n    <marker id=\"pr1\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0,8 3,0 6\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n  <!-- LEFT: Demand curve with elasticity regions -->\n  <!-- Axes -->\n  <line x1=\"40\" y1=\"280\" x2=\"230\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" marker-end=\"url(#pr1)\"/>\n  <line x1=\"40\" y1=\"280\" x2=\"40\" y2=\"25\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" marker-end=\"url(#pr1)\"/>\n  <text x=\"135\" y=\"310\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\">Quantity</text>\n  <text x=\"15\" y=\"150\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" transform=\"rotate(-90,15,150)\">Price</text>\n  <!-- Demand line -->\n  <line x1=\"55\" y1=\"40\" x2=\"215\" y2=\"270\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"220\" y=\"267\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">D</text>\n  <!-- Midpoint -->\n  <circle cx=\"135\" cy=\"155\" r=\"4\" fill=\"#3b82f6\"/>\n  <text x=\"148\" y=\"153\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"600\">Midpoint</text>\n  <!-- Elastic region -->\n  <line x1=\"55\" y1=\"40\" x2=\"135\" y2=\"155\" stroke=\"#ef4444\" stroke-width=\"4\" opacity=\"0.3\"/>\n  <text x=\"70\" y=\"80\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">Elastic</text>\n  <text x=\"70\" y=\"93\" fill=\"#ef4444\" font-size=\"9\">|PED| > 1</text>\n  <!-- Inelastic region -->\n  <line x1=\"135\" y1=\"155\" x2=\"215\" y2=\"270\" stroke=\"#3b82f6\" stroke-width=\"4\" opacity=\"0.3\"/>\n  <text x=\"170\" y=\"235\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"600\">Inelastic</text>\n  <text x=\"170\" y=\"248\" fill=\"#3b82f6\" font-size=\"9\">|PED| < 1</text>\n  <text x=\"135\" y=\"170\" fill=\"#e8ecf5\" font-size=\"9\">|PED| = 1</text>\n\n  <!-- RIGHT: Total Revenue curve -->\n  <!-- Axes -->\n  <line x1=\"280\" y1=\"280\" x2=\"470\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" marker-end=\"url(#pr1)\"/>\n  <line x1=\"280\" y1=\"280\" x2=\"280\" y2=\"25\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" marker-end=\"url(#pr1)\"/>\n  <text x=\"375\" y=\"310\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\">Quantity</text>\n  <text x=\"260\" y=\"150\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" transform=\"rotate(-90,260,150)\">Total Revenue</text>\n  <!-- TR curve (inverted U) -->\n  <path d=\"M 295 270 Q 340 180, 375 105 Q 395 105, 410 120 Q 440 180, 455 270\" stroke=\"#059669\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"420\" y=\"140\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">TR</text>\n  <!-- Max TR point -->\n  <circle cx=\"375\" cy=\"105\" r=\"4\" fill=\"#3b82f6\"/>\n  <text x=\"375\" y=\"92\" fill=\"#3b82f6\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">Max TR</text>\n  <text x=\"375\" y=\"78\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"middle\">(unit elastic)</text>\n  <!-- Rising TR region -->\n  <text x=\"320\" y=\"175\" fill=\"#ef4444\" font-size=\"9\" font-weight=\"600\">TR rising</text>\n  <text x=\"320\" y=\"188\" fill=\"#ef4444\" font-size=\"8\">(elastic region)</text>\n  <!-- Falling TR region -->\n  <text x=\"420\" y=\"200\" fill=\"#3b82f6\" font-size=\"9\" font-weight=\"600\">TR falling</text>\n  <text x=\"420\" y=\"213\" fill=\"#3b82f6\" font-size=\"8\">(inelastic region)</text>\n  <!-- Dashed line connecting midpoints -->\n  <line x1=\"375\" y1=\"105\" x2=\"375\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"4,3\" opacity=\"0.4\"/>\n</svg>",
+    "title": "PED and Total Revenue",
+    "checklist": [
+     "Demand curve with elastic and inelastic regions clearly marked",
+     "Midpoint identified as unit elastic (|PED| = 1)",
+     "Total revenue curve showing inverted-U shape",
+     "Maximum TR at the unit elastic point",
+     "Clear link between PED value and TR behaviour"
+    ],
+    "description": "Shows the relationship between price elasticity of demand and total revenue. When demand is elastic, a price cut raises TR; when inelastic, a price rise raises TR."
+   },
+   {
+    "id": "consumer-behaviour-demand:diagram:11ed0202",
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <!-- Perfectly Elastic -->\n  <text x=\"55\" y=\"20\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">Perfectly</text>\n  <text x=\"55\" y=\"32\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">Elastic</text>\n  <line x1=\"15\" y1=\"80\" x2=\"95\" y2=\"80\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"55\" y=\"72\" fill=\"#059669\" font-size=\"9\" text-anchor=\"middle\">D</text>\n  <text x=\"8\" y=\"100\" fill=\"#e8ecf5\" font-size=\"8\">P</text>\n  <line x1=\"15\" y1=\"50\" x2=\"15\" y2=\"110\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <line x1=\"15\" y1=\"110\" x2=\"95\" y2=\"110\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <text x=\"90\" y=\"120\" fill=\"#e8ecf5\" font-size=\"8\">Q</text>\n  <text x=\"55\" y=\"135\" fill=\"#3b82f6\" font-size=\"9\" text-anchor=\"middle\">|PED| = ∞</text>\n\n  <!-- Elastic -->\n  <text x=\"160\" y=\"20\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">Elastic</text>\n  <line x1=\"125\" y1=\"45\" x2=\"195\" y2=\"108\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"198\" y=\"105\" fill=\"#059669\" font-size=\"9\">D</text>\n  <line x1=\"120\" y1=\"45\" x2=\"120\" y2=\"110\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <line x1=\"120\" y1=\"110\" x2=\"200\" y2=\"110\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <text x=\"113\" y=\"100\" fill=\"#e8ecf5\" font-size=\"8\">P</text>\n  <text x=\"195\" y=\"120\" fill=\"#e8ecf5\" font-size=\"8\">Q</text>\n  <text x=\"160\" y=\"135\" fill=\"#3b82f6\" font-size=\"9\" text-anchor=\"middle\">|PED| > 1</text>\n\n  <!-- Unit Elastic -->\n  <text x=\"265\" y=\"20\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">Unit Elastic</text>\n  <path d=\"M 235 45 Q 255 85, 295 108\" stroke=\"#059669\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"298\" y=\"105\" fill=\"#059669\" font-size=\"9\">D</text>\n  <line x1=\"230\" y1=\"45\" x2=\"230\" y2=\"110\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <line x1=\"230\" y1=\"110\" x2=\"300\" y2=\"110\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <text x=\"223\" y=\"100\" fill=\"#e8ecf5\" font-size=\"8\">P</text>\n  <text x=\"295\" y=\"120\" fill=\"#e8ecf5\" font-size=\"8\">Q</text>\n  <text x=\"265\" y=\"135\" fill=\"#3b82f6\" font-size=\"9\" text-anchor=\"middle\">|PED| = 1</text>\n\n  <!-- Inelastic -->\n  <text x=\"370\" y=\"20\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">Inelastic</text>\n  <line x1=\"350\" y1=\"45\" x2=\"390\" y2=\"108\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"393\" y=\"105\" fill=\"#059669\" font-size=\"9\">D</text>\n  <line x1=\"340\" y1=\"45\" x2=\"340\" y2=\"110\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <line x1=\"340\" y1=\"110\" x2=\"400\" y2=\"110\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <text x=\"333\" y=\"100\" fill=\"#e8ecf5\" font-size=\"8\">P</text>\n  <text x=\"395\" y=\"120\" fill=\"#e8ecf5\" font-size=\"8\">Q</text>\n  <text x=\"370\" y=\"135\" fill=\"#3b82f6\" font-size=\"9\" text-anchor=\"middle\">|PED| < 1</text>\n\n  <!-- Perfectly Inelastic -->\n  <text x=\"470\" y=\"20\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">Perfectly</text>\n  <text x=\"470\" y=\"32\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">Inelastic</text>\n  <line x1=\"470\" y1=\"45\" x2=\"470\" y2=\"108\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"478\" y=\"55\" fill=\"#059669\" font-size=\"9\">D</text>\n  <line x1=\"440\" y1=\"45\" x2=\"440\" y2=\"110\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <line x1=\"440\" y1=\"110\" x2=\"490\" y2=\"110\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <text x=\"433\" y=\"100\" fill=\"#e8ecf5\" font-size=\"8\">P</text>\n  <text x=\"485\" y=\"120\" fill=\"#e8ecf5\" font-size=\"8\">Q</text>\n  <text x=\"470\" y=\"135\" fill=\"#3b82f6\" font-size=\"9\" text-anchor=\"middle\">|PED| = 0</text>\n\n  <!-- Summary table -->\n  <rect x=\"20\" y=\"155\" width=\"460\" height=\"185\" rx=\"6\" fill=\"none\" stroke=\"#e8ecf5\" stroke-width=\"1\" opacity=\"0.3\"/>\n  <text x=\"250\" y=\"175\" fill=\"#e8ecf5\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"600\">PED ↔ Total Revenue Relationship</text>\n  <line x1=\"30\" y1=\"182\" x2=\"470\" y2=\"182\" stroke=\"#e8ecf5\" stroke-width=\"0.5\" opacity=\"0.3\"/>\n  <text x=\"40\" y=\"200\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\">PED Value</text>\n  <text x=\"190\" y=\"200\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\">Price Rise Effect on TR</text>\n  <text x=\"370\" y=\"200\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\">Price Cut Effect on TR</text>\n  <line x1=\"30\" y1=\"207\" x2=\"470\" y2=\"207\" stroke=\"#e8ecf5\" stroke-width=\"0.5\" opacity=\"0.3\"/>\n  <text x=\"40\" y=\"225\" fill=\"#ef4444\" font-size=\"10\">|PED| > 1 (elastic)</text>\n  <text x=\"190\" y=\"225\" fill=\"#ef4444\" font-size=\"10\">TR falls ↓</text>\n  <text x=\"370\" y=\"225\" fill=\"#059669\" font-size=\"10\">TR rises ↑</text>\n  <text x=\"40\" y=\"248\" fill=\"#3b82f6\" font-size=\"10\">|PED| = 1 (unit)</text>\n  <text x=\"190\" y=\"248\" fill=\"#e8ecf5\" font-size=\"10\">TR unchanged ↔</text>\n  <text x=\"370\" y=\"248\" fill=\"#e8ecf5\" font-size=\"10\">TR unchanged ↔</text>\n  <text x=\"40\" y=\"271\" fill=\"#059669\" font-size=\"10\">|PED| < 1 (inelastic)</text>\n  <text x=\"190\" y=\"271\" fill=\"#059669\" font-size=\"10\">TR rises ↑</text>\n  <text x=\"370\" y=\"271\" fill=\"#ef4444\" font-size=\"10\">TR falls ↓</text>\n  <line x1=\"30\" y1=\"280\" x2=\"470\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"0.5\" opacity=\"0.3\"/>\n  <text x=\"250\" y=\"298\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"middle\" opacity=\"0.7\">Key insight: firms should only raise price if demand is inelastic</text>\n  <text x=\"250\" y=\"312\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"middle\" opacity=\"0.7\">Government taxes inelastic goods for maximum revenue with least Qd fall</text>\n</svg>",
+    "title": "PED Values: Visual Comparison",
+    "checklist": [
+     "All five PED cases shown with correct curve shapes",
+     "PED values clearly labelled for each case",
+     "Relationship between PED and total revenue explained",
+     "Practical significance for firms and government included"
+    ],
+    "description": "Shows the five key PED cases from perfectly elastic to perfectly inelastic, with the shape of the demand curve for each."
+   },
+   {
+    "id": "consumer-behaviour-demand:diagram:f8177054",
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <!-- YED Section -->\n  <text x=\"130\" y=\"22\" fill=\"#e8ecf5\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"700\">Income Elasticity (YED)</text>\n  <!-- YED Number line -->\n  <line x1=\"20\" y1=\"55\" x2=\"245\" y2=\"55\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <!-- Zero marker -->\n  <line x1=\"130\" y1=\"45\" x2=\"130\" y2=\"65\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"130\" y=\"80\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\">0</text>\n  <!-- +1 marker -->\n  <line x1=\"190\" y1=\"45\" x2=\"190\" y2=\"65\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"190\" y=\"80\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\">+1</text>\n  <!-- Regions -->\n  <rect x=\"20\" y=\"48\" width=\"110\" height=\"14\" rx=\"2\" fill=\"#ef4444\" opacity=\"0.2\"/>\n  <text x=\"75\" y=\"102\" fill=\"#ef4444\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"600\">Inferior Good</text>\n  <text x=\"75\" y=\"114\" fill=\"#ef4444\" font-size=\"8\" text-anchor=\"middle\">YED &lt; 0</text>\n  <text x=\"75\" y=\"126\" fill=\"#ef4444\" font-size=\"8\" text-anchor=\"middle\">↑ Income → ↓ Qd</text>\n  <rect x=\"130\" y=\"48\" width=\"60\" height=\"14\" rx=\"2\" fill=\"#3b82f6\" opacity=\"0.2\"/>\n  <text x=\"160\" y=\"102\" fill=\"#3b82f6\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"600\">Necessity</text>\n  <text x=\"160\" y=\"114\" fill=\"#3b82f6\" font-size=\"8\" text-anchor=\"middle\">0 &lt; YED &lt; 1</text>\n  <text x=\"160\" y=\"126\" fill=\"#3b82f6\" font-size=\"8\" text-anchor=\"middle\">↑ Income → ↑ Qd (slowly)</text>\n  <rect x=\"190\" y=\"48\" width=\"55\" height=\"14\" rx=\"2\" fill=\"#059669\" opacity=\"0.2\"/>\n  <text x=\"220\" y=\"102\" fill=\"#059669\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"600\">Luxury</text>\n  <text x=\"220\" y=\"114\" fill=\"#059669\" font-size=\"8\" text-anchor=\"middle\">YED &gt; 1</text>\n  <text x=\"220\" y=\"126\" fill=\"#059669\" font-size=\"8\" text-anchor=\"middle\">↑ Income → ↑↑ Qd</text>\n\n  <!-- Examples -->\n  <text x=\"75\" y=\"142\" fill=\"#e8ecf5\" font-size=\"8\" text-anchor=\"middle\" opacity=\"0.7\">e.g. value brands</text>\n  <text x=\"160\" y=\"142\" fill=\"#e8ecf5\" font-size=\"8\" text-anchor=\"middle\" opacity=\"0.7\">e.g. bread, rice</text>\n  <text x=\"220\" y=\"142\" fill=\"#e8ecf5\" font-size=\"8\" text-anchor=\"middle\" opacity=\"0.7\">e.g. holidays</text>\n\n  <!-- XED Section -->\n  <text x=\"380\" y=\"22\" fill=\"#e8ecf5\" font-size=\"13\" text-anchor=\"middle\" font-weight=\"700\">Cross Elasticity (XED)</text>\n  <!-- XED Number line -->\n  <line x1=\"275\" y1=\"55\" x2=\"485\" y2=\"55\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <!-- Zero marker -->\n  <line x1=\"380\" y1=\"45\" x2=\"380\" y2=\"65\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"380\" y=\"80\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\">0</text>\n  <!-- Regions -->\n  <rect x=\"275\" y=\"48\" width=\"105\" height=\"14\" rx=\"2\" fill=\"#3b82f6\" opacity=\"0.2\"/>\n  <text x=\"328\" y=\"102\" fill=\"#3b82f6\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"600\">Complements</text>\n  <text x=\"328\" y=\"114\" fill=\"#3b82f6\" font-size=\"8\" text-anchor=\"middle\">XED &lt; 0</text>\n  <text x=\"328\" y=\"126\" fill=\"#3b82f6\" font-size=\"8\" text-anchor=\"middle\">↑ Pᵇ → ↓ Qdₐ</text>\n  <rect x=\"380\" y=\"48\" width=\"105\" height=\"14\" rx=\"2\" fill=\"#059669\" opacity=\"0.2\"/>\n  <text x=\"433\" y=\"102\" fill=\"#059669\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"600\">Substitutes</text>\n  <text x=\"433\" y=\"114\" fill=\"#059669\" font-size=\"8\" text-anchor=\"middle\">XED &gt; 0</text>\n  <text x=\"433\" y=\"126\" fill=\"#059669\" font-size=\"8\" text-anchor=\"middle\">↑ Pᵇ → ↑ Qdₐ</text>\n  <!-- Unrelated -->\n  <text x=\"380\" y=\"142\" fill=\"#e8ecf5\" font-size=\"8\" text-anchor=\"middle\" opacity=\"0.7\">XED = 0: Unrelated</text>\n  <!-- Examples -->\n  <text x=\"328\" y=\"155\" fill=\"#e8ecf5\" font-size=\"8\" text-anchor=\"middle\" opacity=\"0.7\">e.g. printers &amp; ink</text>\n  <text x=\"433\" y=\"155\" fill=\"#e8ecf5\" font-size=\"8\" text-anchor=\"middle\" opacity=\"0.7\">e.g. Coke &amp; Pepsi</text>\n\n  <!-- Significance boxes -->\n  <rect x=\"15\" y=\"175\" width=\"225\" height=\"165\" rx=\"6\" fill=\"none\" stroke=\"#059669\" stroke-width=\"1.5\"/>\n  <text x=\"128\" y=\"195\" fill=\"#059669\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"600\">YED Significance</text>\n  <text x=\"25\" y=\"215\" fill=\"#e8ecf5\" font-size=\"9\">• Firms: forecast demand over business cycle</text>\n  <text x=\"25\" y=\"232\" fill=\"#e8ecf5\" font-size=\"9\">• Luxury firms vulnerable in recessions</text>\n  <text x=\"25\" y=\"249\" fill=\"#e8ecf5\" font-size=\"9\">• Diversify product range (normal + inferior)</text>\n  <text x=\"25\" y=\"266\" fill=\"#e8ecf5\" font-size=\"9\">• Govt: tax revenue on luxuries is volatile</text>\n  <text x=\"25\" y=\"283\" fill=\"#e8ecf5\" font-size=\"9\">• Structural change: growth shifts demand</text>\n  <text x=\"25\" y=\"300\" fill=\"#e8ecf5\" font-size=\"9\">  from primary to services/luxuries</text>\n  <text x=\"25\" y=\"320\" fill=\"#e8ecf5\" font-size=\"9\">• Inferior goods act as counter-cyclical buffer</text>\n\n  <rect x=\"260\" y=\"175\" width=\"225\" height=\"165\" rx=\"6\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/>\n  <text x=\"373\" y=\"195\" fill=\"#3b82f6\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"600\">XED Significance</text>\n  <text x=\"270\" y=\"215\" fill=\"#e8ecf5\" font-size=\"9\">• Firms: identify competitors (substitutes)</text>\n  <text x=\"270\" y=\"232\" fill=\"#e8ecf5\" font-size=\"9\">• Pricing strategy: bundle complements</text>\n  <text x=\"270\" y=\"249\" fill=\"#e8ecf5\" font-size=\"9\">• Anticipate effect of rivals' price changes</text>\n  <text x=\"270\" y=\"266\" fill=\"#e8ecf5\" font-size=\"9\">• Govt: predict effects of taxes on related</text>\n  <text x=\"270\" y=\"283\" fill=\"#e8ecf5\" font-size=\"9\">  goods (e.g. sugar tax → complement demand)</text>\n  <text x=\"270\" y=\"300\" fill=\"#e8ecf5\" font-size=\"9\">• Competition authorities: define markets</text>\n  <text x=\"270\" y=\"320\" fill=\"#e8ecf5\" font-size=\"9\">• Cross-subsidisation (cheap printer, pricey ink)</text>\n</svg>",
+    "title": "YED and XED Interpretation",
+    "checklist": [
+     "YED: inferior, necessity and luxury classifications shown",
+     "XED: substitutes and complements clearly distinguished",
+     "Sign convention explained for both YED and XED",
+     "Real-world examples provided",
+     "Significance for firms, consumers and government"
+    ],
+    "description": "Visual summary of how to interpret income elasticity and cross elasticity of demand values, with goods classification."
+   }
+  ],
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "When a good's price falls, it becomes relatively cheaper compared to substitutes, so consumers switch towards it (the substitution effect).",
+      "The lower price also increases consumers' real income, allowing them to buy more of all normal goods (the income effect).",
+      "Combined, these effects cause an extension in quantity demanded — a movement along the demand curve.",
+      "Total consumer surplus increases as both existing buyers pay less and new buyers enter the market."
+     ],
+     "title": "A fall in price increases quantity demanded",
+     "result": "The law of demand is explained by the substitution and income effects, and price falls raise consumer welfare through increased surplus."
+    },
+    {
+     "steps": [
+      "Changes in real disposable income shift demand — rightward for normal goods (positive YED), leftward for inferior goods (negative YED).",
+      "A rise in the price of a substitute increases demand for the good (positive XED), while a rise in the price of a complement reduces it (negative XED).",
+      "Changes in tastes, population size, advertising and consumer confidence also shift the demand curve independently of price.",
+      "A rightward shift in demand, ceteris paribus, puts upward pressure on equilibrium price and increases equilibrium quantity."
+     ],
+     "title": "Non-price factors shift the demand curve",
+     "result": "Understanding demand shifters is essential for predicting how markets respond to changes in income, related goods and consumer preferences."
+    },
+    {
+     "steps": [
+      "Price elasticity of demand (PED) measures the percentage change in quantity demanded divided by the percentage change in price.",
+      "Demand is elastic (PED > 1) when there are close substitutes, the good takes a large share of income, or consumers have time to adjust.",
+      "Demand is inelastic (PED < 1) for necessities, addictive goods, or products with few substitutes.",
+      "PED varies along a straight-line demand curve — elastic at high prices and inelastic at low prices."
+     ],
+     "title": "PED determines the responsiveness of demand to price changes",
+     "result": "PED is determined by substitutability, proportion of income, necessity and time — and it drives pricing and revenue decisions."
+    },
+    {
+     "steps": [
+      "When demand is price elastic (PED > 1), a price cut raises total revenue because the quantity effect outweighs the price effect.",
+      "When demand is price inelastic (PED < 1), a price rise raises total revenue because quantity demanded falls proportionately less.",
+      "Firms use PED knowledge to set revenue-maximising prices — lowering prices for elastic goods and raising them for inelastic ones.",
+      "Governments also use PED when setting indirect taxes — taxes on inelastic goods (cigarettes, petrol) raise the most revenue with the least fall in quantity."
+     ],
+     "title": "Elasticity determines the impact on total revenue",
+     "result": "PED is the critical link between price changes and revenue outcomes for both firms and governments."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "PED estimates are unreliable in practice",
+     "content": "Calculating PED requires ceteris paribus conditions, but in reality multiple factors change simultaneously. Elasticity also changes over time as consumers find substitutes. Firms may rely on outdated estimates, leading to incorrect pricing decisions. PED is a useful theoretical tool but should be used cautiously in real-world strategy."
+    },
+    {
+     "title": "Income elasticity depends on the definition of 'normal'",
+     "content": "Whether a good is normal or inferior depends on income levels and cultural context. A good may be inferior in a high-income country but normal in a developing one. YED also changes as incomes rise — luxury goods become necessities over time. This means YED classifications are not fixed and can mislead long-term forecasts."
+    },
+    {
+     "title": "Consumer surplus is difficult to measure",
+     "content": "Consumer surplus assumes we can accurately measure willingness to pay, but this varies enormously between individuals and is influenced by behavioural biases. Consumers may overvalue goods due to advertising or brand loyalty, distorting true surplus calculations. Despite this, consumer surplus remains the standard welfare measure in economics."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "id": "consumer-behaviour-demand:mistake:22514608",
+    "title": "Confusing movement along vs shift of the demand curve",
+    "examTip": "Examiners specifically look for this distinction. Say \"an increase in quantity demanded\" for price changes, and \"an increase in demand\" for shifts.",
+    "mistake": "Students say \"demand increases\" when the price falls. A fall in price causes a movement ALONG the demand curve (extension), not a shift.",
+    "correction": "A change in price → movement along the curve. A change in a non-price factor (income, tastes, prices of related goods, population) → shift of the curve. Use \"quantity demanded\" for movements, \"demand\" for shifts."
+   },
+   {
+    "id": "consumer-behaviour-demand:mistake:d1bfd973",
+    "title": "Getting the PED formula sign wrong or forgetting it is usually negative",
+    "examTip": "Show your working clearly. Write the formula, substitute the values, then state whether demand is elastic or inelastic.",
+    "mistake": "Students forget that PED is normally negative (due to the inverse relationship between price and quantity demanded) and give a positive answer.",
+    "correction": "PED = % change in Qd ÷ % change in price. The answer is usually negative. For elasticity comparisons, use the absolute value: |PED| > 1 is elastic, |PED| < 1 is inelastic."
+   },
+   {
+    "id": "consumer-behaviour-demand:mistake:51fcc0d3",
+    "title": "Confusing elastic and inelastic demand",
+    "mistake": "Students mix up which is which — saying demand is \"elastic\" when quantity demanded barely changes, or \"inelastic\" when it changes a lot.",
+    "correction": "Elastic demand (PED > 1): quantity demanded is highly responsive to price changes — luxuries, goods with many substitutes. Inelastic demand (PED < 1): quantity demanded barely changes — necessities, addictive goods, goods with few substitutes."
+   },
+   {
+    "id": "consumer-behaviour-demand:mistake:d6510341",
+    "title": "Ignoring the conditions of demand when explaining shifts",
+    "examTip": "Use the mnemonic PASIFIC: Population, Advertising, Substitutes/complements, Income, Fashion/tastes, Interest rates, Confidence.",
+    "mistake": "Students say demand shifted but do not explain WHY or which non-price factor changed.",
+    "correction": "Always identify the specific factor: changes in income, tastes/preferences, population, price of substitutes or complements, advertising, expectations of future price changes."
+   }
+  ]
+ }
+}

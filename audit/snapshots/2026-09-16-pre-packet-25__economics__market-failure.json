@@ -1,0 +1,1610 @@
+{
+ "section_id": "market-failure",
+ "subject": "economics",
+ "label": "2026-09-16-pre-packet-25",
+ "tables": {
+  "section_content": [
+   {
+    "id": "market-failure:block:beb65c72",
+    "title": "Types of Market Failure",
+    "sections": [
+     {
+      "id": "market-failure:sub:what-is-market-failure",
+      "body": [
+       {
+        "text": "**Market failure** occurs when the free market mechanism leads to a misallocation of resources, meaning the outcome is not allocatively efficient. In a perfectly functioning market, the price mechanism would ensure that resources flow to where they are valued most. When markets fail, society ends up with too much of some goods and too little of others.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Free market operates",
+         "Price signals are distorted",
+         "Resources misallocated"
+        ],
+        "result": "Society gets the wrong mix of goods and services",
+        "resultType": "bad"
+       },
+       {
+        "text": "You need to understand that market failure is not about markets collapsing entirely. It simply means that the market, left to its own devices, produces an outcome that reduces total welfare. The types the IAL specification names are externalities, the non-provision of public goods (the free-rider problem), imperfect market information, moral hazard, and speculation and market bubbles.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Market failure provides the main economic justification for government intervention. If markets allocated resources perfectly, there would be no reason for the state to step in with taxes, subsidies, regulation, or public provision.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "What Is Market Failure",
+      "recall": {
+       "id": "market-failure:sub:what-is-market-failure:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Free market operates without intervention",
+        "Price signals become distorted",
+        "Resources are misallocated",
+        "Society gets wrong mix of goods and services"
+       ]
+      },
+      "keyIdea": "When free markets left alone fail to allocate resources efficiently, the outcome leaves society worse off than it could be.",
+      "examMatters": "You should define market failure precisely as a misallocation of resources, not just \"when something goes wrong.\" Always link market failure to a specific type, such as externalities or public goods, and explain why the free market produces the wrong quantity. Generic definitions without a mechanism score poorly.",
+      "realExample": {
+       "text": "**China's rapid industrialisation** produced severe air pollution in cities like Beijing, where PM2.5 levels regularly exceeded WHO safe limits by ten times. The market alone failed to account for the health costs imposed on millions of residents, forcing the government to introduce strict emission controls.",
+       "emoji": "🏭"
+      },
+      "misconception": "Students write \"market failure means the market has completely stopped working.\" Market failure does not mean collapse; it means the market produces an inefficient allocation where total welfare could be improved. Instead write: market failure is a situation where the free market misallocates resources, producing too much or too little of a good."
+     },
+     {
+      "id": "market-failure:sub:allocative-inefficiency-deadweight-loss",
+      "body": [
+       {
+        "text": "**Allocative efficiency** is achieved when price equals marginal cost (P = MC), meaning resources go to their highest-valued use. At this point, the value consumers place on the last unit exactly matches the cost of producing it. When this condition is not met, you get allocative inefficiency.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "P does not equal MC",
+         "Too much or too little produced",
+         "Consumer or producer surplus lost"
+        ],
+        "result": "Welfare loss reduces total welfare",
+        "resultType": "bad"
+       },
+       {
+        "text": "**Welfare loss** is the reduction in total economic surplus that occurs when the market does not reach the socially optimal output. You can think of it as the welfare that simply disappears because transactions that would have benefited both buyers and sellers never take place.",
+        "type": "paragraph"
+       },
+       {
+        "text": "On a diagram, welfare loss appears as a triangle between the supply curve, the demand curve, and the actual quantity traded. The larger the gap between the market quantity and the socially optimal quantity, the greater the welfare loss.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Allocative Inefficiency and Welfare Loss",
+      "recall": {
+       "id": "market-failure:sub:allocative-inefficiency-deadweight-loss:recall",
+       "type": "fillin",
+       "hints": [
+        "the cost of one more unit",
+        "the opposite of overproduces",
+        "not a gain"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "MC",
+        "underproduces",
+        "welfare"
+       ],
+       "template": [
+        "Allocative efficiency requires P = ___",
+        "→ When P ≠ MC, the market over- or ___",
+        "→ The surplus that is lost is called ___ loss"
+       ]
+      },
+      "keyIdea": "When price does not equal marginal cost, the market over- or under-produces, and the lost welfare that results is called welfare loss.",
+      "examMatters": "When drawing welfare loss diagrams, you should clearly label the triangle between supply, demand, and the actual output level. Always state what the welfare loss represents in words: it is welfare that is lost because mutually beneficial trades do not occur. Unlabelled triangles score zero.",
+      "realExample": {
+       "text": "**Air pollution** is the uncorrected external cost at its largest. The World Bank and the Institute for Health Metrics and Evaluation put the global welfare loss from deaths linked to it at about $5 trillion in 2013. Every unit of fuel burned was priced at its private cost; the cost to the people breathing the result was never in the price, so far more was burned than the social optimum — the welfare loss triangle, at world scale.",
+       "emoji": "🏭"
+      },
+      "misconception": "Students confuse allocative inefficiency with productive inefficiency. Allocative inefficiency means the wrong quantity is being produced relative to what society values, while productive inefficiency means producing at higher cost than necessary. Instead write: allocative inefficiency occurs when P does not equal MC, so the market produces the wrong amount of a good."
+     }
+    ],
+    "takeaway": [
+     "Market failure means misallocation, not market collapse.",
+     "Allocative efficiency requires P = MC at equilibrium.",
+     "Welfare loss is the welfare triangle lost from wrong output.",
+     "Market failure justifies government intervention."
+    ],
+    "quizIndices": [
+     0
+    ],
+    "practiceIndices": [
+     2
+    ]
+   },
+   {
+    "id": "market-failure:block:3ffcdc9a",
+    "title": "Externalities",
+    "sections": [
+     {
+      "id": "market-failure:sub:negative-externalities-production",
+      "body": [
+       {
+        "text": "A **negative externality in production** occurs when the production of a good imposes costs on third parties who are not involved in the transaction. The firm's private costs (the costs it actually pays) are lower than the full social costs, because the external costs are borne by others. This means the supply curve the firm acts on understates the true cost to society.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Firm produces at private cost",
+         "External costs fall on third parties",
+         "MSC > MPC"
+        ],
+        "result": "Market overproduces beyond the social optimum",
+        "resultType": "bad"
+       },
+       {
+        "text": "On a diagram, the marginal social cost (MSC) curve lies above the marginal private cost (MPC) curve. The vertical gap between them represents the external cost per unit. The free market produces where MPC = MPB, but the socially optimal output is where MSC = MSB, which is a lower quantity.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should note that overproduction creates a welfare loss triangle between the MSC and MSB curves, from the market quantity back to the social optimum. This is the welfare loss caused by the externality.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Negative Externalities in Production",
+      "recall": {
+       "id": "market-failure:sub:negative-externalities-production:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Firm produces at private cost",
+        "External costs fall on third parties",
+        "MSC is greater than MPC",
+        "Market overproduces beyond social optimum"
+       ]
+      },
+      "keyIdea": "When firms impose costs on third parties through production, the market overproduces because the true social cost is higher than the private cost.",
+      "examMatters": "When analysing negative production externalities, you should draw the MSC above MPC and identify both the market output and socially optimal output. Always label the welfare loss triangle and explain that the market overproduces because firms ignore external costs in their production decisions.",
+      "realExample": {
+       "text": "**BP's Deepwater Horizon** oil spill in 2010 released 4.9 million barrels of oil into the Gulf of Mexico, devastating fishing and tourism industries. The production of oil imposed massive external costs on coastal communities, ecosystems, and businesses that had no part in BP's drilling operations.",
+       "emoji": "🛢️"
+      },
+      "misconception": "Students say \"negative externalities only come from pollution.\" While pollution is the most common example, noise, congestion, and visual blight from production also count as negative externalities. Instead write: any cost imposed on uninvolved third parties through the production process is a negative externality."
+     },
+     {
+      "id": "market-failure:sub:negative-externalities-consumption",
+      "body": [
+       {
+        "text": "A **negative externality in consumption** arises when the consumption of a good or service imposes costs on third parties. Here the private benefit to the consumer exceeds the social benefit because the external harm is not factored into the consumer's decision. The individual enjoys the product but others suffer.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Consumer acts on private benefit",
+         "Third parties bear external costs",
+         "MSB < MPB"
+        ],
+        "result": "Market overproduces the good",
+        "resultType": "bad"
+       },
+       {
+        "text": "On a diagram, the marginal social benefit (MSB) curve lies below the marginal private benefit (MPB) curve. The free market produces where MPC = MPB, but the social optimum is where MSC = MSB. Since MSB is lower, the socially optimal quantity is less than the market quantity.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Passive smoking, anti-social behaviour from alcohol, and noise from loud music are all examples you can use. In each case, the consumer gets private enjoyment while imposing unchosen costs on bystanders.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Negative Externalities in Consumption",
+      "recall": {
+       "id": "market-failure:sub:negative-externalities-consumption:recall",
+       "type": "fillin",
+       "hints": [
+        "be_____",
+        "co___",
+        "MP_"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "benefit",
+        "costs",
+        "MPB"
+       ],
+       "template": [
+        "Consumer acts on private ___ only",
+        "→ Third parties bear external ___",
+        "→ MSB is less than ___"
+       ]
+      },
+      "keyIdea": "When consuming a good harms third parties, the market overproduces because consumers ignore the costs they impose on others.",
+      "examMatters": "Diagrams for negative consumption externalities shift the benefit curve, not the cost curve. Examiners penalise students who draw MSC above MPC for a consumption externality. Remember that the MSB lies below MPB, and the welfare loss triangle sits between these benefit curves from the market output back to the social optimum.",
+      "realExample": {
+       "text": "**SUV ownership in London** imposes negative consumption externalities through higher pedestrian injury risk and greater CO2 emissions per kilometre. Transport for London data shows SUVs produce roughly 25% more emissions than average cars, yet individual buyers focus only on personal comfort and safety.",
+       "emoji": "🚗"
+      },
+      "misconception": "Students confuse consumption and production externalities. The key distinction is the source: if the harm comes from making the good, it is a production externality; if it comes from using the good, it is a consumption externality. Instead write: always identify whether the third-party cost arises during the production process or during the act of consumption."
+     },
+     {
+      "id": "market-failure:sub:positive-externalities-production",
+      "body": [
+       {
+        "text": "A **positive externality in production** occurs when the production of a good creates benefits for third parties beyond those received by the buyer or seller. The social cost of production is effectively lower than the private cost because the external benefits offset some of the burden. This means MSC lies below MPC.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Firm produces a good",
+         "Third parties gain spillover benefits",
+         "MSC < MPC"
+        ],
+        "result": "Market underproduces relative to social optimum",
+        "resultType": "bad"
+       },
+       {
+        "text": "Firms that train workers create positive production externalities because those workers may leave and take their skills to other employers. The training firm bears the full cost but cannot capture all the benefits. Similarly, a beekeeper whose bees pollinate neighbouring farms generates benefits beyond the honey sold.",
+        "type": "paragraph"
+       },
+       {
+        "text": "On a diagram, MSC sits below MPC. The socially optimal output is higher than the free market output, meaning the market underproduces. Government can correct this with subsidies to close the gap between private and social costs.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Positive Externalities in Production",
+      "recall": {
+       "id": "market-failure:sub:positive-externalities-production:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        2,
+        3,
+        0,
+        1
+       ],
+       "correctOrder": [
+        "Firm produces a good",
+        "Third parties gain spillover benefits",
+        "MSC falls below MPC",
+        "Market underproduces relative to social optimum"
+       ]
+      },
+      "keyIdea": "When production generates benefits for third parties, the market underproduces because firms cannot capture the full social value they create.",
+      "examMatters": "Positive production externalities are tested less often but catch students off guard. You should draw MSC below MPC and clearly show the socially optimal output is greater than the market output. Explain that the market underproduces because firms do not factor in the benefits they create for others.",
+      "realExample": {
+       "text": "**Californian almond farmers** rely on migratory beekeepers who truck hives across the state each spring. The beekeeping industry generates positive production externalities worth billions in crop pollination, far exceeding the revenue from honey sales alone.",
+       "emoji": "🐝"
+      },
+      "misconception": "Students forget that positive production externalities shift the cost curve, not the benefit curve. Since production creates the spillover, it is the MSC that falls below MPC, not the MSB that rises above MPB. Instead write: for production externalities, always adjust the cost side of the diagram to show the divergence."
+     },
+     {
+      "id": "market-failure:sub:positive-externalities-consumption",
+      "body": [
+       {
+        "text": "A **positive externality in consumption** occurs when the consumption of a good or service generates benefits for third parties. The social benefit exceeds the private benefit because the consumer only considers their own gain, ignoring the wider value created. This means MSB lies above MPB.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Consumer buys based on private benefit",
+         "Third parties also gain",
+         "MSB > MPB"
+        ],
+        "result": "Market underproduces the good",
+        "resultType": "bad"
+       },
+       {
+        "text": "Vaccination is the classic example. When you get vaccinated, you protect yourself (private benefit) but also reduce the chance of infecting others (external benefit). Because you only consider your own protection when deciding, the market produces fewer vaccinations than the socially optimal level.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Education generates similar spillovers: a more educated workforce raises productivity across the whole economy, reduces crime rates, and improves public health outcomes. These social benefits extend well beyond the individual student.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Positive Externalities in Consumption",
+      "recall": {
+       "id": "market-failure:sub:positive-externalities-consumption:recall",
+       "type": "fillin",
+       "hints": [
+        "pr_____",
+        "ex______",
+        "MP_"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "private",
+        "external",
+        "MPB"
+       ],
+       "template": [
+        "Consumer buys based on ___ benefit",
+        "→ Third parties also gain ___ benefits",
+        "→ MSB is greater than ___"
+       ]
+      },
+      "keyIdea": "When consuming a good benefits third parties, the market underproduces because individuals do not value the spillover gains others receive.",
+      "examMatters": "When evaluating positive consumption externalities, you should draw MSB above MPB and identify the welfare gain from moving to the social optimum. Always explain why the free market underproduces: consumers base decisions on MPB alone and ignore the wider social benefits that their consumption creates.",
+      "realExample": {
+       "text": "**The NHS flu vaccination programme** provides free jabs to at-risk groups because private demand alone would be too low. Public Health England estimates that every pound spent on flu vaccination saves the NHS roughly four pounds in reduced hospitalisations, demonstrating the large positive consumption externality.",
+       "emoji": "💉"
+      },
+      "misconception": "Students claim \"education is a public good because it benefits everyone.\" Education is not a public good because it is both excludable and rival. It generates positive consumption externalities, which is a completely different concept. Instead write: education is excludable and rival, so it is a private good; its market failure is the external benefit of consumption that the buyer does not count."
+     }
+    ],
+    "takeaway": [
+     "Negative externalities cause overproduction; positive cause underproduction.",
+     "Production externalities shift cost curves; consumption shift benefit curves.",
+     "The welfare loss triangle shows the cost of the market getting it wrong.",
+     "Government uses taxes and subsidies to close the gap."
+    ],
+    "diagramRef": "Negative Externality",
+    "quizIndices": [
+     1
+    ],
+    "practiceIndices": [
+     0,
+     3
+    ]
+   },
+   {
+    "id": "market-failure:block:63c6406f",
+    "title": "Public Goods",
+    "sections": [
+     {
+      "id": "market-failure:sub:characteristics-public-goods",
+      "body": [
+       {
+        "text": "A **public good** has two defining characteristics. First, it is **non-excludable**, meaning once the good is provided, you cannot prevent anyone from benefiting, whether they have paid or not. Second, it is **non-rival** (or non-diminishable), meaning one person's consumption does not reduce the amount available for others.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Good is non-excludable and non-rival",
+         "No one can be charged",
+         "No firm can earn revenue"
+        ],
+        "result": "Private market will not provide the good",
+        "resultType": "bad"
+       },
+       {
+        "text": "Street lighting is a classic example. Once a streetlight is on, you cannot stop anyone from benefiting from its light, and one person walking under it does not dim it for the next. National defence works the same way: protecting one citizen does not reduce the protection available to another.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Because private firms cannot charge for public goods, there is no profit incentive to produce them. This is a complete market failure: the free market provides zero quantity, even though society clearly values and needs these goods.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Characteristics of Public Goods",
+      "recall": {
+       "id": "market-failure:sub:characteristics-public-goods:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        3,
+        0,
+        2,
+        1
+       ],
+       "correctOrder": [
+        "Good is non-excludable and non-rival",
+        "No one can be charged for using it",
+        "No firm can earn revenue from it",
+        "Private market will not provide the good"
+       ]
+      },
+      "keyIdea": "Public goods are non-excludable and non-rival, which means the market will not provide them because no one can be charged for using them.",
+      "examMatters": "Examiners test your ability to apply the two characteristics to specific examples. For any good they mention, you must explain why it is or is not non-excludable and why it is or is not non-rival. Simply naming \"street lights\" without explaining the characteristics earns very few marks.",
+      "realExample": {
+       "text": "**The UK's lighthouse system** was historically funded by the government because individual ships could not be excluded from seeing the light. Trinity House, the lighthouse authority, collects dues from ports rather than individual vessels, illustrating why public goods require non-market funding mechanisms.",
+       "emoji": "🚨"
+      },
+      "misconception": "Students say \"public goods are goods provided by the government.\" The definition is about characteristics, not who provides them. A government-built swimming pool is excludable and rival, so it is not a public good. Instead write: a public good is defined by non-excludability and non-rivalry, regardless of who provides it."
+     },
+     {
+      "id": "market-failure:sub:free-rider-problem",
+      "body": [
+       {
+        "text": "The **free rider problem** is the central reason why public goods cause market failure. Because public goods are non-excludable, rational individuals have no incentive to pay — they can enjoy the benefit whether they contribute or not. If everyone thinks this way, no one pays, and the good is not produced.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Good is non-excludable",
+         "Rational consumer refuses to pay",
+         "Revenue is zero"
+        ],
+        "result": "No private firm produces the good — total market failure",
+        "resultType": "bad"
+       },
+       {
+        "text": "This creates what economists call a **missing market**. Demand exists — people genuinely want street lighting, flood defences, and national defence — but no market mechanism can reveal that demand because everyone has an incentive to hide their true willingness to pay.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The standard solution is government provision funded through taxation. Taxes are compulsory, which eliminates the free rider problem by forcing everyone to contribute. However, this introduces the challenge of determining how much of the public good to provide, since there is no market price signal.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "The Free Rider Problem",
+      "recall": {
+       "id": "market-failure:sub:free-rider-problem:recall",
+       "type": "fillin",
+       "hints": [
+        "ex_________",
+        "ze__",
+        "ta_______"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "excludable",
+        "zero",
+        "taxation"
+       ],
+       "template": [
+        "Good is non-___ so no one pays",
+        "→ Revenue is ___ for private firms",
+        "→ Solution is government provision via ___"
+       ]
+      },
+      "keyIdea": "Because no one can be excluded from a public good, rational individuals will not pay voluntarily, so the good goes unproduced by the market.",
+      "examMatters": "When explaining the free rider problem, a full answer needs a logical chain: non-excludability leads to no incentive to pay, which leads to no revenue for firms, which leads to no production. Simply saying \"people free ride\" without explaining why is not enough. Link each step clearly to earn full analysis marks.",
+      "realExample": {
+       "text": "**The Thames Barrier** protects 1.4 million people and property worth over 300 billion pounds from flooding. No private firm would build it because every London resident benefits regardless of payment, making it a textbook case of the free rider problem solved by government provision.",
+       "emoji": "🌊"
+      },
+      "misconception": "Students write \"the free rider problem means people are being lazy or selfish.\" Free riding is economically rational behaviour, not a moral failing. If you cannot be excluded from a benefit, paying is irrational from an individual perspective. Instead write: free riding is a rational response to non-excludability that leads to an collectively inefficient outcome."
+     }
+    ],
+    "takeaway": [
+     "Public goods are non-excludable and non-rival by definition.",
+     "The free rider problem means no one voluntarily pays.",
+     "Private markets produce zero public goods — complete failure.",
+     "Government uses taxation to fund public good provision."
+    ],
+    "diagramRef": "Public Good",
+    "quizIndices": [
+     2
+    ],
+    "practiceIndices": [
+     1
+    ]
+   },
+   {
+    "id": "market-failure:block:b6de4fde",
+    "title": "Information Failures",
+    "sections": [
+     {
+      "id": "market-failure:sub:asymmetric-information",
+      "body": [
+       {
+        "text": "**Asymmetric information** exists when one party in a transaction has more or better information than the other. This imbalance distorts decision-making and can cause markets to function poorly or even collapse entirely. The party with more information can exploit their advantage at the expense of the less-informed party.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "One party has superior information",
+         "Other party cannot assess quality or risk",
+         "Trust breaks down"
+        ],
+        "result": "Market produces inefficient or unfair outcomes",
+        "resultType": "bad"
+       },
+       {
+        "text": "The used car market is the classic example, described by economist George Akerlof as the **market for lemons**. Sellers know whether their car is reliable or a lemon, but buyers cannot tell. Buyers therefore offer low prices to reflect the average quality, which drives good-car owners out, leaving only lemons.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Asymmetric information is pervasive: doctors know more than patients, insurance companies know less than policyholders about personal risk, and employers know less about a candidate's true ability than the candidate does. Each imbalance creates the potential for market failure.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Asymmetric Information",
+      "recall": {
+       "id": "market-failure:sub:asymmetric-information:recall",
+       "type": "fillin",
+       "hints": [
+        "su______",
+        "qu_____",
+        "le____"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "superior",
+        "quality",
+        "lemons"
+       ],
+       "template": [
+        "One party has ___ information",
+        "→ Buyers cannot assess ___ or risk",
+        "→ Market for ___ drives out good sellers"
+       ]
+      },
+      "keyIdea": "When one side of a transaction knows more than the other, markets break down because the less-informed party cannot make rational decisions.",
+      "examMatters": "Examiners frequently use the market for lemons as a framework. You must explain the chain clearly: information asymmetry causes buyers to discount quality, which drives out high-quality sellers, which lowers average quality further. This adverse selection spiral is what you need to demonstrate in your answer.",
+      "realExample": {
+       "text": "**Carfax in the United States** built a business solving asymmetric information in used car sales. By providing vehicle history reports covering accidents, service records, and ownership changes, Carfax allows buyers to assess quality, partially correcting the market-for-lemons problem that Akerlof identified.",
+       "emoji": "🚙"
+      },
+      "misconception": "Students write \"asymmetric information means one side is lying.\" Asymmetric information does not require deception; it simply means one party has more knowledge than the other, which may occur naturally. Instead write: asymmetric information is about unequal access to relevant knowledge, which distorts market outcomes whether or not anyone acts dishonestly."
+     },
+     {
+      "id": "market-failure:sub:moral-hazard-adverse-selection",
+      "body": [
+       {
+        "text": "**Moral hazard** occurs when one party changes their behaviour after entering an agreement because they are protected from the consequences. If you take out comprehensive car insurance, you might drive more recklessly because you know the insurer will cover the cost of any accident. The insurer cannot observe your driving behaviour after the policy is signed.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Adverse selection** happens before a transaction, when asymmetric information causes the wrong people to self-select into a market. In health insurance, people who know they are high-risk are most likely to buy coverage, while healthy people opt out because premiums seem too high. This pushes up costs for insurers, raising premiums further and driving more healthy people away.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Information is asymmetric",
+         "High-risk individuals self-select",
+         "Premiums rise for everyone"
+        ],
+        "result": "Market may collapse as low-risk people exit",
+        "resultType": "bad"
+       },
+       {
+        "text": "Both problems are forms of market failure rooted in asymmetric information. Solutions include mandatory insurance, excess charges and no-claims bonuses for moral hazard, and screening, signalling, and regulation for adverse selection.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Moral Hazard and Adverse Selection",
+      "recall": {
+       "id": "market-failure:sub:moral-hazard-adverse-selection:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Information is asymmetric between parties",
+        "High-risk individuals self-select into market",
+        "Premiums rise for everyone",
+        "Low-risk people exit and market may collapse"
+       ]
+      },
+      "keyIdea": "Asymmetric information creates two specific problems: people change behaviour after a deal is struck, and the wrong people are attracted to certain markets.",
+      "examMatters": "Examiners love insurance market examples for testing these concepts. For full marks, clearly distinguish the timing: adverse selection occurs before the contract is signed, and moral hazard occurs after. Apply each concept to a specific scenario rather than just defining them in the abstract.",
+      "realExample": {
+       "text": "**The 2008 financial crisis** was partly driven by moral hazard. Banks packaged risky mortgages into securities and sold them to investors, transferring the risk while keeping the fees. Because banks no longer bore the consequences of bad lending, they had reduced incentive to check borrowers' ability to repay.",
+       "emoji": "🏦"
+      },
+      "misconception": "Students mix up moral hazard and adverse selection. Moral hazard is about behaviour changing after a deal is made, while adverse selection is about the wrong people entering the market before a deal. Instead write: moral hazard is a post-agreement problem where behaviour changes; adverse selection is a pre-agreement problem where risky parties self-select."
+     }
+    ],
+    "takeaway": [
+     "Asymmetric information means one party knows more than the other.",
+     "Adverse selection drives good options out before a deal.",
+     "Moral hazard changes behaviour after protection is in place.",
+     "Solutions include regulation, screening, and mandatory participation."
+    ],
+    "quizIndices": [
+     14
+    ],
+    "practiceIndices": [
+     4
+    ]
+   },
+   {
+    "id": "market-failure:block:9ad6cfb3",
+    "title": "Welfare Loss",
+    "sections": [
+     {
+      "id": "market-failure:sub:measuring-welfare-loss",
+      "body": [
+       {
+        "text": "**Total economic surplus** is the sum of consumer surplus and producer surplus in a market. In a perfectly competitive market, total surplus is maximised at the equilibrium where supply meets demand. Any deviation from this point — whether through externalities, information gaps, or an intervention that overshoots — reduces total surplus.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Identify competitive equilibrium",
+         "Compare actual output to optimum",
+         "Calculate the surplus lost"
+        ],
+        "result": "The difference is the welfare loss",
+        "resultType": "neutral"
+       },
+       {
+        "text": "You measure welfare loss by calculating the area of the triangle between the supply curve, the demand curve, and the actual quantity traded. This triangle represents transactions that would have generated net benefit to society but do not occur because the market is distorted.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Welfare loss applies to all types of market failure. Whether the distortion comes from a negative externality, a positive externality left uncorrected, or an intervention that overshoots — an indirect tax larger than the external cost, or a minimum price set above the equilibrium — the welfare loss triangle captures the efficiency cost in each case.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Measuring Welfare Loss",
+      "recall": {
+       "id": "market-failure:sub:measuring-welfare-loss:recall",
+       "type": "reorder",
+       "prompt": "Put these in the right order:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Identify competitive equilibrium output",
+        "Compare actual output to optimum",
+        "Calculate surplus that is lost",
+        "Welfare loss triangle is the difference"
+       ]
+      },
+      "keyIdea": "Welfare loss is measured by the reduction in total economic surplus when the market deviates from the allocatively efficient output.",
+      "examMatters": "When calculating welfare loss on a diagram, you should clearly identify the three points that form the welfare loss triangle. State the formula: half base times height, where the base is the difference between market and optimal quantity, and the height is the relevant price or cost gap. Show your working.",
+      "realExample": {
+       "text": "**The US sugar programme** uses import quotas and price supports that keep domestic sugar prices roughly double the world price. Economists at the American Enterprise Institute estimated the annual welfare loss to the US economy at over 3 billion dollars in foregone consumer and producer surplus.",
+       "emoji": "📉"
+      },
+      "misconception": "Students write \"welfare loss is the same as a fall in consumer surplus.\" Consumer surplus can fall without any welfare loss if it simply transfers to producers. Welfare loss is surplus that disappears entirely, benefiting no one. Instead write: welfare loss is the total surplus destroyed, not merely redistributed between consumers and producers."
+     },
+     {
+      "id": "market-failure:sub:diagrams-welfare-loss",
+      "body": [
+       {
+        "text": "For **negative externalities**, the welfare loss triangle appears between the MSC curve, the demand curve, and the market quantity. The market overproduces, so the triangle lies to the right of the social optimum. You draw it by marking where the market produces, where it should produce, and the vertical gap between social cost and social benefit.",
+        "type": "paragraph"
+       },
+       {
+        "text": "For **positive externalities**, the triangle appears because the market underproduces. The social optimum is to the right of the market output, and the triangle represents the net benefit from additional units that the market fails to produce. The area sits between the MSB and MPC curves from the market output to the social optimum.",
+        "type": "paragraph"
+       },
+       {
+        "text": "For **an intervention that overshoots** — a tax above the external cost, or a minimum price above the equilibrium — the triangle sits between the demand and supply curves, from the new quantity back to the social optimum: transactions worth making that no longer happen. That is government failure (1.3.6.2).",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Diagrams for Welfare Loss",
+      "recall": {
+       "id": "market-failure:sub:diagrams-welfare-loss:recall",
+       "type": "fillin",
+       "hints": [
+        "which side of the optimum?",
+        "too little, or too much?",
+        "the quantity that maximises welfare"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "right",
+        "underproduces",
+        "efficient"
+       ],
+       "template": [
+        "Negative externality: triangle to ___ of social optimum",
+        "→ Positive externality: market ___",
+        "→ Tax above the external cost: output falls below the ___ quantity"
+       ],
+       "distractors": [
+        "left",
+        "overproduces",
+        "private"
+       ]
+      },
+      "keyIdea": "Every type of market failure produces a welfare loss triangle on a diagram, and learning to draw each one correctly is essential for exam success.",
+      "examMatters": "Diagram accuracy is worth significant marks in economics exams. Examiners check that your curves are correctly positioned, the triangle is in the right place, and your labels match your written explanation. Practise drawing externality, public good, and price-control diagrams until the welfare loss area becomes second nature.",
+      "realExample": {
+       "text": "**The Stern Review (2006)** put a number on the welfare loss from an uncorrected external cost: without action, the damage from climate change would cost the equivalent of at least 5% of global GDP each year, and could reach 20%. It is the negative-externality triangle drawn for the whole world economy — and the argument for a carbon price is the argument for moving output back towards the social optimum.",
+       "emoji": "🌡️"
+      },
+      "misconception": "Students draw welfare loss triangles without labelling which curves form the boundaries. An unlabelled triangle could represent anything and earns no marks. Instead write: always label the three sides of the triangle with the relevant curves and clearly state whether the market has over- or under-produced."
+     }
+    ],
+    "takeaway": [
+     "Welfare loss is total surplus destroyed, not just redistributed.",
+     "Welfare loss = 0.5 x quantity gap x price/cost gap.",
+     "Every market failure type has its own triangle placement.",
+     "Label all diagram curves and shade the welfare loss area."
+    ],
+    "quizIndices": [
+     5
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "flow": {
+     "steps": [
+      "Price mechanism fails",
+      "Resources misallocated",
+      "Welfare not maximised"
+     ],
+     "result": "Welfare loss to society",
+     "resultType": "bad"
+    },
+    "meta": "3 concepts",
+    "title": "Types of Market Failure",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Market failure</strong> — a situation where the free market leads to a misallocation of resources, meaning the outcome is not allocatively efficient.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Allocative efficiency</strong> — achieved when resources are distributed so that no reallocation could make someone better off without making someone else worse off, occurring where price equals marginal cost.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Complete market failure</strong> — occurs when the market fails to provide a good at all, as with public goods where no private firm can charge a price.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Market failure arises from <strong>externalities</strong>, the non-provision of public goods, imperfect information, moral hazard and market bubbles, each breaking the price mechanism in a different way.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Partial market failure means the good is provided but at the <strong>wrong quantity</strong>; complete market failure means the good is not provided at all.",
+        "type": "imp"
+       },
+       {
+        "text": "Every type of market failure covered in this section represents a case where one or more functions of the price mechanism from 1.3.4 breaks down.",
+        "type": "link"
+       }
+      ],
+      "title": "CAUSES OF FAILURE"
+     }
+    ],
+    "keyIdea": "A market fails whenever the free market produces an outcome that does not maximise total welfare; the price mechanism misfires, and resources end up in the wrong place or in the wrong quantity.",
+    "takeaway": [
+     "Market failure means the free market does not achieve allocative efficiency.",
+     "Partial failure means wrong quantity; complete failure means no provision at all.",
+     "Always name the specific cause of failure before evaluating solutions."
+    ],
+    "examMatters": "You should state the specific type of market failure before analysing it. Never write vaguely that the market fails; identify whether the failure is due to externalities, public goods, information gaps, moral hazard or a bubble, and explain why that specific cause leads to misallocation."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Third-party costs or benefits exist",
+      "Price ignores external effects",
+      "Market over- or underproduces"
+     ],
+     "result": "Welfare loss at free-market output",
+     "resultType": "bad"
+    },
+    "meta": "8 concepts",
+    "title": "Externalities",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Marginal private cost (MPC)</strong> — the cost to the producer of making one more unit, represented by the supply curve in a competitive market.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Marginal social cost (MSC)</strong> — the total cost to society of one more unit, equal to MPC plus any negative externality in production.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Marginal private benefit (MPB)</strong> — the benefit to the consumer of consuming one more unit, represented by the demand curve.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Marginal social benefit (MSB)</strong> — the total benefit to society of one more unit, equal to MPB plus any positive externality in consumption.",
+        "type": "def"
+       }
+      ],
+      "title": "COST AND BENEFIT CURVES"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Negative externality in production</strong> — MSC exceeds MPC, such as factory pollution; the market overproduces because producers do not pay the full social cost.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Negative externality in consumption</strong> — MSB is less than MPB, such as passive smoking; consumers overconsume because they ignore the harm to others.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Positive externality in production</strong> — MSC is less than MPC, such as training workers who then benefit other employers; the market underproduces.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Positive externality in consumption</strong> — MSB exceeds MPB, such as vaccination providing herd immunity; the market underconsumes because individuals ignore the benefit to others.",
+        "type": "mech"
+       }
+      ],
+      "title": "FOUR TYPES OF EXTERNALITY"
+     },
+     {
+      "items": [
+       {
+        "text": "The socially optimal output is where <strong>MSB equals MSC</strong>; any deviation creates a welfare loss triangle representing the cost of misallocation.",
+        "type": "imp"
+       },
+       {
+        "text": "Externalities justify government intervention in 1.3.6 through taxes, subsidies, regulation, and tradeable permits.",
+        "type": "link"
+       }
+      ],
+      "title": "WHY IT MATTERS"
+     }
+    ],
+    "keyIdea": "When a transaction spills costs or benefits onto bystanders who did not choose to be involved, the market produces too much of harmful things and too little of beneficial ones because the price ignores those third-party effects.",
+    "formulas": [
+     {
+      "text": "External Cost = MSC - MPC",
+      "label": "EXTERNAL COST"
+     },
+     {
+      "text": "External Benefit = MSB - MPB",
+      "label": "EXTERNAL BENEFIT"
+     }
+    ],
+    "takeaway": [
+     "Negative externalities cause overproduction; positive externalities cause underproduction relative to the social optimum.",
+     "The socially optimal output is where MSB equals MSC, not where MPB equals MPC.",
+     "Production externalities shift the cost curve; consumption externalities shift the benefit curve."
+    ],
+    "examMatters": "Examiners require you to draw the correct pair of curves for each externality type. For a negative production externality, MSC is above MPC; for a positive consumption externality, MSB is above MPB. Label the welfare loss triangle between the free-market quantity and the socially optimal quantity.",
+    "misconception": "Students confuse which curve shifts for production versus consumption externalities. Wrong because production externalities affect the cost side (MPC vs MSC) while consumption externalities affect the benefit side (MPB vs MSB). Instead write: always ask whether the third party is affected by the production process or by the act of consumption, then adjust the correct curve."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Good is non-rival and non-excludable",
+      "Consumers free ride",
+      "No private firm can charge a price"
+     ],
+     "result": "Complete market failure; government must provide",
+     "resultType": "bad"
+    },
+    "meta": "4 concepts",
+    "title": "Public Goods",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Non-excludable</strong> — once the good is provided, it is impossible to prevent anyone from using it, so firms cannot charge a price and consumers will free ride.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Non-rival</strong> — one person's use does not reduce the amount available to others, so the marginal cost of an extra user is zero.",
+        "type": "def"
+       }
+      ],
+      "title": "CHARACTERISTICS"
+     },
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Free rider</strong> — a person who benefits from a good without paying for it because non-excludability means no one can be denied access.",
+        "type": "def"
+       },
+       {
+        "text": "Because consumers expect others to pay while they free ride, <strong>no effective demand</strong> is revealed and private firms cannot earn revenue, so the good is not produced.",
+        "type": "mech"
+       },
+       {
+        "text": "Public goods such as national defence, street lighting, and flood defences must be provided by the <strong>government and funded through taxation</strong> because the market completely fails.",
+        "type": "imp"
+       },
+       {
+        "text": "The free rider problem directly links to government provision in 1.3.6; it is the strongest justification for state spending on certain goods.",
+        "type": "link"
+       }
+      ],
+      "title": "THE FREE RIDER PROBLEM"
+     }
+    ],
+    "keyIdea": "Some goods cannot be sold on a market because once they exist, nobody can be excluded and nobody's use reduces the amount left; this makes private provision impossible and is the clearest case of complete market failure.",
+    "takeaway": [
+     "Public goods are non-rival and non-excludable, leading to the free rider problem.",
+     "Free riding means no effective demand, so private markets completely fail to provide the good.",
+     "Government provision funded by taxation is the standard solution to public goods."
+    ],
+    "examMatters": "You should explain both non-rivalry and non-excludability, then link them to the free rider problem. Many students only mention one characteristic. For top marks, show how non-excludability causes the free rider problem and why non-rivalry means the efficient price would be zero.",
+    "misconception": "Students call any government-provided good a public good. Wrong because public goods are defined by non-rivalry and non-excludability, not by who provides them; a state hospital is excludable and rival, so it is not a public good. Instead write: a public good must be non-rival and non-excludable by nature, regardless of who provides it."
+   },
+   {
+    "flow": {
+     "steps": [
+      "One side has better information",
+      "Other side makes poor decisions",
+      "Wrong quantity or quality traded"
+     ],
+     "result": "Market failure through misallocation",
+     "resultType": "bad"
+    },
+    "meta": "3 concepts",
+    "title": "Information Failures",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Asymmetric information</strong> — a situation where one party in a transaction has more or better information than the other, leading to market failure because the less-informed party makes poor decisions.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Moral hazard</strong> — occurs when one party takes greater risks because they know another party bears the cost, such as reckless behaviour after buying insurance.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Adverse selection</strong> — occurs when asymmetric information causes the wrong type of participant to dominate a market, such as high-risk drivers being more likely to buy insurance.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "In the used car market, sellers know the quality but buyers do not; buyers offer low prices to avoid lemons, which drives <strong>good-quality sellers</strong> out of the market.",
+        "type": "mech"
+       },
+       {
+        "text": "In insurance markets, companies cannot distinguish high-risk from low-risk customers, so they charge average premiums that <strong>attract high-risk buyers</strong> and repel low-risk ones.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Information failures undermine the assumption behind the demand curve that consumers make <strong>fully informed choices</strong>, weakening the case for unregulated free markets.",
+        "type": "imp"
+       },
+       {
+        "text": "Information failures reinforce the case for intervening in markets for goods with external benefits and external costs: consumers who lack information cannot accurately weigh private costs against private benefits.",
+        "type": "link"
+       }
+      ],
+      "title": "MARKET CONSEQUENCES"
+     }
+    ],
+    "keyIdea": "Markets assume buyers and sellers know what they are doing, but when one side knows more than the other or when neither side has enough data, the wrong quantity gets produced and the wrong people get served.",
+    "takeaway": [
+     "Asymmetric information means one side of the market makes decisions based on incomplete data.",
+     "Moral hazard changes behaviour after a contract; adverse selection changes who enters the market before the contract.",
+     "Information failures justify regulation, mandatory disclosure, and government provision of information."
+    ],
+    "examMatters": "Examiners test asymmetric information through real-world examples. Always name which side has the information advantage and explain how the other side's decisions are distorted. The best answers link to moral hazard or adverse selection as consequences."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Market produces wrong quantity",
+      "Some beneficial trades missed or harmful trades occur",
+      "Net welfare destroyed"
+     ],
+     "result": "Welfare loss triangle on the diagram",
+     "resultType": "bad"
+    },
+    "meta": "3 concepts",
+    "title": "Welfare Loss",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Welfare loss</strong> — the net loss of total economic welfare when the market does not produce at the socially optimal output, shown as a triangle between the MSB and MSC curves.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Social optimum</strong> — the output level where marginal social benefit equals marginal social cost, maximising total welfare with no welfare loss.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Externalities create welfare loss because the market ignores social costs or benefits, producing at <strong>MPB = MPC</strong> instead of MSB = MSC.",
+        "type": "mech"
+       },
+       {
+        "text": "Indirect taxes and price controls create welfare loss by moving quantity away from the <strong>free-market equilibrium</strong>, even when the aim is to correct a failure.",
+        "type": "mech"
+       },
+       {
+        "text": "A negative externality creates welfare loss by <strong>pushing output</strong> past the social optimum, where each extra unit costs society more than it is worth.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "The size of the welfare loss triangle depends on <strong>elasticity</strong>; more elastic curves produce larger welfare losses for any given distortion.",
+        "type": "imp"
+       },
+       {
+        "text": "Welfare loss is the unifying concept across all market failures; every diagram in this section should include a clearly labelled welfare loss triangle.",
+        "type": "link"
+       }
+      ],
+      "title": "SOURCES OF WELFARE LOSS"
+     }
+    ],
+    "keyIdea": "Whenever the market produces more or less than the socially optimal quantity, a triangle of lost welfare appears on the diagram representing transactions that should have happened but did not, or transactions that happened but should not have.",
+    "takeaway": [
+     "Welfare loss is the welfare destroyed when the market does not produce at the socially optimal level.",
+     "It appears as a triangle between MSB and MSC, from the market output to the social optimum.",
+     "Every source of market failure and most government interventions create some form of welfare loss."
+    ],
+    "examMatters": "Marks turn specifically on identifying and shading the welfare loss on a diagram. Always draw it as a triangle between the social optimum and the market output, bounded by the MSB and MSC curves. Label it clearly as the welfare loss."
+   }
+  ],
+  "section_quiz": [
+   {
+    "id": "market-failure:quiz:6f661cc6",
+    "options": [
+     "The government intervenes in the free market",
+     "The free market fails to allocate resources efficiently, leading to a net welfare loss",
+     "Firms make losses and leave the market",
+     "Consumers cannot afford to buy the goods they want"
+    ],
+    "question": "Market failure is best defined as a situation where:",
+    "explanation": "Market failure means the free market does not achieve allocative efficiency — resources are misallocated, and total welfare is not maximised. Option A describes government intervention which is a response to market failure, not market failure itself. Option C describes normal competitive exit, not market failure. Option D describes a lack of purchasing power, not a failure of the market mechanism.",
+    "correctIndex": 1
+   },
+   {
+    "id": "market-failure:quiz:89b287ec",
+    "options": [
+     "A positive externality of production",
+     "A negative externality of consumption",
+     "A negative externality of production",
+     "An information gap between buyer and seller"
+    ],
+    "question": "A factory emits pollution that harms the health of local residents. This is an example of:",
+    "explanation": "The pollution is a cost imposed on third parties (residents) as a result of production by the factory. This is a negative production externality because MSC > MPC. Option A is wrong because the externality is negative, not positive. Option B is wrong because the externality arises from production, not consumption. Option D is incorrect because goods with external costs relate to overconsumption (e.g., cigarettes), not production pollution.",
+    "correctIndex": 2
+   },
+   {
+    "id": "market-failure:quiz:fefda22d",
+    "options": [
+     "A good provided by the government and funded through taxation",
+     "A good that is both non-rival and non-excludable",
+     "A good that benefits society and should be encouraged",
+     "A good available to all citizens at a subsidised price"
+    ],
+    "question": "Which of the following best describes a public good?",
+    "explanation": "A public good is defined by its two characteristics: non-rivalry (one person's use does not diminish another's) and non-excludability (non-payers cannot be prevented from using it). Option A describes how public goods are often provided but is not a definition. Option C describes a good with external benefits of consumption. Option D describes a subsidised good, not a public good.",
+    "correctIndex": 1
+   },
+   {
+    "id": "market-failure:quiz:1959f579",
+    "options": [
+     "Consumers can buy goods without paying the full social cost",
+     "Firms can pollute without paying for the environmental damage",
+     "Individuals can benefit from a public good without contributing to its cost",
+     "Workers can earn wages without being productive"
+    ],
+    "question": "The free-rider problem means that:",
+    "explanation": "The free-rider problem arises because public goods are non-excludable — individuals cannot be prevented from benefiting even if they do not pay. This means rational consumers will not voluntarily pay, leading to no private provision. Option A relates to externalities, not the free-rider problem. Option B relates to negative production externalities. Option D relates to labour market issues.",
+    "correctIndex": 2
+   },
+   {
+    "id": "market-failure:quiz:4e87ef91",
+    "options": [
+     "Its external costs exceed its external benefits",
+     "Consumers count only their own benefit, so MSB exceeds MPB",
+     "The government regulates and taxes its supply",
+     "A single firm controls its supply and restricts output"
+    ],
+    "question": "A good generating external benefits of consumption is underconsumed in a free market because:",
+    "explanation": "The consumer weighs the benefit to themselves against the price, and the benefit falling on third parties is counted by nobody. Marginal social benefit therefore lies above marginal private benefit, and the market settles below the social optimum. Option A reverses the sign. Option C describes an intervention, not the cause. Option D is market power, a Unit 3 topic.",
+    "correctIndex": 1
+   },
+   {
+    "id": "market-failure:quiz:ef8fa174",
+    "options": [
+     "The MPC and MPB curves, from 0 to Qm",
+     "The MSC and MSB curves, from 0 to Qopt",
+     "The MSC and MPB curves, from Qopt to Qm",
+     "The MPC and MSC curves, from 0 to Qm"
+    ],
+    "question": "On a negative production externality diagram, the welfare loss is the area between:",
+    "explanation": "The welfare loss triangle lies between the MSC curve (true social cost) and the MPB curve (demand), from Q_opt to Q_m. This area represents units where social cost exceeds social benefit — they should not have been produced. Option A would include all trade up to Qm, not just the welfare loss. Option B covers the total surplus area, not the loss. Option D shows the total external cost, not the welfare loss.",
+    "correctIndex": 2
+   },
+   {
+    "id": "market-failure:quiz:540fac2e",
+    "options": [
+     "A buyer purchases a product without knowing its true quality",
+     "A person takes greater risks because someone else bears the cost of failure",
+     "A firm charges different prices to different consumers",
+     "The government sets a minimum price above the equilibrium and creates a surplus"
+    ],
+    "question": "Moral hazard occurs when:",
+    "explanation": "Moral hazard is a change in behaviour after an agreement — a party takes greater risks because the costs of failure are borne (wholly or partly) by someone else. A classic example is insured drivers driving more recklessly. Option A describes adverse selection or imperfect information, not moral hazard. Option C describes price discrimination. Option D describes a government intervention (which may cause government failure), not a change in behaviour after an agreement.",
+    "correctIndex": 1
+   },
+   {
+    "id": "market-failure:quiz:8151d4af",
+    "options": [
+     "It is non-rival and non-excludable in consumption",
+     "It generates external costs that harm third parties",
+     "Learners count only their own gain, not the benefit to others",
+     "It is always provided free of charge by the government"
+    ],
+    "question": "In a free market, why do too few young people stay in education?",
+    "explanation": "A learner counts only their own gain and none of the external benefit to others through higher productivity and lower crime, so MSB lies above MPB. Poor information about the private gain can widen that gap, but it is a separate source of market failure (1.3.5.4b). Option A describes a public good; education is both rival and excludable, since a place can be filled and withheld.",
+    "correctIndex": 2
+   },
+   {
+    "id": "market-failure:quiz:c2b565f0",
+    "options": [
+     "A factory discharges waste into a river",
+     "A driver's vehicle emissions contribute to urban air pollution",
+     "A firm invests in research that benefits the whole industry",
+     "A homeowner installs solar panels, reducing local energy prices"
+    ],
+    "question": "Which of the following is an example of a negative consumption externality?",
+    "explanation": "A driver choosing to drive (consumption of transport) creates air pollution that harms third parties — this is a cost from consumption. Option A is a negative production externality (the factory is the producer). Option C is a positive production externality (knowledge spillovers). Option D is a positive externality. The key is that driving is an act of consumption that imposes costs on others.",
+    "correctIndex": 1
+   },
+   {
+    "id": "market-failure:quiz:b28b8a7f",
+    "options": [
+     "An external benefit of consumption",
+     "The free-rider problem",
+     "Asymmetric information",
+     "An external cost of consumption"
+    ],
+    "question": "A city introduces a charge for driving into its centre at peak times. Which market failure is the charge aimed at?",
+    "explanation": "Each driver weighs their own journey against its cost to them, and none of them counts the congestion and poorer air they impose on everyone else. That is an external cost of consumption, and a charge makes the driver face it.",
+    "correctIndex": 3
+   },
+   {
+    "id": "market-failure:quiz:89a602d6",
+    "options": [
+     "Being provided by the government and funded through taxation",
+     "Being non-rivalrous and non-excludable",
+     "Having positive externalities when consumed",
+     "Being available to everyone at zero cost"
+    ],
+    "question": "A public good is characterised by:",
+    "explanation": "The economic definition of a public good rests on two key characteristics: non-rivalry (one person's consumption does not reduce availability to others) and non-excludability (it is impossible to prevent non-payers from consuming).",
+    "correctIndex": 1
+   },
+   {
+    "id": "market-failure:quiz:debbb003",
+    "options": [
+     "One person consuming it leaves no less for anyone else",
+     "Nobody can be prevented from consuming it",
+     "It is provided free of charge by the government",
+     "Its price is set below the market equilibrium"
+    ],
+    "question": "A good is non-rival if:",
+    "explanation": "Non-rivalry is about whether consumption uses the good up: a lighthouse beam guiding one ship is not diminished for the next. Being unable to exclude non-payers is the other characteristic of a public good, and it is a separate test. Who provides a good, and at what price, decides neither.",
+    "correctIndex": 0
+   },
+   {
+    "id": "market-failure:quiz:55760d15",
+    "options": [
+     "Produce at the socially optimal level",
+     "Overproduce relative to the socially optimal level",
+     "Underproduce relative to the socially optimal level",
+     "Not produce the good at all"
+    ],
+    "question": "When a good generates positive externalities of consumption, the free market will:",
+    "explanation": "With positive externalities, the social benefit exceeds the private benefit. The free market only considers private benefits when making decisions, so it produces less than the socially optimal quantity.",
+    "correctIndex": 2
+   },
+   {
+    "id": "market-failure:quiz:bdc513b2",
+    "options": [
+     "Designer handbags bought for personal status",
+     "Vaccination against an infectious disease",
+     "National defence funded from general taxation",
+     "Street lighting on a residential road"
+    ],
+    "question": "Which of these is most likely to be underconsumed because of external benefits of consumption?",
+    "explanation": "Vaccination protects the person vaccinated and also lowers the chance that others are infected, so MSB lies above MPB and the free market provides too little. National defence and street lighting are public goods, which fail for non-excludability rather than for an external benefit. A handbag confers no third-party benefit.",
+    "correctIndex": 1
+   },
+   {
+    "id": "market-failure:quiz:807db511",
+    "options": [
+     "Overproduction of cars",
+     "Adverse selection where good quality cars are driven out of the market",
+     "An increase in car prices above their true value",
+     "The government banning the sale of used cars"
+    ],
+    "question": "Asymmetric information in the used car market (the 'lemons' problem) leads to:",
+    "explanation": "Sellers know more about car quality than buyers. Buyers offer low prices expecting poor quality, causing owners of good cars to withdraw from the market. This adverse selection means mostly 'lemons' remain.",
+    "correctIndex": 1
+   },
+   {
+    "id": "market-failure:quiz:fbff4e06",
+    "options": [
+     "Private cost minus external cost",
+     "Private cost plus external cost",
+     "External cost minus private cost",
+     "Private cost multiplied by external cost"
+    ],
+    "question": "The social cost of production is equal to:",
+    "explanation": "Social cost includes all costs to society: the private costs borne by the producer plus any external costs imposed on third parties. Social cost = private cost + external cost.",
+    "correctIndex": 1
+   },
+   {
+    "id": "market-failure:quiz:e09aa14c",
+    "options": [
+     "Non-rival and non-excludable in consumption",
+     "Overconsumed, because the consumer bears none of that cost",
+     "Consumed only by high-income groups in practice",
+     "Underproduced by the free market"
+    ],
+    "question": "Where an external cost of consumption exists, the free market will leave the good:",
+    "explanation": "The consumer weighs their private benefit against the price and bears none of the cost falling on third parties, so MSB lies below MPB and the market quantity exceeds the social optimum. Option A describes a public good. Option D reverses the direction.",
+    "correctIndex": 1
+   },
+   {
+    "id": "market-failure:quiz:9204ab21",
+    "options": [
+     "The MPC and MSC curves, from 0 to Qm",
+     "The MSB and MPB curves, at every output",
+     "The MSB and MPC curves, from Qm to Qopt",
+     "The MPB and MPC curves, from 0 to Qopt"
+    ],
+    "question": "On a positive consumption externality diagram, the welfare gain from reaching the social optimum is the area between:",
+    "explanation": "The market stops at Qm, where private benefit meets cost. Every unit from Qm to Qopt is worth more to society (MSB) than it costs to supply (MPC), so the triangle between those two curves over that range is the welfare the market leaves on the table.",
+    "correctIndex": 2
+   },
+   {
+    "id": "market-failure:quiz:0ad1ef9d",
+    "options": [
+     "A consumer choosing a cheaper but lower quality product",
+     "A person with car insurance driving more recklessly because they are covered",
+     "A firm reducing its price to attract more customers",
+     "A worker accepting a job that pays below the minimum wage"
+    ],
+    "question": "Which of the following is an example of moral hazard?",
+    "explanation": "Moral hazard occurs when having insurance (or other protection) changes behaviour, making the insured event more likely. A driver with insurance may take more risks because they will not bear the full cost of an accident.",
+    "correctIndex": 1
+   },
+   {
+    "id": "market-failure:quiz:b21edecc",
+    "options": [
+     "Non-rivalrous and non-excludable",
+     "Rivalrous but non-excludable",
+     "Non-rivalrous but excludable",
+     "Rivalrous and excludable"
+    ],
+    "question": "Common resources (such as ocean fish stocks) are prone to market failure because they are:",
+    "explanation": "Common resources are rivalrous (one person's use reduces availability for others) but non-excludable (difficult to prevent access). This leads to overexploitation as no one has an incentive to conserve — the 'tragedy of the commons'.",
+    "correctIndex": 1
+   },
+   {
+    "id": "market-failure:quiz:a25f2495",
+    "options": [
+     "Too much of the good is being produced",
+     "The market is at the socially optimal equilibrium",
+     "Too little of the good is being produced and welfare could be improved by producing more",
+     "The good should not be produced at all"
+    ],
+    "question": "If the marginal social benefit (MSB) of a good exceeds the marginal social cost (MSC), then:",
+    "explanation": "When MSB > MSC, the benefit to society of producing an additional unit exceeds the cost. Society would gain net welfare by increasing output until MSB = MSC (the allocatively efficient point).",
+    "correctIndex": 2
+   },
+   {
+    "id": "market-failure:quiz:6431cc50",
+    "options": [
+     "Consumers save too much for retirement",
+     "Consumers may undervalue future benefits and under-save for retirement",
+     "The government provides too many pension options",
+     "Pension providers always make profits"
+    ],
+    "question": "Information failure in the market for pensions means that:",
+    "explanation": "Consumers may lack information about how much they need for retirement, or exhibit present bias (underweighting future needs). This information failure leads to under-saving, which is why governments often mandate or incentivise pension contributions.",
+    "correctIndex": 1
+   },
+   {
+    "id": "market-failure:quiz:a168079b",
+    "options": [
+     "MSC > MSB, meaning there is overproduction",
+     "MSB > MSC, meaning there is underproduction",
+     "MSC = MSB, meaning the market is allocatively efficient",
+     "MPC > MSC, meaning producers bear all costs"
+    ],
+    "question": "A negative externality of production causes the market to produce at a level where:",
+    "explanation": "With negative production externalities, MSC exceeds MPC. The free market equilibrium (where MPC = MSB) produces more than the social optimum (where MSC = MSB), resulting in overproduction and welfare loss.",
+    "correctIndex": 0
+   },
+   {
+    "id": "market-failure:quiz:38769a04",
+    "options": [
+     "Externalities",
+     "Public goods",
+     "Perfect competition",
+     "Information asymmetry"
+    ],
+    "question": "Which of the following is least likely to be a cause of market failure?",
+    "explanation": "Perfect competition leads to allocative efficiency where P = MC, which is an optimal market outcome. Externalities, public goods, and information asymmetry are all sources of market failure.",
+    "correctIndex": 2
+   }
+  ],
+  "section_practice": [
+   {
+    "id": "market-failure:practice:3723bb0b",
+    "marks": 4,
+    "command": "Define",
+    "guidance": "A negative externality is a cost imposed on a third party not directly involved in a transaction (1 mark), which arises as a side effect of production or consumption (1 mark). For example, factory pollution harms local residents' health and property values (1 mark). Because the external cost is not reflected in the market price, the good is overproduced relative to the socially optimal level (1 mark).",
+    "question": "Define the term 'negative externality'. (4 marks)"
+   },
+   {
+    "id": "market-failure:practice:8c86bd5f",
+    "marks": 6,
+    "command": "Explain",
+    "guidance": "Reason 1: Non-excludability (1 mark) — it is not possible to prevent non-payers from benefiting from the good, such as street lighting or national defence (1 mark). This means firms cannot charge a price and would make losses, so they have no incentive to supply (1 mark).\n\nReason 2: Non-rivalry (1 mark) — one person's consumption does not reduce availability for others, so the marginal cost of an additional user is zero (1 mark). This leads to the free-rider problem — rational consumers will not voluntarily pay, expecting others to fund provision (1 mark).",
+    "question": "Explain two reasons why public goods would not be provided by the free market. (6 marks)"
+   },
+   {
+    "id": "market-failure:practice:10b5bb6d",
+    "marks": 6,
+    "command": "Analyse",
+    "guidance": "Define an external cost of consumption as a cost falling on a third party that the consumer does not bear. Then develop one chain: the consumer weighs private benefit against price, so MSB lies below MPB; the market settles where MPB meets supply, above the social optimum where MSB meets MSC; the excess output is the misallocation, and the welfare loss is the area between MSB and MSC across it. A diagram showing MPB, MSB and both equilibria supports the chain. Apply it to a named market such as tobacco or private road transport.",
+    "question": "Analyse how external costs of consumption lead to a misallocation of resources. (6 marks)"
+   },
+   {
+    "id": "market-failure:practice:8b86f27f",
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Define negative externalities of production and explain why they cause market failure — the social cost exceeds the private cost, leading to overproduction (2 marks).\n\nFor taxation: A Pigouvian tax can internalise the externality by raising the private cost to equal the social cost (3 marks); generates government revenue that can fund clean-up or compensate affected parties (2 marks); allows market forces to operate — firms decide how to reduce output or invest in cleaner technology (2 marks).\n\nAgainst — limitations of taxation: Difficult to set the correct tax rate because externalities are hard to quantify (2 marks); may be regressive, hitting poorer households harder (2 marks); firms may pass the cost to consumers rather than reducing output (1 mark).\n\nAlternative methods: Regulation — outright bans or emission limits can be more certain in reducing pollution (2 marks); tradable pollution permits — create market incentives with a guaranteed cap on emissions (2 marks).\n\nEvaluation: Taxation is effective but not always the most effective method. The best approach depends on the externality — for measurable, widespread externalities like carbon emissions, taxation or permits may work best; for toxic waste, regulation may be more appropriate (2 marks).",
+    "question": "Evaluate the view that taxation is the most effective method of correcting the market failure caused by negative externalities of production. (20 marks)"
+   },
+   {
+    "id": "market-failure:practice:fac7d77b",
+    "marks": 4,
+    "command": "Explain",
+    "guidance": "Example 1: Asymmetric information in the used car market — sellers know more about the quality of the car than buyers (1 mark), which can lead to adverse selection where only poor-quality cars are traded (1 mark).\n\nExample 2: Under-consumption of goods with external benefits such as education — consumers may underestimate the long-term private benefits of gaining qualifications (1 mark), leading to lower demand than is socially optimal (1 mark).",
+    "question": "Explain two examples of information failure in markets. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "id": "market-failure:card:bfea8ada",
+    "back": "When the free market leads to a <strong>misallocation of resources</strong> — prices fail to reflect the true costs or benefits, so too much or too little of a good is produced relative to the social optimum.",
+    "front": "What is market failure?"
+   },
+   {
+    "id": "market-failure:card:d2410b9a",
+    "back": "A <strong>cost imposed on third parties</strong> not involved in the transaction. E.g., factory pollution harms nearby residents. Social cost exceeds private cost, leading to <strong>overproduction</strong>.",
+    "front": "What is a negative externality?"
+   },
+   {
+    "id": "market-failure:card:83643826",
+    "back": "A <strong>benefit enjoyed by third parties</strong> not involved in the transaction. E.g., vaccination reduces disease for everyone. Social benefit exceeds private benefit, leading to <strong>underconsumption</strong>.",
+    "front": "What is a positive externality?"
+   },
+   {
+    "id": "market-failure:card:e8d85748",
+    "back": "A good that is <strong>non-excludable</strong> (cannot prevent non-payers from using it) and <strong>non-rivalrous</strong> (one person's use does not reduce availability). E.g., street lighting, national defence.",
+    "front": "What is a public good?"
+   },
+   {
+    "id": "market-failure:card:ddc131a1",
+    "back": "Because public goods are non-excludable, people can <strong>benefit without paying</strong>. No rational consumer will pay if they can get it free, so the market will not provide the good.",
+    "front": "What is the free rider problem?"
+   },
+   {
+    "id": "market-failure:card:d61a3ede",
+    "back": "A benefit from consuming a good that falls on a <strong>third party</strong>, not on the consumer. Because the consumer counts only their own gain, <strong>MSB &gt; MPB</strong> and the good is <strong>underconsumed</strong>. E.g. vaccination, education.",
+    "front": "What is an external benefit of consumption?"
+   },
+   {
+    "id": "market-failure:card:292a0634",
+    "back": "A cost of consuming a good that falls on a <strong>third party</strong>, not on the consumer. Because the consumer bears none of it, <strong>MSB &lt; MPB</strong> and the good is <strong>overconsumed</strong>. E.g. tobacco, alcohol.",
+    "front": "What is an external cost of consumption?"
+   },
+   {
+    "id": "market-failure:card:366e3bd1",
+    "back": "When economic agents lack <strong>perfect knowledge</strong> to make rational decisions. Includes <strong>asymmetric information</strong> (one side knows more) and simply not knowing the full costs or benefits.",
+    "front": "What is information failure?"
+   },
+   {
+    "id": "market-failure:card:b6180000",
+    "back": "When one party in a transaction has <strong>more or better information</strong> than the other. Leads to adverse selection and moral hazard. E.g., sellers know more about a used car than buyers.",
+    "front": "What is asymmetric information?"
+   },
+   {
+    "id": "market-failure:card:608e4f12",
+    "back": "<strong>Private cost</strong> = cost to the producer or consumer. <strong>Social cost</strong> = private cost + external costs (third-party costs). When social cost > private cost, there is a negative externality.",
+    "front": "What is the difference between private and social cost?"
+   },
+   {
+    "id": "market-failure:card:7c7761a6",
+    "back": "<strong>MPB</strong> (marginal private benefit) = benefit to the consumer. <strong>MSB</strong> (marginal social benefit) = MPB + external benefits. When MSB > MPB, there is a positive externality.",
+    "front": "What is the difference between MSB and MPB?"
+   },
+   {
+    "id": "market-failure:card:42598c2c",
+    "back": "The area between MSC and MSB, from the social optimum to the market output. Represents the <strong>excess cost to society</strong> from overproduction — society would be better off producing less.",
+    "front": "What is a welfare loss from a negative externality?"
+   },
+   {
+    "id": "market-failure:card:6a1cd8bc",
+    "back": "Producers only consider <strong>private costs</strong>, ignoring external costs. The market price is too low (does not reflect full social cost), so more is produced and consumed than the socially optimal level.",
+    "front": "Why does the market overproduce goods with negative externalities?"
+   },
+   {
+    "id": "market-failure:card:661178af",
+    "back": "Consumers only consider <strong>private benefits</strong>, ignoring external benefits. Demand is lower than socially optimal — MSB > MPB — so the market produces less than the socially efficient level.",
+    "front": "Why does the market underproduce goods with positive externalities?"
+   },
+   {
+    "id": "market-failure:card:ca19a763",
+    "back": "When one party takes <strong>greater risks</strong> because they know another party bears the cost. E.g., a driver with full insurance may drive less carefully. A form of information failure.",
+    "front": "What is moral hazard?"
+   },
+   {
+    "id": "market-failure:card:2404fff0",
+    "back": "When asymmetric information leads to <strong>low-quality goods dominating</strong> the market. E.g., in the used car market, sellers of lemons stay while owners of good cars exit (Akerlof's model).",
+    "front": "What is adverse selection?"
+   },
+   {
+    "id": "market-failure:card:6c15afe2",
+    "back": "A factory discharging <strong>pollution into a river</strong> — the cost of environmental damage falls on local communities and fisheries, not the factory. Private cost < social cost → overproduction.",
+    "front": "Give an example of a negative externality of production."
+   },
+   {
+    "id": "market-failure:card:582a8b27",
+    "back": "<strong>Vaccination</strong> — the individual gains immunity (private benefit), but society also gains through herd immunity (external benefit). MSB > MPB → underconsumption in a free market.",
+    "front": "Give an example of a positive externality of consumption."
+   }
+  ],
+  "section_diagrams": [
+   {
+    "id": "market-failure:diagram:9d3e22f5",
+    "svg": "<svg viewBox=\"0 0 500 360\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n<defs>\n  <marker id=\"ah\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\">\n    <polygon points=\"0 0,10 3.5,0 7\" fill=\"#e8ecf5\"/>\n  </marker>\n</defs>\n<!-- Axes -->\n<line x1=\"80\" y1=\"280\" x2=\"460\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<line x1=\"80\" y1=\"280\" x2=\"80\" y2=\"35\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<text x=\"28\" y=\"165\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\" transform=\"rotate(-90,28,165)\">Price / Cost</text>\n<text x=\"265\" y=\"325\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\">Quantity</text>\n\n<!-- MPC line -->\n<line x1=\"90\" y1=\"260\" x2=\"440\" y2=\"80\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/>\n<text x=\"444\" y=\"84\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">MPC</text>\n\n<!-- MSC line -->\n<line x1=\"90\" y1=\"210\" x2=\"440\" y2=\"40\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/>\n<text x=\"444\" y=\"38\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">MSC</text>\n\n<!-- D = MPB = MSB line -->\n<line x1=\"90\" y1=\"60\" x2=\"440\" y2=\"260\" stroke=\"#059669\" stroke-width=\"2.5\" fill=\"none\"/>\n<text x=\"350\" y=\"276\" fill=\"#059669\" font-size=\"11\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">D = MPB = MSB</text>\n\n<!-- Welfare loss triangle -->\n<polygon points=\"231.9,141.1 274.2,165.3 274.2,120.5\" fill=\"#f59e0b\" fill-opacity=\"0.15\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n<text x=\"252.1\" y=\"144.3\" fill=\"#f59e0b\" font-size=\"9\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">Welfare</text>\n<text x=\"256.1\" y=\"154.3\" fill=\"#f59e0b\" font-size=\"9\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">Loss</text>\n\n<!-- Dashed lines from social optimum -->\n<line x1=\"231.9\" y1=\"141.1\" x2=\"80\" y2=\"141.1\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<line x1=\"231.9\" y1=\"141.1\" x2=\"231.9\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<text x=\"72\" y=\"145.1\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"end\">Popt</text>\n<text x=\"231.9\" y=\"296\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Qopt</text>\n\n<!-- Dashed lines from market equilibrium -->\n<line x1=\"274.2\" y1=\"165.3\" x2=\"80\" y2=\"165.3\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<line x1=\"274.2\" y1=\"165.3\" x2=\"274.2\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<text x=\"72\" y=\"169.3\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"end\">Pe</text>\n<text x=\"274.2\" y=\"296\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Qe</text>\n\n<!-- Equilibrium dots -->\n<circle cx=\"231.9\" cy=\"141.1\" r=\"4\" fill=\"#ef4444\"/>\n<circle cx=\"274.2\" cy=\"165.3\" r=\"4\" fill=\"#3b82f6\"/>\n\n<!-- Externality bracket at Qe: gap between MSC and MPC -->\n<line x1=\"286.2\" y1=\"120.5\" x2=\"286.2\" y2=\"165.3\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n<line x1=\"282.2\" y1=\"120.5\" x2=\"290.2\" y2=\"120.5\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n<line x1=\"282.2\" y1=\"165.3\" x2=\"290.2\" y2=\"165.3\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n<text x=\"294.2\" y=\"146.9\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\" font-family=\"'DM Sans',sans-serif\">Externality</text>\n\n</svg>",
+    "title": "Negative Externality of Production",
+    "checklist": [
+     "MPC curve (private supply) correctly drawn and labelled",
+     "MSC curve lies ABOVE MPC, with vertical gap = MEC",
+     "D = MPB = MSB curve drawn (no consumption externality, so MPB = MSB)",
+     "Free-market quantity Qm shown where MPC = MPB (D)",
+     "Socially optimal quantity Qopt shown where MSC = MSB",
+     "Qm > Qopt clearly shown (overproduction)",
+     "Welfare loss triangle shaded between MSC and MPB from Qopt to Qm",
+     "Axes labelled: Costs/Benefits (y-axis), Quantity (x-axis)"
+    ],
+    "description": "Shows how a negative production externality causes MSC to lie above MPC, leading to overproduction and a welfare loss triangle."
+   },
+   {
+    "id": "market-failure:diagram:0fbe919d",
+    "svg": "<svg viewBox=\"0 0 500 360\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n<defs>\n  <marker id=\"ah\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\">\n    <polygon points=\"0 0,10 3.5,0 7\" fill=\"#e8ecf5\"/>\n  </marker>\n</defs>\n<!-- Axes -->\n<line x1=\"80\" y1=\"280\" x2=\"460\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<line x1=\"80\" y1=\"280\" x2=\"80\" y2=\"35\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ah)\"/>\n<text x=\"28\" y=\"165\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\" transform=\"rotate(-90,28,165)\">Price / Cost</text>\n<text x=\"265\" y=\"325\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"middle\">Quantity</text>\n\n<!-- S = MPC = MSC line -->\n<line x1=\"90\" y1=\"260\" x2=\"440\" y2=\"80\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n<text x=\"345\" y=\"72\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">S = MPC = MSC</text>\n\n<!-- D = MPB line -->\n<line x1=\"90\" y1=\"60\" x2=\"440\" y2=\"260\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n<text x=\"385\" y=\"276\" fill=\"#059669\" font-size=\"11\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">D = MPB</text>\n\n<!-- MSB line -->\n<line x1=\"140\" y1=\"50\" x2=\"450\" y2=\"253.4\" stroke=\"#f59e0b\" stroke-width=\"2.5\"/>\n<text x=\"426\" y=\"269.4\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">MSB</text>\n\n<!-- Welfare loss triangle -->\n<polygon points=\"274.2,165.3 297.4,153.3 297.4,178.5\" fill=\"#f59e0b\" fill-opacity=\"0.15\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n<text x=\"281.7\" y=\"165.7\" fill=\"#f59e0b\" font-size=\"9\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">Welfare</text>\n<text x=\"285.7\" y=\"175.7\" fill=\"#f59e0b\" font-size=\"9\" font-weight=\"700\" font-family=\"'DM Sans',sans-serif\">Loss</text>\n\n<!-- Dashed lines from market equilibrium -->\n<line x1=\"274.2\" y1=\"165.3\" x2=\"80\" y2=\"165.3\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<line x1=\"274.2\" y1=\"165.3\" x2=\"274.2\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<text x=\"72\" y=\"169.3\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"end\">Pe</text>\n<text x=\"274.2\" y=\"296\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Qe</text>\n\n<!-- Dashed lines from social optimum -->\n<line x1=\"297.4\" y1=\"153.3\" x2=\"80\" y2=\"153.3\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<line x1=\"297.4\" y1=\"153.3\" x2=\"297.4\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n<text x=\"72\" y=\"157.3\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"end\">Popt</text>\n<text x=\"297.4\" y=\"296\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Qopt</text>\n\n<!-- Equilibrium dots -->\n<circle cx=\"274.2\" cy=\"165.3\" r=\"4\" fill=\"#059669\"/>\n<circle cx=\"297.4\" cy=\"153.3\" r=\"4\" fill=\"#f59e0b\"/>\n\n</svg>",
+    "title": "Positive Externality of Consumption",
+    "checklist": [
+     "S = MPC = MSC curve drawn (no production externality, so MPC = MSC)",
+     "MPB curve (private demand) correctly drawn and labelled",
+     "MSB curve lies ABOVE MPB, with vertical gap = MEB",
+     "Free-market quantity Qm shown where MPC = MPB",
+     "Socially optimal quantity Qopt shown where MSC = MSB",
+     "Qm < Qopt clearly shown (underconsumption)",
+     "Welfare loss triangle shaded between MSB and MSC from Qm to Qopt",
+     "Axes labelled: Costs/Benefits (y-axis), Quantity (x-axis)"
+    ],
+    "description": "Shows how a positive consumption externality causes MSB to lie above MPB, leading to underconsumption and a welfare loss triangle."
+   },
+   {
+    "id": "market-failure:diagram:5a730520",
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:transparent\">\n  <!-- Title area -->\n  <text x=\"250\" y=\"30\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"16\" font-weight=\"bold\" text-anchor=\"middle\">Why Markets Fail to Provide Public Goods</text>\n\n  <!-- Non-rival box -->\n  <rect x=\"30\" y=\"55\" width=\"200\" height=\"100\" rx=\"8\" fill=\"transparent\" stroke=\"#059669\" stroke-width=\"2\"/>\n  <text x=\"130\" y=\"78\" fill=\"#059669\" font-family=\"DM Sans, sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\">Non-Rival</text>\n  <text x=\"130\" y=\"98\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" text-anchor=\"middle\">One person's use does</text>\n  <text x=\"130\" y=\"113\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" text-anchor=\"middle\">not reduce availability</text>\n  <text x=\"130\" y=\"128\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" text-anchor=\"middle\">for others (MC = 0)</text>\n  <text x=\"130\" y=\"146\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.7\">e.g., national defence, street lights</text>\n\n  <!-- Non-excludable box -->\n  <rect x=\"270\" y=\"55\" width=\"200\" height=\"100\" rx=\"8\" fill=\"transparent\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n  <text x=\"370\" y=\"78\" fill=\"#3b82f6\" font-family=\"DM Sans, sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\">Non-Excludable</text>\n  <text x=\"370\" y=\"98\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" text-anchor=\"middle\">Cannot prevent non-</text>\n  <text x=\"370\" y=\"113\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" text-anchor=\"middle\">payers from consuming</text>\n  <text x=\"370\" y=\"128\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" text-anchor=\"middle\">the good</text>\n  <text x=\"370\" y=\"146\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.7\">e.g., lighthouse beam, flood barriers</text>\n\n  <!-- Arrows down -->\n  <line x1=\"130\" y1=\"160\" x2=\"130\" y2=\"185\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <polygon points=\"125,185 130,195 135,185\" fill=\"#e8ecf5\"/>\n  <line x1=\"370\" y1=\"160\" x2=\"370\" y2=\"185\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <polygon points=\"365,185 370,195 375,185\" fill=\"#e8ecf5\"/>\n\n  <!-- Free-rider problem box -->\n  <rect x=\"80\" y=\"200\" width=\"340\" height=\"55\" rx=\"8\" fill=\"transparent\" stroke=\"#f59e0b\" stroke-width=\"2\"/>\n  <text x=\"250\" y=\"222\" fill=\"#f59e0b\" font-family=\"DM Sans, sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\">Free-Rider Problem</text>\n  <text x=\"250\" y=\"242\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" text-anchor=\"middle\">Rational consumers will not pay → no revenue for firms</text>\n\n  <!-- Arrow down -->\n  <line x1=\"250\" y1=\"260\" x2=\"250\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <polygon points=\"245,280 250,290 255,280\" fill=\"#e8ecf5\"/>\n\n  <!-- Missing market box -->\n  <rect x=\"100\" y=\"292\" width=\"300\" height=\"45\" rx=\"8\" fill=\"#ef4444\" fill-opacity=\"0.15\" stroke=\"#ef4444\" stroke-width=\"2\"/>\n  <text x=\"250\" y=\"312\" fill=\"#ef4444\" font-family=\"DM Sans, sans-serif\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\">Missing Market (Complete Market Failure)</text>\n  <text x=\"250\" y=\"329\" fill=\"#e8ecf5\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" text-anchor=\"middle\">Private sector will not supply → government must provide</text>\n</svg>",
+    "title": "Public Goods & the Free-Rider Problem",
+    "checklist": [
+     "Non-rivalry and non-excludability clearly defined as the two characteristics",
+     "Free-rider problem explained as a consequence of non-excludability",
+     "Link made to missing market / complete market failure",
+     "Government provision identified as the solution",
+     "Examples of pure public goods given (defence, street lighting)"
+    ],
+    "description": "Illustrates why public goods are not provided by the free market due to the free-rider problem arising from non-rivalry and non-excludability."
+   }
+  ],
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "A negative externality exists when production or consumption imposes costs on third parties that are not reflected in the market price.",
+      "Because external costs are not included, the private cost to the firm is lower than the social cost to society.",
+      "The market produces at the point where marginal private cost equals marginal private benefit, which exceeds the socially optimal output.",
+      "The result is a welfare loss — the area between the social cost and private cost curves over the range of overproduction."
+     ],
+     "title": "Negative externalities cause overproduction",
+     "result": "Negative externalities cause markets to overproduce, creating a divergence between private and social costs and a welfare loss."
+    },
+    {
+     "steps": [
+      "Public goods are non-excludable (cannot prevent non-payers from consuming) and non-rivalrous (one person's consumption does not reduce availability for others).",
+      "Non-excludability creates the free-rider problem — rational consumers will not pay voluntarily because they can consume without paying.",
+      "Because firms cannot charge a price, there is no profit incentive to supply public goods through the market.",
+      "This leads to a missing market — the good is not provided despite generating significant social benefits."
+     ],
+     "title": "Public goods are under-provided by the market",
+     "result": "The free-rider problem means public goods like street lighting and national defence require government provision funded through taxation."
+    },
+    {
+     "steps": [
+      "Information failure occurs when consumers or producers do not have access to full, accurate information about a product's costs or benefits.",
+      "Consumers who underestimate the long-term benefits of a good (education, preventive healthcare) buy less of it than they would if fully informed.",
+      "Consumers who underestimate the long-term costs of a good (tobacco, alcohol) buy more of it than they would if fully informed.",
+      "In both cases, the market outcome diverges from the socially optimal outcome, creating a welfare loss."
+     ],
+     "title": "Information failure leads to misallocation",
+     "result": "Information failure causes systematic under-consumption of goods whose benefits are underestimated and over-consumption of goods whose costs are — a separate source of market failure from externalities, and one that often compounds them."
+    },
+    {
+     "steps": [
+      "Occupational immobility occurs when workers lack the skills or qualifications to move between jobs in different industries.",
+      "Geographical immobility occurs when workers cannot easily relocate due to housing costs, family ties or regional differences.",
+      "When industries decline, immobile workers remain unemployed rather than moving to growing sectors.",
+      "This leads to structural unemployment concentrated in specific regions, wasting productive resources and reducing potential output."
+     ],
+     "title": "Factor immobility creates persistent market failure",
+     "result": "Factor immobility prevents the labour market from clearing efficiently, causing persistent regional unemployment and lost output."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "Measuring externalities is inherently difficult",
+     "content": "Externalities are, by definition, costs or benefits not captured by the market. Placing a monetary value on pollution damage, health costs or environmental degradation involves subjective judgements. Different valuation methods produce different estimates, making it hard to determine the 'correct' level of government intervention. Over-correction can be as harmful as under-correction."
+    },
+    {
+     "title": "Market failure does not automatically justify intervention",
+     "content": "The existence of market failure is a necessary but not sufficient condition for government intervention. Intervention itself can create government failure through unintended consequences, bureaucratic inefficiency and imperfect information. Policymakers must weigh the costs of market failure against the potential costs of government failure before acting."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "id": "market-failure:mistake:e4ea0fe2",
+    "title": "Confusing private, external, and social costs/benefits",
+    "examTip": "On diagrams, the vertical distance between MSC and MPC (or MSB and MPB) at any output level represents the value of the externality.",
+    "mistake": "Students mix up the components or forget that social cost = private cost + external cost.",
+    "correction": "Private = cost/benefit to the decision-maker. External = cost/benefit to third parties. Social = total (private + external). The gap between private and social is the externality."
+   },
+   {
+    "id": "market-failure:mistake:bedee9c4",
+    "title": "Labelling diagrams MSC/MSB incorrectly for externalities",
+    "mistake": "Students draw negative externality diagrams with MSC below MPC, or positive externality diagrams with MSB below MPB.",
+    "correction": "Negative externality in production: MSC is ABOVE MPC (social cost exceeds private cost). Positive externality in consumption: MSB is ABOVE MPB (social benefit exceeds private benefit)."
+   },
+   {
+    "id": "market-failure:mistake:d8d755d7",
+    "title": "Saying public goods \"cannot be provided\" by the market",
+    "mistake": "Students claim public goods are impossible for the private sector to provide. Some public goods can be privately provided (e.g. lighthouses historically).",
+    "correction": "The issue is under-provision, not impossibility. Because of the free rider problem, the private sector has no incentive to provide public goods at the socially optimal level, so they are under-provided or not provided at all."
+   }
+  ]
+ }
+}
