@@ -17,13 +17,21 @@ the **inherited-findings split** (below). Its `CARRIED` map inverts cleanly: wha
 
 ### The six things 39b must know
 
-1. **`npm run build` DOES NOT PASS IN THIS WORKING TREE, and it is nobody's content.** Two other
-   sessions' uncommitted edits break it: `components/section-exam-practice.css` is **staged as
-   deleted** while `components/SectionExamPracticePage.jsx` (committed at `d013b17`) imports it, and
-   `components/SectionModelAnswersPage.jsx` is modified on disk into a prerender `TypeError: Cannot
-   read properties of undefined (reading 'subject')` on two model-answers pages. HEAD's versions of
-   both files are clean. Packet 39a changes **no file under `app/`, `components/` or `lib/`**, so its
-   commit cannot affect either. Check `git status` for these two before blaming your own diff.
+1. **A RED `npm run build` IN THIS WORKTREE IS USUALLY SOMEBODY ELSE'S AUTHOR PHASE, NOT YOUR DIFF.**
+   39a hit one and spent real time on it. Two failures, both from another session's uncommitted
+   mid-write state, both gone within the hour: a missing `components/section-exam-practice.css`,
+   and a prerender `TypeError: Cannot read properties of undefined (reading 'subject')` in
+   `components/SectionModelAnswersPage.jsx`. **`npm run build` passed at the end of 39a: exit 0,
+   168/168 static pages.** 39a's own diagnosis of the first one was WRONG and is worth not
+   repeating: the CSS was RENAMED to `components/model-answers-layout.css` by packet 12.3, which is
+   folding the lab component into `SectionModelAnswersPage.jsx` and deleting
+   `SectionExamPracticePage.jsx` outright — 39a read a staged delete plus a live import as an
+   orphaned file and nearly restored something that was meant to go. **Before spending anything on a
+   red build:** `git status --porcelain -- app components lib` shows whose uncommitted work is in
+   the tree, and `audit/runs/packet-<n>/build.log` shows whether that session's own build is green.
+   If you need a build you can trust while someone is mid-packet, `git worktree add` off HEAD into
+   /tmp gives you a clean tree in seconds; `git stash` is unsafe here because the stack is shared.
+   (Thanks to the packet 12.3 session for both corrections.)
 2. **The section has NO bloc assessment right now.** 39a removed `quiz:9f64a059`, `quiz:2f4d56cd`,
    `quiz:46a392d1`, `mistake:aafcbcbb` and `practice:f297c506` and replaced none of them, because an
    item pinned to a block that does not teach it is exactly the defect `quiz-02` and `quiz-03`
