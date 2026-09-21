@@ -2948,3 +2948,37 @@ later sections.** Line 17 reads `snap[k].length` for a table missing from the t=
 `TypeError`, so a packet whose section sorts after `globalisation` gets no snapshot and no warning
 that it got none. Packet 39a took its snapshot with a one-off equivalent rather than changing a
 shared tool mid-packet. It needs a one-line guard and its own commit.
+---
+
+## 21 September 2026 — `{title, content}` is the canonical extras evaluation frame (packet 31, V035)
+
+An evaluation frame in `section_extras.evaluation` is `{title, content}`, where `content` is a
+**prose string**. `ExtrasTab.jsx:126,129` reads exactly those two fields, `extras.shape` is BLOCK on
+`content`, and 38 frames across packets 14-38 already author it. No other shape is supported and the
+component will not be widened to accept one.
+
+**The choice this settles, because it looked genuinely open.** Packets 24, 25 and 27 each
+independently authored `{title, points[]}`, and packet 23 authored `{point, detail}` — thirteen frames
+rendering an empty card. Three independent authors reaching for a bullet list is a fair argument that
+the renderer is the odd one out, and widening `ExtrasTab` to map a `points` array would have closed
+V035 in one edit without touching any content.
+
+It was refused because **packet 28 settles the question in the other direction on purpose**: its one
+frame is a four-item list deliberately written as flowing prose — "Four questions, and the cost curves
+only answer the first two. How far is…? How wide is…?" — and packets 29, 30, 34, 35, 36 and 38 all do
+the same. The house style for an evaluation frame is a paragraph that carries a judgement, not a list
+that leaves the judgement implicit. Accepting `points` would have made two shapes canonical, made
+`extras.shape` unenforceable, and preserved in nine frames exactly the bulleted register the format
+exists to push authors out of.
+
+**Irreversible part:** the nine `points` arrays are gone. Their content survives as prose, move for
+move, but the arrays are not recoverable from the modules and a later packet wanting a list UI would
+have to re-author them.
+
+**A second, smaller decision in the same packet.** Packet 23's four frames were a pure key rename with
+the prose untouched, though at 232-290 chars they sit at the bottom of the clean range (239 floor, 703
+median). They were NOT extended. Lengthening them would have meant inventing economics beyond the
+finding, in a section whose own packet is already verified and staged, for a card that renders
+correctly either way — the V023 rule that thin content and unrenderable content are different
+problems. If the founder wants them at median depth, that is a content packet against `supply`, not a
+tail of this one.

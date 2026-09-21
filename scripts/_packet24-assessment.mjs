@@ -322,33 +322,25 @@ export const EXTRAS = {
       result: 'The same ' + money(TAX) + ' per unit raises ' + money(TAXED.government) + ' as a tax and costs ' + money(SUBSIDISED.government) + ' as a subsidy, because each policy moves the quantity it applies to in its own favour — and against the budget in the subsidy\'s case.',
     },
   ],
+  /*
+   * V035: authored `{title, points}`, and ExtrasTab.jsx renders `{point.content}` — the heading
+   * appeared and the four points never reached the page, so each card was a question with no
+   * answer. Rewritten as the `{title, content}` prose the component reads and packets 28-38
+   * author. Every analytical move in the four points survives; the subsidy figures stay LIVE
+   * expressions rather than numerals, so they cannot drift from the spine.
+   */
   evaluation: [
     {
       title: 'How far does the price mechanism allocate resources well?',
-      points: [
-        'It coordinates buyers and sellers who never meet, using a single number that costs nothing to read.',
-        'It rations by willingness AND ability to pay, which is not the same as allocating by need.',
-        'A price signal cannot distinguish a temporary disruption from a lasting change in demand, so it can draw investment into capacity that is not wanted.',
-        'The wider the market, the faster supply answers a signal — which is why the same shock moves a local price far more than a global one.',
-      ],
+      content: 'Its strength is real and worth conceding first: it coordinates buyers and sellers who never meet, using a single number that costs nothing to read. The limits are about what that number can and cannot carry. It rations by willingness AND ability to pay, which is not the same as allocating by need — the mechanism is efficient about a question it was never asked. It cannot distinguish a temporary disruption from a lasting change in demand, so it can draw investment into capacity that nobody turns out to want. And how quickly the signal is answered depends on how wide the market is, which is why the same shock moves a local price far more than a global one. The honest verdict names the market before it grades the mechanism.',
     },
     {
       title: 'Is an indirect tax a good way to raise revenue?',
-      points: [
-        'Revenue is largest where the tax changes behaviour least, so a tax that raises a lot is a tax that discourages little.',
-        'A tax meant to discourage consumption and a tax meant to raise revenue pull in opposite directions; a policy should say which it is for.',
-        'Incidence decides who actually pays, and it is not the side that remits the money.',
-        'Responsiveness is usually greater over a longer period, so both the revenue and the split change as time passes.',
-      ],
+      content: 'Good at raising revenue and good at changing behaviour are not the same thing, and a tax cannot be very good at both. Revenue is largest where the tax changes behaviour least, so a tax that raises a lot is a tax that discourages little — which means a policy has to say which job it is for before it can be judged to have done it. Who actually pays is decided by incidence, not by the side that remits the money, so a tax collected from producers can be borne almost entirely by buyers. Both of those shift with the period considered, because responsiveness is usually greater over a longer one: the revenue and the split a first year shows are not the ones a fifth year will.',
     },
     {
       title: 'Does a subsidy reach the people it is meant for?',
-      points: [
-        'Only the share captured by buyers shows up as a lower price — here ' + money(Math.abs(SUBSIDISED.buyerShare)) + ' of ' + money(SUBSIDY) + '.',
-        'Where demand is highly responsive, most of a subsidy is captured by producers instead.',
-        'The cost grows with the quantity, so a subsidy that succeeds becomes more expensive.',
-        'A subsidised price is hard to withdraw once buyers have adjusted to it, which makes a temporary subsidy difficult to keep temporary.',
-      ],
+      content: 'Only the share captured by buyers shows up as a lower price, and here that is ' + money(Math.abs(SUBSIDISED.buyerShare)) + ' of the ' + money(SUBSIDY) + ' paid — the rest stays with producers. Which way that split falls is decided by responsiveness rather than by intention: where demand is highly responsive, most of a subsidy is captured by producers instead, whoever the policy was written for. Two further problems are about time rather than incidence. The cost grows with the quantity, so a subsidy that succeeds becomes more expensive precisely because it worked. And a subsidised price is hard to withdraw once buyers have adjusted to it, which makes a temporary subsidy difficult to keep temporary.',
     },
   ],
 };

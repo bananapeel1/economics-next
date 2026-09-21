@@ -1,0 +1,20 @@
+=== TEST ===
+ℹ pass 240
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1993.237542
+=== VALIDATE (extras.shape lines + summary) ===
+184 findings not in the baseline:
+by rule:
+  BLOCK  claim.uncited                  311
+  BLOCK  quiz.long-correct              177
+  BLOCK  locale.institution             160
+  BLOCK  practice.tariff                 91
+  BLOCK  practice.command                55
+  BLOCK  quiz.essay-stem                 28
+  BLOCK  section.no-recall               22
+  BLOCK  pins.diagram                    19
+  BLOCK  fillin.blanks                    8
+  BLOCK  fillin.dup-answers               5

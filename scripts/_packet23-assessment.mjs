@@ -380,22 +380,29 @@ export const EXTRAS = {
       result: `Supply that is inelastic at ${pesStr(PES_SR())} in the short run is elastic at ${pesStr(PES_LR())} in the long run, which is the significance 1.3.3 · 2d asks for.`,
     },
   ],
+  /*
+   * V035: these four frames were authored `{point, detail}` and ExtrasTab.jsx reads
+   * `{point.title}` and `{point.content}`, so all four rendered a card with NO heading and NO
+   * body — the only one of the four V035 sections where even the question was blank. The prose is
+   * unchanged; only the keys move, because the shape the component reads is the shape packets
+   * 28-38 author and `extras.shape` enforces.
+   */
   evaluation: [
     {
-      point: 'How inelastic supply really is depends on the period being considered',
-      detail: 'A PES value quoted without its period means very little, because the same market gives different answers over a week, a season and a decade. Where a question gives a time frame, the time frame is doing most of the analytical work.',
+      title: 'How inelastic supply really is depends on the period being considered',
+      content: 'A PES value quoted without its period means very little, because the same market gives different answers over a week, a season and a decade. Where a question gives a time frame, the time frame is doing most of the analytical work.',
     },
     {
-      point: 'The determinants rarely bind equally, so naming all five is weaker than judging one',
-      detail: 'In a fresh produce market perishability dominates; in a licensed trade the legal cap dominates; in heavy industry capacity and factor mobility dominate. Identifying which constraint actually binds is the judgement the higher tariffs ask for.',
+      title: 'The determinants rarely bind equally, so naming all five is weaker than judging one',
+      content: 'In a fresh produce market perishability dominates; in a licensed trade the legal cap dominates; in heavy industry capacity and factor mobility dominate. Identifying which constraint actually binds is the judgement the higher tariffs ask for.',
     },
     {
-      point: 'Supply-side constraints can be loosened by policy, not only by time',
-      detail: 'Legal constraints are rules rather than costs, so planning reform, licence expansion or quota changes can raise PES without waiting for capacity to be built. That makes the short run partly a policy choice rather than a fact of the industry.',
+      title: 'Supply-side constraints can be loosened by policy, not only by time',
+      content: 'Legal constraints are rules rather than costs, so planning reform, licence expansion or quota changes can raise PES without waiting for capacity to be built. That makes the short run partly a policy choice rather than a fact of the industry.',
     },
     {
-      point: 'A firm-level answer and a market-level answer are not the same',
-      detail: 'Over long periods, high prices bring new firms into an industry, so market supply is more elastic than the supply of any single firm. An answer framed entirely around one producer\'s capacity misses that channel.',
+      title: 'A firm-level answer and a market-level answer are not the same',
+      content: 'Over long periods, high prices bring new firms into an industry, so market supply is more elastic than the supply of any single firm. An answer framed entirely around one producer\'s capacity misses that channel.',
     },
   ],
 };
