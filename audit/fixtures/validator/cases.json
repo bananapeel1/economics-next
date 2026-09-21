@@ -43,7 +43,7 @@
        }
       ],
       "realExample": {
-       "emoji": "🛒",
+       "emoji": "\ud83d\uded2",
        "text": "A shopper in Kuala Lumpur comparing two phone plans weighs the extra data against the extra monthly cost before choosing."
       },
       "misconception": "Students often write that rational means selfish. It means consistent: choosing the option with the greatest net benefit. Write: rational consumers weigh marginal benefit against marginal cost.",
@@ -74,7 +74,7 @@
        }
       ],
       "realExample": {
-       "emoji": "☕",
+       "emoji": "\u2615",
        "text": "Singapore commuters keep the same kopi order for years even when a cheaper stall opens next door: habit and inertia, not calculation."
       },
       "misconception": "Students think inertia means laziness. It means the cost of switching, including effort, is felt more than the gain. Write: inertia keeps consumers on a worse deal because switching feels costly.",
@@ -84,8 +84,8 @@
        "prompt": "Complete the chain:",
        "template": [
         "Total ___ is overall satisfaction",
-        "→ The extra satisfaction from one more unit ___ as more is consumed",
-        "→ So the demand curve slopes ___"
+        "\u2192 The extra satisfaction from one more unit ___ as more is consumed",
+        "\u2192 So the demand curve slopes ___"
        ],
        "answers": [
         "utility",
@@ -131,7 +131,7 @@
        }
       ],
       "realExample": {
-       "emoji": "📱",
+       "emoji": "\ud83d\udcf1",
        "text": "When Hong Kong incomes rose in 2023, demand for premium phones shifted right at every price."
       },
       "misconception": "Students say a price rise shifts demand left. It causes a movement along the curve. Write: a shift needs a non-price factor.",
@@ -162,17 +162,17 @@
        }
       ],
       "realExample": {
-       "emoji": "⛽",
+       "emoji": "\u26fd",
        "text": "Fuel demand in Pakistan changed little when prices rose sharply in 2022, a sign of inelastic demand."
       },
-      "misconception": "Students treat PED as positive. It is negative for normal goods; the sign is conventionally dropped. Write: PED = %ΔQd ÷ %ΔP.",
+      "misconception": "Students treat PED as positive. It is negative for normal goods; the sign is conventionally dropped. Write: PED = %\u0394Qd \u00f7 %\u0394P.",
       "examMatters": "Show the formula and interpret the number.",
       "recall": {
        "type": "fillin",
        "prompt": "Complete:",
        "template": [
         "A price rise of 10% cuts quantity demanded by 25%, so demand here is price ___",
-        "→ and total revenue will therefore ___"
+        "\u2192 and total revenue will therefore ___"
        ],
        "answers": [
         "elastic",
@@ -212,7 +212,7 @@
        }
       ],
       "realExample": {
-       "emoji": "🚌",
+       "emoji": "\ud83d\ude8c",
        "text": "Bus travel in Jakarta fell as incomes rose and riders switched to motorbikes: an inferior good."
       },
       "misconception": "Students call inferior goods low quality. Inferior describes the income response, not the product. Write: demand falls as income rises.",
@@ -256,7 +256,7 @@
        }
       ],
       "realExample": {
-       "emoji": "🎟️",
+       "emoji": "\ud83c\udf9f\ufe0f",
        "text": "Ticket prices for a sold-out K-pop tour rose 20% and revenue rose, because demand was inelastic."
       },
       "misconception": "Students think higher prices always mean more revenue. Only with inelastic demand. Write: compare the percentage changes.",
@@ -342,7 +342,7 @@
      "4%"
     ],
     "correctIndex": 3,
-    "explanation": "0.4 × 10% = 4%."
+    "explanation": "0.4 \u00d7 10% = 4%."
    },
    {
     "id": "q6",
@@ -913,7 +913,7 @@
      "id": "p1",
      "marks": 2,
      "question": "Define the term 'utility'. (2 marks)",
-     "guidance": "…"
+     "guidance": "\u2026"
     }
    }
   },
@@ -1046,7 +1046,7 @@
   {
    "rule": "locale.currency",
    "fail": {
-    "content.0.sections.0.realExample.text": "A £10 phone plan against a RM 40 plan."
+    "content.0.sections.0.realExample.text": "A \u00a310 phone plan against a RM 40 plan."
    }
   },
   {
@@ -1130,7 +1130,7 @@
    "rule": "flow.separator",
    "fail": {
     "content.0.sections.0.body.1.steps": [
-     "Identify — list every option",
+     "Identify \u2014 list every option",
      "Compare",
      "Choose"
     ]
@@ -1252,8 +1252,8 @@
    "fail": {
     "content.0.sections.1.recall.template": [
      "Total utility is overall satisfaction: ___",
-     "→ Marginal utility ___ as more is consumed",
-     "→ So the demand curve slopes ___"
+     "\u2192 Marginal utility ___ as more is consumed",
+     "\u2192 So the demand curve slopes ___"
     ]
    }
   },
@@ -1262,8 +1262,8 @@
    "pass": {
     "content.0.sections.1.recall.template": [
      "Total ___ is overall satisfaction",
-     "→ Marginal ___ as more is consumed",
-     "→ So the demand curve slopes ___"
+     "\u2192 Marginal ___ as more is consumed",
+     "\u2192 So the demand curve slopes ___"
     ],
     "content.0.sections.1.recall.answers": [
      "utility",
@@ -1563,7 +1563,7 @@
      "prompt": "Complete:",
      "template": [
       "PED = percentage change in ___ demanded",
-      "→ divided by percentage change in ___"
+      "\u2192 divided by percentage change in ___"
      ],
      "answers": [
       "quantity",
@@ -1716,7 +1716,7 @@
      "type": "fillin",
      "prompt": "Complete:",
      "template": [
-      "Price multiplied by quantity sold is a firm’s total ___"
+      "Price multiplied by quantity sold is a firm\u2019s total ___"
      ],
      "answers": [
       "revenue"
@@ -1788,6 +1788,21 @@
       "unitary"
      ]
     }
+   }
+  },
+  {
+   "rule": "schema.recall-diagram",
+   "fail": {
+    "content.0.sections.0.recall.type": "diagram",
+    "content.0.sections.0.recall.specId": "no-such-spec"
+   }
+  },
+  {
+   "rule": "schema.quant-template",
+   "fail": {
+    "content.0.quantIds": [
+     "no-such-template"
+    ]
    }
   }
  ]

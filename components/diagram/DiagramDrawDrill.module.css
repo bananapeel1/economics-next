@@ -1,0 +1,145 @@
+/* Drawing drill. Every colour is a token from app/globals.css — the September 2026 light-mode
+   audit traced its root cause to dark-tuned colours written as literals, and diagram colours
+   baked into the database were one of the five. No literal belongs in this file. */
+
+.drill {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-primary);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.chip {
+  font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500;
+  padding: 3px 9px; border-radius: 20px;
+  background: var(--green-15); color: var(--accent-green);
+}
+.grey { background: var(--bg-section); color: var(--text-muted); }
+.marks { background: var(--indigo-15); color: var(--accent-blue); }
+
+.prompt { margin: 0; font-size: 15.5px; line-height: 1.6; color: var(--text-primary); }
+.prompt strong { font-weight: 600; }
+
+.steps { display: flex; gap: 8px; flex-wrap: wrap; }
+.stepBtn {
+  display: flex; align-items: center; gap: 8px; cursor: pointer;
+  border: 1.5px solid var(--border-primary); background: var(--bg-card);
+  color: var(--text-muted); border-radius: 10px; padding: 7px 12px 7px 8px;
+  font-family: inherit; font-size: 13px; font-weight: 500;
+}
+.stepNum {
+  width: 20px; height: 20px; border-radius: 50%; flex: none;
+  background: var(--bg-section); color: var(--text-muted);
+  font-family: 'DM Mono', monospace; font-size: 11px;
+  display: grid; place-items: center;
+}
+.current { border-color: var(--accent-green); background: var(--green-15); color: var(--accent-green); }
+.current .stepNum { background: var(--accent-green); color: var(--bg-card); }
+.done .stepNum { background: var(--accent-green); color: var(--bg-card); }
+.done { color: var(--text-secondary); }
+
+.hint {
+  display: flex; gap: 10px; align-items: flex-start;
+  background: var(--bg-section); border-radius: 10px; padding: 11px 14px;
+  font-size: 14px; color: var(--text-secondary);
+}
+.hintKey {
+  font-family: 'DM Mono', monospace; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--accent-green); flex: none; padding-top: 2px;
+}
+
+/* ── the canvas ── */
+.plot { width: 100%; height: auto; display: block; touch-action: none; user-select: none; }
+.grid { stroke: var(--border-primary); stroke-width: 1; pointer-events: none; }
+.axis { stroke: var(--text-muted); stroke-width: 1.6; pointer-events: none; }
+.tick { fill: var(--text-dim); font-family: 'DM Mono', monospace; font-size: 10px; pointer-events: none; }
+.axisTitle { fill: var(--text-muted); font-family: inherit; font-size: 11.5px; font-weight: 500; pointer-events: none; }
+
+.curve { fill: none; stroke-width: 2.6; stroke-linecap: round; pointer-events: none; }
+.demand { stroke: var(--accent-blue); }
+.supply { stroke: var(--accent-amber); }
+.shifted { stroke: var(--accent-red); }
+.ghost { stroke: var(--text-dim); stroke-dasharray: 5 4; stroke-width: 2; opacity: 0.7; }
+
+.guide { stroke: var(--accent-green); stroke-width: 1.2; stroke-dasharray: 4 3; opacity: 0.75; pointer-events: none; }
+.dot { fill: var(--accent-green); stroke: var(--bg-card); stroke-width: 2; pointer-events: none; }
+.dotOff { fill: var(--accent-red); }
+
+/* A halo, so a label that lands over a grid line or a curve stays readable. */
+.curveLabel, .eqLabel {
+  paint-order: stroke fill; stroke: var(--bg-card); stroke-width: 3px; stroke-linejoin: round;
+  pointer-events: none;
+}
+.curveLabel { font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700; }
+.eqLabel { font-family: 'DM Mono', monospace; font-size: 11.5px; font-weight: 500; fill: var(--accent-green); }
+.labelOff { fill: var(--accent-red); }
+.demandFill { fill: var(--accent-blue); }
+.supplyFill { fill: var(--accent-amber); }
+.shiftedFill { fill: var(--accent-red); }
+.ghostFill { fill: var(--text-dim); }
+
+.hit { stroke: transparent; stroke-width: 22; fill: none; cursor: grab; }
+.hit:focus { outline: none; }
+.hit:focus-visible { stroke: var(--green-30); }
+.hitOn { stroke: var(--green-25); }
+
+.region { fill: transparent; stroke: transparent; stroke-width: 1; cursor: pointer; }
+.shading .region:hover { fill: var(--indigo-15); }
+.regionSel { fill: var(--red-15); stroke: var(--accent-red); stroke-dasharray: 3 2; }
+.regionOk { fill: var(--green-25); stroke: var(--accent-green); stroke-width: 1.8; }
+.regionBad { fill: var(--red-15); stroke: var(--accent-red); stroke-width: 1.8; }
+.regionMiss { fill: none; stroke: var(--accent-green); stroke-width: 1.8; stroke-dasharray: 5 3; }
+
+/* ── tap-to-nudge: the path a drag cannot replace on a phone ── */
+.nudge { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.nudgeLabel { font-size: 13px; color: var(--text-muted); }
+.nudgeBtn {
+  font-family: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer;
+  padding: 9px 14px; border-radius: 10px;
+  border: 1.5px solid var(--border-primary); background: var(--bg-input); color: var(--text-secondary);
+}
+.nudgeBtn:disabled { opacity: 0.45; cursor: not-allowed; }
+.nudgeBtn:not(:disabled):hover { border-color: var(--accent-green); color: var(--accent-green); }
+.nudgeValue { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--accent-green); }
+
+/* ── mark scheme ── */
+.scheme { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.scheme li {
+  display: grid; grid-template-columns: 24px 1fr; gap: 11px;
+  padding: 12px 0; border-bottom: 1px solid var(--border-primary);
+}
+.scheme li:last-child { border-bottom: 0; }
+.markBox {
+  width: 22px; height: 22px; border-radius: 6px; display: grid; place-items: center;
+  font-family: 'DM Mono', monospace; font-size: 13px; font-weight: 700; margin-top: 1px;
+}
+.got .markBox { background: var(--green-15); color: var(--accent-green); }
+.missed .markBox { background: var(--red-10); color: var(--accent-red); }
+.criterion { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+.rule { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--text-dim); margin-top: 3px; word-break: break-word; }
+.note { font-size: 13px; color: var(--text-secondary); margin-top: 6px; border-left: 2px solid var(--border-hover); padding-left: 9px; line-height: 1.5; }
+.got .note { border-left-color: var(--accent-green); }
+.missed .note { border-left-color: var(--accent-red); }
+
+.actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn {
+  font-family: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer;
+  padding: 10px 16px; border-radius: 10px;
+  border: 1.5px solid var(--border-primary); background: var(--bg-card); color: var(--text-secondary);
+}
+.btn:hover { border-color: var(--border-hover); color: var(--text-primary); }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.primary { background: var(--accent-green); border-color: var(--accent-green); color: var(--bg-card); }
+.primary:not(:disabled):hover { color: var(--bg-card); filter: brightness(1.08); }
+
+/* 390px is the acceptance width for anything a student touches. */
+@media (max-width: 520px) {
+  .drill { padding: 16px; gap: 12px; }
+  .steps { gap: 6px; }
+  .stepBtn { font-size: 12px; padding: 6px 10px 6px 7px; }
+  .nudgeBtn { flex: 1 1 auto; }
+}
