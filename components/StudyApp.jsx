@@ -23,7 +23,7 @@ import HomeScreen from './HomeScreen';
 import { SpacedReview, MixedReview, countDueReviews, getDueReviews } from './ReviewMode';
 import { BookAlt, Notes as NotesIcon, ChartHistogram, DrawerAlt, CardsBlank, Quiz as QuizIcon, Mistakes as MistakesIcon, Tutor as TutorIcon, Star, Padlock, LearnMode as LearnModeIcon } from './Icons';
 import { trackFunnel } from '@/lib/funnel';
-import { countSteps, clampStep, furthestStep } from '@/lib/learn-steps';
+import { countSteps, clampStep, furthestStep, contentVersion, encodePointer, parsePointer } from '@/lib/learn-steps';
 
 const HomeIcon = () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>;
 
@@ -58,6 +58,27 @@ const allTabs = [
    arrive. Loading says it is loading, and the "being prepared" wording is reserved for a response
    that really came back empty. V007 gave it a second caller — a paid tab whose data is still in
    flight — so it is a component rather than a block inside one branch of renderTab. */
+/*
+ * V038 fix round 4 — a payload says which section it describes.
+ *
+ * `rawSectionData` is deliberately NOT cleared on a section change (F098: keep the previous section
+ * on screen while the new one arrives, rather than blanking to a loading card). That is a good
+ * trade for prose — a paragraph of the topic you just left is a worse read than the one you asked
+ * for, not a wrong ANSWER. It is not a good trade for Learn Mode, which does not merely display the
+ * payload: it judges the student's saved place against it, and, until round 4, wrote the verdict to
+ * storage. Section B's pointer judged by section A's deck is how every rejected round got in
+ * (verify-a.md rounds 1-3).
+ *
+ * So the section id travels WITH the payload, from the moment the payload enters the app, and the
+ * one consumer that judges rather than displays compares it before it is allowed to judge. A
+ * payload tagged by a future path that forgets reads as "not this section", which parks Learn Mode
+ * for one fetch — the safe direction, and a bounded one: `publicSectionPayload` always sets
+ * `paidPending`, so the API fetch runs on every first paint and always carries both fields.
+ */
+function payloadForSection(data, sectionId) {
+  return data ? { ...data, sectionId } : data;
+}
+
 function SectionLoading() {
   return (
     <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--text-muted)' }}>
@@ -72,6 +93,15 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
   // F031: the price on this bar must be the price checkout will charge.
   const { trialEligible } = useAuth();
   const offer = introOffer(trialEligible);
+  /*
+   * V009. `isPremium` arrives three-valued from StudyApp: true, false, or null for "not known yet".
+   * Every padlock, the "£1 FIRST MONTH" label and the upgrade bar below are statements about what
+   * this student has paid for, and on a prerendered page the answer is genuinely absent for the
+   * first moment of the visit. `locked` is therefore `=== false`, never `!isPremium`: an unknown
+   * entitlement draws the cards plain — no lock, no price, no CTA — and the true state replaces it
+   * a moment later. Showing a paying student a padlock and an upsell is F035 with smaller pixels.
+   */
+  const locked = isPremium === false;
   // F030: the same function the engine uses, so the launchpad and "Step 1 of N" agree.
   const contentSteps = countSteps(sectionData?.content);
   const notesSections = sectionData?.notes?.length || 0;
@@ -94,10 +124,17 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
      count the engine uses, already computed above — and clamp the pointer into that range. The
      row's own total is the fallback for the moment before the content has loaded. */
   const progressSteps = contentSteps || progress?.total_steps || 0;
-  const progressPct = progress && progressSteps
+  /* V038. The row is only about THIS deck when it was written against a deck of this length —
+     the same version proxy the engine resolves the pointer with. A 14-step row read against a
+     rebuilt 29-step deck drew a confident "48%" that was not a measurement of anything the
+     student had done (audit/runs/packet-37/verify-b.md, section 3). Say it has been rebuilt
+     instead of drawing a number, and let Learn Mode ask them what to do about it. */
+  const progressOtherVersion = !!progress && contentSteps > 0
+    && Number.isFinite(progress.total_steps) && progress.total_steps !== contentSteps;
+  const progressPct = progress && progressSteps && !progressOtherVersion
     ? Math.round(((clampStep(progress.furthest_step, progressSteps) + 1) / progressSteps) * 100)
     : 0;
-  const hasProgress = !!progress;
+  const hasProgress = !!progress && !progressOtherVersion;
 
   return (
     <div className="section-overview">
@@ -119,7 +156,7 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
             <div className="overview-hero-label">RECOMMENDED &middot; START HERE</div>
             <div className="overview-hero-name">Learn Mode</div>
             <div className="overview-hero-meta">
-              {!isPremium && <span className="overview-hero-free">&#10003; Free</span>}
+              {locked && <span className="overview-hero-free">&#10003; Free</span>}
               {contentSteps} steps
             </div>
             {hasProgress && (
@@ -129,6 +166,9 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
                 </div>
                 <span className="overview-hero-progress-text">{progressPct}%</span>
               </div>
+            )}
+            {progressOtherVersion && (
+              <div className="overview-hero-rebuilt">This topic has been rebuilt since you were last here</div>
             )}
           </div>
         </div>
@@ -210,30 +250,30 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
       <div className="overview-category">
         <div className="overview-category-header">
           <span className="overview-category-line" />
-          <span className="overview-category-label">{isPremium ? 'PREMIUM' : 'PREMIUM \u2014 \u00A31 FIRST MONTH'}</span>
+          <span className="overview-category-label">{locked ? 'PREMIUM \u2014 \u00A31 FIRST MONTH' : 'PREMIUM'}</span>
           <span className="overview-category-line" />
         </div>
         <div className="overview-grid overview-grid-4">
-          <button className={`overview-card ${!isPremium ? 'overview-card-premium' : ''}`} onClick={() => onTabSelect('flashcards')}>
-            {!isPremium && <span className="overview-card-lock"><Padlock size={12} /></span>}
+          <button className={`overview-card ${locked ? 'overview-card-premium' : ''}`} onClick={() => onTabSelect('flashcards')}>
+            {locked && <span className="overview-card-lock"><Padlock size={12} /></span>}
             <span className="overview-card-icon"><CardsBlank size={24} /></span>
             <span className="overview-card-label">Flashcards</span>
             <span className="overview-card-count">{flashcardCount == null ? '\u2014' : `${flashcardCount} cards`}</span>
           </button>
-          <button className={`overview-card ${!isPremium ? 'overview-card-premium' : ''}`} onClick={() => onTabSelect('quiz')}>
-            {!isPremium && <span className="overview-card-lock"><Padlock size={12} /></span>}
+          <button className={`overview-card ${locked ? 'overview-card-premium' : ''}`} onClick={() => onTabSelect('quiz')}>
+            {locked && <span className="overview-card-lock"><Padlock size={12} /></span>}
             <span className="overview-card-icon"><QuizIcon size={24} /></span>
             <span className="overview-card-label">Quiz</span>
             <span className="overview-card-count">{quizCount == null ? '\u2014' : `${quizCount} questions`}</span>
           </button>
-          <button className={`overview-card ${!isPremium ? 'overview-card-premium' : ''}`} onClick={() => onTabSelect('tutor')}>
-            {!isPremium && <span className="overview-card-lock"><Padlock size={12} /></span>}
+          <button className={`overview-card ${locked ? 'overview-card-premium' : ''}`} onClick={() => onTabSelect('tutor')}>
+            {locked && <span className="overview-card-lock"><Padlock size={12} /></span>}
             <span className="overview-card-icon"><TutorIcon size={24} /></span>
             <span className="overview-card-label">AI Tutor</span>
             <span className="overview-card-count">Ask anything</span>
           </button>
-          <button className={`overview-card ${!isPremium ? 'overview-card-premium' : ''}`} onClick={() => { window.location.href = '/fun'; }}>
-            {!isPremium && <span className="overview-card-lock"><Padlock size={12} /></span>}
+          <button className={`overview-card ${locked ? 'overview-card-premium' : ''}`} onClick={() => { window.location.href = '/fun'; }}>
+            {locked && <span className="overview-card-lock"><Padlock size={12} /></span>}
             <span className="overview-card-icon" style={{ fontSize: 24 }}>&#127183;</span>
             <span className="overview-card-label">Blackjack</span>
             <span className="overview-card-count">Learn while you play</span>
@@ -242,7 +282,7 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
       </div>
 
       {/* ── Premium CTA Bar ── */}
-      {!isPremium && (
+      {locked && (
         <div className="overview-cta-bar">
           <span className="overview-cta-icon">&#9889;</span>
           <span className="overview-cta-text">
@@ -262,7 +302,15 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
 }
 
 export default function StudyApp({ subjects, sections, units, initialSectionData, initialSectionId, requestedSectionId = null }) {
-  const { user, isPremium } = useAuth();
+  const { user, isPremium, entitlementKnown } = useAuth();
+  /*
+   * V009. `true` / `false` / `null`, where null is "not known yet". Everything that draws a padlock,
+   * a plan label or an upgrade CTA takes THIS, not `isPremium` — on a prerendered page `isPremium`
+   * is false before the answer arrives, and a padlock drawn on that is a false statement to a
+   * student who has paid. Anything that merely withholds a convenience (the "ask the tutor" link)
+   * can keep using `isPremium`: the cost of being wrong there is a missing shortcut, not a lie.
+   */
+  const entitlement = entitlementKnown ? isPremium : null;
 
   // Subject state — follow whichever section we were explicitly asked to open.
   // requestedSectionId is resolved on the server, so this produces the same
@@ -399,7 +447,8 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   }
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const dataMatchesSection = startSection === initialSectionId;
-  const [rawSectionData, setSectionData] = useState(dataMatchesSection ? initialSectionData : null);
+  // V038 fix round 4: tagged with the section it describes, at every point a payload enters.
+  const [rawSectionData, setSectionData] = useState(dataMatchesSection ? payloadForSection(initialSectionData, initialSectionId) : null);
 
   /*
    * F074, critical. Of 769 quiz questions in the corpus the correct answer is option B in 492 of
@@ -542,19 +591,37 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   // BEFORE the step for the new section was loaded, so it stamped the previous section's step onto the
   // new section's key (audit: cross-section resume contamination). Persist only from an explicit step
   // change, for the section that step belongs to; load with one helper used by every navigation path.
+  /*
+   * V038. Both saved pointers, each still carrying the identity of the deck it was written
+   * against, because only LearnModeTab knows what the current deck IS — the content arrives after
+   * this runs, on every navigation path. Nothing is compared here; this reads, and the engine
+   * decides (`resolvePointer`).
+   *
+   *   local  { step, version }      version === null for every pointer written before this packet
+   *   db     { step, totalSteps }   `user_content_progress` has no version column; the step count
+   *                                 it was written with is the proxy
+   */
+  function readSavedPointer(subjectId, sectionId) {
+    if (typeof window === 'undefined') return { local: null, db: null };
+    const row = user && savedProgress?.[sectionId];
+    const db = row && Number.isFinite(row.furthest_step)
+      ? { step: row.furthest_step, totalSteps: Number.isFinite(row.total_steps) ? row.total_steps : null }
+      : null;
+    let local = null;
+    try {
+      local = parsePointer(localStorage.getItem(`revvy_learnmode_${subjectId}_${sectionId}_section`));
+    } catch { /* blocked storage: the server copy is the whole story */ }
+    return { local, db };
+  }
+
   function readSavedStep(subjectId, sectionId) {
     if (typeof window === 'undefined') return 0;
     // F048: the server's furthest step used to beat the local one outright, so a student who moved
     // ahead in a browser whose write had not landed was sent back on return. Both are high-water
-    // marks; the further one wins. LearnModeTab clamps the result into the current step range.
-    const db = user && savedProgress?.[sectionId];
-    const dbStep = db && Number.isFinite(db.furthest_step) ? db.furthest_step : 0;
-    let localStep = 0;
-    try {
-      const local = localStorage.getItem(`revvy_learnmode_${subjectId}_${sectionId}_section`);
-      localStep = local ? (parseInt(local, 10) || 0) : 0;
-    } catch { /* blocked storage: the server copy is the whole story */ }
-    return Math.max(dbStep, localStep);
+    // marks; the further one wins. LearnModeTab clamps the result into the current step range —
+    // and, since V038, refuses to apply it at all when it came from another version of the deck.
+    const { local, db } = readSavedPointer(subjectId, sectionId);
+    return Math.max(db?.step || 0, local?.step || 0);
   }
 
   /*
@@ -621,10 +688,16 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     }
   }, [user, activeSection, activeSubjectId, savedProgress]);
 
-  function handleLearnStepChange(step) {
+  /*
+   * V038: the step is stored with the version of the deck it was reached on. The engine passes
+   * that version down with every step change, because the engine is the only thing that holds the
+   * content. Without a version the value falls back to the old bare integer, which the resolver
+   * then reads as "another version" — the safe direction.
+   */
+  function handleLearnStepChange(step, version) {
     setLearnModeSection(step);
     if (typeof window !== 'undefined' && activeSubjectId && activeSection) {
-      try { localStorage.setItem(`revvy_learnmode_${activeSubjectId}_${activeSection}_section`, String(step)); } catch {}
+      try { localStorage.setItem(`revvy_learnmode_${activeSubjectId}_${activeSection}_section`, encodePointer(step, version)); } catch {}
     }
   }
 
@@ -690,6 +763,15 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     // alone (`paidPending`). The quiz, the flashcards, the extras and the mistakes come from this
     // route for everyone, free or Pro, because it is the only reader that knows who is asking.
     // The shortcut survives for a caller that ships a complete payload; today none does.
+    /*
+     * V009. Nothing goes to the network until we know who is asking. The cache key below is
+     * `section : user : pro|free`, so firing before auth settles asks for the anonymous payload,
+     * then refetches when the user arrives, then refetches again when entitlement does — three
+     * requests where packet 2.1 measured and pinned ONE per load. `entitlementKnown` is false for
+     * the length of one local session read (signed out) or one /api/subscription (signed in), and
+     * every paid tab is showing `SectionLoading` for that window anyway.
+     */
+    if (!entitlementKnown) return;
     if (isInitial) {
       setIsInitial(false);
       if (!draftFlag() && !initialSectionData?.paidPending) return;
@@ -711,18 +793,19 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       // cache keyed on the section alone would keep serving a free student's 2-question quiz after
       // they subscribed, and worse, a paying student's 25 after they signed out. Caught by the
       // packet verifier; it was a bug I introduced with the cache itself.
-      const cacheKey = `${sectionUrl(activeSection)}:${user?.id || 'anon'}:${isPremium ? 'pro' : 'free'}`;
+      const requestedId = activeSection; // V038 fix round 4: what this payload will describe
+      const cacheKey = `${sectionUrl(requestedId)}:${user?.id || 'anon'}:${isPremium ? 'pro' : 'free'}`;
       const cached = sectionCacheRef.current.get(cacheKey);
       if (cached) { setSectionData(cached); return; }
       try {
         let pending = inflightRef.current.get(cacheKey);
         if (!pending) {
-          pending = fetch(sectionUrl(activeSection))
+          pending = fetch(sectionUrl(requestedId))
             .then((res) => (res.ok ? res.json() : null))
             .finally(() => { inflightRef.current.delete(cacheKey); });
           inflightRef.current.set(cacheKey, pending);
         }
-        const data = await pending;
+        const data = payloadForSection(await pending, requestedId);
         if (!data) return;
         sectionCacheRef.current.set(cacheKey, data);
         if (!cancelled) setSectionData(data);
@@ -732,7 +815,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     }
     loadSection();
     return () => { cancelled = true; };
-  }, [activeSection, user?.id, isPremium]);  // refetch when entitlement changes, not just the section
+  }, [activeSection, user?.id, isPremium, entitlementKnown]);  // refetch when entitlement changes, not just the section
 
   // Reset scroll state when section or tab changes
   useEffect(() => {
@@ -854,8 +937,20 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   // section itself gets shorter, which is the one case where it must (packet 5.1).
   const persistLearnStep = useCallback((step, totalSteps, { complete = false } = {}) => {
     if (!user || !activeSection || !totalSteps) return;
+    /*
+     * V038. The stored high-water mark may only be carried forward when it was written against a
+     * deck of this length — the same version proxy `resolvePointer` uses on the way in, applied on
+     * the way out so the two cannot disagree. Without this, a student who chose "start again" on a
+     * rebuilt topic took one step and was dragged straight back to the old deck's number by
+     * `Math.max`: the clamp heals a pointer that is too BIG, nothing healed one that belongs to a
+     * different deck. A row from another version is not evidence about this one, so it is dropped
+     * and replaced by the step actually reached here.
+     */
+    const row = savedProgress?.[activeSection];
+    const sameVersion = row && Number.isFinite(row.total_steps) && row.total_steps === totalSteps;
+    const prev = sameVersion ? row.furthest_step : 0;
     // Clamped on write as well as on read: see furthestStep in lib/learn-steps.js for why.
-    const furthest = furthestStep(savedProgress?.[activeSection]?.furthest_step, step, totalSteps, complete);
+    const furthest = furthestStep(prev, step, totalSteps, complete);
     saveProgress(activeSection, furthest, totalSteps);
   }, [user, activeSection, savedProgress, saveProgress]);
 
@@ -893,7 +988,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       setLearnModeResuming(step > 0);
       fetch(sectionUrl(firstId))
         .then(res => res.ok ? res.json() : null)
-        .then(data => { if (data) setSectionData(data); })
+        .then(data => { if (data) setSectionData(payloadForSection(data, firstId)); })
         .catch(() => {});
     }
   }
@@ -917,14 +1012,20 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       return <SectionLoading />;
     }
 
-    // Show full paywall for premium-only tabs if not subscribed
-    if (PREMIUM_TABS.has(activeTab) && !isPremium) {
-      const tabLabel = tabs.find(t => t.id === activeTab)?.label || activeTab;
-      return <PaywallOverlay feature={tabLabel} />;
-    }
-
     if (!sectionData) {
       return <SectionLoading />;
+    }
+
+    /* Show the full paywall for premium-only tabs — but on the SERVER's verdict about this student,
+       `sectionData.isPremium`, for the same reason the preview line below gives: the payload knows
+       who was actually asked about, and it has already arrived by the time we get here (the
+       withheld state is answered above). V009 made that the only usable answer on these pages: the
+       document is prerendered now, so the client's `isPremium` starts as "not known yet" and
+       reading it here would put "Unlock Tutor" in front of a paying student for the length of
+       /api/subscription — which is F035, the bug the root layout's cookie read was added to fix. */
+    if (PREMIUM_TABS.has(activeTab) && !sectionData.isPremium) {
+      const tabLabel = tabs.find(t => t.id === activeTab)?.label || activeTab;
+      return <PaywallOverlay feature={tabLabel} />;
     }
 
     /* Preview tabs: everyone gets the preview UI unless the payload they were SENT is the full one.
@@ -934,8 +1035,8 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     const isPreview = PREVIEW_TABS.has(activeTab) && !sectionData.isPremium;
 
     switch (activeTab) {
-      case 'home': return <HomeScreen subjects={subjects} units={subjectUnits} sections={subjectSections} user={user} isPremium={isPremium} onNavigateToSection={(id) => navigateToSection(id, { tab: 'overview' })} onNavigateToTab={(tab) => setActiveTab(tab)} />;
-      case 'overview': return <SectionOverview section={currentSection} unit={currentUnit} sectionData={sectionData} tabs={tabs} onTabSelect={handleTabSelect} isPremium={isPremium} user={user} savedProgress={savedProgress} />;
+      case 'home': return <HomeScreen subjects={subjects} units={subjectUnits} sections={subjectSections} user={user} isPremium={entitlement} onNavigateToSection={(id) => navigateToSection(id, { tab: 'overview' })} onNavigateToTab={(tab) => setActiveTab(tab)} />;
+      case 'overview': return <SectionOverview section={currentSection} unit={currentUnit} sectionData={sectionData} tabs={tabs} onTabSelect={handleTabSelect} isPremium={entitlement} user={user} savedProgress={savedProgress} />;
       case 'learn-mode': {
         // If a review is active, show the review component instead
         if (activeReview?.type === 'spaced') {
@@ -943,6 +1044,27 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
         }
         if (activeReview?.type === 'mixed') {
           return <MixedReview onFinish={handleFinishReview} />;
+        }
+        /*
+         * V038 fix round 4 — the one place the evidence is checked against the section on screen.
+         *
+         * Learn Mode is handed three things that must all describe `activeSection`: the deck
+         * (`sectionData.content`), the saved pointer (read below, per section, so it always does)
+         * and `contentVersionSince`. Two of them come from the payload, and after an in-app section
+         * change the payload is still the PREVIOUS section's for one render or one fetch (F098,
+         * `navigateToSection`), while this component is keyed to the new one. That is how section
+         * B's pointer came to be judged — and stamped — by section A's deck.
+         *
+         * `undefined` is checked as well as the id: a payload that carries no publish date has not
+         * answered the question the legacy branch of `resolvePointer` asks, and `null` (never
+         * republished) is an answer while `undefined` is not.
+         *
+         * Neither check may be turned into "render it anyway with defaults". Parking costs a
+         * loading card for as long as the payload takes; judging with the wrong evidence costs the
+         * student their place, permanently.
+         */
+        if (sectionData.sectionId !== activeSection || sectionData.contentVersionSince === undefined) {
+          return <SectionLoading />;
         }
         return (
           <LearnModeTab
@@ -957,6 +1079,15 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
             currentSection={currentSection}
             currentUnit={currentUnit}
             currentStep={learnModeSection}
+            /* V038: read at render, after hydration, so it reflects the write the last step change
+               made rather than a value captured on a navigation that has since been superseded. */
+            savedPointer={hydrated ? readSavedPointer(activeSubjectId, activeSection) : null}
+            /* V038 fix round 2: when this deck became the deck. The only thing that can tell a
+               legacy bare-integer pointer from a pointer written against a rebuild, since the
+               integer carries no identity of its own. Fix round 4: it is this section's, because
+               the guard above has already refused any payload that belongs to another one, and it
+               is present, because the same guard refuses `undefined`. */
+            contentVersionSince={sectionData.contentVersionSince}
             onStepChange={handleLearnStepChange}
             onPersistStep={persistLearnStep}
             isResuming={learnModeResuming}
@@ -968,7 +1099,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
             onNavigateToQuiz={() => handleTabSelect('quiz')}
             onNavigateToTab={handleTabSelect}
             onAskTutor={isPremium ? goToTutor : null}
-            isPremium={isPremium}
+            isPremium={entitlement}
             dueReviews={dueReviewCount}
             onStartReview={handleStartReview}
             onStartMixedReview={handleStartMixedReview}
@@ -1046,7 +1177,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
                 tabs={tabs}
                 activeTab={activeTab}
                 setActiveTab={handleTabSelect}
-                isPremium={isPremium}
+                isPremium={entitlement}
                 visitedFeatures={visitedFeatures}
                 learnModeCompletions={learnModeCompletions}
                 activeSection={activeSection}

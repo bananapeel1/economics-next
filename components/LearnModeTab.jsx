@@ -3,7 +3,7 @@ import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { highlightGlossaryTerms } from '@/lib/glossary-highlight';
 import { recordReview } from '@/lib/strength';
 import { distributeItems, matchDiagramsToBlocks, resolvePinnedItem, resolvePinnedDiagram, fallbackItemForBlock } from './learn-mode/utils';
-import { buildSteps, pickSpacedRecall, clampStep, firstStepOfBlock } from '@/lib/learn-steps';
+import { buildSteps, pickSpacedRecall, clampStep, firstStepOfBlock, contentVersion, resolvePointer } from '@/lib/learn-steps';
 import InlineDiagram from './learn-mode/InlineDiagram';
 import InlinePractice from './learn-mode/InlinePractice';
 import InlineQuiz from './learn-mode/InlineQuiz';
@@ -78,6 +78,7 @@ export default function LearnModeTab({
   contentData, diagramsData, practiceData, quizData, glossaryTerms,
   sectionId, subjectId, currentSection, currentUnit,
   currentStep, onStepChange, onPersistStep,
+  savedPointer, contentVersionSince,
   isResuming, onResumeDismiss,
   onComplete, onNavigateToQuiz, onNavigateToTab,
   onAskTutor, isPremium,
@@ -185,12 +186,71 @@ export default function LearnModeTab({
   // ── The steps ──
   const flatSteps = useMemo(() => buildSteps(contentData), [contentData]);
   const totalSteps = flatSteps.length;
+  /*
+   * V038. The deck's own identity, and what the saved pointer is allowed to do about it.
+   *
+   * `clampStep` below keeps a pointer inside this deck; it has never known which deck the number
+   * came from. A completed 14-step pointer clamped into a rebuilt 29-step deck resumed at "step 14
+   * of 29 · 48%", three chapters into material the student had never seen, and rewrote their stored
+   * position on the way past (audit/runs/packet-37/verify-b.md, section 3). So: a pointer whose
+   * version does not match this deck is not applied. The student is told, and chooses.
+   *
+   * Fix round 2: "does not match" needs a positive disagreement, not merely a missing fingerprint.
+   * Reading every legacy pointer as foreign put that notice in front of every signed-out returner
+   * on every section (Verify A, 21 September). `contentVersionSince` is what supplies the evidence
+   * for the legacy case; `resolvePointer` owns the rule.
+   *
+   * Fix round 4: all three inputs below must describe the SAME section — `contentData` (the deck),
+   * `savedPointer` (the student's place) and `contentVersionSince` (when this deck was published).
+   * Nothing in this component can check that; the caller holds the section id and the payload, so
+   * the caller is where it is enforced (`StudyApp.jsx`, the `learn-mode` case of `renderTab`). Do
+   * not render this component with a payload that belongs to another section, and do not render it
+   * with `contentVersionSince` undefined: `resolvePointer` reads undefined as "not arrived" and
+   * will refuse to resume a legacy pointer rather than guess.
+   */
+  const deckVersion = useMemo(() => contentVersion(contentData), [contentData]);
+  const pointer = resolvePointer(savedPointer, deckVersion, totalSteps, { versionSince: contentVersionSince });
+  const isRebuilt = pointer.stale;
+  // Measured, because "how many students met a rebuilt topic, and what did they choose" is the
+  // only way to know whether this notice is the right trade at the next publish.
+  const rebuiltSeen = useRef('');
+  useEffect(() => {
+    if (!isRebuilt || !deckVersion) return;
+    const mark = `${sectionId}:${deckVersion}`;
+    if (rebuiltSeen.current === mark) return;
+    rebuiltSeen.current = mark;
+    trackFunnel('rebuilt_shown', { sectionId, step: pointer.step, totalSteps, staleStep: pointer.staleStep });
+  }, [isRebuilt, deckVersion, sectionId, totalSteps, pointer.step, pointer.staleStep]);
   // F026: a saved pointer from an older step model, or from another section, must not render as
   // "Step 9 of 5". Clamp for rendering, and write the clamped value back so persistence agrees.
-  const safeStep = clampStep(currentStep, totalSteps);
+  const safeStep = isRebuilt ? pointer.step : clampStep(currentStep, totalSteps);
   useEffect(() => {
-    if (totalSteps && currentStep !== safeStep) onStepChange(safeStep);
-  }, [currentStep, safeStep, totalSteps]); // eslint-disable-line react-hooks/exhaustive-deps
+    // While the rebuilt notice is up, nothing is written back: the old pointer is the only record
+    // the student has of where they got to, and overwriting it here is the destructive half of the
+    // bug (18 → 13 in the evidence). The write happens when they pick start-again or jump-to-end.
+    if (totalSteps && !isRebuilt && currentStep !== safeStep) onStepChange(safeStep, deckVersion);
+  }, [currentStep, safeStep, totalSteps, isRebuilt, deckVersion]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  /*
+   * V038 fix round 4 — the automatic stamp is gone, deliberately.
+   *
+   * Round 2 added an effect here that claimed a legacy bare-integer pointer for this deck the
+   * moment the resolver said nothing contradicted it: `onStepChange(safeStep, deckVersion)` with
+   * the step unchanged. It was the only write on this path that no student asked for, and it is
+   * the step that turned all four rejected rounds from a wrong READING into a permanent wrong
+   * RECORD — an automatic write cannot tell a right deck from a wrong one, so whatever the
+   * resolver was handed got written to storage and could never be taken back
+   * (verify-a.md rounds 1-3; measured again, before this change, on 21 September: an in-app switch
+   * from national-income to aggregate-demand wrote `{"v":"14.chvz90","s":5}` onto
+   * aggregate-demand's key, a fingerprint belonging to the other section's deck).
+   *
+   * Nothing is lost by removing it. A legacy pointer is upgraded to a versioned one by the first
+   * step the student actually takes (`onStepChange(step, deckVersion)` below, and the clamp effect
+   * above), and a pointer that is still legacy on the next visit is judged by
+   * `LEGACY_POINTER_EPOCH` on that visit exactly as it was on this one — the date is not a
+   * one-shot check, it is re-read on every render. What the stamp bought was one fewer date
+   * comparison. What it cost was the student's place.
+   */
 
 
   // ── Distribute diagrams/quiz/practice to check-in steps ──
@@ -314,8 +374,38 @@ export default function LearnModeTab({
       onPersistStep?.(target, totalSteps);
     }
     scrollToTop(true);
-    onStepChange(target);
-  }, [safeStep, totalSteps, sectionId, onPersistStep, onStepChange, scrollToTop]);
+    // V038: every write stamps the deck this step was reached on.
+    onStepChange(target, deckVersion);
+  }, [safeStep, totalSteps, sectionId, onPersistStep, onStepChange, scrollToTop, deckVersion]);
+
+  /*
+   * V038, the two ways out of a pointer from another version. Neither resumes: "start again" puts
+   * the student at step 0 under THIS deck's version, and "jump to end" takes them to the last step
+   * the way a normal forward navigation would, which persists it. Both replace the stale record
+   * rather than reinterpreting it, so the notice does not come back.
+   */
+  const restartRebuilt = useCallback(() => {
+    trackFunnel('rebuilt_restart', { sectionId, step: 0, totalSteps });
+    /*
+     * BOTH records, not just the local one. Writing only the local pointer left a signed-in
+     * student's old-deck row ({furthest_step:13, total_steps:14}) untouched; `savedPointer` is
+     * re-read from both sources on every render, `resolvePointer` still scored that row as
+     * another version standing further on than anything valid, and the notice re-rendered on the
+     * next frame — "Start again" did nothing the student could see. `persistLearnStep` drops a
+     * high-water mark from another version, so this replaces the row with 0 against THIS deck's
+     * length instead of being swallowed by `Math.max`.
+     */
+    onPersistStep?.(0, totalSteps);
+    onStepChange(0, deckVersion);
+    scrollToTop(true);
+  }, [sectionId, totalSteps, onPersistStep, onStepChange, deckVersion, scrollToTop]);
+  const skipToEndRebuilt = useCallback(() => {
+    if (!totalSteps) return;
+    trackFunnel('rebuilt_jump_end', { sectionId, step: totalSteps - 1, totalSteps });
+    onPersistStep?.(totalSteps - 1, totalSteps);
+    onStepChange(totalSteps - 1, deckVersion);
+    scrollToTop(true);
+  }, [sectionId, totalSteps, onPersistStep, onStepChange, deckVersion, scrollToTop]);
 
   /* F045: keyboard navigation read state through a stale closure and stayed live on the pre-test
      and completion screens, so an arrow key could skip the test or desync the counter. It reads
@@ -451,7 +541,7 @@ export default function LearnModeTab({
           writeLocalState(subjectId, sectionId, { completed: false, scores: fresh });
           saveSectionState(subjectId, sectionId, { completed: false });
           setIsComplete(false);
-          onStepChange(0);
+          onStepChange(0, deckVersion);
           setTimeout(scrollToTop, 50);
         }}
       />
@@ -498,8 +588,31 @@ export default function LearnModeTab({
         </div>
       )}
 
+      {/*
+        * V038 — the rebuilt notice.
+        *
+        * It takes the resume banner's place, never sits beside it, because they say opposite
+        * things about the same pointer. Two ways out and no third: there is no "continue", because
+        * there is nothing honest to continue to — the old step index means nothing in this deck.
+        */}
+      {isRebuilt && (
+        <div className="lm-rebuilt-banner" role="status">
+          <div className="lm-rebuilt-body">
+            <span className="lm-rebuilt-title">This topic has been rebuilt</span>
+            <span className="lm-rebuilt-text">
+              It now has {totalSteps} steps, and your saved place was in an earlier version, so it no
+              longer points anywhere. Start again, or jump to the end if you had finished.
+            </span>
+          </div>
+          <div className="lm-rebuilt-actions">
+            <button className="lm-rebuilt-restart" onClick={restartRebuilt}>Start again</button>
+            <button className="lm-rebuilt-end" onClick={skipToEndRebuilt}>Jump to the end</button>
+          </div>
+        </div>
+      )}
+
       {/* Resume banner */}
-      {isResuming && safeStep > 0 && (
+      {!isRebuilt && isResuming && safeStep > 0 && (
         <div className="lm-resume-banner">
           <span className="lm-resume-text">You left off at step {safeStep + 1} of {totalSteps}. Pick up where you left off?</span>
           <div className="lm-resume-actions">
@@ -517,7 +630,9 @@ export default function LearnModeTab({
         * busiest path in the product (packet 16's walkthrough), and V015 would have widened the
         * gap. A section with no unreserved question hides the offer entirely.
         */}
-      {pretestOffered && safeStep === 0 && pretestCount > 0 && (
+      {/* V038: step 0 asks one question at a time. The rebuilt notice is the one that has to be
+          answered first, so the pre-test offer waits until it has been. */}
+      {!isRebuilt && pretestOffered && safeStep === 0 && pretestCount > 0 && (
         <div className="lm-pretest-offer" role="region" aria-label="Optional pre-test">
           <div className="lm-pretest-offer-text">
             <strong>Want a quick check first?</strong> {pretestCount === 1 ? 'One question' : `${pretestCount === 2 ? 'Two' : 'Three'} questions`} on what you might already know. Optional, and nothing is marked.

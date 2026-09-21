@@ -47,10 +47,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { ECONOMICS, BUSINESS } from '../../lib/ial-marking.js';
-import { isValidTariff } from '../../lib/practice-tariffs.js';
-import { practiceCommand } from '../../lib/ial-commands.js';
-import { contractProblems } from '../../lib/exam-item.js';
+// Packet 12.2, E013. The per-section computation that used to sit in `collect()` below now lives in
+// lib/spec-coverage.js, so the lab page and this guard cannot report different numbers for the same
+// section. What stays here is everything this file is: the flags, the two banks, and the report.
+import { loadOracle, loadSections, sectionCoverage } from '../../lib/spec-coverage.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const args = process.argv.slice(2);
@@ -65,26 +65,10 @@ const BASELINE_PATH = path.join(ROOT, 'audit/spec-coverage-baseline.json');
 const read = (p) => JSON.parse(fs.readFileSync(p, 'utf8'));
 const exists = (p) => { try { fs.accessSync(p); return true; } catch { return false; } };
 
-/* ── The oracle ──────────────────────────────────────────────────────────────────────────────── */
+/* ── The oracle and the 43 sections, both from lib/spec-coverage.js ──────────────────────────── */
 
-const oracle = read(path.join(ROOT, 'audit/raw/spec-items.json'));
-const LEAVES = oracle.items.filter((r) => r.kind === 'leaf');
-const LEAF_IDS = new Set(LEAVES.map((r) => r.id));
-const ALL_IDS = new Set(oracle.items.map((r) => r.id));
-const leavesByTopic = new Map();
-for (const leaf of LEAVES) {
-  const key = `${leaf.subject}:${leaf.topic}`;
-  if (!leavesByTopic.has(key)) leavesByTopic.set(key, []);
-  leavesByTopic.get(key).push(leaf.id);
-}
-
-/* ── The 43 sections ─────────────────────────────────────────────────────────────────────────── */
-
-const coverage = read(path.join(ROOT, 'audit/raw/spec-coverage.json'));
-const SECTIONS = coverage.bySection.map((s) => {
-  const [subject, slug] = s.key.split('__');
-  return { slug, subject, topic: s.number, title: s.title, unit: Number(s.number.split('.')[0]) };
-});
+const LEAVES = loadOracle().leaves;
+const SECTIONS = loadSections();
 
 /* ── Bank 1: the model answers ───────────────────────────────────────────────────────────────── */
 
@@ -158,18 +142,6 @@ function stagedTags() {
   return { byQuestion, columnPresent: false, file: 'audit/runs/packet-12.1/section_practice-tags.json' };
 }
 
-/* ── Failures ────────────────────────────────────────────────────────────────────────────────── */
-
-const EVALUATIVE = { economics: [['Evaluate', 20], ['Discuss', 14]], business: [['Evaluate', 20]] };
-
-function isEvaluative(subject, command, marks) {
-  return (EVALUATIVE[subject] || []).some(([c, m]) => c === command && m === Number(marks));
-}
-
-function specForSubject(subject) {
-  return subject === 'business' ? BUSINESS : ECONOMICS;
-}
-
 /* ── The run ─────────────────────────────────────────────────────────────────────────────────── */
 
 async function collect() {
@@ -209,58 +181,23 @@ async function collect() {
       );
     }
 
-    const leafIds = fixture
-      ? (leavesByTopic.get(`${section.subject}:${section.topic}`) || [])
-      : (leavesByTopic.get(`${section.subject}:${section.topic}`) || []);
-
-    const examined = new Set();
-    const commandCounts = new Map();
-    let untagged = 0;
-
-    for (const item of items) {
-      // The t=0 rows for 24 sections carry no `command` field; the Practice tab derives it from the
-      // question's first word, and so must the guard, or every one of those rows reads as a blank
-      // command with an invalid tariff and the real failures are buried.
-      const command = practiceCommand({ command: item.command, question: item.question });
-      const marks = Number(item.marks);
-      commandCounts.set(`${command} ${marks}`, (commandCounts.get(`${command} ${marks}`) || 0) + 1);
-
-      if (!isValidTariff(section.subject, command, marks)) {
-        failures.push({
-          rule: 'tariff', section: section.slug, ref: item.ref, bank: item.bank,
-          detail: `${command} ${marks} is not ${section.subject === 'economics' ? 'an Economics' : 'a Business'} tariff (lib/ial-marking.js)`,
-          key: `tariff|${section.slug}|${item.ref}|${command} ${marks}`,
-        });
-      }
-
-      for (const problem of contractProblems(item, { specItemIds: ALL_IDS })) {
-        failures.push({
-          rule: 'specid', section: section.slug, ref: item.ref, bank: item.bank,
-          detail: problem, key: `specid|${section.slug}|${item.ref}|${problem}`,
-        });
-      }
-
-      if (item.specItems === undefined) untagged++;
-      else for (const id of item.specItems || []) if (LEAF_IDS.has(id)) examined.add(id);
-    }
-
-    if (items.length > 0 && !items.some((i) => isEvaluative(section.subject, practiceCommand({ command: i.command, question: i.question }), i.marks))) {
-      const wanted = (EVALUATIVE[section.subject] || []).map(([c, m]) => `${c} ${m}`).join(' or ');
-      failures.push({
-        rule: 'noeval', section: section.slug, ref: '-', bank: '-',
-        detail: `${items.length} question(s) and no evaluative question (${wanted})`,
-        key: `noeval|${section.slug}`,
-      });
-    }
+    // The whole per-section computation — the three failure rules, the untagged count, the
+    // examined/unexamined split, the command histogram — is lib/spec-coverage.js's job now. The t=0
+    // rows for 24 sections carry no `command` field and that module derives it from the question's
+    // first word, exactly as the Practice tab does; see its `sectionCoverage` header.
+    const cov = sectionCoverage({
+      subject: section.subject, topic: section.topic, slug: section.slug, items,
+    });
+    failures.push(...cov.failures);
 
     rows.push({
       slug: section.slug, subject: section.subject, unit: section.unit, topic: section.topic,
       title: section.title, origin,
-      questions: items.length, untagged,
-      leaves: leafIds.length, examined: examined.size,
-      pct: leafIds.length ? (examined.size / leafIds.length) * 100 : 0,
-      unexamined: leafIds.filter((id) => !examined.has(id)),
-      commands: [...commandCounts.entries()].sort((a, b) => b[1] - a[1]),
+      questions: cov.questions, untagged: cov.untagged,
+      leaves: cov.leaves, examined: cov.examined,
+      pct: cov.pct,
+      unexamined: cov.unexamined,
+      commands: cov.commands,
     });
   }
 

@@ -1,0 +1,8 @@
+FIRES [BLOCK]  packet 24/25/27 shape {title, points}  → probe|extras.shape|extras:evaluation0
+FIRES [BLOCK]  packet 23 shape {point, detail}  → probe|extras.shape|extras:evaluation0, probe|extras.shape|extras:evaluation0:title
+FIRES [BLOCK]  body only {content} — the half this rule was blind to  → probe|extras.shape|extras:evaluation0:title
+FIRES [BLOCK]  empty title string  → probe|extras.shape|extras:evaluation0:title
+clear  the canonical shape packets 28-38 author
+
+13 rewritten frames across the four bundles: clear.
+A/B clean: extras.shape fires at BLOCK on every defect shape found in the tree, and on the body-only shape it was blind to.

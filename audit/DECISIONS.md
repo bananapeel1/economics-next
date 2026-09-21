@@ -2573,3 +2573,498 @@ A missing entry now means **zero**, and the failure says so and says what to do:
 raise the baseline with `--baseline --confirm`, which prints what it is adding. The general form: **a
 regression gate protects what it has already measured and nothing else, so its default for the unmeasured
 case is the whole of its reach.** V041.
+
+## 2026-09-21 — packet 38: a finding can ask you to IMPROVE another unit's leaf, and the audit will not tell you
+
+`topFix-02` has four clauses. Three are right. The fourth asks this packet to "merge the simultaneous
+steps in **automatic-stabilisers**" — and `automatic stabilisers` is **`ECON-4.3.5-3a-2`**,
+`econ_spec.txt:1855`, "automatic stabilisers and discretionary fiscal policy", which is **Unit 4**
+and belongs to `role-state-macroeconomy`. The live section teaches it as a full subsection of 2.3.6.
+
+This is a new shape of the inverted class packet 35 named. There, findings asked a section to BUILD
+what another section owned. Here the finding asks the packet to **improve, in place, a subsection
+that should not exist in this section at all** — and an improvement request reads as an endorsement
+that the subsection belongs. Nothing in the audit flags it; it was found only because this packet
+re-derived the leaf list from `audit/raw/spec-items.json` rather than from the live section's shape.
+
+**The rule that follows: when an item asks you to IMPROVE a subsection rather than add one, check
+that the subsection's leaf is yours before you improve it.** The four inverted findings this packet
+refused (`specGap-02`, `specGap-04`, `specGap-06`, `topFix-02` clause 4) are all Unit 4 or UK GCE,
+and three of the four name 4.3.5. Whichever packet rebuilds `role-state-macroeconomy` inherits them.
+
+The subsection is removed rather than merged, and `automatic stabilisers` is banned with **one
+exemption**: a declared pointer sentence naming topic 4.3.5, so a student meeting the phrase in a
+past paper is told where it is taught. The exemption is A/B'd in both directions and a `NEEDS_ONE`
+rule makes the pointer compulsory, because a ban with no positive obligation is satisfied by silence.
+
+## 2026-09-21 — packet 38: the signed-out pre-test asks about chapters the student has not opened, on half the corpus
+
+Verify B found two of this section's three pre-test questions pinned to chapters 2 and 3. **A/B'd
+before it was blamed on the packet** (`audit/runs/packet-38/pretest-ab.mjs`), and the control
+settles it:
+
+| corpus | sections affected | premature questions |
+|---|---|---|
+| `data` (live) | **22 of 43** | 44 |
+| `draft` (staged) | **29 of 43** | 58 |
+
+This section reads `(5 ch): 2 of 3 — ch2, ch3` LIVE and `(7 ch): 2 of 3 — ch2, ch3` STAGED. Identical
+before and after the rebuild, and the signature `2 of 3 — ch2, ch3` is the same on every affected
+section in both corpora, which is what says it is a mechanism and not content.
+
+The mechanism is packet 25's, read from the other end: `freeQuizPayload()` takes
+`PREVIEW_LIMITS.quiz` (2) for the Quiz tab FIRST, then one pin per block, then tops the pre-test up.
+The two Quiz-tab items are not chosen for chapter, so they are what the pre-test falls back on.
+
+**Packet 2.5 / V021 closed the neighbouring defect** — the pre-test asking a question a check-in
+would ask. This one is *the pre-test asking a question from a chapter you have not opened*, and it
+is invisible to `npm run exposure`, which counts pre-test LENGTH and never what the questions are
+about. Logged as a feature item for a code packet; no content packet can fix it.
+
+## 2026-09-21 — packet 38: four of this packet's own checks reported a correct section as broken
+
+All four were caught by the checks disagreeing with a section that was right, which is the cheap
+direction. Recorded because each is a shape, not a typo:
+
+1. **A whitespace-joined specification lookup.** The spec is a PDF extraction whose requirements wrap
+   mid-phrase across a column: `2a` reads "including the short-run Phillips" then a newline, thirty
+   spaces, and "curve." — and the left-hand row label "between" is interleaved *between* them. A
+   normalised `includes` still fails, so the check asserts the two halves at their own lines.
+   It first reported that the specification does not contain a phrase it plainly does.
+2. **A locator that could pick the wrong block.** "Appendix 6: Command word taxonomy" occurs three
+   times and the first two are contents listings. Taking "the second occurrence" parsed a page of
+   page numbers, found zero command words, and reported all eight IAL command words as non-existent
+   — including the eight the packet's own practice items use. The locator now selects the occurrence
+   *followed by the table* and asserts that it found eight.
+3. **`JSON.stringify` equality against a jsonb round-trip** — packet 31's decision, re-learnt. 229
+   "mismatches" on a draft that was correct field by field. `sameJson` from `lib/content-gate.mjs`
+   is the comparator; it already exists and is already tested.
+4. **A verifier reading the wrong column.** `loadBundle()` selects `data`, the PUBLISHED column, and
+   gate item 5 is about `draft`. The first run compared the module with the live copy it is meant to
+   replace and reported 216 mismatches. **It failed loudly only because this packet is a full
+   rebuild and the two versions differ wholesale; a packet making a small edit would have passed.**
+   That is the dangerous version of this bug, and it is worth checking for in any verifier inherited
+   from another packet.
+
+5. **And a fifth, found after this entry was written: a Verify B that measured a modal opened by a
+   scripted click**, and so read a `getBoundingClientRect()` that was silently scaled by the entry
+   animation's resting transform. It has its own entry below. Four of the five were caught by the
+   check disagreeing with a section that was right; **the fifth was caught only because the ratio
+   789/858 was too round a number to be a coincidence, and it had already been published.**
+
+## 2026-09-21 — packet 38: the section is the longest in the product, and the specification decides that
+
+Seven blocks, thirty subsections, thirty-seven steps. `structure-09` asks for trimming and the two
+redundancies it names are removed; what remains is coverage. **2.3.6 has 34 substantive leaves** —
+against 19 for 2.3.4 (packet 37), 24 for 2.3.3 (packet 36) and 22 for 1.3.5 (packet 35) — and the
+live section evidenced 18 of them at 88%. Length here is proportional to the specification, not to
+authoring appetite, and the alternative is a section that lists leaves instead of teaching them.
+
+Seven blocks is measured, not preferred: packet 25 established the runner **refuses at nine** (a
+chapter is served no check-in quiz and nobody is told) and **notes at eight** (the pre-test drops to
+two). At seven the pre-test is three and all seven chapters are served — confirmed by
+`exposure-census` on the staged draft, not assumed.
+
+## 2026-09-21 — packet 38: a scripted click opens a modal un-animated, and the rect you then read is silently scaled
+
+**This entry replaces one that was wrong.** The earlier version said packet 38's enlarge sheet
+measured 789px against packet 37's 858 and reproduced packet 31's settled figures. It did not.
+**Both are 858.** The 789 was an artefact of how the measurement was taken, and packet 37's
+blocking defect reproduces exactly in this section.
+
+`components/learn-mode/InlineDiagram.jsx` renders the sheet through a portal and applies
+`lm-diagram-modal-visible` to animate it in from a resting
+`transform: matrix(0.92, 0, 0, 0.92, 0, 0)`. Opening the sheet with a scripted `element.click()`
+mounts the modal but that class is never applied, so it stays scaled. `getBoundingClientRect()`
+returns the TRANSFORMED box — 789 = 858 × 0.92 — while `getComputedStyle().width` returns the
+untransformed 858. **The two disagreed for an hour and nothing in the check looked at both.**
+
+Re-measured with a real tap, visible class asserted and transform asserted as the identity matrix:
+
+```
+svg 858 × 644 · pane client 390 / scroll 882 · 492px hidden · smallest label 12 CSS px
+44% of the drawing visible · 5 of 9 labels off-screen: the title, "Unemployment (%)",
+"SRPC", the "6%" tick and the caption
+```
+
+**858 is `220vw` at a 390px viewport** (`app/globals.css:6071`, `:7559`). It is a viewport unit, so
+it is the same number for every diagram in every section whatever the viewBox — packet 37's figure
+was never anomalous, and there was never a discrepancy to explain. **44% is packet 37's own figure
+verbatim.**
+
+**The guard, for any check that measures rendering:** a scripted click opens a modal without its
+entry animation. Tap as a student does; assert the visible class AND an identity transform before
+reading a rect; and record `getComputedStyle().width` beside `getBoundingClientRect().width` so a
+mismatch is visible rather than silent.
+
+**And the honest part.** On the artefact this packet's Verify B recorded a qualified pass, claimed
+its number differed from packet 37's, and claimed "both marked points and the arrow between them
+are visible without scrolling" — when the 6% tick is one of the five hidden labels. That sentence
+stated a scope it had not measured, which is the rule the brain session adopted into `BRAIN.md`
+the same afternoon, on evidence this session supplied. It was caught only because 789/858 = 0.9196
+was too round a number to be a coincidence. **V037 stands where packet 31 left it; packet 38
+neither narrows it nor excuses it, and packet 37's gate gets nothing from this packet.**
+
+### What 858 actually is, and why that makes V037 a decision rather than a bug
+
+Found by the packet 40 session from the stylesheet and verified here against the source rather than
+taken on trust. **858 is deliberate and tuned.** `app/globals.css:6069-6070`, immediately above the
+rule: *"220vw, not 200: with no font floor (processSvg step 7) the smallest authored label, 7 units
+on a 500 box, is 12px here at 390px."* The "smallest label 12 CSS px" measured above is not a
+coincidence — it is the number the width was chosen to hit.
+
+And the obvious alternative is already closed. `components/learn-mode/processSvg.js:131-138` records
+that a font floor was tried **twice** and rejected on measurement: 1/28 of the viewBox raised 1,419
+of 1,420 labels, 1/36 still raised 1,281 of 1,377 and put 18 overlapping pairs on a diagram that had
+none, "because a label's size and its neighbours' positions were authored together" — and it bought
+nothing, since 14 units at the 313px inline width is 8.7px either way. *"The sheet, not a floor, is
+the phone answer."*
+
+So V037 is not a rendering defect and not a missing font floor. It is **a priced trade that nobody
+has re-priced: 12px labels bought with 492px of horizontal scroll.** And the programme already rules
+on that trade by diagram KIND — packets 28/29 settled that the sheet is adequate for a TABLE, whose
+cells mean something read one at a time, and fatal for a MATRIX, whose cells only mean anything
+compared at once.
+
+**Packet 38's hidden list is the case that decides the third kind.** On a curve diagram the five
+labels the sheet hides at 390px are the title, the axis label "Unemployment (%)", the curve's own
+"SRPC", the "6%" tick and the caption. An axis label and a tick are not readable in sequence: they
+have to be read *against* the drawing. That puts a plotted curve closer to the matrix case than the
+table case — which is a question the founder can rule on, where "the modal is too wide" is not.
+Framing owed to the packet 40 session; the font-floor half of its suggestion is withdrawn here,
+because F088 already tried it.
+
+## 2026-09-21 — packet 38: the INDEX is older than the working tree, and I reverted another packet's row by assuming the reverse
+
+Packet 23's decision says the git index is shared and explicit staging does not protect your files
+from someone else's commit. This is the other half of it, and it cost another session ~680
+characters of `audit/PROGRESS.md`.
+
+Before committing, this packet diffed `git show :audit/PROGRESS.md` against the working tree to
+check what a by-path commit would drop, found the index's packet-5 row missing from the working
+tree, and **adopted the index version** — reasoning that the index held a newer edit by a concurrent
+session. That is backwards. **`git add` stages what is on disk, so a working tree that differs from
+the index is always NEWER than it.** The staged row was 7,116 characters; the row on disk was 7,796.
+Adopting the index reverted the other session's most recent packet-5 / V038 edit.
+
+The check itself was right and worth keeping: a by-path commit writes the WORKING TREE, so before
+committing a shared handoff file you must know what the working tree is missing. What was wrong was
+the remedy. The rule:
+
+- **`M ` (staged only)** — someone staged a change and has not touched it since. The working tree
+  already has it; nothing to do.
+- **`MM` (staged AND modified)** — the working tree is ahead of the index. **Never adopt the index
+  version.** If the diff shows index content missing from the working tree, that content was
+  *edited away* on disk by its owner, deliberately.
+- **` M` (modified only)** — ordinary shared-file editing; append, never rewrite.
+
+**POSTSCRIPT, and it does not soften the lesson: the revert was harmless, by luck.** The owning
+session — the brain session for packets 5, 36 and 37 — reports that those 680 characters were a
+"FIX ROUND 3" claim for V038 written by a Haiku handoff agent, never authorised by the harness and
+never seen by a verifier. The staged row that was restored ends "awaiting Verify A round 3", which
+is the accurate statement, so it stands and nothing is to be re-applied. **A wrong method that
+happens to produce the right file is still a wrong method**, and the next time the two versions
+differ it will be the other way round.
+
+**The text is not recoverable from git.** The packet 40 session ran `git fsck --unreachable
+--dangling` and it returns zero blobs: the on-disk version was never hash-objected, so it existed
+only in the working tree, and only the owning session's own transcript has it. `git show
+HEAD:audit/PROGRESS.md` is not a fallback either — HEAD's packet-5 row is 2,195 characters and
+predates the whole fix-round sequence. Say so plainly if this happens again, or somebody spends an
+hour on fsck and stash archaeology. All four live sessions were messaged, because nothing in the
+tree records whose row it is; `audit/runs/packet-5/` (with `fix-round-3-brief.md`, written
+18:36 the same day) is where the text can be reconstructed from if the owner's session is gone.
+
+**The rule I first drew from this was too narrow, and the packet 40 session corrected it.** "The
+working tree is newer than the index" is true and is not the lesson. The lesson is that **a
+difference between the index and the working tree on a SHARED handoff file is never yours to resolve
+by picking a side.** Four sessions write `PROGRESS.md`, `NEXT.md`, `DECISIONS.md` and `ledger.json`
+in this worktree. The method that survives that is to rebuild each file as `git show HEAD:<f>` plus
+your own block re-applied, and then prove you deleted nothing:
+
+```
+diff <(git show HEAD:<f> | sort) <(sort <f>) | grep -c '^<'
+```
+
+which must equal only the lines you meant to replace. Adopting the index version is the one move
+that method rules out, and it is the move packet 38 made.
+
+**And a rule for handoff files generally**: append or prepend, never re-emit a whole file, and never
+transplant a line from one version of a shared file into another. Packet 38 prepended to `NEXT.md`
+and appended to `DECISIONS.md` and lost nothing in either; it lost something in the one file where
+it edited a line in place.
+
+## 2026-09-21 — packet 38: an audit item's FIX field is a claim too, and F088's contradicts its own evidence
+
+Rule 1 says an audit item's SCOPE is a claim. This is the same rule pointed at its REMEDY, and
+`F088` is the case that shows it.
+
+`node audit/scripts/ledger.mjs show F088` returns `status: confirmed`, `closed_by: packet-5`, and a
+`fix` field that reads, in part: *"enforce a minimum SVG font-size in processSvg (e.g. scale text to
+>=14 viewBox units, or set font-size via CSS `svg text { font-size: max(12px, ...)}`)"*.
+
+**That is the one remedy the code rejected**, and `components/learn-mode/processSvg.js:131-138`
+records why: a floor was tried twice and both versions were a relayout — 1/28 of the viewBox raised
+1,419 of 1,420 labels; 1/36 raised 1,281 of 1,377 and put 18 overlapping pairs on a diagram that had
+none, "because a label's size and its neighbours' positions were authored together" — and it bought
+nothing, since 14 units at the 313px inline width is 8.7px either way. *"The sheet, not a floor, is
+the phone answer."*
+
+**The correction to the version of this the packet 40 session sent, because it matters for the
+remedy:** the rejection does NOT live only in a source comment. `F088`'s own `evidence` field
+records it in detail — "processSvg.js:131-138 no longer sets any font-size (step 7 removed), so
+labels render at authored size with no relayout… 7 × 858 / 500 = 12.01px" — along with the census of
+all 108 live diagrams it was measured over. So the record is complete. **What is wrong is that one
+record contradicts itself**: `fix` prescribes what `evidence` reports as rejected, and nothing syncs
+the two when a packet closes an item by doing something other than what the audit proposed.
+
+Anyone who does what this programme trains them to do — read the item, act on `fix` — re-proposes a
+closed remedy. That happened today. **The habit that prevents it: on a `confirmed` item, read
+`evidence` before `fix`. `fix` is what the auditor proposed; `evidence` is what was actually done,
+and on any item closed by a packet the two can differ.** Amending `F088`'s `fix` text is packet 5's
+call, not this packet's, and its owner has been told.
+
+Two things in that evidence field that are live and useful:
+
+- **It already contains the 858 and the 12px.** "7 × 858 / 500 = 12.01px", measured on a real label.
+  Packet 38 re-derived both the hard way. A verifier's evidence field is a measurement archive and
+  is worth grepping before measuring.
+- **Its caveat bounds the claim this programme has been repeating.** *"the 12px claim holds at 390
+  only; at 375/360px those 11 labels are 11.55/11.09px (pinch-zoom covers it)."* Every "smallest
+  label 12px" in packets 37 and 38, including packet 38's own re-measurement, is a 390px figure. On
+  a 375px phone it is under 12.
+
+And the line references in that evidence have drifted: it cites the sheet at `globals.css:5982` and
+`:7475`; they are now `:6071` and `:7559`. Same drift as `V006`'s `:429`, now `:560`. **A line number
+in a ledger record is a claim with a shelf life.**
+
+**And the drift does worse than go stale — it makes a true record look fabricated.** Checked at
+source today, F088's three citations resolve to:
+
+| cited | today |
+|---|---|
+| `globals.css:5982` — the sheet | `position: fixed;` |
+| `globals.css:7468` — the inline width | a bare `}` |
+| `globals.css:7475` — the sheet again | a blank line |
+
+The rules themselves are alive and unchanged at `:6069-6071` and `:7559`, about 89 lines down,
+because the file has grown since 14 September; `220vw` landed in `d032302`, *"packet-5: round 2 — no
+font floor, the sheet at 220vw, and a pane a finger can pan"*, which dates the evidence exactly
+right. So a reader doing what this programme trains them to do — follow the citation — finds
+`position: fixed;` and has grounds to doubt a field that is **entirely true**.
+
+That is packet 37's `specGap-05` shape — a finding that doubted an app number that was right —
+except here the programme would be doubting its own record. **The rule: re-grep the STRING before
+doubting the record.** A citation that misses is evidence about the citation, not about the claim.
+
+A footnote that earns its place: the packet 40 session, reporting this, transposed two of the three
+line numbers (it had `:7475` as the `}` and `:7468` as blank; it is the other way round). The
+substance was right and both still resolve to nothing. It is a fair illustration that a report about
+citation accuracy can itself miscite, which is why the remedy is to re-grep rather than to re-cite
+more carefully.
+
+## 2026-09-21 — packet 38: edit a shared handoff file by ANCHOR LINE, never by region
+
+Twice in one session this packet damaged a shared file by addressing a REGION instead of a line, and
+the second time it took out the entry recording the first.
+
+1. `audit/PROGRESS.md` — adopted the index's packet-5 row over the working tree's.
+2. `audit/DECISIONS.md` — a retraction written as `s[:start] + new` truncated from the entry being
+   replaced to the end of the file, deleting the entry that had just been appended after it.
+
+Both were caught by the deletion check, and the check is worth keeping:
+
+```
+diff <(git show HEAD:<f> | sort) <(sort <f>) | grep -c '^<'
+```
+
+must equal only the lines you meant to replace, and **it must be read, not just run** — it returned
+65 on the second failure and the first reading of it stopped at "all inside the block I replaced",
+which was true and beside the point, because the block was bigger than intended.
+
+**But the check is downstream of the habit.** The upstream fix, owed to the packet 40 session, is to
+key every edit to a UNIQUE ANCHOR LINE and replace exactly that line — never a span between two
+offsets, and never "from here to the end". It is the same shape as the packet 33 lesson about
+editing content by `subId` rather than scanning back for a delimiter: address the thing, not the
+region around it. Appending is always safe; replacing a span never is, in a file four sessions write.
+
+## 21 September 2026 — packet 39a, `trade-global-economy` (Economics 4.3.2 sub-topics 1-3)
+
+**Packet 39 is split into 39a and 39b, and the founder ruled it.** 4.3.2 has FIVE sub-topics and 55
+oracle rows / 46 substantive leaves — roughly double packet 33's 32/28 and packet 34's 26/22, which
+were the largest content packets built so far. 39a takes sub-topics 1-3 (19 leaves, 4 blocks, 23
+subsections); 39b takes 4 and 5 (27 leaves) and inherits the four ids packets 33 and 34 reassigned
+here. The split is by SUB-TOPIC and not by ledger id, because the leaves are what the blocks are
+built from and an id can span both halves.
+
+**A half-packet assembles the WHOLE bundle, and carries the other half by id.** Both halves write
+one section. 39a therefore keeps the live "Protectionism and the WTO" block and the items serving it
+— selected out of the live bundle by id, never retyped — and asserts each one deep-equal to what is
+live before staging. Retyping would be an unverified rewrite; dropping them would leave the staged
+draft thinner than the section students read today, and nothing else in the gate compares the two.
+
+**The carried block is WIRED even though it is not rewritten.** `LearnModeTab.jsx:255` computes
+`hasRefs` for the whole section, so the moment a packet pins some blocks, any block left unpinned
+falls to the title fallback for its diagram, to `fallbackItemForBlock` for its quiz, and to
+**nothing at all** for its practice. A half-packet that pins only its own blocks silently removes the
+practice item from every block it did not touch. Verify B confirmed all five chapters resolve a
+diagram, a question and a practice item.
+
+**"New" in a packet runner means not baselined AND not already firing on the live section.** The
+runner inherited from packet 34 defines a new finding as `!baseline.has(key)`, which is correct only
+where every live finding is baselined. `trade-global-economy` has three that are not — two
+`practice.opening` on carried practice items and `spec.uncovered` on ECON-4.3.2-5a-5 — and the
+inherited definition reported them as this packet's. They are now counted and printed separately.
+Any runner copied from 34 should be checked for this.
+
+**Removing reference material regresses `spec.uncovered`, and that is a reason not to remove it.**
+The first pass deleted the four trading-bloc flashcards and the ladder diagram along with the three
+bloc QUIZ items. `spec.uncovered` then fired on ECON-4.3.2-4c-6. The distinction that survives: the
+defect `quiz-02` and `quiz-03` describe is material **assessed and not taught** — a quiz item pinned
+to a block that does not teach it. A flashcard or a diagram in its own tab is not that, and removing
+it costs coverage for no finding. The bloc quiz items are still removed; the reference material
+stays until 39b rewrites it.
+
+**ECON-4.3.2-4c-6 is accepted as one new DEBT, with evidence, and 39b closes it.**
+`spec.uncovered` reads content, notes and extras only (`lib/content-validator.mjs:868`). Live, the
+leaf "movement of factors of production" was satisfied by a Notes sentence reading "factors are not
+perfectly mobile … exchange rate movements" — which supplies `factors` and `movement` and teaches
+nothing about factor mobility inside a trading bloc. That Notes topic is replaced by this packet's,
+so the leaf is now correctly reported as untaught. **Writing a sentence to restore the keyword match
+without teaching the leaf is the failure the ledger exists to prevent**, and teaching it properly
+means building sub-topic 4. Recorded in the runner's `ACCEPTED_DEBT`, which asserts the exception
+still fires so a stale exemption cannot survive.
+
+**The `normalize()` stopword filter was already packet 2's, and this packet's own brief said
+otherwise.** `topFix-02` and `structure-04` both ask for one; `4d45478` added it
+(`components/learn-mode/utils.js:38-41`). Verified by running `matchDiagramsToBlocks` on the live
+titles rather than by reading the code: it returns `{}` where the finding says it returns a match,
+and a genuine title word still resolves. The runner A/Bs both directions instead of claiming a
+change. **Third instance of a false statement in a builder's own brief** (packet 30's "Business
+2.4", packet 33's "packet 34", this). Rule 1 applies to our own notes.
+
+**`audit/scripts/snapshot-touched-sections.mjs` crashes on `globalisation` and never reaches the
+later sections.** Line 17 reads `snap[k].length` for a table missing from the t=0 file and throws
+`TypeError`, so a packet whose section sorts after `globalisation` gets no snapshot and no warning
+that it got none. Packet 39a took its snapshot with a one-off equivalent rather than changing a
+shared tool mid-packet. It needs a one-line guard and its own commit.
+---
+
+## 21 September 2026 — `{title, content}` is the canonical extras evaluation frame (packet 31, V035)
+
+An evaluation frame in `section_extras.evaluation` is `{title, content}`, where `content` is a
+**prose string**. `ExtrasTab.jsx:126,129` reads exactly those two fields, `extras.shape` is BLOCK on
+`content`, and 38 frames across packets 14-38 already author it. No other shape is supported and the
+component will not be widened to accept one.
+
+**The choice this settles, because it looked genuinely open.** Packets 24, 25 and 27 each
+independently authored `{title, points[]}`, and packet 23 authored `{point, detail}` — thirteen frames
+rendering an empty card. Three independent authors reaching for a bullet list is a fair argument that
+the renderer is the odd one out, and widening `ExtrasTab` to map a `points` array would have closed
+V035 in one edit without touching any content.
+
+It was refused because **packet 28 settles the question in the other direction on purpose**: its one
+frame is a four-item list deliberately written as flowing prose — "Four questions, and the cost curves
+only answer the first two. How far is…? How wide is…?" — and packets 29, 30, 34, 35, 36 and 38 all do
+the same. The house style for an evaluation frame is a paragraph that carries a judgement, not a list
+that leaves the judgement implicit. Accepting `points` would have made two shapes canonical, made
+`extras.shape` unenforceable, and preserved in nine frames exactly the bulleted register the format
+exists to push authors out of.
+
+**Irreversible part:** the nine `points` arrays are gone. Their content survives as prose, move for
+move, but the arrays are not recoverable from the modules and a later packet wanting a list UI would
+have to re-author them.
+
+**A second, smaller decision in the same packet.** Packet 23's four frames were a pure key rename with
+the prose untouched, though at 232-290 chars they sit at the bottom of the clean range (239 floor, 703
+median). They were NOT extended. Lengthening them would have meant inventing economics beyond the
+finding, in a section whose own packet is already verified and staged, for a card that renders
+correctly either way — the V023 rule that thin content and unrenderable content are different
+problems. If the founder wants them at median depth, that is a content packet against `supply`, not a
+tail of this one.
+
+## 2026-09-21 — packet 2.3: a prerendered page cannot answer "have you paid?", so it stops asking (V009)
+
+`app/layout.js` read cookies — `createClient()`, `supabase.auth.getUser()`, and a subscription row — to
+seed `AuthProvider` so that a paying student's first paint was already premium. Packet 12 added it for
+F035. A cookie read in the ROOT layout opts every route in the app out of prerendering, and the measured
+cost was the whole branch: **1 static route (`/sitemap.xml`) against 113 dynamic**, while
+`origin/main`'s `RootLayout` is not even `async` and serves `/economics/unit-1/supply` as
+`x-vercel-cache: PRERENDER`. Merging would have undone PR #17's caching for every public page.
+
+**The seed is not coming back, and the cache is the smaller half of the reason.** A prerendered document
+is ONE document served to everybody, so it may not hold anything that depends on entitlement — which is
+already this branch's rule for the topic pages, written into `app/economics/[unit]/[topic]/page.jsx`
+by V007. "Keep the F035 fix" therefore cannot mean "the server answers the question". Read what F035
+actually complained about: a false NEGATIVE held for seconds — "Unlock Tutor" in front of somebody who
+pays. The fix for that is not a faster answer, it is **refusing to answer until you know**.
+
+So `isPremium` gets a second bit. `AuthProvider.entitlementKnown` is false until auth has settled AND,
+for a signed-in student, `/api/subscription` has come back; every surface that makes a CLAIM about what
+has been paid for — a padlock, a paywall, a plan badge, an upgrade CTA — now tests the three-valued form
+and draws nothing on "not known yet". This is not a new idea in the codebase: packet 2.1 shipped exactly
+it for the withheld section payload ("Neither is true yet. So the withheld state is answered first").
+Packet 2.3 only extends the rule from the payload to the person.
+
+Three things this pinned that are worth keeping:
+
+- **`entitlementKnown` compares against the user ID, not a boolean.** `setUser` and `setLoading(false)`
+  land in the same commit when auth settles, while the effect that refetches the subscription runs after
+  it — so a boolean "settled" flag gives a signed-in student exactly one render carrying `loading:false`
+  beside the mount run's "settled: nobody is signed in", and every padlock in the app draws on it. The
+  state is `settledFor`: a user id, `null` for a settled signed-out answer, `undefined` for nothing yet.
+- **The section paywall reads the payload, not the client.** `renderTab` asked `useAuth().isPremium`;
+  it now asks `sectionData.isPremium`, the server's verdict about this student, which has already
+  arrived by the time that line runs. That is the same rule the preview line beside it has followed
+  since packet 2.1, and it means the paywall on a topic page no longer depends on `/api/subscription` at
+  all.
+- **The section fetch waits for `entitlementKnown`.** Its cache key is `section : user : pro|free`, so
+  firing before auth settles asks for the anonymous payload, refetches when the user arrives and
+  refetches again when entitlement does — three requests where packet 2.1 measured and pinned ONE per
+  load. Every paid tab is showing the loading card for that window anyway.
+
+Two things the change surfaced rather than caused:
+
+- **`/login` could not be prerendered**: `useSearchParams()` outside a Suspense boundary fails the build
+  with the CSR-bailout error. It never fired before because the route was never prerendered at all. The
+  boundary is the documented fix and is now in place. V009's own note predicted this ("it then fails on
+  an unrelated `/login` Suspense bailout, which is the proof it switched").
+- **`/` is still dynamic, and always was.** `app/page.js:22` awaits `searchParams` to honour `?section=`
+  during the server render — a dynamic API of its own, nothing to do with the root layout, and present
+  verbatim on `origin/main`. Filed as **V044**, packet 57. Packet 2.3's spec claimed the home page would
+  prerender before anything had measured it; that sentence was corrected in the spec rather than left to
+  read as a result.
+
+**Verify A confirmed V009 on round 1**, on its own measurements rather than this packet's artefacts:
+its own `npm run build` (both `[unit]/[topic]` routes `●`), its own `curl` of the served document, its
+own browser load (one `/api/sections/supply`, zero `/api/subscription`, zero console errors), and a hand
+trace of the sign-in and sign-out races. It also read `audit/scripts/prerender-census.mjs` adversarially
+rather than trusting its JSON.
+
+**It returned one finding this packet had not claimed, and the packet is what made it reachable.**
+`fetchSubscription` resolves in `.finally`, so `entitlementKnown` goes true even when the lookup did not
+answer: `subscription` stays null, and every padlock, the upgrade bar, the plan badge and
+`UpgradeButton`'s offer draw as if the student were on the free plan. The verifier called the path
+unchanged by this packet. **That is true of one of its two branches.** On a network throw, `.catch`
+clears `subscription` — lossy before and after. But on a NON-OK response (`res.ok` false, a 500), the
+chain sets `lookupFailed` and leaves `subscription` alone, so before packet 2.3 the root layout's server
+seed survived it and a paying student stayed premium. With the seed gone there is nothing to fall back
+on. Filed as **V045**, packet 57, not fixed here.
+
+Bounded, and the bound is the useful part: the topic-page **paywall is not affected**, because
+`renderTab` reads `sectionData.isPremium` from `GET /api/sections/[id]` — a separate request with its own
+cookies. So a failed subscription lookup costs cosmetic locks, not withheld content. And the ruling is a
+values call rather than a bug fix: F031 already decided in this same component that "we could not find
+out" is not "there is no subscription", and priced it conservatively for trial eligibility. The
+consistent move is to keep `entitlementKnown` false while `lookupFailed` — which tells no lie, and also
+shows a free student on a flaky network no upsell, possibly for the whole visit. That is the founder's
+to rule on, which is why it is a ledger item and not a quiet extra commit.
+
+**Residual, accepted:** `ModelAnswersPage.isLocked` keeps drawing its lock while entitlement is unknown.
+Unlocking optimistically would expose paid answers that are already in the prop, and a lock that clears
+in one fetch is the smaller harm than a leak. `HomeScreen` and `Sidebar` both destructure `isPremium`
+and never use it; left alone rather than widen the diff.
+
+**Still open, unchanged:** the second half of F035 — `/api/subscription` reconciles against Stripe on
+every GET and belongs on a webhook. The comment that said so lived in the code this packet deleted, so
+it is restated here.

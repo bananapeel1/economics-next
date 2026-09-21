@@ -1,0 +1,75 @@
+
+spec-coverage — leaves examined, against 1,165 `kind: 'leaf'` rows in audit/raw/spec-items.json
+  bank 1  data/modelAnswersData.js + modelAnswersExpansion.js
+  bank 2  section_practice, read from audit/content-sections/ (the t=0 dump of the published tables — a lower bound, not live; --staged for the rebuilds)
+  note    section_practice has no `spec_items` column: scripts/packet-12-1-spec-items.sql is written and NOT run.
+          Tags for bank 2 come from audit/runs/packet-12.1/section_practice-tags.json.
+
+section                               subj   qs  untag  examined  leaves       %
+--------------------------------------------------------------------------------
+measures-economic-performance         econ    8      8         0      48    0.0%
+
+per unit
+  economics unit 2           0 /    48 leaves     0.0%  (8 questions)
+
+command words in measures-economic-performance: Explain 4 ×2 · Define 4 ×1 · Explain 6 ×1 · Assess 10 ×1 · Evaluate 20 ×1 · Outline 4 ×1 · Examine 8 ×1
+
+unexamined leaves in 2.3.1 (48 of 48):
+  ECON-2.3.1-1a       The rate of change of real Gross Domestic Product (GDP) as a measure of economic growth and living standards.
+  ECON-2.3.1-1b       Gross National Income (GNI) as an alternative measure of national income.
+  ECON-2.3.1-1c-1     real and nominal
+  ECON-2.3.1-1c-2     total and per capita
+  ECON-2.3.1-1c-3     value and volume.
+  ECON-2.3.1-1d       Comparison of GDP/GNI rates of growth between countries and over time.
+  ECON-2.3.1-1e       The concept of Purchasing Power Parities (PPPs) in making international comparisons of real GDP/GNI.
+  ECON-2.3.1-1f       The distinction between positive economic growth rates and negative economic growth rates.
+  ECON-2.3.1-1g       The concept of ‘recession’ as two consecutive quarters of negative economic growth.
+  ECON-2.3.1-1h       The limitations of using GDP/GNI to compare living standards between countries and over time.
+  ECON-2.3.1-1i-1     indicators of national happiness and wellbeing
+  ECON-2.3.1-1i-2     the relationship between real incomes and subjective happiness.
+  ECON-2.3.1-2a       The concepts of inflation, deflation and disinflation.
+  ECON-2.3.1-2b       Calculating inflation using a consumer price index (CPI), including role of weighted basket of goods and services.
+  ECON-2.3.1-2c       Limitations of the CPI as a measure of the rate of inflation.
+  ECON-2.3.1-2d       The producer (wholesale) price index as an indicator of future trends in the rate of inflation.
+  ECON-2.3.1-2e-1     demand-pull
+  ECON-2.3.1-2e-2     cost-push
+  ECON-2.3.1-2e-3     excessive growth of money supply.
+  ECON-2.3.1-2f-1     falling aggregate demand (AD)
+  ECON-2.3.1-2f-2     increase in aggregate supply (AS)
+  ECON-2.3.1-2f-3     fall in the money supply.
+  ECON-2.3.1-2g-1     Consumers
+  ECON-2.3.1-2g-2     the government
+  ECON-2.3.1-2g-3     firms
+  ECON-2.3.1-2g-4     workers
+  ECON-2.3.1-2g-5     income distribution
+  ECON-2.3.1-2g-6     investment
+  ECON-2.3.1-2g-7     competitiveness
+  ECON-2.3.1-2g-8     the current account of the balance of payments.
+  ECON-2.3.1-3a       How unemployment is measured, using the International Labour unemployment Organization (ILO) definition.
+  ECON-2.3.1-3b-1     frictional
+  ECON-2.3.1-3b-2     seasonal
+  ECON-2.3.1-3b-3     structural
+  ECON-2.3.1-3b-4     demand deficiency
+  ECON-2.3.1-3b-5     real wage inflexibility.
+  ECON-2.3.1-3c-1     consumers
+  ECON-2.3.1-3c-2     firms
+  ECON-2.3.1-3c-3     workers
+  ECON-2.3.1-3c-4     public finances
+  ECON-2.3.1-3c-5     resource utilisation and production possibility frontier
+  ECON-2.3.1-3c-6     society.
+  ECON-2.3.1-3d       The distinction between unemployment and underemployment.
+  ECON-2.3.1-3e       The significance of changes in rates of employment, unemployment and economic inactivity.
+  ECON-2.3.1-3f       The significance of net migration for employment and unemployment.
+  ECON-2.3.1-4a       Components of the balance of payments, with particular payments reference to the current account.
+  ECON-2.3.1-4b       The distinction between deficits and surpluses in the trade in goods and services balance.
+  ECON-2.3.1-4c       The distinction between balance of payments deficits and surpluses on the current account.
+
+8 questions across 1 section; 8 carry no specItems yet.
+0 of 1,165 spec leaves are examined by at least one question — 0.0%.
+
+4 failure(s): tariff ×4
+  tariff  measures-economic-performance     measures-economic-performance:0Define 4 is not an Economics tariff (lib/ial-marking.js)
+  tariff  measures-economic-performance     measures-economic-performance:1Explain 6 is not an Economics tariff (lib/ial-marking.js)
+  tariff  measures-economic-performance     measures-economic-performance:2Assess 10 is not an Economics tariff (lib/ial-marking.js)
+  tariff  measures-economic-performance     measures-economic-performance:4Outline 4 is not an Economics tariff (lib/ial-marking.js)
+

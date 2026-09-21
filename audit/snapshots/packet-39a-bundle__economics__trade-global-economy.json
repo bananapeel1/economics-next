@@ -1,0 +1,2582 @@
+{
+ "content": [
+  {
+   "id": "trade-global-economy:block:533d4533",
+   "title": "Specialisation and Comparative Advantage",
+   "sections": [
+    {
+     "id": "trade-global-economy:sub:why-countries-specialise",
+     "title": "Why Countries Specialise",
+     "keyIdea": "A country specialises when it concentrates its resources on some goods and buys the rest. The specification asks for the benefits AND the costs of doing so.",
+     "body": [
+      {
+       "type": "paragraph",
+       "text": "Specialisation inside an economy is familiar: one person farms, another teaches, and neither tries to do both badly. **International** specialisation is the same idea one level up — a country puts its resources into a narrower range of goods than it consumes, and trades for the difference."
+      },
+      {
+       "type": "paragraph",
+       "text": "The benefits follow from concentration. Output per worker rises where resources are most productive; longer production runs bring **economies of scale**; and a wider choice reaches consumers at lower prices than a country making everything itself could manage."
+      },
+      {
+       "type": "paragraph",
+       "text": "The costs are the other half of the leaf and students routinely omit them. A specialised economy is **exposed**: if world demand for its one export falls, there is nothing to fall back on. Industries that cannot survive foreign competition close, and their workers are not instantly employable elsewhere. Depending on imports for food, fuel or medicine is a strategic risk as well as an economic one."
+      },
+      {
+       "type": "paragraph",
+       "text": "So the answer to \"should a country specialise?\" is never simply yes. It weighs gains that are usually measurable against risks that are usually not — and the rest of this chapter measures the gains precisely enough for that comparison to be worth making."
+      }
+     ],
+     "realExample": {
+      "emoji": "🌾",
+      "text": "An economy that moves most of its farmland into one export crop earns more per hectare in a normal year, and has no second crop to sell in the year the price of the first one halves."
+     },
+     "misconception": "Students treat \"the benefits and costs of specialisation\" as a question about whether trade is good. It is not. It is a question about **concentration** — what a country gains by narrowing what it makes, and what it gives up in security and flexibility by doing so.",
+     "examMatters": "Appendix 6 defines Examine as requiring knowledge, understanding, application and analysis — the reasoning chain, drawn out. An answer that lists three benefits and stops has not examined anything; the costs are in the specification for a reason.",
+     "recall": {
+      "id": "trade-global-economy:sub:why-countries-specialise:recall",
+      "type": "classify",
+      "prompt": "An island economy is deciding whether to move three-quarters of its resources into fishing. Sort each consequence by which half of the leaf it belongs to:",
+      "groups": [
+       {
+        "name": "A benefit of specialising",
+        "items": [
+         "Boats run at full capacity all year instead of half of it",
+         "Buying freezer plant becomes worth it at the larger catch",
+         "Crews become faster at one job than they were at four"
+        ],
+        "why": "Each is output rising from concentration — capacity used, scale reached, skill deepened. That is what the benefit side of 1a means."
+       },
+       {
+        "name": "A cost of specialising",
+        "items": [
+         "A closed shipyard cannot reopen quickly when fish prices fall",
+         "All the wheat now has to be bought from somewhere else"
+        ],
+        "why": "Each is the exposure that concentration creates: one lost industry that is slow to rebuild, and a necessity that now depends on somebody else selling it."
+       }
+      ]
+     }
+    },
+    {
+     "id": "trade-global-economy:sub:absolute-and-comparative-advantage",
+     "title": "Absolute and Comparative Advantage",
+     "keyIdea": "Absolute advantage is how MUCH a country can make. Comparative advantage is what it GIVES UP to make it. Merida out-produces Kalto in both goods and still gains by trading.",
+     "body": [
+      {
+       "type": "paragraph",
+       "text": "A country has an **absolute advantage** in a good when it can produce more of it from the same resources than another country can. A country has a **comparative advantage** when it produces that good at a lower **opportunity cost** — when making one more unit of it costs less of the other good."
+      },
+      {
+       "type": "paragraph",
+       "text": "The distinction only matters because one country can be better at everything. With all its resources Merida can make 120 grain **or** 60 cloth; Kalto can make 40 grain **or** 40 cloth. Merida beats Kalto at both, so on absolute advantage alone it has no reason to trade at all."
+      },
+      {
+       "type": "paragraph",
+       "text": "Now ask what each gives up. For Merida, 120 grain and 60 cloth use the same resources, so one cloth costs 2 grain. For Kalto one cloth costs 1 grain. Cloth is **cheaper** for Kalto to make, measured in the grain given up."
+      },
+      {
+       "type": "paragraph",
+       "text": "Turn it round for grain: one grain costs Merida 0.50 cloth and costs Kalto 1 cloth. So Merida has the comparative advantage in grain and Kalto has it in cloth — and that is true even though Merida is better at both in absolute terms."
+      }
+     ],
+     "realExample": {
+      "emoji": "⚖️",
+      "text": "A surgeon who types faster than any secretary still hires one, because the hour spent typing is an hour not spent operating. The absolute advantage is real and irrelevant; the opportunity cost decides."
+     },
+     "misconception": "Students say a country has a comparative advantage in a good because it is \"better at making it\" or because its costs are lower. Those are absolute statements. Comparative advantage is a ratio **between two goods inside one country**, and it can only be found by comparing those ratios across countries.",
+     "examMatters": "Appendix 6 defines Define as knowledge and understanding only — the meaning of a term — for 2 marks. A definition of comparative advantage that does not contain the words \"opportunity cost\" has defined absolute advantage instead.",
+     "recall": {
+      "id": "trade-global-economy:sub:absolute-and-comparative-advantage:recall",
+      "type": "fillin",
+      "prompt": "Two other economies. Orvale can make 90 tonnes of steel or 45 machines. Petra can make 20 tonnes of steel or 20 machines. Work each ratio out before answering:",
+      "template": [
+       "One machine costs Orvale ___ tonnes of steel",
+       "One machine costs Petra ___ tonnes of steel",
+       "So the comparative advantage in machines belongs to the ___ economy",
+       "And Orvale's absolute advantage in machines is therefore ___"
+      ],
+      "answers": [
+       "2",
+       "1",
+       "smaller",
+       "irrelevant"
+      ],
+      "hints": [
+       "steel forgone divided by machines gained, for the larger economy",
+       "the same division for the other one",
+       "which of the two gives up less steel per machine",
+       "what an absolute advantage decides once the ratios differ"
+      ],
+      "distractors": [
+       "0.5",
+       "larger",
+       "decisive"
+      ]
+     }
+    },
+    {
+     "id": "trade-global-economy:sub:working-out-who-should-specialise",
+     "title": "Working Out the Gain",
+     "keyIdea": "Specialisation is worth it when total output rises. Here it rises by 20 grain with cloth unchanged — one number moves, so there is nothing to trade off.",
+     "body": [
+      {
+       "type": "paragraph",
+       "text": "Start from no trade, with each country splitting its resources evenly. Merida makes 60 grain and 30 cloth; Kalto makes 20 and 20. Between them: **80 grain and 50 cloth**."
+      },
+      {
+       "type": "paragraph",
+       "text": "Now let each move towards the good it gives up least to make. Kalto goes fully into cloth: 40 cloth, no grain. Merida makes the 10 cloth the world would otherwise be short of and puts everything else into grain, which is 100. Between them: **100 grain and 50 cloth**."
+      },
+      {
+       "type": "paragraph",
+       "text": "Cloth is **identical**. Grain is 20 higher. The same resources, arranged differently, produced more — and because only one of the two numbers moved, no judgement is needed about whether the gain was worth the loss. There is no loss."
+      },
+      {
+       "type": "paragraph",
+       "text": "Splitting it needs a rate between the goods, and it has to sit between the two domestic costs: above 1 grain per cloth or Kalto makes its own grain, below 2 or Merida does. At 1.50, Kalto ships 20 cloth for 30 grain. Merida ends with 70 grain and 30 cloth, Kalto with 30 and 20: each 10 grain better off, neither worse off in cloth."
+      }
+     ],
+     "realExample": {
+      "emoji": "🧮",
+      "text": "Two workshops that both make frames and wheels, each doing half of both, produce fewer of one and the same of the other as when each concentrates — the gain is in the arrangement, not in working harder."
+     },
+     "misconception": "Students specialise **completely** and then report that one good went up and the other went down, which proves nothing either way. Complete specialisation here gives 120 grain and 40 cloth — more grain and **less** cloth than without trade. Holding one good constant is what makes the gain visible.",
+     "examMatters": "Appendix 6 defines Calculate as a quantitative task of several stages based on given data, and advises showing workings. The stages here are output before, output after, and the difference — an answer that states the difference without the two totals has skipped the evidence.",
+     "recall": {
+      "id": "trade-global-economy:sub:working-out-who-should-specialise:recall",
+      "type": "fillin",
+      "prompt": "Two different countries. Without trade, Ardenne makes 24 tonnes of coffee and 16 of cocoa; Belmar makes 6 coffee and 24 cocoa. After specialising they make 48 coffee and 40 cocoa between them:",
+      "template": [
+       "Total coffee without trade is ___ tonnes",
+       "Total cocoa without trade is ___ tonnes",
+       "So the gain from specialising is ___ tonnes of coffee and ___ of cocoa"
+      ],
+      "answers": [
+       "30",
+       "40",
+       "18",
+       "0"
+      ],
+      "hints": [
+       "add the two coffee figures",
+       "add the two cocoa figures",
+       "after minus before, for the good that moved",
+       "after minus before, for the good that did not"
+      ],
+      "distractors": [
+       "48",
+       "22",
+       "8"
+      ]
+     }
+    },
+    {
+     "id": "trade-global-economy:sub:the-assumptions-behind-the-theory",
+     "title": "The Assumptions Behind It",
+     "keyIdea": "The gain was produced by a model, and the model was told what to believe. The specification asks for the assumptions because naming them is what makes the limitations possible.",
+     "body": [
+      {
+       "type": "paragraph",
+       "text": "The arithmetic on the last step is arithmetic, so it cannot be wrong. What can be wrong is whether the world it describes is the world we are in. Four assumptions did the work."
+      },
+      {
+       "type": "bullets",
+       "items": [
+        "**Costs do not change with scale.** Each extra unit of grain cost Merida the same 0.50 cloth as the first one. That is why the ratio could be treated as a single number.",
+        "**Resources move freely between industries.** A worker leaving cloth walks into grain the same day, with no retraining and no lost output in between.",
+        "**There are no transport costs and no barriers.** The 20 cloth arrives in Merida at no cost, so the whole gain survives the journey.",
+        "**Only two countries and two goods exist**, and the resources inside each are fully employed."
+       ]
+      },
+      {
+       "type": "paragraph",
+       "text": "None of these is written down as a trick. Each is a simplification that makes the mechanism visible, and each can be relaxed one at a time — which is exactly what an evaluation question is asking you to do."
+      }
+     ],
+     "realExample": {
+      "emoji": "📦",
+      "text": "Shipping a heavy, low-value good halfway round the world can cost more than the difference in production costs the trade was meant to exploit. The model says trade; the freight bill says otherwise."
+     },
+     "misconception": "Students write that the assumptions \"make the theory unrealistic\", as though that settled it. A model is meant to be simpler than the world. The question is whether relaxing a particular assumption **changes the conclusion**, and for some of these it does not.",
+     "examMatters": "Appendix 6 defines Evaluate as requiring a judgement supported by the reasoning. Naming an assumption earns nothing on its own; saying what follows if it fails is the analysis the marks are for.",
+     "recall": {
+      "id": "trade-global-economy:sub:the-assumptions-behind-the-theory:recall",
+      "type": "match",
+      "prompt": "Match each thing that happens in a real economy to the assumption it breaks:",
+      "pairs": [
+       {
+        "left": "Each extra tonne of ore comes from a poorer seam than the last",
+        "right": "Constant opportunity costs",
+        "why": "Rising cost per extra unit means the opportunity cost is not one number, so the ratio that decided the specialisation changes as the country specialises."
+       },
+       {
+        "left": "A shipyard welder cannot start work in a pharmaceutical plant",
+        "right": "Perfect factor mobility",
+        "why": "The gain assumed resources released by one industry arrive in the other; when they cannot, the released resources are unemployed instead."
+       },
+       {
+        "left": "A refrigerated container costs more than the price gap it exploits",
+        "right": "Zero transport costs",
+        "why": "The model let the goods move for nothing, so the whole calculated gain was available to split. Freight comes out of that gain first."
+       },
+       {
+        "left": "A third country undercuts both producers next year",
+        "right": "Only two countries and two goods",
+        "why": "Two countries and two goods is what made one pair of ratios decisive; more of either means the comparison has to be made again."
+       }
+      ]
+     }
+    },
+    {
+     "id": "trade-global-economy:sub:the-limitations-of-the-theory",
+     "title": "The Limitations of the Theory",
+     "keyIdea": "Relaxing the assumptions does not destroy the theory. It tells you where the predicted gain shrinks, where it may not appear at all, and why a country might refuse it anyway.",
+     "body": [
+      {
+       "type": "paragraph",
+       "text": "**Costs rise as a country specialises.** Move resources into grain and the least suitable land is used last, so the opportunity cost climbs as Merida specialises. That is why countries specialise **partially** and not completely — the advantage runs out before the resources do."
+      },
+      {
+       "type": "paragraph",
+       "text": "**Advantage is made, not found.** A country that invests in skills, infrastructure and research changes what it is good at. A ratio measured today is not a permanent property of a country, which is the point sub-topic 2 builds on."
+      },
+      {
+       "type": "paragraph",
+       "text": "**The gain has to survive being moved.** Transport, insurance and delay come out of the gain before anyone shares it, and for heavy or perishable goods they can exhaust it."
+      },
+      {
+       "type": "paragraph",
+       "text": "**The gain is a total, not a distribution.** The 20 grain was split evenly here by choice of exchange rate. A rate near one country's own cost gives almost all of it to the other. And the workers in the industry that closes bear a cost that the total does not show — which is where the political argument starts, and why sub-topic 5 exists."
+      }
+     ],
+     "realExample": {
+      "emoji": "🏭",
+      "text": "An economy that has specialised in one manufactured export for a generation finds its advantage eroded by a country that deliberately built the same capability — the ratios moved because somebody moved them."
+     },
+     "misconception": "Students conclude that because the theory has limitations, free trade \"does not work\". The limitations say the gain is smaller, slower and less evenly shared than the model suggests. Every one of them still leaves a gain to argue about.",
+     "examMatters": "Appendix 6 defines Evaluate as requiring a supported judgement, and the 20-mark items are where this material earns most. A limitation used as a counterweight — how much smaller, for whom, under what conditions — is worth more than a list of four.",
+     "recall": {
+      "id": "trade-global-economy:sub:the-limitations-of-the-theory:recall",
+      "type": "fillin",
+      "prompt": "An economy gains 12 tonnes of output by specialising. Freight and insurance take 5 tonnes, and the trading partner's bargaining power secures three-quarters of what is left:",
+      "template": [
+       "The gain left after transport is ___ tonnes",
+       "This economy keeps ___ tonnes of it",
+       "So the theory's prediction was right about the ___ and silent about the ___"
+      ],
+      "answers": [
+       "7",
+       "1.75",
+       "total",
+       "split"
+      ],
+      "hints": [
+       "subtract the freight from the gain",
+       "a quarter of what survived the freight",
+       "what the model actually calculates",
+       "what the exchange rate, not the model, decides"
+      ],
+      "distractors": [
+       "12",
+       "5.25",
+       "direction"
+      ]
+     }
+    }
+   ],
+   "takeaway": [
+    "Specialisation has benefits AND costs, and the specification asks for both halves.",
+    "Absolute advantage is how much; comparative advantage is what is given up.",
+    "Partial specialisation raises grain by 20 with cloth unchanged: nothing is traded off.",
+    "The swap rate sits between 1 and 2 grain per cloth; at 1.50 the gain splits evenly.",
+    "The limitations shrink the gain, slow it and skew its distribution; none of them removes it."
+   ],
+   "diagramId": "trade-global-economy:diagram:698178a2",
+   "quizIndices": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "practiceIndices": [
+    0,
+    5
+   ]
+  },
+  {
+   "id": "trade-global-economy:block:41aa8006",
+   "title": "Patterns and Volume of World Trade",
+   "sections": [
+    {
+     "id": "trade-global-economy:sub:what-a-pattern-of-trade-is",
+     "title": "What a Pattern of Trade Is",
+     "keyIdea": "A pattern of trade is who trades what with whom, and in what proportions. The specification names five factors that change it, and this chapter takes them one at a time.",
+     "body": [
+      {
+       "type": "paragraph",
+       "text": "The last chapter explained why trade happens at all. This one is about its **shape**: which countries export which goods, and to whom. That shape is not fixed, and the specification is interested in the changes rather than in the snapshot."
+      },
+      {
+       "type": "paragraph",
+       "text": "Two measurements are worth keeping apart. **Volume** is how much is traded. **Pattern** is how it is distributed — between goods, and between partners. A country's trade can grow while its pattern shifts underneath, and the two facts answer different questions."
+      },
+      {
+       "type": "paragraph",
+       "text": "The five factors the specification lists are the growth of emerging economies, changes in comparative advantage, the growth of trading blocs and bilateral trading agreements, changes in relative exchange rates, and changes in protectionism between countries. Each has a subsection here."
+      },
+      {
+       "type": "paragraph",
+       "text": "Notice what they have in common: none is an accident. Each is either a country becoming good at something new, or a government changing the terms on which goods cross a border. Patterns of trade move because somebody changed something."
+      }
+     ],
+     "realExample": {
+      "emoji": "🗺️",
+      "text": "An economy whose exports went overwhelmingly to its nearest neighbour twenty years ago, and now sends more than half of them to the other side of the world, has the same volume story and a different pattern story."
+     },
+     "misconception": "Students answer a \"patterns of trade\" question by describing how much world trade has grown. Growth is the volume. The pattern question asks what the composition is, and which direction it moved.",
+     "examMatters": "Appendix 6 defines Analyse as requiring a reasoning chain built on knowledge, understanding and application. Naming a factor is the first link; what it does to which flow, in which direction, is the rest of it.",
+     "recall": {
+      "id": "trade-global-economy:sub:what-a-pattern-of-trade-is:recall",
+      "type": "classify",
+      "prompt": "An economy's trade statistics change over a decade. Sort each fact by what it measures:",
+      "groups": [
+       {
+        "name": "Volume",
+        "items": [
+         "Total exports rose by a third",
+         "Imports and exports together are worth more than they were"
+        ],
+        "why": "Both are statements about how much, with no information about composition — a country could double its trade and export exactly the same mix to exactly the same partners."
+       },
+       {
+        "name": "Pattern",
+        "items": [
+         "Machinery overtook minerals as the largest export",
+         "The share going to neighbouring countries fell by half",
+         "Two new partners now take a fifth of all exports"
+        ],
+        "why": "Each is about composition: which goods, and which partners. That is the distribution the word pattern refers to."
+       }
+      ]
+     }
+    },
+    {
+     "id": "trade-global-economy:sub:emerging-economies",
+     "title": "The Impact of Emerging Economies",
+     "keyIdea": "Emerging economies are the largest single change in the pattern of world trade: 24% of world exports 30 years ago, 44% now.",
+     "body": [
+      {
+       "type": "paragraph",
+       "text": "An **emerging economy** is one growing quickly from a low starting point, industrialising, and taking a rising share of world output and trade. The specification names them first among the factors because the size of the change is not in dispute."
+      },
+      {
+       "type": "paragraph",
+       "text": "Put numbers on it. If emerging economies took 24% of world exports 30 years ago and take 44% now, the advanced economies' share went from 76% to 56%. Shares add to 100%: one side's gain of 20% points is the other's loss of the same 20%."
+      },
+      {
+       "type": "paragraph",
+       "text": "The effect on the pattern works through costs and capability together. Low labour costs bring labour-intensive manufacturing first; investment and education then move the same countries into goods that need skills and capital. So the flow changes twice — once when the industry arrives, again when it moves up."
+      },
+      {
+       "type": "paragraph",
+       "text": "And they change trade for everyone else as buyers, not only as sellers. A country of rising incomes imports more of everything, which is why the exporters of the goods it no longer makes can still find their exports to it rising."
+      }
+     ],
+     "realExample": {
+      "emoji": "🏗️",
+      "text": "An economy that began by exporting clothing and now exports components for the machines that make clothing has moved along the same path twice, and changed two different countries' export mixes doing it."
+     },
+     "misconception": "Students treat a falling share as a falling amount. A share falling from 76% to 56% while world trade doubles leaves an advanced economy exporting **more** than before. A share is a proportion of a moving total.",
+     "examMatters": "Appendix 6 defines Explain as needing knowledge, understanding and application, with a two-stage chain for a reason or an impact. \"Emerging economies have grown\" is a fact; the mark is for what that growth did to a particular flow.",
+     "recall": {
+      "id": "trade-global-economy:sub:emerging-economies:recall",
+      "type": "fillin",
+      "prompt": "World exports were $800.0bn and are now $2000.0bn. One advanced economy's share fell from 15% to 9%:",
+      "template": [
+       "Its exports then were worth ___",
+       "Its exports now are worth ___",
+       "So its share fell and its exports ___"
+      ],
+      "answers": [
+       "$120.0bn",
+       "$180.0bn",
+       "rose"
+      ],
+      "hints": [
+       "the old share of the old total",
+       "the new share of the new total",
+       "compare the two values, not the two shares"
+      ],
+      "distractors": [
+       "$300.0bn",
+       "$72.0bn",
+       "fell"
+      ]
+     }
+    },
+    {
+     "id": "trade-global-economy:sub:changes-in-comparative-advantage",
+     "title": "Changes in Comparative Advantage",
+     "keyIdea": "Comparative advantage is a ratio, and ratios move. Double Kalto's grain productivity and its cost of cloth becomes 2 grain, the same as Merida's.",
+     "body": [
+      {
+       "type": "paragraph",
+       "text": "Chapter 1 measured the two countries once. Nothing in the theory says the measurement holds. Investment, education, new technology and newly discovered resources all change how much a country gives up to make something."
+      },
+      {
+       "type": "paragraph",
+       "text": "Work the case through. Kalto could make 40 grain or 40 cloth, so cloth cost it 1 grain. Suppose its grain productivity doubles: 80 grain or the same 40 cloth. Cloth now costs it 2 grain — **exactly what it costs Merida**."
+      },
+      {
+       "type": "paragraph",
+       "text": "When two countries have the same opportunity costs, neither has a comparative advantage in anything and there is no gain left to divide. The trade that the first chapter justified has no basis any more, and it would stop — not because of a tariff, but because the arithmetic that supported it changed."
+      },
+      {
+       "type": "paragraph",
+       "text": "Push the productivity further and the ratios cross: Kalto becomes the low-cost grain producer and the direction of trade **reverses**. This is why a pattern of trade is a moving thing, and why a country whose advantage was built can lose it to a country that builds one too."
+      }
+     ],
+     "realExample": {
+      "emoji": "🔬",
+      "text": "A country that spends two decades training engineers and laying fibre changes what it gives up to produce software, and takes a share of an export market from an economy that had it uncontested."
+     },
+     "misconception": "Students think a country loses its comparative advantage by getting **worse**. It usually loses it by others getting better, or by its own success: rising wages in a country that industrialised first are what move labour-intensive production on to the next one.",
+     "examMatters": "Appendix 6 defines Analyse as requiring a developed chain of reasoning. Here the chain has a numerical link in it — what moved, what that did to the ratio, and which direction the flow then took.",
+     "recall": {
+      "id": "trade-global-economy:sub:changes-in-comparative-advantage:recall",
+      "type": "fillin",
+      "prompt": "Orvale can make 60 tyres or 30 pumps; Petra can make 20 tyres or 20 pumps. Petra then triples its tyre capacity to 60:",
+      "template": [
+       "Before the change, one pump cost Petra ___ tyres",
+       "After the change, one pump costs Petra ___ tyres",
+       "Before, the comparative advantage in pumps belonged to the ___ economy",
+       "After, it belongs to the ___ one"
+      ],
+      "answers": [
+       "1",
+       "3",
+       "smaller",
+       "larger"
+      ],
+      "hints": [
+       "tyres forgone per pump, on the original figures",
+       "the same division on the new tyre capacity",
+       "which economy gave up fewer tyres per pump at the start",
+       "and which gives up fewer now"
+      ],
+      "distractors": [
+       "2",
+       "0.5",
+       "neither"
+      ]
+     }
+    },
+    {
+     "id": "trade-global-economy:sub:trading-blocs-and-bilateral-agreements",
+     "title": "Trading Blocs and Bilateral Agreements",
+     "keyIdea": "Agreements between countries redirect trade towards the members and away from everyone else. As a factor influencing patterns of trade, that redirection is the whole point.",
+     "body": [
+      {
+       "type": "paragraph",
+       "text": "A **trading bloc** is a group of countries that agree to trade with each other on easier terms than they offer outsiders. A **bilateral trading agreement** is the same idea between two countries. The specification names their growth as one of the five factors shaping patterns of trade."
+      },
+      {
+       "type": "paragraph",
+       "text": "The mechanism is simple enough to state precisely. Inside the agreement, barriers come down, so goods from a member become cheaper relative to goods from a non-member. Buyers switch. The **direction** of trade changes even where the total does not, which is exactly what a change in pattern means."
+      },
+      {
+       "type": "paragraph",
+       "text": "The size of the effect depends on who is in. An agreement between economies that already traded heavily changes little; one that includes a large market a country had been shut out of can change that country's export map within a few years."
+      },
+      {
+       "type": "paragraph",
+       "text": "What these agreements are, how they are ranked, and whether the switching they cause is a gain or a loss overall, are questions for the chapter on trade liberalisation. Here they are one of five reasons a pattern moves."
+      }
+     ],
+     "realExample": {
+      "emoji": "🤝",
+      "text": "Two economies sign an agreement removing barriers on farm goods. Within three years each buys produce from the other that it previously bought from a cheaper supplier outside the agreement."
+     },
+     "misconception": "Students describe an agreement as \"increasing trade\", full stop. Some of what looks like new trade is trade **moved** from a non-member who was already supplying it. Distinguishing the two is what the later chapter is for; noticing that both happen is what this one needs.",
+     "examMatters": "Appendix 6 defines Explain as a two-stage chain for a reason or an impact. The two stages here are the change in relative prices caused by the agreement, and the switch in purchases that follows.",
+     "recall": {
+      "id": "trade-global-economy:sub:trading-blocs-and-bilateral-agreements:recall",
+      "type": "classify",
+      "prompt": "Four countries sign an agreement removing barriers among themselves. Sort each outcome by whether it is a change in the pattern of trade or only in its volume:",
+      "groups": [
+       {
+        "name": "A change in pattern",
+        "items": [
+         "A member now buys its steel from another member instead of an outsider",
+         "An outside supplier loses a market it had held for years"
+        ],
+        "why": "In each case the composition of trade moved — a partner was replaced. That redirection is what makes an agreement a factor influencing patterns."
+       },
+       {
+        "name": "A change in volume only",
+        "items": [
+         "Every member trades more than before, in the same proportions with the same partners",
+         "Total trade among the four rises in line with their incomes"
+        ],
+        "why": "Both describe the same map with bigger numbers on it: nobody was replaced and no proportion changed."
+       }
+      ]
+     }
+    },
+    {
+     "id": "trade-global-economy:sub:relative-exchange-rates",
+     "title": "Changes in Relative Exchange Rates",
+     "keyIdea": "An exchange rate is the price of one currency in another, and it changes both prices in a trade at once. A fall of 20% takes an export priced 100 at home from 200 to 160 abroad.",
+     "body": [
+      {
+       "type": "paragraph",
+       "text": "Nothing about how a good is made has to change for its price abroad to change. If the currency buys less foreign money, foreign buyers pay less for the same good, and domestic buyers pay more for the same import."
+      },
+      {
+       "type": "paragraph",
+       "text": "Work both halves. Suppose the rate falls from 2 foreign units per domestic unit to 1.60. A good priced at 100 at home used to cost foreign buyers 200; now it costs 160. An import priced at 200 abroad used to cost 100 at home; now it costs 125."
+      },
+      {
+       "type": "paragraph",
+       "text": "So exports become more competitive and imports less so, and the pattern of trade shifts towards the goods of whichever country's currency fell. The word the specification uses is **relative**, and it matters: what moves trade is one currency against another, not either one on its own."
+      },
+      {
+       "type": "paragraph",
+       "text": "The shift is not guaranteed to be large. It depends on how responsive buyers are to price, on how much of the import is a necessity, and on whether the change is expected to last. A movement believed to be temporary changes very little."
+      }
+     ],
+     "realExample": {
+      "emoji": "💱",
+      "text": "An exporter that has not changed a price, a process or a product in five years finds its order book full in one year and thin in the next, because the currency moved in between."
+     },
+     "misconception": "Students say a weaker currency is \"bad for the economy\". It is bad for buyers of imports and good for sellers of exports at the same time. Which effect dominates is a question about elasticities, not a fact about the direction of the rate.",
+     "examMatters": "Appendix 6 defines Calculate as a several-stage quantitative task from given data. Converting a price at two rates is two divisions, and both belong in the answer.",
+     "recall": {
+      "id": "trade-global-economy:sub:relative-exchange-rates:recall",
+      "type": "fillin",
+      "prompt": "A currency rises from 4.0 foreign units per domestic unit to 5.0. An export is priced 60 at home; an import is priced 400 abroad:",
+      "template": [
+       "The export cost foreign buyers ___ and now costs ___",
+       "The import cost ___ at home and now costs ___",
+       "So exports became ___ competitive"
+      ],
+      "answers": [
+       "240",
+       "300",
+       "100",
+       "80",
+       "less"
+      ],
+      "hints": [
+       "home price times the old rate",
+       "home price times the new rate",
+       "foreign price divided by the old rate",
+       "foreign price divided by the new rate",
+       "what a higher price abroad does to demand for exports"
+      ],
+      "distractors": [
+       "15",
+       "2000",
+       "more"
+      ]
+     }
+    },
+    {
+     "id": "trade-global-economy:sub:changes-in-protectionism",
+     "title": "Changes in Protectionism",
+     "keyIdea": "Protectionism is government action that makes foreign goods harder or dearer to buy. A change in it redirects trade: towards home producers, or towards a third country.",
+     "body": [
+      {
+       "type": "paragraph",
+       "text": "When a government raises a barrier against imports of a good, buyers face a higher price for the foreign version and some of them switch to the domestic one. When it lowers a barrier, the switch runs the other way. Either way the pattern moves, which is why the specification lists it among the five factors."
+      },
+      {
+       "type": "paragraph",
+       "text": "The second effect is less obvious and more interesting. A barrier aimed at one country's goods does not only send buyers home; it sends some of them to a **third** country that the barrier does not cover. A measure directed at one trading partner can hand the market to another."
+      },
+      {
+       "type": "paragraph",
+       "text": "Direction of travel matters for the exam. Barriers have generally fallen over the last fifty years, under agreements between countries and through the institutions that oversee them — which is one of the reasons the volume of world trade grew faster than world output over the same period."
+      },
+      {
+       "type": "paragraph",
+       "text": "What the tools are, why governments use them, and who gains and loses from them, are the questions the chapter on restrictions on free trade answers. Here protectionism is a lever that moves the pattern, and the point is which way."
+      }
+     ],
+     "realExample": {
+      "emoji": "🚧",
+      "text": "A duty imposed on one country's steel leaves the domestic price higher, the domestic mills busier, and a previously minor exporter in a third country taking most of the imports that remain."
+     },
+     "misconception": "Students assume protection against imports means imports fall and domestic production rises, and stop. Some of the fall is real; some is a **reallocation** to suppliers the measure did not name, so total imports can fall far less than the measure's target suggests.",
+     "examMatters": "Appendix 6 defines Examine as knowledge, understanding, application and analysis together. An examination of a trade barrier that never reaches the third country has examined half the effect.",
+     "recall": {
+      "id": "trade-global-economy:sub:changes-in-protectionism:recall",
+      "type": "classify",
+      "prompt": "A government puts a duty on imported tiles from one country only. Sort each result by the direction it moved the pattern of trade:",
+      "groups": [
+       {
+        "name": "Trade moved home",
+        "items": [
+         "Domestic tile makers raise output to meet orders they used to lose",
+         "A buyer who imported everything now sources half at home"
+        ],
+        "why": "Both are the intended effect: the foreign good is dearer, so buyers switch to the domestic one and home production rises."
+       },
+       {
+        "name": "Trade moved to a third country",
+        "items": [
+         "A neighbouring exporter not covered by the duty doubles its shipments",
+         "Imports fall by far less than the duty was expected to remove"
+        ],
+        "why": "Both are the unintended one. The duty named a country, not a good, so demand moved to the nearest uncovered supplier rather than home."
+       }
+      ]
+     }
+    },
+    {
+     "id": "trade-global-economy:sub:changes-in-trade-flows",
+     "title": "Changes in Trade Flows",
+     "keyIdea": "A flow can fall in share and rise in value, or the reverse. Velora's ore went from 70% of exports to 40% — and in money from $56.0bn to $40.0bn.",
+     "body": [
+      {
+       "type": "paragraph",
+       "text": "The specification's second sub-topic asks for changes in trade flows **and the reasons for them**. A flow is trade between two places, or in one good: the value, the direction, and what it is made of."
+      },
+      {
+       "type": "paragraph",
+       "text": "Take Velora. Exports have grown from $80.0bn to $100.0bn. Ore was 70% of them and is now 40%; manufactures were 30% and are now 60%. In value, ore has gone from $56.0bn to $40.0bn and manufactures from $24.0bn to $60.0bn."
+      },
+      {
+       "type": "paragraph",
+       "text": "So ore fell on both measures and manufactures rose on both — but they did not have to. Had exports grown faster, ore's share could have fallen with its value rising. **A share and a value are two different facts**, and a question about a flow is usually about which of them moved."
+      },
+      {
+       "type": "paragraph",
+       "text": "The reasons are the factors from this chapter: an advantage that was built, an exchange rate, an agreement, a barrier, a new competitor. Naming the change is description; attaching it to one of those is the analysis the marks are for."
+      }
+     ],
+     "realExample": {
+      "emoji": "📊",
+      "text": "An exporter's largest customer takes a smaller share of its goods every year while buying more of them each year, because the exporter's other markets are growing faster still."
+     },
+     "misconception": "Students read a falling share as a shrinking trade. Check the total before concluding anything: here ore fell on both measures, but the same 40% share of a total that had doubled would have been a rise in value.",
+     "examMatters": "Appendix 6 defines Calculate as several stages from given data. A share applied to a total is one stage and the comparison is another, and an answer that compares percentages to money has compared two different things.",
+     "recall": {
+      "id": "trade-global-economy:sub:changes-in-trade-flows:recall",
+      "type": "fillin",
+      "prompt": "Another economy's exports grow from $40.0bn to $100.0bn. Coffee was 50% of them and is now 25%:",
+      "template": [
+       "Coffee exports were worth ___",
+       "Coffee exports are now worth ___",
+       "So the share ___ and the value ___"
+      ],
+      "answers": [
+       "$20.0bn",
+       "$25.0bn",
+       "halved",
+       "rose"
+      ],
+      "hints": [
+       "half of the old total",
+       "a quarter of the new total",
+       "compare the two percentages",
+       "compare the two values"
+      ],
+      "distractors": [
+       "$50.0bn",
+       "$10.0bn",
+       "fell"
+      ]
+     }
+    }
+   ],
+   "takeaway": [
+    "Volume is how much; pattern is the composition. The five factors move the pattern.",
+    "Emerging economies went from 24% of world exports to 44%, so the other share is 56%.",
+    "Comparative advantage moves: at 80 grain, Kalto's costs match Merida's and trade loses its basis.",
+    "An exchange rate moves both prices: 200 to 160 abroad, 100 to 125 at home.",
+    "A share and a value are two facts: ore 70% to 40%, and $56.0bn to $40.0bn."
+   ],
+   "diagramId": "trade-global-economy:diagram:efbcbebc",
+   "quizIndices": [
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "practiceIndices": [
+    3
+   ]
+  },
+  {
+   "id": "trade-global-economy:block:59850626",
+   "title": "The Terms of Trade, and What Moves Them",
+   "sections": [
+    {
+     "id": "trade-global-economy:sub:what-the-terms-of-trade-measure",
+     "title": "What the Terms of Trade Measure",
+     "keyIdea": "The terms of trade measure the rate at which a country exchanges its exports for imports. They are a ratio of PRICES, not of quantities, and not of the value of trade.",
+     "body": [
+      {
+       "type": "paragraph",
+       "text": "A country sells goods abroad and uses the proceeds to buy goods from abroad. The **terms of trade** answer one question about that arrangement: how much can a given quantity of exports buy?"
+      },
+      {
+       "type": "paragraph",
+       "text": "The answer is a comparison of two price levels — what the country's exports fetch against what its imports cost. When export prices rise faster than import prices, each unit of exports commands more imports and the terms of trade have **improved**. When import prices rise faster, they have **deteriorated**."
+      },
+      {
+       "type": "paragraph",
+       "text": "Two things it is not. It is not a measure of how much a country trades: the terms of trade can improve in a year when trade collapses. And it is not a measure of whether trade is profitable — it is about relative prices only, and the next chapter shows an improvement making a country worse off."
+      },
+      {
+       "type": "paragraph",
+       "text": "The words matter in the exam. **Improvement** and **deterioration** describe the direction of the ratio and nothing else. Neither word is a verdict, and treating \"improvement\" as good news is the single commonest error in this topic."
+      }
+     ],
+     "realExample": {
+      "emoji": "⚖️",
+      "text": "An economy exporting one commodity finds that a shipment which paid for a year's fuel imports last year pays for ten months of them this year. Nothing about the shipment changed; the two prices moved apart."
+     },
+     "misconception": "Students define the terms of trade as the balance between exports and imports. That is the balance of trade, which is about **values**. The terms of trade are about **prices**, and the two can move in opposite directions in the same year.",
+     "examMatters": "Appendix 6 defines Define as knowledge and understanding only, for 2 marks. A definition that says \"the relationship between exports and imports\" is too loose to earn them; the relationship is between export **prices** and import **prices**.",
+     "recall": {
+      "id": "trade-global-economy:sub:what-the-terms-of-trade-measure:recall",
+      "type": "classify",
+      "prompt": "An economy reports five figures for the year. Sort each by whether the terms of trade can be calculated from it:",
+      "groups": [
+       {
+        "name": "Part of the terms of trade",
+        "items": [
+         "The average price of goods sold abroad",
+         "The average price of goods bought from abroad"
+        ],
+        "why": "Both are price levels, and the terms of trade are one price level divided by the other."
+       },
+       {
+        "name": "Not part of it",
+        "items": [
+         "The total value of exports",
+         "The number of tonnes shipped out",
+         "The gap between exports and imports"
+        ],
+        "why": "Values, volumes and the trade gap are all quantities of trade. None of them is a price, so none can go into the ratio."
+       }
+      ]
+     }
+    },
+    {
+     "id": "trade-global-economy:sub:calculating-the-terms-of-trade",
+     "title": "Calculating the Terms of Trade",
+     "keyIdea": "Divide the export price index by the import price index and multiply by 100. Sarova's 120 over 110 gives 109.1 against a base of 100.0.",
+     "body": [
+      {
+       "type": "paragraph",
+       "text": "Both prices are measured as **index numbers**: a base year is set to 100 and every later year is expressed against it. An export price index of 120 means export prices are a fifth higher than in the base year."
+      },
+      {
+       "type": "paragraph",
+       "text": "The calculation is one division. Export price index ÷ import price index × 100. In the base year both indices are 100, so the terms of trade are 100.0 by construction — which is why a base year is chosen at all."
+      },
+      {
+       "type": "paragraph",
+       "text": "Now Sarova. Export prices have risen to 120 and import prices to 110. So the terms of trade are 120 ÷ 110 × 100 = **109.1**. Above 100.0, so they have improved — by about 9.1%."
+      },
+      {
+       "type": "paragraph",
+       "text": "Read the arithmetic carefully: **both** prices rose. The terms of trade improved because exports rose **faster**, not because imports got cheaper. A country can see every price it faces rise and still record an improvement, and that is the most common misreading of the figure."
+      }
+     ],
+     "realExample": {
+      "emoji": "🧾",
+      "text": "A year in which an exporter's prices rise a fifth and its suppliers' prices rise a tenth shows up as an improvement of about nine points, even though every invoice on both sides is larger than the year before."
+     },
+     "misconception": "Students see an index above 100 and call it \"good\", or see both indices rising and conclude the terms of trade cannot have improved. The level says where prices stand against the base year; the ratio says which rose faster. Only the ratio is the terms of trade.",
+     "examMatters": "Appendix 6 defines Calculate as a quantitative task of several stages based on given data, and advises showing workings. Show the division and the multiplication; an answer of 109.1 with nothing behind it cannot be given method marks.",
+     "recall": {
+      "id": "trade-global-economy:sub:calculating-the-terms-of-trade:recall",
+      "type": "fillin",
+      "prompt": "A different economy. In the base year both price indices are 100. Three years later its export price index is 96 and its import price index is 120:",
+      "template": [
+       "Its terms of trade are now ___",
+       "Compared with the base year they have ___",
+       "And that happened because import prices rose while export prices ___"
+      ],
+      "answers": [
+       "80",
+       "deteriorated",
+       "fell"
+      ],
+      "hints": [
+       "the export index over the import index, times a hundred",
+       "the direction, given a result below the base",
+       "what an index of 96 against a base of 100 means"
+      ],
+      "distractors": [
+       "125",
+       "improved",
+       "rose"
+      ]
+     }
+    },
+    {
+     "id": "trade-global-economy:sub:relative-inflation-rates",
+     "title": "Relative Inflation Rates",
+     "keyIdea": "If a country's prices rise faster than its partners' prices, its export prices outrun its import prices and its terms of trade improve. The word doing the work is RELATIVE.",
+     "body": [
+      {
+       "type": "paragraph",
+       "text": "The first factor the specification lists is the country's inflation rate **against** everyone else's. Domestic inflation raises the price of what the country sells; foreign inflation raises the price of what it buys."
+      },
+      {
+       "type": "paragraph",
+       "text": "So higher inflation at home than abroad pushes the export price index up faster than the import price index, and the ratio rises. The terms of trade **improve** — which sounds wrong, because inflation is usually described as a problem, and it is precisely why this factor is worth teaching carefully."
+      },
+      {
+       "type": "paragraph",
+       "text": "The resolution is the point of the whole chapter: an improvement in the terms of trade is a statement about prices, not about welfare. Goods that cost more to buy sell in smaller quantities, and the next chapter does that arithmetic."
+      },
+      {
+       "type": "paragraph",
+       "text": "Inflation that is equal at home and abroad leaves the terms of trade **unchanged**, however high it is. Both indices rise together and the ratio between them does not move. Relative, again."
+      }
+     ],
+     "realExample": {
+      "emoji": "🎈",
+      "text": "An economy with inflation at a tenth a year, trading with partners at a twentieth, records improving terms of trade year after year while its exporters complain of losing orders."
+     },
+     "misconception": "Students say inflation \"makes a country less competitive, so the terms of trade worsen\". Competitiveness and the terms of trade move in **opposite** directions here: dearer exports are a better exchange rate for the goods and a worse position in the market.",
+     "examMatters": "Appendix 6 defines Explain as needing a two-stage chain for a reason or an impact. The stages are inflation reaching the export price index, and the ratio moving because the import index did not move as far.",
+     "recall": {
+      "id": "trade-global-economy:sub:relative-inflation-rates:recall",
+      "type": "fillin",
+      "prompt": "An economy's export price index rises from 100 to 105 in a year when its import price index rises from 100 to 105:",
+      "template": [
+       "Its terms of trade are now ___",
+       "So relative to the base year they have ___",
+       "Because what matters is inflation at home compared with inflation ___"
+      ],
+      "answers": [
+       "100",
+       "held",
+       "abroad"
+      ],
+      "hints": [
+       "divide the two indices and multiply by a hundred",
+       "what happens to a ratio when both parts move equally",
+       "the other half of the comparison the word relative points at"
+      ],
+      "distractors": [
+       "105",
+       "improved",
+       "last year"
+      ]
+     }
+    },
+    {
+     "id": "trade-global-economy:sub:relative-productivity-rates",
+     "title": "Relative Productivity Rates",
+     "keyIdea": "Productivity is output per unit of input. When it rises faster at home than abroad, export costs and prices fall with it, and the terms of trade deteriorate.",
+     "body": [
+      {
+       "type": "paragraph",
+       "text": "**Productivity** is how much output a worker, machine or hectare produces. Rising productivity lowers the cost of each unit produced, and competition passes some of that saving into the price."
+      },
+      {
+       "type": "paragraph",
+       "text": "So a country whose productivity grows faster than its partners' sees its export prices rise more slowly — or fall. Its export price index lags its import price index, and its terms of trade **deteriorate**."
+      },
+      {
+       "type": "paragraph",
+       "text": "This is the clearest case in the specification of a deterioration that is unambiguously good news. The country is producing more efficiently, selling more cheaply, and almost certainly selling more. The ratio has fallen and the economy is stronger."
+      },
+      {
+       "type": "paragraph",
+       "text": "It is also why the terms of trade cannot be read on their own. The same fall in the index means one thing when it comes from rising productivity and another when it comes from a collapse in the price of the one commodity a country sells. **What moved the ratio** decides what the movement means."
+      }
+     ],
+     "realExample": {
+      "emoji": "⚙️",
+      "text": "A manufacturer that halves the hours needed per unit can cut its export price and still earn more per hour worked. The country's terms of trade fall and its export earnings rise."
+     },
+     "misconception": "Students write that \"deterioration is bad\" without asking what caused it. A deterioration driven by productivity is a country choosing to compete on price from a position of strength; a deterioration driven by a falling export price it does not control is something else entirely.",
+     "examMatters": "Appendix 6 defines Analyse as a developed chain of reasoning. Productivity to unit costs to price to the index to the ratio is four links, and a chain that starts at \"productivity rose\" and ends at \"terms of trade fell\" has skipped three of them.",
+     "recall": {
+      "id": "trade-global-economy:sub:relative-productivity-rates:recall",
+      "type": "classify",
+      "prompt": "Four economies each record a deterioration in the terms of trade. Sort them by whether the deterioration is a sign of strength or of trouble:",
+      "groups": [
+       {
+        "name": "A sign of strength",
+        "items": [
+         "Output per worker rose a tenth and export prices were cut to match",
+         "New machinery cut unit costs and the saving was passed on"
+        ],
+        "why": "In both the fall in the export price index was chosen, paid for by lower costs, and is very likely to be sold in larger volumes."
+       },
+       {
+        "name": "A sign of trouble",
+        "items": [
+         "The world price of its single export commodity halved",
+         "The price of the fuel it must import doubled"
+        ],
+        "why": "In both the ratio moved because of a price the country does not set, and nothing about its efficiency improved with it."
+       }
+      ]
+     }
+    },
+    {
+     "id": "trade-global-economy:sub:relative-labour-costs",
+     "title": "Relative Labour Costs",
+     "keyIdea": "Labour costs enter export prices directly. Wages rising faster at home than abroad — beyond what productivity covers — push export prices up and the terms of trade with them.",
+     "body": [
+      {
+       "type": "paragraph",
+       "text": "Wages are the largest single cost in most production, so what happens to them shows up in prices. If wages in a country rise faster than in the countries it competes with, its firms face higher unit costs and its export prices rise relative to import prices. The terms of trade **improve**."
+      },
+      {
+       "type": "paragraph",
+       "text": "The qualification is productivity, and the specification lists the two factors next to each other for that reason. What matters for costs is the wage **per unit of output**, not the wage per hour. Wages rising a tenth alongside productivity rising a tenth leave unit costs where they were."
+      },
+      {
+       "type": "paragraph",
+       "text": "So the three price factors are one mechanism seen from three sides. Inflation moves the general price level, productivity moves what an hour produces, and labour costs move what an hour is paid. All three reach the terms of trade through the same door: the export price index."
+      },
+      {
+       "type": "paragraph",
+       "text": "And the improvement carries the same warning as before. Exports priced out of a market improve the ratio and shrink the orders — the direction of the index and the direction of the revenue can differ, which is the whole of the next chapter."
+      }
+     ],
+     "realExample": {
+      "emoji": "🧵",
+      "text": "A producer whose wage bill rises a tenth while output per worker is flat has to raise prices or accept a thinner margin; the country's export price index moves either way, and its order book moves the other way."
+     },
+     "misconception": "Students compare wage rates across countries and conclude that the high-wage country must have the worse position. A high wage with high productivity can mean **lower** cost per unit than a low wage with low productivity, and it is the cost per unit that reaches the price.",
+     "examMatters": "Appendix 6 defines Explain as knowledge, understanding and application with a two-stage chain. The application here is the division — the wage against what the hour produced — and an answer that compares hourly wages alone has not applied anything.",
+     "recall": {
+      "id": "trade-global-economy:sub:relative-labour-costs:recall",
+      "type": "fillin",
+      "prompt": "A firm pays 20 per hour and each hour produces 4 units. Wages then rise to 24 and output per hour rises to 6:",
+      "template": [
+       "Labour cost per unit was ___",
+       "Labour cost per unit is now ___",
+       "So the pressure on the export price is ___"
+      ],
+      "answers": [
+       "5",
+       "4",
+       "downward"
+      ],
+      "hints": [
+       "the wage divided by what the hour produced",
+       "the same division on the new pair of figures",
+       "the direction a lower unit cost pushes a price"
+      ],
+      "distractors": [
+       "80",
+       "6",
+       "upward"
+      ]
+     }
+    },
+    {
+     "id": "trade-global-economy:sub:the-exchange-rate",
+     "title": "The Exchange Rate",
+     "keyIdea": "The exchange rate changes both indices at once and in opposite directions. A fall of 20% makes exports cheaper abroad and imports dearer at home, so the terms of trade deteriorate.",
+     "body": [
+      {
+       "type": "paragraph",
+       "text": "This factor already appeared in the chapter on patterns of trade, where it redirected purchases. Here the same movement is read through the two price indices, and it is the only factor on the list that moves both of them by itself."
+      },
+      {
+       "type": "paragraph",
+       "text": "A currency that falls makes the country's exports cheaper measured in foreign currency — the export price index, measured that way, falls. It makes imports dearer measured in domestic currency, so the import price index rises. A smaller number over a larger one: the terms of trade **deteriorate**."
+      },
+      {
+       "type": "paragraph",
+       "text": "A currency that rises does the reverse, and improves them. So the direction is easy to get right if the question of **which currency the prices are measured in** is settled first; most errors in this leaf come from measuring the two sides in different currencies without noticing."
+      },
+      {
+       "type": "paragraph",
+       "text": "The movement need not come from trade at all. Interest rates, expectations and capital flows move exchange rates, so the terms of trade can shift because of decisions taken in financial markets by people with no interest in any of the goods concerned."
+      }
+     ],
+     "realExample": {
+      "emoji": "📉",
+      "text": "A currency that falls a fifth over a summer leaves every export cheaper abroad and every import dearer at home before a single firm has changed a price list."
+     },
+     "misconception": "Students say a falling currency \"makes a country better off because exports rise\". Whatever it does to volumes, it makes the terms of trade **worse**: the country is getting less per unit of exports and paying more per unit of imports. Those are two separate questions and the exam asks them separately.",
+     "examMatters": "Appendix 6 defines Examine as requiring analysis as well as application. Examining this factor means carrying both effects — the export index and the import index — rather than the one the question happened to mention.",
+     "recall": {
+      "id": "trade-global-economy:sub:the-exchange-rate:recall",
+      "type": "fillin",
+      "prompt": "A currency rises. Measured in foreign currency, an economy's export price index goes from 100 to 112; measured at home, its import price index goes from 100 to 90:",
+      "template": [
+       "Its terms of trade are now about ___",
+       "So they have ___",
+       "Which is what a ___ currency does to the ratio"
+      ],
+      "answers": [
+       "124.4",
+       "improved",
+       "rising"
+      ],
+      "hints": [
+       "the export index over the import index, times a hundred, to one decimal",
+       "the direction, given a result above the base",
+       "the direction of the currency that produced it"
+      ],
+      "distractors": [
+       "80.4",
+       "deteriorated",
+       "falling"
+      ]
+     }
+    },
+    {
+     "id": "trade-global-economy:sub:the-prices-of-imports-and-exports",
+     "title": "The Prices of Imports and Exports",
+     "keyIdea": "The last factor is the two prices themselves, moved by world demand and supply for the goods a country happens to trade. This is where a commodity exporter is exposed.",
+     "body": [
+      {
+       "type": "paragraph",
+       "text": "The first four factors reach the terms of trade through a country's own costs and its currency. This one is more direct: the world price of what it sells and what it buys can move on its own, because of demand and supply in those markets."
+      },
+      {
+       "type": "paragraph",
+       "text": "What a country trades therefore decides how exposed it is. An economy exporting one primary commodity and importing manufactured goods has an export price set in a volatile world market and an import price set by firms with some control over theirs. Its terms of trade can swing violently on decisions taken nowhere near it."
+      },
+      {
+       "type": "paragraph",
+       "text": "A diversified exporter is steadier for the same reason in reverse: a fall in one export price is diluted by the others, so the index moves less. **Diversification** is the standard policy response, and it is the link back to the costs of specialisation in the first chapter."
+      },
+      {
+       "type": "paragraph",
+       "text": "This is also the factor that makes the terms of trade worth watching for a developing economy. A long decline in the price of what a country sells, against what it buys, means each year's exports buy fewer imports — and no amount of effort inside the country changes it."
+      }
+     ],
+     "realExample": {
+      "emoji": "🛢️",
+      "text": "An economy that sells one mineral and buys machinery watches its terms of trade rise and fall with a price set by buyers on another continent, while the price of what it needs moves steadily upward."
+     },
+     "misconception": "Students treat the terms of trade as something a government controls. Four of the five factors are at least influenced by domestic policy; this one usually is not, and for a concentrated exporter it is the one that dominates.",
+     "examMatters": "Appendix 6 defines Evaluate as requiring a supported judgement, and the 20-mark items on this topic often turn on exposure. The strongest judgements say **which** factor dominates for the economy in the extract, and why the others matter less.",
+     "recall": {
+      "id": "trade-global-economy:sub:the-prices-of-imports-and-exports:recall",
+      "type": "match",
+      "prompt": "Match each economy to the effect on its terms of trade when the world price of one primary commodity falls by half:",
+      "pairs": [
+       {
+        "left": "Exports are almost entirely that commodity",
+        "right": "A large deterioration",
+        "why": "The export price index is essentially that one price, so it falls with it and the ratio falls with the index."
+       },
+       {
+        "left": "Exports are spread across many manufactured goods",
+        "right": "Almost no change",
+        "why": "One price among many moves the export index very little, which is what diversification buys."
+       },
+       {
+        "left": "Imports that commodity and exports manufactures",
+        "right": "A clear improvement",
+        "why": "The fall lands in the import price index instead, so the ratio rises: the same price movement, the other way up."
+       },
+       {
+        "left": "Both exports and imports are half that commodity",
+        "right": "Broadly offsetting",
+        "why": "Both indices fall together, so the ratio between them barely moves however large the price change is."
+       }
+      ]
+     }
+    }
+   ],
+   "takeaway": [
+    "The terms of trade are a ratio of PRICES — not of values, not of volumes.",
+    "Export price index over import price index, times 100: 120 over 110 is 109.1.",
+    "Both indices can rise and the ratio still improve; what counts is which rose faster.",
+    "Inflation and labour costs push it up; productivity pushes it down; equal movements leave it alone.",
+    "The exchange rate moves both indices at once; world prices move the ones nobody at home controls."
+   ],
+   "diagramId": "trade-global-economy:diagram:8e6c9d9c",
+   "quizIndices": [
+    12,
+    13,
+    14,
+    15,
+    16
+   ],
+   "practiceIndices": [
+    1,
+    2
+   ]
+  },
+  {
+   "id": "trade-global-economy:block:194f40a0",
+   "title": "When the Terms of Trade Change",
+   "sections": [
+    {
+     "id": "trade-global-economy:sub:export-revenues",
+     "title": "The Effect on Export Revenues",
+     "keyIdea": "Revenue is price times quantity, and an improvement raises one and lowers the other. Sarova's prices rose 20%, its volume fell 30%, and its export revenue index ended at 84.",
+     "body": [
+      {
+       "type": "paragraph",
+       "text": "An improvement in the terms of trade means export prices have risen relative to import prices. Higher prices mean fewer sales, and whether revenue rises or falls depends on **how many** fewer."
+      },
+      {
+       "type": "paragraph",
+       "text": "That is price elasticity of demand: the responsiveness of quantity to price. If demand for a country's exports is **elastic**, the fall in quantity outweighs the rise in price and revenue falls. If it is **inelastic**, the price rise dominates and revenue rises."
+      },
+      {
+       "type": "paragraph",
+       "text": "Put Sarova's figures through it. Export prices rose 20%, and with an elasticity of 1.50 the volume falls 30% — so the volume index is 70. Revenue is price times quantity: 1.20 × 0.70 = 0.84, an index of **84**."
+      },
+      {
+       "type": "paragraph",
+       "text": "So the terms of trade improved to 109.1 and export revenue fell by 16%. Both statements are true at once, and an answer that treats the first as evidence for the second has confused a price ratio with an earnings figure."
+      }
+     ],
+     "realExample": {
+      "emoji": "💸",
+      "text": "An exporter facing buyers who can switch supplier easily finds that a price rise of a fifth costs it nearly a third of its orders, and it ends the year with less money than it started."
+     },
+     "misconception": "Students write that improving terms of trade \"raise export revenue because each unit earns more\". Each unit does earn more. There are fewer units, and with elastic demand there are enough fewer to leave total revenue lower.",
+     "examMatters": "Appendix 6 defines Calculate as a several-stage task from given data, and this is the calculation the topic is built on: the price index, the volume index, and the product of the two.",
+     "recall": {
+      "id": "trade-global-economy:sub:export-revenues:recall",
+      "type": "fillin",
+      "prompt": "A different exporter raises its prices a tenth. Demand for its exports has a price elasticity of 0.5, so volume falls 5%:",
+      "template": [
+       "Its export price index is ___",
+       "Its export volume index is ___",
+       "So its export revenue index is about ___ and revenue has ___"
+      ],
+      "answers": [
+       "110",
+       "95",
+       "104.5",
+       "risen"
+      ],
+      "hints": [
+       "a tenth above the base of a hundred",
+       "five per cent below the base",
+       "the two indices multiplied, over a hundred",
+       "compare the result with the base"
+      ],
+      "distractors": [
+       "90",
+       "105",
+       "115"
+      ]
+     }
+    },
+    {
+     "id": "trade-global-economy:sub:living-standards",
+     "title": "The Effect on Living Standards",
+     "keyIdea": "On this leaf an improvement genuinely helps: each unit of exports buys more imports. Sarova's 120 over 110 means one unit of exports now buys 1.09 units of imports.",
+     "body": [
+      {
+       "type": "paragraph",
+       "text": "Living standards depend on what a country can consume, and part of what it consumes is imported. The terms of trade set how much of that a given quantity of exports pays for."
+      },
+      {
+       "type": "paragraph",
+       "text": "In the base year one unit of exports bought exactly one unit of imports, because both indices were 100. At 120 and 110, one unit of exports buys 1.09 units. **For any given volume of exports**, the country can import more, and real incomes rise with it."
+      },
+      {
+       "type": "paragraph",
+       "text": "The condition in bold is doing all the work, and it is the same condition the last subsection broke. If the volume of exports falls far enough, a country with a better rate of exchange on each unit still ends up importing less in total."
+      },
+      {
+       "type": "paragraph",
+       "text": "So the honest statement is conditional: an improvement raises the **purchasing power of exports**, and whether it raises living standards depends on what happens to the volume — which depends on elasticity. Two leaves of the same sub-topic, pulling in opposite directions, is what makes this an evaluation topic."
+      }
+     ],
+     "realExample": {
+      "emoji": "🛒",
+      "text": "A household paid in a currency that buys more abroad than it did last year is better off on every imported item it buys — as long as its hours were not cut to get there."
+     },
+     "misconception": "Students say an improvement \"raises living standards\" without the condition, and the condition is where the marks are. The gain is per unit of exports; the total depends on how many units there still are.",
+     "examMatters": "Appendix 6 defines Evaluate as requiring a supported judgement. A judgement on living standards that carries both the purchasing-power gain and the volume risk is doing what the command word asks; one that carries either alone is not.",
+     "recall": {
+      "id": "trade-global-economy:sub:living-standards:recall",
+      "type": "fillin",
+      "prompt": "An economy's export price index is 150 and its import price index is 120. It exports 40 units, down from 60:",
+      "template": [
+       "Each unit of exports now buys ___ units of imports",
+       "Total imports it can afford are now ___ units",
+       "Against ___ units before, so total purchasing power has ___"
+      ],
+      "answers": [
+       "1.25",
+       "50",
+       "60",
+       "fallen"
+      ],
+      "hints": [
+       "the export index over the import index",
+       "that rate times the units it still exports",
+       "the old units at the old rate of one for one",
+       "compare the two totals"
+      ],
+      "distractors": [
+       "0.8",
+       "48",
+       "risen"
+      ]
+     }
+    },
+    {
+     "id": "trade-global-economy:sub:the-balance-of-trade",
+     "title": "The Effect on the Balance of Trade",
+     "keyIdea": "The balance of trade is export earnings minus import spending. Sarova's improvement left $42.0bn of exports against $55.0bn of imports — a deficit of $13.0bn out of a better ratio.",
+     "body": [
+      {
+       "type": "paragraph",
+       "text": "The **balance of trade** is the value of exports minus the value of imports. Both are values, so both depend on prices and quantities, and the terms of trade only tell you about the prices."
+      },
+      {
+       "type": "paragraph",
+       "text": "Follow Sarova through. Trade was balanced at $50.0bn each way in the base year. Export revenue fell to an index of 84, so exports are now $42.0bn. Import prices rose to 110, so the same quantity of imports now costs $55.0bn."
+      },
+      {
+       "type": "paragraph",
+       "text": "The balance is $42.0bn − $55.0bn = a deficit of **$13.0bn**. The terms of trade improved to 109.1 and the balance of trade went from zero to a deficit of $13.0bn — the two figures point in opposite directions, from the same price movement."
+      },
+      {
+       "type": "paragraph",
+       "text": "The result is not a paradox and it is not a special case. With elastic export demand it is what you should expect, and it is why a question that gives you a change in the terms of trade and asks about the trade balance is a question about elasticity in disguise."
+      }
+     ],
+     "realExample": {
+      "emoji": "⚓",
+      "text": "A port records a year of higher prices on everything leaving and everything arriving, fewer outbound cargoes, the same inbound ones, and a trade gap where there was none."
+     },
+     "misconception": "Students treat an improvement in the terms of trade as an improvement in the trade balance, because both use the word improvement about the same country in the same year. One is a ratio of prices, the other a difference of values, and nothing forces them to agree.",
+     "examMatters": "Appendix 6 defines Analyse as a developed chain of reasoning. The chain here is long and every link is arithmetic: price index, elasticity, volume index, revenue, import bill, balance. Dropping a link is how this question is usually lost.",
+     "recall": {
+      "id": "trade-global-economy:sub:the-balance-of-trade:recall",
+      "type": "reorder",
+      "prompt": "Put the steps in the order that takes an economy from a rise in its export prices to a deficit on its balance of trade:",
+      "correctOrder": [
+       "Export prices rise relative to import prices",
+       "Foreign buyers cut the quantity they order",
+       "The fall in quantity outweighs the rise in price",
+       "Earnings from exports drop below the import bill"
+      ],
+      "why": [
+       "The price movement is the starting point, and until it happens nothing else in the chain is triggered.",
+       "Higher prices are met with smaller orders; how much smaller is what elasticity measures.",
+       "This is the elastic case, and it is the step that decides whether the chain ends in a deficit or a surplus.",
+       "Earnings below spending is what a deficit on the balance of trade is."
+      ]
+     }
+    },
+    {
+     "id": "trade-global-economy:sub:judging-a-change-in-the-terms-of-trade",
+     "title": "Judging a Change",
+     "keyIdea": "An improvement is not good news and a deterioration is not bad news. What decides is WHY the ratio moved and HOW RESPONSIVE demand is — and the exam rewards saying so.",
+     "body": [
+      {
+       "type": "paragraph",
+       "text": "Three leaves, three answers. An improvement raises the purchasing power of each unit of exports, can lower export revenue, and can push the balance of trade into deficit. All three at once, from one price movement."
+      },
+      {
+       "type": "paragraph",
+       "text": "So a judgement needs two questions answered. **What moved it?** Rising productivity that cut export prices is a deterioration worth having; a collapse in the world price of a country's only export is the same number meaning something else entirely."
+      },
+      {
+       "type": "paragraph",
+       "text": "**How elastic is demand?** With inelastic exports, an improvement raises revenue and the purchasing power together and there is no tension at all. With elastic exports the tension is the answer, and Sarova's 1.50 is what turned an improvement into a $13.0bn deficit."
+      },
+      {
+       "type": "paragraph",
+       "text": "Add the time dimension for the strongest answers. Buyers take time to find alternative suppliers, so demand is less elastic in the short run than the long run — a price rise that looks profitable this year can cost the market next year."
+      }
+     ],
+     "realExample": {
+      "emoji": "⏳",
+      "text": "An exporter raises prices, keeps its customers for a season because they have nowhere else to go, and loses a third of them the following year once a new supplier is qualified."
+     },
+     "misconception": "Students learn \"improvement good, deterioration bad\" as a rule and apply it to the extract in front of them. Every question on this sub-topic is built to punish that rule, which is why it is worth replacing with the two questions above.",
+     "examMatters": "Appendix 6 defines Evaluate as a supported judgement, and the 20-mark items are where this chapter earns. A judgement with a condition attached — for this economy, with these buyers, over this period — outscores a confident verdict with nothing behind it.",
+     "recall": {
+      "id": "trade-global-economy:sub:judging-a-change-in-the-terms-of-trade:recall",
+      "type": "classify",
+      "prompt": "Four economies each report a movement in the ratio. Sort them by whether the economy is likely to be better or worse off:",
+      "groups": [
+       {
+        "name": "Likely better off",
+        "items": [
+         "Its buyers have nowhere else to go, and it raised prices a tenth",
+         "New machinery cut its unit costs a fifth before it cut its price"
+        ],
+        "why": "Buyers with nowhere to go means inelastic demand, so the higher price is kept and earnings rise with it; and a price cut paid for by lower costs will be sold in larger volumes."
+       },
+       {
+        "name": "Likely worse off",
+        "items": [
+         "Its wage bill outran output for five years and its order book emptied",
+         "Nine-tenths of what it sells is one crop, and that crop halved"
+        ],
+        "why": "Wages outrunning output raise the ratio by pricing the goods out of the market; and a concentrated exporter has no second product to dilute a price it does not set."
+       }
+      ]
+     }
+    }
+   ],
+   "takeaway": [
+    "Revenue is price times quantity: Sarova's improvement left an export revenue index of 84.",
+    "Purchasing power per unit rose to 1.09 units of imports for one of exports.",
+    "And the balance went from zero to a $13.0bn deficit, out of the same improvement.",
+    "Elasticity decides which of those three dominates.",
+    "So the judgement is always WHY it moved and HOW RESPONSIVE demand is — never the direction alone."
+   ],
+   "diagramId": "trade-global-economy:diagram:902256a4",
+   "quizIndices": [
+    17,
+    18,
+    19,
+    20
+   ],
+   "practiceIndices": [
+    4
+   ]
+  },
+  {
+   "id": "trade-global-economy:block:5c36a2d2",
+   "title": "Protectionism and the WTO",
+   "sections": [
+    {
+     "id": "trade-global-economy:sub:methods-of-protectionism",
+     "body": [
+      {
+       "text": "**Protectionism** means government intervention to restrict imports and shield domestic producers from foreign competition. The main tools are: **tariffs** (taxes on imports that raise the price to consumers), **quotas** (physical limits on the quantity of imports), **subsidies** to domestic producers (lowering their costs to compete with imports), and **non-tariff barriers (NTBs)** such as excessive regulation, bureaucratic customs procedures, or discriminatory standards.",
+       "type": "paragraph"
+      },
+      {
+       "text": "The **arguments for** protectionism include: protecting **infant industries** that need time to achieve economies of scale, safeguarding **national security** in strategic sectors like defence and food, preventing **dumping** (selling below cost to destroy competitors), and protecting **jobs** in politically sensitive regions. Each argument has some theoretical validity but is routinely abused to protect inefficient firms with political connections.",
+       "type": "paragraph"
+      },
+      {
+       "text": "The **arguments against** are powerful: protectionism raises prices for consumers, creates **welfare loss**, reduces competitive pressure (so firms become less efficient over time), and invites **retaliation** from trading partners. History shows that trade wars escalate — the Smoot-Hawley tariffs of 1930 deepened the Great Depression by collapsing world trade.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Government imposes tariff on imports",
+        "Import price rises above world price",
+        "Domestic producers gain, consumers lose",
+        "Welfare loss created"
+       ],
+       "result": "Net welfare loss — producer gains are smaller than consumer losses plus government revenue",
+       "resultType": "bad"
+      }
+     ],
+     "title": "Methods of Protectionism",
+     "keyIdea": "Tariffs, quotas, subsidies, and non-tariff barriers all restrict imports — each raises domestic prices and creates welfare loss, though governments argue they protect jobs, infant industries, and national security.",
+     "examMatters": "Examiners love tariff diagrams. You must be able to draw one showing: world price, tariff-inclusive price, domestic production expanding, imports contracting, consumer surplus lost, producer surplus gained, government revenue, and welfare loss triangles. Practise until this is automatic.",
+     "realExample": {
+      "text": "The US-China tariff war of 2018-2020 saw the US impose tariffs on over $360 billion of Chinese goods. China retaliated with tariffs on US agriculture. Studies showed American consumers bore most of the cost through higher prices, while US farmers lost export markets — illustrating the costs of protectionism and retaliation.",
+      "emoji": "🇺🇸"
+     },
+     "misconception": "Students say tariffs protect domestic jobs. Partially true in the short run, but wrong in the long run — tariffs raise input costs for other industries, invite retaliation, and reduce competitiveness. Instead write: tariffs may save jobs in the protected sector but destroy jobs elsewhere through higher costs and retaliatory tariffs from trading partners."
+    },
+    {
+     "id": "trade-global-economy:sub:the-wto",
+     "body": [
+      {
+       "text": "The **World Trade Organisation (WTO)**, established in 1995, provides the rules-based framework for international trade. Its core principles are: **most-favoured-nation (MFN)** — any tariff concession given to one member must be extended to all; **national treatment** — imported goods must be treated no less favourably than domestic ones once inside the border; and **reciprocity** — trade concessions should be mutual.",
+       "type": "paragraph"
+      },
+      {
+       "text": "The WTO's **dispute settlement mechanism** is often called the 'jewel in the crown' of the trading system. It provides a binding legal process for resolving trade disputes, preventing countries from unilaterally imposing protectionist measures without consequence. Over 600 disputes have been brought since 1995.",
+       "type": "paragraph"
+      },
+      {
+       "text": "However, the WTO faces serious challenges. The **Doha Development Round**, launched in 2001 to address developing countries' concerns, has effectively stalled due to disagreements between rich and poor nations over agriculture subsidies and market access. The rise of **bilateral and regional trade deals** — such as the CPTPP and RCEP — threatens to fragment the multilateral system. Critics argue the WTO is too slow and too consensus-dependent to handle modern trade challenges like digital trade and climate-related border measures.",
+       "type": "paragraph"
+      }
+     ],
+     "title": "The World Trade Organisation (WTO)",
+     "keyIdea": "The WTO promotes free trade through the most-favoured-nation principle and dispute resolution, but the Doha Round's failure has shifted momentum toward bilateral and regional deals.",
+     "examMatters": "A common question asks you to evaluate the effectiveness of the WTO. Structure: successes (MFN principle, dispute resolution, reduced average tariffs) vs failures (Doha stalled, slow decision-making, rise of bilateralism). Conclude with a judgement: the WTO remains essential but needs reform to stay relevant.",
+     "realExample": {
+      "text": "The 16-year WTO dispute between the EU and US over subsidies to Airbus and Boeing is a landmark case. Both sides were found to have provided illegal subsidies, and retaliatory tariffs were authorised. It demonstrated the WTO's power to adjudicate but also its limitations — the dispute took so long that billions in distortionary subsidies were paid before any resolution.",
+      "emoji": "✈️"
+     },
+     "misconception": "Students assume the WTO enforces free trade. Wrong — the WTO is a negotiating forum and dispute-resolution body; it cannot force countries to liberalise. Instead write: the WTO provides rules and a mechanism for settling disputes, but its power depends on members' willingness to comply. It facilitates trade liberalisation rather than imposing it."
+    }
+   ],
+   "takeaway": [
+    "Protectionism (tariffs, quotas, subsidies, NTBs) raises prices and creates welfare loss — arguments for it are often abused.",
+    "The WTO promotes trade through MFN, national treatment, and dispute resolution — but the Doha Round has stalled.",
+    "Bilateral and regional deals are increasingly replacing multilateral WTO negotiations."
+   ],
+   "diagramId": "trade-global-economy:diagram:2ed3a5c6",
+   "quizIndices": [
+    21,
+    22,
+    23,
+    24,
+    25
+   ],
+   "practiceIndices": [
+    6,
+    7
+   ]
+  }
+ ],
+ "notes": [
+  {
+   "title": "Specialisation and Comparative Advantage",
+   "meta": "4 leaves",
+   "keyIdea": "Why countries specialise, how comparative advantage is worked out, and what the theory assumes to get its answer.",
+   "blocks": [
+    {
+     "title": "DEFINITIONS",
+     "items": [
+      {
+       "type": "definition",
+       "text": "<strong>Specialisation</strong> — concentrating resources on a narrower range of goods than are consumed, and trading for the rest."
+      },
+      {
+       "type": "definition",
+       "text": "<strong>Absolute advantage</strong> — producing more of a good from the same resources than another country can."
+      },
+      {
+       "type": "definition",
+       "text": "<strong>Comparative advantage</strong> — producing a good at a lower opportunity cost than another country."
+      },
+      {
+       "type": "definition",
+       "text": "<strong>Opportunity cost</strong> — the next best alternative given up, here measured in units of the other good."
+      }
+     ]
+    },
+    {
+     "title": "MECHANISMS",
+     "items": [
+      {
+       "type": "mechanism",
+       "text": "Merida can make 120 grain or 60 cloth, so cloth costs it 2 grain; Kalto can make 40 or 40, so cloth costs it 1."
+      },
+      {
+       "type": "mechanism",
+       "text": "Partial specialisation takes world output from 80 grain and 50 cloth to 100 and 50 — 20 more grain, cloth unchanged."
+      },
+      {
+       "type": "mechanism",
+       "text": "Any swap rate strictly between 1 and 2 grain per cloth leaves both better off; at 1.50 each gains 10 grain."
+      },
+      {
+       "type": "link",
+       "text": "The assumptions — constant costs, mobile factors, no transport costs, two countries and two goods — are what the limitations relax one at a time."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Patterns and Volume of World Trade",
+   "meta": "6 leaves",
+   "keyIdea": "The five factors the specification names as influencing patterns of trade, and the difference between a share and a value.",
+   "blocks": [
+    {
+     "title": "DEFINITIONS",
+     "items": [
+      {
+       "type": "definition",
+       "text": "<strong>Pattern of trade</strong> — the composition of trade: which goods, with which partners, in what proportions."
+      },
+      {
+       "type": "definition",
+       "text": "<strong>Emerging economy</strong> — an economy growing quickly from a low base and taking a rising share of world output and trade."
+      },
+      {
+       "type": "definition",
+       "text": "<strong>Trading bloc</strong> — a group of countries trading with each other on easier terms than they offer outsiders."
+      },
+      {
+       "type": "definition",
+       "text": "<strong>Bilateral trading agreement</strong> — the same arrangement between two countries."
+      }
+     ]
+    },
+    {
+     "title": "MECHANISMS",
+     "items": [
+      {
+       "type": "mechanism",
+       "text": "Emerging economies' share of world exports went 24% → 44%, so the advanced share went 76% → 56%."
+      },
+      {
+       "type": "mechanism",
+       "text": "Comparative advantage is a ratio and ratios move: double Kalto's grain capacity to 80 and its cost of cloth becomes 2 grain, the same as Merida's."
+      },
+      {
+       "type": "mechanism",
+       "text": "A currency fall of 20% takes an export from 200 to 160 abroad and an import from 100 to 125 at home."
+      },
+      {
+       "type": "mechanism",
+       "text": "Share against value: ore 70% → 40% of exports, and $56.0bn → $40.0bn on exports that grew $80.0bn → $100.0bn."
+      },
+      {
+       "type": "link",
+       "text": "What a trading bloc IS, and whether the trade it redirects is a gain, belongs to trade liberalisation and trading blocs."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "The Terms of Trade, and What Moves Them",
+   "meta": "6 leaves",
+   "keyIdea": "What the terms of trade are, the one division that calculates them, and the five factors that move them.",
+   "blocks": [
+    {
+     "title": "DEFINITIONS",
+     "items": [
+      {
+       "type": "definition",
+       "text": "<strong>Terms of trade</strong> — the rate at which exports exchange for imports: the export price index divided by the import price index, times 100."
+      },
+      {
+       "type": "definition",
+       "text": "<strong>Improvement</strong> — the ratio rises: each unit of exports commands more imports. A direction, not a verdict."
+      },
+      {
+       "type": "definition",
+       "text": "<strong>Deterioration</strong> — the ratio falls. Also a direction, and it can be a sign of strength."
+      },
+      {
+       "type": "definition",
+       "text": "<strong>Index number</strong> — a price level expressed against a base year set to 100."
+      }
+     ]
+    },
+    {
+     "title": "MECHANISMS",
+     "items": [
+      {
+       "type": "mechanism",
+       "text": "Sarova: 120 ÷ 110 × 100 = 109.1, against 100.0 in the base year. Both prices rose; exports rose faster."
+      },
+      {
+       "type": "mechanism",
+       "text": "Relative inflation and relative labour costs push the ratio UP; relative productivity pushes it DOWN; equal movements on both sides leave it unchanged."
+      },
+      {
+       "type": "mechanism",
+       "text": "A falling currency lowers the export index and raises the import index at once, so it deteriorates the ratio from both sides."
+      },
+      {
+       "type": "link",
+       "text": "World prices for the particular goods a country trades are the factor a concentrated exporter cannot influence, which is why diversification is the standard answer."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "When the Terms of Trade Change",
+   "meta": "3 leaves",
+   "keyIdea": "What a movement in the terms of trade does to export revenues, living standards and the balance of trade — and why the three can disagree.",
+   "blocks": [
+    {
+     "title": "DEFINITIONS",
+     "items": [
+      {
+       "type": "definition",
+       "text": "<strong>Balance of trade</strong> — the value of exports minus the value of imports."
+      },
+      {
+       "type": "definition",
+       "text": "<strong>Price elasticity of demand</strong> — the responsiveness of quantity demanded to a change in price."
+      },
+      {
+       "type": "definition",
+       "text": "<strong>Purchasing power of exports</strong> — how many units of imports one unit of exports buys."
+      }
+     ]
+    },
+    {
+     "title": "MECHANISMS",
+     "items": [
+      {
+       "type": "mechanism",
+       "text": "Sarova's prices rose 20% and, at an elasticity of 1.50, volume fell 30%: a revenue index of 84."
+      },
+      {
+       "type": "mechanism",
+       "text": "Purchasing power per unit rose to 1.09 units of imports — a genuine gain, for any given volume of exports."
+      },
+      {
+       "type": "mechanism",
+       "text": "Exports $42.0bn against imports $55.0bn is a $13.0bn deficit, out of an improvement to 109.1."
+      },
+      {
+       "type": "link",
+       "text": "Elasticity decides which of the three dominates, and demand is less elastic in the short run than in the long run."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "flow": {
+    "steps": [
+     "Government imposes tariff/quota",
+     "Domestic producers gain, imports fall",
+     "Consumers pay higher prices, retaliation risk"
+    ],
+    "result": "Short-run gain for protected industry, long-run efficiency loss for the economy",
+    "resultType": "bad"
+   },
+   "meta": "6 concepts",
+   "title": "Protectionism",
+   "blocks": [
+    {
+     "items": [
+      {
+       "tag": "exam",
+       "text": "<strong>Tariff</strong> — a tax on imported goods that raises their price, making domestic goods more competitive.",
+       "type": "def"
+      },
+      {
+       "text": "<strong>Quota</strong> — a quantitative limit on the volume of imports allowed into a country.",
+       "type": "def"
+      },
+      {
+       "text": "<strong>Subsidy to domestic producers</strong> — government payment that lowers domestic costs, enabling firms to compete with cheaper imports without raising consumer prices.",
+       "type": "def"
+      },
+      {
+       "text": "<strong>Non-tariff barriers</strong> — regulations, standards, bureaucratic procedures, and licensing requirements that make it harder for foreign firms to sell in the domestic market.",
+       "type": "def"
+      }
+     ],
+     "title": "METHODS OF PROTECTION"
+    },
+    {
+     "items": [
+      {
+       "text": "<strong>Infant industry</strong> — new industries need temporary protection to achieve economies of scale before competing with established foreign rivals.",
+       "type": "mech"
+      },
+      {
+       "text": "<strong>Strategic trade policy</strong> — protect industries vital for national security or future growth (e.g. semiconductors, defence).",
+       "type": "mech"
+      },
+      {
+       "tag": "exam",
+       "text": "<strong>Anti-dumping</strong> — tariffs counter foreign firms selling below cost to destroy domestic competition.",
+       "type": "mech"
+      },
+      {
+       "text": "Evaluation: infant industry protection only works if it is <strong>temporary</strong> and the industry eventually becomes competitive — in practice, protection is hard to remove once granted.",
+       "type": "imp"
+      }
+     ],
+     "title": "ARGUMENTS FOR PROTECTIONISM"
+    },
+    {
+     "items": [
+      {
+       "text": "Tariffs raise consumer prices and reduce welfare — the welfare loss from a tariff is similar to that from a tax in Unit 1.",
+       "type": "mech"
+      },
+      {
+       "text": "Protection invites <strong>retaliation</strong> — trading partners impose their own barriers, reducing global trade and harming everyone.",
+       "type": "mech"
+      },
+      {
+       "text": "Protectionism links to government failure (Unit 3): once protection is granted, industries lobby to keep it, creating rent-seeking behaviour and misallocation of resources.",
+       "type": "link"
+      }
+     ],
+     "title": "ARGUMENTS AGAINST"
+    }
+   ],
+   "keyIdea": "Protectionism restricts imports to support domestic industries — but the gains for protected producers come at the cost of higher prices for consumers, reduced choice, and potential retaliation from trading partners.",
+   "takeaway": [
+    "Main tools: tariffs, quotas, subsidies, non-tariff barriers.",
+    "Case for: infant industry (temporary), national security, anti-dumping.",
+    "Case against: higher prices, welfare loss, retaliation, rent-seeking."
+   ],
+   "examMatters": "You should draw a tariff diagram: world price, tariff-inclusive price, domestic supply and demand, areas of consumer surplus loss, government revenue, and welfare loss. Then evaluate using infant industry, strategic trade, and anti-dumping arguments.",
+   "misconception": "Students say tariffs help the economy. Wrong because while they help specific producers, they harm consumers through higher prices and reduce overall welfare. Instead write: tariffs redistribute from consumers to domestic producers and the government, but create a welfare loss — they are only justified in specific circumstances (infant industry, national security)."
+  },
+  {
+   "flow": {
+    "steps": [
+     "WTO negotiates multilateral tariff reductions",
+     "Disputes settled through binding arbitration",
+     "Doha Round stalls on agriculture and development"
+    ],
+    "result": "Significant tariff reductions historically, but multilateral progress has slowed",
+    "resultType": "neutral"
+   },
+   "meta": "4 concepts",
+   "title": "The WTO and Trade Liberalisation",
+   "blocks": [
+    {
+     "items": [
+      {
+       "tag": "exam",
+       "text": "<strong>World Trade Organization (WTO)</strong> — an international body that sets the rules for global trade, negotiates tariff reductions, and resolves trade disputes between member nations.",
+       "type": "def"
+      },
+      {
+       "text": "The WTO's key principles: <strong>most-favoured nation</strong> (treat all members equally), <strong>national treatment</strong> (treat imports the same as domestic goods), and <strong>reciprocity</strong> (mutual concessions).",
+       "type": "mech"
+      },
+      {
+       "text": "WTO trade rounds have progressively lowered tariffs — the average tariff on manufactured goods has fallen from around 40% after WWII to under 5% today.",
+       "type": "mech"
+      }
+     ],
+     "title": "KEY CONCEPTS"
+    },
+    {
+     "items": [
+      {
+       "text": "The <strong>Doha Round</strong> (launched 2001) aimed to help developing nations but stalled due to disagreements over agricultural subsidies and market access.",
+       "type": "mech"
+      },
+      {
+       "tag": "exam",
+       "text": "The rise of bilateral and regional trade agreements outside the WTO reflects frustration with the multilateral process, but risks fragmenting global trade rules.",
+       "type": "imp"
+      },
+      {
+       "text": "WTO rules link to trade blocs (4.3.1): regional agreements must comply with WTO Article XXIV, which requires them to cover 'substantially all trade' and not raise barriers against non-members.",
+       "type": "link"
+      }
+     ],
+     "title": "CHALLENGES"
+    }
+   ],
+   "keyIdea": "The WTO provides the institutional framework for negotiating trade liberalisation and settling disputes — but the Doha Round's stalling shows the difficulty of reaching agreement when developing and developed nations have divergent interests.",
+   "takeaway": [
+    "WTO: rules-based system for multilateral trade liberalisation and dispute resolution.",
+    "Key principles: most-favoured nation, national treatment, reciprocity.",
+    "Doha Round stalled, but the WTO remains the institutional backbone of global trade."
+   ],
+   "examMatters": "You should explain the WTO's role and evaluate its effectiveness. Strengths: rules-based system, dispute settlement. Weaknesses: slow progress, difficulty of consensus, limited enforcement power over large economies.",
+   "misconception": "Students say the WTO is irrelevant because of bilateral deals. Wrong because the WTO still provides the baseline rules for global trade and a dispute resolution mechanism. Instead write: while bilateral and regional agreements have proliferated, the WTO remains the foundation of the global trading system and its most-favoured-nation principle prevents complete fragmentation."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "trade-global-economy:quiz:95a09a69",
+   "question": "A country can produce more of every good than its trading partner, using the same resources. What follows?",
+   "options": [
+    "It has an absolute advantage in every good, so trade gains it nothing",
+    "It has a comparative advantage in every good, so it should make everything",
+    "It gains from trade wherever the two countries' opportunity costs differ",
+    "It gains from trade only where the partner subsidises its own exports"
+   ],
+   "correctIndex": 2,
+   "explanation": "Absolute advantage in everything rules nothing out. What decides is whether the two countries give up different amounts of one good to make the other. If the opportunity-cost ratios differ, each has a comparative advantage in one good and both gain. Comparative advantage in every good is impossible: the ratios are reciprocals."
+  },
+  {
+   "id": "trade-global-economy:quiz:d5d5b8a4",
+   "question": "Which pair of price indices shows a country whose terms of trade have DETERIORATED?",
+   "options": [
+    "Export prices 130, import prices 125",
+    "Export prices 104, import prices 104",
+    "Export prices 98, import prices 92",
+    "Export prices 95, import prices 118"
+   ],
+   "correctIndex": 3,
+   "explanation": "A deterioration means the ratio has fallen below the base of 100, which needs import prices ahead of export prices: 95 ÷ 118 × 100 = 80.5. The first and third both have exports ahead, and the second leaves the ratio at exactly 100 however high both prices go."
+  },
+  {
+   "id": "trade-global-economy:quiz:d5ecdaa2",
+   "question": "Which of these is a change in the PATTERN of trade rather than in its volume?",
+   "options": [
+    "Exports and imports both grow by a fifth over the same period",
+    "Machinery replaces minerals as the largest export",
+    "Total world trade reaches the highest level ever recorded",
+    "A country trades considerably more than it did last year"
+   ],
+   "correctIndex": 1,
+   "explanation": "Pattern is composition — which goods, and which partners. The other three are statements about how much, and a country can double its trade while exporting exactly the same mix to exactly the same places."
+  },
+  {
+   "id": "trade-global-economy:quiz:d837a7f4",
+   "question": "Merida can make 120 grain or 60 cloth. Kalto can make 40 grain or 40 cloth. Who has the comparative advantage in cloth?",
+   "options": [
+    "Merida, because it can make more cloth",
+    "Merida, because it is more productive in both goods",
+    "Neither, because the ratios of the two goods are the same in both",
+    "Kalto, because one cloth costs it 1 grain against 2"
+   ],
+   "correctIndex": 3,
+   "explanation": "Cloth costs Merida 2 grain and costs Kalto 1. The lower opportunity cost is Kalto's, so the comparative advantage in cloth is Kalto's — even though Merida can make more of both goods."
+  },
+  {
+   "id": "trade-global-economy:quiz:5c8429b0",
+   "question": "Which statement about the gain from specialisation is correct?",
+   "options": [
+    "It requires each country to make one good and nothing else at all",
+    "It requires one of the two countries to hold an absolute advantage",
+    "It is measured by comparing total output before and after",
+    "It is shared equally between the two countries whatever they agree"
+   ],
+   "correctIndex": 2,
+   "explanation": "A gain is a comparison of totals: here 80 grain and 50 cloth become 100 and 50. Complete specialisation is not required and often produces less of one good; absolute advantage decides nothing; and the split depends on the rate at which the goods are exchanged."
+  },
+  {
+   "id": "trade-global-economy:quiz:35717095",
+   "question": "Two countries trade grain for cloth. Cloth costs one of them 2 grain to make and the other 1 grain. Which exchange rate leaves both better off?",
+   "options": [
+    "0.8 grain per cloth",
+    "2.4 grain per cloth",
+    "Any rate at all, provided both countries agree to it",
+    "1.5 grain per cloth"
+   ],
+   "correctIndex": 3,
+   "explanation": "The rate has to sit strictly between the two domestic costs. Below 1 the low-cost producer would rather keep making its own; above 2 the other would. 1.50 is inside the range, so both gain."
+  },
+  {
+   "id": "trade-global-economy:quiz:df8c21a7",
+   "question": "Which of these is a LIMITATION of the theory of comparative advantage rather than an assumption of it?",
+   "options": [
+    "Resources move freely between industries at no cost and no delay",
+    "There are two countries and two goods, and nothing else exists",
+    "Transport costs can exhaust the predicted gain",
+    "Opportunity costs stay constant however far specialisation goes"
+   ],
+   "correctIndex": 2,
+   "explanation": "The other three are assumptions the model makes to get its result. Transport costs exhausting the gain is what happens when one of those assumptions is relaxed, which is what a limitation is."
+  },
+  {
+   "id": "trade-global-economy:quiz:2996f0b2",
+   "question": "Emerging economies' share of world exports rose from 24% to 44%. What happened to the advanced economies' share?",
+   "options": [
+    "It fell to 56%",
+    "It fell to 24%",
+    "It stayed the same",
+    "It cannot be determined"
+   ],
+   "correctIndex": 0,
+   "explanation": "Shares sum to 100%, so a rise of 20% points on one side is a fall of 20% on the other: 76% to 56%. A falling share is not the same as falling exports, because the world total moved too."
+  },
+  {
+   "id": "trade-global-economy:quiz:57f12191",
+   "question": "Kalto doubles its grain capacity to 80, leaving cloth at 40. What happens to trade with Merida?",
+   "options": [
+    "Kalto now has a comparative advantage in both goods",
+    "Trade continues between them at the same exchange rate as before",
+    "Merida gains a comparative advantage in cloth",
+    "The basis for trade between them disappears"
+   ],
+   "correctIndex": 3,
+   "explanation": "Cloth now costs Kalto 2 grain, which is exactly what it costs Merida. Identical opportunity costs mean neither country has a comparative advantage in anything, so there is no gain left to divide. A country cannot have a comparative advantage in both goods; the ratios are reciprocals."
+  },
+  {
+   "id": "trade-global-economy:quiz:079b88c4",
+   "question": "A currency falls from 2 foreign units per domestic unit to 1.60. A good priced 100 at home now sells abroad for:",
+   "options": [
+    "160",
+    "200",
+    "125",
+    "62.50"
+   ],
+   "correctIndex": 0,
+   "explanation": "100 × 1.60 = 160, down from 100 × 2 = 200. Exports become cheaper abroad when the currency falls, which is why the pattern of trade shifts towards them."
+  },
+  {
+   "id": "trade-global-economy:quiz:74338791",
+   "question": "A government puts a duty on tiles imported from ONE country. Which outcome is the one students most often miss?",
+   "options": [
+    "Domestic tile makers raise their output",
+    "The domestic price of tiles rises",
+    "An exporter in a third country takes the business",
+    "Imports of tiles from that country fall"
+   ],
+   "correctIndex": 2,
+   "explanation": "The first, second and fourth are the intended effects and are usually stated. Because the measure named a country rather than a good, much of the demand moves to the nearest supplier the duty does not cover rather than home — so total imports fall by less than the measure suggests."
+  },
+  {
+   "id": "trade-global-economy:quiz:8678ed5a",
+   "question": "An economy's exports grow from $80.0bn to $100.0bn. Ore falls from 70% of them to 40%. What happened to the VALUE of ore exports?",
+   "options": [
+    "It fell to $40.0bn",
+    "It rose to $40.0bn",
+    "It fell to $24.0bn",
+    "It cannot be worked out"
+   ],
+   "correctIndex": 0,
+   "explanation": "70% of $80.0bn is $56.0bn; 40% of $100.0bn is $40.0bn. Here both the share and the value fell — but they need not: a smaller share of a much larger total can be worth more."
+  },
+  {
+   "id": "trade-global-economy:quiz:279648f6",
+   "question": "The terms of trade are best described as:",
+   "options": [
+    "The difference between export and import values",
+    "The ratio of export prices to import prices",
+    "The volume of exports divided by the volume of imports",
+    "The balance of trade expressed as an index"
+   ],
+   "correctIndex": 1,
+   "explanation": "They are a ratio of two PRICE indices. The difference between export and import values is the balance of trade, which is a different figure that can move the other way in the same year."
+  },
+  {
+   "id": "trade-global-economy:quiz:0d76e1cd",
+   "question": "Sarova's export price index is 120 and its import price index is 110. Its terms of trade are:",
+   "options": [
+    "109.1",
+    "91.7",
+    "130.0",
+    "10.0"
+   ],
+   "correctIndex": 0,
+   "explanation": "120 ÷ 110 × 100 = 109.1, an improvement on the base of 100.0. Note that BOTH prices rose: the ratio improved because exports rose faster, not because imports got cheaper."
+  },
+  {
+   "id": "trade-global-economy:quiz:48405cab",
+   "question": "A country's inflation rate is higher than its trading partners'. Its terms of trade:",
+   "options": [
+    "Deteriorate, because the country has become less competitive abroad",
+    "Are unchanged, because inflation affects both indices equally",
+    "Cannot be predicted from this information alone",
+    "Improve, because export prices rise faster"
+   ],
+   "correctIndex": 3,
+   "explanation": "Domestic inflation raises the export price index faster than foreign inflation raises the import price index, so the ratio rises. Competitiveness falls at the same time — the two move in opposite directions, which is why an improvement is a direction and not a verdict."
+  },
+  {
+   "id": "trade-global-economy:quiz:ec5d4799",
+   "question": "Which cause of a DETERIORATION in the terms of trade is a sign of economic strength?",
+   "options": [
+    "The world price of the single export commodity collapsed",
+    "Rising productivity allowed export prices to be cut",
+    "The price of essential imported fuel doubled",
+    "The currency fell after capital left the country"
+   ],
+   "correctIndex": 1,
+   "explanation": "All four lower the ratio. Only the second does it by lowering costs, which almost certainly means larger volumes and higher earnings. What moved the ratio decides what the movement means."
+  },
+  {
+   "id": "trade-global-economy:quiz:cf9651e4",
+   "question": "A currency rises sharply. What happens to the two price indices behind the terms of trade?",
+   "options": [
+    "The export index falls and the import index rises",
+    "Both indices rise together, so the ratio between them is unchanged",
+    "Neither index moves until firms decide to change their prices",
+    "The export index rises and the import index falls"
+   ],
+   "correctIndex": 3,
+   "explanation": "Measured in foreign currency, a stronger currency makes exports dearer; measured at home, it makes imports cheaper. A larger number over a smaller one, so the terms of trade improve — before any firm has changed a price list."
+  },
+  {
+   "id": "trade-global-economy:quiz:4e737b50",
+   "question": "Sarova's export prices rose 20% and volume fell 30%. Its export revenue index is:",
+   "options": [
+    "84",
+    "90",
+    "110",
+    "70"
+   ],
+   "correctIndex": 0,
+   "explanation": "Revenue is price times quantity: 1.20 × 0.70 = 0.84, an index of 84. The terms of trade improved to 109.1 and revenue fell by 16% — both are true."
+  },
+  {
+   "id": "trade-global-economy:quiz:42ed6a09",
+   "question": "An improvement in the terms of trade RAISES export revenue when demand for exports is:",
+   "options": [
+    "Elastic",
+    "Unitary",
+    "Perfectly elastic",
+    "Inelastic"
+   ],
+   "correctIndex": 3,
+   "explanation": "With inelastic demand the quantity falls by proportionally less than the price rose, so revenue rises. With elastic demand the quantity effect wins and revenue falls. Unitary leaves revenue unchanged, and perfectly elastic means no sales at all at the higher price."
+  },
+  {
+   "id": "trade-global-economy:quiz:85b6c106",
+   "question": "Sarova's terms of trade improved to 109.1 and its trade moved from balance to a deficit of $13.0bn. This is:",
+   "options": [
+    "A contradiction, so one of the figures must be wrong",
+    "Only possible if import volumes also rose",
+    "What elastic export demand produces",
+    "Evidence that the terms of trade were miscalculated"
+   ],
+   "correctIndex": 2,
+   "explanation": "Export earnings fell to $42.0bn because volume fell more than price rose, while the same quantity of imports cost $55.0bn at the higher import prices. A price ratio and a difference of values are not required to agree."
+  },
+  {
+   "id": "trade-global-economy:quiz:2d30e350",
+   "question": "Which is the strongest basis for judging a change in the terms of trade?",
+   "options": [
+    "Whether the index rose or fell",
+    "Whether the change was large",
+    "What caused it, and how responsive demand is",
+    "Whether the balance of trade moved with it"
+   ],
+   "correctIndex": 2,
+   "explanation": "Direction alone is the rule the exam is built to punish: a deterioration from rising productivity is good news and an improvement from an over-strong currency is not. Cause and elasticity are what decide, and a judgement carrying both is what Evaluate asks for."
+  },
+  {
+   "id": "trade-global-economy:quiz:99a75345",
+   "options": [
+    "The tariff revenue collected by the government",
+    "The increase in producer surplus for domestic steel firms",
+    "The domestic production of steel at a higher cost than the world price",
+    "The rise in the domestic price of steel"
+   ],
+   "question": "A government imposes a tariff on imported steel. Which of the following is a welfare loss from the tariff?",
+   "explanation": "A welfare loss from a tariff occurs because domestic firms now produce units of steel that could have been imported at a lower world price &mdash; this is production inefficiency. Resources are wasted producing domestically what could be imported more cheaply. Government revenue and producer surplus are transfers (redistributed from consumers), not welfare losses. The price rise itself is not a loss but the mechanism through which the other effects occur.",
+   "correctIndex": 2
+  },
+  {
+   "id": "trade-global-economy:quiz:6d58badf",
+   "options": [
+    "The industry has been established for decades but faces foreign competition",
+    "The domestic industry has potential to achieve economies of scale and become internationally competitive, and protection is temporary",
+    "The industry provides goods essential for national security",
+    "Foreign producers are dumping goods below cost"
+   ],
+   "question": "The infant industry argument for protectionism is strongest when:",
+   "explanation": "The infant industry argument states that new domestic industries may need temporary protection from established foreign competitors while they grow, develop economies of scale, and gain experience. The argument is strongest when there is genuine potential for the industry to become competitive AND protection is strictly temporary. Option A describes a geriatric (declining) industry. Options C and D are valid reasons for protection but are separate arguments from the infant industry case.",
+   "correctIndex": 1
+  },
+  {
+   "id": "trade-global-economy:quiz:42d4848e",
+   "options": [
+    "National Treatment",
+    "Reciprocity",
+    "Most Favoured Nation (MFN)",
+    "Transparency"
+   ],
+   "question": "Which WTO principle requires that any trade concession given to one member must be extended to all members?",
+   "explanation": "The Most Favoured Nation (MFN) principle is the cornerstone WTO rule that members must treat all trading partners equally &mdash; any tariff reduction or trade concession given to one WTO member must be automatically extended to all other members. National Treatment means imported goods must be treated equally to domestic goods once inside the market. Reciprocity means trade liberalisation should be mutual. Transparency means trade policies must be published and predictable.",
+   "correctIndex": 2
+  },
+  {
+   "id": "trade-global-economy:quiz:df70854b",
+   "options": [
+    "A quota generates government revenue whereas a tariff does not",
+    "A quota creates quota rent for licence holders instead of government revenue",
+    "A quota does not raise the domestic price above the world price",
+    "A quota benefits consumers more than a tariff"
+   ],
+   "question": "How does a quota differ from a tariff in its welfare effects?",
+   "explanation": "The key difference is that a tariff generates government revenue (area c in the tariff diagram), whereas a quota creates quota rent &mdash; an economic surplus that goes to whoever holds the import licences (which may be foreign exporters). Both raise the domestic price, both harm consumers, and both create welfare losses. Quotas are generally considered worse than tariffs because no revenue is generated for the government and they are less transparent.",
+   "correctIndex": 1
+  },
+  {
+   "id": "trade-global-economy:quiz:0266d003",
+   "options": [
+    "A 15% ad valorem tariff on imported electronics",
+    "A quota limiting car imports to 50,000 units per year",
+    "Requiring imported food products to meet extremely strict labelling and safety standards that are difficult for foreign producers to comply with",
+    "A government subsidy to domestic car manufacturers"
+   ],
+   "question": "Which of the following is the best example of a non-tariff barrier to trade?",
+   "explanation": "Non-tariff barriers (NTBs) are regulatory and administrative measures that restrict trade without being tariffs or quotas. Strict product standards, labelling requirements, and safety regulations that foreign producers find difficult to comply with are classic examples of NTBs. Option A is a tariff, option B is a quota (a quantitative restriction), and option D is a subsidy &mdash; none of these are non-tariff barriers in the strict sense.",
+   "correctIndex": 2
+  }
+ ],
+ "practice": [
+  {
+   "id": "trade-global-economy:practice:43762caf",
+   "command": "Define",
+   "marks": 2,
+   "question": "Define the term 'comparative advantage'. (2 marks)",
+   "guidance": "Two marks, so two things have to be in the sentence. Appendix 6 defines Define as knowledge and understanding only: no example, no development, no diagram. Write the definition, then check it against the trap below.\n\nThe ability to produce a good at a lower opportunity cost than another country (1 mark). Opportunity cost is the amount of the other good given up to produce it (1 mark). A definition resting on producing MORE has defined absolute advantage and earns nothing."
+  },
+  {
+   "id": "trade-global-economy:practice:4893ba66",
+   "command": "Calculate",
+   "marks": 4,
+   "question": "A country's export price index rises from 100 to 126 while its import price index rises from 100 to 105. Calculate its terms of trade and state whether they have improved or deteriorated. (4 marks)",
+   "guidance": "Four marks for a calculation in stages, so set the formula down first and work through it on the page. Appendix 6 advises showing workings, and an unsupported final figure cannot be given method marks. The last mark is for the word the question asks for, not the number.\n\nTerms of trade = export price index ÷ import price index × 100 (1 mark). 126 ÷ 105 = 1.2 (1 mark). × 100 = 120.0 (1 mark). Above the base of 100, so the terms of trade have improved (1 mark). Note that both indices rose: exports simply rose faster."
+  },
+  {
+   "id": "trade-global-economy:practice:22c2ba68",
+   "command": "Explain",
+   "marks": 4,
+   "question": "Explain two factors that may cause a deterioration in a country's terms of trade. (4 marks)",
+   "guidance": "Two factors, two marks each, and the marks are in the chain rather than the naming. Appendix 6 defines Explain as requiring a two-stage chain for a reason or an impact: the factor, then how it reaches one of the two price indices, then what that does to the ratio. Pick from the five the specification lists.\n\nAvailable: a rise in relative productivity that lowers export prices; a fall in the exchange rate, which lowers the export index and raises the import index at once; relative labour costs rising more slowly than abroad; relative inflation below trading partners'; or a fall in the world price of the goods exported."
+  },
+  {
+   "id": "trade-global-economy:practice:ec756e2f",
+   "command": "Analyse",
+   "marks": 6,
+   "question": "Analyse two factors that may change the pattern of trade between countries. (6 marks)",
+   "guidance": "Two factors, three marks each, and each has to reach a named flow — which goods, moving in which direction, between whom. Appendix 6 defines Analyse as a developed chain of reasoning, so a list of the specification's five factors is not an answer however complete the list is.\n\nAvailable: the growth of emerging economies; changes in comparative advantage, which can remove a basis for trade entirely when opportunity costs converge; the growth of trading blocs and bilateral agreements, which redirect purchases towards members; changes in relative exchange rates; changes in protectionism, which can send trade home OR to an uncovered third country."
+  },
+  {
+   "id": "trade-global-economy:practice:d44ea0c1",
+   "command": "Examine",
+   "marks": 8,
+   "question": "Examine the impact of an improvement in a country's terms of trade on its export revenues and its balance of trade. (8 marks)",
+   "guidance": "Eight marks, and the question names two things to examine — take them in turn rather than together. Appendix 6 requires analysis as well as application, so each one needs the mechanism and then a number from the extract applied to it. The second effect is the one most answers never reach.\n\nThe mechanism first: an improvement means export prices rose relative to import prices, so each unit of exports earns more and buys more imports. Then the volume response, which is where the marks are: with elastic export demand, quantity falls proportionally more than price rose and export revenue falls. Apply it — a 20% price rise with an elasticity of 1.5 gives a 30% volume fall and a revenue index of 84. The balance of trade can then move into deficit even though the ratio improved, because import spending rose while export earnings fell."
+  },
+  {
+   "id": "trade-global-economy:practice:2b04d16c",
+   "command": "Evaluate",
+   "marks": 20,
+   "question": "Evaluate the view that specialisation and free trade always raise a country's living standards. (20 marks)",
+   "guidance": "Twenty marks, and the word doing the work in the question is ALWAYS. Build both sides, then make the judgement conditional: on the terms of trade this economy faces, on how diversified it is, and on whether displaced resources can move. A confident verdict with no conditions attached is what this question is designed to separate out.\n\nIn support: total output rises where countries specialise by comparative advantage; economies of scale lower unit costs; consumers gain lower prices and wider choice; the purchasing power of a unit of exports can rise. Against: the gain depends on the exchange rate that splits it, and a rate near one country's own opportunity cost gives it almost nothing; transport costs and rising costs of production erode the predicted gain; specialisation concentrates risk, so a fall in one export price can be severe; and workers in industries that close bear a cost the national total conceals."
+  },
+  {
+   "id": "trade-global-economy:practice:e3345b30",
+   "marks": 6,
+   "command": "Explain",
+   "guidance": "Effect 1: Higher prices for consumers (1 mark) — a tariff is a tax on imports that raises the price of the imported good above the world price, reducing consumer surplus (1 mark). Domestic consumers pay more and consume less, leading to a welfare loss (1 mark).\n\nEffect 2: Protection of domestic producers (1 mark) — the higher import price allows domestic firms to increase output because they become more price-competitive relative to imports (1 mark). However, this can lead to productive inefficiency as firms face less competitive pressure to minimise costs (1 mark).",
+   "question": "Explain two economic effects of imposing a tariff on imported goods. (6 marks)"
+  },
+  {
+   "id": "trade-global-economy:practice:09d7629f",
+   "marks": 20,
+   "command": "Evaluate",
+   "guidance": "Introduction: Define free trade as the absence of government-imposed barriers to international trade, and protectionism as the use of tariffs, quotas and other measures to restrict imports (2 marks).\n\nFor free trade: Comparative advantage — specialisation according to comparative advantage increases world output and allows countries to consume beyond their PPF (3 marks); lower prices and greater choice for consumers through access to global markets (2 marks); competitive pressure drives innovation and efficiency among domestic firms (2 marks).\n\nAgainst — arguments for protectionism: Infant industry argument — new industries in developing countries may need temporary protection from established foreign competitors until they achieve economies of scale (3 marks); protection of strategic industries — countries may wish to maintain domestic capacity in defence or food production for national security (2 marks); anti-dumping measures — protection may be justified when foreign firms sell below cost to destroy domestic competition (2 marks).\n\nEvaluation: Free trade generally increases global welfare, but 'always preferable' is too strong (2 marks). Temporary, targeted protectionism may be justified in specific circumstances, but the risk of government failure — protection becoming permanent due to political lobbying — and retaliation from trading partners means protectionism should be used cautiously and sparingly (2 marks).",
+   "question": "Evaluate the view that free trade is always preferable to protectionism. (20 marks)"
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "trade-global-economy:card:0b2bd1d3",
+   "front": "What is specialisation in an international context?",
+   "back": "Concentrating a country's resources on a <strong>narrower range of goods</strong> than it consumes, and trading for the rest."
+  },
+  {
+   "id": "trade-global-economy:card:0e8df010",
+   "front": "What is absolute advantage?",
+   "back": "Producing <strong>more</strong> of a good from the same resources than another country can. It decides nothing on its own."
+  },
+  {
+   "id": "trade-global-economy:card:f6107b8b",
+   "front": "What is comparative advantage?",
+   "back": "Producing a good at a <strong>lower opportunity cost</strong> than another country. A country can have an absolute advantage in everything and a comparative advantage in only some things."
+  },
+  {
+   "id": "trade-global-economy:card:de23f54f",
+   "front": "How is opportunity cost worked out from a production table?",
+   "back": "Divide one maximum by the other. Merida can make 120 grain or 60 cloth, so one cloth costs <strong>2 grain</strong>."
+  },
+  {
+   "id": "trade-global-economy:card:8011f1da",
+   "front": "Why does partial specialisation show the gain more clearly than complete specialisation?",
+   "back": "Because one good can be held constant. Here cloth stays at 50 and grain rises from 80 to 100 — <strong>a gain with nothing given up</strong>."
+  },
+  {
+   "id": "trade-global-economy:card:f980302a",
+   "front": "What limits the exchange rate between two traded goods?",
+   "back": "It must lie strictly between the two countries' own opportunity costs — here between 1 and 2 grain per cloth — or one of them refuses to trade."
+  },
+  {
+   "id": "trade-global-economy:card:c9681ce1",
+   "front": "What are the four assumptions behind comparative advantage?",
+   "back": "Constant opportunity costs; perfect factor mobility; no transport costs or barriers; two countries and two goods, fully employed."
+  },
+  {
+   "id": "trade-global-economy:card:f1baf13a",
+   "front": "What are the main limitations of the theory?",
+   "back": "Costs rise as a country specialises; advantage can be created and lost; transport costs eat the gain; and the theory predicts the <strong>total</strong> gain, not how it is split or who bears the adjustment."
+  },
+  {
+   "id": "trade-global-economy:card:dcd7505f",
+   "front": "What is a pattern of trade?",
+   "back": "The <strong>composition</strong> of trade — which goods, with which partners, in what proportions. Distinct from volume, which is how much."
+  },
+  {
+   "id": "trade-global-economy:card:2d632a9d",
+   "front": "What five factors influence patterns of trade?",
+   "back": "Emerging economies; changes in comparative advantage; growth in trading blocs and bilateral trading agreements; changes in relative exchange rates; changes in protectionism."
+  },
+  {
+   "id": "trade-global-economy:card:eb8ace5b",
+   "front": "What is an emerging economy?",
+   "back": "An economy growing quickly from a low base, industrialising, and taking a rising share of world output and trade."
+  },
+  {
+   "id": "trade-global-economy:card:ac21ade6",
+   "front": "Why can a country's export share fall while its exports rise?",
+   "back": "Because a share is a proportion of a moving total. On a world total that has doubled, a smaller share can still be worth more."
+  },
+  {
+   "id": "trade-global-economy:card:5e34ee3b",
+   "front": "How does a falling currency change trade prices?",
+   "back": "Exports become cheaper abroad (200 → 160) and imports dearer at home (100 → 125)."
+  },
+  {
+   "id": "trade-global-economy:card:efb1ec86",
+   "front": "What are the terms of trade?",
+   "back": "The rate at which exports exchange for imports: the <strong>export price index ÷ import price index × 100</strong>. A ratio of prices, not of values or volumes."
+  },
+  {
+   "id": "trade-global-economy:card:0dcb7609",
+   "front": "How are the terms of trade calculated?",
+   "back": "Divide the export price index by the import price index and multiply by 100. 120 ÷ 110 × 100 = <strong>109.1</strong>."
+  },
+  {
+   "id": "trade-global-economy:card:63a81ffd",
+   "front": "What does an IMPROVEMENT in the terms of trade mean?",
+   "back": "The ratio has <strong>risen</strong>: each unit of exports commands more imports. It is a direction, not a verdict — it can coincide with falling revenue."
+  },
+  {
+   "id": "trade-global-economy:card:1db920aa",
+   "front": "What five factors influence the terms of trade?",
+   "back": "Relative inflation rates; relative productivity rates; relative labour costs; the exchange rate; and the prices of imports and exports."
+  },
+  {
+   "id": "trade-global-economy:card:97e1b40c",
+   "front": "Why does higher domestic inflation IMPROVE the terms of trade?",
+   "back": "It pushes the export price index up faster than the import price index, so the ratio rises — while competitiveness falls at the same time."
+  },
+  {
+   "id": "trade-global-economy:card:f9f3be78",
+   "front": "Why can a deterioration be a sign of strength?",
+   "back": "If rising <strong>productivity</strong> cut unit costs and export prices, the country sells more cheaply from a stronger position and is likely to sell more."
+  },
+  {
+   "id": "trade-global-economy:card:3ccba84a",
+   "front": "What decides whether an improvement raises export revenue?",
+   "back": "The <strong>price elasticity of demand</strong> for exports. Elastic demand means revenue falls; inelastic means it rises. At 1.50, Sarova's revenue index fell to 84."
+  },
+  {
+   "id": "trade-global-economy:card:6e27a87a",
+   "front": "What is the balance of trade?",
+   "back": "The <strong>value</strong> of exports minus the value of imports. It can worsen in the same year the terms of trade improve."
+  },
+  {
+   "id": "trade-global-economy:card:8cefbadc",
+   "front": "How should a change in the terms of trade be judged?",
+   "back": "By asking <strong>what caused it</strong> and <strong>how responsive demand is</strong> — never by the direction of the index alone."
+  },
+  {
+   "id": "trade-global-economy:card:75bb91ff",
+   "back": "Countries agree to <strong>eliminate tariffs between members</strong> but maintain individual external tariffs with non-members. E.g., NAFTA/USMCA.",
+   "front": "What is a free trade area?"
+  },
+  {
+   "id": "trade-global-economy:card:5c41afb0",
+   "back": "A free trade area with a <strong>common external tariff</strong> applied to all non-member imports. E.g., the EU's customs union.",
+   "front": "What is a customs union?"
+  },
+  {
+   "id": "trade-global-economy:card:a551427e",
+   "back": "When a trade bloc replaces <strong>high-cost domestic production with lower-cost imports</strong> from a member country. Increases efficiency and consumer welfare.",
+   "front": "What is trade creation?"
+  },
+  {
+   "id": "trade-global-economy:card:38cfc034",
+   "back": "When a trade bloc diverts imports from a <strong>lower-cost non-member to a higher-cost member</strong>. Reduces efficiency — the external tariff makes non-member goods artificially expensive.",
+   "front": "What is trade diversion?"
+  },
+  {
+   "id": "trade-global-economy:card:f3b00a11",
+   "back": "Trade without <strong>government-imposed barriers</strong> (tariffs, quotas, regulations). Allows countries to specialise according to comparative advantage, increasing global output.",
+   "front": "What is free trade?"
+  },
+  {
+   "id": "trade-global-economy:card:9911051c",
+   "back": "A <strong>tax on imports</strong> that raises the price of foreign goods. Protects domestic firms but raises prices for consumers and may provoke retaliation.",
+   "front": "What is a tariff?"
+  },
+  {
+   "id": "trade-global-economy:card:1e30a477",
+   "back": "A <strong>physical limit on the quantity of imports</strong> allowed into a country. Restricts foreign competition but reduces consumer choice and raises prices.",
+   "front": "What is a quota?"
+  },
+  {
+   "id": "trade-global-economy:card:bfadca91",
+   "back": "Government policies that <strong>restrict international trade</strong> to protect domestic industries — through tariffs, quotas, subsidies, or regulations. Reduces competition but may harm consumers.",
+   "front": "What is protectionism?"
+  },
+  {
+   "id": "trade-global-economy:card:ad6fc9e0",
+   "back": "Protecting <strong>infant industries</strong>, preventing <strong>dumping</strong> (selling below cost), and maintaining <strong>national security</strong> (strategic industries like defence or food production).",
+   "front": "Name three arguments for protectionism."
+  },
+  {
+   "id": "trade-global-economy:card:757b2a72",
+   "back": "Raises <strong>consumer prices</strong>, reduces <strong>choice and efficiency</strong>, may provoke <strong>trade wars</strong> (retaliation), and protects inefficient firms from competition.",
+   "front": "Name three arguments against protectionism."
+  },
+  {
+   "id": "trade-global-economy:card:f68c9c5d",
+   "back": "Selling exports at a price <strong>below the cost of production</strong> in the foreign market. Used to gain market share or dispose of surplus. Can destroy domestic industries in the importing country.",
+   "front": "What is dumping?"
+  },
+  {
+   "id": "trade-global-economy:card:83f18d1b",
+   "back": "New industries in developing countries need <strong>temporary protection</strong> from established foreign competitors until they achieve economies of scale and can compete independently.",
+   "front": "What is an infant industry argument?"
+  },
+  {
+   "id": "trade-global-economy:card:9765fc26",
+   "back": "A government payment to domestic exporters to <strong>reduce their costs and make exports cheaper</strong>. A form of protectionism that distorts trade. Banned under WTO rules in most cases.",
+   "front": "What is an export subsidy?"
+  },
+  {
+   "id": "trade-global-economy:card:b3a29e6a",
+   "back": "Any trade restriction that is <strong>not a tariff</strong> — e.g., quotas, regulations, licensing, safety standards, bureaucratic delays. Often harder to identify and challenge than tariffs.",
+   "front": "What is a non-tariff barrier?"
+  }
+ ],
+ "diagrams": [
+  {
+   "id": "trade-global-economy:diagram:698178a2",
+   "title": "The Gain From Specialising",
+   "checklist": [
+    "Output of BOTH goods, before and after — a gain is a comparison, not a single figure.",
+    "Partial specialisation, not complete: the cloth bars are deliberately identical.",
+    "The gain labelled on the good that moved: 20 more grain.",
+    "No prices anywhere. This is a diagram about output, and the exchange rate comes later."
+   ],
+   "caption": "Merida makes 100 grain and 10 cloth, Kalto makes 40 cloth. Cloth is unchanged at 50 and grain rises from 80 to 100, so the gain needs no trade-off to justify it.",
+   "svg": "<svg width=\"400\" height=\"360\" viewBox=\"0 0 400 360\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"30\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"600\" text-anchor=\"middle\">Output before and after specialising</text><text x=\"200\" y=\"50\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">Merida and Kalto together</text><rect x=\"40\" y=\"58\" width=\"14\" height=\"10\" rx=\"2\" fill=\"#475569\"/><text x=\"59\" y=\"68\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">Without trade</text><rect x=\"194.2\" y=\"58\" width=\"14\" height=\"10\" rx=\"2\" fill=\"#3b82f6\"/><text x=\"213.2\" y=\"68\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">With trade</text><line x1=\"40\" y1=\"250\" x2=\"380\" y2=\"250\" stroke=\"#94a3b8\" stroke-width=\"2\"/><rect x=\"70\" y=\"135.3\" width=\"52\" height=\"114.7\" rx=\"2\" fill=\"#475569\"/><text x=\"96\" y=\"128.33333333333334\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"600\" text-anchor=\"middle\">80</text><rect x=\"128\" y=\"106.7\" width=\"52\" height=\"143.3\" rx=\"2\" fill=\"#3b82f6\"/><text x=\"154\" y=\"99.66666666666666\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"600\" text-anchor=\"middle\">100</text><text x=\"125\" y=\"270\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"400\" text-anchor=\"middle\">Grain</text><rect x=\"240\" y=\"178.3\" width=\"52\" height=\"71.7\" rx=\"2\" fill=\"#475569\"/><text x=\"266\" y=\"171.33333333333331\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"600\" text-anchor=\"middle\">50</text><rect x=\"298\" y=\"178.3\" width=\"52\" height=\"71.7\" rx=\"2\" fill=\"#3b82f6\"/><text x=\"324\" y=\"171.33333333333331\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"600\" text-anchor=\"middle\">50</text><text x=\"295\" y=\"270\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"400\" text-anchor=\"middle\">Cloth</text><text x=\"40\" y=\"306\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">Grain rises by 20 and cloth does not</text><text x=\"40.01\" y=\"321\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">move, so nothing was given up. Complete</text><text x=\"40.02\" y=\"336\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">specialisation gives 120 grain and 40</text><text x=\"40.03\" y=\"351\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">cloth — a trade-off, not a gain.</text></svg>"
+  },
+  {
+   "id": "trade-global-economy:diagram:efbcbebc",
+   "title": "Shares of World Exports",
+   "checklist": [
+    "Shares, not values — the two bars in each pair must add to 100 with the other pair.",
+    "Both directions shown: one side gains the 20 points the other loses.",
+    "A time label on each series, because a share on its own says nothing about change.",
+    "No claim about the level of trade; the total is not on this chart."
+   ],
+   "caption": "Emerging economies' share of world exports rose from 24% to 44% over 30 years, so the advanced economies' share fell from 76% to 56%. The two movements are the same 20 points.",
+   "svg": "<svg width=\"400\" height=\"360\" viewBox=\"0 0 400 360\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"30\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"600\" text-anchor=\"middle\">Share of world exports</text><text x=\"200\" y=\"50\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">30 years apart</text><rect x=\"40\" y=\"58\" width=\"14\" height=\"10\" rx=\"2\" fill=\"#475569\"/><text x=\"59\" y=\"68\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">30 years ago</text><rect x=\"185.8\" y=\"58\" width=\"14\" height=\"10\" rx=\"2\" fill=\"#059669\"/><text x=\"204.8\" y=\"68\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">Now</text><line x1=\"40\" y1=\"250\" x2=\"380\" y2=\"250\" stroke=\"#94a3b8\" stroke-width=\"2\"/><rect x=\"70\" y=\"198.4\" width=\"52\" height=\"51.6\" rx=\"2\" fill=\"#475569\"/><text x=\"96\" y=\"191.4\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"600\" text-anchor=\"middle\">24%</text><rect x=\"128\" y=\"155.4\" width=\"52\" height=\"94.6\" rx=\"2\" fill=\"#059669\"/><text x=\"154\" y=\"148.39999999999998\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"600\" text-anchor=\"middle\">44%</text><text x=\"125\" y=\"270\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"400\" text-anchor=\"middle\">Emerging</text><text x=\"125.01\" y=\"287\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">economies</text><rect x=\"240\" y=\"86.6\" width=\"52\" height=\"163.4\" rx=\"2\" fill=\"#475569\"/><text x=\"266\" y=\"79.6\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"600\" text-anchor=\"middle\">76%</text><rect x=\"298\" y=\"129.6\" width=\"52\" height=\"120.4\" rx=\"2\" fill=\"#059669\"/><text x=\"324\" y=\"122.60000000000002\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"600\" text-anchor=\"middle\">56%</text><text x=\"295\" y=\"270\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"400\" text-anchor=\"middle\">Advanced</text><text x=\"295.01\" y=\"287\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">economies</text><text x=\"40\" y=\"306\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">A falling share is not a falling value:</text><text x=\"40.01\" y=\"321\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">on a world total that has grown, 56% can</text><text x=\"40.02\" y=\"336\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">be worth more than 76% was.</text></svg>"
+  },
+  {
+   "id": "trade-global-economy:diagram:8e6c9d9c",
+   "title": "Calculating the Terms of Trade",
+   "checklist": [
+    "Both price indices on the same scale, against a base of 100.",
+    "The terms of trade drawn as a third bar, so it is visibly the ratio of the first two.",
+    "The base year marked, because improvement and deterioration are relative to it.",
+    "Prices only. No volumes and no values belong on this diagram."
+   ],
+   "caption": "Sarova's export prices are 120 and its import prices 110, both against a base of 100. The terms of trade are 120 ÷ 110 × 100 = 109.1: an improvement, and both prices rose to produce it.",
+   "svg": "<svg width=\"400\" height=\"360\" viewBox=\"0 0 400 360\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"30\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"600\" text-anchor=\"middle\">Two indices, one ratio</text><text x=\"200\" y=\"50\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">Sarova, base year = 100</text><line x1=\"40\" y1=\"117.69230769230768\" x2=\"380\" y2=\"117.69230769230768\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"4 4\"/><line x1=\"40\" y1=\"250\" x2=\"380\" y2=\"250\" stroke=\"#94a3b8\" stroke-width=\"2\"/><rect x=\"70.7\" y=\"91.2\" width=\"52\" height=\"158.8\" rx=\"2\" fill=\"#f59e0b\"/><text x=\"96.66666666666666\" y=\"84.23076923076923\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"600\" text-anchor=\"middle\">120</text><text x=\"96.66666666666666\" y=\"270\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"400\" text-anchor=\"middle\">Export</text><text x=\"96.67666666666666\" y=\"287\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">prices</text><rect x=\"184\" y=\"104.5\" width=\"52\" height=\"145.5\" rx=\"2\" fill=\"#f59e0b\"/><text x=\"210\" y=\"97.46153846153845\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"600\" text-anchor=\"middle\">110</text><text x=\"210\" y=\"270\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"400\" text-anchor=\"middle\">Import</text><text x=\"210.01\" y=\"287\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">prices</text><rect x=\"297.3\" y=\"105.7\" width=\"52\" height=\"144.3\" rx=\"2\" fill=\"#f59e0b\"/><text x=\"323.3333333333333\" y=\"98.65230769230769\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"600\" text-anchor=\"middle\">109.1</text><text x=\"323.3333333333333\" y=\"270\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"400\" text-anchor=\"middle\">Terms of</text><text x=\"323.3433333333333\" y=\"287\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">trade</text><text x=\"40\" y=\"306\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">The ratio is above the base because</text><text x=\"40.01\" y=\"321\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">exports rose faster, not because imports</text><text x=\"40.02\" y=\"336\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">fell. Both indices are above 100.</text></svg>"
+  },
+  {
+   "id": "trade-global-economy:diagram:902256a4",
+   "title": "An Improvement That Costs Revenue",
+   "checklist": [
+    "Price and volume as separate bars, because revenue is their product.",
+    "The revenue bar drawn below the base line of 100, which is the whole point.",
+    "The elasticity stated, since it is what decides the direction.",
+    "No price index for imports here; this chart is about export earnings alone."
+   ],
+   "caption": "Export prices rose 20% and, at a price elasticity of demand of 1.5, volume fell 30%. Revenue is the product: 120 × 70 ÷ 100 = 84, so the terms of trade improved and export revenue fell.",
+   "svg": "<svg width=\"400\" height=\"360\" viewBox=\"0 0 400 360\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"30\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"600\" text-anchor=\"middle\">Price up, volume down, revenue down</text><text x=\"200\" y=\"50\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">Sarova, all indices against a base of 100</text><line x1=\"40\" y1=\"117.69230769230768\" x2=\"380\" y2=\"117.69230769230768\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"4 4\"/><line x1=\"40\" y1=\"250\" x2=\"380\" y2=\"250\" stroke=\"#94a3b8\" stroke-width=\"2\"/><rect x=\"70.7\" y=\"91.2\" width=\"52\" height=\"158.8\" rx=\"2\" fill=\"#3b82f6\"/><text x=\"96.66666666666666\" y=\"84.23076923076923\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"600\" text-anchor=\"middle\">120</text><text x=\"96.66666666666666\" y=\"270\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"400\" text-anchor=\"middle\">Export</text><text x=\"96.67666666666666\" y=\"287\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">prices</text><rect x=\"184\" y=\"157.4\" width=\"52\" height=\"92.6\" rx=\"2\" fill=\"#3b82f6\"/><text x=\"210\" y=\"150.3846153846154\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"600\" text-anchor=\"middle\">70</text><text x=\"210\" y=\"270\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"400\" text-anchor=\"middle\">Export</text><text x=\"210.01\" y=\"287\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">volume</text><rect x=\"297.3\" y=\"138.9\" width=\"52\" height=\"111.1\" rx=\"2\" fill=\"#3b82f6\"/><text x=\"323.3333333333333\" y=\"131.86153846153846\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"600\" text-anchor=\"middle\">84</text><text x=\"323.3333333333333\" y=\"270\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"400\" text-anchor=\"middle\">Export</text><text x=\"323.3433333333333\" y=\"287\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\">revenue</text><text x=\"40\" y=\"306\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">On balanced trade of 50 in the base</text><text x=\"40.01\" y=\"321\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">year: exports 42, imports 55, a deficit</text><text x=\"40.02\" y=\"336\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">of 13.</text></svg>"
+  },
+  {
+   "id": "trade-global-economy:diagram:2ed3a5c6",
+   "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n\n  <!-- Title -->\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">Welfare Effects of a Tariff</text>\n\n  <!-- Axes -->\n  <line x1=\"60\" y1=\"40\" x2=\"60\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <line x1=\"60\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <text x=\"25\" y=\"170\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" transform=\"rotate(-90 25 170)\">Price</text>\n  <text x=\"265\" y=\"320\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\">Quantity</text>\n\n  <!-- Domestic Supply curve (upward sloping) -->\n  <line x1=\"80\" y1=\"270\" x2=\"400\" y2=\"80\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"405\" y=\"75\" fill=\"#059669\" font-size=\"12\" font-weight=\"600\">S(domestic)</text>\n\n  <!-- Domestic Demand curve (downward sloping) -->\n  <line x1=\"80\" y1=\"60\" x2=\"440\" y2=\"280\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"443\" y=\"286\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\">D</text>\n\n  <!-- World price line (Pw) -->\n  <line x1=\"60\" y1=\"220\" x2=\"450\" y2=\"220\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" stroke-dasharray=\"6,3\"/>\n  <text x=\"455\" y=\"224\" fill=\"#e8ecf5\" font-size=\"10\">Pw</text>\n  <text x=\"52\" y=\"224\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"10\">Pw</text>\n\n  <!-- World price + tariff line (Pw+t) -->\n  <line x1=\"60\" y1=\"190\" x2=\"450\" y2=\"190\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"6,3\"/>\n  <text x=\"455\" y=\"194\" fill=\"#ef4444\" font-size=\"10\">Pw+t</text>\n  <text x=\"52\" y=\"194\" text-anchor=\"end\" fill=\"#ef4444\" font-size=\"10\">Pw+t</text>\n\n  <!-- Tariff bracket -->\n  <line x1=\"462\" y1=\"195\" x2=\"462\" y2=\"215\" stroke=\"#ef4444\" stroke-width=\"1\"/>\n  <text x=\"480\" y=\"209\" fill=\"#ef4444\" font-size=\"9\">tariff</text>\n\n  <!-- Q1 line (domestic supply at Pw) -->\n  <line x1=\"131\" y1=\"220\" x2=\"131\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.5\"/>\n  <text x=\"131\" y=\"312\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Q1</text>\n\n  <!-- Q2 line (domestic supply at Pw+t) -->\n  <line x1=\"167\" y1=\"190\" x2=\"167\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.5\"/>\n  <text x=\"167\" y=\"312\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Q2</text>\n\n  <!-- Q3 line (domestic demand at Pw+t) -->\n  <line x1=\"343\" y1=\"190\" x2=\"343\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.5\"/>\n  <text x=\"343\" y=\"312\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Q3</text>\n\n  <!-- Q4 line (domestic demand at Pw) -->\n  <line x1=\"379\" y1=\"220\" x2=\"379\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.5\"/>\n  <text x=\"379\" y=\"312\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Q4</text>\n\n  <!-- Producer surplus gain (a) -->\n  <polygon points=\"80,220 131,220 167,190 80,190\" fill=\"#059669\" opacity=\"0.2\"/>\n  <text x=\"120\" y=\"208\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"8\" font-weight=\"600\">PS gain (a)</text>\n\n  <!-- Welfare loss triangle 1 (production inefficiency) (b) -->\n  <polygon points=\"131,220 167,190 167,220\" fill=\"#ef4444\" opacity=\"0.3\"/>\n  <text x=\"172\" y=\"262\" fill=\"#ef4444\" font-size=\"8\" font-weight=\"600\">Loss (b)</text><line x1=\"176\" y1=\"250\" x2=\"156\" y2=\"226\" stroke=\"#ef4444\" stroke-width=\"0.8\"/>\n\n  <!-- Government revenue rectangle (c) -->\n  <rect x=\"167\" y=\"190\" width=\"176\" height=\"30\" fill=\"#3b82f6\" opacity=\"0.2\" stroke=\"#3b82f6\" stroke-width=\"0.8\"/>\n  <text x=\"255\" y=\"209\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"9\" font-weight=\"600\">Gov. Revenue (c)</text>\n\n  <!-- Welfare loss triangle 2 (consumption loss) (d) -->\n  <polygon points=\"343,220 343,190 379,220\" fill=\"#ef4444\" opacity=\"0.3\"/>\n  <text x=\"338\" y=\"262\" text-anchor=\"end\" fill=\"#ef4444\" font-size=\"8\" font-weight=\"600\">Loss (d)</text><line x1=\"334\" y1=\"250\" x2=\"356\" y2=\"226\" stroke=\"#ef4444\" stroke-width=\"0.8\"/>\n\n  <!-- Legend box -->\n  <rect x=\"60\" y=\"328\" width=\"410\" height=\"16\" rx=\"3\" fill=\"transparent\"/>\n  <text x=\"65\" y=\"340\" fill=\"#e8ecf5\" font-size=\"8\" opacity=\"0.8\">CS loss = a+b+c+d | PS gain = a | Gov revenue = c | Net welfare loss = b+d</text>\n\n  <!-- Import brackets -->\n  <line x1=\"131\" y1=\"225\" x2=\"379\" y2=\"225\" stroke=\"#e8ecf5\" stroke-width=\"1\" opacity=\"0.4\"/>\n  <text x=\"255\" y=\"234\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\" opacity=\"0.6\">Imports before tariff (Q4 - Q1)</text>\n\n  <line x1=\"167\" y1=\"185\" x2=\"343\" y2=\"185\" stroke=\"#ef4444\" stroke-width=\"1\" opacity=\"0.4\"/>\n  <text x=\"255\" y=\"182\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"8\" opacity=\"0.8\">Imports after tariff (Q3 - Q2)</text>\n</svg>",
+   "title": "The Effect of a Tariff (Welfare Analysis)",
+   "checklist": [
+    "Draw domestic supply (upward) and demand (downward) curves with correctly labelled axes",
+    "Show the world price (Pw) as a horizontal line below the domestic equilibrium price",
+    "Show the tariff-inclusive price (Pw+t) as a second horizontal line above Pw",
+    "Identify Q1 to Q4: domestic supply and demand at each price level",
+    "Label and shade: producer surplus gain (a), welfare losses (b and d), government revenue (c)",
+    "State that consumer surplus loss = a + b + c + d and net welfare loss = b + d",
+    "Note that imports fall from (Q4 - Q1) to (Q3 - Q2)"
+   ],
+   "scenarios": [
+    {
+     "label": "Free trade",
+     "description": "At world price Pw, domestic supply is Q1 and domestic demand is Q4. Imports fill the gap (Q4 - Q1). Consumer surplus is maximised."
+    },
+    {
+     "label": "After tariff",
+     "description": "Price rises to Pw+t. Domestic supply expands to Q2, demand contracts to Q3. Imports fall to (Q3 - Q2). Consumers lose surplus, producers gain, government earns revenue, but two triangles of welfare loss remain."
+    }
+   ],
+   "description": "A supply and demand diagram showing the welfare effects of imposing a tariff on imports, including consumer surplus loss, producer surplus gain, government revenue, and the two welfare loss triangles."
+  },
+  {
+   "id": "trade-global-economy:diagram:37257b86",
+   "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n\n  <!-- Title -->\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">Welfare Effects of an Import Quota</text>\n\n  <!-- Axes -->\n  <line x1=\"60\" y1=\"40\" x2=\"60\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <line x1=\"60\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <text x=\"25\" y=\"170\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" transform=\"rotate(-90 25 170)\">Price</text>\n  <text x=\"265\" y=\"320\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\">Quantity</text>\n\n  <!-- Domestic Supply curve -->\n  <line x1=\"80\" y1=\"270\" x2=\"400\" y2=\"80\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"405\" y=\"75\" fill=\"#059669\" font-size=\"12\" font-weight=\"600\">S(domestic)</text>\n\n  <!-- S(domestic) + Quota curve: parallel to S, shifted right by quota amount -->\n  <!-- At Pw, domestic supply is at x=131. Quota adds fixed horizontal distance. -->\n  <!-- S+Q line: same slope as S but shifted right by quota quantity -->\n  <line x1=\"240\" y1=\"270\" x2=\"460\" y2=\"128\" stroke=\"#8b5cf6\" stroke-width=\"2\" stroke-dasharray=\"5,3\"/>\n  <text x=\"462\" y=\"122\" fill=\"#8b5cf6\" font-size=\"10\" font-weight=\"600\">S+quota</text>\n\n  <!-- Domestic Demand curve -->\n  <line x1=\"80\" y1=\"60\" x2=\"440\" y2=\"280\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"443\" y=\"286\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\">D</text>\n\n  <!-- World price line (Pw) -->\n  <line x1=\"60\" y1=\"220\" x2=\"450\" y2=\"220\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" stroke-dasharray=\"6,3\"/>\n  <text x=\"455\" y=\"224\" fill=\"#e8ecf5\" font-size=\"10\">Pw</text>\n  <text x=\"52\" y=\"224\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"10\">Pw</text>\n\n  <!-- New equilibrium price with quota (Pq) -->\n  <line x1=\"60\" y1=\"190\" x2=\"450\" y2=\"190\" stroke=\"#f59e0b\" stroke-width=\"1.5\" stroke-dasharray=\"6,3\"/>\n  <text x=\"455\" y=\"194\" fill=\"#f59e0b\" font-size=\"10\">Pq</text>\n  <text x=\"52\" y=\"194\" text-anchor=\"end\" fill=\"#f59e0b\" font-size=\"10\">Pq</text>\n\n  <!-- Q1: domestic supply at Pw -->\n  <line x1=\"131\" y1=\"220\" x2=\"131\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.5\"/>\n  <text x=\"131\" y=\"312\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Q1</text>\n\n  <!-- Q2: domestic supply at Pq -->\n  <line x1=\"167\" y1=\"190\" x2=\"167\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.5\"/>\n  <text x=\"167\" y=\"312\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Q2</text>\n\n  <!-- Q3: domestic demand at Pq -->\n  <line x1=\"343\" y1=\"190\" x2=\"343\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.5\"/>\n  <text x=\"343\" y=\"312\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Q3</text>\n\n  <!-- Q4: domestic demand at Pw -->\n  <line x1=\"379\" y1=\"220\" x2=\"379\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.5\"/>\n  <text x=\"379\" y=\"312\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Q4</text>\n\n  <!-- Producer surplus gain (a) -->\n  <polygon points=\"80,220 131,220 167,190 80,190\" fill=\"#059669\" opacity=\"0.2\"/>\n  <text x=\"118\" y=\"208\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"8\" font-weight=\"600\">PS gain (a)</text>\n\n  <!-- welfare loss triangle 1 (b) -->\n  <polygon points=\"131,220 167,190 167,220\" fill=\"#ef4444\" opacity=\"0.3\"/>\n  <text x=\"172\" y=\"262\" fill=\"#ef4444\" font-size=\"8\" font-weight=\"600\">Loss (b)</text><line x1=\"176\" y1=\"250\" x2=\"156\" y2=\"226\" stroke=\"#ef4444\" stroke-width=\"0.8\"/>\n\n  <!-- Quota rent rectangle (c) - goes to licence holders, NOT government -->\n  <rect x=\"167\" y=\"190\" width=\"176\" height=\"30\" fill=\"#f59e0b\" opacity=\"0.2\" stroke=\"#f59e0b\" stroke-width=\"0.8\"/>\n  <text x=\"255\" y=\"205\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"9\" font-weight=\"600\">Quota Rent (c)</text>\n  <text x=\"255\" y=\"216\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"7\" opacity=\"0.9\">to licence holders, NOT gov't</text>\n\n  <!-- welfare loss triangle 2 (d) -->\n  <polygon points=\"343,220 343,190 379,220\" fill=\"#ef4444\" opacity=\"0.3\"/>\n  <text x=\"338\" y=\"262\" text-anchor=\"end\" fill=\"#ef4444\" font-size=\"8\" font-weight=\"600\">Loss (d)</text><line x1=\"334\" y1=\"250\" x2=\"356\" y2=\"226\" stroke=\"#ef4444\" stroke-width=\"0.8\"/>\n\n  <!-- Quota bracket -->\n  <line x1=\"167\" y1=\"185\" x2=\"343\" y2=\"185\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n  <text x=\"255\" y=\"180\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"8\" font-weight=\"600\">Quota = Q3 - Q2 (fixed imports)</text>\n\n  <!-- Legend -->\n  <text x=\"65\" y=\"340\" fill=\"#e8ecf5\" font-size=\"8\" opacity=\"0.8\">CS loss = a+b+c+d | PS gain = a | Quota rent = c (NOT gov revenue) | Net welfare loss = b+c+d (if rent goes abroad)</text>\n</svg>",
+   "title": "The Effect of a Quota (Welfare Analysis)",
+   "checklist": [
+    "Draw domestic supply and demand curves with labelled axes",
+    "Show the world price (Pw) as a horizontal dashed line",
+    "Show the new higher price (Pq) after the quota is imposed",
+    "Identify Q1 to Q4 and the fixed quota quantity (Q3 - Q2)",
+    "Label quota rent (c) and emphasise it is NOT government revenue",
+    "Shade the two welfare loss triangles (b and d)",
+    "Explain that quotas are generally worse than equivalent tariffs because no revenue is generated"
+   ],
+   "scenarios": [
+    {
+     "label": "Free trade",
+     "description": "At world price Pw, domestic supply is Q1, domestic demand is Q4. Imports are Q4 - Q1. Maximum consumer surplus."
+    },
+    {
+     "label": "With quota",
+     "description": "The quota restricts imports to Q3 - Q2. Price rises to Pq. Unlike a tariff, area c is quota rent accruing to licence holders rather than government revenue. If the rent goes to foreign exporters, welfare loss is even larger."
+    }
+   ],
+   "description": "A supply and demand diagram showing the welfare effects of imposing an import quota, highlighting how quota rent differs from tariff revenue and the resulting welfare losses."
+  },
+  {
+   "id": "trade-global-economy:diagram:93bba7cd",
+   "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n\n  <!-- Title -->\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">Types of Trading Blocs: Levels of Integration</text>\n\n  <!-- Ascending arrow on left -->\n  <line x1=\"30\" y1=\"310\" x2=\"30\" y2=\"50\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" marker-end=\"url(#arrowUp2)\"/>\n  <defs><marker id=\"arrowUp2\" markerWidth=\"8\" markerHeight=\"8\" refX=\"4\" refY=\"0\" orient=\"auto\"><polygon points=\"0 8, 4 0, 8 8\" fill=\"#e8ecf5\"/></marker></defs>\n  <text x=\"18\" y=\"180\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\" transform=\"rotate(-90 18 180)\">Increasing Integration</text>\n\n  <!-- Level 1: Free Trade Area -->\n  <rect x=\"50\" y=\"268\" width=\"440\" height=\"50\" rx=\"8\" fill=\"#059669\" opacity=\"0.15\" stroke=\"#059669\" stroke-width=\"1.5\"/>\n  <text x=\"70\" y=\"288\" fill=\"#059669\" font-size=\"12\" font-weight=\"700\">1. Free Trade Area</text>\n  <text x=\"70\" y=\"304\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.9\">No internal tariffs/quotas between members. Each keeps own external tariffs.</text>\n  <text x=\"420\" y=\"290\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\" font-weight=\"500\">e.g. USMCA</text>\n\n  <!-- Level 2: Customs Union -->\n  <rect x=\"50\" y=\"205\" width=\"440\" height=\"55\" rx=\"8\" fill=\"#3b82f6\" opacity=\"0.15\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/>\n  <text x=\"70\" y=\"225\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"700\">2. Customs Union</text>\n  <text x=\"70\" y=\"241\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.9\">Free trade area + Common External Tariff (CET) on non-members.</text>\n  <text x=\"70\" y=\"253\" fill=\"#e8ecf5\" font-size=\"8\" opacity=\"0.7\">Eliminates trade deflection. Members negotiate trade deals as a bloc.</text>\n  <text x=\"420\" y=\"230\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"9\" font-weight=\"500\">e.g. SACU</text>\n\n  <!-- Level 3: Common Market -->\n  <rect x=\"50\" y=\"138\" width=\"440\" height=\"58\" rx=\"8\" fill=\"#f59e0b\" opacity=\"0.15\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n  <text x=\"70\" y=\"158\" fill=\"#f59e0b\" font-size=\"12\" font-weight=\"700\">3. Common Market (Single Market)</text>\n  <text x=\"70\" y=\"174\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.9\">Customs union + Free movement of labour, capital, and enterprise.</text>\n  <text x=\"70\" y=\"186\" fill=\"#e8ecf5\" font-size=\"8\" opacity=\"0.7\">Factors of production move freely. Harmonised regulations for goods/services.</text>\n  <text x=\"420\" y=\"163\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"9\" font-weight=\"500\">e.g. EU Single Market</text>\n\n  <!-- Level 4: Economic & Monetary Union -->\n  <rect x=\"50\" y=\"55\" width=\"440\" height=\"75\" rx=\"8\" fill=\"#ef4444\" opacity=\"0.15\" stroke=\"#ef4444\" stroke-width=\"1.5\"/>\n  <text x=\"70\" y=\"78\" fill=\"#ef4444\" font-size=\"12\" font-weight=\"700\">4. Economic &amp; Monetary Union</text>\n  <text x=\"70\" y=\"94\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.9\">Common market + Common currency + Harmonised economic policies.</text>\n  <text x=\"70\" y=\"106\" fill=\"#e8ecf5\" font-size=\"8\" opacity=\"0.7\">Members share central bank and monetary policy. No exchange rate fluctuations.</text>\n  <text x=\"70\" y=\"118\" fill=\"#e8ecf5\" font-size=\"8\" opacity=\"0.7\">Members lose independent monetary/exchange rate policy.</text>\n  <text x=\"420\" y=\"90\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\" font-weight=\"500\">e.g. Eurozone</text>\n\n  <!-- Cumulative feature note -->\n  <text x=\"250\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.6\">Each level includes ALL features of the levels below it</text>\n</svg>",
+   "title": "Types of Trading Blocs (Levels of Integration)",
+   "checklist": [
+    "List the four types in order: FTA, Customs Union, Common Market, Economic/Monetary Union",
+    "Know the key distinguishing feature of each level",
+    "Provide a real-world example for each type",
+    "Understand that each level includes all features of those below it",
+    "Explain that higher integration means greater benefits but also greater loss of sovereignty"
+   ],
+   "scenarios": [
+    {
+     "label": "Low integration (FTA)",
+     "description": "Countries remove barriers between themselves but retain sovereignty over external trade policy. Simple to negotiate but risk of trade deflection."
+    },
+    {
+     "label": "High integration (Monetary Union)",
+     "description": "Countries share a currency and harmonise economic policies. Maximum trade benefits and lowest transaction costs, but significant loss of policy sovereignty and flexibility."
+    }
+   ],
+   "description": "A visual diagram showing the four types of trading blocs in ascending order of economic integration, from free trade areas to economic and monetary unions, with their distinguishing features and real-world examples."
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "trade-global-economy:mistake:8ccfa3f6",
+   "title": "Confusing absolute and comparative advantage",
+   "mistake": "Students say a country has a comparative advantage because it can produce more of a good, or produce it more cheaply.",
+   "correction": "Those are absolute statements. Comparative advantage is a ratio inside one country — what it gives up of the other good — compared across countries. Merida can make more of both goods and still has a comparative advantage in only one.",
+   "examTip": "Always compute both opportunity costs before writing anything. One division per country per good, and the lower figure decides."
+  },
+  {
+   "id": "trade-global-economy:mistake:404b37cc",
+   "title": "Specialising completely and calling the result a gain",
+   "mistake": "Students move every resource into the good each country is best at, find more of one good and less of the other, and call it a gain.",
+   "correction": "Complete specialisation here gives 120 grain and 40 cloth against 80 and 50 without trade — more grain and LESS cloth. Specialise partially so one good is held constant, and the gain is unambiguous.",
+   "examTip": "Hold one good at its no-trade level and put the rest into the other. If both goods moved, you have shown a trade-off and not a gain."
+  },
+  {
+   "id": "trade-global-economy:mistake:6a571be4",
+   "title": "Reading a falling share as a falling value",
+   "mistake": "Students see an export share drop and conclude that the country is exporting less.",
+   "correction": "A share is a proportion of a moving total. An advanced economy going from 76% to 56% of a world total that has grown can be exporting considerably more than before.",
+   "examTip": "Whenever a question gives you a share, look for the total. If the total is not given, say what the share does and do not claim anything about the value."
+  },
+  {
+   "id": "trade-global-economy:mistake:7703e4ed",
+   "title": "Treating an improvement in the terms of trade as good news",
+   "mistake": "Students read \"improvement\" as a verdict and write that the economy is better off.",
+   "correction": "An improvement raises the purchasing power of each unit of exports and can cut export revenue and push the balance of trade into deficit at the same time. Sarova's improvement to 109.1 came with a revenue index of 84 and a deficit of $13.0bn.",
+   "examTip": "Two questions every time: what moved the ratio, and how elastic is demand for exports? An answer carrying both is doing what Evaluate asks."
+  },
+  {
+   "id": "trade-global-economy:mistake:1b423d0a",
+   "title": "Confusing the terms of trade with the balance of trade",
+   "mistake": "Students use the two interchangeably, because both use the word improvement about the same country in the same year.",
+   "correction": "The terms of trade are a ratio of PRICE indices. The balance of trade is the difference between the VALUE of exports and the value of imports. Nothing forces them to move together, and in the elastic case they move apart.",
+   "examTip": "If the question gives you price indices, it is about the terms of trade. If it gives you values or an elasticity, the balance of trade is in play."
+  },
+  {
+   "id": "trade-global-economy:mistake:896fb614",
+   "title": "Not showing welfare loss on a tariff diagram",
+   "mistake": "Students draw the tariff diagram but forget to identify and shade the welfare loss triangles.",
+   "correction": "A tariff creates TWO welfare loss triangles: one representing lost consumer surplus (production inefficiency) and one representing lost consumer surplus (consumption inefficiency). Mark both clearly."
+  }
+ ],
+ "extras": {
+  "chains": [
+   {
+    "title": "From an export price rise to a trade deficit",
+    "steps": [
+     "Export prices rise relative to import prices, so the terms of trade improve.",
+     "Foreign buyers respond to the higher price by cutting the quantity they order.",
+     "Demand is elastic, so the fall in quantity outweighs the rise in price: at an elasticity of 1.50, a 20% rise costs 30% of the volume.",
+     "Export earnings fall to an index of 84 while the import bill rises with import prices.",
+     "Earnings drop below spending: $42.0bn against $55.0bn, a deficit of $13.0bn."
+    ]
+   },
+   {
+    "title": "From different opportunity costs to a shared gain",
+    "steps": [
+     "Each country divides one output maximum by the other to find what a good costs it: cloth costs Merida 2 grain and Kalto 1.",
+     "The country giving up less of the other good has the comparative advantage and moves resources towards that good.",
+     "Specialisation is partial, so one good is held constant: cloth stays at 50 and grain rises to 100.",
+     "The goods are exchanged at a rate between the two domestic costs — 1.50 grain per cloth.",
+     "Each country ends with 10 more grain and no less cloth than it had alone."
+    ]
+   },
+   {
+    "title": "How a productivity gain removes a reason to trade",
+    "steps": [
+     "Kalto's grain capacity doubles to 80, leaving cloth at 40.",
+     "Its opportunity cost of cloth falls to 2 grain.",
+     "That is exactly Merida's cost, so neither country gives up less than the other for either good.",
+     "With identical opportunity costs there is no comparative advantage and no gain left to divide, so the trade has no basis."
+    ]
+   },
+   {
+    "steps": [
+     "The theory of comparative advantage states that countries should specialise in producing goods where they have the lowest opportunity cost, even if they lack an absolute advantage.",
+     "By specialising according to comparative advantage and trading, both countries can consume beyond their production possibility frontiers — total world output increases.",
+     "Specialisation leads to higher productivity, economies of scale and more efficient resource allocation, raising real GDP and living standards in trading nations.",
+     "The gains from trade include lower prices for consumers, greater product variety, access to resources unavailable domestically and competitive pressure that drives innovation."
+    ],
+    "title": "Comparative advantage shows gains from trade",
+    "result": "Comparative advantage demonstrates that free trade is mutually beneficial, enabling countries to consume beyond their domestic production capabilities."
+   },
+   {
+    "steps": [
+     "A tariff is a tax on imported goods that raises the domestic price above the world price, protecting domestic producers from foreign competition.",
+     "The higher price reduces consumer surplus as consumers pay more and consume less, while domestic producers gain surplus by producing more at the higher price.",
+     "The government gains tariff revenue on remaining imports, but the net welfare effect is negative — two welfare loss triangles represent the production inefficiency and consumption loss.",
+     "Tariffs also invite retaliation from trading partners, potentially triggering trade wars that reduce global trade volumes and harm all participating economies."
+    ],
+    "title": "Tariffs create welfare loss and reduce welfare",
+    "result": "Tariffs create net welfare losses by raising prices above efficient levels, and risk escalating into destructive trade wars through retaliation."
+   },
+   {
+    "steps": [
+     "Trading blocs such as customs unions and free trade areas eliminate tariffs between member states, while maintaining common or individual external tariffs against non-members.",
+     "Trade creation occurs when bloc membership shifts production from high-cost domestic producers to lower-cost member state producers, improving allocative efficiency.",
+     "Trade diversion occurs when the common external tariff shifts imports from the lowest-cost world producer (outside the bloc) to a higher-cost member state producer.",
+     "The net welfare effect depends on the balance between trade creation and trade diversion — blocs are beneficial if trade creation dominates, harmful if diversion dominates."
+    ],
+    "title": "Trading blocs create trade creation and diversion",
+    "result": "Trading blocs generate both trade creation (efficiency-improving) and trade diversion (efficiency-reducing), with the net effect depending on relative magnitudes."
+   }
+  ],
+  "evaluation": [
+   {
+    "title": "An improvement in the terms of trade is not necessarily good news",
+    "content": "Each unit of exports buys more imports, which raises the purchasing power of a given export volume — Sarova's rose to 1.09 units of imports for one of exports. But the higher price is met with smaller orders. With a price elasticity of demand of 1.50, a 20% price rise costs 30% of the volume, leaving an export revenue index of 84 and a trade deficit of $13.0bn. The judgement turns on elasticity and on what caused the movement: an improvement produced by rising domestic inflation is a different proposition from one produced by strong world demand for what the country sells."
+   },
+   {
+    "title": "Comparative advantage is a weaker guide to policy than it looks",
+    "content": "The theory predicts a gain of 20 units of output and says nothing about who gets it. The split depends entirely on the exchange rate between the goods, and any rate between 1 and 2 is consistent with the theory — including rates that leave one country with almost nothing. Transport costs come out of the gain before it is shared; rising costs of production mean the advantage runs out before the resources do; and the workers in the industry that closes bear an adjustment cost the national total conceals. None of this removes the gain, but a policy argument that cites the theory without them has cited half of it."
+   },
+   {
+    "title": "A pattern of trade is not a fixed feature of a country",
+    "content": "Comparative advantage is a ratio, and ratios move: a country that doubles its productivity in one good can find its opportunity costs converging with its trading partner's, at which point the basis for the trade between them disappears entirely. Emerging economies moving from 24% to 44% of world exports did not find an advantage; investment, education and infrastructure built one. The policy implication is that a country can act on its pattern of trade rather than only respond to it — and that a country resting on an advantage it once had is the one most exposed."
+   },
+   {
+    "title": "Comparative advantage has limitations as a guide to policy",
+    "content": "The theory assumes constant opportunity costs, perfect factor mobility within countries, zero transport costs and no externalities. In reality, dynamic comparative advantages can be created through industrial policy and investment in human capital. Countries that follow static comparative advantage may be locked into low-value primary production, while those that develop new industries through strategic intervention may achieve higher long-run growth."
+   },
+   {
+    "title": "Infant industry protection may be justified in some cases",
+    "content": "Developing countries may need temporary protection for nascent industries that cannot yet compete with established foreign rivals. Tariffs give domestic firms time to develop economies of scale, learning-by-doing and technological capabilities. However, infant industry protection is often captured by politically connected firms, and 'temporary' protection frequently becomes permanent, reducing long-run efficiency and consumer welfare."
+   },
+   {
+    "title": "Trading blocs may undermine global free trade",
+    "content": "While trading blocs promote free trade among members, they maintain barriers against non-members, creating a discriminatory trading system. The proliferation of overlapping bilateral and regional agreements creates a 'spaghetti bowl' of complex rules of origin and regulatory requirements. The WTO's multilateral approach to trade liberalisation may be undermined if countries pursue preferential arrangements rather than global negotiations."
+   }
+  ]
+ }
+}

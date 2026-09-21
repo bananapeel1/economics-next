@@ -3565,30 +3565,15 @@
    "evaluation": [
     {
      "title": "How serious is a market failure?",
-     "points": [
-      "The size of the welfare area, not the size of the external cost: a large external cost on units that are worth making is not a large loss.",
-      "How far the market quantity sits from the social optimum, which depends on how responsive both sides are to price.",
-      "Whether the people bearing the cost can be identified and compensated, or are distant in space or not yet born.",
-      "Whether the figures are knowable at all — nobody can observe the external cost of a tonne of cement, so the diagram gives a direction and a reason rather than a number."
-     ]
+     "content": "The commonest error is to grade the failure by the size of the external cost, when what the diagram actually measures is the welfare area: a large external cost falling on units that are still worth making is not a large loss. What sets that area is how far the market quantity sits from the social optimum, and that depends on how responsive both sides are to price rather than on how alarming the externality sounds. Two questions then decide how much can be done about it. Can the people bearing the cost be identified and compensated, or are they distant in space or not yet born? And are the figures knowable at all — nobody can observe the external cost of a tonne of cement, so the diagram gives a direction and a reason rather than a number, and an answer that treats its area as a measurement claims more than the model can deliver."
     },
     {
      "title": "How significant is an information gap?",
-     "points": [
-      "How large the gap is: a gap closed by asking one question is not significant.",
-      "How costly the mistake is, and whether it can be corrected once it is discovered.",
-      "How long it takes to reveal itself — a pension shortfall appears once, at the end, with nothing left to learn from.",
-      "Whether providing information would close it. Where the gap is between now and later rather than between two parties, more information changes less than it appears it should."
-     ]
+     "content": "Size first, and it is often small: a gap closed by asking one question is not significant, whatever the asymmetry is called. What makes a gap matter is the cost of the mistake it causes and whether that mistake can be corrected once it is discovered — a bad weekly purchase teaches something, and the next one is better. Timing decides whether that learning is available at all. A pension shortfall appears once, at the end, with nothing left to learn from, which is why it is the harder case even though the information was public throughout. That last point also limits the obvious remedy: where the gap is between now and later rather than between two parties, more information changes less than it appears it should, because the problem was never that the buyer did not know."
     },
     {
      "title": "Is the cover that creates moral hazard worth having?",
-     "points": [
-      "Sharing a ruinous risk across many people is a genuine gain, and moral hazard is the cost of that gain rather than a reason the gain is not real.",
-      "The question is not whether to have cover but how much of the cost to leave with the party taking the risk — which is what an excess or partial cover does.",
-      "In banking the cover was never bought or priced, so there is no premium to adjust and no contract to renegotiate.",
-      "Two of the four groups the specification names never chose anything, which is what makes this a market failure rather than a private arrangement between willing parties."
-     ]
+     "content": "Usually yes, and the concession has to come first: sharing a ruinous risk across many people is a genuine gain, so moral hazard is the price of that gain rather than evidence the gain is not real. The useful question is therefore not whether to have cover but how much of the cost to leave with the party taking the risk, which is exactly what an excess or a partial settlement is for. Banking is the hard case because that mechanism is missing — the cover was never bought or priced, so there is no premium to adjust and no contract to renegotiate. And it stays a market failure rather than a private arrangement between willing parties for a simple reason: two of the four groups the specification names never chose anything at all."
     }
    ]
   },

@@ -33,7 +33,10 @@ const GLOW_SPRING = { stiffness: 120, damping: 20, mass: 0.8 };
 
 function AnimatedTab({ tab, isActive, isFocusable, isPremium, onClick, onKeyDown, isNew, isTopicComplete }) {
   const [isHovered, setIsHovered] = useState(false);
-  const isLocked = tab.premium && !isPremium;
+  /* V009: `isPremium` is true / false / null, where null is "not known yet" — the state every
+     prerendered page starts in. A padlock on null is a padlock shown to a student who may well have
+     paid for the tab it is drawn on, so the tab stays plain until the answer arrives. */
+  const isLocked = tab.premium && isPremium === false;
 
   // The old ref-based version of this checked the same two media queries but stored the answer in
   // a ref, so a student who turned reduced motion on, or rotated a tablet across the breakpoint,

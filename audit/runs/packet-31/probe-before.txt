@@ -1,0 +1,58 @@
+ExtrasTab.jsx renders an evaluation card from: point.title, point.content
+  heading: title   body: content
+
+51 evaluation frames across 25 staged bundles.
+13 render an EMPTY BODY, across 4 sections: supply, price-determination, market-failure, business-objectives-strategy
+
+  supply #1
+    heading: (BLANK TOO)
+    body:    (BLANK)
+    authored keys: {point, detail}   never read: {point, detail}
+  supply #2
+    heading: (BLANK TOO)
+    body:    (BLANK)
+    authored keys: {point, detail}   never read: {point, detail}
+  supply #3
+    heading: (BLANK TOO)
+    body:    (BLANK)
+    authored keys: {point, detail}   never read: {point, detail}
+  supply #4
+    heading: (BLANK TOO)
+    body:    (BLANK)
+    authored keys: {point, detail}   never read: {point, detail}
+  price-determination #1
+    heading: "How far does the price mechanism allocate resources well?"
+    body:    (BLANK)
+    authored keys: {title, points}   never read: {points}
+  price-determination #2
+    heading: "Is an indirect tax a good way to raise revenue?"
+    body:    (BLANK)
+    authored keys: {title, points}   never read: {points}
+  price-determination #3
+    heading: "Does a subsidy reach the people it is meant for?"
+    body:    (BLANK)
+    authored keys: {title, points}   never read: {points}
+  market-failure #1
+    heading: "How serious is a market failure?"
+    body:    (BLANK)
+    authored keys: {title, points}   never read: {points}
+  market-failure #2
+    heading: "How significant is an information gap?"
+    body:    (BLANK)
+    authored keys: {title, points}   never read: {points}
+  market-failure #3
+    heading: "Is the cover that creates moral hazard worth having?"
+    body:    (BLANK)
+    authored keys: {title, points}   never read: {points}
+  business-objectives-strategy #1
+    heading: "How much weight should a strategic tool carry in an answer?"
+    body:    (BLANK)
+    authored keys: {title, points}   never read: {points}
+  business-objectives-strategy #2
+    heading: "How firm is a judgement about strategy?"
+    body:    (BLANK)
+    authored keys: {title, points}   never read: {points}
+  business-objectives-strategy #3
+    heading: "How useful is a mission statement?"
+    body:    (BLANK)
+    authored keys: {title, points}   never read: {points}

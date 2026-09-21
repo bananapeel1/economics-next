@@ -379,33 +379,24 @@ export const EXTRAS = {
       result: 'The environment the strategy was chosen for has gone, and the commitment outlives the conditions it was made under.',
     },
   ],
+  /*
+   * V035: authored `{title, points}`, and ExtrasTab.jsx renders `{point.content}` — the heading
+   * appeared and the four points never reached the page, so each card was a question with no
+   * answer. Rewritten as the `{title, content}` prose the component reads and packets 28-38
+   * author. Every analytical move in the four points survives.
+   */
   evaluation: [
     {
       title: 'How much weight should a strategic tool carry in an answer?',
-      points: [
-        'Whether the tool answers the question asked: Ansoff sorts options, Porter positions a firm, SWOT connects inside to outside, and none of them substitutes for another.',
-        'Whether the case supplies what the tool needs: a matrix filled from assumptions describes the assumptions.',
-        'Whether the conclusion could have been reached without it — if so, the tool is decoration in the answer.',
-        'What the tool leaves out, named specifically: size for Ansoff, resources for Porter, causes for a portfolio, and time for all four.',
-      ],
+      content: 'Four tools and four different jobs: Ansoff sorts options, Porter positions a firm, a portfolio matrix ranks what is already owned, and SWOT connects the inside to the outside. None of them substitutes for another, so the first question is whether the tool being reached for answers the question actually asked. The second is whether the case supplies what the tool needs, because a matrix filled from assumptions describes the assumptions and nothing else. The third is the most uncomfortable: could the conclusion have been reached without the tool? Where it could, the tool is decoration. What earns the weight back is naming what the tool leaves out and leaving it out specifically — size for Ansoff, resources for Porter, causes for a portfolio, and time for all four.',
     },
     {
       title: 'How firm is a judgement about strategy?',
-      points: [
-        'How reversible the decision is: a commitment that can be unwound cheaply needs less certainty before it is taken.',
-        'How fast the environment is changing, because a strategy is chosen for years and the conditions may not last them.',
-        'Whether the firm could be wrong and survive — which depends on how much of its resources one decision commits.',
-        'Whether the evidence is about this firm or about firms in general: a general claim rarely settles a particular case.',
-      ],
+      content: 'Reversibility sets the bar. A commitment that can be unwound cheaply needs far less certainty before it is taken than one that cannot, so the same evidence supports a confident recommendation in one case and a hedged one in the other. Two things then decide whether the evidence is good enough to clear that bar. A strategy is chosen for years, and where the environment is changing quickly the conditions it was chosen for may not last them. And the firm has to be able to be wrong and survive, which depends on how much of its resources the one decision commits. Finally, check what the evidence is about: a claim about firms in general rarely settles what this particular firm should do, and the case itself holds the facts that would.',
     },
     {
       title: 'How useful is a mission statement?',
-      points: [
-        'Whether it rules anything out — a statement that excludes no decision cannot settle an argument.',
-        'Whether anybody inside the business uses it to decide anything.',
-        'Whether pay and promotion reward what it describes, because staff follow the rewards where the two disagree.',
-        'Whether anything would change if it changed: where nothing would, it is a public document rather than a management tool.',
-      ],
+      content: 'One test does most of the work: does it rule anything out? A statement that excludes no decision cannot settle an argument, which is why so many of them survive contradictory strategies without embarrassment. Three checks follow from it. Does anybody inside the business use it to decide anything, or is it quoted only outward? Do pay and promotion reward what it describes, because where the two disagree staff follow the rewards and the statement loses. And would anything actually change if the statement changed? Where nothing would, it is a public document rather than a management tool — which is not worthless, but it is a different thing, and an answer that judges it as strategy has judged the wrong object.',
     },
   ],
 };

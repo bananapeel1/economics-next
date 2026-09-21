@@ -1,0 +1,105 @@
+=== E009 ===
+{
+  "id": "E009",
+  "kind": "feature",
+  "title": "app/lab/exam-practice/[section]/page.js: noindex, resolves any section slug, honest empty state on zero-data sections",
+  "file": "app/lab/exam-practice/[section]/page.js",
+  "packet": 12.2,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-21"
+}
+
+=== E010 ===
+{
+  "id": "E010",
+  "kind": "feature",
+  "title": "SectionExamPracticePage.jsx: header, SSR'd Quick Check (quiz) + Written (modelAnswers) blocks with command/marks/AO/time",
+  "file": "components/SectionExamPracticePage.jsx",
+  "packet": 12.2,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-21"
+}
+
+=== E011 ===
+{
+  "id": "E011",
+  "kind": "feature",
+  "title": "A mid-band 'why this loses marks' annotated answer on the section's highest-tariff question",
+  "file": "components/SectionExamPracticePage.jsx",
+  "packet": 12.2,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-21"
+}
+
+=== E012 ===
+{
+  "id": "E012",
+  "kind": "feature",
+  "title": "Link out to the live /data-response/<slug> page when one exists; render nothing when it doesn't",
+  "file": "components/SectionExamPracticePage.jsx",
+  "packet": 12.2,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-21"
+}
+
+=== E013 ===
+{
+  "id": "E013",
+  "kind": "feature",
+  "title": "lib/spec-coverage.js: section-coverage computation extracted from the CLI script, single implementation",
+  "file": "lib/spec-coverage.js",
+  "packet": 12.2,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-21"
+}
+
+=== E014 ===
+{
+  "id": "E014",
+  "kind": "feature",
+  "title": "The lab page states its section's real coverage N/M with unexamined leaves named, via lib/spec-coverage.js",
+  "file": "components/SectionExamPracticePage.jsx",
+  "packet": 12.2,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-21"
+}
+
+=== E015 ===
+{
+  "id": "E015",
+  "kind": "feature",
+  "title": "Every collapsed <details> block is present in the server-rendered HTML",
+  "file": "app/lab/exam-practice/[section]/page.js",
+  "packet": 12.2,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-21"
+}
+
