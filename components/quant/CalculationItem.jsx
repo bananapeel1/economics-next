@@ -16,8 +16,15 @@ function Rich({ text }) {
   return parts.map((part, i) => (i % 2 ? <strong key={i}>{part}</strong> : <span key={i}>{part}</span>));
 }
 
-/** Callers pass key={item.id} so a new seed remounts with empty inputs. */
-export default function CalculationItem({ item, onResult }) {
+/**
+ * Callers pass key={item.id} so a new seed remounts with empty inputs.
+ *
+ * `onReseed` is optional and adds the "New figures" button (packet 13.2). /admin/quant draws
+ * its own reseed control outside this component and does not pass it; the student surfaces do,
+ * because the claim being made to a student — come back and the numbers will have changed —
+ * is only visible if they can see it happen.
+ */
+export default function CalculationItem({ item, onResult, onReseed }) {
   const [responses, setResponses] = useState({});
   const [result, setResult] = useState(null);
   const [showSolution, setShowSolution] = useState(false);
@@ -115,6 +122,9 @@ export default function CalculationItem({ item, onResult }) {
         <button type="button" className={styles.btn} onClick={() => setShowSolution((s) => !s)}>
           {showSolution ? 'Hide worked solution' : 'Worked solution'}
         </button>
+        {onReseed && (
+          <button type="button" className={styles.btn} onClick={onReseed}>New figures</button>
+        )}
       </div>
 
       {showSolution && (

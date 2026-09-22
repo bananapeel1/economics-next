@@ -5,13 +5,40 @@ import PaywallOverlay from './PaywallOverlay';
 import { Quiz as QuizIcon, CardClub } from './Icons';
 import Link from 'next/link';
 import { PREVIEW_LIMITS } from '@/lib/preview-limits';
+import { subjectFrom } from '@/lib/ial-commands';
+import { templatesForSection, quantItem } from '@/lib/quant-pool';
+import CalculationItem from './quant/CalculationItem';
 
-export default function QuizTab({ questions, sectionId, onAskTutor, previewMode = false, totalCount }) {
+export default function QuizTab({ questions, sectionId, onAskTutor, previewMode = false, totalCount, unitCode, sectionNumber }) {
   const { user } = useAuth();
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [bestScore, setBestScore] = useState(null);
   const [saving, setSaving] = useState(false);
+  /* Packet 13.2. The section's first quantitative drill, above the multiple choice.
+   *
+   * It is NOT part of the quiz score, and that is not a presentation choice. This tab posts
+   * `{score, total}` to /api/progress/quiz and compares a best "like with like" on `total`;
+   * adding a generated item to the total would re-bucket every attempt row already in the
+   * table, so a student's 18/25 would stop matching their next 18/26 and their best would
+   * silently disappear. A drill beside the quiz, marked by its own engine.
+   *
+   * No entitlement gate either: a generated item is not a content bank, so withholding it
+   * protects nothing that F086 was about. Founder's call to overturn — see DECISIONS.md. */
+  const [quantAttempts, setQuantAttempts] = useState({});
+  /*
+   * EVERY template the section has, not `[0]`. Verify A found `payback` reaching no student at
+   * all: `decision-making-techniques` is the only WBS13 3.3.3 section, Learn Mode had room for
+   * one drill on its two check-ins, and this tab took the first of the two in registry order —
+   * `arr` both times. A template that is built, drawn, marked, guarded and unreachable is the
+   * defect this packet opened with, so the surface with no sequence to protect shows them all.
+   */
+  const quantDrills = templatesForSection({
+    subject: subjectFrom(unitCode),
+    unitCode,
+    number: sectionNumber,
+  }).map((t) => quantItem({ sectionId }, t.id, quantAttempts[t.id] || 0)).filter(Boolean);
+  const reseed = (templateId) => setQuantAttempts((a) => ({ ...a, [templateId]: (a[templateId] || 0) + 1 }));
 
   /* V018. This was a local `PREVIEW_LIMIT = 2`, a second copy of PREVIEW_LIMITS.quiz in a file that
      never mentioned it. Harmless while the server sent exactly two questions, load-bearing the
@@ -29,6 +56,7 @@ export default function QuizTab({ questions, sectionId, onAskTutor, previewMode 
     setAnswers({});
     setSubmitted(false);
     setBestScore(null);
+    setQuantAttempts({});
 
     // F087. This used to require `!previewMode`, so a signed-in free student — who gets the same
     // two-question preview as a stranger — had their attempt discarded and never saw a best. Being
@@ -50,8 +78,16 @@ export default function QuizTab({ questions, sectionId, onAskTutor, previewMode 
     }
   }, [sectionId, user, previewMode, quizLength]);
 
+  /* The drill survives a section with no quiz bank. This early return used to be the whole
+     answer to "nothing to show"; it is now the answer to "no multiple choice", and a section
+     that has a calculation still has something to do. */
   if (!questions || !questions.length) {
-    return <div style={{ color: 'var(--text-muted)', textAlign: 'center', padding: 40 }}>No quiz available.</div>;
+    return (
+      <div>
+        {quantDrills.map((item) => <QuantCard key={item.template} item={item} onReseed={() => reseed(item.template)} />)}
+        <div style={{ color: 'var(--text-muted)', textAlign: 'center', padding: 40 }}>No quiz available.</div>
+      </div>
+    );
   }
 
   function selectAnswer(qIndex, optIndex) {
@@ -113,6 +149,8 @@ export default function QuizTab({ questions, sectionId, onAskTutor, previewMode 
 
   return (
     <div>
+      {quantDrills.map((item) => <QuantCard key={item.template} item={item} onReseed={() => reseed(item.template)} />)}
+
       {bestScore && !submitted && (
         <div className="quiz-best-score">
           Your best: {bestScore.score}/{bestScore.total}
@@ -218,6 +256,25 @@ export default function QuizTab({ questions, sectionId, onAskTutor, previewMode 
           </Link>
         </div>
       )}
+    </div>
+  );
+}
+
+/**
+ * The calculation, framed so it cannot be read as question 1 of the quiz. The heading says
+ * what it is and the note says what it is not: the score below counts the multiple choice.
+ */
+function QuantCard({ item, onReseed }) {
+  return (
+    <div className="quiz-question">
+      <div className="quiz-question-num">Calculation practice · {item.unit} · {item.topic}</div>
+      {/* key={item.id}: the card's own contract. Without it "New figures" redrew the question
+          and left the previous answers in the boxes with the previous marking under them. */}
+      <CalculationItem key={item.id} item={item} onReseed={onReseed} />
+      <div className="quiz-explanation">
+        Marked on its own, step by step — it is not part of the quiz score below. Every time you
+        ask for new figures the method stays and the numbers change.
+      </div>
     </div>
   );
 }

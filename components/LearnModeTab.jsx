@@ -7,6 +7,8 @@ import { buildSteps, pickSpacedRecall, clampStep, firstStepOfBlock, contentVersi
 import InlineDiagram from './learn-mode/InlineDiagram';
 import InlinePractice from './learn-mode/InlinePractice';
 import InlineQuiz from './learn-mode/InlineQuiz';
+import CalculationItem from './quant/CalculationItem';
+import { templatesForSection, placeQuantItems, quantItem } from '@/lib/quant-pool';
 import { readAnswerLog, orderByPriority } from '@/lib/answer-log';
 import PreTest from './learn-mode/PreTest';
 import { pickPretestQuestions } from '@/lib/pretest-pool';
@@ -18,7 +20,7 @@ import ClassifyRecall from './learn-mode/ClassifyRecall';
 import { recallId } from '@/lib/learn-steps';
 import ExplainItBackUpgraded from './learn-mode/ExplainItBackUpgraded';
 import { NoteSection, TakeawayCard } from './notes';
-import { isPracticeVisible } from '@/lib/ial-commands';
+import { isPracticeVisible, subjectFrom } from '@/lib/ial-commands';
 import { trackFunnel } from '@/lib/funnel';
 import { readLocalState, writeLocalState, fetchServerState, saveSectionState } from '@/lib/section-state';
 
@@ -68,6 +70,9 @@ function Recall({ recall, keyPrefix, showing = 'first', pool, onComplete, onSkip
 const EMPTY_SCORES = () => ({
   quiz: { correct: 0, total: 0 }, recall: { correct: 0, total: 0, skipped: 0 },
   explain: { attempts: 0, total: 0 }, practice: { correct: 0, total: 0 },
+  // Packet 13.2. Marks, not questions: a calculation is marked per step, and a student who
+  // carried a wrong figure correctly through two of three steps has earned four of six.
+  quant: { correct: 0, total: 0 },
 });
 
 /* ── Main Learn Mode Tab ──
@@ -154,6 +159,19 @@ export default function LearnModeTab({
     return saved ? { ...EMPTY_SCORES(), ...saved } : EMPTY_SCORES();
   });
   function onQuizResult(correct) { setScores(s => ({ ...s, quiz: { correct: s.quiz.correct + (correct ? 1 : 0), total: s.quiz.total + 1 } })); }
+  /* Packet 13.2. A calculation scores once, on the first time it is marked. "Mark my working"
+     can be pressed again after a correction — it has to be, or a student who mistyped could
+     never see the right feedback — and a score that moved on every press would be measuring
+     the button. A fresh set of figures is a different item id and does count again. */
+  const quantMarked = useRef(new Set());
+  function onQuantResult(itemId, result) {
+    if (!itemId || !result || quantMarked.current.has(itemId)) return;
+    quantMarked.current.add(itemId);
+    setScores(s => ({
+      ...s,
+      quant: { correct: s.quant.correct + result.awarded, total: s.quant.total + result.total },
+    }));
+  }
   // F007: only attempted recalls counted, so dismissing one with the × removed it from the score
   // entirely. A skipped check is a check not answered, not a check that never existed.
   // F055 (packet 7): a skip is also counted as skipped, its id is kept — in the section's local
@@ -309,6 +327,42 @@ export default function LearnModeTab({
     }
     return { diagramMap: dMap, quizMap: qMap, practiceMap: pMap };
   }, [flatSteps, contentData, diagramsData, quizData, practiceData, sortedPractice]);
+
+  /* ── Quantitative drills (packet 13.2) ──
+   *
+   * Derived, not authored: `lib/quant-pool.js` matches this section's subject and spec number
+   * against the template registry, so a section gains a calculation when a template claims it
+   * and no content row changes. The join is the reason 13.2 corrected three spec codes first —
+   * `1.2.4` and `2.4.2` are UK GCE numbers and match no IAL section, so the drills would have
+   * been mounted here and appeared nowhere.
+   *
+   * The map is keyed by FLAT step index, like quizMap, and placement runs over the check-in
+   * slots only. `attempt` is bumped by the card's own "New figures" button; it is in the key
+   * as well as the seed so React rebuilds the card with empty inputs.
+   */
+  const [quantAttempts, setQuantAttempts] = useState({});
+  useEffect(() => { setQuantAttempts({}); quantMarked.current = new Set(); }, [sectionId]);
+
+  const quantMap = useMemo(() => {
+    const map = {};
+    if (!flatSteps.length) return map;
+    const unitCode = currentUnit?.code || '';
+    const forSection = templatesForSection({
+      subject: subjectFrom(unitCode),
+      unitCode,
+      number: currentSection?.number || '',
+    });
+    if (!forSection.length) return map;
+
+    const slots = flatSteps.map((s, i) => ({ s, i })).filter(({ s }) => s.type === 'checkin' || s.type === 'legacy');
+    // The chapter titles, so a drill lands on the check-in of the chapter that teaches it.
+    const placed = placeQuantItems(forSection, slots.map(({ s }) => s.blockTitle || s.block?.title || ''));
+    for (const [ordinal, templateId] of Object.entries(placed)) {
+      const slot = slots[Number(ordinal)];
+      if (slot) map[slot.i] = templateId;
+    }
+    return map;
+  }, [flatSteps, currentUnit?.code, currentSection?.number]);
 
   const practiceStepIndices = useMemo(() => Object.keys(practiceMap).map(Number).sort((a, b) => a - b), [practiceMap]);
 
@@ -553,6 +607,14 @@ export default function LearnModeTab({
   const currentDiagram = diagramMap[safeStep];
   const currentPractice = practiceMap[safeStep];
   const currentQuiz = quizMap[safeStep];
+  /* Built here rather than in the map, so the map holds template ids and stays stable while the
+     attempt counter moves. `quantItem` returns null for an id the registry no longer knows,
+     which keeps a renamed template from taking the step down with it. */
+  const currentQuantTemplate = quantMap[safeStep];
+  const currentQuantAttempt = quantAttempts[currentQuantTemplate] || 0;
+  const currentQuant = currentQuantTemplate
+    ? quantItem({ sectionId }, currentQuantTemplate, currentQuantAttempt)
+    : null;
   const isLastStep = safeStep === totalSteps - 1;
   const progressPct = ((safeStep + 1) / totalSteps) * 100;
   const blockCount = step?.blockCount || contentData.length;
@@ -563,10 +625,21 @@ export default function LearnModeTab({
   // must not promise one (see the comment beside the sentence below).
   const checkinIntro = (() => {
     if (step?.type !== 'checkin') return '';
-    const parts = [currentDiagram && 'the diagram', currentQuiz && 'a quick question', spaced && 'one thing from earlier'].filter(Boolean);
+    const parts = [
+      currentDiagram && 'the diagram',
+      currentQuiz && 'a quick question',
+      // Named, because a check-in that carries a six-mark calculation and does not say so is
+      // the same defect in reverse as promising a diagram there is none of (packet 16).
+      currentQuant && 'a calculation',
+      spaced && 'one thing from earlier',
+    ].filter(Boolean);
     if (!parts.length) return '';
     const list = parts.length === 1 ? parts[0] : `${parts.slice(0, -1).join(', ')} and ${parts[parts.length - 1]}`;
-    return `Before the next chapter: ${list}.`;
+    // There is no next chapter on the last check-in, and the button under it says "Complete
+    // topic". Packet 13.2's Verify B found it on all three sections it walked — on
+    // national-income that is exactly where the calculation sits, so the sentence naming the
+    // calculation was also the sentence promising a chapter that does not exist.
+    return `${isLastStep ? 'Before you finish' : 'Before the next chapter'}: ${list}.`;
   })();
 
   const practiceCard = (key) => (
@@ -751,6 +824,11 @@ export default function LearnModeTab({
                       subjectId={subjectId} sectionId={sectionId} stepIndex={safeStep}
                       onResult={onQuizResult} />
                   )}
+                  {currentQuant && (
+                    <CalculationItem key={currentQuant.id} item={currentQuant}
+                      onResult={(result) => onQuantResult(currentQuant.id, result)}
+                      onReseed={() => setQuantAttempts(a => ({ ...a, [currentQuantTemplate]: currentQuantAttempt + 1 }))} />
+                  )}
                   {currentPractice && practiceCard(`practice-${safeStep}`)}
 
                   {/* Spaced recall: from an earlier chapter, with the cue that says so (F038, F053). */}
@@ -796,6 +874,11 @@ export default function LearnModeTab({
                   {step.block.examTip && <div className="exam-tip"><div className="exam-tip-label">Exam Tip</div>{step.block.examTip}</div>}
                   {currentDiagram && <InlineDiagram diagram={currentDiagram} />}
                   {currentQuiz && <InlineQuiz key={`quiz-${safeStep}`} question={currentQuiz} subjectId={subjectId} sectionId={sectionId} stepIndex={safeStep} onResult={onQuizResult} />}
+                  {currentQuant && (
+                    <CalculationItem key={currentQuant.id} item={currentQuant}
+                      onResult={(result) => onQuantResult(currentQuant.id, result)}
+                      onReseed={() => setQuantAttempts(a => ({ ...a, [currentQuantTemplate]: currentQuantAttempt + 1 }))} />
+                  )}
                   {currentPractice && practiceCard(`practice-${safeStep}`)}
                   {step.block.title && <ExplainItBackUpgraded key={`explain-${safeStep}`} title={step.block.title} sectionId={sectionId} blockIndex={step.blockIndex} onAskTutor={onAskTutor} isPremium={isPremium} onAttempt={onExplainAttempt} rubric={chapterRubric(contentData, step.blockIndex, currentUnit?.code)} />}
                 </div>

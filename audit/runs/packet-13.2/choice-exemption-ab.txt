@@ -1,0 +1,18 @@
+A/B — the hole Verify A round 4 found in check 7, and whether it is closed.
+
+The finding: payback's last step offered the whole period, so two of its three choices
+printed the months answer BY CONSTRUCTION, on every draw. The first version of check 7
+exempted bare small integers — written for the 'year 4' coincidence in a stem — and a month
+count is a small integer, so the guard saw nothing. Round 4's attack: type the month that
+appears twice, score 2 of 2, in 5,000 draws out of 5,000, with no arithmetic.
+
+A · control: the year-only choice, and the exemption lifted for choices
+quant-check: 8 templates × 5000 draws = 40000 items, all clean
+
+B1 · the whole-period choice restored, guard AS SHIPPED (choices scanned without the exemption)
+quant-check: 5000 failures in 40000 items
+  printed answer (5000)
+    payback [check-payback-0] months: the answer 7 is printed in a choice as "7", so a student who typed a figure they could see would be marked correct
+
+B2 · the same sabotage against the guard AS IT WAS — small integers exempt everywhere
+quant-check: 8 templates × 5000 draws = 40000 items, all clean

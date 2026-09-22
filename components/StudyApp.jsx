@@ -1111,7 +1111,9 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       case 'diagrams': return <DiagramsTab data={sectionData.diagrams} />;
       case 'practice': return <PracticeQuestionsTab questions={sectionData.practice} onAskTutor={isPremium ? goToTutor : null} sectionNumber={currentSection?.number} unitCode={currentUnit?.code} />;
       case 'flashcards': return <FlashcardsTab cards={sectionData.flashcards} totalCount={sectionData.counts?.flashcards} sectionId={activeSection} previewMode={isPreview} />;
-      case 'quiz': return <QuizTab questions={sectionData.quiz} totalCount={sectionData.counts?.quiz} sectionId={activeSection} onAskTutor={isPremium ? goToTutor : null} previewMode={isPreview} />;
+      /* unitCode and sectionNumber are packet 13.2's: the Quiz tab derives its calculation
+         drill from them, the same two fields PracticeQuestionsTab above already takes. */
+      case 'quiz': return <QuizTab questions={sectionData.quiz} totalCount={sectionData.counts?.quiz} sectionId={activeSection} onAskTutor={isPremium ? goToTutor : null} previewMode={isPreview} unitCode={currentUnit?.code} sectionNumber={currentSection?.number} />;
       case 'mistakes': return <MistakesTab data={sectionData.mistakes} subjectId={activeSubjectId} sectionId={activeSection} quizData={sectionData.quiz} />;
       case 'tutor': return <TutorTab section={currentSection} unit={currentUnit} contentData={sectionData.content} pendingPrompt={pendingTutorPrompt} onPromptConsumed={() => setPendingTutorPrompt(null)} />;
       case 'extras': return <ExtrasTab data={sectionData.extras} totalCount={(sectionData.counts?.extrasChains || 0) + (sectionData.counts?.extrasEvaluation || 0)} previewMode={isPreview} />;

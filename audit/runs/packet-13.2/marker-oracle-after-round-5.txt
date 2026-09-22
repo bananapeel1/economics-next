@@ -1,0 +1,18 @@
+
+percentage-change-business  —  CLEAN
+
+breakeven  —  CLEAN
+
+arr  —  CLEAN
+
+payback  —  CLEAN
+
+ped  —  CLEAN
+
+percentage-change-economics  —  1 leaking (step ← field) pairs
+       9/5000  forecast ← change.method   e.g. check-percentage-change-economics-679: answer 100.05, visible 100
+            "(new figure − original figure) ÷ original figure × 100"
+
+index-numbers  —  CLEAN
+
+multiplier  —  CLEAN

@@ -1,0 +1,28 @@
+A/B — does the new 'printed answer' check catch what it was written for?
+Each template's own rejection is removed, one at a time, and the guard re-run at 5,000 draws.
+
+A · control: all five rejections in place
+quant-check: 8 templates × 5000 draws = 40000 items, all clean
+
+B1 · breakeven: the variable cost may equal the contribution again
+quant-check: 451 failures in 40000 items
+  printed answer (229)
+
+B2 · ped: an answer may be a printed price or quantity again
+quant-check: 1840 failures in 40000 items
+  printed answer (758)
+
+B3 · arr: the total net return may equal a cash flow again
+quant-check: 508 failures in 40000 items
+  printed answer (254)
+
+B4 · payback: the shortfall may equal a cash flow again
+quant-check: 985 failures in 40000 items
+  printed answer (417)
+
+B5 · percentage-change: the third choice may print the answer again
+quant-check: 2 failures in 40000 items
+  printed answer (2)
+
+A · restored
+quant-check: 8 templates × 5000 draws = 40000 items, all clean
