@@ -42,7 +42,8 @@ import { supabase } from '../../scripts/_db.mjs';
 import { sectionPayload, FREE_QUIZ_MAX, PRETEST_HEADROOM } from '../../lib/preview-limits.js';
 import { pickPretestQuestions } from '../../lib/pretest-pool.js';
 import { buildSteps } from '../../lib/learn-steps.js';
-import { distributeItems, resolvePinnedItem, fallbackItemForBlock } from '../../components/learn-mode/utils.js';
+import { resolvePinnedItem, fallbackItemForBlock } from '../../components/learn-mode/utils.js';
+import { placeChapterItems } from '../../lib/checkin-placement.js';
 import { bestUnclaimedIndex } from '../../lib/checkin-fallback.js';
 
 const args = process.argv.slice(2);
@@ -76,10 +77,25 @@ function checkinQuestions(quizData, content) {
     return { reserved: filled.filter(Boolean), slots: checkins.length, starved };
   }
 
-  const map = distributeItems(quizData, slots.length);
-  const reserved = Object.values(map).filter(Boolean);
-  // the legacy path spreads whatever it is sent, so a short chapter list is always the payload's doing
-  return { reserved, slots: slots.length, starved: slots.length - reserved.length };
+  /*
+   * THE UNPINNED PATH SERVES NOTHING, and this census must say so.
+   *
+   * It used to read `distributeItems(quizData, slots.length)` — its own copy of what the client did.
+   * When LearnModeTab stopped placing positionally, this line did not, and for one run this census
+   * reported "chapters served 214 / 214" while the client served 52 fewer: the exact failure this
+   * file's own header names, "a census that reimplements the client tests the reimplementation",
+   * committed by the file that names it.
+   *
+   * So it composes lib/checkin-placement.js, the one function the client calls. A chapter here is
+   * UNWRITTEN, not STARVED: nothing was withheld from it, its section simply pins nothing and no
+   * question can be attributed to it. The fix is a pin, and audit/scripts/checkin-attribution.mjs
+   * is what refuses to let a wrong one stand in for it.
+   */
+  const { quizMap } = placeChapterItems({
+    flatSteps, contentData: content, diagramsData: [], quizData, practiceData: [],
+  });
+  const reserved = Object.values(quizMap).filter(Boolean);
+  return { reserved, slots: slots.length, starved: 0, unpinnedSilent: slots.length - reserved.length };
 }
 
 /*

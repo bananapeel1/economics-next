@@ -2,7 +2,13 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { highlightGlossaryTerms } from '@/lib/glossary-highlight';
 import { recordReview } from '@/lib/strength';
-import { distributeItems, matchDiagramsToBlocks, resolvePinnedItem, resolvePinnedDiagram, fallbackItemForBlock } from './learn-mode/utils';
+// Placement — which question, worked example and diagram a chapter shows — is in
+// lib/checkin-placement.js, shared with the guard that checks it. `distributeItems` is deliberately
+// not imported anywhere in the client any more: the positional map it produced is what served a
+// chapter-3 question at chapter 1 on 21 sections. It stays exported from utils.js only because
+// audit/scripts/exposure-census.mjs and lib/preview-limits.test.mjs model the OLD behaviour in
+// order to prove it is gone.
+import { placeChapterItems } from '@/lib/checkin-placement';
 import { buildSteps, pickSpacedRecall, clampStep, firstStepOfBlock, contentVersion, resolvePointer } from '@/lib/learn-steps';
 import InlineDiagram from './learn-mode/InlineDiagram';
 import InlinePractice from './learn-mode/InlinePractice';
@@ -272,61 +278,18 @@ export default function LearnModeTab({
 
 
   // ── Distribute diagrams/quiz/practice to check-in steps ──
-  const sortedPractice = useMemo(() => [...(practiceData || [])].sort((a, b) => a.marks - b.marks), [practiceData]);
+  // (practice is sorted by marks inside placeChapterItems, which is the only consumer)
 
-  const { diagramMap, quizMap, practiceMap } = useMemo(() => {
-    const dMap = {}, qMap = {}, pMap = {};
-    if (!flatSteps.length) return { diagramMap: dMap, quizMap: qMap, practiceMap: pMap };
-
-    const slots = flatSteps.map((s, i) => ({ s, i })).filter(({ s }) => s.type === 'checkin' || s.type === 'legacy');
-    const hasRefs = slots.some(({ s }) => s.diagramRef || s.quizIndices || s.practiceIndices || s.diagramId || s.quizIds || s.practiceIds);
-
-    if (hasRefs) {
-      const usedDiagrams = new Set();
-      const usedQuiz = new Set();
-      const usedPractice = new Set();
-
-      slots.forEach(({ s: step, i: idx }) => {
-        if (step.type !== 'checkin') return;
-        const diagram = resolvePinnedDiagram(diagramsData, { id: step.diagramId, ref: step.diagramRef }, usedDiagrams);
-        if (diagram) dMap[idx] = diagram;
-        const quiz = resolvePinnedItem(quizData, { ids: step.quizIds, indices: step.quizIndices }, usedQuiz);
-        if (quiz) qMap[idx] = quiz;
-        // practiceIndices are authored against the RAW practiceData order (F013, F040, F111).
-        const practice = resolvePinnedItem(practiceData, { ids: step.practiceIds, indices: step.practiceIndices }, usedPractice);
-        if (practice) pMap[idx] = practice;
-      });
-
-      // Title fallback, per block (F041): fills only slots left empty by a failed or absent ref,
-      // and only from diagrams no block has claimed, so it can never displace a pin that worked.
-      const unclaimed = (diagramsData || []).map((d, di) => ({ d, di })).filter(({ di }) => !usedDiagrams.has(di));
-      if (unclaimed.length) {
-        const remaining = slots.filter(({ s, i }) => s.type === 'checkin' && !dMap[i]);
-        const byTitle = matchDiagramsToBlocks(unclaimed.map(({ d }) => d), remaining.map(({ s }) => ({ title: s.blockTitle })));
-        for (const [localIdx, diagram] of Object.entries(byTitle)) {
-          const slot = remaining[Number(localIdx)];
-          if (slot && !dMap[slot.i]) dMap[slot.i] = diagram;
-        }
-      }
-
-      // The same fallback for the quiz (V026). A chapter that pins nothing, in a section where the
-      // others do, resolved to nothing at all above — for a paying student as well as a free one.
-      // It runs after the pins, out of what no pin claimed, so it can never displace one that worked.
-      slots.forEach(({ s: step, i: idx }) => {
-        if (step.type !== 'checkin' || qMap[idx]) return;
-        const spare = fallbackItemForBlock(quizData, step.blockTitle, usedQuiz);
-        if (spare) qMap[idx] = spare;
-      });
-    } else {
-      // Legacy fallback: spread items across the chapter slots.
-      const byBlock = matchDiagramsToBlocks(diagramsData, contentData);
-      slots.forEach(({ s, i }) => { if (byBlock[s.blockIndex]) dMap[i] = byBlock[s.blockIndex]; });
-      const q = distributeItems(quizData, slots.length);
-      const p = distributeItems(sortedPractice, slots.length);
-      slots.forEach(({ i }, k) => { if (q[k]) qMap[i] = q[k]; if (p[k]) pMap[i] = p[k]; });
-    }
-    return { diagramMap: dMap, quizMap: qMap, practiceMap: pMap };
-  }, [flatSteps, contentData, diagramsData, quizData, practiceData, sortedPractice]);
+  /*
+   * Placement moved to lib/checkin-placement.js so that this component and
+   * audit/scripts/checkin-attribution.mjs share ONE statement about which item a chapter shows.
+   * A guard holding its own copy of this branch would keep passing after the branch changed —
+   * which is how the positional map survived so long.
+   */
+  const { diagramMap, quizMap, practiceMap } = useMemo(
+    () => placeChapterItems({ flatSteps, contentData, diagramsData, quizData, practiceData }),
+    [flatSteps, contentData, diagramsData, quizData, practiceData],
+  );
 
   /* ── Quantitative drills (packet 13.2) ──
    *

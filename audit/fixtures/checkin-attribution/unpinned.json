@@ -1,0 +1,20 @@
+{
+  "note": "A wholly unpinned section — the 21-live-section case. Before this packet, distributeItems placed quiz[0] on chapter 1 whatever it was about; on types-sizes-businesses that served a horizontal-integration question under Business Objectives. It must now serve NOTHING: zero items placed, zero failures. The two banks are deliberately about a LATER chapter, so a regression to positional placement makes this fixture fail rather than pass quietly.",
+  "sections": [
+    {
+      "slug": "fixture-unpinned",
+      "content": [
+        { "title": "Business Objectives", "subsections": [{ "title": "Profit maximisation" }] },
+        { "title": "Growth of Firms", "subsections": [{ "title": "Mergers and integration" }] }
+      ],
+      "quiz": [
+        { "question": "Which of the following best describes horizontal integration?" },
+        { "question": "A firm that acquires one of its suppliers is an example of:" }
+      ],
+      "practice": [
+        { "marks": 4, "question": "Explain the term limited liability." }
+      ],
+      "diagrams": []
+    }
+  ]
+}
