@@ -251,10 +251,19 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   const subjectSectionIds = new Set(sections.filter(s => subjectUnits.some(u => u.id === s.unit_id)).map(s => s.id));
   const subjectSections = sections.filter(s => subjectSectionIds.has(s.id));
 
-  // Determine starting section: URL param > localStorage last-visited > initial > first
-  const urlSection = typeof window !== 'undefined'
-    ? new URLSearchParams(window.location.search).get('section')
-    : null;
+  // Determine starting section: URL > localStorage last-visited > initial > first.
+  //
+  // `urlSectionParam` (not just the ?section= query) is what the URL asked for:
+  // on /economics/unit-3/types-sizes-businesses the section lives in the path,
+  // and the server hands it down as requestedSectionId. Reading only the query
+  // string here meant a topic URL had no say, so `lastVisited` won and the app
+  // opened the previously visited section instead — the URL, the page title and
+  // the SSR'd notes all said 3.3.1 while the app showed 1.3.1. The inline script
+  // on the topic page pre-seeds last-visited-section to paper over this, but it
+  // only runs on a hard load: on a client-side navigation from the subject
+  // landing page React inserts that <script> after this state has already been
+  // computed, so every in-app link into a topic opened the wrong section.
+  const urlSection = urlSectionParam;
   const lastVisited = typeof window !== 'undefined'
     ? localStorage.getItem('last-visited-section')
     : null;
@@ -296,6 +305,10 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const dataMatchesSection = startSection === initialSectionId;
   const [sectionData, setSectionData] = useState(dataMatchesSection ? initialSectionData : null);
+  // Which section `sectionData` actually belongs to. Kept next to the data so a
+  // response that arrives out of order can never be rendered under another
+  // section's heading.
+  const [sectionDataId, setSectionDataId] = useState(dataMatchesSection ? initialSectionId : null);
   const [isInitial, setIsInitial] = useState(dataMatchesSection);
   const [glossaryTerms, setGlossaryTerms] = useState([]);
   const [contentStepInfo, setContentStepInfo] = useState(null);
@@ -370,6 +383,14 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   const tabContentRef = useRef(null);
   const lastScrollTop = useRef(0);
   const scrollThreshold = 60;
+
+  // Bumped on every section-data request. A response whose token is no longer
+  // the current one belongs to a section the student has already left, and is
+  // dropped: /api/sections/:id has no ordering guarantee, so a slow request for
+  // the old section was landing after a fast one for the new section and
+  // overwriting it — the header and sidebar said 3.3.1 while the body showed
+  // 1.3.1's notes.
+  const sectionLoadToken = useRef(0);
 
   const currentSection = subjectSections.find(s => s.id === activeSection) || subjectSections[0];
   const currentUnit = units.find(u => u.id === currentSection?.unit_id);
@@ -475,19 +496,31 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
        */
       if (!initialSectionData?.paidPending) return;
       let cancelled = false;
-      fetch(`/api/sections/${activeSection}`)
+      const wantedOnMount = activeSection;
+      const mountToken = ++sectionLoadToken.current;
+      fetch(`/api/sections/${wantedOnMount}`)
         .then((res) => (res.ok ? res.json() : null))
-        .then((data) => { if (data && !cancelled) setSectionData(data); })
+        .then((data) => {
+          if (!data || cancelled || mountToken !== sectionLoadToken.current) return;
+          setSectionData(data);
+          setSectionDataId(wantedOnMount);
+        })
         .catch((e) => console.warn('Failed to load the full section', e));
       return () => { cancelled = true; };
     }
+    const wanted = activeSection;
+    const token = ++sectionLoadToken.current;
     async function loadSection() {
       setSectionData(null);
+      setSectionDataId(null);
       try {
-        const res = await fetch(`/api/sections/${activeSection}`);
+        const res = await fetch(`/api/sections/${wanted}`);
+        if (token !== sectionLoadToken.current) return;
         if (res.ok) {
           const data = await res.json();
+          if (token !== sectionLoadToken.current) return;
           setSectionData(data);
+          setSectionDataId(wanted);
         }
       } catch (e) {
         console.warn('Failed to load section data', e);
@@ -645,15 +678,20 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       setActiveSection(firstId);
       setIsInitial(false);
       setSectionData(null);
+      setSectionDataId(null);
       setActiveTab('learn-mode');
       setContentStepInfo(null);
       // Load the new section's own saved step instead of carrying the old section's step across.
       const step = readSavedStep(subjectId, firstId);
       setLearnModeSection(step);
       setLearnModeResuming(step > 0);
+      const token = ++sectionLoadToken.current;
       fetch(`/api/sections/${firstId}`)
         .then(res => res.ok ? res.json() : null)
-        .then(data => { if (data) setSectionData(data); })
+        .then(data => {
+          if (token !== sectionLoadToken.current) return;
+          if (data) { setSectionData(data); setSectionDataId(firstId); }
+        })
         .catch(() => {});
     }
   }
@@ -694,7 +732,9 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     const awaitingPaid = sectionData?.paidPending && isPremium
       && (PREMIUM_TABS.has(activeTab) || PREVIEW_TABS.has(activeTab));
 
-    if (!sectionData || awaitingPaid) {
+    // Never render one section's material under another section's heading: if the data in
+    // hand belongs to a section the reader has already left, wait for the right data.
+    if (!sectionData || sectionDataId !== activeSection || awaitingPaid) {
       return (
         <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--text-muted)' }}>
           <div style={{ fontSize: 48, marginBottom: 16 }}>&#128218;</div>
