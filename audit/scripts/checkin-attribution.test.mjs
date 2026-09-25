@@ -83,3 +83,64 @@ test('the rule would have caught the defect that shipped: positional placement o
   assert.ok(failures.some((f) => f.block === 'Business Objectives'),
     'the chapter the reader was actually on must be one of the failures');
 });
+
+/* Packet 2.91, V056 — the diagram door. The word rule above cannot see it: the matcher never places
+   a diagram without a shared title word, so every title-matched diagram passes it. The guard judges
+   whether an AUTHOR placed the diagram, from `placeChapterItems`' own `diagramHow`. */
+import { placeChapterItems } from '../../lib/checkin-placement.js';
+
+test('a diagram placed by a title match FAILS in a corpus that must decide (the 3.3.1 shape)', () => {
+  const { code, json } = runFixture('undecided-diagram');
+  assert.equal(code, 1, 'the staged corpus and fixtures are strict');
+  assert.equal(json.failures.length, 1, JSON.stringify(json.failures));
+  assert.equal(json.failures[0].rule, 'diagram-undecided');
+  assert.equal(json.failures[0].block, 'Types of Business Organisation', 'the chapter before the one that teaches integration');
+});
+
+test('the same section with the diagram pinned, and the other chapter decided none, passes', () => {
+  const { code, json } = runFixture('diagram-pinned');
+  assert.equal(code, 0, JSON.stringify(json.failures));
+});
+
+test('excluding a chapter does not turn a guess elsewhere into a decision', () => {
+  // Decide chapter 1 shows none but leave chapter 2 unpinned: the matcher now puts the diagram on
+  // chapter 2 — the right chapter, by luck of one word — and it is still a guess.
+  const f = JSON.parse(fs.readFileSync(path.join(FIX, 'diagram-pinned.json'), 'utf8')).sections[0];
+  f.content[1] = { ...f.content[1] };
+  delete f.content[1].diagramId;
+  const steps = buildSteps(f.content);
+  const { diagramMap, diagramHow } = placeChapterItems({ flatSteps: steps, contentData: f.content, diagramsData: f.diagrams, quizData: f.quiz, practiceData: [] });
+  const served = steps.map((s, i) => ({ s, i })).filter(({ s, i }) => s.type === 'checkin' && diagramMap[i])
+    .map(({ s, i }) => ({ kind: 'diagram', block: s.blockTitle, item: diagramMap[i], pinned: diagramHow[i] === 'pin', how: diagramHow[i] }));
+  assert.deepEqual(served.map((r) => r.block), ['Growth of Firms'], 'CONTROL: the null moved the guess to chapter 2');
+  const { failures } = judgeServed(served, 'synthetic');
+  assert.equal(failures.length, 1);
+  assert.equal(failures[0].rule, 'diagram-undecided');
+});
+
+test('on live the rule LISTS rather than fails: only a publish changes live', () => {
+  const served = [{ kind: 'diagram', block: 'Types of Business Organisation', how: 'title', pinned: false,
+    item: { id: 'd', title: 'Types of Business Growth (Integration)' } }];
+  const live = judgeServed(served, 'synthetic', { strict: false });
+  assert.equal(live.failures.length, 0);
+  assert.equal(live.undecided.length, 1);
+  const staged = judgeServed(served, 'synthetic', { strict: true });
+  assert.equal(staged.failures.length, 1);
+});
+
+test('the diagram rule catches the placement that shipped on 3.3.1, which the word rule passes', () => {
+  // The real section as it was on 11 September, placed by today's code. This is the V056 report:
+  // chapter 2 "Types of Business Organisation" shows the integration diagram.
+  const j = JSON.parse(fs.readFileSync(path.join(ROOT, 'audit/content-sections/economics__types-sizes-businesses.json'), 'utf8'));
+  const steps = buildSteps(j.content) || [];
+  const { diagramMap, diagramHow } = placeChapterItems({ flatSteps: steps, contentData: j.content, diagramsData: j.diagrams, quizData: j.quiz, practiceData: j.practice });
+  const served = steps.map((s, i) => ({ s, i })).filter(({ s, i }) => s.type === 'checkin' && diagramMap[i])
+    .map(({ s, i }) => ({ kind: 'diagram', block: s.blockTitle, item: diagramMap[i], pinned: diagramHow[i] === 'pin', how: diagramHow[i] }));
+  const integration = served.find((r) => /Integration/.test(r.item.title));
+  assert.equal(integration?.block, 'Types of Business Organisation', 'the defect as reported');
+  // Why the diagram rule exists: the word rule alone passes it, because the matcher needs a shared word.
+  const wordOnly = judgeServed(served.map((r) => ({ ...r, how: 'pin' })), 'types-sizes-businesses');
+  assert.equal(wordOnly.failures.length, 0, 'the word rule cannot see it');
+  const { failures } = judgeServed(served, 'types-sizes-businesses');
+  assert.ok(failures.some((f) => f.rule === 'diagram-undecided' && f.block === 'Types of Business Organisation'));
+});

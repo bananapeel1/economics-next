@@ -1,0 +1,740 @@
+{
+ "section_id": "poverty-inequality",
+ "subject": "economics",
+ "label": "2026-09-25-pre-packet-2.91",
+ "tables": {
+  "section_content": [
+   {
+    "id": "poverty-inequality:block:f33d3bc6",
+    "title": "Types of Poverty",
+    "sections": [
+     {
+      "id": "poverty-inequality:sub:absolute-relative-poverty",
+      "body": [
+       {
+        "text": "**Absolute poverty** is defined as an income level below which a person cannot meet basic needs — food, clean water, shelter, and clothing. The World Bank sets this at $2.15 per day (2022 PPP). Anyone below this threshold lacks the resources for physical survival regardless of what others in their society earn.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Relative poverty** is defined in relation to the living standards of the rest of society — typically below 60% of median household income. A person can be lifted from absolute poverty but still be relatively poor if the gap between them and the median widens. This distinction matters enormously for policy: economic growth reliably reduces absolute poverty but may worsen relative poverty if the gains accrue disproportionately to the rich.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The two measures can move in opposite directions. A country experiencing rapid growth may see millions escape absolute poverty while inequality simultaneously widens — meaning relative poverty rises. Policymakers must therefore track both measures to get an accurate picture of living standards.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Economic growth raises average incomes",
+         "Absolute poverty falls as more people cross the survival threshold",
+         "But if the rich gain proportionally more",
+         "Relative poverty may rise even as absolute poverty falls"
+        ],
+        "result": "Growth is necessary but insufficient — distribution matters too",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Absolute and Relative Poverty",
+      "keyIdea": "Absolute poverty means falling below the survival threshold ($2.15/day), while relative poverty means earning below 60% of the median — growth can reduce one while worsening the other.",
+      "examMatters": "Examiners frequently ask you to distinguish between absolute and relative poverty. Always define both precisely, then explain how a single policy (e.g. GDP growth) can reduce one while worsening the other — this analytical distinction earns the highest marks.",
+      "realExample": {
+       "text": "China lifted over 800 million people out of absolute poverty between 1978 and 2020 — the largest poverty reduction in history. However, its Gini coefficient rose from roughly 0.30 to 0.47 over the same period, meaning relative inequality worsened dramatically even as the poorest gained.",
+       "emoji": "🇨🇳"
+      },
+      "misconception": "Students assume economic growth automatically reduces all forms of poverty. Wrong — growth reduces absolute poverty but can worsen relative poverty if income gains are unevenly distributed. Instead write: growth is necessary to reduce absolute poverty, but without redistribution policies, the gap between rich and poor may widen."
+     },
+     {
+      "id": "poverty-inequality:sub:lorenz-curve-gini",
+      "body": [
+       {
+        "text": "The **Lorenz curve** is a graphical representation of income or wealth distribution. It plots the cumulative percentage of the population (from poorest to richest) on the x-axis against the cumulative percentage of income they receive on the y-axis. A perfectly equal society produces a 45-degree line; the further the Lorenz curve bows away from this line, the more unequal the distribution.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The **Gini coefficient** quantifies inequality as a single number. It equals the area between the line of equality and the Lorenz curve (area A) divided by the total area under the line of equality (A + B). A Gini of 0 means perfect equality; a Gini of 1 means one person holds all income. Most countries fall between 0.25 and 0.65.",
+        "type": "paragraph"
+       },
+       {
+        "text": "A key limitation is that two very different income distributions can produce the same Gini coefficient — a country where the middle class earns disproportionately less and one where the poorest earn disproportionately less might both have a Gini of 0.40. The Gini also ignores non-monetary factors like access to public services, which can significantly affect real living standards.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Lorenz Curve and Gini Coefficient",
+      "keyIdea": "The Lorenz curve plots cumulative income share against cumulative population share, and the Gini coefficient (A divided by A+B) converts that picture into a single number between 0 and 1.",
+      "examMatters": "Examiners expect you to draw a Lorenz curve, label the line of equality, identify areas A and B, and state the formula Gini = A/(A+B). For evaluation, always note that the same Gini can arise from very different underlying distributions — this shows analytical depth.",
+      "realExample": {
+       "text": "South Africa has the world's highest Gini coefficient at approximately 0.63, reflecting extreme inequality rooted in apartheid-era land and wealth distribution. By contrast, Denmark's Gini of roughly 0.28 reflects decades of progressive taxation and universal public services compressing the income distribution.",
+       "emoji": "🇿🇦"
+      },
+      "misconception": "Students treat the Gini coefficient as a perfect measure of inequality. Wrong — two countries with identical Gini values can have very different distributions, and the Gini ignores non-income factors like free healthcare. Instead write: the Gini is a useful summary statistic, but always acknowledge its limitations — it cannot reveal where in the distribution inequality is concentrated."
+     }
+    ],
+    "takeaway": [
+     "Absolute poverty = below survival threshold; relative poverty = below 60% of median income.",
+     "Growth reduces absolute poverty but may worsen relative poverty if gains are unevenly distributed.",
+     "The Gini coefficient (0 to 1) summarises inequality but cannot show where in the distribution the problem lies.",
+     "Always evaluate both measures together — neither tells the full story alone."
+    ],
+    "quizIndices": [
+     0
+    ],
+    "practiceIndices": [
+     0
+    ]
+   },
+   {
+    "id": "poverty-inequality:block:00abd5e2",
+    "title": "Causes and Consequences",
+    "sections": [
+     {
+      "id": "poverty-inequality:sub:causes-inequality",
+      "body": [
+       {
+        "text": "**Wage differentials** are the primary driver of income inequality. Workers with higher human capital — education, skills, experience — command higher wages because their **marginal revenue product (MRP)** is greater. A surgeon earns more than a cleaner because the revenue generated by each additional hour of their labour differs enormously. These differentials are amplified by barriers to entry: professional qualifications restrict supply, pushing wages higher for those inside the profession.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Wealth concentration** reinforces inequality across generations. The wealthy earn investment returns, inherit assets, and can fund better education for their children — creating a self-perpetuating cycle. **Globalisation** has widened inequality within countries: highly skilled workers who can sell services globally see their earnings soar, while low-skilled workers face wage competition from cheaper overseas labour.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Tax and transfer policy** plays a crucial role. Progressive tax systems redistribute income downward, while regressive taxes (like VAT) take a larger proportion from the poor. Government choices about tax rates, loopholes, and public spending significantly shape the final income distribution after market forces have determined pre-tax incomes.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Globalisation opens international markets",
+         "Skilled workers sell services globally at premium wages",
+         "Unskilled workers face competition from lower-wage economies",
+         "Income gap between skilled and unskilled widens"
+        ],
+        "result": "Globalisation increases inequality within countries even as it may reduce it between countries",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Causes of Inequality",
+      "keyIdea": "Inequality stems from wage differentials driven by human capital and MRP, wealth concentration passed between generations, globalisation rewarding skilled workers, and tax policy choices.",
+      "examMatters": "Examiners want you to analyse multiple causes, not just list them. Link each cause to a mechanism: human capital explains wage differentials via MRP, globalisation works through labour market competition, and tax policy operates through redistribution. Chains of reasoning earn higher marks than isolated points.",
+      "realExample": {
+       "text": "In the United States, the CEO-to-worker pay ratio rose from approximately 20:1 in 1965 to around 350:1 in 2023. This dramatic widening reflects rising returns to human capital at the top, stock-based compensation, and tax policy changes that reduced top marginal rates from 91% to 37%.",
+       "emoji": "🇺🇸"
+      },
+      "misconception": "Students say inequality is caused only by differences in effort or talent. Wrong — structural factors like inherited wealth, access to education, discrimination, and tax policy all shape the distribution independently of individual merit. Instead write: inequality reflects both market outcomes (MRP differences) and structural factors (wealth inheritance, institutional design, policy choices)."
+     },
+     {
+      "id": "poverty-inequality:sub:consequences-redistribution",
+      "body": [
+       {
+        "text": "Inequality has significant economic consequences. **Reduced social mobility** means that where you are born on the income ladder increasingly determines where you end up — talent is wasted when the poor cannot access education or capital. Lower aggregate demand results because the poor have a **higher marginal propensity to consume (MPC)** — transferring income from rich to poor increases total spending in the economy.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Redistribution tools include **progressive taxation** (higher earners pay a larger share), **transfer payments** (benefits, pensions, tax credits), and **in-kind provision** (free healthcare, education). Each faces the **equity-efficiency trade-off**: too much redistribution may reduce incentives to work and invest, while too little allows poverty and wasted human potential.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The **Laffer curve** suggests that beyond a certain tax rate, revenue actually falls because high rates discourage economic activity. **Poverty traps** arise when the withdrawal of benefits as income rises creates effective marginal tax rates above 80%, removing the incentive to work more. Good policy design must balance adequate support with maintained work incentives.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Government raises progressive taxes and increases transfers",
+         "Post-tax income distribution becomes more equal",
+         "But high marginal rates may reduce work incentives",
+         "Equity-efficiency trade-off must be managed"
+        ],
+        "result": "Redistribution improves equity but risks reducing economic efficiency if poorly designed",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Consequences and Redistribution",
+      "keyIdea": "High inequality reduces social mobility and aggregate demand (the poor have a higher MPC), creating an equity-efficiency trade-off that redistribution policies attempt to navigate.",
+      "examMatters": "Examiners love the equity-efficiency trade-off as an evaluation theme. Go beyond the basic trade-off: argue that some redistribution (e.g. funding education) improves both equity and efficiency by developing human capital, while other forms (e.g. poorly designed benefits) may create poverty traps — distinguish between the two for top marks.",
+      "realExample": {
+       "text": "The Scandinavian model — particularly Sweden and Denmark — combines high redistribution through progressive taxation and generous public services with high social mobility and strong economic performance. Top marginal tax rates exceed 55%, yet these countries consistently rank among the most competitive economies, challenging the simple equity-efficiency trade-off narrative.",
+       "emoji": "🇸🇪"
+      },
+      "misconception": "Students assume redistribution always reduces efficiency. Wrong — the Scandinavian evidence shows that well-designed redistribution can enhance efficiency by improving human capital and social mobility. Instead write: the equity-efficiency trade-off is real, but its severity depends on policy design — universal services and well-targeted transfers can improve both equity and long-run growth."
+     }
+    ],
+    "takeaway": [
+     "Inequality is caused by wage differentials (MRP), wealth concentration, globalisation, and tax policy.",
+     "High inequality reduces social mobility and aggregate demand (poor have higher MPC).",
+     "Redistribution uses progressive taxes, transfers, and in-kind provision — but faces the equity-efficiency trade-off.",
+     "Poverty traps and the Laffer curve constrain how far redistribution can go without undermining incentives."
+    ],
+    "quizIndices": [
+     6
+    ],
+    "practiceIndices": [
+     1
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "flow": {
+     "steps": [
+      "Economic growth raises average incomes",
+      "Absolute poverty may fall",
+      "But if gains accrue to the rich, relative poverty may rise"
+     ],
+     "result": "Growth is necessary but not sufficient — distribution matters for relative poverty",
+     "resultType": "neutral"
+    },
+    "meta": "4 concepts",
+    "title": "Absolute and Relative Poverty",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Absolute poverty</strong> — inability to afford the basic necessities of life (food, shelter, clean water); often defined as living on less than $2.15/day (World Bank).",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Relative poverty</strong> — having an income significantly below the average for that society; typically defined as below 60% of median household income.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Economic growth can reduce <strong>absolute</strong> poverty by raising incomes, but may increase <strong>relative</strong> poverty if the rich gain more from growth than the poor.",
+        "type": "mech"
+       },
+       {
+        "text": "A country can have zero absolute poverty but high relative poverty (e.g. rich Nordic countries have relative poverty because some households earn much less than the median).",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Examiners expect you to specify which type of poverty you are discussing. Policies to reduce absolute poverty (economic growth, FDI) differ from policies to reduce relative poverty (redistribution, minimum wage).",
+        "type": "imp"
+       },
+       {
+        "text": "Poverty links to globalisation (4.3.1): export-led growth has dramatically reduced absolute poverty in East Asia, but globalisation may increase relative poverty within developed countries.",
+        "type": "link"
+       }
+      ],
+      "title": "KEY DISTINCTIONS"
+     }
+    ],
+    "keyIdea": "Poverty comes in two fundamentally different forms — absolute poverty is about survival, while relative poverty is about social exclusion — and tackling one does not necessarily tackle the other.",
+    "takeaway": [
+     "Absolute poverty = below survival threshold; relative = below social norm.",
+     "Growth reduces absolute poverty but may worsen relative poverty.",
+     "Always specify which type of poverty — exam questions test this distinction."
+    ],
+    "examMatters": "Examiners test whether you understand the distinction. Always define both types and explain why growth reduces absolute poverty more reliably than relative poverty. Use examples: China reduced absolute poverty dramatically, but inequality (Gini coefficient) has risen.",
+    "misconception": "Students say growth eliminates poverty. Wrong because growth reduces absolute poverty but can worsen relative poverty if inequality rises. Instead write: growth is the most powerful tool against absolute poverty, but reducing relative poverty requires deliberate redistribution and inclusive economic policies."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Rank population by income",
+      "Plot cumulative income share (Lorenz curve)",
+      "Calculate Gini = A/(A+B) from the diagram"
+     ],
+     "result": "Single number summarising income inequality for comparison over time or between countries",
+     "resultType": "neutral"
+    },
+    "meta": "4 concepts",
+    "title": "Measuring Inequality: Lorenz Curve and Gini Coefficient",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Lorenz curve</strong> — a diagram plotting the cumulative percentage of income against the cumulative percentage of the population, ranked from poorest to richest.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Gini coefficient</strong> — the ratio of the area between the Lorenz curve and the line of perfect equality to the total area below the line; ranges from 0 (perfect equality) to 1 (perfect inequality).",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "The <strong>line of perfect equality</strong> is the 45-degree line: the bottom 20% earn 20% of income, the bottom 50% earn 50%, etc. The further the Lorenz curve bows from this line, the more unequal the distribution.",
+        "type": "mech"
+       },
+       {
+        "text": "A Gini of 0.25 (e.g. Scandinavia) indicates relatively equal distribution; a Gini of 0.60+ (e.g. South Africa) indicates extreme inequality.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "The Gini coefficient has limitations: it does not show where in the distribution the inequality lies (top vs bottom) and different distributions can produce the same Gini.",
+        "type": "imp"
+       }
+      ],
+      "title": "INTERPRETATION"
+     }
+    ],
+    "keyIdea": "The Lorenz curve shows how income is distributed across a population, and the Gini coefficient converts this visual picture into a single number — closer to 0 means more equal, closer to 1 means more unequal.",
+    "takeaway": [
+     "Lorenz curve: bowed further from 45° line = more inequality.",
+     "Gini: 0 = perfect equality, 1 = perfect inequality.",
+     "Useful for comparison but hides detail — different distributions can give same Gini."
+    ],
+    "examMatters": "Examiners expect you to draw a Lorenz curve, label the line of equality, shade area A (between the curves), and explain what a higher Gini means. Always mention limitations: the Gini is a summary statistic that hides detail about where inequality is concentrated.",
+    "misconception": "Students think a lower Gini is always better. Wrong because some inequality provides incentives for work, risk-taking, and innovation. Instead write: extreme inequality is harmful (poverty, social problems), but some inequality is economically functional — it incentivises effort, enterprise, and human capital investment."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Wage gaps, wealth concentration, globalisation widen inequality",
+      "Reduced social mobility and lower aggregate demand",
+      "Government intervention: progressive tax, transfers"
+     ],
+     "result": "Some inequality is functional but extreme inequality harms growth and social cohesion",
+     "resultType": "neutral"
+    },
+    "meta": "5 concepts",
+    "title": "Causes and Consequences of Inequality",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Wage differentials</strong> — differences in human capital, MRP, and bargaining power create income gaps between skilled and unskilled workers.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Wealth concentration</strong> — inherited wealth, property ownership, and returns to capital (which grow faster than wages) widen the gap.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Globalisation</strong> — skilled workers in developed countries gain from global markets while low-skilled workers face competition from cheaper labour abroad.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Tax and benefits policy</strong> — regressive taxes widen inequality; progressive taxes and transfers narrow it.",
+        "type": "mech"
+       }
+      ],
+      "title": "CAUSES"
+     },
+     {
+      "items": [
+       {
+        "text": "High inequality can reduce <strong>social mobility</strong> — children's outcomes become determined by parental wealth rather than talent or effort.",
+        "type": "mech"
+       },
+       {
+        "text": "Inequality may reduce <strong>aggregate demand</strong> — the poor have a higher marginal propensity to consume, so redistributing to them boosts spending.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Evaluation: some inequality is efficient (incentivises work and enterprise), but extreme inequality can be both unjust and economically damaging.",
+        "type": "imp"
+       },
+       {
+        "text": "Inequality links to poverty: policies that reduce inequality (progressive taxation, minimum wages) tend to reduce relative poverty but may affect incentives to work and invest.",
+        "type": "link"
+       }
+      ],
+      "title": "CONSEQUENCES"
+     }
+    ],
+    "keyIdea": "Inequality arises from differences in factor endowments, market power, globalisation, and government policy — and its consequences range from reduced social mobility to slower long-run growth.",
+    "takeaway": [
+     "Key causes: wage gaps, wealth, globalisation, tax policy.",
+     "Extreme inequality harms social mobility and may reduce aggregate demand.",
+     "Some inequality is necessary for incentives — the debate is about how much."
+    ],
+    "examMatters": "Examiners expect balanced evaluation: acknowledge that some inequality provides incentives, but argue that extreme inequality reduces social mobility, weakens aggregate demand, and can lead to social instability. Use the Gini coefficient and real-world examples.",
+    "misconception": "Students say inequality is always bad. Wrong because some inequality provides incentives for entrepreneurship, human capital investment, and risk-taking. Instead write: inequality up to a point is economically functional, but beyond a threshold it becomes destructive — the challenge is identifying and maintaining that balance."
+   }
+  ],
+  "section_quiz": [
+   {
+    "id": "poverty-inequality:quiz:4cd69a99",
+    "options": [
+     "Absolute poverty has increased due to falling real incomes",
+     "The benefits of growth have been unevenly distributed, increasing inequality",
+     "The Lorenz curve has moved closer to the line of perfect equality",
+     "The government has introduced a more progressive tax system"
+    ],
+    "question": "A country experiences rapid economic growth but the Gini coefficient rises from 0.35 to 0.42. Which of the following is the most likely explanation?",
+    "explanation": "A rising Gini coefficient indicates increasing inequality. With economic growth occurring simultaneously, the most likely explanation is that the benefits of growth have disproportionately gone to higher-income groups. Option A is unlikely since GDP is growing. Option C is wrong — a higher Gini means the Lorenz curve has moved further from equality, not closer. Option D would reduce the Gini, not increase it.",
+    "correctIndex": 1
+   },
+   {
+    "id": "poverty-inequality:quiz:48b71920",
+    "options": [
+     "Relative poverty is measured in monetary terms while absolute poverty is not",
+     "Relative poverty uses a fixed threshold while absolute poverty uses a variable one",
+     "Relative poverty measures deprivation against societal norms while absolute poverty measures inability to meet basic needs",
+     "Relative poverty only exists in developing countries while absolute poverty exists everywhere"
+    ],
+    "question": "Which of the following best distinguishes relative poverty from absolute poverty?",
+    "explanation": "The key distinction is that absolute poverty is a fixed standard based on basic survival needs (food, water, shelter), while relative poverty is measured against the prevailing living standards in a society (e.g. below 60% of median income). Option A is wrong — both can be measured in monetary terms. Option B reverses the definitions. Option D is wrong — relative poverty exists primarily in developed countries, while absolute poverty is more prevalent in developing countries.",
+    "correctIndex": 2
+   },
+   {
+    "id": "poverty-inequality:quiz:942e17f5",
+    "options": [
+     "The total area under the Lorenz curve",
+     "The ratio of the area between the line of equality and the Lorenz curve to the total area under the line of equality",
+     "The distance between the poorest and richest households",
+     "The percentage of the population living below the poverty line"
+    ],
+    "question": "On a Lorenz curve diagram, what does the Gini coefficient measure?",
+    "explanation": "The Gini coefficient = A / (A + B), where A is the area between the line of perfect equality and the Lorenz curve, and (A + B) is the total area under the line of equality. It ranges from 0 (perfect equality) to 1 (perfect inequality). Option A describes area B only. Option C is not what the Gini measures. Option D describes the poverty headcount ratio, not the Gini coefficient.",
+    "correctIndex": 1
+   },
+   {
+    "id": "poverty-inequality:quiz:69671700",
+    "options": [
+     "An increase in indirect taxes on essential goods",
+     "A reduction in government spending on education",
+     "Sustained, inclusive economic growth combined with investment in human capital",
+     "A decrease in the minimum wage to make labour markets more flexible"
+    ],
+    "question": "Which of the following is most likely to reduce absolute poverty in a developing country?",
+    "explanation": "Sustained, inclusive economic growth that reaches lower-income groups, combined with investment in education and training (human capital), is the most effective strategy for reducing absolute poverty. Option A would worsen poverty as indirect taxes on essentials are regressive. Option B would reduce human capital development. Option D may reduce wages for the poorest, worsening poverty even if employment rises.",
+    "correctIndex": 2
+   },
+   {
+    "id": "poverty-inequality:quiz:7426fa25",
+    "options": [
+     "Continuously increase as the rich get richer",
+     "Continuously decrease as prosperity is shared more widely",
+     "First increase during industrialisation, then decrease as education and welfare expand",
+     "Remain constant because market forces maintain equilibrium"
+    ],
+    "question": "According to the Kuznets hypothesis, as a country develops economically, inequality will:",
+    "explanation": "Kuznets hypothesised an inverted-U relationship: inequality rises during early industrialisation (as workers move from low-pay agriculture to higher-pay industry, creating an urban-rural divide) and then falls as more people access education, welfare states develop, and the services sector grows. However, this hypothesis has been widely criticised as many countries have not followed this pattern.",
+    "correctIndex": 2
+   },
+   {
+    "id": "poverty-inequality:quiz:2326343a",
+    "options": [
+     "Income is distributed almost perfectly equally in the country",
+     "The country has a relatively high level of income inequality",
+     "58% of the population lives in absolute poverty",
+     "The Lorenz curve is very close to the line of perfect equality"
+    ],
+    "question": "A country has a Gini coefficient of 0.58. This indicates that:",
+    "explanation": "A Gini coefficient of 0.58 is very high (most countries range from 0.25 to 0.60), indicating significant income inequality. Option A is wrong — a low Gini (near 0) would indicate near-equal distribution. Option C is wrong — the Gini does not measure the poverty headcount. Option D is wrong — a high Gini means the Lorenz curve is far from the line of equality, not close to it.",
+    "correctIndex": 1
+   },
+   {
+    "id": "poverty-inequality:quiz:97277b48",
+    "options": [
+     "Higher inequality always increases savings, which boosts investment and growth",
+     "Inequality limits the poor's access to education and credit, reducing human capital accumulation and enterprise",
+     "Inequality reduces the incentive for the wealthy to work and invest",
+     "Inequality always leads to higher government spending which crowds out private investment"
+    ],
+    "question": "Which of the following best explains how inequality can negatively affect economic growth?",
+    "explanation": "High inequality restricts the poor's access to education, healthcare, and credit, reducing their ability to develop human capital and start businesses. This wastes economic potential, reduces social mobility, and can lower long-run growth. Option A ignores the negative effects on human capital. Option C is unlikely — inequality tends to increase incentives for the wealthy. Option D is not necessarily true and oversimplifies the relationship.",
+    "correctIndex": 1
+   },
+   {
+    "id": "poverty-inequality:quiz:f1d91fa5",
+    "options": [
+     "Gender discrimination in the labour market",
+     "Differences in the quality of institutions and governance",
+     "Skill-biased technological change increasing the wage premium for graduates",
+     "Regional differences in the cost of living within a country"
+    ],
+    "question": "Which of the following is a cause of inequality between countries rather than within countries?",
+    "explanation": "Differences in institutional quality (rule of law, property rights, corruption levels, democratic accountability) between countries are a major cause of inequality between nations. Countries with strong institutions tend to have higher growth and development. Options A, C, and D are all causes of inequality within countries (gender pay gaps, skill premiums, and regional disparities are domestic issues).",
+    "correctIndex": 1
+   },
+   {
+    "id": "poverty-inequality:quiz:c952c037",
+    "options": [
+     "It would reduce poverty by increasing government military spending and employment",
+     "It would have no effect on poverty because GDP is unaffected by conflict",
+     "It would increase poverty by destroying physical and human capital, displacing populations, and deterring investment",
+     "It would reduce poverty by forcing structural economic change and modernisation"
+    ],
+    "question": "How might a civil war affect poverty in a developing country?",
+    "explanation": "Civil war is devastating for poverty: it destroys infrastructure and capital, kills and displaces people, disrupts education and healthcare, deters domestic and foreign investment, disrupts markets and trade, and diverts government spending to the military. Options A and D are wrong — military spending does not generate productive growth, and conflict does not lead to beneficial modernisation. Option B is factually incorrect.",
+    "correctIndex": 2
+   },
+   {
+    "id": "poverty-inequality:quiz:db91dfc6",
+    "options": [
+     "All workers are paid the same wage regardless of productivity",
+     "Wealth generates income (through returns on capital), creating a self-reinforcing cycle of accumulation for asset owners",
+     "Free markets prevent any individual from earning above-average income",
+     "Competition between firms ensures that profits are always distributed equally among workers"
+    ],
+    "question": "In a free market economy, which of the following is the most significant reason why inequality tends to increase over time without government intervention?",
+    "explanation": "In free markets, those who own assets (property, shares, businesses) earn returns on those assets (rent, dividends, profits, capital gains), allowing them to accumulate even more wealth. This creates a self-reinforcing cycle where the wealthy get wealthier, while those without assets cannot benefit from this mechanism. Combined with inheritance, this drives rising inequality. Option A is wrong — free markets do produce wage differentials. Options C and D misrepresent how markets function.",
+    "correctIndex": 1
+   }
+  ],
+  "section_practice": [
+   {
+    "id": "poverty-inequality:practice:f5fc1fc2",
+    "marks": 4,
+    "command": "Define",
+    "guidance": "Absolute poverty is a condition where individuals lack the income necessary to afford the minimum requirements for survival, such as food, shelter and clean water (1 mark). The World Bank defines it as living on less than $2.15 per day at purchasing power parity (1 mark). Relative poverty measures whether an individual's income falls below a certain proportion of the median or average income in their country (1 mark). For example, in the UK, relative poverty is often defined as having a household income below 60% of the median — a person can be relatively poor but still have their basic needs met (1 mark).",
+    "question": "Define the difference between absolute poverty and relative poverty. (4 marks)"
+   },
+   {
+    "id": "poverty-inequality:practice:3d98d47a",
+    "marks": 6,
+    "command": "Explain",
+    "guidance": "Cause 1: Differences in skills and education (1 mark) — workers with higher levels of human capital, such as university degrees or specialist training, tend to command higher wages due to their greater productivity (1 mark). The wage premium for skilled workers has increased with technological change and globalisation (1 mark).\n\nCause 2: Ownership of assets and wealth (1 mark) — individuals who own property, shares or other financial assets receive income from rent, dividends and capital gains that those without assets do not (1 mark). Wealth tends to be concentrated among a small proportion of the population and can be inherited, perpetuating inequality across generations (1 mark).",
+    "question": "Explain two causes of income inequality within a country. (6 marks)"
+   },
+   {
+    "id": "poverty-inequality:practice:d7ddd1e2",
+    "marks": 10,
+    "command": "Assess",
+    "guidance": "Define the Gini coefficient as a numerical measure of inequality derived from the Lorenz curve, ranging from 0 (perfect equality) to 1 (perfect inequality) (2 marks). Advantages: provides a single, comparable figure that allows analysis of trends within a country over time and comparisons between countries (2 marks); widely used by international organisations such as the World Bank and OECD, giving it credibility and extensive data availability (1 mark). Limitations: does not indicate where in the income distribution inequality occurs — two countries can have the same Gini coefficient but very different patterns of inequality (2 marks); focuses on income and does not capture wealth inequality, access to public services or differences in cost of living (2 marks). Judgement: the Gini coefficient is a useful summary measure but should be used alongside other indicators such as the Lorenz curve, income share ratios and poverty rates for a full picture of inequality (1 mark).",
+    "question": "Assess the usefulness of the Gini coefficient as a measure of income inequality. (10 marks)"
+   },
+   {
+    "id": "poverty-inequality:practice:bdfcd97d",
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Define globalisation and inequality. Distinguish between inequality within countries and inequality between countries (2 marks).\n\nFor — globalisation has increased inequality: Developed countries have benefited disproportionately from intellectual property rights, capital-intensive production and dominance in services trade (3 marks); many sub-Saharan African countries have been left behind because they lack infrastructure, institutions and human capital to participate effectively in global markets (2 marks); terms of trade for primary commodity exporters have often deteriorated, trapping developing countries in low-value production (2 marks).\n\nAgainst — globalisation has reduced inequality: Rapid industrialisation in China, India and South-East Asia has dramatically raised incomes and reduced global poverty, narrowing the gap with developed countries (3 marks); technology transfer and FDI have raised productivity in many developing economies (2 marks); access to international markets has allowed developing countries to exploit their comparative advantage in labour-intensive goods (2 marks).\n\nEvaluation: The impact is uneven — globalisation has reduced inequality between the fastest-growing developing countries and the developed world, but has increased the gap for the least developed countries (2 marks). Whether globalisation increases or decreases inequality depends on governance, trade policy and investment in human capital. The process is not inherently equalising or unequalising — outcomes depend on domestic policy choices (2 marks).",
+    "question": "Evaluate the view that globalisation has increased inequality between developed and developing countries. (20 marks)"
+   },
+   {
+    "id": "poverty-inequality:practice:e55dac64",
+    "marks": 4,
+    "command": "Outline",
+    "guidance": "Effect 1: Low levels of human capital — poverty limits access to education and healthcare, resulting in a less productive workforce (1 mark). This constrains long-run economic growth and reduces the country's international competitiveness (1 mark).\n\nEffect 2: Low savings and investment — households living in poverty spend all their income on basic necessities and cannot save (1 mark). This reduces the pool of domestic savings available for investment, limiting capital accumulation and economic development (1 mark).",
+    "question": "Outline two economic effects of poverty on a developing country. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "id": "poverty-inequality:card:8f78f8ec",
+    "back": "When individuals cannot afford <strong>basic necessities</strong> — food, shelter, clean water, healthcare. Measured against a fixed threshold, often $2.15/day (World Bank).",
+    "front": "What is absolute poverty?"
+   },
+   {
+    "id": "poverty-inequality:card:8f71c025",
+    "back": "When individuals have <strong>significantly less income</strong> than the median in their society — typically below 60% of median income. A measure of inequality within a country.",
+    "front": "What is relative poverty?"
+   },
+   {
+    "id": "poverty-inequality:card:7a065e58",
+    "back": "A measure of <strong>income inequality</strong> ranging from 0 (perfect equality) to 1 (one person has all income). Higher values indicate greater inequality. Derived from the Lorenz curve.",
+    "front": "What is the Gini coefficient?"
+   },
+   {
+    "id": "poverty-inequality:card:af7c2634",
+    "back": "A graph showing the <strong>cumulative share of income</strong> received by cumulative percentages of the population. The further from the 45° line of equality, the greater the inequality.",
+    "front": "What is the Lorenz curve?"
+   },
+   {
+    "id": "poverty-inequality:card:339673cb",
+    "back": "<strong>Wage differentials</strong> (skills, education), <strong>unemployment</strong>, <strong>regressive tax systems</strong>, discrimination, and ownership of assets (property, shares) concentrated among the wealthy.",
+    "front": "Name three causes of inequality within countries."
+   },
+   {
+    "id": "poverty-inequality:card:eaed31c5",
+    "back": "<strong>Colonial legacy</strong>, <strong>lack of capital and infrastructure</strong>, <strong>corruption and weak institutions</strong>, reliance on primary commodities, and limited access to education and technology.",
+    "front": "Name three causes of inequality between countries."
+   },
+   {
+    "id": "poverty-inequality:card:e7b6c1fe",
+    "back": "A tax where the <strong>proportion paid rises with income</strong> — higher earners pay a larger share. Reduces inequality by redistributing from rich to poor. E.g., income tax.",
+    "front": "What is progressive taxation?"
+   },
+   {
+    "id": "poverty-inequality:card:4fafa7dd",
+    "back": "A tax where the <strong>proportion paid falls as income rises</strong> — lower earners pay a larger share of their income. E.g., VAT on essentials takes a bigger proportion from the poor.",
+    "front": "What is regressive taxation?"
+   },
+   {
+    "id": "poverty-inequality:card:e0474594",
+    "back": "Government payments to individuals <strong>not in exchange for goods or services</strong> — e.g., unemployment benefits, pensions, child benefit. Directly increases disposable income of the poor.",
+    "front": "What is a transfer payment used to reduce poverty?"
+   },
+   {
+    "id": "poverty-inequality:card:f449885f",
+    "back": "When the <strong>withdrawal of benefits</strong> as income rises means people are no better off working than not working. The effective marginal tax rate is very high — reducing incentive to work.",
+    "front": "What is the poverty trap?"
+   },
+   {
+    "id": "poverty-inequality:card:5c847b40",
+    "back": "A hypothesis that inequality <strong>first rises then falls</strong> as a country develops — forming an inverted U shape. Initially growth benefits the rich; later, education and redistribution reduce inequality.",
+    "front": "What is the Kuznets curve?"
+   },
+   {
+    "id": "poverty-inequality:card:2d25ecd1",
+    "back": "<strong>Equality</strong> means everyone gets the same. <strong>Equity</strong> means fair distribution based on need — people get what they need to achieve equal outcomes. Policy aims for equity, not necessarily equality.",
+    "front": "What is the difference between equity and equality?"
+   },
+   {
+    "id": "poverty-inequality:card:1d0a866d",
+    "back": "Education increases <strong>human capital and productivity</strong>, leading to higher wages. It improves employment prospects, enables social mobility, and has positive externalities for the wider economy.",
+    "front": "How does education reduce poverty?"
+   },
+   {
+    "id": "poverty-inequality:card:fb4747f6",
+    "back": "Policies to reduce inequality (high taxes, generous benefits) may <strong>reduce incentives to work and invest</strong>, lowering efficiency and growth. Finding the right balance is a key policy challenge.",
+    "front": "What is the trade-off between equity and efficiency?"
+   },
+   {
+    "id": "poverty-inequality:card:74cc8b2e",
+    "back": "A tax on the <strong>stock of assets</strong> (property, investments, savings) rather than income flows. Reduces wealth inequality but may be difficult to administer and could drive capital abroad.",
+    "front": "What is a wealth tax?"
+   },
+   {
+    "id": "poverty-inequality:card:d1a7c9e0",
+    "back": "Raises incomes for low-paid workers, <strong>reducing in-work poverty</strong>. But if set too high, it may reduce employment (firms hire fewer workers) and harm those it intends to help.",
+    "front": "What is a minimum wage's effect on poverty?"
+   },
+   {
+    "id": "poverty-inequality:card:8ec7bf46",
+    "back": "A composite index measuring <strong>life expectancy</strong>, <strong>education</strong> (mean and expected years), and <strong>GNI per capita</strong> (PPP). Ranges 0–1. Captures more than just income.",
+    "front": "What is the Human Development Index (HDI)?"
+   },
+   {
+    "id": "poverty-inequality:card:b4aff28e",
+    "back": "<strong>Income</strong> is a flow — earnings received over a period (wages, rent, dividends). <strong>Wealth</strong> is a stock — the total value of assets owned at a point in time (property, savings, shares).",
+    "front": "What is the difference between income and wealth?"
+   }
+  ],
+  "section_diagrams": [
+   {
+    "id": "poverty-inequality:diagram:8b62cca0",
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <line x1=\"60\" y1=\"300\" x2=\"460\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"60\" y1=\"300\" x2=\"60\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"260\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\">Cumulative % of Population (poorest to richest)</text>\n  <text x=\"22\" y=\"170\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" transform=\"rotate(-90,22,170)\">Cumulative % of Income</text>\n  <text x=\"80\" y=\"318\" fill=\"#e8ecf5\" font-size=\"9\">0</text>\n  <text x=\"155\" y=\"318\" fill=\"#e8ecf5\" font-size=\"9\">20</text>\n  <text x=\"235\" y=\"318\" fill=\"#e8ecf5\" font-size=\"9\">40</text>\n  <text x=\"315\" y=\"318\" fill=\"#e8ecf5\" font-size=\"9\">60</text>\n  <text x=\"395\" y=\"318\" fill=\"#e8ecf5\" font-size=\"9\">80</text>\n  <text x=\"450\" y=\"318\" fill=\"#e8ecf5\" font-size=\"9\">100</text>\n  <text x=\"50\" y=\"304\" fill=\"#e8ecf5\" font-size=\"9\">0</text>\n  <text x=\"42\" y=\"248\" fill=\"#e8ecf5\" font-size=\"9\">20</text>\n  <text x=\"42\" y=\"194\" fill=\"#e8ecf5\" font-size=\"9\">40</text>\n  <text x=\"42\" y=\"140\" fill=\"#e8ecf5\" font-size=\"9\">60</text>\n  <text x=\"42\" y=\"86\" fill=\"#e8ecf5\" font-size=\"9\">80</text>\n  <text x=\"38\" y=\"40\" fill=\"#e8ecf5\" font-size=\"9\">100</text>\n  <line x1=\"60\" y1=\"300\" x2=\"460\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/>\n  <text x=\"230\" y=\"140\" fill=\"#e8ecf5\" font-size=\"10\" transform=\"rotate(-34,230,140)\">Line of Perfect Equality</text>\n  <path d=\"M60 300 Q160 295 220 280 Q300 255 360 200 Q420 130 460 30\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"370\" y=\"225\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"600\">Lorenz Curve</text>\n  <text x=\"370\" y=\"238\" fill=\"#3b82f6\" font-size=\"9\">(Country X)</text>\n  <path d=\"M60 300 Q160 298 240 290 Q340 270 400 225 Q440 180 460 30\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2.5\" stroke-dasharray=\"6,3\"/>\n  <text x=\"410\" y=\"265\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">Lorenz Curve</text>\n  <text x=\"410\" y=\"278\" fill=\"#ef4444\" font-size=\"9\">(Country Y — more unequal)</text>\n  <text x=\"220\" y=\"195\" fill=\"#059669\" font-size=\"13\" font-weight=\"700\">A</text>\n  <text x=\"175\" y=\"260\" fill=\"#3b82f6\" font-size=\"13\" font-weight=\"700\">B</text>\n  <rect x=\"280\" y=\"48\" width=\"175\" height=\"50\" rx=\"5\" fill=\"none\" stroke=\"#059669\" stroke-width=\"1.5\"/>\n  <text x=\"368\" y=\"66\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">Gini Coefficient</text>\n  <text x=\"368\" y=\"82\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">= A / (A + B)</text>\n  <text x=\"368\" y=\"94\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">0 = equal, 1 = unequal</text>\n</svg>",
+    "title": "Lorenz Curve and Gini Coefficient",
+    "checklist": [
+     "Draw axes: cumulative % of population (x-axis) vs cumulative % of income (y-axis), both from 0 to 100",
+     "Draw the 45-degree line of perfect equality from origin to top-right corner",
+     "Draw the Lorenz curve below the line of equality — a convex curve bowing away from the diagonal",
+     "Label Area A (between line of equality and Lorenz curve) and Area B (below Lorenz curve)",
+     "State the formula: Gini coefficient = A / (A + B)",
+     "Explain that Gini of 0 = perfect equality and Gini of 1 = perfect inequality",
+     "Note: the further the Lorenz curve from the diagonal, the higher the Gini and the greater the inequality"
+    ],
+    "description": "The Lorenz curve shows the distribution of income in a society. The Gini coefficient is calculated as the ratio of the area between the line of equality and the Lorenz curve (A) to the total area under the line of equality (A+B)."
+   },
+   {
+    "id": "poverty-inequality:diagram:7e2fb2ae",
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <line x1=\"60\" y1=\"300\" x2=\"460\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"60\" y1=\"300\" x2=\"60\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"260\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\">Time / Level of Economic Development</text>\n  <text x=\"22\" y=\"170\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" transform=\"rotate(-90,22,170)\">Income Level</text>\n  <line x1=\"70\" y1=\"240\" x2=\"450\" y2=\"240\" stroke=\"#ef4444\" stroke-width=\"2.5\"/>\n  <text x=\"454\" y=\"236\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">Absolute poverty line</text>\n  <text x=\"454\" y=\"249\" fill=\"#ef4444\" font-size=\"9\">(fixed: $2.15/day)</text>\n  <path d=\"M70 220 Q170 200 270 160 Q370 110 450 70\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"415\" y=\"60\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"600\">Median income</text>\n  <path d=\"M70 250 Q170 235 270 205 Q370 165 450 135\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2.5\" stroke-dasharray=\"6,3\"/>\n  <text x=\"410\" y=\"128\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\">Relative poverty line</text>\n  <text x=\"410\" y=\"141\" fill=\"#059669\" font-size=\"9\">(60% of median)</text>\n  <line x1=\"160\" y1=\"30\" x2=\"160\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.8\" stroke-dasharray=\"3,3\"/>\n  <text x=\"160\" y=\"24\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Period 1</text>\n  <line x1=\"350\" y1=\"30\" x2=\"350\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.8\" stroke-dasharray=\"3,3\"/>\n  <text x=\"350\" y=\"24\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Period 2</text>\n  <circle cx=\"160\" cy=\"240\" r=\"4\" fill=\"#ef4444\"/>\n  <circle cx=\"160\" cy=\"238\" r=\"4\" fill=\"#059669\"/>\n  <circle cx=\"350\" cy=\"240\" r=\"4\" fill=\"#ef4444\"/>\n  <circle cx=\"350\" cy=\"175\" r=\"4\" fill=\"#059669\"/>\n  <path d=\"M165 238 L165 205\" fill=\"none\" stroke=\"#e8ecf5\" stroke-width=\"1\" marker-start=\"url(#pva1)\" marker-end=\"url(#pva2)\"/>\n  <text x=\"175\" y=\"222\" fill=\"#e8ecf5\" font-size=\"8\">Small gap</text>\n  <path d=\"M355 240 L355 175\" fill=\"none\" stroke=\"#e8ecf5\" stroke-width=\"1\" marker-start=\"url(#pva1)\" marker-end=\"url(#pva2)\"/>\n  <text x=\"365\" y=\"210\" fill=\"#e8ecf5\" font-size=\"8\">Larger gap</text>\n  <rect x=\"90\" y=\"268\" width=\"320\" height=\"28\" rx=\"4\" fill=\"#059669\" fill-opacity=\"0.12\" stroke=\"#059669\" stroke-width=\"1\"/>\n  <text x=\"250\" y=\"286\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"10\">As the economy grows, absolute poverty falls but relative poverty may persist or widen</text>\n  <defs>\n    <marker id=\"pva1\" markerWidth=\"5\" markerHeight=\"5\" refX=\"2.5\" refY=\"2.5\" orient=\"auto\"><circle cx=\"2.5\" cy=\"2.5\" r=\"1.5\" fill=\"#e8ecf5\"/></marker>\n    <marker id=\"pva2\" markerWidth=\"6\" markerHeight=\"5\" refX=\"3\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L6,2.5 L0,5\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n</svg>",
+    "title": "Absolute vs Relative Poverty",
+    "checklist": [
+     "Draw a horizontal absolute poverty line (fixed over time) at a low income level",
+     "Draw a rising median income line showing economic growth over time",
+     "Draw the relative poverty line (60% of median) rising alongside median income",
+     "Show that the gap between the absolute and relative poverty lines widens as the economy grows",
+     "Explain that economic growth can reduce absolute poverty while relative poverty persists",
+     "Label the axes: Income Level (y-axis), Time/Development (x-axis)"
+    ],
+    "description": "A visual comparison of absolute and relative poverty thresholds, showing how absolute poverty is a fixed line while relative poverty moves with median income as an economy grows."
+   },
+   {
+    "id": "poverty-inequality:diagram:1d2f3dd1",
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <line x1=\"60\" y1=\"300\" x2=\"460\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"60\" y1=\"300\" x2=\"60\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"260\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\">GDP per Capita (Economic Development)</text>\n  <text x=\"22\" y=\"170\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" transform=\"rotate(-90,22,170)\">Inequality (Gini Coefficient)</text>\n  <path d=\"M80 270 Q150 240 200 130 Q240 60 270 60 Q310 60 350 130 Q400 230 450 260\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/>\n  <text x=\"335\" y=\"50\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\">Kuznets Curve</text>\n  <line x1=\"270\" y1=\"60\" x2=\"270\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/>\n  <text x=\"270\" y=\"315\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Turning point</text>\n  <circle cx=\"270\" cy=\"60\" r=\"5\" fill=\"#ef4444\"/>\n  <text x=\"280\" y=\"80\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">Peak inequality</text>\n  <path d=\"M85 274 L190 148\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\" marker-end=\"url(#kca1)\"/>\n  <text x=\"90\" y=\"195\" fill=\"#ef4444\" font-size=\"9\">Inequality rises:</text>\n  <text x=\"90\" y=\"207\" fill=\"#ef4444\" font-size=\"9\">shift from agriculture</text>\n  <text x=\"90\" y=\"219\" fill=\"#ef4444\" font-size=\"9\">to industry; urban-</text>\n  <text x=\"90\" y=\"231\" fill=\"#ef4444\" font-size=\"9\">rural divide widens</text>\n  <path d=\"M350 133 L440 252\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2\" marker-end=\"url(#kca2)\"/>\n  <text x=\"360\" y=\"170\" fill=\"#059669\" font-size=\"9\">Inequality falls:</text>\n  <text x=\"360\" y=\"182\" fill=\"#059669\" font-size=\"9\">education spreads,</text>\n  <text x=\"360\" y=\"194\" fill=\"#059669\" font-size=\"9\">welfare states form,</text>\n  <text x=\"360\" y=\"206\" fill=\"#059669\" font-size=\"9\">services sector grows</text>\n  <rect x=\"100\" y=\"32\" width=\"135\" height=\"20\" rx=\"4\" fill=\"#ef4444\" fill-opacity=\"0.15\" stroke=\"#ef4444\" stroke-width=\"1\"/>\n  <text x=\"168\" y=\"46\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\">Developing economies</text>\n  <rect x=\"330\" y=\"32\" width=\"125\" height=\"20\" rx=\"4\" fill=\"#059669\" fill-opacity=\"0.15\" stroke=\"#059669\" stroke-width=\"1\"/>\n  <text x=\"393\" y=\"46\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\">Developed economies</text>\n  <defs>\n    <marker id=\"kca1\" markerWidth=\"7\" markerHeight=\"5\" refX=\"7\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L7,2.5 L0,5\" fill=\"#ef4444\"/></marker>\n    <marker id=\"kca2\" markerWidth=\"7\" markerHeight=\"5\" refX=\"7\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L7,2.5 L0,5\" fill=\"#059669\"/></marker>\n  </defs>\n</svg>",
+    "title": "Kuznets Curve: Inequality and Development",
+    "checklist": [
+     "Draw an inverted-U curve with inequality (Gini) on the y-axis and GDP per capita on the x-axis",
+     "Label the peak of the curve as the turning point where inequality begins to fall",
+     "Explain the rising phase: structural shift from agriculture to industry widens inequality",
+     "Explain the falling phase: education, welfare, and services reduce inequality",
+     "Note that this is a hypothesis — many countries have not followed this pattern",
+     "Evaluate: policy choices (taxation, education, social protection) matter more than any automatic relationship"
+    ],
+    "description": "The Kuznets curve shows the hypothesised inverted-U relationship between economic development (GDP per capita) and inequality (Gini coefficient), where inequality initially rises and then falls as a country develops."
+   }
+  ],
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "Economic growth increases a country's total output and real national income, expanding the resources available to raise living standards.",
+      "Growth creates employment opportunities and raises wages, enabling households to earn income above the poverty line and afford basic necessities.",
+      "Higher government tax revenue from growth can fund public services — healthcare, education and social protection — that directly reduce poverty and improve capabilities.",
+      "However, the extent to which growth reduces poverty depends on its distribution — growth concentrated in capital-intensive sectors or urban areas may bypass the rural poor entirely."
+     ],
+     "title": "Economic growth can reduce absolute poverty",
+     "result": "Economic growth is necessary but not sufficient for poverty reduction — its impact depends critically on whether growth is inclusive and broadly shared."
+    },
+    {
+     "steps": [
+      "Some inequality provides incentives for entrepreneurship, risk-taking and hard work — differential rewards motivate productive effort and innovation.",
+      "However, excessive inequality can reduce social mobility as the wealthy use their resources to secure advantages for their children, while the poor lack access to education and opportunities.",
+      "High inequality undermines social cohesion and trust, leading to higher crime rates, worse health outcomes and lower life expectancy — as documented by Wilkinson and Pickett.",
+      "Extreme inequality can also reduce aggregate demand if the wealthy have a lower marginal propensity to consume, potentially slowing economic growth and increasing macroeconomic instability."
+     ],
+     "title": "Inequality affects incentives and social cohesion",
+     "result": "Moderate inequality may support growth through incentive effects, but excessive inequality undermines social cohesion, mobility and aggregate demand."
+    },
+    {
+     "steps": [
+      "The Gini coefficient measures income or wealth inequality on a scale from 0 (perfect equality) to 1 (perfect inequality), derived from the Lorenz curve's deviation from the line of equality.",
+      "It provides a single, comparable statistic that enables cross-country comparisons and tracking changes in inequality over time within a country.",
+      "However, the Gini coefficient can give the same value for very different distributions — a country with a large middle class and small extremes can have the same Gini as one with extremes and no middle.",
+      "The Gini also does not capture the causes of inequality, distinguish between income and wealth inequality, or reflect absolute living standards — a country could become more equal through everyone becoming poorer."
+     ],
+     "title": "Gini coefficient measures inequality but has limitations",
+     "result": "The Gini coefficient is a useful summary measure of inequality but must be supplemented with other indicators to provide a complete picture of distributional outcomes."
+    },
+    {
+     "steps": [
+      "Free market capitalism allocates resources through the price mechanism, rewarding productive activity with profits and wages — this drives innovation, efficiency and economic growth.",
+      "However, the rewards of capitalism are distributed according to factor ownership — those with capital, land and high skills earn disproportionately more, generating income and wealth inequality.",
+      "Market outcomes reflect initial endowments rather than need or merit — inherited wealth, access to education and social connections create unequal starting points that compound over time.",
+      "Without government redistribution through progressive taxation and transfer payments, free market outcomes tend towards increasing concentration of wealth and widening inequality."
+     ],
+     "title": "Free market capitalism generates both growth and inequality",
+     "result": "Free market capitalism is a powerful engine of growth but inherently generates inequality that requires government intervention to ensure socially acceptable distributional outcomes."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "The relationship between growth and poverty is conditional",
+     "content": "The 'trickle-down' theory — that growth automatically benefits the poor — has been challenged by evidence showing that growth can coexist with rising poverty if gains are captured by elites. Pro-poor growth strategies that invest in rural development, small-scale agriculture, education and health tend to be more effective at reducing poverty. The quality and inclusiveness of growth matters more than its rate."
+    },
+    {
+     "title": "Redistribution involves efficiency-equity trade-offs",
+     "content": "Progressive taxation and welfare transfers reduce inequality but may weaken incentive effects — high marginal tax rates can discourage work effort, savings and investment. This trade-off is central to the debate about optimal tax policy. However, well-designed redistribution through investment in education, healthcare and infrastructure can enhance both equity and efficiency by improving human capital and productive potential."
+    },
+    {
+     "title": "Poverty measurement itself is contested",
+     "content": "Absolute poverty measures ($2.15/day PPP) capture extreme deprivation but miss the multidimensional nature of poverty — including access to education, health, clean water and political freedom. Relative poverty measures (below 60% of median income) better capture social exclusion in developed countries but shift with the income distribution. The Multidimensional Poverty Index (MPI) provides a more comprehensive but complex measure of deprivation."
+    },
+    {
+     "title": "Globalisation's impact on poverty and inequality is nuanced",
+     "content": "Globalisation has contributed to unprecedented reductions in absolute poverty globally, particularly in China and East Asia. However, it has also widened inequality within many countries. The net effect depends on a country's institutions, labour market flexibility, education system and social safety net. Countries that invest in skills and social protection tend to share the gains from globalisation more equitably."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "id": "poverty-inequality:mistake:b1e1df82",
+    "title": "Confusing absolute and relative poverty",
+    "examTip": "Economic growth tends to reduce absolute poverty but may increase relative poverty if gains are unequally distributed.",
+    "mistake": "Students define absolute poverty as \"being poor\" without using the fixed threshold, or confuse relative poverty with inequality.",
+    "correction": "Absolute poverty = inability to afford basic necessities, measured against a fixed threshold (e.g. $2.15/day). Relative poverty = having less than the societal norm, measured against median income (e.g. below 60% of median). A country can eliminate absolute poverty while relative poverty remains."
+   },
+   {
+    "id": "poverty-inequality:mistake:d380cba7",
+    "title": "Not interpreting the Lorenz curve correctly",
+    "mistake": "Students confuse which axis shows cumulative income and which shows cumulative population, or cannot identify what a shift means.",
+    "correction": "X-axis = cumulative % of population (from poorest to richest). Y-axis = cumulative % of income. The 45° line = perfect equality. The further the Lorenz curve bows from the 45° line, the greater the inequality."
+   },
+   {
+    "id": "poverty-inequality:mistake:13b0bebc",
+    "title": "Treating inequality as always negative",
+    "mistake": "Students assume inequality is always bad without considering potential benefits.",
+    "correction": "Some inequality can incentivise enterprise, risk-taking, and hard work (reward for effort). Evaluate: excessive inequality can reduce social cohesion, limit access to education, and reduce aggregate demand, but zero inequality may reduce incentives."
+   }
+  ]
+ }
+}

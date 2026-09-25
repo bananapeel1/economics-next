@@ -1,5 +1,180 @@
 # Next session brief
 
+## Packet 2.92 — V060 closed: the eight held rebuilds are pinned on the live site (25 September 2026, Opus 5.5)
+
+**Verify-only. Nothing built, nothing written to content.** The founder's checkpoint publish put the eight
+rebuilds live (types-sizes-businesses at 12:27 UTC, the other seven at 13:53-13:57), and each rebuild carries
+its own pins. This packet confirmed that on PRODUCTION, which is `origin/main` at `fa3d5d1`, using main's own
+`placeChapterItems`. Verify A (a fresh Sonnet verifier, round 1, its own script over all 8 tables) confirmed
+V060 with zero rejections. `ledger.mjs unverified 2.92` exits 0.
+
+**What was measured** (`audit/runs/packet-2.92/live-pins.mjs`, output in `live-pins.txt`):
+- **All 8 are published, and nothing is waiting anywhere.** 0 sections hold a draft (re-read at 14:25 UTC,
+  after 2.91's five sections went live at 14:22). There is no publish command left for the founder from
+  packets 2.9, 2.91 or the held rebuilds.
+- **Live is what each rebuild's own verifier signed off**, in all 8 tables. There are two exceptions, both
+  verified fixes that packet 2.7 re-staged after the bundles were dumped:
+  market-structures-contestability `diagrams[6].scenarios[2].svg` (V031) and globalisation
+  `practice[5].guidance` (V036).
+- **56 chapters.** Quiz and practice come from a pin at 56 of 56, for a Pro reader and a signed-out reader
+  alike, and both see the same item. Diagrams come from a pin at 55. The one without is types-sizes-businesses
+  chapter 4 ("Constraints on Growth and Its Impact"): it has no diagram field, all 5 of the section's diagrams
+  are pinned to other chapters, and it shows none. No chapter is filled by a fallback.
+- **None of the eight uses a decided-empty pin**, so the fact that 2.91's `decidedNoDiagram` is not on `main`
+  changes nothing for them.
+- **Live diagrams placed by a title match went from 31 to 3 by THIS BRANCH's placement**
+  (`npm run attribution`). The 3 are economic-growth (2) and introductory-concepts (1). They are correct by
+  reading, no draft decides them, and they belong to packets 43 and 15.
+- **PRODUCTION IS AT 5, NOT 3, AND THE FOUNDER SHOULD KNOW WHY.** `audit/runs/packet-2.92/prod-title-census.mjs`
+  ran `main`'s own placement over all 43 live sections: 185 check-in diagrams, 10 not placed by a
+  `diagramId`. Five of the 10 resolve a legacy `diagramRef`. The other five are title matches: the 3 above,
+  plus **labour-markets chapter 1 ("Competitive Labour Market Equilibrium") and role-state-macroeconomy
+  chapter 1 ("Crowding Out in the Loanable Funds Market")**. Both of those chapters are pinned
+  `diagramId: null`, and 2.91 decided against both diagrams. They went live at 14:22, and `main` does not
+  know `null` (`decidedNoDiagram` is `831ca27`), so students see exactly the two diagrams 2.91 removed. That
+  is 2.91's documented caveat, now live. **It goes away at the next merge of this branch into `main`**, and
+  nothing else fixes it. None of the 10 is in V060's eight sections.
+- **Walked on revvylearn.com at 390x844, signed out.** business-objectives-strategy chapter 1 (main session,
+  `verify-b.md`) and types-sizes-businesses chapter 1 (the verifier, `verify-a.md`) each show the pinned
+  diagram, question and worked example.
+
+**THE GATE WAS RED WHEN THIS PACKET STARTED, AND IT IS NOT THIS PACKET'S DOING.** `npm run recalls` failed
+on 13 sections, because the publish moved each rebuild's accepted STAGED recall debt into `data`. Each of
+the 13 is live at exactly its `draft` figure: nothing new, just moved. `audit/recall-census-baseline.json`
+was rewritten from the database (see DECISIONS, 2026-09-25, packet 2.92). **After every future publish,
+expect this again.** Re-baseline from the database, and allow a `data` row to rise only to its section's
+`draft` figure.
+
+**Seen, not filed:** a signed-out Learn Mode visit logs `POST /api/learn-mode/state → 401` to the console,
+because the route refuses a signed-out save by design (`app/api/learn-mode/state/route.js:72`). The student
+sees nothing, but the client is still making a call it knows will be refused.
+
+**The probe's own lesson:** Verify A found that it failed bundle drift only in the 4 tables a check-in
+reads, while this spec said ANY differing path fails. No such drift exists, but the check now covers all
+8 tables, and a planted notes edit makes it fire. Write the check the spec states, not the one you think
+matters.
+
+### Packet 2.92 spec (as written before the build)
+
+**Closes:** V060, the only id on 2.92. **Leaves:** nothing. No code and no content write: the founder's checkpoint
+publish put the rebuilds live (types-sizes-businesses 12:27 UTC; the other seven 13:53-13:57 UTC,
+`audit/snapshots/auto-prepublish-2026-09-25T13-5*`), and each rebuild carries its own pins. This packet only
+confirms that on production. Production is `origin/main` at `fa3d5d1`, which has packets 2.8 and 2.9 but NOT
+2.91 (`831ca27`), so read placement from `git show origin/main:<file>`, never from this branch.
+
+The sections and the bundle each one's own Verify A signed off:
+
+| section | bundle in `audit/snapshots/` |
+|---|---|
+| balance-payments-exchange-rates | `packet-40-bundle__economics__balance-payments-exchange-rates.json` |
+| business-objectives-strategy | `packet-27-bundle__business__business-objectives-strategy.json` |
+| causes-effects-globalisation | `packet-34-bundle__economics__causes-effects-globalisation.json` |
+| globalisation | `packet-33-bundle__business__globalisation.json` |
+| market-structures-contestability | `packet-29-bundle__economics__market-structures-contestability.json` |
+| revenue-costs-profits | `packet-28-bundle__economics__revenue-costs-profits.json` |
+| trade-global-economy | `packet-39b-bundle__economics__trade-global-economy.json` (bare shape, no `tables` wrapper) |
+| types-sizes-businesses | `packet-20-bundle__economics__types-sizes-businesses.json` |
+
+**Acceptance checks.** All are read-only against production: Supabase with the `.env.local` service key, and
+`https://revvylearn.com`. Never write to either.
+
+1. **Published.** For all 8 sections, no content table holds a `draft`, and `section_content.published_at` is
+   2026-09-25.
+2. **What is live is what was verified.** Every table's live `data` deep-equals its bundle, comparing keys in any
+   order because jsonb reorders them. Two exceptions are allowed, and only if live carries the fix: packet 2.7
+   (`12b7e2e`) re-staged two of these sections after their bundles were dumped. They are
+   market-structures-contestability `diagrams[6].scenarios[2].svg` (V031) and globalisation
+   `practice[5].guidance` (V036). Any other differing path fails.
+3. **Every chapter pins.** Each block pins its quiz (`quizIndices`/`quizIds` non-empty, or `[]` = decided none) and
+   its practice item (`practiceIndices`/`practiceIds`). Every index must be in range. A chapter that SHOWS a diagram
+   pins it by a `diagramId` that names a live diagram, or `null`; that is 2.91's rule. A chapter with no diagram
+   field passes only if every live diagram is pinned by another chapter, so no title fallback can reach it.
+4. **Production shows what the pins name.** Run `origin/main`'s `placeChapterItems` (over `buildSteps`) twice:
+   over the whole live bank for a Pro reader, and over `https://revvylearn.com/api/sections/<id>` fetched with
+   no cookie for a signed-out reader. At every check-in the quiz, practice and diagram shown must be the item the
+   pins name, or nothing where the chapter decided none. A slot filled by a fallback (the V026 vocabulary match or
+   the diagram title match) fails, because it looks exactly like a pin on screen.
+5. **Rendered.** On revvylearn.com at 390x844, signed out, at least one chapter check-in shows its pinned quiz,
+   practice item and diagram.
+
+**Out of scope:** whether each pin's item is TAUGHT in its chapter. That was each rebuild's own Verify A, and V060
+does not reopen it.
+
+## Packet 2.91 — every chapter's diagram on the 2.9 sections is decided; 5 staged, publish is the founder's (25 September 2026, Opus 5.5)
+
+Commits `831ca27` (build) and the handoff after it. Verify A (a fresh Sonnet verifier, round 1) confirmed
+V056 and V061 with zero rejections; it read the five drafts' `diagramId`s straight from Supabase. `ledger.mjs
+unverified 2.91` exits 0. **V060 moved to packet 2.92**: it is not code, and it closes as the checkpoint
+publishes the held rebuilds.
+
+**The checkpoint started while this packet ran.** PR #29 merged the branch up to `f0eac04` (2.9's handoff)
+into `main`, packets 5/7 included. Packet 2.9's 13 sections were published at 12:11 UTC
+(`auto-prepublish-2026-09-25T12-11-43-061Z__*`), types-sizes-businesses' rebuild at 12:27, and
+meeting-customer-needs at 12:31. This packet's code (`831ca27`) is NOT on `main` yet.
+
+**THE ONE THING WAITING ON THE FOUNDER: publish these 5 sections.** This form only diffs; add `--confirm` to
+publish. Each publish snapshots first.
+
+```
+node scripts/publish-section.mjs government-intervention-firms growth-development labour-markets poverty-inequality role-state-macroeconomy
+```
+
+Only `diagramId` changes on any block. What a student sees change once they are published:
+
+- **labour-markets.** Chapter 2 (Wage Determination) now shows "Monopsony Labour Market". It teaches
+  monopsony, and until now it showed nothing. Chapter 1 stops showing the equilibrium diagram, because
+  equilibrium is chapter 2's material.
+- **role-state-macroeconomy.** Chapter 1 (public goods) stops showing "Crowding Out in the Loanable Funds
+  Market". Nothing in the section teaches crowding out.
+- **growth-development.** Chapter 1 shows the HDI diagram instead of Harrod-Domar. The chapter teaches both;
+  HDI is the chapter's subject and was otherwise shown nowhere.
+- **poverty-inequality.** Chapter 1 shows the Lorenz curve instead of absolute/relative poverty. Same reasoning.
+- The other 7 chapters keep their diagram, now pinned. The 3 chapters that teach none of their section's
+  diagrams are pinned `diagramId: null`.
+
+**Until `831ca27` reaches `main`, two of those chapters stay as they are on production.** `main` resolves
+`diagramId`, so every pinned chapter is right as soon as the sections are published. But `main` does not
+know `diagramId: null`, so its title fallback still puts "Competitive Labour Market Equilibrium" on
+labour-markets chapter 1 and crowding out on role-state-macroeconomy chapter 1. That is no worse than
+today, and it goes away at the next merge. The runner prints this as `[on main until the merge: …]`.
+
+**How the diagrams were chosen.** The rule was 2.9's: a chapter shows a diagram only if its text teaches
+what the diagram draws. The first reading (`audit/runs/packet-2.91/diagram-pins.json`) was checked by a
+blind Sonnet reader who got only the chapter text and the diagram list (`blind-verdicts.json`). They
+agreed on 10 of 13. The three that differed moved to the blind reader's choice, and each keeps its
+`firstReading` and the reason it moved. The one that mattered: labour-markets chapter 1 had been accepted
+because of one sentence about an MRP shift, but the equilibrium the diagram draws is taught in chapter 2.
+
+**What changed in code, and what every later content packet must now do.**
+- **`diagramId: null` means "decided: no diagram"** (`decidedNoDiagram`, `lib/checkin-fallback.js`). Both
+  placement paths honour it. An absent `diagramId` still falls back to the title matcher.
+- **`npm run attribution` now FAILS on any STAGED section that places a diagram by title match.** A content
+  packet has to give every chapter that shows a diagram a `diagramId`, or `null` where the chapter teaches
+  none. The staged corpus is at 0 today, across 30 sections and 165 diagrams, all pinned.
+- **On live it lists rather than fails.** 31 live diagrams are title-matched. 28 are decided by a staged
+  draft (these 5, plus the held rebuilds still waiting). 3 are open, because economic-growth (2) and
+  introductory-concepts (1) hold no draft. All 3 are correct by reading (identical titles) and belong to
+  packets 43 and 15.
+- **`checkin-attribution` reads the database now (V061), not the 11 Sep export and every historical
+  snapshot.** It needs `.env.local`, as `npm run exposure` does. This closes the task 2.9 filed for it.
+- `placeChapterItems` also returns `diagramHow` ('pin' or 'title') per slot. The guard reads that
+  instead of restating the branch.
+
+**The V056 headline case (3.3.1) is fixed live, and not by this packet.** types-sizes-businesses' rebuild
+went live at 12:27 UTC. It pins "The Four Directions of Integration" to "How Businesses Grow", and all 5 of
+its diagrams by id. The other 7 held sections are V060, now packet 2.92.
+
+**Verify B:** `audit/runs/packet-2.91/verify-b.md`. Walked at 390x844, signed out, `?draft=1`:
+labour-markets, role-state-macroeconomy and poverty-inequality. Every check-in showed the decided diagram,
+or none, and its intro promised only what it carried. All five served drafts carry exactly the decided
+`diagramId`s, field by field. **No Pro pass is needed:** diagrams are a free surface, so a Pro reader sees
+the same ones.
+
+**Not done, and small:** `unresolvedDiagramPins` in `lib/content-validator.mjs` simulates the title fallback
+to decide whether a broken ref is "rescued", and does not skip `diagramId: null` chapters. That affects
+only how a broken legacy ref is reported, never placement. The file carries another session's uncommitted
+work, so it was left alone.
+
 ## Packet 2.9 — the banks of the 21 unpinned live sections are pinned; 13 staged, publish is the founder's (25 September 2026, Opus 5.5)
 
 Commit `fc91372`. Picks up the handoff at the end of this file ("packet 2.8 closed"). V057-V059 are claimed;

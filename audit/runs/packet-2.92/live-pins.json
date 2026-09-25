@@ -1,0 +1,2344 @@
+[
+ {
+  "id": "balance-payments-exchange-rates",
+  "failures": [],
+  "notes": [],
+  "publishedAt": "2026-09-25T13:56:59.485+00:00",
+  "bundle": "packet-40-bundle__economics__balance-payments-exchange-rates.json",
+  "bundleDiff": {},
+  "counts": {
+   "blocks": 7,
+   "quiz": 36,
+   "practice": 9,
+   "diagrams": 7
+  },
+  "pro": [
+   {
+    "chapter": 1,
+    "title": "The Balance of Payments",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "balance-payments-exchange-rates:quiz:1b22feb9",
+     "practice": "balance-payments-exchange-rates:practice:a0c3e9d8",
+     "diagram": "The Three Accounts of the Balance of Payments"
+    }
+   },
+   {
+    "chapter": 2,
+    "title": "Correcting an Imbalance",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "balance-payments-exchange-rates:quiz:7953385b",
+     "practice": "balance-payments-exchange-rates:practice:7d575a1b",
+     "diagram": "Three Routes to a Smaller Imbalance"
+    }
+   },
+   {
+    "chapter": 3,
+    "title": "What Moves a Floating Rate",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "balance-payments-exchange-rates:quiz:ae883097",
+     "practice": "balance-payments-exchange-rates:practice:c66d217f",
+     "diagram": "The Market for a Floating Currency"
+    }
+   },
+   {
+    "chapter": 4,
+    "title": "Exchange Rate Systems and Intervention",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "balance-payments-exchange-rates:quiz:b937f4c4",
+     "practice": "balance-payments-exchange-rates:practice:3d5d52d4",
+     "diagram": "Floating, Fixed and Managed Rates"
+    }
+   },
+   {
+    "chapter": 5,
+    "title": "When the Rate Changes",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "balance-payments-exchange-rates:quiz:7676abfa",
+     "practice": "balance-payments-exchange-rates:practice:06c5813b",
+     "diagram": "The J-Curve and Pass-Through"
+    }
+   },
+   {
+    "chapter": 6,
+    "title": "Measuring International Competitiveness",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "balance-payments-exchange-rates:quiz:49b3703a",
+     "practice": "balance-payments-exchange-rates:practice:f73ef866",
+     "diagram": "Relative Unit Labour Costs"
+    }
+   },
+   {
+    "chapter": 7,
+    "title": "Raising Competitiveness, and Why It Matters",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "balance-payments-exchange-rates:quiz:c6676363",
+     "practice": "balance-payments-exchange-rates:practice:e96295a6",
+     "diagram": "Two Routes to the Same Unit Cost"
+    }
+   }
+  ],
+  "api": {
+   "isPremium": false,
+   "contentVersionSince": "2026-09-25T13:56:59.485+00:00",
+   "quizSent": 10,
+   "quizTotal": 36,
+   "practiceSent": 9
+  },
+  "free": [
+   {
+    "chapter": 1,
+    "title": "The Balance of Payments",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "balance-payments-exchange-rates:quiz:1b22feb9",
+     "practice": "balance-payments-exchange-rates:practice:a0c3e9d8",
+     "diagram": "The Three Accounts of the Balance of Payments"
+    }
+   },
+   {
+    "chapter": 2,
+    "title": "Correcting an Imbalance",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "balance-payments-exchange-rates:quiz:7953385b",
+     "practice": "balance-payments-exchange-rates:practice:7d575a1b",
+     "diagram": "Three Routes to a Smaller Imbalance"
+    }
+   },
+   {
+    "chapter": 3,
+    "title": "What Moves a Floating Rate",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "balance-payments-exchange-rates:quiz:ae883097",
+     "practice": "balance-payments-exchange-rates:practice:c66d217f",
+     "diagram": "The Market for a Floating Currency"
+    }
+   },
+   {
+    "chapter": 4,
+    "title": "Exchange Rate Systems and Intervention",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "balance-payments-exchange-rates:quiz:b937f4c4",
+     "practice": "balance-payments-exchange-rates:practice:3d5d52d4",
+     "diagram": "Floating, Fixed and Managed Rates"
+    }
+   },
+   {
+    "chapter": 5,
+    "title": "When the Rate Changes",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "balance-payments-exchange-rates:quiz:7676abfa",
+     "practice": "balance-payments-exchange-rates:practice:06c5813b",
+     "diagram": "The J-Curve and Pass-Through"
+    }
+   },
+   {
+    "chapter": 6,
+    "title": "Measuring International Competitiveness",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "balance-payments-exchange-rates:quiz:49b3703a",
+     "practice": "balance-payments-exchange-rates:practice:f73ef866",
+     "diagram": "Relative Unit Labour Costs"
+    }
+   },
+   {
+    "chapter": 7,
+    "title": "Raising Competitiveness, and Why It Matters",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "balance-payments-exchange-rates:quiz:c6676363",
+     "practice": "balance-payments-exchange-rates:practice:e96295a6",
+     "diagram": "Two Routes to the Same Unit Cost"
+    }
+   }
+  ]
+ },
+ {
+  "id": "business-objectives-strategy",
+  "failures": [],
+  "notes": [],
+  "publishedAt": "2026-09-25T13:53:17.472+00:00",
+  "bundle": "packet-27-bundle__business__business-objectives-strategy.json",
+  "bundleDiff": {},
+  "counts": {
+   "blocks": 7,
+   "quiz": 31,
+   "practice": 9,
+   "diagrams": 7
+  },
+  "pro": [
+   {
+    "chapter": 1,
+    "title": "Mission, Corporate Aims and Corporate Objectives",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "business-objectives-strategy:quiz:97e6dfcb",
+     "practice": "business-objectives-strategy:practice:b6b8622f",
+     "diagram": "Mission, Corporate Aims and Corporate Objectives"
+    }
+   },
+   {
+    "chapter": 2,
+    "title": "Ansoff's Matrix",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "business-objectives-strategy:quiz:9e4d5caf",
+     "practice": "business-objectives-strategy:practice:8551ae91",
+     "diagram": "Ansoff's Matrix"
+    }
+   },
+   {
+    "chapter": 3,
+    "title": "Porter's Strategic Matrix",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "business-objectives-strategy:quiz:efe6930c",
+     "practice": "business-objectives-strategy:practice:ca45be92",
+     "diagram": "Porter's Strategic Matrix"
+    }
+   },
+   {
+    "chapter": 4,
+    "title": "The Aim of Portfolio Analysis",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "business-objectives-strategy:quiz:dc22d69c",
+     "practice": "business-objectives-strategy:practice:24797798",
+     "diagram": "The Aim of Portfolio Analysis"
+    }
+   },
+   {
+    "chapter": 5,
+    "title": "Strategic and Tactical Decisions",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "business-objectives-strategy:quiz:4ccf7bc1",
+     "practice": "business-objectives-strategy:practice:7c7fc216",
+     "diagram": "Strategic and Tactical Decisions, and the Resources They Move"
+    }
+   },
+   {
+    "chapter": 6,
+    "title": "SWOT Analysis",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "business-objectives-strategy:quiz:b7fb7986",
+     "practice": "business-objectives-strategy:practice:d003feb6",
+     "diagram": "The SWOT Grid"
+    }
+   },
+   {
+    "chapter": 7,
+    "title": "External Influences",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "business-objectives-strategy:quiz:43241379",
+     "practice": "business-objectives-strategy:practice:17d02d21",
+     "diagram": "PESTLE, and Porter's Five Forces"
+    }
+   }
+  ],
+  "api": {
+   "isPremium": false,
+   "contentVersionSince": "2026-09-25T13:53:17.472+00:00",
+   "quizSent": 10,
+   "quizTotal": 31,
+   "practiceSent": 9
+  },
+  "free": [
+   {
+    "chapter": 1,
+    "title": "Mission, Corporate Aims and Corporate Objectives",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "business-objectives-strategy:quiz:97e6dfcb",
+     "practice": "business-objectives-strategy:practice:b6b8622f",
+     "diagram": "Mission, Corporate Aims and Corporate Objectives"
+    }
+   },
+   {
+    "chapter": 2,
+    "title": "Ansoff's Matrix",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "business-objectives-strategy:quiz:9e4d5caf",
+     "practice": "business-objectives-strategy:practice:8551ae91",
+     "diagram": "Ansoff's Matrix"
+    }
+   },
+   {
+    "chapter": 3,
+    "title": "Porter's Strategic Matrix",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "business-objectives-strategy:quiz:efe6930c",
+     "practice": "business-objectives-strategy:practice:ca45be92",
+     "diagram": "Porter's Strategic Matrix"
+    }
+   },
+   {
+    "chapter": 4,
+    "title": "The Aim of Portfolio Analysis",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "business-objectives-strategy:quiz:dc22d69c",
+     "practice": "business-objectives-strategy:practice:24797798",
+     "diagram": "The Aim of Portfolio Analysis"
+    }
+   },
+   {
+    "chapter": 5,
+    "title": "Strategic and Tactical Decisions",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "business-objectives-strategy:quiz:4ccf7bc1",
+     "practice": "business-objectives-strategy:practice:7c7fc216",
+     "diagram": "Strategic and Tactical Decisions, and the Resources They Move"
+    }
+   },
+   {
+    "chapter": 6,
+    "title": "SWOT Analysis",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "business-objectives-strategy:quiz:b7fb7986",
+     "practice": "business-objectives-strategy:practice:d003feb6",
+     "diagram": "The SWOT Grid"
+    }
+   },
+   {
+    "chapter": 7,
+    "title": "External Influences",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "business-objectives-strategy:quiz:43241379",
+     "practice": "business-objectives-strategy:practice:17d02d21",
+     "diagram": "PESTLE, and Porter's Five Forces"
+    }
+   }
+  ]
+ },
+ {
+  "id": "causes-effects-globalisation",
+  "failures": [],
+  "notes": [],
+  "publishedAt": "2026-09-25T13:54:54.798+00:00",
+  "bundle": "packet-34-bundle__economics__causes-effects-globalisation.json",
+  "bundleDiff": {},
+  "counts": {
+   "blocks": 5,
+   "quiz": 26,
+   "practice": 8,
+   "diagrams": 5
+  },
+  "pro": [
+   {
+    "chapter": 1,
+    "title": "What Globalisation Looks Like",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "causes-effects-globalisation:quiz:fe03dcde",
+     "practice": "causes-effects-globalisation:practice:2e647efe",
+     "diagram": "Trade as a Proportion of GDP"
+    }
+   },
+   {
+    "chapter": 2,
+    "title": "What Caused It",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "causes-effects-globalisation:quiz:d085a0f0",
+     "practice": "causes-effects-globalisation:practice:c770c668",
+     "diagram": "The Five Causes, and What Each One Changed"
+    }
+   },
+   {
+    "chapter": 3,
+    "title": "FDI by TNCs",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "causes-effects-globalisation:quiz:083b40c4",
+     "practice": "causes-effects-globalisation:practice:d705e71a",
+     "diagram": "FDI by a TNC: What Goes In and What Comes Out"
+    }
+   },
+   {
+    "chapter": 4,
+    "title": "The Possible Benefits",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "causes-effects-globalisation:quiz:9b4b8206",
+     "practice": "causes-effects-globalisation:practice:afd6b3c7",
+     "diagram": "Lower Prices and Higher Consumer Surplus"
+    }
+   },
+   {
+    "chapter": 5,
+    "title": "The Possible Costs",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "causes-effects-globalisation:quiz:0423ff5e",
+     "practice": "causes-effects-globalisation:practice:5ad189fe",
+     "diagram": "Loss of Tax Revenue from Transfer Pricing"
+    }
+   }
+  ],
+  "api": {
+   "isPremium": false,
+   "contentVersionSince": "2026-09-25T13:54:54.798+00:00",
+   "quizSent": 8,
+   "quizTotal": 26,
+   "practiceSent": 8
+  },
+  "free": [
+   {
+    "chapter": 1,
+    "title": "What Globalisation Looks Like",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "causes-effects-globalisation:quiz:fe03dcde",
+     "practice": "causes-effects-globalisation:practice:2e647efe",
+     "diagram": "Trade as a Proportion of GDP"
+    }
+   },
+   {
+    "chapter": 2,
+    "title": "What Caused It",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "causes-effects-globalisation:quiz:d085a0f0",
+     "practice": "causes-effects-globalisation:practice:c770c668",
+     "diagram": "The Five Causes, and What Each One Changed"
+    }
+   },
+   {
+    "chapter": 3,
+    "title": "FDI by TNCs",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "causes-effects-globalisation:quiz:083b40c4",
+     "practice": "causes-effects-globalisation:practice:d705e71a",
+     "diagram": "FDI by a TNC: What Goes In and What Comes Out"
+    }
+   },
+   {
+    "chapter": 4,
+    "title": "The Possible Benefits",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "causes-effects-globalisation:quiz:9b4b8206",
+     "practice": "causes-effects-globalisation:practice:afd6b3c7",
+     "diagram": "Lower Prices and Higher Consumer Surplus"
+    }
+   },
+   {
+    "chapter": 5,
+    "title": "The Possible Costs",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "causes-effects-globalisation:quiz:0423ff5e",
+     "practice": "causes-effects-globalisation:practice:5ad189fe",
+     "diagram": "Loss of Tax Revenue from Transfer Pricing"
+    }
+   }
+  ]
+ },
+ {
+  "id": "globalisation",
+  "failures": [],
+  "notes": [
+   "B: section_practice differs at .5.guidance, a verified later fix (packet 2.7)"
+  ],
+  "publishedAt": "2026-09-25T13:54:40.731+00:00",
+  "bundle": "packet-33-bundle__business__globalisation.json",
+  "bundleDiff": {
+   "section_practice": [
+    ".5.guidance"
+   ]
+  },
+  "counts": {
+   "blocks": 6,
+   "quiz": 30,
+   "practice": 8,
+   "diagrams": 6
+  },
+  "pro": [
+   {
+    "chapter": 1,
+    "title": "Growing Economies",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "globalisation:quiz:99ea54de",
+     "practice": "globalisation:practice:324874d0",
+     "diagram": "Developed, Developing and Emerging Economies"
+    }
+   },
+   {
+    "chapter": 2,
+    "title": "International Trade and Business Growth",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "globalisation:quiz:586a07ed",
+     "practice": "globalisation:practice:e5f887dc",
+     "diagram": "Trade, Specialisation and FDI"
+    }
+   },
+   {
+    "chapter": 3,
+    "title": "What Drives Globalisation: Trade, Politics, Transport, Firms",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "globalisation:quiz:715598a6",
+     "practice": "globalisation:practice:2887a183",
+     "diagram": "What Drives Globalisation: Trade, Politics, Transport, Firms"
+    }
+   },
+   {
+    "chapter": 4,
+    "title": "Migration, Labour and Structural Change",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "globalisation:quiz:0fd26b84",
+     "practice": "globalisation:practice:add7e730",
+     "diagram": "Migration, Labour and Structural Change"
+    }
+   },
+   {
+    "chapter": 5,
+    "title": "Protectionism",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "globalisation:quiz:10385b1d",
+     "practice": "globalisation:practice:246f8470",
+     "diagram": "Protectionism: Four Barriers on One Unit"
+    }
+   },
+   {
+    "chapter": 6,
+    "title": "Trading Blocs",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "globalisation:quiz:9fe74bab",
+     "practice": "globalisation:practice:31c6a29d",
+     "diagram": "Trading Blocs and What Membership Is Worth"
+    }
+   }
+  ],
+  "api": {
+   "isPremium": false,
+   "contentVersionSince": "2026-09-25T13:54:40.731+00:00",
+   "quizSent": 9,
+   "quizTotal": 30,
+   "practiceSent": 8
+  },
+  "free": [
+   {
+    "chapter": 1,
+    "title": "Growing Economies",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "globalisation:quiz:99ea54de",
+     "practice": "globalisation:practice:324874d0",
+     "diagram": "Developed, Developing and Emerging Economies"
+    }
+   },
+   {
+    "chapter": 2,
+    "title": "International Trade and Business Growth",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "globalisation:quiz:586a07ed",
+     "practice": "globalisation:practice:e5f887dc",
+     "diagram": "Trade, Specialisation and FDI"
+    }
+   },
+   {
+    "chapter": 3,
+    "title": "What Drives Globalisation: Trade, Politics, Transport, Firms",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "globalisation:quiz:715598a6",
+     "practice": "globalisation:practice:2887a183",
+     "diagram": "What Drives Globalisation: Trade, Politics, Transport, Firms"
+    }
+   },
+   {
+    "chapter": 4,
+    "title": "Migration, Labour and Structural Change",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "globalisation:quiz:0fd26b84",
+     "practice": "globalisation:practice:add7e730",
+     "diagram": "Migration, Labour and Structural Change"
+    }
+   },
+   {
+    "chapter": 5,
+    "title": "Protectionism",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "globalisation:quiz:10385b1d",
+     "practice": "globalisation:practice:246f8470",
+     "diagram": "Protectionism: Four Barriers on One Unit"
+    }
+   },
+   {
+    "chapter": 6,
+    "title": "Trading Blocs",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "globalisation:quiz:9fe74bab",
+     "practice": "globalisation:practice:31c6a29d",
+     "diagram": "Trading Blocs and What Membership Is Worth"
+    }
+   }
+  ]
+ },
+ {
+  "id": "market-structures-contestability",
+  "failures": [],
+  "notes": [
+   "B: section_diagrams differs at .6.scenarios.2.svg, a verified later fix (packet 2.7)"
+  ],
+  "publishedAt": "2026-09-25T13:53:45.393+00:00",
+  "bundle": "packet-29-bundle__economics__market-structures-contestability.json",
+  "bundleDiff": {
+   "section_diagrams": [
+    ".6.scenarios.2.svg"
+   ]
+  },
+  "counts": {
+   "blocks": 8,
+   "quiz": 39,
+   "practice": 8,
+   "diagrams": 8
+  },
+  "pro": [
+   {
+    "chapter": 1,
+    "title": "Efficiency and Concentration",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "market-structures-contestability:quiz:01ba90ad",
+     "practice": "market-structures-contestability:practice:798d8eec",
+     "diagram": "Efficiency and Concentration"
+    }
+   },
+   {
+    "chapter": 2,
+    "title": "Perfect Competition",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "market-structures-contestability:quiz:1f54586e",
+     "practice": "market-structures-contestability:practice:0027c583",
+     "diagram": "Perfect Competition: Short Run, Long Run and Shutdown"
+    }
+   },
+   {
+    "chapter": 3,
+    "title": "Monopolistic Competition",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "market-structures-contestability:quiz:917f6053",
+     "practice": "market-structures-contestability:practice:d07bfd15",
+     "diagram": "Monopolistic Competition: the Long-Run Tangency"
+    }
+   },
+   {
+    "chapter": 4,
+    "title": "Oligopoly: Barriers to Entry and Exit",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "market-structures-contestability:quiz:06eb46bf",
+     "practice": "market-structures-contestability:practice:81b7e011",
+     "diagram": "Barriers to Entry and Exit"
+    }
+   },
+   {
+    "chapter": 5,
+    "title": "Oligopoly: Interdependence and Collusion",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "market-structures-contestability:quiz:44632ef6",
+     "practice": "market-structures-contestability:practice:1c4e5ff3",
+     "diagram": "Interdependence: the Two-Firm Game"
+    }
+   },
+   {
+    "chapter": 6,
+    "title": "Oligopoly: Price and Non-Price Competition",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "market-structures-contestability:quiz:e63a7065",
+     "practice": "market-structures-contestability:practice:fc98f6cf",
+     "diagram": "Price and Non-Price Competition"
+    }
+   },
+   {
+    "chapter": 7,
+    "title": "Monopoly",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "market-structures-contestability:quiz:dc13bf53",
+     "practice": "market-structures-contestability:practice:1c200bba",
+     "diagram": "Monopoly: Equilibrium, Welfare Loss and Price Discrimination"
+    }
+   },
+   {
+    "chapter": 8,
+    "title": "Monopsony and Contestability",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "market-structures-contestability:quiz:6c9555cc",
+     "practice": "market-structures-contestability:practice:53e0c0ee",
+     "diagram": "Monopsony and Contestability"
+    }
+   }
+  ],
+  "api": {
+   "isPremium": false,
+   "contentVersionSince": "2026-09-25T13:53:45.393+00:00",
+   "quizSent": 10,
+   "quizTotal": 39,
+   "practiceSent": 8
+  },
+  "free": [
+   {
+    "chapter": 1,
+    "title": "Efficiency and Concentration",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "market-structures-contestability:quiz:01ba90ad",
+     "practice": "market-structures-contestability:practice:798d8eec",
+     "diagram": "Efficiency and Concentration"
+    }
+   },
+   {
+    "chapter": 2,
+    "title": "Perfect Competition",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "market-structures-contestability:quiz:1f54586e",
+     "practice": "market-structures-contestability:practice:0027c583",
+     "diagram": "Perfect Competition: Short Run, Long Run and Shutdown"
+    }
+   },
+   {
+    "chapter": 3,
+    "title": "Monopolistic Competition",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "market-structures-contestability:quiz:917f6053",
+     "practice": "market-structures-contestability:practice:d07bfd15",
+     "diagram": "Monopolistic Competition: the Long-Run Tangency"
+    }
+   },
+   {
+    "chapter": 4,
+    "title": "Oligopoly: Barriers to Entry and Exit",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "market-structures-contestability:quiz:06eb46bf",
+     "practice": "market-structures-contestability:practice:81b7e011",
+     "diagram": "Barriers to Entry and Exit"
+    }
+   },
+   {
+    "chapter": 5,
+    "title": "Oligopoly: Interdependence and Collusion",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "market-structures-contestability:quiz:44632ef6",
+     "practice": "market-structures-contestability:practice:1c4e5ff3",
+     "diagram": "Interdependence: the Two-Firm Game"
+    }
+   },
+   {
+    "chapter": 6,
+    "title": "Oligopoly: Price and Non-Price Competition",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "market-structures-contestability:quiz:e63a7065",
+     "practice": "market-structures-contestability:practice:fc98f6cf",
+     "diagram": "Price and Non-Price Competition"
+    }
+   },
+   {
+    "chapter": 7,
+    "title": "Monopoly",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "market-structures-contestability:quiz:dc13bf53",
+     "practice": "market-structures-contestability:practice:1c200bba",
+     "diagram": "Monopoly: Equilibrium, Welfare Loss and Price Discrimination"
+    }
+   },
+   {
+    "chapter": 8,
+    "title": "Monopsony and Contestability",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "market-structures-contestability:quiz:6c9555cc",
+     "practice": "market-structures-contestability:practice:53e0c0ee",
+     "diagram": "Monopsony and Contestability"
+    }
+   }
+  ]
+ },
+ {
+  "id": "revenue-costs-profits",
+  "failures": [],
+  "notes": [],
+  "publishedAt": "2026-09-25T13:53:30.737+00:00",
+  "bundle": "packet-28-bundle__economics__revenue-costs-profits.json",
+  "bundleDiff": {},
+  "counts": {
+   "blocks": 7,
+   "quiz": 28,
+   "practice": 10,
+   "diagrams": 7
+  },
+  "pro": [
+   {
+    "chapter": 1,
+    "title": "Total, Average and Marginal Revenue",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "revenue-costs-profits:quiz:abe2ff43",
+     "practice": "revenue-costs-profits:practice:a2910ca0",
+     "diagram": "Total, Average and Marginal Revenue"
+    }
+   },
+   {
+    "chapter": 2,
+    "title": "Revenue and Price Elasticity of Demand",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "revenue-costs-profits:quiz:f810a177",
+     "practice": "revenue-costs-profits:practice:84f1fbac",
+     "diagram": "Price Elasticity of Demand and Revenue"
+    }
+   },
+   {
+    "chapter": 3,
+    "title": "Diminishing Returns and the Product Curves",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "revenue-costs-profits:quiz:810fda3b",
+     "practice": "revenue-costs-profits:practice:6fca1574",
+     "diagram": "Diminishing Returns and the Product Curves"
+    }
+   },
+   {
+    "chapter": 4,
+    "title": "The Seven Cost Measures",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "revenue-costs-profits:quiz:53e62e75",
+     "practice": "revenue-costs-profits:practice:37e90b95",
+     "diagram": "The Seven Cost Measures"
+    }
+   },
+   {
+    "chapter": 5,
+    "title": "The Long Run, LRAC and Minimum Efficient Scale",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "revenue-costs-profits:quiz:39edd1a1",
+     "practice": "revenue-costs-profits:practice:9b1a540d",
+     "diagram": "The Long Run, LRAC and Minimum Efficient Scale"
+    }
+   },
+   {
+    "chapter": 6,
+    "title": "Economies and Diseconomies of Scale",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "revenue-costs-profits:quiz:2ba765f0",
+     "practice": "revenue-costs-profits:practice:7a04d18a",
+     "diagram": "Economies and Diseconomies of Scale"
+    }
+   },
+   {
+    "chapter": 7,
+    "title": "Profits, Losses and the Shutdown Points",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "revenue-costs-profits:quiz:c6262a99",
+     "practice": "revenue-costs-profits:practice:239a6d28",
+     "diagram": "Profits, Losses and the Shutdown Points"
+    }
+   }
+  ],
+  "api": {
+   "isPremium": false,
+   "contentVersionSince": "2026-09-25T13:53:30.737+00:00",
+   "quizSent": 10,
+   "quizTotal": 28,
+   "practiceSent": 10
+  },
+  "free": [
+   {
+    "chapter": 1,
+    "title": "Total, Average and Marginal Revenue",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "revenue-costs-profits:quiz:abe2ff43",
+     "practice": "revenue-costs-profits:practice:a2910ca0",
+     "diagram": "Total, Average and Marginal Revenue"
+    }
+   },
+   {
+    "chapter": 2,
+    "title": "Revenue and Price Elasticity of Demand",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "revenue-costs-profits:quiz:f810a177",
+     "practice": "revenue-costs-profits:practice:84f1fbac",
+     "diagram": "Price Elasticity of Demand and Revenue"
+    }
+   },
+   {
+    "chapter": 3,
+    "title": "Diminishing Returns and the Product Curves",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "revenue-costs-profits:quiz:810fda3b",
+     "practice": "revenue-costs-profits:practice:6fca1574",
+     "diagram": "Diminishing Returns and the Product Curves"
+    }
+   },
+   {
+    "chapter": 4,
+    "title": "The Seven Cost Measures",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "revenue-costs-profits:quiz:53e62e75",
+     "practice": "revenue-costs-profits:practice:37e90b95",
+     "diagram": "The Seven Cost Measures"
+    }
+   },
+   {
+    "chapter": 5,
+    "title": "The Long Run, LRAC and Minimum Efficient Scale",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "revenue-costs-profits:quiz:39edd1a1",
+     "practice": "revenue-costs-profits:practice:9b1a540d",
+     "diagram": "The Long Run, LRAC and Minimum Efficient Scale"
+    }
+   },
+   {
+    "chapter": 6,
+    "title": "Economies and Diseconomies of Scale",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "revenue-costs-profits:quiz:2ba765f0",
+     "practice": "revenue-costs-profits:practice:7a04d18a",
+     "diagram": "Economies and Diseconomies of Scale"
+    }
+   },
+   {
+    "chapter": 7,
+    "title": "Profits, Losses and the Shutdown Points",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "revenue-costs-profits:quiz:c6262a99",
+     "practice": "revenue-costs-profits:practice:239a6d28",
+     "diagram": "Profits, Losses and the Shutdown Points"
+    }
+   }
+  ]
+ },
+ {
+  "id": "trade-global-economy",
+  "failures": [],
+  "notes": [],
+  "publishedAt": "2026-09-25T13:56:46.782+00:00",
+  "bundle": "packet-39b-bundle__economics__trade-global-economy.json",
+  "bundleDiff": {},
+  "counts": {
+   "blocks": 10,
+   "quiz": 46,
+   "practice": 14,
+   "diagrams": 11
+  },
+  "pro": [
+   {
+    "chapter": 1,
+    "title": "Specialisation and Comparative Advantage",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "trade-global-economy:quiz:d837a7f4",
+     "practice": "trade-global-economy:practice:43762caf",
+     "diagram": "The Gain From Specialising"
+    }
+   },
+   {
+    "chapter": 2,
+    "title": "Patterns and Volume of World Trade",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "trade-global-economy:quiz:2996f0b2",
+     "practice": "trade-global-economy:practice:ec756e2f",
+     "diagram": "Shares of World Exports"
+    }
+   },
+   {
+    "chapter": 3,
+    "title": "The Terms of Trade, and What Moves Them",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "trade-global-economy:quiz:279648f6",
+     "practice": "trade-global-economy:practice:4893ba66",
+     "diagram": "Calculating the Terms of Trade"
+    }
+   },
+   {
+    "chapter": 4,
+    "title": "When the Terms of Trade Change",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "trade-global-economy:quiz:4e737b50",
+     "practice": "trade-global-economy:practice:d44ea0c1",
+     "diagram": "An Improvement That Costs Revenue"
+    }
+   },
+   {
+    "chapter": 5,
+    "title": "Trade Liberalisation and the WTO",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "trade-global-economy:quiz:5141cf67",
+     "practice": "trade-global-economy:practice:fb4ec792",
+     "diagram": "A Bloc Breaks the First Rule"
+    }
+   },
+   {
+    "chapter": 6,
+    "title": "The Four Types of Trading Bloc",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "trade-global-economy:quiz:ab454eb0",
+     "practice": "trade-global-economy:practice:edce18e9",
+     "diagram": "The Four Types of Trading Bloc"
+    }
+   },
+   {
+    "chapter": 7,
+    "title": "Joining a Bloc: the Costs and the Benefits",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "trade-global-economy:quiz:3bf49e7f",
+     "practice": "trade-global-economy:practice:1162d99f",
+     "diagram": "Trade Diversion"
+    }
+   },
+   {
+    "chapter": 8,
+    "title": "Why Governments Restrict Trade",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "trade-global-economy:quiz:4585b0d1",
+     "practice": "trade-global-economy:practice:ce0fca64",
+     "diagram": "The Infant Industry Case"
+    }
+   },
+   {
+    "chapter": 9,
+    "title": "The Tools of Protection",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "trade-global-economy:quiz:c47ec400",
+     "practice": "trade-global-economy:practice:6eb4ec12",
+     "diagram": "A Subsidy: the Price Does Not Move"
+    }
+   },
+   {
+    "chapter": 10,
+    "title": "Who Gains and Who Loses",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "trade-global-economy:quiz:68879831",
+     "practice": "trade-global-economy:practice:302d3ddd",
+     "diagram": "A Tariff: Who Gets What"
+    }
+   }
+  ],
+  "api": {
+   "isPremium": false,
+   "contentVersionSince": "2026-09-25T13:56:46.782+00:00",
+   "quizSent": 10,
+   "quizTotal": 46,
+   "practiceSent": 14
+  },
+  "free": [
+   {
+    "chapter": 1,
+    "title": "Specialisation and Comparative Advantage",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "trade-global-economy:quiz:d837a7f4",
+     "practice": "trade-global-economy:practice:43762caf",
+     "diagram": "The Gain From Specialising"
+    }
+   },
+   {
+    "chapter": 2,
+    "title": "Patterns and Volume of World Trade",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "trade-global-economy:quiz:2996f0b2",
+     "practice": "trade-global-economy:practice:ec756e2f",
+     "diagram": "Shares of World Exports"
+    }
+   },
+   {
+    "chapter": 3,
+    "title": "The Terms of Trade, and What Moves Them",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "trade-global-economy:quiz:279648f6",
+     "practice": "trade-global-economy:practice:4893ba66",
+     "diagram": "Calculating the Terms of Trade"
+    }
+   },
+   {
+    "chapter": 4,
+    "title": "When the Terms of Trade Change",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "trade-global-economy:quiz:4e737b50",
+     "practice": "trade-global-economy:practice:d44ea0c1",
+     "diagram": "An Improvement That Costs Revenue"
+    }
+   },
+   {
+    "chapter": 5,
+    "title": "Trade Liberalisation and the WTO",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "trade-global-economy:quiz:5141cf67",
+     "practice": "trade-global-economy:practice:fb4ec792",
+     "diagram": "A Bloc Breaks the First Rule"
+    }
+   },
+   {
+    "chapter": 6,
+    "title": "The Four Types of Trading Bloc",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "trade-global-economy:quiz:ab454eb0",
+     "practice": "trade-global-economy:practice:edce18e9",
+     "diagram": "The Four Types of Trading Bloc"
+    }
+   },
+   {
+    "chapter": 7,
+    "title": "Joining a Bloc: the Costs and the Benefits",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "trade-global-economy:quiz:3bf49e7f",
+     "practice": "trade-global-economy:practice:1162d99f",
+     "diagram": "Trade Diversion"
+    }
+   },
+   {
+    "chapter": 8,
+    "title": "Why Governments Restrict Trade",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "trade-global-economy:quiz:4585b0d1",
+     "practice": "trade-global-economy:practice:ce0fca64",
+     "diagram": "The Infant Industry Case"
+    }
+   },
+   {
+    "chapter": 9,
+    "title": "The Tools of Protection",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "trade-global-economy:quiz:c47ec400",
+     "practice": "trade-global-economy:practice:6eb4ec12",
+     "diagram": "A Subsidy: the Price Does Not Move"
+    }
+   },
+   {
+    "chapter": 10,
+    "title": "Who Gains and Who Loses",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "trade-global-economy:quiz:68879831",
+     "practice": "trade-global-economy:practice:302d3ddd",
+     "diagram": "A Tariff: Who Gets What"
+    }
+   }
+  ]
+ },
+ {
+  "id": "types-sizes-businesses",
+  "failures": [],
+  "notes": [
+   "C: ch4 \"Constraints on Growth and Its Impact\" has no diagram field; all 5 diagrams are pinned to other chapters, so it shows none"
+  ],
+  "publishedAt": "2026-09-25T12:27:47.466+00:00",
+  "bundle": "packet-20-bundle__economics__types-sizes-businesses.json",
+  "bundleDiff": {},
+  "counts": {
+   "blocks": 6,
+   "quiz": 34,
+   "practice": 13,
+   "diagrams": 5
+  },
+  "pro": [
+   {
+    "chapter": 1,
+    "title": "Types of Business",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "types-sizes-businesses:quiz:34aa4e5f",
+     "practice": "types-sizes-businesses:practice:41e40770",
+     "diagram": "The Five Types of Business"
+    }
+   },
+   {
+    "chapter": 2,
+    "title": "The Size of Businesses",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "types-sizes-businesses:quiz:c7a359cf",
+     "practice": "types-sizes-businesses:practice:6b1dc648",
+     "diagram": "How Size Is Measured"
+    }
+   },
+   {
+    "chapter": 3,
+    "title": "How Businesses Grow",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "types-sizes-businesses:quiz:d9389500",
+     "practice": "types-sizes-businesses:practice:fe5c8be5",
+     "diagram": "The Four Directions of Integration"
+    }
+   },
+   {
+    "chapter": 4,
+    "title": "Constraints on Growth and Its Impact",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "ABSENT"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "none-to-place"
+    },
+    "shows": {
+     "quiz": "types-sizes-businesses:quiz:9aecaf69",
+     "practice": "types-sizes-businesses:practice:15b1dd6c",
+     "diagram": null
+    }
+   },
+   {
+    "chapter": 5,
+    "title": "Demergers",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "types-sizes-businesses:quiz:e86c0d80",
+     "practice": "types-sizes-businesses:practice:4e3aff14",
+     "diagram": "A Demerger Against a Divestment"
+    }
+   },
+   {
+    "chapter": 6,
+    "title": "Business Objectives",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "types-sizes-businesses:quiz:e7732a08",
+     "practice": "types-sizes-businesses:practice:e2d3c8e3",
+     "diagram": "The Three Business Objectives"
+    }
+   }
+  ],
+  "api": {
+   "isPremium": false,
+   "contentVersionSince": "2026-09-25T12:27:47.466+00:00",
+   "quizSent": 9,
+   "quizTotal": 34,
+   "practiceSent": 13
+  },
+  "free": [
+   {
+    "chapter": 1,
+    "title": "Types of Business",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "types-sizes-businesses:quiz:34aa4e5f",
+     "practice": "types-sizes-businesses:practice:41e40770",
+     "diagram": "The Five Types of Business"
+    }
+   },
+   {
+    "chapter": 2,
+    "title": "The Size of Businesses",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "types-sizes-businesses:quiz:c7a359cf",
+     "practice": "types-sizes-businesses:practice:6b1dc648",
+     "diagram": "How Size Is Measured"
+    }
+   },
+   {
+    "chapter": 3,
+    "title": "How Businesses Grow",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "types-sizes-businesses:quiz:d9389500",
+     "practice": "types-sizes-businesses:practice:fe5c8be5",
+     "diagram": "The Four Directions of Integration"
+    }
+   },
+   {
+    "chapter": 4,
+    "title": "Constraints on Growth and Its Impact",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "ABSENT"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "none-to-place"
+    },
+    "shows": {
+     "quiz": "types-sizes-businesses:quiz:9aecaf69",
+     "practice": "types-sizes-businesses:practice:15b1dd6c",
+     "diagram": null
+    }
+   },
+   {
+    "chapter": 5,
+    "title": "Demergers",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "types-sizes-businesses:quiz:e86c0d80",
+     "practice": "types-sizes-businesses:practice:4e3aff14",
+     "diagram": "A Demerger Against a Divestment"
+    }
+   },
+   {
+    "chapter": 6,
+    "title": "Business Objectives",
+    "census": {
+     "quiz": "indices",
+     "practice": "indices",
+     "diagram": "id"
+    },
+    "verdict": {
+     "quiz": "pin",
+     "practice": "pin",
+     "diagram": "pin"
+    },
+    "shows": {
+     "quiz": "types-sizes-businesses:quiz:e7732a08",
+     "practice": "types-sizes-businesses:practice:e2d3c8e3",
+     "diagram": "The Three Business Objectives"
+    }
+   }
+  ]
+ }
+]
