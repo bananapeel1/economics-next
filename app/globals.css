@@ -2914,6 +2914,16 @@ button.sidebar-resource-link {
 .lm-classify-chip.correct { background: var(--rl-green-bg); border-color: var(--rl-green-bd); color: var(--rl-green); }
 .lm-classify-chip.wrong { background: var(--rl-red-bg); border-color: var(--rl-red-bd); color: var(--rl-red); }
 .lm-classify-home { font-weight: 400; color: var(--rl-red); }
+/* Drag and whole-box tap (founder, 25 Sep). The chip owns the gesture so a finger drags it rather than
+   scrolling the page; everywhere else still scrolls. */
+.lm-classify-group.tappable { cursor: pointer; }
+.lm-classify-group.drop-over, .lm-word-bank.drop-over { border-color: var(--recall-accent); box-shadow: 0 0 0 2px rgba(167,139,250,0.35); background: var(--recall-accent-fill); }
+.lm-word-bank.drop-over { border: 1px dashed var(--recall-accent); border-radius: 10px; }
+.lm-classify-chip.draggable { touch-action: none; cursor: grab; -webkit-touch-callout: none; -webkit-user-select: none; }
+.lm-classify-chip.drag-source { opacity: 0.35; }
+.lm-classify-ghost { position: fixed; z-index: 1000; pointer-events: none; cursor: grabbing; margin: 0;
+  transform: scale(1.04); box-shadow: 0 8px 24px rgba(0,0,0,0.25); background: var(--bg-input); border-color: var(--recall-accent); color: var(--text-primary); }
+@media (prefers-reduced-motion: reduce) { .lm-classify-ghost { transform: none; } }
 /* Gallery (W003) */
 .lm-gallery { max-width: 620px; margin: 0 auto; padding: 16px; }
 .lm-gallery-title { font-size: 22px; font-weight: 800; color: var(--text-primary); margin: 0 0 8px; }
