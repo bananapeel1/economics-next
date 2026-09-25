@@ -12,6 +12,29 @@ Append only. Every entry needs a date and the packet that made it.
 
 ## Settled
 
+- **2026-09-22 — packet 12.6 shipped a pilot whose extract its own answers do not use, and 12.7 re-authors
+  rather than grandfathers it.** Economics 1.3.5 was chosen as the marked-script pilot on a claim in
+  `audit/specs/packet-12.6.md` that its three model answers cite the attached extract (`AED 0.18`, `PED -1.4`,
+  `45% fall`). The claim was false: the 4-mark answer applies a coal-fired power station, the 8-mark a steel
+  factory, the 20-mark the UK Soft Drinks Industry Levy, and the extract is UAE plastics / GCC sugar tax. Zero
+  overlap. Packet 12.6's fix round B1 could not re-author (E034 forbids new marking inside that packet) so it
+  replaced its own false student-facing note with an honest one. **The founder's ruling: 12.7 re-authors the
+  application paragraphs of the 1.3.5 4-mark and 8-mark answers against the attached extract, and re-segments
+  them.** The reason is not tidiness — the 65 answers in packet 12.8 are modelled on this section, and a pilot
+  whose flagship interaction is disclaimed by a note teaches the next packet the wrong pattern. The honest note
+  is removed only once the answers actually use the extract, never before.
+
+- **2026-09-22 — a criterion-to-segment link carries a role, because "earned here" and "missed here" are
+  opposite messages.** Packet 12.6's 8-mark Market Failure item is an honest mid-band exemplar (`likelyScore`
+  `5-6 / 8`) whose script stops at Level 3, so criteria `c7` and `c8` — the two Level 4 marks — point at the
+  segments where that assessment *should* have gone, not where it was earned. R1 requires criteria to sum to
+  the tariff, so they cannot simply be dropped, and authoring the missing assessment is new marking. **The
+  founder's ruling: the schema gains `segRole: 'earned' | 'missed'` and the two render differently.** This is
+  not a workaround for one item. Mid-band exemplars are an established pattern here (`lib/mid-band-answer.test.mjs`),
+  so every retrofit in 12.8 will produce criteria of both kinds, and rendering them identically inverts the
+  meaning of the design's central promise. Do not collapse the two roles back into one link type.
+
+
 - **2026-09-15 — the three lenses keep their filled boxes, against F067's fix text.** F067 asked for the Key
   Idea to dominate and, in the same sentence, for Real Example / Misconception / Exam Matters to be demoted to
   a compact style with "no coloured fill". Packet 5 shipped that and a verifier confirmed it. The founder saw

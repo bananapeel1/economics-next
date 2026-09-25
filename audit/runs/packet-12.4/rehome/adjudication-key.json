@@ -1,0 +1,59 @@
+{
+ "seed": 20260922,
+ "pairs": [
+  {
+   "ref": "R01",
+   "key": "economies-scale-4",
+   "id": "ECON-3.3.2-3e-2",
+   "group": "negative-control"
+  },
+  {
+   "ref": "R02",
+   "key": "economies-scale-4",
+   "id": "ECON-3.3.2-3a",
+   "group": "treatment"
+  },
+  {
+   "ref": "R03",
+   "key": "econ-diseconomies-scale-8",
+   "id": "ECON-3.3.2-3f-3",
+   "group": "treatment"
+  },
+  {
+   "ref": "R04",
+   "key": "econ-diseconomies-scale-8",
+   "id": "ECON-3.3.2-3f-1",
+   "group": "treatment"
+  },
+  {
+   "ref": "R05",
+   "key": "econ-diseconomies-scale-8",
+   "id": "ECON-3.3.2-2c-3",
+   "group": "negative-control"
+  },
+  {
+   "ref": "R06",
+   "key": "econ-diseconomies-scale-8",
+   "id": "ECON-3.3.2-3f-2",
+   "group": "treatment"
+  },
+  {
+   "ref": "R07",
+   "key": "economies-scale-4",
+   "id": "ECON-3.3.2-1a-3",
+   "group": "negative-control"
+  },
+  {
+   "ref": "R08",
+   "key": "econ-diseconomies-scale-8",
+   "id": "ECON-3.3.2-2d-2",
+   "group": "negative-control"
+  },
+  {
+   "ref": "R09",
+   "key": "econ-diseconomies-scale-8",
+   "id": "ECON-3.3.2-3a",
+   "group": "treatment"
+  }
+ ]
+}

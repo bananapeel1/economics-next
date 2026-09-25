@@ -1,0 +1,41 @@
+# Packet 12.6 gate — 22 September 2026
+
+## Required gates (all exit 0)
+
+### npm test
+Exit code: 0
+279/279 tests pass
+
+### npm run build
+Exit code: 0
+
+### npm run validate
+Exit code: 0
+No new BLOCK or DEBT findings beyond baseline
+
+### npm run exposure
+Exit code: 0
+
+### npm run recalls
+Exit code: 0
+
+### node audit/scripts/check-staged-drafts.mjs market-failure
+Exit code: 0
+
+## Advisory gates (record code, do not act)
+
+### npm run contrast
+Exit code: 0
+
+### npm run spec-items
+Exit code: 0
+
+### npm run tariff-census
+Exit code: 0
+
+### npm run pin-check
+Exit code: 0
+
+## Gate result: PASS
+
+All required gates exit 0. No new findings. Packet 12.6 is ready for commitment.

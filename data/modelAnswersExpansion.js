@@ -13,6 +13,7 @@ export const EXPANSION_ANSWERS = [
   // ── 1.3.1 Introductory Concepts — 8 marks ──
   {
     id: 'ppf-economic-growth-8',
+    specItems: ['ECON-1.3.1-4a-1', 'ECON-1.3.1-4a-5', 'ECON-1.3.1-4b'],
     subject: 'economics',
     unit: 1,
     sectionNumber: '1.3.1',
@@ -68,6 +69,7 @@ export const EXPANSION_ANSWERS = [
   // ── 1.3.2 Consumer Behaviour & Demand — 8 marks ──
   {
     id: 'yed-business-strategy-8',
+    specItems: ['ECON-1.3.2-3a', 'ECON-1.3.2-3h-2', 'ECON-1.3.2-3h-3', 'ECON-1.3.2-3h-5', 'ECON-1.3.2-3j'],
     subject: 'economics',
     unit: 1,
     sectionNumber: '1.3.2',
@@ -119,6 +121,7 @@ export const EXPANSION_ANSWERS = [
   // ── 1.3.4 Price Determination — 4 marks ──
   {
     id: 'equilibrium-price-4',
+    specItems: ['ECON-1.3.4-1a', 'ECON-1.3.4-1c'],
     subject: 'economics',
     unit: 1,
     sectionNumber: '1.3.4',
@@ -205,11 +208,79 @@ export const EXPANSION_ANSWERS = [
     ],
     examinerCommentary: 'The chain is developed and correct: external cost → MSC above MPC → price too low → overproduction → deadweight welfare loss, with the steel factory as application and the welfare loss triangle available for the diagram credit. It sits at Level 3 because the assessment is implied rather than made — the Pigouvian tax in the final paragraph is offered as a remedy, not weighed. A Level 4 needs a brief assessment: how large the misallocation is, and whether intervention improves on it, depends on whether the external cost can actually be valued, and pollution damage rarely can be valued precisely.',
     likelyScore: '5–6 / 8',
+
+    /* ── Packet 12.6, E034/E035. The marked-script shape. ──────────────────────────────────────
+       ADDITIVE; nothing above is changed. Re-expresses the level ladder in `markScheme` at two
+       marks per level, which is what the ladder itself states (1–2, 3–4, 5–6, 7–8), and points
+       each criterion at the clause of the script that addresses it.
+
+       HONEST LIMIT, and it is the reason this item is worth retrofitting first. This script is a
+       LEVEL 3 script — `likelyScore` says so and the commentary above says why. So `c7` and `c8`,
+       the two Level 4 marks, resolve to the two segments where the assessment BELONGS and is not
+       made; their segment notes say so in as many words, and their wording is taken from the
+       commentary above, not invented. R2 asks that every criterion resolve to a segment on this
+       item, and these do; it does not claim the segment earned the mark. A student ticking these
+       two is claiming something this model script does not demonstrate, which is exactly the gap
+       the page has always described in prose and can now point at.
+
+       `minutes` is `minutesForMarks('economics', 1, 8)` from `lib/exam-timing.js` (8 × 105/80 =
+       10.5 → 11), not a per-question guess. */
+    criteria: [
+      { id: 'c1', band: 'Level 1 — knowledge (1–2 marks)', text: 'Defines a negative externality of production as a cost imposed on third parties', marks: 1, seg: 'p1a' },
+      { id: 'c2', band: 'Level 1 — knowledge (1–2 marks)', text: 'States that marginal social cost exceeds marginal private cost, and names the gap as the external cost', marks: 1, seg: 'p1b' },
+      { id: 'c3', band: 'Level 2 — applied to the context (3–4 marks)', text: 'Names a specific polluter and the third parties it harms', marks: 1, seg: 'p2a' },
+      { id: 'c4', band: 'Level 2 — applied to the context (3–4 marks)', text: 'Explains that the firm decides output on private costs alone, so the external cost is never paid', marks: 1, seg: 'p2b' },
+      { id: 'c5', band: 'Level 3 — developed chain in context (5–6 marks)', text: 'Carries the chain through to price too low and output too high against the social optimum', marks: 1, seg: 'p3a' },
+      { id: 'c6', band: 'Level 3 — developed chain in context (5–6 marks)', text: 'Locates the deadweight welfare loss between Q* and Q₁ on the MSC/MSB diagram', marks: 1, seg: 'p3b' },
+      { id: 'c7', band: 'Level 4 — brief assessment (7–8 marks)', text: 'Weighs how large the misallocation actually is, rather than asserting that it exists', marks: 1, seg: 'p4a' },
+      { id: 'c8', band: 'Level 4 — brief assessment (7–8 marks)', text: 'Weighs whether intervention improves on it — whether the external cost can be valued at all', marks: 1, seg: 'p4b' },
+    ],
+    script: [
+      {
+        id: 'p1',
+        label: 'Define the externality',
+        aos: ['AO1'],
+        segments: [
+          { id: 'p1a', html: 'A <strong>negative externality of production</strong> occurs when the production of a good imposes <strong>costs on third parties</strong> who are not involved in the transaction.', note: 'Level 1 knowledge. The third-party clause is the mark; "production harms the environment" is not.' },
+          { id: 'p1b', html: 'The <strong>marginal social cost (MSC) exceeds the marginal private cost (MPC)</strong> — the gap between them is the external cost.', note: 'The second Level 1 mark. Naming the gap is what lets every later step be about a quantity rather than a feeling.' },
+        ],
+      },
+      {
+        id: 'p2',
+        label: 'Apply it to a context',
+        aos: ['AO2', 'AO3'],
+        segments: [
+          { id: 'p2a', html: 'For example, a <strong>steel factory</strong> discharging chemical waste into a nearby river imposes costs on downstream fisheries, local residents, and the environment.', note: 'Level 2 application: a named producer and named third parties. An unnamed "firm" leaves the answer in Level 1.' },
+          { id: 'p2b', html: 'The factory only considers its <strong>private costs</strong> (raw materials, energy, wages) when deciding how much to produce. It does not pay for the pollution damage — this external cost falls on third parties.', note: 'Begins the chain: the decision rule, not just the harm. This is where Level 2 turns into the start of Level 3.' },
+        ],
+      },
+      {
+        id: 'p3',
+        label: 'Carry the chain to the welfare loss',
+        aos: ['AO3'],
+        segments: [
+          { id: 'p3a', html: 'Because the market price reflects only <strong>private costs, not social costs</strong>, the price is <strong>too low</strong> and output is <strong>too high</strong> relative to the socially optimal level.', note: 'Level 3: the chain is carried through to a misallocation, in that order. Stating "the market fails" without this step is Level 2.' },
+          { id: 'p3b', html: 'On a diagram, the free market produces at Q₁ (where MPC = MPB) but the social optimum is at Q* (where MSC = MSB). The area between Q* and Q₁, bounded by MSC and MSB, is the <strong>deadweight welfare loss</strong> — the excess cost to society from overproduction.', note: 'The diagram credit the Level 3 descriptor asks for. The triangle has to be identified, not just drawn.' },
+        ],
+      },
+      {
+        id: 'p4',
+        label: 'Name the failure — and where the assessment should have gone',
+        aos: ['AO3', 'AO4'],
+        segments: [
+          { id: 'p4a', html: 'This is a clear case of <strong>market failure</strong> because the price mechanism sends the wrong signal — it tells producers to produce more than is socially desirable. Resources are misallocated because the market does not account for the full cost of production.', note: 'THIS SCRIPT STOPS HERE and asserts the misallocation. Level 4 wants it weighed: how large is it? The answer never says, which is why the commentary puts this script at 5–6.' },
+          { id: 'p4b', html: 'Government intervention (e.g. a Pigouvian tax equal to the external cost) could internalise the externality and move output toward the social optimum.', note: 'A remedy offered, not weighed — the exact clause the examiner commentary names as the difference between Level 3 and Level 4. Weighing it means asking whether pollution damage can be valued precisely enough to set the tax, and it rarely can.' },
+        ],
+      },
+    ],
+    stimulus: 'econ-u1-market-failure',
+    minutes: 11,
   },
 
   // ── 1.3.5 Market Failure — 20 marks ──
   {
     id: 'market-failure-government-intervention-20',
+    specItems: ['ECON-1.3.5-1a', 'ECON-1.3.5-1b-1', 'ECON-1.3.5-1b-2'],
     subject: 'economics',
     unit: 1,
     sectionNumber: '1.3.5',
@@ -262,11 +333,97 @@ export const EXPANSION_ANSWERS = [
     ],
     examinerCommentary: 'This answer earns top marks through its <em>conditional, nuanced conclusion</em> — not simply "yes" or "no" but "it depends on the type of failure and the quality of intervention." The sugar tax and Coase theorem examples provide strong AO2 application. The government failure section with information failure, regulatory capture, and unintended consequences demonstrates sophisticated AO4 evaluation. The final sentence — comparing costs of government failure with costs of market failure — is exactly the evaluative framework examiners reward.',
     likelyScore: '18–20 / 20',
+
+    /* ── Packet 12.6, E034/E035. The marked-script shape. ──────────────────────────────────────
+       ADDITIVE; nothing above is changed. This item's `markScheme` is already per-objective and
+       already carries marks (AO1 4 · AO2 4 · AO3 6 · AO4 6 = 20), so the criteria below are that
+       scheme broken into tickable points, each worth a stated number of marks and each pointing at
+       the clause of the script that earns it. The per-objective totals are 4 / 4 / 6 / 6 — the
+       same four numbers, redistributed, never changed.
+
+       `minutes` is `minutesForMarks('economics', 1, 20)` from `lib/exam-timing.js` (20 × 105/80 =
+       26.25 → 26), not a per-question guess. */
+    criteria: [
+      { id: 'c1', band: 'AO1 — knowledge (4 marks)', text: 'Defines market failure as a misallocation of resources, not merely a bad outcome', marks: 1, seg: 'p1a' },
+      { id: 'c2', band: 'AO1 — knowledge (4 marks)', text: 'Explains why a public good is not supplied privately: non-excludable, non-rival, free riding', marks: 1, seg: 'p2b' },
+      { id: 'c3', band: 'AO1 — knowledge (4 marks)', text: 'States the Coase condition — defined property rights and low transaction costs', marks: 1, seg: 'p3a' },
+      { id: 'c4', band: 'AO1 — knowledge (4 marks)', text: 'Defines government failure as intervention that worsens the allocation of resources', marks: 1, seg: 'p4a' },
+      { id: 'c5', band: 'AO2 — application (4 marks)', text: 'Uses a real intervention with its measured effect, not a hypothetical one', marks: 2, seg: 'p2c' },
+      { id: 'c6', band: 'AO2 — application (4 marks)', text: 'Uses a bargaining case in which property rights decide the outcome', marks: 1, seg: 'p3b' },
+      { id: 'c7', band: 'AO2 — application (4 marks)', text: 'Uses a named unintended consequence of a real policy', marks: 1, seg: 'p4d' },
+      { id: 'c8', band: 'AO3 — analysis (6 marks)', text: 'Reads the question as "always" rather than "ever", which is what makes a conditional answer possible', marks: 1, seg: 'p1b' },
+      { id: 'c9', band: 'AO3 — analysis (6 marks)', text: 'Chain for intervention: firms have no incentive to price an external cost, so the market cannot self-correct', marks: 1, seg: 'p2a' },
+      { id: 'c10', band: 'AO3 — analysis (6 marks)', text: 'Carries that chain to the counterfactual — what would have continued without the policy', marks: 1, seg: 'p2d' },
+      { id: 'c11', band: 'AO3 — analysis (6 marks)', text: 'Chain against: shows where the private-bargaining route breaks down in practice', marks: 1, seg: 'p3c' },
+      { id: 'c12', band: 'AO3 — analysis (6 marks)', text: 'Chain on information failure: an unknown external cost means a tax set too high or too low', marks: 1, seg: 'p4b' },
+      { id: 'c13', band: 'AO3 — analysis (6 marks)', text: 'Sets the cost of intervening against the welfare gain from correcting the failure', marks: 1, seg: 'p4e' },
+      { id: 'c14', band: 'AO4 — evaluation (6 marks)', text: 'Raises regulatory capture as a reason intervention may not serve the public', marks: 1, seg: 'p4c' },
+      { id: 'c15', band: 'AO4 — evaluation (6 marks)', text: 'Reaches a conditional verdict rather than a yes or a no', marks: 2, seg: 'p5a' },
+      { id: 'c16', band: 'AO4 — evaluation (6 marks)', text: 'Judges the FORM of intervention, not only whether to intervene', marks: 1, seg: 'p5b' },
+      { id: 'c17', band: 'AO4 — evaluation (6 marks)', text: 'States the deciding comparison: costs of government failure against costs of market failure left uncorrected', marks: 2, seg: 'p5c' },
+    ],
+    script: [
+      {
+        id: 'p1',
+        label: 'Introduction',
+        aos: ['AO1', 'AO3'],
+        segments: [
+          { id: 'p1a', html: '<strong>Market failure</strong> occurs when the free market leads to a <strong>misallocation of resources</strong> — producing too much (negative externalities), too little (positive externalities, merit goods), or none at all (public goods).', note: 'The definition mark. The three-way split is what lets the essay pick its cases later instead of arguing about one.' },
+          { id: 'p1b', html: 'The question is whether government intervention is <strong>always</strong> required to correct these failures, or whether alternative mechanisms — including private bargaining and market-based solutions — can sometimes achieve efficient outcomes without state action.', note: 'Reading "always" is the whole essay. An answer that argues intervention is useful has answered a question that was not asked.' },
+        ],
+      },
+      {
+        id: 'p2',
+        label: 'Argument 1 — intervention is necessary',
+        aos: ['AO1', 'AO2', 'AO3'],
+        segments: [
+          { id: 'p2a', html: 'In many cases, government intervention is essential because the market <strong>cannot self-correct</strong>.', note: 'The claim the paragraph then has to earn. On its own it is worth nothing.' },
+          { id: 'p2b', html: '<strong>Public goods</strong> such as street lighting and national defence are non-excludable and non-rivalrous — the free rider problem means no private firm can profitably supply them. Only the state can fund provision through taxation.', note: 'Knowledge, and the strongest case for "always": with a pure public good there is no private route at all.' },
+          { id: 'p2c', html: 'The UK&rsquo;s <strong>sugar tax</strong> (Soft Drinks Industry Levy), introduced in 2018, reduced sugary drink consumption by 34% and incentivised manufacturers to reformulate products.', note: 'Two application marks, because it is a named policy with a measured effect and a second-order effect. An example with no number earns one at most.' },
+          { id: 'p2d', html: 'Without this intervention, the overconsumption of sugar — and its associated health-system costs — would have continued uncorrected.', note: 'The counterfactual. It is what turns an example into an argument, and most scripts leave it out.' },
+        ],
+      },
+      {
+        id: 'p3',
+        label: 'Argument 2 — intervention is not always necessary',
+        aos: ['AO1', 'AO2', 'AO3'],
+        segments: [
+          { id: 'p3a', html: 'The <strong>Coase theorem</strong> suggests that if property rights are well-defined and transaction costs are low, private parties can negotiate an efficient outcome without government involvement.', note: 'Knowledge, and the two conditions matter: quoting Coase without them makes the counter-argument unfalsifiable.' },
+          { id: 'p3b', html: 'For example, if a factory pollutes a farmer&rsquo;s land and the farmer has clear legal ownership, they can negotiate compensation or a reduction in pollution — reaching the socially optimal output through bargaining.', note: 'Application to a case where the two conditions actually hold: two parties, one clear title.' },
+          { id: 'p3c', html: 'In practice, however, transaction costs are often high and property rights unclear, limiting the applicability of this approach.', note: 'Analysis that turns the counter-argument into a bounded one. Without it the essay argues against itself in the conclusion.' },
+        ],
+      },
+      {
+        id: 'p4',
+        label: 'Evaluation — government failure',
+        aos: ['AO1', 'AO3', 'AO4'],
+        segments: [
+          { id: 'p4a', html: 'Even when intervention is attempted, it can lead to <strong>government failure</strong> — where the intervention makes the allocation of resources <strong>worse rather than better</strong>.', note: '"Worse rather than better" is the definition mark. Government failure is not intervention that merely disappoints.' },
+          { id: 'p4b', html: 'Governments face <strong>information failure</strong> — they may not know the exact size of an external cost, leading them to set taxes too high or too low.', note: 'The chain that connects back to the first argument: the same tax praised above can miss in either direction.' },
+          { id: 'p4c', html: '<strong>Regulatory capture</strong> means regulators may serve industry interests rather than the public.', note: 'Evaluation, because it questions whose interest the intervention serves — a different objection from "it did not work".' },
+          { id: 'p4d', html: '<strong>Unintended consequences</strong> are common — for example, minimum pricing on alcohol may harm low-income moderate drinkers without significantly reducing problem drinking.', note: 'Application inside the evaluation, and it names who is harmed. A generic "there may be side effects" earns nothing.' },
+          { id: 'p4e', html: 'The cost of intervention itself (bureaucracy, enforcement, compliance) may exceed the welfare gain from correcting the failure.', note: 'The comparison the conclusion will turn on, stated once here so the conclusion introduces no new material.' },
+        ],
+      },
+      {
+        id: 'p5',
+        label: 'Conclusion',
+        aos: ['AO4'],
+        segments: [
+          { id: 'p5a', html: 'On balance, government intervention is <strong>often necessary but not always effective or desirable</strong>. For pure public goods and large-scale externalities where private solutions are impractical, intervention is essential.', note: 'Two marks: a conditional verdict that answers "always" with "not always, and here is when". A yes or a no cannot reach the top band on this question.' },
+          { id: 'p5b', html: 'However, the form and extent of intervention matters — well-designed market-based instruments (tradable permits, targeted taxes) tend to outperform heavy-handed regulation.', note: 'Judging the form, not just the fact. It is the move that separates a top-band conclusion from a summary.' },
+          { id: 'p5c', html: 'The key judgement is whether the <strong>costs of government failure</strong> are likely to be greater or less than the costs of <strong>market failure</strong> left uncorrected. Where transaction costs are low and property rights clear, private solutions should be tried first.', note: 'Two marks. This is the evaluative framework itself — a criterion for deciding, not another opinion — and it closes the loop on both arguments.' },
+        ],
+      },
+    ],
+    stimulus: 'econ-u1-market-failure',
+    minutes: 26,
   },
 
   // ── 1.3.6 Government Intervention — 4 marks ──
   {
     id: 'indirect-tax-definition-4',
+    specItems: ['ECON-1.3.6-1a', 'ECON-1.3.6-1b-1'],
     subject: 'economics',
     unit: 1,
     sectionNumber: '1.3.6',
@@ -304,6 +461,7 @@ export const EXPANSION_ANSWERS = [
   // ── 2.3.1 Measures of Economic Performance — 4 marks (additional) ──
   {
     id: 'cpi-limitations-4',
+    specItems: ['ECON-2.3.1-2c'],
     subject: 'economics',
     unit: 2,
     sectionNumber: '2.3.1',
@@ -337,6 +495,7 @@ export const EXPANSION_ANSWERS = [
   // ── 2.3.2 Aggregate Demand — 8 marks ──
   {
     id: 'interest-rates-ad-8',
+    specItems: ['ECON-2.3.2-2a-2', 'ECON-2.3.2-3b-2'],
     subject: 'economics',
     unit: 2,
     sectionNumber: '2.3.2',
@@ -392,6 +551,7 @@ export const EXPANSION_ANSWERS = [
   // ── 2.3.3 Aggregate Supply — 4 marks ──
   {
     id: 'sras-shift-4',
+    specItems: ['ECON-2.3.3-1c', 'ECON-2.3.3-2a-1', 'ECON-2.3.3-2a-2', 'ECON-2.3.3-2a-3'],
     subject: 'economics',
     unit: 2,
     sectionNumber: '2.3.3',
@@ -425,6 +585,7 @@ export const EXPANSION_ANSWERS = [
   // ── 2.3.4 National Income — 8 marks ──
   {
     id: 'multiplier-effect-8',
+    specItems: ['ECON-2.3.4-4a', 'ECON-2.3.4-4b-1', 'ECON-2.3.4-4b-2', 'ECON-2.3.4-4b-3', 'ECON-2.3.4-4b-4'],
     subject: 'economics',
     unit: 2,
     sectionNumber: '2.3.4',
@@ -476,6 +637,7 @@ export const EXPANSION_ANSWERS = [
   // ── 2.3.2 Aggregate Demand — 20 marks ──
   {
     id: 'consumer-spending-growth-20',
+    specItems: ['ECON-2.3.2-1a', 'ECON-2.3.2-1b-1'],
     subject: 'economics',
     unit: 2,
     sectionNumber: '2.3.2',
@@ -533,6 +695,7 @@ export const EXPANSION_ANSWERS = [
   // ── 2.3.5 Economic Growth — 8 marks ──
   {
     id: 'costs-benefits-growth-8',
+    specItems: ['ECON-2.3.5-3a-1', 'ECON-2.3.5-3a-2', 'ECON-2.3.5-3a-3', 'ECON-2.3.5-3a-4', 'ECON-2.3.5-3a-5'],
     subject: 'economics',
     unit: 2,
     sectionNumber: '2.3.5',
@@ -589,13 +752,19 @@ export const EXPANSION_ANSWERS = [
   // ECONOMICS UNIT 3 — ALL NEW (no existing answers)
   // ══════════════════════════════════════════════════════════════
 
-  // ── 3.3.1 Types and Sizes of Businesses — 4 marks ──
+  // ── 3.3.2 Revenue, Costs and Profits — 4 marks ──
+  // RE-HOMED from 3.3.1 by packet 12.4, E029. Economies of scale appears nowhere in IAL Economics
+  // 3.3.1 (Types and Sizes of Businesses: sector, size, growth, objectives) — it is 3.3.2's
+  // `ECON-3.3.2-3a` to `3f`. The answer was always correct; only its address was wrong, which is
+  // why nothing below `sectionTitle` changed. Precedent: 12.1's E005 re-homed 20 Business items the
+  // same way, by what the question examines rather than by where it was filed.
   {
     id: 'economies-scale-4',
+    specItems: ['ECON-3.3.2-3a'],
     subject: 'economics',
     unit: 3,
-    sectionNumber: '3.3.1',
-    sectionTitle: 'Types and Sizes of Businesses',
+    sectionNumber: '3.3.2',
+    sectionTitle: 'Revenue, Costs and Profits',
     marks: 4,
     stimulusRef: null,
     ao: ['AO1', 'AO2'],
@@ -625,6 +794,7 @@ export const EXPANSION_ANSWERS = [
   // ── 3.3.2 Revenue, Costs and Profits — 8 marks ──
   {
     id: 'profit-maximisation-mc-mr-8',
+    specItems: ['ECON-3.3.2-1a-3', 'ECON-3.3.2-2c-7'],
     subject: 'economics',
     unit: 3,
     sectionNumber: '3.3.2',
@@ -675,6 +845,7 @@ export const EXPANSION_ANSWERS = [
   // ── 3.3.3 Market Structures — 20 marks ──
   {
     id: 'monopoly-efficiency-20',
+    specItems: ['ECON-3.3.3-6d', 'ECON-3.3.3-6e', 'ECON-3.3.3-6h'],
     subject: 'economics',
     unit: 3,
     sectionNumber: '3.3.3',
@@ -732,6 +903,7 @@ export const EXPANSION_ANSWERS = [
   // ── 3.3.4 Labour Markets — 4 marks ──
   {
     id: 'derived-demand-labour-4',
+    specItems: ['ECON-3.3.4-1a-1'],
     subject: 'economics',
     unit: 3,
     sectionNumber: '3.3.4',
@@ -765,6 +937,7 @@ export const EXPANSION_ANSWERS = [
   // ── 3.3.4 Labour Markets — 8 marks ──
   {
     id: 'monopsony-wages-8',
+    specItems: ['ECON-3.3.4-3a'],
     subject: 'economics',
     unit: 3,
     sectionNumber: '3.3.4',
@@ -817,6 +990,7 @@ export const EXPANSION_ANSWERS = [
   // ── 3.3.5 Government Intervention — 4 marks ──
   {
     id: 'privatisation-definition-4',
+    specItems: ['ECON-3.3.5-1c-3', 'ECON-3.3.5-1e-3'],
     subject: 'economics',
     unit: 3,
     sectionNumber: '3.3.5',
@@ -887,6 +1061,7 @@ export const EXPANSION_ANSWERS = [
   // ── 4.3.1 Causes and Effects of Globalisation — 8 marks ──
   {
     id: 'mnc-host-country-8',
+    specItems: ['ECON-4.3.1-2b-2', 'ECON-4.3.1-3a-1', 'ECON-4.3.1-3b-2'],
     subject: 'economics',
     unit: 4,
     sectionNumber: '4.3.1',
@@ -938,6 +1113,7 @@ export const EXPANSION_ANSWERS = [
   // ── 4.3.2 Trade and the Global Economy — 20 marks ──
   {
     id: 'free-trade-protectionism-20',
+    specItems: ['ECON-4.3.2-1a', 'ECON-4.3.2-5a-1', 'ECON-4.3.2-5a-2', 'ECON-4.3.2-5c-1'],
     subject: 'economics',
     unit: 4,
     sectionNumber: '4.3.2',
@@ -995,6 +1171,7 @@ export const EXPANSION_ANSWERS = [
   // ── 4.3.3 Balance of Payments — 4 marks ──
   {
     id: 'current-account-deficit-4',
+    specItems: ['ECON-4.3.3-1a-1', 'ECON-4.3.3-1b'],
     subject: 'economics',
     unit: 4,
     sectionNumber: '4.3.3',
@@ -1028,6 +1205,7 @@ export const EXPANSION_ANSWERS = [
   // ── 4.3.4 Poverty and Inequality — 8 marks ──
   {
     id: 'gini-lorenz-inequality-8',
+    specItems: ['ECON-4.3.4-2b-1', 'ECON-4.3.4-2b-2'],
     subject: 'economics',
     unit: 4,
     sectionNumber: '4.3.4',
@@ -1079,6 +1257,7 @@ export const EXPANSION_ANSWERS = [
   // ── 4.3.6 Growth and Development — 4 marks ──
   {
     id: 'barriers-development-4',
+    specItems: ['ECON-4.3.6-2a-10', 'ECON-4.3.6-2a-2', 'ECON-4.3.6-2a-3', 'ECON-4.3.6-2a-7', 'ECON-4.3.6-2a-9'],
     subject: 'economics',
     unit: 4,
     sectionNumber: '4.3.6',
@@ -1112,6 +1291,7 @@ export const EXPANSION_ANSWERS = [
   // ── 4.3.6 Growth and Development — 8 marks ──
   {
     id: 'aid-vs-trade-development-8',
+    specItems: ['ECON-4.3.6-3a-1', 'ECON-4.3.6-3c-5'],
     subject: 'economics',
     unit: 4,
     sectionNumber: '4.3.6',
@@ -1554,13 +1734,15 @@ export const EXPANSION_ANSWERS = [
   // REMAINING ECONOMICS GAPS
   // ══════════════════════════════════════════════════════════════
 
-  // ── 3.3.1 Types and Sizes of Businesses — 8 marks ──
+  // ── 3.3.2 Revenue, Costs and Profits — 8 marks ──
+  // RE-HOMED from 3.3.1 by packet 12.4, E029 — see `economies-scale-4` above for why.
   {
     id: 'econ-diseconomies-scale-8',
+    specItems: ['ECON-3.3.2-3a', 'ECON-3.3.2-3f-1', 'ECON-3.3.2-3f-2', 'ECON-3.3.2-3f-3'],
     subject: 'economics',
     unit: 3,
-    sectionNumber: '3.3.1',
-    sectionTitle: 'Types and Sizes of Businesses',
+    sectionNumber: '3.3.2',
+    sectionTitle: 'Revenue, Costs and Profits',
     marks: 8,
     stimulusRef: null,
     ao: ['AO1', 'AO2', 'AO3', 'AO4'],
@@ -1608,6 +1790,7 @@ export const EXPANSION_ANSWERS = [
   // ── 3.3.2 Revenue, Costs and Profits — 4 marks ──
   {
     id: 'econ-normal-vs-supernormal-profit-4',
+    specItems: ['ECON-3.3.2-4a'],
     subject: 'economics',
     unit: 3,
     sectionNumber: '3.3.2',
@@ -1641,6 +1824,7 @@ export const EXPANSION_ANSWERS = [
   // ── 3.3.5 Government Intervention — 8 marks ──
   {
     id: 'econ-competition-policy-8',
+    specItems: ['ECON-3.3.5-1b-1', 'ECON-3.3.5-1b-5', 'ECON-3.3.5-1b-6'],
     subject: 'economics',
     unit: 3,
     sectionNumber: '3.3.5',
@@ -1692,6 +1876,7 @@ export const EXPANSION_ANSWERS = [
   // ── 4.3.2 Trade — 4 marks ──
   {
     id: 'econ-comparative-advantage-4',
+    specItems: ['ECON-4.3.2-1b-1', 'ECON-4.3.2-1b-2'],
     subject: 'economics',
     unit: 4,
     sectionNumber: '4.3.2',
@@ -1725,6 +1910,7 @@ export const EXPANSION_ANSWERS = [
   // ── 4.3.3 Balance of Payments — 8 marks ──
   {
     id: 'econ-j-curve-depreciation-8',
+    specItems: ['ECON-4.3.3-2e', 'ECON-4.3.3-2f-1'],
     subject: 'economics',
     unit: 4,
     sectionNumber: '4.3.3',

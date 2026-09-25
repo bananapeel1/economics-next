@@ -1,0 +1,309 @@
+{
+ "subject": "economics",
+ "topic": "2.3.1",
+ "title": "Measures of economic performance",
+ "questions": [
+  {
+   "key": "cpi-inflation-4",
+   "question": "Explain how the Consumer Price Index (CPI) is used to measure inflation."
+  },
+  {
+   "key": "unemployment-types-8",
+   "question": "Examine the different types of unemployment in an economy."
+  },
+  {
+   "key": "cpi-limitations-4",
+   "question": "Explain two limitations of using CPI as a measure of inflation."
+  }
+ ],
+ "leaves": [
+  {
+   "id": "ECON-2.3.1-1a",
+   "subtopic": "Economic growth",
+   "requirement": "",
+   "wording": "The rate of change of real Gross Domestic Product (GDP) as a measure of economic growth and living standards."
+  },
+  {
+   "id": "ECON-2.3.1-1b",
+   "subtopic": "Economic growth",
+   "requirement": "",
+   "wording": "Gross National Income (GNI) as an alternative measure of national income."
+  },
+  {
+   "id": "ECON-2.3.1-1c-1",
+   "subtopic": "Economic growth",
+   "requirement": "The distinction between the following measures of GDP/GNI:",
+   "wording": "real and nominal"
+  },
+  {
+   "id": "ECON-2.3.1-1c-2",
+   "subtopic": "Economic growth",
+   "requirement": "The distinction between the following measures of GDP/GNI:",
+   "wording": "total and per capita"
+  },
+  {
+   "id": "ECON-2.3.1-1c-3",
+   "subtopic": "Economic growth",
+   "requirement": "The distinction between the following measures of GDP/GNI:",
+   "wording": "value and volume."
+  },
+  {
+   "id": "ECON-2.3.1-1d",
+   "subtopic": "Economic growth",
+   "requirement": "",
+   "wording": "Comparison of GDP/GNI rates of growth between countries and over time."
+  },
+  {
+   "id": "ECON-2.3.1-1e",
+   "subtopic": "Economic growth",
+   "requirement": "",
+   "wording": "The concept of Purchasing Power Parities (PPPs) in making international comparisons of real GDP/GNI."
+  },
+  {
+   "id": "ECON-2.3.1-1f",
+   "subtopic": "Economic growth",
+   "requirement": "",
+   "wording": "The distinction between positive economic growth rates and negative economic growth rates."
+  },
+  {
+   "id": "ECON-2.3.1-1g",
+   "subtopic": "Economic growth",
+   "requirement": "",
+   "wording": "The concept of ‘recession’ as two consecutive quarters of negative economic growth."
+  },
+  {
+   "id": "ECON-2.3.1-1h",
+   "subtopic": "Economic growth",
+   "requirement": "",
+   "wording": "The limitations of using GDP/GNI to compare living standards between countries and over time."
+  },
+  {
+   "id": "ECON-2.3.1-1i-1",
+   "subtopic": "Economic growth",
+   "requirement": "National happiness and wellbeing:",
+   "wording": "indicators of national happiness and wellbeing"
+  },
+  {
+   "id": "ECON-2.3.1-1i-2",
+   "subtopic": "Economic growth",
+   "requirement": "National happiness and wellbeing:",
+   "wording": "the relationship between real incomes and subjective happiness."
+  },
+  {
+   "id": "ECON-2.3.1-2a",
+   "subtopic": "Inflation",
+   "requirement": "",
+   "wording": "The concepts of inflation, deflation and disinflation."
+  },
+  {
+   "id": "ECON-2.3.1-2b",
+   "subtopic": "Inflation",
+   "requirement": "",
+   "wording": "Calculating inflation using a consumer price index (CPI), including role of weighted basket of goods and services."
+  },
+  {
+   "id": "ECON-2.3.1-2c",
+   "subtopic": "Inflation",
+   "requirement": "",
+   "wording": "Limitations of the CPI as a measure of the rate of inflation."
+  },
+  {
+   "id": "ECON-2.3.1-2d",
+   "subtopic": "Inflation",
+   "requirement": "",
+   "wording": "The producer (wholesale) price index as an indicator of future trends in the rate of inflation."
+  },
+  {
+   "id": "ECON-2.3.1-2e-1",
+   "subtopic": "Inflation",
+   "requirement": "Causes of inflation:",
+   "wording": "demand-pull"
+  },
+  {
+   "id": "ECON-2.3.1-2e-2",
+   "subtopic": "Inflation",
+   "requirement": "Causes of inflation:",
+   "wording": "cost-push"
+  },
+  {
+   "id": "ECON-2.3.1-2e-3",
+   "subtopic": "Inflation",
+   "requirement": "Causes of inflation:",
+   "wording": "excessive growth of money supply."
+  },
+  {
+   "id": "ECON-2.3.1-2f-1",
+   "subtopic": "Inflation",
+   "requirement": "Causes of deflation:",
+   "wording": "falling aggregate demand (AD)"
+  },
+  {
+   "id": "ECON-2.3.1-2f-2",
+   "subtopic": "Inflation",
+   "requirement": "Causes of deflation:",
+   "wording": "increase in aggregate supply (AS)"
+  },
+  {
+   "id": "ECON-2.3.1-2f-3",
+   "subtopic": "Inflation",
+   "requirement": "Causes of deflation:",
+   "wording": "fall in the money supply."
+  },
+  {
+   "id": "ECON-2.3.1-2g-1",
+   "subtopic": "Inflation",
+   "requirement": "Effects of inflation and deflation on:",
+   "wording": "Consumers"
+  },
+  {
+   "id": "ECON-2.3.1-2g-2",
+   "subtopic": "Inflation",
+   "requirement": "Effects of inflation and deflation on:",
+   "wording": "the government"
+  },
+  {
+   "id": "ECON-2.3.1-2g-3",
+   "subtopic": "Inflation",
+   "requirement": "Effects of inflation and deflation on:",
+   "wording": "firms"
+  },
+  {
+   "id": "ECON-2.3.1-2g-4",
+   "subtopic": "Inflation",
+   "requirement": "Effects of inflation and deflation on:",
+   "wording": "workers"
+  },
+  {
+   "id": "ECON-2.3.1-2g-5",
+   "subtopic": "Inflation",
+   "requirement": "Effects of inflation and deflation on:",
+   "wording": "income distribution"
+  },
+  {
+   "id": "ECON-2.3.1-2g-6",
+   "subtopic": "Inflation",
+   "requirement": "Effects of inflation and deflation on:",
+   "wording": "investment"
+  },
+  {
+   "id": "ECON-2.3.1-2g-7",
+   "subtopic": "Inflation",
+   "requirement": "Effects of inflation and deflation on:",
+   "wording": "competitiveness"
+  },
+  {
+   "id": "ECON-2.3.1-2g-8",
+   "subtopic": "Inflation",
+   "requirement": "Effects of inflation and deflation on:",
+   "wording": "the current account of the balance of payments."
+  },
+  {
+   "id": "ECON-2.3.1-3a",
+   "subtopic": "Employment and",
+   "requirement": "",
+   "wording": "How unemployment is measured, using the International Labour unemployment Organization (ILO) definition."
+  },
+  {
+   "id": "ECON-2.3.1-3b-1",
+   "subtopic": "Employment and",
+   "requirement": "The causes of unemployment:",
+   "wording": "frictional"
+  },
+  {
+   "id": "ECON-2.3.1-3b-2",
+   "subtopic": "Employment and",
+   "requirement": "The causes of unemployment:",
+   "wording": "seasonal"
+  },
+  {
+   "id": "ECON-2.3.1-3b-3",
+   "subtopic": "Employment and",
+   "requirement": "The causes of unemployment:",
+   "wording": "structural"
+  },
+  {
+   "id": "ECON-2.3.1-3b-4",
+   "subtopic": "Employment and",
+   "requirement": "The causes of unemployment:",
+   "wording": "demand deficiency"
+  },
+  {
+   "id": "ECON-2.3.1-3b-5",
+   "subtopic": "Employment and",
+   "requirement": "The causes of unemployment:",
+   "wording": "real wage inflexibility."
+  },
+  {
+   "id": "ECON-2.3.1-3c-1",
+   "subtopic": "Employment and",
+   "requirement": "The effects of unemployment on:",
+   "wording": "consumers"
+  },
+  {
+   "id": "ECON-2.3.1-3c-2",
+   "subtopic": "Employment and",
+   "requirement": "The effects of unemployment on:",
+   "wording": "firms"
+  },
+  {
+   "id": "ECON-2.3.1-3c-3",
+   "subtopic": "Employment and",
+   "requirement": "The effects of unemployment on:",
+   "wording": "workers"
+  },
+  {
+   "id": "ECON-2.3.1-3c-4",
+   "subtopic": "Employment and",
+   "requirement": "The effects of unemployment on:",
+   "wording": "public finances"
+  },
+  {
+   "id": "ECON-2.3.1-3c-5",
+   "subtopic": "Employment and",
+   "requirement": "The effects of unemployment on:",
+   "wording": "resource utilisation and production possibility frontier"
+  },
+  {
+   "id": "ECON-2.3.1-3c-6",
+   "subtopic": "Employment and",
+   "requirement": "The effects of unemployment on:",
+   "wording": "society."
+  },
+  {
+   "id": "ECON-2.3.1-3d",
+   "subtopic": "Employment and",
+   "requirement": "",
+   "wording": "The distinction between unemployment and underemployment."
+  },
+  {
+   "id": "ECON-2.3.1-3e",
+   "subtopic": "Employment and",
+   "requirement": "",
+   "wording": "The significance of changes in rates of employment, unemployment and economic inactivity."
+  },
+  {
+   "id": "ECON-2.3.1-3f",
+   "subtopic": "Employment and",
+   "requirement": "",
+   "wording": "The significance of net migration for employment and unemployment."
+  },
+  {
+   "id": "ECON-2.3.1-4a",
+   "subtopic": "Balance of",
+   "requirement": "",
+   "wording": "Components of the balance of payments, with particular payments reference to the current account."
+  },
+  {
+   "id": "ECON-2.3.1-4b",
+   "subtopic": "Balance of",
+   "requirement": "",
+   "wording": "The distinction between deficits and surpluses in the trade in goods and services balance."
+  },
+  {
+   "id": "ECON-2.3.1-4c",
+   "subtopic": "Balance of",
+   "requirement": "",
+   "wording": "The distinction between balance of payments deficits and surpluses on the current account."
+  }
+ ]
+}

@@ -85,3 +85,24 @@ test('--section narrows to one section and market-failure reports a real, partia
   assert.equal(row.slug, 'market-failure');
   assert.ok(row.pct > 0 && row.pct < 100, `expected a partial percentage, got ${row.pct}%`);
 });
+
+/*
+ * E025, packet 12.4. Added with a fourth fixture rather than by rewording the criterion alone: the
+ * acceptance line had no assertion behind it, so it was being read off the table by eye, which is
+ * how "non-zero for every section with questions" survived being wrong about 13 sections.
+ */
+test('real ids belonging to ANOTHER section fail on the zerocov rule, and on that rule alone', () => {
+  const { code, json } = runFixture('zero-coverage');
+  assert.equal(code, 1);
+  assert.deepEqual([...new Set(json.failures.map((f) => f.rule))], ['zerocov']);
+  assert.equal(json.rows[0].examined, 0);
+  assert.ok(json.failures.some((f) => f.detail.includes('examine 0 of')), JSON.stringify(json.failures));
+});
+
+test('the zerocov rule is silent when a section has no model answers at all', () => {
+  // The honest exclusion, pinned. A section carrying only untagged section_practice rows examines
+  // nothing and must NOT fail: 0.0% is true of it. If this ever starts failing, the rule has been
+  // widened back to "has questions" and 13 sections are being blamed for an unrun migration.
+  const { json } = runFixture('clean');
+  assert.equal(json.failures.filter((f) => f.rule === 'zerocov').length, 0);
+});

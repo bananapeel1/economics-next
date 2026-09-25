@@ -1,0 +1,18 @@
+
+> economics-next@0.1.0 contrast
+> node audit/scripts/contrast-check.mjs
+
+[1m
+contrast — light mode[0m[2m  (901 rules with a resolvable colour)[0m
+  [32mpass[0m[2m — nothing below its threshold[0m
+[2m  12 rules set white text with no background of their own — their fill comes[0m
+[2m  from a sibling rule or a JSX inline style, so only the browser can score them.[0m
+[1m
+literals — colours that should be tokens[0m
+  [32mpass[0m[2m — every themed colour declaration resolves through a token[0m
+[1m
+diagrams — processSvg palette vs --dg-* tokens[0m
+  [32mpass[0m[2m — every mapped token exists and its dark value matches the literal[0m
+[1m[32m
+clean
+[0m[0m

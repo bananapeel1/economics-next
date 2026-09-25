@@ -1,5 +1,352 @@
 # Next session brief
 
+## Packet 12.6 — PASSED 22 September 2026, awaiting commit
+
+Gate test/build/validate/drift all 0. E033-E037 confirmed, none rejected, one fix round. Artefacts in
+`audit/runs/packet-12.6/`. Spec: `audit/specs/packet-12.6.md`. Nothing committed; the founder commits.
+
+**A correction later packets must carry:** that spec's "Notes for the author" claimed Economics 1.3.5's
+model answers cite the attached extract. They do not — 4m applies a coal-fired power station, 8m a steel
+factory, 20m the UK Soft Drinks Industry Levy, against a UAE plastics / GCC sugar-tax extract. The pilot
+section was chosen on that false premise. See `audit/DECISIONS.md` → Settled → 2026-09-22.
+
+Also: the 8m and 20m Market Failure answers live in `data/modelAnswersExpansion.js`, which E034/E035's
+`file` field does not name.
+
+## Packet 12.7 spec — RESERVED, spec lives elsewhere (22 September 2026)
+
+**Packet 12.7 is claimed. Do not pick it up.**
+
+The authoritative spec is `audit/specs/packet-12.7.md`. It is deliberately not copied here: a spec
+written into NEXT.md is published to every live session, which is how packet 12.4 was taken by a peer
+minutes after being specced. This block reserves the packet; it is not a work item.
+
+One line so a reader knows what is moving: 12.7 re-authors 1.3.5's application marks against its
+attached extract, adds `segRole: earned|missed` to the criterion shape, and builds the v6 chrome —
+mode gate, question navigation, keyboard. Ledger ids E038-E042. Two founder rulings in
+`audit/DECISIONS.md` (Settled, 2026-09-22) govern it and are not open questions.
+
+## Packet 12.4 spec — tag the Economics bank, and two defects 12.3 left (Opus author, 22 September 2026)
+
+**Read first:** `audit/runs/packet-12.1/tagging-diff.md` (the two-pass method and its honest limits),
+`audit/scripts/tag-lexical.mjs` and `tag-merge.mjs`, `lib/spec-coverage.js` (the docstring at :164-185
+explains why the page and the CLI report different numbers for the same section — that is by design and
+must stay true), and `audit/runs/packet-12.3/verify-b-r1.md` for the two defects in scope below.
+
+**Goal in one line:** make the coverage line on the 22 Economics model-answer pages report a real
+number instead of `0.0%`, by tagging the questions those pages actually display.
+
+**Data-file work plus two small component fixes. No content authoring, no DB write, no SQL.**
+Closing E023-E028.
+
+### Resolved 22 September, before the build — the 7th id
+
+The Brief phase stopped this packet because `ledger.mjs packet 12.4` returned a 7th id,
+`C-trade-global-economy-topFix-05`, that this spec never mentions. It was right to stop, and the
+contradiction is now settled: **the item has been reassigned to packet 12.5** and 12.4 closes
+E023-E028 as written.
+
+Why it is not this packet's. Packet 39b already built every clause of that finding the specification
+supports (Define at 2, Explain at 4 with the tariff item rebuilt from 6, `Outline` gone, the Appellate
+Body limitation added) and correctly refused the two it refutes: there is **no 10-mark item in IAL
+Economics** (`tariff-census.json`: 2, 2/4, 4, 4, 6, 8, 14, 20), and the finding wants a diagram inside
+an `Explain` when Appendix 6 makes `Draw` the command word that requires one. What is left is real —
+present the 14- and 20-mark guidance as levels grids (KAA + Evaluation) — and it is content authoring,
+which this packet's own scope line excludes.
+
+**Packet 12.5 is not scoped yet; this is its seed item.** The levels-grid gap is unlikely to stop at
+one section, so whoever scopes it should census the practice bank before sizing it rather than assume
+it is a one-section job.
+
+### Measured 22 September, before writing this
+
+| | items | tagged | untagged |
+|---|---|---|---|
+| Business | 20 | **20** | 0 |
+| Economics | 46 | **1** | **45** |
+
+Business is fully tagged — a by-product of 12.1's E005, which had to read the spec wording to find each
+item's real IAL section number and captured `specItems` while it was there. That is exactly why 12.3's
+walkthrough found all 10 Business pages reporting real figures (34.5% down to 6.7%) and 21 of 22
+Economics pages reporting `0.0%`. **The gap is Economics-only, it is 45 questions across 22 sections,
+and it is a metadata gap, not a content gap** — those questions do examine the spec; nobody has said
+which leaves.
+
+**No SQL is needed and the packet is not blocked on the founder.** The pages compute coverage over the
+questions they display, which come from `data/modelAnswersData.js` and `modelAnswersExpansion.js` — a
+versioned data file. `section_practice`'s `spec_items` column (still unrun, `scripts/packet-12-1-spec-items.sql`)
+only feeds the CLI's second bank. Tagging the data file alone fixes the headline. Do not wait on the SQL
+and do not attempt a DB write.
+
+### The method, and the one thing 12.1 could not do
+
+`tagging-diff.md` records it honestly: pass 1 was the author reading question text against the topic's
+oracle rows; **pass 2 was `tag-lexical.mjs`, a deterministic matcher, because that session had no
+agent-spawn tool.** It agreed on 31 of 51 proposed tags and, being lexical, misses any question that
+examines a leaf in different words. 12.1's own escalation asked for this to be fixed **before** the
+method scaled to more sections. This is that packet.
+
+So: **pass 2 must be a separate agent**, given only the question text and that topic's rows of
+`audit/raw/spec-items.json`, and never pass 1's output. Keep `tag-lexical.mjs` as a **third** signal —
+it is free, it is genuinely blind, and three instruments that share no code agreeing is the independence
+property this programme keeps failing to get by accident. Write only tags at least two of the three
+passes agree on; everything else goes on the review list with its dissent recorded.
+
+Do not tune any pass after reading its output. That is how an oracle becomes a mirror.
+
+### What must become true
+
+| id | What must become true |
+|---|---|
+| E023 | Every one of the 45 untagged Economics items in `modelAnswersData.js`/`modelAnswersExpansion.js` has been through the three-pass process. Items with an agreed tag carry `specItems`; items without stay **untagged (absent, not `[]`)** and are listed with their dissent in `audit/runs/packet-12.4/tagging-diff.md`. `MODEL_ANSWERS` content — question, markScheme, answerParagraphs, examinerCommentary, likelyScore — is **unchanged**; prove it with a field-level diff, not by assertion |
+| E024 | Pass 2 was a genuine separate agent with only the two permitted inputs. `tagging-diff.md` names all three passes, their per-item verdicts, the agreement rate, and every item where a pass dissented. A tag written on one pass alone is a defect |
+| E025 | `npm run spec-coverage` reports a non-zero, non-rounded figure for every Economics section that has questions, and no `specItems` id outside the oracle (the guard already fails on an invented id — show it passing) |
+| E026 | The coverage headline on every Economics model-answer page reads a real figure. Curl at least five and assert the number in the HTML equals what `lib/spec-coverage.js` computes for that section's displayed questions |
+| E027 | `/business/the-market-model-answers` stops promising what it does not have: an honest title for a page with zero questions, and the dead "browse every topic" link either points somewhere real or is removed. The empty state itself (12.1 fix round B1) stays |
+| E028 | The mid-band panel is **suppressed** where it cannot be a genuine near-miss — 10 of 29 currently top out in the same band as the model answer they were cut from, which teaches nothing. Suppress on that condition rather than showing a misleading panel; record which sections lost theirs. Authoring multi-paragraph answers for those sections is the alternative fix and is NOT in scope |
+
+### Acceptance — runnable without this conversation
+
+1. `node -e` over both data files: zero Economics items with `specItems: []`, and the count carrying a non-empty `specItems` matches `tagging-diff.md`'s agreed count exactly.
+2. A field-level diff proving no `question`, `markScheme`, `answerParagraphs`, `examinerCommentary` or `likelyScore` value changed for any of the 66 items.
+3. `npm run spec-coverage` exits with its usual code, prints a non-zero % for every Economics section holding questions, and lists no unknown spec id.
+4. Five curled Economics pages: the headline figure matches the computed figure, and the sub-line still says the number is a floor where items remain untagged.
+5. `/business/the-market-model-answers` has no dead link and no title claiming questions it lacks.
+6. The suppression rule for E028 is a named, testable condition in code with a unit test, not a per-section list.
+7. `npm test`, `npm run build`, `npm run validate`, `npm run recalls`, `npm run exposure` all exit 0.
+
+**Verify B (390×844, signed out):** two Economics pages that were `0.0%` and now are not, one section that
+lost its mid-band panel under E028, and `the-market`. Report whether the coverage line reads as a
+credible claim to a student rather than as an apology.
+
+**Stage explicitly, commit nothing.** Five sessions are live. 66 of the 92 staged deletions in this index
+belong to other packets — never `git add -A`, and check any path you stage against
+`git diff --cached --diff-filter=D --name-only` first. Do not stage `audit/ledger.json`. Re-read the top
+of `audit/NEXT.md` immediately before appending your handoff.
+
+
+## Packet 12.4 result — the Economics bank is tagged, two model answers re-homed, E025 retired for a real check (Opus 5, 22 September 2026)
+
+**Round 1 — Verify A: 5 of 6 confirmed, E025 REJECTED. Verify B: every scripted step PASS.**
+**Round 2 — the founder widened the packet rather than narrowing the id: E029 moved in from 12.5 and
+E031 was minted into 12.4. Verify B round 2: every step PASS. E025 is STILL not satisfied.**
+
+### E025 is gone. Read this before trusting any acceptance line in this file
+
+**E025 was unsatisfiable as written and wrong about 13 sections, and it took two verifier rejections
+and three attempts at a replacement to say so.** It is now `wont-fix` with a note, superseded by
+**E032**. The history is worth keeping because the mistake repeated itself at every level:
+
+1. **The id.** "Non-zero for every Economics section with questions" assumed every section's
+   questions examine that section, and that every question is taggable. Neither holds. All 43
+   sections carry five `section_practice` rows, untagged until `scripts/packet-12-1-spec-items.sql`
+   is run, so 13 sections — 11 Business, 2 Economics — read 0.0% for a reason that is uniform and
+   TRUE: they have no model answers at all.
+2. **The round-2 end state.** "E025 passes as literally written" was put to the founder and repeated
+   into the options without being checked against the CLI's denominator. It was false when written.
+3. **The replacement I recommended.** "Sections whose model answers examine their own specification"
+   is a TAUTOLOGY: such a section is non-zero by definition, so the check could never fail. Another
+   session caught it. I proposed it while writing a packet whose entire subject is checks that
+   certify nothing.
+
+What replaced it is a rule with an assertion behind it, not a line read off a table by eye: a
+`zerocov` failure fires when a section that **has model answers** examines none of its own
+specification — which is exactly 3.3.1's defect before the re-home — and stays silent on the 13
+sections that honestly have none. `audit/fixtures/spec-coverage/zero-coverage.json` is that defect
+in miniature, and a second test pins `clean.json` to stay silent so the rule cannot drift back into
+blaming 13 sections for an unrun migration.
+
+**The fixture only works with this packet's `lib/spec-coverage.js` change.** Its four ids are real
+oracle leaves of 1.3.2 while its section declares 1.3.5: under HEAD they count as examined and the
+rule cannot fire. `audit/scripts/spec-coverage-check.mjs`, `audit/scripts/spec-coverage.test.mjs`
+and the fixture are therefore staged WITH this packet. Committing them apart from
+`lib/spec-coverage.js` breaks the suite.
+
+### The record of what E025 used to say
+
+The end state put to the founder for round 2 said "E025 passes as literally written". **It does not,
+and it could not have.** That sentence was repeated into the options without being checked against
+the CLI's denominator, and the correction matters more than the packet does:
+
+`npm run spec-coverage` counts BOTH banks, and every Economics section carries five untagged
+`section_practice` rows. A section reads non-zero only when a tagged MODEL ANSWER lifts it off the
+floor. So after the re-home the two Economics sections at 0.0% are exactly the two with no model
+answers at all — 3.3.1, whose two just left, and 4.3.5, which never had any — five untagged practice
+questions each. "Non-zero for every Economics section with questions" is still false.
+
+What the re-home did change is the honesty of the zero, and that was worth doing on its own: before,
+3.3.1's 0.0% sat under two genuine exam questions on a live page, which was a lie about the page.
+Now both zeros mean the same explicable thing. The dishonest zero is gone; the arithmetic one is not.
+
+**Resolved by the founder, 22 September:** retitle rather than tag. Tagging the ten
+`section_practice` rows for 3.3.1 and 4.3.5 — or the 65 across all 13 zero sections — would mean
+extending packet 12.1's `section_practice-tags.json` and is its own packet, not a wording fix.
+Nothing committed. Nine tracked files staged; artefacts in `audit/runs/packet-12.4/`
+(`built.md`, `tagging-diff.md`, `midband-suppression.md`, `verify-a-r1.md`, `verify-b-r1.md`).
+
+### What is true now that was not this morning
+
+21 of the 22 Economics model-answer pages print a real coverage figure instead of `0.0%`, and on
+every one of them the number in the HTML equals what `lib/spec-coverage.js` computes for the
+questions that page displays. Across the bank, leaves examined went from 50 to 155 of 915 with the
+CLI's failure set unchanged. `/business/the-market-model-answers` no longer titles itself after
+questions it does not have, and its dead "browse every topic" clause is a live link to `/business`.
+Nine pages stopped showing a "why this loses marks" panel that topped out in the band its own model
+answer already sits in; a tenth kept one by falling back to a second question.
+
+### The one open question — answer this before 12.4 ships
+
+**E025 as ledgered says "non-zero for every Economics section with questions", and two Economics
+sections still report 0.0%. Neither can be fixed by tagging.** The verifier is right to reject it and
+I have not argued with the verdict or quietly re-worded the id.
+
+- `types-sizes-businesses` (3.3.1): its two questions examine economies and diseconomies of scale,
+  which appear nowhere in 3.3.1's thirty leaves — they are `ECON-3.3.2-3a`..`3f`. Making this row
+  non-zero means tagging a question with another section's leaves, the one thing the method exists
+  to prevent. Filed as **E029** on 12.5.
+- `role-state-macroeconomy` (4.3.5): no model answers at all, so only untagged `section_practice`
+  rows. Filed as **E030** on 12.5.
+
+**The choice:** re-word E025 to "every Economics section whose model answers examine its own
+specification" and close it on the evidence in `verify-a-r1.md`, leaving E029/E030 to carry the two
+exceptions — or leave E025 open against 12.5 and ship 12.4 with five of six closed. Either is
+defensible; `audit/BRAIN.md`'s hard stops put the decision with you, not with a fix round.
+
+Verify B's student, asked whether the coverage line reads as a credible claim or an apology, said
+credible everywhere except that one page: *"a flat zero next to two real exam questions makes the
+page look useless when it isn't, and I'd have to read three lines of fine print to learn that."*
+That is E029 reaching a student.
+
+**And a third option, because a page with zero questions still prints a coverage headline.** Found
+after Verify A had confirmed E027, so it is recorded rather than fixed:
+`/business/the-market-model-answers` reads "This page examines 0 of 24 requirements in 1.3.2 The
+Market · 0.0%" over "0 written questions · 0 marks", then lists all 24 requirements it does not
+examine. There is no floor caveat, because the caveat is gated on `coverage.untagged > 0` and a page
+with no items has nothing untagged (`components/SectionModelAnswersPage.jsx:252`). This predates
+12.4 — the panel has behaved this way since 12.2 — and E027 did not name it.
+
+It matters to the decision above: re-homing 3.3.1's two items to 3.3.2 leaves
+`types-sizes-businesses` reading "0 of 30 · 0.0%" with **no** caveat, which is worse than today's
+version. So the choice is three-way — narrow E025; re-home and accept a new empty page reading
+0.0%; or re-home and suppress the percentage where `coverage.questions === 0` in the same change.
+The third is the right end state: the answers do belong on 3.3.2 (`ECON-3.3.2-3a`, `3c`, `3d-1..6`,
+`3e-1..3`, `3f-1..3`), which sits at 8.8% today. The two moved items would need re-tagging through
+the three-pass against 3.3.2 — the unit-3 pass-2 agent called them empties for 3.3.1, which is the
+right answer to the question it was asked and says nothing about 3.3.2.
+
+### What the next session must know
+
+1. **The three-pass method's third instrument is weak, and the write-up says so.** 69 of the 120
+   written tags rest on passes 1 and 2 with the lexical matcher dissenting; only 7 carry no pass-1
+   vote. A blind, shuffled, controlled adjudication of a sample of those 69 by a fourth reader
+   returned 9/10, against 7/7 on the positive control and 0/7 on the negative control, so they are
+   real tags a lexical matcher cannot see rather than a shared hallucination. **Do not quote "three
+   passes agreed" when scaling this to `section_practice`** — quote the split.
+
+2. **Pass 2 must return a bare count.** The unit-3 agent's completion summary named its conclusion
+   for 3.3.1, and it reached this session before pass 1 had been written for that topic. Nothing
+   rests on it (neither pass tagged those two items) but it is a leak the prompt should close.
+
+3. **`lib/spec-coverage.js` now counts `examined` against the section's own leaves.** A tag naming a
+   real leaf in another topic used to raise `pct` while being filtered out of `examinedIds`, so a
+   page could print a percentage its own list could not explain. No tag in the tree is cross-topic,
+   so no number moved; it is a guard, and 3.3.1 is the case that makes it reachable.
+
+4. **Nine sections lost their mid-band panel because their highest-tariff model answer is itself only
+   mid-band** (5–6 / 8). Authoring a fuller answer for those nine is the alternative fix and is a
+   content packet's job. List in `midband-suppression.md`.
+
+5. **Three leaves for `negative-externality-tax-8` are available but were not taken.** The three-pass
+   agrees on `1a`, `2b` and `2d-3` for the item packet 12.1 had already tagged; 12.1's own two tags
+   were re-derived unanimously, which is the control this packet ran. Rewriting another packet's
+   verified output is not a data fix, so a later packet should take them deliberately or not at all.
+
+6. **Two sessions ran this packet.** Another session wrote the 12.4 spec into NEXT.md and launched a
+   run; its Brief found this session's work on disk and stood down before double-merging. Its
+   artefacts (`brief.md`, `brief-recheck-duplicate-invocation.md`, `count-tags*.mjs`,
+   `item-census.txt`, `ledger-*.txt`) share the run directory with this one's. Writing a spec into
+   `NEXT.md` publishes a work item to every live session; it does not reserve it.
+
+### Round 2 additions
+
+7. **The two re-homed items were re-tagged from scratch, and pass 3 was structurally silent.** Passes
+   1 and 2 agreed exactly on all five tags; `tag-lexical.mjs` proposed nothing and could not have —
+   `economy` and `scale` are not distinctive stems inside a subtopic about economies of scale, and
+   the target leaves ("communication problems", "X-inefficiency") share no content stem with the
+   question. A hand-check by the packet author would have been pass 1 re-reading pass 1, so the five
+   tags went to a blind fourth reader with four negative controls from 3.3.2's own leaves: **5 of 5
+   confirmed, 0 of 4 on the controls.** `rehome/tagging-diff.md` shows the stem measurements rather
+   than asserting the caveat.
+
+8. **An empty page does not say where its questions went.** Verify B's student, on the 3.3.1 page:
+   the new wording "explains why there's no number, not where the questions went". On that page it
+   is sharper than she knows — the questions did not fail to exist, they moved to Revenue, Costs and
+   Profits in this packet, and the page sends her to the subject hub to hunt. An empty page naming
+   where its topic's questions are examined is the honest version. **Not built**: E031's scope is the
+   percentage, and this needs the bank asked a question it is not currently asked. It applies to both
+   empty pages and to every future one.
+
+9. **The dev server served stale output after the round-2 edits.** The first attempt at the page
+   checks showed the pre-edit question counts on three pages. `preview_stop`, kill by port, delete
+   `.next/cache`, restart — then the figures were right. Any page evidence taken without that step
+   after a data-file edit is worthless, and it looks exactly like evidence.
+
+### Two hazards found while running this packet, neither of them packet work
+
+**`node_modules` was deleted out of the worktree mid-run, at about 12:53.** The dev server exited 1,
+Turbopack could not find `next/package.json`, and every `npm` script failed for a reason unrelated to
+the work being verified. Restored by `cp -c -R ../economics-next/node_modules` (three seconds on
+APFS); `npm test` returned to 277/277 and all gates were re-run after the restore.
+
+The cause is a pattern, not an incident. **13 symlinks across five sessions currently point from
+`/private/tmp/claude-503/**/scratchpad/` into live trees** — four at `node_modules`, two at
+`.env.local`, two at `audit/raw`, two at `validator-baseline.json`, one at the **whole `audit`
+directory** (ledger, handoff files, snapshots) and one into `economics-next-worksheets/content`.
+`rm -rf "$dir"` removes links, but one trailing slash — `rm -rf "$dir/node_modules/"` — follows the
+link and empties the real directory, and afterwards the link looks healthy again, so the evidence
+erases itself. Find them with:
+
+```
+find /private/tmp/claude-503 -type l -exec sh -c 'readlink "$1" | grep -q "Claude APP" && echo "$1 -> $(readlink "$1")"' _ {} \;
+```
+
+`find … -type l -delete` (no trailing slash) removes links and never targets. **They have not been
+deleted**: they are other sessions' working state, some of those sessions are live, and deleting a
+directory another packet is mid-run against is the same class of harm. Each owner should remove
+their own. `cp -c -R` is nearly free on APFS and cannot delete anything; it is the method for running
+old code against real data.
+
+**The sharper half of that incident, for `PROTOCOL.md`:** the danger was not the red build, it was
+Verify A being mid-run and about to record a REJECT against this packet for a missing binary. A
+verifier cannot tell "this fix is broken" from "the toolchain vanished underneath me", and it fails
+toward the accusation. Proposed rule for PROTOCOL's verifier section, not taken here because
+PROTOCOL changes are the founder's and go in their own commit: **a rejection whose evidence is a
+missing binary, a failed import or an exited server is not a rejection, it is a re-run.**
+
+## Handoff — packet 12.6 closed, gate passed (written 22 September 2026, workflow bookkeeping pass)
+
+**This session's job was bookkeeping only, per its brief: read the existing run artefacts, write `PROGRESS.md` row 12.6 and this section, stage nothing, commit nothing.** It authored, fixed or verified nothing itself. It independently re-ran `node audit/scripts/ledger.mjs unverified 12.6` and `node audit/scripts/ledger.mjs packet 12.6` (both fresh, not taken from a log: exit 0 "gate clear", 5/5 confirmed), and cross-checked file locations named in `built.md`'s prose against `git status --short` and `grep` over the actual data files, per this programme's "verify independently" rule. It did not touch `app/`, `components/`, `lib/`, `scripts/`, `data/`, or any content/test file, and did not run `git add` on anything.
+
+**The task brief that launched this session asserted "PASSED the gate," "5 confirmed / 0 rejected / 0 unverified," "fix rounds used: 1 of 2," "walkthrough: clean."** All four are independently confirmed true here, unlike packet 42's bookkeeping pass the same day (see above) which found the equivalent brief overstated. For 12.6: ledger re-run matches exactly; `audit/runs/packet-12.6/gate.log` (pre-B1) and `gate-b1-*.log` (post-B1) both show every required gate at exit 0; `verify-b.md` (round 0) rejected E035 as a blocking defect, one fix round (B1) ran, and `verify-b-r1.md` — a genuinely independent re-walk, fresh dev server, real taps, measurements taken from the live DOM and a separate `curl`, not reused from the fix's own probes — verdicts **"No blocking defect."** `verify-a.md`'s own final line: "The gate should pass, with the E035 residual … carried into packet 12.8 rather than closed here."
+
+**No contradiction found among the required reads.** `audit/PROTOCOL.md`, the `## Packet 12.6 spec` reservation pointer in this file (which correctly defers to `audit/specs/packet-12.6.md` as authoritative and was not copied here), `audit/specs/packet-12.6.md` itself, `PROGRESS.md`'s prior state (no row existed for 12.6 before this session), `DECISIONS.md`'s settled/irreversible list (nothing there names 12.6, E033-E037 or the marked-script shape), and `CONTENT-GATE.md`'s recall contract (not implicated — 12.6 adds no recall content; `npm run recalls` reports "no section worse than the baseline") all agree with each other and with what `audit/runs/packet-12.6/` records.
+
+**What the next packet needs to know:**
+
+- **Packet 12.6 is additive and proven on exactly one section (Economics 1.3.5 Market Failure) — 65 other model answers still carry only the old `markScheme`/`answerParagraphs`/`stimulusRef: null` shape.** Packet 12.8 (named in the spec) retrofits the rest against this now-proven shape and validator.
+- **A real, visible mismatch is deliberately NOT fixed by this packet and is not this packet's to fix**: the spec's own "Notes for the author" claimed the three 1.3.5 bank answers cite the attached extract's own figures (`AED 0.18 per bag`, `PED -1.4`, `45% fall`); they do not (0 grep hits in either data file). The three answers instead cite a coal-fired power station, a steel factory and the UK Soft Drinks Industry Levy, while the page now shows a UAE/GCC extract above them. E034 forbids inventing new marking to close this, so it is open for **12.7 or 12.8**: either re-author the application paragraphs against the extract, or attach a different extract.
+- **Ledger metadata is wrong on E034/E035's `file` field** — it names `data/modelAnswersData.js` for both, but 2 of the 3 retrofitted items (`negative-externality-tax-8`, `market-failure-government-intervention-20`) are actually in `data/modelAnswersExpansion.js`. Worth a `ledger.mjs` correction before it misleads a future `grep -n E034 audit/ledger.json` reader.
+- **A judgement call on the 8-mark item, recorded in `built.md` rather than smoothed over**: two of its eight criteria (`c7`, `c8`, the Level-4 marks) point at the script segments where that assessment *should have been* earned, not where it was — the script is a Level-3 answer (`likelyScore` 5-6/8) and R1 requires criteria to sum to the full 8-mark tariff. This is spec-compliant (R2 only asks the segment resolve, not that it earned the mark) but is a real interpretive choice a verifier of packet 12.8's retrofits should know this precedent exists.
+- **R3 and R6 of the new validator are implemented but not proved by mutation** — only R1, R2 and R4 were, because that is what the spec's proof standard named. Untested branches on today's data; worth a mutation pass before trusting them on packet 12.8's larger retrofit.
+- **`npm run contrast` cannot see this packet's CSS** — it reads `app/globals.css` only; the new rules are in `components/model-answers-layout.css`. Same blind spot packet 12.3's B1 fix round already recorded. Not a regression, but still uncovered.
+- **`package.json` is deliberately NOT staged.** The working tree carries this packet's `validate` wiring (adds `node audit/scripts/validate-model-answers.mjs` to the `validate` script), but the shared index already holds another session's staged version of the same file that *removes* `lib/quant-pool.test.mjs` from the `test` script. Staging `package.json` now would silently revert that other session's change. **Command for whoever commits, once the index is quiet**: check `git diff --cached -- package.json` first, then `git add package.json`.
+- **`audit/ledger.json` is deliberately NOT staged either** — it already carries another session's staged changes, and PROTOCOL's rule 5 forbids committing the ledger while a verifier may be running. The five E033-E037 confirmations exist in the working tree only.
+- **Files staged, ready for a human commit**: `audit/scripts/validate-model-answers.mjs` (new), `components/SectionModelAnswersPage.jsx`, `components/model-answers-layout.css`, `lib/model-answers-route.js`, `data/modelAnswersData.js`, `data/modelAnswersExpansion.js`.
+- **Another session is/was in this worktree running packet 12.4 concurrently** (per the spec's own note); `git diff HEAD --numstat` on the two data files includes packet 12.4's already-staged, already-recorded re-homing of `economies-scale-4`/`econ-diseconomies-scale-8` (its own `PROGRESS.md` row 12.4) — not this packet's work, and `built.md` says so explicitly. Do not attribute those lines to 12.6 when reviewing the diff.
+- **Not this session's to resolve, for the founder**: this packet writes nothing live (rule 6) and nothing here changes that — 12.6's changes are staged only, same "held for a checkpoint" posture as every content-adjacent packet since 34, though 12.6 itself ships no content, only the shape and validator.
+
+**Next unclaimed packet**: not re-derived in this bookkeeping pass — check `node audit/scripts/ledger.mjs packet <n> --open` fresh. Packet 42's own handoff (immediately above) names **packet 43 (`economic-growth`, 28 open)** as free as of its own write; packet 12.7 (the v6 chrome: mode gate, question-navigation row, sticky bar, keyboard nav) and packet 12.8 (the other 65 model answers) are both named as follow-ons to 12.6 specifically, by `audit/specs/packet-12.6.md` itself, and are unclaimed as of this write.
+
 ## Packet 2.92 — V060 closed: the eight held rebuilds are pinned on the live site (25 September 2026, Opus 5.5)
 
 **Verify-only. Nothing built, nothing written to content.** The founder's checkpoint publish put the eight

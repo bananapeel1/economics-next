@@ -1,0 +1,337 @@
+{
+ "subject": "economics",
+ "topic": "3.3.3",
+ "title": "Market structures and contestability",
+ "questions": [
+  {
+   "key": "monopoly-efficiency-20",
+   "question": "Evaluate whether monopoly is always against the public interest."
+  }
+ ],
+ "leaves": [
+  {
+   "id": "ECON-3.3.3-1a-1",
+   "subtopic": "Efficiency",
+   "requirement": "The concepts of:",
+   "wording": "allocative efficiency"
+  },
+  {
+   "id": "ECON-3.3.3-1a-2",
+   "subtopic": "Efficiency",
+   "requirement": "The concepts of:",
+   "wording": "productive efficiency"
+  },
+  {
+   "id": "ECON-3.3.3-1a-3",
+   "subtopic": "Efficiency",
+   "requirement": "The concepts of:",
+   "wording": "dynamic efficiency"
+  },
+  {
+   "id": "ECON-3.3.3-1a-4",
+   "subtopic": "Efficiency",
+   "requirement": "The concepts of:",
+   "wording": "X-inefficiency"
+  },
+  {
+   "id": "ECON-3.3.3-1a-5",
+   "subtopic": "Efficiency",
+   "requirement": "The concepts of:",
+   "wording": "efficiency/inefficiency in different market structures."
+  },
+  {
+   "id": "ECON-3.3.3-2a",
+   "subtopic": "Concentration",
+   "requirement": "",
+   "wording": "Calculation of n-firm concentration ratios."
+  },
+  {
+   "id": "ECON-3.3.3-2b",
+   "subtopic": "Concentration ratio",
+   "requirement": "",
+   "wording": "The significance of concentration ratios."
+  },
+  {
+   "id": "ECON-3.3.3-3a",
+   "subtopic": "Perfect",
+   "requirement": "",
+   "wording": "Assumptions of perfect competition."
+  },
+  {
+   "id": "ECON-3.3.3-3b",
+   "subtopic": "Perfect competition",
+   "requirement": "",
+   "wording": "Profit-maximising equilibrium in the short run and long run."
+  },
+  {
+   "id": "ECON-3.3.3-3c",
+   "subtopic": "Perfect competition",
+   "requirement": "",
+   "wording": "The short-run shutdown point."
+  },
+  {
+   "id": "ECON-3.3.3-3d",
+   "subtopic": "Perfect competition",
+   "requirement": "",
+   "wording": "Productive and allocative efficiency in the short run and long run."
+  },
+  {
+   "id": "ECON-3.3.3-4a",
+   "subtopic": "Monopolistic",
+   "requirement": "",
+   "wording": "Assumptions of monopolistic competition."
+  },
+  {
+   "id": "ECON-3.3.3-4b-1",
+   "subtopic": "Monopolistic competition",
+   "requirement": "Types of product differentiation:",
+   "wording": "physical – product features"
+  },
+  {
+   "id": "ECON-3.3.3-4b-2",
+   "subtopic": "Monopolistic competition",
+   "requirement": "Types of product differentiation:",
+   "wording": "marketing – advertising, packaging"
+  },
+  {
+   "id": "ECON-3.3.3-4b-3",
+   "subtopic": "Monopolistic competition",
+   "requirement": "Types of product differentiation:",
+   "wording": "distribution – shop, online, telephone."
+  },
+  {
+   "id": "ECON-3.3.3-4c",
+   "subtopic": "Monopolistic competition",
+   "requirement": "",
+   "wording": "Profit-maximising equilibrium in the short run and long run."
+  },
+  {
+   "id": "ECON-3.3.3-4d",
+   "subtopic": "Monopolistic competition",
+   "requirement": "",
+   "wording": "Productive and allocative efficiency in the short run and long run."
+  },
+  {
+   "id": "ECON-3.3.3-5a",
+   "subtopic": "Oligopoly",
+   "requirement": "",
+   "wording": "Assumptions of oligopoly."
+  },
+  {
+   "id": "ECON-3.3.3-5b-1",
+   "subtopic": "Oligopoly",
+   "requirement": "Barriers to entry and exit:",
+   "wording": "economies of scale"
+  },
+  {
+   "id": "ECON-3.3.3-5b-2",
+   "subtopic": "Oligopoly",
+   "requirement": "Barriers to entry and exit:",
+   "wording": "limit pricing"
+  },
+  {
+   "id": "ECON-3.3.3-5b-3",
+   "subtopic": "Oligopoly",
+   "requirement": "Barriers to entry and exit:",
+   "wording": "patents"
+  },
+  {
+   "id": "ECON-3.3.3-5b-4",
+   "subtopic": "Oligopoly",
+   "requirement": "Barriers to entry and exit:",
+   "wording": "branding"
+  },
+  {
+   "id": "ECON-3.3.3-5b-5",
+   "subtopic": "Oligopoly",
+   "requirement": "Barriers to entry and exit:",
+   "wording": "sunk costs"
+  },
+  {
+   "id": "ECON-3.3.3-5b-6",
+   "subtopic": "Oligopoly",
+   "requirement": "Barriers to entry and exit:",
+   "wording": "legal."
+  },
+  {
+   "id": "ECON-3.3.3-5c-1",
+   "subtopic": "Oligopoly",
+   "requirement": "Interdependence of firms:",
+   "wording": "simple game theory – two firm/two outcome model"
+  },
+  {
+   "id": "ECON-3.3.3-5c-2",
+   "subtopic": "Oligopoly",
+   "requirement": "Interdependence of firms:",
+   "wording": "reasons for collusive and non-collusive behaviour"
+  },
+  {
+   "id": "ECON-3.3.3-5c-3",
+   "subtopic": "Oligopoly",
+   "requirement": "Interdependence of firms:",
+   "wording": "cartels"
+  },
+  {
+   "id": "ECON-3.3.3-5c-4",
+   "subtopic": "Oligopoly",
+   "requirement": "Interdependence of firms:",
+   "wording": "price leadership"
+  },
+  {
+   "id": "ECON-3.3.3-5c-5",
+   "subtopic": "Oligopoly",
+   "requirement": "Interdependence of firms:",
+   "wording": "price wars."
+  },
+  {
+   "id": "ECON-3.3.3-5d",
+   "subtopic": "Oligopoly",
+   "requirement": "",
+   "wording": "Costs and benefits of collusion to producers, consumers, workers and governments."
+  },
+  {
+   "id": "ECON-3.3.3-5e-1",
+   "subtopic": "Oligopoly",
+   "requirement": "Price competition:",
+   "wording": "price wars"
+  },
+  {
+   "id": "ECON-3.3.3-5e-2",
+   "subtopic": "Oligopoly",
+   "requirement": "Price competition:",
+   "wording": "predatory pricing"
+  },
+  {
+   "id": "ECON-3.3.3-5e-3",
+   "subtopic": "Oligopoly",
+   "requirement": "Price competition:",
+   "wording": "limit pricing."
+  },
+  {
+   "id": "ECON-3.3.3-5f-1",
+   "subtopic": "Oligopoly",
+   "requirement": "Non-price competition:",
+   "wording": "advertising and branding"
+  },
+  {
+   "id": "ECON-3.3.3-5f-2",
+   "subtopic": "Oligopoly",
+   "requirement": "Non-price competition:",
+   "wording": "quality"
+  },
+  {
+   "id": "ECON-3.3.3-5f-3",
+   "subtopic": "Oligopoly",
+   "requirement": "Non-price competition:",
+   "wording": "endorsement"
+  },
+  {
+   "id": "ECON-3.3.3-5f-4",
+   "subtopic": "Oligopoly",
+   "requirement": "Non-price competition:",
+   "wording": "product placement"
+  },
+  {
+   "id": "ECON-3.3.3-5f-5",
+   "subtopic": "Oligopoly",
+   "requirement": "Non-price competition:",
+   "wording": "after-sales service."
+  },
+  {
+   "id": "ECON-3.3.3-5g",
+   "subtopic": "Oligopoly",
+   "requirement": "",
+   "wording": "Costs and benefits of price and non-price competition to firms, consumers, employees and suppliers."
+  },
+  {
+   "id": "ECON-3.3.3-6a",
+   "subtopic": "Monopoly",
+   "requirement": "",
+   "wording": "Assumptions of monopoly."
+  },
+  {
+   "id": "ECON-3.3.3-6b",
+   "subtopic": "Monopoly",
+   "requirement": "",
+   "wording": "Barriers to entry and exit."
+  },
+  {
+   "id": "ECON-3.3.3-6c",
+   "subtopic": "Monopoly",
+   "requirement": "",
+   "wording": "Profit-maximising equilibrium."
+  },
+  {
+   "id": "ECON-3.3.3-6d",
+   "subtopic": "Monopoly",
+   "requirement": "",
+   "wording": "Costs and benefits of monopoly to firms and consumers."
+  },
+  {
+   "id": "ECON-3.3.3-6e",
+   "subtopic": "Monopoly",
+   "requirement": "",
+   "wording": "The concept of ‘natural monopoly’ and its implications."
+  },
+  {
+   "id": "ECON-3.3.3-6f",
+   "subtopic": "Monopoly",
+   "requirement": "",
+   "wording": "Conditions necessary for third-degree price discrimination."
+  },
+  {
+   "id": "ECON-3.3.3-6g",
+   "subtopic": "Monopoly",
+   "requirement": "",
+   "wording": "Costs and benefits of price discrimination to firms and consumers."
+  },
+  {
+   "id": "ECON-3.3.3-6h",
+   "subtopic": "Monopoly",
+   "requirement": "",
+   "wording": "Productive, allocative and dynamic efficiency."
+  },
+  {
+   "id": "ECON-3.3.3-7a",
+   "subtopic": "Monopsony",
+   "requirement": "",
+   "wording": "Assumptions and conditions for a monopsony to operate."
+  },
+  {
+   "id": "ECON-3.3.3-7b",
+   "subtopic": "Monopsony",
+   "requirement": "",
+   "wording": "Costs and benefits of a monopsony to firms, consumers and employees."
+  },
+  {
+   "id": "ECON-3.3.3-8a",
+   "subtopic": "Contestability",
+   "requirement": "",
+   "wording": "Characteristics of contestable markets."
+  },
+  {
+   "id": "ECON-3.3.3-8b-1",
+   "subtopic": "Contestability",
+   "requirement": "Implications of contestable markets for behaviour of firms on:",
+   "wording": "profitability"
+  },
+  {
+   "id": "ECON-3.3.3-8b-2",
+   "subtopic": "Contestability",
+   "requirement": "Implications of contestable markets for behaviour of firms on:",
+   "wording": "pricing decisions (limit pricing)."
+  },
+  {
+   "id": "ECON-3.3.3-8c",
+   "subtopic": "Contestability",
+   "requirement": "",
+   "wording": "Costs and benefits of contestability for firms and consumers."
+  },
+  {
+   "id": "ECON-3.3.3-8d",
+   "subtopic": "Contestability",
+   "requirement": "",
+   "wording": "The significance of sunk costs for contestability."
+  }
+ ]
+}

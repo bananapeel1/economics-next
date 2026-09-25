@@ -35,6 +35,7 @@ import { modelAnswersHeading, modelAnswersPath } from '@/data/modelAnswerPages';
 import { aoListFor } from '@/lib/exam-item';
 import { timeLabel, paperLabel } from '@/lib/exam-timing';
 import { midBandAttempt, highestTariffItem } from '@/lib/mid-band-answer';
+import MarkedScriptAttempt from '@/components/MarkedScriptAttempt';
 import './model-answers-layout.css';
 
 const SUBJECT_LABEL = { economics: 'Economics', business: 'Business' };
@@ -227,6 +228,82 @@ function WhyThisLosesMarks({ item, attempt }) {
   );
 }
 
+/**
+ * E035, packet 12.6. The extract, in the page flow.
+ *
+ * NOT a `<details>`, not a modal, not collapsed. Every other long block on this page is a closed
+ * disclosure on purpose — a mark scheme a student opens is a choice they made. An extract is not
+ * the same kind of thing: the questions below award application marks for using it, so hiding it
+ * behind a click makes the default behaviour of the page "answer from memory", which is the exact
+ * failure this packet exists to fix. It sits ABOVE the questions for the same reason a real paper
+ * prints Section C's extract before Section C's questions.
+ *
+ * `blocks` comes from `lib/stimulus.js` as data and is rendered as React nodes here. Nothing from
+ * the markdown file reaches `dangerouslySetInnerHTML`.
+ */
+function StimulusBlock({ stimulus }) {
+  if (!stimulus) return null;
+  const inline = (tokens, keyPrefix) =>
+    tokens.map((t, i) => {
+      if (t.kind === 'strong') return <strong key={`${keyPrefix}-${i}`}>{t.text}</strong>;
+      if (t.kind === 'em') return <em key={`${keyPrefix}-${i}`}>{t.text}</em>;
+      return <span key={`${keyPrefix}-${i}`}>{t.text}</span>;
+    });
+
+  return (
+    <section className="lab-stimulus" aria-labelledby="lab-stimulus-head">
+      <h2 id="lab-stimulus-head" className="lab-stimulus-head">
+        The extract these questions are answered from
+      </h2>
+      {/*
+        Fix round B1. This note used to read "The application marks below are awarded for using it,
+        not for remembering a textbook example." That was false about this page and the walkthrough
+        caught it: the three model answers below were written before any extract was attached and
+        their application marks come from a coal-fired power station, a steel factory and the UK
+        Soft Drinks Industry Levy — the textbook examples the sentence disowned. Re-authoring those
+        answers against this extract is new marking, which E034 forbids in this packet, so the note
+        stops making a promise the page does not keep and points at the page that does.
+      */}
+      <p className="lab-note">
+        Read this first. In a data-response question the application marks come from the extract in
+        front of you, not from a remembered textbook example. The model answers below were written
+        before this extract was attached, so they apply the theory to other cases: take the
+        technique from them, then write your own answer from the figures here. The link at the end
+        of this extract goes to answers that do use it.
+      </p>
+      {stimulus.blocks.map((b, i) =>
+        b.kind === 'table' ? (
+          <div className="lab-stimulus-table-wrap" key={`b${i}`}>
+            {b.caption && <p className="lab-stimulus-caption">{inline(b.caption, `c${i}`)}</p>}
+            <table className="lab-stimulus-table">
+              <thead>
+                <tr>
+                  {b.head.map((h, j) => (
+                    <th key={`h${j}`} scope="col">{h}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {b.rows.map((row, r) => (
+                  <tr key={`r${r}`}>
+                    {row.map((cell, c) => (c === 0 ? <th key={`c${c}`} scope="row">{cell}</th> : <td key={`c${c}`}>{cell}</td>))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : (
+          <p className="lab-stimulus-para" key={`b${i}`}>{inline(b.tokens, `t${i}`)}</p>
+        ),
+      )}
+      <p className="lab-note">
+        <Link href={stimulus.href}>The full data-response piece</Link>
+        {' — the same extract with its own question ladder and marked answers.'}
+      </p>
+    </section>
+  );
+}
+
 /** E014. The section's real coverage, and the requirements no question on this page examines. */
 function CoveragePanel({ coverage, page }) {
   if (!coverage.available) {
@@ -238,6 +315,29 @@ function CoveragePanel({ coverage, page }) {
       </section>
     );
   }
+
+  /* E031, packet 12.4. A page with no questions used to print "This page examines 0 of 24
+     requirements in 1.3.2 The Market — 0.0%" and then list all 24, with no caveat: the floor line
+     below is gated on `untagged > 0`, and a page with no items has nothing untagged. A percentage
+     is a claim about how well the questions cover the specification, and with no questions there is
+     no claim to make — 0.0% reads as "this page covers nothing" when the truth is "this page has
+     nothing yet". The empty state below says that in words, so the panel says it too and shows no
+     number. The unexamined list is dropped with it: enumerating every requirement a page with no
+     questions fails to examine is not information, it is an accusation. */
+  if (coverage.questions === 0) {
+    return (
+      <section className="lab-coverage" aria-labelledby="lab-coverage-head">
+        <h2 id="lab-coverage-head" className="lab-coverage-head">
+          No questions on this page yet, so there is no coverage figure for {page.sectionNumber}{' '}
+          {page.topic}
+        </h2>
+        <p className="lab-coverage-sub">
+          {`A percentage here would say how much of the specification this page's questions examine. With no questions, a figure of 0.0% would read as a judgement on the topic rather than on the page, so none is shown.`}
+        </p>
+      </section>
+    );
+  }
+
   const { examined, leaves, pct, examinedLeaves, unexaminedLeaves } = coverage;
   return (
     <section className="lab-coverage" aria-labelledby="lab-coverage-head">
@@ -283,9 +383,9 @@ function CoveragePanel({ coverage, page }) {
   );
 }
 
-export default function SectionModelAnswersPage({ page, written = [], coverage, dataResponse }) {
+export default function SectionModelAnswersPage({ page, written = [], coverage, dataResponse, stimulus = null }) {
   const subjectLabel = SUBJECT_LABEL[page.subject] || page.subject;
-  const heading = modelAnswersHeading(page);
+  const heading = modelAnswersHeading(page, { hasAnswers: written.length > 0 });
   const totalMarks = written.reduce((n, a) => n + (Number(a.marks) || 0), 0);
   const midBandItem = highestTariffItem(written);
   const midBand = midBandItem ? midBandAttempt(midBandItem) : null;
@@ -367,6 +467,8 @@ export default function SectionModelAnswersPage({ page, written = [], coverage, 
 
         <CoveragePanel coverage={coverage} page={page} />
 
+        <StimulusBlock stimulus={stimulus} />
+
         <section className="lab-block" aria-labelledby="lab-written">
           <div className="lab-block-head">
             <h2 id="lab-written">Exam questions</h2>
@@ -383,8 +485,15 @@ export default function SectionModelAnswersPage({ page, written = [], coverage, 
                One sentence, one expression. Written across two JSX lines it rendered as
                "The rest of Businessis covered": JSX drops the whitespace between an expression and
                a following line break, so the space before "is" disappeared. Packet 12.1, fix B1. */
+            /* The closing clause used to read "use the link above to browse every topic". The only
+               link above is the back-link to this page's own unit, which is not every topic, so the
+               sentence sent the student to look for something that was not there. It is now a real
+               link to the subject hub, which does list every topic in all four units. Packet 12.4,
+               E027. */
             <p className="lab-empty-note" role="note">
-              {`No model answers are published for this topic yet, so this block is empty on purpose rather than by accident. The rest of ${subjectLabel} is covered — use the link above to browse every topic.`}
+              {`No model answers are published for this topic yet, so this block is empty on purpose rather than by accident. The rest of ${subjectLabel} is covered — `}
+              <Link href={`/${page.subject}`}>{`browse every ${subjectLabel} topic`}</Link>
+              {'.'}
             </p>
           ) : (
             <ol className="lab-item-list">
@@ -392,6 +501,10 @@ export default function SectionModelAnswersPage({ page, written = [], coverage, 
                 <li key={item.id} className="lab-item">
                   <Meta item={item} subject={page.subject} unit={page.unit} />
                   <p className="lab-item-question">{item.question}</p>
+                  {/* E036, packet 12.6. The retrofitted shape is its own flag: an item renders the
+                      attempt loop if and only if it carries `criteria`. Sixty-three items do not,
+                      and everything below this line is the path they have always taken. */}
+                  {item.criteria?.length > 0 && <MarkedScriptAttempt item={item} />}
                   <MarkScheme rows={item.markScheme} />
                   <ModelAnswer item={item} />
                   <ExaminerCommentary html={item.examinerCommentary} />

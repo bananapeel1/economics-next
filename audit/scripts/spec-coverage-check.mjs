@@ -190,6 +190,36 @@ async function collect() {
     });
     failures.push(...cov.failures);
 
+    /*
+     * E025, the zerocov rule. The defect this guard was built for: 3.3.1 shipped a live
+     * model-answer page printing a 0.0% coverage line above two genuine exam questions, because
+     * the questions examined 3.3.2's specification rather than its own. Every other rule stayed
+     * silent — the tariffs were valid, the ids were real, an evaluative question was present — so
+     * nothing caught it and a human read the table.
+     *
+     * It keys on HAVING MODEL ANSWERS, not on having questions, and that distinction is the whole
+     * rule. All 43 sections carry exactly 5 `section_practice` rows, and those are untagged in
+     * every one of them until scripts/packet-12-1-spec-items.sql is run, so "every section with
+     * questions" would fail 13 sections — 11 Business, 2 Economics — for a reason that is uniform,
+     * explicable and TRUE: they have no model answers, and 0.0% is the honest number for a section
+     * that examines its specification with nothing. Keying on model answers keeps the original
+     * defect in scope (a section that HAS them and still reads 0.0% fires) without tagging
+     * anything to make the number move. Narrowing a rule until it cannot fail is the failure mode
+     * this one is guarding against, so: `audit/fixtures/spec-coverage/zero-coverage.json` differs
+     * from the clean control only in which section its ids belong to, and fires this rule alone.
+     *
+     * Counting by bank rather than from `answers` is deliberate: `answers` is empty under
+     * --fixture, so a rule written against it could never be tested by a fixture at all.
+     */
+    const modelAnswers = items.filter((i) => i.bank !== 'section_practice').length;
+    if (modelAnswers > 0 && cov.examined === 0) {
+      failures.push({
+        rule: 'zerocov', section: section.slug, ref: '-', bank: 'modelAnswers',
+        detail: `${modelAnswers} model answer(s) examine 0 of this section's ${cov.leaves} leaves — a page would print 0.0% above real questions`,
+        key: `zerocov|${section.slug}`,
+      });
+    }
+
     rows.push({
       slug: section.slug, subject: section.subject, unit: section.unit, topic: section.topic,
       title: section.title, origin,
