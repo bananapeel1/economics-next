@@ -7800,3 +7800,6 @@ a.auth-dropdown-item:visited {
 /* Where "Report a problem" sits under an item: its own row, pushed right, clear of the item's actions. */
 .rp-slot { display: flex; justify-content: flex-end; margin-top: 8px; }
 .sidebar-feedback { padding: 4px 0 16px; border-top: 1px dashed var(--border-primary); }
+/* Learn Mode's step row: the report icon sits beside ⋯ and matches its size (both clear WCAG 2.5.8). */
+.lm-counter-actions { display: flex; align-items: center; gap: 4px; }
+.lm-counter-actions .rp-trigger { width: 28px; height: 28px; }

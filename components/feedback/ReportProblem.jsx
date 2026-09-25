@@ -191,7 +191,8 @@ export default function ReportProblem({ target, onOpenChange, className = '' }) 
               <summary>What gets sent</summary>
               <dl>
                 <dt>This {noun}</dt>
-                <dd>{[target.label, stem && `“${stem.length > 90 ? `${stem.slice(0, 90)}…` : stem}”`].filter(Boolean).join(' · ') || target.sectionId}</dd>
+                <dd>{[target.label, stem && stem !== target.label && `“${stem.length > 90 ? `${stem.slice(0, 90)}…` : stem}”`].filter(Boolean).join(' · ') || target.sectionId}</dd>
+                {target.rendered?.scenario && (<><dt>Showing</dt><dd>{target.rendered.scenario}</dd></>)}
                 {target.answer?.chosen && (<><dt>Your answer</dt><dd>{target.answer.chosen}</dd></>)}
                 {revealed && target.answer?.marked && (<><dt>Marked correct</dt><dd>{target.answer.marked}</dd></>)}
                 <dt>Page</dt>
