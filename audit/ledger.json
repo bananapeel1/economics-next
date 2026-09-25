@@ -18609,11 +18609,11 @@
    "title": "The signed-out pre-test asks about chapters the student has not opened, on 22 of 43 live sections and 29 of 43 staged. freeQuizPayload() takes PREVIEW_LIMITS.quiz (2) for the Quiz tab FIRST, then one pin per block, then tops the pre-test up to PRETEST_HEADROOM — so the two Quiz-tab items, which are not chosen for chapter, are what the pre-test falls back on. Signature is identical everywhere: '2 of 3 - ch2, ch3'. Packet 2.5/V021 closed the neighbouring defect (the pre-test asking a question a check-in will ask); this is the pre-test asking a question from a chapter not yet opened, and npm run exposure cannot see it because it counts pre-test LENGTH only. Measured and A/B'd by packet 38 Verify B: audit/runs/packet-38/pretest-ab.mjs. Fix belongs with V006 in components/LearnModeTab.jsx and lib/preview-limits.js.",
    "file": "lib/preview-limits.js",
    "packet": 57,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null,
+   "note": "Not a defect (25 Sep, Opus 5.5; audit/runs/v043/verify.md). The 22/43 live and 29/43 staged figures come from audit/runs/packet-38/pretest-ab.mjs calling resolvePinnedItem(step, quiz, content). The real signature is (items, pin, used), so the call returns null, the reserved set is empty on 43 of 43 sections, and the 'pre-test' it reports is the payload's first three items: the chapter 1-3 check-in questions, hence 'ch2, ch3' everywhere. A/B with the shipping call (placeChapterItems, as LearnModeTab passes PreTest): signed-out and Pro are identical on every section and 0 pre-test questions repeat a check-in. On screen at 390x844, signed out, macroeconomic-objectives-policies live and ?draft=1: the rendered pre-test is the shipping prediction exactly (three unpinned items), not packet 38's. Residual, identical for Pro and so not payload-driven: 4 live / 2 staged sections draw the SECOND pin of a two-item chapter (e.g. [2,3]: 3 is unreserved and early in the bank). Later-chapter pre-test items are deliberate per DECISIONS 2026-09-15 (packet 15). A chapter-1-only pre-test would reverse that decision; founder's call, new item.",
    "added": "2026-09-21"
   },
   {
