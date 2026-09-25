@@ -13,6 +13,7 @@ import { buildSteps, pickSpacedRecall, clampStep, firstStepOfBlock, contentVersi
 import InlineDiagram from './learn-mode/InlineDiagram';
 import InlinePractice from './learn-mode/InlinePractice';
 import InlineQuiz from './learn-mode/InlineQuiz';
+import { signalMoment } from '@/lib/feedback/client';
 import CalculationItem from './quant/CalculationItem';
 import { templatesForSection, placeQuantItems, quantItem } from '@/lib/quant-pool';
 import { readAnswerLog, orderByPriority } from '@/lib/answer-log';
@@ -524,6 +525,7 @@ export default function LearnModeTab({
       recordReview(subjectId, sectionId, null);
 
       trackFunnel('section_complete', { sectionId, totalSteps });
+      signalMoment('section_complete', { sectionId, title: currentSection?.title ?? null });
       onPersistStep?.(totalSteps - 1, totalSteps, { complete: true });
     }
     setIsComplete(true);

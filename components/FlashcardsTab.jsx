@@ -5,6 +5,7 @@ import { useAuth } from './AuthProvider';
 import PaywallOverlay from './PaywallOverlay';
 import { PREVIEW_LIMITS } from '@/lib/preview-limits';
 import { CardsBlank } from './Icons';
+import { signalMoment } from '@/lib/feedback/client';
 
 export default function FlashcardsTab({ cards, sectionId, previewMode = false, totalCount }) {
   const { user } = useAuth();
@@ -170,6 +171,8 @@ export default function FlashcardsTab({ cards, sectionId, previewMode = false, t
 
       const correctThisRound = deck.filter(i => newStatuses[i] === 'got-it').length;
       const incorrectThisRound = deck.length - correctThisRound;
+      // The end of a round is a finished task. (Opening a deck that is already mastered is not.)
+      signalMoment('flashcards_complete', { sectionId });
 
       if (incorrectThisRound === 0) {
         // All mastered!

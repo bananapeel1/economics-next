@@ -4,6 +4,7 @@ import { useState, useCallback, useMemo, useRef, useEffect } from 'react';
 import { shuffleAllOptions } from '@/lib/shuffle-options';
 import { buildQueue, queueStats, computeNextReview, createDefaultProgress } from '@/lib/spaced-repetition';
 import QuestionCard from '@/components/practice/QuestionCard';
+import { signalMoment } from '@/lib/feedback/client';
 import SessionSummary from '@/components/practice/SessionSummary';
 
 /** "Next due in 6 hours" / "Next due tomorrow", from a timestamp. Empty string if nothing is scheduled. */
@@ -331,6 +332,8 @@ function TopicStep({
 
 export default function PracticeEngine({ subjects, units, sections, isLoggedIn }) {
   const [phase, setPhase] = useState('setup');        // 'setup' | 'session' | 'summary'
+  // A finished session is a moment the feedback card may answer (computers only; see lib/feedback).
+  useEffect(() => { if (phase === 'summary') signalMoment('practice_complete', {}); }, [phase]);
   const [setupStep, setSetupStep] = useState(1);      // 1 = subject-select, 2 = topic-select
   const [selectedSubjectSlug, setSelectedSubjectSlug] = useState('');
   const [selectedSectionIds, setSelectedSectionIds] = useState(new Set());
@@ -852,6 +855,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
         <div className="spe-question-animate" key={questionKey}>
           <QuestionCard
             question={question}
+            sectionId={item.sectionId}
             sectionTitle={sectionTitle}
             questionNumber={currentIndex + 1}
             totalQuestions={queue.length}

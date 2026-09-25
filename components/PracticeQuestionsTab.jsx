@@ -5,8 +5,9 @@ import { SECTION_MODEL_ANSWERS_LINKS } from '@/data/modelAnswersData';
 import Link from 'next/link';
 import { isPracticeVisible, subjectFrom } from '@/lib/ial-commands';
 import { markFiltersForSection, markColorsFor, markColor } from '@/lib/practice-tariffs';
+import ReportProblem from './feedback/ReportProblem';
 
-export default function PracticeQuestionsTab({ questions: allQuestions = [], onAskTutor, sectionNumber, unitCode }) {
+export default function PracticeQuestionsTab({ questions: allQuestions = [], onAskTutor, sectionId, sectionNumber, unitCode }) {
   const MARK_COLORS = markColorsFor(unitCode);
   // Keyed by subject as well as number: Business 1.3.1 and Economics 1.3.1 are different topics with
   // the same number, and a flat lookup sent every Business section to the Economics page that shares
@@ -181,6 +182,21 @@ export default function PracticeQuestionsTab({ questions: allQuestions = [], onA
                       🤖 Get Full Model Answer from Tutor
                     </button>
                   )}
+                </div>
+              )}
+
+              {/* "The mark scheme is wrong" is only offered once the guidance has been opened. */}
+              {sectionId && (
+                <div className="rp-slot">
+                  <ReportProblem target={{
+                    surface: 'practice',
+                    sectionId,
+                    itemId: q.id,
+                    questionIndex: globalIndex,
+                    label: `${q.marks}-mark ${q.command || 'question'}`,
+                    rendered: { stem: q.question },
+                    answer: { revealed: isExpanded },
+                  }} />
                 </div>
               )}
             </div>

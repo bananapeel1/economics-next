@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import { recordAnswer, recordConfidence } from '@/lib/answer-log';
+import ReportProblem from '@/components/feedback/ReportProblem';
 
 /* ── Inline Quiz Card (MCQ) with Confidence Rating ── */
 export default function InlineQuiz({ question, subjectId, sectionId, stepIndex, onResult }) {
@@ -122,6 +123,25 @@ export default function InlineQuiz({ question, subjectId, sectionId, stepIndex, 
         {confidenceTimedOut && !confidence && (
           <div className="lm-confidence-done" style={{ fontStyle: 'italic' }}>No worries — moving on.</div>
         )}
+        {/* Until an option is picked nothing is revealed, so the answer categories stay hidden. */}
+        <div className="rp-slot">
+          <ReportProblem target={{
+            surface: 'checkin',
+            sectionId,
+            itemId: question.id,
+            step: stepIndex,
+            label: 'Check-in question',
+            rendered: { stem: question.question },
+            answer: answered
+              ? {
+                  chosen: question.options?.[selected] ?? null,
+                  marked: question.options?.[question.correctIndex] ?? null,
+                  correct: isCorrect,
+                  revealed: revealPhase >= 2,
+                }
+              : { revealed: false },
+          }} />
+        </div>
 
       </div>
     </div>
