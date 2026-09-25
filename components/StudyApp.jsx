@@ -476,6 +476,15 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   const sectionCacheRef = useRef(new Map());
   // In-flight requests, keyed the same way, so two overlapping effect runs share one round trip.
   const inflightRef = useRef(new Map());
+  /*
+   * Merged from main's f6ad430 (24 Sep). The subject-switch handler below fetches outside the
+   * loader effect, so it never had the effect's `cancelled` guard: a slow response for a section
+   * the student has already left could overwrite the one they are reading. main fixed it with a
+   * request token; here the payload already carries its section id (V038 round 4), so the only
+   * missing fact is which section is current when the response lands.
+   */
+  const activeSectionRef = useRef(activeSection);
+  useEffect(() => { activeSectionRef.current = activeSection; }, [activeSection]);
   const [isInitial, setIsInitial] = useState(dataMatchesSection);
   const [glossaryTerms, setGlossaryTerms] = useState([]);
   const [contentStepInfo, setContentStepInfo] = useState(null);
@@ -988,7 +997,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       setLearnModeResuming(step > 0);
       fetch(sectionUrl(firstId))
         .then(res => res.ok ? res.json() : null)
-        .then(data => { if (data) setSectionData(payloadForSection(data, firstId)); })
+        .then(data => { if (data && activeSectionRef.current === firstId) setSectionData(payloadForSection(data, firstId)); })
         .catch(() => {});
     }
   }
@@ -1012,7 +1021,20 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       return <SectionLoading />;
     }
 
-    if (!sectionData) {
+    /*
+     * Merged from main's f6ad430: never draw one section's material under another section's
+     * heading. A founder-reported bug had the header and sidebar on 3.3.1 while the body showed
+     * 1.3.1's notes. The payload has carried its own section id since V038 round 4, so the check
+     * reads that instead of the separate `sectionDataId` state main added.
+     *
+     * This SUPERSEDES F098's "keep the previous section on screen while the new one arrives" for
+     * the body: a reader now sees the loading card for the length of one fetch on a section they
+     * have not opened this visit, rather than the last section's notes under the new title. The
+     * F092 cache keeps a revisit instant, so the cost is paid once per section per visit. Showing
+     * a student material that does not belong where they are is the class of defect this week was
+     * spent removing (V053); it is not a price worth paying to avoid a spinner.
+     */
+    if (!sectionData || sectionData.sectionId !== activeSection) {
       return <SectionLoading />;
     }
 
