@@ -3261,3 +3261,32 @@ It now reads `data` and `draft` the way `exposure-census` does. `npm run attribu
 teaches.** The first reading kept the diagram already served whenever it was taught. The blind second
 reader chose HDI over Harrod-Domar ("Growth vs Development") and the Lorenz curve over absolute/relative
 poverty. Both were right: the other diagram was otherwise shown nowhere in Learn Mode.
+
+## 2026-09-25 — packet 2.92: the recall baseline follows a publish (V060)
+
+**The checkpoint publish moved accepted debt from `draft` to `data`, and the gate read the move as new debt.**
+Every held rebuild had its answer-recoverable recalls accepted as STAGED debt when it was staged. When the
+founder published them on 25 September (12:11-14:22 UTC), the same recalls became LIVE, and `npm run recalls`
+failed on 13 sections. `audit/recall-census-baseline.json` still held that debt under `draft`, and held `data`
+to the pre-rebuild figures, or to zero where the section had no `data` row. All 13 are live at EXACTLY their
+`draft` baseline (supply 17 = 17, market-failure 26 = 26, business-objectives-strategy 23 = 23, and so on),
+so the publish added no recall that gives its answer away. It moved them.
+
+So the baseline was rewritten from the database with `recall-census.mjs --baseline --confirm`, once no
+section held a draft (re-read at 14:25 UTC). It was written in a scratch worktree and diffed row by row
+against HEAD before commit. The result:
+- 13 `data` rows raised, each to the value its own packet had accepted as staged, and no further.
+- 9 `data` rows and 2 `draft` rows lowered. national-income and macroeconomic-objectives-policies are now 0
+  on both sides.
+- Zero rows added on both sides for the four sections that had none (resource-management,
+  external-influences, trade-global-economy, balance-payments-exchange-rates).
+- No `draft` row raised.
+
+**The rule from here:** after a publish, re-baseline from the database. A `data` row may rise only to the
+`draft` figure its section already carried. A rise past that is new debt, and needs its own reason here.
+
+**Also settled by this packet: V060 closes on production, not on this branch.** Production is `origin/main`
+(`fa3d5d1`), which has 2.8 and 2.9 but not 2.91. So the placement was read from main's own
+`placeChapterItems`, extracted with `git archive`, over the production API and the live tables. None of the
+eight sections uses a decided-empty pin (`quizIndices: []` or `diagramId: null`), so the part of 2.91 that main
+lacks changes nothing for them.
