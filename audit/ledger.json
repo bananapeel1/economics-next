@@ -19298,10 +19298,10 @@
    "title": "A chapter's check-in DIAGRAM can belong to another chapter: matchDiagramsToBlocks gives each diagram to the block title sharing the MOST non-stop words, so on live types-sizes-businesses (3.3.1) 'Types of Business Growth (Integration)' (a chapter-3 topic, Growth of Firms) is served at chapter 2 'Types of Business Organisation' on 'types'+'business' (2 words) over 'growth' (1). Found by packet 2.8's Verify B at 390x844, step 6 of 12. Pre-existing — placement identical at 87671e8 — and outside V053/V055, whose guard judges quiz and practice only, so npm run attribution passes it. Same class as V053 through the diagram door; the fix is a diagramId pin, and the guard should judge diagrams too.",
    "file": "components/learn-mode/utils.js",
    "packet": 2.91,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-2.91",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "Verify A (Sonnet, packet 2.91 round 1) 2026-09-25",
+   "evidence": "lib/checkin-fallback.js:79 decidedNoDiagram() + lib/checkin-placement.js:58-61,112 honor it on both pin and title-match paths, tagging diagramHow; audit/scripts/checkin-attribution.mjs:186-210 judgeServed FAILS a title-matched diagram on the staged corpus (rule diagram-undecided) and lists it on live. Verified live in the gate-291 checkout: node --test audit/scripts/checkin-attribution.test.mjs lib/preview-limits.test.mjs = 40/40 incl. 'the diagram rule catches the placement that shipped on 3.3.1, which the word rule passes'; npm run attribution (--both --check) exits 0 with staged UNDECIDED DIAGRAMS=0; direct Supabase read confirms government-intervention-firms/growth-development/labour-markets/poverty-inequality/role-state-macroeconomy draft.section_content diagramId per block matches audit/runs/packet-2.91/diagram-pins.json exactly (e.g. role-state-macroeconomy block0 diagramId:null, block1 e06d515a), fixing the 3 concrete live mismatches NEXT.md's 'V056, still open' recap named (role-state-macroeconomy market/crowding-out, growth-development Harrod-Domar/HDI, labour-markets monopsony). Not yet published to live data (staged only, as the commit says), so the literal wrong diagram is still served to students on those 3 sections until the founder publishes — same publish-pending shape Verify A already accepted for packet 2.9's V057-9. The exact 3.3.1 example named in the ledger title is now moot: live types-sizes-businesses has been restructured to a different 6-block chapter set with 5/5 diagrams already pinned (0 title-matched), unrelated to this commit.",
    "note": null,
    "added": "2026-09-25"
   },
@@ -19349,12 +19349,12 @@
    "kind": "feature",
    "title": "8 of the 21 (balance-payments-exchange-rates, business-objectives-strategy, causes-effects-globalisation, globalisation, market-structures-contestability, revenue-costs-profits, trade-global-economy, types-sizes-businesses) stay unpinned LIVE: each holds a whole rebuilt section in draft, held for the packet 5/7 checkpoint and already pinned, and staging a pin would overwrite it. Their pins are authored and blind-verified in audit/runs/packet-2.9/pins.json; the checkpoint publish closes this, or a founder-approved live patch if it slips.",
    "file": null,
-   "packet": 2.91,
+   "packet": 2.92,
    "status": "open",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null,
+   "note": "Moved from 2.91 on 25 Sep: not code, it closes as the checkpoint publishes the held rebuilds (PR #29 merged the branch to f0eac04 into main the same day). 1 of 8 live so far: types-sizes-businesses published 12:27 UTC, its rebuild pinning quiz, practice and 5 diagrams by id. Confirm each of the other 7 is pinned live after its publish; audit/runs/packet-2.9/pins.json holds verified live pins if one is published late.",
    "added": "2026-09-25"
   },
   {
@@ -19363,10 +19363,10 @@
    "title": "checkin-attribution judged the wrong corpora: 'live' was audit/content-sections (the 11 Sep export) and 'staged' was every file in audit/snapshots (218, historical ones included), so its 0 never described what a student is served. It now reads the database: live = data, staged = draft per table falling back to data (as the ?draft=1 route does), only for sections holding a draft.",
    "file": "audit/scripts/checkin-attribution.mjs",
    "packet": 2.91,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-2.91",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "Verify A (Sonnet, packet 2.91 round 1) 2026-09-25",
+   "evidence": "audit/scripts/checkin-attribution.mjs:219-234 loadDatabase() reads supabase.from('sections') then per TABLE_TO_KEY table's data/draft columns, replacing the old audit/content-sections (11 Sep export) / audit/snapshots (218 files) directory reads; loadCorpus:244-248 maps live=r.live, staged=r.draft. Verified live in gate-291 checkout: node audit/scripts/checkin-attribution.mjs --both reports 'sections 43' for live and 'sections 30' for staged (only sections actually holding a draft), matching the current DB, not a stale 218-file count; npm run attribution exits 0.",
    "note": null,
    "added": "2026-09-25"
   }

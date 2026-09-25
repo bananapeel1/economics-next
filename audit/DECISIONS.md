@@ -3224,3 +3224,40 @@ guided, so six pins were withheld rather than print a mark scheme above an empty
 and the `_content-ops` renumbering all read indices only. The one risk ids would cover — a bank that has moved
 since the pin was chosen — is checked by the runner instead: every index must still hold the id it was chosen
 for.
+
+## 2026-09-25 — packet 2.91: a chapter's diagram is decided by reading, never by its title (V056, V061)
+
+**A title cannot say which chapter a diagram is about, so the check-in diagram is an authored decision.**
+`matchDiagramsToBlocks` gives each diagram to the chapter title sharing the most words with it. On
+types-sizes-businesses that put "Types of Business Growth (Integration)" under "Types of Business
+Organisation" (`types` and `business`) instead of "Growth of Firms" (`growth`); on role-state-macroeconomy it
+put crowding out under public goods on the word `market`. The matcher stays as the floor for a chapter nobody
+has decided about; every section a packet touches gets a `diagramId` on every chapter that shows one.
+
+**`diagramId: null` means "decided: no diagram".** It is `quizIndices: []` for diagrams, and it exists for
+the same reason: without it the title fallback puts a rejected diagram back. Only an explicit `null` counts;
+an absent field still falls back. Honoured on both placement paths (`decidedNoDiagram`,
+`lib/checkin-fallback.js`). `main` does not know it, so until this branch merges a decided-empty chapter
+still gets `main`'s title fallback: on the five sections staged here, labour-markets chapter 1 and
+role-state-macroeconomy chapter 1 keep their old diagram on production until the merge. Every pinned chapter
+is right on `main` the moment the sections are published, because `main` resolves `diagramId`.
+
+**The guard judges who placed a diagram, not what it is about.** A lexical aboutness score was built and
+measured first (`audit/runs/packet-2.91/text-probe.mjs`: each diagram's title and description against every
+chapter's full text, weighted by how few chapters use each word). It flagged 30 of 227 served diagrams,
+about twenty of them correct, with true and false positives overlapping (2.6x against 3.5x), and it missed
+one outright. So `checkin-attribution` asks the placement (`diagramHow`) whether a pin or a title match put
+each diagram there. A title match FAILS on the staged corpus, so nothing can be published with an
+undecided diagram. On live it is listed with whether the section's draft decides it, because only a publish
+changes live.
+
+**The guard reads the database (V061).** It had judged `audit/content-sections/` (11 September) as "live"
+and all 218 files in `audit/snapshots/` as "staged". Neither is served to anyone, and the historical
+snapshots hold undecided placements no packet can change, so a diagram rule over them would fail forever.
+It now reads `data` and `draft` the way `exposure-census` does. `npm run attribution` therefore needs
+`.env.local`, as `npm run exposure` already did.
+
+**Where a chapter teaches two diagrams, show the one the chapter is named for, or the one only this chapter
+teaches.** The first reading kept the diagram already served whenever it was taught. The blind second
+reader chose HDI over Harrod-Domar ("Growth vs Development") and the Lorenz curve over absolute/relative
+poverty. Both were right: the other diagram was otherwise shown nowhere in Learn Mode.

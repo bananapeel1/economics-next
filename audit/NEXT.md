@@ -1,5 +1,80 @@
 # Next session brief
 
+## Packet 2.91 — every chapter's diagram on the 2.9 sections is decided; 5 staged, publish is the founder's (25 September 2026, Opus 5.5)
+
+Commits `831ca27` (build) and the handoff after it. Verify A (a fresh Sonnet verifier, round 1) confirmed
+V056 and V061 with zero rejections; it read the five drafts' `diagramId`s straight from Supabase. `ledger.mjs
+unverified 2.91` exits 0. **V060 moved to packet 2.92**: it is not code, and it closes as the checkpoint
+publishes the held rebuilds.
+
+**The checkpoint started while this packet ran.** PR #29 merged the branch up to `f0eac04` (2.9's handoff)
+into `main`, packets 5/7 included. Packet 2.9's 13 sections were published at 12:11 UTC
+(`auto-prepublish-2026-09-25T12-11-43-061Z__*`), types-sizes-businesses' rebuild at 12:27, and
+meeting-customer-needs at 12:31. This packet's code (`831ca27`) is NOT on `main` yet.
+
+**THE ONE THING WAITING ON THE FOUNDER: publish these 5 sections.** This form only diffs; add `--confirm` to
+publish. Each publish snapshots first.
+
+```
+node scripts/publish-section.mjs government-intervention-firms growth-development labour-markets poverty-inequality role-state-macroeconomy
+```
+
+Only `diagramId` changes on any block. What a student sees change once they are published:
+
+- **labour-markets.** Chapter 2 (Wage Determination) now shows "Monopsony Labour Market". It teaches
+  monopsony, and until now it showed nothing. Chapter 1 stops showing the equilibrium diagram, because
+  equilibrium is chapter 2's material.
+- **role-state-macroeconomy.** Chapter 1 (public goods) stops showing "Crowding Out in the Loanable Funds
+  Market". Nothing in the section teaches crowding out.
+- **growth-development.** Chapter 1 shows the HDI diagram instead of Harrod-Domar. The chapter teaches both;
+  HDI is the chapter's subject and was otherwise shown nowhere.
+- **poverty-inequality.** Chapter 1 shows the Lorenz curve instead of absolute/relative poverty. Same reasoning.
+- The other 7 chapters keep their diagram, now pinned. The 3 chapters that teach none of their section's
+  diagrams are pinned `diagramId: null`.
+
+**Until `831ca27` reaches `main`, two of those chapters stay as they are on production.** `main` resolves
+`diagramId`, so every pinned chapter is right as soon as the sections are published. But `main` does not
+know `diagramId: null`, so its title fallback still puts "Competitive Labour Market Equilibrium" on
+labour-markets chapter 1 and crowding out on role-state-macroeconomy chapter 1. That is no worse than
+today, and it goes away at the next merge. The runner prints this as `[on main until the merge: …]`.
+
+**How the diagrams were chosen.** The rule was 2.9's: a chapter shows a diagram only if its text teaches
+what the diagram draws. The first reading (`audit/runs/packet-2.91/diagram-pins.json`) was checked by a
+blind Sonnet reader who got only the chapter text and the diagram list (`blind-verdicts.json`). They
+agreed on 10 of 13. The three that differed moved to the blind reader's choice, and each keeps its
+`firstReading` and the reason it moved. The one that mattered: labour-markets chapter 1 had been accepted
+because of one sentence about an MRP shift, but the equilibrium the diagram draws is taught in chapter 2.
+
+**What changed in code, and what every later content packet must now do.**
+- **`diagramId: null` means "decided: no diagram"** (`decidedNoDiagram`, `lib/checkin-fallback.js`). Both
+  placement paths honour it. An absent `diagramId` still falls back to the title matcher.
+- **`npm run attribution` now FAILS on any STAGED section that places a diagram by title match.** A content
+  packet has to give every chapter that shows a diagram a `diagramId`, or `null` where the chapter teaches
+  none. The staged corpus is at 0 today, across 30 sections and 165 diagrams, all pinned.
+- **On live it lists rather than fails.** 31 live diagrams are title-matched. 28 are decided by a staged
+  draft (these 5, plus the held rebuilds still waiting). 3 are open, because economic-growth (2) and
+  introductory-concepts (1) hold no draft. All 3 are correct by reading (identical titles) and belong to
+  packets 43 and 15.
+- **`checkin-attribution` reads the database now (V061), not the 11 Sep export and every historical
+  snapshot.** It needs `.env.local`, as `npm run exposure` does. This closes the task 2.9 filed for it.
+- `placeChapterItems` also returns `diagramHow` ('pin' or 'title') per slot. The guard reads that
+  instead of restating the branch.
+
+**The V056 headline case (3.3.1) is fixed live, and not by this packet.** types-sizes-businesses' rebuild
+went live at 12:27 UTC. It pins "The Four Directions of Integration" to "How Businesses Grow", and all 5 of
+its diagrams by id. The other 7 held sections are V060, now packet 2.92.
+
+**Verify B:** `audit/runs/packet-2.91/verify-b.md`. Walked at 390x844, signed out, `?draft=1`:
+labour-markets, role-state-macroeconomy and poverty-inequality. Every check-in showed the decided diagram,
+or none, and its intro promised only what it carried. All five served drafts carry exactly the decided
+`diagramId`s, field by field. **No Pro pass is needed:** diagrams are a free surface, so a Pro reader sees
+the same ones.
+
+**Not done, and small:** `unresolvedDiagramPins` in `lib/content-validator.mjs` simulates the title fallback
+to decide whether a broken ref is "rescued", and does not skip `diagramId: null` chapters. That affects
+only how a broken legacy ref is reported, never placement. The file carries another session's uncommitted
+work, so it was left alone.
+
 ## Packet 2.9 — the banks of the 21 unpinned live sections are pinned; 13 staged, publish is the founder's (25 September 2026, Opus 5.5)
 
 Commit `fc91372`. Picks up the handoff at the end of this file ("packet 2.8 closed"). V057-V059 are claimed;
