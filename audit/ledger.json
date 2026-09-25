@@ -19259,10 +19259,10 @@
    "title": "A chapter's check-in question and worked example had no relationship to the chapter: LearnModeTab distributed both positionally (distributeItems, map[i]=items[i]) whenever a section pinned nothing, so on types-sizes-businesses chapter 1 (Business Objectives) served 'Which of the following best describes horizontal integration?' — three chapters early — and a limited-liability worked example two chapters early. 21 of 43 live sections take that path; 33 of their 52 chapter slots served a question sharing NO word with their own chapter and only 6 shared one. Reported by the founder reading the live section, not by any check: exposure --check fails on an UNSERVED chapter and so preferred a wrong question to none, pin-check checks a pin resolves and not that it resolves to something relevant, and validate never reads the item-to-chapter pairing.",
    "file": "components/LearnModeTab.jsx",
    "packet": 2.8,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-2.8",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "components/LearnModeTab.jsx:5-13 imports placeChapterItems (lib/checkin-placement.js:71-134) and distributeItems is no longer called anywhere in the client (verified via lib/preview-limits.test.mjs 'the component does not place items itself'); npm run exposure reproduces 51/165 chapters unwritten across 21 unpinned sections, zero of them served a mismatched item",
    "note": null,
    "added": "2026-09-24"
   },
@@ -19272,10 +19272,10 @@
    "title": "Placement lived inside a LearnModeTab useMemo, so every checker rebuilt the branch itself: exposure-census kept its own distributeItems copy and, for one run after the fix, reported 'chapters served 214/214' while the client served 52 fewer — the reimplementation failure its own header names. Fixed by extracting lib/checkin-placement.js as the single statement of which item a chapter shows, called by the component, the census and the new guard.",
    "file": "lib/checkin-placement.js",
    "packet": 2.8,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-2.8",
-   "verified_by": null,
-   "evidence": null,
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "lib/checkin-placement.js:27 placeChapterItems is the sole import target of components/LearnModeTab.jsx:8, audit/scripts/exposure-census.mjs:91-98 and audit/scripts/checkin-attribution.mjs:55,93-99 — one function, three callers, no reimplementation",
    "note": null,
    "added": "2026-09-24"
   },
@@ -19285,12 +19285,25 @@
    "title": "No gate could see whether a served item was ABOUT its chapter. audit/scripts/checkin-attribution.mjs added: fails on a served item no pin claims that shares no word with its chapter (a regression detector — unreachable under the new placement, which is the point), and NOTES a pinned item that shares none rather than failing it, because an author's pin can be right where vocabulary misses. 99 live and 120 staged notes. Four fixtures and five tests, including one that judges the REAL section under the OLD positional placement and requires it to fail.",
    "file": "audit/scripts/checkin-attribution.mjs",
    "packet": 2.8,
-   "status": "claimed",
+   "status": "confirmed",
    "closed_by": "packet-2.8",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "audit/scripts/checkin-attribution.test.mjs:66-85 places the real types-sizes-businesses.json section with distributeItems (old positional logic) and asserts judgeServed fails on >=3 chapters incl. Business Objectives/horizontal-integration; node --test audit/scripts/checkin-attribution.test.mjs = 5/5 pass; npm run attribution = 0 unattributed (live+staged)",
+   "note": null,
+   "added": "2026-09-24"
+  },
+  {
+   "id": "V056",
+   "kind": "feature",
+   "title": "A chapter's check-in DIAGRAM can belong to another chapter: matchDiagramsToBlocks gives each diagram to the block title sharing the MOST non-stop words, so on live types-sizes-businesses (3.3.1) 'Types of Business Growth (Integration)' (a chapter-3 topic, Growth of Firms) is served at chapter 2 'Types of Business Organisation' on 'types'+'business' (2 words) over 'growth' (1). Found by packet 2.8's Verify B at 390x844, step 6 of 12. Pre-existing — placement identical at 87671e8 — and outside V053/V055, whose guard judges quiz and practice only, so npm run attribution passes it. Same class as V053 through the diagram door; the fix is a diagramId pin, and the guard should judge diagrams too.",
+   "file": "components/learn-mode/utils.js",
+   "packet": 2.9,
+   "status": "open",
+   "closed_by": null,
    "verified_by": null,
    "evidence": null,
    "note": null,
-   "added": "2026-09-24"
+   "added": "2026-09-25"
   }
  ],
  "marketing": [

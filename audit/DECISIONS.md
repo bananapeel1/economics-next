@@ -3193,3 +3193,7 @@ traded the second away on purpose, because reserving that slot left `payback` re
 on the only section that carries it. Round 1 had confirmed it; round 2 rejected it correctly. A
 half-true id reads as confirmed. Split into D029 and D030, both verified against the code as it
 now stands.
+
+## 2026-09-25 — packet 2.8: a wholly unpinned section serves no check-in question (V053)
+
+Silence over misdirection. Where a section pins nothing, no question and no worked example are placed; the title-matching fallback (V026) stays only for one unpinned chapter inside an otherwise pinned section, because only there do the other pins establish the bank is chapter-addressed. Measured reason: on 3.3.1 the fallback moved a satisficing question (chapter 1) to chapter 3 on the word `firms`. Diagrams keep `matchDiagramsToBlocks`, which has the same weakness (V056, packet 2.9). Placement lives in one function, `lib/checkin-placement.js`; a checker that re-implements it is not a checker.
