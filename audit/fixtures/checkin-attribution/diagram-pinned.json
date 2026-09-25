@@ -1,0 +1,69 @@
+{
+  "note": "The pinned twin of undecided-diagram.json: the same section with the integration diagram pinned by `diagramId` to the chapter that teaches it, and the other chapter DECIDED to show none (`diagramId: null`). Must pass. Without the null, a pin on chapter 2 alone already claims the only diagram, so the null is exercised by the guard test that drops the pin.",
+  "sections": [
+    {
+      "slug": "fixture-diagram-pinned",
+      "content": [
+        {
+          "id": "b1",
+          "title": "Types of Business Organisation",
+          "quizIndices": [
+            0
+          ],
+          "sections": [
+            {
+              "id": "s1",
+              "title": "Sole traders and partnerships",
+              "keyIdea": "x",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "text": "x"
+                }
+              ]
+            }
+          ],
+          "diagramId": null
+        },
+        {
+          "id": "b2",
+          "title": "Growth of Firms",
+          "quizIndices": [
+            1
+          ],
+          "sections": [
+            {
+              "id": "s2",
+              "title": "Horizontal and vertical integration",
+              "keyIdea": "x",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "text": "x"
+                }
+              ]
+            }
+          ],
+          "diagramId": "d-integration"
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q0",
+          "question": "Which type of business organisation has unlimited liability?"
+        },
+        {
+          "id": "q1",
+          "question": "A firm that acquires one of its suppliers is growing by:"
+        }
+      ],
+      "practice": [],
+      "diagrams": [
+        {
+          "id": "d-integration",
+          "title": "Types of Business Growth (Integration)"
+        }
+      ]
+    }
+  ]
+}

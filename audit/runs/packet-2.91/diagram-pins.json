@@ -1,0 +1,107 @@
+{
+ "_about": "Packet 2.91 (V056). One diagram decision per chapter for the five sections packet 2.9 pinned that carry diagrams (published 25 September 2026, 12:11 UTC, so these apply to LIVE content). `diagram` is the id the check-in must show; null means the chapter was read and teaches none of the section's diagrams, so it shows none (decidedNoDiagram). Chosen by reading each chapter (audit/runs/packet-2.9/sections/<id>.txt) under the rule 2.9 used for questions: a chapter shows a diagram only if it TEACHES what the diagram draws. Then judged by a blind second reader (blind-verdicts.json: a Sonnet reader given only the chapter text and the diagram list, not these choices). It agreed on 10 of 13 first readings; the three that moved carry `firstReading` and say why. All 13 final decisions are the blind reader's `best`.",
+ "government-intervention-firms": [
+  {
+   "block": 0,
+   "blockId": "government-intervention-firms:block:b1ca2796",
+   "title": "Competition Policy",
+   "diagram": null,
+   "why": "CMA, merger control and cartels. None of the three diagrams is taught here; privatisation is chapter 2."
+  },
+  {
+   "block": 1,
+   "blockId": "government-intervention-firms:block:d4d37723",
+   "title": "Regulation of Monopoly",
+   "diagram": "government-intervention-firms:diagram:486972de",
+   "why": "Teaches RPI-X price caps. Unchanged."
+  },
+  {
+   "block": 2,
+   "blockId": "government-intervention-firms:block:0be641d7",
+   "title": "Government Failure and Minimum Wages",
+   "diagram": "government-intervention-firms:diagram:729684bb",
+   "why": "Teaches the minimum wage in a monopsony labour market. Unchanged."
+  }
+ ],
+ "growth-development": [
+  {
+   "block": 0,
+   "blockId": "growth-development:block:e1f67056",
+   "title": "Growth vs Development",
+   "diagram": "growth-development:diagram:338ee613",
+   "why": "Teaches the HDI's three dimensions as the measure that separates development from growth, which is the chapter's title. Harrod-Domar and Prebisch-Singer are taught here too (Barriers to Development). The blind reader chose HDI; the first reading kept the served Harrod-Domar only because it was not wrong, and HDI was otherwise shown nowhere in Learn Mode.",
+   "firstReading": "growth-development:diagram:c0dabfa0"
+  },
+  {
+   "block": 1,
+   "blockId": "growth-development:block:036aba00",
+   "title": "Development Strategies",
+   "diagram": "growth-development:diagram:ae61e29a",
+   "why": "Teaches market-led against interventionist strategies. Unchanged."
+  },
+  {
+   "block": 2,
+   "blockId": "growth-development:block:86b38fdd",
+   "title": "Sustainability",
+   "diagram": null,
+   "why": "Sustainable development and green growth. None of the five diagrams is taught here."
+  }
+ ],
+ "labour-markets": [
+  {
+   "block": 0,
+   "blockId": "labour-markets:block:a6823a69",
+   "title": "Demand and Supply of Labour",
+   "diagram": null,
+   "why": "Teaches labour demand (MRP) and labour supply SEPARATELY; the equilibrium where DL = SL, which is what the served 'Competitive Labour Market Equilibrium' draws, is taught in chapter 2 ('Competitive Labour Markets'). The blind reader found it; the first reading had accepted it on the MRP-shift sentence. It is the V056 shape exactly: a diagram one chapter early.",
+   "firstReading": "labour-markets:diagram:40143342"
+  },
+  {
+   "block": 1,
+   "blockId": "labour-markets:block:ceae9f76",
+   "title": "Wage Determination",
+   "diagram": "labour-markets:diagram:e2d91263",
+   "why": "Teaches monopsony: MCL above supply, hire at MCL = MRP, and the minimum wage. The diagram was unplaced and the chapter showed none."
+  },
+  {
+   "block": 2,
+   "blockId": "labour-markets:block:ad31ac69",
+   "title": "Trade Unions and Wage Differentials",
+   "diagram": "labour-markets:diagram:488e9c65",
+   "why": "Teaches wage differentials and labour immobility. Unchanged."
+  }
+ ],
+ "poverty-inequality": [
+  {
+   "block": 0,
+   "blockId": "poverty-inequality:block:f33d3bc6",
+   "title": "Types of Poverty",
+   "diagram": "poverty-inequality:diagram:8b62cca0",
+   "why": "Teaches the Lorenz curve and the Gini coefficient (A / (A+B)) in its second subsection, immediately before the check-in; absolute against relative poverty is taught too. The blind reader chose the Lorenz curve; it is the diagram a student is asked to draw, and it was otherwise shown nowhere in Learn Mode.",
+   "firstReading": "poverty-inequality:diagram:7e2fb2ae"
+  },
+  {
+   "block": 1,
+   "blockId": "poverty-inequality:block:00abd5e2",
+   "title": "Causes and Consequences",
+   "diagram": null,
+   "why": "Causes of inequality and redistribution. The Kuznets curve is taught nowhere in the section, and the Lorenz curve is chapter 1's."
+  }
+ ],
+ "role-state-macroeconomy": [
+  {
+   "block": 0,
+   "blockId": "role-state-macroeconomy:block:d1cecc10",
+   "title": "Market Failure and the State",
+   "diagram": null,
+   "why": "Public goods and goods with external benefits. It served Crowding Out in the Loanable Funds Market, on the word 'market'; crowding out is taught nowhere in the section."
+  },
+  {
+   "block": 1,
+   "blockId": "role-state-macroeconomy:block:f5a30e42",
+   "title": "Macroeconomic Policy",
+   "diagram": "role-state-macroeconomy:diagram:e06d515a",
+   "why": "Teaches fiscal and monetary policy shifting AD and supply-side policy shifting LRAS. Unchanged."
+  }
+ ]
+}

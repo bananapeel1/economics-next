@@ -1,0 +1,491 @@
+{
+ "government-intervention-firms": {
+  "errors": [],
+  "chapters": [
+   {
+    "block": 0,
+    "title": "Competition Policy",
+    "decided": null,
+    "before": {
+     "diagram": null,
+     "diagramTitle": null,
+     "how": null,
+     "quiz": null,
+     "practice": "government-intervention-firms:practice:f273da05"
+    },
+    "pro": {
+     "diagram": null,
+     "diagramTitle": null,
+     "how": null,
+     "quiz": null,
+     "practice": "government-intervention-firms:practice:f273da05"
+    },
+    "free": {
+     "diagram": null,
+     "diagramTitle": null,
+     "how": null,
+     "quiz": null,
+     "practice": "government-intervention-firms:practice:f273da05"
+    },
+    "mainUntilMerge": {
+     "diagram": null,
+     "diagramTitle": null,
+     "how": null,
+     "quiz": null,
+     "practice": "government-intervention-firms:practice:f273da05"
+    }
+   },
+   {
+    "block": 1,
+    "title": "Regulation of Monopoly",
+    "decided": "government-intervention-firms:diagram:486972de",
+    "before": {
+     "diagram": "government-intervention-firms:diagram:486972de",
+     "diagramTitle": "Price Regulation of a Monopoly (RPI-X Price Cap)",
+     "how": "title",
+     "quiz": "government-intervention-firms:quiz:49506368",
+     "practice": null
+    },
+    "pro": {
+     "diagram": "government-intervention-firms:diagram:486972de",
+     "diagramTitle": "Price Regulation of a Monopoly (RPI-X Price Cap)",
+     "how": "pin",
+     "quiz": "government-intervention-firms:quiz:49506368",
+     "practice": null
+    },
+    "free": {
+     "diagram": "government-intervention-firms:diagram:486972de",
+     "diagramTitle": "Price Regulation of a Monopoly (RPI-X Price Cap)",
+     "how": "pin",
+     "quiz": "government-intervention-firms:quiz:49506368",
+     "practice": null
+    },
+    "mainUntilMerge": {
+     "diagram": "government-intervention-firms:diagram:486972de",
+     "diagramTitle": "Price Regulation of a Monopoly (RPI-X Price Cap)",
+     "how": "pin",
+     "quiz": "government-intervention-firms:quiz:49506368",
+     "practice": null
+    }
+   },
+   {
+    "block": 2,
+    "title": "Government Failure and Minimum Wages",
+    "decided": "government-intervention-firms:diagram:729684bb",
+    "before": {
+     "diagram": "government-intervention-firms:diagram:729684bb",
+     "diagramTitle": "Minimum Wage in a Monopsony Labour Market",
+     "how": "title",
+     "quiz": "government-intervention-firms:quiz:86b27dd7",
+     "practice": "government-intervention-firms:practice:b88b8cc6"
+    },
+    "pro": {
+     "diagram": "government-intervention-firms:diagram:729684bb",
+     "diagramTitle": "Minimum Wage in a Monopsony Labour Market",
+     "how": "pin",
+     "quiz": "government-intervention-firms:quiz:86b27dd7",
+     "practice": "government-intervention-firms:practice:b88b8cc6"
+    },
+    "free": {
+     "diagram": "government-intervention-firms:diagram:729684bb",
+     "diagramTitle": "Minimum Wage in a Monopsony Labour Market",
+     "how": "pin",
+     "quiz": "government-intervention-firms:quiz:86b27dd7",
+     "practice": "government-intervention-firms:practice:b88b8cc6"
+    },
+    "mainUntilMerge": {
+     "diagram": "government-intervention-firms:diagram:729684bb",
+     "diagramTitle": "Minimum Wage in a Monopsony Labour Market",
+     "how": "pin",
+     "quiz": "government-intervention-firms:quiz:86b27dd7",
+     "practice": "government-intervention-firms:practice:b88b8cc6"
+    }
+   }
+  ],
+  "gate": {
+   "ok": true,
+   "newBlocks": 0,
+   "newDebt": 3,
+   "introduced": []
+  },
+  "staged": true
+ },
+ "growth-development": {
+  "errors": [],
+  "chapters": [
+   {
+    "block": 0,
+    "title": "Growth vs Development",
+    "decided": "growth-development:diagram:338ee613",
+    "before": {
+     "diagram": "growth-development:diagram:c0dabfa0",
+     "diagramTitle": "Harrod-Domar Growth Model",
+     "how": "title",
+     "quiz": "growth-development:quiz:b16832aa",
+     "practice": "growth-development:practice:5ed0797d"
+    },
+    "pro": {
+     "diagram": "growth-development:diagram:338ee613",
+     "diagramTitle": "HDI Components and Measurement",
+     "how": "pin",
+     "quiz": "growth-development:quiz:b16832aa",
+     "practice": "growth-development:practice:5ed0797d"
+    },
+    "free": {
+     "diagram": "growth-development:diagram:338ee613",
+     "diagramTitle": "HDI Components and Measurement",
+     "how": "pin",
+     "quiz": "growth-development:quiz:b16832aa",
+     "practice": "growth-development:practice:5ed0797d"
+    },
+    "mainUntilMerge": {
+     "diagram": "growth-development:diagram:338ee613",
+     "diagramTitle": "HDI Components and Measurement",
+     "how": "pin",
+     "quiz": "growth-development:quiz:b16832aa",
+     "practice": "growth-development:practice:5ed0797d"
+    }
+   },
+   {
+    "block": 1,
+    "title": "Development Strategies",
+    "decided": "growth-development:diagram:ae61e29a",
+    "before": {
+     "diagram": "growth-development:diagram:ae61e29a",
+     "diagramTitle": "Development Strategies Comparison",
+     "how": "title",
+     "quiz": "growth-development:quiz:d20003b9",
+     "practice": "growth-development:practice:87a82eaa"
+    },
+    "pro": {
+     "diagram": "growth-development:diagram:ae61e29a",
+     "diagramTitle": "Development Strategies Comparison",
+     "how": "pin",
+     "quiz": "growth-development:quiz:d20003b9",
+     "practice": "growth-development:practice:87a82eaa"
+    },
+    "free": {
+     "diagram": "growth-development:diagram:ae61e29a",
+     "diagramTitle": "Development Strategies Comparison",
+     "how": "pin",
+     "quiz": "growth-development:quiz:d20003b9",
+     "practice": "growth-development:practice:87a82eaa"
+    },
+    "mainUntilMerge": {
+     "diagram": "growth-development:diagram:ae61e29a",
+     "diagramTitle": "Development Strategies Comparison",
+     "how": "pin",
+     "quiz": "growth-development:quiz:d20003b9",
+     "practice": "growth-development:practice:87a82eaa"
+    }
+   },
+   {
+    "block": 2,
+    "title": "Sustainability",
+    "decided": null,
+    "before": {
+     "diagram": null,
+     "diagramTitle": null,
+     "how": null,
+     "quiz": null,
+     "practice": null
+    },
+    "pro": {
+     "diagram": null,
+     "diagramTitle": null,
+     "how": null,
+     "quiz": null,
+     "practice": null
+    },
+    "free": {
+     "diagram": null,
+     "diagramTitle": null,
+     "how": null,
+     "quiz": null,
+     "practice": null
+    },
+    "mainUntilMerge": {
+     "diagram": null,
+     "diagramTitle": null,
+     "how": null,
+     "quiz": null,
+     "practice": null
+    }
+   }
+  ],
+  "gate": {
+   "ok": true,
+   "newBlocks": 0,
+   "newDebt": 6,
+   "introduced": []
+  },
+  "staged": true
+ },
+ "labour-markets": {
+  "errors": [],
+  "chapters": [
+   {
+    "block": 0,
+    "title": "Demand and Supply of Labour",
+    "decided": null,
+    "before": {
+     "diagram": "labour-markets:diagram:40143342",
+     "diagramTitle": "Competitive Labour Market Equilibrium",
+     "how": "title",
+     "quiz": "labour-markets:quiz:4be1d365",
+     "practice": "labour-markets:practice:904e9b48"
+    },
+    "pro": {
+     "diagram": null,
+     "diagramTitle": null,
+     "how": null,
+     "quiz": "labour-markets:quiz:4be1d365",
+     "practice": "labour-markets:practice:904e9b48"
+    },
+    "free": {
+     "diagram": null,
+     "diagramTitle": null,
+     "how": null,
+     "quiz": "labour-markets:quiz:4be1d365",
+     "practice": "labour-markets:practice:904e9b48"
+    },
+    "mainUntilMerge": {
+     "diagram": "labour-markets:diagram:40143342",
+     "diagramTitle": "Competitive Labour Market Equilibrium",
+     "how": "title",
+     "quiz": "labour-markets:quiz:4be1d365",
+     "practice": "labour-markets:practice:904e9b48"
+    }
+   },
+   {
+    "block": 1,
+    "title": "Wage Determination",
+    "decided": "labour-markets:diagram:e2d91263",
+    "before": {
+     "diagram": null,
+     "diagramTitle": null,
+     "how": null,
+     "quiz": "labour-markets:quiz:a4405adb",
+     "practice": null
+    },
+    "pro": {
+     "diagram": "labour-markets:diagram:e2d91263",
+     "diagramTitle": "Monopsony Labour Market",
+     "how": "pin",
+     "quiz": "labour-markets:quiz:a4405adb",
+     "practice": null
+    },
+    "free": {
+     "diagram": "labour-markets:diagram:e2d91263",
+     "diagramTitle": "Monopsony Labour Market",
+     "how": "pin",
+     "quiz": "labour-markets:quiz:a4405adb",
+     "practice": null
+    },
+    "mainUntilMerge": {
+     "diagram": "labour-markets:diagram:e2d91263",
+     "diagramTitle": "Monopsony Labour Market",
+     "how": "pin",
+     "quiz": "labour-markets:quiz:a4405adb",
+     "practice": null
+    }
+   },
+   {
+    "block": 2,
+    "title": "Trade Unions and Wage Differentials",
+    "decided": "labour-markets:diagram:488e9c65",
+    "before": {
+     "diagram": "labour-markets:diagram:488e9c65",
+     "diagramTitle": "Wage Differentials and Labour Immobility",
+     "how": "title",
+     "quiz": "labour-markets:quiz:2515ecf0",
+     "practice": "labour-markets:practice:1249c630"
+    },
+    "pro": {
+     "diagram": "labour-markets:diagram:488e9c65",
+     "diagramTitle": "Wage Differentials and Labour Immobility",
+     "how": "pin",
+     "quiz": "labour-markets:quiz:2515ecf0",
+     "practice": "labour-markets:practice:1249c630"
+    },
+    "free": {
+     "diagram": "labour-markets:diagram:488e9c65",
+     "diagramTitle": "Wage Differentials and Labour Immobility",
+     "how": "pin",
+     "quiz": "labour-markets:quiz:2515ecf0",
+     "practice": "labour-markets:practice:1249c630"
+    },
+    "mainUntilMerge": {
+     "diagram": "labour-markets:diagram:488e9c65",
+     "diagramTitle": "Wage Differentials and Labour Immobility",
+     "how": "pin",
+     "quiz": "labour-markets:quiz:2515ecf0",
+     "practice": "labour-markets:practice:1249c630"
+    }
+   }
+  ],
+  "gate": {
+   "ok": true,
+   "newBlocks": 0,
+   "newDebt": 3,
+   "introduced": []
+  },
+  "staged": true
+ },
+ "poverty-inequality": {
+  "errors": [],
+  "chapters": [
+   {
+    "block": 0,
+    "title": "Types of Poverty",
+    "decided": "poverty-inequality:diagram:8b62cca0",
+    "before": {
+     "diagram": "poverty-inequality:diagram:7e2fb2ae",
+     "diagramTitle": "Absolute vs Relative Poverty",
+     "how": "title",
+     "quiz": "poverty-inequality:quiz:4cd69a99",
+     "practice": "poverty-inequality:practice:f5fc1fc2"
+    },
+    "pro": {
+     "diagram": "poverty-inequality:diagram:8b62cca0",
+     "diagramTitle": "Lorenz Curve and Gini Coefficient",
+     "how": "pin",
+     "quiz": "poverty-inequality:quiz:4cd69a99",
+     "practice": "poverty-inequality:practice:f5fc1fc2"
+    },
+    "free": {
+     "diagram": "poverty-inequality:diagram:8b62cca0",
+     "diagramTitle": "Lorenz Curve and Gini Coefficient",
+     "how": "pin",
+     "quiz": "poverty-inequality:quiz:4cd69a99",
+     "practice": "poverty-inequality:practice:f5fc1fc2"
+    },
+    "mainUntilMerge": {
+     "diagram": "poverty-inequality:diagram:8b62cca0",
+     "diagramTitle": "Lorenz Curve and Gini Coefficient",
+     "how": "pin",
+     "quiz": "poverty-inequality:quiz:4cd69a99",
+     "practice": "poverty-inequality:practice:f5fc1fc2"
+    }
+   },
+   {
+    "block": 1,
+    "title": "Causes and Consequences",
+    "decided": null,
+    "before": {
+     "diagram": null,
+     "diagramTitle": null,
+     "how": null,
+     "quiz": "poverty-inequality:quiz:97277b48",
+     "practice": "poverty-inequality:practice:3d98d47a"
+    },
+    "pro": {
+     "diagram": null,
+     "diagramTitle": null,
+     "how": null,
+     "quiz": "poverty-inequality:quiz:97277b48",
+     "practice": "poverty-inequality:practice:3d98d47a"
+    },
+    "free": {
+     "diagram": null,
+     "diagramTitle": null,
+     "how": null,
+     "quiz": "poverty-inequality:quiz:97277b48",
+     "practice": "poverty-inequality:practice:3d98d47a"
+    },
+    "mainUntilMerge": {
+     "diagram": null,
+     "diagramTitle": null,
+     "how": null,
+     "quiz": "poverty-inequality:quiz:97277b48",
+     "practice": "poverty-inequality:practice:3d98d47a"
+    }
+   }
+  ],
+  "gate": {
+   "ok": true,
+   "newBlocks": 0,
+   "newDebt": 3,
+   "introduced": []
+  },
+  "staged": true
+ },
+ "role-state-macroeconomy": {
+  "errors": [],
+  "chapters": [
+   {
+    "block": 0,
+    "title": "Market Failure and the State",
+    "decided": null,
+    "before": {
+     "diagram": "role-state-macroeconomy:diagram:e67d4f90",
+     "diagramTitle": "Crowding Out in the Loanable Funds Market",
+     "how": "title",
+     "quiz": null,
+     "practice": null
+    },
+    "pro": {
+     "diagram": null,
+     "diagramTitle": null,
+     "how": null,
+     "quiz": null,
+     "practice": null
+    },
+    "free": {
+     "diagram": null,
+     "diagramTitle": null,
+     "how": null,
+     "quiz": null,
+     "practice": null
+    },
+    "mainUntilMerge": {
+     "diagram": "role-state-macroeconomy:diagram:e67d4f90",
+     "diagramTitle": "Crowding Out in the Loanable Funds Market",
+     "how": "title",
+     "quiz": null,
+     "practice": null
+    }
+   },
+   {
+    "block": 1,
+    "title": "Macroeconomic Policy",
+    "decided": "role-state-macroeconomy:diagram:e06d515a",
+    "before": {
+     "diagram": "role-state-macroeconomy:diagram:e06d515a",
+     "diagramTitle": "AD/AS: Macroeconomic Policy Effects",
+     "how": "title",
+     "quiz": "role-state-macroeconomy:quiz:e358b5a1",
+     "practice": "role-state-macroeconomy:practice:901afec0"
+    },
+    "pro": {
+     "diagram": "role-state-macroeconomy:diagram:e06d515a",
+     "diagramTitle": "AD/AS: Macroeconomic Policy Effects",
+     "how": "pin",
+     "quiz": "role-state-macroeconomy:quiz:e358b5a1",
+     "practice": "role-state-macroeconomy:practice:901afec0"
+    },
+    "free": {
+     "diagram": "role-state-macroeconomy:diagram:e06d515a",
+     "diagramTitle": "AD/AS: Macroeconomic Policy Effects",
+     "how": "pin",
+     "quiz": "role-state-macroeconomy:quiz:e358b5a1",
+     "practice": "role-state-macroeconomy:practice:901afec0"
+    },
+    "mainUntilMerge": {
+     "diagram": "role-state-macroeconomy:diagram:e06d515a",
+     "diagramTitle": "AD/AS: Macroeconomic Policy Effects",
+     "how": "pin",
+     "quiz": "role-state-macroeconomy:quiz:e358b5a1",
+     "practice": "role-state-macroeconomy:practice:901afec0"
+    }
+   }
+  ],
+  "gate": {
+   "ok": true,
+   "newBlocks": 0,
+   "newDebt": 4,
+   "introduced": []
+  },
+  "staged": true
+ }
+}

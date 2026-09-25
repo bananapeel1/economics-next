@@ -2,11 +2,13 @@
 /**
  * Is every item a chapter SHOWS actually ABOUT that chapter?
  *
- *   node audit/scripts/checkin-attribution.mjs                 live `data`
- *   node audit/scripts/checkin-attribution.mjs --staged        the rebuilds
+ *   node audit/scripts/checkin-attribution.mjs                 live `data`, read from the database
+ *   node audit/scripts/checkin-attribution.mjs --staged        `draft`, per table falling back to `data`,
+ *                                                              for every section holding a draft
  *   node audit/scripts/checkin-attribution.mjs --both
- *   node audit/scripts/checkin-attribution.mjs --check         exit 1 on an unattributable served item
+ *   node audit/scripts/checkin-attribution.mjs --check         exit 1 on a FAIL (below)
  *   node audit/scripts/checkin-attribution.mjs --section <id>  one section
+ *   node audit/scripts/checkin-attribution.mjs --verbose       list every live undecided diagram
  *   node audit/scripts/checkin-attribution.mjs --fixture <f>   a fixture, for the guard's own tests
  *
  * WHY THIS EXISTS. A reader opened `types-sizes-businesses`, read chapter 1 — Profit Maximisation,
@@ -46,6 +48,40 @@
  * with NO relationship to its chapter, which is the defect that shipped. Real attribution needs the
  * per-item spec tags packet 12.5 is backfilling; when `spec_items` is populated this guard should
  * compare the item's leaves against the chapter's leaves and retire rule (b).
+ *
+ * DIAGRAMS (packet 2.91, V056), AND WHY THEIR RULE IS DIFFERENT. The quiz rule above cannot see the
+ * diagram defect at all. `matchDiagramsToBlocks` never places a diagram without a shared title word,
+ * so rule (b) passes everything it places — including the case that shipped: on live
+ * types-sizes-businesses "Types of Business Growth (Integration)" shares `types` and `business` with
+ * chapter 2, "Types of Business Organisation", and only `growth` with chapter 3, "Growth of Firms",
+ * which is the one that teaches integration. A title cannot say which chapter a diagram is about.
+ *
+ * A stronger lexical rule was measured and rejected (audit/runs/packet-2.91/text-probe.mjs): scoring
+ * each diagram's own title and description against every chapter's full text, weighted by how few
+ * chapters use each word, flagged 30 of 227 served diagrams. It caught 3.3.1 by 18.5 to 1.7, but
+ * about twenty of the thirty were correct placements (a rebuild's "Maximum and Minimum Prices"
+ * diagram on its "Maximum and Minimum Prices" chapter among them), the separation between true and
+ * false was 2.6x against 3.5x, and it missed a case outright. A guard that fails on correct content
+ * gets switched off.
+ *
+ * So the diagram rule judges the one thing a machine can know: whether an AUTHOR placed the diagram.
+ * `placeChapterItems` reports it (`diagramHow`), so this file restates nothing:
+ *   `pin`    an author's `diagramId` / `diagramRef` resolved. Trusted, like a pinned question; NOTED
+ *            if it shares no word with the chapter title, so a reader can look.
+ *   `title`  `matchDiagramsToBlocks` guessed. That is `diagram-undecided`, and it FAILS on the staged
+ *            corpus: nothing waiting to be published may place a diagram by title. The fix is a
+ *            `diagramId` pin, or `diagramId: null` where the chapter teaches none of the section's
+ *            diagrams (`decidedNoDiagram`, lib/checkin-fallback.js).
+ * On LIVE it is listed, not failed: live changes only by publishing a draft, so the list says, per
+ * section, whether the staged draft already decides it. A live section with no draft is open debt.
+ * An unpinned diagram sharing no word with its chapter FAILS everywhere, like a question — unreachable
+ * through today's matcher, so it is the regression detector.
+ *
+ * WHY IT READS THE DATABASE. Until 2.91 "live" meant `audit/content-sections/`, the 11 September
+ * export, and "staged" meant every file in `audit/snapshots/`, historical ones included (218 on
+ * 25 September). Neither is what a student is served, and the diagram rule cannot run on them: the
+ * export and the old snapshots hold undecided placements that no packet can ever change, so the
+ * rule would fail forever. It now reads `data` and `draft`, as exposure-census does.
  */
 
 import fs from 'node:fs';
@@ -53,6 +89,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildSteps } from '../../lib/learn-steps.js';
 import { placeChapterItems } from '../../lib/checkin-placement.js';
+import { TABLE_TO_KEY } from '../../lib/content-gate.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const argv = process.argv.slice(2);
@@ -63,6 +100,7 @@ const FIXTURE = val('--fixture');
 const ONLY = val('--section');
 const STAGED = flag('--staged');
 const BOTH = flag('--both');
+const VERBOSE = flag('--verbose');
 
 const STOP = new Set(['and', 'the', 'for', 'its', 'with', 'from', 'into', 'that', 'this', 'are',
   'was', 'how', 'why', 'what', 'their', 'them', 'not', 'but', 'can', 'has', 'over', 'which',
@@ -76,6 +114,7 @@ const shares = (itemText, blockTitle) => {
 };
 
 const itemText = (it) => [it?.question, it?.prompt, it?.title, it?.scenario].filter(Boolean).join(' ');
+const diagramLabel = (d) => d?.id || d?.title || '?';
 
 /**
  * Placement for one section — from lib/checkin-placement.js, the SAME function the client calls.
@@ -90,7 +129,7 @@ function place(section) {
   const pinnedKeys = ['diagramRef', 'quizIndices', 'practiceIndices', 'diagramId', 'quizIds', 'practiceIds'];
   const hasRefs = slots.some(({ s }) => pinnedKeys.some((k) => s[k]));
 
-  const { quizMap, practiceMap } = placeChapterItems({
+  const { quizMap, practiceMap, diagramMap, diagramHow } = placeChapterItems({
     flatSteps: steps,
     contentData: content,
     diagramsData: section.diagrams || [],
@@ -107,6 +146,12 @@ function place(section) {
   for (const [idxStr, item] of Object.entries(practiceMap)) {
     const step = byIndex.get(Number(idxStr));
     if (step && item) served.push({ kind: 'practice', block: step.blockTitle, item, pinned: Boolean(step.practiceIds || step.practiceIndices) });
+  }
+  // Diagrams carry HOW they were placed, from the placement itself: a pin is an author's decision,
+  // a title match is the matcher's guess (V056). `pinned` keeps its meaning for the shared rule.
+  for (const [idxStr, item] of Object.entries(diagramMap)) {
+    const step = byIndex.get(Number(idxStr));
+    if (step && item) served.push({ kind: 'diagram', block: step.blockTitle, item, pinned: diagramHow[idxStr] === 'pin', how: diagramHow[idxStr] });
   }
   return { served, hasRefs, chapters: slots.length };
 }
@@ -126,58 +171,106 @@ function place(section) {
  *         make the guard punish correct content, and a guard with false positives gets switched
  *         off. They are counted and listed so a mis-pin (V016's defect) is visible to a reader
  *         without being auto-condemned.
+ *
+ *   UNDECIDED  a DIAGRAM placed by title match rather than by a pin (V056, header). A FAILURE when
+ *         `strict` — the staged corpus, and fixtures — and returned as `undecided` otherwise, for
+ *         the live listing. Judged before the word test, because the matcher never places a diagram
+ *         without a shared word and the word test would pass every one of them.
  */
-export function judgeServed(served, sectionId) {
+export function judgeServed(served, sectionId, { strict = true } = {}) {
   const failures = [];
   const notes = [];
+  const undecided = [];
   for (const row of served) {
-    if (shares(itemText(row.item), row.block)) continue;
+    const text = row.kind === 'diagram' ? row.item?.title : itemText(row.item);
+    if (row.kind === 'diagram' && row.how === 'title') {
+      const rec = {
+        section: sectionId, block: row.block, kind: row.kind, rule: 'diagram-undecided',
+        key: `diagram-undecided|${sectionId}|${row.block}`, diagram: diagramLabel(row.item),
+        detail: `diagram on "${row.block}" was placed by a title match, not by a pin: "${String(text).slice(0, 56)}"`,
+      };
+      if (strict) failures.push(rec);
+      else undecided.push(rec);
+    }
+    if (shares(text, row.block)) continue;
     const rec = {
       section: sectionId, block: row.block, kind: row.kind,
-      detail: `${row.kind} on "${row.block}" shares no word with the chapter: "${String(itemText(row.item)).slice(0, 56)}"`,
+      detail: `${row.kind} on "${row.block}" shares no word with the chapter: "${String(text).slice(0, 56)}"`,
     };
     if (row.pinned) notes.push({ ...rec, rule: 'pinned-mismatch', key: `pinned-mismatch|${sectionId}|${row.block}|${row.kind}` });
     else failures.push({ ...rec, rule: 'attribution', key: `attribution|${sectionId}|${row.block}|${row.kind}` });
   }
-  return { failures, notes };
+  return { failures, notes, undecided };
 }
 
-function judge(section) {
+function judge(section, opts) {
   const { served, hasRefs, chapters } = place(section);
-  const { failures, notes } = judgeServed(served, section.id);
-  return { failures, notes, served: served.length, chapters, hasRefs };
+  const { failures, notes, undecided } = judgeServed(served, section.id, opts);
+  return { failures, notes, undecided, served: served, chapters, hasRefs };
 }
 
-function loadCorpus(staged) {
+/**
+ * Every section, as the route serves it. `live` is `data`; `staged` is `draft` per table, falling
+ * back to `data` exactly as `app/api/sections/[id]/route.js` does for `?draft=1`, and only for the
+ * sections that hold a draft of some table — a section with none is identical to live.
+ * The database client is imported here rather than at the top so that importing `judgeServed`
+ * (the test file does) never needs credentials.
+ */
+async function loadDatabase() {
+  const { supabase } = await import('../../scripts/_db.mjs');
+  const { data: sections, error } = await supabase.from('sections').select('id').order('id');
+  if (error) throw new Error(`sections: ${error.message}`);
+  const out = [];
+  for (const { id } of sections) {
+    const live = { id }; const draft = { id }; let hasDraft = false;
+    for (const [table, key] of Object.entries(TABLE_TO_KEY)) {
+      const { data, error: e } = await supabase.from(table).select('data, draft').eq('section_id', id).maybeSingle();
+      if (e) throw new Error(`${table} ${id}: ${e.message}`);
+      live[key] = data?.data ?? null;
+      draft[key] = data?.draft ?? data?.data ?? null;
+      if (data?.draft != null) hasDraft = true;
+    }
+    out.push({ live, draft: hasDraft ? draft : null });
+  }
+  return out;
+}
+
+let dbCache = null;
+async function loadCorpus(staged) {
   if (FIXTURE) {
     const f = JSON.parse(fs.readFileSync(path.isAbsolute(FIXTURE) ? FIXTURE : path.join(ROOT, FIXTURE), 'utf8'));
     return f.sections.map((s) => ({ ...s, id: s.slug || s.id }));
   }
-  const dir = path.join(ROOT, staged ? 'audit/snapshots' : 'audit/content-sections');
-  if (!fs.existsSync(dir)) return [];
-  return fs.readdirSync(dir).filter((f) => f.endsWith('.json')).map((f) => {
-    const j = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
-    return { ...j, id: (j.meta && j.meta.id) || f.replace(/\.json$/, '') };
-  });
+  dbCache = dbCache || await loadDatabase();
+  return dbCache.map((r) => (staged ? r.draft : r.live)).filter(Boolean);
 }
 
-function run(staged, label) {
-  const corpus = loadCorpus(staged).filter((s) => !ONLY || s.id === ONLY || s.id.endsWith(ONLY));
-  let served = 0, silentChapters = 0;
+async function run(staged, label) {
+  const strict = Boolean(staged || FIXTURE);
+  const corpus = (await loadCorpus(staged)).filter((s) => !ONLY || s.id === ONLY || s.id.endsWith(ONLY));
+  let silentChapters = 0;
+  const counts = { quiz: 0, practice: 0, diagram: 0, diagramByPin: 0 };
   const failures = [];
   const notes = [];
+  const undecided = [];
   for (const section of corpus) {
-    const r = judge(section);
-    served += r.served;
+    const r = judge(section, { strict });
+    for (const row of r.served) {
+      counts[row.kind] += 1;
+      if (row.kind === 'diagram' && row.how === 'pin') counts.diagramByPin += 1;
+    }
     failures.push(...r.failures);
     notes.push(...r.notes);
+    undecided.push(...r.undecided);
     if (!r.hasRefs && r.chapters) silentChapters += r.chapters;
   }
-  const unattributed = failures.length;
+  const byRule = (rule) => failures.filter((f) => f.rule === rule).length;
   console.log(`\ncheckin-attribution — ${label}`);
   console.log(`  sections                     ${corpus.length}`);
-  console.log(`  items served at a chapter    ${served}`);
-  console.log(`  UNATTRIBUTED                 ${unattributed}`);
+  console.log(`  items served at a chapter    ${counts.quiz + counts.practice} (quiz ${counts.quiz}, practice ${counts.practice})`);
+  console.log(`  diagrams served at a chapter ${counts.diagram} (placed by a pin ${counts.diagramByPin}, by a title match ${counts.diagram - counts.diagramByPin})`);
+  console.log(`  UNATTRIBUTED                 ${byRule('attribution')}`);
+  if (strict) console.log(`  UNDECIDED DIAGRAMS           ${byRule('diagram-undecided')}   (a title match in a corpus that must decide — FAILS)`);
   console.log(`  chapters serving nothing because their section pins nothing   ${silentChapters}`);
   console.log(`  pinned items sharing no word with their chapter (NOTE, not a failure)   ${notes.length}`);
   if (failures.length) {
@@ -185,7 +278,31 @@ function run(staged, label) {
     for (const f of failures.slice(0, 40)) console.log(`  ${f.section.padEnd(42)} ${f.detail}`);
     if (failures.length > 40) console.log(`  … and ${failures.length - 40} more`);
   }
+  if (!strict && undecided.length) liveUndecided(undecided);
   return failures;
+}
+
+/**
+ * Live diagrams placed by title, per section, with whether the section's staged draft decides them.
+ * Live changes only by publishing, so this is a list for whoever publishes, not a failure.
+ */
+function liveUndecided(undecided) {
+  const bySection = new Map();
+  for (const u of undecided) bySection.set(u.section, [...(bySection.get(u.section) || []), u]);
+  const staged = new Map((dbCache || []).filter((r) => r.draft).map((r) => [r.live.id, r.draft]));
+  let decidedByDraft = 0, open = 0;
+  const lines = [];
+  for (const [section, rows] of bySection) {
+    const draft = staged.get(section);
+    const stillUndecided = draft ? judge(draft, { strict: true }).failures.filter((f) => f.rule === 'diagram-undecided').length : null;
+    const state = draft == null ? 'NO DRAFT — open' : stillUndecided ? `draft still has ${stillUndecided} — open` : 'draft decides them all — fixed at publish';
+    if (draft != null && !stillUndecided) decidedByDraft += rows.length; else open += rows.length;
+    lines.push(`  ${section.padEnd(42)} ${String(rows.length).padStart(2)}  ${state}`);
+    if (VERBOSE) for (const r of rows) lines.push(`      ${r.detail}`);
+  }
+  console.log(`  diagrams placed by a title match (listed, not failed: live changes only by publishing)   ${undecided.length}`);
+  console.log(`    decided by the section's staged draft ${decidedByDraft} · no decision staged ${open}`);
+  console.log(lines.join('\n'));
 }
 
 /*
@@ -199,12 +316,13 @@ const RUN_DIRECTLY = process.argv[1] && path.resolve(process.argv[1]) === fileUR
 
 if (RUN_DIRECTLY) {
   const all = [];
-  if (BOTH) { all.push(...run(false, 'live `data`')); all.push(...run(true, 'staged')); }
-  else all.push(...run(STAGED, STAGED ? 'staged' : 'live `data`'));
+  if (FIXTURE) all.push(...await run(false, 'fixture'));
+  else if (BOTH) { all.push(...await run(false, 'live `data`')); all.push(...await run(true, 'staged `draft`')); }
+  else all.push(...await run(STAGED, STAGED ? 'staged `draft`' : 'live `data`'));
 
   console.log('');
-  if (!all.length) console.log('no unattributed items');
-  else console.log(`${all.length} unattributed item(s)`);
+  if (!all.length) console.log('no failures');
+  else console.log(`${all.length} failure(s)`);
   console.log('');
 
   if (flag('--json')) console.log(JSON.stringify({ failures: all }, null, 1));
