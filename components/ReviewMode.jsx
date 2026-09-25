@@ -176,6 +176,15 @@ export function SpacedReview({ reviewEntry, onFinish }) {
   return (
     <div className="lm-review-container">
       <div className="lm-review-header">
+        {/*
+          * Skip, and it records nothing. Scoring happens only when a review is COMPLETED (the
+          * schedule advance and recordReview above), so leaving here does not count as a review:
+          * the topic stays due and its strength does not move. The founder, 25 Sep: "i want a
+          * clear skip button if i dont want to" — met a review between them and a new topic.
+          */}
+        <button type="button" className="lm-review-skip" onClick={onFinish}>
+          Skip review
+        </button>
         <h2 className="lm-review-title">&#128337; Spaced Review</h2>
         <p className="lm-review-subtitle">{reviewEntry.title}</p>
       </div>
@@ -335,6 +344,15 @@ export function MixedReview({ onFinish }) {
   return (
     <div className="lm-review-container">
       <div className="lm-review-header">
+        {/*
+          * Skip, and it records nothing. Scoring happens only when a review is COMPLETED (the
+          * schedule advance and recordReview above), so leaving here does not count as a review:
+          * the topic stays due and its strength does not move. The founder, 25 Sep: "i want a
+          * clear skip button if i dont want to" — met a review between them and a new topic.
+          */}
+        <button type="button" className="lm-review-skip" onClick={onFinish}>
+          Skip review
+        </button>
         <h2 className="lm-review-title">&#128256; Mixed Review</h2>
         <p className="lm-review-subtitle">Questions from multiple topics, shuffled</p>
       </div>
