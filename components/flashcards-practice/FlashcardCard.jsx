@@ -35,6 +35,9 @@ export default function FlashcardCard({ card, sectionTitle, cardNumber, totalCar
   useEffect(() => {
     function handleKeyDown(e) {
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      // Keys pressed in a dialog (the feedback card, "Report a problem") belong to it: Space or
+      // Enter on its Send button must send, not flip this card.
+      if (e.target.closest?.('[role="dialog"]')) return;
 
       // Space or Enter: flip card
       if (e.key === ' ' || e.key === 'Enter') {

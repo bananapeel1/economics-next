@@ -7646,3 +7646,157 @@ a.auth-dropdown-item:visited {
   .lm-container .lm-nav-next, .lm-container .lm-nav-complete { min-height: 44px; padding: 0 22px; justify-content: center; }
   .lm-chapter-dots { margin-top: -6px; }
 }
+
+/* ── Feedback card and "Report a problem" (fb-, rp-) ─────────────────────────────────────────
+   Tokens only, and in globals.css on purpose: `npm run contrast` reads this file and nothing else.
+   Small green text uses --accent-green-light, not --accent-green: #059669 on the dark card is
+   4.3:1, under AA at 11-14px. Filled buttons pair --accent-green-light with --bg-primary text,
+   which passes in both themes (6.3:1 light, 7.5:1 dark) where white on #059669 does not. */
+
+.fb-sr {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* The card. Bottom-right is free on every desktop route, which is the only place it appears by
+   itself (prompt-policy.js: computers only). The phone rules below serve "Send feedback", which a
+   student opens themselves: the card rises above .lm-nav and .spe-action-bar (64px + the safe area),
+   whose bottom-right corner is the Next button, and sits under the mobile header and drawer
+   (z 100/200) but over the sticky bars (z 10/30). */
+.fb-card {
+  position: fixed; right: 24px; bottom: 24px; z-index: 40;
+  width: min(360px, calc(100vw - 32px));
+  max-height: calc(100dvh - 96px); overflow-y: auto;
+  background: var(--bg-card); color: var(--text-primary);
+  border: 1px solid var(--border-primary); border-radius: 12px;
+  box-shadow: 0 12px 32px var(--shadow-dropdown);
+  padding: 16px 16px 14px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  animation: fb-in 200ms ease-out;
+}
+@media (max-width: 768px) {
+  .fb-card { left: 12px; right: 12px; width: auto; bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
+}
+@keyframes fb-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .fb-card, .rp-dialog[open] { animation: none; } }
+
+.fb-card form { display: grid; gap: 12px; }
+.fb-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.fb-eyebrow {
+  margin: 0 0 4px; font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500;
+  letter-spacing: 0.05em; text-transform: uppercase; color: var(--accent-green-light);
+}
+.fb-title { margin: 0; font-size: 15px; font-weight: 600; line-height: 1.35; color: var(--text-primary); text-wrap: balance; }
+.fb-close {
+  flex: none; width: 32px; height: 32px; margin: -4px -6px 0 0; border: 0; border-radius: 8px;
+  background: none; color: var(--text-muted); font-size: 20px; line-height: 1; cursor: pointer;
+}
+.fb-close:hover { background: var(--bg-input); color: var(--text-primary); }
+
+.fb-scale, .fb-chips, .rp-options { border: 0; margin: 0; padding: 0; min-width: 0; }
+.fb-scale-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.fb-scale-opt, .fb-chip, .rp-option { position: relative; cursor: pointer; }
+.fb-scale-opt input, .fb-chip input, .rp-option input { position: absolute; opacity: 0; pointer-events: none; }
+.fb-scale-opt span {
+  display: grid; place-items: center; min-height: 44px; border-radius: 8px;
+  border: 1px solid var(--border-primary); background: var(--bg-input);
+  font-size: 15px; font-weight: 600; color: var(--text-secondary);
+}
+.fb-scale-opt:hover span { border-color: var(--border-hover); }
+.fb-scale-opt input:checked + span {
+  background: var(--accent-green-light); border-color: var(--accent-green-light); color: var(--bg-primary);
+}
+.fb-scale-ends { display: flex; justify-content: space-between; margin-top: 6px; font-size: 12px; color: var(--text-muted); }
+
+.fb-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.fb-chip span {
+  display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border-radius: 20px;
+  border: 1px solid var(--border-primary); background: var(--bg-card);
+  font-size: 13px; color: var(--text-secondary);
+}
+.fb-chip input:checked + span { border-color: var(--accent-green-light); background: var(--green-10); color: var(--text-primary); }
+
+.fb-label { display: flex; align-items: baseline; gap: 8px; margin: 0; font-size: 13px; font-weight: 600; color: var(--text-secondary); }
+.fb-optional { font-size: 12px; font-weight: 400; color: var(--text-muted); }
+.fb-input {
+  display: block; width: 100%; min-height: 76px; resize: vertical; box-sizing: border-box;
+  margin-top: 6px; padding: 10px 12px; border-radius: 8px;
+  border: 1px solid var(--border-primary); background: var(--bg-input); color: var(--text-primary);
+  font: 16px/1.45 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif; /* 16px: iOS zooms below it */
+}
+.fb-input:focus { outline: none; border-color: var(--accent-green-light); }
+.fb-hint, .fb-fineprint { margin: 0; font-size: 12px; line-height: 1.45; color: var(--text-muted); }
+.fb-error { margin: 0; padding-left: 10px; border-left: 3px solid var(--accent-red); font-size: 13px; color: var(--text-primary); }
+
+.fb-actions, .rp-actions { display: flex; justify-content: flex-end; gap: 8px; }
+.fb-send, .fb-ghost {
+  min-height: 40px; padding: 0 16px; border-radius: 8px; cursor: pointer;
+  font: 600 14px 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.fb-send { border: 1px solid var(--accent-green-light); background: var(--accent-green-light); color: var(--bg-primary); }
+.fb-send:disabled { opacity: 0.45; cursor: default; }
+.fb-ghost { border: 1px solid var(--border-primary); background: none; color: var(--text-secondary); }
+.fb-ghost:hover { border-color: var(--border-hover); color: var(--text-primary); }
+
+.fb-close:focus-visible, .fb-send:focus-visible, .fb-ghost:focus-visible, .rp-trigger:focus-visible,
+.fb-scale-opt input:focus-visible + span, .fb-chip input:focus-visible + span, .rp-option input:focus-visible + span {
+  outline: 2px solid var(--accent-green-light); outline-offset: 2px;
+}
+@media (pointer: coarse) {
+  .fb-chip span { min-height: 44px; }
+  .fb-send, .fb-ghost, .fb-close { min-height: 44px; min-width: 44px; }
+}
+
+/* The trigger: an icon button, quiet until wanted. Its name is in aria-label and the title tooltip. */
+.rp-trigger {
+  display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; padding: 0;
+  border: 0; border-radius: 6px; background: none; cursor: pointer; color: var(--text-muted);
+}
+.rp-trigger:hover { background: var(--bg-input); color: var(--text-secondary); }
+.rp-trigger[data-reported] { color: var(--accent-green-light); }
+@media (pointer: coarse) { .rp-trigger { width: 44px; height: 44px; } }
+
+/* The sheet: a centred card on a desk, a bottom sheet on a phone. ::backdrop does not inherit
+   custom properties in older Safari, hence the fallback. */
+.rp-dialog {
+  width: min(460px, calc(100vw - 32px)); max-width: 100%; max-height: min(680px, calc(100dvh - 32px));
+  margin: auto; /* the global `* { margin: 0 }` reset removes the browser's own centring */
+  padding: 0; overflow-y: auto; box-sizing: border-box;
+  border: 1px solid var(--border-primary); border-radius: 16px;
+  background: var(--bg-card); color: var(--text-primary);
+  box-shadow: 0 24px 48px var(--shadow-dropdown);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.rp-dialog[open] { animation: fb-in 180ms ease-out; }
+.rp-dialog::backdrop { background: var(--overlay-heavy, rgba(0, 0, 0, 0.6)); }
+@media (max-width: 600px) {
+  .rp-dialog {
+    width: 100%; margin: auto 0 0; border-radius: 16px 16px 0 0; border-bottom: 0;
+    max-height: 88dvh; padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
+.rp-form, .rp-sent { display: grid; gap: 14px; padding: 20px; }
+.rp-title { margin: 0; font-size: 17px; font-weight: 600; line-height: 1.3; color: var(--text-primary); text-wrap: balance; }
+.rp-sub { margin: 4px 0 0; font-size: 13px; line-height: 1.5; color: var(--text-muted); }
+.rp-options { display: grid; gap: 6px; }
+.rp-option span {
+  display: flex; align-items: center; min-height: 44px; padding: 0 12px 0 38px; border-radius: 10px;
+  border: 1px solid var(--border-primary); font-size: 14px; color: var(--text-primary);
+}
+.rp-option span::before {
+  content: ''; position: absolute; left: 13px; top: calc(50% - 7px); width: 14px; height: 14px; border-radius: 50%;
+  border: 2px solid var(--text-muted); box-sizing: border-box; /* a control's own edge needs 3:1; --border-hover is 1.5:1 */
+}
+.rp-option:hover span { border-color: var(--border-hover); }
+.rp-option input:checked + span { border-color: var(--accent-green-light); background: var(--green-10); }
+.rp-option input:checked + span::before { border: 4px solid var(--accent-green-light); }
+.rp-field { display: grid; }
+.rp-context { font-size: 13px; color: var(--text-muted); }
+.rp-context summary { cursor: pointer; width: max-content; }
+.rp-context dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 12px; margin: 10px 0 0; }
+.rp-context dt { color: var(--text-muted); }
+.rp-context dd { margin: 0; color: var(--text-secondary); overflow-wrap: anywhere; }
+
+/* Where "Report a problem" sits under an item: its own row, pushed right, clear of the item's actions. */
+.rp-slot { display: flex; justify-content: flex-end; margin-top: 8px; }
+.sidebar-feedback { padding: 4px 0 16px; border-top: 1px dashed var(--border-primary); }

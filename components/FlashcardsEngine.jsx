@@ -1,9 +1,10 @@
 'use client';
 
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useEffect } from 'react';
 import { buildQueue, computeNextReview, createDefaultProgress } from '@/lib/spaced-repetition';
 import FlashcardCard from '@/components/flashcards-practice/FlashcardCard';
 import FlashcardSummary from '@/components/flashcards-practice/FlashcardSummary';
+import { signalMoment } from '@/lib/feedback/client';
 
 /* ─── localStorage helpers (for non-auth users) ─── */
 
@@ -280,6 +281,8 @@ function TopicStep({
 
 export default function FlashcardsEngine({ subjects, units, sections, isLoggedIn }) {
   const [phase, setPhase] = useState('setup');        // 'setup' | 'session' | 'summary'
+  // A finished session is a moment the feedback card may answer (computers only; see lib/feedback).
+  useEffect(() => { if (phase === 'summary') signalMoment('flashcards_complete', {}); }, [phase]);
   const [setupStep, setSetupStep] = useState(1);      // 1 = subject-select, 2 = topic-select
   const [selectedSubjectSlug, setSelectedSubjectSlug] = useState('');
   const [selectedSectionIds, setSelectedSectionIds] = useState(new Set());

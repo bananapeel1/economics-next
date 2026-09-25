@@ -39,6 +39,12 @@ export default async function AdminLayout({ children }) {
           }}>
             Dashboard
           </Link>
+          <Link href="/admin/inbox" style={{
+            display: 'block', padding: '8px 20px', fontSize: 13, color: '#8892a8',
+            textDecoration: 'none', transition: 'all 0.15s'
+          }}>
+            Inbox
+          </Link>
           <Link href="/admin/sections" style={{
             display: 'block', padding: '8px 20px', fontSize: 13, color: '#8892a8',
             textDecoration: 'none', transition: 'all 0.15s'
