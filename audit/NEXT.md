@@ -1,5 +1,97 @@
 # Next session brief
 
+## Packet 2.9 — the banks of the 21 unpinned live sections are pinned; 13 staged, publish is the founder's (25 September 2026, Opus 5.5)
+
+Commit `fc91372`. Picks up the handoff at the end of this file ("packet 2.8 closed"). V057-V059 are claimed;
+Verify A (a fresh Sonnet verifier, round 1) confirmed all three against the live database and an
+isolated checkout of `fc91372`; `ledger.mjs unverified 2.9` exits 0. V056 and V060 move to **packet 2.91**
+("2.10" would read as 2.1 in the ledger, whose `packet` field is a number).
+
+**THE ONE THING WAITING ON THE FOUNDER: publish the 13 staged sections.** Nothing reaches a student until then.
+Production (`main`) still places items POSITIONALLY on all 21 sections (packet 2.8 is not on main), so today a
+live student is shown questions from other chapters. Publishing these pins fixes that for 13 sections
+immediately, whatever the code does, because `main`'s pinned path resolves block `quizIndices`/`practiceIndices`
+the same way. Each publish snapshots automatically first:
+
+```
+node scripts/publish-section.mjs assessing-competitiveness business-growth decision-making-techniques global-industries-mncs global-marketing global-markets-expansion influences-business-decisions managing-change government-intervention-firms growth-development labour-markets poverty-inequality role-state-macroeconomy
+```
+
+That form only diffs. Add `--confirm` to publish. Do NOT run `--all --confirm`: that would also publish the
+held rebuilds.
+
+**What was done.**
+- **The choosing.** Four readers chose a quiz and a practice item per chapter by reading the chapter
+  (`audit/runs/packet-2.9/AUTHOR-BRIEF.md`). Two readers then judged every pin blind (`VERIFY-BRIEF.md`,
+  `verdicts/`): 88 PASS, 1 FAIL (now an empty chapter), 0 MISSED.
+- **The totals.** 51 chapters: 44 quiz pins, 7 chapters decided empty, 38 practice pins, 6 practice pins
+  withheld from guided slots.
+- **The runner.** `scripts/packet-2.9-pin-banks.mjs` applies `pins.json` and proves six things per section
+  (its header). Re-run it with no flags any time; it writes nothing.
+- **Staged.** 13 sections with no draft: 28 chapters, 23 quiz pins, 5 decided-empty chapters, 21 practice
+  pins. Snapshots are `audit/snapshots/2026-09-25-pre-packet-2.9__*`.
+- **Not staged: 8 sections (V060, open).** balance-payments-exchange-rates, business-objectives-strategy,
+  causes-effects-globalisation, globalisation, market-structures-contestability, revenue-costs-profits,
+  trade-global-economy and types-sizes-businesses each hold a whole rebuilt section in draft for the 5/7
+  checkpoint, and those rebuilds pin already. The checkpoint publish closes V060. Their live pins are in
+  `pins.json` if the checkpoint slips and a stop-gap is wanted; that needs a founder-approved direct write
+  to `data`, because `draft` is occupied.
+- **V058.** `quizIndices: []` now means "decided: no question" to the placement and the signed-out payload.
+  Without it, the V026 fallback refilled the decided-empty chapters on one title word. On
+  global-markets-expansion it put back a "push factor" question that no chapter teaches.
+- **V059.** `exposure-census.mjs` restated the pinned path (V054 had moved only the unpinned half). It now
+  composes `placeChapterItems` and reports decided chapters as DECIDED. Staged figures: 209/214 served,
+  5 DECIDED, 0 STARVED, 0 UNWRITTEN.
+- **Verify B.** global-markets-expansion at 390x844 with `?draft=1`, signed out. The chapter 1 check-in shows
+  the joint-venture question and worked example; the chapter 2 check-in shows no question, promises none,
+  and shows the chapter's own independent practice. No console errors.
+
+**For the founder's one Pro pass (a session cannot sign in).** Open `/?section=labour-markets&draft=1` signed
+in. Look at three things:
+1. Chapter 1's check-in asks the hiring rule for a profit-maximising firm and shows the derived-demand worked
+   example.
+2. Chapter 2's check-in asks the monopsony question and shows no practice item (withheld: guided slot).
+3. Chapter 3's check-in asks why surgeons out-earn retail assistants and shows the wage-differentials practice
+   as an independent attempt.
+
+**What the readers found that is not this packet's to fix** (full lists in `proposals/*.json` under
+`untaught` and `flags`):
+- **Untaught items.** 130 items across the 21 banks test something no chapter of their section teaches.
+  role-state-macroeconomy is the extreme: 10 of 12 quiz items are public finance, which neither chapter
+  teaches, and chapter 1 (public goods) has nothing to ask. Several of these are IAL content the CHAPTERS
+  are missing (competitive tendering, Lewis, capital flight), so check the spec before deleting any item.
+- **Items filed in the wrong section's bank.** global-marketing's Ansoff items are taught in
+  global-markets-expansion. The revenue-costs-profits economies-of-scale items are taught in
+  types-sizes-businesses chapter 4, whose own bank has none.
+- **Contestable keys, left unpinned.** global-marketing q2 keys Unilever sachets as Price while chapter 1
+  teaches pack size as Product. business-objectives-strategy q5 keys a minimum-wage rise as Legal (PESTLE).
+- **Content errors in chapter text.**
+  - The World Bank line "$2.15 (2022 PPP)" is mislabelled; the line has been $3.00/day since June 2025.
+  - "Rates cannot fall below zero" is false.
+  - The WTO appellate body is described as working, but it has been non-functional since 2019.
+  - A tariff welfare-loss sentence gets the accounting backwards.
+  - globalisation chapter 2 treats the UK as inside the EU.
+  - A raw `&amp;mdash;` appears in a trade quiz option.
+- **UK institutions as default.** role-state-macroeconomy (tax bands, Universal Credit, NHS) and
+  government-intervention-firms (CMA, Ofwat).
+
+**V056, still open under 2.9: diagrams.** The same wrong-chapter flaw through `matchDiagramsToBlocks`. The
+runner kept diagrams exactly where they were (check 4), so it did not fix any. Measured on the 13 staged
+sections:
+- role-state-macroeconomy chapter 1 (market failure) shows "Crowding Out in the Loanable Funds Market";
+- growth-development chapter 1 shows Harrod-Domar, while the HDI diagram is unplaced;
+- labour-markets chapter 2 teaches monopsony, while "Monopsony Labour Market" is unplaced.
+
+The fix is `diagramId` pins plus a decided-none rule for diagrams, because the diagram fallback would refill
+an emptied chapter on "market". It also needs `checkin-attribution` to judge diagrams. About half a packet.
+
+**`checkin-attribution` cannot see any of this (filed as a task).** It reads `audit/content-sections/`, the
+11 September export, as "live", and every file in `audit/snapshots/` (218 of them, historical ones included)
+as "staged". It never reads the database, so its 0 does not describe what a student is served today.
+
+**Still open from earlier: V043.** The pre-test reserves through `freeQuizPayload`, not placement. The pins
+here change which items are spare, not the rule.
+
 ## Packet 13.2 spec — six drill templates, Learn Mode and the Quiz tab (COMPLETE, 22 September 2026)
 
 Brief, build notes, three fix rounds, four verification rounds and the 390×844 walkthrough:

@@ -3197,3 +3197,30 @@ now stands.
 ## 2026-09-25 — packet 2.8: a wholly unpinned section serves no check-in question (V053)
 
 Silence over misdirection. Where a section pins nothing, no question and no worked example are placed; the title-matching fallback (V026) stays only for one unpinned chapter inside an otherwise pinned section, because only there do the other pins establish the bank is chapter-addressed. Measured reason: on 3.3.1 the fallback moved a satisficing question (chapter 1) to chapter 3 on the word `firms`. Diagrams keep `matchDiagramsToBlocks`, which has the same weakness (V056, packet 2.9). Placement lives in one function, `lib/checkin-placement.js`; a checker that re-implements it is not a checker.
+
+## 2026-09-25 — packet 2.9: a pin is chosen by reading the chapter, and an empty pin is a decision (V057, V058)
+
+**A pin is a judgement about teaching, not vocabulary.** An item is pinned to a chapter only when that chapter's
+text teaches the keyed answer: quoted, not early, and not untaught anywhere in the section. Every pin was judged
+blind by a second reader who never saw the chooser's reasoning. Sharing a word with the title counts for nothing:
+the gates in this repository all match vocabulary, and that is exactly how a horizontal-integration question
+reached a chapter on business objectives. **An empty check-in is acceptable and a wrong one is not**, so a
+chapter whose bank holds nothing it teaches gets no question.
+
+**`quizIndices: []` means "decided: no question".** It does not mean "not yet pinned". Once one chapter pins,
+the whole section is on the pinned path, and there V026's fallback fills every unpinned chapter on one shared
+title word. That is right for a chapter nobody decided about and wrong for one somebody read. So an explicit
+empty list is honoured by the placement and by the signed-out payload (`decidedNoQuestion`,
+`lib/checkin-fallback.js`), while an absent pin still falls back. Practice has no fallback, so an absent
+practice pin is already empty.
+
+**A practice pin must not land in a GUIDED slot while its opening paragraph is its mark scheme.**
+`practice.opening` is still DEBT on 160 back-catalogue items. On a 3–4 chapter section the middle check-ins are
+guided, so six pins were withheld rather than print a mark scheme above an empty answer box. They are listed in
+`audit/runs/packet-2.9/merge-proposals.mjs` and restore with one line once the founder takes the
+`getPracticeMode` fix.
+
+**Pins are by index, not id.** No block in the corpus pins by id, and `pins.range` / `pins.reuse`, `pin-check`
+and the `_content-ops` renumbering all read indices only. The one risk ids would cover — a bank that has moved
+since the pin was chosen — is checked by the runner instead: every index must still hold the id it was chosen
+for.
