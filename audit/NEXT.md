@@ -89,8 +89,11 @@ an emptied chapter on "market". It also needs `checkin-attribution` to judge dia
 11 September export, as "live", and every file in `audit/snapshots/` (218 of them, historical ones included)
 as "staged". It never reads the database, so its 0 does not describe what a student is served today.
 
-**Still open from earlier: V043.** The pre-test reserves through `freeQuizPayload`, not placement. The pins
-here change which items are spare, not the rule.
+**V043 is closed wont-fix (another session, 25 September):** its figures came from a probe that called
+`resolvePinnedItem` with the wrong arguments, so its reserved set was always empty. `LearnModeTab` hands `PreTest`
+the questions `placeChapterItems` placed, so these pins also decide what the pre-test may not ask. Evidence:
+`audit/runs/v043/verify.md`. (An earlier draft of this block repeated the packet 2.8 handoff's claim that the
+pre-test reserves through the payload; that claim is wrong.)
 
 ## Packet 13.2 spec — six drill templates, Learn Mode and the Quiz tab (COMPLETE, 22 September 2026)
 
