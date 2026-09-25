@@ -1139,7 +1139,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       }
       case 'content': return <ContentTab key={activeSection} data={sectionData.content} glossaryTerms={glossaryTerms} onStepChange={handleStepChange} initialPosition={stepperPositions.current[activeSection] || null} />;
       case 'notes': return <NotesTab data={sectionData.notes} glossaryTerms={glossaryTerms} />;
-      case 'diagrams': return <DiagramsTab data={sectionData.diagrams} />;
+      case 'diagrams': return <DiagramsTab data={sectionData.diagrams} sectionId={activeSection} />;
       case 'practice': return <PracticeQuestionsTab questions={sectionData.practice} onAskTutor={isPremium ? goToTutor : null} sectionId={activeSection} sectionNumber={currentSection?.number} unitCode={currentUnit?.code} />;
       case 'flashcards': return <FlashcardsTab cards={sectionData.flashcards} totalCount={sectionData.counts?.flashcards} sectionId={activeSection} previewMode={isPreview} />;
       /* unitCode and sectionNumber are packet 13.2's: the Quiz tab derives its calculation
