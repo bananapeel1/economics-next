@@ -182,7 +182,7 @@ export function SpacedReview({ reviewEntry, onFinish }) {
           * the topic stays due and its strength does not move. The founder, 25 Sep: "i want a
           * clear skip button if i dont want to" — met a review between them and a new topic.
           */}
-        <button type="button" className="lm-review-skip" onClick={onFinish} aria-label="Skip this review and go back">
+        <button type="button" className="lm-review-skip" onClick={onFinish}>
           Skip review
         </button>
         <h2 className="lm-review-title">&#128337; Spaced Review</h2>
@@ -350,7 +350,7 @@ export function MixedReview({ onFinish }) {
           * the topic stays due and its strength does not move. The founder, 25 Sep: "i want a
           * clear skip button if i dont want to" — met a review between them and a new topic.
           */}
-        <button type="button" className="lm-review-skip" onClick={onFinish} aria-label="Skip this mixed review and go back">
+        <button type="button" className="lm-review-skip" onClick={onFinish}>
           Skip review
         </button>
         <h2 className="lm-review-title">&#128256; Mixed Review</h2>
