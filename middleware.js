@@ -28,6 +28,31 @@ async function getSectionMap() {
   return sectionMap;
 }
 
+// Routes that render no server-side session. Refreshing the Supabase auth cookie
+// on these costs a round-trip to Supabase on every request and marks the response
+// uncacheable, so they are skipped. Anything not listed keeps the refresh.
+const PUBLIC_PREFIXES = [
+  '/business',
+  '/command-words',
+  '/contact',
+  '/data-response',
+  '/economics',
+  '/glossary',
+  '/guides',
+  '/ial-revision',
+  '/model-answers',
+  '/past-papers',
+  '/pdfs',
+  '/topic-links',
+];
+
+function isPublicRoute(pathname) {
+  if (pathname === '/') return true;
+  return PUBLIC_PREFIXES.some(
+    prefix => pathname === prefix || pathname.startsWith(`${prefix}/`)
+  );
+}
+
 export async function middleware(request) {
   const { searchParams, pathname } = request.nextUrl;
   const sectionParam = searchParams.get('section');
@@ -43,6 +68,10 @@ export async function middleware(request) {
       url.searchParams.delete('section');
       return NextResponse.redirect(url, 301);
     }
+  }
+
+  if (isPublicRoute(pathname)) {
+    return NextResponse.next();
   }
 
   return await updateSession(request);

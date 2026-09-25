@@ -240,7 +240,7 @@ export default function IALRevisionPage() {
         icon={LearnMode}
         heading={"Start revising, free"}
         sub={"Economics and Business notes, no signup required"}
-        href="/?section=introductory-concepts"
+        href="/economics/unit-1/introductory-concepts"
         cta={"Open the app"}
       />
 

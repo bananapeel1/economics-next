@@ -173,7 +173,7 @@ export default function EconomicsPage() {
               Structured around the Edexcel International A-Level specification &mdash; not the UK domestic spec &mdash; so your notes follow the units and topics of the paper you actually sit.
             </p>
             <div className="elp-hero-actions">
-              <Link href="/?section=introductory-concepts" className="elp-btn-primary">
+              <Link href="/economics/unit-1/introductory-concepts" className="elp-btn-primary">
                 Start revising free &rarr;
               </Link>
             </div>
@@ -262,7 +262,7 @@ export default function EconomicsPage() {
               <p className="elp-unit-desc">{unit.desc}</p>
               <div className="elp-topics-grid">
                 {unit.sections.map((s) => (
-                  <Link key={s.id} href={`/?section=${s.id}`} className="elp-topic-tile">
+                  <Link key={s.id} href={`/economics/unit-${unit.num}/${s.id}`} className="elp-topic-tile">
                     <div className="elp-tt-ref">{s.number}</div>
                     <div className="elp-tt-body">
                       <div className="elp-tt-name">{s.title}</div>
@@ -272,7 +272,7 @@ export default function EconomicsPage() {
                   </Link>
                 ))}
               </div>
-              <Link href={`/?section=${unit.ctaSection}`} className="elp-unit-cta">
+              <Link href={`/economics/unit-${unit.num}/${unit.ctaSection}`} className="elp-unit-cta">
                 Start revising Unit {unit.num} &rarr;
               </Link>
             </div>

@@ -3144,12 +3144,33 @@ button.sidebar-resource-link {
   cursor: pointer; font-family: inherit; transition: all 0.15s;
 }
 .lm-review-banner-mixed-btn:hover { background: rgba(245, 158, 11, 0.06); }
+/* Dismiss for today (founder, 25 Sep). 44px target, the platform minimum DECISIONS settled on. */
+.lm-review-banner-close {
+  margin-left: auto; min-width: 44px; min-height: 44px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: transparent; border: none; border-radius: 22px;
+  color: var(--accent-amber-light); font-size: 24px; line-height: 1;
+  cursor: pointer; font-family: inherit; transition: background 0.15s;
+}
+[data-theme="dark"] .lm-review-banner-close { color: #FBBF24; }
+.lm-review-banner-close:hover { background: rgba(245, 158, 11, 0.1); }
+.lm-review-banner-close:focus-visible { outline: 2px solid var(--accent-amber); outline-offset: 2px; }
 
 /* ─── Review Container (shared by Spaced + Mixed) ─── */
 .lm-review-container {
   max-width: 680px; margin: 0 auto; padding: 0 8px;
 }
 .lm-review-header { text-align: center; margin-bottom: 28px; }
+/* A review is always optional: a clear way out, top of the review, before any question. */
+.lm-review-skip {
+  display: block; margin: 0 0 14px auto; min-height: 44px; padding: 0 18px;
+  background: transparent; color: var(--text-primary);
+  border: 1.5px solid rgba(127, 127, 127, 0.4); border-radius: 22px;
+  font-size: 14px; font-weight: 600; font-family: inherit;
+  cursor: pointer; transition: background 0.15s;
+}
+.lm-review-skip:hover { background: rgba(127, 127, 127, 0.1); }
+.lm-review-skip:focus-visible { outline: 2px solid var(--accent-amber); outline-offset: 2px; }
 .lm-review-title {
   font-size: 24px; font-weight: 800;
   color: var(--text-primary); letter-spacing: -0.5px;

@@ -25,6 +25,86 @@ export async function generateMetadata({ params }) {
   };
 }
 
+// Section prose carries `[label](/path)` links so concepts can point at the topic
+// page that teaches them. Only site-relative paths are accepted — an external
+// href simply will not match, so nothing in the data can emit an outbound link.
+const INLINE_LINK = /\[([^\]]+)\]\((\/[^)\s]*)\)/g;
+
+function renderProse(text) {
+  const out = [];
+  let cursor = 0;
+  for (const match of text.matchAll(INLINE_LINK)) {
+    if (match.index > cursor) out.push(text.slice(cursor, match.index));
+    out.push(
+      <Link key={match.index} href={match[2]} className="guide-inline-link">
+        {match[1]}
+      </Link>
+    );
+    cursor = match.index + match[0].length;
+  }
+  if (cursor < text.length) out.push(text.slice(cursor));
+  return out;
+}
+
+function StatRow({ stats }) {
+  return (
+    <div className="guide-stats">
+      {stats.map((stat, i) => (
+        <div key={i} className="guide-stat">
+          <b>{stat.value}</b>
+          <span>{stat.label}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/**
+ * How a paper's 80 marks divide, drawn to scale.
+ *
+ * The most useful fact on the Economics guide is that the source booklet
+ * outweighs the essays, and it was buried in a table cell. One scale across all
+ * four bars, so the comparison is the thing you see rather than something you
+ * work out.
+ */
+function MarksChart({ chart }) {
+  return (
+    <figure className="guide-marks">
+      <div className="guide-marks-legend">
+        {chart.legend.map((item, i) => (
+          <span key={i} className="guide-marks-key">
+            <i className={`guide-marks-swatch s${item.key}`} aria-hidden="true" />
+            {item.name}
+          </span>
+        ))}
+      </div>
+      {chart.units.map((unit, i) => (
+        <div key={i} className="guide-marks-row">
+          <div className="guide-marks-name">{unit.label}</div>
+          <div className="guide-marks-bar">
+            {unit.segments.map((seg, j) => (
+              <div
+                key={j}
+                className={`guide-marks-seg s${seg.key}`}
+                style={{ width: `${(seg.marks / chart.total) * 100}%` }}
+              >
+                <span>{seg.marks}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+      {chart.caption && <figcaption>{chart.caption}</figcaption>}
+    </figure>
+  );
+}
+
+function formatDate(iso) {
+  return new Date(`${iso}T00:00:00Z`).toLocaleDateString('en-GB', {
+    day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
+  });
+}
+
 export default async function GuidePage({ params }) {
   const { slug } = await params;
   const guide = guidesData.find(g => g.slug === slug);
@@ -50,6 +130,8 @@ export default async function GuidePage({ params }) {
     'learningResourceType': 'Study Guide',
     'inLanguage': 'en-GB',
     'isAccessibleForFree': true,
+    ...(guide.published ? { 'datePublished': guide.published } : {}),
+    ...(guide.updated ? { 'dateModified': guide.updated } : {}),
     'provider': {
       '@type': 'EducationalOrganization',
       'name': 'Revvy Learn',
@@ -57,60 +139,53 @@ export default async function GuidePage({ params }) {
     },
   };
 
-  const faqLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: guide.sections.slice(0, 4).map(section => ({
-      '@type': 'Question',
-      name: section.heading.endsWith('?') ? section.heading : `What is ${section.heading.toLowerCase()} in A-Level ${guide.subject === 'economics' ? 'Economics' : 'Business'}?`,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: section.content.slice(0, 300),
-      },
-    })),
-  };
-
   return (
     <div className="resource-page rl-night">
       <SiteHeader crumb="Guides" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
 
+      <div className="guide-shell">
       <div className="resource-page-header">
         <Link href="/guides" className="resource-back-link">&larr; All Guides</Link>
         <span className="seo-unit-badge">{guide.subject === 'economics' ? 'Economics' : 'Business'} Guide</span>
         <h1 className="resource-page-title">{guide.title}</h1>
         <p className="resource-page-subtitle">{guide.heroSubtitle}</p>
+        {guide.updated && (
+          <p className="guide-updated">
+            Updated <time dateTime={guide.updated}>{formatDate(guide.updated)}</time>
+          </p>
+        )}
       </div>
 
       {/* Hero CTA */}
-      <div className="seo-hero-cta">
-        <div className="seo-hero-cta-content">
-          <div className="seo-hero-cta-text">
-            <span className="seo-hero-cta-label">Interactive Revision</span>
-            <p>Flashcards, quizzes, AI tutor &amp; progress tracking for this topic</p>
+      {guide.heroCta && (
+        <div className="seo-hero-cta">
+          <div className="seo-hero-cta-content">
+            <div className="seo-hero-cta-text">
+              <p>{guide.heroCta.blurb}</p>
+            </div>
+            <Link href={guide.heroCta.href} className="seo-hero-cta-button">
+              {guide.heroCta.label} &rarr;
+            </Link>
           </div>
-          <Link href={`/${guide.subject}`} className="seo-hero-cta-button">
-            Open in App &rarr;
-          </Link>
         </div>
-      </div>
+      )}
 
       {/* Table of contents */}
-      <nav style={{ marginBottom: '32px', padding: '20px', background: 'var(--card-bg, #1a1a2e)', borderRadius: '8px', border: '1px solid var(--border, #2a2a3e)' }}>
-        <div style={{ fontWeight: 600, marginBottom: '12px', color: 'var(--text-primary, #fff)' }}>In this guide:</div>
-        <ol style={{ paddingLeft: '20px', margin: 0 }}>
+      <div className="guide-layout">
+      <nav className="guide-toc" aria-label="In this guide">
+        <div className="guide-toc-title">In this guide:</div>
+        <ol>
           {guide.sections.map((section, i) => (
-            <li key={i} style={{ marginBottom: '6px' }}>
-              <a href={`#section-${i}`} style={{ color: 'var(--text-secondary, #bbb)', textDecoration: 'none' }}>
-                {section.heading}
-              </a>
+            <li key={i}>
+              <a href={`#section-${i}`}>{section.heading}</a>
             </li>
           ))}
         </ol>
       </nav>
 
+      <div className="guide-main">
       {/* Guide content */}
       <div className="seo-stepper">
         {guide.sections.map((section, i) => (
@@ -121,7 +196,47 @@ export default async function GuidePage({ params }) {
             </div>
             <div className="seo-stepper-body">
               <h2>{section.heading}</h2>
-              <p style={{ lineHeight: 1.7, color: 'var(--text-secondary, #ccc)' }}>{section.content}</p>
+              <p>{renderProse(section.content)}</p>
+              {section.stats && <StatRow stats={section.stats} />}
+              {section.marksChart && <MarksChart chart={section.marksChart} />}
+              {section.list && (
+                <ul className="guide-list">
+                  {section.list.map((item, j) => (
+                    <li key={j}>{renderProse(item)}</li>
+                  ))}
+                </ul>
+              )}
+              {section.table && (
+                <div className="guide-table-wrap">
+                  <table className="guide-table">
+                    {section.table.caption && <caption>{section.table.caption}</caption>}
+                    <thead>
+                      <tr>
+                        {section.table.head.map((cell, j) => (
+                          <th key={j} scope="col">{cell}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {section.table.rows.map((row, j) => (
+                        <tr key={j}>
+                          {row.map((cell, k) => (
+                            k === 0
+                              ? <th key={k} scope="row">{renderProse(cell)}</th>
+                              : <td key={k}>{renderProse(cell)}</td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+              {section.cta && (
+                <Link href={section.cta.href} className="guide-inline-cta">
+                  {section.cta.label}
+                  <span aria-hidden="true">&rarr;</span>
+                </Link>
+              )}
             </div>
           </div>
         ))}
@@ -129,7 +244,7 @@ export default async function GuidePage({ params }) {
 
       {/* Related topics */}
       {guide.relatedTopics && guide.relatedTopics.length > 0 && (
-        <div className="seo-related-links" style={{ marginTop: '32px' }}>
+        <div className="seo-related-links">
           <h2>Related Topics</h2>
           <div className="seo-links-grid">
             {guide.relatedTopics.map((topic, i) => (
@@ -140,10 +255,17 @@ export default async function GuidePage({ params }) {
       )}
 
       {/* CTA */}
-      <div className="seo-cta" style={{ marginTop: '32px' }}>
-        <h2>Master This Topic Interactively</h2>
-        <p>Use flashcards, quizzes and the AI tutor to nail your understanding.</p>
-        <Link href={`/${guide.subject}`} className="seo-cta-button">Start Revising &rarr;</Link>
+      {guide.closingCta && (
+        <div className="seo-cta">
+          <h2>{guide.closingCta.heading}</h2>
+          <p>{guide.closingCta.blurb}</p>
+          <Link href={guide.closingCta.href} className="seo-cta-button">
+            {guide.closingCta.label} &rarr;
+          </Link>
+        </div>
+      )}
+      </div>
+      </div>
       </div>
     </div>
   );

@@ -6,12 +6,12 @@ import LandingScrollBar from '@/components/LandingScrollBar';
 import '@/styles/landing.css';
 
 export const metadata = {
-  title: 'Edexcel IAL Business Revision Guide | Revvy Learn',
-  description: 'Free in-depth revision guide for Edexcel IAL Business, plus free Economics notes on market failure, macroeconomic objectives, globalisation and more.',
+  title: 'Edexcel IAL Revision Guides — Economics & Business | Revvy Learn',
+  description: 'Revision guides for Edexcel IAL Economics (WEC11-WEC14) and Business (WBS11-WBS14): how each paper is built, what every command word asks for, and where the marks are.',
   alternates: { canonical: 'https://revvylearn.com/guides' },
   openGraph: {
-    title: 'Edexcel IAL Business Revision Guide | Revvy Learn',
-    description: 'Free in-depth revision guide for Edexcel IAL Business, plus free Economics and Business topic notes.',
+    title: 'Edexcel IAL Revision Guides — Economics & Business | Revvy Learn',
+    description: 'Revision guides for Edexcel IAL Economics and Business — paper structure, command words and the marks most often lost.',
     url: 'https://revvylearn.com/guides',
   },
 };
@@ -115,7 +115,7 @@ export default function GuidesIndexPage() {
           <h2 className="elp-cta-title">Start revising interactively</h2>
           <p className="elp-cta-sub">Use flashcards, quizzes and the AI tutor alongside these guides.</p>
           <div className="elp-cta-actions">
-            <Link href="/?section=introductory-concepts" className="elp-btn-primary" style={{ fontSize: '15px', padding: '14px 30px' }}>Open Revvy Learn &rarr;</Link>
+            <Link href="/economics/unit-1/introductory-concepts" className="elp-btn-primary" style={{ fontSize: '15px', padding: '14px 30px' }}>Open Revvy Learn &rarr;</Link>
           </div>
         </div>
       </div>

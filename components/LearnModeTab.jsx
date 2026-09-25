@@ -235,16 +235,6 @@ export default function LearnModeTab({
   const deckVersion = useMemo(() => contentVersion(contentData), [contentData]);
   const pointer = resolvePointer(savedPointer, deckVersion, totalSteps, { versionSince: contentVersionSince });
   const isRebuilt = pointer.stale;
-  // Measured, because "how many students met a rebuilt topic, and what did they choose" is the
-  // only way to know whether this notice is the right trade at the next publish.
-  const rebuiltSeen = useRef('');
-  useEffect(() => {
-    if (!isRebuilt || !deckVersion) return;
-    const mark = `${sectionId}:${deckVersion}`;
-    if (rebuiltSeen.current === mark) return;
-    rebuiltSeen.current = mark;
-    trackFunnel('rebuilt_shown', { sectionId, step: pointer.step, totalSteps, staleStep: pointer.staleStep });
-  }, [isRebuilt, deckVersion, sectionId, totalSteps, pointer.step, pointer.staleStep]);
   // F026: a saved pointer from an older step model, or from another section, must not render as
   // "Step 9 of 5". Clamp for rendering, and write the clamped value back so persistence agrees.
   const safeStep = isRebuilt ? pointer.step : clampStep(currentStep, totalSteps);
@@ -402,7 +392,7 @@ export default function LearnModeTab({
    * rather than reinterpreting it, so the notice does not come back.
    */
   const restartRebuilt = useCallback(() => {
-    trackFunnel('rebuilt_restart', { sectionId, step: 0, totalSteps });
+    trackFunnel('rebuilt_auto_restart', { sectionId, step: 0, totalSteps, staleStep: pointer.staleStep });
     /*
      * BOTH records, not just the local one. Writing only the local pointer left a signed-in
      * student's old-deck row ({furthest_step:13, total_steps:14}) untouched; `savedPointer` is
@@ -415,14 +405,53 @@ export default function LearnModeTab({
     onPersistStep?.(0, totalSteps);
     onStepChange(0, deckVersion);
     scrollToTop(true);
-  }, [sectionId, totalSteps, onPersistStep, onStepChange, deckVersion, scrollToTop]);
-  const skipToEndRebuilt = useCallback(() => {
-    if (!totalSteps) return;
-    trackFunnel('rebuilt_jump_end', { sectionId, step: totalSteps - 1, totalSteps });
-    onPersistStep?.(totalSteps - 1, totalSteps);
-    onStepChange(totalSteps - 1, deckVersion);
-    scrollToTop(true);
-  }, [sectionId, totalSteps, onPersistStep, onStepChange, deckVersion, scrollToTop]);
+  }, [sectionId, totalSteps, onPersistStep, onStepChange, deckVersion, scrollToTop, pointer.staleStep]);
+  /*
+   * The founder, 25 September: "don't show this. make sure it never appears" — the V038 notice
+   * ("This topic has been rebuilt … Start again, or jump to the end"). It was about to meet every
+   * returning student at once: the checkpoint publish rebuilt 27 sections the same day.
+   *
+   * So a stale pointer now does, silently, what "Start again" did: it writes step 0 against THIS
+   * deck to both records (restartRebuilt's own reasoning, above, for why both) so the stale state
+   * cannot recur, and the student simply opens the rebuilt topic at its start. Nothing about their
+   * progress is claimed or lost that the notice was preserving — the old index "means nothing in
+   * this deck", which is why the notice never offered a Continue. Completion is a separate record
+   * (readLocalState().completed) and is untouched, so a student who had finished still sees it.
+   *
+   * "Jump to the end" is gone with the notice. It existed for a student who had finished; that
+   * student's completion already survives, so the only thing it did was move their step pointer.
+   *
+   * Guarded on `deckVersion`: `resolvePointer` refuses to call a pointer stale before the deck's
+   * version evidence has arrived (V038 round 4), so `isRebuilt` cannot fire on a half-loaded page,
+   * and the mark makes this run once per section per deck.
+   */
+  /*
+   * The review banner can be dismissed — the founder, 25 Sep: "add an x so users can remove it if
+   * they dont want it". For the rest of the day, not forever: a due review is still worth a nudge
+   * tomorrow, and the reviews themselves stay due and reachable from the progress screens.
+   * Read after mount rather than in the initialiser, so the server render (which has no storage)
+   * and the first client render agree; storage can throw in a private window, hence try/catch.
+   */
+  const REVIEW_BANNER_KEY = 'revvy-review-banner-dismissed';
+  const today = () => new Date().toISOString().slice(0, 10);
+  const [reviewBannerDismissed, setReviewBannerDismissed] = useState(false);
+  useEffect(() => {
+    try { setReviewBannerDismissed(localStorage.getItem(REVIEW_BANNER_KEY) === today()); } catch { /* no storage */ }
+  }, []);
+  const dismissReviewBanner = useCallback(() => {
+    setReviewBannerDismissed(true);
+    try { localStorage.setItem(REVIEW_BANNER_KEY, today()); } catch { /* no storage */ }
+    trackFunnel('review_banner_dismissed', { sectionId, dueReviews });
+  }, [sectionId, dueReviews]);
+
+  const autoRestarted = useRef('');
+  useEffect(() => {
+    if (!isRebuilt || !deckVersion) return;
+    const mark = `${sectionId}:${deckVersion}`;
+    if (autoRestarted.current === mark) return;
+    autoRestarted.current = mark;
+    restartRebuilt();
+  }, [isRebuilt, deckVersion, sectionId, restartRebuilt]);
 
   /* F045: keyboard navigation read state through a stale closure and stayed live on the pre-test
      and completion screens, so an arrow key could skip the test or desync the counter. It reads
@@ -615,35 +644,14 @@ export default function LearnModeTab({
   return (
     <div className="lm-container" ref={containerRef}>
       {/* Review banner */}
-      {dueReviews > 0 && onStartReview && (
+      {dueReviews > 0 && onStartReview && !reviewBannerDismissed && (
         <div className="lm-review-banner">
           <span className="lm-review-banner-icon">&#128337;</span>
           <span className="lm-review-banner-text">{dueReviews} review{dueReviews !== 1 ? 's' : ''} due</span>
           <button className="lm-review-banner-btn" onClick={onStartReview}>Review now</button>
           {onStartMixedReview && <button className="lm-review-banner-mixed-btn" onClick={onStartMixedReview}>Mixed review</button>}
-        </div>
-      )}
-
-      {/*
-        * V038 — the rebuilt notice.
-        *
-        * It takes the resume banner's place, never sits beside it, because they say opposite
-        * things about the same pointer. Two ways out and no third: there is no "continue", because
-        * there is nothing honest to continue to — the old step index means nothing in this deck.
-        */}
-      {isRebuilt && (
-        <div className="lm-rebuilt-banner" role="status">
-          <div className="lm-rebuilt-body">
-            <span className="lm-rebuilt-title">This topic has been rebuilt</span>
-            <span className="lm-rebuilt-text">
-              It now has {totalSteps} steps, and your saved place was in an earlier version, so it no
-              longer points anywhere. Start again, or jump to the end if you had finished.
-            </span>
-          </div>
-          <div className="lm-rebuilt-actions">
-            <button className="lm-rebuilt-restart" onClick={restartRebuilt}>Start again</button>
-            <button className="lm-rebuilt-end" onClick={skipToEndRebuilt}>Jump to the end</button>
-          </div>
+          <button type="button" className="lm-review-banner-close" onClick={dismissReviewBanner}
+            aria-label="Hide the reviews reminder for today">&times;</button>
         </div>
       )}
 

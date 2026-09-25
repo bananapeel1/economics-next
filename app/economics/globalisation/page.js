@@ -1,6 +1,7 @@
-import { createServerClient } from '@/lib/supabase-server';
+import { createAnonClient } from '@/lib/supabase-anon';
 import Link from 'next/link';
 import SiteHeader from '@/components/SiteHeader';
+import TopicCta from '@/components/TopicCta';
 import BackToApp from '@/components/BackToApp';
 import { BoltIcon, BookAlt, CardsIcon, ChartHistogram, Clipboard, DrawerAlt, LearnMode, NetworkGraph, Star, Tutor } from '@/components/Icons';
 import UnitScrollBar from '../UnitScrollBar';
@@ -162,7 +163,7 @@ const KEY_CONCEPTS = [
 ];
 
 export default async function GlobalisationPillarPage() {
-  const supabase = createServerClient();
+  const supabase = createAnonClient();
 
   const [{ data: notes }, { data: practice }] = await Promise.all([
     supabase.from('section_notes').select('data').eq('section_id', 'causes-effects-globalisation').single(),
@@ -246,7 +247,7 @@ export default async function GlobalisationPillarPage() {
             <h1 className="elp-hero-title">Globalisation &mdash;<br /><em style={{ color: 'var(--eup-accent)' }}>causes, effects, evaluation</em></h1>
             <p className="elp-hero-desc">The complete Edexcel IAL Economics guide to globalisation. Causes, effects on developed and developing countries, the role of transnational corporations (TNCs) and a full evaluation framework for WEC14.</p>
             <div className="elp-hero-actions">
-              <Link href="/economics/unit-4/causes-effects-globalisation" className="elp-btn-primary">Open in app &rarr;</Link>
+              <TopicCta slot="hero" href="/economics/unit-4/causes-effects-globalisation" topic="globalisation" />
               <a href="#causes" className="elp-btn-secondary">Jump to causes</a>
             </div>
             <div className="elp-hero-proof">
@@ -436,7 +437,7 @@ export default async function GlobalisationPillarPage() {
                 </div>
               ))}
             </div>
-            <Link href="/economics/unit-4/causes-effects-globalisation" className="eup-topic-open-link" style={{ marginTop: 16, display: 'inline-block' }}>Open all notes interactively &rarr;</Link>
+            <TopicCta slot="afterNotes" href="/economics/unit-4/causes-effects-globalisation" topic="globalisation" />
           </div>
         </div>
       )}
@@ -558,7 +559,7 @@ export default async function GlobalisationPillarPage() {
           <h2 className="elp-cta-title">Ready to master globalisation?</h2>
           <p className="elp-cta-sub">Free notes across all four units. Flashcards, quizzes and AI tutor unlock with Pro — £1 for your first month as a new subscriber.</p>
           <div className="elp-cta-actions">
-            <Link href="/economics/unit-4/causes-effects-globalisation" className="elp-btn-primary" style={{ fontSize: 15, padding: '14px 30px' }}>Open in app &mdash; it&apos;s free &rarr;</Link>
+            <TopicCta slot="closing" href="/economics/unit-4/causes-effects-globalisation" topic="globalisation" />
             <Link href="/economics/unit-4" className="elp-btn-secondary">&larr; Back to Unit 4</Link>
           </div>
           <p className="elp-cta-note">No signup required for notes &middot; Cancel anytime &middot; &pound;1 first month for new subscribers, then &pound;1.99 &middot; charged in your local currency</p>
@@ -571,9 +572,9 @@ export default async function GlobalisationPillarPage() {
 
         heading={"Revise globalisation in the app"}
 
-        sub={"Diagrams, flashcards and exam-style practice on this exact topic"}
+        sub={"Diagrams and exam-style practice on this exact topic — free"}
 
-        href="/?section=causes-effects-globalisation"
+        href="/economics/unit-4/causes-effects-globalisation"
 
         cta={"Open 4.3.1"}
 

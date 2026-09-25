@@ -81,6 +81,12 @@ export default async function AdminLayout({ children }) {
           }}>
             Quant drills
           </Link>
+          <Link href="/admin/diagram-drills" style={{
+            display: 'block', padding: '8px 20px', fontSize: 13, color: '#8892a8',
+            textDecoration: 'none', transition: 'all 0.15s'
+          }}>
+            Drawing drills
+          </Link>
           <Link href="/admin/widgets" style={{
             display: 'block', padding: '8px 20px', fontSize: 13, color: '#8892a8',
             textDecoration: 'none', transition: 'all 0.15s'
