@@ -1,0 +1,22 @@
+{
+  "note": "Packet 2.91, V056: the diagram defect that shipped on types-sizes-businesses (3.3.1), in the smallest shape that reproduces it. 'Types of Business Growth (Integration)' shares `types` and `business` with chapter 1 and only `growth` with chapter 2, the chapter that teaches integration, so matchDiagramsToBlocks puts it under chapter 1. The chapters pin their questions, so the section is on the pinned path and the diagram arrives by the title fallback. Every word test passes it; the guard must FAIL it as placed by a title match, not by a pin. The pinned twin is diagram-pinned.json.",
+  "sections": [
+    {
+      "slug": "fixture-undecided-diagram",
+      "content": [
+        { "id": "b1", "title": "Types of Business Organisation", "quizIndices": [0],
+          "sections": [{ "id": "s1", "title": "Sole traders and partnerships", "keyIdea": "x", "body": [{ "type": "paragraph", "text": "x" }] }] },
+        { "id": "b2", "title": "Growth of Firms", "quizIndices": [1],
+          "sections": [{ "id": "s2", "title": "Horizontal and vertical integration", "keyIdea": "x", "body": [{ "type": "paragraph", "text": "x" }] }] }
+      ],
+      "quiz": [
+        { "id": "q0", "question": "Which type of business organisation has unlimited liability?" },
+        { "id": "q1", "question": "A firm that acquires one of its suppliers is growing by:" }
+      ],
+      "practice": [],
+      "diagrams": [
+        { "id": "d-integration", "title": "Types of Business Growth (Integration)" }
+      ]
+    }
+  ]
+}

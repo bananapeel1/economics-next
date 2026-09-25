@@ -1,0 +1,188 @@
+{
+  "government-intervention-firms": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "Competition Policy",
+        "taught": [],
+        "best": null,
+        "why": "Chapter covers CMA merger control (SLC test), cartels, and abuse of dominant position — it never discusses price caps, monopsony minimum wages, or privatisation/deregulation, so none of the section's three diagrams are taught here."
+      },
+      {
+        "block": 1,
+        "title": "Regulation of Monopoly",
+        "taught": [
+          {
+            "id": "government-intervention-firms:diagram:486972de",
+            "evidence": "\"Price cap regulation (RPI–X) limits the maximum annual price increase to the rate of inflation (RPI) minus an efficiency factor (X)... To maintain or grow profits, the firm must cut costs by at least X% per year\" directly teaches the RPI-X price-cap mechanism the diagram draws (Pm→Preg, Qm→Qreg)."
+          }
+        ],
+        "best": "government-intervention-firms:diagram:486972de",
+        "why": "It is the only diagram this chapter actually teaches, and the entire first subsection is built around explaining RPI-X."
+      },
+      {
+        "block": 2,
+        "title": "Government Failure and Minimum Wages",
+        "taught": [
+          {
+            "id": "government-intervention-firms:diagram:729684bb",
+            "evidence": "\"A minimum wage set between the monopsony wage and the competitive wage eliminates the firm's incentive to restrict hiring. The wage floor acts like a perfectly elastic labour supply curve up to a point, so the firm hires more workers at the mandated wage\" matches the diagram's flattened-MCL, wage-and-employment-both-rise mechanism."
+          }
+        ],
+        "best": "government-intervention-firms:diagram:729684bb",
+        "why": "It is the only diagram taught in this chapter and is explicitly the chapter's central policy conclusion (see the KEY IDEA and TAKEAWAY)."
+      }
+    ],
+    "taughtNowhere": [
+      "government-intervention-firms:diagram:7cae2be1"
+    ]
+  },
+  "growth-development": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "Growth vs Development",
+        "taught": [
+          {
+            "id": "growth-development:diagram:338ee613",
+            "evidence": "\"The Human Development Index (HDI) combines three dimensions: life expectancy at birth, mean and expected years of schooling, and GNI per capita (PPP)\" — exactly the three components (health, education, income) the diagram shows."
+          },
+          {
+            "id": "growth-development:diagram:c0dabfa0",
+            "evidence": "\"investment requires savings... Without investment, capital stock does not grow, productivity stagnates, and incomes remain low\" plus the chapter's own FLOW (\"Low income means low savings -> Low savings means low investment -> Low investment means low productivity growth -> Low productivity keeps incomes low\") teaches the Harrod-Domar circular savings-investment-capital-growth relationship."
+          },
+          {
+            "id": "growth-development:diagram:3ba0c914",
+            "evidence": "\"long-term declining terms of trade (the Prebisch-Singer hypothesis). When copper or coffee prices crash, government revenues collapse\" explains the declining-terms-of-trade mechanism the diagram depicts, not just naming it."
+          }
+        ],
+        "best": "growth-development:diagram:338ee613",
+        "why": "HDI is introduced in the subsection that mirrors the chapter's own growth-vs-development framing and is the chapter's headline measurement tool for 'development'."
+      },
+      {
+        "block": 1,
+        "title": "Development Strategies",
+        "taught": [
+          {
+            "id": "growth-development:diagram:ae61e29a",
+            "evidence": "The chapter is structured as \"Market-Led Strategies\" (trade liberalisation, FDI, SAPs, microfinance) versus \"Interventionist Strategies\" (ISI, state investment, buffer stocks, aid), explicitly weighing trade-offs — precisely what the diagram compares."
+          }
+        ],
+        "best": "growth-development:diagram:ae61e29a",
+        "why": "It is the only diagram taught here and is a one-to-one match with the chapter's two-part structure."
+      },
+      {
+        "block": 2,
+        "title": "Sustainability",
+        "taught": [],
+        "best": null,
+        "why": "Covers Brundtland sustainable development, the Environmental Kuznets Curve, and green growth/Paris Agreement — none of which is one of this section's five listed diagrams."
+      }
+    ],
+    "taughtNowhere": [
+      "growth-development:diagram:2bef8cb5"
+    ]
+  },
+  "labour-markets": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "Demand and Supply of Labour",
+        "taught": [],
+        "best": null,
+        "why": "Teaches the MRP demand curve and the backward-bending supply curve as separate concepts, but never combines them into a market equilibrium (that combination is explicit only in Chapter 2), and does not touch monopsony or wage differentials/immobility."
+      },
+      {
+        "block": 1,
+        "title": "Wage Determination",
+        "taught": [
+          {
+            "id": "labour-markets:diagram:40143342",
+            "evidence": "\"the equilibrium wage is determined where demand for labour (DL = MRP) equals supply of labour (SL)\" plus the FLOW on immigration shifting the supply curve and changing the equilibrium wage/employment matches the diagram, including 'effects of a shift'."
+          },
+          {
+            "id": "labour-markets:diagram:e2d91263",
+            "evidence": "\"the marginal cost of labour (MCL) lies above the supply curve... hires where MCL = MRP, but pays the wage... from the supply curve... a national minimum wage set between the monopsony wage and the competitive wage can increase both wages AND employment\" matches the monopsony diagram including its minimum-wage effect."
+          }
+        ],
+        "best": "labour-markets:diagram:e2d91263",
+        "why": "The chapter's own TAKEAWAY flags the monopsony-plus-minimum-wage result as 'a key evaluation point', making it the more exam-critical of the two diagrams taught here."
+      },
+      {
+        "block": 2,
+        "title": "Trade Unions and Wage Differentials",
+        "taught": [
+          {
+            "id": "labour-markets:diagram:488e9c65",
+            "evidence": "\"Barriers to entry protect high wages in certain professions... Labour immobility prevents wage differentials from being competed away. Geographical immobility... Occupational immobility...\" matches comparing a restricted-supply high-skill market against an elastic-supply low-skill market, with immobility blocking equalisation."
+          }
+        ],
+        "best": "labour-markets:diagram:488e9c65",
+        "why": "It is the only diagram this chapter teaches (the union/monopsony discussion here is about bilateral monopoly and countervailing power, a different mechanism from the minimum-wage-in-monopsony diagram already taught in Chapter 2)."
+      }
+    ],
+    "taughtNowhere": []
+  },
+  "poverty-inequality": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "Types of Poverty",
+        "taught": [
+          {
+            "id": "poverty-inequality:diagram:7e2fb2ae",
+            "evidence": "\"Absolute poverty is defined as an income level below which a person cannot meet basic needs... Relative poverty is defined in relation to the living standards of the rest of society — typically below 60% of median household income... The two measures can move in opposite directions\" matches the fixed-threshold-vs-median-tracking-threshold comparison the diagram shows."
+          },
+          {
+            "id": "poverty-inequality:diagram:8b62cca0",
+            "evidence": "\"The Lorenz curve... plots the cumulative percentage of the population... against the cumulative percentage of income... The Gini coefficient... equals the area between the line of equality and the Lorenz curve (area A) divided by the total area under the line of equality (A+B)\" is a direct, explicit description of the diagram."
+          }
+        ],
+        "best": "poverty-inequality:diagram:8b62cca0",
+        "why": "It is the more technical, calculation-based diagram (constructing the curve and computing A/(A+B)) and benefits most from visual reinforcement for exam recall."
+      },
+      {
+        "block": 1,
+        "title": "Causes and Consequences",
+        "taught": [],
+        "best": null,
+        "why": "Covers causes of inequality (wage differentials, wealth concentration, globalisation, tax policy) and consequences/redistribution (Laffer curve, poverty traps) but does not revisit the Lorenz/Gini or poverty-threshold diagrams, and never describes an inequality-vs-development inverted-U relationship."
+      }
+    ],
+    "taughtNowhere": [
+      "poverty-inequality:diagram:1d2f3dd1"
+    ]
+  },
+  "role-state-macroeconomy": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "Market Failure and the State",
+        "taught": [],
+        "best": null,
+        "why": "Covers public goods and goods with external benefits only — no mention of tax rates, government borrowing, deficits, interest rates in a loanable-funds context, or AD/AS; sharing the word 'market' with the loanable-funds diagram is not the same as teaching it."
+      },
+      {
+        "block": 1,
+        "title": "Macroeconomic Policy",
+        "taught": [
+          {
+            "id": "role-state-macroeconomy:diagram:e06d515a",
+            "evidence": "\"Expansionary fiscal policy (raising G or cutting T)... shifts AD right... [monetary policy] shift AD right... Supply-side policies aim to shift LRAS right\" explicitly teaches each policy lever shifting the correct curve, matching the combined demand-side/supply-side AD/AS diagram."
+          },
+          {
+            "id": "role-state-macroeconomy:diagram:b86db06e",
+            "evidence": "\"The Laffer curve formalises this: beyond a certain tax rate, total revenue actually falls because economic activity declines\" teaches the tax-rate-vs-revenue relationship the diagram draws."
+          }
+        ],
+        "best": "role-state-macroeconomy:diagram:e06d515a",
+        "why": "It maps onto the larger, more central first subsection covering all three policy levers (fiscal, monetary, supply-side), which is the chapter's main subject; the Laffer curve is a narrower point within the second subsection."
+      }
+    ],
+    "taughtNowhere": [
+      "role-state-macroeconomy:diagram:f2161d44",
+      "role-state-macroeconomy:diagram:e67d4f90",
+      "role-state-macroeconomy:diagram:6285bdc1"
+    ]
+  }
+}

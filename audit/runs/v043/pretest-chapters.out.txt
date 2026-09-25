@@ -1,0 +1,74 @@
+(node:22552) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/preview-limits.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[diagrams] pin "Aggregate Demand Curve" matched no diagram. Available: The AD Curve | The Multiplier Effect | Circular Flow of Income with AD Components
+[diagrams] pin "Shifts in Aggregate Demand" matched no diagram. Available: The AD Curve | The Multiplier Effect | Circular Flow of Income with AD Components
+[diagrams] pin "Aggregate Demand Curve" matched no diagram. Available: The AD Curve | The Multiplier Effect | Circular Flow of Income with AD Components
+[diagrams] pin "Shifts in Aggregate Demand" matched no diagram. Available: The AD Curve | The Multiplier Effect | Circular Flow of Income with AD Components
+[diagrams] pin "AD/AS Shifts" matched no diagram. Available: Short-Run Aggregate Supply (SRAS) | LRAS: Classical vs Keynesian | AD/AS Equilibrium: Multiple Scenarios
+[diagrams] pin "Self-Correcting Mechanism" matched no diagram. Available: Short-Run Aggregate Supply (SRAS) | LRAS: Classical vs Keynesian | AD/AS Equilibrium: Multiple Scenarios
+[diagrams] pin "AD/AS Shifts" matched no diagram. Available: Short-Run Aggregate Supply (SRAS) | LRAS: Classical vs Keynesian | AD/AS Equilibrium: Multiple Scenarios
+[diagrams] pin "Self-Correcting Mechanism" matched no diagram. Available: Short-Run Aggregate Supply (SRAS) | LRAS: Classical vs Keynesian | AD/AS Equilibrium: Multiple Scenarios
+[diagrams] pin "ad-as-growth" matched no diagram. Available: The Business (Trade) Cycle | Output Gap Diagram | PPF: Actual vs Potential Growth
+[diagrams] pin "trade-cycle-diagram" matched no diagram. Available: The Business (Trade) Cycle | Output Gap Diagram | PPF: Actual vs Potential Growth
+[diagrams] pin "ad-as-shifts" matched no diagram. Available: The Business (Trade) Cycle | Output Gap Diagram | PPF: Actual vs Potential Growth
+[diagrams] pin "ad-as-growth-analysis" matched no diagram. Available: The Business (Trade) Cycle | Output Gap Diagram | PPF: Actual vs Potential Growth
+[diagrams] pin "ad-as-growth" matched no diagram. Available: The Business (Trade) Cycle | Output Gap Diagram | PPF: Actual vs Potential Growth
+[diagrams] pin "trade-cycle-diagram" matched no diagram. Available: The Business (Trade) Cycle | Output Gap Diagram | PPF: Actual vs Potential Growth
+[diagrams] pin "ad-as-shifts" matched no diagram. Available: The Business (Trade) Cycle | Output Gap Diagram | PPF: Actual vs Potential Growth
+[diagrams] pin "ad-as-growth-analysis" matched no diagram. Available: The Business (Trade) Cycle | Output Gap Diagram | PPF: Actual vs Potential Growth
+[diagrams] pin "Indirect Tax" matched no diagram. Available: Maximum Price (Price Ceiling) | Minimum Price (Price Floor) | Tax to Correct Negative Externality | Subsidy to Correct Positive Externality
+[diagrams] pin "Indirect Tax" matched no diagram. Available: Maximum Price (Price Ceiling) | Minimum Price (Price Floor) | Tax to Correct Negative Externality | Subsidy to Correct Positive Externality
+[diagrams] pin "supply-side-lras" matched no diagram. Available: The Phillips Curve | Fiscal Policy: AD/AS Impact | Monetary Policy Transmission Mechanism | Supply-Side Policy: LRAS Shift
+[diagrams] pin "supply-side-lras" matched no diagram. Available: The Phillips Curve | Fiscal Policy: AD/AS Impact | Monetary Policy Transmission Mechanism | Supply-Side Policy: LRAS Shift
+[diagrams] pin "Demand-Pull and Cost-Push Inflation" matched no diagram. Available: CPI Basket of Goods | Types of Unemployment
+[diagrams] pin "Demand-Pull and Cost-Push Inflation" matched no diagram. Available: CPI Basket of Goods | Types of Unemployment
+[diagrams] pin "National Income Equilibrium" matched no diagram. Available: Circular Flow of Income | Injections and Withdrawals Equilibrium
+[diagrams] pin "The Multiplier" matched no diagram. Available: Circular Flow of Income | Injections and Withdrawals Equilibrium
+[diagrams] pin "National Income Equilibrium" matched no diagram. Available: Circular Flow of Income | Injections and Withdrawals Equilibrium
+[diagrams] pin "The Multiplier" matched no diagram. Available: Circular Flow of Income | Injections and Withdrawals Equilibrium
+[diagrams] pin "Consumer Surplus" matched no diagram. Available: Supply & Demand Equilibrium | Consumer & Producer Surplus
+[diagrams] pin "Indirect Tax" matched no diagram. Available: Supply & Demand Equilibrium | Consumer & Producer Surplus
+[diagrams] pin "Subsidy" matched no diagram. Available: Supply & Demand Equilibrium | Consumer & Producer Surplus
+[diagrams] pin "Consumer Surplus" matched no diagram. Available: Supply & Demand Equilibrium | Consumer & Producer Surplus
+[diagrams] pin "Indirect Tax" matched no diagram. Available: Supply & Demand Equilibrium | Consumer & Producer Surplus
+[diagrams] pin "Subsidy" matched no diagram. Available: Supply & Demand Equilibrium | Consumer & Producer Surplus
+
+=== LIVE — 43 sections ===
+run      sections-with-premature  premature-qs  pre-test∩check-in  reserved-set-empty  pre-test length 3/2/1/0
+A-out                         22            44                  0                  43  43/0/0/0
+A-pro                         21            42                  0                  43  43/0/0/0
+B-out                          4             6                  0                  21  41/2/0/0
+B-pro                          4             6                  0                  21  43/0/0/0
+  B-out   aggregate-supply                         pinned 5ch  pre=3  chapters=[3,-,-]  reserved=5
+  B-pro   aggregate-supply                         pinned 5ch  pre=3  chapters=[3,-,-]  reserved=5
+  B-out   consumer-behaviour-demand                pinned 6ch  pre=3  chapters=[2,3,-]  reserved=6
+  B-pro   consumer-behaviour-demand                pinned 6ch  pre=3  chapters=[2,3,-]  reserved=6
+  B-out   introductory-concepts                    pinned 5ch  pre=3  chapters=[3,-,-]  reserved=5
+  B-pro   introductory-concepts                    pinned 5ch  pre=3  chapters=[3,-,-]  reserved=5
+  B-out   national-income                          pinned 4ch  pre=3  chapters=[2,4,-]  reserved=4
+  B-pro   national-income                          pinned 4ch  pre=3  chapters=[2,4,-]  reserved=4
+[diagrams] pin "AD/AS Shifts" matched no diagram. Available: Short-Run Aggregate Supply (SRAS) | LRAS: Classical vs Keynesian | AD/AS Equilibrium: Multiple Scenarios
+[diagrams] pin "Self-Correcting Mechanism" matched no diagram. Available: Short-Run Aggregate Supply (SRAS) | LRAS: Classical vs Keynesian | AD/AS Equilibrium: Multiple Scenarios
+[diagrams] pin "AD/AS Shifts" matched no diagram. Available: Short-Run Aggregate Supply (SRAS) | LRAS: Classical vs Keynesian | AD/AS Equilibrium: Multiple Scenarios
+[diagrams] pin "Self-Correcting Mechanism" matched no diagram. Available: Short-Run Aggregate Supply (SRAS) | LRAS: Classical vs Keynesian | AD/AS Equilibrium: Multiple Scenarios
+[diagrams] pin "ad-as-growth" matched no diagram. Available: The Business (Trade) Cycle | Output Gap Diagram | PPF: Actual vs Potential Growth
+[diagrams] pin "trade-cycle-diagram" matched no diagram. Available: The Business (Trade) Cycle | Output Gap Diagram | PPF: Actual vs Potential Growth
+[diagrams] pin "ad-as-shifts" matched no diagram. Available: The Business (Trade) Cycle | Output Gap Diagram | PPF: Actual vs Potential Growth
+[diagrams] pin "ad-as-growth-analysis" matched no diagram. Available: The Business (Trade) Cycle | Output Gap Diagram | PPF: Actual vs Potential Growth
+[diagrams] pin "ad-as-growth" matched no diagram. Available: The Business (Trade) Cycle | Output Gap Diagram | PPF: Actual vs Potential Growth
+[diagrams] pin "trade-cycle-diagram" matched no diagram. Available: The Business (Trade) Cycle | Output Gap Diagram | PPF: Actual vs Potential Growth
+[diagrams] pin "ad-as-shifts" matched no diagram. Available: The Business (Trade) Cycle | Output Gap Diagram | PPF: Actual vs Potential Growth
+[diagrams] pin "ad-as-growth-analysis" matched no diagram. Available: The Business (Trade) Cycle | Output Gap Diagram | PPF: Actual vs Potential Growth
+
+=== DRAFT (staged) — 43 sections ===
+run      sections-with-premature  premature-qs  pre-test∩check-in  reserved-set-empty  pre-test length 3/2/1/0
+A-out                         40            72                  0                  43  43/0/0/0
+A-pro                          6             9                  0                  43  43/0/0/0
+B-out                          2             2                  0                   0  38/3/0/2
+B-pro                          2             2                  0                   0  43/0/0/0
+  B-out   aggregate-supply                         pinned 5ch  pre=3  chapters=[3,-,-]  reserved=5
+  B-pro   aggregate-supply                         pinned 5ch  pre=3  chapters=[3,-,-]  reserved=5
+  B-out   introductory-concepts                    pinned 5ch  pre=3  chapters=[3,-,-]  reserved=5
+  B-pro   introductory-concepts                    pinned 5ch  pre=3  chapters=[3,-,-]  reserved=5
