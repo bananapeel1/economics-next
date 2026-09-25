@@ -1,0 +1,339 @@
+{
+  "poverty-inequality": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "Types of Poverty",
+        "quiz": {
+          "index": 0,
+          "id": "poverty-inequality:quiz:4cd69a99",
+          "evidence": "A country experiencing rapid growth may see millions escape absolute poverty while inequality simultaneously widens — meaning relative poverty rises.",
+          "why": "A reasoning item on the chapter's central claim that growth and widening inequality can coexist (the China example shows exactly this rising-Gini case), and its distractors test which way the Lorenz curve moves and what progressive taxation does, which chapter 1 covers in the Lorenz/Gini subsection and the Denmark example."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 0,
+          "id": "poverty-inequality:practice:f5fc1fc2",
+          "evidence": "Absolute poverty = below survival threshold; relative poverty = below 60% of median income.",
+          "why": "It tests the distinction the chapter is named after; p2 (10-mark Gini usefulness) qualifies equally well here, but p0 keeps the marks rising into chapter 2 (4 then 6)."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 1,
+        "title": "Causes and Consequences",
+        "quiz": {
+          "index": 6,
+          "id": "poverty-inequality:quiz:97277b48",
+          "evidence": "**Reduced social mobility** means that where you are born on the income ladder increasingly determines where you end up — talent is wasted when the poor cannot access education or capital.",
+          "why": "The keyed answer restates this consequence (the poor lack education and credit, so human capital and enterprise are lost) with plausible distractors, whereas the other chapter-2 candidate, q9, has three absurd distractors."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 1,
+          "id": "poverty-inequality:practice:3d98d47a",
+          "evidence": "Inequality is caused by wage differentials (MRP), wealth concentration, globalisation, and tax policy.",
+          "why": "Chapter 2 teaches four within-country causes with their mechanisms (MRP and human capital, inheritance, skill-biased globalisation, regressive taxes), which is more than enough for two developed 6-mark explanations."
+        },
+        "practiceNone": null
+      }
+    ],
+    "untaught": [
+      { "kind": "quiz", "index": 4, "id": "poverty-inequality:quiz:7426fa25", "what": "The Kuznets hypothesis (inequality rises and then falls with development); no chapter mentions Kuznets or an inverted-U path." },
+      { "kind": "quiz", "index": 7, "id": "poverty-inequality:quiz:f1d91fa5", "what": "Causes of inequality BETWEEN countries (quality of institutions and governance); the section teaches only within-country causes, and institutions and governance never appear." },
+      { "kind": "quiz", "index": 8, "id": "poverty-inequality:quiz:c952c037", "what": "The effect of civil war or conflict on poverty (destroyed capital, displacement, deterred investment); conflict is never mentioned." },
+      { "kind": "practice", "index": 3, "id": "poverty-inequality:practice:bdfcd97d", "what": "Whether globalisation has widened inequality between developed and developing countries; the only teaching is one FLOW clause saying globalisation 'may reduce it between countries', with no mechanisms on either side, so a 20-mark evaluation cannot be written from the section." }
+    ],
+    "flags": [
+      "Chapter 1 gives the absolute poverty line as '$2.15 per day (2022 PPP)' (in the body and again in the KEY IDEA). $2.15 is in 2017 PPP (the line was adopted in 2022), and in June 2025 the World Bank raised the international poverty line to $3.00/day in 2021 PPP. As written, the chapter is both mislabelled and out of date.",
+      "Relative poverty as 'below 60% of median household income' is the UK/EU convention (the OECD uses 50%). The chapter says 'typically', so it is not wrong, but the framing is UK-leaning for an IAL audience.",
+      "q9 asks for the 'most significant reason' inequality grows over time, while chapter 2 says 'Wage differentials are the primary driver of income inequality'. The keyed answer (wealth compounding) is defensible for the 'over time' dynamic and the other three options are absurd, so the item is not wrong, but it tests little and its stem sits awkwardly against the chapter.",
+      "p4 (two effects of poverty on a developing country) is only half taught: chapter 2 covers the consequences of INEQUALITY, and the only poverty effect it gives is 'talent is wasted when the poor cannot access education or capital'. A second effect would have to come from outside the section. It is not pinned (chapter 2 has p1) and is listed here rather than as untaught.",
+      "Taught but not pinned: q1, q2 and q5 (chapter 1), q3 (chapters 1 and 2), q9 (chapter 2), and p2 (chapter 1)."
+    ]
+  },
+  "revenue-costs-profits": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "Revenue Concepts",
+        "quiz": {
+          "index": 0,
+          "id": "revenue-costs-profits:quiz:1361a4c5",
+          "evidence": "This is why MR falls faster than AR — the MR curve has exactly twice the gradient of a linear AR curve.",
+          "why": "Applying the chapter's rule to AR = 100 − 2Q gives an MR gradient of −4, and only the keyed option has it, so the item tests the KEY IDEA by application; the alternative, q1, has a distractor on normal profit, which is only taught in chapter 3."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 0,
+          "id": "revenue-costs-profits:practice:3d2c4cc7",
+          "evidence": "**Marginal revenue (MR)** is the change in TR from selling one more unit.",
+          "why": "It defines the chapter's core term, and the chapter's explanation of why MR falls (the price cut applies to every unit) gives the extra development a 4-mark definition rewards."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 1,
+        "title": "Cost Concepts",
+        "quiz": {
+          "index": 2,
+          "id": "revenue-costs-profits:quiz:d1f17836",
+          "evidence": "Adding more of the variable factor (labour) to the fixed factor eventually causes **diminishing marginal returns** — each extra worker adds less output than the previous one, causing MC to rise.",
+          "why": "Three of its four options are long-run or diseconomies statements, so it tests exactly the chapter's misconception ('Students confuse diminishing returns with diseconomies of scale'); q3 (MC cuts ATC at its minimum) and q8 (MES) also qualify."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 2,
+          "id": "revenue-costs-profits:practice:85f32f79",
+          "evidence": "diminishing returns explains why SRAC curves slope upward; diseconomies of scale explains why the LRAC curve may eventually slope upward.",
+          "why": "Chapter 2 links diminishing returns to rising MC and the U-shaped ATC, and it supplies the counterweights (fixed costs spread over output, the short-run/long-run boundary) that an 'assess' answer needs."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 2,
+        "title": "Profit",
+        "quiz": {
+          "index": 6,
+          "id": "revenue-costs-profits:quiz:3cab7e25",
+          "evidence": "Economists include normal profit as part of total cost, so when TR = TC, the firm earns exactly normal profit.",
+          "why": "It tests the chapter's KEY IDEA that normal profit is a cost covering the entrepreneur's opportunity cost, and its distractors (supernormal profit, loss, MR = 0) are all taught in chapters 1 and 3."
+        },
+        "quizNone": null,
+        "practice": null,
+        "practiceNone": "No practice item is about chapter 3. Nearest misses: p3 (are supernormal profits 'always harmful to consumers', 20 marks) uses chapter 3's signal function, but the harm side (P > MC, X-inefficiency) and the dynamic-efficiency defence are taught only in chapter 4, so it goes on chapter 4 as the last chapter it needs. p4 (short-run shutdown) is untaught. p0 and p2 belong to chapters 1 and 2."
+      },
+      {
+        "block": 3,
+        "title": "Efficiency",
+        "quiz": {
+          "index": 9,
+          "id": "revenue-costs-profits:quiz:ce9fd702",
+          "evidence": "**X-inefficiency** occurs when a firm operates above its minimum cost curve — not because of its scale, but because of **organisational slack**.",
+          "why": "The keyed answer restates the chapter's definition (slack plus no competitive pressure), and the 'too small to achieve economies of scale' distractor tests the chapter's 'not because of its scale' point; no other item in the bank is on chapter 4."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 3,
+          "id": "revenue-costs-profits:practice:1ca71b08",
+          "evidence": "**Monopoly** may generate dynamic efficiency through R&D investment, but the lack of competitive pressure risks X-inefficiency and static welfare loss.",
+          "why": "Judging whether supernormal profit is 'always harmful' needs both the static harm and the dynamic-efficiency defence, which are taught only here, plus chapter 3's signal function, so chapter 4 is the last chapter it needs."
+        },
+        "practiceNone": null
+      }
+    ],
+    "untaught": [
+      { "kind": "quiz", "index": 4, "id": "revenue-costs-profits:quiz:5b677bd1", "what": "The types of internal economies of scale (technical/indivisibility vs financial, marketing, purchasing); this section names 'economies of scale' but never lists or defines any type." },
+      { "kind": "quiz", "index": 5, "id": "revenue-costs-profits:quiz:3c95f38c", "what": "External vs internal economies of scale; this section never mentions external economies." },
+      { "kind": "quiz", "index": 7, "id": "revenue-costs-profits:quiz:79c9f8de", "what": "The short-run shutdown rule (AR < AVC); AVC appears only as the reason ATC is U-shaped, and shutdown is never discussed." },
+      { "kind": "practice", "index": 1, "id": "revenue-costs-profits:practice:2ba5d107", "what": "Two types of economies of scale; no type is named in this section." },
+      { "kind": "practice", "index": 4, "id": "revenue-costs-profits:practice:e3f412f6", "what": "The conditions for a short-run shutdown (price below AVC); not taught." }
+    ],
+    "flags": [
+      "q4, q5 and p1 test content that another section in this group does teach: types-sizes-businesses chapter 4 lists technical, purchasing, financial, managerial and risk-bearing economies plus external economies. They are untaught only because they sit in this section's bank. The shutdown rule (q7, p4) is not taught in any of the five sections I read.",
+      "Chapter 3 is the only chapter here left without a practice pin; a short item on normal vs supernormal profit, or on the signal function, would fill it.",
+      "Taught but not pinned: q1 (chapter 1: 'At unit elasticity (PED = 1), TR is maximised and MR = 0'), q3 and q8 (chapter 2).",
+      "No UK-GCE-only facts found. Chapter 1's 'price elasticity of demand from Unit 1' matches IAL Unit 1."
+    ]
+  },
+  "role-state-macroeconomy": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "Market Failure and the State",
+        "quiz": null,
+        "quizNone": "No quiz item tests public goods, non-excludability or non-rivalry, the free-rider problem, or goods with external benefits, which are everything chapter 1 teaches. Nearest misses: q10 (indirect-tax incidence under inelastic demand) and q8 (VAT is regressive) are about taxes, which chapter 1 mentions only as the way public goods are funded, and neither incidence nor regressivity is taught anywhere in the section; q0 (transfer payments) and q1 (Laffer curve) are chapter 2 content.",
+        "practice": null,
+        "practiceNone": "No practice item is about chapter 1. Nearest miss: p1 (why use progressive taxation). Chapter 1 says public goods are funded 'through taxation', but progressive taxation is taught only in chapter 2. The other practice items (fiscal policy, Laffer, TNCs, deficit vs debt) are chapter 2 content or untaught."
+      },
+      {
+        "block": 1,
+        "title": "Macroeconomic Policy",
+        "quiz": {
+          "index": 1,
+          "id": "role-state-macroeconomy:quiz:e358b5a1",
+          "evidence": "The **Laffer curve** formalises this: beyond a certain tax rate, total revenue actually falls because economic activity declines.",
+          "why": "A reasoning item on the equity-efficiency trade-off, which the chapter calls 'the central dilemma'; the keyed answer's 'avoidance, and evasion' goes beyond the chapter's 'economic activity declines', but the tested direction (revenue falls) is taught and every distractor is refutable (q0, transfer payments, also qualifies)."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 1,
+          "id": "role-state-macroeconomy:practice:901afec0",
+          "evidence": "Combined with **transfer payments** (Universal Credit, pensions, child benefit), the tax-benefit system compresses the post-tax income distribution.",
+          "why": "The chapter gives two developable reasons (compressing post-tax incomes to reduce inequality, and funding transfers and in-kind provision for the poorest); p0 (define fiscal policy) and p2 (validity of the Laffer curve) also qualify, but p1 is a reasoning item and does not repeat the Laffer quiz pin."
+        },
+        "practiceNone": null
+      }
+    ],
+    "untaught": [
+      { "kind": "quiz", "index": 2, "id": "role-state-macroeconomy:quiz:0c66e5ef", "what": "The fiscal deficit as a flow vs the national debt as a stock; the national debt is never mentioned, and the deficit appears only as 'a rising budget deficit'." },
+      { "kind": "quiz", "index": 3, "id": "role-state-macroeconomy:quiz:e9cd5cbb", "what": "Automatic stabilisers; not mentioned." },
+      { "kind": "quiz", "index": 4, "id": "role-state-macroeconomy:quiz:3ff51d3f", "what": "Crowding out and the loanable-funds mechanism; not mentioned." },
+      { "kind": "quiz", "index": 5, "id": "role-state-macroeconomy:quiz:448aeb48", "what": "The structural (vs cyclical) deficit; not mentioned." },
+      { "kind": "quiz", "index": 6, "id": "role-state-macroeconomy:quiz:f86c8392", "what": "Transfer pricing by TNCs to shift profits to low-tax jurisdictions; TNCs and tax avoidance are never mentioned." },
+      { "kind": "quiz", "index": 7, "id": "role-state-macroeconomy:quiz:976749b8", "what": "Policy responses to the 2008 financial crisis, including quantitative easing; neither 2008 nor QE is mentioned (the only monetary tool taught is the base rate)." },
+      { "kind": "quiz", "index": 8, "id": "role-state-macroeconomy:quiz:827fbcd2", "what": "Indirect taxes (VAT) being regressive; this section never uses 'regressive' or mentions VAT (poverty-inequality chapter 2 does)." },
+      { "kind": "quiz", "index": 9, "id": "role-state-macroeconomy:quiz:071e15ac", "what": "Policy turning pro-cyclical because of poor data, lags and shocks; the chapter mentions time lags but never says they can make policy amplify fluctuations, so the keyed answer can only be reached by eliminating absurd distractors." },
+      { "kind": "quiz", "index": 10, "id": "role-state-macroeconomy:quiz:0b0d6852", "what": "Tax incidence and PED (inelastic demand puts the burden on consumers); indirect taxes and incidence are not taught." },
+      { "kind": "quiz", "index": 11, "id": "role-state-macroeconomy:quiz:eb1b45a5", "what": "The OECD 15% global minimum corporation tax and tax competition; not mentioned." },
+      { "kind": "practice", "index": 3, "id": "role-state-macroeconomy:practice:1d5fee2a", "what": "Controlling TNCs as a route to sustainable growth in developing countries; TNCs, developing countries and sustainability are not taught in this section." },
+      { "kind": "practice", "index": 4, "id": "role-state-macroeconomy:practice:caa9fa66", "what": "Differences between the fiscal deficit and the national debt; not taught." }
+    ],
+    "flags": [
+      "This is the worst chapter/bank mismatch in the group: 10 of 12 quiz items and 2 of 5 practice items test public finance (deficit vs debt, automatic stabilisers, crowding out, structural deficit, tax incidence, TNC tax avoidance, 2008 crisis policy) that neither chapter teaches. Chapter 1 is micro market failure (public goods, external benefits). The bank and the chapters look written for different outlines of the topic, and the section needs content, not just pins.",
+      "UK-specific facts presented to an IAL audience: 'the UK's 20%/40%/45% income tax bands' (chapter 2), Universal Credit and its '55% taper rate' (chapter 2), the Bank of England rate cycle (chapter 2), 'the NHS, state schools, and council housing' and 'compulsory education until age 18' (chapter 1; the age-18 rule is England-specific but is written as a general example), and the q0 distractor 'Paying a nurse's salary in an NHS hospital'.",
+      "Content error in chapter 2: 'rates cannot fall below zero (the zero lower bound)'. The ECB, Bank of Japan, Swiss National Bank and Riksbank all set negative policy rates; the zero lower bound limits how far below zero rates can usefully go, not whether they can.",
+      "q1's keyed answer adds 'avoidance, and evasion', which the chapter does not teach; it is not wrong, and the pin rests on the direction of the effect, which the chapter does teach.",
+      "Taught but not pinned: q0 (chapter 2, pensions listed as transfer payments), p0 and p2 (chapter 2)."
+    ]
+  },
+  "trade-global-economy": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "The Case for Free Trade",
+        "quiz": {
+          "index": 0,
+          "id": "trade-global-economy:quiz:9eb895dc",
+          "evidence": "A country has a comparative advantage in a good if it can produce that good at a **lower opportunity cost** than another country.",
+          "why": "An opportunity-cost calculation done exactly as the chapter teaches (Y gives up 0.5 food per machine, X gives up 2), with a distractor ('requires absolute advantage') that tests the chapter's misconception; q13 also qualifies but only asks for recall."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 0,
+          "id": "trade-global-economy:practice:a9f1d212",
+          "evidence": "A country has a comparative advantage when it can produce a good at a lower opportunity cost than another — and both countries gain from trade if terms of trade fall between their opportunity cost ratios.",
+          "why": "It is the only practice item on chapter 1, the chapter's definition plus its contrast with absolute advantage make a full 4-mark answer, and its 4 marks rise to 20 on chapter 2."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 1,
+        "title": "Protectionism and the WTO",
+        "quiz": {
+          "index": 5,
+          "id": "trade-global-economy:quiz:6d58badf",
+          "evidence": "protecting **infant industries** that need time to achieve economies of scale",
+          "why": "A reasoning item on the chapter's arguments for protection: the keyed condition (economies of scale still to come, temporary protection) follows from 'need time to achieve economies of scale', and the distractors are the chapter's other arguments (national security, dumping) or an industry that is not infant; q12 (non-tariff barrier) and q7 (MFN) also qualify."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 3,
+          "id": "trade-global-economy:practice:09d7629f",
+          "evidence": "Each argument has some theoretical validity but is routinely abused to protect inefficient firms with political connections.",
+          "why": "It needs chapter 1's benefits and limits of free trade and chapter 2's arguments for and against protection, so chapter 2 is the last chapter it needs and both chapters teach it; p1 (effects of a tariff) also qualifies but is narrower."
+        },
+        "practiceNone": null
+      }
+    ],
+    "untaught": [
+      { "kind": "quiz", "index": 1, "id": "trade-global-economy:quiz:4b6e785a", "what": "The terms-of-trade index (export price index / import price index × 100); the chapter defines terms of trade only as 'the exchange ratio' in the comparative-advantage model." },
+      { "kind": "quiz", "index": 2, "id": "trade-global-economy:quiz:9f64a059", "what": "Customs union vs free trade area (common external tariff); trading blocs are never taught." },
+      { "kind": "quiz", "index": 3, "id": "trade-global-economy:quiz:2f4d56cd", "what": "Trade diversion; not taught." },
+      { "kind": "quiz", "index": 4, "id": "trade-global-economy:quiz:99a75345", "what": "Which part of a tariff's effect is a deadweight loss (domestic production above the world-price cost); chapter 2 says only 'Welfare loss created' and never breaks the loss into its production and consumption parts." },
+      { "kind": "quiz", "index": 6, "id": "trade-global-economy:quiz:beca776e", "what": "The Prebisch-Singer hypothesis; not mentioned." },
+      { "kind": "quiz", "index": 8, "id": "trade-global-economy:quiz:cbbc46fa", "what": "The Marshall-Lerner condition for a depreciation to improve the trade balance; exchange rates appear only as 'exchange rate distortions'." },
+      { "kind": "quiz", "index": 9, "id": "trade-global-economy:quiz:46a392d1", "what": "The benefits and costs of trading-bloc membership (trade creation, loss of independent trade policy); not taught." },
+      { "kind": "quiz", "index": 10, "id": "trade-global-economy:quiz:df70854b", "what": "Quota rent vs tariff revenue; quotas are defined only as 'physical limits on the quantity of imports'." },
+      { "kind": "quiz", "index": 11, "id": "trade-global-economy:quiz:ddc2e111", "what": "An improvement in the terms of trade worsening the trade balance through inflation and lost competitiveness; the terms-of-trade index and its link to the trade balance are not taught." },
+      { "kind": "practice", "index": 2, "id": "trade-global-economy:practice:f297c506", "what": "The economic impact of forming a customs union; trading blocs are not taught." },
+      { "kind": "practice", "index": 4, "id": "trade-global-economy:practice:899b5425", "what": "Causes of a deterioration in the terms of trade; not taught." }
+    ],
+    "flags": [
+      "Content error in chapter 2's FLOW: 'Net welfare loss — producer gains are smaller than consumer losses plus government revenue'. The accounting is backwards: the loss arises because producer gains PLUS government revenue are smaller than the consumer surplus lost. Fix this together with q4, which tests this area.",
+      "Chapter 2 describes WTO dispute settlement as a working 'binding legal process', but the Appellate Body has been unable to hear appeals since December 2019 (the US blocks appointments), so a losing party can 'appeal into the void'. The 'jewel in the crown' framing is out of date and should be qualified.",
+      "q0's distractor text contains a raw HTML entity: 'Neither country &mdash; comparative advantage requires absolute advantage'. It may render literally.",
+      "Terms of trade as an index (q1, q11, p4, q6) and Marshall-Lerner (q8) probably belong with the balance-payments-exchange-rates section, and trading blocs (q2, q3, q9, p2) are not taught anywhere in this section. These 11 untaught items are more than half the bank.",
+      "Taught but not pinned: q13 (chapter 1), q7 and q12 (chapter 2), p1 (chapter 2).",
+      "No UK-GCE-only facts found."
+    ]
+  },
+  "types-sizes-businesses": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "Business Objectives",
+        "quiz": {
+          "index": 1,
+          "id": "types-sizes-businesses:quiz:e7732a08",
+          "evidence": "Profit max at MC = MR; revenue max at MR = 0; sales max at AR = ATC.",
+          "why": "It tests the chapter's first KEY IDEA, and every distractor is one of the alternative objectives the chapter contrasts with profit maximisation (MR = 0, AR = AC, maximum TR), so it also checks the chapter's 'profit is maximised where revenue is highest' misconception."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 2,
+          "id": "types-sizes-businesses:practice:a5f0810d",
+          "evidence": "This arises from the **principal-agent problem**: shareholders (principals) want maximum profit, but managers (agents) have their own interests.",
+          "why": "Chapter 1 presents the principal-agent problem as the cause of revenue maximisation, sales maximisation and satisficing (its FLOW starts 'Ownership separated from control'), with Baumol and Amazon for evaluation, so a creditable 10-mark answer needs nothing later."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 1,
+        "title": "Types of Business Organisation",
+        "quiz": {
+          "index": 3,
+          "id": "types-sizes-businesses:quiz:6581f923",
+          "evidence": "Becoming a plc creates the **divorce of ownership and control** — shareholders own the firm but managers run it day-to-day. This separation is the root of the principal-agent problem.",
+          "why": "Chapter 2 teaches why the principal-agent problem arises (owners do not run the firm), the 'different objectives' half of the keyed answer can lean on chapter 1 as the rules allow, and chapter 2 has no other qualifying item (q6, co-operatives, is untaught)."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 0,
+          "id": "types-sizes-businesses:practice:4e3aff14",
+          "evidence": "Shareholders enjoy **limited liability** — they can lose their investment but not their personal assets.",
+          "why": "It asks for the chapter's KEY IDEA as a definition, and the chapter's misconception (limited liability is not limited risk) supplies the precision a 4-mark answer needs."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 2,
+        "title": "Growth of Firms",
+        "quiz": {
+          "index": 0,
+          "id": "types-sizes-businesses:quiz:d9389500",
+          "evidence": "**Horizontal integration** merges firms at the same stage in the same industry — increasing market share and enabling economies of scale.",
+          "why": "Applying the chapter's definition picks the car-maker pair, and the three distractors are the other integration types the chapter names; this is the item the founder saw served on chapter 1, and this is where it belongs."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 3,
+          "id": "types-sizes-businesses:practice:aced507f",
+          "evidence": "Organic growth is safer but slower; external growth is faster but riskier.",
+          "why": "The chapter is built around this comparison and gives both sides plus evaluation (control vs speed, over half of mergers failing, organic growth being too slow in consolidating markets); p1 (horizontal integration) also qualifies but is narrower."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 3,
+        "title": "Economies and Diseconomies of Scale",
+        "quiz": {
+          "index": 8,
+          "id": "types-sizes-businesses:quiz:810f53a2",
+          "evidence": "The stock market may value the separate pieces more than the whole (eliminating the 'conglomerate discount').",
+          "why": "The keyed answer paraphrases this sentence, and the 'exploit additional economies of scale' distractor runs against the chapter's diseconomies logic; it is the only item in the bank on chapter 4."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 4,
+          "id": "types-sizes-businesses:practice:713cf058",
+          "evidence": "When diseconomies outweigh the benefits of size, a **demerger** may follow — splitting the firm into smaller, independent companies that can focus on their main activities.",
+          "why": "Chapter 4 gives two distinct reasons to demerge (escaping diseconomies and regaining focus, and the market valuing the parts above the whole), which is what a two-reason answer needs."
+        },
+        "practiceNone": null
+      }
+    ],
+    "untaught": [
+      { "kind": "quiz", "index": 6, "id": "types-sizes-businesses:quiz:33b5aa78", "what": "Co-operatives (member ownership, one member one vote); no chapter mentions co-operatives." },
+      { "kind": "quiz", "index": 7, "id": "types-sizes-businesses:quiz:501af66f", "what": "Backward vs forward vertical integration; chapter 3 says only 'Vertical integration (backward or forward) secures supply chains or distribution' and never says which direction is which, so the keyed 'backward' can only be guessed from word order." }
+    ],
+    "flags": [
+      "Both chapter-4 pins (q8, p4) are on the demerger subsection because nothing in this bank tests economies of scale, the chapter's central idea. The items that do (revenue-costs-profits q4, q5 and p1: technical economies, external economies, two types of economies of scale) are in the other section's bank, where they are untaught.",
+      "q3 could equally sit on chapter 1, which states 'shareholders (principals) want maximum profit, but managers (agents) have their own interests'. It went to chapter 2 because chapter 1 has four other qualifying items (q1, q2, q5, q9) and chapter 2 has none.",
+      "q2's keyed option says 'Sales volume maximisation' where the chapter says 'Sales maximisation' (AR = ATC). This is harmless but inconsistent.",
+      "Chapter 2 does not teach not-for-profit, co-operative or public-sector organisations. If the IAL spec for this topic lists them, the gap is in the chapter, not in q6.",
+      "Taught but not pinned: q2, q5 and q9 (chapter 1), q4 (chapter 3 FLOW: 'competition regulators may intervene'), and p1 (chapter 3).",
+      "No UK-GCE-only facts found. The UK framing is cosmetic (Amazon 'reinvesting every pound', Toyota 'billion-pound' robotic lines)."
+    ]
+  }
+}

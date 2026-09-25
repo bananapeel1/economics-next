@@ -1,0 +1,116 @@
+SECTION poverty-inequality — Poverty and Inequality
+
+########## CHAPTER 1 (block 0, id poverty-inequality:block:f33d3bc6): Types of Poverty
+
+--- Absolute and Relative Poverty
+**Absolute poverty** is defined as an income level below which a person cannot meet basic needs — food, clean water, shelter, and clothing. The World Bank sets this at $2.15 per day (2022 PPP). Anyone below this threshold lacks the resources for physical survival regardless of what others in their society earn.
+**Relative poverty** is defined in relation to the living standards of the rest of society — typically below 60% of median household income. A person can be lifted from absolute poverty but still be relatively poor if the gap between them and the median widens. This distinction matters enormously for policy: economic growth reliably reduces absolute poverty but may worsen relative poverty if the gains accrue disproportionately to the rich.
+The two measures can move in opposite directions. A country experiencing rapid growth may see millions escape absolute poverty while inequality simultaneously widens — meaning relative poverty rises. Policymakers must therefore track both measures to get an accurate picture of living standards.
+FLOW: Economic growth raises average incomes -> Absolute poverty falls as more people cross the survival threshold -> But if the rich gain proportionally more -> Relative poverty may rise even as absolute poverty falls => Growth is necessary but insufficient — distribution matters too
+KEY IDEA: Absolute poverty means falling below the survival threshold ($2.15/day), while relative poverty means earning below 60% of the median — growth can reduce one while worsening the other.
+MISCONCEPTION: Students assume economic growth automatically reduces all forms of poverty. Wrong — growth reduces absolute poverty but can worsen relative poverty if income gains are unevenly distributed. Instead write: growth is necessary to reduce absolute poverty, but without redistribution policies, the gap between rich and poor may widen.
+EXAMPLE: China lifted over 800 million people out of absolute poverty between 1978 and 2020 — the largest poverty reduction in history. However, its Gini coefficient rose from roughly 0.30 to 0.47 over the same period, meaning relative inequality worsened dramatically even as the poorest gained.
+
+--- Lorenz Curve and Gini Coefficient
+The **Lorenz curve** is a graphical representation of income or wealth distribution. It plots the cumulative percentage of the population (from poorest to richest) on the x-axis against the cumulative percentage of income they receive on the y-axis. A perfectly equal society produces a 45-degree line; the further the Lorenz curve bows away from this line, the more unequal the distribution.
+The **Gini coefficient** quantifies inequality as a single number. It equals the area between the line of equality and the Lorenz curve (area A) divided by the total area under the line of equality (A + B). A Gini of 0 means perfect equality; a Gini of 1 means one person holds all income. Most countries fall between 0.25 and 0.65.
+A key limitation is that two very different income distributions can produce the same Gini coefficient — a country where the middle class earns disproportionately less and one where the poorest earn disproportionately less might both have a Gini of 0.40. The Gini also ignores non-monetary factors like access to public services, which can significantly affect real living standards.
+KEY IDEA: The Lorenz curve plots cumulative income share against cumulative population share, and the Gini coefficient (A divided by A+B) converts that picture into a single number between 0 and 1.
+MISCONCEPTION: Students treat the Gini coefficient as a perfect measure of inequality. Wrong — two countries with identical Gini values can have very different distributions, and the Gini ignores non-income factors like free healthcare. Instead write: the Gini is a useful summary statistic, but always acknowledge its limitations — it cannot reveal where in the distribution inequality is concentrated.
+EXAMPLE: South Africa has the world's highest Gini coefficient at approximately 0.63, reflecting extreme inequality rooted in apartheid-era land and wealth distribution. By contrast, Denmark's Gini of roughly 0.28 reflects decades of progressive taxation and universal public services compressing the income distribution.
+TAKEAWAY: ["Absolute poverty = below survival threshold; relative poverty = below 60% of median income.","Growth reduces absolute poverty but may worsen relative poverty if gains are unevenly distributed.","The Gini coefficient (0 to 1) summarises inequality but cannot show where in the distribution the problem lies.","Always evaluate both measures together — neither tells the full story alone."]
+
+########## CHAPTER 2 (block 1, id poverty-inequality:block:00abd5e2): Causes and Consequences
+
+--- Causes of Inequality
+**Wage differentials** are the primary driver of income inequality. Workers with higher human capital — education, skills, experience — command higher wages because their **marginal revenue product (MRP)** is greater. A surgeon earns more than a cleaner because the revenue generated by each additional hour of their labour differs enormously. These differentials are amplified by barriers to entry: professional qualifications restrict supply, pushing wages higher for those inside the profession.
+**Wealth concentration** reinforces inequality across generations. The wealthy earn investment returns, inherit assets, and can fund better education for their children — creating a self-perpetuating cycle. **Globalisation** has widened inequality within countries: highly skilled workers who can sell services globally see their earnings soar, while low-skilled workers face wage competition from cheaper overseas labour.
+**Tax and transfer policy** plays a crucial role. Progressive tax systems redistribute income downward, while regressive taxes (like VAT) take a larger proportion from the poor. Government choices about tax rates, loopholes, and public spending significantly shape the final income distribution after market forces have determined pre-tax incomes.
+FLOW: Globalisation opens international markets -> Skilled workers sell services globally at premium wages -> Unskilled workers face competition from lower-wage economies -> Income gap between skilled and unskilled widens => Globalisation increases inequality within countries even as it may reduce it between countries
+KEY IDEA: Inequality stems from wage differentials driven by human capital and MRP, wealth concentration passed between generations, globalisation rewarding skilled workers, and tax policy choices.
+MISCONCEPTION: Students say inequality is caused only by differences in effort or talent. Wrong — structural factors like inherited wealth, access to education, discrimination, and tax policy all shape the distribution independently of individual merit. Instead write: inequality reflects both market outcomes (MRP differences) and structural factors (wealth inheritance, institutional design, policy choices).
+EXAMPLE: In the United States, the CEO-to-worker pay ratio rose from approximately 20:1 in 1965 to around 350:1 in 2023. This dramatic widening reflects rising returns to human capital at the top, stock-based compensation, and tax policy changes that reduced top marginal rates from 91% to 37%.
+
+--- Consequences and Redistribution
+Inequality has significant economic consequences. **Reduced social mobility** means that where you are born on the income ladder increasingly determines where you end up — talent is wasted when the poor cannot access education or capital. Lower aggregate demand results because the poor have a **higher marginal propensity to consume (MPC)** — transferring income from rich to poor increases total spending in the economy.
+Redistribution tools include **progressive taxation** (higher earners pay a larger share), **transfer payments** (benefits, pensions, tax credits), and **in-kind provision** (free healthcare, education). Each faces the **equity-efficiency trade-off**: too much redistribution may reduce incentives to work and invest, while too little allows poverty and wasted human potential.
+The **Laffer curve** suggests that beyond a certain tax rate, revenue actually falls because high rates discourage economic activity. **Poverty traps** arise when the withdrawal of benefits as income rises creates effective marginal tax rates above 80%, removing the incentive to work more. Good policy design must balance adequate support with maintained work incentives.
+FLOW: Government raises progressive taxes and increases transfers -> Post-tax income distribution becomes more equal -> But high marginal rates may reduce work incentives -> Equity-efficiency trade-off must be managed => Redistribution improves equity but risks reducing economic efficiency if poorly designed
+KEY IDEA: High inequality reduces social mobility and aggregate demand (the poor have a higher MPC), creating an equity-efficiency trade-off that redistribution policies attempt to navigate.
+MISCONCEPTION: Students assume redistribution always reduces efficiency. Wrong — the Scandinavian evidence shows that well-designed redistribution can enhance efficiency by improving human capital and social mobility. Instead write: the equity-efficiency trade-off is real, but its severity depends on policy design — universal services and well-targeted transfers can improve both equity and long-run growth.
+EXAMPLE: The Scandinavian model — particularly Sweden and Denmark — combines high redistribution through progressive taxation and generous public services with high social mobility and strong economic performance. Top marginal tax rates exceed 55%, yet these countries consistently rank among the most competitive economies, challenging the simple equity-efficiency trade-off narrative.
+TAKEAWAY: ["Inequality is caused by wage differentials (MRP), wealth concentration, globalisation, and tax policy.","High inequality reduces social mobility and aggregate demand (poor have higher MPC).","Redistribution uses progressive taxes, transfers, and in-kind provision — but faces the equity-efficiency trade-off.","Poverty traps and the Laffer curve constrain how far redistribution can go without undermining incentives."]
+
+########## QUIZ BANK (order as stored)
+q0 poverty-inequality:quiz:4cd69a99
+  Q: A country experiences rapid economic growth but the Gini coefficient rises from 0.35 to 0.42. Which of the following is the most likely explanation?
+    Absolute poverty has increased due to falling real incomes
+  * The benefits of growth have been unevenly distributed, increasing inequality
+    The Lorenz curve has moved closer to the line of perfect equality
+    The government has introduced a more progressive tax system
+q1 poverty-inequality:quiz:48b71920
+  Q: Which of the following best distinguishes relative poverty from absolute poverty?
+    Relative poverty is measured in monetary terms while absolute poverty is not
+    Relative poverty uses a fixed threshold while absolute poverty uses a variable one
+  * Relative poverty measures deprivation against societal norms while absolute poverty measures inability to meet basic needs
+    Relative poverty only exists in developing countries while absolute poverty exists everywhere
+q2 poverty-inequality:quiz:942e17f5
+  Q: On a Lorenz curve diagram, what does the Gini coefficient measure?
+    The total area under the Lorenz curve
+  * The ratio of the area between the line of equality and the Lorenz curve to the total area under the line of equality
+    The distance between the poorest and richest households
+    The percentage of the population living below the poverty line
+q3 poverty-inequality:quiz:69671700
+  Q: Which of the following is most likely to reduce absolute poverty in a developing country?
+    An increase in indirect taxes on essential goods
+    A reduction in government spending on education
+  * Sustained, inclusive economic growth combined with investment in human capital
+    A decrease in the minimum wage to make labour markets more flexible
+q4 poverty-inequality:quiz:7426fa25
+  Q: According to the Kuznets hypothesis, as a country develops economically, inequality will:
+    Continuously increase as the rich get richer
+    Continuously decrease as prosperity is shared more widely
+  * First increase during industrialisation, then decrease as education and welfare expand
+    Remain constant because market forces maintain equilibrium
+q5 poverty-inequality:quiz:2326343a
+  Q: A country has a Gini coefficient of 0.58. This indicates that:
+    Income is distributed almost perfectly equally in the country
+  * The country has a relatively high level of income inequality
+    58% of the population lives in absolute poverty
+    The Lorenz curve is very close to the line of perfect equality
+q6 poverty-inequality:quiz:97277b48
+  Q: Which of the following best explains how inequality can negatively affect economic growth?
+    Higher inequality always increases savings, which boosts investment and growth
+  * Inequality limits the poor's access to education and credit, reducing human capital accumulation and enterprise
+    Inequality reduces the incentive for the wealthy to work and invest
+    Inequality always leads to higher government spending which crowds out private investment
+q7 poverty-inequality:quiz:f1d91fa5
+  Q: Which of the following is a cause of inequality between countries rather than within countries?
+    Gender discrimination in the labour market
+  * Differences in the quality of institutions and governance
+    Skill-biased technological change increasing the wage premium for graduates
+    Regional differences in the cost of living within a country
+q8 poverty-inequality:quiz:c952c037
+  Q: How might a civil war affect poverty in a developing country?
+    It would reduce poverty by increasing government military spending and employment
+    It would have no effect on poverty because GDP is unaffected by conflict
+  * It would increase poverty by destroying physical and human capital, displacing populations, and deterring investment
+    It would reduce poverty by forcing structural economic change and modernisation
+q9 poverty-inequality:quiz:db91dfc6
+  Q: In a free market economy, which of the following is the most significant reason why inequality tends to increase over time without government intervention?
+    All workers are paid the same wage regardless of productivity
+  * Wealth generates income (through returns on capital), creating a self-reinforcing cycle of accumulation for asset owners
+    Free markets prevent any individual from earning above-average income
+    Competition between firms ensures that profits are always distributed equally among workers
+
+########## PRACTICE BANK (order as stored)
+p0 poverty-inequality:practice:f5fc1fc2 (4 marks)
+  Define the difference between absolute poverty and relative poverty. (4 marks)
+p1 poverty-inequality:practice:3d98d47a (6 marks)
+  Explain two causes of income inequality within a country. (6 marks)
+p2 poverty-inequality:practice:d7ddd1e2 (10 marks)
+  Assess the usefulness of the Gini coefficient as a measure of income inequality. (10 marks)
+p3 poverty-inequality:practice:bdfcd97d (20 marks)
+  Evaluate the view that globalisation has increased inequality between developed and developing countries. (20 marks)
+p4 poverty-inequality:practice:e55dac64 (4 marks)
+  Outline two economic effects of poverty on a developing country. (4 marks)

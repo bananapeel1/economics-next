@@ -1,0 +1,136 @@
+SECTION government-intervention-firms — Government Intervention
+
+########## CHAPTER 1 (block 0, id government-intervention-firms:block:b1ca2796): Competition Policy
+
+--- The CMA and Merger Control
+The **Competition and Markets Authority (CMA)** is the UK's primary competition regulator. When firms propose a merger, the CMA investigates whether it would result in a **substantial lessening of competition (SLC)** — meaning fewer choices, higher prices, or lower quality for consumers.
+If the SLC test is met, the CMA can **block the merger entirely**, approve it with **behavioural or structural remedies** (such as requiring the firm to sell off certain stores or brands), or accept **binding commitments** from the merging parties. This gives the CMA a graduated toolkit rather than a simple yes-or-no decision.
+The CMA also runs **leniency programmes** to break cartels. By offering reduced fines to the first cartel member that confesses, the CMA exploits the **prisoner's dilemma** — each firm fears the others will confess first, so the cartel collapses from within.
+FLOW: Firms propose merger -> CMA investigates market impact -> SLC test applied -> Merger blocked or approved with conditions => Competition protected — consumers retain choice and fair prices
+KEY IDEA: The CMA uses the 'substantial lessening of competition' (SLC) test to decide whether mergers harm consumers — it can block deals, approve them, or force divestments.
+MISCONCEPTION: Students assume the CMA blocks all large mergers. Wrong — most mergers are approved, and many proceed with minor conditions. Instead write: the CMA only intervenes when it finds evidence of a substantial lessening of competition; size alone is not the trigger.
+EXAMPLE: The CMA blocked the proposed Sainsbury's-Asda merger in 2019, concluding it would substantially lessen competition in groceries and fuel, leading to higher prices for millions of UK shoppers.
+
+--- Anti-Competitive Behaviour
+**Cartels** are secret agreements between firms to fix prices, rig bids, or divide markets. They are illegal because they replicate monopoly outcomes — higher prices and restricted output — while pretending to compete. Detection is difficult, which is why leniency programmes are essential.
+**Abuse of dominant position** occurs when a firm with significant market power uses it to exclude competitors or exploit consumers. This includes **predatory pricing** (setting prices below cost to drive rivals out, then raising them), **exclusive dealing** (forcing retailers to stock only your products), and **tying** (bundling products to leverage dominance from one market into another).
+Penalties are severe to create a credible deterrent. Fines can reach **10% of worldwide annual turnover**, and individual directors can face criminal prosecution and prison sentences. The scale of fines reflects the enormous consumer harm that anti-competitive behaviour causes.
+KEY IDEA: Cartels, abuse of dominance, and predatory pricing all distort competition — regulators can impose fines of up to 10% of global turnover to deter these practices.
+MISCONCEPTION: Students confuse being dominant with abusing dominance. Wrong — having a large market share is perfectly legal; it is the exploitation or exclusionary use of that position that breaks competition law. Instead write: dominance is not illegal, but using it to foreclose competitors or exploit consumers is.
+EXAMPLE: The European Commission fined Google €4.34 billion in 2018 for abusing its Android dominance by requiring phone manufacturers to pre-install Google Search and Chrome as a condition of licensing the Play Store.
+TAKEAWAY: ["The CMA applies the SLC test to mergers and can block, approve, or impose remedies.","Leniency programmes exploit the prisoner's dilemma to break cartels from within.","Fines up to 10% of global turnover deter anti-competitive practices like predatory pricing and abuse of dominance.","Being dominant is legal; abusing that dominance to harm competition is not."]
+
+########## CHAPTER 2 (block 1, id government-intervention-firms:block:d4d37723): Regulation of Monopoly
+
+--- Price Cap Regulation (RPI–X)
+**Price cap regulation (RPI–X)** limits the maximum annual price increase to the rate of inflation (RPI) minus an efficiency factor (X). If inflation is 3% and X is 2%, the firm can only raise prices by 1%. To maintain or grow profits, the firm must **cut costs by at least X% per year** in real terms.
+This is superior to **rate-of-return regulation**, which guarantees the firm a fixed percentage return on its capital. The problem with rate-of-return is the **Averch-Johnson effect** — firms over-invest in capital to inflate the base on which their guaranteed return is calculated, leading to productive inefficiency.
+The challenge with RPI–X is **setting X correctly**. If X is too low, the firm earns excessive profits at consumers' expense. If X is too high, the firm cannot invest in maintaining infrastructure. Regulators face an information asymmetry — the firm knows its true costs better than the regulator does.
+FLOW: Regulator sets RPI–X cap -> Firm must cut real costs by X% annually -> Prices fall in real terms over time -> Consumers benefit from lower bills => Productive efficiency improves — firm is incentivised to innovate and cut waste
+KEY IDEA: Under RPI–X, prices can only rise by inflation minus an efficiency factor — forcing the firm to cut costs to protect its profits, unlike rate-of-return regulation which encourages waste.
+MISCONCEPTION: Students say RPI–X means prices always fall. Wrong — prices can still rise if inflation exceeds X; what falls is the real (inflation-adjusted) price. Instead write: RPI–X ensures prices fall in real terms, but nominal prices may still increase when inflation is higher than the efficiency factor.
+EXAMPLE: Ofwat regulates English and Welsh water companies using an RPI–X framework, setting price caps every five years. This forces monopoly water suppliers to find efficiency savings rather than simply passing costs on to bill-payers.
+
+--- Privatisation and Nationalisation
+**Privatisation** transfers state-owned enterprises to private ownership. The theoretical benefits are clear: the **profit motive** drives cost-cutting, **share price discipline** punishes inefficiency, and access to private capital markets funds investment without burdening taxpayers.
+However, privatising a **natural monopoly** simply replaces a public monopoly with a private one. Without regulation, the private firm will charge monopoly prices and restrict output. This is why privatisation in utilities was always accompanied by the creation of regulators like Ofgem, Ofwat, and Ofcom.
+**Nationalisation** pursues social objectives — universal service, cross-subsidisation, and long-term investment. The risk is **X-inefficiency**: without competitive pressure or the threat of takeover, costs drift upwards and productivity stagnates. The debate ultimately turns on whether government failure or market failure causes greater welfare loss.
+KEY IDEA: Privatisation introduces profit incentives and capital market discipline, but a natural monopoly simply becomes a private monopoly without effective regulation — ownership alone does not guarantee efficiency.
+MISCONCEPTION: Students assume privatisation always improves efficiency. Wrong — in natural monopolies, private ownership without regulation can worsen outcomes by adding a profit extraction layer on top of monopoly power. Instead write: privatisation improves efficiency only when combined with effective competition or regulation; ownership change alone is insufficient.
+EXAMPLE: British Rail was privatised between 1994 and 1997. Some franchises saw improved services and higher passenger numbers, but fragmentation of the network between track (Railtrack) and operators created coordination failures and contributed to safety concerns.
+TAKEAWAY: ["RPI–X forces firms to cut costs in real terms, unlike rate-of-return regulation which causes the Averch-Johnson effect.","Setting X too high risks under-investment; too low allows excessive profits — information asymmetry is the core problem.","Privatisation works best with competition or strong regulation; without either, it creates private monopoly.","The privatisation vs nationalisation debate hinges on whether government failure or market failure is the greater risk."]
+
+########## CHAPTER 3 (block 2, id government-intervention-firms:block:0be641d7): Government Failure and Minimum Wages
+
+--- Government Failure in Intervention
+**Government failure** arises when state intervention leads to a net welfare loss — the policy creates more distortion than the market failure it was meant to correct. Four key causes: **regulatory capture** (the regulator starts serving the industry it oversees), **information asymmetry** (government lacks the data to set optimal policy), **unintended consequences** (policies produce outcomes nobody predicted), and **political short-termism** (politicians favour policies with visible short-run benefits over long-run efficiency).
+Regulatory capture is particularly dangerous because it is invisible. When former industry executives staff the regulator, or when the regulator depends on the industry for data and expertise, policies subtly shift to protect incumbents rather than consumers.
+The existence of government failure does not mean governments should never intervene — it means intervention must be carefully designed, monitored, and evaluated. The relevant comparison is not 'perfect government vs imperfect market' but 'imperfect government vs imperfect market'.
+FLOW: Market failure identified -> Government intervenes with policy -> Unintended consequences emerge -> Net welfare may fall below pre-intervention level => Government failure — the intervention made things worse, not better
+KEY IDEA: Government failure occurs when intervention creates a worse outcome than the market failure it was designed to fix — the cure can be worse than the disease.
+MISCONCEPTION: Students treat government failure as proof that markets should be left alone. Wrong — market failure still exists and still causes welfare loss. Instead write: government failure means we should compare the costs of intervention against the costs of inaction, not assume either is automatically better.
+EXAMPLE: UK rent controls in the 1970s were intended to keep housing affordable, but landlords withdrew properties from the market because rents could not cover costs. The policy reduced housing supply, worsening the very shortage it was designed to fix.
+
+--- Minimum Wage as Intervention
+In the **competitive labour market model**, a minimum wage set above the equilibrium wage creates a surplus of labour — more workers want jobs at the higher wage than firms want to hire. The result is **unemployment** equal to the gap between labour supplied and labour demanded at the minimum wage.
+In a **monopsony labour market**, the outcome reverses. A single dominant employer (or a few large employers acting similarly) restricts hiring below the competitive level to keep wages down. A minimum wage set between the monopsony wage and the competitive wage **eliminates the firm's incentive to restrict hiring**. The wage floor acts like a perfectly elastic labour supply curve up to a point, so the firm hires more workers at the mandated wage.
+The real-world effect therefore depends on **market structure**. If low-wage labour markets exhibit monopsony power — as empirical evidence increasingly suggests — minimum wages can raise pay without significant job losses. The policy conclusion flips depending on which model applies.
+FLOW: Government sets minimum wage above equilibrium -> Competitive market: quantity demanded falls → unemployment -> Monopsony market: firm no longer restricts hiring → employment rises -> Net effect depends on degree of employer market power => Employment outcome is an empirical question — market structure determines the answer
+KEY IDEA: In a competitive labour market a minimum wage above equilibrium causes unemployment, but in a monopsony market it can raise both wages AND employment — the effect depends entirely on market structure.
+MISCONCEPTION: Students always draw the competitive model and conclude minimum wages cause unemployment. Wrong — this ignores monopsony, which is the more realistic model for many low-wage labour markets. Instead write: the employment effect depends on market structure; in monopsony markets, a minimum wage can increase both wages and employment simultaneously.
+EXAMPLE: The UK National Living Wage has been raised repeatedly since its introduction in 2016. Empirical studies by the Low Pay Commission consistently find minimal negative employment effects, suggesting significant monopsony power exists in low-wage UK labour markets.
+TAKEAWAY: ["Government failure occurs when intervention creates worse outcomes than the market failure it targets.","Regulatory capture, information asymmetry, and unintended consequences are the main causes of government failure.","Minimum wages cause unemployment in competitive markets but can raise employment in monopsony markets.","The real-world employment effect of minimum wages depends on market structure — empirical evidence suggests monopsony power is significant in low-wage sectors."]
+
+########## QUIZ BANK (order as stored)
+q0 government-intervention-firms:quiz:6a9d7383
+  Q: Under the RPI-X price regulation formula, a firm subject to a cap of RPI - 3% when inflation is 4% can increase its prices by a maximum of:
+    3%
+    4%
+  * 1%
+    7%
+q1 government-intervention-firms:quiz:2c05f0ba
+  Q: The Averch-Johnson effect suggests that profit regulation (rate-of-return regulation) may lead firms to:
+    Under-invest in capital to minimise costs
+  * Over-invest in capital to inflate their permitted profit base
+    Charge prices below marginal cost
+    Voluntarily reduce their market share
+q2 government-intervention-firms:quiz:49506368
+  Q: Which of the following is most likely to result from the privatisation of a state-owned monopoly WITHOUT effective post-privatisation regulation?
+    Lower prices and improved consumer choice
+  * A private monopoly that charges high prices and earns supernormal profits
+    Increased allocative efficiency as the firm sets P = MC
+    Elimination of all X-inefficiency
+q3 government-intervention-firms:quiz:86b27dd7
+  Q: In a monopsony labour market, a minimum wage set at the competitive equilibrium wage will most likely:
+    Cause unemployment as it is above the market-clearing wage
+    Have no effect on wages or employment
+  * Increase both the wage rate and the level of employment
+    Reduce the wage rate but increase employment
+q4 government-intervention-firms:quiz:04d73c07
+  Q: Regulatory capture is best described as a situation where:
+    The government regulates too many industries simultaneously
+  * The regulated firms influence the regulator to set rules that favour the industry
+    Consumers successfully lobby for stricter regulation of monopolies
+    Foreign regulators take control of domestic markets
+q5 government-intervention-firms:quiz:139e74d1
+  Q: The Laffer curve suggests that:
+    Higher tax rates always lead to higher tax revenue
+  * There exists a tax rate beyond which further increases actually reduce total tax revenue
+    Tax revenue is independent of the tax rate
+    Progressive taxation eliminates income inequality
+q6 government-intervention-firms:quiz:afa93371
+  Q: Which of the following is an example of a measure to reduce occupational immobility?
+    Subsidised housing to help workers relocate to areas with more jobs
+  * Government-funded apprenticeship schemes and retraining programmes
+    Improved motorway and rail networks to reduce commuting times
+    Establishing enterprise zones in areas of high unemployment
+q7 government-intervention-firms:quiz:7f6b5ace
+  Q: The poverty trap (benefits trap) occurs when:
+    The government spends too much on welfare, causing a budget deficit
+  * Workers face very high effective marginal tax rates as rising income triggers both taxation and benefit withdrawal
+    Multinational firms avoid paying corporation tax
+    Inflation erodes the real value of welfare payments
+q8 government-intervention-firms:quiz:707c0f55
+  Q: A government introduces competitive tendering for waste collection services. Which of the following is the most likely intended benefit?
+    Elimination of waste collection as a public service
+  * Increased competition among bidders, driving down costs and improving efficiency
+    Transfer of all risk from the government to private firms
+    Guaranteed improvement in service quality with no monitoring required
+q9 government-intervention-firms:quiz:e39f370a
+  Q: Which statement best explains why asymmetric information limits the effectiveness of government regulation of monopolies?
+    Consumers have more information than firms about product quality
+    The government always has better information than the firms it regulates
+  * Regulated firms know more about their own costs and markets than the regulator, enabling them to exploit this advantage
+    Asymmetric information only affects financial markets, not product markets
+
+########## PRACTICE BANK (order as stored)
+p0 government-intervention-firms:practice:2fb62ac6 (4 marks)
+  Define the term 'privatisation'. (4 marks)
+p1 government-intervention-firms:practice:f273da05 (6 marks)
+  Explain two objectives of government competition policy. (6 marks)
+p2 government-intervention-firms:practice:b88b8cc6 (10 marks)
+  Assess the impact of a national minimum wage on employment and living standards. (10 marks)
+p3 government-intervention-firms:practice:fc97f30e (20 marks)
+  Evaluate the arguments for and against the nationalisation of natural monopolies such as water and rail. (20 marks)
+p4 government-intervention-firms:practice:e648313a (4 marks)
+  Outline two problems associated with regulatory capture in the context of government intervention. (4 marks)

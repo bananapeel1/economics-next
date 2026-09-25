@@ -19304,6 +19304,58 @@
    "evidence": null,
    "note": null,
    "added": "2026-09-25"
+  },
+  {
+   "id": "V057",
+   "kind": "feature",
+   "title": "The 21 live sections that pinned nothing now carry a pin per chapter, chosen by reading the chapter: a quiz item and a practice item only where the chapter TEACHES the keyed answer (not merely shares its vocabulary), judged blind by a second reader who never saw the chooser's reasoning (88 PASS, 1 FAIL -> left empty, 0 MISSED across 51 chapters). 13 sections with no draft are STAGED (section_content only; 28 chapters: 23 quiz pins + 5 decided-empty, 21 practice pins) through scripts/packet-2.9-pin-banks.mjs, which proves only quizIndices/practiceIndices changed, that placeChapterItems shows the chosen item to Pro AND signed-out readers, that no diagram moves, that the pins introduce no validator finding, and that no practice pin lands in a GUIDED slot while its opening paragraph is the mark scheme (6 withheld for that). PUBLISH IS THE FOUNDER'S.",
+   "file": "scripts/packet-2.9-pin-banks.mjs",
+   "packet": 2.9,
+   "status": "claimed",
+   "closed_by": "packet-2.9",
+   "verified_by": null,
+   "evidence": null,
+   "note": null,
+   "added": "2026-09-25"
+  },
+  {
+   "id": "V058",
+   "kind": "feature",
+   "title": "An explicit empty pin (quizIndices: []) now means the author DECIDED the chapter asks nothing, honoured by the client placement and the signed-out payload (decidedNoQuestion, lib/checkin-fallback.js). Pinning moved the 21 sections onto the pinned path, where V026's fallback fills any unpinned chapter on one shared title word: on global-markets-expansion it served a 'push factor' question that no chapter teaches and both readers had rejected. No block in the corpus carried an empty pin before, so nothing shipped changes meaning. Three tests, each with an A/B control proving the fixture reaches the fallback; each half sabotaged in a scratch copy fails its test.",
+   "file": "lib/checkin-fallback.js",
+   "packet": 2.9,
+   "status": "claimed",
+   "closed_by": "packet-2.9",
+   "verified_by": null,
+   "evidence": null,
+   "note": null,
+   "added": "2026-09-25"
+  },
+  {
+   "id": "V059",
+   "kind": "feature",
+   "title": "exposure-census.mjs still restated the PINNED path (resolvePinnedItem then fallbackItemForBlock) after V054 moved only the unpinned path onto the shared placement, so it would have reported the decided-empty chapters as served with the fallback's question while the client asked nothing. Both paths now compose placeChapterItems, and a decided-empty chapter is reported as DECIDED, never STARVED. Live figures unchanged (114/165); staged 186/214 -> 209/214 with 5 DECIDED, 0 STARVED, 0 UNWRITTEN.",
+   "file": "audit/scripts/exposure-census.mjs",
+   "packet": 2.9,
+   "status": "claimed",
+   "closed_by": "packet-2.9",
+   "verified_by": null,
+   "evidence": null,
+   "note": null,
+   "added": "2026-09-25"
+  },
+  {
+   "id": "V060",
+   "kind": "feature",
+   "title": "8 of the 21 (balance-payments-exchange-rates, business-objectives-strategy, causes-effects-globalisation, globalisation, market-structures-contestability, revenue-costs-profits, trade-global-economy, types-sizes-businesses) stay unpinned LIVE: each holds a whole rebuilt section in draft, held for the packet 5/7 checkpoint and already pinned, and staging a pin would overwrite it. Their pins are authored and blind-verified in audit/runs/packet-2.9/pins.json; the checkpoint publish closes this, or a founder-approved live patch if it slips.",
+   "file": null,
+   "packet": 2.9,
+   "status": "open",
+   "closed_by": null,
+   "verified_by": null,
+   "evidence": null,
+   "note": null,
+   "added": "2026-09-25"
   }
  ],
  "marketing": [

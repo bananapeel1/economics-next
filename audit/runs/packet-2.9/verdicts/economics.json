@@ -1,0 +1,248 @@
+{
+  "balance-payments-exchange-rates": [
+    {
+      "block": 0,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "The BoP must always **balance** — a current account deficit must be financed by a financial account surplus (capital inflows).", "reason": "q1: the chapter states the keyed answer (a financial account surplus) almost word for word." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "The causes of a current account deficit include: a **strong exchange rate** making exports expensive and imports cheap, **high domestic demand** sucking in imports, **low productivity** reducing export competitiveness, and a **declining manufacturing base** if deindustrialisation has hollowed out tradeable goods production.", "reason": "p1: four causes are named, each with its mechanism, so a student can explain any two." },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 1,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "In the **short run**, trade contracts are fixed in foreign currency, export and import volumes are slow to adjust, and consumers take time to switch away from imports. The immediate effect of depreciation is simply a higher import bill.", "reason": "q4: the chapter teaches that short-run volumes do not respond (inelastic), so the current account worsens first; the distractors about immediate switching are contradicted in the text. The J-curve appears only in this chapter." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "A depreciation only improves the current account if the sum of export and import price elasticities exceeds one (Marshall-Lerner), and even then the improvement is delayed — the J-curve shows a short-run worsening before long-run gains.", "reason": "p2: Marshall-Lerner and the J-curve, which are this chapter's two main ideas, are exactly the case that a depreciation does not necessarily help." },
+      "missed": [],
+      "better": []
+    }
+  ],
+  "causes-effects-globalisation": [
+    {
+      "block": 0,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "The net impact depends critically on domestic policy. Countries with strong education systems, safety nets, and effective regulation can capture the gains while cushioning the losers.", "reason": "q9: the keyed evaluative point, that the net impact depends on country-specific policy and institutions, is this chapter's conclusion about globalisation as a whole. Chapter 2's governance point is about MNCs only." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "**Globalisation** is the increasing integration and interdependence of the world's economies through the growth of international trade, capital flows, and the spread of technology.", "reason": "p0: this is the chapter's opening definition." },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 1,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "MNCs transfer **technology and management expertise** that spills over to local firms.", "reason": "q4: technology transfer and spillovers to domestic firms are taught as a host-country benefit of FDI. The distractors (profit repatriation, dependency) are taught here as costs." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "For the **host country**, FDI brings significant benefits. New factories create **employment**, often in regions with limited opportunities.", "reason": "p2: the chapter covers FDI benefits (jobs, technology, tax), then costs (repatriation, transfer pricing, labour and environment), then the governance judgement. That is a full 10-mark answer." },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 2,
+      "quiz": { "verdict": "NONE", "rule": null, "quote": null, "reason": "Left empty. No quiz item in the bank tests FTAs, customs unions or trade creation and diversion. q1 (WTO) is Chapter 1 material." },
+      "practice": { "verdict": "NONE", "rule": null, "quote": null, "reason": "Left empty. No practice item in the bank concerns trade blocs." },
+      "missed": [],
+      "better": []
+    }
+  ],
+  "government-intervention-firms": [
+    {
+      "block": 0,
+      "quiz": { "verdict": "NONE", "rule": null, "quote": null, "reason": "Left empty. No quiz item tests the CMA, the SLC test, cartels, leniency or abuse of dominance. q8 (competitive tendering) is taught nowhere in the section." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "When firms propose a merger, the CMA investigates whether it would result in a **substantial lessening of competition (SLC)** — meaning fewer choices, higher prices, or lower quality for consumers.", "reason": "p1: the chapter gives the aims of competition policy: preventing mergers that lessen competition, breaking cartels, and stopping abuse of dominance, all in order to protect prices, choice and quality. A student can explain two." },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 1,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "However, privatising a **natural monopoly** simply replaces a public monopoly with a private one. Without regulation, the private firm will charge monopoly prices and restrict output.", "reason": "q2: the keyed answer (a private monopoly with high prices) restates this sentence." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "**Nationalisation** pursues social objectives — universal service, cross-subsidisation, and long-term investment. The risk is **X-inefficiency**: without competitive pressure or the threat of takeover, costs drift upwards and productivity stagnates.", "reason": "p3: the arguments for nationalisation (social objectives) and against it (X-inefficiency), together with the privatisation case and the Ofwat and British Rail examples, are all in this chapter." },
+      "missed": [],
+      "better": [ { "kind": "quiz", "index": 0, "reason": "Advisory. Both pins test the privatisation half. q0 (RPI 4% − X 3% = 1%) applies the chapter's own worked RPI–X example ('If inflation is 3% and X is 2%, the firm can only raise prices by 1%'), the regulation mechanism that the chapter title names and the chapter opens with." } ]
+    },
+    {
+      "block": 2,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "A minimum wage set between the monopsony wage and the competitive wage **eliminates the firm's incentive to restrict hiring**. The wage floor acts like a perfectly elastic labour supply curve up to a point, so the firm hires more workers at the mandated wage.", "reason": "q3: the chapter teaches that under monopsony a wage floor up to the competitive level raises both wages and employment, and the key is correct." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "If low-wage labour markets exhibit monopsony power — as empirical evidence increasingly suggests — minimum wages can raise pay without significant job losses.", "reason": "p2: the competitive model versus the monopsony model, plus the NLW and Low Pay Commission evidence, gives a creditable assessment of the effects on employment and pay." },
+      "missed": [],
+      "better": [ { "kind": "quiz", "index": 4, "reason": "Advisory. Both pins test the minimum-wage half. q4 (regulatory capture) tests the government-failure half, which the chapter opens with ('the regulator starts serving the industry it oversees')." } ]
+    }
+  ],
+  "growth-development": [
+    {
+      "block": 0,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "The **Human Development Index (HDI)** combines three dimensions: life expectancy at birth, mean and expected years of schooling, and GNI per capita (PPP).", "reason": "q0: the three HDI components are listed, so the Gini coefficient is identifiable as the item that is not one of them." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "Development is blocked by the savings gap (Harrod-Domar), primary commodity dependence, debt burdens, weak institutions, low human capital, and geography — often forming a self-reinforcing poverty trap.", "reason": "p1: the Barriers to Development subsection explains the savings gap, commodity dependence, debt and weak institutions." },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 1,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "However, protection often becomes permanent — firms never become competitive because they face no pressure to innovate or reduce costs.", "reason": "q5: the keyed long-run risk of ISI is this sentence." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "The most successful development stories (East Asia) combined market openness with strategic state intervention.", "reason": "p3: the chapter is split into market-led and interventionist strategies, each with its limits and a case study (South Korea, India). That is exactly this 20-marker." },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 2,
+      "quiz": { "verdict": "NONE", "rule": null, "quote": null, "reason": "Left empty. No quiz item tests sustainable development, the EKC, green growth or carbon pricing." },
+      "practice": { "verdict": "NONE", "rule": null, "quote": null, "reason": "Left empty. No practice item concerns sustainability." },
+      "missed": [],
+      "better": []
+    }
+  ],
+  "labour-markets": [
+    {
+      "block": 0,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "A profit-maximising firm hires workers up to the point where **MRP = wage**, because any worker whose MRP exceeds the wage adds to profit.", "reason": "q1: the hiring rule is stated verbatim." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "The demand for labour is a **derived demand** — it depends on the demand for the product the worker helps produce.", "reason": "p0: the chapter defines derived demand and illustrates it (FLOW, AI engineers example)." },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 1,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "Workers are paid less than their marginal revenue product — this gap is **monopsonistic exploitation**. Employment is also lower than in a competitive market.", "reason": "q5: lower employment is stated here. A lower wage follows from the same chapter placing the monopsony wage below the competitive wage ('set between the monopsony wage and the competitive wage')." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "Crucially, a **national minimum wage** set between the monopsony wage and the competitive wage can **increase both wages AND employment** simultaneously.", "reason": "p3: the chapter gives the MCL-above-supply analysis, exploitation, lower employment, the minimum-wage evaluation and the NHS example, which is enough for a 20-marker." },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 2,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "Doctors, lawyers, and accountants require years of qualifications that restrict supply, keeping wages above what they would be with free entry.", "reason": "q7: this chapter teaches the wage-differential explanation (restricted, inelastic supply from lengthy training). It leans on Chapter 1's point that long-training occupations have inelastic supply, which is allowed." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "**Compensating wage differentials** exist to attract workers into jobs with unpleasant or dangerous characteristics — night shifts, physical risk, or unsociable hours command a premium. **Human capital theory** explains higher wages as a return on investment in education, training, and skills that raise a worker's productivity.", "reason": "p1: five causes of wage differentials are taught; a student can explain two." },
+      "missed": [],
+      "better": []
+    }
+  ],
+  "market-structures-contestability": [
+    {
+      "block": 0,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "Crucially, the tangency point is **not at the minimum of ATC**, meaning the firm has **excess capacity** — it could produce more at a lower average cost but chooses not to.", "reason": "q3: 'could produce more at a lower average cost' puts the tangency to the left of minimum ATC, which is the key." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "**Perfect competition** is a market structure with many firms, each selling a **homogeneous (identical) product**. Because no single firm is large enough to influence the market price, each is a **price taker**", "reason": "p0: the characteristics (many firms, homogeneous product, price takers, no barriers to entry) are all stated." },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 1,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "When both cheat, they end up worse off than if they had cooperated. This is the **Nash equilibrium**: neither firm can improve its position by changing strategy alone.", "reason": "q7: the key is taught directly (both cheat: individually rational, collectively worse)." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "The **prisoner's dilemma** illustrates the core problem: if both firms cooperate (keep prices high), they share monopoly profit. But each firm has a **dominant strategy to cheat** — cutting its price to steal market share.", "reason": "p3: the chapter gives the prisoner's dilemma, cartel instability, tacit collusion and the OPEC case, plus the kinked-demand alternative, which is enough to evaluate game theory." },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 2,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "Three conditions must hold: the firm must have **market power** (downward-sloping demand), it must be able to **separate consumers** into groups with different price elasticities, and there must be **no possibility of resale** between groups.", "reason": "q5: the three conditions match the three distractors, which leaves productive efficiency as the non-condition." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "Three conditions must hold: the firm must have **market power** (downward-sloping demand), it must be able to **separate consumers** into groups with different price elasticities, and there must be **no possibility of resale** between groups.", "reason": "p1: the conditions are taught only in this chapter." },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 3,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "What disciplines firm behaviour is not the number of existing competitors but the threat of entry — if sunk costs are low, even a monopolist must price competitively or face hit-and-run entry.", "reason": "q8: the threat of entry and sunk costs are the chapter's central claim, and Baumol is named." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "**Monopoly** is the mirror image: persistent supernormal profit funds R&D and innovation (Schumpeter's argument for dynamic efficiency), but P > MC means allocative inefficiency and production may not occur at minimum ATC.", "reason": "p2: the 'Evaluating Market Structures & Efficiency' subsection compares the static and dynamic efficiency of monopoly and perfect competition, and contestability adds a further counter-argument. Chapter 3 only touches this in a misconception." },
+      "missed": [],
+      "better": []
+    }
+  ],
+  "poverty-inequality": [
+    {
+      "block": 0,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "However, its Gini coefficient rose from roughly 0.30 to 0.47 over the same period, meaning relative inequality worsened dramatically even as the poorest gained.", "reason": "q0: the chapter teaches that growth with gains accruing to the rich raises inequality and the Gini, and it defines the Gini and Lorenz curve here." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "Absolute poverty means falling below the survival threshold ($2.15/day), while relative poverty means earning below 60% of the median — growth can reduce one while worsening the other.", "reason": "p0: both definitions are given and contrasted." },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 1,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "**Reduced social mobility** means that where you are born on the income ladder increasingly determines where you end up — talent is wasted when the poor cannot access education or capital.", "reason": "q6: blocked access to education and capital, and the resulting wasted human capital, is the chapter's explanation of how inequality harms the economy." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "Inequality stems from wage differentials driven by human capital and MRP, wealth concentration passed between generations, globalisation rewarding skilled workers, and tax policy choices.", "reason": "p1: four within-country causes are explained; a student can develop two." },
+      "missed": [],
+      "better": []
+    }
+  ],
+  "revenue-costs-profits": [
+    {
+      "block": 0,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "This is why MR falls faster than AR — the MR curve has exactly twice the gradient of a linear AR curve.", "reason": "q0: twice the gradient of AR = 100 − 2Q gives MR = 100 − 4Q, and it is the only option with that gradient." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "**Marginal revenue (MR)** is the change in TR from selling one more unit.", "reason": "p0: the definition is stated and developed (why MR falls below AR, and its link to PED)." },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 1,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "Adding more of the variable factor (labour) to the fixed factor eventually causes **diminishing marginal returns** — each extra worker adds less output than the previous one, causing MC to rise.", "reason": "q2: the key restates this. The distractors (long run, diseconomies) are explicitly distinguished in the chapter's misconception." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "It is U-shaped because at low output the firm spreads fixed costs over few units (high AFC), and at high output diminishing returns push up AVC.", "reason": "p2: the chapter links diminishing returns to rising MC, AVC and SRAC, and gives the spreading of fixed costs and the long run as limits. That is enough for a 10-mark assessment." },
+      "missed": [],
+      "better": [ { "kind": "quiz", "index": 3, "reason": "Advisory. The practice already tests diminishing returns. q3 tests the relationship the chapter's KEY IDEA calls 'the key relationship' (MC cuts ATC at its minimum), which is otherwise untested." } ]
+    },
+    {
+      "block": 2,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "Economists include normal profit as part of total cost, so when TR = TC, the firm earns exactly normal profit.", "reason": "q6: the key (TR = TC, covering the entrepreneur's opportunity cost) is taught verbatim." },
+      "practice": { "verdict": "NONE", "rule": null, "quote": null, "reason": "Left empty, correctly. p1 (types of economies of scale) and p4 (short-run shutdown) are taught nowhere in the section, and p3 is pinned to Efficiency, where the static and dynamic trade-off it needs is taught." },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 3,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "**X-inefficiency** occurs when a firm operates above its minimum cost curve — not because of its scale, but because of **organisational slack**. Without competitive pressure, managers may tolerate waste, overstaffing, or outdated processes.", "reason": "q9: the key restates the chapter's definition." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "**Dynamic efficiency** is about improvement over time — investing in research, new technology, and better products. It requires funds, and **supernormal profit** provides those funds.", "reason": "p3: dynamic efficiency against X-inefficiency and static loss (drawing on Chapter 3's signal function) is the evaluation this 20-marker needs, and it is taught here." },
+      "missed": [],
+      "better": []
+    }
+  ],
+  "role-state-macroeconomy": [
+    {
+      "block": 0,
+      "quiz": { "verdict": "NONE", "rule": null, "quote": null, "reason": "Left empty. No quiz item tests public goods, free riders or goods with external benefits." },
+      "practice": { "verdict": "NONE", "rule": null, "quote": null, "reason": "Left empty. No practice item concerns public goods or external benefits." },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 1,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "The **Laffer curve** formalises this: beyond a certain tax rate, total revenue actually falls because economic activity declines.", "reason": "q1: the chapter teaches that revenue falls beyond the revenue-maximising rate because of disincentives." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "**Progressive taxation** takes a higher proportion of income from higher earners — the UK's 20%/40%/45% income tax bands are a clear example. Combined with **transfer payments** (Universal Credit, pensions, child benefit), the tax-benefit system compresses the post-tax income distribution.", "reason": "p1: reducing inequality (compressing the distribution) and funding transfers and in-kind provision for the poorest are both taught, giving two creditable reasons." },
+      "missed": [],
+      "better": [ { "kind": "practice", "index": 0, "reason": "Advisory. Both pins test the redistribution half. p0 (define fiscal policy) tests the chapter's opening subsection, which the chapter title names ('Fiscal policy involves changes in government spending (G) and taxation (T) to influence aggregate demand')." } ]
+    }
+  ],
+  "trade-global-economy": [
+    {
+      "block": 0,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "A country has a comparative advantage in a good if it can produce that good at a **lower opportunity cost** than another country.", "reason": "q0: the chapter teaches the method of calculating opportunity costs. Y's cost is 0.5 food per machine against X's 2, so the key is correct." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "A country has a comparative advantage in a good if it can produce that good at a **lower opportunity cost** than another country.", "reason": "p0: the definition is stated, with the absolute and comparative contrast." },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 1,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "The **arguments for** protectionism include: protecting **infant industries** that need time to achieve economies of scale", "reason": "q5: an infant industry needing time to reach economies of scale is taught. The other options are separate arguments listed here (security, dumping), or they contradict 'infant'." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "The **arguments against** are powerful: protectionism raises prices for consumers, creates **welfare loss**, reduces competitive pressure (so firms become less efficient over time), and invites **retaliation** from trading partners.", "reason": "p3: this chapter adds the case for and against protection, which completes the free-trade-versus-protectionism debate on top of Chapter 1." },
+      "missed": [],
+      "better": []
+    }
+  ],
+  "types-sizes-businesses": [
+    {
+      "block": 0,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "This occurs at the output level where marginal cost equals marginal revenue (MC = MR).", "reason": "q1: the profit-maximising rule is stated directly, and revenue maximisation and sales maximisation are distinguished." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "Managers aim for a 'good enough' profit that keeps shareholders quiet, while pursuing their own goals — perks, prestige, or an easy life. This arises from the **principal-agent problem**: shareholders (principals) want maximum profit, but managers (agents) have their own interests.", "reason": "p2: this chapter teaches the principal-agent problem and its effect on firm performance (satisficing, Baumol revenue maximisation, Amazon), which is enough for a 10-mark assessment." },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 1,
+      "quiz": { "verdict": "FAIL", "rule": 3, "quote": "Becoming a plc creates the **divorce of ownership and control** — shareholders own the firm but managers run it day-to-day. This separation is the root of the principal-agent problem.", "reason": "q3's key (different objectives, and shareholders cannot monitor managers) is taught in Chapter 1, Business Objectives ('shareholders (principals) want maximum profit, but managers (agents) have their own interests'; 'Information is imperfect'). This chapter only names the problem as a consequence of the plc structure and never mentions differing objectives or monitoring, so the item belongs to Chapter 1 (rule 3) and cannot be answered from this chapter's text (rule 1). No unchosen quiz item qualifies here: q6 (co-operatives) is taught nowhere, so the slot should be empty." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "Shareholders enjoy **limited liability** — they can lose their investment but not their personal assets.", "reason": "p0: the definition is taught here, together with the contrasting misconception about limited risk." },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 2,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "**Horizontal integration** merges firms at the same stage in the same industry — increasing market share and enabling economies of scale.", "reason": "q0: two car manufacturers are the same stage in the same industry." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "The key advantage is control — the firm maintains its culture, avoids integration headaches, and grows at a pace it can manage. The key disadvantage is speed — competitors who grow externally may seize opportunities first.", "reason": "p3: the chapter covers organic growth against external growth, including the risks of mergers (over half fail) and the Starbucks and Facebook cases." },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 3,
+      "quiz": { "verdict": "PASS", "rule": null, "quote": "The stock market may value the separate pieces more than the whole (eliminating the 'conglomerate discount').", "reason": "q8: the key restates this sentence. Demergers are taught only in this chapter." },
+      "practice": { "verdict": "PASS", "rule": null, "quote": "When diseconomies outweigh the benefits of size, a **demerger** may follow — splitting the firm into smaller, independent companies that can focus on their main activities. The stock market may value the separate pieces more than the whole (eliminating the 'conglomerate discount').", "reason": "p4: two reasons (diseconomies and loss of focus; releasing the conglomerate discount) are taught, with the GSK and Haleon example." },
+      "missed": [],
+      "better": []
+    }
+  ]
+}
